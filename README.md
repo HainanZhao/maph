@@ -15,6 +15,9 @@ project is self-contained: run its commands from that project's directory.
 - [`projects/certifiable-grid-optimization/`](projects/certifiable-grid-optimization/):
   certifiable AC optimal power flow, beginning with exact and approximate
   voltage recovery on unicyclic networks.
+- [`projects/gas-aware-amm-routing/`](projects/gas-aware-amm-routing/):
+  exact and certifiable order routing across parallel constant-product
+  automated market makers with fixed execution costs.
 
 The projects share only the repository history and top-level ignore rules.
 Their source packages, scripts, tests, documentation, and data or paper
