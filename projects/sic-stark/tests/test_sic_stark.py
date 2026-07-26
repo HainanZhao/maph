@@ -1,4 +1,5 @@
 from fractions import Fraction
+from math import gcd
 import unittest
 
 from src.sic_stark import (
@@ -8,6 +9,8 @@ from src.sic_stark import (
     canonical_beta_is_rational,
     canonical_beta_power_trace,
     canonical_characteristic_correction_index,
+    canonical_cyclic_approximant_pair,
+    canonical_cyclic_approximant_record,
     canonical_dimension_four_algebraic_unit_packet_record,
     canonical_dimension_four_countermodel,
     canonical_dimension_four_character_resolvents,
@@ -37,6 +40,8 @@ from src.sic_stark import (
     canonical_general_modular_modulus,
     canonical_general_modular_node_strip_margins,
     canonical_general_modular_parameters,
+    canonical_ghost_minor_record,
+    canonical_ghost_weyl_entry_terms,
     canonical_global_unit_residues,
     canonical_jacobi_scale_exponents,
     canonical_jacobi_word,
@@ -54,6 +59,8 @@ from src.sic_stark import (
     canonical_quadratic_residue_multiply,
     canonical_quadratic_residue_norm,
     canonical_quadratic_residue_units,
+    canonical_odd_constant_overlap_countermodel_record,
+    canonical_reciprocal_trace_moment_record,
     canonical_residue_multiplication_matrix,
     canonical_root_filtered_stokes_record,
     canonical_shift_partner,
@@ -1160,6 +1167,53 @@ class CanonicalSicStarkTests(unittest.TestCase):
                 dimension**3 - 3 * dimension**2 + 2,
             )
 
+    def test_cyclic_approximants_align_with_level_three_step(
+        self,
+    ) -> None:
+        for dimension in range(4, 101):
+            for index in range(1, 13):
+                numerator, denominator = (
+                    canonical_cyclic_approximant_pair(
+                        dimension, index
+                    )
+                )
+                self.assertEqual(gcd(numerator, denominator), 1)
+                record = canonical_cyclic_approximant_record(
+                    dimension, index, 1
+                )
+                self.assertTrue(record["approximants_are_reduced"])
+                self.assertTrue(
+                    record["same_residues_after_conductor_step"]
+                )
+                self.assertTrue(record["level_step_is_identity"])
+                self.assertTrue(record["off_grid_factor_is_retained"])
+                if index % 3 in (1, 2):
+                    self.assertTrue(
+                        record["denominator_coprime_to_dimension"]
+                    )
+                    self.assertTrue(
+                        record["safe_universal_subsequence"]
+                    )
+
+            constant = canonical_cyclic_approximant_record(
+                dimension, 4, 0
+            )
+            self.assertTrue(
+                constant["rational_boundary_monomial_is_one"]
+            )
+            self.assertFalse(constant["off_grid_factor_is_retained"])
+            self.assertFalse(
+                constant[
+                    "cyclic_limit_covers_full_characteristic_packet"
+                ]
+            )
+            self.assertFalse(
+                constant["cyclic_limit_retains_signed_sf_phases"]
+            )
+            self.assertFalse(
+                constant["finite_five_term_tcc_identity_proved"]
+            )
+
     def test_reflection_reduces_tcc_to_one_involution(self) -> None:
         for dimension in range(4, 501):
             record = canonical_zak_reflection_quadratic_record(
@@ -1184,6 +1238,101 @@ class CanonicalSicStarkTests(unittest.TestCase):
                 record["reflection_alone_proves_involution"]
             )
             self.assertFalse(record["rm_involution_proved"])
+
+    def test_reciprocity_forces_only_two_trace_moments(self) -> None:
+        for dimension in range(4, 501):
+            record = canonical_reciprocal_trace_moment_record(
+                dimension
+            )
+            self.assertEqual(record["trace_pi"], 1)
+            self.assertEqual(record["trace_pi_square"], 1)
+            self.assertEqual(record["trace_h"], 2 - dimension)
+            self.assertEqual(record["trace_h_square"], dimension)
+            self.assertEqual(
+                record["second_elementary_symmetric_h"],
+                (dimension - 1) * (dimension - 4) // 2,
+            )
+            self.assertEqual(
+                record["first_unforced_spectral_moment_degree"], 3
+            )
+            self.assertTrue(
+                record["identity_coefficient_of_h_square_is_forced"]
+            )
+            self.assertFalse(
+                record[
+                    "traceless_coefficients_of_h_square_are_forced"
+                ]
+            )
+            self.assertTrue(
+                record["idempotency_equivalent_to_rank_one"]
+            )
+            self.assertTrue(
+                record[
+                    "rank_one_equivalent_to_vanishing_two_by_two_minors"
+                ]
+            )
+
+    def test_odd_constant_overlap_model_has_all_coarse_moments(
+        self,
+    ) -> None:
+        for dimension in range(5, 101, 2):
+            record = (
+                canonical_odd_constant_overlap_countermodel_record(
+                    dimension
+                )
+            )
+            self.assertTrue(record["real"])
+            self.assertTrue(record["reciprocal"])
+            self.assertTrue(record["zauner_invariant"])
+            self.assertTrue(record["ordinarily_hermitian"])
+            self.assertEqual(record["trace_pi"], 1)
+            self.assertEqual(record["trace_pi_square"], 1)
+            self.assertEqual(record["trace_h_square"], dimension)
+            self.assertEqual(record["zero_twisted_residual"], 0)
+            self.assertTrue(
+                record["nonzero_twisted_residual_is_negative"]
+            )
+            self.assertFalse(record["is_idempotent"])
+            self.assertFalse(record["h_is_involution"])
+
+    def test_ghost_rank_one_target_is_an_explicit_minor_system(
+        self,
+    ) -> None:
+        for dimension in range(4, 31):
+            for row in range(dimension):
+                for column in range(dimension):
+                    terms = canonical_ghost_weyl_entry_terms(
+                        dimension, row, column
+                    )
+                    self.assertEqual(len(terms), dimension)
+                    self.assertEqual(
+                        {node[0][0] for node in terms},
+                        {(row - column) % dimension},
+                    )
+                    self.assertEqual(
+                        [node[0][1] for node in terms],
+                        list(range(dimension)),
+                    )
+
+            record = canonical_ghost_minor_record(
+                dimension, (0, 1), (0, 1)
+            )
+            self.assertEqual(
+                record["terms_per_product"], dimension * dimension
+            )
+            self.assertEqual(
+                record["expanded_signed_term_count"],
+                2 * dimension * dimension,
+            )
+            self.assertEqual(
+                record["all_two_by_two_minor_count"],
+                (dimension * (dimension - 1) // 2) ** 2,
+            )
+            self.assertTrue(
+                record[
+                    "minor_vanishing_equivalent_to_rank_one_collectively"
+                ]
+            )
 
     def test_zauner_blocks_do_not_improve_orbit_reduction(self) -> None:
         for dimension in range(4, 501):
@@ -1255,6 +1404,20 @@ class CanonicalSicStarkTests(unittest.TestCase):
         self.assertEqual(
             record["zak_zauner_blocks"]["dimension_defect"], 0
         )
+        self.assertTrue(
+            record["cyclic_approximant"][
+                "same_residues_after_conductor_step"
+            ]
+        )
+        self.assertEqual(
+            record["reciprocal_trace_moments"]["trace_h_square"], 4
+        )
+        self.assertEqual(
+            record["ghost_rank_one_minor"][
+                "all_two_by_two_minor_count"
+            ],
+            36,
+        )
 
     def test_invalid_dimensions_are_rejected(self) -> None:
         with self.assertRaises(ValueError):
@@ -1267,6 +1430,16 @@ class CanonicalSicStarkTests(unittest.TestCase):
             canonical_beta_is_rational(3)
         with self.assertRaises(ValueError):
             canonical_beta_power_trace(3, 0)
+        with self.assertRaises(ValueError):
+            canonical_cyclic_approximant_pair(4, 0)
+        with self.assertRaises(ValueError):
+            canonical_cyclic_approximant_record(4, 1, -1)
+        with self.assertRaises(ValueError):
+            canonical_odd_constant_overlap_countermodel_record(4)
+        with self.assertRaises(ValueError):
+            canonical_ghost_minor_record(4, (0, 4), (0, 1))
+        with self.assertRaises(ValueError):
+            canonical_ghost_minor_record(4, (0, 1), (2, 6))
         with self.assertRaises(ValueError):
             canonical_beta_power_trace(4, -1)
         with self.assertRaises(ValueError):
