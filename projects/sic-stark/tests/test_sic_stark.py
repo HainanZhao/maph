@@ -3,15 +3,20 @@ import unittest
 
 from src.sic_stark import (
     IDENTITY_2,
+    canonical_beta_is_rational,
     canonical_characteristic_correction_index,
     canonical_dimension_four_countermodel,
     canonical_family_record,
     canonical_form,
     canonical_form_stabilizer_residual,
+    canonical_general_modular_modulus,
     canonical_jacobi_scale_exponents,
     canonical_jacobi_word,
     canonical_kernel_identity,
     canonical_level_quotient,
+    canonical_pentagon_compatibility_record,
+    canonical_primitive_sigma_shift_coordinates,
+    canonical_primitive_sigma_shifts_are_quasiperiods,
     canonical_quadratic_identity,
     canonical_level_stabilizer,
     canonical_shift_partner,
@@ -89,6 +94,92 @@ class CanonicalSicStarkTests(unittest.TestCase):
             self.assertEqual(
                 reconstructed, canonical_level_stabilizer(dimension)
             )
+
+    def test_beta_is_irrational_in_the_canonical_range(self) -> None:
+        for dimension in range(4, 501):
+            self.assertFalse(canonical_beta_is_rational(dimension))
+
+    def test_general_modular_modulus_differs_from_tcc_modulus(self) -> None:
+        for dimension in range(4, 501):
+            modulus = canonical_general_modular_modulus(dimension)
+            self.assertEqual(modulus, dimension * (dimension - 2))
+            self.assertEqual(
+                modulus,
+                abs(canonical_level_stabilizer(dimension)[1][0]),
+            )
+            self.assertNotEqual(modulus, dimension)
+
+    def test_primitive_sigma_shifts_miss_the_period_lattice(self) -> None:
+        for dimension in range(4, 501):
+            coordinates = canonical_primitive_sigma_shift_coordinates(
+                dimension
+            )
+            self.assertEqual(
+                coordinates,
+                (
+                    (Fraction(1, dimension), Fraction(0)),
+                    (
+                        Fraction(dimension - 1, dimension),
+                        Fraction(-1, dimension),
+                    ),
+                    (
+                        Fraction(dimension - 2),
+                        Fraction(-(dimension - 1), dimension),
+                    ),
+                ),
+            )
+            self.assertEqual(
+                canonical_primitive_sigma_shifts_are_quasiperiods(
+                    dimension
+                ),
+                (False, False, False),
+            )
+
+            # Pair multiplication in Q(beta), with
+            # beta^2=(d-1)beta-1, checks d*delta_k*beta^k=1.
+            def multiply(
+                left: tuple[Fraction, Fraction],
+                right: tuple[Fraction, Fraction],
+            ) -> tuple[Fraction, Fraction]:
+                a, b = left
+                c, e = right
+                return (
+                    a * c - b * e,
+                    a * e + b * c + (dimension - 1) * b * e,
+                )
+
+            beta = (Fraction(0), Fraction(1))
+            beta_power = (Fraction(1), Fraction(0))
+            for coordinate in coordinates:
+                scaled = (
+                    dimension * coordinate[0],
+                    dimension * coordinate[1],
+                )
+                self.assertEqual(
+                    multiply(scaled, beta_power),
+                    (Fraction(1), Fraction(0)),
+                )
+                beta_power = multiply(beta_power, beta)
+
+    def test_dimension_four_pentagon_compatibility_record(self) -> None:
+        record = canonical_pentagon_compatibility_record(4)
+        self.assertFalse(record["beta_rational"])
+        self.assertFalse(record["cyclic_parameter_is_root_of_unity"])
+        self.assertEqual(record["characteristic_modulus"], 4)
+        self.assertEqual(record["general_modular_modulus"], 8)
+        self.assertFalse(record["moduli_match"])
+        self.assertEqual(
+            record["primitive_shift_coordinates"],
+            (
+                (Fraction(1, 4), Fraction(0)),
+                (Fraction(3, 4), Fraction(-1, 4)),
+                (Fraction(2), Fraction(-3, 4)),
+            ),
+        )
+        self.assertEqual(
+            record["primitive_shifts_are_quasiperiods"],
+            (False, False, False),
+        )
 
     def test_twist_kernel_has_dimension_independent_representative(self) -> None:
         for dimension in range(4, 501):
@@ -384,6 +475,10 @@ class CanonicalSicStarkTests(unittest.TestCase):
         self.assertEqual(record["jacobi_scale_exponents"], (-2, -1, 0))
         self.assertEqual(record["form_stabilizer_residual"], (0, 0, 0))
         self.assertEqual(record["tcc_equation_count"], 5)
+        self.assertEqual(
+            record["pentagon_compatibility"]["general_modular_modulus"],
+            8,
+        )
 
     def test_invalid_dimensions_are_rejected(self) -> None:
         with self.assertRaises(ValueError):
@@ -392,6 +487,12 @@ class CanonicalSicStarkTests(unittest.TestCase):
             canonical_stabilizer(0)
         with self.assertRaises(ValueError):
             extended_displacement_modulus(0)
+        with self.assertRaises(ValueError):
+            canonical_beta_is_rational(3)
+        with self.assertRaises(ValueError):
+            canonical_general_modular_modulus(3)
+        with self.assertRaises(ValueError):
+            canonical_primitive_sigma_shift_coordinates(3)
 
 
 if __name__ == "__main__":
