@@ -2463,6 +2463,101 @@ def canonical_beta_power_trace(
     return current
 
 
+def canonical_cyclic_approximant_pair(
+    dimension: int,
+    index: int,
+) -> tuple[int, int]:
+    r"""Return the reduced Chebyshev approximant to ``beta_d``.
+
+    Write ``S_n=beta_d^n+beta_d^(-n)``.  The modular-geodesic
+    approximants used in the cyclic-quantum-dilogarithm formula are
+
+    ``t_n=S_(n-1)/S_n``.
+
+    Consecutive ``S`` values have constant gcd
+    ``gcd(2,d-1)``, so the returned numerator and denominator are
+    coprime.  Their ratio tends to the small fixed point ``beta_d``.
+    """
+
+    canonical_form(dimension)
+    if index < 1:
+        raise ValueError("approximant index must be positive")
+    divisor = gcd(2, dimension - 1)
+    numerator = canonical_beta_power_trace(dimension, index - 1)
+    denominator = canonical_beta_power_trace(dimension, index)
+    assert numerator % divisor == 0
+    assert denominator % divisor == 0
+    reduced = (numerator // divisor, denominator // divisor)
+    assert gcd(*reduced) == 1
+    return reduced
+
+
+def canonical_cyclic_approximant_record(
+    dimension: int,
+    index: int,
+    total_series_index: int,
+) -> dict[str, object]:
+    r"""Audit the cyclic-dilogarithm approximation route to TCC.
+
+    For ``a=d-1``, the Chebyshev recurrence has period three modulo
+    ``d``.  This is the arithmetic shadow of ``L_d^3 in Gamma(d)``:
+    the reduced root-of-unity approximants at indices ``n`` and
+    ``n+3`` have identical numerator and denominator residues modulo
+    ``d``.
+
+    The rational boundary monomial at ``t_n=M_n/N_n`` is
+    ``exp(2*pi*i*M_n*J/N_n)``.  Since ``M_n,N_n`` are coprime, its
+    difference from one is retained exactly when ``N_n`` does not
+    divide ``J``.  Thus fixed positive series degrees survive for all
+    sufficiently large approximants instead of suffering the
+    premature equal-base cancellation from cycle 13.
+    """
+
+    canonical_form(dimension)
+    if total_series_index < 0:
+        raise ValueError("total series index must be nonnegative")
+    numerator, denominator = canonical_cyclic_approximant_pair(
+        dimension, index
+    )
+    shifted_numerator, shifted_denominator = (
+        canonical_cyclic_approximant_pair(dimension, index + 3)
+    )
+    denominator_coprime = gcd(denominator, dimension) == 1
+    monomial_is_one = total_series_index % denominator == 0
+    stabilizer = canonical_stabilizer(dimension)
+    return {
+        "index": index,
+        "conductor_step": 3,
+        "approximant": (numerator, denominator),
+        "shifted_approximant": (
+            shifted_numerator,
+            shifted_denominator,
+        ),
+        "approximants_are_reduced": (
+            gcd(numerator, denominator) == 1
+            and gcd(shifted_numerator, shifted_denominator) == 1
+        ),
+        "same_residues_after_conductor_step": (
+            numerator % dimension == shifted_numerator % dimension
+            and denominator % dimension
+            == shifted_denominator % dimension
+        ),
+        "level_step_is_identity": (
+            matrix_mod(matrix_power(stabilizer, 3), dimension)
+            == IDENTITY_2
+        ),
+        "denominator_coprime_to_dimension": denominator_coprime,
+        "safe_universal_subsequence": index % 3 in (1, 2),
+        "total_series_index": total_series_index,
+        "rational_boundary_monomial_is_one": monomial_is_one,
+        "off_grid_factor_is_retained": not monomial_is_one,
+        "cyclic_limit_available_for_identity_shintani_invariant": True,
+        "cyclic_limit_covers_full_characteristic_packet": False,
+        "cyclic_limit_retains_signed_sf_phases": False,
+        "finite_five_term_tcc_identity_proved": False,
+    }
+
+
 def canonical_zak_reflection_quadratic_record(
     dimension: int,
 ) -> dict[str, object]:
@@ -2529,6 +2624,183 @@ def canonical_zak_reflection_quadratic_record(
     }
 
 
+def canonical_reciprocal_trace_moment_record(
+    dimension: int,
+) -> dict[str, object]:
+    r"""Return the quadratic moments forced before TCC.
+
+    For canonical rank one, write the ghost Weyl coefficients as
+    ``a_0=1`` and ``a_p=c*u_p`` off zero, where
+    ``c^2=1/(d+1)`` and ``u_p*u_(-p)=1``.  Weyl orthogonality then
+    forces ``Tr(Pi)=Tr(Pi^2)=1``.  Thus ``H=2*Pi-I`` has the correct
+    first two trace moments even when its traceless square is nonzero.
+    """
+
+    canonical_form(dimension)
+    scale_square = Fraction(1, dimension + 1)
+    trace_pi_square = Fraction(
+        1 + (dimension * dimension - 1) * scale_square,
+        dimension,
+    )
+    trace_h_square = (
+        4 * trace_pi_square - 4 + dimension
+    )
+    second_elementary_symmetric_h = (
+        (2 - dimension) ** 2 - trace_h_square
+    ) // 2
+    return {
+        "off_zero_scale_square": scale_square,
+        "trace_pi": 1,
+        "trace_pi_square": trace_pi_square,
+        "trace_h": 2 - dimension,
+        "trace_h_square": trace_h_square,
+        "second_elementary_symmetric_h": (
+            second_elementary_symmetric_h
+        ),
+        "first_unforced_spectral_moment_degree": 3,
+        "identity_coefficient_of_h_square_is_forced": True,
+        "traceless_coefficients_of_h_square_are_forced": False,
+        "idempotency_equivalent_to_rank_one": True,
+        "rank_one_equivalent_to_vanishing_two_by_two_minors": True,
+    }
+
+
+def canonical_odd_constant_overlap_countermodel_record(
+    dimension: int,
+) -> dict[str, object]:
+    r"""Return an exact Hermitian nonprojector with all coarse moments.
+
+    For odd ``d``, put every nonzero normalized overlap equal to one.
+    With ``c^2=1/(d+1)``, the resulting operator is
+
+    ``Pi_* = ((1-c)/d) I + c P``,
+
+    where ``P`` is parity.  It is ordinarily Hermitian, reciprocal,
+    Zauner invariant, and has ``Tr(Pi_*)=Tr(Pi_*^2)=1``, but its
+    negative-parity eigenvalue is negative.  Every nonzero twisted
+    convolution residual equals ``(2-d)c-2c^2``, which is strictly
+    negative.
+    """
+
+    canonical_form(dimension)
+    if dimension % 2 == 0:
+        raise ValueError("the constant-overlap record requires odd d")
+    scale_square = Fraction(1, dimension + 1)
+    zero_residual = (
+        1
+        + (dimension * dimension - 1) * scale_square
+        - dimension
+    )
+    moments = canonical_reciprocal_trace_moment_record(dimension)
+    return {
+        "dimension": dimension,
+        "off_zero_normalized_overlap": 1,
+        "off_zero_scale_square": scale_square,
+        "operator_formula": "Pi_* = ((1-c)/d) I + c P",
+        "parity_multiplicities": (
+            (dimension + 1) // 2,
+            (dimension - 1) // 2,
+        ),
+        "positive_parity_eigenvalue": (
+            "lambda_+ = (1+(d-1)c)/d"
+        ),
+        "negative_parity_eigenvalue": (
+            "lambda_- = (1-sqrt(d+1))/d"
+        ),
+        "negative_parity_eigenvalue_is_negative": True,
+        "real": True,
+        "reciprocal": True,
+        "periodic": True,
+        "zauner_invariant": True,
+        "ordinarily_hermitian": True,
+        "trace_pi": moments["trace_pi"],
+        "trace_pi_square": moments["trace_pi_square"],
+        "trace_h": moments["trace_h"],
+        "trace_h_square": moments["trace_h_square"],
+        "zero_twisted_residual": zero_residual,
+        "nonzero_twisted_residual": "(2-d)c-2c^2",
+        "nonzero_twisted_residual_is_negative": True,
+        "is_idempotent": False,
+        "h_is_involution": False,
+    }
+
+
+def canonical_ghost_weyl_entry_terms(
+    dimension: int,
+    row: int,
+    column: int,
+) -> tuple[tuple[ResidueVector, int], ...]:
+    r"""Return the Weyl coefficients contributing to one ghost entry.
+
+    With ``D_(a,b)=tau^(a*b) X^a Z^b`` and Weyl coefficient ``mu``,
+
+    ``d*Pi[j,k] = sum_b mu_(j-k,b) tau^(b*(j+k))``.
+
+    The returned phase exponent is reduced modulo the extended
+    displacement modulus.  This partial Fourier form turns each
+    rank-one minor into an explicit bilinear exchange identity.
+    """
+
+    canonical_form(dimension)
+    reduced_row = row % dimension
+    reduced_column = column % dimension
+    displacement = (reduced_row - reduced_column) % dimension
+    modulus = extended_displacement_modulus(dimension)
+    return tuple(
+        (
+            (displacement, second),
+            (second * (reduced_row + reduced_column)) % modulus,
+        )
+        for second in range(dimension)
+    )
+
+
+def canonical_ghost_minor_record(
+    dimension: int,
+    rows: tuple[int, int],
+    columns: tuple[int, int],
+) -> dict[str, object]:
+    r"""Return one explicit two-by-two determinantal TCC target."""
+
+    canonical_form(dimension)
+    reduced_rows = tuple(row % dimension for row in rows)
+    reduced_columns = tuple(
+        column % dimension for column in columns
+    )
+    if reduced_rows[0] == reduced_rows[1]:
+        raise ValueError("minor rows must be distinct modulo d")
+    if reduced_columns[0] == reduced_columns[1]:
+        raise ValueError("minor columns must be distinct modulo d")
+    pair_count = dimension * (dimension - 1) // 2
+    return {
+        "rows": reduced_rows,
+        "columns": reduced_columns,
+        "positive_entries": (
+            canonical_ghost_weyl_entry_terms(
+                dimension, reduced_rows[0], reduced_columns[0]
+            ),
+            canonical_ghost_weyl_entry_terms(
+                dimension, reduced_rows[1], reduced_columns[1]
+            ),
+        ),
+        "negative_entries": (
+            canonical_ghost_weyl_entry_terms(
+                dimension, reduced_rows[0], reduced_columns[1]
+            ),
+            canonical_ghost_weyl_entry_terms(
+                dimension, reduced_rows[1], reduced_columns[0]
+            ),
+        ),
+        "terms_per_product": dimension * dimension,
+        "expanded_signed_term_count": 2 * dimension * dimension,
+        "all_two_by_two_minor_count": pair_count * pair_count,
+        "fixed_nonzero_pivot_equation_count": (
+            (dimension - 1) * (dimension - 1)
+        ),
+        "minor_vanishing_equivalent_to_rank_one_collectively": True,
+    }
+
+
 def canonical_zauner_block_multiplicities(
     dimension: int,
 ) -> tuple[int, int, int]:
@@ -2563,7 +2835,7 @@ def canonical_zak_zauner_block_record(
         multiplicity * multiplicity
         for multiplicity in multiplicities
     )
-    orbit_count = len(canonical_zauner_orbits(dimension))
+    orbit_count = canonical_tcc_orbit_bound(dimension)
     return {
         "multiplicities": multiplicities,
         "commutant_dimension": commutant_dimension,
@@ -2801,8 +3073,17 @@ def canonical_family_record(dimension: int) -> dict[str, object]:
         "zak_reflection_quadratic": (
             canonical_zak_reflection_quadratic_record(dimension)
         ),
+        "reciprocal_trace_moments": (
+            canonical_reciprocal_trace_moment_record(dimension)
+        ),
+        "ghost_rank_one_minor": canonical_ghost_minor_record(
+            dimension, (0, 1), (0, 1)
+        ),
         "zak_zauner_blocks": canonical_zak_zauner_block_record(
             dimension
+        ),
+        "cyclic_approximant": canonical_cyclic_approximant_record(
+            dimension, 1, 1
         ),
         "jacobi_word": canonical_jacobi_word(dimension),
         "jacobi_scale_exponents": canonical_jacobi_scale_exponents(),

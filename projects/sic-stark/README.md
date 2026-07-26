@@ -15,7 +15,7 @@ has been solved.
 
 The canonical arithmetic, Weyl--Heisenberg diagnostics, and finite twisted
 convolution are implemented exactly or to controlled floating-point
-precision. Research cycles 2--13 additionally:
+precision. Research cycles 2--15 additionally:
 
 - proves from the source's conjugation involution that rank-one shifts
   \(0\) and \(1\) occur together;
@@ -73,6 +73,18 @@ precision. Research cycles 2--13 additionally:
 - proves that Zauner block diagonalization gives no reduction beyond the
   existing orbit count, and isolates the off-grid
   \(1-\widetilde q^nq^m\) factor that a boundary-limit proof must retain.
+- aligns the new cyclic-quantum-dilogarithm approximants with the
+  canonical threefold level step and proves that their safe
+  subsequences retain the off-grid factor;
+- proves that reciprocity already forces the first two trace moments
+  and constructs an ordinary-Hermitian, Zauner-invariant exact
+  countermodel having those moments but failing idempotency;
+- matches a new quotient--Fourier quantum-dilogarithm identity to the
+  TCC sum and isolates its zero-characteristic and \(3\mid d\)
+  obstructions.
+- converts TCC into the rank-one determinantal equations for one
+  scalar-shifted RM Zak matrix and writes every \(2\times2\) minor as
+  an explicit sheared partial-Fourier exchange identity.
 
 See [`docs/sic-stark-sprint1.md`](docs/sic-stark-sprint1.md) and
 [`docs/sic-stark-cycle2.md`](docs/sic-stark-cycle2.md), followed by
@@ -86,7 +98,9 @@ See [`docs/sic-stark-sprint1.md`](docs/sic-stark-sprint1.md) and
 [`docs/sic-stark-cycle10.md`](docs/sic-stark-cycle10.md), and finally
 [`docs/sic-stark-cycle11.md`](docs/sic-stark-cycle11.md) and
 [`docs/sic-stark-cycle12.md`](docs/sic-stark-cycle12.md), followed by
-[`docs/sic-stark-cycle13.md`](docs/sic-stark-cycle13.md), for the claim ledger.
+[`docs/sic-stark-cycle13.md`](docs/sic-stark-cycle13.md) and
+[`docs/sic-stark-cycle14.md`](docs/sic-stark-cycle14.md), and finally
+[`docs/sic-stark-cycle15.md`](docs/sic-stark-cycle15.md), for the claim ledger.
 
 ## Verification
 
