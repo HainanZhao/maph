@@ -1,8 +1,10 @@
+from fractions import Fraction
 import unittest
 
 from src.sic_stark import (
     IDENTITY_2,
     canonical_characteristic_correction_index,
+    canonical_dimension_four_countermodel,
     canonical_family_record,
     canonical_form,
     canonical_form_stabilizer_residual,
@@ -16,12 +18,16 @@ from src.sic_stark import (
     canonical_stabilizer,
     canonical_tcc_equation_count,
     canonical_tcc_equation_representatives,
+    canonical_tcc_fourier_frequency,
     canonical_tcc_formal_signature,
+    canonical_tcc_orbit_model_phase_totals,
     canonical_tcc_orbit_bound,
+    canonical_primitive_correction_indices,
     canonical_twist_exponent,
     canonical_twist_kernel,
     canonical_twist_multiplier,
     canonical_zauner_action,
+    canonical_zauner_orbit_representative,
     canonical_zauner_orbit_sum,
     canonical_zauner_orbits,
     determinant,
@@ -31,6 +37,7 @@ from src.sic_stark import (
     matrix_mod,
     matrix_power,
     matrix_vector_multiply,
+    symplectic_pair,
     transform_form,
 )
 
@@ -245,6 +252,111 @@ class CanonicalSicStarkTests(unittest.TestCase):
                 self.assertEqual(exponent, 0)
                 self.assertEqual(numerator, denominator)
                 self.assertGreater(multiplicity, 0)
+
+    def test_tcc_twist_is_a_symplectic_fourier_frequency(self) -> None:
+        for dimension in range(4, 21):
+            for output in (
+                (0, 0),
+                (1, 0),
+                (0, 1),
+                (dimension - 1, dimension - 2),
+            ):
+                frequency = canonical_tcc_fourier_frequency(
+                    dimension, output
+                )
+                for first in range(dimension):
+                    for second in range(dimension):
+                        characteristic = (first, second)
+                        self.assertEqual(
+                            canonical_twist_exponent(
+                                dimension, output, characteristic
+                            ),
+                            symplectic_pair(
+                                frequency, characteristic
+                            )
+                            % dimension,
+                        )
+
+    def test_primitive_tcc_frequency_and_correction_shift(self) -> None:
+        for dimension in range(4, 101):
+            self.assertEqual(
+                canonical_tcc_fourier_frequency(
+                    dimension, (1, 0)
+                ),
+                (1, dimension - 1),
+            )
+            for characteristic in (
+                (0, 0),
+                (1, 0),
+                (0, 1),
+                (dimension - 1, dimension - 2),
+            ):
+                first, shifted = canonical_primitive_correction_indices(
+                    dimension, characteristic
+                )
+                self.assertEqual(shifted, first + dimension - 2)
+
+    def test_exact_dimension_four_countermodel(self) -> None:
+        dimension = 4
+        values = canonical_dimension_four_countermodel()
+        for first in range(dimension):
+            for second in range(dimension):
+                characteristic = (first, second)
+                negative = (-first, -second)
+                value = values[
+                    canonical_zauner_orbit_representative(
+                        dimension, characteristic
+                    )
+                ]
+                negative_value = values[
+                    canonical_zauner_orbit_representative(
+                        dimension, negative
+                    )
+                ]
+                self.assertEqual(value * negative_value, 1)
+
+        for second in range(dimension):
+            product = Fraction(1)
+            for first in range(dimension):
+                numerator = values[
+                    canonical_zauner_orbit_representative(
+                        dimension, (first, second)
+                    )
+                ]
+                denominator = values[
+                    canonical_zauner_orbit_representative(
+                        dimension, (first - 1, second)
+                    )
+                ]
+                product *= numerator / denominator
+            self.assertEqual(product, 1)
+
+        totals = canonical_tcc_orbit_model_phase_totals(
+            dimension, (1, 0), values
+        )
+        self.assertEqual(
+            totals,
+            {
+                0: Fraction(6),
+                1: Fraction(9, 2),
+                2: Fraction(9, 2),
+                3: Fraction(6),
+            },
+        )
+        self.assertEqual(totals[0] - totals[2], Fraction(3, 2))
+        self.assertEqual(totals[1] - totals[3], Fraction(-3, 2))
+
+    def test_orbit_model_rejects_incomplete_or_zero_values(self) -> None:
+        with self.assertRaises(ValueError):
+            canonical_tcc_orbit_model_phase_totals(
+                4, (1, 0), {(0, 0): 1}
+            )
+        values = canonical_dimension_four_countermodel()
+        values[(0, 0)] = Fraction(0)
+        with self.assertRaises(ValueError):
+            canonical_tcc_orbit_model_phase_totals(
+                4, (1, 0), values
+            )
 
     def test_uniform_jacobi_word_and_scales(self) -> None:
         self.assertEqual(

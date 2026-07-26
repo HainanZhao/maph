@@ -15,7 +15,7 @@ has been solved.
 
 The canonical arithmetic, Weyl--Heisenberg diagnostics, and finite twisted
 convolution are implemented exactly or to controlled floating-point
-precision. Research cycle 2 additionally:
+precision. Research cycles 2--4 additionally:
 
 - proves from the source's conjugation involution that rank-one shifts
   \(0\) and \(1\) occur together;
@@ -25,11 +25,18 @@ precision. Research cycle 2 additionally:
   invariant under Zauner action, giving an exact threefold reduction of the
   TCC equations;
 - identifies the zero-output equation as an automatic consequence of the
-  cocycle inverse law.
+  cocycle inverse law;
+- rewrites every remaining equation as a distinguished finite symplectic
+  Fourier coefficient;
+- expands the first primitive quotient into three \(S\)-kernel ratios and
+  explicit finite q-Pochhammer corrections;
+- gives an exact countermodel proving that covariance, reciprocal pairing,
+  and cyclic telescoping alone cannot imply TCC.
 
 See [`docs/sic-stark-sprint1.md`](docs/sic-stark-sprint1.md) and
 [`docs/sic-stark-cycle2.md`](docs/sic-stark-cycle2.md), followed by
-[`docs/sic-stark-cycle3.md`](docs/sic-stark-cycle3.md), for the claim ledger.
+[`docs/sic-stark-cycle3.md`](docs/sic-stark-cycle3.md) and
+[`docs/sic-stark-cycle4.md`](docs/sic-stark-cycle4.md), for the claim ledger.
 
 ## Verification
 

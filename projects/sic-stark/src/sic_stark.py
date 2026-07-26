@@ -2,6 +2,9 @@
 
 from __future__ import annotations
 
+from collections.abc import Mapping
+from fractions import Fraction
+
 
 Matrix2 = tuple[tuple[int, int], tuple[int, int]]
 BinaryQuadraticForm = tuple[int, int, int]
@@ -240,6 +243,29 @@ def canonical_twist_exponent(
     return symplectic_pair(left, transformed) % dimension
 
 
+def canonical_tcc_fourier_frequency(
+    dimension: int, output: ResidueVector
+) -> ResidueVector:
+    r"""Return the Fourier frequency ``(I+L_d)^(-1)*output`` modulo ``d``.
+
+    The canonical twist kernel is congruent to
+    ``Z=[[0,-1],[1,1]]``, whose inverse is
+    ``[[1,1],[-1,0]]``.  Since ``Z`` is symplectic,
+
+    ``<output,Z*q> = <Z^(-1)*output,q> (mod d)``.
+
+    Thus TCC asks for the symplectic Fourier coefficient of the
+    multiplicative difference ``u(q)/u(q-output)`` at this frequency.
+    """
+
+    canonical_form(dimension)
+    first, second = output
+    return (
+        (first + second) % dimension,
+        (-first) % dimension,
+    )
+
+
 def canonical_zauner_action(
     dimension: int, vector: ResidueVector
 ) -> ResidueVector:
@@ -382,6 +408,113 @@ def canonical_tcc_formal_signature(
             )
             signature[key] = signature.get(key, 0) + 1
     return signature
+
+
+def canonical_primitive_correction_indices(
+    dimension: int, characteristic: ResidueVector
+) -> tuple[int, int]:
+    r"""Return the finite-product indices for ``q`` and ``q-(1,0)``.
+
+    If ``n(q)=q_2-(d-2)q_1`` is the q-Pochhammer correction index, the
+    primitive adjacent quotient has indices
+    ``(n(q), n(q)+d-2)``.
+    """
+
+    first = canonical_characteristic_correction_index(
+        dimension, characteristic
+    )
+    shifted = canonical_characteristic_correction_index(
+        dimension, (characteristic[0] - 1, characteristic[1])
+    )
+    return (first, shifted)
+
+
+def canonical_tcc_orbit_model_phase_totals(
+    dimension: int,
+    output: ResidueVector,
+    orbit_values: Mapping[ResidueVector, int | Fraction],
+) -> dict[int, Fraction]:
+    r"""Evaluate an exact Zauner-invariant model, grouped by phase.
+
+    ``orbit_values`` assigns a nonzero rational value to the canonical
+    representative of every Zauner orbit.  The return value groups
+
+    ``u(q)/u(q-output)``
+
+    by the exponent of the ``d``-th root of unity in TCC.  It is useful
+    for exact countermodels: covariance constraints are built in, while
+    no claim is made that the supplied values are genuine modular-cocycle
+    special values.
+    """
+
+    canonical_form(dimension)
+    representatives = {
+        min(orbit) for orbit in canonical_zauner_orbits(dimension)
+    }
+    supplied = set(orbit_values)
+    if supplied != representatives:
+        missing = sorted(representatives - supplied)
+        extra = sorted(supplied - representatives)
+        raise ValueError(
+            f"orbit values have missing representatives {missing} "
+            f"and extra representatives {extra}"
+        )
+    values = {
+        representative: Fraction(value)
+        for representative, value in orbit_values.items()
+    }
+    if any(value == 0 for value in values.values()):
+        raise ValueError("orbit values must be nonzero")
+
+    reduced_output = (
+        output[0] % dimension,
+        output[1] % dimension,
+    )
+    totals = {
+        exponent: Fraction(0) for exponent in range(dimension)
+    }
+    for first in range(dimension):
+        for second in range(dimension):
+            characteristic = (first, second)
+            difference = (
+                (first - reduced_output[0]) % dimension,
+                (second - reduced_output[1]) % dimension,
+            )
+            numerator = values[
+                canonical_zauner_orbit_representative(
+                    dimension, characteristic
+                )
+            ]
+            denominator = values[
+                canonical_zauner_orbit_representative(
+                    dimension, difference
+                )
+            ]
+            exponent = canonical_twist_exponent(
+                dimension, reduced_output, characteristic
+            )
+            totals[exponent] += numerator / denominator
+    return totals
+
+
+def canonical_dimension_four_countermodel(
+) -> dict[ResidueVector, Fraction]:
+    r"""Return an exact reciprocal, Zauner-invariant non-TCC witness.
+
+    The values are indexed by the six Zauner-orbit representatives in
+    dimension four.  They obey ``u(-q)=u(q)^(-1)``.  Nevertheless, their
+    primitive TCC residual is ``3/2 - (3/2)i``, proving that covariance,
+    reciprocal pairing, and cyclic telescoping do not force TCC.
+    """
+
+    return {
+        (0, 0): Fraction(1),
+        (0, 1): Fraction(2),
+        (0, 2): Fraction(1),
+        (0, 3): Fraction(1, 2),
+        (1, 1): Fraction(1),
+        (2, 3): Fraction(1),
+    }
 
 
 def canonical_jacobi_word(dimension: int) -> tuple[int, int, int]:
