@@ -1,0 +1,396 @@
+\documentclass[aps,pra,onecolumn,amsmath,amssymb,superscriptaddress,longbibliography]{revtex4-2}
+
+\usepackage{booktabs}
+\usepackage{bm}
+\usepackage{hyperref}
+
+\newcommand{\ii}{\mathrm{i}}
+\newcommand{\ee}{\mathrm{e}}
+\newcommand{\per}{\operatorname{per}}
+\newcommand{\evec}{\bm e}
+
+\begin{document}
+
+\title{Supplemental Material for\\
+``Directional response jets of suppressed multiphoton events\\
+in a four-mode Fourier interferometer''}
+
+\author{Hainan Zhao}
+\email{hainzhao@gmail.com}
+\affiliation{Independent Researcher}
+
+\date{\today}
+\maketitle
+
+\section{Phase histograms and generating coefficients}
+\label{supp:hist}
+
+Let $q^4=1$ and
+\begin{equation}
+L_j(q)=\sum_{k=0}^{3}q^{jk}x_k .
+\end{equation}
+For input $\bm r$ and output $\bm s$, define
+\begin{equation}
+\Phi_q(\bm r,\bm s)=
+\left(\prod_{k=0}^{3}r_k!\right)
+[\bm x^{\bm r}]\prod_{j=0}^{3}L_j(q)^{s_j}.
+\label{supp:eq:phi}
+\end{equation}
+If $h_\ell(\bm r,\bm s)$ counts labelled permanent paths with phase
+$\ii^\ell$, then
+\begin{equation}
+\Phi_q(\bm r,\bm s)=\sum_{\ell=0}^{3}h_\ell(\bm r,\bm s)q^\ell .
+\end{equation}
+The four evaluations at $1,\ii,-1,-\ii$ determine the histogram by Fourier
+inversion.
+
+\section{Full proof of sectorwise reciprocity}
+\label{supp:reciprocity}
+
+Fix nonnegative $d,N$, let $0\leq a,s\leq d$, and let
+$0\leq p,k\leq N$.  We compare
+\begin{align}
+\bm r&=(a,k,d-a,N-k),&
+\bm s&=(s,p,d-s,N-p),\nonumber\\
+\widetilde{\bm r}&=(a,p,d-a,N-p),&
+\widetilde{\bm s}&=(s,k,d-s,N-k).
+\label{supp:eq:pairs}
+\end{align}
+
+At $q=\ii$, set
+\begin{equation}
+E=x_0+x_2,\quad T=x_0-x_2,\quad
+S=x_1+x_3,\quad D=x_1-x_3.
+\end{equation}
+The output generating polynomial factors as
+\begin{align}
+A(E,S)&=(E+S)^s(E-S)^{d-s}
+=\sum_{m=0}^{d}\alpha_m E^{d-m}S^m,\nonumber\\
+B_p(T,D)&=(T+\ii D)^p(T-\ii D)^{N-p}.
+\end{align}
+Use the unnormalized binary Krawtchouk coefficients
+\begin{equation}
+K_m(p;N)=
+\sum_t(-1)^t\binom pt\binom{N-p}{m-t}.
+\end{equation}
+Direct binomial expansion gives
+\begin{align}
+[T^m]B_p
+&=(-1)^{N-p-m}\ii^{N-m}K_m(p;N)D^{N-m},
+\label{supp:eq:three-coeffs-a}\\
+[x_0^ax_2^{d-a}]E^{d-m}T^m
+&=(-1)^mK_a(m;d),
+\label{supp:eq:three-coeffs-b}\\
+[x_1^kx_3^{N-k}]S^mD^{N-m}
+&=(-1)^{N-m-k}K_k(m;N).
+\label{supp:eq:three-coeffs-c}
+\end{align}
+Let $C^{(a)}_{p,k}$ denote the coefficient before the input-factorial
+multiplier.  Equations
+\eqref{supp:eq:three-coeffs-a}--\eqref{supp:eq:three-coeffs-c} yield
+\begin{multline}
+C^{(a)}_{p,k}
+=\sum_m\alpha_m
+(-1)^{N-p-m}\ii^{N-m}
+(-1)^mK_a(m;d)\\
+\times(-1)^{N-m-k}
+K_m(p;N)K_k(m;N).
+\label{supp:eq:coefficient-sum}
+\end{multline}
+All factors other than the final two Krawtchouk coefficients are unchanged
+under $p\leftrightarrow k$.  The standard duality
+\begin{equation}
+\binom NpK_m(p;N)=\binom NmK_p(m;N)
+\label{supp:eq:duality}
+\end{equation}
+therefore gives, term by term,
+\begin{equation}
+C^{(a)}_{p,k}
+=\frac{\binom Nk}{\binom Np}C^{(a)}_{k,p}.
+\label{supp:eq:ratio}
+\end{equation}
+The input-factorial multipliers in Eq.~\eqref{supp:eq:phi} are
+\begin{equation}
+a!(d-a)!k!(N-k)!
+=\frac{a!(d-a)!N!}{\binom Nk}
+\end{equation}
+and the same expression with $p$ replacing $k$.  They cancel the ratio in
+Eq.~\eqref{supp:eq:ratio}.
+
+At $q=-1$, the output polynomial is
+\begin{equation}
+(E+S)^d(E-S)^N,
+\end{equation}
+independent of $p$.  The requested monomials have total degree $d$ in the
+even-indexed variables $(x_0,x_2)$ and total degree $N$ in the odd-indexed
+variables $(x_1,x_3)$, so only the $E^dS^N$ term contributes.  Its two
+odd-mode coefficients have ratio $\binom Nk/\binom Np$, canceled by the
+same factorials.  At $q=1$, both labelled values count all $n!$ permanent
+paths.  The $q=-\ii$ equality is the complex conjugate of the $q=\ii$
+equality.  Fourier inversion proves equality of all four phase bins.
+
+Ordinary input--output exchange, which holds because the canonical $F_4$ is
+symmetric, supplies the other two equalities in the fourfold statement.
+The product of input and output factorials is the same for the reciprocal
+pairs, so normalized Fock amplitudes are also equal.
+
+\subsection{Polynomial extension}
+
+For
+\begin{equation}
+H(z)=
+\begin{pmatrix}
+1&1&1&1\\
+1&z&-1&-z\\
+1&-1&1&-1\\
+1&-z&-1&z
+\end{pmatrix},
+\end{equation}
+the four generating forms are $E+S,T+zD,E-S,T-zD$.  Replacing $\ii$ by
+$z$ in Eq.~\eqref{supp:eq:three-coeffs-a} contributes the common factor
+$z^{N-m}$ and leaves Eq.~\eqref{supp:eq:ratio} unchanged.  Reciprocal
+permanents are thus identical polynomials in $z$.  The passive-unitary
+interpretation is restricted to $|z|=1$.
+
+\subsection{Boundary of the result}
+
+The histogram is defined in the canonical dephased gauge; arbitrary row and
+column phases need not preserve the four bins.  Nor does parity alone imply
+an analogous theorem for $F_8$.  For example, the $F_8$ phase histograms for
+\begin{align}
+(0,0,1,0,0,1,0,0)&\longrightarrow(1,0,0,1,0,0,0,0),\nonumber\\
+(0,0,1,1,0,0,0,0)&\longrightarrow(1,0,0,0,0,1,0,0)
+\end{align}
+are unequal, although the odd-mode occupation subvectors are exchanged in
+the naive sense.  The two binary sectors exposed by the order-four
+factorization, rather than parity alone, are essential.
+
+\section{Directional derivatives and Krylov moments}
+\label{supp:moments}
+
+For the unnormalized root matrix $2F_4$, write
+\begin{equation}
+Z_{\bm r,\bm t}=\per(2F_4)[\bm t,\bm r],
+\qquad
+D_{\bm r,\bm s}=2^n
+\sqrt{\prod_jr_j!\prod_ks_k!}.
+\end{equation}
+Second quantization maps $X_{pq}$ and $Y_{pq}$ to
+\begin{align}
+\widehat X_{pq}&=b_p^\dagger b_q+b_q^\dagger b_p,\nonumber\\
+\widehat Y_{pq}&=-\ii b_p^\dagger b_q+\ii b_q^\dagger b_p.
+\end{align}
+For a dark target, direct use of the ladder factors gives
+\begin{align}
+\mathcal A_X'(0)
+&=\frac{\ii}{D_{\bm r,\bm s}}
+\left(s_qZ_{\bm r,\bm s+\evec_p-\evec_q}
++s_pZ_{\bm r,\bm s-\evec_p+\evec_q}\right),
+\label{supp:eq:x-tangent}\\
+\mathcal A_Y'(0)
+&=\frac{1}{D_{\bm r,\bm s}}
+\left(s_pZ_{\bm r,\bm s-\evec_p+\evec_q}
+-s_qZ_{\bm r,\bm s+\evec_p-\evec_q}\right).
+\label{supp:eq:y-tangent}
+\end{align}
+The square roots cancel against the normalization of the neighboring Fock
+state.  At higher order, move one particle at a time in the output
+occupation graph.  A move out of a mode with current occupation $m$
+contributes $m$; for $Y$, it also contributes $+\ii$ or $-\ii$ according
+to the orientation.  Summing the resulting Gaussian-integer weights times
+$Z_{\bm r,\bm t}$ gives the common-denominator numerator of
+$\langle\bm s|\widehat G^jF_4|\bm r\rangle$.
+
+The two-mode sector reached from a target with $M=s_p+s_q$ has dimension
+$M+1$.  If the first $M+1$ Krylov moments vanish, Cayley--Hamilton implies
+that the amplitude vanishes for the entire one-parameter rotation.
+
+\section{Complete event-level response tables}
+
+An entry $c\epsilon^{2j}$ means
+$P(\epsilon)=c\epsilon^{2j}+O(\epsilon^{2j+1})$.
+
+\subsection{Cyclic four-photon event}
+
+\begin{equation}
+\bm r=(1,1,1,1),\qquad \bm s=(3,1,0,0).
+\end{equation}
+\begin{center}
+\begin{tabular}{ccc}
+\toprule
+pair&$X_{pq}$&$Y_{pq}$\\
+\midrule
+01&$3\epsilon^2/8$&$3\epsilon^2/8$\\
+02&exact&exact\\
+03&$3\epsilon^2/8$&$3\epsilon^2/8$\\
+12&exact&exact\\
+13&exact&exact\\
+23&exact&exact\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Reciprocity-closed four-photon event}
+
+\begin{equation}
+\bm r=\bm s=(0,1,2,1).
+\end{equation}
+\begin{center}
+\begin{tabular}{ccc}
+\toprule
+pair&$X_{pq}$&$Y_{pq}$\\
+\midrule
+01&$\epsilon^2/64$&$\epsilon^2/64$\\
+02&$\epsilon^2/4$&$\epsilon^2/4$\\
+03&$\epsilon^2/64$&$\epsilon^2/64$\\
+12&$\epsilon^2/64$&$25\epsilon^2/64$\\
+13&$\epsilon^2/4$&exact\\
+23&$\epsilon^2/64$&$25\epsilon^2/64$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+For pair $13$, direct evaluation at arbitrary angle gives the unnormalized
+coefficient $4\ii\sin(2\epsilon)$.  Fock normalization therefore yields
+\begin{equation}
+\mathcal A_{X_{13}}(\epsilon)=
+\frac{\ii\sin(2\epsilon)}{4},\qquad
+\mathcal A_{Y_{13}}(\epsilon)=0.
+\end{equation}
+
+\subsection{Eleven-photon affine-family root}
+
+\begin{equation}
+\bm r=(0,1,3,7),\qquad \bm s=(1,3,3,4).
+\end{equation}
+\begin{center}
+\begin{tabular}{ccc}
+\toprule
+pair&$X_{pq}$&$Y_{pq}$\\
+\midrule
+01&$595\epsilon^2/8192$&$455\epsilon^2/16384$\\
+02&$315\epsilon^2/16384$&$315\epsilon^2/8192$\\
+03&$875\epsilon^2/16384$&$315\epsilon^2/16384$\\
+12&$315\epsilon^2/16384$&$315\epsilon^4/8192$\\
+13&$315\epsilon^2/16384$&$315\epsilon^2/16384$\\
+23&$35\epsilon^2/4096$&$35\epsilon^2/4096$\\
+\bottomrule
+\end{tabular}
+\end{center}
+For $Y_{12}$, the two first-neighbor permanents are equal:
+\begin{equation}
+Z_{\bm r,(1,2,4,4)}
+=Z_{\bm r,(1,4,2,4)}=241920.
+\end{equation}
+Since $s_1=s_2=3$, Eq.~\eqref{supp:eq:y-tangent} vanishes.  The exact
+second-order common-denominator moment is
+\begin{equation}
+2903040(1-\ii).
+\end{equation}
+Including the Taylor factor $1/2!$ and Fock normalization gives
+$315\epsilon^4/8192$.
+
+All three traceless diagonal $SU(4)$ directions preserve every tabled zero:
+an appended diagonal unitary multiplies the target amplitude by
+$\exp(\ii\sum_js_j\theta_j)$.
+
+\section{Proof of the all-odd exact $Y_{13}$ axis}
+\label{supp:odd-proof}
+
+Let $\bm r=\bm s=(0,a,2a,a)$, with $a$ odd.  Put
+$x=x_1$, $y=x_2$, $z=x_3$, $u=x+z$, and $v=x-z$.
+For $c=\cos\epsilon$, $d=\sin\epsilon$, define
+$\alpha=c+d$ and $\beta=c-d$.  The two mixed Fourier row forms obey
+\begin{equation}
+L'_1L'_3=
+\alpha\beta(y^2+v^2)
++\ii(\alpha^2-\beta^2)yv,
+\qquad L_2=y-u.
+\end{equation}
+The desired coefficient is proportional to
+\begin{equation}
+[x^ay^{2a}z^a]
+\left(A(y^2+v^2)+Byv\right)^a(y-u)^{2a},
+\label{supp:eq:odd-coefficient}
+\end{equation}
+where $A=\alpha\beta$ and $B=\ii(\alpha^2-\beta^2)$.
+
+The functional $[x^az^a]$ is invariant under $x\leftrightarrow z$, which
+sends $v\mapsto-v$.  It kills every term with an odd number of $Byv$
+factors.  Choose $2h$ such factors.  If $k-h$ of the remaining factors
+contribute $v^2$, the central coefficient is
+\begin{equation}
+K_{a,k}=[x^az^a](x-z)^{2k}(x+z)^{2a-2k},
+\end{equation}
+with weight proportional to
+\begin{equation}
+\binom{a-2h}{k-h}\binom{2a}{2k}.
+\end{equation}
+The weight is invariant under $k\leftrightarrow a-k$.  Substituting
+$z\mapsto-z$ gives
+\begin{equation}
+K_{a,a-k}=(-1)^aK_{a,k}.
+\end{equation}
+For odd $a$, each $k$ contribution cancels its $a-k$ partner.  Hence
+Eq.~\eqref{supp:eq:odd-coefficient} vanishes for every $\epsilon$.
+
+\section{Nuisance-floor and finite-shot calculation}
+\label{supp:nuisance}
+
+The illustrative model in the main text is
+\begin{equation}
+P_{\rm obs}=\mathcal V P_{\rm ind}
++(1-\mathcal V)P_{\rm dist}+B.
+\end{equation}
+For mutually distinguishable labelled photons, $P_{\rm dist}$ is the
+coefficient of $\bm y^{\bm s}$ in
+\begin{equation}
+\prod_{k=0}^{3}
+\left(\sum_{j=0}^{3}|U_{jk}|^2y_j\right)^{r_k}.
+\label{supp:eq:dist}
+\end{equation}
+At $\epsilon=0.1$ for the four-photon $13$ comparison, the exact program
+gives
+\begin{align}
+P_{\rm ind}^{X}&=0.00246684393741,&
+P_{\rm ind}^{Y}&=0,\nonumber\\
+P_{\rm dist}^{X}&=0.046875,&
+P_{\rm dist}^{Y}&=0.0474917109844.
+\end{align}
+Substitution of $\mathcal V=0.99$ and $B=0$ gives the values in the main
+text.  For $M$ independent accepted trials at each setting, the difference
+of empirical proportions has approximate variance
+\begin{equation}
+\frac{P_X(1-P_X)+P_Y(1-P_Y)}{M}.
+\end{equation}
+Equating the mean contrast to $Z$ standard deviations gives the reported
+normal-approximation estimate.  Exact binomial likelihoods should replace
+this estimate when counts are very small.
+
+Uniform or mode-dependent attenuation placed strictly after the complete
+interferometer sends a target amplitude to
+\begin{equation}
+\mathcal A_{\bm r,\bm s}\prod_j\eta_j^{s_j/2}
+\end{equation}
+and cannot lift a zero when the full photon number is postselected.
+Loss interleaved with the interferometer is different: it can change the
+relative weights of interfering paths.  The present model does not claim to
+identify that loss, general partial distinguishability, source impurity, or
+detector backgrounds from a single observed floor.
+
+\section{Reproducibility}
+
+The repository uses only the Python standard library.  The relevant commands
+are
+\begin{verbatim}
+python3 -m unittest discover -s tests -v
+python3 scripts/analyze_reciprocity_census.py
+python3 scripts/analyze_unitary_leakage.py
+python3 scripts/analyze_finite_shot_protocol.py
+\end{verbatim}
+The phase histograms and leakage moments are exact integer or rational
+calculations.  Floating-point arithmetic is used only for the illustrative
+finite-angle nuisance model; the script separately certifies the exact
+$\sin^2(2\epsilon)/16$ law to numerical tolerance at multiple angles.
+
+\end{document}
