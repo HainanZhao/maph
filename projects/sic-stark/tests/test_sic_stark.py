@@ -3,10 +3,21 @@ import unittest
 
 from src.sic_stark import (
     IDENTITY_2,
+    biquadratic_2_3_galois_action,
+    biquadratic_2_3_multiply,
     canonical_beta_is_rational,
     canonical_characteristic_correction_index,
+    canonical_dimension_four_algebraic_unit_packet_record,
     canonical_dimension_four_countermodel,
+    canonical_dimension_four_character_resolvents,
+    canonical_dimension_four_laurent_action,
     canonical_dimension_four_localization_record,
+    canonical_dimension_four_packet_directions,
+    canonical_dimension_four_packet_evaluation,
+    canonical_dimension_four_packet_permutations,
+    canonical_dimension_four_packet_relation_residuals,
+    canonical_dimension_four_relation_nullities,
+    canonical_dimension_four_residual_laurent_packet,
     canonical_dimension_four_trace_obstruction_record,
     canonical_family_record,
     canonical_form,
@@ -228,6 +239,136 @@ class CanonicalSicStarkTests(unittest.TestCase):
         self.assertEqual(
             witness["original_phase"],
             witness["simultaneous_phase"],
+        )
+
+    def test_dimension_four_residual_packet_is_the_regular_action(
+        self,
+    ) -> None:
+        packet = canonical_dimension_four_residual_laurent_packet()
+        self.assertEqual(
+            canonical_dimension_four_packet_directions(),
+            ((0, 3), (0, 1), (1, 1), (2, 3)),
+        )
+        permutations = canonical_dimension_four_packet_permutations()
+        self.assertEqual(len(set(permutations)), 4)
+        for group_index, permutation in enumerate(permutations):
+            self.assertEqual(set(permutation), set(range(4)))
+            for packet_index, polynomial in enumerate(packet):
+                self.assertEqual(
+                    canonical_dimension_four_laurent_action(
+                        polynomial, group_index
+                    ),
+                    packet[permutation[packet_index]],
+                )
+
+    def test_dimension_four_character_resolvents_are_eigenvectors(
+        self,
+    ) -> None:
+        resolvents = canonical_dimension_four_character_resolvents()
+        character_table = {
+            "T": (1, 1, 1, 1),
+            "U": (1, -1, 1, -1),
+            "V": (1, 1, -1, -1),
+            "W": (1, -1, -1, 1),
+        }
+        for name, signs in character_table.items():
+            polynomial = resolvents[name]
+            self.assertTrue(polynomial)
+            for group_index, sign in enumerate(signs):
+                self.assertEqual(
+                    canonical_dimension_four_laurent_action(
+                        polynomial, group_index
+                    ),
+                    {
+                        exponent: sign * coefficient
+                        for exponent, coefficient in polynomial.items()
+                    },
+                )
+
+    def test_dimension_four_first_packet_relations_do_not_force_zero(
+        self,
+    ) -> None:
+        self.assertEqual(
+            canonical_dimension_four_relation_nullities(5),
+            (0, 0, 0, 0, 1),
+        )
+        self.assertEqual(
+            canonical_dimension_four_packet_relation_residuals(),
+            {"degree_five": {}, "degree_six": {}},
+        )
+        packet = canonical_dimension_four_packet_evaluation(2, 1)
+        self.assertEqual(
+            packet,
+            (
+                Fraction(3, 2),
+                Fraction(3, 4),
+                Fraction(3),
+                Fraction(-3),
+            ),
+        )
+        character_values = (
+            packet[0] + packet[1] + packet[2] + packet[3],
+            packet[0] - packet[1] + packet[2] - packet[3],
+            packet[0] + packet[1] - packet[2] - packet[3],
+            packet[0] - packet[1] - packet[2] + packet[3],
+        )
+        self.assertEqual(
+            character_values,
+            (
+                Fraction(9, 4),
+                Fraction(27, 4),
+                Fraction(9, 4),
+                Fraction(-21, 4),
+            ),
+        )
+        self.assertTrue(all(character_values))
+
+    def test_dimension_four_algebraic_units_give_nonzero_galois_packet(
+        self,
+    ) -> None:
+        record = (
+            canonical_dimension_four_algebraic_unit_packet_record()
+        )
+        one = (
+            Fraction(1),
+            Fraction(0),
+            Fraction(0),
+            Fraction(0),
+        )
+        self.assertEqual(record["unit_products"], (one, one))
+        units = record["units"]
+        permutations = canonical_dimension_four_packet_permutations()
+        for group_index, permutation in enumerate(permutations):
+            for unit_index, unit in enumerate(units):
+                self.assertEqual(
+                    biquadratic_2_3_galois_action(
+                        unit, group_index
+                    ),
+                    units[permutation[unit_index]],
+                )
+
+        packet = record["packet"]
+        for group_index, permutation in enumerate(permutations):
+            for packet_index, value in enumerate(packet):
+                self.assertEqual(
+                    biquadratic_2_3_galois_action(
+                        value, group_index
+                    ),
+                    packet[permutation[packet_index]],
+                )
+        self.assertEqual(
+            record["character_values"],
+            (
+                (Fraction(3200), Fraction(0), Fraction(0), Fraction(0)),
+                (Fraction(0), Fraction(0), Fraction(0), Fraction(1440)),
+                (Fraction(0), Fraction(0), Fraction(1920), Fraction(0)),
+                (Fraction(0), Fraction(2144), Fraction(0), Fraction(0)),
+            ),
+        )
+        self.assertTrue(record["all_packet_components_nonzero"])
+        self.assertTrue(record["all_character_values_nonzero"])
+        self.assertEqual(
+            biquadratic_2_3_multiply(units[0], units[1]), one
         )
 
     def test_characteristic_embedding_into_general_modular_gamma(
@@ -731,6 +872,16 @@ class CanonicalSicStarkTests(unittest.TestCase):
             canonical_local_unit_cosets(3)
         with self.assertRaises(ValueError):
             canonical_primitive_direction_unit_stabilizers(3)
+        with self.assertRaises(ValueError):
+            canonical_dimension_four_laurent_action({}, 4)
+        with self.assertRaises(ValueError):
+            canonical_dimension_four_relation_nullities(0)
+        with self.assertRaises(ValueError):
+            canonical_dimension_four_packet_evaluation(0, 1)
+        with self.assertRaises(ValueError):
+            biquadratic_2_3_galois_action(
+                (Fraction(0),) * 4, -1
+            )
 
 
 if __name__ == "__main__":
