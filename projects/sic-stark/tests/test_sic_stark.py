@@ -6,10 +6,14 @@ from src.sic_stark import (
     canonical_beta_is_rational,
     canonical_characteristic_correction_index,
     canonical_dimension_four_countermodel,
+    canonical_dimension_four_localization_record,
     canonical_family_record,
     canonical_form,
     canonical_form_stabilizer_residual,
+    canonical_general_modular_characteristic,
     canonical_general_modular_modulus,
+    canonical_general_modular_node_strip_margins,
+    canonical_general_modular_parameters,
     canonical_jacobi_scale_exponents,
     canonical_jacobi_word,
     canonical_kernel_identity,
@@ -108,6 +112,125 @@ class CanonicalSicStarkTests(unittest.TestCase):
                 abs(canonical_level_stabilizer(dimension)[1][0]),
             )
             self.assertNotEqual(modulus, dimension)
+
+    def test_general_modular_parameter_dictionary(self) -> None:
+        self.assertEqual(
+            canonical_general_modular_parameters(4),
+            (8, -21, 3, 8),
+        )
+        for dimension in range(4, 501):
+            k, p, r, s = canonical_general_modular_parameters(
+                dimension
+            )
+            matrix = canonical_level_stabilizer(dimension)
+            self.assertEqual(matrix, ((-p, -s), (k, -r)))
+            self.assertEqual(p * r + k * s, 1)
+            self.assertEqual(k, dimension * (dimension - 2))
+            self.assertEqual(r, dimension - 1)
+            self.assertEqual(s, k)
+
+    def test_characteristic_embedding_into_general_modular_gamma(
+        self,
+    ) -> None:
+        for dimension in range(4, 51):
+            modulus = canonical_general_modular_modulus(dimension)
+            samples = set()
+            for first in range(dimension):
+                for second in range(dimension):
+                    continuous, discrete = (
+                        canonical_general_modular_characteristic(
+                            dimension, (first, second)
+                        )
+                    )
+                    self.assertEqual(
+                        continuous,
+                        (
+                            Fraction(1 - second),
+                            Fraction((dimension - 2) * second),
+                        ),
+                    )
+                    self.assertEqual(
+                        discrete,
+                        (
+                            second
+                            - (dimension - 2) * first
+                            - 1
+                        )
+                        % modulus,
+                    )
+                    self.assertEqual(
+                        discrete % (dimension - 2),
+                        (second - 1) % (dimension - 2),
+                    )
+                    samples.add((continuous, discrete))
+            self.assertEqual(len(samples), dimension * dimension)
+
+    def test_general_modular_nodes_are_inside_the_pole_free_strip(
+        self,
+    ) -> None:
+        for dimension in range(4, 501):
+            for second in range(dimension):
+                lower, upper = (
+                    canonical_general_modular_node_strip_margins(
+                        dimension, (0, second)
+                    )
+                )
+                self.assertEqual(lower, (1, second))
+                self.assertEqual(upper, (1, dimension - second))
+                self.assertGreaterEqual(lower[1], 0)
+                self.assertGreater(upper[1], 0)
+
+    def test_dimension_four_localization_phase_match(self) -> None:
+        record = canonical_dimension_four_localization_record()
+        self.assertEqual(record["parameters"], (8, -21, 3, 8))
+        self.assertEqual(
+            record["beta_integral_parameters"],
+            {"N": 3, "g": "Q", "alpha": "-3D"},
+        )
+        nodes = record["nodes"]
+        self.assertEqual(len(nodes), 16)
+        self.assertEqual(
+            {
+                (
+                    node["continuous_coordinates"],
+                    node["discrete"],
+                )
+                for node in nodes
+            },
+            {
+                (
+                    (
+                        Fraction(1 - second),
+                        Fraction(2 * second),
+                    ),
+                    (second - 2 * first - 1) % 8,
+                )
+                for first in range(4)
+                for second in range(4)
+            },
+        )
+        for node in nodes:
+            first, second = node["characteristic"]
+            discrete = node["discrete"]
+            self.assertEqual(
+                node["selection_parity"],
+                discrete % 2,
+            )
+            self.assertEqual(
+                node["tcc_phase"],
+                (-2 * (first + second)) % 8,
+            )
+            self.assertEqual(
+                node["normalized_tcc_phase"],
+                (
+                    node["tcc_phase"]
+                    + node["normalization_ratio"]
+                )
+                % 8,
+            )
+            self.assertEqual(node["global_phase_difference"], 3)
+            self.assertGreaterEqual(node["lower_strip_margin"][1], 0)
+            self.assertGreater(node["upper_strip_margin"][1], 0)
 
     def test_primitive_sigma_shifts_miss_the_period_lattice(self) -> None:
         for dimension in range(4, 501):
@@ -491,6 +614,12 @@ class CanonicalSicStarkTests(unittest.TestCase):
             canonical_beta_is_rational(3)
         with self.assertRaises(ValueError):
             canonical_general_modular_modulus(3)
+        with self.assertRaises(ValueError):
+            canonical_general_modular_parameters(3)
+        with self.assertRaises(ValueError):
+            canonical_general_modular_characteristic(3, (0, 0))
+        with self.assertRaises(ValueError):
+            canonical_general_modular_node_strip_margins(3, (0, 0))
         with self.assertRaises(ValueError):
             canonical_primitive_sigma_shift_coordinates(3)
 

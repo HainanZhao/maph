@@ -4,6 +4,14 @@ Date: 2026-07-26
 
 ## Outcome
 
+> **Cycle-6 correction.** The modulus \(d(d-2)\) does admit a natural
+> sparse embedding of the \(d^2\) TCC characteristics, and the finite
+> q-Pochhammer index becomes its discrete coordinate. Thus unequal
+> moduli are not a standalone obstruction. The direct localization still
+> fails: cycle 6 proves that every embedded TCC node lies in the
+> two-gamma integrand's pole-free strip. See
+> [`sic-stark-cycle6.md`](sic-stark-cycle6.md).
+
 Cycle 4 proposed testing whether a published Fourier or pentagon identity
 for the noncompact quantum dilogarithm descends to the primitive TCC
 coefficient. The answer is:
@@ -25,7 +33,9 @@ reasons.
    irrational for every \(d\geq4\).
 3. The general modular quantum dilogarithm attached to the actual matrix
    \(A_d=L_d^3\) has discrete modulus \(d(d-2)\), not \(d\), and its
-   pentagon/beta identities retain a continuous integral.
+   pentagon/beta identities retain a continuous integral. Cycle 6 shows
+   that the modulus mismatch can be handled by a sparse embedding; the
+   continuous localization remains the obstruction.
 
 The finite q-Pochhammer factors found in cycle 4 are essential to the
 definition and periodicity of the Shintani--Faddeev values, but do not

@@ -161,6 +161,151 @@ def canonical_general_modular_modulus(dimension: int) -> int:
     return modulus
 
 
+def canonical_general_modular_parameters(
+    dimension: int,
+) -> tuple[int, int, int, int]:
+    r"""Return ``(k,p,r,s)`` for the general modular gamma of ``A_d``.
+
+    Sarkissian--Spiridonov write
+
+    ``M=[[-p,-s],[k,-r]]`` with ``p*r+k*s=1`` and ``k>0``.
+
+    This function translates the canonical matrix ``A_d=L_d^3`` into
+    that convention.
+    """
+
+    matrix = canonical_level_stabilizer(dimension)
+    parameters = (
+        matrix[1][0],
+        -matrix[0][0],
+        -matrix[1][1],
+        -matrix[0][1],
+    )
+    k, p, r, s = parameters
+    assert k > 0
+    assert p * r + k * s == 1
+    return parameters
+
+
+def canonical_general_modular_characteristic(
+    dimension: int, characteristic: ResidueVector
+) -> tuple[QuadraticCoordinate, int]:
+    r"""Map a TCC characteristic to an unnormalized modular gamma sample.
+
+    Let ``D_d=(d-2)beta_d-1`` and represent a quadratic number by its
+    coordinates in the basis ``(1,beta_d)``.  On the canonical residue
+    grid, the exact q-product dictionary is
+
+    ``u(q)=gamma_A(1+q_2*D_d, q_2-(d-2)q_1-1)``.
+
+    The discrete coordinate is reduced modulo ``k=d(d-2)``.  In
+    particular, the continuous coordinate is independent of ``q_1``.
+    """
+
+    modulus = canonical_general_modular_modulus(dimension)
+    first = characteristic[0] % dimension
+    second = characteristic[1] % dimension
+    continuous = (
+        Fraction(1 - second),
+        Fraction((dimension - 2) * second),
+    )
+    discrete = (
+        second - (dimension - 2) * first - 1
+    ) % modulus
+    return (continuous, discrete)
+
+
+def canonical_general_modular_node_strip_margins(
+    dimension: int, characteristic: ResidueVector
+) -> tuple[tuple[int, int], tuple[int, int]]:
+    r"""Certify the node's distances from the two modular-gamma pole cones.
+
+    A pair ``(a,n)`` denotes the positive quantity ``a+n*D_d``, where
+    ``D_d=(d-2)beta_d-1>0``.  For a node with reduced second coordinate
+    ``q_2``, the distances from ``0`` and
+    ``Q=omega_1+omega_2=d*D_d+2`` are respectively
+
+    ``mu=1+q_2*D_d`` and ``Q-mu=1+(d-q_2)*D_d``.
+
+    Both are strictly positive, so every TCC node lies in the open strip
+    between the left and right pole cones.
+    """
+
+    canonical_form(dimension)
+    second = characteristic[1] % dimension
+    return ((1, second), (1, dimension - second))
+
+
+def canonical_dimension_four_localization_record() -> dict[str, object]:
+    r"""Return the exact d=4 beta-integral/TCC phase comparison.
+
+    Exponents are modulo eight and denote powers of
+    ``zeta_8=exp(pi*i/4)``.  With ``N=3``, ``g=Q``, and
+    ``alpha=-3D``, the published two-gamma beta-integral phase agrees
+    with the normalized primitive TCC phase up to the global factor
+    ``zeta_8^3``.  The nodes nevertheless lie in the pole-free strip,
+    so they cannot arise as residues of that integrand.
+    """
+
+    dimension = 4
+    nodes: list[dict[str, object]] = []
+    for first in range(dimension):
+        for second in range(dimension):
+            continuous, discrete = (
+                canonical_general_modular_characteristic(
+                    dimension, (first, second)
+                )
+            )
+            tcc_phase = (discrete + 1 - 3 * second) % 8
+            normalization_ratio = (5 * discrete) % 8
+            normalized_tcc_phase = (
+                tcc_phase + normalization_ratio
+            ) % 8
+            beta_discrete_phase = (6 * discrete) % 8
+            beta_continuous_phase = (6 - 3 * second) % 8
+            beta_integral_phase = (
+                beta_discrete_phase + beta_continuous_phase
+            ) % 8
+            lower, upper = (
+                canonical_general_modular_node_strip_margins(
+                    dimension, (first, second)
+                )
+            )
+            nodes.append(
+                {
+                    "characteristic": (first, second),
+                    "continuous_coordinates": continuous,
+                    "discrete": discrete,
+                    "selection_parity": (second - 1) % 2,
+                    "tcc_phase": tcc_phase,
+                    "normalization_ratio": normalization_ratio,
+                    "normalized_tcc_phase": normalized_tcc_phase,
+                    "beta_integral_phase": beta_integral_phase,
+                    "global_phase_difference": (
+                        normalized_tcc_phase - beta_integral_phase
+                    )
+                    % 8,
+                    "lower_strip_margin": lower,
+                    "upper_strip_margin": upper,
+                }
+            )
+    return {
+        "parameters": canonical_general_modular_parameters(dimension),
+        "period_coordinates": {
+            "D": (Fraction(-1), Fraction(2)),
+            "omega_1": (Fraction(-3), Fraction(8)),
+            "omega_2": (Fraction(1), Fraction(0)),
+            "Q": (Fraction(-2), Fraction(8)),
+        },
+        "beta_integral_parameters": {
+            "N": 3,
+            "g": "Q",
+            "alpha": "-3D",
+        },
+        "nodes": tuple(nodes),
+    }
+
+
 def canonical_primitive_sigma_shift_coordinates(
     dimension: int,
 ) -> tuple[QuadraticCoordinate, QuadraticCoordinate, QuadraticCoordinate]:
@@ -202,13 +347,16 @@ def canonical_primitive_sigma_shifts_are_quasiperiods(
 def canonical_pentagon_compatibility_record(
     dimension: int,
 ) -> dict[str, object]:
-    r"""Return exact gates for applying known pentagon identities to TCC.
+    r"""Return exact warnings for applying known pentagon identities.
 
     A cyclic finite quantum-dilogarithm identity requires a root-of-unity
     deformation parameter, which would require rational ``beta_d``.  The
     general modular identity does apply to ``A_d``, but its native
     discrete modulus is ``d(d-2)`` and it retains a continuous integral.
-    The primitive sigma shifts also miss the quasiperiod lattice.
+    The larger modulus admits the sparse characteristic embedding
+    implemented by ``canonical_general_modular_characteristic``; it is
+    not by itself an obstruction.  The primitive sigma shifts also miss
+    the quasiperiod lattice.
     """
 
     beta_rational = canonical_beta_is_rational(dimension)
@@ -219,6 +367,9 @@ def canonical_pentagon_compatibility_record(
         "characteristic_modulus": dimension,
         "general_modular_modulus": modular_modulus,
         "moduli_match": modular_modulus == dimension,
+        "general_modular_parameters": (
+            canonical_general_modular_parameters(dimension)
+        ),
         "primitive_shift_coordinates": (
             canonical_primitive_sigma_shift_coordinates(dimension)
         ),
