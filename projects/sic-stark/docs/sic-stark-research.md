@@ -10,6 +10,9 @@ dimensions and ultimately in every finite dimension.
 This document is a research ledger, not a claim that Zauner's conjecture has
 been solved.
 
+The current canonical-family reductions are recorded in
+`docs/sic-stark-sprint1.md` and `docs/sic-stark-cycle2.md`.
+
 ## Mathematical specification
 
 For an integer \(d\geq2\), a SIC is a set of \(d^2\) unit vectors

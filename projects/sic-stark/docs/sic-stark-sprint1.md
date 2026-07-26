@@ -313,11 +313,12 @@ This is the highest-priority question.
 
 ### Q2. Are the shifts \(0\) and \(1\) equivalent?
 
-Search for an exact change of variables
-\(\boldsymbol q\mapsto R\boldsymbol q+\boldsymbol c\), using reciprocal
-pairing and the Zauner action, that maps one convolution to the other.
-Proving equivalence would halve the analytic work and explain why the two
-shifts always appear together in rank one.
+**Resolved in cycle 2.** The source proves that complex conjugation pairs
+shifts by
+\(\bar\lambda=-(\lambda+d_j-1)\). In rank one \(d_j=d\), hence
+\(\bar\lambda=1-\lambda\pmod d\), which exchanges \(0\) and \(1\).
+This halves the analytic work but does not prove that either shift is valid.
+See `docs/sic-stark-cycle2.md`.
 
 ### Q3. How many \(\boldsymbol p\)-orbits really require proof?
 

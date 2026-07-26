@@ -25,6 +25,17 @@ def matrix_multiply(left: Matrix2, right: Matrix2) -> Matrix2:
     )
 
 
+def matrix_vector_multiply(
+    matrix: Matrix2, vector: ResidueVector
+) -> ResidueVector:
+    """Multiply a 2-by-2 integer matrix by a column vector."""
+
+    return (
+        matrix[0][0] * vector[0] + matrix[0][1] * vector[1],
+        matrix[1][0] * vector[0] + matrix[1][1] * vector[1],
+    )
+
+
 def matrix_power(matrix: Matrix2, exponent: int) -> Matrix2:
     """Raise a 2-by-2 integer matrix to a nonnegative power."""
 
@@ -79,6 +90,22 @@ def canonical_level_stabilizer(dimension: int) -> Matrix2:
     return matrix_power(canonical_stabilizer(dimension), 3)
 
 
+def canonical_level_quotient(dimension: int) -> Matrix2:
+    r"""Return the integral matrix ``(L_d^3-I)/d``.
+
+    Explicitly, this is
+    ``[[d^2-3d+1, 2-d], [d-2, -1]]``.  It records the exact lift of the
+    congruence ``L_d^3 == I (mod d)`` and makes characteristic correction
+    factors computable without forming a large matrix power.
+    """
+
+    canonical_form(dimension)
+    return (
+        (dimension * dimension - 3 * dimension + 1, 2 - dimension),
+        (dimension - 2, -1),
+    )
+
+
 def canonical_twist_kernel(dimension: int) -> Matrix2:
     r"""Return ``I+L_d`` reduced modulo ``d``.
 
@@ -92,6 +119,31 @@ def canonical_twist_kernel(dimension: int) -> Matrix2:
             (1 + stabilizer[0][0], stabilizer[0][1]),
             (stabilizer[1][0], 1 + stabilizer[1][1]),
         ),
+        dimension,
+    )
+
+
+def canonical_kernel_identity(dimension: int) -> Matrix2:
+    r"""Return ``I+L_d+L_d^2`` modulo ``d``.
+
+    The zero result proves that the canonical twist kernel ``I+L_d`` is
+    also ``-L_d^2`` modulo ``d``.
+    """
+
+    stabilizer = canonical_stabilizer(dimension)
+    square = matrix_multiply(stabilizer, stabilizer)
+    identity_sum: Matrix2 = (
+        (
+            1 + stabilizer[0][0] + square[0][0],
+            stabilizer[0][1] + square[0][1],
+        ),
+        (
+            stabilizer[1][0] + square[1][0],
+            1 + stabilizer[1][1] + square[1][1],
+        ),
+    )
+    return matrix_mod(
+        identity_sum,
         dimension,
     )
 
@@ -117,23 +169,61 @@ def canonical_twist_multiplier(dimension: int, shift: int) -> int:
     return (2 * shift + 2 * dimension - 1) % modulus
 
 
+def canonical_shift_partner(dimension: int, shift: int) -> int:
+    r"""Return the complex-conjugate shift ``1-shift`` modulo ``d``.
+
+    Appleby--Flammia--Kopp prove that shifts are paired by
+    ``bar(lambda)=-(lambda+d_j-1)``.  In the canonical rank-one family
+    ``d_j=d``, so this becomes ``1-lambda`` modulo ``d``.  In particular,
+    shifts zero and one occur together.
+    """
+
+    canonical_form(dimension)
+    return (1 - shift) % dimension
+
+
+def symplectic_pair(
+    left: ResidueVector, right: ResidueVector
+) -> int:
+    r"""Return ``left_2*right_1-left_1*right_2``."""
+
+    return left[1] * right[0] - left[0] * right[1]
+
+
+def canonical_twist_exponent(
+    dimension: int,
+    left: ResidueVector,
+    right: ResidueVector,
+) -> int:
+    r"""Return ``<left,(I+L_d)right>`` modulo ``d``."""
+
+    transformed = matrix_vector_multiply(
+        canonical_twist_kernel(dimension), right
+    )
+    return symplectic_pair(left, transformed) % dimension
+
+
 def canonical_zauner_action(
     dimension: int, vector: ResidueVector
 ) -> ResidueVector:
     """Apply ``L_d`` to a column vector modulo ``d``."""
 
-    stabilizer = canonical_stabilizer(dimension)
+    first, second = matrix_vector_multiply(
+        canonical_stabilizer(dimension), vector
+    )
+    return (first % dimension, second % dimension)
+
+
+def canonical_zauner_orbit_sum(
+    dimension: int, vector: ResidueVector
+) -> ResidueVector:
+    r"""Return ``vector+L_d*vector+L_d^2*vector`` modulo ``d``."""
+
+    first = canonical_zauner_action(dimension, vector)
+    second = canonical_zauner_action(dimension, first)
     return (
-        (
-            stabilizer[0][0] * vector[0]
-            + stabilizer[0][1] * vector[1]
-        )
-        % dimension,
-        (
-            stabilizer[1][0] * vector[0]
-            + stabilizer[1][1] * vector[1]
-        )
-        % dimension,
+        (vector[0] + first[0] + second[0]) % dimension,
+        (vector[1] + first[1] + second[1]) % dimension,
     )
 
 
@@ -160,6 +250,57 @@ def canonical_zauner_orbits(
             visited.update(canonical_orbit)
             orbits.append(canonical_orbit)
     return tuple(orbits)
+
+
+def canonical_tcc_orbit_bound(dimension: int) -> int:
+    r"""Return the number of Zauner orbits of TCC output indices.
+
+    This is the number of equations left if covariance of the special-value
+    array under ``L_d`` is established.  It is an exact combinatorial bound,
+    not by itself a proof of that analytic covariance.
+    """
+
+    canonical_form(dimension)
+    fixed_points = 3 if dimension % 3 == 0 else 1
+    return fixed_points + (
+        dimension * dimension - fixed_points
+    ) // 3
+
+
+def canonical_jacobi_word(dimension: int) -> tuple[int, int, int]:
+    r"""Return the HJ exponents in ``L_d^3=(T^(d-1)S)^3``."""
+
+    canonical_form(dimension)
+    return (dimension - 1,) * 3
+
+
+def canonical_jacobi_scale_exponents() -> tuple[int, int, int]:
+    r"""Return the powers of ``beta_d`` in the three ``S``-kernel inputs.
+
+    At the fixed point ``beta_d``, the Jacobi cocycle law gives
+    ``sigma_(L^3)(z,beta)`` as the product of ``sigma_S`` evaluated at
+    ``z/beta^2``, ``z/beta``, and ``z``.
+    """
+
+    return (-2, -1, 0)
+
+
+def canonical_characteristic_correction_index(
+    dimension: int, characteristic: ResidueVector
+) -> int:
+    r"""Return the finite-product index for ``r=characteristic/d``.
+
+    In the modular-to-Jacobi conversion this index is the second component
+    of ``(I-L_d^3)r``.  Since
+    ``L_d^3=I+d*canonical_level_quotient(d)``, it simplifies to
+    ``characteristic[1]-(d-2)*characteristic[0]``.
+    """
+
+    canonical_form(dimension)
+    return (
+        characteristic[1]
+        - (dimension - 2) * characteristic[0]
+    )
 
 
 def canonical_quadratic_identity(dimension: int) -> Matrix2:
@@ -205,12 +346,18 @@ def canonical_family_record(dimension: int) -> dict[str, object]:
         "expected_discriminant": (dimension + 1) * (dimension - 3),
         "stabilizer": stabilizer,
         "level_stabilizer": canonical_level_stabilizer(dimension),
+        "level_quotient": canonical_level_quotient(dimension),
         "twist_kernel": canonical_twist_kernel(dimension),
+        "kernel_identity_residual": canonical_kernel_identity(dimension),
         "determinant": determinant(stabilizer),
         "extended_modulus": extended_displacement_modulus(dimension),
         "shift_zero_multiplier": canonical_twist_multiplier(dimension, 0),
         "shift_one_multiplier": canonical_twist_multiplier(dimension, 1),
+        "shift_zero_partner": canonical_shift_partner(dimension, 0),
         "zauner_orbit_count": len(canonical_zauner_orbits(dimension)),
+        "tcc_orbit_bound": canonical_tcc_orbit_bound(dimension),
+        "jacobi_word": canonical_jacobi_word(dimension),
+        "jacobi_scale_exponents": canonical_jacobi_scale_exponents(),
         "quadratic_identity_residual": canonical_quadratic_identity(
             dimension
         ),
