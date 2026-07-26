@@ -13,6 +13,7 @@ from collections.abc import Iterable, Sequence
 
 
 ComplexVector = tuple[complex, ...]
+DisplacementCoefficients = dict[tuple[int, int], complex]
 
 
 def normalize(vector: Iterable[complex]) -> ComplexVector:
@@ -95,6 +96,108 @@ def max_sic_residual(fiducial: Sequence[complex]) -> float:
     return max((abs(value) for value in residuals.values()), default=0.0)
 
 
+def projector_displacement_coefficients(
+    fiducial: Sequence[complex],
+) -> DisplacementCoefficients:
+    r"""Return the displacement-basis coefficients of ``|psi><psi|``.
+
+    With the conventions in :func:`displacement_overlap`,
+
+    .. math::
+
+       |\psi\rangle\langle\psi|
+       =\frac1d\sum_{p,q}a_{p,q}D_{p,q},\qquad
+       a_{p,q}=\operatorname{Tr}(|\psi\rangle\langle\psi|D_{p,q}^\dagger).
+    """
+
+    psi = normalize(fiducial)
+    dimension = len(psi)
+    return {
+        (p, q): displacement_overlap(psi, p, q).conjugate()
+        for p in range(dimension)
+        for q in range(dimension)
+    }
+
+
+def twisted_idempotency_residuals(
+    coefficients: DisplacementCoefficients, dimension: int
+) -> DisplacementCoefficients:
+    r"""Return the finite twisted-convolution residual for ``P^2=P``.
+
+    For
+
+    .. math::
+
+       P=\frac1d\sum_{\boldsymbol p}a_{\boldsymbol p}D_{\boldsymbol p},
+
+    the displacement multiplication law reduces idempotency to
+
+    In odd dimension the equation is simply
+
+    .. math::
+
+       \sum_{\boldsymbol p}
+       a_{\boldsymbol p}a_{\boldsymbol t-\boldsymbol p}
+       \tau^{p_2t_1-p_1t_2}
+       =d\,a_{\boldsymbol t}
+
+    for every :math:`\boldsymbol t\in(\mathbb Z/d\mathbb Z)^2`.  In even
+    dimension, reducing a displacement index modulo ``d`` contributes an
+    additional sign because ``D_(p+d,q)=(-1)^q D_(p,q)`` and
+    ``D_(p,q+d)=(-1)^p D_(p,q)``.  The implementation includes this
+    representative-wrap sign explicitly.
+    """
+
+    if dimension <= 0:
+        raise ValueError("dimension must be positive")
+    expected_keys = {
+        (p, q) for p in range(dimension) for q in range(dimension)
+    }
+    if set(coefficients) != expected_keys:
+        raise ValueError("coefficients must contain every displacement key")
+    tau = -cmath.exp(1j * math.pi / dimension)
+    residuals: DisplacementCoefficients = {}
+    for target_p in range(dimension):
+        for target_q in range(dimension):
+            total = 0j
+            for p in range(dimension):
+                for q in range(dimension):
+                    remainder_p = (target_p - p) % dimension
+                    remainder_q = (target_q - q) % dimension
+                    raw_p = p + remainder_p
+                    raw_q = q + remainder_q
+                    wrap_p = raw_p // dimension
+                    wrap_q = raw_q // dimension
+                    wrap_sign = 1
+                    if dimension % 2 == 0:
+                        wrap_sign = (-1) ** (
+                            wrap_p * target_q + wrap_q * target_p
+                        )
+                    total += (
+                        coefficients[(p, q)]
+                        * coefficients[(remainder_p, remainder_q)]
+                        * tau ** (q * remainder_p - p * remainder_q)
+                        * wrap_sign
+                    )
+            residuals[(target_p, target_q)] = (
+                total - dimension * coefficients[(target_p, target_q)]
+            )
+    return residuals
+
+
+def max_twisted_idempotency_residual(
+    coefficients: DisplacementCoefficients, dimension: int
+) -> float:
+    """Return the largest absolute twisted-convolution residual."""
+
+    return max(
+        abs(value)
+        for value in twisted_idempotency_residuals(
+            coefficients, dimension
+        ).values()
+    )
+
+
 def displacement_vector(
     fiducial: Sequence[complex], p: int, q: int
 ) -> ComplexVector:
@@ -169,3 +272,28 @@ def hesse_fiducial() -> ComplexVector:
 
     scale = 1.0 / math.sqrt(2.0)
     return (0j, scale, -scale)
+
+
+def dimension_four_fiducial() -> ComplexVector:
+    r"""Return an exact-radical representative of the dimension-four orbit.
+
+    This is Eq. (10) of Zhu, Teo, and Englert, *Structure of Two-qubit
+    Symmetric Informationally Complete POVMs* (2010), arXiv:1008.1138.
+    """
+
+    golden_ratio_conjugate = (math.sqrt(5.0) - 1.0) / 2.0
+    eighth_root = cmath.exp(1j * math.pi / 4.0)
+    inverse_eighth_root = eighth_root.conjugate()
+    inverse_power = golden_ratio_conjugate ** (-1.5)
+    scale = 1.0 / (
+        2.0 * math.sqrt(3.0 + golden_ratio_conjugate)
+    )
+    return tuple(
+        scale * entry
+        for entry in (
+            1.0 + inverse_eighth_root,
+            eighth_root + 1j * inverse_power,
+            1.0 - inverse_eighth_root,
+            eighth_root - 1j * inverse_power,
+        )
+    )
