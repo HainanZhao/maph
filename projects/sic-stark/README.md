@@ -15,7 +15,7 @@ has been solved.
 
 The canonical arithmetic, Weyl--Heisenberg diagnostics, and finite twisted
 convolution are implemented exactly or to controlled floating-point
-precision. Research cycles 2--5 additionally:
+precision. Research cycles 2--6 additionally:
 
 - proves from the source's conjugation involution that rank-one shifts
   \(0\) and \(1\) occur together;
@@ -32,18 +32,18 @@ precision. Research cycles 2--5 additionally:
   explicit finite q-Pochhammer corrections;
 - gives an exact countermodel proving that covariance, reciprocal pairing,
   and cyclic telescoping alone cannot imply TCC;
-- proves that the known continuous, cyclic, and general modular pentagon
-  identities do not directly specialize to the primitive TCC transform:
-  their contour, deformation parameter, or discrete modulus is
-  incompatible;
-- isolates a new real-multiplication localization theorem as the narrow
-  remaining quantum-dilogarithmic route.
+- embeds every TCC special value exactly into the general modular gamma
+  function and matches the dimension-four beta-integral phase;
+- closes the standard pentagon/localization route by proving that every
+  desired characteristic sample lies strictly inside the resulting
+  two-gamma kernel's pole-free strip.
 
 See [`docs/sic-stark-sprint1.md`](docs/sic-stark-sprint1.md) and
 [`docs/sic-stark-cycle2.md`](docs/sic-stark-cycle2.md), followed by
 [`docs/sic-stark-cycle3.md`](docs/sic-stark-cycle3.md) and
 [`docs/sic-stark-cycle4.md`](docs/sic-stark-cycle4.md), then
-[`docs/sic-stark-cycle5.md`](docs/sic-stark-cycle5.md), for the claim ledger.
+[`docs/sic-stark-cycle5.md`](docs/sic-stark-cycle5.md) and
+[`docs/sic-stark-cycle6.md`](docs/sic-stark-cycle6.md), for the claim ledger.
 
 ## Verification
 
