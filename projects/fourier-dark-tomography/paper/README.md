@@ -12,6 +12,7 @@ Proposed venue: **Physical Review A**, regular article.
 - `build/manuscript.pdf`: compiled manuscript.
 - `arxiv-source-v1.1.tar.gz`: minimal arXiv TeX upload bundle.
 - `arxiv-metadata.md`: copy-ready `quant-ph` metadata and author checklist.
+- `zenodo-metadata.md`: copy-ready Zenodo preprint record and file checksums.
 - `submission-source.tar.gz`: current manuscript, code, tests, documentation,
   reproduction guide, and code license.
 - `legacy/`: pre-generalization supplement and source bundle, retained only
