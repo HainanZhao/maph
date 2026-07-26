@@ -13,6 +13,7 @@ from src.sic_stark import (
     canonical_dimension_four_distribution_relation_record,
     canonical_dimension_four_floquet_gate_record,
     canonical_dimension_four_fractional_cell_record,
+    canonical_dimension_four_zak_gate_record,
     canonical_dimension_four_internal_distribution_maps,
     canonical_dimension_four_laurent_action,
     canonical_dimension_four_localization_record,
@@ -68,6 +69,12 @@ from src.sic_stark import (
     canonical_zauner_orbit_representative,
     canonical_zauner_orbit_sum,
     canonical_zauner_orbits,
+    canonical_zak_alternating_exponent,
+    canonical_zak_cocycle_exponent,
+    canonical_zak_matrix_entry_terms,
+    canonical_zak_quadratic_exponent,
+    canonical_zak_representation_action,
+    canonical_zak_representation_product_defect,
     determinant,
     extended_displacement_modulus,
     form_discriminant,
@@ -570,6 +577,110 @@ class CanonicalSicStarkTests(unittest.TestCase):
             record["algebraic_commutator_trace_packet_is_nonzero"]
         )
         self.assertFalse(record["floquet_spectrum_alone_can_force_tcc"])
+
+    def test_zak_cocycle_and_weyl_representation_are_exact(
+        self,
+    ) -> None:
+        for dimension in range(4, 11):
+            for left_first in range(dimension):
+                for left_second in range(dimension):
+                    left = (left_first, left_second)
+                    for right_first in range(dimension):
+                        for right_second in range(dimension):
+                            right = (right_first, right_second)
+                            self.assertEqual(
+                                canonical_zak_alternating_exponent(
+                                    dimension, left, right
+                                ),
+                                (
+                                    -symplectic_pair(left, right)
+                                )
+                                % dimension,
+                            )
+                            for basis_index in range(dimension):
+                                self.assertEqual(
+                                    canonical_zak_representation_product_defect(
+                                        dimension,
+                                        left,
+                                        right,
+                                        basis_index,
+                                    ),
+                                    (0, 0),
+                                )
+
+    def test_zak_twisted_convolution_matches_tcc_phase(
+        self,
+    ) -> None:
+        for dimension in range(4, 14):
+            for output_first in range(dimension):
+                for output_second in range(dimension):
+                    output = (output_first, output_second)
+                    for first in range(dimension):
+                        for second in range(dimension):
+                            characteristic = (first, second)
+                            remainder = (
+                                (output_first - first) % dimension,
+                                (output_second - second) % dimension,
+                            )
+                            self.assertEqual(
+                                (
+                                    canonical_zak_cocycle_exponent(
+                                        dimension,
+                                        characteristic,
+                                        remainder,
+                                    )
+                                    + canonical_zak_quadratic_exponent(
+                                        dimension, characteristic
+                                    )
+                                )
+                                % dimension,
+                                canonical_twist_exponent(
+                                    dimension,
+                                    output,
+                                    characteristic,
+                                ),
+                            )
+
+        record = canonical_dimension_four_zak_gate_record()
+        self.assertEqual(record["group_order"], 16)
+        self.assertEqual(record["matrix_dimension"], 4)
+        self.assertEqual(record["twisted_algebra_dimension"], 16)
+        self.assertEqual(record["terms_per_matrix_entry"], (4,) * 16)
+        self.assertTrue(record["all_residual_phases_match"])
+        self.assertTrue(record["representation_is_exact"])
+        self.assertTrue(
+            record["alternating_bicharacter_is_nondegenerate"]
+        )
+        self.assertTrue(
+            record["zak_transform_closes_on_finite_matrices"]
+        )
+        self.assertEqual(
+            record["matrix_target"],
+            "Zak(F) Zak(V) = d^2 I_d",
+        )
+        self.assertTrue(record["deformation_rejects_matrix_target"])
+        self.assertFalse(record["matrix_target_proved_for_rm_values"])
+
+    def test_zak_representation_action_uses_extended_phase_modulus(
+        self,
+    ) -> None:
+        self.assertEqual(
+            canonical_zak_representation_action(4, (1, 2), 3),
+            (0, 1),
+        )
+        self.assertEqual(
+            canonical_zak_representation_action(5, (1, 2), 3),
+            (4, 3),
+        )
+        self.assertEqual(
+            canonical_zak_matrix_entry_terms(4, 0, 3),
+            (
+                ((1, 0), 1),
+                ((1, 1), 4),
+                ((1, 2), 1),
+                ((1, 3), 0),
+            ),
+        )
 
     def test_characteristic_embedding_into_general_modular_gamma(
         self,

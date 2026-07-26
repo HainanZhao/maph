@@ -2176,6 +2176,263 @@ def canonical_dimension_four_floquet_gate_record(
     }
 
 
+def canonical_zak_cocycle_exponent(
+    dimension: int,
+    left: ResidueVector,
+    right: ResidueVector,
+) -> int:
+    r"""Return the exponent of the canonical Zak cocycle.
+
+    With ``Z=I+L_d``, the cocycle is
+
+    ``sigma(q,r)=omega_d^<r,Z*q>``.
+    """
+
+    return canonical_twist_exponent(dimension, right, left)
+
+
+def canonical_zak_quadratic_exponent(
+    dimension: int,
+    vector: ResidueVector,
+) -> int:
+    r"""Return the chirp exponent ``<q,Z*q>`` modulo ``d``."""
+
+    return canonical_twist_exponent(dimension, vector, vector)
+
+
+def canonical_zak_alternating_exponent(
+    dimension: int,
+    left: ResidueVector,
+    right: ResidueVector,
+) -> int:
+    r"""Return the alternating bicharacter exponent of ``sigma``.
+
+    It equals ``-<left,right>`` modulo ``d`` and is therefore
+    nondegenerate on ``(Z/dZ)^2``.
+    """
+
+    return (
+        canonical_zak_cocycle_exponent(
+            dimension, left, right
+        )
+        - canonical_zak_cocycle_exponent(
+            dimension, right, left
+        )
+    ) % dimension
+
+
+def canonical_zak_representation_action(
+    dimension: int,
+    characteristic: ResidueVector,
+    basis_index: int,
+) -> tuple[int, int]:
+    r"""Apply the explicit Weyl representative to a standard basis node.
+
+    Let ``tau_d=-exp(pi*i/d)``, so ``tau_d^2=omega_d``, and let
+    ``X e_j=e_(j+1)``, ``Z e_j=omega_d^j e_j``.  The projective
+    representation
+
+    ``rho(a,b)=tau_d^(a^2+b^2) X^a Z^(-b)``
+
+    realizes the canonical Zak cocycle.  The return value is the target
+    basis index and the exponent of ``tau_d`` modulo its order.
+    """
+
+    canonical_form(dimension)
+    first = characteristic[0] % dimension
+    second = characteristic[1] % dimension
+    source = basis_index % dimension
+    phase_modulus = extended_displacement_modulus(dimension)
+    return (
+        (source + first) % dimension,
+        (
+            first * first
+            + second * second
+            - 2 * second * source
+        )
+        % phase_modulus,
+    )
+
+
+def canonical_zak_representation_product_defect(
+    dimension: int,
+    left: ResidueVector,
+    right: ResidueVector,
+    basis_index: int,
+) -> tuple[int, int]:
+    r"""Return target and phase defects in ``rho(q)rho(r)=sigma(q,r)rho(q+r)``."""
+
+    intermediate, right_phase = (
+        canonical_zak_representation_action(
+            dimension, right, basis_index
+        )
+    )
+    actual_target, left_phase = (
+        canonical_zak_representation_action(
+            dimension, left, intermediate
+        )
+    )
+    total = (
+        (left[0] + right[0]) % dimension,
+        (left[1] + right[1]) % dimension,
+    )
+    expected_target, expected_phase = (
+        canonical_zak_representation_action(
+            dimension, total, basis_index
+        )
+    )
+    cocycle_phase = 2 * canonical_zak_cocycle_exponent(
+        dimension, left, right
+    )
+    phase_modulus = extended_displacement_modulus(dimension)
+    return (
+        (actual_target - expected_target) % dimension,
+        (
+            left_phase
+            + right_phase
+            - cocycle_phase
+            - expected_phase
+        )
+        % phase_modulus,
+    )
+
+
+def canonical_zak_matrix_entry_terms(
+    dimension: int,
+    row: int,
+    column: int,
+) -> tuple[tuple[ResidueVector, int], ...]:
+    r"""Return terms contributing to one entry of the finite Zak matrix.
+
+    If ``Zak(f)=sum_(a,b) f(a,b) rho(a,b)``, then the ``(k,j)`` entry is
+
+    ``sum_b f(k-j,b) tau_d^((k-j)^2+b^2-2*b*j)``.
+    """
+
+    canonical_form(dimension)
+    reduced_row = row % dimension
+    reduced_column = column % dimension
+    first = (reduced_row - reduced_column) % dimension
+    return tuple(
+        (
+            (first, second),
+            canonical_zak_representation_action(
+                dimension,
+                (first, second),
+                reduced_column,
+            )[1],
+        )
+        for second in range(dimension)
+    )
+
+
+def canonical_dimension_four_zak_gate_record(
+) -> dict[str, object]:
+    r"""Return the exact finite Zak reformulation and deformation gate."""
+
+    dimension = 4
+    phase_defects: dict[
+        tuple[ResidueVector, ResidueVector], int
+    ] = {}
+    for output_first in range(dimension):
+        for output_second in range(dimension):
+            output = (output_first, output_second)
+            for first in range(dimension):
+                for second in range(dimension):
+                    characteristic = (first, second)
+                    remainder = (
+                        (output_first - first) % dimension,
+                        (output_second - second) % dimension,
+                    )
+                    twisted_exponent = (
+                        canonical_zak_cocycle_exponent(
+                            dimension,
+                            characteristic,
+                            remainder,
+                        )
+                        + canonical_zak_quadratic_exponent(
+                            dimension, characteristic
+                        )
+                    ) % dimension
+                    phase_defects[(output, characteristic)] = (
+                        twisted_exponent
+                        - canonical_twist_exponent(
+                            dimension, output, characteristic
+                        )
+                    ) % dimension
+
+    representation_defects: dict[
+        tuple[ResidueVector, ResidueVector, int],
+        tuple[int, int],
+    ] = {}
+    for left_first in range(dimension):
+        for left_second in range(dimension):
+            left = (left_first, left_second)
+            for right_first in range(dimension):
+                for right_second in range(dimension):
+                    right = (right_first, right_second)
+                    for basis_index in range(dimension):
+                        representation_defects[
+                            (left, right, basis_index)
+                        ] = (
+                            canonical_zak_representation_product_defect(
+                                dimension,
+                                left,
+                                right,
+                                basis_index,
+                            )
+                        )
+
+    nondegenerate = True
+    for first in range(dimension):
+        for second in range(dimension):
+            characteristic = (first, second)
+            if characteristic == (0, 0):
+                continue
+            if not any(
+                canonical_zak_alternating_exponent(
+                    dimension,
+                    characteristic,
+                    (test_first, test_second),
+                )
+                for test_first in range(dimension)
+                for test_second in range(dimension)
+            ):
+                nondegenerate = False
+
+    witness = canonical_dimension_four_perturbation_witness()
+    return {
+        "group_order": dimension**2,
+        "matrix_dimension": dimension,
+        "twisted_algebra_dimension": dimension**2,
+        "terms_per_matrix_entry": tuple(
+            len(
+                canonical_zak_matrix_entry_terms(
+                    dimension, row, column
+                )
+            )
+            for row in range(dimension)
+            for column in range(dimension)
+        ),
+        "phase_defects": phase_defects,
+        "all_residual_phases_match": not any(
+            phase_defects.values()
+        ),
+        "representation_defects": representation_defects,
+        "representation_is_exact": all(
+            defect == (0, 0)
+            for defect in representation_defects.values()
+        ),
+        "alternating_bicharacter_is_nondegenerate": nondegenerate,
+        "zak_transform_closes_on_finite_matrices": True,
+        "matrix_target": "Zak(F) Zak(V) = d^2 I_d",
+        "deformation_rejects_matrix_target": (
+            witness["coefficient_is_forced_nonzero"]
+        ),
+        "matrix_target_proved_for_rm_values": False,
+    }
+
+
 def canonical_jacobi_word(dimension: int) -> tuple[int, int, int]:
     r"""Return the HJ exponents in ``L_d^3=(T^(d-1)S)^3``."""
 

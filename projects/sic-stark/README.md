@@ -15,7 +15,7 @@ has been solved.
 
 The canonical arithmetic, Weyl--Heisenberg diagnostics, and finite twisted
 convolution are implemented exactly or to controlled floating-point
-precision. Research cycles 2--11 additionally:
+precision. Research cycles 2--12 additionally:
 
 - proves from the source's conjugation involution that rank-one shifts
   \(0\) and \(1\) occur together;
@@ -62,7 +62,10 @@ precision. Research cycles 2--11 additionally:
 - classifies the RM Floquet evolution as diagonal or
   weighted-permutation, proves that the formal deformation lifts to it,
   and rewrites TCC as a twisted trace of the multiplicative commutator
-  between RM monodromy and characteristic translation.
+  between RM monodromy and characteristic translation;
+- constructs an explicit all-parity finite Zak/Weyl representation of
+  the TCC cocycle and converts the conjecture into a
+  deformation-sensitive \(d\times d\) RM matrix-inverse identity.
 
 See [`docs/sic-stark-sprint1.md`](docs/sic-stark-sprint1.md) and
 [`docs/sic-stark-cycle2.md`](docs/sic-stark-cycle2.md), followed by
@@ -74,7 +77,8 @@ See [`docs/sic-stark-sprint1.md`](docs/sic-stark-sprint1.md) and
 [`docs/sic-stark-cycle8.md`](docs/sic-stark-cycle8.md), followed by
 [`docs/sic-stark-cycle9.md`](docs/sic-stark-cycle9.md) and
 [`docs/sic-stark-cycle10.md`](docs/sic-stark-cycle10.md), and finally
-[`docs/sic-stark-cycle11.md`](docs/sic-stark-cycle11.md), for the claim ledger.
+[`docs/sic-stark-cycle11.md`](docs/sic-stark-cycle11.md) and
+[`docs/sic-stark-cycle12.md`](docs/sic-stark-cycle12.md), for the claim ledger.
 
 ## Verification
 
