@@ -112,10 +112,51 @@ Exact histograms satisfy
 (0,3,3,x),(1,1,2,x+2)\right).
 \]
 
-This was checked directly for \(0\leq x\leq200\).  Together with the
-quasipolynomial degree bound above, seven exact samples in each residue
-class already suffice for a computer-assisted identity proof.  It
-explains the shifted factors
+The exact interpolation certificate originally proved this from seven
+samples in each residue class.  A direct proof is now available.  At a
+fourth root \(q\), evaluate the histogram as the corresponding repeated
+matrix permanent.  The values at \(q=1\) are trivial, those at \(q=-i\)
+are conjugates of \(q=i\), and at \(q=-1\) both transitions reduce to
+the same two-row-type polynomial.
+
+At \(q=i\), put \(M=x+3\), \(S=X+Z\), and \(D=X-Z\).  Both generating
+polynomials contain
+
+\[
+(Y+S)(Y-S)^2=\sum_{m=0}^3a_mY^{3-m}S^m.
+\]
+
+The remaining factors are
+
+\[
+(-Y+iD)^r(-Y-iD)^{M-r},
+\]
+
+with \(r=3\) for the first transition and \(r=1\) for the second.  After
+selecting total \(Y\)-degree three, their relevant \(X,Z\) coefficients
+are four-term sums containing respectively
+
+\[
+K_m(3;M)K_1(m;M)
+\quad\text{and}\quad
+K_m(1;M)K_3(m;M),
+\]
+
+with all other weights identical.  Krawtchouk duality gives
+
+\[
+\binom M3K_m(3;M)K_1(m;M)
+=
+\binom M1K_m(1;M)K_3(m;M)
+\]
+
+term by term.  The coefficient ratio
+\(6/((x+1)(x+2))\) is exactly canceled by the ratio of the input
+occupation factorials.  The same binomial ratio appears at \(q=-1\).
+Equality at all four roots and Fourier inversion prove the complete
+histogram identity.
+
+This direct proof explains the shifted factors
 
 \[
 (x-2)(x-5)(x-7)\quad\leftrightarrow\quad
@@ -124,8 +165,11 @@ x(x-3)(x-5)
 
 and shows that the \(L_A\) and \(L_C\) \(N=11\) events have identical
 phase histograms despite not being related by the elementary
-occupation symmetries currently used.  A direct coefficient or
-creation-operator proof of this identity is a promising small theorem.
+occupation symmetries currently used.  The direct coefficient proof is
+therefore complete.  It has since generalized to the sectorwise
+reciprocity theorem in
+[`agent-n11-direct-proof.md`](agent-n11-direct-proof.md), which applies
+to arbitrary even- and odd-sector particle totals.
 
 ## 4. Attempts to obtain an infinite ray
 
@@ -165,14 +209,16 @@ mechanism:
 > residual dark events can occur as arithmetic roots shared by their
 > real and imaginary components.
 
-This is structurally different from both cyclic suppression and the
-odd-\(a\) reflection family.  The best next steps are:
+After closing under sectorwise reciprocity, \(L_A\) and \(L_C\) are one
+structural class rather than two.  Their darkness at the listed
+parameters is still an arithmetic root phenomenon; reciprocity explains
+the pairing of roots, not why the first root exists.  The best next
+steps are:
 
-1. prove the \(L_A/L_C\) histogram identity directly;
-2. package the quasipolynomial lemma and gcd calculation as a formal
+1. package the quasipolynomial lemma and gcd calculation as a formal
    proposition;
-3. search for repeated common factors across the \(N=5,6,8,9\)
+2. search for repeated common factors across the \(N=5,6,8,9\)
    residual censuses;
-4. test whether robustness under phase perturbations distinguishes
-   isolated polynomial-root zeros from symmetry- or parity-protected
-   zeros.
+3. quotient those censuses by the full reciprocity/dihedral closure;
+4. add realistic distinguishability and loss floors to the exact
+   directional leakage fingerprints.

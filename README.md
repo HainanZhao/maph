@@ -34,8 +34,20 @@ factors.
   function, rigorous zero-free region, and current conjectures.
 - [`docs/thesis-outline.md`](docs/thesis-outline.md): proposed thesis
   claim, chapter structure, success criteria, and research sprints.
+- [`docs/thesis-stage2-reciprocity.md`](docs/thesis-stage2-reciprocity.md):
+  current checkpoint, theorem inventory, rejected assumptions, and next
+  thesis work.
 - [`docs/agent-n11-findings.md`](docs/agent-n11-findings.md): exact
   affine-quasipolynomial analysis of the eleven-particle residue.
+- [`docs/agent-n11-direct-proof.md`](docs/agent-n11-direct-proof.md):
+  symbolic Krawtchouk-duality proof of the hidden affine-line histogram
+  identity.
+- [`docs/agent-unitary-leakage.md`](docs/agent-unitary-leakage.md):
+  exact directional leakage fingerprints and the all-odd protected-axis
+  theorem.
+- [`docs/agent-irred-extension.md`](docs/agent-irred-extension.md):
+  extended irreducibility certificates and failed elementary
+  Newton/Eisenstein proof routes.
 - [`scripts/audit_reflection_irreducibility.py`](scripts/audit_reflection_irreducibility.py):
   standard-library finite-field certificates for the stronger polynomial
   irreducibility conjecture.
@@ -88,6 +100,8 @@ python3 scripts/analyze_four_mode_thesis.py
 python3 scripts/certify_reflection_conjecture.py --a-limit 1000
 python3 scripts/audit_reflection_irreducibility.py
 python3 scripts/analyze_n11_affine.py
+python3 scripts/analyze_unitary_leakage.py
+python3 scripts/analyze_reciprocity_census.py
 python3 scripts/explore.py --limit 500
 python3 scripts/explore.py --limit 5000 --csv data/f_values_5000.csv
 python3 scripts/scan_squarefree_triples.py --prime-limit 200

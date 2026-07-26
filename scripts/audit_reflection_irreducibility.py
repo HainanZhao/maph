@@ -15,7 +15,7 @@ factorization is
   ``a`` is odd.
 
 By default this script uses only the Python standard library to verify a
-finite-field certificate for every 2 <= a <= 38.  Each relevant monic
+finite-field certificate for every 2 <= a <= 59.  Each relevant monic
 integer polynomial is irreducible modulo an explicitly recorded prime,
 which proves its irreducibility over Q by Gauss's lemma.  The finite-field
 test is Rabin's exact criterion, implemented below with elementary modular
@@ -78,6 +78,27 @@ MOD_P_CERTIFICATES = {
     36: 227,
     37: 3061,
     38: 317,
+    39: 167,
+    40: 487,
+    41: 359,
+    42: 2539,
+    43: 431,
+    44: 647,
+    45: 593,
+    46: 163,
+    47: 127,
+    48: 139,
+    49: 1559,
+    50: 929,
+    51: 397,
+    52: 491,
+    53: 1493,
+    54: 911,
+    55: 241,
+    56: 353,
+    57: 433,
+    58: 1013,
+    59: 1009,
 }
 
 
@@ -349,7 +370,7 @@ def exact_factor_audit(
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--max-a", type=int, default=38)
+    parser.add_argument("--max-a", type=int, default=59)
     parser.add_argument(
         "--exact-factor",
         action="store_true",
@@ -360,7 +381,7 @@ def main() -> None:
     if args.max_a < 1:
         parser.error("--max-a must be positive")
     if args.max_a > max(MOD_P_CERTIFICATES):
-        parser.error("recorded mod-p certificates currently stop at a=38")
+        parser.error("recorded mod-p certificates currently stop at a=59")
 
     sympy_module = None
     if args.exact_factor:
