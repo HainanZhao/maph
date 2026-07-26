@@ -15,7 +15,7 @@ has been solved.
 
 The canonical arithmetic, Weyl--Heisenberg diagnostics, and finite twisted
 convolution are implemented exactly or to controlled floating-point
-precision. Research cycles 2--8 additionally:
+precision. Research cycles 2--9 additionally:
 
 - proves from the source's conjugation involution that rank-one shifts
   \(0\) and \(1\) occur together;
@@ -49,7 +49,13 @@ precision. Research cycles 2--8 additionally:
   characters, and finds its first degree-five and degree-six relations;
 - gives a faithful, totally positive algebraic-unit countermodel in
   \(\mathbb Q(\sqrt2,\sqrt3)\) whose residual packet and every character
-  projection are nonzero.
+  projection are nonzero;
+- specializes the published conductor-lowering theorem to exact
+  same-grid distribution products and shows that prime dimensions have
+  no proper scalar relation;
+- constructs a two-parameter multiplicative perturbation preserving all
+  published within-level multiplicative identities while forcing a
+  nonzero primitive Laurent coefficient.
 
 See [`docs/sic-stark-sprint1.md`](docs/sic-stark-sprint1.md) and
 [`docs/sic-stark-cycle2.md`](docs/sic-stark-cycle2.md), followed by
@@ -58,7 +64,8 @@ See [`docs/sic-stark-sprint1.md`](docs/sic-stark-sprint1.md) and
 [`docs/sic-stark-cycle5.md`](docs/sic-stark-cycle5.md) and
 [`docs/sic-stark-cycle6.md`](docs/sic-stark-cycle6.md), and finally
 [`docs/sic-stark-cycle7.md`](docs/sic-stark-cycle7.md) and
-[`docs/sic-stark-cycle8.md`](docs/sic-stark-cycle8.md), for the claim ledger.
+[`docs/sic-stark-cycle8.md`](docs/sic-stark-cycle8.md), followed by
+[`docs/sic-stark-cycle9.md`](docs/sic-stark-cycle9.md), for the claim ledger.
 
 ## Verification
 
