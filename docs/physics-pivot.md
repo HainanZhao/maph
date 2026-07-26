@@ -261,6 +261,10 @@ integer permanents; at present there is no such argument.
 | P5 | The \(m=N=4\) scan has 193/113/80 counts and three residual families | Exact computational observation |
 | P6a | No four-mode dark events for \(N=3\bmod4\) | Falsified at \(N=11\) |
 | P6b | No four-mode dark events for \(N=2^k-1\) | Weak conjecture; checked only at \(N=1,3,7\) |
+| P7 | Exact parity classification of \((0,a,2a,a)\to(0,a,2a,a)\) | Proved in `thesis-stage1.md` using Krawtchouk duality; novelty audit pending |
+
+The subsequent assumption audit and proof of P7 are documented in
+[`thesis-stage1.md`](thesis-stage1.md).
 
 ## Why not choose a famous grand problem
 

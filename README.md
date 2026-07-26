@@ -29,6 +29,11 @@ factors.
 
 - [`docs/physics-pivot.md`](docs/physics-pivot.md): current quantum-optics
   direction and first computational observations.
+- [`docs/thesis-stage1.md`](docs/thesis-stage1.md): assumption audit,
+  mechanism classification, and the first infinite non-periodic dark
+  family.
+- [`docs/thesis-outline.md`](docs/thesis-outline.md): proposed thesis
+  claim, chapter structure, success criteria, and research sprints.
 - [`src/fourier_suppression.py`](src/fourier_suppression.py): exact
   phase-histogram computation for Fourier multiports.
 - [`scripts/scan_fourier_suppression.py`](scripts/scan_fourier_suppression.py):
