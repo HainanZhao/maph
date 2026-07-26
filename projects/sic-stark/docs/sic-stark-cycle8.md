@@ -374,6 +374,13 @@ proof, it should be evaluated on the explicit countermodel as a
 specificity gate: if the countermodel also satisfies it, the property
 cannot force TCC.
 
+Cycle 9 applies this gate to the published conductor-lowering and
+level-raising formulas. Their internal dimension-four specializations
+are preserved by the unit deformation, and a forced nonzero Laurent
+coefficient proves that the complete within-level multiplicative package
+still cannot imply TCC. See
+[`sic-stark-cycle9.md`](sic-stark-cycle9.md).
+
 ## Executable checks
 
 The implementation provides:

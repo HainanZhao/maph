@@ -10,12 +10,15 @@ from src.sic_stark import (
     canonical_dimension_four_algebraic_unit_packet_record,
     canonical_dimension_four_countermodel,
     canonical_dimension_four_character_resolvents,
+    canonical_dimension_four_distribution_relation_record,
+    canonical_dimension_four_internal_distribution_maps,
     canonical_dimension_four_laurent_action,
     canonical_dimension_four_localization_record,
     canonical_dimension_four_packet_directions,
     canonical_dimension_four_packet_evaluation,
     canonical_dimension_four_packet_permutations,
     canonical_dimension_four_packet_relation_residuals,
+    canonical_dimension_four_perturbation_witness,
     canonical_dimension_four_relation_nullities,
     canonical_dimension_four_residual_laurent_packet,
     canonical_dimension_four_trace_obstruction_record,
@@ -38,12 +41,14 @@ from src.sic_stark import (
     canonical_primitive_direction_unit_stabilizers,
     canonical_primitive_sigma_shift_coordinates,
     canonical_primitive_sigma_shifts_are_quasiperiods,
+    canonical_proper_scalar_distribution_divisors,
     canonical_quadratic_identity,
     canonical_quadratic_residue_multiply,
     canonical_quadratic_residue_norm,
     canonical_quadratic_residue_units,
     canonical_residue_multiplication_matrix,
     canonical_shift_partner,
+    canonical_scalar_distribution_fibers,
     canonical_stabilizer,
     canonical_tcc_equation_count,
     canonical_tcc_equation_representatives,
@@ -370,6 +375,69 @@ class CanonicalSicStarkTests(unittest.TestCase):
         self.assertEqual(
             biquadratic_2_3_multiply(units[0], units[1]), one
         )
+
+    def test_dimension_four_distribution_relations_are_not_specific(
+        self,
+    ) -> None:
+        second_fibers = canonical_scalar_distribution_fibers(4, 2)
+        fourth_fibers = canonical_scalar_distribution_fibers(4, 4)
+        self.assertEqual(
+            set(second_fibers),
+            {(0, 0), (0, 2), (2, 0), (2, 2)},
+        )
+        self.assertTrue(
+            all(len(fiber) == 4 for fiber in second_fibers.values())
+        )
+        self.assertEqual(set(fourth_fibers), {(0, 0)})
+        self.assertEqual(len(fourth_fibers[(0, 0)]), 16)
+        self.assertEqual(
+            canonical_dimension_four_internal_distribution_maps(),
+            (
+                ((2, 0), (0, 2)),
+                ((0, 2), (2, 2)),
+                ((2, 2), (2, 0)),
+                ((0, 0), (0, 0)),
+            ),
+        )
+
+        record = canonical_dimension_four_distribution_relation_record()
+        self.assertEqual(record["fiber_sizes"], {2: (4, 4, 4, 4), 4: (16,)})
+        self.assertTrue(record["all_formal_relations_hold"])
+        self.assertTrue(record["all_algebraic_relations_hold"])
+        self.assertTrue(
+            all(
+                defect == (0, 0)
+                for defect in record[
+                    "formal_exponent_defects"
+                ].values()
+            )
+        )
+        self.assertEqual(
+            canonical_proper_scalar_distribution_divisors(4), (2,)
+        )
+        for prime in (5, 7, 11, 13, 17, 19):
+            self.assertEqual(
+                canonical_proper_scalar_distribution_divisors(prime),
+                (),
+            )
+
+    def test_multiplicative_perturbation_forces_nonzero_coefficient(
+        self,
+    ) -> None:
+        witness = canonical_dimension_four_perturbation_witness()
+        self.assertEqual(witness["output"], (1, 0))
+        self.assertEqual(witness["laurent_exponent"], (2, 0))
+        self.assertEqual(
+            tuple(term[:2] for term in witness["terms"]),
+            (((0, 1), 3), ((1, 3), 0)),
+        )
+        self.assertEqual(witness["phase_sum"], (1, -1))
+        self.assertEqual(
+            witness["baseline_orbit_ratios"],
+            (((0, 1), (0, 3)), ((0, 1), (0, 3))),
+        )
+        self.assertTrue(witness["ratios_are_identical"])
+        self.assertTrue(witness["coefficient_is_forced_nonzero"])
 
     def test_characteristic_embedding_into_general_modular_gamma(
         self,
@@ -882,6 +950,8 @@ class CanonicalSicStarkTests(unittest.TestCase):
             biquadratic_2_3_galois_action(
                 (Fraction(0),) * 4, -1
             )
+        with self.assertRaises(ValueError):
+            canonical_scalar_distribution_fibers(4, 3)
 
 
 if __name__ == "__main__":

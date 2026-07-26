@@ -1601,6 +1601,276 @@ def canonical_dimension_four_algebraic_unit_packet_record(
     }
 
 
+def canonical_scalar_distribution_fibers(
+    dimension: int,
+    divisor: int,
+) -> dict[ResidueVector, tuple[ResidueVector, ...]]:
+    r"""Return fibers of multiplication by ``divisor`` on the d-grid.
+
+    When ``divisor`` divides ``dimension``, Kopp's
+    conductor-lowering/level-raising theorem with ``B=divisor*I``
+    specializes to the internal product relation
+
+    ``u(divisor*q) = product_{divisor*t=divisor*q} u(t)``.
+    """
+
+    canonical_form(dimension)
+    if divisor <= 0 or dimension % divisor:
+        raise ValueError("divisor must be a positive divisor of dimension")
+    fibers: dict[ResidueVector, list[ResidueVector]] = {}
+    for first in range(dimension):
+        for second in range(dimension):
+            characteristic = (first, second)
+            image = (
+                divisor * first % dimension,
+                divisor * second % dimension,
+            )
+            fibers.setdefault(image, []).append(characteristic)
+    return {
+        image: tuple(characteristics)
+        for image, characteristics in sorted(fibers.items())
+    }
+
+
+def canonical_proper_scalar_distribution_divisors(
+    dimension: int,
+) -> tuple[int, ...]:
+    """Return nontrivial scalar distribution maps internal to the d-grid."""
+
+    canonical_form(dimension)
+    return tuple(
+        divisor
+        for divisor in range(2, dimension)
+        if dimension % divisor == 0
+    )
+
+
+def canonical_dimension_four_internal_distribution_maps(
+) -> tuple[Matrix2, Matrix2, Matrix2, Matrix2]:
+    r"""Return all d=4 internal distribution maps modulo global units.
+
+    An integral multiplication endomorphism whose complete torus kernel
+    lies in the four-torsion has Smith factors dividing four.  For the
+    canonical norm form this leaves ``2`` times the three powers of
+    ``beta`` and the zero map induced by ``4``.
+    """
+
+    dimension = 4
+    maps: list[Matrix2] = []
+    for global_unit in canonical_global_unit_residues(dimension):
+        unit_matrix = canonical_residue_multiplication_matrix(
+            dimension, global_unit
+        )
+        maps.append(
+            matrix_mod(
+                tuple(
+                    tuple(2 * entry for entry in row)
+                    for row in unit_matrix
+                ),
+                dimension,
+            )
+        )
+    maps.append(((0, 0), (0, 0)))
+    return (maps[0], maps[1], maps[2], maps[3])
+
+
+def canonical_dimension_four_distribution_relation_record(
+) -> dict[str, object]:
+    r"""Audit all internal d=4 distribution relations on the countermodel."""
+
+    orbit_monomials = {
+        (0, 0): (0, 0),
+        (0, 1): (1, 0),
+        (0, 2): (0, 0),
+        (0, 3): (-1, 0),
+        (1, 1): (0, 1),
+        (2, 3): (0, -1),
+    }
+
+    def monomial(characteristic: ResidueVector) -> LaurentExponent:
+        return orbit_monomials[
+            canonical_zauner_orbit_representative(
+                4, characteristic
+            )
+        ]
+
+    formal_defects: dict[
+        tuple[int, ResidueVector], LaurentExponent
+    ] = {}
+    for divisor in (2, 4):
+        for image, fiber in canonical_scalar_distribution_fibers(
+            4, divisor
+        ).items():
+            right_exponent = (
+                sum(monomial(value)[0] for value in fiber),
+                sum(monomial(value)[1] for value in fiber),
+            )
+            left_exponent = monomial(image)
+            formal_defects[(divisor, image)] = (
+                right_exponent[0] - left_exponent[0],
+                right_exponent[1] - left_exponent[1],
+            )
+
+    algebraic_record = (
+        canonical_dimension_four_algebraic_unit_packet_record()
+    )
+    inverse_x, x_value, y_value, inverse_y = algebraic_record[
+        "units"
+    ]
+    one: BiquadraticCoordinate = (
+        Fraction(1),
+        Fraction(0),
+        Fraction(0),
+        Fraction(0),
+    )
+    orbit_values = {
+        (0, 0): one,
+        (0, 1): x_value,
+        (0, 2): one,
+        (0, 3): inverse_x,
+        (1, 1): y_value,
+        (2, 3): inverse_y,
+    }
+
+    def algebraic_value(
+        characteristic: ResidueVector,
+    ) -> BiquadraticCoordinate:
+        return orbit_values[
+            canonical_zauner_orbit_representative(
+                4, characteristic
+            )
+        ]
+
+    algebraic_equalities: dict[
+        tuple[int, ResidueVector], bool
+    ] = {}
+    for divisor in (2, 4):
+        for image, fiber in canonical_scalar_distribution_fibers(
+            4, divisor
+        ).items():
+            product = one
+            for characteristic in fiber:
+                product = biquadratic_2_3_multiply(
+                    product, algebraic_value(characteristic)
+                )
+            algebraic_equalities[(divisor, image)] = (
+                product == algebraic_value(image)
+            )
+
+    return {
+        "internal_maps_mod_4": (
+            canonical_dimension_four_internal_distribution_maps()
+        ),
+        "fiber_sizes": {
+            divisor: tuple(
+                len(fiber)
+                for fiber in canonical_scalar_distribution_fibers(
+                    4, divisor
+                ).values()
+            )
+            for divisor in (2, 4)
+        },
+        "formal_exponent_defects": formal_defects,
+        "all_formal_relations_hold": all(
+            defect == (0, 0)
+            for defect in formal_defects.values()
+        ),
+        "algebraic_equalities": algebraic_equalities,
+        "all_algebraic_relations_hold": all(
+            algebraic_equalities.values()
+        ),
+    }
+
+
+def canonical_dimension_four_perturbation_witness(
+) -> dict[str, object]:
+    r"""Return a coefficient proving multiplicative identities cannot imply TCC.
+
+    Multiply any nonzero Zauner-invariant baseline array by the formal
+    unit perturbation from cycle 8.  That perturbation preserves inverse
+    pairing, the fixed half-characteristic values, and every internal
+    d=4 distribution relation.  In the primitive residual at ``p=e_1``,
+    the coefficient of ``x^2`` comes only from two terms.  Both have the
+    same baseline ratio and their phases sum to ``1-i``, so the
+    perturbed residual is never the zero Laurent polynomial.
+    """
+
+    dimension = 4
+    output = (1, 0)
+    orbit_monomials = {
+        (0, 0): (0, 0),
+        (0, 1): (1, 0),
+        (0, 2): (0, 0),
+        (0, 3): (-1, 0),
+        (1, 1): (0, 1),
+        (2, 3): (0, -1),
+    }
+    target_exponent = (2, 0)
+    terms: list[
+        tuple[
+            ResidueVector,
+            int,
+            ResidueVector,
+            ResidueVector,
+        ]
+    ] = []
+    for first in range(dimension):
+        for second in range(dimension):
+            characteristic = (first, second)
+            difference = ((first - 1) % dimension, second)
+            numerator_orbit = (
+                canonical_zauner_orbit_representative(
+                    dimension, characteristic
+                )
+            )
+            denominator_orbit = (
+                canonical_zauner_orbit_representative(
+                    dimension, difference
+                )
+            )
+            numerator_exponent = orbit_monomials[numerator_orbit]
+            denominator_exponent = orbit_monomials[
+                denominator_orbit
+            ]
+            exponent = (
+                numerator_exponent[0]
+                - denominator_exponent[0],
+                numerator_exponent[1]
+                - denominator_exponent[1],
+            )
+            if exponent == target_exponent:
+                terms.append(
+                    (
+                        characteristic,
+                        canonical_twist_exponent(
+                            dimension, output, characteristic
+                        ),
+                        numerator_orbit,
+                        denominator_orbit,
+                    )
+                )
+    phase_units = ((1, 0), (0, 1), (-1, 0), (0, -1))
+    phase_sum = (
+        sum(phase_units[term[1]][0] for term in terms),
+        sum(phase_units[term[1]][1] for term in terms),
+    )
+    baseline_ratios = tuple(
+        (term[2], term[3]) for term in terms
+    )
+    return {
+        "output": output,
+        "laurent_exponent": target_exponent,
+        "terms": tuple(terms),
+        "phase_sum": phase_sum,
+        "baseline_orbit_ratios": baseline_ratios,
+        "ratios_are_identical": len(set(baseline_ratios)) == 1,
+        "coefficient_is_forced_nonzero": (
+            phase_sum != (0, 0)
+            and len(set(baseline_ratios)) == 1
+        ),
+    }
+
+
 def canonical_jacobi_word(dimension: int) -> tuple[int, int, int]:
     r"""Return the HJ exponents in ``L_d^3=(T^(d-1)S)^3``."""
 
