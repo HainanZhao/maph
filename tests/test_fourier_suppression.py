@@ -4,6 +4,7 @@ import unittest
 from src.fourier_suppression import (
     canonical_dark_pair,
     four_mode_reflection_closed_sum,
+    four_mode_odd_sector_reciprocal_pair,
     four_mode_self_family_closed_form,
     four_mode_self_family_coefficient,
     four_mode_reflection_self_coefficient,
@@ -212,6 +213,70 @@ class FourierSuppressionTests(unittest.TestCase):
                     four_mode_reflection_closed_sum(a, b),
                     0,
                 )
+
+    def test_hidden_n11_affine_histogram_identity(self):
+        for parameter in range(15):
+            self.assertEqual(
+                phase_histogram(
+                    (0, 1, 3, parameter + 2),
+                    (1, 3, 2, parameter),
+                ),
+                phase_histogram(
+                    (0, 3, 3, parameter),
+                    (1, 1, 2, parameter + 2),
+                ),
+            )
+
+    def test_odd_sector_histogram_reciprocity(self):
+        for odd_total in range(5):
+            for even_total in range(4):
+                for input_mode_zero in range(even_total + 1):
+                    input_mode_two = even_total - input_mode_zero
+                    for output_mode_zero in range(even_total + 1):
+                        output_mode_two = even_total - output_mode_zero
+                        for input_split in range(odd_total + 1):
+                            for output_split in range(odd_total + 1):
+                                first = phase_histogram(
+                                    (
+                                        input_mode_zero,
+                                        input_split,
+                                        input_mode_two,
+                                        odd_total - input_split,
+                                    ),
+                                    (
+                                        output_mode_zero,
+                                        output_split,
+                                        output_mode_two,
+                                        odd_total - output_split,
+                                    ),
+                                )
+                                second = phase_histogram(
+                                    *four_mode_odd_sector_reciprocal_pair(
+                                        (
+                                            input_mode_zero,
+                                            input_split,
+                                            input_mode_two,
+                                            odd_total - input_split,
+                                        ),
+                                        (
+                                            output_mode_zero,
+                                            output_split,
+                                            output_mode_two,
+                                            odd_total - output_split,
+                                        ),
+                                    )
+                                )
+                                self.assertEqual(first, second)
+
+    def test_odd_sector_reciprocity_requires_balanced_even_total(self):
+        self.assertIsNone(
+            four_mode_odd_sector_reciprocal_pair(
+                (1, 1, 0, 0),
+                (0, 1, 0, 1),
+            )
+        )
+        with self.assertRaises(ValueError):
+            four_mode_odd_sector_reciprocal_pair((1, 1), (1, 1))
 
     def test_four_mode_dark_family_lifts_to_larger_power_of_two(self):
         source = (0, 3, 6, 3)

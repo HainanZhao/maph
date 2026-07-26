@@ -308,6 +308,44 @@ def reflection_positive_tail_start(a: int) -> int:
     return 4 * a - 3
 
 
+def four_mode_odd_sector_reciprocal_pair(
+    input_occupation: Sequence[int],
+    output_occupation: Sequence[int],
+) -> tuple[Occupation, Occupation] | None:
+    """Swap the odd-mode input/output splits when even totals agree.
+
+    For F_4, Krawtchouk self-duality proves that the returned pair has
+    exactly the same four-entry phase histogram as the original pair.
+    If the total occupation in modes 0 and 2 differs between input and
+    output, the sectorwise reciprocity theorem does not apply and the
+    function returns ``None``.
+    """
+    input_tuple, output_tuple = _validate_pair(
+        input_occupation, output_occupation
+    )
+    if len(input_tuple) != 4:
+        raise ValueError("sectorwise reciprocity requires four modes")
+    if input_tuple[0] + input_tuple[2] != (
+        output_tuple[0] + output_tuple[2]
+    ):
+        return None
+
+    return (
+        (
+            input_tuple[0],
+            output_tuple[1],
+            input_tuple[2],
+            output_tuple[3],
+        ),
+        (
+            output_tuple[0],
+            input_tuple[1],
+            output_tuple[2],
+            input_tuple[3],
+        ),
+    )
+
+
 def fourier_support_type_counts(
     input_occupation: Sequence[int],
     output_occupation: Sequence[int],

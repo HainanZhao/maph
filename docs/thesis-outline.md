@@ -11,24 +11,25 @@ a complete dissertation.
 
 ## Working title
 
-**Beyond cyclic suppression: exact cancellation mechanisms in
-many-boson Fourier interference**
+**The reciprocity closure of suppression laws in four-mode Fourier
+interferometers**
 
 ## Proposed central claim
 
 Dark transitions in Fourier multiports should not be divided only into
-“symmetry predicted” and “accidental.”  They admit a finer hierarchy:
+“symmetry predicted” and “accidental.”  Elementary suppression laws
+must first be closed under exact histogram-preserving reciprocity.  The
+current hierarchy is:
 
 1. cyclic selection-rule zeros;
-2. lower-dimensional zeros obtained by collapse to two effective support
+2. reciprocity images of cyclic zeros, including the former T1 family;
+3. lower-dimensional zeros obtained by collapse to two effective support
    types;
-3. nested orthogonal-polynomial cancellations among multiple path
-   sectors;
-4. any residue not captured by the first three mechanisms.
+4. residual arithmetic roots not captured by this closure.
 
 The thesis develops exact certificates for this hierarchy, proves a
-closed amplitude formula for one infinite non-periodic family, and tests
-how far the hierarchy explains finite four-mode data.
+phase-histogram reciprocity theorem and a closed amplitude formula, and
+tests how far their closure explains finite four-mode data.
 
 This claim is intentionally weaker than a complete classification of
 all Fourier zeros.  It is also more meaningful than calling every
@@ -46,12 +47,14 @@ for the evaluation step at prime-power mode counts.
 
 ### RQ2 — mechanism
 
-Which zeros are predicted by cyclic symmetry, which reduce to a
-two-type transition, and which require a multi-sector coefficient
-identity?
+Which zeros are predicted directly by cyclic symmetry, which become
+cyclic after histogram reciprocity, which reduce to a two-type
+transition, and which remain unexplained?
 
-Current answer: complete for the three \(m=N=4\) pilot families; a
-finite census exists through \(N=9\).
+Current answer: the reciprocity theorem places the former multitype T1
+pilot in the cyclic closure.  The exact orbit census through \(N=9\)
+reduces 72 nominal residual families at \(N=9\) to 40 closure
+components.
 
 ### RQ3 — infinite families
 
@@ -73,16 +76,20 @@ has coefficient
 \end{cases}
 \]
 
-The proof uses nested Krawtchouk duality.
+The coefficient proof uses nested Krawtchouk duality.  The reciprocity
+theorem further identifies this zero line as a transport of a standard
+cyclic-symmetry zero.
 
 ### RQ4 — physical distinction
 
 Do different cancellation mechanisms respond differently to structured
 phase errors or partial distinguishability?
 
-Current answer: open.  Generic robustness is already known in the
-literature, so only a mechanism-dependent result would count as a new
-contribution.
+Current answer: yes for calibrated output-mode unitary mixers.  Direct
+cyclic, reciprocity-cyclic, and isolated-root examples have different
+directional leakage exponents.  Every odd T1 member is exactly protected
+along the \(Y_{13}\) axis.  Realistic partial-distinguishability and loss
+floors remain open.
 
 ## Proposed chapters
 
@@ -117,7 +124,15 @@ contribution.
 - exact census for larger photon numbers;
 - limitations of the filter.
 
-### 5. Nested Krawtchouk cancellation
+### 5. Krawtchouk reciprocity closure
+
+- sectorwise histogram reciprocity;
+- extension across the \(4\times4\) complex-Hadamard family;
+- cyclic closure of the former T1 family;
+- reciprocity-orbit census;
+- boundary failure of the naive \(F_8\) analogue.
+
+### 6. Reflection-plane arithmetic
 
 - generating-function representation;
 - Theorems T1 and T2;
@@ -125,13 +140,16 @@ contribution.
 - two-parameter reflection family;
 - attack on Conjecture T3.
 
-### 6. Larger devices and physical consequences
+### 7. Larger devices and physical consequences
 
 - lifting \(F_d\) zeros to \(F_m\) for \(d\mid m\);
 - examples in \(F_8,F_{12},F_{16}\);
-- mechanism-sensitive perturbations if a nontrivial result is found.
+- exact tangent formulas for appended two-mode mixers;
+- directional quadratic/quartic/exact leakage fingerprints;
+- the all-odd \(Y_{13}\) protected-axis theorem;
+- realistic distinguishability and loss analysis.
 
-### 7. Conclusions and open problems
+### 8. Conclusions and open problems
 
 - what the hierarchy explains;
 - what remains genuinely unclassified;
@@ -143,7 +161,7 @@ contribution.
 ### Minimum defensible thesis
 
 - independent literature audit;
-- fully checked proofs of the cyclotomic criterion and T1/T2;
+- fully checked proofs of the cyclotomic criterion, T1/T2, T4, and P1;
 - reproducible exact code;
 - correct separation of the pilot families;
 - honest discussion of novelty and limitations.
@@ -153,17 +171,22 @@ contribution.
 Minimum thesis plus one of:
 
 - proof of Conjecture T3;
-- a second non-equivalent multitype infinite family;
+- a classification of the new sectorwise reciprocity and the fraction
+  of residual events it explains;
 - a theorem quantifying the fraction explained by the mechanism
   hierarchy in a growing regime;
 - a mechanism-dependent robustness theorem.
 
+The present package meets the last criterion and partially meets the
+reciprocity-classification criterion.  This assessment still depends on
+independent proof review and novelty confirmation.
+
 ### Paper threshold
 
-Literature novelty must be confirmed, and at least one result must go
-beyond a single isolated closed-form family.  The most credible package
-is T1/T2, the lifting theorem, and either Conjecture T3 or a second
-structural family.
+Literature novelty must be confirmed.  The most credible package is the
+sectorwise histogram reciprocity, its cyclic-closure consequence, the
+exact directional leakage theorem, and either realistic-noise analysis
+or a proof of Conjecture T3.
 
 ### Stretch goal
 
@@ -191,8 +214,12 @@ polynomials.
 2. **Done:** reclassify residual families through \(N=11\).
 3. **Done for \(N=11\):** reduce 16 representatives to four reflection
    classes and classify their natural affine lines exactly.
-4. **Next:** prove the hidden histogram identity directly and find
-   repeated affine factors at smaller particle numbers.
+4. **Done:** prove the hidden histogram identity directly and generalize
+   it to an infinite sectorwise reciprocity theorem.
+5. **Done through \(N=9\):** quotient the residual census by this
+   reciprocity.
+6. **Next:** extend the quotient with precomputed \(N=11\) families and
+   find repeated affine factors at smaller particle numbers.
 
 ### Sprint C — Conjecture T3
 
@@ -208,25 +235,29 @@ polynomials.
 5. **Next:** control the remaining linearly wide strip uniformly in
    \(a\), especially the oscillatory region below and just above
    \(b=2a\).
-6. **New algebraic route:** attack the stronger observed irreducibility
-   pattern of \(Q_a(b)=(a!)^2C_{a,b}\), using modular factorization and
-   Newton polygons.
+6. **Challenged:** the stronger irreducibility pattern is exactly
+   certified through \(a=59\), but elementary Eisenstein and one-edge
+   Newton-polygon routes show no traction.  Keep T3e secondary unless a
+   new valuation structure appears.
 
 ### Sprint D — physical discriminator
 
-1. Choose a unitary-preserving perturbation of the Fourier network.
-2. Compare leading leakage coefficients for cyclic, two-type, and
-   nested cancellations.
-3. Determine whether the difference is experimentally observable.
+1. **Done:** choose phase-programmable, unitary two-mode output mixers.
+2. **Done:** derive exact leading leakage coefficients for direct
+   cyclic, reciprocity-cyclic, and isolated-root examples.
+3. **Done:** prove an exact \(Y_{13}\) null axis for every odd T1
+   member.
+4. **Next:** add partial distinguishability, mode-dependent loss, and
+   reconstructed-unitary uncertainty to test experimental resolvability.
 
 ## Current verdict
 
-The project has advanced from a thesis proposal to a viable core
-chapter.  It is not yet a complete thesis or a submission-ready paper.
-The reflection plane now has a closed Bessel generating function, an
-exact recurrence, a rigorous zero-free region, and a much stronger
-finite certificate.  The remaining decisive issues are the unbounded
-finite strip in Conjecture T3, a second structural family or physical
-prediction, and independent database-level confirmation that a proved
-completeness theorem would be new.  The \(N=11\) affine-root mechanism
-is a promising candidate for that second structural direction.
+The project has advanced from a thesis proposal to a coherent thesis
+core.  It is not yet a submission-ready paper.  The strongest package
+is now the phase-histogram reciprocity theorem, its reclassification of
+the T1 line as transported cyclic suppression, and the
+mechanism-sensitive leakage fingerprint with an exact protected axis.
+The reflection-plane completeness conjecture remains a valuable
+arithmetic chapter but is no longer the only route to success.  The
+decisive next issues are reciprocity-orbit coverage, realistic noise
+floors, and independent database-level novelty confirmation.

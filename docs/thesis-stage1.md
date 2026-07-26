@@ -9,14 +9,15 @@ transitions in Fourier multiports.  That is still the broad setting, but
 the thesis needs a sharper organizing question:
 
 > Which exact zeros of a Fourier multiport are caused by the standard
-> cyclic selection rule, which are embedded two-mode Hong--Ou--Mandel
-> effects, and which require a genuinely multi-mode path-cancellation
-> mechanism?
+> cyclic selection rule directly, which lie in its closure under
+> Krawtchouk histogram reciprocity, which are embedded two-mode
+> Hong--Ou--Mandel effects, and which remain outside all three
+> explanations?
 
 A working title is:
 
-> **Beyond cyclic suppression: reducible and irreducible dark
-> transitions in Fourier multiports**
+> **The reciprocity closure of suppression laws in four-mode Fourier
+> interferometers**
 
 “Irreducible” is provisional.  It must ultimately be defined in terms of
 the absence of a lower-dimensional factorization of the occupied
@@ -64,7 +65,7 @@ ledger but is not a current thesis pillar.
 
 ### A6. The odd-\(a\) line is itself a new physical mechanism
 
-**Probably false.** The line \(b=2a\) reduces to the central
+**False.** The line \(b=2a\) reduces to the central
 Krawtchouk value
 
 \[
@@ -76,10 +77,36 @@ with the extended Hong--Ou--Mandel central nodal line, even though the
 four-mode coefficient reaches it through a nested reduction.  The
 project should not sell T1 alone as a new suppression principle.
 
+More strongly, Corollary T4a proves that the entire line is a
+histogram-reciprocity image of an ordinary cyclic-symmetry zero.
+
 The potentially new content is the **completeness statement** T3: within
 the full reflection-symmetric plane, the familiar parity line supplies
 all positive-integer zeros.  This distinction changes the paper
 threshold materially.
+
+### A7. Failure of the cyclic rule means a non-cyclic mechanism
+
+**False.** The cyclic rule is only a direct sufficient test on the
+given occupation pair.  Theorem T4 below preserves the complete phase
+histogram while changing the pair.  Under this reciprocity and elementary
+mode symmetries, the entire T1 family maps to a transition caught
+directly by the cyclic rule.
+
+The correct object is therefore the **closure** of elementary
+suppression laws under exact histogram-preserving transformations.  A
+zero should be called unexplained only after this closure has been
+applied.
+
+### A8. Reciprocity-equivalent zeros have the same robustness
+
+**False without transporting the perturbation as well.** Reciprocity
+equates ideal amplitudes or histograms after changing the occupation
+pair.  Applying the same laboratory mixer to the same named output
+modes does not commute with that transformation.  Direct cyclic and
+reciprocity-cyclic representatives therefore have different
+directional leakage fingerprints, as shown by Theorem P1 and the exact
+tables below.
 
 ## Exact generating-function representation
 
@@ -251,9 +278,10 @@ collapse immediately to one balanced \(2\times2\) transition.  Its first
 proof instead pairs coefficient sectors \(k\leftrightarrow a-k\).
 
 The stronger evaluation below shows that the sectors themselves are
-Krawtchouk coefficients.  The best current description is therefore a
-**nested Krawtchouk cancellation**, intermediate between a single
-embedded beam splitter and a genuinely new multi-mode special function.
+Krawtchouk coefficients.  The coefficient proof therefore exhibits a
+nested Krawtchouk cancellation.  Theorem T4 later shows that this
+nesting is an exact transport of a cyclic-symmetry zero, not a new
+irreducible suppression mechanism.
 
 This is an independently derived theorem of this project, but the
 literature audit indicates that its arithmetic core is an established
@@ -783,7 +811,7 @@ R_a\ \text{is irreducible over }\mathbb Q,
 \]
 
 Exact finite-field certificates prove the stated irreducibility pattern
-for every \(1\leq a\leq38\), with the degree-zero quotient understood at
+for every \(1\leq a\leq59\), with the degree-zero quotient understood at
 \(a=1\).  The standard-library command
 
 ```text
@@ -808,6 +836,25 @@ This is currently the most promising proof target, but also potentially
 harder than T3 itself.  A failed irreducibility conjecture would not
 falsify T3; a higher-degree factor could exist without having a positive
 integral root.
+
+The extended audit also weakens the originally proposed proof strategy.
+Every finite-field certificate prime must exceed \(2a\), because the
+constant term is a factorial and reduction modulo a smaller prime
+acquires a factor \(b\).  Certificate primes are correspondingly
+irregular.  Moreover:
+
+- no unshifted primitive one-edge Newton/Dumas case occurs through
+  \(a=60\);
+- no shifted case occurs for \(a\leq25\),
+  \(|c|\leq2a\), and tested primes \(p\leq4a+10\);
+- ordinary and naively shifted Eisenstein arguments are therefore not a
+  credible uniform route without new valuation structure.
+
+These are exact finite diagnostics, not impossibility theorems.  They
+support keeping T3e as a strong algebraic conjecture while attacking the
+weaker integral-root statement T3 directly.  Details and reproduction
+commands are in
+[the irreducibility challenge audit](agent-irred-extension.md).
 
 ### Exact computational certificate
 
@@ -924,53 +971,533 @@ calculation also found the unexpected histogram identity
 \operatorname{hist}\bigl((0,3,3,x),(1,1,2,x+2)\bigr).
 \]
 
-A finite residue-class degree argument supplies a computer-assisted
-proof; a direct coefficient proof remains a good small target.  Full
-parameters, degree reasoning, negative searches, and reproduction work
-are recorded in
+### Theorem N1 — direct proof of the hidden identity
+
+**Proved.** The displayed histogram identity holds for every
+nonnegative integer \(x\).
+
+### Proof
+
+The four entries of a phase histogram are determined by its evaluations
+at \(q=1,i,-1,-i\).  It therefore suffices to prove equality of the two
+unnormalized repeated-matrix permanents at those four values.
+
+Write the parameter as \(n\), set \(M=n+3\), and use variables
+\(X,Y,Z\) for input modes \(1,2,3\).  At \(q=i\), put
+
+\[
+S=X+Z,\qquad D=X-Z.
+\]
+
+The four Fourier row forms restricted to these modes are
+
+\[
+Y+S,\quad -Y+iD,\quad Y-S,\quad -Y-iD.
+\]
+
+Both transitions contain
+
+\[
+A=(Y+S)(Y-S)^2
+=\sum_{m=0}^3 a_mY^{3-m}S^m,
+\qquad
+(a_0,a_1,a_2,a_3)=(1,-1,-1,1).
+\]
+
+The remaining factors are
+
+\[
+B_r=(-Y+iD)^r(-Y-iD)^{M-r},
+\]
+
+with \(r=3\) on the left and \(r=1\) on the right.  Using
+
+\[
+K_m(r;M)=[t^m](1-t)^r(1+t)^{M-r},
+\]
+
+the coefficient of \(Y^m\) in \(B_r\) is
+
+\[
+p_mK_m(r;M)D^{M-m}.
+\]
+
+The phase \(p_m\) is the same for \(r=3\) and \(r=1\), since
+
+\[
+(-1)^mi^3(-i)^{n-m}
+=
+(-1)^mi(-i)^{n+2-m}.
+\]
+
+Moreover,
+
+\[
+[X^kZ^{M-k}]S^mD^{M-m}
+=(-1)^{M-m+k}K_k(m;M).
+\]
+
+The required exponents have \(k=1\) on the left and \(k=3\) on the
+right.  These have the same parity, so every factor in the resulting
+four-term sums agrees except
+
+\[
+K_m(3;M)K_1(m;M)
+\quad\text{versus}\quad
+K_m(1;M)K_3(m;M).
+\]
+
+Krawtchouk duality gives, term by term,
+
+\[
+\binom M3 K_m(3;M)K_1(m;M)
+=
+\binom M1 K_m(1;M)K_3(m;M).
+\]
+
+Hence, if \(c_L,c_R\) denote the two polynomial coefficients,
+
+\[
+\frac{c_L}{c_R}
+=
+\frac{\binom M1}{\binom M3}
+=
+\frac6{(n+1)(n+2)}.
+\]
+
+The input-occupation factorials are
+
+\[
+1!\,3!\,(n+2)!
+\quad\text{and}\quad
+3!\,3!\,n!,
+\]
+
+whose ratio is the reciprocal factor.  Thus the permanents agree at
+\(q=i\), and conjugation gives equality at \(q=-i\).
+
+At \(q=-1\), both output products reduce to
+
+\[
+(Y+S)^3(Y-S)^{n+3}.
+\]
+
+After selecting \(Y^3S^{n+3}\), the two \(X,Z\) coefficients have ratio
+
+\[
+\frac{\binom{n+3}{1}}{\binom{n+3}{3}}
+=\frac6{(n+1)(n+2)},
+\]
+
+again canceled by the input factorials.  At \(q=1\), both repeated
+matrices contain only ones and their permanents equal \((n+6)!\).
+All four Fourier evaluations therefore agree, and invertibility of the
+four-point discrete Fourier transform proves equality of the complete
+histograms. ∎
+
+### Theorem T4 — sectorwise histogram reciprocity
+
+**Proved.** Let \(N,d\geq0\), let \(s_0+s_2=d\), let
+\(0\leq\alpha\leq d\), and let \(0\leq p,k\leq N\).  The two \(F_4\)
+transitions
+
+\[
+\begin{aligned}
+(\alpha,k,d-\alpha,N-k)&\longrightarrow(s_0,p,s_2,N-p),\\
+(\alpha,p,d-\alpha,N-p)&\longrightarrow(s_0,k,s_2,N-k)
+\end{aligned}
+\]
+
+have identical four-phase histograms.
+
+Theorem N1 is the specialization
+
+\[
+d=3,\quad\alpha=0,\quad(s_0,s_2)=(1,2),\quad
+N=n+3,\quad(p,k)=(3,1).
+\]
+
+### Proof
+
+Restore a variable \(W\) for mode zero and put
+
+\[
+E=W+Y,\qquad T=W-Y,\qquad S=X+Z,\qquad D=X-Z.
+\]
+
+At \(q=i\), write
+
+\[
+A(E,S)=(E+S)^{s_0}(E-S)^{s_2}
+=\sum_{m=0}^d a_mE^{d-m}S^m,
+\]
+
+\[
+B_p(T,D)=(T+iD)^p(T-iD)^{N-p}.
+\]
+
+The three elementary coefficient formulas are
+
+\[
+\begin{aligned}
+[T^m]B_p
+&=(-1)^{N-p-m}i^{N-m}K_m(p;N)D^{N-m},\\
+[W^\alpha Y^{d-\alpha}]E^{d-m}T^m
+&=(-1)^mK_\alpha(m;d),\\
+[X^kZ^{N-k}]S^mD^{N-m}
+&=(-1)^{N-m-k}K_k(m;N).
+\end{aligned}
+\]
+
+If \(C^{(\alpha)}_{p,k}\) is the resulting unlabelled coefficient,
+every factor in its sum other than
+\(K_m(p;N)K_k(m;N)\) is invariant under
+\(p\leftrightarrow k\).  Termwise Krawtchouk duality therefore yields
+
+\[
+C^{(\alpha)}_{p,k}
+=\frac{\binom Nk}{\binom Np}C^{(\alpha)}_{k,p}.
+\]
+
+The corresponding input-factorial multipliers are
+
+\[
+\frac{\alpha!(d-\alpha)!\,N!}{\binom Nk}
+\quad\text{and}\quad
+\frac{\alpha!(d-\alpha)!\,N!}{\binom Np},
+\]
+
+so the labelled evaluations agree at \(q=i\).  At \(q=-1\), both
+generating products reduce to \((E+S)^d(E-S)^N\), and the same binomial
+ratio is canceled by the factorials.  The \(q=1\) evaluations count all
+labelled paths, and \(q=-i\) follows by conjugation.  Four-point Fourier
+inversion proves the histogram identity. ∎
+
+If
+
+\[
+\mathcal H_{d,N}(\alpha,k;s,p)
+=
+\operatorname{hist}\bigl(
+(\alpha,k,d-\alpha,N-k),(s,p,d-s,N-p)
+\bigr),
+\]
+
+then T4 and ordinary input/output exchange together give the fourfold
+symmetry
+
+\[
+\mathcal H(\alpha,k;s,p)
+=\mathcal H(\alpha,p;s,k)
+=\mathcal H(s,k;\alpha,p)
+=\mathcal H(s,p;\alpha,k).
+\]
+
+Thus the odd and even occupation sectors can be transposed independently,
+although a generic instance is not related by any ordinary mode
+permutation.
+
+T4 is qualitatively stronger than the original affine observation: it
+is an infinite parameterized equivalence between complete path-phase
+distributions.  It transports every dark or bright transition, and
+indeed its full phase-count profile, to a generally different
+occupation pair.  A novelty check must still determine whether this is
+known under a symmetric-power or multivariate-Krawtchouk formulation.
+
+### Corollary T4a — T1 is in the cyclic reciprocity closure
+
+For every \(a\geq0\), apply T4 with
+
+\[
+N=d=2a,\qquad k=a,\qquad p=2a,\qquad
+(s_0,s_2)=(a,a).
+\]
+
+It identifies the histograms of
+
+\[
+(0,a,2a,a)\longrightarrow(a,2a,a,0)
+\]
+
+and
+
+\[
+(0,2a,2a,0)\longrightarrow(a,a,a,a).
+\]
+
+Independent rotations of the input and output preserve vanishing.  The
+first transition is therefore equivalent for zero/nonzero purposes to
+the T1 self-transition, while the second is equivalent to
+
+\[
+(0,0,2a,2a)\longrightarrow(a,a,a,a).
+\]
+
+The uniform output has a one-step cyclic stabilizer.  Applied in the
+input/output-exchanged direction, the cyclic rule tests the weighted
+mode sum of \((0,0,2a,2a)\):
+
+\[
+2(2a)+3(2a)=10a\equiv2a\pmod4.
+\]
+
+It forces a zero exactly when \(a\) is odd.  Thus T1/T2's parity line is
+precisely a reciprocity image of standard cyclic suppression.
+
+This also explains why the reflection-plane conjecture singles out
+\(b=2a\).  After rotating the output of
+\((0,a,b,a)\to(0,a,b,a)\), the T4 balance condition is
+
+\[
+b=s_0+s_2=2a.
+\]
+
+No off-line point in that self-transition plane enters this particular
+cyclic reciprocity orbit.
+
+### Corollary T4b — robustness across the \(4\times4\) Hadamard family
+
+The same reciprocity is a polynomial identity for
+
+\[
+H(z)=
+\begin{pmatrix}
+1&1&1&1\\
+1&z&-1&-z\\
+1&-1&1&-1\\
+1&-z&-1&z
+\end{pmatrix}
+\]
+
+for arbitrary complex \(z\).  When \(|z|=1\), \(H(z)/2\) is unitary,
+and \(H(i)/2=F_4\).
+
+Indeed, the four row forms become
+
+\[
+E+S,\qquad T+zD,\qquad E-S,\qquad T-zD.
+\]
+
+The coefficient of \(T^m\) in the odd-row product gains a common factor
+\(z^{N-m}\); every other step of the T4 proof is unchanged.  Thus the
+two normalized physical amplitudes agree throughout the full dephased
+complex-Hadamard family, not only at the Fourier point.
+
+The scope is also sharply delimited.  A naive even/odd-sector swap for
+\(F_8\) already fails with two particles, so T4 is not an automatic
+parity law for all \(F_{2^m}\).  Its engine is the two-mode binary split
+inside \(F_4\).
+
+### Exact closure census
+
+Closing the residual families under independent rotations, reflections,
+input/output exchange, and T4 gives:
+
+| particles | original residual families | closure components | residual families reaching a direct cyclic event |
+|---:|---:|---:|---:|
+| 4 | 3 | 3 | 1 |
+| 5 | 8 | 3 | 0 |
+| 6 | 10 | 6 | 0 |
+| 7 | 0 | 0 | 0 |
+| 8 | 33 | 23 | 1 |
+| 9 | 72 | 40 | 0 |
+
+The \(N=4\) family reaching the cyclic class is T1 at \(a=1\).  Thus
+the closure does more than merge equivalent residual representatives:
+it can convert a nominally unexplained event into a directly
+symmetry-predicted one.  At \(N=5,6,9\), it substantially reduces the
+number of components without by itself explaining their darkness.
+
+The exact reproduction command is
+
+```text
+python3 scripts/analyze_reciprocity_census.py
+```
+
+The computer-assisted residue-class argument remains an independent
+check, but it is no longer needed for the theorem.  Full parameters,
+degree reasoning, negative searches, and reproduction work are recorded
+in
 [the \(N=11\) mining note](agent-n11-findings.md).
 
 This suggests a second organizing mechanism: **isolated common roots of
 affine amplitude quasipolynomials**.  It is structurally different from
-both cyclic symmetry and a parity-protected infinite line, but it is not
-yet a paper-level classification theorem.
+the cyclic/reciprocity closure in the tested orbits, but it is not yet a
+paper-level classification theorem.
+
+## Directional leakage as a physical discriminator
+
+The reciprocity result challenges another assumption: two zeros in the
+same algebraic closure need not respond identically when the same
+physical perturbation is applied to the laboratory output modes.
+
+Append a calibrated lossless mixer after \(F_4\):
+
+\[
+U^X_{pq}(\epsilon)=e^{i\epsilon X_{pq}}F_4,\qquad
+U^Y_{pq}(\epsilon)=e^{i\epsilon Y_{pq}}F_4,
+\]
+
+where
+
+\[
+X_{pq}=|p\rangle\langle q|+|q\rangle\langle p|,
+\qquad
+Y_{pq}=-i|p\rangle\langle q|+i|q\rangle\langle p|.
+\]
+
+For a dark event, exact ladder-operator differentiation expresses the
+first leakage amplitude entirely through neighboring root-of-unity
+permanents.  If \(Z_{r,t}\) is the unnormalized \(F_4\) permanent and
+
+\[
+D_{r,s}=2^N\sqrt{\prod_jr_j!\prod_ks_k!},
+\]
+
+then
+
+\[
+\mathcal A_X'(0)
+=\frac{i}{D_{r,s}}
+\left(s_qZ_{r,s+e_p-e_q}+s_pZ_{r,s-e_p+e_q}\right),
+\]
+
+\[
+\mathcal A_Y'(0)
+=\frac{1}{D_{r,s}}
+\left(s_pZ_{r,s-e_p+e_q}-s_qZ_{r,s+e_p-e_q}\right).
+\]
+
+This gives a **directional leakage fingerprint**, rather than one
+ambiguous scalar notion of robustness.
+
+### Theorem P1 — an exact protected axis for every odd T1 member
+
+**Proved.** For every positive odd \(a\), the transition
+
+\[
+(0,a,2a,a)\longrightarrow(0,a,2a,a)
+\]
+
+remains exactly dark under
+
+\[
+U^Y_{13}(\epsilon)=e^{i\epsilon Y_{13}}F_4
+\]
+
+for every real \(\epsilon\).
+
+For the proof, put \(u=x+z\) and \(v=x-z\).  The rotated row pair has
+the form
+
+\[
+L'_1L'_3=A(y^2+v^2)+Byv,
+\]
+
+while \(L_2=y-u\).  Exchange \(x\leftrightarrow z\) kills every term
+with an odd power of \(v\).  In a surviving sector with \(2h\) factors
+of \(Byv\), the remaining coefficient is a symmetric weight times
+
+\[
+K_{a,k}=[x^az^a](x-z)^{2k}(x+z)^{2a-2k}.
+\]
+
+The weight is invariant under \(k\leftrightarrow a-k\), whereas
+
+\[
+K_{a,a-k}=(-1)^aK_{a,k}.
+\]
+
+All sectors therefore cancel for odd \(a\), uniformly in
+\(\epsilon\).
+
+### Exact four-axis fingerprints
+
+For three representative events, the leading target probability is:
+
+| event | \(X_{12}\) | \(Y_{12}\) | \(X_{13}\) | \(Y_{13}\) |
+|---|---:|---:|---:|---:|
+| direct cyclic: \((1,1,1,1)\to(3,1,0,0)\) | exact | exact | exact | exact |
+| reciprocity-cyclic: \((0,1,2,1)\to\) itself | \(\epsilon^2/64\) | \(25\epsilon^2/64\) | \(\epsilon^2/4\) | exact |
+| isolated \(N=11\): \((0,1,3,7)\to(1,3,3,4)\) | \(315\epsilon^2/16384\) | \(315\epsilon^4/8192\) | \(315\epsilon^2/16384\) | \(315\epsilon^2/16384\) |
+
+The quartic \(Y_{12}\) direction of the isolated event is an exact
+second-order calculation, not a floating-point fit.  It also prevents
+an over-simple narrative: an isolated arithmetic root can be flatter
+than an infinite family along one direction.  What distinguishes the
+classes is the complete directional exponent pattern.
+
+The standard-library reproduction is
+
+```text
+python3 scripts/analyze_unitary_leakage.py
+```
+
+and the derivations and all six mixer pairs are recorded in
+[the unitary-leakage note](agent-unitary-leakage.md).
+
+This is experimentally meaningful in principle: forbidden-event
+leakage has already been used to diagnose Fourier photonic circuits,
+and programmable photonic processors with number-resolving detection
+exist:
+
+- [Crespi et al., Nature Communications 7,
+  10469 (2016)](https://doi.org/10.1038/ncomms10469);
+- [Dittel et al., Physical Review Letters 120,
+  240404 (2018)](https://doi.org/10.1103/PhysRevLett.120.240404);
+- [Arrazola et al., Nature 591,
+  54--60 (2021)](https://doi.org/10.1038/s41586-021-03202-1).
+
+The four-photon cyclic/reciprocity-cyclic comparison is the realistic
+first experiment.  The eleven-photon row is a later benchmark.  Partial
+distinguishability, mode-dependent loss, and reconstructed-unitary
+uncertainty must still be added before claiming an experimentally
+resolvable quartic signature.
 
 ## Revised contribution ladder
 
 1. **Completed:** exact phase-histogram computation and prime-power
    cancellation certificate.
 2. **Completed:** classification of the three four-photon residual
-   families into two embedded two-mode effects and one sector-pairing
-   effect.
-3. **Completed:** Theorem T1, an infinite family of non-periodic dark
-   self-transitions.
+   families into two embedded two-mode effects and one
+   reciprocity-cyclic event.
+3. **Reclassified:** Theorem T1 is an infinite family of non-periodic
+   dark self-transitions, but T4a places it in the reciprocity closure of
+   the standard cyclic rule.
 4. **Completed:** Theorem T2, the exact parity classification and closed
    coefficient formula.
 5. **Completed:** lifting to arbitrary mode counts divisible by four.
 6. **In progress:** T3a--T3e reduce Conjecture T3 to a linear wedge,
    add arithmetic and irreducibility structure, certify the conjecture
    for \(a\leq1000\), and certify the stronger irreducibility pattern
-   for \(a\leq38\).
+   for \(a\leq59\).
 7. **Completed first multitype case study:** the \(N=11\) residue
    reduces to four isolated affine quasipolynomial-root classes.
-8. **Paper threshold:** prove T3/T3e in general, or add a broader
-   structural theorem or mechanism-specific physical prediction.  T1/T2
-   alone no longer meet this threshold.
-9. **Master's-thesis threshold:** a substantial \(F_4\) mechanism
+8. **New structural theorem:** T4 upgrades one hidden \(N=11\) identity
+   to an infinite sectorwise histogram reciprocity and explains the
+   whole T1/T2 zero line as transported cyclic suppression.
+9. **New physical theorem:** P1 proves an all-odd exact perturbation
+   axis, while the four-axis leakage table distinguishes direct cyclic,
+   reciprocity-cyclic, and isolated-root examples.
+10. **Paper threshold:** confirm T4/P1 novelty and add realistic
+   distinguishability/loss analysis, a T4 orbit classification, or a
+   proof of T3/T3e.
+11. **Master's-thesis threshold:** a substantial \(F_4\) mechanism
    classification, or a substantial partial classification together
    with extension to \(F_{2^d}\) and robustness analysis.
 
 ## Immediate experiments
 
-1. Attack T3e uniformly using Newton polygons and primes adapted to
-   \(a\); fall back to T3d divisibility if full irreducibility is too
-   strong.
-2. Prove the \(L_A/L_C\) histogram identity directly.
+1. Attack the weaker integral-root conjecture T3 directly using T3d
+   divisibility and the reciprocity explanation of the line \(b=2a\).
+   Revisit T3e only if new coefficient-valuation structure appears.
+2. Extend the T4 closure census beyond \(N=9\) using stored residual
+   representatives rather than repeating expensive full pair scans.
 3. Search the \(N=5,6,8,9\) residue for repeated affine common factors.
 4. Formalize reducibility under Fourier-valid dihedral operations and
    lower-dimensional tensor decompositions.
-5. Compare leakage under unitary perturbations for cyclic, parity-line,
-   and isolated affine-root zeros.
+5. Add realistic noise floors to the exact leakage comparison of direct
+   cyclic, reciprocity-cyclic, and isolated affine-root zeros.
 6. Confirm the focused novelty audit through MathSciNet or Zentralblatt
    access before drafting a paper.
 
@@ -980,7 +1507,7 @@ yet a paper-level classification theorem.
 |---|---|---|
 | R1 | First pilot family is an embedded balanced two-mode zero | Proved; known mechanism |
 | R2 | Second pilot family is an embedded central-nodal-line zero | Proved; known mechanism |
-| T1 | \((0,a,2a,a)\to(0,a,2a,a)\) is dark for every odd \(a\) | Proved here; arithmetic core is a known parity/Krawtchouk mechanism |
+| T1 | \((0,a,2a,a)\to(0,a,2a,a)\) is dark for every odd \(a\) | Proved; T4a places it in the cyclic reciprocity closure |
 | T2 | Exact all-\(a\) coefficient formula | Proved using Krawtchouk duality |
 | T2b | Every \(F_d\) zero lifts to \(F_m\) when \(d\mid m\) | Proved; elementary embedding |
 | T3 | In the positive reflection plane, zeros occur exactly at odd \(a\), \(b=2a\) | Conjecture; exactly certified for \(a\leq1000\) and every \(b>0\) |
@@ -988,5 +1515,9 @@ yet a paper-level classification theorem.
 | T3b | \(C_{a,b}>0\) for \(a\geq3,\ b\geq4a-3\), with explicit small-\(a\) bounds | Proved |
 | T3c | Exact nonzero formula on \(b=2a-1\) | Proved |
 | T3d | Monic integer polynomial structure and divisibility restrictions on integral roots | Proved |
-| T3e | \(Q_a\) is irreducible for even \(a\); after the two known linear factors, irreducible for odd \(a\) | Conjecture in general; exactly certified for \(a\leq38\) |
-| T4 | T1 is irreducible in an appropriate formal sense | Probably false if nested reductions count; definition still required |
+| T3e | \(Q_a\) is irreducible for even \(a\); after the two known linear factors, irreducible for odd \(a\) | Conjecture in general; exactly certified for \(a\leq59\) |
+| N1 | The two \(L_A/L_C\) affine lines have identical phase histograms | Proved directly by Krawtchouk duality |
+| T4 | Sectorwise reciprocity preserves the complete \(F_4\) phase histogram | Proved |
+| T4a | T1/T2's zero line is a reciprocity image of a cyclic-symmetry zero | Proved |
+| T4b | Sectorwise reciprocity persists across the full \(4\times4\) complex-Hadamard family | Proved |
+| P1 | Every odd T1 member remains exactly dark along the \(Y_{13}\) unitary rotation | Proved |
