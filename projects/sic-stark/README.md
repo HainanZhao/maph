@@ -21,11 +21,15 @@ precision. Research cycle 2 additionally:
   \(0\) and \(1\) occur together;
 - reduces the \(L_d^3\) Jacobi cocycle to three copies of the universal
   \(S\)-kernel;
-- proves the canonical phase kernel is invariant under simultaneous Zauner
-  action and records the resulting conditional threefold equation reduction.
+- proves the Shintani--Faddeev values and canonical phase kernel are
+  invariant under Zauner action, giving an exact threefold reduction of the
+  TCC equations;
+- identifies the zero-output equation as an automatic consequence of the
+  cocycle inverse law.
 
 See [`docs/sic-stark-sprint1.md`](docs/sic-stark-sprint1.md) and
-[`docs/sic-stark-cycle2.md`](docs/sic-stark-cycle2.md) for the claim ledger.
+[`docs/sic-stark-cycle2.md`](docs/sic-stark-cycle2.md), followed by
+[`docs/sic-stark-cycle3.md`](docs/sic-stark-cycle3.md), for the claim ledger.
 
 ## Verification
 

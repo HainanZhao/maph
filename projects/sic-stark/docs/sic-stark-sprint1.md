@@ -46,9 +46,9 @@ as the TCC:
 
 \[
 \sum_{\boldsymbol q}
- \tau_d^{\,r\langle\boldsymbol p,
+ \omega_d^{\,r\langle\boldsymbol p,
                  (\lambda I+F_t)\boldsymbol q\rangle}
- \mathfrak S^{d^{-1}\boldsymbol q}_{A_t^{-1}}(\beta_t)
+ \mathfrak S^{d^{-1}\boldsymbol q}_{A_t}(\beta_t)
  \mathfrak S^{d^{-1}(\boldsymbol q-\boldsymbol p)}_{A_t^{-1}}(\beta_t)
  =
  d^2\delta_{\boldsymbol p,\boldsymbol0}.
@@ -265,8 +265,8 @@ The canonical rank-one target becomes
 \[
 \boxed{
 \sum_{\boldsymbol q\in(\mathbb Z/d\mathbb Z)^2}
-\tau_d^{\langle\boldsymbol p,Z_*\boldsymbol q\rangle}
-\mathfrak S^{\,\boldsymbol q/d}_{A_d^{-1}}(\beta_d)
+\omega_d^{\langle\boldsymbol p,Z_*\boldsymbol q\rangle}
+\mathfrak S^{\,\boldsymbol q/d}_{A_d}(\beta_d)
 \mathfrak S^{\,(\boldsymbol q-\boldsymbol p)/d}_{A_d^{-1}}(\beta_d)
 =d^2\delta_{\boldsymbol p,\boldsymbol0}
 }
@@ -322,10 +322,13 @@ See `docs/sic-stark-cycle2.md`.
 
 ### Q3. How many \(\boldsymbol p\)-orbits really require proof?
 
-The convolution is indexed by \(d^2\) values of \(\boldsymbol p\), but
-Zauner, Galois, parity, and unit actions may collapse these to divisor orbits
-classified by \(\gcd(p_1,p_2,d)\).  Prove the covariance before performing
-large numerical scans.
+**Resolved at the Zauner level in cycle 3.** The source's
+\(GL_2(\mathbb Z)\)-transformation theorem proves exact invariance of the
+canonical special-value array under \(L_d\). Together with phase-kernel
+invariance and the automatic zero-output identity, this leaves exactly
+\((d^2-1)/3\) unresolved equations when \(3\nmid d\) and \(d^2/3+1\) when
+\(3\mid d\). Further Galois or divisor-orbit reduction remains open. See
+`docs/sic-stark-cycle3.md`.
 
 ### Q4. Can idempotency propagate up a dimension tower?
 

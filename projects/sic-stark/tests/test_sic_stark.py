@@ -5,6 +5,7 @@ from src.sic_stark import (
     canonical_characteristic_correction_index,
     canonical_family_record,
     canonical_form,
+    canonical_form_stabilizer_residual,
     canonical_jacobi_scale_exponents,
     canonical_jacobi_word,
     canonical_kernel_identity,
@@ -13,6 +14,9 @@ from src.sic_stark import (
     canonical_level_stabilizer,
     canonical_shift_partner,
     canonical_stabilizer,
+    canonical_tcc_equation_count,
+    canonical_tcc_equation_representatives,
+    canonical_tcc_formal_signature,
     canonical_tcc_orbit_bound,
     canonical_twist_exponent,
     canonical_twist_kernel,
@@ -27,6 +31,7 @@ from src.sic_stark import (
     matrix_mod,
     matrix_power,
     matrix_vector_multiply,
+    transform_form,
 )
 
 
@@ -48,6 +53,15 @@ class CanonicalSicStarkTests(unittest.TestCase):
     def test_canonical_stabilizer_is_unimodular(self) -> None:
         for dimension in range(4, 501):
             self.assertEqual(determinant(canonical_stabilizer(dimension)), 1)
+
+    def test_canonical_stabilizer_fixes_form(self) -> None:
+        for dimension in range(4, 501):
+            form = canonical_form(dimension)
+            stabilizer = canonical_stabilizer(dimension)
+            self.assertEqual(transform_form(form, stabilizer), form)
+            self.assertEqual(
+                canonical_form_stabilizer_residual(dimension), (0, 0, 0)
+            )
 
     def test_canonical_stabilizer_cube_is_identity_mod_d(self) -> None:
         for dimension in range(4, 501):
@@ -142,6 +156,14 @@ class CanonicalSicStarkTests(unittest.TestCase):
             self.assertEqual(
                 len(orbits), canonical_tcc_orbit_bound(dimension)
             )
+            self.assertEqual(
+                len(orbits) - 1,
+                canonical_tcc_equation_count(dimension),
+            )
+            self.assertEqual(
+                len(orbits) - 1,
+                len(canonical_tcc_equation_representatives(dimension)),
+            )
 
     def test_nonzero_fixed_vectors_when_three_divides_dimension(self) -> None:
         for dimension in (6, 9, 12, 15):
@@ -188,6 +210,42 @@ class CanonicalSicStarkTests(unittest.TestCase):
                                 ),
                             )
 
+    def test_formal_tcc_signature_is_zauner_invariant(self) -> None:
+        for dimension in range(4, 16):
+            representatives = canonical_tcc_equation_representatives(
+                dimension
+            )
+            self.assertEqual(
+                representatives, tuple(sorted(representatives))
+            )
+            for first in range(dimension):
+                for second in range(dimension):
+                    output = (first, second)
+                    acted_output = canonical_zauner_action(
+                        dimension, output
+                    )
+                    self.assertEqual(
+                        canonical_tcc_formal_signature(
+                            dimension, acted_output
+                        ),
+                        canonical_tcc_formal_signature(
+                            dimension, output
+                        ),
+                    )
+
+    def test_zero_output_tcc_signature_is_automatic(self) -> None:
+        for dimension in range(4, 101):
+            signature = canonical_tcc_formal_signature(
+                dimension, (0, 0)
+            )
+            self.assertEqual(sum(signature.values()), dimension * dimension)
+            for (exponent, numerator, denominator), multiplicity in (
+                signature.items()
+            ):
+                self.assertEqual(exponent, 0)
+                self.assertEqual(numerator, denominator)
+                self.assertGreater(multiplicity, 0)
+
     def test_uniform_jacobi_word_and_scales(self) -> None:
         self.assertEqual(
             canonical_jacobi_scale_exponents(), (-2, -1, 0)
@@ -212,6 +270,8 @@ class CanonicalSicStarkTests(unittest.TestCase):
         self.assertEqual(record["cube_mod_dimension"], IDENTITY_2)
         self.assertEqual(record["shift_zero_partner"], 1)
         self.assertEqual(record["jacobi_scale_exponents"], (-2, -1, 0))
+        self.assertEqual(record["form_stabilizer_residual"], (0, 0, 0))
+        self.assertEqual(record["tcc_equation_count"], 5)
 
     def test_invalid_dimensions_are_rejected(self) -> None:
         with self.assertRaises(ValueError):
