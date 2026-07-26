@@ -266,6 +266,48 @@ def four_mode_reflection_self_coefficient(a: int, b: int) -> int:
     return result
 
 
+def four_mode_reflection_closed_sum(a: int, b: int) -> int:
+    """Return the reflection-family coefficient by its binomial convolution.
+
+    Krawtchouk duality reduces the nested coefficient in
+    :func:`four_mode_reflection_self_coefficient` to
+
+        (-1)^a sum_j (-1)^j
+            binom(2(a-j), a-j) binom(b, 2j) binom(2j, j).
+
+    The sum stops at ``min(a, b // 2)``.  This form exposes the
+    exponential generating function and is much faster for large
+    parameter scans.
+    """
+    if a < 0 or b < 0:
+        raise ValueError("a and b must be nonnegative")
+
+    return (-1) ** a * sum(
+        (-1) ** j
+        * comb(2 * (a - j), a - j)
+        * comb(b, 2 * j)
+        * comb(2 * j, j)
+        for j in range(min(a, b // 2) + 1)
+    )
+
+
+def reflection_positive_tail_start(a: int) -> int:
+    """Return a rigorous threshold beyond which ``C[a,b]`` is positive.
+
+    Strict growth of the alternating binomial-convolution terms proves
+    positivity for ``b >= 4*a - 3`` when ``a >= 3``.  The two exceptional
+    thresholds are 3 for ``a == 1`` and 6 for ``a == 2``.  These are
+    sufficient proof bounds, not claims that the bounds are sharp.
+    """
+    if a < 1:
+        raise ValueError("a must be positive")
+    if a == 1:
+        return 3
+    if a == 2:
+        return 6
+    return 4 * a - 3
+
+
 def fourier_support_type_counts(
     input_occupation: Sequence[int],
     output_occupation: Sequence[int],

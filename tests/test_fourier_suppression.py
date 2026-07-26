@@ -3,6 +3,7 @@ import unittest
 
 from src.fourier_suppression import (
     canonical_dark_pair,
+    four_mode_reflection_closed_sum,
     four_mode_self_family_closed_form,
     four_mode_self_family_coefficient,
     four_mode_reflection_self_coefficient,
@@ -13,6 +14,7 @@ from src.fourier_suppression import (
     occupation_vectors,
     phase_histogram,
     prime_power_base,
+    reflection_positive_tail_start,
     simple_cyclic_rule_predicts_dark,
 )
 
@@ -152,6 +154,63 @@ class FourierSuppressionTests(unittest.TestCase):
                     permanent,
                     input_factorials
                     * four_mode_reflection_self_coefficient(a, b),
+                )
+
+    def test_reflection_closed_sum_matches_nested_coefficient(self):
+        for a in range(16):
+            for b in range(41):
+                self.assertEqual(
+                    four_mode_reflection_closed_sum(a, b),
+                    four_mode_reflection_self_coefficient(a, b),
+                )
+
+    def test_reflection_coefficient_recurrence(self):
+        for a in range(1, 12):
+            for b in range(2, 31):
+                left = b * four_mode_reflection_closed_sum(a, b)
+                right = (
+                    (2 * b - 1)
+                    * four_mode_reflection_closed_sum(a, b - 1)
+                    - (b - 1)
+                    * four_mode_reflection_closed_sum(a, b - 2)
+                    + 4
+                    * (b - 1)
+                    * four_mode_reflection_closed_sum(a - 1, b - 2)
+                )
+                self.assertEqual(left, right)
+
+    def test_reflection_a_recurrence(self):
+        def coefficient(a, b):
+            if a < 0 or b < 0:
+                return 0
+            return four_mode_reflection_closed_sum(a, b)
+
+        for a in range(10):
+            for b in range(25):
+                left = (a + 1) ** 2 * coefficient(a + 1, b)
+                right = (
+                    b * (b - 1) * coefficient(a, b - 2)
+                    - (8 * a * a + 4 * a + 2) * coefficient(a, b)
+                    + 8
+                    * b
+                    * (b - 1)
+                    * coefficient(a - 1, b - 2)
+                    - (16 * a * (a - 1) + 4)
+                    * coefficient(a - 1, b)
+                    + 16
+                    * b
+                    * (b - 1)
+                    * coefficient(a - 2, b - 2)
+                )
+                self.assertEqual(left, right)
+
+    def test_reflection_positive_tail_bound(self):
+        for a in range(1, 31):
+            start = reflection_positive_tail_start(a)
+            for b in range(start, start + 10):
+                self.assertGreater(
+                    four_mode_reflection_closed_sum(a, b),
+                    0,
                 )
 
     def test_four_mode_dark_family_lifts_to_larger_power_of_two(self):
