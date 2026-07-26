@@ -7,7 +7,8 @@ The central theorem gives, for every \(m\ge2\) and every \(n>2\) divisible
 by \(m\), an explicit Fourier-cat input, \(m(m-1)/2\) dark outcomes, and two
 fixed signed probes whose limiting contrast Jacobian identifies all
 \(m(m-1)\) off-diagonal Hermitian error coordinates.  The construction is
-dimension-minimal within the weak-probe regular-local protocol.
+dimension-saturating within the weak-probe regular-local protocol; this is
+an algebraic identifiability statement, not a sample-efficiency claim.
 
 ## Layout
 
@@ -21,6 +22,8 @@ dimension-minimal within the weak-probe regular-local protocol.
 - `src/fourier_suppression.py`: exact Fourier phase-histogram machinery.
 - `scripts/`: exact certificates and finite-angle analyses.
 - `tests/`: theorem regression tests and independent polynomial checks.
+- `REPRODUCIBILITY.md`: claim-to-command map for the paper.
+- `LICENSE-CODE`: MIT license for the accompanying software.
 
 ## Quick start
 
@@ -31,6 +34,8 @@ python3 -m unittest discover -s tests -v
 python3 scripts/certify_general_fourier_cat_tomography.py --max-modes 9
 python3 scripts/search_su4_dark_tomography.py
 python3 scripts/analyze_cat_finite_statistics.py
+python3 scripts/analyze_general_resource_scaling.py
+python3 scripts/simulate_f4_reconstruction.py --repetitions 5000
 ```
 
 Compile the paper from `paper/`:

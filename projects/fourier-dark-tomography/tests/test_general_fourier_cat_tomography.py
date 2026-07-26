@@ -7,6 +7,7 @@ from scripts.certify_general_fourier_cat_tomography import (
     basis_entry,
     certificate_matrix,
     coordinates,
+    f4_spam_matrix,
     imaginary_probe_entry,
     modular_charge,
     probe_amplitude,
@@ -148,6 +149,15 @@ class GeneralFourierCatTomographyTests(unittest.TestCase):
                         )
                         self.assertAlmostEqual(actual.real, expected.real, 10)
                         self.assertAlmostEqual(actual.imag, expected.imag, 10)
+
+    def test_f4_amplitude_and_phase_spam_ranks(self):
+        amplitude = f4_spam_matrix(include_phases=False)
+        phase = f4_spam_matrix(include_amplitudes=False)
+        combined = f4_spam_matrix()
+        self.assertEqual(rational_rank(amplitude), 3)
+        self.assertEqual(rational_rank(phase), 3)
+        # The two three-dimensional images overlap in two directions.
+        self.assertEqual(rational_rank(combined), 4)
 
 
 if __name__ == "__main__":

@@ -303,7 +303,7 @@ calibrations, or estimator bias, and therefore is not a cost forecast.
 The rank-twelve theorem assumes a calibrated coherent input and calibrated
 signed probes.  Several failures are structurally important.
 
-### Cat-state phase is the missing reference
+### The full cat coefficient vector is the missing reference
 
 Let the four cat components acquire unknown phases \(\alpha_j\).  Infinitesimally
 these are produced by an input diagonal phase \(D\), since
@@ -319,6 +319,20 @@ If these phases are included as unconstrained nuisance parameters, the
 augmented model cannot separately identify all twelve device coordinates
 from this experiment alone.  An independent phase calibration or additional
 reference state is necessary.
+
+Unequal component amplitudes are confounded as well. For
+\[
+|\Psi_\eta\rangle=\frac12\sum_j(1+\eta_j)|4e_j\rangle,
+\]
+the nominally dark charge-\(c\) leakage is proportional to the discrete
+Fourier coefficient \(\widehat\eta_c\) and is constant across the selected
+outcomes in that charge block. A device error with constant cyclic-edge
+coordinate \(z_p\) reproduces the same leakage through
+\((n-1)z_p+z_{p+c}=nz_p\); the antipodal block reproduces both quadratures
+through gains \(n\) and \(n-2\). Thus the complete complex coefficient
+vector must be calibrated. At \(m=4\), amplitude-only and phase-only
+nuisance images each have rank three, while their combined selected-data
+image has rank four.
 
 Partial dephasing of the cat is not merely lower visibility: in the fully
 incoherent limit the input again has the number-state input-phase gauge, and
@@ -359,8 +373,8 @@ statement:
   regime in the ideal model;
 - a background floor creates a transparent displacement-versus-bias
   tradeoff;
-- unknown cat phases recreate precisely the three-dimensional gauge that
-  the coherent resource was introduced to remove.
+- unknown cat amplitudes and phases produce exact device-confounded
+  directions on the selected data.
 
 The last point should be stated as prominently as the rank-twelve
 certificate.  It identifies the experimental resource requirement and

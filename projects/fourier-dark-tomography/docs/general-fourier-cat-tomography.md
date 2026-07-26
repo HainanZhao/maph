@@ -228,8 +228,12 @@ polynomial inverse is asserted.
 One dark outcome has one complex amplitude derivative and therefore supplies
 at most two independent real limiting contrast rows, regardless of how many
 probe directions are applied.  The construction uses exactly two rows for
-each of \(m(m-1)/2\) outcomes, proving outcome minimality.  Its
-\(m(m-1)\) scalar contrasts also attain the dimension bound.
+each of \(m(m-1)/2\) outcomes, attaining the induced outcome count and the
+\(m(m-1)\) scalar dimension bound within this weak-probe regular-local
+model. These are algebraic counts, not run costs: all bins are acquired in
+parallel and an overcomplete selection may be statistically preferable.
+The operational resource claim is four programmed settings independent of
+\(m\).
 
 The non-antipodal amplitude block \((n-1)I+P_c\) has singular values
 \[

@@ -17,7 +17,8 @@
 
 \begin{document}
 
-\title{Dimension-saturating local tomography from Fourier-cat dark events}
+\title{Dimension-saturating local tomography of off-diagonal
+Fourier-interferometer errors from displaced dark events}
 
 \author{Hainan Zhao}
 \email{hainzhao@gmail.com}
@@ -26,30 +27,24 @@
 \date{\today}
 
 \begin{abstract}
-An exact dark event is a sensitive null test for a linear-optical device, but
-its unprobed probability is quadratic in a small coherent error and has no
-regular local inverse.  We show that positive and negative calibrated output
-probes turn dark-event counts into linear phase-sensitive observables.  A
-general signed-probe theorem gives their limiting Jacobian and proves that
-one dark event contributes at most two real rows.  Number-state inputs face
-an exact obstruction: in an $m$-mode Fourier interferometer, an
-$(m-1)$-dimensional subspace of off-diagonal output generators is
-indistinguishable from input phases, even after an arbitrary known output
-analyzer.  A coherent Fourier-cat input removes this continuous gauge.
-For every $m\geq2$ and every $n>2$ divisible by $m$, we construct
-$m(m-1)/2$ dark outcomes and two fixed probes whose $m(m-1)$ signed
-contrasts identify every off-diagonal Hermitian error locally.  Within the
-weak-probe, regular-local protocol defined here, both the outcome and
-scalar-contrast counts attain their dimension lower bounds; four programmed
-settings suffice for every $m$, although we do not prove that four is the
-minimum possible number of settings.  At $m=n=4$ we additionally
-give a sparse exact implementation with Jacobian determinant
-$-177147/256$.  We prove an $O(\epsilon^2)$ finite-probe bias bound and show
-how internal coherent errors propagate to the estimated output generator.
-The Fourier-cat suppression rule and displaced-null principle are known;
-the contribution is their explicit bosonic identifiability construction
-together with the Fock gauge theorem and exact dimension-saturating
-certificates.
+Dark output events are useful null tests for linear-optical devices, but
+their unprobed probabilities have no signed linear response to a coherent
+error.  We append positive and negative calibrated output displacements and
+use their count difference as a phase-sensitive local observable.  We prove
+that number-state inputs leave an exact $(m-1)$-dimensional gauge at an
+$m$-mode Fourier interferometer, whereas a phase-calibrated fixed-number
+multimode cat removes that continuous obstruction.  For every $m\geq2$ and
+every $n>2$ divisible by $m$, an explicit family of dark outcomes and two
+fixed probes gives a full-rank local Jacobian for all $m(m-1)$ off-diagonal
+Hermitian error coordinates using four programmed settings.  The scalar
+response count saturates a dimension bound within the declared weak-probe
+model.  We also give exact four-mode certificates, a weighted local
+estimator, finite-angle and finite-shot tests, and an augmented analysis
+showing that unknown cat amplitudes as well as phases are confounded with
+device errors.  The construction is an identifiability result, not a
+scalable replacement for conventional optical characterization: at $n=m$
+its reference probabilities decay as $O(\epsilon^2m^{2-m})$ for
+unit-norm probes.
 \end{abstract}
 
 \maketitle
@@ -104,20 +99,35 @@ Our contributions are:
 \item a general count-level signed-probe theorem, including the two-real-row
 bound per dark event and a rigorous $O(\epsilon^2)$ finite-angle bias bound;
 \item an exact $(m-1)$-dimensional number-state gauge no-go theorem;
-\item an outcome- and contrast-minimal rank-nine $F_4$ certificate, within
-the same regular-local framework, using one four-photon Fock input;
+\item an exact rank-nine $F_4$ certificate using one four-photon Fock input;
 \item for all $m\geq2$ and $n>2$ divisible by $m$, a
 dimension-saturating Fourier-cat construction identifying all $m(m-1)$
 off-diagonal Hermitian coordinates from $m(m-1)/2$ dark outcomes and four
 programmed signed settings;
 \item a sparse exact $F_4$ implementation with a rational full-rank
-certificate;
-\item a first-order adjoint rule connecting arbitrary internal coherent
-circuit errors to the reconstructed output generator.
+certificate, an explicit weighted estimator, and finite-shot simulations.
 \end{enumerate}
 The result is local tomography on the declared $m(m-1)$-dimensional
 off-diagonal slice.  It is not global unitary tomography and does not
 identify the $m-1$ output-diagonal $SU(m)$ generators.
+
+\begin{figure*}[t]
+\centering
+\fbox{\shortstack{fixed-number multimode cat\\or four-photon Fock input}}
+$\longrightarrow$
+\fbox{\shortstack{nominal $F_m$\\+ unknown local error}}
+$\longrightarrow$
+\fbox{\shortstack{calibrated displacement\\
+$+\epsilon R,-\epsilon R,+\epsilon T,-\epsilon T$}}
+$\longrightarrow$
+\fbox{\shortstack{photon-number-resolved\\detection}}
+$\longrightarrow$
+\fbox{\shortstack{signed probability contrasts\\weighted local estimate}}
+\caption{Protocol concept.  The known displacement supplies a reference
+amplitude at nominally dark outputs.  The scheme assumes that the input
+coefficients and displacement generators have been calibrated.}
+\label{fig:protocol}
+\end{figure*}
 
 \section{Model and parameter target}
 \label{sec:model}
@@ -357,7 +367,8 @@ Let
  F_m(k,j)=m^{-1/2}\omega^{kj},\qquad
  \omega=\ee^{2\pi\ii/m},
 \end{equation}
-and define the phase-twisted all-bunched cat
+and define the phase-twisted all-bunched cat, equivalently a fixed-number
+generalized multimode NOON state,
 \begin{equation}
  |\Psi_\ell^{(m,n)}\rangle
  =\frac1{\sqrt m}\sum_{j=0}^{m-1}
@@ -441,6 +452,16 @@ where the selected outcomes share
 $\alpha=\sqrt n\,m^{(1-n)/2}$.  The two probes therefore read the real and
 imaginary parts of every selected complex functional.
 
+Both probes are lossless mode-mixing Hamiltonians and can in principle be
+synthesized from pairwise beam splitters and phases, but they are dense:
+$O(m^2)$ couplings must be compiled into each analyzer.  Since
+$\|R\|_2=m-1$ and $\|T\|_2\leq m-1$, a conservative unit-spectral-size
+implementation is $\bar R=R/(m-1)$ and $\bar T=T/(m-1)$; reference
+amplitudes and response rows acquire the same known scale factors.  With
+the unnormalized generators the perturbative condition is
+$\epsilon(m-1)\ll1$, whereas for $\bar R,\bar T$ it is
+$\epsilon\ll1$.
+
 For completeness, the underlying block inversion is especially simple.
 For a non-antipodal separation, set $z_a=H_{a,a-c}$.  Equation
 \eqref{eq:general-dark-functional} becomes
@@ -461,10 +482,14 @@ off-diagonal Hermitian entries, proving the theorem.  A detailed derivation
 is in Appendix~\ref{app:cat-certificate}.
 
 One dark event supplies at most two real rows by Corollary~1.  Consequently
-the theorem's $m(m-1)/2$ events and $m(m-1)$ scalar contrasts attain the
-corresponding lower bounds \emph{within this weak-probe regular-local
-framework}.  This does not prove global injectivity, nor does it prove that
-four programmed settings are necessary among more general protocols.  After
+the theorem's $m(m-1)$ scalar contrasts attain the dimension lower bound,
+and its selected outcomes attain the induced event-count bound,
+\emph{within this weak-probe regular-local framework}.  These are algebraic
+counts, not experimental run counts: all bins are collected in parallel,
+and an overcomplete outcome set may be statistically preferable.  The
+operationally notable resource is four programmed settings independent of
+$m$.  This does not prove global injectivity, nor does it prove that four
+settings are necessary among more general protocols.  After
 division by the known reference magnitudes in
 Eq.~\eqref{eq:general-reference-values}, each cyclic block has condition
 number at most $n/(n-2)$.  Without that row calibration, the worst
@@ -563,7 +588,11 @@ programmed settings because all outcomes for a probe are recorded in
 parallel: $\pm\epsilon H_X$ and $\pm\epsilon H_Y$.  The raw
 limiting condition number is $7.05$; row normalization gives $4.86$, and
 ideal background-free Poisson whitening gives $4.79$.  These are local
-design diagnostics, not hardware-independent resource guarantees.
+design diagnostics, not hardware-independent resource guarantees.  Here
+row normalization divides every response row by its Euclidean norm, while
+Poisson whitening divides a probability-derivative row by the square root
+of its nominal displaced-event probability before singular values are
+taken.
 
 \section{Finite probe angle and count statistics}
 \label{sec:finite}
@@ -635,42 +664,185 @@ recorded in one setting.  Under any stated likelihood, a Cramér--Rao bound
 is conditional on local unbiasedness and does not by itself give a hardware
 cost forecast.
 
-This section is an ideal-model statistical layer.  Its formulas and tables
-are reproduced by the accompanying finite-angle script and tests.  Loss,
-partial distinguishability, source contamination, detector crosstalk,
-calibration drift, and optimal shot allocation require an augmented
-likelihood before experimental sample complexity can be claimed.
+\subsection{Estimator, allocation, and all-mode scaling}
 
-\subsection{Cat-phase confounding}
-
-The coherent input phase is not a benign visibility parameter; it is the
-resource that removes the gauge.  If the components of
-Eq.~\eqref{eq:f4-cat} acquire unknown phases $\alpha_j$, infinitesimally
-they are generated by an input diagonal $D$, and
+For a calibrated finite angle, let $\widehat{\bm r}$ collect the empirical
+positive-minus-negative probability differences, divided by $\epsilon$,
+after subtracting the measured probe-only differences.  If $J_\epsilon$ is
+the exact finite-angle Jacobian and $\Sigma$ is the count covariance, a
+concrete local estimator is weighted least squares,
 \begin{equation}
- F_4\ee^{\ii D}
- =\ee^{\ii F_4DF_4^\dagger}F_4.
+ \widehat{\btheta}
+ =(J_\epsilon^{\mathsf T}\Sigma^{-1}J_\epsilon)^{-1}
+ J_\epsilon^{\mathsf T}\Sigma^{-1}\widehat{\bm r}.
+\label{eq:wls-estimator}
+\end{equation}
+It supplies the local covariance approximation
+$(J_\epsilon^{\mathsf T}\Sigma^{-1}J_\epsilon)^{-1}$ and an ellipsoidal
+confidence region, conditional on the calibrated model.  A finite-angle
+maximum-likelihood fit to the probabilities in
+Eq.~\eqref{eq:cat-finite-amplitude} is preferable once the initial estimate
+leaves the linear regime.
+
+The all-mode construction permits an explicit ideal allocation calculation.
+Use the unit-spectral-size probes $\bar R,\bar T$, let $N$ be the total
+number of successful input trials, and split each probe-pair allocation
+equally between its two signs.  For a non-antipodal cyclic block define
+\begin{align}
+ C_c&=\sum_{k=0}^{m-1}
+ |n-1+\exp(2\pi\ii ck/m)|^{-2},\nonumber\\
+ C&=\sum_{c=1}^{\lfloor(m-1)/2\rfloor}C_c .
+\end{align}
+The trace coefficients for the $R$ and $T$ pairs are
+\begin{equation}
+ (A_R,A_T)=
+ \begin{cases}
+ (C,C),&m\ {\rm odd},\\
+ \left(C+\dfrac{m}{2n^2},
+ C+\dfrac{m}{2(n-2)^2}\right),&m\ {\rm even}.
+ \end{cases}
+\label{eq:allocation-coefficients}
+\end{equation}
+Minimizing the trace Cramér--Rao bound gives
+\begin{align}
+ w_R&=\frac{\sqrt{A_R}}{\sqrt{A_R}+\sqrt{A_T}},
+ &w_T&=1-w_R,\nonumber\\
+ \min\Tr\operatorname{Cov}(\widehat{\btheta})
+ &=\frac{(\sqrt{A_R}+\sqrt{A_T})^2}
+ {4N\alpha^2}.
+\label{eq:optimal-allocation}
+\end{align}
+This result is background-free and local.  At $n=m$, its average
+per-coordinate variance scales as
+\begin{equation}
+ \frac1{m(m-1)}\Tr\operatorname{Cov}(\widehat{\btheta})
+ =\Theta\!\left(\frac{m^{m-4}}{N}\right).
+\label{eq:average-cr-scaling}
+\end{equation}
+Moreover, the weakest nominal reference probability is
+$\Theta(\epsilon^2m^{2-m})$.  Obtaining even a constant expected number of
+reference counts in every sign bin therefore requires
+\begin{equation}
+ N=\Omega(\epsilon^{-2}m^{m-2}).
+\label{eq:count-threshold}
+\end{equation}
+If a fixed additive background $b$ dominates those bins, the average local
+bound instead scales as
+\begin{equation}
+ \Theta\!\left(
+ \frac{b\,m^{2m-6}}{N\epsilon^2}\right).
+\label{eq:background-scaling}
+\end{equation}
+Thus neither row normalization nor algebraic dimension saturation implies
+sample efficiency.
+
+\begin{table}[t]
+\caption{All-mode resource diagnostic for $n=m$, unit-spectral-size probes,
+and $\epsilon=0.05$.  The last two columns are respectively $N$ times the
+ideal average Cramér--Rao variance and the total trials needed for ten
+expected events in the weakest sign bin under the A-optimal allocation.}
+\label{tab:resource-scaling}
+\begin{ruledtabular}
+\begin{tabular}{ccccc}
+$m$&$\alpha^2$&$p_{\min}$&$N\overline{\mathrm{Var}}$&$N_{10}$\\
+\hline
+4&$6.25{\times}10^{-2}$&$6.94{\times}10^{-5}$&$1.09$&$5.17{\times}10^5$\\
+6&$7.72{\times}10^{-4}$&$1.23{\times}10^{-6}$&$27.2$&$3.11{\times}10^7$\\
+8&$3.81{\times}10^{-6}$&$7.01{\times}10^{-9}$&$2.75{\times}10^3$&$5.59{\times}10^9$\\
+10&$1.00{\times}10^{-8}$&$1.98{\times}10^{-11}$&$6.27{\times}10^5$&$2.00{\times}10^{12}$
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+As an end-to-end check, we simulated the sparse $F_4$ protocol with all
+twelve coordinates nonzero, $\|\btheta\|_2=0.002$, $\epsilon=0.05$,
+$N=2\times10^6$, and calibrated background $b=10^{-5}$.  Numerical
+A-optimal allocation assigns $0.536N$ trials to the $H_X$ sign pair.
+Across 5000 Poisson repetitions, Eq.~\eqref{eq:wls-estimator} gives
+empirical root-mean-square vector error $2.90\times10^{-3}$, compared with
+$2.90\times10^{-3}$ predicted by its covariance; the nominal 95\%
+ellipsoid covers 95.7\% of trials.  This validates the estimator in the
+stated idealized model, not against unmodeled hardware errors.  A
+deterministic scan over 128 random simultaneous-error directions finds
+worst relative linear-inversion bias $0.9\%$, $3.4\%$, and $9.1\%$ on
+spheres of radius $10^{-3}$, $3\times10^{-3}$, and $10^{-2}$,
+respectively.  This is a direction-sampled $F_4$ diagnostic, not a uniform
+radius theorem.
+
+This section remains an ideal-model statistical layer.  Loss, partial
+distinguishability, source contamination, detector crosstalk, and
+calibration drift require an augmented likelihood before experimental
+sample complexity can be claimed.
+
+\subsection{Cat-coefficient SPAM confounding}
+
+The resource that removes the number-state gauge is the complete complex
+coefficient vector, not phase coherence alone.  Write a perturbed
+fixed-number multimode cat as
+\begin{equation}
+ |\Psi_{\bm\eta}\rangle
+ =\frac1{\sqrt m}\sum_{j=0}^{m-1}(1+\eta_j)|n\be_j\rangle,
+\label{eq:imbalanced-cat}
+\end{equation}
+where normalization and global phase remove two irrelevant first-order real
+directions.  For a nominally dark charge-$c$ output, direct substitution in
+the cat polynomial gives
+\begin{equation}
+ \delta A_{\bm s}
+ =\alpha_{\bm s}\widehat\eta_c,\qquad
+ \widehat\eta_c=\frac1m\sum_{j=0}^{m-1}
+ \eta_j\omega^{jc}.
+\label{eq:imbalance-leakage}
+\end{equation}
+The leakage is constant in $p$ over the selected outcomes
+$\bm s_{p,c}$.
+
+\paragraph*{Proposition 1 (coefficient--device confounding).}
+Every first-order leakage vector in
+Eq.~\eqref{eq:imbalance-leakage}, restricted to the outcomes of
+Theorem~3, is exactly representable by an off-diagonal device error.
+For a non-antipodal block, choose all $z_p$ equal so that
+\begin{equation}
+ \ii[(n-1)z_p+z_{p+c}]
+ =\ii nz_p=\widehat\eta_c.
+\end{equation}
+For the antipodal block, the two real variables in
+$\ii[nx_p+\ii(n-2)y_p]$ reproduce an arbitrary complex constant because
+$n>2$.  Thus adding unknown cat coefficients to the selected-data Jacobian
+does not increase its rank; it creates exact device--SPAM null directions.
+
+For real amplitude imbalances with zero mean, the nuisance image has
+dimension $m-1$.  Unknown relative phases have the same dimension.  Their
+combined image has dimension $m-1$ for odd $m$ and $m$ for even $m$:
+the two images coincide on non-antipodal Fourier components, while
+amplitude and phase supply the two distinct quadratures of the antipodal
+component.  In particular, at $m=4$ the amplitude-only and phase-only
+images each have rank three, but their union has rank four rather than six.
+The accompanying exact Gaussian-integer test certifies these three ranks.
+
+Phase confounding also has the direct operator interpretation
+\begin{equation}
+ F_m\ee^{\ii D}
+ =\ee^{\ii F_mDF_m^\dagger}F_m.
 \label{eq:cat-phase-confounding}
 \end{equation}
-The three relative cat phases are therefore exactly confounded with the
-three device directions in Eq.~\eqref{eq:gauge-basis}.  If those preparation
-phases are free nuisance parameters, the augmented model does not separately
-identify all twelve device coordinates.  Independent cat-phase calibration
-or additional reference states are necessary.  Complete dephasing returns
-the experiment to the number-state gauge.  Even with calibrated phases,
-the construction is not globally injective: for a diagonal
-$D=\operatorname{diag}(d_0,\ldots,d_{m-1})$, the discrete conditions
+Complete dephasing therefore returns the experiment to the number-state
+gauge.  The full complex cat coefficient vector must be independently
+calibrated, or additional inputs and outcomes must be introduced and shown
+to give a full augmented SPAM--device Jacobian.
+
+Even after that calibration, the construction is not globally injective:
+for $D=\operatorname{diag}(d_0,\ldots,d_{m-1})$, the discrete conditions
 \begin{equation}
  n(d_j-d_0)\in2\pi\mathbb Z\qquad(1\leq j<m)
 \label{eq:cat-global-alias}
 \end{equation}
-leave the equal-phase $n$-photon cat unchanged up to a global phase.
-Consequently the corresponding finite transported transformations
-$F_m\exp(\ii D)F_m^\dagger$ are exact global aliases.  They are discrete
-near a fixed calibrated representative and therefore do not contradict the
-local full-rank theorem.
+leave the equal-phase cat unchanged up to a global phase.  The corresponding
+finite transported transformations $F_m\exp(\ii D)F_m^\dagger$ are exact
+global aliases.  They are discrete near a calibrated representative and do
+not contradict local full rank.
 
-\section{Internal coherent errors}
+\section{Standard propagation of internal coherent errors}
 \label{sec:internal}
 
 Let a nominal circuit factor as
@@ -697,6 +869,10 @@ is
 \end{equation}
 Thus the signed-probe reconstruction applies to arbitrary internal coherent,
 lossless errors after adjoint propagation.
+
+Equation~\eqref{eq:effective-generator} is the standard first-order
+conjugation rule, included to define what the reconstructed output generator
+means for a layered circuit; it is not claimed as an independent novelty.
 
 This does not automatically locate a faulty component.  Different layer
 errors can have the same output-equivalent generator, and output-diagonal
@@ -727,17 +903,86 @@ harder than preparing a number state.  The rank-nine $F_4$ Fock design is
 the nearer-term protocol; the cat family is a complete-identifiability
 benchmark.
 
-The closest comparator we found for general near-identity unitary
-estimation reconstructs all $d^2-1$ parameters and can attain the quantum
-Cramér--Rao bound, but uses a target qudit, two control qudits, and
-controlled shift and phase operations \cite{EscandonMonardes2024}.  It does
-not provide a passive-bosonic Fourier construction from photon-counted dark
-outcomes.  To our knowledge, prior work has not combined Fourier-cat
-suppression with displaced-null readout to give an explicit all-mode,
-dimension-saturating local frame for coherent off-diagonal errors of a
-passive multiport.  This is a scoped literature assessment, not a claim to
-the first arbitrary-unitary tomography protocol, the first displaced-null
-measurement, or a new Fourier-cat suppression law.
+As optical-device characterization, the proper comparator set is much
+broader than near-identity qudit estimation.  One- and two-photon schemes
+reconstruct arbitrary linear-optical transformations and have been analyzed
+under loss, noise, and mode mismatch
+\cite{LaingOBrien2012,Dhand2016}.  Coherent-light protocols recover
+transfer-matrix moduli and phases using a standard laser and intensity
+measurements \cite{RahimiKeshari2013}; PhaseLift variants are noise robust
+and efficiently scalable \cite{Suess2020}.  More recent procedures explicitly
+model unbalanced input/output losses, phase instability, photon
+indistinguishability, and experimental reconstruction
+\cite{Hoch2023,Biriukov2026}.  These mature methods are the default choice
+for broad transfer-matrix characterization.
+
+\begin{table*}[t]
+\caption{Operational comparison.  Configuration counts are schematic
+because the cited protocols differ in parallel detection and calibration
+assumptions.  ``Four settings'' does not include preparation calibration.}
+\label{tab:protocol-comparison}
+\scriptsize
+\begin{ruledtabular}
+\begin{tabular}{p{2.5cm}p{2.6cm}p{2.3cm}p{3.1cm}p{1.5cm}p{3.2cm}}
+Protocol&Input complexity&Programmed configurations&Parameters identified&
+Scope&Noise treatment\\
+\hline
+Coherent-light reconstruction
+\cite{RahimiKeshari2013,Suess2020,Hoch2023}&
+Low: standard laser and intensity detectors&
+Scales with modes&
+Complex transfer matrix up to declared gauges/loss model&
+Broad; global&
+Experimentally demonstrated; noise, loss, and phase instability treated\\
+One-/two-photon reconstruction
+\cite{LaingOBrien2012,Dhand2016,Biriukov2026}&
+Moderate: single photons or photon pairs&
+Typically $O(m^2)$ port combinations&
+Linear-optical transfer matrix&
+Broad; global&
+Loss, mode mismatch, indistinguishability, and uncertainty studied\\
+$F_4$ Fock dark-event design&
+Four-photon Fock state&
+Eight probe directions (sixteen signed settings) in Table~\ref{tab:fock-design}&
+Nine of twelve off-diagonal coordinates at $F_4$&
+Local&
+Finite-angle ideal model; no complete SPAM/loss model\\
+Fourier-cat dark-event design&
+Very high: calibrated fixed-number multimode cat&
+Four signed probe settings independent of $m$&
+$m(m-1)$ off-diagonal coordinates at $F_m$&
+Local&
+Ideal estimator and count model; exact coefficient-SPAM confounding\\
+\end{tabular}
+\end{ruledtabular}
+\end{table*}
+
+The present protocol should therefore not be read as a lower-cost
+replacement.  Its plausible niche is a \emph{residual, operating-point
+diagnostic} after conventional characterization: it uses the same
+multiphoton and photon-counting layer as a Fourier-suppression experiment,
+keeps the number of analyzer programs fixed, and turns structured forbidden
+events into signed alarms for coherent drift.  Whether this is preferable
+to periodic classical-light recalibration is platform dependent and is not
+demonstrated here.
+
+This distinction also explains why suppression can be scalable for a scalar
+benchmark while failing here as a high-dimensional reconstruction resource.
+Recent Fourier protocols aggregate many forbidden outcomes to estimate one
+indistinguishability parameter with favorable scaling \cite{Sanz2026}.  Our
+frame instead resolves phase-sensitive information across individual rare
+bins; summing them would discard the coordinate information.  The two uses
+of suppression therefore have different statistical bottlenecks.
+
+The general high-dimensional unitary-estimation protocol of
+Escand\'on-Monardes \emph{et al.} remains a useful conceptual comparator: it
+reconstructs all $d^2-1$ parameters and can attain the quantum
+Cramér--Rao bound, but uses a target qudit, two controls, and controlled
+shift and phase operations \cite{EscandonMonardes2024}.  To our knowledge,
+prior work has not combined Fourier-cat suppression with displaced-null
+readout to give the explicit all-mode local frame proved here.  This is a
+scoped structural claim, not a claim to the first or most efficient
+linear-optical characterization protocol.
 
 The rigorous scope is:
 \begin{itemize}
@@ -745,15 +990,16 @@ The rigorous scope is:
 global injectivity or global unitary tomography;
 \item $m(m-1)$ off-diagonal coordinates only, not the $m-1$
 output-diagonal $SU(m)$ directions;
-\item coherent lossless errors with calibrated probes and input phases;
+\item coherent lossless errors with calibrated probes and the complete
+complex input coefficient vector;
 \item two probe directions and four signed settings suffice, but neither a
 one-probe nor a fewer-setting impossibility theorem has been proved;
-\item the all-mode outcome and scalar-contrast counts, and the $F_4$ Fock
-counts, are minimal only within the declared weak-probe regular-local
-framework; the finite-angle experiment has not been globally optimized;
+\item the scalar-contrast and induced outcome counts are minimal only within
+the declared weak-probe regular-local framework; outcome bins are collected
+in parallel and this algebraic minimality is not a run-cost advantage;
 \item identification is local and calibrated: global aliases and
-off-diagonal device errors confounded with uncalibrated input phases or
-probe errors are not excluded;
+off-diagonal device errors confounded with uncalibrated input amplitudes,
+phases, or probe errors are not excluded;
 \item at $n=m$, $\alpha^2=m^{2-m}$, so event rates decay rapidly even
 though the row-normalized condition bound is at most $m/(m-2)$;
 \item the ideal likelihood does not absorb loss or distinguishability into
@@ -774,16 +1020,34 @@ This viewpoint exposes a sharp resource separation.  Number states have an
 exact $(m-1)$-dimensional blind subspace at $F_m$; the $F_4$ certificate
 saturates the resulting rank-nine bound.  A calibrated cat state lifts that
 continuous gauge, and the cyclic-edge construction gives an invertible
-$m(m-1)$-coordinate design for every mode number.  Unknown cat phases
-recreate precisely the obstruction the state was introduced to remove.  The
-distinction is therefore one of identifiability, not simply better
-visibility.
+$m(m-1)$-coordinate design for every mode number.  Unknown cat amplitudes
+or phases create device-indistinguishable leakage on the selected data.  The
+distinction is therefore one of calibrated identifiability, not simply
+better visibility.
 
 The most immediate extensions are a joint SPAM--device likelihood,
 lower-cost coherent reference states, circuit-specific internal-error
 dictionaries, and sparse or bounded-norm probes that improve large-$m$
 count rates.  Any such extension must preserve the separation between local
 full rank, finite-angle bias, finite-shot efficiency, and global uniqueness.
+
+\section{Code and data availability}
+\label{sec:code}
+
+The exact certificates, finite-angle calculation, resource-scaling analysis,
+weighted estimator, Monte Carlo simulation, tests, and reproduction
+instructions are available at
+\url{https://github.com/HainanZhao/maph/tree/fourier-dark-tomography-v1/projects/fourier-dark-tomography}.
+The release tag \texttt{fourier-dark-tomography-v1} fixes the submitted
+state and resolves to its exact commit; the code is MIT licensed.  In
+particular,
+\texttt{certify\_general\_fourier\_cat\_tomography.py} reproduces the
+all-mode ranks and coefficient-SPAM certificate,
+\texttt{search\_su4\_dark\_tomography.py} reproduces the exact $F_4$
+matrices and determinants,
+\texttt{analyze\_cat\_finite\_statistics.py} reproduces the finite-angle
+table, and the resource and reconstruction scripts reproduce
+Table~\ref{tab:resource-scaling} and the Monte Carlo values quoted above.
 
 \begin{acknowledgments}
 The author used OpenAI Codex as a research and writing assistant for
@@ -1054,6 +1318,56 @@ is their product, Eq.~\eqref{eq:cat-determinants}.  This is an exact
 rational certificate.  The released verification independently constructs
 the same rows from Gaussian-integer permanent moments and asserts every
 cross-block zero.
+
+\section{Derivation of the all-mode resource scaling}
+\label{app:resource-scaling}
+
+At the nominal device, one selected block and one probe quadrature have,
+to leading order,
+\begin{equation}
+ p_\pm=\alpha^2\epsilon^2|h|^2,\qquad
+ \partial_{\btheta}p_\pm
+ =\pm2\alpha^2\epsilon |h|B ,
+\end{equation}
+after choosing the probe phase so that the real row $B$ is read.  If
+$N_h$ trials are assigned to that probe pair and split equally between its
+signs, their information is
+\begin{equation}
+ I_h=4N_h\alpha^2B^{\mathsf T}B .
+\label{eq:block-information}
+\end{equation}
+The reference magnitude and $\epsilon$ cancel only in the
+background-free Fisher ratio; the factor $\alpha^2$ does not.
+
+For a non-antipodal separation, $B=(n-1)I+P_c$ for each of the two real
+quadratures.  Therefore
+\begin{equation}
+ \Tr[(B^{\mathsf T}B)^{-1}]
+ =\sum_{k=0}^{m-1}
+ |n-1+\exp(2\pi\ii ck/m)|^{-2}=C_c.
+\end{equation}
+The antipodal real and imaginary blocks have $m/2$ coordinates and gains
+$n$ and $n-2$, respectively.  Summing the inverse-Gram traces gives
+Eq.~\eqref{eq:allocation-coefficients}.  For allocations
+$N_R=w_RN$, $N_T=w_TN$, the covariance trace is
+\begin{equation}
+ \frac{1}{4N\alpha^2}
+ \left(\frac{A_R}{w_R}+\frac{A_T}{w_T}\right).
+\end{equation}
+Elementary differentiation under $w_R+w_T=1$ proves
+Eq.~\eqref{eq:optimal-allocation}.
+
+At $n=m$, every $C_c$ lies between $m/n^2$ and
+$m/(n-2)^2$, so $C=\Theta(1)$.  Combining
+$\alpha^2=m^{2-m}$ with $m(m-1)$ coordinates proves
+Eq.~\eqref{eq:average-cr-scaling}.  For the normalized probes, the weakest
+reference probability is a constant-in-$m$ gain times
+$\epsilon^2\alpha^2$, proving Eq.~\eqref{eq:count-threshold}.  When
+$b\gg p_\pm$, Eq.~\eqref{eq:poisson-fi} instead contributes
+$O(N\epsilon^2\alpha^4m^2/b)$ information per coordinate.  Its reciprocal
+gives Eq.~\eqref{eq:background-scaling}.  These are local asymptotics in
+the selected-channel Poisson model and do not include the probability of
+successfully preparing or transmitting the $n$-photon input.
 
 \section{Internal-error propagation}
 \label{app:internal-proof}
