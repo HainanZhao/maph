@@ -5,7 +5,9 @@ from src.sic_stark import (
     canonical_family_record,
     canonical_form,
     canonical_quadratic_identity,
+    canonical_level_stabilizer,
     canonical_stabilizer,
+    canonical_twist_kernel,
     canonical_twist_multiplier,
     canonical_zauner_action,
     canonical_zauner_orbits,
@@ -38,8 +40,15 @@ class CanonicalSicStarkTests(unittest.TestCase):
 
     def test_canonical_stabilizer_cube_is_identity_mod_d(self) -> None:
         for dimension in range(4, 501):
-            cube = matrix_power(canonical_stabilizer(dimension), 3)
+            cube = canonical_level_stabilizer(dimension)
             self.assertEqual(matrix_mod(cube, dimension), IDENTITY_2)
+
+    def test_twist_kernel_has_dimension_independent_representative(self) -> None:
+        for dimension in range(4, 501):
+            self.assertEqual(
+                canonical_twist_kernel(dimension),
+                ((0, dimension - 1), (1, 1)),
+            )
 
     def test_shift_one_is_compatible_with_identity_twist(self) -> None:
         for dimension in range(4, 501):

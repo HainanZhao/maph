@@ -73,6 +73,29 @@ def canonical_stabilizer(dimension: int) -> Matrix2:
     return ((dimension - 1, -1), (1, 0))
 
 
+def canonical_level_stabilizer(dimension: int) -> Matrix2:
+    r"""Return ``A_d=L_d^3``, which is identity modulo ``d``."""
+
+    return matrix_power(canonical_stabilizer(dimension), 3)
+
+
+def canonical_twist_kernel(dimension: int) -> Matrix2:
+    r"""Return ``I+L_d`` reduced modulo ``d``.
+
+    Although represented with residues in ``0,...,d-1``, this matrix is
+    uniformly congruent to ``[[0,-1],[1,1]]``.
+    """
+
+    stabilizer = canonical_stabilizer(dimension)
+    return matrix_mod(
+        (
+            (1 + stabilizer[0][0], stabilizer[0][1]),
+            (stabilizer[1][0], 1 + stabilizer[1][1]),
+        ),
+        dimension,
+    )
+
+
 def extended_displacement_modulus(dimension: int) -> int:
     r"""Return ``d`` for odd ``d`` and ``2d`` for even ``d``."""
 
@@ -181,6 +204,8 @@ def canonical_family_record(dimension: int) -> dict[str, object]:
         "discriminant": form_discriminant(form),
         "expected_discriminant": (dimension + 1) * (dimension - 3),
         "stabilizer": stabilizer,
+        "level_stabilizer": canonical_level_stabilizer(dimension),
+        "twist_kernel": canonical_twist_kernel(dimension),
         "determinant": determinant(stabilizer),
         "extended_modulus": extended_displacement_modulus(dimension),
         "shift_zero_multiplier": canonical_twist_multiplier(dimension, 0),

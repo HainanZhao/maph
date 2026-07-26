@@ -218,6 +218,68 @@ The twist condition is
 that the restricted canonical target can use \(\lambda=1\) and \(G=I\) in
 every dimension.
 
+For this canonical form the paper defines
+
+\[
+F_t=\frac{d_j-1}{2}I+\frac{f_j}{f}SQ_d.
+\]
+
+Here \(d_j=d\) and the conductor \(f\) of \(Q_d\) is \(f_j\), so direct
+matrix substitution gives \(F_t=L_d\).  Therefore the twist matrix appearing
+in TCC is
+
+\[
+\lambda I+F_t=I+L_d
+\equiv
+Z_*:=
+\begin{pmatrix}
+0&-1\\
+1&1
+\end{pmatrix}
+\pmod d.
+\]
+
+The matrix \(Z_*\) is independent of the dimension.
+
+### Fully explicit restricted conjecture
+
+Set
+
+\[
+\Delta_d=(d+1)(d-3),\qquad
+\beta_d=\frac{d-1+\sqrt{\Delta_d}}2,
+\]
+
+\[
+L_d=
+\begin{pmatrix}d-1&-1\\1&0\end{pmatrix},
+\qquad
+A_d=L_d^3,
+\qquad
+Z_*=
+\begin{pmatrix}0&-1\\1&1\end{pmatrix}.
+\]
+
+The canonical rank-one target becomes
+
+\[
+\boxed{
+\sum_{\boldsymbol q\in(\mathbb Z/d\mathbb Z)^2}
+\tau_d^{\langle\boldsymbol p,Z_*\boldsymbol q\rangle}
+\mathfrak S^{\,\boldsymbol q/d}_{A_d^{-1}}(\beta_d)
+\mathfrak S^{\,(\boldsymbol q-\boldsymbol p)/d}_{A_d^{-1}}(\beta_d)
+=d^2\delta_{\boldsymbol p,\boldsymbol0}
+}
+\]
+
+for every \(d\ge4\) and every
+\(\boldsymbol p\in(\mathbb Z/d\mathbb Z)^2\), with the paper's specified
+choice of representatives at the singular characteristics.
+
+This is the current main research question.  The arithmetic matrices, the
+quadratic point, the shift, and the twist are now all uniform and explicit.
+Only the Shintani--Faddeev RM values and their convolution remain opaque.
+
 Even the RM-values hypothesis can be weakened for mere SIC existence: the
 paper notes that it suffices to have one sign-switching Galois automorphism
 with the required unit-modulus property.
