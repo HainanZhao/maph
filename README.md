@@ -27,6 +27,9 @@ factors.
 
 ## Repository map
 
+- [`paper/`](paper/): submission-ready Physical Review A manuscript,
+  Supplemental Material, compiled PDFs, cover letter, and checklist for the
+  directional-response-jet results.
 - [`docs/physics-pivot.md`](docs/physics-pivot.md): current quantum-optics
   direction and first computational observations.
 - [`docs/thesis-stage1.md`](docs/thesis-stage1.md): assumption audit,
@@ -101,6 +104,7 @@ python3 scripts/certify_reflection_conjecture.py --a-limit 1000
 python3 scripts/audit_reflection_irreducibility.py
 python3 scripts/analyze_n11_affine.py
 python3 scripts/analyze_unitary_leakage.py
+python3 scripts/analyze_finite_shot_protocol.py
 python3 scripts/analyze_reciprocity_census.py
 python3 scripts/explore.py --limit 500
 python3 scripts/explore.py --limit 5000 --csv data/f_values_5000.csv
