@@ -7,6 +7,7 @@ from src.sic_stark import (
     canonical_characteristic_correction_index,
     canonical_dimension_four_countermodel,
     canonical_dimension_four_localization_record,
+    canonical_dimension_four_trace_obstruction_record,
     canonical_family_record,
     canonical_form,
     canonical_form_stabilizer_residual,
@@ -14,15 +15,23 @@ from src.sic_stark import (
     canonical_general_modular_modulus,
     canonical_general_modular_node_strip_margins,
     canonical_general_modular_parameters,
+    canonical_global_unit_residues,
     canonical_jacobi_scale_exponents,
     canonical_jacobi_word,
     canonical_kernel_identity,
     canonical_level_quotient,
+    canonical_level_stabilizer,
+    canonical_local_unit_cosets,
     canonical_pentagon_compatibility_record,
+    canonical_primitive_correction_indices,
+    canonical_primitive_direction_unit_stabilizers,
     canonical_primitive_sigma_shift_coordinates,
     canonical_primitive_sigma_shifts_are_quasiperiods,
     canonical_quadratic_identity,
-    canonical_level_stabilizer,
+    canonical_quadratic_residue_multiply,
+    canonical_quadratic_residue_norm,
+    canonical_quadratic_residue_units,
+    canonical_residue_multiplication_matrix,
     canonical_shift_partner,
     canonical_stabilizer,
     canonical_tcc_equation_count,
@@ -31,7 +40,6 @@ from src.sic_stark import (
     canonical_tcc_formal_signature,
     canonical_tcc_orbit_model_phase_totals,
     canonical_tcc_orbit_bound,
-    canonical_primitive_correction_indices,
     canonical_twist_exponent,
     canonical_twist_kernel,
     canonical_twist_multiplier,
@@ -128,6 +136,99 @@ class CanonicalSicStarkTests(unittest.TestCase):
             self.assertEqual(k, dimension * (dimension - 2))
             self.assertEqual(r, dimension - 1)
             self.assertEqual(s, k)
+
+    def test_quadratic_residue_multiplication_representation(
+        self,
+    ) -> None:
+        for dimension in range(4, 31):
+            global_units = canonical_global_unit_residues(dimension)
+            self.assertEqual(
+                global_units,
+                ((1, 0), (0, 1), (dimension - 1, dimension - 1)),
+            )
+            self.assertEqual(
+                canonical_quadratic_residue_multiply(
+                    dimension, global_units[1], global_units[1]
+                ),
+                global_units[2],
+            )
+            self.assertEqual(
+                canonical_quadratic_residue_multiply(
+                    dimension, global_units[2], global_units[1]
+                ),
+                global_units[0],
+            )
+            for unit in canonical_quadratic_residue_units(dimension):
+                matrix = canonical_residue_multiplication_matrix(
+                    dimension, unit
+                )
+                self.assertEqual(
+                    determinant(matrix) % dimension,
+                    canonical_quadratic_residue_norm(
+                        dimension, unit
+                    ),
+                )
+                for global_unit in global_units:
+                    product = canonical_quadratic_residue_multiply(
+                        dimension, unit, global_unit
+                    )
+                    self.assertEqual(
+                        canonical_residue_multiplication_matrix(
+                            dimension, product
+                        ),
+                        matrix_mod(
+                            matrix_multiply(
+                                matrix,
+                                canonical_residue_multiplication_matrix(
+                                    dimension, global_unit
+                                ),
+                            ),
+                            dimension,
+                        ),
+                    )
+
+    def test_primitive_direction_has_no_new_local_stabilizer(
+        self,
+    ) -> None:
+        for dimension in range(4, 101):
+            stabilizers = (
+                canonical_primitive_direction_unit_stabilizers(
+                    dimension
+                )
+            )
+            self.assertEqual(stabilizers["exact"], ((1, 0),))
+            self.assertEqual(
+                set(stabilizers["up_to_zauner"]),
+                set(canonical_global_unit_residues(dimension)),
+            )
+
+    def test_dimension_four_local_ray_quotient_and_phase_failure(
+        self,
+    ) -> None:
+        record = canonical_dimension_four_trace_obstruction_record()
+        self.assertEqual(record["local_unit_count"], 12)
+        self.assertEqual(record["local_unit_quotient_order"], 4)
+        self.assertTrue(record["local_unit_quotient_exponent_two"])
+        self.assertEqual(
+            record["local_unit_quotient_structure"], "C2 x C2"
+        )
+        cosets = record["local_unit_quotient_cosets"]
+        self.assertTrue(all(len(coset) == 3 for coset in cosets))
+        self.assertEqual(
+            {unit for coset in cosets for unit in coset},
+            set(canonical_quadratic_residue_units(4)),
+        )
+        witness = record["phase_descent_witness"]
+        self.assertEqual(witness["acted_direction"], (0, 3))
+        self.assertEqual(witness["acted_characteristic"], (0, 3))
+        self.assertNotEqual(
+            witness["original_phase"],
+            witness["fixed_direction_phase"],
+        )
+        self.assertEqual(
+            witness["original_phase"],
+            witness["simultaneous_phase"],
+        )
 
     def test_characteristic_embedding_into_general_modular_gamma(
         self,
@@ -622,6 +723,14 @@ class CanonicalSicStarkTests(unittest.TestCase):
             canonical_general_modular_node_strip_margins(3, (0, 0))
         with self.assertRaises(ValueError):
             canonical_primitive_sigma_shift_coordinates(3)
+        with self.assertRaises(ValueError):
+            canonical_quadratic_residue_units(3)
+        with self.assertRaises(ValueError):
+            canonical_global_unit_residues(3)
+        with self.assertRaises(ValueError):
+            canonical_local_unit_cosets(3)
+        with self.assertRaises(ValueError):
+            canonical_primitive_direction_unit_stabilizers(3)
 
 
 if __name__ == "__main__":
