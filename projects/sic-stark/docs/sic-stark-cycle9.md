@@ -404,6 +404,12 @@ Any candidate relation should first be checked against the perturbation
 witness above. Failure on the witness is necessary before attempting a
 proof that it forces TCC.
 
+Cycle 10 performs this test and proves that ordinary scalar
+fractional-cell elimination yields only deformation-invariant flatness,
+while the first bilinear Hirota candidate is not a \(q\)-Pochhammer
+identity. See
+[`sic-stark-cycle10.md`](sic-stark-cycle10.md).
+
 ## Executable checks
 
 Cycle 9 adds:

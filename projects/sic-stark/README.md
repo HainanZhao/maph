@@ -15,7 +15,7 @@ has been solved.
 
 The canonical arithmetic, Weyl--Heisenberg diagnostics, and finite twisted
 convolution are implemented exactly or to controlled floating-point
-precision. Research cycles 2--9 additionally:
+precision. Research cycles 2--10 additionally:
 
 - proves from the source's conjugation involution that rank-one shifts
   \(0\) and \(1\) occur together;
@@ -55,7 +55,10 @@ precision. Research cycles 2--9 additionally:
   no proper scalar relation;
 - constructs a two-parameter multiplicative perturbation preserving all
   published within-level multiplicative identities while forcing a
-  nonzero primitive Laurent coefficient.
+  nonzero primitive Laurent coefficient;
+- proves that fractional \(q\)-Pochhammer cell elimination gives only
+  pure-gauge flatness, while the natural bilinear Hirota determinant
+  already fails in its first formal coefficient.
 
 See [`docs/sic-stark-sprint1.md`](docs/sic-stark-sprint1.md) and
 [`docs/sic-stark-cycle2.md`](docs/sic-stark-cycle2.md), followed by
@@ -65,7 +68,8 @@ See [`docs/sic-stark-sprint1.md`](docs/sic-stark-sprint1.md) and
 [`docs/sic-stark-cycle6.md`](docs/sic-stark-cycle6.md), and finally
 [`docs/sic-stark-cycle7.md`](docs/sic-stark-cycle7.md) and
 [`docs/sic-stark-cycle8.md`](docs/sic-stark-cycle8.md), followed by
-[`docs/sic-stark-cycle9.md`](docs/sic-stark-cycle9.md), for the claim ledger.
+[`docs/sic-stark-cycle9.md`](docs/sic-stark-cycle9.md) and
+[`docs/sic-stark-cycle10.md`](docs/sic-stark-cycle10.md), for the claim ledger.
 
 ## Verification
 
