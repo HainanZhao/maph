@@ -11,6 +11,7 @@ from src.sic_stark import (
     canonical_dimension_four_countermodel,
     canonical_dimension_four_character_resolvents,
     canonical_dimension_four_distribution_relation_record,
+    canonical_dimension_four_floquet_gate_record,
     canonical_dimension_four_fractional_cell_record,
     canonical_dimension_four_internal_distribution_maps,
     canonical_dimension_four_laurent_action,
@@ -26,6 +27,9 @@ from src.sic_stark import (
     canonical_family_record,
     canonical_form,
     canonical_form_stabilizer_residual,
+    canonical_floquet_block_degrees,
+    canonical_floquet_commutator_trace_signature,
+    canonical_floquet_transfer_support,
     canonical_general_modular_characteristic,
     canonical_general_modular_modulus,
     canonical_general_modular_node_strip_margins,
@@ -487,6 +491,85 @@ class CanonicalSicStarkTests(unittest.TestCase):
             },
         )
         self.assertFalse(record["any_candidate_passes_both_gates"])
+
+    def test_floquet_transfer_is_only_a_weighted_permutation(
+        self,
+    ) -> None:
+        for dimension in range(4, 31):
+            support = canonical_floquet_transfer_support(dimension)
+            self.assertEqual(len(support), dimension * dimension)
+            self.assertEqual(
+                len({source for source, _ in support}),
+                dimension * dimension,
+            )
+            self.assertEqual(
+                len({target for _, target in support}),
+                dimension * dimension,
+            )
+            self.assertEqual(
+                canonical_floquet_block_degrees(dimension),
+                tuple(
+                    len(orbit)
+                    for orbit in canonical_zauner_orbits(dimension)
+                ),
+            )
+            self.assertTrue(
+                all(
+                    degree in (1, 3)
+                    for degree in (
+                        canonical_floquet_block_degrees(dimension)
+                    )
+                )
+            )
+            if dimension <= 12:
+                for output in canonical_tcc_equation_representatives(
+                    dimension
+                ):
+                    self.assertEqual(
+                        canonical_floquet_commutator_trace_signature(
+                            dimension, output
+                        ),
+                        canonical_tcc_formal_signature(
+                            dimension, output
+                        ),
+                    )
+
+    def test_floquet_spectrum_does_not_reject_deformation(
+        self,
+    ) -> None:
+        record = canonical_dimension_four_floquet_gate_record()
+        self.assertEqual(record["block_degrees"], (1, 3, 3, 3, 3, 3))
+        self.assertEqual(record["gauge_invariant_cycle_count"], 6)
+        self.assertEqual(record["transfer_nonzero_count"], 16)
+        self.assertTrue(record["one_nonzero_per_source"])
+        self.assertTrue(record["one_nonzero_per_target"])
+        self.assertTrue(
+            record["deformation_lifts_to_weighted_transfer"]
+        )
+        self.assertFalse(
+            record["weighted_transfer_rejects_deformation"]
+        )
+        self.assertTrue(
+            all(
+                defect == (0, 0)
+                for defect in record["monodromy_defects"].values()
+            )
+        )
+        self.assertEqual(
+            record["primitive_commutator_trace_signature"],
+            canonical_tcc_formal_signature(4, (1, 0)),
+        )
+        self.assertEqual(
+            canonical_floquet_commutator_trace_signature(4, (1, 0)),
+            canonical_tcc_formal_signature(4, (1, 0)),
+        )
+        self.assertTrue(
+            record["primitive_trace_coefficient_is_forced_nonzero"]
+        )
+        self.assertTrue(
+            record["algebraic_commutator_trace_packet_is_nonzero"]
+        )
+        self.assertFalse(record["floquet_spectrum_alone_can_force_tcc"])
 
     def test_characteristic_embedding_into_general_modular_gamma(
         self,
