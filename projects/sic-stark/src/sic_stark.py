@@ -1111,6 +1111,30 @@ def canonical_dimension_four_laurent_action(
     }
 
 
+def _canonical_dimension_four_orbit_monomials(
+) -> dict[ResidueVector, LaurentExponent]:
+    """Return the cycle-8 formal unit assigned to each Zauner orbit."""
+
+    return {
+        (0, 0): (0, 0),
+        (0, 1): (1, 0),
+        (0, 2): (0, 0),
+        (0, 3): (-1, 0),
+        (1, 1): (0, 1),
+        (2, 3): (0, -1),
+    }
+
+
+def _canonical_dimension_four_monomial(
+    characteristic: ResidueVector,
+) -> LaurentExponent:
+    """Return the formal-unit exponent at a dimension-four node."""
+
+    return _canonical_dimension_four_orbit_monomials()[
+        canonical_zauner_orbit_representative(4, characteristic)
+    ]
+
+
 def canonical_dimension_four_residual_laurent_packet(
 ) -> tuple[
     LaurentPolynomial,
@@ -1136,14 +1160,6 @@ def canonical_dimension_four_residual_laurent_packet(
     """
 
     dimension = 4
-    orbit_monomials = {
-        (0, 0): (0, 0),
-        (0, 1): (1, 0),
-        (0, 2): (0, 0),
-        (0, 3): (-1, 0),
-        (1, 1): (0, 1),
-        (2, 3): (0, -1),
-    }
     gaussian_units = ((1, 0), (0, 1), (-1, 0), (0, -1))
     normalizers = ((1, -1), (1, -1), (1, 1), (1, 1))
     packet: list[LaurentPolynomial] = []
@@ -1159,16 +1175,12 @@ def canonical_dimension_four_residual_laurent_packet(
                     (first - output[0]) % dimension,
                     (second - output[1]) % dimension,
                 )
-                numerator_exponent = orbit_monomials[
-                    canonical_zauner_orbit_representative(
-                        dimension, characteristic
-                    )
-                ]
-                denominator_exponent = orbit_monomials[
-                    canonical_zauner_orbit_representative(
-                        dimension, difference
-                    )
-                ]
+                numerator_exponent = (
+                    _canonical_dimension_four_monomial(characteristic)
+                )
+                denominator_exponent = (
+                    _canonical_dimension_four_monomial(difference)
+                )
                 exponent = (
                     numerator_exponent[0]
                     - denominator_exponent[0],
@@ -1678,21 +1690,8 @@ def canonical_dimension_four_distribution_relation_record(
 ) -> dict[str, object]:
     r"""Audit all internal d=4 distribution relations on the countermodel."""
 
-    orbit_monomials = {
-        (0, 0): (0, 0),
-        (0, 1): (1, 0),
-        (0, 2): (0, 0),
-        (0, 3): (-1, 0),
-        (1, 1): (0, 1),
-        (2, 3): (0, -1),
-    }
-
     def monomial(characteristic: ResidueVector) -> LaurentExponent:
-        return orbit_monomials[
-            canonical_zauner_orbit_representative(
-                4, characteristic
-            )
-        ]
+        return _canonical_dimension_four_monomial(characteristic)
 
     formal_defects: dict[
         tuple[int, ResidueVector], LaurentExponent
@@ -1797,14 +1796,6 @@ def canonical_dimension_four_perturbation_witness(
 
     dimension = 4
     output = (1, 0)
-    orbit_monomials = {
-        (0, 0): (0, 0),
-        (0, 1): (1, 0),
-        (0, 2): (0, 0),
-        (0, 3): (-1, 0),
-        (1, 1): (0, 1),
-        (2, 3): (0, -1),
-    }
     target_exponent = (2, 0)
     terms: list[
         tuple[
@@ -1828,10 +1819,12 @@ def canonical_dimension_four_perturbation_witness(
                     dimension, difference
                 )
             )
-            numerator_exponent = orbit_monomials[numerator_orbit]
-            denominator_exponent = orbit_monomials[
-                denominator_orbit
-            ]
+            numerator_exponent = (
+                _canonical_dimension_four_monomial(characteristic)
+            )
+            denominator_exponent = (
+                _canonical_dimension_four_monomial(difference)
+            )
             exponent = (
                 numerator_exponent[0]
                 - denominator_exponent[0],
@@ -1868,6 +1861,142 @@ def canonical_dimension_four_perturbation_witness(
             phase_sum != (0, 0)
             and len(set(baseline_ratios)) == 1
         ),
+    }
+
+
+def q_pochhammer_fractional_cell_determinant_coefficient(
+) -> LaurentPolynomial:
+    r"""Return the first obstruction to a scalar Hirota cell identity.
+
+    Put ``F(w)=(w;q)_infinity`` and let ``s`` and ``t`` encode the
+    horizontal and vertical fractional characteristic shifts.  For
+
+    ``D(w)=F(w)F(s*t*w)-F(s*w)F(t*w)``,
+
+    Euler's expansion gives
+
+    ``[w]D=(-1+s+t-s*t)/(1-q)``.
+
+    The returned polynomial is the numerator, indexed by powers of
+    ``(s,t)``.  It is ``-(1-s)(1-t)``, hence is nonzero for a genuine
+    fractional cell.
+    """
+
+    return {
+        (0, 0): Fraction(-1),
+        (1, 0): Fraction(1),
+        (0, 1): Fraction(1),
+        (1, 1): Fraction(-1),
+    }
+
+
+def canonical_dimension_four_fractional_cell_record(
+) -> dict[str, object]:
+    r"""Audit closed-cell elimination and the first Hirota candidate.
+
+    Edge quotients of any nonzero vertex array form a pure-gauge
+    connection, so their elementary-cell holonomy is identically one.
+    The cycle-8 formal deformation therefore passes every such
+    elimination.  The bilinear vertex determinant does detect the
+    deformation, but the first coefficient of the actual
+    q-Pochhammer product proves that determinant is not an analytic
+    identity.
+    """
+
+    dimension = 4
+    holonomy_defects: dict[ResidueVector, LaurentExponent] = {}
+    bilinear_defects: dict[ResidueVector, LaurentExponent] = {}
+    for first in range(dimension):
+        for second in range(dimension):
+            lower_left = (first, second)
+            lower_right = ((first + 1) % dimension, second)
+            upper_left = (first, (second + 1) % dimension)
+            upper_right = (
+                (first + 1) % dimension,
+                (second + 1) % dimension,
+            )
+            exponents = tuple(
+                _canonical_dimension_four_monomial(characteristic)
+                for characteristic in (
+                    lower_left,
+                    lower_right,
+                    upper_left,
+                    upper_right,
+                )
+            )
+            lower_horizontal = (
+                exponents[1][0] - exponents[0][0],
+                exponents[1][1] - exponents[0][1],
+            )
+            right_vertical = (
+                exponents[3][0] - exponents[1][0],
+                exponents[3][1] - exponents[1][1],
+            )
+            left_vertical = (
+                exponents[2][0] - exponents[0][0],
+                exponents[2][1] - exponents[0][1],
+            )
+            upper_horizontal = (
+                exponents[3][0] - exponents[2][0],
+                exponents[3][1] - exponents[2][1],
+            )
+            holonomy_defects[lower_left] = (
+                lower_horizontal[0]
+                + right_vertical[0]
+                - left_vertical[0]
+                - upper_horizontal[0],
+                lower_horizontal[1]
+                + right_vertical[1]
+                - left_vertical[1]
+                - upper_horizontal[1],
+            )
+            bilinear_defects[lower_left] = (
+                exponents[0][0]
+                + exponents[3][0]
+                - exponents[1][0]
+                - exponents[2][0],
+                exponents[0][1]
+                + exponents[3][1]
+                - exponents[1][1]
+                - exponents[2][1],
+            )
+
+    coefficient = (
+        q_pochhammer_fractional_cell_determinant_coefficient()
+    )
+    return {
+        "cell_count": len(holonomy_defects),
+        "holonomy_defects": holonomy_defects,
+        "all_holonomies_are_trivial": all(
+            defect == (0, 0)
+            for defect in holonomy_defects.values()
+        ),
+        "flatness_rejects_deformation": any(
+            defect != (0, 0)
+            for defect in holonomy_defects.values()
+        ),
+        "bilinear_deformation_defects": bilinear_defects,
+        "bilinear_rejects_deformation_on_every_cell": all(
+            defect != (0, 0)
+            for defect in bilinear_defects.values()
+        ),
+        "q_pochhammer_determinant_linear_coefficient": coefficient,
+        "q_pochhammer_bilinear_identity_holds": not any(
+            coefficient.values()
+        ),
+        "gate_table": {
+            "closed_cell_flatness": {
+                "analytic_identity": True,
+                "rejects_deformation": False,
+                "viable": False,
+            },
+            "rank_one_bilinear": {
+                "analytic_identity": False,
+                "rejects_deformation": True,
+                "viable": False,
+            },
+        },
+        "any_candidate_passes_both_gates": False,
     }
 
 

@@ -11,6 +11,7 @@ from src.sic_stark import (
     canonical_dimension_four_countermodel,
     canonical_dimension_four_character_resolvents,
     canonical_dimension_four_distribution_relation_record,
+    canonical_dimension_four_fractional_cell_record,
     canonical_dimension_four_internal_distribution_maps,
     canonical_dimension_four_laurent_action,
     canonical_dimension_four_localization_record,
@@ -70,6 +71,7 @@ from src.sic_stark import (
     matrix_mod,
     matrix_power,
     matrix_vector_multiply,
+    q_pochhammer_fractional_cell_determinant_coefficient,
     symplectic_pair,
     transform_form,
 )
@@ -438,6 +440,53 @@ class CanonicalSicStarkTests(unittest.TestCase):
         )
         self.assertTrue(witness["ratios_are_identical"])
         self.assertTrue(witness["coefficient_is_forced_nonzero"])
+
+    def test_fractional_cell_elimination_fails_both_candidate_gates(
+        self,
+    ) -> None:
+        coefficient = (
+            q_pochhammer_fractional_cell_determinant_coefficient()
+        )
+        self.assertEqual(
+            coefficient,
+            {
+                (0, 0): Fraction(-1),
+                (1, 0): Fraction(1),
+                (0, 1): Fraction(1),
+                (1, 1): Fraction(-1),
+            },
+        )
+
+        record = canonical_dimension_four_fractional_cell_record()
+        self.assertEqual(record["cell_count"], 16)
+        self.assertTrue(record["all_holonomies_are_trivial"])
+        self.assertFalse(record["flatness_rejects_deformation"])
+        self.assertTrue(
+            record["bilinear_rejects_deformation_on_every_cell"]
+        )
+        self.assertFalse(
+            record["q_pochhammer_bilinear_identity_holds"]
+        )
+        self.assertEqual(
+            record["bilinear_deformation_defects"][(0, 0)],
+            (0, 1),
+        )
+        self.assertEqual(
+            record["gate_table"],
+            {
+                "closed_cell_flatness": {
+                    "analytic_identity": True,
+                    "rejects_deformation": False,
+                    "viable": False,
+                },
+                "rank_one_bilinear": {
+                    "analytic_identity": False,
+                    "rejects_deformation": True,
+                    "viable": False,
+                },
+            },
+        )
+        self.assertFalse(record["any_candidate_passes_both_gates"])
 
     def test_characteristic_embedding_into_general_modular_gamma(
         self,
