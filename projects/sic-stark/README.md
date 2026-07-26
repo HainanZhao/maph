@@ -15,7 +15,7 @@ has been solved.
 
 The canonical arithmetic, Weyl--Heisenberg diagnostics, and finite twisted
 convolution are implemented exactly or to controlled floating-point
-precision. Research cycles 2--7 additionally:
+precision. Research cycles 2--8 additionally:
 
 - proves from the source's conjugation involution that rank-one shifts
   \(0\) and \(1\) occur together;
@@ -43,7 +43,13 @@ precision. Research cycles 2--7 additionally:
 - shows already in dimension four that the additive TCC phase does not
   descend to a fixed-direction ray-class character, so character
   resolvents decompose the full residual vector rather than force a
-  primitive coefficient to vanish.
+  primitive coefficient to vanish;
+- constructs the complete dimension-four ray-unit residual packet,
+  decomposes its regular \(C_2^2\) representation into all four
+  characters, and finds its first degree-five and degree-six relations;
+- gives a faithful, totally positive algebraic-unit countermodel in
+  \(\mathbb Q(\sqrt2,\sqrt3)\) whose residual packet and every character
+  projection are nonzero.
 
 See [`docs/sic-stark-sprint1.md`](docs/sic-stark-sprint1.md) and
 [`docs/sic-stark-cycle2.md`](docs/sic-stark-cycle2.md), followed by
@@ -51,7 +57,8 @@ See [`docs/sic-stark-sprint1.md`](docs/sic-stark-sprint1.md) and
 [`docs/sic-stark-cycle4.md`](docs/sic-stark-cycle4.md), then
 [`docs/sic-stark-cycle5.md`](docs/sic-stark-cycle5.md) and
 [`docs/sic-stark-cycle6.md`](docs/sic-stark-cycle6.md), and finally
-[`docs/sic-stark-cycle7.md`](docs/sic-stark-cycle7.md), for the claim ledger.
+[`docs/sic-stark-cycle7.md`](docs/sic-stark-cycle7.md) and
+[`docs/sic-stark-cycle8.md`](docs/sic-stark-cycle8.md), for the claim ledger.
 
 ## Verification
 

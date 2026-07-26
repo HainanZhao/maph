@@ -11,6 +11,9 @@ Matrix2 = tuple[tuple[int, int], tuple[int, int]]
 BinaryQuadraticForm = tuple[int, int, int]
 ResidueVector = tuple[int, int]
 QuadraticCoordinate = tuple[Fraction, Fraction]
+LaurentExponent = tuple[int, int]
+LaurentPolynomial = dict[LaurentExponent, Fraction]
+BiquadraticCoordinate = tuple[Fraction, Fraction, Fraction, Fraction]
 
 IDENTITY_2: Matrix2 = ((1, 0), (0, 1))
 
@@ -986,6 +989,615 @@ def canonical_dimension_four_countermodel(
         (0, 3): Fraction(1, 2),
         (1, 1): Fraction(1),
         (2, 3): Fraction(1),
+    }
+
+
+def _laurent_add(
+    *terms: tuple[Fraction | int, Mapping[LaurentExponent, Fraction]]
+) -> LaurentPolynomial:
+    """Return an exact linear combination of Laurent polynomials."""
+
+    result: LaurentPolynomial = {}
+    for scalar, polynomial in terms:
+        coefficient = Fraction(scalar)
+        for exponent, value in polynomial.items():
+            result[exponent] = (
+                result.get(exponent, Fraction(0))
+                + coefficient * value
+            )
+    return {
+        exponent: value
+        for exponent, value in result.items()
+        if value
+    }
+
+
+def _laurent_multiply(
+    left: Mapping[LaurentExponent, Fraction],
+    right: Mapping[LaurentExponent, Fraction],
+) -> LaurentPolynomial:
+    """Multiply two exact bivariate Laurent polynomials."""
+
+    result: LaurentPolynomial = {}
+    for left_exponent, left_value in left.items():
+        for right_exponent, right_value in right.items():
+            exponent = (
+                left_exponent[0] + right_exponent[0],
+                left_exponent[1] + right_exponent[1],
+            )
+            result[exponent] = (
+                result.get(exponent, Fraction(0))
+                + left_value * right_value
+            )
+    return {
+        exponent: value
+        for exponent, value in result.items()
+        if value
+    }
+
+
+def _laurent_power(
+    polynomial: Mapping[LaurentExponent, Fraction],
+    exponent: int,
+) -> LaurentPolynomial:
+    """Raise a Laurent polynomial to a nonnegative integer power."""
+
+    if exponent < 0:
+        raise ValueError("exponent must be nonnegative")
+    result: LaurentPolynomial = {(0, 0): Fraction(1)}
+    factor = dict(polynomial)
+    remaining = exponent
+    while remaining:
+        if remaining & 1:
+            result = _laurent_multiply(result, factor)
+        factor = _laurent_multiply(factor, factor)
+        remaining //= 2
+    return result
+
+
+def canonical_dimension_four_packet_directions(
+) -> tuple[ResidueVector, ResidueVector, ResidueVector, ResidueVector]:
+    r"""Return the regular ray-unit orbit of the primitive direction in d=4."""
+
+    return ((0, 3), (0, 1), (1, 1), (2, 3))
+
+
+def canonical_dimension_four_packet_permutations(
+) -> tuple[tuple[int, int, int, int], ...]:
+    r"""Return the ``C2 x C2`` regular action on packet coordinates."""
+
+    return (
+        (0, 1, 2, 3),
+        (1, 0, 3, 2),
+        (2, 3, 0, 1),
+        (3, 2, 1, 0),
+    )
+
+
+def canonical_dimension_four_packet_variable_actions(
+) -> tuple[Matrix2, Matrix2, Matrix2, Matrix2]:
+    r"""Return the ray-unit action on Laurent exponents of ``x`` and ``y``.
+
+    On the four primitive value orbits, use the coordinates
+
+    ``(x^-1, x, y, y^-1)``.
+
+    The quotient ``C2 x C2`` then acts on ``(x,y)`` by
+
+    ``(x,y)``, ``(x^-1,y^-1)``, ``(y^-1,x^-1)``, and ``(y,x)``.
+    """
+
+    return (
+        ((1, 0), (0, 1)),
+        ((-1, 0), (0, -1)),
+        ((0, -1), (-1, 0)),
+        ((0, 1), (1, 0)),
+    )
+
+
+def canonical_dimension_four_laurent_action(
+    polynomial: Mapping[LaurentExponent, Fraction],
+    group_index: int,
+) -> LaurentPolynomial:
+    """Apply a dimension-four ray-unit quotient element to a Laurent polynomial."""
+
+    actions = canonical_dimension_four_packet_variable_actions()
+    if not 0 <= group_index < len(actions):
+        raise ValueError("group index must lie between 0 and 3")
+    action = actions[group_index]
+    return {
+        matrix_vector_multiply(action, exponent): value
+        for exponent, value in polynomial.items()
+    }
+
+
+def canonical_dimension_four_residual_laurent_packet(
+) -> tuple[
+    LaurentPolynomial,
+    LaurentPolynomial,
+    LaurentPolynomial,
+    LaurentPolynomial,
+]:
+    r"""Return the exact reciprocal two-parameter TCC residual packet.
+
+    Normalize the four actual residuals by Gaussian units as
+
+    ``(R_(0,3), R_(0,1), R_(1,1), R_(2,3))
+      = ((1-i)A, (1-i)B, (1+i)C, (1+i)D)``.
+
+    Zauner covariance and inversion reduce the six value orbits to
+
+    ``(1, x, 1, x^-1, y, y^-1)``.
+
+    The result is the tuple ``(A,B,C,D)`` of Laurent polynomials in
+    ``x,y``.  It is a formal unit model: ``x`` and ``y`` are invertible
+    indeterminates and form one regular ray-unit orbit with their
+    inverses.
+    """
+
+    dimension = 4
+    orbit_monomials = {
+        (0, 0): (0, 0),
+        (0, 1): (1, 0),
+        (0, 2): (0, 0),
+        (0, 3): (-1, 0),
+        (1, 1): (0, 1),
+        (2, 3): (0, -1),
+    }
+    gaussian_units = ((1, 0), (0, 1), (-1, 0), (0, -1))
+    normalizers = ((1, -1), (1, -1), (1, 1), (1, 1))
+    packet: list[LaurentPolynomial] = []
+    for output, normalizer in zip(
+        canonical_dimension_four_packet_directions(),
+        normalizers,
+    ):
+        gaussian_polynomial: dict[LaurentExponent, tuple[int, int]] = {}
+        for first in range(dimension):
+            for second in range(dimension):
+                characteristic = (first, second)
+                difference = (
+                    (first - output[0]) % dimension,
+                    (second - output[1]) % dimension,
+                )
+                numerator_exponent = orbit_monomials[
+                    canonical_zauner_orbit_representative(
+                        dimension, characteristic
+                    )
+                ]
+                denominator_exponent = orbit_monomials[
+                    canonical_zauner_orbit_representative(
+                        dimension, difference
+                    )
+                ]
+                exponent = (
+                    numerator_exponent[0]
+                    - denominator_exponent[0],
+                    numerator_exponent[1]
+                    - denominator_exponent[1],
+                )
+                phase = gaussian_units[
+                    canonical_twist_exponent(
+                        dimension, output, characteristic
+                    )
+                ]
+                previous = gaussian_polynomial.get(exponent, (0, 0))
+                gaussian_polynomial[exponent] = (
+                    previous[0] + phase[0],
+                    previous[1] + phase[1],
+                )
+        polynomial: LaurentPolynomial = {}
+        for exponent, phase in gaussian_polynomial.items():
+            assert (
+                phase[1] * normalizer[0]
+                - phase[0] * normalizer[1]
+                == 0
+            )
+            polynomial[exponent] = Fraction(
+                phase[0] * normalizer[0]
+                + phase[1] * normalizer[1],
+                2,
+            )
+        packet.append(
+            {
+                exponent: value
+                for exponent, value in polynomial.items()
+                if value
+            }
+        )
+    assert len(packet) == 4
+    return (packet[0], packet[1], packet[2], packet[3])
+
+
+def canonical_dimension_four_character_resolvents(
+) -> dict[str, LaurentPolynomial]:
+    r"""Return the four Walsh character projections ``T,U,V,W``."""
+
+    first, second, third, fourth = (
+        canonical_dimension_four_residual_laurent_packet()
+    )
+    return {
+        "T": _laurent_add(
+            (1, first), (1, second), (1, third), (1, fourth)
+        ),
+        "U": _laurent_add(
+            (1, first), (-1, second), (1, third), (-1, fourth)
+        ),
+        "V": _laurent_add(
+            (1, first), (1, second), (-1, third), (-1, fourth)
+        ),
+        "W": _laurent_add(
+            (1, first), (-1, second), (-1, third), (1, fourth)
+        ),
+    }
+
+
+def canonical_dimension_four_packet_relation_residuals(
+) -> dict[str, LaurentPolynomial]:
+    r"""Return exact residuals of the first two packet relations.
+
+    There is no polynomial relation of total degree at most four.  In
+    character coordinates ``T,U,V,W``, the first relation has degree
+    five.  A particularly short independent degree-six relation is
+
+    ``(V^3-T*U*W)^2 = 16*T^3*U^2``.
+    """
+
+    resolvents = canonical_dimension_four_character_resolvents()
+    t_value = resolvents["T"]
+    u_value = resolvents["U"]
+    v_value = resolvents["V"]
+    w_value = resolvents["W"]
+    degree_five = _laurent_add(
+        (
+            -16,
+            _laurent_multiply(
+                _laurent_multiply(t_value, u_value),
+                _laurent_power(v_value, 2),
+            ),
+        ),
+        (
+            16,
+            _laurent_multiply(
+                _laurent_power(t_value, 3), u_value
+            ),
+        ),
+        (
+            -1,
+            _laurent_multiply(
+                u_value, _laurent_power(v_value, 4)
+            ),
+        ),
+        (
+            2,
+            _laurent_multiply(
+                _laurent_multiply(
+                    t_value, _laurent_power(v_value, 3)
+                ),
+                w_value,
+            ),
+        ),
+        (
+            -1,
+            _laurent_multiply(
+                _laurent_multiply(
+                    _laurent_power(t_value, 2), u_value
+                ),
+                _laurent_power(w_value, 2),
+            ),
+        ),
+        (
+            -1,
+            _laurent_multiply(
+                _laurent_multiply(
+                    _laurent_power(t_value, 2), u_value
+                ),
+                _laurent_power(v_value, 2),
+            ),
+        ),
+        (
+            1,
+            _laurent_multiply(
+                _laurent_power(t_value, 2),
+                _laurent_power(u_value, 3),
+            ),
+        ),
+    )
+    degree_six = _laurent_add(
+        (
+            1,
+            _laurent_power(
+                _laurent_add(
+                    (1, _laurent_power(v_value, 3)),
+                    (
+                        -1,
+                        _laurent_multiply(
+                            _laurent_multiply(t_value, u_value),
+                            w_value,
+                        ),
+                    ),
+                ),
+                2,
+            ),
+        ),
+        (
+            -16,
+            _laurent_multiply(
+                _laurent_power(t_value, 3),
+                _laurent_power(u_value, 2),
+            ),
+        ),
+    )
+    return {
+        "degree_five": degree_five,
+        "degree_six": degree_six,
+    }
+
+
+def _weak_compositions(
+    total: int, length: int
+) -> tuple[tuple[int, ...], ...]:
+    """Return weak compositions of ``total`` into ``length`` parts."""
+
+    if length == 1:
+        return ((total,),)
+    return tuple(
+        (first,) + tail
+        for first in range(total + 1)
+        for tail in _weak_compositions(total - first, length - 1)
+    )
+
+
+def _sparse_laurent_rank(
+    polynomials: tuple[LaurentPolynomial, ...],
+) -> int:
+    """Return exact column rank using sparse Laurent elimination."""
+
+    basis: dict[LaurentExponent, LaurentPolynomial] = {}
+    for polynomial in polynomials:
+        vector = dict(polynomial)
+        while vector:
+            pivot = min(vector)
+            if pivot not in basis:
+                pivot_value = vector[pivot]
+                basis[pivot] = {
+                    exponent: value / pivot_value
+                    for exponent, value in vector.items()
+                }
+                break
+            scalar = vector[pivot]
+            vector = _laurent_add(
+                (1, vector), (-scalar, basis[pivot])
+            )
+    return len(basis)
+
+
+def canonical_dimension_four_relation_nullities(
+    maximum_degree: int,
+) -> tuple[int, ...]:
+    r"""Return counts of packet relations through each positive degree."""
+
+    if maximum_degree < 1:
+        raise ValueError("maximum degree must be positive")
+    packet = canonical_dimension_four_residual_laurent_packet()
+    powers: list[list[LaurentPolynomial]] = []
+    for polynomial in packet:
+        component_powers = [{(0, 0): Fraction(1)}]
+        for _ in range(maximum_degree):
+            component_powers.append(
+                _laurent_multiply(
+                    component_powers[-1], polynomial
+                )
+            )
+        powers.append(component_powers)
+
+    nullities: list[int] = []
+    monomials: list[tuple[int, ...]] = []
+    for degree in range(1, maximum_degree + 1):
+        monomials.extend(_weak_compositions(degree, len(packet)))
+        composed: list[LaurentPolynomial] = []
+        for monomial in ((0, 0, 0, 0), *monomials):
+            value: LaurentPolynomial = {(0, 0): Fraction(1)}
+            for index, exponent in enumerate(monomial):
+                value = _laurent_multiply(
+                    value, powers[index][exponent]
+                )
+            composed.append(value)
+        nullities.append(
+            len(composed) - _sparse_laurent_rank(tuple(composed))
+        )
+    return tuple(nullities)
+
+
+def canonical_dimension_four_packet_evaluation(
+    x_value: int | Fraction,
+    y_value: int | Fraction,
+) -> tuple[Fraction, Fraction, Fraction, Fraction]:
+    """Evaluate the normalized formal packet at nonzero rational ``x,y``."""
+
+    x_fraction = Fraction(x_value)
+    y_fraction = Fraction(y_value)
+    if x_fraction == 0 or y_fraction == 0:
+        raise ValueError("Laurent variables must be nonzero")
+    values: list[Fraction] = []
+    for polynomial in canonical_dimension_four_residual_laurent_packet():
+        values.append(
+            sum(
+                coefficient
+                * x_fraction ** exponent[0]
+                * y_fraction ** exponent[1]
+                for exponent, coefficient in polynomial.items()
+            )
+        )
+    assert len(values) == 4
+    return (values[0], values[1], values[2], values[3])
+
+
+def biquadratic_2_3_multiply(
+    left: BiquadraticCoordinate,
+    right: BiquadraticCoordinate,
+) -> BiquadraticCoordinate:
+    r"""Multiply coordinates in the basis ``(1,sqrt(2),sqrt(3),sqrt(6))``."""
+
+    a, b, c, d = left
+    e, f, g, h = right
+    return (
+        a * e + 2 * b * f + 3 * c * g + 6 * d * h,
+        a * f + b * e + 3 * c * h + 3 * d * g,
+        a * g + c * e + 2 * b * h + 2 * d * f,
+        a * h + d * e + b * g + c * f,
+    )
+
+
+def biquadratic_2_3_galois_action(
+    value: BiquadraticCoordinate,
+    group_index: int,
+) -> BiquadraticCoordinate:
+    r"""Apply the ordered ``C2 x C2`` action used by the d=4 packet."""
+
+    if not 0 <= group_index < 4:
+        raise ValueError("group index must lie between 0 and 3")
+    first_signs = (1, -1, -1, 1)
+    second_signs = (1, 1, -1, -1)
+    first_sign = first_signs[group_index]
+    second_sign = second_signs[group_index]
+    a, b, c, d = value
+    return (
+        a,
+        first_sign * b,
+        second_sign * c,
+        first_sign * second_sign * d,
+    )
+
+
+def _biquadratic_power(
+    value: BiquadraticCoordinate,
+    inverse: BiquadraticCoordinate,
+    exponent: int,
+) -> BiquadraticCoordinate:
+    """Raise a known unit to an arbitrary integer power."""
+
+    result: BiquadraticCoordinate = (
+        Fraction(1),
+        Fraction(0),
+        Fraction(0),
+        Fraction(0),
+    )
+    factor = value if exponent >= 0 else inverse
+    for _ in range(abs(exponent)):
+        result = biquadratic_2_3_multiply(result, factor)
+    return result
+
+
+def _evaluate_laurent_biquadratic(
+    polynomial: Mapping[LaurentExponent, Fraction],
+    x_value: BiquadraticCoordinate,
+    x_inverse: BiquadraticCoordinate,
+    y_value: BiquadraticCoordinate,
+    y_inverse: BiquadraticCoordinate,
+) -> BiquadraticCoordinate:
+    """Evaluate a Laurent polynomial at two known biquadratic units."""
+
+    result: BiquadraticCoordinate = (
+        Fraction(0),
+        Fraction(0),
+        Fraction(0),
+        Fraction(0),
+    )
+    for exponent, coefficient in polynomial.items():
+        term = biquadratic_2_3_multiply(
+            _biquadratic_power(
+                x_value, x_inverse, exponent[0]
+            ),
+            _biquadratic_power(
+                y_value, y_inverse, exponent[1]
+            ),
+        )
+        result = tuple(
+            result[index] + coefficient * term[index]
+            for index in range(4)
+        )
+    return result
+
+
+def canonical_dimension_four_algebraic_unit_packet_record(
+) -> dict[str, object]:
+    r"""Return a faithful algebraic-unit Galois countermodel for the packet.
+
+    Work in ``L=Q(sqrt(2),sqrt(3))`` and take
+
+    ``x=(3+2*sqrt(2))*(5+2*sqrt(6))``,
+    ``y=(3+2*sqrt(2))*(5-2*sqrt(6))``.
+
+    These are algebraic units.  Their four conjugates are
+    ``(x^-1,x,y,y^-1)`` and realize the regular ``C2 x C2`` ray-unit
+    permutation.  Nevertheless, the resulting residual packet and all
+    four character projections are nonzero.
+    """
+
+    one: BiquadraticCoordinate = (
+        Fraction(1),
+        Fraction(0),
+        Fraction(0),
+        Fraction(0),
+    )
+    x_value = tuple(
+        Fraction(value) for value in (15, 10, 8, 6)
+    )
+    x_inverse = tuple(
+        Fraction(value) for value in (15, -10, 8, -6)
+    )
+    y_value = tuple(
+        Fraction(value) for value in (15, 10, -8, -6)
+    )
+    y_inverse = tuple(
+        Fraction(value) for value in (15, -10, -8, 6)
+    )
+    assert biquadratic_2_3_multiply(x_value, x_inverse) == one
+    assert biquadratic_2_3_multiply(y_value, y_inverse) == one
+
+    packet = tuple(
+        _evaluate_laurent_biquadratic(
+            polynomial,
+            x_value,
+            x_inverse,
+            y_value,
+            y_inverse,
+        )
+        for polynomial in (
+            canonical_dimension_four_residual_laurent_packet()
+        )
+    )
+    character_signs = (
+        (1, 1, 1, 1),
+        (1, -1, 1, -1),
+        (1, 1, -1, -1),
+        (1, -1, -1, 1),
+    )
+    character_values = tuple(
+        tuple(
+            sum(
+                sign * packet[index][coordinate]
+                for index, sign in enumerate(signs)
+            )
+            for coordinate in range(4)
+        )
+        for signs in character_signs
+    )
+    return {
+        "field": "Q(sqrt(2),sqrt(3))",
+        "units": (x_inverse, x_value, y_value, y_inverse),
+        "unit_products": (
+            biquadratic_2_3_multiply(x_value, x_inverse),
+            biquadratic_2_3_multiply(y_value, y_inverse),
+        ),
+        "packet": packet,
+        "character_values": character_values,
+        "all_packet_components_nonzero": all(
+            any(value) for value in packet
+        ),
+        "all_character_values_nonzero": all(
+            any(value) for value in character_values
+        ),
     }
 
 

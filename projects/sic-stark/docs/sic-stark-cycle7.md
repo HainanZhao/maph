@@ -397,6 +397,12 @@ A promising next computational test is to determine whether that packet
 satisfies an additional low-degree algebraic relation, beyond covariance,
 whose isotypical projections vanish for a genuine structural reason.
 
+Cycle 8 performs this test in dimension four. The packet is the regular
+\(C_2^2\) representation, its first relation occurs in degree five, and
+an explicit totally positive algebraic-unit Galois specialization makes
+all four character projections nonzero. See
+[`sic-stark-cycle8.md`](sic-stark-cycle8.md).
+
 ## Executable checks
 
 The following functions implement the exact local audit:
