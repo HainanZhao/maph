@@ -33,8 +33,6 @@ These are personal declarations that cannot be verified from the repository:
 - [ ] Add any funding acknowledgment, or select “no external funding.”
 - [ ] Choose the article license and data-availability options in the portal.
 - [ ] Decide whether to post the identical version to arXiv `quant-ph`.
-- [ ] Check that the committed source has been pushed to the public repository
-      before relying on its URL in the data/code statement.
 
 ## Suggested portal metadata
 
