@@ -11,7 +11,8 @@ This document is a research ledger, not a claim that Zauner's conjecture has
 been solved.
 
 The current canonical-family reductions are recorded in
-`docs/sic-stark-sprint1.md` and `docs/sic-stark-cycle2.md`.
+`docs/sic-stark-sprint1.md`, `docs/sic-stark-cycle2.md`, and
+`docs/sic-stark-cycle3.md`.
 
 ## Mathematical specification
 

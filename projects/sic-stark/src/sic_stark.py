@@ -76,12 +76,49 @@ def form_discriminant(form: BinaryQuadraticForm) -> int:
     return b * b - 4 * a * c
 
 
+def transform_form(
+    form: BinaryQuadraticForm, matrix: Matrix2
+) -> BinaryQuadraticForm:
+    r"""Return the coefficients of ``form(matrix*(x,y))``.
+
+    This is the determinant-one specialization of the source paper's
+    ``GL_2(Z)`` action on binary quadratic forms.
+    """
+
+    a, b, c = form
+    alpha, beta = matrix[0]
+    gamma, delta = matrix[1]
+    return (
+        a * alpha * alpha + b * alpha * gamma + c * gamma * gamma,
+        2 * a * alpha * beta
+        + b * (alpha * delta + beta * gamma)
+        + 2 * c * gamma * delta,
+        a * beta * beta + b * beta * delta + c * delta * delta,
+    )
+
+
 def canonical_stabilizer(dimension: int) -> Matrix2:
     r"""Return the elementary stabilizer ``[[d-1,-1],[1,0]]``."""
 
     if dimension < 4:
         raise ValueError("the non-sporadic canonical family starts at d=4")
     return ((dimension - 1, -1), (1, 0))
+
+
+def canonical_form_stabilizer_residual(
+    dimension: int,
+) -> BinaryQuadraticForm:
+    r"""Return ``Q_d(L_d*(x,y))-Q_d(x,y)`` coefficientwise."""
+
+    form = canonical_form(dimension)
+    transformed = transform_form(
+        form, canonical_stabilizer(dimension)
+    )
+    return (
+        transformed[0] - form[0],
+        transformed[1] - form[1],
+        transformed[2] - form[2],
+    )
 
 
 def canonical_level_stabilizer(dimension: int) -> Matrix2:
@@ -227,6 +264,17 @@ def canonical_zauner_orbit_sum(
     )
 
 
+def canonical_zauner_orbit_representative(
+    dimension: int, vector: ResidueVector
+) -> ResidueVector:
+    """Return the lexicographically least vector in a Zauner orbit."""
+
+    reduced = (vector[0] % dimension, vector[1] % dimension)
+    first = canonical_zauner_action(dimension, reduced)
+    second = canonical_zauner_action(dimension, first)
+    return min(reduced, first, second)
+
+
 def canonical_zauner_orbits(
     dimension: int,
 ) -> tuple[tuple[ResidueVector, ...], ...]:
@@ -252,19 +300,88 @@ def canonical_zauner_orbits(
     return tuple(orbits)
 
 
-def canonical_tcc_orbit_bound(dimension: int) -> int:
-    r"""Return the number of Zauner orbits of TCC output indices.
+def canonical_tcc_equation_count(dimension: int) -> int:
+    r"""Return the exact number of unresolved Zauner-orbit TCC equations.
 
-    This is the number of equations left if covariance of the special-value
-    array under ``L_d`` is established.  It is an exact combinatorial bound,
-    not by itself a proof of that analytic covariance.
+    The source's ``GL_2(Z)`` transformation theorem, specialized to the
+    canonical form stabilizer, proves that the Shintani--Faddeev array is
+    invariant under ``L_d``.  The TCC residual is therefore constant on
+    these orbits.  The zero-output equation is already an identity by the
+    cocycle inverse law, so it is excluded here.
     """
+
+    canonical_form(dimension)
+    fixed_points = 3 if dimension % 3 == 0 else 1
+    orbit_count = fixed_points + (
+        dimension * dimension - fixed_points
+    ) // 3
+    return orbit_count - 1
+
+
+def canonical_tcc_orbit_bound(dimension: int) -> int:
+    """Return the total number of Zauner orbits, including zero."""
 
     canonical_form(dimension)
     fixed_points = 3 if dimension % 3 == 0 else 1
     return fixed_points + (
         dimension * dimension - fixed_points
     ) // 3
+
+
+def canonical_tcc_equation_representatives(
+    dimension: int,
+) -> tuple[ResidueVector, ...]:
+    """Return one lexicographically canonical output index per TCC orbit."""
+
+    return tuple(
+        representative
+        for representative in (
+            min(orbit) for orbit in canonical_zauner_orbits(dimension)
+        )
+        if representative != (0, 0)
+    )
+
+
+def canonical_tcc_formal_signature(
+    dimension: int, output: ResidueVector
+) -> dict[tuple[int, ResidueVector, ResidueVector], int]:
+    r"""Return the formal orbit-reduced signature of a TCC sum.
+
+    Each term is keyed by its root-of-unity exponent, the Zauner orbit of
+    the numerator ``u(q)``, and the orbit of the denominator
+    ``u(q-output)``.  The inverse cocycle law rewrites the two TCC factors
+    as this quotient. Equality of these dictionaries is a symbolic
+    certificate of covariance that assumes only ``u(L_d*q)=u(q)``.
+    """
+
+    canonical_form(dimension)
+    reduced_output = (
+        output[0] % dimension,
+        output[1] % dimension,
+    )
+    signature: dict[
+        tuple[int, ResidueVector, ResidueVector], int
+    ] = {}
+    for first in range(dimension):
+        for second in range(dimension):
+            characteristic = (first, second)
+            difference = (
+                (first - reduced_output[0]) % dimension,
+                (second - reduced_output[1]) % dimension,
+            )
+            key = (
+                canonical_twist_exponent(
+                    dimension, reduced_output, characteristic
+                ),
+                canonical_zauner_orbit_representative(
+                    dimension, characteristic
+                ),
+                canonical_zauner_orbit_representative(
+                    dimension, difference
+                ),
+            )
+            signature[key] = signature.get(key, 0) + 1
+    return signature
 
 
 def canonical_jacobi_word(dimension: int) -> tuple[int, int, int]:
@@ -345,6 +462,9 @@ def canonical_family_record(dimension: int) -> dict[str, object]:
         "discriminant": form_discriminant(form),
         "expected_discriminant": (dimension + 1) * (dimension - 3),
         "stabilizer": stabilizer,
+        "form_stabilizer_residual": (
+            canonical_form_stabilizer_residual(dimension)
+        ),
         "level_stabilizer": canonical_level_stabilizer(dimension),
         "level_quotient": canonical_level_quotient(dimension),
         "twist_kernel": canonical_twist_kernel(dimension),
@@ -355,6 +475,7 @@ def canonical_family_record(dimension: int) -> dict[str, object]:
         "shift_one_multiplier": canonical_twist_multiplier(dimension, 1),
         "shift_zero_partner": canonical_shift_partner(dimension, 0),
         "zauner_orbit_count": len(canonical_zauner_orbits(dimension)),
+        "tcc_equation_count": canonical_tcc_equation_count(dimension),
         "tcc_orbit_bound": canonical_tcc_orbit_bound(dimension),
         "jacobi_word": canonical_jacobi_word(dimension),
         "jacobi_scale_exponents": canonical_jacobi_scale_exponents(),

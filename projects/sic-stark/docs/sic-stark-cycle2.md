@@ -2,6 +2,12 @@
 
 Date: 2026-07-26
 
+> **Cycle-3 update:** the special-value covariance posed below was proved by
+> specializing the source's \(GL_2(\mathbb Z)\)-transformation theorem.
+> The zero-output orbit is also automatic. Thus the unresolved equation
+> count is one less than the orbit count displayed here; see
+> `docs/sic-stark-cycle3.md`.
+
 ## Outcome
 
 This cycle closes one question from sprint 1 and makes the main analytic
@@ -124,9 +130,9 @@ Here juxtaposition denotes multiplication. At \(\tau=\beta\),
 The modular cocycle value
 \(\mathfrak S^{\boldsymbol r}_{L^3}(\beta)\) differs from this expression
 only by the explicit finite q-Pochhammer correction indexed by
-\((I-L^3)\boldsymbol r\). The value for \(L^{-3}\), which appears in the
-restricted TCC, is its reciprocal by the modular cocycle law because
-\(\beta\) is fixed.
+\((I-L^3)\boldsymbol r\). The restricted TCC contains this \(L^3\) value
+and an \(L^{-3}\) value; the latter is the reciprocal of its corresponding
+\(L^3\) value by the modular cocycle law because \(\beta\) is fixed.
 
 This completes the useful part of sprint-1 Question 1: the growing matrix
 \(A_d\) no longer requires a dimension-dependent continued-fraction
@@ -186,9 +192,9 @@ d^2/3+2,&3\mid d.
 \end{cases}
 \]
 
-The word “if” matters: this cycle proves covariance of the algebraic kernel,
-not covariance of the raw Shintani--Faddeev values. Treating the latter as
-automatic would be a gap.
+At the end of this cycle the word “if” still mattered: only covariance of
+the algebraic kernel had been proved. Cycle 3 closes this gap using the
+source's transformation theorem.
 
 ## 5. New smallest target
 

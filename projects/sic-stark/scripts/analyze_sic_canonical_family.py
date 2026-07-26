@@ -24,7 +24,7 @@ def main() -> None:
 
     print(
         "d  Q=<a,b,c>       Delta=(d+1)(d-3)  det(L)  "
-        "L^3 mod d       #orbits  TCC bound  HJ word"
+        "L^3 mod d       #orbits  TCC eqs    HJ word"
     )
     for dimension in range(arguments.start, arguments.stop + 1):
         record = canonical_family_record(dimension)
@@ -34,7 +34,7 @@ def main() -> None:
             f"{record['determinant']:<7} "
             f"{str(record['cube_mod_dimension']):<15} "
             f"{record['zauner_orbit_count']:<8} "
-            f"{record['tcc_orbit_bound']:<10} "
+            f"{record['tcc_equation_count']:<10} "
             f"{record['jacobi_word']}"
         )
 
