@@ -217,6 +217,52 @@ def certificate_matrix(modes: int, photons: int) -> list[list[int]]:
     return rows
 
 
+def fourth_root_power(exponent: int) -> Gaussian:
+    """Return i**exponent exactly as a Gaussian integer."""
+    return ((1, 0), (0, 1), (-1, 0), (0, -1))[exponent % 4]
+
+
+def f4_spam_matrix(
+    photons: int = 4,
+    *,
+    include_amplitudes: bool = True,
+    include_phases: bool = True,
+) -> list[list[int]]:
+    """Selected-contrast Jacobian for relative F4-cat coefficient errors.
+
+    The three columns in either family use the relative perturbation bases
+    e_j-e_0, j=1,2,3.  Real coefficient perturbations model amplitude
+    imbalance; multiplication by i models phase perturbations.  Common
+    nonzero factors are omitted.
+    """
+    if not include_amplitudes and not include_phases:
+        return [[] for _ in range(12)]
+    events = selected_events(4, photons)
+    columns: list[tuple[str, int]] = []
+    if include_amplitudes:
+        columns.extend(("amplitude", mode) for mode in range(1, 4))
+    if include_phases:
+        columns.extend(("phase", mode) for mode in range(1, 4))
+    rows: list[list[int]] = []
+    for charge, _, occupation in events:
+        references = (
+            probe_amplitude(occupation, charge, imaginary=False),
+            probe_amplitude(occupation, charge, imaginary=True),
+        )
+        for reference in references:
+            row = []
+            for family, mode in columns:
+                leakage = add(
+                    fourth_root_power(mode * charge),
+                    scale(-1, fourth_root_power(0)),
+                )
+                if family == "phase":
+                    leakage = -leakage[1], leakage[0]
+                row.append(real_inner(reference, leakage))
+            rows.append(row)
+    return rows
+
+
 def rational_rank(rows: list[list[int]]) -> int:
     matrix = [[Fraction(value) for value in row] for row in rows]
     rank = 0

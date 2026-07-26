@@ -10,6 +10,12 @@
 - [x] Number-state gauge obstruction, Fourier-cat construction, exact
       Jacobian certificate, finite-angle bias, and internal-error propagation
       are included.
+- [x] Coherent-light and one-/two-photon optical characterization are
+      compared explicitly, including loss, phase-instability, and
+      mode-mismatch-aware work.
+- [x] The complete complex cat-coefficient SPAM obstruction is analyzed.
+- [x] An explicit weighted estimator, A-optimal allocation, all-mode
+      Cramér–Rao scaling, and simultaneous-error Monte Carlo are included.
 - [x] Prior suppression-law, null-estimation, linear-optical
       characterization, and general unitary-estimation work is cited and
       distinguished.
@@ -18,7 +24,7 @@
 - [x] AI assistance is disclosed and author responsibility is stated.
 - [x] Exact verification scripts and regression tests accompany the paper.
 - [x] Re-run both project test suites after the repository migration
-      (33 Erdős tests and 31 Fourier tests pass).
+      (33 Erdős tests and 40 Fourier tests pass).
 - [x] Recompile the PDF after the repository migration and check the log for
       undefined references, undefined citations, and overfull boxes.
 - [x] Exact arbitrary-mode, sparse \(F_4\), and finite-angle certificates
@@ -37,7 +43,8 @@
 
 ## Suggested portal metadata
 
-Title: Dimension-saturating local tomography from Fourier-cat dark events
+Title: Dimension-saturating local tomography of off-diagonal
+Fourier-interferometer errors from displaced dark events
 
 Article type: Regular Article
 
