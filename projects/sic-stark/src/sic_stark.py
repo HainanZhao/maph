@@ -4,11 +4,13 @@ from __future__ import annotations
 
 from collections.abc import Mapping
 from fractions import Fraction
+from math import isqrt
 
 
 Matrix2 = tuple[tuple[int, int], tuple[int, int]]
 BinaryQuadraticForm = tuple[int, int, int]
 ResidueVector = tuple[int, int]
+QuadraticCoordinate = tuple[Fraction, Fraction]
 
 IDENTITY_2: Matrix2 = ((1, 0), (0, 1))
 
@@ -128,6 +130,105 @@ def canonical_level_stabilizer(dimension: int) -> Matrix2:
     r"""Return ``A_d=L_d^3``, which is identity modulo ``d``."""
 
     return matrix_power(canonical_stabilizer(dimension), 3)
+
+
+def canonical_beta_is_rational(dimension: int) -> bool:
+    r"""Return whether the positive root ``beta_d`` is rational.
+
+    Here ``beta_d`` is the larger root of
+    ``x^2-(d-1)x+1``.  Its discriminant is
+    ``(d-1)^2-4``.  This is never a square in the canonical range
+    ``d >= 4``, but the exact predicate makes the cyclic-pentagon
+    compatibility check executable.
+    """
+
+    discriminant = form_discriminant(canonical_form(dimension))
+    root = isqrt(discriminant)
+    return root * root == discriminant
+
+
+def canonical_general_modular_modulus(dimension: int) -> int:
+    r"""Return the discrete modulus of the modular gamma for ``A_d``.
+
+    The general modular quantum dilogarithm attached to
+    ``A_d=L_d^3`` uses the absolute value of the lower-left entry of
+    ``A_d`` as its discrete modulus.  In the canonical family this is
+    ``d(d-2)``, rather than the characteristic modulus ``d``.
+    """
+
+    modulus = abs(canonical_level_stabilizer(dimension)[1][0])
+    assert modulus == dimension * (dimension - 2)
+    return modulus
+
+
+def canonical_primitive_sigma_shift_coordinates(
+    dimension: int,
+) -> tuple[QuadraticCoordinate, QuadraticCoordinate, QuadraticCoordinate]:
+    r"""Return coordinates of ``1/(d beta_d^k)``, for ``k=0,1,2``.
+
+    Each pair ``(a,b)`` represents ``a+b*beta_d``.  The coordinates
+    follow from ``beta_d^2-(d-1)beta_d+1=0`` and are useful because the
+    real quasiperiod lattice of ``sigma_S`` is
+    ``Z + Z*beta_d``.
+    """
+
+    canonical_form(dimension)
+    return (
+        (Fraction(1, dimension), Fraction(0)),
+        (
+            Fraction(dimension - 1, dimension),
+            Fraction(-1, dimension),
+        ),
+        (
+            Fraction(dimension - 2),
+            Fraction(-(dimension - 1), dimension),
+        ),
+    )
+
+
+def canonical_primitive_sigma_shifts_are_quasiperiods(
+    dimension: int,
+) -> tuple[bool, bool, bool]:
+    r"""Test whether the primitive quotient shifts lie in ``Z+Z beta``."""
+
+    return tuple(
+        constant.denominator == 1 and beta.denominator == 1
+        for constant, beta in canonical_primitive_sigma_shift_coordinates(
+            dimension
+        )
+    )  # type: ignore[return-value]
+
+
+def canonical_pentagon_compatibility_record(
+    dimension: int,
+) -> dict[str, object]:
+    r"""Return exact gates for applying known pentagon identities to TCC.
+
+    A cyclic finite quantum-dilogarithm identity requires a root-of-unity
+    deformation parameter, which would require rational ``beta_d``.  The
+    general modular identity does apply to ``A_d``, but its native
+    discrete modulus is ``d(d-2)`` and it retains a continuous integral.
+    The primitive sigma shifts also miss the quasiperiod lattice.
+    """
+
+    beta_rational = canonical_beta_is_rational(dimension)
+    modular_modulus = canonical_general_modular_modulus(dimension)
+    return {
+        "beta_rational": beta_rational,
+        "cyclic_parameter_is_root_of_unity": beta_rational,
+        "characteristic_modulus": dimension,
+        "general_modular_modulus": modular_modulus,
+        "moduli_match": modular_modulus == dimension,
+        "primitive_shift_coordinates": (
+            canonical_primitive_sigma_shift_coordinates(dimension)
+        ),
+        "primitive_shifts_are_quasiperiods": (
+            canonical_primitive_sigma_shifts_are_quasiperiods(dimension)
+        ),
+        "faddeev_fourier_sigma_line": "1+i*sqrt(beta)*R",
+        "tcc_sigma_line": "R",
+        "general_modular_measure": "finite sum times continuous integral",
+    }
 
 
 def canonical_level_quotient(dimension: int) -> Matrix2:
@@ -599,6 +700,9 @@ def canonical_family_record(dimension: int) -> dict[str, object]:
             canonical_form_stabilizer_residual(dimension)
         ),
         "level_stabilizer": canonical_level_stabilizer(dimension),
+        "pentagon_compatibility": (
+            canonical_pentagon_compatibility_record(dimension)
+        ),
         "level_quotient": canonical_level_quotient(dimension),
         "twist_kernel": canonical_twist_kernel(dimension),
         "kernel_identity_residual": canonical_kernel_identity(dimension),
