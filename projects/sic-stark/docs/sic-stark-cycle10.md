@@ -455,6 +455,12 @@ The recommended next cycle is:
 The first gate remains unchanged: any proposed boundary relation must
 fail on the formal unit orbit before it is tested against TCC.
 
+Cycle 11 carries out the Floquet audit and proves that the available
+vector evolution is only diagonal or weighted-permutation. It also
+recasts TCC as a twisted trace of the multiplicative commutator between
+RM monodromy and characteristic translation. See
+[`sic-stark-cycle11.md`](sic-stark-cycle11.md).
+
 Theta/Fay addition formulas are a lower-priority route. In the available
 normalization they first control products
 \(u(\boldsymbol r)u(-\boldsymbol r)\), on which the perturbation cancels.

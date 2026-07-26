@@ -2000,6 +2000,182 @@ def canonical_dimension_four_fractional_cell_record(
     }
 
 
+def canonical_floquet_transfer_support(
+    dimension: int,
+) -> tuple[tuple[ResidueVector, ResidueVector], ...]:
+    r"""Return the support of one ``L_d`` characteristic transfer.
+
+    The Jacobi transformation law has the form
+
+    ``P_{L_d*q}(L_d*tau) = kappa_q(tau) P_q(tau)``.
+
+    Thus its vector transfer matrix is a weighted permutation: every
+    source and every target occurs exactly once.
+    """
+
+    canonical_form(dimension)
+    return tuple(
+        (
+            (first, second),
+            canonical_zauner_action(dimension, (first, second)),
+        )
+        for first in range(dimension)
+        for second in range(dimension)
+    )
+
+
+def canonical_floquet_block_degrees(
+    dimension: int,
+) -> tuple[int, ...]:
+    r"""Return degrees of the weighted-cycle characteristic factors.
+
+    A weighted permutation decomposes over Zauner orbits.  An orbit of
+    length ``ell`` contributes a factor ``lambda^ell-c``, where ``c``
+    is the product of its edge weights.
+    """
+
+    return tuple(
+        len(orbit) for orbit in canonical_zauner_orbits(dimension)
+    )
+
+
+def canonical_floquet_commutator_trace_signature(
+    dimension: int,
+    output: ResidueVector,
+) -> dict[tuple[int, ResidueVector, ResidueVector], int]:
+    r"""Return the formal trace of the Floquet/translation commutator.
+
+    Let ``D=diag(u(q))``, let ``T_p e_q=e_{q+p}``, and let
+    ``W_p e_q=omega^<p,(I+L)q> e_q``.  Then
+
+    ``Tr(W_p D T_p D^-1 T_p^-1)``
+
+    is exactly the canonical TCC residual.  This returns its
+    orbit-reduced formal signature.
+    """
+
+    canonical_form(dimension)
+    reduced_output = (
+        output[0] % dimension,
+        output[1] % dimension,
+    )
+    signature: dict[
+        tuple[int, ResidueVector, ResidueVector], int
+    ] = {}
+    for first in range(dimension):
+        for second in range(dimension):
+            basis_index = (first, second)
+            translated_back = (
+                (first - reduced_output[0]) % dimension,
+                (second - reduced_output[1]) % dimension,
+            )
+            key = (
+                canonical_twist_exponent(
+                    dimension, reduced_output, basis_index
+                ),
+                canonical_zauner_orbit_representative(
+                    dimension, basis_index
+                ),
+                canonical_zauner_orbit_representative(
+                    dimension, translated_back
+                ),
+            )
+            signature[key] = signature.get(key, 0) + 1
+    return signature
+
+
+def canonical_dimension_four_floquet_gate_record(
+) -> dict[str, object]:
+    r"""Audit the RM Floquet transfer against the formal deformation.
+
+    The one-step transfer is a weighted Zauner permutation.  Assigning
+    one formal deformation weight to one edge of each three-cycle lifts
+    the cycle-9 vertex deformation to that transfer.  Its three-step
+    monodromy is exactly the deformed diagonal array, so weighted-cycle
+    structure and its spectral factorization do not reject the
+    deformation.
+    """
+
+    dimension = 4
+    orbits = canonical_zauner_orbits(dimension)
+    edge_exponents: dict[ResidueVector, LaurentExponent] = {}
+    for orbit in orbits:
+        target = _canonical_dimension_four_monomial(orbit[0])
+        for index, characteristic in enumerate(orbit):
+            edge_exponents[characteristic] = (
+                target if len(orbit) == 3 and index == 0 else (0, 0)
+            )
+
+    monodromy_defects: dict[
+        ResidueVector, LaurentExponent
+    ] = {}
+    for first in range(dimension):
+        for second in range(dimension):
+            characteristic = (first, second)
+            current = characteristic
+            total = (0, 0)
+            for _ in range(3):
+                edge = edge_exponents[current]
+                total = (
+                    total[0] + edge[0],
+                    total[1] + edge[1],
+                )
+                current = canonical_zauner_action(
+                    dimension, current
+                )
+            target = _canonical_dimension_four_monomial(
+                characteristic
+            )
+            monodromy_defects[characteristic] = (
+                total[0] - target[0],
+                total[1] - target[1],
+            )
+
+    support = canonical_floquet_transfer_support(dimension)
+    sources = tuple(source for source, _ in support)
+    targets = tuple(target for _, target in support)
+    algebraic_packet = (
+        canonical_dimension_four_algebraic_unit_packet_record()
+    )
+    primitive_witness = (
+        canonical_dimension_four_perturbation_witness()
+    )
+    return {
+        "dimension": dimension,
+        "block_degrees": canonical_floquet_block_degrees(dimension),
+        "gauge_invariant_cycle_count": len(orbits),
+        "transfer_nonzero_count": len(support),
+        "one_nonzero_per_source": len(set(sources)) == dimension**2,
+        "one_nonzero_per_target": len(set(targets)) == dimension**2,
+        "edge_exponents": edge_exponents,
+        "monodromy_defects": monodromy_defects,
+        "deformation_lifts_to_weighted_transfer": all(
+            defect == (0, 0)
+            for defect in monodromy_defects.values()
+        ),
+        "weighted_transfer_rejects_deformation": any(
+            defect != (0, 0)
+            for defect in monodromy_defects.values()
+        ),
+        "primitive_commutator_trace_signature": (
+            canonical_floquet_commutator_trace_signature(
+                dimension, (1, 0)
+            )
+        ),
+        "primitive_trace_coefficient_is_forced_nonzero": (
+            primitive_witness["coefficient_is_forced_nonzero"]
+        ),
+        "algebraic_commutator_trace_packet_is_nonzero": (
+            algebraic_packet["all_packet_components_nonzero"]
+        ),
+        "floquet_spectrum_alone_can_force_tcc": False,
+        "missing_structure": (
+            "a non-pure-gauge characteristic translation compatible "
+            "with RM monodromy"
+        ),
+    }
+
+
 def canonical_jacobi_word(dimension: int) -> tuple[int, int, int]:
     r"""Return the HJ exponents in ``L_d^3=(T^(d-1)S)^3``."""
 
