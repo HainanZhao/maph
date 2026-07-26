@@ -1,0 +1,1077 @@
+\documentclass[aps,pra,reprint,amsmath,amssymb,superscriptaddress,longbibliography]{revtex4-2}
+
+\usepackage{booktabs}
+\usepackage{bm}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{xcolor}
+\setcounter{MaxMatrixCols}{12}
+
+\newcommand{\ii}{\mathrm{i}}
+\newcommand{\ee}{\mathrm{e}}
+\newcommand{\per}{\operatorname{per}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\btheta}{\bm{\theta}}
+\newcommand{\be}{\bm e}
+\newcommand{\Ffour}{F_4}
+
+\begin{document}
+
+\title{Dimension-saturating local tomography from Fourier-cat dark events}
+
+\author{Hainan Zhao}
+\email{hainzhao@gmail.com}
+\affiliation{Independent Researcher}
+
+\date{\today}
+
+\begin{abstract}
+An exact dark event is a sensitive null test for a linear-optical device, but
+its unprobed probability is quadratic in a small coherent error and has no
+regular local inverse.  We show that positive and negative calibrated output
+probes turn dark-event counts into linear phase-sensitive observables.  A
+general signed-probe theorem gives their limiting Jacobian and proves that
+one dark event contributes at most two real rows.  Number-state inputs face
+an exact obstruction: in an $m$-mode Fourier interferometer, an
+$(m-1)$-dimensional subspace of off-diagonal output generators is
+indistinguishable from input phases, even after an arbitrary known output
+analyzer.  A coherent Fourier-cat input removes this continuous gauge.
+For every $m\geq2$ and every $n>2$ divisible by $m$, we construct
+$m(m-1)/2$ dark outcomes and two fixed probes whose $m(m-1)$ signed
+contrasts identify every off-diagonal Hermitian error locally.  Within the
+weak-probe, regular-local protocol defined here, both the outcome and
+scalar-contrast counts attain their dimension lower bounds; four programmed
+settings suffice for every $m$, although we do not prove that four is the
+minimum possible number of settings.  At $m=n=4$ we additionally
+give a sparse exact implementation with Jacobian determinant
+$-177147/256$.  We prove an $O(\epsilon^2)$ finite-probe bias bound and show
+how internal coherent errors propagate to the estimated output generator.
+The Fourier-cat suppression rule and displaced-null principle are known;
+the contribution is their explicit bosonic identifiability construction
+together with the Fock gauge theorem and exact dimension-saturating
+certificates.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+\label{sec:introduction}
+
+Destructive multiphoton interference produces output events with exactly
+zero ideal probability.  Fourier suppression laws generalize the
+Hong--Ou--Mandel effect to multiport devices
+\cite{Tichy2010,Crespi2016,Dittel2018PRL,Dittel2018PRA,Bezerra2023}, and
+forbidden-event populations have become practical witnesses of interference
+and device quality \cite{Crespi2016,Wang2023,Sanz2026}.  A scalar
+forbidden-event fraction, however, does not specify which coherent device
+error produced the counts.
+
+There is a more basic local difficulty.  If an event is dark at a nominal
+device, its probability has zero derivative with respect to every coherent
+error coordinate.  The leading quadratic response cannot distinguish
+opposite errors.  The situation parallels the non-identifiability of exact
+null measurements in quantum statistics.  Girotti, Godley, and Guţă showed
+that a deliberate displacement restores identifiability and can support
+optimal estimation in general pure-state models \cite{Girotti2024}.  Here we
+develop a finite-mode, photon-counting implementation of that principle:
+a known signed optical probe supplies a reference amplitude against which
+unknown leakage interferes.
+
+The central issue is not merely sensitivity but \emph{identifiability}.
+Number-state preparation and number-resolved detection possess independent
+input and output phase gauges, familiar from linear-optical
+characterization \cite{RahimiKeshari2013}.  At a Fourier device, the
+transported input-phase gauge lies entirely inside the nominally
+off-diagonal output-error coordinates.  We prove that number-state
+experiments cannot see these directions even if an arbitrary calibrated
+analyzer is appended.  An exact four-photon search then saturates, rather
+than evades, this rank bound.
+
+The missing resource is an input phase reference.  We use equal
+superpositions of all-bunched number states.  Fourier multiports and
+multimode cat states have a substantial prior literature
+\cite{VourdasDunningham2005}; the associated modular dark sectors also
+follow from the general symmetry suppression framework
+\cite{Dittel2018PRA}.  We use this known selection rule to produce a
+dimension-saturating frame of simultaneously dark outcomes for arbitrary
+mode number.  General near-identity qudit-unitary estimation has also been studied
+with a controlled-qudit architecture \cite{EscandonMonardes2024}; our
+construction instead uses bosonic Fourier interference, number-resolved
+dark outcomes, and two fixed global probes.
+
+Our contributions are:
+\begin{enumerate}
+\item a general count-level signed-probe theorem, including the two-real-row
+bound per dark event and a rigorous $O(\epsilon^2)$ finite-angle bias bound;
+\item an exact $(m-1)$-dimensional number-state gauge no-go theorem;
+\item an outcome- and contrast-minimal rank-nine $F_4$ certificate, within
+the same regular-local framework, using one four-photon Fock input;
+\item for all $m\geq2$ and $n>2$ divisible by $m$, a
+dimension-saturating Fourier-cat construction identifying all $m(m-1)$
+off-diagonal Hermitian coordinates from $m(m-1)/2$ dark outcomes and four
+programmed signed settings;
+\item a sparse exact $F_4$ implementation with a rational full-rank
+certificate;
+\item a first-order adjoint rule connecting arbitrary internal coherent
+circuit errors to the reconstructed output generator.
+\end{enumerate}
+The result is local tomography on the declared $m(m-1)$-dimensional
+off-diagonal slice.  It is not global unitary tomography and does not
+identify the $m-1$ output-diagonal $SU(m)$ generators.
+
+\section{Model and parameter target}
+\label{sec:model}
+
+Let $U_0$ be an $m$-mode passive interferometer and
+$\widehat U_0$ its action on a fixed $n$-photon sector.  For number
+occupations $\bm r,\bm s$, the normalized transition amplitude is
+\begin{equation}
+ {\cal A}_{\bm r,\bm s}(U)
+ =\frac{\per U[\bm s,\bm r]}
+ {\sqrt{\prod_jr_j!\prod_ks_k!}}.
+\label{eq:fock-amplitude}
+\end{equation}
+Rows and columns are repeated according to $\bm s$ and $\bm r$.
+
+The unknown coherent output generator belongs to
+\begin{align}
+ {\cal H}_{\rm off}(m)
+ &=\{H=H^\dagger:H_{aa}=0\},\nonumber\\
+ \dim_{\mathbb R}{\cal H}_{\rm off}(m)&=m(m-1).
+\label{eq:hoff}
+\end{align}
+
+For the explicit four-mode certificates we use
+\begin{equation}
+ (\Ffour)_{kj}=\frac{\ii^{kj}}2,\qquad 0\leq k,j<4.
+\label{eq:f4}
+\end{equation}
+The twelve off-diagonal Hermitian generators are
+\begin{align}
+ X_{pq}&=|p\rangle\langle q|+|q\rangle\langle p|,\nonumber\\
+ Y_{pq}&=-\ii|p\rangle\langle q|+\ii|q\rangle\langle p|,
+ \qquad 0\leq p<q<4.
+\label{eq:xy}
+\end{align}
+We fix the coordinate order
+\begin{equation}
+\btheta=(x_{01},y_{01},x_{02},y_{02},x_{03},y_{03},
+x_{12},y_{12},x_{13},y_{13},x_{23},y_{23})
+\label{eq:coordinate-order}
+\end{equation}
+and write $G(\btheta)=\sum_\mu\theta_\mu G_\mu$.  The unknown device is
+locally
+\begin{equation}
+ U(\btheta)=\ee^{\ii G(\btheta)}\Ffour.
+\label{eq:unknown-device}
+\end{equation}
+The normalization $\Tr X_{pq}^2=\Tr Y_{pq}^2=2$ fixes the meaning of the
+reported coordinates and condition numbers.
+
+The three traceless output-diagonal generators are deliberately excluded.
+For an output occupation $\bm s$, a diagonal output unitary multiplies its
+amplitude by a phase, leaving its number probability unchanged.  Moreover,
+at a dark event
+\begin{equation}
+ \langle\bm s|\ii\widehat Z\,\widehat U_0|\psi\rangle
+ =\ii z(\bm s)\langle\bm s|\widehat U_0|\psi\rangle=0 .
+\label{eq:output-diagonal-zero}
+\end{equation}
+They therefore do not occur in the leading dark-event Jacobian.  A finite
+noncommuting analyzer can create higher-order sensitivity to them, but that
+is a different parameter model.
+
+\section{Signed-probe identifiability}
+\label{sec:signed-probe}
+
+Consider events $e=(|\psi_e\rangle,|\bm s_e\rangle)$ that are dark at
+$U_0$:
+\begin{equation}
+ \langle\bm s_e|\widehat U_0|\psi_e\rangle=0.
+\label{eq:dark}
+\end{equation}
+For a real generator coordinate $\bm u$, define the complex amplitude
+functional
+\begin{equation}
+ \ell_e\bm u
+ =\langle\bm s_e|\ii\widehat G(\bm u)\widehat U_0|\psi_e\rangle .
+\label{eq:ell}
+\end{equation}
+
+\subsection{Why an undisplaced null is insufficient}
+
+Without a probe,
+\begin{equation}
+ p_e(\btheta)=|\ell_e\btheta|^2+O(\|\btheta\|^3).
+\label{eq:quadratic-null}
+\end{equation}
+Thus $Dp_e(0)=0$.  More strongly, no collection of such unprobed dark
+probabilities has a locally Lipschitz left inverse on an open parameter
+neighborhood: along $\btheta=t\bm u$, a Lipschitz inverse would imply
+$|t|\|\bm u\|=O(t^2)$, a contradiction.  This does not exclude a
+nonregular higher-order inverse on a restricted domain; it rules out the
+regular local tomography needed for a stable signed estimate.
+
+\subsection{Calibrated central contrast}
+
+Append a known probe $H(\bm h)$ after the unknown error and program both
+signs:
+\begin{equation}
+ p_{e,\bm h}^{\sigma}(\btheta,\epsilon)
+ =\left|
+ \langle\bm s_e|
+ \ee^{\ii\sigma\epsilon\widehat H(\bm h)}
+ \ee^{\ii\widehat G(\btheta)}
+ \widehat U_0|\psi_e\rangle
+ \right|^2,\qquad \sigma=\pm1 .
+\label{eq:probe-probability}
+\end{equation}
+We use the baseline-subtracted response
+\begin{align}
+ R_{e,\bm h}(\btheta,\epsilon)
+ &=
+ \epsilon^{-1}\big[
+ p^+_{e,\bm h}(\btheta,\epsilon)
+ -p^-_{e,\bm h}(\btheta,\epsilon)\nonumber\\
+ &\hspace{2.2cm}
+ -p^+_{e,\bm h}(0,\epsilon)
+ +p^-_{e,\bm h}(0,\epsilon)\big].
+\label{eq:response}
+\end{align}
+This is four times the convention
+$[p^+-p^-]/(4\epsilon)$ often used for a central difference.
+
+\paragraph*{Theorem 1 (signed-probe Jacobian).}
+For every finite-dimensional photon sector,
+\begin{equation}
+ \left.
+ \frac{\partial}{\partial\theta_\mu}
+ \lim_{\epsilon\to0}R_{e,\bm h}(\btheta,\epsilon)
+ \right|_{\btheta=0}
+ =
+ 4\,\operatorname{Re}
+ \left[(\ell_e\bm h)^*(\ell_e\be_\mu)\right].
+\label{eq:signed-probe-theorem}
+\end{equation}
+At finite angle the derivative differs from
+Eq.~\eqref{eq:signed-probe-theorem} by $O(\epsilon^2)$.
+
+A proof and a norm-explicit remainder bound are given in
+Appendix~\ref{app:signed-proof}.  Equation~\eqref{eq:signed-probe-theorem}
+is a statement about observable probability differences, not an assumption
+that complex transition amplitudes can be measured directly.  The probe
+amplitude $\ell_e\bm h$ acts as a phase reference.
+
+\paragraph*{Corollary 1 (two-row event bound).}
+For one dark event, all limiting signed-probe rows lie in
+\begin{equation}
+ \operatorname{span}_{\mathbb R}
+ \{\operatorname{Re}\ell_e,\operatorname{Im}\ell_e\}.
+\label{eq:two-row-span}
+\end{equation}
+Hence one event contributes at most two independent real first-order
+measurements, no matter how many probes are applied.
+
+If a limiting $q\times d$ response matrix has full column rank, some
+$d\times d$ row minor is nonsingular.  Continuity preserves that minor for
+all sufficiently small nonzero calibrated $\epsilon$.  The ordinary local
+inverse-function theorem applied to the selected $d$ responses then gives a
+local differentiable left inverse.  This argument must not be confused with
+the algebraic Jacobian conjecture, which concerns a polynomial self-map with
+constant nonzero determinant and a \emph{global polynomial} inverse.  Nor
+does full rank at one point imply global injectivity.  Our map need not be
+polynomial, the determinant is evaluated locally, and only local
+identifiability is claimed.
+
+\section{The number-state gauge and its optimal rank}
+\label{sec:fock-gauge}
+
+\paragraph*{Theorem 2 (transported input-phase gauge).}
+Let $F_m$ be the $m$-mode Fourier matrix.  For every real traceless diagonal
+$D$, the generator
+\begin{equation}
+ K_D=F_mDF_m^\dagger
+\label{eq:transported-gauge}
+\end{equation}
+has zero diagonal and is therefore an off-diagonal Hermitian generator.
+Nevertheless, for every input number state $|\bm r\rangle$,
+\begin{equation}
+ \ee^{\ii\widehat K_D}\widehat F_m|\bm r\rangle
+ =\widehat F_m\ee^{\ii\widehat D}|\bm r\rangle
+ =\ee^{\ii\sum_jd_jr_j}\widehat F_m|\bm r\rangle .
+\label{eq:gauge-no-go}
+\end{equation}
+Consequently $K_D$ is invisible to all output number probabilities, even
+after an arbitrary known output analyzer.  The invisible subspace has
+dimension $m-1$.
+
+The proof is included in Appendix~\ref{app:fock-certificate}.  At $m=4$,
+an explicit basis inside the coordinate order
+\eqref{eq:coordinate-order} is
+\begin{align}
+ K_A&=X_{01}+X_{03}+X_{12}+X_{23},\nonumber\\
+ K_B&=Y_{01}-Y_{03}+Y_{12}+Y_{23},\nonumber\\
+ K_C&=X_{02}+X_{13}.
+\label{eq:gauge-basis}
+\end{align}
+Thus Fock-input experiments can identify at most nine of the twelve
+off-diagonal coordinates.
+
+\subsection{Exact four-photon saturation}
+
+The bound is tight.  Use input $\bm r=(1,1,1,1)$ and the nine
+output--probe contrasts in Table~\ref{tab:fock-design}.  All five outputs
+are exactly dark by the cyclic Fourier selection rule
+\cite{Tichy2010,Dittel2018PRA}.
+\begin{table}[t]
+\caption{An exact rank-nine design.  Multiple probes on one output give
+separate scalar contrasts.}
+\label{tab:fock-design}
+\begin{ruledtabular}
+\begin{tabular}{cc}
+output $\bm s$ & probes\\
+\hline
+$(0,0,1,3)$ & $X_{03},Y_{03}$\\
+$(0,0,2,2)$ & $X_{02},Y_{02}$\\
+$(0,0,3,1)$ & $X_{12},Y_{12}$\\
+$(0,1,1,2)$ & $X_{23},Y_{23}$\\
+$(0,2,2,0)$ & $Y_{02}$
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+The normalized $9\times12$ limiting matrix is displayed and derived in
+Appendix~\ref{app:fock-certificate}.  It annihilates exactly the three
+vectors in Eq.~\eqref{eq:gauge-basis}; a $9\times9$ minor has determinant
+$81/8$.  Therefore its rank is nine.  Nine scalar contrasts are necessary
+for a nine-dimensional quotient, and five events are necessary by
+Corollary~1.  The design attains both lower bounds.
+
+\section{A coherent phase reference}
+\label{sec:cat}
+
+\subsection{Known Fourier-cat dark sectors}
+
+Let
+\begin{equation}
+ F_m(k,j)=m^{-1/2}\omega^{kj},\qquad
+ \omega=\ee^{2\pi\ii/m},
+\end{equation}
+and define the phase-twisted all-bunched cat
+\begin{equation}
+ |\Psi_\ell^{(m,n)}\rangle
+ =\frac1{\sqrt m}\sum_{j=0}^{m-1}
+ \omega^{-\ell j}|n\be_j\rangle .
+\label{eq:general-cat}
+\end{equation}
+For an output occupation $\bm s$ of total size $n$, put
+$Q(\bm s)=\sum_kks_k\pmod m$.  Direct evaluation gives
+\begin{equation}
+ {\cal A}_{\Psi_\ell,\bm s}(F_m)
+ =
+ \sqrt{\frac{n!}{\prod_ks_k!}}\,
+ m^{(1-n)/2}\,
+ \delta_{Q(\bm s),\ell}.
+\label{eq:cat-sector}
+\end{equation}
+Thus all outputs outside one modular sector are dark.  The Fourier
+multiport--cat connection is known from
+Vourdas and Dunningham \cite{VourdasDunningham2005}, and
+Eq.~\eqref{eq:cat-sector} is also an immediate cyclic-symmetry selection
+rule \cite{Dittel2018PRA}.  We recall it to specify our phase convention and
+resource; we do not claim it as a new suppression law.  A self-contained
+derivation is given in Appendix~\ref{app:cat-certificate}.
+
+\subsection{An all-mode dimension-saturating frame}
+
+We now specialize to the charge-zero cat, take $n>2$ divisible by $m$, and
+write
+\begin{equation}
+ \alpha_{\bm s}=
+ \sqrt{\frac{n!}{\prod_as_a!}}\,m^{(1-n)/2}.
+\end{equation}
+For an output with $Q(\bm s)=c\neq0$, define the phase-free dark-amplitude
+functional
+\begin{equation}
+ L_{\bm s}(H)=\alpha_{\bm s}\sum_{a=0}^{m-1}s_aH_{a,a-c},
+\label{eq:general-dark-functional}
+\end{equation}
+where indices are modulo $m$.  Its physical amplitude derivative is
+$\ell_{\bm s}(H)=\ii L_{\bm s}(H)$.
+
+\paragraph*{Theorem 3 (all-mode Fourier-cat frame).}
+For every $m\geq2$ and every $n>2$ divisible by $m$, there are
+$m(m-1)/2$ dark outcomes and two fixed Hermitian probes $R,T$ for which
+the two limiting signed contrasts per outcome have full rank on
+${\cal H}_{\rm off}(m)$.  Thus four settings,
+$\pm\epsilon R$ and $\pm\epsilon T$, suffice for local identification at
+all sufficiently small calibrated nonzero $\epsilon$.
+
+Here is the explicit construction.  Choose the cyclic separations
+$c=1,\ldots,\lfloor m/2\rfloor$.  If $2c\not\equiv0\pmod m$, use all $m$
+outcomes
+\begin{equation}
+ \bm s_{p,c}=(n-1)\be_p+\be_{p+c},\qquad 0\leq p<m.
+\label{eq:selected-general-outcomes}
+\end{equation}
+If $m$ is even and $c=m/2$, retain only $0\leq p<m/2$.  Their charge is
+$np+c\equiv c$, so all are dark.  Their total number is
+$m(m-1)/2$.
+
+Let $R$ be the real complete-graph probe,
+\begin{equation}
+ R_{ab}=1\ (a\neq b),\qquad R_{aa}=0.
+\end{equation}
+Orient every edge of cyclic separation $c<m/2$ by
+\begin{equation}
+ T_{a,a-c}=\ii,\qquad T_{a-c,a}=-\ii.
+\label{eq:oriented-probe}
+\end{equation}
+For even $m$, orient the remaining antipodal edges as
+$T_{p,p+m/2}=\ii$ for $0\leq p<m/2$, with the reverse entries fixed by
+Hermiticity.  Then
+\begin{align}
+ L_{p,c}(R)&=\alpha n,&L_{p,c}(T)&=\ii\alpha n
+ &&(2c\not\equiv0),\nonumber\\
+ L_{p,c}(R)&=\alpha n,&L_{p,c}(T)&=\ii\alpha(n-2)
+ &&(2c\equiv0),
+\label{eq:general-reference-values}
+\end{align}
+where the selected outcomes share
+$\alpha=\sqrt n\,m^{(1-n)/2}$.  The two probes therefore read the real and
+imaginary parts of every selected complex functional.
+
+For completeness, the underlying block inversion is especially simple.
+For a non-antipodal separation, set $z_a=H_{a,a-c}$.  Equation
+\eqref{eq:general-dark-functional} becomes
+\begin{equation}
+ \frac{L_{p,c}(H)}{\alpha}=(n-1)z_p+z_{p+c}.
+\label{eq:cyclic-block}
+\end{equation}
+The map is $((n-1)I+P_c)z$ with $P_c$ a permutation.  A vector in its
+kernel would obey $(n-1)\|z\|=\|z\|$, and hence vanishes because $n>2$.
+For the antipodal class, with $z_p=x_p+\ii y_p$,
+\begin{equation}
+ \frac{L_{p,c}(H)}{\alpha}
+ =(n-1)z_p+z_p^*=nx_p+\ii(n-2)y_p,
+\label{eq:antipodal-block}
+\end{equation}
+which is also invertible.  The cyclic edge classes partition all
+off-diagonal Hermitian entries, proving the theorem.  A detailed derivation
+is in Appendix~\ref{app:cat-certificate}.
+
+One dark event supplies at most two real rows by Corollary~1.  Consequently
+the theorem's $m(m-1)/2$ events and $m(m-1)$ scalar contrasts attain the
+corresponding lower bounds \emph{within this weak-probe regular-local
+framework}.  This does not prove global injectivity, nor does it prove that
+four programmed settings are necessary among more general protocols.  After
+division by the known reference magnitudes in
+Eq.~\eqref{eq:general-reference-values}, each cyclic block has condition
+number at most $n/(n-2)$.  Without that row calibration, the worst
+antipodal gain ratio is at most $[n/(n-2)]^2$.
+
+For $m\geq3$, the smallest member of the family is $n=m$; for $m=2$ the
+first allowed choice is $n=4$.  At $n=m$, the common squared amplitude
+normalization is
+\begin{equation}
+ \alpha^2=m^{2-m}.
+\label{eq:alpha-scaling}
+\end{equation}
+This exponential-in-$m$ factor is a probability-rate cost, not a rank or
+conditioning failure.  With the dense unnormalized probes above, the
+probe-only dark-event probability scales as
+$p_{\rm ref}=O(\epsilon^2m^{4-m})$ at $n=m$; if the probe operators are
+normalized to fixed spectral size it scales instead as
+$O(\epsilon^2m^{2-m})$.  These estimates caution against interpreting the
+algebraic all-mode theorem as an immediate large-$m$ sample-complexity
+advantage.
+
+\subsection{A sparse exact $F_4$ implementation}
+
+Set $m=n=4$, $\ell=0$:
+\begin{equation}
+ |\Psi_{\rm cat}\rangle
+ =\frac{|4000\rangle+|0400\rangle+|0040\rangle+|0004\rangle}{2}.
+\label{eq:f4-cat}
+\end{equation}
+Equation~\eqref{eq:cat-sector} makes the 25 outputs with
+$Q(\bm s)\neq0$ exactly dark.  Use the two probe generators
+\begin{equation}
+ H_X=X_{01}-X_{02},\qquad
+ H_Y=Y_{01}-Y_{02}.
+\label{eq:cat-probes}
+\end{equation}
+They are the two quadratures coupling mode $0$ to the antisymmetric
+supermode $(|1\rangle-|2\rangle)/\sqrt2$.
+
+In the column orders
+\begin{align}
+ \btheta_X&=(x_{01},x_{02},x_{03},x_{12},x_{13},x_{23}),\nonumber\\
+ \btheta_Y&=(y_{01},y_{02},y_{03},y_{12},y_{13},y_{23}),
+\end{align}
+six $H_X$ contrasts and six $H_Y$ contrasts have the limiting matrices
+\begin{equation}
+ J_X=
+ \begin{pmatrix}
+0&-\frac32&0&0&-\frac32&0\\
+\frac34&0&0&\frac34&0&\frac32\\
+\frac94&0&0&\frac34&0&0\\
+\frac34&0&\frac34&0&0&\frac32\\
+0&-4&0&0&0&0\\
+\frac34&0&\frac32&\frac34&0&0
+\end{pmatrix},
+\label{eq:jx}
+\end{equation}
+and
+\begin{equation}
+ J_Y=
+ \begin{pmatrix}
+0&-\frac32&0&0&-\frac32&0\\
+\frac34&0&0&\frac34&0&\frac32\\
+0&-\frac32&0&0&\frac32&0\\
+\frac94&0&0&\frac34&0&0\\
+\frac34&0&-\frac34&0&0&\frac32\\
+\frac34&0&-\frac32&\frac34&0&0
+\end{pmatrix}.
+\label{eq:jy}
+\end{equation}
+The $H_X$ output order is
+\begin{equation}
+(0022),(0112),(0310),(1021),(1030),(1102),
+\label{eq:x-outputs}
+\end{equation}
+and the $H_Y$ output order is
+\begin{equation}
+(0022),(0112),(0220),(0310),(1021),(1102).
+\label{eq:y-outputs}
+\end{equation}
+Every omitted cross block is exactly zero.  The exact determinants are
+\begin{align}
+ \det J_X&=-\frac{243}{8},&
+ \det J_Y&=\frac{729}{32},\nonumber\\
+ \det\operatorname{diag}(J_X,J_Y)
+ &=-\frac{177147}{256}.
+\label{eq:cat-determinants}
+\end{align}
+The Gaussian-integer derivation is in
+Appendix~\ref{app:cat-certificate}.
+
+This sparse four-mode certificate is an implementation alternative to
+Theorem~3.  It uses seven distinct outcomes rather than the six in the
+general construction, while retaining twelve scalar responses and four
+programmed settings because all outcomes for a probe are recorded in
+parallel: $\pm\epsilon H_X$ and $\pm\epsilon H_Y$.  The raw
+limiting condition number is $7.05$; row normalization gives $4.86$, and
+ideal background-free Poisson whitening gives $4.79$.  These are local
+design diagnostics, not hardware-independent resource guarantees.
+
+\section{Finite probe angle and count statistics}
+\label{sec:finite}
+
+The matrices \eqref{eq:jx}--\eqref{eq:jy} are the
+$\epsilon\rightarrow0$ Jacobian of $R$, not exact finite-angle
+Jacobians.  For the cat input, exact finite-angle probabilities are
+available from
+\begin{equation}
+ A_{\bm s}(U)
+ =\frac12\sqrt{\frac{4!}{\prod_ks_k!}}
+ \sum_{j=0}^{3}\prod_{k=0}^{3}U_{kj}^{s_k},
+ \qquad p_{\bm s}(U)=|A_{\bm s}(U)|^2 .
+\label{eq:cat-finite-amplitude}
+\end{equation}
+For the probes \eqref{eq:cat-probes}, $H^3=2H$, so
+\begin{equation}
+ \ee^{\ii\epsilon H}
+ =I+\frac{\ii\sin(\sqrt2\epsilon)}{\sqrt2}H
+ +\frac{\cos(\sqrt2\epsilon)-1}{2}H^2 .
+\label{eq:probe-exponential}
+\end{equation}
+
+Appendix~\ref{app:signed-proof} proves that the central-contrast Jacobian
+has no $O(\epsilon)$ error: its first correction is $O(\epsilon^2)$.
+For the selected design, exact finite-angle evaluation gives the compact
+diagnostic in Table~\ref{tab:finite-angle}.
+\begin{table}[t]
+\caption{Finite-angle Jacobian bias and spectral condition number in the
+ideal coherent model.  Bias is relative Frobenius error from the limiting
+matrix.}
+\label{tab:finite-angle}
+\begin{ruledtabular}
+\begin{tabular}{ccc}
+$\epsilon$ & relative bias & $\kappa_2(J_\epsilon)$\\
+\hline
+0.010 & $7.74\times10^{-4}$ & 7.043\\
+0.020 & $3.09\times10^{-3}$ & 7.033\\
+0.050 & $1.92\times10^{-2}$ & 6.968\\
+0.100 & $7.46\times10^{-2}$ & 6.759
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+The favorable condition number at larger angle does not remove the growing
+model bias.  Probe-only baseline subtraction in Eq.~\eqref{eq:response} is
+also essential: for the selected $H_Y$ outcomes, the largest undivided
+baseline begins as $9\epsilon^3/8+O(\epsilon^5)$.
+
+For independent selected Poisson channels,
+\begin{equation}
+ Y_{a\bm s}\sim\operatorname{Pois}
+ \{N_a[p_{a\bm s}(\btheta)+b_{\bm s}]\},
+\end{equation}
+the Fisher information is
+\begin{equation}
+ I_{\mu\nu}^{\rm P}
+ =\sum_{a,\bm s}N_a
+ \frac{\partial_\mu p_{a\bm s}\,\partial_\nu p_{a\bm s}}
+ {p_{a\bm s}+b_{\bm s}}.
+\label{eq:poisson-fi}
+\end{equation}
+At a displaced dark event,
+$p=c\epsilon^2+O(\epsilon^3)$ and
+$\partial_\mu p=d_\mu\epsilon+O(\epsilon^2)$.  The information therefore
+has a finite nonzero limit when $b=0$, but is suppressed as
+$\epsilon^2/(c\epsilon^2+b)$ above a fixed background floor.  A multinomial
+model must additionally include the negative covariance between outcomes
+recorded in one setting.  Under any stated likelihood, a Cramér--Rao bound
+is conditional on local unbiasedness and does not by itself give a hardware
+cost forecast.
+
+This section is an ideal-model statistical layer.  Its formulas and tables
+are reproduced by the accompanying finite-angle script and tests.  Loss,
+partial distinguishability, source contamination, detector crosstalk,
+calibration drift, and optimal shot allocation require an augmented
+likelihood before experimental sample complexity can be claimed.
+
+\subsection{Cat-phase confounding}
+
+The coherent input phase is not a benign visibility parameter; it is the
+resource that removes the gauge.  If the components of
+Eq.~\eqref{eq:f4-cat} acquire unknown phases $\alpha_j$, infinitesimally
+they are generated by an input diagonal $D$, and
+\begin{equation}
+ F_4\ee^{\ii D}
+ =\ee^{\ii F_4DF_4^\dagger}F_4.
+\label{eq:cat-phase-confounding}
+\end{equation}
+The three relative cat phases are therefore exactly confounded with the
+three device directions in Eq.~\eqref{eq:gauge-basis}.  If those preparation
+phases are free nuisance parameters, the augmented model does not separately
+identify all twelve device coordinates.  Independent cat-phase calibration
+or additional reference states are necessary.  Complete dephasing returns
+the experiment to the number-state gauge.  Even with calibrated phases,
+the construction is not globally injective: for a diagonal
+$D=\operatorname{diag}(d_0,\ldots,d_{m-1})$, the discrete conditions
+\begin{equation}
+ n(d_j-d_0)\in2\pi\mathbb Z\qquad(1\leq j<m)
+\label{eq:cat-global-alias}
+\end{equation}
+leave the equal-phase $n$-photon cat unchanged up to a global phase.
+Consequently the corresponding finite transported transformations
+$F_m\exp(\ii D)F_m^\dagger$ are exact global aliases.  They are discrete
+near a fixed calibrated representative and therefore do not contradict the
+local full-rank theorem.
+
+\section{Internal coherent errors}
+\label{sec:internal}
+
+Let a nominal circuit factor as
+\begin{equation}
+ U_0=U_LU_{L-1}\cdots U_1.
+\end{equation}
+If a small coherent generator $H_\ell$ is inserted after layer $\ell$, set
+$W_\ell=U_L\cdots U_{\ell+1}$.  Then
+\begin{equation}
+ U_L\cdots U_{\ell+1}
+ \ee^{\ii\delta_\ell H_\ell}
+ U_\ell\cdots U_1
+ =
+ \ee^{\ii\delta_\ell W_\ell H_\ell W_\ell^\dagger}U_0.
+\label{eq:single-internal}
+\end{equation}
+For simultaneous small errors, the first-order output-equivalent generator
+is
+\begin{equation}
+ G_{\rm eff}
+ =\sum_\ell\delta_\ell
+ W_\ell H_\ell W_\ell^\dagger+O(\|\bm\delta\|^2).
+\label{eq:effective-generator}
+\end{equation}
+Thus the signed-probe reconstruction applies to arbitrary internal coherent,
+lossless errors after adjoint propagation.
+
+This does not automatically locate a faulty component.  Different layer
+errors can have the same output-equivalent generator, and output-diagonal
+projections remain outside our $m(m-1)$-coordinate target.  Layer localization
+requires the circuit Jacobian across additional configurations, addressable
+controls, or structural priors.  Appendix~\ref{app:internal-proof} gives the
+short proof and the multi-error expansion.
+
+\section{Relation to prior work and limitations}
+\label{sec:limitations}
+
+The deliberate displacement of a null measurement is a general estimation
+principle, not one introduced here.  Girotti \emph{et al.} established its
+role in resolving null-measurement non-identifiability and in asymptotically
+optimal pure-state estimation \cite{Girotti2024}.  Our contribution is an
+explicit multiphoton-count implementation, the exact number-state gauge
+theorem, and explicit dimension-saturating local frames for a Fourier
+device.
+
+Likewise, Eq.~\eqref{eq:cat-sector} is a known Fourier-cat/cyclic selection
+effect \cite{VourdasDunningham2005,Dittel2018PRA}.  The new role assigned to
+the cat is operational: it supplies the missing relative phase reference.
+Standard Fourier suppression experiments
+\cite{Tichy2010,Crespi2016,Dittel2018PRL} and programmable photonic
+processors \cite{Arrazola2021,Wang2023} provide the experimental context,
+but preparing a phase-stable multimode multiphoton cat is substantially
+harder than preparing a number state.  The rank-nine $F_4$ Fock design is
+the nearer-term protocol; the cat family is a complete-identifiability
+benchmark.
+
+The closest comparator we found for general near-identity unitary
+estimation reconstructs all $d^2-1$ parameters and can attain the quantum
+Cramér--Rao bound, but uses a target qudit, two control qudits, and
+controlled shift and phase operations \cite{EscandonMonardes2024}.  It does
+not provide a passive-bosonic Fourier construction from photon-counted dark
+outcomes.  To our knowledge, prior work has not combined Fourier-cat
+suppression with displaced-null readout to give an explicit all-mode,
+dimension-saturating local frame for coherent off-diagonal errors of a
+passive multiport.  This is a scoped literature assessment, not a claim to
+the first arbitrary-unitary tomography protocol, the first displaced-null
+measurement, or a new Fourier-cat suppression law.
+
+The rigorous scope is:
+\begin{itemize}
+\item local reconstruction around a calibrated nominal interferometer, not
+global injectivity or global unitary tomography;
+\item $m(m-1)$ off-diagonal coordinates only, not the $m-1$
+output-diagonal $SU(m)$ directions;
+\item coherent lossless errors with calibrated probes and input phases;
+\item two probe directions and four signed settings suffice, but neither a
+one-probe nor a fewer-setting impossibility theorem has been proved;
+\item the all-mode outcome and scalar-contrast counts, and the $F_4$ Fock
+counts, are minimal only within the declared weak-probe regular-local
+framework; the finite-angle experiment has not been globally optimized;
+\item identification is local and calibrated: global aliases and
+off-diagonal device errors confounded with uncalibrated input phases or
+probe errors are not excluded;
+\item at $n=m$, $\alpha^2=m^{2-m}$, so event rates decay rapidly even
+though the row-normalized condition bound is at most $m/(m-2)$;
+\item the ideal likelihood does not absorb loss or distinguishability into
+a universal ``background'' parameter
+\cite{Shchesnovich2015,DufourBuchleitner2026}.
+\end{itemize}
+
+\section{Discussion}
+\label{sec:discussion}
+
+A multiphoton dark event is not by itself a signed sensor.  The known probe
+in Eq.~\eqref{eq:response} supplies a reference amplitude and turns photon
+counts into linear local observables.  Which coordinates can then be
+reconstructed depends on both the collection of dark amplitude gradients
+and the phase reference carried by the input state.
+
+This viewpoint exposes a sharp resource separation.  Number states have an
+exact $(m-1)$-dimensional blind subspace at $F_m$; the $F_4$ certificate
+saturates the resulting rank-nine bound.  A calibrated cat state lifts that
+continuous gauge, and the cyclic-edge construction gives an invertible
+$m(m-1)$-coordinate design for every mode number.  Unknown cat phases
+recreate precisely the obstruction the state was introduced to remove.  The
+distinction is therefore one of identifiability, not simply better
+visibility.
+
+The most immediate extensions are a joint SPAM--device likelihood,
+lower-cost coherent reference states, circuit-specific internal-error
+dictionaries, and sparse or bounded-norm probes that improve large-$m$
+count rates.  Any such extension must preserve the separation between local
+full rank, finite-angle bias, finite-shot efficiency, and global uniqueness.
+
+\begin{acknowledgments}
+The author used OpenAI Codex as a research and writing assistant for
+symbolic exploration, exact-code generation, literature discovery, and
+editorial revision.  All claims and calculations remain the author's
+responsibility.
+\end{acknowledgments}
+
+\appendix
+
+\section{Proof of the signed-probe and finite-angle theorems}
+\label{app:signed-proof}
+
+Put $|\phi_e\rangle=\widehat U_0|\psi_e\rangle$ and suppress the event
+subscript.  For a fixed probe $\widehat h$, define
+\begin{align}
+ a(t)&=\langle\bm s|\ee^{\ii t\widehat h}|\phi\rangle,\nonumber\\
+ b_\mu(t)&=\langle\bm s|\ee^{\ii t\widehat h}
+ \ii\widehat G_\mu|\phi\rangle,\nonumber\\
+ g_\mu(t)&=\left.\partial_{\theta_\mu}
+ |\langle\bm s|\ee^{\ii t\widehat h}
+ \ee^{\ii\widehat G(\btheta)}|\phi\rangle|^2
+ \right|_{\btheta=0}\nonumber\\
+ &=2\operatorname{Re}\{a(t)^*b_\mu(t)\}.
+\label{eq:appendix-g}
+\end{align}
+Darkness gives $a(0)=0$.  Let
+\begin{equation}
+ a_r=\langle\bm s|(\ii\widehat h)^r|\phi\rangle,\qquad
+ b_{r\mu}=\langle\bm s|(\ii\widehat h)^r
+ \ii\widehat G_\mu|\phi\rangle .
+\end{equation}
+The derivative of the response \eqref{eq:response} is
+\begin{equation}
+ \left.\partial_{\theta_\mu}R\right|_0
+ =\frac{g_\mu(\epsilon)-g_\mu(-\epsilon)}{\epsilon}.
+\end{equation}
+Taylor expansion of $a$ and $b$ gives
+\begin{align}
+ \left.\partial_{\theta_\mu}R\right|_0
+={}&4\operatorname{Re}(a_1^*b_{0\mu})\nonumber\\
+&+4\epsilon^2\operatorname{Re}\left\{
+\frac{a_1^*b_{2\mu}}2+\frac{a_2^*b_{1\mu}}2
++\frac{a_3^*b_{0\mu}}6\right\}
++O(\epsilon^4).
+\label{eq:finite-expansion}
+\end{align}
+Since $a_1=\ell\bm h$ and $b_{0\mu}=\ell\be_\mu$,
+Eq.~\eqref{eq:signed-probe-theorem} follows.  Writing
+$\ell=\bm u+\ii\bm v$ as a complex row, its probe row is a real linear
+combination of $\bm u$ and $\bm v$, which proves
+Eq.~\eqref{eq:two-row-span}.
+
+For a norm bound, let
+\begin{equation}
+ M=\|\widehat h\|\leq n\|h\|,\qquad
+ L_\mu=\|\widehat G_\mu\|\leq n\|G_\mu\|.
+\end{equation}
+Leibniz's rule applied to Eq.~\eqref{eq:appendix-g} yields
+\begin{equation}
+ |g_\mu'''(t)|
+ \leq2\sum_{k=0}^{3}\binom3kM^kM^{3-k}L_\mu
+ =16M^3L_\mu .
+\end{equation}
+The central-difference remainder theorem therefore gives, for the
+convention \eqref{eq:response},
+\begin{equation}
+ \left|
+ \left.\partial_{\theta_\mu}R\right|_0
+ -4\operatorname{Re}(a_1^*b_{0\mu})
+ \right|
+ \leq\frac{16}{3}\epsilon^2M^3L_\mu .
+\label{eq:finite-bound}
+\end{equation}
+This bound is conservative but uniform.  Retaining the explicit
+$\epsilon^2$ term in Eq.~\eqref{eq:finite-expansion} leaves an
+$O(\epsilon^4)$ remainder.  Baseline subtraction does not change the
+derivative with respect to $\btheta$, but it removes the finite-angle
+probe-only offset from the observed response.
+
+\section{Fock gauge proof and exact rank-nine certificate}
+\label{app:fock-certificate}
+
+For $D=\operatorname{diag}(d_0,\ldots,d_{m-1})$,
+\begin{equation}
+ (F_mDF_m^\dagger)_{pp}
+ =\frac1m\sum_jd_j=\frac{\Tr D}{m}=0.
+\end{equation}
+Conjugation commutes with exponentiation, so
+$\ee^{\ii K_D}F_m=F_m\ee^{\ii D}$ at the single-particle level and hence
+in every symmetric photon sector.  A number state is an eigenvector of
+$\widehat D=\sum_jd_j\widehat n_j$, proving
+Eq.~\eqref{eq:gauge-no-go}.  Appending a known unitary $V$ preserves the
+global phase, so no subsequent number measurement removes the
+obstruction.  The map from traceless $D$ to $K_D$ is injective and its
+dimension is $m-1$.
+
+For completeness, the $F_4$ finite certificate can be evaluated with
+Gaussian integers.  Let
+\begin{equation}
+ Z_{\bm r,\bm t}=\per(2F_4)[\bm t,\bm r],\qquad
+ D_{\bm r,\bm s}=2^n
+ \sqrt{\prod_jr_j!\prod_ks_k!}.
+\end{equation}
+For a dark target, the first amplitude derivatives are
+\begin{align}
+ \ell X_{pq}
+ &=\frac{\ii}{D_{\bm r,\bm s}}
+ \left(s_qZ_{\bm r,\bm s+\be_p-\be_q}
+ +s_pZ_{\bm r,\bm s-\be_p+\be_q}\right),\nonumber\\
+ \ell Y_{pq}
+ &=\frac{1}{D_{\bm r,\bm s}}
+ \left(s_pZ_{\bm r,\bm s-\be_p+\be_q}
+ -s_qZ_{\bm r,\bm s+\be_p-\be_q}\right).
+\label{eq:neighboring-permanents}
+\end{align}
+Negative occupations are omitted.  These follow directly from the Fock
+ladder factors; the square roots cancel against the changed-state
+normalization.
+
+Substitution into Eq.~\eqref{eq:signed-probe-theorem}, for the row order of
+Table~\ref{tab:fock-design}, gives
+\begin{widetext}
+\begin{equation}
+J_F=
+\begin{pmatrix}
+0&0&0&0&\frac32&0&0&0&0&0&-\frac32&0\\
+0&0&0&0&0&\frac32&0&0&0&0&0&\frac32\\
+0&0&1&0&0&0&0&0&-1&0&0&0\\
+0&0&0&1&0&0&0&0&0&-1&0&0\\
+0&0&0&0&0&0&\frac32&0&0&0&-\frac32&0\\
+0&0&0&0&0&0&0&\frac32&0&0&0&-\frac32\\
+-1&0&0&0&0&0&-1&0&0&0&2&0\\
+0&-1&0&0&0&0&0&-1&0&0&0&2\\
+0&0&0&1&0&0&0&0&0&1&0&0
+\end{pmatrix}.
+\label{eq:fock-jacobian}
+\end{equation}
+\end{widetext}
+Each row annihilates the coordinate vectors of $K_A,K_B,K_C$.
+The minor in columns
+\begin{equation}
+(x_{01},y_{01},x_{02},y_{02},x_{03},y_{03},x_{12},y_{12},y_{13})
+\end{equation}
+has determinant $81/8$.  Hence $\operatorname{rank}J_F=9$ and the three
+independent gauge vectors form its complete nullspace.
+
+\section{Fourier-cat frame proof and sparse rank-twelve certificate}
+\label{app:cat-certificate}
+
+For the component $|n\be_j\rangle$, every term in the repeated-column
+permanent has the same phase.  Equation~\eqref{eq:fock-amplitude} gives
+\begin{equation}
+ {\cal A}_{|n\be_j\rangle,\bm s}(F_m)
+ =\sqrt{\frac{n!}{\prod_ks_k!}}\,
+ m^{-n/2}\omega^{jQ(\bm s)} .
+\end{equation}
+Multiplying by the coefficients in Eq.~\eqref{eq:general-cat} and summing
+over $j$ gives
+\begin{equation}
+ \frac1{\sqrt m}\sum_{j=0}^{m-1}
+ \omega^{j[Q(\bm s)-\ell]}
+ =\sqrt m\,\delta_{Q(\bm s),\ell},
+\end{equation}
+which proves Eq.~\eqref{eq:cat-sector}.
+
+We next derive Eq.~\eqref{eq:general-dark-functional} and complete the
+all-mode proof.  For a general single-particle matrix $U$, the cat amplitude
+is the polynomial
+\begin{equation}
+ A_{\bm s}(U)=
+ \sqrt{\frac{n!}{\prod_as_a!}}\,\frac1{\sqrt m}
+ \sum_{j=0}^{m-1}\prod_{a=0}^{m-1}U_{aj}^{s_a}.
+\label{eq:general-cat-polynomial}
+\end{equation}
+Along $U(\theta)=\ee^{\ii\theta H}F_m$,
+$\dot U_{aj}=\ii\sum_bH_{ab}F_m(b,j)$.  Differentiating
+Eq.~\eqref{eq:general-cat-polynomial} at zero produces terms proportional
+to
+\begin{equation}
+ \sum_{j=0}^{m-1}\omega^{j[Q(\bm s)+b-a]}
+ =m\,\delta_{b,a-c}
+\end{equation}
+when $Q(\bm s)=c$.  Collecting the factorial and Fourier normalizations
+gives
+\begin{equation}
+ \left.\frac{d}{d\theta}A_{\bm s}
+   (\ee^{\ii\theta H}F_m)\right|_{\theta=0}
+ =\ii\alpha_{\bm s}\sum_as_aH_{a,a-c}
+ =\ii L_{\bm s}(H),
+\label{eq:general-cat-gradient}
+\end{equation}
+as asserted.
+
+For the selected outcome \eqref{eq:selected-general-outcomes}, all
+factorials are the same and
+$\alpha=\sqrt n\,m^{(1-n)/2}$.  In a non-antipodal cyclic class, the
+$m$ complex coordinates $z_a=H_{a,a-c}$ are independent, because their
+Hermitian conjugates belong to the unselected class $-c$.  The selected
+functionals form the complex matrix $(n-1)I+P_c$.  If it annihilates $z$,
+unitarity of the permutation gives
+\begin{equation}
+ (n-1)\|z\|=\|P_cz\|=\|z\|,
+\end{equation}
+so $z=0$ for $n>2$.  In the self-conjugate antipodal class, Hermiticity
+instead reduces each edge to $z_p=x_p+\ii y_p$, and its functional is
+$nx_p+\ii(n-2)y_p$.  This is invertible over the reals.  Each undirected
+off-diagonal edge appears in exactly one selected cyclic class, so these
+blocks are a direct-sum decomposition of ${\cal H}_{\rm off}(m)$.
+
+It remains to show that the complex functionals are observable from counts.
+For the probes defined in Eq.~\eqref{eq:oriented-probe}, direct substitution
+gives Eq.~\eqref{eq:general-reference-values}.  Since
+$\ell=\ii L$, Theorem~1 reduces here to
+\begin{equation}
+ D R_{\bm s,h}(0)[H]
+ =4\operatorname{Re}\{L_{\bm s}(h)^*L_{\bm s}(H)\}.
+\label{eq:general-cat-response}
+\end{equation}
+The $R$ and $T$ rows are therefore nonzero multiples of the real and
+imaginary parts of every $L_{\bm s}$.  The preceding direct-sum argument
+proves full rank.  There are exactly $m(m-1)$ such real rows.  Since
+Corollary~1 bounds one event by two rows, the event and scalar-response
+counts meet the weak-probe regular-local lower bounds.  Analytic dependence
+on $\epsilon$ and persistence of a nonzero determinant then establish the
+finite-angle local statement through the ordinary inverse-function theorem.
+
+The conditioning claim follows from the singular values
+$|n-1+\lambda|$, $|\lambda|=1$, of each non-antipodal block, and from the
+two gains $n,n-2$ in an antipodal block.  Their ratio is at most
+$n/(n-2)$ after known reference-row normalization.  Finally,
+$\alpha^2=n m^{1-n}$, which becomes Eq.~\eqref{eq:alpha-scaling} when
+$n=m$.
+
+We now certify the sparse $F_4$ matrices without numerical zero tests.  For any
+four-mode unitary,
+\begin{equation}
+ A_{\bm s}(U)
+ =\frac12\sqrt{\frac{4!}{\prod_ks_k!}}
+ \sum_{j=0}^{3}\prod_{k=0}^{3}U_{kj}^{s_k}.
+\end{equation}
+Its derivative in the direction $\dot U_\mu=\ii G_\mu F_4$ is
+\begin{align}
+ \dot A_{\bm s,\mu}
+ ={}&\frac12\sqrt{\frac{4!}{\prod_ks_k!}}
+ \sum_{j=0}^{3}\sum_{k:s_k>0}
+ s_k(\dot U_\mu)_{kj}U_{kj}^{s_k-1}
+ \prod_{\substack{r=0\\r\neq k}}^3U_{rj}^{s_r}.
+\label{eq:cat-gradient}
+\end{align}
+At $U=F_4$, all entries lie in $\mathbb Q(\ii)$ times the displayed
+normalization.  The limiting physical response is
+\begin{equation}
+ J_{\bm s,\mu}
+ =4\operatorname{Re}
+ \left(\dot A_{\bm s,h}^*\dot A_{\bm s,\mu}\right).
+\label{eq:cat-response-entry}
+\end{equation}
+Evaluating Eq.~\eqref{eq:cat-gradient} for the outputs
+\eqref{eq:x-outputs}--\eqref{eq:y-outputs} gives
+Eqs.~\eqref{eq:jx}--\eqref{eq:jy}.  Direct expansion gives
+\begin{equation}
+ \det J_X=-243/8,\qquad \det J_Y=729/32.
+\end{equation}
+The $H_X$ rows have zero entries in all six $Y$ columns and the $H_Y$
+rows have zero entries in all six $X$ columns.  Thus the full determinant
+is their product, Eq.~\eqref{eq:cat-determinants}.  This is an exact
+rational certificate.  The released verification independently constructs
+the same rows from Gaussian-integer permanent moments and asserts every
+cross-block zero.
+
+\section{Internal-error propagation}
+\label{app:internal-proof}
+
+Write $U_0=W_\ell V_\ell$, with
+$W_\ell=U_L\cdots U_{\ell+1}$ and
+$V_\ell=U_\ell\cdots U_1$.  Then
+\begin{align}
+ W_\ell\ee^{\ii\delta H_\ell}V_\ell
+ &=
+ W_\ell\ee^{\ii\delta H_\ell}W_\ell^\dagger U_0\nonumber\\
+ &=\ee^{\ii\delta W_\ell H_\ell W_\ell^\dagger}U_0,
+\end{align}
+which proves Eq.~\eqref{eq:single-internal} exactly for one inserted error.
+For several errors, expanding each exponential to first order and collecting
+terms gives Eq.~\eqref{eq:effective-generator}.  Commutators enter at second
+order, so the layer-to-output dictionary is linear only in the local regime.
+
+\bibliography{references}
+
+\end{document}
