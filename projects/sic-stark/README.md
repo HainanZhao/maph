@@ -15,7 +15,7 @@ has been solved.
 
 The canonical arithmetic, Weyl--Heisenberg diagnostics, and finite twisted
 convolution are implemented exactly or to controlled floating-point
-precision. Research cycles 2--12 additionally:
+precision. Research cycles 2--13 additionally:
 
 - proves from the source's conjugation involution that rank-one shifts
   \(0\) and \(1\) occur together;
@@ -66,6 +66,13 @@ precision. Research cycles 2--12 additionally:
 - constructs an explicit all-parity finite Zak/Weyl representation of
   the TCC cocycle and converts the conjecture into a
   deformation-sensitive \(d\times d\) RM matrix-inverse identity.
+- uses fixed-point reflection, with its exceptional zero characteristic,
+  to reduce that inverse identity to a single normalized involution
+  \(H^2=I\), proves \(\operatorname{Tr}H=2-d\), and identifies this
+  remaining target with ghost-projector idempotency;
+- proves that Zauner block diagonalization gives no reduction beyond the
+  existing orbit count, and isolates the off-grid
+  \(1-\widetilde q^nq^m\) factor that a boundary-limit proof must retain.
 
 See [`docs/sic-stark-sprint1.md`](docs/sic-stark-sprint1.md) and
 [`docs/sic-stark-cycle2.md`](docs/sic-stark-cycle2.md), followed by
@@ -78,7 +85,8 @@ See [`docs/sic-stark-sprint1.md`](docs/sic-stark-sprint1.md) and
 [`docs/sic-stark-cycle9.md`](docs/sic-stark-cycle9.md) and
 [`docs/sic-stark-cycle10.md`](docs/sic-stark-cycle10.md), and finally
 [`docs/sic-stark-cycle11.md`](docs/sic-stark-cycle11.md) and
-[`docs/sic-stark-cycle12.md`](docs/sic-stark-cycle12.md), for the claim ledger.
+[`docs/sic-stark-cycle12.md`](docs/sic-stark-cycle12.md), followed by
+[`docs/sic-stark-cycle13.md`](docs/sic-stark-cycle13.md), for the claim ledger.
 
 ## Verification
 

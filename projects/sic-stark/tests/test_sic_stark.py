@@ -6,6 +6,7 @@ from src.sic_stark import (
     biquadratic_2_3_galois_action,
     biquadratic_2_3_multiply,
     canonical_beta_is_rational,
+    canonical_beta_power_trace,
     canonical_characteristic_correction_index,
     canonical_dimension_four_algebraic_unit_packet_record,
     canonical_dimension_four_countermodel,
@@ -25,6 +26,7 @@ from src.sic_stark import (
     canonical_dimension_four_relation_nullities,
     canonical_dimension_four_residual_laurent_packet,
     canonical_dimension_four_trace_obstruction_record,
+    canonical_equal_base_q_binomial_cancellation,
     canonical_family_record,
     canonical_form,
     canonical_form_stabilizer_residual,
@@ -53,6 +55,7 @@ from src.sic_stark import (
     canonical_quadratic_residue_norm,
     canonical_quadratic_residue_units,
     canonical_residue_multiplication_matrix,
+    canonical_root_filtered_stokes_record,
     canonical_shift_partner,
     canonical_scalar_distribution_fibers,
     canonical_stabilizer,
@@ -66,6 +69,7 @@ from src.sic_stark import (
     canonical_twist_kernel,
     canonical_twist_multiplier,
     canonical_zauner_action,
+    canonical_zauner_block_multiplicities,
     canonical_zauner_orbit_representative,
     canonical_zauner_orbit_sum,
     canonical_zauner_orbits,
@@ -75,6 +79,8 @@ from src.sic_stark import (
     canonical_zak_quadratic_exponent,
     canonical_zak_representation_action,
     canonical_zak_representation_product_defect,
+    canonical_zak_reflection_quadratic_record,
+    canonical_zak_zauner_block_record,
     determinant,
     extended_displacement_modulus,
     form_discriminant,
@@ -1142,6 +1148,93 @@ class CanonicalSicStarkTests(unittest.TestCase):
                 ),
             )
 
+    def test_beta_power_trace_recurrence(self) -> None:
+        for dimension in range(4, 501):
+            self.assertEqual(canonical_beta_power_trace(dimension, 0), 2)
+            self.assertEqual(
+                canonical_beta_power_trace(dimension, 1),
+                dimension - 1,
+            )
+            self.assertEqual(
+                canonical_beta_power_trace(dimension, 3),
+                dimension**3 - 3 * dimension**2 + 2,
+            )
+
+    def test_reflection_reduces_tcc_to_one_involution(self) -> None:
+        for dimension in range(4, 501):
+            record = canonical_zak_reflection_quadratic_record(
+                dimension
+            )
+            self.assertEqual(
+                record["sqrt_lambda_sum_square_residual"], 0
+            )
+            self.assertEqual(
+                record["sqrt_lambda_difference_square_residual"], 0
+            )
+            self.assertTrue(
+                record["zero_characteristic_correction_is_required"]
+            )
+            self.assertEqual(record["normalized_target"], "H^2 = I_d")
+            self.assertEqual(record["trace_h"], 2 - dimension)
+            self.assertEqual(
+                record["conditional_eigenvalue_multiplicities"],
+                (1, dimension - 1),
+            )
+            self.assertFalse(
+                record["reflection_alone_proves_involution"]
+            )
+            self.assertFalse(record["rm_involution_proved"])
+
+    def test_zauner_blocks_do_not_improve_orbit_reduction(self) -> None:
+        for dimension in range(4, 501):
+            multiplicities = canonical_zauner_block_multiplicities(
+                dimension
+            )
+            self.assertEqual(sum(multiplicities), dimension)
+            record = canonical_zak_zauner_block_record(dimension)
+            self.assertEqual(record["multiplicities"], multiplicities)
+            self.assertEqual(record["dimension_defect"], 0)
+            self.assertFalse(
+                record["block_diagonalization_reduces_equation_count"]
+            )
+
+    def test_equal_base_q_binomial_cancellation(self) -> None:
+        self.assertEqual(
+            canonical_equal_base_q_binomial_cancellation(0), (1,)
+        )
+        for degree in range(1, 21):
+            self.assertEqual(
+                canonical_equal_base_q_binomial_cancellation(degree),
+                (0,),
+            )
+
+    def test_root_filtered_stokes_gate_retains_off_grid_factor(
+        self,
+    ) -> None:
+        for dimension in range(4, 31):
+            constant = canonical_root_filtered_stokes_record(
+                dimension, 0, 0
+            )
+            self.assertTrue(
+                constant["boundary_monomial_is_root_of_unity"]
+            )
+            self.assertFalse(
+                constant["equal_base_coefficient_vanishes"]
+            )
+            for numerator, denominator in ((1, 0), (2, 3)):
+                record = canonical_root_filtered_stokes_record(
+                    dimension, numerator, denominator
+                )
+                self.assertFalse(
+                    record["boundary_monomial_is_root_of_unity"]
+                )
+                self.assertTrue(
+                    record["equal_base_coefficient_vanishes"]
+                )
+                self.assertFalse(
+                    record["uniform_root_filtered_stokes_limit_proved"]
+                )
+
     def test_family_record_is_internally_consistent(self) -> None:
         record = canonical_family_record(4)
         self.assertEqual(record["form"], (1, -3, 1))
@@ -1155,6 +1248,13 @@ class CanonicalSicStarkTests(unittest.TestCase):
             record["pentagon_compatibility"]["general_modular_modulus"],
             8,
         )
+        self.assertEqual(
+            record["zak_reflection_quadratic"]["normalized_target"],
+            "H^2 = I_d",
+        )
+        self.assertEqual(
+            record["zak_zauner_blocks"]["dimension_defect"], 0
+        )
 
     def test_invalid_dimensions_are_rejected(self) -> None:
         with self.assertRaises(ValueError):
@@ -1165,6 +1265,10 @@ class CanonicalSicStarkTests(unittest.TestCase):
             extended_displacement_modulus(0)
         with self.assertRaises(ValueError):
             canonical_beta_is_rational(3)
+        with self.assertRaises(ValueError):
+            canonical_beta_power_trace(3, 0)
+        with self.assertRaises(ValueError):
+            canonical_beta_power_trace(4, -1)
         with self.assertRaises(ValueError):
             canonical_general_modular_modulus(3)
         with self.assertRaises(ValueError):
@@ -1195,6 +1299,10 @@ class CanonicalSicStarkTests(unittest.TestCase):
             )
         with self.assertRaises(ValueError):
             canonical_scalar_distribution_fibers(4, 3)
+        with self.assertRaises(ValueError):
+            canonical_equal_base_q_binomial_cancellation(-1)
+        with self.assertRaises(ValueError):
+            canonical_root_filtered_stokes_record(4, -1, 0)
 
 
 if __name__ == "__main__":
