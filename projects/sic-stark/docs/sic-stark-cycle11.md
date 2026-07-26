@@ -516,6 +516,12 @@ not localize to the canonical finite grid. The new formulation suggests
 revisiting it through a finite Zak-transform or operator-trace
 intertwiner rather than through pointwise specialization.
 
+Cycle 12 constructs this finite Zak transform explicitly. It identifies
+the canonical twisted group algebra with \(M_d(\mathbb C)\) and converts
+TCC into a deformation-sensitive \(d\times d\) RM matrix-inverse
+identity. See
+[`sic-stark-cycle12.md`](sic-stark-cycle12.md).
+
 ## Executable checks
 
 Cycle 11 adds:
