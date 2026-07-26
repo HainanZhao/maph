@@ -1,7 +1,14 @@
-# Erdős Problem 700 exploration
+# Discrete mathematics and quantum-interference exploration
 
-This repository is a reproducible exploration of [Erdős Problem
-700](https://www.erdosproblems.com/700). For an integer \(n\), define
+The current research direction is the exact classification of dark events
+in Fourier multiport interferometers.  See
+[`docs/physics-pivot.md`](docs/physics-pivot.md) for the research question,
+the proposed cyclotomic-balance explanation, the first exact scan, and the
+claim ledger.
+
+The repository began as a reproducible exploration of [Erdős Problem
+700](https://www.erdosproblems.com/700). That work remains archived and
+tested here. For an integer \(n\), define
 
 \[
 f(n)=\min_{1<k\leq n/2}\gcd\left(n,\binom{n}{k}\right).
@@ -20,6 +27,15 @@ factors.
 
 ## Repository map
 
+- [`docs/physics-pivot.md`](docs/physics-pivot.md): current quantum-optics
+  direction and first computational observations.
+- [`src/fourier_suppression.py`](src/fourier_suppression.py): exact
+  phase-histogram computation for Fourier multiports.
+- [`scripts/scan_fourier_suppression.py`](scripts/scan_fourier_suppression.py):
+  enumerate dark events and separate the elementary symmetry-predicted
+  cases.
+- [`tests/test_fourier_suppression.py`](tests/test_fourier_suppression.py):
+  exact tests, including the Hong--Ou--Mandel event.
 - [`docs/roadmap.md`](docs/roadmap.md): phased research plan.
 - [`docs/brainstorm-stage2.md`](docs/brainstorm-stage2.md): current proof avenues.
 - [`docs/brainstorm-stage3.md`](docs/brainstorm-stage3.md): near-multiple reduction
@@ -57,6 +73,7 @@ The project uses only the Python standard library.
 
 ```bash
 python3 -m unittest discover -s tests -v
+python3 scripts/scan_fourier_suppression.py --modes 4 --particles 4
 python3 scripts/explore.py --limit 500
 python3 scripts/explore.py --limit 5000 --csv data/f_values_5000.csv
 python3 scripts/scan_squarefree_triples.py --prime-limit 200

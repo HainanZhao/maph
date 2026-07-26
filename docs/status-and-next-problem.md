@@ -49,7 +49,7 @@ reconstructed independently by a human, the searches should be rerun by
 an independent program, and relevant literature should be checked in
 greater depth.
 
-## Recommended easier follow-on: Erdős Problem 699
+## Revised status of Erdős Problem 699
 
 [Erdős Problem 699](https://www.erdosproblems.com/699) asks whether, for
 every
@@ -62,42 +62,27 @@ p\mid
 \gcd\left(\binom ni,\binom nj\right).
 \]
 
-It is a better next target than another unrelated problem because:
+The initial recommendation below became stale almost immediately.  As of
+2026-07-26, the problem page lists two partial proof claims:
 
-1. **The machinery transfers directly.** Kummer valuations, Lucas digit
-   tests, prime-support masks, and exact cross-checking are already
-   implemented here.
-2. **A counterexample is finite and decisive.** Failure is certified by
-   one triple \((n,i,j)\) for which every common prime divisor is below
-   \(i\).
-3. **The quantifiers are cleaner.** Problem 700 minimizes a gcd over all
-   \(k\), mixes all prime powers dividing \(n\), and asks for infinite
-   families or uniform asymptotics. Problem 699 compares only two
-   coefficients in one row.
-4. **Restricted theorems are natural.** One can first treat fixed \(i\),
-   special positions \(j\), prime-power rows, or regions such as
-   \(j-i\) small.
+1. Liam Price, using GPT-5.6, submitted a partial proof for
+   \(j\leq3i/2\) or \(n=2j\).  The site marks this partial proof as
+   accepted as correct.
+2. Wouter Van Doorn and Stefano Rocca submitted a work-in-progress
+   partial claim reducing possible counterexamples to \(i=3\) or an
+   ineffective finite exceptional set with \(4\leq i\leq1475\).  Its
+   authors say they are still digesting, verifying, and polishing it; the
+   site does not currently mark it accepted.
 
-This does not mean Problem 699 is easy. The public discussion reports an
-independent search through \(n=10^7\) without a counterexample, and a
-recent proposed proof was found invalid. A useful project should
-therefore prioritize theory and near-miss classification over simply
-repeating the same exhaustive scan.
+Thus Problem 699 remains open, but it is now an active and crowded target.
+It is no longer recommended as a clean independent follow-on.  A useful
+contribution would instead be an audit/closure project: independently
+reconstruct the second claim, make its finite exceptional set effective,
+enumerate that set, or solve the residual \(i=3\) case.
 
-### Proposed first phase
+This status correction motivated the physics pivot documented in
+[`physics-pivot.md`](physics-pivot.md).
 
-1. Implement two independent prime-support evaluators for
-   \(\binom ni\): one using factorial valuations and one using Kummer
-   carries.
-2. Reproduce all published exceptional examples and cross-check small
-   rows exhaustively.
-3. For every \((n,i,j)\), record the largest common prime and the deficit
-   below \(i\); preserve the closest near misses.
-4. Search structured families suggested by base-\(p\) digit patterns,
-   rather than scanning only by increasing \(n\).
-5. Attempt restricted proofs for fixed \(i\) and for prime-power or
-   near-prime-power rows.
-
-A realistic initial milestone is a trustworthy classifier plus one new
-restricted theorem or a substantially sharper structural reduction in
-roughly one to three weeks of focused work.
+The public page remains the authoritative live source; neither a
+site-accepted partial proof nor a work-in-progress manuscript is the same
+thing as a refereed full solution.
