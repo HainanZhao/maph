@@ -10,6 +10,8 @@ Proposed venue: **Physical Review A**, regular article.
 - `cover-letter.md`: draft editor cover letter.
 - `submission-checklist.md`: metadata and upload checklist.
 - `build/manuscript.pdf`: compiled manuscript.
+- `arxiv-source-v1.1.tar.gz`: minimal arXiv TeX upload bundle.
+- `arxiv-metadata.md`: copy-ready `quant-ph` metadata and author checklist.
 - `submission-source.tar.gz`: current manuscript, code, tests, documentation,
   reproduction guide, and code license.
 - `legacy/`: pre-generalization supplement and source bundle, retained only
@@ -34,6 +36,7 @@ python3 scripts/search_su4_dark_tomography.py
 python3 scripts/analyze_cat_finite_statistics.py
 python3 scripts/analyze_general_resource_scaling.py
 python3 scripts/simulate_f4_reconstruction.py --repetitions 5000
+python3 scripts/generate_reconstruction_sweep.py --repetitions 1500
 ```
 
 The exact rank certificates use symbolic integer, rational, or cyclotomic

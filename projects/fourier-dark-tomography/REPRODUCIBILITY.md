@@ -1,6 +1,6 @@
 # Reproducing the Fourier dark-event results
 
-Use the release tag `fourier-dark-tomography-v1`. From this project
+Use the release tag `fourier-dark-tomography-v1.1`. From this project
 directory, all Python calculations use only the standard library.
 
 ## Complete test suite
@@ -18,6 +18,7 @@ python3 -m unittest discover -s tests -v
 | Finite-angle bias and count-information table | `python3 scripts/analyze_cat_finite_statistics.py` |
 | All-mode probability, allocation, and CR scaling | `python3 scripts/analyze_general_resource_scaling.py` |
 | Weighted \(F_4\) reconstruction Monte Carlo | `python3 scripts/simulate_f4_reconstruction.py --repetitions 5000` |
+| Reconstruction scaling and linearity figure | `python3 scripts/generate_reconstruction_sweep.py --repetitions 1500` |
 
 The coefficient-SPAM ranks are tested exactly over Gaussian integers by
 `tests/test_general_fourier_cat_tomography.py`. The arbitrary-mode

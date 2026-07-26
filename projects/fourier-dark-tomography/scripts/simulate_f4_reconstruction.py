@@ -5,7 +5,7 @@ This is a deliberately modest end-to-end estimator, not a universal hardware
 model.  It uses:
 
 * the exact four-photon cat probabilities at finite probe angle;
-* calibrated probe-only baselines;
+* pre-calibrated probe-only baselines treated as exact;
 * a local weighted least-squares estimator;
 * A-optimal allocation between the two signed probe pairs;
 * independent Poisson selected-channel counts with an optional calibrated
@@ -33,7 +33,6 @@ from scripts.analyze_cat_finite_statistics import (
     PROBE_X,
     PROBE_Y,
     probabilities,
-    probability_jacobian_at_zero,
     selected_contrast_jacobian,
 )
 
@@ -78,58 +77,26 @@ def trace(matrix: list[list[float]]) -> float:
     return sum(matrix[index][index] for index in range(len(matrix)))
 
 
-def pair_information(
-    probe,
-    selected_outputs,
-    epsilon: float,
-    background: float,
-) -> list[list[float]]:
-    """Information per trial allocated to one probe pair, signs split 50/50."""
-    result = [[0.0] * 12 for _ in range(12)]
-    output_index = {output: index for index, output in enumerate(OUTPUTS)}
-    for sign in (1, -1):
-        probability = probabilities([0.0] * 12, probe, sign * epsilon)
-        jacobian = probability_jacobian_at_zero(probe, sign * epsilon)
-        for output in selected_outputs:
-            index = output_index[output]
-            denominator = probability[index] + background
-            derivative = jacobian[index]
-            for row in range(12):
-                for column in range(12):
-                    result[row][column] += (
-                        0.5
-                        * derivative[row]
-                        * derivative[column]
-                        / denominator
-                    )
-    return result
-
-
-def combined_information(
-    real_information: list[list[float]],
-    imaginary_information: list[list[float]],
-    real_fraction: float,
-) -> list[list[float]]:
-    return [
-        [
-            real_fraction * real + (1 - real_fraction) * imaginary
-            for real, imaginary in zip(real_row, imaginary_row)
-        ]
-        for real_row, imaginary_row in zip(
-            real_information, imaginary_information
-        )
-    ]
-
-
 def optimal_pair_fraction(
     epsilon: float, background: float
 ) -> tuple[float, float]:
-    """Numerical A-optimal fraction and per-total-trial covariance trace."""
-    real = pair_information(PROBE_X, OUTPUTS_X, epsilon, background)
-    imaginary = pair_information(PROBE_Y, OUTPUTS_Y, epsilon, background)
+    """A-optimal fraction for the declared signed-contrast estimator.
+
+    The separate raw sign counts contain common-mode information that is
+    discarded when they are compressed into the baseline-subtracted
+    contrasts used by the manuscript estimator.  Optimize the covariance of
+    that estimator itself, with one nominal total trial, so the returned
+    objective is N times the covariance trace.
+    """
 
     def objective(fraction: float) -> float:
-        return trace(inverse(combined_information(real, imaginary, fraction)))
+        jacobian, variances, _ = design_rows(
+            epsilon, 1.0, fraction, background
+        )
+        covariance = weighted_estimate(
+            [0.0] * len(jacobian), jacobian, variances
+        )[1]
+        return trace(covariance)
 
     left, right = 0.02, 0.98
     ratio = (math.sqrt(5) - 1) / 2
@@ -339,7 +306,7 @@ def monte_carlo(
     )
     return {
         "real_fraction": real_fraction,
-        "information_trace_per_trial": information_trace,
+        "N_times_covariance_trace": information_trace,
         "predicted_rmse": predicted_rmse,
         "empirical_rmse": math.sqrt(squared_errors / repetitions),
         "bias_norm": bias_norm,

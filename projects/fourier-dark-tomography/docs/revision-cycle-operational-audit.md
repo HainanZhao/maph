@@ -125,11 +125,11 @@ For the sparse \(F_4\) design with
 \(\epsilon=0.05\), \(N=2\times10^6\), background \(10^{-5}\), and all
 twelve coordinates nonzero with norm \(0.002\):
 
-- A-optimal \(H_X\)-pair allocation: \(0.535812\);
-- predicted RMS vector error: \(0.00290243\);
-- empirical RMS over 5000 repetitions: \(0.00289937\);
-- bias norm: \(3.63\times10^{-5}\);
-- nominal 95% ellipsoid coverage: \(0.9572\).
+- A-optimal \(H_X\)-pair allocation for signed contrasts: \(0.516351\);
+- predicted RMS vector error: \(0.00290022\);
+- empirical RMS over 5000 repetitions: \(0.00290334\);
+- bias norm: \(4.93\times10^{-5}\);
+- nominal 95% ellipsoid coverage: \(0.9544\).
 
 This validates the estimator under its stated ideal count model only.
 A deterministic scan over 128 simultaneous-error directions gives worst
@@ -144,3 +144,40 @@ settings independent of \(m\). Outcome minimality is retained only as a
 mathematical consequence of the two-row event bound. The paper explicitly
 states that bins are collected in parallel and that overcomplete designs
 may be statistically superior.
+
+## Statistical-consistency review
+
+A subsequent audit found that the reported \(H_X\)-pair allocation optimized
+the Fisher information of the separate raw sign counts, while the declared
+estimator first compresses those counts into signed contrasts. Re-optimizing
+the actual contrast covariance gives
+
+\[
+w_X=0.5163513,\qquad
+\sqrt{\operatorname{Tr}\operatorname{Cov}}=0.002900218
+\]
+
+at \(\epsilon=0.05\), \(N=2\times10^6\), and \(b=10^{-5}\). A 5000-run
+simulation gives vector RMSE \(0.00290334\) and 95.44% nominal-ellipsoid
+coverage. The implementation and a numerical regression test now certify
+these values.
+
+The statistical model now makes four further assumptions explicit:
+
+- probe-only baselines are pre-calibrated and treated as exact; finite
+  baseline shots would add covariance and acquisition cost;
+- background scaling assumes
+  \(b_{\boldsymbol s}=\Theta(b)\) uniformly over selected bins;
+- the appendix derives the signed-contrast information
+  \(4w_hN\alpha^2B_h^TB_h\), inverse-trace allocation, and both asymptotic
+  regimes;
+- the Monte Carlo uses selected-channel Poissonization. At the displayed
+  \(F_4\) operating point the six selected bins contain at most 0.0062
+  probability per setting, so omitted multinomial covariance is a
+  sub-percent correction.
+
+A reproducible vector figure now scans total trial count and the local
+linearity radius. It confirms \(N^{-1/2}\) finite-shot scaling and displays
+the growth of local-inversion bias. The comparison table now describes
+conventional methods as full-matrix and not neighborhood-restricted rather
+than simply “global,” and the abstract specifies unit spectral norm.

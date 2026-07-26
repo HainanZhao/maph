@@ -32,7 +32,7 @@ law or global unitary tomography.
 
 The revised manuscript explicitly compares the construction with
 coherent-light and one-/two-photon transfer-matrix characterization. It
-does not claim lower sample cost: for unit-norm probes the reference events
+does not claim lower sample cost: for unit-spectral-norm probes the reference events
 become exponentially rare with mode number. It provides the ideal
 all-mode Cramér–Rao scaling, an A-optimal shot allocation, a weighted local
 estimator with Monte Carlo validation, and a proof that unknown cat
