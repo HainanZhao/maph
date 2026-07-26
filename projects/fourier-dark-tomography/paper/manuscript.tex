@@ -2,6 +2,7 @@
 
 \usepackage{booktabs}
 \usepackage{bm}
+\usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{microtype}
 \usepackage{xcolor}
@@ -44,7 +45,7 @@ showing that unknown cat amplitudes as well as phases are confounded with
 device errors.  The construction is an identifiability result, not a
 scalable replacement for conventional optical characterization: at $n=m$
 its reference probabilities decay as $O(\epsilon^2m^{2-m})$ for
-unit-norm probes.
+unit-spectral-norm probes.
 \end{abstract}
 
 \maketitle
@@ -455,7 +456,7 @@ imaginary parts of every selected complex functional.
 Both probes are lossless mode-mixing Hamiltonians and can in principle be
 synthesized from pairwise beam splitters and phases, but they are dense:
 $O(m^2)$ couplings must be compiled into each analyzer.  Since
-$\|R\|_2=m-1$ and $\|T\|_2\leq m-1$, a conservative unit-spectral-size
+$\|R\|_2=m-1$ and $\|T\|_2\leq m-1$, a conservative unit-spectral-norm
 implementation is $\bar R=R/(m-1)$ and $\bar T=T/(m-1)$; reference
 amplitudes and response rows acquire the same known scale factors.  With
 the unnormalized generators the perturbative condition is
@@ -668,7 +669,13 @@ cost forecast.
 
 For a calibrated finite angle, let $\widehat{\bm r}$ collect the empirical
 positive-minus-negative probability differences, divided by $\epsilon$,
-after subtracting the measured probe-only differences.  If $J_\epsilon$ is
+after subtracting the probe-only differences.  In the statistical model
+used below, these baselines are pre-calibrated and treated as exact; their
+calibration shots are not included in $N$.  If instead they are estimated
+from $N_0$ finite-count trials, their covariance must be added to $\Sigma$,
+$N_0$ must enter the resource budget, and calibration drift produces a
+systematic offset.  Thus ``four settings'' describes the tomography stage,
+conditional on an offline baseline and probe calibration.  If $J_\epsilon$ is
 the exact finite-angle Jacobian and $\Sigma$ is the count covariance, a
 concrete local estimator is weighted least squares,
 \begin{equation}
@@ -685,7 +692,7 @@ Eq.~\eqref{eq:cat-finite-amplitude} is preferable once the initial estimate
 leaves the linear regime.
 
 The all-mode construction permits an explicit ideal allocation calculation.
-Use the unit-spectral-size probes $\bar R,\bar T$, let $N$ be the total
+Use the unit-spectral-norm probes $\bar R,\bar T$, let $N$ be the total
 number of successful input trials, and split each probe-pair allocation
 equally between its two signs.  For a non-antipodal cyclic block define
 \begin{align}
@@ -726,8 +733,10 @@ reference counts in every sign bin therefore requires
  N=\Omega(\epsilon^{-2}m^{m-2}).
 \label{eq:count-threshold}
 \end{equation}
-If a fixed additive background $b$ dominates those bins, the average local
-bound instead scales as
+If additive backgrounds obey
+$b_{\bm s}=\Theta(b)$ uniformly over the selected bins and are stable across
+the two signs, and if this fixed $b$ dominates the signal in those bins,
+the average local bound instead scales as
 \begin{equation}
  \Theta\!\left(
  \frac{b\,m^{2m-6}}{N\epsilon^2}\right).
@@ -737,7 +746,7 @@ Thus neither row normalization nor algebraic dimension saturation implies
 sample efficiency.
 
 \begin{table}[t]
-\caption{All-mode resource diagnostic for $n=m$, unit-spectral-size probes,
+\caption{All-mode resource diagnostic for $n=m$, unit-spectral-norm probes,
 and $\epsilon=0.05$.  The last two columns are respectively $N$ times the
 ideal average Cramér--Rao variance and the total trials needed for ten
 expected events in the weakest sign bin under the A-optimal allocation.}
@@ -757,17 +766,42 @@ $m$&$\alpha^2$&$p_{\min}$&$N\overline{\mathrm{Var}}$&$N_{10}$\\
 As an end-to-end check, we simulated the sparse $F_4$ protocol with all
 twelve coordinates nonzero, $\|\btheta\|_2=0.002$, $\epsilon=0.05$,
 $N=2\times10^6$, and calibrated background $b=10^{-5}$.  Numerical
-A-optimal allocation assigns $0.536N$ trials to the $H_X$ sign pair.
+A-optimal allocation for the signed-contrast estimator assigns
+$0.51635N$ trials to the $H_X$ sign pair.
 Across 5000 Poisson repetitions, Eq.~\eqref{eq:wls-estimator} gives
-empirical root-mean-square vector error $2.90\times10^{-3}$, compared with
-$2.90\times10^{-3}$ predicted by its covariance; the nominal 95\%
-ellipsoid covers 95.7\% of trials.  This validates the estimator in the
+empirical root-mean-square vector error $2.9033\times10^{-3}$, compared with
+$2.9002\times10^{-3}$ predicted by its covariance; the nominal 95\%
+ellipsoid covers 95.4\% of trials.  This validates the estimator in the
 stated idealized model, not against unmodeled hardware errors.  A
 deterministic scan over 128 random simultaneous-error directions finds
 worst relative linear-inversion bias $0.9\%$, $3.4\%$, and $9.1\%$ on
 spheres of radius $10^{-3}$, $3\times10^{-3}$, and $10^{-2}$,
 respectively.  This is a direction-sampled $F_4$ diagnostic, not a uniform
 radius theorem.
+
+Figure~\ref{fig:reconstruction-sweep} adds two compact sweeps.  The
+finite-shot error follows the predicted $N^{-1/2}$ law, while increasing
+$\|\btheta\|_2$ eventually exposes the bias of local linear inversion.
+Counts from a fixed-trial experiment are multinomial rather than
+independent Poisson.  Here the total nominal probability of the six selected
+bins is at most $0.0062$ per setting at $\epsilon=0.05$; the omitted
+multinomial covariance terms are therefore a sub-percent correction to the
+selected-channel covariance.  We use Poissonization to isolate the local
+estimator and state this approximation explicitly rather than claiming an
+exact fixed-trial likelihood.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.96\textwidth]{figures/reconstruction_sweep.pdf}
+\caption{Sparse-$F_4$ validation in the calibrated Poisson model.
+Left: empirical vector RMSE (points) and the covariance prediction (line)
+versus total tomography trials at $\epsilon=0.05$ and
+$\|\btheta\|_2=0.002$; their common scaling is $N^{-1/2}$.
+Right: deterministic relative local-inversion bias over 128 sampled
+directions; the band spans the median to maximum.  The figure is generated
+by the released standard-library script.}
+\label{fig:reconstruction-sweep}
+\end{figure*}
 
 This section remains an ideal-model statistical layer.  Loss, partial
 distinguishability, source contamination, detector crosstalk, and
@@ -932,14 +966,14 @@ Coherent-light reconstruction
 Low: standard laser and intensity detectors&
 Scales with modes&
 Complex transfer matrix up to declared gauges/loss model&
-Broad; global&
+Full matrix; not restricted to a small neighborhood&
 Experimentally demonstrated; noise, loss, and phase instability treated\\
 One-/two-photon reconstruction
 \cite{LaingOBrien2012,Dhand2016,Biriukov2026}&
 Moderate: single photons or photon pairs&
 Typically $O(m^2)$ port combinations&
 Linear-optical transfer matrix&
-Broad; global&
+Full matrix; not restricted to a small neighborhood&
 Loss, mode mismatch, indistinguishability, and uncertainty studied\\
 $F_4$ Fock dark-event design&
 Four-photon Fock state&
@@ -1037,8 +1071,8 @@ full rank, finite-angle bias, finite-shot efficiency, and global uniqueness.
 The exact certificates, finite-angle calculation, resource-scaling analysis,
 weighted estimator, Monte Carlo simulation, tests, and reproduction
 instructions are available at
-\url{https://github.com/HainanZhao/maph/tree/fourier-dark-tomography-v1/projects/fourier-dark-tomography}.
-The release tag \texttt{fourier-dark-tomography-v1} fixes the submitted
+\url{https://github.com/HainanZhao/maph/tree/fourier-dark-tomography-v1.1/projects/fourier-dark-tomography}.
+The release tag \texttt{fourier-dark-tomography-v1.1} fixes the submitted
 state and resolves to its exact commit; the code is MIT licensed.  In
 particular,
 \texttt{certify\_general\_fourier\_cat\_tomography.py} reproduces the
@@ -1331,7 +1365,10 @@ to leading order,
 \end{equation}
 after choosing the probe phase so that the real row $B$ is read.  If
 $N_h$ trials are assigned to that probe pair and split equally between its
-signs, their information is
+signs, the signed contrast has Jacobian
+$J_h=4\alpha^2|h|B$ and covariance
+$4\alpha^2|h|^2/N_h$ in the background-free local model.  Its Fisher
+information is consequently
 \begin{equation}
  I_h=4N_h\alpha^2B^{\mathsf T}B .
 \label{eq:block-information}
@@ -1358,11 +1395,13 @@ Elementary differentiation under $w_R+w_T=1$ proves
 Eq.~\eqref{eq:optimal-allocation}.
 
 At $n=m$, every $C_c$ lies between $m/n^2$ and
-$m/(n-2)^2$, so $C=\Theta(1)$.  Combining
+$m/(n-2)^2$.  There are $\Theta(m)$ non-antipodal separations, each
+contributing $\Theta(1/m)$, so $C=\Theta(1)$.  Combining
 $\alpha^2=m^{2-m}$ with $m(m-1)$ coordinates proves
 Eq.~\eqref{eq:average-cr-scaling}.  For the normalized probes, the weakest
 reference probability is a constant-in-$m$ gain times
 $\epsilon^2\alpha^2$, proving Eq.~\eqref{eq:count-threshold}.  When
+$b_{\bm s}=\Theta(b)$ uniformly on the selected bins and
 $b\gg p_\pm$, Eq.~\eqref{eq:poisson-fi} instead contributes
 $O(N\epsilon^2\alpha^4m^2/b)$ information per coordinate.  Its reciprocal
 gives Eq.~\eqref{eq:background-scaling}.  These are local asymptotics in

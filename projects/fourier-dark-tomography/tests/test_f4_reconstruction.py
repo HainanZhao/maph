@@ -14,8 +14,8 @@ from scripts.analyze_cat_finite_statistics import selected_contrast_jacobian
 class F4ReconstructionTests(unittest.TestCase):
     def test_optimal_fraction_is_interior(self):
         fraction, trace_value = optimal_pair_fraction(0.05, 1e-5)
-        self.assertGreater(fraction, 0.05)
-        self.assertLess(fraction, 0.95)
+        self.assertAlmostEqual(fraction, 0.5163513, places=7)
+        self.assertAlmostEqual(trace_value, 16.8225306185, places=7)
         self.assertGreater(trace_value, 0)
 
     def test_noiseless_local_estimator(self):

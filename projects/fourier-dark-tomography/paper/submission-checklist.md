@@ -31,6 +31,9 @@
       pass from the new project directory.
 - [x] Generate a fresh source archive from the final submission
       state.
+- [x] Generate and independently compile the minimal
+      `arxiv-source-v1.1.tar.gz` upload bundle.
+- [x] Prepare copy-ready metadata for primary category `quant-ph`.
 
 ## Author confirmations before submission
 
@@ -39,7 +42,9 @@
 - [ ] Confirm the no-conflict and exclusive-submission statements.
 - [ ] Add funding information, or select “no external funding.”
 - [ ] Choose the article license and data-availability options.
-- [ ] Decide whether to post the identical version to arXiv `quant-ph`.
+- [ ] Select the arXiv manuscript license and accept the submittal
+      agreement in the author's account.
+- [ ] Preview arXiv's compiled PDF and complete `Submit Article`.
 
 ## Suggested portal metadata
 
