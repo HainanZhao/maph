@@ -479,6 +479,13 @@ This asks the finite sum to vanish for the reason finite sums most
 naturally vanish. It also directly targets the missing Shimura
 reciprocity/Galois-action information identified in the source work.
 
+Cycle 7 carries out this audit. Its exact local calculation shows that
+ray-class multiplication moves the output direction together with the
+summation characteristic, while the additive Fourier phase fails to
+descend if the direction is held fixed. Thus character resolvents apply
+to the full residual packet, not to one primitive coefficient; see
+[`sic-stark-cycle7.md`](sic-stark-cycle7.md).
+
 ## Executable checks
 
 The following functions implement the exact audit:

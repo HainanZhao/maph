@@ -15,7 +15,7 @@ has been solved.
 
 The canonical arithmetic, Weyl--Heisenberg diagnostics, and finite twisted
 convolution are implemented exactly or to controlled floating-point
-precision. Research cycles 2--6 additionally:
+precision. Research cycles 2--7 additionally:
 
 - proves from the source's conjugation involution that rank-one shifts
   \(0\) and \(1\) occur together;
@@ -36,14 +36,22 @@ precision. Research cycles 2--6 additionally:
   function and matches the dimension-four beta-integral phase;
 - closes the standard pentagon/localization route by proving that every
   desired characteristic sample lies strictly inside the resulting
-  two-gamma kernel's pole-free strip.
+  two-gamma kernel's pole-free strip;
+- computes the exact local ray-unit action on TCC characteristics and
+  proves that it moves the output direction together with the summation
+  variable;
+- shows already in dimension four that the additive TCC phase does not
+  descend to a fixed-direction ray-class character, so character
+  resolvents decompose the full residual vector rather than force a
+  primitive coefficient to vanish.
 
 See [`docs/sic-stark-sprint1.md`](docs/sic-stark-sprint1.md) and
 [`docs/sic-stark-cycle2.md`](docs/sic-stark-cycle2.md), followed by
 [`docs/sic-stark-cycle3.md`](docs/sic-stark-cycle3.md) and
 [`docs/sic-stark-cycle4.md`](docs/sic-stark-cycle4.md), then
 [`docs/sic-stark-cycle5.md`](docs/sic-stark-cycle5.md) and
-[`docs/sic-stark-cycle6.md`](docs/sic-stark-cycle6.md), for the claim ledger.
+[`docs/sic-stark-cycle6.md`](docs/sic-stark-cycle6.md), and finally
+[`docs/sic-stark-cycle7.md`](docs/sic-stark-cycle7.md), for the claim ledger.
 
 ## Verification
 
