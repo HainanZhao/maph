@@ -30,10 +30,15 @@ factors.
 - [`docs/physics-pivot.md`](docs/physics-pivot.md): current quantum-optics
   direction and first computational observations.
 - [`docs/thesis-stage1.md`](docs/thesis-stage1.md): assumption audit,
-  mechanism classification, and the first infinite non-periodic dark
-  family.
+  mechanism classification, the reflection-plane Bessel generating
+  function, rigorous zero-free region, and current conjectures.
 - [`docs/thesis-outline.md`](docs/thesis-outline.md): proposed thesis
   claim, chapter structure, success criteria, and research sprints.
+- [`docs/agent-n11-findings.md`](docs/agent-n11-findings.md): exact
+  affine-quasipolynomial analysis of the eleven-particle residue.
+- [`scripts/audit_reflection_irreducibility.py`](scripts/audit_reflection_irreducibility.py):
+  standard-library finite-field certificates for the stronger polynomial
+  irreducibility conjecture.
 - [`src/fourier_suppression.py`](src/fourier_suppression.py): exact
   phase-histogram computation for Fourier multiports.
 - [`scripts/scan_fourier_suppression.py`](scripts/scan_fourier_suppression.py):
@@ -79,6 +84,10 @@ The project uses only the Python standard library.
 ```bash
 python3 -m unittest discover -s tests -v
 python3 scripts/scan_fourier_suppression.py --modes 4 --particles 4
+python3 scripts/analyze_four_mode_thesis.py
+python3 scripts/certify_reflection_conjecture.py --a-limit 1000
+python3 scripts/audit_reflection_irreducibility.py
+python3 scripts/analyze_n11_affine.py
 python3 scripts/explore.py --limit 500
 python3 scripts/explore.py --limit 5000 --csv data/f_values_5000.csv
 python3 scripts/scan_squarefree_triples.py --prime-limit 200

@@ -176,24 +176,41 @@ polynomials.
 
 ### Sprint A — novelty and correctness
 
-1. Read the full 2018 detailed symmetry paper and the 2026 symmetric
-   \(SU(N)\) paper theorem by theorem.
-2. Search citations for later work on non-periodic Fourier inputs.
-3. Have the T1/T2 proof reconstructed independently.
+1. **Done at open-literature level:** compare the 2018 detailed
+   symmetry paper, the 2026 symmetric \(SU(N)\) paper, and later work on
+   non-periodic Fourier inputs.
+2. **Done:** identify T1's arithmetic core as a known central
+   Krawtchouk/parity mechanism.
+3. **Next:** confirm the absence of the T3 completeness theorem through
+   MathSciNet or Zentralblatt access before making a novelty claim.
 
 ### Sprint B — multitype classification
 
-1. Formalize support-type reduction.
-2. Reclassify residual families through \(N=11\).
-3. Identify common affine or reflection patterns.
+1. **Partly done:** implement and apply the support-type filter;
+   strengthen it to a formal reducibility definition.
+2. **Done:** reclassify residual families through \(N=11\).
+3. **Done for \(N=11\):** reduce 16 representatives to four reflection
+   classes and classify their natural affine lines exactly.
+4. **Next:** prove the hidden histogram identity directly and find
+   repeated affine factors at smaller particle numbers.
 
 ### Sprint C — Conjecture T3
 
-1. Express \(C_{a,b}\) as a Hahn/Krawtchouk-type value.
-2. derive divisibility and sign constraints;
-3. search much larger rectangles with exact recurrence;
-4. prove zero exclusion in at least one region, such as \(b<2a\) or
-   \(b>2a\).
+1. **Done:** express \(C_{a,b}\) as an explicit central-binomial
+   convolution and derive its Bessel generating function.
+2. **Done:** derive a three-term recurrence and an exact formula on
+   \(b=2a-1\).
+3. **Done:** certify every \(b>0\) for \(a\leq1000\), using modular
+   recurrence plus a rigorous positive-tail bound.
+4. **Done in a non-sharp form:** prove \(C_{a,b}>0\) for
+   \(a\geq3,\ b\geq4a-3\), with the two smaller cases handled
+   separately.
+5. **Next:** control the remaining linearly wide strip uniformly in
+   \(a\), especially the oscillatory region below and just above
+   \(b=2a\).
+6. **New algebraic route:** attack the stronger observed irreducibility
+   pattern of \(Q_a(b)=(a!)^2C_{a,b}\), using modular factorization and
+   Newton polygons.
 
 ### Sprint D — physical discriminator
 
@@ -206,6 +223,10 @@ polynomials.
 
 The project has advanced from a thesis proposal to a viable core
 chapter.  It is not yet a complete thesis or a submission-ready paper.
-The main mathematical result is exact and infinite; the remaining
-decisive issue is whether it sits inside an existing theorem and whether
-it can be extended to a broader structural statement.
+The reflection plane now has a closed Bessel generating function, an
+exact recurrence, a rigorous zero-free region, and a much stronger
+finite certificate.  The remaining decisive issues are the unbounded
+finite strip in Conjecture T3, a second structural family or physical
+prediction, and independent database-level confirmation that a proved
+completeness theorem would be new.  The \(N=11\) affine-root mechanism
+is a promising candidate for that second structural direction.
