@@ -12,6 +12,9 @@ project is self-contained: run its commands from that project's directory.
   multiphoton dark events, Fourier-cat coherent-error identification, exact
   rank certificates, finite-angle statistics, and the Physical Review A
   manuscript.
+- [`projects/certifiable-grid-optimization/`](projects/certifiable-grid-optimization/):
+  certifiable AC optimal power flow, beginning with exact and approximate
+  voltage recovery on unicyclic networks.
 
 The projects share only the repository history and top-level ignore rules.
 Their source packages, scripts, tests, documentation, and data or paper
@@ -25,4 +28,9 @@ python3 -m unittest discover -s tests -v
 
 cd ../fourier-dark-tomography
 python3 -m unittest discover -s tests -v
+
+cd ../certifiable-grid-optimization
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python -m unittest discover -s tests -v
 ```
