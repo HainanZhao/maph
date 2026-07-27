@@ -12,9 +12,9 @@ and the compiled
 
 1. `python3 scripts/generate_referee_certificates.py`
    emits the deterministic project certificate. Version 3 contains the
-   exact \(4\times4\) Laurent matrix and all 36 exact minor quotients,
-   encoded as rational vectors in the coefficient basis printed in the
-   JSON file.
+   complete 16-characteristic overlap audit, the exact \(4\times4\)
+   Laurent matrix, and all 36 exact minor quotients, encoded as rational
+   vectors in the coefficient basis printed in the JSON file.
 2. `python3 scripts/verify_referee_certificate.py`
    independently reloads that JSON and verifies every polynomial
    identity using `fractions.Fraction` arithmetic.
@@ -41,7 +41,7 @@ Generated review artifacts belong in `certificates/`:
   proves that this is the \(\lambda=1\) equation and applies the exact
   conjugation rule \(\bar\lambda=1-\lambda\) to obtain \(\lambda=0\).
 - The manuscript defines its double sine directly as
-  \(\Gamma_2(\omega_1+\omega_2-z)/\Gamma_2(z)\), avoiding names that
+  \(\Gamma_2(z)/\Gamma_2(\omega_1+\omega_2-z)\), avoiding names that
   differ between source versions.  Replacing it by Kopp's convention
   changes \(x^2=u\) to \(x^2=4/u\).
 - The exceptional zero characteristic and its normalization to

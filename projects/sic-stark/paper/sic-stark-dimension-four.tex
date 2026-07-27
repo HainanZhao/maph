@@ -24,7 +24,7 @@ from a Shintani Ray Unit}
 We study the rank condition that turns canonical
 Shintani--Faddeev real-multiplication values into ghost projectors for
 Weyl--Heisenberg symmetric informationally complete measurements.
-We give exact Zak-rank, exterior-square, and parity-moment formulations
+We give exact exterior-square and parity-moment formulations
 for the canonical family.  In dimension four, all $36$ minors of one
 explicitly defined normalized ghost matrix
 are divisible by the common factor
@@ -80,10 +80,11 @@ For any complex matrix $K$,
 \]
 Hence $\Delta_2(K)=0$ if and only if $\operatorname{rank}K\le1$.
 
-The ghost also obeys parity-Hermiticity $G^\dagger=PGP$.  Therefore
-$J=PG$ is Hermitian and the rank-one certificate becomes
+If a ghost matrix is denoted by $H$, it obeys
+parity-Hermiticity $H^\dagger=PHP$.  Therefore
+$R=PH$ is Hermitian and the rank-one certificate becomes
 \[
- \Tr J^4=(\Tr J^2)^2.
+ \Tr R^4=(\Tr R^2)^2.
 \]
 The fourth-moment identity is used only as an equivalent diagnostic
 here; the dimension-four proof below uses the complete exact minor
@@ -100,8 +101,8 @@ To prevent convention ambiguity, define the function used here directly
 by its gamma ratio:
 \[
  S_2^{\mathrm{here}}(z\mid\omega_1,\omega_2)
- :=\frac{\Gamma_2(\omega_1+\omega_2-z\mid\omega_1,\omega_2)}
- {\Gamma_2(z\mid\omega_1,\omega_2)}.
+ :=\frac{\Gamma_2(z\mid\omega_1,\omega_2)}
+ {\Gamma_2(\omega_1+\omega_2-z\mid\omega_1,\omega_2)}.
 \]
 This definition is decisive.  Using Kopp's
 $\operatorname{Sin}_{2,\mathrm{Kopp}}$ instead in the display defining
@@ -117,6 +118,69 @@ The normalized signed double-sine table is
 -x&-x^{-1}&x&-x
 \end{pmatrix}.
 \]
+
+\begin{lemma}[All sixteen principal overlaps]\label{lem:overlaptable}
+The AFK candidate normalized overlaps for
+$t=(4,1,\langle1,-3,1\rangle)$ are exactly the entries of the
+displayed table.
+\end{lemma}
+
+\begin{proof}
+Put
+\[
+ {\cal D}_{c,b}:=
+ S_2^{\mathrm{here}}\!\left(\frac{c+b\beta}{4}\,\middle|\,\beta,1\right).
+\]
+The principal-form specialization of AFK Definition~1.32 is, for
+$(p,q)\ne(0,0)$ and $r\equiv-p-q\pmod4$,
+\[
+ \widetilde\nu_{p,q}
+ =(-1)^{\,4(p+q)+pq+\min(4,p+q)}
+ {\cal D}_{4-p,q}{\cal D}_{4-r,p}{\cal D}_{4-q,r}.
+\tag{DS}
+\]
+This is the three-factor cocycle decomposition for
+$B=\left(\begin{smallmatrix}3&-1\\1&0\end{smallmatrix}\right)^3$;
+in particular it includes the AFK phase rather than appending an
+unstated sign afterward.  The complete substitution audit is
+\[
+\begin{array}{c|c|c|c}
+(p,q)&r&(-1)^E&
+({4-p,q})({4-r,p})({4-q,r})\quad\longmapsto\quad
+\widetilde\nu_{p,q}\\ \hline
+(0,1)&3&-&41\,10\,33\mapsto-x\\
+(0,2)&2&+&42\,20\,22\mapsto1\\
+(0,3)&1&-&43\,30\,11\mapsto-x^{-1}\\
+(1,0)&3&-&30\,11\,43\mapsto-x^{-1}\\
+(1,1)&2&-&31\,21\,32\mapsto-x^{-1}\\
+(1,2)&1&-&32\,31\,21\mapsto-x^{-1}\\
+(1,3)&0&-&33\,41\,10\mapsto-x\\
+(2,0)&2&+&20\,22\,42\mapsto1\\
+(2,1)&1&-&21\,32\,31\mapsto-x^{-1}\\
+(2,2)&0&+&22\,42\,20\mapsto1\\
+(2,3)&3&+&23\,12\,13\mapsto x\\
+(3,0)&1&-&10\,33\,41\mapsto-x\\
+(3,1)&0&-&11\,43\,30\mapsto-x^{-1}\\
+(3,2)&3&+&12\,13\,23\mapsto x\\
+(3,3)&2&-&13\,23\,12\mapsto-x
+\end{array}
+\]
+where, for example, $41\,10\,33$ means
+${\cal D}_{4,1}{\cal D}_{1,0}{\cal D}_{3,3}$.
+Every reduction in the last column uses only
+\[
+ S(z)S(\beta+1-z)=1,\qquad
+ S(z+1)=2\sin(\pi z/\beta)S(z),\qquad
+ S(z+\beta)=2\sin(\pi z)S(z),
+\tag{FE}
+\]
+and $\beta^2=3\beta-1$; cyclically permuting the three displayed
+factors changes nothing.  Thus the table is a finite check of
+\textup{(DS)} rather than an appeal to numerical recognition.
+At $(0,0)$ AFK's exceptional principal value is $\sqrt5$, completing
+all sixteen entries.
+\end{proof}
+
 The zero characteristic is exceptional and is replaced by $\sqrt5$
 before applying the displacement chirp.  Every table entry is then
 divided by $\sqrt5$ in forming the normalized Weyl overlaps; in
@@ -173,7 +237,7 @@ of $\Q(i,\sqrt2,\sqrt5)[x,x^{-1}]$.
 
 \begin{proof}
 The exact Laurent expansion has $34$ formally nonzero minors and two
-structurally zero minors.  Reduce each power using
+structurally zero minors.  Modulo $x^2-tx+1$, reduce each power using
 \[
  x^{-1}=t-x,\quad x^2=tx-1,\quad
  t=\sqrt{3+\sqrt5}=\frac{\sqrt2+\sqrt{10}}2.
@@ -309,20 +373,19 @@ The fiber above $\mathfrak A$ under
 \]
 has order two, so Kopp's exponent is $n=2/2=1$.
 
-Kopp's sign class $\mathfrak R$ is the nonidentity element of the
-order-two ray group.  Here is a direct ray calculation of that fact.
-The kernel created by adding $\infty_1$ would be trivial only if there
-were a unit congruent to $1$ modulo $4$, positive at $\infty_2$, and
-negative at $\infty_1$.  Every unit is $\pm\phi^n$.  For $0\le n<6$,
+Kopp's Definition~6.3 defines $\mathfrak R$ by the residue/sign pair
+$(-1\bmod4,+\text{ at }\infty_2)$.  This is the nonidentity element
+of the order-two ray group.  Indeed, every unit is $\pm\phi^n$.  For
+$0\le n<6$,
 the residues of $\phi^n=a_n+b_n\phi$ modulo $4$ are
 \[
 (a_n,b_n)=(1,0),(0,1),(1,1),(1,2),(2,3),(3,1),
 \]
-and $\phi^6\equiv1\pmod4$.  The only positive-sign unit in the residue
-class $1$ is therefore positive at both real places; multiplying by
-$-1$ changes the residue class.  Thus the kernel has order two, and
-its nonidentity sign class is $\mathfrak R$.  Equivalently, its Artin
-image is the inertia generator at the newly ramified real place.
+and $\phi^6\equiv1\pmod4$.  Hence every unit congruent to $-1$ modulo
+$4$ is $-\phi^{6k}$, whose value at $\infty_2$ is
+$-(\phi')^{6k}<0$.  No global unit realizes Kopp's residue/sign pair,
+so $\mathfrak R\ne\mathfrak A$; the ray group has order two, proving
+the claim.
 Hence, for its nontrivial quadratic character
 $\chi$,
 \[
@@ -372,24 +435,27 @@ cocycle factors is
 \[
  (0,1)\longmapsto(3,0)\longmapsto(1,3)\longmapsto(0,1).
 \]
-Insert these three characteristics in the cocycle law for $C^3$ and
-then in AFK Definition~1.32.  Kopp's $S$-generator formula uses
-$\operatorname{Sin}_{2,\mathrm{Kopp}}
-=\Gamma_2(z)/\Gamma_2(\beta+1-z)$, whereas our definition is its
-reciprocal.  The three factors are consequently, in orbit order,
+Before reduction, the applications of $C$ give
 \[
-S_2^{\mathrm{here}}(1+\beta/4),\quad
-S_2^{\mathrm{here}}(1/4),\quad
-S_2^{\mathrm{here}}(1+(3\beta-1)/4),
+ C(0,1)=(-1,0)=(3,0)+(-4,0),\quad
+ C(3,0)=(9,3)=(1,3)+(8,0),\quad
+ C(1,3)=(0,1).
 \]
-all with periods $(\beta,1)$.  The integral translations in the
-three characteristics contribute exponent
-$1+1+3=5$; after multiplication by
-$\Phi_{(0,1)}=\xi_4^{-1}$ their phase is $(-1)^5=-1$.
-This gives the asserted signed value.  This calculation is precisely
-the specialization of AFK Definition~1.32 and its cocycle
-factorization, with the gamma-ratio convention written out rather
-than left implicit.
+Insert these characteristics and translations in AFK Definition~1.32.
+Equivalently, specialize formula \textup{(DS)} with
+$p=0,q=1,r=3$.  Its exponent is
+\[
+4(p+q)+pq+\min(4,p+q)=4+0+1=5,
+\]
+and its three arguments are
+$1+\beta/4$, $1/4$, and $1+(3\beta-1)/4$.
+Kopp's $S$-generator formula uses
+$\operatorname{Sin}_{2,\mathrm{Kopp}}
+=\Gamma_2(\beta+1-z)/\Gamma_2(z)$, whereas our definition is its
+reciprocal.  Formula \textup{(DS)} already combines the three
+translation multipliers and $\Phi_{(0,1)}$ into $(-1)^5=-1$.
+It therefore gives exactly the asserted signed product, with no
+unrecorded phase.
 \end{proof}
 
 Because $S_2^{\mathrm{here}}$ is the reciprocal of the
@@ -449,22 +515,44 @@ $D_{\boldsymbol p}$.  Substitute
 $a_{\boldsymbol q}=\nu_{\boldsymbol q}/\sqrt5$ and
 $\nu_{\boldsymbol q}
 =\Phi_{\boldsymbol q}\operatorname{shin}_{B}^{\boldsymbol q/4}(\beta)$.
-AFK's phase quotient converts the Weyl chirp into
+The two identities used in AFK~\S5.4 specialize here to
+\[
+ \frac{\Phi_{\boldsymbol q}}{\Phi_{\boldsymbol q-\boldsymbol p}}
+ =(-1)^{1+s_4(\boldsymbol p)}\tau^{Q(\boldsymbol p)}
+   \tau^{(4-3)\langle\boldsymbol p,\boldsymbol q\rangle}
+   \omega_4^{\langle\boldsymbol p,L_{z,t}\boldsymbol q\rangle},
+\]
+\[
+ \frac{\operatorname{shin}_{A_t}^{\boldsymbol q/4}(\beta)}
+ {\operatorname{shin}_{A_t}^{(\boldsymbol q-\boldsymbol p)/4}(\beta)}
+ =
+ \operatorname{shin}_{A_t}^{\boldsymbol q/4}(\beta)
+ \operatorname{shin}_{A_t^{-1}}^{(\boldsymbol q-\boldsymbol p)/4}(\beta).
+\]
+For the identity twist, $f_t(1)=1$.  Its Weyl chirp supplies the
+additional power $\tau^{\langle\boldsymbol p,\boldsymbol q\rangle}$;
+therefore
+$\tau^{(1+4-3)\langle\boldsymbol p,\boldsymbol q\rangle}
+=\omega_4^{\langle\boldsymbol p,\boldsymbol q\rangle}$.
+The coefficient of $D_{\boldsymbol p}$ is consequently a nonzero
+factor independent of $\boldsymbol q$ times
 \[
  \sum_{\boldsymbol q\in\mathcal I_{\boldsymbol p}}
- \tau^{\langle\boldsymbol p,(I+F_t)\boldsymbol q\rangle}
- \operatorname{shin}_{A_t^{-1}}^{\boldsymbol q/4}(\beta)
+ \omega_4^{\langle\boldsymbol p,(I+L_{z,t})\boldsymbol q\rangle}
+ \operatorname{shin}_{A_t}^{\boldsymbol q/4}(\beta)
  \operatorname{shin}_{A_t^{-1}}^{(\boldsymbol q-\boldsymbol p)/4}(\beta)
  =16\delta^{(4)}_{\boldsymbol p,\boldsymbol0},
 \]
-where $F_t$ is AFK's Zauner generator.  This is equation~(1.49) with
-$r=1$ and $\lambda=1$.
+where $\omega_4=e^{2\pi i/4}$ and $L_{z,t}$ is AFK's Zauner
+generator.  This is equation~(1.49) with $r=1$ and $\lambda=1$.
 Conversely the same coefficient comparison reverses every step, so
 the equivalence is exact.
 \end{proof}
 
-\begin{theorem}[Both dimension-four TCC shifts]\label{thm:shifts}
-Both $0$ and $1$ are shifts for every dimension-four admissible tuple.
+\begin{theorem}[Dimension-four TCC]\label{thm:shifts}
+For every dimension-four admissible tuple $t$, one has
+$0,1\in\mathcal Z_t$.  Moreover,
+$\mathcal Z_{t'}=\mathcal Z_t$ for any two such tuples $t,t'$.
 \end{theorem}
 
 \begin{proof}
@@ -477,15 +565,15 @@ canonical tuple.  The twist--shift congruence is also explicit:
 for $G=I$ it is
 $2\lambda+7\equiv1\pmod8$, hence $\lambda\equiv1\pmod4$.
 
-Complex conjugation sends the twist $G$ to $JG$, where
-$J=\operatorname{diag}(1,-1)$, preserves idempotence, and sends a shift
+Complex conjugation sends the twist $G$ to $J_0G$, where
+$J_0=\operatorname{diag}(1,-1)$, preserves idempotence, and sends a shift
 to
 \[
 \bar\lambda=-(\lambda+d_j-1)\pmod d.
 \]
 Here $d_j=d=4$, so $\bar\lambda=1-\lambda\pmod4$; consequently the
 conjugate of the verified $\lambda=1$ equation is precisely the
-$\lambda=0$ equation.  Equivalently $\det(JG)=-1$ in the
+$\lambda=0$ equation.  Equivalently $\det(J_0G)=-1$ in the
 twist--shift congruence gives
 $-(2\lambda+7)\equiv1\pmod8$, hence $\lambda\equiv0\pmod4$.
 

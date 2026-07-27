@@ -78,6 +78,27 @@ def main():
     assert section["coefficient_basis"] == ["1", "sqrt(2)", "sqrt(5)", "sqrt(10)"]
     records = section["minor_certificates"]
     assert len(records) == section["all_minor_count"] == 36
+    overlap_audit = section["all_sixteen_overlap_audit"]
+    overlap_table = section["signed_double_sine_table"]
+    assert len(overlap_audit) == 16
+    for item in overlap_audit:
+        first, second = item["characteristic"]
+        if first == second == 0:
+            assert item["exceptional_principal_value"] == "sqrt(5)"
+            continue
+        third = (-first - second) % 4
+        exponent = 4 * (first + second) + first * second + min(
+            4, first + second
+        )
+        assert item["third_residue"] == third
+        assert item["sign_exponent"] == exponent
+        assert item["sign"] == (-1 if exponent % 2 else 1)
+        assert item["double_sine_arguments"] == [
+            [4 - first, second],
+            [4 - third, first],
+            [4 - second, third],
+        ]
+        assert item["reduced_value"] == overlap_table[first][second]
 
     one = ((Fraction(1), 0, 0, 0), ZERO)
     t = ((0, Fraction(1, 2), 0, Fraction(1, 2)), ZERO)
@@ -94,7 +115,10 @@ def main():
         quotient = polynomial(record["quotient_after_multiplication_by_x_squared"])
         assert shifted_minor == pmul(relation, quotient), key
 
-    print(f"verified {len(records)} exact minor identities from {CERTIFICATE}")
+    print(
+        f"verified {len(overlap_audit)} overlap records and "
+        f"{len(records)} exact minor identities from {CERTIFICATE}"
+    )
 
 
 if __name__ == "__main__":
