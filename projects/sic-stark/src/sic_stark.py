@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from collections.abc import Mapping
 from fractions import Fraction
+from itertools import combinations
 from math import gcd, isqrt
 
 
@@ -14,6 +15,17 @@ QuadraticCoordinate = tuple[Fraction, Fraction]
 LaurentExponent = tuple[int, int]
 LaurentPolynomial = dict[LaurentExponent, Fraction]
 BiquadraticCoordinate = tuple[Fraction, Fraction, Fraction, Fraction]
+TowerCoordinate = tuple[
+    Fraction,
+    Fraction,
+    Fraction,
+    Fraction,
+    Fraction,
+    Fraction,
+    Fraction,
+    Fraction,
+]
+TowerComplex = tuple[TowerCoordinate, TowerCoordinate]
 
 IDENTITY_2: Matrix2 = ((1, 0), (0, 1))
 
@@ -2801,6 +2813,567 @@ def canonical_ghost_minor_record(
     }
 
 
+def matrix_exterior_square_energy(
+    matrix: tuple[tuple[complex, ...], ...],
+) -> float:
+    r"""Return the sum of the squared absolute values of all 2-minors.
+
+    This is ``||wedge^2(matrix)||_F^2``.  It vanishes exactly when the
+    matrix has rank at most one, and is the positive scalar certificate
+    used in cycle 16.
+    """
+
+    if not matrix or not matrix[0]:
+        return 0.0
+    column_count = len(matrix[0])
+    if any(len(row) != column_count for row in matrix):
+        raise ValueError("matrix rows must have equal length")
+    energy = 0.0
+    for first_row, second_row in combinations(range(len(matrix)), 2):
+        for first_column, second_column in combinations(
+            range(column_count), 2
+        ):
+            minor = (
+                matrix[first_row][first_column]
+                * matrix[second_row][second_column]
+                - matrix[first_row][second_column]
+                * matrix[second_row][first_column]
+            )
+            energy += abs(minor) ** 2
+    return energy
+
+
+def matrix_gram_second_elementary(
+    matrix: tuple[tuple[complex, ...], ...],
+) -> float:
+    r"""Return ``((Tr K* K)^2-Tr((K* K)^2))/2``.
+
+    Cauchy--Binet identifies this number with
+    :func:`matrix_exterior_square_energy`.
+    """
+
+    if not matrix or not matrix[0]:
+        return 0.0
+    column_count = len(matrix[0])
+    if any(len(row) != column_count for row in matrix):
+        raise ValueError("matrix rows must have equal length")
+    gram = tuple(
+        tuple(
+            sum(
+                matrix[row][first].conjugate() * matrix[row][second]
+                for row in range(len(matrix))
+            )
+            for second in range(column_count)
+        )
+        for first in range(column_count)
+    )
+    trace = sum(gram[index][index] for index in range(column_count))
+    trace_square = sum(
+        gram[first][second] * gram[second][first]
+        for first in range(column_count)
+        for second in range(column_count)
+    )
+    return float(((trace * trace - trace_square) / 2).real)
+
+
+def canonical_ghost_exterior_square_record(
+    dimension: int,
+) -> dict[str, object]:
+    r"""Return the single positive rank-one certificate for canonical TCC.
+
+    If ``K=d*sqrt(d+1)*Pi`` and ``d*Pi[j,k]=W(j-k,k)``, then
+
+    ``||wedge^2 K||_F^2 = (d+1)^2 sum |E(j,l;k,m)|^2``,
+
+    where ``E`` is the sheared partial-Fourier exchange residual from
+    cycle 15.  Thus all minors vanish iff one nonnegative scalar does.
+    """
+
+    canonical_form(dimension)
+    pair_count = dimension * (dimension - 1) // 2
+    minor_count = pair_count * pair_count
+    block_multiplicities = canonical_zauner_block_multiplicities(
+        dimension
+    )
+    return {
+        "dimension": dimension,
+        "row_pair_count": pair_count,
+        "column_pair_count": pair_count,
+        "exchange_residual_count": minor_count,
+        "shifted_zak_to_partial_fourier_minor_scale": dimension + 1,
+        "energy_scale": (dimension + 1) ** 2,
+        "positive_certificate": (
+            "Delta_2(K)=((Tr K^*K)^2-Tr((K^*K)^2))/2"
+        ),
+        "cauchy_binet_form": (
+            "Delta_2(K)=sum_{|I|=|J|=2}|det K[I,J]|^2"
+        ),
+        "partial_fourier_form": (
+            "Delta_2(K)=(d+1)^2 sum |E(j,l;k,m)|^2"
+        ),
+        "zauner_block_multiplicities": block_multiplicities,
+        "zauner_positive_sector_count": (
+            sum(
+                multiplicity * (multiplicity - 1) // 2
+                for multiplicity in block_multiplicities
+            )
+            + sum(
+                block_multiplicities[first]
+                * block_multiplicities[second]
+                for first in range(3)
+                for second in range(first + 1, 3)
+            )
+        ),
+        "trace_k_is_nonzero": True,
+        "certificate_zero_equivalent_to_rank_one": True,
+        "certificate_zero_equivalent_to_tcc": True,
+        "certificate_is_nonnegative_in_complex_embedding": True,
+        "certificate_is_holomorphic": False,
+    }
+
+
+def matrix_parity_schatten_certificate(
+    matrix: tuple[tuple[complex, ...], ...],
+) -> dict[str, float]:
+    r"""Evaluate the parity-polynomial form of the rank-one certificate.
+
+    Parity acts by ``P e_j=e_(-j)``.  When ``matrix^*=P matrix P``,
+    ``J=P matrix`` is Hermitian and
+
+    ``K^*K=J^2``.
+
+    The returned exterior-square and parity-moment energies must then
+    agree.
+    """
+
+    dimension = len(matrix)
+    if dimension == 0 or any(len(row) != dimension for row in matrix):
+        raise ValueError("matrix must be nonempty and square")
+
+    parity_product = tuple(
+        tuple(matrix[(-row) % dimension][column] for column in range(dimension))
+        for row in range(dimension)
+    )
+
+    def multiply(
+        left: tuple[tuple[complex, ...], ...],
+        right: tuple[tuple[complex, ...], ...],
+    ) -> tuple[tuple[complex, ...], ...]:
+        return tuple(
+            tuple(
+                sum(
+                    left[row][index] * right[index][column]
+                    for index in range(dimension)
+                )
+                for column in range(dimension)
+            )
+            for row in range(dimension)
+        )
+
+    square = multiply(parity_product, parity_product)
+    fourth = multiply(square, square)
+    trace_square = sum(square[index][index] for index in range(dimension))
+    trace_fourth = sum(fourth[index][index] for index in range(dimension))
+    parity_moment_energy = (
+        (trace_square * trace_square - trace_fourth) / 2
+    )
+
+    parity_hermiticity_defect = 0.0
+    for row in range(dimension):
+        for column in range(dimension):
+            defect = (
+                matrix[column][row].conjugate()
+                - matrix[(-row) % dimension][(-column) % dimension]
+            )
+            parity_hermiticity_defect = max(
+                parity_hermiticity_defect, abs(defect)
+            )
+
+    return {
+        "parity_hermiticity_max_defect": parity_hermiticity_defect,
+        "trace_parity_square": float(trace_square.real),
+        "trace_parity_fourth": float(trace_fourth.real),
+        "parity_moment_energy": float(parity_moment_energy.real),
+        "exterior_square_energy": matrix_exterior_square_energy(matrix),
+    }
+
+
+def canonical_parity_schatten_record(
+    dimension: int,
+) -> dict[str, object]:
+    r"""Return the parity-Hermitian fourth-moment form of canonical TCC.
+
+    For the normalized ghost ``G``, source parity-Hermiticity gives
+    ``G^*=PGP``.  Hence ``J=PG`` is Hermitian, ``G^*G=J^2``, and the
+    cycle-16 certificate is the polynomial
+
+    ``((Tr J^2)^2-Tr J^4)/2``.
+
+    Reciprocal pairing only bounds ``Tr J^2=||G||_F^2`` below by one;
+    it does not force the fourth-moment equality.
+    """
+
+    canonical_form(dimension)
+    self_inverse_characteristics = gcd(2, dimension) ** 2
+    nontrivial_reciprocal_pairs = (
+        dimension * dimension - self_inverse_characteristics
+    ) // 2
+    return {
+        "dimension": dimension,
+        "parity_formula": "P e_j = e_(-j)",
+        "source_parity_hermiticity": "G^* = P G P",
+        "hermitian_transform": "J = P G = J^*",
+        "gram_reduction": "G^* G = J^2",
+        "positive_certificate": (
+            "Delta_2(G)=((Tr J^2)^2-Tr J^4)/2"
+        ),
+        "self_inverse_characteristic_count": (
+            self_inverse_characteristics
+        ),
+        "nontrivial_reciprocal_pair_count": (
+            nontrivial_reciprocal_pairs
+        ),
+        "reciprocity_frobenius_lower_bound": "Tr J^2 >= 1",
+        "equality_condition_for_lower_bound": (
+            "u(p)^2=1 for every characteristic p"
+        ),
+        "quadratic_lower_bound_forces_tcc": False,
+        "constant_overlap_countermodel_attains_lower_bound": True,
+        "constant_overlap_countermodel_saturates_fourth_moment": False,
+        "adjoint_eliminated_on_parity_hermitian_locus": True,
+        "fourth_moment_equivalent_to_tcc": True,
+        "tcc_fourth_moment_target": "Tr J^4 = (Tr J^2)^2",
+    }
+
+
+def canonical_dimension_four_holomorphic_quartic_countermodel_record(
+) -> dict[str, object]:
+    r"""Return a parity-Hermitian countermodel to a lone holomorphic quartic.
+
+    In a parity eigenbasis with signature ``(+,+,+,-)``, take
+
+    ``G = diag(1, 1, B)``,
+    ``B=[[-1/2,sqrt(3)/2],[-sqrt(3)/2,-1/2]]``.
+
+    It is parity-Hermitian and has eigenvalues ``1,1,zeta_3,zeta_3^2``.
+    Hence its first, second, and fourth power traces are all one, while
+    it is invertible.  This shows why the Bos--Waldron holomorphic
+    quartic cannot be moved from its unit-torus/Hermitian locus to the
+    RM ghost using parity-Hermiticity and trace identities alone.
+    """
+
+    return {
+        "dimension": 4,
+        "parity_signature": (3, 1),
+        "parity_eigenbasis_matrix": (
+            ("1", "0", "0", "0"),
+            ("0", "1", "0", "0"),
+            ("0", "0", "-1/2", "sqrt(3)/2"),
+            ("0", "0", "-sqrt(3)/2", "-1/2"),
+        ),
+        "characteristic_polynomial": "(x-1)(x^3-1)",
+        "eigenvalues": ("1", "1", "zeta_3", "zeta_3^2"),
+        "trace_power_1": 1,
+        "trace_power_2": 1,
+        "trace_power_3": 4,
+        "trace_power_4": 1,
+        "determinant": 1,
+        "rank": 4,
+        "parity_hermitian": True,
+        "ordinary_hermitian": False,
+        "bos_waldron_quartic_holds": True,
+        "rank_one": False,
+        "tcc_holds": False,
+        "unit_torus_hypothesis_is_essential": True,
+        "correct_rm_positive_quartic_holds": False,
+    }
+
+
+def _tower_basis(index: int, coefficient: Fraction | int = 1) -> TowerCoordinate:
+    """Return one basis vector of Q(sqrt(2),sqrt(5),sqrt(3+sqrt(5)))."""
+
+    return tuple(
+        Fraction(coefficient if position == index else 0)
+        for position in range(8)
+    )  # type: ignore[return-value]
+
+
+def _tower_add(*values: TowerCoordinate) -> TowerCoordinate:
+    return tuple(
+        sum((value[index] for value in values), Fraction(0))
+        for index in range(8)
+    )  # type: ignore[return-value]
+
+
+def _tower_scale(
+    scalar: Fraction | int, value: TowerCoordinate
+) -> TowerCoordinate:
+    factor = Fraction(scalar)
+    return tuple(factor * entry for entry in value)  # type: ignore[return-value]
+
+
+def _tower_multiply(
+    left: TowerCoordinate, right: TowerCoordinate
+) -> TowerCoordinate:
+    r"""Multiply in the basis ``sqrt(2)^a sqrt(5)^b t^c``.
+
+    Basis indices are ``a+2*b+4*c`` and ``t^2=3+sqrt(5)``.
+    """
+
+    result = [Fraction(0) for _ in range(8)]
+    for left_index, left_value in enumerate(left):
+        if not left_value:
+            continue
+        for right_index, right_value in enumerate(right):
+            if not right_value:
+                continue
+            coefficient = left_value * right_value
+            first_power = (left_index & 1) + (right_index & 1)
+            fifth_power = (
+                ((left_index >> 1) & 1)
+                + ((right_index >> 1) & 1)
+            )
+            tower_power = (
+                ((left_index >> 2) & 1)
+                + ((right_index >> 2) & 1)
+            )
+            if first_power == 2:
+                coefficient *= 2
+                first_power = 0
+            if fifth_power == 2:
+                coefficient *= 5
+                fifth_power = 0
+            branches = [(coefficient, fifth_power)]
+            if tower_power == 2:
+                tower_power = 0
+                branches = [
+                    (3 * coefficient, fifth_power),
+                    (coefficient, fifth_power + 1),
+                ]
+            for branch_coefficient, branch_fifth_power in branches:
+                if branch_fifth_power == 2:
+                    branch_coefficient *= 5
+                    branch_fifth_power = 0
+                index = (
+                    first_power
+                    + 2 * branch_fifth_power
+                    + 4 * tower_power
+                )
+                result[index] += branch_coefficient
+    return tuple(result)  # type: ignore[return-value]
+
+
+def _tower_complex_add(*values: TowerComplex) -> TowerComplex:
+    return (
+        _tower_add(*(value[0] for value in values)),
+        _tower_add(*(value[1] for value in values)),
+    )
+
+
+def _tower_complex_scale(
+    scalar: TowerComplex, value: TowerComplex
+) -> TowerComplex:
+    return (
+        _tower_add(
+            _tower_multiply(scalar[0], value[0]),
+            _tower_scale(-1, _tower_multiply(scalar[1], value[1])),
+        ),
+        _tower_add(
+            _tower_multiply(scalar[0], value[1]),
+            _tower_multiply(scalar[1], value[0]),
+        ),
+    )
+
+
+def canonical_dimension_four_double_sine_factor_record(
+) -> dict[str, object]:
+    r"""Factor every dimension-four ghost minor through one RM unit law.
+
+    The principal-ghost double-sine algorithm gives, up to its exceptional
+    zero value, a signed table in ``{1,x,x^-1}``.  Put
+
+    ``t=sqrt(3+sqrt(5))``.
+
+    This routine computes all 36 two-by-two minors exactly in
+    ``Q(sqrt(2),sqrt(5),t)[x,x^-1]`` and reduces them by
+
+    ``x^2-t*x+1=0``.
+
+    Every remainder is zero.  Thus the complete dimension-four TCC follows
+    from the single still-analytic special-value identity ``x+x^-1=t``.
+    """
+
+    zero = _tower_basis(0, 0)
+    one = _tower_basis(0)
+    sqrt_two = _tower_basis(1)
+    sqrt_five = _tower_basis(2)
+    # The positive radical is already in Q(sqrt(2),sqrt(5)):
+    # sqrt(3+sqrt(5))=(sqrt(2)+sqrt(10))/2.
+    tower_t = _tower_add(
+        _tower_scale(Fraction(1, 2), sqrt_two),
+        _tower_scale(
+            Fraction(1, 2),
+            _tower_multiply(sqrt_two, sqrt_five),
+        ),
+    )
+    complex_one: TowerComplex = (one, zero)
+    complex_i: TowerComplex = (zero, one)
+    tau: TowerComplex = (
+        _tower_scale(Fraction(-1, 2), sqrt_two),
+        _tower_scale(Fraction(-1, 2), sqrt_two),
+    )
+
+    def complex_power(value: TowerComplex, exponent: int) -> TowerComplex:
+        result = complex_one
+        for _ in range(exponent):
+            result = _tower_complex_scale(result, value)
+        return result
+
+    def polynomial_add(
+        *polynomials: Mapping[int, TowerComplex],
+    ) -> dict[int, TowerComplex]:
+        result: dict[int, TowerComplex] = {}
+        for polynomial in polynomials:
+            for exponent, coefficient in polynomial.items():
+                result[exponent] = _tower_complex_add(
+                    result.get(exponent, (zero, zero)), coefficient
+                )
+        return {
+            exponent: coefficient
+            for exponent, coefficient in result.items()
+            if coefficient != (zero, zero)
+        }
+
+    def polynomial_scale(
+        scalar: TowerComplex, polynomial: Mapping[int, TowerComplex]
+    ) -> dict[int, TowerComplex]:
+        return {
+            exponent: _tower_complex_scale(scalar, coefficient)
+            for exponent, coefficient in polynomial.items()
+        }
+
+    def polynomial_multiply(
+        left: Mapping[int, TowerComplex],
+        right: Mapping[int, TowerComplex],
+    ) -> dict[int, TowerComplex]:
+        result: dict[int, TowerComplex] = {}
+        for left_exponent, left_value in left.items():
+            for right_exponent, right_value in right.items():
+                exponent = left_exponent + right_exponent
+                product = _tower_complex_scale(left_value, right_value)
+                result[exponent] = _tower_complex_add(
+                    result.get(exponent, (zero, zero)), product
+                )
+        return {
+            exponent: coefficient
+            for exponent, coefficient in result.items()
+            if coefficient != (zero, zero)
+        }
+
+    # Entries are (sign coefficient, exponent of x).  This is the full
+    # signed table produced by the symmetrized principal double sine.
+    unit_table = (
+        ((sqrt_five, 0), (_tower_scale(-1, one), 1), (one, 0), (_tower_scale(-1, one), -1)),
+        ((_tower_scale(-1, one), -1), (_tower_scale(-1, one), -1), (_tower_scale(-1, one), -1), (_tower_scale(-1, one), 1)),
+        ((one, 0), (_tower_scale(-1, one), -1), (one, 0), (one, 1)),
+        ((_tower_scale(-1, one), 1), (_tower_scale(-1, one), -1), (one, 1), (_tower_scale(-1, one), 1)),
+    )
+
+    inverse_sqrt_five = _tower_scale(Fraction(1, 5), sqrt_five)
+    matrix: list[list[dict[int, TowerComplex]]] = [
+        [{} for _ in range(4)] for _ in range(4)
+    ]
+    for first in range(4):
+        for second in range(4):
+            unit_coefficient, exponent = unit_table[first][second]
+            scalar = _tower_complex_scale(
+                complex_power(tau, first * second),
+                (inverse_sqrt_five, zero),
+            )
+            coefficient = _tower_complex_scale(
+                scalar, (unit_coefficient, zero)
+            )
+            for column in range(4):
+                row = (column + first) % 4
+                phase = _tower_complex_scale(
+                    complex_power(complex_i, second * column),
+                    (_tower_scale(Fraction(1, 4), one), zero),
+                )
+                term = {exponent: _tower_complex_scale(phase, coefficient)}
+                matrix[row][column] = polynomial_add(
+                    matrix[row][column], term
+                )
+
+    # Reduce x^e to A_e+B_e*x under x^2=t*x-1.
+    reductions: dict[int, tuple[TowerCoordinate, TowerCoordinate]] = {
+        -2: (
+            _tower_add(_tower_multiply(tower_t, tower_t), _tower_scale(-1, one)),
+            _tower_scale(-1, tower_t),
+        ),
+        -1: (tower_t, _tower_scale(-1, one)),
+        0: (one, zero),
+        1: (zero, one),
+        2: (_tower_scale(-1, one), tower_t),
+    }
+
+    nonzero_minor_count = 0
+    nonzero_remainder_count = 0
+    for first_row, second_row in combinations(range(4), 2):
+        for first_column, second_column in combinations(range(4), 2):
+            positive = polynomial_multiply(
+                matrix[first_row][first_column],
+                matrix[second_row][second_column],
+            )
+            negative = polynomial_scale(
+                (_tower_scale(-1, one), zero),
+                polynomial_multiply(
+                    matrix[first_row][second_column],
+                    matrix[second_row][first_column],
+                ),
+            )
+            minor = polynomial_add(positive, negative)
+            if minor:
+                nonzero_minor_count += 1
+            remainder_constant: TowerComplex = (zero, zero)
+            remainder_linear: TowerComplex = (zero, zero)
+            for exponent, coefficient in minor.items():
+                constant, linear = reductions[exponent]
+                remainder_constant = _tower_complex_add(
+                    remainder_constant,
+                    _tower_complex_scale((constant, zero), coefficient),
+                )
+                remainder_linear = _tower_complex_add(
+                    remainder_linear,
+                    _tower_complex_scale((linear, zero), coefficient),
+                )
+            if remainder_constant != (zero, zero) or remainder_linear != (
+                zero,
+                zero,
+            ):
+                nonzero_remainder_count += 1
+
+    return {
+        "dimension": 4,
+        "double_sine_unit_table_values": "{sqrt(5),1,x,x^-1} with signs",
+        "unit_relation": "x^2-sqrt(3+sqrt(5))*x+1=0",
+        "equivalent_reciprocal_relation": (
+            "x+x^-1=sqrt(3+sqrt(5))"
+        ),
+        "all_minor_count": 36,
+        "formally_nonzero_minor_count_before_relation": (
+            nonzero_minor_count
+        ),
+        "nonzero_remainder_count_after_relation": (
+            nonzero_remainder_count
+        ),
+        "every_minor_is_in_principal_ideal": (
+            nonzero_remainder_count == 0
+        ),
+        "single_special_value_identity_implies_dimension_four_tcc": True,
+        "special_value_identity_proved_analytically": False,
+    }
+
+
 def canonical_zauner_block_multiplicities(
     dimension: int,
 ) -> tuple[int, int, int]:
@@ -2974,6 +3547,157 @@ def canonical_root_filtered_stokes_record(
     }
 
 
+def canonical_dimension_four_ray_class_record() -> dict[str, object]:
+    r"""Return the elementary 2-power ray-group audit for ``Q(sqrt(5))``.
+
+    Write ``O_K = Z[phi]`` with ``phi^2=phi+1``.  Since 2 is inert,
+    a residue ``a+b*phi`` modulo ``2^k`` is a unit exactly when its norm
+    is odd.  Class number one gives the one-real-place ray-group order
+
+    ``2 * |(O_K/m)^x| / |image(O_K^x)|``.
+
+    Enumerating the finite groups shows that modulus 4 has order two.
+    This matches the degree of the Stark candidate ``x^2`` over the
+    base field.  The cocycle value ``x`` is a square root of that Stark
+    invariant and has degree four.  Modulus 8 has a Vierergruppe, but
+    its appearance as the general modular phase modulus does not make
+    it the ray conductor.
+    """
+
+    def multiply(
+        left: tuple[int, int],
+        right: tuple[int, int],
+        modulus: int,
+    ) -> tuple[int, int]:
+        a, b = left
+        c, d = right
+        return (
+            (a * c + b * d) % modulus,
+            (a * d + b * c + b * d) % modulus,
+        )
+
+    def norm(value: tuple[int, int]) -> int:
+        a, b = value
+        return a * a + a * b - b * b
+
+    audits: dict[int, dict[str, object]] = {}
+    for modulus in (4, 8):
+        residues = [
+            (a, b)
+            for a in range(modulus)
+            for b in range(modulus)
+            if norm((a, b)) % 2
+        ]
+        phi_powers: list[tuple[int, int]] = []
+        power = (1, 0)
+        while True:
+            power = multiply(power, (0, 1), modulus)
+            phi_powers.append(power)
+            if power == (1, 0):
+                break
+        unit_image = set(phi_powers)
+        unit_image.update(
+            ((-a) % modulus, (-b) % modulus)
+            for a, b in phi_powers
+        )
+
+        signed_group = [
+            (residue, sign)
+            for residue in residues
+            for sign in (-1, 1)
+        ]
+        signed_unit_image = set()
+        power = (1, 0)
+        for exponent in range(2 * len(phi_powers)):
+            for minus in (False, True):
+                residue = (
+                    ((-power[0]) % modulus, (-power[1]) % modulus)
+                    if minus
+                    else power
+                )
+                signed_unit_image.add((residue, -1 if minus else 1))
+            power = multiply(power, (0, 1), modulus)
+
+        def signed_multiply(
+            left: tuple[tuple[int, int], int],
+            right: tuple[tuple[int, int], int],
+        ) -> tuple[tuple[int, int], int]:
+            return (
+                multiply(left[0], right[0], modulus),
+                left[1] * right[1],
+            )
+
+        remaining = set(signed_group)
+        quotient_orders: list[int] = []
+        while remaining:
+            representative = min(remaining)
+            coset = {
+                signed_multiply(representative, unit)
+                for unit in signed_unit_image
+            }
+            remaining.difference_update(coset)
+            value = ((1, 0), 1)
+            for order in range(1, 9):
+                value = signed_multiply(value, representative)
+                if value in signed_unit_image:
+                    quotient_orders.append(order)
+                    break
+
+        audits[modulus] = {
+            "residue_unit_count": len(residues),
+            "phi_residue_order": len(phi_powers),
+            "ordinary_unit_image_count": len(unit_image),
+            "signed_unit_image_count": len(signed_unit_image),
+            "one_real_place_ray_group_order": (
+                len(signed_group) // len(signed_unit_image)
+            ),
+            "quotient_element_orders": tuple(sorted(quotient_orders)),
+        }
+
+    return {
+        "base_field": "Q(sqrt(5))",
+        "class_number": 1,
+        "quarter_argument_denominator": 4,
+        "general_modular_modulus": 8,
+        "modulus_audits": audits,
+        "modulus_four_matches_stark_square_degree": (
+            audits[4]["one_real_place_ray_group_order"] == 2
+        ),
+        "modulus_eight_phase_cover_group": "C2 x C2",
+        "candidate_cocycle_polynomial_over_base": (
+            "X^4 - (1 + sqrt(5)) X^2 + 1"
+        ),
+        "candidate_stark_square_polynomial_over_base": (
+            "U^2 - (1 + sqrt(5)) U + 1"
+        ),
+        "golden_ratio_form": "x^2 = phi + sqrt(phi)",
+        "candidate_ray_field": "Q(sqrt(5), sqrt(phi))",
+        "candidate_relative_discriminant": "(4)",
+        "candidate_absolute_discriminant": 400,
+        "minkowski_bound": "15 / (2 pi)",
+        "minkowski_bound_below_three": True,
+        "smallest_dyadic_prime_norm": 4,
+        "candidate_class_number": 1,
+        "candidate_infinite_ramification": "second real place",
+        "ray_field_degree_matches_ray_group": True,
+        "visible_units": ("sqrt(phi)", "phi + sqrt(phi)"),
+        "visible_regulator": "log(phi) log(phi + sqrt(phi))",
+        "relative_l_derivative": (
+            "log(phi + sqrt(phi))"
+        ),
+        "centered_unit_cell_exact_candidates": ("-1", "1"),
+        "unit_index_one_proved": True,
+        "two_infinite_place_ray_group_order": 4,
+        "one_infinite_place_fiber_order": 2,
+        "kopp_exponent_n": 1,
+        "partial_zeta_normalization_matched": True,
+        "candidate_polynomial_over_rationals": (
+            "X^8 - 2 X^6 - 2 X^4 - 2 X^2 + 1"
+        ),
+        "ray_class_identification_proved": True,
+    }
+
+
 def canonical_jacobi_word(dimension: int) -> tuple[int, int, int]:
     r"""Return the HJ exponents in ``L_d^3=(T^(d-1)S)^3``."""
 
@@ -3078,6 +3802,19 @@ def canonical_family_record(dimension: int) -> dict[str, object]:
         ),
         "ghost_rank_one_minor": canonical_ghost_minor_record(
             dimension, (0, 1), (0, 1)
+        ),
+        "ghost_exterior_square": (
+            canonical_ghost_exterior_square_record(dimension)
+        ),
+        "parity_schatten": canonical_parity_schatten_record(dimension),
+        "holomorphic_quartic_gate_dimension_four": (
+            canonical_dimension_four_holomorphic_quartic_countermodel_record()
+        ),
+        "dimension_four_double_sine_factor": (
+            canonical_dimension_four_double_sine_factor_record()
+        ),
+        "dimension_four_ray_class": (
+            canonical_dimension_four_ray_class_record()
         ),
         "zak_zauner_blocks": canonical_zak_zauner_block_record(
             dimension
