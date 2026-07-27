@@ -56,3 +56,47 @@ Generated review artifacts belong in `certificates/`:
 Accordingly, the revised manuscript claims the complete
 dimension-four Twisted Convolution Conjecture, but no higher-dimensional
 case.
+
+## Dimension-five continuation
+
+The separate research note
+[`sic-stark-dimension-five.md`](sic-stark-dimension-five.md) records the
+next-dimensional calculation. Its artifacts are also checksummed:
+
+- `dimension-five-finite.json` contains the exact 100-minor Laurent system;
+- `dimension-five-pari.txt` contains the ray and Stark-polynomial audit;
+- `dimension-five-exact-minors.txt` records exact vanishing of all 100
+  minors in the correctly labeled Stark-conjugate factor;
+- `dimension-five-numerical.txt` independently checks the original
+  double-sine values;
+- `dimension-five-bridge.json` audits all 25 characteristics, including
+  Kopp-positive lifts, ray-class logs, cocycle signs, and all 24
+  Kopp/AFK multiplier comparisons;
+- `dimension-five-root-isolation.txt` gives rational Sturm intervals for
+  all 16 real roots of the absolute packet polynomial;
+- `dimension-five-embedding-certificate.txt` certifies the interval-root
+  to `nfgaloisconj` labels and uniquely selects factor four by the positive
+  \(\sqrt5,\sqrt6\) subfield embeddings;
+- `dimension-five-character-support.json` proves that the Kopp difference
+  is supported on four order-eight characters and has zero coefficient at
+  the unique quadratic character.
+- `dimension-five-local-isolation.txt` proves that four fan minors have an
+  invertible Jacobian at the certified packet, so the rank-one point is
+  reduced and locally isolated.
+- `dimension-five-shintani.txt` gives the exact Shintani specialization,
+  sign classes, imaginary-ray conductor, and safe exponent \(5760\);
+- `dimension-five-unit-lattice.txt` certifies the labeled \(K\)-isomorphism,
+  unit data, nonsplit modulus-one conjugates, Frobenius action, and exact
+  rational interval propagation of all eight real orbit labels;
+- `dimension-five-double-sine-intervals.txt` is the Arb enclosure used in
+  the Voutier height-rigidity step.
+
+The dimension-five theorem has now been rewritten unconditionally.  The
+supporting research note
+[`sic-stark-dimension-five-unconditional-closure.md`](sic-stark-dimension-five-unconditional-closure.md)
+records the proof of its former Stark-value input by specializing Shintani's
+1978 theorem and applying certified height rigidity.  The rewritten
+manuscript is
+[`../paper/sic-stark-dimension-five.tex`](../paper/sic-stark-dimension-five.tex),
+with compiled
+[`../paper/sic-stark-dimension-five.pdf`](../paper/sic-stark-dimension-five.pdf).

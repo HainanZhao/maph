@@ -1,0 +1,926 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+\usepackage{booktabs}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\Cl}{\operatorname{Cl}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+
+\title{A Dimension-Five Twisted-Convolution Identity\\
+from a Shintani Ray Packet}
+\author{Draft for review}
+\date{27 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+For $K=\Q(\sqrt3)$ and modulus $(5)\infty_2$, the ray group relevant
+to the dimension-five principal ghost is cyclic of order eight.  We
+compute all twenty-four nonzero characteristics, their positive Kopp
+lifts, ray classes, cocycle signs, and modular multipliers.  We then
+prove unconditionally that the four positive double-sine values form
+the reciprocal degree-eight ray-unit packet previously recognized
+numerically by Kopp.  The proof specializes Shintani's 1978
+algebraicity theorem, extracts the safe exponent $5760$, certifies the
+labeled ray field and Frobenius orbit exactly, and uses rigorous Arb
+enclosures together with Voutier's height bound to remove the power.
+An exact calculation over $\Q(\zeta_5,\sqrt6)$ then proves that all one
+hundred $2$-minors of the reconstructed ghost matrix vanish.  This
+establishes both predicted shifts for every dimension-five admissible
+tuple, and hence the complete dimension-five Twisted Convolution
+Conjecture.  No Stark conjecture or \texttt{bnrstark} recognition is
+used as an input.
+\end{abstract}
+
+\section{Canonical data and conventions}
+
+Put
+\[
+ K=\Q(\sqrt3),\qquad \beta=2+\sqrt3,\qquad
+ Q=\langle1,-4,1\rangle,\qquad
+ L=\begin{pmatrix}4&-1\\1&0\end{pmatrix}.
+\]
+Then
+\[
+ B=L^3=\begin{pmatrix}56&-15\\15&-4\end{pmatrix},\qquad
+ B\binom0{1/5}-\binom0{1/5}=\binom{-3}{-1}.
+\]
+Label the real embeddings by
+$\infty_1(\sqrt3)=+\sqrt3$ and
+$\infty_2(\sqrt3)=-\sqrt3$.  The modulus throughout is
+\[
+ \mathfrak m=(5)\infty_2.
+\]
+
+To remove the standard double-sine ambiguity, define
+\[
+ S_2(z\mid\omega_1,\omega_2)
+ :=\frac{\Gamma_2(z\mid\omega_1,\omega_2)}
+ {\Gamma_2(\omega_1+\omega_2-z\mid\omega_1,\omega_2)}.
+\tag{1}
+\]
+Thus $S_2$ is the reciprocal of Kopp's
+$\operatorname{Sin}_{2,\mathrm{Kopp}}$ convention.
+For $0\le c\le5$ and $0\le b<5$, write
+\[
+ {\cal D}_{c,b}:=
+ S_2\!\left(\frac{c+b\beta}{5}\,\middle|\,\beta,1\right).
+\]
+For $(p,q)\ne(0,0)$, let $r\equiv-p-q\pmod5$.  The principal-form
+specialization of the AFK three-factor formula is
+\[
+ \widetilde\nu_{p,q}
+ =(-1)^{5(p+q)+pq+\min(5,p+q)}
+ {\cal D}_{5-p,q}{\cal D}_{5-r,p}{\cal D}_{5-q,r}.
+\tag{2}
+\]
+Formula (2) is used only for nonzero characteristics.  Later we set the
+table entry $T_{0,0}:=\sqrt6$ solely so that the identity Weyl
+coefficient is $T_{0,0}/\sqrt6=1$.  This reconstruction convention is
+not AFK's auxiliary zero-characteristic cocycle value.
+
+\begin{lemma}[Derivation and convention check for (2)]
+Formula \textup{(2)} is the specialization of AFK Definition~1.32 to
+$t=(5,1,\langle1,-4,1\rangle)$, with no unrecorded reciprocal or sign.
+\end{lemma}
+
+\begin{proof}
+AFK Definition~1.32 first forms
+$\widetilde\nu_{\boldsymbol p}
+=\Phi_{\boldsymbol p}\operatorname{shin}^{\boldsymbol p/5}_{B}(\beta)$.
+Insert the defining modular-to-Jacobi quotient
+\cite[equation (1.26)]{AFK}, and then use the Jacobi cocycle
+decomposition \cite[equations (8.2)--(8.5)]{AFK} and the $S$-kernel
+formula \cite[equation (8.6)]{AFK}.  In the notation of AFK Section~8.2,
+\[
+ L=T^4S,\qquad B=L^3,\qquad L\beta=\beta,\qquad
+ j_{L^k}(\beta)=\beta^k .
+\]
+Thus the word $B=(T^4S)^3$ contributes exactly three $S$-kernels.
+Modulo five the characteristic orbit is
+\[
+ (p,q)\longmapsto(r,p)\longmapsto(q,r)\longmapsto(p,q),
+ \qquad r\equiv-p-q\pmod5,
+\]
+and the three unreduced linear arguments are
+\[
+ \frac{q\beta-p}{5},\qquad
+ \frac{p\beta-r}{5},\qquad
+ \frac{r\beta-q}{5}.
+\]
+Reducing their first coordinates to the representatives
+$5-p,5-r,5-q$ gives respectively
+$\mathcal D_{5-p,q}$, $\mathcal D_{5-r,p}$, and
+$\mathcal D_{5-q,r}$.  AFK's $S$-kernel is its displayed double sine
+in the denominator (AFK Section~8.2, equation for
+$\sigma_S$).  That double sine is Kopp's
+$\operatorname{Sin}_{2,\mathrm{Kopp}}$; hence each denominator is
+precisely one factor of the reciprocal convention (1).
+
+For completeness, apply the integral-translation law
+\cite[equation (8.9)]{AFK} to the three representative changes and
+multiply by the phase in AFK Definition~1.30.  Direct substitution gives
+\[
+ \Phi_{p,q}\,(\hbox{three translation multipliers})
+ =(-1)^{E(p,q)},\qquad
+ E(p,q)=5(p+q)+pq+\min(5,p+q).
+\]
+This is a finite parity calculation:
+\[
+ E(p,q)\equiv
+ \begin{cases}
+ pq& (p+q\le5),\\
+ p+q+pq+1&(p+q\ge5)
+ \end{cases}\pmod2,
+\]
+where the two expressions agree at $p+q=5$.  In the order
+$p=0,\ldots,4$ (columns $q=0,\ldots,4$), the resulting signs are
+\[
+\begin{pmatrix}
+ *&+&+&+&+\\
+ +&-&+&-&+\\
+ +&+&+&+&-\\
+ +&-&+&+&+\\
+ +&+&-&+&-
+\end{pmatrix};
+\]
+the asterisk is the excluded zero characteristic.  This accounts for
+all twenty-four cases and proves (2) directly from the cited
+definitions.
+\end{proof}
+
+\section{Ray labels and all characteristics}
+
+\begin{lemma}[Certified ray arithmetic]\label{lem:ray}
+The class and ray groups are
+\[
+ \Cl(K)=1,\qquad
+ \Cl_{(5)}(K)\cong C_4,\qquad
+ \Cl_{\mathfrak m}(K)\cong C_8,\qquad
+ \Cl_{(5)\infty_1\infty_2}(K)\cong C_8\times C_2.
+\tag{3}
+\]
+Kopp's residue/sign class $\mathfrak R$ is the element $4\in C_8$.
+The fiber of
+$\Cl_{(5)\infty_1\infty_2}(K)\to\Cl_{\mathfrak m}(K)$ has order two,
+so the exponent in Kopp's theorem is $n=2/2=1$.
+The computation is unconditional.
+\end{lemma}
+
+\begin{proof}
+PARI/GP~2.15.4 gives the structures in (3), and
+\texttt{bnfcertify}=1.  The unit group is
+$\{\pm\beta^n:n\in\Z\}$ and $\beta^3\equiv1\pmod5$.
+Hence units congruent to $-1$ modulo $5$ are
+$-\beta^{3k}$.  Their value under $\infty_2$ is
+$-(2-\sqrt3)^{3k}<0$, so no global unit realizes the pair
+$(-1\bmod5,+\text{ at }\infty_2)$ defining Kopp's $\mathfrak R$.
+It is therefore the nontrivial sign class, namely the unique element
+of order two in $C_8$.
+\end{proof}
+
+\begin{proposition}[No quadratic-character shortcut]\label{prop:noquadratic}
+The Kopp partial-zeta difference has zero coefficient at the unique
+order-two character of $\Cl_{\mathfrak m}(K)$.  It is supported on four
+characters, all of order eight.
+\end{proposition}
+
+\begin{proof}
+Write $\Cl_{\mathfrak m}(K)=\langle g\rangle\cong C_8$ and
+$\mathfrak R=g^4$.  For
+$\chi_k(g)=\exp(2\pi i k/8)$, Fourier inversion gives
+\[
+\zeta_{\mathfrak m}(s,\mathfrak A)
+-\zeta_{\mathfrak m}(s,\mathfrak R\mathfrak A)
+=\frac18\sum_{k=0}^7
+\overline{\chi_k(\mathfrak A)}
+\bigl(1-\overline{\chi_k(\mathfrak R)}\bigr)L(s,\chi_k).
+\tag{CF}
+\]
+Since $\chi_k(\mathfrak R)=(-1)^k$, the coefficient is zero for even
+$k$ and two for odd $k$.  The support is therefore
+$k=1,3,5,7$, whose characters all have order eight.  The unique
+quadratic character is $\chi_4$; it is even on $\mathfrak R$ and its
+coefficient in \textup{(CF)} is zero.  Hence the difference cannot
+factor through the quadratic quotient.  This is the precise reason
+the dimension-four quadratic $L$-function reduction does not recur.
+Equivalently, $\mathfrak R=g^4$ lies in the kernel
+$\langle g^2\rangle$ of the quotient $C_8\to C_2$, so
+$\mathfrak A$ and $\mathfrak R\mathfrak A$ have the same image in the
+unique quadratic quotient and their difference projects to zero.
+\end{proof}
+
+For each $(p,q)\ne(0,0)$ start with $p$ and repeatedly subtract five;
+let $\widetilde p$ be the first lift for which
+\[
+ q(2-\sqrt3)-\widetilde p>0.
+\tag{4}
+\]
+Let $\mathfrak q$ be the prime above $3$, and use it as the generator
+of $C_8$.  PARI's raw cyclic basis $g$ gives the discrete logarithms
+of the positive principal ideals $(q\beta-\widetilde p)$ in the audit
+transcript, with $\mathfrak q=g^5$.  Multiplication by $5$, which is
+its own inverse modulo $8$, converts those raw logs to the normalized
+$\mathfrak q$-coordinates below:
+\[
+\begin{array}{c|ccccc}
+p\backslash q&0&1&2&3&4\\ \hline
+0&-&0&6&2&4\\
+1&4&7&5&7&0\\
+2&2&5&5&6&3\\
+3&6&7&2&1&1\\
+4&0&4&3&1&3
+\end{array}
+\tag{5}
+\]
+The corresponding positive lifts are
+$0$ in the first row, $-4$ in row one except at $(1,4)$ where it is
+$1$, and $-3,-2,-1$ in rows two, three, and four.
+
+\begin{lemma}[All multiplier comparisons]\label{lem:multiplier}
+For every nonzero $(p,q)\bmod5$, Kopp's modular multiplier equals
+the square of the AFK phase at that characteristic.
+\end{lemma}
+
+\begin{proof}
+Write $B=(\begin{smallmatrix}a&b\\c&d\end{smallmatrix})$ and
+$\boldsymbol r=(\widetilde p/5,q/5)^{\mathsf T}$, with
+$\widetilde p$ chosen by (4).  Substitution in Kopp's defining
+theta-character gives the exponent
+\[
+\frac12\{(c-d+1)r_1+(-a+b+1)r_2-cd r_1^2
++2(a-1)d r_1r_2-(a-2)b r_2^2\}.
+\tag{6}
+\]
+For $B=(\begin{smallmatrix}56&-15\\15&-4\end{smallmatrix})$, direct
+reduction of (6) modulo one gives
+\[
+ \frac{p^2-4pq+q^2}{5}\pmod1
+\tag{7}
+\]
+in all twenty-four cases.  Also
+$s(-4,15)=-19/90$, so the Rademacher invariant is three and
+$\psi^2(B)=i$.  Therefore the Kopp multiplier has exponent
+\[
+ -\frac14-\frac{p^2-4pq+q^2}{5}\pmod1,
+\tag{8}
+\]
+which is precisely the exponent of the square of the AFK phase.
+The exact twenty-four-row substitution, including every positive lift,
+is part of the bridge certificate.
+\end{proof}
+
+For a normalized ray log $k$, name the positive square root of its
+ray value by
+\[
+\begin{array}{c|cccccccc}
+k&0&1&2&3&4&5&6&7\\ \hline
+\text{positive root}&x&w&y^{-1}&z&x^{-1}&w^{-1}&y&z^{-1}.
+\end{array}
+\]
+The class log in (5) selects the unsigned entry and the explicit sign
+in (2) selects its sign.  Thus the complete reconstruction table is
+\[
+T_5=
+\begin{pmatrix}
+\sqrt6&x&y&y^{-1}&x^{-1}\\
+x^{-1}&-z^{-1}&w^{-1}&-z^{-1}&x\\
+y^{-1}&w^{-1}&w^{-1}&y&-z\\
+y&-z^{-1}&y^{-1}&w&w\\
+x&x^{-1}&-z&w&-z
+\end{pmatrix}.
+\tag{9}
+\]
+Here $x,y,z,w$ denote the four positive representatives of
+the ray-class pairs
+\[
+(0,4),\qquad(6,2),\qquad(3,7),\qquad(1,5),
+\tag{10}
+\]
+respectively.  In particular, the table is generated from the ray logs
+and the sign exponent; it is not stored as a list of expected answers in
+the bridge generator.
+
+\section{The analytic ray packet}
+
+Set
+\[
+\begin{aligned}
+P(U)={}&U^8-(8+5\sqrt3)U^7+(53+30\sqrt3)U^6\\
+&-(156+90\sqrt3)U^5+(225+130\sqrt3)U^4\\
+&-(156+90\sqrt3)U^3+(53+30\sqrt3)U^2\\
+&-(8+5\sqrt3)U+1.
+\end{aligned}
+\tag{11}
+\]
+It is the reciprocal lift $P(U)=U^4F(U+U^{-1})$ of
+\[
+\begin{aligned}
+F(V)={}&V^4-(8+5\sqrt3)V^3+(49+30\sqrt3)V^2\\
+&-(132+75\sqrt3)V+(121+70\sqrt3).
+\end{aligned}
+\tag{12}
+\]
+Kopp previously recognized the same polynomial numerically as the
+Stark-unit polynomial for $\Q(\sqrt3)$ and modulus five; see
+\cite[\S7, (7.21)]{Kopp2021} and
+\cite[Example~1.17, (3.12)]{Kopp2023}.  PARI's \texttt{bnrstark}
+reproduces (12), but that recognition is not used as a proof below.
+
+The square roots of the reciprocal packet have absolute polynomial
+\[
+\begin{aligned}
+{\cal Q}(X)={}&X^{32}-16X^{30}+95X^{28}-260X^{26}+355X^{24}
+-348X^{22}\\
+&+388X^{20}-300X^{18}+195X^{16}-300X^{14}+388X^{12}\\
+&-348X^{10}+355X^8-260X^6+95X^4-16X^2+1.
+\end{aligned}
+\tag{13}
+\]
+Define $w^{-1},z^{-1},x^{-1},y^{-1},y,x,z,w$ to be the unique
+positive roots of (13) in, respectively,
+\[
+\begin{gathered}
+(0.424835,0.424836),\ (0.481476,0.481477),\
+(0.506963,0.506964),\ (0.782390,0.782391),\\
+(1.278133,1.278134),\ (1.972526,1.972527),\
+(2.076946,2.076947),\ (2.353849,2.353850).
+\end{gathered}
+\tag{14}
+\]
+Sturm's theorem certifies exactly one root in every interval.
+
+\subsection{Shintani's theorem with an explicit exponent}
+
+For a ray class $A\in\Cl_{\mathfrak m}(K)$ put
+\[
+ X_A:=\exp Z'_{\mathfrak m}(0,A).
+\]
+
+\begin{lemma}[Specialized Shintani algebraicity]\label{lem:shintani}
+For every $A\in\Cl_{\mathfrak m}(K)$,
+\[
+ X_A^{5760}\in\mathcal O_H^\times,
+\]
+where $H$ is the ray field of modulus $\mathfrak m$.  These powers have
+the Artin action indexed by the ray classes.  At every embedding of
+$H$ inducing $\infty_2$ on $K$, their absolute value is one.
+\end{lemma}
+
+\begin{proof}
+Work first in the full narrow ray group
+\[
+ C:=\Cl_{(5)\infty_1\infty_2}(K)\cong C_8\times C_2.
+\]
+In Shintani's notation, let $\mu$ be the class represented by
+$11-5\beta$, which is congruent to $1$ modulo $5$ and has signs
+$(-,+)$ at $(\infty_1,\infty_2)$.  Let $\nu$ be the class represented
+by $4$, which is congruent to $-1$ modulo $5$ and is totally positive.
+The exact ray logs are
+\[
+ \mu=[4,1]\in C,\qquad \nu=[4,0]\in C.
+\]
+Forgetting $\infty_1$ kills $\mu$ and sends $\nu$ to the unique
+order-two element $4\in C_8$.  Hence
+\[
+ G=\langle\mu\rangle,\qquad \nu\notin G,\qquad
+ C/G\simeq\Cl_{\mathfrak m}(K).
+\]
+
+Every unit is $\pm\beta^n$, and $\beta$ has order three modulo $5$.
+Thus no totally positive unit is $-1$ modulo $5$, which is Shintani's
+condition (0-3).  There is no norm-$-1$ unit, since
+$a^2-3b^2=-1$ is impossible modulo $3$; this implies condition (0-6).
+
+The field $H$ has signature $(8,4)$ and a unique octic subfield
+\[
+ M\simeq\Q(\zeta_{60})^+.
+\]
+Thus $H/M$ is quadratic, $M$ is the maximal absolutely abelian
+subfield of $H$, and exactly one real place of $K$ splits in $H$.
+These are Shintani's hypothesis (0-9).  His Theorem~2
+\cite{Shintani1978} therefore applies to $X_{(5)}(c,G)$.
+
+This invariant is exactly the one-place zeta difference used here.
+Indeed, if $c$ maps to $A$, then the inverse images of $A$ and
+$RA$ in $C$ are respectively
+\[
+ \{c,c\mu\},\qquad \{c\nu,c\mu\nu\}.
+\]
+Shintani's Theorem~1 consequently gives
+\[
+\begin{aligned}
+\log X_{(5)}(c,G)
+&=\zeta'_{\rm full}(0,c)-\zeta'_{\rm full}(0,c\nu)\\
+&\quad+\zeta'_{\rm full}(0,c\mu)
+       -\zeta'_{\rm full}(0,c\mu\nu)\\
+&=\zeta'_{\mathfrak m}(0,A)-\zeta'_{\mathfrak m}(0,RA)
+=Z'_{\mathfrak m}(0,A).
+\end{aligned}
+\]
+
+It remains to make Shintani's existential power explicit.  The normal
+closure of $H$ is the full two-infinite-place ray field.  It is also
+the degree-sixteen ray field over $\Q(\sqrt{-5})$ with conductor
+\[
+ \mathfrak c=\begin{pmatrix}15&0\\0&3\end{pmatrix}
+\]
+in PARI's integral basis.  The quadratic-subfield enumeration contains
+a unique copy of $\Q(\sqrt{-5})$, so this identification preserves the
+imaginary quadratic field occurring in Shintani's proof.
+
+Shintani's Proposition~4 expresses the real invariant as a product of
+ratios of imaginary-quadratic $W$-invariants with integral
+multiplicities.  For a nontrivial divisor $\mathfrak d\mid\mathfrak c$,
+clearing the absolute-value square root and the distribution exponent
+requires a multiple of $12f_{\mathfrak d}n(S)$.  For the trivial
+divisor the required exponent is $12h_kn(S)$.  The exact exponents for
+the eight divisors are
+\[
+ 384,\ 288,\ 288,\ 144,\ 240,\ 360,\ 360,\ 180,
+\]
+whose least common multiple is $5760$.  Since $(5)$ is prime and its
+only proper divisor fails (0-3), Shintani's $Y_{(5)}$ equals
+$X_{(5)}$ and no induction exponent is added.  Proposition~5 supplies
+the unit, Artin, and nonsplit-modulus-one assertions.
+\end{proof}
+
+\subsection{The labeled candidate field}
+
+The absolute polynomial of a root of (11) is
+\[
+\begin{aligned}
+p(T)={}&T^{16}-16T^{15}+95T^{14}-260T^{13}+355T^{12}
+-348T^{11}\\
+&+388T^{10}-300T^9+195T^8-300T^7+388T^6-348T^5\\
+&+355T^4-260T^3+95T^2-16T+1.
+\end{aligned}
+\]
+
+\begin{lemma}[Exact field and Frobenius labels]\label{lem:frobenius}
+The field defined by (11) is the labeled ray field $H$ over $K$.
+Let $U$ be the root of $p$ in
+\[
+ (3.890,3.891).
+\]
+Then $U$ is a norm-one unit.  Arithmetic Frobenius at the prime
+$\mathfrak q$ above $3$ acts transitively on its eight real conjugates,
+which lie successively in
+\[
+\begin{gathered}
+(3.890,3.891),\ (5.540,5.541),\ (0.612,0.613),\
+(4.313,4.314),\\
+(0.257,0.258),\ (0.180,0.181),\ (1.633,1.634),\
+(0.231,0.232).
+\end{gathered}
+\]
+At the embeddings above $\infty_2$, all conjugates of $U$ have
+absolute value one.
+\end{lemma}
+
+\begin{proof}
+Applying \texttt{rnfequation} to both the candidate and the ray field,
+\texttt{nfisisom} returns eight maps.  Exact substitution shows that
+all eight maps fix the labeled root of $y^2-4y+1$; hence the
+isomorphism is over $K$, not merely over $\Q$.  Moreover
+\texttt{bnfcertify}=1, \texttt{bnfisunit} gives an exact unit
+decomposition, and the norm of $U$ is one.
+
+The prime $\mathfrak q$ generates the ray group.  Modulo
+$\mathfrak q$ the relative polynomial is
+\[
+ T^8+T^7+2T^6+2T^2+T+1\in\mathbb F_3[T],
+\]
+which is irreducible.  Arithmetic Frobenius is therefore $T\mapsto
+T^3$.  Reduction modulo this polynomial identifies one of the exact
+\texttt{nfgaloisconj} automorphisms with Frobenius.
+
+A rational interval of width $10^{-80}$ contains exactly one root of
+$p$ in $(3.890,3.891)$.  Exact rational interval evaluation of the
+successive Frobenius polynomials places their images inside the eight
+disjoint intervals in the statement.  This proves the labels
+Galois-equivariantly.
+
+Finally, under the nonidentity embedding of $K$, substitute
+$T=2(Y^2-1)/(Y^2+1)$ in the trace polynomial (12).
+The exact \texttt{nfpolsturm} counts are $[8,0]$, so all four trace
+roots at that embedding lie in $(-2,2)$.  Each corresponding
+reciprocal quadratic has both roots on the unit circle.
+\end{proof}
+
+\subsection{Certified removal of the power}
+
+\begin{theorem}[Unconditional ray packet]\label{thm:packet}
+For
+\[
+ \mathcal X_k:=\exp Z'_{\mathfrak m}(0,\mathfrak q^k),
+ \qquad 0\le k<8,
+\]
+the exact Artin-labeled packet is
+\[
+(\mathcal X_0,\ldots,\mathcal X_7)
+=(x^2,w^2,y^{-2},z^2,x^{-2},w^{-2},y^2,z^{-2}).
+\tag{15}
+\]
+In particular, $\mathcal X_0=U$.
+\end{theorem}
+
+\begin{proof}
+Kopp's proved Kronecker-limit theorem, with the convention and
+multiplier checked above, gives
+\[
+ \widetilde\nu_{p,q}^{\,2}
+ =\exp Z'_{\mathfrak m}(0,\mathfrak A_{p,q});
+\tag{16}
+\]
+here $\mathfrak A_{p,q}$ is the normalized ray class in (5).
+The four positive generators at characteristics
+\[
+ (0,1),\quad(0,2),\quad(2,4),\quad(3,3)
+\]
+have $\mathfrak q$-coordinates $0,6,3,1$, respectively.
+
+We evaluate the regularized integral for the reciprocal double sine
+(1) with Arb balls through \texttt{python-flint}~\cite{pythonflint}.
+Every Simpson panel uses an Arb enclosure of the
+fourth derivative.  All endpoints, widths, tolerances, and acceptance
+comparisons are exact rationals or outward-rounded balls.  Near zero,
+the positive series of
+$H_c(t)=\sinh(ct/2)/(ct/2)$ gives the rational bound
+\[
+ |f(t)-f(0)|\le4t^2\qquad(0\le t\le10^{-4}).
+\]
+For the tail, every reduced argument and its complement belongs to
+$(1/100,5)$; beyond $36$, each exponential denominator exceeds
+$3/4$, giving the remainder bound $e^{-36}/9$.
+The candidate roots are selected by disjoint rational isolating
+intervals, independently of library ordering.
+
+For each of the four characteristics, the ball for
+$\log(\widetilde\nu_{p,q}^{\,2})-\log(U_k)$ contains zero.  The largest
+radius is less than
+\[
+ \epsilon=2.23\times10^{-9}.
+\]
+The reciprocal partners give the remaining four real embeddings.
+
+By Lemma~\ref{lem:shintani}, both
+$\mathcal X_0^{5760}$ and $U^{5760}$ are units in the same labeled
+field.  Set
+\[
+ \eta=\mathcal X_0^{5760}/U^{5760}.
+\]
+Lemma~\ref{lem:frobenius} and the interval labels show that at every
+real embedding,
+\[
+ |\log|\sigma(\eta)||<5760\epsilon<1.29\times10^{-5}.
+\]
+At the four complex pairs, both numerator and denominator have
+absolute value one.  Hence
+\[
+ h(\eta)<1.29\times10^{-5}.
+\]
+
+If $3\le d=[\Q(\eta):\Q]\le16$ and $\eta$ is not a root of unity,
+Voutier's explicit bound \cite{Voutier1996} gives
+\[
+ h(\eta)>
+ \frac1{4d}\left(\frac{\log\log d}{\log d}\right)^3.
+\]
+Its minimum for $3\le d\le16$ is
+$5.2279533222\ldots\times10^{-5}$, a contradiction.  A non-torsion
+quadratic unit has height at least
+$\tfrac12\log((1+\sqrt5)/2)$, and a rational unit is $\pm1$.
+Thus $\eta$ is a root of unity.  Since $H$ has a real embedding, its
+only roots of unity are $\pm1$; positivity at the distinguished
+embedding gives $\eta=1$.  Therefore
+$\mathcal X_0^{5760}=U^{5760}$ and positivity yields
+$\mathcal X_0=U$.  The exact Artin action in
+Lemma~\ref{lem:shintani}, together with the certified Frobenius orbit
+in Lemma~\ref{lem:frobenius}, proves the full packet (15).
+\end{proof}
+
+Since every reciprocal double-sine factor in (2) is positive at the
+displayed arguments, equations (2), (5), and (15) now derive the
+signed table (9) unconditionally.
+
+\section{Exact finite cancellation}
+
+Let $\zeta_5=e^{2\pi i/5}$ and
+$\tau=-e^{\pi i/5}=\zeta_5^3$.  Define, without reference to software,
+\[
+ K_{r,c}:=\frac1{5\sqrt6}
+ \sum_{\substack{0\le a,b<5\\r\equiv c+a\pmod5}}
+ T_{a,b}\tau^{ab}\zeta_5^{bc},
+ \qquad 0\le r,c<5,
+\tag{17}
+\]
+where $T$ is (9).  Equivalently,
+$K=\frac15\sum_{a,b}(T_{a,b}/\sqrt6)D_{a,b}$ for
+$D_{a,b}e_c=\tau^{ab}\zeta_5^{bc}e_{c+a}$.
+In particular,
+\[
+ \Tr K=T_{0,0}/\sqrt6=1.
+\tag{18}
+\]
+
+\begin{proposition}[Exact 100-minor certificate]\label{prop:minors}
+For the algebraic values selected by (13)--(14), all one hundred
+$2$-minors of the matrix (17) vanish exactly.  Hence
+$\operatorname{rank}K=1$ and $K^2=K$.
+\end{proposition}
+
+\begin{proof}
+Over the coefficient field $\Q(\zeta_5,\sqrt6)$, (13) has four
+degree-eight factors.  Let $w$ be the interval-defined root in (14).
+Exact rational interval arithmetic applied to the
+\texttt{nfgaloisconj} polynomials proves that
+\texttt{nfgaloisconj} substitutions are
+\[
+\begin{array}{c|cccccccc}
+ &w&w^{-1}&y&y^{-1}&x&x^{-1}&z&z^{-1}\\ \hline
+\text{conjugate index}&2&8&5&4&10&6&16&12.
+\end{array}
+\tag{19}
+\]
+with every image lying inside its corresponding interval in (14).
+Moreover, exact \texttt{nfisincl} identities express $\sqrt5$ and
+$\sqrt6$ as polynomials in $w$; rational interval evaluation selects
+their positive signs.  Among the four factors, factor four is the
+unique factor on which both of these subfield elements equal the
+positive $\sqrt5$ and positive $\sqrt6$.  This certifies, rather than
+numerically assumes, that the interval-defined tuple is the tuple used
+in the factor-four calculation.
+
+Substitution in (9) and (17), followed by exact reduction modulo the
+selected factor, makes all one hundred minors zero.  As a factor
+selection check, factors one, two, and three leave respectively
+$70,100,100$ nonzero minors.  This is exact number-field arithmetic,
+not floating-point evaluation.  The complete script and transcript
+are supplied with the manuscript.
+
+The matrix is nonzero because (18) gives trace one.  Thus its rank is
+exactly one.  Any rank-one matrix satisfies
+$K^2=(\Tr K)K$, proving idempotency.
+\end{proof}
+
+\section{Dimension-five twisted convolution}
+
+\begin{lemma}[Weyl coefficient bridge]\label{lem:bridge}
+The matrix $K$ of (17) is the standard-basis Weyl reconstruction of
+the canonical AFK ghost for
+$t=(5,1,\langle1,-4,1\rangle)$.  Moreover, $K^2=K$ is equivalent to
+the $\lambda=1$ instance of AFK equation~(1.49):
+\[
+\sum_{\boldsymbol q\in{\cal I}_{\boldsymbol p}}
+\zeta_5^{\langle\boldsymbol p,(I+L_{z,t})\boldsymbol q\rangle}
+\operatorname{shin}_{A_t}^{\boldsymbol q/5}(\beta)
+\operatorname{shin}_{A_t^{-1}}^{(\boldsymbol q-\boldsymbol p)/5}(\beta)
+=25\delta_{\boldsymbol p,\boldsymbol0}^{(5)}.
+\tag{20}
+\]
+\end{lemma}
+
+\begin{proof}
+For $\boldsymbol p\ne\boldsymbol0$, put
+$\nu_{\boldsymbol p}:=\widetilde\nu_{\boldsymbol p}$ as given by
+(2).  The first two unconditional parts of AFK's construction give
+\[
+ \nu_{\boldsymbol p}\nu_{-\boldsymbol p}=1.
+\tag{21}
+\]
+Theorem~\ref{thm:packet}, followed by (2) and (5), identifies these
+twenty-four numbers with the nonzero entries of $T$.  The actual ghost
+reconstruction is therefore
+\[
+ K=\frac15I+\frac1{5\sqrt6}
+ \sum_{\boldsymbol p\ne\boldsymbol0}
+ \nu_{\boldsymbol p}D_{\boldsymbol p}.
+\tag{22}
+\]
+The artificial entry $T_{0,0}=\sqrt6$ packages the first term of
+(22) into the single entry formula (17); it is not an analytic
+zero-characteristic value.
+
+Now expand $K^2-K$ using
+$D_{\boldsymbol p}D_{\boldsymbol q}
+=\tau^{\langle\boldsymbol p,\boldsymbol q\rangle}
+D_{\boldsymbol p+\boldsymbol q}$ and compare every Weyl coefficient.
+For $\boldsymbol p\ne\boldsymbol0$, multiplication by $150$ makes its
+coefficient
+\[
+ \sum_{\substack{\boldsymbol q\bmod5\\
+ \boldsymbol q\ne\boldsymbol0,\boldsymbol p}}
+ \tau^{\langle\boldsymbol p,\boldsymbol q\rangle}
+ \nu_{\boldsymbol p-\boldsymbol q}\nu_{\boldsymbol q}
+-3\sqrt6\,\nu_{\boldsymbol p}.
+\tag{23}
+\]
+Using (21), the product in (23) is
+$\nu_{\boldsymbol q}/\nu_{\boldsymbol q-\boldsymbol p}$.
+
+AFK's $\nu_{\boldsymbol0}^{\rm aux}$ is an auxiliary cocycle value,
+not the identity coefficient in (22).  Their zero-characteristic
+lemma specializes to
+\[
+ \nu_{\boldsymbol0}^{\rm aux}
++(\nu_{\boldsymbol0}^{\rm aux})^{-1}
+=-(5-2)\sqrt6=-3\sqrt6.
+\tag{24}
+\]
+After adjoining the two omitted endpoints
+$\boldsymbol q=\boldsymbol0,\boldsymbol p$, their combined contribution
+is
+\[
+ \nu_{\boldsymbol p}\!
+ \left(\nu_{\boldsymbol0}^{\rm aux}
++(\nu_{\boldsymbol0}^{\rm aux})^{-1}\right)
+=-3\sqrt6\,\nu_{\boldsymbol p}.
+\]
+Thus (23) is exactly the full endpoint-corrected sum
+\[
+ \sum_{\boldsymbol q\in{\cal I}_{\boldsymbol p}}
+ \tau^{\langle\boldsymbol p,\boldsymbol q\rangle}
+ \frac{\nu_{\boldsymbol q}}
+ {\nu_{\boldsymbol q-\boldsymbol p}},
+\tag{25}
+\]
+with the two endpoint ratios interpreted using
+$\nu_{\boldsymbol0}^{\rm aux}$.
+
+Write $\Phi_{\boldsymbol q}$ for the AFK phase.  Their phase-ratio
+calculation specializes, with $r=f_j/f=1$ and $d_j=d=5$, to
+\[
+ \frac{\Phi_{\boldsymbol q}}
+ {\Phi_{\boldsymbol q-\boldsymbol p}}
+ =
+ (-1)^{1+s_5(\boldsymbol p)}
+ \tau^{Q(\boldsymbol p)}
+ \tau^{\langle\boldsymbol p,\boldsymbol q\rangle}
+ \zeta_5^{\langle\boldsymbol p,L_{z,t}\boldsymbol q\rangle}.
+\tag{26}
+\]
+The first two factors are nonzero and independent of
+$\boldsymbol q$.  Multiplying the remaining $\tau$ factor by the
+displacement chirp in (25), and using $\tau^2=\zeta_5$, gives exactly
+\[
+ \zeta_5^{\langle\boldsymbol p,
+ (I+L_{z,t})\boldsymbol q\rangle}.
+\]
+The cocycle inverse identity
+\[
+ \frac{\operatorname{shin}_{A_t}^{\boldsymbol q/5}(\beta)}
+ {\operatorname{shin}_{A_t}^{(\boldsymbol q-\boldsymbol p)/5}(\beta)}
+ =
+ \operatorname{shin}_{A_t}^{\boldsymbol q/5}(\beta)
+ \operatorname{shin}_{A_t^{-1}}^{
+   (\boldsymbol q-\boldsymbol p)/5}(\beta)
+\tag{27}
+\]
+gives the two factors printed in (20).  Here
+$A_t=B$, $L_{z,t}=L$, and
+$f_t(1)=2+9\equiv1\pmod5$, so the identity twist produces exactly the
+chirp in (25).  The remaining factor depends on
+$\boldsymbol p$ but is nonzero and independent of
+$\boldsymbol q$.  Hence the vanishing of every nonzero Weyl coefficient
+is equivalent to (20) for $\boldsymbol p\ne\boldsymbol0$.
+For $\boldsymbol p=\boldsymbol0$, the cocycle inverse identity makes
+the sum $25$ automatically.  This is the specialization of AFK
+equations (5.78)--(5.98), including rather than suppressing their
+endpoint correction.
+\end{proof}
+
+\begin{theorem}[Complete dimension-five TCC]\label{thm:tcc}
+For every dimension-five admissible tuple $t$,
+\[
+ 0,1\in{\cal Z}_t.
+\]
+Furthermore ${\cal Z}_{t'}={\cal Z}_t$ for any two dimension-five
+admissible tuples $t,t'$.
+\end{theorem}
+
+\begin{proof}
+Proposition~\ref{prop:minors} and Lemma~\ref{lem:bridge} prove the
+$\lambda=1$ identity for the canonical tuple.  The twist condition is
+\[
+ \det(G)f_t(\lambda)\equiv1\pmod5,\qquad
+ f_t(\lambda)=2\lambda+9.
+\]
+Thus $G=I$ gives $2\lambda+9\equiv1\pmod5$, or
+$\lambda\equiv1\pmod5$.
+
+Complex conjugation preserves idempotency and sends
+$\lambda$ to
+$\bar\lambda=-(\lambda+d-1)=1-\lambda\pmod5$.
+It therefore sends the verified shift $1$ to shift $0$.
+Equivalently the conjugate twist has determinant $-1$, and
+$-(2\lambda+9)\equiv1\pmod5$ gives $\lambda\equiv0\pmod5$.
+
+Finally, dimension-five admissibility forces $r=1$,
+$K=\Q(\sqrt3)$, and $j=m=1$.  Since the relevant conductor is one,
+every admissible form has discriminant twelve.  The ordinary class
+number is one, so primitive indefinite forms of discriminant twelve
+constitute one $\mathrm{GL}_2(\Z)$-equivalence class.  (The narrow class
+number is not needed: determinant-$-1$ transformations are allowed.)
+Thus every admissible form is integrally equivalent to the canonical
+one in the sense required here.
+
+For clarity, the transport does not invoke AFK's conditional
+transformation theorem.  If $t_M$ is obtained from $t$ by
+$M\in\mathrm{GL}_2(\Z)$, then unconditionally
+\[
+ A_{t_M}=M^{-1}A_tM,\qquad
+ L_{z,t_M}=M^{-1}L_{z,t}M,\qquad
+ \beta_{t_M}=M^{-1}\beta_t.
+\]
+Kopp's covariance formula sends each cocycle factor at
+$(t_M,\boldsymbol q)$ to the corresponding factor at
+$(t,\ell M\boldsymbol q)$, with
+$\ell=\operatorname{sgn}(j_{M^{-1}}(\beta_t))$; when
+$\det M=-1$ both factors are complex-conjugated, which does not change
+the real TCC sum.  Reindexing
+\[
+ \boldsymbol q'=\ell M\boldsymbol q,\qquad
+ {\cal I}'_{\ell M\boldsymbol p}=\ell M{\cal I}_{\boldsymbol p},
+\]
+and using symplectic covariance transforms the complete left side of
+(20) for $(t_M,\boldsymbol p)$ into that for
+$(t,\ell M\boldsymbol p)$.  Hence
+${\cal Z}_t\subseteq{\cal Z}_{t_M}$.  Applying the same calculation to
+$M^{-1}$ gives the reverse inclusion and therefore equality.
+\end{proof}
+
+\section{Scope and reproducibility}
+
+Theorem~\ref{thm:tcc} proves the complete formal TCC in dimension five.
+It does not prove a dimension-five SIC, the TCC in arbitrary
+dimensions, or Zauner's conjecture.  The new number-theoretic step is
+Theorem~\ref{thm:packet}: it proves the previously conjectural
+dimension-five ray packet by combining Kopp's proved limit formula with
+the applicable case of Shintani's proved algebraicity theorem and an
+effective height argument.
+
+The supplementary package contains:
+\begin{itemize}
+\item the 25-characteristic bridge certificate and generator;
+\item the exact $C_8$ Fourier-support audit excluding the quadratic
+character;
+\item the PARI transcript with \texttt{bnfcertify}=1 and all positive
+ray-class logs;
+\item the Sturm root-isolation transcript;
+\item the exact interval/conjugate/factor embedding certificate;
+\item the formal 100-minor Laurent certificate; and
+\item the exact four-factor minor-reduction transcript;
+\item the Shintani sign-class, conductor, and exponent-$5760$ audit;
+\item the labeled $K$-isomorphism, unit, Sturm, and Frobenius-orbit
+certificate; and
+\item the rigorous Arb double-sine enclosure and height-gap transcript.
+\end{itemize}
+Their SHA-256 digests are recorded in
+\texttt{certificates/SHA256SUMS}.
+
+\begin{thebibliography}{12}
+\bibitem{Kopp}
+G.~Kopp, \emph{The Shintani--Faddeev modular cocycle: Stark units from
+$q$-Pochhammer ratios}, arXiv:2411.06763.
+\bibitem{AFK}
+D.~M.~Appleby, S.~T.~Flammia, and G.~S.~Kopp,
+\emph{A constructive approach to Zauner's conjecture via the Stark
+conjectures}, arXiv:2501.03970.
+\bibitem{Kopp2018}
+G.~Kopp, \emph{SIC-POVMs and the Stark conjectures},
+Int.\ Math.\ Res.\ Not.\ IMRN 2021, no.~18, 13812--13838;
+arXiv:1807.05877.
+\bibitem{Kopp2021}
+G.~S.~Kopp, \emph{Indefinite zeta functions},
+Res.\ Math.\ Sci.\ \textbf{8}, 17 (2021),
+\url{https://doi.org/10.1007/s40687-021-00252-9}.
+\bibitem{Kopp2023}
+G.~S.~Kopp, \emph{A Kronecker limit formula for indefinite zeta
+functions}, Res.\ Math.\ Sci.\ \textbf{10}, 24 (2023),
+\url{https://doi.org/10.1007/s40687-023-00384-0}.
+\bibitem{Shintani1978}
+T.~Shintani, \emph{On certain ray class invariants of real quadratic
+fields}, J.\ Math.\ Soc.\ Japan \textbf{30} (1978), 139--167,
+\url{https://doi.org/10.2969/jmsj/03010139}.
+\bibitem{Voutier1996}
+P.~Voutier, \emph{An effective lower bound for the height of algebraic
+numbers}, Acta Arith.\ \textbf{74} (1996), 81--95,
+\url{https://doi.org/10.4064/aa-74-1-81-95}.
+\bibitem{PARI}
+The PARI Group, \emph{PARI/GP version 2.15.4},
+Université de Bordeaux, 2023,
+\url{https://pari.math.u-bordeaux.fr/}.
+\bibitem{pythonflint}
+F.~Johansson and contributors, \emph{python-flint 0.9.0},
+\url{https://github.com/flintlib/python-flint}.
+\end{thebibliography}
+
+\end{document}
