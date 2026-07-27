@@ -1,0 +1,144 @@
+\\ Audit whether the dimension-five ray field satisfies Shintani's
+\\ 1978 "quadratic over the maximal absolutely abelian subfield"
+\\ hypothesis.  The full narrow ray field is the normal closure used
+\\ in Shintani's proof; the one-infinite-place field is the Stark field.
+
+default(realprecision, 80);
+
+K = bnfinit(y^2 - 4*y + 1, 1);
+\\ PARI orders the real roots increasingly, so [1,0] is the place
+\\ infinity_2(sqrt(3))=-sqrt(3).
+Rone = bnrinit(K, [5, [1, 0]], 1);
+Rboth = bnrinit(K, [5, [1, 1]], 1);
+
+Hrelative = bnrclassfield(Rone, , 1);
+Nrelative = bnrclassfield(Rboth, , 1);
+Habsolute = rnfpolredbest(K, Hrelative, 2);
+Nabsolute = rnfpolredbest(K, Nrelative, 2);
+
+print("PARI_VERSION=", version());
+print("ONE_INFINITY_RAY_GROUP=", Rone.cyc);
+print("BOTH_INFINITY_RAY_GROUP=", Rboth.cyc);
+
+\\ Shintani's sign classes and hypotheses in the labeled embeddings.
+\\ PARI's embedding order is (infinity_2,infinity_1).
+beta = Mod(y, y^2 - 4*y + 1);
+mu_generator = 11 - 5*beta;
+nu_generator = 4;
+prime_above_five = idealprimedec(K, 5)[1];
+mod_five = nfmodprinit(K, prime_above_five);
+beta_mod_five = nfmodpr(K, beta, mod_five);
+print("BETA_MOD_5_ORDER=", fforder(beta_mod_five));
+print("NORM_MINUS_ONE_MOD_3_OBSTRUCTION=", Mod(-1, 3) != Mod(0, 3)^2 && Mod(-1, 3) != Mod(1, 3)^2);
+print("MU_GENERATOR_EMBEDDINGS_INFINITY_2_INFINITY_1=", nfeltembed(K, mu_generator));
+print("MU_FULL_RAY_LOG=", bnrisprincipal(Rboth, idealhnf(K, mu_generator), 0));
+print("MU_ONE_INFINITY_IMAGE=", bnrisprincipal(Rone, idealhnf(K, mu_generator), 0));
+print("NU_FULL_RAY_LOG=", bnrisprincipal(Rboth, idealhnf(K, nu_generator), 0));
+print("NU_ONE_INFINITY_IMAGE=", bnrisprincipal(Rone, idealhnf(K, nu_generator), 0));
+
+print("STARK_FIELD_RELATIVE_POLYNOMIAL=", Hrelative);
+print("NORMAL_CLOSURE_RELATIVE_POLYNOMIAL=", Nrelative);
+print("STARK_FIELD_ABSOLUTE_POLYNOMIAL=", Habsolute);
+print("NORMAL_CLOSURE_ABSOLUTE_POLYNOMIAL=", Nabsolute);
+print("STARK_FIELD_SIGNATURE=", nfinit(Habsolute).sign);
+print("NORMAL_CLOSURE_SIGNATURE=", nfinit(Nabsolute).sign);
+
+Nquadratic = nfsubfields(Nabsolute, 2);
+print("NORMAL_CLOSURE_QUADRATIC_SUBFIELD_COUNT=", #Nquadratic);
+print("NORMAL_CLOSURE_QUADRATIC_SUBFIELDS=", vector(#Nquadratic, k, Nquadratic[k][1]));
+audit_quadratic_bases() =
+{
+    my(kpol, knf, relative_factors, relative_polynomial);
+    for(k = 1, #Nquadratic,
+        kpol = subst(Nquadratic[k][1], x, y);
+        knf = nfinit(kpol);
+        relative_factors = nffactor(knf, Nabsolute);
+        relative_polynomial = relative_factors[1, 1];
+        print(
+            "NORMAL_CLOSURE_ABELIAN_OVER_QUADRATIC_", k, "=",
+            rnfisabelian(knf, relative_polynomial),
+            " BASE=", kpol
+        );
+        if(rnfisabelian(knf, relative_polynomial),
+            print(
+                "NORMAL_CLOSURE_RELATIVE_DISCRIMINANT_OVER_QUADRATIC_", k, "=",
+                idealfactor(knf, rnfdisc(knf, relative_polynomial)[1])
+            )
+        )
+    );
+};
+audit_quadratic_bases();
+
+\\ The fixed field of the sign involution in the Stark field was
+\\ identified independently with Q(zeta_60)^+.
+Mpol = x^8 - 7*x^6 + 14*x^4 - 8*x^2 + 1;
+print("MAXIMAL_REAL_ABELIAN_CANDIDATE=", Mpol);
+print("STARK_OVER_REAL_ABELIAN_DEGREE=", poldegree(Habsolute) / poldegree(Mpol));
+
+\\ Shintani's proof passes through an imaginary quadratic ray field.
+\\ The normal closure is the unique degree-16 quotient of the
+\\ Q(sqrt(-5)) ray group modulo 15 obtained by killing its order-5
+\\ subgroup.
+kminusfive = bnfinit(y^2 + 5, 1);
+rayminusfive = bnrinit(kminusfive, 15, 1);
+minusfive_subgroup = matdiagonal([8, 2]);
+minusfive_relative = bnrclassfield(rayminusfive, minusfive_subgroup, 1);
+minusfive_absolute = rnfpolredbest(kminusfive, minusfive_relative, 2);
+print("Q_SQRT_MINUS_5_CLASS_NUMBER=", kminusfive.no);
+print("Q_SQRT_MINUS_5_BNFCERTIFY=", bnfcertify(kminusfive));
+print("Q_SQRT_MINUS_5_RAY_15_GROUP=", rayminusfive.cyc);
+print("Q_SQRT_MINUS_5_DEGREE_16_SUBGROUP=", minusfive_subgroup);
+print("Q_SQRT_MINUS_5_DEGREE_16_CONDUCTOR=", bnrconductor(rayminusfive, minusfive_subgroup, , 1)[1]);
+print("NORMAL_CLOSURE_IS_Q_SQRT_MINUS_5_RAY_SUBFIELD=", #nfisisom(Nabsolute, minusfive_absolute) > 0);
+
+\\ Clear every rational exponent in Shintani's imaginary-quadratic
+\\ invariants.  For a nontrivial ideal d, Z_d=|phi_d|^(1/(6 f_d));
+\\ replacing the absolute value by phi_d conjugate(phi_d) doubles the
+\\ exponent.  For the trivial modulus W contributes its distribution
+\\ exponent n=[Cl_f:Cl_1^*], so clearing |W|^(1/(6h)) after distribution
+\\ requires 12hn.
+imaginary_conductor = bnrconductor(rayminusfive, minusfive_subgroup, , 1)[1][1];
+imaginary_ray = bnrinit(kminusfive, imaginary_conductor, 1);
+imaginary_primes = Vec(idealfactor(kminusfive, imaginary_conductor)[, 1]);
+shintani_denominators = vector(8);
+audit_shintani_denominators() =
+{
+    my(divisor, divisor_ray_order, roots_of_unity, n_index);
+    my(smallest_integer, clearing_exponent);
+    for(mask = 0, 7,
+        divisor = matid(2);
+        for(j = 1, 3,
+            if(
+                bittest(mask, j-1),
+                divisor = idealmul(
+                    kminusfive,
+                    divisor,
+                    imaginary_primes[j]
+                )
+            )
+        );
+        divisor = idealhnf(kminusfive, divisor);
+        divisor_ray_order = bnrinit(kminusfive, divisor).no;
+        roots_of_unity = if(mask == 0, 2, 1);
+        n_index = roots_of_unity * imaginary_ray.no / divisor_ray_order;
+        smallest_integer = divisor[1, 1];
+        clearing_exponent = if(
+            mask == 0,
+            12 * kminusfive.no * n_index,
+            12 * smallest_integer * n_index
+        );
+        shintani_denominators[mask+1] = clearing_exponent;
+        print(
+            "SHINTANI_DIVISOR_MASK_", mask,
+            "_IDEAL=", divisor,
+            " RAY_ORDER=", divisor_ray_order,
+            " N_INDEX=", n_index,
+            " CLEARING_EXPONENT=", clearing_exponent
+        )
+    )
+};
+audit_shintani_denominators();
+print("SHINTANI_CLEARING_EXPONENTS=", shintani_denominators);
+print("SHINTANI_SAFE_EXPONENT=", lcm(shintani_denominators));
+
+quit();
