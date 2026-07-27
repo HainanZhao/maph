@@ -116,6 +116,33 @@ def dimension_four_unit() -> float:
     return math.prod(double_sine(value, beta, 1.0) for value in arguments)
 
 
+def overlap_table() -> list[list[float]]:
+    """Evaluate all nonexceptional principal overlaps from the raw formula."""
+
+    dimension = 4
+    beta = (3 + math.sqrt(5)) / 2
+    table = [[math.nan for _ in range(dimension)] for _ in range(dimension)]
+    for first in range(dimension):
+        for second in range(dimension):
+            if first == second == 0:
+                continue
+            third = (-first - second) % dimension
+            exponent = (
+                dimension * (first + second)
+                + first * second
+                + min(dimension, first + second)
+            )
+            arguments = (
+                1 + (second * beta - first) / dimension,
+                1 + (first * beta - third) / dimension,
+                1 + (third * beta - second) / dimension,
+            )
+            table[first][second] = (-1) ** exponent * math.prod(
+                double_sine(value, beta, 1.0) for value in arguments
+            )
+    return table
+
+
 def main() -> None:
     unit = dimension_four_unit()
     target = math.sqrt(3 + math.sqrt(5))
@@ -126,6 +153,21 @@ def main() -> None:
         "reciprocal-relation residual = "
         f"{unit + 1 / unit - target:+.3e}"
     )
+    expected = [
+        [math.sqrt(5), -unit, 1, -1 / unit],
+        [-1 / unit, -1 / unit, -1 / unit, -unit],
+        [1, -1 / unit, 1, unit],
+        [-unit, -1 / unit, unit, -unit],
+    ]
+    evaluated = overlap_table()
+    residuals = [
+        abs(evaluated[first][second] - expected[first][second])
+        for first in range(4)
+        for second in range(4)
+        if (first, second) != (0, 0)
+    ]
+    print(f"all 15 nonexceptional overlaps checked = {len(residuals)}")
+    print(f"maximum overlap-table residual = {max(residuals):.3e}")
 
 
 if __name__ == "__main__":

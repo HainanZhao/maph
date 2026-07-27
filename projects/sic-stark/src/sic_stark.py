@@ -3431,6 +3431,45 @@ def canonical_dimension_four_double_sine_factor_record(
                 }
             )
 
+    overlap_values = [
+        ["sqrt(5)", "-x", "1", "-x^-1"],
+        ["-x^-1", "-x^-1", "-x^-1", "-x"],
+        ["1", "-x^-1", "1", "x"],
+        ["-x", "-x^-1", "x", "-x"],
+    ]
+    overlap_audit = []
+    for first in range(4):
+        for second in range(4):
+            if first == second == 0:
+                overlap_audit.append(
+                    {
+                        "characteristic": [0, 0],
+                        "exceptional_principal_value": "sqrt(5)",
+                    }
+                )
+                continue
+            third = (-first - second) % 4
+            sign_exponent = (
+                4 * (first + second)
+                + first * second
+                + min(4, first + second)
+            )
+            overlap_audit.append(
+                {
+                    "characteristic": [first, second],
+                    "third_residue": third,
+                    "sign_exponent": sign_exponent,
+                    "sign": -1 if sign_exponent % 2 else 1,
+                    "double_sine_arguments": [
+                        [4 - first, second],
+                        [4 - third, first],
+                        [4 - second, third],
+                    ],
+                    "argument_encoding": "(constant + beta_coefficient*beta)/4",
+                    "reduced_value": overlap_values[first][second],
+                }
+            )
+
     return {
         "dimension": 4,
         "coefficient_basis": [
@@ -3451,12 +3490,8 @@ def canonical_dimension_four_double_sine_factor_record(
             "The exceptional T[0,0]=sqrt(5) is divided by sqrt(5), "
             "so the zero Weyl overlap is a_0=1."
         ),
-        "signed_double_sine_table": [
-            ["sqrt(5)", "-x", "1", "-x^-1"],
-            ["-x^-1", "-x^-1", "-x^-1", "-x"],
-            ["1", "-x^-1", "1", "x"],
-            ["-x", "-x^-1", "x", "-x"],
-        ],
+        "signed_double_sine_table": overlap_values,
+        "all_sixteen_overlap_audit": overlap_audit,
         "matrix_entries": [
             [polynomial_text(entry) for entry in row]
             for row in matrix

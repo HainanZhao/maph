@@ -1479,6 +1479,13 @@ class CanonicalSicStarkTests(unittest.TestCase):
         )
         self.assertEqual(len(record["matrix_entries"]), 4)
         self.assertEqual(len(record["minor_certificates"]), 36)
+        self.assertEqual(len(record["all_sixteen_overlap_audit"]), 16)
+        self.assertEqual(
+            record["all_sixteen_overlap_audit"][1]["reduced_value"], "-x"
+        )
+        self.assertEqual(
+            record["all_sixteen_overlap_audit"][15]["sign_exponent"], 37
+        )
         self.assertTrue(
             all(
                 not certificate["division_remainder"]
