@@ -100,12 +100,13 @@ To prevent convention ambiguity, define the function used here directly
 by its gamma ratio:
 \[
  S_2^{\mathrm{here}}(z\mid\omega_1,\omega_2)
- :=\frac{\Gamma_2(z\mid\omega_1,\omega_2)}
- {\Gamma_2(\omega_1+\omega_2-z\mid\omega_1,\omega_2)}.
+ :=\frac{\Gamma_2(\omega_1+\omega_2-z\mid\omega_1,\omega_2)}
+ {\Gamma_2(z\mid\omega_1,\omega_2)}.
 \]
-This definition is decisive.  Using the reciprocal gamma ratio in the
-display defining $x$ changes $x^2$ from $u$ to $4/u$, because the
-prefactor $\sqrt2$ is not inverted.
+This definition is decisive.  Using Kopp's
+$\operatorname{Sin}_{2,\mathrm{Kopp}}$ instead in the display defining
+$x$ changes $x^2$ from $u$ to $4/u$, because the prefactor $\sqrt2$
+is not inverted.
 
 The normalized signed double-sine table is
 \[
@@ -132,6 +133,34 @@ $\tau=-(1+i)/\sqrt2$.  Reduction of $r=c+a$ modulo four is performed
 before evaluating the entry; the factor $\tau^{ab}$ retains the
 even-dimensional displacement sign convention.  This formula is the
 complete definition of the matrix whose minors are certified below.
+
+\begin{lemma}[Weyl reconstruction]\label{lem:weyl}
+Let $\nu_{a,b}=T_{a,b}(x)$ for the sixteen entries of the displayed
+table, and put $a_{a,b}=\nu_{a,b}/\sqrt5$.  Thus
+$a_{0,0}=1$.  With
+\[
+ D_{a,b}e_c=\tau^{ab}i^{bc}e_{c+a}\qquad(a,b,c\in\mathbb Z/4\mathbb Z),
+\]
+the operator reconstructed from these sixteen normalized ghost
+overlaps is
+\[
+ \Pi_I=\frac14\sum_{a,b\bmod4}a_{a,b}D_{a,b},
+ \qquad
+ (\Pi_I)_{r,c}=\frac1{4\sqrt5}
+ \sum_{r\equiv c+a}T_{a,b}\tau^{ab}i^{bc}=K_{r,c}(x).
+\]
+Moreover,
+\[
+ \Tr\Pi_I=\frac{T_{0,0}}{\sqrt5}=1.
+\]
+\end{lemma}
+
+\begin{proof}
+The displayed action of $D_{a,b}$ gives the matrix-entry formula
+term by term.  On taking the trace, the sum over $c$ annihilates every
+$b\ne0$, while $a=0$ is forced on the diagonal.  Hence only
+$T_{0,0}=\sqrt5$ remains.
+\end{proof}
 
 \begin{proposition}\label{prop:minors}
 Every one of the $36$ two-by-two minors of the dimension-four
@@ -214,9 +243,8 @@ $h_L=1$.
 
 Write $s=\sqrt\phi$, so $s^4-s^2-1=0$.  The power-basis
 discriminant is $-400$, equal to the certified field discriminant
-below; hence $\mathcal O_L=\Z[s]$.  Exact Buchmann
-class-group/unit computation in PARI/GP, whose input and transcript are
-included in the certificate package, returns fundamental units
+below; hence $\mathcal O_L=\Z[s]$.  An exact Buchmann class-group/unit
+computation in PARI/GP 2.15.4~\cite{PARI} returns fundamental units
 $s^3-s$ and $-s^2+s$.  Since
 \[
  s^3-s=s^{-1},\qquad -s^2+s=-u^{-1},
@@ -231,6 +259,9 @@ The exact computation also returns class number one, ray structures
 $[2]$ and $[2,2]$, and the same regulator.  The output
 \texttt{bnfcertify(B)=1} certifies the class group, regulator, and
 fundamental-unit computation unconditionally.
+The complete input and output are supplied in
+\path{scripts/referee_pari_audit.gp} and
+\path{certificates/pari-audit.txt}.
 
 For the nontrivial quadratic character $\chi$ of $L/K$,
 \[
@@ -279,8 +310,20 @@ The fiber above $\mathfrak A$ under
 has order two, so Kopp's exponent is $n=2/2=1$.
 
 Kopp's sign class $\mathfrak R$ is the nonidentity element of the
-order-two ray group, since its Artin image is the inertia generator at
-the ramified place $\infty_2$.  Hence, for its nontrivial quadratic character
+order-two ray group.  Here is a direct ray calculation of that fact.
+The kernel created by adding $\infty_1$ would be trivial only if there
+were a unit congruent to $1$ modulo $4$, positive at $\infty_2$, and
+negative at $\infty_1$.  Every unit is $\pm\phi^n$.  For $0\le n<6$,
+the residues of $\phi^n=a_n+b_n\phi$ modulo $4$ are
+\[
+(a_n,b_n)=(1,0),(0,1),(1,1),(1,2),(2,3),(3,1),
+\]
+and $\phi^6\equiv1\pmod4$.  The only positive-sign unit in the residue
+class $1$ is therefore positive at both real places; multiplying by
+$-1$ changes the residue class.  Thus the kernel has order two, and
+its nonidentity sign class is $\mathfrak R$.  Equivalently, its Artin
+image is the inertia generator at the newly ramified real place.
+Hence, for its nontrivial quadratic character
 $\chi$,
 \[
  Z_{(4)\infty_2}(s,\mathfrak A)
@@ -308,12 +351,47 @@ even-denominator simplification) gives
 Thus $\chi_{\boldsymbol r}^{-1}(B)=-i$.  This is also exactly the
 specialization of the phase relation of Appleby--Flammia--Kopp.
 
-The principal-ghost formula gives
-$\nu_{(0,1)}=-x$ and, before shift/reflection simplification,
+\begin{lemma}[Convention-matched cocycle value]\label{lem:cocycle}
+For $\boldsymbol p=(0,1)$, AFK's phase and Kopp's modular cocycle give
+\[
+\nu_{\boldsymbol p}
+=\Phi_{\boldsymbol p}\,
+ \operatorname{shin}^{\boldsymbol r}_{B}(\beta)=-x,
+\]
+where, before shift/reflection simplification,
 \[
 x=\prod_{z\in\{1+\beta/4,\;1/4,\;1+(3\beta-1)/4\}}
  S_2^{\mathrm{here}}(z\mid\beta,1).
 \]
+\end{lemma}
+
+\begin{proof}
+Write $C=\left(\begin{smallmatrix}3&-1\\1&0\end{smallmatrix}\right)$,
+so $B=C^3$.  Modulo four the characteristic orbit under the three
+cocycle factors is
+\[
+ (0,1)\longmapsto(3,0)\longmapsto(1,3)\longmapsto(0,1).
+\]
+Insert these three characteristics in the cocycle law for $C^3$ and
+then in AFK Definition~1.32.  Kopp's $S$-generator formula uses
+$\operatorname{Sin}_{2,\mathrm{Kopp}}
+=\Gamma_2(z)/\Gamma_2(\beta+1-z)$, whereas our definition is its
+reciprocal.  The three factors are consequently, in orbit order,
+\[
+S_2^{\mathrm{here}}(1+\beta/4),\quad
+S_2^{\mathrm{here}}(1/4),\quad
+S_2^{\mathrm{here}}(1+(3\beta-1)/4),
+\]
+all with periods $(\beta,1)$.  The integral translations in the
+three characteristics contribute exponent
+$1+1+3=5$; after multiplication by
+$\Phi_{(0,1)}=\xi_4^{-1}$ their phase is $(-1)^5=-1$.
+This gives the asserted signed value.  This calculation is precisely
+the specialization of AFK Definition~1.32 and its cocycle
+factorization, with the gamma-ratio convention written out rather
+than left implicit.
+\end{proof}
+
 Because $S_2^{\mathrm{here}}$ is the reciprocal of the
 Shintani--Kopp double sine, its shift and reflection identities give
 \[
@@ -322,9 +400,13 @@ x=\sqrt2\,
 S_2^{\mathrm{here}}(1/4\mid\beta,1)}
 {S_2^{\mathrm{here}}((\beta+1)/4\mid\beta,1)}.
 \]
-Kopp's theorem and the phase relation now give, with no sign ambiguity,
+Squaring Lemma~\ref{lem:cocycle}, and using the multiplier computed
+above, gives line by line
 \[
 x^2=\nu_{(0,1)}^2
+=\Phi_{(0,1)}^2\operatorname{shin}^{\boldsymbol r}_{B}(\beta)^2
+=(\psi^{-2}\chi_{\boldsymbol r}^{-1})(B)
+  \operatorname{shin}^{\boldsymbol r}_{B}(\beta)^2
 =\exp Z_{(4)\infty_2}'(0,\mathfrak A)
 =\exp L'(0,\chi)=u.
 \tag{KL}
@@ -351,29 +433,49 @@ Thus $K(x)\ne0$ internally, without invoking a ghost identification,
 and its rank is exactly one.
 \end{proof}
 
+\begin{lemma}[The TCC coefficient identity]\label{lem:tccbridge}
+For the canonical tuple
+$t=(4,1,\langle1,-3,1\rangle)$, $\Pi_I^2=\Pi_I$ is exactly the
+$\lambda=1$ instance of AFK equation~(1.49), not merely a rank
+analogy.
+\end{lemma}
+
+\begin{proof}
+Expand $\Pi_I^2$ using
+$D_{\boldsymbol p}D_{\boldsymbol q}
+=\tau^{\langle\boldsymbol p,\boldsymbol q\rangle}
+D_{\boldsymbol p+\boldsymbol q}$ and compare the coefficient of each
+$D_{\boldsymbol p}$.  Substitute
+$a_{\boldsymbol q}=\nu_{\boldsymbol q}/\sqrt5$ and
+$\nu_{\boldsymbol q}
+=\Phi_{\boldsymbol q}\operatorname{shin}_{B}^{\boldsymbol q/4}(\beta)$.
+AFK's phase quotient converts the Weyl chirp into
+\[
+ \sum_{\boldsymbol q\in\mathcal I_{\boldsymbol p}}
+ \tau^{\langle\boldsymbol p,(I+F_t)\boldsymbol q\rangle}
+ \operatorname{shin}_{A_t^{-1}}^{\boldsymbol q/4}(\beta)
+ \operatorname{shin}_{A_t^{-1}}^{(\boldsymbol q-\boldsymbol p)/4}(\beta)
+ =16\delta^{(4)}_{\boldsymbol p,\boldsymbol0},
+\]
+where $F_t$ is AFK's Zauner generator.  This is equation~(1.49) with
+$r=1$ and $\lambda=1$.
+Conversely the same coefficient comparison reverses every step, so
+the equivalence is exact.
+\end{proof}
+
 \begin{theorem}[Both dimension-four TCC shifts]\label{thm:shifts}
-For the admissible tuple
-$t=(4,1,\langle1,-3,1\rangle)$, both $\lambda=1$ and $\lambda=0$
-satisfy the formal Twisted Convolution Conjecture.
+Both $0$ and $1$ are shifts for every dimension-four admissible tuple.
 \end{theorem}
 
 \begin{proof}
-With twist $G=I$, the principal-ghost Weyl formula and the finite
-Fourier transform give exactly the displayed matrix $K(x)$.  Direct
-summation of its four diagonal entries gives $\Tr K(x)=1$.  A rank-one
+Lemma~\ref{lem:weyl} identifies $\Pi_I=K(x)$ and gives
+$\Tr K(x)=1$.  A rank-one
 matrix satisfies $K^2=(\Tr K)K$, so
 Theorem~\ref{thm:reduction} gives $K(x)^2=K(x)$.
-
-The convention-matched equivalence proved in the principal-ghost
-construction is
-\[
-\operatorname{rank}K=1
-\Longleftrightarrow\hbox{ normalized twisted convolution}
-\Longleftrightarrow G^2=G
-\]
-for the associated ghost matrix.  In rank one and dimension four, the
-identity twist has determinant $+1$ and corresponds to $\lambda=1$.
-Thus $\lambda=1$ satisfies the formal TCC equation.
+Lemma~\ref{lem:tccbridge} therefore proves that $1$ is a shift for the
+canonical tuple.  The twist--shift congruence is also explicit:
+for $G=I$ it is
+$2\lambda+7\equiv1\pmod8$, hence $\lambda\equiv1\pmod4$.
 
 Complex conjugation sends the twist $G$ to $JG$, where
 $J=\operatorname{diag}(1,-1)$, preserves idempotence, and sends a shift
@@ -383,7 +485,23 @@ to
 \]
 Here $d_j=d=4$, so $\bar\lambda=1-\lambda\pmod4$; consequently the
 conjugate of the verified $\lambda=1$ equation is precisely the
-$\lambda=0$ equation.
+$\lambda=0$ equation.  Equivalently $\det(JG)=-1$ in the
+twist--shift congruence gives
+$-(2\lambda+7)\equiv1\pmod8$, hence $\lambda\equiv0\pmod4$.
+
+It remains to pass from the canonical form to every admissible form.
+For $d=4$, admissibility forces $r=1$, $K=\Q(\sqrt5)$, and $j=m=1$.
+Since $f_1=1$, every admissible form has conductor one and discriminant
+five.  Such primitive indefinite forms constitute one proper
+equivalence class: $h_K=1$ and the norm-$-1$ unit $\phi$ imply that
+the narrow class number is also one.  Thus every form is $Q_M$ for
+some $M\in\mathrm{GL}_2(\Z)$.  The transformation formulas of
+AFK~\S7.1 change variables
+$\boldsymbol q\mapsto\ell M\boldsymbol q$ in equation~(1.49), where
+$\ell=\operatorname{sgn}j_{M^{-1}}(\beta)$, and give
+$\mathcal Z_t\subseteq\mathcal Z_{t_M}$.  Applying the identical
+argument to $M^{-1}$ gives the reverse inclusion.  Therefore both
+verified shifts belong to every dimension-four admissible tuple.
 \end{proof}
 
 \section{Scope and review points}
@@ -411,6 +529,10 @@ fields}, J. Math. Soc. Japan 30 (1978), 139--167.
 S.~Flammia et al., \emph{Zauner.jl},
 \url{https://github.com/sflammia/Zauner.jl},
 revision \texttt{dcff219c986208ce900e2ddaaed8eae2bae6756f}.
+\bibitem{PARI}
+The PARI Group, \emph{PARI/GP version 2.15.4},
+Université de Bordeaux, 2023,
+\url{https://pari.math.u-bordeaux.fr/}.
 \end{thebibliography}
 
 \end{document}

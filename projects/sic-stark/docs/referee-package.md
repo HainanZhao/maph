@@ -15,12 +15,15 @@ and the compiled
    exact \(4\times4\) Laurent matrix and all 36 exact minor quotients,
    encoded as rational vectors in the coefficient basis printed in the
    JSON file.
-2. `gp -q scripts/referee_pari_audit.gp`
+2. `python3 scripts/verify_referee_certificate.py`
+   independently reloads that JSON and verifies every polynomial
+   identity using `fractions.Fraction` arithmetic.
+3. `gp -q scripts/referee_pari_audit.gp`
    independently checks the quartic field, integral basis, class group,
    regulator, fundamental units, and ray groups.
-3. `python3 -m unittest discover -s tests -v`
+4. `python3 -m unittest discover -s tests -v`
    runs the exact regression suite.
-4. `python3 scripts/explore_dimension_four_double_sine.py`
+5. `python3 scripts/explore_dimension_four_double_sine.py`
    performs an independent numerical branch audit.
 
 Generated review artifacts belong in `certificates/`:
@@ -38,8 +41,8 @@ Generated review artifacts belong in `certificates/`:
   proves that this is the \(\lambda=1\) equation and applies the exact
   conjugation rule \(\bar\lambda=1-\lambda\) to obtain \(\lambda=0\).
 - The manuscript defines its double sine directly as
-  \(\Gamma_2(z)/\Gamma_2(\omega_1+\omega_2-z)\), avoiding names that
-  differ between source versions.  Replacing it by the reciprocal
+  \(\Gamma_2(\omega_1+\omega_2-z)/\Gamma_2(z)\), avoiding names that
+  differ between source versions.  Replacing it by Kopp's convention
   changes \(x^2=u\) to \(x^2=4/u\).
 - The exceptional zero characteristic and its normalization to
   \(a_0=1\) are explicit.
