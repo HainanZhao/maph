@@ -1,0 +1,128 @@
+{
+  "dimension": 4,
+  "exterior_square": {
+    "cauchy_binet_form": "Delta_2(K)=sum_{|I|=|J|=2}|det K[I,J]|^2",
+    "certificate_is_holomorphic": false,
+    "certificate_is_nonnegative_in_complex_embedding": true,
+    "certificate_zero_equivalent_to_rank_one": true,
+    "certificate_zero_equivalent_to_tcc": true,
+    "column_pair_count": 6,
+    "dimension": 4,
+    "energy_scale": 25,
+    "exchange_residual_count": 36,
+    "partial_fourier_form": "Delta_2(K)=(d+1)^2 sum |E(j,l;k,m)|^2",
+    "positive_certificate": "Delta_2(K)=((Tr K^*K)^2-Tr((K^*K)^2))/2",
+    "row_pair_count": 6,
+    "shifted_zak_to_partial_fourier_minor_scale": 5,
+    "trace_k_is_nonzero": true,
+    "zauner_block_multiplicities": [
+      2,
+      1,
+      1
+    ],
+    "zauner_positive_sector_count": 6
+  },
+  "minor_factorization": {
+    "all_minor_count": 36,
+    "dimension": 4,
+    "double_sine_unit_table_values": "{sqrt(5),1,x,x^-1} with signs",
+    "equivalent_reciprocal_relation": "x+x^-1=sqrt(3+sqrt(5))",
+    "every_minor_is_in_principal_ideal": true,
+    "formally_nonzero_minor_count_before_relation": 34,
+    "nonzero_remainder_count_after_relation": 0,
+    "single_special_value_identity_implies_dimension_four_tcc": true,
+    "special_value_identity_proved_analytically": false,
+    "unit_relation": "x^2-sqrt(3+sqrt(5))*x+1=0"
+  },
+  "parity_fourth_moment": {
+    "adjoint_eliminated_on_parity_hermitian_locus": true,
+    "constant_overlap_countermodel_attains_lower_bound": true,
+    "constant_overlap_countermodel_saturates_fourth_moment": false,
+    "dimension": 4,
+    "equality_condition_for_lower_bound": "u(p)^2=1 for every characteristic p",
+    "fourth_moment_equivalent_to_tcc": true,
+    "gram_reduction": "G^* G = J^2",
+    "hermitian_transform": "J = P G = J^*",
+    "nontrivial_reciprocal_pair_count": 6,
+    "parity_formula": "P e_j = e_(-j)",
+    "positive_certificate": "Delta_2(G)=((Tr J^2)^2-Tr J^4)/2",
+    "quadratic_lower_bound_forces_tcc": false,
+    "reciprocity_frobenius_lower_bound": "Tr J^2 >= 1",
+    "self_inverse_characteristic_count": 4,
+    "source_parity_hermiticity": "G^* = P G P",
+    "tcc_fourth_moment_target": "Tr J^4 = (Tr J^2)^2"
+  },
+  "ray_and_unit_arithmetic": {
+    "base_field": "Q(sqrt(5))",
+    "candidate_absolute_discriminant": 400,
+    "candidate_class_number": 1,
+    "candidate_cocycle_polynomial_over_base": "X^4 - (1 + sqrt(5)) X^2 + 1",
+    "candidate_infinite_ramification": "second real place",
+    "candidate_polynomial_over_rationals": "X^8 - 2 X^6 - 2 X^4 - 2 X^2 + 1",
+    "candidate_ray_field": "Q(sqrt(5), sqrt(phi))",
+    "candidate_relative_discriminant": "(4)",
+    "candidate_stark_square_polynomial_over_base": "U^2 - (1 + sqrt(5)) U + 1",
+    "centered_unit_cell_exact_candidates": [
+      "-1",
+      "1"
+    ],
+    "class_number": 1,
+    "general_modular_modulus": 8,
+    "golden_ratio_form": "x^2 = phi + sqrt(phi)",
+    "kopp_exponent_n": 1,
+    "minkowski_bound": "15 / (2 pi)",
+    "minkowski_bound_below_three": true,
+    "modulus_audits": {
+      "4": {
+        "one_real_place_ray_group_order": 2,
+        "ordinary_unit_image_count": 12,
+        "phi_residue_order": 6,
+        "quotient_element_orders": [
+          1,
+          2
+        ],
+        "residue_unit_count": 12,
+        "signed_unit_image_count": 12
+      },
+      "8": {
+        "one_real_place_ray_group_order": 4,
+        "ordinary_unit_image_count": 24,
+        "phi_residue_order": 12,
+        "quotient_element_orders": [
+          1,
+          2,
+          2,
+          2
+        ],
+        "residue_unit_count": 48,
+        "signed_unit_image_count": 24
+      }
+    },
+    "modulus_eight_phase_cover_group": "C2 x C2",
+    "modulus_four_matches_stark_square_degree": true,
+    "one_infinite_place_fiber_order": 2,
+    "partial_zeta_normalization_matched": true,
+    "quarter_argument_denominator": 4,
+    "ray_class_identification_proved": true,
+    "ray_field_degree_matches_ray_group": true,
+    "relative_l_derivative": "log(phi + sqrt(phi))",
+    "smallest_dyadic_prime_norm": 4,
+    "two_infinite_place_ray_group_order": 4,
+    "unit_index_one_proved": true,
+    "visible_regulator": "log(phi) log(phi + sqrt(phi))",
+    "visible_units": [
+      "sqrt(phi)",
+      "phi + sqrt(phi)"
+    ]
+  },
+  "review_assertions": {
+    "all_minor_count": 36,
+    "kopp_exponent": 1,
+    "minor_remainders_after_relation": 0,
+    "ray_group_order_one_infinite_place": 2,
+    "ray_group_order_two_infinite_places": 4,
+    "target_cocycle_value": "sqrt(phi + sqrt(phi))",
+    "target_stark_unit": "phi + sqrt(phi)"
+  },
+  "schema": "sic-stark-referee-certificate-v1"
+}

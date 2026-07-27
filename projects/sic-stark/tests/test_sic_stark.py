@@ -15,10 +15,12 @@ from src.sic_stark import (
     canonical_dimension_four_countermodel,
     canonical_dimension_four_character_resolvents,
     canonical_dimension_four_distribution_relation_record,
+    canonical_dimension_four_double_sine_factor_record,
     canonical_dimension_four_floquet_gate_record,
     canonical_dimension_four_fractional_cell_record,
     canonical_dimension_four_zak_gate_record,
     canonical_dimension_four_internal_distribution_maps,
+    canonical_dimension_four_holomorphic_quartic_countermodel_record,
     canonical_dimension_four_laurent_action,
     canonical_dimension_four_localization_record,
     canonical_dimension_four_packet_directions,
@@ -28,6 +30,7 @@ from src.sic_stark import (
     canonical_dimension_four_perturbation_witness,
     canonical_dimension_four_relation_nullities,
     canonical_dimension_four_residual_laurent_packet,
+    canonical_dimension_four_ray_class_record,
     canonical_dimension_four_trace_obstruction_record,
     canonical_equal_base_q_binomial_cancellation,
     canonical_family_record,
@@ -41,6 +44,7 @@ from src.sic_stark import (
     canonical_general_modular_node_strip_margins,
     canonical_general_modular_parameters,
     canonical_ghost_minor_record,
+    canonical_ghost_exterior_square_record,
     canonical_ghost_weyl_entry_terms,
     canonical_global_unit_residues,
     canonical_jacobi_scale_exponents,
@@ -60,6 +64,7 @@ from src.sic_stark import (
     canonical_quadratic_residue_norm,
     canonical_quadratic_residue_units,
     canonical_odd_constant_overlap_countermodel_record,
+    canonical_parity_schatten_record,
     canonical_reciprocal_trace_moment_record,
     canonical_residue_multiplication_matrix,
     canonical_root_filtered_stokes_record,
@@ -92,6 +97,9 @@ from src.sic_stark import (
     extended_displacement_modulus,
     form_discriminant,
     matrix_multiply,
+    matrix_exterior_square_energy,
+    matrix_gram_second_elementary,
+    matrix_parity_schatten_certificate,
     matrix_mod,
     matrix_power,
     matrix_vector_multiply,
@@ -1334,6 +1342,138 @@ class CanonicalSicStarkTests(unittest.TestCase):
                 ]
             )
 
+    def test_exterior_square_compresses_all_ghost_minors(self) -> None:
+        matrices = (
+            ((1 + 0j, 2 + 0j), (2 + 0j, 4 + 0j)),
+            ((1 + 1j, 2 - 1j), (3 + 0j, -1 + 2j)),
+            (
+                (1 + 0j, 2 + 1j, 0 + 0j),
+                (0 + 1j, 3 + 0j, 4 - 2j),
+                (2 + 0j, 0 + 0j, 1 + 1j),
+            ),
+        )
+        for matrix in matrices:
+            self.assertAlmostEqual(
+                matrix_exterior_square_energy(matrix),
+                matrix_gram_second_elementary(matrix),
+                places=10,
+            )
+        self.assertEqual(matrix_exterior_square_energy(matrices[0]), 0)
+        self.assertGreater(matrix_exterior_square_energy(matrices[1]), 0)
+
+        for dimension in range(4, 101):
+            record = canonical_ghost_exterior_square_record(dimension)
+            pair_count = dimension * (dimension - 1) // 2
+            self.assertEqual(record["row_pair_count"], pair_count)
+            self.assertEqual(record["column_pair_count"], pair_count)
+            self.assertEqual(
+                record["exchange_residual_count"], pair_count**2
+            )
+            self.assertEqual(
+                record["energy_scale"], (dimension + 1) ** 2
+            )
+            self.assertEqual(
+                record["zauner_positive_sector_count"],
+                dimension * (dimension - 1) // 2,
+            )
+            self.assertTrue(
+                record["certificate_zero_equivalent_to_tcc"]
+            )
+
+    def test_parity_hermiticity_makes_the_certificate_polynomial(
+        self,
+    ) -> None:
+        hermitian_matrices = (
+            (
+                (2 + 0j, 1 + 1j, -1 + 0j),
+                (1 - 1j, 3 + 0j, 2 + 2j),
+                (-1 + 0j, 2 - 2j, 4 + 0j),
+            ),
+            (
+                (1 + 0j, 2 - 1j, 0 + 0j),
+                (2 + 1j, 5 + 0j, 0 + 0j),
+                (0 + 0j, 0 + 0j, 0 + 0j),
+            ),
+        )
+        dimension = 3
+        for hermitian in hermitian_matrices:
+            ghost = tuple(
+                tuple(
+                    hermitian[(-row) % dimension][column]
+                    for column in range(dimension)
+                )
+                for row in range(dimension)
+            )
+            certificate = matrix_parity_schatten_certificate(ghost)
+            self.assertAlmostEqual(
+                certificate["parity_hermiticity_max_defect"], 0.0
+            )
+            self.assertAlmostEqual(
+                certificate["parity_moment_energy"],
+                certificate["exterior_square_energy"],
+                places=9,
+            )
+
+        for dimension in range(4, 101):
+            record = canonical_parity_schatten_record(dimension)
+            expected_fixed = 4 if dimension % 2 == 0 else 1
+            self.assertEqual(
+                record["self_inverse_characteristic_count"],
+                expected_fixed,
+            )
+            self.assertEqual(
+                2 * record["nontrivial_reciprocal_pair_count"]
+                + expected_fixed,
+                dimension * dimension,
+            )
+            self.assertTrue(
+                record["adjoint_eliminated_on_parity_hermitian_locus"]
+            )
+            self.assertTrue(record["fourth_moment_equivalent_to_tcc"])
+
+    def test_holomorphic_quartic_needs_its_unit_torus_hypothesis(
+        self,
+    ) -> None:
+        record = (
+            canonical_dimension_four_holomorphic_quartic_countermodel_record()
+        )
+        self.assertEqual(record["characteristic_polynomial"], "(x-1)(x^3-1)")
+        self.assertEqual(record["trace_power_1"], 1)
+        self.assertEqual(record["trace_power_2"], 1)
+        self.assertEqual(record["trace_power_3"], 4)
+        self.assertEqual(record["trace_power_4"], 1)
+        self.assertEqual(record["determinant"], 1)
+        self.assertEqual(record["rank"], 4)
+        self.assertTrue(record["parity_hermitian"])
+        self.assertFalse(record["ordinary_hermitian"])
+        self.assertTrue(record["bos_waldron_quartic_holds"])
+        self.assertFalse(record["rank_one"])
+        self.assertFalse(record["tcc_holds"])
+        self.assertTrue(record["unit_torus_hypothesis_is_essential"])
+        self.assertFalse(record["correct_rm_positive_quartic_holds"])
+
+    def test_dimension_four_minors_share_one_double_sine_factor(
+        self,
+    ) -> None:
+        record = canonical_dimension_four_double_sine_factor_record()
+        self.assertEqual(record["dimension"], 4)
+        self.assertEqual(record["all_minor_count"], 36)
+        self.assertEqual(
+            record["formally_nonzero_minor_count_before_relation"], 34
+        )
+        self.assertEqual(
+            record["nonzero_remainder_count_after_relation"], 0
+        )
+        self.assertTrue(record["every_minor_is_in_principal_ideal"])
+        self.assertTrue(
+            record[
+                "single_special_value_identity_implies_dimension_four_tcc"
+            ]
+        )
+        self.assertFalse(
+            record["special_value_identity_proved_analytically"]
+        )
+
     def test_zauner_blocks_do_not_improve_orbit_reduction(self) -> None:
         for dimension in range(4, 501):
             multiplicities = canonical_zauner_block_multiplicities(
@@ -1346,6 +1486,49 @@ class CanonicalSicStarkTests(unittest.TestCase):
             self.assertFalse(
                 record["block_diagonalization_reduces_equation_count"]
             )
+
+    def test_dimension_four_ray_modulus_four_matches_stark_square(
+        self,
+    ) -> None:
+        record = canonical_dimension_four_ray_class_record()
+        modulus_four = record["modulus_audits"][4]
+        modulus_eight = record["modulus_audits"][8]
+        self.assertEqual(
+            modulus_four["one_real_place_ray_group_order"], 2
+        )
+        self.assertEqual(
+            modulus_eight["one_real_place_ray_group_order"], 4
+        )
+        self.assertEqual(
+            modulus_eight["quotient_element_orders"], (1, 2, 2, 2)
+        )
+        self.assertEqual(
+            record["modulus_eight_phase_cover_group"], "C2 x C2"
+        )
+        self.assertTrue(
+            record["modulus_four_matches_stark_square_degree"]
+        )
+        self.assertEqual(
+            record["candidate_stark_square_polynomial_over_base"],
+            "U^2 - (1 + sqrt(5)) U + 1",
+        )
+        self.assertEqual(record["candidate_relative_discriminant"], "(4)")
+        self.assertEqual(record["candidate_absolute_discriminant"], 400)
+        self.assertTrue(record["minkowski_bound_below_three"])
+        self.assertEqual(record["smallest_dyadic_prime_norm"], 4)
+        self.assertEqual(record["candidate_class_number"], 1)
+        self.assertEqual(
+            record["candidate_infinite_ramification"],
+            "second real place",
+        )
+        self.assertTrue(record["ray_field_degree_matches_ray_group"])
+        self.assertTrue(record["ray_class_identification_proved"])
+        self.assertEqual(
+            record["centered_unit_cell_exact_candidates"], ("-1", "1")
+        )
+        self.assertTrue(record["unit_index_one_proved"])
+        self.assertEqual(record["kopp_exponent_n"], 1)
+        self.assertTrue(record["partial_zeta_normalization_matched"])
 
     def test_equal_base_q_binomial_cancellation(self) -> None:
         self.assertEqual(

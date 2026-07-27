@@ -8,8 +8,11 @@ Q_d=\langle1,1-d,1\rangle,\qquad d\ge4,
 \]
 
 as a focused route toward Zauner's SIC-existence conjecture. It is a
-research ledger and executable reduction, not a claim that the conjecture
-has been solved.
+research ledger and executable reduction.  General TCC remains open; the
+canonical dimension-four specialization is proved in the current draft.
+
+The consolidated manuscript for review is
+[`docs/sic-stark-paper-draft.md`](docs/sic-stark-paper-draft.md).
 
 ## Current result
 
@@ -85,6 +88,37 @@ precision. Research cycles 2--15 additionally:
 - converts TCC into the rank-one determinantal equations for one
   scalar-shifted RM Zak matrix and writes every \(2\times2\) minor as
   an explicit sheared partial-Fourier exchange identity.
+- compresses the complete minor system to one nonnegative
+  exterior-square scalar, gives its exact partial-Fourier
+  sum-of-squares form, and separates this fourth positive moment from
+  the already-forced algebraic trace moments.
+- uses parity-Hermiticity to turn that certificate into the polynomial
+  saturation \(\operatorname{Tr}(PG)^4=(\operatorname{Tr}(PG)^2)^2\),
+  proves the sharp reciprocal lower bound on the quadratic norm, and
+  shows the constant-overlap countermodel attains the bound without
+  satisfying the fourth moment.
+- separates the published Bos--Waldron holomorphic quartic from the
+  positive RM quartic and gives an exact parity-Hermitian, full-rank
+  dimension-four countermodel satisfying the first, second, and
+  fourth algebraic power-trace equations.
+- finds that all 36 dimension-four ghost minors share the single
+  double-sine factor
+  \(x^2-\sqrt{3+\sqrt5}\,x+1\), reducing dimension-four TCC to one
+  explicit quarter-period special-value identity.
+- identifies that special value with a modulus-four Shintani ray-class
+  invariant, gives its exact reciprocal degree-eight target polynomial,
+  and isolates the remaining algebraicity/class-polynomial step.
+- computes the modulus-four ray group as order two and matches it to
+  the quadratic polynomial of the Stark invariant \(x^2\), explaining
+  the quartic for the cocycle square root \(x\).
+- identifies the full ray field as
+  \(\mathbb Q(\sqrt5,\sqrt\phi)\) and the target Stark unit as
+  \(\phi+\sqrt\phi\), leaving only its analytic partial-zeta evaluation.
+- replaces that direct special-function evaluation by a relative
+  class-number calculation: \(D_L=400\), \(h_L=1\), and the visible
+  regulator gives the required logarithm once two finite checks pass.
+- closes those checks, proves the fundamental-unit and normalization
+  statements, and obtains an exact dimension-four TCC theorem.
 
 See [`docs/sic-stark-sprint1.md`](docs/sic-stark-sprint1.md) and
 [`docs/sic-stark-cycle2.md`](docs/sic-stark-cycle2.md), followed by
@@ -100,7 +134,16 @@ See [`docs/sic-stark-sprint1.md`](docs/sic-stark-sprint1.md) and
 [`docs/sic-stark-cycle12.md`](docs/sic-stark-cycle12.md), followed by
 [`docs/sic-stark-cycle13.md`](docs/sic-stark-cycle13.md) and
 [`docs/sic-stark-cycle14.md`](docs/sic-stark-cycle14.md), and finally
-[`docs/sic-stark-cycle15.md`](docs/sic-stark-cycle15.md), for the claim ledger.
+[`docs/sic-stark-cycle15.md`](docs/sic-stark-cycle15.md) and
+[`docs/sic-stark-cycle16.md`](docs/sic-stark-cycle16.md), followed by
+[`docs/sic-stark-cycle17.md`](docs/sic-stark-cycle17.md) and
+[`docs/sic-stark-cycle18.md`](docs/sic-stark-cycle18.md), and finally
+[`docs/sic-stark-cycle19.md`](docs/sic-stark-cycle19.md), followed by
+[`docs/sic-stark-cycle20.md`](docs/sic-stark-cycle20.md) and
+[`docs/sic-stark-cycle21.md`](docs/sic-stark-cycle21.md), followed by
+[`docs/sic-stark-cycle22.md`](docs/sic-stark-cycle22.md) and
+[`docs/sic-stark-cycle23.md`](docs/sic-stark-cycle23.md), followed by
+[`docs/sic-stark-cycle24.md`](docs/sic-stark-cycle24.md), for the claim ledger.
 
 ## Verification
 
@@ -110,4 +153,5 @@ The code uses only the Python standard library.
 python3 -m unittest discover -s tests -v
 python3 scripts/analyze_sic_canonical_family.py --stop 20
 python3 scripts/verify_sic_fiducials.py --dimension 4 --show-residuals
+python3 scripts/explore_dimension_four_double_sine.py
 ```
