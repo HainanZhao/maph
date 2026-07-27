@@ -11,7 +11,10 @@ and the compiled
 ## Verification layers
 
 1. `python3 scripts/generate_referee_certificates.py`
-   emits the deterministic project certificate.
+   emits the deterministic project certificate. Version 2 contains the
+   exact \(4\times4\) Laurent matrix and all 36 exact minor quotients,
+   encoded as rational vectors in the coefficient basis printed in the
+   JSON file.
 2. `gp -q scripts/referee_pari_audit.gp`
    independently checks the quartic field, integral basis, class group,
    regulator, fundamental units, and ray groups.
@@ -27,12 +30,21 @@ Generated review artifacts belong in `certificates/`:
 - `test-suite.txt`
 - `double-sine-audit.txt`
 
-## Claims requiring human convention review
+## Exact scope of the package
 
-- the reciprocal double-sine convention between `Zauner.jl` and Kopp;
-- the exceptional zero characteristic;
-- the identification of the selected ray class and infinite place;
-- the normalized cocycle square in Kopp's Theorem 1.1;
-- the final projector normalization after the rank-one certificate.
+- The finite certificate proves a rank-one implication for the one
+  explicitly defined matrix in the manuscript.
+- It does not certify both formal TCC shifts.
+- The manuscript uses the reciprocal of Kopp's `Sin_2`; this is now a
+  definition, not an implicit convention.
+- The exceptional zero characteristic and its normalization to
+  \(a_0=1\) are explicit.
+- The ray-group order and class-number computations are certified.
+- The ray-class, characteristic, stabilizer, multiplier, sign, and
+  cocycle conversion needed to specialize Kopp's Theorem 1.1 have not
+  been proved. The manuscript labels this as equation `(KL)` and does
+  not use it as an unconditional premise.
 
-These are listed explicitly in Section 10 of the paper draft.
+Accordingly, the unconditional theorem in the revised manuscript is
+the finite reduction `(SV) => rank K=1`, not the full dimension-four
+Twisted Convolution Conjecture.

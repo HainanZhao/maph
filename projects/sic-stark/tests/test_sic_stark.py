@@ -1467,8 +1467,17 @@ class CanonicalSicStarkTests(unittest.TestCase):
         self.assertTrue(record["every_minor_is_in_principal_ideal"])
         self.assertTrue(
             record[
-                "single_special_value_identity_implies_dimension_four_tcc"
+                "single_special_value_identity_implies_dimension_four_ghost_rank_one"
             ]
+        )
+        self.assertFalse(record["full_two_shift_tcc_checked"])
+        self.assertEqual(len(record["matrix_entries"]), 4)
+        self.assertEqual(len(record["minor_certificates"]), 36)
+        self.assertTrue(
+            all(
+                not certificate["division_remainder"]
+                for certificate in record["minor_certificates"]
+            )
         )
         self.assertFalse(
             record["special_value_identity_proved_analytically"]
@@ -1523,12 +1532,11 @@ class CanonicalSicStarkTests(unittest.TestCase):
         )
         self.assertTrue(record["ray_field_degree_matches_ray_group"])
         self.assertTrue(record["ray_class_identification_proved"])
-        self.assertEqual(
-            record["centered_unit_cell_exact_candidates"], ("-1", "1")
-        )
-        self.assertTrue(record["unit_index_one_proved"])
+        self.assertTrue(record["fundamental_units_verified_by_pari_bnf"])
         self.assertEqual(record["kopp_exponent_n"], 1)
-        self.assertTrue(record["partial_zeta_normalization_matched"])
+        self.assertTrue(record["kopp_exponent_order_check_only"])
+        self.assertFalse(record["partial_zeta_normalization_matched"])
+        self.assertFalse(record["kopp_specialization_proved"])
 
     def test_equal_base_q_binomial_cancellation(self) -> None:
         self.assertEqual(

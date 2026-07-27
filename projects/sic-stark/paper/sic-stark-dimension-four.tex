@@ -7,12 +7,13 @@
 \newtheorem{theorem}{Theorem}
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
 \newcommand{\Tr}{\operatorname{Tr}}
 \newcommand{\Q}{\mathbb Q}
 \newcommand{\Z}{\mathbb Z}
 
-\title{A Dimension-Four Twisted-Convolution Identity\\
-from a Shintani Ray Unit}
+\title{An Exact Dimension-Four Reduction of a\\
+Twisted-Convolution Identity to a Shintani Special Value}
 \author{Draft for review}
 \date{27 July 2026}
 
@@ -20,19 +21,22 @@ from a Shintani Ray Unit}
 \maketitle
 
 \begin{abstract}
-We study the twisted-convolution condition that turns canonical
+We study the rank condition that turns canonical
 Shintani--Faddeev real-multiplication values into ghost projectors for
 Weyl--Heisenberg symmetric informationally complete measurements.
 We give exact Zak-rank, exterior-square, and parity-moment formulations
-for the canonical family.  In dimension four, all $36$ shifted ghost
-minors have the common factor
+for the canonical family.  In dimension four, all $36$ minors of one
+explicitly defined normalized ghost matrix
+are divisible by the common factor
 $x^2-\sqrt{3+\sqrt5}\,x+1$.  Using the Shintani--Kopp
-Kronecker-limit formula and the analytic class-number formula for
-$\Q(\sqrt5,\sqrt\phi)$, we identify
-$x^2=\phi+\sqrt\phi$, where $\phi=(1+\sqrt5)/2$.
-Thus the canonical dimension-four ghost has rank one and satisfies
-twisted convolution.  General-dimensional twisted convolution remains
-open.
+Kronecker-limit formula requires additional ray-class and multiplier
+identifications which we state explicitly but do not prove here.
+Independently, the analytic class-number formula for
+$\Q(\sqrt5,\sqrt\phi)$ gives the target value
+$\exp L'(0,\chi)=\phi+\sqrt\phi$.
+Consequently we prove, unconditionally, that the displayed special-value
+identity implies rank one of the explicit ghost.  We do not claim the
+full two-shift Twisted Convolution Conjecture.
 \end{abstract}
 
 \section{Canonical setup}
@@ -56,9 +60,12 @@ For $D_{p,q}=\tau^{pq}X^pZ^q$, $\tau=-e^{\pi i/d}$, write
 \[
  P=\frac1d\sum_{\boldsymbol p}a_{\boldsymbol p}D_{\boldsymbol p}.
 \]
-The equation $P^2=P$ is the finite twisted-convolution equation for
+The equation $P^2=P$ is a finite twisted-convolution equation for
 the coefficients.  In even dimensions, the representative-wrap signs
-of the displacement operators are retained.
+of the displacement operators are retained.  The principal-ghost and
+formal TCC constructions motivating this normalization are those of
+Appleby--Flammia--Kopp~\cite{AFK}; software is not used as their
+mathematical source.
 
 \section{Finite rank certificates}
 
@@ -81,13 +88,23 @@ $J=PG$ is Hermitian and the rank-one certificate becomes
 Reciprocity forces lower trace information but does not force this
 fourth moment.
 
-\section{Dimension four}
+\section{Dimension four and conventions}
 
 Let
 \[
  \phi=\frac{1+\sqrt5}{2},\qquad \beta=\phi^2,\qquad
  \tau=-e^{\pi i/4}.
 \]
+We use the reciprocal of Kopp's convention:
+\[
+ S_2^{\mathrm{here}}(z\mid\omega_1,\omega_2)
+ :=\operatorname{Sin}_{2,\mathrm{Kopp}}(z;\omega_1,\omega_2)^{-1}
+ =\frac{\Gamma_2(\omega_1+\omega_2-z\mid\omega_1,\omega_2)}
+ {\Gamma_2(z\mid\omega_1,\omega_2)}.
+\]
+This definition is decisive: replacing $S_2^{\mathrm{here}}$ by Kopp's
+$\operatorname{Sin}_2$ inverts the special value below.
+
 The normalized signed double-sine table is
 \[
 \begin{pmatrix}
@@ -98,15 +115,29 @@ The normalized signed double-sine table is
 \end{pmatrix}.
 \]
 The zero characteristic is exceptional and is replaced by $\sqrt5$
-before applying the displacement chirp.
+before applying the displacement chirp.  Every table entry is then
+divided by $\sqrt5$ in forming the normalized Weyl overlaps; in
+particular the exceptional entry gives $a_{\boldsymbol0}=1$.
 
-\begin{proposition}
-Every one of the $36$ two-by-two minors of the shifted dimension-four
-ghost matrix lies in the principal ideal
+Define the matrix used in this paper, without reference to software, by
+\[
+ K_{r,c}(x)=\frac1{4\sqrt5}
+ \sum_{\substack{0\le a,b<4\\r\equiv c+a\pmod4}}
+ T_{a,b}(x)\tau^{ab}i^{bc},\qquad 0\le r,c<4,
+\]
+where $T(x)$ is the displayed table and
+$\tau=-(1+i)/\sqrt2$.  Reduction of $r=c+a$ modulo four is performed
+before evaluating the entry; the factor $\tau^{ab}$ retains the
+even-dimensional displacement sign convention.  This formula is the
+complete definition of the matrix whose minors are certified below.
+
+\begin{proposition}\label{prop:minors}
+Every one of the $36$ two-by-two minors of the dimension-four
+matrix $K(x)$ lies in the principal ideal
 \[
  \left(x^2-\sqrt{3+\sqrt5}\,x+1\right)
 \]
-of $\Q(\sqrt2,\sqrt5)[x,x^{-1}]$.
+of $\Q(i,\sqrt2,\sqrt5)[x,x^{-1}]$.
 \end{proposition}
 
 \begin{proof}
@@ -116,23 +147,38 @@ structurally zero minors.  Reduce each power using
  x^{-1}=t-x,\quad x^2=tx-1,\quad
  t=\sqrt{3+\sqrt5}=\frac{\sqrt2+\sqrt{10}}2.
 \]
-Every remainder $A+Bx$ is zero.  The deterministic certificate is
-generated by
-\path{scripts/generate_referee_certificates.py}.
+Every remainder $A+Bx$ is zero.  More explicitly, for every row pair
+$I$ and column pair $J$, the supplementary certificate records a
+Laurent polynomial $M_{I,J}$ and a polynomial $Q_{I,J}$ satisfying
+\[
+ x^2M_{I,J}(x)
+ =(x^2-tx+1)Q_{I,J}(x)
+\]
+coefficientwise in the basis
+\[
+1,\sqrt2,\sqrt5,\sqrt{10},t,\sqrt2t,\sqrt5t,\sqrt{10}t
+\]
+and separately in real and imaginary parts.  Thus the certificate is
+verified by rational arithmetic only.  It contains all $36$ minors,
+including the two zero quotients, rather than a Boolean summary.
 \end{proof}
 
 It remains to prove $x+x^{-1}=\sqrt{3+\sqrt5}$.  Shift and reflection
 give
 \[
  x=\sqrt2\,
- \frac{S_2(\beta/4\mid\beta,1)S_2(1/4\mid\beta,1)}
- {S_2((\beta+1)/4\mid\beta,1)}.
+ \frac{S_2^{\mathrm{here}}(\beta/4\mid\beta,1)
+ S_2^{\mathrm{here}}(1/4\mid\beta,1)}
+ {S_2^{\mathrm{here}}((\beta+1)/4\mid\beta,1)}.
 \]
 
 \section{The modulus-four ray field}
 
 Let $K=\Q(\sqrt5)$ and $\mathcal O_K=\Z[\phi]$.  Since $2$ is inert,
-finite residue enumeration gives
+there are $|(\mathcal O_K/4)^\times|=12$ finite residue units.
+The images of $\{\pm\phi^n\}$, together with the sign at
+$\infty_2$, have order $12$.  Since $h_K=1$, the ray exact sequence
+therefore gives
 \[
  |\operatorname{Cl}_{(4)\infty_2}(K)|=2.
 \]
@@ -140,7 +186,9 @@ Set $L=K(\sqrt\phi)$.  Its relative discriminant is $(4)$, and the
 second real place ramifies because $\phi'<0$.  Hence $L$ is the full
 ray field of modulus $(4)\infty_2$.
 
-Put $u=\phi+\sqrt\phi$.  Its Artin conjugate is
+Put $u=\phi+\sqrt\phi$, and define the nontrivial
+$\sigma\in\operatorname{Gal}(L/K)$ by
+$\sigma(\sqrt\phi)=-\sqrt\phi$.  Then
 $u^\sigma=\phi-\sqrt\phi=u^{-1}$, so
 \[
  N_{L/K}(u)=1,\qquad \Tr_{L/K}(u)=1+\sqrt5.
@@ -148,84 +196,116 @@ $u^\sigma=\phi-\sqrt\phi=u^{-1}$, so
 
 \section{Class number, units, and regulator}
 
-The field $L$ has signature $(2,1)$ and absolute discriminant $-400$.
+The field $L$ has signature $(2,1)$ and discriminant $-400$.
 Its Minkowski bound is $15/(2\pi)<2.4$.  There is no ideal of norm
 two, hence $h_L=1$.
 
-Write $t=\sqrt\phi$, so $t^4-t^2-1=0$.  The units $t$ and
-$u=t^2+t$ form a fundamental system.  A centered logarithmic
-parallelogram argument bounds a hypothetical missing unit at all
-archimedean places.  Exact norm enumeration in the integral basis
-$1,t,t^2,t^3$ leaves only $\pm1$ in that cell.  Consequently
+Write $s=\sqrt\phi$, so $s^4-s^2-1=0$.  Exact Buchmann
+class-group/unit computation in PARI/GP, whose input and transcript are
+included in the certificate package, returns fundamental units
+$s^3-s$ and $-s^2+s$.  Since
 \[
- \mathcal O_L^\times=\{\pm t^m u^n:m,n\in\Z\},\qquad
+ s^3-s=s^{-1},\qquad -s^2+s=-u^{-1},
+\]
+these generate the same rank-two lattice as $s$ and $u=s^2+s$; the
+exponent-change matrix has determinant one.  Consequently
+\[
+ \mathcal O_L^\times=\{\pm s^m u^n:m,n\in\Z\},\qquad
  R_L=\log\phi\,\log u.
 \]
-PARI/GP independently returns discriminant $-400$, class number one,
-ray structures $[2]$ and $[2,2]$, and the same regulator; its transcript
-is included in \texttt{certificates/pari-audit.txt}.
+The exact computation also returns class number one, ray structures
+$[2]$ and $[2,2]$, and the same regulator.
 
 For the nontrivial quadratic character $\chi$ of $L/K$,
 \[
  L(s,\chi)=\frac{\zeta_L(s)}{\zeta_K(s)}.
 \]
-Since $h_K=h_L=1$, $w_K=w_L=2$, and $R_K=\log\phi$, the analytic
-class-number formula at zero yields
+For a number field $F$, the analytic class-number formula at zero is
+\[
+ \zeta_F(s)=-\frac{h_FR_F}{w_F}s^{r_1+r_2-1}
+ +O(s^{r_1+r_2}).
+\]
+Since $h_K=h_L=1$, $w_K=w_L=2$, $R_K=\log\phi$, and the respective
+orders of vanishing are one and two, division of these leading terms
+yields
 \[
  L'(0,\chi)=\log u.
 \]
 
-\section{Kronecker-limit normalization}
+\section{The Kronecker-limit bridge}
 
 The two-infinite-place ray group has structure $[2,2]$, while the
 one-infinite-place group has structure $[2]$.  The quotient fibers
-therefore have order two, so the exponent in Kopp's theorem is $n=1$.
-For the two ray classes $A_0,A_1$,
+therefore have order two, which is consistent with $n=1$ in Kopp's
+Theorem~1.1.  This order calculation alone does not specialize that
+theorem.  A complete specialization must also exhibit the labeled
+modulus and embeddings, a ray class $A$, a characteristic
+$\boldsymbol r$, a stabilizer $B\in\Gamma_{\boldsymbol r}$, the
+multiplier $(\psi^{-2}\chi_{\boldsymbol r}^{-1})(B)$, and an equality
+(including sign) $Z(s,A)=L(s,\chi)$.  Finally it must convert
+$\operatorname{shin}^{\boldsymbol r}_B(\beta)^2$ into the three
+$S_2^{\mathrm{here}}$ factors defining $x^2$.  Those data are not
+derived here.  We therefore record
 \[
- L(s,\chi)=\zeta(s,A_0)-\zeta(s,A_1).
+ x^2=\exp L'(0,\chi)=u
+\tag{KL}
 \]
-The generalized derivative in the Shintani--Kopp formula is this
-difference, and the normalized positive cocycle occurs squared.
-Therefore
-\[
- x^2=\exp L'(0,\chi)=u=\phi+\sqrt\phi.
-\]
+as the exact missing bridge, not as a proved equality.
 
-\begin{theorem}
-Assuming the published principal-ghost formula and the proved
-Shintani--Kopp Kronecker-limit theorem with their stated conventions,
-the canonical dimension-four ghost has rank one and satisfies twisted
-convolution.  No Stark conjecture is assumed.
+\begin{theorem}[Unconditional finite reduction]\label{thm:reduction}
+Let $K(x)$ be the explicitly defined matrix above.  If
+\[
+\left(
+\sqrt2\,
+\frac{S_2^{\mathrm{here}}(\beta/4\mid\beta,1)
+S_2^{\mathrm{here}}(1/4\mid\beta,1)}
+{S_2^{\mathrm{here}}((\beta+1)/4\mid\beta,1)}
+\right)^2
+=\phi+\sqrt\phi,
+\tag{SV}
+\]
+then $K(x)$ has rank exactly one.
 \end{theorem}
 
 \begin{proof}
-Because $x^2=u$ and $u+u^{-1}=1+\sqrt5$,
+Under \textup{(SV)}, $x^2=u$.  Since $u+u^{-1}=1+\sqrt5$,
 \[
  (x+x^{-1})^2=3+\sqrt5.
 \]
-The defining double-sine value is positive, hence
+The defining reciprocal double-sine value is positive, hence
 $x+x^{-1}=\sqrt{3+\sqrt5}$.  The common minor factor vanishes, so all
-$36$ minors vanish.  The shifted Zak matrix has rank one, which is
-equivalent to normalized ghost idempotency and twisted convolution.
+$36$ minors vanish by Proposition~\ref{prop:minors}.  Thus
+$\operatorname{rank}K(x)\le1$.  The normalized zero Weyl coefficient is
+one, and the Weyl-to-matrix Fourier transform is injective, so
+$K(x)\ne0$ and its rank is exactly one.
 \end{proof}
+
+\begin{corollary}[Conditional ghost statement]
+If, in addition, a convention-matched specialization of Kopp's
+Theorem~1.1 proves \textup{(KL)} for the displayed
+$S_2^{\mathrm{here}}$ value and the principal-ghost construction
+identifies $K(x)$ with one of its shifted Zak matrices, that ghost is a
+rank-one projector.
+\end{corollary}
 
 \section{Scope and review points}
 
-The theorem concerns the canonical dimension-four ghost.  It does not
-prove general TCC, the Minimalist RM Values Conjecture, the Stark
-conjecture, or Zauner's conjecture in arbitrary dimension.
-
-Before submission, a referee should independently audit:
-(i) the reciprocal double-sine convention; (ii) the exceptional zero
-characteristic; (iii) the exact $36$-minor certificate; (iv) the ray
-class and infinite-place convention; (v) the cocycle-square
-normalization in Kopp's theorem; and (vi) the final projector
-normalization.
+Theorem~\ref{thm:reduction} concerns one explicitly defined
+dimension-four matrix.  It does not prove both shifts $\lambda=0,1$
+required by the formal Twisted Convolution Conjecture; no equivalence
+between those shifts is assumed.  Nor does it prove the Minimalist RM
+Values Conjecture, the Stark conjecture, or Zauner's conjecture.  The
+remaining analytic task is precisely the convention-matched
+specialization listed in the preceding section.
 
 \begin{thebibliography}{9}
 \bibitem{Kopp}
 G.~Kopp, \emph{The Shintani--Faddeev modular cocycle: Stark units from
 $q$-Pochhammer ratios}, arXiv:2411.06763.
+\bibitem{AFK}
+D.~M.~Appleby, S.~T.~Flammia, and G.~S.~Kopp,
+\emph{A constructive approach to Zauner's conjecture via the Stark
+conjectures}, arXiv:2501.03970.
 \bibitem{Shintani1977}
 T.~Shintani, \emph{On a Kronecker limit formula for real quadratic
 fields}, J. Fac. Sci. Univ. Tokyo 24 (1977), 167--199.
