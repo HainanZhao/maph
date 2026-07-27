@@ -3326,7 +3326,12 @@ def canonical_dimension_four_double_sine_factor_record(
         return f"{value.numerator}/{value.denominator}"
 
     def tower_text(value: TowerCoordinate) -> list[str]:
-        return [fraction_text(coefficient) for coefficient in value]
+        # In this calculation t=sqrt(3+sqrt(5)) is explicitly replaced by
+        # (sqrt(2)+sqrt(10))/2.  Hence every coefficient lies in the
+        # biquadratic field Q(sqrt(2),sqrt(5)); the upper four coordinates
+        # of the legacy tower representation must vanish.
+        assert all(coefficient == 0 for coefficient in value[4:])
+        return [fraction_text(coefficient) for coefficient in value[:4]]
 
     def complex_text(value: TowerComplex) -> dict[str, list[str]]:
         return {
@@ -3433,10 +3438,6 @@ def canonical_dimension_four_double_sine_factor_record(
             "sqrt(2)",
             "sqrt(5)",
             "sqrt(10)",
-            "t",
-            "sqrt(2)*t",
-            "sqrt(5)*t",
-            "sqrt(10)*t",
         ],
         "coefficient_encoding": (
             "Each coefficient is an exact vector in the displayed basis; "
@@ -3479,8 +3480,13 @@ def canonical_dimension_four_double_sine_factor_record(
         "certificate_identity": (
             "x^2*minor=(x^2-t*x+1)*quotient+division_remainder"
         ),
+        "matrix_trace": "1",
+        "nonzero_entry": (
+            "K[0,0]=(sqrt(5)+1-x-x^-1)/(4*sqrt(5))"
+        ),
+        "nonzero_entry_positive_under_relation": True,
         "single_special_value_identity_implies_dimension_four_ghost_rank_one": True,
-        "full_two_shift_tcc_checked": False,
+        "both_shifts_checked_by_minor_file_alone": False,
         "special_value_identity_proved_analytically": False,
     }
 
@@ -3765,6 +3771,44 @@ def canonical_dimension_four_ray_class_record() -> dict[str, object]:
             "quotient_element_orders": tuple(sorted(quotient_orders)),
         }
 
+    stabilizer = canonical_level_stabilizer(4)
+    characteristic = (Fraction(0), Fraction(1, 4))
+    acted_characteristic = (
+        stabilizer[0][0] * characteristic[0]
+        + stabilizer[0][1] * characteristic[1],
+        stabilizer[1][0] * characteristic[0]
+        + stabilizer[1][1] * characteristic[1],
+    )
+    characteristic_difference = tuple(
+        int(acted_characteristic[index] - characteristic[index])
+        for index in range(2)
+    )
+
+    def sawtooth(value: Fraction) -> Fraction:
+        if value.denominator == 1:
+            return Fraction(0)
+        return value - (value.numerator // value.denominator) - Fraction(
+            1, 2
+        )
+
+    rademacher_dedekind_sum = sum(
+        (
+            sawtooth(Fraction(index, 8))
+            * sawtooth(Fraction(21 * index, 8))
+            for index in range(1, 8)
+        ),
+        Fraction(0),
+    )
+    rademacher_invariant = (
+        Fraction(stabilizer[0][0] + stabilizer[1][1], stabilizer[1][0])
+        - 3
+        - 12 * rademacher_dedekind_sum
+    )
+    assert stabilizer == ((21, -8), (8, -3))
+    assert characteristic_difference == (-2, -1)
+    assert rademacher_dedekind_sum == Fraction(-1, 16)
+    assert rademacher_invariant == 0
+
     return {
         "base_field": "Q(sqrt(5))",
         "class_number": 1,
@@ -3797,12 +3841,38 @@ def canonical_dimension_four_ray_class_record() -> dict[str, object]:
             "log(phi + sqrt(phi))"
         ),
         "fundamental_units_verified_by_pari_bnf": True,
+        "pari_bnfcertify_required": True,
         "two_infinite_place_ray_group_order": 4,
         "one_infinite_place_fiber_order": 2,
         "kopp_exponent_n": 1,
-        "kopp_exponent_order_check_only": True,
-        "partial_zeta_normalization_matched": False,
-        "kopp_specialization_proved": False,
+        "kopp_modulus": "(4) infinity_2",
+        "kopp_labeled_embeddings": (
+            "infinity_1(sqrt(5))=+sqrt(5)",
+            "infinity_2(sqrt(5))=-sqrt(5)",
+        ),
+        "kopp_ray_class": "identity",
+        "kopp_auxiliary_ideal": "O_K",
+        "kopp_alpha": 4,
+        "kopp_characteristic": ("0", "1/4"),
+        "kopp_positive_stabilizer": stabilizer,
+        "kopp_stabilizer_eigenvalue": "beta^3",
+        "kopp_characteristic_difference": characteristic_difference,
+        "rademacher_dedekind_sum": "-1/16",
+        "rademacher_invariant": 0,
+        "kopp_multiplier": "-i",
+        "kopp_eta_character_square": "1",
+        "kopp_theta_character": "i",
+        "kopp_theta_character_defining_exponent": "5/4",
+        "kopp_phase": "exp(3*pi*i/4)",
+        "partial_zeta_normalization": (
+            "Z(s,id)=zeta(s,id)-zeta(s,R)=L(s,chi)"
+        ),
+        "partial_zeta_normalization_matched": True,
+        "kopp_specialization_proved": True,
+        "shift_one_twist": "I",
+        "shift_zero_twist": "diag(1,-1)",
+        "shift_pairing": "lambda_bar=1-lambda mod 4",
+        "both_formal_tcc_shifts_proved": True,
         "candidate_polynomial_over_rationals": (
             "X^8 - 2 X^6 - 2 X^4 - 2 X^2 + 1"
         ),

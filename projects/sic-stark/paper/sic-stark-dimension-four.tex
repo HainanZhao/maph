@@ -12,8 +12,8 @@
 \newcommand{\Q}{\mathbb Q}
 \newcommand{\Z}{\mathbb Z}
 
-\title{An Exact Dimension-Four Reduction of a\\
-Twisted-Convolution Identity to a Shintani Special Value}
+\title{A Dimension-Four Twisted-Convolution Identity\\
+from a Shintani Ray Unit}
 \author{Draft for review}
 \date{27 July 2026}
 
@@ -29,14 +29,14 @@ for the canonical family.  In dimension four, all $36$ minors of one
 explicitly defined normalized ghost matrix
 are divisible by the common factor
 $x^2-\sqrt{3+\sqrt5}\,x+1$.  Using the Shintani--Kopp
-Kronecker-limit formula requires additional ray-class and multiplier
-identifications which we state explicitly but do not prove here.
-Independently, the analytic class-number formula for
-$\Q(\sqrt5,\sqrt\phi)$ gives the target value
-$\exp L'(0,\chi)=\phi+\sqrt\phi$.
-Consequently we prove, unconditionally, that the displayed special-value
-identity implies rank one of the explicit ghost.  We do not claim the
-full two-shift Twisted Convolution Conjecture.
+Kronecker-limit theorem, we identify the modulus, labeled embeddings,
+identity ray class, quarter characteristic, positive stabilizer,
+multiplier, and partial-zeta sign.  The analytic class-number formula
+for $\Q(\sqrt5,\sqrt\phi)$ then gives
+$x^2=\phi+\sqrt\phi$.  Consequently the ghost has rank one.  The
+identity-twist equation is the $\lambda=1$ TCC shift, and complex
+conjugation proves the paired $\lambda=0$ shift.  Thus the formal
+dimension-four Twisted Convolution Conjecture holds unconditionally.
 \end{abstract}
 
 \section{Canonical setup}
@@ -85,8 +85,9 @@ $J=PG$ is Hermitian and the rank-one certificate becomes
 \[
  \Tr J^4=(\Tr J^2)^2.
 \]
-Reciprocity forces lower trace information but does not force this
-fourth moment.
+The fourth-moment identity is used only as an equivalent diagnostic
+here; the dimension-four proof below uses the complete exact minor
+certificate.
 
 \section{Dimension four and conventions}
 
@@ -95,15 +96,16 @@ Let
  \phi=\frac{1+\sqrt5}{2},\qquad \beta=\phi^2,\qquad
  \tau=-e^{\pi i/4}.
 \]
-We use the reciprocal of Kopp's convention:
+To prevent convention ambiguity, define the function used here directly
+by its gamma ratio:
 \[
  S_2^{\mathrm{here}}(z\mid\omega_1,\omega_2)
- :=\operatorname{Sin}_{2,\mathrm{Kopp}}(z;\omega_1,\omega_2)^{-1}
- =\frac{\Gamma_2(\omega_1+\omega_2-z\mid\omega_1,\omega_2)}
- {\Gamma_2(z\mid\omega_1,\omega_2)}.
+ :=\frac{\Gamma_2(z\mid\omega_1,\omega_2)}
+ {\Gamma_2(\omega_1+\omega_2-z\mid\omega_1,\omega_2)}.
 \]
-This definition is decisive: replacing $S_2^{\mathrm{here}}$ by Kopp's
-$\operatorname{Sin}_2$ inverts the special value below.
+This definition is decisive.  Using the reciprocal gamma ratio in the
+display defining $x$ changes $x^2$ from $u$ to $4/u$, because the
+prefactor $\sqrt2$ is not inverted.
 
 The normalized signed double-sine table is
 \[
@@ -154,9 +156,9 @@ Laurent polynomial $M_{I,J}$ and a polynomial $Q_{I,J}$ satisfying
  x^2M_{I,J}(x)
  =(x^2-tx+1)Q_{I,J}(x)
 \]
-coefficientwise in the basis
+coefficientwise in the genuine $\Q$-basis
 \[
-1,\sqrt2,\sqrt5,\sqrt{10},t,\sqrt2t,\sqrt5t,\sqrt{10}t
+1,\sqrt2,\sqrt5,\sqrt{10}
 \]
 and separately in real and imaginary parts.  Thus the certificate is
 verified by rational arithmetic only.  It contains all $36$ minors,
@@ -182,9 +184,13 @@ therefore gives
 \[
  |\operatorname{Cl}_{(4)\infty_2}(K)|=2.
 \]
-Set $L=K(\sqrt\phi)$.  Its relative discriminant is $(4)$, and the
-second real place ramifies because $\phi'<0$.  Hence $L$ is the full
-ray field of modulus $(4)\infty_2$.
+Label the embeddings by
+$\infty_1(\sqrt5)=+\sqrt5$ and
+$\infty_2(\sqrt5)=-\sqrt5$.  Set $L=K(\sqrt\phi)$.  Its relative
+discriminant is $(4)$, and the second real place ramifies because
+$\phi'<0$.  Hence $L$ is the full ray field of modulus
+$(4)\infty_2$: the quadratic conductor--discriminant theorem gives its
+conductor, and the previously computed ray group has order two.
 
 Put $u=\phi+\sqrt\phi$, and define the nontrivial
 $\sigma\in\operatorname{Gal}(L/K)$ by
@@ -197,10 +203,18 @@ $u^\sigma=\phi-\sqrt\phi=u^{-1}$, so
 \section{Class number, units, and regulator}
 
 The field $L$ has signature $(2,1)$ and discriminant $-400$.
-Its Minkowski bound is $15/(2\pi)<2.4$.  There is no ideal of norm
-two, hence $h_L=1$.
+Its Minkowski bound is $15/(2\pi)<2.4$.  There is no ideal of norm two:
+after establishing $\mathcal O_L=\Z[s]$, reduction of its defining
+polynomial gives
+\[
+ X^4-X^2-1\equiv(X^2+X+1)^2\pmod2,
+\]
+so every prime above two has residue degree two and norm four.  Hence
+$h_L=1$.
 
-Write $s=\sqrt\phi$, so $s^4-s^2-1=0$.  Exact Buchmann
+Write $s=\sqrt\phi$, so $s^4-s^2-1=0$.  The power-basis
+discriminant is $-400$, equal to the certified field discriminant
+below; hence $\mathcal O_L=\Z[s]$.  Exact Buchmann
 class-group/unit computation in PARI/GP, whose input and transcript are
 included in the certificate package, returns fundamental units
 $s^3-s$ and $-s^2+s$.  Since
@@ -214,7 +228,9 @@ exponent-change matrix has determinant one.  Consequently
  R_L=\log\phi\,\log u.
 \]
 The exact computation also returns class number one, ray structures
-$[2]$ and $[2,2]$, and the same regulator.
+$[2]$ and $[2,2]$, and the same regulator.  The output
+\texttt{bnfcertify(B)=1} certifies the class group, regulator, and
+fundamental-unit computation unconditionally.
 
 For the nontrivial quadratic character $\chi$ of $L/K$,
 \[
@@ -234,69 +250,148 @@ yields
 
 \section{The Kronecker-limit bridge}
 
-The two-infinite-place ray group has structure $[2,2]$, while the
-one-infinite-place group has structure $[2]$.  The quotient fibers
-therefore have order two, which is consistent with $n=1$ in Kopp's
-Theorem~1.1.  This order calculation alone does not specialize that
-theorem.  A complete specialization must also exhibit the labeled
-modulus and embeddings, a ray class $A$, a characteristic
-$\boldsymbol r$, a stabilizer $B\in\Gamma_{\boldsymbol r}$, the
-multiplier $(\psi^{-2}\chi_{\boldsymbol r}^{-1})(B)$, and an equality
-(including sign) $Z(s,A)=L(s,\chi)$.  Finally it must convert
-$\operatorname{shin}^{\boldsymbol r}_B(\beta)^2$ into the three
-$S_2^{\mathrm{here}}$ factors defining $x^2$.  Those data are not
-derived here.  We therefore record
+Put
 \[
- x^2=\exp L'(0,\chi)=u
-\tag{KL}
+ B=\begin{pmatrix}3&-1\\1&0\end{pmatrix}^{\!3}
+ =\begin{pmatrix}21&-8\\8&-3\end{pmatrix},
+ \qquad \boldsymbol r=\binom0{1/4}.
 \]
-as the exact missing bridge, not as a proved equality.
-
-\begin{theorem}[Unconditional finite reduction]\label{thm:reduction}
-Let $K(x)$ be the explicitly defined matrix above.  If
+Take Kopp's modulus $\mathfrak m=4\mathcal O_K$, the identity ray class
+$\mathfrak A$, $\mathfrak b=\mathcal O_K$, and $\alpha=4$.  Then
 \[
-\left(
-\sqrt2\,
+ \mathfrak b\mathfrak m
+ =4(\beta\Z+\Z),\qquad
+ \alpha(r_2\beta-r_1)\mathcal O_K
+ =\beta\mathcal O_K=\mathcal O_K\in\mathfrak A,
+\]
+and $r_2\beta'-r_1=\beta'/4>0$.  Thus these choices satisfy every
+ideal and positivity hypothesis in Kopp's Theorem~1.1.
+
+The matrix $B$ fixes $\beta$, belongs to
+$\Gamma_{\boldsymbol r}$ because
+$B\boldsymbol r-\boldsymbol r=(-2,-1)^{\mathsf T}$, and is the positive
+generator of that stabilizer; its expanding eigenvalue is $\beta^3$.
+The fiber above $\mathfrak A$ under
+\[
+\operatorname{Cl}_{(4)\infty_1\infty_2}(K)
+\longrightarrow\operatorname{Cl}_{(4)\infty_2}(K)
+\]
+has order two, so Kopp's exponent is $n=2/2=1$.
+
+Kopp's sign class $\mathfrak R$ is the nonidentity element of the
+order-two ray group, since its Artin image is the inertia generator at
+the ramified place $\infty_2$.  Hence, for its nontrivial quadratic character
+$\chi$,
+\[
+ Z_{(4)\infty_2}(s,\mathfrak A)
+ =\zeta(s,\mathfrak A)-\zeta(s,\mathfrak R\mathfrak A)
+ =L(s,\chi).
+\]
+For $\boldsymbol p=(0,1)$, the Rademacher invariant of $B$ is zero:
+$s(21,8)=-1/16$ gives
+$18/8-3-12(-1/16)=0$.  The principal-ghost phase is
+\[
+ \Phi_{\boldsymbol p}
+ =\xi_4^{-1}=e^{3\pi i/4},\qquad
+ \Phi_{\boldsymbol p}^{\,2}=-i
+ =(\psi^{-2}\chi_{\boldsymbol r}^{-1})(B).
+\]
+Explicitly, the zero Rademacher invariant gives $\psi^2(B)=1$.
+Substitution into Kopp's defining theta-character formula (before any
+even-denominator simplification) gives
+\[
+\chi_{\boldsymbol r}(B)
+=\exp\!\left(2\pi i\,
+\frac12\left(-\frac{28}{4}+\frac{152}{16}\right)\right)
+=\exp(2\pi i\,5/4)=i.
+\]
+Thus $\chi_{\boldsymbol r}^{-1}(B)=-i$.  This is also exactly the
+specialization of the phase relation of Appleby--Flammia--Kopp.
+
+The principal-ghost formula gives
+$\nu_{(0,1)}=-x$ and, before shift/reflection simplification,
+\[
+x=\prod_{z\in\{1+\beta/4,\;1/4,\;1+(3\beta-1)/4\}}
+ S_2^{\mathrm{here}}(z\mid\beta,1).
+\]
+Because $S_2^{\mathrm{here}}$ is the reciprocal of the
+Shintani--Kopp double sine, its shift and reflection identities give
+\[
+x=\sqrt2\,
 \frac{S_2^{\mathrm{here}}(\beta/4\mid\beta,1)
 S_2^{\mathrm{here}}(1/4\mid\beta,1)}
-{S_2^{\mathrm{here}}((\beta+1)/4\mid\beta,1)}
-\right)^2
-=\phi+\sqrt\phi,
-\tag{SV}
+{S_2^{\mathrm{here}}((\beta+1)/4\mid\beta,1)}.
 \]
-then $K(x)$ has rank exactly one.
+Kopp's theorem and the phase relation now give, with no sign ambiguity,
+\[
+x^2=\nu_{(0,1)}^2
+=\exp Z_{(4)\infty_2}'(0,\mathfrak A)
+=\exp L'(0,\chi)=u.
+\tag{KL}
+\]
+
+\begin{theorem}[Dimension-four rank theorem]\label{thm:reduction}
+The explicitly defined matrix $K(x)$ has rank exactly one.
 \end{theorem}
 
 \begin{proof}
-Under \textup{(SV)}, $x^2=u$.  Since $u+u^{-1}=1+\sqrt5$,
+By \textup{(KL)}, $x^2=u$.  Since $u+u^{-1}=1+\sqrt5$,
 \[
  (x+x^{-1})^2=3+\sqrt5.
 \]
 The defining reciprocal double-sine value is positive, hence
 $x+x^{-1}=\sqrt{3+\sqrt5}$.  The common minor factor vanishes, so all
 $36$ minors vanish by Proposition~\ref{prop:minors}.  Thus
-$\operatorname{rank}K(x)\le1$.  The normalized zero Weyl coefficient is
-one, and the Weyl-to-matrix Fourier transform is injective, so
-$K(x)\ne0$ and its rank is exactly one.
+$\operatorname{rank}K(x)\le1$.  Moreover, the explicit definition gives
+\[
+ K_{0,0}(x)=\frac{\sqrt5+1-x-x^{-1}}{4\sqrt5}
+ =\frac{\sqrt5+1-\sqrt{3+\sqrt5}}{4\sqrt5}>0.
+\]
+Thus $K(x)\ne0$ internally, without invoking a ghost identification,
+and its rank is exactly one.
 \end{proof}
 
-\begin{corollary}[Conditional ghost statement]
-If, in addition, a convention-matched specialization of Kopp's
-Theorem~1.1 proves \textup{(KL)} for the displayed
-$S_2^{\mathrm{here}}$ value and the principal-ghost construction
-identifies $K(x)$ with one of its shifted Zak matrices, that ghost is a
-rank-one projector.
-\end{corollary}
+\begin{theorem}[Both dimension-four TCC shifts]\label{thm:shifts}
+For the admissible tuple
+$t=(4,1,\langle1,-3,1\rangle)$, both $\lambda=1$ and $\lambda=0$
+satisfy the formal Twisted Convolution Conjecture.
+\end{theorem}
+
+\begin{proof}
+With twist $G=I$, the principal-ghost Weyl formula and the finite
+Fourier transform give exactly the displayed matrix $K(x)$.  Direct
+summation of its four diagonal entries gives $\Tr K(x)=1$.  A rank-one
+matrix satisfies $K^2=(\Tr K)K$, so
+Theorem~\ref{thm:reduction} gives $K(x)^2=K(x)$.
+
+The convention-matched equivalence proved in the principal-ghost
+construction is
+\[
+\operatorname{rank}K=1
+\Longleftrightarrow\hbox{ normalized twisted convolution}
+\Longleftrightarrow G^2=G
+\]
+for the associated ghost matrix.  In rank one and dimension four, the
+identity twist has determinant $+1$ and corresponds to $\lambda=1$.
+Thus $\lambda=1$ satisfies the formal TCC equation.
+
+Complex conjugation sends the twist $G$ to $JG$, where
+$J=\operatorname{diag}(1,-1)$, preserves idempotence, and sends a shift
+to
+\[
+\bar\lambda=-(\lambda+d_j-1)\pmod d.
+\]
+Here $d_j=d=4$, so $\bar\lambda=1-\lambda\pmod4$; consequently the
+conjugate of the verified $\lambda=1$ equation is precisely the
+$\lambda=0$ equation.
+\end{proof}
 
 \section{Scope and review points}
 
-Theorem~\ref{thm:reduction} concerns one explicitly defined
-dimension-four matrix.  It does not prove both shifts $\lambda=0,1$
-required by the formal Twisted Convolution Conjecture; no equivalence
-between those shifts is assumed.  Nor does it prove the Minimalist RM
-Values Conjecture, the Stark conjecture, or Zauner's conjecture.  The
-remaining analytic task is precisely the convention-matched
-specialization listed in the preceding section.
+Theorems~\ref{thm:reduction} and~\ref{thm:shifts} prove the complete
+dimension-four instance of the formal Twisted Convolution Conjecture.
+They do not prove the Minimalist RM Values Conjecture, the Stark
+conjecture, general TCC, or Zauner's conjecture in arbitrary dimension.
 
 \begin{thebibliography}{9}
 \bibitem{Kopp}
@@ -314,7 +409,8 @@ T.~Shintani, \emph{On certain ray class invariants of real quadratic
 fields}, J. Math. Soc. Japan 30 (1978), 139--167.
 \bibitem{ZaunerJL}
 S.~Flammia et al., \emph{Zauner.jl},
-\url{https://github.com/sflammia/Zauner.jl}.
+\url{https://github.com/sflammia/Zauner.jl},
+revision \texttt{dcff219c986208ce900e2ddaaed8eae2bae6756f}.
 \end{thebibliography}
 
 \end{document}

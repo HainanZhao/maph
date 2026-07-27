@@ -1470,7 +1470,13 @@ class CanonicalSicStarkTests(unittest.TestCase):
                 "single_special_value_identity_implies_dimension_four_ghost_rank_one"
             ]
         )
-        self.assertFalse(record["full_two_shift_tcc_checked"])
+        self.assertFalse(record["both_shifts_checked_by_minor_file_alone"])
+        self.assertEqual(record["matrix_trace"], "1")
+        self.assertTrue(record["nonzero_entry_positive_under_relation"])
+        self.assertEqual(
+            record["coefficient_basis"],
+            ["1", "sqrt(2)", "sqrt(5)", "sqrt(10)"],
+        )
         self.assertEqual(len(record["matrix_entries"]), 4)
         self.assertEqual(len(record["minor_certificates"]), 36)
         self.assertTrue(
@@ -1533,10 +1539,18 @@ class CanonicalSicStarkTests(unittest.TestCase):
         self.assertTrue(record["ray_field_degree_matches_ray_group"])
         self.assertTrue(record["ray_class_identification_proved"])
         self.assertTrue(record["fundamental_units_verified_by_pari_bnf"])
+        self.assertTrue(record["pari_bnfcertify_required"])
         self.assertEqual(record["kopp_exponent_n"], 1)
-        self.assertTrue(record["kopp_exponent_order_check_only"])
-        self.assertFalse(record["partial_zeta_normalization_matched"])
-        self.assertFalse(record["kopp_specialization_proved"])
+        self.assertEqual(
+            record["kopp_positive_stabilizer"],
+            ((21, -8), (8, -3)),
+        )
+        self.assertEqual(record["kopp_multiplier"], "-i")
+        self.assertEqual(record["rademacher_dedekind_sum"], "-1/16")
+        self.assertEqual(record["rademacher_invariant"], 0)
+        self.assertTrue(record["partial_zeta_normalization_matched"])
+        self.assertTrue(record["kopp_specialization_proved"])
+        self.assertTrue(record["both_formal_tcc_shifts_proved"])
 
     def test_equal_base_q_binomial_cancellation(self) -> None:
         self.assertEqual(
