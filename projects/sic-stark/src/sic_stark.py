@@ -3318,6 +3318,66 @@ def canonical_dimension_four_double_sine_factor_record(
 
     nonzero_minor_count = 0
     nonzero_remainder_count = 0
+    minor_certificates: list[dict[str, object]] = []
+
+    def fraction_text(value: Fraction) -> str:
+        if value.denominator == 1:
+            return str(value.numerator)
+        return f"{value.numerator}/{value.denominator}"
+
+    def tower_text(value: TowerCoordinate) -> list[str]:
+        return [fraction_text(coefficient) for coefficient in value]
+
+    def complex_text(value: TowerComplex) -> dict[str, list[str]]:
+        return {
+            "real": tower_text(value[0]),
+            "imaginary": tower_text(value[1]),
+        }
+
+    def polynomial_text(
+        polynomial: Mapping[int, TowerComplex],
+    ) -> dict[str, dict[str, list[str]]]:
+        return {
+            str(exponent): complex_text(coefficient)
+            for exponent, coefficient in sorted(polynomial.items())
+        }
+
+    # Divide a Laurent polynomial by x^2-t*x+1 after multiplying by x^2.
+    # All minors have exponents in [-2,2], so the quotient is an ordinary
+    # polynomial of degree at most two.  The returned zero remainder is an
+    # independently checkable exact divisibility certificate.
+    def divide_shifted_minor(
+        minor: Mapping[int, TowerComplex],
+    ) -> tuple[dict[int, TowerComplex], dict[int, TowerComplex]]:
+        dividend = {
+            exponent + 2: coefficient
+            for exponent, coefficient in minor.items()
+        }
+        quotient: dict[int, TowerComplex] = {}
+        relation = {
+            2: (one, zero),
+            1: (_tower_scale(-1, tower_t), zero),
+            0: (one, zero),
+        }
+        while dividend and max(dividend) >= 2:
+            degree = max(dividend)
+            coefficient = dividend[degree]
+            quotient[degree - 2] = coefficient
+            for relation_degree, relation_coefficient in relation.items():
+                target = degree - 2 + relation_degree
+                dividend[target] = _tower_complex_add(
+                    dividend.get(target, (zero, zero)),
+                    _tower_complex_scale(
+                        (_tower_scale(-1, one), zero),
+                        _tower_complex_scale(
+                            coefficient, relation_coefficient
+                        ),
+                    ),
+                )
+                if dividend[target] == (zero, zero):
+                    del dividend[target]
+        return quotient, dividend
+
     for first_row, second_row in combinations(range(4), 2):
         for first_column, second_column in combinations(range(4), 2):
             positive = polynomial_multiply(
@@ -3351,9 +3411,55 @@ def canonical_dimension_four_double_sine_factor_record(
                 zero,
             ):
                 nonzero_remainder_count += 1
+            quotient, division_remainder = divide_shifted_minor(minor)
+            minor_certificates.append(
+                {
+                    "rows": [first_row, second_row],
+                    "columns": [first_column, second_column],
+                    "laurent_minor": polynomial_text(minor),
+                    "quotient_after_multiplication_by_x_squared": (
+                        polynomial_text(quotient)
+                    ),
+                    "division_remainder": polynomial_text(
+                        division_remainder
+                    ),
+                }
+            )
 
     return {
         "dimension": 4,
+        "coefficient_basis": [
+            "1",
+            "sqrt(2)",
+            "sqrt(5)",
+            "sqrt(10)",
+            "t",
+            "sqrt(2)*t",
+            "sqrt(5)*t",
+            "sqrt(10)*t",
+        ],
+        "coefficient_encoding": (
+            "Each coefficient is an exact vector in the displayed basis; "
+            "complex coefficients have separate real and imaginary vectors."
+        ),
+        "matrix_definition": (
+            "K[r,c]=(1/(4*sqrt(5))) sum_{a,b: r=c+a mod 4} "
+            "T[a,b]*tau^(a*b)*i^(b*c), tau=-(1+i)/sqrt(2)"
+        ),
+        "normalization": (
+            "The exceptional T[0,0]=sqrt(5) is divided by sqrt(5), "
+            "so the zero Weyl overlap is a_0=1."
+        ),
+        "signed_double_sine_table": [
+            ["sqrt(5)", "-x", "1", "-x^-1"],
+            ["-x^-1", "-x^-1", "-x^-1", "-x"],
+            ["1", "-x^-1", "1", "x"],
+            ["-x", "-x^-1", "x", "-x"],
+        ],
+        "matrix_entries": [
+            [polynomial_text(entry) for entry in row]
+            for row in matrix
+        ],
         "double_sine_unit_table_values": "{sqrt(5),1,x,x^-1} with signs",
         "unit_relation": "x^2-sqrt(3+sqrt(5))*x+1=0",
         "equivalent_reciprocal_relation": (
@@ -3369,7 +3475,12 @@ def canonical_dimension_four_double_sine_factor_record(
         "every_minor_is_in_principal_ideal": (
             nonzero_remainder_count == 0
         ),
-        "single_special_value_identity_implies_dimension_four_tcc": True,
+        "minor_certificates": minor_certificates,
+        "certificate_identity": (
+            "x^2*minor=(x^2-t*x+1)*quotient+division_remainder"
+        ),
+        "single_special_value_identity_implies_dimension_four_ghost_rank_one": True,
+        "full_two_shift_tcc_checked": False,
         "special_value_identity_proved_analytically": False,
     }
 
@@ -3685,12 +3796,13 @@ def canonical_dimension_four_ray_class_record() -> dict[str, object]:
         "relative_l_derivative": (
             "log(phi + sqrt(phi))"
         ),
-        "centered_unit_cell_exact_candidates": ("-1", "1"),
-        "unit_index_one_proved": True,
+        "fundamental_units_verified_by_pari_bnf": True,
         "two_infinite_place_ray_group_order": 4,
         "one_infinite_place_fiber_order": 2,
         "kopp_exponent_n": 1,
-        "partial_zeta_normalization_matched": True,
+        "kopp_exponent_order_check_only": True,
+        "partial_zeta_normalization_matched": False,
+        "kopp_specialization_proved": False,
         "candidate_polynomial_over_rationals": (
             "X^8 - 2 X^6 - 2 X^4 - 2 X^2 + 1"
         ),
