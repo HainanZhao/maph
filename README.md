@@ -1,6 +1,6 @@
 # Research projects
 
-This repository contains independent mathematical research programs.  Each
+This repository contains independent mathematical research programs. Each
 project is self-contained: run its commands from that project's directory.
 
 ## Projects
@@ -18,6 +18,9 @@ project is self-contained: run its commands from that project's directory.
 - [`projects/gas-aware-amm-routing/`](projects/gas-aware-amm-routing/):
   exact and certifiable order routing across parallel constant-product
   automated market makers with fixed execution costs.
+- [`projects/sic-stark/`](projects/sic-stark/): a focused investigation of
+  Zauner's conjecture through the Shintani--Faddeev/Stark-unit construction,
+  with exact Weyl--Heisenberg diagnostics and canonical-family reductions.
 
 The projects share only the repository history and top-level ignore rules.
 Their source packages, scripts, tests, documentation, and data or paper
@@ -36,4 +39,7 @@ cd ../certifiable-grid-optimization
 python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
 .venv/bin/python -m unittest discover -s tests -v
+
+cd ../sic-stark
+python3 -m unittest discover -s tests -v
 ```
