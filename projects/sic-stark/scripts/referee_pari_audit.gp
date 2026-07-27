@@ -5,6 +5,7 @@ print("PARI_VERSION=", version());
 
 P = x^4 - x^2 - 1;
 L = bnfinit(P, 1);
+print("L_BNFCERTIFY=", bnfcertify(L));
 print("L_POLYNOMIAL=", P);
 print("L_SIGNATURE=", L.sign);
 print("L_DISCRIMINANT=", L.disc);

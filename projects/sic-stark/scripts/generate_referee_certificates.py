@@ -20,7 +20,7 @@ from src.sic_stark import (  # noqa: E402
 
 def main() -> None:
     certificate = {
-        "schema": "sic-stark-referee-certificate-v2",
+        "schema": "sic-stark-referee-certificate-v3",
         "dimension": 4,
         "minor_factorization": (
             canonical_dimension_four_double_sine_factor_record()
@@ -40,8 +40,8 @@ def main() -> None:
             "target_cocycle_value": "sqrt(phi + sqrt(phi))",
             "finite_matrix_is_explicit": True,
             "all_minor_quotients_included": True,
-            "full_two_shift_tcc_checked": False,
-            "kopp_specialization_proved": False,
+            "full_two_shift_tcc_checked": True,
+            "kopp_specialization_proved": True,
         },
     }
     print(json.dumps(certificate, indent=2, sort_keys=True))

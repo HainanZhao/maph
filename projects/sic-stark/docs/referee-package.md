@@ -11,7 +11,7 @@ and the compiled
 ## Verification layers
 
 1. `python3 scripts/generate_referee_certificates.py`
-   emits the deterministic project certificate. Version 2 contains the
+   emits the deterministic project certificate. Version 3 contains the
    exact \(4\times4\) Laurent matrix and all 36 exact minor quotients,
    encoded as rational vectors in the coefficient basis printed in the
    JSON file.
@@ -34,17 +34,22 @@ Generated review artifacts belong in `certificates/`:
 
 - The finite certificate proves a rank-one implication for the one
   explicitly defined matrix in the manuscript.
-- It does not certify both formal TCC shifts.
-- The manuscript uses the reciprocal of Kopp's `Sin_2`; this is now a
-  definition, not an implicit convention.
+- The finite file certifies the identity-twist matrix.  The manuscript
+  proves that this is the \(\lambda=1\) equation and applies the exact
+  conjugation rule \(\bar\lambda=1-\lambda\) to obtain \(\lambda=0\).
+- The manuscript defines its double sine directly as
+  \(\Gamma_2(z)/\Gamma_2(\omega_1+\omega_2-z)\), avoiding names that
+  differ between source versions.  Replacing it by the reciprocal
+  changes \(x^2=u\) to \(x^2=4/u\).
 - The exceptional zero characteristic and its normalization to
   \(a_0=1\) are explicit.
 - The ray-group order and class-number computations are certified.
-- The ray-class, characteristic, stabilizer, multiplier, sign, and
-  cocycle conversion needed to specialize Kopp's Theorem 1.1 have not
-  been proved. The manuscript labels this as equation `(KL)` and does
-  not use it as an unconditional premise.
+- The Kopp specialization uses modulus \((4)\infty_2\), the identity
+  ray class, characteristic \((0,1/4)^T\), stabilizer
+  `[[21,-8],[8,-3]]`, exponent \(n=1\), and multiplier \(-i\).
+- The PARI transcript contains `L_BNFCERTIFY=1`, making its
+  class-group and unit computation unconditional.
 
-Accordingly, the unconditional theorem in the revised manuscript is
-the finite reduction `(SV) => rank K=1`, not the full dimension-four
-Twisted Convolution Conjecture.
+Accordingly, the revised manuscript claims the complete
+dimension-four Twisted Convolution Conjecture, but no higher-dimensional
+case.
