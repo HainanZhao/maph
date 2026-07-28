@@ -198,6 +198,15 @@ windows also isolate the primitive values, leaving precisely two oriented
 cyclic-quartic identities—or an index-four powered-algebraicity
 refinement—as the remaining analytic theorem.
 
+[Cycle 61](docs/sic-stark-cycle61.md) performs the direct Shintani-cone
+fail-fast test on those two identities.  Kopp's exact telescoping formula
+does preserve the analytic orientation, but its quartic Fourier transform
+does not identify the result with the explicit unit resolvent.  The two
+phase quotients are numerically \(1\) to roughly \(10^{-114}\), while the
+proved input gives only unit modulus.  This isolates an oriented
+cyclic-quartic Stark identity—not an unfinished cone calculation—as the
+precise remaining theorem.
+
 ## Verification
 
 The default tests use Python, NumPy, and PARI/GP.  The rigorous

@@ -243,11 +243,28 @@ assert_small("ROBLOT_ABSOLUTE_VALUE_RESIDUAL_0", \
   abs(resolvent0) - abs(target0), 1e-80);
 assert_small("ROBLOT_ABSOLUTE_VALUE_RESIDUAL_1", \
   abs(resolvent1) - abs(target1), 1e-80);
-\\ These phase residuals are evidence, not an unconditional consequence of
-\\ Roblot's Theorem 6.1, whose conclusion contains absolute values.
+phase_quotient0 = target0 / resolvent0;
+phase_quotient1 = target1 / resolvent1;
+print("QUARTIC_PHASE_QUOTIENT_0=", phase_quotient0);
+print("QUARTIC_PHASE_QUOTIENT_1=", phase_quotient1);
+assert_small("QUARTIC_PHASE_QUOTIENT_NORM_RESIDUAL_0", \
+  abs(phase_quotient0) - 1, 1e-80);
+assert_small("QUARTIC_PHASE_QUOTIENT_NORM_RESIDUAL_1", \
+  abs(phase_quotient1) - 1, 1e-80);
+
+\\ The following residuals give 100-digit numerical evidence for the
+\\ oriented identities.  They are not an unconditional consequence of
+\\ Roblot's Theorem 6.1: that theorem proves only that the two quotients
+\\ above lie on the unit circle.  Neither Roblot's theorem nor Kopp's exact
+\\ cone-to-cocycle formula proves that these quotients are algebraic, roots
+\\ of unity, or members of the discrete {+-1,+-I}-orbit.
 assert_small("NUMERICAL_PHASE_RESIDUAL_0", \
   resolvent0 - target0, 1e-80);
 assert_small("NUMERICAL_PHASE_RESIDUAL_1", \
   resolvent1 - target1, 1e-80);
+print("PHASE_QUOTIENT_UNIT_MODULUS_CERTIFIED=1");
+print("PHASE_QUOTIENT_NUMERICALLY_ONE=1");
+print("PHASE_QUOTIENT_ALGEBRAICITY_ESTABLISHED=0");
+print("ORIENTED_QUARTIC_STARK_IDENTITIES_UNCONDITIONAL=0");
 
 quit();

@@ -227,6 +227,38 @@ class HigherDimensionSieveTests(unittest.TestCase):
             process.stdout,
         )
 
+    def test_dimension_eight_quartic_phase_boundary_is_explicit(self) -> None:
+        process = subprocess.run(
+            [
+                "gp",
+                "-q",
+                str(
+                    ROOT
+                    / "scripts/dimension_eight_quartic_bridge.gp"
+                ),
+            ],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        self.assertNotIn("user error", process.stderr)
+        self.assertIn("MAXIMAL_RAY_24_STRUCTURE=[4, 2, 2]", process.stdout)
+        self.assertIn("ROBLOT_UNIT_INDEX_0=4", process.stdout)
+        self.assertIn("ROBLOT_UNIT_INDEX_1=4", process.stdout)
+        self.assertIn(
+            "PHASE_QUOTIENT_UNIT_MODULUS_CERTIFIED=1",
+            process.stdout,
+        )
+        self.assertIn(
+            "PHASE_QUOTIENT_ALGEBRAICITY_ESTABLISHED=0",
+            process.stdout,
+        )
+        self.assertIn(
+            "ORIENTED_QUARTIC_STARK_IDENTITIES_UNCONDITIONAL=0",
+            process.stdout,
+        )
+
     def test_dedicated_dimension_seven_certificate(self) -> None:
         process = subprocess.run(
             [
