@@ -190,6 +190,14 @@ minors for each formal shift.  This closes the finite algebraic gate but
 does not promote Roblot's quartic absolute-value theorem to the two
 oriented analytic identities.
 
+[Cycle 60](docs/sic-stark-cycle60.md) closes the entire lower-conductor
+dimension-eight stratum unconditionally.  Its degree-eight field is the
+one-place ray-\(12\) field, has Shintani index two and safe exponent \(576\),
+and Arb/height rigidity proves all fifteen lower entries.  Rigorous Arb
+windows also isolate the primitive values, leaving precisely two oriented
+cyclic-quartic identities—or an index-four powered-algebraicity
+refinement—as the remaining analytic theorem.
+
 ## Verification
 
 The default tests use Python, NumPy, and PARI/GP.  The rigorous
@@ -205,5 +213,6 @@ gp -q scripts/dimension_seven_shintani_audit.gp
 gp -q scripts/dimension_seven_artin_labels.gp
 gp -q scripts/dimension_seven_exact_tcc.gp
 gp -q scripts/dimension_eight_artin_labels.gp
+gp -q scripts/dimension_eight_lower_shintani_audit.gp
 gp -q scripts/dimension_eight_exact_tcc.gp
 ```

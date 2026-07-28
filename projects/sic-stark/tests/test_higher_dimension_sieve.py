@@ -200,6 +200,33 @@ class HigherDimensionSieveTests(unittest.TestCase):
             finite.stdout,
         )
 
+    def test_dimension_eight_lower_stratum_is_shintani_index_two(self) -> None:
+        process = subprocess.run(
+            [
+                "gp",
+                "-q",
+                str(
+                    ROOT
+                    / "scripts/dimension_eight_lower_shintani_audit.gp"
+                ),
+            ],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        self.assertNotIn("user error", process.stderr)
+        self.assertIn(
+            "LOWER_POLYNOMIAL_MATCHES_RAY_12=1", process.stdout
+        )
+        self.assertIn("SHINTANI_INDEX=2", process.stdout)
+        self.assertIn("SHINTANI_SAFE_EXPONENT=576", process.stdout)
+        self.assertIn(
+            "LOWER_DIMENSION_EIGHT_SHINTANI_"
+            "ALGEBRAICITY_CERTIFIED=1",
+            process.stdout,
+        )
+
     def test_dedicated_dimension_seven_certificate(self) -> None:
         process = subprocess.run(
             [
