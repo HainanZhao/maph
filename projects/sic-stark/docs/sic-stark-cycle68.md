@@ -18,7 +18,7 @@ The full dimension-six theorem is not yet proved.  The new evidence
 isolates a much smaller analytic statement than the mixed-signature
 Stark algebraicity conjecture.
 
-## Fixed-point divisibility lemma
+## Fixed-point divisibility proposal
 
 Let \(K_d(\tau)\) denote the off-shell ghost matrix reconstructed from
 the convention-matched Shintani--Faddeev characteristic cocycles, and
@@ -34,7 +34,7 @@ let \(A_d=L_d^3\).  The natural general target is:
 > A_d\tau-\tau.
 > \]
 
-Since \(A_d\beta_d=\beta_d\), this immediately gives
+Since \(A_d\beta_d=\beta_d\), this would immediately give
 
 \[
  K_d(\beta_d)^2=K_d(\beta_d).
@@ -52,7 +52,23 @@ For dimension six,
 and the normalized defect packet computed in cycle 67 is the numerical
 first derivative predicted by this lemma.
 
-## Why this is preferable to a global Stark theorem
+## Cycle-69 correction
+
+Cycle 69 proves that, for the dimension-six stabilizer,
+
+\[
+ A\tau-\tau
+ =-24\frac{\tau^2-5\tau+1}{24\tau-5}
+\]
+
+has a simple zero at \(\beta\).  Thus it generates the same local ideal as
+\(\tau-\beta\).  Divisibility of a holomorphic defect entry by
+\(A\tau-\tau\) is therefore equivalent to its vanishing at \(\beta\).
+
+The proposal below remains a useful reformulation, but it is not a weaker
+route around TCC or the primitive special-value identity.
+
+## Why the formulation remains useful
 
 The divisibility statement:
 
@@ -62,8 +78,9 @@ The divisibility statement:
 - is directly phrased in the finite Weyl algebra underlying TCC; and
 - has a plausible uniform formulation in \(d\).
 
-It therefore aligns better with the north-star goal than proving a new
-degree-six Stark theorem solely to identify one scalar overlap.
+It aligns with the finite Weyl formulation of the north-star goal, but
+proving it in dimension six has exactly the same constant-term content as
+proving TCC.
 
 ## Concrete next proof program
 
@@ -77,9 +94,10 @@ For the thirteen dimension-six representatives:
 4. prove cancellation of the constant term;
 5. bound the remaining term by \(C|A\tau-\tau|\).
 
-The cyclic pentagon identity may help with step 4 after lifting both the
+The cyclic pentagon identity may help with step 4 only after lifting both the
 order-\(n\) cyclic phase and the level-six Weyl phase to a common root
-system.  It is not needed if the signed triple sums cancel directly.
+system and matching its coefficient constraints.  Without that parameter
+match, it merely repackages the missing identity.
 
 ## Theorem status
 
