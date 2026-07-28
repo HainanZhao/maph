@@ -245,8 +245,8 @@ def fundamental_log_double_sine(
     if not (
         argument > arb(1) / 100
         and complement > arb(1) / 100
-        and argument < 5
-        and complement < 5
+        and argument < 6
+        and complement < 6
     ):
         raise RuntimeError("tail-majorant hypotheses failed")
     tail = _certified_simpson(
@@ -255,10 +255,12 @@ def fundamental_log_double_sine(
         cutoff,
         tolerance / 4,
     )
-    # For the finite list of reduced fifth-arguments, z and beta+1-z
-    # lie in (1/100,5).  If v >= 36, then v/z+1 > 41/5.  Each absolute
-    # exponential denominator is > 3/4 (already exp(8)>1+8>4), their
-    # product is > 1/2, and v+z>36.  Each term is therefore <1/18;
+    # For the finite lists of reduced fifth- and sixth-dimension
+    # arguments, z and beta+1-z lie in (1/100,6).  If v >= 36, then
+    # v/z+1 > 7.  Since exp(7)>1+7=8, each absolute exponential
+    # denominator is > 7/8 (the beta-scaled one is larger), their
+    # product is > 3/4, and v+z>36.  Each term is therefore <1/27,
+    # and in particular <1/18;
     # integrating the difference against exp(-v) gives exp(-36)/9.
     tail_remainder = (
         _arb_fraction(Fraction(1, 9))
