@@ -262,6 +262,8 @@ audit_packet(packet_label, source_polynomial) =
       matching_characters = Vec(matching_characters);
       assert_equal(Str("CM_CHARACTER_COUNT_", index_two_fields[position]),
         #matching_characters, 2);
+      print("LINEAR_REINDUCTION_VERIFIED_PACKET=", packet_label,
+            " BASE=", index_two_fields[position], " VALUE=1");
 
       for(character_index = 1, #matching_characters,
         exponents = matching_characters[character_index];

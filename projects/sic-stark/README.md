@@ -8,28 +8,43 @@ Q_d=\langle1,1-d,1\rangle,\qquad d\ge4,
 \]
 
 as a focused route toward Zauner's SIC-existence conjecture. It is a
-research ledger and executable reduction.  General TCC remains open; the
-current paper proves the formal TCC unconditionally in dimensions four
-and five.
+research ledger and executable reduction. General TCC remains open; two
+companion papers prove its formal dimension-four, five, seven, and eight
+instances unconditionally:
 
-The consolidated manuscript is available as
-[`paper/sic-stark-dimensions-four-five.tex`](paper/sic-stark-dimensions-four-five.tex)
-and
-[`paper/sic-stark-dimensions-four-five.pdf`](paper/sic-stark-dimensions-four-five.pdf).
-The longer research ledger in `docs/` records the open and partially
-closed higher-dimensional cases.
+- [Paper I source](paper/sic-stark-dimensions-four-five.tex) and
+  [PDF](paper/sic-stark-dimensions-four-five.pdf): dimensions four and
+  five;
+- [Paper II source](paper/sic-stark-dimensions-seven-eight.tex) and
+  [PDF](paper/sic-stark-dimensions-seven-eight.pdf): dimensions seven
+  and eight.
+
+The dimension-six orientation problem remains open. The longer research
+ledger in `docs/` records that boundary and the exploratory work behind
+the proved cases.
 
 ## Publication and archival upload checklist
 
-The recommended Zenodo deposit is one tagged, immutable source archive
-containing this project directory, together with the compiled paper PDF as
-a separate convenient download.  Do not upload only the PDF: the
-dimension-five theorem depends on exact and interval certificates that
-must remain available with their generating scripts.
+The recommended Zenodo deposit is a common project release with two
+submission-specific reproducibility archives and the two compiled PDFs as
+separate convenient downloads. Do not upload only the PDFs: both theorems
+depend on exact or interval certificates that must remain available with
+their generating scripts.
 
-### Required standalone upload
+Build both deterministic companion archives in one command:
+
+```bash
+scripts/build_companion_archives.sh
+```
+
+This creates `dist/sic-stark-paper-I.tar.gz` and
+`dist/sic-stark-paper-II.tar.gz`. Their exact contents are documented in
+`publication/paper-I-README.md` and `publication/paper-II-README.md`.
+
+### Required standalone uploads
 
 - `paper/sic-stark-dimensions-four-five.pdf`
+- `paper/sic-stark-dimensions-seven-eight.pdf`
 
 ### Required contents of the reproducibility archive
 
@@ -86,33 +101,41 @@ Shared implementation and regression tests:
 - `src/`
 - `tests/`
 
-The dimension-eight CM-descent material is not needed to verify the
-dimension-four/five theorem, but should be included if the composite-
-dimension outlook remains in the paper:
+The dimension-eight CM-descent material is not needed to verify Paper I.
+It belongs in the separate Paper II archive:
 
 - `docs/sic-stark-dimension-eight-cm-descent.md`
+- `docs/sic-stark-dimension-eight-canonical-closure.md`
 - `scripts/dimension_eight_cm_descent.gp`
+- `scripts/dimension_eight_linear_cm_reinduction.gp`
+- `scripts/dimension_eight_cm_unit_lattice.gp`
+- `scripts/certify_dimension_eight_cm_orientation.py`
+- `scripts/dimension_eight_cm_real_unit_bridge.gp`
+- `scripts/dimension_eight_maximal_tuple_audit.gp`
+- `scripts/dimension_eight_maximal_quadratic_units.gp`
+- `scripts/certify_dimension_eight_maximal_cocycle.py`
+- `scripts/dimension_eight_maximal_exact_tcc.py`
 - `certificates/dimension-eight-cm-descent.txt`
 - the dimension-six and dimension-eight scripts cited explicitly in
   Section 7 of the manuscript
 
-### Create before depositing
+### Release metadata
 
-The final tagged archive should also contain:
+The tagged archive contains:
 
-- `CITATION.cff`, with the author, title, release version, and eventual DOI;
+- `CITATION.cff`, with the author, title, and release version;
 - `.zenodo.json`, with matching creator and license metadata;
-- a license file covering the manuscript and another, if necessary,
-  covering the code;
+- `LICENSE` (CC BY 4.0 for manuscripts/documentation) and
+  `LICENSE-CODE` (MIT for code);
 - a pinned Python environment or lock file recording Python 3.12.3,
   python-flint 0.9.0, FLINT 3.6.0, and the required NumPy version;
 - a short `REPRODUCE.md` containing the exact commands and expected
   runtimes; and
 - the final successful test transcript.
 
-After deposition, replace the manuscript's archival placeholder with the
-Zenodo DOI and record both the DOI and the immutable Git commit in this
-README.
+After deposition, the only remaining metadata step is to insert the
+Zenodo DOI and immutable Git commit in the manuscripts, citation
+metadata, and this README.
 
 Build the complete archive in one command:
 
@@ -276,9 +299,10 @@ the closed \(d=4\) case:
   currently available conductor-lowering argument; and
 - dimension seven has a complete unconditional analytic and exact
   finite closure; while
-- dimension eight now has an exact finite closure for a uniquely selected
-  algebraic packet, with two oriented cyclic-quartic analytic identities
-  still open.
+- dimension eight is now closed unconditionally in both admissible
+  strata: the conductor-three/discriminant-45 packet by linear CM
+  reinduction, and the maximal-order/discriminant-five packet by
+  quadratic ray units and an exact six-factor phase audit.
 
 The dimension-seven derivation, including the exact \(\Upsilon\) labels,
 six lowered moduli, stabilizer, Kopp exponents, and the \(3.5\cdot10^{-9}\)
@@ -328,6 +352,37 @@ proved input gives only unit modulus.  This isolates an oriented
 cyclic-quartic Stark identity—not an unfinished cone calculation—as the
 precise remaining theorem.
 
+[Cycles 72–81](docs/sic-stark-cycle72.md) revisit the proposed CM descent
+without assuming that projective equivalence is enough.  Exact
+degree-sixteen character calculations prove genuine linear reinduction
+from both \(\mathbf Q(\sqrt{-6})\) and
+\(\mathbf Q(\sqrt{-30})\).  Over the former base, Stark's proved
+imaginary-quadratic rank-one theorem supplies an oriented unit
+resolvent; Arb balls isolate its integral unit coordinates, and exact
+normal-closure identities identify its absolute norms with the original
+real-quadratic Roblot units.  This closes both formerly missing quartic
+orientations and hence the canonical conductor-three dimension-eight
+packet unconditionally.  The consolidated statement and reproduction
+commands are in
+[`docs/sic-stark-dimension-eight-canonical-closure.md`](docs/sic-stark-dimension-eight-canonical-closure.md).
+
+[Cycles 82–92](docs/sic-stark-cycle82.md) resolve the separate
+maximal-order discriminant-five stratum.  They identify the
+\(C_2^2\) ray group and its two supported quadratic characters, prove
+both associated regulator/unit formulas unconditionally, transcribe
+the six-factor AFK continued-fraction cocycle, and compress the signed
+packet to a degree-\(32\) quotient ring shared with
+\(\mathbb Q(\zeta_{16})\).  Exact arithmetic proves all \(784\) minors
+for each shift.  [Cycle 92](docs/sic-stark-cycle92.md) removes the
+last numerical sign choice: every finite \(q\)-Pochhammer and
+double-sine recurrence phase is reduced exactly in
+\(\mathbb Q(\sqrt5)\), and all \(63\) resulting integral
+\(\pi\)-phases reproduce the radical table.  Together with the
+conductor-three result and form-class transport, this proves the
+complete formal TCC in dimension eight.  The consolidated theorem and
+reproduction commands are in
+[`docs/sic-stark-dimension-eight-unconditional-closure.md`](docs/sic-stark-dimension-eight-unconditional-closure.md).
+
 [Cycle 62](docs/sic-stark-cycle62.md) returns to dimension six and
 classifies every quadratic induction base of its faithful dihedral
 quotient.  The only abelian base is the original
@@ -373,4 +428,9 @@ gp -q scripts/dimension_seven_exact_tcc.gp
 gp -q scripts/dimension_eight_artin_labels.gp
 gp -q scripts/dimension_eight_lower_shintani_audit.gp
 gp -q scripts/dimension_eight_exact_tcc.gp
+gp -q scripts/dimension_eight_maximal_tuple_audit.gp
+gp -q scripts/dimension_eight_maximal_quadratic_units.gp
+PYTHONPATH=scripts python3 scripts/certify_dimension_eight_maximal_cocycle.py
+python3 scripts/dimension_eight_maximal_sign_audit.py
+python3 scripts/dimension_eight_maximal_exact_tcc.py
 ```

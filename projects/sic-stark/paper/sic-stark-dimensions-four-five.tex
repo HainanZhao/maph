@@ -40,14 +40,10 @@ packet.  Exact number-field arithmetic makes all $100$ rank-two
 minors vanish.  In both dimensions complex conjugation supplies the
 paired shift, and integral form covariance gives the result for every
 admissible tuple.  No Stark conjecture or \texttt{bnrstark}
-recognition is used as an input.  We finish with exact research-status
-boundaries for dimensions six and eight: one primitive order-six
-Shintani--Stark value remains in dimension six, while two oriented
-cyclic-quartic resolvents remain in dimension eight.  For the latter
-we identify an exact projective-$V_4$ descent gate to the imaginary
-quadratic fields $\Q(\sqrt{-6})$ and $\Q(\sqrt{-30})$.  The finite
-cancellation certificates in those dimensions are already exact, but
-the boundary results are not asserted as unconditional TCC theorems.
+recognition is used as an input.  A companion paper applies the same
+bridge to the unconditional dimension-seven and dimension-eight
+identities; the present paper remains logically independent of those
+higher-dimensional certificates.
 \end{abstract}
 
 \section{Overview and common convention}
@@ -1529,311 +1525,15 @@ dimension-five assertion is
 Theorem~\ref{thm:tcc}.
 \end{proof}
 
-\section{Composite dimensions six and eight}\label{sec:composite}
+\section{Outlook}
 
-The preceding argument succeeds because Shintani's 1978 theorem supplies
-powered algebraicity for the entire dimension-five packet.  The same
-finite reconstruction can be completed in dimensions six and eight, but
-none of the special-value theorems used in this paper supplies the
-needed oriented algebraicity for every primitive characteristic.  This
-section records computationally exact finite results, the unconditional
-analytic strata covered by the cited theorems, and the remaining
-research targets.  It contains no dimension-six or dimension-eight TCC
-theorem.
-
-\subsection{Dimension six: one primitive order-six value}
-
-Put
-\[
- K_6=\Q(\sqrt{21}),\qquad
- \beta_6=\frac{5+\sqrt{21}}2,\qquad
- Q_6=\langle1,-5,1\rangle.
-\]
-The relevant one-place ray group is
-\[
- \Cl_{(6)\infty_2}(K_6)\cong C_6.
-\tag{28}
-\]
-Its order-two character gives the lower-conductor stratum.  If
-\[
- Y=\frac{\beta_6-2+\sqrt{\beta_6-1}}2>1,
-\]
-then the modulus-three audit
-\path{scripts/dimension_six_lower_stratum.gp}, combining the analytic
-class-number formula with Kopp's Theorem~1.1~\cite{Kopp}, proves
-unconditionally that the overlap $y=\nu_{(0,2)}$ satisfies
-\[
- y^2=Y,\qquad y^2+y^{-2}=\beta_6-2.
-\tag{29}
-\]
-
-The remaining three reciprocal pairs form the primitive order-six
-packet.  Let
-\[
-\begin{aligned}
- \mathcal Q_6(X)={}&X^{12}+3X^{11}-6X^{10}-16X^9+3X^8+27X^6\\
- &\quad+3X^4-16X^3-6X^2+3X+1,
-\end{aligned}
-\tag{30}
-\]
-and let $x_{\rm alg}$ be its unique root in
-\[
- 2.21288528901718<x_{\rm alg}<2.21288528901719.
-\tag{31}
-\]
-The norm-$37$ prime $(4\beta_6+1)$ generates the ray group and fixes the
-arithmetic-Frobenius order of the other two primitive pairs.  Inserting
-this Artin-labeled algebraic packet together with (29) in the
-six-dimensional Weyl reconstruction makes all
-\[
- \binom62^2=225
-\]
-two-by-two minors vanish exactly; the reconstructed matrix has trace one.
-Thus the finite algebra has no remaining ambiguity.
-
-In the double-sine convention (1), the distinguished
-$(0,1)$ analytic value is
-\[
- x_{\rm an}
- =
- \frac{
- S_2(\beta_6/6\mid\beta_6,1)
- S_2(1/6\mid\beta_6,1)}
- {S_2((\beta_6+1)/6\mid\beta_6,1)}.
-\tag{32}
-\]
-
-\paragraph{Exact closure target.}
-The exact finite audit shows the following conditional implication:
-the canonical analytic table agrees with the certified rank-one
-algebraic table, and hence gives both formal shifts, if
-\[
- x_{\rm an}=x_{\rm alg}.
-\tag{33}
-\]
-The characteristic orbits, reciprocity, and the arithmetic-Frobenius
-labeling propagate this one equality through the other primitive
-pairs.  The script
-\path{scripts/dimension_six_primitive_fourier_audit.gp} records the
-equivalent oriented order-six Fourier identity, including its ray-group
-generator, character convention, Euler-factor convention, and
-embedding order.  That analytic identity, and therefore (33), remains
-unproved here.
-
-This is not a finite-computation issue.  The ray field has signature
-$(6,3)$; its primitive character has order six; and its cubic component
-is wildly ramified above $3$.  Shintani's index-two theorem does not
-apply, Roblot's hypotheses~\cite{Roblot2013} do not cover this wild
-sextic case, and
-proved CM Brumer--Stark results do not apply to this mixed-signature
-extension.  Standard double-sine shifts, reflection, duplication, and
-conductor lowering determine norms of the four level-six lifts but do
-not isolate the selected lift.
-
-There is also no weaker local-divisibility shortcut.  For
-\[
- A_6=\begin{pmatrix}115&-24\\24&-5\end{pmatrix},
-\]
-write $A_6\cdot z=(115z-24)/(24z-5)$.  Then
-\[
- A_6\cdot z-z
- =-24\frac{z^2-5z+1}{24z-5}.
-\tag{34}
-\]
-The right side has a simple zero at $\beta_6$.  Consequently, in the
-local holomorphic ring at $\beta_6$, divisibility of a defect entry by
-$A_6\cdot z-z$ is equivalent to its vanishing at $\beta_6$; proving
-such divisibility would already prove the missing TCC identity.
-
-\subsection{Dimension eight: an unconditional lower stratum and two
-quartic phases}
-
-Let
-\[
- K_8=\Q(\sqrt5),\qquad
- \phi=\frac{1+\sqrt5}{2},\qquad
- \beta_8=3\phi+2=\frac{7+3\sqrt5}{2}.
-\]
-The canonical form has discriminant $45$ and belongs to the order
-\[
- \mathcal O_3=\Z+3\mathcal O_{K_8}.
-\]
-The order-ray group and its maximal-order realization are
-\[
- \Cl_{(8)\infty_2}(\mathcal O_3)
- \cong
- \Cl_{(24)\infty_2}(\mathcal O_{K_8})
- \cong C_4\times C_2\times C_2.
-\tag{35}
-\]
-The change-of-order isomorphism in (35) does not identify partial zeta
-functions by itself.  Kopp's conductor-lowering formula~\cite{Kopp}
-supplies the
-required three-factor bridge between the order-modulus-eight
-characteristics and maximal-order moduli $8$ and $24$.
-
-The fifteen nonzero lower-conductor characteristics lie in the
-one-place ray-$12$ field.  Its one-place and both-place ray groups are
-$C_2^2$ and $C_2^3$, and the extension is in Shintani's index-two
-range.  An exact divisor audit gives safe exponent $576$.  Arb
-enclosures and the height gap used above then prove unconditionally
-that its four independent positive values are the real roots of
-\[
-\begin{aligned}
- P_{\rm low}(X)={}&X^8-8X^7+12X^6+8X^5-22X^4\\
-                  &\quad+8X^3+12X^2-8X+1.
-\end{aligned}
-\tag{36}
-\]
-Zauner covariance and reciprocity supply the full lower stratum.
-
-The forty-eight primitive characteristics contain four quadratic
-Fourier components and two conjugate pairs of quartic components.
-The two cyclic quartic quotient fields have relative equations
-\[
-\begin{aligned}
- F_0/K_8:\quad&X^4-6\phi X^2+3,\\
- F_1/K_8:\quad&X^4+(6-6\phi)X^2+3.
-\end{aligned}
-\tag{37}
-\]
-The exact models, fundamental-unit coordinates, and embeddings used
-below are fixed in
-\path{scripts/dimension_eight_quartic_bridge.gp}.  Let
-$\eta_0,\eta_1$ be the anti-units selected there and let
-$\rho_1,\ldots,\rho_4$ denote the four real embeddings in its
-local-Frobenius order.  Define the oriented logarithmic resolvents
-\[
-\begin{aligned}
- R_0&=\log|\eta_0|_{\rho_3}
-      +i\log|\eta_0|_{\rho_4},\\
- R_1&=\log|\eta_1|_{\rho_2}
-      +i\log|\eta_1|_{\rho_1}.
-\end{aligned}
-\tag{38}
-\]
-In the PARI dual coordinates for the cyclic basis
-$C_4\times C_2\times C_2$ fixed by that script, Roblot's
-cyclic-quartic theorem proves the two modulus identities
-~\cite{Roblot2013}
-\[
- |L'_S(0,[1,0,0])|=|R_0|,
- \qquad
- |L'_S(0,[1,1,0])|=|R_1|.
-\tag{39}
-\]
-It does not prove the orientations.
-
-\paragraph{Projective CM-descent gate.}
-There is nevertheless a sharper route than an abstract oriented
-refinement of (39).  To handle the infinite-place swap exactly, embed
-the one-place ray group into the full group
-\[
- \Cl_{(24)\infty_1\infty_2}(K_8)\cong C_4\times C_2^3.
-\]
-In its PARI cyclic coordinates, base conjugation has matrix
-\[
- C_\sigma=
- \begin{pmatrix}
- 3&2&0&2\\0&1&0&0\\0&1&1&0\\0&0&0&1
- \end{pmatrix}.
-\tag{CM1}
-\]
-The pullbacks of the two one-place characters, their conjugates, and
-their inverses have full-ray dual coordinates
-\[
-\begin{array}{c|c|c|c|c}
-\chi&\chi&\chi^\sigma&\chi^{-1}
- &\chi(\chi^\sigma)^{-1}\\ \hline
-{[1,0,0]}&[3,0,0,0]&[1,1,0,1]&[1,0,0,0]&[2,1,0,1]\\
-{[1,1,0]}&[3,0,0,1]&[1,1,0,0]&[1,0,0,1]&[2,1,0,1].
-\end{array}
-\tag{CM2}
-\]
-Thus the literal identity $\chi^\sigma=\chi^{-1}$ fails: its two sides
-have different labeled infinite-place conductors.  However, the
-projectively decisive quotient is the same order-two character in both
-rows.  Its conductor is $(24)\infty_1\infty_2$, and exact class-field
-construction gives
-\[
- K_8(\sqrt{-6})/\Q,\qquad
- \{\text{quadratic subfields}\}
- =\{\Q(\sqrt5),\Q(\sqrt{-6}),\Q(\sqrt{-30})\}.
-\tag{CM3}
-\]
-Consequently the induced Artin representations have projective image
-$V_4$, not a larger dihedral group.  Equations (CM1)--(CM3), including
-the one-place quotient maps, are reproduced by
-\path{scripts/dimension_eight_cm_descent.gp}.
-
-The exact audit script
-\path{scripts/dimension_eight_exact_tcc.gp} constructs an algebraic
-candidate packet: its primitive squared-overlap field has degree $32$
-over $\Q$, all signed overlaps lie in one degree-$64$ field, and
-adjoining the Weyl phases gives a convention-selected degree-$128$
-compositum.  For each of the two formal shifts, the script verifies
-\[
- \Tr\Pi=1,\qquad \Pi^2=\Pi,\qquad
- \text{all }\binom82^2=784\text{ two-by-two minors vanish}.
-\tag{40}
-\]
-
-\paragraph{Exact closure targets.}
-The canonical analytic table would coincide with this candidate packet
-and therefore satisfy both formal shifts if the two convention-matched
-oriented identities
-\[
-\begin{aligned}
- L'_S(0,[1,0,0])&=R_0,\\
- L'_S(0,[1,1,0])&=R_1
-\end{aligned}
-\tag{41}
-\]
-hold.  The lower-conductor special values and the algebraic
-calculation \textup{(40)} is unconditional; its identification with
-the primitive analytic table is conditional on \textup{(41)}.
-
-Rigorous double-sine windows locate all eight independent primitive
-analytic squares in the corresponding isolated algebraic intervals.
-At high precision the phase quotients in (41) equal
-$1+O(10^{-114})$.  This is strong evidence, not an equality proof:
-(39) permits an arbitrary unit-circle phase.  The exact finite TCC
-orientation sieve selects one pair among the $64$ natural algebraic
-orientations, but using that selection to deduce (41) would be circular.
-The projective computation above narrows the missing proof further.
-One must construct the two re-induced Hecke characters over
-$\Q(\sqrt{-6})$ or $\Q(\sqrt{-30})$, verify the linear (not merely
-projective) Artin induction including any scalar twist, match the
-removed Euler factors defining $L_S$, and translate the
-imaginary-quadratic Kronecker-limit formula into the orientations
-$R_0,R_1$.  That CM calculation would supply the phase and make (41),
-and hence dimension eight, unconditional without further finite
-computation.  The present paper records the exact descent gate but
-does not assert that final convention match.
-
-\subsection{Comparison}
-
-The two composite dimensions fail for different reasons:
-\[
-\begin{array}{c|c|c|c}
-d&\text{unconditional analytic part}&\text{exact finite part}
- &\text{missing input}\\ \hline
-6&\text{lower stratum, modulus and sign}
- &225\text{ minors}
- &1\text{ order-six value}\\
-8&15\text{ lower overlaps, quartic moduli, projective CM gate}
- &2\times784\text{ minors}
- &\text{linear CM re-induction and two phase matches}.
-\end{array}
-\tag{42}
-\]
-Dimension six has no analogous shortcut: its primitive character has
-order six, so the corresponding projective quotient has order three
-rather than two.  Dimension eight is therefore closer to closure than
-the raw comparison (39) suggests; its remaining obstruction is the
-linear re-induction (including a possible scalar twist), the
-$S$-Euler-factor comparison, and the two imaginary-quadratic
-Kronecker-limit convention matches.
+The proofs above establish the formal TCC in dimensions four and five.
+A companion paper applies the same convention-audited bridge to
+dimensions seven and eight, using Shintani height rigidity in dimension
+seven and a combination of linear CM reinduction and quadratic phase
+reduction in dimension eight.  Dimension six remains exceptional: its
+finite rank-one certificate is exact, but one oriented primitive
+order-six special value is not proved by the inputs used here.
 
 \section{Scope and reproducibility}
 
@@ -1846,15 +1546,6 @@ Theorem~\ref{thm:packet}: it proves the previously conjectural
 dimension-five ray packet by combining Kopp's proved limit formula with
 the applicable case of Shintani's proved algebraicity theorem and an
 effective height argument.
-
-Section~\ref{sec:composite} records research-status closure targets,
-not conditional propositions masquerading as higher-dimensional
-theorems.  It shows how far the proved low-dimensional machinery
-extends: the finite algebraic candidate packets pass exact cancellation
-audits, while their identification with the primitive analytic values
-still requires (33) in dimension six and the two orientations (41) in
-dimension eight.  More decimal recognition cannot replace those
-missing special-value proofs.
 
 All reported certificates were regenerated on Linux
 6.8.0-124-generic (x86-64, four virtual AMD EPYC 9354P cores) with
@@ -1870,9 +1561,10 @@ Representative wall times and peak resident memory were:
 \end{array}
 \]
 The complete regression suite takes approximately three minutes on
-that platform.  A tagged immutable source archive, including the files
-below and \texttt{certificates/SHA256SUMS}, will be deposited with
-Zenodo and its DOI inserted in the final submission.  A repository
+that platform. A tagged immutable source archive will contain the
+files below and a self-verifying root manifest named
+\texttt{ARCHIVE\_CONTENTS.sha256}. It will be deposited with Zenodo
+and its DOI inserted in the final submission. A repository
 commit hash alone is not intended to substitute for that persistent
 archive.
 
@@ -1889,18 +1581,13 @@ The supplementary package contains:
 \item the Shintani sign-class, fixed-field, conductor, and
   divisor-by-divisor exponent-$5760$ audit;
 \item the labeled $K$-isomorphism, unit, Sturm, Frobenius-orbit,
-  and rigorous Arb height-gap certificates;
-\item the dimension-six ray, lower-stratum, Frobenius-orientation,
-  $225$-minor, and fixed-point-factorization audits; and
-\item the dimension-eight conductor-lowering, lower-stratum,
-  cyclic-quartic, projective CM-descent, Artin-label, orientation,
-  and two-shift
-  $784$-minor audits.
+  and rigorous Arb height-gap certificates.
 \end{itemize}
-SHA-256 digests for the archived dimension-four and dimension-five
-artifacts are recorded in \texttt{certificates/SHA256SUMS}; the
-dimension-six and dimension-eight research scripts are fixed by the
-repository commit accompanying this manuscript.
+SHA-256 digests for every archived proof artifact are recorded in the
+archive-root manifest
+\begin{center}
+\texttt{ARCHIVE\_CONTENTS.sha256}.
+\end{center}
 
 \section*{Acknowledgments}
 
