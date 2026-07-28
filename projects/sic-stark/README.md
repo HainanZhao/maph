@@ -225,6 +225,16 @@ tables.  Their imaginary parts, idempotency defects, and rank-two minors
 all decrease along the modular geodesic, validly reopening a direct
 cyclic-limit proof of dimension-six TCC.
 
+[Cycles 64--68](docs/sic-stark-cycle68.md) correct and sharpen the
+dimension-six boundary analysis.  Even-dimensional wrap signs leave
+thirteen signed Zauner defect representatives, and the moving
+characteristic contributes an Euler--Maclaurin half-power that was
+invisible in the first symmetric validation.  With it restored, the
+idempotency defect decays as the square of the convergent denominator
+and the normalized first-derivative packet stabilizes.  The remaining
+target is a local fixed-point divisibility lemma for
+\(K_6(\tau)^2-K_6(\tau)\).
+
 ## Verification
 
 The default tests use Python, NumPy, and PARI/GP.  The rigorous

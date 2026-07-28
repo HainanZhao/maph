@@ -175,21 +175,33 @@ def regularized_log_constant(
     singular = singular_data(
         numerator, denominator, first, second
     )
-    root_w = cmath.exp(
-        2j
-        * math.pi
-        * (second * numerator / denominator - first)
-        / DIMENSION
-    )
-    root_q = cmath.exp(2j * math.pi * numerator / denominator)
+    full_denominator = DIMENSION * denominator
+
+    def residue_root(index: int) -> complex:
+        residue = (
+            second * numerator
+            - first * denominator
+            + DIMENSION * index * numerator
+        ) % full_denominator
+        return cmath.exp(
+            2j * math.pi * residue / full_denominator
+        )
 
     if singular is None:
-        log_cyclic_dilogarithm = 0j
-        root = root_q * root_w
-        for index in range(1, denominator):
-            log_cyclic_dilogarithm += index * cmath.log(1 - root)
-            root *= root_q
-        return -log_cyclic_dilogarithm / denominator
+        # The characteristic makes w depend radially on tau.  Retaining
+        # that dependence contributes the Euler--Maclaurin half-power
+        # (1/2-alpha_j) in every residue class.  Replacing this expression
+        # by only -log(D_zeta(w))/n silently drops a branch-dependent
+        # factor for general rational points.
+        result = 0j
+        for index in range(denominator):
+            residue_alpha = (
+                Fraction(second, DIMENSION) + index
+            ) / denominator
+            result += float(
+                Fraction(1, 2) - residue_alpha
+            ) * cmath.log(1 - residue_root(index))
+        return result
 
     singular_residue, alpha = singular
     if alpha == 0:
@@ -200,7 +212,6 @@ def regularized_log_constant(
         - math.lgamma(float(alpha))
         - float(boundary_power) * math.log(denominator)
     )
-    root = root_w
     for index in range(denominator):
         if index != singular_residue:
             residue_alpha = (
@@ -208,8 +219,7 @@ def regularized_log_constant(
             ) / denominator
             result += float(
                 Fraction(1, 2) - residue_alpha
-            ) * cmath.log(1 - root)
-        root *= root_q
+            ) * cmath.log(1 - residue_root(index))
     return complex(result)
 
 
@@ -260,8 +270,21 @@ def small_denominator_boundary_shin(
 ) -> complex:
     """Return the corrected boundary value at 1/4 -> 19/4."""
 
-    numerator, denominator = 1, 4
-    mapped_numerator, mapped_denominator = 19, 4
+    return rational_boundary_shin(
+        1, 4, 19, 4, first, second
+    )
+
+
+def rational_boundary_shin(
+    numerator: int,
+    denominator: int,
+    mapped_numerator: int,
+    mapped_denominator: int,
+    first: int,
+    second: int,
+) -> complex:
+    """Return the corrected boundary value for one rational pair."""
+
     source = regularized_log_constant(
         numerator, denominator, first, second
     )
@@ -298,14 +321,33 @@ def direct_small_denominator_shin(
 ) -> complex:
     """Evaluate the defining Pochhammer ratio near 1/4."""
 
+    return direct_rational_shin(
+        1, 4, radial_parameter, first, second
+    )
+
+
+def direct_rational_shin(
+    numerator: int,
+    denominator: int,
+    radial_parameter: float,
+    first: int,
+    second: int,
+) -> complex:
+    """Evaluate the defining Pochhammer ratio near a rational."""
+
     old_precision = mpmath.mp.dps
     mpmath.mp.dps = 35
     try:
         tau = (
-            mpmath.mpf(1) / 4
+            mpmath.mpf(numerator) / denominator
             + 1j
             * mpmath.mpf(radial_parameter)
-            / (2 * mpmath.pi * 16)
+            / (
+                2
+                * mpmath.pi
+                * denominator
+                * denominator
+            )
         )
         transformed_tau = (
             A_MATRIX[0][0] * tau + A_MATRIX[0][1]
@@ -373,6 +415,90 @@ def direct_boundary_validation() -> dict[tuple[int, int], list[float]]:
         assert errors[-1] < 0.008
         results[characteristic] = errors
     return results
+
+
+def naive_cyclic_log_constant(
+    numerator: int,
+    denominator: int,
+    first: int,
+    second: int,
+) -> complex:
+    """Return the incomplete constant that drops radial half-powers."""
+
+    log_cyclic_dilogarithm = 0j
+    root_w = cmath.exp(
+        2j
+        * math.pi
+        * (second * numerator / denominator - first)
+        / DIMENSION
+    )
+    root_q = cmath.exp(2j * math.pi * numerator / denominator)
+    root = root_q * root_w
+    for index in range(1, denominator):
+        log_cyclic_dilogarithm += index * cmath.log(1 - root)
+        root *= root_q
+    return -log_cyclic_dilogarithm / denominator
+
+
+def moving_characteristic_validation() -> tuple[float, float]:
+    """Distinguish the full constant from the naive cyclic one."""
+
+    numerator, denominator = 5, 23
+    mapped_numerator, mapped_denominator = 23, 5
+    first, second = 0, 1
+    direct = direct_rational_shin(
+        numerator,
+        denominator,
+        0.4,
+        first,
+        second,
+    )
+    corrected = rational_boundary_shin(
+        numerator,
+        denominator,
+        mapped_numerator,
+        mapped_denominator,
+        first,
+        second,
+    )
+    common_root = cmath.exp(
+        2j
+        * math.pi
+        * ((second * numerator - first * denominator) % DIMENSION)
+        / DIMENSION
+    )
+    correction = (
+        -1j
+        * A_MATRIX[1][0]
+        / (
+            2
+            * math.pi
+            * denominator
+            * mapped_denominator
+        )
+        * complex(mpmath.polylog(2, common_root))
+    )
+    naive = cmath.exp(
+        naive_cyclic_log_constant(
+            mapped_numerator,
+            mapped_denominator,
+            first,
+            second,
+        )
+        - naive_cyclic_log_constant(
+            numerator,
+            denominator,
+            first,
+            second,
+        )
+        + correction
+    )
+    corrected_error = abs(direct / corrected - 1)
+    naive_error = abs(direct / naive - 1)
+    assert corrected_error < 0.006
+    assert naive_error > 0.02
+    assert corrected_error < naive_error / 3
+    return corrected_error, naive_error
 
 
 def sawtooth(value: Fraction) -> Fraction:
@@ -518,6 +644,7 @@ def positive_primitive_root() -> float:
 def main() -> None:
     patterns = exact_boundary_audit()
     direct_errors = direct_boundary_validation()
+    corrected_error, naive_error = moving_characteristic_validation()
     print("RADEMACHER_INVARIANT=", RADEMACHER, sep="")
     print("NONZERO_SINGULAR_COUNT_PER_STEP=5")
     print(
@@ -544,6 +671,15 @@ def main() -> None:
             + ",".join(f"{error:.15e}" for error in errors)
         )
     print("DIRECT_PRODUCT_ERRORS_DECREASE=1")
+    print(
+        "MOVING_CHARACTERISTIC_CORRECTED_ERROR="
+        f"{corrected_error:.15e}"
+    )
+    print(
+        "MOVING_CHARACTERISTIC_NAIVE_ERROR="
+        f"{naive_error:.15e}"
+    )
+    print("RADIAL_HALF_POWER_CORRECTION_VERIFIED=1")
 
     primitive_root = positive_primitive_root()
     idempotency_residuals = []

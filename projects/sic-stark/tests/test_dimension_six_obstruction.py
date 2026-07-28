@@ -120,6 +120,10 @@ class DimensionSixObstructionTests(unittest.TestCase):
             result.stdout,
         )
         self.assertIn(
+            "RADIAL_HALF_POWER_CORRECTION_VERIFIED=1",
+            result.stdout,
+        )
+        self.assertIn(
             "BOUNDARY_IDEMPOTENCY_RESIDUALS_DECREASE=1",
             result.stdout,
         )
@@ -132,6 +136,41 @@ class DimensionSixObstructionTests(unittest.TestCase):
             result.stdout,
         )
         self.assertIn("FINITE_LEVEL_TCC_IDENTITY_PROVED=0", result.stdout)
+
+    def test_signed_defect_has_quadratic_geodesic_scale(self) -> None:
+        result = subprocess.run(
+            [
+                sys.executable,
+                str(ROOT / "scripts/dimension_six_defect_limit.py"),
+            ],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        self.assertIn(
+            "EVEN_DIMENSION_WRAP_SIGN_VERIFIED=1",
+            result.stdout,
+        )
+        self.assertIn(
+            "NONZERO_DEFECT_REPRESENTATIVE_COUNT=13",
+            result.stdout,
+        )
+        self.assertIn(
+            "NUMERICAL_DEFECT_SCALE=O(1/denominator^2)",
+            result.stdout,
+        )
+        self.assertIn(
+            "CONVERGENT_NORM_IDENTITY=-21",
+            result.stdout,
+        )
+        self.assertIn(
+            "CONVERGENT_FIRST_DERIVATIVE_PACKET=1",
+            result.stdout,
+        )
+        self.assertIn(
+            "ASYMPTOTIC_DEFECT_BOUND_PROVED=0",
+            result.stdout,
+        )
 
 
 if __name__ == "__main__":
