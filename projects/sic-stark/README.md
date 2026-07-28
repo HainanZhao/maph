@@ -536,6 +536,61 @@ quantum-dilogarithm formula is compatible with the length-one
 \(\beta=[[5]]\) boundary, but supplies a limit rather than the required
 finite AFK pentagon/Weyl cancellation.
 
+[Cycles 113--122](docs/sic-stark-cycle122.md) construct the exact cyclic
+parameter ledger and uncover a finite Heisenberg descent that had not
+previously been isolated.  The rational characteristics occupy the nodes
+\(bm-an\bmod 6n\), split into six central sectors, and differ from the
+standard cyclic normalization by one explicit central factor.  The two
+geodesic orders span a fixed index-\(504\) correspondence.  More
+importantly, the invariant ideals \((2)\) at level \(24\) and
+\((2\sqrt{21})\) at level \(504\) each cut out a canonical
+Zauner-stable six-dimensional Weyl block.  The remaining theorem is now
+an analytic restriction statement: the regularized
+Shintani--Faddeev transfer operator must be shown to preserve one of
+these blocks and restrict to the AFK ghost.
+
+[Cycles 123--132](docs/sic-stark-cycle132.md) identify the phase and
+amplitude of that prospective restriction.  The \(36\) characteristics
+form an affine \((\mathbb Z/6)^2\) quotient of the level-\(24\)
+modular-gamma cylinder.  Ishibashi's even-level inversion Gaussian,
+combined with the AFK normalization, gives an exact nondegenerate
+level-six chirp; the even wrap is precisely its half-shifted Fourier
+sector.  The valid compact Zak space uses the discrete helical period
+\((\omega_1-\omega_2,6)\); the two individual irrational functional
+shifts must not be treated as a topological lattice.  Independently, the
+primitive overlap quotient is exactly the
+\(g=Q,\ell=0\) two-gamma kernel in the published general-modular beta
+convolution, with normalization \(Z(h+4)/Z(h)=\tau_6^h\).  Dimension
+six is reduced to one explicit harmonic-analysis lemma: evaluate the
+helical Zak alias sum of that continuous-discrete beta convolution and
+identify it with AFK equation (1.49).
+
+[Cycles 133--142](docs/sic-stark-cycle142.md) derive the helical alias
+problem completely.  The beta-transform frequencies match both formal
+TCC shifts bijectively, and every primitive alias packet is the same
+well-poised bilateral series
+\({}_2\psi_2(x,w^2x;-qw^2x,-qx;q,-q)\), up to explicit product
+prefactors.  AFK even-wrap holonomy is antiperiodic, but a careful
+line-bundle Poisson audit shows that it shifts the dual lattice rather
+than inserting an alternating dual-alias weight; this rules out a
+tempting but false direct use of Bailey's product at \(+q\).  Slater's
+transformation removes all characteristic dependence from the
+unsummed part and leaves two universal \(q\)-Kummer-adjacent
+\({}_2\phi_1\) values at argument \(-q\).  Dimension six is now one
+modular-completion/connection formula away from closure, rather than a
+36-case analytic identity.
+
+[Cycle 143](docs/sic-stark-cycle143.md) applies the mandated Arb gate.
+The double-sine packet encloses the isolated algebraic primitive, all
+225 analytic minors enclose zero, and AFK's exceptional endpoint is
+exactly \(-4\sqrt7\). The proposed end-to-end radial chain nevertheless
+does not close: its ordinary \( {}_2\psi_2\)-Slater reduction requires
+the equal-base specialization \(\widetilde q=q\), which fails at three
+interior points of the \(A_6\)-axis and returns at the RM endpoint only
+when the standard bilateral convergence annulus has collapsed. Per the
+hard gate, Cycles 144--152 are halted until a genuine two-base modular
+completion is stated and enclosed.
+
 ## Verification
 
 The default tests use Python, NumPy, and PARI/GP.  The rigorous
@@ -568,4 +623,11 @@ python3 scripts/dimension_six_adjoint_decomposition.py
 gp -q scripts/dimension_six_absolute_abelian_gate.gp
 gp -q scripts/dimension_six_full_ray_cm_gate.gp
 gp -q scripts/dimension_six_projective_cm_gate.gp
+python3 scripts/dimension_six_cyclic_parameter_ledger.py
+python3 scripts/dimension_six_heisenberg_descent.py
+python3 scripts/dimension_six_level24_blocks.py
+python3 scripts/dimension_six_inversion_phase.py
+python3 scripts/dimension_six_modular_gamma_grid.py
+python3 scripts/dimension_six_beta_kernel_match.py
+PYTHONPATH=scripts python3 scripts/dimension_six_cycle143_gate.py
 ```
