@@ -155,64 +155,64 @@ def fundamental_log_double_sine(
 
     # At zero the regularized integrand is even.  Put
     # H_c(t)=sinh(ct/2)/(ct/2).  Its positive series gives, for
-    # |c| <= 5 and t <= 1/10000,
+    # |c| <= 6 and t <= 1/10000,
     #
     #   |H_c-1-c^2 t^2/24| <= c^4 cosh(|c|t/2)t^4/1920,
     #
     # while cosh(|c|t/2) <= exp(1/4000) <= 4000/3999.  The rational
     # inequalities below then give
     #
-    #   |r_linear| <= t^4/3,  |r_denominator| <= t^4/6,
-    #   |H_beta H_1-1| <= 3t^2/4,
-    #   |(linear^2-beta^2-1)/24| <= 7/4.
+    #   |r_linear| <= 3t^4/4,  |r_denominator| <= 2t^4/5,
+    #   |H_beta H_1-1| <= 11t^2/10,
+    #   |(linear^2-beta^2-1)/24| <= 31/12.
     #
     # Hence the difference from the displayed constant term is at most
-    # (5/3)(1/3+1/6+(7/4)(3/4))t^2 < 4t^2.  All comparisons here are
+    # 2(3/4+2/5+(31/12)(11/10))t^2 < 8t^2.  All comparisons here are
     # exact rational checks; this avoids interval division by a ball
     # containing zero.
     delta = Fraction(1, 10_000)
     exponential_majorant = Fraction(4000, 3999)
     numerator_remainder = (
-        Fraction(625, 1920) * exponential_majorant
+        Fraction(1296, 1920) * exponential_majorant
     )
     denominator_remainder = (
-        Fraction(256, 1920) * exponential_majorant
+        Fraction(625, 1920) * exponential_majorant
         + Fraction(1, 1920) * exponential_majorant
         + (
-            Fraction(16, 24)
+            Fraction(25, 24)
             * Fraction(1, 24)
             * exponential_majorant**2
         )
     )
     denominator_increment = (
-        Fraction(17, 24) * exponential_majorant
+        Fraction(26, 24) * exponential_majorant
         + (
-            Fraction(16, 24)
+            Fraction(25, 24)
             * Fraction(1, 24)
             * exponential_majorant**2
             * delta**2
         )
     )
-    second_order_majorant = Fraction(4)
+    second_order_majorant = Fraction(8)
     if not (
-        numerator_remainder < Fraction(1, 3)
-        and denominator_remainder < Fraction(1, 6)
-        and denominator_increment < Fraction(3, 4)
+        numerator_remainder < Fraction(3, 4)
+        and denominator_remainder < Fraction(2, 5)
+        and denominator_increment < Fraction(11, 10)
         and (
-            Fraction(5, 3)
+            Fraction(2)
             * (
-                Fraction(1, 3)
-                + Fraction(1, 6)
-                + Fraction(7, 4) * Fraction(3, 4)
+                Fraction(3, 4)
+                + Fraction(2, 5)
+                + Fraction(31, 12) * Fraction(11, 10)
             )
             < second_order_majorant
         )
     ):
         raise RuntimeError("near-zero rational majorant check failed")
     if not (
-        abs(linear) < 5
+        abs(linear) < 6
         and beta > 3
-        and beta < 4
+        and beta < 5
         and delta <= Fraction(1, 10_000)
     ):
         raise RuntimeError("near-zero Taylor-majorant hypotheses failed")
@@ -298,12 +298,13 @@ def overlap_log(
     second: int,
     beta: arb,
     tolerance: Fraction,
+    dimension: int = 5,
 ) -> tuple[arb, int]:
-    third = (-first - second) % 5
+    third = (-first - second) % dimension
     arguments = (
-        1 + (second * beta - first) / 5,
-        1 + (first * beta - third) / 5,
-        1 + (third * beta - second) / 5,
+        1 + (second * beta - first) / dimension,
+        1 + (first * beta - third) / dimension,
+        1 + (third * beta - second) / dimension,
     )
     total = arb(0)
     panels = 0

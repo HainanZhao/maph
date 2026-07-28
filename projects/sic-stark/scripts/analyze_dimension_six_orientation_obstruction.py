@@ -12,7 +12,7 @@ from __future__ import annotations
 
 from fractions import Fraction
 import json
-from math import gcd
+from math import cos, gcd, pi
 
 
 GROUP_ORDER = 6
@@ -72,6 +72,40 @@ def main() -> None:
     assert reversed_odd_part == [-value for value in odd_part]
     assert any(value != 0 for value in odd_part)
 
+    # Even after the quadratic component q and the absolute value rho of
+    # the primitive regulator are fixed, a full circle of real logarithm
+    # packets remains.  Fourier inversion gives
+    #
+    #   D_j(theta) = (2 rho cos(theta-j*pi/3)+(-1)^j q)/3.
+    #
+    # It satisfies D_(j+3)=-D_j for every theta.  Exponentiating therefore
+    # gives positive reciprocal ray values for every theta, not merely for
+    # the six Artin orientations of an algebraic unit.
+    rho = 1
+    quadratic_component = 2
+
+    def ray_packet(angle: float) -> list[float]:
+        return [
+            (
+                2 * rho * cos(angle - index * pi / 3)
+                + (-1) ** index * quadratic_component
+            )
+            / 3
+            for index in range(GROUP_ORDER)
+        ]
+
+    packet_zero = ray_packet(0)
+    packet_generic = ray_packet(pi / 7)
+    for packet in (packet_zero, packet_generic):
+        assert all(
+            abs(packet[index + 3] + packet[index]) < 1e-12
+            for index in range(3)
+        )
+    assert any(
+        abs(left - right) > 1e-6
+        for left, right in zip(packet_zero, packet_generic)
+    )
+
     # Subgroup norms and field polynomials depend only on unlabeled
     # Galois orbits, so inversion merely permutes their factors.
     subgroups = {
@@ -109,6 +143,22 @@ def main() -> None:
         "datum_changed_by_artin_reversal": (
             "the inversion-odd (or oriented) primitive character component"
         ),
+        "continuous_ambiguity": {
+            "fixed_data": [
+                "quadratic component q",
+                "primitive absolute value rho",
+                "R-reciprocity D_(j+3)=-D_j",
+                "positive reciprocal exponentials exp(D_j)",
+            ],
+            "remaining_parameter": "theta in R/(2*pi*Z)",
+            "fourier_family": (
+                "D_j(theta)=(2*rho*cos(theta-j*pi/3)+(-1)^j*q)/3"
+            ),
+            "consequence": (
+                "Roblot-type absolute-value information leaves a continuous "
+                "circle, not a finite set of Artin orientations."
+            ),
+        },
         "conclusion": (
             "Quadratic class-number formulas, Dedekind-zeta quotients, "
             "and subgroup norms cannot select the d=6 Artin orientation. "
