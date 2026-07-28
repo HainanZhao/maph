@@ -377,6 +377,148 @@ The certificate prints their exact expressions in the power bases of
 Galois action on the full unit lattice, and checks the two index-four
 determinants.
 
+## 8. The four quadratic components
+
+The remaining supported characters are quadratic.  In maximal-ray
+coordinates they are
+
+\[
+ (0,0,1),\quad(2,1,1),\quad(2,0,1),\quad(0,1,1).
+\]
+
+Their quadratic fields over \(K\) have relative equations
+
+\[
+ X^2-\phi,\qquad
+ X^2-6\phi,\qquad
+ X^2-3\phi,\qquad
+ X^2-2\phi.
+\]
+
+All four have signature \((2,1)\), class number one, and successful
+`bnfcertify` output.  The selected Stark units have minimal
+polynomials
+
+\[
+\begin{aligned}
+ T^4-8T^3-2T^2-8T+1,\qquad&
+ T^4-2788T^3-3642T^2-2788T+1,\\
+ T^4-136T^3+126T^2-136T+1,\qquad&
+ T^4-356T^3-314T^2-356T+1.
+\end{aligned}
+\]
+
+For the first and fourth characters the relative unit-norm index is
+one, hence \(e=0\).  The prime above \(3\), which is included in the
+order-ray \(S\)-set but not in the primitive conductor, is inert, so
+\(t_S=1\).  For the middle two characters, the norm index is two,
+hence \(e=1\), and both finite \(S\)-primes are ramified, so \(t_S=0\).
+In every case
+
+\[
+ 2^{e+t_S}|\operatorname{Cl}^-|=2.
+\]
+
+The square of a primitive anti-unit generates the required index-two
+sublattice.  Roblot's quadratic theorem proves the full rank-one Stark
+identity in this case, not merely an absolute-value statement.  Thus
+all four quadratic Fourier coefficients are unconditional.
+
+## 9. Correction: the ray-group isomorphism does not identify zetas
+
+The previous reconstruction in this section was too quick.  Although
+\[
+ \operatorname{Cl}_{(8)\infty_2}(\mathcal O_3)
+ \simeq
+ \operatorname{Cl}_{(24)\infty_2}(\mathcal O_K),
+\]
+this group isomorphism does **not** identify the corresponding partial
+zeta functions.  The conductor prime \(3\) is invisible in the abstract
+group comparison but remains visible in the Dirichlet series.  Thus
+`dimension_eight_packet_reconstruction.gp` reconstructs the
+maximal-order ray-\(24\) packet, not the nonmaximal-order ray-\(8\)
+packet.
+
+Kopp's conductor-lowering theorem gives the correct bridge.  Put
+\[
+ \phi=\frac{1+\sqrt5}{2},\qquad
+ B=\begin{pmatrix}3&2\\0&1\end{pmatrix},\qquad
+ \beta=B\phi=3\phi+2.
+\]
+If \(\boldsymbol p=(a,b)\) and
+\(\boldsymbol r=\boldsymbol p/8\), the three solutions of
+\(B\boldsymbol s\equiv\boldsymbol r\pmod{\mathbb Z^2}\) are
+\[
+ \boldsymbol s_j
+ =\frac1{24}\binom{a-2b+8j}{3b},
+ \qquad j=0,1,2.
+\]
+Their maximal-order ray generators are
+\[
+ \gamma_j
+ =24(s_{j,2}\phi-s_{j,1})
+ =3b\phi-a+2b-8j.
+\]
+
+Let
+\[
+ \mathfrak d_j=(24,\gamma_j),\qquad
+ \mathfrak m_j=(24)\mathfrak d_j^{-1}.
+\]
+For every primitive dimension-eight characteristic,
+\[
+ N\mathfrak d_j\in\{1,9\},\qquad
+ \mathfrak m_j\in\{(24),(8)\}.
+\]
+Write \(D_j\) for the differenced maximal-order partial-zeta derivative
+of the reduced ray class
+\(\gamma_j\mathfrak d_j^{-1}\) modulo
+\(\mathfrak m_j\infty_2\), put
+\[
+ \epsilon_j=\operatorname{sgn}(\gamma_j'),\qquad
+ k_j=\begin{cases}1,&\mathfrak m_j=(24),\\2,&\mathfrak m_j=(8),\end{cases}
+\]
+and use the positive square fixed by the AFK phase.  The
+conductor-lowering and stabilizer calculation gives
+\[
+ \boxed{\quad
+ \log\bigl(\widetilde\nu_{a,b}^{\,2}\bigr)
+ =\sum_{j=0}^{2}\frac{\epsilon_jk_j}{2}D_j.
+ \quad}
+\]
+The factor \(k_j=2\) occurs because the common stabilizer
+\[
+ M^{12},\qquad M=\begin{pmatrix}2&1\\1&1\end{pmatrix},
+\]
+is the square of the canonical level-eight stabilizer \(M^6\).
+The signs \(\epsilon_j\) are the second-real-place orientation
+discarded by an ideal-only class label.
+
+For example, at \((a,b)=(0,1)\), the two ray-\(24\) contributions and
+the ray-\(8\) contribution give
+\[
+\begin{aligned}
+\log\bigl(\widetilde\nu_{0,1}^{\,2}\bigr)
+ &=
+ 3.9330945661607571783
+ -1.9999892753207030993\\
+ &=1.9331052908400540791.
+\end{aligned}
+\]
+This agrees with the direct double-sine value
+\(2\log|\widetilde\nu_{0,1}|\).  The reproducible audit checks all
+\(48\) primitive characteristics; its maximum log-square residual is
+\(5.6\times10^{-9}\), at the accuracy of the elementary numerical
+double-sine integrator.
+
+This correction does not remove the quartic obstruction.  The
+ray-\(8\) terms are quadratic and unconditional, while the ray-\(24\)
+terms still contain the two quartic Fourier pairs.  Roblot proves the
+absolute values of their logarithmic resolvents, but not their two
+orientations.  The minimal remaining analytic input is therefore still
+two oriented cyclic-quartic Stark identities, now inserted through the
+correct conductor-lowering formula.
+
 ## Recommendation
 
 Dimension eight is substantially closer than it appeared in cycle 29:
@@ -401,6 +543,10 @@ orientation identity and no nonmaximal-order layer.
 ## Reproducibility
 
 - `scripts/dimension_eight_quartic_bridge.gp`
+- `scripts/dimension_eight_quadratic_bridge.gp`
+- `scripts/dimension_eight_packet_reconstruction.gp`
+- `scripts/explore_dimension_eight_conductor_lowering.gp`
+- `scripts/verify_dimension_eight_conductor_lowering.py`
 - `scripts/analyze_dimension_eight_order_ray.py`
 - `scripts/generate_dimension_eight_ray_table.py`
 

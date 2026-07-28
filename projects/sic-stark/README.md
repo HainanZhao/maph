@@ -145,13 +145,50 @@ See [`docs/sic-stark-sprint1.md`](docs/sic-stark-sprint1.md) and
 [`docs/sic-stark-cycle23.md`](docs/sic-stark-cycle23.md), followed by
 [`docs/sic-stark-cycle24.md`](docs/sic-stark-cycle24.md), for the claim ledger.
 
+## Higher-dimensional status
+
+The later research ledger now separates the first three dimensions beyond
+the closed \(d=4\) case:
+
+- dimension five has an unconditional algebraic closure package;
+- dimension six has a genuine primitive-character obstruction to the
+  currently available conductor-lowering argument; and
+- dimension seven passes the Shintani index sieve and now has a complete
+  conductor-two absolute-value bridge for all \(48\) nonzero
+  characteristics.
+
+The dimension-seven derivation, including the exact \(\Upsilon\) labels,
+six lowered moduli, stabilizer, Kopp exponents, and the \(3.5\cdot10^{-9}\)
+full-packet audit, is in
+[`docs/sic-stark-cycle46.md`](docs/sic-stark-cycle46.md).  Cycles
+[`47`](docs/sic-stark-cycle47.md) through
+[`56`](docs/sic-stark-cycle56.md) subsequently derive the exact phase
+\(\phi_p=\zeta_{56}^{7-32Q(p)}\), construct the complete complex
+characteristic packet, identify all six exact ray fields, recognize small
+reciprocal unit polynomials, reduce the packet to eight variables, and audit
+both formal shifts.  [Cycle 57](docs/sic-stark-cycle57.md) then isolates all
+sixteen squared-overlap roots, finds the safe Shintani exponent \(16128\),
+certifies the Artin labels, collapses the signed overlap algebra and
+\(\zeta_{56}\) into one degree-\(48\) field, selects that compositum by an
+exact real-cyclotomic intersection identity, verifies the labeled
+ray-field isomorphism over \(\mathbf Q(\sqrt2)\), and proves exactly all
+\(441\) rank-two minors for each of the two formal shifts.  The
+adversarial source and field-gluing audit, including the corrected
+Shintani unit-congruence factors, is recorded in
+[Cycle 58](docs/sic-stark-cycle58.md).
+
 ## Verification
 
-The code uses only the Python standard library.
+The default tests use Python, NumPy, and PARI/GP.  The rigorous
+double-sine enclosure additionally uses `python-flint`.
 
 ```bash
 python3 -m unittest discover -s tests -v
 python3 scripts/analyze_sic_canonical_family.py --stop 20
 python3 scripts/verify_sic_fiducials.py --dimension 4 --show-residuals
 python3 scripts/explore_dimension_four_double_sine.py
+python3 scripts/verify_dimension_seven_conductor_lowering.py
+gp -q scripts/dimension_seven_shintani_audit.gp
+gp -q scripts/dimension_seven_artin_labels.gp
+gp -q scripts/dimension_seven_exact_tcc.gp
 ```
