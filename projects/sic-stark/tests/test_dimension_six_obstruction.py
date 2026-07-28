@@ -278,6 +278,98 @@ class DimensionSixObstructionTests(unittest.TestCase):
             result.stdout,
         )
 
+    def test_absolute_abelianization_kills_cubic_orientation(self) -> None:
+        result = subprocess.run(
+            [
+                "gp",
+                "-q",
+                str(
+                    ROOT
+                    / "scripts/dimension_six_absolute_abelian_gate.gp"
+                ),
+            ],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        self.assertNotIn("user error", result.stderr)
+        self.assertIn(
+            "FULL_RAY_ABELIANIZATION=C2xC2",
+            result.stdout,
+        )
+        self.assertIn(
+            "MAXIMAL_ABSOLUTELY_ABELIAN_SUBFIELD_DEGREE=4",
+            result.stdout,
+        )
+        self.assertIn(
+            "FAITHFUL_CUBIC_ORIENTATION_SURVIVES_ABELIANIZATION=0",
+            result.stdout,
+        )
+        self.assertIn(
+            "SCALAR_KERNEL_IN_COMMUTATOR=1",
+            result.stdout,
+        )
+        self.assertIn(
+            "SCALAR_TWIST_DESCENT_TO_PROJECTIVE_CM_FIELD=0",
+            result.stdout,
+        )
+
+    def test_full_ray_field_is_not_cm(self) -> None:
+        result = subprocess.run(
+            [
+                "gp",
+                "-q",
+                str(
+                    ROOT
+                    / "scripts/dimension_six_full_ray_cm_gate.gp"
+                ),
+            ],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        self.assertNotIn("user error", result.stderr)
+        self.assertIn(
+            "TOTALLY_REAL_DEGREE_TWELVE_SUBFIELD_COUNT=0",
+            result.stdout,
+        )
+        self.assertIn(
+            "FULL_RAY_FIELD_IS_CM=0",
+            result.stdout,
+        )
+        self.assertIn(
+            "CM_BRUMER_STARK_THEOREM_APPLIES=0",
+            result.stdout,
+        )
+
+    def test_projective_cm_packet_misses_linear_orientation(self) -> None:
+        result = subprocess.run(
+            [
+                "gp",
+                "-q",
+                str(
+                    ROOT
+                    / "scripts/dimension_six_projective_cm_gate.gp"
+                ),
+            ],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        self.assertNotIn("user error", result.stderr)
+        self.assertIn(
+            "PROJECTIVE_QUOTIENT_IS_CM=1",
+            result.stdout,
+        )
+        self.assertIn(
+            "PROJECTIVE_TOTALLY_REAL_HALF_FIELD_COUNT=1",
+            result.stdout,
+        )
+        self.assertIn(
+            "TARGET_LINEAR_REPRESENTATION_IN_PROJECTIVE_CM_PACKET=0",
+            result.stdout,
+        )
+
     def test_qgamma_regularizes_the_full_rational_boundary(self) -> None:
         result = subprocess.run(
             [
