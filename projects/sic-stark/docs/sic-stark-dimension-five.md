@@ -389,5 +389,5 @@ minor certificate proves the complete dimension-five TCC.
 - `certificates/dimension-five-unit-lattice.txt`
 - `scripts/certify_dimension_five_double_sine.py`
 - `certificates/dimension-five-double-sine-intervals.txt`
-- `paper/sic-stark-dimension-five.tex`
-- `paper/sic-stark-dimension-five.pdf`
+- `paper/sic-stark-dimensions-four-five.tex`
+- `paper/sic-stark-dimensions-four-five.pdf`
