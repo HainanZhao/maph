@@ -12,34 +12,486 @@
 \newcommand{\Q}{\mathbb Q}
 \newcommand{\Z}{\mathbb Z}
 
-\title{A Dimension-Five Twisted-Convolution Identity\\
-from a Shintani Ray Packet}
+\title{Twisted-Convolution Identities in Dimensions Four and Five\\
+from Shintani Ray Units}
 \author{Draft for review}
-\date{27 July 2026}
+\date{28 July 2026}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-For $K=\Q(\sqrt3)$ and modulus $(5)\infty_2$, the ray group relevant
-to the dimension-five principal ghost is cyclic of order eight.  We
+We prove the formal Twisted Convolution Conjecture unconditionally in
+dimensions four and five.  Dimension four is the quadratic calibration:
+the principal-ghost table depends on one positive double-sine value,
+all $36$ rank-two minors have one common quadratic factor, and Kopp's
+Kronecker-limit formula together with an analytic class-number
+calculation evaluates that factor exactly.  Dimension five is the main
+arithmetic case.  For $K=\Q(\sqrt3)$ and modulus $(5)\infty_2$, we
 compute all twenty-four nonzero characteristics, their positive Kopp
-lifts, ray classes, cocycle signs, and modular multipliers.  We then
-prove unconditionally that the four positive double-sine values form
-the reciprocal degree-eight ray-unit packet previously recognized
-numerically by Kopp.  The proof specializes Shintani's 1978
-algebraicity theorem, extracts the safe exponent $5760$, certifies the
-labeled ray field and Frobenius orbit exactly, and uses rigorous Arb
-enclosures together with Voutier's height bound to remove the power.
-An exact calculation over $\Q(\zeta_5,\sqrt6)$ then proves that all one
-hundred $2$-minors of the reconstructed ghost matrix vanish.  This
-establishes both predicted shifts for every dimension-five admissible
-tuple, and hence the complete dimension-five Twisted Convolution
-Conjecture.  No Stark conjecture or \texttt{bnrstark} recognition is
-used as an input.
+lifts, ray classes, signs, and multipliers.  Shintani's 1978
+algebraicity theorem gives a safe exponent $5760$; labeled ray-field
+and Frobenius certificates, rigorous Arb enclosures, and Voutier's
+height bound then identify the complete reciprocal degree-eight ray
+packet.  Exact number-field arithmetic makes all $100$ rank-two
+minors vanish.  In both dimensions complex conjugation supplies the
+paired shift, and integral form covariance gives the result for every
+admissible tuple.  No Stark conjecture or \texttt{bnrstark}
+recognition is used as an input.  We finish with exact research-status
+boundaries for dimensions six and eight: one primitive order-six
+Shintani--Stark value remains in dimension six, while two oriented
+cyclic-quartic resolvents remain in dimension eight.  The finite
+cancellation certificates in those dimensions are already exact, but
+the boundary results are not asserted as unconditional TCC theorems.
 \end{abstract}
 
-\section{Canonical data and conventions}
+\section{Overview and common convention}
+
+The principal-ghost construction of Appleby--Flammia--Kopp
+\cite{AFK} associates convention-sensitive Shintani--Faddeev
+real-multiplication values to a finite Weyl reconstruction.  The formal
+TCC asks for two shifted twisted convolutions to vanish, equivalently
+for the reconstructed ghost matrices to be rank-one idempotents.  Our
+proof architecture is
+\[
+\begin{array}{c}
+\text{characteristic-to-ray and multiplier bridge}\\
+\Downarrow\\
+\text{analytic identification of a labeled ray-unit packet}\\
+\Downarrow\\
+\text{exact vanishing of every rank-two minor}\\
+\Downarrow\\
+\text{both formal shifts and integral-form transport}.
+\end{array}
+\]
+
+To remove the standard double-sine ambiguity once and for all, define
+\[
+ S_2(z\mid\omega_1,\omega_2)
+ :=\frac{\Gamma_2(z\mid\omega_1,\omega_2)}
+ {\Gamma_2(\omega_1+\omega_2-z\mid\omega_1,\omega_2)}.
+\tag{1}
+\]
+Thus $S_2$ is the reciprocal of Kopp's
+$\operatorname{Sin}_{2,\mathrm{Kopp}}$ convention
+\cite[Definition~4.22, equation~(4.8)]{Kopp}.
+
+\begin{theorem}[Low-dimensional TCC]\label{thm:lowdim}
+For every admissible tuple in dimension four or five,
+\[
+ 0,1\in{\cal Z}_t.
+\]
+If $t,t'$ have the same dimension, then
+$\mathcal Z_t=\mathcal Z_{t'}$.
+\end{theorem}
+
+The dimension-four proof below is deliberately compact: it records the
+complete analytic and finite bridge but leaves the thirty-six explicit
+minor quotients to the supplementary certificate.  Dimension five
+requires the longer powered-algebraicity and height-rigidity argument
+that forms the body of the paper.
+
+\section{Dimension four: the quadratic calibration}\label{sec:d4}
+
+Put
+\[
+ \phi=\frac{1+\sqrt5}{2},\qquad
+ \beta_4=\phi^2,\qquad
+ Q_4=\langle1,-3,1\rangle,\qquad
+ \tau_4=-e^{\pi i/4}.
+\]
+The complete signed reconstruction table is
+\[
+T_4(x)=
+\begin{pmatrix}
+\sqrt5&-x&1&-x^{-1}\\
+-x^{-1}&-x^{-1}&-x^{-1}&-x\\
+1&-x^{-1}&1&x\\
+-x&-x^{-1}&x&-x
+\end{pmatrix},
+\tag{D4.1}
+\]
+where
+\[
+x=\sqrt2\,
+\frac{S_2(\beta_4/4\mid\beta_4,1)
+      S_2(1/4\mid\beta_4,1)}
+     {S_2((\beta_4+1)/4\mid\beta_4,1)}.
+\tag{D4.2}
+\]
+\begin{lemma}[Dimension-four reconstruction table]\label{lem:d4overlaps}
+For the canonical tuple, the fifteen nonzero AFK analytic overlaps are
+the nonzero-characteristic entries of \textup{(D4.1)}.  The entry
+$(T_4)_{0,0}=\sqrt5$ packages the normalized ghost identity coefficient
+into the same table.
+\end{lemma}
+
+\begin{proof}
+Put
+\[
+ {\cal D}^{(4)}_{c,b}:=
+ S_2\!\left(\frac{c+b\beta_4}{4}\,\middle|\,\beta_4,1\right).
+\]
+For $(p,q)\ne(0,0)$ and $r\equiv-p-q\pmod4$, the principal-form
+specialization of AFK Definition~1.32 is
+\[
+ \widetilde\nu_{p,q}
+ =(-1)^{\,4(p+q)+pq+\min(4,p+q)}
+ {\cal D}^{(4)}_{4-p,q}{\cal D}^{(4)}_{4-r,p}
+ {\cal D}^{(4)}_{4-q,r}.
+\tag{D4.DS}
+\]
+This formula already includes the AFK phase.  The complete substitution
+audit is
+\[
+\begin{array}{c|c|c@{\qquad}c|c|c}
+(p,q)&r&\widetilde\nu_{p,q}&(p,q)&r&\widetilde\nu_{p,q}\\ \hline
+(0,1)&3&-x &(0,2)&2&1\\
+(0,3)&1&-x^{-1}&(1,0)&3&-x^{-1}\\
+(1,1)&2&-x^{-1}&(1,2)&1&-x^{-1}\\
+(1,3)&0&-x&(2,0)&2&1\\
+(2,1)&1&-x^{-1}&(2,2)&0&1\\
+(2,3)&3&x&(3,0)&1&-x\\
+(3,1)&0&-x^{-1}&(3,2)&3&x\\
+(3,3)&2&-x&&&
+\end{array}
+\]
+Every nonzero-characteristic entry follows from \textup{(D4.DS)}
+using only
+\[
+ S_2(z)S_2(\beta_4+1-z)=1,\quad
+ S_2(z+1)=2\sin(\pi z/\beta_4)S_2(z),\quad
+ S_2(z+\beta_4)=2\sin(\pi z)S_2(z),
+\tag{D4.FE}
+\]
+and $\beta_4^2=3\beta_4-1$.  The value $\sqrt5$ at $(0,0)$ is not an
+analytic zero-characteristic cocycle value: after division by
+$\sqrt5$ it represents the Weyl coefficient $\mu_{\boldsymbol0}=1$.
+\end{proof}
+
+Define
+\[
+ K^{(4)}_{r,c}(x)=\frac1{4\sqrt5}
+ \sum_{\substack{0\le a,b<4\\r\equiv c+a\pmod4}}
+ (T_4)_{a,b}(x)\tau_4^{ab}i^{bc}.
+\tag{D4.3}
+\]
+The representative reduction in (D4.3) retains the even-dimensional
+wrap sign.  Its diagonal Fourier sum gives
+\[
+ \Tr K^{(4)}=(T_4)_{0,0}/\sqrt5=1.
+\tag{D4.4}
+\]
+Exact Laurent reduction proves that every one of its $36$ rank-two
+minors belongs to the principal ideal
+\[
+ \left(x^2-\sqrt{3+\sqrt5}\,x+1\right)
+ \subset\Q(i,\sqrt2,\sqrt5)[x,x^{-1}].
+\tag{D4.5}
+\]
+The certificate records all $36$ quotients coefficientwise in the
+genuine basis $1,\sqrt2,\sqrt5,\sqrt{10}$; two minors are structurally
+zero and the other $34$ have nonzero formal quotients.
+
+It remains to evaluate (D4.2).  Write $K_4=\Q(\sqrt5)$,
+$\mathcal O_{K_4}=\Z[\phi]$, and label its embeddings by
+$\infty_1(\sqrt5)=+\sqrt5$ and $\infty_2(\sqrt5)=-\sqrt5$.
+Since $2$ is inert,
+$|(\mathcal O_{K_4}/4)^\times|=12$.  The images of
+$\{\pm\phi^n\}$ together with the sign at $\infty_2$ have order $12$;
+the ray exact sequence and $h_{K_4}=1$ therefore give
+\[
+ \Cl_{(4)\infty_2}(K_4)\cong C_2.
+\tag{D4.6}
+\]
+The field
+\[
+ L_4=K_4(\sqrt\phi)
+\]
+has relative discriminant $(4)$, and $\infty_2$ ramifies because
+$\phi'<0$.  The quadratic conductor--discriminant theorem and
+\textup{(D4.6)} show that $L_4$ is the full ray field.
+
+Set $u=\phi+\sqrt\phi$ and let
+$\sigma(\sqrt\phi)=-\sqrt\phi$.  Then
+$u^\sigma=u^{-1}$ and
+\[
+ N_{L_4/K_4}(u)=1,\qquad \Tr_{L_4/K_4}(u)=1+\sqrt5.
+\]
+The field $L_4$ has signature $(2,1)$ and discriminant $-400$.
+For $s=\sqrt\phi$, the power-basis discriminant of
+$1,s,s^2,s^3$ is also $-400$, equal to the certified field
+discriminant; hence $\mathcal O_{L_4}=\Z[s]$.  Its Minkowski bound is
+$15/(2\pi)<2.4$, and there is no ideal of norm two because
+\[
+ X^4-X^2-1\equiv(X^2+X+1)^2\pmod2.
+\]
+Thus $h_{L_4}=1$.  PARI/GP~2.15.4~\cite{PARI} returns the fundamental units
+$s^3-s=s^{-1}$ and $-s^2+s=-u^{-1}$; its
+\texttt{bnfcertify}=1 output certifies unconditionally that
+\[
+ R_{L_4}=\log\phi\,\log u.
+\]
+For the nontrivial quadratic ray character $\chi$,
+$L(s,\chi)=\zeta_{L_4}(s)/\zeta_{K_4}(s)$.  Using
+\[
+ \zeta_F(s)=-\frac{h_FR_F}{w_F}s^{r_1+r_2-1}
+ +O(s^{r_1+r_2})
+\]
+for $F=K_4,L_4$ gives
+\[
+ L'(0,\chi)=\log u.
+\tag{D4.7}
+\]
+
+We now spell out the convention-sensitive specialization of Kopp's
+Theorem~1.1~\cite{Kopp}.  Take modulus $4\mathcal O_{K_4}$, identity ray class
+$\mathfrak A$, $\mathfrak b=\mathcal O_{K_4}$, $\alpha=4$,
+characteristic
+\[
+ \boldsymbol r=\binom0{1/4},
+\qquad
+ B_4=
+ \begin{pmatrix}3&-1\\1&0\end{pmatrix}^{\!3}
+ =
+ \begin{pmatrix}21&-8\\8&-3\end{pmatrix}.
+\]
+Here
+$4(\beta_4\Z+\Z)=\mathfrak b\mathfrak m$,
+$4(r_2\beta_4-r_1)\mathcal O_{K_4}
+=\beta_4\mathcal O_{K_4}=\mathcal O_{K_4}\in\mathfrak A$, and
+$r_2\beta_4'-r_1=\beta_4'/4>0$.
+Moreover
+$B_4\boldsymbol r-\boldsymbol r=(-2,-1)^{\mathsf T}$;
+$B_4$ is the positive generator of $\Gamma_{\boldsymbol r}$ with
+expanding eigenvalue $\beta_4^3$.  The fiber of
+\[
+ \Cl_{(4)\infty_1\infty_2}(K_4)
+ \longrightarrow \Cl_{(4)\infty_2}(K_4)
+\]
+has order two, so Kopp's exponent is $n=2/2=1$.
+
+Kopp defines a sign class $\mathfrak R$ in
+\cite[Definition~6.3]{Kopp}.  Here it is represented by
+$(-1\bmod4,+\text{ at }\infty_2)$.  The residues of
+$\phi^n=a_n+b_n\phi$ for $0\le n<6$ are
+\[
+ (a_n,b_n)=(1,0),(0,1),(1,1),(1,2),(2,3),(3,1),
+\]
+and $\phi^6\equiv1\pmod4$.  Hence every unit congruent to $-1$ modulo
+$4$ is $-\phi^{6k}$, which is negative at $\infty_2$.  Thus
+$\mathfrak R\ne\mathfrak A$; by \textup{(D4.6)} it is the nonidentity
+class, and the differenced partial zeta is
+\[
+ Z_{(4)\infty_2}(s,\mathfrak A)
+ =\zeta(s,\mathfrak A)-\zeta(s,\mathfrak R\mathfrak A)
+ =L(s,\chi).
+\tag{D4.8}
+\]
+
+The Rademacher invariant of $B_4$ is zero:
+$s(21,8)=-1/16$ gives
+$18/8-3-12(-1/16)=0$.  Thus $\psi^2(B_4)=1$, while Kopp's theta
+character gives
+\[
+ \chi_{\boldsymbol r}(B_4)
+ =\exp\!\left(2\pi i\,\frac12
+ \left(-\frac{28}{4}+\frac{152}{16}\right)\right)=i.
+\]
+Consequently
+\[
+ (\psi^{-2}\chi_{\boldsymbol r}^{-1})(B_4)=-i
+ =\Phi_{(0,1)}^2,\qquad
+ \Phi_{(0,1)}=e^{3\pi i/4}.
+\tag{D4.9}
+\]
+
+For completeness, put
+$C=\left(\begin{smallmatrix}3&-1\\1&0\end{smallmatrix}\right)$.
+The characteristic orbit in the three cocycle factors is
+\[
+ (0,1)\longmapsto(3,0)\longmapsto(1,3)\longmapsto(0,1),
+\]
+with unreduced steps
+\[
+ C(0,1)=(-1,0)=(3,0)+(-4,0),\quad
+ C(3,0)=(9,3)=(1,3)+(8,0),\quad
+ C(1,3)=(0,1).
+\]
+Substitution in \textup{(D4.DS)} gives exponent
+$4(0+1)+0+\min(4,1)=5$ and the three arguments
+$1+\beta_4/4$, $1/4$, and $1+(3\beta_4-1)/4$.  Hence
+\[
+ \nu_{(0,1)}
+ =\Phi_{(0,1)}
+  \operatorname{shin}^{\boldsymbol r}_{B_4}(\beta_4)=-x.
+\tag{D4.10}
+\]
+Squaring \textup{(D4.10)} and applying Kopp's formula line by line now
+gives
+\[
+\begin{split}
+ x^2
+ &=\Phi_{(0,1)}^2
+   \operatorname{shin}^{\boldsymbol r}_{B_4}(\beta_4)^2\\
+ &=(\psi^{-2}\chi_{\boldsymbol r}^{-1})(B_4)
+   \operatorname{shin}^{\boldsymbol r}_{B_4}(\beta_4)^2\\
+ &=\exp Z_{(4)\infty_2}'(0,\mathfrak A)
+  =\exp L'(0,\chi)=u.
+\end{split}
+\tag{D4.11}
+\]
+Since $u+u^{-1}=1+\sqrt5$ and $x>0$,
+\[
+ x+x^{-1}=\sqrt{3+\sqrt5}.
+\]
+Thus (D4.5) makes every minor vanish; (D4.4) then gives
+\[
+ \operatorname{rank}K^{(4)}=1,\qquad
+ (K^{(4)})^2=K^{(4)}.
+\tag{D4.12}
+\]
+
+\begin{lemma}[Dimension-four coefficient bridge]\label{lem:d4tcc}
+For the canonical tuple
+$t_4=(4,1,\langle1,-3,1\rangle)$, the equality
+$(K^{(4)})^2=K^{(4)}$ is equivalent to the $\lambda=1$ instance of
+AFK equation~(1.49).
+\end{lemma}
+
+\begin{proof}
+For $\boldsymbol p\ne\boldsymbol0$, let
+$\nu_{\boldsymbol p}$ denote the analytic value from
+Lemma~\ref{lem:d4overlaps}.  Reciprocity gives
+\[
+ \nu_{\boldsymbol p}\nu_{-\boldsymbol p}=1.
+\tag{D4.13}
+\]
+The actual ghost reconstruction is
+\[
+ K^{(4)}=\frac14I+\frac1{4\sqrt5}
+ \sum_{\boldsymbol p\ne\boldsymbol0}
+ \nu_{\boldsymbol p}D_{\boldsymbol p};
+\tag{D4.14}
+\]
+the artificial table entry $(T_4)_{0,0}=\sqrt5$ packages the first
+term and is not used as an analytic cocycle value.
+
+Expand \textup{(D4.14)} using
+$D_{\boldsymbol p}D_{\boldsymbol q}
+=\tau_4^{\langle\boldsymbol p,\boldsymbol q\rangle}
+D_{\boldsymbol p+\boldsymbol q}$.  After multiplication by $80$, the
+coefficient of $D_{\boldsymbol p}$ for
+$\boldsymbol p\ne\boldsymbol0$ is
+\[
+ \sum_{\substack{\boldsymbol q\bmod4\\
+       \boldsymbol q\ne\boldsymbol0,\boldsymbol p}}
+ \tau_4^{\langle\boldsymbol p,\boldsymbol q\rangle}
+ \nu_{\boldsymbol p-\boldsymbol q}\nu_{\boldsymbol q}
+ -2\sqrt5\,\nu_{\boldsymbol p}.
+\tag{D4.15}
+\]
+By \textup{(D4.13)}, the product is
+$\nu_{\boldsymbol q}/\nu_{\boldsymbol q-\boldsymbol p}$.
+
+AFK's $\nu_{\boldsymbol0}^{\rm aux}$ is a separate auxiliary cocycle
+value.  Their zero-characteristic lemma gives
+\[
+ \nu_{\boldsymbol0}^{\rm aux}
+ +(\nu_{\boldsymbol0}^{\rm aux})^{-1}
+ =-(4-2)\sqrt5=-2\sqrt5.
+\tag{D4.16}
+\]
+Thus adjoining the omitted endpoints
+$\boldsymbol q=\boldsymbol0,\boldsymbol p$ to \textup{(D4.15)}
+produces exactly the full endpoint-corrected sum
+\[
+ \sum_{\boldsymbol q\in\mathcal I_{\boldsymbol p}}
+ \tau_4^{\langle\boldsymbol p,\boldsymbol q\rangle}
+ \frac{\nu_{\boldsymbol q}}
+ {\nu_{\boldsymbol q-\boldsymbol p}},
+\tag{D4.17}
+\]
+with the endpoint ratios interpreted through
+$\nu_{\boldsymbol0}^{\rm aux}$.
+
+For nonzero characteristics write
+\[
+ \nu_{\boldsymbol q}
+ =\Phi_{\boldsymbol q}
+ \operatorname{shin}_{A_{t_4}}^{\boldsymbol q/4}(\beta_4),
+ \qquad A_{t_4}=B_4.
+\]
+The two phase identities in AFK Section~5.4 give
+\[
+ \frac{\Phi_{\boldsymbol q}}{\Phi_{\boldsymbol q-\boldsymbol p}}
+ =(-1)^{1+s_4(\boldsymbol p)}\tau_4^{Q_4(\boldsymbol p)}
+  \tau_4^{(4-3)\langle\boldsymbol p,\boldsymbol q\rangle}
+  \omega_4^{\langle\boldsymbol p,L_{z,t_4}\boldsymbol q\rangle},
+\]
+\[
+ \frac{\operatorname{shin}_{A_{t_4}}^{\boldsymbol q/4}(\beta_4)}
+ {\operatorname{shin}_{A_{t_4}}^{(\boldsymbol q-\boldsymbol p)/4}
+  (\beta_4)}
+ =
+ \operatorname{shin}_{A_{t_4}}^{\boldsymbol q/4}(\beta_4)
+ \operatorname{shin}_{A_{t_4}^{-1}}^{
+   (\boldsymbol q-\boldsymbol p)/4}(\beta_4).
+\]
+For the identity twist $f_{t_4}(1)=1$.  Its Weyl chirp contributes
+the additional
+$\tau_4^{\langle\boldsymbol p,\boldsymbol q\rangle}$, and hence
+\[
+ \tau_4^{(1+4-3)\langle\boldsymbol p,\boldsymbol q\rangle}
+ =\omega_4^{\langle\boldsymbol p,\boldsymbol q\rangle}.
+\]
+Up to a nonzero factor independent of $\boldsymbol q$, the coefficient
+equation is therefore
+\[
+ \sum_{\boldsymbol q\in\mathcal I_{\boldsymbol p}}
+ \omega_4^{\langle\boldsymbol p,
+ (I+L_{z,t_4})\boldsymbol q\rangle}
+ \operatorname{shin}_{A_{t_4}}^{\boldsymbol q/4}(\beta_4)
+ \operatorname{shin}_{A_{t_4}^{-1}}^{
+       (\boldsymbol q-\boldsymbol p)/4}(\beta_4)
+ =16\delta_{\boldsymbol p,\boldsymbol0}^{(4)}.
+\tag{D4.TCC}
+\]
+This is exactly AFK equation~(1.49) with $r=1$ and $\lambda=1$.
+For $\boldsymbol p=\boldsymbol0$, the cocycle inverse identity makes
+the sum $16$ automatically.  Every step is reversible, including the
+endpoint correction \textup{(D4.16)}.
+\end{proof}
+
+By \textup{(D4.4)} and \textup{(D4.12)}, $K^{(4)}$ is a trace-one
+rank-one idempotent, so Lemma~\ref{lem:d4tcc} proves that $1$ is a
+shift.  The twist--shift congruence for the identity twist is
+\[
+ 2\lambda+7\equiv1\pmod8,
+\]
+hence $\lambda\equiv1\pmod4$.
+
+Complex conjugation replaces the twist $G$ by $J_0G$, where
+$J_0=\operatorname{diag}(1,-1)$.  It preserves idempotence and sends
+\[
+ \lambda\longmapsto-(\lambda+d_j-1)=1-\lambda\pmod4.
+\]
+It therefore supplies the $\lambda=0$ equation.  Equivalently,
+$\det(J_0G)=-1$ gives
+$-(2\lambda+7)\equiv1\pmod8$ and hence
+$\lambda\equiv0\pmod4$.
+
+Finally, dimension-four admissibility forces
+$r=j=m=1$, $K_4=\Q(\sqrt5)$, and conductor one, so every admissible
+form has discriminant five.  Class number one and the norm-$-1$ unit
+$\phi$ give narrow class number one; all such forms lie in one proper
+equivalence class.  The AFK Section~7.1 transformation with
+$\boldsymbol q\mapsto\ell M\boldsymbol q$ gives
+$\mathcal Z_t\subseteq\mathcal Z_{t_M}$, and applying it to $M^{-1}$
+gives the reverse inclusion.  Thus both shifts hold for every
+dimension-four admissible tuple and their shift sets are equal.
+
+\section{Dimension five: canonical data and conventions}
 
 Put
 \[
@@ -59,15 +511,7 @@ $\infty_2(\sqrt3)=-\sqrt3$.  The modulus throughout is
  \mathfrak m=(5)\infty_2.
 \]
 
-To remove the standard double-sine ambiguity, define
-\[
- S_2(z\mid\omega_1,\omega_2)
- :=\frac{\Gamma_2(z\mid\omega_1,\omega_2)}
- {\Gamma_2(\omega_1+\omega_2-z\mid\omega_1,\omega_2)}.
-\tag{1}
-\]
-Thus $S_2$ is the reciprocal of Kopp's
-$\operatorname{Sin}_{2,\mathrm{Kopp}}$ convention.
+We continue to use the reciprocal double-sine convention (1).
 For $0\le c\le5$ and $0\le b<5$, write
 \[
  {\cal D}_{c,b}:=
@@ -616,25 +1060,26 @@ signed table (9) unconditionally.
 Let $\zeta_5=e^{2\pi i/5}$ and
 $\tau=-e^{\pi i/5}=\zeta_5^3$.  Define, without reference to software,
 \[
- K_{r,c}:=\frac1{5\sqrt6}
+ \Pi^{(5)}_{r,c}:=\frac1{5\sqrt6}
  \sum_{\substack{0\le a,b<5\\r\equiv c+a\pmod5}}
  T_{a,b}\tau^{ab}\zeta_5^{bc},
  \qquad 0\le r,c<5,
 \tag{17}
 \]
 where $T$ is (9).  Equivalently,
-$K=\frac15\sum_{a,b}(T_{a,b}/\sqrt6)D_{a,b}$ for
+$\Pi^{(5)}=\frac15\sum_{a,b}(T_{a,b}/\sqrt6)D_{a,b}$ for
 $D_{a,b}e_c=\tau^{ab}\zeta_5^{bc}e_{c+a}$.
 In particular,
 \[
- \Tr K=T_{0,0}/\sqrt6=1.
+ \Tr\Pi^{(5)}=T_{0,0}/\sqrt6=1.
 \tag{18}
 \]
 
 \begin{proposition}[Exact 100-minor certificate]\label{prop:minors}
 For the algebraic values selected by (13)--(14), all one hundred
 $2$-minors of the matrix (17) vanish exactly.  Hence
-$\operatorname{rank}K=1$ and $K^2=K$.
+$\operatorname{rank}\Pi^{(5)}=1$ and
+$(\Pi^{(5)})^2=\Pi^{(5)}$.
 \end{proposition}
 
 \begin{proof}
@@ -667,16 +1112,17 @@ not floating-point evaluation.  The complete script and transcript
 are supplied with the manuscript.
 
 The matrix is nonzero because (18) gives trace one.  Thus its rank is
-exactly one.  Any rank-one matrix satisfies
-$K^2=(\Tr K)K$, proving idempotency.
+exactly one.  Any rank-one matrix $M$ satisfies
+$M^2=(\Tr M)M$, proving idempotency.
 \end{proof}
 
 \section{Dimension-five twisted convolution}
 
 \begin{lemma}[Weyl coefficient bridge]\label{lem:bridge}
-The matrix $K$ of (17) is the standard-basis Weyl reconstruction of
+The matrix $\Pi^{(5)}$ of (17) is the standard-basis Weyl reconstruction of
 the canonical AFK ghost for
-$t=(5,1,\langle1,-4,1\rangle)$.  Moreover, $K^2=K$ is equivalent to
+$t=(5,1,\langle1,-4,1\rangle)$.  Moreover,
+$(\Pi^{(5)})^2=\Pi^{(5)}$ is equivalent to
 the $\lambda=1$ instance of AFK equation~(1.49):
 \[
 \sum_{\boldsymbol q\in{\cal I}_{\boldsymbol p}}
@@ -700,7 +1146,7 @@ Theorem~\ref{thm:packet}, followed by (2) and (5), identifies these
 twenty-four numbers with the nonzero entries of $T$.  The actual ghost
 reconstruction is therefore
 \[
- K=\frac15I+\frac1{5\sqrt6}
+ \Pi^{(5)}=\frac15I+\frac1{5\sqrt6}
  \sum_{\boldsymbol p\ne\boldsymbol0}
  \nu_{\boldsymbol p}D_{\boldsymbol p}.
 \tag{22}
@@ -709,7 +1155,7 @@ The artificial entry $T_{0,0}=\sqrt6$ packages the first term of
 (22) into the single entry formula (17); it is not an analytic
 zero-characteristic value.
 
-Now expand $K^2-K$ using
+Now expand $(\Pi^{(5)})^2-\Pi^{(5)}$ using
 $D_{\boldsymbol p}D_{\boldsymbol q}
 =\tau^{\langle\boldsymbol p,\boldsymbol q\rangle}
 D_{\boldsymbol p+\boldsymbol q}$ and compare every Weyl coefficient.
@@ -857,15 +1303,286 @@ ${\cal Z}_t\subseteq{\cal Z}_{t_M}$.  Applying the same calculation to
 $M^{-1}$ gives the reverse inclusion and therefore equality.
 \end{proof}
 
+\begin{proof}[Proof of Theorem~\ref{thm:lowdim}]
+The dimension-four assertion is proved in Section~\ref{sec:d4}; the
+dimension-five assertion is
+Theorem~\ref{thm:tcc}.
+\end{proof}
+
+\section{Composite dimensions six and eight}\label{sec:composite}
+
+The preceding argument succeeds because Shintani's 1978 theorem supplies
+powered algebraicity for the entire dimension-five packet.  The same
+finite reconstruction can be completed in dimensions six and eight, but
+none of the special-value theorems used in this paper supplies the
+needed oriented algebraicity for every primitive characteristic.  This
+section records computationally exact finite results, the unconditional
+analytic strata covered by the cited theorems, and the remaining
+research targets.  It contains no dimension-six or dimension-eight TCC
+theorem.
+
+\subsection{Dimension six: one primitive order-six value}
+
+Put
+\[
+ K_6=\Q(\sqrt{21}),\qquad
+ \beta_6=\frac{5+\sqrt{21}}2,\qquad
+ Q_6=\langle1,-5,1\rangle.
+\]
+The relevant one-place ray group is
+\[
+ \Cl_{(6)\infty_2}(K_6)\cong C_6.
+\tag{28}
+\]
+Its order-two character gives the lower-conductor stratum.  If
+\[
+ Y=\frac{\beta_6-2+\sqrt{\beta_6-1}}2>1,
+\]
+then the modulus-three audit
+\path{scripts/dimension_six_lower_stratum.gp}, combining the analytic
+class-number formula with Kopp's Theorem~1.1~\cite{Kopp}, proves
+unconditionally that the overlap $y=\nu_{(0,2)}$ satisfies
+\[
+ y^2=Y,\qquad y^2+y^{-2}=\beta_6-2.
+\tag{29}
+\]
+
+The remaining three reciprocal pairs form the primitive order-six
+packet.  Let
+\[
+\begin{aligned}
+ {\cal Q}_6(X)={}&X^{12}+3X^{11}-6X^{10}-16X^9+3X^8+27X^6\\
+ &\quad+3X^4-16X^3-6X^2+3X+1,
+\end{aligned}
+\tag{30}
+\]
+and let $x_{\rm alg}$ be its unique root in
+\[
+ 2.21288528901718<x_{\rm alg}<2.21288528901719.
+\tag{31}
+\]
+The norm-$37$ prime $(4\beta_6+1)$ generates the ray group and fixes the
+arithmetic-Frobenius order of the other two primitive pairs.  Inserting
+this Artin-labeled algebraic packet together with (29) in the
+six-dimensional Weyl reconstruction makes all
+\[
+ \binom62^2=225
+\]
+two-by-two minors vanish exactly; the reconstructed matrix has trace one.
+Thus the finite algebra has no remaining ambiguity.
+
+In the double-sine convention (1), the distinguished
+$(0,1)$ analytic value is
+\[
+ x_{\rm an}
+ =
+ \frac{
+ S_2(\beta_6/6\mid\beta_6,1)
+ S_2(1/6\mid\beta_6,1)}
+ {S_2((\beta_6+1)/6\mid\beta_6,1)}.
+\tag{32}
+\]
+
+\paragraph{Exact closure target.}
+The exact finite audit shows the following conditional implication:
+the canonical analytic table agrees with the certified rank-one
+algebraic table, and hence gives both formal shifts, if
+\[
+ x_{\rm an}=x_{\rm alg}.
+\tag{33}
+\]
+The characteristic orbits, reciprocity, and the arithmetic-Frobenius
+labeling propagate this one equality through the other primitive
+pairs.  The script
+\path{scripts/dimension_six_primitive_fourier_audit.gp} records the
+equivalent oriented order-six Fourier identity, including its ray-group
+generator, character convention, Euler-factor convention, and
+embedding order.  That analytic identity, and therefore (33), remains
+unproved here.
+
+This is not a finite-computation issue.  The ray field has signature
+$(6,3)$; its primitive character has order six; and its cubic component
+is wildly ramified above $3$.  Shintani's index-two theorem does not
+apply, Roblot's hypotheses~\cite{Roblot2013} do not cover this wild
+sextic case, and
+proved CM Brumer--Stark results do not apply to this mixed-signature
+extension.  Standard double-sine shifts, reflection, duplication, and
+conductor lowering determine norms of the four level-six lifts but do
+not isolate the selected lift.
+
+There is also no weaker local-divisibility shortcut.  For
+\[
+ A_6=\begin{pmatrix}115&-24\\24&-5\end{pmatrix},
+\]
+write $A_6\cdot z=(115z-24)/(24z-5)$.  Then
+\[
+ A_6\cdot z-z
+ =-24\frac{z^2-5z+1}{24z-5}.
+\tag{34}
+\]
+The right side has a simple zero at $\beta_6$.  Consequently, in the
+local holomorphic ring at $\beta_6$, divisibility of a defect entry by
+$A_6\cdot z-z$ is equivalent to its vanishing at $\beta_6$; proving
+such divisibility would already prove the missing TCC identity.
+
+\subsection{Dimension eight: an unconditional lower stratum and two
+quartic phases}
+
+Let
+\[
+ K_8=\Q(\sqrt5),\qquad
+ \phi=\frac{1+\sqrt5}{2},\qquad
+ \beta_8=3\phi+2=\frac{7+3\sqrt5}{2}.
+\]
+The canonical form has discriminant $45$ and belongs to the order
+\[
+ {\cal O}_3=\Z+3{\cal O}_{K_8}.
+\]
+The order-ray group and its maximal-order realization are
+\[
+ \Cl_{(8)\infty_2}({\cal O}_3)
+ \cong
+ \Cl_{(24)\infty_2}({\cal O}_{K_8})
+ \cong C_4\times C_2\times C_2.
+\tag{36}
+\]
+The change-of-order isomorphism in (36) does not identify partial zeta
+functions by itself.  Kopp's conductor-lowering formula~\cite{Kopp}
+supplies the
+required three-factor bridge between the order-modulus-eight
+characteristics and maximal-order moduli $8$ and $24$.
+
+The fifteen nonzero lower-conductor characteristics lie in the
+one-place ray-$12$ field.  Its one-place and both-place ray groups are
+$C_2^2$ and $C_2^3$, and the extension is in Shintani's index-two
+range.  An exact divisor audit gives safe exponent $576$.  Arb
+enclosures and the height gap used above then prove unconditionally
+that its four independent positive values are the real roots of
+\[
+\begin{aligned}
+ P_{\rm low}(X)={}&X^8-8X^7+12X^6+8X^5-22X^4\\
+                  &\quad+8X^3+12X^2-8X+1.
+\end{aligned}
+\tag{37}
+\]
+Zauner covariance and reciprocity supply the full lower stratum.
+
+The forty-eight primitive characteristics contain four quadratic
+Fourier components and two conjugate pairs of quartic components.
+The two cyclic quartic quotient fields have relative equations
+\[
+\begin{aligned}
+ F_0/K_8:\quad&X^4-6\phi X^2+3,\\
+ F_1/K_8:\quad&X^4+(6-6\phi)X^2+3.
+\end{aligned}
+\tag{38}
+\]
+The exact models, fundamental-unit coordinates, and embeddings used
+below are fixed in
+\path{scripts/dimension_eight_quartic_bridge.gp}.  Let
+$\eta_0,\eta_1$ be the anti-units selected there and let
+$\rho_1,\ldots,\rho_4$ denote the four real embeddings in its
+local-Frobenius order.  Define the oriented logarithmic resolvents
+\[
+\begin{aligned}
+ R_0&=\log|\eta_0|_{\rho_3}
+      +i\log|\eta_0|_{\rho_4},\\
+ R_1&=\log|\eta_1|_{\rho_2}
+      +i\log|\eta_1|_{\rho_1}.
+\end{aligned}
+\tag{39}
+\]
+In the PARI dual coordinates for the cyclic basis
+$C_4\times C_2\times C_2$ fixed by that script, Roblot's
+cyclic-quartic theorem proves the two modulus identities
+~\cite{Roblot2013}
+\[
+ |L'_S(0,[1,0,0])|=|R_0|,
+ \qquad
+ |L'_S(0,[1,1,0])|=|R_1|.
+\tag{40}
+\]
+It does not prove the orientations.
+
+The exact audit script
+\path{scripts/dimension_eight_exact_tcc.gp} constructs an algebraic
+candidate packet: its primitive squared-overlap field has degree $32$
+over $\Q$, all signed overlaps lie in one degree-$64$ field, and
+adjoining the Weyl phases gives a convention-selected degree-$128$
+compositum.  For each of the two formal shifts, the script verifies
+\[
+ \Tr\Pi=1,\qquad \Pi^2=\Pi,\qquad
+ \text{all }\binom82^2=784\text{ two-by-two minors vanish}.
+\tag{41}
+\]
+
+\paragraph{Exact closure targets.}
+The canonical analytic table would coincide with this candidate packet
+and therefore satisfy both formal shifts if the two convention-matched
+oriented identities
+\[
+\begin{aligned}
+ L'_S(0,[1,0,0])&=R_0,\\
+ L'_S(0,[1,1,0])&=R_1
+\end{aligned}
+\tag{42}
+\]
+hold.  The lower-conductor special values and the algebraic
+calculation \textup{(41)} are unconditional; their identification with
+the primitive analytic table is conditional on \textup{(42)}.
+
+Rigorous double-sine windows locate all eight independent primitive
+analytic squares in the corresponding isolated algebraic intervals.
+At high precision the phase quotients in (42) equal
+$1+O(10^{-114})$.  This is strong evidence, not an equality proof:
+(40) permits an arbitrary unit-circle phase.  The exact finite TCC
+orientation sieve selects one pair among the $64$ natural algebraic
+orientations, but using that selection to deduce (42) would be circular.
+An oriented refinement of Roblot's theorem, or powered algebraicity for
+these two convention-matched cocycle values, would make (42) and hence
+dimension eight unconditional without any further finite computation.
+
+\subsection{Comparison}
+
+The two composite dimensions fail for different reasons:
+\[
+\begin{array}{c|c|c|c}
+d&\text{unconditional analytic part}&\text{exact finite part}
+ &\text{missing input}\\ \hline
+6&\text{lower stratum, modulus and sign}
+ &225\text{ minors}
+ &1\text{ order-six value}\\
+8&15\text{ lower overlaps and quartic moduli}
+ &2\times784\text{ minors}
+ &2\text{ quartic orientations}.
+\end{array}
+\tag{43}
+\]
+Dimension six is the smaller and conceptually sharper open
+Stark--Shintani identity.  Dimension eight has the larger finite packet,
+but its remaining analytic obstruction is already separated into two
+explicit cyclic-quartic phases.
+
 \section{Scope and reproducibility}
 
 Theorem~\ref{thm:tcc} proves the complete formal TCC in dimension five.
-It does not prove a dimension-five SIC, the TCC in arbitrary
+Together with Section~\ref{sec:d4}, it proves
+Theorem~\ref{thm:lowdim}.  It does not prove a dimension-five SIC,
+the TCC in arbitrary
 dimensions, or Zauner's conjecture.  The new number-theoretic step is
 Theorem~\ref{thm:packet}: it proves the previously conjectural
 dimension-five ray packet by combining Kopp's proved limit formula with
 the applicable case of Shintani's proved algebraicity theorem and an
 effective height argument.
+
+Section~\ref{sec:composite} records research-status closure targets,
+not conditional propositions masquerading as higher-dimensional
+theorems.  It shows how far the proved low-dimensional machinery
+extends: the finite algebraic candidate packets pass exact cancellation
+audits, while their identification with the primitive analytic values
+still requires (33) in dimension six and the two orientations (42) in
+dimension eight.  More decimal recognition cannot replace those
+missing special-value proofs.
 
 The supplementary package contains:
 \begin{itemize}
@@ -882,9 +1599,19 @@ ray-class logs;
 \item the labeled $K$-isomorphism, unit, Sturm, and Frobenius-orbit
 certificate; and
 \item the rigorous Arb double-sine enclosure and height-gap transcript.
+\item the dimension-four $36$-minor, ray, multiplier, and PARI
+certificates;
+\item the dimension-six ray, lower-stratum, Frobenius-orientation, and
+$225$-minor audit scripts;
+\item the exact dimension-six fixed-point factorization (34);
+\item the dimension-eight conductor-lowering, lower-stratum,
+cyclic-quartic, Artin-label, and orientation audits; and
+\item the exact two-shift dimension-eight $784$-minor audit script.
 \end{itemize}
-Their SHA-256 digests are recorded in
-\texttt{certificates/SHA256SUMS}.
+SHA-256 digests for the archived dimension-four and dimension-five
+artifacts are recorded in \texttt{certificates/SHA256SUMS}; the
+dimension-six and dimension-eight research scripts are fixed by the
+repository commit accompanying this manuscript.
 
 \begin{thebibliography}{12}
 \bibitem{Kopp}
@@ -921,6 +1648,10 @@ Université de Bordeaux, 2023,
 \bibitem{pythonflint}
 F.~Johansson and contributors, \emph{python-flint 0.9.0},
 \url{https://github.com/flintlib/python-flint}.
+\bibitem{Roblot2013}
+X.-F.~Roblot, \emph{Index formulae for Stark units and their
+solutions}, Pacific J.\ Math.\ \textbf{266} (2013), 391--422,
+\url{https://doi.org/10.2140/pjm.2013.266.391}.
 \end{thebibliography}
 
 \end{document}

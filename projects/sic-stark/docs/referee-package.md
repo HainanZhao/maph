@@ -97,6 +97,6 @@ supporting research note
 records the proof of its former Stark-value input by specializing Shintani's
 1978 theorem and applying certified height rigidity.  The rewritten
 manuscript is
-[`../paper/sic-stark-dimension-five.tex`](../paper/sic-stark-dimension-five.tex),
+[`../paper/sic-stark-dimensions-four-five.tex`](../paper/sic-stark-dimensions-four-five.tex),
 with compiled
-[`../paper/sic-stark-dimension-five.pdf`](../paper/sic-stark-dimension-five.pdf).
+[`../paper/sic-stark-dimensions-four-five.pdf`](../paper/sic-stark-dimensions-four-five.pdf).
