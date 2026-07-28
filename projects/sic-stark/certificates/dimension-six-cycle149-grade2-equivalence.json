@@ -1,0 +1,86 @@
+{
+  "equation_33": "L'_S(0,chi_1)=r_0+zeta_6*r_1+zeta_6^2*r_2",
+  "forward_reduction": [
+    {
+      "extra_identity": "none",
+      "input": "full boundary packet D_j=r_j",
+      "operation": "primitive Fourier projection",
+      "output": "L'_S(0,chi_1)=r_0+zeta_6*r_1+zeta_6^2*r_2"
+    },
+    {
+      "extra_identity": "none",
+      "input": "fusion boundary value",
+      "operation": "certified characteristic-to-ray bridge",
+      "output": "differenced ray derivative D_j"
+    }
+  ],
+  "fourier_inverse_checked_on_basis": true,
+  "grade_2": {
+    "full_flow_invariant_continuity_statement": "NOT_DERIVED_FROM_EQUATION_33_BY_THE_STANDARD_BASIS",
+    "missing_reverse_input": "existence and flow-invariant regularity of the two-base boundary limit",
+    "pointwise_boundary_packet_identification": "EQUIVALENT",
+    "reason": "each direction uses only the certified ray bridge, standard functional relations/reciprocity, the proved quadratic component, exact C6 Fourier inversion, and the multiplier ledger",
+    "verdict": "conservation holds for the endpoint value; the dynamical regularity formulation is strictly stronger"
+  },
+  "grade_3_attack_surface": [
+    "differentiate with respect to the interior tau parameter",
+    "move and deform the beta-integral contour",
+    "track pinches and residue/Stokes jumps",
+    "vary the lens label ell and use its recurrences",
+    "iterate the A6 geodesic return map",
+    "apply badly-approximable and bounded-partial-quotient estimates",
+    "compare the d=5 +q and d=6 -q fusion loci in one family",
+    "study transfer-operator and spectral regularity"
+  ],
+  "prohibited_inputs_not_used": [
+    "TCC6",
+    "rank-two minors",
+    "ghost idempotency",
+    "numerical recognition"
+  ],
+  "reverse_reduction": [
+    {
+      "consumes": "chi_1 component",
+      "operation": "complex conjugation / reciprocity",
+      "produces": "chi_5 component"
+    },
+    {
+      "consumes": "L'_S(0,chi_3)=2*log(Y)",
+      "operation": "proved conductor-three quadratic component",
+      "produces": "D_0-D_1+D_2"
+    },
+    {
+      "consumes": "chi_1, chi_5, chi_3",
+      "formula": {
+        "D0": "(Q+2*A+B)/3",
+        "D1": "(-Q+A+2*B)/3",
+        "D2": "(Q-A+B)/3",
+        "Lambda1": "A+zeta_6*B"
+      },
+      "operation": "C6 Fourier inversion over Q(zeta_6)",
+      "produces": "D_0,D_1,D_2"
+    },
+    {
+      "consumes": "D_0,D_1,D_2",
+      "operation": "sign-class reciprocity",
+      "produces": "D_(j+3)=-D_j"
+    },
+    {
+      "consumes": "six primitive ray values plus proved lower strata",
+      "operation": "shift/reflection/duplication and conductor lowering",
+      "produces": "all 36 boundary magnitudes"
+    },
+    {
+      "consumes": "boundary magnitudes and labels",
+      "operation": "verified multiplier ledger",
+      "produces": "all 36 convention-matched complex phases"
+    }
+  ],
+  "schema": "sic-stark-dimension-six-grade2-equivalence-v1",
+  "standalone_bridge": {
+    "algebraic_half_status": "VERIFIED",
+    "first_conclusion": "equation (33), the oriented Stark instance",
+    "hypothesis": "flow-invariant arithmetic fusion-continuity along the A6 geodesic",
+    "second_conclusion": "both formal dimension-six TCC shifts"
+  }
+}

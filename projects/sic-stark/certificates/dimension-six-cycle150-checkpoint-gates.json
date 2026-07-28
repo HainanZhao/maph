@@ -1,0 +1,54 @@
+{
+  "dimension_five_level_bit_gate": {
+    "alias_parity_period": 2,
+    "analytic_lens_level": 15,
+    "bilateral_argument": "+q",
+    "formal_fused_ratio": "q*(1-x)*(1-w^(-1)*x)/((1-q*x)*(1-q*w^(-1)*x))",
+    "fusion_sign_bit": 0,
+    "interpretation": "odd d=5 has no even-wrap sign; the two-class alias transcript lands on the positive closed locus",
+    "level_bit_read": true
+  },
+  "dimension_four_even_wrap_gate": {
+    "A1_over_X1_exponent": "beta+3/2",
+    "A2_over_X2_exponent": "beta+7/2",
+    "X1_times_X2": "i",
+    "analytic_lens_level": 8,
+    "bilateral_argument": "-q",
+    "even_wrap_phase_level": 16,
+    "formal_fused_ratio": "-q*(1-x)*(1-i*x)/((1+q*x)*(1+i*q*x))",
+    "fusion_sign_bit": 1,
+    "level_24_rejected": true,
+    "prediction_confirmed": true
+  },
+  "gate_log": {
+    "d4_even_wrap": "DONE",
+    "d5_level_bit": "DONE",
+    "pinch": "DONE",
+    "residue_vs_rm_aux": "DONE"
+  },
+  "pinch_gate": {
+    "actual_endpoint_failure": "loss of decay at imaginary infinity after Bernoulli quadratic terms cancel",
+    "endpoint_g": "Q=omega1+omega2>0",
+    "finite_pinch_at_g_equals_Q": false,
+    "left_pole_cone": "y=-j*omega1-t*omega2, j,t>=0",
+    "minimum_real_separation": "Q",
+    "residue_correction_from_finite_pinch": false,
+    "right_pole_cone": "y=g+j*omega1+t*omega2, j,t>=0",
+    "verdict": "UNPINCHED_BUT_NOT_ABSOLUTELY_CONVERGENT"
+  },
+  "residue_vs_rm_aux_gate": {
+    "Gamma_M_Q_0": "finite and nonzero",
+    "comparison_status": "VERIFIED_CALIBRATION",
+    "finite_part_prescription": "two-base tilted value followed by its alpha=0 Fresnel/Abel boundary limit",
+    "inverse_helical_trace": "-4*sqrt(7)",
+    "logical_role": "normalization calibration only; the nonzero oriented fusion-continuity statement is not inferred from it",
+    "reciprocal_roots": "-2*sqrt(7)+3*sqrt(3), -2*sqrt(7)-3*sqrt(3)",
+    "rm_aux_enclosure": "VERIFIED_IN_CYCLE_143",
+    "rm_aux_identity": "nu_aux+nu_aux^(-1)=-4*sqrt(7)",
+    "rm_aux_identity_squared": "112",
+    "vertical_integral": "not absolutely convergent",
+    "zero_frequency": "(alpha,N)=(0,2)"
+  },
+  "schema": "sic-stark-dimension-six-checkpoint-gates-v1",
+  "silent_gate_count": 0
+}

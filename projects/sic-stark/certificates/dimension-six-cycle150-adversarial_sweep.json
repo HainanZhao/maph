@@ -1,0 +1,43 @@
+{
+  "all_perturbations_detected": true,
+  "conclusion": "the pipeline detects the principal convention errors, while independently confirming that neither Slater's boundary series nor the undeformed contour supplies the missing fusion theorem",
+  "independent_reimplementations": {
+    "all_frequency_labels_match": true,
+    "annulus_edge_exchange": "EXCLUDED",
+    "helical_records_checked": 1476,
+    "pointwise_contour_periodization": "NOT_PROMOTED",
+    "slater_boundary_applicability": "EXCLUDED",
+    "slater_interior_condition": "|q|^2 < |q| < 1"
+  },
+  "perturbations": {
+    "even_wrap_sign": {
+      "correct_d5_test_value": "10/343",
+      "corrupted_test_value": "-50/357",
+      "detected": true
+    },
+    "infinite_place_swap": {
+      "correct_d5_oriented_root": ">1",
+      "corrupted_reciprocal": "<1",
+      "detected": true
+    },
+    "lens_label_plus_one": {
+      "detected": true,
+      "failures_detected": 36,
+      "total": 36
+    },
+    "tau_to_conjugate": {
+      "correct_q_inside_unit_disk": true,
+      "corrupted_q_inside_unit_disk": false,
+      "detected": true
+    },
+    "trace_5_to_6": {
+      "corrupted_trace": 6,
+      "detected": true,
+      "lens_fixed_point_numerator": "24*rho",
+      "lens_pair_still_fuses": false,
+      "lesson": "standard base equality alone does not encode the A6 arithmetic fixed point",
+      "standard_pair_still_fuses": true
+    }
+  },
+  "schema": "sic-stark-dimension-six-adversarial-sweep-v1"
+}
