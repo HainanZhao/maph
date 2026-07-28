@@ -584,7 +584,13 @@ Then
 \]
 Label the real embeddings by
 $\infty_1(\sqrt3)=+\sqrt3$ and
-$\infty_2(\sqrt3)=-\sqrt3$.  The modulus throughout is
+$\infty_2(\sqrt3)=-\sqrt3$.\footnote{PARI orders real embeddings by
+increasing real root.  Thus its first root of $y^2-3$ is $-\sqrt3$,
+so the PARI infinite-place vector \texttt{[1,0]} denotes the place
+called $\infty_2$ here.  Equivalently, in the integral generator
+$\beta=2+\sqrt3$ used by the scripts, the first root of
+$y^2-4y+1$ is $2-\sqrt3$.  Raw conductor outputs in the certificates
+use PARI's ordering.}  The modulus throughout is
 \[
  \mathfrak m=(5)\infty_2.
 \]

@@ -9,10 +9,109 @@ Q_d=\langle1,1-d,1\rangle,\qquad d\ge4,
 
 as a focused route toward Zauner's SIC-existence conjecture. It is a
 research ledger and executable reduction.  General TCC remains open; the
-canonical dimension-four specialization is proved in the current draft.
+current paper proves the formal TCC unconditionally in dimensions four
+and five.
 
-The consolidated manuscript for review is
-[`docs/sic-stark-paper-draft.md`](docs/sic-stark-paper-draft.md).
+The consolidated manuscript is available as
+[`paper/sic-stark-dimensions-four-five.tex`](paper/sic-stark-dimensions-four-five.tex)
+and
+[`paper/sic-stark-dimensions-four-five.pdf`](paper/sic-stark-dimensions-four-five.pdf).
+The longer research ledger in `docs/` records the open and partially
+closed higher-dimensional cases.
+
+## Publication and archival upload checklist
+
+The recommended Zenodo deposit is one tagged, immutable source archive
+containing this project directory, together with the compiled paper PDF as
+a separate convenient download.  Do not upload only the PDF: the
+dimension-five theorem depends on exact and interval certificates that
+must remain available with their generating scripts.
+
+### Required standalone upload
+
+- `paper/sic-stark-dimensions-four-five.pdf`
+
+### Required contents of the reproducibility archive
+
+Manuscript and package guide:
+
+- `README.md`
+- `paper/sic-stark-dimensions-four-five.tex`
+- `paper/sic-stark-dimensions-four-five.pdf`
+- `docs/referee-package.md`
+- `certificates/SHA256SUMS`
+
+Dimension-four certificates:
+
+- `certificates/dimension-four-certificate.json`
+- `certificates/pari-audit.txt`
+- `certificates/double-sine-audit.txt`
+- `scripts/generate_referee_certificates.py`
+- `scripts/verify_referee_certificate.py`
+- `scripts/referee_pari_audit.gp`
+- `scripts/explore_dimension_four_double_sine.py`
+
+Dimension-five certificates:
+
+- `certificates/dimension-five-bridge.json`
+- `certificates/dimension-five-character-support.json`
+- `certificates/dimension-five-finite.json`
+- `certificates/dimension-five-exact-minors.txt`
+- `certificates/dimension-five-pari.txt`
+- `certificates/dimension-five-root-isolation.txt`
+- `certificates/dimension-five-embedding-certificate.txt`
+- `certificates/dimension-five-local-isolation.txt`
+- `certificates/dimension-five-shintani.txt`
+- `certificates/dimension-five-unit-lattice.txt`
+- `certificates/dimension-five-double-sine-intervals.txt`
+
+Dimension-five generating and verification code:
+
+- `scripts/analyze_dimension_five_character.py`
+- `scripts/analyze_dimension_five_finite.py`
+- `scripts/generate_dimension_five_bridge.py`
+- `scripts/dimension_five_pari_audit.gp`
+- `scripts/dimension_five_root_isolation.gp`
+- `scripts/dimension_five_embedding_certificate.gp`
+- `scripts/dimension_five_local_isolation.gp`
+- `scripts/dimension_five_shintani_audit.gp`
+- `scripts/dimension_five_special_reduction_audit.gp`
+- `scripts/dimension_five_unit_lattice_audit.gp`
+- `scripts/certify_dimension_five_double_sine.py`
+- `scripts/verify_dimension_five_conjugates.gp`
+
+Shared implementation and regression tests:
+
+- `src/`
+- `tests/`
+
+The dimension-eight CM-descent material is not needed to verify the
+dimension-four/five theorem, but should be included if the composite-
+dimension outlook remains in the paper:
+
+- `docs/sic-stark-dimension-eight-cm-descent.md`
+- `scripts/dimension_eight_cm_descent.gp`
+- `certificates/dimension-eight-cm-descent.txt`
+- the dimension-six and dimension-eight scripts cited explicitly in
+  Section 7 of the manuscript
+
+### Create before depositing
+
+The final tagged archive should also contain:
+
+- `CITATION.cff`, with the author, title, release version, and eventual DOI;
+- `.zenodo.json`, with matching creator and license metadata;
+- a license file covering the manuscript and another, if necessary,
+  covering the code;
+- a pinned Python environment or lock file recording Python 3.12.3,
+  python-flint 0.9.0, FLINT 3.6.0, and the required NumPy version;
+- a short `REPRODUCE.md` containing the exact commands and expected
+  runtimes; and
+- the final successful test transcript.
+
+After deposition, replace the manuscript's archival placeholder with the
+Zenodo DOI and record both the DOI and the immutable Git commit in this
+README.
 
 ## Current result
 
