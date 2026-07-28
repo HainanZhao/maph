@@ -186,6 +186,35 @@ with the embeddings ordered as in the certificate.  Roblot proves the
 absolute values of both sides.  The displayed equalities additionally
 fix their orientations.
 
+## Why unit uniqueness does not remove the phase
+
+Roblot's Theorem 6.1 states that a quartic solution to the index
+properties is unique up to the action of \(\{\pm1\}\times G\).  This
+does make the algebraic candidates discrete: their logarithmic
+resolvents differ by Gaussian multiplication and conjugation.
+
+However, the theorem's analytic conclusion is
+
+\[
+\left|L'_S(0,\chi)\right|
+=\frac12\left|
+\sum_{g\in G}\chi(g)\log|\eta^g|
+\right|.
+\]
+
+The absolute values remain on both complex quantities.  Uniqueness of
+\(\eta\) does not imply that the analytic resolvent is one of the eight
+oriented unit resolvents; it could still be any complex number on the
+same circle.  Consequently, using the finite TCC equations to choose
+one of the eight units is valid as an algebraic candidate selection,
+but using that selection to infer the analytic phase would be circular.
+
+This source audit rules out the tempting shortcut.  The remaining input
+really must control the analytic phase or prove powered algebraicity.
+See X.-F. Roblot, *Index formulae for Stark units and their solutions*,
+Theorem 6.1 and the discussion preceding Section 2:
+<https://math.univ-lyon1.fr/~roblot/resources/index.pdf>.
+
 Either of the following would close dimension eight:
 
 1. an oriented refinement of the cyclic-quartic Stark index formula for
@@ -207,4 +236,3 @@ PYTHONPATH=/path/to/python-flint \
   python3 scripts/certify_dimension_eight_primitive_windows.py
 gp -q scripts/dimension_eight_exact_tcc.gp
 ```
-
