@@ -207,6 +207,15 @@ proved input gives only unit modulus.  This isolates an oriented
 cyclic-quartic Stark identity—not an unfinished cone calculation—as the
 precise remaining theorem.
 
+[Cycle 62](docs/sic-stark-cycle62.md) returns to dimension six and
+classifies every quadratic induction base of its faithful dihedral
+quotient.  The only abelian base is the original
+\(\mathbf Q(\sqrt{21})\); the \(\mathbf Q(\sqrt{-3})\) and
+\(\mathbf Q(\sqrt{-7})\) relative groups are nonabelian, ruling out a
+hidden elliptic-unit transfer.  It identifies a uniform \(q\)-gamma
+regularization at vanishing cyclic factors as the next concrete route to
+a direct finite-level TCC identity.
+
 ## Verification
 
 The default tests use Python, NumPy, and PARI/GP.  The rigorous
