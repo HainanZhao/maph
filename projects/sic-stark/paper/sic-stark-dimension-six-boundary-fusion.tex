@@ -1,0 +1,620 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+\usepackage{booktabs}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Tr}{\operatorname{Tr}}
+
+\title{Dimension-Six Twisted Convolution as Arithmetic Boundary Fusion\\
+of a Two-Base Lens-Space Beta Integral}
+\author{Hainan Zhao\\
+\small Independent Researcher\\
+\small\texttt{hainzhao@gmail.com}}
+\date{28 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We reformulate the remaining dimension-six case of the formal Twisted
+Convolution Conjecture of Appleby--Flammia--Kopp as one boundary theorem
+for a two-base general modular quantum-dilogarithm packet.  The
+dimension-six principal-ghost quotient is identified with the
+two-gamma kernel in the degenerate Sarkissian--Spiridonov lens-space
+beta transform.  In the upper half-plane its natural bases are
+$e^{2\pi i\tau}$ and $e^{2\pi iA_6\tau}$ and must not be fused.
+At the real-multiplication fixed point
+$\beta_6+\beta_6^{-1}=5$ they coalesce arithmetically and give the
+previously isolated well-poised ${}_2\psi_2$ packet at argument $-q$.
+The identical calculation in the proved dimension-five case lands
+instead on the summable $+q$ locus, while the independent
+dimension-four even-wrap control returns to $-q$.  We verify the
+interior identity as a meromorphic spectral identity, specialize the
+published beta
+evaluation exactly, and show that the undeformed endpoint contour is
+not absolutely convergent because its quadratic decay cancels.  We
+define the finite part by an interior tilted contour and prove
+tilt-independence by Cauchy's theorem in the pole-free strip.  An
+exact all-characteristic calculation gives
+$A_6\equiv I\pmod6$, $\psi^2(A_6)=-1$, and equality of the Kopp and AFK
+multipliers in all thirty-six cases.  Consequently one explicitly
+stated analytic fusion-continuity conjecture implies both formal
+dimension-six shifts.  We do not claim that conjecture here.
+\end{abstract}
+
+\section{Statement and proof status}
+
+Put
+\[
+ \beta=\frac{5+\sqrt{21}}2,\qquad
+ A=\begin{pmatrix}115&-24\\24&-5\end{pmatrix}.
+\tag{1}
+\]
+Then
+\[
+ \beta^2-5\beta+1=0,\qquad A\beta=\beta,\qquad
+ \beta+\beta^{-1}=5.
+\tag{2}
+\]
+The first equality is the arithmetic trace relation; throughout this
+paper it is part of the boundary condition, not a generic removable
+limit.
+
+The finite part of the dimension-six calculation is already exact.
+There are two formal shifts, the reconstructed matrix has trace one,
+and all $225$ rank-two minors vanish after imposing the certified
+algebraic packet.  What is missing is the analytic identification of
+that packet with the convention-matched AFK cocycle values.  The
+purpose of this note is to make the remaining analytic statement
+independent of the finite certificates.
+
+Parametrize the attracting half of the $A$-axis by
+\[
+ \gamma(s)=\frac52+
+ \frac{\sqrt{21}}2\frac{1-s^2}{1+s^2}
+ +i\frac{\sqrt{21}s}{1+s^2},\qquad s>0.
+\]
+Then $\gamma(s)\to\beta$ as $s\downarrow0$.
+Kopp's Definition~4.7 chooses the positive stabilizer generator by this
+attracting direction and observes that it translates the same geodesic
+toward $\beta$~\cite{Kopp}.  Definition~4.9 defines the RM stable value
+by evaluation of the meromorphic continuation at the fixed point, and
+Proposition~7.20 realizes it as a limit from the upper half-plane.
+
+Let $\mathcal P_j(\tau)$, $j=0,1,2$, denote the primitive ray-class
+logarithms of the spectral periodization in the norm-$37$ Frobenius
+order, with logarithm branches continued from the two-base chamber
+along $\gamma$, and put
+\[
+ \mathcal R_1(\tau)=
+ \mathcal P_0(\tau)+\zeta_6\mathcal P_1(\tau)
+ +\zeta_6^2\mathcal P_2(\tau).
+\]
+
+For $\tau$ in the interior convergence chamber, put
+$S_\tau=\{y:0<\Re y<\Re Q_\tau\}$.  If
+\[
+ C_h=\{c+h(t)+it:t\in\mathbb R\}\subset S_\tau
+\]
+is a $C^1$ graph homotopic to $c+i\mathbb R$ through graphs on which
+the two-base kernel has one common integrable majorant, define its
+\emph{tilted value} by integration over $C_h$, followed by the exact
+helical periodization.
+
+\begin{proposition}[Tilt independence]\label{prop:tilt}
+The interior tilted value is independent of the admissible graph
+$C_h$.
+\end{proposition}
+
+\begin{proof}
+Truncate two admissible graphs at imaginary heights $\pm T$ and join
+their endpoints inside $S_\tau$.  The kernel is holomorphic in the
+region between them because its pole cones lie on opposite sides of
+the strip.  Cauchy's theorem makes the integral around the resulting
+boundary zero.  The common interior exponential majorant makes both
+joining integrals tend to zero as $T\to\infty$.  The two graph
+integrals are equal.  Absolute local uniform convergence permits the
+same argument after helical periodization.
+\end{proof}
+
+Thus $\mathcal P_j(\tau)$ may equivalently be defined by any admissible
+tilt, and
+\[
+ \operatorname{FP}_{\beta}\mathcal P_j
+ :=\lim_{s\downarrow0}\mathcal P_j(\gamma(s)),
+\]
+if it exists, has no remaining contour-choice ambiguity.
+
+For each \(j\), let \(U_j^{\rm fus}\) be the boundary value obtained by
+first taking the meromorphic spectral periodization with its certified
+level-\(24\) label, then imposing the fixed-point relation
+\(\widetilde q_M=q_M\), and evaluating the resulting expression through
+the \(24\)-factor continuation rather than the collapsed bilateral
+series.  The logarithm is the continuation of the branch used for
+\(\mathcal P_j\).  Define
+\[
+ \operatorname{Fus}_5\mathcal R_1
+ :=\log U_0^{\rm fus}
+ +\zeta_6\log U_1^{\rm fus}
+ +\zeta_6^2\log U_2^{\rm fus}.
+\]
+The subscript \(5\) records the trace equation
+\(\beta+\beta^{-1}=5\), not a dimension.
+
+\begin{conjecture}[Minimal fusion-continuity, MFC$_6$]
+\label{conj:fusion}
+The scalar $\mathcal R_1(\gamma(s))$ has a finite limit as
+$s\downarrow0$, and meromorphic spectral periodization commutes in this
+primitive component with trace-five base fusion, preserving the
+norm-$37$ lens/Frobenius label:
+\[
+ \lim_{s\downarrow0}\mathcal R_1(\gamma(s))
+ =\operatorname{Fus}_5\mathcal R_1.
+\]
+\end{conjecture}
+
+No uniform convergence, H\"older estimate, or two-sided continuity is
+assumed.  Since $A$ translates the same oriented geodesic toward its
+attracting fixed point, existence of the limit makes it $A$-invariant;
+invariance is not an additional hypothesis.  The exceptional zero
+frequency is also not part of MFC$_6$: it is supplied separately by the
+exact AFK endpoint $-4\sqrt7$.  Its tilted Fresnel/Abel value gives the
+reciprocal pair $-2\sqrt7\pm3\sqrt3$, whose trace is $-4\sqrt7$.
+
+\begin{theorem}[Analytic-to-Stark bridge]\label{thm:stark}
+Assume Conjecture~\ref{conj:fusion}.  Let
+$G=\operatorname{Cl}_{(6)\infty_2}(\Q(\sqrt{21}))
+=\langle g\rangle\simeq C_6$, let
+$\chi_1(g)=\zeta_6$, and let $r_j$ be the logarithms of the certified
+algebraic ray-unit orbit in the arithmetic Frobenius order.  Then
+\[
+ L'_S(0,\chi_1)
+ =r_0+\zeta_6r_1+\zeta_6^2r_2.
+\tag{3}
+\]
+Thus a flow-invariant analytic regularity statement at the
+$A_6$ fixed point implies the convention-fixed rank-one Stark
+identity over $\Q(\sqrt{21})$.
+\end{theorem}
+
+\begin{theorem}[Conditional dimension-six closure]\label{thm:conditional}
+Assume Conjecture~\ref{conj:fusion}.  Then $0$ and $1$ are shifts for
+every admissible dimension-six tuple in the sense of
+AFK~\cite[Definition 1.34 and equation (1.49)]{AFK}.
+\end{theorem}
+
+The implication in Theorem~\ref{thm:conditional} is proved in
+Section~\ref{sec:conditional}.  Conjecture~\ref{conj:fusion} remains
+open.  In particular, the theorem is not an unconditional proof of the
+dimension-six TCC.
+
+\section{The honest two-base packet}\label{sec:two-base}
+
+For the general modular quantum dilogarithm of
+Sarkissian--Spiridonov~\cite{SS}, use
+\[
+ (p,k,r,s)=(-115,24,5,24),\qquad pr+ks=1.
+\tag{4}
+\]
+Their equations (5)--(8) give the two bases
+\[
+ q_M=e^{2\pi i\tau},\qquad
+ \widetilde q_M=e^{2\pi iA\tau}.
+\tag{5}
+\]
+They are distinct in the upper half-plane.  Their equation (15)
+factors the same general modular function into $24$ standard Faddeev
+factors.  If $\rho=24\tau-5$, the bases in each standard factor are
+\[
+ q_S=e^{2\pi i\rho},\qquad
+ \widetilde q_S=e^{-2\pi i/\rho}.
+\tag{6}
+\]
+Equations (4) and (5) are different modular pairs away from the
+boundary.  Conflating them gives the false equal-base interior model.
+
+\begin{proposition}[Interior factorization]\label{prop:interior}
+In the chamber in which both product bases have modulus less than one,
+the direct general modular gamma in (4) equals its $24$-factor
+Faddeev continuation.  Periodizing the degenerate two-gamma kernel
+over the helical quotient
+\[
+ \bigl(\mathbb R\times\Z/24\Z\bigr)/
+ \langle(\omega_1-\omega_2,6)\rangle
+\tag{7}
+\]
+gives three absolutely and locally uniformly convergent bibasic
+bilateral classes for each level-six frequency.  The resulting
+identity is valid as a meromorphic spectral identity.
+\end{proposition}
+
+\begin{proof}
+The factorization is equation (15) of~\cite{SS} specialized by (3).
+For a frequency $(a,b)\bmod6$ and alias $z\in\Z$, direct reduction gives
+\[
+ N_z=a+2-6z,\qquad \ell_z=b-6z,
+\tag{8}
+\]
+and
+\[
+ \frac{\alpha_z}{3\tau-1}
+ =\frac{4b-5a}{3}+2z.
+\tag{9}
+\]
+Thus $-5(N_z-2)\equiv a$ and $\ell_z\equiv b\pmod6$.
+Three alias steps are one helical translation at level $24$.
+The functional-equation ratio is bibasic and has geometric tails in
+the stated chamber.  Finite heads and the bound
+\[
+ \frac{|a|^{M+1}}
+ {(M+1)(1-|a|)(1-|q|)}
+\tag{10}
+\]
+for the omitted logarithmic $q$-Pochhammer tail prove local uniform
+convergence.  This justifies the spectral reindexing.  The exact
+integer ledger and Arb enclosures are reproduced by
+\path{scripts/dimension_six_two_base_lens.py} and
+\path{scripts/dimension_six_interior_factorization_audit.py}.
+\end{proof}
+
+At $\tau=\beta$, both pairs fuse, but for different reasons:
+$A\beta=\beta$ for (4), while
+$\beta+\beta^{-1}=5$ makes the bases in (5) equal.  Exact substitution
+in the term ratio gives
+\[
+ -q\,\frac{(1-x)(1+w^{-1}x)}
+ {(1+qx)(1-qw^{-1}x)}.
+\tag{11}
+\]
+This is the well-poised ${}_2\psi_2$ packet at argument $-q$ found in
+the finite Zak descent.  Equation (10) is a boundary identity only.
+
+\section{The dimension-five control}
+
+For dimension five,
+\[
+ \beta_5=2+\sqrt3,\qquad
+ A_5=\begin{pmatrix}56&-15\\15&-4\end{pmatrix},\qquad
+ \beta_5+\beta_5^{-1}=4.
+\tag{12}
+\]
+Running the same two-base construction gives at fusion
+\[
+ q\,\frac{(1-x)(1-w^{-1}x)}
+ {(1-qx)(1-qw^{-1}x)}.
+\tag{13}
+\]
+
+\begin{proposition}[Summability dichotomy]\label{prop:dichotomy}
+The proved dimension-five packet lies on the positive-argument
+closed ${}_2\psi_2$ locus (12).  The dimension-six packet lies on its
+sign-reflected neighbor (10).
+\end{proposition}
+
+\begin{proof}
+The sign follows from the exact even-wrap and lens-label reductions.
+For dimension five the direct two-base function and its factorization
+are enclosed at three interior points, all six bibasic classes
+converge with rigorous tails, and the boundary double-sine square
+encloses the independently proved algebraic root
+\[
+ 3.8908617139430792553376439596\ldots.
+\]
+The executable proof is
+\path{scripts/dimension_five_two_base_calibration.py}.  The
+dimension-four control independently fixes lens level $8$ and phase
+level $16$.  Exact exponent reduction also gives
+\[
+ -q\,\frac{(1-x)(1-ix)}{(1+qx)(1+iqx)},
+\]
+so dimension four, like dimension six, lies at argument $-q$; see
+\path{scripts/dimension_four_two_base_calibration.py}.
+\end{proof}
+
+This control is decisive: the minus sign in (10) is not a dispensable
+normalization, and replacing it by the summable plus sign would erase
+the dimension-six obstruction.
+
+\section{Exact beta evaluation and its residue}
+
+Sarkissian--Spiridonov's unnumbered beta-evaluation theorem immediately
+preceding their equation (58), followed by their degeneration (66),
+applies meromorphically after the specialization
+\[
+ \omega_1=24\beta-5=\beta^3,\quad
+ \omega_2=1,\quad Q=\omega_1+\omega_2,\quad
+ g=Q,\quad \ell=0.
+\tag{14}
+\]
+The continuous phase coefficient is
+\[
+ p-k(1-s)=-115-24(1-24)=437.
+\tag{15}
+\]
+For the Fourier variables $(\alpha,N)$, equation (66) becomes
+\[
+\begin{split}
+ &\sum_{m\bmod24}\int
+ e^{\pi i m\,437(2N-4)/24}
+ e^{\pi i\alpha(2y-Q)/(24\omega_1)}
+ \Gamma_M(y,m)\Gamma_M(Q-y,-m)
+ \frac{dy}{i\sqrt{\omega_1}}\\
+ &\qquad =
+ 24\Gamma_M(-\alpha,4-N)
+ \Gamma_M(\alpha,N)\Gamma_M(Q,0),
+\end{split}
+\tag{16}
+\]
+as a meromorphic Fourier identity.
+
+\begin{proposition}[Conservation of orientation]\label{prop:residue}
+The right side of (15) does not reduce, by the standard double-sine
+reflection and period-shift relations, to an unoriented norm identity.
+The irreducible oriented residue is
+\[
+ \Gamma_M(-\alpha,4-N)\Gamma_M(\alpha,N).
+\tag{17}
+\]
+\end{proposition}
+
+\begin{proof}
+The reflection partner of $\Gamma_M(\alpha,N)$ is
+$\Gamma_M(Q-\alpha,4-N)$, not
+$\Gamma_M(-\alpha,4-N)$.  Shifting by $Q$ changes the discrete label by
+$r-1=4$, which is not zero modulo $24$.  Canonical reduction therefore
+leaves (16).  The full parameter and relation-basis audit is
+\path{scripts/dimension_six_ss_evaluation_audit.py}.
+\end{proof}
+
+Thus (15) is a genuine integral-transform identity but not, on its own,
+the new finite multiplicative relation required to identify the
+dimension-six algebraic packet.
+
+\section{Why the endpoint contour does not close the proof}
+
+\begin{proposition}[Endpoint obstruction]\label{prop:contour}
+At (13), the undeformed vertical contour in (15) is not absolutely
+convergent for any real Fourier frequency $\alpha$.
+\end{proposition}
+
+\begin{proof}
+For $y=i\lambda$, the two asymptotic formulas
+\cite[equations (40)--(41)]{SS} give
+\[
+ \Gamma_M(y,m)\sim
+ Z(m)e^{-\pi iB_{2,2}(y)/48},
+\quad
+ \Gamma_M(Q-y,-m)\sim
+ Z(-m)^{-1}e^{+\pi iB_{2,2}(Q-y)/48}.
+\tag{18}
+\]
+Since $B_{2,2}(Q-y)=B_{2,2}(y)$, the quadratic decay cancels and the
+kernel tends to the nonzero constant $Z(m)/Z(-m)$.  The remaining
+phase has modulus
+\[
+ \exp\left(-\frac{2\pi\alpha\lambda}{24\omega_1}\right).
+\tag{19}
+\]
+It grows at one end when $\alpha\ne0$ and fails to decay at either end
+when $\alpha=0$.
+\end{proof}
+
+There is nevertheless no finite pole pinch at $g=Q$.  The poles of the
+first gamma factor lie in the cone at and to the left of $0$, while
+those of the reflected factor lie in the cone at and to the right of
+$g$.  At $g=Q>0$ the cones remain separated by $Q$.  Hence no
+finite-pinch residue correction occurs; the obstruction is entirely at
+imaginary infinity.
+
+Likewise, the fused bilateral series has
+$cd/(ab)=q^2$ and $z=-q$.  Slater's strict convergence annulus
+$|q|^2<|q|<1$ collapses at the boundary.  Neither the original contour
+nor the boundary bilateral sum proves Conjecture~\ref{conj:fusion};
+equation (15) survives only as a meromorphic continuation.
+
+\subsection*{Component type and the exact small divisor}
+
+For finite frequency $(a,b)\bmod6$, choose the centered lift
+\[
+ s_{a,b}\equiv4b-5a\pmod6,\qquad
+ s_{a,b}\in\{-3,-2,-1,0,1,2\}.
+\]
+Exactly six components have $s_{a,b}=0$; they are purely oscillatory
+and admit the Fresnel/Abel prescription.  The remaining thirty grow at
+one end of the vertical contour and require the interior strip and its
+tilted finite part.  Reversing the convention for residue three changes
+six growth orientations but not this $6+30$ split.
+
+Put $\Delta(\tau)=\tau+\tau^{-1}-5$.  Direct calculation gives
+\[
+ A\tau-\tau
+ =-\frac{24\tau}{24\tau-5}\Delta(\tau).
+\tag{19a}
+\]
+Equivalently,
+\[
+ \gamma(s)=
+ \frac{\beta+\beta^{-1}s^2+i\sqrt{21}s}{1+s^2},
+\]
+and therefore
+\[
+ \Delta(\gamma(s))
+ =i\frac{21}{\beta}s+O(s^2),
+\qquad
+ 2\pi|\Im(A\gamma(s)-\gamma(s))|
+ =2\pi\sqrt{21}(1-\beta^{-6})s+O(s^2).
+\tag{19b}
+\]
+This is the degenerating two-base decay coefficient.
+
+The arithmetic at the same point is explicit:
+\[
+ \beta=[4;\overline{1,3}],\qquad
+ (n\beta-m)(n\beta^{-1}-m)=m^2-5mn+n^2.
+\]
+Taking $m$ nearest to $n\beta$ and using the nonzero integral norm gives
+\[
+ \|n\beta\|\geq\frac1{\sqrt{21}\,n+\tfrac12},
+\qquad
+ |1-e^{2\pi in\beta}|
+ \geq\frac4{\sqrt{21}\,n+\tfrac12}.
+\tag{19c}
+\]
+Thus exponential damping of rate $\kappa(s)\asymp s$ competes with
+quadratic-irrational divisors of order $1/n$ in the transition range
+$n\asymp1/s$.  This is the sharp small-divisor form of MFC$_6$.
+
+\section{Stabilizer ledger and conditional closure}
+\label{sec:conditional}
+
+\begin{lemma}[All multipliers]\label{lem:multipliers}
+The matrix $A$ fixes every characteristic modulo $6$, satisfies
+$\psi^2(A)=-1$, and for every
+$\boldsymbol r=(a/6,b/6)$,
+\[
+ (\psi^{-2}\chi_{\boldsymbol r}^{-1})(A)
+ =\Phi_{a,b}^{\,2}.
+\tag{20}
+\]
+\end{lemma}
+
+\begin{proof}
+The first assertion is $A\equiv I\pmod6$.  The Rademacher invariant is
+$6$, so
+\[
+ \psi^2(A)=e^{\pi i6/6}=-1.
+\]
+Substitution of $\boldsymbol r$ in Kopp's theta-character formula and
+reduction modulo one agrees with the square of
+\[
+ \Phi_{a,b}
+ =(-1)^{6+7(1+a)(1+b)}
+ e^{-\pi i6/12}\tau_6^{-(a^2-5ab+b^2)}
+\tag{21}
+\]
+in all $36$ cases.  This is exact rational arithmetic; see
+\path{scripts/dimension_six_stabilizer_ledger.py}.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:conditional}]
+Conjecture~\ref{conj:fusion} identifies the two-base boundary packet
+with the AFK/Kopp packet characteristic by characteristic.
+Lemma~\ref{lem:multipliers} shows that this identification has the
+required stabilizer phase.  The exact finite frequency maps then turn
+the two formal TCC sums into the two reconstructed matrices.  Their
+trace is one and all $225$ rank-two minors vanish, so each has rank one
+and is idempotent.  The matrix-to-TCC Fourier bridge gives both shifts
+for the canonical tuple.  Integral covariance under
+$\mathrm{GL}_2(\Z)$, applied also to the inverse transformation, gives
+equality of shift sets and transports the result to every admissible
+dimension-six form.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:stark}]
+The exact characteristic-to-ray bridge identifies the fused boundary
+packet with the differenced derivatives
+$D_j=Z'_{(6)\infty_2}(0,g^j)$ in the certified Frobenius order.
+Projecting to the primitive order-six Fourier line gives
+\[
+ L'_S(0,\chi_1)=r_0+\zeta_6r_1+\zeta_6^2r_2.
+\tag{22}
+\]
+No TCC identity or minor vanishing is used in this projection.
+\end{proof}
+
+\subsection*{Grade-2 equivalence and Grade-3 attack surface}
+
+The rigid endpoint content of Conjecture~\ref{conj:fusion} is
+reduction-equivalent to (22).  Write
+\[
+ \Lambda_1=A_0+\zeta_6B_0,\qquad Q_3=D_0-D_1+D_2.
+\]
+The reverse reduction is
+\[
+ D_0=\frac{Q_3+2A_0+B_0}{3},\qquad
+ D_1=\frac{-Q_3+A_0+2B_0}{3},\qquad
+ D_2=\frac{Q_3-A_0+B_0}{3}.
+\tag{23}
+\]
+Indeed, (22) fixes $\Lambda_1$, conjugation fixes $\Lambda_5$, and the
+proved conductor-three identity fixes $Q_3$.  Equation (23), sign-class
+reciprocity, shift/reflection/duplication, conductor lowering, and
+Lemma~\ref{lem:multipliers} recover all thirty-six endpoint values.
+Conversely, primitive Fourier projection gives (22).  Neither direction
+uses TCC or a minor certificate.
+
+The literal MFC$_6$ assertion is not derived from (22) by this standard
+basis: equation (22) does not establish existence of the geodesic limit
+or commutation of periodization with fusion.  Thus the endpoint value is
+Grade-2 equivalent, but the converse for the full regularity hypothesis
+is open.  Its family formulation has a genuinely
+richer attack surface: one may differentiate in $\tau$, deform the
+contour, track pinches and residue jumps, vary the lens label, iterate
+the $A_6$ return map, and use badly-approximable-point estimates.  This
+analytic structure is absent from the rigid equality (22).
+
+\section{Scope and reproducibility}
+
+The verified content of this note is the two-base reformulation,
+the dimension-five/dimension-six dichotomy, the meromorphic
+Sarkissian--Spiridonov specialization, the endpoint exclusion, and the
+finite multiplier ledger.  The unconditional TCC is already proved in
+dimensions four, five, seven, and eight in the companion
+papers~\cite{PaperI,PaperII}.  Dimension six remains conditional on
+Conjecture~\ref{conj:fusion}.
+
+The cycle-by-cycle state and all negative-result gates are recorded in
+\path{docs/dimension-six-state-notes-v3.md}.  The executable certificate
+packet is regenerated by
+\path{scripts/generate_dimension_six_amendment_certificates.sh}.
+The zero-frequency tilted/Fresnel normalization gives the reciprocal
+pair $-2\sqrt7\pm3\sqrt3$ and hence the independently enclosed trace
+$-4\sqrt7$.  This is a normalization calibration only; it does not
+imply the nonzero oriented fusion-continuity assertion.
+
+\section*{Acknowledgments}
+
+The author thanks the developers of PARI/GP, FLINT, Arb, and
+python-flint.  The formulation in this note benefited from repeated
+adversarial checks of normalization, place labeling, and boundary
+convergence.
+
+\begin{thebibliography}{9}
+
+\bibitem{AFK}
+D.~M. Appleby, S.~T. Flammia, and G.~S. Kopp,
+\emph{A constructive approach to Zauner's conjecture via the
+Shintani--Faddeev modular cocycle},
+arXiv:2501.03970.
+
+\bibitem{Kopp}
+G.~S. Kopp,
+\emph{The Shintani--Faddeev modular cocycle: Stark units from
+$q$-Pochhammer ratios},
+arXiv:2411.06763.
+
+\bibitem{SS}
+G.~A. Sarkissian and V.~P. Spiridonov,
+\emph{General modular quantum dilogarithm and beta integrals},
+arXiv:1910.11747, version 4.
+
+\bibitem{PaperI}
+H.~Zhao,
+\emph{Twisted-convolution identities in dimensions four and five
+from Shintani ray units}, preprint, 2026.
+
+\bibitem{PaperII}
+H.~Zhao,
+\emph{Twisted-convolution identities in dimensions seven and eight:
+Shintani height rigidity and CM descent}, preprint, 2026.
+
+\end{thebibliography}
+
+\end{document}

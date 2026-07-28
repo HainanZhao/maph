@@ -2,6 +2,16 @@
 
 Date: 2026-07-28
 
+> **Amendment A1.** The equal-base interior model diagnosed below is
+> retired. Cycle 144' replaces it by the honest two-base lens packet.
+> In the notation now fixed, Sarkissian--Spiridonov's lens partner is
+> \(\widetilde q_M=e^{2\pi iA_6\tau}\), whereas the standard Faddeev
+> partner is \(\widetilde q_S=e^{-2\pi i/\rho}\). The trace criterion
+> \(\widetilde q_S=q_S\iff \rho+\rho^{-1}\in\mathbb Z\) applies to the
+> latter pair. Both fusion mechanisms meet at the RM boundary, but they
+> are distinct in the interior. The hard halt served its purpose by
+> preventing their conflation.
+
 ## Verdict
 
 \[
@@ -77,8 +87,8 @@ off-boundary evaluation of the two-base lens packet. Using it at three
 interior radii would already assume the modularly completed connection
 formula that the program calls “the Lemma.”
 
-The obstruction is consequently not a failed numerical identity. It is
-a missing map
+The obstruction was consequently not a failed numerical identity. It
+was the missing map
 
 \[
  \text{two-base lens packet }(q,\widetilde q)
@@ -86,8 +96,8 @@ a missing map
  \text{completed equal-base boundary packet}.
 \]
 
-That map must be stated and justified before an end-to-end radial Arb
-enclosure is mathematically defined.
+That map is constructed and enclosed in
+[Cycle 144'](sic-stark-cycle144.md).
 
 ## Calibration details
 
@@ -122,11 +132,12 @@ dimension-five Voutier certificate was rerun and still passes.
 | Equal bases at three interior axis points | `EXCLUDED` |
 | Standard \( {}_2\psi_2\) convergence at \(\beta_6\) | `EXCLUDED` |
 | Complete Zak-to-Slater radial chain | `NOT ENCLOSED` |
-| Cycles 144--152 under the stated gate | `HALTED` |
+| Equal-base Cycles 144--152 program | `RETIRED` |
+| Honest two-base successor | `RESUMED` in Cycle 144' |
 
 ## Required restart
 
-The next cycle must precede the requested regime-(i) scan. It should:
+Amendment A1 implemented the required restart:
 
 1. write the genuine two-base interior lens packet;
 2. state the proposed \((q,\widetilde q)\)-to-boundary completion as an

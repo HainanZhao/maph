@@ -19,6 +19,11 @@ instances unconditionally:
   [PDF](paper/sic-stark-dimensions-seven-eight.pdf): dimensions seven
   and eight.
 
+The separate conditional/reformulation manuscript for dimension six is
+[Paper III source](paper/sic-stark-dimension-six-boundary-fusion.tex)
+with its [PDF](paper/sic-stark-dimension-six-boundary-fusion.pdf). It
+does not claim an unconditional dimension-six proof.
+
 The dimension-six orientation problem remains open. The longer research
 ledger in `docs/` records that boundary and the exploratory work behind
 the proved cases.
@@ -45,6 +50,22 @@ This creates `dist/sic-stark-paper-I.tar.gz` and
 
 - `paper/sic-stark-dimensions-four-five.pdf`
 - `paper/sic-stark-dimensions-seven-eight.pdf`
+
+For a separate Paper III preprint deposit, upload:
+
+- `paper/sic-stark-dimension-six-boundary-fusion.tex`
+- `paper/sic-stark-dimension-six-boundary-fusion.pdf`
+- `docs/dimension-six-state-notes-v3.md`
+- `docs/dimension-six-analytic-to-stark-theorem.md`
+- `docs/sic-stark-cycle143.md` through `docs/sic-stark-cycle153.md`
+- `certificates/dimension-six-amendment-SHA256SUMS`
+- every `certificates/dimension-six-cycle14[4-9]-*`,
+  `certificates/dimension-six-cycle150-*`, and
+  `certificates/dimension-six-cycle153-*` file
+- `scripts/generate_dimension_six_amendment_certificates.sh`
+- the `dimension_six_*` scripts named by that generator
+- the matching `tests/test_dimension_six_*` regression files
+- `requirements-lock.txt`
 
 ### Required contents of the reproducibility archive
 
@@ -591,6 +612,95 @@ when the standard bilateral convergence annulus has collapsed. Per the
 hard gate, Cycles 144--152 are halted until a genuine two-base modular
 completion is stated and enclosed.
 
+[Cycle 144'](docs/sic-stark-cycle144.md) implements Amendment A1 and
+reopens the program. It distinguishes the general-lens pair
+\((e^{2\pi i\tau},e^{2\pi iA_6\tau})\) from the standard Faddeev pair
+\((e^{2\pi i\rho},e^{-2\pi i/\rho})\), encloses the direct lens product
+against the published 24-factor continuation at all three interior
+points, and encloses all nine bibasic alias classes. At the RM fusion
+locus, its exact term ratio reduces to the retired equal-base
+\({}_2\psi_2\), now used only as a boundary identity.
+
+[Cycle 145'](docs/sic-stark-cycle145.md) supplies the decisive control.
+Dimension five fuses to the \(+q\) closed locus, whereas dimension six
+fuses to its \(-q\) neighbor. The full \(d=5\) two-base continuation
+and all six bibasic classes are enclosed, and the fused packet agrees
+with the already proved algebraic boundary value. The \(d=4\)
+even-wrap calibration independently fixes analytic lens level \(8\)
+and phase level \(16\), rejecting level \(24\) for that dimension.
+
+[Cycle 146'](docs/sic-stark-cycle146.md) specializes the exact
+Sarkissian--Spiridonov statement: the unnumbered theorem preceding
+their equation (58), through the published two-gamma evaluation (66).
+All meromorphic-identity hypotheses pass. The result is a genuine
+integral-transform identity, but canonical reflection/shift reduction
+leaves the oriented product
+\(\Gamma_M(-\alpha,4-N)\Gamma_M(\alpha,N)\); it supplies no new finite
+multiplicative relation by itself. The direct undeformed endpoint
+contour remains to be audited.
+
+[Cycles 147'--148'](docs/sic-stark-cycle148.md) verify the interior
+identity in the meromorphic spectral sense and isolate the precise
+boundary issue. No named state-integral theorem covers the
+general-\(A_6\), \(\mathbb Z/24\)-labeled kernel. At \(g=Q\), the two
+gamma asymptotics cancel their quadratic decay, so the original
+vertical contour grows at one end for every nonzero real frequency
+and fails to decay for zero frequency. The meromorphic S--S value
+remains valid, leaving one arithmetic fusion-continuity lemma.
+
+[Cycle 149](docs/sic-stark-cycle149.md) completes the exact stabilizer
+ledger.  The matrix \(A_6\) is the identity modulo \(6\), fixes all
+thirty-six characteristics, has \(\psi^2(A_6)=-1\), and Kopp's
+multiplier agrees with the square of the AFK phase in every case.
+Fusion-continuity would therefore close both formal shifts.  The
+Grade-2 audit shows that its rigid endpoint value is reduction-equivalent
+to the previously isolated oriented order-six regulator identity,
+without using TCC or the minors.  The full family nevertheless has a
+strictly richer Grade-3 attack surface.
+
+[Cycle 150](docs/sic-stark-cycle150.md) independently rechecks the
+helical frequency map and the two boundary exclusions, then perturbs the
+wrap sign, half-plane, lens label, infinite-place orientation, and trace.
+Every corruption is detected.  In particular, changing the trace from
+five to six preserves equality of the standard modular bases but destroys
+the \(A_6\) fixed point, demonstrating why arithmetic fusion cannot be
+treated as a generic removable limit.
+
+[Cycle 151](docs/sic-stark-cycle151.md) clears the parallel queue.  The
+exact dimension-sixteen screen gives Shintani index \(16\), so its
+\(2\)-group ray field does not satisfy the required index-two
+hypothesis.  The complete dimension-seven conductor-two certificate and
+both deterministic companion archives rerun successfully.  Release
+payloads are ready, but no external Zenodo deposit is claimed because
+this workspace has no deposit credential.
+
+[Cycle 152](docs/sic-stark-cycle152.md) selects Outcome B.  The
+dimension-six result is written as a boundary-fusion reformulation with
+one named open lemma and an exact conditional closure theorem; it is not
+presented as an unconditional TCC proof.  The consolidated audit is in
+[state notes v3](docs/dimension-six-state-notes-v3.md), and the crown
+deliverable is the standalone
+[analytic-to-Stark theorem](docs/dimension-six-analytic-to-stark-theorem.md).
+The separate source is
+[`paper/sic-stark-dimension-six-boundary-fusion.tex`](paper/sic-stark-dimension-six-boundary-fusion.tex);
+it does not alter either proved companion paper.
+
+[Cycle 153](docs/sic-stark-cycle153.md) removes the finite-part
+ambiguity. Admissible tilted contours in the pole-free strip have the
+same interior value by a direct Cauchy argument. Six frequency
+components are purely oscillatory/Fresnel and thirty grow at one end
+and genuinely require the strip. The exact fusion defect is
+\[
+A_6\tau-\tau=
+-\frac{24\tau}{24\tau-5}(\tau+\tau^{-1}-5),
+\]
+and \(\beta_6=[4;\overline{1,3}]\) gives the explicit lower bound
+\(\|n\beta_6\|\ge(\sqrt{21}n+\tfrac12)^{-1}\). Thus the remaining
+estimate is a concrete \(n\asymp s^{-1}\) small-divisor problem.
+The Arb rehearsal records rigorous approaching-point balls and the
+observed loss of conditioning without claiming the open boundary
+limit.
+
 ## Verification
 
 The default tests use Python, NumPy, and PARI/GP.  The rigorous
@@ -630,4 +740,11 @@ python3 scripts/dimension_six_inversion_phase.py
 python3 scripts/dimension_six_modular_gamma_grid.py
 python3 scripts/dimension_six_beta_kernel_match.py
 PYTHONPATH=scripts python3 scripts/dimension_six_cycle143_gate.py
+PYTHONPATH=scripts python3 scripts/dimension_six_two_base_lens.py
+PYTHONPATH=scripts python3 scripts/dimension_five_two_base_calibration.py
+PYTHONPATH=scripts python3 scripts/dimension_four_two_base_calibration.py
+python3 scripts/dimension_six_ss_evaluation_audit.py
+python3 scripts/dimension_six_interior_factorization_audit.py
+python3 scripts/dimension_six_boundary_integral_audit.py
+PYTHONPATH=scripts python3 scripts/dimension_six_tilted_finite_part.py --arb
 ```

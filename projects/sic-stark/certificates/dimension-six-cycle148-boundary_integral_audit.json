@@ -1,0 +1,64 @@
+{
+  "component_census": {
+    "one_sided_growing_strip_required": 30,
+    "purely_oscillatory_Fresnel": 6
+  },
+  "cycle_148_outcome": "direct contour route excluded; one fusion-continuity lemma remains",
+  "degeneration_g_equals_Q_removes_decay": true,
+  "endpoint_cases": {
+    "alpha_negative": {
+      "lambda_to_minus_infinity": "decays",
+      "lambda_to_plus_infinity": "grows",
+      "two_sided_absolute_convergence": false
+    },
+    "alpha_positive": {
+      "lambda_to_minus_infinity": "grows",
+      "lambda_to_plus_infinity": "decays",
+      "two_sided_absolute_convergence": false
+    },
+    "alpha_zero": {
+      "lambda_to_minus_infinity": "nonzero constant modulus",
+      "lambda_to_plus_infinity": "nonzero constant modulus",
+      "two_sided_absolute_convergence": false
+    }
+  },
+  "main_six_gamma_integral_convergence_not_inherited": true,
+  "meromorphic_boundary_evaluation": {
+    "interpretation": "analytic continuation / distributional Fourier value, not the original absolutely convergent vertical integral",
+    "status": "VERIFIED_BY_SS_EQUATION_66",
+    "value": "24*Gamma_M(-alpha,4-N)*Gamma_M(alpha,N)*Gamma_M(Q,0)"
+  },
+  "original_vertical_contour_absolute_convergence": "EXCLUDED",
+  "phase_modulus_on_y_i_lambda": "exp(-2*pi*alpha*lambda/(24*omega1))",
+  "reason": "the sign of alpha reverses which end grows, and alpha=0 has a nondecaying integrand",
+  "remaining_phase": "exp(pi*i*alpha*(2*y-Q)/(24*omega1))",
+  "residual_sublemma_count": 1,
+  "residual_sublemmas": [
+    {
+      "must_preserve": [
+        "trace-integrality locus",
+        "Galois-conjugate modular partner",
+        "all lens labels",
+        "odd stabilizer multiplier psi^2(A6)=-1"
+      ],
+      "name": "arithmetic fusion-continuity lemma",
+      "statement": "The meromorphic spectral periodization from the two-base chamber has a boundary value at tau=beta6, beta6+beta6^(-1)=5, equal to the convention-matched AFK double-sine cocycle packet.",
+      "status": "OPEN"
+    }
+  ],
+  "schema": "sic-stark-dimension-six-boundary-integral-audit-v1",
+  "single_vertical_contour_for_all_36_frequencies": "EXCLUDED",
+  "source_asymptotics": {
+    "bernoulli_symmetry": "B22(Q-y)=B22(y)",
+    "kernel_limit": "Z(m)/Z(-m), nonzero",
+    "kernel_limit_is_nonzero_root_of_unity": true,
+    "negative_imaginary_direction": "Sarkissian--Spiridonov equation (41)",
+    "positive_imaginary_direction": "Sarkissian--Spiridonov equation (40)",
+    "quadratic_exponentials_cancel": true
+  },
+  "tilted_finite_part": {
+    "boundary_value": "limit along the A6 axis, when it exists",
+    "interior_definition": "integrate on an admissible graph in the pole-free strip, then apply exact helical periodization",
+    "tilt_independence": "PROVED_BY_CAUCHY_AND_VANISHING_CAPS"
+  }
+}

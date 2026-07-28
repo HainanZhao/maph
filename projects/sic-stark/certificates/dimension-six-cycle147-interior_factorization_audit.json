@@ -1,0 +1,44 @@
+{
+  "corpus_checks": [
+    {
+      "d6_verdict": "NOT_APPLICABLE: the d=6 integrand is a sum over m mod 24 of two general-lens Gamma_M factors, and its modular partner is A6*tau rather than the standard S-transform used in Theorem 1.1",
+      "hypotheses": "I_{A,B}(b)=integral Phi_b(x)^B exp(-A*pi*i*x^2), with integers B>A>0 and no lens label",
+      "source": "Garoufalidis--Kashaev, From state integrals to q-series, Theorem 1.1"
+    },
+    {
+      "d6_verdict": "NOT_A_RIGOROUS_SPECIALIZATION: no theorem in that paper treats the A6 general-lens discrete kernel",
+      "hypotheses": "physics block factorization for specified 3d N=2 theories and integration cycles",
+      "source": "Beem--Dimofte--Pasquetti, Holomorphic Blocks in Three Dimensions"
+    },
+    {
+      "d6_verdict": "NOT_APPLICABLE: beta6 is a quadratic irrational boundary point, not a rational root-of-unity cusp",
+      "hypotheses": "radial asymptotics at rational roots of unity",
+      "source": "Garoufalidis--Zagier, Asymptotics of Nahm sums at roots of unity"
+    }
+  ],
+  "exact_inputs": {
+    "SS_equation_66_fourier_transform": "VERIFIED",
+    "alias_records_checked": 900,
+    "dual_descent": "xi*Delta+n/4=ell",
+    "frequency_map": "(xi,n,ell)->(-n,ell) mod 6",
+    "helical_quotient": "X=(R x Z/24)/<(omega1-omega2,6)>",
+    "three_bibasic_classes_per_frequency": true,
+    "two_base_Arb_enclosures": "9/9 at three interior points"
+  },
+  "interior_meromorphic_spectral_identity": "VERIFIED",
+  "literal_pointwise_contour_periodization": "OPEN",
+  "named_statement_discipline_satisfied": true,
+  "pointwise_gap_list": [
+    "choose a single pole-separating contour for every helical translate near g=Q",
+    "prove a translate-uniform integrable majorant before interchanging the helical sum and the contour integral",
+    "show that this pointwise periodization equals the meromorphic spectral continuation"
+  ],
+  "proof": {
+    "conclusion": "The periodized identity holds as a meromorphic Fourier-series/distribution identity in the interior.",
+    "step_1": "Equation (66) is the meromorphic Fourier transform of the continuous-discrete kernel.",
+    "step_2": "Restriction of a Fourier transform to the dual of the helical quotient collects exactly the four discrete lifts and all continuous lifts.",
+    "step_3": "The exact reindexing above turns those lifts into three bibasic bilateral classes.",
+    "step_4": "In the chamber |q_M|<|q_M_tilde|<1, the geometric tail bounds of Cycle 144' make each class absolutely and locally uniformly convergent."
+  },
+  "schema": "sic-stark-dimension-six-interior-factorization-audit-v1"
+}

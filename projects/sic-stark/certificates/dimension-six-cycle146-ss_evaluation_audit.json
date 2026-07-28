@@ -1,0 +1,107 @@
+{
+  "all_meromorphic_identity_hypotheses_verified": true,
+  "canonical_relation_reduction": {
+    "Q_shift_discrete_change": 4,
+    "Q_shift_preserves_label_mod_24": false,
+    "irreducible_oriented_residue": "Gamma_M(-alpha,4-N)*Gamma_M(alpha,N)",
+    "reflection_cancellations": 0,
+    "standard_relations_determine_only_norms": true
+  },
+  "direct_boundary_contour_hypothesis_open": true,
+  "double_sine_expansion": {
+    "C_m": "Z(m)*exp(-pi*i*B22(mu)/48+pi*i*sum_Delta B22(z)/2)",
+    "definition": "S_here(z|omega1,1)=gamma^(2)(z;omega1,1)",
+    "delta_condition": "-115*gamma-delta == -115*m mod 24",
+    "factor_counts": {
+      "Gamma(-alpha,4-N)": 24,
+      "Gamma(Q,0)": 24,
+      "Gamma(alpha,N)": 24
+    },
+    "factor_nodes": "z_(gamma,delta)(mu,m)=(mu+omega1*delta+gamma)/24",
+    "formula": "Gamma_M(mu,m)=C_m(mu)*product_{Delta(24,-115,m)} S_here(z_(gamma,delta))"
+  },
+  "equation_66_boundary_lhs": "integral_{-i infinity}^{i infinity} sum_{m=0}^{23} exp(pi*i*m*437*(2*N-4)/24) exp(pi*i*alpha*(2*y-Q)/(24*omega1)) Gamma_M(y,m)*Gamma_M(Q-y,-m) dy/(i*sqrt(omega1))",
+  "equation_66_boundary_rhs": "24*Gamma_M(-alpha,4-N)*Gamma_M(alpha,N)*Gamma_M(Q,0)",
+  "hypotheses": [
+    {
+      "hypothesis": "M=[[-p,-s],[k,-r]] in SL(2,Z), k>0",
+      "status": "VERIFIED",
+      "verification": "(-115)*5+24*24=1; M=[[115,-24],[24,-5]]=A6"
+    },
+    {
+      "hypothesis": "equation (58) discrete sector nu=0",
+      "status": "VERIFIED",
+      "verification": "m,N,l are integral; l=0"
+    },
+    {
+      "hypothesis": "positive boundary periods",
+      "status": "VERIFIED",
+      "verification": "omega2=1 and omega1=24*beta-5=beta^3>0"
+    },
+    {
+      "hypothesis": "balancing before degeneration",
+      "status": "VERIFIED_BY_SOURCE",
+      "verification": "equation (66) is derived from (58) by the limits stated after equations (60)--(65); no new balancing condition remains beyond Q=omega1+omega2"
+    },
+    {
+      "hypothesis": "g=Q,l=0 specialization",
+      "status": "VERIFIED",
+      "verification": "RHS becomes 24*Gamma(-alpha,4-N)*Gamma(alpha,N)*Gamma(Q,0)"
+    },
+    {
+      "hypothesis": "fixed scalar is finite and nonzero",
+      "status": "VERIFIED",
+      "verification": "pole positivity excludes Q from the pole lattice; the zero equation -115+24*n=1 has no integer n"
+    },
+    {
+      "hypothesis": "restrictions used in the proof",
+      "status": "VERIFIED_BY_SOURCE",
+      "verification": "the paragraph after equation (58) explicitly lifts the auxiliary period/chamber restrictions by analytic continuation"
+    },
+    {
+      "hypothesis": "undeformed contour at g=Q",
+      "status": "OPEN_FOR_DIRECT_BOUNDARY_INTEGRAL",
+      "verification": "equation (66) gives a meromorphic identity, but the source does not separately prove that the original vertical contour remains unpinched at this endpoint"
+    }
+  ],
+  "parameter_map": {
+    "M": [
+      [
+        115,
+        -24
+      ],
+      [
+        24,
+        -5
+      ]
+    ],
+    "N": "arbitrary integral beta-transform label",
+    "Q": "omega1+omega2",
+    "alpha": "helical continuous frequency",
+    "g": "Q",
+    "k": 24,
+    "l": 0,
+    "omega1": "24*beta-5=beta^3",
+    "omega2": "1",
+    "p": -115,
+    "pr_plus_ks": 1,
+    "r": 5,
+    "s": 24
+  },
+  "schema": "sic-stark-dimension-six-ss-evaluation-audit-v1",
+  "source": {
+    "analytic_continuation_paragraph": "paragraph immediately following equation (58)",
+    "balancing_equation": 57,
+    "beta_integral_equation": 58,
+    "degenerate_two_gamma_evaluation": 66,
+    "main_statement": "unnumbered theorem immediately preceding equation (58)",
+    "paper": "Sarkissian--Spiridonov, General modular quantum dilogarithm and beta integrals, arXiv:1910.11747v4"
+  },
+  "verdict": {
+    "SS_equation_66_is_a_new_integral_transform_identity": true,
+    "SS_evaluation_alone_implies_TCC_33": false,
+    "SS_supplies_new_finite_multiplicative_relation": false,
+    "conservation_of_obstruction": true,
+    "remaining_map": "periodize the continuous-discrete Fourier identity on the helical quotient and justify its boundary specialization"
+  }
+}
