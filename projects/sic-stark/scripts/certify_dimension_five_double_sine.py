@@ -319,8 +319,8 @@ def overlap_log(
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--digits", type=int, default=30)
-    parser.add_argument("--tolerance", default="1e-8")
+    parser.add_argument("--digits", type=int, default=60)
+    parser.add_argument("--tolerance", default="1e-10")
     arguments = parser.parse_args()
     tolerance = Fraction(arguments.tolerance)
     if tolerance <= 0:
@@ -408,6 +408,7 @@ def main() -> None:
             )
 
     powered_height_upper = 5760 * maximum_log_difference
+    height_upper = powered_height_upper / 2
     voutier_bounds = []
     for degree in range(3, 17):
         d_value = arb(degree)
@@ -422,6 +423,7 @@ def main() -> None:
             voutier_lower = bound
     print(f"MAXIMUM_LOG_DIFFERENCE={maximum_log_difference}")
     print(f"POWERED_HEIGHT_UPPER_BOUND={powered_height_upper}")
+    print(f"WEIL_HEIGHT_UPPER_BOUND={height_upper}")
     print(f"VOUTIER_MINIMUM_DEGREE_3_TO_16={voutier_lower}")
     print(
         "HEIGHT_GAP_CERTIFIED="

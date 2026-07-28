@@ -154,6 +154,24 @@ class DimensionFiveArtifactTests(unittest.TestCase):
         self.assertIn("NORM_MINUS_ONE_MOD_3_OBSTRUCTION=1", shintani)
         self.assertIn("MU_ONE_INFINITY_IMAGE=[0]~", shintani)
         self.assertIn("NU_ONE_INFINITY_IMAGE=[4]~", shintani)
+        self.assertIn(
+            "BASE_CONJUGATION_ACTION_ON_RAY_GENERATORS="
+            "[[5, 0]~, [4, 1]~]",
+            shintani,
+        )
+        self.assertIn(
+            "SHINTANI_FIXED_RELATIVE_FIELD=x^2 + 5",
+            shintani,
+        )
+        self.assertIn(
+            "NORMAL_CLOSURE_IS_Q_SQRT_MINUS_5_RAY_SUBFIELD=1",
+            shintani,
+        )
+        self.assertIn("STARK_FIELD_OCTIC_SUBFIELD_COUNT=1", shintani)
+        self.assertIn(
+            "UNIQUE_OCTIC_SUBFIELD_IS_Q_ZETA_60_PLUS=1",
+            shintani,
+        )
         self.assertIn("SHINTANI_SAFE_EXPONENT=5760", shintani)
 
         units = (
@@ -184,6 +202,7 @@ class DimensionFiveArtifactTests(unittest.TestCase):
             / "certificates/dimension-five-double-sine-intervals.txt"
         ).read_text()
         self.assertEqual(intervals.count("CONTAINS_ZERO=True"), 4)
+        self.assertIn("WEIL_HEIGHT_UPPER_BOUND=[+/- 1.24e-7]", intervals)
         self.assertIn("HEIGHT_GAP_CERTIFIED=True", intervals)
 
 

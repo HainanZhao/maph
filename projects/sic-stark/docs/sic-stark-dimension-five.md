@@ -335,6 +335,11 @@ Shintani's imaginary-quadratic reduction uses
 \[
 \begin{pmatrix}15&0\\0&3\end{pmatrix}.
 \]
+This field is not selected from a subfield list: conjugation acts on
+the \(C_8\times C_2\) ray generators by \((5,0)\) and \((4,1)\), and
+the class field of its fixed subgroup
+\(\{(a,b):a+b\equiv0\pmod2\}\) is exactly
+\(\mathbb Q(\sqrt3,\sqrt{-5})\).
 Clearing every absolute-value and distribution denominator over its
 eight divisors gives
 \[
@@ -345,12 +350,13 @@ value raised to the \(5760\)-th power is a correctly Artin-labeled unit.
 
 Rigorous double-sine integration gives maximum logarithmic error
 \[
-2.23\times10^{-9}.
+4.4\times10^{-11}.
 \]
-After raising to the Shintani power, the height of the quotient of the
-analytic and algebraic candidates is less than
+After raising to the Shintani power and accounting for eight real and
+four complex pairs in degree sixteen, the height of the quotient of
+the analytic and algebraic candidates is less than
 \[
-1.28\times10^{-5}.
+1.27\times10^{-7}.
 \]
 Voutier's lower bound for a non-torsion algebraic number of degree at
 most \(16\) is at least
