@@ -139,6 +139,145 @@ class DimensionSixObstructionTests(unittest.TestCase):
             result.stdout,
         )
 
+    def test_weight_one_functional_equation_is_oriented(self) -> None:
+        result = subprocess.run(
+            [
+                "gp",
+                "-q",
+                str(
+                    ROOT
+                    / "scripts/"
+                    "dimension_six_weight_one_functional_equation.gp"
+                ),
+            ],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        self.assertNotIn("user error", result.stderr)
+        self.assertIn("GAMMA_SHIFTS=[0, 1]", result.stdout)
+        self.assertIn("ABSOLUTE_CONDUCTOR=756", result.stdout)
+        self.assertIn("ROOT_NUMBER=I", result.stdout)
+        self.assertIn(
+            "LS_EQUALS_PRIMITIVE_L_FOR_ORDER_SIX_CHARACTER=1",
+            result.stdout,
+        )
+        self.assertIn(
+            "EXACT_NORMALIZATION="
+            "2*Lprime(0)=i*sqrt(756)/pi*Lbar(1)",
+            result.stdout,
+        )
+
+    def test_no_lower_level_scalar_twist(self) -> None:
+        result = subprocess.run(
+            [
+                "gp",
+                "-q",
+                str(
+                    ROOT
+                    / "scripts/dimension_six_scalar_twist_gate.gp"
+                ),
+            ],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        self.assertNotIn("user error", result.stderr)
+        self.assertIn(
+            "LOWER_D12_EIGENFORM_COUNT=113",
+            result.stdout,
+        )
+        self.assertIn(
+            "LOWER_D12_FORMS_WITHOUT_TRACE_ZERO_WITNESS=0",
+            result.stdout,
+        )
+        self.assertIn(
+            "LARGEST_REQUIRED_WITNESS_PRIME=41",
+            result.stdout,
+        )
+        self.assertIn(
+            "LOWER_LEVEL_SCALAR_TWIST_AVAILABLE=0",
+            result.stdout,
+        )
+
+    def test_rankin_norm_loses_orientation(self) -> None:
+        result = subprocess.run(
+            [
+                sys.executable,
+                str(
+                    ROOT
+                    / "scripts/dimension_six_rankin_orientation_gate.py"
+                ),
+            ],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        self.assertIn(
+            "RANKIN_SELF_PRODUCT_GALOIS_INVARIANT=1",
+            result.stdout,
+        )
+        self.assertIn(
+            "ADJOINT_PACKET_SEES_ANTI_INVARIANT_ORIENTATION=0",
+            result.stdout,
+        )
+        self.assertIn(
+            "LINEAR_F_ISOTYPIC_REGULATOR_STILL_REQUIRED=1",
+            result.stdout,
+        )
+
+    def test_scalar_twist_cannot_change_mixed_parity(self) -> None:
+        result = subprocess.run(
+            [
+                sys.executable,
+                str(
+                    ROOT
+                    / "scripts/dimension_six_parity_twist_gate.py"
+                ),
+            ],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        self.assertIn(
+            "SCALAR_TWIST_REACHABLE_PARITIES=[[0,1],[1,0]]",
+            result.stdout,
+        )
+        self.assertIn(
+            "TOTALLY_ODD_PARITY_REACHABLE=0",
+            result.stdout,
+        )
+        self.assertIn(
+            "TOTALLY_ODD_STARK_THEOREM_APPLIES_AFTER_SCALAR_TWIST=0",
+            result.stdout,
+        )
+
+    def test_adjoint_decomposition_forgets_orientation(self) -> None:
+        result = subprocess.run(
+            [
+                sys.executable,
+                str(
+                    ROOT
+                    / "scripts/dimension_six_adjoint_decomposition.py"
+                ),
+            ],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        self.assertIn(
+            "RHO_TENSOR_DUAL=1+epsilon_21+Ind_K_Q(chi^2)",
+            result.stdout,
+        )
+        self.assertIn(
+            "ADJOINT_PACKET_CONTAINS_ORIENTED_CHI_ONE_LINE=0",
+            result.stdout,
+        )
+        self.assertIn(
+            "DERIVED_HECKE_ADJOINT_ROUTE_CLOSES_ORIENTATION=0",
+            result.stdout,
+        )
+
     def test_qgamma_regularizes_the_full_rational_boundary(self) -> None:
         result = subprocess.run(
             [

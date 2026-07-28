@@ -439,6 +439,54 @@ composite-level mixed-signature algebraicity theorem.  This isolates a
 new mixed-signature, non-adjoint regulator formula as the precise modular
 extension that would finish the proof.
 
+[Cycle 98](docs/sic-stark-cycle98.md) fixes the complete functional
+equation of the level-\(756\) form.  Its gamma shifts are \((0,1)\), its
+root number is exactly \(i\), and
+\[
+ 2L'(0,\chi_1)=i\sqrt{756}\,L(1,\overline{\chi_1})/\pi.
+\]
+Thus there is no residual phase ambiguity in moving the problem to
+\(s=1\); the remaining lemma is one explicitly normalized modular
+period/regulator equality.
+
+[Cycle 99](docs/sic-stark-cycle99.md) exhausts every lower-level
+projective-\(D_{12}\) weight-one eigenform.  All \(113\) candidates have
+an unramified prime \(p\le41\) where their Hecke trace-zero pattern differs
+from the target.  Because scalar twists preserve this pattern, the
+level-\(756\) form is not a scalar twist of any lower-level form; the
+\(\mathbf Q(\sqrt{-3})\) orientation cannot be peeled off by conductor
+descent.
+
+[Cycle 100](docs/sic-stark-cycle100.md) audits the Rankin--Eisenstein
+route.  Self Rankin products and adjoint regulators are invariant under
+\(\zeta_6\mapsto\zeta_6^{-1}\), so they erase the one-dimensional
+anti-invariant component that distinguishes \(\chi_1\) from \(\chi_5\).
+Only a genuinely linear \(f\)-isotypic regulator can retain the missing
+orientation.
+
+[Cycle 101](docs/sic-stark-cycle101.md) closes the parity-twist escape.
+A Dirichlet character restricts to parity \((0,0)\) or \((1,1)\) at the
+two real places of \(\mathbb Q(\sqrt{21})\); twisting the target parity
+\((0,1)\) can only give \((0,1)\) or \((1,0)\).  Hence no scalar twist
+puts the target inside a totally-odd or totally-even Stark theorem.
+
+[Cycle 102](docs/sic-stark-cycle102.md) closes the remaining
+functional-equation bookkeeping.  The faithful order-six character has
+finite conductor \((6)\), exactly the finite \(S\)-modulus, so
+\(L_S(s,\chi_1)=L(s,\chi_1)\).  The oriented level-\(756\) period formula
+therefore carries no hidden Euler multiplier.
+
+[Cycle 103](docs/sic-stark-cycle103.md) decomposes the exact adjoint
+packet:
+\[
+ \rho\otimes\rho^\vee
+ =\mathbf1\oplus\epsilon_{21}
+  \oplus\operatorname{Ind}_{\mathbb Q(\sqrt{21})}^{\mathbb Q}(\chi_1^2).
+\]
+These are precisely inversion-even quadratic/order-three data; the
+oriented \(\chi_1\) line is absent.  This explains structurally why an
+adjoint derived-Hecke theorem cannot finish the proof.
+
 ## Verification
 
 The default tests use Python, NumPy, and PARI/GP.  The rigorous
@@ -463,4 +511,9 @@ python3 scripts/dimension_eight_maximal_sign_audit.py
 python3 scripts/dimension_eight_maximal_exact_tcc.py
 python3 scripts/dimension_six_rational_induction_gate.py
 gp -q scripts/dimension_six_weight_one_modularity.gp
+gp -q scripts/dimension_six_weight_one_functional_equation.gp
+gp -q scripts/dimension_six_scalar_twist_gate.gp
+python3 scripts/dimension_six_rankin_orientation_gate.py
+python3 scripts/dimension_six_parity_twist_gate.py
+python3 scripts/dimension_six_adjoint_decomposition.py
 ```
