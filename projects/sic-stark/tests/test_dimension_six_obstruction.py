@@ -89,6 +89,50 @@ class DimensionSixObstructionTests(unittest.TestCase):
             result.stdout,
         )
 
+    def test_qgamma_regularizes_the_full_rational_boundary(self) -> None:
+        result = subprocess.run(
+            [
+                sys.executable,
+                str(
+                    ROOT
+                    / "scripts/dimension_six_qgamma_boundary.py"
+                ),
+            ],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        self.assertIn("RADEMACHER_INVARIANT=6", result.stdout)
+        self.assertIn(
+            "ALL_SINGULAR_QGAMMA_PARAMETERS_MATCH=1",
+            result.stdout,
+        )
+        self.assertIn(
+            "ALL_NONZERO_BOUNDARY_ORDERS_ZERO=1",
+            result.stdout,
+        )
+        self.assertIn(
+            "QGAMMA_PATTERN_ZAUNER_COVARIANT=1",
+            result.stdout,
+        )
+        self.assertIn(
+            "DIRECT_PRODUCT_ERRORS_DECREASE=1",
+            result.stdout,
+        )
+        self.assertIn(
+            "BOUNDARY_IDEMPOTENCY_RESIDUALS_DECREASE=1",
+            result.stdout,
+        )
+        self.assertIn(
+            "BOUNDARY_MINOR_RESIDUALS_DECREASE=1",
+            result.stdout,
+        )
+        self.assertIn(
+            "REGULARIZED_BOUNDARY_APPROACHES_ALGEBRAIC_PACKET=1",
+            result.stdout,
+        )
+        self.assertIn("FINITE_LEVEL_TCC_IDENTITY_PROVED=0", result.stdout)
+
 
 if __name__ == "__main__":
     unittest.main()
