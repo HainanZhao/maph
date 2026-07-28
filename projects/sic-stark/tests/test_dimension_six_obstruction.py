@@ -59,6 +59,36 @@ class DimensionSixObstructionTests(unittest.TestCase):
         self.assertFalse(certificate["selected_lift_determined"])
         self.assertEqual(len(certificate["lift_orbits"]), 4)
 
+    def test_no_imaginary_quadratic_induction_shortcut(self) -> None:
+        result = subprocess.run(
+            [
+                "gp",
+                "-q",
+                str(
+                    ROOT
+                    / "scripts/dimension_six_quadratic_induction_audit.gp"
+                ),
+            ],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        self.assertNotIn("user error", result.stderr)
+        self.assertIn("NORMAL_CLOSURE_GROUP_ID=[24, 8]", result.stdout)
+        self.assertIn("FAITHFUL_QUOTIENT_GROUP_ID=[12, 4]", result.stdout)
+        self.assertIn(
+            "QUADRATIC_BASE_DISCRIMINANTS=[21,-3,-7]",
+            result.stdout,
+        )
+        self.assertIn(
+            "UNIQUE_ABELIAN_QUADRATIC_BASE_DISCRIMINANT=21",
+            result.stdout,
+        )
+        self.assertIn(
+            "IMAGINARY_QUADRATIC_ELLIPTIC_UNIT_TRANSFER_AVAILABLE=0",
+            result.stdout,
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
