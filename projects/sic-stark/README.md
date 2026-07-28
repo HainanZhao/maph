@@ -487,6 +487,47 @@ These are precisely inversion-even quadratic/order-three data; the
 oriented \(\chi_1\) line is absent.  This explains structurally why an
 adjoint derived-Hecke theorem cannot finish the proof.
 
+[Cycles 104--105](docs/sic-stark-cycle104.md) audit the current linear
+regulator and special-Gamma literature.  The closest results require
+imaginary-dihedral induction, a \(p\)-adic rather than complex value, an
+absolute ray field abelian over \(\mathbb Q\), or a relative quadratic
+extension.  The exact \(d=6\) data fail each gate; the quadratic
+multiple-gamma theorem recovers only the already-proved \(\chi_3\)
+stratum.
+
+[Cycle 106](docs/sic-stark-cycle106.md) challenges the only remaining
+Kashio loophole by replacing the asymmetric one-place field with the
+full two-place narrow ray field.  The latter is Galois of degree \(24\)
+over \(\mathbb Q\), but has nonabelian group
+\(\operatorname{SmallGroup}(24,8)\); normality does not satisfy the
+required abelian-over-\(\mathbb Q\) hypothesis.
+
+[Cycle 107](docs/sic-stark-cycle107.md) computes the full ray group's
+abelianization exactly.  Its commutator has order \(6\), so the maximal
+absolute-abelian subfield is only the biquadratic field
+\(\mathbb Q(\sqrt{21},\sqrt{-3})\).  Abelianization kills the cubic
+rotation and therefore cannot retain the faithful order-six orientation.
+
+[Cycle 108](docs/sic-stark-cycle108.md) tests a subtler CM loophole.
+Although the full two-place ray field is totally imaginary, none of its
+nine degree-\(12\) subfields is totally real.  It is therefore not a CM
+field, so inflating the mixed character does not activate the modern CM
+Brumer--Stark theorem.
+
+[Cycle 109](docs/sic-stark-cycle109.md) finds a genuine CM near miss:
+the faithful degree-\(12\) projective \(D_{12}\)-quotient is CM, with a
+unique totally real degree-\(6\) half-field.  But its characters are
+trivial on the scalar kernel, while the target linear representation has
+central eigenvalue \(-1\).  The CM packet and the desired oriented packet
+are therefore disjoint.
+
+[Cycle 110](docs/sic-stark-cycle110.md) proves that the CM near miss
+cannot be repaired by twisting.  The scalar kernel is the unique central
+involution of the degree-\(24\) group and lies in its commutator, so every
+one-dimensional character is trivial on it.  The target retains central
+eigenvalue \(-1\) under every scalar twist and never descends to the
+projective CM field.
+
 ## Verification
 
 The default tests use Python, NumPy, and PARI/GP.  The rigorous
@@ -516,4 +557,7 @@ gp -q scripts/dimension_six_scalar_twist_gate.gp
 python3 scripts/dimension_six_rankin_orientation_gate.py
 python3 scripts/dimension_six_parity_twist_gate.py
 python3 scripts/dimension_six_adjoint_decomposition.py
+gp -q scripts/dimension_six_absolute_abelian_gate.gp
+gp -q scripts/dimension_six_full_ray_cm_gate.gp
+gp -q scripts/dimension_six_projective_cm_gate.gp
 ```
