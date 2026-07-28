@@ -155,7 +155,21 @@ done < <(
 
 if ! $core_only; then
     add_file "docs/sic-stark-dimension-eight-cm-descent.md"
+    add_file "docs/sic-stark-dimension-eight-canonical-closure.md"
+    add_file "docs/sic-stark-dimension-eight-unconditional-closure.md"
     add_file "certificates/dimension-eight-cm-descent.txt"
+    add_file "scripts/dimension_eight_linear_cm_reinduction.gp"
+    add_file "scripts/dimension_eight_cm_unit_lattice.gp"
+    add_file "scripts/certify_dimension_eight_cm_orientation.py"
+    add_file "scripts/dimension_eight_cm_real_unit_bridge.gp"
+    add_file "scripts/dimension_eight_maximal_tuple_audit.gp"
+    add_file "scripts/dimension_eight_maximal_quadratic_units.gp"
+    add_file "scripts/certify_dimension_eight_maximal_cocycle.py"
+    add_file "scripts/dimension_eight_maximal_sign_audit.py"
+    add_file "scripts/dimension_eight_maximal_exact_tcc.py"
+    for cycle in {82..92}; do
+        add_file "docs/sic-stark-cycle${cycle}.md"
+    done
 
     # Include every script cited in the manuscript's composite-dimension
     # section, so new cited audits are automatically picked up.

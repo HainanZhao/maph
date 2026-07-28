@@ -31,8 +31,10 @@ class HigherDimensionSieveTests(unittest.TestCase):
         }
 
     def test_closed_dimensions_and_next_targets(self) -> None:
-        self.assertEqual(self.coverage["closed_dimensions"], [4, 5, 7])
-        self.assertEqual(self.coverage["next_exact_tcc_target"], 8)
+        self.assertEqual(
+            self.coverage["closed_dimensions"], [4, 5, 7, 8]
+        )
+        self.assertEqual(self.coverage["next_exact_tcc_target"], 9)
         self.assertEqual(
             self.coverage["next_analytic_theorem_target"], 6
         )
@@ -56,14 +58,14 @@ class HigherDimensionSieveTests(unittest.TestCase):
             record["maximal_one_ray_structure"], [6, 2]
         )
 
-    def test_dimension_eight_retains_quartic_obstruction(self) -> None:
+    def test_dimension_eight_is_now_a_proved_control(self) -> None:
         record = self.records[8]
         self.assertEqual(record["shintani_index"], 4)
         self.assertEqual(
             record["local_one_place_ray_kernel_exponent"], 4
         )
         self.assertEqual(
-            record["classification"], "finite-closure-target"
+            record["classification"], "proved-control"
         )
 
     def test_dimension_eight_tcc_selects_one_discrete_orientation(self) -> None:

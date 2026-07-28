@@ -1,8 +1,5 @@
 # SIC--Stark referee package
 
-This directory accompanies
-[`sic-stark-paper-draft.md`](sic-stark-paper-draft.md).
-
 The current review manuscript is
 [`../paper/sic-stark-dimensions-four-five.tex`](../paper/sic-stark-dimensions-four-five.tex),
 with compiled
@@ -55,9 +52,11 @@ Generated review artifacts belong in `certificates/`:
 - The PARI transcript contains `L_BNFCERTIFY=1`, making its
   class-group and unit computation unconditional.
 
-Accordingly, the revised manuscript claims the complete
-dimension-four Twisted Convolution Conjecture, but no higher-dimensional
-case.
+Accordingly, this first certificate layer proves the complete
+dimension-four Twisted Convolution Conjecture. Paper I additionally
+proves dimension five using the separate artifacts below. Dimensions
+seven and eight are treated in Paper II and its independent
+reproducibility archive.
 
 ## Dimension-five continuation
 
@@ -92,11 +91,6 @@ next-dimensional calculation. Its artifacts are also checksummed:
   rational interval propagation of all eight real orbit labels;
 - `dimension-five-double-sine-intervals.txt` is the Arb enclosure used in
   the Voutier height-rigidity step.
-- `dimension-eight-cm-descent.txt` certifies the full-ray conjugation
-  action, the common projective quadratic character of the two quartic
-  packets, and the imaginary quadratic descent candidates
-  \(\mathbb Q(\sqrt{-6})\) and \(\mathbb Q(\sqrt{-30})\).
-
 The dimension-five theorem has now been rewritten unconditionally.  The
 supporting research note
 [`sic-stark-dimension-five-unconditional-closure.md`](sic-stark-dimension-five-unconditional-closure.md)
@@ -106,3 +100,6 @@ manuscript is
 [`../paper/sic-stark-dimensions-four-five.tex`](../paper/sic-stark-dimensions-four-five.tex),
 with compiled
 [`../paper/sic-stark-dimensions-four-five.pdf`](../paper/sic-stark-dimensions-four-five.pdf).
+
+The companion higher-dimensional result has its own independent
+reproducibility archive and is not required by this package.

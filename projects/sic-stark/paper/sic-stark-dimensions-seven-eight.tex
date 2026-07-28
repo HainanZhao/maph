@@ -1,0 +1,664 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+\usepackage{booktabs}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\Cl}{\operatorname{Cl}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+
+\title{Twisted-Convolution Identities in Dimensions Seven and Eight:\\
+Shintani Height Rigidity and CM Descent}
+\author{Hainan Zhao\\
+\small Independent Researcher\\
+\small\texttt{hainzhao@gmail.com}}
+\date{28 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We prove the formal Twisted Convolution Conjecture of
+Appleby--Flammia--Kopp unconditionally in dimensions seven and eight.
+In dimension seven, conductor lowering places every characteristic in
+one of six maximal-order ray groups.  Shintani's proved index-two
+algebraicity theorem gives a safe exponent $16128$; rigorous Arb
+enclosures, Voutier's height gap, exact Artin labels, and a
+degree-$48$ compositum certificate identify the complete signed
+overlap packet and make all $441$ rank-two minors vanish for both
+formal shifts.  Dimension eight has two admissible form conductors.
+For conductor three, genuine linear reinduction to quartic ray
+characters over $\Q(\sqrt{-6})$ and Stark's proved
+imaginary-quadratic rank-one theorem determine the two formerly
+missing orientations.  For conductor one, the relevant ray characters
+are quadratic; analytic class-number formulas determine their units,
+and an exact phase calculation in $\Q(\sqrt5)$ orients all $63$
+nonzero cocycle values.  Exact quotient-ring arithmetic makes all
+$784$ minors vanish for both shifts in each dimension-eight stratum.
+No unproved Stark conjecture or numerical recognition is used as a
+logical input.
+\end{abstract}
+
+\section{Formal TCC and conventions}
+
+We use the conventions of Appleby--Flammia--Kopp (AFK)~\cite{AFK}.
+An admissible tuple $t=(d,r,Q)$ contains a primitive indefinite
+integral binary quadratic form $Q$, a positive real fixed point
+$\rho_t$, a level-$d$ stabilizer $A_t$, and the matrix $L_{z,t}$.
+For $\boldsymbol p\in\Z^2$, let $\mathcal I_{\boldsymbol p}$ be a
+complete set of representatives modulo $d$ containing
+$\boldsymbol0$ and $\boldsymbol p$.  A residue
+$\lambda\in\Z/d\Z$ is a \emph{shift} when its AFK coprimality
+condition holds and
+\[
+ \sum_{\boldsymbol q\in\mathcal I_{\boldsymbol p}}
+ \omega_d^{\,r\langle\boldsymbol p,
+  (\lambda I+L_{z,t})\boldsymbol q\rangle}
+ \operatorname{shin}_{A_t}^{\boldsymbol q/d}(\rho_t)
+ \operatorname{shin}_{A_t^{-1}}^{
+       (\boldsymbol q-\boldsymbol p)/d}(\rho_t)
+ =d^2\delta_{\boldsymbol p,\boldsymbol0}^{(d)}
+\tag{TCC}
+\]
+for every $\boldsymbol p$.  Write $\mathcal Z_t$ for the shift set.
+The formal TCC asserts $0,1\in\mathcal Z_t$ and equality of shift
+sets for admissible forms of the same discriminant.
+
+Our reciprocal double sine is
+\[
+ S_2(z\mid\omega_1,\omega_2)
+ :=\frac{\Gamma_2(z\mid\omega_1,\omega_2)}
+ {\Gamma_2(\omega_1+\omega_2-z\mid\omega_1,\omega_2)}.
+\tag{1}
+\]
+It is the reciprocal of Kopp's
+$\operatorname{Sin}_{2,\mathrm{Kopp}}$ convention
+\cite[Definition~4.22]{Kopp}.  In particular,
+\[
+ S_2(z+1\mid\beta,1)
+ =2\sin(\pi z/\beta)S_2(z\mid\beta,1).
+\tag{2}
+\]
+The place labels $\infty_1,\infty_2$ always refer to the positive and
+negative square-root embeddings printed in the certificates.  PARI
+orders the negative root first in the quadratic fields used below;
+all raw PARI conductor vectors are translated to the displayed place
+labels before use.
+
+\begin{proposition}[Finite reconstruction bridge]\label{prop:bridge}
+Suppose the convention-matched AFK values
+$\nu_{\boldsymbol p}$ are inserted into the normalized Weyl
+reconstruction for a permitted twist.  Then the reconstructed matrix
+$\Pi$ satisfies $\Tr\Pi=1$, and equation \textup{(TCC)} is equivalent
+to $\Pi^2=\Pi$.  If all rank-two minors vanish and $\Pi\ne0$, then
+$\Pi$ is a rank-one idempotent and the corresponding residue is a
+shift.
+\end{proposition}
+
+\begin{proof}
+Expand the Weyl coefficient of $\Pi^2-\Pi$, use the Weyl multiplication
+law, and reindex by the displacement difference.  The AFK endpoint
+correction changes the raw diagonal value
+$\sqrt{d+1}$ to the normalized zero overlap one.  The resulting
+coefficient is exactly the left side of \textup{(TCC)} minus its
+$d^2\delta$ term.  Fourier inversion is injective.  Finally, vanishing
+of the $2\times2$ minors gives rank at most one, while trace one gives
+rank exactly one and idempotency.
+\end{proof}
+
+\begin{theorem}\label{thm:main}
+For every admissible tuple $t$ in dimension seven or eight,
+\[
+ 0,1\in\mathcal Z_t.
+\]
+If $t,t'$ have forms of the same discriminant, then
+$\mathcal Z_t=\mathcal Z_{t'}$.
+\end{theorem}
+
+\section{Dimension seven}\label{sec:d7}
+
+\subsection{Conductor lowering and ray classes}
+
+Put
+\[
+ K_7=\Q(\sqrt2),\qquad
+ \alpha=2+\sqrt2,\qquad
+ \beta_7=3+2\sqrt2.
+\]
+The determinant-two map
+\[
+ B=\begin{pmatrix}2&-1\\0&1\end{pmatrix}
+\]
+sends $\alpha$ to $\beta_7$.  For a characteristic $(a,b)/7$, its two
+preimages are
+\[
+ s_j=\frac1{14}\binom{a+b+7j}{2b},\qquad j=0,1.
+\tag{3}
+\]
+Kopp's inverse ray map assigns to $s_j$ the principal element
+\[
+ \gamma_{a,b,j}=2b\sqrt2+3b-a-7j.
+\tag{4}
+\]
+Removing the common ideal divisor of $(14)$ and $(\gamma)$ produces
+exactly six lowered moduli.  Their one-place ray groups and Kopp
+exponents are
+\[
+\begin{array}{c|c|c}
+\text{modulus HNF}&\text{ray group}&n\\ \hline
+\left(\begin{smallmatrix}14&0\\0&14\end{smallmatrix}\right)&C_6\times C_2&1\\
+\left(\begin{smallmatrix}7&0\\0&7\end{smallmatrix}\right)&C_6&1\\
+\left(\begin{smallmatrix}14&6\\0&2\end{smallmatrix}\right)&C_2&1\\
+\left(\begin{smallmatrix}14&8\\0&2\end{smallmatrix}\right)&C_2&1\\
+\left(\begin{smallmatrix}7&3\\0&1\end{smallmatrix}\right)&C_2&2\\
+\left(\begin{smallmatrix}7&4\\0&1\end{smallmatrix}\right)&1&2.
+\end{array}
+\tag{5}
+\]
+The common determinant-one stabilizer is
+\[
+ A_7=\begin{pmatrix}239&-140\\70&-41\end{pmatrix}.
+\tag{6}
+\]
+The exact inverse-ray, gcd, sign-class, and stabilizer computations are
+printed for all $96$ lifted factors by
+\path{scripts/explore_dimension_seven_conductor_lowering.gp}.
+
+\subsection{Powered algebraicity and packet identification}
+
+The full one-place ray-$14$ field has relative group
+$C_6\times C_2$.  In its normal closure, the maximal absolutely
+abelian subfield has index two and the applicable imaginary-quadratic
+base is $\Q(\sqrt{-7})$.  Auditing all $32$ divisors of its conductor
+gives
+\[
+ m=\operatorname{lcm}_{\mathfrak d\mid\mathfrak c}
+ \bigl(12f_{\mathfrak d}n(S_{\mathfrak d})\bigr)=16128.
+\tag{7}
+\]
+Here the unit-congruence factor
+$w(\mathfrak d)$ is computed separately for every divisor; four
+divisors, including the trivial one, have $w=2$.  Shintani's proved
+theorem~\cite{Shintani1978} therefore makes the powered packet
+algebraic.
+
+The sixteen squared-overlap representatives satisfy a reciprocal
+degree-$16$ polynomial over $\Q(\sqrt2)$ with factors of degrees
+$2,2,12$.  Exact class-field comparisons identify the factors with
+the two quadratic lowered fields and the one-place ray-$14$ field.
+Sturm intervals label all real roots.  Rigorous Arb evaluation of the
+eight independent analytic values gives a powered logarithmic error
+below $9.5\cdot10^{-7}$ after multiplication by $16128$, whereas
+Voutier's lower bound~\cite{Voutier1996} is greater than
+$5.22\cdot10^{-5}$ for every relevant degree.  The quotient of an
+analytic value by its assigned algebraic root must therefore be a
+root of unity; positivity and the exact cocycle multipliers select the
+displayed root.
+
+Artin labels are fixed by split primes above $17$ and $41$.  Local
+Frobenius congruences identify their exact automorphisms in the labeled
+ray field over $\Q(\sqrt2)$, rather than only in an abstractly
+isomorphic number field.
+
+\subsection{Exact finite certificate}
+
+Let $H$ be the degree-$24$ signed overlap field and
+$C=\Q(\zeta_{56})$.  Their intersection has degree $12$.  The standard
+component is selected by the exact identity
+\[
+ c_H=\zeta_{56}+\zeta_{56}^{-1},\qquad
+ 1.98<c_H<1.99,
+\tag{8}
+\]
+and it also satisfies
+\[
+ \sqrt2=\zeta_{56}^{7}+\zeta_{56}^{-7}.
+\tag{9}
+\]
+In the resulting degree-$48$ compositum,
+\path{scripts/dimension_seven_exact_tcc.gp} verifies for each formal
+shift
+\[
+ \Tr\Pi=1,\qquad \Pi^2=\Pi,\qquad
+ 441\text{ rank-two minors vanish}.
+\tag{10}
+\]
+Proposition~\ref{prop:bridge} proves both shifts for the canonical
+tuple.  The form order has one relevant proper class; unconditional
+$\mathrm{GL}_2(\Z)$ covariance transports the result to every
+dimension-seven admissible form.
+
+\section{Dimension eight}\label{sec:d8}
+
+Dimension-eight admissibility has $j=2$ and $f_2=3$.  The form
+conductor is therefore one or three, giving discriminants $5$ and
+$45$.  These strata must be proved independently.
+
+\subsection{Conductor three: linear CM reinduction}
+
+For the canonical discriminant-$45$ form, the order-ray group is
+identified with the maximal-order ray group
+\[
+ \Cl_{(8)\infty_2}(\Z+3\mathcal O_{\Q(\sqrt5)})
+ \simeq
+ \Cl_{(24)\infty_2}(\mathcal O_{\Q(\sqrt5)})
+ \simeq C_4\times C_2^2.
+\tag{11}
+\]
+Kopp's conductor-lowering formula supplies the exact three-factor
+dictionary.  The fifteen lower characteristics lie in an index-two
+ray-$12$ field; Shintani exponent $576$, Arb isolation, and height
+rigidity prove that entire lower packet.
+
+The primitive packet contains two conjugate pairs of quartic
+characters.  On the full two-place ray group, base conjugation does
+not literally send either one-place character to its inverse because
+it swaps the labeled infinite place.  The projective quotient is
+nevertheless the same order-two character in both cases, and the
+associated biquadratic field has quadratic subfields
+\[
+ \Q(\sqrt5),\qquad\Q(\sqrt{-6}),\qquad\Q(\sqrt{-30}).
+\tag{12}
+\]
+This projective observation is not used as a substitute for linear
+equivalence.  The script
+\path{scripts/dimension_eight_linear_cm_reinduction.gp} compares the
+complete induced characters on the degree-$16$ normal closure and
+proves genuine linear reinduction, without a scalar twist, from
+quartic ray characters over $\Q(\sqrt{-6})$.  The alternative base
+$\Q(\sqrt{-30})$ gives an independent check.
+
+\begin{lemma}[Ray labels and local factors]\label{lem:cm-label}
+In the cyclic coordinates $[8,4]$ printed by the pinned
+$\Q(\sqrt{-6})$ ray computations, the reinduced characters are
+\[
+ \psi_0=[6,1],\qquad \psi_1=[2,1].
+\tag{13}
+\]
+They have the same complete Artin $L$-functions as the original
+$\Q(\sqrt5)$ characters $[1,0,0]$ and $[1,1,0]$, respectively. With
+\[
+ S_M=\{\infty,\mathfrak p_2,\mathfrak p_3,\mathfrak p_5\},
+\tag{14}
+\]
+every finite member is ramified for $\psi_b$, so
+$L_{M,S_M}(s,\psi_b)=L_M(s,\psi_b)$.
+\end{lemma}
+
+\begin{proof}
+The exact normal-closure calculation leaves precisely two faithful
+ray characters for each kernel, an inverse pair.  For packet zero the
+coefficient at $n=5$ is $-i$ for $[6,1]$ and $+i$ for $[2,3]$; the
+source coefficient is $-i$.  For packet one it is $+i$ for $[2,1]$
+and $-i$ for $[6,3]$; the source coefficient is $+i$.  This single
+exact separating coefficient selects among an exhaustive
+two-element set; it is not finite-coefficient recognition.
+\path{scripts/dimension_eight_cm_unit_lattice.gp} fixes the relative
+factors before constructing their ray groups and prints these four
+coefficients.
+
+The two source characters have full conductor $(24)\infty_2$.
+The CM conductors printed by the same audit are supported at the
+displayed primes above $2,3,5$, and $\psi_b$ is ramified at every
+finite member of $S_M$.  Thus those local factors are already one.
+Linear reinduction gives the equality of the complete functions
+$L_M(s,\psi_b)=L_K(s,\chi_b)$; no unramified source Euler factor at
+$5$ is removed. The archimedean parity is part of the same induced
+character equality.
+\end{proof}
+
+\begin{lemma}[Normalized imaginary-quadratic Stark resolvent]
+\label{lem:stark-normalization}
+Let $M=\Q(\sqrt{-6})$ and let $E_b/M$ be either cyclic quartic
+extension selected in Lemma~\ref{lem:cm-label}.  There is a global unit
+$\varepsilon_b\in E_b^\times$ such that, for $g\in\operatorname{Gal}(E_b/M)$,
+\[
+ \zeta'_{S_M}(0,g)
+ =-\log |g(\varepsilon_b)|_{\rm ord},
+\qquad
+ |z|_{\rm ord}:=\sqrt{z\overline z}.
+\tag{15}
+\]
+Consequently
+\[
+ L'_{S_M}(0,\psi_b)
+ =-\sum_g\overline{\psi_b(g)}
+      \log|g(\varepsilon_b)|_{\rm ord}.
+\tag{16}
+\]
+\end{lemma}
+
+\begin{proof}
+Stark's proved rank-one theorem for abelian extensions of an imaginary
+quadratic base~\cite{Stark1980} applies to $E_b/M$ with the set
+\textup{(14)}.  Both fields have
+$e=|\mu(E_b)|=2$.  Stark's normalized complex-place absolute value is
+$|z|_{\rm ord}^2$; hence its factor $1/e$ becomes coefficient one in
+the ordinary modulus convention used above.
+The finite set contains the distinct conductor primes above $2,3,5$;
+the integrality clause in this specialization makes the Stark element
+a global unit, not only an $S$-unit.  Fourier transforming the displayed
+partial-zeta formula gives \textup{(16)}.
+\end{proof}
+
+Exact unit-action matrices show that the quartic anti-unit component
+in Lemma~\ref{lem:stark-normalization} is a rank-two integral lattice.
+Rigorous Arb inversion isolates the four coordinate pairs
+\[
+ (0,2),\quad(-2,0),\quad(0,-2),\quad(2,0)
+\tag{17}
+\]
+with radii below $5\cdot10^{-9}$.  Exact identities in the common
+normal closure then match their absolute norms to the original
+real-quadratic units.  Thus the two oriented identities required by
+the AFK table hold exactly, rather than only in absolute value.
+
+The signed packet and $\Q(\zeta_{16})$ lie in a
+convention-selected degree-$128$ compositum.
+\path{scripts/dimension_eight_exact_tcc.gp} verifies trace one,
+idempotency, and all $784$ minors for both shifts.
+
+\subsection{Conductor one: quadratic units and exact phases}
+
+For $Q=\langle1,-3,1\rangle$, put
+\[
+ C=\begin{pmatrix}3&-1\\1&0\end{pmatrix},\qquad
+ A_8=C^6=\begin{pmatrix}377&-144\\144&-55\end{pmatrix}.
+\tag{18}
+\]
+The one-place and both-place ray groups are $C_2^2$ and $C_2^3$.
+Kopp's exponent is one, and the difference is supported on two
+quadratic characters.  Writing $\phi=(1+\sqrt5)/2$, their fields and
+oriented units are obtained from the positive roots
+\[
+ h=\sqrt\phi>0,\qquad r=\sqrt{2\phi}>\phi:
+\]
+\[
+\begin{array}{c|c|c}
+ &\text{absolute equation}&\text{unit}\\ \hline
+L_0&h^4-h^2-1=0&u_0=\phi+h\\
+L_1&r^4-2r^2-4=0&u_1=(r+\phi)/(r-\phi).
+\end{array}
+\tag{19}
+\]
+Both fields have class number one, with successful unconditional PARI
+certificates.
+
+After dropping torsion, their fundamental-unit coordinates are
+\[
+ \phi=(-2,0),\quad u_0=(0,-1)
+ \quad\hbox{in }L_0,\qquad
+ \phi=(1,0),\quad u_1=(-1,-2)
+ \quad\hbox{in }L_1.
+\]
+Both determinant indices have absolute value two. This is the exact
+relative regulator-index calculation; the analytic class-number
+formula therefore gives
+\[
+ L'(0,\chi_0)=\log u_0,\qquad
+ L'(0,\chi_1)=\log u_1.
+\tag{20}
+\]
+
+\begin{lemma}[Exact magnitude transform]\label{lem:d8-magnitudes}
+Let $c=(c_1,c_2)$ be the ray-$8$ class log of a primitive
+characteristic.  Its differenced partial-zeta derivative is
+\[
+ Z'_c(0)=\frac12\left(
+ (-1)^{c_2}\log u_0+
+ (-1)^{c_1+c_2}\log u_1\right).
+\tag{21}
+\]
+Hence, for
+\[
+ x^2=u_0,\qquad d^2=\sqrt{u_1/u_0},\qquad a=xd,
+\tag{22}
+\]
+the four ray-$8$ magnitudes are
+\[
+ [0,0]\mapsto a,\quad [0,1]\mapsto a^{-1},\quad
+ [1,0]\mapsto d^{-1},\quad [1,1]\mapsto d.
+\tag{23}
+\]
+At modulus four the stabilizer power is two and
+\[
+ Z'_c(0)=2(-1)^c\log u_0,
+\tag{24}
+\]
+giving magnitudes $x^2,x^{-2}$; at modulus two the magnitude is one.
+These cases exhaust all $63$ nonzero characteristics.
+\end{lemma}
+
+\begin{proof}
+For the ray group $G=C_2^2$, Fourier inversion gives
+\[
+ Z'_c(0)=\frac1{|G|}
+ \sum_{\chi\in\widehat G}
+ \overline{\chi(c)}(1-\overline{\chi(R)})L'(0,\chi).
+\]
+The sign class is $R=[0,1]$, so only
+$\chi_0=[0,1]$ and $\chi_1=[1,1]$ survive, each with coefficient
+$1/2$.  Substitution of \textup{(20)} proves \textup{(21)} and taking
+half the exponential gives \textup{(23)}.  The identical calculation
+for the ray-$4$ group $C_2$, followed by the exactly audited stabilizer
+power two, proves \textup{(24)}.  The characteristic audit prints
+$12$ occurrences of each ray-$8$ label, six of each ray-$4$ label,
+and three modulus-two labels.
+\end{proof}
+
+The continued-fraction word of $A_8$ is
+$[3,3,3,3,3,3,0]$.  Put $\beta=(3+\sqrt5)/2$.
+The exact Euclidean recursion gives the rows
+\[
+\begin{pmatrix}
+377&-144\\144&-55\\55&-21\\21&-8\\
+8&-3\\3&-1\\1&0\\0&1
+\end{pmatrix},
+\tag{25}
+\]
+whose values on $(\beta,1)^T$ are
+\[
+\beta^7,\beta^6,\ldots,\beta,1.
+\tag{26}
+\]
+Thus all six adjacent period ratios in AFK's continued-fraction
+cocycle are $\beta$.  For the characteristic $(p,q)/8$, division of
+the first period expression by the six successive denominators gives
+\[
+ z_i=\frac{q\beta^{i+2}-p\beta^{i+1}}8,\qquad 0\leq i<6,
+\tag{27}
+\]
+and the outer finite-product index is
+\[
+ \frac{-144p+(377-1)q}{8}=-18p+47q.
+\tag{28}
+\]
+These identities are checked in exact arithmetic by the archived
+maximal-tuple audit.
+
+Put $e(t)=e^{2\pi i t}$ and
+\[
+ [z;\omega]_n=
+ \begin{cases}
+ \prod_{k=0}^{n-1}(1-e(z+k\omega)),&n\geq0,\\
+ \prod_{k=1}^{-n}(1-e(z-k\omega))^{-1},&n<0.
+ \end{cases}
+\tag{29}
+\]
+For $s(z)=\lfloor-z\rfloor+1$, define
+\[
+ \Sigma(z)=[z/\beta;-1/\beta]_{-s(z)}
+ e\!\left(
+ \frac{6(z+s(z))^2+6(1-\beta)(z+s(z))}
+ {24\beta}\right)
+ S_2(z+s(z)+1\mid\beta,1).
+\tag{30}
+\]
+Iterating AFK Definition~1.32 along the rows \textup{(25)}, inserting
+its outer finite product \textup{(28)}, and replacing each of Kopp's
+double sines by the reciprocal convention \textup{(1)} gives
+\[
+ \nu_{p,q}=
+ \frac{\tau^{-3(p^2-3pq+q^2)}(-1)^{(1+p)(1+q)}}
+ {[(q\beta-p)/8;\beta]_{-18p+47q}}
+ \prod_{i=0}^{5}
+ \Sigma\!\left(\frac{q\beta^{i+2}-p\beta^{i+1}}8\right),
+ \quad \tau=-e^{\pi i/8}.
+\tag{31}
+\]
+
+For real $t\notin\Z$,
+\[
+ 1-e^{2\pi i t}=-2i e^{\pi i t}\sin(\pi t).
+\tag{32}
+\]
+The fundamental reciprocal double sine is positive on
+$0<z<\beta+1$, since it is a ratio of positive Barnes double-gamma
+values.  Equations
+\textup{(2)}, \textup{(31)}, and \textup{(32)} therefore reduce every
+phase to an exact element of $\Q(\beta)/2\Z$.
+\path{scripts/dimension_eight_maximal_sign_audit.py} proves for all
+$63$ nonzero characteristics that the coefficient of $\beta$ cancels,
+the remaining coefficient of $\pi$ is integral, and its parity agrees
+with the signed radical table.  Decimal arithmetic is used only to
+guess a floor; both defining inequalities are then verified exactly in
+$\Q(\sqrt5)$.  The audit also proves that no finite-product factor or
+recurrence sine vanishes.
+
+With $x,d,a$ as in Lemma~\ref{lem:d8-magnitudes},
+the table uses only
+\[
+ \pm1,\quad\pm x^2,\quad\pm x^{-2},\quad
+ \pm d,\quad\pm d^{-1},\quad\pm a,\quad\pm a^{-1}.
+\tag{33}
+\]
+Exact shared-subfield identities glue it to $\Q(\zeta_{16})$.
+\path{scripts/dimension_eight_maximal_exact_tcc.py} verifies, for
+each shift,
+\[
+ \Tr\Pi=1,\qquad \Pi^2=\Pi,\qquad
+ 784\text{ rank-two minors vanish}.
+\tag{34}
+\]
+
+\subsection{Form-class completion}
+
+Solving the admissibility recurrences gives
+\[
+ d=8\Longrightarrow
+ r=1,\quad n=9,\quad K=\Q(\sqrt5),\quad
+ j=2,\quad m=1,\quad f_2=3.
+\tag{35}
+\]
+Hence the form conductor is exactly $f=1$ or $f=3$, and the only
+discriminants are $5$ and $45$.  The exact wide class calculations are
+\[
+ h_{\mathrm{GL}_2}(5)=h_{\mathrm{GL}_2}(45)=1.
+\tag{36}
+\]
+For discriminant five, the maximal order also has narrow class number
+one because $\phi$ has norm $-1$.  For discriminant $45$ only the wide
+ring class number is used: determinant-$-1$ transformations are
+allowed, and no narrow-class-number assertion is needed.
+
+If $t_M$ is obtained from $t$ by $M\in\mathrm{GL}_2(\Z)$, the
+unconditional covariance calculation of the companion Paper I sends
+the complete TCC sum at $(t_M,\boldsymbol p)$ to that at
+$(t,\ell M\boldsymbol p)$, after reindexing its representatives; for
+$\det M=-1$ both cocycle factors are conjugated.  This proves
+$\mathcal Z_t\subseteq\mathcal Z_{t_M}$.  Applying the same calculation
+to $M^{-1}$ proves the reverse inclusion.  Equations
+\textup{(35)}--\textup{(36)} therefore transport each of the two
+certified representatives across its own discriminant and complete
+dimension eight.
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Section~\ref{sec:d7} proves both shifts for dimension seven and
+transports them across its form class.  Section~\ref{sec:d8} proves
+both dimension-eight conductors and transports within each of the only
+two possible discriminants.
+\end{proof}
+
+\section{Why dimension six remains different}
+
+The dimension-six primitive character has order six.  Its projective
+quotient has order three, rather than the order-two quotient that
+produces the $V_4$ CM descent in dimension eight.  The alternative
+index-two induction groups are nonabelian, so no second abelian
+induction base supplies an imaginary-quadratic elliptic-unit theorem.
+The finite dimension-six candidate already satisfies all $225$ minors;
+the remaining input is one oriented primitive order-six special value.
+Thus the gap is analytic, not a finite reconstruction problem.
+
+\section{Reproducibility}
+
+The supplementary archive contains:
+\begin{itemize}
+\item all dimension-seven conductor-lowering, Shintani-divisor,
+  Arb-height, Artin-label, field-gluing, and exact-minor scripts;
+\item all conductor-three dimension-eight order/maximal-order,
+  linear-reinduction, CM-unit, Arb-orientation, normal-closure, and
+  exact-minor scripts;
+\item all maximal-order dimension-eight ray, quadratic unit, exact
+  phase, field gluing, and exact minor scripts;
+\item generated CM-orientation and $63$-sign transcripts, the global
+  regression transcript, and SHA-256 checksums; and
+\item end-to-end regression tests for both dimension-eight strata.
+\end{itemize}
+
+The principal reproduction commands are
+\begin{verbatim}
+python3 -m unittest tests.test_dimension_seven_closure
+gp -q scripts/dimension_seven_exact_tcc.gp
+gp -q scripts/dimension_eight_linear_cm_reinduction.gp
+gp -q scripts/dimension_eight_cm_unit_lattice.gp
+python3 scripts/certify_dimension_eight_cm_orientation.py
+gp -q scripts/dimension_eight_cm_real_unit_bridge.gp
+gp -q scripts/dimension_eight_exact_tcc.gp
+gp -q scripts/dimension_eight_maximal_tuple_audit.gp
+gp -q scripts/dimension_eight_maximal_quadratic_units.gp
+python3 scripts/dimension_eight_maximal_sign_audit.py
+python3 scripts/dimension_eight_maximal_exact_tcc.py
+\end{verbatim}
+
+\section*{Acknowledgments}
+
+The author acknowledges the use of OpenAI's GPT-5.6 Sol model for
+mathematical brainstorming, symbolic-computation scaffolding, code
+review, and manuscript editing.  All claims are the author's
+responsibility and are tied to the exact certificates described above.
+
+\begin{thebibliography}{10}
+\bibitem{AFK}
+D.~M.~Appleby, S.~T.~Flammia, and G.~S.~Kopp,
+\emph{A constructive approach to Zauner's conjecture via the Stark
+conjectures}, arXiv:2501.03970.
+\bibitem{Kopp}
+G.~Kopp, \emph{The Shintani--Faddeev modular cocycle: Stark units from
+$q$-Pochhammer ratios}, arXiv:2411.06763.
+\bibitem{Shintani1978}
+T.~Shintani, \emph{On certain ray class invariants of real quadratic
+fields}, J.\ Math.\ Soc.\ Japan \textbf{30} (1978), 139--167,
+\url{https://doi.org/10.2969/jmsj/03010139}.
+\bibitem{Voutier1996}
+P.~Voutier, \emph{An effective lower bound for the height of algebraic
+numbers}, Acta Arith.\ \textbf{74} (1996), 81--95,
+\url{https://doi.org/10.4064/aa-74-1-81-95}.
+\bibitem{Stark1980}
+H.~M.~Stark, \emph{$L$-functions at $s=1$. IV. First derivatives at
+$s=0$}, Adv.\ Math.\ \textbf{35} (1980), 197--235,
+\url{https://doi.org/10.1016/0001-8708(80)90049-3}.
+\bibitem{PARI}
+The PARI Group, \emph{PARI/GP version 2.15.4},
+\url{https://pari.math.u-bordeaux.fr/}.
+\bibitem{pythonflint}
+F.~Johansson and contributors, \emph{python-flint 0.9.0},
+\url{https://github.com/flintlib/python-flint}.
+\end{thebibliography}
+
+\end{document}
