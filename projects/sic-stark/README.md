@@ -216,6 +216,15 @@ hidden elliptic-unit transfer.  It identifies a uniform \(q\)-gamma
 regularization at vanishing cyclic factors as the next concrete route to
 a direct finite-level TCC identity.
 
+[Cycle 63](docs/sic-stark-cycle63.md) derives that \(q\)-gamma correction.
+For all nonzero singular characteristics, the numerator and denominator
+parameters agree, so every fractional boundary order and gamma factor
+cancels.  Including the residual modular-scale factor and the
+Möbius-curvature dilogarithmic phase gives complete rational-boundary
+tables.  Their imaginary parts, idempotency defects, and rank-two minors
+all decrease along the modular geodesic, validly reopening a direct
+cyclic-limit proof of dimension-six TCC.
+
 ## Verification
 
 The default tests use Python, NumPy, and PARI/GP.  The rigorous
