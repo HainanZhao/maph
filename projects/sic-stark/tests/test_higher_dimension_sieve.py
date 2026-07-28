@@ -259,6 +259,43 @@ class HigherDimensionSieveTests(unittest.TestCase):
             process.stdout,
         )
 
+    def test_dimension_eight_projective_cm_descent_gate(self) -> None:
+        process = subprocess.run(
+            [
+                "gp",
+                "-q",
+                str(ROOT / "scripts/dimension_eight_cm_descent.gp"),
+            ],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        self.assertNotIn("user error", process.stderr)
+        self.assertIn(
+            "CHARACTER_[1, 0, 0]_CONJUGATE_EQUALS_INVERSE=0",
+            process.stdout,
+        )
+        self.assertIn(
+            "CHARACTER_[1, 0, 0]_PROJECTIVE_QUOTIENT_DUAL="
+            "[2, 1, 0, 1]",
+            process.stdout,
+        )
+        self.assertIn(
+            "CHARACTER_[1, 1, 0]_PROJECTIVE_QUOTIENT_DUAL="
+            "[2, 1, 0, 1]",
+            process.stdout,
+        )
+        self.assertIn(
+            "PROJECTIVE_HAS_CM_BASE_Q_SQRT_MINUS_6=1",
+            process.stdout,
+        )
+        self.assertIn(
+            "PROJECTIVE_HAS_CM_BASE_Q_SQRT_MINUS_30=1",
+            process.stdout,
+        )
+        self.assertIn("PROJECTIVE_IMAGE_V4_GATE=1", process.stdout)
+
     def test_dedicated_dimension_seven_certificate(self) -> None:
         process = subprocess.run(
             [

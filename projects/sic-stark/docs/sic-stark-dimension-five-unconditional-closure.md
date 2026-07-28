@@ -107,19 +107,32 @@ inverse image is \(\{c,c\mu\}\), while that of \(RA\) is
 Thus Shintani's theorem applies to the particular \(X\) in the result,
 not merely to an unspecified ray invariant.
 
-The normal closure \(N\) of \(H/\mathbb Q\) is the full two-infinite-place
-ray field.  It is also the degree-sixteen ray field over
-\(\mathbb Q(\sqrt{-5})\) of conductor
+The normal closure \(N\) of \(H/\mathbb Q\) is the full
+two-infinite-place ray field.  In cyclic ray coordinates, base
+conjugation acts by
+\[
+e_1\mapsto(5,0),\qquad e_2\mapsto(4,1).
+\]
+Its fixed subgroup is
+\[
+\{(a,b):a+b\equiv0\pmod2\}
+=\langle(2,0),(1,1)\rangle.
+\]
+Exact class-field construction gives the corresponding fixed field as
+\(K(\sqrt{-5})\).  This is Shintani's biquadratic field \(Kk\), so his
+imaginary quadratic field is forced to be
+\(k=\mathbb Q(\sqrt{-5})\).
+
+Independently, \(N\) is a degree-sixteen ray-class subfield over \(k\)
+of conductor
 \[
 \mathfrak c=
 \begin{pmatrix}15&0\\0&3\end{pmatrix}
 \]
-in PARI's integral basis.  Its ray group is \(C_8\times C_2\).
-The quadratic-subfield enumeration contains a unique copy of
-\(\mathbb Q(\sqrt{-5})\), so the displayed absolute isomorphism
-identifies the required imaginary quadratic subfield rather than merely
-an abstract degree-sixteen field.  This is the imaginary-quadratic
-field used in Shintani's proof.
+in PARI's integral basis.  The ray group of \(k\) modulo \(15\) is
+\(C_{40}\times C_2\); killing the subgroup
+\(\operatorname{diag}(8,2)\) gives this degree-sixteen field, and an
+exact absolute-field isomorphism identifies it with \(N\).
 
 Consequently, a positive integral power of every Shintani invariant is
 an algebraic unit in \(H\), with the predicted Artin action, and its
@@ -283,11 +296,11 @@ The largest certified error in
 \]
 is less than
 \[
-2.23\times10^{-9}.
+4.4\times10^{-11}.
 \]
 After raising to the Shintani power,
 \[
-\delta:=5760(2.23\times10^{-9})<1.29\times10^{-5}.
+\delta:=5760(4.4\times10^{-11})<2.54\times10^{-7}.
 \]
 
 The certificate uses interval Simpson quadrature with an Arb enclosure
@@ -307,7 +320,7 @@ Run:
 ```text
 PYTHONPATH=/tmp/sic_flint python3 \
   scripts/certify_dimension_five_double_sine.py \
-  --digits 40 --tolerance 1e-8
+  --digits 60 --tolerance 1e-10
 ```
 
 The tested interval package was `python-flint==0.9.0`.
@@ -318,15 +331,22 @@ Set
 \[
 \eta=\frac{X^{5760}}{U^{5760}}\in H^\times.
 \]
-At each of the eight real embeddings, the certified calculations and
-the exact Artin labeling give
+The four certified characteristics cover one representative of each
+reciprocal pair of real classes; their reciprocals give the remaining
+four real embeddings.  At each of those eight embeddings, the exact
+Artin labeling gives
 \[
 \bigl|\log|\sigma(\eta)|\bigr|<\delta.
 \]
 At the four complex pairs, both numerator and denominator have modulus
-one, so the corresponding logarithms vanish.  Therefore
+one, so the corresponding logarithms vanish.  Since \(H\) has
+signature \((8,4)\),
 \[
-h(\eta)<\delta<1.29\times10^{-5}.
+h(\eta)=\frac1{16}\left(
+\sum_{\sigma\ {\rm real}}\max(0,\log|\sigma\eta|)
++2\sum_{\tau\ {\rm complex\ pair}}\max(0,\log|\tau\eta|)
+\right)
+<\frac{\delta}{2}<1.27\times10^{-7}.
 \]
 
 If \(3\le d=[\mathbb Q(\eta):\mathbb Q]\le16\) and \(\eta\) is not a

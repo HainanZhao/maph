@@ -3,10 +3,12 @@
 This directory accompanies
 [`sic-stark-paper-draft.md`](sic-stark-paper-draft.md).
 
-The review manuscript is available as
-[`../paper/sic-stark-dimension-four.tex`](../paper/sic-stark-dimension-four.tex)
-and the compiled
-[`../paper/sic-stark-dimension-four.pdf`](../paper/sic-stark-dimension-four.pdf).
+The current review manuscript is
+[`../paper/sic-stark-dimensions-four-five.tex`](../paper/sic-stark-dimensions-four-five.tex),
+with compiled
+[`../paper/sic-stark-dimensions-four-five.pdf`](../paper/sic-stark-dimensions-four-five.pdf).
+The older dimension-four-only file is retained as a superseded audit
+draft.
 
 ## Verification layers
 
@@ -90,6 +92,10 @@ next-dimensional calculation. Its artifacts are also checksummed:
   rational interval propagation of all eight real orbit labels;
 - `dimension-five-double-sine-intervals.txt` is the Arb enclosure used in
   the Voutier height-rigidity step.
+- `dimension-eight-cm-descent.txt` certifies the full-ray conjugation
+  action, the common projective quadratic character of the two quartic
+  packets, and the imaginary quadratic descent candidates
+  \(\mathbb Q(\sqrt{-6})\) and \(\mathbb Q(\sqrt{-30})\).
 
 The dimension-five theorem has now been rewritten unconditionally.  The
 supporting research note

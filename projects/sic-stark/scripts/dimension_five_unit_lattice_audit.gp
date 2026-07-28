@@ -177,11 +177,11 @@ audit_unit_lattice() =
     );
     print(
         "RIGOROUS_DOUBLE_SINE_LOG_ERROR_BOUND_AT_POWER_5760=",
-        5760 * 2.3e-9
+        5760 * 4.4e-11
     );
     print(
         "UNIT_COORDINATE_ERROR_BOUND_FROM_CERTIFIED_INTERVALS=",
-        sqrt(8) * 5760 * 2.3e-9 / smallest_singular_value
+        sqrt(8) * 5760 * 4.4e-11 / smallest_singular_value
     );
 
     \\ Exact Artin labeling.  The prime above 3 is a ray generator;
