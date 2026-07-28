@@ -71,10 +71,13 @@ def classification(record: dict[str, object]) -> tuple[str, list[str]]:
         return (
             "finite-closure-target",
             [
-                "quadratic sectors are unconditional",
+                "all lower-conductor and quadratic sectors are "
+                "unconditional",
                 "two cyclic-quartic absolute values are unconditional",
                 "the canonical TCC equations select one discrete "
                 "orientation pair",
+                "the selected packet satisfies both finite TCC shifts "
+                "exactly",
             ],
         )
     if isomorphic and shintani_index == 2:
