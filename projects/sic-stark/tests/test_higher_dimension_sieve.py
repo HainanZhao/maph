@@ -30,17 +30,15 @@ class HigherDimensionSieveTests(unittest.TestCase):
             for record in cls.coverage["records"]
         }
 
-    def test_dimension_seven_is_unique_best_candidate(self) -> None:
+    def test_closed_dimensions_and_next_targets(self) -> None:
+        self.assertEqual(self.coverage["closed_dimensions"], [4, 5, 7])
+        self.assertEqual(self.coverage["next_exact_tcc_target"], 8)
         self.assertEqual(
-            self.coverage["best_unconditional_candidate"], 7
+            self.coverage["next_analytic_theorem_target"], 6
         )
-        best = [
-            dimension
-            for dimension, record in self.records.items()
-            if dimension >= 7
-            and record["classification"] == "best-candidate"
-        ]
-        self.assertEqual(best, [7])
+        self.assertEqual(
+            self.records[7]["classification"], "proved-control"
+        )
 
     def test_known_dimensions_calibrate_shintani_index(self) -> None:
         self.assertEqual(self.records[4]["shintani_index"], 2)
@@ -64,7 +62,143 @@ class HigherDimensionSieveTests(unittest.TestCase):
         self.assertEqual(
             record["local_one_place_ray_kernel_exponent"], 4
         )
-        self.assertNotEqual(record["classification"], "best-candidate")
+        self.assertEqual(
+            record["classification"], "finite-closure-target"
+        )
+
+    def test_dimension_eight_tcc_selects_one_discrete_orientation(self) -> None:
+        process = subprocess.run(
+            [
+                sys.executable,
+                str(
+                    ROOT
+                    / "scripts/analyze_dimension_eight_orientation_sieve.py"
+                ),
+            ],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        self.assertIn("ORIENTATION_COUNT=64", process.stdout)
+        self.assertIn("PASSING_ORIENTATION_COUNT=1", process.stdout)
+        self.assertIn("RANK_1_ORIENTATION=0,0", process.stdout)
+
+    def test_dimension_eight_primitive_overlap_field_collapse(self) -> None:
+        process = subprocess.run(
+            [
+                "gp",
+                "-q",
+                str(
+                    ROOT
+                    / "scripts/dimension_eight_overlap_polynomial.gp"
+                ),
+            ],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        self.assertIn("CANDIDATE_ABSOLUTE_IRREDUCIBLE=1", process.stdout)
+        self.assertIn("CANDIDATE_ABSOLUTE_DEGREE=32", process.stdout)
+        self.assertIn(
+            "CANDIDATE_FIELD_MATCHES_RAY_24=1", process.stdout
+        )
+
+        isolation = subprocess.run(
+            [
+                "gp",
+                "-q",
+                str(
+                    ROOT
+                    / "scripts/dimension_eight_root_isolation.gp"
+                ),
+            ],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        self.assertIn("TOTAL_REAL_ROOT_COUNT=16", isolation.stdout)
+        self.assertIn(
+            "ISOLATED_PRIMITIVE_ROOT_COUNT=16", isolation.stdout
+        )
+
+    def test_dimension_eight_artin_labels(self) -> None:
+        process = subprocess.run(
+            [
+                "gp",
+                "-q",
+                str(
+                    ROOT
+                    / "scripts/dimension_eight_artin_labels.gp"
+                ),
+            ],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        self.assertNotIn("user error", process.stderr)
+        self.assertIn("RAY_GROUP=[4, 2, 2]", process.stdout)
+        self.assertIn("PRIME_31_RAY_LOG=[1, 0, 0]", process.stdout)
+        self.assertIn("PRIME_59_RAY_LOG=[0, 1, 0]", process.stdout)
+        self.assertIn("PRIME_71_RAY_LOG=[0, 0, 1]", process.stdout)
+        self.assertIn("MATCHED_ROOT_COUNT=16", process.stdout)
+        self.assertIn(
+            "ALL_DIMENSION_EIGHT_ARTIN_LABELS_CERTIFIED=1",
+            process.stdout,
+        )
+
+    def test_dimension_eight_signed_field_and_exact_finite_tcc(self) -> None:
+        lift = subprocess.run(
+            [
+                "gp",
+                "-q",
+                str(
+                    ROOT
+                    / "scripts/dimension_eight_square_root_lift.gp"
+                ),
+            ],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        self.assertNotIn("user error", lift.stderr)
+        self.assertIn(
+            "SIGNED_OVERLAP_ABSOLUTE_DEGREE=64", lift.stdout
+        )
+        self.assertIn(
+            "ALL_CONJUGATE_RATIO_ROOTS_VERIFIED=16", lift.stdout
+        )
+        self.assertIn(
+            "LOWER_CONDUCTOR_FIELD_LIES_IN_SIGNED_FIELD=1",
+            lift.stdout,
+        )
+
+        finite = subprocess.run(
+            [
+                "gp",
+                "-q",
+                str(ROOT / "scripts/dimension_eight_exact_tcc.gp"),
+            ],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        self.assertNotIn("user error", finite.stderr)
+        self.assertIn("INSTALLED_OVERLAP_COUNT=64", finite.stdout)
+        self.assertIn("COMMON_EXACT_FIELD_DEGREE=128", finite.stdout)
+        self.assertIn("SHIFT_1_IDEMPOTENCY_CERTIFIED=1", finite.stdout)
+        self.assertIn("SHIFT_1_RANK_ONE_CERTIFIED=1", finite.stdout)
+        self.assertIn("SHIFT_0_IDEMPOTENCY_CERTIFIED=1", finite.stdout)
+        self.assertIn("SHIFT_0_RANK_ONE_CERTIFIED=1", finite.stdout)
+        self.assertIn(
+            "DIMENSION_EIGHT_EXACT_FINITE_TCC_CERTIFIED=1",
+            finite.stdout,
+        )
 
     def test_dedicated_dimension_seven_certificate(self) -> None:
         process = subprocess.run(

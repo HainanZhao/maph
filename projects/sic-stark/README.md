@@ -147,15 +147,17 @@ See [`docs/sic-stark-sprint1.md`](docs/sic-stark-sprint1.md) and
 
 ## Higher-dimensional status
 
-The later research ledger now separates the first three dimensions beyond
+The later research ledger now separates the first dimensions beyond
 the closed \(d=4\) case:
 
 - dimension five has an unconditional algebraic closure package;
 - dimension six has a genuine primitive-character obstruction to the
   currently available conductor-lowering argument; and
-- dimension seven passes the Shintani index sieve and now has a complete
-  conductor-two absolute-value bridge for all \(48\) nonzero
-  characteristics.
+- dimension seven has a complete unconditional analytic and exact
+  finite closure; while
+- dimension eight now has an exact finite closure for a uniquely selected
+  algebraic packet, with two oriented cyclic-quartic analytic identities
+  still open.
 
 The dimension-seven derivation, including the exact \(\Upsilon\) labels,
 six lowered moduli, stabilizer, Kopp exponents, and the \(3.5\cdot10^{-9}\)
@@ -177,6 +179,17 @@ adversarial source and field-gluing audit, including the corrected
 Shintani unit-congruence factors, is recorded in
 [Cycle 58](docs/sic-stark-cycle58.md).
 
+[Cycle 59](docs/sic-stark-cycle59.md) applies the resulting theorem schema
+to dimension eight.  The finite TCC equations select one of the \(64\)
+natural quartic orientation pairs.  The \(16\) primitive squared overlaps
+collapse to the degree-\(32\) one-place ray field and acquire exact Artin
+labels; adjoining one square root contains every signed primitive overlap
+and the lower-conductor field.  In a compatible degree-\(128\) Weyl-phase
+compositum, exact arithmetic proves idempotency and all \(784\) rank-two
+minors for each formal shift.  This closes the finite algebraic gate but
+does not promote Roblot's quartic absolute-value theorem to the two
+oriented analytic identities.
+
 ## Verification
 
 The default tests use Python, NumPy, and PARI/GP.  The rigorous
@@ -191,4 +204,6 @@ python3 scripts/verify_dimension_seven_conductor_lowering.py
 gp -q scripts/dimension_seven_shintani_audit.gp
 gp -q scripts/dimension_seven_artin_labels.gp
 gp -q scripts/dimension_seven_exact_tcc.gp
+gp -q scripts/dimension_eight_artin_labels.gp
+gp -q scripts/dimension_eight_exact_tcc.gp
 ```

@@ -56,8 +56,27 @@ def classification(record: dict[str, object]) -> tuple[str, list[str]]:
     local_exponent = int(record["local_one_place_ray_kernel_exponent"])
     ray_order = int(record["order_ray_order"])
 
-    if dimension in (4, 5):
+    if dimension in (4, 5, 7):
         return "proved-control", ["existing unconditional benchmark"]
+    if dimension == 6:
+        return (
+            "analytic-theorem-boundary",
+            [
+                "one primitive order-six scalar remains",
+                "conductor lowering and current Stark theorems do not "
+                "separate it",
+            ],
+        )
+    if dimension == 8:
+        return (
+            "finite-closure-target",
+            [
+                "quadratic sectors are unconditional",
+                "two cyclic-quartic absolute values are unconditional",
+                "the canonical TCC equations select one discrete "
+                "orientation pair",
+            ],
+        )
     if isomorphic and shintani_index == 2:
         reasons.extend(
             [
@@ -116,16 +135,8 @@ def main() -> None:
         record["classification_reasons"] = reasons
         combined.append(record)
 
-    best = [
-        int(record["dimension"])
-        for record in combined
-        if record["classification"] == "best-candidate"
-        and int(record["dimension"]) >= 7
-    ]
-    assert best == [7]
-
     result = {
-        "schema": "sic-stark-higher-dimension-theorem-coverage-v1",
+        "schema": "sic-stark-higher-dimension-theorem-coverage-v2",
         "audited_dimensions": [
             int(record["dimension"]) for record in combined
         ],
@@ -133,7 +144,9 @@ def main() -> None:
             "Prefer an isomorphic order/maximal ray bridge and "
             "Shintani index [H:H intersection Q_ab]=2."
         ),
-        "best_unconditional_candidate": 7,
+        "closed_dimensions": [4, 5, 7],
+        "next_exact_tcc_target": 8,
+        "next_analytic_theorem_target": 6,
         "records": combined,
     }
     print(json.dumps(result, indent=2, sort_keys=True))
