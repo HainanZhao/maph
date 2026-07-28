@@ -528,6 +528,14 @@ one-dimensional character is trivial on it.  The target retains central
 eigenvalue \(-1\) under every scalar twist and never descends to the
 projective CM field.
 
+[Cycles 111--112](docs/sic-stark-cycle111.md) finish the induction audit
+and return to the one live direct route.  Dimension forces any
+one-dimensional induction base to be quadratic, and the three quadratic
+bases are already exhausted.  Yalkinoglu's cyclic
+quantum-dilogarithm formula is compatible with the length-one
+\(\beta=[[5]]\) boundary, but supplies a limit rather than the required
+finite AFK pentagon/Weyl cancellation.
+
 ## Verification
 
 The default tests use Python, NumPy, and PARI/GP.  The rigorous
