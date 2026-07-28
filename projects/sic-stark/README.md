@@ -40,6 +40,7 @@ Manuscript and package guide:
 - `paper/sic-stark-dimensions-four-five.pdf`
 - `docs/referee-package.md`
 - `certificates/SHA256SUMS`
+- `scripts/build_publication_archive.sh`
 
 Dimension-four certificates:
 
@@ -112,6 +113,27 @@ The final tagged archive should also contain:
 After deposition, replace the manuscript's archival placeholder with the
 Zenodo DOI and record both the DOI and the immutable Git commit in this
 README.
+
+Build the complete archive in one command:
+
+```bash
+scripts/build_publication_archive.sh
+```
+
+The default output is
+`dist/sic-stark-reproducibility.tar.gz`.  The builder first verifies
+`certificates/SHA256SUMS`, discovers the dimension-six/eight scripts cited
+by the manuscript, normalizes tar metadata for reproducible output, and
+adds `ARCHIVE_CONTENTS.sha256` inside the archive.  Use
+`--strict-release-metadata` for the final deposit; it will refuse to build
+until the citation, Zenodo, license, environment, and reproduction files
+listed above exist.  Useful alternatives are:
+
+```bash
+scripts/build_publication_archive.sh --list
+scripts/build_publication_archive.sh --core-only
+scripts/build_publication_archive.sh --output /path/to/release.tar.gz
+```
 
 ## Current result
 
