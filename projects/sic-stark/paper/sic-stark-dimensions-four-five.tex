@@ -14,7 +14,9 @@
 
 \title{Twisted-Convolution Identities in Dimensions Four and Five\\
 from Shintani Ray Units}
-\author{Hainan Zhao}
+\author{Hainan Zhao\\
+\small Independent Researcher\\
+\small\texttt{hainzhao@gmail.com}}
 \date{28 July 2026}
 
 \begin{document}
@@ -925,9 +927,12 @@ The field $H$ has signature $(8,4)$ and a unique octic subfield
 \[
  M\simeq\Q(\zeta_{60})^+.
 \]
-The uniqueness and the displayed isomorphism are checked exactly in
-the archived \path{scripts/dimension_five_shintani_audit.gp}
-transcript and independently in
+An exhaustive degree-eight subfield enumeration of the degree-sixteen
+defining field returns exactly one subfield; an exact
+\texttt{nfisisom} calculation then identifies it with the displayed
+cyclotomic field.  This is recorded in the archived
+\path{scripts/dimension_five_shintani_audit.gp} transcript and checked
+independently in
 \path{scripts/dimension_five_special_reduction_audit.gp}.
 Thus $H/M$ is quadratic, $M$ is the maximal absolutely abelian
 subfield of $H$, and exactly one real place of $K$ splits in $H$.
@@ -1031,8 +1036,8 @@ The exact divisor audit is
 \begin{array}{c@{\quad}c@{\quad}c@{\quad}c@{\quad}c@{\quad}c}
 \mathfrak d&f_{\mathfrak d}&h(\mathfrak d)&w(\mathfrak d)
  &n(\mathfrak d)&\text{clearing exponent}\\ \hline
-\mathcal O_k&1&2&2&16&12h_kn=384\\
-\mathfrak p_3&3&2&1&8&12f_{\mathfrak d}n=288\\
+\mathcal O_k&1&2&2&16&12h_kn(\mathfrak d)=384\\
+\mathfrak p_3&3&2&1&8&12f_{\mathfrak d}n(\mathfrak d)=288\\
 \overline{\mathfrak p}_3&3&2&1&8&288\\
 (3)&3&4&1&4&144\\
 \mathfrak p_5&5&4&1&4&240\\
@@ -1653,9 +1658,9 @@ The order-ray group and its maximal-order realization are
  \cong
  \Cl_{(24)\infty_2}(\mathcal O_{K_8})
  \cong C_4\times C_2\times C_2.
-\tag{36}
+\tag{35}
 \]
-The change-of-order isomorphism in (36) does not identify partial zeta
+The change-of-order isomorphism in (35) does not identify partial zeta
 functions by itself.  Kopp's conductor-lowering formula~\cite{Kopp}
 supplies the
 required three-factor bridge between the order-modulus-eight
@@ -1672,7 +1677,7 @@ that its four independent positive values are the real roots of
  P_{\rm low}(X)={}&X^8-8X^7+12X^6+8X^5-22X^4\\
                   &\quad+8X^3+12X^2-8X+1.
 \end{aligned}
-\tag{37}
+\tag{36}
 \]
 Zauner covariance and reciprocity supply the full lower stratum.
 
@@ -1684,7 +1689,7 @@ The two cyclic quartic quotient fields have relative equations
  F_0/K_8:\quad&X^4-6\phi X^2+3,\\
  F_1/K_8:\quad&X^4+(6-6\phi)X^2+3.
 \end{aligned}
-\tag{38}
+\tag{37}
 \]
 The exact models, fundamental-unit coordinates, and embeddings used
 below are fixed in
@@ -1699,7 +1704,7 @@ local-Frobenius order.  Define the oriented logarithmic resolvents
  R_1&=\log|\eta_1|_{\rho_2}
       +i\log|\eta_1|_{\rho_1}.
 \end{aligned}
-\tag{39}
+\tag{38}
 \]
 In the PARI dual coordinates for the cyclic basis
 $C_4\times C_2\times C_2$ fixed by that script, Roblot's
@@ -1709,13 +1714,13 @@ cyclic-quartic theorem proves the two modulus identities
  |L'_S(0,[1,0,0])|=|R_0|,
  \qquad
  |L'_S(0,[1,1,0])|=|R_1|.
-\tag{40}
+\tag{39}
 \]
 It does not prove the orientations.
 
 \paragraph{Projective CM-descent gate.}
 There is nevertheless a sharper route than an abstract oriented
-refinement of (40).  To handle the infinite-place swap exactly, embed
+refinement of (39).  To handle the infinite-place swap exactly, embed
 the one-place ray group into the full group
 \[
  \Cl_{(24)\infty_1\infty_2}(K_8)\cong C_4\times C_2^3.
@@ -1764,7 +1769,7 @@ compositum.  For each of the two formal shifts, the script verifies
 \[
  \Tr\Pi=1,\qquad \Pi^2=\Pi,\qquad
  \text{all }\binom82^2=784\text{ two-by-two minors vanish}.
-\tag{41}
+\tag{40}
 \]
 
 \paragraph{Exact closure targets.}
@@ -1776,26 +1781,26 @@ oriented identities
  L'_S(0,[1,0,0])&=R_0,\\
  L'_S(0,[1,1,0])&=R_1
 \end{aligned}
-\tag{42}
+\tag{41}
 \]
 hold.  The lower-conductor special values and the algebraic
-calculation \textup{(41)} are unconditional; their identification with
-the primitive analytic table is conditional on \textup{(42)}.
+calculation \textup{(40)} is unconditional; its identification with
+the primitive analytic table is conditional on \textup{(41)}.
 
 Rigorous double-sine windows locate all eight independent primitive
 analytic squares in the corresponding isolated algebraic intervals.
-At high precision the phase quotients in (42) equal
+At high precision the phase quotients in (41) equal
 $1+O(10^{-114})$.  This is strong evidence, not an equality proof:
-(40) permits an arbitrary unit-circle phase.  The exact finite TCC
+(39) permits an arbitrary unit-circle phase.  The exact finite TCC
 orientation sieve selects one pair among the $64$ natural algebraic
-orientations, but using that selection to deduce (42) would be circular.
+orientations, but using that selection to deduce (41) would be circular.
 The projective computation above narrows the missing proof further.
 One must construct the two re-induced Hecke characters over
 $\Q(\sqrt{-6})$ or $\Q(\sqrt{-30})$, verify the linear (not merely
 projective) Artin induction including any scalar twist, match the
 removed Euler factors defining $L_S$, and translate the
 imaginary-quadratic Kronecker-limit formula into the orientations
-$R_0,R_1$.  That CM calculation would supply the phase and make (42),
+$R_0,R_1$.  That CM calculation would supply the phase and make (41),
 and hence dimension eight, unconditional without further finite
 computation.  The present paper records the exact descent gate but
 does not assert that final convention match.
@@ -1810,16 +1815,16 @@ d&\text{unconditional analytic part}&\text{exact finite part}
 6&\text{lower stratum, modulus and sign}
  &225\text{ minors}
  &1\text{ order-six value}\\
-8&15\text{ lower overlaps, quartic moduli, CM gate}
+8&15\text{ lower overlaps, quartic moduli, projective CM gate}
  &2\times784\text{ minors}
  &\text{linear CM re-induction and two phase matches}.
 \end{array}
-\tag{43}
+\tag{42}
 \]
 Dimension six has no analogous shortcut: its primitive character has
 order six, so the corresponding projective quotient has order three
 rather than two.  Dimension eight is therefore closer to closure than
-the raw comparison (40) suggests; its remaining obstruction is the
+the raw comparison (39) suggests; its remaining obstruction is the
 linear re-induction (including a possible scalar twist), the
 $S$-Euler-factor comparison, and the two imaginary-quadratic
 Kronecker-limit convention matches.
@@ -1841,7 +1846,7 @@ not conditional propositions masquerading as higher-dimensional
 theorems.  It shows how far the proved low-dimensional machinery
 extends: the finite algebraic candidate packets pass exact cancellation
 audits, while their identification with the primitive analytic values
-still requires (33) in dimension six and the two orientations (42) in
+still requires (33) in dimension six and the two orientations (41) in
 dimension eight.  More decimal recognition cannot replace those
 missing special-value proofs.
 
@@ -1890,6 +1895,16 @@ SHA-256 digests for the archived dimension-four and dimension-five
 artifacts are recorded in \texttt{certificates/SHA256SUMS}; the
 dimension-six and dimension-eight research scripts are fixed by the
 repository commit accompanying this manuscript.
+
+\section*{Acknowledgments}
+
+The author acknowledges the use of OpenAI's GPT-5.6 Sol model for
+mathematical brainstorming, symbolic-computation scaffolding, code
+review, and manuscript editing.  All proofs, computations, and claims
+were independently checked through the exact certificates described
+above, and responsibility for the final manuscript rests with the
+author.  Additional personal and institutional acknowledgments will be
+added before submission.
 
 \begin{thebibliography}{12}
 \bibitem{Kopp}
