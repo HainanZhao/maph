@@ -89,6 +89,56 @@ class DimensionSixObstructionTests(unittest.TestCase):
             result.stdout,
         )
 
+    def test_rational_induction_cannot_see_orientation(self) -> None:
+        result = subprocess.run(
+            [
+                sys.executable,
+                str(
+                    ROOT
+                    / "scripts/dimension_six_rational_induction_gate.py"
+                ),
+            ],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        self.assertIn(
+            "PRIMITIVE_EVEN_PACKET_IN_RATIONAL_SPAN=1",
+            result.stdout,
+        )
+        self.assertIn(
+            "PRIMITIVE_ODD_PACKET_IN_RATIONAL_SPAN=0",
+            result.stdout,
+        )
+        self.assertIn(
+            "RATIONAL_ARTIN_INDUCTION_CAN_ORIENT_CHI_1=0",
+            result.stdout,
+        )
+
+    def test_exact_weight_one_modular_identification(self) -> None:
+        result = subprocess.run(
+            [
+                "gp",
+                "-q",
+                str(
+                    ROOT
+                    / "scripts/dimension_six_weight_one_modularity.gp"
+                ),
+            ],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        self.assertNotIn("user error", result.stderr)
+        self.assertIn("ABSOLUTE_ARTIN_CONDUCTOR=756", result.stdout)
+        self.assertIn("STURM_BOUND=144", result.stdout)
+        self.assertIn("MATCHING_WEIGHT_ONE_NEWFORMS=1", result.stdout)
+        self.assertIn("MATCHING_NEBENTYPUS=-7", result.stdout)
+        self.assertIn(
+            "MATCHING_PROJECTIVE_GALOIS_TYPE=12",
+            result.stdout,
+        )
+
     def test_qgamma_regularizes_the_full_rational_boundary(self) -> None:
         result = subprocess.run(
             [

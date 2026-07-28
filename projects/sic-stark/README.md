@@ -411,6 +411,34 @@ and the normalized first-derivative packet stabilizes.  The remaining
 target is a local fixed-point divisibility lemma for
 \(K_6(\tau)^2-K_6(\tau)\).
 
+[Cycles 69--71](docs/sic-stark-cycle71.md) prove that this local
+fixed-point lemma is equivalent to the missing constant-term identity
+and state the final unconditional boundary.  All \(225\) finite minors,
+the lower analytic stratum, the ray labels, and the orientation sign are
+certified; the full theorem is equivalent to one positive modulus-six
+Shintani--Stark value.
+
+[Cycles 93--96](docs/sic-stark-cycle93.md) test four new routes against
+that boundary.  CM cyclic-sextic Brumer--Stark is excluded by the
+ray-field signature \((6,3)\), and the published
+\(\mathbb Q(\sqrt{21})\) algebraic double-sine formula is the already-used
+level-three stratum.  Exact rational-character linear algebra proves
+that rational Artin induction sees only the inversion-even primitive
+packet.  The final cycle identifies the primitive Hecke \(L\)-function
+exactly with the level-\(756\), nebentypus-\(-7\), projective-\(D_{12}\)
+weight-one newform through the Sturm bound \(144\).  This is a new
+modular formulation of the remaining oriented regulator identity, not
+yet an unconditional evaluation of it.
+
+[Cycle 97](docs/sic-stark-cycle97.md) checks the closest modern modular
+Stark theorems.  The proved real-dihedral derived-Hecke formula concerns
+the adjoint representation and a totally odd quotient character; the
+dimension-six target is the original mixed-signature representation.
+Harmonic-Maass results likewise do not provide the required
+composite-level mixed-signature algebraicity theorem.  This isolates a
+new mixed-signature, non-adjoint regulator formula as the precise modular
+extension that would finish the proof.
+
 ## Verification
 
 The default tests use Python, NumPy, and PARI/GP.  The rigorous
@@ -433,4 +461,6 @@ gp -q scripts/dimension_eight_maximal_quadratic_units.gp
 PYTHONPATH=scripts python3 scripts/certify_dimension_eight_maximal_cocycle.py
 python3 scripts/dimension_eight_maximal_sign_audit.py
 python3 scripts/dimension_eight_maximal_exact_tcc.py
+python3 scripts/dimension_six_rational_induction_gate.py
+gp -q scripts/dimension_six_weight_one_modularity.gp
 ```
