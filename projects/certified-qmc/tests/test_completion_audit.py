@@ -10,6 +10,7 @@ import unittest
 
 from src.certificate import canonical_sha256
 from scripts.audit_production_phase_completion import release_package
+from scripts.finalize_supply_side_paper import replace_block
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -104,6 +105,23 @@ class CompletionAuditTests(unittest.TestCase):
             self.assertEqual(
                 release_package(release)["status"], "FAILED"
             )
+
+    def test_paper_result_blocks_have_exact_marker_contract(self):
+        source = (
+            "before\n"
+            "<!-- BEGIN GENERATED X -->\nold\n"
+            "<!-- END GENERATED X -->\n"
+            "after\n"
+        )
+        replaced = replace_block(source, "X", "new")
+        self.assertIn(
+            "<!-- BEGIN GENERATED X -->\n\nnew\n\n"
+            "<!-- END GENERATED X -->",
+            replaced,
+        )
+        self.assertNotIn("old", replaced)
+        with self.assertRaisesRegex(ValueError, "marker contract"):
+            replace_block("no markers", "X", "new")
 
 
 if __name__ == "__main__":

@@ -132,6 +132,8 @@ mechanically refuses to start without the published-DOI certificate.
 - `scripts/audit_production_phase_completion.py`: require explicit,
   self-hashed evidence for every Cycles 013–019 deliverable and report
   missing evidence as pending rather than inferred success.
+- `scripts/finalize_supply_side_paper.py`: replace result markers only
+  from passed fidelity, usability, oracle, DOI, and Cycle-009 artifacts.
 - `scripts/audit_phase0_target.py`: certify the frozen official prefix.
 - `scripts/audit_workstream_b_reference_table.py`: certify every
   dimension of the frozen vector-only prefix.
