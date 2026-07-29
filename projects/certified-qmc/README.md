@@ -77,11 +77,14 @@ four-core node.  This authorizes the full exact throughput branch;
 Cycle 013 has since closed the licensing/dependency gate: UNSW vectors
 use keyed, non-embedded mode and the release graph contains no FFTW.
 Cycle 014 has banked the full independently verified 3,740-prime
-schedule, leaving chunk replay as the production gate.
-Cycle 015 has now closed that gate with hash-chained chunks, three
-byte-identical forced-kill resumes, and 10/10 selected-entry replays.
-The fidelity run awaits its explicit pre-run freeze. Cycle 009 is
-explicitly deferred to the Workstream C entry gate.
+schedule. Cycle 015 closed the chunk-replay gate with hash-chained
+chunks, three byte-identical forced-kill resumes, and 10/10
+selected-entry replays. The Cycles 016–017 fidelity grid is now frozen
+and running. Its first attempt correctly paused under the original
+25% VPS drift alarm and is preserved; a human-authorized,
+versioned +75% alarm retains the seven-node-day hard budget and all
+certification predicates. Cycle 009 remains explicitly deferred to the
+Workstream C entry gate.
 
 ## Layout
 
@@ -143,6 +146,8 @@ explicitly deferred to the Workstream C entry gate.
   schedule and independent replay.
 - `docs/cycle-015-chunked-replay.md`: G3 forced-kill and selected-entry
   replay transcript.
+- `docs/cycles-016-017-production.md`: fidelity freeze, preserved
+  throughput pause, and versioned VPS disposition.
 - `docs/roadmap.md`: gated workstreams.
 
 ## Quick start

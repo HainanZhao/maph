@@ -149,6 +149,16 @@ Date: 2026-07-29
   four visible cores, projecting the confirmed 54.901-trillion-update
   workload to 1.577618 node-days with 3.7001% replay overhead.  This is
   a local measurement, not a portable performance guarantee.
+- The first Cycles 016–017 production attempt correctly paused after
+  5.013504 billion updates at 3.653537 aggregate ns/update, above its
+  prospectively frozen +25% VPS drift alarm. Same-host
+  single-process diagnostics remained below that ceiling. The partial
+  hash-chained run is preserved and no partial merit is promoted.
+- The human-authorized v2 monitor uses a versioned +75% VPS drift
+  alarm (4.344801 ns/update), whose boundary projects 2.704 node-days.
+  The seven-node-day hard budget and all certification gates are
+  unchanged. The v2 fidelity computation is in progress; no production
+  table is yet promoted.
 - The pinned FFTW plans, compiled LatNet midpoint matches, and synthetic
   fast-CBC transcripts validate that the proposed model class is
   realistic.  They are outside the Workstream B certification chain.
