@@ -6,6 +6,7 @@ from pathlib import Path
 import unittest
 
 from src.certificate import canonical_sha256
+from scripts.audit_usability_production import expected_update_count
 
 
 PROJECT = Path(__file__).resolve().parents[1]
@@ -57,6 +58,9 @@ class Cycle018Tests(unittest.TestCase):
         self.assertEqual(
             {table["N"] for table in spec["tables"]},
             {2**10, 2**15, 2**20},
+        )
+        self.assertEqual(
+            expected_update_count(spec), 256_764_805_120
         )
 
     def test_packaging_preflight_is_replayable_and_binds_packager(self):

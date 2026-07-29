@@ -87,8 +87,13 @@ preserved.  The corrected implementation was versioned and
 re-preregistered without changing an acceptance threshold.  It passed
 25/25 independent modular oracle checks, both overflow checks, and all
 checkpoint replays.  Its four-core VPS median was 2.483 ns/update,
-projecting the confirmed 54.9-trillion-update fidelity workload to
-1.58 node-days with 3.70% replay overhead.
+projecting the preregistered conservative 54.9-trillion-update
+fidelity-plus-usability budget to 1.58 node-days with 3.70% replay
+overhead.  Once the verified primes were known, their greater-than-
+61-bit sizes shortened the minimal schedule prefixes: the exact
+scheduled count is 54.054 trillion including overflow work
+(53.797 trillion for fidelity alone).  This is a prospective-budget
+reconciliation, not a grid reduction.
 
 The first production attempt then correctly paused under a
 prospectively frozen +25% throughput-drift alarm.  Same-host diagnostics

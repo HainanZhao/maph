@@ -63,6 +63,26 @@ def replace_block(
     )
 
 
+def validate_cycle009_result(cycle009: dict) -> dict:
+    histogram = cycle009["histogram"]
+    if (
+        cycle009["comparison_count"] != 802767
+        or histogram["double_double_resolved"] != 0
+        or histogram["arb_resolved"]
+        + histogram["exact_crt_resolved"]
+        != 802767
+        or histogram["exact_crt_resolved"] >= 803
+        or cycle009["acceptance"]["passed"] is not True
+    ):
+        raise ValueError("Cycle-009 acceptance contract failed")
+    if not all(
+        row["equal"]
+        for row in cycle009["final_merit"]["overflow_checks"]
+    ):
+        raise ValueError("Cycle-009 final merit overflow check failed")
+    return histogram
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--paper", type=Path, default=DEFAULT_PAPER)
@@ -93,14 +113,7 @@ def main() -> None:
     cycle009 = load_self_hashed(
         args.cycle009.resolve(), "certificate_sha256"
     )
-    histogram = cycle009["histogram"]
-    if (
-        cycle009["comparison_count"] != 802767
-        or histogram["arb_resolved"]
-        + histogram["exact_crt_resolved"]
-        != 802767
-    ):
-        raise ValueError("Cycle-009 histogram count mismatch")
+    histogram = validate_cycle009_result(cycle009)
 
     fidelity_lines = "\n".join(
         (
