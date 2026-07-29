@@ -96,7 +96,10 @@ and running. Its first attempt correctly paused under the original
 25% VPS drift alarm and is preserved; a human-authorized,
 versioned +75% alarm retains the seven-node-day hard budget and all
 certification predicates. Cycle 009 remains explicitly deferred to the
-Workstream C entry gate.
+Workstream C entry gate.  Its compiled plain-`__int128` scorer now
+matches the independent Python NTT through \(N=2^{12}\), its integrated
+Arb/CRT/checkpoint preflight is banked, and the resumable target driver
+mechanically refuses to start without the published-DOI certificate.
 
 ## Layout
 
