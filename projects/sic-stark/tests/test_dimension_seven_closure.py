@@ -58,8 +58,66 @@ class DimensionSevenClosureTests(unittest.TestCase):
         self.assertIn("D7_Q32_DISCRIMINANT=32", output)
         self.assertIn("D7_WIDE_CLASS_NUMBER_8=1", output)
         self.assertIn("D7_WIDE_CLASS_NUMBER_32=1", output)
-        self.assertIn("D7_CERTIFIED_STRATUM_DISCRIMINANT=32", output)
-        self.assertIn("D7_OPEN_STRATUM_DISCRIMINANT=8", output)
+        self.assertIn("D7_Q8_STABILIZER=[239, -140; 70, -41]", output)
+        self.assertIn(
+            "D7_CERTIFIED_STRATA_DISCRIMINANTS=[8, 32]", output
+        )
+        self.assertIn("D7_OPEN_STRATA=[]", output)
+
+    def test_maximal_order_exact_sign_packet(self) -> None:
+        process = subprocess.run(
+            [
+                sys.executable,
+                str(
+                    ROOT
+                    / "scripts"
+                    / "dimension_seven_maximal_sign_audit.py"
+                ),
+            ],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        self.assertIn("AUDITED_NONZERO_CHARACTERISTICS=48", process.stdout)
+        self.assertIn(
+            "DIMENSION_SEVEN_DISCRIMINANT_EIGHT_SIGNS_CERTIFIED=1",
+            process.stdout,
+        )
+
+    def test_maximal_order_tuple_and_arb_transcript(self) -> None:
+        output = self.run_gp("dimension_seven_maximal_tuple_audit.gp")
+        self.assertIn("FORM_DISCRIMINANT=8", output)
+        self.assertIn("AT=[239, -140; 70, -41]", output)
+        self.assertIn("RADEMACHER_AT=0", output)
+        self.assertIn("RAY_7_ONE_STRUCTURE=[6]", output)
+        self.assertIn("RAY_7_BOTH_STRUCTURE=[6, 2]", output)
+        self.assertIn("NONZERO_CHARACTERISTICS=48", output)
+        transcript = (
+            ROOT
+            / "certificates"
+            / "dimension-seven-maximal-cocycle-intervals.txt"
+        ).read_text()
+        self.assertIn("MAXIMUM_LOG_DIFFERENCE=[+/- 2.30e-11]", transcript)
+        self.assertIn("HEIGHT_GAP_CERTIFIED=True", transcript)
+        self.assertIn(
+            "DIMENSION_SEVEN_DISCRIMINANT_EIGHT_MAGNITUDES_CERTIFIED=1",
+            transcript,
+        )
+
+    def test_maximal_order_exact_both_shift_tcc(self) -> None:
+        output = self.run_gp(
+            "dimension_seven_maximal_exact_tcc.gp", "4000000000"
+        )
+        self.assertIn("SIGNED_SCALAR_PACKET_IRREDUCIBLE=1", output)
+        self.assertIn("QUARTIC_PACKET_IRREDUCIBLE=1", output)
+        self.assertIn("COMPOSITUM_ABSOLUTE_DEGREE=48", output)
+        for shift in (1, 0):
+            self.assertIn(f"SHIFT_{shift}_TRACE_CERTIFIED=1", output)
+            self.assertIn(
+                f"SHIFT_{shift}_IDEMPOTENCY_CERTIFIED=1", output
+            )
+            self.assertIn(f"SHIFT_{shift}_RANK_ONE_CERTIFIED=1", output)
 
     def test_complete_phase_and_ray_label_packet(self) -> None:
         packet = run_python("dimension_seven_packet_certificate.py")

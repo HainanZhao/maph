@@ -7,11 +7,10 @@ This package accompanies:
 
 ## Main theorem
 
-For every admissible dimension-seven tuple of discriminant \(32\), and
-for every admissible dimension-eight tuple, both \(0\) and \(1\) are
-formal TCC shifts. Shift sets agree for forms of the same discriminant.
-The admissible dimension-seven discriminant-\(8\) stratum is explicitly
-outside the theorem and remains open.
+For every admissible dimension-seven or dimension-eight tuple, both
+\(0\) and \(1\) are formal TCC shifts. Shift sets agree for forms of
+the same discriminant.  The two dimension-seven discriminants, \(8\)
+and \(32\), are certified independently.
 
 Dimension eight has two separately certified form discriminants:
 
@@ -33,6 +32,12 @@ Dimension eight has two separately certified form discriminants:
 ```bash
 python3 -m unittest tests.test_dimension_seven_closure
 gp -q scripts/dimension_seven_admissible_strata.gp
+gp -q scripts/dimension_seven_maximal_tuple_audit.gp
+python3 scripts/dimension_seven_maximal_sign_audit.py
+gp -q scripts/dimension_seven_maximal_exact_tcc.gp
+PYTHONPATH=scripts .venv/bin/python \
+  scripts/certify_dimension_seven_maximal_cocycle.py \
+  --tolerance 1e-10
 gp -q scripts/dimension_seven_exact_tcc.gp
 gp -q scripts/dimension_eight_linear_cm_reinduction.gp
 gp -q scripts/dimension_eight_cm_unit_lattice.gp

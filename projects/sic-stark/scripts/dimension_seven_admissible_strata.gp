@@ -34,7 +34,13 @@ A7 = L7^3;
 assert_equal("D7_Q32_STABILIZER", A7, [204, -35; 35, -6]);
 assert_equal("D7_Q32_FIXED_POINT_MINPOLY", minpoly(epsilon), x^2 - 6*x + 1);
 
-print("D7_CERTIFIED_STRATUM_DISCRIMINANT=32");
-print("D7_OPEN_STRATUM_DISCRIMINANT=8");
+L7max = [7, -4; 2, -1];
+A7max = L7max^3;
+assert_equal("D7_Q8_STABILIZER", A7max, [239, -140; 70, -41]);
+assert_equal("D7_Q8_FIXED_POINT_MINPOLY", \
+  minpoly(Mod(2 + y, y^2 - 2)), x^2 - 4*x + 2);
+
+print("D7_CERTIFIED_STRATA_DISCRIMINANTS=[8, 32]");
+print("D7_OPEN_STRATA=[]");
 
 quit();

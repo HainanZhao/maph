@@ -29,6 +29,12 @@ Run the principal exact certificates:
 
 ```bash
 gp -q scripts/dimension_seven_admissible_strata.gp
+gp -q scripts/dimension_seven_maximal_tuple_audit.gp
+python3 scripts/dimension_seven_maximal_sign_audit.py
+gp -q scripts/dimension_seven_maximal_exact_tcc.gp
+PYTHONPATH=scripts python3 \
+  scripts/certify_dimension_seven_maximal_cocycle.py \
+  --tolerance 1e-10
 gp -q scripts/dimension_seven_exact_tcc.gp
 PYTHONPATH=scripts python3 scripts/certify_dimension_seven_double_sine.py \
   --tolerance 1e-10
