@@ -1,0 +1,177 @@
+{
+  "boundary": "This computation contains only j^-1 and j^-3. Every j^-2 usability entry must be reused from the sealed fidelity artifact and authenticated by hash.",
+  "frozen_at_utc": "2026-07-29T07:53:58Z",
+  "intermediate_prefix_policy": "Dimensions other than 16,64,256 are necessary incremental state and are not members of the frozen usability table grid.",
+  "logical_dimensions": [
+    16,
+    64,
+    256
+  ],
+  "parallel_workers": 4,
+  "prefix_block_size": 256,
+  "preregistrations": [
+    "data/cycle-018-usability-preregistration.json",
+    "data/cycles-016-017-preregistration-v2.json",
+    "data/workstream-b-production-freeze.json"
+  ],
+  "prime_schedule": "data/primes-schedule-v1.json",
+  "prime_schedule_manifest": "certificates/cycle-014-prime-schedule-manifest.json",
+  "run_id": "cycle-018-usability-v1",
+  "schema": "certified-qmc-chunked-production-spec-v1",
+  "tables": [
+    {
+      "N": 1024,
+      "dimension": 256,
+      "source_citation": "https://web.maths.unsw.edu.au/~fkuo/lattice/lattice-29102-1024.3600",
+      "source_file_sha256": "d42503eda84c7fede8d2513d674a9eca4075041dc4cf8c2e0995b46b035b5ce9",
+      "source_id": "unsw-fixed-29102",
+      "source_path": ".run-inputs/lattice-29102-1024.3600",
+      "source_snapshot_sha256": "bb8c5a8e38d84778fc1b18f1880890cfc6608d65b80a6f606b4aed7270f726ba",
+      "table_id": "unsw-fixed-29102-n1024-j1-usability",
+      "weight_power": 1,
+      "work_prime_count": 121
+    },
+    {
+      "N": 1024,
+      "dimension": 256,
+      "source_citation": "https://web.maths.unsw.edu.au/~fkuo/lattice/lattice-29102-1024.3600",
+      "source_file_sha256": "d42503eda84c7fede8d2513d674a9eca4075041dc4cf8c2e0995b46b035b5ce9",
+      "source_id": "unsw-fixed-29102",
+      "source_path": ".run-inputs/lattice-29102-1024.3600",
+      "source_snapshot_sha256": "bb8c5a8e38d84778fc1b18f1880890cfc6608d65b80a6f606b4aed7270f726ba",
+      "table_id": "unsw-fixed-29102-n1024-j3-usability",
+      "weight_power": 3,
+      "work_prime_count": 175
+    },
+    {
+      "N": 32768,
+      "dimension": 256,
+      "source_citation": "https://web.maths.unsw.edu.au/~fkuo/lattice/lattice-29102-32768.3600",
+      "source_file_sha256": "30d9cceb8639da07fabdd4ac493fb93628f6db41054595156a335302013e012e",
+      "source_id": "unsw-fixed-29102",
+      "source_path": ".run-inputs/lattice-29102-32768.3600",
+      "source_snapshot_sha256": "bb8c5a8e38d84778fc1b18f1880890cfc6608d65b80a6f606b4aed7270f726ba",
+      "table_id": "unsw-fixed-29102-n32768-j1-usability",
+      "weight_power": 1,
+      "work_prime_count": 162
+    },
+    {
+      "N": 32768,
+      "dimension": 256,
+      "source_citation": "https://web.maths.unsw.edu.au/~fkuo/lattice/lattice-29102-32768.3600",
+      "source_file_sha256": "30d9cceb8639da07fabdd4ac493fb93628f6db41054595156a335302013e012e",
+      "source_id": "unsw-fixed-29102",
+      "source_path": ".run-inputs/lattice-29102-32768.3600",
+      "source_snapshot_sha256": "bb8c5a8e38d84778fc1b18f1880890cfc6608d65b80a6f606b4aed7270f726ba",
+      "table_id": "unsw-fixed-29102-n32768-j3-usability",
+      "weight_power": 3,
+      "work_prime_count": 217
+    },
+    {
+      "N": 1048576,
+      "dimension": 256,
+      "source_citation": "https://web.maths.unsw.edu.au/~fkuo/lattice/lattice-29102-1048576.3600",
+      "source_file_sha256": "04b844e3401e89356a1c339d2f96fe8c15d062c9c2316dc2bd81b3a65e1d39cf",
+      "source_id": "unsw-fixed-29102",
+      "source_path": ".run-inputs/lattice-29102-1048576.3600",
+      "source_snapshot_sha256": "bb8c5a8e38d84778fc1b18f1880890cfc6608d65b80a6f606b4aed7270f726ba",
+      "table_id": "unsw-fixed-29102-n1048576-j1-usability",
+      "weight_power": 1,
+      "work_prime_count": 204
+    },
+    {
+      "N": 1048576,
+      "dimension": 256,
+      "source_citation": "https://web.maths.unsw.edu.au/~fkuo/lattice/lattice-29102-1048576.3600",
+      "source_file_sha256": "04b844e3401e89356a1c339d2f96fe8c15d062c9c2316dc2bd81b3a65e1d39cf",
+      "source_id": "unsw-fixed-29102",
+      "source_path": ".run-inputs/lattice-29102-1048576.3600",
+      "source_snapshot_sha256": "bb8c5a8e38d84778fc1b18f1880890cfc6608d65b80a6f606b4aed7270f726ba",
+      "table_id": "unsw-fixed-29102-n1048576-j3-usability",
+      "weight_power": 3,
+      "work_prime_count": 258
+    },
+    {
+      "N": 1024,
+      "dimension": 256,
+      "source_citation": "https://web.maths.unsw.edu.au/~fkuo/lattice/lattice-39102-1024-1048576.3600",
+      "source_file_sha256": "48c219ad626c2848a711d99a23363f348d9065e9ab53d8304f35c811b4e78dae",
+      "source_id": "unsw-extensible-39102",
+      "source_path": ".run-inputs/lattice-39102-1024-1048576.3600",
+      "source_snapshot_sha256": "bb8c5a8e38d84778fc1b18f1880890cfc6608d65b80a6f606b4aed7270f726ba",
+      "table_id": "unsw-extensible-39102-n1024-j1-usability",
+      "weight_power": 1,
+      "work_prime_count": 121
+    },
+    {
+      "N": 1024,
+      "dimension": 256,
+      "source_citation": "https://web.maths.unsw.edu.au/~fkuo/lattice/lattice-39102-1024-1048576.3600",
+      "source_file_sha256": "48c219ad626c2848a711d99a23363f348d9065e9ab53d8304f35c811b4e78dae",
+      "source_id": "unsw-extensible-39102",
+      "source_path": ".run-inputs/lattice-39102-1024-1048576.3600",
+      "source_snapshot_sha256": "bb8c5a8e38d84778fc1b18f1880890cfc6608d65b80a6f606b4aed7270f726ba",
+      "table_id": "unsw-extensible-39102-n1024-j3-usability",
+      "weight_power": 3,
+      "work_prime_count": 175
+    },
+    {
+      "N": 32768,
+      "dimension": 256,
+      "source_citation": "https://web.maths.unsw.edu.au/~fkuo/lattice/lattice-39102-1024-1048576.3600",
+      "source_file_sha256": "48c219ad626c2848a711d99a23363f348d9065e9ab53d8304f35c811b4e78dae",
+      "source_id": "unsw-extensible-39102",
+      "source_path": ".run-inputs/lattice-39102-1024-1048576.3600",
+      "source_snapshot_sha256": "bb8c5a8e38d84778fc1b18f1880890cfc6608d65b80a6f606b4aed7270f726ba",
+      "table_id": "unsw-extensible-39102-n32768-j1-usability",
+      "weight_power": 1,
+      "work_prime_count": 162
+    },
+    {
+      "N": 32768,
+      "dimension": 256,
+      "source_citation": "https://web.maths.unsw.edu.au/~fkuo/lattice/lattice-39102-1024-1048576.3600",
+      "source_file_sha256": "48c219ad626c2848a711d99a23363f348d9065e9ab53d8304f35c811b4e78dae",
+      "source_id": "unsw-extensible-39102",
+      "source_path": ".run-inputs/lattice-39102-1024-1048576.3600",
+      "source_snapshot_sha256": "bb8c5a8e38d84778fc1b18f1880890cfc6608d65b80a6f606b4aed7270f726ba",
+      "table_id": "unsw-extensible-39102-n32768-j3-usability",
+      "weight_power": 3,
+      "work_prime_count": 217
+    },
+    {
+      "N": 1048576,
+      "dimension": 256,
+      "source_citation": "https://web.maths.unsw.edu.au/~fkuo/lattice/lattice-39102-1024-1048576.3600",
+      "source_file_sha256": "48c219ad626c2848a711d99a23363f348d9065e9ab53d8304f35c811b4e78dae",
+      "source_id": "unsw-extensible-39102",
+      "source_path": ".run-inputs/lattice-39102-1024-1048576.3600",
+      "source_snapshot_sha256": "bb8c5a8e38d84778fc1b18f1880890cfc6608d65b80a6f606b4aed7270f726ba",
+      "table_id": "unsw-extensible-39102-n1048576-j1-usability",
+      "weight_power": 1,
+      "work_prime_count": 204
+    },
+    {
+      "N": 1048576,
+      "dimension": 256,
+      "source_citation": "https://web.maths.unsw.edu.au/~fkuo/lattice/lattice-39102-1024-1048576.3600",
+      "source_file_sha256": "48c219ad626c2848a711d99a23363f348d9065e9ab53d8304f35c811b4e78dae",
+      "source_id": "unsw-extensible-39102",
+      "source_path": ".run-inputs/lattice-39102-1024-1048576.3600",
+      "source_snapshot_sha256": "bb8c5a8e38d84778fc1b18f1880890cfc6608d65b80a6f606b4aed7270f726ba",
+      "table_id": "unsw-extensible-39102-n1048576-j3-usability",
+      "weight_power": 3,
+      "work_prime_count": 258
+    }
+  ],
+  "throughput_monitor": {
+    "action": "PAUSE_AND_INVESTIGATE",
+    "claim_tag": "NUMERICAL",
+    "drift_fraction": "0.75",
+    "failure_exit_code": 76,
+    "inherits": "human-authorized Cycles 016-017 v2 VPS monitor",
+    "maximum_aggregate_ns_per_update": "4.34480050068027950",
+    "minimum_updates_before_enforcement": 5000000000,
+    "pilot_median_aggregate_ns_per_update": "2.482743143245874"
+  }
+}
