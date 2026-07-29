@@ -1,0 +1,205 @@
+{
+  "anchors": [
+    {
+      "commands": [
+        {
+          "argv": ["gp", "-q", "scripts/referee_pari_audit.gp"],
+          "required_markers": [
+            "L_BNFCERTIFY=1",
+            "RAY_4_INFINITY_2_STRUCTURE=[2]",
+            "TARGET_UNIT_NUMERIC="
+          ]
+        }
+      ],
+      "engine": "A",
+      "historical_scope": "Paper I dimension 4, discriminant 5",
+      "id": "A-d4-ray4",
+      "packet_components": ["u=phi+sqrt(phi)"],
+      "real_base": "Q(sqrt(5))",
+      "source_modulus": "(4)*infinity_2"
+    },
+    {
+      "commands": [
+        {
+          "argv": ["gp", "-q", "scripts/dimension_five_shintani_audit.gp"],
+          "required_markers": [
+            "SHINTANI_SAFE_EXPONENT=5760"
+          ]
+        },
+        {
+          "argv": ["gp", "-q", "scripts/dimension_five_unit_lattice_audit.gp"],
+          "required_markers": [
+            "ABSOLUTE_BNFCERTIFY=1",
+            "STARK_UNIT_MINPOLY_CHECK=1",
+            "SHINTANI_SAFE_EXPONENT=5760"
+          ]
+        },
+        {
+          "argv": ["{PYTHON}", "scripts/certify_dimension_five_double_sine.py", "--tolerance", "1e-10"],
+          "required_markers": ["HEIGHT_GAP_CERTIFIED=True"]
+        }
+      ],
+      "engine": "B",
+      "historical_scope": "Paper I dimension 5, discriminant 12",
+      "id": "B-d5-ray5",
+      "packet_components": ["degree-16 Shintani packet"],
+      "real_base": "Q(sqrt(3))",
+      "safe_exponent": 5760,
+      "source_modulus": "(5)*infinity_2"
+    },
+    {
+      "commands": [
+        {
+          "argv": ["gp", "-q", "scripts/dimension_seven_maximal_tuple_audit.gp"],
+          "required_markers": [
+            "FORM_DISCRIMINANT=8",
+            "NORMAL_CLOSURE_ABELIAN_OVER_Q_SQRT_MINUS_7=1",
+            "INHERITED_SHINTANI_SAFE_EXPONENT=16128"
+          ]
+        },
+        {
+          "argv": ["{PYTHON}", "scripts/certify_dimension_seven_maximal_cocycle.py", "--tolerance", "1e-10"],
+          "required_markers": [
+            "SHINTANI_SAFE_EXPONENT=16128",
+            "HEIGHT_GAP_CERTIFIED=True",
+            "DIMENSION_SEVEN_DISCRIMINANT_EIGHT_MAGNITUDES_CERTIFIED=1"
+          ]
+        },
+        {
+          "argv": ["python3", "scripts/dimension_seven_maximal_sign_audit.py"],
+          "required_markers": [
+            "AUDITED_NONZERO_CHARACTERISTICS=48",
+            "DIMENSION_SEVEN_DISCRIMINANT_EIGHT_SIGNS_CERTIFIED=1"
+          ]
+        }
+      ],
+      "engine": "B",
+      "historical_scope": "Paper II dimension 7, discriminant 8",
+      "id": "B-d7-disc8",
+      "packet_components": ["degree-12 signed packet", "quartic signed packet"],
+      "real_base": "Q(sqrt(2))",
+      "safe_exponent": 16128,
+      "source_modulus": "(7)*infinity_2",
+      "transfer_modulus": "(14)"
+    },
+    {
+      "commands": [
+        {
+          "argv": ["gp", "-q", "scripts/dimension_seven_shintani_audit.gp"],
+          "required_markers": [
+            "SHINTANI_INDEX=2",
+            "SHINTANI_DIVISOR_COUNT=32",
+            "SHINTANI_SAFE_EXPONENT=16128",
+            "REAL_DISTRIBUTION_DENOMINATORS_CLEARED=1"
+          ]
+        },
+        {
+          "argv": ["{PYTHON}", "scripts/certify_dimension_seven_double_sine.py", "--tolerance", "1e-10"],
+          "required_markers": [
+            "SHINTANI_SAFE_EXPONENT=16128",
+            "HEIGHT_GAP_CERTIFIED=True"
+          ]
+        }
+      ],
+      "engine": "B",
+      "historical_scope": "Paper II dimension 7, discriminant 32",
+      "id": "B-d7-disc32",
+      "packet_components": ["degree-16 ray packet with 2,2,12 factorization"],
+      "real_base": "Q(sqrt(2))",
+      "safe_exponent": 16128,
+      "source_modulus": "(14)*infinity_2"
+    },
+    {
+      "commands": [
+        {
+          "argv": ["gp", "-q", "scripts/dimension_eight_lower_shintani_audit.gp"],
+          "required_markers": [
+            "SHINTANI_INDEX=2",
+            "SHINTANI_DIVISOR_COUNT=12",
+            "SHINTANI_SAFE_EXPONENT=576",
+            "LOWER_DIMENSION_EIGHT_SHINTANI_ALGEBRAICITY_CERTIFIED=1"
+          ]
+        },
+        {
+          "argv": ["{PYTHON}", "scripts/certify_dimension_eight_lower_conductor.py", "--tolerance", "1e-10"],
+          "required_markers": [
+            "SHINTANI_SAFE_EXPONENT=576",
+            "HEIGHT_GAP_CERTIFIED=True",
+            "LOWER_CONDUCTOR_ROOT_IDENTITIES_CERTIFIED=1"
+          ]
+        }
+      ],
+      "engine": "B",
+      "historical_scope": "Paper II dimension 8 conductor-three lower packet",
+      "id": "B-d8-ray12-lower",
+      "packet_components": ["degree-8 lower packet"],
+      "real_base": "Q(sqrt(5))",
+      "safe_exponent": 576,
+      "source_modulus": "(12)*infinity_2"
+    },
+    {
+      "commands": [
+        {
+          "argv": ["gp", "-q", "scripts/dimension_eight_linear_cm_reinduction.gp"],
+          "required_markers": [
+            "LINEAR_REINDUCTION_VERIFIED_PACKET=0",
+            "LINEAR_REINDUCTION_VERIFIED_PACKET=1"
+          ]
+        },
+        {
+          "argv": ["gp", "-q", "scripts/dimension_eight_cm_unit_lattice.gp"],
+          "required_markers": [
+            "PACKET_0_SELECTED_RAY_CHARACTER=[6, 1]",
+            "PACKET_1_SELECTED_RAY_CHARACTER=[2, 1]",
+            "CM_UNIT_LATTICE_AUDIT_COMPLETE=1"
+          ]
+        },
+        {
+          "argv": ["{PYTHON}", "scripts/certify_dimension_eight_cm_orientation.py", "--tolerance", "1e-10"],
+          "required_markers": [
+            "DIMENSION_EIGHT_ORIENTED_CM_BRIDGE_CERTIFIED=1"
+          ]
+        },
+        {
+          "argv": ["gp", "-q", "scripts/dimension_eight_cm_real_unit_bridge.gp"],
+          "required_markers": ["CM_TO_REAL_UNIT_BRIDGE_CERTIFIED=1"]
+        }
+      ],
+      "engine": "C",
+      "historical_scope": "Paper II dimension 8 conductor-three primitive packet",
+      "id": "C-d8-ray24-primitive",
+      "packet_components": ["psi_0=[6,1]", "psi_1=[2,1]"],
+      "real_base": "Q(sqrt(5))",
+      "source_modulus": "(24)*infinity_2"
+    },
+    {
+      "commands": [
+        {
+          "argv": ["gp", "-q", "scripts/dimension_eight_maximal_quadratic_units.gp"],
+          "required_markers": [
+            "REGULATOR_INDEX_0=2",
+            "REGULATOR_INDEX_1=2",
+            "BNRL1_UNIT_0=",
+            "BNRL1_UNIT_1=",
+            "QUADRATIC_CHARACTER_PACKET_UNCONDITIONAL=1"
+          ]
+        }
+      ],
+      "engine": "A",
+      "historical_scope": "Paper II dimension 8 conductor-one packet",
+      "id": "A-d8-ray8",
+      "packet_components": ["u_0=phi+sqrt(phi)", "u_1=(sqrt(2phi)+phi)/(sqrt(2phi)-phi)"],
+      "real_base": "Q(sqrt(5))",
+      "source_modulus": "(8)*infinity_2"
+    }
+  ],
+  "expected_anchor_count": 7,
+  "frozen_at_utc": "2026-07-29T00:00:00Z",
+  "schema": "effective-stark-anchor-battery-v1",
+  "source": {
+    "paper_I_sha256": "8271d4cc796eed8581739fe27afef6e9606df1287f7cdf887f2c97b56eec7f34",
+    "paper_II_sha256": "7e9877305f23fd98acb32667319955f157e3285506eb5b6713480efde6e723bd",
+    "sic_stark_commit": "46db8a0",
+    "sic_stark_tree": "68dc2935b56f2b6e5c1ea6b8a8c4619485b7505b"
+  }
+}

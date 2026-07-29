@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/effective-stark/corpus-record-v1.json",
+  "title": "Effective-Stark census record",
+  "type": "object",
+  "required": [
+    "schema",
+    "case_id",
+    "field",
+    "modulus",
+    "ray_data",
+    "fourier_support",
+    "verdict",
+    "claim_tag",
+    "evidence"
+  ],
+  "properties": {
+    "schema": {"const": "effective-stark-corpus-record-v1"},
+    "case_id": {"type": "string", "minLength": 1},
+    "field": {
+      "type": "object",
+      "required": ["squarefree_radicand", "fundamental_discriminant", "defining_polynomial"],
+      "properties": {
+        "squarefree_radicand": {"type": "integer", "minimum": 2, "maximum": 200},
+        "fundamental_discriminant": {"type": "integer", "minimum": 5},
+        "defining_polynomial": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "modulus": {
+      "type": "object",
+      "required": ["finite_ideal_hnf", "finite_norm", "real_place"],
+      "properties": {
+        "finite_ideal_hnf": {"type": "array"},
+        "finite_norm": {"type": "integer", "minimum": 1, "maximum": 100},
+        "real_place": {"type": "integer", "enum": [1, 2]},
+        "conjugate_case_id": {"type": ["string", "null"]}
+      },
+      "additionalProperties": true
+    },
+    "ray_data": {
+      "type": "object",
+      "required": ["one_place_invariants", "two_place_invariants", "exponent"],
+      "properties": {
+        "one_place_invariants": {"type": "array", "items": {"type": "integer", "minimum": 2}},
+        "two_place_invariants": {"type": "array", "items": {"type": "integer", "minimum": 2}},
+        "exponent": {"type": "integer", "minimum": 1}
+      },
+      "additionalProperties": true
+    },
+    "fourier_support": {
+      "type": "object",
+      "required": ["character_orders", "support_size", "certificate"],
+      "properties": {
+        "character_orders": {"type": "array", "items": {"type": "integer", "minimum": 1}},
+        "support_size": {"type": "integer", "minimum": 0},
+        "certificate": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": true
+    },
+    "verdict": {"type": "string", "enum": ["PROVED", "FRONTIER"]},
+    "claim_tag": {"type": "string", "enum": ["VERIFIED"]},
+    "proof_engine": {"type": "string", "enum": ["A", "B", "C"]},
+    "obstruction": {
+      "type": "string",
+      "pattern": "^(EXPONENT_CAP|WILD_RAMIFICATION|SUPPORT_ORDER_[3-9][0-9]*|PROJECTIVE_ORDER_GE_3|INDEX_GT_2|UNIT_CONGRUENCE_FAIL|DEGREE_CAP|TIME_CAP|IDENTIFICATION_FAIL)$"
+    },
+    "packet": {
+      "type": "object",
+      "properties": {
+        "defining_polynomial": {"type": "string"},
+        "root_intervals": {"type": "array"},
+        "artin_labels": {"type": "array"},
+        "safe_exponent": {"type": "integer", "minimum": 1},
+        "arb_radius": {"type": "string"},
+        "height_margin_ratio": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "evidence": {
+      "type": "object",
+      "required": ["files", "sha256"],
+      "properties": {
+        "files": {"type": "array", "items": {"type": "string"}},
+        "sha256": {"type": "object", "additionalProperties": {"type": "string", "pattern": "^[0-9a-f]{64}$"}}
+      },
+      "additionalProperties": true
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"verdict": {"const": "PROVED"}}},
+      "then": {
+        "required": ["proof_engine", "packet"],
+        "not": {"required": ["obstruction"]}
+      }
+    },
+    {
+      "if": {"properties": {"verdict": {"const": "FRONTIER"}}},
+      "then": {
+        "required": ["obstruction"],
+        "not": {"anyOf": [{"required": ["proof_engine"]}, {"required": ["packet"]}]}
+      }
+    }
+  ],
+  "additionalProperties": false
+}
