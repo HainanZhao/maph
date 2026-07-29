@@ -111,6 +111,11 @@ Date: 2026-07-29
   selected entries replay exactly, pass both universal overflow primes,
   match independent Python oracles, and touch at most 0.8529% of pilot
   payload.
+- The batch form of `verify-entry` authenticates the pilot dataset once
+  and replays two selected entries with independent per-entry CRT and
+  overflow checks. Its dimension-7 exact fields are identical to the
+  single-entry invocation. Production audits use this mode to avoid
+  reparsing the full manifest 100 times.
 - The compiled plain-`__int128` valuation-stratified Cycle-009 scorer
   matches the independent Python NTT for every candidate at
   \(N=2^3,\ldots,2^{12}\) over two verified primes (20 complete score

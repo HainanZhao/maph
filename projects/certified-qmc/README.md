@@ -109,6 +109,8 @@ mechanically refuses to start without the published-DOI certificate.
 - `src/ntt_prime.py`: deterministic 64-bit prime/root audit.
 - `src/scaled_integer.py`: integer representation and proved bounds.
 - `src/crt.py`: bounded balanced reconstruction.
+- `src/entry_replay.py`: single-pass dataset authentication with
+  independent per-entry CRT/overflow replay for one or many selections.
 - `src/modular_error.py`: direct modular merit and CRT-CBC prototype.
 - `src/ntt.py`: validated radix-two transform and correlation.
 - `src/power2_fastcbc.py`: composite-\(2^m\) valuation mapping.
