@@ -135,10 +135,11 @@ def main() -> None:
             "- exact-CRT acceptance predicate: "
             f"`{exact_count} < 803` is "
             f"`{'PASSED' if cycle009['acceptance']['passed'] else 'FAILED'}`;",
-            "- exact final-vector merit: `VERIFIED`, reduced rational "
-            f"numerator `{cycle009['final_merit']['reduced_numerator']}` "
-            "over denominator "
-            f"`{cycle009['final_merit']['reduced_denominator']}`.",
+            "- exact final-vector merit: `VERIFIED`; the complete "
+            "reduced rational is stored in the result artifact under "
+            f"certificate hash `{cycle009['certificate_sha256']}` and "
+            "generator hash "
+            f"`{cycle009['final_merit']['generator_sha256']}`.",
         )
     )
     paper = args.paper.resolve()

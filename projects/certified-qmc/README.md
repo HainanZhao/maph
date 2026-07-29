@@ -134,6 +134,8 @@ mechanically refuses to start without the published-DOI certificate.
   missing evidence as pending rather than inferred success.
 - `scripts/finalize_supply_side_paper.py`: replace result markers only
   from passed fidelity, usability, oracle, DOI, and Cycle-009 artifacts.
+- `scripts/record_workstream_d_decision.py`: record the required human
+  application-path disposition without silently overwriting it.
 - `scripts/audit_phase0_target.py`: certify the frozen official prefix.
 - `scripts/audit_workstream_b_reference_table.py`: certify every
   dimension of the frozen vector-only prefix.
