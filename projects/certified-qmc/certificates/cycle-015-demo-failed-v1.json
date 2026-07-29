@@ -1,0 +1,38 @@
+{
+  "schema": "certified-qmc-cycle-015-demo-failed-v1",
+  "claim_tag": "FAILED_GATE_TRANSCRIPT",
+  "attempt": {
+    "ended_at_utc": "2026-07-29T07:29:05Z",
+    "command": ".venv/bin/python scripts/run_cycle015_demo.py",
+    "exit_code": 1,
+    "failed_phase": "selected-entry replay after baseline and three forced-kill resume exercises"
+  },
+  "preregistration": {
+    "path": "data/cycle-015-preregistration.json",
+    "sha256": "647246a9baddba997c5c7be71a709517bc6e750e9a783ac9edae038883cfb93a",
+    "frozen_at_utc": "2026-07-29T07:31:00Z",
+    "timestamp_preceded_run": false,
+    "finding": "The manually entered freeze timestamp postdated the actual attempt, so this run was never eligible for gate promotion."
+  },
+  "baseline": {
+    "chunk_count": 938,
+    "dataset_payload_bytes": 120064,
+    "manifest_sha256": "62ba477ecfc5e928a2efb25bc5cac51c1078d5d3ef2c2b8b921f46a61a8553e4",
+    "seal_sha256": "b267c29580a81c2d10347201b36c77b6c5833cccc7141745cf154585ec31c17e",
+    "run_manifest_sha256": "82a81058b5dccdece95ac59bb23f34f82ed937087cf495572488823461414f24",
+    "table_index_sha256": "bd42871999478ec474fde9415026cdbab539e3241fbaeceb11ea7d016d3f8290"
+  },
+  "failure": {
+    "table": "pilot-002",
+    "N": 32,
+    "dimension": 8,
+    "exception": "ValueError",
+    "message": "recorded work-prime count is not minimal/sufficient",
+    "cause": "The verifier incorrectly required the table-level max-dimension work-prime count to equal the smaller prefix's minimal count. Extra authenticated work primes remain sufficient and must be accepted.",
+    "residue_oracle_mismatch_observed": false,
+    "manifest_break_observed": false,
+    "overflow_failure_observed": false
+  },
+  "disposition": "RERUN_ONLY_AFTER_VERSIONED_PREREGISTRATION; NO_TAG_PROMOTION",
+  "boundary": "This transcript preserves both the verifier defect and the invalid prospective timestamp. None of this attempt's successful substeps closes G3."
+}

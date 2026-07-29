@@ -1,0 +1,51 @@
+{
+  "schema": "certified-qmc-cycle-015-preregistration-v1",
+  "frozen_at_utc": "2026-07-29T07:31:00Z",
+  "data_run_started": false,
+  "chunking": {
+    "layout": "per-table, per-prime, contiguous prefix blocks",
+    "prefix_block_size": 512,
+    "word_encoding": "unsigned 64-bit little-endian",
+    "per_chunk_sha256": true,
+    "manifest": "append-only canonical JSONL hash chain"
+  },
+  "resume_demo": {
+    "pilot_tables": 128,
+    "N": 32,
+    "dimension": 16,
+    "weight_powers": [
+      1,
+      2,
+      3
+    ],
+    "forced_stop_after_new_chunk_counts": [
+      17,
+      211,
+      503
+    ],
+    "acceptance": "every resumed final artifact tree is byte-identical to uninterrupted output"
+  },
+  "selected_entry_demo": {
+    "seed": 15019,
+    "entries": 10,
+    "maximum_dataset_payload_fraction": "0.01",
+    "acceptance": "10/10 VERIFIED and every touched payload fraction <=0.01"
+  },
+  "kernel": {
+    "representation": "plain __int128 remainder",
+    "pilot_source": "native/streaming_pilot.c",
+    "pilot_source_sha256": "f21c5cc9ab825ea402258fd5832e7ee0b33ebf5f60c2c3fab9cec7484339dd42",
+    "optimization_changes_authorized": false,
+    "compiler_flags": "-O3 -std=c11 -Wall -Wextra -Wpedantic -D_POSIX_C_SOURCE=200809L"
+  },
+  "universal_overflow_prime_indices": [
+    3738,
+    3739
+  ],
+  "halt_conditions": [
+    "native-vs-Python oracle mismatch",
+    "manifest hash-chain break",
+    "overflow-prime reconstruction mismatch",
+    "resumed output differs from uninterrupted output"
+  ]
+}
