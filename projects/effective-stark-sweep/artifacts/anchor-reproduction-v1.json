@@ -1,0 +1,355 @@
+{
+  "claim_tag": "VERIFIED",
+  "completed_anchor_count": 7,
+  "expected_anchor_count": 7,
+  "gate_scope": "FULL_7_ANCHOR_GATE",
+  "recorded_at_utc": "2026-07-29T16:16:44.694825+00:00",
+  "records": [
+    {
+      "anchor_id": "A-d4-ray4",
+      "engine": "A",
+      "passed": true,
+      "step_count": 1,
+      "steps": [
+        {
+          "argv": [
+            "gp",
+            "-q",
+            "scripts/referee_pari_audit.gp"
+          ],
+          "elapsed_seconds": 0.00808,
+          "missing_markers": [],
+          "output_sha256": "d837e61917d1d42fecb54d44bcabcf50f6b704146a8457810564d71cd4eda610",
+          "passed": true,
+          "required_markers": [
+            "L_BNFCERTIFY=1",
+            "RAY_4_INFINITY_2_STRUCTURE=[2]",
+            "TARGET_UNIT_NUMERIC="
+          ],
+          "returncode": 0
+        }
+      ],
+      "transcript": "artifacts/anchor-transcripts/A-d4-ray4.txt",
+      "transcript_sha256": "c47045e16028e649bc7eba01f04d682c23b9495973be51ca165852b85bdc2baa"
+    },
+    {
+      "anchor_id": "B-d5-ray5",
+      "engine": "B",
+      "passed": true,
+      "step_count": 3,
+      "steps": [
+        {
+          "argv": [
+            "gp",
+            "-q",
+            "scripts/dimension_five_shintani_audit.gp"
+          ],
+          "elapsed_seconds": 0.857475,
+          "missing_markers": [],
+          "output_sha256": "cd69bbd4934d2067ce19864e52bc80255e99e9e939f183371328ff470418d45d",
+          "passed": true,
+          "required_markers": [
+            "SHINTANI_SAFE_EXPONENT=5760"
+          ],
+          "returncode": 0
+        },
+        {
+          "argv": [
+            "gp",
+            "-q",
+            "scripts/dimension_five_unit_lattice_audit.gp"
+          ],
+          "elapsed_seconds": 2.03728,
+          "missing_markers": [],
+          "output_sha256": "b76561193bf21a922ef2b7465a22e3bc8e1100bbebbed8c63c0969c925e74154",
+          "passed": true,
+          "required_markers": [
+            "ABSOLUTE_BNFCERTIFY=1",
+            "STARK_UNIT_MINPOLY_CHECK=1",
+            "SHINTANI_SAFE_EXPONENT=5760"
+          ],
+          "returncode": 0
+        },
+        {
+          "argv": [
+            "/root/projects/maph/projects/sic-stark/.venv/bin/python",
+            "scripts/certify_dimension_five_double_sine.py",
+            "--tolerance",
+            "1e-10"
+          ],
+          "elapsed_seconds": 32.232996,
+          "missing_markers": [],
+          "output_sha256": "bd0e82954160cf77d86dc0ac13ab2a98bcaff14f8b0c5614b19913e691a6cc2c",
+          "passed": true,
+          "required_markers": [
+            "HEIGHT_GAP_CERTIFIED=True"
+          ],
+          "returncode": 0
+        }
+      ],
+      "transcript": "artifacts/anchor-transcripts/B-d5-ray5.txt",
+      "transcript_sha256": "b3177915a989015937e6a9315525fe858b0efd6e1cf841a21e6f8cd12421021e"
+    },
+    {
+      "anchor_id": "B-d7-disc8",
+      "engine": "B",
+      "passed": true,
+      "step_count": 3,
+      "steps": [
+        {
+          "argv": [
+            "gp",
+            "-q",
+            "scripts/dimension_seven_maximal_tuple_audit.gp"
+          ],
+          "elapsed_seconds": 4.216784,
+          "missing_markers": [],
+          "output_sha256": "23e10e482e2dc330171f670c080c162038147d878e915992f61e158d75ef6b30",
+          "passed": true,
+          "required_markers": [
+            "FORM_DISCRIMINANT=8",
+            "NORMAL_CLOSURE_ABELIAN_OVER_Q_SQRT_MINUS_7=1",
+            "INHERITED_SHINTANI_SAFE_EXPONENT=16128"
+          ],
+          "returncode": 0
+        },
+        {
+          "argv": [
+            "/root/projects/maph/projects/sic-stark/.venv/bin/python",
+            "scripts/certify_dimension_seven_maximal_cocycle.py",
+            "--tolerance",
+            "1e-10"
+          ],
+          "elapsed_seconds": 167.903872,
+          "missing_markers": [],
+          "output_sha256": "ae247004c5a30ecf59f968842c4e9fc6ef5e87ba1eb2715407e119290d5c6e68",
+          "passed": true,
+          "required_markers": [
+            "SHINTANI_SAFE_EXPONENT=16128",
+            "HEIGHT_GAP_CERTIFIED=True",
+            "DIMENSION_SEVEN_DISCRIMINANT_EIGHT_MAGNITUDES_CERTIFIED=1"
+          ],
+          "returncode": 0
+        },
+        {
+          "argv": [
+            "python3",
+            "scripts/dimension_seven_maximal_sign_audit.py"
+          ],
+          "elapsed_seconds": 1.152551,
+          "missing_markers": [],
+          "output_sha256": "b1422cfb74503f0a33b5a721a4c0a69a8138e4d780aadeeb9357caadf16eefb7",
+          "passed": true,
+          "required_markers": [
+            "AUDITED_NONZERO_CHARACTERISTICS=48",
+            "DIMENSION_SEVEN_DISCRIMINANT_EIGHT_SIGNS_CERTIFIED=1"
+          ],
+          "returncode": 0
+        }
+      ],
+      "transcript": "artifacts/anchor-transcripts/B-d7-disc8.txt",
+      "transcript_sha256": "9470fd9e3cf3c3927d802d794768016ca4bf3faa803a55121b6a6ef25f783167"
+    },
+    {
+      "anchor_id": "B-d7-disc32",
+      "engine": "B",
+      "passed": true,
+      "step_count": 2,
+      "steps": [
+        {
+          "argv": [
+            "gp",
+            "-q",
+            "scripts/dimension_seven_shintani_audit.gp"
+          ],
+          "elapsed_seconds": 1.771146,
+          "missing_markers": [],
+          "output_sha256": "71ae5e3d2facdeb444b6c4b616162006f966ef751e49cbd32f6f52e1e983a7cb",
+          "passed": true,
+          "required_markers": [
+            "SHINTANI_INDEX=2",
+            "SHINTANI_DIVISOR_COUNT=32",
+            "SHINTANI_SAFE_EXPONENT=16128",
+            "REAL_DISTRIBUTION_DENOMINATORS_CLEARED=1"
+          ],
+          "returncode": 0
+        },
+        {
+          "argv": [
+            "/root/projects/maph/projects/sic-stark/.venv/bin/python",
+            "scripts/certify_dimension_seven_double_sine.py",
+            "--tolerance",
+            "1e-10"
+          ],
+          "elapsed_seconds": 64.486315,
+          "missing_markers": [],
+          "output_sha256": "5df034a570ba4017c1a052c3ba5468badf101905c3bb561aa14aa969b3e2746f",
+          "passed": true,
+          "required_markers": [
+            "SHINTANI_SAFE_EXPONENT=16128",
+            "HEIGHT_GAP_CERTIFIED=True"
+          ],
+          "returncode": 0
+        }
+      ],
+      "transcript": "artifacts/anchor-transcripts/B-d7-disc32.txt",
+      "transcript_sha256": "32e253539e2f22900367913e5c594f9470f356ea6975f705677784ae19adfdfd"
+    },
+    {
+      "anchor_id": "B-d8-ray12-lower",
+      "engine": "B",
+      "passed": true,
+      "step_count": 2,
+      "steps": [
+        {
+          "argv": [
+            "gp",
+            "-q",
+            "scripts/dimension_eight_lower_shintani_audit.gp"
+          ],
+          "elapsed_seconds": 0.036364,
+          "missing_markers": [],
+          "output_sha256": "4a0552fff0921eb6b16e41f141e166f48796938356d55ddd64aa1f071754a410",
+          "passed": true,
+          "required_markers": [
+            "SHINTANI_INDEX=2",
+            "SHINTANI_DIVISOR_COUNT=12",
+            "SHINTANI_SAFE_EXPONENT=576",
+            "LOWER_DIMENSION_EIGHT_SHINTANI_ALGEBRAICITY_CERTIFIED=1"
+          ],
+          "returncode": 0
+        },
+        {
+          "argv": [
+            "/root/projects/maph/projects/sic-stark/.venv/bin/python",
+            "scripts/certify_dimension_eight_lower_conductor.py",
+            "--tolerance",
+            "1e-10"
+          ],
+          "elapsed_seconds": 34.330912,
+          "missing_markers": [],
+          "output_sha256": "66fa81b063b29fd438c62c590c8bf2d01a8232774336ed43c750a6a601873983",
+          "passed": true,
+          "required_markers": [
+            "SHINTANI_SAFE_EXPONENT=576",
+            "HEIGHT_GAP_CERTIFIED=True",
+            "LOWER_CONDUCTOR_ROOT_IDENTITIES_CERTIFIED=1"
+          ],
+          "returncode": 0
+        }
+      ],
+      "transcript": "artifacts/anchor-transcripts/B-d8-ray12-lower.txt",
+      "transcript_sha256": "45e220c66d67b336ea93872d47c2f710a4409eba0b2aacfb989d5716e5b7220a"
+    },
+    {
+      "anchor_id": "C-d8-ray24-primitive",
+      "engine": "C",
+      "passed": true,
+      "step_count": 4,
+      "steps": [
+        {
+          "argv": [
+            "gp",
+            "-q",
+            "scripts/dimension_eight_linear_cm_reinduction.gp"
+          ],
+          "elapsed_seconds": 0.779247,
+          "missing_markers": [],
+          "output_sha256": "d756c5990f81bf673a9cff4e6af1a8450570a409e211327f57e328a446859c0f",
+          "passed": true,
+          "required_markers": [
+            "LINEAR_REINDUCTION_VERIFIED_PACKET=0",
+            "LINEAR_REINDUCTION_VERIFIED_PACKET=1"
+          ],
+          "returncode": 0
+        },
+        {
+          "argv": [
+            "gp",
+            "-q",
+            "scripts/dimension_eight_cm_unit_lattice.gp"
+          ],
+          "elapsed_seconds": 0.097015,
+          "missing_markers": [],
+          "output_sha256": "40223892b6f7d45dde9dbd915f83156810ec5678034e4bc0134c3ef3ccfcfa13",
+          "passed": true,
+          "required_markers": [
+            "PACKET_0_SELECTED_RAY_CHARACTER=[6, 1]",
+            "PACKET_1_SELECTED_RAY_CHARACTER=[2, 1]",
+            "CM_UNIT_LATTICE_AUDIT_COMPLETE=1"
+          ],
+          "returncode": 0
+        },
+        {
+          "argv": [
+            "/root/projects/maph/projects/sic-stark/.venv/bin/python",
+            "scripts/certify_dimension_eight_cm_orientation.py",
+            "--tolerance",
+            "1e-10"
+          ],
+          "elapsed_seconds": 56.806013,
+          "missing_markers": [],
+          "output_sha256": "8be788a98fd0393a70aa941732404b7b062f4935630d67e1fd2bea9b5e4963fd",
+          "passed": true,
+          "required_markers": [
+            "DIMENSION_EIGHT_ORIENTED_CM_BRIDGE_CERTIFIED=1"
+          ],
+          "returncode": 0
+        },
+        {
+          "argv": [
+            "gp",
+            "-q",
+            "scripts/dimension_eight_cm_real_unit_bridge.gp"
+          ],
+          "elapsed_seconds": 1.20443,
+          "missing_markers": [],
+          "output_sha256": "3cb6028b243f6751475fffd0cd57f26be223074c1e27851650f6ae8d7dd36c2e",
+          "passed": true,
+          "required_markers": [
+            "CM_TO_REAL_UNIT_BRIDGE_CERTIFIED=1"
+          ],
+          "returncode": 0
+        }
+      ],
+      "transcript": "artifacts/anchor-transcripts/C-d8-ray24-primitive.txt",
+      "transcript_sha256": "9a8691b4dfdc31982feedaecf4896bc5d4233caa6376ea0d2a51259f7f7b7a67"
+    },
+    {
+      "anchor_id": "A-d8-ray8",
+      "engine": "A",
+      "passed": true,
+      "step_count": 1,
+      "steps": [
+        {
+          "argv": [
+            "gp",
+            "-q",
+            "scripts/dimension_eight_maximal_quadratic_units.gp"
+          ],
+          "elapsed_seconds": 0.149974,
+          "missing_markers": [],
+          "output_sha256": "290155d603acda7e194a53499fdd9fdcab0dc64c18e7dd39b689890a4ea5fbb6",
+          "passed": true,
+          "required_markers": [
+            "REGULATOR_INDEX_0=2",
+            "REGULATOR_INDEX_1=2",
+            "BNRL1_UNIT_0=",
+            "BNRL1_UNIT_1=",
+            "QUADRATIC_CHARACTER_PACKET_UNCONDITIONAL=1"
+          ],
+          "returncode": 0
+        }
+      ],
+      "transcript": "artifacts/anchor-transcripts/A-d8-ray8.txt",
+      "transcript_sha256": "126c5ba6ade5a1bbd0bbd23e479d7edbc0ea557989a7d42d3622eb132fc65477"
+    }
+  ],
+  "schema": "effective-stark-anchor-reproduction-v1",
+  "source": {
+    "paper_II_sha256": "7e9877305f23fd98acb32667319955f157e3285506eb5b6713480efde6e723bd",
+    "paper_I_sha256": "8271d4cc796eed8581739fe27afef6e9606df1287f7cdf887f2c97b56eec7f34",
+    "sic_stark_tree": "68dc2935b56f2b6e5c1ea6b8a8c4619485b7505b"
+  },
+  "verdict": "ANCHOR_GATE_PASSED"
+}
