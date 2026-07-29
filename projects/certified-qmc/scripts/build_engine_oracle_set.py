@@ -91,6 +91,7 @@ def replay_batch(
     prepared = []
     wanted_dimensions: dict[str, set[int]] = {}
     required_by_entry: dict[tuple[str, int], list[int]] = {}
+    required_set_by_entry: dict[tuple[str, int], set[int]] = {}
     for request in requests:
         table_id = request["table_id"]
         if table_id not in tables:
@@ -111,13 +112,20 @@ def replay_batch(
         minimal = choose_moduli(primes[:available_count], bound)
         required = [*range(len(minimal)), 3738, 3739]
         required_by_entry[(table_id, dimension)] = required
+        required_set_by_entry[(table_id, dimension)] = set(required)
         wanted_dimensions.setdefault(table_id, set()).add(dimension)
         prepared.append((request, table, weights, bound, len(minimal)))
 
-    available: dict[tuple[str, int, int], dict] = {}
+    selected_residues: dict[tuple[str, int, int], int] = {}
+    chunk_hashes_by_entry: dict[
+        tuple[str, int], dict[str, str]
+    ] = {
+        (request["table_id"], int(request["dimension"])): {}
+        for request in requests
+    }
     total_payload_bytes = 0
-    selected_paths: set[str] = set()
-    selected_record_by_path: dict[str, dict] = {}
+    selected_unique_chunk_count = 0
+    selected_payload_bytes = 0
     final_record = None
     for record in iter_chain(dataset / "manifest.jsonl"):
         final_record = record
@@ -128,20 +136,49 @@ def replay_batch(
         dimensions = wanted_dimensions.get(table_id)
         if not dimensions:
             continue
+        prime_index = int(record["prime_index"])
+        matched_dimensions = []
         for dimension in dimensions:
+            entry_key = (table_id, dimension)
             if (
                 record["dimension_start"]
                 <= dimension
                 <= record["dimension_end"]
-                and record["prime_index"]
-                in required_by_entry[(table_id, dimension)]
+                and prime_index in required_set_by_entry[entry_key]
             ):
-                key = (table_id, dimension, record["prime_index"])
-                if key in available:
+                key = (table_id, dimension, prime_index)
+                if key in selected_residues:
                     raise ValueError("multiple chunks cover oracle residue")
-                available[key] = record
-                selected_paths.add(record["path"])
-                selected_record_by_path[record["path"]] = record
+                matched_dimensions.append(dimension)
+        if not matched_dimensions:
+            continue
+        if (
+            prime_index >= len(primes)
+            or int(record["prime"]) != primes[prime_index]
+        ):
+            raise ValueError(
+                "selected oracle chunk prime does not match schedule"
+            )
+        path = dataset / record["path"]
+        raw = path.read_bytes()
+        if (
+            len(raw) != int(record["bytes"])
+            or sha256(raw).hexdigest() != record["sha256"]
+        ):
+            raise ValueError("selected oracle chunk authentication failed")
+        selected_unique_chunk_count += 1
+        selected_payload_bytes += len(raw)
+        for dimension in matched_dimensions:
+            offset = dimension - int(record["dimension_start"])
+            residue = struct.unpack_from("<Q", raw, offset * 8)[0]
+            if residue >= primes[prime_index]:
+                raise ValueError("oracle residue is not reduced")
+            selected_residues[
+                (table_id, dimension, prime_index)
+            ] = residue
+            chunk_hashes_by_entry[(table_id, dimension)][
+                record["path"]
+            ] = record["sha256"]
     if final_record is None or final_record["event"] != "SEAL":
         raise ValueError(f"{dataset.name}: dataset is not sealed")
     if (
@@ -160,41 +197,26 @@ def replay_batch(
     ):
         raise ValueError("seal payload-byte total mismatch")
 
-    raw_cache: dict[str, bytes] = {}
-    selected_payload_bytes = 0
-    for relative in sorted(selected_paths):
-        matching = selected_record_by_path[relative]
-        path = dataset / relative
-        raw = path.read_bytes()
-        if (
-            len(raw) != int(matching["bytes"])
-            or file_sha256(path) != matching["sha256"]
-        ):
-            raise ValueError("selected oracle chunk authentication failed")
-        raw_cache[relative] = raw
-        selected_payload_bytes += len(raw)
-
     results = []
     for request, table, weights, bound, work_count in prepared:
         table_id = request["table_id"]
         dimension = int(request["dimension"])
         required = required_by_entry[(table_id, dimension)]
         if any(
-            (table_id, dimension, prime_index) not in available
+            (table_id, dimension, prime_index)
+            not in selected_residues
             for prime_index in required
         ):
             raise ValueError("oracle entry lacks required residue chunk")
-        residues = {}
-        chunk_hashes = {}
-        for prime_index in required:
-            record = available[(table_id, dimension, prime_index)]
-            raw = raw_cache[record["path"]]
-            offset = dimension - int(record["dimension_start"])
-            residue = struct.unpack_from("<Q", raw, offset * 8)[0]
-            if residue >= primes[prime_index]:
-                raise ValueError("oracle residue is not reduced")
-            residues[prime_index] = residue
-            chunk_hashes[record["path"]] = record["sha256"]
+        residues = {
+            prime_index: selected_residues[
+                (table_id, dimension, prime_index)
+            ]
+            for prime_index in required
+        }
+        chunk_hashes = chunk_hashes_by_entry[
+            (table_id, dimension)
+        ]
         numerator = balanced_reconstruct(
             [residues[index] for index in range(work_count)],
             primes[:work_count],
@@ -239,7 +261,7 @@ def replay_batch(
         "manifest_sha256": file_sha256(dataset / "manifest.jsonl"),
         "seal_line_sha256": final_record["line_sha256"],
         "run_manifest_sha256": run_manifest["run_manifest_sha256"],
-        "selected_unique_chunk_count": len(selected_paths),
+        "selected_unique_chunk_count": selected_unique_chunk_count,
         "selected_payload_bytes": selected_payload_bytes,
         "dataset_payload_bytes": total_payload_bytes,
     }
