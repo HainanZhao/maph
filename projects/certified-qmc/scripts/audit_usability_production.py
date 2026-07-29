@@ -8,6 +8,7 @@ import json
 from pathlib import Path
 import subprocess
 import sys
+import tempfile
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -34,52 +35,71 @@ def digest(path: Path) -> str:
     return sha256(path.read_bytes()).hexdigest()
 
 
-def verify_one(
-    dataset: Path, table_id: str, modulus: int, dimension: int
-) -> dict:
-    completed = subprocess.run(
-        [
-            str(VERIFIER),
-            "--dataset",
-            str(dataset),
-            "--table",
-            table_id,
-            "--N",
-            str(modulus),
-            "--d",
-            str(dimension),
-            "--compact",
-        ],
-        check=True,
-        capture_output=True,
-        text=True,
-    )
-    result = json.loads(completed.stdout)
+def verify_many(
+    dataset: Path, requests: list[dict]
+) -> dict[tuple[str, int, int], dict]:
+    with tempfile.NamedTemporaryFile(
+        "w",
+        prefix="certified-qmc-usability-replay-",
+        suffix=".json",
+    ) as request_file:
+        json.dump(requests, request_file)
+        request_file.flush()
+        completed = subprocess.run(
+            [
+                str(VERIFIER),
+                "--dataset",
+                str(dataset),
+                "--requests",
+                request_file.name,
+                "--compact",
+            ],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+    batch = json.loads(completed.stdout)
     if (
-        result["status"] != "VERIFIED"
-        or not all(
-            row["equal"] for row in result["overflow_checks"]
-        )
+        batch["status"] != "VERIFIED"
+        or batch["request_count"] != len(requests)
     ):
-        raise ArithmeticError("selected-entry replay failed")
-    compact = {
-        key: result[key]
-        for key in (
-            "status",
-            "table",
-            "N",
-            "dimension",
-            "weight_power",
-            "generator_prefix_sha256",
-            "work_prime_count",
-            "reduced_numerator",
-            "reduced_denominator",
-            "touched_payload_fraction",
+        raise ArithmeticError("selected-entry batch replay failed")
+    result = {}
+    for row in batch["results"]:
+        if (
+            row["status"] != "VERIFIED"
+            or not all(
+                check["equal"] for check in row["overflow_checks"]
+            )
+        ):
+            raise ArithmeticError("selected-entry replay failed")
+        compact = {
+            key: row[key]
+            for key in (
+                "status",
+                "table",
+                "N",
+                "dimension",
+                "weight_power",
+                "generator_prefix_sha256",
+                "work_prime_count",
+                "reduced_numerator",
+                "reduced_denominator",
+                "touched_payload_fraction",
+            )
+        }
+        compact["overflow_checks_equal"] = True
+        compact["entry_replay_sha256"] = canonical_sha256(
+            compact
         )
-    }
-    compact["overflow_checks_equal"] = True
-    compact["entry_replay_sha256"] = canonical_sha256(compact)
-    return compact
+        result[
+            (
+                row["table"],
+                int(row["N"]),
+                int(row["dimension"]),
+            )
+        ] = compact
+    return result
 
 
 def authenticate_dataset(dataset: Path) -> dict:
@@ -146,6 +166,38 @@ def main() -> None:
         (table["source_id"], int(table["N"])): table
         for table in fidelity_spec["tables"]
     }
+    computed_requests = []
+    reused_requests = []
+    for source_id in prereg["grid"]["families"]:
+        for modulus in prereg["grid"]["N"]:
+            for dimension in prereg["grid"]["dimensions"]:
+                fidelity_table = fidelity_by_key[
+                    (source_id, modulus)
+                ]
+                reused_requests.append(
+                    {
+                        "table": fidelity_table["table_id"],
+                        "N": modulus,
+                        "dimension": dimension,
+                    }
+                )
+                for power in (1, 3):
+                    computed_table = computed_by_key[
+                        (source_id, modulus, power)
+                    ]
+                    computed_requests.append(
+                        {
+                            "table": computed_table["table_id"],
+                            "N": modulus,
+                            "dimension": dimension,
+                        }
+                    )
+    computed_by_replay_key = verify_many(
+        usability_dataset, computed_requests
+    )
+    reused_by_replay_key = verify_many(
+        fidelity_dataset, reused_requests
+    )
     logical_entries = []
     computed_replays = []
     reused_replays = []
@@ -157,12 +209,13 @@ def main() -> None:
                         table = fidelity_by_key[
                             (source_id, modulus)
                         ]
-                        replay = verify_one(
-                            fidelity_dataset,
-                            table["table_id"],
-                            modulus,
-                            dimension,
-                        )
+                        replay = reused_by_replay_key[
+                            (
+                                table["table_id"],
+                                modulus,
+                                dimension,
+                            )
+                        ]
                         reused_replays.append(replay)
                         mode = "HASH_REUSED_FROM_FIDELITY_V2"
                         dataset = "fidelity-v2"
@@ -170,12 +223,13 @@ def main() -> None:
                         table = computed_by_key[
                             (source_id, modulus, power)
                         ]
-                        replay = verify_one(
-                            usability_dataset,
-                            table["table_id"],
-                            modulus,
-                            dimension,
-                        )
+                        replay = computed_by_replay_key[
+                            (
+                                table["table_id"],
+                                modulus,
+                                dimension,
+                            )
+                        ]
                         computed_replays.append(replay)
                         mode = "COMPUTED_CYCLE_018"
                         dataset = "usability-v1"
@@ -253,6 +307,11 @@ def main() -> None:
         },
         "computed_replays": computed_replays,
         "hash_reused_j2_replays": reused_replays,
+        "verifier_batching": {
+            "computed_dataset_manifest_passes": 1,
+            "fidelity_dataset_manifest_passes": 1,
+            "total_verify_entry_invocations": 2,
+        },
         "gate": {
             "computed_36_of_36_verified": True,
             "reused_18_of_18_verified_by_hash": True,

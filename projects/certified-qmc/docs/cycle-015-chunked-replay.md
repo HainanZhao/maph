@@ -94,3 +94,18 @@ ten replay samples.
 - complete run-manifest template: passed.
 
 G3 is closed.  Cycles 016–017 may start only after their pre-run freeze.
+
+## Post-gate batch replay extension
+
+The Cycles 016–018 audit path now accepts a JSON array of selected
+entries through the same `verify-entry` executable.  It authenticates
+the sealed manifest, run manifest, table index, and prime schedule once,
+then performs the unchanged bounded CRT reconstruction and two
+universal overflow checks separately for every requested entry.
+
+On the banked pilot, dimensions 7 and 13 replay together and the
+dimension-7 result is field-identical to an independent single-entry
+invocation.  Single-entry CLI behavior and the 1% contract are
+unchanged.  This is verifier orchestration only: it does not modify the
+frozen production kernel, data layout, threshold, or certificate
+meaning.

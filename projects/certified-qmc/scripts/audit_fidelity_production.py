@@ -9,6 +9,7 @@ from pathlib import Path
 import random
 import subprocess
 import sys
+import tempfile
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -38,44 +39,71 @@ def parse_generator(path: Path, dimension: int) -> list[int]:
     return result[:dimension]
 
 
-def verify_one(dataset: Path, table: dict, dimension: int) -> dict:
-    completed = subprocess.run(
-        [
-            str(VERIFIER),
-            "--dataset",
-            str(dataset),
-            "--table",
+def verify_many(
+    dataset: Path, entries: list[tuple[dict, int]]
+) -> dict[tuple[str, int, int], dict]:
+    requests_by_key = {}
+    for table, dimension in entries:
+        key = (
             table["table_id"],
-            "--N",
-            str(table["N"]),
-            "--d",
-            str(dimension),
-            "--compact",
-        ],
-        check=True,
-        capture_output=True,
-        text=True,
-    )
-    result = json.loads(completed.stdout)
-    return {
-        key: result[key]
-        for key in (
-            "status",
-            "table",
-            "N",
-            "dimension",
-            "weight_power",
-            "generator_prefix_sha256",
-            "work_prime_count",
-            "scaled_numerator",
-            "scaled_denominator",
-            "reduced_numerator",
-            "reduced_denominator",
-            "overflow_checks",
-            "touched_payload_bytes",
-            "touched_payload_fraction",
-            "touched_payload_fraction_exact",
+            int(table["N"]),
+            int(dimension),
         )
+        requests_by_key[key] = {
+            "table": key[0],
+            "N": key[1],
+            "dimension": key[2],
+        }
+    with tempfile.NamedTemporaryFile(
+        "w",
+        prefix="certified-qmc-fidelity-replay-",
+        suffix=".json",
+    ) as request_file:
+        json.dump(list(requests_by_key.values()), request_file)
+        request_file.flush()
+        completed = subprocess.run(
+            [
+                str(VERIFIER),
+                "--dataset",
+                str(dataset),
+                "--requests",
+                request_file.name,
+                "--compact",
+            ],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+    batch = json.loads(completed.stdout)
+    if (
+        batch["status"] != "VERIFIED"
+        or batch["request_count"] != len(requests_by_key)
+    ):
+        raise ArithmeticError("selected-entry batch replay failed")
+    keep = (
+        "status",
+        "table",
+        "N",
+        "dimension",
+        "weight_power",
+        "generator_prefix_sha256",
+        "work_prime_count",
+        "scaled_numerator",
+        "scaled_denominator",
+        "reduced_numerator",
+        "reduced_denominator",
+        "overflow_checks",
+        "touched_payload_bytes",
+        "touched_payload_fraction",
+        "touched_payload_fraction_exact",
+    )
+    return {
+        (
+            row["table"],
+            int(row["N"]),
+            int(row["dimension"]),
+        ): {key: row[key] for key in keep}
+        for row in batch["results"]
     }
 
 
@@ -140,8 +168,25 @@ def main() -> None:
     selected = randomizer.sample(
         entries, int(prereg["post_run_audit"]["sample_count"])
     )
+    table_by_id = {
+        table["table_id"]: table for table in spec["tables"]
+    }
+    oracle_entries = [
+        (
+            table_by_id[frozen["table_id"]],
+            int(frozen["d"]),
+        )
+        for frozen in prereg[
+            "post_run_audit"
+        ]["independent_oracle_entries"]
+    ]
+    replay_by_key = verify_many(
+        dataset, [*selected, *oracle_entries]
+    )
     replay = [
-        verify_one(dataset, table, dimension)
+        replay_by_key[
+            (table["table_id"], int(table["N"]), dimension)
+        ]
         for table, dimension in selected
     ]
     if (
@@ -154,16 +199,15 @@ def main() -> None:
     ):
         raise ArithmeticError("selected-entry replay gate failed")
 
-    table_by_id = {
-        table["table_id"]: table for table in spec["tables"]
-    }
     oracles = []
     for frozen in prereg[
         "post_run_audit"
     ]["independent_oracle_entries"]:
         table = table_by_id[frozen["table_id"]]
         dimension = int(frozen["d"])
-        replayed = verify_one(dataset, table, dimension)
+        replayed = replay_by_key[
+            (table["table_id"], int(table["N"]), dimension)
+        ]
         generator = parse_generator(
             ROOT / table["source_path"], dimension
         )
@@ -235,6 +279,8 @@ def main() -> None:
         "selected_entry_replay": {
             "seed": prereg["post_run_audit"]["seed"],
             "sample_count": len(replay),
+            "verifier_mode": "single authenticated batch",
+            "verifier_invocations_including_oracles": 1,
             "all_verified": True,
             "all_overflow_checks_equal": True,
             "maximum_touched_payload_fraction": max(

@@ -153,6 +153,70 @@ class Cycle015Tests(unittest.TestCase):
         )
         self.assertLessEqual(result["touched_payload_fraction"], 0.01)
 
+    def test_batch_verify_entry_authenticates_manifest_once(self):
+        completed = subprocess.run(
+            [
+                str(PROJECT / "bin" / "verify-entry"),
+                "--dataset",
+                str(DATASET),
+                "--requests",
+                str(
+                    PROJECT
+                    / "tests"
+                    / "fixtures"
+                    / "cycle015-batch-requests.json"
+                ),
+                "--compact",
+            ],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        batch = json.loads(completed.stdout)
+        self.assertEqual(batch["status"], "VERIFIED")
+        self.assertEqual(batch["request_count"], 2)
+        self.assertEqual(
+            [row["dimension"] for row in batch["results"]],
+            [7, 13],
+        )
+        self.assertTrue(
+            all(
+                all(
+                    check["equal"]
+                    for check in row["overflow_checks"]
+                )
+                for row in batch["results"]
+            )
+        )
+        single = subprocess.run(
+            [
+                str(PROJECT / "bin" / "verify-entry"),
+                "--dataset",
+                str(DATASET),
+                "--table",
+                "pilot-000",
+                "--N",
+                "32",
+                "--d",
+                "7",
+                "--compact",
+            ],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        one = json.loads(single.stdout)
+        first = batch["results"][0]
+        for key in (
+            "scaled_numerator",
+            "scaled_denominator",
+            "reduced_numerator",
+            "reduced_denominator",
+            "proved_numerator_bound",
+            "generator_prefix_sha256",
+        ):
+            self.assertEqual(first[key], one[key])
+
 
 if __name__ == "__main__":
     unittest.main()
