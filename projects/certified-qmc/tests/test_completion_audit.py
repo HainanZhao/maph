@@ -68,12 +68,20 @@ class CompletionAuditTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             release = Path(directory)
             assets = []
-            for index in range(4):
+            roles = (
+                ("source", "Apache-2.0"),
+                ("engine conformance oracle", "CC-BY-4.0"),
+                ("supplementary fidelity tables", "CC-BY-4.0"),
+                ("supplementary usability tables", "CC-BY-4.0"),
+            )
+            for index, (role, license_id) in enumerate(roles):
                 path = release / f"asset-{index}.bin"
                 path.write_bytes(bytes([index]) * (index + 1))
                 assets.append(
                     {
                         "filename": path.name,
+                        "role": role,
+                        "license": license_id,
                         "bytes": path.stat().st_size,
                         "sha256": sha256(path.read_bytes()).hexdigest(),
                     }

@@ -117,7 +117,19 @@ def release_package(release: Path) -> dict:
         manifest = self_hashed(manifest_path, "manifest_sha256")
         if len(manifest["assets"]) != 4:
             raise ValueError("release must contain four authenticated assets")
+        expected_licenses = {
+            "source": "Apache-2.0",
+            "engine conformance oracle": "CC-BY-4.0",
+            "supplementary fidelity tables": "CC-BY-4.0",
+            "supplementary usability tables": "CC-BY-4.0",
+        }
         for asset in manifest["assets"]:
+            if expected_licenses.get(asset["role"]) != asset.get(
+                "license"
+            ):
+                raise ValueError(
+                    f"release asset license mismatch: {asset['filename']}"
+                )
             path = release / asset["filename"]
             if (
                 not path.is_file()
