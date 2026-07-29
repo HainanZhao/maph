@@ -75,6 +75,11 @@ run is in progress at `artifacts/fidelity-v2`. It must not be tagged
 complete until the dataset is sealed, 100/100 selected-entry replays
 pass, and all three frozen independent oracle checks agree.
 
+The current crash/reboot recovery procedure and a timestamped live
+checkpoint are tracked in `docs/live-production-recovery.md`.  The
+driver resumes from authenticated completed chunks and must never be
+started concurrently against the same output directory.
+
 ## Claim boundary
 
 The frozen plain `__int128` remainder kernel, compiler flags, and prime
