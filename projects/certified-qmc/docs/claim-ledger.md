@@ -95,6 +95,11 @@ Date: 2026-07-29
   Point Shop as `UNCLEAR`, and frozen QMCPy as `REDISTRIBUTABLE` under
   Apache-2.0. Production therefore uses keyed merits without embedded
   vectors and requires no licensing escalation.
+- The full ordered production schedule contains 3,738 work primes and
+  two universal overflow primes. An independent code path verifies all
+  3,740 complete-factorization Lucas/Pocklington N−1 certificates,
+  primitive roots, and 2-adic valuations; two generator reruns are
+  byte-identical to the banked schedule.
 
 ## ENCLOSED
 
@@ -116,9 +121,9 @@ Date: 2026-07-29
   \(T_{\rm eval}(\mathcal M)+T_{\rm format}\).
 - Workstream B production uses the frozen fidelity/usability grid and
   artifact contract. The exact throughput branch is authorized, but
-  full compute remains forbidden until source licensing/vendoring, the
-  full deterministic prime schedule, and production chunk replay are
-  complete.
+  full compute remains forbidden until production chunk replay and run
+  hygiene are complete. Source licensing and the full prime schedule
+  are closed gates.
 
 ## EXPLICITLY DEFERRED GATES
 

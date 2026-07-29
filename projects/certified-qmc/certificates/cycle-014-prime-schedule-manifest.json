@@ -1,0 +1,81 @@
+{
+  "boundary": "VERIFIED means every p has an independently replayed complete factorization of p-1, Fermat equality, and gcd condition for each distinct prime divisor, which proves primality and the claimed primitive root. It does not benchmark modular kernels.",
+  "certificate_sha256": "a7628c92deebb53bd204638fd1a7f91568af71dec26b5ae3e4199d1995cd875f",
+  "claim_tag": "VERIFIED_FULL_N_MINUS_ONE_PRIME_SCHEDULE",
+  "gate": {
+    "byte_identical_regeneration_demonstrated": true,
+    "complete_schedule_verified": true,
+    "cycle_014_exit_gate_passed": true,
+    "two_overflow_primes_verified": true
+  },
+  "generator": {
+    "path": "scripts/generate_prime_schedule_v1.py",
+    "regeneration": {
+      "generator_runs_byte_identical_to_banked_schedule": true,
+      "generator_runs_byte_identical_to_each_other": true,
+      "regenerated_sha256": [
+        "22fadf04ddc70749a5c340483d457590dbe445fbf87883f4875f0ccf71331697",
+        "22fadf04ddc70749a5c340483d457590dbe445fbf87883f4875f0ccf71331697"
+      ],
+      "runs": 2,
+      "schedule_sha256": "22fadf04ddc70749a5c340483d457590dbe445fbf87883f4875f0ccf71331697"
+    },
+    "sha256": "c18330ba989bd9923f159cbcc527406df73af26f288c1177d57e1837edc303c0"
+  },
+  "independent_verifier": {
+    "all_records_verified": true,
+    "candidate_primality": "full-factorization Lucas/Pocklington N-1 criterion",
+    "coefficient_factor_primality": "independent deterministic trial division",
+    "imports_project_arithmetic_helpers": false,
+    "path": "scripts/verify_prime_schedule_v1.py",
+    "records_verified": 3740,
+    "sha256": "9de5ec433b3ddd34df42cc7ef57318e52adaf2a5a7ef0d7d93acb45c4220967e"
+  },
+  "schedule": {
+    "bytes": 5779087,
+    "count": 3740,
+    "first": {
+      "c": 1073741806,
+      "distinct_prime_divisors": 3,
+      "index": 0,
+      "p": "4611685941117976577",
+      "status": "VERIFIED",
+      "two_adic_valuation": 33,
+      "witness": 3
+    },
+    "last_work": {
+      "c": 1073661576,
+      "distinct_prime_divisors": 6,
+      "index": 3737,
+      "p": "4611341355891818497",
+      "status": "VERIFIED",
+      "two_adic_valuation": 35,
+      "witness": 5
+    },
+    "overflow": [
+      {
+        "c": 1073661568,
+        "distinct_prime_divisors": 4,
+        "index": 3738,
+        "p": "4611341321532080129",
+        "status": "VERIFIED",
+        "two_adic_valuation": 39,
+        "witness": 3
+      },
+      {
+        "c": 1073661558,
+        "distinct_prime_divisors": 4,
+        "index": 3739,
+        "p": "4611341278582407169",
+        "status": "VERIFIED",
+        "two_adic_valuation": 33,
+        "witness": 7
+      }
+    ],
+    "path": "data/primes-schedule-v1.json",
+    "sha256": "22fadf04ddc70749a5c340483d457590dbe445fbf87883f4875f0ccf71331697",
+    "universal_overflow_prime_count": 2,
+    "work_prime_count": 3738
+  },
+  "schema": "certified-qmc-cycle-014-prime-schedule-manifest-v1"
+}

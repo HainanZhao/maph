@@ -76,9 +76,9 @@ throughput gates: 2.483 ns/update projects the confirmed
 four-core node.  This authorizes the full exact throughput branch;
 Cycle 013 has since closed the licensing/dependency gate: UNSW vectors
 use keyed, non-embedded mode and the release graph contains no FFTW.
-Production now waits for the full verified prime schedule and chunk
-replay.  Cycle 009 is explicitly deferred to the Workstream C entry
-gate.
+Cycle 014 has banked the full independently verified 3,740-prime
+schedule, leaving chunk replay as the production gate.
+Cycle 009 is explicitly deferred to the Workstream C entry gate.
 
 ## Layout
 
@@ -136,6 +136,8 @@ gate.
   corrected transcript, and mechanical production decision.
 - `docs/licensing.md`: code/data licenses and third-party vector policy.
 - `docs/cycle-013-licensing-and-dependencies.md`: G1 transcript.
+- `docs/cycle-014-full-prime-schedule.md`: complete N−1 certificate
+  schedule and independent replay.
 - `docs/roadmap.md`: gated workstreams.
 
 ## Quick start

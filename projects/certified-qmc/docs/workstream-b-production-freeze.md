@@ -101,10 +101,10 @@ mechanical exact/Arb tier fallback, are frozen in
 
 This does not yet launch production.  Cycle 013 closed the source
 provenance/license gate by selecting keyed, non-embedded vector mode.
-The remaining blockers are generation and verification of the full
-deterministic prime schedule and the production
-chunk/selected-entry replay implementation.  The pilot outcome and its
-preserved failed first transcript are documented in
+Cycle 014 closed the deterministic schedule blocker with 3,740
+independently verified N−1 certificates. Only the production
+chunk/selected-entry replay and run-hygiene gate remains. The pilot
+outcome and its preserved failed first transcript are documented in
 `docs/workstream-b-streaming-pilot-report.md`.
 
 The complete machine-readable freeze is
