@@ -1,0 +1,98 @@
+{
+  "boundary": "Prime counts include the corrected weight-denominator term and are fixed before Cycle-018 computation.",
+  "fidelity_predecessor": {
+    "preregistration_path": "data/cycles-016-017-preregistration-v2.json",
+    "preregistration_sha256": "2a1b8b322485b1f25257b2f6d5f66d5662c11c3d4a5b8dcab17a0fc8675ea78b",
+    "required_state_before_cycle_018_compute": "fidelity-v2 is sealed and its Cycles 016-017 exit gate certificate passes",
+    "spec_path": "data/cycles-016-017-fidelity-spec-v2.json",
+    "spec_sha256": "28789f431c71dd0b29ae65dd6caf6949d02cba89ae3eb6178611e51571fd8bbe"
+  },
+  "frozen_at_utc": "2026-07-29T07:53:58Z",
+  "grid": {
+    "N": [
+      1024,
+      32768,
+      1048576
+    ],
+    "computed_nonduplicated_entries": 36,
+    "dimensions": [
+      16,
+      64,
+      256
+    ],
+    "families": [
+      "unsw-fixed-29102",
+      "unsw-extensible-39102"
+    ],
+    "logical_entries": 54,
+    "reused_j2_entries": 18,
+    "weight_powers": [
+      1,
+      2,
+      3
+    ]
+  },
+  "halt_conditions": [
+    "fidelity predecessor is unsealed or fails its exit gate",
+    "any source, schedule, or preregistration hash mismatch",
+    "any overflow-prime or selected-entry replay failure",
+    "throughput above the versioned VPS ceiling",
+    "any attempted j^-2 recomputation"
+  ],
+  "preregistration_sha256": "9577052b7c1f47a4b6616cd87dc90d19e7265a4ff9d9558f91b4a05e610c9006",
+  "production_spec": {
+    "path": "data/cycle-018-usability-spec.json",
+    "sha256": "d6bb69b6e5a2aaf76e082675888602d6a94e07be35ff31e9d19cb4ba4333bdcf"
+  },
+  "production_started": false,
+  "reuse_gate": {
+    "certificate_required_before_packaging": true,
+    "rule": "For all 18 j^-2 entries, source file hash, N, dimension, weight power, generator-prefix hash, residue chunk hashes, and reconstructed rational must be inherited from fidelity-v2; recomputation is forbidden."
+  },
+  "schedule": {
+    "available_work_primes": 3738,
+    "extension_required": false,
+    "maximum_required_work_primes": 258,
+    "path": "data/primes-schedule-v1.json",
+    "sha256": "22fadf04ddc70749a5c340483d457590dbe445fbf87883f4875f0ccf71331697"
+  },
+  "schema": "certified-qmc-cycle-018-usability-preregistration-v1",
+  "weight_denominator_budgets": {
+    "N1024-j1": {
+      "incremental_updates_per_table": 31719424,
+      "proved_balanced_crt_bits": 7479,
+      "proved_numerator_bound_bits": 7478,
+      "work_prime_count": 121
+    },
+    "N1024-j3": {
+      "incremental_updates_per_table": 45875200,
+      "proved_balanced_crt_bits": 10846,
+      "proved_numerator_bound_bits": 10845,
+      "work_prime_count": 175
+    },
+    "N1048576-j1": {
+      "incremental_updates_per_table": 54760833024,
+      "proved_balanced_crt_bits": 12609,
+      "proved_numerator_bound_bits": 12608,
+      "work_prime_count": 204
+    },
+    "N1048576-j3": {
+      "incremental_updates_per_table": 69256347648,
+      "proved_balanced_crt_bits": 15976,
+      "proved_numerator_bound_bits": 15975,
+      "work_prime_count": 258
+    },
+    "N32768-j1": {
+      "incremental_updates_per_table": 1358954496,
+      "proved_balanced_crt_bits": 10044,
+      "proved_numerator_bound_bits": 10043,
+      "work_prime_count": 162
+    },
+    "N32768-j3": {
+      "incremental_updates_per_table": 1820327936,
+      "proved_balanced_crt_bits": 13411,
+      "proved_numerator_bound_bits": 13410,
+      "work_prime_count": 217
+    }
+  }
+}
