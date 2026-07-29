@@ -217,6 +217,31 @@ class Cycle015Tests(unittest.TestCase):
         ):
             self.assertEqual(first[key], one[key])
 
+    def test_batch_extension_transcript_replays(self):
+        artifact = json.loads(
+            (
+                PROJECT
+                / "certificates"
+                / "cycle-015-batch-replay-extension.json"
+            ).read_text()
+        )
+        supplied = artifact.pop("certificate_sha256")
+        self.assertEqual(supplied, canonical_sha256(artifact))
+        self.assertTrue(
+            artifact["gate"]["cycle_015_batch_extension_passed"]
+        )
+        self.assertEqual(
+            artifact["single_vs_batch"]["single_result_sha256"],
+            artifact["single_vs_batch"]["batch_entry_sha256"],
+        )
+        self.assertTrue(
+            all(
+                artifact["single_vs_batch"]["equal_fields"].values()
+            )
+        )
+        for relative, expected in artifact["source"].items():
+            self.assertEqual(file_sha256(PROJECT / relative), expected)
+
 
 if __name__ == "__main__":
     unittest.main()
