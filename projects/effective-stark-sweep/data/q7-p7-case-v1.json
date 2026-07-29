@@ -1,0 +1,71 @@
+{
+  "schema": "effective-stark-case-development-v1",
+  "case_id": "RQ-000190",
+  "field": "Q(sqrt(7))",
+  "finite_ideal_hnf": [[7, 0], [0, 1]],
+  "finite_norm": 7,
+  "archimedean_place": "infinity_2",
+  "fourier_support_orders": [2, 6],
+  "w1": {
+    "B03_POSITIVE_NOT_MINUS_ONE": true,
+    "B06_NEGATIVE_NORM_NOT_ONE": true,
+    "B09_INDEX_TWO": true,
+    "one_place_ray_group": [6],
+    "two_place_ray_group": [6, 2]
+  },
+  "w2": {
+    "claim_tag": "VERIFIED",
+    "normal_closure_absolute_degree": 24,
+    "commutator_fixed_field_polynomial": "x^12-x^10+x^8-x^6+x^4-x^2+1",
+    "imaginary_bases": [
+      {
+        "field": "Q(i)",
+        "defining_polynomial": "x^2+1",
+        "conductor_hnf": [[7, 0], [0, 7]],
+        "ray_group": [12],
+        "full_ray_reconstruction_isomorphic": true,
+        "divisor_count": 2
+      },
+      {
+        "field": "Q(sqrt(-7))",
+        "defining_polynomial": "x^2-x+2",
+        "conductor_hnf": [[28, 12], [0, 4]],
+        "ray_group": [6, 2],
+        "full_ray_reconstruction_isomorphic": true,
+        "divisor_count": 18
+      }
+    ],
+    "printed_table_base": "Q(i)",
+    "safe_exponent": 4032,
+    "real_distribution_indices": [6, 1],
+    "two_route_mismatch": false
+  },
+  "w3": {
+    "algebraic_candidate_claim_tag": "VERIFIED",
+    "relative_packet_polynomial": "x^6-(6+2*sqrt(7))*x^5+(22+8*sqrt(7))*x^4-(34+13*sqrt(7))*x^3+(22+8*sqrt(7))*x^2-(6+2*sqrt(7))*x+1",
+    "absolute_packet_polynomial": "x^12-12*x^11+52*x^10-108*x^9+124*x^8-92*x^7+63*x^6-92*x^5+124*x^4-108*x^3+52*x^2-12*x+1",
+    "ray_field_identification_over_base": true,
+    "sturm_windows": 6,
+    "split_prime_frobenius_labels": [
+      {"rational_prime": 19, "ray_log": 1},
+      {"rational_prime": 31, "ray_log": 5}
+    ],
+    "numerical_voutier_margin": "2.01e222",
+    "analytic_arb_enclosure": {
+      "claim_tag": "ENCLOSED",
+      "method": "exact nine-point Yamamoto cone enumeration plus Arb double-sine integration",
+      "pari_l_value_in_proof_chain": false,
+      "powered_height_upper": "9.191e-9",
+      "voutier_degree_3_to_24_lower": "5.2279e-5",
+      "certified_margin_lower": "5688"
+    },
+    "packet_identity_verdict": "VERIFIED"
+  },
+  "theorem_claim": {
+    "claim_tag": "VERIFIED",
+    "statement": "Within the frozen literature perimeter, this is the first unconditional order-six archimedean Stark instance: Shintani's index-two theorem applies with explicit safe exponent 4032, and an independent Arb cone certificate identifies the six-root packet.",
+    "boundary": "The first claim is relative to the named, hash-frozen literature perimeter. The historical PARI recognition is NUMERICAL and is excluded from the proof chain."
+  },
+  "paper_iii_cross_reference": "T3.9",
+  "dimension_six_comparison": "Character order six is not itself the obstruction. The remaining dimension-six obstruction is the failure of the applicable index-two/CM-descent structure (including its ramification constraints), not the character order."
+}

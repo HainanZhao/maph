@@ -16,7 +16,7 @@ census definitions, orchestration, records, and certificates.
 
 ## Current state
 
-Cycles 001–010 are complete. Publication uploads, identifier recording, and
+Cycles 001–020 are complete. Publication uploads, identifier recording, and
 correspondence are administrative metadata, not research gates.  The
 earlier sequencing records are retained only as process history and are
 superseded by `data/research-activation-v3.json`.
@@ -27,6 +27,14 @@ The exact state can be checked with:
 python3 scripts/audit_activation.py
 python3 -m unittest discover -s tests -v
 python3 scripts/audit_w1_anchor_screen.py
+```
+
+The order-six analytic certificate was replayed with Python 3.12.3 and
+python-flint 0.9.0:
+
+```bash
+python scripts/certify_q7_p7_packet.py \
+  --digits 70 --tolerance 1e-11
 ```
 
 The seven anchor bundles are frozen in
@@ -43,6 +51,16 @@ clean index-four frontier. See
 
 `ROUTE_CANDIDATE` is not a theorem tag. No new case becomes `PROVED`
 until its engine-specific packet and identification certificates pass.
+
+The second campaign proves unconditional powered algebraicity for the
+first order-six case, over `Q(sqrt(7))`, with safe exponent 4032. Its
+exact candidate packet is ray-field verified and Sturm/Frobenius
+labeled. A PARI-independent Yamamoto-cone evaluator encloses all six
+logarithms in Arb balls; the powered height upper bound is
+\(9.20\times10^{-9}\), giving a Voutier margin above 5,688. The explicit
+packet identity is therefore `VERIFIED`.
+The full W1 census routes 6,931 cases and records 1,269 frontiers. See
+[`docs/cycles-011-020-summary.md`](docs/cycles-011-020-summary.md).
 
 ## Claim tags
 

@@ -42,11 +42,29 @@ def expand_argv(argv: list[str]) -> list[str]:
 
 def verify_source(manifest: dict[str, Any]) -> dict[str, str]:
     source = manifest["source"]
-    paper_i = SIC_ROOT / "paper" / "sic-stark-dimensions-four-five.tex"
-    paper_ii = SIC_ROOT / "paper" / "sic-stark-dimensions-seven-eight.tex"
+    frozen_commit = source["sic_stark_commit"]
+
+    def frozen_blob(path: str) -> bytes:
+        return subprocess.run(
+            ["git", "show", f"{frozen_commit}:{path}"],
+            cwd=WORKSPACE_ROOT,
+            check=True,
+            capture_output=True,
+        ).stdout
+
     actual = {
-        "paper_I_sha256": sha256_file(paper_i),
-        "paper_II_sha256": sha256_file(paper_ii),
+        "paper_I_sha256": sha256_bytes(
+            frozen_blob(
+                "projects/sic-stark/paper/"
+                "sic-stark-dimensions-four-five.tex"
+            )
+        ),
+        "paper_II_sha256": sha256_bytes(
+            frozen_blob(
+                "projects/sic-stark/paper/"
+                "sic-stark-dimensions-seven-eight.tex"
+            )
+        ),
     }
     for key, digest in actual.items():
         if digest != source[key]:
@@ -54,7 +72,11 @@ def verify_source(manifest: dict[str, Any]) -> dict[str, str]:
                 f"source mismatch for {key}: expected {source[key]}, got {digest}"
             )
     tree = subprocess.run(
-        ["git", "rev-parse", "HEAD:projects/sic-stark"],
+        [
+            "git",
+            "rev-parse",
+            f"{frozen_commit}:projects/sic-stark",
+        ],
         cwd=WORKSPACE_ROOT,
         check=True,
         capture_output=True,
@@ -62,7 +84,7 @@ def verify_source(manifest: dict[str, Any]) -> dict[str, str]:
     ).stdout.strip()
     if tree != source["sic_stark_tree"]:
         raise RuntimeError(
-            "SIC--Stark subtree mismatch: "
+            "Frozen SIC--Stark subtree mismatch: "
             f"expected {source['sic_stark_tree']}, got {tree}"
         )
     return {**actual, "sic_stark_tree": tree}
