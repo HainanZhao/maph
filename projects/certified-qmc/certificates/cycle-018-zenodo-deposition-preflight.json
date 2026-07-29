@@ -1,0 +1,46 @@
+{
+  "boundary": "VERIFIED_LOCAL_PREFLIGHT covers local fail-closed logic and a mocked end-to-end API response. It is not an external deposition and cannot authorize announcement. Only cycle-018-zenodo-deposition.json produced from the real published response may do so.",
+  "certificate_sha256": "ae249f53f905185902acb7b9c12a45abbdee981b635385f83e65db42ec495f56",
+  "claim_tag": "VERIFIED_LOCAL_PREFLIGHT",
+  "gate": {
+    "announcement_permitted": false,
+    "external_deposition_published": false,
+    "local_deposition_flow_passed": true
+  },
+  "official_contract_review": {
+    "developer_api": "https://developers.zenodo.org/",
+    "file_limits": "https://help.zenodo.org/docs/deposit/manage-files/",
+    "maximum_files": 100,
+    "maximum_total_bytes": 50000000000,
+    "remote_checksum": "MD5 computed by Zenodo",
+    "reviewed_at_utc": "2026-07-29T09:30:00Z"
+  },
+  "recorded_at_utc": "2026-07-29T09:28:33Z",
+  "schema": "certified-qmc-cycle018-zenodo-preflight-v1",
+  "source": {
+    "docs/cycle-018-release-deposition.md": "63e5fe33681b928b572826b2fa16dc12cc5e022beb5e016b0ca7793049d925d1",
+    "scripts/zenodo_deposit_release.py": "ff7fb5296d83471b3e28435faf25eaefe7763e5d3d1d7804ced715711f3f6a35",
+    "tests/test_zenodo_deposit.py": "fc249bf6846110353b3ca310899d1ccc145afb45685984b52d815f83a1bf6245"
+  },
+  "test": {
+    "command": ".venv/bin/python -m unittest tests.test_zenodo_deposit -q",
+    "return_code": 0,
+    "stderr_tail": [
+      "Ran 5 tests in 0.022s",
+      "",
+      "OK"
+    ],
+    "tests_run": 5
+  },
+  "verified_predicates": {
+    "announcement_requires_published_response": true,
+    "bad_remote_checksum_rejected": true,
+    "draft_inventory_reverified": true,
+    "local_release_manifest_and_files_authenticated": true,
+    "missing_or_duplicate_remote_inventory_rejected": true,
+    "published_inventory_reverified": true,
+    "reserved_doi_confirmed_after_publish": true,
+    "undeclared_local_file_rejected": true,
+    "upload_filename_size_and_md5_equal": true
+  }
+}
