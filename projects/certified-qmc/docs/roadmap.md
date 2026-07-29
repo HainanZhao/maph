@@ -77,8 +77,9 @@ replay.
     artifact licenses.~~
     Full input files are fetched transiently and hash-pinned for runs,
     but are not redistributed.
-13. ~~Extend and verify the deterministic prime schedule required by
-    the pilot only.~~
+13. ~~Generate and independently verify the full 3,740-prime production
+    schedule with complete N−1 certificates and byte-identical
+    regeneration.~~
 14. ~~Implement the prime-major streaming evaluator and pass the frozen
     \(N=1024,d=256,\gamma_j=j^{-2}\) pilot.~~
 15. ~~Recompute the full-grid wall-time projection from the pilot and
@@ -88,8 +89,8 @@ replay.
 
 Gate: every supplied entry has a replayable certificate and upstream
 hash. The 54.9-trillion incremental count now has a passing local
-projection and the source/license gate is closed. The full-schedule and
-chunk-replay gates still forbid production launch.
+projection; the source/license and full-schedule gates are closed.
+Chunk replay still forbids production launch.
 
 ## Phase 3 — number-theoretic constructions
 
