@@ -73,7 +73,7 @@ def run_archive(command: list[str], destination: Path) -> None:
         )
         assert tar.stdout is not None
         compressed = subprocess.run(
-            ["zstd", "-19", "-T0", "-q", "-c"],
+            ["zstd", "-19", "--single-thread", "-q", "-c"],
             stdin=tar.stdout,
             stdout=output,
             check=True,
@@ -84,6 +84,14 @@ def run_archive(command: list[str], destination: Path) -> None:
             raise subprocess.CalledProcessError(return_code, command)
         if compressed.returncode != 0:
             raise RuntimeError("zstd compression failed")
+
+
+def git_commit_timestamp(revision: str) -> str:
+    return subprocess.check_output(
+        ["git", "show", "-s", "--format=%cI", revision],
+        cwd=REPO,
+        text=True,
+    ).strip()
 
 
 def main() -> None:
@@ -121,6 +129,7 @@ def main() -> None:
         cwd=REPO,
         text=True,
     ).strip()
+    revision_timestamp = git_commit_timestamp(revision)
 
     if output.exists():
         raise ValueError("release output already exists")
@@ -137,8 +146,9 @@ def main() -> None:
             "git",
             "archive",
             "--format=tar",
+            f"--mtime={revision_timestamp}",
             "--prefix=certified-qmc-v1.0/source/",
-            f"{args.revision}:projects/certified-qmc",
+            f"{revision}:projects/certified-qmc",
         ],
         source_archive,
     )
