@@ -39,16 +39,20 @@ complete; multi-prime compiled engine open.
 Kill gate: if CRT/NTT results differ from exact ground truth once, halt
 optimization and isolate the representation error.
 
-## Phase 2 — certified table supply
+## Phase 2 — certified evaluator conformance and reference anchors
 
 Status: the frozen distribution sites and six-paper primary-literature
 perimeter contain no merit attached to the frozen vectors. The
-classification branch is closed for that perimeter. The grid, weights,
-artifact contract, exact precompute budget, source policy, full prime
-schedule, and chunk replay are closed. Fidelity production is active
-under the versioned VPS monitor. Its first +25% drift pause is preserved;
-the human-authorized v2 alarm is +75%, while the seven-node-day budget
-and all certification gates remain unchanged.
+classification branch is closed for that perimeter. The engine is the
+primary artifact; a preregistered, structurally diverse oracle set is
+the principal software-conformance data product; the exhaustive grid is
+supplementary archival data and supplies Workstream C comparison
+anchors. The grid, weights, artifact contract, exact precompute budget,
+source policy, full prime schedule, and chunk replay are closed.
+Fidelity production is active under the versioned VPS monitor. Its
+first +25% drift pause is preserved; the human-authorized v2 alarm is
++75%, while the seven-node-day budget and all certification gates
+remain unchanged.
 
 1. ~~Freeze a source-specific discrepancy protocol and quarantine any
    prematurely exposed values.~~
@@ -90,6 +94,9 @@ and all certification gates remain unchanged.
     overflow checks, and complete run manifests.~~
 17. Produce chunked tables in increasing \(N\), with the frozen
     throughput-drift monitor and post-run audit.
+18. Freeze and extract the engine conformance/oracle set independently
+    of observed merit values; publish the full fidelity grid as
+    supplementary data.
 
 Gate: every supplied entry has a replayable certificate and upstream
 hash. The 54.9-trillion combined incremental count has a passing local

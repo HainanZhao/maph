@@ -113,3 +113,14 @@ first transcript are documented in
 The complete machine-readable freeze is
 `data/workstream-b-production-freeze.json`; exact budgets are in
 `certificates/workstream-b-production-budget.json`.
+
+## Post-freeze artifact-emphasis amendment
+
+The 2026-07-29 interpretive amendment does not change this grid,
+kernel, thresholds, evaluation order, or production authorization.
+Production continues because its marginal cost is accepted, the result
+has archival value, and Workstream C requires certified CBC-side
+anchors.  In the release and methods paper, however, the evaluator is
+the primary artifact, a preregistered few-hundred-entry oracle set is
+the main software-conformance data product, and this exhaustive grid is
+supplementary data.  See `docs/artifact-emphasis-amendment.md`.

@@ -1,0 +1,2501 @@
+{
+  "adversarial_decision_cases": [
+    {
+      "N": 32,
+      "candidates": [
+        1,
+        5
+      ],
+      "case_id": "ordinary-n32",
+      "prefix": [
+        1,
+        7
+      ],
+      "purpose": "ordinary separated comparison",
+      "weights": [
+        "1",
+        "1/4",
+        "1/9"
+      ]
+    },
+    {
+      "N": 32,
+      "candidates": [
+        5,
+        27
+      ],
+      "case_id": "sign-tie-n32",
+      "prefix": [
+        1,
+        7
+      ],
+      "purpose": "exact z versus N-z symmetry tie",
+      "weights": [
+        "1",
+        "1/4",
+        "1/9"
+      ]
+    },
+    {
+      "N": 32,
+      "candidates": [
+        1,
+        5
+      ],
+      "case_id": "tiny-weight-n32",
+      "prefix": [
+        1,
+        7
+      ],
+      "purpose": "near-degenerate tiny new-coordinate weight",
+      "weights": [
+        "1",
+        "1/4",
+        "1/100000000000000000000000000000"
+      ]
+    },
+    {
+      "N": 64,
+      "candidates": [
+        1,
+        5
+      ],
+      "case_id": "zero-weight-n64",
+      "prefix": [
+        1,
+        5,
+        13
+      ],
+      "purpose": "all-candidate exact tie at zero new weight",
+      "weights": [
+        "1",
+        "1/4",
+        "1/9",
+        "0"
+      ]
+    },
+    {
+      "N": 64,
+      "candidates": [
+        1,
+        5
+      ],
+      "case_id": "tiny-weight-n64",
+      "prefix": [
+        1,
+        5,
+        13
+      ],
+      "purpose": "deep precision escalation stress",
+      "weights": [
+        "1",
+        "1/4",
+        "1/9",
+        "1/100000000000000000000000000000000000000000000000000"
+      ]
+    },
+    {
+      "N": 64,
+      "candidates": [
+        5,
+        59
+      ],
+      "case_id": "sign-tie-n64",
+      "prefix": [
+        1,
+        5,
+        13
+      ],
+      "purpose": "higher-stage exact sign symmetry tie",
+      "weights": [
+        "1",
+        "1/4",
+        "1/9",
+        "1/16"
+      ]
+    },
+    {
+      "N": 64,
+      "candidates": [
+        1,
+        5
+      ],
+      "case_id": "denominator-stress-n64",
+      "prefix": [
+        1,
+        5,
+        13
+      ],
+      "purpose": "non-factorial coprime denominator stress",
+      "weights": [
+        "1",
+        "1/6",
+        "1/35",
+        "1/143"
+      ]
+    },
+    {
+      "N": 64,
+      "candidates": [
+        5,
+        25
+      ],
+      "case_id": "quotient-competitors-n64",
+      "prefix": [
+        1,
+        5,
+        13
+      ],
+      "purpose": "same-valuation quotient competitors",
+      "weights": [
+        "1",
+        "1/4",
+        "1/9",
+        "1/16"
+      ]
+    }
+  ],
+  "artifact_priority": [
+    "exact/enclosure evaluator and independent verifier",
+    "curated engine oracle/conformance set",
+    "supplementary exhaustive fidelity grid"
+  ],
+  "claim_boundary": "Software-conformance oracle selected by input structure; not a representative sample of lattice-rule quality.",
+  "dependencies": {
+    "fidelity_spec": "data/cycles-016-017-fidelity-spec-v2.json",
+    "interpretive_amendment": "docs/artifact-emphasis-amendment.md",
+    "usability_preregistration": "data/cycle-018-usability-preregistration.json"
+  },
+  "extraction_gate": "Extract only after the supplying fidelity/usability dataset is sealed and its independent audit passes.",
+  "frozen_at_utc": "2026-07-29T08:15:52Z",
+  "schema": "certified-qmc-engine-oracle-preregistration-v1",
+  "selection_counts": {
+    "adversarial_decision_cases": 8,
+    "table_merits": 290,
+    "total_oracle_cases": 298
+  },
+  "selection_sha256": "4f99db70e21e87abd840ce81a9e5d12fc18554efb175dee9ad0074c9225234ae",
+  "selection_status": "PREREGISTERED_BEFORE_VALUE_EXTRACTION",
+  "table_merits": [
+    {
+      "N": 1024,
+      "dimension": 1,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 2,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 3,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 4,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 5,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 6,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 7,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 8,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 9,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 10,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 11,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 12,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 13,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 14,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 15,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 16,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 17,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 18,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 19,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 20,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 21,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 22,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 23,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 24,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 25,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 26,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 27,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 28,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 29,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 30,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 31,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 32,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 33,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 34,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 35,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 36,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 37,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 38,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 39,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 40,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 41,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 42,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 43,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 44,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 45,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 46,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 47,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 48,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 49,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 50,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 51,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 52,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 53,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 54,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 55,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 56,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 57,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 58,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 59,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 60,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 61,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 62,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 63,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 64,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 1,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 2,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 3,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 4,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 5,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 6,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 7,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 8,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 9,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 10,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 11,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 12,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 13,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 14,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 15,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 16,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 17,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 18,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 19,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 20,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 21,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 22,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 23,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 24,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 25,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 26,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 27,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 28,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 29,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 30,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 31,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 32,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 33,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 34,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 35,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 36,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 37,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 38,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 39,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 40,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 41,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 42,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 43,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 44,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 45,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 46,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 47,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 48,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 49,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 50,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 51,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 52,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 53,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 54,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 55,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 56,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 57,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 58,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 59,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 60,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 61,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 62,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 63,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 64,
+      "selection_stratum": "full-prefix-n1024-d1-64",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 2048,
+      "dimension": 1,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n2048-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 2048,
+      "dimension": 16,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n2048-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 2048,
+      "dimension": 64,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n2048-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 2048,
+      "dimension": 256,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n2048-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 2048,
+      "dimension": 1024,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n2048-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 2048,
+      "dimension": 3600,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n2048-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 4096,
+      "dimension": 1,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n4096-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 4096,
+      "dimension": 16,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n4096-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 4096,
+      "dimension": 64,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n4096-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 4096,
+      "dimension": 256,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n4096-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 4096,
+      "dimension": 1024,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n4096-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 4096,
+      "dimension": 3600,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n4096-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 8192,
+      "dimension": 1,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n8192-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 8192,
+      "dimension": 16,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n8192-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 8192,
+      "dimension": 64,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n8192-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 8192,
+      "dimension": 256,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n8192-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 8192,
+      "dimension": 1024,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n8192-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 8192,
+      "dimension": 3600,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n8192-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 16384,
+      "dimension": 1,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n16384-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 16384,
+      "dimension": 16,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n16384-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 16384,
+      "dimension": 64,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n16384-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 16384,
+      "dimension": 256,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n16384-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 16384,
+      "dimension": 1024,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n16384-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 16384,
+      "dimension": 3600,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n16384-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 32768,
+      "dimension": 1,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n32768-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 32768,
+      "dimension": 16,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n32768-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 32768,
+      "dimension": 64,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n32768-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 32768,
+      "dimension": 256,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n32768-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 32768,
+      "dimension": 1024,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n32768-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 32768,
+      "dimension": 3600,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n32768-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 65536,
+      "dimension": 1,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n65536-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 65536,
+      "dimension": 16,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n65536-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 65536,
+      "dimension": 64,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n65536-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 65536,
+      "dimension": 256,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n65536-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 65536,
+      "dimension": 1024,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n65536-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 65536,
+      "dimension": 3600,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n65536-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 131072,
+      "dimension": 1,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n131072-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 131072,
+      "dimension": 16,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n131072-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 131072,
+      "dimension": 64,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n131072-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 131072,
+      "dimension": 256,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n131072-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 131072,
+      "dimension": 1024,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n131072-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 131072,
+      "dimension": 3600,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n131072-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 262144,
+      "dimension": 1,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n262144-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 262144,
+      "dimension": 16,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n262144-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 262144,
+      "dimension": 64,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n262144-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 262144,
+      "dimension": 256,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n262144-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 262144,
+      "dimension": 1024,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n262144-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 262144,
+      "dimension": 3600,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n262144-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 524288,
+      "dimension": 1,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n524288-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 524288,
+      "dimension": 16,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n524288-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 524288,
+      "dimension": 64,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n524288-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 524288,
+      "dimension": 256,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n524288-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 524288,
+      "dimension": 1024,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n524288-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 524288,
+      "dimension": 3600,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n524288-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1048576,
+      "dimension": 1,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1048576-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1048576,
+      "dimension": 16,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1048576-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1048576,
+      "dimension": 64,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1048576-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1048576,
+      "dimension": 256,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1048576-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1048576,
+      "dimension": 1024,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1048576-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1048576,
+      "dimension": 3600,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1048576-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 2048,
+      "dimension": 1,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n2048-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 2048,
+      "dimension": 16,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n2048-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 2048,
+      "dimension": 64,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n2048-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 2048,
+      "dimension": 256,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n2048-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 2048,
+      "dimension": 1024,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n2048-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 2048,
+      "dimension": 3600,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n2048-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 4096,
+      "dimension": 1,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n4096-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 4096,
+      "dimension": 16,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n4096-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 4096,
+      "dimension": 64,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n4096-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 4096,
+      "dimension": 256,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n4096-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 4096,
+      "dimension": 1024,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n4096-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 4096,
+      "dimension": 3600,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n4096-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 8192,
+      "dimension": 1,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n8192-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 8192,
+      "dimension": 16,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n8192-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 8192,
+      "dimension": 64,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n8192-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 8192,
+      "dimension": 256,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n8192-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 8192,
+      "dimension": 1024,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n8192-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 8192,
+      "dimension": 3600,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n8192-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 16384,
+      "dimension": 1,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n16384-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 16384,
+      "dimension": 16,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n16384-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 16384,
+      "dimension": 64,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n16384-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 16384,
+      "dimension": 256,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n16384-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 16384,
+      "dimension": 1024,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n16384-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 16384,
+      "dimension": 3600,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n16384-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 32768,
+      "dimension": 1,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n32768-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 32768,
+      "dimension": 16,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n32768-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 32768,
+      "dimension": 64,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n32768-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 32768,
+      "dimension": 256,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n32768-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 32768,
+      "dimension": 1024,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n32768-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 32768,
+      "dimension": 3600,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n32768-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 65536,
+      "dimension": 1,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n65536-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 65536,
+      "dimension": 16,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n65536-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 65536,
+      "dimension": 64,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n65536-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 65536,
+      "dimension": 256,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n65536-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 65536,
+      "dimension": 1024,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n65536-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 65536,
+      "dimension": 3600,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n65536-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 131072,
+      "dimension": 1,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n131072-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 131072,
+      "dimension": 16,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n131072-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 131072,
+      "dimension": 64,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n131072-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 131072,
+      "dimension": 256,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n131072-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 131072,
+      "dimension": 1024,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n131072-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 131072,
+      "dimension": 3600,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n131072-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 262144,
+      "dimension": 1,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n262144-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 262144,
+      "dimension": 16,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n262144-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 262144,
+      "dimension": 64,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n262144-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 262144,
+      "dimension": 256,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n262144-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 262144,
+      "dimension": 1024,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n262144-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 262144,
+      "dimension": 3600,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n262144-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 524288,
+      "dimension": 1,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n524288-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 524288,
+      "dimension": 16,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n524288-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 524288,
+      "dimension": 64,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n524288-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 524288,
+      "dimension": 256,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n524288-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 524288,
+      "dimension": 1024,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n524288-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 524288,
+      "dimension": 3600,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n524288-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1048576,
+      "dimension": 1,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1048576-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1048576,
+      "dimension": 16,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1048576-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1048576,
+      "dimension": 64,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1048576-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1048576,
+      "dimension": 256,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1048576-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1048576,
+      "dimension": 1024,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1048576-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1048576,
+      "dimension": 3600,
+      "selection_stratum": "cross-scale-j2",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1048576-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 256,
+      "selection_stratum": "n1024-extreme-d",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 1024,
+      "selection_stratum": "n1024-extreme-d",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 3600,
+      "selection_stratum": "n1024-extreme-d",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 256,
+      "selection_stratum": "n1024-extreme-d",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 1024,
+      "selection_stratum": "n1024-extreme-d",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 3600,
+      "selection_stratum": "n1024-extreme-d",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j2",
+      "weight_power": 2
+    },
+    {
+      "N": 1024,
+      "dimension": 16,
+      "selection_stratum": "alternate-weight-profile",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j1",
+      "weight_power": 1
+    },
+    {
+      "N": 1024,
+      "dimension": 16,
+      "selection_stratum": "alternate-weight-profile",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j3",
+      "weight_power": 3
+    },
+    {
+      "N": 1024,
+      "dimension": 64,
+      "selection_stratum": "alternate-weight-profile",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j1",
+      "weight_power": 1
+    },
+    {
+      "N": 1024,
+      "dimension": 64,
+      "selection_stratum": "alternate-weight-profile",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j3",
+      "weight_power": 3
+    },
+    {
+      "N": 1024,
+      "dimension": 256,
+      "selection_stratum": "alternate-weight-profile",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j1",
+      "weight_power": 1
+    },
+    {
+      "N": 1024,
+      "dimension": 256,
+      "selection_stratum": "alternate-weight-profile",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1024-j3",
+      "weight_power": 3
+    },
+    {
+      "N": 32768,
+      "dimension": 16,
+      "selection_stratum": "alternate-weight-profile",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n32768-j1",
+      "weight_power": 1
+    },
+    {
+      "N": 32768,
+      "dimension": 16,
+      "selection_stratum": "alternate-weight-profile",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n32768-j3",
+      "weight_power": 3
+    },
+    {
+      "N": 32768,
+      "dimension": 64,
+      "selection_stratum": "alternate-weight-profile",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n32768-j1",
+      "weight_power": 1
+    },
+    {
+      "N": 32768,
+      "dimension": 64,
+      "selection_stratum": "alternate-weight-profile",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n32768-j3",
+      "weight_power": 3
+    },
+    {
+      "N": 32768,
+      "dimension": 256,
+      "selection_stratum": "alternate-weight-profile",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n32768-j1",
+      "weight_power": 1
+    },
+    {
+      "N": 32768,
+      "dimension": 256,
+      "selection_stratum": "alternate-weight-profile",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n32768-j3",
+      "weight_power": 3
+    },
+    {
+      "N": 1048576,
+      "dimension": 16,
+      "selection_stratum": "alternate-weight-profile",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1048576-j1",
+      "weight_power": 1
+    },
+    {
+      "N": 1048576,
+      "dimension": 16,
+      "selection_stratum": "alternate-weight-profile",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1048576-j3",
+      "weight_power": 3
+    },
+    {
+      "N": 1048576,
+      "dimension": 64,
+      "selection_stratum": "alternate-weight-profile",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1048576-j1",
+      "weight_power": 1
+    },
+    {
+      "N": 1048576,
+      "dimension": 64,
+      "selection_stratum": "alternate-weight-profile",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1048576-j3",
+      "weight_power": 3
+    },
+    {
+      "N": 1048576,
+      "dimension": 256,
+      "selection_stratum": "alternate-weight-profile",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1048576-j1",
+      "weight_power": 1
+    },
+    {
+      "N": 1048576,
+      "dimension": 256,
+      "selection_stratum": "alternate-weight-profile",
+      "source_id": "unsw-fixed-29102",
+      "table_id": "unsw-fixed-29102-n1048576-j3",
+      "weight_power": 3
+    },
+    {
+      "N": 1024,
+      "dimension": 16,
+      "selection_stratum": "alternate-weight-profile",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j1",
+      "weight_power": 1
+    },
+    {
+      "N": 1024,
+      "dimension": 16,
+      "selection_stratum": "alternate-weight-profile",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j3",
+      "weight_power": 3
+    },
+    {
+      "N": 1024,
+      "dimension": 64,
+      "selection_stratum": "alternate-weight-profile",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j1",
+      "weight_power": 1
+    },
+    {
+      "N": 1024,
+      "dimension": 64,
+      "selection_stratum": "alternate-weight-profile",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j3",
+      "weight_power": 3
+    },
+    {
+      "N": 1024,
+      "dimension": 256,
+      "selection_stratum": "alternate-weight-profile",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j1",
+      "weight_power": 1
+    },
+    {
+      "N": 1024,
+      "dimension": 256,
+      "selection_stratum": "alternate-weight-profile",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1024-j3",
+      "weight_power": 3
+    },
+    {
+      "N": 32768,
+      "dimension": 16,
+      "selection_stratum": "alternate-weight-profile",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n32768-j1",
+      "weight_power": 1
+    },
+    {
+      "N": 32768,
+      "dimension": 16,
+      "selection_stratum": "alternate-weight-profile",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n32768-j3",
+      "weight_power": 3
+    },
+    {
+      "N": 32768,
+      "dimension": 64,
+      "selection_stratum": "alternate-weight-profile",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n32768-j1",
+      "weight_power": 1
+    },
+    {
+      "N": 32768,
+      "dimension": 64,
+      "selection_stratum": "alternate-weight-profile",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n32768-j3",
+      "weight_power": 3
+    },
+    {
+      "N": 32768,
+      "dimension": 256,
+      "selection_stratum": "alternate-weight-profile",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n32768-j1",
+      "weight_power": 1
+    },
+    {
+      "N": 32768,
+      "dimension": 256,
+      "selection_stratum": "alternate-weight-profile",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n32768-j3",
+      "weight_power": 3
+    },
+    {
+      "N": 1048576,
+      "dimension": 16,
+      "selection_stratum": "alternate-weight-profile",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1048576-j1",
+      "weight_power": 1
+    },
+    {
+      "N": 1048576,
+      "dimension": 16,
+      "selection_stratum": "alternate-weight-profile",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1048576-j3",
+      "weight_power": 3
+    },
+    {
+      "N": 1048576,
+      "dimension": 64,
+      "selection_stratum": "alternate-weight-profile",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1048576-j1",
+      "weight_power": 1
+    },
+    {
+      "N": 1048576,
+      "dimension": 64,
+      "selection_stratum": "alternate-weight-profile",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1048576-j3",
+      "weight_power": 3
+    },
+    {
+      "N": 1048576,
+      "dimension": 256,
+      "selection_stratum": "alternate-weight-profile",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1048576-j1",
+      "weight_power": 1
+    },
+    {
+      "N": 1048576,
+      "dimension": 256,
+      "selection_stratum": "alternate-weight-profile",
+      "source_id": "unsw-extensible-39102",
+      "table_id": "unsw-extensible-39102-n1048576-j3",
+      "weight_power": 3
+    }
+  ]
+}

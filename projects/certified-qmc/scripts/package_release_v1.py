@@ -23,6 +23,8 @@ PRIME_SCHEDULE = ROOT / "data" / "primes-schedule-v1.json"
 PRIME_MANIFEST = (
     ROOT / "certificates" / "cycle-014-prime-schedule-manifest.json"
 )
+ENGINE_ORACLE = ROOT / "certificates" / "engine-oracle-set-v1.json"
+ENGINE_ORACLE_PREREG = ROOT / "data" / "engine-oracle-set-v1.json"
 
 
 def digest(path: Path) -> str:
@@ -46,12 +48,17 @@ def canonical_sha(value: object) -> str:
     ).hexdigest()
 
 
-def checked_audit(path: Path, gate: str) -> dict:
+def load_self_hashed(path: Path, field: str) -> dict:
     value = json.loads(path.read_text())
-    supplied = value.pop("certificate_sha256")
+    supplied = value.pop(field)
     if canonical_sha(value) != supplied:
         raise ValueError(f"{path.name} self-hash mismatch")
-    value["certificate_sha256"] = supplied
+    value[field] = supplied
+    return value
+
+
+def checked_audit(path: Path, gate: str) -> dict:
+    value = load_self_hashed(path, "certificate_sha256")
     if value["gate"].get(gate) is not True:
         raise ValueError(f"{path.name} release gate is not passed")
     return value
@@ -98,6 +105,9 @@ def main() -> None:
     checked_audit(
         USABILITY_AUDIT, "cycle_018_data_gate_passed"
     )
+    oracle = load_self_hashed(ENGINE_ORACLE, "oracle_sha256")
+    if oracle["claim_tag"] != "VERIFIED" or oracle["counts"]["total"] != 298:
+        raise ValueError("engine oracle release gate is not passed")
     if not (fidelity / "dataset-sha256.json").is_file():
         raise ValueError("fidelity SHA manifest is absent")
     if not (usability / "manifest.jsonl").is_file():
@@ -120,6 +130,7 @@ def main() -> None:
     usability_archive = (
         output / "certified-qmc-v1.0-usability.tar.zst"
     )
+    oracle_archive = output / "certified-qmc-v1.0-engine-oracle.tar.zst"
 
     run_archive(
         [
@@ -153,12 +164,32 @@ def main() -> None:
             ],
             destination,
         )
+    run_archive(
+        [
+            "tar",
+            "--sort=name",
+            "--mtime=@0",
+            "--owner=0",
+            "--group=0",
+            "--numeric-owner",
+            "--transform",
+            "s,^,oracle/,",
+            "-C",
+            str(ROOT),
+            "-cf",
+            "-",
+            str(ENGINE_ORACLE.relative_to(ROOT)),
+            str(ENGINE_ORACLE_PREREG.relative_to(ROOT)),
+        ],
+        oracle_archive,
+    )
 
     assets = []
     for path, role in (
         (source_archive, "source"),
-        (fidelity_archive, "fidelity tables"),
-        (usability_archive, "usability tables"),
+        (oracle_archive, "engine conformance oracle"),
+        (fidelity_archive, "supplementary fidelity tables"),
+        (usability_archive, "supplementary usability tables"),
     ):
         assets.append(
             {
@@ -183,6 +214,8 @@ def main() -> None:
         ),
         "fidelity_audit_sha256": digest(FIDELITY_AUDIT),
         "usability_audit_sha256": digest(USABILITY_AUDIT),
+        "engine_oracle_sha256": digest(ENGINE_ORACLE),
+        "engine_oracle_self_hash": oracle["oracle_sha256"],
         "assets": assets,
         "doi": None,
         "announcement_permitted": False,
