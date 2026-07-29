@@ -1,0 +1,74 @@
+{
+  "common": {
+    "fourier_support": {
+      "coefficient": "1-conjugate(chi(R))",
+      "exact_dual_coordinates_required": true,
+      "float_L_values_forbidden": true
+    }
+  },
+  "engine_A": {
+    "id": "A",
+    "predicates": [
+      "A_SUPPORT_ORDER_LE_2",
+      "A_EXACT_RAY_KERNEL_FIELD",
+      "A_EXACT_CHARACTER_CONDUCTOR",
+      "A_BNFCERTIFY",
+      "A_INTEGRAL_REGULATOR_INDEX",
+      "A_ACNF_NORMALIZATION",
+      "A_ORIENTED_UNIT"
+    ]
+  },
+  "engine_B": {
+    "halt_conditions": ["HALT_TWO_ROUTE_MISMATCH"],
+    "id": "B",
+    "predicates": [
+      "B03_POSITIVE_NOT_MINUS_ONE",
+      "B06_NEGATIVE_NORM_NOT_ONE",
+      "B09_INDEX_TWO",
+      "B_EXACT_ONE_REAL_PLACE_SPLITTING",
+      "B_TWO_ROUTE_IMAGINARY_BASE_AGREEMENT",
+      "B_COMPLETE_DIVISOR_TABLE",
+      "B_REAL_DISTRIBUTION_INDICES_CLEARED",
+      "B_ARB_HEIGHT_MARGIN_GE_100",
+      "B_RAY_FIELD_IDENTIFIED_OVER_K",
+      "B_TWO_SPLIT_PRIME_ARTIN_LABELS",
+      "B_POSITIVE_OR_EXACT_PHASE_ORIENTATION"
+    ],
+    "safe_exponent_formula": {
+      "nontrivial_divisor": "12*f_d*n_d",
+      "safe_exponent": "lcm(all divisor exponents, all real distribution indices)",
+      "trivial_divisor": "12*h_k*n_d"
+    }
+  },
+  "engine_C": {
+    "id": "C",
+    "predicates": [
+      "C_SUPPORT_ORDER_4",
+      "C_TWO_PLACE_LIFT",
+      "C_PROJECTIVE_QUOTIENT_ORDER_2",
+      "C_BIQUADRATIC_TWO_CM_BASES",
+      "C_LINEAR_REINDUCTION_NORMAL_CLOSURE",
+      "C_EXACT_CONDUCTOR_AND_LOCAL_FACTORS",
+      "C_EXHAUSTIVE_INVERSE_PAIR_SEPARATOR",
+      "C_STARK1980_S_SIZE_GE_3",
+      "C_ROOTS_OF_UNITY_CERTIFIED",
+      "C_ARB_UNIT_LATTICE_ISOLATION",
+      "C_EXACT_ORIENTATION"
+    ]
+  },
+  "frozen_at_utc": "2026-07-29T00:00:00Z",
+  "schema": "effective-stark-engine-predicates-v1",
+  "source_scripts": [
+    "../sic-stark/scripts/referee_pari_audit.gp",
+    "../sic-stark/scripts/dimension_five_shintani_audit.gp",
+    "../sic-stark/scripts/dimension_five_unit_lattice_audit.gp",
+    "../sic-stark/scripts/dimension_seven_shintani_audit.gp",
+    "../sic-stark/scripts/dimension_seven_maximal_tuple_audit.gp",
+    "../sic-stark/scripts/dimension_eight_lower_shintani_audit.gp",
+    "../sic-stark/scripts/dimension_eight_maximal_quadratic_units.gp",
+    "../sic-stark/scripts/dimension_eight_cm_descent.gp",
+    "../sic-stark/scripts/dimension_eight_linear_cm_reinduction.gp",
+    "../sic-stark/scripts/dimension_eight_cm_unit_lattice.gp",
+    "../sic-stark/scripts/dimension_eight_cm_real_unit_bridge.gp"
+  ]
+}
