@@ -123,6 +123,48 @@ class CompletionAuditTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "marker contract"):
             replace_block("no markers", "X", "new")
 
+    def test_workstream_d_recorder_is_human_explicit_and_no_overwrite(self):
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory) / "decision.json"
+            command = [
+                sys.executable,
+                str(
+                    ROOT
+                    / "scripts"
+                    / "record_workstream_d_decision.py"
+                ),
+                "--decision",
+                "public-benchmark",
+                "--human-response",
+                "Use the public benchmark.",
+                "--output",
+                str(output),
+            ]
+            subprocess.run(
+                command,
+                cwd=ROOT,
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+            payload = json.loads(output.read_text())
+            supplied = payload.pop("decision_sha256")
+            self.assertEqual(supplied, canonical_sha256(payload))
+            self.assertEqual(
+                payload["human_decision"], "public-benchmark"
+            )
+            self.assertTrue(payload["workstream_d_scoping_authorized"])
+            repeated = subprocess.run(
+                command,
+                cwd=ROOT,
+                capture_output=True,
+                text=True,
+            )
+            self.assertNotEqual(repeated.returncode, 0)
+            self.assertIn(
+                "already exists", repeated.stderr + repeated.stdout
+            )
+
 
 if __name__ == "__main__":
     unittest.main()
