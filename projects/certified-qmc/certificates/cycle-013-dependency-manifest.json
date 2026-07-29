@@ -14,39 +14,45 @@
     ],
     "sha256": "74a51d2027d6a7bf240d0dbec5cd0909639767324795f11724a4a43d073c7d90"
   },
-  "certificate_sha256": "f6b88fe1c5c4ff001d6659e19c2ba6a0d08c5b92d160ff292492ecb1bbe2785a",
+  "certificate_sha256": "6b3d176da44d344a76d489ac9bd5611bb9c4dfb34d706a055eedb3e93f5209cb",
   "claim_tag": "VERIFIED_RELEASE_DEPENDENCY_PERIMETER",
   "clean_room": {
     "binaries": [
       {
+        "byte_identical_to_release": true,
         "contains_fftw": false,
         "ldd": [
-          "\tlinux-vdso.so.1 (0x00007ffeac1dd000)",
-          "\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x000073bbf5200000)",
-          "\t/lib64/ld-linux-x86-64.so.2 (0x000073bbf5564000)"
+          "\tlinux-vdso.so.1 (0x00007ffcffbe2000)",
+          "\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x000077401a800000)",
+          "\t/lib64/ld-linux-x86-64.so.2 (0x000077401ab6b000)"
         ],
         "name": "direct_modular",
+        "ordinary_release_sha256": "6f10c1dc13d37cd7f5f24a174c5aaf19db424e2082100d2628fd4df9e8da206c",
         "sha256": "6f10c1dc13d37cd7f5f24a174c5aaf19db424e2082100d2628fd4df9e8da206c"
       },
       {
+        "byte_identical_to_release": true,
         "contains_fftw": false,
         "ldd": [
-          "\tlinux-vdso.so.1 (0x00007ffce2fb5000)",
-          "\tlibgomp.so.1 => /lib/x86_64-linux-gnu/libgomp.so.1 (0x0000748422f0a000)",
-          "\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x0000748422c00000)",
-          "\t/lib64/ld-linux-x86-64.so.2 (0x0000748422f71000)"
+          "\tlinux-vdso.so.1 (0x00007fff4b7e8000)",
+          "\tlibgomp.so.1 => /lib/x86_64-linux-gnu/libgomp.so.1 (0x00007a0131184000)",
+          "\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007a0130e00000)",
+          "\t/lib64/ld-linux-x86-64.so.2 (0x00007a01311eb000)"
         ],
         "name": "streaming_pilot",
+        "ordinary_release_sha256": "837ca2079c1845761be87b951f84d9180226000c963708b27ef200e0698644fa",
         "sha256": "837ca2079c1845761be87b951f84d9180226000c963708b27ef200e0698644fa"
       },
       {
+        "byte_identical_to_release": true,
         "contains_fftw": false,
         "ldd": [
-          "\tlinux-vdso.so.1 (0x00007fffbff42000)",
-          "\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x000072fba6e00000)",
-          "\t/lib64/ld-linux-x86-64.so.2 (0x000072fba710d000)"
+          "\tlinux-vdso.so.1 (0x00007ffedfbc0000)",
+          "\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x000076c00c000000)",
+          "\t/lib64/ld-linux-x86-64.so.2 (0x000076c00c39e000)"
         ],
         "name": "cycle009_ntt",
+        "ordinary_release_sha256": "97f0910667e874872b9638b08aa801692a14dfa586c9079b0f537c746fad6f80",
         "sha256": "97f0910667e874872b9638b08aa801692a14dfa586c9079b0f537c746fad6f80"
       }
     ],
@@ -60,7 +66,7 @@
       "native/cycle009_ntt.c"
     ]
   },
-  "created_at_utc": "2026-07-29T08:40:49.605740+00:00",
+  "created_at_utc": "2026-07-29T08:43:55.411330+00:00",
   "dependency_policy": {
     "fftw_present": false,
     "other_third_party_dependencies": [],
@@ -79,9 +85,9 @@
         "libc.so.6"
       ],
       "ldd": [
-        "\tlinux-vdso.so.1 (0x00007ffe57bc0000)",
-        "\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x000075b2e7a00000)",
-        "\t/lib64/ld-linux-x86-64.so.2 (0x000075b2e7cca000)"
+        "\tlinux-vdso.so.1 (0x00007fffd45a6000)",
+        "\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007ea5e6200000)",
+        "\t/lib64/ld-linux-x86-64.so.2 (0x00007ea5e64ca000)"
       ],
       "sha256": "6f10c1dc13d37cd7f5f24a174c5aaf19db424e2082100d2628fd4df9e8da206c"
     },
@@ -93,10 +99,10 @@
         "libc.so.6"
       ],
       "ldd": [
-        "\tlinux-vdso.so.1 (0x00007ffc5c5f4000)",
-        "\tlibgomp.so.1 => /lib/x86_64-linux-gnu/libgomp.so.1 (0x0000710143d90000)",
-        "\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x0000710143a00000)",
-        "\t/lib64/ld-linux-x86-64.so.2 (0x0000710143df7000)"
+        "\tlinux-vdso.so.1 (0x00007ffdd77e7000)",
+        "\tlibgomp.so.1 => /lib/x86_64-linux-gnu/libgomp.so.1 (0x00007058fa98f000)",
+        "\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007058fa600000)",
+        "\t/lib64/ld-linux-x86-64.so.2 (0x00007058fa9f6000)"
       ],
       "sha256": "837ca2079c1845761be87b951f84d9180226000c963708b27ef200e0698644fa"
     },
@@ -107,9 +113,9 @@
         "libc.so.6"
       ],
       "ldd": [
-        "\tlinux-vdso.so.1 (0x00007ffc6e1b2000)",
-        "\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007e8e4c400000)",
-        "\t/lib64/ld-linux-x86-64.so.2 (0x00007e8e4c7f9000)"
+        "\tlinux-vdso.so.1 (0x00007ffd8e39e000)",
+        "\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x0000704420c00000)",
+        "\t/lib64/ld-linux-x86-64.so.2 (0x0000704420e69000)"
       ],
       "sha256": "97f0910667e874872b9638b08aa801692a14dfa586c9079b0f537c746fad6f80"
     }
@@ -123,6 +129,7 @@
     "source": "native/streaming_pilot.c"
   },
   "gate": {
+    "clean_room_binaries_byte_identical": true,
     "clean_room_build_passed": true,
     "cycle_013_dependency_gate_passed": true,
     "fftw_absent_from_build_graph": true,

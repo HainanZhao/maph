@@ -76,6 +76,11 @@ class Cycle013Tests(unittest.TestCase):
             )
         for binary in artifact["clean_room"]["binaries"]:
             self.assertFalse(binary["contains_fftw"])
+            self.assertTrue(binary["byte_identical_to_release"])
+            self.assertEqual(
+                binary["sha256"],
+                binary["ordinary_release_sha256"],
+            )
 
 
 if __name__ == "__main__":

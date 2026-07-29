@@ -174,6 +174,22 @@ def main() -> None:
         item["contains_fftw"] for item in clean_room["binaries"]
     ):
         raise RuntimeError("clean-room binary links FFTW")
+    ordinary_by_name = {
+        Path(item["binary"]).name: item["sha256"]
+        for item in dependencies
+    }
+    for item in clean_room["binaries"]:
+        item["ordinary_release_sha256"] = ordinary_by_name[
+            item["name"]
+        ]
+        item["byte_identical_to_release"] = (
+            item["sha256"] == item["ordinary_release_sha256"]
+        )
+    if not all(
+        item["byte_identical_to_release"]
+        for item in clean_room["binaries"]
+    ):
+        raise RuntimeError("clean-room binary is not byte-identical")
 
     compiler = run(["cc", "--version"]).splitlines()[0]
     payload = {
@@ -222,6 +238,7 @@ def main() -> None:
         "gate": {
             "release_build_passed": True,
             "clean_room_build_passed": True,
+            "clean_room_binaries_byte_identical": True,
             "fftw_absent_from_build_graph": True,
             "fftw_absent_from_dynamic_dependencies": True,
             "cycle_013_dependency_gate_passed": True,
