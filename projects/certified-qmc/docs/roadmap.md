@@ -135,3 +135,14 @@ Select one preintegrated payoff or UQ integrand only after documenting:
 Gate: the report separately labels rule merit, RKHS inequality,
 integrand norm, statistical interval, discretization/model error, and
 empirical comparisons.
+
+## Production-phase completion audit
+
+`scripts/audit_production_phase_completion.py --require-complete` is
+the terminal Cycles 013–019 gate.  It requires 14 independent items:
+the closed G1–G3 certificates; sealed fidelity/usability audits; the
+298-case oracle; authenticated four-asset release package; repository
+tag; published DOI response; finalized supply-side prose; sealed
+Cycle-009 histogram; post-release optimization register; and the
+recorded human Workstream-D disposition.  Missing evidence is
+`PENDING`, never promoted by absence.

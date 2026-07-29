@@ -127,6 +127,9 @@ mechanically refuses to start without the published-DOI certificate.
 - `scripts/verify_certificate.py`: replay a core certificate.
 - `scripts/verify_engine_oracle.py`: authenticate the compact oracle or
   rebuild it byte-identically from both supplementary datasets.
+- `scripts/audit_production_phase_completion.py`: require explicit,
+  self-hashed evidence for every Cycles 013–019 deliverable and report
+  missing evidence as pending rather than inferred success.
 - `scripts/audit_phase0_target.py`: certify the frozen official prefix.
 - `scripts/audit_workstream_b_reference_table.py`: certify every
   dimension of the frozen vector-only prefix.
@@ -171,6 +174,8 @@ mechanically refuses to start without the published-DOI certificate.
   throughput pause, and versioned VPS disposition.
 - `docs/paper-supply-side-draft.md`: engine-first methods-paper prose
   with result fields mechanically left pending until their gates close.
+- `docs/post-release-optimization-register.md`: closed optimization
+  queue and its bit-identical promotion predicates.
 - `docs/roadmap.md`: gated workstreams.
 
 ## Quick start
