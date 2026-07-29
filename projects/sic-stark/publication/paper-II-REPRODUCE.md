@@ -23,12 +23,15 @@ sha256sum --check --strict ARCHIVE_CONTENTS.sha256
 PYTHONPATH=scripts python3 -m unittest discover -s tests -v
 ```
 
-The smoke suite reports `Ran 11 tests` followed by `OK`.
+The smoke suite reports `Ran 16 tests` followed by `OK`.
 
 Run the principal exact certificates:
 
 ```bash
+gp -q scripts/dimension_seven_admissible_strata.gp
 gp -q scripts/dimension_seven_exact_tcc.gp
+PYTHONPATH=scripts python3 scripts/certify_dimension_seven_double_sine.py \
+  --tolerance 1e-10
 gp -q scripts/dimension_eight_linear_cm_reinduction.gp
 gp -q scripts/dimension_eight_cm_unit_lattice.gp
 PYTHONPATH=scripts python3 scripts/certify_dimension_eight_cm_orientation.py

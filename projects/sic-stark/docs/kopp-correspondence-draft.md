@@ -1,12 +1,13 @@
-# Draft correspondence: four unconditional dimensions
+# Draft correspondence: unconditional identities in four dimensions
 
 Subject: Unconditional twisted-convolution identities in dimensions 4, 5, 7, and 8
 
 Dear Dr. Kopp,
 
 I am writing to share two companion manuscripts proving the formal
-Appleby--Flammia--Kopp Twisted Convolution Conjecture unconditionally
-in dimensions \(4,5,7,\) and \(8\). The proofs use your
+Appleby--Flammia--Kopp Twisted Convolution Conjecture in dimensions
+\(4\) and \(5\), in the discriminant-\(32\) stratum of dimension
+\(7\), and in both admissible strata of dimension \(8\). The proofs use your
 Shintani--Faddeev cocycle as the analytic bridge, but every special
 value used in the finite reconstruction is identified without assuming
 a Stark conjecture or using `bnrstark` recognition as a logical input.
@@ -17,8 +18,9 @@ The four dimensions split naturally by proof mechanism:
 - dimension \(5\) uses Shintani's proved algebraicity theorem, an
   explicit safe exponent, Arb isolation, Voutier rigidity, and exact
   degree-eight ray-field arithmetic;
-- dimension \(7\) uses conductor lowering and the same height-rigidity
-  strategy in a degree-\(48\) compositum;
+- the discriminant-\(32\) dimension-\(7\) stratum uses conductor
+  lowering and the same height-rigidity strategy in a degree-\(48\)
+  compositum (the admissible discriminant-\(8\) stratum remains open);
 - dimension \(8\) splits into its two form discriminants, closed
   respectively by linear CM reinduction to Stark's proved
   imaginary-quadratic rank-one case and by quadratic ray units with an

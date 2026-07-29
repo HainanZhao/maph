@@ -38,12 +38,28 @@ class DimensionSevenClosureTests(unittest.TestCase):
 
     def test_exact_phase_packet(self) -> None:
         packet = run_python("dimension_seven_phase_audit.py")
+        self.assertEqual(packet["form"], [1, -6, 1])
+        self.assertEqual(packet["form_conductor"], 2)
+        self.assertEqual(packet["form_discriminant"], 32)
+        self.assertEqual(packet["fixed_point"], "3+2*sqrt(2)")
         self.assertEqual(packet["rademacher_invariant"], 9)
         self.assertEqual(
             packet["phase_formula"], "zeta_56^(7-32*Q(p))"
         )
         self.assertEqual(len(packet["records"]), 48)
         self.assertLess(packet["reciprocal_residual"], 1e-7)
+
+    def test_admissible_strata_and_scope(self) -> None:
+        output = self.run_gp("dimension_seven_admissible_strata.gp")
+        self.assertIn("D7_F1=2", output)
+        self.assertIn("D7_FORM_CONDUCTORS=[1, 2]", output)
+        self.assertIn("D7_DISCRIMINANTS=[8, 32]", output)
+        self.assertIn("D7_Q8_DISCRIMINANT=8", output)
+        self.assertIn("D7_Q32_DISCRIMINANT=32", output)
+        self.assertIn("D7_WIDE_CLASS_NUMBER_8=1", output)
+        self.assertIn("D7_WIDE_CLASS_NUMBER_32=1", output)
+        self.assertIn("D7_CERTIFIED_STRATUM_DISCRIMINANT=32", output)
+        self.assertIn("D7_OPEN_STRATUM_DISCRIMINANT=8", output)
 
     def test_complete_phase_and_ray_label_packet(self) -> None:
         packet = run_python("dimension_seven_packet_certificate.py")
@@ -65,6 +81,12 @@ class DimensionSevenClosureTests(unittest.TestCase):
         output = self.run_gp(
             "dimension_seven_shintani_audit.gp", "2000000000"
         )
+        transcript = (
+            ROOT
+            / "certificates"
+            / "dimension-seven-shintani-divisors.txt"
+        ).read_text()
+        self.assertEqual(output, transcript)
         self.assertIn("SHINTANI_INDEX=2", output)
         self.assertIn("MAXIMAL_ABELIAN_IS_Q_ZETA_56=1", output)
         self.assertIn(

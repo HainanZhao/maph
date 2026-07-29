@@ -1,0 +1,77 @@
+{
+  "claim_tag": "VERIFIED",
+  "corrected_theorem_scope": {
+    "dimension_eight": {
+      "admissible_discriminants": [
+        5,
+        45
+      ],
+      "status": "VERIFIED_BOTH_STRATA"
+    },
+    "dimension_seven": {
+      "admissible_form_conductors": [
+        1,
+        2
+      ],
+      "admissible_form_discriminants": [
+        8,
+        32
+      ],
+      "certified_discriminants": [
+        32
+      ],
+      "open_discriminants": [
+        8
+      ]
+    },
+    "statement": "Both formal shifts are proved for every admissible dimension-seven form of discriminant 32 and every admissible dimension-eight form."
+  },
+  "dimension_eight_referee_repairs": {
+    "cm_conductor": "p_2^3*p_3*p_5",
+    "cm_conductor_hnf": "[60,36;0,2]",
+    "cm_ray_group": [
+      8,
+      4
+    ],
+    "roots_of_unity_order": 2,
+    "roots_of_unity_script": "scripts/dimension_eight_cm_unit_lattice.gp",
+    "stark_S_cardinality": 4,
+    "stark_unit_hypothesis": "|S| >= 3"
+  },
+  "evidence_hashes": {
+    "arb_transcript": "5df034a570ba4017c1a052c3ba5468badf101905c3bb561aa14aa969b3e2746f",
+    "dimension_eight_cm_script": "7d030ebe54e8290b8de435368140a72a794a882d22f95a92ed3f6ca1c57f54c5",
+    "dimension_eight_test": "0a63605e0e930d2b5f073671276f70fc66bfeacbf81fa5939584b2288946baff",
+    "dimension_seven_phase_script": "a3a7e3447b29061556248af04099bf4ec169702610ae25895b4467a6f8c71c5d",
+    "dimension_seven_scope_script": "afca6736eb844f3c819a1c5b80c36bbcc915ab2a18089707075e47b873e9cc1e",
+    "dimension_seven_shintani_script": "c7d28d50042f03fb762c62d267b34f9a4e62893be40d47ec06d44c064906e3a1",
+    "dimension_seven_test": "9195deaa31ac7802e40411c139e86e2509701c8a45db4f25b4f05be6519f3979",
+    "divisor_transcript": "ea8b215ee1ff2c66d74a90d833c74db99f162d95d61067462fcb49e154158046",
+    "paper_II_pdf": "c5ea6d5c29eadfb2e2fab84457ec9a1ceffbb50ccedd4d4be8208c03a17a32a7",
+    "paper_II_source": "072769eb3a29a92f62e6937f418d1ff7c473dda4e0f359268604d71a94da7713",
+    "referee_regression_test": "77021db62c47df0d584ad0b8b7758d4c51cbf07154ff5909f6813a3b4e711591"
+  },
+  "prior_gate": {
+    "discriminant_32_replay_remains_valid": true,
+    "scope_inference_withdrawn": true,
+    "superseded_certificate": "certificates/dimension-seven-cycle158-publication-gate.json",
+    "superseded_verdict": "PROVED_NO_RESCOPE"
+  },
+  "recorded_at_utc": "2026-07-29T15:10:00Z",
+  "regression_repairs": {
+    "companion_paper_I_cited": true,
+    "dimension_seven_32_divisor_table": true,
+    "dimension_seven_forms_displayed": true,
+    "dimension_seven_full_packet_polynomial": true,
+    "dimension_seven_raw_arb_radius": "5.86e-11",
+    "dimension_seven_sturm_and_frobenius_labels": true,
+    "platform_runtime_archive_section": true
+  },
+  "schema": "sic-stark-dimension-seven-cycle160-scope-correction-v1",
+  "targeted_regression_run": {
+    "command": "python3 -m unittest tests.test_paper_ii_referee_regressions tests.test_dimension_seven_closure tests.test_dimension_eight_unconditional_closure",
+    "failed": 0,
+    "passed": 15
+  },
+  "verdict": "RESCOPED_DISCRIMINANT_32_PROVED_DISCRIMINANT_8_OPEN"
+}

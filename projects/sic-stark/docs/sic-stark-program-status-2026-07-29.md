@@ -4,16 +4,16 @@ Date: 2026-07-29
 
 ## Proved dimensions
 
-Four dimensions are proved unconditionally by the Twisted Convolution
-Conjecture (TCC) in the canonical rank-one family
-\(Q_d=\langle1,1-d,1\rangle\):
+Unconditional formal TCC identities are proved in four dimensions,
+with the following exact scope:
 
 - **Dimension 4** (Paper I): boundary value \(\log u\) via the class
   number formula, fused packet at \(-q\), exact two-base calibration.
 - **Dimension 5** (Paper I): fused at \(+q\) at the closed locus, lens
   level 15, alias sign bit 0, independently proved algebraic packet.
-- **Dimension 7** (Paper II): exact packet certificate, phase audit,
-  symbolic reduction, TCC shifts verified.
+- **Dimension 7, discriminant 32** (Paper II): exact packet
+  certificate, phase audit, symbolic reduction, and both TCC shifts.
+  The distinct admissible discriminant-8 stratum remains open.
 - **Dimension 8** (Paper II): CM orientation certified, maximal cocycle
   certified, lower conductor certified, primitive windows certified,
   unconditional closure.
@@ -66,14 +66,14 @@ be repaired before it is publication-ready:
 
 ## Latest completed cycles
 
-### Cycle 158: dimension-seven publication gate
+### Cycle 160: dimension-seven scope correction
 
-The conductor-two obligation was rerun from the current tree rather
-than inherited from Cycle 151. All eight dedicated closure tests pass,
-the Paper II clean-extraction archive passes all 80 included tests, and
-the exact certificate again gives Shintani index two, both shifts, and
-all 441 minors per shift. Theorem 1 needs no rescope. See
-`docs/sic-stark-cycle158.md`.
+The Cycle-158 replay correctly verified the discriminant-32 packet but
+incorrectly promoted covariance within that discriminant to all
+dimension-seven admissible forms. Admissibility permits conductors one
+and two, hence discriminants 8 and 32. Paper II is rescoped to the
+proved discriminant-32 stratum; discriminant 8 is an explicit open
+target. The Cycle-158 universal scope verdict is withdrawn.
 
 ### Cycle 154: factorized conditioning
 

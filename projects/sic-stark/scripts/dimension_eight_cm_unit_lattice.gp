@@ -110,6 +110,12 @@ cm_conductor_0 = rnfconductor(cm_base, cm_relative_0);
 cm_conductor_1 = rnfconductor(cm_base, cm_relative_1);
 cm_ray_0 = cm_conductor_0[2];
 cm_ray_1 = cm_conductor_1[2];
+print("CM_CONDUCTOR_0=", cm_conductor_0[1]);
+print("CM_CONDUCTOR_0_FACTORIZATION=", \
+  idealfactor(cm_base, cm_conductor_0[1][1]));
+print("CM_CONDUCTOR_1=", cm_conductor_1[1]);
+print("CM_CONDUCTOR_1_FACTORIZATION=", \
+  idealfactor(cm_base, cm_conductor_1[1][1]));
 
 \\ Construct the ray groups before the absolute unit audits so their
 \\ displayed cyclic coordinates are reproducible within this transcript.

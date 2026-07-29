@@ -110,6 +110,8 @@ def main() -> None:
         "rank": 1,
         "form": list(FORM),
         "form_conductor": 2,
+        "form_discriminant": 32,
+        "fixed_point": "3+2*sqrt(2)",
         "dimension_grid_indices": {"j": 1, "m": 1},
         "stabilizer": [list(row) for row in STABILIZER],
         "rademacher_dedekind_sum": "-37/70",

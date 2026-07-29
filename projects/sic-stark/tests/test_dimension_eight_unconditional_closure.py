@@ -53,6 +53,17 @@ class DimensionEightUnconditionalClosureTests(unittest.TestCase):
 
         lattice = run_gp("scripts/dimension_eight_cm_unit_lattice.gp")
         self.assertIn("CM_UNIT_LATTICE_AUDIT_COMPLETE=1", lattice)
+        self.assertEqual(
+            lattice.count(
+                "FACTORIZATION=[[2, [0, 1]~, 2, 1, "
+                "[0, -6; 1, 0]], 3; [3, [0, 1]~, 2, 1, "
+                "[0, -6; 1, 0]], 1; [5, [-2, 1]~, 1, 1, "
+                "[2, -6; 1, 2]], 1]"
+            ),
+            2,
+        )
+        self.assertIn("PACKET_0_ROOTS_OF_UNITY=2", lattice)
+        self.assertIn("PACKET_1_ROOTS_OF_UNITY=2", lattice)
         self.assertIn(
             "PACKET_0_SELECTED_RAY_CHARACTER=[6, 1]", lattice
         )
