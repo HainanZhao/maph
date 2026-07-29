@@ -87,6 +87,14 @@ Date: 2026-07-29
 - The pilot's first failed transcript is retained. It exposed and then
   isolated a native constant-factor error before authorization; the v2
   preregistration changed no acceptance threshold.
+- The Cycle-013 release graph and clean-room build contain no FFTW
+  reference or linked object. The direct evaluator links only the C
+  runtime; the frozen OpenMP streaming kernel links only the compiler
+  OpenMP runtime and C runtime.
+- Archived terms snapshots classify the UNSW lattice page and Magic
+  Point Shop as `UNCLEAR`, and frozen QMCPy as `REDISTRIBUTABLE` under
+  Apache-2.0. Production therefore uses keyed merits without embedded
+  vectors and requires no licensing escalation.
 
 ## ENCLOSED
 
@@ -198,3 +206,6 @@ hardware and implementation.
 - “Public-table audit” as the flagship Workstream B deliverable:
   replaced by certified reference-table supply after the frozen
   sites-plus-literature perimeter produced zero attached merit values.
+- The exact/Arb production tier split is retained as a designed
+  contingency but retired from the active plan because the frozen
+  streaming throughput gate passed.

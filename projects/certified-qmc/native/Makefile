@@ -1,25 +1,24 @@
 CC ?= cc
-CFLAGS ?= -O3 -std=c11 -Wall -Wextra -Wpedantic
+RELEASE_CFLAGS := -O3 -std=c11 -Wall -Wextra -Wpedantic \
+	-D_POSIX_C_SOURCE=200809L
 
 BUILD_DIR := ../build/native
-TARGETS := $(BUILD_DIR)/direct_modular $(BUILD_DIR)/fftw_plan_audit \
-	$(BUILD_DIR)/streaming_pilot
+TARGETS := $(BUILD_DIR)/direct_modular $(BUILD_DIR)/streaming_pilot
+LEGACY_NUMERICAL_TARGET := $(BUILD_DIR)/fftw_plan_audit
 
-.PHONY: all clean
+.PHONY: all release clean
 
-all: $(TARGETS)
+all: release
+
+release: $(TARGETS)
 
 $(BUILD_DIR)/direct_modular: direct_modular.c
 	mkdir -p $(BUILD_DIR)
-	$(CC) $(CFLAGS) -D_POSIX_C_SOURCE=200809L $< -o $@
-
-$(BUILD_DIR)/fftw_plan_audit: fftw_plan_audit.c
-	mkdir -p $(BUILD_DIR)
-	$(CC) $(CFLAGS) -D_POSIX_C_SOURCE=200809L $< -o $@ -lfftw3 -lm
+	$(CC) $(RELEASE_CFLAGS) $< -o $@
 
 $(BUILD_DIR)/streaming_pilot: streaming_pilot.c
 	mkdir -p $(BUILD_DIR)
-	$(CC) $(CFLAGS) -D_POSIX_C_SOURCE=200809L -fopenmp $< -o $@
+	$(CC) $(RELEASE_CFLAGS) -fopenmp $< -o $@
 
 clean:
-	rm -f $(TARGETS)
+	rm -f $(TARGETS) $(LEGACY_NUMERICAL_TARGET)

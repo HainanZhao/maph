@@ -72,8 +72,11 @@ replay.
    model validation outside the certification chain.~~
 11. ~~Freeze the fidelity/usability grid, weights, artifact contract,
     and per-cell conservative prime budgets.~~
-12. Vendor all fixed and extensible upstream files with
-    license/provenance review and SHA freezes.
+12. ~~Archive and classify source terms, freeze keyed-vector mode for
+    `UNCLEAR` sources, remove FFTW from the release graph, and choose
+    artifact licenses.~~
+    Full input files are fetched transiently and hash-pinned for runs,
+    but are not redistributed.
 13. ~~Extend and verify the deterministic prime schedule required by
     the pilot only.~~
 14. ~~Implement the prime-major streaming evaluator and pass the frozen
@@ -85,8 +88,8 @@ replay.
 
 Gate: every supplied entry has a replayable certificate and upstream
 hash. The 54.9-trillion incremental count now has a passing local
-projection, but source/license and full-schedule gates still forbid
-production launch.
+projection and the source/license gate is closed. The full-schedule and
+chunk-replay gates still forbid production launch.
 
 ## Phase 3 — number-theoretic constructions
 
