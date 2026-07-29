@@ -1,0 +1,75 @@
+{
+  "amended_at_utc": "2026-07-29T04:36:30Z",
+  "checkpoint_sha256": "3fcc1aa8666735b61363d3790ad405504dadc77d4645ccb6e341594e38e31de0",
+  "conditional_double_double_optimization": {
+    "authorized_before_arb_profile": false,
+    "dual_shadow_same_tournament": true,
+    "promotion_predicate": "bit-identical complete branch trace to banked Arb run",
+    "required_source": "published rigorous double-word building-block constants",
+    "required_trace_fields": [
+      "stage",
+      "comparison_index",
+      "incumbent_exponent",
+      "challenger_exponent",
+      "comparison_sign",
+      "selected_exponent"
+    ],
+    "same_final_vector_alone_is_insufficient": true
+  },
+  "data_run_started": false,
+  "mandatory_report": {
+    "arb_fraction_of_total_wall_time": true,
+    "arb_wall_seconds": true,
+    "depth_histogram": [
+      "double_double_resolved",
+      "arb_resolved",
+      "exact_crt_resolved"
+    ],
+    "exact_escalation_count_against": 803,
+    "primary_run_double_double_resolved_value": 0
+  },
+  "primary_decision_architecture": {
+    "arb_precision_may_increase": true,
+    "correctness_basis": "outward-rounded Arb operations; no new DD radius proof",
+    "double_double_enabled": false,
+    "escalation": "balanced exact CRT reconstruction of candidate difference",
+    "ground_truth": "compiled prime-major scaled products and valuation-stratified NTT residues",
+    "shadow": "compiled Arb balls at 106-bit precision"
+  },
+  "schema": "certified-qmc-cycle009-preregistration-v2",
+  "supersedes_checkpoint_sha256": "0b70f46a781bf851a03937416f7e175c659f1663afe88c9961c424bb34b4eaf9",
+  "tag": "PREREGISTERED_AMENDMENT",
+  "target_run_started_before_amendment": false,
+  "unchanged_acceptance_gate": {
+    "comparison_count": 802767,
+    "exact_crt_escalation_rate": "exact_crt_escalated/802767",
+    "maximum_passing_count": 802,
+    "predicate": "exact_crt_escalated<803"
+  },
+  "unchanged_crt_budget": {
+    "candidate_crt_required_bits": 2162,
+    "candidate_difference_bound": "281751642321429516575114369182695812167268221912467557124745285965098344015686815483773942511840337539034821863181762287777678340048403992685877195124854347753538922315816785280478032531277351792772023956660820798824495660846123353008990086369531746023731349738475692814871396139915182771955141320842597657254544491786391926253181723555310437033814167048700158506595965550353222239553910137593700000419142698503990475863167259632228878759926333579818406836952191015493524698995351693832557075553508721052077217792144269146526759333494142258204106962726966322386017881803490920405601091478328504317806773022486560659001783091200000000000000000000000000",
+    "candidate_difference_bound_bits": 2161,
+    "candidate_minimum_primes": 35,
+    "candidate_product_bits": 2170,
+    "final_error_bound": "4996343174427227308497908438666770048344035652158767064765198288076721798846816254790660443233041433016422165485247885053471014651597554752724703496083584343834897105149246281873295634470493442987795370548677867645773009792257199022415675000587482820135801322870611515807195583110283149992116089427790314391876377288222108016373718584556435420864633235811215001278514602302021205556414999666285796318086635057913214873629221561450115870174346187737336171775190107222110058849527513578532309910720575919003138120273395644006037897816866591048843755255877241713543145094345253047728558218673849687592616885212129380488029286887849984000000000000000000000000",
+    "final_error_bound_bits": 2175,
+    "final_error_crt_required_bits": 2176,
+    "final_error_minimum_primes": 36,
+    "final_error_product_bits": 2232,
+    "overflow_check_extra_primes": 2,
+    "schedule_count": 40,
+    "schedule_covers_final_plus_overflow": true,
+    "schedule_sha256": "0948f43a85aa3a0af87e51591e3fac08a8deaae6b2075d2e80fde5694f01cc95"
+  },
+  "unchanged_target": {
+    "candidate_classes_per_stage": 16384,
+    "candidate_order": "5^a mod N for ascending 0<=a<N/4",
+    "convention": "DKS2013-eq5.13-beta0-product-B2",
+    "dimension": 50,
+    "first_component": 1,
+    "modulus": 65536,
+    "tie_rule": "smallest candidate exponent a",
+    "weights": "gamma_j=1/j^2"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "audit_sha256": "cec942b7003cba17a90f1836114d2d66a5c7480888bc3a42967eedf0c7aa3bba",
+  "audit_target": {
+    "dimension": 4,
+    "id": "unsw-fixed-product-j^-2-n1024",
+    "scope": "vendored prefix only",
+    "upstream_sha256": "d42503eda84c7fede8d2513d674a9eca4075041dc4cf8c2e0995b46b035b5ce9",
+    "upstream_url": "https://web.maths.unsw.edu.au/~fkuo/lattice/lattice-29102-1024.3600"
+  },
+  "core_certificate": {
+    "certificate_sha256": "cb54a588c778071d6eb811f67c1cdea6f9e0283944aa5a40ea330f191a685eeb",
+    "definition": {
+      "claim_boundary": "squared shift-averaged worst-case error in the frozen product-weight beta=0 convention; not an integrand error",
+      "convention": "DKS2013-eq5.13-beta0-product-B2",
+      "kernel": "B2(x)=x^2-x+1/6",
+      "quantity": "-1+(1/N)*sum_k product_j(1+gamma_j*B2({k*z_j/N}))"
+    },
+    "denominator_proof": {
+      "formula": "N*product_j(6*den(gamma_j)*N^2)",
+      "master_bit_length": 110,
+      "master_denominator": "924117287566379233691096636719104",
+      "quotient": "8192",
+      "reduced_denominator_divides_master": true
+    },
+    "input": {
+      "all_generator_components_are_units": true,
+      "dimension": 4,
+      "generator_mod_N": [
+        1,
+        275,
+        179,
+        319
+      ],
+      "modulus": 1024,
+      "weights": [
+        {
+          "denominator": "1",
+          "numerator": "1"
+        },
+        {
+          "denominator": "4",
+          "numerator": "1"
+        },
+        {
+          "denominator": "9",
+          "numerator": "1"
+        },
+        {
+          "denominator": "16",
+          "numerator": "1"
+        }
+      ]
+    },
+    "replay": {
+      "algorithm": "direct exact Fraction sum-product",
+      "exact_summand_sha256": "be2ea02f001c197cd11256e0e2da2f946ec1b7f94797c62d587bc3c094d89ad7"
+    },
+    "result": {
+      "denominator": "112807286079880277550182694912",
+      "numerator": "61326642586251563219681"
+    },
+    "schema": "certified-qmc-exact-b2-error-v1",
+    "tag": "VERIFIED"
+  },
+  "schema": "certified-qmc-audit-wrapper-v1",
+  "tag": "VERIFIED_PREFIX"
+}

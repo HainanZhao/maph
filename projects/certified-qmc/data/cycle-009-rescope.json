@@ -1,0 +1,35 @@
+{
+  "schema": "certified-qmc-cycle009-rescope-v1",
+  "frozen_at_utc": "2026-07-29T06:44:00Z",
+  "execution_state": "PREREGISTERED_NOT_RUN",
+  "cancelled": false,
+  "removed_from": "Workstream B critical path",
+  "new_role": "Workstream C entry gate for certified-CBC construction claims",
+  "reason": "Workstream B now evaluates supplied vectors only and does not use the CBC decision layer; Workstream C will construct and compare new rules and therefore needs the measured decision architecture.",
+  "banked_inputs": [
+    {
+      "path": "certificates/cycle-009-preregistration.json",
+      "sha256": "e43ce3edbab6d0e665278c0c4639df131eab072859ab325db796ebf86bb476ba"
+    },
+    {
+      "path": "certificates/cycle-009-preregistration-v2-arb106.json",
+      "sha256": "ea2161929134ae9ad5ae987661185b82ec634e52ecee0064a180d63cc367b02f"
+    },
+    {
+      "path": "certificates/cycle-009-prime-schedule-40.json",
+      "sha256": "d949639b42db78910cda6ec6b5a35886936cd70a0e99861bc1c6bcdbf9a30a07"
+    }
+  ],
+  "unchanged_gate": {
+    "comparison_count": 802767,
+    "maximum_passing_exact_crt_escalations": 802,
+    "predicate": "exact_crt_escalated<803",
+    "required_report": [
+      "exact CRT escalation count and rate",
+      "escalation-depth histogram",
+      "complete branch trace",
+      "final vector"
+    ]
+  },
+  "claim_block": "No Workstream C rule may be labeled selected by certified CBC until this gate passes."
+}

@@ -44,10 +44,24 @@ define the finite part by an interior tilted contour and prove
 tilt-independence by Cauchy's theorem in the pole-free strip.  An
 exact all-characteristic calculation gives
 $A_6\equiv I\pmod6$, $\psi^2(A_6)=-1$, and equality of the Kopp and AFK
-multipliers in all thirty-six cases.  Consequently one explicitly
-stated analytic fusion-continuity conjecture implies both formal
-dimension-six shifts.  We do not claim that conjecture here.
+multipliers in all thirty-six cases. A subsequent Fourier-normalization
+audit found that the draft does not define the map from its additive
+spectral coefficients to the three logarithmic ray-class values.
+Accordingly the componentwise boundary estimate and its claimed
+implication to the formal shifts are retired pending such a derivation.
 \end{abstract}
+
+\paragraph{Cycle-157 status.}
+This is a research draft with a known formulation gap.  The raw packets
+in Conjecture~\ref{conj:estimate} omit the ordinary Fourier gauge.
+Restoring that gauge changes the fused alias scalar from $-q$ to $q^2$
+but still gives strong, well-conditioned growth on the tested boundary
+ladder.  More fundamentally, no formula below maps the resulting 36
+additive Fourier coefficients to the three ray-class logarithms
+$\mathcal P_j$, including branch and finite-part choices.  Thus
+BF$_6$ and the assertion BF$_6\Rightarrow$MFC$_6$ are not current
+claims.  The exact downstream algebra is conditional on a future,
+independently defined analytic input.
 
 \section{Statement and proof status}
 
@@ -543,7 +557,8 @@ One alias period has multiplier $-q$; at the boundary the oscillations
 are therefore $(-1)^ke^{2\pi ik\beta}$ and concentrate at
 $|k|\asymp s^{-1}$.
 
-\begin{conjecture}[Quantitative boundary fusion, BF$_6(\eta)$]
+\begin{conjecture}[Retired quantitative boundary fusion,
+BF$_6(\eta)$]
 \label{conj:estimate}
 For some $\eta,C,s_0>0$, uniformly over the thirty pairs
 $4b-5a\not\equiv0\pmod6$ and $r=0,1,2$,
@@ -558,9 +573,11 @@ where the fused value is the inherited $24$-factor Abel--Fresnel limit.
 \end{conjecture}
 
 A Dini modulus tending to zero would suffice instead of a power.
-Conjecture~\ref{conj:estimate} implies MFC$_6$ and hence
-Theorems~\ref{thm:stark} and~\ref{thm:conditional}.  The completely
-standalone formulation is
+The formerly claimed implication from
+Conjecture~\ref{conj:estimate} to MFC$_6$ is withdrawn by the
+cycle-157 audit: the displayed packets are ungauged, and the missing
+coefficient-to-ray-logarithm map is needed before any such implication
+can be stated. The retired standalone formulation is retained at
 \path{docs/dimension-six-standalone-estimate.md}.
 
 \subsection*{Conditioning slopes}

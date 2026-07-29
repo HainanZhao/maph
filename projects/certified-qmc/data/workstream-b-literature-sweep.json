@@ -1,0 +1,70 @@
+{
+  "schema": "certified-qmc-workstream-b-literature-sweep-v1",
+  "perimeter": "data/workstream-b-literature-perimeter.json",
+  "completed_at_utc": "2026-07-29T06:40:00Z",
+  "inspection_rule": "presence and attachment audit only; no exact-minus-published subtraction",
+  "papers_inspected": 6,
+  "papers_with_numerical_merits_or_foms": 4,
+  "papers_with_values_attached_to_frozen_vectors": 0,
+  "qualifying_classification_targets": 0,
+  "external_merit_subtractions_performed": false,
+  "results": [
+    {
+      "id": "kuo-joe-2002-composite",
+      "numerical_merits_present": true,
+      "attached_to_frozen_vectors": false,
+      "disposition": "CONTEXT_ONLY",
+      "evidence": "The numerical section treats composite test moduli near 10^3, 2*10^3, and products of distinct primes; it does not identify lattice-29102 or the N=2^10 through 2^20 fixed family.",
+      "inspection_source": "author thesis version containing the corresponding construction and numerical chapters",
+      "inspection_source_url": "https://researchcommons.waikato.ac.nz/bitstreams/e53faf1e-b556-4700-8e84-d9ba0dd00b15/download",
+      "inspection_source_sha256": "9e4a2e5a36343fdfb277aff7772bf3d019d8e070273e11ff12d4882b8e172025"
+    },
+    {
+      "id": "kuo-2003-optimal-rate",
+      "numerical_merits_present": false,
+      "attached_to_frozen_vectors": false,
+      "disposition": "THEORY_ONLY_FOR_THIS_SWEEP",
+      "evidence": "The journal article is a convergence theorem paper. The corresponding author thesis chapter and its rate experiments use prime moduli rather than the frozen powers-of-two vector family.",
+      "journal_url": "https://www.sciencedirect.com/science/article/pii/S0885064X03000062"
+    },
+    {
+      "id": "nuyens-cools-2006-fast-cbc",
+      "numerical_merits_present": true,
+      "attached_to_frozen_vectors": false,
+      "disposition": "CONTEXT_ONLY",
+      "evidence": "Tables 2-4 print 100-dimensional worst-case errors for prime and selected composite moduli. They compare independent fast-CBC runs with earlier experiments and do not identify the lattice-29102 or lattice-39102 vectors.",
+      "inspection_source_url": "https://www.ams.org/journals/mcom/2006-75-254/S0025-5718-06-01785-6/",
+      "inspection_source_sha256": "eaa462c32e59c4a01c107b8d087d12ad40cb031111a3d80fabfd24fee292c872"
+    },
+    {
+      "id": "lecuyer-munger-2016-latticebuilder",
+      "numerical_merits_present": true,
+      "attached_to_frozen_vectors": false,
+      "disposition": "CONTEXT_ONLY",
+      "evidence": "The examples report variance ratios and merit distributions for lattices generated within the experiments; no example identifies a frozen UNSW vector.",
+      "inspection_source_url": "https://www.iro.umontreal.ca/~lecuyer/myftp/papers/latbuilder-final.pdf"
+    },
+    {
+      "id": "lecuyer-et-al-2022-latnet-builder",
+      "numerical_merits_present": true,
+      "attached_to_frozen_vectors": false,
+      "disposition": "CONTEXT_ONLY",
+      "evidence": "The paper prints FOMs and FOM quantiles for newly generated polynomial lattices, Sobol points, and digital nets. It does not attach a value to the frozen rank-1 lattice vectors.",
+      "inspection_source_url": "https://export.arxiv.org/pdf/2012.10263",
+      "inspection_source_sha256": "115affa3cb265a3a893e0667c7c03e9bf87ce30b29be747b35dd3db0ed845284"
+    },
+    {
+      "id": "dick-kuo-sloan-2013-survey",
+      "numerical_merits_present": false,
+      "attached_to_frozen_vectors": false,
+      "disposition": "REPOSITORY_LINK_WITHOUT_MERIT_TABLE",
+      "evidence": "The survey develops the merit formulas and links the UNSW generating-vector repository, but it does not print a numerical merit table attached to lattice-29102 or lattice-39102.",
+      "inspection_source_url": "https://web.maths.unsw.edu.au/~josefdick/preprints/DKS2013_Acta_Num_Version.pdf",
+      "inspection_source_sha256": "4a74dcf7d574148d7a78eae81a469a5e25cf6a4cc474ba065a6b659ad6c33ca1"
+    }
+  ],
+  "perimeter_conclusion": "Across the frozen distribution sites and the six named primary papers, no published numerical merit is attached unambiguously to the frozen production vectors.",
+  "classification_branch": "CLOSED_FOR_FROZEN_PERIMETER",
+  "T_eval_priority": "OPTIONAL_APPENDIX_UNLESS_A_NEW_PROSPECTIVE_MERIT_TARGET_IS_PREREGISTERED",
+  "workstream_b_pivot": "CERTIFIED_REFERENCE_TABLE_SUPPLY"
+}

@@ -1,0 +1,98 @@
+{
+  "arb_precision_bits": 128,
+  "cases": [
+    {
+      "id": "ordinary-separated",
+      "left": 1,
+      "modulus": 32,
+      "prefix": [
+        1,
+        7
+      ],
+      "result": {
+        "comparison": 1,
+        "resolved_by": "double-double"
+      },
+      "right": 5,
+      "weights": [
+        {
+          "denominator": "1",
+          "numerator": "1"
+        },
+        {
+          "denominator": "4",
+          "numerator": "1"
+        },
+        {
+          "denominator": "9",
+          "numerator": "1"
+        }
+      ]
+    },
+    {
+      "id": "near-overlap-arb",
+      "left": 1,
+      "modulus": 32,
+      "prefix": [
+        1,
+        7
+      ],
+      "result": {
+        "comparison": 1,
+        "resolved_by": "arb"
+      },
+      "right": 5,
+      "weights": [
+        {
+          "denominator": "1",
+          "numerator": "1"
+        },
+        {
+          "denominator": "4",
+          "numerator": "1"
+        },
+        {
+          "denominator": "100000000000000000000000000000",
+          "numerator": "1"
+        }
+      ]
+    },
+    {
+      "id": "forced-sign-tie",
+      "left": 5,
+      "modulus": 32,
+      "prefix": [
+        1,
+        7
+      ],
+      "result": {
+        "comparison": 0,
+        "exact_equality": true,
+        "resolved_by": "exact-crt-reference"
+      },
+      "right": 27,
+      "weights": [
+        {
+          "denominator": "1",
+          "numerator": "1"
+        },
+        {
+          "denominator": "4",
+          "numerator": "1"
+        },
+        {
+          "denominator": "9",
+          "numerator": "1"
+        }
+      ]
+    }
+  ],
+  "claim_boundary": "Reference direct-score comparison ladder only. The compiled NTT shadow and production-cost radii remain unimplemented.",
+  "date": "2026-07-29",
+  "double_double_radius": "exact rational audit radius around EFT double-double center",
+  "flint_version": "3.6.0",
+  "python_flint_version": "0.9.0",
+  "schema": "certified-qmc-shadow-decision-preflight-v1",
+  "tag": "VERIFIED_REFERENCE",
+  "target_run_started": false
+}

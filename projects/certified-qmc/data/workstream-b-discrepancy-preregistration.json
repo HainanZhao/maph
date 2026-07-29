@@ -1,0 +1,28 @@
+{
+  "schema": "certified-qmc-workstream-b-discrepancy-preregistration-v1",
+  "frozen_at_utc": "2026-07-29T04:24:47Z",
+  "status_at_freeze": {
+    "published_merit_values_acquired": false,
+    "exact_vs_published_merit_comparisons_performed": false,
+    "existing_unsw_data_kind": "generator-components-only",
+    "cycle005_comparison": "internal exact evaluator agreement",
+    "cycle008_comparison": "internal direct-vs-stratified modular agreement"
+  },
+  "classification": {
+    "exact_target": "q: exact rational in explicitly converted source normalization",
+    "published_value": "y: published lexical decimal interpreted as an exact rational",
+    "certified_bound": "B_alg: end-to-end absolute error bound including final formatting",
+    "discrepancy_predicate": "abs(y-q)>B_alg",
+    "expected_rounding_predicate": "abs(y-q)<=B_alg",
+    "missing_bound_classification": "UNCLASSIFIED_EXTERNAL"
+  },
+  "required_before_comparison": [
+    "source URL/version/retrieval timestamp/hash/lexical value",
+    "kernel/weight/error normalization",
+    "source algorithm and operation order",
+    "software/compiler/library/rounding mode",
+    "published formatting convention",
+    "replayable outward-rounded B_alg derivation"
+  ],
+  "workstream_b_merit_computation_blocked_until_gate_replays": true
+}

@@ -1,0 +1,380 @@
+{
+  "artifacts": {
+    "binary": "/root/projects/maph/projects/certified-qmc/build/native/fftw_plan_audit",
+    "binary_sha256": "d14bc2c5ede257229983e91904e0570ec5a577d65099e249a14c58c0cc343a34",
+    "source": "native/fftw_plan_audit.c",
+    "source_sha256": "b3658e2126e581d5c528f20a959fb7d28b39f5f0b5929200591fb315eeace4b6",
+    "transcript_sha256": "1a294363745822b114e7473db0d57b07d4c732f781cbb1975dbfe0b5d3f5d374"
+  },
+  "boundary": "The plan transcript and fftw_flops counts are verified metadata. They are inputs to, not themselves a proof of, a forward-error bound.",
+  "claim_tag": "VERIFIED_PLAN_METADATA",
+  "created_utc": "2026-07-29T04:58:23.256993+00:00",
+  "environment": {
+    "compiler": "cc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "fftw_cc": "gcc -O3 -fomit-frame-pointer -mtune=native -malign-double -fstrict-aliasing -fno-schedule-insns",
+    "fftw_codelet_optim": "",
+    "fftw_package_version": "3.3.10-1ubuntu3",
+    "fftw_version": "fftw-3.3.10-sse2-avx",
+    "one_sixth_hex": "0x1.5555555555555p-3",
+    "p2_scaling_hex": "0x1.3bd3cc9be45dep+4",
+    "planner_flag": "FFTW_ESTIMATE",
+    "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+    "rounding_mode": "0"
+  },
+  "plans": [
+    {
+      "adds": 0,
+      "cost": 0.0,
+      "description": "(rdft2-r2hc-rank0)",
+      "direction": "r2c",
+      "fmas": 0,
+      "length": 1,
+      "muls": 0
+    },
+    {
+      "adds": 0,
+      "cost": 0.0,
+      "description": "(rdft2-hc2r-rank0   (rdft-rank0-iter-ci/1))",
+      "direction": "c2r",
+      "fmas": 0,
+      "length": 1,
+      "muls": 0
+    },
+    {
+      "adds": 2,
+      "cost": 0.0,
+      "description": "(rdft2-r2hc-direct-2 \"r2cf_2\")",
+      "direction": "r2c",
+      "fmas": 0,
+      "length": 2,
+      "muls": 0
+    },
+    {
+      "adds": 2,
+      "cost": 0.0,
+      "description": "(rdft2-hc2r-direct-2 \"r2cb_2\")",
+      "direction": "c2r",
+      "fmas": 0,
+      "length": 2,
+      "muls": 0
+    },
+    {
+      "adds": 6,
+      "cost": 0.0,
+      "description": "(rdft2-r2hc-direct-4 \"r2cf_4\")",
+      "direction": "r2c",
+      "fmas": 0,
+      "length": 4,
+      "muls": 0
+    },
+    {
+      "adds": 6,
+      "cost": 0.0,
+      "description": "(rdft2-hc2r-direct-4 \"r2cb_4\")",
+      "direction": "c2r",
+      "fmas": 0,
+      "length": 4,
+      "muls": 2
+    },
+    {
+      "adds": 20,
+      "cost": 0.0,
+      "description": "(rdft2-r2hc-direct-8 \"r2cf_8\")",
+      "direction": "r2c",
+      "fmas": 0,
+      "length": 8,
+      "muls": 2
+    },
+    {
+      "adds": 20,
+      "cost": 0.0,
+      "description": "(rdft2-hc2r-direct-8 \"r2cb_8\")",
+      "direction": "c2r",
+      "fmas": 0,
+      "length": 8,
+      "muls": 6
+    },
+    {
+      "adds": 54,
+      "cost": 0.0,
+      "description": "(rdft2-r2hc-direct-16 \"r2cf_16\")",
+      "direction": "r2c",
+      "fmas": 4,
+      "length": 16,
+      "muls": 8
+    },
+    {
+      "adds": 54,
+      "cost": 0.0,
+      "description": "(rdft2-hc2r-direct-16 \"r2cb_16\")",
+      "direction": "c2r",
+      "fmas": 4,
+      "length": 16,
+      "muls": 14
+    },
+    {
+      "adds": 17,
+      "cost": 31.0,
+      "description": "(rdft2-ct-dit/2   (hc2c-direct-2/4/1 \"hc2cfdftv_2_avx\"     (rdft2-r2hc-direct-2 \"r2cf_2\")     (rdft2-r2hc01-direct-2 \"r2cfII_2\"))   (dft-direct-16 \"n1fv_16_avx\"))",
+      "direction": "r2c",
+      "fmas": 0,
+      "length": 32,
+      "muls": 12
+    },
+    {
+      "adds": 17,
+      "cost": 25.0,
+      "description": "(rdft2-ct-dif/2   (hc2c-direct-2/4/1 \"hc2cbdftv_2_avx\"     (rdft2-hc2r-direct-2 \"r2cb_2\")     (rdft2-hc2r10-direct-2 \"r2cbIII_2\"))   (dft-direct-16 \"n1bv_16_avx\"))",
+      "direction": "c2r",
+      "fmas": 0,
+      "length": 32,
+      "muls": 8
+    },
+    {
+      "adds": 37,
+      "cost": 67.0,
+      "description": "(rdft2-ct-dit/2   (hc2c-direct-2/4/1 \"hc2cfdftv_2_avx\"     (rdft2-r2hc-direct-2 \"r2cf_2\")     (rdft2-r2hc01-direct-2 \"r2cfII_2\"))   (dft-direct-32 \"n1fv_32_avx\"))",
+      "direction": "r2c",
+      "fmas": 0,
+      "length": 64,
+      "muls": 28
+    },
+    {
+      "adds": 37,
+      "cost": 53.0,
+      "description": "(rdft2-ct-dif/2   (hc2c-direct-2/4/1 \"hc2cbdftv_2_avx\"     (rdft2-hc2r-direct-2 \"r2cb_2\")     (rdft2-hc2r10-direct-2 \"r2cbIII_2\"))   (dft-direct-32 \"n1bv_32_avx\"))",
+      "direction": "c2r",
+      "fmas": 0,
+      "length": 64,
+      "muls": 16
+    },
+    {
+      "adds": 297,
+      "cost": 416.0,
+      "description": "(rdft2-ct-dit/8   (hc2c-direct-8/28/1 \"hc2cfdftv_8_avx\"     (rdft2-r2hc-direct-8 \"r2cf_8\")     (rdft2-r2hc01-direct-8 \"r2cfII_8\"))   (dft-direct-16-x4 \"n2fv_16_avx\"))",
+      "direction": "r2c",
+      "fmas": 12,
+      "length": 128,
+      "muls": 93
+    },
+    {
+      "adds": 287,
+      "cost": 393.0,
+      "description": "(rdft2-ct-dif/4   (hc2c-direct-4/12/1 \"hc2cbdftv_4_avx\"     (rdft2-hc2r-direct-4 \"r2cb_4\")     (rdft2-hc2r10-direct-4 \"r2cbIII_4\"))   (dft-direct-32-x2 \"n1bv_32_avx\"))",
+      "direction": "c2r",
+      "fmas": 16,
+      "length": 128,
+      "muls": 74
+    },
+    {
+      "adds": 596,
+      "cost": 893.0,
+      "description": "(rdft2-ct-dit/32   (hc2c-direct-32/124/1 \"hc2cfdftv_32_avx\"     (rdft2-ct-dit/2       (hc2c-direct-2/4/1 \"hc2cfdftv_2_avx\"         (rdft2-r2hc-direct-2 \"r2cf_2\")         (rdft2-r2hc01-direct-2 \"r2cfII_2\"))       (dft-direct-16 \"n1fv_16_avx\"))     (rdft2-r2hc01-direct-32 \"r2cfII_32\"))   (dft-direct-8-x16 \"n2fv_8_avx\"))",
+      "direction": "r2c",
+      "fmas": 52,
+      "length": 256,
+      "muls": 191
+    },
+    {
+      "adds": 596,
+      "cost": 860.0,
+      "description": "(rdft2-ct-dif/32   (hc2c-direct-32/124/1 \"hc2cbdftv_32_avx\"     (rdft2-ct-dif/2       (hc2c-direct-2/4/1 \"hc2cbdftv_2_avx\"         (rdft2-hc2r-direct-2 \"r2cb_2\")         (rdft2-hc2r10-direct-2 \"r2cbIII_2\"))       (dft-direct-16 \"n1bv_16_avx\"))     (rdft2-hc2r10-direct-32 \"r2cbIII_32\"))   (dft-direct-8-x16 \"n1bv_8_avx\"))",
+      "direction": "c2r",
+      "fmas": 52,
+      "length": 256,
+      "muls": 160
+    },
+    {
+      "adds": 1398,
+      "cost": 2105.0,
+      "description": "(rdft2-ct-dit/32   (hc2c-direct-32/124/1 \"hc2cfdftv_32_avx\"     (rdft2-ct-dit/2       (hc2c-direct-2/4/1 \"hc2cfdftv_2_avx\"         (rdft2-r2hc-direct-2 \"r2cf_2\")         (rdft2-r2hc01-direct-2 \"r2cfII_2\"))       (dft-direct-16 \"n1fv_16_avx\"))     (rdft2-r2hc01-direct-32 \"r2cfII_32\"))   (dft-direct-16-x16 \"n2fv_16_avx\"))",
+      "direction": "r2c",
+      "fmas": 116,
+      "length": 512,
+      "muls": 473
+    },
+    {
+      "adds": 1398,
+      "cost": 2014.0,
+      "description": "(rdft2-ct-dif/32   (hc2c-direct-32/124/1 \"hc2cbdftv_32_avx\"     (rdft2-ct-dif/2       (hc2c-direct-2/4/1 \"hc2cbdftv_2_avx\"         (rdft2-hc2r-direct-2 \"r2cb_2\")         (rdft2-hc2r10-direct-2 \"r2cbIII_2\"))       (dft-direct-16 \"n1bv_16_avx\"))     (rdft2-hc2r10-direct-32 \"r2cbIII_32\"))   (dft-direct-16-x16 \"n1bv_16_avx\"))",
+      "direction": "c2r",
+      "fmas": 116,
+      "length": 512,
+      "muls": 384
+    },
+    {
+      "adds": 3146,
+      "cost": 4785.0,
+      "description": "(rdft2-ct-dit/32   (hc2c-direct-32/124/1 \"hc2cfdftv_32_avx\"     (rdft2-ct-dit/2       (hc2c-direct-2/4/1 \"hc2cfdftv_2_avx\"         (rdft2-r2hc-direct-2 \"r2cf_2\")         (rdft2-r2hc01-direct-2 \"r2cfII_2\"))       (dft-direct-16 \"n1fv_16_avx\"))     (rdft2-r2hc01-direct-32 \"r2cfII_32\"))   (dft-direct-32-x16 \"n2fv_32_avx\"))",
+      "direction": "r2c",
+      "fmas": 276,
+      "length": 1024,
+      "muls": 1085
+    },
+    {
+      "adds": 3146,
+      "cost": 4578.0,
+      "description": "(rdft2-ct-dif/32   (hc2c-direct-32/124/1 \"hc2cbdftv_32_avx\"     (rdft2-ct-dif/2       (hc2c-direct-2/4/1 \"hc2cbdftv_2_avx\"         (rdft2-hc2r-direct-2 \"r2cb_2\")         (rdft2-hc2r10-direct-2 \"r2cbIII_2\"))       (dft-direct-16 \"n1bv_16_avx\"))     (rdft2-hc2r10-direct-32 \"r2cbIII_32\"))   (dft-direct-32-x16 \"n1bv_32_avx\"))",
+      "direction": "c2r",
+      "fmas": 276,
+      "length": 1024,
+      "muls": 880
+    },
+    {
+      "adds": 6882,
+      "cost": 10657.0,
+      "description": "(rdft2-ct-dit/32   (hc2c-direct-32/124/1 \"hc2cfdftv_32_avx\"     (rdft2-ct-dit/2       (hc2c-direct-2/4/1 \"hc2cfdftv_2_avx\"         (rdft2-r2hc-direct-2 \"r2cf_2\")         (rdft2-r2hc01-direct-2 \"r2cfII_2\"))       (dft-direct-16 \"n1fv_16_avx\"))     (rdft2-r2hc01-direct-32 \"r2cfII_32\"))   (dft-direct-64-x16 \"n2fv_64_avx\"))",
+      "direction": "r2c",
+      "fmas": 692,
+      "length": 2048,
+      "muls": 2389
+    },
+    {
+      "adds": 6882,
+      "cost": 10218.0,
+      "description": "(rdft2-ct-dif/32   (hc2c-direct-32/124/1 \"hc2cbdftv_32_avx\"     (rdft2-ct-dif/2       (hc2c-direct-2/4/1 \"hc2cbdftv_2_avx\"         (rdft2-hc2r-direct-2 \"r2cb_2\")         (rdft2-hc2r10-direct-2 \"r2cbIII_2\"))       (dft-direct-16 \"n1bv_16_avx\"))     (rdft2-hc2r10-direct-32 \"r2cbIII_32\"))   (dft-direct-64-x16 \"n1bv_64_avx\"))",
+      "direction": "c2r",
+      "fmas": 692,
+      "length": 2048,
+      "muls": 1952
+    },
+    {
+      "adds": 14882,
+      "cost": 23425.0,
+      "description": "(rdft2-ct-dit/32   (hc2c-direct-32/124/1 \"hc2cfdftv_32_avx\"     (rdft2-ct-dit/2       (hc2c-direct-2/4/1 \"hc2cfdftv_2_avx\"         (rdft2-r2hc-direct-2 \"r2cf_2\")         (rdft2-r2hc01-direct-2 \"r2cfII_2\"))       (dft-direct-16 \"n1fv_16_avx\"))     (rdft2-r2hc01-direct-32 \"r2cfII_32\"))   (dft-direct-128-x16 \"n1fv_128_avx\"))",
+      "direction": "r2c",
+      "fmas": 1684,
+      "length": 4096,
+      "muls": 5173
+    },
+    {
+      "adds": 14882,
+      "cost": 22522.0,
+      "description": "(rdft2-ct-dif/32   (hc2c-direct-32/124/1 \"hc2cbdftv_32_avx\"     (rdft2-ct-dif/2       (hc2c-direct-2/4/1 \"hc2cbdftv_2_avx\"         (rdft2-hc2r-direct-2 \"r2cb_2\")         (rdft2-hc2r10-direct-2 \"r2cbIII_2\"))       (dft-direct-16 \"n1bv_16_avx\"))     (rdft2-hc2r10-direct-32 \"r2cbIII_32\"))   (dft-direct-128-x16 \"n1bv_128_avx\"))",
+      "direction": "c2r",
+      "fmas": 1684,
+      "length": 4096,
+      "muls": 4272
+    },
+    {
+      "adds": 35593,
+      "cost": 55692.14159,
+      "description": "(rdft2-ct-dit/16   (hc2c-direct-16/60/1 \"hc2cfdftv_16_avx\"     (rdft2-r2hc-direct-16 \"r2cf_16\")     (rdft2-r2hc01-direct-16 \"r2cfII_16\"))   (dft-vrank>=1-x8/1     (dft-ct-dit/16       (dftw-direct-16/16 \"t3fv_16_avx\")       (dft-direct-32-x16 \"n1fv_32_avx\"))))",
+      "direction": "r2c",
+      "fmas": 2060,
+      "length": 8192,
+      "muls": 15974
+    },
+    {
+      "adds": 34162,
+      "cost": 49661.14159,
+      "description": "(rdft2-ct-dif/32   (hc2c-direct-32/124/1 \"hc2cbdftv_32_avx\"     (rdft2-ct-dif/2       (hc2c-direct-2/4/1 \"hc2cbdftv_2_avx\"         (rdft2-hc2r-direct-2 \"r2cb_2\")         (rdft2-hc2r10-direct-2 \"r2cbIII_2\"))       (dft-direct-16 \"n1bv_16_avx\"))     (rdft2-hc2r10-direct-32 \"r2cbIII_32\"))   (dft-vrank>=1-x16/1     (dft-ct-dit/8       (dftw-direct-8/28 \"t1buv_8_avx\")       (dft-direct-32-x8 \"n1bv_32_avx\"))))",
+      "direction": "c2r",
+      "fmas": 2068,
+      "length": 8192,
+      "muls": 11360
+    },
+    {
+      "adds": 75570,
+      "cost": 119460.14159,
+      "description": "(rdft2-ct-dit/32   (hc2c-direct-32/124/1 \"hc2cfdftv_32_avx\"     (rdft2-ct-dit/2       (hc2c-direct-2/4/1 \"hc2cfdftv_2_avx\"         (rdft2-r2hc-direct-2 \"r2cf_2\")         (rdft2-r2hc01-direct-2 \"r2cfII_2\"))       (dft-direct-16 \"n1fv_16_avx\"))     (rdft2-r2hc01-direct-32 \"r2cfII_32\"))   (dft-vrank>=1-x16/1     (dft-ct-dit/16       (dftw-direct-16/16 \"t3fv_16_avx\")       (dft-direct-32-x16 \"n1fv_32_avx\"))))",
+      "direction": "r2c",
+      "fmas": 5140,
+      "length": 16384,
+      "muls": 33605
+    },
+    {
+      "adds": 72498,
+      "cost": 107325.14159,
+      "description": "(rdft2-ct-dif/32   (hc2c-direct-32/124/1 \"hc2cbdftv_32_avx\"     (rdft2-ct-dif/2       (hc2c-direct-2/4/1 \"hc2cbdftv_2_avx\"         (rdft2-hc2r-direct-2 \"r2cb_2\")         (rdft2-hc2r10-direct-2 \"r2cbIII_2\"))       (dft-direct-16 \"n1bv_16_avx\"))     (rdft2-hc2r10-direct-32 \"r2cbIII_32\"))   (dft-vrank>=1-x16/1     (dft-ct-dit/8       (dftw-direct-8/28 \"t1buv_8_avx\")       (dft-direct-64-x8 \"n1bv_64_avx\"))))",
+      "direction": "c2r",
+      "fmas": 5396,
+      "length": 16384,
+      "muls": 24032
+    },
+    {
+      "adds": 160777,
+      "cost": 258572.14159,
+      "description": "(rdft2-ct-dit/16   (hc2c-direct-16/60/1 \"hc2cfdftv_16_avx\"     (rdft2-r2hc-direct-16 \"r2cf_16\")     (rdft2-r2hc01-direct-16 \"r2cfII_16\"))   (dft-vrank>=1-x8/1     (dft-ct-dit/32       (dftw-direct-32/16 \"t3fv_32_avx\")       (dft-direct-64-x32 \"n1fv_64_avx\"))))",
+      "direction": "r2c",
+      "fmas": 12812,
+      "length": 32768,
+      "muls": 72166
+    },
+    {
+      "adds": 153394,
+      "cost": 230845.14159,
+      "description": "(rdft2-ct-dif/32   (hc2c-direct-32/124/1 \"hc2cbdftv_32_avx\"     (rdft2-ct-dif/2       (hc2c-direct-2/4/1 \"hc2cbdftv_2_avx\"         (rdft2-hc2r-direct-2 \"r2cb_2\")         (rdft2-hc2r10-direct-2 \"r2cbIII_2\"))       (dft-direct-16 \"n1bv_16_avx\"))     (rdft2-hc2r10-direct-32 \"r2cbIII_32\"))   (dft-vrank>=1-x16/1     (dft-ct-dit/8       (dftw-direct-8/28 \"t1buv_8_avx\")       (dft-direct-128-x8 \"n1bv_128_avx\"))))",
+      "direction": "c2r",
+      "fmas": 13332,
+      "length": 32768,
+      "muls": 50784
+    },
+    {
+      "adds": 338185,
+      "cost": 549388.14159,
+      "description": "(rdft2-ct-dit/16   (hc2c-direct-16/60/1 \"hc2cfdftv_16_avx\"     (rdft2-r2hc-direct-16 \"r2cf_16\")     (rdft2-r2hc01-direct-16 \"r2cfII_16\"))   (dft-vrank>=1-x8/1     (dft-ct-dit/32       (dftw-direct-32/16 \"t3fv_32_avx\")       (dft-direct-128-x32 \"n1fv_128_avx\"))))",
+      "direction": "r2c",
+      "fmas": 30732,
+      "length": 65536,
+      "muls": 149734
+    },
+    {
+      "adds": 339977,
+      "cost": 497721.27431,
+      "description": "(rdft2-ct-dif/16   (hc2c-direct-16/60/1 \"hc2cbdftv_16_avx\"     (rdft2-hc2r-direct-16 \"r2cb_16\")     (rdft2-hc2r10-direct-16 \"r2cbIII_16\"))   (dft-vrank>=1-x8/1     (dft-ct-dit/8       (dftw-direct-8/28 \"t1buv_8_avx\")       (dft-vrank>=1-x8/1         (dft-ct-dit/8           (dftw-direct-8/28 \"t1buv_8_avx\")           (dft-direct-64-x8 \"n1bv_64_avx\"))))))",
+      "direction": "c2r",
+      "fmas": 17420,
+      "length": 65536,
+      "muls": 122876
+    },
+    {
+      "adds": 712114,
+      "cost": 1164196.14159,
+      "description": "(rdft2-ct-dit/32   (hc2c-direct-32/124/1 \"hc2cfdftv_32_avx\"     (rdft2-ct-dit/2       (hc2c-direct-2/4/1 \"hc2cfdftv_2_avx\"         (rdft2-r2hc-direct-2 \"r2cf_2\")         (rdft2-r2hc01-direct-2 \"r2cfII_2\"))       (dft-direct-16 \"n1fv_16_avx\"))     (rdft2-r2hc01-direct-32 \"r2cfII_32\"))   (dft-vrank>=1-x16/1     (dft-ct-dit/32       (dftw-direct-32/16 \"t3fv_32_avx\")       (dft-direct-128-x32 \"n1fv_128_avx\"))))",
+      "direction": "r2c",
+      "fmas": 69652,
+      "length": 131072,
+      "muls": 312773
+    },
+    {
+      "adds": 715698,
+      "cost": 1059823.40703,
+      "description": "(rdft2-ct-dif/32   (hc2c-direct-32/124/1 \"hc2cbdftv_32_avx\"     (rdft2-ct-dif/2       (hc2c-direct-2/4/1 \"hc2cbdftv_2_avx\"         (rdft2-hc2r-direct-2 \"r2cb_2\")         (rdft2-hc2r10-direct-2 \"r2cbIII_2\"))       (dft-direct-16 \"n1bv_16_avx\"))     (rdft2-hc2r10-direct-32 \"r2cbIII_32\"))   (dft-vrank>=1-x16/1     (dft-ct-dit/8       (dftw-direct-8/28 \"t1buv_8_avx\")       (dft-vrank>=1-x8/1         (dft-ct-dit/8           (dftw-direct-8/28 \"t1buv_8_avx\")           (dft-direct-64-x8 \"n1bv_64_avx\"))))))",
+      "direction": "c2r",
+      "fmas": 43028,
+      "length": 131072,
+      "muls": 258016
+    },
+    {
+      "adds": 1605641,
+      "cost": 2605093.27431,
+      "description": "(rdft2-ct-dit/16   (hc2c-direct-16/60/1 \"hc2cfdftv_16_avx\"     (rdft2-r2hc-direct-16 \"r2cf_16\")     (rdft2-r2hc01-direct-16 \"r2cfII_16\"))   (dft-vrank>=1-x8/1     (dft-ct-dit/32       (dftw-direct-32/16 \"t3fv_32_avx\")       (dft-vrank>=1-x32/1         (dft-ct-dit/16           (dftw-direct-16/16 \"t3fv_16_avx\")           (dft-direct-32-x16 \"n1fv_32_avx\"))))))",
+      "direction": "r2c",
+      "fmas": 98316,
+      "length": 262144,
+      "muls": 802790
+    },
+    {
+      "adds": 1498034,
+      "cost": 2248687.40703,
+      "description": "(rdft2-ct-dif/32   (hc2c-direct-32/124/1 \"hc2cbdftv_32_avx\"     (rdft2-ct-dif/2       (hc2c-direct-2/4/1 \"hc2cbdftv_2_avx\"         (rdft2-hc2r-direct-2 \"r2cb_2\")         (rdft2-hc2r10-direct-2 \"r2cbIII_2\"))       (dft-direct-16 \"n1bv_16_avx\"))     (rdft2-hc2r10-direct-32 \"r2cbIII_32\"))   (dft-vrank>=1-x16/1     (dft-ct-dit/8       (dftw-direct-8/28 \"t1buv_8_avx\")       (dft-vrank>=1-x8/1         (dft-ct-dit/8           (dftw-direct-8/28 \"t1buv_8_avx\")           (dft-direct-128-x8 \"n1bv_128_avx\"))))))",
+      "direction": "c2r",
+      "fmas": 106516,
+      "length": 262144,
+      "muls": 537568
+    }
+  ],
+  "replay": {
+    "command": "python3 scripts/audit_fftw_plans.py --maximum-log2 18",
+    "identical_consecutive_transcripts": true
+  },
+  "schema": "certified-qmc/workstream-b-fftw-plan-audit/v1",
+  "scope": {
+    "latnet_builder_commit": "39dd60fceb0c86a6124b701072d91f8e3aed73df",
+    "maximum_log2": 18,
+    "planner_flag": "FFTW_ESTIMATE",
+    "producer": "LatNet Builder fast-CBC",
+    "rounding_mode_required": "FE_TONEAREST"
+  }
+}

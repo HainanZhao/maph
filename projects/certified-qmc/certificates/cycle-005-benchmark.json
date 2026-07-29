@@ -1,0 +1,194 @@
+{
+  "claim_boundary": "Timings are local NUMERICAL observations for direct Python evaluators; they are not NTT or production-scale projections.",
+  "date": "2026-07-29",
+  "decision": "CONTINUE_WITH_FAST_MODULAR_ENGINEERING",
+  "environment": {
+    "implementation": "CPython",
+    "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3"
+  },
+  "input": {
+    "modulus": 1024,
+    "source": "frozen UNSW lattice-29102-1024 prefix",
+    "weight_model": "gamma_j=1/j^2"
+  },
+  "rows": [
+    {
+      "all_three_exactly_equal": true,
+      "crt_bound_bits": 59,
+      "crt_prime_count": 1,
+      "dimension": 2,
+      "direct_modular_crt": {
+        "median_ns": 1054959,
+        "minimum_ns": 1001929,
+        "repeats": 3,
+        "samples_ns": [
+          1001929,
+          1078689,
+          1054959
+        ],
+        "tag": "NUMERICAL"
+      },
+      "exact_result": {
+        "denominator": "79164837199872",
+        "numerator": "25341113",
+        "tag": "VERIFIED"
+      },
+      "fraction_oracle": {
+        "median_ns": 7737537,
+        "minimum_ns": 6469976,
+        "repeats": 3,
+        "samples_ns": [
+          7737537,
+          6469976,
+          8097120
+        ],
+        "tag": "NUMERICAL"
+      },
+      "scaled_integer": {
+        "median_ns": 1012057,
+        "minimum_ns": 955220,
+        "repeats": 3,
+        "samples_ns": [
+          1057118,
+          955220,
+          1012057
+        ],
+        "tag": "NUMERICAL"
+      }
+    },
+    {
+      "all_three_exactly_equal": true,
+      "crt_bound_bits": 111,
+      "crt_prime_count": 2,
+      "dimension": 4,
+      "direct_modular_crt": {
+        "median_ns": 3696472,
+        "minimum_ns": 3653832,
+        "repeats": 3,
+        "samples_ns": [
+          4383328,
+          3653832,
+          3696472
+        ],
+        "tag": "NUMERICAL"
+      },
+      "exact_result": {
+        "denominator": "112807286079880277550182694912",
+        "numerator": "61326642586251563219681",
+        "tag": "VERIFIED"
+      },
+      "fraction_oracle": {
+        "median_ns": 12674189,
+        "minimum_ns": 11532780,
+        "repeats": 3,
+        "samples_ns": [
+          13039282,
+          12674189,
+          11532780
+        ],
+        "tag": "NUMERICAL"
+      },
+      "scaled_integer": {
+        "median_ns": 1655833,
+        "minimum_ns": 1612684,
+        "repeats": 3,
+        "samples_ns": [
+          1655833,
+          1694895,
+          1612684
+        ],
+        "tag": "NUMERICAL"
+      }
+    },
+    {
+      "all_three_exactly_equal": true,
+      "crt_bound_bits": 223,
+      "crt_prime_count": 4,
+      "dimension": 8,
+      "direct_modular_crt": {
+        "median_ns": 14339295,
+        "minimum_ns": 13937360,
+        "repeats": 3,
+        "samples_ns": [
+          14834428,
+          13937360,
+          14339295
+        ],
+        "tag": "NUMERICAL"
+      },
+      "exact_result": {
+        "denominator": "4453919327447782722987287591555087687469284660020804740710400",
+        "numerator": "3479117843948793228205024080136863660140294385888703223",
+        "tag": "VERIFIED"
+      },
+      "fraction_oracle": {
+        "median_ns": 23688994,
+        "minimum_ns": 22438855,
+        "repeats": 3,
+        "samples_ns": [
+          22438855,
+          24289511,
+          23688994
+        ],
+        "tag": "NUMERICAL"
+      },
+      "scaled_integer": {
+        "median_ns": 3654001,
+        "minimum_ns": 3584402,
+        "repeats": 3,
+        "samples_ns": [
+          3584402,
+          3654001,
+          4119984
+        ],
+        "tag": "NUMERICAL"
+      }
+    },
+    {
+      "all_three_exactly_equal": true,
+      "crt_bound_bits": 462,
+      "crt_prime_count": 8,
+      "dimension": 16,
+      "direct_modular_crt": {
+        "median_ns": 50644147,
+        "minimum_ns": 49994643,
+        "repeats": 3,
+        "samples_ns": [
+          49994643,
+          50644147,
+          52456162
+        ],
+        "tag": "NUMERICAL"
+      },
+      "exact_result": {
+        "denominator": "6192478663894038242767851571352304290491369843964616248347650336728166277982467646289818752285440743153494663996079861661696000000",
+        "numerator": "6022742696152245409643640102740549865414901254373268557879343239558627406936422309336078796488884818479561495046109783419813",
+        "tag": "VERIFIED"
+      },
+      "fraction_oracle": {
+        "median_ns": 47529822,
+        "minimum_ns": 46311260,
+        "repeats": 3,
+        "samples_ns": [
+          49579308,
+          46311260,
+          47529822
+        ],
+        "tag": "NUMERICAL"
+      },
+      "scaled_integer": {
+        "median_ns": 5769269,
+        "minimum_ns": 5718948,
+        "repeats": 3,
+        "samples_ns": [
+          5769269,
+          6449485,
+          5718948
+        ],
+        "tag": "NUMERICAL"
+      }
+    }
+  ],
+  "schema": "certified-qmc-cycle005-benchmark-v1"
+}

@@ -1,0 +1,191 @@
+{
+  "benchmark": [
+    {
+      "all_scores_equal": true,
+      "candidate_classes": 64,
+      "direct": {
+        "median_ns": 6312304,
+        "minimum_ns": 6170693,
+        "repeats": 3,
+        "samples_ns": [
+          6342106,
+          6312304,
+          6170693
+        ],
+        "tag": "NUMERICAL"
+      },
+      "minimum_speedup": 3.304598338246832,
+      "modulus": 256,
+      "stratified_ntt": {
+        "median_ns": 1905766,
+        "minimum_ns": 1867305,
+        "repeats": 3,
+        "samples_ns": [
+          1905766,
+          1928257,
+          1867305
+        ],
+        "tag": "NUMERICAL"
+      }
+    },
+    {
+      "all_scores_equal": true,
+      "candidate_classes": 256,
+      "direct": {
+        "median_ns": 95018468,
+        "minimum_ns": 93284952,
+        "repeats": 3,
+        "samples_ns": [
+          95018468,
+          93284952,
+          95608003
+        ],
+        "tag": "NUMERICAL"
+      },
+      "minimum_speedup": 12.436725054044487,
+      "modulus": 1024,
+      "stratified_ntt": {
+        "median_ns": 7507615,
+        "minimum_ns": 7500765,
+        "repeats": 3,
+        "samples_ns": [
+          7500765,
+          8260662,
+          7507615
+        ],
+        "tag": "NUMERICAL"
+      }
+    },
+    {
+      "all_scores_equal": true,
+      "candidate_classes": 1024,
+      "direct": {
+        "median_ns": 1614441054,
+        "minimum_ns": 1599797809,
+        "repeats": 3,
+        "samples_ns": [
+          1599797809,
+          1614441054,
+          1675030737
+        ],
+        "tag": "NUMERICAL"
+      },
+      "minimum_speedup": 45.5024529206255,
+      "modulus": 4096,
+      "stratified_ntt": {
+        "median_ns": 38214002,
+        "minimum_ns": 35158496,
+        "repeats": 3,
+        "samples_ns": [
+          38265063,
+          38214002,
+          35158496
+        ],
+        "tag": "NUMERICAL"
+      }
+    }
+  ],
+  "candidate_classes": "5^a modulo 2^m, 0<=a<2^(m-2)",
+  "claim_boundary": "The modular score mapping is VERIFIED. Timings are local NUMERICAL observations; exact multi-prime fast CBC and certified branch selection remain open.",
+  "date": "2026-07-29",
+  "environment": {
+    "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3"
+  },
+  "frozen_case": {
+    "all_scores_equal_to_direct_enumeration": true,
+    "candidate_count": 256,
+    "candidate_sha256": "8ab8012bf89f240e9ff411146d46ee1e4f77a0ca454c9d34c3d0d346713629fd",
+    "modulus": 1024,
+    "new_dimension": 9,
+    "prefix": [
+      1,
+      275,
+      179,
+      319,
+      299,
+      451,
+      417,
+      167
+    ],
+    "prime": "4611685941117976577",
+    "score_sha256": "0f52fbe54f2a19dea6b12c9a710c4281f57033d0d329d1ff9ec61e0ea82375bc",
+    "strata": [
+      {
+        "cyclic_length": 256,
+        "method": "C2-sign-quotient-plus-C_2^(ell-2)-NTT",
+        "multiplicity": 2,
+        "unit_modulus": 1024,
+        "valuation": 0
+      },
+      {
+        "cyclic_length": 128,
+        "method": "C2-sign-quotient-plus-C_2^(ell-2)-NTT",
+        "multiplicity": 2,
+        "unit_modulus": 512,
+        "valuation": 1
+      },
+      {
+        "cyclic_length": 64,
+        "method": "C2-sign-quotient-plus-C_2^(ell-2)-NTT",
+        "multiplicity": 2,
+        "unit_modulus": 256,
+        "valuation": 2
+      },
+      {
+        "cyclic_length": 32,
+        "method": "C2-sign-quotient-plus-C_2^(ell-2)-NTT",
+        "multiplicity": 2,
+        "unit_modulus": 128,
+        "valuation": 3
+      },
+      {
+        "cyclic_length": 16,
+        "method": "C2-sign-quotient-plus-C_2^(ell-2)-NTT",
+        "multiplicity": 2,
+        "unit_modulus": 64,
+        "valuation": 4
+      },
+      {
+        "cyclic_length": 8,
+        "method": "C2-sign-quotient-plus-C_2^(ell-2)-NTT",
+        "multiplicity": 2,
+        "unit_modulus": 32,
+        "valuation": 5
+      },
+      {
+        "cyclic_length": 4,
+        "method": "C2-sign-quotient-plus-C_2^(ell-2)-NTT",
+        "multiplicity": 2,
+        "unit_modulus": 16,
+        "valuation": 6
+      },
+      {
+        "cyclic_length": 2,
+        "method": "C2-sign-quotient-plus-C_2^(ell-2)-NTT",
+        "multiplicity": 2,
+        "unit_modulus": 8,
+        "valuation": 7
+      },
+      {
+        "cyclic_length": 1,
+        "method": "candidate-independent-small-stratum",
+        "multiplicity": 2,
+        "unit_modulus": 4,
+        "valuation": 8
+      },
+      {
+        "cyclic_length": 1,
+        "method": "candidate-independent-small-stratum",
+        "multiplicity": 1,
+        "unit_modulus": 2,
+        "valuation": 9
+      }
+    ],
+    "weight_model": "gamma_j=1/j^2"
+  },
+  "group": "U(2^m)=<-1> x <5>, m>=3",
+  "kernel_symmetry": "P(k)=P(-k), F(k)=F(-k)",
+  "schema": "certified-qmc-power2-fastcbc-map-v1",
+  "tag": "VERIFIED_MAPPING"
+}

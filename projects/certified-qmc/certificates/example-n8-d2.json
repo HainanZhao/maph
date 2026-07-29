@@ -1,0 +1,45 @@
+{
+  "certificate_sha256": "016dfca341dc6736681e779de1f25d59b0560202d4200ccf3739881318bbaf48",
+  "definition": {
+    "claim_boundary": "squared shift-averaged worst-case error in the frozen product-weight beta=0 convention; not an integrand error",
+    "convention": "DKS2013-eq5.13-beta0-product-B2",
+    "kernel": "B2(x)=x^2-x+1/6",
+    "quantity": "-1+(1/N)*sum_k product_j(1+gamma_j*B2({k*z_j/N}))"
+  },
+  "denominator_proof": {
+    "formula": "N*product_j(6*den(gamma_j)*N^2)",
+    "master_bit_length": 22,
+    "master_denominator": "2359296",
+    "quotient": "16",
+    "reduced_denominator_divides_master": true
+  },
+  "input": {
+    "all_generator_components_are_units": true,
+    "dimension": 2,
+    "generator_mod_N": [
+      1,
+      3
+    ],
+    "modulus": 8,
+    "weights": [
+      {
+        "denominator": "1",
+        "numerator": "1"
+      },
+      {
+        "denominator": "2",
+        "numerator": "1"
+      }
+    ]
+  },
+  "replay": {
+    "algorithm": "direct exact Fraction sum-product",
+    "exact_summand_sha256": "291219dcd864f365e953fc87826c7b521f5f227d61b667706ba7eb6f0315629e"
+  },
+  "result": {
+    "denominator": "147456",
+    "numerator": "761"
+  },
+  "schema": "certified-qmc-exact-b2-error-v1",
+  "tag": "VERIFIED"
+}

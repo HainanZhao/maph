@@ -1,0 +1,126 @@
+{
+  "assumption": "round-to-nearest on the observed decimal grid",
+  "boundary": "These are synthetic exact formatting cells. No external merit lexeme was read or compared.",
+  "cases": [
+    {
+      "convention": "table-wide significant digits; round-to-nearest",
+      "exact_value": {
+        "denominator": "2000",
+        "numerator": "2469"
+      },
+      "grid_exponent": -4,
+      "grid_spacing": {
+        "denominator": "10000",
+        "numerator": "1"
+      },
+      "half_cell": {
+        "denominator": "20000",
+        "numerator": "1"
+      },
+      "lexeme": "1.2345",
+      "significant_digits": 5
+    },
+    {
+      "convention": "table-wide significant digits; round-to-nearest",
+      "exact_value": {
+        "denominator": "2000000",
+        "numerator": "2469"
+      },
+      "grid_exponent": -7,
+      "grid_spacing": {
+        "denominator": "10000000",
+        "numerator": "1"
+      },
+      "half_cell": {
+        "denominator": "20000000",
+        "numerator": "1"
+      },
+      "lexeme": "1.2345e-3",
+      "significant_digits": 5
+    },
+    {
+      "convention": "table-wide significant digits; round-to-nearest",
+      "exact_value": {
+        "denominator": "5000000",
+        "numerator": "617"
+      },
+      "grid_exponent": -7,
+      "grid_spacing": {
+        "denominator": "10000000",
+        "numerator": "1"
+      },
+      "half_cell": {
+        "denominator": "20000000",
+        "numerator": "1"
+      },
+      "lexeme": "0.0001234",
+      "significant_digits": 4
+    },
+    {
+      "convention": "table-wide significant digits; round-to-nearest",
+      "exact_value": {
+        "denominator": "10",
+        "numerator": "-123"
+      },
+      "grid_exponent": -2,
+      "grid_spacing": {
+        "denominator": "100",
+        "numerator": "1"
+      },
+      "half_cell": {
+        "denominator": "200",
+        "numerator": "1"
+      },
+      "lexeme": "-12.30",
+      "significant_digits": 4
+    },
+    {
+      "convention": "final displayed lexical digit; round-to-nearest",
+      "exact_value": {
+        "denominator": "1",
+        "numerator": "0"
+      },
+      "grid_exponent": -4,
+      "grid_spacing": {
+        "denominator": "10000",
+        "numerator": "1"
+      },
+      "half_cell": {
+        "denominator": "20000",
+        "numerator": "1"
+      },
+      "lexeme": "0.0000",
+      "significant_digits": 5
+    },
+    {
+      "convention": "table-wide significant digits; round-to-nearest",
+      "exact_value": {
+        "denominator": "1",
+        "numerator": "1200"
+      },
+      "grid_exponent": 2,
+      "grid_spacing": {
+        "denominator": "1",
+        "numerator": "100"
+      },
+      "half_cell": {
+        "denominator": "1",
+        "numerator": "50"
+      },
+      "lexeme": "1200",
+      "significant_digits": 2
+    }
+  ],
+  "claim_tag": "VERIFIED_EXACT_FORMAT_CELLS",
+  "created_utc": "2026-07-29T06:11:38.483778+00:00",
+  "current_frozen_set": {
+    "format_bounds_required": 0,
+    "merit_column_count": 0,
+    "table_count": 1
+  },
+  "schema": "certified-qmc/workstream-b-format-bound-preflight/v1",
+  "source": {
+    "path": "src/format_bound.py",
+    "sha256": "91a4cfa0563df9d8628fedaf26f3e799a512d15a857c068e651290f2a6a013a4"
+  }
+}
