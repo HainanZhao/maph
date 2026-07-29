@@ -101,12 +101,16 @@ production.
 
 Production outcome:
 
+<!-- BEGIN GENERATED PRODUCTION OUTCOME -->
+
 - fidelity manifest: `PENDING`;
 - 100-entry selected replay: `PENDING`;
 - three independent oracle checks: `PENDING`;
 - usability grid and \(j^{-2}\) hash reuse: `PENDING`;
 - 298-case engine oracle extraction: `PENDING`;
 - DOI: `PENDING`.
+
+<!-- END GENERATED PRODUCTION OUTCOME -->
 
 No result sentence may replace these markers until the corresponding
 self-hashed certificate exists and replays.
@@ -132,6 +136,16 @@ certified price or risk estimate.  The application pilot will keep
 rule merit, RKHS inequality, integrand membership/norm, smoothing
 hypotheses, randomized-shift interval, and model error as distinct
 claims.
+
+Cycle-009 decision-layer outcome:
+
+<!-- BEGIN GENERATED CYCLE009 OUTCOME -->
+
+- escalation histogram: `PENDING`;
+- exact-CRT acceptance predicate: `PENDING`;
+- exact final-vector merit: `PENDING`.
+
+<!-- END GENERATED CYCLE009 OUTCOME -->
 
 ## Methodological correction
 
