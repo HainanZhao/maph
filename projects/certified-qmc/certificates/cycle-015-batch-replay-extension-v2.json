@@ -11,7 +11,7 @@
     "request_count": 2
   },
   "boundary": "This replaces manifest materialization with streaming authentication in verifier/audit orchestration only. Single-entry values, production chunks, thresholds, and the frozen production kernel are unchanged.",
-  "certificate_sha256": "a137c247f1c9727498280ef3c0b0d21cb481845e58c9d572a41d1b7ba87725ab",
+  "certificate_sha256": "90e4e7d19b6ced9d6bd3bc2697823b6c903ef7656e0371fa6d37df9dab4ec522",
   "claim_tag": "VERIFIED",
   "dataset": {
     "authenticated_record_count": 939,
@@ -23,6 +23,7 @@
   "gate": {
     "all_overflow_checks_equal": true,
     "cycle_015_streaming_extension_passed": true,
+    "full_dataset_file_set_authentication_passed": true,
     "predecessor_transcript_preserved": true,
     "single_entry_behavior_preserved": true,
     "streamed_oracle_extraction_preserves_exact_values": true,
@@ -35,7 +36,7 @@
     "sha256": "7d83e4200dfaaf2c971b30fcc20e102ed5946f9d086aa3150612bb5cf058bc80",
     "status": "PRESERVED"
   },
-  "recorded_at_utc": "2026-07-29T09:42:11Z",
+  "recorded_at_utc": "2026-07-29T09:43:16Z",
   "request_fixture": {
     "path": "tests/fixtures/cycle015-batch-requests.json",
     "request_count": 2,
@@ -80,6 +81,12 @@
       "stop_return_code": 75
     },
     "file_hashing_block_bytes": 1048576,
+    "full_dataset_authentication": {
+      "chunk_count": 938,
+      "manifested_file_set_exact": true,
+      "path_traversal_and_symlinks_rejected": true,
+      "payload_bytes": 120064
+    },
     "manifest_materialized_by_selected_entry_verifier": false,
     "oracle_extractor": {
       "entries": 2,

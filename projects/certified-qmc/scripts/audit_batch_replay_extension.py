@@ -19,6 +19,7 @@ from src.certificate import canonical_sha256
 from src.chunked_table import file_sha256, iter_chain
 from src.entry_replay import DatasetReplay
 from scripts.build_engine_oracle_set import replay_batch
+from scripts.audit_usability_production import authenticate_dataset
 
 
 DATASET = ROOT / "artifacts" / "cycle-015-pilot"
@@ -125,6 +126,14 @@ def main() -> None:
     ):
         raise AssertionError(
             "streaming verifier retained a materialized manifest"
+        )
+    full_authentication = authenticate_dataset(DATASET)
+    if (
+        full_authentication["chunk_count"] != 938
+        or full_authentication["payload_bytes"] != 120064
+    ):
+        raise ArithmeticError(
+            "pilot full-dataset authentication totals changed"
         )
     schedule = json.loads(
         (ROOT / "data" / "primes-schedule-v1.json").read_text()
@@ -331,6 +340,12 @@ def main() -> None:
                 "summed_per_entry_chunk_count": summed_entry_chunks,
                 "shared_chunks_read_once": True,
             },
+            "full_dataset_authentication": {
+                "chunk_count": full_authentication["chunk_count"],
+                "payload_bytes": full_authentication["payload_bytes"],
+                "manifested_file_set_exact": True,
+                "path_traversal_and_symlinks_rejected": True,
+            },
         },
         "boundary": (
             "This replaces manifest materialization with streaming "
@@ -346,6 +361,7 @@ def main() -> None:
             "streaming_manifest_authentication_passed": True,
             "streaming_resume_byte_identical": True,
             "streamed_oracle_extraction_preserves_exact_values": True,
+            "full_dataset_file_set_authentication_passed": True,
             "cycle_015_streaming_extension_passed": True,
         },
     }
