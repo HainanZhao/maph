@@ -15,6 +15,10 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
+if hasattr(sys, "set_int_max_str_digits"):
+    # Production d=3600 certificates contain exact integers far beyond
+    # Python's interactive 4,300-decimal-digit safety default.
+    sys.set_int_max_str_digits(0)
 
 from src.chunked_table import canonical_bytes, chunk_records, file_sha256, read_chain
 from src.crt import balanced_reconstruct, choose_moduli
@@ -40,6 +44,11 @@ def main() -> None:
     parser.add_argument("--table", required=True)
     parser.add_argument("--N", type=int, required=True)
     parser.add_argument("--d", type=int, required=True)
+    parser.add_argument(
+        "--compact",
+        action="store_true",
+        help="omit the potentially long selected chunk-path list",
+    )
     args = parser.parse_args()
 
     dataset = args.dataset.resolve()
@@ -170,7 +179,6 @@ def main() -> None:
         "reduced_numerator": str(value.numerator),
         "reduced_denominator": str(value.denominator),
         "chunks_read": len(touched_chunks),
-        "chunk_paths": touched_chunks,
         "dataset_payload_bytes": payload_bytes,
         "touched_payload_bytes": touched,
         "touched_payload_fraction": float(fraction_touched),
@@ -184,6 +192,8 @@ def main() -> None:
             "embedded."
         ),
     }
+    if not args.compact:
+        result["chunk_paths"] = touched_chunks
     print(json.dumps(result, indent=2, sort_keys=True))
 
 

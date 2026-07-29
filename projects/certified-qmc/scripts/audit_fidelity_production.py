@@ -13,6 +13,8 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
+if hasattr(sys, "set_int_max_str_digits"):
+    sys.set_int_max_str_digits(0)
 
 from src.certificate import canonical_sha256
 from src.chunked_table import chunk_records, file_sha256, read_chain
@@ -48,6 +50,7 @@ def verify_one(dataset: Path, table: dict, dimension: int) -> dict:
             str(table["N"]),
             "--d",
             str(dimension),
+            "--compact",
         ],
         check=True,
         capture_output=True,

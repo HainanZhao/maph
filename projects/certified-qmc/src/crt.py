@@ -23,7 +23,7 @@ def choose_moduli(schedule: Sequence[int], bound: int) -> list[int]:
     for modulus in schedule:
         if modulus < 2:
             raise ValueError("invalid CRT modulus")
-        if any(gcd(modulus, previous) != 1 for previous in chosen):
+        if gcd(modulus, product) != 1:
             raise ValueError("CRT moduli must be pairwise coprime")
         chosen.append(modulus)
         product *= modulus

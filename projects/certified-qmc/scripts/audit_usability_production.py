@@ -48,6 +48,7 @@ def verify_one(
             str(modulus),
             "--d",
             str(dimension),
+            "--compact",
         ],
         check=True,
         capture_output=True,
