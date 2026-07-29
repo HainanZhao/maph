@@ -127,6 +127,21 @@ def release_package(release: Path) -> dict:
                 raise ValueError(
                     f"release asset mismatch: {asset['filename']}"
                 )
+        if len(manifest.get("ancillary_files", [])) != 3:
+            raise ValueError(
+                "release must authenticate three ancillary files"
+            )
+        for ancillary in manifest["ancillary_files"]:
+            path = release / ancillary["filename"]
+            if (
+                not path.is_file()
+                or path.stat().st_size != int(ancillary["bytes"])
+                or file_sha256(path) != ancillary["sha256"]
+            ):
+                raise ValueError(
+                    "release ancillary mismatch: "
+                    f"{ancillary['filename']}"
+                )
     except Exception as error:
         return result(
             "Cycle 018 deterministic release package",
@@ -138,7 +153,7 @@ def release_package(release: Path) -> dict:
         "Cycle 018 deterministic release package",
         "PASSED",
         evidence,
-        "manifest and all four assets authenticate",
+        "manifest, four assets, and three ancillary files authenticate",
     )
 
 
