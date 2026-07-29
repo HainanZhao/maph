@@ -17,6 +17,17 @@ SPEC = PROJECT / "data" / "cycles-016-017-fidelity-spec.json"
 PREREG = (
     PROJECT / "data" / "cycles-016-017-preregistration.json"
 )
+V2_SPEC = (
+    PROJECT / "data" / "cycles-016-017-fidelity-spec-v2.json"
+)
+V2_PREREG = (
+    PROJECT / "data" / "cycles-016-017-preregistration-v2.json"
+)
+PAUSE = (
+    PROJECT
+    / "certificates"
+    / "cycles-016-017-throughput-pause-v1.json"
+)
 
 
 def digest(path: Path) -> str:
@@ -92,6 +103,65 @@ class Cycles016017Tests(unittest.TestCase):
                 digest(PROJECT / ".run-inputs" / filename),
                 expected,
             )
+
+    def test_v1_pause_is_preserved_and_v2_is_prospective(self):
+        pause = json.loads(PAUSE.read_text())
+        supplied = pause.pop("certificate_sha256")
+        self.assertEqual(canonical_sha256(pause), supplied)
+        self.assertTrue(pause["frozen_trigger"]["triggered"])
+        self.assertEqual(
+            pause["frozen_trigger"]["driver_exit_code"], 76
+        )
+        self.assertTrue(
+            pause["preservation"]["resume_under_v1_forbidden"]
+        )
+
+        v2 = json.loads(V2_PREREG.read_text())
+        v2_hash = v2.pop("preregistration_sha256")
+        self.assertEqual(canonical_sha256(v2), v2_hash)
+        self.assertFalse(v2["production_started"])
+        self.assertGreater(
+            v2["frozen_at_utc"], pause["recorded_at_utc"]
+        )
+        self.assertEqual(
+            v2["predecessor"]["preregistration"]["sha256"],
+            digest(PREREG),
+        )
+        self.assertEqual(
+            v2["predecessor"]["pause_transcript"]["sha256"],
+            digest(PAUSE),
+        )
+        self.assertEqual(
+            v2["production_spec"]["sha256"],
+            digest(V2_SPEC),
+        )
+        self.assertEqual(
+            v2["run_gate"]["maximum_aggregate_ns_per_update"],
+            "4.34480050068027950",
+        )
+        self.assertEqual(v2["run_gate"]["maximum_node_days"], 7)
+
+    def test_v2_changes_only_versioned_monitor_metadata(self):
+        v1 = json.loads(SPEC.read_text())
+        v2 = json.loads(V2_SPEC.read_text())
+        self.assertEqual(v1["tables"], v2["tables"])
+        self.assertEqual(
+            v1["throughput_monitor"][
+                "minimum_updates_before_enforcement"
+            ],
+            v2["throughput_monitor"][
+                "minimum_updates_before_enforcement"
+            ],
+        )
+        self.assertEqual(
+            v2["throughput_monitor"]["drift_fraction"], "0.75"
+        )
+        self.assertEqual(
+            v2["throughput_monitor"][
+                "maximum_aggregate_ns_per_update"
+            ],
+            "4.34480050068027950",
+        )
 
 
 if __name__ == "__main__":

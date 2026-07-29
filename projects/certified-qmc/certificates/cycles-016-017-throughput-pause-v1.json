@@ -1,0 +1,123 @@
+{
+  "certificate_sha256": "395e6941595e2258b7c1b50e2aa5b81c3dd4e4ba4008608b5203f5e302238544",
+  "claim_tags": {
+    "partial_manifest_and_chunks": "VERIFIED",
+    "partial_merit_values": "NOT_PROMOTED",
+    "production_disposition": "PAUSED_INVESTIGATE",
+    "timings_and_diagnosis": "NUMERICAL"
+  },
+  "frozen_trigger": {
+    "drift_fraction": "0.25",
+    "driver_exit_code": 76,
+    "maximum_ns_per_update": "3.10342892905734250",
+    "minimum_updates_before_enforcement": 5000000000,
+    "observed_cumulative_ns_per_update": 3.653536617902369,
+    "observed_cumulative_updates": 5013504000,
+    "observed_cumulative_wall_ns": 18317020448,
+    "pause_record": {
+      "cumulative_ns_per_update": 3.653536617902369,
+      "cumulative_updates": 5013504000,
+      "cumulative_wall_ns": 18317020448,
+      "event": "PAUSE",
+      "line_sha256": "f2266352126ac216892a0bee72b4b331ec2ec7b6ac5c778d1054022886dd33d6",
+      "maximum_aggregate_ns_per_update": 3.1034289290573427,
+      "previous_line_sha256": "b1216892b4cfd2478c8d269786d49095dbb1687fb1288c504f39b36b90aa2607",
+      "reason": "THROUGHPUT_DRIFT_GT_25_PERCENT",
+      "sequence": 340
+    },
+    "pilot_median_ns_per_update": "2.482743143245874",
+    "triggered": true
+  },
+  "investigation": {
+    "d256_same_host_rerun": {
+      "all_oracles_pass": true,
+      "median_ns_per_update": 1.9370941515789917,
+      "runs_ns_per_update": [
+        1.9182326967353063,
+        1.9370941515789917,
+        1.936386790496624,
+        2.152605700966538,
+        2.5157993897696995
+      ]
+    },
+    "d3600_median_ns_per_update": 2.09924973915218,
+    "d3600_same_host_single_process_runs": [
+      {
+        "checkpoint_digest": "2773875969519480252",
+        "checkpoint_ns": 16538144,
+        "checkpoint_replay": true,
+        "checkpoint_sha256": "365d124341801e8a08b9328b28dbf5530241766f55e9acdef1d8043c52358192",
+        "dimension": 3600,
+        "modulus": 1024,
+        "output_words": 550800,
+        "overflow_ns": 32753347,
+        "overflow_primes": 2,
+        "overflow_updates": 7372800,
+        "state_bytes_per_prime": 8192,
+        "threads": 4,
+        "work_ns": 1168539810,
+        "work_ns_per_update": 2.09924973915218,
+        "work_primes": 151,
+        "work_updates": 556646400
+      },
+      {
+        "checkpoint_digest": "2773875969519480252",
+        "checkpoint_ns": 16470953,
+        "checkpoint_replay": true,
+        "checkpoint_sha256": "365d124341801e8a08b9328b28dbf5530241766f55e9acdef1d8043c52358192",
+        "dimension": 3600,
+        "modulus": 1024,
+        "output_words": 550800,
+        "overflow_ns": 28803151,
+        "overflow_primes": 2,
+        "overflow_updates": 7372800,
+        "state_bytes_per_prime": 8192,
+        "threads": 4,
+        "work_ns": 1205651802,
+        "work_ns_per_update": 2.165920415545668,
+        "work_primes": 151,
+        "work_updates": 556646400
+      },
+      {
+        "checkpoint_digest": "2773875969519480252",
+        "checkpoint_ns": 16685845,
+        "checkpoint_replay": true,
+        "checkpoint_sha256": "365d124341801e8a08b9328b28dbf5530241766f55e9acdef1d8043c52358192",
+        "dimension": 3600,
+        "modulus": 1024,
+        "output_words": 550800,
+        "overflow_ns": 28245006,
+        "overflow_primes": 2,
+        "overflow_updates": 7372800,
+        "state_bytes_per_prime": 8192,
+        "threads": 4,
+        "work_ns": 1141689731,
+        "work_ns_per_update": 2.0510143081855916,
+        "work_primes": 151,
+        "work_updates": 556646400
+      }
+    ],
+    "finding": "The original single-process four-core evaluator remains below the frozen ceiling at both d=256 and d=3600. The production orchestration measurement, which includes one process launch and vector parse per prime, exceeded the +25% drift alarm on the VPS. This localizes the pause outside the frozen modular reduction kernel; it does not promote a universal causal performance claim.",
+    "host": "four-visible-core AMD EPYC 9354P virtual machine"
+  },
+  "partial_dataset": {
+    "authenticated_chunks": 10880,
+    "authenticated_payload_bytes": 39168000,
+    "manifest_last_line_sha256": "9d8f8d5f5ae3d68d5e6b8462d1de8119fe989e35d6e0574947e1435ea892aec2",
+    "manifest_records": 10880,
+    "manifest_sha256": "d59c8646ec57cecfaee9ef212ce860ffd95f15f05a153fa1d164b538690c37ca",
+    "path": "artifacts/fidelity-v1",
+    "run_manifest_sha256": "82bc1da7d80da8d122de60174011af542608a16029ddc03fab55afde8cb4a495",
+    "table_index_sha256": "c960ceca9b95191aa6dc54da262753d6dbba6c0ca55c5870b250bcde98989cae",
+    "telemetry_last_line_sha256": "f2266352126ac216892a0bee72b4b331ec2ec7b6ac5c778d1054022886dd33d6",
+    "telemetry_sha256": "a60c04b7e517f30da077f4d747207c789bef07b27588723b2e02824448045d70"
+  },
+  "preservation": {
+    "partial_dataset_retained": true,
+    "required_next_step": "human-authorized versioned preregistration and a clean output dataset",
+    "resume_under_v1_forbidden": true,
+    "threshold_changed_in_place": false
+  },
+  "recorded_at_utc": "2026-07-29T07:47:52Z",
+  "schema": "certified-qmc-cycles-016-017-throughput-pause-transcript-v1"
+}

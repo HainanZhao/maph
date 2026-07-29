@@ -530,7 +530,10 @@ def main() -> None:
                         {
                             "sequence": telemetry_sequence,
                             "event": "PAUSE",
-                            "reason": "THROUGHPUT_DRIFT_GT_25_PERCENT",
+                            "reason": (
+                                "THROUGHPUT_DRIFT_ABOVE_"
+                                "FROZEN_CEILING"
+                            ),
                             "cumulative_wall_ns": cumulative_wall_ns,
                             "cumulative_updates": cumulative_updates,
                             "cumulative_ns_per_update": (
