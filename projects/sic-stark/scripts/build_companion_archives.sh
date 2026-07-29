@@ -89,8 +89,6 @@ add_existing() {
 
 common_release_files() {
     local list=$1
-    add_existing "$list" "CITATION.cff"
-    add_existing "$list" ".zenodo.json"
     add_existing "$list" "LICENSE"
     add_existing "$list" "LICENSE-CODE"
     add_existing "$list" "requirements-lock.txt"
@@ -115,6 +113,8 @@ add_matches() {
 paper_one_files() {
     local list=$1
     common_release_files "$list"
+    add_existing "$list" "publication/paper-I-CITATION.cff"
+    add_existing "$list" "publication/paper-I-zenodo.json"
     add_existing "$list" "paper/sic-stark-dimensions-four-five.tex"
     add_existing "$list" "paper/sic-stark-dimensions-four-five.pdf"
     add_existing "$list" "publication/paper-I-README.md"
@@ -135,6 +135,8 @@ paper_one_files() {
 paper_two_files() {
     local list=$1
     common_release_files "$list"
+    add_existing "$list" "publication/paper-II-CITATION.cff"
+    add_existing "$list" "publication/paper-II-zenodo.json"
     add_existing "$list" "paper/sic-stark-dimensions-seven-eight.tex"
     add_existing "$list" "paper/sic-stark-dimensions-seven-eight.pdf"
     add_existing "$list" "publication/paper-II-README.md"
@@ -184,6 +186,12 @@ build_one() {
         elif [[ "$relative" == \
             "publication/paper-$paper-REPRODUCE.md" ]]; then
             target="REPRODUCE.md"
+        elif [[ "$relative" == \
+            "publication/paper-$paper-CITATION.cff" ]]; then
+            target="CITATION.cff"
+        elif [[ "$relative" == \
+            "publication/paper-$paper-zenodo.json" ]]; then
+            target=".zenodo.json"
         fi
         mkdir -p -- "$package/$(dirname -- "$target")"
         cp -- "$ROOT/$relative" "$package/$target"
