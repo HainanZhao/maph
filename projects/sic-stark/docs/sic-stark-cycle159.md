@@ -1,5 +1,11 @@
 # SIC--Stark research cycle 159: trilogy publication handoff
 
+> **Publication hold added in Cycle 160.** The local artifact mechanics
+> below remain valid, but the statement that Paper II needed no
+> dimension-seven rescope was incorrect. The corrected manuscript
+> proves discriminant $32$ in dimension seven and leaves discriminant
+> $8$ open.
+
 Date: 2026-07-29
 
 ## Program decision

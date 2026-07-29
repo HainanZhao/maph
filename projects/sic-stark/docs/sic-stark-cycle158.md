@@ -1,5 +1,10 @@
 # SIC--Stark research cycle 158: dimension-seven publication gate
 
+> **Superseded by Cycle 160.** This gate correctly replayed the
+> discriminant-$32$ certificate but incorrectly inferred coverage of
+> the independent discriminant-$8$ stratum. Its universal
+> dimension-seven scope verdict is withdrawn.
+
 Date: 2026-07-29
 
 ## Question
@@ -63,4 +68,3 @@ the prove branch.
 
 The self-hashed gate record is
 `certificates/dimension-seven-cycle158-publication-gate.json`.
-

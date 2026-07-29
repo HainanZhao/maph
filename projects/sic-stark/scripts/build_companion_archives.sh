@@ -147,6 +147,13 @@ paper_two_files() {
         "certificates/dimension-eight-cm-descent.txt"
     add_existing "$list" \
         "certificates/dimension-eight-maximal-signs.txt"
+    add_existing "$list" \
+        "certificates/dimension-seven-double-sine-intervals.txt"
+    add_existing "$list" \
+        "certificates/dimension-seven-shintani-divisors.txt"
+    add_existing "$list" \
+        "certificates/dimension-seven-cycle160-scope-correction.json"
+    add_existing "$list" "docs/sic-stark-cycle160.md"
     add_existing "$list" "certificates/test-suite.txt"
     add_existing "$list" "scripts/certify_dimension_five_double_sine.py"
     add_existing "$list" "scripts/explore_dimension_four_double_sine.py"
@@ -155,7 +162,7 @@ paper_two_files() {
     add_matches "$list" "scripts" \
         'scripts/((analyze|certify|explore|generate|verify)_dimension_(seven|eight).*|dimension_(seven|eight).*)'
     add_matches "$list" "tests" \
-        'tests/(test_dimension_seven_closure|test_dimension_eight_maximal_signs|test_dimension_eight_unconditional_closure)\.py'
+        'tests/(test_dimension_seven_closure|test_dimension_eight_maximal_signs|test_dimension_eight_unconditional_closure|test_paper_ii_referee_regressions)\.py'
 }
 
 build_one() {

@@ -9,15 +9,17 @@ Q_d=\langle1,1-d,1\rangle,\qquad d\ge4,
 
 as a focused route toward Zauner's SIC-existence conjecture. It is a
 research ledger and executable reduction. General TCC remains open; two
-companion papers prove its formal dimension-four, five, seven, and eight
-instances unconditionally:
+companion papers prove dimensions four and five, the
+discriminant-$32$ stratum in dimension seven, and both admissible
+strata in dimension eight:
 
 - [Paper I source](paper/sic-stark-dimensions-four-five.tex) and
   [PDF](paper/sic-stark-dimensions-four-five.pdf): dimensions four and
   five;
 - [Paper II source](paper/sic-stark-dimensions-seven-eight.tex) and
-  [PDF](paper/sic-stark-dimensions-seven-eight.pdf): dimensions seven
-  and eight.
+  [PDF](paper/sic-stark-dimensions-seven-eight.pdf): discriminant
+  \(32\) in dimension seven and discriminants \(5,45\) in dimension
+  eight. The dimension-seven discriminant-\(8\) stratum remains open.
 
 The separate conditional/reformulation manuscript for dimension six is
 [Paper III source](paper/sic-stark-dimension-six-boundary-fusion.tex)
@@ -139,8 +141,7 @@ It belongs in the separate Paper II archive:
 - `scripts/certify_dimension_eight_maximal_cocycle.py`
 - `scripts/dimension_eight_maximal_exact_tcc.py`
 - `certificates/dimension-eight-cm-descent.txt`
-- the dimension-six and dimension-eight scripts cited explicitly in
-  Section 7 of the manuscript
+- the dimension-eight scripts cited explicitly in Paper II
 
 ### Release metadata
 
