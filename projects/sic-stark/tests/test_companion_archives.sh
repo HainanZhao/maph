@@ -18,7 +18,7 @@ mkdir -p -- "$first" "$second"
 "$BUILDER" --output-dir "$first" >/dev/null
 "$BUILDER" --output-dir "$second" >/dev/null
 
-for paper in I II; do
+for paper in I II III; do
     archive="sic-stark-paper-$paper.tar.gz"
     cmp --silent "$first/$archive" "$second/$archive" || {
         printf 'FAIL: Paper %s archives differ\n' "$paper" >&2
@@ -43,6 +43,7 @@ done
 
 paper_one_members=$(tar -tzf "$first/sic-stark-paper-I.tar.gz")
 paper_two_members=$(tar -tzf "$first/sic-stark-paper-II.tar.gz")
+paper_three_members=$(tar -tzf "$first/sic-stark-paper-III.tar.gz")
 
 grep -Fq "sic-stark-paper-I/paper/sic-stark-dimensions-four-five.pdf" \
     <<<"$paper_one_members"
@@ -57,5 +58,14 @@ grep -Fq "dimension_eight_maximal_sign_audit.py" \
     <<<"$paper_two_members"
 grep -Fq "dimension_seven_exact_tcc.gp" <<<"$paper_two_members"
 
+grep -Fq \
+    "sic-stark-paper-III/paper/sic-stark-dimension-six-boundary-fusion.pdf" \
+    <<<"$paper_three_members"
+grep -Fq "dimension_six_two_base_lens.py" <<<"$paper_three_members"
+if grep -Fq "dimension_eight\|dimension_seven" <<<"$paper_three_members"; then
+    printf '%s\n' "FAIL: Paper III contains cross-paper artifacts" >&2
+    exit 1
+fi
+
 printf '%s\n' \
-    "PASS: both companion archives are deterministic and self-checksumming"
+    "PASS: all three companion archives are deterministic and self-checksumming"
