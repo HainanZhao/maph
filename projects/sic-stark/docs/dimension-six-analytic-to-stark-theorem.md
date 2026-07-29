@@ -104,6 +104,26 @@ Since \(\beta=[4;\overline{1,3}]\) and
 \(\|n\beta\|\ge(\sqrt{21}n+\tfrac12)^{-1}\), the hard range is
 \(n\asymp s^{-1}\).
 
+A standalone sufficient quantitative hypothesis is
+
+> **BF\(_6(\eta)\).** For some \(C,\eta>0\), the three alias sums of
+> each of the thirty one-sided-growing components satisfy
+> \[
+>  \left|\mathscr S_{a,b,r}(s)
+>       -\mathscr S^{\mathrm{fus}}_{a,b,r}\right|
+>  \le C\,|t(\gamma(s))|^\eta,
+>  \qquad r=0,1,2,
+> \]
+> uniformly over those components as \(s\downarrow0\).
+
+The definitions of the sums, the fusion values, and the one-period
+multiplier \(-e^{2\pi i\beta}\) are given without the surrounding
+SIC--Stark tower in
+[`dimension-six-standalone-estimate.md`](dimension-six-standalone-estimate.md).
+BF\(_6(\eta)\) implies MFC\(_6\).  More generally, a uniform Dini
+modulus in the trace defect is sufficient for the same implication.
+Neither estimate is presently proved.
+
 ## Standalone conditional theorem
 
 > **Analytic-to-Stark theorem.** Assume MFC\(_6\). Then

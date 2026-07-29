@@ -57,11 +57,13 @@ For a separate Paper III preprint deposit, upload:
 - `paper/sic-stark-dimension-six-boundary-fusion.pdf`
 - `docs/dimension-six-state-notes-v3.md`
 - `docs/dimension-six-analytic-to-stark-theorem.md`
-- `docs/sic-stark-cycle143.md` through `docs/sic-stark-cycle153.md`
+- `docs/dimension-six-standalone-estimate.md`
+- `docs/sic-stark-cycle143.md` through `docs/sic-stark-cycle154.md`
 - `certificates/dimension-six-amendment-SHA256SUMS`
-- every `certificates/dimension-six-cycle14[4-9]-*`,
-  `certificates/dimension-six-cycle150-*`, and
-  `certificates/dimension-six-cycle153-*` file
+- every file matching `certificates/dimension-six-cycle14[4-9]-*`,
+  `certificates/dimension-six-cycle150-*`,
+  `certificates/dimension-six-cycle153-*`, or
+  `certificates/dimension-six-cycle154-*`
 - `scripts/generate_dimension_six_amendment_certificates.sh`
 - the `dimension_six_*` scripts named by that generator
 - the matching `tests/test_dimension_six_*` regression files
@@ -700,6 +702,23 @@ estimate is a concrete \(n\asymp s^{-1}\) small-divisor problem.
 The Arb rehearsal records rigorous approaching-point balls and the
 observed loss of conditioning without claiming the open boundary
 limit.
+
+[Cycle 154](docs/sic-stark-cycle154.md) measures that conditioning and
+isolates the analytic stratum.  For the factorized-continuation
+implementation,
+\[
+\log_{10}C_6(s)=2.803972/s-14.9000,\qquad
+\log_{10}C_4(s)=0.643602/s-17.0281.
+\]
+The widening is essential exponential in \(1/s\) on the pinned windows,
+not logarithmic or power-law.  Because the proved dimension-four
+control displays the same numerical pathology, these are explicitly
+reported as algorithm-conditioning slopes rather than intrinsic
+boundary exponents.  The six Fresnel modes coincide exactly with the
+q-gamma cancellation modes under both TCC frequency maps, but not with
+the conductor-lowered arithmetic stratum.  The open estimate is stated
+independently in
+[the standalone boundary problem](docs/dimension-six-standalone-estimate.md).
 
 ## Verification
 
