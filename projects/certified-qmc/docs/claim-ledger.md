@@ -168,9 +168,13 @@ Date: 2026-07-29
 - Compiled direct-baseline timings in Cycle 006 and direct-versus-NTT
   score timings in Cycle 008.
 - The streaming pilot measured 2.482743 aggregate wall ns/update on
-  four visible cores, projecting the confirmed 54.901-trillion-update
-  workload to 1.577618 node-days with 3.7001% replay overhead.  This is
-  a local measurement, not a portable performance guarantee.
+  four visible cores, projecting the preregistered conservative
+  54.901-trillion-update fidelity-plus-usability budget to 1.577618
+  node-days with 3.7001% replay overhead.  The verified schedule later
+  fixed the exact telemetry count at 54.054 trillion including
+  overflow work; the difference comes from conservative 61-bit prime
+  counts, not a reduced grid.  This is a local measurement, not a
+  portable performance guarantee.
 - The first Cycles 016–017 production attempt correctly paused after
   5.013504 billion updates at 3.653537 aggregate ns/update, above its
   prospectively frozen +25% VPS drift alarm. Same-host

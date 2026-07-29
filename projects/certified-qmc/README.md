@@ -83,9 +83,10 @@ numerical model validation, not part of the trusted base.
 
 The full supply grid and weights are frozen.  A compiled prime-major
 streaming pilot passed its frozen oracle, overflow, replay, and
-throughput gates: 2.483 ns/update projects the confirmed
-54.9-trillion-update workload to 1.58 node-days on the recorded
-four-core node.  This authorizes the full exact throughput branch;
+throughput gates: 2.483 ns/update projects the preregistered
+conservative 54.9-trillion-update phase budget to 1.58 node-days on
+the recorded four-core node.  This authorizes the full exact
+throughput branch;
 Cycle 013 has since closed the licensing/dependency gate: UNSW vectors
 use keyed, non-embedded mode and the release graph contains no FFTW.
 Cycle 014 has banked the full independently verified 3,740-prime

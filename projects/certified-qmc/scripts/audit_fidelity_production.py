@@ -27,6 +27,15 @@ SPEC = ROOT / "data" / "cycles-016-017-fidelity-spec-v2.json"
 VERIFIER = ROOT / "bin" / "verify-entry"
 
 
+def expected_update_count(spec: dict) -> int:
+    return sum(
+        (int(table["work_prime_count"]) + 2)
+        * int(table["N"])
+        * int(table["dimension"])
+        for table in spec["tables"]
+    )
+
+
 def parse_generator(path: Path, dimension: int) -> list[int]:
     result = []
     for line in path.read_text().splitlines():
@@ -254,6 +263,25 @@ def main() -> None:
         if row["event"] == "BATCH":
             updates += int(row["updates"])
             wall_ns += int(row["wall_ns"])
+    expected_updates = expected_update_count(spec)
+    if updates != expected_updates:
+        raise ArithmeticError(
+            "telemetry update count does not cover the frozen grid"
+        )
+    aggregate_ns_per_update = wall_ns / updates
+    frozen_alarm = float(
+        prereg["run_gate"]["maximum_aggregate_ns_per_update"]
+    )
+    if aggregate_ns_per_update > frozen_alarm:
+        raise ArithmeticError(
+            "production throughput exceeds the frozen VPS ceiling"
+        )
+    node_days = wall_ns / (86400 * 10**9)
+    maximum_node_days = int(
+        prereg["run_gate"]["maximum_node_days"]
+    )
+    if node_days > maximum_node_days:
+        raise ArithmeticError("production exceeds seven node-days")
     payload = {
         "schema": (
             "certified-qmc-cycles-016-017-production-audit-v1"
@@ -300,26 +328,22 @@ def main() -> None:
         "independent_oracles": oracles,
         "throughput": {
             "updates": updates,
+            "expected_updates": expected_updates,
+            "update_count_exact": True,
             "wall_ns": wall_ns,
-            "aggregate_ns_per_update": wall_ns / updates,
-            "frozen_alarm_ns_per_update": float(
-                prereg["run_gate"][
-                    "maximum_aggregate_ns_per_update"
-                ]
-            ),
-            "alarm_pass": (
-                wall_ns / updates
-                <= float(
-                    prereg["run_gate"][
-                        "maximum_aggregate_ns_per_update"
-                    ]
-                )
-            ),
+            "aggregate_ns_per_update": aggregate_ns_per_update,
+            "frozen_alarm_ns_per_update": frozen_alarm,
+            "alarm_pass": True,
+            "measured_kernel_node_days": node_days,
+            "maximum_node_days": maximum_node_days,
+            "node_day_budget_pass": True,
         },
         "gate": {
             "replay_100_of_100": True,
             "oracle_spot_checks_pass": True,
             "manifest_sealed": True,
+            "telemetry_exactly_covers_frozen_grid": True,
+            "throughput_and_node_day_budgets_pass": True,
             "cycles_016_017_exit_gate_passed": True,
         },
     }

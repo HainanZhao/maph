@@ -29,6 +29,16 @@ FIDELITY_AUDIT = (
     ROOT / "certificates" / "cycles-016-017-production-audit.json"
 )
 VERIFIER = ROOT / "bin" / "verify-entry"
+CONSERVATIVE_PHASE_TOTAL_UPDATES = 54_901_459_582_976
+
+
+def expected_update_count(spec: dict) -> int:
+    return sum(
+        (int(table["work_prime_count"]) + 2)
+        * int(table["N"])
+        * int(table["dimension"])
+        for table in spec["tables"]
+    )
 
 
 def digest(path: Path) -> str:
@@ -164,6 +174,25 @@ def main() -> None:
     fidelity_spec = json.loads(FIDELITY_SPEC.read_text())
     usability_auth = authenticate_dataset(usability_dataset)
     fidelity_auth = authenticate_dataset(fidelity_dataset)
+    usability_updates = 0
+    usability_wall_ns = 0
+    for row in iter_chain(usability_dataset / "telemetry.jsonl"):
+        if row["event"] == "BATCH":
+            usability_updates += int(row["updates"])
+            usability_wall_ns += int(row["wall_ns"])
+    expected_usability_updates = expected_update_count(spec)
+    if usability_updates != expected_usability_updates:
+        raise ArithmeticError(
+            "usability telemetry does not cover the frozen compute"
+        )
+    fidelity_updates = int(
+        fidelity_audit["throughput"]["expected_updates"]
+    )
+    combined_updates = fidelity_updates + usability_updates
+    if combined_updates > CONSERVATIVE_PHASE_TOTAL_UPDATES:
+        raise ArithmeticError(
+            "exact scheduled work exceeds the preregistered budget"
+        )
 
     computed_by_key = {
         (
@@ -300,6 +329,7 @@ def main() -> None:
             "computed_entries": "VERIFIED",
             "fidelity_reuse": "VERIFIED",
             "dataset_manifests": "VERIFIED",
+            "throughput": "NUMERICAL",
         },
         "preregistration": {
             "path": str(PREREG.relative_to(ROOT)),
@@ -323,10 +353,41 @@ def main() -> None:
             "fidelity_dataset_manifest_passes": 1,
             "total_verify_entry_invocations": 2,
         },
+        "throughput": {
+            "updates": usability_updates,
+            "expected_updates": expected_usability_updates,
+            "update_count_exact": True,
+            "wall_ns": usability_wall_ns,
+            "aggregate_ns_per_update": (
+                usability_wall_ns / usability_updates
+            ),
+        },
+        "phase_update_budget_reconciliation": {
+            "fidelity_scheduled_updates_including_overflow": (
+                fidelity_updates
+            ),
+            "usability_scheduled_updates_including_overflow": (
+                usability_updates
+            ),
+            "combined_scheduled_updates_including_overflow": (
+                combined_updates
+            ),
+            "preregistered_conservative_updates": (
+                CONSERVATIVE_PHASE_TOTAL_UPDATES
+            ),
+            "within_conservative_budget": True,
+            "reason": (
+                "The preregistered projection used conservative 61-bit "
+                "prime counts. The verified schedule uses larger "
+                "admitted primes and therefore shorter exact prefixes."
+            ),
+        },
         "gate": {
             "computed_36_of_36_verified": True,
             "reused_18_of_18_verified_by_hash": True,
             "j2_recomputed": False,
+            "telemetry_exactly_covers_frozen_usability_compute": True,
+            "combined_work_within_preregistered_budget": True,
             "cycle_018_data_gate_passed": True,
         },
     }

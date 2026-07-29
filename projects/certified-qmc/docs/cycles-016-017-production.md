@@ -20,6 +20,17 @@ and rises to 3,678 at \(N=2^{20}\), plus the two universal overflow
 primes. These are the shortest verified schedule prefixes satisfying
 the corrected numerator bounds. The exact fidelity count is
 53,767,080,345,600 modular updates.
+Including both universal overflow primes at every fidelity cell, the
+driver telemetry must contain exactly 53,797,264,588,800 updates.
+
+The earlier 54,901,459,582,976-update number remains the prospective
+conservative budget for fidelity plus the nonduplicated usability
+profiles.  It used 61-bit lower bounds for prime contribution before
+the full schedule existed.  The verified primes are larger, so the
+minimal schedule prefixes are shorter: the exact scheduled
+fidelity-plus-usability count, including overflow work, is
+54,054,029,393,920.  The smaller exact count is a schedule
+reconciliation, not a reduction of the frozen grid.
 
 ## Preserved v1 pause
 

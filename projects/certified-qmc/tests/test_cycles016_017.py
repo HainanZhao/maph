@@ -8,6 +8,7 @@ import unittest
 from src.certificate import canonical_sha256
 from src.crt import choose_moduli
 from src.scaled_integer import error_numerator_bound
+from scripts.audit_fidelity_production import expected_update_count
 
 from fractions import Fraction
 
@@ -35,6 +36,12 @@ def digest(path: Path) -> str:
 
 
 class Cycles016017Tests(unittest.TestCase):
+    def test_frozen_grid_exact_update_count(self):
+        spec = json.loads(V2_SPEC.read_text())
+        self.assertEqual(
+            expected_update_count(spec), 53_797_264_588_800
+        )
+
     def test_preregistration_self_hash_and_spec_pin(self):
         prereg = json.loads(PREREG.read_text())
         supplied = prereg.pop("preregistration_sha256")
