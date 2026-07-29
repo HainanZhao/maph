@@ -185,7 +185,9 @@ def main() -> None:
             )
 
         metadata = json.loads(METADATA.read_text())
-        metadata["license"] = "cc-by-4.0"
+        if metadata.get("license") != "Apache-2.0":
+            raise ValueError("unexpected release-code license metadata")
+        metadata["license"] = "apache-2.0"
         metadata["prereserve_doi"] = True
         updated = curl_json(
             "PUT",

@@ -7,15 +7,16 @@ Status: `G1 PASSED`
 ## Dependency gate
 
 The release target is now `make -C native release`.  Its graph contains
-only the project-owned direct and frozen streaming kernels.  The
-streaming binary's only ELF `NEEDED` entries are `libgomp.so.1` and
-`libc.so.6`; the direct evaluator needs only `libc.so.6`.  No FFTW, GMP,
-FLINT, or other third-party mathematical object is linked.
+only the project-owned direct, frozen streaming, and Cycle-009 exact
+NTT kernels.  The streaming binary's only ELF `NEEDED` entries are
+`libgomp.so.1` and `libc.so.6`; the direct evaluator and exact NTT
+scorer need only `libc.so.6`.  No FFTW, GMP, FLINT, or other third-party
+mathematical object is linked.
 
-A clean-room copy containing only the release Makefile and two C sources
+A clean-room copy containing only the release Makefile and three C sources
 was compiled with an empty package-config path and a compiler wrapper
-that rejects any FFTW argument.  Both binaries built successfully and
-were byte-identical to the ordinary release build.  `ldd`, ELF
+that rejects any FFTW argument.  All three binaries built successfully
+and were byte-identical to the ordinary release build.  `ldd`, ELF
 dependencies, build commands, source hashes, compiler, flags, and CPU
 are banked in `certificates/cycle-013-dependency-manifest.json`.
 

@@ -22,10 +22,12 @@ RELEASE_SOURCES = (
     NATIVE / "Makefile",
     NATIVE / "direct_modular.c",
     NATIVE / "streaming_pilot.c",
+    NATIVE / "cycle009_ntt.c",
 )
 BINARIES = (
     ROOT / "build" / "native" / "direct_modular",
     ROOT / "build" / "native" / "streaming_pilot",
+    ROOT / "build" / "native" / "cycle009_ntt",
 )
 
 
@@ -123,6 +125,7 @@ def clean_room_build() -> dict[str, object]:
         clean_binaries = (
             clean_root / "build" / "native" / "direct_modular",
             clean_root / "build" / "native" / "streaming_pilot",
+            clean_root / "build" / "native" / "cycle009_ntt",
         )
         results = []
         for binary in clean_binaries:

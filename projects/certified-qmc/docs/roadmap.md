@@ -29,7 +29,8 @@ complete; multi-prime compiled engine open.
    valuation mapping.~~
 8. Implement the Cycle-009 three-representation ladder and validate its
    balls on \(N\le2^{12}\).
-9. Compile the stratified NTT, run it prime-major across the 40-prime
+9. ~~Compile and validate the single-prime stratified NTT through
+   \(N=2^{12}\).~~ Run it prime-major across the 40-prime
    schedule, and reconstruct candidate differences at
    \(N=2^{16},d=50\).
 10. Bank the plain-reduction correctness transcript, then introduce

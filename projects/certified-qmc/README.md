@@ -116,10 +116,14 @@ Workstream C entry gate.
 - `native/direct_modular.c`: compiled direct modular baseline.
 - `native/streaming_pilot.c`: prime-major incremental exact-table
   throughput pilot.
+- `native/cycle009_ntt.c`: compiled plain-`__int128`
+  valuation-stratified exact candidate scorer.
 - `tools/numerical-crosscheck/`: release-excluded FFTW/LatNet
   `NUMERICAL` cross-check harnesses.
 - `scripts/certify_rule.py`: certify a user-supplied rule.
 - `scripts/verify_certificate.py`: replay a core certificate.
+- `scripts/verify_engine_oracle.py`: authenticate the compact oracle or
+  rebuild it byte-identically from both supplementary datasets.
 - `scripts/audit_phase0_target.py`: certify the frozen official prefix.
 - `scripts/audit_workstream_b_reference_table.py`: certify every
   dimension of the frozen vector-only prefix.
@@ -137,6 +141,8 @@ Workstream C entry gate.
 - `docs/status-2026-07-29.md`: initial results and next-cycle handoff.
 - `docs/cycle-001-...` through `cycle-008-...`: gated cycle records.
 - `docs/cycle-009-decision-layer-preregistration.md`: next-rung freeze.
+- `certificates/cycle-009-compiled-ntt-gate.json`: compiled scorer
+  replay against direct and independent Python mappings.
 - `docs/workstream-b-discrepancy-preregistration.md`: external audit
   classification gate.
 - `docs/workstream-b-cycle010-forward-error-report.md`: producer-bound
@@ -160,6 +166,8 @@ Workstream C entry gate.
   replay transcript.
 - `docs/cycles-016-017-production.md`: fidelity freeze, preserved
   throughput pause, and versioned VPS disposition.
+- `docs/paper-supply-side-draft.md`: engine-first methods-paper prose
+  with result fields mechanically left pending until their gates close.
 - `docs/roadmap.md`: gated workstreams.
 
 ## Quick start

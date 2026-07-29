@@ -92,10 +92,11 @@ Date: 2026-07-29
 - The pilot's first failed transcript is retained. It exposed and then
   isolated a native constant-factor error before authorization; the v2
   preregistration changed no acceptance threshold.
-- The Cycle-013 release graph and clean-room build contain no FFTW
-  reference or linked object. The direct evaluator links only the C
-  runtime; the frozen OpenMP streaming kernel links only the compiler
-  OpenMP runtime and C runtime.
+- The revalidated Cycle-013 release graph and clean-room build contain
+  no FFTW reference or linked object. The direct evaluator and compiled
+  Cycle-009 NTT scorer link only the C runtime; the frozen OpenMP
+  streaming kernel links only the compiler OpenMP runtime and C
+  runtime.
 - Archived terms snapshots classify the UNSW lattice page and Magic
   Point Shop as `UNCLEAR`, and frozen QMCPy as `REDISTRIBUTABLE` under
   Apache-2.0. Production therefore uses keyed merits without embedded
@@ -110,6 +111,11 @@ Date: 2026-07-29
   selected entries replay exactly, pass both universal overflow primes,
   match independent Python oracles, and touch at most 0.8529% of pilot
   payload.
+- The compiled plain-`__int128` valuation-stratified Cycle-009 scorer
+  matches the independent Python NTT for every candidate at
+  \(N=2^3,\ldots,2^{12}\) over two verified primes (20 complete score
+  vectors).  Through \(N=256\), both compiled and Python NTT outputs
+  additionally match direct candidate enumeration.
 
 ## ENCLOSED
 
@@ -173,6 +179,12 @@ Date: 2026-07-29
 - The pinned FFTW plans, compiled LatNet midpoint matches, and synthetic
   fast-CBC transcripts validate that the proposed model class is
   realistic.  They are outside the Workstream B certification chain.
+- One premature one-prime Cycle-009 scorer smoke test at
+  \(N=2^{16}\), prefix `[1]`, is quarantined.  It sampled no Arb balls,
+  comparisons, winners, or escalation statistics and is excluded from
+  all gates and performance claims.  Its exact scope and console
+  transcript are preserved in
+  `docs/cycle009-premature-smoke-quarantine.md`.
 
 This is a regression fact, not an enclosure.
 
@@ -194,7 +206,9 @@ hardware and implementation.
   audited in Cycle 001.
 - Whether the official full table reproduces under the exact stated
   convention.
-- Compiled multi-prime valuation-stratified NTT scoring.
+- Multi-prime Cycle-009 stage orchestration, checkpointing, and
+  exact-CRT overlap reconstruction around the now-validated compiled
+  single-prime scorer.
 - A production-cost compiled double-double radius propagated through
   the valuation-stratified score kernel.
 - Certified floating/Arb separation for CBC comparisons.

@@ -1,4 +1,40 @@
-# Reproducing one certified entry
+# Reproducing the engine oracle and one supplementary entry
+
+The primary release artifact is the exact evaluator and its 298-case
+conformance oracle.  The exhaustive fidelity/usability grids are
+supplementary data and certified CBC-side comparison anchors.
+
+## 1. Authenticate the compact engine oracle
+
+From the released source directory, after extracting the compact oracle
+archive:
+
+```bash
+python3 scripts/verify_engine_oracle.py \
+  --oracle oracle/certificates/engine-oracle-set-v1.json
+```
+
+This checks the oracle self-hash, all 290 table-entry hashes, the
+value-blind selection preregistration, and exactly recomputes all eight
+adversarial decision cases.  It authenticates but does not
+arithmetically reconstruct the 290 table merits without their residue
+datasets.
+
+For a byte-identical full replay after also extracting both
+supplementary archives:
+
+```bash
+python3 scripts/verify_engine_oracle.py \
+  --oracle oracle/certificates/engine-oracle-set-v1.json \
+  --fidelity tables/fidelity-v2 \
+  --usability tables/usability-v1
+```
+
+The selected merits are then reconstructed from authenticated chunks,
+checked with both overflow primes, and compared byte-for-byte with the
+released compact oracle.
+
+## 2. Reproduce one supplementary certified entry
 
 This walkthrough verifies one exact fidelity-table entry without
 trusting a printed decimal merit. It authenticates the run metadata and
@@ -11,7 +47,7 @@ vectors. Each table entry is instead keyed by the upstream citation,
 the frozen source-file SHA-256, the entry index, and the
 generator-prefix SHA-256.
 
-## 1. Build the frozen evaluator and verify the prime schedule
+### Build the frozen evaluator and verify the prime schedule
 
 From the released source directory:
 
@@ -27,7 +63,7 @@ The schedule verifier independently checks all 3,740 N−1
 certificates. The production binary must link only the system C runtime;
 the release graph contains no FFTW.
 
-## 2. Authenticate and reconstruct one entry
+### Authenticate and reconstruct one entry
 
 Assuming the fidelity dataset archive was extracted as
 `tables/fidelity-v2`, run:
@@ -54,7 +90,7 @@ integrand. It certifies the selected lattice rule’s squared
 shift-averaged worst-case error in the frozen product-weight,
 Bernoulli-\(B_2\) convention.
 
-## 3. Check the keyed upstream vector
+### Check the keyed upstream vector
 
 For the example above, retrieve the vector from its cited publisher and
 verify its frozen hash:
@@ -71,7 +107,7 @@ The required digest is recorded in `table-index.json` and
 compact JSON, must hash to the `generator_prefix_sha256` reported by
 `verify-entry`.
 
-## 4. Replay the release tests
+## 3. Replay the release tests
 
 The Arb-dependent tests use the pinned environment:
 
