@@ -1,0 +1,59 @@
+{
+  "archive_gate": {
+    "archive": "dist/sic-stark-paper-II.tar.gz",
+    "archive_bytes": 415399,
+    "archive_sha256": "292ca88e161201898463e20a1a3aa5fcde9d23422e724aee4490ac9fe62df7c1",
+    "clean_extraction_tests": 80,
+    "deterministic_and_self_checksumming": true,
+    "dimension_seven_sources_present": true
+  },
+  "certificate_sha256": "e4e5c734f1a148ebf13c9ae3822d1a98293d9910b50e23768827b0adad7e35a5",
+  "claim_tag": "VERIFIED",
+  "conductor_two_gate": {
+    "base_field": "Q(sqrt(2))",
+    "canonical_discriminant": 32,
+    "formal_shifts": [
+      0,
+      1
+    ],
+    "idempotency_exact": true,
+    "minors_per_shift": 441,
+    "order_conductor": 2,
+    "phase_and_ray_labels_exact": true,
+    "shintani_index": 2,
+    "trace": 1,
+    "wide_form_class_count": 1
+  },
+  "paper_ii": {
+    "pdf_sha256": "c11bb46070b7574847ba2983ff13414fb6f47ca46d4a6ca0f2fe9a10b62ad9c1",
+    "source_sha256": "2049ca876a892c2359438010bb159ed9a6f2a7afceb7fbf2f3ea2d9ed124cf81",
+    "theorem_1_scope_change_required": false,
+    "theorem_statement": "For every admissible tuple in dimensions seven or eight, 0 and 1 are shifts; same-discriminant forms have equal shift sets."
+  },
+  "recorded_at_utc": "2026-07-29T12:17:28Z",
+  "rerun": {
+    "command": "python3 -m unittest tests.test_dimension_seven_closure -v",
+    "elapsed_seconds": "28.557",
+    "failed": 0,
+    "passed": 8,
+    "tests": [
+      "test_both_formal_shifts",
+      "test_complete_phase_and_ray_label_packet",
+      "test_exact_artin_and_archimedean_labels",
+      "test_exact_both_shift_tcc_certificate",
+      "test_exact_phase_packet",
+      "test_exact_ray_fields_and_candidate_unit_fields",
+      "test_shintani_index_conductor_and_safe_power",
+      "test_symbolic_orbit_reduction"
+    ]
+  },
+  "schema": "sic-stark-dimension-seven-cycle158-publication-gate-v1",
+  "source_hashes": {
+    "cycle151_record": "ab26670f4745dc123685aebc8183027606356e7392439896c3abafc8cdaa65b0",
+    "exact_tcc_script": "ea0e918fae929bbfbf9f29261567e0064e468efd9552aea314238d9dc693d145",
+    "lowering_script": "de33999efeedeb9bf78833e7d32ad50496294fb8e8aec56e088eedb506bf6a60",
+    "shintani_script": "c7d28d50042f03fb762c62d267b34f9a4e62893be40d47ec06d44c064906e3a1",
+    "test_module": "1f6246c29dd5954b448e7056035c955b9b146f436b5629c164f8bb2ff655b094"
+  },
+  "verdict": "PROVED_NO_RESCOPE"
+}
