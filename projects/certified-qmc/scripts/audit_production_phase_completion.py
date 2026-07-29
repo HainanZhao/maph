@@ -123,6 +123,10 @@ def release_package(release: Path) -> dict:
             "supplementary fidelity tables": "CC-BY-4.0",
             "supplementary usability tables": "CC-BY-4.0",
         }
+        if {
+            asset.get("role") for asset in manifest["assets"]
+        } != set(expected_licenses):
+            raise ValueError("release asset-role set mismatch")
         for asset in manifest["assets"]:
             if expected_licenses.get(asset["role"]) != asset.get(
                 "license"
