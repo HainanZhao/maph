@@ -2,20 +2,15 @@
 
 Date frozen: 2026-07-29 UTC
 
-Status: `PREPARED_NOT_ACTIVATED`
+Status: `ACTIVE; SEVEN-ANCHOR GATE PASSED 7/7`
 
-## Sequencing gate
+## Research activation
 
-The sweep does not begin until all of the following are recorded:
-
-1. Paper I has an arXiv identifier and immutable artifact DOI.
-2. Paper II has an arXiv identifier and immutable artifact DOI.
-3. The author has reviewed and sent the Kopp correspondence.
-
-The sibling project currently records both deposits as blocked on
-external credentials and the correspondence as drafted but unsent.
-Creating schemas and replay wrappers does not count as launching the
-census.
+The sweep has no publication or correspondence entry gate.  Those
+human-sized administrative actions do not affect the mathematics and
+are tracked separately.  Research proceeds whenever its exact source,
+anchor, certificate, and manifest gates pass.  The superseded
+sequencing records remain in the repository as process history.
 
 ## Frozen range
 

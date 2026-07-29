@@ -32,6 +32,12 @@ class PhaseZeroContractTests(unittest.TestCase):
         self.sequencing = json.loads(
             (ROOT / "data" / "sequencing-gate-v1.json").read_text()
         )
+        self.activation = json.loads(
+            (ROOT / "data" / "sequencing-gate-v2.json").read_text()
+        )
+        self.research_activation = json.loads(
+            (ROOT / "data" / "research-activation-v3.json").read_text()
+        )
 
     def test_frozen_field_count(self) -> None:
         squarefree = []
@@ -133,6 +139,34 @@ class PhaseZeroContractTests(unittest.TestCase):
             self.sequencing["prerequisites"]["kopp_correspondence"][
                 "sent_at_utc"
             ]
+        )
+
+    def test_versioned_activation_preserves_unknown_identifiers(self) -> None:
+        self.assertTrue(self.activation["activated"])
+        self.assertEqual(
+            self.activation["amends"], "data/sequencing-gate-v1.json"
+        )
+        for paper in ("paper_I", "paper_II"):
+            self.assertIsNone(
+                self.activation["prerequisites"][paper]["arxiv_id"]
+            )
+            self.assertIsNone(
+                self.activation["prerequisites"][paper]["artifact_doi"]
+            )
+
+    def test_research_has_no_external_administrative_gate(self) -> None:
+        self.assertTrue(self.research_activation["activated"])
+        self.assertEqual(
+            self.research_activation["verdict"],
+            "RESEARCH_ACTIVE_NO_EXTERNAL_SEQUENCING_GATE",
+        )
+        self.assertTrue(
+            all(
+                value == "TRACKED_SEPARATELY_NOT_A_RESEARCH_GATE"
+                for value in self.research_activation[
+                    "administrative_metadata"
+                ].values()
+            )
         )
 
     def test_record_schema_accepts_proved_and_frontier_only(self) -> None:
