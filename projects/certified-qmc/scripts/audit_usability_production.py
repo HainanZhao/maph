@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from src.certificate import canonical_sha256
-from src.chunked_table import file_sha256, iter_chain
+from src.chunked_table import file_sha256, iter_chain, safe_chunk_path
 
 
 SPEC = ROOT / "data" / "cycle-018-usability-spec.json"
@@ -116,13 +116,18 @@ def authenticate_dataset(dataset: Path) -> dict:
     final_record = None
     chunk_count = 0
     payload_bytes = 0
+    manifested_paths = set()
     for record in iter_chain(dataset / "manifest.jsonl"):
         final_record = record
         if record["event"] != "CHUNK":
             continue
         chunk_count += 1
         payload_bytes += int(record["bytes"])
-        path = dataset / record["path"]
+        relative = str(record["path"])
+        if relative in manifested_paths:
+            raise ValueError("duplicate chunk path in manifest")
+        manifested_paths.add(relative)
+        path = safe_chunk_path(dataset, relative)
         if (
             path.stat().st_size != record["bytes"]
             or file_sha256(path) != record["sha256"]
@@ -135,6 +140,17 @@ def authenticate_dataset(dataset: Path) -> dict:
         or int(final_record["dataset_payload_bytes"]) != payload_bytes
     ):
         raise ValueError("dataset seal totals do not match manifest")
+    actual_chunk_count = 0
+    for path in (dataset / "chunks").rglob("*"):
+        if path.is_symlink():
+            raise ValueError("chunk tree contains a symlink")
+        if not path.is_file():
+            continue
+        if str(path.relative_to(dataset)) not in manifested_paths:
+            raise ValueError("dataset has an unmanifested chunk")
+        actual_chunk_count += 1
+    if actual_chunk_count != chunk_count:
+        raise ValueError("chunk file count mismatch")
     result = {
         "manifest_sha256": file_sha256(dataset / "manifest.jsonl"),
         "manifest_last_line_sha256": final_record["line_sha256"],

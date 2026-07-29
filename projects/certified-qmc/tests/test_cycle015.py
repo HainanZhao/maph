@@ -15,6 +15,7 @@ from src.chunked_table import (
     file_sha256,
     iter_chain,
     read_chain,
+    safe_chunk_path,
 )
 from src.entry_replay import DatasetReplay
 from scripts.build_engine_oracle_set import replay_batch
@@ -357,6 +358,33 @@ class Cycle015Tests(unittest.TestCase):
                 ValueError, "previous-hash link"
             ):
                 list(iter_chain(manifest))
+
+    def test_chunk_paths_reject_traversal_and_symlinks(self):
+        with tempfile.TemporaryDirectory() as directory:
+            dataset = Path(directory)
+            chunks = dataset / "chunks"
+            chunks.mkdir()
+            regular = chunks / "regular.bin"
+            regular.write_bytes(b"payload")
+            self.assertEqual(
+                safe_chunk_path(dataset, "chunks/regular.bin"),
+                regular,
+            )
+            for unsafe in (
+                "../outside.bin",
+                "chunks/../outside.bin",
+                "/absolute.bin",
+                "other/not-a-chunk.bin",
+            ):
+                with self.subTest(unsafe=unsafe):
+                    with self.assertRaisesRegex(
+                        ValueError, "unsafe chunk path"
+                    ):
+                        safe_chunk_path(dataset, unsafe)
+            linked = chunks / "linked.bin"
+            linked.symlink_to(regular)
+            with self.assertRaisesRegex(ValueError, "symlink"):
+                safe_chunk_path(dataset, "chunks/linked.bin")
 
 
 if __name__ == "__main__":

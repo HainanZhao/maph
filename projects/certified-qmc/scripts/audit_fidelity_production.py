@@ -18,7 +18,7 @@ if hasattr(sys, "set_int_max_str_digits"):
     sys.set_int_max_str_digits(0)
 
 from src.certificate import canonical_sha256
-from src.chunked_table import file_sha256, iter_chain
+from src.chunked_table import file_sha256, iter_chain, safe_chunk_path
 from src.scaled_integer import scaled_squared_error
 
 
@@ -132,13 +132,18 @@ def main() -> None:
     final_record = None
     chunk_count = 0
     payload_bytes = 0
+    manifested_paths = set()
     for record in iter_chain(manifest_path):
         final_record = record
         if record["event"] != "CHUNK":
             continue
         chunk_count += 1
         payload_bytes += int(record["bytes"])
-        path = dataset / record["path"]
+        relative = str(record["path"])
+        if relative in manifested_paths:
+            raise ValueError("duplicate chunk path in manifest")
+        manifested_paths.add(relative)
+        path = safe_chunk_path(dataset, relative)
         if (
             path.stat().st_size != record["bytes"]
             or file_sha256(path) != record["sha256"]
@@ -151,6 +156,18 @@ def main() -> None:
         or int(final_record["dataset_payload_bytes"]) != payload_bytes
     ):
         raise ValueError("fidelity seal totals do not match manifest")
+    actual_chunk_count = 0
+    for path in (dataset / "chunks").rglob("*"):
+        if path.is_symlink():
+            raise ValueError("fidelity chunk tree contains a symlink")
+        if not path.is_file():
+            continue
+        relative = str(path.relative_to(dataset))
+        if relative not in manifested_paths:
+            raise ValueError("fidelity dataset has an unmanifested chunk")
+        actual_chunk_count += 1
+    if actual_chunk_count != chunk_count:
+        raise ValueError("fidelity chunk file count mismatch")
 
     dataset_sha = {
         "schema": "certified-qmc-fidelity-dataset-sha256-v1",

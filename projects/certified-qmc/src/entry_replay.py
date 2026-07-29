@@ -15,6 +15,7 @@ from .chunked_table import (
     canonical_bytes,
     file_sha256,
     iter_chain,
+    safe_chunk_path,
 )
 from .crt import balanced_reconstruct, choose_moduli
 from .scaled_integer import error_numerator_bound, factor_denominator
@@ -153,7 +154,7 @@ class DatasetReplay:
                     matched.append((request, key))
             if not matched:
                 continue
-            path = self.dataset / record["path"]
+            path = safe_chunk_path(self.dataset, record["path"])
             raw = path.read_bytes()
             if (
                 len(raw) != int(record["bytes"])

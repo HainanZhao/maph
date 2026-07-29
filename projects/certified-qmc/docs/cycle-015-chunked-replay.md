@@ -126,3 +126,9 @@ rejected truncation and hash-link tampering, and reproduced a
 chunk-boundary stop/resume tree byte-for-byte.  It changes no chunk
 bytes, CRT result, threshold, production input, or frozen native
 kernel.
+
+Downloaded chunk references are constrained to regular files beneath
+the dataset's `chunks/` directory; absolute paths, `..` traversal, and
+symlinks fail closed.  Full-dataset audits additionally require an
+exact match between manifested paths and files present in the chunk
+tree, so unmanifested payloads cannot enter a release archive silently.

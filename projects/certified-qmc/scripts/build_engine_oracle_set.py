@@ -23,6 +23,7 @@ from src.chunked_table import (
     canonical_bytes,
     file_sha256,
     iter_chain,
+    safe_chunk_path,
 )
 from src.crt import balanced_reconstruct, choose_moduli
 from src.scaled_integer import error_numerator_bound, factor_denominator
@@ -159,7 +160,7 @@ def replay_batch(
             raise ValueError(
                 "selected oracle chunk prime does not match schedule"
             )
-        path = dataset / record["path"]
+        path = safe_chunk_path(dataset, record["path"])
         raw = path.read_bytes()
         if (
             len(raw) != int(record["bytes"])

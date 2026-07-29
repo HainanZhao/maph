@@ -27,6 +27,7 @@ from src.chunked_table import (
     canonical_bytes,
     file_sha256,
     iter_chain,
+    safe_chunk_path,
 )
 
 
@@ -262,7 +263,7 @@ def scan_existing_chunks(
         if key in seen:
             raise RuntimeError("duplicate chunk in manifest")
         seen.add(key)
-        chunk = output / record["path"]
+        chunk = safe_chunk_path(output, record["path"])
         if not chunk.is_file():
             raise RuntimeError("manifested chunk is missing")
         if chunk.stat().st_size != int(record["bytes"]):
