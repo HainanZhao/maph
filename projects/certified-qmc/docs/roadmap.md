@@ -44,10 +44,11 @@ optimization and isolate the representation error.
 Status: the frozen distribution sites and six-paper primary-literature
 perimeter contain no merit attached to the frozen vectors. The
 classification branch is closed for that perimeter. The grid, weights,
-artifact contract, and exact precompute budget are frozen. The compiled
-streaming pilot authorizes the full exact throughput branch; production
-compute remains gated on sources, the full prime schedule, and chunk
-replay.
+artifact contract, exact precompute budget, source policy, full prime
+schedule, and chunk replay are closed. Fidelity production is active
+under the versioned VPS monitor. Its first +25% drift pause is preserved;
+the human-authorized v2 alarm is +75%, while the seven-node-day budget
+and all certification gates remain unchanged.
 
 1. ~~Freeze a source-specific discrepancy protocol and quarantine any
    prematurely exposed values.~~
@@ -91,9 +92,11 @@ replay.
     throughput-drift monitor and post-run audit.
 
 Gate: every supplied entry has a replayable certificate and upstream
-hash. The 54.9-trillion incremental count now has a passing local
-projection; source/license, full-schedule, and chunk-replay gates are
-closed. The Cycles-016–017 pre-run freeze is now the launch boundary.
+hash. The 54.9-trillion combined incremental count has a passing local
+projection; source/license, full-schedule, chunk-replay, and fidelity
+pre-run gates are closed. The active v2 fidelity run must seal and pass
+100 selected replays plus three frozen oracle checks before Cycle 018
+computation begins.
 
 ## Phase 3 — number-theoretic constructions
 
