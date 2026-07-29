@@ -2,6 +2,18 @@
 
 Date: 2026-07-29
 
+## Final program disposition
+
+**CANCELLED_BY_USER at `2026-07-29T12:07:54Z`.** This charter is
+retained as historical scope, not an active program. The exhaustive
+tables, usability grid, conformance-oracle release, packaging,
+application pilot, QMC paper, and scale-CBC gates are retired. The
+small exact evaluator remains an internal utility; the campaign's
+preregistration/failure/quarantine/pivot record remains a methods-paper
+case study. Only the totally-real unit-lattice question is parked as a
+small, independent side question at dimensions 16–64, without an
+industrial certification engine.
+
 ## Mission
 
 Build the independently replayable exact/enclosure evaluation path that
@@ -34,10 +46,10 @@ and paper emphasis follows that finding:
    artifact for software testing;
 3. the 79,200-entry fidelity grid is supplementary archival data.
 
-The exhaustive grid remains part of the authorized run.  Its marginal
-cost is already accepted, it gives the community broader reference
-coverage, and Workstream C needs certified CBC-side anchors for a
-certified-versus-certified unit-lattice benchmark.
+The exhaustive grid was initially authorized, then cancelled when its
+consumer case failed review. It is not required for the surviving C2
+side question: small CBC anchors at dimensions 16–64 can be evaluated
+directly with exact rational arithmetic.
 
 ## Workstream A — certification engine
 
@@ -166,6 +178,11 @@ evidence.
 
 ## Workstream C — number-theoretic constructions
 
+Status: parked as a small independent side question, not an active
+workstream. If resumed later, it uses direct `Fraction` evaluation and
+the existing regulator machinery; it does not depend on the cancelled
+production engine or tables.
+
 - exact Zaremba/dual indices in dimension two;
 - continued-fraction constants with explicit finite-\(N\) statements;
 - certified dimension-three enumeration;
@@ -177,6 +194,8 @@ The unit-lattice thread is the research bet, not a presumed improvement
 over CBC.
 
 ## Workstream D — application pilot
+
+Status: cancelled.
 
 Select one preintegrated pricing or UQ workload. The final report keeps
 separate:
@@ -194,14 +213,10 @@ is certified.
 
 ## Deliverables
 
-1. Open-source exact/enclosure engine with replayable certificates.
-2. A curated, structurally diverse exact oracle/conformance set.
-3. Supplementary exhaustive certified reference merits for the frozen
-   distributed vectors, with per-entry replay and SHA manifests.
-4. Certified number-theoretic construction benchmarks.
-5. One claim-bounded application report.
-6. A methods/results paper only after novelty and source-precision
-   audits are complete.
+1. Retained internal exact evaluator.
+2. Retained process record for the cross-project methods paper.
+3. Optional future C2 note only if the small direct benchmark produces
+   a mathematical result.
 
 ## Standing orders
 

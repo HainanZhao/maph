@@ -2,6 +2,9 @@
 
 Frozen at: **2026-07-29T04:24:47Z**
 
+Final disposition: **CANCELLED_BY_USER before the data run.** Retained
+as a preregistration/process artifact only; do not execute.
+
 This checkpoint precedes the \(N=2^{16},d=50\) data run. No decision
 statistics have been sampled.
 

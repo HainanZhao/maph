@@ -1,10 +1,16 @@
-# Live production recovery checkpoint
+# Cancelled production record and historical recovery checkpoint
 
-Status: operational recovery record for the active Cycles 016–018 run.
-This file is not a certification result and promotes no data.  The
-authoritative mutable state is the chunked dataset under
-`artifacts/fidelity-v2`; this tracked record explains how to resume it
-without recomputing completed chunks.
+Status: **CANCELLED_BY_USER at `2026-07-29T12:07:54Z`. DO NOT
+RESUME.** The production controller, all native workers, and the
+continuation watcher were terminated. Cycles 016–019, usability/oracle
+production, packaging, release deposition, and the QMC paper are
+retired from the active program.
+
+The exact cancellation endpoint is self-hashed in
+`certificates/cycles-016-019-user-cancellation.json`. The partial v2
+dataset is deliberately unsealed and no partial merit is promoted.
+This file retains the earlier recovery design as process evidence only;
+the commands below are historical and are no longer authorized.
 
 ## Banked snapshot
 
@@ -62,7 +68,11 @@ their manifest record is appended.  A crash can therefore lose at most
 the currently executing four-prime batch.  The Cycle-015 gate already
 demonstrated byte-identical recovery after three literal forced kills.
 
-## Recovery after process crash or host reboot
+## Historical recovery procedure — disabled
+
+**Do not execute these commands.** They are preserved to document the
+resumability controls that existed before the user cancelled the
+program.
 
 Never run two production drivers against the same output directory.
 First inspect the process and terminal records:
@@ -124,13 +134,10 @@ Any resume metadata mismatch, oracle mismatch, overflow-prime failure,
 manifest break, or new `PAUSE` is an escalation condition.  Do not
 delete, rewrite, truncate, or manually “repair” a chunk or chain.
 
-## Persistence boundary
+## Preservation boundary
 
-This checkpoint and all frozen source/configuration files are tracked
-and pushed to the repository.  Completed production chunks are stored
-on the VPS disk and make process-crash or ordinary reboot recovery
-incremental.  Git does not contain the live multi-gigabyte dataset, so
-total loss of the VPS volume would still lose those completed chunks;
-an external volume snapshot or object-store mirror is required to
-cover provider-level disk loss.
-
+This checkpoint, the cancellation certificate, and all frozen
+source/configuration files are tracked and pushed to the repository.
+Completed chunks remain on the VPS only as an unpromoted historical
+transcript. They are not an active recovery point and must not be
+resumed.

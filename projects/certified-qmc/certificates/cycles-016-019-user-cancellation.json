@@ -1,0 +1,82 @@
+{
+  "cancelled_at_utc": "2026-07-29T12:07:54Z",
+  "certificate_sha256": "41f500f5022e4566e9be1858c6d5aafb03f4c830003a3b52be3cfad86493b060",
+  "claim_tags": {
+    "partial_merit_values": "NOT_PROMOTED",
+    "process_and_endpoint_record": "VERIFIED",
+    "program_disposition": "CANCELLED_BY_USER",
+    "timings": "NUMERICAL"
+  },
+  "disposition": {
+    "cycle_009_decision_run": "CANCELLED",
+    "cycles_016_017_fidelity_production": "CANCELLED",
+    "cycle_018_oracle_and_packaging": "CANCELLED",
+    "cycle_019_release_paper_and_application_gate": "CANCELLED",
+    "full_qmc_program": "CANCELLED",
+    "production_resume_forbidden": true,
+    "release_deposition": "CANCELLED",
+    "usability_grid": "CANCELLED",
+    "watcher_resume_forbidden": true
+  },
+  "partial_dataset": {
+    "aggregate_ns_per_update": "2.9664749686028506",
+    "chunk_files": 205248,
+    "chunk_payload_bytes": 738892800,
+    "directory_bytes": 860026814,
+    "expected_total_updates": 53797264588800,
+    "last_completed_chunk": {
+      "N": 262144,
+      "dimension_end": 3600,
+      "dimension_start": 3585,
+      "line_sha256": "e47684b158d6aa45ccf014e1d26d65ba329aac8dcaa1262bfa10f4be31baf044",
+      "prime_index": 2253,
+      "role": "WORK",
+      "sequence": 205247,
+      "table_id": "unsw-fixed-29102-n262144-j2"
+    },
+    "manifest_records": 205248,
+    "manifest_sealed": false,
+    "manifest_sha256": "64488571fa203c50ce07c3d95390c8c51f4a653353e303542b2632d55c4e0e09",
+    "path": "artifacts/fidelity-v2",
+    "progress_percent": "9.579433008333469",
+    "run_manifest_sha256": "cb9e4ac83bd5e8ff7fd739b41d9ac47c0c8452eb96822d38a199a7e4845469f8",
+    "table_index_sha256": "2952fbb6b98d19c6a7a5fd2b7451165ddba0a00d5244dd9eb41b4e321dd0e8a6",
+    "telemetry_last_line_sha256": "8c1401316df80c9b771555fd13a9d77731051aec171b9794a1e54b2139a89f2a",
+    "telemetry_records": 6414,
+    "telemetry_sequence": 6413,
+    "telemetry_sha256": "368b25888fe0543e587aabc44877cdda0a7262ce7fde675e3458ecb62f077e83",
+    "throughput_pause_records": 0,
+    "updates": 5153472921600
+  },
+  "preservation": {
+    "completed_chunks_retained": true,
+    "failed_v1_run_retained": true,
+    "no_chunk_or_chain_was_rewritten": true,
+    "partial_dataset_promoted": false,
+    "process_history_retained_for_methods_case_study": true
+  },
+  "process_termination": {
+    "native_worker_processes_absent": true,
+    "orphan_zero_byte_temp_files_removed": 4,
+    "production_controller": {
+      "pid": 901613,
+      "process_group": 901613,
+      "signal": "SIGTERM",
+      "verified_absent": true
+    },
+    "verified_at_utc": "2026-07-29T12:08:16Z",
+    "watcher": {
+      "pid": 922856,
+      "process_group": 922856,
+      "signal": "SIGTERM",
+      "verified_absent": true
+    }
+  },
+  "retained_scope": {
+    "exact_evaluator": "INTERNAL_UTILITY_ONLY",
+    "qmc_process_record": "METHODS_PAPER_CASE_STUDY",
+    "unit_lattice_c2": "PARKED_INDEPENDENT_SIDE_QUESTION"
+  },
+  "schema": "certified-qmc-cycles-016-019-user-cancellation-v1",
+  "user_rationale": "The exhaustive industrial table grid and its release apparatus no longer have a surviving consumer case. Preserve the small exact evaluator and process record; park only the decoupled C2 unit-lattice question."
+}

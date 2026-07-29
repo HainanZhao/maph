@@ -1,6 +1,7 @@
 # Post-release optimization register
 
-Status: closed until release v1.0 has a published DOI
+Status: **CANCELLED_BY_USER.** There will be no QMC v1.0 release; all
+listed optimization work is retired.
 
 The production release uses the frozen plain-`__int128` kernel,
 compiler, flags, and scalar layout.  The following work opens only after

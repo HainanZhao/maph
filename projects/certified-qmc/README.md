@@ -1,5 +1,14 @@
 # Certified Quasi-Monte Carlo
 
+> **Program status: CANCELLED_BY_USER on 2026-07-29.** The exhaustive
+> table campaign, usability/oracle production, packaging, release,
+> Cycle-009 scale run, application pilot, and QMC paper are stopped and
+> must not be resumed. The small exact evaluator remains as an internal
+> utility. The preregistered pilot, preserved failed run, quarantine,
+> trusted-base pivots, and cancellation endpoint remain as a methods
+> case study. C2 is parked separately as a small number-theoretic side
+> question, not an industrial-engine workstream.
+
 This project builds an independently replayable exact/enclosure
 evaluation path for figures of merit of rank-1 lattice rules.  Its
 primary artifact is the evaluator and verifier; a curated conformance
@@ -69,38 +78,14 @@ supplied artifacts alone.  This bounded toolchain finding—not the
 rational absence of exhaustive published merit columns—is the project's
 central motivation.
 
-The release consequently leads with the evaluator, verifier, and a
-preregistered few-hundred-entry conformance/oracle set.  The full
-79,200-entry fidelity grid remains authorized and running because its
-marginal cost is accepted, it has archival value, and Workstream C
-requires certified CBC-side comparison anchors; it is presented as
-supplementary data.  A preregistered six-paper sweep found no numerical
-merit attached to the frozen vectors, so no producer-error bound is
-needed for that perimeter. Future merit-bearing tables use
-\(B_{\rm alg}(\mathcal M)=T_{\rm eval}(\mathcal M)+T_{\rm format}\);
-CBC selection is outside that comparison.  The FFTW/LatNet replays are
-numerical model validation, not part of the trusted base.
-
-The full supply grid and weights are frozen.  A compiled prime-major
-streaming pilot passed its frozen oracle, overflow, replay, and
-throughput gates: 2.483 ns/update projects the preregistered
-conservative 54.9-trillion-update phase budget to 1.58 node-days on
-the recorded four-core node.  This authorizes the full exact
-throughput branch;
-Cycle 013 has since closed the licensing/dependency gate: UNSW vectors
-use keyed, non-embedded mode and the release graph contains no FFTW.
-Cycle 014 has banked the full independently verified 3,740-prime
-schedule. Cycle 015 closed the chunk-replay gate with hash-chained
-chunks, three byte-identical forced-kill resumes, and 10/10
-selected-entry replays. The Cycles 016–017 fidelity grid is now frozen
-and running. Its first attempt correctly paused under the original
-25% VPS drift alarm and is preserved; a human-authorized,
-versioned +75% alarm retains the seven-node-day hard budget and all
-certification predicates. Cycle 009 remains explicitly deferred to the
-Workstream C entry gate.  Its compiled plain-`__int128` scorer now
-matches the independent Python NTT through \(N=2^{12}\), its integrated
-Arb/CRT/checkpoint preflight is banked, and the resumable target driver
-mechanically refuses to start without the published-DOI certificate.
+The campaign established the exact evaluator, pilot, licensing,
+verified-prime, and chunk-replay machinery, but the exhaustive grid's
+consumer case did not survive scrutiny. Production was therefore
+cancelled at 9.579433008333469%, before sealing or promotion. The
+partial chain and exact endpoint are retained in
+`certificates/cycles-016-019-user-cancellation.json`; they are evidence
+of process, not a table deliverable. No DOI or QMC release will be
+created.
 
 ## Layout
 
