@@ -18,6 +18,7 @@ sys.path.insert(0, str(ROOT))
 from src.certificate import canonical_sha256
 from src.chunked_table import file_sha256, iter_chain
 from src.entry_replay import DatasetReplay
+from scripts.build_engine_oracle_set import replay_batch
 
 
 DATASET = ROOT / "artifacts" / "cycle-015-pilot"
@@ -118,10 +119,50 @@ def main() -> None:
         seal = record
     if seal is None or seal["event"] != "SEAL":
         raise ValueError("pilot dataset manifest is not sealed")
-    replay = DatasetReplay(DATASET, ROOT)
-    if hasattr(replay, "records") or hasattr(replay, "chunks"):
+    dataset_replay = DatasetReplay(DATASET, ROOT)
+    if hasattr(dataset_replay, "records") or hasattr(
+        dataset_replay, "chunks"
+    ):
         raise AssertionError(
             "streaming verifier retained a materialized manifest"
+        )
+    schedule = json.loads(
+        (ROOT / "data" / "primes-schedule-v1.json").read_text()
+    )
+    oracle_requests = [
+        {
+            "table_id": "pilot-000",
+            "N": 32,
+            "dimension": dimension,
+            "weight_power": 1,
+        }
+        for dimension in (7, 13)
+    ]
+    extracted, extraction_provenance = replay_batch(
+        DATASET,
+        oracle_requests,
+        [int(row["p"]) for row in schedule["primes"]],
+        "cycle-015-pilot",
+    )
+    for oracle, replayed in zip(extracted, batch["results"]):
+        if (
+            oracle["reduced_numerator"]
+            != replayed["reduced_numerator"]
+            or oracle["reduced_denominator"]
+            != replayed["reduced_denominator"]
+        ):
+            raise ArithmeticError(
+                "streamed oracle extraction changed an exact value"
+            )
+    summed_entry_chunks = sum(
+        row["authenticated_chunk_count"] for row in extracted
+    )
+    if (
+        extraction_provenance["selected_unique_chunk_count"]
+        >= summed_entry_chunks
+    ):
+        raise AssertionError(
+            "shared oracle chunks were not deduplicated"
         )
     with tempfile.TemporaryDirectory(
         prefix="certified-qmc-streaming-resume-"
@@ -264,6 +305,7 @@ def main() -> None:
             "manifest_materialized_by_selected_entry_verifier": False,
             "retained_dataset_records_after_initialization": False,
             "retained_dataset_chunks_after_initialization": False,
+            "selected_chunk_payloads_retained_after_scan": False,
             "file_hashing_block_bytes": 1048576,
             "pilot_chain_matches_predecessor_seal": (
                 seal["line_sha256"]
@@ -277,6 +319,17 @@ def main() -> None:
                 "baseline_tree_sha256": baseline_tree_sha256,
                 "resumed_tree_sha256": resumed_tree_sha256,
                 "byte_identical": True,
+            },
+            "oracle_extractor": {
+                "entries": len(extracted),
+                "exact_values_equal_to_selected_entry_replay": True,
+                "selected_unique_chunk_count": (
+                    extraction_provenance[
+                        "selected_unique_chunk_count"
+                    ]
+                ),
+                "summed_per_entry_chunk_count": summed_entry_chunks,
+                "shared_chunks_read_once": True,
             },
         },
         "boundary": (
@@ -292,6 +345,7 @@ def main() -> None:
             "predecessor_transcript_preserved": True,
             "streaming_manifest_authentication_passed": True,
             "streaming_resume_byte_identical": True,
+            "streamed_oracle_extraction_preserves_exact_values": True,
             "cycle_015_streaming_extension_passed": True,
         },
     }

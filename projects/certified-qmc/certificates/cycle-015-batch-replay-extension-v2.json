@@ -11,7 +11,7 @@
     "request_count": 2
   },
   "boundary": "This replaces manifest materialization with streaming authentication in verifier/audit orchestration only. Single-entry values, production chunks, thresholds, and the frozen production kernel are unchanged.",
-  "certificate_sha256": "31426be5b853b35152eefcc4858eb4d587803dda19ff1beeb0ee549ddb5c4ebf",
+  "certificate_sha256": "208ed157d4e5172b2fb376fbed3b558b49deb32db592bb41a1c5a5eb49fc9deb",
   "claim_tag": "VERIFIED",
   "dataset": {
     "authenticated_record_count": 939,
@@ -25,6 +25,7 @@
     "cycle_015_streaming_extension_passed": true,
     "predecessor_transcript_preserved": true,
     "single_entry_behavior_preserved": true,
+    "streamed_oracle_extraction_preserves_exact_values": true,
     "streaming_manifest_authentication_passed": true,
     "streaming_resume_byte_identical": true,
     "two_entry_batch_verified": true
@@ -34,7 +35,7 @@
     "sha256": "7d83e4200dfaaf2c971b30fcc20e102ed5946f9d086aa3150612bb5cf058bc80",
     "status": "PRESERVED"
   },
-  "recorded_at_utc": "2026-07-29T09:32:33Z",
+  "recorded_at_utc": "2026-07-29T09:39:46Z",
   "request_fixture": {
     "path": "tests/fixtures/cycle015-batch-requests.json",
     "request_count": 2,
@@ -64,11 +65,11 @@
     "bin/verify-entry": "2830432c6ab83ebeab3b6c109f6c51be382aef7eb112e9c7e458d484763dbc96",
     "scripts/audit_fidelity_production.py": "dd7cd10f7ee464f22aa00bfa09ab53244b079292c97caad2f500bd0e7513e031",
     "scripts/audit_usability_production.py": "42265f1fd036c81cc3a3ded83381c5e82b3bc0b134891c4a19908a1eb71b0b09",
-    "scripts/build_engine_oracle_set.py": "5543ebbb2b8bd99b5dc074d3984855fd1a8e7a09776bd92685cecd4ae9ca6951",
+    "scripts/build_engine_oracle_set.py": "77cb5fb39c0074182b58514916b9bef72499a3d75d1c9ef07f6cc0cce793cf8d",
     "scripts/run_chunked_production.py": "a01a12eb126454b1b42ffd299e288eca98753565b53c941edfe5ff41bb501c3b",
     "scripts/verify_entry.py": "108884cebdebd3c2c0b750757a7801053d67fe83af255144ce4fd3dad8f29e62",
     "src/chunked_table.py": "0332e16fa83768901e1c69cbe60f3ac81c88e4b6e346acd60bff75e9d6e453ce",
-    "src/entry_replay.py": "e58ac781df2960eeca79ba609d0acfa0abb9310a5a15680bd7cf6c773d176c43"
+    "src/entry_replay.py": "787e7f590f723223a3cee668d78b137e27ad73f6952e7f6736d5a0fd4a420ab5"
   },
   "streaming": {
     "chunk_boundary_resume": {
@@ -80,8 +81,16 @@
     },
     "file_hashing_block_bytes": 1048576,
     "manifest_materialized_by_selected_entry_verifier": false,
+    "oracle_extractor": {
+      "entries": 2,
+      "exact_values_equal_to_selected_entry_replay": true,
+      "selected_unique_chunk_count": 6,
+      "shared_chunks_read_once": true,
+      "summed_per_entry_chunk_count": 10
+    },
     "pilot_chain_matches_predecessor_seal": true,
     "retained_dataset_chunks_after_initialization": false,
-    "retained_dataset_records_after_initialization": false
+    "retained_dataset_records_after_initialization": false,
+    "selected_chunk_payloads_retained_after_scan": false
   }
 }

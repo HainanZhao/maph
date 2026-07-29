@@ -17,6 +17,7 @@ from src.chunked_table import (
     read_chain,
 )
 from src.entry_replay import DatasetReplay
+from scripts.build_engine_oracle_set import replay_batch
 
 
 PROJECT = Path(__file__).resolve().parents[1]
@@ -225,6 +226,61 @@ class Cycle015Tests(unittest.TestCase):
             "generator_prefix_sha256",
         ):
             self.assertEqual(first[key], one[key])
+
+    def test_oracle_extractor_streams_shared_chunks_without_value_change(self):
+        schedule = json.loads(
+            (
+                PROJECT / "data" / "primes-schedule-v1.json"
+            ).read_text()
+        )
+        primes = [int(row["p"]) for row in schedule["primes"]]
+        requests = [
+            {
+                "table_id": "pilot-000",
+                "N": 32,
+                "dimension": dimension,
+                "weight_power": 1,
+            }
+            for dimension in (7, 13)
+        ]
+        extracted, provenance = replay_batch(
+            DATASET, requests, primes, "cycle-015-pilot"
+        )
+        completed = subprocess.run(
+            [
+                str(PROJECT / "bin" / "verify-entry"),
+                "--dataset",
+                str(DATASET),
+                "--requests",
+                str(
+                    PROJECT
+                    / "tests"
+                    / "fixtures"
+                    / "cycle015-batch-requests.json"
+                ),
+                "--compact",
+            ],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        verified = json.loads(completed.stdout)["results"]
+        for oracle, replayed in zip(extracted, verified):
+            self.assertEqual(
+                oracle["reduced_numerator"],
+                replayed["reduced_numerator"],
+            )
+            self.assertEqual(
+                oracle["reduced_denominator"],
+                replayed["reduced_denominator"],
+            )
+        self.assertLess(
+            provenance["selected_unique_chunk_count"],
+            sum(
+                row["authenticated_chunk_count"]
+                for row in extracted
+            ),
+        )
 
     def test_batch_extension_transcript_replays(self):
         predecessor_path = (

@@ -115,7 +115,12 @@ class DatasetReplay:
             wanted_by_table.setdefault(
                 request["table_id"], []
             ).append(request)
-        available: dict[tuple[str, int, int], dict] = {}
+        selected_residues: dict[tuple[str, int, int], int] = {}
+        selected_paths: dict[tuple[str, int, int], str] = {}
+        touched_by_entry: dict[tuple[str, int], int] = {
+            (request["table_id"], request["dimension"]): 0
+            for request in prepared
+        }
         payload_bytes = 0
         last_record = None
         for record in iter_chain(self.manifest_path):
@@ -129,6 +134,7 @@ class DatasetReplay:
             prime_index = int(record["prime_index"])
             start = int(record["dimension_start"])
             end = int(record["dimension_end"])
+            matched = []
             for request in wanted:
                 dimension = request["dimension"]
                 if (
@@ -140,11 +146,46 @@ class DatasetReplay:
                         dimension,
                         prime_index,
                     )
-                    if key in available:
+                    if key in selected_residues:
                         raise ValueError(
                             "multiple chunks cover selected residue"
                         )
-                    available[key] = record
+                    matched.append((request, key))
+            if not matched:
+                continue
+            path = self.dataset / record["path"]
+            raw = path.read_bytes()
+            if (
+                len(raw) != int(record["bytes"])
+                or sha256(raw).hexdigest() != record["sha256"]
+            ):
+                raise ValueError(
+                    "selected chunk authentication failed"
+                )
+            if (
+                prime_index >= len(self.primes)
+                or int(record["prime"]) != self.primes[prime_index]
+            ):
+                raise ValueError(
+                    "selected chunk prime does not match schedule"
+                )
+            for request, key in matched:
+                offset = (
+                    request["dimension"]
+                    - int(record["dimension_start"])
+                )
+                residue = struct.unpack_from(
+                    "<Q", raw, offset * 8
+                )[0]
+                if residue >= self.primes[prime_index]:
+                    raise ValueError(
+                        "selected residue is not reduced"
+                    )
+                selected_residues[key] = residue
+                selected_paths[key] = record["path"]
+                touched_by_entry[
+                    (request["table_id"], request["dimension"])
+                ] += len(raw)
         if last_record is None or last_record["event"] != "SEAL":
             raise ValueError("dataset manifest is not sealed")
         if (
@@ -164,35 +205,24 @@ class DatasetReplay:
             dimension = request["dimension"]
             required = request["required_indices"]
             if any(
-                (table_id, dimension, prime_index) not in available
+                (table_id, dimension, prime_index)
+                not in selected_residues
                 for prime_index in required
             ):
                 raise ValueError(
                     "selected entry lacks required prime chunks"
                 )
-            residues: dict[int, int] = {}
-            touched = 0
-            touched_chunks = []
-            for prime_index in required:
-                record = available[
+            residues = {
+                prime_index: selected_residues[
                     (table_id, dimension, prime_index)
                 ]
-                path = self.dataset / record["path"]
-                raw = path.read_bytes()
-                touched += len(raw)
-                if (
-                    len(raw) != int(record["bytes"])
-                    or sha256(raw).hexdigest() != record["sha256"]
-                ):
-                    raise ValueError(
-                        "selected chunk authentication failed"
-                    )
-                offset = dimension - int(record["dimension_start"])
-                residue = struct.unpack_from("<Q", raw, offset * 8)[0]
-                if residue >= self.primes[prime_index]:
-                    raise ValueError("selected residue is not reduced")
-                residues[prime_index] = residue
-                touched_chunks.append(record["path"])
+                for prime_index in required
+            }
+            touched = touched_by_entry[(table_id, dimension)]
+            touched_chunks = [
+                selected_paths[(table_id, dimension, prime_index)]
+                for prime_index in required
+            ]
 
             table = request["table"]
             modulus = request["N"]
