@@ -1,0 +1,57 @@
+{
+  "schema": "certified-qmc-run-manifest-template-v1",
+  "required_top_level_fields": [
+    "schema",
+    "run_id",
+    "production_spec",
+    "compiler",
+    "kernel",
+    "prime_schedule",
+    "input_tables",
+    "preregistrations",
+    "chunking",
+    "table_index_sha256",
+    "run_manifest_sha256"
+  ],
+  "compiler_required_fields": [
+    "version",
+    "flags",
+    "cpu_model",
+    "platform"
+  ],
+  "kernel_required_fields": [
+    "representation",
+    "production_source",
+    "production_source_sha256",
+    "pilot_source",
+    "pilot_source_sha256",
+    "binary_sha256",
+    "linked_libraries",
+    "optimization_changes"
+  ],
+  "prime_schedule_required_fields": [
+    "path",
+    "sha256",
+    "verification_manifest",
+    "verification_manifest_sha256"
+  ],
+  "input_table_required_fields": [
+    "table_id",
+    "source_id",
+    "source_citation",
+    "source_snapshot_sha256",
+    "source_file_sha256",
+    "N",
+    "dimension",
+    "weight_power",
+    "work_prime_count"
+  ],
+  "chunking_required_fields": [
+    "prefix_block_size",
+    "encoding",
+    "manifest",
+    "manifest_chain",
+    "universal_overflow_prime_indices"
+  ],
+  "self_hash_rule": "SHA-256 of canonical compact JSON before run_manifest_sha256 is inserted"
+}

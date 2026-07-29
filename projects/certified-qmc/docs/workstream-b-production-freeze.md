@@ -103,8 +103,11 @@ This does not yet launch production.  Cycle 013 closed the source
 provenance/license gate by selecting keyed, non-embedded vector mode.
 Cycle 014 closed the deterministic schedule blocker with 3,740
 independently verified N−1 certificates. Only the production
-chunk/selected-entry replay and run-hygiene gate remains. The pilot
-outcome and its preserved failed first transcript are documented in
+chunk/selected-entry replay and run-hygiene gate remained; Cycle 015
+has now closed it with three byte-identical forced-kill resumes and
+10/10 exact selected-entry replays. The production pre-run freeze is
+now the launch boundary. The pilot outcome and its preserved failed
+first transcript are documented in
 `docs/workstream-b-streaming-pilot-report.md`.
 
 The complete machine-readable freeze is

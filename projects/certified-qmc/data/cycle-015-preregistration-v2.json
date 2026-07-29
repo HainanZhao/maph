@@ -1,0 +1,75 @@
+{
+  "schema": "certified-qmc-cycle-015-preregistration-v2",
+  "frozen_at_utc": "2026-07-29T07:29:16Z",
+  "data_run_started": false,
+  "predecessor": {
+    "path": "data/cycle-015-preregistration.json",
+    "sha256": "647246a9baddba997c5c7be71a709517bc6e750e9a783ac9edae038883cfb93a",
+    "timestamp_preceded_attempt": false,
+    "failed_transcript": "certificates/cycle-015-demo-failed-v1.json",
+    "failed_transcript_sha256": "e4d0bc7fbd852662ac36efb9660338850ed6f052a4a09a0c0f95f1fe4bd6f2d2"
+  },
+  "authorized_corrections": [
+    "Regenerate the pilot spec with this v2 freeze timestamp and preregistration hash.",
+    "Accept a table-level work-prime count greater than a smaller prefix's minimal sufficient count; reconstruct with every recorded work prime.",
+    "Normalize ldd load addresses so independent output trees are deterministic."
+  ],
+  "unchanged_thresholds": {
+    "forced_stop_after_new_chunk_counts": [
+      17,
+      211,
+      503
+    ],
+    "selected_entry_seed": 15019,
+    "selected_entry_count": 10,
+    "maximum_dataset_payload_fraction": "0.01",
+    "prefix_block_size": 512,
+    "resume_acceptance": "every resumed final artifact tree is byte-identical to uninterrupted output"
+  },
+  "chunking": {
+    "layout": "per-table, per-prime, contiguous prefix blocks",
+    "prefix_block_size": 512,
+    "word_encoding": "unsigned 64-bit little-endian",
+    "per_chunk_sha256": true,
+    "manifest": "append-only canonical JSONL hash chain"
+  },
+  "resume_demo": {
+    "pilot_tables": 128,
+    "N": 32,
+    "dimension": 16,
+    "weight_powers": [
+      1,
+      2,
+      3
+    ],
+    "forced_stop_after_new_chunk_counts": [
+      17,
+      211,
+      503
+    ],
+    "acceptance": "every resumed final artifact tree is byte-identical to uninterrupted output"
+  },
+  "selected_entry_demo": {
+    "seed": 15019,
+    "entries": 10,
+    "maximum_dataset_payload_fraction": "0.01",
+    "acceptance": "10/10 VERIFIED and every touched payload fraction <=0.01"
+  },
+  "kernel": {
+    "representation": "plain __int128 remainder",
+    "pilot_source": "native/streaming_pilot.c",
+    "pilot_source_sha256": "f21c5cc9ab825ea402258fd5832e7ee0b33ebf5f60c2c3fab9cec7484339dd42",
+    "optimization_changes_authorized": false,
+    "compiler_flags": "-O3 -std=c11 -Wall -Wextra -Wpedantic -D_POSIX_C_SOURCE=200809L"
+  },
+  "universal_overflow_prime_indices": [
+    3738,
+    3739
+  ],
+  "halt_conditions": [
+    "native-vs-Python oracle mismatch",
+    "manifest hash-chain break",
+    "overflow-prime reconstruction mismatch",
+    "resumed output differs from uninterrupted output"
+  ]
+}

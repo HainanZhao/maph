@@ -1,0 +1,289 @@
+{
+  "baseline": {
+    "manifest_lines": 939,
+    "manifest_sha256": "3991c53e47399123a0f559c9522985beffc2bf461e77d3d3b5847e474bfd38df",
+    "path": "artifacts/cycle-015-pilot",
+    "seal": {
+      "chunk_count": 938,
+      "dataset_payload_bytes": 120064,
+      "event": "SEAL",
+      "line_sha256": "af9dbebcd3a4ddaed1a0bfe4ff667d5768855606f2217c4feb5daead7f943356",
+      "previous_line_sha256": "bb70d1cba249a08e33780e8c363659e450e2a12a5feacf535e69c69525d987bb",
+      "run_manifest_sha256": "1a0e8920d943dc8af95f352e9c0c5834c35b995f0d2eaf5218b61cf8f102c22e",
+      "sequence": 938,
+      "table_index_sha256": "4fe0be444d552099411bbb8abff0431dd4fa869b618dda91141a25536fb56b50"
+    },
+    "tree": {
+      "bytes": 878327,
+      "files": 941,
+      "sha256": "e0e99b511791bf585f7075370292f879f719ac7645e2c551a76bfda4aec0d148"
+    }
+  },
+  "boundary": "VERIFIED covers deterministic chunk bytes, the append-only hash chain, forced-kill resumability, exact reconstruction, two universal overflow checks, and independent Python oracle agreement on the frozen pilot samples. It is not yet a production-grid result.",
+  "certificate_sha256": "ac646bf12a0ab4092db79e4e9518ce70c9e99ddebc2c9eea45d842e941eb7b53",
+  "claim_tags": {
+    "chunk_hash_chain_and_resume": "VERIFIED",
+    "runtime": "NUMERICAL_NOT_PROMOTED",
+    "selected_entry_replay": "VERIFIED"
+  },
+  "gate": {
+    "cycle_015_exit_gate_passed": true,
+    "run_manifest_complete": true,
+    "selected_entry_touch_budget_passed": true,
+    "ten_selected_entries_verified": true,
+    "three_sigkill_resume_runs_byte_identical": true
+  },
+  "kill_and_resume": [
+    {
+      "boundary_marker": {
+        "last_line_sha256": "9056b7c30dd6206359ff520df5ffba202a175309980412510f7885beb4309627",
+        "new_chunks": 17,
+        "status": "READY_FOR_FORCED_KILL"
+      },
+      "byte_identical_to_uninterrupted": true,
+      "forced_kill_after_manifested_chunks": 17,
+      "kill_signal": "SIGKILL",
+      "killed_return_code": -9,
+      "resumed_tree": {
+        "bytes": 878327,
+        "files": 941,
+        "sha256": "e0e99b511791bf585f7075370292f879f719ac7645e2c551a76bfda4aec0d148"
+      },
+      "stderr": ""
+    },
+    {
+      "boundary_marker": {
+        "last_line_sha256": "0f7fa852747966db96d1636b4c6816a0c1c6a31e9c421bce084c26d8d2ed88bf",
+        "new_chunks": 211,
+        "status": "READY_FOR_FORCED_KILL"
+      },
+      "byte_identical_to_uninterrupted": true,
+      "forced_kill_after_manifested_chunks": 211,
+      "kill_signal": "SIGKILL",
+      "killed_return_code": -9,
+      "resumed_tree": {
+        "bytes": 878327,
+        "files": 941,
+        "sha256": "e0e99b511791bf585f7075370292f879f719ac7645e2c551a76bfda4aec0d148"
+      },
+      "stderr": ""
+    },
+    {
+      "boundary_marker": {
+        "last_line_sha256": "04b410d539eee37e28665639698b55aee501449477d96c810136fa40e14cd324",
+        "new_chunks": 503,
+        "status": "READY_FOR_FORCED_KILL"
+      },
+      "byte_identical_to_uninterrupted": true,
+      "forced_kill_after_manifested_chunks": 503,
+      "kill_signal": "SIGKILL",
+      "killed_return_code": -9,
+      "resumed_tree": {
+        "bytes": 878327,
+        "files": 941,
+        "sha256": "e0e99b511791bf585f7075370292f879f719ac7645e2c551a76bfda4aec0d148"
+      },
+      "stderr": ""
+    }
+  ],
+  "pilot_spec": {
+    "path": "data/cycle-015-pilot-spec.json",
+    "sha256": "930254c111eea2d3b9b77bf957942e8b9cb3af84939d0c9280c2b637b9ec896d",
+    "table_count": 128
+  },
+  "preregistration": {
+    "path": "data/cycle-015-preregistration-v2.json",
+    "sha256": "d9efe0afa9d1f45fb82f454a19b937a90f61db4ef2db7c283187e2cad87fe68a"
+  },
+  "run_manifest": {
+    "compiler": {
+      "cpu_model": "AMD EPYC 9354P 32-Core Processor",
+      "flags": "-O3 -std=c11 -Wall -Wextra -Wpedantic -D_POSIX_C_SOURCE=200809L",
+      "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+      "version": "cc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+    },
+    "kernel": {
+      "binary_sha256": "9cc306ba02ae84073aa2cb462bdce642a67d96d0e03694ac109b390921dd033e",
+      "linked_libraries": [
+        "linux-vdso.so.1",
+        "libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6",
+        "/lib64/ld-linux-x86-64.so.2"
+      ],
+      "optimization_changes": false,
+      "pilot_source": "native/streaming_pilot.c",
+      "pilot_source_sha256": "f21c5cc9ab825ea402258fd5832e7ee0b33ebf5f60c2c3fab9cec7484339dd42",
+      "production_source": "native/production_prime.c",
+      "production_source_sha256": "da63eb3549ed289d5b496fd50d222b5e112cb0effb0b2b6a533895807eebde9c",
+      "representation": "plain __int128 remainder"
+    },
+    "path": "artifacts/cycle-015-pilot/run-manifest.json",
+    "preregistrations": {
+      "data/cycle-015-preregistration-v2.json": "d9efe0afa9d1f45fb82f454a19b937a90f61db4ef2db7c283187e2cad87fe68a",
+      "data/workstream-b-production-freeze.json": "82da2e75e15e9ac88812120a8dcfbbdd481ce147603ce2857487c2eb8130bda1",
+      "data/workstream-b-streaming-pilot-preregistration-v2.json": "29fb8118e47b3e0c215308a98fb2a7d3e1a56d6862738f4a954c100bb7aae1b1"
+    },
+    "prime_schedule": {
+      "path": "data/primes-schedule-v1.json",
+      "sha256": "22fadf04ddc70749a5c340483d457590dbe445fbf87883f4875f0ccf71331697",
+      "verification_manifest": "certificates/cycle-014-prime-schedule-manifest.json",
+      "verification_manifest_sha256": "d1c787ba469d1cb177313546bdc2bb27154bc56b8b6560cd30a5d10b05a465d2"
+    },
+    "self_hash": "1a0e8920d943dc8af95f352e9c0c5834c35b995f0d2eaf5218b61cf8f102c22e",
+    "sha256": "68809efa117313a6966b4c6ba234feb1e748e27fb8d04361d87db293a14893b3",
+    "template": {
+      "path": "data/run-manifest-template.json",
+      "sha256": "35e1ec495af8c746852b7a7ba67a05779a4dcf1c3c6c47e57d0a7ce4e9c87309"
+    }
+  },
+  "schema": "certified-qmc-cycle-015-chunk-replay-v1",
+  "selected_entry_replay": {
+    "all_overflow_checks_equal": true,
+    "all_python_oracles_equal": true,
+    "all_ten_verified": true,
+    "entries": [
+      {
+        "N": 32,
+        "chunks_read": 8,
+        "dataset_payload_bytes": 120064,
+        "dimension": 8,
+        "generator_prefix_sha256": "6ff94b0b4432b89d6d382627a225d4ac70c264772931297cb368282bfc03b46d",
+        "oracle_scaled_integer_equal": true,
+        "overflow_checks_equal": true,
+        "status": "VERIFIED",
+        "table": "pilot-002",
+        "touched_payload_bytes": 1024,
+        "touched_payload_fraction": 0.008528784648187633,
+        "weight_power": 3
+      },
+      {
+        "N": 32,
+        "chunks_read": 8,
+        "dataset_payload_bytes": 120064,
+        "dimension": 11,
+        "generator_prefix_sha256": "1bee9ae0049e1190aff8aff5c9463266834524284dab81b4336932dd96d48a5f",
+        "oracle_scaled_integer_equal": true,
+        "overflow_checks_equal": true,
+        "status": "VERIFIED",
+        "table": "pilot-005",
+        "touched_payload_bytes": 1024,
+        "touched_payload_fraction": 0.008528784648187633,
+        "weight_power": 3
+      },
+      {
+        "N": 32,
+        "chunks_read": 7,
+        "dataset_payload_bytes": 120064,
+        "dimension": 11,
+        "generator_prefix_sha256": "1bee9ae0049e1190aff8aff5c9463266834524284dab81b4336932dd96d48a5f",
+        "oracle_scaled_integer_equal": true,
+        "overflow_checks_equal": true,
+        "status": "VERIFIED",
+        "table": "pilot-007",
+        "touched_payload_bytes": 896,
+        "touched_payload_fraction": 0.007462686567164179,
+        "weight_power": 2
+      },
+      {
+        "N": 32,
+        "chunks_read": 7,
+        "dataset_payload_bytes": 120064,
+        "dimension": 16,
+        "generator_prefix_sha256": "a80b751d44e2d626d959ba84cf9f1020b0f06d8a3d598b902e6070ee42a9094b",
+        "oracle_scaled_integer_equal": true,
+        "overflow_checks_equal": true,
+        "status": "VERIFIED",
+        "table": "pilot-015",
+        "touched_payload_bytes": 896,
+        "touched_payload_fraction": 0.007462686567164179,
+        "weight_power": 1
+      },
+      {
+        "N": 32,
+        "chunks_read": 7,
+        "dataset_payload_bytes": 120064,
+        "dimension": 16,
+        "generator_prefix_sha256": "a80b751d44e2d626d959ba84cf9f1020b0f06d8a3d598b902e6070ee42a9094b",
+        "oracle_scaled_integer_equal": true,
+        "overflow_checks_equal": true,
+        "status": "VERIFIED",
+        "table": "pilot-016",
+        "touched_payload_bytes": 896,
+        "touched_payload_fraction": 0.007462686567164179,
+        "weight_power": 2
+      },
+      {
+        "N": 32,
+        "chunks_read": 7,
+        "dataset_payload_bytes": 120064,
+        "dimension": 13,
+        "generator_prefix_sha256": "1a1cb0e6f8eccc60210171829a09c70fc810433972cb3dd0311caff74d56a05f",
+        "oracle_scaled_integer_equal": true,
+        "overflow_checks_equal": true,
+        "status": "VERIFIED",
+        "table": "pilot-018",
+        "touched_payload_bytes": 896,
+        "touched_payload_fraction": 0.007462686567164179,
+        "weight_power": 1
+      },
+      {
+        "N": 32,
+        "chunks_read": 7,
+        "dataset_payload_bytes": 120064,
+        "dimension": 13,
+        "generator_prefix_sha256": "1a1cb0e6f8eccc60210171829a09c70fc810433972cb3dd0311caff74d56a05f",
+        "oracle_scaled_integer_equal": true,
+        "overflow_checks_equal": true,
+        "status": "VERIFIED",
+        "table": "pilot-040",
+        "touched_payload_bytes": 896,
+        "touched_payload_fraction": 0.007462686567164179,
+        "weight_power": 2
+      },
+      {
+        "N": 32,
+        "chunks_read": 7,
+        "dataset_payload_bytes": 120064,
+        "dimension": 11,
+        "generator_prefix_sha256": "1bee9ae0049e1190aff8aff5c9463266834524284dab81b4336932dd96d48a5f",
+        "oracle_scaled_integer_equal": true,
+        "overflow_checks_equal": true,
+        "status": "VERIFIED",
+        "table": "pilot-058",
+        "touched_payload_bytes": 896,
+        "touched_payload_fraction": 0.007462686567164179,
+        "weight_power": 2
+      },
+      {
+        "N": 32,
+        "chunks_read": 7,
+        "dataset_payload_bytes": 120064,
+        "dimension": 3,
+        "generator_prefix_sha256": "cfc87d00440d503b95b27223bdd7c42be2f142aba4da12e534f051c68b843b13",
+        "oracle_scaled_integer_equal": true,
+        "overflow_checks_equal": true,
+        "status": "VERIFIED",
+        "table": "pilot-085",
+        "touched_payload_bytes": 896,
+        "touched_payload_fraction": 0.007462686567164179,
+        "weight_power": 2
+      },
+      {
+        "N": 32,
+        "chunks_read": 7,
+        "dataset_payload_bytes": 120064,
+        "dimension": 3,
+        "generator_prefix_sha256": "cfc87d00440d503b95b27223bdd7c42be2f142aba4da12e534f051c68b843b13",
+        "oracle_scaled_integer_equal": true,
+        "overflow_checks_equal": true,
+        "status": "VERIFIED",
+        "table": "pilot-087",
+        "touched_payload_bytes": 896,
+        "touched_payload_fraction": 0.007462686567164179,
+        "weight_power": 1
+      }
+    ],
+    "frozen_maximum_payload_fraction": 0.01,
+    "maximum_observed_payload_fraction": 0.008528784648187633,
+    "seed": 15019
+  }
+}

@@ -100,6 +100,11 @@ Date: 2026-07-29
   3,740 complete-factorization Lucas/Pocklington N−1 certificates,
   primitive roots, and 2-adic valuations; two generator reruns are
   byte-identical to the banked schedule.
+- The chunked production driver resumes after literal `SIGKILL` at
+  three preregistered boundaries to byte-identical sealed trees. Ten
+  selected entries replay exactly, pass both universal overflow primes,
+  match independent Python oracles, and touch at most 0.8529% of pilot
+  payload.
 
 ## ENCLOSED
 
@@ -121,9 +126,8 @@ Date: 2026-07-29
   \(T_{\rm eval}(\mathcal M)+T_{\rm format}\).
 - Workstream B production uses the frozen fidelity/usability grid and
   artifact contract. The exact throughput branch is authorized, but
-  full compute remains forbidden until production chunk replay and run
-  hygiene are complete. Source licensing and the full prime schedule
-  are closed gates.
+  the production run itself has not started. Source licensing, the full
+  prime schedule, and chunk replay/run hygiene are closed gates.
 
 ## EXPLICITLY DEFERRED GATES
 

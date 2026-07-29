@@ -84,13 +84,16 @@ replay.
     \(N=1024,d=256,\gamma_j=j^{-2}\) pilot.~~
 15. ~~Recompute the full-grid wall-time projection from the pilot and
     apply the prospectively frozen go/no-go predicate.~~
-16. Produce chunked tables in increasing \(N\), with independent entry
-    replay and two-prime overflow checks.
+16. ~~Implement hash-chained chunks, forced-kill resumability,
+    selected-entry replay below the 1% payload ceiling, universal
+    overflow checks, and complete run manifests.~~
+17. Produce chunked tables in increasing \(N\), with the frozen
+    throughput-drift monitor and post-run audit.
 
 Gate: every supplied entry has a replayable certificate and upstream
 hash. The 54.9-trillion incremental count now has a passing local
-projection; the source/license and full-schedule gates are closed.
-Chunk replay still forbids production launch.
+projection; source/license, full-schedule, and chunk-replay gates are
+closed. The Cycles-016–017 pre-run freeze is now the launch boundary.
 
 ## Phase 3 — number-theoretic constructions
 
