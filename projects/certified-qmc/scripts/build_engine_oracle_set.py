@@ -272,10 +272,12 @@ def main() -> None:
     parser.add_argument("--recorded-at-utc", required=True)
     args = parser.parse_args()
 
-    require_audit_gate(
+    fidelity_audit = require_audit_gate(
         FIDELITY_AUDIT, "cycles_016_017_exit_gate_passed"
     )
-    require_audit_gate(USABILITY_AUDIT, "cycle_018_data_gate_passed")
+    usability_audit = require_audit_gate(
+        USABILITY_AUDIT, "cycle_018_data_gate_passed"
+    )
     prereg = json.loads(PREREG.read_text())
     supplied_selection_sha = prereg.pop("selection_sha256")
     if canonical_sha(prereg) != supplied_selection_sha:
@@ -309,6 +311,24 @@ def main() -> None:
         primes,
         "usability-v1",
     )
+    if (
+        fidelity_provenance["seal_line_sha256"]
+        != fidelity_audit["dataset"]["seal_line_sha256"]
+    ):
+        raise ValueError(
+            "fidelity dataset does not match its passed audit"
+        )
+    if (
+        usability_provenance["seal_line_sha256"]
+        != usability_audit["usability_dataset"][
+            "manifest_last_line_sha256"
+        ]
+        or usability_provenance["manifest_sha256"]
+        != usability_audit["usability_dataset"]["manifest_sha256"]
+    ):
+        raise ValueError(
+            "usability dataset does not match its passed audit"
+        )
     adversarial = [
         exact_adversarial(case)
         for case in prereg["adversarial_decision_cases"]
