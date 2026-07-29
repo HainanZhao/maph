@@ -18,7 +18,7 @@ if hasattr(sys, "set_int_max_str_digits"):
     sys.set_int_max_str_digits(0)
 
 from src.certificate import canonical_sha256
-from src.chunked_table import chunk_records, file_sha256, read_chain
+from src.chunked_table import file_sha256, iter_chain
 from src.scaled_integer import scaled_squared_error
 
 
@@ -120,17 +120,28 @@ def main() -> None:
     spec = json.loads(SPEC.read_text())
 
     manifest_path = dataset / "manifest.jsonl"
-    records = read_chain(manifest_path)
-    if not records or records[-1]["event"] != "SEAL":
-        raise ValueError("fidelity dataset is not sealed")
-    chunks = chunk_records(records)
-    for record in chunks:
+    final_record = None
+    chunk_count = 0
+    payload_bytes = 0
+    for record in iter_chain(manifest_path):
+        final_record = record
+        if record["event"] != "CHUNK":
+            continue
+        chunk_count += 1
+        payload_bytes += int(record["bytes"])
         path = dataset / record["path"]
         if (
             path.stat().st_size != record["bytes"]
             or file_sha256(path) != record["sha256"]
         ):
             raise ValueError("full-dataset chunk authentication failed")
+    if final_record is None or final_record["event"] != "SEAL":
+        raise ValueError("fidelity dataset is not sealed")
+    if (
+        int(final_record["chunk_count"]) != chunk_count
+        or int(final_record["dataset_payload_bytes"]) != payload_bytes
+    ):
+        raise ValueError("fidelity seal totals do not match manifest")
 
     dataset_sha = {
         "schema": "certified-qmc-fidelity-dataset-sha256-v1",
@@ -145,11 +156,9 @@ def main() -> None:
                 "telemetry.jsonl",
             )
         },
-        "manifest_last_line_sha256": records[-1]["line_sha256"],
-        "authenticated_chunk_count": len(chunks),
-        "authenticated_payload_bytes": sum(
-            int(record["bytes"]) for record in chunks
-        ),
+        "manifest_last_line_sha256": final_record["line_sha256"],
+        "authenticated_chunk_count": chunk_count,
+        "authenticated_payload_bytes": payload_bytes,
     }
     dataset_sha["manifest_sha256"] = canonical_sha256(dataset_sha)
     dataset_sha_path = dataset / "dataset-sha256.json"
@@ -239,12 +248,12 @@ def main() -> None:
     if not all(row["equal"] for row in oracles):
         raise ArithmeticError("independent oracle mismatch")
 
-    telemetry = read_chain(dataset / "telemetry.jsonl")
-    batches = [
-        row for row in telemetry if row["event"] == "BATCH"
-    ]
-    updates = sum(int(row["updates"]) for row in batches)
-    wall_ns = sum(int(row["wall_ns"]) for row in batches)
+    updates = 0
+    wall_ns = 0
+    for row in iter_chain(dataset / "telemetry.jsonl"):
+        if row["event"] == "BATCH":
+            updates += int(row["updates"])
+            wall_ns += int(row["wall_ns"])
     payload = {
         "schema": (
             "certified-qmc-cycles-016-017-production-audit-v1"
@@ -270,8 +279,8 @@ def main() -> None:
             "sha256_manifest_file_sha256": file_sha256(
                 dataset_sha_path
             ),
-            "seal_line_sha256": records[-1]["line_sha256"],
-            "chunk_count": len(chunks),
+            "seal_line_sha256": final_record["line_sha256"],
+            "chunk_count": chunk_count,
             "payload_bytes": dataset_sha[
                 "authenticated_payload_bytes"
             ],

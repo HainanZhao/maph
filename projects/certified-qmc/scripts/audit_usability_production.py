@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from src.certificate import canonical_sha256
-from src.chunked_table import chunk_records, file_sha256, read_chain
+from src.chunked_table import file_sha256, iter_chain
 
 
 SPEC = ROOT / "data" / "cycle-018-usability-spec.json"
@@ -103,28 +103,39 @@ def verify_many(
 
 
 def authenticate_dataset(dataset: Path) -> dict:
-    records = read_chain(dataset / "manifest.jsonl")
-    if not records or records[-1]["event"] != "SEAL":
-        raise ValueError(f"{dataset.name} is not sealed")
-    chunks = chunk_records(records)
-    for record in chunks:
+    final_record = None
+    chunk_count = 0
+    payload_bytes = 0
+    for record in iter_chain(dataset / "manifest.jsonl"):
+        final_record = record
+        if record["event"] != "CHUNK":
+            continue
+        chunk_count += 1
+        payload_bytes += int(record["bytes"])
         path = dataset / record["path"]
         if (
             path.stat().st_size != record["bytes"]
             or file_sha256(path) != record["sha256"]
         ):
             raise ValueError("chunk authentication failed")
+    if final_record is None or final_record["event"] != "SEAL":
+        raise ValueError(f"{dataset.name} is not sealed")
+    if (
+        int(final_record["chunk_count"]) != chunk_count
+        or int(final_record["dataset_payload_bytes"]) != payload_bytes
+    ):
+        raise ValueError("dataset seal totals do not match manifest")
     result = {
         "manifest_sha256": file_sha256(dataset / "manifest.jsonl"),
-        "manifest_last_line_sha256": records[-1]["line_sha256"],
+        "manifest_last_line_sha256": final_record["line_sha256"],
         "run_manifest_sha256": file_sha256(
             dataset / "run-manifest.json"
         ),
         "table_index_sha256": file_sha256(
             dataset / "table-index.json"
         ),
-        "chunk_count": len(chunks),
-        "payload_bytes": sum(int(row["bytes"]) for row in chunks),
+        "chunk_count": chunk_count,
+        "payload_bytes": payload_bytes,
     }
     result["dataset_authentication_sha256"] = canonical_sha256(result)
     return result

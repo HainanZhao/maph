@@ -1,0 +1,87 @@
+{
+  "batch": {
+    "all_entries_verified": true,
+    "all_overflow_checks_equal": true,
+    "dimensions": [
+      7,
+      13
+    ],
+    "manifest_authentication_passes": 1,
+    "per_entry_crt_reconstructions": 2,
+    "request_count": 2
+  },
+  "boundary": "This replaces manifest materialization with streaming authentication in verifier/audit orchestration only. Single-entry values, production chunks, thresholds, and the frozen production kernel are unchanged.",
+  "certificate_sha256": "5093c21eed44cefbc0bef38b68d9228cffd2104ec0afe28402b6d71eb011e16c",
+  "claim_tag": "VERIFIED",
+  "dataset": {
+    "authenticated_record_count": 939,
+    "manifest_sha256": "3991c53e47399123a0f559c9522985beffc2bf461e77d3d3b5847e474bfd38df",
+    "run_manifest_sha256": "68809efa117313a6966b4c6ba234feb1e748e27fb8d04361d87db293a14893b3",
+    "seal_line_sha256": "af9dbebcd3a4ddaed1a0bfe4ff667d5768855606f2217c4feb5daead7f943356",
+    "table_index_sha256": "bd42871999478ec474fde9415026cdbab539e3241fbaeceb11ea7d016d3f8290"
+  },
+  "gate": {
+    "all_overflow_checks_equal": true,
+    "cycle_015_streaming_extension_passed": true,
+    "predecessor_transcript_preserved": true,
+    "single_entry_behavior_preserved": true,
+    "streaming_manifest_authentication_passed": true,
+    "streaming_resume_byte_identical": true,
+    "two_entry_batch_verified": true
+  },
+  "predecessor": {
+    "path": "certificates/cycle-015-batch-replay-extension-v1.json",
+    "sha256": "7d83e4200dfaaf2c971b30fcc20e102ed5946f9d086aa3150612bb5cf058bc80",
+    "status": "PRESERVED"
+  },
+  "recorded_at_utc": "2026-07-29T09:21:08Z",
+  "request_fixture": {
+    "path": "tests/fixtures/cycle015-batch-requests.json",
+    "request_count": 2,
+    "sha256": "324ac029747cd2d2665575da3a082b89fa200b426326d0392fcc99e8acd24c9e"
+  },
+  "schema": "certified-qmc-cycle015-batch-replay-extension-v2",
+  "single_vs_batch": {
+    "batch_entry_sha256": "703cd8892ea1c03f59e6b83518f9cb43835968464802189b727729884fab15ab",
+    "entry": {
+      "N": 32,
+      "dimension": 7,
+      "table": "pilot-000"
+    },
+    "equal_fields": {
+      "generator_prefix_sha256": true,
+      "proved_numerator_bound": true,
+      "reduced_denominator": true,
+      "reduced_numerator": true,
+      "scaled_denominator": true,
+      "scaled_numerator": true,
+      "touched_payload_fraction_exact": true,
+      "work_prime_count": true
+    },
+    "single_result_sha256": "703cd8892ea1c03f59e6b83518f9cb43835968464802189b727729884fab15ab"
+  },
+  "source": {
+    "bin/verify-entry": "2830432c6ab83ebeab3b6c109f6c51be382aef7eb112e9c7e458d484763dbc96",
+    "scripts/audit_fidelity_production.py": "a663caa5fd26b9e55434f82cad98f6fc0d73467190dc4f48868037d779e82e25",
+    "scripts/audit_usability_production.py": "10a7361cd5025ba9226698e7b21a7331712a9a6b260074467bc5e3803fa1cd7d",
+    "scripts/build_engine_oracle_set.py": "5543ebbb2b8bd99b5dc074d3984855fd1a8e7a09776bd92685cecd4ae9ca6951",
+    "scripts/run_chunked_production.py": "a01a12eb126454b1b42ffd299e288eca98753565b53c941edfe5ff41bb501c3b",
+    "scripts/verify_entry.py": "108884cebdebd3c2c0b750757a7801053d67fe83af255144ce4fd3dad8f29e62",
+    "src/chunked_table.py": "0332e16fa83768901e1c69cbe60f3ac81c88e4b6e346acd60bff75e9d6e453ce",
+    "src/entry_replay.py": "e58ac781df2960eeca79ba609d0acfa0abb9310a5a15680bd7cf6c773d176c43"
+  },
+  "streaming": {
+    "chunk_boundary_resume": {
+      "baseline_tree_sha256": "e0e99b511791bf585f7075370292f879f719ac7645e2c551a76bfda4aec0d148",
+      "byte_identical": true,
+      "resumed_tree_sha256": "e0e99b511791bf585f7075370292f879f719ac7645e2c551a76bfda4aec0d148",
+      "stop_after_chunks": 211,
+      "stop_return_code": 75
+    },
+    "file_hashing_block_bytes": 1048576,
+    "manifest_materialized_by_selected_entry_verifier": false,
+    "pilot_chain_matches_predecessor_seal": true,
+    "retained_dataset_chunks_after_initialization": false,
+    "retained_dataset_records_after_initialization": false
+  }
+}

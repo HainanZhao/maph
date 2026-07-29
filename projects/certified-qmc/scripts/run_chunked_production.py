@@ -25,9 +25,8 @@ from src.chunked_table import (
     ZERO_HASH,
     append_record,
     canonical_bytes,
-    chunk_records,
     file_sha256,
-    read_chain,
+    iter_chain,
 )
 
 
@@ -242,14 +241,23 @@ def write_exact(path: Path, value: dict) -> None:
         path.write_text(rendered)
 
 
-def validate_existing_chunks(output: Path, records: list[dict]) -> None:
-    seen = set()
-    for record in chunk_records(records):
+def scan_existing_chunks(
+    output: Path, manifest_path: Path
+) -> tuple[set[tuple[str, int, int, int]], dict | None, int, int]:
+    """Authenticate a resumable dataset with bounded manifest memory."""
+    seen: set[tuple[str, int, int, int]] = set()
+    final_record = None
+    chunk_count = 0
+    payload_bytes = 0
+    for record in iter_chain(manifest_path):
+        final_record = record
+        if record["event"] != "CHUNK":
+            continue
         key = (
             record["table_id"],
-            record["prime_index"],
-            record["dimension_start"],
-            record["dimension_end"],
+            int(record["prime_index"]),
+            int(record["dimension_start"]),
+            int(record["dimension_end"]),
         )
         if key in seen:
             raise RuntimeError("duplicate chunk in manifest")
@@ -257,10 +265,13 @@ def validate_existing_chunks(output: Path, records: list[dict]) -> None:
         chunk = output / record["path"]
         if not chunk.is_file():
             raise RuntimeError("manifested chunk is missing")
-        if chunk.stat().st_size != record["bytes"]:
+        if chunk.stat().st_size != int(record["bytes"]):
             raise RuntimeError("manifested chunk length mismatch")
         if file_sha256(chunk) != record["sha256"]:
             raise RuntimeError("manifested chunk hash mismatch")
+        chunk_count += 1
+        payload_bytes += int(record["bytes"])
+    return seen, final_record, chunk_count, payload_bytes
 
 
 def tasks(spec: dict, primes: list[int]) -> list[dict]:
@@ -344,22 +355,21 @@ def main() -> None:
     write_exact(output / "run-manifest.json", run_manifest)
 
     manifest_path = output / "manifest.jsonl"
-    records = read_chain(manifest_path)
-    validate_existing_chunks(output, records)
-    if records and records[-1]["event"] == "SEAL":
+    existing, final_record, sequence, prior_payload_bytes = (
+        scan_existing_chunks(output, manifest_path)
+    )
+    if final_record and final_record["event"] == "SEAL":
+        if (
+            int(final_record["chunk_count"]) != sequence
+            or int(final_record["dataset_payload_bytes"])
+            != prior_payload_bytes
+        ):
+            raise RuntimeError("sealed dataset totals mismatch")
         print(output)
         return
-    existing = {
-        (
-            record["table_id"],
-            record["prime_index"],
-            record["dimension_start"],
-            record["dimension_end"],
-        )
-        for record in chunk_records(records)
-    }
-    previous = records[-1]["line_sha256"] if records else ZERO_HASH
-    sequence = len(records)
+    previous = (
+        final_record["line_sha256"] if final_record else ZERO_HASH
+    )
     new_chunks = 0
 
     grouped: dict[tuple[str, int], list[dict]] = {}
@@ -383,27 +393,17 @@ def main() -> None:
     if workers < 1:
         raise ValueError("parallel_workers must be positive")
     telemetry_path = output / "telemetry.jsonl"
-    telemetry_records = (
-        read_chain(telemetry_path)
-        if spec.get("throughput_monitor")
-        else []
-    )
-    telemetry_previous = (
-        telemetry_records[-1]["line_sha256"]
-        if telemetry_records
-        else ZERO_HASH
-    )
-    telemetry_sequence = len(telemetry_records)
-    cumulative_wall_ns = sum(
-        int(record["wall_ns"])
-        for record in telemetry_records
-        if record["event"] == "BATCH"
-    )
-    cumulative_updates = sum(
-        int(record["updates"])
-        for record in telemetry_records
-        if record["event"] == "BATCH"
-    )
+    telemetry_previous = ZERO_HASH
+    telemetry_sequence = 0
+    cumulative_wall_ns = 0
+    cumulative_updates = 0
+    if spec.get("throughput_monitor"):
+        for record in iter_chain(telemetry_path):
+            telemetry_previous = record["line_sha256"]
+            telemetry_sequence += 1
+            if record["event"] == "BATCH":
+                cumulative_wall_ns += int(record["wall_ns"])
+                cumulative_updates += int(record["updates"])
 
     with ThreadPoolExecutor(max_workers=workers) as executor:
         for batch_start in range(0, len(group_items), workers):
@@ -559,31 +559,31 @@ def main() -> None:
                     )
                     raise SystemExit(76)
 
-    final_records = read_chain(manifest_path)
-    validate_existing_chunks(output, final_records)
-    chunks = chunk_records(final_records)
+    _, final_record, chunk_count, payload_bytes = scan_existing_chunks(
+        output, manifest_path
+    )
     expected_tasks = tasks(spec, primes)
-    if len(chunks) != len(expected_tasks):
+    if chunk_count != len(expected_tasks):
         raise RuntimeError("chunk count does not cover all tasks")
     seal = append_record(
         manifest_path,
         {
-            "sequence": len(final_records),
+            "sequence": chunk_count,
             "event": "SEAL",
-            "chunk_count": len(chunks),
-            "dataset_payload_bytes": sum(row["bytes"] for row in chunks),
+            "chunk_count": chunk_count,
+            "dataset_payload_bytes": payload_bytes,
             "table_index_sha256": index["index_sha256"],
             "run_manifest_sha256": run_manifest["run_manifest_sha256"],
         },
-        final_records[-1]["line_sha256"] if final_records else ZERO_HASH,
+        final_record["line_sha256"] if final_record else ZERO_HASH,
     )
     print(
         json.dumps(
             {
                 "output": str(output),
                 "status": "SEALED",
-                "chunk_count": len(chunks),
-                "dataset_payload_bytes": sum(row["bytes"] for row in chunks),
+                "chunk_count": chunk_count,
+                "dataset_payload_bytes": payload_bytes,
                 "seal_sha256": seal["line_sha256"],
             },
             sort_keys=True,

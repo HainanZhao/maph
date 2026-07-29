@@ -110,4 +110,17 @@ unchanged.  This is verifier orchestration only: it does not modify the
 frozen production kernel, data layout, threshold, or certificate
 meaning.
 
-Artifact: `certificates/cycle-015-batch-replay-extension.json`.
+Artifacts:
+`certificates/cycle-015-batch-replay-extension-v1.json` preserves the
+original batch transcript;
+`certificates/cycle-015-batch-replay-extension-v2.json` banks the
+bounded-memory streaming verifier/audit extension.
+
+The v2 extension authenticates `manifest.jsonl` one record at a time
+and retains only metadata for chunks required by the selected request
+set.  File hashes are likewise accumulated in fixed 1 MiB blocks.
+The extension replayed the original single and batched exact results,
+rejected truncation and hash-link tampering, and reproduced a
+chunk-boundary stop/resume tree byte-for-byte.  It changes no chunk
+bytes, CRT result, threshold, production input, or frozen native
+kernel.

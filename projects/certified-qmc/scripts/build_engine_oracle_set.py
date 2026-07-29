@@ -21,9 +21,8 @@ if hasattr(sys, "set_int_max_str_digits"):
 from src.certificate import canonical_sha256
 from src.chunked_table import (
     canonical_bytes,
-    chunk_records,
     file_sha256,
-    read_chain,
+    iter_chain,
 )
 from src.crt import balanced_reconstruct, choose_moduli
 from src.scaled_integer import error_numerator_bound, factor_denominator
@@ -60,7 +59,7 @@ def require_audit_gate(path: Path, gate: str) -> dict:
     return value
 
 
-def dataset_context(dataset: Path) -> tuple[dict, dict, list[dict]]:
+def dataset_context(dataset: Path) -> tuple[dict, dict]:
     run_manifest = load_self_hashed(
         dataset / "run-manifest.json", "run_manifest_sha256"
     )
@@ -69,17 +68,9 @@ def dataset_context(dataset: Path) -> tuple[dict, dict, list[dict]]:
     )
     if run_manifest["table_index_sha256"] != index["index_sha256"]:
         raise ValueError("run manifest does not authenticate table index")
-    records = read_chain(dataset / "manifest.jsonl")
-    if not records or records[-1]["event"] != "SEAL":
-        raise ValueError(f"{dataset.name}: dataset is not sealed")
-    seal = records[-1]
-    if seal["run_manifest_sha256"] != run_manifest["run_manifest_sha256"]:
-        raise ValueError("seal does not authenticate run manifest")
-    if seal["table_index_sha256"] != index["index_sha256"]:
-        raise ValueError("seal does not authenticate table index")
     if run_manifest["prime_schedule"]["sha256"] != file_sha256(SCHEDULE):
         raise ValueError("dataset prime-schedule hash mismatch")
-    return run_manifest, index, records
+    return run_manifest, index
 
 
 def weights_for(dimension: int, power: int) -> list[Fraction]:
@@ -95,7 +86,7 @@ def replay_batch(
     primes: list[int],
     logical_name: str,
 ) -> tuple[list[dict], dict]:
-    run_manifest, index, records = dataset_context(dataset)
+    run_manifest, index = dataset_context(dataset)
     tables = {table["table_id"]: table for table in index["tables"]}
     prepared = []
     wanted_dimensions: dict[str, set[int]] = {}
@@ -127,7 +118,11 @@ def replay_batch(
     total_payload_bytes = 0
     selected_paths: set[str] = set()
     selected_record_by_path: dict[str, dict] = {}
-    for record in chunk_records(records):
+    final_record = None
+    for record in iter_chain(dataset / "manifest.jsonl"):
+        final_record = record
+        if record["event"] != "CHUNK":
+            continue
         total_payload_bytes += int(record["bytes"])
         table_id = record["table_id"]
         dimensions = wanted_dimensions.get(table_id)
@@ -147,6 +142,23 @@ def replay_batch(
                 available[key] = record
                 selected_paths.add(record["path"])
                 selected_record_by_path[record["path"]] = record
+    if final_record is None or final_record["event"] != "SEAL":
+        raise ValueError(f"{dataset.name}: dataset is not sealed")
+    if (
+        final_record["run_manifest_sha256"]
+        != run_manifest["run_manifest_sha256"]
+    ):
+        raise ValueError("seal does not authenticate run manifest")
+    if (
+        final_record["table_index_sha256"]
+        != index["index_sha256"]
+    ):
+        raise ValueError("seal does not authenticate table index")
+    if (
+        int(final_record["dataset_payload_bytes"])
+        != total_payload_bytes
+    ):
+        raise ValueError("seal payload-byte total mismatch")
 
     raw_cache: dict[str, bytes] = {}
     selected_payload_bytes = 0
@@ -225,7 +237,7 @@ def replay_batch(
     provenance = {
         "dataset": logical_name,
         "manifest_sha256": file_sha256(dataset / "manifest.jsonl"),
-        "seal_line_sha256": records[-1]["line_sha256"],
+        "seal_line_sha256": final_record["line_sha256"],
         "run_manifest_sha256": run_manifest["run_manifest_sha256"],
         "selected_unique_chunk_count": len(selected_paths),
         "selected_payload_bytes": selected_payload_bytes,

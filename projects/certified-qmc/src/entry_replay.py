@@ -13,9 +13,8 @@ from typing import Iterable
 
 from .chunked_table import (
     canonical_bytes,
-    chunk_records,
     file_sha256,
-    read_chain,
+    iter_chain,
 )
 from .crt import balanced_reconstruct, choose_moduli
 from .scaled_integer import error_numerator_bound, factor_denominator
@@ -58,16 +57,7 @@ class DatasetReplay:
             raise ValueError(
                 "run manifest does not authenticate table index"
             )
-        self.records = read_chain(self.dataset / "manifest.jsonl")
-        if not self.records or self.records[-1]["event"] != "SEAL":
-            raise ValueError("dataset manifest is not sealed")
-        seal = self.records[-1]
-        if (
-            seal["run_manifest_sha256"]
-            != self.run_manifest["run_manifest_sha256"]
-            or seal["table_index_sha256"] != self.index["index_sha256"]
-        ):
-            raise ValueError("seal does not authenticate dataset metadata")
+        self.manifest_path = self.dataset / "manifest.jsonl"
         schedule_path = (
             self.project_root
             / self.run_manifest["prime_schedule"]["path"]
@@ -83,10 +73,6 @@ class DatasetReplay:
             (table["table_id"], int(table["N"])): table
             for table in self.index["tables"]
         }
-        self.chunks = chunk_records(self.records)
-        self.payload_bytes = sum(
-            int(record["bytes"]) for record in self.chunks
-        )
 
     def _prepare(self, requests: Iterable[dict]) -> list[dict]:
         prepared = []
@@ -130,7 +116,13 @@ class DatasetReplay:
                 request["table_id"], []
             ).append(request)
         available: dict[tuple[str, int, int], dict] = {}
-        for record in self.chunks:
+        payload_bytes = 0
+        last_record = None
+        for record in iter_chain(self.manifest_path):
+            last_record = record
+            if record["event"] != "CHUNK":
+                continue
+            payload_bytes += int(record["bytes"])
             wanted = wanted_by_table.get(record["table_id"])
             if not wanted:
                 continue
@@ -153,6 +145,18 @@ class DatasetReplay:
                             "multiple chunks cover selected residue"
                         )
                     available[key] = record
+        if last_record is None or last_record["event"] != "SEAL":
+            raise ValueError("dataset manifest is not sealed")
+        if (
+            last_record["run_manifest_sha256"]
+            != self.run_manifest["run_manifest_sha256"]
+            or last_record["table_index_sha256"]
+            != self.index["index_sha256"]
+        ):
+            raise ValueError("seal does not authenticate dataset metadata")
+        if payload_bytes != int(last_record["dataset_payload_bytes"]):
+            raise ValueError("seal payload-byte total mismatch")
+        self.payload_bytes = payload_bytes
 
         results = []
         for request in prepared:
