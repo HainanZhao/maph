@@ -25,6 +25,9 @@ PRIME_MANIFEST = (
 )
 ENGINE_ORACLE = ROOT / "certificates" / "engine-oracle-set-v1.json"
 ENGINE_ORACLE_PREREG = ROOT / "data" / "engine-oracle-set-v1.json"
+PACKAGING_PREFLIGHT = (
+    ROOT / "certificates" / "cycle-018-packaging-preflight.json"
+)
 
 
 def digest(path: Path) -> str:
@@ -116,6 +119,19 @@ def main() -> None:
     oracle = load_self_hashed(ENGINE_ORACLE, "oracle_sha256")
     if oracle["claim_tag"] != "VERIFIED" or oracle["counts"]["total"] != 298:
         raise ValueError("engine oracle release gate is not passed")
+    packaging_preflight = checked_audit(
+        PACKAGING_PREFLIGHT,
+        "cycle_018_packaging_preflight_passed",
+    )
+    if (
+        packaging_preflight["implementation"][
+            "scripts/package_release_v1.py"
+        ]
+        != digest(Path(__file__))
+    ):
+        raise ValueError(
+            "packaging preflight does not bind this release packager"
+        )
     if not (fidelity / "dataset-sha256.json").is_file():
         raise ValueError("fidelity SHA manifest is absent")
     if not (usability / "manifest.jsonl").is_file():
@@ -254,6 +270,10 @@ def main() -> None:
         "usability_audit_sha256": digest(USABILITY_AUDIT),
         "engine_oracle_sha256": digest(ENGINE_ORACLE),
         "engine_oracle_self_hash": oracle["oracle_sha256"],
+        "packaging_preflight_sha256": digest(PACKAGING_PREFLIGHT),
+        "packaging_preflight_self_hash": packaging_preflight[
+            "certificate_sha256"
+        ],
         "assets": assets,
         "ancillary_files": ancillary_files,
         "doi": None,

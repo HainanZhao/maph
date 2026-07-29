@@ -15,6 +15,11 @@ PREREG = (
     / "data"
     / "cycle-018-usability-preregistration.json"
 )
+PACKAGING_PREFLIGHT = (
+    PROJECT
+    / "certificates"
+    / "cycle-018-packaging-preflight.json"
+)
 
 
 def digest(path: Path) -> str:
@@ -52,6 +57,29 @@ class Cycle018Tests(unittest.TestCase):
         self.assertEqual(
             {table["N"] for table in spec["tables"]},
             {2**10, 2**15, 2**20},
+        )
+
+    def test_packaging_preflight_is_replayable_and_binds_packager(self):
+        payload = json.loads(PACKAGING_PREFLIGHT.read_text())
+        supplied = payload.pop("certificate_sha256")
+        self.assertEqual(canonical_sha256(payload), supplied)
+        self.assertEqual(payload["claim_tag"], "VERIFIED")
+        self.assertTrue(
+            payload["gate"]["cycle_018_packaging_preflight_passed"]
+        )
+        for archive in (
+            "source_archive",
+            "table_fixture_archive",
+            "oracle_fixture_archive",
+        ):
+            self.assertTrue(
+                payload[archive]["byte_identical_second_run"]
+            )
+        self.assertEqual(
+            payload["implementation"][
+                "scripts/package_release_v1.py"
+            ],
+            digest(PROJECT / "scripts" / "package_release_v1.py"),
         )
 
 
