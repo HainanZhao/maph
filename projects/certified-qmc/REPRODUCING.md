@@ -17,7 +17,7 @@ From the released source directory:
 
 ```bash
 make -C production
-.venv/bin/python scripts/verify_prime_schedule_v1.py \
+python3 scripts/verify_prime_schedule_v1.py \
   --schedule data/primes-schedule-v1.json \
   --output /tmp/certified-qmc-prime-verification.json \
   --skip-regeneration
