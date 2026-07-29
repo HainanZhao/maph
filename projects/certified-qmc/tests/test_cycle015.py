@@ -4,10 +4,19 @@ from hashlib import sha256
 import json
 from pathlib import Path
 import subprocess
+import tempfile
 import unittest
 
 from src.certificate import canonical_sha256
-from src.chunked_table import chunk_records, file_sha256, read_chain
+from src.chunked_table import (
+    ZERO_HASH,
+    append_record,
+    chunk_records,
+    file_sha256,
+    iter_chain,
+    read_chain,
+)
+from src.entry_replay import DatasetReplay
 
 
 PROJECT = Path(__file__).resolve().parents[1]
@@ -218,17 +227,31 @@ class Cycle015Tests(unittest.TestCase):
             self.assertEqual(first[key], one[key])
 
     def test_batch_extension_transcript_replays(self):
+        predecessor_path = (
+            PROJECT
+            / "certificates"
+            / "cycle-015-batch-replay-extension-v1.json"
+        )
+        predecessor = json.loads(predecessor_path.read_text())
+        predecessor_supplied = predecessor.pop("certificate_sha256")
+        self.assertEqual(
+            predecessor_supplied, canonical_sha256(predecessor)
+        )
         artifact = json.loads(
             (
                 PROJECT
                 / "certificates"
-                / "cycle-015-batch-replay-extension.json"
+                / "cycle-015-batch-replay-extension-v2.json"
             ).read_text()
         )
         supplied = artifact.pop("certificate_sha256")
         self.assertEqual(supplied, canonical_sha256(artifact))
         self.assertTrue(
-            artifact["gate"]["cycle_015_batch_extension_passed"]
+            artifact["gate"]["cycle_015_streaming_extension_passed"]
+        )
+        self.assertEqual(
+            artifact["predecessor"]["sha256"],
+            file_sha256(predecessor_path),
         )
         self.assertEqual(
             artifact["single_vs_batch"]["single_result_sha256"],
@@ -241,6 +264,43 @@ class Cycle015Tests(unittest.TestCase):
         )
         for relative, expected in artifact["source"].items():
             self.assertEqual(file_sha256(PROJECT / relative), expected)
+
+    def test_streaming_chain_and_replay_do_not_retain_manifest(self):
+        materialized = read_chain(DATASET / "manifest.jsonl")
+        streamed = list(iter_chain(DATASET / "manifest.jsonl"))
+        self.assertEqual(streamed, materialized)
+        replay = DatasetReplay(DATASET, PROJECT)
+        self.assertFalse(hasattr(replay, "records"))
+        self.assertFalse(hasattr(replay, "chunks"))
+
+    def test_streaming_chain_rejects_truncation_and_link_tampering(self):
+        with tempfile.TemporaryDirectory() as directory:
+            manifest = Path(directory) / "manifest.jsonl"
+            first = append_record(
+                manifest,
+                {"sequence": 0, "event": "TEST"},
+                ZERO_HASH,
+            )
+            append_record(
+                manifest,
+                {"sequence": 1, "event": "TEST"},
+                first["line_sha256"],
+            )
+            valid = manifest.read_bytes()
+            manifest.write_bytes(valid[:-1])
+            with self.assertRaisesRegex(ValueError, "unterminated"):
+                list(iter_chain(manifest))
+            lines = valid.splitlines(keepends=True)
+            lines[1] = lines[1].replace(
+                first["line_sha256"].encode("ascii"),
+                b"f" * 64,
+                1,
+            )
+            manifest.write_bytes(b"".join(lines))
+            with self.assertRaisesRegex(
+                ValueError, "previous-hash link"
+            ):
+                list(iter_chain(manifest))
 
 
 if __name__ == "__main__":

@@ -9,13 +9,15 @@ import json
 from pathlib import Path
 import subprocess
 import sys
+import tempfile
 
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from src.certificate import canonical_sha256
-from src.chunked_table import file_sha256, read_chain
+from src.chunked_table import file_sha256, iter_chain
+from src.entry_replay import DatasetReplay
 
 
 DATASET = ROOT / "artifacts" / "cycle-015-pilot"
@@ -24,8 +26,15 @@ REQUESTS = (
     ROOT / "tests" / "fixtures" / "cycle015-batch-requests.json"
 )
 OUTPUT = (
-    ROOT / "certificates" / "cycle-015-batch-replay-extension.json"
+    ROOT / "certificates" / "cycle-015-batch-replay-extension-v2.json"
 )
+PREDECESSOR = (
+    ROOT
+    / "certificates"
+    / "cycle-015-batch-replay-extension-v1.json"
+)
+DRIVER = ROOT / "scripts" / "run_chunked_production.py"
+SPEC = ROOT / "data" / "cycle-015-pilot-spec.json"
 
 
 def utc_now() -> str:
@@ -40,6 +49,19 @@ def invoke(arguments: list[str]) -> dict:
         text=True,
     )
     return json.loads(completed.stdout)
+
+
+def tree_digest(root: Path) -> str:
+    rows = [
+        {
+            "path": str(path.relative_to(root)),
+            "bytes": path.stat().st_size,
+            "sha256": file_sha256(path),
+        }
+        for path in sorted(root.rglob("*"))
+        if path.is_file()
+    ]
+    return canonical_sha256(rows)
 
 
 def main() -> None:
@@ -89,12 +111,85 @@ def main() -> None:
         for row in batch["results"]
     ):
         raise ArithmeticError("batch overflow-prime failure")
-    records = read_chain(DATASET / "manifest.jsonl")
+    record_count = 0
+    seal = None
+    for record in iter_chain(DATASET / "manifest.jsonl"):
+        record_count += 1
+        seal = record
+    if seal is None or seal["event"] != "SEAL":
+        raise ValueError("pilot dataset manifest is not sealed")
+    replay = DatasetReplay(DATASET, ROOT)
+    if hasattr(replay, "records") or hasattr(replay, "chunks"):
+        raise AssertionError(
+            "streaming verifier retained a materialized manifest"
+        )
+    with tempfile.TemporaryDirectory(
+        prefix="certified-qmc-streaming-resume-"
+    ) as directory:
+        temporary = Path(directory)
+        baseline = temporary / "baseline"
+        resumed = temporary / "resumed"
+        subprocess.run(
+            [
+                sys.executable,
+                str(DRIVER),
+                "--spec",
+                str(SPEC),
+                "--output",
+                str(baseline),
+            ],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        stopped = subprocess.run(
+            [
+                sys.executable,
+                str(DRIVER),
+                "--spec",
+                str(SPEC),
+                "--output",
+                str(resumed),
+                "--stop-after-new-chunks",
+                "211",
+            ],
+            capture_output=True,
+            text=True,
+        )
+        if stopped.returncode != 75:
+            raise RuntimeError("streaming resume stop point failed")
+        subprocess.run(
+            [
+                sys.executable,
+                str(DRIVER),
+                "--spec",
+                str(SPEC),
+                "--output",
+                str(resumed),
+            ],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        baseline_tree_sha256 = tree_digest(baseline)
+        resumed_tree_sha256 = tree_digest(resumed)
+        if baseline_tree_sha256 != resumed_tree_sha256:
+            raise ArithmeticError(
+                "streaming scanner resume is not byte-identical"
+            )
     payload = {
-        "schema": "certified-qmc-cycle015-batch-replay-extension-v1",
+        "schema": "certified-qmc-cycle015-batch-replay-extension-v2",
         "recorded_at_utc": utc_now(),
         "claim_tag": "VERIFIED",
+        "predecessor": {
+            "path": str(PREDECESSOR.relative_to(ROOT)),
+            "sha256": file_sha256(PREDECESSOR),
+            "status": "PRESERVED",
+        },
         "source": {
+            "src/chunked_table.py": file_sha256(
+                ROOT / "src" / "chunked_table.py"
+            ),
             "src/entry_replay.py": file_sha256(
                 ROOT / "src" / "entry_replay.py"
             ),
@@ -102,6 +197,18 @@ def main() -> None:
                 ROOT / "scripts" / "verify_entry.py"
             ),
             "bin/verify-entry": file_sha256(VERIFIER),
+            "scripts/audit_fidelity_production.py": file_sha256(
+                ROOT / "scripts" / "audit_fidelity_production.py"
+            ),
+            "scripts/audit_usability_production.py": file_sha256(
+                ROOT / "scripts" / "audit_usability_production.py"
+            ),
+            "scripts/build_engine_oracle_set.py": file_sha256(
+                ROOT / "scripts" / "build_engine_oracle_set.py"
+            ),
+            "scripts/run_chunked_production.py": file_sha256(
+                ROOT / "scripts" / "run_chunked_production.py"
+            ),
         },
         "request_fixture": {
             "path": str(REQUESTS.relative_to(ROOT)),
@@ -112,7 +219,8 @@ def main() -> None:
             "manifest_sha256": file_sha256(
                 DATASET / "manifest.jsonl"
             ),
-            "seal_line_sha256": records[-1]["line_sha256"],
+            "seal_line_sha256": seal["line_sha256"],
+            "authenticated_record_count": record_count,
             "run_manifest_sha256": file_sha256(
                 DATASET / "run-manifest.json"
             ),
@@ -152,16 +260,39 @@ def main() -> None:
             "manifest_authentication_passes": 1,
             "per_entry_crt_reconstructions": 2,
         },
+        "streaming": {
+            "manifest_materialized_by_selected_entry_verifier": False,
+            "retained_dataset_records_after_initialization": False,
+            "retained_dataset_chunks_after_initialization": False,
+            "file_hashing_block_bytes": 1048576,
+            "pilot_chain_matches_predecessor_seal": (
+                seal["line_sha256"]
+                == json.loads(PREDECESSOR.read_text())["dataset"][
+                    "seal_line_sha256"
+                ]
+            ),
+            "chunk_boundary_resume": {
+                "stop_after_chunks": 211,
+                "stop_return_code": stopped.returncode,
+                "baseline_tree_sha256": baseline_tree_sha256,
+                "resumed_tree_sha256": resumed_tree_sha256,
+                "byte_identical": True,
+            },
+        },
         "boundary": (
-            "This extends verifier orchestration only. Single-entry "
-            "semantics, production chunks, thresholds, and the frozen "
-            "production kernel are unchanged."
+            "This replaces manifest materialization with streaming "
+            "authentication in verifier/audit orchestration only. "
+            "Single-entry values, production chunks, thresholds, and "
+            "the frozen production kernel are unchanged."
         ),
         "gate": {
             "single_entry_behavior_preserved": True,
             "two_entry_batch_verified": True,
             "all_overflow_checks_equal": True,
-            "cycle_015_batch_extension_passed": True,
+            "predecessor_transcript_preserved": True,
+            "streaming_manifest_authentication_passed": True,
+            "streaming_resume_byte_identical": True,
+            "cycle_015_streaming_extension_passed": True,
         },
     }
     payload["certificate_sha256"] = canonical_sha256(payload)

@@ -6,7 +6,7 @@ from hashlib import sha256
 import json
 import os
 from pathlib import Path
-from typing import Iterable
+from typing import Iterable, Iterator
 
 
 ZERO_HASH = "0" * 64
@@ -22,7 +22,13 @@ def canonical_bytes(value: object) -> bytes:
 
 
 def file_sha256(path: Path) -> str:
-    return sha256(path.read_bytes()).hexdigest()
+    hasher = sha256()
+    block = bytearray(1024 * 1024)
+    view = memoryview(block)
+    with path.open("rb", buffering=0) as stream:
+        while count := stream.readinto(view):
+            hasher.update(view[:count])
+    return hasher.hexdigest()
 
 
 def record_hash(record_without_hash: dict) -> str:
@@ -40,26 +46,39 @@ def append_record(path: Path, payload: dict, previous: str) -> dict:
     return record
 
 
-def read_chain(path: Path) -> list[dict]:
+def iter_chain(path: Path) -> Iterator[dict]:
+    """Authenticate a JSONL hash chain without retaining prior rows."""
     if not path.exists():
-        return []
-    records = []
+        return
     previous = ZERO_HASH
-    for sequence, line in enumerate(path.read_bytes().splitlines()):
-        record = json.loads(line)
-        if record.get("sequence") != sequence:
-            raise ValueError("manifest sequence is not contiguous")
-        supplied = record.pop("line_sha256", None)
-        if record.get("previous_line_sha256") != previous:
-            raise ValueError("manifest previous-hash link failed")
-        expected = record_hash(record)
-        if supplied != expected:
-            raise ValueError("manifest line hash failed")
-        record["line_sha256"] = supplied
-        records.append(record)
-        previous = supplied
-    return records
+    with path.open("rb") as stream:
+        for sequence, line in enumerate(stream):
+            if not line.endswith(b"\n"):
+                raise ValueError("manifest has an unterminated final line")
+            record = json.loads(line)
+            if record.get("sequence") != sequence:
+                raise ValueError("manifest sequence is not contiguous")
+            supplied = record.pop("line_sha256", None)
+            if record.get("previous_line_sha256") != previous:
+                raise ValueError("manifest previous-hash link failed")
+            expected = record_hash(record)
+            if supplied != expected:
+                raise ValueError("manifest line hash failed")
+            record["line_sha256"] = supplied
+            yield record
+            previous = supplied
+
+
+def read_chain(path: Path) -> list[dict]:
+    """Authenticate and materialize a chain for small-data callers."""
+    return list(iter_chain(path))
 
 
 def chunk_records(records: Iterable[dict]) -> list[dict]:
     return [record for record in records if record["event"] == "CHUNK"]
+
+
+def iter_chunk_records(records: Iterable[dict]) -> Iterator[dict]:
+    for record in records:
+        if record["event"] == "CHUNK":
+            yield record
