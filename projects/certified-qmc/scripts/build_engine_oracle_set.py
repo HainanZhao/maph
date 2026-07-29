@@ -93,6 +93,7 @@ def replay_batch(
     dataset: Path,
     requests: list[dict],
     primes: list[int],
+    logical_name: str,
 ) -> tuple[list[dict], dict]:
     run_manifest, index, records = dataset_context(dataset)
     tables = {table["table_id"]: table for table in index["tables"]}
@@ -222,7 +223,7 @@ def replay_batch(
         results.append(result)
 
     provenance = {
-        "dataset": str(dataset),
+        "dataset": logical_name,
         "manifest_sha256": file_sha256(dataset / "manifest.jsonl"),
         "seal_line_sha256": records[-1]["line_sha256"],
         "run_manifest_sha256": run_manifest["run_manifest_sha256"],
@@ -297,10 +298,16 @@ def main() -> None:
         raise ArithmeticError("oracle request partition mismatch")
 
     fidelity_results, fidelity_provenance = replay_batch(
-        args.fidelity.resolve(), fidelity_requests, primes
+        args.fidelity.resolve(),
+        fidelity_requests,
+        primes,
+        "fidelity-v2",
     )
     usability_results, usability_provenance = replay_batch(
-        args.usability.resolve(), usability_requests, primes
+        args.usability.resolve(),
+        usability_requests,
+        primes,
+        "usability-v1",
     )
     adversarial = [
         exact_adversarial(case)

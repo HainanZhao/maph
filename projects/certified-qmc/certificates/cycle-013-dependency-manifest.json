@@ -8,20 +8,22 @@
       "cc -O3 -std=c11 -Wall -Wextra -Wpedantic -D_POSIX_C_SOURCE=200809L direct_modular.c -o ../build/native/direct_modular",
       "mkdir -p ../build/native",
       "cc -O3 -std=c11 -Wall -Wextra -Wpedantic -D_POSIX_C_SOURCE=200809L -fopenmp streaming_pilot.c -o ../build/native/streaming_pilot",
+      "mkdir -p ../build/native",
+      "cc -O3 -std=c11 -Wall -Wextra -Wpedantic -D_POSIX_C_SOURCE=200809L cycle009_ntt.c -o ../build/native/cycle009_ntt",
       "make: Leaving directory '/root/projects/maph/projects/certified-qmc/native'"
     ],
-    "sha256": "242e2ca63dcc5137b01ac73f8cabee3135b772d035f15dd56b020447c61ea88c"
+    "sha256": "74a51d2027d6a7bf240d0dbec5cd0909639767324795f11724a4a43d073c7d90"
   },
-  "certificate_sha256": "5e7399abaa328558fbed7da06474c8219181654670be6e50e5bdc112dc2c2b76",
+  "certificate_sha256": "f6b88fe1c5c4ff001d6659e19c2ba6a0d08c5b92d160ff292492ecb1bbe2785a",
   "claim_tag": "VERIFIED_RELEASE_DEPENDENCY_PERIMETER",
   "clean_room": {
     "binaries": [
       {
         "contains_fftw": false,
         "ldd": [
-          "\tlinux-vdso.so.1 (0x00007ffc3bb49000)",
-          "\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007795d4c00000)",
-          "\t/lib64/ld-linux-x86-64.so.2 (0x00007795d4f0a000)"
+          "\tlinux-vdso.so.1 (0x00007ffeac1dd000)",
+          "\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x000073bbf5200000)",
+          "\t/lib64/ld-linux-x86-64.so.2 (0x000073bbf5564000)"
         ],
         "name": "direct_modular",
         "sha256": "6f10c1dc13d37cd7f5f24a174c5aaf19db424e2082100d2628fd4df9e8da206c"
@@ -29,13 +31,23 @@
       {
         "contains_fftw": false,
         "ldd": [
-          "\tlinux-vdso.so.1 (0x00007ffe2a3f7000)",
-          "\tlibgomp.so.1 => /lib/x86_64-linux-gnu/libgomp.so.1 (0x000071f73bfe8000)",
-          "\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x000071f73bc00000)",
-          "\t/lib64/ld-linux-x86-64.so.2 (0x000071f73c04f000)"
+          "\tlinux-vdso.so.1 (0x00007ffce2fb5000)",
+          "\tlibgomp.so.1 => /lib/x86_64-linux-gnu/libgomp.so.1 (0x0000748422f0a000)",
+          "\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x0000748422c00000)",
+          "\t/lib64/ld-linux-x86-64.so.2 (0x0000748422f71000)"
         ],
         "name": "streaming_pilot",
         "sha256": "837ca2079c1845761be87b951f84d9180226000c963708b27ef200e0698644fa"
+      },
+      {
+        "contains_fftw": false,
+        "ldd": [
+          "\tlinux-vdso.so.1 (0x00007fffbff42000)",
+          "\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x000072fba6e00000)",
+          "\t/lib64/ld-linux-x86-64.so.2 (0x000072fba710d000)"
+        ],
+        "name": "cycle009_ntt",
+        "sha256": "97f0910667e874872b9638b08aa801692a14dfa586c9079b0f537c746fad6f80"
       }
     ],
     "build_succeeded": true,
@@ -44,10 +56,11 @@
     "release_sources_copied_only": [
       "native/Makefile",
       "native/direct_modular.c",
-      "native/streaming_pilot.c"
+      "native/streaming_pilot.c",
+      "native/cycle009_ntt.c"
     ]
   },
-  "created_at_utc": "2026-07-29T07:14:06.414079+00:00",
+  "created_at_utc": "2026-07-29T08:40:49.605740+00:00",
   "dependency_policy": {
     "fftw_present": false,
     "other_third_party_dependencies": [],
@@ -66,9 +79,9 @@
         "libc.so.6"
       ],
       "ldd": [
-        "\tlinux-vdso.so.1 (0x00007ffe4d9f9000)",
-        "\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x000078a2c9a00000)",
-        "\t/lib64/ld-linux-x86-64.so.2 (0x000078a2c9dd4000)"
+        "\tlinux-vdso.so.1 (0x00007ffe57bc0000)",
+        "\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x000075b2e7a00000)",
+        "\t/lib64/ld-linux-x86-64.so.2 (0x000075b2e7cca000)"
       ],
       "sha256": "6f10c1dc13d37cd7f5f24a174c5aaf19db424e2082100d2628fd4df9e8da206c"
     },
@@ -80,12 +93,25 @@
         "libc.so.6"
       ],
       "ldd": [
-        "\tlinux-vdso.so.1 (0x00007ffd2d198000)",
-        "\tlibgomp.so.1 => /lib/x86_64-linux-gnu/libgomp.so.1 (0x000077b87a35d000)",
-        "\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x000077b87a000000)",
-        "\t/lib64/ld-linux-x86-64.so.2 (0x000077b87a3c4000)"
+        "\tlinux-vdso.so.1 (0x00007ffc5c5f4000)",
+        "\tlibgomp.so.1 => /lib/x86_64-linux-gnu/libgomp.so.1 (0x0000710143d90000)",
+        "\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x0000710143a00000)",
+        "\t/lib64/ld-linux-x86-64.so.2 (0x0000710143df7000)"
       ],
       "sha256": "837ca2079c1845761be87b951f84d9180226000c963708b27ef200e0698644fa"
+    },
+    {
+      "binary": "build/native/cycle009_ntt",
+      "contains_fftw": false,
+      "elf_needed": [
+        "libc.so.6"
+      ],
+      "ldd": [
+        "\tlinux-vdso.so.1 (0x00007ffc6e1b2000)",
+        "\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007e8e4c400000)",
+        "\t/lib64/ld-linux-x86-64.so.2 (0x00007e8e4c7f9000)"
+      ],
+      "sha256": "97f0910667e874872b9638b08aa801692a14dfa586c9079b0f537c746fad6f80"
     }
   ],
   "frozen_kernel": {
@@ -110,7 +136,8 @@
     "tag": "NUMERICAL"
   },
   "release_sources": {
-    "native/Makefile": "5eb4812d70361e4d2d91e5b4c05595d1abe93f9565121d93e212585af7e14ae4",
+    "native/Makefile": "a02540cd2eee864fdecf8edc6d4f3cf08cede3bfb95487d05a959b625ee44051",
+    "native/cycle009_ntt.c": "c314aa42befe7f06d5e6da636b7808fc0f8147182eeab6631083420fe59bfbe9",
     "native/direct_modular.c": "346090028d359c412416800b0d386a359c97b3e6004325d537a1e16a71359c3a",
     "native/streaming_pilot.c": "f21c5cc9ab825ea402258fd5832e7ee0b33ebf5f60c2c3fab9cec7484339dd42"
   },

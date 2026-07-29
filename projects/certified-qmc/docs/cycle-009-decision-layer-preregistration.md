@@ -111,3 +111,36 @@ complete per-comparison branch trace—not merely the final vector—must
 be bit-identical before promotion.
 
 Artifact: `certificates/cycle-009-preregistration-v2-arb106.json`.
+
+## Compiled exact-score gate after freeze
+
+The frozen plain-`__int128` representation now has a compiled
+valuation-stratified NTT scorer.  Before any target run, every candidate
+score was compared with the independently structured Python NTT at all
+power-of-two moduli \(2^3,\ldots,2^{12}\) over two independently
+verified primes (20 complete score vectors).  Cases through \(N=256\)
+also match direct \(O(N^2)\) candidate enumeration.
+
+This closes the compiled-NTT arithmetic gate, not the target
+experiment.  The \(N=2^{16},d=50\) run remains unstarted until the
+Cycle-019 release boundary; multi-prime stage orchestration,
+per-dimension checkpoints, Arb tournament decisions, and exact-CRT
+overlap reconstruction remain required.
+
+Artifact: `certificates/cycle-009-compiled-ntt-gate.json`.
+
+The compiled residue-difference fallback was then checked on all 28
+candidate pairs of an \(N=32\) stage against direct integer
+differences, including both overflow primes.  The same checkpoint also
+proves Arb-106 containment, tournament/global-argmin agreement, and
+hash-chained per-dimension resume behavior.
+
+Artifact: `certificates/cycle-009-integrated-preflight.json`.
+
+A later one-prime target-modulus executable smoke test crossed the
+post-release sequencing boundary without sampling any Arb ball,
+comparison, winner, or escalation count.  It is preserved and excluded
+from every gate under
+`docs/cycle009-premature-smoke-quarantine.md`.  The target driver
+mechanically requires a published DOI certificate and a fresh
+manifested output directory.
