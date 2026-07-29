@@ -1,0 +1,41 @@
+{
+  "boundary": "VERIFIED covers archive commands, deterministic regeneration, compression, and member prefixes on HEAD plus temporary data. Final dataset content remains gated on its production audits.",
+  "certificate_sha256": "a891f9c7a9ad5de66efb120d29183d15daa01892f45c923073f7efe088d55c20",
+  "claim_tag": "VERIFIED",
+  "gate": {
+    "cycle_018_packaging_preflight_passed": true,
+    "member_layout_contract_passed": true,
+    "oracle_archive_deterministic": true,
+    "source_archive_deterministic": true,
+    "table_archive_deterministic": true
+  },
+  "implementation": {
+    "REPRODUCING.md": "0b89dd411fdf10b405ad0bc2111c9a09d7c51e0ba2ecac297835f9ba20972cae",
+    "scripts/package_release_v1.py": "c66650a113d609783e9efa3cf947313669b1a41b0c2f0d3f818149c1128947c2"
+  },
+  "oracle_fixture_archive": {
+    "byte_identical_second_run": true,
+    "member_count": 2,
+    "required_prefix_members_present": true,
+    "sha256": "6144d9c3a3399283e712fbbde647e8f14c4a9ae20135f03ca80287c093dcc8c2"
+  },
+  "recorded_at_utc": "2026-07-29T09:13:09Z",
+  "schema": "certified-qmc-cycle018-packaging-preflight-v1",
+  "source_archive": {
+    "byte_identical_second_run": true,
+    "member_count": 1302,
+    "required_members_present": true,
+    "sha256": "18b20bd040d5615a3cf2d23cb8315bc999628608ced305d43828109af7488262"
+  },
+  "table_fixture_archive": {
+    "byte_identical_second_run": true,
+    "member_count": 4,
+    "required_prefix_members_present": true,
+    "sha256": "2e704563ff404560334e3d33f0295bc49c28b70c60ab1fa11384a2c9b3966c68"
+  },
+  "tools": {
+    "git": "git version 2.43.0",
+    "tar": "tar (GNU tar) 1.35",
+    "zstd": "*** Zstandard CLI (64-bit) v1.5.5, by Yann Collet ***"
+  }
+}
