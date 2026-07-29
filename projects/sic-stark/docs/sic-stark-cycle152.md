@@ -81,7 +81,7 @@ The regenerated certificate manifest is
 `certificates/dimension-six-amendment-SHA256SUMS`, with SHA-256
 
 ```text
-4b3188bc7188844b27a7096319df430f4a1950bfa5a1a83bc0f321cb6b2a9514
+6f87fbcdfa6067c44b789d3aeac63a6b7e3198f853b958ff29d4f528be7f2bf6
 ```
 
-The separate eight-page Paper III draft compiles without errors.
+The separate nine-page Paper III draft compiles without errors.

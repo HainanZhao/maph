@@ -59,6 +59,10 @@ run_python dimension-six-cycle150-checkpoint-gates.json \
     "$ROOT/scripts/dimension_six_checkpoint_gates.py"
 run_python dimension-six-cycle153-tilted-finite-part.json \
     "$ROOT/scripts/dimension_six_tilted_finite_part.py" --arb
+run_python dimension-six-cycle154-conditioning-comparison.json \
+    "$ROOT/scripts/dimension_six_conditioning_comparison.py"
+run_python dimension-six-cycle154-fresnel-stratum.json \
+    "$ROOT/scripts/dimension_six_fresnel_stratum_audit.py"
 
 mkdir -p -- "$CERTIFICATE_DIR"
 for generated in "$work_dir"/dimension-six-cycle*; do
@@ -71,7 +75,8 @@ manifest="$CERTIFICATE_DIR/dimension-six-amendment-SHA256SUMS"
     find certificates -maxdepth 1 -type f \
         \( -name 'dimension-six-cycle14[4-9]-*' -o \
         -name 'dimension-six-cycle150-*' -o \
-        -name 'dimension-six-cycle153-*' \) |
+        -name 'dimension-six-cycle153-*' -o \
+        -name 'dimension-six-cycle154-*' \) |
         LC_ALL=C sort |
         xargs sha256sum
 ) >"$manifest"

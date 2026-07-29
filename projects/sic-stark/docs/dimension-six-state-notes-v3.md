@@ -59,6 +59,17 @@ Everything after this lemma is exact and verified.
   \(\|n\beta_6\|\ge(\sqrt{21}n+\tfrac12)^{-1}\).
 - `VERIFIED`: the zero-mode tilted/Fresnel normalization has reciprocal
   roots \(-2\sqrt7\pm3\sqrt3\) and trace \(-4\sqrt7\).
+- `MEASURED`: for the factorized-continuation implementation,
+  \(\log_{10}C_6(s)=2.8039716/s-14.9000\) and
+  \(\log_{10}C_4(s)=0.6436017/s-17.0281\), with the slopes reproduced
+  at a second precision.  These are implementation-conditioning slopes,
+  not intrinsic exponents of the open boundary estimate.
+- `VERIFIED`: under both exact TCC frequency maps, the six Fresnel modes
+  are exactly the six q-gamma singular-cancellation modes.
+- `EXCLUDED`: identifying those six modes with the conductor-lowered
+  arithmetic stratum.  Only one point of the proved three-point
+  modulus-three orbit is Fresnel; the analytic split is organized by
+  Fourier direction rather than conductor.
 
 ## Excluded shortcuts
 

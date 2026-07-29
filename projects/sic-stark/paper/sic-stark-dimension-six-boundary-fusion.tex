@@ -17,7 +17,7 @@ of a Two-Base Lens-Space Beta Integral}
 \author{Hainan Zhao\\
 \small Independent Researcher\\
 \small\texttt{hainzhao@gmail.com}}
-\date{28 July 2026}
+\date{29 July 2026}
 
 \begin{document}
 \maketitle
@@ -244,7 +244,7 @@ For a frequency $(a,b)\bmod6$ and alias $z\in\Z$, direct reduction gives
 \]
 and
 \[
- \frac{\alpha_z}{3\tau-1}
+ \frac{\alpha_z}{4\tau-1}
  =\frac{4b-5a}{3}+2z.
 \tag{9}
 \]
@@ -274,7 +274,7 @@ in the term ratio gives
 \tag{11}
 \]
 This is the well-poised ${}_2\psi_2$ packet at argument $-q$ found in
-the finite Zak descent.  Equation (10) is a boundary identity only.
+the finite Zak descent.  Equation (11) is a boundary identity only.
 
 \section{The dimension-five control}
 
@@ -294,8 +294,8 @@ Running the same two-base construction gives at fusion
 
 \begin{proposition}[Summability dichotomy]\label{prop:dichotomy}
 The proved dimension-five packet lies on the positive-argument
-closed ${}_2\psi_2$ locus (12).  The dimension-six packet lies on its
-sign-reflected neighbor (10).
+closed ${}_2\psi_2$ locus (13).  The dimension-six packet lies on its
+sign-reflected neighbor (11).
 \end{proposition}
 
 \begin{proof}
@@ -316,9 +316,18 @@ level $16$.  Exact exponent reduction also gives
 \]
 so dimension four, like dimension six, lies at argument $-q$; see
 \path{scripts/dimension_four_two_base_calibration.py}.
+The exceptional dimension-six zero mode is independently normalized by
+\[
+ \nu_{\rm aux}+\nu_{\rm aux}^{-1}=-4\sqrt7.
+\]
+Thus the complete calibration triangle is
+\[
+ d=4:-q,\qquad d=5:+q,\qquad
+ d=6\text{ zero mode}:-4\sqrt7.
+\]
 \end{proof}
 
-This control is decisive: the minus sign in (10) is not a dispensable
+This control is decisive: the minus sign in (11) is not a dispensable
 normalization, and replacing it by the summable plus sign would erase
 the dimension-six obstruction.
 
@@ -470,6 +479,110 @@ Taking $m$ nearest to $n\beta$ and using the nonzero integral norm gives
 Thus exponential damping of rate $\kappa(s)\asymp s$ competes with
 quadratic-irrational divisors of order $1/n$ in the transition range
 $n\asymp1/s$.  This is the sharp small-divisor form of MFC$_6$.
+
+\begin{proposition}[Analytic stratum audit]\label{prop:stratum}
+For both formal shifts, the six Fresnel frequency modes coincide
+exactly with the six q-gamma singular-cancellation modes.  They do not
+coincide with the conductor-lowered arithmetic stratum.
+\end{proposition}
+
+\begin{proof}
+The Fresnel condition is $4b-5a\equiv0\pmod6$.  Inverting the two exact
+TCC frequency maps sends its six solutions respectively to
+\[
+ \{(0,0),(4,1),(2,2),(0,3),(4,4),(2,5)\}
+\]
+and
+\[
+ \{(0,0),(5,5),(4,4),(3,3),(2,2),(1,1)\}.
+\]
+These are exactly the respective q-gamma cancellation patterns.  Each
+set has denominator counts
+\[
+ (1,1,2,2)\quad\text{at denominators }(1,2,3,6).
+\]
+The thirty growing modes have counts $(0,2,6,22)$.  Only one point of
+the proved three-point modulus-three orbit is Fresnel for either
+shift.  The executable exact comparison is
+\path{scripts/dimension_six_fresnel_stratum_audit.py}.
+\end{proof}
+
+\subsection*{A standalone sufficient estimate}
+
+For $\tau\in\mathbb H$, put
+\[
+ \omega=24\tau-5,\quad q=e^{2\pi i\tau},\quad
+ \widetilde q=e^{2\pi iA\tau},
+\]
+and define
+\[
+ G_\tau(\mu,m)=
+ \frac{(\widetilde X(\mu,m);\widetilde q)_\infty}
+ {(X(\mu,m);q)_\infty},
+\]
+where
+\[
+ X(\mu,m)=e^{2\pi i(\mu+m)/24},\quad
+ \widetilde X(\mu,m)=\widetilde q\,
+ e^{2\pi i(\mu+115m\omega)/(24\omega)}.
+\]
+With $D=4\tau-1$, let
+\[
+ \alpha_z=D(4b-5a)/3+2Dz,\qquad N_z=a+2-6z,
+\]
+\[
+ K_{a,b}(z;\tau)=
+ G_\tau(\alpha_z,N_z)G_\tau(-\alpha_z,4-N_z),
+\]
+\[
+ \mathcal S_{a,b,r}(s)=
+ \sum_{k\in\Z}K_{a,b}(r+3k;\gamma(s)),
+ \qquad r=0,1,2.
+\]
+One alias period has multiplier $-q$; at the boundary the oscillations
+are therefore $(-1)^ke^{2\pi ik\beta}$ and concentrate at
+$|k|\asymp s^{-1}$.
+
+\begin{conjecture}[Quantitative boundary fusion, BF$_6(\eta)$]
+\label{conj:estimate}
+For some $\eta,C,s_0>0$, uniformly over the thirty pairs
+$4b-5a\not\equiv0\pmod6$ and $r=0,1,2$,
+\[
+ \left|\mathcal S_{a,b,r}(s)
+ -\mathcal S^{\rm fus}_{a,b,r}\right|
+ \le C\,|\Delta(\gamma(s))|^\eta,
+ \qquad 0<s<s_0,
+\tag{19d}
+\]
+where the fused value is the inherited $24$-factor Abel--Fresnel limit.
+\end{conjecture}
+
+A Dini modulus tending to zero would suffice instead of a power.
+Conjecture~\ref{conj:estimate} implies MFC$_6$ and hence
+Theorems~\ref{thm:stark} and~\ref{thm:conditional}.  The completely
+standalone formulation is
+\path{docs/dimension-six-standalone-estimate.md}.
+
+\subsection*{Conditioning slopes}
+
+After dividing the relative Arb radius by the requested
+$q$-Pochhammer tolerance, the pinned asymptotic windows give
+\[
+\begin{array}{c|c|c|c|c}
+d&\operatorname{Tr}(\beta)&\sqrt{\operatorname{disc}K}
+&\dfrac{d\log_{10}C_d}{d(1/s)}
+&\dfrac{d\log_{10}C_d}{d(1/|\tau-\beta|)}\\ \hline
+4&3&\sqrt5&0.643602&1.43948\\
+6&5&\sqrt{21}&2.803972&12.8721
+\end{array}
+\tag{19e}
+\]
+with $R^2=0.999933$ and $0.999996$, respectively, and replication at a
+second precision.  This is essential-exponential conditioning in
+$1/s$ for the factorized-continuation implementation.  It is not an
+intrinsic exponent of BF$_6$.  The dimension-four value is proved
+despite the same pathology; its slope is about $4.36$ times smaller.
+See \path{scripts/dimension_six_conditioning_comparison.py}.
 
 \section{Stabilizer ledger and conditional closure}
 \label{sec:conditional}
