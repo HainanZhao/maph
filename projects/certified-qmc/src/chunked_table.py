@@ -31,6 +31,29 @@ def file_sha256(path: Path) -> str:
     return hasher.hexdigest()
 
 
+def safe_chunk_path(dataset: Path, relative: str) -> Path:
+    """Resolve one regular chunk path without traversal or symlinks."""
+    requested = Path(relative)
+    if (
+        requested.is_absolute()
+        or not requested.parts
+        or requested.parts[0] != "chunks"
+        or any(part in ("", ".", "..") for part in requested.parts)
+    ):
+        raise ValueError("unsafe chunk path")
+    dataset = dataset.resolve()
+    candidate = dataset
+    for part in requested.parts:
+        candidate /= part
+        if candidate.is_symlink():
+            raise ValueError("chunk path contains a symlink")
+    try:
+        candidate.resolve().relative_to(dataset)
+    except ValueError as error:
+        raise ValueError("chunk path escapes dataset") from error
+    return candidate
+
+
 def record_hash(record_without_hash: dict) -> str:
     return sha256(canonical_bytes(record_without_hash)).hexdigest()
 
