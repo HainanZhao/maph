@@ -66,6 +66,15 @@ be repaired before it is publication-ready:
 
 ## Latest completed cycles
 
+### Cycle 158: dimension-seven publication gate
+
+The conductor-two obligation was rerun from the current tree rather
+than inherited from Cycle 151. All eight dedicated closure tests pass,
+the Paper II clean-extraction archive passes all 80 included tests, and
+the exact certificate again gives Shintani index two, both shifts, and
+all 441 minors per shift. Theorem 1 needs no rescope. See
+`docs/sic-stark-cycle158.md`.
+
 ### Cycle 154: factorized conditioning
 
 ### Conditioning measurement
