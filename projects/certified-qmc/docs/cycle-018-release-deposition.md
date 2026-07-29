@@ -1,7 +1,7 @@
 # Cycle 018 release and deposition contract
 
-Status: implementation-ready; external publication remains gated on
-the completed data artifacts and a Zenodo token
+Status: **CANCELLED_BY_USER.** No QMC package, tag, deposition, DOI, or
+announcement will be created.
 
 Reviewed: 2026-07-29 UTC
 

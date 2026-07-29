@@ -1,5 +1,16 @@
 # Cycles 016–017 fidelity production
 
+## Final disposition
+
+**CANCELLED_BY_USER at `2026-07-29T12:07:54Z`.** The v2 producer and
+all four native workers were terminated at 5,153,472,921,600 updates
+(9.579433008333469%). The continuation watcher was also terminated, so
+no fidelity audit, usability run, oracle extraction, packaging, release,
+or Cycle-009 run will follow. The unsealed partial dataset and both
+failed/pivot transcripts are retained without tag promotion. Exact
+hashes and process dispositions are recorded in
+`certificates/cycles-016-019-user-cancellation.json`.
+
 ## Pre-run freeze
 
 The production grid is fixed in
@@ -70,15 +81,12 @@ place:
   oracle gate is unchanged;
 - the v1 output is not resumed; v2 starts in a clean dataset.
 
-The v2 preregistration predates its first computation. The production
-run is in progress at `artifacts/fidelity-v2`. It must not be tagged
-complete until the dataset is sealed, 100/100 selected-entry replays
-pass, and all three frozen independent oracle checks agree.
+The v2 preregistration predated its first computation. The cancelled
+partial run remains at `artifacts/fidelity-v2`; it is unsealed and must
+not be resumed or tagged complete.
 
-The current crash/reboot recovery procedure and a timestamped live
-checkpoint are tracked in `docs/live-production-recovery.md`.  The
-driver resumes from authenticated completed chunks and must never be
-started concurrently against the same output directory.
+The former crash/reboot recovery procedure is retained, explicitly
+disabled, in `docs/live-production-recovery.md` as process evidence.
 
 ## Claim boundary
 

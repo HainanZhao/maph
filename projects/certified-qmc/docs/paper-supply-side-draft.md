@@ -1,6 +1,8 @@
 # Methods-paper supply-side draft
 
-Status: pre-results prose; production result fields remain `PENDING`
+Status: **CANCELLED_BY_USER.** Retained only as process-history source
+material for the cross-project methods paper; do not finalize it as a
+QMC paper.
 
 ## Motivation: making merit computations falsifiable
 

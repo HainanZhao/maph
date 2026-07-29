@@ -140,11 +140,10 @@ Date: 2026-07-29
   timestamped model-class discrepancy gate.  Selection optimality is
   excluded; future bounds are
   \(T_{\rm eval}(\mathcal M)+T_{\rm format}\).
-- Workstream B production uses the frozen fidelity/usability grid and
-  artifact contract. Source licensing, the full prime schedule, and
-  chunk replay/run hygiene are closed gates.  The versioned v2 fidelity
-  run is active; no production result is promoted until its sealed
-  post-run audit passes.
+- Workstream B production used a frozen fidelity/usability grid and
+  artifact contract. It was cancelled before sealing; the
+  preregistration remains historical and no production result was
+  promoted.
 - The engine conformance/oracle set is selected structurally before
   merit extraction.  It spans modulus scale, prefix dimension, all
   three frozen weight profiles, full tractable prefixes, and
@@ -153,12 +152,8 @@ Date: 2026-07-29
 
 ## EXPLICITLY DEFERRED GATES
 
-- The \(N=2^{16},d=50\) Cycle 009 run remains preregistered with
-  compiled Arb-106 first and exact CRT for unresolved comparisons. It is
-  deferred to the Workstream C entry gate. It accepts only an exact-CRT
-  escalation count below 803 over 802,767 fixed comparisons and must
-  report the escalation-depth histogram before any certified-CBC
-  construction claim.
+- The \(N=2^{16},d=50\) Cycle 009 run was cancelled with the QMC
+  program. Its preregistration remains as process evidence only.
 
 ## NUMERICAL
 
@@ -180,11 +175,12 @@ Date: 2026-07-29
   prospectively frozen +25% VPS drift alarm. Same-host
   single-process diagnostics remained below that ceiling. The partial
   hash-chained run is preserved and no partial merit is promoted.
-- The human-authorized v2 monitor uses a versioned +75% VPS drift
+- The human-authorized v2 monitor used a versioned +75% VPS drift
   alarm (4.344801 ns/update), whose boundary projects 2.704 node-days.
-  The seven-node-day hard budget and all certification gates are
-  unchanged. The v2 fidelity computation is in progress; no production
-  table is yet promoted.
+  The user cancelled the run at 5,153,472,921,600 updates
+  (9.579433008333469%), 2.966475 aggregate ns/update, and zero pause
+  records. The partial dataset is unsealed and no production table was
+  promoted.
 - The pinned FFTW plans, compiled LatNet midpoint matches, and synthetic
   fast-CBC transcripts validate that the proposed model class is
   realistic.  They are outside the Workstream B certification chain.
@@ -232,10 +228,17 @@ hardware and implementation.
   its \(B_{\rm alg}(\mathcal M)\) passes. Previously exposed repository
   examples are protocol contaminated and remain unclassified.
 - Certified Zaremba enumeration.
-- Competitive totally-real unit constructions.
+- Whether small totally-real unit constructions compete with direct CBC
+  anchors at dimensions 16–64; parked outside this program as C2.
 - Any application-level error statement.
 
 ## RETIRED OR CORRECTED
+
+- The Certified-QMC production/release program itself: cancelled by
+  user on 2026-07-29 after the exhaustive-grid consumer case failed
+  review. Cycles 016–019, packaging, DOI, QMC paper, application pilot,
+  and scale-CBC work are retired. The exact evaluator and process
+  record are retained; C2 is a decoupled side question.
 
 - `6^d N^(2d+1)` as the universal rational-weight denominator:
   corrected by the weight-denominator product.

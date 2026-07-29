@@ -1,5 +1,14 @@
 # Gated roadmap
 
+## Final disposition
+
+**QMC PROGRAM CANCELLED_BY_USER on 2026-07-29.** No phase below remains
+active. Cycles 016–019, the full grid, usability/oracle production,
+packaging, DOI, QMC paper, Cycle-009 scale experiment, and application
+pilot are retired. The exact evaluator is retained internally and the
+process record is preserved for the methods paper. C2 is parked as a
+small direct-arithmetic side question, decoupled from this roadmap.
+
 ## Phase 0 — exact ground truth
 
 Status: complete, including the bounded flagship-source audit.
@@ -42,7 +51,7 @@ optimization and isolate the representation error.
 
 ## Phase 2 — certified evaluator conformance and reference anchors
 
-Status: the frozen distribution sites and six-paper primary-literature
+Historical status: the frozen distribution sites and six-paper primary-literature
 perimeter contain no merit attached to the frozen vectors. The
 classification branch is closed for that perimeter. The engine is the
 primary artifact; a preregistered, structurally diverse oracle set is
@@ -50,7 +59,7 @@ the principal software-conformance data product; the exhaustive grid is
 supplementary archival data and supplies Workstream C comparison
 anchors. The grid, weights, artifact contract, exact precompute budget,
 source policy, full prime schedule, and chunk replay are closed.
-Fidelity production is active under the versioned VPS monitor. Its
+Fidelity production was later cancelled under the versioned VPS monitor. Its
 first +25% drift pause is preserved; the human-authorized v2 alarm is
 +75%, while the seven-node-day budget and all certification gates
 remain unchanged.
@@ -93,20 +102,22 @@ remain unchanged.
 16. ~~Implement hash-chained chunks, forced-kill resumability,
     selected-entry replay below the 1% payload ceiling, universal
     overflow checks, and complete run manifests.~~
-17. Produce chunked tables in increasing \(N\), with the frozen
-    throughput-drift monitor and post-run audit.
-18. Freeze and extract the engine conformance/oracle set independently
-    of observed merit values; publish the full fidelity grid as
-    supplementary data.
+17. ~~Produce chunked tables in increasing \(N\).~~ Cancelled at
+    9.579433008333469%; partial data unsealed and unpromoted.
+18. ~~Extract and publish the engine conformance/oracle set and full
+    grid.~~ Cancelled.
 
-Gate: every supplied entry has a replayable certificate and upstream
+Historical gate: every supplied entry would have required a replayable certificate and upstream
 hash. The 54.9-trillion combined incremental count has a passing local
 projection; source/license, full-schedule, chunk-replay, and fidelity
-pre-run gates are closed. The active v2 fidelity run must seal and pass
-100 selected replays plus three frozen oracle checks before Cycle 018
-computation begins.
+pre-run gates were closed. The v2 run did not seal, so no entry was
+promoted and Cycle 018 did not begin.
 
 ## Phase 3 — number-theoretic constructions
+
+Status: cancelled as a workstream. C2 alone is parked outside this
+program as a small direct `Fraction`/PARI experiment at dimensions
+16–64.
 
 1. Run the preregistered Cycle 009 Arb-106 decision experiment and bank
    its escalation count/depth histogram before making any certified-CBC
@@ -124,6 +135,8 @@ constant.
 
 ## Phase 4 — application pilot
 
+Status: cancelled.
+
 Select one preintegrated payoff or UQ integrand only after documenting:
 
 - the exact transformation;
@@ -138,8 +151,9 @@ empirical comparisons.
 
 ## Production-phase completion audit
 
-`scripts/audit_production_phase_completion.py --require-complete` is
-the terminal Cycles 013–019 gate.  It requires 14 independent items:
+This gate is retired without passage. Historically,
+`scripts/audit_production_phase_completion.py --require-complete`
+required 14 independent items:
 the closed G1–G3 certificates; sealed fidelity/usability audits; the
 298-case oracle; authenticated four-asset release package; repository
 tag; published DOI response; finalized supply-side prose; sealed

@@ -1,6 +1,7 @@
 # Workstream-D human decision brief
 
-Status: prepared; human disposition required after Cycle 019
+Status: **CANCELLED_BY_USER.** No Workstream-D decision or experiment
+is required.
 
 The production directive requires an explicit choice before application
 scoping.  No Workstream-D experiment may begin from this brief alone.
