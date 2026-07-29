@@ -17,22 +17,26 @@ Shintani Height Rigidity and CM Descent}
 \author{Hainan Zhao\\
 \small Independent Researcher\\
 \small\texttt{hainzhao@gmail.com}}
-\date{28 July 2026}
+\date{29 July 2026}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
 We prove the formal Twisted Convolution Conjecture of
-Appleby--Flammia--Kopp unconditionally for the discriminant-$32$
-dimension-seven stratum and for every admissible tuple in dimension
-eight.  In dimension seven, conductor lowering places every characteristic in
-one of six maximal-order ray groups.  Shintani's proved index-two
-algebraicity theorem gives a safe exponent $16128$; rigorous Arb
-enclosures, Voutier's height gap, exact Artin labels, and a
-degree-$48$ compositum certificate identify the complete signed
-overlap packet and make all $441$ rank-two minors vanish for both
-formal shifts.  Dimension eight has two admissible form conductors.
+Appleby--Flammia--Kopp unconditionally for every admissible tuple in
+dimensions seven and eight.  Dimension seven has two form conductors,
+and we prove the discriminant-$8$ and discriminant-$32$ strata
+independently.  For discriminant $32$, conductor lowering places every
+characteristic in one of six maximal-order ray groups.  For
+discriminant $8$, the direct six-factor Shintani--Faddeev cocycle has
+alternating periods $2+\sqrt2$ and $(2+\sqrt2)/2$.  Shintani's proved
+index-two algebraicity theorem gives a common safe exponent $16128$;
+rigorous Arb enclosures, Voutier's height gap, exact phase and Artin
+labels, and degree-$48$ compositum certificates identify both complete
+signed overlap packets and make all $441$ rank-two minors vanish for
+both formal shifts in each stratum.  Dimension eight has two
+admissible form conductors.
 For conductor three, genuine linear reinduction to quartic ray
 characters over $\Q(\sqrt{-6})$ and Stark's proved
 imaginary-quadratic rank-one theorem determine the two formerly
@@ -42,9 +46,7 @@ and an exact phase calculation in $\Q(\sqrt5)$ orients all $63$
 nonzero cocycle values.  Exact quotient-ring arithmetic makes all
 $784$ minors vanish for both shifts in each dimension-eight stratum.
 No unproved Stark conjecture or numerical recognition is used as a
-logical input. Dimension-seven admissibility also permits discriminant
-$8$; that second stratum is isolated explicitly but is not claimed
-here.
+logical input.
 \end{abstract}
 
 \section{Formal TCC and conventions}
@@ -115,8 +117,7 @@ rank exactly one and idempotency.
 \end{proof}
 
 \begin{theorem}\label{thm:main}
-For every admissible dimension-seven tuple $t$ whose form has
-discriminant $32$, and for every admissible dimension-eight tuple $t$,
+For every admissible dimension-seven or dimension-eight tuple $t$,
 \[
  0,1\in\mathcal Z_t.
 \]
@@ -143,10 +144,121 @@ exist; convenient representatives are
  Q_{7,2}=\langle1,-6,1\rangle,\quad
  \operatorname{disc}Q_{7,2}=32.
 \]
-This section proves the formal TCC for $Q_{7,2}$ and transports it
-within discriminant $32$.  It does not use form covariance to cross
-from discriminant $32$ to discriminant $8$, and it makes no claim for
-$Q_{7,1}$.
+The two discriminants are distinct covariance strata, so they must be
+proved independently.  We first prove the missing maximal-order tuple
+$Q_{7,1}$ and then recall the conductor-lowering proof for
+$Q_{7,2}$.  Since both orders have wide class number one, covariance
+then covers every admissible form in each stratum.
+
+\subsection{The maximal-order discriminant-eight packet}
+
+Put
+\[
+ \alpha=2+\sqrt2,\qquad
+ L_{7,1}=\begin{pmatrix}7&-4\\2&-1\end{pmatrix},\qquad
+ A_{7,1}=L_{7,1}^3
+ =\begin{pmatrix}239&-140\\70&-41\end{pmatrix}.
+\]
+The first number is the positive fixed point of $Q_{7,1}$.  Direct
+matrix multiplication gives $A_{7,1}\equiv I\pmod7$, and the exact
+Dedekind-sum calculation gives $\Psi(A_{7,1})=0$.  Thus the AFK phase
+is
+\[
+ \Phi^{(1)}_{\boldsymbol p}
+ =-\tau_7^{-2Q_{7,1}(\boldsymbol p)},\qquad
+ \tau_7=-e^{\pi i/7}.
+\tag{3}
+\]
+All of these assertions, together with all $48$ inverse-ray labels,
+are replayed by the maximal-tuple audit script:
+\begin{center}\small
+\path{scripts/dimension_seven_maximal_tuple_audit.gp}.
+\end{center}
+
+The canonical continued-fraction word for $A_{7,1}$ is
+\[
+ [4,2,4,2,4,2,0].
+\tag{4}
+\]
+Consequently the direct Shintani--Faddeev formula has six reciprocal
+double-sine factors, with periods alternating between $\alpha$ and
+$\alpha/2$.  This is not the three-factor discriminant-$32$ formula
+with its fixed point relabeled.
+
+The one-place and two-place ray groups modulo seven are respectively
+$C_6$ and $C_6\times C_2$.  The conjugation commutator and the kernel
+obtained by forgetting the second real place are distinct order-two
+subgroups.  Hence the one-place Stark field has index two over its
+maximal absolutely abelian intersection, exactly the hypothesis of
+Shintani's theorem.  It is a subfield of the ray-$14$ field used
+below.  The full divisor and real-distribution audit for that field
+therefore supplies the same safe exponent
+\[
+ m=16128.
+\tag{5}
+\]
+
+The six nonquadratic signed values are the relevant real roots of
+\[
+\begin{aligned}
+G(X)={}&X^{12}+4X^{11}-2X^{10}-22X^9-18X^8+16X^7\\
+ &+41X^6+16X^5-18X^4-22X^3-2X^2+4X+1,
+\end{aligned}
+\tag{6}
+\]
+while the two remaining nontrivial magnitudes are the negative real
+roots of
+\[
+ R(X)=X^4+2X^3+X^2+2X+1.
+\tag{7}
+\]
+These are exact signed-square factorizations of the certified
+Stark-unit polynomials: no integer-relation output is used as a proof
+input.  Both fields embed in the degree-$24$ ray-$14$ overlap field.
+Rational Sturm intervals isolate every displayed root.
+
+The six-factor Arb evaluator
+\path{scripts/certify_dimension_seven_maximal_cocycle.py} gives
+\[
+ \epsilon_{\log}\le2.30\cdot10^{-11},\qquad
+ 16128\epsilon_{\log}\le3.71\cdot10^{-7}.
+\tag{8}
+\]
+The complete Arb balls are archived in
+\begin{center}\small
+\texttt{certificates/dimension-seven-}\\
+\texttt{maximal-cocycle-intervals.txt}.
+\end{center}
+Voutier's lower bound is greater than $5.22\cdot10^{-5}$ in every
+relevant degree, so height rigidity identifies the analytic
+magnitudes with the isolated algebraic roots.  Independently, the
+maximal sign-audit script
+\begin{center}\small
+\path{scripts/dimension_seven_maximal_sign_audit.py}
+\end{center}
+tracks every finite $q$-Pochhammer phase and double-sine recurrence
+in $\Q(\sqrt2)$; the irrational phase coefficient cancels in all
+$48$ cases and fixes the complete sign table.
+
+Finally, the exact maximal-order TCC script
+\begin{center}\small
+\path{scripts/dimension_seven_maximal_exact_tcc.gp}
+\end{center}
+inserts the sixteen Zauner-orbit representatives using
+\[
+ (a,b)\longmapsto(3b,2a-b)\pmod7.
+\tag{9}
+\]
+In the same degree-$48$ compositum with $\Q(\zeta_{56})$ used below,
+it proves for each formal shift
+\[
+ \Tr\Pi=1,\qquad \Pi^2=\Pi,\qquad
+ 441\text{ rank-two minors vanish}.
+\tag{10}
+\]
+Proposition~\ref{prop:bridge} proves both shifts for $Q_{7,1}$.
+The order of discriminant $8$ has wide class number one, so covariance
+proves the entire discriminant-$8$ stratum.
 
 \subsection{Conductor lowering and ray classes}
 
@@ -176,12 +288,12 @@ sends $\alpha$ to $\beta_7$.  For a characteristic $(a,b)/7$, its two
 preimages are
 \[
  s_j=\frac1{14}\binom{a+b+7j}{2b},\qquad j=0,1.
-\tag{3}
+\tag{11}
 \]
 Kopp's inverse ray map assigns to $s_j$ the principal element
 \[
  \gamma_{a,b,j}=2b\sqrt2+3b-a-7j.
-\tag{4}
+\tag{12}
 \]
 Removing the common ideal divisor of $(14)$ and $(\gamma)$ produces
 exactly six lowered moduli.  Their one-place ray groups and Kopp
@@ -196,13 +308,13 @@ exponents are
 \left(\begin{smallmatrix}7&3\\0&1\end{smallmatrix}\right)&C_2&2\\
 \left(\begin{smallmatrix}7&4\\0&1\end{smallmatrix}\right)&1&2.
 \end{array}
-\tag{5}
+\tag{13}
 \]
 The common determinant-one stabilizer of the lowered factors at
 $\alpha$ is
 \[
  A_{\rm low}=\begin{pmatrix}239&-140\\70&-41\end{pmatrix}.
-\tag{6}
+\tag{14}
 \]
 The exact inverse-ray, gcd, sign-class, and stabilizer computations are
 printed for all $96$ lifted factors by
@@ -224,7 +336,7 @@ gives
  \qquad
  m=\operatorname{lcm}_{\mathfrak d\mid\mathfrak c}
  m_{\mathfrak d}=16128.
-\tag{7}
+\tag{15}
 \]
 Write
 $\mathfrak c=\mathfrak p_2^3\bar{\mathfrak p}_2^3\mathfrak p_7$ and
@@ -338,12 +450,12 @@ component is selected by the exact identity
 \[
  c_H=\zeta_{56}+\zeta_{56}^{-1},\qquad
  1.98<c_H<1.99,
-\tag{8}
+\tag{16}
 \]
 and it also satisfies
 \[
  \sqrt2=\zeta_{56}^{7}+\zeta_{56}^{-7}.
-\tag{9}
+\tag{17}
 \]
 In the resulting degree-$48$ compositum,
 \path{scripts/dimension_seven_exact_tcc.gp} verifies for each formal
@@ -351,14 +463,15 @@ shift
 \[
  \Tr\Pi=1,\qquad \Pi^2=\Pi,\qquad
  441\text{ rank-two minors vanish}.
-\tag{10}
+\tag{18}
 \]
 Proposition~\ref{prop:bridge} proves both shifts for the
 discriminant-$32$ tuple $Q_{7,2}$. The order of discriminant $32$ has
 wide class number one. Unconditional $\mathrm{GL}_2(\Z)$ covariance
 therefore transports the result to every admissible dimension-seven
-form of discriminant $32$, and no farther. The discriminant-$8$
-stratum requires an independent analytic packet and remains open.
+form of discriminant $32$. Together with the independent
+discriminant-$8$ proof above, this proves the dimension-seven part of
+Theorem~\ref{thm:main}.
 
 \section{Dimension eight}\label{sec:d8}
 
@@ -375,7 +488,7 @@ identified with the maximal-order ray group
  \simeq
  \Cl_{(24)\infty_2}(\mathcal O_{\Q(\sqrt5)})
  \simeq C_4\times C_2^2.
-\tag{11}
+\tag{19}
 \]
 Kopp's conductor-lowering formula supplies the exact three-factor
 dictionary.  The fifteen lower characteristics lie in an index-two
@@ -390,7 +503,7 @@ nevertheless the same order-two character in both cases, and the
 associated biquadratic field has quadratic subfields
 \[
  \Q(\sqrt5),\qquad\Q(\sqrt{-6}),\qquad\Q(\sqrt{-30}).
-\tag{12}
+\tag{20}
 \]
 This projective observation is not used as a substitute for linear
 equivalence.  The script
@@ -413,13 +526,13 @@ $\Cl_{\mathfrak m_M}(M)$ has cyclic coordinates $[8,4]$, and in those
 coordinates the reinduced characters are
 \[
  \psi_0=[6,1],\qquad \psi_1=[2,1].
-\tag{13}
+\tag{21}
 \]
 They have the same complete Artin $L$-functions as the original
 $\Q(\sqrt5)$ characters $[1,0,0]$ and $[1,1,0]$, respectively. With
 \[
  S_M=\{\infty,\mathfrak p_2,\mathfrak p_3,\mathfrak p_5\},
-\tag{14}
+\tag{22}
 \]
 every finite member is ramified for $\psi_b$, so
 $L_{M,S_M}(s,\psi_b)=L_M(s,\psi_b)$.
@@ -457,21 +570,21 @@ $\varepsilon_b\in E_b^\times$ such that, for $g\in\operatorname{Gal}(E_b/M)$,
  =-\log |g(\varepsilon_b)|_{\rm ord},
 \qquad
  |z|_{\rm ord}:=\sqrt{z\overline z}.
-\tag{15}
+\tag{23}
 \]
 Consequently
 \[
  L'_{S_M}(0,\psi_b)
  =-\sum_g\overline{\psi_b(g)}
       \log|g(\varepsilon_b)|_{\rm ord}.
-\tag{16}
+\tag{24}
 \]
 \end{lemma}
 
 \begin{proof}
 Stark's proved rank-one theorem for abelian extensions of an imaginary
 quadratic base~\cite{Stark1980} applies to $E_b/M$ with the set
-\textup{(14)}. Here $|S_M|=4\ge3$, so the unit clause in Stark's
+\textup{(22)}. Here $|S_M|=4\ge3$, so the unit clause in Stark's
 theorem gives a global unit rather than only an $S$-unit. The script
 \path{scripts/dimension_eight_cm_unit_lattice.gp} independently
 certifies \texttt{bnfcertify=1} and
@@ -480,7 +593,7 @@ $|z|_{\rm ord}^2$; hence its factor $1/e$ becomes coefficient one in
 the ordinary modulus convention used above.
 The finite set contains the distinct conductor primes above $2,3,5$.
 Fourier transforming the displayed partial-zeta formula gives
-\textup{(16)}.
+\textup{(24)}.
 \end{proof}
 
 Exact unit-action matrices show that the quartic anti-unit component
@@ -488,7 +601,7 @@ in Lemma~\ref{lem:stark-normalization} is a rank-two integral lattice.
 Rigorous Arb inversion isolates the four coordinate pairs
 \[
  (0,2),\quad(-2,0),\quad(0,-2),\quad(2,0)
-\tag{17}
+\tag{25}
 \]
 with radii below $5\cdot10^{-9}$.  Exact identities in the common
 normal closure then match their absolute norms to the original
@@ -506,7 +619,7 @@ For $Q=\langle1,-3,1\rangle$, put
 \[
  C=\begin{pmatrix}3&-1\\1&0\end{pmatrix},\qquad
  A_8=C^6=\begin{pmatrix}377&-144\\144&-55\end{pmatrix}.
-\tag{18}
+\tag{26}
 \]
 The one-place and both-place ray groups are $C_2^2$ and $C_2^3$.
 Kopp's exponent is one, and the difference is supported on two
@@ -521,7 +634,7 @@ oriented units are obtained from the positive roots
 L_0&h^4-h^2-1=0&u_0=\phi+h\\
 L_1&r^4-2r^2-4=0&u_1=(r+\phi)/(r-\phi).
 \end{array}
-\tag{19}
+\tag{27}
 \]
 Both fields have class number one, with successful unconditional PARI
 certificates.
@@ -539,7 +652,7 @@ formula therefore gives
 \[
  L'(0,\chi_0)=\log u_0,\qquad
  L'(0,\chi_1)=\log u_1.
-\tag{20}
+\tag{28}
 \]
 
 \begin{lemma}[Exact magnitude transform]\label{lem:d8-magnitudes}
@@ -549,23 +662,23 @@ characteristic.  Its differenced partial-zeta derivative is
  Z'_c(0)=\frac12\left(
  (-1)^{c_2}\log u_0+
  (-1)^{c_1+c_2}\log u_1\right).
-\tag{21}
+\tag{29}
 \]
 Hence, for
 \[
  x^2=u_0,\qquad d^2=\sqrt{u_1/u_0},\qquad a=xd,
-\tag{22}
+\tag{30}
 \]
 the four ray-$8$ magnitudes are
 \[
  [0,0]\mapsto a,\quad [0,1]\mapsto a^{-1},\quad
  [1,0]\mapsto d^{-1},\quad [1,1]\mapsto d.
-\tag{23}
+\tag{31}
 \]
 At modulus four the stabilizer power is two and
 \[
  Z'_c(0)=2(-1)^c\log u_0,
-\tag{24}
+\tag{32}
 \]
 giving magnitudes $x^2,x^{-2}$; at modulus two the magnitude is one.
 These cases exhaust all $63$ nonzero characteristics.
@@ -580,10 +693,10 @@ For the ray group $G=C_2^2$, Fourier inversion gives
 \]
 The sign class is $R=[0,1]$, so only
 $\chi_0=[0,1]$ and $\chi_1=[1,1]$ survive, each with coefficient
-$1/2$.  Substitution of \textup{(20)} proves \textup{(21)} and taking
-half the exponential gives \textup{(23)}.  The identical calculation
+$1/2$.  Substitution of \textup{(28)} proves \textup{(29)} and taking
+half the exponential gives \textup{(31)}.  The identical calculation
 for the ray-$4$ group $C_2$, followed by the exactly audited stabilizer
-power two, proves \textup{(24)}.  The characteristic audit prints
+power two, proves \textup{(32)}.  The characteristic audit prints
 $12$ occurrences of each ray-$8$ label, six of each ray-$4$ label,
 and three modulus-two labels.
 \end{proof}
@@ -596,24 +709,24 @@ The exact Euclidean recursion gives the rows
 377&-144\\144&-55\\55&-21\\21&-8\\
 8&-3\\3&-1\\1&0\\0&1
 \end{pmatrix},
-\tag{25}
+\tag{33}
 \]
 whose values on $(\beta,1)^T$ are
 \[
 \beta^7,\beta^6,\ldots,\beta,1.
-\tag{26}
+\tag{34}
 \]
 Thus all six adjacent period ratios in AFK's continued-fraction
 cocycle are $\beta$.  For the characteristic $(p,q)/8$, division of
 the first period expression by the six successive denominators gives
 \[
  z_i=\frac{q\beta^{i+2}-p\beta^{i+1}}8,\qquad 0\leq i<6,
-\tag{27}
+\tag{35}
 \]
 and the outer finite-product index is
 \[
  \frac{-144p+(377-1)q}{8}=-18p+47q.
-\tag{28}
+\tag{36}
 \]
 These identities are checked in exact arithmetic by the archived
 maximal-tuple audit.
@@ -625,7 +738,7 @@ Put $e(t)=e^{2\pi i t}$ and
  \prod_{k=0}^{n-1}(1-e(z+k\omega)),&n\geq0,\\
  \prod_{k=1}^{-n}(1-e(z-k\omega))^{-1},&n<0.
  \end{cases}
-\tag{29}
+\tag{37}
 \]
 For $s(z)=\lfloor-z\rfloor+1$, define
 \[
@@ -634,10 +747,10 @@ For $s(z)=\lfloor-z\rfloor+1$, define
  \frac{6(z+s(z))^2+6(1-\beta)(z+s(z))}
  {24\beta}\right)
  S_2(z+s(z)+1\mid\beta,1).
-\tag{30}
+\tag{38}
 \]
-Iterating AFK Definition~1.32 along the rows \textup{(25)}, inserting
-its outer finite product \textup{(28)}, and replacing each of Kopp's
+Iterating AFK Definition~1.32 along the rows \textup{(33)}, inserting
+its outer finite product \textup{(36)}, and replacing each of Kopp's
 double sines by the reciprocal convention \textup{(1)} gives
 \[
  \nu_{p,q}=
@@ -646,18 +759,18 @@ double sines by the reciprocal convention \textup{(1)} gives
  \prod_{i=0}^{5}
  \Sigma\!\left(\frac{q\beta^{i+2}-p\beta^{i+1}}8\right),
  \quad \tau=-e^{\pi i/8}.
-\tag{31}
+\tag{39}
 \]
 
 For real $t\notin\Z$,
 \[
  1-e^{2\pi i t}=-2i e^{\pi i t}\sin(\pi t).
-\tag{32}
+\tag{40}
 \]
 The fundamental reciprocal double sine is positive on
 $0<z<\beta+1$, since it is a ratio of positive Barnes double-gamma
 values.  Equations
-\textup{(2)}, \textup{(31)}, and \textup{(32)} therefore reduce every
+\textup{(2)}, \textup{(39)}, and \textup{(40)} therefore reduce every
 phase to an exact element of $\Q(\beta)/2\Z$.
 \path{scripts/dimension_eight_maximal_sign_audit.py} proves for all
 $63$ nonzero characteristics that the coefficient of $\beta$ cancels,
@@ -672,7 +785,7 @@ the table uses only
 \[
  \pm1,\quad\pm x^2,\quad\pm x^{-2},\quad
  \pm d,\quad\pm d^{-1},\quad\pm a,\quad\pm a^{-1}.
-\tag{33}
+\tag{41}
 \]
 Exact shared-subfield identities glue it to $\Q(\zeta_{16})$.
 \path{scripts/dimension_eight_maximal_exact_tcc.py} verifies, for
@@ -680,7 +793,7 @@ each shift,
 \[
  \Tr\Pi=1,\qquad \Pi^2=\Pi,\qquad
  784\text{ rank-two minors vanish}.
-\tag{34}
+\tag{42}
 \]
 
 \subsection{Form-class completion}
@@ -690,13 +803,13 @@ Solving the admissibility recurrences gives
  d=8\Longrightarrow
  r=1,\quad n=9,\quad K=\Q(\sqrt5),\quad
  j=2,\quad m=1,\quad f_2=3.
-\tag{35}
+\tag{43}
 \]
 Hence the form conductor is exactly $f=1$ or $f=3$, and the only
 discriminants are $5$ and $45$.  The exact wide class calculations are
 \[
  h_{\mathrm{GL}_2}(5)=h_{\mathrm{GL}_2}(45)=1.
-\tag{36}
+\tag{44}
 \]
 For discriminant five, the maximal order also has narrow class number
 one because $\phi$ has norm $-1$.  For discriminant $45$ only the wide
@@ -711,16 +824,16 @@ $(t,\ell M\boldsymbol p)$, after reindexing its representatives; for
 $\det M=-1$ both cocycle factors are conjugated.  This proves
 $\mathcal Z_t\subseteq\mathcal Z_{t_M}$.  Applying the same calculation
 to $M^{-1}$ proves the reverse inclusion.  Equations
-\textup{(35)}--\textup{(36)} therefore transport each of the two
+\textup{(43)}--\textup{(44)} therefore transport each of the two
 certified representatives across its own discriminant and complete
 dimension eight.
 
 \begin{proof}[Proof of Theorem~\ref{thm:main}]
-Section~\ref{sec:d7} proves both shifts for the discriminant-$32$
-dimension-seven representative and transports them within that
-discriminant. It explicitly excludes the independent discriminant-$8$
-stratum. Section~\ref{sec:d8} proves both dimension-eight conductors
-and transports within each of the only two possible discriminants.
+Section~\ref{sec:d7} proves both shifts independently for the
+discriminant-$8$ and discriminant-$32$ dimension-seven
+representatives, then transports within each discriminant.
+Section~\ref{sec:d8} proves both dimension-eight conductors and
+transports within each of the only two possible discriminants.
 \end{proof}
 
 \section{Why dimension six remains different}
@@ -743,8 +856,8 @@ Representative measurements on that virtual machine were
 \[
 \begin{array}{lrr}
 \text{audit}&\text{wall time}&\text{peak RSS}\\ \hline
-\text{dimension-seven closure suite}&27.5\ {\rm s}&175\ {\rm MB}\\
-\text{Paper-II archive smoke suite}&43.0\ {\rm s}&175\ {\rm MB}.
+\text{dimension-seven closure suite}&43.5\ {\rm s}&179\ {\rm MB}\\
+\text{Paper-II archive smoke suite}&58.6\ {\rm s}&179\ {\rm MB}.
 \end{array}
 \]
 The submission-specific archive is built deterministically, carries a
@@ -755,9 +868,10 @@ deposit; no DOI is claimed in this version.
 
 The supplementary archive contains:
 \begin{itemize}
-\item all dimension-seven conductor-lowering, Shintani-divisor,
-  Arb-height, Artin-label, field-gluing, and exact-minor scripts,
-  including the complete divisor and enclosure transcripts;
+\item all dimension-seven maximal-order and conductor-lowering,
+  Shintani-divisor, Arb-height, exact-phase, Artin-label, field-gluing,
+  and exact-minor scripts, including the complete divisor and
+  enclosure transcripts;
 \item all conductor-three dimension-eight order/maximal-order,
   linear-reinduction, CM-unit, Arb-orientation, normal-closure, and
   exact-minor scripts;

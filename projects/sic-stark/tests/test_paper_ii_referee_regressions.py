@@ -1,6 +1,7 @@
 """Regression locks for the Paper-II referee corrections."""
 
 from pathlib import Path
+import re
 import unittest
 
 
@@ -15,12 +16,13 @@ class PaperIIRefereeRegressionTests(unittest.TestCase):
         self.assertIn(r"\operatorname{disc}Q_{7,1}=8", text)
         self.assertIn(r"Q_{7,2}=\langle1,-6,1\rangle", text)
         self.assertIn(r"\operatorname{disc}Q_{7,2}=32", text)
-        self.assertIn("whose form has\ndiscriminant $32$", text)
-        self.assertIn("makes no claim for\n$Q_{7,1}$", text)
-        self.assertNotIn(
-            "For every admissible tuple $t$ in dimension seven or eight",
+        self.assertIn(
+            "For every admissible dimension-seven or dimension-eight "
+            "tuple $t$",
             text,
         )
+        self.assertIn("proved independently", text)
+        self.assertNotIn("remains open", text)
 
     def test_dimension_seven_audit_artifacts_are_named(self) -> None:
         text = PAPER.read_text()
@@ -33,6 +35,15 @@ class PaperIIRefereeRegressionTests(unittest.TestCase):
         )
         self.assertIn(
             "certificates/dimension-seven-double-sine-intervals.txt",
+            text,
+        )
+        self.assertIn("G(X)={}&X^{12}+4X^{11}", text)
+        self.assertIn(
+            r"\epsilon_{\log}\le2.30\cdot10^{-11}",
+            text,
+        )
+        self.assertIn(
+            r"\path{scripts/dimension_seven_maximal_exact_tcc.gp}",
             text,
         )
 
@@ -60,6 +71,16 @@ class PaperIIRefereeRegressionTests(unittest.TestCase):
         self.assertIn("wall time", text)
         self.assertIn("peak RSS", text)
         self.assertIn("Zenodo DOI", text)
+
+    def test_display_tags_are_unique_and_consecutive(self) -> None:
+        text = PAPER.read_text()
+        tags = [int(value) for value in re.findall(r"\\tag\{(\d+)\}", text)]
+        self.assertEqual(tags, list(range(1, 45)))
+        references = [
+            int(value)
+            for value in re.findall(r"\\textup\{\((\d+)\)\}", text)
+        ]
+        self.assertTrue(all(value in tags for value in references))
 
 
 if __name__ == "__main__":

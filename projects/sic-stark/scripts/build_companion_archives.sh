@@ -153,7 +153,12 @@ paper_two_files() {
         "certificates/dimension-seven-shintani-divisors.txt"
     add_existing "$list" \
         "certificates/dimension-seven-cycle160-scope-correction.json"
+    add_existing "$list" \
+        "certificates/dimension-seven-cycle161-discriminant-eight-closure.json"
+    add_existing "$list" \
+        "certificates/dimension-seven-maximal-cocycle-intervals.txt"
     add_existing "$list" "docs/sic-stark-cycle160.md"
+    add_existing "$list" "docs/sic-stark-cycle161.md"
     add_existing "$list" "certificates/test-suite.txt"
     add_existing "$list" "scripts/certify_dimension_five_double_sine.py"
     add_existing "$list" "scripts/explore_dimension_four_double_sine.py"

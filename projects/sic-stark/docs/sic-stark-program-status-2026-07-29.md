@@ -11,9 +11,10 @@ with the following exact scope:
   number formula, fused packet at \(-q\), exact two-base calibration.
 - **Dimension 5** (Paper I): fused at \(+q\) at the closed locus, lens
   level 15, alias sign bit 0, independently proved algebraic packet.
-- **Dimension 7, discriminant 32** (Paper II): exact packet
-  certificate, phase audit, symbolic reduction, and both TCC shifts.
-  The distinct admissible discriminant-8 stratum remains open.
+- **Dimension 7, discriminants 8 and 32** (Paper II): independent
+  exact packets, phase audits, Arb/Shintani height rigidity, and both
+  TCC shifts.  Cycle 161 closes the conductor-one stratum omitted by
+  the original proof.
 - **Dimension 8** (Paper II): CM orientation certified, maximal cocycle
   certified, lower conductor certified, primitive windows certified,
   unconditional closure.
@@ -65,6 +66,20 @@ be repaired before it is publication-ready:
 `paper/sic-stark-dimension-six-boundary-fusion.{tex,pdf}`.
 
 ## Latest completed cycles
+
+### Cycle 161: dimension-seven discriminant-eight closure
+
+The missing tuple \(Q_{7,1}=\langle1,-4,2\rangle\) has stabilizer
+\(\left(\begin{smallmatrix}239&-140\\70&-41\end{smallmatrix}\right)\)
+and a six-factor AFK word \([4,2,4,2,4,2,0]\).  Rigorous Arb
+enclosures plus the inherited Shintani exponent \(16128\) identify
+its degree-12 and quartic signed packets; an exact phase audit fixes
+all 48 signs.  In the degree-48 common field, both shifts have trace
+one, zero idempotency defects, and all 441 minors vanish.  Because
+both dimension-seven discriminant orders have wide class number one,
+the universal dimension-seven scope is restored.  The Paper-II source,
+PDF, deterministic companion archive, internal manifest, and root
+certificate manifest have all been rebuilt and sealed.
 
 ### Cycle 160: dimension-seven scope correction
 
