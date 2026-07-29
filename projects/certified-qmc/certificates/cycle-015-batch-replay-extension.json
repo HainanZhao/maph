@@ -1,0 +1,59 @@
+{
+  "batch": {
+    "all_entries_verified": true,
+    "all_overflow_checks_equal": true,
+    "dimensions": [
+      7,
+      13
+    ],
+    "manifest_authentication_passes": 1,
+    "per_entry_crt_reconstructions": 2,
+    "request_count": 2
+  },
+  "boundary": "This extends verifier orchestration only. Single-entry semantics, production chunks, thresholds, and the frozen production kernel are unchanged.",
+  "certificate_sha256": "ff89204c2a0c24ac8ca0744096e36f9d713d0c1cbcae423f16fd96a7ba6c9cda",
+  "claim_tag": "VERIFIED",
+  "dataset": {
+    "manifest_sha256": "3991c53e47399123a0f559c9522985beffc2bf461e77d3d3b5847e474bfd38df",
+    "run_manifest_sha256": "68809efa117313a6966b4c6ba234feb1e748e27fb8d04361d87db293a14893b3",
+    "seal_line_sha256": "af9dbebcd3a4ddaed1a0bfe4ff667d5768855606f2217c4feb5daead7f943356",
+    "table_index_sha256": "bd42871999478ec474fde9415026cdbab539e3241fbaeceb11ea7d016d3f8290"
+  },
+  "gate": {
+    "all_overflow_checks_equal": true,
+    "cycle_015_batch_extension_passed": true,
+    "single_entry_behavior_preserved": true,
+    "two_entry_batch_verified": true
+  },
+  "recorded_at_utc": "2026-07-29T09:01:25Z",
+  "request_fixture": {
+    "path": "tests/fixtures/cycle015-batch-requests.json",
+    "request_count": 2,
+    "sha256": "324ac029747cd2d2665575da3a082b89fa200b426326d0392fcc99e8acd24c9e"
+  },
+  "schema": "certified-qmc-cycle015-batch-replay-extension-v1",
+  "single_vs_batch": {
+    "batch_entry_sha256": "703cd8892ea1c03f59e6b83518f9cb43835968464802189b727729884fab15ab",
+    "entry": {
+      "N": 32,
+      "dimension": 7,
+      "table": "pilot-000"
+    },
+    "equal_fields": {
+      "generator_prefix_sha256": true,
+      "proved_numerator_bound": true,
+      "reduced_denominator": true,
+      "reduced_numerator": true,
+      "scaled_denominator": true,
+      "scaled_numerator": true,
+      "touched_payload_fraction_exact": true,
+      "work_prime_count": true
+    },
+    "single_result_sha256": "703cd8892ea1c03f59e6b83518f9cb43835968464802189b727729884fab15ab"
+  },
+  "source": {
+    "bin/verify-entry": "2830432c6ab83ebeab3b6c109f6c51be382aef7eb112e9c7e458d484763dbc96",
+    "scripts/verify_entry.py": "108884cebdebd3c2c0b750757a7801053d67fe83af255144ce4fd3dad8f29e62",
+    "src/entry_replay.py": "1831dbdc5ce4ece946df01bba0c14198007928ca4435485befc3147daeff156d"
+  }
+}

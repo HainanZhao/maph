@@ -109,3 +109,5 @@ invocation.  Single-entry CLI behavior and the 1% contract are
 unchanged.  This is verifier orchestration only: it does not modify the
 frozen production kernel, data layout, threshold, or certificate
 meaning.
+
+Artifact: `certificates/cycle-015-batch-replay-extension.json`.
