@@ -185,16 +185,29 @@ def main() -> None:
     )
 
     assets = []
-    for path, role in (
-        (source_archive, "source"),
-        (oracle_archive, "engine conformance oracle"),
-        (fidelity_archive, "supplementary fidelity tables"),
-        (usability_archive, "supplementary usability tables"),
+    for path, role, license_id in (
+        (source_archive, "source", "Apache-2.0"),
+        (
+            oracle_archive,
+            "engine conformance oracle",
+            "CC-BY-4.0",
+        ),
+        (
+            fidelity_archive,
+            "supplementary fidelity tables",
+            "CC-BY-4.0",
+        ),
+        (
+            usability_archive,
+            "supplementary usability tables",
+            "CC-BY-4.0",
+        ),
     ):
         assets.append(
             {
                 "filename": path.name,
                 "role": role,
+                "license": license_id,
                 "bytes": path.stat().st_size,
                 "sha256": digest(path),
             }
