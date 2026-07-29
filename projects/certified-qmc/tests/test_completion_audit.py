@@ -1,12 +1,15 @@
 from __future__ import annotations
 
 import json
+from hashlib import sha256
 from pathlib import Path
 import subprocess
 import sys
+import tempfile
 import unittest
 
 from src.certificate import canonical_sha256
+from scripts.audit_production_phase_completion import release_package
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -59,6 +62,48 @@ class CompletionAuditTests(unittest.TestCase):
             "published DOI",
         ):
             self.assertIn(required, text)
+
+    def test_release_package_requires_every_manifested_file(self):
+        with tempfile.TemporaryDirectory() as directory:
+            release = Path(directory)
+            assets = []
+            for index in range(4):
+                path = release / f"asset-{index}.bin"
+                path.write_bytes(bytes([index]) * (index + 1))
+                assets.append(
+                    {
+                        "filename": path.name,
+                        "bytes": path.stat().st_size,
+                        "sha256": sha256(path.read_bytes()).hexdigest(),
+                    }
+                )
+            ancillary = []
+            for name in ("LICENSE", "LICENSE-DATA", "REPRODUCING.md"):
+                path = release / name
+                path.write_text(name)
+                ancillary.append(
+                    {
+                        "filename": path.name,
+                        "bytes": path.stat().st_size,
+                        "sha256": sha256(path.read_bytes()).hexdigest(),
+                    }
+                )
+            manifest = {
+                "schema": "test-release",
+                "assets": assets,
+                "ancillary_files": ancillary,
+            }
+            manifest["manifest_sha256"] = canonical_sha256(manifest)
+            (release / "release-manifest.json").write_text(
+                json.dumps(manifest, sort_keys=True) + "\n"
+            )
+            self.assertEqual(
+                release_package(release)["status"], "PASSED"
+            )
+            (release / "LICENSE").write_text("tampered")
+            self.assertEqual(
+                release_package(release)["status"], "FAILED"
+            )
 
 
 if __name__ == "__main__":

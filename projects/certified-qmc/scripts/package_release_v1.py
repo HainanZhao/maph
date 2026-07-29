@@ -199,6 +199,21 @@ def main() -> None:
                 "sha256": digest(path),
             }
         )
+    ancillary_sources = (
+        (ROOT / "LICENSE", output / "LICENSE"),
+        (ROOT / "LICENSE-DATA", output / "LICENSE-DATA"),
+        (ROOT / "REPRODUCING.md", output / "REPRODUCING.md"),
+    )
+    for source, destination in ancillary_sources:
+        shutil.copy2(source, destination)
+    ancillary_files = [
+        {
+            "filename": destination.name,
+            "bytes": destination.stat().st_size,
+            "sha256": digest(destination),
+        }
+        for _, destination in ancillary_sources
+    ]
     manifest = {
         "schema": "certified-qmc-release-v1.0-manifest",
         "version": "1.0",
@@ -217,6 +232,7 @@ def main() -> None:
         "engine_oracle_sha256": digest(ENGINE_ORACLE),
         "engine_oracle_self_hash": oracle["oracle_sha256"],
         "assets": assets,
+        "ancillary_files": ancillary_files,
         "doi": None,
         "announcement_permitted": False,
         "boundary": (
@@ -227,11 +243,6 @@ def main() -> None:
     manifest["manifest_sha256"] = canonical_sha(manifest)
     (output / "release-manifest.json").write_text(
         json.dumps(manifest, indent=2, sort_keys=True) + "\n"
-    )
-    shutil.copy2(ROOT / "LICENSE", output / "LICENSE")
-    shutil.copy2(ROOT / "LICENSE-DATA", output / "LICENSE-DATA")
-    shutil.copy2(
-        ROOT / "REPRODUCING.md", output / "REPRODUCING.md"
     )
     print(output)
 
