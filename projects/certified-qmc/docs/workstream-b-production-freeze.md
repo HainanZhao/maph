@@ -99,11 +99,12 @@ prospective node-day and replay-overhead decision thresholds, and the
 mechanical exact/Arb tier fallback, are frozen in
 `docs/workstream-b-streaming-pilot-preregistration.md`.
 
-This does not yet launch production.  The remaining blockers are
-source provenance/license review and vendoring, generation and
-verification of the full deterministic prime schedule, and the
-production chunk/selected-entry replay implementation.  The pilot
-outcome and its preserved failed first transcript are documented in
+This does not yet launch production.  Cycle 013 closed the source
+provenance/license gate by selecting keyed, non-embedded vector mode.
+The remaining blockers are generation and verification of the full
+deterministic prime schedule and the production
+chunk/selected-entry replay implementation.  The pilot outcome and its
+preserved failed first transcript are documented in
 `docs/workstream-b-streaming-pilot-report.md`.
 
 The complete machine-readable freeze is

@@ -1,0 +1,119 @@
+{
+  "boundary": "VERIFIED covers the recorded source graph, compiler command, ELF NEEDED entries, ldd resolution, export exclusion, and clean-room reproduction. System and compiler runtimes are listed explicitly; no FFTW, GMP, or FLINT object is linked.",
+  "build_graph": {
+    "contains_fftw": false,
+    "dry_run_lines": [
+      "make: Entering directory '/root/projects/maph/projects/certified-qmc/native'",
+      "mkdir -p ../build/native",
+      "cc -O3 -std=c11 -Wall -Wextra -Wpedantic -D_POSIX_C_SOURCE=200809L direct_modular.c -o ../build/native/direct_modular",
+      "mkdir -p ../build/native",
+      "cc -O3 -std=c11 -Wall -Wextra -Wpedantic -D_POSIX_C_SOURCE=200809L -fopenmp streaming_pilot.c -o ../build/native/streaming_pilot",
+      "make: Leaving directory '/root/projects/maph/projects/certified-qmc/native'"
+    ],
+    "sha256": "242e2ca63dcc5137b01ac73f8cabee3135b772d035f15dd56b020447c61ea88c"
+  },
+  "certificate_sha256": "5e7399abaa328558fbed7da06474c8219181654670be6e50e5bdc112dc2c2b76",
+  "claim_tag": "VERIFIED_RELEASE_DEPENDENCY_PERIMETER",
+  "clean_room": {
+    "binaries": [
+      {
+        "contains_fftw": false,
+        "ldd": [
+          "\tlinux-vdso.so.1 (0x00007ffc3bb49000)",
+          "\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007795d4c00000)",
+          "\t/lib64/ld-linux-x86-64.so.2 (0x00007795d4f0a000)"
+        ],
+        "name": "direct_modular",
+        "sha256": "6f10c1dc13d37cd7f5f24a174c5aaf19db424e2082100d2628fd4df9e8da206c"
+      },
+      {
+        "contains_fftw": false,
+        "ldd": [
+          "\tlinux-vdso.so.1 (0x00007ffe2a3f7000)",
+          "\tlibgomp.so.1 => /lib/x86_64-linux-gnu/libgomp.so.1 (0x000071f73bfe8000)",
+          "\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x000071f73bc00000)",
+          "\t/lib64/ld-linux-x86-64.so.2 (0x000071f73c04f000)"
+        ],
+        "name": "streaming_pilot",
+        "sha256": "837ca2079c1845761be87b951f84d9180226000c963708b27ef200e0698644fa"
+      }
+    ],
+    "build_succeeded": true,
+    "compiler_wrapper_rejects_fftw_arguments": true,
+    "pkg_config_search_path_empty": true,
+    "release_sources_copied_only": [
+      "native/Makefile",
+      "native/direct_modular.c",
+      "native/streaming_pilot.c"
+    ]
+  },
+  "created_at_utc": "2026-07-29T07:14:06.414079+00:00",
+  "dependency_policy": {
+    "fftw_present": false,
+    "other_third_party_dependencies": [],
+    "project_or_lgpl_math_dependencies": [],
+    "system_or_compiler_runtime": [
+      "libc",
+      "ELF loader",
+      "libgomp for the frozen OpenMP pilot kernel"
+    ]
+  },
+  "dynamic_dependencies": [
+    {
+      "binary": "build/native/direct_modular",
+      "contains_fftw": false,
+      "elf_needed": [
+        "libc.so.6"
+      ],
+      "ldd": [
+        "\tlinux-vdso.so.1 (0x00007ffe4d9f9000)",
+        "\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x000078a2c9a00000)",
+        "\t/lib64/ld-linux-x86-64.so.2 (0x000078a2c9dd4000)"
+      ],
+      "sha256": "6f10c1dc13d37cd7f5f24a174c5aaf19db424e2082100d2628fd4df9e8da206c"
+    },
+    {
+      "binary": "build/native/streaming_pilot",
+      "contains_fftw": false,
+      "elf_needed": [
+        "libgomp.so.1",
+        "libc.so.6"
+      ],
+      "ldd": [
+        "\tlinux-vdso.so.1 (0x00007ffd2d198000)",
+        "\tlibgomp.so.1 => /lib/x86_64-linux-gnu/libgomp.so.1 (0x000077b87a35d000)",
+        "\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x000077b87a000000)",
+        "\t/lib64/ld-linux-x86-64.so.2 (0x000077b87a3c4000)"
+      ],
+      "sha256": "837ca2079c1845761be87b951f84d9180226000c963708b27ef200e0698644fa"
+    }
+  ],
+  "frozen_kernel": {
+    "compiler": "cc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "cpu_model": "AMD EPYC 9354P 32-Core Processor",
+    "flags": "-O3 -std=c11 -Wall -Wextra -Wpedantic -D_POSIX_C_SOURCE=200809L -fopenmp",
+    "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+    "sha256": "f21c5cc9ab825ea402258fd5832e7ee0b33ebf5f60c2c3fab9cec7484339dd42",
+    "source": "native/streaming_pilot.c"
+  },
+  "gate": {
+    "clean_room_build_passed": true,
+    "cycle_013_dependency_gate_passed": true,
+    "fftw_absent_from_build_graph": true,
+    "fftw_absent_from_dynamic_dependencies": true,
+    "release_build_passed": true
+  },
+  "numerical_crosscheck_exclusion": {
+    "excluded_from_release_target": true,
+    "git_export_attribute": "tools/numerical-crosscheck: export-ignore: set",
+    "path": "tools/numerical-crosscheck",
+    "tag": "NUMERICAL"
+  },
+  "release_sources": {
+    "native/Makefile": "5eb4812d70361e4d2d91e5b4c05595d1abe93f9565121d93e212585af7e14ae4",
+    "native/direct_modular.c": "346090028d359c412416800b0d386a359c97b3e6004325d537a1e16a71359c3a",
+    "native/streaming_pilot.c": "f21c5cc9ab825ea402258fd5832e7ee0b33ebf5f60c2c3fab9cec7484339dd42"
+  },
+  "release_target": "make -C native release",
+  "schema": "certified-qmc-cycle-013-dependency-manifest-v1"
+}

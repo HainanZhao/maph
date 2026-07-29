@@ -1,0 +1,410 @@
+<html>
+<head>
+<title>Lattice rule generating vectors</title>
+</head>
+
+<body>
+<h1>Lattice rule generating vectors</h1>
+
+<p>
+This page contains some <b>generating vectors</b> for <b>rank-1 lattice rules</b>. 
+They were constructed using the <b>component-by-component algorithms</b> (a.k.a. CBC algorithms) 
+by minimizing as much as possible the <b><i>shift-averaged</i> worst case errors</b> 
+in <b>weighted unanchored Sobolev spaces</b>. 
+</p>
+
+<p>
+Here is a (biased) selection of milestone papers:
+<ol>
+<li> I. H. Sloan and H. Wozniakowski, <i>When are quasi-Monte Carlo
+algorithms efficient for high dimensional integrals?</i>, J. Complexity,
+<b>14</b>, 1 - 33 (1998).
+</li>
+<li> I. H. Sloan, F. Y. Kuo, and S. Joe, <i>Constructing randomly shifted 
+lattice rules in weighted Sobolev spaces</i>, SIAM J. Numer. Anal., <b>40</b>, 1650 - 1665 (2002). 
+</li>
+<li> F. Y. Kuo, <i>Component-by-component constructions achieve the optimal rate of 
+convergence for multivariate integration in weighted Korobov and Sobolev spaces</i>, 
+J. Complexity, <b>19</b>, 301 - 320 (2003). 
+</li>
+<li> D. Nuyens and R. Cools, <i>Fast algorithms for component-by-component construction
+of rank-1 lattice rules in shift-invariant reproducing kernel
+Hilbert spaces</i>, Math. Comp., <b>75</b>, 903 - 920 (2006).
+</li>
+<li> R. Cools, F. Y. Kuo, D. Nuyens, <i>Constructing embedded lattice rules for multivariate 
+integration</i>, SIAM J. Sci. Comput., <b>28</b>, 2162 - 2188 (2006).
+<a href="http://dx.doi.org/10.1137/06065074X">Link to article</a>.
+</li> 
+</ol>
+</p>
+
+For various choices of weights, we provide generating vectors for 
+<b>fixed</b> lattice rules (i.e., the number of points <i>n</i> is fixed) as
+well as <b>embedded</b>/<b>extensible</b> lattice rules 
+(i.e., the number of points <i>n</i> can be chosen from a range). 
+Let <i><b>z</b></i> = (<i>z</i><sub>1</sub>, <i>z</i><sub>2</sub>, ..., <i>z<sub>d</sub></i>) 
+denote the generating vector.
+
+For a fixed lattice rule with <i>n</i> points, we have the simple formula
+<br>
+<dl>
+<dd>
+the <i>j</i>-th component of the <i>i</i>-th point = frac( <i>i/n</i> * <i>z<sub>j</sub></i> )
+</dd>
+</dl>
+for <i>i</i> = 0,1,...,<i>n</i>-1 and <i>j</i> = 1,2,...,<i>d</i>, 
+where frac(.) means taking the fractional part, e.g., frac(1.8) = 0.8. 
+
+For an extensible lattice rule, it is also fine to use the above simple formula 
+provided that the TOTAL NUMBER OF POINTS IS AN EXACT POWER OF 2.
+Otherwise a more complicated radical inverse or gray code ordering should be used. 
+Note that all these lattice rules are designed to be used with <b>random
+shifts</b>.
+</p>
+
+<p>
+See [5, Section 2.2] for an overview of different types of weights, 
+see [5, Section 5.1] for a discussion on using lattice points as an extensible
+sequence, and
+see [5, Section 5.2] regarding error estimation using random shifts.
+</p>
+
+<h2>A collection of generating vectors</h2>
+
+<p>
+Each file in the table below contains two columns: the dimension and the
+corresponding component of the generating vector. 
+The files are named in one of the following two forms:
+<dl>
+<dd>lattice-2xxxx-<i>n</i>.<i>d</i></dd>
+<dd>lattice-3xxxx-<i>n</i><sub>1</sub>-<i>n</i><sub>2</sub>.<i>d</i></dd>
+</dl>
+The first denotes a fixed lattice rule with <i>n</i> points, while
+the second denotes an extensible lattice rule with <i>n</i> taking any
+value between <i>n</i><sub>1</sub> and <i>n</i><sub>2</sub>.
+The xxxx is a code distinguishing different choices of weights. The value <i>d</i>
+specifies the number of available components in the file. 
+</p>
+
+<p> 
+In theory, the CBC algorithm can be used to construct generating
+vectors up to any dimension. 
+However, it has been observed that the components start to repeat from
+some dimension onward for product-type weights, hence leading to a practical
+limit on the value of <i>d</i>. This side effect of the CBC algorithm is yet to
+be fully understood.
+</p>
+
+<p>
+<b>RECOMMENDATIONS:</b> If you are unsure which lattice rules to try, you may begin
+with the following four extensible lattice rules:
+<ol type="A">
+<li><a href="./lattice-32001-1024-1048576.3600">lattice-32001-1024-1048576.3600</a> 
+    (order-2 weights)</li>
+<li><a href="./lattice-33002-1024-1048576.9125">lattice-33002-1024-1048576.9125</a>
+    (order-3 weights)</li>
+<li><a href="./lattice-38005-1024-1048576.5000">lattice-38005-1024-1048576.5000</a>
+    (equal product weights)</li>
+<li><a href="./lattice-39101-1024-1048576.3600">lattice-39101-1024-1048576.3600</a>
+    (decaying product weights)</li>
+</ol>
+The error for an extensible lattice rule is at most 1.6 times that of
+a fixed lattice rule. 
+</p>
+
+<p>
+<table border="1">
+<tr>
+  <th>Weights</td>
+  <th>Fixed lattice rules</th>
+  <th>Extensible lattice rules</th>
+</tr>
+<tr>
+  <td rowspan="11">Order 2</td>
+  <td><a href="./lattice-22001-1024.3600">lattice-22001-1024.3600</a></td>
+  <td rowspan="11"><a href="./lattice-32001-1024-1048576.3600">lattice-32001-1024-1048576.3600</a></td>
+</tr>
+<tr><td><a href="./lattice-22001-2048.3600">lattice-22001-2048.3600</a></td></tr>
+<tr><td><a href="./lattice-22001-4096.3600">lattice-22001-4096.3600</a></td></tr>
+<tr><td><a href="./lattice-22001-8192.3600">lattice-22001-8192.3600</a></td></tr>
+<tr><td><a href="./lattice-22001-16384.3600">lattice-22001-16384.3600</a></td></tr>
+<tr><td><a href="./lattice-22001-32768.3600">lattice-22001-32768.3600</a></td></tr>
+<tr><td><a href="./lattice-22001-65536.3600">lattice-22001-65536.3600</a></td></tr>
+<tr><td><a href="./lattice-22001-131072.3600">lattice-22001-131072.3600</a></td></tr>
+<tr><td><a href="./lattice-22001-262144.3600">lattice-22001-262144.3600</a></td></tr>
+<tr><td><a href="./lattice-22001-524288.3600">lattice-22001-524288.3600</a></td></tr>
+<tr><td><a href="./lattice-22001-1048576.3600">lattice-22001-1048576.3600</a></td></tr>
+<tr>
+  <td rowspan="11">Order 3: &Gamma;<sub>1</sub> = &Gamma;<sub>2</sub> = &Gamma;<sub>3</sub> = 1</td>
+  <td><a href="./lattice-23001-1024.9125">lattice-23001-1024.9125</a></td>
+  <td rowspan="11"><a href="./lattice-33001-1024-1048576.9125">lattice-33001-1024-1048576.9125</a></td>
+</tr>
+<tr><td><a href="./lattice-23001-2048.9125">lattice-23001-2048.9125</a></td></tr>
+<tr><td><a href="./lattice-23001-4096.9125">lattice-23001-4096.9125</a></td></tr>
+<tr><td><a href="./lattice-23001-8192.9125">lattice-23001-8192.9125</a></td></tr>
+<tr><td><a href="./lattice-23001-16384.9125">lattice-23001-16384.9125</a></td></tr>
+<tr><td><a href="./lattice-23001-32768.9125">lattice-23001-32768.9125</a></td></tr>
+<tr><td><a href="./lattice-23001-65536.9125">lattice-23001-65536.9125</a></td></tr>
+<tr><td><a href="./lattice-23001-131072.9125">lattice-23001-131072.9125</a></td></tr>
+<tr><td><a href="./lattice-23001-262144.9125">lattice-23001-262144.9125</a></td></tr>
+<tr><td><a href="./lattice-23001-524288.9125">lattice-23001-524288.9125</a></td></tr>
+<tr><td><a href="./lattice-23001-1048576.9125">lattice-23001-1048576.9125</a></td></tr>
+<tr>
+  <td rowspan="11">Order 3: &Gamma;<sub>1</sub> = &Gamma;<sub>2</sub> = 1, &Gamma;<sub>3</sub> = 0.5</td>
+  <td><a href="./lattice-23002-1024.9125">lattice-23002-1024.9125</a></td>
+  <td rowspan="11"><a href="./lattice-33002-1024-1048576.9125">lattice-33002-1024-1048576.9125</a></td>
+</tr>
+<tr><td><a href="./lattice-23002-2048.9125">lattice-23002-2048.9125</a></td></tr>
+<tr><td><a href="./lattice-23002-4096.9125">lattice-23002-4096.9125</a></td></tr>
+<tr><td><a href="./lattice-23002-8192.9125">lattice-23002-8192.9125</a></td></tr>
+<tr><td><a href="./lattice-23002-16384.9125">lattice-23002-16384.9125</a></td></tr>
+<tr><td><a href="./lattice-23002-32768.9125">lattice-23002-32768.9125</a></td></tr>
+<tr><td><a href="./lattice-23002-65536.9125">lattice-23002-65536.9125</a></td></tr>
+<tr><td><a href="./lattice-23002-131072.9125">lattice-23002-131072.9125</a></td></tr>
+<tr><td><a href="./lattice-23002-262144.9125">lattice-23002-262144.9125</a></td></tr>
+<tr><td><a href="./lattice-23002-524288.9125">lattice-23002-524288.9125</a></td></tr>
+<tr><td><a href="./lattice-23002-1048576.9125">lattice-23002-1048576.9125</a></td></tr>
+<tr>
+  <td rowspan="11">Order 3: &Gamma;<sub>1</sub> = &Gamma;<sub>2</sub> = 1, &Gamma;<sub>3</sub> = 0.3</td>
+  <td><a href="./lattice-23003-1024.9125">lattice-23003-1024.9125</a></td>
+  <td rowspan="11"><a href="./lattice-33003-1024-1048576.9125">lattice-33003-1024-1048576.9125</a></td>
+</tr>
+<tr><td><a href="./lattice-23003-2048.9125">lattice-23003-2048.9125</a></td></tr>
+<tr><td><a href="./lattice-23003-4096.9125">lattice-23003-4096.9125</a></td></tr>
+<tr><td><a href="./lattice-23003-8192.9125">lattice-23003-8192.9125</a></td></tr>
+<tr><td><a href="./lattice-23003-16384.9125">lattice-23003-16384.9125</a></td></tr>
+<tr><td><a href="./lattice-23003-32768.9125">lattice-23003-32768.9125</a></td></tr>
+<tr><td><a href="./lattice-23003-65536.9125">lattice-23003-65536.9125</a></td></tr>
+<tr><td><a href="./lattice-23003-131072.9125">lattice-23003-131072.9125</a></td></tr>
+<tr><td><a href="./lattice-23003-262144.9125">lattice-23003-262144.9125</a></td></tr>
+<tr><td><a href="./lattice-23003-524288.9125">lattice-23003-524288.9125</a></td></tr>
+<tr><td><a href="./lattice-23003-1048576.9125">lattice-23003-1048576.9125</a></td></tr>
+<tr>
+  <td rowspan="11">Order 3: &Gamma;<sub>1</sub> = &Gamma;<sub>2</sub> = 1, &Gamma;<sub>3</sub> = 0.1</td>
+  <td><a href="./lattice-23004-1024.9125">lattice-23004-1024.9125</a></td>
+  <td rowspan="11"><a href="./lattice-33004-1024-1048576.9125">lattice-33004-1024-1048576.9125</a></td>
+</tr>
+<tr><td><a href="./lattice-23004-2048.9125">lattice-23004-2048.9125</a></td></tr>
+<tr><td><a href="./lattice-23004-4096.9125">lattice-23004-4096.9125</a></td></tr>
+<tr><td><a href="./lattice-23004-8192.9125">lattice-23004-8192.9125</a></td></tr>
+<tr><td><a href="./lattice-23004-16384.9125">lattice-23004-16384.9125</a></td></tr>
+<tr><td><a href="./lattice-23004-32768.9125">lattice-23004-32768.9125</a></td></tr>
+<tr><td><a href="./lattice-23004-65536.9125">lattice-23004-65536.9125</a></td></tr>
+<tr><td><a href="./lattice-23004-131072.9125">lattice-23004-131072.9125</a></td></tr>
+<tr><td><a href="./lattice-23004-262144.9125">lattice-23004-262144.9125</a></td></tr>
+<tr><td><a href="./lattice-23004-524288.9125">lattice-23004-524288.9125</a></td></tr>
+<tr><td><a href="./lattice-23004-1048576.9125">lattice-23004-1048576.9125</a></td></tr>
+<tr>
+  <td rowspan="11">Order 3: &Gamma;<sub>1</sub> = &Gamma;<sub>2</sub> = 1, &Gamma;<sub>3</sub> = 0.05</td>
+  <td><a href="./lattice-23005-1024.9125">lattice-23005-1024.9125</a></td>
+  <td rowspan="11"><a href="./lattice-33005-1024-1048576.9125">lattice-33005-1024-1048576.9125</a></td>
+</tr>
+<tr><td><a href="./lattice-23005-2048.9125">lattice-23005-2048.9125</a></td></tr>
+<tr><td><a href="./lattice-23005-4096.9125">lattice-23005-4096.9125</a></td></tr>
+<tr><td><a href="./lattice-23005-8192.9125">lattice-23005-8192.9125</a></td></tr>
+<tr><td><a href="./lattice-23005-16384.9125">lattice-23005-16384.9125</a></td></tr>
+<tr><td><a href="./lattice-23005-32768.9125">lattice-23005-32768.9125</a></td></tr>
+<tr><td><a href="./lattice-23005-65536.9125">lattice-23005-65536.9125</a></td></tr>
+<tr><td><a href="./lattice-23005-131072.9125">lattice-23005-131072.9125</a></td></tr>
+<tr><td><a href="./lattice-23005-262144.9125">lattice-23005-262144.9125</a></td></tr>
+<tr><td><a href="./lattice-23005-524288.9125">lattice-23005-524288.9125</a></td></tr>
+<tr><td><a href="./lattice-23005-1048576.9125">lattice-23005-1048576.9125</a></td></tr>
+<tr>
+  <td rowspan="11">Order 3: &Gamma;<sub>1</sub> = &Gamma;<sub>2</sub> = 1, &Gamma;<sub>3</sub> = 0.01</td>
+  <td><a href="./lattice-23006-1024.9125">lattice-23006-1024.9125</a></td>
+  <td rowspan="11"><a href="./lattice-33006-1024-1048576.9125">lattice-33006-1024-1048576.9125</a></td>
+</tr>
+<tr><td><a href="./lattice-23006-2048.9125">lattice-23006-2048.9125</a></td></tr>
+<tr><td><a href="./lattice-23006-4096.9125">lattice-23006-4096.9125</a></td></tr>
+<tr><td><a href="./lattice-23006-8192.9125">lattice-23006-8192.9125</a></td></tr>
+<tr><td><a href="./lattice-23006-16384.9125">lattice-23006-16384.9125</a></td></tr>
+<tr><td><a href="./lattice-23006-32768.9125">lattice-23006-32768.9125</a></td></tr>
+<tr><td><a href="./lattice-23006-65536.9125">lattice-23006-65536.9125</a></td></tr>
+<tr><td><a href="./lattice-23006-131072.9125">lattice-23006-131072.9125</a></td></tr>
+<tr><td><a href="./lattice-23006-262144.9125">lattice-23006-262144.9125</a></td></tr>
+<tr><td><a href="./lattice-23006-524288.9125">lattice-23006-524288.9125</a></td></tr>
+<tr><td><a href="./lattice-23006-1048576.9125">lattice-23006-1048576.9125</a></td></tr>
+<tr>
+  <td rowspan="11">Product: &gamma;<sub><i>j</i></sub> = 1</td>
+  <td><a href="./lattice-28001-1024.300">lattice-28001-1024.300</a></td>
+  <td rowspan="11"><a href="./lattice-38001-1024-1048576.300">lattice-38001-1024-1048576.300</a></td>
+</tr>
+<tr><td><a href="./lattice-28001-2048.300">lattice-28001-2048.300</a></td></tr>
+<tr><td><a href="./lattice-28001-4096.300">lattice-28001-4096.300</a></td></tr>
+<tr><td><a href="./lattice-28001-8192.300">lattice-28001-8192.300</a></td></tr>
+<tr><td><a href="./lattice-28001-16384.300">lattice-28001-16384.300</a></td></tr>
+<tr><td><a href="./lattice-28001-32768.300">lattice-28001-32768.300</a></td></tr>
+<tr><td><a href="./lattice-28001-65536.300">lattice-28001-65536.300</a></td></tr>
+<tr><td><a href="./lattice-28001-131072.300">lattice-28001-131072.300</a></td></tr>
+<tr><td><a href="./lattice-28001-262144.300">lattice-28001-262144.300</a></td></tr>
+<tr><td><a href="./lattice-28001-524288.300">lattice-28001-524288.300</a></td></tr>
+<tr><td><a href="./lattice-28001-1048576.300">lattice-28001-1048576.300</a></td></tr>
+<tr>
+  <td rowspan="11">Product: &gamma;<sub><i>j</i></sub> = 0.5</td>
+  <td><a href="./lattice-28002-1024.550">lattice-28002-1024.550</a></td>
+  <td rowspan="11"><a href="./lattice-38002-1024-1048576.550">lattice-38002-1024-1048576.550</a></td>
+</tr>
+<tr><td><a href="./lattice-28002-2048.550">lattice-28002-2048.550</a></td></tr>
+<tr><td><a href="./lattice-28002-4096.550">lattice-28002-4096.550</a></td></tr>
+<tr><td><a href="./lattice-28002-8192.550">lattice-28002-8192.550</a></td></tr>
+<tr><td><a href="./lattice-28002-16384.550">lattice-28002-16384.550</a></td></tr>
+<tr><td><a href="./lattice-28002-32768.550">lattice-28002-32768.550</a></td></tr>
+<tr><td><a href="./lattice-28002-65536.550">lattice-28002-65536.550</a></td></tr>
+<tr><td><a href="./lattice-28002-131072.550">lattice-28002-131072.550</a></td></tr>
+<tr><td><a href="./lattice-28002-262144.550">lattice-28002-262144.550</a></td></tr>
+<tr><td><a href="./lattice-28002-524288.550">lattice-28002-524288.550</a></td></tr>
+<tr><td><a href="./lattice-28002-1048576.550">lattice-28002-1048576.550</a></td></tr>
+<tr>
+  <td rowspan="11">Product: &gamma;<sub><i>j</i></sub> = 0.3</td>
+  <td><a href="./lattice-28003-1024.900">lattice-28003-1024.900</a></td>
+  <td rowspan="11"><a href="./lattice-38003-1024-1048576.900">lattice-38003-1024-1048576.900</a></td>
+</tr>
+<tr><td><a href="./lattice-28003-2048.900">lattice-28003-2048.900</a></td></tr>
+<tr><td><a href="./lattice-28003-4096.900">lattice-28003-4096.900</a></td></tr>
+<tr><td><a href="./lattice-28003-8192.900">lattice-28003-8192.900</a></td></tr>
+<tr><td><a href="./lattice-28003-16384.900">lattice-28003-16384.900</a></td></tr>
+<tr><td><a href="./lattice-28003-32768.900">lattice-28003-32768.900</a></td></tr>
+<tr><td><a href="./lattice-28003-65536.900">lattice-28003-65536.900</a></td></tr>
+<tr><td><a href="./lattice-28003-131072.900">lattice-28003-131072.900</a></td></tr>
+<tr><td><a href="./lattice-28003-262144.900">lattice-28003-262144.900</a></td></tr>
+<tr><td><a href="./lattice-28003-524288.900">lattice-28003-524288.900</a></td></tr>
+<tr><td><a href="./lattice-28003-1048576.900">lattice-28003-1048576.900</a></td></tr>
+<tr>
+  <td rowspan="11">Product: &gamma;<sub><i>j</i></sub> = 0.1</td>
+  <td><a href="./lattice-28004-1024.2600">lattice-28004-1024.2600</a></td>
+  <td rowspan="11"><a href="./lattice-38004-1024-1048576.2600">lattice-38004-1024-1048576.2600</a></td>
+</tr>
+<tr><td><a href="./lattice-28004-2048.2600">lattice-28004-2048.2600</a></td></tr>
+<tr><td><a href="./lattice-28004-4096.2600">lattice-28004-4096.2600</a></td></tr>
+<tr><td><a href="./lattice-28004-8192.2600">lattice-28004-8192.2600</a></td></tr>
+<tr><td><a href="./lattice-28004-16384.2600">lattice-28004-16384.2600</a></td></tr>
+<tr><td><a href="./lattice-28004-32768.2600">lattice-28004-32768.2600</a></td></tr>
+<tr><td><a href="./lattice-28004-65536.2600">lattice-28004-65536.2600</a></td></tr>
+<tr><td><a href="./lattice-28004-131072.2600">lattice-28004-131072.2600</a></td></tr>
+<tr><td><a href="./lattice-28004-262144.2600">lattice-28004-262144.2600</a></td></tr>
+<tr><td><a href="./lattice-28004-524288.2600">lattice-28004-524288.2600</a></td></tr>
+<tr><td><a href="./lattice-28004-1048576.2600">lattice-28004-1048576.2600</a></td></tr>
+<tr>
+  <td rowspan="11">Product: &gamma;<sub><i>j</i></sub> = 0.05</td>
+  <td><a href="./lattice-28005-1024.5000">lattice-28005-1024.5000</a></td>
+  <td rowspan="11"><a href="./lattice-38005-1024-1048576.5000">lattice-38005-1024-1048576.5000</a></td>
+</tr>
+<tr><td><a href="./lattice-28005-2048.5000">lattice-28005-2048.5000</a></td></tr>
+<tr><td><a href="./lattice-28005-4096.5000">lattice-28005-4096.5000</a></td></tr>
+<tr><td><a href="./lattice-28005-8192.5000">lattice-28005-8192.5000</a></td></tr>
+<tr><td><a href="./lattice-28005-16384.5000">lattice-28005-16384.5000</a></td></tr>
+<tr><td><a href="./lattice-28005-32768.5000">lattice-28005-32768.5000</a></td></tr>
+<tr><td><a href="./lattice-28005-65536.5000">lattice-28005-65536.5000</a></td></tr>
+<tr><td><a href="./lattice-28005-131072.5000">lattice-28005-131072.5000</a></td></tr>
+<tr><td><a href="./lattice-28005-262144.5000">lattice-28005-262144.5000</a></td></tr>
+<tr><td><a href="./lattice-28005-524288.5000">lattice-28005-524288.5000</a></td></tr>
+<tr><td><a href="./lattice-28005-1048576.5000">lattice-28005-1048576.5000</a></td></tr>
+<tr>
+  <td rowspan="11">Product: &gamma;<sub><i>j</i></sub> = 0.01</td>
+  <td><a href="./lattice-28006-1024.9125">lattice-28006-1024.9125</a></td>
+  <td rowspan="11"><a href="./lattice-38006-1024-1048576.9125">lattice-38006-1024-1048576.9125</a></td>
+</tr>
+<tr><td><a href="./lattice-28006-2048.9125">lattice-28006-2048.9125</a></td></tr>
+<tr><td><a href="./lattice-28006-4096.9125">lattice-28006-4096.9125</a></td></tr>
+<tr><td><a href="./lattice-28006-8192.9125">lattice-28006-8192.9125</a></td></tr>
+<tr><td><a href="./lattice-28006-16384.9125">lattice-28006-16384.9125</a></td></tr>
+<tr><td><a href="./lattice-28006-32768.9125">lattice-28006-32768.9125</a></td></tr>
+<tr><td><a href="./lattice-28006-65536.9125">lattice-28006-65536.9125</a></td></tr>
+<tr><td><a href="./lattice-28006-131072.9125">lattice-28006-131072.9125</a></td></tr>
+<tr><td><a href="./lattice-28006-262144.9125">lattice-28006-262144.9125</a></td></tr>
+<tr><td><a href="./lattice-28006-524288.9125">lattice-28006-524288.9125</a></td></tr>
+<tr><td><a href="./lattice-28006-1048576.9125">lattice-28006-1048576.9125</a></td></tr>
+<tr>
+  <td rowspan="11">Product: &gamma;<sub><i>j</i></sub> = 0.9<sup><i>j</i></sup></td>
+  <td><a href="./lattice-29001-1024.200">lattice-29001-1024.200</a></td>
+  <td rowspan="11"><a href="./lattice-39001-1024-1048576.200">lattice-39001-1024-1048576.200</a></td>
+</tr>
+<tr><td><a href="./lattice-29001-2048.200">lattice-29001-2048.200</a></td></tr>
+<tr><td><a href="./lattice-29001-4096.200">lattice-29001-4096.200</a></td></tr>
+<tr><td><a href="./lattice-29001-8192.200">lattice-29001-8192.200</a></td></tr>
+<tr><td><a href="./lattice-29001-16384.200">lattice-29001-16384.200</a></td></tr>
+<tr><td><a href="./lattice-29001-32768.200">lattice-29001-32768.200</a></td></tr>
+<tr><td><a href="./lattice-29001-65536.200">lattice-29001-65536.200</a></td></tr>
+<tr><td><a href="./lattice-29001-131072.200">lattice-29001-131072.200</a></td></tr>
+<tr><td><a href="./lattice-29001-262144.200">lattice-29001-262144.200</a></td></tr>
+<tr><td><a href="./lattice-29001-524288.200">lattice-29001-524288.200</a></td></tr>
+<tr><td><a href="./lattice-29001-1048576.200">lattice-29001-1048576.200</a></td></tr>
+<tr>
+  <td rowspan="11">Product: &gamma;<sub><i>j</i></sub> = 0.75<sup><i>j</i></sup></td>
+  <td><a href="./lattice-29002-1024.90">lattice-29002-1024.90</a></td>
+  <td rowspan="11"><a href="./lattice-39002-1024-1048576.90">lattice-39002-1024-1048576.90</a></td>
+</tr>
+<tr><td><a href="./lattice-29002-2048.90">lattice-29002-2048.90</a></td></tr>
+<tr><td><a href="./lattice-29002-4096.90">lattice-29002-4096.90</a></td></tr>
+<tr><td><a href="./lattice-29002-8192.90">lattice-29002-8192.90</a></td></tr>
+<tr><td><a href="./lattice-29002-16384.90">lattice-29002-16384.90</a></td></tr>
+<tr><td><a href="./lattice-29002-32768.90">lattice-29002-32768.90</a></td></tr>
+<tr><td><a href="./lattice-29002-65536.90">lattice-29002-65536.90</a></td></tr>
+<tr><td><a href="./lattice-29002-131072.90">lattice-29002-131072.90</a></td></tr>
+<tr><td><a href="./lattice-29002-262144.90">lattice-29002-262144.90</a></td></tr>
+<tr><td><a href="./lattice-29002-524288.90">lattice-29002-524288.90</a></td></tr>
+<tr><td><a href="./lattice-29002-1048576.90">lattice-29002-1048576.90</a></td></tr>
+<tr>
+  <td rowspan="11">Product: &gamma;<sub><i>j</i></sub> = 0.5<sup><i>j</i></sup></td>
+  <td><a href="./lattice-29003-1024.70">lattice-29003-1024.70</a></td>
+  <td rowspan="11"><a href="./lattice-39003-1024-1048576.70">lattice-39003-1024-1048576.70</a></td>
+</tr>
+<tr><td><a href="./lattice-29003-2048.70">lattice-29003-2048.70</a></td></tr>
+<tr><td><a href="./lattice-29003-4096.70">lattice-29003-4096.70</a></td></tr>
+<tr><td><a href="./lattice-29003-8192.70">lattice-29003-8192.70</a></td></tr>
+<tr><td><a href="./lattice-29003-16384.70">lattice-29003-16384.70</a></td></tr>
+<tr><td><a href="./lattice-29003-32768.70">lattice-29003-32768.70</a></td></tr>
+<tr><td><a href="./lattice-29003-65536.70">lattice-29003-65536.70</a></td></tr>
+<tr><td><a href="./lattice-29003-131072.70">lattice-29003-131072.70</a></td></tr>
+<tr><td><a href="./lattice-29003-262144.70">lattice-29003-262144.70</a></td></tr>
+<tr><td><a href="./lattice-29003-524288.70">lattice-29003-524288.70</a></td></tr>
+<tr><td><a href="./lattice-29003-1048576.70">lattice-29003-1048576.70</a></td></tr>
+<tr>
+  <td rowspan="11">Product: &gamma;<sub><i>j</i></sub> = 1/<i>j</i></td>
+  <td><a href="./lattice-29101-1024.3600">lattice-29101-1024.3600</a></td>
+  <td rowspan="11"><a href="./lattice-39101-1024-1048576.3600">lattice-39101-1024-1048576.3600</a></td>
+</tr>
+<tr><td><a href="./lattice-29101-2048.3600">lattice-29101-2048.3600</a></td></tr>
+<tr><td><a href="./lattice-29101-4096.3600">lattice-29101-4096.3600</a></td></tr>
+<tr><td><a href="./lattice-29101-8192.3600">lattice-29101-8192.3600</a></td></tr>
+<tr><td><a href="./lattice-29101-16384.3600">lattice-29101-16384.3600</a></td></tr>
+<tr><td><a href="./lattice-29101-32768.3600">lattice-29101-32768.3600</a></td></tr>
+<tr><td><a href="./lattice-29101-65536.3600">lattice-29101-65536.3600</a></td></tr>
+<tr><td><a href="./lattice-29101-131072.3600">lattice-29101-131072.3600</a></td></tr>
+<tr><td><a href="./lattice-29101-262144.3600">lattice-29101-262144.3600</a></td></tr>
+<tr><td><a href="./lattice-29101-524288.3600">lattice-29101-524288.3600</a></td></tr>
+<tr><td><a href="./lattice-29101-1048576.3600">lattice-29101-1048576.3600</a></td></tr>
+<tr>
+  <td rowspan="11">Product: &gamma;<sub><i>j</i></sub> = 1/<i>j</i><sup>2</sup></td>
+  <td><a href="./lattice-29102-1024.3600">lattice-29102-1024.3600</a></td>
+  <td rowspan="11"><a href="./lattice-39102-1024-1048576.3600">lattice-39102-1024-1048576.3600</a></td>
+</tr>
+<tr><td><a href="./lattice-29102-2048.3600">lattice-29102-2048.3600</a></td></tr>
+<tr><td><a href="./lattice-29102-4096.3600">lattice-29102-4096.3600</a></td></tr>
+<tr><td><a href="./lattice-29102-8192.3600">lattice-29102-8192.3600</a></td></tr>
+<tr><td><a href="./lattice-29102-16384.3600">lattice-29102-16384.3600</a></td></tr>
+<tr><td><a href="./lattice-29102-32768.3600">lattice-29102-32768.3600</a></td></tr>
+<tr><td><a href="./lattice-29102-65536.3600">lattice-29102-65536.3600</a></td></tr>
+<tr><td><a href="./lattice-29102-131072.3600">lattice-29102-131072.3600</a></td></tr>
+<tr><td><a href="./lattice-29102-262144.3600">lattice-29102-262144.3600</a></td></tr>
+<tr><td><a href="./lattice-29102-524288.3600">lattice-29102-524288.3600</a></td></tr>
+<tr><td><a href="./lattice-29102-1048576.3600">lattice-29102-1048576.3600</a></td></tr>
+
+</table>
+
+</p> 
+
+<p>
+<h2>Questions or comments?</h2>
+We are always keen to hear from you regarding your experience with these
+generating vectors.
+Please email Frances Kuo &lt;<a href="mailto:f.kuo@unsw.edu.au">f.kuo@unsw.edu.au</a>&gt;.
+</p>
+
+<p>
+Last updated: 20 December 2007
+</p>
+
+</body>
+</html>
+

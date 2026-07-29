@@ -13,9 +13,10 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / "native" / "fftw_plan_audit.c"
-BINARY = ROOT / "build" / "native" / "fftw_plan_audit"
+ROOT = Path(__file__).resolve().parents[3]
+TOOL_ROOT = ROOT / "tools" / "numerical-crosscheck"
+SOURCE = TOOL_ROOT / "native" / "fftw_plan_audit.c"
+BINARY = ROOT / "build" / "numerical-crosscheck" / "fftw_plan_audit"
 
 
 def sha256(path: Path) -> str:
@@ -64,7 +65,7 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    subprocess.run(["make", "-C", str(ROOT / "native"), "all"], check=True)
+    subprocess.run(["make", "-C", str(TOOL_ROOT), "all"], check=True)
     first = command_output(str(BINARY), str(args.maximum_log2))
     second = command_output(str(BINARY), str(args.maximum_log2))
     if first != second:
@@ -102,7 +103,8 @@ def main() -> None:
         "plans": plans,
         "replay": {
             "command": (
-                f"python3 scripts/audit_fftw_plans.py "
+                "python3 tools/numerical-crosscheck/scripts/"
+                f"audit_fftw_plans.py "
                 f"--maximum-log2 {args.maximum_log2}"
             ),
             "identical_consecutive_transcripts": True,

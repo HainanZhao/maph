@@ -16,7 +16,7 @@ import sys
 from flint import arb, ctx
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT))
 from src.producer_error import (
     certify_p2_cbc_branches,

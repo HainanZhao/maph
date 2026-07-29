@@ -44,7 +44,13 @@ class WorkstreamBArtifactTests(unittest.TestCase):
                 self.assertGreaterEqual(plan["muls"], 0)
                 self.assertGreaterEqual(plan["fmas"], 0)
                 self.assertTrue(plan["description"])
-        source = PROJECT / artifact["artifacts"]["source"]
+        source = (
+            PROJECT
+            / "tools"
+            / "numerical-crosscheck"
+            / "native"
+            / "fftw_plan_audit.c"
+        )
         self.assertEqual(
             digest(source), artifact["artifacts"]["source_sha256"]
         )

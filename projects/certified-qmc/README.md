@@ -74,9 +74,11 @@ streaming pilot passed its frozen oracle, overflow, replay, and
 throughput gates: 2.483 ns/update projects the confirmed
 54.9-trillion-update workload to 1.58 node-days on the recorded
 four-core node.  This authorizes the full exact throughput branch;
-production still waits for source/license vendoring, the full verified
-prime schedule, and chunk replay.  Cycle 009 is explicitly deferred to
-the Workstream C entry gate.
+Cycle 013 has since closed the licensing/dependency gate: UNSW vectors
+use keyed, non-embedded mode and the release graph contains no FFTW.
+Production now waits for the full verified prime schedule and chunk
+replay.  Cycle 009 is explicitly deferred to the Workstream C entry
+gate.
 
 ## Layout
 
@@ -94,9 +96,10 @@ the Workstream C entry gate.
 - `src/radix2_model.py`: reference binary64 FFT and rational transform
   envelope.
 - `native/direct_modular.c`: compiled direct modular baseline.
-- `native/fftw_plan_audit.c`: version-pinned FFTW plan transcript.
 - `native/streaming_pilot.c`: prime-major incremental exact-table
   throughput pilot.
+- `tools/numerical-crosscheck/`: release-excluded FFTW/LatNet
+  `NUMERICAL` cross-check harnesses.
 - `scripts/certify_rule.py`: certify a user-supplied rule.
 - `scripts/verify_certificate.py`: replay a core certificate.
 - `scripts/audit_phase0_target.py`: certify the frozen official prefix.
@@ -131,6 +134,8 @@ the Workstream C entry gate.
   contract, and compute gate.
 - `docs/workstream-b-streaming-pilot-report.md`: preserved failed run,
   corrected transcript, and mechanical production decision.
+- `docs/licensing.md`: code/data licenses and third-party vector policy.
+- `docs/cycle-013-licensing-and-dependencies.md`: G1 transcript.
 - `docs/roadmap.md`: gated workstreams.
 
 ## Quick start
