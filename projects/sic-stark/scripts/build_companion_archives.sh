@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Build deterministic, submission-specific archives for Papers I and II.
+# Build deterministic, submission-specific archives for Papers I, II,
+# and III.
 
 readonly SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)"
 readonly ROOT="$(cd -- "$SCRIPT_DIR/.." && pwd -P)"
 readonly DEFAULT_OUTPUT_DIR="$ROOT/dist"
 
 output_dir="$DEFAULT_OUTPUT_DIR"
-selection="both"
+selection="all"
 list_only=false
 
 usage() {
@@ -16,10 +17,10 @@ usage() {
 Usage: scripts/build_companion_archives.sh [OPTIONS]
 
 Options:
-  --paper I|II|both   Select an archive (default: both).
-  --output-dir PATH   Output directory (default: dist).
-  --list              Print selected source files without building.
-  -h, --help          Show this help.
+  --paper I|II|III|all   Select an archive (default: all).
+  --output-dir PATH      Output directory (default: dist).
+  --list                 Print selected source files without building.
+  -h, --help             Show this help.
 EOF
 }
 
@@ -58,7 +59,7 @@ while (($#)); do
 done
 
 case "$selection" in
-    I|II|both) ;;
+    I|II|III|all) ;;
     *)
         printf 'error: invalid paper selection: %s\n' "$selection" >&2
         exit 2
@@ -170,15 +171,37 @@ paper_two_files() {
         'tests/(test_dimension_seven_closure|test_dimension_eight_maximal_signs|test_dimension_eight_unconditional_closure|test_paper_ii_referee_regressions)\.py'
 }
 
+paper_three_files() {
+    local list=$1
+    common_release_files "$list"
+    add_existing "$list" "publication/paper-III-CITATION.cff"
+    add_existing "$list" "publication/paper-III-zenodo.json"
+    add_existing "$list" "paper/sic-stark-dimension-six-boundary-fusion.tex"
+    add_existing "$list" "paper/sic-stark-dimension-six-boundary-fusion.pdf"
+    add_existing "$list" "publication/paper-III-README.md"
+    add_existing "$list" "publication/paper-III-REPRODUCE.md"
+    add_existing "$list" "docs/dimension-six-state-notes-v3.md"
+    add_existing "$list" "docs/dimension-six-analytic-to-stark-theorem.md"
+    add_existing "$list" "docs/dimension-six-standalone-estimate.md"
+    add_existing "$list" "scripts/certify_dimension_five_double_sine.py"
+    add_existing "$list" "scripts/dimension_five_two_base_calibration.py"
+    add_existing "$list" "scripts/dimension_four_two_base_calibration.py"
+    add_existing "$list" "scripts/explore_dimension_four_double_sine.py"
+    add_matches "$list" "certificates" 'certificates/dimension-six-.*'
+    add_matches "$list" "scripts" \
+        'scripts/((analyze|certify|explore|generate|verify)_dimension_six.*|dimension_six_.*)'
+    add_matches "$list" "tests" 'tests/test_dimension_six_.*\.py'
+}
+
 build_one() {
     local paper=$1
     local list="$work_dir/paper-$paper-files"
     : >"$list"
-    if [[ "$paper" == "I" ]]; then
-        paper_one_files "$list"
-    else
-        paper_two_files "$list"
-    fi
+    case "$paper" in
+        I) paper_one_files "$list" ;;
+        II) paper_two_files "$list" ;;
+        III) paper_three_files "$list" ;;
+    esac
     LC_ALL=C sort -u "$list" -o "$list"
 
     if $list_only; then
@@ -242,8 +265,10 @@ build_one() {
 case "$selection" in
     I) build_one I ;;
     II) build_one II ;;
-    both)
+    III) build_one III ;;
+    all)
         build_one I
         build_one II
+        build_one III
         ;;
 esac
