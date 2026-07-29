@@ -176,6 +176,8 @@ mechanically refuses to start without the published-DOI certificate.
   with result fields mechanically left pending until their gates close.
 - `docs/post-release-optimization-register.md`: closed optimization
   queue and its bit-identical promotion predicates.
+- `docs/workstream-d-decision-brief.md`: the two human-gated application
+  paths and their unchanged claim boundary.
 - `docs/roadmap.md`: gated workstreams.
 
 ## Quick start
