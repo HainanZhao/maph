@@ -1,72 +1,62 @@
-# Draft correspondence: dimension-six lens-space factorization
+# Draft correspondence: four unconditional dimensions
 
-Subject: A precise boundary-fusion question for the dimension-six
-Shintani--Faddeev cocycle
+Subject: Unconditional twisted-convolution identities in dimensions 4, 5, 7, and 8
 
 Dear Dr. Kopp,
 
-We have been studying the dimension-six AFK twisted-convolution packet
-at
+I am writing to share two companion manuscripts proving the formal
+Appleby--Flammia--Kopp Twisted Convolution Conjecture unconditionally
+in dimensions \(4,5,7,\) and \(8\). The proofs use your
+Shintani--Faddeev cocycle as the analytic bridge, but every special
+value used in the finite reconstruction is identified without assuming
+a Stark conjecture or using `bnrstark` recognition as a logical input.
+
+The four dimensions split naturally by proof mechanism:
+
+- dimension \(4\) is the quadratic convention calibration;
+- dimension \(5\) uses Shintani's proved algebraicity theorem, an
+  explicit safe exponent, Arb isolation, Voutier rigidity, and exact
+  degree-eight ray-field arithmetic;
+- dimension \(7\) uses conductor lowering and the same height-rigidity
+  strategy in a degree-\(48\) compositum;
+- dimension \(8\) splits into its two form discriminants, closed
+  respectively by linear CM reinduction to Stark's proved
+  imaginary-quadratic rank-one case and by quadratic ray units with an
+  exact symbolic phase reduction.
+
+Exact certificates then verify every rank-two minor and both formal
+shifts: \(36\), \(100\), \(441\), and \(784\) minors in dimensions
+\(4,5,7,\) and \(8\), with integral-form covariance completing the
+stated scope. The manuscripts and deterministic reproducibility
+archives are available at:
+
+[insert Paper I arXiv URL and archive DOI]
+
+[insert Paper II arXiv URL and archive DOI]
+
+The remaining low-dimensional exception is dimension \(6\), and here
+the obstruction is sharply isolated. For
 
 \[
  \beta=(5+\sqrt{21})/2,\qquad
- A=\begin{pmatrix}115&-24\\24&-5\end{pmatrix}.
+ A=\begin{pmatrix}115&-24\\24&-5\end{pmatrix},
 \]
 
-The finite arithmetic side is complete: the ray labels, all 36
-characteristic multipliers, both formal TCC frequency maps, and all 225
-rank-two minor reductions are exact. The remaining primitive order-six
-orientation is the familiar obstruction.
-
-We found a representation that may give a cleaner analytic formulation.
-With the Sarkissian--Spiridonov general modular parameters
-
-\[
- (p,k,r,s)=(-115,24,5,24),
-\]
-
-the primitive AFK quotient is the \(g=Q,\ell=0\) two-gamma kernel in
-their degenerate lens-space beta convolution. In the upper half-plane
-the honest packet has independent bases
-
-\[
- q=e^{2\pi i\tau},\qquad \widetilde q=e^{2\pi iA\tau}.
-\]
-
-At the RM point, \(A\beta=\beta\). Independently, the standard Faddeev
-pair fuses because
-
-\[
- \beta+\beta^{-1}=5.
-\]
-
-The resulting formal fusion is exactly the previously derived
-well-poised \({}_2\psi_2\) packet at argument \(-q\). A dimension-five
-control calculation instead lands on the \(+q\) summable locus and
-recovers the proved dimension-five value.
-
-The published meromorphic Fourier evaluation applies to the
-dimension-six specialization, but it leaves the oriented product
-
-\[
- \Gamma_M(-\alpha,4-N)\Gamma_M(\alpha,N)
-\]
-
-after canonical reflection and shift reductions. It therefore does not
-by itself give the missing finite multiplicative relation. Moreover, at
-\(g=Q\) the two Bernoulli asymptotics cancel, so the original vertical
-contour is not absolutely convergent at either end. We have now checked
-the full pole cones: no finite pinch occurs at \(g=Q\); the failure is
-loss of decay at imaginary infinity.
+the finite side is complete: all ray labels and characteristic
+multipliers are exact, and the candidate packet makes all \(225\)
+rank-two minors vanish. Only one oriented primitive order-six special
+value remains.
 
 Parametrize the attracting \(A\)-axis by
+
 \[
  \gamma(s)=\frac52+
  \frac{\sqrt{21}}2\frac{1-s^2}{1+s^2}
  +i\frac{\sqrt{21}s}{1+s^2}.
 \]
+
 In the notation of your Definitions 4.7 and 4.9 and Proposition 7.20,
-the weakest sufficient question is:
+the weakest sufficient analytic question I know is:
 
 > Does the primitive order-six logarithmic spectral resolvent have a
 > finite limit along \(\gamma(s)\) as \(s\downarrow0\), and does
@@ -74,21 +64,9 @@ the weakest sufficient question is:
 > trace-five base fusion while preserving the norm-\(37\)
 > Frobenius/lens label?
 
-No uniform or Hölder estimate is needed for the conditional theorem.
-Existence makes the limit \(A\)-invariant because \(A\) translates the
-same oriented axis toward \(\beta\).
-
-We have checked exactly that \(A\equiv I\pmod6\), so it fixes all 36
-characteristics, and that
-
-\[
- (\psi^{-2}\chi_{\boldsymbol r}^{-1})(A)
- =\Phi_{\boldsymbol r}^{\,2}
-\]
-
-in every case. Thus a positive answer to the fusion-continuity question
-would finish both formal dimension-six shifts without any further
-finite computation.
+No uniform or Hölder estimate is needed: existence of this one
+oriented limit would finish both formal dimension-six shifts without
+further finite computation.
 
 Does this boundary statement match a version of the
 Shintani--Faddeev cocycle continuation you already have, or is there a

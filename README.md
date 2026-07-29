@@ -21,9 +21,10 @@ project is self-contained: run its commands from that project's directory.
 - [`projects/sic-stark/`](projects/sic-stark/): a focused investigation of
   Zauner's conjecture through the Shintani--Faddeev/Stark-unit construction,
   with exact Weyl--Heisenberg diagnostics and canonical-family reductions.
-- [`projects/certified-qmc/`](projects/certified-qmc/): exact and replayable
-  certification of rank-1 lattice-rule figures of merit, audits of public
-  generating vectors, and certified number-theoretic constructions.
+- [`projects/certified-qmc/`](projects/certified-qmc/): cancelled research
+  campaign retained as an archival process record; only the small exact
+  evaluator remains an internal utility, and no production run or release
+  is active.
 
 The projects share only the repository history and top-level ignore rules.
 Their source packages, scripts, tests, documentation, and data or paper
