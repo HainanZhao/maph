@@ -1,0 +1,161 @@
+{
+  "boundary": "Thresholds, input hashes, audit seed, and oracle entries are fixed before the first production merit is evaluated.",
+  "cell_budgets": {
+    "1024": {
+      "incremental_updates_per_table": 9278668800,
+      "proved_balanced_crt_bits": 156005,
+      "proved_numerator_bound_bits": 156004,
+      "work_prime_count": 2517
+    },
+    "1048576": {
+      "incremental_updates_per_table": 13883985100800,
+      "proved_balanced_crt_bits": 228015,
+      "proved_numerator_bound_bits": 228014,
+      "work_prime_count": 3678
+    },
+    "131072": {
+      "incremental_updates_per_table": 1571291136000,
+      "proved_balanced_crt_bits": 206412,
+      "proved_numerator_bound_bits": 206411,
+      "work_prime_count": 3330
+    },
+    "16384": {
+      "incremental_updates_per_table": 175826534400,
+      "proved_balanced_crt_bits": 184809,
+      "proved_numerator_bound_bits": 184808,
+      "work_prime_count": 2981
+    },
+    "2048": {
+      "incremental_updates_per_table": 19412582400,
+      "proved_balanced_crt_bits": 163206,
+      "proved_numerator_bound_bits": 163205,
+      "work_prime_count": 2633
+    },
+    "262144": {
+      "incremental_updates_per_table": 3252053606400,
+      "proved_balanced_crt_bits": 213613,
+      "proved_numerator_bound_bits": 213612,
+      "work_prime_count": 3446
+    },
+    "32768": {
+      "incremental_updates_per_table": 365336985600,
+      "proved_balanced_crt_bits": 192010,
+      "proved_numerator_bound_bits": 192009,
+      "work_prime_count": 3097
+    },
+    "4096": {
+      "incremental_updates_per_table": 40535654400,
+      "proved_balanced_crt_bits": 170407,
+      "proved_numerator_bound_bits": 170406,
+      "work_prime_count": 2749
+    },
+    "524288": {
+      "incremental_updates_per_table": 6723049881600,
+      "proved_balanced_crt_bits": 220814,
+      "proved_numerator_bound_bits": 220813,
+      "work_prime_count": 3562
+    },
+    "65536": {
+      "incremental_updates_per_table": 758277734400,
+      "proved_balanced_crt_bits": 199211,
+      "proved_numerator_bound_bits": 199210,
+      "work_prime_count": 3214
+    },
+    "8192": {
+      "incremental_updates_per_table": 84492288000,
+      "proved_balanced_crt_bits": 177608,
+      "proved_numerator_bound_bits": 177607,
+      "work_prime_count": 2865
+    }
+  },
+  "frozen_at_utc": "2026-07-29T07:40:39Z",
+  "halt_conditions": [
+    "oracle mismatch",
+    "overflow-prime failure",
+    "manifest/hash break",
+    "throughput drift above frozen ceiling",
+    "any deviation from a frozen threshold or kernel"
+  ],
+  "kernel_freeze": {
+    "changes_forbidden_until_after_release": [
+      "Montgomery reduction",
+      "lazy reduction",
+      "compiler-flag changes",
+      "vectorization passes"
+    ],
+    "compiler_flags_frozen": "-O3 -std=c11 -Wall -Wextra -Wpedantic -D_POSIX_C_SOURCE=200809L",
+    "pilot_source_sha256": "f21c5cc9ab825ea402258fd5832e7ee0b33ebf5f60c2c3fab9cec7484339dd42",
+    "representation": "plain __int128 remainder"
+  },
+  "post_run_audit": {
+    "independent_oracle_entries": [
+      {
+        "N": 1024,
+        "d": 16,
+        "mode": "independent Python scaled-integer oracle",
+        "table_id": "unsw-fixed-29102-n1024-j2"
+      },
+      {
+        "N": 2048,
+        "d": 8,
+        "mode": "independent Python scaled-integer oracle",
+        "table_id": "unsw-extensible-39102-n2048-j2"
+      },
+      {
+        "N": 1048576,
+        "d": 16,
+        "mode": "from-scratch direct evaluation, budgeted separately",
+        "table_id": "unsw-fixed-29102-n1048576-j2"
+      }
+    ],
+    "sample_count": 100,
+    "seed": 16017,
+    "selected_entry_required_status": "VERIFIED",
+    "selection": "uniform pseudorandom sampling over 22 tables x 3600 prefixes using Python random.Random"
+  },
+  "pre_run_freeze": {
+    "evaluation_order": "prime-major; within each family/N column update the running product once per dimension and emit every prefix; no per-cell restart",
+    "exact_arb_fallback": "DESIGNED_BUT_UNUSED",
+    "external_vectors_redistributed": false,
+    "full_exact_branch_authorized": true,
+    "grid": "families 29102 + 39102; N=2^10..2^20; every prefix d=1..3600; gamma_j=j^-2",
+    "input_table_hashes": {
+      "lattice-29102-1024.3600": "d42503eda84c7fede8d2513d674a9eca4075041dc4cf8c2e0995b46b035b5ce9",
+      "lattice-29102-1048576.3600": "04b844e3401e89356a1c339d2f96fe8c15d062c9c2316dc2bd81b3a65e1d39cf",
+      "lattice-29102-131072.3600": "aedcccd7ec9e658ceccfff2630f3ef31232d4e588b765a49de7976f804bd07a3",
+      "lattice-29102-16384.3600": "7a182dc21b2e089cbf58ab79ed0cd0b92ed49348a8cd96ce036c76f7c91f29d2",
+      "lattice-29102-2048.3600": "4f39beafc1531dce6368f1f7e2020a3427a85a1d34d21a795914217d4c5e2ae8",
+      "lattice-29102-262144.3600": "b499955f65e4061c266c3b2ed048ce3a7e09e3554f018a7f051e2100a6056781",
+      "lattice-29102-32768.3600": "30d9cceb8639da07fabdd4ac493fb93628f6db41054595156a335302013e012e",
+      "lattice-29102-4096.3600": "c16b51add83f91efa8a9323be3d12f5e90c3e4a4a21359d3a2b42d2afccc90ea",
+      "lattice-29102-524288.3600": "ea396c2343e9f1850568edc559806564f64d7a793e3a644b4da793de2da788d6",
+      "lattice-29102-65536.3600": "4a278eca915ae62d03dc578e4c91200b3d65b8dac29f7aa8b7197112cedac527",
+      "lattice-29102-8192.3600": "89722aea5b7854345035c8afca9b62d284b55bc0eefdd50f54c8dc7ad2319d74",
+      "lattice-39102-1024-1048576.3600": "48c219ad626c2848a711d99a23363f348d9065e9ab53d8304f35c811b4e78dae"
+    },
+    "phase_0_29102_n1024_hash_match": true,
+    "prime_schedule_sha256": "22fadf04ddc70749a5c340483d457590dbe445fbf87883f4875f0ccf71331697",
+    "unsw_index_snapshot_sha256": "bb8c5a8e38d84778fc1b18f1880890cfc6608d65b80a6f606b4aed7270f726ba"
+  },
+  "preregistration_sha256": "b2a9eaa32d881477c42c57e0bf868b46423763fe2359b1df7f085bc66f8d467e",
+  "production_spec": {
+    "path": "data/cycles-016-017-fidelity-spec.json",
+    "sha256": "7f297837ef1c0ed90a943dfa75cb1f895a9b5012f7b4c4ad59abf8b83e7179ec"
+  },
+  "production_started": false,
+  "run_gate": {
+    "manifest_or_hash_failure_action": "HALT_AND_ESCALATE",
+    "maximum_aggregate_ns_per_update": "3.10342892905734250",
+    "maximum_node_days": 7,
+    "minimum_updates_before_drift_enforcement": 5000000000,
+    "overflow_failure_action": "HALT_AND_ESCALATE",
+    "overflow_prime_indices": [
+      3738,
+      3739
+    ],
+    "pilot_projection_node_days": "1.5776183140488904",
+    "throughput_drift_action": "PAUSE_AND_INVESTIGATE"
+  },
+  "schema": "certified-qmc-cycles-016-017-production-preregistration-v1",
+  "total_fidelity_incremental_updates": 53767080345600
+}

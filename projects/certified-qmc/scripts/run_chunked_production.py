@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+from concurrent.futures import ThreadPoolExecutor
 from hashlib import sha256
 import json
 import os
@@ -14,6 +15,7 @@ import struct
 import subprocess
 import sys
 import tempfile
+import time
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -71,10 +73,21 @@ def parse_generator(path: Path, dimension: int) -> list[int]:
 
 
 def prefix_hashes(generator: list[int]) -> list[str]:
-    return [
-        canonical_sha(generator[:dimension])
-        for dimension in range(1, len(generator) + 1)
-    ]
+    # Canonical compact JSON for an integer vector is exactly
+    # ``[v1,v2,...]``. Copying the incremental SHA state before adding
+    # the closing bracket preserves the definition without the
+    # quadratic re-serialization cost at d=3600.
+    state = sha256()
+    state.update(b"[")
+    result = []
+    for index, value in enumerate(generator):
+        if index:
+            state.update(b",")
+        state.update(str(value).encode("ascii"))
+        completed = state.copy()
+        completed.update(b"]")
+        result.append(completed.hexdigest())
+    return result
 
 
 def load_inputs(spec_path: Path) -> tuple[dict, dict, list[int]]:
@@ -144,6 +157,18 @@ def build_manifest(
     compiler = subprocess.check_output(
         ["cc", "--version"], text=True
     ).splitlines()[0]
+    chunking = {
+        "prefix_block_size": spec["prefix_block_size"],
+        "encoding": "unsigned 64-bit little-endian",
+        "manifest": "manifest.jsonl",
+        "manifest_chain": (
+            "each canonical JSON line contains previous_line_sha256 "
+            "and its own line_sha256"
+        ),
+        "universal_overflow_prime_indices": [3738, 3739],
+    }
+    if "parallel_workers" in spec:
+        chunking["parallel_workers"] = int(spec["parallel_workers"])
     payload = {
         "schema": "certified-qmc-run-manifest-v1",
         "run_id": spec["run_id"],
@@ -199,18 +224,11 @@ def build_manifest(
             path: file_sha256(ROOT / path)
             for path in spec["preregistrations"]
         },
-        "chunking": {
-            "prefix_block_size": spec["prefix_block_size"],
-            "encoding": "unsigned 64-bit little-endian",
-            "manifest": "manifest.jsonl",
-            "manifest_chain": (
-                "each canonical JSON line contains previous_line_sha256 "
-                "and its own line_sha256"
-            ),
-            "universal_overflow_prime_indices": [3738, 3739],
-        },
+        "chunking": chunking,
         "table_index_sha256": index["index_sha256"],
     }
+    if "throughput_monitor" in spec:
+        payload["throughput_monitor"] = spec["throughput_monitor"]
     payload["run_manifest_sha256"] = canonical_sha(payload)
     return payload
 
@@ -274,6 +292,38 @@ def tasks(spec: dict, primes: list[int]) -> list[dict]:
     return result
 
 
+def evaluate_prime(
+    table: dict,
+    prime_index: int,
+    prime: int,
+) -> tuple[bytes, int]:
+    source_path = ROOT / table["source_path"]
+    with tempfile.NamedTemporaryFile(
+        prefix="certified-qmc-prime-",
+        suffix=".bin",
+        delete=False,
+    ) as temporary:
+        raw_path = Path(temporary.name)
+    started = time.monotonic_ns()
+    try:
+        subprocess.run(
+            [
+                str(BINARY),
+                str(source_path),
+                str(table["N"]),
+                str(table["dimension"]),
+                str(table["weight_power"]),
+                str(prime),
+                str(raw_path),
+            ],
+            check=True,
+        )
+        raw = raw_path.read_bytes()
+    finally:
+        raw_path.unlink(missing_ok=True)
+    return raw, time.monotonic_ns() - started
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--spec", type=Path, required=True)
@@ -328,98 +378,183 @@ def main() -> None:
     table_by_id = {
         table["table_id"]: table for table in spec["tables"]
     }
-    for (table_id, prime_index), pending in grouped.items():
-        table = table_by_id[table_id]
-        source_path = ROOT / table["source_path"]
-        with tempfile.NamedTemporaryFile(
-            prefix="certified-qmc-prime-",
-            suffix=".bin",
-            delete=False,
-        ) as temporary:
-            raw_path = Path(temporary.name)
-        try:
-            subprocess.run(
-                [
-                    str(BINARY),
-                    str(source_path),
-                    str(table["N"]),
-                    str(table["dimension"]),
-                    str(table["weight_power"]),
-                    str(primes[prime_index]),
-                    str(raw_path),
-                ],
-                check=True,
-            )
-            raw = raw_path.read_bytes()
-        finally:
-            raw_path.unlink(missing_ok=True)
-        if len(raw) != int(table["dimension"]) * 8:
-            raise RuntimeError("native prime output length mismatch")
+    group_items = list(grouped.items())
+    workers = int(spec.get("parallel_workers", 1))
+    if workers < 1:
+        raise ValueError("parallel_workers must be positive")
+    telemetry_path = output / "telemetry.jsonl"
+    telemetry_records = (
+        read_chain(telemetry_path)
+        if spec.get("throughput_monitor")
+        else []
+    )
+    telemetry_previous = (
+        telemetry_records[-1]["line_sha256"]
+        if telemetry_records
+        else ZERO_HASH
+    )
+    telemetry_sequence = len(telemetry_records)
+    cumulative_wall_ns = sum(
+        int(record["wall_ns"])
+        for record in telemetry_records
+        if record["event"] == "BATCH"
+    )
+    cumulative_updates = sum(
+        int(record["updates"])
+        for record in telemetry_records
+        if record["event"] == "BATCH"
+    )
 
-        for task in pending:
-            start = task["start"]
-            end = task["end"]
-            content = raw[(start - 1) * 8:end * 8]
-            relative = Path("chunks") / table_id / (
-                f"p{prime_index:04d}-d{start:04d}-{end:04d}.bin"
-            )
-            chunk_path = output / relative
-            chunk_path.parent.mkdir(parents=True, exist_ok=True)
-            temporary_chunk = chunk_path.with_suffix(".tmp")
-            temporary_chunk.write_bytes(content)
-            os.replace(temporary_chunk, chunk_path)
-            payload = {
-                "sequence": sequence,
-                "event": "CHUNK",
-                "table_id": table_id,
-                "N": table["N"],
-                "weight_power": table["weight_power"],
-                "prime_index": prime_index,
-                "prime": str(primes[prime_index]),
-                "role": task["role"],
-                "dimension_start": start,
-                "dimension_end": end,
-                "encoding": "u64le",
-                "path": str(relative),
-                "bytes": len(content),
-                "sha256": file_sha256(chunk_path),
-            }
-            record = append_record(manifest_path, payload, previous)
-            previous = record["line_sha256"]
-            sequence += 1
-            new_chunks += 1
-            if (
-                args.stop_after_new_chunks is not None
-                and new_chunks == args.stop_after_new_chunks
-            ):
-                print(
-                    json.dumps(
-                        {
-                            "status": "INTENTIONAL_CHUNK_BOUNDARY_STOP",
-                            "new_chunks": new_chunks,
-                            "last_line_sha256": previous,
-                        },
-                        sort_keys=True,
+    with ThreadPoolExecutor(max_workers=workers) as executor:
+        for batch_start in range(0, len(group_items), workers):
+            batch = group_items[batch_start:batch_start + workers]
+            batch_started = time.monotonic_ns()
+            futures = [
+                executor.submit(
+                    evaluate_prime,
+                    table_by_id[table_id],
+                    prime_index,
+                    primes[prime_index],
+                )
+                for (table_id, prime_index), _ in batch
+            ]
+            evaluated = [future.result() for future in futures]
+            batch_wall_ns = time.monotonic_ns() - batch_started
+            batch_updates = 0
+
+            for (
+                ((table_id, prime_index), pending),
+                (raw, _prime_process_ns),
+            ) in zip(batch, evaluated):
+                table = table_by_id[table_id]
+                if len(raw) != int(table["dimension"]) * 8:
+                    raise RuntimeError("native prime output length mismatch")
+                batch_updates += int(table["N"]) * int(table["dimension"])
+
+                for task in pending:
+                    start = task["start"]
+                    end = task["end"]
+                    content = raw[(start - 1) * 8:end * 8]
+                    relative = Path("chunks") / table_id / (
+                        f"p{prime_index:04d}-d{start:04d}-{end:04d}.bin"
                     )
+                    chunk_path = output / relative
+                    chunk_path.parent.mkdir(parents=True, exist_ok=True)
+                    temporary_chunk = chunk_path.with_suffix(".tmp")
+                    temporary_chunk.write_bytes(content)
+                    os.replace(temporary_chunk, chunk_path)
+                    payload = {
+                        "sequence": sequence,
+                        "event": "CHUNK",
+                        "table_id": table_id,
+                        "N": table["N"],
+                        "weight_power": table["weight_power"],
+                        "prime_index": prime_index,
+                        "prime": str(primes[prime_index]),
+                        "role": task["role"],
+                        "dimension_start": start,
+                        "dimension_end": end,
+                        "encoding": "u64le",
+                        "path": str(relative),
+                        "bytes": len(content),
+                        "sha256": file_sha256(chunk_path),
+                    }
+                    record = append_record(manifest_path, payload, previous)
+                    previous = record["line_sha256"]
+                    sequence += 1
+                    new_chunks += 1
+                    if (
+                        args.stop_after_new_chunks is not None
+                        and new_chunks == args.stop_after_new_chunks
+                    ):
+                        print(
+                            json.dumps(
+                                {
+                                    "status": (
+                                        "INTENTIONAL_CHUNK_BOUNDARY_STOP"
+                                    ),
+                                    "new_chunks": new_chunks,
+                                    "last_line_sha256": previous,
+                                },
+                                sort_keys=True,
+                            )
+                        )
+                        raise SystemExit(75)
+                    if (
+                        args.pause_after_new_chunks is not None
+                        and new_chunks == args.pause_after_new_chunks
+                    ):
+                        print(
+                            json.dumps(
+                                {
+                                    "status": "READY_FOR_FORCED_KILL",
+                                    "new_chunks": new_chunks,
+                                    "last_line_sha256": previous,
+                                },
+                                sort_keys=True,
+                            ),
+                            flush=True,
+                        )
+                        while True:
+                            signal.pause()
+
+            monitor = spec.get("throughput_monitor")
+            if monitor:
+                telemetry = append_record(
+                    telemetry_path,
+                    {
+                        "sequence": telemetry_sequence,
+                        "event": "BATCH",
+                        "batch_index": telemetry_sequence,
+                        "workers": len(batch),
+                        "wall_ns": batch_wall_ns,
+                        "updates": batch_updates,
+                        "aggregate_ns_per_update": (
+                            batch_wall_ns / batch_updates
+                        ),
+                    },
+                    telemetry_previous,
                 )
-                raise SystemExit(75)
-            if (
-                args.pause_after_new_chunks is not None
-                and new_chunks == args.pause_after_new_chunks
-            ):
-                print(
-                    json.dumps(
+                telemetry_previous = telemetry["line_sha256"]
+                telemetry_sequence += 1
+                cumulative_wall_ns += batch_wall_ns
+                cumulative_updates += batch_updates
+                if (
+                    cumulative_updates
+                    >= int(monitor["minimum_updates_before_enforcement"])
+                    and cumulative_wall_ns / cumulative_updates
+                    > float(monitor["maximum_aggregate_ns_per_update"])
+                ):
+                    append_record(
+                        telemetry_path,
                         {
-                            "status": "READY_FOR_FORCED_KILL",
-                            "new_chunks": new_chunks,
-                            "last_line_sha256": previous,
+                            "sequence": telemetry_sequence,
+                            "event": "PAUSE",
+                            "reason": "THROUGHPUT_DRIFT_GT_25_PERCENT",
+                            "cumulative_wall_ns": cumulative_wall_ns,
+                            "cumulative_updates": cumulative_updates,
+                            "cumulative_ns_per_update": (
+                                cumulative_wall_ns / cumulative_updates
+                            ),
+                            "maximum_aggregate_ns_per_update": float(
+                                monitor["maximum_aggregate_ns_per_update"]
+                            ),
                         },
-                        sort_keys=True,
-                    ),
-                    flush=True,
-                )
-                while True:
-                    signal.pause()
+                        telemetry_previous,
+                    )
+                    print(
+                        json.dumps(
+                            {
+                                "status": "PAUSED_THROUGHPUT_DRIFT",
+                                "cumulative_ns_per_update": (
+                                    cumulative_wall_ns / cumulative_updates
+                                ),
+                            },
+                            sort_keys=True,
+                        ),
+                        flush=True,
+                    )
+                    raise SystemExit(76)
 
     final_records = read_chain(manifest_path)
     validate_existing_chunks(output, final_records)
