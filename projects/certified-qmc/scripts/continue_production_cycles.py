@@ -22,6 +22,9 @@ USABILITY_AUDIT = (
     ROOT / "certificates" / "cycle-018-usability-audit.json"
 )
 LOGICAL_INDEX = USABILITY / "logical-table-index.json"
+ENGINE_ORACLE = (
+    ROOT / "certificates" / "engine-oracle-set-v1.json"
+)
 STATE = ROOT / "artifacts" / "cycle-continuation-state.json"
 MAX_STALE_SECONDS = 15 * 60
 
@@ -144,11 +147,27 @@ def main() -> None:
             utc_now(),
         ]
     )
+    record_state("BUILDING_ENGINE_ORACLE")
+    run(
+        [
+            str(PYTHON),
+            "scripts/build_engine_oracle_set.py",
+            "--fidelity",
+            str(FIDELITY),
+            "--usability",
+            str(USABILITY),
+            "--output",
+            str(ENGINE_ORACLE),
+            "--recorded-at-utc",
+            utc_now(),
+        ]
+    )
     record_state(
         "CYCLE_018_DATA_GATE_PASSED",
         fidelity_audit=str(FIDELITY_AUDIT.relative_to(ROOT)),
         usability_audit=str(USABILITY_AUDIT.relative_to(ROOT)),
         logical_index=str(LOGICAL_INDEX.relative_to(ROOT)),
+        engine_oracle=str(ENGINE_ORACLE.relative_to(ROOT)),
     )
     print(STATE)
 

@@ -1,8 +1,10 @@
 # Certified Quasi-Monte Carlo
 
-This project develops replayable certificates for figures of merit of
-rank-1 lattice rules, audits public generating-vector tables, and tests
-number-theoretic constructions against certified baselines.
+This project builds an independently replayable exact/enclosure
+evaluation path for figures of merit of rank-1 lattice rules.  Its
+primary artifact is the evaluator and verifier; a curated conformance
+oracle makes implementations falsifiable, while exhaustive certified
+tables are supplementary archival data and comparison anchors.
 
 The first target is intentionally narrower than the full proposal:
 
@@ -59,12 +61,22 @@ Phase 0 and implementation Cycles 001–008 are complete:
 - exact-polynomial/Arb certification of every selected component in
   three synthetic fast-CBC searches through \(N=64\).
 
-The inspected snapshots do not contain an arithmetic-certified lattice
-merit/CBC path, so the project continues.  The frozen Workstream B
-target publishes vector components but no merit column: its deliverable
-is a certified reference-merit data product, and no producer-error bound
-is needed. A preregistered six-paper sweep likewise found no numerical
-merit attached to the frozen vectors. Future merit-bearing tables use
+Across the inspected, hash-frozen LatNet Builder and QMCPy snapshots and
+the named public-distribution perimeter, no independently replayable
+exact or enclosed lattice-merit path was supplied.  A merit produced
+within that frozen toolchain therefore cannot be falsified from its
+supplied artifacts alone.  This bounded toolchain finding—not the
+rational absence of exhaustive published merit columns—is the project's
+central motivation.
+
+The release consequently leads with the evaluator, verifier, and a
+preregistered few-hundred-entry conformance/oracle set.  The full
+79,200-entry fidelity grid remains authorized and running because its
+marginal cost is accepted, it has archival value, and Workstream C
+requires certified CBC-side comparison anchors; it is presented as
+supplementary data.  A preregistered six-paper sweep found no numerical
+merit attached to the frozen vectors, so no producer-error bound is
+needed for that perimeter. Future merit-bearing tables use
 \(B_{\rm alg}(\mathcal M)=T_{\rm eval}(\mathcal M)+T_{\rm format}\);
 CBC selection is outside that comparison.  The FFTW/LatNet replays are
 numerical model validation, not part of the trusted base.

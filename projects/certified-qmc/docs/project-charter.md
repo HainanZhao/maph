@@ -4,12 +4,40 @@ Date: 2026-07-29
 
 ## Mission
 
-Build exact and enclosure-certified quality measures for rank-1 lattice
-rules, supply certified merits for public generating-vector tables,
-construct and compare
-number-theoretic rules with explicit constants, and demonstrate the
-result on one application without conflating a certified rule merit
+Build the independently replayable exact/enclosure evaluation path that
+the audited rank-1 lattice-rule toolchain lacks.  Use a compact,
+structurally diverse oracle suite to make implementations falsifiable;
+retain exhaustive certified merits as supplementary archival data and
+as the CBC-side anchors for number-theoretic comparisons.  Demonstrate
+the result on one application without conflating a certified rule merit
 with a certified application output.
+
+## Motivation and artifact hierarchy
+
+The frozen source-and-literature audit found something more important
+than an absent merit column.  Across the hash-frozen LatNet Builder and
+QMCPy revisions and the named public distribution perimeter, no
+independently replayable exact or enclosed evaluation path was supplied.
+Consequently, a merit produced within that frozen toolchain cannot be
+falsified from its supplied artifacts alone.  This is a bounded claim
+about the named, hash-frozen perimeter, not a universal claim about
+every private or historical QMC implementation.
+
+The absence of exhaustive published merit tables is rational: vectors
+are the reusable object, and consumers can evaluate the merit under
+their own convention and weights.  The certification gap therefore
+sits one layer down, in the evaluator and its replay contract.  Release
+and paper emphasis follows that finding:
+
+1. the exact/enclosure engine and independent verifier are primary;
+2. a few-hundred-entry conformance/oracle suite is the principal data
+   artifact for software testing;
+3. the 79,200-entry fidelity grid is supplementary archival data.
+
+The exhaustive grid remains part of the authorized run.  Its marginal
+cost is already accepted, it gives the community broader reference
+coverage, and Workstream C needs certified CBC-side anchors for a
+certified-versus-certified unit-lattice benchmark.
 
 ## Workstream A — certification engine
 
@@ -78,13 +106,13 @@ Every rational-weight bit budget includes
 \(\sum_j\log_2\operatorname{den}(\gamma_j)\); for
 \(\gamma_j=j^{-2}\) this is \(2\log_2(d!)\).
 
-## Workstream B — certified public-table supply
+## Workstream B — evaluator conformance and certified anchors
 
 The frozen public sites and six-paper primary-literature perimeter
-publish no numerical merit attached to the frozen vectors. Workstream B
-therefore supplies the missing record: certified reference merits for
-distributed generating vectors. Each source is frozen by URL and
-SHA-256.
+publish no numerical merit attached to the frozen vectors.  Workstream
+B therefore validates the engine against exact ground truth and
+supplies a compact, diverse conformance set.  Each source is frozen by
+URL and SHA-256.
 
 The fidelity grid covers the fixed `lattice-29102` and extensible
 `lattice-39102` families for \(N=2^{10},\ldots,2^{20}\), every prefix
@@ -97,6 +125,14 @@ Every table is a versioned data product: exact rationals or sufficient
 CRT residues, proved reconstruction bounds, ordered verified primes,
 two overflow-check primes, per-entry provenance, chunk hashes, a
 top-level SHA manifest, and one-command independent entry replay.
+
+The curated oracle set spans the \(N\) ladder, representative and
+extreme prefix dimensions, all three frozen weight profiles,
+full-prefix construction tests at tractable scale, and deliberately
+difficult decision-layer cases such as exact symmetries, zero/tiny
+weights, and large rational denominators.  Its selection is frozen
+before values are extracted.  It is a software-conformance suite, not
+a statistical sample of lattice-rule quality.
 
 The corrected weight-denominator budget is computed before production.
 No full-grid run begins until the source/license freeze, deterministic
@@ -159,11 +195,12 @@ is certified.
 ## Deliverables
 
 1. Open-source exact/enclosure engine with replayable certificates.
-2. Certified reference-merit tables completing the public record for
-   frozen distributed vectors, with per-entry replay and SHA manifests.
-3. Certified number-theoretic construction benchmarks.
-4. One claim-bounded application report.
-5. A methods/results paper only after novelty and source-precision
+2. A curated, structurally diverse exact oracle/conformance set.
+3. Supplementary exhaustive certified reference merits for the frozen
+   distributed vectors, with per-entry replay and SHA manifests.
+4. Certified number-theoretic construction benchmarks.
+5. One claim-bounded application report.
+6. A methods/results paper only after novelty and source-precision
    audits are complete.
 
 ## Standing orders

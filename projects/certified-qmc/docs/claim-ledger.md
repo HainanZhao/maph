@@ -24,6 +24,11 @@ Date: 2026-07-29
   an ordinary floating-point comparison.
 - At the audited QMCPy commit, no exact/enclosed lattice-merit evaluator
   or certified CBC path was discovered.
+- Across the named, hash-frozen LatNet Builder/QMCPy revisions and
+  public-distribution perimeter, no independently replayable exact or
+  enclosed evaluation path was supplied.  A merit produced within that
+  frozen path is therefore not falsifiable from the supplied artifacts
+  alone.  This claim is perimeter-bounded, not universal.
 - The scaled merit and CBC candidate-difference numerators satisfy the
   signed bounds recorded in Cycle 002.
 - The deterministic first 16 `c*2^32+1` primes, their complete
@@ -125,9 +130,15 @@ Date: 2026-07-29
   excluded; future bounds are
   \(T_{\rm eval}(\mathcal M)+T_{\rm format}\).
 - Workstream B production uses the frozen fidelity/usability grid and
-  artifact contract. The exact throughput branch is authorized, but
-  the production run itself has not started. Source licensing, the full
-  prime schedule, and chunk replay/run hygiene are closed gates.
+  artifact contract. Source licensing, the full prime schedule, and
+  chunk replay/run hygiene are closed gates.  The versioned v2 fidelity
+  run is active; no production result is promoted until its sealed
+  post-run audit passes.
+- The engine conformance/oracle set is selected structurally before
+  merit extraction.  It spans modulus scale, prefix dimension, all
+  three frozen weight profiles, full tractable prefixes, and
+  adversarial exact-decision cases.  It is not a representative sample
+  of rule quality.
 
 ## EXPLICITLY DEFERRED GATES
 
@@ -225,6 +236,12 @@ hardware and implementation.
 - “Public-table audit” as the flagship Workstream B deliverable:
   replaced by certified reference-table supply after the frozen
   sites-plus-literature perimeter produced zero attached merit values.
+- “Missing published merits” as the project's primary gap: retired.
+  Their absence is rational because vectors are reusable across merit
+  conventions and weights.  The audited gap is the absence of an
+  independently replayable certified evaluation path in the frozen
+  toolchain.  The engine is primary, the curated oracle set is the
+  principal data artifact, and the exhaustive grid is supplementary.
 - The exact/Arb production tier split is retained as a designed
   contingency but retired from the active plan because the frozen
   streaming throughput gate passed.
