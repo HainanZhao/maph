@@ -25,6 +25,16 @@ def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def frozen_sha256(commit: str, path: str) -> str:
+    payload = subprocess.run(
+        ["git", "show", f"{commit}:{path}"],
+        cwd=WORKSPACE,
+        check=True,
+        capture_output=True,
+    ).stdout
+    return hashlib.sha256(payload).hexdigest()
+
+
 def is_squarefree(value: int) -> bool:
     factor = 2
     while factor * factor <= value:
@@ -83,8 +93,13 @@ def main() -> None:
         SIC / ".venv" / "bin" / "python"
     ).is_file()
 
+    frozen_commit = objects["anchors"]["source"]["sic_stark_commit"]
     tree = subprocess.run(
-        ["git", "rev-parse", "HEAD:projects/sic-stark"],
+        [
+            "git",
+            "rev-parse",
+            f"{frozen_commit}:projects/sic-stark",
+        ],
         cwd=WORKSPACE,
         check=True,
         capture_output=True,
@@ -93,14 +108,18 @@ def main() -> None:
     checks["source_tree_frozen"] = (
         tree == objects["anchors"]["source"]["sic_stark_tree"]
     )
-    paper_i = SIC / "paper" / "sic-stark-dimensions-four-five.tex"
-    paper_ii = SIC / "paper" / "sic-stark-dimensions-seven-eight.tex"
+    paper_i = (
+        "projects/sic-stark/paper/sic-stark-dimensions-four-five.tex"
+    )
+    paper_ii = (
+        "projects/sic-stark/paper/sic-stark-dimensions-seven-eight.tex"
+    )
     checks["paper_I_hash_frozen"] = (
-        sha256(paper_i)
+        frozen_sha256(frozen_commit, paper_i)
         == objects["anchors"]["source"]["paper_I_sha256"]
     )
     checks["paper_II_hash_frozen"] = (
-        sha256(paper_ii)
+        frozen_sha256(frozen_commit, paper_ii)
         == objects["anchors"]["source"]["paper_II_sha256"]
     )
 

@@ -76,8 +76,13 @@ class PhaseZeroContractTests(unittest.TestCase):
         )
 
     def test_source_tree_is_frozen(self) -> None:
+        frozen_commit = self.anchors["source"]["sic_stark_commit"]
         actual = subprocess.run(
-            ["git", "rev-parse", "HEAD:projects/sic-stark"],
+            [
+                "git",
+                "rev-parse",
+                f"{frozen_commit}:projects/sic-stark",
+            ],
             cwd=WORKSPACE,
             check=True,
             capture_output=True,
