@@ -1,0 +1,17 @@
+{
+  "frozen_at_utc": "2026-07-29T16:45:00Z",
+  "schema": "effective-stark-w1-spotchecks-v1",
+  "selection_rule": "Ten diverse full-census rows: two per candidate engine and four FRONTIER rows covering every observed obstruction, selected before any bulk identification.",
+  "cases": [
+    {"case_id": "RQ-000004", "expected_engine": "A", "expected_verdict": "ROUTE_CANDIDATE"},
+    {"case_id": "RQ-000098", "expected_engine": "A", "expected_verdict": "ROUTE_CANDIDATE"},
+    {"case_id": "RQ-000190", "expected_engine": "B", "expected_verdict": "ROUTE_CANDIDATE"},
+    {"case_id": "RQ-000304", "expected_engine": "B", "expected_verdict": "ROUTE_CANDIDATE"},
+    {"case_id": "RQ-000075", "expected_engine": "C", "expected_verdict": "ROUTE_CANDIDATE"},
+    {"case_id": "RQ-000129", "expected_engine": "C", "expected_verdict": "ROUTE_CANDIDATE"},
+    {"case_id": "RQ-000018", "expected_engine": "NONE", "expected_obstruction": "INDEX_GT_2", "expected_verdict": "FRONTIER"},
+    {"case_id": "RQ-000115", "expected_engine": "NONE", "expected_obstruction": "INDEX_GT_2", "expected_verdict": "FRONTIER"},
+    {"case_id": "RQ-000374", "expected_engine": "NONE", "expected_obstruction": "EXPONENT_CAP", "expected_verdict": "FRONTIER"},
+    {"case_id": "RQ-000851", "expected_engine": "NONE", "expected_obstruction": "UNIT_CONGRUENCE_FAIL", "expected_verdict": "FRONTIER"}
+  ]
+}

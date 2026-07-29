@@ -79,11 +79,20 @@ def main() -> None:
     parser.add_argument("--d-max", type=int, default=13)
     parser.add_argument("--norm-max", type=int, default=12)
     parser.add_argument(
+        "--full-census",
+        action="store_true",
+        help="require the exact frozen D<=200, norm<=100 range",
+    )
+    parser.add_argument(
         "--output",
         type=Path,
         default=ROOT / "artifacts" / "w1-pilot-v1.json",
     )
     args = parser.parse_args()
+    if args.full_census and (args.d_max != 200 or args.norm_max != 100):
+        raise SystemExit(
+            "--full-census requires --d-max 200 --norm-max 100"
+        )
     source = json.loads(SOURCE.read_text())
     cases = [
         case
@@ -110,14 +119,22 @@ def main() -> None:
         if row["obstruction"] != "NONE"
     )
     payload = {
-        "schema": "effective-stark-w1-pilot-v1",
+        "schema": (
+            "effective-stark-w1-structural-census-v1"
+            if args.full_census
+            else "effective-stark-w1-pilot-v1"
+        ),
         "claim_tag": "VERIFIED_STRUCTURAL_SCREEN",
         "recorded_at_utc": datetime.now(timezone.utc).isoformat(),
         "scope": {
             "D_max": args.d_max,
             "norm_max": args.norm_max,
             "case_count": len(cases),
-            "purpose": "bounded structural-screen validation, not the Phase-1 yield gate",
+            "purpose": (
+                "complete frozen maximal-order structural census"
+                if args.full_census
+                else "bounded structural-screen validation, not the Phase-1 yield gate"
+            ),
         },
         "source_census_sha256": hashlib.sha256(SOURCE.read_bytes()).hexdigest(),
         "screen_source_sha256": hashlib.sha256(GP_SOURCE.read_bytes()).hexdigest(),
