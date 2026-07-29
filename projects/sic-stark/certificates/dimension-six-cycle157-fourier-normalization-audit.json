@@ -1,0 +1,439 @@
+{
+  "ladder_denominators": [
+    64,
+    256,
+    1024,
+    4096
+  ],
+  "precision": {
+    "dps_high": 40,
+    "dps_low": 20,
+    "guard_digits": 15
+  },
+  "control_dimensions": {
+    "control_closes_missing_ray_log_map": false,
+    "dimension_4": "proved boundary overlap and interior alias sum are computed independently; no equality normalizes the map",
+    "dimension_5": "proved boundary overlap and interior alias sum are computed independently; no equality normalizes the map"
+  },
+  "equation_66_ledger": {
+    "cycle156_raw_packet_was_ordinary_fourier_coefficient": false,
+    "extracted_constant_phase": "exp(-pi*i*alpha*Q/(24*omega1))",
+    "fused_normalized_gamma_alias_scalar": "-q",
+    "fused_ordinary_gauge_alias_scalar": "-q",
+    "fused_ordinary_transform_alias_scalar": "q^2 times the rational term ratio",
+    "ordinary_gauge_restored": "exp(+pi*i*alpha*Q/(24*omega1))"
+  },
+  "finite_frequency_ledger": {
+    "N_z": "a+2-6*z",
+    "all_aliases_keep_frequency_(a,b)": true,
+    "ell_z": "b-6*z",
+    "finite_frequency": "(p_a,p_b)=(-5*(N_z-2),ell_z) mod 6",
+    "records_checked": 900,
+    "standard_restriction_weight": "all aliases enter with coefficient +1 after the ordinary Fourier gauge has been included in each ambient coefficient"
+  },
+  "normalization_gates": {
+    "ambient_fourier_transform": "VERIFIED",
+    "complete_additive_z_coefficient": "VERIFIED_DEFINITION",
+    "finite_boundary_limit": "NOT_PROVED",
+    "helical_finite_frequency_descent": "VERIFIED",
+    "identification_with_AFK_cocycle_values": "MISSING",
+    "logarithm_branch_and_boundary_subtraction": "MISSING",
+    "map_from_36_additive_coefficients_to_3_ray_classes": "MISSING",
+    "map_from_additive_values_to_logarithms_P_j": "MISSING",
+    "ordinary_fourier_gauge": "VERIFIED_AND_RESTORED"
+  },
+  "numerical": {
+    "proved_conductor_3": {
+      "frequency": [
+        0,
+        2
+      ],
+      "growth_summary": {
+        "bounded_limit_proved": false,
+        "first_denominator": 64,
+        "last_denominator": 4096,
+        "last_over_first_abs": 241.32952213198175,
+        "log_abs_vs_log_one_over_s": {
+          "intercept": -1.2862283067200782,
+          "r_squared": 0.9711221754849153,
+          "slope": 1.3138232758740012
+        }
+      },
+      "records": [
+        {
+          "cancellation_digits": [
+            0.09073515132458836,
+            -0.377128991218424,
+            -0.146816671909511
+          ],
+          "coefficient": "(0.5572619470046586139749662 + 0.5730178798117064304203381j)",
+          "coefficient_abs": 0.7993061792350452,
+          "cutoffs": [
+            [
+              24,
+              26
+            ],
+            [
+              24,
+              26
+            ],
+            [
+              23,
+              27
+            ]
+          ],
+          "denominator": 64,
+          "fused_boundary_alias_scalar": "q^2 times rational term ratio",
+          "gauge_step": "(-0.2021395809249206271046767 + 0.7725814406143132061353361j)",
+          "gauge_step_vs_boundary_minus_q_relative_error": "0.2521945365",
+          "minus_q": "(-0.1592631297371193133116662 + 0.6175605175519108813730895j)",
+          "ordinary_transformed_abs": 8.508338709637266,
+          "ordinary_transformed_arg_over_pi": -0.7474030092294087,
+          "ordinary_transformed_value": "(-5.967019166741091818131603 - 6.06518836159738556105422j)",
+          "residue_packets": [
+            "(2.373663744642449774658192 + 0.9913902672075132521275801j)",
+            "(0.09031332283720810189434778 - 0.9821087058705276158988984j)",
+            "(-1.906715120474999262577574 + 0.5637363184747207941916564j)"
+          ],
+          "s": 0.015625,
+          "scalar": "(-0.4435198922732667480295018 + 0.002563689480680451553849678j)",
+          "two_precision_agreement_digits": 32.02295006469106,
+          "two_precision_relative_error": "9.48527519e-33"
+        },
+        {
+          "cancellation_digits": [
+            -0.07392806309813842,
+            -0.2197404777123038,
+            -0.16610772303808854
+          ],
+          "coefficient": "(10.22787911266741736795288 + 0.7946425740137942223332566j)",
+          "coefficient_abs": 10.25870206038628,
+          "cutoffs": [
+            [
+              49,
+              50
+            ],
+            [
+              49,
+              51
+            ],
+            [
+              48,
+              52
+            ]
+          ],
+          "denominator": 256,
+          "fused_boundary_alias_scalar": "q^2 times rational term ratio",
+          "gauge_step": "(-0.2422899370754300943691002 + 0.9137340929117213255196842j)",
+          "gauge_step_vs_boundary_minus_q_relative_error": "0.0578426255",
+          "minus_q": "(-0.2288519155753138967224203 + 0.8638219467634999926275441j)",
+          "ordinary_transformed_abs": 110.741598829764,
+          "ordinary_transformed_arg_over_pi": -0.9757614182507064,
+          "ordinary_transformed_value": "(-110.4206874746427058738353 - 8.424576487852090850018287j)",
+          "residue_packets": [
+            "(4.017364926960205935665231 + 2.617338361636699460642562j)",
+            "(3.247388357321667599140363 - 3.506816519933818966901364j)",
+            "(2.963125828385543833147291 + 1.684120732310913728592058j)"
+          ],
+          "s": 0.00390625,
+          "scalar": "(-0.4497868052061786536103074 + 0.0006253226352066666791595148j)",
+          "two_precision_agreement_digits": 31.92190861062274,
+          "two_precision_relative_error": "1.19699239e-32"
+        },
+        {
+          "cancellation_digits": [
+            -0.12997917737957157,
+            -0.5874769849035408,
+            -0.14018441464804687
+          ],
+          "coefficient": "(58.93485381080201508051071 + 4.684945089965246967551423j)",
+          "coefficient_abs": 59.120772188771305,
+          "cutoffs": [
+            [
+              98,
+              99
+            ],
+            [
+              99,
+              101
+            ],
+            [
+              98,
+              101
+            ]
+          ],
+          "denominator": 1024,
+          "fused_boundary_alias_scalar": "q^2 times rational term ratio",
+          "gauge_step": "(-0.2529246374874914209621822 + 0.9530478491202075417672941j)",
+          "gauge_step_vs_boundary_minus_q_relative_error": "0.01415727561",
+          "minus_q": "(-0.2493809986131485800786578 + 0.9397470696710962245745691j)",
+          "ordinary_transformed_abs": 640.4477899765925,
+          "ordinary_transformed_arg_over_pi": -0.9748590339460156,
+          "ordinary_transformed_value": "(-638.4511874223186703218366 - 50.53170257306612367460691j)",
+          "residue_packets": [
+            "(3.212008927523437107345357 + 4.693160940549155587881076j)",
+            "(43.70228910377750267774521 + 2.648341109918594038298575j)",
+            "(12.02055577950107529542015 - 2.656556960502502658628228j)"
+          ],
+          "s": 0.0009765625,
+          "scalar": "(-0.4513696627133788808378573 + 0.0001553321555121532146423754j)",
+          "two_precision_agreement_digits": 31.378954005837024,
+          "two_precision_relative_error": "4.178746195e-32"
+        },
+        {
+          "cancellation_digits": [
+            -0.2765973329853959,
+            -0.22928299362461146,
+            -0.09578079689413149
+          ],
+          "coefficient": "(153.4886370710205633235433 + 110.9295072274515861914445j)",
+          "coefficient_abs": 189.3782386749985,
+          "cutoffs": [
+            [
+              196,
+              198
+            ],
+            [
+              196,
+              201
+            ],
+            [
+              198,
+              200
+            ]
+          ],
+          "denominator": 4096,
+          "fused_boundary_alias_scalar": "q^2 times rational term ratio",
+          "gauge_step": "(-0.2556182963528325467984769 + 0.9631478477647711829243974j)",
+          "gauge_step_vs_boundary_minus_q_relative_error": "0.003520684006",
+          "minus_q": "(-0.2547206788790375431297264 + 0.9597690237609785013361829j)",
+          "ordinary_transformed_abs": 2053.3133149338037,
+          "ordinary_transformed_arg_over_pi": -0.8008248661756883,
+          "ordinary_transformed_value": "(-1664.28735714615974095951 - 1202.59850412674993499207j)",
+          "residue_packets": [
+            "(0.6566063481694393856974288 + 8.016097758446529886452403j)",
+            "(137.5414157333242903325394 + 98.62353579869548979671076j)",
+            "(15.29061498952683360530642 + 4.289873670309566508281349j)"
+          ],
+          "s": 0.000244140625,
+          "scalar": "(-0.4517663789626159307234383 + 0.00003877026394556706622864538j)",
+          "two_precision_agreement_digits": 31.913367008836534,
+          "two_precision_relative_error": "1.220767591e-32"
+        }
+      ]
+    },
+    "unproved_primitive": {
+      "frequency": [
+        0,
+        1
+      ],
+      "growth_summary": {
+        "bounded_limit_proved": false,
+        "first_denominator": 64,
+        "last_denominator": 4096,
+        "last_over_first_abs": 18.87917545881912,
+        "log_abs_vs_log_one_over_s": {
+          "intercept": 0.5540498276871018,
+          "r_squared": 0.9692050669523602,
+          "slope": 0.7300239166270504
+        }
+      },
+      "records": [
+        {
+          "cancellation_digits": [
+            0.0402967545496236,
+            -0.25117827344742577,
+            -0.2738367672474086
+          ],
+          "coefficient": "(-4.684739201212638520203774 - 4.079381586278650358840918j)",
+          "coefficient_abs": 6.2119349247917715,
+          "cutoffs": [
+            [
+              24,
+              25
+            ],
+            [
+              24,
+              26
+            ],
+            [
+              24,
+              26
+            ]
+          ],
+          "denominator": 64,
+          "fused_boundary_alias_scalar": "q^2 times rational term ratio",
+          "gauge_step": "(-0.2021395809249206271046767 + 0.7725814406143132061353361j)",
+          "gauge_step_vs_boundary_minus_q_relative_error": "0.2521945365",
+          "minus_q": "(-0.1592631297371193133116662 + 0.6175605175519108813730895j)",
+          "ordinary_transformed_abs": 66.12390565144295,
+          "ordinary_transformed_arg_over_pi": 0.22620856871409786,
+          "ordinary_transformed_value": "(50.11759904425447829304501 + 43.13463996187139631423714j)",
+          "residue_packets": [
+            "(-1.86912914936251013325068 - 5.213672796004164035817892j)",
+            "(0.7988211957137343748224539 + 0.4593524764601517522669487j)",
+            "(-3.614431247563862761775548 + 0.6749387332653619247100253j)"
+          ],
+          "s": 0.015625,
+          "scalar": "(-0.4435198922732667480295018 + 0.002563689480680451553849678j)",
+          "two_precision_agreement_digits": 32.497633821547176,
+          "two_precision_relative_error": "3.179553804e-33"
+        },
+        {
+          "cancellation_digits": [
+            -0.05043684633454067,
+            -0.18645441720799666,
+            -0.5438170608375825
+          ],
+          "coefficient": "(-18.78180432642928439685688 + 4.995265281926375789259218j)",
+          "coefficient_abs": 19.43473305690348,
+          "cutoffs": [
+            [
+              49,
+              50
+            ],
+            [
+              49,
+              51
+            ],
+            [
+              48,
+              51
+            ]
+          ],
+          "denominator": 256,
+          "fused_boundary_alias_scalar": "q^2 times rational term ratio",
+          "gauge_step": "(-0.2422899370754300943691002 + 0.9137340929117213255196842j)",
+          "gauge_step_vs_boundary_minus_q_relative_error": "0.0578426255",
+          "minus_q": "(-0.2288519155753138967224203 + 0.8638219467634999926275441j)",
+          "ordinary_transformed_abs": 209.79587855094778,
+          "ordinary_transformed_arg_over_pi": -0.08318570603652294,
+          "ordinary_transformed_value": "(202.6724186770214745989321 - 54.20517839256827076295497j)",
+          "residue_packets": [
+            "(-1.347330354916190000419571 - 7.409006826476802934516411j)",
+            "(1.652505081998188531129896 + 5.260642217083617359632384j)",
+            "(-19.08697905351128292756721 + 7.143629891319561364143245j)"
+          ],
+          "s": 0.00390625,
+          "scalar": "(-0.4497868052061786536103074 + 0.0006253226352066666791595148j)",
+          "two_precision_agreement_digits": 32.71249887802162,
+          "two_precision_relative_error": "1.938657644e-33"
+        },
+        {
+          "cancellation_digits": [
+            -0.0901470361335855,
+            -0.39623297425032183,
+            -0.16213993409250152
+          ],
+          "coefficient": "(-46.49192130215225914852785 + 54.31651374223691960203899j)",
+          "coefficient_abs": 71.49673007541065,
+          "cutoffs": [
+            [
+              97,
+              99
+            ],
+            [
+              99,
+              101
+            ],
+            [
+              98,
+              101
+            ]
+          ],
+          "denominator": 1024,
+          "fused_boundary_alias_scalar": "q^2 times rational term ratio",
+          "gauge_step": "(-0.2529246374874914209621822 + 0.9530478491202075417672941j)",
+          "gauge_step_vs_boundary_minus_q_relative_error": "0.01415727561",
+          "minus_q": "(-0.2493809986131485800786578 + 0.9397470696710962245745691j)",
+          "ordinary_transformed_abs": 774.5149644044487,
+          "ordinary_transformed_arg_over_pi": -0.27476681755877286,
+          "ordinary_transformed_value": "(503.4385376613583852457986 - 588.577156270796448303505j)",
+          "residue_packets": [
+            "(0.3867813949353793091340414 - 8.40974851800747114163817j)",
+            "(-0.4247980044634319224452956 + 23.20463824243183917466182j)",
+            "(-46.4539046926242065352166 + 39.52162401781255156901533j)"
+          ],
+          "s": 0.0009765625,
+          "scalar": "(-0.4513696627133788808378573 + 0.0001553321555121532146423754j)",
+          "two_precision_agreement_digits": 31.666865644852514,
+          "two_precision_relative_error": "2.153447831e-32"
+        },
+        {
+          "cancellation_digits": [
+            -0.254399171643734,
+            -0.4124244025859449,
+            -0.09418332455478357
+          ],
+          "coefficient": "(-62.46906473902316953411153 + 96.71728846104849112441134j)",
+          "coefficient_abs": 115.13738722337732,
+          "cutoffs": [
+            [
+              195,
+              197
+            ],
+            [
+              196,
+              201
+            ],
+            [
+              199,
+              199
+            ]
+          ],
+          "denominator": 4096,
+          "fused_boundary_alias_scalar": "q^2 times rational term ratio",
+          "gauge_step": "(-0.2556182963528325467984769 + 0.9631478477647711829243974j)",
+          "gauge_step_vs_boundary_minus_q_relative_error": "0.003520684006",
+          "minus_q": "(-0.2547206788790375431297264 + 0.9597690237609785013361829j)",
+          "ordinary_transformed_abs": 1248.3648168159928,
+          "ordinary_transformed_arg_over_pi": -0.3174820216812806,
+          "ordinary_transformed_value": "(677.2241620686718813373441 - 1048.704987198216917076988j)",
+          "residue_packets": [
+            "(-0.1832837252415320842896471 - 12.34512914537356189801858j)",
+            "(-20.7201114445676174335287 + 43.63068648193380933744436j)",
+            "(-41.56566956921402001629319 + 65.43173112448824368498556j)"
+          ],
+          "s": 0.000244140625,
+          "scalar": "(-0.4517663789626159307234383 + 0.00003877026394556706622864538j)",
+          "two_precision_agreement_digits": 31.33956479925353,
+          "two_precision_relative_error": "4.575464612e-32"
+        }
+      ]
+    }
+  },
+  "schema": "sic-stark-dimension-six-cycle157-fourier-audit-v1",
+  "verdict": {
+    "BF6_as_written_uses_raw_ungauged_packets": true,
+    "BF6_implies_MFC6_supported": false,
+    "MFC6_is_operationally_testable_from_current_definition": false,
+    "cycle156_raw_growth_decides_true_fourier_packet": false,
+    "recommended_status": "retire BF6 as written; keep only the explicitly Fourier-normalized additive coefficient as a diagnostic; do not resume boundary numerics until the coefficient-to-ray-logarithm map is supplied"
+  },
+  "weighted_ratio_crosschecks": [
+    {
+      "agreement_digits": 53.50066284504279,
+      "denominator": 64,
+      "direct": "(-0.1544045436859443210157415 + 0.1485652803126615938942497j)",
+      "frequency": [
+        0,
+        2
+      ],
+      "relative_error": "3.157454893e-54",
+      "residue": 0,
+      "telescoped": "(-0.1544045436859443210157415 + 0.1485652803126615938942497j)"
+    },
+    {
+      "agreement_digits": 53.07921325921027,
+      "denominator": 64,
+      "direct": "(-0.1241108644529521260548048 + 0.1704598772604901653501698j)",
+      "frequency": [
+        0,
+        1
+      ],
+      "relative_error": "8.332719081e-54",
+      "residue": 0,
+      "telescoped": "(-0.1241108644529521260548048 + 0.1704598772604901653501698j)"
+    }
+  ]
+}

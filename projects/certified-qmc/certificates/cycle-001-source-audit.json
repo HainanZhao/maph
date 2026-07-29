@@ -1,0 +1,53 @@
+{
+  "schema": "certified-qmc-source-audit-v1",
+  "tag": "VERIFIED_SOURCE_AUDIT",
+  "date": "2026-07-29",
+  "decision": "CONTINUE",
+  "scope_limit": "Snapshot-scoped source audit; not a universal nonexistence claim.",
+  "repositories": [
+    {
+      "name": "LatNet Builder",
+      "url": "https://github.com/umontreal-simul/latnetbuilder",
+      "commit": "39dd60fceb0c86a6124b701072d91f8e3aed73df",
+      "findings": [
+        {
+          "path": "include/latbuilder/Types.h",
+          "observation": "Real and RealVector use double"
+        },
+        {
+          "path": "include/latbuilder/Functor/BernoulliPoly.h",
+          "observation": "Bernoulli polynomials use Real and binary64 constants"
+        },
+        {
+          "path": "include/latbuilder/MeritSeq/CoordUniformInnerProdFast.h",
+          "observation": "fast inner products use double-precision FFTW arrays"
+        },
+        {
+          "path": "include/latbuilder/Functor/MinElement.h",
+          "observation": "argmin branches on an ordinary less-than comparison"
+        },
+        {
+          "path": "include/latbuilder/Task/Search.h",
+          "observation": "best merit and pruning threshold are Real values"
+        }
+      ],
+      "certified_merit_path_found": false
+    },
+    {
+      "name": "QMCPy",
+      "url": "https://github.com/QMCSoftware/QMCSoftware",
+      "commit": "a774f3a1297b982f2544742e8c691e035c9fc0a7",
+      "findings": [
+        {
+          "path": "qmcpy/discrete_distribution/lattice/lattice.py",
+          "observation": "generating vectors are integer-valued; generated points are NumPy floating point"
+        },
+        {
+          "path": "qmcpy/util/latnetbuilder_linker.py",
+          "observation": "LatNet Builder linkage is marked under reconstruction"
+        }
+      ],
+      "certified_merit_path_found": false
+    }
+  ]
+}

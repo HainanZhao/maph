@@ -2,6 +2,14 @@
 
 Date: 2026-07-29
 
+> **Retired after cycle 157.** The packets below omit the ordinary
+> Fourier gauge and are not ordinary Fourier coefficients. Restoring
+> that gauge does not produce bounded behavior on the tested ladder,
+> and no explicit map from the resulting additive coefficients to the
+> three ray-class logarithms has been derived. This file is retained as
+> a falsified/unsupported proof target, not as the current research
+> plan. See `docs/sic-stark-cycle157.md`.
+
 This statement contains the remaining analysis without ray classes,
 Stark units, SIC matrices, or TCC notation.
 

@@ -1,0 +1,42 @@
+{
+  "schema": "certified-qmc-workstream-b-classification-v2",
+  "frozen_at_utc": "2026-07-29T06:08:09Z",
+  "supersedes_for_future_unseen_targets": "certified-qmc-workstream-b-discrepancy-v1",
+  "does_not_apply_retroactively": true,
+  "published_pair": {
+    "vector": "z",
+    "lexical_merit": "y",
+    "exact_or_enclosed_merit": "q"
+  },
+  "selection": {
+    "included_in_B_alg": false,
+    "reason": "classification evaluates the published merit of the published vector; producer argmin optimality is irrelevant"
+  },
+  "bound": {
+    "formula": "B_alg(M)=T_eval(M)+T_format",
+    "T_eval": "certified evaluation envelope for every producer in explicit model class M",
+    "T_format": "exact half-cell bound from the observed decimal lexical grid under round-to-nearest",
+    "strict_discrepancy_predicate": "abs(y-q)>B_alg(M)",
+    "inside_or_equal_classification": "EXPECTED_ROUNDING_UNDER_MODEL_M",
+    "missing_model_or_format_classification": "UNCLASSIFIED_EXTERNAL"
+  },
+  "model_class_requirements": [
+    "binary64 round-to-nearest",
+    "explicit radix and transform-depth bound",
+    "explicit twiddle-error assumption",
+    "explicit accumulation-order family",
+    "no overflow or harmful underflow",
+    "reference radix-two implementation and outward replay",
+    "sensitivity variants for twiddle and accumulation assumptions"
+  ],
+  "source_specific_historical_binary_required": false,
+  "external_subtraction_authorized": false,
+  "authorization_gate": [
+    "target has a published merit column",
+    "kernel, weights, and error normalization are frozen",
+    "observed lexical precision and T_format are frozen",
+    "model class M and T_eval(M) are frozen",
+    "sensitivity variants preserve the classification"
+  ],
+  "current_frozen_set_disposition": "NO_MERIT_COLUMNS; CERTIFIED_REFERENCE_MERITS ONLY"
+}

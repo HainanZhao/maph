@@ -1,0 +1,149 @@
+{
+  "arithmetic": "signed/unsigned __int128 intermediates; residues modulo audited 62-bit primes",
+  "binary_sha256": "6f10c1dc13d37cd7f5f24a174c5aaf19db424e2082100d2628fd4df9e8da206c",
+  "claim_boundary": "Residue equalities are VERIFIED. Timings are local NUMERICAL observations and this direct O(Nd) evaluator is not fast CBC.",
+  "date": "2026-07-29",
+  "environment": {
+    "compiler": "cc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39"
+  },
+  "scaling_benchmark": [
+    {
+      "dimension": 16,
+      "input_kind": "frozen UNSW prefix",
+      "modulus": 1024,
+      "residue": "178433748215180020",
+      "timing": {
+        "median_ns": 1092080,
+        "minimum_ns": 1035959,
+        "repeats": 5,
+        "samples_ns": [
+          1092080,
+          1035959,
+          1102519,
+          1093400,
+          1064628
+        ],
+        "tag": "NUMERICAL"
+      }
+    },
+    {
+      "dimension": 16,
+      "input_kind": "synthetic modulus-scaling case",
+      "modulus": 16384,
+      "residue": "3003444863212299038",
+      "timing": {
+        "median_ns": 4918382,
+        "minimum_ns": 4773020,
+        "repeats": 5,
+        "samples_ns": [
+          4918382,
+          4835602,
+          5061435,
+          4773020,
+          4995595
+        ],
+        "tag": "NUMERICAL"
+      }
+    },
+    {
+      "dimension": 16,
+      "input_kind": "synthetic modulus-scaling case",
+      "modulus": 262144,
+      "residue": "3106522000399417380",
+      "timing": {
+        "median_ns": 68891421,
+        "minimum_ns": 67354515,
+        "repeats": 5,
+        "samples_ns": [
+          67354515,
+          69422774,
+          68891421,
+          68795770,
+          74090995
+        ],
+        "tag": "NUMERICAL"
+      }
+    },
+    {
+      "dimension": 16,
+      "input_kind": "synthetic modulus-scaling case",
+      "modulus": 1048576,
+      "residue": "1694486486597291969",
+      "timing": {
+        "median_ns": 278243453,
+        "minimum_ns": 269711170,
+        "repeats": 5,
+        "samples_ns": [
+          287437944,
+          278243453,
+          269711170,
+          278287533,
+          271945198
+        ],
+        "tag": "NUMERICAL"
+      }
+    }
+  ],
+  "schema": "certified-qmc-native-baseline-v1",
+  "source_sha256": "346090028d359c412416800b0d386a359c97b3e6004325d537a1e16a71359c3a",
+  "tag": "VERIFIED_IMPLEMENTATION",
+  "validation": [
+    {
+      "dimension": 2,
+      "equal_to_python_oracle": true,
+      "modulus": 1024,
+      "prime": "4611685941117976577",
+      "residue": "51898599424"
+    },
+    {
+      "dimension": 2,
+      "equal_to_python_oracle": true,
+      "modulus": 1024,
+      "prime": "4611685692009873409",
+      "residue": "51898599424"
+    },
+    {
+      "dimension": 4,
+      "equal_to_python_oracle": true,
+      "modulus": 1024,
+      "prime": "4611685941117976577",
+      "residue": "3789690791314447598"
+    },
+    {
+      "dimension": 4,
+      "equal_to_python_oracle": true,
+      "modulus": 1024,
+      "prime": "4611685692009873409",
+      "residue": "3256915680386997480"
+    },
+    {
+      "dimension": 8,
+      "equal_to_python_oracle": true,
+      "modulus": 1024,
+      "prime": "4611685941117976577",
+      "residue": "384512900429558809"
+    },
+    {
+      "dimension": 8,
+      "equal_to_python_oracle": true,
+      "modulus": 1024,
+      "prime": "4611685692009873409",
+      "residue": "2121260640302206570"
+    },
+    {
+      "dimension": 16,
+      "equal_to_python_oracle": true,
+      "modulus": 1024,
+      "prime": "4611685941117976577",
+      "residue": "178433748215180020"
+    },
+    {
+      "dimension": 16,
+      "equal_to_python_oracle": true,
+      "modulus": 1024,
+      "prime": "4611685692009873409",
+      "residue": "1381785989121882731"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "schema": "certified-qmc-workstream-b-table-inventory-v1",
+  "frozen_at_utc": "2026-07-29T06:08:09Z",
+  "inspection_rule": "schema and formatting metadata only; no exact-minus-published merit subtraction",
+  "frozen_audit_set": [
+    {
+      "id": "unsw-fixed-product-j^-2-n1024",
+      "collection": "Frances Kuo lattice rule generating vectors",
+      "index_url": "https://web.maths.unsw.edu.au/~fkuo/lattice/index.html",
+      "index_sha256": "bb8c5a8e38d84778fc1b18f1880890cfc6608d65b80a6f606b4aed7270f726ba",
+      "index_bytes": 24930,
+      "index_lines": 410,
+      "table_schema": [
+        "dimension",
+        "generating_vector_component"
+      ],
+      "merit_column_present": false,
+      "published_merit_precision": null,
+      "classification_track": "CERTIFIED_REFERENCE_MERIT_ONLY",
+      "evidence": "The collection index states that each file contains exactly two columns: dimension and generating-vector component."
+    }
+  ],
+  "candidate_repositories": [
+    {
+      "id": "magic-point-shop-latseq",
+      "collection": "Magic Point Shop lattice sequences",
+      "index_url": "https://people.cs.kuleuven.be/~dirk.nuyens/qmc-generators/",
+      "index_sha256": "9e84e4fe88b2619a18d955dbcbe23f6004f16b1282651193fce2c4315d8569d3",
+      "index_bytes": 20667,
+      "sample_url": "https://people.cs.kuleuven.be/~dirk.nuyens/qmc-generators/LATSEQ/exod2_base2_m20_CKN.txt",
+      "sample_sha256": "65fe5560a1cf8efc6b92fd408624d256dd69907921e82cc11be2ac9a21e73a50",
+      "sample_lines": 250,
+      "sample_schema": [
+        "generating_vector_component"
+      ],
+      "merit_column_present": false,
+      "published_merit_precision": null,
+      "classification_track": "CANDIDATE_CERTIFIED_REFERENCE_MERIT_ONLY"
+    },
+    {
+      "id": "qmcpy-packaged-kuo-vector",
+      "collection": "QMCPy packaged lattice generating vector",
+      "repository": "https://github.com/QMCSoftware/QMCSoftware",
+      "commit": "a774f3a1297b982f2544742e8c691e035c9fc0a7",
+      "artifact": "qmcpy/discrete_distribution/lattice/generating_vectors/kuo.lattice-33002-1024-1048576.9125.npy",
+      "artifact_sha256": "dbb76538e5dc9249f1a8de2b73df6f3d8c4ffec86f07b32df5e481441e712a3b",
+      "artifact_schema": {
+        "dtype": "uint64",
+        "shape": [
+          9125
+        ]
+      },
+      "merit_column_present": false,
+      "published_merit_precision": null,
+      "classification_track": "CANDIDATE_CERTIFIED_REFERENCE_MERIT_ONLY"
+    }
+  ],
+  "excluded_or_quarantined": [
+    {
+      "id": "latnet-builder-repository-examples",
+      "reason": "not a production reference-table collection; merit fields were exposed before the model-class amendment",
+      "classification": "EXPLORATORY_PROTOCOL_CONTAMINATED"
+    }
+  ],
+  "counts": {
+    "frozen_tables": 1,
+    "frozen_tables_with_merit_columns": 0,
+    "frozen_tables_without_merit_columns": 1,
+    "candidate_repositories_with_merit_columns": 0
+  },
+  "conclusion": "The current frozen Workstream B audit is a certified-reference-merit project. It has no published merit value to classify and requires no B_alg bound."
+}

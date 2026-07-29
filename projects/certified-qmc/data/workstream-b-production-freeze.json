@@ -1,0 +1,151 @@
+{
+  "schema": "certified-qmc-workstream-b-production-freeze-v1",
+  "frozen_at_utc": "2026-07-29T06:42:00Z",
+  "workstream": "CERTIFIED_REFERENCE_TABLE_SUPPLY",
+  "source_families": [
+    {
+      "id": "unsw-fixed-29102",
+      "kind": "fixed",
+      "file_pattern": "lattice-29102-{N}.3600",
+      "index_url": "https://web.maths.unsw.edu.au/~fkuo/lattice/index.html",
+      "modulus_exponents": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "published_dimension": 3600
+    },
+    {
+      "id": "unsw-extensible-39102",
+      "kind": "extensible",
+      "file": "lattice-39102-1024-1048576.3600",
+      "index_url": "https://web.maths.unsw.edu.au/~fkuo/lattice/index.html",
+      "modulus_exponents": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "published_dimension": 3600
+    }
+  ],
+  "normalization": {
+    "convention": "DKS2013-eq5.13-beta0-product-B2",
+    "kernel": "B2(x)=x^2-x+1/6",
+    "quantity": "squared shift-averaged worst-case error",
+    "tag": "FROZEN"
+  },
+  "weight_profiles": [
+    {
+      "id": "producer-j^-2",
+      "formula": "gamma_j=1/j^2",
+      "role": "documented construction weights",
+      "applies_to": "complete fidelity grid"
+    },
+    {
+      "id": "standard-j^-1",
+      "formula": "gamma_j=1/j",
+      "role": "slow-decay stress profile",
+      "applies_to": "small usability grid"
+    },
+    {
+      "id": "standard-j^-3",
+      "formula": "gamma_j=1/j^3",
+      "role": "fast-decay comparison profile",
+      "applies_to": "small usability grid"
+    }
+  ],
+  "fidelity_grid": {
+    "source_family_ids": [
+      "unsw-fixed-29102",
+      "unsw-extensible-39102"
+    ],
+    "modulus_exponents": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "dimensions": "every prefix 1 through 3600",
+    "weight_profile_ids": [
+      "producer-j^-2"
+    ],
+    "logical_merit_count": 79200
+  },
+  "usability_grid": {
+    "source_family_ids": [
+      "unsw-fixed-29102",
+      "unsw-extensible-39102"
+    ],
+    "modulus_exponents": [
+      10,
+      15,
+      20
+    ],
+    "dimensions": [
+      16,
+      64,
+      256
+    ],
+    "weight_profile_ids": [
+      "standard-j^-1",
+      "producer-j^-2",
+      "standard-j^-3"
+    ],
+    "producer_profile_entries_reuse_fidelity_grid": true,
+    "logical_merit_count": 54
+  },
+  "weight_selection_rule": "The producer profile and the full usability grid are frozen before production; no profile may be removed or added in response to observed merits.",
+  "artifact_contract": {
+    "top_level_manifest": "SHA-256 manifest over source, normalization, weight-profile, budget, chunk, and verifier hashes",
+    "chunk_key": [
+      "source_family_id",
+      "source_sha256",
+      "N",
+      "dimension_interval",
+      "weight_profile_id"
+    ],
+    "entry_payload": [
+      "dimension",
+      "generator_prefix_sha256",
+      "exact reduced rational or sufficient CRT residues",
+      "proved reconstruction bound",
+      "ordered verified prime IDs",
+      "reconstruction status",
+      "claim boundary"
+    ],
+    "residue_mode": "prime-major chunks with deterministic balanced reconstruction and two additional overflow-check primes",
+    "verification": "one command replays any selected entry independently",
+    "partial_download": "manifest and chunk hashes permit verification without downloading unrelated cells"
+  },
+  "compute_gate": {
+    "budget_certificate_required": "certificates/workstream-b-production-budget.json",
+    "all_source_files_vendored_and_sha_frozen": false,
+    "license_and_redistribution_review_complete": false,
+    "deterministic_prime_schedule_extended": false,
+    "compiled_streaming_evaluator_scale_pilot_passed": false,
+    "production_compute_authorized": false
+  }
+}

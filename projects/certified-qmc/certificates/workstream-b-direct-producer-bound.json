@@ -1,0 +1,147 @@
+{
+  "adversarial_cases": [
+    {
+      "generator": [
+        1,
+        3
+      ],
+      "modulus": 8,
+      "name": "small-balanced",
+      "result": {
+        "contains_independent_arb_target": true,
+        "exact_merit_enclosure": "[0.3086763774117478166474340444247910987162 +/- 2.97e-41]",
+        "float_hex": "0x1.3c15a9081ff54p-2",
+        "float_value": 0.3086763774117476,
+        "forward_error_bound": "[1.296725795718912161413517352372196077693e-15 +/- 3.59e-55]",
+        "model": "LatNet direct symmetric unilevel CoordUniformCBC CU:P2",
+        "observed_error_enclosure": "[2.343896168870552184294485752233198022802e-16 +/- 1.34e-56]",
+        "operation_counts": {
+          "abscissa_input": 5,
+          "add": 27,
+          "div": 2,
+          "input": 4,
+          "mul": 52,
+          "one_sixth_input": 1,
+          "p2_scaling_input": 1,
+          "sub": 9,
+          "weight_input": 2
+        },
+        "precision_bits": 256,
+        "scaling_hex": "0x1.3bd3cc9be45dep+4"
+      },
+      "weights": [
+        "1",
+        "1/4"
+      ]
+    },
+    {
+      "generator": [
+        1,
+        7,
+        5
+      ],
+      "modulus": 16,
+      "name": "mixed-scale",
+      "result": {
+        "contains_independent_arb_target": true,
+        "exact_merit_enclosure": "[0.3687637105045995132579147560972483946695 +/- 2.78e-41]",
+        "float_hex": "0x1.799d31b24684ap-2",
+        "float_value": 0.3687637105045992,
+        "forward_error_bound": "[2.906997802907345614717938652727327554625e-15 +/- 4.27e-55]",
+        "model": "LatNet direct symmetric unilevel CoordUniformCBC CU:P2",
+        "observed_error_enclosure": "[2.951816210464966712637557932990495255507e-16 +/- 3.98e-57]",
+        "operation_counts": {
+          "abscissa_input": 9,
+          "add": 66,
+          "div": 3,
+          "input": 4,
+          "mul": 129,
+          "one_sixth_input": 1,
+          "p2_scaling_input": 1,
+          "sub": 15,
+          "weight_input": 3
+        },
+        "precision_bits": 256,
+        "scaling_hex": "0x1.3bd3cc9be45dep+4"
+      },
+      "weights": [
+        "1",
+        "1/1000",
+        "7/9"
+      ]
+    },
+    {
+      "generator": [
+        1,
+        31,
+        15,
+        7,
+        25,
+        11
+      ],
+      "modulus": 64,
+      "name": "factorial-denominators",
+      "result": {
+        "contains_independent_arb_target": true,
+        "exact_merit_enclosure": "[0.1109415189439997232480494215486963038788 +/- 8.55e-42]",
+        "float_hex": "0x1.c66a9d3a20f0ep-4",
+        "float_value": 0.11094151894399948,
+        "forward_error_bound": "[2.258487789185324088832322479902152825648e-15 +/- 2.81e-55]",
+        "model": "LatNet direct symmetric unilevel CoordUniformCBC CU:P2",
+        "observed_error_enclosure": "[2.445845070308713750672981811852077520041e-16 +/- 3.72e-56]",
+        "operation_counts": {
+          "abscissa_input": 33,
+          "add": 435,
+          "div": 6,
+          "input": 4,
+          "mul": 864,
+          "one_sixth_input": 1,
+          "p2_scaling_input": 1,
+          "sub": 45,
+          "weight_input": 6
+        },
+        "precision_bits": 256,
+        "scaling_hex": "0x1.3bd3cc9be45dep+4"
+      },
+      "weights": [
+        "1",
+        "1/4",
+        "1/9",
+        "1/16",
+        "1/25",
+        "1/36"
+      ]
+    }
+  ],
+  "boundary": "This certificate closes the direct evaluation arithmetic only. It does not bound FFTW transforms, fast-CBC candidate scores, minimum-selection decisions, or historical decimal output.",
+  "claim_tag": "ENCLOSED_DIRECT_PRODUCER_ERROR",
+  "created_utc": "2026-07-29T04:58:23.349203+00:00",
+  "gate": {
+    "all_independent_arb_targets_contained": true
+  },
+  "method": {
+    "independent_oracle": "-1 + N^-1 sum_k product_j(1+gamma_j*2*pi^2*B2)",
+    "local_rounding_error": "exact dyadic difference at every add/subtract/multiply/divide",
+    "midpoint": "binary64 operation replay",
+    "propagation": "Arb outward absolute-error balls at 256 bits"
+  },
+  "producer_model": {
+    "binary64_rounding": "FE_TONEAREST",
+    "figure": "CU:P2",
+    "latnet_builder_commit": "39dd60fceb0c86a6124b701072d91f8e3aed73df",
+    "lattice": "ordinary unilevel symmetric",
+    "operation_order": "CoordUniformCBC + CoordUniformInnerProd + compressedSum",
+    "p2_scaling_hex": "0x1.3bd3cc9be45dep+4",
+    "task": "evaluation",
+    "weights": "product"
+  },
+  "schema": "certified-qmc/workstream-b-direct-producer-bound/v1",
+  "source_artifacts": {
+    "implementation": "src/producer_error.py",
+    "implementation_sha256": "044da5a226fd343443ef2ece0e16e06ab81316d99c7658545e34f9f4614e493c",
+    "plan_certificate": "certificates/workstream-b-fftw-plan-audit.json",
+    "plan_certificate_sha256": "799aa647f61eabc41d0f1a96a163bb2d631dcd2c7894bad818c023fcf8f67062",
+    "test": "tests/test_producer_error.py",
+    "test_sha256": "dec27e4082daa0a57b38936a3bb0afe7d236ce5681a3f226f84e8c80e3710ec0"
+  }
+}

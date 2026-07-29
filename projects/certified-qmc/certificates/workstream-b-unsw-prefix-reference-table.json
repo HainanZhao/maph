@@ -1,0 +1,1351 @@
+{
+  "claim_boundary": "exact squared worst-case merits for the frozen prefix only; not an audit of the unvendored 3600-component source and not an integration-error claim",
+  "classification_track": "CERTIFIED_REFERENCE_MERIT_ONLY",
+  "dimensions": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "external_merit_subtractions_performed": false,
+  "normalization": {
+    "convention": "DKS2013-eq5.13-beta0-product-B2",
+    "kernel": "B2(x)=x^2-x+1/6",
+    "weights": "gamma_j=1/j^2"
+  },
+  "published_merit_values_present": false,
+  "rows": [
+    {
+      "core_certificate": {
+        "certificate_sha256": "9259537026c4450cdd1c22a26148a59b766c89f40874af5ef1c4a88faa740488",
+        "definition": {
+          "claim_boundary": "squared shift-averaged worst-case error in the frozen product-weight beta=0 convention; not an integrand error",
+          "convention": "DKS2013-eq5.13-beta0-product-B2",
+          "kernel": "B2(x)=x^2-x+1/6",
+          "quantity": "-1+(1/N)*sum_k product_j(1+gamma_j*B2({k*z_j/N}))"
+        },
+        "denominator_proof": {
+          "formula": "N*product_j(6*den(gamma_j)*N^2)",
+          "master_bit_length": 33,
+          "master_denominator": "6442450944",
+          "quotient": "1024",
+          "reduced_denominator_divides_master": true
+        },
+        "input": {
+          "all_generator_components_are_units": true,
+          "dimension": 1,
+          "generator_mod_N": [
+            1
+          ],
+          "modulus": 1024,
+          "weights": [
+            {
+              "denominator": "1",
+              "numerator": "1"
+            }
+          ]
+        },
+        "replay": {
+          "algorithm": "direct exact Fraction sum-product",
+          "exact_summand_sha256": "7c734fde325370c269689b097cd47244d8fc054c4bffd2685b05d4d41b2986d8"
+        },
+        "result": {
+          "denominator": "6291456",
+          "numerator": "1"
+        },
+        "schema": "certified-qmc-exact-b2-error-v1",
+        "tag": "VERIFIED"
+      },
+      "dimension": 1,
+      "generator_component": 1
+    },
+    {
+      "core_certificate": {
+        "certificate_sha256": "a5fa64b45d62a8c72ff2acf9e3e2e90653d7640b861c2ec7c0de6ebbc383cd5d",
+        "definition": {
+          "claim_boundary": "squared shift-averaged worst-case error in the frozen product-weight beta=0 convention; not an integrand error",
+          "convention": "DKS2013-eq5.13-beta0-product-B2",
+          "kernel": "B2(x)=x^2-x+1/6",
+          "quantity": "-1+(1/N)*sum_k product_j(1+gamma_j*B2({k*z_j/N}))"
+        },
+        "denominator_proof": {
+          "formula": "N*product_j(6*den(gamma_j)*N^2)",
+          "master_bit_length": 58,
+          "master_denominator": "162129586585337856",
+          "quotient": "2048",
+          "reduced_denominator_divides_master": true
+        },
+        "input": {
+          "all_generator_components_are_units": true,
+          "dimension": 2,
+          "generator_mod_N": [
+            1,
+            275
+          ],
+          "modulus": 1024,
+          "weights": [
+            {
+              "denominator": "1",
+              "numerator": "1"
+            },
+            {
+              "denominator": "4",
+              "numerator": "1"
+            }
+          ]
+        },
+        "replay": {
+          "algorithm": "direct exact Fraction sum-product",
+          "exact_summand_sha256": "4c0bf13ab3d4c8911421bff14e3c52dec5025eebbd07edc77a9747f7370c737d"
+        },
+        "result": {
+          "denominator": "79164837199872",
+          "numerator": "25341113"
+        },
+        "schema": "certified-qmc-exact-b2-error-v1",
+        "tag": "VERIFIED"
+      },
+      "dimension": 2,
+      "generator_component": 275
+    },
+    {
+      "core_certificate": {
+        "certificate_sha256": "807bada5f7252072b5a1f9e0045ed6ed496a3711a46b3166246f3e941451cc90",
+        "definition": {
+          "claim_boundary": "squared shift-averaged worst-case error in the frozen product-weight beta=0 convention; not an integrand error",
+          "convention": "DKS2013-eq5.13-beta0-product-B2",
+          "kernel": "B2(x)=x^2-x+1/6",
+          "quantity": "-1+(1/N)*sum_k product_j(1+gamma_j*B2({k*z_j/N}))"
+        },
+        "denominator_proof": {
+          "formula": "N*product_j(6*den(gamma_j)*N^2)",
+          "master_bit_length": 83,
+          "master_denominator": "9180280442698590295425024",
+          "quotient": "4096",
+          "reduced_denominator_divides_master": true
+        },
+        "input": {
+          "all_generator_components_are_units": true,
+          "dimension": 3,
+          "generator_mod_N": [
+            1,
+            275,
+            179
+          ],
+          "modulus": 1024,
+          "weights": [
+            {
+              "denominator": "1",
+              "numerator": "1"
+            },
+            {
+              "denominator": "4",
+              "numerator": "1"
+            },
+            {
+              "denominator": "9",
+              "numerator": "1"
+            }
+          ]
+        },
+        "replay": {
+          "algorithm": "direct exact Fraction sum-product",
+          "exact_summand_sha256": "0e42e107d02d3439105ea1bfb403633cee94431bcc0ab4c5d9452b186dd469a1"
+        },
+        "result": {
+          "denominator": "2241279404955710521344",
+          "numerator": "1003430089122607"
+        },
+        "schema": "certified-qmc-exact-b2-error-v1",
+        "tag": "VERIFIED"
+      },
+      "dimension": 3,
+      "generator_component": 179
+    },
+    {
+      "core_certificate": {
+        "certificate_sha256": "cb54a588c778071d6eb811f67c1cdea6f9e0283944aa5a40ea330f191a685eeb",
+        "definition": {
+          "claim_boundary": "squared shift-averaged worst-case error in the frozen product-weight beta=0 convention; not an integrand error",
+          "convention": "DKS2013-eq5.13-beta0-product-B2",
+          "kernel": "B2(x)=x^2-x+1/6",
+          "quantity": "-1+(1/N)*sum_k product_j(1+gamma_j*B2({k*z_j/N}))"
+        },
+        "denominator_proof": {
+          "formula": "N*product_j(6*den(gamma_j)*N^2)",
+          "master_bit_length": 110,
+          "master_denominator": "924117287566379233691096636719104",
+          "quotient": "8192",
+          "reduced_denominator_divides_master": true
+        },
+        "input": {
+          "all_generator_components_are_units": true,
+          "dimension": 4,
+          "generator_mod_N": [
+            1,
+            275,
+            179,
+            319
+          ],
+          "modulus": 1024,
+          "weights": [
+            {
+              "denominator": "1",
+              "numerator": "1"
+            },
+            {
+              "denominator": "4",
+              "numerator": "1"
+            },
+            {
+              "denominator": "9",
+              "numerator": "1"
+            },
+            {
+              "denominator": "16",
+              "numerator": "1"
+            }
+          ]
+        },
+        "replay": {
+          "algorithm": "direct exact Fraction sum-product",
+          "exact_summand_sha256": "be2ea02f001c197cd11256e0e2da2f946ec1b7f94797c62d587bc3c094d89ad7"
+        },
+        "result": {
+          "denominator": "112807286079880277550182694912",
+          "numerator": "61326642586251563219681"
+        },
+        "schema": "certified-qmc-exact-b2-error-v1",
+        "tag": "VERIFIED"
+      },
+      "dimension": 4,
+      "generator_component": 319
+    },
+    {
+      "core_certificate": {
+        "certificate_sha256": "266b16ccfc261ac72d2e5f580ae2725e578a5eaeec442c45ce6290887c5dc435",
+        "definition": {
+          "claim_boundary": "squared shift-averaged worst-case error in the frozen product-weight beta=0 convention; not an integrand error",
+          "convention": "DKS2013-eq5.13-beta0-product-B2",
+          "kernel": "B2(x)=x^2-x+1/6",
+          "quantity": "-1+(1/N)*sum_k product_j(1+gamma_j*B2({k*z_j/N}))"
+        },
+        "denominator_proof": {
+          "formula": "N*product_j(6*den(gamma_j)*N^2)",
+          "master_bit_length": 137,
+          "master_denominator": "145351081339080550702031302041655679385600",
+          "quotient": "16384",
+          "reduced_denominator_divides_master": true
+        },
+        "input": {
+          "all_generator_components_are_units": true,
+          "dimension": 5,
+          "generator_mod_N": [
+            1,
+            275,
+            179,
+            319,
+            299
+          ],
+          "modulus": 1024,
+          "weights": [
+            {
+              "denominator": "1",
+              "numerator": "1"
+            },
+            {
+              "denominator": "4",
+              "numerator": "1"
+            },
+            {
+              "denominator": "9",
+              "numerator": "1"
+            },
+            {
+              "denominator": "16",
+              "numerator": "1"
+            },
+            {
+              "denominator": "25",
+              "numerator": "1"
+            }
+          ]
+        },
+        "replay": {
+          "algorithm": "direct exact Fraction sum-product",
+          "exact_summand_sha256": "078ec5426cc28e45be47d398e917c9acac9190e878190a69bda85ec91928b5da"
+        },
+        "result": {
+          "denominator": "8871525960637240643434527712503398400",
+          "numerator": "5530790702906059091293467283231"
+        },
+        "schema": "certified-qmc-exact-b2-error-v1",
+        "tag": "VERIFIED"
+      },
+      "dimension": 5,
+      "generator_component": 299
+    },
+    {
+      "core_certificate": {
+        "certificate_sha256": "ead217a655aadfb8d044c799788e12fd6b23d4749735d856789d726f13e51b6e",
+        "definition": {
+          "claim_boundary": "squared shift-averaged worst-case error in the frozen product-weight beta=0 convention; not an integrand error",
+          "convention": "DKS2013-eq5.13-beta0-product-B2",
+          "kernel": "B2(x)=x^2-x+1/6",
+          "quantity": "-1+(1/N)*sum_k product_j(1+gamma_j*B2({k*z_j/N}))"
+        },
+        "denominator_proof": {
+          "formula": "N*product_j(6*den(gamma_j)*N^2)",
+          "master_bit_length": 165,
+          "master_denominator": "32920917580700869147113565707040327464165939609600",
+          "quotient": "32768",
+          "reduced_denominator_divides_master": true
+        },
+        "input": {
+          "all_generator_components_are_units": true,
+          "dimension": 6,
+          "generator_mod_N": [
+            1,
+            275,
+            179,
+            319,
+            299,
+            451
+          ],
+          "modulus": 1024,
+          "weights": [
+            {
+              "denominator": "1",
+              "numerator": "1"
+            },
+            {
+              "denominator": "4",
+              "numerator": "1"
+            },
+            {
+              "denominator": "9",
+              "numerator": "1"
+            },
+            {
+              "denominator": "16",
+              "numerator": "1"
+            },
+            {
+              "denominator": "25",
+              "numerator": "1"
+            },
+            {
+              "denominator": "36",
+              "numerator": "1"
+            }
+          ]
+        },
+        "replay": {
+          "algorithm": "direct exact Fraction sum-product",
+          "exact_summand_sha256": "2547a6cae898d51902700693820df06cd56fe8329f5dc6f010f8dd187808efa5"
+        },
+        "result": {
+          "denominator": "1004666674215724766452440359711924055913267200",
+          "numerator": "691468917867959020550414333577386005937"
+        },
+        "schema": "certified-qmc-exact-b2-error-v1",
+        "tag": "VERIFIED"
+      },
+      "dimension": 6,
+      "generator_component": 451
+    },
+    {
+      "core_certificate": {
+        "certificate_sha256": "48b93298ed071474a323e8d3fecf317416478feb1fa643741eb8a0b4ce06a7b5",
+        "definition": {
+          "claim_boundary": "squared shift-averaged worst-case error in the frozen product-weight beta=0 convention; not an integrand error",
+          "convention": "DKS2013-eq5.13-beta0-product-B2",
+          "kernel": "B2(x)=x^2-x+1/6",
+          "quantity": "-1+(1/N)*sum_k product_j(1+gamma_j*B2({k*z_j/N}))"
+        },
+        "denominator_proof": {
+          "formula": "N*product_j(6*den(gamma_j)*N^2)",
+          "master_bit_length": 193,
+          "master_denominator": "10148904717491692402640303756798702412853187701870323302400",
+          "quotient": "65536",
+          "reduced_denominator_divides_master": true
+        },
+        "input": {
+          "all_generator_components_are_units": true,
+          "dimension": 7,
+          "generator_mod_N": [
+            1,
+            275,
+            179,
+            319,
+            299,
+            451,
+            417
+          ],
+          "modulus": 1024,
+          "weights": [
+            {
+              "denominator": "1",
+              "numerator": "1"
+            },
+            {
+              "denominator": "4",
+              "numerator": "1"
+            },
+            {
+              "denominator": "9",
+              "numerator": "1"
+            },
+            {
+              "denominator": "16",
+              "numerator": "1"
+            },
+            {
+              "denominator": "25",
+              "numerator": "1"
+            },
+            {
+              "denominator": "36",
+              "numerator": "1"
+            },
+            {
+              "denominator": "49",
+              "numerator": "1"
+            }
+          ]
+        },
+        "replay": {
+          "algorithm": "direct exact Fraction sum-product",
+          "exact_summand_sha256": "7ca748c7dcf7afd10f763c9fe3faf56f402cb67664ce936c92e24376ca2f3df5"
+        },
+        "result": {
+          "denominator": "154859996299616888468022213085917700391436579923558400",
+          "numerator": "114582512514537635524391524981399422503467558639"
+        },
+        "schema": "certified-qmc-exact-b2-error-v1",
+        "tag": "VERIFIED"
+      },
+      "dimension": 7,
+      "generator_component": 417
+    },
+    {
+      "core_certificate": {
+        "certificate_sha256": "2fd23a1838a32273a4dfc0a51801120f44a974ce4568b08c4e40cc69fbc7df89",
+        "definition": {
+          "claim_boundary": "squared shift-averaged worst-case error in the frozen product-weight beta=0 convention; not an integrand error",
+          "convention": "DKS2013-eq5.13-beta0-product-B2",
+          "kernel": "B2(x)=x^2-x+1/6",
+          "quantity": "-1+(1/N)*sum_k product_j(1+gamma_j*B2({k*z_j/N}))"
+        },
+        "denominator_proof": {
+          "formula": "N*product_j(6*den(gamma_j)*N^2)",
+          "master_bit_length": 222,
+          "master_denominator": "4086488798610650439471728314402159173603818552707728432820754841600",
+          "quotient": "917504",
+          "reduced_denominator_divides_master": true
+        },
+        "input": {
+          "all_generator_components_are_units": true,
+          "dimension": 8,
+          "generator_mod_N": [
+            1,
+            275,
+            179,
+            319,
+            299,
+            451,
+            417,
+            167
+          ],
+          "modulus": 1024,
+          "weights": [
+            {
+              "denominator": "1",
+              "numerator": "1"
+            },
+            {
+              "denominator": "4",
+              "numerator": "1"
+            },
+            {
+              "denominator": "9",
+              "numerator": "1"
+            },
+            {
+              "denominator": "16",
+              "numerator": "1"
+            },
+            {
+              "denominator": "25",
+              "numerator": "1"
+            },
+            {
+              "denominator": "36",
+              "numerator": "1"
+            },
+            {
+              "denominator": "49",
+              "numerator": "1"
+            },
+            {
+              "denominator": "64",
+              "numerator": "1"
+            }
+          ]
+        },
+        "replay": {
+          "algorithm": "direct exact Fraction sum-product",
+          "exact_summand_sha256": "b0cdcb303ee8e31f88b0b7a5a9289efffdd6ab4c58aa73e5fe0387d2a20185c1"
+        },
+        "result": {
+          "denominator": "4453919327447782722987287591555087687469284660020804740710400",
+          "numerator": "3479117843948793228205024080136863660140294385888703223"
+        },
+        "schema": "certified-qmc-exact-b2-error-v1",
+        "tag": "VERIFIED"
+      },
+      "dimension": 8,
+      "generator_component": 167
+    },
+    {
+      "core_certificate": {
+        "certificate_sha256": "3b6844be769e18cba06f1c56a3237ec67ebf79a70923819652314d9650851cae",
+        "definition": {
+          "claim_boundary": "squared shift-averaged worst-case error in the frozen product-weight beta=0 convention; not an integrand error",
+          "convention": "DKS2013-eq5.13-beta0-product-B2",
+          "kernel": "B2(x)=x^2-x+1/6",
+          "quantity": "-1+(1/N)*sum_k product_j(1+gamma_j*B2({k*z_j/N}))"
+        },
+        "denominator_proof": {
+          "formula": "N*product_j(6*den(gamma_j)*N^2)",
+          "master_bit_length": 251,
+          "master_denominator": "2082507122147093238076680396655243410403707654363892697898299532789782937600",
+          "quotient": "262144",
+          "reduced_denominator_divides_master": true
+        },
+        "input": {
+          "all_generator_components_are_units": true,
+          "dimension": 9,
+          "generator_mod_N": [
+            1,
+            275,
+            179,
+            319,
+            299,
+            451,
+            417,
+            167,
+            289
+          ],
+          "modulus": 1024,
+          "weights": [
+            {
+              "denominator": "1",
+              "numerator": "1"
+            },
+            {
+              "denominator": "4",
+              "numerator": "1"
+            },
+            {
+              "denominator": "9",
+              "numerator": "1"
+            },
+            {
+              "denominator": "16",
+              "numerator": "1"
+            },
+            {
+              "denominator": "25",
+              "numerator": "1"
+            },
+            {
+              "denominator": "36",
+              "numerator": "1"
+            },
+            {
+              "denominator": "49",
+              "numerator": "1"
+            },
+            {
+              "denominator": "64",
+              "numerator": "1"
+            },
+            {
+              "denominator": "81",
+              "numerator": "1"
+            }
+          ]
+        },
+        "replay": {
+          "algorithm": "direct exact Fraction sum-product",
+          "exact_summand_sha256": "19e941f0bd32ccdef7cec4b5123616946c99189c7bfaa03b61e0edab80e04825"
+        },
+        "result": {
+          "denominator": "7944134224499104454333039843197797433485823266463824073403547412070400",
+          "numerator": "6478307532258525835248816440640717393169592466144571861199737279"
+        },
+        "schema": "certified-qmc-exact-b2-error-v1",
+        "tag": "VERIFIED"
+      },
+      "dimension": 9,
+      "generator_component": 289
+    },
+    {
+      "core_certificate": {
+        "certificate_sha256": "2d2d8eb04117259eaf91c587189800025732e50930f08742bba90650699f71cc",
+        "definition": {
+          "claim_boundary": "squared shift-averaged worst-case error in the frozen product-weight beta=0 convention; not an integrand error",
+          "convention": "DKS2013-eq5.13-beta0-product-B2",
+          "kernel": "B2(x)=x^2-x+1/6",
+          "quantity": "-1+(1/N)*sum_k product_j(1+gamma_j*B2({k*z_j/N}))"
+        },
+        "denominator_proof": {
+          "formula": "N*product_j(6*den(gamma_j)*N^2)",
+          "master_bit_length": 280,
+          "master_denominator": "1310200192867506263525695934161901108584486894429363889754844398536747660146114560000",
+          "quotient": "3670016",
+          "reduced_denominator_divides_master": true
+        },
+        "input": {
+          "all_generator_components_are_units": true,
+          "dimension": 10,
+          "generator_mod_N": [
+            1,
+            275,
+            179,
+            319,
+            299,
+            451,
+            417,
+            167,
+            289,
+            109
+          ],
+          "modulus": 1024,
+          "weights": [
+            {
+              "denominator": "1",
+              "numerator": "1"
+            },
+            {
+              "denominator": "4",
+              "numerator": "1"
+            },
+            {
+              "denominator": "9",
+              "numerator": "1"
+            },
+            {
+              "denominator": "16",
+              "numerator": "1"
+            },
+            {
+              "denominator": "25",
+              "numerator": "1"
+            },
+            {
+              "denominator": "36",
+              "numerator": "1"
+            },
+            {
+              "denominator": "49",
+              "numerator": "1"
+            },
+            {
+              "denominator": "64",
+              "numerator": "1"
+            },
+            {
+              "denominator": "81",
+              "numerator": "1"
+            },
+            {
+              "denominator": "100",
+              "numerator": "1"
+            }
+          ]
+        },
+        "replay": {
+          "algorithm": "direct exact Fraction sum-product",
+          "exact_summand_sha256": "82c22e3f3890bad67c7590cb46eedd25c975c444fcb5beb1055fb709ae1a3324"
+        },
+        "result": {
+          "denominator": "357001220939501697956002353712327441783492740748095891068279919906819932160000",
+          "numerator": "302018838260848606846114302739616178080679153708167244136832882576907911"
+        },
+        "schema": "certified-qmc-exact-b2-error-v1",
+        "tag": "VERIFIED"
+      },
+      "dimension": 10,
+      "generator_component": 109
+    },
+    {
+      "core_certificate": {
+        "certificate_sha256": "0c0c0f4d85d9bfc917f3084487af73b666999e4370d51b3c541ae3fbc7c11e9d",
+        "definition": {
+          "claim_boundary": "squared shift-averaged worst-case error in the frozen product-weight beta=0 convention; not an integrand error",
+          "convention": "DKS2013-eq5.13-beta0-product-B2",
+          "kernel": "B2(x)=x^2-x+1/6",
+          "quantity": "-1+(1/N)*sum_k product_j(1+gamma_j*B2({k*z_j/N}))"
+        },
+        "denominator_proof": {
+          "formula": "N*product_j(6*den(gamma_j)*N^2)",
+          "master_bit_length": 309,
+          "master_denominator": "997411090618708967890254821538178221822273111044357550466155972749089886716380232349122560000",
+          "quotient": "1048576",
+          "reduced_denominator_divides_master": true
+        },
+        "input": {
+          "all_generator_components_are_units": true,
+          "dimension": 11,
+          "generator_mod_N": [
+            1,
+            275,
+            179,
+            319,
+            299,
+            451,
+            417,
+            167,
+            289,
+            109,
+            395
+          ],
+          "modulus": 1024,
+          "weights": [
+            {
+              "denominator": "1",
+              "numerator": "1"
+            },
+            {
+              "denominator": "4",
+              "numerator": "1"
+            },
+            {
+              "denominator": "9",
+              "numerator": "1"
+            },
+            {
+              "denominator": "16",
+              "numerator": "1"
+            },
+            {
+              "denominator": "25",
+              "numerator": "1"
+            },
+            {
+              "denominator": "36",
+              "numerator": "1"
+            },
+            {
+              "denominator": "49",
+              "numerator": "1"
+            },
+            {
+              "denominator": "64",
+              "numerator": "1"
+            },
+            {
+              "denominator": "81",
+              "numerator": "1"
+            },
+            {
+              "denominator": "100",
+              "numerator": "1"
+            },
+            {
+              "denominator": "121",
+              "numerator": "1"
+            }
+          ]
+        },
+        "replay": {
+          "algorithm": "direct exact Fraction sum-product",
+          "exact_summand_sha256": "85f1e0ae38b48a8fe32c8c5dfa58ddea3f6eeea6876f9156a86f2fe0445dbf7f"
+        },
+        "result": {
+          "denominator": "951205340021809547319655248201540204832337485355718183962017033337678801266079170560000",
+          "numerator": "829963778342839057724982247910957119603400775053529947389190823443474496917421199"
+        },
+        "schema": "certified-qmc-exact-b2-error-v1",
+        "tag": "VERIFIED"
+      },
+      "dimension": 11,
+      "generator_component": 395
+    },
+    {
+      "core_certificate": {
+        "certificate_sha256": "23f3f509a609539673a8f96ff97bad350381aa1c852e34f3d394128be312d75e",
+        "definition": {
+          "claim_boundary": "squared shift-averaged worst-case error in the frozen product-weight beta=0 convention; not an integrand error",
+          "convention": "DKS2013-eq5.13-beta0-product-B2",
+          "kernel": "B2(x)=x^2-x+1/6",
+          "quantity": "-1+(1/N)*sum_k product_j(1+gamma_j*B2({k*z_j/N}))"
+        },
+        "denominator_proof": {
+          "formula": "N*product_j(6*den(gamma_j)*N^2)",
+          "master_bit_length": 339,
+          "master_denominator": "903624190637705315753320949543323286796442238129091299091686370003086120974237062397576496378019840000",
+          "quotient": "14680064",
+          "reduced_denominator_divides_master": true
+        },
+        "input": {
+          "all_generator_components_are_units": true,
+          "dimension": 12,
+          "generator_mod_N": [
+            1,
+            275,
+            179,
+            319,
+            299,
+            451,
+            417,
+            167,
+            289,
+            109,
+            395,
+            81
+          ],
+          "modulus": 1024,
+          "weights": [
+            {
+              "denominator": "1",
+              "numerator": "1"
+            },
+            {
+              "denominator": "4",
+              "numerator": "1"
+            },
+            {
+              "denominator": "9",
+              "numerator": "1"
+            },
+            {
+              "denominator": "16",
+              "numerator": "1"
+            },
+            {
+              "denominator": "25",
+              "numerator": "1"
+            },
+            {
+              "denominator": "36",
+              "numerator": "1"
+            },
+            {
+              "denominator": "49",
+              "numerator": "1"
+            },
+            {
+              "denominator": "64",
+              "numerator": "1"
+            },
+            {
+              "denominator": "81",
+              "numerator": "1"
+            },
+            {
+              "denominator": "100",
+              "numerator": "1"
+            },
+            {
+              "denominator": "121",
+              "numerator": "1"
+            },
+            {
+              "denominator": "144",
+              "numerator": "1"
+            }
+          ]
+        },
+        "replay": {
+          "algorithm": "direct exact Fraction sum-product",
+          "exact_summand_sha256": "dde78833e7671ac80655033cfc2daed6240cdb876260cd2e5a60946642bd2a09"
+        },
+        "result": {
+          "denominator": "61554513021040324875512868986356141689603140567308923114482768603943833008782322910688706560000",
+          "numerator": "55229472999112628349329228567645343031885558911543230577917259037326753875529110034071831"
+        },
+        "schema": "certified-qmc-exact-b2-error-v1",
+        "tag": "VERIFIED"
+      },
+      "dimension": 12,
+      "generator_component": 81
+    },
+    {
+      "core_certificate": {
+        "certificate_sha256": "e0ea6c534cb7b7c9057a72aa5e5fb7375b79894ec3fe5334cccf14f3546e09c0",
+        "definition": {
+          "claim_boundary": "squared shift-averaged worst-case error in the frozen product-weight beta=0 convention; not an integrand error",
+          "convention": "DKS2013-eq5.13-beta0-product-B2",
+          "kernel": "B2(x)=x^2-x+1/6",
+          "quantity": "-1+(1/N)*sum_k product_j(1+gamma_j*B2({k*z_j/N}))"
+        },
+        "denominator_proof": {
+          "formula": "N*product_j(6*den(gamma_j)*N^2)",
+          "master_bit_length": 369,
+          "master_denominator": "960783900272632204019753227740176515398728343316488338568873224891929016840095144367769588677803631192309760000",
+          "quotient": "4194304",
+          "reduced_denominator_divides_master": true
+        },
+        "input": {
+          "all_generator_components_are_units": true,
+          "dimension": 13,
+          "generator_mod_N": [
+            1,
+            275,
+            179,
+            319,
+            299,
+            451,
+            417,
+            167,
+            289,
+            109,
+            395,
+            81,
+            215
+          ],
+          "modulus": 1024,
+          "weights": [
+            {
+              "denominator": "1",
+              "numerator": "1"
+            },
+            {
+              "denominator": "4",
+              "numerator": "1"
+            },
+            {
+              "denominator": "9",
+              "numerator": "1"
+            },
+            {
+              "denominator": "16",
+              "numerator": "1"
+            },
+            {
+              "denominator": "25",
+              "numerator": "1"
+            },
+            {
+              "denominator": "36",
+              "numerator": "1"
+            },
+            {
+              "denominator": "49",
+              "numerator": "1"
+            },
+            {
+              "denominator": "64",
+              "numerator": "1"
+            },
+            {
+              "denominator": "81",
+              "numerator": "1"
+            },
+            {
+              "denominator": "100",
+              "numerator": "1"
+            },
+            {
+              "denominator": "121",
+              "numerator": "1"
+            },
+            {
+              "denominator": "144",
+              "numerator": "1"
+            },
+            {
+              "denominator": "169",
+              "numerator": "1"
+            }
+          ]
+        },
+        "replay": {
+          "algorithm": "direct exact Fraction sum-product",
+          "exact_summand_sha256": "344b4f830c4bb7be63651b33e8abfbfb0196ef2655bd6819d4534508ced029f2"
+        },
+        "result": {
+          "denominator": "229068732326658297543466860709232453202898107365724644319742494795782331666969095317785641831828029440000",
+          "numerator": "210597737347486166126214912321140618235434815414928540728389663657506305659545698003035379718191711"
+        },
+        "schema": "certified-qmc-exact-b2-error-v1",
+        "tag": "VERIFIED"
+      },
+      "dimension": 13,
+      "generator_component": 215
+    },
+    {
+      "core_certificate": {
+        "certificate_sha256": "8c92f7f1441f3795f3c3ecc8ea2edc07bd50f12eec03bb2eab900785d73f7545",
+        "definition": {
+          "claim_boundary": "squared shift-averaged worst-case error in the frozen product-weight beta=0 convention; not an integrand error",
+          "convention": "DKS2013-eq5.13-beta0-product-B2",
+          "kernel": "B2(x)=x^2-x+1/6",
+          "quantity": "-1+(1/N)*sum_k product_j(1+gamma_j*B2({k*z_j/N}))"
+        },
+        "denominator_proof": {
+          "formula": "N*product_j(6*den(gamma_j)*N^2)",
+          "master_bit_length": 399,
+          "master_denominator": "1184767008278436089091566910384318795857426678274001769497357097341192528256252656774280156319681945568182301108469760000",
+          "quotient": "8388608",
+          "reduced_denominator_divides_master": true
+        },
+        "input": {
+          "all_generator_components_are_units": true,
+          "dimension": 14,
+          "generator_mod_N": [
+            1,
+            275,
+            179,
+            319,
+            299,
+            451,
+            417,
+            167,
+            289,
+            109,
+            395,
+            81,
+            215,
+            115
+          ],
+          "modulus": 1024,
+          "weights": [
+            {
+              "denominator": "1",
+              "numerator": "1"
+            },
+            {
+              "denominator": "4",
+              "numerator": "1"
+            },
+            {
+              "denominator": "9",
+              "numerator": "1"
+            },
+            {
+              "denominator": "16",
+              "numerator": "1"
+            },
+            {
+              "denominator": "25",
+              "numerator": "1"
+            },
+            {
+              "denominator": "36",
+              "numerator": "1"
+            },
+            {
+              "denominator": "49",
+              "numerator": "1"
+            },
+            {
+              "denominator": "64",
+              "numerator": "1"
+            },
+            {
+              "denominator": "81",
+              "numerator": "1"
+            },
+            {
+              "denominator": "100",
+              "numerator": "1"
+            },
+            {
+              "denominator": "121",
+              "numerator": "1"
+            },
+            {
+              "denominator": "144",
+              "numerator": "1"
+            },
+            {
+              "denominator": "169",
+              "numerator": "1"
+            },
+            {
+              "denominator": "196",
+              "numerator": "1"
+            }
+          ]
+        },
+        "replay": {
+          "algorithm": "direct exact Fraction sum-product",
+          "exact_summand_sha256": "b61f0948e5313be2c426589adf30d49c8645cfcfaa0f8cd7bc0c214a0e9304c8"
+        },
+        "result": {
+          "denominator": "141235233340076933990903724477805947763613066467523785769624364059113565475493986222062129535637133785269534720000",
+          "numerator": "132610365524577979312879349412250425145741380065200244727524057997288314150511780662131601847640066219961873"
+        },
+        "schema": "certified-qmc-exact-b2-error-v1",
+        "tag": "VERIFIED"
+      },
+      "dimension": 14,
+      "generator_component": 115
+    },
+    {
+      "core_certificate": {
+        "certificate_sha256": "6c23763d5daf86629545c05947338e3a30fe881b97e5a2f13edd702d11a32132",
+        "definition": {
+          "claim_boundary": "squared shift-averaged worst-case error in the frozen product-weight beta=0 convention; not an integrand error",
+          "convention": "DKS2013-eq5.13-beta0-product-B2",
+          "kernel": "B2(x)=x^2-x+1/6",
+          "quantity": "-1+(1/N)*sum_k product_j(1+gamma_j*B2({k*z_j/N}))"
+        },
+        "denominator_proof": {
+          "formula": "N*product_j(6*den(gamma_j)*N^2)",
+          "master_bit_length": 430,
+          "master_denominator": "1677129638137968690749626467241249078674745999407083567260821966197211700286918320870159245410640201270738138165604962533376000000",
+          "quotient": "83886080",
+          "reduced_denominator_divides_master": true
+        },
+        "input": {
+          "all_generator_components_are_units": true,
+          "dimension": 15,
+          "generator_mod_N": [
+            1,
+            275,
+            179,
+            319,
+            299,
+            451,
+            417,
+            167,
+            289,
+            109,
+            395,
+            81,
+            215,
+            115,
+            143
+          ],
+          "modulus": 1024,
+          "weights": [
+            {
+              "denominator": "1",
+              "numerator": "1"
+            },
+            {
+              "denominator": "4",
+              "numerator": "1"
+            },
+            {
+              "denominator": "9",
+              "numerator": "1"
+            },
+            {
+              "denominator": "16",
+              "numerator": "1"
+            },
+            {
+              "denominator": "25",
+              "numerator": "1"
+            },
+            {
+              "denominator": "36",
+              "numerator": "1"
+            },
+            {
+              "denominator": "49",
+              "numerator": "1"
+            },
+            {
+              "denominator": "64",
+              "numerator": "1"
+            },
+            {
+              "denominator": "81",
+              "numerator": "1"
+            },
+            {
+              "denominator": "100",
+              "numerator": "1"
+            },
+            {
+              "denominator": "121",
+              "numerator": "1"
+            },
+            {
+              "denominator": "144",
+              "numerator": "1"
+            },
+            {
+              "denominator": "169",
+              "numerator": "1"
+            },
+            {
+              "denominator": "196",
+              "numerator": "1"
+            },
+            {
+              "denominator": "225",
+              "numerator": "1"
+            }
+          ]
+        },
+        "replay": {
+          "algorithm": "direct exact Fraction sum-product",
+          "exact_summand_sha256": "f3464b0e60152bd7a0f6898e2a147fd62389a62c2d12cdbf01b38b829957110b"
+        },
+        "result": {
+          "denominator": "19992943264698609003420191612735379680094075195873779860267901017632623914324263583065977637894632831463076331205427200000",
+          "numerator": "19128486451136594448415284254739769018731047944232174839401524423409770875053754339410842072471785745787524256508451"
+        },
+        "schema": "certified-qmc-exact-b2-error-v1",
+        "tag": "VERIFIED"
+      },
+      "dimension": 15,
+      "generator_component": 143
+    },
+    {
+      "core_certificate": {
+        "certificate_sha256": "b08a5ecd4bc3cabcdd6e9448f089848938af2421c44ad338bbec97460dfdaa28",
+        "definition": {
+          "claim_boundary": "squared shift-averaged worst-case error in the frozen product-weight beta=0 convention; not an integrand error",
+          "convention": "DKS2013-eq5.13-beta0-product-B2",
+          "kernel": "B2(x)=x^2-x+1/6",
+          "quantity": "-1+(1/N)*sum_k product_j(1+gamma_j*B2({k*z_j/N}))"
+        },
+        "denominator_proof": {
+          "formula": "N*product_j(6*den(gamma_j)*N^2)",
+          "master_bit_length": 460,
+          "master_denominator": "2701206355108083698490593775381442550661811908210097242046592492585790652170325501785213083006526658080254229450451029801058210676736000000",
+          "quotient": "436207616",
+          "reduced_denominator_divides_master": true
+        },
+        "input": {
+          "all_generator_components_are_units": true,
+          "dimension": 16,
+          "generator_mod_N": [
+            1,
+            275,
+            179,
+            319,
+            299,
+            451,
+            417,
+            167,
+            289,
+            109,
+            395,
+            81,
+            215,
+            115,
+            143,
+            361
+          ],
+          "modulus": 1024,
+          "weights": [
+            {
+              "denominator": "1",
+              "numerator": "1"
+            },
+            {
+              "denominator": "4",
+              "numerator": "1"
+            },
+            {
+              "denominator": "9",
+              "numerator": "1"
+            },
+            {
+              "denominator": "16",
+              "numerator": "1"
+            },
+            {
+              "denominator": "25",
+              "numerator": "1"
+            },
+            {
+              "denominator": "36",
+              "numerator": "1"
+            },
+            {
+              "denominator": "49",
+              "numerator": "1"
+            },
+            {
+              "denominator": "64",
+              "numerator": "1"
+            },
+            {
+              "denominator": "81",
+              "numerator": "1"
+            },
+            {
+              "denominator": "100",
+              "numerator": "1"
+            },
+            {
+              "denominator": "121",
+              "numerator": "1"
+            },
+            {
+              "denominator": "144",
+              "numerator": "1"
+            },
+            {
+              "denominator": "169",
+              "numerator": "1"
+            },
+            {
+              "denominator": "196",
+              "numerator": "1"
+            },
+            {
+              "denominator": "225",
+              "numerator": "1"
+            },
+            {
+              "denominator": "256",
+              "numerator": "1"
+            }
+          ]
+        },
+        "replay": {
+          "algorithm": "direct exact Fraction sum-product",
+          "exact_summand_sha256": "4faefff022f17162c70dc8d871eea06b63cb56a59a176db50bdacdc59baabbca"
+        },
+        "result": {
+          "denominator": "6192478663894038242767851571352304290491369843964616248347650336728166277982467646289818752285440743153494663996079861661696000000",
+          "numerator": "6022742696152245409643640102740549865414901254373268557879343239558627406936422309336078796488884818479561495046109783419813"
+        },
+        "schema": "certified-qmc-exact-b2-error-v1",
+        "tag": "VERIFIED"
+      },
+      "dimension": 16,
+      "generator_component": 361
+    }
+  ],
+  "schema": "certified-qmc-workstream-b-reference-table-v1",
+  "table_sha256": "2bb544ca8aaa7abdca9501edd315519eb5d821df2b8999ef74dd054ebf9c71e3",
+  "tag": "VERIFIED_REFERENCE_TABLE_PREFIX",
+  "target": {
+    "full_upstream_table_certified": false,
+    "id": "unsw-fixed-product-j^-2-n1024",
+    "index_url": "https://web.maths.unsw.edu.au/~fkuo/lattice/index.html",
+    "modulus": 1024,
+    "scope": "vendored 16-component prefix",
+    "source": "Frances Kuo, Lattice rule generating vectors",
+    "upstream_bytes": 57600,
+    "upstream_lines": 3600,
+    "upstream_sha256": "d42503eda84c7fede8d2513d674a9eca4075041dc4cf8c2e0995b46b035b5ce9",
+    "url": "https://web.maths.unsw.edu.au/~fkuo/lattice/lattice-29102-1024.3600",
+    "weight_model": "product weights gamma_j=1/j^2"
+  }
+}

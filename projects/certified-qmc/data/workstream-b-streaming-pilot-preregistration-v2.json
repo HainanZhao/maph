@@ -1,0 +1,89 @@
+{
+  "schema": "certified-qmc-workstream-b-streaming-pilot-preregistration-v2",
+  "frozen_at_utc": "2026-07-29T06:55:14Z",
+  "measurement_started": false,
+  "predecessor": {
+    "path": "data/workstream-b-streaming-pilot-preregistration.json",
+    "sha256": "61fc31e1faf72f074d6eeb0f8fc1d3902fc8f480e192ed6a5876ceb7a34ae39f",
+    "failed_transcript": "certificates/workstream-b-streaming-pilot-failed-v1.json",
+    "failed_transcript_sha256": "05db9230f1bfddf3c8f8be1c726c1d6a15d5cc830ea913315f3bb5a621a27c51",
+    "disposition": "REDESIGN_REQUIRED",
+    "failure": "The native constant product used F_j(0)=6*j^2*N^2+N^2 where the exact numerator requires C_j=6*j^2*N^2; all 25 selected oracle residues therefore disagreed.",
+    "preservation_rule": "The failed transcript and v1 preregistration remain immutable."
+  },
+  "redesign": {
+    "scope": "Replace only the native common-denominator factor with C_j=6*j^2*N^2 modulo each prime.",
+    "threshold_changes": "none",
+    "pilot_shape_changes": "none",
+    "timing_statistic_changes": "none",
+    "correctness_checks_changes": "none",
+    "rationale": "The defect is deterministic and localized; the new run must satisfy the original prospective gate without relaxing any predicate."
+  },
+  "pilot": {
+    "source": "frozen lattice-29102-1024 prefix",
+    "N": 1024,
+    "dimension": 256,
+    "weight_profile": "gamma_j=1/j^2",
+    "arithmetic": "compiled __int128 modular multiplication with plain remainder",
+    "layout": "prime-major streaming",
+    "algorithm": "incremental within-column running-product reuse",
+    "work_primes": 151,
+    "universal_overflow_check_primes": 2,
+    "warmup_runs": 1,
+    "measured_runs": 5,
+    "timing_statistic": "median aggregate wall ns per work-prime update",
+    "parallel_workers": "all workers visible to the allocated pilot node",
+    "montgomery_enabled": false
+  },
+  "incremental_accounting": {
+    "confirmed": true,
+    "definition": "For each source family, modulus, weight profile, and prime, initialize p(k)=1 once; visit dimensions in order; update every p(k) once; emit the current prefix residue; never restart a prefix from dimension one.",
+    "full_grid_work_updates": 54901459582976,
+    "count_includes": "all work-prime incremental product updates for both fidelity families plus nonduplicated usability profiles",
+    "count_excludes": [
+      "two universal overflow-check primes per run",
+      "checkpoint and manifest I/O",
+      "balanced CRT reconstruction",
+      "future Montgomery conversion overhead"
+    ],
+    "per_cell_from_scratch_forbidden": true
+  },
+  "production_decision": {
+    "reference_budget_node_days": 7,
+    "node_day_seconds": 86400,
+    "maximum_passing_aggregate_ns_per_update": "11.016100566250485",
+    "projection_formula": "median_ns_per_update*54901459582976/1e9/86400",
+    "maximum_replay_overhead_fraction": "0.15",
+    "replay_overhead_formula": "(overflow_prime_ns+checkpoint_write_read_verify_ns)/work_prime_ns",
+    "correctness_required": [
+      "all selected prefix residues match the Python modular oracle",
+      "checkpoint digest replays exactly",
+      "all two overflow primes are evaluated for every emitted prefix"
+    ],
+    "authorize_full_exact_fidelity_grid_iff": "correctness passes AND projected_node_days<=7 AND replay_overhead_fraction<=0.15"
+  },
+  "no_go_fallback": {
+    "trigger": "correctness passes AND projected_node_days>7",
+    "exact_tier_tag": "VERIFIED",
+    "enclosure_tier_tag": "ENCLOSED",
+    "tier_boundary_rule": "After measurement, choose the largest global d_cut in [16,3600] for which the same measured median ns/update projects the complete two-family fidelity workload through d_cut, plus the frozen usability workload, to at most 7 node-days. The rule is applied mechanically before any production merit is inspected.",
+    "dimensions_at_or_below_cut": "exact rational or sufficient CRT residues",
+    "dimensions_above_cut": "Arb balls",
+    "arb_start_precision_bits": 160,
+    "arb_precision_escalation": "double precision until the radius predicate passes",
+    "arb_radius_predicate": "radius<=2^-100*max(1,abs(midpoint))",
+    "artifact_contract_unchanged": true
+  },
+  "replay_failure_disposition": {
+    "trigger": "replay_overhead_fraction>0.15 or any correctness failure",
+    "action": "do not authorize exact or two-tier production; redesign streaming/checkpoint implementation and rerun under a new preregistration"
+  },
+  "artifact_geometry": {
+    "worst_entry_work_residue_bytes": 29904,
+    "worst_entry_work_residue_count": 3738,
+    "two_overflow_primes_universal": true,
+    "full_fidelity_worst_count_residue_upper_bound_decimal_gb": "2.3683968",
+    "consumer_download_expectation": "approximately 2-3 GB before compression and manifest metadata; chunk-selective verification is supported"
+  },
+  "paper_perimeter_sentence": "Across the frozen distribution sites and the named, hash-frozen six-paper primary-literature perimeter, we found no numerical merit attached to the frozen vectors; this is not a universal claim about the QMC literature."
+}

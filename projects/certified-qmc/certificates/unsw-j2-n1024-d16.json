@@ -1,0 +1,127 @@
+{
+  "audit_sha256": "7365f04c401a7e33a6b7853d12af8b1cf9776093b8f5eed5fe6da71016475c2b",
+  "audit_target": {
+    "dimension": 16,
+    "id": "unsw-fixed-product-j^-2-n1024",
+    "scope": "vendored prefix only",
+    "upstream_sha256": "d42503eda84c7fede8d2513d674a9eca4075041dc4cf8c2e0995b46b035b5ce9",
+    "upstream_url": "https://web.maths.unsw.edu.au/~fkuo/lattice/lattice-29102-1024.3600"
+  },
+  "core_certificate": {
+    "certificate_sha256": "b08a5ecd4bc3cabcdd6e9448f089848938af2421c44ad338bbec97460dfdaa28",
+    "definition": {
+      "claim_boundary": "squared shift-averaged worst-case error in the frozen product-weight beta=0 convention; not an integrand error",
+      "convention": "DKS2013-eq5.13-beta0-product-B2",
+      "kernel": "B2(x)=x^2-x+1/6",
+      "quantity": "-1+(1/N)*sum_k product_j(1+gamma_j*B2({k*z_j/N}))"
+    },
+    "denominator_proof": {
+      "formula": "N*product_j(6*den(gamma_j)*N^2)",
+      "master_bit_length": 460,
+      "master_denominator": "2701206355108083698490593775381442550661811908210097242046592492585790652170325501785213083006526658080254229450451029801058210676736000000",
+      "quotient": "436207616",
+      "reduced_denominator_divides_master": true
+    },
+    "input": {
+      "all_generator_components_are_units": true,
+      "dimension": 16,
+      "generator_mod_N": [
+        1,
+        275,
+        179,
+        319,
+        299,
+        451,
+        417,
+        167,
+        289,
+        109,
+        395,
+        81,
+        215,
+        115,
+        143,
+        361
+      ],
+      "modulus": 1024,
+      "weights": [
+        {
+          "denominator": "1",
+          "numerator": "1"
+        },
+        {
+          "denominator": "4",
+          "numerator": "1"
+        },
+        {
+          "denominator": "9",
+          "numerator": "1"
+        },
+        {
+          "denominator": "16",
+          "numerator": "1"
+        },
+        {
+          "denominator": "25",
+          "numerator": "1"
+        },
+        {
+          "denominator": "36",
+          "numerator": "1"
+        },
+        {
+          "denominator": "49",
+          "numerator": "1"
+        },
+        {
+          "denominator": "64",
+          "numerator": "1"
+        },
+        {
+          "denominator": "81",
+          "numerator": "1"
+        },
+        {
+          "denominator": "100",
+          "numerator": "1"
+        },
+        {
+          "denominator": "121",
+          "numerator": "1"
+        },
+        {
+          "denominator": "144",
+          "numerator": "1"
+        },
+        {
+          "denominator": "169",
+          "numerator": "1"
+        },
+        {
+          "denominator": "196",
+          "numerator": "1"
+        },
+        {
+          "denominator": "225",
+          "numerator": "1"
+        },
+        {
+          "denominator": "256",
+          "numerator": "1"
+        }
+      ]
+    },
+    "replay": {
+      "algorithm": "direct exact Fraction sum-product",
+      "exact_summand_sha256": "4faefff022f17162c70dc8d871eea06b63cb56a59a176db50bdacdc59baabbca"
+    },
+    "result": {
+      "denominator": "6192478663894038242767851571352304290491369843964616248347650336728166277982467646289818752285440743153494663996079861661696000000",
+      "numerator": "6022742696152245409643640102740549865414901254373268557879343239558627406936422309336078796488884818479561495046109783419813"
+    },
+    "schema": "certified-qmc-exact-b2-error-v1",
+    "tag": "VERIFIED"
+  },
+  "schema": "certified-qmc-audit-wrapper-v1",
+  "tag": "VERIFIED_PREFIX"
+}
