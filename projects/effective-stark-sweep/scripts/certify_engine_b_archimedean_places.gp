@@ -1,4 +1,4 @@
-\\ Exact all-archimedean-place audit for the seven Engine-B packets.
+\\ Exact all-archimedean-place audit for the eight Engine-B packets.
 \\ For a reciprocal polynomial Q of degree 2n, construct the unique
 \\ trace polynomial R with Q(X)=X^n R(X+X^-1).  Roots of R in (-2,2)
 \\ give conjugate pairs of Q on the unit circle.  The remaining roots
@@ -90,6 +90,10 @@ run_audit() =
       -826*x^9+1131*x^8-1598*x^7+1613*x^6-1336*x^5
       +995*x^4-513*x^3+146*x^2-20*x+1,
     10, 5);
+  audit_case("RQ_000458",
+    x^8-40*x^7+172*x^6+488*x^5+694*x^4
+      +488*x^3+172*x^2-40*x+1,
+    4, 2);
   print("ENGINE_B_ARCHIMEDEAN_PLACE_AUDIT=VERIFIED");
 };
 

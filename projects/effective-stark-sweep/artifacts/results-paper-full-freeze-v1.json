@@ -1,0 +1,75 @@
+{
+  "schema": "effective-stark-results-paper-full-freeze-v1",
+  "recorded_at_utc": "2026-07-30T14:38:10Z",
+  "status": "COMPLETE_MAJOR_REVISION_REFEREE_READY_NOT_SUBMISSION_READY",
+  "supersedes": "artifacts/results-paper-ab-freeze-v1.json",
+  "supersession_reason": "The A/B extraction was an incomplete response to the requested repair.  The full manuscript restores CM descent only after proving a cyclic-quartic Fourier-to-CM-norm theorem and correcting the e=6 powered-unit bridge.",
+  "primary_manuscript": {
+    "tex": "paper/effective-stark-results.tex",
+    "tex_sha256": "0e6b01556809530a285752c0a1b90e478bac1cae225f3abea17a659f44913bba",
+    "pdf": "paper/effective-stark-results.pdf",
+    "pdf_sha256": "d298138c7d756a8a1127fb5e30536458d5276b592a9850ed24b49db4c2138f0a",
+    "page_count": 15,
+    "latex_passes": 2,
+    "latex_warnings": 0,
+    "source_date_epoch": 1785420000,
+    "independent_builds_byte_identical": true
+  },
+  "theorem_scope": {
+    "engine_a": "uniform quadratic-support theorem",
+    "engine_b_case_count": 8,
+    "engine_c_case_count": 5,
+    "engine_c_e_values_used_in_proofs": [
+      2,
+      6,
+      8
+    ],
+    "structural_lemmas": [
+      "absolutely-abelian no-go",
+      "index parity"
+    ]
+  },
+  "explicit_nonclaims": {
+    "q6_e12": "auxiliary-prime cross-check only; excluded from theorem until individual primes and finite valuations eliminate residual S-unit ambiguity",
+    "rq000458_engine_c": "normalization diagnostic only; theorem claim rests solely on Engine B",
+    "census": "no completeness counts or conductor trends"
+  },
+  "engine_c_scope_correction": {
+    "artifact": "artifacts/engine-c-claim-scope-correction-v1.json",
+    "artifact_sha256": "af04f48f7227503a20bc902ea988e8b3d4208f404da989ec290beabb13a0b0ea"
+  },
+  "engine_c_correction": {
+    "description": "The first e=6 bridge took norms of the powered Stark unit epsilon.  The primitive packet requires u with epsilon=u^3.  All six routes were rerun after exact coordinate division by three.",
+    "script": "scripts/correct_engine_c_e6_primitive_packets.py",
+    "script_sha256": "7776087f351743d60b06d41fd490fa09a24238175cde7fdeeeb7dbc912d3e128",
+    "artifact": "artifacts/engine-c-e6-primitive-packet-correction-v1.json",
+    "artifact_sha256": "4e00a4c51505fa3430ea5ccf4a9a335d2d712a79b9e377376dc9250c62fdea2b",
+    "route_count": 6,
+    "verdict": "VERIFIED"
+  },
+  "referee_audit": {
+    "script": "scripts/audit_results_paper_full.py",
+    "script_sha256": "cc1a8a850cf6fbda049edb5c5b3129f2b7612f86a28b7fdf90dc23602a180b7f",
+    "artifact": "artifacts/results-paper-full-referee-audit-v1.json",
+    "artifact_sha256": "ef085db85412fd49cc7facfe2c083b93ea92745a519a039f88ba4db0df4a146b",
+    "outcome": "PASS"
+  },
+  "engine_b_archimedean_audit": {
+    "script": "scripts/certify_engine_b_archimedean_places.gp",
+    "script_sha256": "241c947123f038f5cc34a45bc73b89744854b7d6ebe4bc6dc18a43b4c19ff7b6",
+    "artifact": "artifacts/engine-b-archimedean-place-audit-v1.json",
+    "artifact_sha256": "4bcd91d8ced4e96c5bef20c5d99b02ecdf4eee78875f5f32e6f935b7a06e117b",
+    "case_count": 8,
+    "outcome": "VERIFIED_EXACT_ALL_EIGHT"
+  },
+  "literature_watch": {
+    "artifact": "artifacts/kopp-arxiv-watch-2026-07-30.json",
+    "artifact_sha256": "08383db7bf814d1be3b26efbdbbc0cd2fae47eb63ed5f581ac278d68e5fc5076",
+    "observed_current_version": "v3"
+  },
+  "publication_gate": {
+    "zenodo": "NO_ACTION_TAKEN",
+    "submission": "BLOCKED_PENDING_NEW_HUMAN_REFEREE_ROUND_AND_PUBLIC_CERTIFICATE_ARCHIVE",
+    "publish_action_allowed": false
+  }
+}
