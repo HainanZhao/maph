@@ -1,0 +1,26 @@
+{
+  "schema": "effective-stark-engine-c-generic-w3-contract-v1",
+  "frozen_at_utc": "2026-07-30T06:34:18Z",
+  "claim_tag": "PREREGISTERED_CONTRACT",
+  "pilot": {
+    "absolute_packet_polynomial": "x^8 + 10*x^6 + 14*x^4 - 20*x^2 + 4",
+    "case_ids": ["RQ-001280", "RQ-001297"],
+    "real_base": "Q(sqrt(35))",
+    "cm_bases": ["Q(sqrt(-10))", "Q(sqrt(-14))"],
+    "expected_inventory_e_pair": [2, 2]
+  },
+  "required_components": [
+    "exact_character_selection",
+    "arb_torsion_quotient_unit_orbit",
+    "exact_artin_labeled_packet_bridge",
+    "member_specific_transport"
+  ],
+  "character_selection": {
+    "candidate_source": "bnrchar on the independently reconstructed rnfconductor subgroup",
+    "comparison": "exact lfunan coefficient vectors",
+    "acceptance": "unique source match and an injective finite signature on the exhaustive compatible set",
+    "forbidden": "numerical character recognition or a hard-coded selected CM character"
+  },
+  "promotion_boundary": "No packet promotion until every required component and the anchor replay are complete.",
+  "failure_disposition": "HALT_AND_PRESERVE"
+}
