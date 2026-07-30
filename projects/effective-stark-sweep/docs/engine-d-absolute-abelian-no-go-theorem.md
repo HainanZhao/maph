@@ -1,7 +1,7 @@
 # Engine D gate: absolute-abelian parity is a no-go theorem
 
 **Date:** 2026-07-30  
-**Status:** `VERIFIED_THEOREM`; proposed 276-case Engine D rejected  
+**Status:** `VERIFIED_THEOREM`; promoted to a displayed paper lemma
 **Scope:** one-place ray invariants over real quadratic fields
 
 ## The missing predicate
@@ -121,4 +121,3 @@ field.
 - 276-case D bulk: `CANCELLED_EMPTY_CORRECTED_POPULATION`;
 - no analytic values, Arb recognitions, or theorem tags were promoted
   before this gate fired.
-

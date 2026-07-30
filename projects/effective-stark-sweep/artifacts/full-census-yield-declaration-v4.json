@@ -1,0 +1,111 @@
+{
+  "accounting": {
+    "frontier_proxy_negative_withdrawn_pending": 177,
+    "pre_recovery_frontier": 1818,
+    "pre_registered_threshold": 15,
+    "proved_trivial": 3899,
+    "safe_eligible_beyond_seven_anchors": 6311,
+    "safe_eligible_including_trivial": 6318,
+    "substantive_pending_b": 64,
+    "substantive_safe_breakdown": {
+      "A": 1560,
+      "B": 131,
+      "C": 728
+    },
+    "substantive_safe_eligible": 2419,
+    "yield_checkpoint": "PASS"
+  },
+  "claim_tag": "VERIFIED_ACCOUNTING_WITH_PENDING_CLASSIFICATION",
+  "engine_population_attestations": {
+    "A": "unaffected: routing is support-order <=2 and does not depend on the conjugation proxy",
+    "B": "131 valid stable-modulus rows plus 64 pending genuine normal-closure reconstructions",
+    "C_completeness": "not yet closed: 252 supported quartic rows excluded by the W1 proxy must receive the complete geometry screen",
+    "C_positive_728": "unaffected: every positive case passed the actual splitting-closure geometry gate"
+  },
+  "histogram": {
+    "ENGINE_A_NONTRIVIAL_ELIGIBLE": {
+      "row_occurrences": 1560,
+      "status": "UNCHANGED_AND_PROXY_INDEPENDENT"
+    },
+    "ENGINE_B_PENDING_ACTUAL_NORMAL_CLOSURE": {
+      "row_occurrences": 64,
+      "status": "PENDING_NOT_FRONTIER"
+    },
+    "ENGINE_B_VALID_STABLE_MODULUS": {
+      "row_occurrences": 131,
+      "status": "ELIGIBLE"
+    },
+    "ENGINE_C_POSITIVE_ELIGIBLE": {
+      "completeness_note": "252 proxy-excluded supported quartic rows await the same actual-splitting-closure geometry screen",
+      "row_occurrences": 728,
+      "status": "UNCHANGED_POSITIVE_SET"
+    },
+    "FRONTIER_PRE_RECOVERY": {
+      "row_occurrences": 1818,
+      "status": "NOT_FINAL_UNTIL_PROXY_RECOVERY"
+    },
+    "PROVED_TRIVIAL": {
+      "row_occurrences": 3899,
+      "status": "UNCHANGED"
+    }
+  },
+  "index_one_proxy_overlap_no_double_count": {
+    "inside_proved_trivial": 2552,
+    "inside_substantive_engine_a": 693,
+    "proposed_engine_d_rejected_and_retained_in_frontier": 276,
+    "proxy_rows": 3521,
+    "sum_check": 3521
+  },
+  "recorded_at_utc": "2026-07-30T09:29:05.483495+00:00",
+  "rejected_engine_d_split": {
+    "ledger_artifact": "artifacts/census-split-v3-engine-d-proposal-rejected-v1.json",
+    "proposal": "FRONTIER 1818->1542; substantive 2483->2759",
+    "reason": "the no-go lemma and exact modulus-stability audit give zero corrected substantive Engine-D cases",
+    "status": "PROPOSED_AND_REJECTED"
+  },
+  "representative_count": 8200,
+  "revision_history": [
+    {
+      "artifact": "artifacts/full-census-yield-declaration-v1.json",
+      "revision": "v1",
+      "role": "first complete theorem-route accounting"
+    },
+    {
+      "artifact": "artifacts/full-census-yield-declaration-v2.json",
+      "revision": "v2",
+      "role": "packet-occurrence versus distinct-closure and mixed-row correction"
+    },
+    {
+      "artifact": "artifacts/full-census-yield-declaration-v3.json",
+      "revision": "v3",
+      "role": "corrected closure counts and frozen frontier trend"
+    },
+    {
+      "artifact": "artifacts/full-census-yield-declaration-v4.json",
+      "revision": "v4",
+      "role": "finite-modulus stability containment; B 131 valid plus 64 pending"
+    }
+  ],
+  "schema": "effective-stark-full-census-yield-v4",
+  "source_hashes": {
+    "artifacts/census-split-v3-engine-d-proposal-rejected-v1.json": "149fa8de2162bcac8e1d480f314af18ec1c1c1503203ac7bfbb549acc2d71b9e",
+    "artifacts/conjugation-dependent-census-audit-v1.json": "98735d7d772e68203b157dbdd2ff003e26363cb3a4a9b184aa1e78968d33b113",
+    "artifacts/full-census-yield-declaration-v3.json": "406bc4695329213652608b1db00178bac9ee8deadbbe5e505cae3149782aefa8",
+    "artifacts/proxy-recovery-queue-v1.json": "88d13397e205fe2c38ceffa6547e6d08088b9f2a80abe4dc966d600be0305fe8",
+    "artifacts/proxy-scope-and-tag-audit-v1.json": "cd565359db21f7c06b2fde8db103902f4c37d4877055f8842ec7961813ad7a1a",
+    "scripts/declare_census_v4.py": "0c15c76159b6f8cbb1d3eca699776254901b8f695883aba22d597f03138ba6d6"
+  },
+  "tag_history": {
+    "false_case_level_theorem_tags": 0,
+    "intermediate_correction": "proxy-dependent VERIFIED_W2 classification artifacts are superseded in v4; RQ-007500 is the one affected completed canonical closure certificate",
+    "paper_sentence": "Across four accounting revisions, zero false case-level theorem tags were issued: every predicate correction preceded W3 promotion.",
+    "stronger_zero_false_tags_claim": "NOT_MADE"
+  },
+  "w4_gate_open": false,
+  "w4_gate_requirements": [
+    "241-row B reconstruction and reclassification complete (64 former passes plus 177 withdrawn negatives)",
+    "252-row C catch-up geometry complete",
+    "8200-row genuine index ledger complete",
+    "occurrence transport closed"
+  ]
+}

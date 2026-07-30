@@ -1,5 +1,11 @@
 # Cycle 067 — Engine-D anchor gate and census containment
 
+> **Superseded scope note (Cycle 068):** the subsequent full code-path
+> audit broadened recovery from 64 former B passes to all 241 unstable
+> B screens (including 177 withdrawn negatives), found 252 quartic rows
+> requiring a C catch-up screen, and froze a complete 8,200-row genuine
+> index rerun. The Cycle-067 artifacts remain the discovery record.
+
 **Date:** 2026-07-30  
 **Outcome:** proposed Engine D rejected; 64 B rows quarantined  
 **Promotions:** one uniform no-go theorem, three negative anchors  
@@ -103,4 +109,3 @@ support-prime records are stored individually under
 
 The failed proposed split remains preserved in
 `artifacts/census-split-v3-engine-d-proposal-rejected-v1.json`.
-
