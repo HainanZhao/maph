@@ -1,0 +1,149 @@
+{
+  "schema": "effective-stark-theorem-value-exponent-pilot-v1",
+  "frozen_at_utc": "2026-07-30T00:00:00Z",
+  "selection_rule": "Before measuring new safe exponents, retain distinct normal closures that are competitive on at least one of: degree 16, shortest divisor count at a fixed degree, occurrence multiplicity at least 3, first order-10 support, smallest real-quadratic discriminant, or C-to-B reroute novelty.",
+  "exclusions": [
+    {
+      "case_id": "RQ-000190",
+      "reason": "already proved"
+    },
+    {
+      "case_id": "RQ-000419",
+      "reason": "already selected as the next B W3 target; safe exponent 4032 already verified"
+    },
+    {
+      "case_id": "RQ-004467",
+      "reason": "safe exponent 13810176 already verified and explicitly deprioritized"
+    }
+  ],
+  "routes": [
+    {
+      "case_id": "RQ-002955",
+      "field_d": 77,
+      "finite_norm": 7,
+      "normal_closure_degree": 24,
+      "closure_multiplicity": 4,
+      "support_orders": [2, 6],
+      "base_polynomial": "z^2-z+3",
+      "base_a": -1,
+      "base_b": 3,
+      "conductor_hnf": [[7, 0], [0, 7]],
+      "divisor_count": 2,
+      "selection_reason": "order six, degree 24, shortest divisor table, four closure occurrences"
+    },
+    {
+      "case_id": "RQ-006512",
+      "field_d": 161,
+      "finite_norm": 7,
+      "normal_closure_degree": 24,
+      "closure_multiplicity": 10,
+      "support_orders": [2, 6],
+      "base_polynomial": "z^2-z+6",
+      "base_a": -1,
+      "base_b": 6,
+      "conductor_hnf": [[7, 0], [0, 7]],
+      "divisor_count": 2,
+      "selection_reason": "largest multiplicity among degree-24 two-row closures"
+    },
+    {
+      "case_id": "RQ-001107",
+      "field_d": 33,
+      "finite_norm": 11,
+      "normal_closure_degree": 40,
+      "closure_multiplicity": 8,
+      "support_orders": [2, 10],
+      "base_polynomial": "z^2-z+1",
+      "base_a": -1,
+      "base_b": 1,
+      "conductor_hnf": [[11, 0], [0, 11]],
+      "divisor_count": 2,
+      "selection_reason": "first order-10 target and eight closure occurrences"
+    },
+    {
+      "case_id": "RQ-000108",
+      "route_label": "sqrt_minus_3",
+      "field_d": 5,
+      "finite_norm": 45,
+      "normal_closure_degree": 16,
+      "closure_multiplicity": 1,
+      "support_orders": [4],
+      "base_polynomial": "z^2-z+1",
+      "base_a": -1,
+      "base_b": 1,
+      "conductor_hnf": [[15, 5], [0, 5]],
+      "divisor_count": 4,
+      "selection_reason": "smallest new B normal closure and a C-geometry reroute"
+    },
+    {
+      "case_id": "RQ-000108",
+      "route_label": "sqrt_minus_15",
+      "field_d": 5,
+      "finite_norm": 45,
+      "normal_closure_degree": 16,
+      "closure_multiplicity": 1,
+      "support_orders": [4],
+      "base_polynomial": "z^2-z+4",
+      "base_a": -1,
+      "base_b": 4,
+      "conductor_hnf": [[15, 7], [0, 1]],
+      "divisor_count": 4,
+      "selection_reason": "second exact route for the smallest new closure; exponent chooses the printed route"
+    },
+    {
+      "case_id": "RQ-000021",
+      "field_d": 2,
+      "finite_norm": 49,
+      "normal_closure_degree": 24,
+      "closure_multiplicity": 2,
+      "support_orders": [2, 6],
+      "base_polynomial": "z^2+14",
+      "base_a": 0,
+      "base_b": 14,
+      "conductor_hnf": [[7, 0], [0, 1]],
+      "divisor_count": 2,
+      "selection_reason": "smallest real-quadratic field in the new B corpus"
+    },
+    {
+      "case_id": "RQ-000686",
+      "field_d": 21,
+      "finite_norm": 21,
+      "normal_closure_degree": 24,
+      "closure_multiplicity": 3,
+      "support_orders": [2, 6],
+      "base_polynomial": "z^2-z+2",
+      "base_a": -1,
+      "base_b": 2,
+      "conductor_hnf": [[21, 9], [0, 3]],
+      "divisor_count": 4,
+      "selection_reason": "three occurrences and a four-row route beyond prime conductor"
+    },
+    {
+      "case_id": "RQ-002057",
+      "field_d": 57,
+      "finite_norm": 27,
+      "normal_closure_degree": 24,
+      "closure_multiplicity": 3,
+      "support_orders": [2, 6],
+      "base_polynomial": "z^2-z+5",
+      "base_a": -1,
+      "base_b": 5,
+      "conductor_hnf": [[9, 0], [0, 9]],
+      "divisor_count": 3,
+      "selection_reason": "three occurrences and a prime-power conductor route"
+    },
+    {
+      "case_id": "RQ-007487",
+      "field_d": 185,
+      "finite_norm": 80,
+      "normal_closure_degree": 32,
+      "closure_multiplicity": 1,
+      "support_orders": [2, 4],
+      "base_polynomial": "z^2+185",
+      "base_a": 0,
+      "base_b": 185,
+      "conductor_hnf": [[5, 0], [0, 1]],
+      "divisor_count": 2,
+      "selection_reason": "C-geometry reroute with mixed quadratic/quartic support and a two-row route"
+    }
+  ]
+}

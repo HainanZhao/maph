@@ -149,3 +149,27 @@ Euler-factor corpus therefore verifies a single ACNF theorem over 912
 field objects, then transfers the result to their occurrences.  That
 bulk remains after the individual C and B identifications in the
 pre-registered order.
+
+## Theorem-value portfolio
+
+To prevent the census from choosing examples after inspecting their
+analytic behavior, we froze eight additional normal closures using
+only degree, multiplicity, divisor count, character order, and route
+novelty.  We then computed their safe exponents exactly.  The selected
+five are
+
+| real base and modulus | closure degree | multiplicity | support | safe exponent |
+|---|---:|---:|---|---:|
+| \(\mathbb Q(\sqrt5)\), norm 45 | 16 | 1 | 4 | 2880 |
+| \(\mathbb Q(\sqrt2)\), norm 49 | 24 | 2 | 2,6 | 2016 |
+| \(\mathbb Q(\sqrt{57})\), norm 27 | 24 | 3 | 2,6 | 2592 |
+| \(\mathbb Q(\sqrt{77})\), norm 7 | 24 | 4 | 2,6 | 4032 |
+| \(\mathbb Q(\sqrt{33})\), norm 11 | 40 | 8 | 2,10 | 15840 |
+
+The first four price height-rigidity risk at or below the proved
+Paper-II scale.  The fifth is intentionally not cost-minimal: it is
+the first order-ten case and tests whether the observed order-six
+success reflects a wider even-order phenomenon.  The
+\(\mathbb Q(\sqrt{111})\) norm-three case, with exponent
+\(13{,}810{,}176\), remains an explicit deferred control rather than
+an active W3 target.
