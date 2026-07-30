@@ -43,13 +43,13 @@ class ResultsPaperMajorRevisionTests(unittest.TestCase):
         self.assertIn("RESULTS_PAPER_FULL_AUDIT=PASS", completed.stdout)
 
     def test_full_freeze_hashes(self):
-        freeze = load("artifacts/results-paper-full-freeze-v7.json")
+        freeze = load("artifacts/results-paper-full-freeze-v8.json")
         self.assertEqual(
             freeze["status"],
-            "PUBLISHED_ZENODO_VERIFIED",
+            "PUBLISHED_ZENODO_V1_1_ROBLOT_OVERLAP_VERIFIED",
         )
         self.assertEqual(
-            freeze["supersedes"], "artifacts/results-paper-full-freeze-v6.json"
+            freeze["supersedes"], "artifacts/results-paper-full-freeze-v7.json"
         )
         manuscript = freeze["primary_manuscript"]
         self.assertEqual(sha(manuscript["tex"]), manuscript["tex_sha256"])
@@ -71,7 +71,7 @@ class ResultsPaperMajorRevisionTests(unittest.TestCase):
             sha(companion["local_freeze"]), companion["local_freeze_sha256"]
         )
         publication = freeze["publication"]
-        self.assertEqual(publication["doi"], "10.5281/zenodo.21703306")
+        self.assertEqual(publication["doi"], "10.5281/zenodo.21707548")
         self.assertTrue(publication["top_level_pdf_and_tex"])
         self.assertEqual(
             sha(publication["metadata"]), publication["metadata_sha256"]
@@ -179,11 +179,16 @@ class ResultsPaperMajorRevisionTests(unittest.TestCase):
             "Shintani's Proposition~5(i)--(iii) on pp.~156--158", prose
         )
         self.assertIn(
-            "We are not aware of previous unconditional one-place Stark packet",
+            "We are not aware of an earlier unconditional, componentwise Artin-labelled identification",
             prose,
         )
         self.assertIn("support order ten", prose)
         self.assertNotIn("support orders six or ten", prose)
+        self.assertIn(
+            "We therefore make no claim to the first unconditional weak Stark result",
+            prose,
+        )
+        self.assertIn("Supplementary Table~S3", prose)
         self.assertIn(r"\cite{Zhao45}", paper)
         self.assertIn(r"\cite{Zhao78}", paper)
         self.assertIn(
@@ -191,6 +196,27 @@ class ResultsPaperMajorRevisionTests(unittest.TestCase):
             prose,
         )
         self.assertNotIn("so these are apparently the first examples", prose)
+
+    def test_roblot_sextic_overlap_boundary(self):
+        record = load("artifacts/roblot-sextic-overlap-audit-v1.json")
+        cases = {row["case_id"]: row for row in record["cases"]}
+        self.assertEqual(record["verdict"], "PASS")
+        self.assertEqual(
+            {
+                case_id: row["roblot_theorem_7_1_applies"]
+                for case_id, row in cases.items()
+            },
+            {
+                "RQ-000190": True,
+                "RQ-000419": True,
+                "RQ-000021": True,
+                "RQ-002057": False,
+                "RQ-002955": True,
+            },
+        )
+        self.assertEqual(
+            cases["RQ-002057"]["relative_ramification_index_above_3"], 6
+        )
 
     def test_superseded_cm_gap_draft_is_removed(self):
         self.assertFalse(

@@ -103,8 +103,10 @@ def main() -> None:
         "Equality of unlabeled polynomials is never the bridge",
         "not used in the theorem",
         "The theorem claim for this row rests solely on Engine B",
-        "We are not aware of previous unconditional one-place Stark packet",
-        "https://doi.org/10.5281/zenodo.21703306",
+        "We therefore make no claim to the first unconditional weak Stark result",
+        "componentwise Artin-labelled identification",
+        "RQ-002057: the prime above \\(3\\) has relative ramification index",
+        "https://doi.org/10.5281/zenodo.21707548",
         "PDF and",
         "source are exposed as top-level files",
         "Shintani's Proposition~4 on pp.~154--156",
@@ -113,6 +115,7 @@ def main() -> None:
         "complete the proof of Theorem",
         "Supplementary Table~S1",
         "Supplementary Table~S2",
+        "Supplementary Table~S3",
         r"\cite{Zhao45}",
         r"\cite{Zhao78}",
         "support order ten",
@@ -138,8 +141,10 @@ def main() -> None:
         supplement,
         "Supplementary Table S1: certificate record map",
         "Supplementary Table S2: complete Artin-label interval replay",
+        "Supplementary Table S3: relation to Roblot's sextic theorem",
         r"\path{data/q7-p7-case-v1.json}",
         r"\path{artifacts/engine-c-fourier-convention-correction-v1.json}",
+        r"\path{artifacts/roblot-sextic-overlap-audit-v1.json}",
         "672 zero Euler products",
         "affecting 603 rows",
         "In 346 rows every supported derivative vanishes",
@@ -167,6 +172,38 @@ def main() -> None:
     }
     if any(euler.get(key) != value for key, value in expected_euler.items()):
         raise AssertionError("Engine-A Euler-degeneracy counts changed")
+
+    # Prior-work boundary: test Roblot's sextic hypotheses on all five
+    # selected order-six ray fields.
+    roblot_output = run(
+        ["gp", "-q", "scripts/audit_roblot_sextic_overlap.gp"],
+        "ROBLOT_SEXTIC_OVERLAP_AUDIT=PASS",
+    )
+    roblot = load("artifacts/roblot-sextic-overlap-audit-v1.json")
+    roblot_cases = {row["case_id"]: row for row in roblot["cases"]}
+    expected_roblot = {
+        "RQ-000190": True,
+        "RQ-000419": True,
+        "RQ-000021": True,
+        "RQ-002057": False,
+        "RQ-002955": True,
+    }
+    if set(roblot_cases) != set(expected_roblot):
+        raise AssertionError("Roblot overlap case set changed")
+    for case_id, applies in expected_roblot.items():
+        row = roblot_cases[case_id]
+        if (
+            not all(row[key] for key in ("A1", "A2", "A3"))
+            or row["class_number_H"] != 1
+            or row["roblot_theorem_7_1_applies"] is not applies
+        ):
+            raise AssertionError(f"Roblot overlap changed for {case_id}")
+    if (
+        not roblot_cases["RQ-002057"]["wild_above_3"]
+        or roblot_cases["RQ-002057"]["relative_ramification_index_above_3"]
+        != 6
+    ):
+        raise AssertionError("RQ-002057 wild-3 boundary changed")
 
     # Engine B: all eight selected rows and their exact root geometry.
     q7 = load("data/q7-p7-case-v1.json")
@@ -387,6 +424,13 @@ def main() -> None:
             },
             "archimedean_stdout_sha256": hashlib.sha256(
                 arch_output.encode()
+            ).hexdigest(),
+        },
+        "prior_work": {
+            "roblot_7_1_applies_count": 4,
+            "roblot_7_1_wild_exception": "RQ-002057",
+            "roblot_replay_stdout_sha256": hashlib.sha256(
+                roblot_output.encode()
             ).hexdigest(),
         },
         "engine_c": {

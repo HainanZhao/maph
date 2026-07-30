@@ -4,7 +4,7 @@ This archive accompanies *Effective Archimedean Stark Theorems over
 Real Quadratic Fields: Quadratic Support, Shintani Transfer, and CM
 Descent*.
 
-Public record: <https://doi.org/10.5281/zenodo.21703306>.
+Public record: <https://doi.org/10.5281/zenodo.21707548>.
 
 The paper contains the mathematical arguments. This archive exposes
 the exact case data, Arb certificate transcripts, correction records,
@@ -61,6 +61,10 @@ gate. No failed record is accepted by either verifier.
   minus-sign normalization prose is superseded; packet polynomials and
   case tags are unchanged.
 - Census completeness and conductor trends are outside this archive.
+- Roblot's sextic weak-Stark theorem applies to four selected
+  order-six ray fields; RQ-002057 is excluded by wild ramification
+  above \(3\).  The exact hypothesis audit is included in
+  `artifacts/roblot-sextic-overlap-audit-v1.json`.
 
 ## Integrity
 

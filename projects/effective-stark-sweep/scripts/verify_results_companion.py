@@ -180,6 +180,23 @@ def verify_engine_b() -> None:
         ["gp", "-q", "scripts/certify_engine_b_archimedean_places.gp"],
         "ENGINE_B_ARCHIMEDEAN_PLACE_AUDIT=VERIFIED",
     )
+    run(
+        ["gp", "-q", "scripts/audit_roblot_sextic_overlap.gp"],
+        "ROBLOT_SEXTIC_OVERLAP_AUDIT=PASS",
+    )
+    overlap = load("artifacts/roblot-sextic-overlap-audit-v1.json")
+    applicability = {
+        row["case_id"]: row["roblot_theorem_7_1_applies"]
+        for row in overlap["cases"]
+    }
+    if applicability != {
+        "RQ-000190": True,
+        "RQ-000419": True,
+        "RQ-000021": True,
+        "RQ-002057": False,
+        "RQ-002955": True,
+    }:
+        raise RuntimeError("Roblot sextic-overlap boundary changed")
     print("ENGINE_B=VERIFIED")
 
 

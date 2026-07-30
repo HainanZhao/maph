@@ -24,7 +24,7 @@ records queue-level Engine-A statistics that are not used in the
 uniform theorem.
 
 \paragraph{Archive DOI.}
-\url{https://doi.org/10.5281/zenodo.21703306}.  The main paper PDF and
+\url{https://doi.org/10.5281/zenodo.21707548}.  The main paper PDF and
 \TeX\ source, this supplement, and the frozen companion archive are
 top-level files in the public record.
 
@@ -75,8 +75,36 @@ index-parity theorem &
 parity audit &
 \path{artifacts/results-paper-odd-index-parity-audit-v1.json}\\
 literature perimeter & \path{data/literature-perimeter-v1.json}\\
+Roblot sextic-overlap audit &
+\path{artifacts/roblot-sextic-overlap-audit-v1.json}\\
 \bottomrule
 \end{longtable}
+
+\section*{Supplementary Table S3: relation to Roblot's sextic theorem}
+
+Here \(H/K\) is the cyclic sextic one-place ray field.  The columns
+record Roblot's hypotheses (A1)--(A3), the certified class number of
+\(H\), and applicability of \cite[Thm.~7.1]{Roblot2013}.  Every class
+number was computed with \texttt{bnfinit(P,1)} and certified by
+\texttt{bnfcertify(bnf)=1}; the local assertion was checked in
+\(H/H^+\) by exact prime decomposition.
+
+\begin{center}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+case & A1 & A2 & A3 & \(h_H\) & Thm.~7.1\\
+\midrule
+RQ-000190 & yes & yes & yes & \(1\) & applies\\
+RQ-000419 & yes & yes & yes & \(1\) & applies\\
+RQ-000021 & yes & yes & yes & \(1\) & applies\\
+RQ-002057 & yes & yes & yes & \(1\) & no: wild at \(3\)\\
+RQ-002955 & yes & yes & yes & \(1\) & applies\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+For RQ-002057 the relative ramification index above \(3\) is \(6\).
+For the other four cases no prime above \(3\) ramifies in \(H/K\).
 
 \section*{Supplementary Table S2: complete Artin-label interval replay}
 
@@ -133,5 +161,12 @@ character occurrences across 912 distinct character fields.  Exact
 imprimitive Euler-factor evaluation finds 672 zero Euler products,
 affecting 603 rows.  In 346 rows every supported derivative vanishes,
 so the theorem's product is empty and \(X_A=1\).
+
+\begin{thebibliography}{1}
+\bibitem{Roblot2013}
+X.-F.~Roblot, \emph{Index formulae for Stark units and their
+solutions}, Pacific J.\ Math.\ \textbf{266} (2013), 391--422,
+\url{https://doi.org/10.2140/pjm.2013.266.391}.
+\end{thebibliography}
 
 \end{document}
