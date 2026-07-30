@@ -1,0 +1,100 @@
+{
+  "schema": "dedekind-stark-roblot-quartic-gate-sealed-v1",
+  "sealed_at_utc": "2026-07-30T19:30:00Z",
+  "independence_wall": "PASS",
+  "analytic_lprime_opened": false,
+  "screen_claim_tag": "VERIFIED_EXACT",
+  "coefficient_claim_tag": "NUMERICAL_FROM_EXACT_UNIT",
+  "source": {
+    "script": "scripts/roblot_quartic_gate.gp",
+    "script_sha256": "4d749534dc4a8736f70972d4312777a62d97323e65733cce18ac46a101dc0e02",
+    "preregistration": "docs/cycle-023-sealed-constructor-preregistration.md",
+    "preregistration_sha256": "f3ae666d9253ba3223ac86958100a2a430bb21f90bd7969d6126136c5dc1cf22"
+  },
+  "screen": [
+    {
+      "case_id": "RQ-000129",
+      "A1": true,
+      "A2": true,
+      "A3": true,
+      "class_number": 1,
+      "signature": [4, 2],
+      "plus_polynomial": "x^4 - 4*x^3 + 2*x^2 + 4*x - 2",
+      "rational_finite_support": [2]
+    },
+    {
+      "case_id": "RQ-001280",
+      "A1": true,
+      "A2": true,
+      "A3": true,
+      "class_number": 1,
+      "signature": [4, 2],
+      "plus_polynomial": "x^4 - 10*x^3 + 14*x^2 + 20*x + 4",
+      "rational_finite_support": [2]
+    },
+    {
+      "case_id": "RQ-001569",
+      "A1": true,
+      "A2": true,
+      "A3": true,
+      "class_number": 2,
+      "signature": [4, 2],
+      "plus_polynomial": "x^4 - 14*x^3 + 33*x^2 - 14*x + 1",
+      "rational_finite_support": [2, 3]
+    },
+    {
+      "case_id": "RQ-001894",
+      "A1": true,
+      "A2": true,
+      "A3": true,
+      "class_number": 4,
+      "signature": [4, 2],
+      "plus_polynomial": "x^4 - 20*x^3 - 975*x^2 - 4550*x + 8725",
+      "rational_finite_support": [3, 5]
+    },
+    {
+      "case_id": "RQ-007519",
+      "A1": true,
+      "A2": true,
+      "A3": true,
+      "class_number": 2,
+      "signature": [4, 2],
+      "plus_polynomial": "x^4 - 14*x^3 - 75*x^2 + 310*x + 217",
+      "rational_finite_support": [2, 3]
+    }
+  ],
+  "selected_constructor": {
+    "case_id": "RQ-000129",
+    "selection_rule_winner": true,
+    "class_number": 1,
+    "fitting_generator": 1,
+    "t_S": 0,
+    "norm_index": 4,
+    "e_exponent": 2,
+    "gamma_on_minus": [[0, -1], [1, 0]],
+    "minus_basis": [[0, 1], [-1, -1], [-1, 1], [0, 0], [0, 0]],
+    "theta_vector": [0, -1, -1, 0, 0],
+    "eta_vector": [2, -2, 2, 0, 0],
+    "eta_unit": "(2*x^7 + 3*x^6 - 2*x^5 + 2*x^4 - 14*x^3 + 18*x^2 - 28*x - 19)/13",
+    "anti_unit_norm": 1,
+    "distinguished_embedding_rule": "least real root of the absolute polynomial",
+    "distinguished_root": "-0.8399152530738541891635331740098141577877340328126600499976552202990159878009639324880472453484625117",
+    "log_orbit": [
+      "0.7603040672341132203618767533025413298587686777359811185011293115094218545803828613643109708781627635",
+      "2.716375069447568006553168682290680632878678462645767531093116993695858718395770896977548802778899780",
+      "-0.7603040672341132203618767533025413298587686777359811185011293115094218545803828613643109708781627635",
+      "-2.716375069447568006553168682290680632878678462645767531093116993695858718395770896977548802778899780"
+    ],
+    "roblot_coefficient": {
+      "real": "0.7603040672341132203618767533025413298587686777359811185011293115094218545803828613643109708781627635",
+      "imag": "2.716375069447568006553168682290680632878678462645767531093116993695858718395770896977548802778899780",
+      "abs": "2.820772197921876651801560889557126233172740719557793209879142697661897968467623241537999767699335074",
+      "phase_over_pi": "0.4131291606403244528199871468741034582216570414665111135217778469840250272891427007032036070189008854"
+    }
+  },
+  "theorem_source": {
+    "reference": "X.-F. Roblot, Index formulae for Stark units and their solutions, Theorem 6.1",
+    "arxiv": "1112.2820",
+    "formula": "eta_bar = f * (gamma + 1)^(e + t_S) * theta_bar"
+  }
+}
