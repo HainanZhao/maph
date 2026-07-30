@@ -15,11 +15,11 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "v3"
+VERSION = "v7"
 NAME = f"effective-stark-results-companion-{VERSION}"
 DIST = ROOT / "dist"
 ARCHIVE = DIST / f"{NAME}.tar.gz"
-FREEZE = ROOT / "artifacts/results-paper-companion-local-freeze-v3.json"
+FREEZE = ROOT / "artifacts/results-paper-companion-local-freeze-v7.json"
 
 SEEDS = {
     "paper/effective-stark-results.tex",
@@ -31,6 +31,8 @@ SEEDS = {
     "scripts/verify_results_companion.py",
     "scripts/build_results_companion.py",
     "scripts/audit_results_paper_full.py",
+    "scripts/audit_engine_a_euler_degeneracy.py",
+    "scripts/screen_engine_a_euler_degeneracy.gp",
     "scripts/certify_engine_b_archimedean_places.gp",
     "scripts/correct_engine_c_e6_primitive_packets.py",
     "scripts/run_engine_c_packet_bridge.py",
@@ -48,6 +50,8 @@ SEEDS = {
     "data/engine-c-e6-tranche-01-packet-bridge-v1.json",
     "data/literature-perimeter-v1.json",
     "artifacts/engine-b-archimedean-place-audit-v1.json",
+    "artifacts/engine-a-euler-degeneracy-v1.json",
+    "artifacts/engine-a-euler-degeneracy-v1.transcript",
     "artifacts/engine-c-claim-scope-correction-v1.json",
     "artifacts/engine-c-e6-primitive-packet-correction-v1.json",
     "artifacts/engine-c-e6-primitive-packet-correction-v1.transcript",
@@ -55,7 +59,7 @@ SEEDS = {
     "artifacts/engine-c-w3-tranche-01-verified-v1.json",
     "artifacts/results-paper-index-parity-lemma-v1.json",
     "artifacts/results-paper-odd-index-parity-audit-v1.json",
-    "artifacts/results-paper-full-referee-audit-v1.json",
+    "artifacts/results-paper-full-referee-audit-v2.json",
     "artifacts/shintani-1978-source-map-v1.json",
 }
 

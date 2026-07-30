@@ -43,13 +43,13 @@ class ResultsPaperMajorRevisionTests(unittest.TestCase):
         self.assertIn("RESULTS_PAPER_FULL_AUDIT=PASS", completed.stdout)
 
     def test_full_freeze_hashes(self):
-        freeze = load("artifacts/results-paper-full-freeze-v2.json")
+        freeze = load("artifacts/results-paper-full-freeze-v4.json")
         self.assertEqual(
             freeze["status"],
-            "MATHEMATICAL_REPAIRS_PASS_LOCAL_ARCHIVE_FROZEN_PENDING_PUBLIC_DEPOSIT_AND_HUMAN_REFEREE",
+            "REFEREE_MUST_FIXES_CLOSED_LOCAL_ARCHIVE_FROZEN_PENDING_PUBLIC_DEPOSIT_AND_HUMAN_REFEREE",
         )
         self.assertEqual(
-            freeze["supersedes"], "artifacts/results-paper-full-freeze-v1.json"
+            freeze["supersedes"], "artifacts/results-paper-full-freeze-v2.json"
         )
         manuscript = freeze["primary_manuscript"]
         self.assertEqual(sha(manuscript["tex"]), manuscript["tex_sha256"])
@@ -80,6 +80,33 @@ class ResultsPaperMajorRevisionTests(unittest.TestCase):
         self.assertIn("rests solely on Engine B", paper)
         self.assertNotIn("General-\\(e\\) CM normalization and orientation", paper)
 
+    def test_referee_must_fixes_are_regression_guarded(self):
+        paper = (ROOT / "paper/effective-stark-results.tex").read_text()
+        prose = " ".join(paper.split())
+        self.assertNotIn(r"\tag{", paper)
+        self.assertIn("examples comprise five order-six packets", paper)
+        self.assertIn(r"\(e=|\mu(E)|=2,6,8\)", paper)
+        self.assertNotIn(r"\(e=|\mu(E)|=2,4,6,8\)", paper)
+        self.assertIn(r"\phantomsection\label{par:conventions}", paper)
+        self.assertIn(r"\theta(\bar s)=i", paper)
+        self.assertIn(r"\psi(\sigma)=i", paper)
+        self.assertIn(r"\label{eq:index-parity}", paper)
+        self.assertIn(r"\label{sec:rq458}", paper)
+        self.assertIn("complete the proof of Theorem", prose)
+
+    def test_engine_a_euler_degeneracy_audit(self):
+        record = load("artifacts/engine-a-euler-degeneracy-v1.json")
+        self.assertEqual(
+            record["claim_tag"], "VERIFIED_EXACT_EULER_DEGENERACY_AUDIT"
+        )
+        self.assertEqual(record["case_count"], 1560)
+        self.assertEqual(record["supported_quadratic_character_count"], 2232)
+        self.assertEqual(record["characters_with_zero_euler_product"], 672)
+        self.assertEqual(record["cases_with_zero_euler_product"], 603)
+        self.assertEqual(
+            record["cases_with_all_supported_euler_products_zero"], 346
+        )
+
     def test_height_lemma_uses_only_powered_algebraic_elements(self):
         paper = (ROOT / "paper/effective-stark-results.tex").read_text()
         self.assertIn(r"\frac1m\log|\sigma_v(X_A^m)|", paper)
@@ -94,7 +121,10 @@ class ResultsPaperMajorRevisionTests(unittest.TestCase):
         self.assertIn(
             "Shintani's Proposition~5(i)--(iii) on pp.~156--158", prose
         )
-        self.assertIn("We are unaware of earlier unconditional oriented", prose)
+        self.assertIn(
+            "We are not aware of previous unconditional one-place Stark packet",
+            prose,
+        )
         self.assertNotIn("so these are apparently the first examples", prose)
 
     def test_superseded_cm_gap_draft_is_removed(self):

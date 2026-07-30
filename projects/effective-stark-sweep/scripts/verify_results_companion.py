@@ -52,6 +52,20 @@ def verify_engine_a() -> None:
     )
     if any(text not in paper for text in required):
         raise RuntimeError("Engine-A written theorem is incomplete")
+    run(
+        ["python3", "scripts/audit_engine_a_euler_degeneracy.py"],
+        "ENGINE_A_EULER_DEGENERACY_AUDIT=VERIFIED",
+    )
+    degeneracy = load("artifacts/engine-a-euler-degeneracy-v1.json")
+    expected = {
+        "case_count": 1560,
+        "supported_quadratic_character_count": 2232,
+        "characters_with_zero_euler_product": 672,
+        "cases_with_zero_euler_product": 603,
+        "cases_with_all_supported_euler_products_zero": 346,
+    }
+    if any(degeneracy.get(key) != value for key, value in expected.items()):
+        raise RuntimeError("Engine-A Euler-degeneracy audit changed")
     print("ENGINE_A=VERIFIED")
 
 
