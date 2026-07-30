@@ -1,0 +1,36 @@
+{
+  "schema": "effective-stark-engine-c-claim-scope-correction-v1",
+  "recorded_at_utc": "2026-07-30T14:40:00Z",
+  "status": "SUPERSEDING_SCOPE_CORRECTION",
+  "reason": "A written Fourier-to-CM-norm derivation distinguishes the powered Stark unit from the primitive quartic packet and exposes two route-specific normalization gaps.",
+  "corrections": [
+    {
+      "record": "artifacts/engine-c-e6-tranche-01-verified-v1.json",
+      "record_sha256": "89ed74bcee4acd5e37a43c0cb3ff06901a46fcaf588602070b5283f1058e8f6a",
+      "old_scope": "the displayed norms of epsilon were identified as the primitive e=6 packets",
+      "new_scope": "the powered-unit computations remain exact, but the primitive packet polynomials are those obtained after exact division of free-unit coordinates by three",
+      "replacement": "artifacts/engine-c-e6-primitive-packet-correction-v1.json",
+      "replacement_sha256": "4e00a4c51505fa3430ea5ccf4a9a335d2d712a79b9e377376dc9250c62fdea2b"
+    },
+    {
+      "record": "data/q6-norm8-case-v3.json",
+      "record_sha256": "1765eb7fb1739a4b1d71408ec84e4e8b63b5b3f7a7f91e5fa80acd317e1a1c26",
+      "old_scope": "the packet was proved independently through e=8 and e=12",
+      "new_scope": "the packet is proved through the natural e=8 route with |S|=3; the e=12 auxiliary-prime route is an exact cross-check but not a proof until finite valuations eliminate residual S-unit ambiguity"
+    },
+    {
+      "record": "data/rq000458-dual-case-v1.json",
+      "record_sha256": "93ebe3b77243cc37f99aab6f84c3a95548673e7f48b885d8f57b7ab282f579c7",
+      "old_scope": "independent Engine-B and Engine-C proofs",
+      "new_scope": "Engine B proves the packet; the Engine-C calculation is a normalization diagnostic until its fourth-root Fourier scaling is rederived"
+    }
+  ],
+  "current_theorem_tags": {
+    "e6_primitive_packets": "VERIFIED_AFTER_CORRECTION",
+    "q6_e8_route": "VERIFIED",
+    "q6_e12_route": "CROSS_CHECK_NOT_IN_PROOF",
+    "rq000458_engine_b": "VERIFIED",
+    "rq000458_engine_c": "DIAGNOSTIC_NOT_IN_PROOF"
+  },
+  "publication_effect": "All three corrections are reflected in paper/effective-stark-results.tex. No public deposit or submission used the superseded scopes."
+}
