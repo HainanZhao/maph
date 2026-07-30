@@ -1,0 +1,20 @@
+{
+  "schema": "effective-stark-engine-b-archimedean-place-audit-v1",
+  "recorded_at_utc": "2026-07-30T14:20:00Z",
+  "claim": "For every selected Engine-B absolute packet polynomial Q of degree 2n, the exact trace polynomial R defined by Q(X)=X^n R(X+X^-1) has only real roots. Its roots in (-2,2) account for every nonreal root of Q, proving that those conjugates lie on the unit circle.",
+  "method": "exact PARI polsturm counts and symbolic trace identity",
+  "script": {
+    "path": "scripts/certify_engine_b_archimedean_places.gp",
+    "sha256": "f041ed7dc956d736c2ab1eae1aa36f8f4910c760e3c8b00e3c9ddb51c389d127"
+  },
+  "cases": [
+    {"case_id": "RQ-000190", "degree": 12, "positive_real_roots": 6, "unit_circle_pairs": 3},
+    {"case_id": "RQ-000419", "degree": 12, "positive_real_roots": 6, "unit_circle_pairs": 3},
+    {"case_id": "RQ-000108", "degree": 8, "positive_real_roots": 4, "unit_circle_pairs": 2},
+    {"case_id": "RQ-000021", "degree": 12, "positive_real_roots": 6, "unit_circle_pairs": 3},
+    {"case_id": "RQ-002057", "degree": 12, "positive_real_roots": 6, "unit_circle_pairs": 3},
+    {"case_id": "RQ-002955", "degree": 12, "positive_real_roots": 6, "unit_circle_pairs": 3},
+    {"case_id": "RQ-001107", "degree": 20, "positive_real_roots": 10, "unit_circle_pairs": 5}
+  ],
+  "verdict": "VERIFIED_EXACT_ALL_SEVEN"
+}

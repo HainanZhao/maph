@@ -1,0 +1,23 @@
+RESULT=FAIL_PRESERVED
+DATE_UTC=2026-07-30
+SCOPE=Engine-A/Engine-B manuscript and CM major-revision draft
+SOURCE_DATE_EPOCH=1785420000
+FORCE_SOURCE_DATE=1
+LATEX_PASSES_PER_BUILD=2
+INDEPENDENT_BUILD_DIRECTORIES=2
+
+Both independent builds compiled without LaTeX warnings, but cmp found
+byte differences:
+
+effective-stark-results.pdf:
+  first difference at byte 328464
+  trailer IDs:
+    4E92471EFB6BDC363AE1A76CC6DFDCCB
+    5D441B04A6A249435062DD17ED9B0E22
+
+effective-stark-cm-major-revision.pdf:
+  cmp also reported a difference in the trailer region.
+
+DIAGNOSIS=pdfTeX generated the trailer ID from build-path-dependent state.
+REMEDY=Declare \pdftrailerid{} in each source and rerun the independent-build gate.
+TAG_PROMOTION=NONE

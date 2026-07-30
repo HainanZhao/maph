@@ -1,0 +1,192 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[hidelinks]{hyperref}
+\pdftrailerid{}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}[lemma]{Proposition}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Gal}{\operatorname{Gal}}
+
+\title{CM Descent for One-Place Archimedean Stark Invariants:\\
+Major-Revision Working Draft}
+\author{Hainan Zhao}
+\date{30 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This is a major-revision working draft, not a submission manuscript
+and not a source of proved packet claims.  It isolates the precise
+cyclic-quartic normalization used in a proposed descent from
+one-place real-quadratic invariants to Stark's proved theorem over
+imaginary quadratic fields.  The remaining proof obligations are an
+explicit Fourier-to-CM-norm bridge and, for the
+\(\Q(\sqrt6)\) example, a prime-ideal and finite-valuation analysis of
+the auxiliary Euler factors.  Previously computed packets are retained
+as candidates until those obligations close.
+\end{abstract}
+
+\section{Status and separation of automorphisms}
+
+Let \(k\) be imaginary quadratic and let \(E/k\) be cyclic quartic,
+with
+\[
+ G=\Gal(E/k)=\langle\sigma\rangle\simeq C_4,\qquad
+ \tau=\sigma^2.
+\]
+The involution \(\tau\) fixes \(k\).  It is therefore \emph{not}
+global complex conjugation, which acts nontrivially on \(k\).
+Whenever \(E\) is stable under global complex conjugation, denote the
+latter by \(j\) in the normal closure and put \(E^+=E^{\langle j\rangle}\).
+The internal anti-unit relation concerns \(\tau\); the positive CM
+norm concerns \(j\).  They must not be conflated.
+
+Fix a faithful ray character with
+\(\psi(\sigma)=i\), and let \(S\) contain the complex place and all
+conductor primes.  Suppose Stark's proved imaginary-quadratic
+rank-one theorem applies and \(|S|\ge3\), so that it supplies a global
+unit \(\varepsilon\in\mathcal O_E^\times\), unique modulo
+\(\mu(E)\).  Put \(e=|\mu(E)|\) and
+\[
+ \ell_g=\log|g\varepsilon|_{\rm ord}.
+\]
+
+\begin{lemma}[Cyclic-quartic normalization]\label{lem:norm}
+Assume in addition that
+\[
+ \tau(\varepsilon)\equiv\varepsilon^{-1}\pmod{\mu(E)}.
+\tag{1}
+\]
+Then
+\[
+ \zeta'_S(0,g)=-\frac2e\ell_g
+\tag{2}
+\]
+and, with \(L_S(s,\psi)=\sum_{g\in G}\overline{\psi(g)}
+\zeta_S(s,g)\),
+\[
+ L'_S(0,\psi)=-\frac4e(\ell_1-i\ell_\sigma).
+\tag{3}
+\]
+These coefficients are independent of the numerical value of \(e\).
+\end{lemma}
+
+\begin{proof}
+Stark's normalized complex absolute value is
+\(|z|_w=|z|_{\rm ord}^2\).  His formula
+\(\zeta'_S(0,g)=-e^{-1}\log|g\varepsilon|_w\) gives (2).
+Condition (1) gives
+\(\ell_{\sigma^2}=-\ell_1\) and
+\(\ell_{\sigma^3}=-\ell_\sigma\).  Since
+\[
+ (\overline{\psi(1)},\overline{\psi(\sigma)},
+ \overline{\psi(\sigma^2)},\overline{\psi(\sigma^3)})
+ =(1,-i,-1,i),
+\]
+Fourier inversion of (2) gives (3).
+\end{proof}
+
+\begin{lemma}[Torsion invariance]
+If \(j\) acts as complex conjugation on roots of unity, then the
+ordered magnitudes \((|g\varepsilon|)_{g\in G}\) and positive products
+\[
+ q_g=(g\varepsilon)\,j(g\varepsilon)
+\tag{4}
+\]
+are unchanged when \(\varepsilon\) is multiplied by an element of
+\(\mu(E)\).
+\end{lemma}
+
+\begin{proof}
+Magnitudes are unchanged by roots of unity.  If
+\(\xi\in\mu(E)\), then \(j(\xi)=\xi^{-1}\), so the additional factor
+in (4) is \(\xi j(\xi)=1\).
+\end{proof}
+
+\section{The missing Fourier-to-norm bridge}
+
+Equality of induced representations proves equality of the relevant
+Artin \(L\)-functions, but does not by itself identify an individual
+one-place invariant.  The packet results require the following
+proposition, which is a proof obligation rather than a theorem of this
+draft.
+
+\begin{proposition}[Required bridge; not yet proved]\label{prop:bridge}
+Let \(\theta\) be a selected one-place ray character over the real
+quadratic field \(K\), and suppose
+\[
+ \operatorname{Ind}_{G_K}^{G_\Q}\theta
+ \simeq
+ \operatorname{Ind}_{G_k}^{G_\Q}\psi
+\tag{5}
+\]
+as linear representations, with all imprimitive local Euler factors
+specified.  For a ray class \(A\), an explicitly determined
+group-ring element \(b_A\in\mathbb Z[G]\) and sign
+\(\epsilon_A\in\{\pm1\}\) should satisfy
+\[
+ \log X_A
+ =\epsilon_A\log\left|
+ N_{E/E^+}\!\left(\varepsilon^{\,b_A}\right)\right|.
+\tag{6}
+\]
+The map \(A\mapsto b_A\), all local factors, and the Artin labels must
+be derived by Fourier inversion rather than inferred from matching
+polynomials.
+\end{proposition}
+
+To prove Proposition~\ref{prop:bridge}, the revision must print:
+
+\begin{enumerate}
+\item both Fourier inversions, including the one-place sign class;
+\item the exact character correspondence arising from (5);
+\item every local Euler factor at primes removed from either side;
+\item the resulting integral group-ring coefficient \(b_A\);
+\item the exact normal-closure map taking (4) to the asserted
+one-place ray field; and
+\item the Artin action on every displayed packet value.
+\end{enumerate}
+
+\section{The auxiliary-prime gate for
+\texorpdfstring{\(\Q(\sqrt6)\)}{Q(sqrt(6))}}
+
+The current computation establishes two rational-prime Euler
+polynomials, normalized analytic runs at \(q=3,5\), exact
+unit-lattice divisibility, and the cross-route identity
+\(q_8^3=q_{12}^2\).  Those facts do not yet eliminate a residual
+\(S\)-unit ambiguity.
+
+Before the case can be promoted, the revision must, for each
+imaginary quadratic base and each rational \(q\):
+
+\begin{enumerate}
+\item factor \(q\mathcal O_k\) and name every prime
+\(\mathfrak q\) added to \(S\);
+\item state whether \(\mathfrak q\) is split, inert, or ramified and
+whether it divides the conductor;
+\item compute \(\psi(\mathfrak q)\) and the group-ring Euler factor
+\(1-\operatorname{Frob}_{\mathfrak q}^{-1}N\mathfrak q^{-s}\);
+\item compute the finite valuations of the enlarged Stark unit at
+all primes above \(q\); and
+\item invoke a precise uniqueness theorem showing that equality of
+the archimedean logarithms and those finite valuations leaves only a
+root of unity.
+\end{enumerate}
+
+Only after these checks may a statement such as
+``the enlarged unit is the square of the natural unit modulo
+torsion'' enter a proof.
+
+\section{Candidate corpus, without promotion}
+
+The existing computations for the \(\Q(\sqrt{35})\) packet, the first
+\(e=6\) tranche, RQ-000458, and \(\Q(\sqrt6)\) remain useful candidate
+data and regression controls.  They are not claimed as theorems in
+this draft.  A future submission will require
+Proposition~\ref{prop:bridge} and, for \(\Q(\sqrt6)\), the complete
+auxiliary-prime gate above.
+
+\end{document}

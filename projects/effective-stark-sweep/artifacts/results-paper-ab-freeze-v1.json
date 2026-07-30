@@ -1,0 +1,78 @@
+{
+  "schema": "effective-stark-results-paper-ab-freeze-v1",
+  "recorded_at_utc": "2026-07-30T14:04:22Z",
+  "status": "REFEREE_ROUND_READY_NOT_SUBMISSION_READY",
+  "supersedes": "artifacts/results-paper-major-revision-hold-v1.json",
+  "scope": {
+    "included": [
+      "uniform Engine-A quadratic-support theorem",
+      "Shintani transfer proposition",
+      "all-embeddings height-rigidity lemma",
+      "seven selected Engine-B packets",
+      "absolutely-abelian no-go lemma",
+      "index-parity lemma and 446-case genuine replay"
+    ],
+    "excluded": [
+      "all Engine-C packet promotions",
+      "general-e CM theorem",
+      "RQ-000458",
+      "Q(sqrt(35))",
+      "Q(sqrt(6)) auxiliary-prime claim",
+      "census completeness and conductor trends"
+    ]
+  },
+  "primary_manuscript": {
+    "tex": "paper/effective-stark-results.tex",
+    "tex_sha256": "62db7ea9410ad3f0ca2172e748da7b8315ee5e4108d3d797cd90156dfabe93e1",
+    "pdf": "paper/effective-stark-results.pdf",
+    "pdf_sha256": "433c830d3253c73462895379077596e930ba0595bf03a665c302ff1f817e1131",
+    "page_count": 11,
+    "latex_passes": 2,
+    "latex_warnings": 0,
+    "source_date_epoch": 1785420000,
+    "independent_builds_byte_identical": true,
+    "pdf_trailer_id": "suppressed"
+  },
+  "cm_quarantine_draft": {
+    "tex": "paper/effective-stark-cm-major-revision.tex",
+    "tex_sha256": "1fbde1728347cc935ae51f387becbdea3cca10c8fb18185c744596a21bf5e51a",
+    "pdf": "paper/effective-stark-cm-major-revision.pdf",
+    "pdf_sha256": "403dc81dd6827ec82690c05418ba4c299ee8f0232cd00aeb09ca957344e21fc2",
+    "page_count": 3,
+    "claim_status": "PROOF_OBLIGATIONS_ONLY_NO_PROMOTED_PACKETS",
+    "independent_builds_byte_identical": true
+  },
+  "referee_audit": {
+    "script": "scripts/audit_results_paper_ab.py",
+    "script_sha256": "25980e5a4a228db2f7a7bed87c337c903e067b694c15017403943109b88e2019",
+    "artifact": "artifacts/results-paper-ab-referee-audit-v1.json",
+    "artifact_sha256": "b7b03faec8705977a75904a904f2e9aa062dc3785c4b0330171fec1e059571e0",
+    "outcome": "PASS"
+  },
+  "independent_archimedean_audit": {
+    "script": "scripts/certify_engine_b_archimedean_places.gp",
+    "script_sha256": "f041ed7dc956d736c2ab1eae1aa36f8f4910c760e3c8b00e3c9ddb51c389d127",
+    "artifact": "artifacts/engine-b-archimedean-place-audit-v1.json",
+    "artifact_sha256": "34825a465df75608ce55d444b531e23c0630fdb1bb2ac07cfd85d8e39ce89fdc",
+    "outcome": "VERIFIED_EXACT_ALL_SEVEN"
+  },
+  "literature_watch": {
+    "artifact": "artifacts/kopp-arxiv-watch-2026-07-30.json",
+    "artifact_sha256": "08383db7bf814d1be3b26efbdbbc0cd2fae47eb63ed5f581ac278d68e5fc5076",
+    "observed_current_version": "v3",
+    "change_from_frozen_perimeter": false
+  },
+  "toolchain": {
+    "pdftex": "3.141592653-2.6-1.40.25 (TeX Live 2023/Debian)",
+    "pari_gp": "2.15.4",
+    "python": "3.12.3"
+  },
+  "failed_runs_preserved": [
+    "artifacts/results-paper-ab-deterministic-build.failed-01.txt"
+  ],
+  "publication_gate": {
+    "zenodo": "NOT_RESERVED_FOR_SPLIT_ARTIFACT",
+    "submission": "BLOCKED_PENDING_HUMAN_REFEREE_ROUND_AND_PUBLIC_CERTIFICATE_ARCHIVE",
+    "publish_action_allowed": false
+  }
+}
