@@ -4,6 +4,7 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{booktabs}
 \usepackage{array}
+\pdftrailerid{}
 
 \newtheorem{theorem}{Theorem}
 \newtheorem{proposition}[theorem]{Proposition}
@@ -19,7 +20,7 @@
 \newcommand{\ab}{\mathrm{ab}}
 
 \title{Effective Archimedean Stark Theorems over Real Quadratic Fields:\\
-A Uniform Quadratic Formula, Higher-Order Packets, and CM Descent}
+Quadratic Support, Shintani Transfer, and Higher-Order Packets}
 \author{Hainan Zhao\\
 \small Independent Researcher\\
 \small\texttt{hainzhao@gmail.com}}
@@ -33,21 +34,18 @@ We prove a uniform formula for every one-place real-quadratic Stark
 invariant whose differenced Fourier support is quadratic.  The formula
 is an explicit product of relative units, with rational exponents
 computed from class numbers, imprimitive Euler factors, and an exact
-relative-regulator index.  Beyond this quadratic floor, we identify
-seven packets by Shintani's index-two theorem and effective height
-rigidity, including support orders six and ten, and prove further
-quartic packets by descent to Stark's proved imaginary-quadratic
-rank-one theorem.  One packet is obtained independently from
-Shintani's 1978 theorem and Stark's 1980 theorem.  A difficult
-\(\Q(\sqrt6)\) example is closed through two auxiliary primes and two
-CM bases with \(e=8\) and \(e=12\).  Two structural lemmas show that a
-nontrivial one-place packet cannot be governed by an absolutely
-abelian ray field and must have even Shintani index.  The latter is
-independently consistent with all 446 genuinely reconstructed
-odd-index cases in a separate census.  The paper contains the
-mathematical proofs; exact and Arb certificates provide independently
-replayable checks.  No unproved Stark conjecture or floating-point
-recognition enters a proof.
+relative-regulator index.  Beyond this quadratic floor, we translate
+Shintani's index-two theorem into the one-place notation, give a
+general all-embeddings height-rigidity criterion, and use them to
+identify seven explicit packets with support orders up to ten.  The
+examples include two order-six packets, an order-six packet at a
+ramified \(3\)-power conductor, and an order-ten packet.  Two
+structural lemmas prove that an absolutely abelian one-place ray field
+has trivial differenced support and that nontrivial support forces
+even Shintani index.  The latter is independently consistent with all
+446 genuinely reconstructed odd-index cases in a separate census.
+Exact and Arb certificates accompany the written proofs; no unproved
+Stark conjecture or floating-point recognition enters a proof.
 \end{abstract}
 
 \section{Introduction and claim boundary}
@@ -86,11 +84,9 @@ each displayed identity follows from a published proved theorem under
 hypotheses checked exactly in the case bundle.  It does not mean that
 the general real-quadratic rank-one Stark conjecture is proved.
 Shintani's theorem is used only in its index-two range
-\cite{Shintani1978}; Stark's theorem is used only for abelian
-extensions of imaginary quadratic fields \cite{Stark1980}; and the
-quadratic cases use the analytic class-number formula.  Numerical
-PARI recognition, when retained as a cross-check, is outside the proof
-chain.
+\cite{Shintani1978}, and the quadratic cases use the analytic
+class-number formula.  Numerical PARI recognition, when retained as a
+cross-check, is outside the proof chain.
 
 \subsection*{Terminology and quantitative conventions}
 
@@ -120,17 +116,16 @@ evaluated as Arb balls.
 
 \subsection*{How the results fit together}
 
-There are three theorem mechanisms, not a sequence of unrelated case
-studies.  Engine A is a uniform closed-form floor for quadratic
-Fourier support.  Engine B crosses to higher character orders when
-Shintani's maximal absolutely abelian subfield has index two; the
-order-six cases on either side of ramification isolate this
-index/wildness condition as the relevant obstruction.  Engine C
-handles quartic support through imaginary-quadratic descent and gives
-a theorem base disjoint from Engine B.  The dual-routed case tests
-their overlap.  Finally, Lemmas~\ref{lem:noD} and \ref{lem:parity}
-show why neither an absolutely abelian fourth engine nor character
-order alone describes the frontier.
+There are two theorem mechanisms.  Engine A is a uniform closed-form
+formula for quadratic Fourier support.  Engine B reaches higher
+character orders when Shintani's maximal absolutely abelian subfield
+has index two: Proposition~\ref{prop:transfer} translates the
+algebraicity theorem and Lemma~\ref{lem:height} turns certified
+archimedean comparisons into exact identities.  The order-six cases
+on either side of ramification isolate the index/wildness condition,
+rather than character order, as the relevant obstruction.
+Lemmas~\ref{lem:noD} and \ref{lem:parity} explain two further
+structural boundaries.
 
 \subsection*{Main theorems}
 
@@ -146,121 +141,61 @@ relative-regulator indices.  No numerical approximation is required
 to state or prove the formula.
 \end{theorem}
 
-\begin{theorem}[Selected higher-order and CM packets]\label{thm:main}
-The following one-place archimedean packets are identified
-unconditionally by Engine B.
-\begin{center}
-\begin{tabular}{@{}llllrr@{}}
+\begin{theorem}[Selected higher-order packets]\label{thm:main}
+Use the integral basis \(1,\omega\), where
+\(\omega=(1+\sqrt D)/2\) for \(D\equiv1\pmod4\) and
+\(\omega=\sqrt D\) otherwise, and let the displayed HNF matrix denote
+the finite ideal \(\mathfrak f\) in that basis.  For every row below, the packet
+\(\mathcal X_{\mathfrak f\infty_2}\) is the Artin-labeled set of
+positive roots of the relative polynomial printed in
+Section~\ref{sec:packets}.
+\begin{center}\scriptsize
+\begin{tabular}{@{}lllcrr@{}}
 \toprule
-case & \(K\) & \(\Norm\mathfrak f\) & support & safe exponent & margin\\
+case & \(K\) & \(\operatorname{HNF}(\mathfrak f)\) & support
+ & \(m\) & margin\\
 \midrule
-RQ-000190 & \(\Q(\sqrt7)\)  & 7  & \(2,6\)  & 4032  & \(>5688\)\\
-RQ-000419 & \(\Q(\sqrt{14})\)& 7 & \(2,6\)  & 4032  & \(>7315\)\\
-RQ-000108 & \(\Q(\sqrt5)\)  & 45 & \(4\)    & 2880  & \(>2460\)\\
-RQ-000021 & \(\Q(\sqrt2)\)  & 49 & \(2,6\)  & 2016  & \(>4261\)\\
-RQ-002057 & \(\Q(\sqrt{57})\)&27 & \(2,6\)  & 2592  & \(>748\)\\
-RQ-002955 & \(\Q(\sqrt{77})\)& 7 & \(2,6\)  & 4032  & \(>5151\)\\
-RQ-001107 & \(\Q(\sqrt{33})\)&11 & \(2,10\) & 15840 & \(>5817\)\\
+RQ-000190 & \(\Q(\sqrt7)\) &
+\(\left[\begin{smallmatrix}7&0\\0&1\end{smallmatrix}\right]\)&
+\(2,6\)&4032&\(>5688\)\\
+RQ-000419 & \(\Q(\sqrt{14})\) &
+\(\left[\begin{smallmatrix}7&0\\0&1\end{smallmatrix}\right]\)&
+\(2,6\)&4032&\(>7315\)\\
+RQ-000108 & \(\Q(\sqrt5)\) &
+\(\left[\begin{smallmatrix}15&6\\0&3\end{smallmatrix}\right]\)&
+\(4\)&2880&\(>2460\)\\
+RQ-000021 & \(\Q(\sqrt2)\) &
+\(\left[\begin{smallmatrix}7&0\\0&7\end{smallmatrix}\right]\)&
+\(2,6\)&2016&\(>4261\)\\
+RQ-002057 & \(\Q(\sqrt{57})\) &
+\(\left[\begin{smallmatrix}9&3\\0&3\end{smallmatrix}\right]\)&
+\(2,6\)&2592&\(>748\)\\
+RQ-002955 & \(\Q(\sqrt{77})\) &
+\(\left[\begin{smallmatrix}7&3\\0&1\end{smallmatrix}\right]\)&
+\(2,6\)&4032&\(>5151\)\\
+RQ-001107 & \(\Q(\sqrt{33})\) &
+\(\left[\begin{smallmatrix}11&5\\0&1\end{smallmatrix}\right]\)&
+\(2,10\)&15840&\(>5817\)\\
 \bottomrule
 \end{tabular}
 \end{center}
-Here ``margin'' has the meaning in (2).  In addition:
-\begin{enumerate}
-\item the primitive norm-$32$ packet over \(\Q(\sqrt{35})\), and its
-norm-$64$ transport, are proved independently through
-\(\Q(\sqrt{-10})\) and \(\Q(\sqrt{-14})\);
-\item three generic CM-descent packets, RQ-001569, RQ-007519, and
-RQ-001894, are proved independently through two imaginary quadratic
-bases each, with \(e=|\mu(E)|=6\);
-\item the norm-$8$ packet RQ-000129 over \(\Q(\sqrt6)\) is proved
-through the \(e=8\) and \(e=12\) CM routes after an exact
-auxiliary-prime enlargement; and
-\item the quartic packet RQ-000458 over \(\Q(\sqrt{14})\) is proved
-once by Shintani's theorem and once by Stark's imaginary-quadratic
-theorem.
-\end{enumerate}
+Here \(m\) is the safe exponent of
+Proposition~\ref{prop:transfer}, and ``margin'' has the meaning in
+(2).  Each row includes exact ray-field identification, unconditional
+class and unit groups, Sturm isolation, all-embeddings Arb bounds, and
+exact Artin labels.
 \end{theorem}
 
-\paragraph{Status of the claims.}
-Every assertion in Theorems~\ref{thm:A} and \ref{thm:main} is proved
-in the mathematical sense fixed above.  For RQ-000458, the two proofs
-are mathematically independent, although the second-route selection
-was not timestamped in advance; the supplementary provenance record
-preserves this process limitation.  A dated literature search found
-no earlier unconditional oriented examples with support order six or
-ten, so these are apparently the first examples in those order
-classes.  This historical observation is not part of either theorem
-and is not asserted as a universal priority claim.\footnote{The
+\paragraph{Historical scope.}
+A dated literature search found no earlier unconditional oriented
+examples with support order six or ten, so these are apparently the
+first examples in those order classes.  This historical observation
+is not part of either theorem and is not asserted as a universal
+priority claim.\footnote{The
 search record names the sources, versions, hashes, and date.  Kopp's
 arXiv:2411.06763 was checked again on 30 July 2026; the current version
 remains v3, dated 3 May 2025, and its algebraicity applications are
 conditional.}
-
-\subsection*{Theorem inventory}
-
-For clarity, the paper's ten principal contributions are as follows.
-All ten are proved; the two bounded historical observations and the
-one process qualification are stated separately from the mathematics.
-\begin{enumerate}
-\item \textbf{Order six and its replication.}
-The packet over \(\Q(\sqrt7)\) has margin \(>5688\), and the
-structural replication over \(\Q(\sqrt{14})\) has margin \(>7315\).
-The dated literature search records them as apparently the first
-unconditional oriented packets with support order six; this is a
-bounded historical observation, not a theorem claim.  Together with
-the separate \(\Q(\sqrt{21})\) failure, they show that character order
-six is not itself the obstruction; the operative boundary is the
-index-two/wildness hypothesis.
-\item \textbf{Order ten.}
-The \(\Q(\sqrt{33})\) packet has margin \(>5817\) and is the first
-proved support order in the present inventory containing the prime
-five.  Its apparent historical priority is subject to the same dated
-literature boundary.
-\item \textbf{Ramified-prime-\(3\) control.}
-RQ-002057 over \(\Q(\sqrt{57})\), with finite modulus of norm \(27\),
-has order-six support and wild \(3\)-power conductor structure.  It
-is the closest proved structural neighbor of the
-\(\Q(\sqrt{21})\) wall and sharpens the diagnosis in item 1.
-\item \textbf{Uniform Engine-A theorem.}
-Theorem~\ref{thm:A} gives a closed product formula for every
-quadratic-support packet, reducing each application to exact class
-numbers, Euler factors, unit kernels, and a relative-regulator
-index.  This is the paper's broadest result and is quotable
-independently of the corpus or its software.
-\item \textbf{Two disjoint theorem routes.}
-RQ-000458 is the same Artin-labeled packet proved once through
-Shintani 1978 and once through Stark 1980, with disjoint theorem
-bases and intermediate data.  The supplement records the absent
-contemporaneous selection timestamp; it does not weaken either proof.
-\item \textbf{Generic CM closure beyond class number one.}
-The \(\Q(\sqrt{35})\) packet is the first generic Engine-C closure
-in the corpus with \(h_K>1\).  Two imaginary bases of different
-class numbers, \(2\) and \(4\), are forced to the same Artin-labeled
-packet.
-\item \textbf{\(\Q(\sqrt6)\) general-\(e\) CM closure.}
-The \(\Q(\sqrt6)\) packet is proved through \(e=8\) and \(e=12\)
-routes after auxiliary-prime enlargement.  Independent primes
-verify that the enlargement is harmless, while the exact identity
-\(q_8^3=q_{12}^2\) aligns the two values of \(e\).
-\item \textbf{No-go lemma.}
-Lemma~\ref{lem:noD} proves that no nontrivial one-place differenced
-packet over a real quadratic field is governed by an absolutely
-abelian ray field.  It rules out a hidden fourth abelian engine and
-therefore proves a small completeness statement about the method
-taxonomy itself.
-\item \textbf{Index-parity lemma.}
-Lemma~\ref{lem:parity} proves that nontrivial differenced support
-forces even Shintani index.  As an independent consistency replay,
-all 446 genuinely reconstructed odd-index cases in the census had
-trivial sign class and empty differenced support, with zero
-exceptions.
-\item \textbf{General-\(e\) normalization and orientation.}
-Theorem~\ref{thm:general-e} proves the Engine-C class-log and
-direct-\(L'\) coefficients and the torsion-invariant Artin
-orientation uniformly in \(e=|\mu(E)|\).  In particular it covers
-\(e=6,8,12\), subject to the explicitly stated \(|S|\ge3\)
-global-unit boundary.
-\end{enumerate}
 
 Theorem~\ref{thm:main} is deliberately a selected-results theorem,
 not a census-completeness statement.  Counts, conductor trends, and a
@@ -282,9 +217,7 @@ mathematically adjacent precedents, not identical class-field
 objects.  The order-six and order-ten historical statements refer
 only to the dated search described above.
 
-\section{Three proved engines}
-
-\subsection{Engine A: quadratic characters}
+\section{The quadratic-support theorem}
 
 Let \(G=\Cl_{\mathfrak m}(K)\), and suppose every character
 \(\chi\) with \(\chi(R)=-1\) has order two.  Write
@@ -408,7 +341,8 @@ Subtracting the formula with \(A\) replaced by \(RA\) multiplies the
 Every surviving character is quadratic, hence every coefficient is
 rational.  If \(q\) clears their denominators, exponentiation yields
 \[
- X_A^q=\prod_{\chi(R)=-1}u_\chi^{\,n_{A,\chi}}
+ X_A^q=\prod_{\chi(R)=-1}
+        |\tau_1u_\chi|^{\,n_{A,\chi}}
  \qquad(n_{A,\chi}\in\Z),
 \tag{9}
 \]
@@ -456,86 +390,189 @@ map, primitive kernel, determinant, and orientation.  The
 dimension-four and dimension-eight anchors independently replay (5),
 including relative index \(I_\chi=2\) in both dimension-eight cases.
 
-\subsection{Engine B: Shintani algebraicity and height rigidity}
+\section{Shintani transfer and height rigidity}
 
-Engine B first verifies Shintani's unit-congruence and real-place
-hypotheses (the conditions labelled (0-3), (0-6), and (0-9) in
-\cite{Shintani1978}) and the index
+Let \(H=H_{\mathfrak m}\) be the one-place ray class field of
+\(\mathfrak m=\mathfrak f\infty_2\), and let \(\mathcal N\) be its
+normal closure over \(\Q\).  Engine B first checks Shintani's
+conditions (0-3), (0-6), and (0-9), including
 \[
  [H:H\cap\Q^{\rm ab}]=2.
 \tag{10}
 \]
-The certificate prints the exact unit images modulo \(\mathfrak f\),
-their signs at both real places, the splitting count, and the
-commutator subgroup; the word ``verified'' never means that these
-predicates were inferred from a group order alone.
+The maximal absolutely abelian subfield is the fixed field of
+\([\Gal(\mathcal N/\Q),\Gal(\mathcal N/\Q)]\).  The imaginary
+quadratic field and transfer conductor below are then reconstructed a
+second time from their intrinsic ray class fields.
 
-Let \(N/\Q\) be the actual normal closure and put
-\(G_N=\Gal(N/\Q)\).  The fixed field of \([G_N,G_N]\) reconstructs
-the maximal absolutely abelian subfield.  Independently, for each
-imaginary quadratic subfield \(k\), the intrinsic ray group of \(k\)
-and its class-field polynomial reconstruct the same field.
-Equality is tested by exact field inclusions and conductor
-round-trips.  The two routes must agree; this is not a numerical
-isomorphism heuristic.
-
-Shintani's distribution relations introduce a finite transfer
-conductor \(\mathfrak c\) over \(k\).  For every
-\(\mathfrak d\mid\mathfrak c\), the proof record prints the ray class
-number, \(w(\mathfrak d)\), the distribution index
-\(n(S_{\mathfrak d})\), and the conductor factor appearing in
-Shintani's theorem.  Its prescribed multiple
+More precisely, an Engine-B transfer route consists of an imaginary
+quadratic subfield \(k\subset\mathcal N\), a finite modulus
+\(\mathfrak c\) of \(k\), and a \(k\)-isomorphism
 \[
- m_{\mathfrak d}
- =12\,c_{\mathfrak d}\,n(S_{\mathfrak d})
+ \iota:H_{\mathfrak c}(k)\xrightarrow{\;\sim\;}\mathcal N.
+\]
+Here \(\mathcal N/k\) is abelian,
+\(\mathfrak c=\operatorname{cond}(\mathcal N/k)\), and
+\(H_{\mathfrak c}(k)\) denotes the corresponding ray class field.
+Thus ``transfer conductor'' below means this Artin conductor, not a
+conductor guessed from a discriminant.  In every selected case it is
+computed by \texttt{rnfconductor} and the isomorphism is independently
+constructed by \texttt{bnrclassfield}; the two routes printed for a
+case must produce the same \(\mathcal N\).
+
+\begin{proposition}[Shintani transfer in one-place notation]
+\label{prop:transfer}
+Let \(C=\Cl_{\mathfrak f\infty_1\infty_2}(K)\), and suppose exact
+fiber identities identify Shintani's invariant
+\(X_{\mathfrak f}(c,G)\) with \(X_A\) in (1).  Assume Shintani's
+conditions (0-3), (0-6), and (0-9), and let \(k\) and
+\(\mathfrak c\) be respectively the imaginary quadratic field and
+finite transfer conductor occurring in his proof.
+
+For \(\mathfrak d\mid\mathfrak c\), let
+\[
+ h(\mathfrak d)=|\Cl_{\mathfrak d}(k)|,\qquad
+ w(\mathfrak d)
+ =|\{\zeta\in\mu(k):\zeta\equiv1\pmod{\mathfrak d}\}|,
+\]
+put
+\[
+ n(\mathfrak d)
+ =w(\mathfrak d)\frac{h(\mathfrak c)}{h(\mathfrak d)},
 \tag{11}
 \]
-clears that divisor term; in the trivial-divisor row
-\(c_1=h_k\).  The safe exponent is the exact integer
+and, for \(\mathfrak d\ne\mathcal O_k\), let
+\(f_{\mathfrak d}\) be the positive generator of
+\(\mathfrak d\cap\Z\).  If \(r\) clears the explicitly computed
+real-side distribution and induction denominators, then
 \[
- m=\operatorname{lcm}_{\mathfrak d\mid\mathfrak c}
-       m_{\mathfrak d},
+\begin{split}
+ m_{\mathcal O_k}&=12h_k n(\mathcal O_k),\\
+ m_{\mathfrak d}&=12f_{\mathfrak d}n(\mathfrak d)
+ \quad(\mathfrak d\ne\mathcal O_k),\\
+ m&=\operatorname{lcm}\bigl(r,\,
+       (m_{\mathfrak d})_{\mathfrak d\mid\mathfrak c}\bigr)
+\end{split}
 \tag{12}
 \]
-after also clearing the real-side distribution indices.  The full
-table is part of each proof, rather than only its least common
-multiple.  Shintani's theorem then places \(X_A^m\) in the certified
-ray field as an algebraic unit with the asserted Artin action.
-
-The algebraic candidate is not obtained by trusting a decimal
-recognition.  An exact relative polynomial for the ray field is
-certified over \(K\) by \texttt{rnfconductor}; its unit group is
-certified, and the reciprocal candidate polynomial is printed.
-Sturm sequences isolate its positive real roots.  Exact Frobenius
-actions at two split primes label the roots by ray classes, producing
-an explicit candidate \(\alpha_A\) for every \(A\).  Numerical
-recognition may have suggested this polynomial, but the proof begins
-only after these exact checks.
-
-It remains to prove \(X_A=\alpha_A\).  The cone evaluator encloses
-every conjugate logarithmic difference by \(\delta\).  Since
-Shintani's theorem makes both \(X_A^m\) and \(\alpha_A^m\) algebraic,
+has the following property:
 \[
- \eta_A=(X_A/\alpha_A)^m
-\]
-is an algebraic unit and the product formula gives
-\[
- h(\eta_A)\le m\delta.
+ X_A^m\in\mathcal O_H^\times,\qquad
+ (X_A^m)^{\operatorname{Art}(B)}=X_{AB}^m.
 \tag{13}
 \]
-For degree \(d\ge3\), Voutier's explicit bound is
+At every embedding of \(H\) above the nonsplit real place,
+\(|X_A^m|=1\).
+\end{proposition}
+
+\begin{proof}
+Shintani's Theorem~1 identifies the logarithm of
+\(X_{\mathfrak f}(c,G)\) with the full-ray zeta differences over the
+two fibers of \(A\) and \(RA\); the assumed exact fiber identity
+therefore gives \(X_A\).  Under (0-3), (0-6), and (0-9),
+Shintani's Theorem~2 supplies the index-two algebraicity construction
+\cite{Shintani1978}.
+
+In Shintani's equation (8), the distribution index is exactly (11).
+For \(\mathfrak d\ne\mathcal O_k\), equations (4) and (9) contain
+\(|\varphi_{\mathfrak d}|^{1/(6f_{\mathfrak d})}\) and then the
+power \(1/n(\mathfrak d)\).  Replacing an absolute value by the
+product with its conjugate contributes a factor two, so
+\(12f_{\mathfrak d}n(\mathfrak d)\) clears the row.  At the trivial
+divisor, equation (6) replaces \(f_{\mathfrak d}\) by \(h_k\).
+Proposition~4 is an integral product of ratios of these
+\(W_{\mathfrak c}\)-invariants, so it introduces no further rational
+power.  The separately computed integer \(r\) clears the real-side
+distribution or induction step.  Raising to (12) therefore clears
+every exponent in the construction.  Shintani's Proposition~5 gives
+the unit assertion, the Artin covariance, and modulus one at the
+nonsplit real embeddings, proving (13).
+\end{proof}
+
+For the headline case \(K=\Q(\sqrt7)\),
+\(\mathfrak f=\left[\begin{smallmatrix}7&0\\0&1\end{smallmatrix}\right]\),
+the short transfer route has \(k=\Q(i)\) and
+\(\mathfrak c=(7)\).  The complete divisor table is
 \[
- V(d)=\frac1{4d}
- \left(\frac{\log\log d}{\log d}\right)^3.
+\begin{array}{c|r|r|r|r|r}
+\mathfrak d&h(\mathfrak d)&w(\mathfrak d)&n(\mathfrak d)
+ &f_{\mathfrak d}&m_{\mathfrak d}\\ \hline
+\mathcal O_k&1&4&48&1&576\\
+(7)&12&1&1&7&84
+\end{array}
 \tag{14}
 \]
-The certificate takes the minimum over every possible degree in its
-window.  If the margin (2) exceeds 100, (13)--(14) force
-\(\eta_A\) to be a root of unity.  Degree one is handled by the fact
-that a positive rational unit is one; degree two uses
-\(\frac12\log\phi\) as the non-torsion lower bound.  Finally
-\(\eta_A>0\), so the root of unity is one, and
-\(X_A=\alpha_A\).
+and the real-side indices are \(6\) and \(1\).  Hence
+\(\operatorname{lcm}(576,84,6)=4032\).  This is a complete instance
+of Proposition~\ref{prop:transfer}; the longer
+\(\Q(\sqrt{-7})\) reconstruction gives the same normal closure and
+safe power independently.
+
+\begin{lemma}[All-embeddings height rigidity]\label{lem:height}
+Let \(H\) be a number field of degree \(D\).  Suppose
+\((X_A^m)_A\subset\mathcal O_H^\times\) is an algebraic family with
+Artin covariance, and let
+\((\alpha_A)_A\subset\mathcal O_H^\times\) be an exactly
+Artin-labeled positive candidate family.  For each archimedean place
+\(v\) of \(H\), suppose either
+\[
+ \left|\log|X_A|_v-\log|\alpha_A|_v\right|\le\epsilon_v
+\tag{15}
+\]
+or both powered absolute values are proved to be one.  Put
+\[
+ B_A=\frac{m}{D}\sum_{v\mid\infty}n_v\epsilon_v,
+\qquad n_v=[H_v:\mathbb R],
+\tag{16}
+\]
+with \(\epsilon_v=0\) in the second case.  If
+\[
+ B_A<
+ \min\left\{\frac12\log\frac{1+\sqrt5}{2},\
+ \min_{3\le d\le D}
+ \frac1{4d}\left(\frac{\log\log d}{\log d}\right)^3
+ \right\},
+\tag{17}
+\]
+then \(X_A=\alpha_A\).
+\end{lemma}
+
+\begin{proof}
+The quotient
+\(\eta_A=X_A^m/\alpha_A^m\) is a unit of \(H\).  Its finite-place
+contribution to the Weil height is zero.  Equations (15)--(16) and
+the definition of logarithmic height give
+\[
+ h(\eta_A)
+ =\frac1D\sum_{v\mid\infty}
+ n_v\max(0,\log|\eta_A|_v)
+ \le B_A.
+\]
+If \(d=[\Q(\eta_A):\Q]\ge3\) and \(\eta_A\) is not torsion,
+Voutier's explicit lower bound contradicts (17)
+\cite{Voutier1996}.  A non-torsion quadratic unit has height at least
+\(\frac12\log((1+\sqrt5)/2)\), and a rational unit is \(\pm1\).
+Thus \(\eta_A\) is a root of unity.  At the distinguished real
+embedding both \(X_A\) and \(\alpha_A\) are positive, so
+\(\eta_A=1\); taking the unique positive \(m\)-th root proves the
+claim.
+\end{proof}
+
+For every row of Theorem~\ref{thm:main}, the embeddings over the
+split real place are all represented by the printed packet roots and
+the cone enclosures.  At the remaining archimedean places,
+Proposition~\ref{prop:transfer} gives modulus one for \(X_A^m\), and
+the reciprocal candidate polynomial is checked exactly, after the
+substitution \(T=X+X^{-1}\), to have its remaining roots on the unit
+circle.  Hence these places contribute \(\epsilon_v=0\) in (16).
+
+The algebraic candidates are certified without a GRH assumption:
+each class and unit computation uses \texttt{bnfinit(P,1)}, followed
+by the full call \texttt{bnfcertify(bnf)} returning \(1\); the
+quotient-only flag is not used.  Exact \texttt{rnfconductor} and
+\texttt{bnrclassfield} round trips identify the relative ray fields,
+Sturm sequences isolate the positive roots, and split-prime
+Frobenius actions label them.
 
 \paragraph{Effective but not uniformly cheap.}
 The required raw radius is \(O(V_{\min}/m)\).  Arb precision therefore
@@ -546,133 +583,7 @@ with much larger exponents can exceed the fixed per-case resource cap
 and belong to the frontier.  This is a stated limit of Engine B, not
 evidence against its completed cases.
 
-\subsection{Engine C: CM descent and Stark's proved theorem}
-
-Let \(\theta\) be one of the quartic characters in the support over
-\(K\), and let \(N/\Q\) be the splitting closure of its character
-field.  Engine C is available when the projective quotient contains
-the required \(V_4\), whose two imaginary quadratic fixed fields are
-denoted \(k_1,k_2\).  For either \(k=k_i\), exact class-field
-reconstruction produces an abelian character field \(E/k\) and a
-finite set \(\mathcal C\) of compatible linear ray characters
-\(\psi\).
-
-The phrase \emph{linear reinduction} means the following exact
-statement, rather than projective equivalence:
-\[
- \operatorname{Ind}_{G_K}^{G_\Q}\theta
- \cong
- \operatorname{Ind}_{G_k}^{G_\Q}\psi
-\tag{15}
-\]
-as ordinary representations after restriction to the explicitly
-computed finite quotient \(\Gal(N/\Q)\).  The characters on the two
-sides are compared on every conjugacy class.  Multiplying \(\psi\) by
-a scalar character would generally change (15), which is why
-``scalar twists are forbidden.''  Among the remaining finite
-candidate set, exact Euler coefficients are appended until
-\[
- \psi\longmapsto (a_n(\psi))_{n\in B}
-\tag{16}
-\]
-is injective.  Matching the source coefficients selects one
-\(\psi\); the printed finite table proves uniqueness and replaces any
-informal appeal to numerical recognition.
-
-Let \(E/k\) be the selected abelian extension of an imaginary
-quadratic field.  Stark's proved rank-one theorem applies with a set
-\(S\) containing the complex place and the conductor primes.  In
-every use of the global-unit conclusion below, \(|S|\ge3\) is checked
-explicitly, and \(e=|\mu(E)|\) is computed exactly.  If
-\(\ell_g=\log|g\varepsilon|_{\rm ord}\), the normalization is
-\[
- \zeta'_S(0,g)=-\frac2e\ell_g,\qquad
- \ell_g=-\frac e2\zeta'_S(0,g).
-\tag{17}
-\]
-For the frozen quartic Fourier convention,
-\[
- L'_S(0,\psi)=-\frac4e(\ell_1-i\ell_\sigma),\qquad
- \ell_1-i\ell_\sigma=-\frac e4L'_S(0,\psi).
-\tag{18}
-\]
-
-\begin{theorem}[General-\(e\) CM normalization and orientation]
-\label{thm:general-e}
-Let \(E/k\) be an abelian CM character field over an imaginary
-quadratic field to which Stark's proved rank-one theorem applies, let
-\(|S|\ge3\), and put \(e=|\mu(E)|\).  Then the class logarithms and
-the primitive quartic \(L'\)-value satisfy (17)--(18).  The ordered
-object
-\[
- \left(
- [\varepsilon]\in\mathcal O_E^\times/\mu(E),\
- (\log|g\varepsilon|_{\rm ord})_{g\in\Gal(E/k)},\
- (N_{E/E^+}(g\varepsilon))_{g\in\Gal(E/k)}
- \right)
-\]
-where \(E^+\) is the fixed field of complex conjugation, is
-independent of the literal root-of-unity multiple of
-\(\varepsilon\).  If the compatible ray characters are enumerated
-exactly, the finite separating-coefficient procedure (16), followed
-by the exact Artin action, canonically labels this torsion-invariant
-object.  The statement applies without a change of normalization for
-\(e=6,8,12\).
-\end{theorem}
-
-\begin{proof}
-Stark's normalized complex absolute value is
-\(|z|_w=|z|_{\rm ord}^2\).  Substitution in his formula
-\(\zeta'_S(0,g)=-e^{-1}\log|g\varepsilon|_w\) gives (17).
-Fourier inversion for the frozen quartic convention, together with
-\(\ell_{\sigma^2}=-\ell_1\) and
-\(\ell_{\sigma^3}=-\ell_\sigma\), gives (18).
-
-Multiplication by \(\xi\in\mu(E)\) changes neither the ordinary
-magnitudes nor the positive CM norms, so the displayed object is
-well-defined modulo torsion.  Distinct compatible finite ray
-characters have different Hecke \(L\)-series and hence differ at a
-finite Dirichlet coefficient.  Therefore appending coefficients
-until (16) is injective gives an effective finite selector; ordering
-by the selected character's exact Artin generator supplies the
-labels.  Nothing in the argument depends on a special value of \(e\);
-only its exact value in (17)--(18) is used.
-\end{proof}
-
-These are formulas, not interchangeable shorthand.  The \(e=2\)
-anchor cannot distinguish \(2/e\) from \(e/2\); the nontrivial
-normalization check is the \(e=4\) cross-route identity for
-RQ-000458.  The specializations of (17)--(18) carry the same minus
-signs for \(e=6,8,12\).
-
-For completeness, here is the analytic-to-algebraic step.  The
-selected Hecke \(L'\)-value is enclosed independently by a
-theta/Mellin evaluation.  Exact unit computation gives
-\(E^\times/\mu(E)\), the Artin generator \(\sigma\), and the
-anti-unit lattice
-\[
- \ker(1+\sigma^2)\subset E^\times/\mu(E).
-\]
-Equations (17)--(18) turn the \(L'\)-ball into two logarithmic
-coordinates.  Arb inversion of the resulting \(2\times2\) real
-logarithm matrix must isolate one integral coordinate orbit; overlap
-with two integer orbits is a halt.  Each isolated unit is then
-embedded into the common normal closure and multiplied by its exact
-complex conjugate.  These positive CM norms are fixed by
-conjugation, generate the asserted one-place ray field over \(K\),
-and are labeled by the exact Artin action.  This proves the
-corresponding \(X_A\), or its reciprocal, and the reciprocal packet
-polynomials below make that harmless.  Roots of unity disappear from
-the CM norm, so the theorem claims the torsion-invariant packet rather
-than a literal representative of Stark's unit.
-
-This gives a written proof scheme with finite hypotheses: exact
-reinduction (15), unique selection (16), Stark's proved formula
-(17)--(18), unique integral lattice isolation, and exact CM-norm
-identities.  The machine-readable record supplies the large integer
-fields and coefficient tables but does not replace any logical step.
-
-\section{The order-six and order-ten packets}
+\section{The order-six and order-ten packets}\label{sec:packets}
 
 \subsection{\texorpdfstring{\(\Q(\sqrt7)\)}{Q(sqrt(7))} at the
 ramified prime above seven}
@@ -745,6 +656,15 @@ power of the ramified prime 3 and the support still has order six.
 The bases \(\Q(\sqrt{-3})\) and \(\Q(\sqrt{-19})\) independently
 give the same degree-$24$ closure.  On the shorter route the divisor
 exponents are \(864,324,108\), hence \(m=2592\).
+With \(y=(1+\sqrt{57})/2\), so \(y^2-y-14=0\), its packet is
+\[
+\begin{aligned}
+P_{57}(X)={}&X^6-(30+9y)X^5+(582+177y)X^4\\
+&-(2529+772y)X^3+(582+177y)X^2\\
+&-(30+9y)X+1.
+\end{aligned}
+\tag{20a}
+\]
 The fundamental positive unit has order three modulo the finite
 modulus, so a ray-class domain is the union of three adjacent cones,
 with 240 exact affine points per class.  The powered height is at most
@@ -823,10 +743,13 @@ P_{33}(X)={}&X^{10}-(8+4y)X^9+(74+30y)X^8
 \end{aligned}
 \tag{24}
 \]
-Its absolute degree-$20$ field is the certified ray field over \(K\).
-The actual packet-comparison degree is 40; the certificate
-conservatively covers degrees three through 80.  On this whole window
-the minimum Voutier bound is
+Its relative degree is ten, so the certified ray field \(H/K\) has
+absolute degree \(20\).  The normal closure used to compute the
+Frobenius action has degree \(40\), but the comparison quotient
+\(\eta_A=X_A^m/\alpha_A^m\) lies in \(H\), since both powered terms
+do.  Therefore Lemma~\ref{lem:height} needs only \(d\le20\).  The
+archived computation conservatively evaluated every degree through
+80; on either window the minimum Voutier bound is
 \[
  5.22795332222684\ldots\times10^{-5}.
 \]
@@ -838,172 +761,30 @@ This support order is the first one in the present proved inventory
 divisible by the prime \(5\); its historical priority status is the
 survey-bounded status stated after Theorem~\ref{thm:main}.
 
-\section{CM-descent packets}
-
-\subsection{A generic mixed-signature packet}
-
-The first packet completed by the generic Engine-C implementation is
-over \(\Q(\sqrt{35})\), at the primitive ideal of norm 32.  Both
-\(\Q(\sqrt{-10})\) and \(\Q(\sqrt{-14})\) have \(e=2\) and
-\(|S|=3\), but their class numbers are respectively \(2\) and \(4\).
-The real base itself has \(h_K>1\).  Thus this is not a
-class-number-one coincidence: two intrinsically different CM
-reconstructions give the same Artin-labeled polynomial
-\[
-\begin{aligned}
-P_{35}(X)={}&X^8-38904X^7+905404X^6+62136X^5\\
-&-873210X^4+62136X^3+905404X^2-38904X+1.
-\end{aligned}
-\tag{25}
-\]
-Exact conjugation fixes the four Artin norm classes, and Arb orbit
-isolation matches them to the four real roots.  The remaining roots
-form two nonreal conjugate pairs, so the signature is \([4,2]\).
-An exact conductor transport proves the norm-$64$ member.
-
-The first \(e=6\) tranche comprises RQ-001569, RQ-007519, and
-RQ-001894.  Six independent imaginary-base routes cover fourteen
-transported occurrences.  Every route has \(|S|\ge3\), an exact
-character-selection signature, a certified theta/Mellin target, a
-unique integral anti-unit orbit, and an exact Artin bridge.  The two
-routes for each canonical case give the identical degree-eight
-packet.  For example, RQ-001569 is
-\[
-\begin{aligned}
-X^8&-69087392X^7+7865869852X^6-660330848X^5\\
-&-7321345850X^4-660330848X^3
- +7865869852X^2-69087392X+1.
-\end{aligned}
-\tag{26}
-\]
-The other two complete integer polynomials are printed in the
-reproducibility table's certificate.
-
-\subsection{\texorpdfstring{\(\Q(\sqrt6)\)}{Q(sqrt(6))} and
-auxiliary-prime independence}
-
-For RQ-000129 the two routes are over
-\(\Q(\sqrt{-2})\), with \(e=8\), and
-\(\Q(\sqrt{-3})\), with \(e=12\).  The natural second route has only
-the complex place and one finite conductor prime, hence \(|S|=2\);
-the first attempt was halted because Stark's global-unit conclusion
-requires \(|S|\ge3\).
-
-Let \(q\) be an auxiliary rational prime and write
-\(P_q(Nq^{-s})\) for the removed local Euler factor.  Since the
-primitive \(L\)-function has a simple zero at zero,
-\[
- L'_{S\cup\{q\}}(0,\psi)=P_q(1)L'_S(0,\psi).
-\tag{27}
-\]
-At \(q=3,5\), exact Euler factors agree on the real source and both CM
-routes, and
-\[
- P_3(1)=1+i,\qquad P_5(1)=2.
-\tag{28}
-\]
-Neither value vanishes, so the analytic rank remains one.  On the
-secondary route the enlarged set has size three, and Stark's
-global-unit theorem now applies.
-
-The exact Euler-factor identity (27), rather than a comparison of
-decimal approximations,
-controls the enlarged unit.  Under (18), \(q=5\) doubles the exact
-logarithmic coordinates.  Stark's uniqueness modulo \(\mu(E)\)
-therefore says that the enlarged unit is the square of the natural
-unit modulo torsion; no arbitrary \(S\)-unit factor is available.
-The exact free unit lattice verifies this divisibility, and the
-positive CM norm kills torsion.  Hence its unique positive square
-root recovers the natural norm.  The \(q=3\) run independently gives
-the exact \((I\pm A)\) group-ring transform.  Both enlarged
-computations were rerun from the Euler factor through lattice
-isolation; they were not copied from the halted \(|S|=2\) analytic
-attempt.
-
-At the isolated level, the two routes have coordinates \((4,0)\) and
-\((6,0)\).  Their positive norms \(q_8,q_{12}\) satisfy 256 exact
-common-normal-closure identities, summarized by
-\[
- q_8^3=q_{12}^2.
-\tag{29}
-\]
-Dividing by \(4\) and \(6\) in the two exact free unit lattices gives
-primitive coordinates \((1,0)\) on both sides.  Their positive Artin
-norms agree.  Indeed the source ray group is \(C_4\), so (6) and
-(18), together with
-\(\varepsilon_e=u_e^{e/2}\), give at each Artin label
-\[
- \log X_A=-\log N_{E/E^+}(g u_e).
-\]
-Thus \(X_A\) is the reciprocal of the primitive positive CM norm.
-The polynomial is reciprocal, so both have the identical polynomial
-\[
-\boxed{\,X^8-8X^7+12X^6+8X^5-10X^4
-       +8X^3+12X^2-8X+1\,}.
-\tag{30}
-\]
-An exact Sturm count gives four positive roots and no negative roots,
-as required by the selector-field signature \([4,2]\).
-
-The polynomial printed in the earlier draft,
-\[
-X^8+24X^7+732X^6-9304X^5+53958X^4
--9304X^3+732X^2+24X+1,
-\]
-has no real roots.  It is the minimal polynomial of the complex
-anti-unit before division in the unit lattice and before taking the
-CM norm; it is not a packet polynomial.  The correction record
-retains both objects and the exact maps between them.
-
-\subsection{Two disjoint theorem bases}
-
-For RQ-000458, \(K=\Q(\sqrt{14})\), the finite ideal has HNF
-\(\left[\begin{smallmatrix}12&0\\0&6\end{smallmatrix}\right]\) and
-\(\Cl_{\mathfrak m}(K)\simeq C_4\times C_2\).  Both routes identify
-\[
-P_{458}(X)=X^4-(20+6\sqrt{14})X^3
- +(138+36\sqrt{14})X^2-(20+6\sqrt{14})X+1.
-\tag{31}
-\]
-The Engine-B proof uses safe exponent 1152 and gives powered height
-\(8.0791\times10^{-9}\), hence Voutier margin greater than 6470.
-
-The independent Engine-C proof reinduces linearly over
-\(\Q(\sqrt{-42})\) and \(\Q(\sqrt{-3})\).  On the first base,
-\(|S|=3\) and \(e=4\).  The coefficient at \(n=7\) uniquely selects
-the ray character.  Arb inversion isolates
-\[
- (-8,4),\quad(0,-4),\quad(8,-4),\quad(0,4),
-\]
-and 32 exact common-closure identities prove (31).  Thus one theorem
-base is Shintani 1978 and the other is Stark 1980; they share no
-certificate intermediate.  The supplementary chronology records that
-the second-route selection was not timestamped before execution; this
-process limitation does not weaken either mathematical proof.
-
 \section{Structural boundary lemmas}
 
-\begin{lemma}[No absolute-abelian fourth engine]\label{lem:noD}
-A nontrivial one-place differenced invariant over a real quadratic
-field is not governed by an absolutely abelian ray field.
+\begin{lemma}[Absolutely abelian ray fields]\label{lem:noD}
+Let \(H/K\) be the one-place ray class field of a real quadratic
+field.  If \(H/\Q\) is Galois and abelian, then the sign class
+\(R\in\Gal(H/K)\) is trivial and the differenced Fourier support in
+(1) is empty.
 \end{lemma}
 
 \begin{proof}
 If the one-place field \(H/\Q\) were abelian, the complex
 conjugations above the two real places of \(K\) would be conjugate:
 any lift of the nontrivial element of \(\Gal(K/\Q)\) interchanges the
-places.  In an abelian group conjugate elements are equal.  Every
-character of \(\Gal(H/K)\), being a character of a subgroup of the
-finite abelian group \(\Gal(H/\Q)\), extends to an absolute
-character.  Such a character has equal parity at the two real places.
-The Fourier support of (1), however, consists of characters odd at
-the retained place and even at the omitted place.  Hence that support
-must be empty.
+places.  In an abelian group conjugate elements are equal.  The
+inertia element at the omitted real place is trivial in the one-place
+ray field, whereas the inertia element at the retained place is
+\(R\).  Hence \(R=1\).  It follows immediately that no character
+satisfies \(\chi(R)=-1\), so the differenced Fourier support is empty.
 \end{proof}
 
-Engine A is not an exception: it reduces individual quadratic
-characters by (2), but does not assert that the entire mixed-signature
-one-place ray field is absolutely abelian.
+Engine A is not an exception: Proposition~\ref{prop:A} reduces
+individual quadratic characters through (5)--(6), but it does not
+assert that the entire mixed-signature one-place ray field is
+absolutely abelian.
 
 \begin{lemma}[Index parity]\label{lem:parity}
 Let \(H/K\) be a one-place ray field and let \(N/\Q\) be its genuine
@@ -1045,8 +826,7 @@ define \([G,G]\).  As an independent consistency check, a
 pre-registered replay over all 8,200 genuine normal-closure
 reconstructions found 446 odd indices greater than one.  Every one
 had trivial sign class and empty differenced Fourier support; there
-were no exceptions.  An earlier 88-row proxy population is excluded
-from this count and retained only as a provenance-control artifact.
+were no exceptions.
 
 \appendix
 
@@ -1075,46 +855,73 @@ RQ-000021 & \path{data/rq000021-case-v1.json}\\
 ramified-prime-$3$ control & \path{data/q57-norm27-case-v1.json}\\
 RQ-002955 & \path{data/rq002955-case-v1.json}\\
 order ten & \path{data/q33-p11-order10-case-v1.json}\\
-generic CM packet & \path{artifacts/engine-c-w3-tranche-01-verified-v1.json}\\
-\(\Q(\sqrt{35})\) class numbers & \path{artifacts/q35-base-class-numbers-v1.json}\\
-\(e=6\) tranche & \path{artifacts/engine-c-e6-tranche-01-verified-v1.json}\\
-\(\Q(\sqrt6)\) & \path{data/q6-norm8-case-v3.json}\\
-two-route packet & \path{data/rq000458-dual-case-v1.json}\\
+all archimedean places &
+\path{artifacts/engine-b-archimedean-place-audit-v1.json}\\
 quadratic theorem & \path{data/engine-a-uniform-theorem-v1.json}\\
-general-\(e\) theorem & \path{data/engine-c-general-e-theory-v3.json}\\
 index-parity theorem & \path{artifacts/results-paper-index-parity-lemma-v1.json}\\
 parity audit & \path{artifacts/results-paper-odd-index-parity-audit-v1.json}\\
-seal-order audit & \path{artifacts/results-paper-seal-order-audit-v1.json}\\
+literature perimeter and Kopp watch &
+\path{data/literature-perimeter-v1.json};
+\path{artifacts/kopp-arxiv-watch-2026-07-30.json}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{Artin-label replay}
+
+For each cyclic ray group below, \(r\) denotes the power of the
+generator in the pinned PARI ray coordinates.  The entry following
+\(r\) is a rational Sturm interval containing exactly one positive
+root of the absolute packet polynomial.  The cone evaluation for
+class \(r\), Shintani's Artin covariance (13), and the exact
+ray-field isomorphism identify that root with \(X_r\).
+\begin{center}\scriptsize
+\begin{tabular}{@{}p{0.14\linewidth}p{0.80\linewidth}@{}}
+\toprule
+case & \(r:\) isolating interval\\
+\midrule
+RQ-000190 &
+\(0:(5.325,5.326),\ 1:(2.713,2.714),\
+2:(2.251,2.252),\ 3:(.187,.188),\
+4:(.368,.369),\ 5:(.444,.445)\)\\
+RQ-000419 &
+\(0:(20.431,20.432),\ 1:(.189,.190),\
+2:(1.090,1.091),\ 3:(.048,.049),\
+4:(5.289,5.290),\ 5:(.916,.917)\)\\
+RQ-000108 &
+\(0:(7.892,7.893),\ 1:(2.242,2.243),\
+2:(.126,.127),\ 3:(.445,.446)\)\\
+RQ-000021 &
+\(0:(6.109,6.110),\ 1:(7.496,7.497),\
+2:(4.351,4.352),\ 3:(.163,.164),\
+4:(.133,.134),\ 5:(.229,.230)\)\\
+RQ-002057 &
+\(0:(5.709,5.710),\ 1:(.028,.029),\
+2:(.035,.036),\ 3:(.175,.176),\
+4:(34.732,34.733),\ 5:(27.792,27.793)\)\\
+RQ-002955 &
+\(0:(18.232,18.233),\ 1:(2.180,2.181),\
+2:(8.620,8.621),\ 3:(.054,.055),\
+4:(.458,.459),\ 5:(.116,.117)\)\\
+RQ-001107 &
+\(0:(8.645,8.646),\ 1:(.276,.277),\
+2:(1.245,1.246),\ 3:(.571,.572),\
+4:(.236,.237),\ 5:(.115,.116),\
+6:(3.611,3.612),\ 7:(.802,.803),\
+8:(1.748,1.749),\ 9:(4.234,4.235)\)\\
 \bottomrule
 \end{tabular}
 \end{center}
 
 Each record carries hashes of its exact and analytic dependencies.
-Failed attempts remain versioned.  Predicate provenance is marked
-\texttt{GENUINE} or \texttt{PROXY}; no theorem tag may depend on a
-proxy.  A later audit found an unmarked conjugation proxy in census
-classification, but none in a promoted theorem chain.  The present
-paper was therefore frozen independently of all census populations
-and trends.  This is a claim-boundary statement, not evidence for
-census completeness.
-
-\paragraph{Chronology.}
-The complete commit and timestamp chronology is recorded in
-\path{artifacts/results-paper-seal-order-audit-v1.json}.  It confirms
-that every promoted case bundle predates the manuscript.  The later
-semantic correction of the \(\Q(\sqrt6)\) packet is preserved in a
-separate versioned record.
+The supplementary manifest also records the full software versions,
+commands, source hashes, and failed computations; those provenance
+details are not part of the mathematical argument.
 
 \paragraph{Data availability.}
-The companion archive has reserved DOI
-\href{https://doi.org/10.5281/zenodo.21703306}
-{\texttt{10.5281/zenodo.21703306}}.  At the date of this referee
-draft the Zenodo record is an unpublished draft; publication of the
-archive is a hard gate before submission of the paper.  The core file
-list and full SHA-256 values are in
-\path{artifacts/results-paper-core-manifest-v1.json}.  The released
-archive will include the complete repository subset, the failed-run
-transcripts, and one-command replay instructions.
+The companion archive will be deposited before submission.  It will
+contain the source, exact and Arb certificates, the complete
+SHA-256 manifest, and one-command replay instructions.
 
 \section*{Declaration of generative AI and AI-assisted technologies
 in the manuscript preparation process}
