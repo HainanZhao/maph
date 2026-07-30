@@ -1,0 +1,63 @@
+{
+  "schema": "effective-stark-results-paper-full-freeze-v4",
+  "recorded_at_utc": "2026-07-30T15:38:00Z",
+  "status": "REFEREE_MUST_FIXES_CLOSED_LOCAL_ARCHIVE_FROZEN_PENDING_PUBLIC_DEPOSIT_AND_HUMAN_REFEREE",
+  "supersedes": "artifacts/results-paper-full-freeze-v2.json",
+  "supersession_reason": "The referee must-fixes were closed, the historical-scope paragraph was softened to a knowledge statement, the singled-out Kopp discussion was removed, and the deterministic manuscript and companion archive were rebuilt.",
+  "primary_manuscript": {
+    "tex": "paper/effective-stark-results.tex",
+    "tex_sha256": "45bc2aa98e6af79f6a905f59c92666057ee9faa846b42f576d624ba6d331df9c",
+    "pdf": "paper/effective-stark-results.pdf",
+    "pdf_sha256": "d3cfc5be83f4d3186dc459830d4ca82981de20205f16e10b174a05edc1812ca1",
+    "page_count": 17,
+    "latex_passes": 3,
+    "latex_warnings": 0,
+    "source_date_epoch": 1785420000,
+    "independent_builds_byte_identical": true
+  },
+  "repairs": {
+    "abstract": "The proved CM route list is e=2,6,8, and the higher-order theorem is summarized as five order-six packets, two quartic packets, and one order-ten packet.",
+    "equations": "All manual equation tags were removed; labels and eqref now determine a collision-free sequence.",
+    "conventions": "The L-function Fourier convention, inverse transform, Artin action, and compatible quartic generators are fixed explicitly and cited by Engines A and C.",
+    "height_places": "Zero-radius places are paired through the exact ray-field isomorphism, so the candidate and powered analytic invariant have modulus one at the same nonsplit embedding.",
+    "voutier": "The manuscript cites the main theorem on page 82 and states its degree range d>=2.",
+    "engine_a_degeneracy": "An exact 1,560-case replay found 672 zero Euler products among 2,232 supported character occurrences, affecting 603 rows; all supported terms vanish in 346 rows.",
+    "proof_completion": "The manuscript explicitly identifies the seven Section 4 Engine-B rows plus the RQ-000458 proof as the proof of the selected higher-order theorem.",
+    "historical_scope": "The paper says only that the authors are not aware of previous unconditional one-place packet identifications at support orders six or ten and states that the observation plays no role in the proofs."
+  },
+  "engine_a_euler_degeneracy": {
+    "artifact": "artifacts/engine-a-euler-degeneracy-v1.json",
+    "artifact_sha256": "f4ead3438d3b305fa42e73e1d979530a04104ce8d642db0b1c9ac85929bac033",
+    "verdict": "VERIFIED"
+  },
+  "shintani_source_map": {
+    "artifact": "artifacts/shintani-1978-source-map-v1.json",
+    "artifact_sha256": "b145c2a7ae22853963586bfb2ea276290d9e8e4c043a5cca44fac2176e0083c0"
+  },
+  "referee_audit": {
+    "script": "scripts/audit_results_paper_full.py",
+    "script_sha256": "f9a1441331d267164564b4646008c62314145a3f8ea7cd2661e72baa72af9178",
+    "artifact": "artifacts/results-paper-full-referee-audit-v2.json",
+    "artifact_sha256": "8865dc86581926987a10e3db6ff74fea0cbcfe266a2fb8d7bff9e22823a34685",
+    "outcome": "PASS"
+  },
+  "companion_archive": {
+    "builder": "scripts/build_results_companion.py",
+    "builder_sha256": "453889511a63b5a836645cff8c506bb378a4326863e769d3e2f425a68f8f9fb6",
+    "verifier": "scripts/verify_results_companion.py",
+    "verifier_sha256": "3965623ebc64fddfc0dd2fbd3a8996d1638aab01022bea74c2c28fb9c2de2260",
+    "local_freeze": "artifacts/results-paper-companion-local-freeze-v7.json",
+    "local_freeze_sha256": "24b56ba102783689bfab06389f87e2dbf60a5596c9561ef0af0e99d8ec5fe165",
+    "archive": "dist/effective-stark-results-companion-v7.tar.gz",
+    "archive_sha256": "5856e4765f8006753a1fc5ff0ef3616f57f026a8e01b70f21d55c3c644547ba1",
+    "archive_replay": "PASS",
+    "manifest_file_count": 8400,
+    "public_identifier": null,
+    "status": "LOCAL_FROZEN_NOT_PUBLIC"
+  },
+  "publication_gate": {
+    "zenodo": "NO_ACTION_TAKEN",
+    "submission": "BLOCKED_PENDING_PUBLIC_ARCHIVE_AND_NEW_HUMAN_REFEREE_ROUND",
+    "publish_action_allowed": false
+  }
+}

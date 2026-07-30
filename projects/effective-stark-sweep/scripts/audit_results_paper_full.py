@@ -13,7 +13,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PAPER = ROOT / "paper/effective-stark-results.tex"
-OUT = ROOT / "artifacts/results-paper-full-referee-audit-v1.json"
+OUT = ROOT / "artifacts/results-paper-full-referee-audit-v2.json"
 getcontext().prec = 80
 
 
@@ -86,6 +86,11 @@ def main() -> None:
         r"\frac1m\log|\sigma_v(X_A^m)|",
         r"j(E)=E,\qquad j|_k\ne1",
         r"Put \(E^+=E^{\langle j\rangle}\)",
+        r"\phantomsection\label{par:conventions}",
+        r"\theta(\bar s)=i",
+        r"\psi(\sigma)=i",
+        r"\label{eq:index-parity}",
+        r"\label{sec:rq458}",
     )
     require(
         prose,
@@ -94,10 +99,13 @@ def main() -> None:
         "Equality of unlabeled polynomials is never the bridge",
         "not used in the theorem",
         "The theorem claim for this row rests solely on Engine B",
-        "We are unaware of earlier unconditional oriented examples",
+        "We are not aware of previous unconditional one-place Stark packet",
         "not a finished referee draft until its companion archive",
         "Shintani's Proposition~4 on pp.~154--156",
         "Shintani's Proposition~5(i)--(iii) on pp.~156--158",
+        "valid for every degree",
+        "complete the proof of Theorem",
+        "in 346 rows all supported terms vanish",
     )
     reject(
         main_body,
@@ -109,7 +117,26 @@ def main() -> None:
         r"\left|\log|X_A|_v-\log|\alpha_A|_v\right|",
         "so these are apparently the first examples",
         r"Put \(E^+=E^{\langle j\rangle}\) inside the common normal closure",
+        r"\tag{",
+        r"e=|\mu(E)|=2,4,6,8",
     )
+
+    # Engine A: the closed formula includes exact imprimitive
+    # degeneracies, which are audited over the frozen queue.
+    euler_output = run(
+        ["python3", "scripts/audit_engine_a_euler_degeneracy.py"],
+        "ENGINE_A_EULER_DEGENERACY_AUDIT=VERIFIED",
+    )
+    euler = load("artifacts/engine-a-euler-degeneracy-v1.json")
+    expected_euler = {
+        "case_count": 1560,
+        "supported_quadratic_character_count": 2232,
+        "characters_with_zero_euler_product": 672,
+        "cases_with_zero_euler_product": 603,
+        "cases_with_all_supported_euler_products_zero": 346,
+    }
+    if any(euler.get(key) != value for key, value in expected_euler.items()):
+        raise AssertionError("Engine-A Euler-degeneracy counts changed")
 
     # Engine B: all eight selected rows and their exact root geometry.
     q7 = load("data/q7-p7-case-v1.json")
@@ -290,10 +317,17 @@ def main() -> None:
         raise AssertionError("cyclic-quartic Fourier sign audit failed")
 
     artifact = {
-        "schema": "effective-stark-results-paper-full-referee-audit-v1",
+        "schema": "effective-stark-results-paper-full-referee-audit-v2",
         "claim_tag": "VERIFIED_MAJOR_REVISION_AUDIT",
         "paper": "paper/effective-stark-results.tex",
         "paper_sha256": sha("paper/effective-stark-results.tex"),
+        "engine_a": {
+            "uniform_theorem": "PASS",
+            "euler_degeneracy": expected_euler,
+            "euler_replay_stdout_sha256": hashlib.sha256(
+                euler_output.encode()
+            ).hexdigest(),
+        },
         "engine_b": {
             "case_count": 8,
             "margins": {

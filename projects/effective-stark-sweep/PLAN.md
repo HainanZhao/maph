@@ -76,14 +76,14 @@ case-level PROVED corpus entry
 
 | Track | State | Current fact | Controlling evidence / file |
 |---|---|---|---|
-| Results paper | `ACTIVE` | Complete three-engine major revision under a new mathematical repair round; not a finished referee draft until its public archive exists | `paper/effective-stark-results.tex`, `artifacts/results-paper-full-freeze-v1.json` (supersession pending) |
-| Results-paper audit | `BANKED` | Full audit passes; deterministic PDF; 117 repository tests pass | `artifacts/results-paper-full-referee-audit-v1.json` |
+| Results paper | `ACTIVE` | Latest referee must-fixes closed; deterministic 17-page PDF and local companion v7 frozen; one further human referee round remains | `paper/effective-stark-results.tex`, `artifacts/results-paper-full-freeze-v4.json` |
+| Results-paper audit | `BANKED` | Full A/B/C audit and compact companion replay pass, including the exact Engine-A Euler-degeneracy audit | `artifacts/results-paper-full-referee-audit-v2.json` |
 | Genuine routing census v5 | `BANKED` | 8,200/8,200 genuine screens; proxy recovery complete | `artifacts/full-census-yield-declaration-v5.json` |
 | Census manuscript | `ACTIVE` | Substantial Markdown draft exists; no journal LaTeX/PDF yet | `paper/effective-stark-sweep-draft.md` |
 | Engine-B occurrence transport | `READY` | Last formal W4 gate; current scope must be regenerated from v5 rather than copied from the obsolete 195-row ledger | `docs/cycle-070-genuine-census-v5.md` |
 | W4 census analysis | `BLOCKED` | Opens after the v5 Engine-B transport ledger closes | this plan |
 | DST / Cohen--Roblot comparison | `READY` | Initial perimeter table exists; case-by-case overlap comparison is incomplete | `docs/prior-art-overlap-table-v1.md` |
-| Public certificate archive | `BLOCKED` | Awaiting final manuscript scope and fresh referee round | `artifacts/results-paper-full-freeze-v1.json` |
+| Public certificate archive | `BLOCKED` | Local v7 is frozen; public deposit awaits the fresh human referee round | `artifacts/results-paper-companion-local-freeze-v7.json` |
 | Zenodo / arXiv | `HUMAN` | No upload or publication action authorized by the present plan | this plan |
 
 ### Genuine census v5 routing counts
@@ -104,6 +104,13 @@ five tool, and two real-place failures. The genuine norm-quartile
 frontier shares are 8.42%, 19.53%, 24.58%, and 28.53%. These statistics
 are banked at the routing-census level; their mathematical
 interpretation belongs to W4.
+
+The Engine-A row count is a routing count.  A subsequent exact
+imprimitive-Euler audit found 672 zero Euler products among 2,232
+supported quadratic character occurrences, affecting 603 rows; in
+346 rows every supported derivative vanishes and the explicit product
+is empty, so \(X_A=1\).  Before the census paper prints packet counts,
+W4 must distinguish routing support from effective derivative support.
 
 ## Banked theorem inventory
 
@@ -218,6 +225,21 @@ State: `ACTIVE`
       runtimes, and memory.
 - [x] Remove the superseded three-page CM gap-ledger manuscript and
       PDF so it cannot be mistaken for a second paper.
+- [x] Correct the abstract to the proved \(e=2,6,8\) CM routes and
+      state the five order-six rows without an ambiguous partial count.
+- [x] Replace every manual equation tag by `label`/`eqref` numbering.
+- [x] Freeze the Fourier, inverse-transform, Artin-action, and quartic
+      generator conventions and reference them from Engines A and C.
+- [x] Close the zero-radius nonsplit-place pairing in the height lemma
+      and cite Voutier's main theorem with its degree range.
+- [x] Audit the Engine-A zero-Euler-factor degeneracies exactly and add
+      the result to the written theorem discussion and companion.
+- [x] Add the explicit Theorem 2 completion marker and close all
+      bibliography citation gaps.
+- [x] Replace the priority language by the non-load-bearing statement
+      that the authors are not aware of previous unconditional
+      one-place packets at support orders six or ten; remove the
+      singled-out Kopp discussion from the paper.
 - [ ] Deposit the companion archive under a public immutable
       identifier and put that identifier in the manuscript.
 - [ ] Conduct a new Papers-I/II-style referee pass over every displayed
