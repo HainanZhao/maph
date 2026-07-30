@@ -18,7 +18,7 @@ census paper and Paper III T3.9 with its case and certificate hashes.
 |---|---|---:|---:|---|---:|
 | RQ-000419 | Q(sqrt(14)), p_7 | 2,6 | 4032 | `VERIFIED` | >7315 |
 | RQ-002057 | Q(sqrt(57)), norm 27 | 2,6 | 2592 | `VERIFIED` | >748 |
-| RQ-000458 | Q(sqrt(14)), norm 72 | 4 | 1152 | `DUAL_PROVED` | >6470 (B) |
+| RQ-000458 | Q(sqrt(14)), norm 72 | 4 | 1152 | `DUAL_ROUTED` (Cycle-059 correction) | >6470 (B) |
 | RQ-000108 | Q(sqrt(5)), norm 45 | 4 | 2880 | `VERIFIED` | >2460 |
 | RQ-000021 | Q(sqrt(2)), norm 49 | 2,6 | 2016 | `VERIFIED` | >4261 |
 | RQ-002955 | Q(sqrt(77)), p_7 | 2,6 | 4032 | `VERIFIED` | >5151 |
@@ -37,7 +37,10 @@ RQ-000458 aligns exactly at the modulus, ray-class, character, and
 packet levels. Engine B and Engine C then prove it using separate
 certificates and no shared analytic intermediate.
 
-The dual identity was sealed at `2026-07-30T05:15:41Z`. Its exact case
+The dual identity was sealed retrospectively at
+`2026-07-30T05:15:41Z`, but the selection/open ordering was not
+contemporaneously documented; Cycle 059 therefore corrected the
+process tag to `DUAL_ROUTED`. Its exact case
 identity is: real base `Q(sqrt(14))` (discriminant 56), finite ideal
 HNF `[[12,0],[0,6]]` of norm 72, infinite component `[1,0]`, ray
 structure `C4 x C2`, sign log `[2,0]`, aligned characters `[1,1]` and
