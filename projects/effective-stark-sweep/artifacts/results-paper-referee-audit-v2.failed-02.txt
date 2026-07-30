@@ -1,0 +1,7 @@
+RUN_AT_UTC=2026-07-30T12:24:00Z
+COMMAND=python3 scripts/audit_results_paper.py
+STATUS=FAILED_TEXT_MATCH_ONLY
+ERROR=paper omits required text: 256 common-normal-closure identities
+CAUSE=The rewritten sentence says "256 exact common-normal-closure identities"; the mathematical value and meaning are unchanged.
+EFFECT=All preceding v2 checks passed; no audit record was emitted.
+RESOLUTION=Match the stronger exact wording.

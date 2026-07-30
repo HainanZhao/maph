@@ -1,0 +1,7 @@
+RUN_AT_UTC=2026-07-30T12:25:00Z
+COMMAND=python3 scripts/audit_results_paper.py
+STATUS=FAILED_TEXT_MATCH_ONLY
+ERROR=paper omits required text: mixed signature
+CAUSE=The source line wraps between "mixed" and "signature"; the auditor checked raw TeX rather than normalized prose.
+EFFECT=All preceding v2 mathematical checks passed; no audit record was emitted.
+RESOLUTION=Use normalized prose for prose requirements and raw TeX only for formulas.

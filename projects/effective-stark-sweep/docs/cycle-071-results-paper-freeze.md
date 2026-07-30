@@ -39,3 +39,14 @@ this point requires rebuilding twice, rerunning
 `scripts/audit_results_paper.py`, and issuing a new freeze hash.
 The PDF was built independently in two temporary directories with
 `SOURCE_DATE_EPOCH=1785411036`; the two outputs were byte-identical.
+
+## Supersession
+
+This freeze was superseded on 30 July 2026 by
+`artifacts/results-paper-freeze-v3.json` after the external-referee
+repair.  Version 2 remains preserved as the pre-repair checkpoint.
+The v3 manuscript is fourteen pages, contains the explicit eight-item
+theorem inventory, expands all three engine proofs, corrects the
+\(\mathbb Q(\sqrt6)\) packet polynomial, and banks the genuine
+446-case parity replay.  Its independent builds are byte-identical at
+`SOURCE_DATE_EPOCH=1785414600`.

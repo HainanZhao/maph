@@ -1,0 +1,12 @@
+$ /usr/bin/gp -q
+print("real_base_Q_sqrt_35|",bnfinit(x^2-35).no)
+print("imaginary_base_Q_sqrt_minus_10|",bnfinit(x^2+10).no)
+print("imaginary_base_Q_sqrt_minus_14|",bnfinit(x^2+14).no)
+quit
+--- stdout ---
+real_base_Q_sqrt_35|2
+imaginary_base_Q_sqrt_minus_10|2
+imaginary_base_Q_sqrt_minus_14|4
+--- stderr ---
+--- returncode ---
+0

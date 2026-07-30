@@ -1,0 +1,38 @@
+{
+  "schema": "effective-stark-results-paper-odd-index-parity-preregistration-v1",
+  "recorded_at_utc": "2026-07-30T11:56:13Z",
+  "status": "FROZEN_BEFORE_EXECUTION",
+  "purpose": "Test the index-parity lemma against every genuinely reconstructed census row, while keeping the withdrawn 88-row proxy population outside the theorem test.",
+  "inputs": {
+    "genuine_index_ledger": {
+      "path": "artifacts/genuine-index-ledger-8200-v3.json",
+      "sha256": "7d58cbc32956879642fce3df6508ae150a2a955d7215430f03bfac20734c3a7e"
+    },
+    "exact_fourier_screen": {
+      "path": "artifacts/w1-full-census-v1.json",
+      "sha256": "b656a587bea705e8efe817e2870a0ea86cbf2c10fa37c7d9aa03d3868dfa76f1"
+    },
+    "withdrawn_proxy_population": {
+      "path": "artifacts/frontier-odd-index-stability-correction-v1.json",
+      "sha256": "9f9753eaa6b8a114fb5caf993504ba709264a6572d24a0e7e645b963acd5584b"
+    }
+  },
+  "population": {
+    "all_genuine_reconstructions": 8200,
+    "test_rows": "every row with odd genuine Shintani index greater than one",
+    "historical_88_row_proxy_population": "excluded from the theorem test because all 88 finite moduli were proved conjugation-unstable"
+  },
+  "independence": {
+    "index_side": "re-read and hash every per-case genuine reconstruction transcript; parse DERIVED_SUBGROUP_ORDER rather than trusting the aggregate histogram alone",
+    "support_side": "use the exact W1 Fourier computation, which the R-13 scope audit established as proxy-free",
+    "identity_test": "the sign class is trivial exactly when every coordinate in sign_log is zero"
+  },
+  "acceptance_criteria": [
+    "all 8200 transcript hashes match the genuine ledger",
+    "every transcript-derived index equals its ledger value",
+    "every odd genuine index greater than one has trivial sign_log",
+    "every odd genuine index greater than one has support_count zero and empty support_orders",
+    "zero exceptions"
+  ],
+  "failure_action": "Any exception withdraws Lemma 2 and the abstract parity claim pending mathematical diagnosis."
+}

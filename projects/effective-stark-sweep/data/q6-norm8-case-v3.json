@@ -1,0 +1,60 @@
+{
+  "schema": "effective-stark-case-development-v3",
+  "case_id": "RQ-000129",
+  "field": "Q(sqrt(6))",
+  "finite_ideal_hnf": [[4, 0], [0, 2]],
+  "finite_norm": 8,
+  "archimedean_place": "infinity_2",
+  "fourier_support_orders": [4],
+  "engine": "C",
+  "supersedes": {
+    "path": "data/q6-norm8-case-v2.json",
+    "sha256": "2a91b9c587bad8af19b8295dadd8cde4a3a8a8dbf32ee86169491bfe7184fc79",
+    "reason": "v2 misidentified the zero-real-root minimal polynomial of the complex anti-unit as the positive packet polynomial"
+  },
+  "routes": [
+    {
+      "base": "Q(sqrt(-2))",
+      "e": 8,
+      "natural_s_size": 3,
+      "isolated_anti_unit_coordinates": [4, 0],
+      "primitive_lattice_root_coordinates": [1, 0],
+      "positive_norm_polynomial": "x^8-8*x^7+12*x^6+8*x^5-10*x^4+8*x^3+12*x^2-8*x+1"
+    },
+    {
+      "base": "Q(sqrt(-3))",
+      "e": 12,
+      "natural_s_size": 2,
+      "auxiliary_s_size": 3,
+      "isolated_anti_unit_coordinates": [6, 0],
+      "primitive_lattice_root_coordinates": [1, 0],
+      "positive_norm_polynomial": "x^8-8*x^7+12*x^6+8*x^5-10*x^4+8*x^3+12*x^2-8*x+1"
+    }
+  ],
+  "auxiliary_prime_closure": {
+    "claim_tag": "VERIFIED",
+    "rational_primes": [3, 5],
+    "exact_euler_multipliers_at_s0": {
+      "3": "1+i",
+      "5": "2"
+    },
+    "rank_preserved": true,
+    "secondary_global_unit_clause_restored": true,
+    "q5_effect": "the enlarged Stark unit has twice the natural unit-lattice coordinate, so its positive norm is the square of the natural positive norm; exact division by 2 in the free lattice plus positivity recovers the natural norm",
+    "q3_effect": "the exact (I+/-A) group-ring transform gives an independent auxiliary-prime normalization check"
+  },
+  "cross_route": {
+    "isolated_power_identity": "q8^3=q12^2",
+    "primitive_lattice_root_packet_agreement": true,
+    "common_packet_polynomial": "x^8-8*x^7+12*x^6+8*x^5-10*x^4+8*x^3+12*x^2-8*x+1",
+    "real_root_count": 4,
+    "negative_root_count": 0,
+    "selector_field_signature": [4, 2]
+  },
+  "correction_certificate": {
+    "path": "artifacts/q6-positive-packet-correction-v2.json",
+    "sha256": "654408dac923999cea1c3ab6911b144016e239ff0fddd3c0f2ad5369e73947f0"
+  },
+  "verdict": "VERIFIED",
+  "boundary": "The theorem identifies the positive Artin-labeled packet. Literal CM Stark units remain defined modulo roots of unity."
+}

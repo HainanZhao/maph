@@ -1,0 +1,42 @@
+{
+  "case": {
+    "finite_modulus_norm": 32,
+    "imaginary_bases": [
+      "Q(sqrt(-10))",
+      "Q(sqrt(-14))"
+    ],
+    "real_base": "Q(sqrt(35))"
+  },
+  "claim_tag": "VERIFIED_EXACT",
+  "conclusion": "The real base has class number 2, while the two imaginary bases have distinct class numbers 2 and 4.",
+  "created_utc": "2026-07-30T12:19:31.112488+00:00",
+  "fields": {
+    "imaginary_base_Q_sqrt_minus_10": {
+      "class_number": 2,
+      "method": "PARI bnfinit(polynomial).no",
+      "observed_class_number": 2,
+      "polynomial": "x^2+10"
+    },
+    "imaginary_base_Q_sqrt_minus_14": {
+      "class_number": 4,
+      "method": "PARI bnfinit(polynomial).no",
+      "observed_class_number": 4,
+      "polynomial": "x^2+14"
+    },
+    "real_base_Q_sqrt_35": {
+      "class_number": 2,
+      "method": "PARI bnfinit(polynomial).no",
+      "observed_class_number": 2,
+      "polynomial": "x^2-35"
+    }
+  },
+  "schema": "effective-stark-q35-base-class-numbers-v1",
+  "software": {
+    "pari_gp": "2.15.4",
+    "python": "3.12.3"
+  },
+  "transcript": {
+    "path": "artifacts/q35-base-class-numbers-v1.transcript",
+    "sha256": "93e0b007cbdbaa2e1ae0c77de9722a1d6596fd24af33929789b94886e81ec2d6"
+  }
+}

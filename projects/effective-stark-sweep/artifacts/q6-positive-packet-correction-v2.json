@@ -1,0 +1,96 @@
+{
+  "case_id": "RQ-000129",
+  "claim_tag": "VERIFIED_CORRECTION",
+  "common_normalized_power_polynomial": "x^8 - 1146734152*x^7 + 143378958341532*x^6 - 205547702181368*x^5 + 145465056206150*x^4 - 205547702181368*x^3 + 143378958341532*x^2 - 1146734152*x + 1",
+  "correct_packet_negative_root_count": 0,
+  "correct_packet_positive_roots": "[0.17581208233877761167058812500129738964, 0.37604912177498273856418883616039804460, 2.6592270586351003108314065143357952688, 5.6878912228174955353283846739142920809]~",
+  "correct_packet_real_root_count": 4,
+  "correct_positive_packet_polynomial": "x^8 - 8*x^7 + 12*x^6 + 8*x^5 - 10*x^4 + 8*x^3 + 12*x^2 - 8*x + 1",
+  "error_classification": "The v2 record and results-paper equation (13) printed the minimal polynomial of the complex anti-unit epsilon and misidentified it as the positive packet.",
+  "exact_cross_route_identity": "q8^3=q12^2",
+  "field": "Q(sqrt(6))",
+  "normalization_correction": "The first correction isolated the positive power identity q8^3=q12^2 but did not yet take the exact roots inside the certified anti-unit lattices. The isolated coordinates are divisible by 4 and 6. Dividing in the exact lattice and taking the positive CM norm gives the same X_A packet polynomial on both routes. The possible reciprocal has the same polynomial.",
+  "old_anti_unit_polynomial": "x^8+24*x^7+732*x^6-9304*x^5+53958*x^4-9304*x^3+732*x^2+24*x+1",
+  "old_anti_unit_real_root_count": 0,
+  "route_records": [
+    {
+      "character_field": "x^8-4*x^6-4*x^5+6*x^4+16*x^3+16*x^2+8*x+2",
+      "coordinate_divisor": 4,
+      "isolated_coordinates": "[4,0]",
+      "isolated_stark_unit": {
+        "anti_unit_minimal_polynomial": "x^8 + 24*x^7 + 732*x^6 - 9304*x^5 + 53958*x^4 - 9304*x^3 + 732*x^2 + 24*x + 1",
+        "complex_conjugation_group_index": 15,
+        "conjugation_fixed_norm_count": 4,
+        "coordinates": "[4,0]",
+        "normal_sigma_group_index": 11,
+        "normalized_packet_polynomial": "x^8 - 1146734152*x^7 + 143378958341532*x^6 - 205547702181368*x^5 + 145465056206150*x^4 - 205547702181368*x^3 + 143378958341532*x^2 - 1146734152*x + 1",
+        "positive_norm_polynomial": "x^8 - 1096*x^7 + 51612*x^6 + 32776*x^5 + 95558*x^4 + 32776*x^3 + 51612*x^2 - 1096*x + 1"
+      },
+      "normalizing_power": 3,
+      "primitive_lattice_root": {
+        "anti_unit_minimal_polynomial": "x^8 + 4*x^7 + 8*x^6 + 12*x^5 + 22*x^4 + 12*x^3 + 8*x^2 + 4*x + 1",
+        "complex_conjugation_group_index": 15,
+        "conjugation_fixed_norm_count": 4,
+        "coordinates": "[1,0]",
+        "normal_sigma_group_index": 11,
+        "positive_norm_polynomial": "x^8 - 8*x^7 + 12*x^6 + 8*x^5 - 10*x^4 + 8*x^3 + 12*x^2 - 8*x + 1"
+      },
+      "root_coordinates": "[1,0]",
+      "route_id": "Qsqrt(-2)",
+      "separator_prime": 3
+    },
+    {
+      "character_field": "x^8-2*x^6+5*x^4-4*x^2+1",
+      "coordinate_divisor": 6,
+      "isolated_coordinates": "[6,0]",
+      "isolated_stark_unit": {
+        "anti_unit_minimal_polynomial": "x^8 + 328*x^7 + 33460*x^6 + 39368*x^5 + 11973990*x^4 - 39368*x^3 + 33460*x^2 - 328*x + 1",
+        "complex_conjugation_group_index": 10,
+        "conjugation_fixed_norm_count": 4,
+        "coordinates": "[6,0]",
+        "normal_sigma_group_index": 12,
+        "normalized_packet_polynomial": "x^8 - 1146734152*x^7 + 143378958341532*x^6 - 205547702181368*x^5 + 145465056206150*x^4 - 205547702181368*x^3 + 143378958341532*x^2 - 1146734152*x + 1",
+        "positive_norm_polynomial": "x^8 - 34216*x^7 + 12000252*x^6 - 9163544*x^5 - 5039482*x^4 - 9163544*x^3 + 12000252*x^2 - 34216*x + 1"
+      },
+      "normalizing_power": 2,
+      "primitive_lattice_root": {
+        "anti_unit_minimal_polynomial": "x^8 - 4*x^6 - 4*x^5 + 18*x^4 - 16*x^3 + 12*x^2 - 4*x + 1",
+        "complex_conjugation_group_index": 10,
+        "conjugation_fixed_norm_count": 4,
+        "coordinates": "[1,0]",
+        "normal_sigma_group_index": 12,
+        "positive_norm_polynomial": "x^8 - 8*x^7 + 12*x^6 + 8*x^5 - 10*x^4 + 8*x^3 + 12*x^2 - 8*x + 1"
+      },
+      "root_coordinates": "[1,0]",
+      "route_id": "Qsqrt(-3)",
+      "separator_prime": 19
+    }
+  ],
+  "schema": "effective-stark-q6-positive-packet-correction-v1",
+  "selector_field_signature": [
+    4,
+    2
+  ],
+  "source_hashes": {
+    "artifacts/q6-auxiliary-prime-independence-v1.json": "6fe285e1d7f1b21bf520391a89702b1972f62e2c4a3280df602b044de6cbc6bc",
+    "artifacts/q6-positive-packet-correction-v1.json": "21949c5ce3be4be0a1f359d71de757a7a6b664977119169300512d118f66a7b4",
+    "data/q6-norm8-case-v2.json": "2a91b9c587bad8af19b8295dadd8cde4a3a8a8dbf32ee86169491bfe7184fc79",
+    "scripts/certify_q6_positive_packet.py": "d964441d695f45480309528f3722c28063d8f9a4136eb6d2c2bd72b95884ce6c",
+    "scripts/generic_engine_c_packet_bridge.gp": "37673ebd468a72a29199cc06b7f3773d3d5f32fde9955e2e8371d8e62430e3e8"
+  },
+  "supersedes": {
+    "case_record": {
+      "path": "data/q6-norm8-case-v2.json",
+      "sha256": "2a91b9c587bad8af19b8295dadd8cde4a3a8a8dbf32ee86169491bfe7184fc79"
+    },
+    "first_correction": {
+      "path": "artifacts/q6-positive-packet-correction-v1.json",
+      "sha256": "21949c5ce3be4be0a1f359d71de757a7a6b664977119169300512d118f66a7b4"
+    }
+  },
+  "transcript": {
+    "path": "artifacts/q6-positive-packet-correction-v2.transcript",
+    "sha256": "dab1bdee4225447df9130359ca14b457b826800eeb2ef8d77e41b2ea13f59bb0"
+  },
+  "verdict": "VERIFIED"
+}

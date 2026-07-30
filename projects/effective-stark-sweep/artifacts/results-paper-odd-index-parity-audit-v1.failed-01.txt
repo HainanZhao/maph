@@ -1,0 +1,7 @@
+RUN_AT_UTC=2026-07-30T11:59:00Z
+COMMAND=python3 scripts/audit_odd_index_parity.py
+STATUS=FAILED_BEFORE_VERDICT
+ERROR=KeyError: old_population
+CAUSE=The withdrawn proxy-control artifact stores its row count under population.rows, not old_population.rows.
+EFFECT=No mathematical acceptance criterion was evaluated and no audit artifact was emitted.
+RESOLUTION=Correct the metadata parser only; leave the frozen inputs and acceptance criteria unchanged.
