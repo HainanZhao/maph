@@ -247,21 +247,29 @@ than a transcendental phase assertion. Rademacher reciprocity would
 then become a plausible proof tool.
 
 This is the most promising collision because the program now has
-certified, Artin-labeled quartic packets that can serve as genuine
-calibration data. A fitted identity is not evidence if it has enough
-free coefficients to interpolate the controls, so the admissible
-formula family and its coefficient budget must be frozen first.
+certified, Artin-labeled quartic packets that can serve as exact
+convention controls. The initial feasibility audit found that they are
+**not yet genuine calibration responses**: the archived Engine-C
+comparison vectors are obtained by Fourier inversion of the same
+\(L'\)-data whose phase is to be explained. The active project at
+`projects/dedekind-stark-phase` therefore requires an independently
+constructed Roblot-canonical weak solution on the original
+real-quadratic quartic extension before fitting. A fitted identity is
+not evidence if it has enough free coefficients to interpolate the
+controls, so the admissible formula family and its coefficient budget
+remain frozen behind that independence gate.
 
 **First computation.**
 
-1. Extract every exact multiplier exponent, Dedekind--Rademacher sum,
-   orientation choice, and certified phase from the five Engine-C
-   packets.
-2. Freeze a low-complexity reciprocity-compatible formula family
-   before fitting.
-3. Fit against the certified zero defects.
-4. Test the resulting formula, without refitting, on 50
-   preregistered uncertified quartic census rows at 38 digits.
+1. Reconstruct Roblot's canonical weak solution on each original
+   cyclic-quartic extension and check (A1)--(A3) there.
+2. Seal its coefficient before opening the archived packet or
+   \(L'\)-value.
+3. Freeze a low-complexity reciprocity-compatible formula family only
+   after independent defects exist.
+4. Fit against the independent certified defects.
+5. Test the resulting formula, without refitting, on 50
+   preregistered quartic census rows at 38 digits.
 
 A clean failure is valuable: it identifies which phase information is
 not contained in the classical multiplier data.

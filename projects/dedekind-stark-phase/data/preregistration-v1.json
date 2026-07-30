@@ -1,0 +1,40 @@
+{
+  "calibration_cases": [
+    "RQ-001280",
+    "RQ-001569",
+    "RQ-007519",
+    "RQ-001894",
+    "RQ-000129"
+  ],
+  "claim_boundary": {
+    "absolute_lprime_phase_quantized": false,
+    "cm_route_implies_roblot_eligibility": false,
+    "formula_target": "arg(Lprime(0,chi)) - arg(canonical_weak_solution_coefficient) modulo pi/2",
+    "same_lprime_fourier_inversion_is_independent_target": false
+  },
+  "failure_criteria": [
+    "no canonical weak solution can be constructed independently of Lprime and the certified packet",
+    "the admissible feature matrix is underdetermined by the controls",
+    "a route-dependent feature changes while the packet defect must remain invariant",
+    "the frozen formula fails one certified control or one untouched holdout"
+  ],
+  "formula_family_gate": {
+    "maximum_free_integer_coefficients": 3,
+    "must_be_frozen_before_fit": true,
+    "required_symmetries": [
+      "invariant under inversion of the quartic generator after the corresponding Artin relabeling",
+      "invariant across two certified CM routes for the same original packet",
+      "well-defined modulo pi/2"
+    ],
+    "status": "BLOCKED_UNTIL_INDEPENDENT_DEFECT_EXISTS"
+  },
+  "holdout": {
+    "acceptance": "every certified ball for the phase defect contains the exact congruence class predicted before opening the target",
+    "sample_size": 50,
+    "seed": "dedekind-stark-phase-holdout-v1|2026-07-30",
+    "status": "BLOCKED_UNTIL_TARGET_PIPELINE_EXISTS"
+  },
+  "recorded_at_utc": "2026-07-30T00:00:00Z",
+  "schema": "dedekind-stark-phase-preregistration-v1",
+  "status": "FROZEN_BEFORE_ANY_FIT"
+}
