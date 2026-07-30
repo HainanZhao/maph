@@ -1,0 +1,12 @@
+The degree-48 W2 tranche was interrupted deliberately after four
+completed cases.  The lower-degree tranches had completed 376 cases
+quickly, whereas these first four cases required about 20--30 seconds
+each on the VPS.  This is far below the frozen one-node-hour per-case
+FRONTIER cap, so it is not a mathematical or tool failure.  The batch
+was stopped to analyze and bank the completed degree <= 40 census
+before spending approximately an hour on the next tranche.
+
+The raw four-case transcript is preserved in
+engine-b-two-route-degree48-interrupted-v0.transcript.  No aggregate
+JSON was emitted by the interrupted runner and no verdict outside
+those four transcripts is claimed.

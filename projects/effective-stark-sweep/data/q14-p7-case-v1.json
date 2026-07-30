@@ -1,0 +1,39 @@
+{
+  "schema": "effective-stark-case-development-v1",
+  "case_id": "RQ-000419",
+  "field": "Q(sqrt(14))",
+  "finite_ideal_hnf": [[7, 0], [0, 1]],
+  "finite_norm": 7,
+  "archimedean_place": "infinity_2",
+  "fourier_support_orders": [2, 6],
+  "engine": "B",
+  "w2": {
+    "claim_tag": "VERIFIED",
+    "normal_closure_absolute_degree": 24,
+    "imaginary_bases": [
+      {
+        "field": "Q(sqrt(-7))",
+        "defining_polynomial": "x^2-x+2",
+        "conductor_hnf": [[56, 24], [0, 8]],
+        "divisor_count": 32,
+        "ray_subfield_reconstruction_isomorphic": true
+      },
+      {
+        "field": "Q(sqrt(-2))",
+        "defining_polynomial": "x^2+2",
+        "conductor_hnf": [[7, 0], [0, 7]],
+        "divisor_count": 2,
+        "ray_subfield_reconstruction_isomorphic": true
+      }
+    ],
+    "printed_table_base": "Q(sqrt(-2))",
+    "clearing_exponents": [576, 84],
+    "safe_exponent": 4032,
+    "two_route_mismatch": false
+  },
+  "w3": {
+    "claim_tag": "PENDING",
+    "required_gate": "exact packet candidate, ray/Frobenius labels, and Arb height-rigidity closure"
+  },
+  "verdict": "W2_VERIFIED_W3_PENDING"
+}

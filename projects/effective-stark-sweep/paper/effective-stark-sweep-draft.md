@@ -82,3 +82,70 @@ After the priority \(\mathbb Q(\sqrt7)\) case, identification proceeds
 C, then B, then A. C and B receive individual full bundles. A runs
 under the uniform ACNF/relative-regulator theorem, with exact
 case-specific indices and orientations.
+
+## The geometric census changes the structural counts
+
+The structural C label is not itself a CM-descent theorem.  Applying
+the complete predicate packet-by-packet to all 817 structural rows
+produces 1,350 distinct primitive quartic packets.  Of these, 1,255
+have normal group \([16,13]\) and exactly two imaginary quadratic
+subgroups supporting linear reinduction.  Seventy-seven fail the
+linear-base count, thirteen have the wrong normal-closure order, one
+has the wrong order-16 group, and four are tool-blocked rather than
+mathematically classified.
+
+At case level, 728 rows remain C-eligible, 63 route to B, 22 acquire a
+named mathematical obstruction, and four remain quarantined.  The
+quarantine is part of the claim boundary: a PARI segmentation fault or
+an interrupted resolvent is not a theorem about the field.
+
+The 63 reroutes enlarge B to 718 cases.  We completed the exact
+two-route reconstruction for every case of absolute normal-closure
+degree at most 40, 372 cases in all.  Exactly 195 pass and 177 have no
+abelian imaginary quadratic base.  No case with such a base disagrees
+on the independent ray-subfield reconstruction.  Consequently,
+index two and the one-real-place splitting condition are not
+sufficient operational hypotheses: existence of an abelian imaginary
+base is a separate predicate.  The 195 passes define only 59 distinct
+normal closures, so W2/W3 is naturally organized by closures rather
+than by modulus occurrences.
+
+## New theorem candidates and exponent economics
+
+For \(K=\mathbb Q(\sqrt{14})\) and
+\(\mathfrak m=\mathfrak p_7\infty_2\), both
+\(\mathbb Q(\sqrt{-7})\) and \(\mathbb Q(\sqrt{-2})\) reconstruct the
+degree-24 normal closure.  The latter route has conductor \((7)\) and
+two clearing exponents, 576 and 84, hence safe exponent 4032.  This is
+the next Engine-B packet-identification target; no W3 identity is
+claimed yet.
+
+For \(K=\mathbb Q(\sqrt{111})\) and the norm-three modulus, the two
+derived bases are \(\mathbb Q(i)\) and
+\(\mathbb Q(\sqrt{-111})\).  The shorter \(\mathbb Q(i)\) route has
+eight divisors and safe exponent \(13{,}810{,}176\).  It is a valid W2
+case but lower W3 priority: the exponent makes the required analytic
+enclosure over three thousand times tighter than in the 4032 cases.
+
+The first new Engine-C target is \(K=\mathbb Q(\sqrt6)\), finite norm
+eight.  Exact normal-closure restriction gives linear reinduction over
+\(\mathbb Q(\sqrt{-2})\) and \(\mathbb Q(\sqrt{-3})\).  On the selected
+\(\mathbb Q(\sqrt{-2})\) route, the character field has signature
+\([0,4]\), class number one, \(|S|=3\), and
+\(e=|\mu(E)|=8\).  Its exact anti-unit lattice and oriented ray
+character isolate a reciprocal norm-one candidate with orbit
+coordinates \((4,0),(0,4)\).  This is deliberately not labeled
+VERIFIED: the equality with the archimedean invariant awaits an
+independent Arb Shintani/cocycle enclosure.
+
+## Uniform Engine A after deduplication
+
+Of 5,459 A rows, 3,899 have empty Fourier support.  For these the
+differenced derivative is identically zero and \(X_A=1\), exactly.
+The remaining 1,560 rows contain 2,232 supported quadratic-character
+occurrences, but exact ray-field extraction reduces them to 912
+distinct absolute quartic fields.  The eventual regulator-index and
+Euler-factor corpus therefore verifies a single ACNF theorem over 912
+field objects, then transfers the result to their occurrences.  That
+bulk remains after the individual C and B identifications in the
+pre-registered order.
