@@ -104,6 +104,23 @@ The same gate identified every one of the 276 proposed cases as having
 a conjugation-unstable finite modulus. The census therefore generated
 a mechanism and then rejected it before it became a theorem claim.
 
+**Lemma (absolute-abelian one-place obstruction).** *A nontrivial
+one-place differenced Stark invariant over a real quadratic field is
+never governed by an absolutely abelian ray field.* Indeed, if
+\(H/\mathbb Q\) is abelian, the complex conjugations above the two real
+places of \(K\) are conjugate in \(\operatorname{Gal}(H/\mathbb Q)\)
+and hence, because this group is abelian, are the same single element
+\(c\). Every character of \(H/\mathbb Q\) therefore has the same
+archimedean sign at both places, whereas the Fourier support of the
+one-place difference consists precisely of characters odd at one real
+place and even at the other. This contradiction proves the claim.
+
+The lemma also explains the Engine-A signature phenomenon. Engine A
+uses quadratic ACNF reductions character by character; it does not
+assert that the entire mixed-signature one-place ray field is
+absolutely abelian. Thus the engine taxonomy has no fourth abelian
+member hidden below A.
+
 ## Census result and containment correction
 
 The frozen maximal-order backbone contains 8,200 conjugacy
@@ -128,7 +145,10 @@ and checks its normal group and CM subfields directly. Engine A is
 relative and also unaffected. Of the 195 B rows, 131 have stable
 finite modulus and remain eligible, while 64 are quarantined until
 their actual normal closure is reconstructed as a compositum with the
-conjugate-modulus field. The current contained split is:
+conjugate-modulus field. In addition, all 177 former
+`NO_ABELIAN_IMAGINARY_BASE` findings came from unstable moduli and are
+withdrawn pending the same reconstruction. The current contained
+split is:
 
 | status | occurrences |
 |---|---:|
@@ -143,17 +163,20 @@ The nontrivial A rows contain 2,232 supported quadratic packets, while
 the 728 fully C-eligible rows contain 1,163 quartic packets. Across all
 structural C rows, 1,255 individual packets pass geometry and define
 430 fields, but 92 of those packets lie in mixed-pass rows and are
-outside the C bulk. The pre-containment frontier taxonomy is 1,100
+outside the C bulk. The pre-containment frontier taxonomy was 1,100
 `INDEX_GT_2`, 502 `EXPONENT_CAP`, 177
 `NO_ABELIAN_IMAGINARY_BASE`, 33 `UNIT_CONGRUENCE_FAIL`, two
 `REAL_PLACE_SPLITTING_FAIL`, and four `TOOL_BLOCKED`. These counts sum
-to the original 1,818-row frontier. The 64-row B quarantine is
-reported separately and is not silently assigned an obstruction.
+to the original 1,818-row frontier. Its 177
+`NO_ABELIAN_IMAGINARY_BASE` entries are now pending rather than
+negative results. The 64-row B quarantine is reported separately and
+is not silently assigned an obstruction.
 
 Before the containment correction, the frontier share rose strictly
 across conductor-norm quartiles: 9.93%, 21.60%, 27.26%, and 31.65%.
 That summary is now historical rather than final and will be
-recomputed after the 64-row B quarantine is resolved.
+recomputed after the 241-row B reconstruction, 252-row C catch-up
+screen, and complete genuine index pass.
 
 The old coordinate ledger contained 88 odd index proxies above two.
 Its exact outputs satisfy the former 85/88 and 86/88 correlations, but
@@ -179,16 +202,25 @@ This is an eligibility count, not a count of new proved packets. The
 earlier 6,382-row declaration is preserved as process history; its
 64-row difference is explicitly quarantined.
 
+This is accounting revision v4. Across four revisions, zero false
+case-level theorem tags were issued: every predicate correction
+preceded W3 promotion. We deliberately make the narrower claim.
+Proxy-dependent `VERIFIED_W2_*` classification artifacts did exist;
+they are superseded here, including the single unstable canonical
+closure RQ-007500 among the 51 completed W2 closures. Fifty canonical
+W2 closures remain genuine.
+
 ## Identification order
 
-After the priority \(\mathbb Q(\sqrt7)\) case, identification proceeds
-C, then B, then A. C and B receive individual full bundles. A runs
-under the uniform ACNF/relative-regulator theorem, with exact
-case-specific indices and orientations.
+The existing C-positive and A bulks proceed independently. Stable
+Engine-B cases may also proceed, while the 241 unstable B screens form
+a separate normal-closure recovery track. W4 remains closed until that
+track, the 252-row C catch-up screen, occurrence transport, and a new
+8,200-row genuine index ledger are complete.
 
 ## The geometric census changes the structural counts
 
-The structural C label is not itself a CM-descent theorem.  Applying
+The structural C label is not itself a CM-descent theorem. Applying
 the complete predicate packet-by-packet to all 817 structural rows
 produces 1,350 distinct primitive quartic packets.  Of these, 1,255
 have normal group \([16,13]\) and exactly two imaginary quadratic
@@ -202,16 +234,20 @@ named mathematical obstruction, and four remain quarantined.  The
 quarantine is part of the claim boundary: a PARI segmentation fault or
 an interrupted resolvent is not a theorem about the field.
 
-The 63 reroutes enlarge B to 718 cases.  We completed the exact
-two-route reconstruction for every case of absolute normal-closure
-degree at most 40, 372 cases in all.  Exactly 195 pass and 177 have no
-abelian imaginary quadratic base.  No case with such a base disagrees
-on the independent ray-subfield reconstruction.  Consequently,
-index two and the one-real-place splitting condition are not
-sufficient operational hypotheses: existence of an abelian imaginary
-base is a separate predicate.  The 195 passes define only 59 distinct
-normal closures, so W2/W3 is naturally organized by closures rather
-than by modulus occurrences.
+The positive set of 728 is sound because its complete gate constructs
+the actual splitting closure. Its completeness is not yet closed:
+252 supported order-four rows were excluded by the W1 proxy before
+that gate and must now receive the same geometry screen. Likewise, the
+63 C-to-B reroutes reused the proxy index and enter recovery.
+
+The generic B screen processed 372 cases. Exactly 131 have stable
+finite modulus, and all 131 pass. The other 241 are proxy-dependent:
+64 former passes and all 177 former
+`NO_ABELIAN_IMAGINARY_BASE` results. These are neither positive nor
+negative evidence until the actual normal closure—the compositum with
+the conjugate-modulus ray field—is constructed. Among the 51 completed
+canonical W2 closure certificates, 50 have stable representatives;
+RQ-007500 is superseded. No affected closure reached W3.
 
 ## New theorem candidates and exponent economics
 
