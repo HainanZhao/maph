@@ -1,0 +1,32 @@
+{
+  "schema": "effective-stark-engine-c-unit-orbit-cases-v1",
+  "working_digits": 100,
+  "isolation_radius": "1/1000",
+  "coordinate_search_bound": 16,
+  "records": [
+    {
+      "case_id": "PAPER-II-C-PACKET-0",
+      "route_id": "Qsqrt(-6)",
+      "role": "REGRESSION_ANCHOR",
+      "character_field_polynomial": "x^8-4*x^6-12*x^5+18*x^4+48*x^3-16*x^2-168*x+166",
+      "expected_roots_of_unity": 2,
+      "expected_isolated_orbit": [[-2,0],[0,-2],[0,2],[2,0]]
+    },
+    {
+      "case_id": "RQ-001280",
+      "route_id": "Qsqrt(-10)",
+      "role": "NEW_CASE_ROUTE",
+      "character_field_polynomial": "x^8-10*x^6+41*x^4-70*x^2+49",
+      "expected_roots_of_unity": 2,
+      "expected_isolated_orbit": null
+    },
+    {
+      "case_id": "RQ-001280",
+      "route_id": "Qsqrt(-14)",
+      "role": "NEW_CASE_ROUTE",
+      "character_field_polynomial": "x^8-4*x^7-8*x^6+16*x^5+70*x^4-16*x^3+76*x^2-72*x+18",
+      "expected_roots_of_unity": 2,
+      "expected_isolated_orbit": null
+    }
+  ]
+}

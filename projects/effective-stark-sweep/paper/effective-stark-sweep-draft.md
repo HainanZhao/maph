@@ -190,7 +190,23 @@ eight divisors and safe exponent \(13{,}810{,}176\).  It is a valid W2
 case but lower W3 priority: the exponent makes the required analytic
 enclosure over three thousand times tighter than in the 4032 cases.
 
-The first new Engine-C target is \(K=\mathbb Q(\sqrt6)\), finite norm
+The first closure completed by the generic Engine-C pipeline is
+\(K=\mathbb Q(\sqrt{35})\), at the primitive finite ideal of norm
+\(32\), with a separate exact transport to the norm-\(64\) member.
+Linear reinduction over both \(\mathbb Q(\sqrt{-10})\) and
+\(\mathbb Q(\sqrt{-14})\) gives \(e=2\) and \(|S|=3\).  Exact
+coefficient selection, a theta/Mellin Arb evaluation with explicit
+tails, and logarithmic-lattice inversion isolate the orbit
+\(\{(\pm1,\pm1)\}\) in both character fields.  The two disjoint exact
+normal-closure bridges give the same Artin-labeled packet polynomial
+\[
+x^8-38904x^7+905404x^6+62136x^5-873210x^4
+ +62136x^3+905404x^2-38904x+1.
+\]
+This is the first new theorem produced by the generic C-side
+implementation, rather than a case-specific Paper-II script.
+
+The next Engine-C target is \(K=\mathbb Q(\sqrt6)\), finite norm
 eight.  Exact normal-closure restriction gives linear reinduction over
 \(\mathbb Q(\sqrt{-2})\) and \(\mathbb Q(\sqrt{-3})\).  On the selected
 \(\mathbb Q(\sqrt{-2})\) route, the character field has signature
