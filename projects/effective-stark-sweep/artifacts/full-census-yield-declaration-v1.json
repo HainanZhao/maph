@@ -1,0 +1,111 @@
+{
+  "c_closure_key_method": "polredbest(nfsplitting(packet_polynomial,16,1)[1]); exact polynomial equality",
+  "claim_tag": "VERIFIED_COUNTS",
+  "conductor_norm_trend": {
+    "conclusion": "The prediction that frontier share grows with conductor norm is supported on the frozen quartile statistic.",
+    "quartiles": [
+      {
+        "frontier": 159,
+        "frontier_share": {
+          "decimal": 0.07082405345211581,
+          "denominator": 2245,
+          "numerator": 159,
+          "reduced": "159/2245"
+        },
+        "norm_interval": [
+          1,
+          25
+        ],
+        "total": 2245
+      },
+      {
+        "frontier": 306,
+        "frontier_share": {
+          "decimal": 0.14789753504108266,
+          "denominator": 2069,
+          "numerator": 306,
+          "reduced": "306/2069"
+        },
+        "norm_interval": [
+          26,
+          50
+        ],
+        "total": 2069
+      },
+      {
+        "frontier": 367,
+        "frontier_share": {
+          "decimal": 0.19657204070701662,
+          "denominator": 1867,
+          "numerator": 367,
+          "reduced": "367/1867"
+        },
+        "norm_interval": [
+          51,
+          75
+        ],
+        "total": 1867
+      },
+      {
+        "frontier": 437,
+        "frontier_share": {
+          "decimal": 0.21644378405151066,
+          "denominator": 2019,
+          "numerator": 437,
+          "reduced": "437/2019"
+        },
+        "norm_interval": [
+          76,
+          100
+        ],
+        "total": 2019
+      }
+    ],
+    "strictly_increasing": true
+  },
+  "corrected_engine_histogram": {
+    "ENGINE_A_NONTRIVIAL_ELIGIBLE": {
+      "distinct_closures": 912,
+      "packet_occurrences": 2232,
+      "row_occurrences": 1560
+    },
+    "ENGINE_B_ELIGIBLE": {
+      "distinct_closures": 59,
+      "row_occurrences": 195
+    },
+    "ENGINE_C_ELIGIBLE": {
+      "distinct_closures": 430,
+      "distinct_packet_field_models": 430,
+      "packet_occurrences": 1255,
+      "row_occurrences": 728
+    },
+    "FRONTIER": {
+      "row_occurrences": 1818
+    },
+    "PROVED_TRIVIAL": {
+      "distinct_closures": 1,
+      "row_occurrences": 3899
+    }
+  },
+  "frontier_taxonomy": {
+    "EXPONENT_CAP": 502,
+    "INDEX_GT_2": 1100,
+    "NO_ABELIAN_IMAGINARY_BASE": 177,
+    "REAL_PLACE_SPLITTING_FAIL": 2,
+    "TOOL_BLOCKED": 4,
+    "UNIT_CONGRUENCE_FAIL": 33
+  },
+  "pre_registered_threshold": 15,
+  "proved_eligible_beyond_seven_anchors": 6375,
+  "proved_eligible_row_occurrences": 6382,
+  "representative_count": 8200,
+  "schema": "effective-stark-full-census-yield-v1",
+  "sources": {
+    "artifacts/engine-b-two-route-analysis-v1.json": "d4838dfb74e91916421752e7b45da27a24c578f57f1f11f35971dec78803542e",
+    "artifacts/engine-c-geometry-analysis-v1.json": "6f0d6d306b88f3ce0a74d66b02a871bd81e716d123f14db8da52a2d29031c75d",
+    "artifacts/identification-queues-v2.json": "671b5d3b66879647db6989d86198f097e93fa2bdd289686a06948571e2d4c4ef",
+    "artifacts/w1-census-analysis-v1.json": "6903636e8cef316e9cb8e20a71b419c0ec01daf07b382fb186b8ed00483c8ff9"
+  },
+  "yield_checkpoint": "PASS",
+  "yield_checkpoint_conclusion": "Proceed with the census-paper genre; the corrected eligible yield exceeds the threshold."
+}

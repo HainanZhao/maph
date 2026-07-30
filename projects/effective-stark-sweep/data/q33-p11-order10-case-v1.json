@@ -40,8 +40,32 @@
     "final_certificate_rule": "State the exact maximum comparison degree actually reached and the minimum certified Voutier bound over the entire realized degree window."
   },
   "identification": {
-    "claim_tag": "NOT_YET_RUN",
-    "state": "W3 pending"
+    "claim_tag": "VERIFIED",
+    "relative_packet_polynomial": "x^10-(8+4*y)*x^9+(74+30*y)*x^8-(294+125*y)*x^7+(669+281*y)*x^6-(871+368*y)*x^5+(669+281*y)*x^4-(294+125*y)*x^3+(74+30*y)*x^2-(8+4*y)*x+1, y^2-y-8=0",
+    "absolute_packet_polynomial": "x^20-20*x^19+146*x^18-513*x^17+995*x^16-1336*x^15+1613*x^14-1598*x^13+1131*x^12-826*x^11+803*x^10-826*x^9+1131*x^8-1598*x^7+1613*x^6-1336*x^5+995*x^4-513*x^3+146*x^2-20*x+1",
+    "ray_field_identification_over_base": true,
+    "packet_field_bnfcertify": true,
+    "unit_order_mod_finite": 1,
+    "cone_points_per_class": 16,
+    "boundary_convention": "average of upper and lower half-open conventions",
+    "maximum_packet_comparison_degree": 40,
+    "certified_degree_cap": 80,
+    "minimum_voutier_bound_over_cap": "5.227953322226842684096474508733414710049805681812675619102365340795663452226475183308244934541235949e-5",
+    "raw_log_error_target": "3.300475582213915835919491482786246660384978334477699254483816503027565310749037363199649579887143907e-11",
+    "raw_log_error_upper": "5.673061674394120786204626366122395881560118966214645362829682671710402461666495322898115505701069042e-13",
+    "powered_height_upper": "8.986129692240287325348128163937875076391228442483998254722217351989277499279728591470614961030493362e-9",
+    "voutier_margin_lower": "5817",
+    "degree_1_fallback": "positive rational unit is 1",
+    "degree_2_fallback": "height at least (1/2)log(phi)",
+    "certificate_hashes": {
+      "numerical_recognition_sha256": "6f0a730f50c6f4bd6f39c0da70656aa40fa193f53f35ee23b797a5f36b134d5b",
+      "exact_candidate_sha256": "19d5a58e6946ddbfa6ed064794b0e67ee69114f23e20e5b56bfce7b85786bfd8",
+      "arb_certificate_sha256": "edc58d180578674acff86a52fd6e7e52cf0440a2bd4e0fa5e5cf4ae498d15b87"
+    }
   },
-  "verdict": "THEOREM_CANDIDATE_NOT_YET_VERIFIED"
+  "theorem_claim": {
+    "claim_tag": "VERIFIED",
+    "statement": "This is the first unconditional order-ten archimedean Stark packet in the frozen perimeter and the first proved support order containing the prime 5."
+  },
+  "verdict": "VERIFIED"
 }

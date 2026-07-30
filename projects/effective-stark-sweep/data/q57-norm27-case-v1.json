@@ -66,8 +66,51 @@
     "reason": "It has order-six support and a conductor that is a power of the ramified prime 3 on a field with 3 dividing the discriminant. It is the nearest reachable neighbor of the Q(sqrt(21)) wall and isolates that wall to the exact Shintani wildness/index failure rather than character order or 3-ramification by itself."
   },
   "identification": {
-    "claim_tag": "NOT_YET_RUN",
-    "state": "W3 packet recognition, Arb enclosure, Artin labeling, and height closure pending"
+    "claim_tag": "VERIFIED",
+    "relative_packet_polynomial": "x^6-(30+9*y)*x^5+(582+177*y)*x^4-(2529+772*y)*x^3+(582+177*y)*x^2-(30+9*y)*x+1, y^2-y-14=0",
+    "absolute_packet_polynomial": "x^12-69*x^11+1377*x^10-6694*x^9+7590*x^8-15594*x^7+10791*x^6-15594*x^5+7590*x^4-6694*x^3+1377*x^2-69*x+1",
+    "ray_field_identification_over_base": true,
+    "sturm_windows": 6,
+    "split_prime_frobenius_labels": [
+      {"rational_prime": 7, "ray_log": 5},
+      {"rational_prime": 41, "ray_log": 1}
+    ],
+    "congruence_unit_domain": {
+      "claim_tag": "VERIFIED",
+      "fundamental_totally_positive_unit": "151+20*sqrt(57)",
+      "fundamental_unit_mod_finite_order": 3,
+      "ray_congruence_unit_generator": "epsilon^3",
+      "adjacent_epsilon_cones_per_class": 3,
+      "determinant_per_cone": 80,
+      "points_per_ray_class": 240
+    },
+    "analytic_arb_enclosure": {
+      "claim_tag": "ENCLOSED",
+      "pari_l_value_in_proof_chain": false,
+      "quadrature": "validated order-12 interval Taylor quadrature",
+      "certified_taylor_panels": 1401222,
+      "powered_height_upper": "6.98169763007033306221593529713261228697070757244171459030719761407195185086128697132591920e-8",
+      "voutier_degree_3_to_24_lower": "5.22795332222684268409647450873341471004980568181267561910236534079566345222647518330824486e-5",
+      "certified_margin_lower": "748",
+      "degree_1_fallback": "positive rational unit is 1",
+      "degree_2_fallback": "non-torsion height at least (1/2)log(phi), with positivity orienting torsion"
+    },
+    "certificate_hashes": {
+      "exact_candidate_sha256": "b0039d5b454b5a56e34a125649cac9bc437717070723e0345e01d032e64b2800",
+      "arb_certificate_sha256": "76fbc9452a76464379e8aa816ed5f0caff31368caa1867abbff4a2f7d7551be1",
+      "numerical_recognition_sha256": "a38073e7d7a9174ab3ece2cd2a6b6d8b39aa3938295de8ec86bd723e3b069bbe",
+      "quadrature_validation_sha256": "49bba1b8c7fbc85402568ba942d6cddf10e27a1b7eac24f8f77a34872f66afab"
+    },
+    "failed_attempts_excluded": [
+      "Naive regular-fan product omitted half-open internal-ray corrections.",
+      "A single fundamental-unit cone ignored that epsilon has order three modulo the finite modulus."
+    ],
+    "packet_identity_verdict": "VERIFIED"
   },
-  "verdict": "THEOREM_CANDIDATE_NOT_YET_VERIFIED"
+  "theorem_claim": {
+    "claim_tag": "VERIFIED",
+    "statement": "This is an unconditional order-six archimedean Stark instance with ramified-prime-3 power conductor.",
+    "boundary": "The theorem uses the exact three-cone domain for <epsilon^3>; both failed one-domain formulations and numerical bnrL1 recognition are excluded from the proof chain."
+  },
+  "verdict": "VERIFIED"
 }

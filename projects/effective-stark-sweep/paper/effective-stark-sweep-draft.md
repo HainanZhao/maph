@@ -60,21 +60,70 @@ from the \(\frac12\log\phi\) height bound. Hence the displayed packet
 identity is `VERIFIED`. The independent PARI comparison remains only a
 `NUMERICAL` cross-check.
 
+The replay bundle is case `RQ-000190` (the dedicated theorem record is
+`data/q7-p7-case-v1.json`, SHA-256
+`f5f68b12163f4a884e860a92ddd2dd0757c138bb9a6fb49ec3ccc780fb3030b7`);
+the independent Arb certificate has SHA-256
+`a727ecf67311ab6d1e63f25dca79dc2246e559545cbb14cde3ac967692df18c9`.
+Thus order six is provable when the index-two hypothesis holds; the
+dimension-6 obstruction is the index/wildness failure, not the
+character order.
+
+## Second order-six theorem
+
+For \(K=\mathbb Q(\sqrt{14})\) and
+\(\mathfrak m=\mathfrak p_7\infty_2\), the same index-two mechanism
+produces a second unconditional order-six instance. The totally
+positive unit \(15+4\sqrt{14}\) has norm \(+1\) and is congruent to
+one modulo \(\mathfrak p_7\); the \(\mathbb Q(\sqrt{-2})\) divisor
+route again gives safe exponent \(4032\). The exact packet is
+\[
+\begin{aligned}
+X^6&-(13+4\sqrt{14})X^5+(85+22\sqrt{14})X^4\\
+&-(139+38\sqrt{14})X^3+(85+22\sqrt{14})X^2\\
+&-(13+4\sqrt{14})X+1.
+\end{aligned}
+\]
+Its absolute field is the labeled ray field, with Frobenius generators
+at 11 and 103. An independent 20-point Yamamoto-cone evaluation
+encloses all six logarithms without a PARI \(L\)-value. The powered
+height upper bound is \(7.147\times10^{-9}\), giving certified Voutier
+margin \(>7315\). Hence the displayed packet and theorem are
+`VERIFIED`.
+
 ## Census result
 
 The frozen maximal-order backbone contains 8,200 conjugacy
-representatives. Exact W1 routing gives 5,459 A candidates, 655 B
-candidates, 817 C candidates, and 1,269 frontiers. The frontier
-taxonomy is 1,080 `INDEX_GT_2`, 156 `EXPONENT_CAP`, and 33
-`UNIT_CONGRUENCE_FAIL`.
+representatives. The initial structural W1 routing gave 5,459 A
+candidates, 655 B candidates, 817 C candidates, and 1,269 provisional
+frontiers. After the complete geometric C predicate and the corrected
+B battery, the formal theorem-route histogram is:
+
+| verdict | occurrences | distinct closures or packet fields |
+|---|---:|---:|
+| `PROVED_TRIVIAL` | 3,899 | 1 |
+| nontrivial Engine A eligible | 1,560 | 912 |
+| Engine B eligible | 195 | 59 |
+| Engine C eligible | 728 | 430 |
+| `FRONTIER` | 1,818 | -- |
+
+The nontrivial A rows contain 2,232 supported quadratic packets, while
+the C rows contain 1,255 eligible quartic packets. The final frontier
+taxonomy is 1,100 `INDEX_GT_2`, 502 `EXPONENT_CAP`, 177
+`NO_ABELIAN_IMAGINARY_BASE`, 33 `UNIT_CONGRUENCE_FAIL`, two
+`REAL_PLACE_SPLITTING_FAIL`, and four `TOOL_BLOCKED`. These counts sum
+to 8,200 occurrences with no residual category.
 
 The frontier share rises strictly across conductor-norm quartiles:
 7.08%, 14.79%, 19.66%, and 21.64%. Thus the predicted growth with
 \(N(\mathfrak f)\) is supported on the frozen quartile summary.
 
-The Phase-1 yield checkpoint passes with 6,928 structural route
-candidates beyond the three known anchors in range. This is a routing
-count, not a count of new proved packets.
+The pre-registered yield checkpoint passes formally: 6,382
+representatives are proved-trivial or eligible for one of the three
+proved engines, hence 6,375 occur beyond the seven anchors, far above
+the threshold of 15. This is an eligibility count, not a count of new
+proved packets. The declaration is hash-frozen in
+`artifacts/full-census-yield-declaration-v1.json`.
 
 ## Identification order
 
@@ -117,8 +166,8 @@ For \(K=\mathbb Q(\sqrt{14})\) and
 \(\mathbb Q(\sqrt{-7})\) and \(\mathbb Q(\sqrt{-2})\) reconstruct the
 degree-24 normal closure.  The latter route has conductor \((7)\) and
 two clearing exponents, 576 and 84, hence safe exponent 4032.  This is
-the next Engine-B packet-identification target; no W3 identity is
-claimed yet.
+the second order-six theorem proved above; its W3 identity is
+`VERIFIED`.
 
 For \(K=\mathbb Q(\sqrt{111})\) and the norm-three modulus, the two
 derived bases are \(\mathbb Q(i)\) and
@@ -171,24 +220,22 @@ five are
 | \(\mathbb Q(\sqrt{77})\), norm 7 | 24 | 4 | 2,6 | 4032 |
 | \(\mathbb Q(\sqrt{33})\), norm 11 | 40 | 8 | 2,10 | 15840 |
 
-The first four price height-rigidity risk at or below the proved
-Paper-II scale.  The fifth is intentionally not cost-minimal: it is
-the first order-ten case, and hence the first proposed proved support
-order containing the prime 5; it tests whether the observed order-six
-success reflects a wider even-order phenomenon.  Its comparison-degree
-cap is 80.  The certified minimum Voutier bound over degrees 3 through
-80 is \(5.22795332222684\ldots\times10^{-5}\), while the degree-80
-value is \(1.19789136153146\ldots\times10^{-4}\).  At exponent 15840,
-a factor-100 height margin therefore requires raw logarithmic error at
-most \(3.30047558221391\ldots\times10^{-11}\).  The final case
-certificate will state the actual maximum comparison degree and the
-minimum bound across the realized window.
+All five W3 gates are now closed. The fifth was intentionally not
+cost-minimal: it is the first order-ten case and the first proved
+support order containing the prime 5. Its realized maximum packet
+comparison degree is 40, while the certificate conservatively covers
+degrees 3 through 80. The minimum Voutier bound on that window is
+\(5.22795332222684\ldots\times10^{-5}\), and the degree-80 value is
+\(1.19789136153146\ldots\times10^{-4}\). At exponent 15840, the
+factor-100 raw-error ceiling is
+\(3.30047558221391\ldots\times10^{-11}\); the achieved bound is
+\(5.674\times10^{-13}\), for margin \(>5817\).
 
 Among the low-cost cases, the \(\mathbb Q(\sqrt{57})\), norm-27 target
 has the strongest diagnostic value and is promoted ahead of the
 \(\mathbb Q(\sqrt2)\) tower case.  It combines order-six support with a
 power of the ramified prime 3 on a field whose discriminant is divisible
-by 3.  If its W3 identification closes, it is the closest
+by 3. Its closed W3 identification makes it the closest
 proved-reachable neighbor of the \(\mathbb Q(\sqrt{21})\) wall and
 isolates that wall to the precise index/wildness failure rather than to
 order six or 3-ramification alone.  Its dedicated W2 replay derives
@@ -196,11 +243,57 @@ order six or 3-ramification alone.  Its dedicated W2 replay derives
 from the commutator-fixed field, and both reconstruct the degree-24
 normal closure.  On the shorter \(\mathbb Q(\sqrt{-19})\) route the
 three divisor rows have clearing exponents \(864,324,108\), with safe
-least common multiple \(2592\).  Packet identification remains W3.
+least common multiple \(2592\).
 The
 \(\mathbb Q(\sqrt{111})\) norm-three case, with exponent
 \(13{,}810{,}176\), remains an explicit deferred control rather than
 an active W3 target.
+
+The W3 gate for \(\mathbb Q(\sqrt{57})\), norm 27, is now closed.
+The exact packet defines the labeled ray field and an independent Arb
+certificate gives powered height upper bound
+\(6.982\times10^{-8}\), hence Voutier margin \(>748\).
+The fundamental totally positive unit has order three modulo the
+finite modulus, so the correct ray-congruence fundamental domain is
+the union of three adjacent \(\epsilon\)-cones, with 240 exact affine
+points per ray class. This proves that order-six support with a
+ramified-prime-3 power conductor is reachable; the
+\(\mathbb Q(\sqrt{21})\) wall is therefore isolated still more sharply
+to its exact index/wildness failure.
+
+The other selected closures are also `VERIFIED`. For
+\(\mathbb Q(\sqrt5)\), norm 45, a quartic relative packet clears
+Voutier by \(>2460\). For \(\mathbb Q(\sqrt2)\), norm 49, the
+order-six packet clears by \(>4261\); the split-prime boundary requires
+the canonical average of the upper and lower half-open Shintani
+conventions. For \(\mathbb Q(\sqrt{77})\), \(\mathfrak p_7\), the
+second ramified-\(7\) replication has safe exponent 4032 and margin
+\(>5151\). The same half-weight boundary rule is forced independently
+there.
+
+Finally, `RQ-001107` over \(\mathbb Q(\sqrt{33})\) and
+\(\mathfrak p_{11}\) proves the order-ten packet
+\[
+\begin{aligned}
+X^{10}&-(8+4y)X^9+(74+30y)X^8-(294+125y)X^7\\
+&+(669+281y)X^6-(871+368y)X^5+(669+281y)X^4\\
+&-(294+125y)X^3+(74+30y)X^2-(8+4y)X+1,
+\end{aligned}
+\qquad y^2-y-8=0.
+\]
+Its absolute degree-20 field is certified and identified with the ray
+field over \(K\). This is the first unconditional order-ten
+archimedean Stark packet in the frozen perimeter.
+
+## The dimension-16 check
+
+The corrected Engine-B battery on
+\(\mathbb Q(\sqrt{221})\), modulus \((16)\infty_2\), returns
+`FRONTIER(INDEX_GT_2)`. The one-place ray group is
+\(C_{16}\times C_4\times C_2\), but the maximal absolutely abelian
+bridge has index 16 rather than 2. Thus this route does not produce a
+fifth unconditional TCC dimension. The complete predicate output is
+banked in `artifacts/d16-corrected-battery-v1.json`.
 
 ## Corrected-battery audit
 
@@ -216,6 +309,43 @@ and exactly the banked base set and normal-closure field.
 The complete C and corrected B screens also expose 11 packet-level
 overlaps: one quartic packet passes C geometry in a case whose full
 ray datum passes B.  These are elevated cross-validation targets, but
-we do not yet call them dual proofs.  That promotion requires exact
-alignment of the character packet, algebraic unit, and oriented Artin
-labels under both engines.
+promotion requires exact alignment of the character packet, algebraic
+unit, and oriented Artin labels under both engines.
+
+## A dual proof from disjoint theorem bases
+
+The cheapest overlap, case `RQ-000458`, is now `DUAL_PROVED`.  Here
+\(K=\mathbb Q(\sqrt{14})\), the finite ideal has HNF
+\(\left[\begin{smallmatrix}12&0\\0&6\end{smallmatrix}\right]\), and
+\(\operatorname{Cl}_{\mathfrak m}(K)\simeq C_4\times C_2\).
+The exact alignment gate identifies the same modulus, the same ray
+characters \([1,1]\) and \([3,1]\), and the same packet
+\[
+ X^4-(20+6\sqrt{14})X^3+(138+36\sqrt{14})X^2
+ -(20+6\sqrt{14})X+1
+\]
+on both routes.
+
+The Engine-B proof uses Shintani's index-two theorem with safe exponent
+1152.  Exact four-cone domains enclose all eight class logarithms, and
+the packet projector is applied only after enclosure.  The powered
+height upper bound is \(8.080\times10^{-9}\), giving Voutier margin
+\(>6470\), with the degree-one and degree-two fallbacks stated
+separately.
+
+The Engine-C proof shares no certificate intermediate with that
+route. Exact character induction on the degree-16 normal closure has
+no scalar twist and reconstructs both \(\mathbb Q(\sqrt{-42})\) and
+\(\mathbb Q(\sqrt{-3})\).  On the first base, \(|S|=3\), the global
+unit clause applies, and \(e=4\).  The exact coefficient at \(n=7\)
+selects the ray character \([1,0,1]\) from its inverse.  A fresh Arb
+recomputation isolates the Stark-unit coordinate orbit
+\[
+ (-8,4),\quad(0,-4),\quad(8,-4),\quad(0,4).
+\]
+The distinguished fourth root has coordinates \((-2,1)\).  Thirty-two
+exact identities in the common normal closure prove that its ordinary
+absolute values are precisely the roots of the displayed real packet.
+Thus the same packet is proved once from Shintani 1978 and once from
+Stark 1980.  The case bundle is
+`data/rq000458-dual-case-v1.json`.
