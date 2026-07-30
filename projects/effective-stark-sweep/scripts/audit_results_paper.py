@@ -48,6 +48,22 @@ def margin(lower: str, upper: str) -> Decimal:
 def main() -> None:
     paper = PAPER.read_text()
     prose = " ".join(paper.split())
+    if r"\appendix" not in paper:
+        raise AssertionError("certificate and provenance material is not in an appendix")
+    main_body = paper.split(r"\appendix", 1)[0]
+    for tag in ("VERIFIED", "VERIFIED_THEOREM", "DUAL_ROUTED", "DUAL_PROVED", "PROXY"):
+        if tag in main_body:
+            raise AssertionError(f"internal process tag remains in main narrative: {tag}")
+    for internal_detail in (
+        "d1d355a14a",
+        "a0674aed11",
+        "0afdc1304d",
+        "c3663bd8dcbe1f1de0b9b1f3cfe5ac17",
+    ):
+        if internal_detail in paper:
+            raise AssertionError(
+                f"raw audit-log detail remains in manuscript: {internal_detail}"
+            )
 
     # Conditionality and novelty boundary.
     require(
@@ -380,7 +396,7 @@ def main() -> None:
         "Closed packet formula",
         "one closed product formula",
         "Theorem inventory",
-        "following ten items",
+        "ten principal contributions",
         "This is the paper's broadest result",
         "Order six and its replication",
         "Order ten",
@@ -405,6 +421,10 @@ def main() -> None:
         "found 446 odd indices",
         "10.5281/zenodo.21703306",
         "unpublished draft",
+        "Certificates and provenance",
+        "Declaration of generative AI and AI-assisted technologies",
+        "author reviewed and verified all outputs",
+        "takes full responsibility",
     )
     require(
         paper,
@@ -433,6 +453,8 @@ def main() -> None:
             "structural_lemmas": "2/2",
             "odd_index_consistency": "446/446",
             "seal_order": "PASS",
+            "journal_facing_process_edit": "PASS_TAGS_REMOVED_FROM_MAIN_CHRONOLOGY_IN_APPENDIX",
+            "ai_disclosure": "PASS_SEPARATE_PRE_BIBLIOGRAPHY_DECLARATION",
             "q6_polynomial_correction": "PASS_OLD_ZERO_REAL_NEW_FOUR_POSITIVE",
             "theorem_inventory": "10/10",
             "general_e_theorem": "VERIFIED_THEOREM_WITH_V3_SIGN_CORRECTION",

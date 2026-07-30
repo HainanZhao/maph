@@ -60,3 +60,13 @@ Engine-A product for \(X_A\), and promotes the banked general-\(e\)
 Engine-C normalization/orientation result to a named tenth theorem
 inventory item covering \(e=6,8,12\).  Independent builds are
 byte-identical at `SOURCE_DATE_EPOCH=1785417387`.
+
+Freeze v4 was superseded by
+`artifacts/results-paper-freeze-v5.json` after the journal-facing
+editorial pass. Version 5 removes internal verification tags from the
+mathematical narrative, moves certificate paths and chronology to an
+appendix, shortens the RQ-000458 process caveat, and places a
+publisher-compatible AI-use declaration immediately before the
+bibliography. No theorem, formula, constant, polynomial, or margin
+changed. Independent builds are byte-identical at
+`SOURCE_DATE_EPOCH=1785420000`.

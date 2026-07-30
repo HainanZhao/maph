@@ -1,0 +1,50 @@
+{
+  "schema": "effective-stark-results-paper-freeze-v5",
+  "claim_tag": "VERIFIED_REFEREE_READY_FREEZE",
+  "recorded_at_utc": "2026-07-30T13:30:06Z",
+  "supersedes": "artifacts/results-paper-freeze-v4.json",
+  "supersession_reason": "Journal-facing editorial pass: removed internal process tags from the mathematical narrative, moved certificates and chronology to an appendix, shortened the RQ-000458 process caveat, and replaced the acknowledgments audit prose with a publisher-compatible AI-use declaration.",
+  "primary_manuscript": {
+    "tex": "paper/effective-stark-results.tex",
+    "tex_sha256": "8ec46959aa13aee89848a96b436aae1d76f86d80d3250749d8b2f8261f5025ff",
+    "pdf": "paper/effective-stark-results.pdf",
+    "pdf_sha256": "20976139ddefbff240bcd8e9d23028f3584fb06ac41e277d6cb4162eb3048b23",
+    "page_count": 15,
+    "latex_passes": 2,
+    "latex_warnings": 0,
+    "source_date_epoch": 1785420000,
+    "independent_builds_byte_identical": true
+  },
+  "mathematical_scope": {
+    "theorem_inventory_count": 10,
+    "mathematical_content_changed_from_v4": false,
+    "main_narrative_process_tags": 0,
+    "certificate_and_provenance_location": "appendix",
+    "seal_chronology_location": "artifacts/results-paper-seal-order-audit-v1.json"
+  },
+  "referee_audit": {
+    "artifact": "artifacts/results-paper-referee-audit-v2.json",
+    "sha256": "d8f5f4ee27b453916a201ff9d7865d2ba86f7f433e2c7594fb4e785e10018bb9",
+    "outcome": "PASS"
+  },
+  "ai_disclosure_policy": {
+    "artifact": "docs/results-paper-ai-disclosure-policy-v1.md",
+    "sha256": "aa4e05fb9d7afba4f6df429a660f125b36681c8ab6cb61f1995bd4430316a963",
+    "manuscript_placement": "separate unnumbered section immediately before bibliography",
+    "target_journal_recheck_required": true
+  },
+  "reserved_doi": {
+    "doi": "10.5281/zenodo.21703306",
+    "state": "UNPUBLISHED_DRAFT"
+  },
+  "failed_runs_preserved": [
+    "artifacts/results-paper-referee-audit-v2.failed-01.txt",
+    "artifacts/results-paper-referee-audit-v2.failed-02.txt",
+    "artifacts/results-paper-referee-audit-v2.failed-03.txt",
+    "artifacts/results-paper-referee-audit-v2.failed-04.txt",
+    "artifacts/results-paper-deterministic-build-v3.failed-01.txt",
+    "artifacts/results-paper-deterministic-build-v4.failed-01.txt",
+    "artifacts/results-paper-deterministic-build-v5.failed-01.txt"
+  ],
+  "next_action": "traditional mathematical referee read; recheck the selected journal's current AI policy before submission; Zenodo publication remains blocked pending explicit user approval"
+}
