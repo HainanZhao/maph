@@ -260,15 +260,14 @@ not part of the proof.
 \end{theorem}
 
 \paragraph{Historical scope.}
-A dated literature search found no earlier unconditional oriented
-examples with support order six or ten, so these are apparently the
-first examples in those order classes.  This historical observation
-is not part of either theorem and is not asserted as a universal
-priority claim.\footnote{The
-search record names the sources, versions, hashes, and date.  Kopp's
-arXiv:2411.06763 was checked again on 30 July 2026; the current version
-remains v3, dated 3 May 2025, and its algebraicity applications are
-conditional.}
+We are unaware of earlier unconditional oriented examples with
+support order six or ten.  This historical remark is not part of
+either theorem and makes no universal priority claim.  The public
+supplement will include the dated search perimeter---sources,
+versions, hashes, and date---on which the remark is based.\footnote{
+Kopp's arXiv:2411.06763 was checked again on 30 July 2026; the current
+version remains v3, dated 3 May 2025, and its algebraicity
+applications are conditional.}
 
 Theorems~\ref{thm:main} and \ref{thm:cmcases} are deliberately
 selected-results theorems, not census-completeness statements.
@@ -540,27 +539,51 @@ At every embedding of \(H\) above the nonsplit real place,
 \end{proposition}
 
 \begin{proof}
-Shintani's Theorem~1 identifies the logarithm of
-\(X_{\mathfrak f}(c,G)\) with the full-ray zeta differences over the
-two fibers of \(A\) and \(RA\); the assumed exact fiber identity
-therefore gives \(X_A\).  Under (0-3), (0-6), and (0-9),
-Shintani's Theorem~2 supplies the index-two algebraicity construction
-\cite{Shintani1978}.
+Here and in this paragraph, unqualified theorem, proposition, and
+equation numbers refer to Shintani's paper \cite{Shintani1978}.
+His definition (0-5) on p.~140 introduces the positive invariant
+\(X_{\mathfrak f}(c)\), and Theorem~1 on p.~140 identifies its
+logarithm with the difference of the two partial zeta derivatives.
+Definition (18) on p.~150 forms the distribution-corrected invariant
+\(Y_{\mathfrak f}(c)\); definitions (19)--(20) on pp.~151--152 then
+take the products over \(G\).  The assumed exact fiber identity
+identifies our \(X_A\) with \(X_{\mathfrak f}(c,G)\), while the
+explicit real-side distribution calculation, whose denominators
+divide \(r\), passes from \(X_{\mathfrak f}(c,G)\) to
+\(Y_{\mathfrak f}(c,G)\).  Under (0-3), (0-6), and (0-9),
+Shintani's Theorem~2 on p.~141 supplies the index-two algebraicity
+construction.
 
-In Shintani's equation (8), the distribution index is exactly (11).
-For \(\mathfrak d\ne\mathcal O_k\), equations (4) and (9) contain
-\(|\varphi_{\mathfrak d}|^{1/(6f_{\mathfrak d})}\) and then the
-power \(1/n(\mathfrak d)\).  Replacing an absolute value by the
-product with its conjugate contributes a factor two, so
-\(12f_{\mathfrak d}n(\mathfrak d)\) clears the row.  At the trivial
-divisor, equation (6) replaces \(f_{\mathfrak d}\) by \(h_k\).
-Proposition~4 is an integral product of ratios of these
-\(W_{\mathfrak c}\)-invariants, so it introduces no further rational
-power.  The separately computed integer \(r\) clears the real-side
-distribution or induction step.  Raising to (12) therefore clears
-every exponent in the construction.  Shintani's Proposition~5 gives
-the unit assertion, the Artin covariance, and modulus one at the
-nonsplit real embeddings, proving (13).
+On the imaginary-quadratic side, Shintani's equation (8) on p.~146
+defines
+\[
+ n(S)=w(\mathfrak f(S))
+ \frac{|H_k(\mathfrak c)|}{|H_k(\mathfrak f(S))|}.
+\]
+Reindexing the subsets by the divisors
+\(\mathfrak d=\mathfrak f(S)\) of \(\mathfrak c\) gives exactly
+(11).  For \(\mathfrak d\ne\mathcal O_k\), equation (4) on p.~143
+contains
+\(|\varphi_{\mathfrak d}|^{1/(6f_{\mathfrak d})}\), and equation
+(9) on p.~146 contributes the further exponent
+\(1/n(\mathfrak d)\).  Replacing an absolute value by its product
+with its complex conjugate contributes a factor two.  Hence
+\(12f_{\mathfrak d}n(\mathfrak d)\) clears that row.  At the trivial
+divisor, equation (6) on p.~144 replaces
+\(f_{\mathfrak d}\) by \(h_k\), giving
+\(12h_kn(\mathcal O_k)\).
+
+Shintani's Proposition~4 on pp.~154--156 expresses
+\(Y_{\mathfrak f}(c,G)\) as an integral product of ratios of the
+\(W_{\mathfrak c}\)-invariants and introduces no additional rational
+power.  The integer \(r\) in (12), which is external to Shintani's
+imaginary-side construction, clears the explicitly recorded
+real-side fiber, distribution, and induction denominators.  Thus
+(12) clears every exponent in his product.  Finally, Shintani's
+Proposition~5(i)--(iii) on pp.~156--158 supplies, respectively, the
+unit and field assertion, Artin covariance, and modulus one under
+embeddings inducing the nontrivial real automorphism.  This proves
+(13).
 \end{proof}
 
 For the headline case \(K=\Q(\sqrt7)\),
@@ -588,9 +611,14 @@ Let \(H\) be a number field of degree \(D\).  Suppose
 Artin covariance, and let
 \((\alpha_A)_A\subset\mathcal O_H^\times\) be an exactly
 Artin-labeled positive candidate family.  For each archimedean place
-\(v\) of \(H\), suppose either
+\(v\) of \(H\), choose an embedding
+\(\sigma_v:H\hookrightarrow\mathbb C\) representing \(v\), and
+suppose either
 \[
- \left|\log|X_A|_v-\log|\alpha_A|_v\right|\le\epsilon_v
+ \left|
+ \frac1m\log|\sigma_v(X_A^m)|
+ -\log|\sigma_v(\alpha_A)|
+ \right|\le\epsilon_v
 \tag{15}
 \]
 or both powered absolute values are proved to be one.  Put
@@ -627,9 +655,10 @@ Voutier's explicit lower bound contradicts (17)
 \cite{Voutier1996}.  A non-torsion quadratic unit has height at least
 \(\frac12\log((1+\sqrt5)/2)\), and a rational unit is \(\pm1\).
 Thus \(\eta_A\) is a root of unity.  At the distinguished real
-embedding both \(X_A\) and \(\alpha_A\) are positive, so
-\(\eta_A=1\); taking the unique positive \(m\)-th root proves the
-claim.
+embedding the analytic number \(X_A\) and the algebraic candidate
+\(\alpha_A\) are positive.  Hence \(\eta_A=1\), and
+\(X_A^m=\alpha_A^m\) there; taking the unique positive
+\(m\)-th root proves the claim.
 \end{proof}
 
 For every row of Theorem~\ref{thm:main}, the embeddings over the
@@ -861,8 +890,8 @@ cyclic quartic extension with
 \]
 Write \(\tau=\sigma^2\) for the internal involution over \(k\).
 Global complex conjugation is a different automorphism, denoted by
-\(j\), because it acts nontrivially on the imaginary quadratic base.
-Put \(E^+=E^{\langle j\rangle}\) inside the common normal closure.
+\(j\), of the common normal closure, because it acts nontrivially on
+the imaginary quadratic base.
 
 \begin{theorem}[Cyclic-quartic CM norm bridge]\label{thm:cmbridge}
 Assume the following exact hypotheses.
@@ -884,8 +913,15 @@ gives
 \(\tau(\varepsilon)=\varepsilon^{-1}\) and
 \(\varepsilon=u^{e/2}\) for a certified free unit \(u\).
 \item The exact normal-closure embedding identifies \(\bar s\) with
-\(\sigma\) and \(j\) with complex conjugation.
+\(\sigma\), and global complex conjugation satisfies
+\[
+ j(E)=E,\qquad j|_k\ne1.
+\]
+Thus \(j\in\operatorname{Aut}(E)\), and the embedding identifies this
+automorphism with complex conjugation on \(E\).
 \end{enumerate}
+Put \(E^+=E^{\langle j\rangle}\).  Then \(E/E^+\) is quadratic and
+the norm below is defined.
 Then, for \(r\in\Z/4\Z\),
 \[
  \boxed{\qquad
@@ -1196,6 +1232,8 @@ dual-route packet &
 all archimedean places &
 \path{artifacts/engine-b-archimedean-place-audit-v1.json}\\
 quadratic theorem & \path{data/engine-a-uniform-theorem-v1.json}\\
+Shintani source map &
+\path{artifacts/shintani-1978-source-map-v1.json}\\
 index-parity theorem & \path{artifacts/results-paper-index-parity-lemma-v1.json}\\
 parity audit & \path{artifacts/results-paper-odd-index-parity-audit-v1.json}\\
 literature perimeter & \path{data/literature-perimeter-v1.json}\\
@@ -1257,9 +1295,19 @@ commands, source hashes, and failed computations; those provenance
 details are not part of the mathematical argument.
 
 \paragraph{Data availability.}
-The companion archive will be deposited before submission.  It will
-contain the source, exact and Arb certificates, the complete
-SHA-256 manifest, and one-command replay instructions.
+This major-revision version is not a finished referee draft until its
+companion archive has a public immutable identifier.  Before such a
+circulation or any submission, the archive will be frozen and
+deposited.  It will contain the manuscript source, a complete
+SHA-256 manifest, expected verifier outputs, exact and Arb
+certificates, and a short README separating discovery programs from
+proof-checking programs.  Separate minimal verification commands will
+cover the quadratic theorem, every selected Engine-B packet, the
+cyclic-quartic bridge and selected Engine-C packets, and the two
+structural lemmas.  The environment record will state the software
+versions, PARI proof modes (including
+\texttt{bnfinit(P,1)} followed by
+\texttt{bnfcertify(bnf)=1}), and expected runtime and memory.
 
 \section*{Declaration of generative AI and AI-assisted technologies
 in the manuscript preparation process}

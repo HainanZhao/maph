@@ -43,13 +43,13 @@ class ResultsPaperMajorRevisionTests(unittest.TestCase):
         self.assertIn("RESULTS_PAPER_FULL_AUDIT=PASS", completed.stdout)
 
     def test_full_freeze_hashes(self):
-        freeze = load("artifacts/results-paper-full-freeze-v1.json")
+        freeze = load("artifacts/results-paper-full-freeze-v2.json")
         self.assertEqual(
             freeze["status"],
-            "COMPLETE_MAJOR_REVISION_REFEREE_READY_NOT_SUBMISSION_READY",
+            "MATHEMATICAL_REPAIRS_PASS_LOCAL_ARCHIVE_FROZEN_PENDING_PUBLIC_DEPOSIT_AND_HUMAN_REFEREE",
         )
         self.assertEqual(
-            freeze["supersedes"], "artifacts/results-paper-ab-freeze-v1.json"
+            freeze["supersedes"], "artifacts/results-paper-full-freeze-v1.json"
         )
         manuscript = freeze["primary_manuscript"]
         self.assertEqual(sha(manuscript["tex"]), manuscript["tex_sha256"])
@@ -57,24 +57,53 @@ class ResultsPaperMajorRevisionTests(unittest.TestCase):
         audit = freeze["referee_audit"]
         self.assertEqual(sha(audit["script"]), audit["script_sha256"])
         self.assertEqual(sha(audit["artifact"]), audit["artifact_sha256"])
-        correction = freeze["engine_c_correction"]
-        self.assertEqual(sha(correction["script"]), correction["script_sha256"])
+        source_map = freeze["shintani_source_map"]
         self.assertEqual(
-            sha(correction["artifact"]), correction["artifact_sha256"]
+            sha(source_map["artifact"]), source_map["artifact_sha256"]
         )
-        scope = freeze["engine_c_scope_correction"]
-        self.assertEqual(sha(scope["artifact"]), scope["artifact_sha256"])
-        watch = freeze["literature_watch"]
-        self.assertEqual(sha(watch["artifact"]), watch["artifact_sha256"])
+        companion = freeze["companion_archive"]
+        self.assertEqual(sha(companion["builder"]), companion["builder_sha256"])
+        self.assertEqual(sha(companion["verifier"]), companion["verifier_sha256"])
+        self.assertEqual(
+            sha(companion["local_freeze"]), companion["local_freeze_sha256"]
+        )
+        self.assertIsNone(companion["public_identifier"])
         self.assertFalse(freeze["publication_gate"]["publish_action_allowed"])
 
     def test_cm_theorem_and_nonclaim_boundaries(self):
         paper = (ROOT / "paper/effective-stark-results.tex").read_text()
         self.assertIn("Cyclic-quartic CM norm bridge", paper)
         self.assertIn(r"\varepsilon=u^{e/2}", paper)
+        self.assertIn(r"j(E)=E,\qquad j|_k\ne1", paper)
+        self.assertIn(r"Put \(E^+=E^{\langle j\rangle}\)", paper)
         self.assertIn("not used in the theorem", paper)
         self.assertIn("rests solely on Engine B", paper)
         self.assertNotIn("General-\\(e\\) CM normalization and orientation", paper)
+
+    def test_height_lemma_uses_only_powered_algebraic_elements(self):
+        paper = (ROOT / "paper/effective-stark-results.tex").read_text()
+        self.assertIn(r"\frac1m\log|\sigma_v(X_A^m)|", paper)
+        self.assertNotIn(
+            r"\left|\log|X_A|_v-\log|\alpha_A|_v\right|", paper
+        )
+
+    def test_shintani_source_map_and_priority_boundary(self):
+        paper = (ROOT / "paper/effective-stark-results.tex").read_text()
+        prose = " ".join(paper.split())
+        self.assertIn("Shintani's Proposition~4 on pp.~154--156", prose)
+        self.assertIn(
+            "Shintani's Proposition~5(i)--(iii) on pp.~156--158", prose
+        )
+        self.assertIn("We are unaware of earlier unconditional oriented", prose)
+        self.assertNotIn("so these are apparently the first examples", prose)
+
+    def test_superseded_cm_gap_draft_is_removed(self):
+        self.assertFalse(
+            (ROOT / "paper/effective-stark-cm-major-revision.tex").exists()
+        )
+        self.assertFalse(
+            (ROOT / "paper/effective-stark-cm-major-revision.pdf").exists()
+        )
 
     def test_e6_primitive_correction_divides_coordinates_exactly(self):
         correction = load(

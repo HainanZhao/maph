@@ -83,6 +83,9 @@ def main() -> None:
         r"\zeta'_S(0,g)=-\frac2e\ell_g",
         r"L'_S(0,\psi)",
         r"=-\frac4e(\ell_1-i\ell_\sigma)",
+        r"\frac1m\log|\sigma_v(X_A^m)|",
+        r"j(E)=E,\qquad j|_k\ne1",
+        r"Put \(E^+=E^{\langle j\rangle}\)",
     )
     require(
         prose,
@@ -91,6 +94,10 @@ def main() -> None:
         "Equality of unlabeled polynomials is never the bridge",
         "not used in the theorem",
         "The theorem claim for this row rests solely on Engine B",
+        "We are unaware of earlier unconditional oriented examples",
+        "not a finished referee draft until its companion archive",
+        "Shintani's Proposition~4 on pp.~154--156",
+        "Shintani's Proposition~5(i)--(iii) on pp.~156--158",
     )
     reject(
         main_body,
@@ -99,6 +106,9 @@ def main() -> None:
         "DUAL_PROVED",
         "DUAL_ROUTED",
         "X^8+24X^7+732X^6",
+        r"\left|\log|X_A|_v-\log|\alpha_A|_v\right|",
+        "so these are apparently the first examples",
+        r"Put \(E^+=E^{\langle j\rangle}\) inside the common normal closure",
     )
 
     # Engine B: all eight selected rows and their exact root geometry.
