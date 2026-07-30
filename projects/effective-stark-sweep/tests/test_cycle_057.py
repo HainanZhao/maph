@@ -105,12 +105,11 @@ class Cycle057Test(unittest.TestCase):
     def test_q6_remains_blocked_before_arb(self) -> None:
         case = load("data/q6-norm8-case-v1.json")
         identification = case["identification"]
-        self.assertTrue(
-            identification["state"].startswith("BLOCKED_BEFORE_ARB")
-        )
         self.assertEqual(
-            len(identification["required_promotion_gates"]), 3
+            identification["state"], "BLOCKED_THEOREM_SCOPE_RESISTANCE"
         )
+        self.assertIn("|S|=2", identification["active_blocker"])
+        self.assertEqual(len(identification["required_reopening"]), 2)
 
 
 if __name__ == "__main__":

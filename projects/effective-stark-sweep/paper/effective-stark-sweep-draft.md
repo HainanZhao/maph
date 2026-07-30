@@ -115,18 +115,29 @@ outside the C bulk. The final frontier
 taxonomy is 1,100 `INDEX_GT_2`, 502 `EXPONENT_CAP`, 177
 `NO_ABELIAN_IMAGINARY_BASE`, 33 `UNIT_CONGRUENCE_FAIL`, two
 `REAL_PLACE_SPLITTING_FAIL`, and four `TOOL_BLOCKED`. These counts sum
-to 8,200 occurrences with no residual category.
+to 8,200 occurrences with no residual category.  The historical name
+`INDEX_GT_2` is retained as a schema label, but its predicate was
+``index != 2 OR real-place splitting fails``; it is not a literal
+assertion that all 1,100 indices exceed two.  The separated exact
+index ledger is part of the corpus.
 
 The frontier share rises strictly across conductor-norm quartiles:
-7.08%, 14.79%, 19.66%, and 21.64%. Thus the predicted growth with
+9.93%, 21.60%, 27.26%, and 31.65%. Thus the predicted growth with
 \(N(\mathfrak f)\) is supported on the frozen quartile summary.
+
+The separated ledger also exposes 88 odd indices above two:
+75 of index 3, six of index 5, and seven of index 9.  Eighty-one pass
+the exactly-one-real-place splitting predicate.  These cases remain
+FRONTIER, but form a new discovery stratum whose concentration in
+3-primary character support will be analyzed only after the W4 gate
+opens.
 
 The pre-registered yield checkpoint passes formally: 6,382
 representatives are proved-trivial or eligible for one of the three
 proved engines, hence 6,375 occur beyond the seven anchors, far above
 the threshold of 15. This is an eligibility count, not a count of new
 proved packets. The declaration is hash-frozen in
-`artifacts/full-census-yield-declaration-v2.json`.
+`artifacts/full-census-yield-declaration-v3.json`.
 
 ## Identification order
 
@@ -187,13 +198,17 @@ eight.  Exact normal-closure restriction gives linear reinduction over
 \(e=|\mu(E)|=8\).  Its exact anti-unit lattice and oriented ray
 character isolate a reciprocal norm-one candidate with orbit
 coordinates \((4,0),(0,4)\).  This is deliberately not labeled
-VERIFIED.  Before any Arb Shintani/cocycle enclosure, three proof
-obligations remain: a written \(e=8\) analogue of the normalization
-lemma, an exact orientation procedure resolving all eight
-root-of-unity multiples, and an independent
-\(\mathbb Q(\sqrt{-3})\)-side reconstruction of the same oriented
-packet.  An enclosure without these steps would certify a possibly
-mis-normalized or mis-oriented statement.
+VERIFIED.  The later general-\(e\) lemma proves the \(2/e\)
+normalization and torsion-invariant orientation, and the independent
+\(\mathbb Q(\sqrt{-3})\) route is now reconstructed exactly:
+\(e=12\), \(w_k=6\), with character \([1,1]\) selected by the exact
+coefficient \(a_3=-i\).  The two candidate orbits satisfy 256 exact
+common-normal-closure identities \(q_8^3=q_{12}^2\).  This exposes a
+different boundary: the second conductor has only one finite prime,
+so its natural Stark set has \(|S|=2\), outside the banked
+\(|S|\ge3\) global-unit clause.  We halt before Arb; an
+\(|S|=2\) S-unit lemma with finite-valuation control or an exact
+auxiliary-prime enlargement is required for promotion.
 
 ## Uniform Engine A after deduplication
 
@@ -233,8 +248,12 @@ e_{\min}&2&4&6&8\\ \hline
 \text{occurrences}&404&292&457&10.
 \end{array}
 \]
-Consequently, banked \(e=2,4\) lemmas cover 395 complete cases. The
-other 333 cases require general-\(e\) normalization and orientation.
+Consequently, banked \(e=2,4\) lemmas cover 395 complete cases.  The
+general-\(e\) normalization and torsion-invariant orientation are now
+proved, covering the other 333 cases at theorem level.  This does not
+itself identify their packets: the bulk still requires a generic exact
+character table, certified Arb unit-orbit isolation, and an
+Artin-labeled exact packet bridge.
 The unique minimum-\(e=8\) field is the
 \(\mathbb Q(\sqrt6)\) packet, occurring ten times; its two exact
 imaginary-base routes have \(e=(8,12)\). Hence its second-base check is
@@ -242,9 +261,10 @@ also a genuinely new normalization case, not a repetition of the
 primary route.
 
 The B population consists of 59 closures. Eight have banked
-representatives and 51 remain. One divisor audit and one canonical W3
-identification are performed per closure, followed by exact transport
-to every member modulus; closure equality alone is not a theorem for a
+representatives; all remaining 51 now have fresh exact two-route W2
+reconstructions and printed divisor audits, with zero disagreements.
+Their W3 packet identifications and all 187 member-occurrence
+transports remain open: closure equality alone is not a theorem for a
 member occurrence. All ten remaining B/C overlaps pass exact
 same-character-packet alignment, but remain alignment-only until both
 independent W3 proofs exist.

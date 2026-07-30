@@ -108,16 +108,12 @@ class Cycle052Test(unittest.TestCase):
     def test_q6_arb_gate_has_all_three_inherited_obligations(self) -> None:
         case = load("data/q6-norm8-case-v1.json")
         identification = case["identification"]
-        self.assertTrue(
-            identification["state"].startswith("BLOCKED_BEFORE_ARB")
-        )
         self.assertEqual(
-            len(identification["required_promotion_gates"]), 3
+            identification["state"], "BLOCKED_THEOREM_SCOPE_RESISTANCE"
         )
-        joined = " ".join(identification["required_promotion_gates"])
-        self.assertIn("e=8", joined)
-        self.assertIn("eight", joined)
-        self.assertIn("Q(sqrt(-3))", joined)
+        self.assertEqual(len(identification["discharged_gates"]), 3)
+        self.assertIn("|S|=2", identification["active_blocker"])
+        self.assertEqual(len(identification["required_reopening"]), 2)
 
     def test_dimension_six_analogue_is_promoted(self) -> None:
         case = load("data/q57-norm27-case-v1.json")

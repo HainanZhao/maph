@@ -75,10 +75,12 @@ def main() -> None:
     c_path = ROOT / "artifacts/engine-c-geometry-analysis-v1.json"
     b_path = ROOT / "artifacts/engine-b-two-route-analysis-v1.json"
     queue_path = ROOT / "artifacts/identification-queues-v2.json"
+    frontier_path = ROOT / "artifacts/frontier-index-inventory-v1.json"
     w1 = json.loads(w1_path.read_text())
     c = json.loads(c_path.read_text())
     b = json.loads(b_path.read_text())
     queue = json.loads(queue_path.read_text())
+    frontier_inventory = json.loads(frontier_path.read_text())
 
     eligible_c_ids = set(c["complete_c_case_ids"])
     all_passing_polynomials = c_passing_polynomials()
@@ -143,7 +145,7 @@ def main() -> None:
     eligible = 6382
     beyond_anchors = eligible - 7
     output = {
-        "schema": "effective-stark-full-census-yield-v1",
+        "schema": "effective-stark-full-census-yield-v3",
         "claim_tag": "VERIFIED_COUNTS",
         "representative_count": 8200,
         "corrected_engine_histogram": histogram,
@@ -165,19 +167,30 @@ def main() -> None:
             "yield exceeds the threshold."
         ),
         "frontier_taxonomy": frontier,
+        "frontier_index_label_note": (
+            "Historical INDEX_GT_2 means index != 2 OR the exactly-one-"
+            "real-place splitting predicate failed; exact separated "
+            "predicates are in frontier-index-inventory-v1.json."
+        ),
         "conductor_norm_trend": {
-            "quartiles": w1["norm_quartiles"],
-            "strictly_increasing": w1[
-                "frontier_share_strictly_increases_by_norm_quartile"
-            ],
+            "population": "final post-C/post-B FRONTIER population",
+            "quartiles": frontier_inventory[
+                "corrected_frontier_norm_trend"
+            ]["quartiles"],
+            "strictly_increasing": frontier_inventory[
+                "corrected_frontier_norm_trend"
+            ]["strictly_increasing"],
             "conclusion": (
                 "The prediction that frontier share grows with conductor "
-                "norm is supported on the frozen quartile statistic."
+                "norm is supported on the final post-C/post-B frozen "
+                "quartile statistic."
             ),
         },
         "sources": {
             str(path.relative_to(ROOT)): sha(path)
-            for path in (w1_path, c_path, b_path, queue_path)
+            for path in (
+                w1_path, c_path, b_path, queue_path, frontier_path
+            )
         },
         "c_closure_key_method": (
             "polredbest(nfsplitting(packet_polynomial,16,1)[1]); "

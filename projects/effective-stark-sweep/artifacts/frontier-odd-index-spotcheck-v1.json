@@ -1,0 +1,43 @@
+{
+  "schema": "effective-stark-frontier-odd-index-spotcheck-v1",
+  "claim_tag": "VERIFIED_EXACT_SPOTCHECK",
+  "purpose": "Independent fresh rerun of one case at each observed odd index above two",
+  "screen": "scripts/screen_w1_case.gp",
+  "records": [
+    {
+      "case_id": "RQ-000294",
+      "field": "Q(sqrt(10))",
+      "finite_norm": 67,
+      "two_place_ray_group": [12],
+      "one_place_ray_group": [12],
+      "one_place_kernel_size": 1,
+      "commutator_size": 3,
+      "shintani_index": 3,
+      "exactly_one_real_place_splitting": false
+    },
+    {
+      "case_id": "RQ-002147",
+      "field": "Q(sqrt(58))",
+      "finite_norm": 33,
+      "two_place_ray_group": [20, 2],
+      "one_place_ray_group": [20],
+      "one_place_kernel_size": 2,
+      "commutator_size": 5,
+      "shintani_index": 5,
+      "exactly_one_real_place_splitting": true
+    },
+    {
+      "case_id": "RQ-003093",
+      "field": "Q(sqrt(79))",
+      "finite_norm": 36,
+      "two_place_ray_group": [18, 2],
+      "one_place_ray_group": [18],
+      "one_place_kernel_size": 2,
+      "commutator_size": 9,
+      "shintani_index": 9,
+      "exactly_one_real_place_splitting": true
+    }
+  ],
+  "interpretation": "Odd Shintani indices are genuine exact outputs, not JSON aggregation errors. The index-5 and index-9 controls satisfy the exactly-one-real-place splitting predicate, so their obstruction is the odd index itself.",
+  "disposition": "ESCALATED_DISCOVERY_CANDIDATES"
+}
