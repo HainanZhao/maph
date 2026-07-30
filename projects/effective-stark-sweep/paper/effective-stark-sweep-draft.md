@@ -1,5 +1,51 @@
 # An effective census of unconditional archimedean Stark instances
 
+> **GENUINE CENSUS v5 BANKED.** Population counts below are now based
+> only on GENUINE predicates. W4 analysis remains closed solely on B
+> occurrence transport. The theorem-only results paper remains
+> independently scope-sealed in
+> `paper/effective-stark-results-paper.md`.
+
+## Genuine census v5
+
+The proxy-recovery tracks are complete. Every one of the 8,200
+representatives has a genuine common-stable-modulus normal-closure
+index, all 241 proxy-exposed B rows have been re-screened, and all 252
+proxy-excluded quartic rows have reached complete C geometry. The
+resulting occurrence census is
+
+| verdict | occurrences | distinct certified objects |
+|---|---:|---:|
+| `PROVED_TRIVIAL` | 3,899 | 1 |
+| Engine A, nontrivial | 1,560 | 912 absolute fields |
+| Engine B eligible | 232 | 88 normal closures |
+| Engine C eligible | 881 | 447 packet fields |
+| `FRONTIER` | 1,628 | -- |
+
+The C rows contain 1,361 eligible packet occurrences. The exact
+FRONTIER taxonomy is 1,088 `INDEX_GT_2`, 502 `EXPONENT_CAP`, 31
+`UNIT_CONGRUENCE_FAIL`, five `TOOL_BLOCKED`, and two
+`REAL_PLACE_SPLITTING_FAIL`.
+
+The genuine frontier shares by conductor-norm quartile are
+\[
+\frac{189}{2245}=8.42\%,\quad
+\frac{404}{2069}=19.53\%,\quad
+\frac{459}{1867}=24.58\%,\quad
+\frac{576}{2019}=28.53\%.
+\]
+Thus the pre-registered monotonicity prediction survives genuine
+reconstruction, although every share is lower than its superseded
+proxy-derived value.
+
+The full genuine index histogram contains 446 odd indices above two.
+Every one occurs on an empty-support `PROVED_TRIVIAL` row; there is no
+substantive odd-index frontier. RQ-000172,
+\(\mathbb Q(\sqrt6)\) at \((9)\infty_2\), is the first replayed
+control: its normal closure has relative degree nine, its maximal
+abelian subfield has relative degree three, and the differenced
+invariant is identically zero.
+
 ## First new theorem: an order-six instance
 
 For \(K=\mathbb Q(\sqrt7)\) and
@@ -121,7 +167,7 @@ assert that the entire mixed-signature one-place ray field is
 absolutely abelian. Thus the engine taxonomy has no fourth abelian
 member hidden below A.
 
-## Census result and containment correction
+## Historical census result and containment correction (v4, superseded)
 
 The frozen maximal-order backbone contains 8,200 conjugacy
 representatives. The initial structural W1 routing gave 5,459 A
@@ -172,7 +218,8 @@ to the original 1,818-row frontier. Its 177
 negative results. The 64-row B quarantine is reported separately and
 is not silently assigned an obstruction.
 
-Before the containment correction, the frontier share rose strictly
+**PROVISIONAL / WITHDRAWN PENDING v5.** Before the containment
+correction, the frontier share rose strictly
 across conductor-norm quartiles: 9.93%, 21.60%, 27.26%, and 31.65%.
 That summary is now historical rather than final and will be
 recomputed after the 241-row B reconstruction, 252-row C catch-up
