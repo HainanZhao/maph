@@ -1,0 +1,18 @@
+Replay date: 2026-07-29 UTC
+PARI/GP: 2.15.4
+
+The following five scripts were rerun in fresh GP processes and their
+stdout compared byte-for-byte with the banked transcripts:
+
+  scripts/q6_norm8_engine_c_reinduction.gp
+  scripts/q6_norm8_engine_c_stark_conditions.gp
+  scripts/q6_norm8_engine_c_unit_lattice.gp
+  scripts/q14_p7_w2_divisors.gp
+  scripts/q111_norm3_w2_divisors.gp
+
+NEW_EXACT_REPLAY_COUNT=5
+NEW_EXACT_REPLAYS_BYTE_IDENTICAL=1
+
+The Python regression suite completed 30/30 tests.  The full
+1,350-packet C transcript and the 372-case B transcripts are banked
+with source hashes and were not recomputed during this short replay.

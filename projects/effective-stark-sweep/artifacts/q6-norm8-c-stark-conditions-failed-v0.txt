@@ -1,0 +1,16 @@
+Q(sqrt(6)), norm-8 Engine-C Stark-1980 condition check, failed
+expectation v0.
+
+The first exact run returned
+
+    CHARACTER_FIELD_ROOTS_OF_UNITY=8
+    E_NORMALIZATION=8
+    ORDINARY_ABSOLUTE_VALUE_COEFFICIENT=1/4
+    Q6_NORM8_STARK_1980_CONDITIONS_VERIFIED=0
+
+The script had inherited the anchor-specific expectation e=2.  This
+is not a failed Stark hypothesis: the theorem uses the certified
+quantity e=|mu(E)|, and the new character field has eight roots of
+unity.  Version v1 therefore asserts the independently computed
+value e=8 and retains the coefficient 2/e=1/4.  No numerical
+identification result was inspected before this correction.

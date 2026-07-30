@@ -1,0 +1,5 @@
+FAILED_RUN_VERSION=v0
+COMMAND=python3 scripts/run_engine_c_geometry_pilot.py --full
+RESULT=HALT
+ERROR=expected one PACKET_COUNT, got 0
+PRESERVATION_NOTE=The v0 driver accumulated transcripts in memory and therefore did not preserve the failing case identifier. The run stopped before emitting any classification artifact. Version v1 writes each case transcript immediately and records the exact failing case plus stdout/stderr before raising.

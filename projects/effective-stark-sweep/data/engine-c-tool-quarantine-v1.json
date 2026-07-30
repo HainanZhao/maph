@@ -1,0 +1,69 @@
+{
+  "schema": "effective-stark-engine-c-tool-quarantine-v1",
+  "entries": [
+    {
+      "case_id": "RQ-002397",
+      "packet_index": 2,
+      "tag": "TOOL_BLOCKED_PARI_2_15_4",
+      "source_character": [1, 1, 1],
+      "primitive_conductor": [[[8, 4], [0, 4]], [1, 0]],
+      "primitive_ray_cyc": [4, 2],
+      "primitive_character": [1, 1],
+      "primitive_kernel_hnf": [[4, 2], [0, 1]],
+      "failure": "bnrclassfield segmentation fault in a fresh GP process",
+      "mathematical_verdict": null,
+      "failed_transcripts": [
+        "artifacts/engine-c-geometry-failed-v0.txt",
+        "artifacts/engine-c-geometry-failed-v1.json",
+        "artifacts/engine-c-geometry-failed-v2.json"
+      ]
+    },
+    {
+      "case_id": "RQ-005298",
+      "packet_index": 4,
+      "tag": "COMPUTE_DEFERRED_ORDER16_RESOLVENT",
+      "source_character": [3, 1, 0],
+      "primitive_conductor": [[[24, 8], [0, 4]], [1, 0]],
+      "primitive_ray_cyc": [4, 4, 2],
+      "primitive_character": [3, 1, 0],
+      "primitive_kernel_hnf": [[4, 1, 0], [0, 1, 0], [0, 0, 1]],
+      "polgalois": [16, 1, 11, "1/2[2^3]E(4)=Q_8:2"],
+      "failure": "normal-closure subgroup resolution exceeded 16 minutes; interrupted below the one-node-hour hard cap so the independent census could continue",
+      "mathematical_verdict": null,
+      "failed_transcripts": [
+        "artifacts/engine-c-geometry-interrupted-v7.json",
+        "artifacts/engine-c-geometry-interrupted-v7.transcript"
+      ]
+    },
+    {
+      "case_id": "RQ-007451",
+      "packet_index": 1,
+      "tag": "TOOL_BLOCKED_PARI_2_15_4",
+      "source_character": [1, 0],
+      "primitive_conductor": [[[8, 0], [0, 4]], [1, 0]],
+      "primitive_ray_cyc": [4, 2],
+      "primitive_character": [1, 0],
+      "primitive_kernel_hnf": [[4, 0], [0, 1]],
+      "failure": "bnrclassfield segmentation fault in a fresh GP process",
+      "mathematical_verdict": null,
+      "failed_transcripts": [
+        "artifacts/engine-c-geometry-failed-v4.json"
+      ]
+    },
+    {
+      "case_id": "RQ-007475",
+      "packet_index": 2,
+      "tag": "TOOL_BLOCKED_PARI_2_15_4",
+      "source_character": [1, 1, 0],
+      "primitive_conductor": [[[8, 0], [0, 4]], [1, 0]],
+      "primitive_ray_cyc": [4, 2],
+      "primitive_character": [3, 0],
+      "primitive_kernel_hnf": [[4, 0], [0, 1]],
+      "failure": "bnrclassfield segmentation fault for the same primitive kernel as RQ-007451",
+      "mathematical_verdict": null,
+      "failed_transcripts": [
+        "artifacts/engine-c-geometry-failed-v8.json"
+      ]
+    }
+  ]
+}

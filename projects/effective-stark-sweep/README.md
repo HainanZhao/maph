@@ -16,7 +16,7 @@ census definitions, orchestration, records, and certificates.
 
 ## Current state
 
-Cycles 001–020 are complete. Publication uploads, identifier recording, and
+Cycles 001–050 are complete. Publication uploads, identifier recording, and
 correspondence are administrative metadata, not research gates.  The
 earlier sequencing records are retained only as process history and are
 superseded by `data/research-activation-v3.json`.
@@ -61,6 +61,30 @@ logarithms in Arb balls; the powered height upper bound is
 packet identity is therefore `VERIFIED`.
 The full W1 census routes 6,931 cases and records 1,269 frontiers. See
 [`docs/cycles-011-020-summary.md`](docs/cycles-011-020-summary.md).
+
+The full Engine-C geometry gate has now processed 1,350 primitive
+quartic packets. It leaves 728 C-eligible cases, reroutes 63 to B,
+names 22 mathematical frontiers, and quarantines four tool failures.
+The enlarged B queue has been screened completely through absolute
+normal-closure degree 40: 195 of 372 cases pass both imaginary-base
+routes, with zero route disagreements, and collapse to 59 distinct
+normal closures. The other 177 cases expose a newly explicit
+obstruction, `NO_ABELIAN_IMAGINARY_BASE`.
+
+Two new B divisor tables are banked. The
+\(\mathbb Q(\sqrt{14}),\mathfrak p_7\infty_2\) case has safe exponent
+4032 and is the next B identification target; the
+\(\mathbb Q(\sqrt{111})\), norm-3 case has safe exponent 13,810,176.
+The exact algebraic half of the first new C target over
+\(\mathbb Q(\sqrt6)\), norm 8, is complete, but its explicit unit
+identity remains `NUMERICAL` until the named Arb orientation gate
+passes.
+
+Engine A has also been reduced before its deferred bulk: 3,899 cases
+are exact trivial identities \(X_A=1\), while 1,560 nontrivial cases
+contain 2,232 quadratic packet occurrences in only 912 distinct
+quartic fields. See
+[`docs/cycles-021-050-summary.md`](docs/cycles-021-050-summary.md).
 
 ## Claim tags
 

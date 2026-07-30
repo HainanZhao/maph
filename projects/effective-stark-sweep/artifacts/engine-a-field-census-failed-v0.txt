@@ -1,0 +1,6 @@
+The first Engine-A field-census driver run stopped on RQ-000004 after
+the exact GP screen succeeded.  The Python parser used ``\\d`` inside
+a raw regular expression, thereby searching for a literal backslash
+instead of a digit.  It reported one supported character but parsed
+zero field rows.  No mathematical output was accepted.  Version v1
+uses ``\d`` and reruns from the beginning.
