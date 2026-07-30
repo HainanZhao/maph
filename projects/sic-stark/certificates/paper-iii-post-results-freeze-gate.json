@@ -1,0 +1,48 @@
+{
+  "schema": "sic-stark-paper-iii-post-results-freeze-gate-v1",
+  "recorded_at_utc": "2026-07-30T11:32:14Z",
+  "claim_tag": "VERIFIED_EXISTING_DIAGNOSTICS",
+  "finding": "The two diagnostics scheduled after the Effective-Stark results-paper freeze were already completed and incorporated; they must not be rerun as new research.",
+  "diagnostics": [
+    {
+      "cycle": 155,
+      "name": "tilted-integral rehearsal",
+      "artifact": "certificates/dimension-six-cycle155-tilted-integral-rehearsal.json",
+      "sha256": "0590b5f3d6236e972a4b1e9f241fee193f7527cde63067f86000e1d6bc9a5331",
+      "verdict": "ROW_I_CENTRAL_INTEGRAL_POLYNOMIALLY_CONDITIONED",
+      "claim_boundary": "numerical conditioning evidence, not fusion continuity"
+    },
+    {
+      "cycle": 156,
+      "name": "proved-growing-component dissection",
+      "artifact": "certificates/dimension-six-cycle156-growing-component.json",
+      "sha256": "78fb682f900ce48a5af74747183e1fd89523dc00fa3a38977752f65e4c359d45",
+      "verdict": "ADVERSE_PERIODIZATION_GROWTH",
+      "claim_boundary": "the raw packet is not identified with the proved arithmetic overlap"
+    },
+    {
+      "cycle": 157,
+      "name": "Fourier-normalization audit",
+      "artifact": "certificates/dimension-six-cycle157-fourier-normalization-audit.json",
+      "sha256": "f5dd1d19e4fdbcdf74c0744835fe68ed47721f7577b408aba12e910c8b693fdb",
+      "verdict": "RETIRE_BF6_IMPLICATION_PENDING_COEFFICIENT_TO_RAY_MAP",
+      "claim_boundary": "not a negative theorem about dimension-six TCC"
+    }
+  ],
+  "paper": {
+    "source": "paper/sic-stark-dimension-six-boundary-fusion.tex",
+    "source_sha256": "347228e05a87946ca41bb31c118aae069b7fb6002fff4933d030a153cef21cb7",
+    "pdf": "paper/sic-stark-dimension-six-boundary-fusion.pdf",
+    "pdf_sha256": "0155b3f19719646bf19b8a94ad2bd0ef83f48c22b02e74200d393d3c8fd438a0",
+    "compiled_twice": true,
+    "page_count": 9,
+    "scope": "research note; conditional on MFC6; unsupported BF6 implication explicitly retired",
+    "editorial_gate": "overfull-box cleanup and a dedicated referee pass remain before a new public version"
+  },
+  "tests": {
+    "command": "python3 -m unittest tests.test_dimension_six_cycle157_fourier_audit tests.test_dimension_six_tilted_finite_part -v",
+    "passed": 6,
+    "failed": 0
+  },
+  "publication_boundary": "Paper III already has a published research-note DOI. Any revised public version is an irreversible external action and requires explicit author approval after referee review."
+}
