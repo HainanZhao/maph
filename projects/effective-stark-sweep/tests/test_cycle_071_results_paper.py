@@ -43,17 +43,20 @@ class ResultsPaperMajorRevisionTests(unittest.TestCase):
         self.assertIn("RESULTS_PAPER_FULL_AUDIT=PASS", completed.stdout)
 
     def test_full_freeze_hashes(self):
-        freeze = load("artifacts/results-paper-full-freeze-v4.json")
+        freeze = load("artifacts/results-paper-full-freeze-v6.json")
         self.assertEqual(
             freeze["status"],
-            "REFEREE_MUST_FIXES_CLOSED_LOCAL_ARCHIVE_FROZEN_PENDING_PUBLIC_DEPOSIT_AND_HUMAN_REFEREE",
+            "FOURIER_CONVENTION_LAYOUT_AND_CHRONOLOGY_REPAIRS_PASS_LOCAL_ARCHIVE_FROZEN_PENDING_PUBLIC_DEPOSIT_AND_HUMAN_REFEREE",
         )
         self.assertEqual(
-            freeze["supersedes"], "artifacts/results-paper-full-freeze-v2.json"
+            freeze["supersedes"], "artifacts/results-paper-full-freeze-v4.json"
         )
         manuscript = freeze["primary_manuscript"]
         self.assertEqual(sha(manuscript["tex"]), manuscript["tex_sha256"])
         self.assertEqual(sha(manuscript["pdf"]), manuscript["pdf_sha256"])
+        supplement = freeze["supplement"]
+        self.assertEqual(sha(supplement["tex"]), supplement["tex_sha256"])
+        self.assertEqual(sha(supplement["pdf"]), supplement["pdf_sha256"])
         audit = freeze["referee_audit"]
         self.assertEqual(sha(audit["script"]), audit["script_sha256"])
         self.assertEqual(sha(audit["artifact"]), audit["artifact_sha256"])
@@ -76,6 +79,10 @@ class ResultsPaperMajorRevisionTests(unittest.TestCase):
         self.assertIn(r"\varepsilon=u^{e/2}", paper)
         self.assertIn(r"j(E)=E,\qquad j|_k\ne1", paper)
         self.assertIn(r"Put \(E^+=E^{\langle j\rangle}\)", paper)
+        self.assertIn(r"=-\frac4e(\ell_1+i\ell_\sigma)", paper)
+        self.assertIn(r"N_{E/E^+}(\sigma^ru)^{-1}", paper)
+        self.assertNotIn(r"\ell_1-i\ell_\sigma", paper)
+        self.assertNotIn(r"\sigma^{-r}u", paper)
         self.assertIn("not used in the theorem", paper)
         self.assertIn("rests solely on Engine B", paper)
         self.assertNotIn("General-\\(e\\) CM normalization and orientation", paper)
@@ -84,6 +91,10 @@ class ResultsPaperMajorRevisionTests(unittest.TestCase):
         paper = (ROOT / "paper/effective-stark-results.tex").read_text()
         prose = " ".join(paper.split())
         self.assertNotIn(r"\tag{", paper)
+        self.assertNotIn(r"\begin{center}\scriptsize", paper)
+        self.assertGreaterEqual(
+            paper.count(r"\begin{center}\footnotesize"), 2
+        )
         self.assertIn("examples comprise five order-six packets", paper)
         self.assertIn(r"\(e=|\mu(E)|=2,6,8\)", paper)
         self.assertNotIn(r"\(e=|\mu(E)|=2,4,6,8\)", paper)
@@ -93,6 +104,25 @@ class ResultsPaperMajorRevisionTests(unittest.TestCase):
         self.assertIn(r"\label{eq:index-parity}", paper)
         self.assertIn(r"\label{sec:rq458}", paper)
         self.assertIn("complete the proof of Theorem", prose)
+
+    def test_audit_tables_and_queue_counts_moved_to_supplement(self):
+        paper = (ROOT / "paper/effective-stark-results.tex").read_text()
+        prose = " ".join(paper.split())
+        supplement = (
+            ROOT / "paper/effective-stark-results-supplement.tex"
+        ).read_text()
+        self.assertIn(r"\section{Exact finite moduli}\label{app:moduli}", paper)
+        self.assertIn("Supplementary Table~S1", prose)
+        self.assertIn("Supplementary Table~S2", prose)
+        self.assertNotIn(r"\path{data/q7-p7-case-v1.json}", paper)
+        self.assertNotIn("672 such characters among 2,232", paper)
+        self.assertIn("Supplementary Table S1: certificate record map", supplement)
+        self.assertIn(
+            "Supplementary Table S2: complete Artin-label interval replay",
+            supplement,
+        )
+        self.assertIn("672 zero Euler products", supplement)
+        self.assertIn("In 346 rows every supported derivative vanishes", supplement)
 
     def test_engine_a_euler_degeneracy_audit(self):
         record = load("artifacts/engine-a-euler-degeneracy-v1.json")
@@ -105,6 +135,28 @@ class ResultsPaperMajorRevisionTests(unittest.TestCase):
         self.assertEqual(record["cases_with_zero_euler_product"], 603)
         self.assertEqual(
             record["cases_with_all_supported_euler_products_zero"], 346
+        )
+
+    def test_engine_c_fourier_convention_correction(self):
+        theory = load("data/engine-c-general-e-theory-v4.json")
+        correction = load(
+            "artifacts/engine-c-fourier-convention-correction-v1.json"
+        )
+        self.assertEqual(
+            theory["claim_tag"], "VERIFIED_THEOREM_CONVENTION_CORRECTION"
+        )
+        self.assertEqual(
+            theory["formulas"]["direct_lprime_forward"],
+            "L'_S(0,psi)=-(4/e)*(ell_1+i*ell_sigma)",
+        )
+        self.assertEqual(
+            theory["formulas"]["primitive_packet"],
+            "Y_(sbar^r)=N_(E/E+)(sigma^r*u)^-1",
+        )
+        self.assertEqual(correction["verdict"], "PASS")
+        self.assertEqual(
+            correction["packet_log_coefficients_m0_m1"],
+            [[-2, 0], [0, -2], [2, 0], [0, 2]],
         )
 
     def test_height_lemma_uses_only_powered_algebraic_elements(self):
@@ -123,6 +175,14 @@ class ResultsPaperMajorRevisionTests(unittest.TestCase):
         )
         self.assertIn(
             "We are not aware of previous unconditional one-place Stark packet",
+            prose,
+        )
+        self.assertIn("support order ten", prose)
+        self.assertNotIn("support orders six or ten", prose)
+        self.assertIn(r"\cite{Zhao45}", paper)
+        self.assertIn(r"\cite{Zhao78}", paper)
+        self.assertIn(
+            "That order-eight packet is not repeated in the selected tables",
             prose,
         )
         self.assertNotIn("so these are apparently the first examples", prose)

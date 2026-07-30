@@ -8,6 +8,10 @@ The paper contains the mathematical arguments. This archive exposes
 the exact case data, Arb certificate transcripts, correction records,
 and compact proof-checking programs used for the selected computational
 theorems. It is not a replacement for the written proofs.
+The separate
+`paper/effective-stark-results-supplement.pdf` contains the complete
+certificate-record map, Artin-label interval table, and queue-level
+statistics omitted from the main mathematical narrative.
 
 ## One-command verification
 
@@ -49,6 +53,11 @@ gate. No failed record is accepted by either verifier.
   normalization diagnostic only.
 - The three corrected \(e=6\) polynomials are primitive packets. The
   earlier larger polynomials are preserved as powered representatives.
+- The Engine-C forward-character convention gives
+  \(L'_S(0,\psi)=-(4/e)(\ell_1+i\ell_\sigma)\) and
+  \(Y_{\bar s^r}=N_{E/E^+}(\sigma^r u)^{-1}\).  The earlier
+  minus-sign normalization prose is superseded; packet polynomials and
+  case tags are unchanged.
 - Census completeness and conductor trends are outside this archive.
 
 ## Integrity

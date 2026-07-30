@@ -13,6 +13,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PAPER = ROOT / "paper/effective-stark-results.tex"
+SUPPLEMENT = ROOT / "paper/effective-stark-results-supplement.tex"
 OUT = ROOT / "artifacts/results-paper-full-referee-audit-v2.json"
 getcontext().prec = 80
 
@@ -60,6 +61,7 @@ def margin(lower: str, upper: str) -> Decimal:
 
 def main() -> None:
     paper = PAPER.read_text()
+    supplement = SUPPLEMENT.read_text()
     prose = " ".join(paper.split())
     main_body = paper.split(r"\appendix", 1)[0]
 
@@ -79,10 +81,10 @@ def main() -> None:
         r"L_{\mathfrak m}(s,\theta)=L_S(s,\psi)",
         r"\varepsilon=u^{e/2}",
         r"Y_{\bar s^r}",
-        r"N_{E/E^+}(\sigma^{-r}u)^{-1}",
+        r"N_{E/E^+}(\sigma^ru)^{-1}",
         r"\zeta'_S(0,g)=-\frac2e\ell_g",
         r"L'_S(0,\psi)",
-        r"=-\frac4e(\ell_1-i\ell_\sigma)",
+        r"=-\frac4e(\ell_1+i\ell_\sigma)",
         r"\frac1m\log|\sigma_v(X_A^m)|",
         r"j(E)=E,\qquad j|_k\ne1",
         r"Put \(E^+=E^{\langle j\rangle}\)",
@@ -91,6 +93,8 @@ def main() -> None:
         r"\psi(\sigma)=i",
         r"\label{eq:index-parity}",
         r"\label{sec:rq458}",
+        r"\section{Exact finite moduli}\label{app:moduli}",
+        r"\begin{center}\footnotesize",
     )
     require(
         prose,
@@ -103,9 +107,13 @@ def main() -> None:
         "not a finished referee draft until its companion archive",
         "Shintani's Proposition~4 on pp.~154--156",
         "Shintani's Proposition~5(i)--(iii) on pp.~156--158",
-        "valid for every degree",
+        "stated for every degree",
         "complete the proof of Theorem",
-        "in 346 rows all supported terms vanish",
+        "Supplementary Table~S1",
+        "Supplementary Table~S2",
+        r"\cite{Zhao45}",
+        r"\cite{Zhao78}",
+        "support order ten",
     )
     reject(
         main_body,
@@ -119,6 +127,26 @@ def main() -> None:
         r"Put \(E^+=E^{\langle j\rangle}\) inside the common normal closure",
         r"\tag{",
         r"e=|\mu(E)|=2,4,6,8",
+        r"\ell_1-i\ell_\sigma",
+        r"\sigma^{-r}u",
+        r"\begin{center}\scriptsize",
+        "support orders six or ten",
+    )
+    require(
+        supplement,
+        "Supplementary Table S1: certificate record map",
+        "Supplementary Table S2: complete Artin-label interval replay",
+        r"\path{data/q7-p7-case-v1.json}",
+        r"\path{artifacts/engine-c-fourier-convention-correction-v1.json}",
+        "672 zero Euler products",
+        "affecting 603 rows",
+        "In 346 rows every supported derivative vanishes",
+    )
+    reject(
+        main_body,
+        r"\path{data/q7-p7-case-v1.json}",
+        "672 such characters among 2,232",
+        "affecting 603 rows",
     )
 
     # Engine A: the closed formula includes exact imprimitive
@@ -288,6 +316,22 @@ def main() -> None:
     ):
         raise AssertionError("Engine-C scope correction is stale")
 
+    convention_output = run(
+        ["python3", "scripts/audit_engine_c_fourier_convention.py"],
+        "ENGINE_C_FOURIER_CONVENTION_AUDIT=VERIFIED",
+    )
+    convention = load(
+        "artifacts/engine-c-fourier-convention-correction-v1.json"
+    )
+    if (
+        convention["claim_tag"]
+        != "VERIFIED_EXACT_CONVENTION_CORRECTION"
+        or convention["verdict"] != "PASS"
+        or convention["packet_log_coefficients_m0_m1"]
+        != [[-2, 0], [0, -2], [2, 0], [0, 2]]
+    ):
+        raise AssertionError("Engine-C Fourier convention audit failed")
+
     required_polynomial_fragments = (
         "38904X^7",
         "416X^7",
@@ -305,14 +349,16 @@ def main() -> None:
     )
 
     # Verify the four Fourier/CM signs in the written bridge.
-    # L'=-2(m0-i*m1); Re(i^{-r}L') must equal
-    # (-2m0,2m1,2m0,-2m1).
-    expected = ((-2, 0), (0, 2), (2, 0), (0, -2))
+    # L'=-2(m0+i*m1); Re(i^{-r}L') must equal
+    # (-2m0,-2m1,2m0,2m1).
+    expected = ((-2, 0), (0, -2), (2, 0), (0, 2))
     actual = []
     for r in range(4):
         coefficient = (1j) ** (-r) * -2
-        # coefficient multiplies m0-i*m1
-        actual.append((round(coefficient.real), round(coefficient.imag)))
+        # coefficient multiplies m0+i*m1.
+        actual.append(
+            (round(coefficient.real), round((coefficient * 1j).real))
+        )
     if tuple(actual) != expected:
         raise AssertionError("cyclic-quartic Fourier sign audit failed")
 
@@ -321,6 +367,10 @@ def main() -> None:
         "claim_tag": "VERIFIED_MAJOR_REVISION_AUDIT",
         "paper": "paper/effective-stark-results.tex",
         "paper_sha256": sha("paper/effective-stark-results.tex"),
+        "supplement": "paper/effective-stark-results-supplement.tex",
+        "supplement_sha256": sha(
+            "paper/effective-stark-results-supplement.tex"
+        ),
         "engine_a": {
             "uniform_theorem": "PASS",
             "euler_degeneracy": expected_euler,
@@ -341,6 +391,10 @@ def main() -> None:
             "proved_case_count": 5,
             "e_values": [2, 6, 8],
             "formal_bridge": "PASS",
+            "fourier_convention": "PASS",
+            "fourier_replay_stdout_sha256": hashlib.sha256(
+                convention_output.encode()
+            ).hexdigest(),
             "e6_primitive_correction": "PASS",
             "e6_replay_stdout_sha256": hashlib.sha256(
                 correction_output.encode()

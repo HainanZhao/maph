@@ -1,0 +1,85 @@
+{
+  "schema": "effective-stark-results-paper-full-freeze-v6",
+  "recorded_at_utc": "2026-07-30T16:12:00Z",
+  "status": "FOURIER_CONVENTION_LAYOUT_AND_CHRONOLOGY_REPAIRS_PASS_LOCAL_ARCHIVE_FROZEN_PENDING_PUBLIC_DEPOSIT_AND_HUMAN_REFEREE",
+  "supersedes": "artifacts/results-paper-full-freeze-v4.json",
+  "supersession_reason": "The Engine-C Fourier sign and Artin exponent were corrected to match the declared convention and exact bridge; main theorem tables were enlarged and simplified; audit tables and queue counts moved to a supplement; the author's prior dimension-four, five, seven, and eight papers were cited and order-six novelty language was withdrawn.",
+  "primary_manuscript": {
+    "tex": "paper/effective-stark-results.tex",
+    "tex_sha256": "4e28e5ef95731493f925f55f691419eb6392577f70f6e6cbf075d884619b3258",
+    "pdf": "paper/effective-stark-results.pdf",
+    "pdf_sha256": "3cd32d3b207f630ebc383430235579ce0b19b1ad982931a48d5d7851514a90ef",
+    "page_count": 17,
+    "latex_passes": 3,
+    "latex_warnings": 0,
+    "source_date_epoch": 1785420000,
+    "independent_builds_byte_identical": true
+  },
+  "supplement": {
+    "tex": "paper/effective-stark-results-supplement.tex",
+    "tex_sha256": "1d6ba855e1194921444d5efb6135153dbaf2db19991f68e8daf6201ebaf3effc",
+    "pdf": "paper/effective-stark-results-supplement.pdf",
+    "pdf_sha256": "5236f72b05752bd19185711641cc37c18b4bc6e63e6fbf702f4446d0230c1c3b",
+    "page_count": 2,
+    "latex_passes": 3,
+    "latex_warnings": 0,
+    "source_date_epoch": 1785420000,
+    "independent_builds_byte_identical": true
+  },
+  "engine_c_fourier_correction": {
+    "theory": "data/engine-c-general-e-theory-v4.json",
+    "theory_sha256": "b6145824b56fd4dd4f8c1671eab60774364b7e5bba37e4b4311809c94c9bb189",
+    "audit_script": "scripts/audit_engine_c_fourier_convention.py",
+    "audit_script_sha256": "51c5fb6e6098621efd77dc4eca85eb533a186d247e9b1e570932dd3a5e21f354",
+    "artifact": "artifacts/engine-c-fourier-convention-correction-v1.json",
+    "artifact_sha256": "c06279aabf0f786b8484a15eb283b636ed24521898ba035795775e3b07f64256",
+    "direct_lprime": "L'_S(0,psi)=-(4/e)*(ell_1+i*ell_sigma)",
+    "packet_formula": "Y_(sbar^r)=N_(E/E+)(sigma^r*u)^-1",
+    "packet_polynomials": "UNCHANGED",
+    "case_tags": "UNCHANGED"
+  },
+  "layout_repairs": {
+    "main_theorem_tables": "footnotesize with short modulus labels",
+    "exact_moduli": "normal-sized appendix table with all HNF matrices",
+    "record_map": "Supplementary Table S1",
+    "artin_intervals": "Supplementary Table S2, with one RQ-000190 row retained in the main paper",
+    "engine_a_queue_counts": "supplement only"
+  },
+  "chronology_repairs": {
+    "paper_I": "Twisted-convolution identities in dimensions four and five from Shintani ray units, DOI 10.5281/zenodo.21680223",
+    "paper_II": "Twisted-convolution identities in dimensions seven and eight: Shintani height rigidity and CM descent, DOI 10.5281/zenodo.21681700",
+    "order_six": "RQ-000021 is disclosed as a streamlined reidentification of a prior arithmetic input; no new priority claim",
+    "order_eight": "the prior Q(sqrt(3)), (5) infinity_2 packet at safe exponent 5760 is cited as another specialization",
+    "order_ten": "the bounded knowledge statement is retained only for order ten"
+  },
+  "referee_audit": {
+    "script": "scripts/audit_results_paper_full.py",
+    "script_sha256": "072aa411c2eb3b89984fd35e6b9ffb818db3d7f18e39e1df68dbe47279246dc3",
+    "artifact": "artifacts/results-paper-full-referee-audit-v2.json",
+    "artifact_sha256": "439c2e0dc9f58ebc6ae10561facd72545773018516c5e4a34aae87322cf37115",
+    "outcome": "PASS"
+  },
+  "shintani_source_map": {
+    "artifact": "artifacts/shintani-1978-source-map-v1.json",
+    "artifact_sha256": "b145c2a7ae22853963586bfb2ea276290d9e8e4c043a5cca44fac2176e0083c0"
+  },
+  "companion_archive": {
+    "builder": "scripts/build_results_companion.py",
+    "builder_sha256": "3a48af00e8a60b1f66e185f43f80301cfe6db82ab903127e75ccb45daf4e0074",
+    "verifier": "scripts/verify_results_companion.py",
+    "verifier_sha256": "77b1a5dbec5620635121494453d38437bc46357eda9f07eda87f218b7fb862f8",
+    "local_freeze": "artifacts/results-paper-companion-local-freeze-v9.json",
+    "local_freeze_sha256": "ee01f0e18390c8ec887f35c30b505bf1830b4ef0284c19b5aad0c18bc65b3486",
+    "archive": "dist/effective-stark-results-companion-v9.tar.gz",
+    "archive_sha256": "0168a3882afb3e0eda89e597088cf6d8b297257b213fef5ee2fce3bc854bef4a",
+    "archive_replay": "PASS",
+    "manifest_file_count": 8410,
+    "public_identifier": null,
+    "status": "LOCAL_FROZEN_NOT_PUBLIC"
+  },
+  "publication_gate": {
+    "zenodo": "NO_ACTION_TAKEN",
+    "submission": "BLOCKED_PENDING_PUBLIC_ARCHIVE_AND_NEW_HUMAN_REFEREE_ROUND",
+    "publish_action_allowed": false
+  }
+}
