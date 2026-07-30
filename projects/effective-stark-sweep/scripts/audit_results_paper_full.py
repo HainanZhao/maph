@@ -63,6 +63,7 @@ def main() -> None:
     paper = PAPER.read_text()
     supplement = SUPPLEMENT.read_text()
     prose = " ".join(paper.split())
+    supplement_prose = " ".join(supplement.split())
     main_body = paper.split(r"\appendix", 1)[0]
 
     # The complete paper must contain the three mechanisms and the written
@@ -106,7 +107,13 @@ def main() -> None:
         "We therefore make no claim to the first unconditional weak Stark result",
         "componentwise Artin-labelled identification",
         "RQ-002057: the prime above \\(3\\) has relative ramification index",
-        "https://doi.org/10.5281/zenodo.21707548",
+        r"Tate \cite[Thm.~IV.5.4]{Tate1984}",
+        r"Arakawa's relative-index formula",
+        "Thus the algebraicity underlying Engine~A is classical",
+        "Roblot's (A4) is not a hypothesis of these existence theorems",
+        "It is not an application of Roblot's squareness criteria",
+        "explicitly excludes imaginary quadratic bases",
+        "https://doi.org/10.5281/zenodo.21707692",
         "PDF and",
         "source are exposed as top-level files",
         "Shintani's Proposition~4 on pp.~154--156",
@@ -138,10 +145,12 @@ def main() -> None:
         "support orders six or ten",
     )
     require(
-        supplement,
+        supplement_prose,
         "Supplementary Table S1: certificate record map",
         "Supplementary Table S2: complete Artin-label interval replay",
         "Supplementary Table S3: relation to Roblot's sextic theorem",
+        "Roblot's (A4) is not part of the existence statement",
+        "neither assumed nor silently included",
         r"\path{data/q7-p7-case-v1.json}",
         r"\path{artifacts/engine-c-fourier-convention-correction-v1.json}",
         r"\path{artifacts/roblot-sextic-overlap-audit-v1.json}",

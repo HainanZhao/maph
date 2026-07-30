@@ -43,13 +43,13 @@ class ResultsPaperMajorRevisionTests(unittest.TestCase):
         self.assertIn("RESULTS_PAPER_FULL_AUDIT=PASS", completed.stdout)
 
     def test_full_freeze_hashes(self):
-        freeze = load("artifacts/results-paper-full-freeze-v8.json")
+        freeze = load("artifacts/results-paper-full-freeze-v9.json")
         self.assertEqual(
             freeze["status"],
-            "PUBLISHED_ZENODO_V1_1_ROBLOT_OVERLAP_VERIFIED",
+            "PUBLISHED_ZENODO_V1_2_TATE_ARAKAWA_ROBLOT_SCOPE_VERIFIED",
         )
         self.assertEqual(
-            freeze["supersedes"], "artifacts/results-paper-full-freeze-v7.json"
+            freeze["supersedes"], "artifacts/results-paper-full-freeze-v8.json"
         )
         manuscript = freeze["primary_manuscript"]
         self.assertEqual(sha(manuscript["tex"]), manuscript["tex_sha256"])
@@ -71,7 +71,7 @@ class ResultsPaperMajorRevisionTests(unittest.TestCase):
             sha(companion["local_freeze"]), companion["local_freeze_sha256"]
         )
         publication = freeze["publication"]
-        self.assertEqual(publication["doi"], "10.5281/zenodo.21707548")
+        self.assertEqual(publication["doi"], "10.5281/zenodo.21707692")
         self.assertTrue(publication["top_level_pdf_and_tex"])
         self.assertEqual(
             sha(publication["metadata"]), publication["metadata_sha256"]
@@ -90,7 +90,24 @@ class ResultsPaperMajorRevisionTests(unittest.TestCase):
         self.assertNotIn(r"\sigma^{-r}u", paper)
         self.assertIn("not used in the theorem", paper)
         self.assertIn("rests solely on Engine B", paper)
+        self.assertIn(
+            "It is not an application of\n"
+            "Roblot's squareness criteria",
+            paper,
+        )
+        self.assertIn("explicitly excludes imaginary quadratic bases", paper)
         self.assertNotIn("General-\\(e\\) CM normalization and orientation", paper)
+
+    def test_quadratic_layer_is_credited_to_tate_and_arakawa(self):
+        paper = (ROOT / "paper/effective-stark-results.tex").read_text()
+        self.assertIn(r"Tate \cite[Thm.~IV.5.4]{Tate1984}", paper)
+        self.assertIn("Arakawa's relative-index formula", paper)
+        self.assertIn("Thus the algebraicity\nunderlying Engine~A is classical", paper)
+        self.assertIn(
+            "Roblot's (A4) is not a hypothesis of these\n"
+            "existence theorems",
+            paper,
+        )
 
     def test_referee_must_fixes_are_regression_guarded(self):
         paper = (ROOT / "paper/effective-stark-results.tex").read_text()

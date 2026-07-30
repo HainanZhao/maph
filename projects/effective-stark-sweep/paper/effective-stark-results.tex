@@ -91,9 +91,14 @@ each displayed identity follows from a published proved theorem under
 hypotheses checked exactly in the case bundle.  It does not mean that
 the general real-quadratic rank-one Stark conjecture is proved.
 Shintani's theorem is used only in its index-two range
-\cite{Shintani1978}, and the quadratic cases use the analytic
-class-number formula.  CM descent uses Stark's proved theorem for
-abelian extensions of imaginary quadratic fields
+\cite{Shintani1978}.  The underlying rank-one conjecture for
+quadratic extensions is the classical proved case of
+Tate \cite[Thm.~IV.5.4]{Tate1984}; the contribution of Engine~A is
+the uniform one-place formula, including its imprimitive Euler
+factors, relative-regulator index, and exact per-character
+exponents.  Arakawa's relative-index formula for quadratic base
+fields is closely related \cite{Arakawa1985}.  CM descent uses
+Stark's proved theorem for abelian extensions of imaginary quadratic fields
 \cite{Stark1980}. Numerical PARI recognition, when retained as a
 cross-check, is outside the proof chain.
 
@@ -293,6 +298,15 @@ reidentification of a previously used arithmetic input, not a new
 priority claim.  The present work places those mechanisms in a common
 effective framework and supplies further order-six replications.
 \paragraph{Relation to earlier index-formula results.}
+At the quadratic layer, Tate's Theorem~IV.5.4 proves the full
+rank-one conjecture for quadratic extensions in this setting,
+including signs \cite{Tate1984}; see also Arakawa's index formula for
+quadratic base fields \cite{Arakawa1985}.  Thus the algebraicity
+underlying Engine~A is classical.  The new content of
+Theorem~\ref{thm:A} is its uniform explicit expression in the
+one-place normalization through \(I_\chi\), \(E_\chi\), and the
+resulting exact per-character exponents.
+
 Roblot \cite[Thms.~6.1 and~7.1]{Roblot2013} proves unconditionally
 that the Stark-unit index formulae admit solutions for cyclic quartic
 extensions and, under additional class-number and
@@ -309,7 +323,9 @@ class number \(h_H=1\).  Theorem~7.1 of \cite{Roblot2013} applies to
 RQ-000190, RQ-000419, RQ-000021, and RQ-002955.  It does not apply to
 RQ-002057: the prime above \(3\) has relative ramification index
 \(6\) in \(H/K\), and is therefore wild.  Supplementary Table~S3
-records the check.
+records the check.  Roblot's (A4) is not a hypothesis of these
+existence theorems; it is required in his earlier deduction that an
+assumed Stark unit satisfies the local index property (P2).
 
 The contribution here is componentwise identification: the positive
 one-place invariants are proved to be the Artin-labelled roots of an
@@ -987,6 +1003,11 @@ gives
 Thus \(j\in\operatorname{Aut}(E)\), and the embedding identifies this
 automorphism with complex conjugation on \(E\).
 \end{enumerate}
+The divisibility assertion in item~3 is certified directly in the
+imaginary-quadratic unit lattice.  It is not an application of
+Roblot's squareness criteria \cite[Cor.~2.4 and
+Thms.~6.2, 7.2]{Roblot2013}, whose framework assumes a totally real
+base and explicitly excludes imaginary quadratic bases.
 Put \(E^+=E^{\langle j\rangle}\).  Then \(E/E^+\) is quadratic and
 the norm below is defined.  For \(r\in\Z/4\Z\),
 \begin{equation}\label{eq:cm-norm-bridge}
@@ -1344,7 +1365,7 @@ identify the isolated root with \(X_r\).
 \paragraph{Archive DOI.}
 The paper, supplementary tables, and frozen companion archive are
 deposited at
-\url{https://doi.org/10.5281/zenodo.21707548}.  The PDF and
+\url{https://doi.org/10.5281/zenodo.21707692}.  The PDF and
 \TeX\ source are exposed as top-level files in that record.  The
 companion archive contains the manuscript source, a complete
 SHA-256 manifest, expected verifier outputs, exact and Arb
@@ -1386,6 +1407,15 @@ fields}, J.\ Math.\ Soc.\ Japan \textbf{30} (1978), 139--167,
 H.~M.~Stark, \emph{\(L\)-functions at \(s=1\). IV. First derivatives
 at \(s=0\)}, Adv.\ Math.\ \textbf{35} (1980), 197--235,
 \url{https://doi.org/10.1016/0001-8708(80)90049-3}.
+\bibitem{Tate1984}
+J.~Tate, \emph{Les conjectures de Stark sur les fonctions \(L\)
+d'Artin en \(s=0\)}, Progress in Mathematics, vol.~47,
+Birkh\"auser Boston, Boston, 1984.
+\bibitem{Arakawa1985}
+T.~Arakawa, \emph{On the Stark--Shintani conjecture and certain
+relative class numbers}, in \emph{Automorphic forms and number
+theory (Sendai, 1983)}, Adv.\ Stud.\ Pure Math., vol.~7,
+North-Holland, Amsterdam, 1985, pp.~1--6.
 \bibitem{Yamamoto2010}
 S.~Yamamoto, \emph{On Shintani's ray class invariant for totally real
 number fields}, Math.\ Ann.\ \textbf{346} (2010), 559--593,
