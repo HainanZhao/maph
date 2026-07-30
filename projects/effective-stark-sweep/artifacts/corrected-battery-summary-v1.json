@@ -1,0 +1,49 @@
+{
+  "schema": "effective-stark-corrected-battery-summary-v1",
+  "claim_tag": "VERIFIED",
+  "recorded_at_utc": "2026-07-30T02:23:21+00:00",
+  "trigger": "Discovery of the NO_ABELIAN_IMAGINARY_BASE false-pass mode invalidated every prior B PASS until fresh corrected screening.",
+  "anchor_gate": {
+    "end_to_end_reproduction": {
+      "passed": 7,
+      "expected": 7,
+      "artifact": "artifacts/corrected-battery-anchor-reproduction-v1.json",
+      "sha256": "ba81374d552f1e24a236deedb7c2553866de3e8b1714e1f272e2637fa7d9f5e3"
+    },
+    "w1_structural_screen": {
+      "passed": 7,
+      "expected": 7,
+      "artifact": "artifacts/corrected-battery-w1-anchor-screen-v1.json",
+      "sha256": "6196bc75b5abaef745216663ffc2068da86c98f1cb78fc365b09324fc8bc7c83"
+    },
+    "currently_b_routed_corrected_two_route_screen": {
+      "passed": 3,
+      "expected": 3,
+      "artifact": "artifacts/corrected-battery-anchor-b-v1.json",
+      "sha256": "c94ba48a5597362e0093317a111244beb310ba92a4d927413e808d174a54b83c"
+    },
+    "routing_note": "The historical ray-12 lower stratum now routes through A because its support has order at most two. It is covered by the end-to-end and W1 replays and is not forced through an irrelevant B predicate."
+  },
+  "population_gate": {
+    "fresh_processes": 195,
+    "passed": 195,
+    "expected": 195,
+    "exact_comparisons": [
+      "nonempty abelian imaginary-base set",
+      "independent ray-subfield match count",
+      "base set equal to banked corrected result",
+      "normal-closure field equal to banked corrected result"
+    ],
+    "artifact": "artifacts/corrected-battery-b195-v1.json",
+    "sha256": "39b412369e1bc5b9b9fe946817fb44c8319a22a0823dc7aae23ce1fc1ef861db",
+    "transcript": "artifacts/corrected-battery-b195-v1.transcript",
+    "transcript_sha256": "3e966cfbf28b549a97a4612e43238e712d0dd109494aaffa962cb85cce13a25e"
+  },
+  "selected_case_checks": {
+    "RQ-002057": "PASSED_CORRECTED_BATTERY",
+    "RQ-002955": "PASSED_CORRECTED_BATTERY",
+    "RQ-001107": "PASSED_CORRECTED_BATTERY"
+  },
+  "verdict": "CORRECTED_BATTERY_GATE_CLOSED",
+  "authorization": "The five selected closures may now enter their case-specific W2/W3 gates. This artifact does not itself promote any packet identity."
+}

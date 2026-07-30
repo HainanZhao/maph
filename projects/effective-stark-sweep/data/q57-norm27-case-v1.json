@@ -1,0 +1,73 @@
+{
+  "schema": "effective-stark-case-development-v1",
+  "case_id": "RQ-002057",
+  "field": "Q(sqrt(57))",
+  "finite_ideal_hnf": [[9, 3], [0, 3]],
+  "finite_norm": 27,
+  "archimedean_place": "infinity_2",
+  "local_shape": {
+    "claim_tag": "VERIFIED",
+    "ramified_rational_prime": 3,
+    "field_discriminant": 57,
+    "finite_modulus_is_ramified_3_power": true,
+    "one_place_ray_group": [6],
+    "two_place_ray_group": [6, 2],
+    "fourier_support_orders": [2, 6]
+  },
+  "engine_b": {
+    "claim_tag": "VERIFIED",
+    "corrected_battery_replay_passed": true,
+    "imaginary_bases": ["Q(sqrt(-3))", "Q(sqrt(-19))"],
+    "selected_base": "Q(sqrt(-19))",
+    "selected_base_polynomial": "z^2-z+5",
+    "normal_closure_degree": 24,
+    "two_route_match_count": 2,
+    "selected_conductor_hnf": [[9, 0], [0, 9]],
+    "two_route_transcript": "artifacts/rq57-norm27-w2-two-route-v1.transcript",
+    "two_route_transcript_sha256": "9b203e7b6f22081befdcc754bb1c71f849e0546f6217e7bd756c3984c7794c98"
+  },
+  "exponent": {
+    "claim_tag": "VERIFIED",
+    "safe_exponent": 2592,
+    "factorization": "2^5 * 3^4",
+    "selected_route_divisor_count": 3,
+    "divisor_rows": [
+      {
+        "divisor_power": 0,
+        "ray_order": 1,
+        "w": 2,
+        "distribution_index": 72,
+        "f_d": 1,
+        "clearing_exponent": 864
+      },
+      {
+        "divisor_power": 1,
+        "ray_order": 4,
+        "w": 1,
+        "distribution_index": 9,
+        "f_d": 3,
+        "clearing_exponent": 324
+      },
+      {
+        "divisor_power": 2,
+        "ray_order": 36,
+        "w": 1,
+        "distribution_index": 1,
+        "f_d": 9,
+        "clearing_exponent": 108
+      }
+    ],
+    "divisor_table_transcript": "artifacts/rq57-norm27-w2-divisor-table-v1.transcript",
+    "divisor_table_transcript_sha256": "2a66439a0a724184899de80123357ca26aa2e14231b3029ea6c90ad8a7f526e0"
+  },
+  "significance": {
+    "priority": "PROMOTED_ABOVE_RQ-000021",
+    "paper_iii_role": "Sharpest proved-reachable dimension-6 analogue in the census if W3 closes.",
+    "reason": "It has order-six support and a conductor that is a power of the ramified prime 3 on a field with 3 dividing the discriminant. It is the nearest reachable neighbor of the Q(sqrt(21)) wall and isolates that wall to the exact Shintani wildness/index failure rather than character order or 3-ramification by itself."
+  },
+  "identification": {
+    "claim_tag": "NOT_YET_RUN",
+    "state": "W3 packet recognition, Arb enclosure, Artin labeling, and height closure pending"
+  },
+  "verdict": "THEOREM_CANDIDATE_NOT_YET_VERIFIED"
+}

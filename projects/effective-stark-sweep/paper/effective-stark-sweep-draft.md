@@ -135,8 +135,13 @@ eight.  Exact normal-closure restriction gives linear reinduction over
 \(e=|\mu(E)|=8\).  Its exact anti-unit lattice and oriented ray
 character isolate a reciprocal norm-one candidate with orbit
 coordinates \((4,0),(0,4)\).  This is deliberately not labeled
-VERIFIED: the equality with the archimedean invariant awaits an
-independent Arb Shintani/cocycle enclosure.
+VERIFIED.  Before any Arb Shintani/cocycle enclosure, three proof
+obligations remain: a written \(e=8\) analogue of the normalization
+lemma, an exact orientation procedure resolving all eight
+root-of-unity multiples, and an independent
+\(\mathbb Q(\sqrt{-3})\)-side reconstruction of the same oriented
+packet.  An enclosure without these steps would certify a possibly
+mis-normalized or mis-oriented statement.
 
 ## Uniform Engine A after deduplication
 
@@ -168,8 +173,49 @@ five are
 
 The first four price height-rigidity risk at or below the proved
 Paper-II scale.  The fifth is intentionally not cost-minimal: it is
-the first order-ten case and tests whether the observed order-six
-success reflects a wider even-order phenomenon.  The
+the first order-ten case, and hence the first proposed proved support
+order containing the prime 5; it tests whether the observed order-six
+success reflects a wider even-order phenomenon.  Its comparison-degree
+cap is 80.  The certified minimum Voutier bound over degrees 3 through
+80 is \(5.22795332222684\ldots\times10^{-5}\), while the degree-80
+value is \(1.19789136153146\ldots\times10^{-4}\).  At exponent 15840,
+a factor-100 height margin therefore requires raw logarithmic error at
+most \(3.30047558221391\ldots\times10^{-11}\).  The final case
+certificate will state the actual maximum comparison degree and the
+minimum bound across the realized window.
+
+Among the low-cost cases, the \(\mathbb Q(\sqrt{57})\), norm-27 target
+has the strongest diagnostic value and is promoted ahead of the
+\(\mathbb Q(\sqrt2)\) tower case.  It combines order-six support with a
+power of the ramified prime 3 on a field whose discriminant is divisible
+by 3.  If its W3 identification closes, it is the closest
+proved-reachable neighbor of the \(\mathbb Q(\sqrt{21})\) wall and
+isolates that wall to the precise index/wildness failure rather than to
+order six or 3-ramification alone.  Its dedicated W2 replay derives
+\(\mathbb Q(\sqrt{-3})\) and \(\mathbb Q(\sqrt{-19})\) independently
+from the commutator-fixed field, and both reconstruct the degree-24
+normal closure.  On the shorter \(\mathbb Q(\sqrt{-19})\) route the
+three divisor rows have clearing exponents \(864,324,108\), with safe
+least common multiple \(2592\).  Packet identification remains W3.
+The
 \(\mathbb Q(\sqrt{111})\) norm-three case, with exponent
 \(13{,}810{,}176\), remains an explicit deferred control rather than
 an active W3 target.
+
+## Corrected-battery audit
+
+Discovery of the `NO_ABELIAN_IMAGINARY_BASE` false-pass mode invalidated
+all earlier B passes until rerun.  The corrected battery replayed all
+seven Papers-I/II anchors end to end, re-screened their W1 predicates,
+and applied the corrected two-route test to the three anchors still
+routed through B; every check passed.  Separately, all 195 previously
+passing B cases were rerun in fresh PARI processes.  All 195 retained a
+nonempty abelian imaginary-base set, an independent ray-subfield match,
+and exactly the banked base set and normal-closure field.
+
+The complete C and corrected B screens also expose 11 packet-level
+overlaps: one quartic packet passes C geometry in a case whose full
+ray datum passes B.  These are elevated cross-validation targets, but
+we do not yet call them dual proofs.  That promotion requires exact
+alignment of the character packet, algebraic unit, and oriented Artin
+labels under both engines.

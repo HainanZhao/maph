@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
 from datetime import datetime, timezone
@@ -98,7 +99,34 @@ def check_route(record: dict[str, object], expected: str) -> bool:
     raise ValueError(expected)
 
 
+def current_route(record: dict[str, object]) -> str:
+    """Apply the frozen W1 route precedence, independent of history."""
+    if int(record["max_support_order"]) <= 2:
+        return "A"
+    if (
+        int(record["c_structural"]) == 1
+        and int(record["c_projective_failures"]) == 0
+    ):
+        return "C_CANDIDATE"
+    if (
+        int(record["shintani_index"]) == 2
+        and int(record["exactly_one_real_place_splitting"]) == 1
+        and int(record["b03_positive_not_minus_one"]) == 1
+        and int(record["b06_negative_norm_not_one"]) == 1
+    ):
+        return "B_STRUCTURAL_CANDIDATE"
+    return "FRONTIER"
+
+
 def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--output",
+        type=Path,
+        default=ROOT / "artifacts" / "w1-anchor-regression-v1.json",
+    )
+    args = parser.parse_args()
+    args.output = args.output.resolve()
     records = []
     failed = []
     for anchor in ANCHORS:
@@ -128,6 +156,7 @@ def main() -> None:
                 "historical_engine": expect["route_predicate"],
                 "passed": passed,
                 "checks": checks,
+                "current_route_after_precedence": current_route(record),
                 "screen_record": record,
             }
         )
@@ -147,7 +176,7 @@ def main() -> None:
         ),
     }
     serialized = json.dumps(payload, indent=2, sort_keys=True) + "\n"
-    output = ROOT / "artifacts" / "w1-anchor-regression-v1.json"
+    output = args.output
     output.write_text(serialized)
     print(f"PASSED_COUNT={payload['passed_count']}")
     print(f"OUTPUT_SHA256={hashlib.sha256(serialized.encode()).hexdigest()}")
