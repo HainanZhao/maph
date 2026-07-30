@@ -16,7 +16,7 @@ census definitions, orchestration, records, and certificates.
 
 ## Current state
 
-Cycles 001–052 are complete. Publication uploads, identifier recording, and
+Cycles 001–065 are complete. Publication uploads, identifier recording, and
 correspondence are administrative metadata, not research gates.  The
 earlier sequencing records are retained only as process history and are
 superseded by `data/research-activation-v3.json`.
@@ -27,6 +27,7 @@ The exact state can be checked with:
 python3 scripts/audit_activation.py
 python3 -m unittest discover -s tests -v
 python3 scripts/audit_w1_anchor_screen.py
+./scripts/verify_manifest.sh
 ```
 
 The order-six analytic certificate was replayed with Python 3.12.3 and
@@ -107,6 +108,17 @@ clearing exponents 864, 324, and 108, hence safe exponent 2592. W3
 packet identification is next. The \(\mathbb Q(\sqrt6)\) Arb step is
 explicitly blocked until the \(e=8\) normalization, eightfold
 orientation, and second-base packet check are proved.
+
+The generic Engine-C W3 pipeline is now operational.  It performs
+exact exhaustive CM character selection, certified theta/Mellin
+evaluation of primitive \(L'(0)\) with explicit tails, exact
+anti-unit-lattice extraction, Arb orbit isolation, and an
+Artin/Frobenius-labeled normal-closure bridge.  Its Paper-II regression
+anchor passes.  Its first new closure,
+\(\mathbb Q(\sqrt{35})\), is `VERIFIED` independently through
+\(\mathbb Q(\sqrt{-10})\) and \(\mathbb Q(\sqrt{-14})\); both
+RQ-001280 and its RQ-001297 transport are sealed.  See
+[`docs/cycle-065-q35-engine-c-w3.md`](docs/cycle-065-q35-engine-c-w3.md).
 
 ## Claim tags
 
