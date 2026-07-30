@@ -1,0 +1,65 @@
+{
+  "schema": "effective-stark-results-paper-freeze-v2",
+  "claim_tag": "VERIFIED_REFEREE_READY_FREEZE",
+  "recorded_at_utc": "2026-07-30T11:30:36Z",
+  "primary_manuscript": {
+    "tex": "paper/effective-stark-results.tex",
+    "tex_sha256": "724a3452c324337dfead0763f7e3c1993b7737eed6c8180ff7cb8a29c4093fdd",
+    "pdf": "paper/effective-stark-results.pdf",
+    "pdf_sha256": "150f37b6dfebe978bd4fbf615a3e4d09c8fb20c267726363af8b93723b5da451",
+    "page_count": 8,
+    "latex_passes": 2,
+    "latex_warnings": 0,
+    "source_date_epoch": 1785411036,
+    "independent_builds_byte_identical": true
+  },
+  "scope": {
+    "included": [
+      "seven promoted Engine-B packets, including order six and order ten",
+      "generic Q(sqrt(35)) Engine-C closure and transport",
+      "first e=6 Engine-C tranche",
+      "Q(sqrt(6)) auxiliary-prime closure",
+      "RQ-000458 disjoint theorem-base proof",
+      "uniform Engine-A theorem",
+      "absolute-abelian no-go lemma",
+      "genuine-normal-closure index-parity lemma"
+    ],
+    "excluded": [
+      "all census population counts",
+      "all FRONTIER counts and conductor trends",
+      "bulk-completeness claims",
+      "unpromoted W2 candidates",
+      "Q(sqrt(111)) exponent-economics discussion",
+      "work-queue and process-economics prose"
+    ],
+    "invariance": "No census-v5 population outcome changes a theorem in this manuscript."
+  },
+  "parity_lemma": {
+    "decision": "INCLUDED_AFTER_ONE_CYCLE_PROOF",
+    "proof": "docs/results-paper-index-parity-lemma.md",
+    "proof_sha256": "9f1f01baa045d52c255600b38ac52b891c1ecfc791d3e3771a471d79b9b86ed9"
+  },
+  "referee_audit": {
+    "artifact": "artifacts/results-paper-referee-audit-v1.json",
+    "sha256": "7b79e0471658210ddf7e8f8d2caf4ca59b1c34f49dae2852670e28cf04fbc24e",
+    "outcome": "PASS",
+    "checks": [
+      "conditionality and bounded-novelty disclaimers",
+      "census independence",
+      "all seven displayed safe exponents",
+      "all eight displayed height margins",
+      "all displayed packet polynomials",
+      "all displayed finite constants and Artin labels",
+      "nine embedded certificate hashes",
+      "general-e normalization signs",
+      "every use of Stark 1980 and the |S|>=3 unit clause",
+      "both structural lemmas"
+    ]
+  },
+  "notational_correction": {
+    "record": "data/engine-c-general-e-theory-v3.json",
+    "sha256": "7dbc2bf3a1b2e0aa6be46cfe4391aacca40e4fe01b0c3a130d3d0c826ae44629",
+    "effect": "restores minus signs omitted from v2 specialization strings; no theorem, case tag, or numerical certificate changes"
+  },
+  "next_action": "full external referee round before any arXiv submission"
+}

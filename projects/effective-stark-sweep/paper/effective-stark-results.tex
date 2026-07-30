@@ -1,0 +1,608 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+\usepackage{booktabs}
+\usepackage{array}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Cl}{\operatorname{Cl}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Norm}{\operatorname{N}}
+\newcommand{\ord}{\operatorname{ord}}
+\newcommand{\ab}{\mathrm{ab}}
+
+\title{Certified Archimedean Stark Packets over Real Quadratic Fields:\\
+Orders Six and Ten}
+\author{Hainan Zhao\\
+\small Independent Researcher\\
+\small\texttt{hainzhao@gmail.com}}
+\date{30 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We give unconditional, replayable identifications of one-place
+archimedean Stark packets over real quadratic fields.  Three proved
+theorem bases are used: quadratic analytic class-number formulae,
+Shintani's index-two algebraicity theorem followed by effective height
+rigidity, and descent to Stark's proved imaginary-quadratic rank-one
+theorem.  The examples include, within a frozen literature perimeter,
+the first unconditional packets with character orders six and ten,
+an order-six packet at a ramified-prime-$3$ power conductor, a generic
+CM-descent packet of mixed signature, and one quartic packet proved
+through two disjoint theorem bases.  A uniform quadratic-character
+formula and two structural lemmas explain the boundary of the three
+engines.  In particular, a nontrivial one-place packet has even
+Shintani index.  Every polynomial, Artin label, exponent, and analytic
+margin is tied to an exact or ball-arithmetic certificate.  No
+unproved Stark conjecture and no floating-point recognition enters a
+proof.
+\end{abstract}
+
+\section{Introduction and claim boundary}
+
+Let $K$ be real quadratic and let
+\(\mathfrak m=\mathfrak f\infty_2\) be a ray modulus containing one
+real place.  For \(A\in\Cl_{\mathfrak m}(K)\), let \(R\) be the sign
+class and put
+\[
+ Z_{\mathfrak m}(s,A)
+ =\zeta_{\mathfrak m}(s,A)
+  -\zeta_{\mathfrak m}(s,RA),\qquad
+ X_A=\exp Z'_{\mathfrak m}(0,A).
+\tag{1}
+\]
+The numbers \(X_A\) are positive real analytic invariants.  Stark's
+rank-one conjecture predicts algebraic units with the prescribed
+Artin action, but that conjecture is not known in this generality.
+The purpose of this paper is to identify explicit packets only where a
+proved theorem already supplies algebraicity and where the remaining
+analytic-to-algebraic comparison can be certified.
+
+The word \emph{unconditional} has this precise meaning throughout:
+each displayed identity follows from a published proved theorem under
+hypotheses checked exactly in the case bundle.  It does not mean that
+the general real-quadratic rank-one Stark conjecture is proved.
+Shintani's theorem is used only in its index-two range
+\cite{Shintani1978}; Stark's theorem is used only for abelian
+extensions of imaginary quadratic fields \cite{Stark1980}; and the
+quadratic cases use the analytic class-number formula.  Numerical
+PARI recognition, when retained as a cross-check, is outside the proof
+chain.
+
+The historical ``first'' assertions are also bounded.  We froze eleven
+sources comprising Shintani and Stark, Yamamoto's ray-invariant work,
+Tangedal's double-sine formulas, the Dummit--Sands--Tangedal
+computations and exponent-two theorem, Cohen--Roblot, Roblot, Kopp, and
+the archimedean/finite-place comparison literature
+\cite{Yamamoto2009,Tangedal2007,DST1997,DST2003,CohenRoblot2000,
+Roblot2013,Kopp2025,DasguptaKakde2023,TangedalYoung2013}.
+Within that named and hash-frozen perimeter we found no earlier
+unconditional oriented packets with character order six or ten.
+This is a bounded literature statement, not a universal negative.
+In particular, the conditional or numerical constructions of
+Cohen--Roblot and Dummit--Sands--Tangedal are prior computations, not
+claims displaced by the present certification.
+
+\subsection*{Main results}
+
+The packet order in the next theorem means the maximum order of a
+character occurring in the Fourier support of (1).
+
+\begin{theorem}\label{thm:main}
+The following one-place archimedean packets are identified
+unconditionally.
+\begin{center}
+\begin{tabular}{@{}llllrr@{}}
+\toprule
+case & \(K\) & \(\Norm\mathfrak f\) & support & safe exponent & margin\\
+\midrule
+RQ-000190 & \(\Q(\sqrt7)\)  & 7  & \(2,6\)  & 4032  & \(>5688\)\\
+RQ-000419 & \(\Q(\sqrt{14})\)& 7 & \(2,6\)  & 4032  & \(>7315\)\\
+RQ-000108 & \(\Q(\sqrt5)\)  & 45 & \(4\)    & 2880  & \(>2460\)\\
+RQ-000021 & \(\Q(\sqrt2)\)  & 49 & \(2,6\)  & 2016  & \(>4261\)\\
+RQ-002057 & \(\Q(\sqrt{57})\)&27 & \(2,6\)  & 2592  & \(>748\)\\
+RQ-002955 & \(\Q(\sqrt{77})\)& 7 & \(2,6\)  & 4032  & \(>5151\)\\
+RQ-001107 & \(\Q(\sqrt{33})\)&11 & \(2,10\) & 15840 & \(>5817\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+The first row is, within the frozen perimeter, the first
+unconditional order-six instance; the last row is the first
+order-ten instance.  In addition:
+\begin{enumerate}
+\item the primitive norm-$32$ packet over \(\Q(\sqrt{35})\), and its
+norm-$64$ transport, are proved independently through
+\(\Q(\sqrt{-10})\) and \(\Q(\sqrt{-14})\);
+\item three generic CM-descent packets, RQ-001569, RQ-007519, and
+RQ-001894, are proved independently through two imaginary quadratic
+bases each, with \(e=|\mu(E)|=6\);
+\item the norm-$8$ packet RQ-000129 over \(\Q(\sqrt6)\) is proved
+through the \(e=8\) and \(e=12\) CM routes after an exact
+auxiliary-prime enlargement; and
+\item the quartic packet RQ-000458 over \(\Q(\sqrt{14})\) is proved
+once by Shintani's theorem and once by Stark's imaginary-quadratic
+theorem.
+\end{enumerate}
+\end{theorem}
+
+The theorem concerns promoted case identities, not a census
+population.  Counts, completeness, and conductor trends belong to a
+separate paper and are not logical inputs here.
+
+\section{Three proved engines}
+
+\subsection{Quadratic characters}
+
+Suppose every character \(\chi\) with \(\chi(R)=-1\) has order two.
+Let \(\chi^\circ\) be primitive, let \(L_\chi/K\) be its quadratic
+field, and let \(u_\chi\) generate the primitive rank-one kernel of
+the exact norm map on free unit lattices.  Orient \(u_\chi\) to be
+larger than one at the selected real embedding and define
+\[
+ I_\chi=
+ [E_{L_\chi}/\mu(L_\chi):
+   \langle E_K/\mu(K),u_\chi\rangle].
+\]
+
+\begin{proposition}[Uniform quadratic engine]\label{prop:A}
+With \(E_\chi\) the exact product of imprimitive Euler factors at
+zero,
+\[
+ L'_{\mathfrak m}(0,\chi)=
+ E_\chi\frac{h_{L_\chi}}{h_K}
+ \frac{w_K}{w_{L_\chi}}\frac{2}{I_\chi}\log|u_\chi|.
+\tag{2}
+\]
+Moreover
+\[
+ Z'_{\mathfrak m}(0,A)=
+ \frac{2}{|\Cl_{\mathfrak m}(K)|}
+ \sum_{\chi(R)=-1}\chi(A)^{-1}
+ L'_{\mathfrak m}(0,\chi).
+\tag{3}
+\]
+Consequently a common denominator in (2)--(3) gives an explicit
+power identity for every \(X_A\).
+\end{proposition}
+
+\begin{proof}
+The field \(L_\chi\) has signature \((2,1)\).  Dividing the analytic
+class-number formulas for \(\zeta_{L_\chi}\) and \(\zeta_K\) gives
+\[
+ L'_{\mathfrak m}(0,\chi)=E_\chi
+ \frac{h_{L_\chi}}{h_K}\frac{w_K}{w_{L_\chi}}
+ \frac{R_{L_\chi}}{R_K}.
+\]
+In exact free-unit coordinates, let \(v_K\) be the embedded base unit
+and \(v_{\rm rel}\) the primitive norm-kernel generator.  Then
+\(I_\chi=|\det(v_K,v_{\rm rel})|\).  The regulator of the subgroup
+they generate is both \(I_\chi R_{L_\chi}\) and
+\(2R_K\log|u_\chi|\), proving (2).  Equation (3) is exact Fourier
+inversion.  All coefficients are rational because the supported
+characters are quadratic.
+\end{proof}
+
+This proposition is a theorem, not a claim that every queued
+quadratic case has already been evaluated.  Each application must
+still certify its conductor, class numbers, Euler factors, primitive
+norm kernel, determinant, and orientation.
+
+\subsection{Shintani algebraicity and height rigidity}
+
+Engine B first verifies Shintani's unit-congruence and real-place
+hypotheses and the index
+\[
+ [H:H\cap\Q^{\rm ab}]=2.
+\tag{4}
+\]
+The maximal absolutely abelian subfield is reconstructed from the
+commutator-fixed subgroup.  Its imaginary quadratic bases are then
+reconstructed independently as ray fields; agreement of the two
+routes is mandatory.
+
+For each divisor \(\mathfrak d\) of the transfer conductor, the
+certificate prints the conductor factor, class number, roots of
+unity, real-distribution index, and a clearing exponent.  The least
+common multiple is a safe exponent \(m\).  Shintani's theorem then
+makes \(X_A^m\) an algebraic unit with the required Artin action.
+
+The analytic evaluator encloses all logarithms in Arb balls.  If
+\(\alpha_A\) is the isolated candidate and
+\(\eta=X_A^m/\alpha_A\), these balls give an upper bound for
+\(h(\eta)\).  For degrees at least three, Voutier's explicit lower
+bound \cite{Voutier1996} excludes every non-torsion \(\eta\).
+Degree one is handled by positivity of a rational unit; degree two by
+\(\frac12\log\phi\).  Finally positivity eliminates the remaining
+root of unity.  This is the height-rigidity step.
+
+\subsection{CM descent and Stark's proved theorem}
+
+Engine C starts from quartic ray-character support whose normal
+closure has the required \(V_4\) projective quotient.  It constructs
+the actual splitting closure, identifies both imaginary quadratic
+subfields, and checks linear reinduction on the normal closure.  A
+finite exhaustive Dirichlet-coefficient signature separates the
+candidate character from its inverse; scalar twists are forbidden.
+
+Let \(E/k\) be the selected abelian extension of an imaginary
+quadratic field.  Stark's proved rank-one theorem applies with a set
+\(S\) containing the complex place and the conductor primes.  In
+every use of the global-unit conclusion below, \(|S|\ge3\) is checked
+explicitly, and \(e=|\mu(E)|\) is computed exactly.  If
+\(\ell_g=\log|g\varepsilon|_{\rm ord}\), the normalization is
+\[
+ \zeta'_S(0,g)=-\frac2e\ell_g,\qquad
+ \ell_g=-\frac e2\zeta'_S(0,g).
+\tag{5}
+\]
+For the frozen quartic Fourier convention,
+\[
+ L'_S(0,\psi)=-\frac4e(\ell_1-i\ell_\sigma),\qquad
+ \ell_1-i\ell_\sigma=-\frac e4L'_S(0,\psi).
+\tag{6}
+\]
+These are formulas, not interchangeable shorthand.  The \(e=2\)
+anchor cannot distinguish \(2/e\) from \(e/2\); the nontrivial
+normalization check is the \(e=4\) cross-route identity for
+RQ-000458.  The specializations of (5)--(6) carry the same minus
+signs for \(e=6,8,12\).
+
+Arb lattice inversion isolates an integral orbit in
+\(E^\times/\mu(E)\).  The exact Artin bridge identifies its positive
+CM norms.  The theorem therefore claims the torsion-invariant packet,
+not a literal root-of-unity representative.
+
+\section{The order-six and order-ten packets}
+
+\subsection{\texorpdfstring{\(\Q(\sqrt7)\)}{Q(sqrt(7))} at the
+ramified prime above seven}
+
+For \(K=\Q(\sqrt7)\) and
+\(\mathfrak m=\mathfrak p_7\infty_2\), the one-place and two-place ray
+groups are \(C_6\) and \(C_6\times C_2\).  The support orders are two
+and six and (4) holds.  The commutator-fixed calculation produces
+\(\Q(i)\) and \(\Q(\sqrt{-7})\), and their intrinsic conductor
+reconstructions give the same degree-$24$ normal closure.  The
+\(\Q(i)\) route has two divisor rows and safe exponent \(4032\).
+
+The packet polynomial over \(K\) is
+\[
+\begin{aligned}
+P_7(X)={}&X^6-(6+2\sqrt7)X^5+(22+8\sqrt7)X^4\\
+ &-(34+13\sqrt7)X^3+(22+8\sqrt7)X^2\\
+ &-(6+2\sqrt7)X+1.
+\end{aligned}
+\tag{7}
+\]
+It is irreducible over \(K\), defines the one-place ray field, has six
+positive Sturm-isolated roots, and is Artin-labeled by the split
+primes \(19\) and \(31\).
+
+For the class represented by \((3)^r\), an exact Yamamoto domain has
+generators
+\[
+ \lambda_r=(7-2\sqrt7)/3^r,\qquad
+ \lambda_r(8+3\sqrt7).
+\]
+Its determinant is nine and its half-open parallelotope contains
+exactly nine lattice points.  The resulting 27 independent
+double-sine evaluations are enclosed without a PARI \(L\)-value.
+At exponent \(4032\), the powered height upper bound is
+\(9.1903\times10^{-9}\).  The minimum Voutier lower bound in degrees
+three through 24 is \(5.2279\times10^{-5}\), so the margin exceeds
+5688.  The degree-one and degree-two fallbacks finish the proof of
+(7).
+
+\subsection{Replications and the
+\texorpdfstring{ramified-prime-\(3\)}{ramified-prime-3} control}
+
+For \(\Q(\sqrt{14})\) at \(\mathfrak p_7\), both
+\(\Q(\sqrt{-7})\) and \(\Q(\sqrt{-2})\) reconstruct the degree-$24$
+normal closure.  The latter route has clearing exponents 576 and 84,
+with least common multiple 4032.  The packet is
+\[
+\begin{aligned}
+P_{14}(X)={}&X^6-(13+4\sqrt{14})X^5
+ +(85+22\sqrt{14})X^4\\
+&-(139+38\sqrt{14})X^3
+ +(85+22\sqrt{14})X^2\\
+&-(13+4\sqrt{14})X+1.
+\end{aligned}
+\tag{8}
+\]
+Split primes 11 and 103 label the Artin generators.  The 20-point
+cone evaluator gives powered height at most
+\(7.1466\times10^{-9}\), hence margin greater than 7315.
+
+The strongest boundary control is RQ-002057 over
+\(\Q(\sqrt{57})\), with modulus of norm \(27\).  The conductor is a
+power of the ramified prime 3 and the support still has order six.
+The bases \(\Q(\sqrt{-3})\) and \(\Q(\sqrt{-19})\) independently
+give the same degree-$24$ closure.  On the shorter route the divisor
+exponents are \(864,324,108\), hence \(m=2592\).
+The fundamental positive unit has order three modulo the finite
+modulus, so a ray-class domain is the union of three adjacent cones,
+with 240 exact affine points per class.  The powered height is at most
+\(6.982\times10^{-8}\), giving margin greater than 748.  Thus
+order-six support and ramified-prime-$3$ structure are both
+reachable; neither alone explains the separate
+\(\Q(\sqrt{21})\) boundary.
+
+\subsection{Order ten}
+
+For RQ-001107 over \(\Q(\sqrt{33})\) and
+\(\mathfrak p_{11}\), put \(y^2-y-8=0\).  The packet is
+\[
+\begin{aligned}
+P_{33}(X)={}&X^{10}-(8+4y)X^9+(74+30y)X^8
+ -(294+125y)X^7\\
+&+(669+281y)X^6-(871+368y)X^5
+ +(669+281y)X^4\\
+&-(294+125y)X^3+(74+30y)X^2-(8+4y)X+1.
+\end{aligned}
+\tag{9}
+\]
+Its absolute degree-$20$ field is the certified ray field over \(K\).
+The actual packet-comparison degree is 40; the certificate
+conservatively covers degrees three through 80.  On this whole window
+the minimum Voutier bound is
+\[
+ 5.22795332222684\ldots\times10^{-5}.
+\]
+At \(m=15840\), the factor-100 raw-error target is
+\(3.30047558221391\ldots\times10^{-11}\); the achieved bound is
+\(5.6731\times10^{-13}\), so the certified margin exceeds 5817.
+The degree-one and degree-two fallbacks are recorded separately.
+
+\section{CM-descent packets}
+
+\subsection{A generic mixed-signature packet}
+
+The first packet completed by the generic Engine-C implementation is
+over \(\Q(\sqrt{35})\), at the primitive ideal of norm 32.  Both
+\(\Q(\sqrt{-10})\) and \(\Q(\sqrt{-14})\) have \(e=2\) and
+\(|S|=3\), and both give the Artin-labeled polynomial
+\[
+\begin{aligned}
+P_{35}(X)={}&X^8-38904X^7+905404X^6+62136X^5\\
+&-873210X^4+62136X^3+905404X^2-38904X+1.
+\end{aligned}
+\tag{10}
+\]
+Exact conjugation fixes the four Artin norm classes, and Arb orbit
+isolation matches them to the four real roots.  The remaining roots
+form two nonreal conjugate pairs, so the signature is \([4,2]\).
+An exact conductor transport proves the norm-$64$ member.
+
+The first \(e=6\) tranche comprises RQ-001569, RQ-007519, and
+RQ-001894.  Six independent imaginary-base routes cover fourteen
+transported occurrences.  Every route has \(|S|\ge3\), an exact
+character-selection signature, a certified theta/Mellin target, a
+unique integral anti-unit orbit, and an exact Artin bridge.  The two
+routes for each canonical case give the identical degree-eight
+packet.  Their complete integer polynomials are printed in the
+certificate bundle rather than abbreviated here.
+
+\subsection{\texorpdfstring{\(\Q(\sqrt6)\)}{Q(sqrt(6))} and
+auxiliary-prime independence}
+
+For RQ-000129 the two routes are over
+\(\Q(\sqrt{-2})\), with \(e=8\), and
+\(\Q(\sqrt{-3})\), with \(e=12\).  Their exact candidate orbits obey
+256 common-normal-closure identities
+\[
+ q_8^3=q_{12}^2.
+\tag{11}
+\]
+The natural second route has \(|S|=2\), so it cannot use the
+\(|S|\ge3\) global-unit clause.  This first attempt was halted rather
+than promoted.
+
+At the auxiliary rational primes 3 and 5, the complete Euler factors
+agree on the source and both CM routes, with nonzero derivative
+multipliers
+\[
+ P_3(1)=1+i,\qquad P_5(1)=2.
+\tag{12}
+\]
+Enlarging \(S\) gives size three, preserves rank one, and produces
+normalized Arb targets overlapping the same primitive
+\(L'(0)\)-ball.  On the exact unit lattice, the prime 5 doubles the
+natural orbit and hence identifies the square of every positive
+packet norm.  Positivity gives the unique square root.  This proves
+the torsion-invariant packet with minimal polynomial
+\[
+X^8+24X^7+732X^6-9304X^5+53958X^4
+-9304X^3+732X^2+24X+1.
+\tag{13}
+\]
+
+\subsection{Two disjoint theorem bases}
+
+For RQ-000458, \(K=\Q(\sqrt{14})\), the finite ideal has HNF
+\(\left[\begin{smallmatrix}12&0\\0&6\end{smallmatrix}\right]\) and
+\(\Cl_{\mathfrak m}(K)\simeq C_4\times C_2\).  Both routes identify
+\[
+P_{458}(X)=X^4-(20+6\sqrt{14})X^3
+ +(138+36\sqrt{14})X^2-(20+6\sqrt{14})X+1.
+\tag{14}
+\]
+The Engine-B proof uses safe exponent 1152 and gives powered height
+\(8.0791\times10^{-9}\), hence Voutier margin greater than 6470.
+
+The independent Engine-C proof reinduces linearly over
+\(\Q(\sqrt{-42})\) and \(\Q(\sqrt{-3})\).  On the first base,
+\(|S|=3\) and \(e=4\).  The coefficient at \(n=7\) uniquely selects
+the ray character.  Arb inversion isolates
+\[
+ (-8,4),\quad(0,-4),\quad(8,-4),\quad(0,4),
+\]
+and 32 exact common-closure identities prove (14).  Thus one theorem
+base is Shintani 1978 and the other is Stark 1980; they share no
+certificate intermediate.  Because the second-route selection seal
+was not timestamped before execution, the process tag is
+\texttt{DUAL\_ROUTED}, not the stronger
+\texttt{DUAL\_PROVED}.  This process caveat does not weaken either
+mathematical proof.
+
+\section{Structural boundary lemmas}
+
+\begin{lemma}[No absolute-abelian fourth engine]\label{lem:noD}
+A nontrivial one-place differenced invariant over a real quadratic
+field is not governed by an absolutely abelian ray field.
+\end{lemma}
+
+\begin{proof}
+If the one-place field \(H/\Q\) were abelian, the complex
+conjugations above the two real places of \(K\) would be conjugate and,
+in an abelian group, equal.  Every absolute character would therefore
+have equal parity at the two real places.  The Fourier support of
+(1), however, consists of characters odd at the retained place and
+even at the omitted place.  A nonzero such character cannot descend
+from a Dirichlet character.
+\end{proof}
+
+Engine A is not an exception: it reduces individual quadratic
+characters by (2), but does not assert that the entire mixed-signature
+one-place ray field is absolutely abelian.
+
+\begin{lemma}[Index parity]\label{lem:parity}
+Let \(H/K\) be a one-place ray field and let \(N/\Q\) be its genuine
+normal closure.  If the sign class \(R\) is nontrivial, then
+\[
+ 2\mid[H:H\cap\Q^{\rm ab}].
+\tag{15}
+\]
+Equivalently, an odd Shintani index can occur only when the Fourier
+support of (1) is empty.
+\end{lemma}
+
+\begin{proof}
+Put \(G=\Gal(N/\Q)\), \(A=\Gal(N/K)\), and
+\(B=\Gal(N/H)\).  Let \(c_1,c_2\in A\) be the real-place inertia
+involutions.  A lift of the nontrivial automorphism of \(K/\Q\)
+interchanges them, so they are conjugate in \(G\).  Hence
+\(c_1c_2^{-1}\in[G,G]\).  In \(A/B=\Gal(H/K)\), the involution at the
+omitted place is trivial and the one at the retained place is \(R\).
+Thus the image of \([G,G]\) in \(A/B\) contains \(R\).  Its order is
+\([H:H\cap\Q^{\rm ab}]\), which is even if \(R\ne1\).
+Finally, characters of a finite abelian group separate a nonidentity
+element of order two, so \(R=1\) is equivalent to empty differenced
+support.
+\end{proof}
+
+The use of the genuine normal closure in Lemma~\ref{lem:parity} is
+essential.  Conjugation coordinates at an unstable modulus do not
+define \([G,G]\).
+
+\section{Reproducibility and containment}
+
+The exact field computations use PARI/GP 2.15.4; analytic
+certificates use Python 3.12.3 and python-flint 0.9.0.  The principal
+replays were run under Linux/x86-64 on an AMD EPYC 9354P virtual CPU.
+All analytic conclusions are Arb balls, never point estimates.
+
+The principal machine-readable records are
+\begin{center}\small
+\begin{tabular}{@{}ll@{}}
+\toprule
+result & record\\
+\midrule
+first order six & \path{data/q7-p7-case-v1.json}\\
+second order six & \path{data/q14-p7-case-v1.json}\\
+ramified-prime-$3$ control & \path{data/q57-norm27-case-v1.json}\\
+order ten & \path{data/q33-p11-order10-case-v1.json}\\
+generic CM packet & \path{artifacts/engine-c-w3-tranche-01-verified-v1.json}\\
+\(e=6\) tranche & \path{artifacts/engine-c-e6-tranche-01-verified-v1.json}\\
+\(\Q(\sqrt6)\) & \path{data/q6-norm8-case-v2.json}\\
+two-route packet & \path{data/rq000458-dual-case-v1.json}\\
+quadratic theorem & \path{data/engine-a-uniform-theorem-v1.json}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Each record carries hashes of its exact and analytic dependencies.
+Failed attempts remain versioned.  Predicate provenance is marked
+\texttt{GENUINE} or \texttt{PROXY}; no theorem tag may depend on a
+proxy.  A later audit found an unmarked conjugation proxy in census
+classification, but none in a promoted theorem chain.  The present
+paper was therefore frozen independently of all census populations
+and trends.  This is a claim-boundary statement, not evidence for
+census completeness.
+
+\section*{Acknowledgments}
+
+The author acknowledges the use of OpenAI's GPT-5.6 Sol model for
+mathematical brainstorming, symbolic-computation scaffolding, code
+review, and manuscript editing.  All claims are the author's
+responsibility and are tied to the certificates described above.
+
+\begin{thebibliography}{20}
+\bibitem{Shintani1978}
+T.~Shintani, \emph{On certain ray class invariants of real quadratic
+fields}, J.\ Math.\ Soc.\ Japan \textbf{30} (1978), 139--167,
+\url{https://doi.org/10.2969/jmsj/03010139}.
+\bibitem{Stark1980}
+H.~M.~Stark, \emph{\(L\)-functions at \(s=1\). IV. First derivatives
+at \(s=0\)}, Adv.\ Math.\ \textbf{35} (1980), 197--235,
+\url{https://doi.org/10.1016/0001-8708(80)90049-3}.
+\bibitem{Yamamoto2009}
+S.~Yamamoto, \emph{On Shintani's ray class invariant for totally real
+number fields}, Math.\ Ann.\ \textbf{346} (2010), 559--593,
+\url{https://doi.org/10.1007/s00208-009-0405-x}.
+\bibitem{Tangedal2007}
+B.~A.~Tangedal, \emph{Continued fractions, special values of the
+double sine function, and Stark units over real quadratic fields},
+J.\ Number Theory \textbf{124} (2007), 291--313,
+\url{https://doi.org/10.1016/j.jnt.2006.09.011}.
+\bibitem{Voutier1996}
+P.~Voutier, \emph{An effective lower bound for the height of algebraic
+numbers}, Acta Arith.\ \textbf{74} (1996), 81--95,
+\url{https://doi.org/10.4064/aa-74-1-81-95}.
+\bibitem{DST1997}
+D.~S.~Dummit, J.~W.~Sands, and B.~A.~Tangedal,
+\emph{Computing Stark units for totally real cubic fields},
+Math.\ Comp.\ \textbf{66} (1997), 1239--1267,
+\url{https://doi.org/10.1090/S0025-5718-97-00852-1}.
+\bibitem{DST2003}
+D.~S.~Dummit, J.~W.~Sands, and B.~A.~Tangedal,
+\emph{Stark's conjecture in multiquadratic extensions, revisited},
+J.\ Th\'eorie des Nombres de Bordeaux \textbf{15} (2003), 83--97,
+\url{https://doi.org/10.5802/jtnb.388}.
+\bibitem{CohenRoblot2000}
+H.~Cohen and X.-F.~Roblot, \emph{Computing the Hilbert class field of
+real quadratic fields}, Math.\ Comp.\ \textbf{69} (2000), 1229--1244,
+\url{https://doi.org/10.1090/S0025-5718-99-01111-4}.
+\bibitem{Roblot2013}
+X.-F.~Roblot, \emph{Index formulae for Stark units and their
+solutions}, Pacific J.\ Math.\ \textbf{266} (2013), 391--422,
+\url{https://doi.org/10.2140/pjm.2013.266.391}.
+\bibitem{Kopp2025}
+G.~Kopp, \emph{The Shintani--Faddeev modular cocycle: Stark units from
+\(q\)-Pochhammer ratios}, arXiv:2411.06763.
+\bibitem{DasguptaKakde2023}
+S.~Dasgupta and M.~Kakde, \emph{On the Brumer--Stark conjecture},
+Ann.\ of Math.\ \textbf{197} (2023), 289--388,
+\url{https://doi.org/10.4007/annals.2023.197.1.5}.
+\bibitem{TangedalYoung2013}
+B.~A.~Tangedal and P.~T.~Young, \emph{Explicit computation of
+Gross--Stark units over real quadratic fields},
+J.\ Number Theory \textbf{133} (2013), 1022--1045,
+\url{https://doi.org/10.1016/j.jnt.2012.04.021}.
+\bibitem{PARI}
+The PARI Group, \emph{PARI/GP version 2.15.4},
+\url{https://pari.math.u-bordeaux.fr/}.
+\bibitem{pythonflint}
+F.~Johansson and contributors, \emph{python-flint 0.9.0},
+\url{https://github.com/flintlib/python-flint}.
+\end{thebibliography}
+
+\end{document}
