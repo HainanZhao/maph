@@ -46,6 +46,10 @@ def run(record: dict, coefficient_limit: int, source: str) -> tuple[dict, str]:
                 f'{record["character_field_polynomial"]};'
             ),
             f"COEFFICIENT_LIMIT={coefficient_limit};",
+            (
+                "REQUIRE_RELATIVE_ABELIAN="
+                f"{1 if record.get('require_relative_abelian', True) else 0};"
+            ),
         ]
     )
     completed = subprocess.run(
@@ -93,6 +97,46 @@ def run(record: dict, coefficient_limit: int, source: str) -> tuple[dict, str]:
             scalar(
                 completed.stdout,
                 "CHARACTER_FIELD_ROOTS_OF_UNITY_E",
+            )
+        ),
+        "source_compatible_relative_factor_count": int(
+            scalar(
+                completed.stdout,
+                "SOURCE_COMPATIBLE_RELATIVE_FACTOR_COUNT",
+            )
+        ),
+        "relative_abelian_certified": bool(
+            int(
+                scalar(
+                    completed.stdout,
+                    "RELATIVE_ABELIAN_CERTIFIED",
+                )
+            )
+        ),
+        "pari_rnfisabelian_diagnostic": bool(
+            int(
+                scalar(
+                    completed.stdout,
+                    "PARI_RNFISABELIAN_DIAGNOSTIC",
+                )
+            )
+        ),
+        "classfield_roundtrip_absolute_polynomial": scalar(
+            completed.stdout,
+            "CLASSFIELD_ROUNDTRIP_ABSOLUTE_POLYNOMIAL",
+        ),
+        "classfield_roundtrip_isomorphism_count": int(
+            scalar(
+                completed.stdout,
+                "CLASSFIELD_ROUNDTRIP_ISOMORPHISM_COUNT",
+            )
+        ),
+        "relative_abelian_required": bool(
+            int(
+                scalar(
+                    completed.stdout,
+                    "RELATIVE_ABELIAN_REQUIRED",
+                )
             )
         ),
         "canonical_relative_factor": scalar(

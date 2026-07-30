@@ -22,6 +22,17 @@ unit_action_matrix(bnf, polynomial, automorphism) =
   answer;
 };
 
+print_rational_polynomial(label, polynomial) =
+{
+  my(value = lift(polynomial), degree_value = poldegree(value));
+  print(label, "_DEGREE=", degree_value);
+  for(index = 0, degree_value,
+    my(coefficient = polcoef(value, index));
+    print(label, "_COEFF_", index, "=",
+      numerator(coefficient), "/", denominator(coefficient));
+  );
+};
+
 inspect_involution(gal, normal_polynomial, inclusions, candidate, group_index) =
 {
   my(output = List());
@@ -71,20 +82,24 @@ run_bridge() =
         Str(automorphisms[index]), automorphisms[index], action
       ]));
   );
-  my(primes_five = idealprimedec(field, 5));
+  my(separator_primes =
+    idealprimedec(field, SEPARATOR_PRIME));
   my(frobenius_pairs = List());
   for(automorphism_index = 1, #order_four,
-    for(prime_index = 1, #primes_five,
+    for(prime_index = 1, #separator_primes,
       \\ Absolute ramification may come from the quadratic base
       \\ (Q(sqrt(-10)) is ramified at 5); relative Frobenius is still
       \\ defined.  Residue degree four selects the quartic factor.
-      if(primes_five[prime_index].f == 4,
+      if(separator_primes[prime_index].f == 4,
         my(modpr =
-          nfmodprinit(field, primes_five[prime_index]));
+          nfmodprinit(field, separator_primes[prime_index]));
         if(nfmodpr(field,
             Mod(order_four[automorphism_index][2], polynomial),
             modpr) ==
-            nfmodpr(field, Mod(x, polynomial)^5, modpr),
+            nfmodpr(
+              field,
+              Mod(x, polynomial)^SEPARATOR_PRIME,
+              modpr),
           listput(frobenius_pairs, [
             automorphism_index, prime_index
           ]));
@@ -92,11 +107,22 @@ run_bridge() =
     );
   );
   print("ORDER_FOUR_CANDIDATE_COUNT=", #order_four);
-  print("PRIMES_ABOVE_SEPARATOR=", primes_five);
+  print("SEPARATOR_PRIME=", SEPARATOR_PRIME);
+  print("PRIMES_ABOVE_SEPARATOR=", separator_primes);
   print("FROBENIUS_PAIRS=", Vec(frobenius_pairs));
-  if(#frobenius_pairs != 1,
-    error(Str("Frobenius pair count: ", #frobenius_pairs)));
-  my(frobenius_pair = frobenius_pairs[1]);
+  my(frobenius_automorphism_indices =
+    Set(vector(#frobenius_pairs,
+      index, frobenius_pairs[index][1])));
+  print("FROBENIUS_AUTOMORPHISM_INDICES=",
+    frobenius_automorphism_indices);
+  if(#frobenius_automorphism_indices != 1,
+    error(Str("Frobenius automorphism count: ",
+      #frobenius_automorphism_indices)));
+  my(frobenius_pair = 0);
+  for(index = 1, #frobenius_pairs,
+    if(frobenius_pairs[index][1]
+       == frobenius_automorphism_indices[1],
+      frobenius_pair = frobenius_pairs[index]; break));
   my(sigma =
     order_four[frobenius_pair[1]][2]);
   my(action =
@@ -117,9 +143,9 @@ run_bridge() =
     [Str(inclusions[index]), inclusions[index]]));
   my(inclusion = vecsort(inclusion_pairs, 1)[1][2]);
 
-  \\ The least exact separator is n=5 and a_5=-i.  Recover the
-  \\ corresponding order-four Frobenius without numerical recognition:
-  \\ sigma(alpha) == alpha^5 modulo the unique usable prime.
+  \\ Recover the order-four Frobenius at the frozen exact separator
+  \\ without numerical recognition:
+  \\ sigma(alpha) == alpha^SEPARATOR_PRIME modulo the unique usable prime.
   \\ Lift sigma through a canonical inclusion into the normal closure.
   my(normal_sigma_matches = List());
   my(sigma_image = Mod(subst(
@@ -187,6 +213,13 @@ run_bridge() =
       normal_polynomial)));
   if(#Set(labeled_norms) != 4,
     error("Artin-labeled norm orbit is not free"));
+  for(label_index = 1, 4,
+    if(Mod(subst(
+        lift(labeled_norms[label_index]), x, conjugation),
+        normal_polynomial) != labeled_norms[label_index],
+      error(Str("Artin norm is not conjugation-fixed at label ",
+        label_index - 1)));
+  );
   my(labeled_polynomials =
     Set(vector(4, index, minpoly(labeled_norms[index]))));
   if(#labeled_polynomials != 1 ||
@@ -223,12 +256,21 @@ run_bridge() =
   print("NORMAL_SIGMA_GROUP_INDEX=", normal_sigma_index);
   print("COMPLEX_CONJUGATION_GROUP_INDEX=", conjugation_index);
   print("DIHEDRAL_RELATION_VERIFIED=1");
+  print_rational_polynomial("NORMAL_FIELD", normal_polynomial);
+  print_rational_polynomial("COMPLEX_CONJUGATION", conjugation);
   for(label_index = 1, 4,
     print("ARTIN_LABEL_", label_index - 1,
       "_POSITIVE_NORM=", labeled_norms[label_index]);
+    print("ARTIN_LABEL_", label_index - 1,
+      "_CONJUGATION_FIXED=1");
+    print_rational_polynomial(
+      Str("ARTIN_NORM_", label_index - 1),
+      labeled_norms[label_index]);
   );
   print("ARTIN_LABELED_PACKET_POLYNOMIAL=",
     labeled_polynomials[1]);
+  print_rational_polynomial(
+    "ARTIN_LABELED_PACKET", labeled_polynomials[1]);
   print("NORMAL_CLOSURE_DEGREE=", poldegree(normal_polynomial));
   print("REAL_CONJUGATION_RECORD_COUNT=", #records);
   print("DISTINCT_POSITIVE_NORM_POLYNOMIAL_COUNT=", #polynomials);

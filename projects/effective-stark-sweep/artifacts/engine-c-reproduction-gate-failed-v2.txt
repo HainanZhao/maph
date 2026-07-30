@@ -1,0 +1,8 @@
+Engine-C hard-control reproduction gate, failed attempt v2
+UTC date: 2026-07-30
+
+The four exact generic routes completed, but the wrapper compared the
+Q(sqrt(6)) primary polynomial as an unnormalized string.  PARI inserted
+spaces while the banked JSON did not.  The polynomial coefficients were
+unchanged.  The wrapper was corrected to remove whitespace before the
+bank comparison; no theorem or numerical datum changed.

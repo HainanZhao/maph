@@ -1,0 +1,23 @@
+Engine-C hard-control reproduction gate, failed attempt v0
+UTC date: 2026-07-30
+
+Command:
+  python3 scripts/run_engine_c_reproduction_gate.py
+
+Failure:
+  RQ-000458 / Qsqrt(-42)
+  generic selector returned [1, 1, 1]
+  banked exact Dirichlet-coefficient selector returned [1, 0, 1]
+
+Diagnosis:
+  generic_engine_c_character_selection.gp selected a canonical quartic
+  relative factor before comparing its Dirichlet coefficients with the
+  source character.  RQ-000458 has more than one relative quartic factor,
+  so factor-first canonicalization can select a different ray-basis
+  realization.  No C-bulk result is promoted from this failed run.
+
+Required correction:
+  enumerate every relative quartic factor, retain only factors having
+  exactly one compatible character whose complete frozen coefficient
+  vector matches the source, and canonicalize only within that matching
+  set.  Re-run both hard controls twice and require byte-identical output.

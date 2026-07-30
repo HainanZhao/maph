@@ -29,6 +29,16 @@ def scalar(text: str, key: str) -> str:
         raise RuntimeError(f"{key}: got {len(found)} values")
     return found[0]
 
+def rational_polynomial(text: str, label: str) -> list[list[int]]:
+    degree = int(scalar(text, f"{label}_DEGREE"))
+    answer = []
+    for index in range(degree + 1):
+        numerator, denominator = scalar(
+            text, f"{label}_COEFF_{index}"
+        ).split("/")
+        answer.append([int(numerator), int(denominator)])
+    return answer
+
 
 def main() -> None:
     config = json.loads(CONFIG.read_text(encoding="utf-8"))
@@ -69,6 +79,7 @@ def main() -> None:
                     "CANDIDATE_COORDINATES="
                     f'{record["candidate_coordinates"]};'
                 ),
+                f'SEPARATOR_PRIME={record["separator_prime"]};',
             ]
         )
         completed = subprocess.run(
@@ -123,6 +134,10 @@ def main() -> None:
                     completed.stdout,
                     "ARTIN_LABELED_PACKET_POLYNOMIAL",
                 ),
+                "artin_labeled_packet_polynomial_coefficients":
+                    rational_polynomial(
+                        completed.stdout, "ARTIN_LABELED_PACKET"
+                    ),
                 "normal_sigma_group_index": int(
                     scalar(
                         completed.stdout,
@@ -139,6 +154,28 @@ def main() -> None:
                     scalar(
                         completed.stdout,
                         f"ARTIN_LABEL_{index}_POSITIVE_NORM",
+                    )
+                    for index in range(4)
+                ],
+                "artin_norms_conjugation_fixed": [
+                    int(
+                        scalar(
+                            completed.stdout,
+                            f"ARTIN_LABEL_{index}_CONJUGATION_FIXED",
+                        )
+                    )
+                    == 1
+                    for index in range(4)
+                ],
+                "normal_field_polynomial_coefficients": rational_polynomial(
+                    completed.stdout, "NORMAL_FIELD"
+                ),
+                "complex_conjugation_coefficients": rational_polynomial(
+                    completed.stdout, "COMPLEX_CONJUGATION"
+                ),
+                "artin_norm_coefficients": [
+                    rational_polynomial(
+                        completed.stdout, f"ARTIN_NORM_{index}"
                     )
                     for index in range(4)
                 ],

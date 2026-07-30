@@ -1,0 +1,191 @@
+{
+  "auxiliary_primes": [
+    3,
+    5
+  ],
+  "case_id": "RQ-000129",
+  "claim_tag": "VERIFIED_AUXILIARY_PRIME_CLOSURE",
+  "closure_argument": "For q=5, Stark's |S|>=3 theorem identifies the doubled logarithmic orbit, hence the square of every positive packet norm. Positivity gives the unique positive square root, recovering the natural packet. q=3 independently gives the (I+/-A) group-ring transform and normalizes to the same primitive L' ball.",
+  "exact_cross_route_bridge": "q8^3=q12^2",
+  "exact_euler_multipliers_at_s0": {
+    "3": "1+i",
+    "5": "2"
+  },
+  "field": "Q(sqrt(6))",
+  "normalized_q_independence": true,
+  "rank_preserved_for_both_primes": true,
+  "route_independent_euler_factors": true,
+  "route_records": [
+    {
+      "anti_action": [
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          0
+        ]
+      ],
+      "coordinate_orbits": {
+        "natural": [
+          [
+            -4,
+            0
+          ],
+          [
+            0,
+            -4
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            4,
+            0
+          ]
+        ],
+        "q=3": [
+          [
+            -4,
+            -4
+          ],
+          [
+            -4,
+            4
+          ],
+          [
+            4,
+            -4
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "q=5": [
+          [
+            -8,
+            0
+          ],
+          [
+            0,
+            -8
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            8,
+            0
+          ]
+        ]
+      },
+      "e": 8,
+      "enlarged_s_sizes": {
+        "q=3": 4,
+        "q=5": 4
+      },
+      "natural_s_size": 3,
+      "primitive_lprime_ball": "[1.73833956834084061345752271779661098136872357019087432479712315260264028648808 +/- 8.30e-78] + [-0.97803550110672739309564596449406965150995489245489320629599384109321843190769401780662 +/- 8.63e-87]j",
+      "q3_group_ring_relation": "(I+A)natural",
+      "q5_group_ring_relation": "2*natural",
+      "route_id": "Qsqrt(-2)"
+    },
+    {
+      "anti_action": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "coordinate_orbits": {
+        "natural": [
+          [
+            -6,
+            0
+          ],
+          [
+            0,
+            -6
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            6,
+            0
+          ]
+        ],
+        "q=3": [
+          [
+            -6,
+            -6
+          ],
+          [
+            -6,
+            6
+          ],
+          [
+            6,
+            -6
+          ],
+          [
+            6,
+            6
+          ]
+        ],
+        "q=5": [
+          [
+            -12,
+            0
+          ],
+          [
+            0,
+            -12
+          ],
+          [
+            0,
+            12
+          ],
+          [
+            12,
+            0
+          ]
+        ]
+      },
+      "e": 12,
+      "enlarged_s_sizes": {
+        "q=3": 3,
+        "q=5": 3
+      },
+      "natural_s_size": 2,
+      "primitive_lprime_ball": "[1.73833956834084061345752271779661098136872357019087432479712315260264028648808 +/- 8.30e-78] + [-0.97803550110672739309564596449406965150995489245489320629599384109321843190769401780662 +/- 8.63e-87]j",
+      "q3_group_ring_relation": "(I+A)natural",
+      "q5_group_ring_relation": "2*natural",
+      "route_id": "Qsqrt(-3)"
+    }
+  ],
+  "schema": "effective-stark-q6-auxiliary-prime-independence-v1",
+  "source_hashes": {
+    "artifacts/engine-c-reproduction-gate-v1.json": "664912a9e0d465432f74e6c42f89b2503570f4b7eca0addf9c73cce9eb071d61",
+    "artifacts/q6-second-base-normalized-bridge-v1.transcript": "d28f45618f9fcaa34c969eda140061615f443c5a115ee1326883f6a15919bcef",
+    "data/q6-norm8-case-v1.json": "903c9b635cfc72a67629a8fbeb23590afda259908eef1e8259fd0869009893dd",
+    "scripts/certify_engine_c_unit_orbits.py": "9f325e73240b5887e329f954eb310969c2b0fad5d8be436672a4421dc1e05a71",
+    "scripts/certify_q6_auxiliary_prime_independence.py": "a4c698f6a72f332f86aa34e175119134b50d6d4ecff727a582ec80ce277f5efb",
+    "scripts/export_engine_c_unit_lattice.gp": "59ae0218231f959ade8e77d436bb5d12e3d0500c190ca93e823cb691e6e6b7c1",
+    "scripts/q6_norm8_auxiliary_prime_euler.gp": "feb3780f4aadeb5fcdd4485da826eb9814db77c610ea56ab6ab75f58ebd077ed"
+  },
+  "transcript": {
+    "path": "artifacts/q6-auxiliary-prime-independence-v1.transcript",
+    "sha256": "8440108eaba7ee67e0bcae14992e7d11a7c5df0d930c342388866c284d915300"
+  },
+  "verdict": "VERIFIED"
+}

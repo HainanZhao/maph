@@ -1,0 +1,23 @@
+Engine-C hard-control reproduction gate, failed attempt v1
+UTC date: 2026-07-30
+
+Command:
+  python3 scripts/run_engine_c_reproduction_gate.py
+
+Failure:
+  RQ-000129 / Qsqrt(-3)
+  no source-compatible relative quartic factor survived the generic
+  pipeline's rnfisabelian requirement.
+
+Independent diagnosis:
+  For both relative quartic factors of
+    x^8 - 2*x^6 + 5*x^4 - 4*x^2 + 1
+  over Q(sqrt(-3)), PARI returns rnfisabelian = 0.  The first factor
+  nevertheless reproduces the banked conductor, inverse character pair,
+  and complete frozen source coefficient vector.
+
+Disposition:
+  This route may be replayed only as ALGEBRAIC_ONLY_S_SIZE_2 with the
+  relative-abelian predicate explicitly false.  It cannot be used in a
+  Stark-1980 theorem promotion.  The Q(sqrt(6)) analytic gate remains
+  halted.

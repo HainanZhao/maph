@@ -127,10 +127,22 @@ The frontier share rises strictly across conductor-norm quartiles:
 
 The separated ledger also exposes 88 odd indices above two:
 75 of index 3, six of index 5, and seven of index 9.  Eighty-one pass
-the exactly-one-real-place splitting predicate.  These cases remain
-FRONTIER, but form a new discovery stratum whose concentration in
-3-primary character support will be analyzed only after the W4 gate
-opens.
+the exactly-one-real-place splitting predicate. In 85 rows the index
+equals the normal-closure commutator size; the other three have index
+3 and commutator size 6. Support shares an odd prime with the index in
+86 rows. A 3-primary support component occurs in
+\(80/88=10/11\), versus \(298/721\) among even-index controls. These
+exact correlations are not yet a structural theorem.
+
+The same audit exposes a possible fourth proof engine. There are
+3,521 index-one occurrences whose ray field is abelian over
+\(\mathbb Q\). After removing Engine-A and empty-support cases, 276
+substantive FRONTIER occurrences across 85 fields remain. We call the
+proposed absolute-abelian reduction “Engine D”: decompose its
+characters into Dirichlet characters and identify the resulting
+\(L'(0)\)-values through cyclotomic/ACNF units and exact regulator
+indices. This is a frozen research gate, not a proved engine; the
+three controls are RQ-000018, RQ-000032, and RQ-000274.
 
 The pre-registered yield checkpoint passes formally: 6,382
 representatives are proved-trivial or eligible for one of the three
@@ -205,26 +217,63 @@ x^8-38904x^7+905404x^6+62136x^5-873210x^4
 \]
 This is the first new theorem produced by the generic C-side
 implementation, rather than a case-specific Paper-II script.
+Exact conjugation fixes the four Artin norm classes, and Arb orbit
+isolation matches them to the four real roots; the other roots form
+two nonreal conjugate pairs. Thus the packet has signature \([4,2]\):
+it is the first mixed-signature output of the generic C tranche, not
+the first mixed-signature packet in the full corpus.
 
-The next Engine-C target is \(K=\mathbb Q(\sqrt6)\), finite norm
-eight.  Exact normal-closure restriction gives linear reinduction over
+The normalization used here is explicit. If
+\(\ell_g=\log|g\varepsilon|_{\rm ord}\), then
+\[
+\zeta'_S(0,g)=-\frac2e\ell_g,\qquad
+\ell_g=-\frac e2\zeta'_S(0,g),
+\]
+while the frozen quartic Fourier convention gives
+\[
+L'_S(0,\psi)=-\frac4e(\ell_1-i\ell_\sigma),\qquad
+\ell_1-i\ell_\sigma=-\frac e4L'_S(0,\psi).
+\]
+The \(e=2\) anchor cannot distinguish \(2/e\) from the unsigned
+inverse magnitude \(e/2\); the \(e=4\) RQ-000458 cross-route match is
+the nontrivial normalization control.
+
+The first elevated-scrutiny \(e=6\) tranche then closes three further
+canonical fields: RQ-001569, RQ-007519, and RQ-001894. Their six
+independent imaginary-base routes cover 14 census occurrences.
+Every route has \(|S|\ge3\), exact character selection, a certified
+theta/Mellin target, an isolated integral anti-unit orbit, and an exact
+Artin-labeled bridge. Each route pair gives one identical packet, and
+the four conjugation-fixed Artin classes match the four real roots.
+
+The next Engine-C control is \(K=\mathbb Q(\sqrt6)\), finite norm
+eight. Exact normal-closure restriction gives linear reinduction over
 \(\mathbb Q(\sqrt{-2})\) and \(\mathbb Q(\sqrt{-3})\).  On the selected
 \(\mathbb Q(\sqrt{-2})\) route, the character field has signature
 \([0,4]\), class number one, \(|S|=3\), and
 \(e=|\mu(E)|=8\).  Its exact anti-unit lattice and oriented ray
 character isolate a reciprocal norm-one candidate with orbit
-coordinates \((4,0),(0,4)\).  This is deliberately not labeled
-VERIFIED.  The later general-\(e\) lemma proves the \(2/e\)
+coordinates \((4,0),(0,4)\). At that intermediate gate the candidate
+was deliberately not labeled `VERIFIED`. The later general-\(e\)
+lemma proves the \(2/e\)
 normalization and torsion-invariant orientation, and the independent
 \(\mathbb Q(\sqrt{-3})\) route is now reconstructed exactly:
 \(e=12\), \(w_k=6\), with character \([1,1]\) selected by the exact
-coefficient \(a_3=-i\).  The two candidate orbits satisfy 256 exact
-common-normal-closure identities \(q_8^3=q_{12}^2\).  This exposes a
-different boundary: the second conductor has only one finite prime,
-so its natural Stark set has \(|S|=2\), outside the banked
-\(|S|\ge3\) global-unit clause.  We halt before Arb; an
-\(|S|=2\) S-unit lemma with finite-valuation control or an exact
-auxiliary-prime enlargement is required for promotion.
+coefficient \(a_3=-i\). The two candidate orbits satisfy 256 exact
+common-normal-closure identities \(q_8^3=q_{12}^2\). The second
+natural Stark set has only \(|S|=2\), so the first attempt correctly
+halted.
+
+An exact auxiliary-prime argument now closes that boundary. At the
+rational primes 3 and 5, the complete Euler factors agree on the
+source and both CM routes, with nonzero derivative multipliers
+\(P_3(1)=1+i\) and \(P_5(1)=2\). Enlarging \(S\) makes the secondary
+set have size three. The normalized Arb targets for both primes and
+both routes overlap the same primitive \(L'(0)\) ball. On the exact
+anti-unit lattices, \(q=3\) produces the \((I\pm A)\) group-ring
+transform and \(q=5\) doubles the natural orbit. The latter identifies
+the square of every positive packet norm; positivity recovers its
+unique natural square root. Thus RQ-000129 is `VERIFIED`.
 
 ## Uniform Engine A after deduplication
 
