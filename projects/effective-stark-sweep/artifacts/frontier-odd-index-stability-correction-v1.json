@@ -1,0 +1,52 @@
+{
+  "claim_tag": "VERIFIED_RETRACTION_AND_PROXY_STATISTIC",
+  "exception_files": [
+    {
+      "case_id": "RQ-002169",
+      "exception_type": "INDEX_3_COMMUTATOR_6",
+      "path": "artifacts/frontier-odd-index-exceptions/RQ-002169.json",
+      "sha256": "ebf40a23588d556adaf594eb607e512c803eb787128720e4a6f4bdcf71f6da14"
+    },
+    {
+      "case_id": "RQ-002945",
+      "exception_type": "INDEX_3_COMMUTATOR_6",
+      "path": "artifacts/frontier-odd-index-exceptions/RQ-002945.json",
+      "sha256": "fb65f4c1c88f27e08a4864a640142071f07fc4e7eab7c88cb577360597bd9dd1"
+    },
+    {
+      "case_id": "RQ-007972",
+      "exception_type": "INDEX_3_COMMUTATOR_6",
+      "path": "artifacts/frontier-odd-index-exceptions/RQ-007972.json",
+      "sha256": "eae2700b0c369a1a40ad675b8394dd17bcbabb55ec2d4a2cf536bf38d41b386d"
+    },
+    {
+      "case_id": "RQ-006579",
+      "exception_type": "SUPPORT_NO_COMMON_ODD_PRIME",
+      "path": "artifacts/frontier-odd-index-exceptions/RQ-006579.json",
+      "sha256": "3cd18c74f3ae214b4994109256a418e9e5d78285b3504da466ca29af2c556580"
+    },
+    {
+      "case_id": "RQ-007289",
+      "exception_type": "SUPPORT_NO_COMMON_ODD_PRIME",
+      "path": "artifacts/frontier-odd-index-exceptions/RQ-007289.json",
+      "sha256": "2c39b914010129c87b75953852ef62c4a484f6d2cb3eb0c139c6cafd3c5bb37f"
+    }
+  ],
+  "old_exact_coordinate_regularities": {
+    "index_proxy_equals_commutator_proxy": "85/88",
+    "index_proxy_shares_odd_prime_with_support": "86/88"
+  },
+  "population": {
+    "galois_stable_finite_moduli": 0,
+    "galois_unstable_finite_moduli": 88,
+    "rows": 88
+  },
+  "recorded_at_utc": "2026-07-30T09:11:13.995599+00:00",
+  "schema": "effective-stark-frontier-odd-index-stability-correction-v1",
+  "semantic_verdict": "The two fractions remain reproducible statistics of the old coordinate proxy, but all 88 moduli are unstable. They are retracted as Shintani-index/normal-closure laws and may not be used in W4 as structural evidence.",
+  "source_hashes": {
+    "artifacts/frontier-odd-index-correlates-v1.json": "82ddf2a84879439153838d7f83309b576467a041c0827037636ea93953d2f1b9",
+    "artifacts/w1-full-census-v1.json": "b656a587bea705e8efe817e2870a0ea86cbf2c10fa37c7d9aa03d3868dfa76f1",
+    "scripts/audit_odd_index_modulus_stability.py": "757970f958e132e5b00b72ce4ef85ace2ec06c08be385a84a15b817720d12087"
+  }
+}

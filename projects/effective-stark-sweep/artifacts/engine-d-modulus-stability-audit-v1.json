@@ -1,0 +1,51 @@
+{
+  "claim_tag": "VERIFIED_EXACT_STRUCTURAL_CORRECTION",
+  "corrected_candidate_case_ids": [],
+  "corrected_candidate_support_distribution": [],
+  "corrected_predicate": {
+    "commutator_size": 1,
+    "finite_modulus_fixed_by_base_conjugation": true,
+    "meaning": "under modulus stability, the one-place field equals its intersection with Q^ab",
+    "shintani_index": 1
+  },
+  "counts": {
+    "corrected_substantive_engine_d_fields": 0,
+    "corrected_substantive_engine_d_occurrences": 0,
+    "former_index_one_abelian_proxy_occurrences": 3521,
+    "galois_stable_modulus_occurrences": 1042,
+    "invalidated_unstable_substantive_occurrences": 276
+  },
+  "finding": "The former criterion shintani_index=1 and commutator_size=1 is insufficient unless the finite modulus is Galois-stable.  For an unstable modulus the conjugation matrix compares different ray problems, so its commutator/index output cannot certify that the one-place ray field is abelian over Q.",
+  "former_3521_overlap_partition": {
+    "engine_a_substantive": 693,
+    "invalidated_unstable_modulus_substantive": 276,
+    "proved_trivial_empty_support": 2552
+  },
+  "former_anchor_stability": [
+    {
+      "case_id": "RQ-000018",
+      "field_discriminant": 8,
+      "finite_modulus_galois_stable": false,
+      "finite_norm": 41
+    },
+    {
+      "case_id": "RQ-000032",
+      "field_discriminant": 8,
+      "finite_modulus_galois_stable": false,
+      "finite_norm": 79
+    },
+    {
+      "case_id": "RQ-000274",
+      "field_discriminant": 40,
+      "finite_modulus_galois_stable": false,
+      "finite_norm": 36
+    }
+  ],
+  "recorded_at_utc": "2026-07-30T09:05:50.372555+00:00",
+  "schema": "effective-stark-engine-d-modulus-stability-audit-v1",
+  "source_hashes": {
+    "artifacts/engine-d-index-one-candidates-v1.json": "c0a28ed10fbb204565cf60ba9fa4a250a9eb869658dfcdc4898ee7cfde5755e8",
+    "artifacts/w1-full-census-v1.json": "b656a587bea705e8efe817e2870a0ea86cbf2c10fa37c7d9aa03d3868dfa76f1",
+    "scripts/audit_engine_d_modulus_stability.py": "c8b7c4731989f5de3d841a015984800fa13fdfbb0e4fdeac8578f225323d45c1"
+  }
+}
