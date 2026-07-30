@@ -1,0 +1,31 @@
+{
+  "case_taxonomy": {
+    "C_ELIGIBLE": 153,
+    "HAS_TOOL_BLOCK": 1,
+    "MIXED_PASS_FAIL": 3,
+    "NO_PACKET_PASSES": 95
+  },
+  "catchup_case_count": 252,
+  "claim_tag": "VERIFIED_COMPLETE_C_CATCHUP",
+  "completeness_statement": "All 252 queued rows reached the complete-C gate. Exactly 881 rows are certified C-eligible across old and catch-up populations; one additional row remains explicitly TOOL_BLOCKED and is not a mathematical negative.",
+  "packet_taxonomy": {
+    "GEOMETRY_PASS": 203,
+    "LINEAR_REINDUCTION_BASE_COUNT_FAIL": 8,
+    "NORMAL_CLOSURE_GROUP_NOT_16_13": 1,
+    "NORMAL_CLOSURE_ORDER_NE_16": 102,
+    "TOOL_BLOCKED": 1
+  },
+  "predicate_provenance": "GENUINE",
+  "recorded_at_utc": "2026-07-30T10:36:41.575009+00:00",
+  "schema": "effective-stark-engine-c-catchup-summary-v1",
+  "source_hashes": {
+    "artifacts/engine-c-catchup-252-v1.json": "794a9e05457039f43168398c1f074029e29fba40594dd90a68597bf0e9a487b0",
+    "scripts/summarize_engine_c_catchup.py": "6e0593f5a6c4cb10eedae7032c4730b4749fa5868b5df463679dc4ca04a57046"
+  },
+  "updated_c_accounting": {
+    "new_certified_c_eligible": 153,
+    "previous_certified_c_eligible": 728,
+    "tool_blocked_not_counted_as_negative": 1,
+    "total_certified_c_eligible": 881
+  }
+}
