@@ -185,6 +185,21 @@ def verify_engine_b() -> None:
 
 def verify_engine_c() -> None:
     run(
+        ["python3", "scripts/audit_engine_c_fourier_convention.py"],
+        "ENGINE_C_FOURIER_CONVENTION_AUDIT=VERIFIED",
+    )
+    convention = load(
+        "artifacts/engine-c-fourier-convention-correction-v1.json"
+    )
+    if (
+        convention["verdict"] != "PASS"
+        or convention["corrected_formulas"]["direct_lprime"]
+        != "-(4/e)*(ell_1+i*ell_sigma)"
+        or convention["corrected_formulas"]["packet"]
+        != "Y_(sbar^r)=N_(E/E+)(sigma^r*u)^-1"
+    ):
+        raise RuntimeError("Engine-C Fourier convention changed")
+    run(
         ["python3", "scripts/correct_engine_c_e6_primitive_packets.py"],
         "E6_PRIMITIVE_PACKET_CORRECTION=VERIFIED",
     )

@@ -15,15 +15,17 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "v7"
+VERSION = "v9"
 NAME = f"effective-stark-results-companion-{VERSION}"
 DIST = ROOT / "dist"
 ARCHIVE = DIST / f"{NAME}.tar.gz"
-FREEZE = ROOT / "artifacts/results-paper-companion-local-freeze-v7.json"
+FREEZE = ROOT / "artifacts/results-paper-companion-local-freeze-v9.json"
 
 SEEDS = {
     "paper/effective-stark-results.tex",
     "paper/effective-stark-results.pdf",
+    "paper/effective-stark-results-supplement.tex",
+    "paper/effective-stark-results-supplement.pdf",
     "companion/README.md",
     "companion/ENVIRONMENT.md",
     "companion/EXPECTED_OUTPUT.txt",
@@ -32,12 +34,14 @@ SEEDS = {
     "scripts/build_results_companion.py",
     "scripts/audit_results_paper_full.py",
     "scripts/audit_engine_a_euler_degeneracy.py",
+    "scripts/audit_engine_c_fourier_convention.py",
     "scripts/screen_engine_a_euler_degeneracy.gp",
     "scripts/certify_engine_b_archimedean_places.gp",
     "scripts/correct_engine_c_e6_primitive_packets.py",
     "scripts/run_engine_c_packet_bridge.py",
     "scripts/generic_engine_c_packet_bridge.gp",
     "data/engine-a-uniform-theorem-v1.json",
+    "data/engine-c-general-e-theory-v4.json",
     "data/q7-p7-case-v1.json",
     "data/q14-p7-case-v1.json",
     "data/rq000108-case-v1.json",
@@ -52,6 +56,7 @@ SEEDS = {
     "artifacts/engine-b-archimedean-place-audit-v1.json",
     "artifacts/engine-a-euler-degeneracy-v1.json",
     "artifacts/engine-a-euler-degeneracy-v1.transcript",
+    "artifacts/engine-c-fourier-convention-correction-v1.json",
     "artifacts/engine-c-claim-scope-correction-v1.json",
     "artifacts/engine-c-e6-primitive-packet-correction-v1.json",
     "artifacts/engine-c-e6-primitive-packet-correction-v1.transcript",

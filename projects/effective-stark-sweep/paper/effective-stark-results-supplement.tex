@@ -1,0 +1,135 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage[hidelinks]{hyperref}
+\usepackage{booktabs,longtable,array}
+\pdftrailerid{}
+
+\newcommand{\Q}{\mathbb Q}
+
+\title{Supplementary Tables for\\
+\emph{Effective Archimedean Stark Theorems over Real Quadratic Fields}}
+\author{Hainan Zhao}
+\date{30 July 2026}
+
+\begin{document}
+\hbadness=10000
+\maketitle
+
+\section*{Scope and archive}
+
+This supplement contains the record map and the complete
+Artin-label interval replay referenced by the main paper.  It also
+records queue-level Engine-A statistics that are not used in the
+uniform theorem.
+
+\paragraph{Archive DOI.}
+To be inserted before external circulation.
+
+\section*{Supplementary Table S1: certificate record map}
+
+\small
+\begin{longtable}{@{}p{0.29\linewidth}
+ >{\raggedright\arraybackslash}p{0.65\linewidth}@{}}
+\toprule
+result & record\\
+\midrule
+\endfirsthead
+\toprule
+result & record\\
+\midrule
+\endhead
+first order six & \path{data/q7-p7-case-v1.json}\\
+second order six & \path{data/q14-p7-case-v1.json}\\
+RQ-000108 & \path{data/rq000108-case-v1.json}\\
+RQ-000021 & \path{data/rq000021-case-v1.json}\\
+ramified-prime-\(3\) control & \path{data/q57-norm27-case-v1.json}\\
+RQ-002955 & \path{data/rq002955-case-v1.json}\\
+order ten & \path{data/q33-p11-order10-case-v1.json}\\
+cyclic-quartic character selection &
+\path{artifacts/engine-c-character-selection-v1.json}\\
+\(\Q(\sqrt{35})\) CM packet &
+\path{artifacts/engine-c-w3-tranche-01-verified-v1.json}\\
+\(e=6\) powered-unit record &
+\path{artifacts/engine-c-e6-tranche-01-verified-v1.json}\\
+\(e=6\) primitive correction &
+\path{artifacts/engine-c-e6-primitive-packet-correction-v1.json}\\
+\(\Q(\sqrt6)\), \(e=8\) proof route &
+\path{data/q6-norm8-case-v3.json}\\
+Engine-C scope correction &
+\path{artifacts/engine-c-claim-scope-correction-v1.json}\\
+Engine-C Fourier-sign correction &
+\path{artifacts/engine-c-fourier-convention-correction-v1.json}\\
+dual-route packet & \path{data/rq000458-dual-case-v1.json}\\
+all archimedean places &
+\path{artifacts/engine-b-archimedean-place-audit-v1.json}\\
+quadratic theorem & \path{data/engine-a-uniform-theorem-v1.json}\\
+quadratic Euler degeneracy audit &
+\path{artifacts/engine-a-euler-degeneracy-v1.json}\\
+Shintani source map &
+\path{artifacts/shintani-1978-source-map-v1.json}\\
+index-parity theorem &
+\path{artifacts/results-paper-index-parity-lemma-v1.json}\\
+parity audit &
+\path{artifacts/results-paper-odd-index-parity-audit-v1.json}\\
+literature perimeter & \path{data/literature-perimeter-v1.json}\\
+\bottomrule
+\end{longtable}
+
+\section*{Supplementary Table S2: complete Artin-label interval replay}
+
+For each cyclic ray group below, \(r\) denotes the power of the
+generator in the pinned PARI ray coordinates.  Each rational interval
+contains exactly one positive root of the absolute packet polynomial.
+\begin{longtable}{@{}p{0.14\linewidth}p{0.80\linewidth}@{}}
+\toprule
+case & \(r:\) isolating interval\\
+\midrule
+\endfirsthead
+\toprule
+case & \(r:\) isolating interval\\
+\midrule
+\endhead
+RQ-000190 &
+\(0:(5.325,5.326),\ 1:(2.713,2.714),\
+2:(2.251,2.252),\ 3:(.187,.188),\
+4:(.368,.369),\ 5:(.444,.445)\)\\
+RQ-000419 &
+\(0:(20.431,20.432),\ 1:(.189,.190),\
+2:(1.090,1.091),\ 3:(.048,.049),\
+4:(5.289,5.290),\ 5:(.916,.917)\)\\
+RQ-000108 &
+\(0:(7.892,7.893),\ 1:(2.242,2.243),\
+2:(.126,.127),\ 3:(.445,.446)\)\\
+RQ-000021 &
+\(0:(6.109,6.110),\ 1:(7.496,7.497),\
+2:(4.351,4.352),\ 3:(.163,.164),\
+4:(.133,.134),\ 5:(.229,.230)\)\\
+RQ-002057 &
+\(0:(5.709,5.710),\ 1:(.028,.029),\
+2:(.035,.036),\ 3:(.175,.176),\
+4:(34.732,34.733),\ 5:(27.792,27.793)\)\\
+RQ-002955 &
+\(0:(18.232,18.233),\ 1:(2.180,2.181),\
+2:(8.620,8.621),\ 3:(.054,.055),\
+4:(.458,.459),\ 5:(.116,.117)\)\\
+RQ-001107 &
+\(0:(8.645,8.646),\ 1:(.276,.277),\
+2:(1.245,1.246),\ 3:(.571,.572),\
+4:(.236,.237),\ 5:(.115,.116),\
+6:(3.611,3.612),\ 7:(.802,.803),\
+8:(1.748,1.749),\ 9:(4.234,4.235)\)\\
+\bottomrule
+\end{longtable}
+
+\section*{Engine-A queue statistics}
+
+The uniform theorem does not depend on a finite search range.  In the
+frozen verification queue there are 1,560 rows with nonempty
+differenced character support, comprising 2,232 supported quadratic
+character occurrences across 912 distinct character fields.  Exact
+imprimitive Euler-factor evaluation finds 672 zero Euler products,
+affecting 603 rows.  In 346 rows every supported derivative vanishes,
+so the theorem's product is empty and \(X_A=1\).
+
+\end{document}

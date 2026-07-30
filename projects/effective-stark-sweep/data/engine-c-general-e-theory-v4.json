@@ -1,0 +1,37 @@
+{
+  "schema": "effective-stark-engine-c-general-e-theory-v4",
+  "recorded_at_utc": "2026-07-30T16:00:00Z",
+  "claim_tag": "VERIFIED_THEOREM_CONVENTION_CORRECTION",
+  "supersedes": {
+    "path": "data/engine-c-general-e-theory-v3.json",
+    "sha256": "7dbc2bf3a1b2e0aa6be46cfe4391aacca40e4fe01b0c3a130d3d0c826ae44629",
+    "scope": "v3 used the inverse character on the CM-side Fourier transform while declaring the forward-character convention; v4 restores one convention on both sides"
+  },
+  "conventions": {
+    "ray_l_function": "L(s,chi)=sum_A chi(A)*zeta(s,A)",
+    "inverse_transform": "zeta(s,A)=|G|^-1*sum_chi chi(A)^-1*L(s,chi)",
+    "quartic_generators": "theta(sbar)=psi(sigma)=i",
+    "ordinary_complex_modulus": "|z|_ord=sqrt(z*conjugate(z))",
+    "stark_normalized_complex_absolute_value": "|z|_w=|z|_ord^2",
+    "anti_unit_relations": "ell_(sigma^2)=-ell_1 and ell_(sigma^3)=-ell_sigma"
+  },
+  "formulas": {
+    "class_log_forward": "zeta'_S(0,g)=-(2/e)*ell_g",
+    "class_log_inverse": "ell_g=-(e/2)*zeta'_S(0,g)",
+    "direct_lprime_forward": "L'_S(0,psi)=-(4/e)*(ell_1+i*ell_sigma)",
+    "direct_lprime_inverse": "ell_1+i*ell_sigma=-(e/4)*L'_S(0,psi)",
+    "primitive_packet": "Y_(sbar^r)=N_(E/E+)(sigma^r*u)^-1"
+  },
+  "exact_bridge_alignment": {
+    "script": "scripts/generic_engine_c_packet_bridge.gp",
+    "script_sha256": "37673ebd468a72a29199cc06b7f3773d3d5f32fde9955e2e8371d8e62430e3e8",
+    "implementation": "the Artin-label loop applies normal_sigma exactly r=label_index-1 times before taking the conjugation norm",
+    "consequence": "the implementation uses positive sigma powers and agrees with the corrected formula"
+  },
+  "case_impact": {
+    "packet_polynomials": "UNCHANGED_RECIPROCAL_POLYNOMIALS",
+    "unlabeled_root_sets": "UNCHANGED",
+    "artin_label_formula": "CORRECTED_FROM_SIGMA_MINUS_R_TO_SIGMA_PLUS_R",
+    "case_tags": "UNCHANGED"
+  }
+}

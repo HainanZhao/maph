@@ -194,40 +194,40 @@ to state or prove the formula.
 \begin{theorem}[Selected higher-order packets]\label{thm:main}
 Use the integral basis \(1,\omega\), where
 \(\omega=(1+\sqrt D)/2\) for \(D\equiv1\pmod4\) and
-\(\omega=\sqrt D\) otherwise, and let the displayed HNF matrix denote
-the finite ideal \(\mathfrak f\) in that basis.  For every row below,
+\(\omega=\sqrt D\) otherwise.  The short modulus labels below are
+defined by exact HNF matrices in Appendix~\ref{app:moduli}.  For every row below,
 the packet \(\mathcal X_{\mathfrak f\infty_2}\) is the Artin-labeled
 set of positive roots of the relative polynomial printed in
 Section~\ref{sec:packets} or \ref{sec:cmcases}.
-\begin{center}\scriptsize
+\begin{center}\footnotesize
 \begin{tabular}{@{}lllcrr@{}}
 \toprule
-case & \(K\) & \(\operatorname{HNF}(\mathfrak f)\) & support
+case & \(K\) & modulus & support
  & \(m\) & margin\\
 \midrule
 RQ-000190 & \(\Q(\sqrt7)\) &
-\(\left[\begin{smallmatrix}7&0\\0&1\end{smallmatrix}\right]\)&
+\(\mathfrak p_7\)&
 \(2,6\)&4032&\(>5688\)\\
 RQ-000419 & \(\Q(\sqrt{14})\) &
-\(\left[\begin{smallmatrix}7&0\\0&1\end{smallmatrix}\right]\)&
+\(\mathfrak p_7\)&
 \(2,6\)&4032&\(>7315\)\\
 RQ-000108 & \(\Q(\sqrt5)\) &
-\(\left[\begin{smallmatrix}15&6\\0&3\end{smallmatrix}\right]\)&
+\(\mathfrak f_{45}\)&
 \(4\)&2880&\(>2460\)\\
 RQ-000021 & \(\Q(\sqrt2)\) &
-\(\left[\begin{smallmatrix}7&0\\0&7\end{smallmatrix}\right]\)&
+\((7)\)&
 \(2,6\)&2016&\(>4261\)\\
 RQ-002057 & \(\Q(\sqrt{57})\) &
-\(\left[\begin{smallmatrix}9&3\\0&3\end{smallmatrix}\right]\)&
+\(\mathfrak f_{27}\)&
 \(2,6\)&2592&\(>748\)\\
 RQ-002955 & \(\Q(\sqrt{77})\) &
-\(\left[\begin{smallmatrix}7&3\\0&1\end{smallmatrix}\right]\)&
+\(\mathfrak p_7\)&
 \(2,6\)&4032&\(>5151\)\\
 RQ-001107 & \(\Q(\sqrt{33})\) &
-\(\left[\begin{smallmatrix}11&5\\0&1\end{smallmatrix}\right]\)&
+\(\mathfrak p_{11}\)&
 \(2,10\)&15840&\(>5817\)\\
 RQ-000458 & \(\Q(\sqrt{14})\) &
-\(\left[\begin{smallmatrix}12&0\\0&6\end{smallmatrix}\right]\)&
+\(\mathfrak f_{72}\)&
 \(4\)&1152&\(>6470\)\\
 \bottomrule
 \end{tabular}
@@ -244,26 +244,26 @@ Use the same integral-basis convention as in
 Theorem~\ref{thm:main}.  For every row below, the primitive quartic
 packet \eqref{eq:quartic-packet} is the Artin-labeled set of positive numbers whose
 polynomial is printed in Section~\ref{sec:cmcases}.
-\begin{center}\scriptsize
+\begin{center}\footnotesize
 \begin{tabular}{@{}llllcl@{}}
 \toprule
-case & \(K\) & \(\operatorname{HNF}(\mathfrak f)\)
+case & \(K\) & modulus
  & CM bases & \(e\) used in proof & polynomial\\
 \midrule
 RQ-001280 & \(\Q(\sqrt{35})\) &
-\(\left[\begin{smallmatrix}8&4\\0&4\end{smallmatrix}\right]\)&
+\(\mathfrak f_{32}\)&
 \(\Q(\sqrt{-10}),\Q(\sqrt{-14})\)&\(2,2\)&\(P_{35}\)\\
 RQ-001569 & \(\Q(\sqrt{42})\) &
-\(\left[\begin{smallmatrix}6&0\\0&2\end{smallmatrix}\right]\)&
+\(\mathfrak f_{12}\)&
 \(\Q(\sqrt{-7}),\Q(\sqrt{-6})\)&\(6,6\)&\(P_{42}\)\\
 RQ-007519 & \(\Q(\sqrt{186})\) &
-\(\left[\begin{smallmatrix}6&0\\0&2\end{smallmatrix}\right]\)&
+\(\mathfrak f_{12}\)&
 \(\Q(\sqrt{-6}),\Q(\sqrt{-31})\)&\(6,6\)&\(P_{186}\)\\
 RQ-001894 & \(\Q(\sqrt{51})\) &
-\(\left[\begin{smallmatrix}15&0\\0&5\end{smallmatrix}\right]\)&
+\(\mathfrak f_{75}\)&
 \(\Q(\sqrt{-15}),\Q(\sqrt{-85})\)&\(6,6\)&\(P_{51}\)\\
 RQ-000129 & \(\Q(\sqrt6)\) &
-\(\left[\begin{smallmatrix}4&0\\0&2\end{smallmatrix}\right]\)&
+\(\mathfrak f_8\)&
 \(\Q(\sqrt{-2})\)&\(8\)&\(P_6\)\\
 \bottomrule
 \end{tabular}
@@ -279,10 +279,23 @@ not part of the proof.
 \end{theorem}
 
 \paragraph{Historical scope.}
+Earlier papers in this program established the quadratic
+dimension-four calibration and an unconditional support-order-eight
+packet over \(\Q(\sqrt3)\) at \((5)\infty_2\), with safe exponent
+\(5760\) \cite{Zhao45}.  That order-eight packet is not repeated in
+the selected tables here; it is another specialization of
+Proposition~\ref{prop:transfer} and Lemma~\ref{lem:height}.  The
+second paper then used unconditional order-six
+one-place inputs over \(\Q(\sqrt2)\), including the ray-\((7)\)
+stratum, in proving both dimension-seven strata
+\cite{Zhao78}.  Thus RQ-000021 is a streamlined effective
+reidentification of a previously used arithmetic input, not a new
+priority claim.  The present work places those mechanisms in a common
+effective framework and supplies further order-six replications.
 We are not aware of previous unconditional one-place Stark packet
-identifications with support orders six or ten.  This historical
-observation plays no role in the proofs.  This archimedean claim is
-distinct from numerical and conditional
+identifications with support order ten.  This historical observation
+plays no role in the proofs.  These archimedean results are distinct
+from numerical and conditional
 Stark-unit computations \cite{TangedalYoung2013} and from the proved
 finite-place Brumer--Stark theory \cite{DasguptaKakde2023}.
 
@@ -305,7 +318,7 @@ resulting fields independently, whereas every promoted object here is
 a one-place ray field with nontrivial finite modulus.  Thus these are
 mathematically adjacent precedents, not identical class-field
 objects.  The order-six and order-ten historical statements refer
-only to the dated search described above.
+to the bounded literature comparison recorded in the supplement.
 
 \section{The quadratic-support theorem}
 
@@ -477,17 +490,12 @@ kernels, and determinant indices reduces the corollary immediately
 to a concrete product of explicitly computed relative units.
 If \(E_\chi=0\), that character contributes exponent zero and is
 simply absent from the product; if every supported character
-vanishes, the product is empty and \(X_A=1\).  An exact audit of the
-frozen 1,560-row Engine-A queue finds 672 such characters among 2,232
-supported character occurrences, affecting 603 rows; in 346 rows all
-supported terms vanish.
+vanishes, the product is empty and \(X_A=1\).
 \end{remark}
 
 The theorem is uniform; its proof does not enumerate the census.
-There are 1,560 nontrivial eligible occurrences in the frozen range,
-involving 2,232 supported character occurrences and 912 distinct
-quartic fields.  These figures describe a verification queue, not a
-completeness claim here.  Each application still certifies its
+The corresponding queue statistics and exact Euler-degeneracy audit
+are reported in the supplement.  Each application still certifies its
 primitive conductor, field, class numbers, Euler factors, exact norm
 map, primitive kernel, determinant, and orientation.  The
 dimension-four and dimension-eight anchors independently replay
@@ -499,7 +507,10 @@ including relative index \(I_\chi=2\) in both dimension-eight cases.
 Let \(H=H_{\mathfrak m}\) be the one-place ray class field of
 \(\mathfrak m=\mathfrak f\infty_2\), and let \(\mathcal N\) be its
 normal closure over \(\Q\).  Engine B first checks Shintani's
-conditions (0-3), (0-6), and (0-9), including
+conditions (0-3), (0-6), and (0-9): respectively, \(-1\) is absent
+from the image of the totally positive units modulo \(\mathfrak f\),
+\(1\) is absent from the residue classes of norm-negative units, and
+the required one-place splitting holds with
 \begin{equation}\label{eq:index-two}
  [H:H\cap\Q^{\rm ab}]=2.
 \end{equation}
@@ -529,7 +540,7 @@ Let \(C=\Cl_{\mathfrak f\infty_1\infty_2}(K)\), and suppose exact
 fiber identities identify Shintani's invariant
 \(X_{\mathfrak f}(c,G)\) with \(X_A\) in
 \eqref{eq:def-zx}.  Assume Shintani's
-conditions (0-3), (0-6), and (0-9), and let \(k\) and
+three conditions just restated, and let \(k\) and
 \(\mathfrak c\) be respectively the imaginary quadratic field and
 finite transfer conductor occurring in his proof.
 
@@ -578,7 +589,7 @@ take the products over \(G\).  The assumed exact fiber identity
 identifies our \(X_A\) with \(X_{\mathfrak f}(c,G)\), while the
 explicit real-side distribution calculation, whose denominators
 divide \(r\), passes from \(X_{\mathfrak f}(c,G)\) to
-\(Y_{\mathfrak f}(c,G)\).  Under (0-3), (0-6), and (0-9),
+\(Y_{\mathfrak f}(c,G)\).  Under these three hypotheses,
 Shintani's Theorem~2 on p.~141 supplies the index-two algebraicity
 construction.
 
@@ -679,7 +690,7 @@ the definition of logarithmic height give
  \le B_A.
 \]
 If \(d=[\Q(\eta_A):\Q]\ge3\) and \(\eta_A\) is not torsion,
-the main theorem of Voutier \cite[p.~82]{Voutier1996}, valid for
+the main theorem of Voutier \cite[p.~82]{Voutier1996}, stated for
 every degree \(d\ge2\), contradicts \eqref{eq:voutier-gate}.  A
 non-torsion quadratic unit has height at least
 \(\frac12\log((1+\sqrt5)/2)\), and a rational unit is \(\pm1\).
@@ -956,7 +967,7 @@ the norm below is defined.  For \(r\in\Z/4\Z\),
 \begin{equation}\label{eq:cm-norm-bridge}
  \boxed{\qquad
  Y_{\bar s^r}
- =N_{E/E^+}(\sigma^{-r}u)^{-1}.
+ =N_{E/E^+}(\sigma^ru)^{-1}.
  \qquad}
 \end{equation}
 The right side is independent of the root-of-unity representative of
@@ -979,17 +990,18 @@ The anti-unit relation gives
 \(\psi(\sigma)=i\) gives
 \begin{equation}\label{eq:cm-lprime}
  L'_S(0,\psi)
- =-\frac4e(\ell_1-i\ell_\sigma).
+ =-\frac4e(\ell_1+i\ell_\sigma).
 \end{equation}
 These are respectively the class-log coefficient \(2/e\) and the
 direct-\(L'\) coefficient \(4/e\); their inverse recovery
-coefficients are \(-e/2\) and \(-e/4\).
+coefficients are \(-e/2\) and \(-e/4\), with the same plus sign in
+the latter Gaussian combination.
 
 Write \(m_r=\log|\sigma^ru|_{\rm ord}\).  The exact divisibility in
 hypothesis 3 gives \(\ell_{\sigma^r}=(e/2)m_r\), so
 \eqref{eq:cm-lprime} becomes
 \[
- L'_S(0,\psi)=-2(m_0-im_1).
+ L'_S(0,\psi)=-2(m_0+im_1).
 \]
 By \eqref{eq:reinduction} this is
 \(L'_{\mathfrak m}(0,\theta)\).  Substitution in
@@ -997,7 +1009,7 @@ By \eqref{eq:reinduction} this is
 \[
  (\log Y_1,\log Y_{\bar s},\log Y_{\bar s^2},
    \log Y_{\bar s^3})
- =(-2m_0,\,2m_1,\,2m_0,\,-2m_1).
+ =(-2m_0,\,-2m_1,\,2m_0,\,2m_1).
 \]
 Since the internal anti-unit relation gives
 \((m_2,m_3)=(-m_0,-m_1)\), while
@@ -1010,6 +1022,13 @@ are positive, so equality of logarithms proves
 \eqref{eq:cm-norm-bridge}.  If \(u\) is multiplied by a
 root of unity \(\xi\), then \(j(\xi)=\xi^{-1}\), and its CM norm is
 unchanged.
+
+The positive power \(\sigma^r\) is the convention checked by the
+Artin-label replay: its exact bridge applies the selected lift of
+\(\sigma\) exactly \(r\) times before taking the CM norm.  Thus the
+replay uses the same generator as
+\(\theta(\bar s)=\psi(\sigma)=i\), rather than silently inverting one
+side.
 \end{proof}
 
 \paragraph{Finite character selection and algebraic closure.}
@@ -1218,7 +1237,50 @@ were no exceptions.
 
 \appendix
 
-\section{Certificates and provenance}
+\section{Exact finite moduli}\label{app:moduli}
+
+The short labels in Theorems~\ref{thm:main} and
+\ref{thm:cmcases} are local to their rows.  In the integral basis
+\(1,\omega\) fixed in Theorem~\ref{thm:main}, the exact finite ideals
+are as follows.
+\begin{center}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{@{}lll@{}}
+\toprule
+case & short label & \(\operatorname{HNF}(\mathfrak f)\)\\
+\midrule
+RQ-000190 & \(\mathfrak p_7\) &
+\(\begin{pmatrix}7&0\\0&1\end{pmatrix}\)\\
+RQ-000419 & \(\mathfrak p_7\) &
+\(\begin{pmatrix}7&0\\0&1\end{pmatrix}\)\\
+RQ-000108 & \(\mathfrak f_{45}\) &
+\(\begin{pmatrix}15&6\\0&3\end{pmatrix}\)\\
+RQ-000021 & \((7)\) &
+\(\begin{pmatrix}7&0\\0&7\end{pmatrix}\)\\
+RQ-002057 & \(\mathfrak f_{27}\) &
+\(\begin{pmatrix}9&3\\0&3\end{pmatrix}\)\\
+RQ-002955 & \(\mathfrak p_7\) &
+\(\begin{pmatrix}7&3\\0&1\end{pmatrix}\)\\
+RQ-001107 & \(\mathfrak p_{11}\) &
+\(\begin{pmatrix}11&5\\0&1\end{pmatrix}\)\\
+RQ-000458 & \(\mathfrak f_{72}\) &
+\(\begin{pmatrix}12&0\\0&6\end{pmatrix}\)\\
+\midrule
+RQ-001280 & \(\mathfrak f_{32}\) &
+\(\begin{pmatrix}8&4\\0&4\end{pmatrix}\)\\
+RQ-001569 & \(\mathfrak f_{12}\) &
+\(\begin{pmatrix}6&0\\0&2\end{pmatrix}\)\\
+RQ-007519 & \(\mathfrak f_{12}\) &
+\(\begin{pmatrix}6&0\\0&2\end{pmatrix}\)\\
+RQ-001894 & \(\mathfrak f_{75}\) &
+\(\begin{pmatrix}15&0\\0&5\end{pmatrix}\)\\
+RQ-000129 & \(\mathfrak f_8\) &
+\(\begin{pmatrix}4&0\\0&2\end{pmatrix}\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Certificates and data availability}
 
 The exact field computations use PARI/GP 2.15.4 \cite{PARI}; analytic
 certificates use Python 3.12.3 and python-flint 0.9.0
@@ -1231,105 +1293,37 @@ rerun by the pinned exact or Arb pipeline and reviewed by the author.
 The disclosure immediately before the bibliography gives the tools
 and purposes.
 
-The principal machine-readable records are
-\begin{center}\small
-\begin{tabular}{@{}p{0.29\linewidth}
- >{\raggedright\arraybackslash}p{0.65\linewidth}@{}}
-\toprule
-result & record\\
-\midrule
-first order six & \path{data/q7-p7-case-v1.json}\\
-second order six & \path{data/q14-p7-case-v1.json}\\
-RQ-000108 & \path{data/rq000108-case-v1.json}\\
-RQ-000021 & \path{data/rq000021-case-v1.json}\\
-ramified-prime-$3$ control & \path{data/q57-norm27-case-v1.json}\\
-RQ-002955 & \path{data/rq002955-case-v1.json}\\
-order ten & \path{data/q33-p11-order10-case-v1.json}\\
-cyclic-quartic character selection &
-\path{artifacts/engine-c-character-selection-v1.json}\\
-\(\Q(\sqrt{35})\) CM packet &
-\path{artifacts/engine-c-w3-tranche-01-verified-v1.json}\\
-\(e=6\) powered-unit record &
-\path{artifacts/engine-c-e6-tranche-01-verified-v1.json}\\
-\(e=6\) primitive correction &
-\path{artifacts/engine-c-e6-primitive-packet-correction-v1.json}\\
-\(\Q(\sqrt6)\), \(e=8\) proof route &
-\path{data/q6-norm8-case-v3.json}\\
-Engine-C scope correction &
-\path{artifacts/engine-c-claim-scope-correction-v1.json}\\
-dual-route packet &
-\path{data/rq000458-dual-case-v1.json}\\
-all archimedean places &
-\path{artifacts/engine-b-archimedean-place-audit-v1.json}\\
-quadratic theorem & \path{data/engine-a-uniform-theorem-v1.json}\\
-quadratic Euler degeneracy audit &
-\path{artifacts/engine-a-euler-degeneracy-v1.json}\\
-Shintani source map &
-\path{artifacts/shintani-1978-source-map-v1.json}\\
-index-parity theorem & \path{artifacts/results-paper-index-parity-lemma-v1.json}\\
-parity audit & \path{artifacts/results-paper-odd-index-parity-audit-v1.json}\\
-literature perimeter & \path{data/literature-perimeter-v1.json}\\
-\bottomrule
-\end{tabular}
-\end{center}
-
-\subsection*{Artin-label replay}
-
-For each cyclic ray group below, \(r\) denotes the power of the
-generator in the pinned PARI ray coordinates.  The entry following
-\(r\) is a rational Sturm interval containing exactly one positive
-root of the absolute packet polynomial.  The cone evaluation for
-class \(r\), Shintani's Artin covariance
-\eqref{eq:shintani-conclusion}, and the exact
-ray-field isomorphism identify that root with \(X_r\).
-\begin{center}\scriptsize
-\begin{tabular}{@{}p{0.14\linewidth}p{0.80\linewidth}@{}}
+The certificate archive has three layers: exact field and ray-class
+records, Arb enclosure transcripts, and compact replay programs that
+check the theorem-facing identities against both.  Supplementary
+Table~S1 gives the complete record map.  Supplementary Table~S2 gives
+the complete Artin-label interval replay.  For illustration, the
+headline case has
+\begin{center}
+\begin{tabular}{@{}cl@{}}
 \toprule
 case & \(r:\) isolating interval\\
 \midrule
 RQ-000190 &
-\(0:(5.325,5.326),\ 1:(2.713,2.714),\
-2:(2.251,2.252),\ 3:(.187,.188),\
-4:(.368,.369),\ 5:(.444,.445)\)\\
-RQ-000419 &
-\(0:(20.431,20.432),\ 1:(.189,.190),\
-2:(1.090,1.091),\ 3:(.048,.049),\
-4:(5.289,5.290),\ 5:(.916,.917)\)\\
-RQ-000108 &
-\(0:(7.892,7.893),\ 1:(2.242,2.243),\
-2:(.126,.127),\ 3:(.445,.446)\)\\
-RQ-000021 &
-\(0:(6.109,6.110),\ 1:(7.496,7.497),\
-2:(4.351,4.352),\ 3:(.163,.164),\
-4:(.133,.134),\ 5:(.229,.230)\)\\
-RQ-002057 &
-\(0:(5.709,5.710),\ 1:(.028,.029),\
-2:(.035,.036),\ 3:(.175,.176),\
-4:(34.732,34.733),\ 5:(27.792,27.793)\)\\
-RQ-002955 &
-\(0:(18.232,18.233),\ 1:(2.180,2.181),\
-2:(8.620,8.621),\ 3:(.054,.055),\
-4:(.458,.459),\ 5:(.116,.117)\)\\
-RQ-001107 &
-\(0:(8.645,8.646),\ 1:(.276,.277),\
-2:(1.245,1.246),\ 3:(.571,.572),\
-4:(.236,.237),\ 5:(.115,.116),\
-6:(3.611,3.612),\ 7:(.802,.803),\
-8:(1.748,1.749),\ 9:(4.234,4.235)\)\\
+\(\begin{aligned}
+0&:(5.325,5.326),&1&:(2.713,2.714),&2&:(2.251,2.252),\\
+3&:(.187,.188),&4&:(.368,.369),&5&:(.444,.445)
+\end{aligned}\)\\
 \bottomrule
 \end{tabular}
 \end{center}
+The cone evaluation for class \(r\), Shintani's covariance
+\eqref{eq:shintani-conclusion}, and the exact ray-field isomorphism
+identify the isolated root with \(X_r\).
 
-Each record carries hashes of its exact and analytic dependencies.
-The supplementary manifest also records the full software versions,
-commands, source hashes, and failed computations; those provenance
-details are not part of the mathematical argument.
+\paragraph{Archive DOI.}
+To be inserted before external circulation.
 
-\paragraph{Data availability.}
 This major-revision version is not a finished referee draft until its
 companion archive has a public immutable identifier.  Before such a
 circulation or any submission, the archive will be frozen and
-deposited.  It will contain the manuscript source, a complete
+deposited together with the supplementary tables.  It will contain
+the manuscript source, a complete
 SHA-256 manifest, expected verifier outputs, exact and Arb
 certificates, and a short README separating discovery programs from
 proof-checking programs.  Separate minimal verification commands will
@@ -1353,6 +1347,14 @@ the article.
 
 \begin{thebibliography}{20}
 \raggedright
+\bibitem{Zhao45}
+H.~Zhao, \emph{Twisted-convolution identities in dimensions four and
+five from Shintani ray units}, 2026,
+\url{https://doi.org/10.5281/zenodo.21680223}.
+\bibitem{Zhao78}
+H.~Zhao, \emph{Twisted-convolution identities in dimensions seven and
+eight: Shintani height rigidity and CM descent}, 2026,
+\url{https://doi.org/10.5281/zenodo.21681700}.
 \bibitem{Shintani1978}
 T.~Shintani, \emph{On certain ray class invariants of real quadratic
 fields}, J.\ Math.\ Soc.\ Japan \textbf{30} (1978), 139--167,
