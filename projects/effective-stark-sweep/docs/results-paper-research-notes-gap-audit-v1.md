@@ -178,3 +178,28 @@ The following should not be restored to the results paper:
    bounded priority claim before submission.
 4. Issue paper freeze v4 only after those edits and the same
    deterministic-build/referee-audit gates.
+
+## Partial resolution in freeze v4
+
+The following items from this audit were resolved in
+`artifacts/results-paper-freeze-v4.json`:
+
+- the theorem inventory now has a ninth item for the index-parity
+  theorem and its 446-case replay;
+- the inventory now has a tenth item for the banked general-\(e\)
+  Engine-C theorem, and the body states and proves it for
+  \(e=6,8,12\) under the \(|S|\ge3\) boundary;
+- the index-parity theorem record is in the reproducibility table and
+  core manifest;
+- the original and sign-corrected general-\(e\) records are in the
+  core manifest, and the current record is in the reproducibility
+  table;
+- Lemma 2's proof identifies the fixed field of
+  \([G,G]B/B\) as \(H\cap N^{[G,G]}=H\cap\mathbb Q^{\rm ab}\);
+- the introduction fixes \(\infty_2\) as the negative-square-root
+  embedding and PARI's first real place;
+- Engine A now has a single displayed closed formula for \(X_A\), plus
+  a remark explaining which exact inputs vary by case.
+
+The short case-level explanatory facts and the literature/citation
+obligations remain open.

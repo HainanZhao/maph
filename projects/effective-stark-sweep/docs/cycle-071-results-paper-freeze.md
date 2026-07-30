@@ -50,3 +50,13 @@ theorem inventory, expands all three engine proofs, corrects the
 \(\mathbb Q(\sqrt6)\) packet polynomial, and banks the genuine
 446-case parity replay.  Its independent builds are byte-identical at
 `SOURCE_DATE_EPOCH=1785414600`.
+
+Freeze v3 was in turn superseded by
+`artifacts/results-paper-freeze-v4.json`.  Version 4 adds the explicit
+fixed-field step in the parity proof, makes index parity the ninth
+inventory item, defines \(\infty_2\) as the negative-square-root
+embedding (PARI's first real place), displays the closed universal
+Engine-A product for \(X_A\), and promotes the banked general-\(e\)
+Engine-C normalization/orientation result to a named tenth theorem
+inventory item covering \(e=6,8,12\).  Independent builds are
+byte-identical at `SOURCE_DATE_EPOCH=1785417387`.

@@ -29,7 +29,7 @@ class ResultsPaperFreezeTests(unittest.TestCase):
         self.assertEqual(theory["specializations"]["12"]["direct_lprime_forward"], "-1/3")
 
     def test_freeze_hashes(self):
-        freeze = load("artifacts/results-paper-freeze-v3.json")
+        freeze = load("artifacts/results-paper-freeze-v4.json")
         manuscript = freeze["primary_manuscript"]
         self.assertEqual(sha(manuscript["tex"]), manuscript["tex_sha256"])
         self.assertEqual(sha(manuscript["pdf"]), manuscript["pdf_sha256"])
