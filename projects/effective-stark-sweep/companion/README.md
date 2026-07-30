@@ -4,6 +4,8 @@ This archive accompanies *Effective Archimedean Stark Theorems over
 Real Quadratic Fields: Quadratic Support, Shintani Transfer, and CM
 Descent*.
 
+Public record: <https://doi.org/10.5281/zenodo.21703306>.
+
 The paper contains the mathematical arguments. This archive exposes
 the exact case data, Arb certificate transcripts, correction records,
 and compact proof-checking programs used for the selected computational
