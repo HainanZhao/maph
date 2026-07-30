@@ -35,7 +35,7 @@ The current selected-results manuscript is
 It contains the uniform Engine-A theorem, eight selected Engine-B
 packets, five selected cyclic-quartic CM packets, and two structural
 lemmas. The paper, supplement, and companion archive are public at
-[Zenodo v1.2 DOI 10.5281/zenodo.21707692](https://doi.org/10.5281/zenodo.21707692);
+[Zenodo v1.3 DOI 10.5281/zenodo.21708121](https://doi.org/10.5281/zenodo.21708121);
 the top-level PDF and TeX files are directly previewable there.
 
 The census paper has a substantial Markdown draft at

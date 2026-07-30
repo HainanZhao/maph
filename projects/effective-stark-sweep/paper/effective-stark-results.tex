@@ -166,7 +166,13 @@ forbidden and would interchange the labels
 \subsection*{How the results fit together}
 
 There are three theorem mechanisms.  Engine A is a uniform closed-form
-formula for quadratic Fourier support.  Engine B reaches higher
+formula for quadratic Fourier support.  It is also the
+algorithmically closed stratum: Corollary~\ref{cor:Aclosed} evaluates
+every quadratic-support packet by exact finite arithmetic in class
+groups and unit lattices of quartic fields, with no analytic
+enclosure, safe exponent, or height comparison.  Engines B and C are
+instead per-case certified-analysis mechanisms; see the cost
+discussion at the end of Section~\ref{sec:shintani}.  Engine B reaches higher
 character orders when Shintani's maximal absolutely abelian subfield
 has index two: Proposition~\ref{prop:transfer} translates the
 algebraicity theorem and Lemma~\ref{lem:height} turns certified
@@ -523,6 +529,16 @@ finite arithmetic.
 \end{corollary}
 
 \begin{remark}
+The dominant per-character cost is one quartic-field call to
+\texttt{bnfinit(P,1)}, certified by \texttt{bnfcertify}, followed by
+the \(2\times2\) determinant in \eqref{eq:relative-index}.  Since
+\(\chi^\circ\) is quadratic, every imprimitive Euler factor at zero
+is \(0\) or \(2\), so \(E_\chi\) is either \(0\) or
+\(2^{r_\chi}\), where \(r_\chi\) counts the nonvanishing factors.
+After the relative units are embedded in their compositum, the packet
+minimal polynomial is obtained by an exact resultant; no
+floating-point recognition enters this computation.
+
 The word ``uniform'' refers to this single character product, not to
 one field-independent named unit.  For fixed
 \((K,\mathfrak m,A)\), the supported characters form a finite set,
@@ -536,14 +552,19 @@ vanishes, the product is empty and \(X_A=1\).
 
 The theorem is uniform; its proof does not enumerate the census.
 The corresponding queue statistics and exact Euler-degeneracy audit
-are reported in the supplement.  Each application still certifies its
+are reported in the supplement.  The closed form is what makes the
+frozen quadratic-support queue exhaustively verifiable rather than
+sampled.  In a mixed-support packet, its quadratic Fourier slice can
+be evaluated and removed exactly, so the certified-analysis budget of
+Engines B or C is spent only on the higher-order residual.  Each
+application still certifies its
 primitive conductor, field, class numbers, Euler factors, exact norm
 map, primitive kernel, determinant, and orientation.  The
 dimension-four and dimension-eight anchors independently replay
 \eqref{eq:quadratic-lprime},
 including relative index \(I_\chi=2\) in both dimension-eight cases.
 
-\section{Shintani transfer and height rigidity}
+\section{Shintani transfer and height rigidity}\label{sec:shintani}
 
 Let \(H=H_{\mathfrak m}\) be the one-place ray class field of
 \(\mathfrak m=\mathfrak f\infty_2\), and let \(\mathcal N\) be its
@@ -1365,7 +1386,7 @@ identify the isolated root with \(X_r\).
 \paragraph{Archive DOI.}
 The paper, supplementary tables, and frozen companion archive are
 deposited at
-\url{https://doi.org/10.5281/zenodo.21707692}.  The PDF and
+\url{https://doi.org/10.5281/zenodo.21708121}.  The PDF and
 \TeX\ source are exposed as top-level files in that record.  The
 companion archive contains the manuscript source, a complete
 SHA-256 manifest, expected verifier outputs, exact and Arb

@@ -43,13 +43,13 @@ class ResultsPaperMajorRevisionTests(unittest.TestCase):
         self.assertIn("RESULTS_PAPER_FULL_AUDIT=PASS", completed.stdout)
 
     def test_full_freeze_hashes(self):
-        freeze = load("artifacts/results-paper-full-freeze-v9.json")
+        freeze = load("artifacts/results-paper-full-freeze-v10.json")
         self.assertEqual(
             freeze["status"],
-            "PUBLISHED_ZENODO_V1_2_TATE_ARAKAWA_ROBLOT_SCOPE_VERIFIED",
+            "PUBLISHED_ZENODO_V1_3_ENGINE_A_COMPLEXITY_AND_PEELING",
         )
         self.assertEqual(
-            freeze["supersedes"], "artifacts/results-paper-full-freeze-v8.json"
+            freeze["supersedes"], "artifacts/results-paper-full-freeze-v9.json"
         )
         manuscript = freeze["primary_manuscript"]
         self.assertEqual(sha(manuscript["tex"]), manuscript["tex_sha256"])
@@ -71,7 +71,7 @@ class ResultsPaperMajorRevisionTests(unittest.TestCase):
             sha(companion["local_freeze"]), companion["local_freeze_sha256"]
         )
         publication = freeze["publication"]
-        self.assertEqual(publication["doi"], "10.5281/zenodo.21707692")
+        self.assertEqual(publication["doi"], "10.5281/zenodo.21708121")
         self.assertTrue(publication["top_level_pdf_and_tex"])
         self.assertEqual(
             sha(publication["metadata"]), publication["metadata_sha256"]
@@ -108,6 +108,28 @@ class ResultsPaperMajorRevisionTests(unittest.TestCase):
             "existence theorems",
             paper,
         )
+
+    def test_engine_a_cost_and_peeling_are_explicit(self):
+        paper = (ROOT / "paper/effective-stark-results.tex").read_text()
+        self.assertIn("algorithmically closed stratum", paper)
+        self.assertIn(
+            "with no analytic\n"
+            "enclosure, safe exponent, or height comparison",
+            paper,
+        )
+        self.assertIn("The dominant per-character cost is one quartic-field", paper)
+        self.assertIn(r"\(2\times2\) determinant", paper)
+        self.assertIn(r"\(2^{r_\chi}\)", paper)
+        self.assertIn(
+            "packet\nminimal polynomial is obtained by an exact resultant",
+            paper,
+        )
+        self.assertIn("exhaustively verifiable rather than\nsampled", paper)
+        self.assertIn(
+            "quadratic Fourier slice can\nbe evaluated and removed exactly",
+            paper,
+        )
+        self.assertIn("higher-order residual", paper)
 
     def test_referee_must_fixes_are_regression_guarded(self):
         paper = (ROOT / "paper/effective-stark-results.tex").read_text()

@@ -1,0 +1,88 @@
+{
+  "companion_archive": {
+    "archive": "dist/effective-stark-results-companion-v13.tar.gz",
+    "archive_replay": "PASS",
+    "archive_sha256": "1ecca96bd388ab2cafa27c091380121db4749e41ae794c2326439adbbe87b608",
+    "builder": "scripts/build_results_companion.py",
+    "builder_sha256": "9470c5a322b7076800c9a1f6ca73667f3a62d21fa213301d53cfda3bc398f8dd",
+    "local_freeze": "artifacts/results-paper-companion-local-freeze-v13.json",
+    "local_freeze_sha256": "adade491abb21a7fbaa8be3bea1269c178fbfa5ad91b2b61a66ce6f209649a45",
+    "manifest_file_count": 8413,
+    "status": "PUBLIC_ZENODO",
+    "verifier": "scripts/verify_results_companion.py",
+    "verifier_sha256": "ed1f4e5072ea2103a6865fff99815498b9f26af7b4b81f44dc68dc2c06ef3e72"
+  },
+  "engine_a_complexity": {
+    "dominant_cost": "one certified quartic-field bnfinit(P,1)/bnfcertify computation per supported character",
+    "euler_factor_values": "0 or a power of 2",
+    "mixed_support_peeling": "quadratic Fourier slice evaluated and removed exactly before higher-order certified analysis",
+    "packet_polynomial": "exact resultant in the compositum",
+    "status": "WRITTEN_AND_REGRESSION_GUARDED"
+  },
+  "engine_c_fourier_correction": {
+    "artifact": "artifacts/engine-c-fourier-convention-correction-v1.json",
+    "artifact_sha256": "c6e48cebc242ac7194ac3905825d6780a05175e156559eb92de4d951bbc0a420",
+    "audit_script": "scripts/audit_engine_c_fourier_convention.py",
+    "audit_script_sha256": "51c5fb6e6098621efd77dc4eca85eb533a186d247e9b1e570932dd3a5e21f354"
+  },
+  "primary_manuscript": {
+    "independent_builds_byte_identical": true,
+    "latex_passes": 3,
+    "latex_warnings": 0,
+    "page_count": 18,
+    "pdf": "paper/effective-stark-results.pdf",
+    "pdf_sha256": "addf0f6cea1e41d012dae9d3092f34cd6365ee3c5d7aa3e7f3a804d034295834",
+    "source_date_epoch": 1785420000,
+    "tex": "paper/effective-stark-results.tex",
+    "tex_sha256": "29d0deb1da369cbf755bfb38946597978c1408bc62f1a3b2a0e0053e9f0810d3"
+  },
+  "prior_work_audit": {
+    "A4_scope": "not required by Roblot Theorems 6.1 and 7.1 for existence; required only in the earlier deduction from an assumed Stark unit to P2",
+    "artifact": "artifacts/roblot-sextic-overlap-audit-v1.json",
+    "artifact_sha256": "41341515494a09f0268280dca275e5cfb40f54c2b5e86954fcba151a748d4cd3",
+    "engine_c_boundary": "Roblot's squareness criteria assume a totally real base and are not used for the imaginary-quadratic Engine-C divisibility input",
+    "quadratic_context": "Tate IV.5.4 proves the underlying quadratic rank-one case; Arakawa 1985 supplies related relative-index context; Engine A contributes the uniform explicit one-place formula",
+    "roblot_7_1_applies_count": 4,
+    "script": "scripts/audit_roblot_sextic_overlap.gp",
+    "script_sha256": "d6e57f4cc8dbfbaea730698db9fbafec39efde2ca04139993a79ff3a3493523a",
+    "wild_exception": "RQ-002057"
+  },
+  "publication": {
+    "concept_doi": "10.5281/zenodo.21703305",
+    "doi": "10.5281/zenodo.21708121",
+    "metadata": "artifacts/zenodo-results-record-metadata-v4.json",
+    "metadata_sha256": "9ab70afe71dc778655dcf47668c20c44a36b02ccecd1dab35c40ce13355fc1f0",
+    "record": "artifacts/zenodo-results-publication-v4.json",
+    "record_sha256": "62e1033cbe77c19c9d56df56ee4471ba622c286cad009b985b56eada5fdf4076",
+    "record_url": "https://zenodo.org/records/21708121",
+    "status": "PUBLISHED",
+    "top_level_pdf_and_tex": true,
+    "version": "1.3"
+  },
+  "recorded_at_utc": "2026-07-30T17:38:30Z",
+  "referee_audit": {
+    "artifact": "artifacts/results-paper-full-referee-audit-v2.json",
+    "artifact_sha256": "ecefe2855d344d5b4c7c7465019570e7b0a76bb4efb38dbcb4d6e4aba799be08",
+    "outcome": "PASS",
+    "script": "scripts/audit_results_paper_full.py",
+    "script_sha256": "7c6517fb205ff2add73715df5201c28f81988e950f78c7999a833c5cbcc52b27"
+  },
+  "schema": "effective-stark-results-paper-full-freeze-v10",
+  "shintani_source_map": {
+    "artifact": "artifacts/shintani-1978-source-map-v1.json",
+    "artifact_sha256": "b145c2a7ae22853963586bfb2ea276290d9e8e4c043a5cca44fac2176e0083c0"
+  },
+  "status": "PUBLISHED_ZENODO_V1_3_ENGINE_A_COMPLEXITY_AND_PEELING",
+  "supplement": {
+    "independent_builds_byte_identical": true,
+    "latex_passes": 3,
+    "latex_warnings": 0,
+    "page_count": 3,
+    "pdf": "paper/effective-stark-results-supplement.pdf",
+    "pdf_sha256": "ae363f2bc59f168194afb71e3dde7c6caf4e7550e061d64afe685f74448a685f",
+    "source_date_epoch": 1785420000,
+    "tex": "paper/effective-stark-results-supplement.tex",
+    "tex_sha256": "1d02df5032660c7e6e6351e6d4a8ecd2781e344f2f47dc57986acfc0e6085ba9"
+  },
+  "supersedes": "artifacts/results-paper-full-freeze-v9.json"
+}

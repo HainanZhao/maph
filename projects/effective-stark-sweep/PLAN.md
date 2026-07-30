@@ -76,15 +76,15 @@ case-level PROVED corpus entry
 
 | Track | State | Current fact | Controlling evidence / file |
 |---|---|---|---|
-| Results paper | `PUBLISHED` | v1.2 adds Tate--Arakawa credit, clarifies Roblot (A4), and excludes his squareness criteria from Engine C; published at DOI 10.5281/zenodo.21707692 | `paper/effective-stark-results.tex`, `artifacts/zenodo-results-publication-v3.json` |
+| Results paper | `PUBLISHED` | v1.3 adds the exact Engine-A cost anatomy and mixed-support peeling; published at DOI 10.5281/zenodo.21708121 | `paper/effective-stark-results.tex`, `artifacts/zenodo-results-publication-v4.json` |
 | Results-paper audit | `BANKED` | Full A/B/C audit and compact companion replay pass, including exact Engine-A degeneracy and Engine-C Fourier-convention audits | `artifacts/results-paper-full-referee-audit-v2.json` |
 | Genuine routing census v5 | `BANKED` | 8,200/8,200 genuine screens; proxy recovery complete | `artifacts/full-census-yield-declaration-v5.json` |
 | Census manuscript | `ACTIVE` | Substantial Markdown draft exists; no journal LaTeX/PDF yet | `paper/effective-stark-sweep-draft.md` |
 | Engine-B occurrence transport | `READY` | Last formal W4 gate; current scope must be regenerated from v5 rather than copied from the obsolete 195-row ledger | `docs/cycle-070-genuine-census-v5.md` |
 | W4 census analysis | `BLOCKED` | Opens after the v5 Engine-B transport ledger closes | this plan |
 | DST / Cohen--Roblot comparison | `READY` | Initial perimeter table exists; case-by-case overlap comparison is incomplete | `docs/prior-art-overlap-table-v1.md` |
-| Public certificate archive | `PUBLISHED` | Companion v12 published; SHA-256 `04ab5b01021b3b7ba4adb4fbf25c872a9a2507f52bc32da0370275d70b53cfce` | `artifacts/zenodo-results-publication-v3.json` |
-| Zenodo / arXiv | `ZENODO_DONE` | Corrected Zenodo v1.2 published; arXiv remains a separate human action | DOI `10.5281/zenodo.21707692` |
+| Public certificate archive | `PUBLISHED` | Companion v13 published; SHA-256 `1ecca96bd388ab2cafa27c091380121db4749e41ae794c2326439adbbe87b608` | `artifacts/zenodo-results-publication-v4.json` |
+| Zenodo / arXiv | `ZENODO_DONE` | Corrected Zenodo v1.3 published; arXiv remains a separate human action | DOI `10.5281/zenodo.21708121` |
 
 ### Genuine census v5 routing counts
 
