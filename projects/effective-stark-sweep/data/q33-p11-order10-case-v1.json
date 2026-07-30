@@ -1,0 +1,47 @@
+{
+  "schema": "effective-stark-case-development-v1",
+  "case_id": "RQ-001107",
+  "field": "Q(sqrt(33))",
+  "finite_ideal_hnf": [[11, 5], [0, 1]],
+  "finite_norm": 11,
+  "archimedean_place": "infinity_2",
+  "local_shape": {
+    "claim_tag": "VERIFIED",
+    "ramified_rational_prime": 11,
+    "one_place_ray_group": [10],
+    "two_place_ray_group": [10, 2],
+    "fourier_support_orders": [2, 10],
+    "first_support_order_containing_prime_5_target": true
+  },
+  "engine_b": {
+    "claim_tag": "VERIFIED_W2_SCREEN",
+    "corrected_battery_replay_passed": true,
+    "imaginary_bases": ["Q(sqrt(-3))", "Q(sqrt(-11))"],
+    "selected_base": "Q(sqrt(-3))",
+    "selected_base_polynomial": "z^2-z+1",
+    "normal_closure_degree": 40,
+    "two_route_match_count": 2
+  },
+  "exponent": {
+    "claim_tag": "VERIFIED",
+    "safe_exponent": 15840,
+    "factorization": "2^5 * 3^2 * 5 * 11",
+    "selected_route_divisor_count": 2
+  },
+  "height_window": {
+    "claim_tag": "ENCLOSED",
+    "maximum_packet_comparison_degree_cap": 80,
+    "voutier_degree_window": [3, 80],
+    "minimum_voutier_lower_bound": "5.227953322226842684096474508733414710049805681812675619102365340795663452226475183308244934541235949e-5",
+    "minimum_occurs_at_degree": 3,
+    "degree_80_voutier_bound": "0.0001197891361531460546930407687826495592308716888318137051544105260326583637671430775648654523004084846",
+    "raw_log_error_ceiling_for_100x_margin": "3.300475582213915835919491482786246660384978334477699254483816503027565310749037363199649579887143907e-11",
+    "source_artifact": "artifacts/rq001107-voutier-window-v1.json",
+    "final_certificate_rule": "State the exact maximum comparison degree actually reached and the minimum certified Voutier bound over the entire realized degree window."
+  },
+  "identification": {
+    "claim_tag": "NOT_YET_RUN",
+    "state": "W3 pending"
+  },
+  "verdict": "THEOREM_CANDIDATE_NOT_YET_VERIFIED"
+}

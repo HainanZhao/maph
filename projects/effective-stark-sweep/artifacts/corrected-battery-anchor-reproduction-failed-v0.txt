@@ -1,0 +1,9 @@
+CORRECTED_BATTERY_ANCHOR_REPRODUCTION_FAILED_V0
+DATE_UTC=2026-07-30
+FAILED_AFTER_ANCHOR=A-d4-ray4
+MATHEMATICAL_MISMATCH=0
+CAUSE=The new --transcript-dir option accepted a relative path, while the
+artifact-recording path called Path.relative_to against an absolute project
+root.  The A-d4-ray4 computation itself passed, but the driver raised
+ValueError before recording the result.
+DISPOSITION=Preserve this transcript; resolve output paths before replay.

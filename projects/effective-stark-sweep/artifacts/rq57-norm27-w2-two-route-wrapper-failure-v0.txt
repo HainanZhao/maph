@@ -1,0 +1,9 @@
+RQ57_NORM27_W2_TWO_ROUTE_WRAPPER_FAILURE_V0
+DATE_UTC=2026-07-30
+MATHEMATICAL_MISMATCH=0
+CAUSE=The case-specific GP file used read() to load a generic script that
+contains its own terminal run_screen() expression. In noninteractive file
+mode GP emitted only the parisizemax warning and no completion marker,
+while returning zero. The empty and warning-only transcripts are preserved.
+DISPOSITION=Use the same validated fresh-process Python invocation as the
+195-case corrected battery and require explicit completion markers.

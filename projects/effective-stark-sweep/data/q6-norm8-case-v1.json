@@ -40,9 +40,21 @@
   },
   "identification": {
     "claim_tag": "NUMERICAL",
-    "state": "candidate isolated numerically; analytic Arb orientation pending",
-    "required_promotion_gate": "Arb Shintani/cocycle enclosure with the exact e=8 normalization"
+    "state": "BLOCKED_BEFORE_ARB: candidate isolated numerically",
+    "required_promotion_gates": [
+      "A written e=8 analogue of Lemma 4 deriving the exact Stark normalization from the ordinary complex absolute-value convention",
+      "An exact orientation procedure that enumerates and uniquely resolves all eight root-of-unity multiples",
+      "An independent Q(sqrt(-3)) imaginary-base reconstruction identifying the same oriented packet"
+    ],
+    "arb_gate_order": "The Arb Shintani/cocycle enclosure may run only after all three gates pass."
+  },
+  "e8_protocol": {
+    "claim_tag": "PREREGISTERED_NOT_PROVED",
+    "normalization_target": "With |x|_w=|x|_ordinary^2 and e=8, the 2/e factor is 1/4; the exact character/Fourier convention must be derived in the written analogue before use.",
+    "orientation_target": "Enumerate zeta_8^j times the candidate for j=0,...,7 and require one exact Artin-phase/normal-closure identity to select exactly one.",
+    "second_base_target": "The Q(sqrt(-3)) route must independently recover the same packet and orientation, not merely an isomorphic normal closure.",
+    "mismatch_disposition": "HALT_AND_REPORT"
   },
   "verdict": "THEOREM_CANDIDATE_NOT_YET_VERIFIED",
-  "boundary": "All field, conductor, character, Stark-hypothesis, and unit-lattice claims are exact. The equality between the differenced invariant and the displayed candidate unit is not claimed until the Arb orientation gate passes."
+  "boundary": "All field, conductor, character, Stark-hypothesis, and unit-lattice claims are exact. The equality between the differenced invariant and the displayed candidate unit is not claimed. In particular, an Arb enclosure alone cannot promote the case until the three e=8 gates are discharged."
 }

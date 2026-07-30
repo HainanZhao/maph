@@ -1,0 +1,65 @@
+{
+  "schema": "effective-stark-closure-execution-order-v2",
+  "claim_tag": "PREREGISTERED",
+  "supersedes_execution_order_only": "artifacts/theorem-value-selection-v1.json",
+  "reason_for_amendment": [
+    "RQ-002057 is the sharpest dimension-6 analogue because it combines order-six support with a ramified 3-power modulus.",
+    "Q(sqrt(6)) cannot enter Arb identification until the three e=8 proof gates close.",
+    "Packet-level B/C overlaps require immediate same-packet alignment checks, but are not called dual proofs before alignment."
+  ],
+  "gates_now_closed": {
+    "seven_anchor_corrected_battery": true,
+    "all_195_b_passes_corrected_battery": true
+  },
+  "execution_order": [
+    {
+      "priority": 0,
+      "work": "Dual-engine same-packet alignment pilot",
+      "case_id": "RQ-007674",
+      "claim_boundary": "Packet-level intersection only; prove exact packet alignment before calling this a dual-engine case."
+    },
+    {
+      "priority": 1,
+      "work": "W2/W3 closure",
+      "case_id": "RQ-002057"
+    },
+    {
+      "priority": 2,
+      "work": "W3 closure",
+      "case_id": "RQ-000419"
+    },
+    {
+      "priority": 3,
+      "work": "W2/W3 closure",
+      "case_id": "RQ-000021"
+    },
+    {
+      "priority": 4,
+      "work": "W2/W3 closure",
+      "case_id": "RQ-000108"
+    },
+    {
+      "priority": 5,
+      "work": "W2/W3 closure",
+      "case_id": "RQ-002955"
+    },
+    {
+      "priority": 6,
+      "work": "W2/W3 closure",
+      "case_id": "RQ-001107"
+    }
+  ],
+  "blocked": [
+    {
+      "case_id": "RQ-000129",
+      "reason": "e=8 normalization, eightfold orientation, and second-base packet cross-check are all mandatory before Arb."
+    }
+  ],
+  "deferred": [
+    {
+      "case_id": "RQ-004467",
+      "safe_exponent": 13810176,
+      "reason": "Poor early W3 target."
+    }
+  ]
+}

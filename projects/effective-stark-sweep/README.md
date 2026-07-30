@@ -16,7 +16,7 @@ census definitions, orchestration, records, and certificates.
 
 ## Current state
 
-Cycles 001–050 are complete. Publication uploads, identifier recording, and
+Cycles 001–052 are complete. Publication uploads, identifier recording, and
 correspondence are administrative metadata, not research gates.  The
 earlier sequencing records are retained only as process history and are
 superseded by `data/research-activation-v3.json`.
@@ -92,6 +92,21 @@ not conductor proxies. Their safe exponents are 2880, 2016, 2592,
 cheapest exponent, a prime-power conductor, a four-occurrence
 order-six transfer, and the first order-ten target. See
 [`docs/cycle-051-theorem-value-selection.md`](docs/cycle-051-theorem-value-selection.md).
+
+After discovery of the `NO_ABELIAN_IMAGINARY_BASE` false-pass mode, the
+entire affected proof perimeter was rerun before any selected closure:
+7/7 anchors passed end to end and structurally, all three currently
+B-routed anchors passed the corrected predicate, and all 195/195 prior
+B passes agreed exactly in fresh processes. See
+[`docs/cycle-052-corrected-battery.md`](docs/cycle-052-corrected-battery.md).
+
+The promoted \(\mathbb Q(\sqrt{57})\), norm-27 case now has a dedicated
+W2 certificate. Both derived imaginary bases reconstruct its degree-24
+normal closure, and the selected \(\mathbb Q(\sqrt{-19})\) route has
+clearing exponents 864, 324, and 108, hence safe exponent 2592. W3
+packet identification is next. The \(\mathbb Q(\sqrt6)\) Arb step is
+explicitly blocked until the \(e=8\) normalization, eightfold
+orientation, and second-base packet check are proved.
 
 ## Claim tags
 

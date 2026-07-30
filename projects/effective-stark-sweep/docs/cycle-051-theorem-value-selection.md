@@ -35,3 +35,15 @@ price W3 risk cheaply; the fifth deliberately buys new character-order
 structure. `RQ-006512` is the first multiplicity reserve and
 `RQ-007487` the first mixed-support reserve.  The Q(sqrt(111)) case
 remains explicitly deprioritized.
+
+## Cycle-052 significance amendment
+
+The frozen membership and measured exponents above do not change, but
+the execution order does. `RQ-002057` moves ahead of `RQ-000021`
+because its ramified 3-power modulus and order-six support make it the
+closest reachable analogue of the dimension-6
+\(\mathbb Q(\sqrt{21})\) wall. `RQ-001107` is the first order-ten
+target and therefore the first target whose support order contains the
+prime 5. Its case certificate must state both the maximum
+packet-comparison degree and the minimum Voutier bound across the
+entire realized degree window.

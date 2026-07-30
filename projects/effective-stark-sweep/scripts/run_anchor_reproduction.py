@@ -124,9 +124,13 @@ def run_step(step: dict[str, Any], timeout: int) -> dict[str, Any]:
     }
 
 
-def write_transcript(anchor_id: str, steps: list[dict[str, Any]]) -> Path:
-    TRANSCRIPT_DIR.mkdir(parents=True, exist_ok=True)
-    path = TRANSCRIPT_DIR / f"{anchor_id}.txt"
+def write_transcript(
+    anchor_id: str,
+    steps: list[dict[str, Any]],
+    transcript_dir: Path = TRANSCRIPT_DIR,
+) -> Path:
+    transcript_dir.mkdir(parents=True, exist_ok=True)
+    path = transcript_dir / f"{anchor_id}.txt"
     pieces = []
     for index, step in enumerate(steps, start=1):
         pieces.append(
@@ -150,7 +154,15 @@ def main() -> int:
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--timeout", type=int, default=3600)
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
+    parser.add_argument(
+        "--transcript-dir",
+        type=Path,
+        default=TRANSCRIPT_DIR,
+        help="separate transcript bank for versioned replays",
+    )
     args = parser.parse_args()
+    args.output = args.output.resolve()
+    args.transcript_dir = args.transcript_dir.resolve()
 
     manifest = load_manifest()
     anchors = manifest["anchors"]
@@ -198,7 +210,9 @@ def main() -> int:
             if not result["passed"]:
                 all_passed = False
                 break
-        transcript = write_transcript(anchor["id"], steps)
+        transcript = write_transcript(
+            anchor["id"], steps, args.transcript_dir
+        )
         records.append(
             {
                 "anchor_id": anchor["id"],
