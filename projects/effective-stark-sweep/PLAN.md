@@ -79,9 +79,11 @@ case-level PROVED corpus entry
 | Results paper | `PUBLISHED` | v1.3 adds the exact Engine-A cost anatomy and mixed-support peeling; published at DOI 10.5281/zenodo.21708121 | `paper/effective-stark-results.tex`, `artifacts/zenodo-results-publication-v4.json` |
 | Results-paper audit | `BANKED` | Full A/B/C audit and compact companion replay pass, including exact Engine-A degeneracy and Engine-C Fourier-convention audits | `artifacts/results-paper-full-referee-audit-v2.json` |
 | Genuine routing census v5 | `BANKED` | 8,200/8,200 genuine screens; proxy recovery complete | `artifacts/full-census-yield-declaration-v5.json` |
-| Census manuscript | `ACTIVE` | Substantial Markdown draft exists; no journal LaTeX/PDF yet | `paper/effective-stark-sweep-draft.md` |
-| Engine-B occurrence transport | `READY` | Last formal W4 gate; current scope must be regenerated from v5 rather than copied from the obsolete 195-row ledger | `docs/cycle-070-genuine-census-v5.md` |
-| W4 census analysis | `BLOCKED` | Opens after the v5 Engine-B transport ledger closes | this plan |
+| Census-paper range | `BANKED` | Existing maximal-order universe frozen: squarefree radicands 2--200, ideal norm at most 100, 8,200 conjugacy representatives | `data/census-paper-preregistration-v1.json` |
+| Census-paper Layer 0 | `BANKED` | Clean PARI enumeration reproduced the backbone; support-first split is T/Q/H = 3,936/1,560/2,704 | `artifacts/census-paper-layer0-reconciliation-v1.json` |
+| Census manuscript | `ACTIVE` | Execution plan and older Markdown research draft exist; no journal LaTeX/PDF yet | `docs/census-paper-execution-plan-v1.md`, `paper/effective-stark-sweep-draft.md` |
+| Engine-B occurrence transport | `READY` | Gates case-level transported `PROVED` claims, not structural T/Q/H statistics; scope must be regenerated from v5 | `docs/cycle-070-genuine-census-v5.md` |
+| W4 census analysis | `READY` | Support-first finite-range analysis may run; transported-case and safe-exponent claims remain gated separately | `artifacts/census-paper-layer0-reconciliation-v1.json` |
 | DST / Cohen--Roblot comparison | `READY` | Initial perimeter table exists; case-by-case overlap comparison is incomplete | `docs/prior-art-overlap-table-v1.md` |
 | Public certificate archive | `PUBLISHED` | Companion v13 published; SHA-256 `1ecca96bd388ab2cafa27c091380121db4749e41ae794c2326439adbbe87b608` | `artifacts/zenodo-results-publication-v4.json` |
 | Zenodo / arXiv | `ZENODO_DONE` | Corrected Zenodo v1.3 published; arXiv remains a separate human action | DOI `10.5281/zenodo.21708121` |
@@ -111,6 +113,16 @@ supported quadratic character occurrences, affecting 603 rows; in
 346 rows every supported derivative vanishes and the explicit product
 is empty, so \(X_A=1\).  Before the census paper prints packet counts,
 W4 must distinguish routing support from effective derivative support.
+
+For the census paper, v5's routing labels are not the structural
+trichotomy. A support-first audit found 3,936 empty-support rows:
+3,899 labeled `PROVED_TRIVIAL` in v5 and 37 mislabeled `FRONTIER`
+because the old declaration applied `EXPONENT_CAP` before the
+empty-support theorem. The paper-level split is therefore
+T/Q/H = 3,936/1,560/2,704, with the higher-order stratum cross-tabulating
+as 232 B-eligible, 881 C-eligible, and 1,591 frontier. The v5 artifact
+is preserved as historical routing evidence; the correction is banked
+in `artifacts/census-paper-layer0-reconciliation-v1.json`.
 
 ## Banked theorem inventory
 
@@ -166,9 +178,12 @@ RESULTS PAPER
 
 CENSUS PAPER
   genuine routing census v5 [done]
-    -> regenerate v5 Engine-B transport scope
-      -> close occurrence transport
+    -> support-first T/Q/H reconciliation [done]
+      -> Q exact corpus + H taxonomy
         -> W4 structural analysis
+  regenerate v5 Engine-B transport scope
+    -> close occurrence transport
+      -> transported occurrence PROVED claims
   DST / Cohen--Roblot overlap comparison ------------+
   revise existing Markdown draft --------------------+
                                                        v
@@ -267,13 +282,39 @@ the frozen hashes.
 
 State: `ACTIVE`
 
+- [x] Freeze the existing maximal-order range and the RQ registry:
+      squarefree radicands \(2\le D\le200\), integral-ideal norm at
+      most 100, conjugate one-place pairs identified.
+- [x] Freeze the degree-32 exact-resultant cap and deterministic
+      50-row independent analytic audit.
+- [x] Rerun the PARI ideal enumeration and reproduce the 121 fields,
+      13,939 raw ideals, and 8,200 representatives exactly.
+- [x] Reconcile the structural T/Q/H split. Correct the 37
+      empty-support rows that v5 routed to `FRONTIER`; preserve v5
+      rather than rewriting history.
+- [x] Reconcile the Q-stratum counts: 1,560 rows, 2,232 supported
+      quadratic characters, 912 quartic fields, 672 zero Euler
+      products, 603 affected rows, and 346 all-vanishing rows.
+- [ ] Build the row-level exact Q corpus under the uniform theorem.
+- [x] Preselect RQ-000013 as the first one-character, one-removed-prime,
+      nonzero imprimitive branch, hence the worked \(E_\chi=2\) row.
+- [ ] Complete and print RQ-000013's exact unit/index calculation;
+      share its certificate with the results-paper supplement.
+- [ ] Run the preregistered independent 50-row Arb audit.
+- [ ] Build the support-order/Engine-B/Engine-C/Roblot/resolution
+      matrix for all 2,704 H rows.
+- [ ] Extract the minimal unresolved row at every support order and
+      the minimal all-mechanisms-fail row, led by the
+      \(\mathbb Q(\sqrt{21})\) wall.
 - [ ] Derive a new v5 occurrence-transport manifest from 232 Engine-B
       eligible rows and 88 closures. Reconcile it explicitly against
       the obsolete 195-row/51-closure ledger; do not silently reuse the
       old count of 187 pending transports.
 - [ ] Certify member-modulus identity, ray-class map, orientation, and
       packet transport for every occurrence claimed at case level.
-- [ ] Seal the transport ledger and open W4.
+- [ ] Seal the transport ledger before calling any transported
+      occurrence case-level `PROVED`. Structural T/Q/H counts and
+      mechanism eligibility do not wait on transport.
 - [ ] Run W4 in the preregistered order:
   1. Shintani-index distribution;
   2. FRONTIER share versus conductor norm;

@@ -1,0 +1,36 @@
+{
+  "claim_boundary": {
+    "higher_order_identifications_reproved": false,
+    "quadratic_stratum_exhaustive_exact_evaluation": true,
+    "statistics_are_finite_range_only": true,
+    "trichotomy_basis": "exact differenced Fourier support"
+  },
+  "frozen_range": {
+    "D_max": 200,
+    "D_min": 2,
+    "field_parameter": "squarefree radicand D",
+    "finite_ideal_norm_max": 100,
+    "finite_moduli": "all nonzero integral ideals of the maximal order O_K",
+    "nonmaximal_form_order_moduli": "excluded from the 8200-row theorem universe; retained only as external anchors",
+    "one_place_conjugation_rule": "identify (f,infinity_1) with (conjugate(f),infinity_2)",
+    "representative_count_expected": 8200,
+    "reuse_existing_RQ_registry": true
+  },
+  "independent_analytic_spotcheck": {
+    "acceptance": "the independently computed Arb enclosure of each selected logarithmic derivative contains the logarithm of the exact Engine-A unit product at every checked Artin class",
+    "failure_rule": "halt publication of the affected table; preserve the failed transcript; do not drop or replace the row",
+    "precision_bits_initial": 192,
+    "sample_selection": "take the 50 Q-row case_ids with lexicographically smallest SHA-256 of seed || case_id",
+    "sample_size": 50,
+    "seed": "effective-stark-census-q-audit-v1|2026-07-30",
+    "target_decimal_digits": 38
+  },
+  "packet_polynomial_policy": {
+    "deliverable_above_cap": "exact oriented unit product and exponent data",
+    "deliverable_at_or_below_cap": "also compute the packet minimal polynomial by an exact resultant in the compositum",
+    "maximum_absolute_compositum_degree": 32
+  },
+  "recorded_at_utc": "2026-07-30T00:00:00Z",
+  "schema": "effective-stark-census-paper-preregistration-v1",
+  "status": "FROZEN_BEFORE_CENSUS_PAPER_STATISTICS"
+}

@@ -1,5 +1,17 @@
 # An effective census of unconditional archimedean Stark instances
 
+> **MANUSCRIPT MIGRATION NOTE (2026-07-30).** This is the historical
+> research draft, not the current theorem-count source. The
+> support-first census-paper plan is
+> `docs/census-paper-execution-plan-v1.md`, and its controlling
+> reconciliation is
+> `artifacts/census-paper-layer0-reconciliation-v1.json`.
+> The paper-level trichotomy is now T/Q/H =
+> 3,936/1,560/2,704. Census v5's 3,899 trivial count was a routing
+> count that left 37 empty-support rows behind `EXPONENT_CAP`; the
+> discrepancy is preserved and explained rather than silently edited
+> out below.
+
 > **GENUINE CENSUS v5 BANKED.** Population counts below are now based
 > only on GENUINE predicates. W4 analysis remains closed solely on B
 > occurrence transport. The theorem-only results paper remains

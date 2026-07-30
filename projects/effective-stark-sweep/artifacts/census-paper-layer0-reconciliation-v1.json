@@ -1,0 +1,105 @@
+{
+  "claim_tag": "VERIFIED_EXACT_RECONCILIATION",
+  "clean_enumeration_rerun": {
+    "ephemeral_output_sha256": "625f11a6f62c9cb3d43cf7a18550f2c117c026a8f6a401c33338ba7372fe2034",
+    "mathematical_payload_identical": true,
+    "performed": true
+  },
+  "higher_order_mechanism_cross_tab": {
+    "ENGINE_B_ELIGIBLE": 232,
+    "ENGINE_C_ELIGIBLE": 881,
+    "FRONTIER": 1591,
+    "sum": 2704
+  },
+  "parity_replay": {
+    "nonempty_support_rows": 0,
+    "odd_index_above_two_rows": 446
+  },
+  "predicate_provenance": "GENUINE",
+  "publication_universe": {
+    "D_max": 200,
+    "D_min": 2,
+    "field_count": 121,
+    "field_parameter": "squarefree radicand D",
+    "finite_ideal_norm_max": 100,
+    "finite_modulus_type": "all nonzero integral ideals of O_K",
+    "nonmaximal_form_order_moduli_in_universe": false,
+    "one_place_representatives": "conjugate pairs identified",
+    "raw_ideal_count": 13939,
+    "representative_count": 8200
+  },
+  "quadratic_stratum_reconciliation": {
+    "classification_rule": "the 346 rows remain in Q because the trichotomy is by Fourier support, even though exact evaluation gives X_A=1",
+    "distinct_quartic_fields": 912,
+    "rows": 1560,
+    "rows_affected_by_zero_Euler_factors": 603,
+    "rows_with_all_supported_derivatives_zero": 346,
+    "supported_quadratic_character_occurrences": 2232,
+    "zero_Euler_character_occurrences": 672
+  },
+  "recorded_at_utc": "2026-07-30T17:47:18.591503+00:00",
+  "schema": "effective-stark-census-paper-layer0-reconciliation-v1",
+  "source_sha256": {
+    "artifacts/engine-a-euler-degeneracy-v1.json": "f4ead3438d3b305fa42e73e1d979530a04104ce8d642db0b1c9ac85929bac033",
+    "artifacts/engine-a-queue-analysis-v1.json": "77c28debf2bd95df78e22e7e7d788b2a147e5a850ab84333b7b1e6e6525d6776",
+    "artifacts/frozen-ideal-census-v1.json": "9fa0f1880ca0c2d263e0235bd4ed83e8e6001b88bfede0927a7197f46f7d4563",
+    "artifacts/full-census-yield-declaration-v5.json": "a7fe4234899d610d93c841be394abf730272179f5c867336997d75de965425f2",
+    "artifacts/w1-full-census-v1.json": "b656a587bea705e8efe817e2870a0ea86cbf2c10fa37c7d9aa03d3868dfa76f1",
+    "data/range-v1.json": "277af7a5b79657342bd8a793c05b6a22f82890b8f6763f7d77a8ca669114d869",
+    "scripts/audit_census_paper_layer0.py": "7824b372295078059804a23fbe0f5cfe3d09bf3350e2289b6e6fec766ff6cdb9",
+    "scripts/enumerate_frozen_ideals.gp": "fcd5e32514e57a0eb275a1dd5cd6ce01d42de5cb53a7044fbf8f8256c47e51f8",
+    "scripts/enumerate_frozen_ideals.py": "1a13e37fb4f0cfe832c8ab61cf998203eed567a87727f3210cb10aa8387525af"
+  },
+  "structural_trichotomy": {
+    "H_nonempty_higher_order_support": 2704,
+    "Q_nonempty_quadratic_support": 1560,
+    "T_empty_support": 3936,
+    "sum": 8200
+  },
+  "v5_reconciliation": {
+    "affected_case_ids": [
+      "RQ-001878",
+      "RQ-002198",
+      "RQ-002235",
+      "RQ-002558",
+      "RQ-002766",
+      "RQ-002916",
+      "RQ-003026",
+      "RQ-003262",
+      "RQ-003317",
+      "RQ-003407",
+      "RQ-003424",
+      "RQ-004007",
+      "RQ-004264",
+      "RQ-004406",
+      "RQ-004494",
+      "RQ-004519",
+      "RQ-004610",
+      "RQ-004835",
+      "RQ-004949",
+      "RQ-004990",
+      "RQ-005004",
+      "RQ-005017",
+      "RQ-005455",
+      "RQ-005899",
+      "RQ-005932",
+      "RQ-006020",
+      "RQ-006472",
+      "RQ-006813",
+      "RQ-006912",
+      "RQ-007188",
+      "RQ-007401",
+      "RQ-007481",
+      "RQ-007536",
+      "RQ-007561",
+      "RQ-007629",
+      "RQ-007980",
+      "RQ-008005"
+    ],
+    "banked_routing_trivial_count": 3899,
+    "cause": "v5 applied EXPONENT_CAP before the empty-support theorem to 37 W1 engine-NONE rows",
+    "empty_support_rows_previously_routed_FRONTIER": 37,
+    "mathematical_consequence": "the census-paper trichotomy uses 3936/1560/2704; v5 remains a preserved historical routing declaration",
+    "structural_empty_support_count": 3936
+  }
+}
