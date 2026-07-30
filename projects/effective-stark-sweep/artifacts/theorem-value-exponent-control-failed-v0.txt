@@ -1,0 +1,10 @@
+The first generic-exponent control command compared whole printed
+divisor rows with `cmp`.  It reported a byte difference because the
+generic script prints an exponent vector and `F_D`, while the two
+older case-specific scripts use a shorter row format.  The shell
+command did not stop on that nonzero `cmp` and incorrectly printed a
+success marker afterward.
+
+No arithmetic value differed and no result was accepted from that
+marker.  The corrected control compares the clearing-exponent vector
+and safe exponent as parsed values and asserts equality in Python.

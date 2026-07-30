@@ -86,6 +86,13 @@ contain 2,232 quadratic packet occurrences in only 912 distinct
 quartic fields. See
 [`docs/cycles-021-050-summary.md`](docs/cycles-021-050-summary.md).
 
+The next five B closures have now been selected by exact theorem cost,
+not conductor proxies. Their safe exponents are 2880, 2016, 2592,
+4032, and 15840. The portfolio contains the smallest new closure, the
+cheapest exponent, a prime-power conductor, a four-occurrence
+order-six transfer, and the first order-ten target. See
+[`docs/cycle-051-theorem-value-selection.md`](docs/cycle-051-theorem-value-selection.md).
+
 ## Claim tags
 
 - `VERIFIED`: exact or replay-certified statement.

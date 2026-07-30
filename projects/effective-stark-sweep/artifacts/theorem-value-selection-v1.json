@@ -1,0 +1,176 @@
+{
+  "active_before_additional_selection": [
+    {
+      "case_id": "RQ-000129",
+      "engine": "C",
+      "state": "Arb orientation pending"
+    },
+    {
+      "case_id": "RQ-000419",
+      "engine": "B",
+      "safe_exponent": 4032,
+      "state": "W3 pending"
+    }
+  ],
+  "additional_selected": [
+    {
+      "case_id": "RQ-000108",
+      "closure_multiplicity": 1,
+      "divisor_count": 4,
+      "field_d": 5,
+      "finite_norm": 45,
+      "normal_closure_degree": 16,
+      "rank": 1,
+      "rationale": "Only new degree-16 B closure; safe exponent 2880 on the Q(sqrt(-15)) route; order-four support rerouted from C, so it tests that engine choice is geometric rather than determined by character order.",
+      "safe_exponent": 2880,
+      "selected_base_polynomial": "z^2-z+4",
+      "selected_route": "sqrt_minus_15",
+      "support_orders": [
+        4
+      ]
+    },
+    {
+      "case_id": "RQ-000021",
+      "closure_multiplicity": 2,
+      "divisor_count": 2,
+      "field_d": 2,
+      "finite_norm": 49,
+      "normal_closure_degree": 24,
+      "rank": 2,
+      "rationale": "Lowest measured safe exponent, 2016; degree 24 over the smallest real base Q(sqrt(2)); extends the Paper-II Q(sqrt(2)) tower at a much cheaper exponent.",
+      "safe_exponent": 2016,
+      "selected_base_polynomial": "z^2+14",
+      "selected_route": "selected",
+      "support_orders": [
+        2,
+        6
+      ]
+    },
+    {
+      "case_id": "RQ-002057",
+      "closure_multiplicity": 3,
+      "divisor_count": 3,
+      "field_d": 57,
+      "finite_norm": 27,
+      "normal_closure_degree": 24,
+      "rank": 3,
+      "rationale": "Safe exponent 2592, degree 24, three closure occurrences, and a three-row prime-power conductor route; supplies a new local shape rather than another prime-conductor case.",
+      "safe_exponent": 2592,
+      "selected_base_polynomial": "z^2-z+5",
+      "selected_route": "selected",
+      "support_orders": [
+        2,
+        6
+      ]
+    },
+    {
+      "case_id": "RQ-002955",
+      "closure_multiplicity": 4,
+      "divisor_count": 2,
+      "field_d": 77,
+      "finite_norm": 7,
+      "normal_closure_degree": 24,
+      "rank": 4,
+      "rationale": "Safe exponent 4032, degree 24, and four closure occurrences; a low-risk order-six transfer control after Q(sqrt(14)).",
+      "safe_exponent": 4032,
+      "selected_base_polynomial": "z^2-z+3",
+      "selected_route": "selected",
+      "support_orders": [
+        2,
+        6
+      ]
+    },
+    {
+      "case_id": "RQ-001107",
+      "closure_multiplicity": 8,
+      "divisor_count": 2,
+      "field_d": 33,
+      "finite_norm": 11,
+      "normal_closure_degree": 40,
+      "rank": 5,
+      "rationale": "First order-ten target, with eight closure occurrences. Degree 40 and safe exponent 15840 make it the portfolio's deliberate high-value/high-cost theorem bet.",
+      "safe_exponent": 15840,
+      "selected_base_polynomial": "z^2-z+1",
+      "selected_route": "selected",
+      "support_orders": [
+        2,
+        10
+      ]
+    }
+  ],
+  "additional_selected_count": 5,
+  "claim_tag": "VERIFIED_SELECTION_INPUTS",
+  "execution_order": [
+    "RQ-000129",
+    "RQ-000419",
+    "RQ-000108",
+    "RQ-000021",
+    "RQ-002057",
+    "RQ-002955",
+    "RQ-001107"
+  ],
+  "explicitly_deprioritized": [
+    {
+      "case_id": "RQ-004467",
+      "reason": "Exponent is three orders of magnitude above every selected closure; retain W2, defer W3.",
+      "safe_exponent": 13810176
+    }
+  ],
+  "ranking_method": "Pareto portfolio, not an arbitrary scalar score: prioritize safe exponent and closure degree, then multiplicity, while reserving one slot for a genuinely new character order.",
+  "reserves": [
+    {
+      "case_id": "RQ-006512",
+      "closure_multiplicity": 10,
+      "divisor_count": 2,
+      "field_d": 161,
+      "finite_norm": 7,
+      "normal_closure_degree": 24,
+      "rationale": "Ten occurrences, the largest multiplicity in the pilot, but order-six prime-conductor structure and safe exponent 12096 make it best after the cheaper transfer control.",
+      "reserve_rank": 1,
+      "safe_exponent": 12096,
+      "selected_base_polynomial": "z^2-z+6",
+      "selected_route": "selected",
+      "support_orders": [
+        2,
+        6
+      ]
+    },
+    {
+      "case_id": "RQ-007487",
+      "closure_multiplicity": 1,
+      "divisor_count": 2,
+      "field_d": 185,
+      "finite_norm": 80,
+      "normal_closure_degree": 32,
+      "rationale": "Safe exponent 3840 and mixed order-2/order-4 support on a C-to-B reroute, but degree 32 and one occurrence duplicate novelty already tested by RQ-000108.",
+      "reserve_rank": 2,
+      "safe_exponent": 3840,
+      "selected_base_polynomial": "z^2+185",
+      "selected_route": "selected",
+      "support_orders": [
+        2,
+        4
+      ]
+    },
+    {
+      "case_id": "RQ-000686",
+      "closure_multiplicity": 3,
+      "divisor_count": 4,
+      "field_d": 21,
+      "finite_norm": 21,
+      "normal_closure_degree": 24,
+      "rationale": "Three occurrences and a four-row composite-conductor route, but safe exponent 12096 is dominated by RQ-002057.",
+      "reserve_rank": 3,
+      "safe_exponent": 12096,
+      "selected_base_polynomial": "z^2-z+2",
+      "selected_route": "selected",
+      "support_orders": [
+        2,
+        6
+      ]
+    }
+  ],
+  "results_sha256": "2bdbc780e6b2383610dcf6de41a89a38308fcdb5695cf0ef1598a2625a188333",
+  "schema": "effective-stark-theorem-value-selection-v1",
+  "stop_rule": "If either of the first two additional closures requires new industrial infrastructure or exceeds one node-hour for a single certificate step, pause the portfolio and rescope the W3 template before proceeding."
+}

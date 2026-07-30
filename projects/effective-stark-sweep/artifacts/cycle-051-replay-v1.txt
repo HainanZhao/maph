@@ -1,0 +1,13 @@
+Cycle-051 replay, 2026-07-30 UTC.
+
+- The nine-route exponent pilot was rerun from the hash-frozen input.
+- Its JSON and complete transcript were byte-identical to the banked
+  outputs.
+- The generic engine reproduced the Q(sqrt(14)) clearing vector
+  [576, 84] and safe exponent 4032.
+- The generic engine reproduced the Q(sqrt(111)) clearing vector
+  [124416, 46656, 127872, 47952, 127872, 47952, 3552, 1332]
+  and safe exponent 13810176.
+- The complete Python regression suite passed 33/33 tests.
+
+THEOREM_VALUE_EXPONENT_REPLAY_VERIFIED=1
