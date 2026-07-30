@@ -132,7 +132,7 @@ their overlap.  Finally, Lemmas~\ref{lem:noD} and \ref{lem:parity}
 show why neither an absolutely abelian fourth engine nor character
 order alone describes the frontier.
 
-\subsection*{Main theorems and epistemic status}
+\subsection*{Main theorems}
 
 \begin{theorem}[Uniform quadratic-support theorem]\label{thm:A}
 For every real quadratic \(K\), every one-place modulus
@@ -181,15 +181,14 @@ theorem.
 \end{enumerate}
 \end{theorem}
 
-\paragraph{Epistemic ledger.}
-Theorems~\ref{thm:A} and \ref{thm:main}, and every item enumerated in
-Theorem~\ref{thm:main}, have mathematical status
-\texttt{VERIFIED}.  RQ-000458 has the process label
-\texttt{DUAL\_ROUTED}, rather than \texttt{DUAL\_PROVED}, because its
-second-route selection seal was not timestamped before execution;
-both mathematical proofs remain valid.  A dated literature search
-found no earlier unconditional oriented examples with support order
-six or ten, so these are apparently the first examples in those order
+\paragraph{Status of the claims.}
+Every assertion in Theorems~\ref{thm:A} and \ref{thm:main} is proved
+in the mathematical sense fixed above.  For RQ-000458, the two proofs
+are mathematically independent, although the second-route selection
+was not timestamped in advance; the supplementary provenance record
+preserves this process limitation.  A dated literature search found
+no earlier unconditional oriented examples with support order six or
+ten, so these are apparently the first examples in those order
 classes.  This historical observation is not part of either theorem
 and is not asserted as a universal priority claim.\footnote{The
 search record names the sources, versions, hashes, and date.  Kopp's
@@ -199,73 +198,63 @@ conditional.}
 
 \subsection*{Theorem inventory}
 
-For clarity, the paper's contributions are the following ten
-items.  The status in this list concerns mathematical proof unless it
-is explicitly prefixed by ``historical'' or ``process.''
+For clarity, the paper's ten principal contributions are as follows.
+All ten are proved; the two bounded historical observations and the
+one process qualification are stated separately from the mathematics.
 \begin{enumerate}
-\item \textbf{Order six and its replication
-(\texttt{VERIFIED}).}
+\item \textbf{Order six and its replication.}
 The packet over \(\Q(\sqrt7)\) has margin \(>5688\), and the
 structural replication over \(\Q(\sqrt{14})\) has margin \(>7315\).
 The dated literature search records them as apparently the first
-unconditional oriented packets with support order six
-(\texttt{SURVEYED\_PRIORITY}, not a theorem claim).  Together with
-the separate \(\Q(\sqrt{21})\) failure, they show that character
-order six is not itself the obstruction; the operative boundary is
-the index-two/wildness hypothesis.
-\item \textbf{Order ten (\texttt{VERIFIED}).}
+unconditional oriented packets with support order six; this is a
+bounded historical observation, not a theorem claim.  Together with
+the separate \(\Q(\sqrt{21})\) failure, they show that character order
+six is not itself the obstruction; the operative boundary is the
+index-two/wildness hypothesis.
+\item \textbf{Order ten.}
 The \(\Q(\sqrt{33})\) packet has margin \(>5817\) and is the first
 proved support order in the present inventory containing the prime
-five.  Its apparent historical priority has status
-\texttt{SURVEYED\_PRIORITY}.
-\item \textbf{Ramified-prime-\(3\) control
-(\texttt{VERIFIED}).}
+five.  Its apparent historical priority is subject to the same dated
+literature boundary.
+\item \textbf{Ramified-prime-\(3\) control.}
 RQ-002057 over \(\Q(\sqrt{57})\), with finite modulus of norm \(27\),
 has order-six support and wild \(3\)-power conductor structure.  It
 is the closest proved structural neighbor of the
 \(\Q(\sqrt{21})\) wall and sharpens the diagnosis in item 1.
-\item \textbf{Uniform Engine-A theorem
-(\texttt{VERIFIED\_THEOREM}).}
+\item \textbf{Uniform Engine-A theorem.}
 Theorem~\ref{thm:A} gives a closed product formula for every
 quadratic-support packet, reducing each application to exact class
 numbers, Euler factors, unit kernels, and a relative-regulator
 index.  This is the paper's broadest result and is quotable
 independently of the corpus or its software.
-\item \textbf{Two disjoint theorem routes
-(\texttt{VERIFIED}; process \texttt{DUAL\_ROUTED}).}
+\item \textbf{Two disjoint theorem routes.}
 RQ-000458 is the same Artin-labeled packet proved once through
 Shintani 1978 and once through Stark 1980, with disjoint theorem
-bases and intermediate data.  The deliberately weaker process label
-records the missing contemporaneous selection seal; it does not
-weaken either proof.
-\item \textbf{Generic CM closure beyond class number one
-(\texttt{VERIFIED}).}
+bases and intermediate data.  The supplement records the absent
+contemporaneous selection timestamp; it does not weaken either proof.
+\item \textbf{Generic CM closure beyond class number one.}
 The \(\Q(\sqrt{35})\) packet is the first generic Engine-C closure
 in the corpus with \(h_K>1\).  Two imaginary bases of different
 class numbers, \(2\) and \(4\), are forced to the same Artin-labeled
 packet.
-\item \textbf{\(\Q(\sqrt6)\) general-\(e\) CM closure
-(\texttt{VERIFIED}).}
+\item \textbf{\(\Q(\sqrt6)\) general-\(e\) CM closure.}
 The \(\Q(\sqrt6)\) packet is proved through \(e=8\) and \(e=12\)
 routes after auxiliary-prime enlargement.  Independent primes
 verify that the enlargement is harmless, while the exact identity
 \(q_8^3=q_{12}^2\) aligns the two values of \(e\).
-\item \textbf{No-go lemma
-(\texttt{VERIFIED\_THEOREM}).}
+\item \textbf{No-go lemma.}
 Lemma~\ref{lem:noD} proves that no nontrivial one-place differenced
 packet over a real quadratic field is governed by an absolutely
 abelian ray field.  It rules out a hidden fourth abelian engine and
 therefore proves a small completeness statement about the method
 taxonomy itself.
-\item \textbf{Index-parity lemma
-(\texttt{VERIFIED\_THEOREM}).}
+\item \textbf{Index-parity lemma.}
 Lemma~\ref{lem:parity} proves that nontrivial differenced support
 forces even Shintani index.  As an independent consistency replay,
 all 446 genuinely reconstructed odd-index cases in the census had
 trivial sign class and empty differenced support, with zero
 exceptions.
-\item \textbf{General-\(e\) normalization and orientation
-(\texttt{VERIFIED\_THEOREM}).}
+\item \textbf{General-\(e\) normalization and orientation.}
 Theorem~\ref{thm:general-e} proves the Engine-C class-log and
 direct-\(L'\) coefficients and the torsion-invariant Artin
 orientation uniformly in \(e=|\mu(E)|\).  In particular it covers
@@ -988,11 +977,9 @@ the ray character.  Arb inversion isolates
 \]
 and 32 exact common-closure identities prove (31).  Thus one theorem
 base is Shintani 1978 and the other is Stark 1980; they share no
-certificate intermediate.  Because the second-route selection seal
-was not timestamped before execution, the process tag is
-\texttt{DUAL\_ROUTED}, not the stronger
-\texttt{DUAL\_PROVED}.  This process caveat does not weaken either
-mathematical proof.
+certificate intermediate.  The supplementary chronology records that
+the second-route selection was not timestamped before execution; this
+process limitation does not weaken either mathematical proof.
 
 \section{Structural boundary lemmas}
 
@@ -1061,12 +1048,19 @@ had trivial sign class and empty differenced Fourier support; there
 were no exceptions.  An earlier 88-row proxy population is excluded
 from this count and retained only as a provenance-control artifact.
 
-\section{Reproducibility and containment}
+\appendix
+
+\section{Certificates and provenance}
 
 The exact field computations use PARI/GP 2.15.4; analytic
 certificates use Python 3.12.3 and python-flint 0.9.0.  The principal
 replays were run under Linux/x86-64 on an AMD EPYC 9354P virtual CPU.
 All analytic conclusions are Arb balls, never point estimates.
+AI-assisted systems proposed code, text, and adversarial checks but
+were not mathematical authorities: every accepted computation was
+rerun by the pinned exact or Arb pipeline and reviewed by the author.
+The disclosure immediately before the bibliography gives the tools
+and purposes.
 
 The principal machine-readable records are
 \begin{center}\small
@@ -1104,17 +1098,12 @@ paper was therefore frozen independently of all census populations
 and trends.  This is a claim-boundary statement, not evidence for
 census completeness.
 
-\paragraph{Seal ordering.}
-The cycle-060 checkpoint was committed as
-\texttt{d1d355a14a} at 06:04:41 UTC.  The generic Engine-C W3 tranche
-was sealed as \texttt{a0674aed11} at 07:07:17 UTC, and the first
-\(e=6\) tranche together with the original \(\Q(\sqrt6)\) closure was
-sealed as \texttt{0afdc1304d} at 08:41:02 UTC.  All three precede the
-first manuscript commit.  The later correction of the
-\(\Q(\sqrt6)\) polynomial illustrates the distinction between a
-properly sealed computation and a correct mathematical interpretation:
-seal order passed, but the positive-packet audit still found and
-repaired a semantic error.
+\paragraph{Chronology.}
+The complete commit and timestamp chronology is recorded in
+\path{artifacts/results-paper-seal-order-audit-v1.json}.  It confirms
+that every promoted case bundle predates the manuscript.  The later
+semantic correction of the \(\Q(\sqrt6)\) packet is preserved in a
+separate versioned record.
 
 \paragraph{Data availability.}
 The companion archive has reserved DOI
@@ -1123,26 +1112,23 @@ The companion archive has reserved DOI
 draft the Zenodo record is an unpublished draft; publication of the
 archive is a hard gate before submission of the paper.  The core file
 list and full SHA-256 values are in
-\path{artifacts/results-paper-core-manifest-v1.json}, whose SHA-256 is
-\[
-\texttt{c3663bd8dcbe1f1de0b9b1f3cfe5ac17}
-\quad
-\texttt{3c27017dda82868e84180231e0ce1dbe}.
-\]
-Thus the paper names one content hash even before the DOI resolves;
-the released archive will include the complete repository subset,
-the failed-run transcripts, and one-command replay instructions.
+\path{artifacts/results-paper-core-manifest-v1.json}.  The released
+archive will include the complete repository subset, the failed-run
+transcripts, and one-command replay instructions.
 
-\section*{Acknowledgments}
+\section*{Declaration of generative AI and AI-assisted technologies
+in the manuscript preparation process}
 
-The author acknowledges the use of OpenAI's GPT-5.6 Sol model for
+During preparation of this work, the author used OpenAI GPT-5.6 for
 mathematical brainstorming, symbolic-computation scaffolding, code
-review, and manuscript editing, and an independent Claude-based
-verification channel for adversarial checking of statements and
-certificates.  All claims are the author's responsibility and are
-tied to the certificates described above.
+review, and manuscript editing, and Anthropic Claude for
+independent adversarial checking of statements and certificates.  The
+author reviewed and verified all outputs, made all mathematical and
+editorial decisions, and takes full responsibility for the content of
+the article.
 
 \begin{thebibliography}{20}
+\raggedright
 \bibitem{Shintani1978}
 T.~Shintani, \emph{On certain ray class invariants of real quadratic
 fields}, J.\ Math.\ Soc.\ Japan \textbf{30} (1978), 139--167,

@@ -1,0 +1,22 @@
+2026-07-30 UTC
+
+Command:
+python3 scripts/audit_results_paper.py
+
+Outcome:
+FAIL
+
+Traceback:
+  File "scripts/audit_results_paper.py", line 508, in <module>
+    main()
+  File "scripts/audit_results_paper.py", line 393, in main
+    require(
+  File "scripts/audit_results_paper.py", line 35, in require
+    raise AssertionError(f"paper omits required text: {needle}")
+AssertionError: paper omits required text: following ten items
+
+Disposition:
+The journal-facing edit replaced the old process-oriented inventory
+introduction with “the paper's ten principal contributions.” The audit
+expectation was updated; no mathematical assertion or certificate was
+changed.
