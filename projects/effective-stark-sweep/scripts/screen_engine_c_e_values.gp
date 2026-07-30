@@ -1,0 +1,173 @@
+\\ Exact roots-of-unity inventory for one Engine-C packet field.
+\\ Caller defines CASE_ID, PACKET_INDEX, D_VALUE, SOURCE_POLYNOMIAL.
+default(parisizemax,4000000000);
+
+subgroup_order(subgroup)=vecprod(Vec(subgroup[2]));
+subgroup_elements(subgroup,identity)=
+{
+  my(answer=List(),generators=subgroup[1],orders=subgroup[2]);
+  for(code=0,subgroup_order(subgroup)-1,
+    my(q=code,value=identity);
+    for(index=1,#generators,
+      my(digit=q%orders[index]);q=q\orders[index];
+      value*=generators[index]^digit);
+    listput(answer,value));
+  Vec(answer)
+};
+contains(elements,value)=
+{
+  for(index=1,#elements,if(elements[index]==value,return(1)));0
+};
+is_subset(first,second)=
+{
+  for(index=1,#first,if(!contains(second,first[index]),return(0)));1
+};
+same_set(first,second)=
+  #first==#second&&is_subset(first,second)&&is_subset(second,first);
+element_index(elements,value)=
+{
+  for(index=1,#elements,if(elements[index]==value,return(index)));
+  error("group element not found")
+};
+is_quartic_character(elements,exponents)=
+{
+  for(first=1,#elements,for(second=1,#elements,
+    my(product_index=element_index(
+      elements,elements[first]*elements[second]));
+    if((exponents[first]+exponents[second]
+      -exponents[product_index])%4,return(0))));
+  1
+};
+character_value(elements,exponents,value)=
+  I^exponents[element_index(elements,value)];
+candidate_induced(value,subgroup,exponents,complement)=
+{
+  if(!contains(subgroup,value),return(0));
+  character_value(subgroup,exponents,value)
+    +character_value(
+      subgroup,exponents,complement^(-1)*value*complement)
+};
+quartic_exponent(value)=
+{
+  for(exponent=0,3,
+    if(contains(source_kernel,
+      value*quotient_generator^(-exponent)),return(exponent)));
+  error("quartic quotient exponent missing")
+};
+quartic_character(value)=I^quartic_exponent(value);
+source_induced(value)=
+{
+  if(!contains(base_subgroup,value),return(0));
+  quartic_character(value)
+    +quartic_character(outside^(-1)*value*outside)
+};
+normalized_polynomial(polynomial)=
+  subst(polynomial,variable(polynomial),t);
+
+run_inventory() =
+{
+  my(source=SOURCE_POLYNOMIAL);
+  my(splitting=nfsplitting(source,16,1),P=splitting[1]);
+  my(gal=galoisinit(P),subgroups=galoissubgroups(gal));
+  my(identity=gal.group[1],base_index=0,kernel_index=0);
+  my(source_model=normalized_polynomial(polredbest(source)));
+  if(galoisidentify(gal)!=[16,13],
+    error("normal group is not [16,13]"));
+  for(index=1,#subgroups,
+    my(order_value=subgroup_order(subgroups[index]));
+    if(order_value==8,
+      my(fixed=polredbest(galoisfixedfield(
+        gal,subgroups[index][1],1,z)));
+      if(poldisc(fixed)==D_VALUE,base_index=index));
+    if(order_value==2,
+      my(fixed=polredbest(galoisfixedfield(
+        gal,subgroups[index][1],1,z)));
+      if(!kernel_index&&normalized_polynomial(fixed)==source_model,
+        kernel_index=index))
+  );
+  if(!base_index||!kernel_index,error("source subgroups missing"));
+  base_subgroup=subgroup_elements(subgroups[base_index],identity);
+  source_kernel=subgroup_elements(subgroups[kernel_index],identity);
+  quotient_generator=0;
+  for(index=1,#base_subgroup,
+    my(candidate=base_subgroup[index]);
+    if(!contains(source_kernel,candidate)
+      &&!contains(source_kernel,candidate^2)
+      &&contains(source_kernel,candidate^4),
+      quotient_generator=candidate));
+  outside=0;
+  for(index=1,#gal.group,
+    if(!contains(base_subgroup,gal.group[index]),
+      outside=gal.group[index];break));
+  if(type(quotient_generator)=="t_INT"||type(outside)=="t_INT",
+    error("source induced character not constructed"));
+
+  my(route_count=0,e_values=List());
+  print("CASE_ID=",CASE_ID);
+  print("PACKET_INDEX=",PACKET_INDEX);
+  print("SOURCE_POLYNOMIAL=",source);
+  for(index=1,#subgroups,
+    if(subgroup_order(subgroups[index])==8,
+      my(fixed=polredbest(galoisfixedfield(
+        gal,subgroups[index][1],1,z)));
+      my(elements=subgroup_elements(subgroups[index],identity));
+      my(norm=sum(item=1,#elements,
+        source_induced(elements[item])
+          *conj(source_induced(elements[item])))/#elements);
+      if(norm==2&&poldisc(fixed)<0,
+        route_count++;
+        my(complement=0);
+        for(item=1,#gal.group,
+          if(!contains(elements,gal.group[item]),
+            complement=gal.group[item];break));
+        my(matches=List());
+        for(code=0,4^(#elements-1)-1,
+          my(q=code,exponents=vector(#elements),ok=1);
+          for(item=2,#elements,
+            exponents[item]=q%4;q=q\4);
+          if(is_quartic_character(elements,exponents),
+            for(item=1,#gal.group,
+              if(candidate_induced(
+                gal.group[item],elements,exponents,complement)
+                !=source_induced(gal.group[item]),
+                ok=0;break));
+            if(ok,listput(matches,exponents))));
+        matches=Vec(matches);
+        if(#matches!=2,error("matching character count changed"));
+        my(character_kernel=List());
+        for(item=1,#elements,
+          if(matches[1][item]==0,
+            listput(character_kernel,elements[item])));
+        character_kernel=Vec(character_kernel);
+        my(character_kernel_index=0);
+        for(item=1,#subgroups,
+          if(subgroup_order(subgroups[item])==#character_kernel
+            &&same_set(
+              subgroup_elements(subgroups[item],identity),
+              character_kernel),
+            character_kernel_index=item));
+        if(!character_kernel_index,error("character kernel missing"));
+        my(character_field=polredbest(galoisfixedfield(
+          gal,subgroups[character_kernel_index][1],1,z)));
+        my(character_bnf=bnfinit(
+          subst(character_field,variable(character_field),x),1));
+        my(e=character_bnf.tu[1]);
+        if(!bnfcertify(character_bnf),
+          error("character field bnfcertify failed"));
+        listput(e_values,e);
+        print("ROUTE_",route_count,"_CM_BASE=",fixed);
+        print("ROUTE_",route_count,
+          "_CHARACTER_FIELD=",character_field);
+        print("ROUTE_",route_count,"_E=",e);
+        print("ROUTE_",route_count,"_BNFCERTIFY=1")
+      )
+    )
+  );
+  if(route_count!=2,error("Engine-C route count is not two"));
+  print("ROUTE_COUNT=",route_count);
+  print("E_VALUES=",Vec(e_values));
+  print("MINIMUM_E=",vecmin(Vec(e_values)));
+  print("ENGINE_C_E_INVENTORY_VERIFIED=1")
+};
+
+run_inventory();

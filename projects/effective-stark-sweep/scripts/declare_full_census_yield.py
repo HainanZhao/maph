@@ -25,21 +25,27 @@ def sha(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def c_passing_polynomials() -> list[str]:
+def c_passing_polynomials(
+    eligible_case_ids: set[str] | None = None,
+) -> list[str]:
     transcript = (
         ROOT / "artifacts/engine-c-geometry-full-v1.transcript"
     ).read_text().splitlines()
     current_polynomial = None
+    current_case = None
     passing: list[str] = []
     for line in transcript:
-        if "_ABSOLUTE_POLYNOMIAL=" in line:
+        if line.startswith("CASE_ID="):
+            current_case = line.split("=", 1)[1]
+        elif "_ABSOLUTE_POLYNOMIAL=" in line:
             current_polynomial = line.split("=", 1)[1]
         elif "_C_GEOMETRY_PASS=1" in line:
             if current_polynomial is None:
                 raise RuntimeError("C pass without packet polynomial")
-            passing.append(current_polynomial)
-    if len(passing) != 1255:
-        raise RuntimeError(f"expected 1255 C packets, got {len(passing)}")
+            if current_case is None:
+                raise RuntimeError("C pass without case id")
+            if eligible_case_ids is None or current_case in eligible_case_ids:
+                passing.append(current_polynomial)
     return passing
 
 
@@ -74,11 +80,27 @@ def main() -> None:
     b = json.loads(b_path.read_text())
     queue = json.loads(queue_path.read_text())
 
-    packet_polynomials = c_passing_polynomials()
+    eligible_c_ids = set(c["complete_c_case_ids"])
+    all_passing_polynomials = c_passing_polynomials()
+    packet_polynomials = c_passing_polynomials(eligible_c_ids)
+    if len(all_passing_polynomials) != 1255:
+        raise RuntimeError(
+            f"expected 1255 total C passes, got {len(all_passing_polynomials)}"
+        )
+    if len(packet_polynomials) != 1163:
+        raise RuntimeError(
+            f"expected 1163 eligible C packets, got {len(packet_polynomials)}"
+        )
+    all_distinct_models = sorted(set(all_passing_polynomials))
     distinct_packet_models = sorted(set(packet_polynomials))
+    all_models = sorted(set(all_distinct_models) | set(distinct_packet_models))
     with ThreadPoolExecutor(max_workers=4) as executor:
-        keys = list(executor.map(closure_key, distinct_packet_models))
-    distinct_c_closures = len(set(keys))
+        keys = list(executor.map(closure_key, all_models))
+    key_by_model = dict(zip(all_models, keys, strict=True))
+    distinct_c_closures = len({
+        key_by_model[model] for model in distinct_packet_models
+    })
+    all_distinct_c_closures = len(set(keys))
 
     histogram = {
         "PROVED_TRIVIAL": {
@@ -96,7 +118,7 @@ def main() -> None:
         },
         "ENGINE_C_ELIGIBLE": {
             "row_occurrences": 728,
-            "packet_occurrences": 1255,
+            "packet_occurrences": 1163,
             "distinct_packet_field_models": len(distinct_packet_models),
             "distinct_closures": distinct_c_closures,
         },
@@ -125,6 +147,15 @@ def main() -> None:
         "claim_tag": "VERIFIED_COUNTS",
         "representative_count": 8200,
         "corrected_engine_histogram": histogram,
+        "engine_c_all_geometry_passes": {
+            "scope_note": (
+                "Includes passing packets inside mixed-pass rows that are "
+                "not C-eligible as complete cases."
+            ),
+            "packet_occurrences": 1255,
+            "distinct_packet_field_models": len(all_distinct_models),
+            "distinct_closures": all_distinct_c_closures,
+        },
         "proved_eligible_row_occurrences": eligible,
         "proved_eligible_beyond_seven_anchors": beyond_anchors,
         "pre_registered_threshold": 15,
