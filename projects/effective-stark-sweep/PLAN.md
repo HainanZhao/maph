@@ -76,15 +76,15 @@ case-level PROVED corpus entry
 
 | Track | State | Current fact | Controlling evidence / file |
 |---|---|---|---|
-| Results paper | `ACTIVE` | Fourier-convention, layout, and prior-work chronology repairs closed; deterministic 17-page paper plus 2-page supplement; local companion v9 frozen | `paper/effective-stark-results.tex`, `artifacts/results-paper-full-freeze-v6.json` |
+| Results paper | `PUBLISHED` | Deterministic 17-page paper plus 2-page supplement and companion v10 published at DOI 10.5281/zenodo.21703306 | `paper/effective-stark-results.tex`, `artifacts/zenodo-results-publication-v1.json` |
 | Results-paper audit | `BANKED` | Full A/B/C audit and compact companion replay pass, including exact Engine-A degeneracy and Engine-C Fourier-convention audits | `artifacts/results-paper-full-referee-audit-v2.json` |
 | Genuine routing census v5 | `BANKED` | 8,200/8,200 genuine screens; proxy recovery complete | `artifacts/full-census-yield-declaration-v5.json` |
 | Census manuscript | `ACTIVE` | Substantial Markdown draft exists; no journal LaTeX/PDF yet | `paper/effective-stark-sweep-draft.md` |
 | Engine-B occurrence transport | `READY` | Last formal W4 gate; current scope must be regenerated from v5 rather than copied from the obsolete 195-row ledger | `docs/cycle-070-genuine-census-v5.md` |
 | W4 census analysis | `BLOCKED` | Opens after the v5 Engine-B transport ledger closes | this plan |
 | DST / Cohen--Roblot comparison | `READY` | Initial perimeter table exists; case-by-case overlap comparison is incomplete | `docs/prior-art-overlap-table-v1.md` |
-| Public certificate archive | `BLOCKED` | Local v9 is frozen; public deposit awaits the fresh human referee round | `artifacts/results-paper-companion-local-freeze-v9.json` |
-| Zenodo / arXiv | `HUMAN` | No upload or publication action authorized by the present plan | this plan |
+| Public certificate archive | `PUBLISHED` | Companion v10 published; SHA-256 `79536ad9be167b3a18b499cd59dfd092ad03b29b8399b94a93ae709eaee29fe1` | `artifacts/zenodo-results-publication-v1.json` |
+| Zenodo / arXiv | `ZENODO_DONE` | Zenodo record published; arXiv remains a separate human action | DOI `10.5281/zenodo.21703306` |
 
 ### Genuine census v5 routing counts
 
@@ -249,15 +249,15 @@ State: `ACTIVE`
 - [x] Enlarge the main theorem tables, move exact HNFs to a readable
       appendix, and move the complete record map, interval replay, and
       Engine-A queue statistics to a separate supplement.
-- [ ] Deposit the companion archive under a public immutable
+- [x] Deposit the companion archive under a public immutable
       identifier and put that identifier in the manuscript.
 - [ ] Conduct a new Papers-I/II-style referee pass over every displayed
       theorem, polynomial, exponent, height margin, and citation.
 - [ ] Resolve every resulting mathematical issue.
-- [ ] Build a public, hash-manifested certificate archive.
-- [ ] Rebuild the exact manuscript version against that archive.
-- [ ] Obtain human authorization before Zenodo publication or arXiv
-      submission.
+- [x] Build a public, hash-manifested certificate archive.
+- [x] Rebuild the exact manuscript version against that archive.
+- [x] Obtain human authorization before Zenodo publication.
+- [ ] Obtain human authorization before arXiv submission.
 
 Definition of done: referee report closed; paper and public artifact
 cross-reference one another; DOI exists; uploaded source and PDF match

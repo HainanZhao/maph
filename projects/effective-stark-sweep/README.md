@@ -34,8 +34,9 @@ The current selected-results manuscript is
 [`paper/effective-stark-results.tex`](paper/effective-stark-results.tex).
 It contains the uniform Engine-A theorem, eight selected Engine-B
 packets, five selected cyclic-quartic CM packets, and two structural
-lemmas. It remains a major-revision draft until the companion archive
-is public and a fresh referee round closes.
+lemmas. The paper, supplement, and companion archive are public at
+[Zenodo DOI 10.5281/zenodo.21703306](https://doi.org/10.5281/zenodo.21703306);
+the top-level PDF and TeX files are directly previewable there.
 
 The census paper has a substantial Markdown draft at
 [`paper/effective-stark-sweep-draft.md`](paper/effective-stark-sweep-draft.md).

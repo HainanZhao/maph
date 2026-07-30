@@ -15,11 +15,11 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "v9"
+VERSION = "v10"
 NAME = f"effective-stark-results-companion-{VERSION}"
 DIST = ROOT / "dist"
 ARCHIVE = DIST / f"{NAME}.tar.gz"
-FREEZE = ROOT / "artifacts/results-paper-companion-local-freeze-v9.json"
+FREEZE = ROOT / "artifacts/results-paper-companion-local-freeze-v10.json"
 
 SEEDS = {
     "paper/effective-stark-results.tex",

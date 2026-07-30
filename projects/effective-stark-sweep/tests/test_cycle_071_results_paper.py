@@ -43,13 +43,13 @@ class ResultsPaperMajorRevisionTests(unittest.TestCase):
         self.assertIn("RESULTS_PAPER_FULL_AUDIT=PASS", completed.stdout)
 
     def test_full_freeze_hashes(self):
-        freeze = load("artifacts/results-paper-full-freeze-v6.json")
+        freeze = load("artifacts/results-paper-full-freeze-v7.json")
         self.assertEqual(
             freeze["status"],
-            "FOURIER_CONVENTION_LAYOUT_AND_CHRONOLOGY_REPAIRS_PASS_LOCAL_ARCHIVE_FROZEN_PENDING_PUBLIC_DEPOSIT_AND_HUMAN_REFEREE",
+            "PUBLISHED_ZENODO_VERIFIED",
         )
         self.assertEqual(
-            freeze["supersedes"], "artifacts/results-paper-full-freeze-v4.json"
+            freeze["supersedes"], "artifacts/results-paper-full-freeze-v6.json"
         )
         manuscript = freeze["primary_manuscript"]
         self.assertEqual(sha(manuscript["tex"]), manuscript["tex_sha256"])
@@ -70,8 +70,13 @@ class ResultsPaperMajorRevisionTests(unittest.TestCase):
         self.assertEqual(
             sha(companion["local_freeze"]), companion["local_freeze_sha256"]
         )
-        self.assertIsNone(companion["public_identifier"])
-        self.assertFalse(freeze["publication_gate"]["publish_action_allowed"])
+        publication = freeze["publication"]
+        self.assertEqual(publication["doi"], "10.5281/zenodo.21703306")
+        self.assertTrue(publication["top_level_pdf_and_tex"])
+        self.assertEqual(
+            sha(publication["metadata"]), publication["metadata_sha256"]
+        )
+        self.assertEqual(sha(publication["record"]), publication["record_sha256"])
 
     def test_cm_theorem_and_nonclaim_boundaries(self):
         paper = (ROOT / "paper/effective-stark-results.tex").read_text()
