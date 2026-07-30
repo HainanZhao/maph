@@ -17,7 +17,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PAPER = ROOT / "paper/effective-stark-results.tex"
-OUT = ROOT / "artifacts/results-paper-referee-audit-v1.json"
+OUT = ROOT / "artifacts/results-paper-referee-audit-v2.json"
 getcontext().prec = 80
 
 
@@ -54,19 +54,19 @@ def main() -> None:
         prose,
         "It does not mean that",
         "general real-quadratic rank-one Stark conjecture is proved",
-        "within a frozen literature perimeter",
-        "bounded literature statement, not a universal negative",
+        "not asserted as a universal priority claim",
+        "historical observation is not part of either theorem",
         "No unproved Stark conjecture",
         "Numerical PARI recognition",
     )
 
     # The results manuscript must remain census-independent.
     forbidden = (
-        "8,200",
         "1,628",
         "FRONTIER share",
         "norm quartile",
         "census v5",
+        "conductor trend is",
     )
     for needle in forbidden:
         if needle in prose:
@@ -80,12 +80,17 @@ def main() -> None:
     q77 = load("data/rq002955-case-v1.json")
     q33 = load("data/q33-p11-order10-case-v1.json")
     q35 = load("artifacts/engine-c-w3-tranche-01-verified-v1.json")
+    q35_class_numbers = load("artifacts/q35-base-class-numbers-v1.json")
     e6 = load("artifacts/engine-c-e6-tranche-01-verified-v1.json")
-    q6 = load("data/q6-norm8-case-v2.json")
+    q6 = load("data/q6-norm8-case-v3.json")
+    q6_correction = load("artifacts/q6-positive-packet-correction-v2.json")
     dual = load("data/rq000458-dual-case-v1.json")
     engine_a = load("data/engine-a-uniform-theorem-v1.json")
     theory = load("data/engine-c-general-e-theory-v3.json")
     parity = load("artifacts/results-paper-index-parity-lemma-v1.json")
+    parity_audit = load("artifacts/results-paper-odd-index-parity-audit-v1.json")
+    seal_audit = load("artifacts/results-paper-seal-order-audit-v1.json")
+    core_manifest = load("artifacts/results-paper-core-manifest-v1.json")
 
     for record in (q7, q14, q5, q2, q57, q77, q33, q35, e6, q6, dual):
         serialized = json.dumps(record)
@@ -160,9 +165,16 @@ def main() -> None:
     polynomial_checks = [
         ("q7", q7["w3"]["relative_packet_polynomial"], "34+13\\sqrt7"),
         ("q14", q14["w3"]["relative_packet_polynomial"], "139+38\\sqrt{14}"),
+        ("rq000108", q5["identification"]["relative_packet_polynomial"], "9+9y"),
+        ("rq000021", q2["identification"]["relative_packet_polynomial"], "129+90\\sqrt2"),
+        ("rq002955", q77["identification"]["relative_packet_polynomial"], "217+54y"),
         ("q33", q33["identification"]["relative_packet_polynomial"], "871+368y"),
         ("q35", q35["closure"]["packet_polynomial"], "873210"),
-        ("q6", q6["candidate_unit_minimal_polynomial"], "53958"),
+        (
+            "q6",
+            q6["cross_route"]["common_packet_polynomial"],
+            "X^8-8X^7+12X^6+8X^5-10X^4",
+        ),
         ("rq000458", dual["packet"]["relative_polynomial"], "138+36\\sqrt{14}"),
     ]
     for name, polynomial, distinguishing_text in polynomial_checks:
@@ -196,6 +208,16 @@ def main() -> None:
         raise AssertionError("q33 degree cap changed")
     if q35["closure"]["route_e"] != [2, 2] or q35["closure"]["stark_s_size"] != [3, 3]:
         raise AssertionError("q35 Stark bookkeeping changed")
+    q35_classes = {
+        key: row["observed_class_number"]
+        for key, row in q35_class_numbers["fields"].items()
+    }
+    if q35_classes != {
+        "real_base_Q_sqrt_35": 2,
+        "imaginary_base_Q_sqrt_minus_10": 2,
+        "imaginary_base_Q_sqrt_minus_14": 4,
+    }:
+        raise AssertionError("q35 class-number certificate changed")
     if e6["field_count"] != 3 or e6["occurrence_count"] != 14:
         raise AssertionError("e6 tranche cardinality changed")
     if [route["e"] for route in q6["routes"]] != [8, 12]:
@@ -220,7 +242,7 @@ def main() -> None:
         "actual packet-comparison degree is 40",
         "degrees three through 80",
         "Six independent imaginary-base routes cover fourteen",
-        "256 common-normal-closure identities",
+        "256 exact common-normal-closure identities",
         "P_3(1)=1+i",
         "P_5(1)=2",
         "safe exponent 1152",
@@ -262,8 +284,8 @@ def main() -> None:
             dual["alignment_certificate"]["sha256"],
         ),
         (
-            q6["auxiliary_prime_closure"]["certificate"]["path"],
-            q6["auxiliary_prime_closure"]["certificate"]["sha256"],
+            q6["correction_certificate"]["path"],
+            q6["correction_certificate"]["sha256"],
         ),
     ]
     for path, expected in hash_map:
@@ -311,7 +333,7 @@ def main() -> None:
         {
             "family": "RQ-000129",
             "theorem": "Stark 1980 after auxiliary-prime enlargement",
-            "s_sizes": [3, q6["auxiliary_prime_closure"]["secondary_enlarged_s_size"]],
+            "s_sizes": [3, q6["routes"][1]["auxiliary_s_size"]],
             "e_values": [route["e"] for route in q6["routes"]],
             "global_unit_clause": True,
         },
@@ -332,31 +354,75 @@ def main() -> None:
         raise AssertionError("uniform Engine-A theorem is not banked")
     if parity["claim_tag"] != "VERIFIED_THEOREM":
         raise AssertionError("parity lemma is not banked")
+    if (
+        parity_audit["verdict"] != "PASS"
+        or parity_audit["odd_index_greater_than_one_count"] != 446
+        or parity_audit["exception_count"] != 0
+    ):
+        raise AssertionError("genuine odd-index parity audit did not pass 446/446")
+    if seal_audit["verdict"] != "NO_FRONT_RUNNING_OF_UNSEALED_RESULTS":
+        raise AssertionError("seal-order audit did not clear")
+    if core_manifest["reserved_doi"] != "10.5281/zenodo.21703306":
+        raise AssertionError("reserved DOI changed")
+    if q6_correction["old_anti_unit_real_root_count"] != 0:
+        raise AssertionError("q6 old anti-unit root diagnosis changed")
+    if (
+        q6_correction["correct_packet_real_root_count"] != 4
+        or q6_correction["correct_packet_negative_root_count"] != 0
+    ):
+        raise AssertionError("q6 corrected packet root count changed")
     require(
-        paper,
+        prose,
+        "Uniform quadratic-support theorem",
+        "Theorem inventory",
+        "This is the paper's broadest result",
+        "Order six and its replication",
+        "Order ten",
+        "Ramified-prime-\\(3\\) control",
+        "Uniform Engine-A theorem",
+        "Two disjoint theorem routes",
+        "Generic CM closure beyond class number one",
+        "General-\\(e\\) CM closure",
+        "No-go lemma",
+        "mixed signature",
+        "Effective but not uniformly cheap",
+        "selected-results theorem",
         "No absolute-abelian fourth engine",
         "Index parity",
         r"2\mid[H:H\cap\Q^{\rm ab}]",
         "genuine normal closure",
+        "all 8,200 genuine normal-closure",
+        "found 446 odd indices",
+        "10.5281/zenodo.21703306",
+        "unpublished draft",
+    )
+    require(
+        paper,
+        r"\lambda_L(\epsilon_K)=(a,a,-2a)",
+        r"\lambda_L(u_\chi)=(b,-b,0)",
     )
 
     report = {
-        "schema": "effective-stark-results-paper-referee-audit-v1",
+        "schema": "effective-stark-results-paper-referee-audit-v2",
         "claim_tag": "VERIFIED_PAPER_AUDIT",
         "paper": "paper/effective-stark-results.tex",
         "paper_sha256": sha("paper/effective-stark-results.tex"),
         "scope": "promoted theorem identities only; census populations excluded",
         "checks": {
             "conditionality_disclaimer": "PASS",
-            "bounded_literature_claim": "PASS",
+            "historical_claim_separated_from_theorem": "PASS",
             "census_independence": "PASS",
             "main_table_exponents": "7/7",
             "displayed_height_margins": "PASS_RECOMPUTED",
-            "displayed_polynomials": "6/6 tied to exact records",
+            "displayed_polynomials": "9/9 tied to exact records",
             "displayed_finite_constants_and_labels": "PASS",
             "certificate_hashes": f"{len(hash_map)}/{len(hash_map)}",
             "general_e_coefficients": "PASS_WITH_V3_SIGN_CORRECTION",
             "structural_lemmas": "2/2",
+            "odd_index_consistency": "446/446",
+            "seal_order": "PASS",
+            "q6_polynomial_correction": "PASS_OLD_ZERO_REAL_NEW_FOUR_POSITIVE",
+            "reserved_doi": "10.5281/zenodo.21703306",
             "stark_usage_audit": "PASS",
         },
         "recomputed_margins": {
@@ -381,12 +447,17 @@ def main() -> None:
                 "data/rq002955-case-v1.json",
                 "data/q33-p11-order10-case-v1.json",
                 "artifacts/engine-c-w3-tranche-01-verified-v1.json",
+                "artifacts/q35-base-class-numbers-v1.json",
                 "artifacts/engine-c-e6-tranche-01-verified-v1.json",
-                "data/q6-norm8-case-v2.json",
+                "data/q6-norm8-case-v3.json",
+                "artifacts/q6-positive-packet-correction-v2.json",
                 "data/rq000458-dual-case-v1.json",
                 "data/engine-a-uniform-theorem-v1.json",
                 "data/engine-c-general-e-theory-v3.json",
                 "artifacts/results-paper-index-parity-lemma-v1.json",
+                "artifacts/results-paper-odd-index-parity-audit-v1.json",
+                "artifacts/results-paper-seal-order-audit-v1.json",
+                "artifacts/results-paper-core-manifest-v1.json",
             ]
         },
     }

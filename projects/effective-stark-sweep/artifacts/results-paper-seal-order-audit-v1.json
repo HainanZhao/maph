@@ -1,0 +1,42 @@
+{
+  "schema": "effective-stark-results-paper-seal-order-audit-v1",
+  "claim_tag": "VERIFIED_PROCESS_AUDIT",
+  "reference_checkpoint": {
+    "commit": "d1d355a14a119da1499b07aa1748c56057bff9ce",
+    "committed_at_utc": "2026-07-30T06:04:41+00:00",
+    "status": "Q(sqrt(6)) unpromoted; generic W3 and e=6 tranche not yet banked"
+  },
+  "sealed_results": [
+    {
+      "result": "generic Engine-C W3 tranche",
+      "path": "artifacts/engine-c-w3-tranche-01-verified-v1.json",
+      "sha256": "788cb3982e7403a15045902fb7c35b732bb9943bfd2e48b8d7f6d47ffab70c00",
+      "first_commit": "a0674aed115dcea9ce4878e2f09e245254aebd84",
+      "committed_at_utc": "2026-07-30T07:07:17+00:00",
+      "ordering": "after Cycle 060 and before the first results-paper draft"
+    },
+    {
+      "result": "first e=6 Engine-C tranche",
+      "path": "artifacts/engine-c-e6-tranche-01-verified-v1.json",
+      "sha256": "89ed74bcee4acd5e37a43c0cb3ff06901a46fcaf588602070b5283f1058e8f6a",
+      "first_commit": "0afdc1304dfb7f6f39fea791b2dc8f9438318642",
+      "committed_at_utc": "2026-07-30T08:41:02+00:00",
+      "ordering": "after Cycle 060 and before the first results-paper draft"
+    },
+    {
+      "result": "Q(sqrt(6)) auxiliary-prime closure v2",
+      "path": "data/q6-norm8-case-v2.json",
+      "sha256": "2a91b9c587bad8af19b8295dadd8cde4a3a8a8dbf32ee86169491bfe7184fc79",
+      "first_commit": "0afdc1304dfb7f6f39fea791b2dc8f9438318642",
+      "committed_at_utc": "2026-07-30T08:41:02+00:00",
+      "ordering": "after Cycle 060 and before the first results-paper draft",
+      "subsequent_mathematical_correction": "The seal ordering was valid, but the v2 polynomial label was mathematically wrong and is superseded by data/q6-norm8-case-v3.json."
+    }
+  ],
+  "paper_freeze": {
+    "commit": "d7934ff9c3b2c3f8124ecdd296fd7fa76b1b63ad",
+    "relationship": "all three promoted artifacts entered Git before this draft commit"
+  },
+  "verdict": "NO_FRONT_RUNNING_OF_UNSEALED_RESULTS",
+  "caveat": "This process verdict does not validate the mathematical content of a sealed artifact; the Q(sqrt(6)) polynomial error was caught separately and superseded."
+}

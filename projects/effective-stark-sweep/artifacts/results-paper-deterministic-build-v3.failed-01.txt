@@ -1,0 +1,11 @@
+RESULTS_PAPER_DETERMINISTIC_BUILD=FAIL
+timestamp_utc=2026-07-30T12:30:00Z
+source_date_epoch=1785414600
+attempt=compiled identical source in two temporary output directories while
+  passing each temporary absolute source path to pdfTeX
+first_sha256=c80163aac5002f8ff562eb0dd4f7e18dc93916015332e3b05904db419fdf86ef
+second_sha256=3c270a9c20e8c36d874b8c7a2a830a70a50cccafb9970bd1241725cdd8d0c5d8
+failure=PDF files differed at byte 331046
+diagnosis=the absolute input path entered pdfTeX's trailer-ID computation;
+  SOURCE_DATE_EPOCH alone was insufficient when the source path differed
+disposition=preserved failed engineering run; no mathematical verdict issued

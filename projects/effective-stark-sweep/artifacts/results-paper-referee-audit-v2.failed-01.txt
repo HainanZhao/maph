@@ -1,0 +1,7 @@
+RUN_AT_UTC=2026-07-30T12:20:00Z
+COMMAND=python3 scripts/audit_results_paper.py
+STATUS=FAILED_OBSOLETE_EXPECTATION
+ERROR=paper omits required text: within a frozen literature perimeter
+CAUSE=The v1 auditor required wording that the referee explicitly rejected. The rewritten paper separates mathematical status from a dated, non-theorem historical observation.
+EFFECT=No v2 audit record was emitted.
+RESOLUTION=Version the audit contract and enforce the revised proof, status, correction, parity, and data-availability requirements.
