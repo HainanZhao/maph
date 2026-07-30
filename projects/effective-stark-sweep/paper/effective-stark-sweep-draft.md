@@ -91,65 +91,93 @@ height upper bound is \(7.147\times10^{-9}\), giving certified Voutier
 margin \(>7315\). Hence the displayed packet and theorem are
 `VERIFIED`.
 
-## Census result
+## The census as a theorem-discovery instrument
+
+The frontier catalogue is not only a count. A probe for index-one ray
+fields initially appeared to expose 276 new absolute-abelian cases.
+Its anchor gate instead found a missing hypothesis in the census
+screen and produced a uniform no-go theorem: a Dirichlet character
+restricts to equal parity at the two real places, whereas the
+differenced one-place invariant is supported on asymmetric parity.
+Thus an absolute-abelian “Engine D” cannot cover the proposed packet.
+The same gate identified every one of the 276 proposed cases as having
+a conjugation-unstable finite modulus. The census therefore generated
+a mechanism and then rejected it before it became a theorem claim.
+
+## Census result and containment correction
 
 The frozen maximal-order backbone contains 8,200 conjugacy
 representatives. The initial structural W1 routing gave 5,459 A
 candidates, 655 B candidates, 817 C candidates, and 1,269 provisional
-frontiers. After the complete geometric C predicate and the corrected
-B battery, the formal theorem-route histogram is:
+frontiers. After the complete geometric C predicate and the first
+corrected B battery, the formal theorem-route histogram was:
 
 | verdict | occurrences | distinct closures or packet fields |
 |---|---:|---:|
 | `PROVED_TRIVIAL` | 3,899 | 1 |
 | nontrivial Engine A eligible | 1,560 | 912 |
-| Engine B eligible | 195 | 59 |
+| Engine B eligible before stability audit | 195 | 59 |
 | Engine C eligible | 728 | 393 |
 | `FRONTIER` | 1,818 | -- |
+
+The Engine-D anchor gate exposed a missing condition in every screen
+which interpreted base conjugation on one ray group: the finite
+modulus must be fixed by conjugation. The complete C gate is not
+affected because it constructs the actual packet splitting closure
+and checks its normal group and CM subfields directly. Engine A is
+relative and also unaffected. Of the 195 B rows, 131 have stable
+finite modulus and remain eligible, while 64 are quarantined until
+their actual normal closure is reconstructed as a compositum with the
+conjugate-modulus field. The current contained split is:
+
+| status | occurrences |
+|---|---:|
+| `PROVED_TRIVIAL` | 3,899 |
+| nontrivial Engine A eligible | 1,560 |
+| stable-modulus Engine B eligible | 131 |
+| Engine C eligible | 728 |
+| original `FRONTIER` | 1,818 |
+| unstable-modulus B quarantine | 64 |
 
 The nontrivial A rows contain 2,232 supported quadratic packets, while
 the 728 fully C-eligible rows contain 1,163 quartic packets. Across all
 structural C rows, 1,255 individual packets pass geometry and define
 430 fields, but 92 of those packets lie in mixed-pass rows and are
-outside the C bulk. The final frontier
-taxonomy is 1,100 `INDEX_GT_2`, 502 `EXPONENT_CAP`, 177
+outside the C bulk. The pre-containment frontier taxonomy is 1,100
+`INDEX_GT_2`, 502 `EXPONENT_CAP`, 177
 `NO_ABELIAN_IMAGINARY_BASE`, 33 `UNIT_CONGRUENCE_FAIL`, two
 `REAL_PLACE_SPLITTING_FAIL`, and four `TOOL_BLOCKED`. These counts sum
-to 8,200 occurrences with no residual category.  The historical name
-`INDEX_GT_2` is retained as a schema label, but its predicate was
-``index != 2 OR real-place splitting fails``; it is not a literal
-assertion that all 1,100 indices exceed two.  The separated exact
-index ledger is part of the corpus.
+to the original 1,818-row frontier. The 64-row B quarantine is
+reported separately and is not silently assigned an obstruction.
 
-The frontier share rises strictly across conductor-norm quartiles:
-9.93%, 21.60%, 27.26%, and 31.65%. Thus the predicted growth with
-\(N(\mathfrak f)\) is supported on the frozen quartile summary.
+Before the containment correction, the frontier share rose strictly
+across conductor-norm quartiles: 9.93%, 21.60%, 27.26%, and 31.65%.
+That summary is now historical rather than final and will be
+recomputed after the 64-row B quarantine is resolved.
 
-The separated ledger also exposes 88 odd indices above two:
-75 of index 3, six of index 5, and seven of index 9.  Eighty-one pass
-the exactly-one-real-place splitting predicate. In 85 rows the index
-equals the normal-closure commutator size; the other three have index
-3 and commutator size 6. Support shares an odd prime with the index in
-86 rows. A 3-primary support component occurs in
-\(80/88=10/11\), versus \(298/721\) among even-index controls. These
-exact correlations are not yet a structural theorem.
+The old coordinate ledger contained 88 odd index proxies above two.
+Its exact outputs satisfy the former 85/88 and 86/88 correlations, but
+all 88 finite moduli are unstable. The fractions are retained as
+reproducible statistics of the old coordinate proxy and retracted as
+Shintani-index or normal-closure laws. The three \(3\)-versus-\(6\)
+exceptions and two support-prime exceptions have individual records.
 
-The same audit exposes a possible fourth proof engine. There are
-3,521 index-one occurrences whose ray field is abelian over
-\(\mathbb Q\). After removing Engine-A and empty-support cases, 276
-substantive FRONTIER occurrences across 85 fields remain. We call the
-proposed absolute-abelian reduction “Engine D”: decompose its
-characters into Dirichlet characters and identify the resulting
-\(L'(0)\)-values through cyclotomic/ACNF units and exact regulator
-indices. This is a frozen research gate, not a proved engine; the
-three controls are RQ-000018, RQ-000032, and RQ-000274.
+The same correction disposes of the proposed fourth proof engine.
+The 3,521-row proxy partitions as 2,552 empty-support rows, 693
+substantive Engine-A rows, and 276 proposed new rows. All 276 new rows
+have non-stable finite modulus; all 1,042 stable rows are already
+empty-support or Engine A. The corrected new Engine-D population is
+zero. The negative anchors RQ-000018, RQ-000032, and RQ-000274 have
+mixed signatures \((8,4)\), \((6,3)\), and \((4,2)\), respectively,
+an exact contradiction to their former absolute-abelian
+interpretation.
 
-The pre-registered yield checkpoint passes formally: 6,382
-representatives are proved-trivial or eligible for one of the three
-proved engines, hence 6,375 occur beyond the seven anchors, far above
-the threshold of 15. This is an eligibility count, not a count of new
-proved packets. The declaration is hash-frozen in
-`artifacts/full-census-yield-declaration-v3.json`.
+The pre-registered yield checkpoint still passes under containment:
+6,318 representatives are proved-trivial or safely eligible, hence
+6,311 occur beyond the seven anchors, far above the threshold of 15.
+This is an eligibility count, not a count of new proved packets. The
+earlier 6,382-row declaration is preserved as process history; its
+64-row difference is explicitly quarantined.
 
 ## Identification order
 
