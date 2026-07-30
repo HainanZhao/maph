@@ -1,0 +1,31 @@
+{
+  "schema": "effective-stark-rq000458-seal-resolution-v1",
+  "case_id": "RQ-000458",
+  "resolved_at_utc": "2026-07-30T05:41:35Z",
+  "outcome": "DUAL_ROUTED",
+  "field": "Q(sqrt(14))",
+  "modulus": {
+    "finite_ideal_hnf": [[12, 0], [0, 6]],
+    "finite_norm": 72,
+    "infinite_component": [1, 0]
+  },
+  "ray_group": [4, 2],
+  "support_characters": [[1, 1], [3, 1]],
+  "support_orders": [4],
+  "caveat": "both routes independent in theorem base and intermediate data, as attested; seal ordering not contemporaneously documented",
+  "reason": [
+    "All selection, packet, and route artifacts first entered Git together in commit dc2cc037d8ad751639a7f0cc2429e830c7c9019b at 2026-07-30T04:58:48Z; none exists in its parent.",
+    "Filesystem birth times and an internally written JSON timestamp are mutable rather than contemporaneous cryptographic seals.",
+    "The candidate screen froze case choice, not the C-side character/orientation selection procedure.",
+    "No explicit packet-open timestamp artifact was banked."
+  ],
+  "evidence": {
+    "candidate_screen": {
+      "internal_timestamp_utc": "2026-07-30T04:09:03.106527Z",
+      "sha256": "c348b284390aa05db584d1025d7197f6301d2002af8747b4a9b09a7b12435512"
+    },
+    "packet_recognition_sha256": "d6b849acff2770a32bca0d58b0bcec0c0d2d591549d8fbca7c596dea3a9e366c",
+    "exact_alignment_sha256": "18e877e99fa53578834a13b03f25a52599710057dd86a8442dd6091415c94cf1",
+    "first_final_c_route_sha256": "728e23bac846574379f7ab0af23d5d6fa88cebc276e32010e93073fb7c112b87"
+  }
+}

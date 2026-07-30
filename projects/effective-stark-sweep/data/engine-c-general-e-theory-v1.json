@@ -1,0 +1,127 @@
+{
+  "schema": "effective-stark-engine-c-general-e-theory-v1",
+  "banked_at_utc": "2026-07-30T05:42:40Z",
+  "claim_tag": "VERIFIED_THEOREM",
+  "scope": "Engine-C torsion-invariant archimedean packets under Stark's proved imaginary-quadratic rank-one theorem",
+  "theorem": {
+    "hypotheses": [
+      "E/k is the certified abelian character field over an imaginary quadratic base",
+      "the exact linear reinduction has no scalar twist",
+      "S contains the complex place and the certified finite conductor primes",
+      "|S| >= 3, so the Stark element used here is a global unit",
+      "e = |mu(E)| is computed exactly",
+      "the complete finite candidate ray-character set is enumerated"
+    ],
+    "normalized_complex_absolute_value": "|z|_w = |z|_ord^2",
+    "partial_zeta_formula": "zeta'_S(0,g) = -(2/e) * log|g(epsilon)|_ord",
+    "fourier_formula": "L'_S(0,psi) = -(2/e) * sum_g conjugate(psi(g))*log|g(epsilon)|_ord",
+    "analytic_to_unit_scale": "e/2",
+    "unit_is_intrinsically_defined_modulo": "mu(E)",
+    "certified_output": "Artin-labeled class [epsilon] in O_E^x/mu(E), its ordered ordinary magnitudes, and its positive CM norms"
+  },
+  "specializations": {
+    "6": {
+      "ordinary_modulus_coefficient": "1/3",
+      "analytic_to_unit_scale": 3,
+      "torsion_handling": "compute in O_E^x/mu_6; zeta_3 is torsion and is not a free-unit coordinate"
+    },
+    "8": {
+      "ordinary_modulus_coefficient": "1/4",
+      "analytic_to_unit_scale": 4,
+      "torsion_handling": "compute in O_E^x/mu_8"
+    },
+    "12": {
+      "ordinary_modulus_coefficient": "1/6",
+      "analytic_to_unit_scale": 6,
+      "torsion_handling": "compute in O_E^x/mu_12"
+    }
+  },
+  "orientation_certificate": {
+    "steps": [
+      "enumerate all linear ray characters compatible with conductor, kernel, projective quotient, and normal-closure reinduction",
+      "compute exact Dirichlet-coefficient signatures until the signature map is injective on the enumerated set",
+      "match the independently computed source signature uniquely; non-unique or absent match is HALT",
+      "order embeddings by the selected exact Artin action",
+      "isolate a unique integral logarithmic-lattice orbit in O_E^x/mu(E) with Arb using scale e/2",
+      "identify the Artin-labeled positive real packet by exact normal-closure identities"
+    ],
+    "selecting_invariant": "injective exact Dirichlet-coefficient signature of the linear ray character, followed by exact Artin action",
+    "reciprocal_selection": "certified logarithm sign plus Artin label; positivity alone is insufficient",
+    "root_of_unity_statement": "all mu(E)-multiples have identical magnitudes and CM norms, so selecting a literal torsion representative is neither possible from Stark logarithms nor required",
+    "failure_disposition": "HALT_AND_ESCALATE"
+  },
+  "base_field_bookkeeping": {
+    "warning": "w_k and e=|mu(E)| are distinct quantities",
+    "w_k": {
+      "Q(sqrt(-3))": 6,
+      "Q(i)": 4,
+      "other_imaginary_quadratic": 2
+    },
+    "per_case_required_prints": [
+      "w_k",
+      "e",
+      "|S|",
+      "exact torsion subgroup",
+      "coefficient signature table"
+    ]
+  },
+  "e6_gate": {
+    "theory_state": "BANKED",
+    "eligible_field_count": 75,
+    "eligible_occurrence_count": 457,
+    "bulk_state": "WAITING_FOR_DIRECTIVE_TASK_8_VALIDATION_IF_APPLICABLE"
+  },
+  "e_gt_6_decision": {
+    "choice": "GENERAL_E",
+    "reason": "normalization and torsion-invariant orientation use no step special to e=2,4,6",
+    "q_sqrt_6_primary_route": {
+      "base": "Q(sqrt(-2))",
+      "e": 8,
+      "scale": 4
+    },
+    "q_sqrt_6_independent_route": {
+      "base": "Q(sqrt(-3))",
+      "e": 12,
+      "scale": 6,
+      "w_k": 6
+    },
+    "q_sqrt_6_state": "BLOCKED_PENDING_SECOND_BASE_RECONSTRUCTION_AND_EXACT_SAME_PACKET_COMPARISON",
+    "literal_mu_8_representative_claimed": false
+  },
+  "inventory_cross_check": {
+    "field_minimum_e_histogram": {
+      "2": 227,
+      "4": 90,
+      "6": 75,
+      "8": 1
+    },
+    "field_total": 393,
+    "occurrence_minimum_e_histogram": {
+      "2": 404,
+      "4": 292,
+      "6": 457,
+      "8": 10
+    },
+    "occurrence_total": 1163,
+    "q_sqrt_6_route_e_pair": [
+      8,
+      12
+    ]
+  },
+  "source_hashes": {
+    "projects/sic-stark/paper/sic-stark-dimensions-seven-eight.tex": "9b2acaeb9114bfa404260c9ced0e38cefdcb9fc2089520c2fe90af9c9b9e4252",
+    "projects/sic-stark/scripts/certify_dimension_eight_cm_orientation.py": "38b5d7e319c72a0c5d35c0973a1c65fbd10a283e65b93850ccac7b853c02f82f",
+    "projects/effective-stark-sweep/scripts/certify_rq000458_c_orientation.py": "204965d569e5dde84a0c69ed58f1646a1323180b72df0e35caa6e5af223466a1",
+    "projects/effective-stark-sweep/artifacts/engine-c-e-inventory-v1.json": "a53be7591753b11fecdad2d96dca4479b99bbfaf732982fc1cf17dcf0ac5ef9b",
+    "projects/effective-stark-sweep/artifacts/q6-norm8-c-stark-conditions-v1.transcript": "9389c57c59844e2930852a26fbaefdcb37bd0e65e14ae70213c6a91112ea22cf",
+    "projects/effective-stark-sweep/artifacts/q6-norm8-c-reinduction-v1.transcript": "8a65f7f43426ec3de223b2c3ccf88d36a536d22d156e63aa8096318f264b3345",
+    "projects/effective-stark-sweep/artifacts/q6-norm8-c-unit-lattice-v2.transcript": "fce556c45e4e26283d47569b93cc80a8347e0eaeddc8603fd162f55747929df1"
+  },
+  "reference": {
+    "author": "H. M. Stark",
+    "title": "L-functions at s=1. IV. First derivatives at s=0",
+    "journal": "Advances in Mathematics 35 (1980), 197-235",
+    "doi": "10.1016/0001-8708(80)90049-3"
+  },
+  "promotion_boundary": "This theorem does not promote a case without its replayable exact character table, Arb orbit isolation, and exact packet bridge."
+}

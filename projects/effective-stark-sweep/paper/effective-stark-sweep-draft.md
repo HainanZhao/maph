@@ -357,9 +357,9 @@ ray datum passes B.  These are elevated cross-validation targets, but
 promotion requires exact alignment of the character packet, algebraic
 unit, and oriented Artin labels under both engines.
 
-## A dual proof from disjoint theorem bases
+## Two routes from disjoint theorem bases
 
-The cheapest overlap, case `RQ-000458`, is now `DUAL_PROVED`.  Here
+The cheapest overlap, case `RQ-000458`, is `DUAL_ROUTED`.  Here
 \(K=\mathbb Q(\sqrt{14})\), the finite ideal has HNF
 \(\left[\begin{smallmatrix}12&0\\0&6\end{smallmatrix}\right]\), and
 \(\operatorname{Cl}_{\mathfrak m}(K)\simeq C_4\times C_2\).
@@ -392,5 +392,8 @@ The distinguished fourth root has coordinates \((-2,1)\).  Thirty-two
 exact identities in the common normal closure prove that its ordinary
 absolute values are precisely the roots of the displayed real packet.
 Thus the same packet is proved once from Shintani 1978 and once from
-Stark 1980.  The case bundle is
+Stark 1980.  The two routes are independent in theorem base and
+intermediate data, as attested; seal ordering was not
+contemporaneously documented.  We therefore do not promote the case
+to the stronger `DUAL_PROVED` process tag.  The case bundle is
 `data/rq000458-dual-case-v1.json`.

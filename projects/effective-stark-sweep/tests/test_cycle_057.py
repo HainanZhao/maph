@@ -81,9 +81,17 @@ class Cycle057Test(unittest.TestCase):
         self.assertEqual(result["record"]["maximal_one_ray_structure"],
                          [16, 4, 2])
 
-    def test_dual_case_is_exactly_dual_proved(self) -> None:
+    def test_dual_case_is_conservatively_dual_routed(self) -> None:
         case = load("data/rq000458-dual-case-v1.json")
-        self.assertEqual(case["verdict"], "DUAL_PROVED")
+        self.assertEqual(case["verdict"], "DUAL_ROUTED")
+        self.assertEqual(
+            case["promotion_resolution"]["decision"],
+            "NO_CONTEMPORANEOUS_ORDERING_SEAL",
+        )
+        self.assertIn(
+            "seal ordering not contemporaneously documented",
+            case["promotion_resolution"]["caveat"],
+        )
         self.assertTrue(case["packet"]["same_modulus"])
         self.assertTrue(case["packet"]["identical_packet_polynomial"])
         self.assertEqual(

@@ -1,6 +1,11 @@
 # Cycle 056 — RQ-000458 dual proof
 
-Status: `DUAL_PROVED`.
+Retrospective status correction (Cycle 059): `DUAL_ROUTED`.
+
+Both routes remain mathematically proved and independent in theorem
+base and intermediate data, as attested; seal ordering was not
+contemporaneously documented.  The original Cycle-056 promotion to
+`DUAL_PROVED` therefore exceeded the process record and is superseded.
 
 The cost screen selected RQ-000458, over `Q(sqrt(14))` with finite
 ideal HNF `[[12,0],[0,6]]`, because its shortest Engine-B route has
