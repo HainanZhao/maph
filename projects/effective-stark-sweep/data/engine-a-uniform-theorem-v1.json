@@ -1,0 +1,40 @@
+{
+  "schema": "effective-stark-engine-a-uniform-theorem-v1",
+  "claim_tag": "VERIFIED_THEOREM",
+  "scope": {
+    "base": "real quadratic K",
+    "modulus": "f * infinity_2",
+    "support_condition": "every character with chi(R)=-1 has order 2",
+    "nontrivial_occurrences": 1560,
+    "supported_character_occurrences": 2232,
+    "distinct_quartic_fields": 912
+  },
+  "formula": "L'_m(0,chi)=E_chi*(h_L/h_K)*(w_K/w_L)*(2/I_chi)*log|u_chi|",
+  "relative_index_definition": "I_chi is the absolute determinant of the embedded base-unit vector and a primitive generator of the exact free-unit norm kernel",
+  "fourier_inversion": "D_A=(2/|G|)*sum_{chi(R)=-1} chi(A)^(-1)L'_m(0,chi)",
+  "case_specific_obligations": [
+    "primitive character conductor",
+    "quadratic ray field and bnfcertify",
+    "class numbers and roots of unity",
+    "imprimitive Euler factors at zero",
+    "exact free-unit norm map",
+    "primitive relative-unit kernel",
+    "relative index determinant",
+    "real-embedding orientation",
+    "cleared-denominator packet power identity"
+  ],
+  "anchor_transcripts": [
+    {
+      "case": "dimension four",
+      "path": "artifacts/engine-a-uniform-d4-anchor-v1.transcript",
+      "sha256": "d837e61917d1d42fecb54d44bcabcf50f6b704146a8457810564d71cd4eda610"
+    },
+    {
+      "case": "dimension eight, two quadratic packets",
+      "path": "artifacts/engine-a-uniform-d8-anchor-v1.transcript",
+      "sha256": "ffe4d0c4691fc019dc5d0f2d9cf0e04d12c8c94eadbf201baa32270d82d760ca"
+    }
+  ],
+  "bulk_gate": "OPEN_FOR_FINITE_VERIFICATION",
+  "proof_document": "docs/cycle-019-uniform-engine-a-theorem.md"
+}

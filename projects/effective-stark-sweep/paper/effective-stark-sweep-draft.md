@@ -104,11 +104,14 @@ B battery, the formal theorem-route histogram is:
 | `PROVED_TRIVIAL` | 3,899 | 1 |
 | nontrivial Engine A eligible | 1,560 | 912 |
 | Engine B eligible | 195 | 59 |
-| Engine C eligible | 728 | 430 |
+| Engine C eligible | 728 | 393 |
 | `FRONTIER` | 1,818 | -- |
 
 The nontrivial A rows contain 2,232 supported quadratic packets, while
-the C rows contain 1,255 eligible quartic packets. The final frontier
+the 728 fully C-eligible rows contain 1,163 quartic packets. Across all
+structural C rows, 1,255 individual packets pass geometry and define
+430 fields, but 92 of those packets lie in mixed-pass rows and are
+outside the C bulk. The final frontier
 taxonomy is 1,100 `INDEX_GT_2`, 502 `EXPONENT_CAP`, 177
 `NO_ABELIAN_IMAGINARY_BASE`, 33 `UNIT_CONGRUENCE_FAIL`, two
 `REAL_PLACE_SPLITTING_FAIL`, and four `TOOL_BLOCKED`. These counts sum
@@ -123,7 +126,7 @@ representatives are proved-trivial or eligible for one of the three
 proved engines, hence 6,375 occur beyond the seven anchors, far above
 the threshold of 15. This is an eligibility count, not a count of new
 proved packets. The declaration is hash-frozen in
-`artifacts/full-census-yield-declaration-v1.json`.
+`artifacts/full-census-yield-declaration-v2.json`.
 
 ## Identification order
 
@@ -203,6 +206,48 @@ Euler-factor corpus therefore verifies a single ACNF theorem over 912
 field objects, then transfers the result to their occurrences.  That
 bulk remains after the individual C and B identifications in the
 pre-registered order.
+
+The uniform theorem gate is now closed. For every supported quadratic
+character, the exact norm-kernel lattice defines
+\(I_\chi\), and the mixed-signature class-number formula gives
+\[
+L'_{\mathfrak m}(0,\chi)=E_\chi
+\frac{h_{L_\chi}}{h_K}\frac{w_K}{w_{L_\chi}}
+\frac{2}{I_\chi}\log|u_\chi|.
+\]
+The proof includes imprimitive Euler factors and exact Fourier
+inversion; a coordinate gcd without the primitive norm kernel is not
+accepted. Dimension four and both quadratic dimension-eight packets
+replay the formula. Thus the 912-field A corpus is finite verification
+under one theorem.
+
+## Bulk decomposition and the general-e boundary
+
+The exact roots-of-unity inventory changes the C execution plan. The
+728 fully eligible cases contain 1,163 packets in 393 packet fields.
+Their minimum available normalization values are
+\[
+\begin{array}{c|rrrr}
+e_{\min}&2&4&6&8\\ \hline
+\text{fields}&227&90&75&1\\
+\text{occurrences}&404&292&457&10.
+\end{array}
+\]
+Consequently, banked \(e=2,4\) lemmas cover 395 complete cases. The
+other 333 cases require general-\(e\) normalization and orientation.
+The unique minimum-\(e=8\) field is the
+\(\mathbb Q(\sqrt6)\) packet, occurring ten times; its two exact
+imaginary-base routes have \(e=(8,12)\). Hence its second-base check is
+also a genuinely new normalization case, not a repetition of the
+primary route.
+
+The B population consists of 59 closures. Eight have banked
+representatives and 51 remain. One divisor audit and one canonical W3
+identification are performed per closure, followed by exact transport
+to every member modulus; closure equality alone is not a theorem for a
+member occurrence. All ten remaining B/C overlaps pass exact
+same-character-packet alignment, but remain alignment-only until both
+independent W3 proofs exist.
 
 ## Theorem-value portfolio
 
