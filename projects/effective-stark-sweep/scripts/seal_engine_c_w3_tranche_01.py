@@ -14,6 +14,8 @@ CHARACTERS = ROOT / "artifacts/engine-c-character-selection-v1.json"
 THETA = ROOT / "artifacts/engine-c-theta-targets-v1.json"
 ORBITS = ROOT / "artifacts/engine-c-unit-orbits-v1.json"
 BRIDGE = ROOT / "artifacts/engine-c-packet-bridge-v1.json"
+ROOT_REALITY = ROOT / "artifacts/engine-c-packet-root-reality-v1.json"
+THEORY_V2 = ROOT / "data/engine-c-general-e-theory-v2.json"
 STAGING = ROOT / "artifacts/engine-c-w3-tranche-01-boundary-v1.json"
 OUTPUT = ROOT / "artifacts/engine-c-w3-tranche-01-verified-v1.json"
 
@@ -33,6 +35,7 @@ def main() -> None:
     theta = json.loads(THETA.read_text())
     orbits = json.loads(ORBITS.read_text())
     bridge = json.loads(BRIDGE.read_text())
+    root_reality = json.loads(ROOT_REALITY.read_text())
     staging = json.loads(STAGING.read_text())
 
     character_rows = rows(characters, "RQ-001280")
@@ -67,6 +70,8 @@ def main() -> None:
         for row in bridge_rows
     ):
         raise RuntimeError("Artin-labeled packet disagreement")
+    if root_reality["packet_signature"] != [4, 2]:
+        raise RuntimeError("packet root signature changed")
 
     members = staging["tranche"]["members"]
     if [row["case_id"] for row in members] != [
@@ -120,18 +125,21 @@ def main() -> None:
             "arb_primitive_lprime_targets": True,
             "unique_integral_orbit": True,
             "exact_artin_labeled_bridge": True,
+            "four_real_root_matching": True,
             "independent_two_route_agreement": True,
             "paper_ii_anchor_replayed": True,
         },
         "normalization": (
-            "Class-log conversion is e/2. Direct primitive quartic "
-            "L'-to-two-log inversion is e/4 because anti-unit Fourier "
-            "pairs are duplicated."
+            "Forward class-log coefficient: zeta'=-(2/e)ell. "
+            "Inverse class recovery: ell=-(e/2)zeta'. Forward direct "
+            "quartic coefficient: L'=-(4/e)(ell_1-i ell_sigma). "
+            "Inverse direct-L' recovery: ell_1-i ell_sigma=-(e/4)L'."
         ),
         "source_hashes": {
             str(path.relative_to(ROOT)): sha(path)
             for path in (
-                CHARACTERS, THETA, ORBITS, BRIDGE, STAGING, SELF
+                CHARACTERS, THETA, ORBITS, BRIDGE, ROOT_REALITY,
+                THEORY_V2, STAGING, SELF
             )
         },
     }

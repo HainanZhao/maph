@@ -1,0 +1,64 @@
+{
+  "schema": "effective-stark-case-development-v2",
+  "case_id": "RQ-000129",
+  "field": "Q(sqrt(6))",
+  "finite_ideal_hnf": [[4, 0], [0, 2]],
+  "finite_norm": 8,
+  "archimedean_place": "infinity_2",
+  "fourier_support_orders": [4],
+  "engine": "C",
+  "supersedes": {
+    "path": "data/q6-norm8-case-v1.json",
+    "sha256": "903c9b635cfc72a67629a8fbeb23590afda259908eef1e8259fd0869009893dd",
+    "reason": "the pre-auxiliary |S|=2 scope halt is preserved but discharged"
+  },
+  "routes": [
+    {
+      "base": "Q(sqrt(-2))",
+      "e": 8,
+      "natural_s_size": 3,
+      "selected_character": [1],
+      "relative_abelian_certificate": "exact ray-class reconstruction",
+      "natural_coordinate_orbit": [[-4, 0], [0, -4], [0, 4], [4, 0]]
+    },
+    {
+      "base": "Q(sqrt(-3))",
+      "e": 12,
+      "natural_s_size": 2,
+      "selected_character": [1, 1],
+      "relative_abelian_certificate": "exact rnfconductor-to-bnrclassfield round trip",
+      "natural_coordinate_orbit": [[-6, 0], [0, -6], [0, 6], [6, 0]]
+    }
+  ],
+  "auxiliary_prime_closure": {
+    "claim_tag": "VERIFIED",
+    "rational_primes": [3, 5],
+    "exact_euler_multipliers_at_s0": {
+      "3": "1+i",
+      "5": "2"
+    },
+    "route_independent_euler_factors": true,
+    "rank_preserved": true,
+    "secondary_enlarged_s_size": 3,
+    "q3_coordinate_relation": "the exact (I+/-A) group-ring transform",
+    "q5_coordinate_relation": "twice the natural orbit",
+    "positive_square_root_argument": "q=5 identifies the square of every positive packet norm; positivity recovers the unique natural norm",
+    "two_route_exact_bridge": "q8^3=q12^2",
+    "certificate": {
+      "path": "artifacts/q6-auxiliary-prime-independence-v1.json",
+      "sha256": "6fe285e1d7f1b21bf520391a89702b1972f62e2c4a3280df602b044de6cbc6bc"
+    }
+  },
+  "generic_reproduction_gate": {
+    "byte_identical_execution_count": 2,
+    "rq000458_c_side_reproduced": true,
+    "q6_algebraic_half_reproduced": true,
+    "certificate": {
+      "path": "artifacts/engine-c-reproduction-gate-v1.json",
+      "sha256": "664912a9e0d465432f74e6c42f89b2503570f4b7eca0addf9c73cce9eb071d61"
+    }
+  },
+  "candidate_unit_minimal_polynomial": "x^8+24*x^7+732*x^6-9304*x^5+53958*x^4-9304*x^3+732*x^2+24*x+1",
+  "verdict": "VERIFIED",
+  "boundary": "The theorem identifies the torsion-invariant positive norm packet. It does not select a literal representative inside the root-of-unity coset."
+}

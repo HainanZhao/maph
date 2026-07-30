@@ -3,7 +3,8 @@
 \\ Caller defines:
 \\ CASE_ID, ROUTE_ID, REAL_BASE_POLYNOMIAL, REAL_FINITE_HNF,
 \\ SOURCE_CHARACTER, PACKET_FIELD_POLYNOMIAL, CM_BASE_POLYNOMIAL,
-\\ CHARACTER_FIELD_POLYNOMIAL, COEFFICIENT_LIMIT.
+\\ CHARACTER_FIELD_POLYNOMIAL, COEFFICIENT_LIMIT,
+\\ REQUIRE_RELATIVE_ABELIAN.
 
 default(parisizemax, 4000000000);
 
@@ -46,40 +47,82 @@ run_character_selection() =
   my(factors =
     nffactor(cm_base, CHARACTER_FIELD_POLYNOMIAL));
   my(best_factor = 0, best_conductor = 0, best_key = 0);
+  my(best_quartic = 0, best_selected_index = 0);
+  my(best_pari_rnfisabelian = 0);
+  my(source_compatible_factor_count = 0);
 
   for(index = 1, matsize(factors)[1],
     my(candidate_factor = factors[index, 1]);
     if(poldegree(candidate_factor) == 4,
-      if(!rnfisabelian(cm_base, candidate_factor),
-        error("relative character field is not abelian"));
+      my(candidate_relative_abelian =
+        rnfisabelian(cm_base, candidate_factor));
       my(candidate_conductor =
         rnfconductor(cm_base, candidate_factor));
       my(candidate_key =
         finite_hnf_key(candidate_conductor[1]));
-      if(type(best_factor) == "t_INT"
-         || lex(candidate_key, best_key) < 0
-         || (
-           lex(candidate_key, best_key) == 0
-           && cmp(candidate_factor, best_factor) < 0
-         ),
-        best_factor = candidate_factor;
-        best_conductor = candidate_conductor;
-        best_key = candidate_key;
+      my(candidate_ray = candidate_conductor[2]);
+      my(all_compatible =
+        bnrchar(candidate_ray, candidate_conductor[3]));
+      my(candidate_quartic = List());
+      for(item = 1, #all_compatible,
+        if(ray_character_order(
+          all_compatible[item], Vec(candidate_ray.cyc)) == 4,
+          listput(candidate_quartic, all_compatible[item])));
+      candidate_quartic = Vec(candidate_quartic);
+      if(#candidate_quartic == 2
+         && inverse_characters(
+           candidate_quartic[1],
+           candidate_quartic[2],
+           Vec(candidate_ray.cyc)),
+        my(candidate_matches = List());
+        for(item = 1, #candidate_quartic,
+          if(lfunan(
+               lfuncreate([candidate_ray, candidate_quartic[item]]),
+               COEFFICIENT_LIMIT)
+             == source_coefficients,
+            listput(candidate_matches, item)));
+        candidate_matches = Vec(candidate_matches);
+        if(#candidate_matches == 1,
+          source_compatible_factor_count++;
+          if(type(best_factor) == "t_INT"
+             || lex(candidate_key, best_key) < 0
+             || (
+               lex(candidate_key, best_key) == 0
+               && cmp(candidate_factor, best_factor) < 0
+             ),
+            best_factor = candidate_factor;
+            best_conductor = candidate_conductor;
+            best_key = candidate_key;
+            best_quartic = candidate_quartic;
+            best_selected_index = candidate_matches[1];
+            best_pari_rnfisabelian = candidate_relative_abelian;
+          );
+        );
       );
     );
   );
   if(type(best_factor) == "t_INT",
-    error("no relative quartic factor found"));
+    error("no source-compatible relative quartic factor found"));
 
   my(cm_ray = best_conductor[2]);
-  my(all_compatible =
-    bnrchar(cm_ray, best_conductor[3]));
-  my(quartic = List());
-  for(index = 1, #all_compatible,
-    if(ray_character_order(
-      all_compatible[index], Vec(cm_ray.cyc)) == 4,
-      listput(quartic, all_compatible[index])));
-  quartic = Vec(quartic);
+  my(quartic = best_quartic);
+  my(classfield_absolute = 0);
+  my(classfield_isomorphisms = []);
+  my(relative_abelian_certified = best_pari_rnfisabelian);
+  if(!relative_abelian_certified,
+    classfield_absolute =
+      bnrclassfield(cm_ray, best_conductor[3], 2);
+    if(polisirreducible(classfield_absolute),
+      classfield_isomorphisms =
+        nfisisom(character_field, nfinit(classfield_absolute));
+      relative_abelian_certified =
+        type(classfield_isomorphisms) != "t_INT"
+        && #classfield_isomorphisms > 0;
+    );
+  );
+  if(REQUIRE_RELATIVE_ABELIAN
+     && !relative_abelian_certified,
+    error("ray-class round-trip abelian certificate failed"));
   if(#quartic != 2,
     error(Str("compatible quartic character count changed: ",
       #quartic)));
@@ -99,6 +142,8 @@ run_character_selection() =
   if(#matches != 1,
     error(Str("exact source-match count changed: ", #matches)));
   my(selected_index = matches[1]);
+  if(selected_index != best_selected_index,
+    error("selected character changed after matching-factor freeze"));
   my(inverse_index = 3 - selected_index);
   my(separator = 0);
   for(n = 1, COEFFICIENT_LIMIT,
@@ -136,6 +181,17 @@ run_character_selection() =
   print("CHARACTER_FIELD_ROOTS_OF_UNITY_E=",
     character_field.tu[1]);
   print("CHARACTER_FIELD_BNFCERTIFY=1");
+  print("SOURCE_COMPATIBLE_RELATIVE_FACTOR_COUNT=",
+    source_compatible_factor_count);
+  print("PARI_RNFISABELIAN_DIAGNOSTIC=",
+    best_pari_rnfisabelian);
+  print("CLASSFIELD_ROUNDTRIP_ABSOLUTE_POLYNOMIAL=",
+    classfield_absolute);
+  print("CLASSFIELD_ROUNDTRIP_ISOMORPHISM_COUNT=",
+    #classfield_isomorphisms);
+  print("RELATIVE_ABELIAN_CERTIFIED=",
+    relative_abelian_certified);
+  print("RELATIVE_ABELIAN_REQUIRED=", REQUIRE_RELATIVE_ABELIAN);
   print("CANONICAL_RELATIVE_FACTOR=", best_factor);
   print("CM_CONDUCTOR=", best_conductor[1]);
   print("CM_CONDUCTOR_FACTORIZATION=", conductor_factorization);

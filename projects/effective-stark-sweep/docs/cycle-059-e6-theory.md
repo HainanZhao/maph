@@ -34,24 +34,60 @@ becomes
 =-\frac2e\log|g\varepsilon|_{\rm ord}.
 \quad}                                                    \tag{1}
 \]
-With the Paper-II Fourier convention this gives
+Thus the **forward class-log coefficient** is \(2/e\): if
+\(\ell_g=\log|g\varepsilon|_{\rm ord}\), then
+\[
+\boxed{\qquad
+\zeta'_{E/k,S}(0,g)=-\frac{2}{e}\,\ell_g,
+\qquad
+\ell_g=-\frac e2\,\zeta'_{E/k,S}(0,g).
+\qquad}                                                   \tag{2}
+\]
+The second expression is the inverse recovery formula; \(e/2\) is
+not itself the coefficient in Stark's class-log formula.
+
+With the Paper-II Fourier convention,
 \[
 L'_{S}(0,\psi)
 =-\frac2e\sum_{g\in G}\overline{\psi(g)}
-       \log|g\varepsilon|_{\rm ord}.                       \tag{2}
+       \ell_g.                                             \tag{3}
 \]
-Thus analytic logarithms are converted to unit logarithms by the exact
-factor \(e/2\).  The factors needed by the census are:
+For a primitive quartic character, write \(G=\langle\sigma\rangle\),
+\(\overline{\psi(\sigma)}=-i\), and use the anti-unit relations
+\(\ell_{\sigma^2}=-\ell_1\) and
+\(\ell_{\sigma^3}=-\ell_\sigma\).  Then (3) becomes
+\[
+\boxed{\qquad
+L'_S(0,\psi)
+  =-\frac4e\bigl(\ell_1-i\ell_\sigma\bigr),
+\qquad
+\ell_1-i\ell_\sigma
+  =-\frac e4 L'_S(0,\psi).
+\qquad}                                                   \tag{4}
+\]
+Therefore the **forward direct-\(L'\) coefficient** is \(4/e\), while
+\(-e/4\) is the inverse Fourier-lattice recovery coefficient, with
+the displayed sign and character convention.
 
-| \(e\) | coefficient in (1) | analytic-to-unit factor |
-|---:|---:|---:|
-| 6 | \(1/3\) | \(3\) |
-| 8 | \(1/4\) | \(4\) |
-| 12 | \(1/6\) | \(6\) |
+The coefficients and inverse factors needed by the census are:
+
+| \(e\) | class forward \(2/e\) | class inverse \(-e/2\) | direct-\(L'\) forward \(4/e\) | direct-\(L'\) inverse \(-e/4\) |
+|---:|---:|---:|---:|---:|
+| 6 | \(1/3\) | \(-3\) | \(2/3\) | \(-3/2\) |
+| 8 | \(1/4\) | \(-4\) | \(1/2\) | \(-2\) |
+| 12 | \(1/6\) | \(-6\) | \(1/3\) | \(-3\) |
 
 This proves the normalization part of the \(e=6\) lemma, and also the
 previously requested written \(e=8\) analogue of Paper II's
 normalization lemma.
+
+An \(e=2\) class-log replay alone cannot distinguish the forward
+coefficient \(2/e\) from the unsigned inverse magnitude \(e/2\),
+because both equal one.  The nontrivial \(e\ge4\) normalization check
+is the RQ-000458 \(e=4\) cross-route match; the
+\(\mathbb Q(\sqrt{35})\) two-base agreement independently validates
+the generic direct-\(L'\), orbit, and bridge implementation, while
+remaining an \(e=2\) normalization case.
 
 ## What “orientation” can and cannot mean
 
@@ -100,9 +136,12 @@ fixed by the following finite exact procedure.
    this exhaustive table.  Failure to obtain one unique match is a
    halt, not a choice made numerically.
 3. Order the embeddings by the selected character's exact Artin
-   generator.  Perform the Arb logarithmic-lattice inversion in the
-   torsion-free group \(\mathcal O_E^\times/\mu(E)\), using the factor
-   \(e/2\), and require a unique isolated integral orbit.
+   generator.  If the input consists of class derivatives, apply the
+   inverse formula in (2).  If it is the primitive quartic
+   \(L'(0,\psi)\), apply the inverse Fourier formula in (4).  Perform
+   the Arb logarithmic-lattice inversion in the torsion-free group
+   \(\mathcal O_E^\times/\mu(E)\), and require a unique isolated
+   integral orbit.
 4. Use exact normal-closure identities to map the isolated orbit to
    the real packet.  The CM norm is positive.  The certified sign of
    its logarithm, together with the selected Artin label, distinguishes
@@ -155,9 +194,10 @@ sealed aligned-candidate validation, if such a candidate exists.
 cross-check.**
 
 For the \(\mathbb Q(\sqrt6)\) packet, the
-\(\mathbb Q(\sqrt{-2})\) route uses \(e=8\) and scaling factor \(4\);
-the independent \(\mathbb Q(\sqrt{-3})\) route uses \(e=12\) and
-scaling factor \(6\), with \(w_k=6\).  Both routes must independently:
+\(\mathbb Q(\sqrt{-2})\) route has class forward coefficient \(1/4\)
+and direct-\(L'\) forward coefficient \(1/2\); the independent
+\(\mathbb Q(\sqrt{-3})\) route has coefficients \(1/6\) and \(1/3\),
+respectively, with \(w_k=6\).  Both routes must independently:
 
 - select the linear ray character by an injective exact coefficient
   signature;
@@ -186,6 +226,11 @@ No Arb promotion is made by this theory note.
 - RQ-000458 \(e=4\) independent orientation:
   `scripts/certify_rq000458_c_orientation.py`, SHA-256
   `204965d569e5dde84a0c69ed58f1646a1323180b72df0e35caa6e5af223466a1`.
+- RQ-000458 identity, in plain text:
+  \(K=\mathbb Q(\sqrt{14})\), modulus finite HNF
+  `[[12,0],[0,6]]` of norm \(72\) with infinite component `[1,0]`,
+  ray group \(C_4\times C_2\), and Fourier support orders exactly
+  \(\{4\}\) (characters `[1,1]` and `[3,1]`).
 - Exact census inventory:
   `artifacts/engine-c-e-inventory-v1.json`, SHA-256
   `a53be7591753b11fecdad2d96dca4479b99bbfaf732982fc1cf17dcf0ac5ef9b`.

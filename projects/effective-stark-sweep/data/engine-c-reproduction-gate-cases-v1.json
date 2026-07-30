@@ -1,0 +1,72 @@
+{
+  "schema": "effective-stark-engine-c-reproduction-gate-cases-v1",
+  "coefficient_limit": 64,
+  "records": [
+    {
+      "case_id": "RQ-000458",
+      "route_id": "Qsqrt(-42)",
+      "role": "REPRODUCTION_CONTROL",
+      "real_base_polynomial": "y^2-14",
+      "real_finite_hnf": "[12,0;0,6]",
+      "source_character": "[1,1]",
+      "packet_field_polynomial": "x^8-40*x^7+172*x^6+488*x^5+694*x^4+488*x^3+172*x^2-40*x+1",
+      "cm_base_polynomial": "y^2+42",
+      "character_field_polynomial": "x^8-4*x^7+20*x^6-28*x^5+106*x^4-152*x^3+152*x^2+184*x+58",
+      "expected_selected_character": "[1, 1, 1]",
+      "banked_selected_character": "[1, 1, 1]",
+      "banked_fixed_ray_character": "[1, 0, 1]",
+      "expected_e": 4,
+      "expected_stark_s_size": 3,
+      "theorem_scope": "STARK_1980_GLOBAL_UNIT"
+    },
+    {
+      "case_id": "RQ-000458",
+      "route_id": "Qsqrt(-3)",
+      "role": "REPRODUCTION_CONTROL",
+      "real_base_polynomial": "y^2-14",
+      "real_finite_hnf": "[12,0;0,6]",
+      "source_character": "[1,1]",
+      "packet_field_polynomial": "x^8-40*x^7+172*x^6+488*x^5+694*x^4+488*x^3+172*x^2-40*x+1",
+      "cm_base_polynomial": "y^2-y+1",
+      "character_field_polynomial": "x^8-20*x^6-12*x^5+138*x^4+240*x^3+220*x^2+564*x+601",
+      "expected_selected_character": "[9, 0, 1, 1]",
+      "banked_selected_character": "[9, 0, 1, 1]",
+      "banked_fixed_ray_character": "[3, 1, 1, 1]",
+      "expected_e": 12,
+      "expected_stark_s_size": 4,
+      "theorem_scope": "STARK_1980_GLOBAL_UNIT"
+    },
+    {
+      "case_id": "RQ-000129",
+      "route_id": "Qsqrt(-2)",
+      "role": "REPRODUCTION_CONTROL",
+      "real_base_polynomial": "y^2-6",
+      "real_finite_hnf": "[4,0;0,2]",
+      "source_character": "[1]",
+      "packet_field_polynomial": "x^8-4*x^5-2*x^4-8*x^2-8*x-2",
+      "cm_base_polynomial": "y^2+2",
+      "character_field_polynomial": "x^8-4*x^6-4*x^5+6*x^4+16*x^3+16*x^2+8*x+2",
+      "expected_selected_character": "[1]",
+      "banked_selected_character": "[1]",
+      "expected_e": 8,
+      "expected_stark_s_size": 3,
+      "theorem_scope": "STARK_1980_GLOBAL_UNIT"
+    },
+    {
+      "case_id": "RQ-000129",
+      "route_id": "Qsqrt(-3)",
+      "role": "REPRODUCTION_CONTROL",
+      "real_base_polynomial": "y^2-6",
+      "real_finite_hnf": "[4,0;0,2]",
+      "source_character": "[1]",
+      "packet_field_polynomial": "x^8-4*x^5-2*x^4-8*x^2-8*x-2",
+      "cm_base_polynomial": "y^2-y+1",
+      "character_field_polynomial": "x^8-2*x^6+5*x^4-4*x^2+1",
+      "expected_selected_character": "[1, 1]",
+      "banked_selected_character": "[1, 1]",
+      "expected_e": 12,
+      "expected_stark_s_size": 2,
+      "theorem_scope": "ALGEBRAIC_ONLY_S_SIZE_2"
+    }
+  ]
+}
