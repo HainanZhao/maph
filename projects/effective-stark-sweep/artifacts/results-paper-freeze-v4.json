@@ -1,0 +1,108 @@
+{
+  "schema": "effective-stark-results-paper-freeze-v4",
+  "claim_tag": "VERIFIED_REFEREE_READY_FREEZE",
+  "recorded_at_utc": "2026-07-30T13:16:27Z",
+  "supersedes": "artifacts/results-paper-freeze-v3.json",
+  "supersession_reason": "Added the fixed-field identification in the index-parity proof, the parity and general-e theorem-inventory items, the infinity_2 embedding convention, a closed universal Engine-A packet formula, and a named proof of the general-e Engine-C theorem.",
+  "primary_manuscript": {
+    "tex": "paper/effective-stark-results.tex",
+    "tex_sha256": "ac219b77b621481546ab096adaed11553d54f4f64d88f099a6ed5422506cdac3",
+    "pdf": "paper/effective-stark-results.pdf",
+    "pdf_sha256": "2267dbf72e89934feaea0c655cbd09a3300094fa06ba671b955d7560158d8df6",
+    "page_count": 15,
+    "latex_passes": 2,
+    "latex_warnings": 0,
+    "source_date_epoch": 1785417387,
+    "independent_builds_byte_identical": true
+  },
+  "theorem_inventory": [
+    {
+      "item": "Q(sqrt(7)) order-six packet and Q(sqrt(14)) replication",
+      "mathematical_status": "VERIFIED",
+      "historical_status": "SURVEYED_PRIORITY_NOT_A_THEOREM"
+    },
+    {
+      "item": "Q(sqrt(33)) order-ten packet",
+      "mathematical_status": "VERIFIED",
+      "historical_status": "SURVEYED_PRIORITY_NOT_A_THEOREM"
+    },
+    {
+      "item": "RQ-002057 ramified-prime-3 control",
+      "mathematical_status": "VERIFIED"
+    },
+    {
+      "item": "uniform Engine-A quadratic-support theorem and closed packet formula",
+      "mathematical_status": "VERIFIED_THEOREM"
+    },
+    {
+      "item": "RQ-000458 independent Shintani and Stark routes",
+      "mathematical_status": "VERIFIED_TWICE",
+      "process_status": "DUAL_ROUTED"
+    },
+    {
+      "item": "Q(sqrt(35)) generic CM closure beyond class number one",
+      "mathematical_status": "VERIFIED"
+    },
+    {
+      "item": "Q(sqrt(6)) e=8 and e=12 auxiliary-prime closure",
+      "mathematical_status": "VERIFIED_AFTER_PACKET_CORRECTION"
+    },
+    {
+      "item": "absolute-abelian no-go lemma",
+      "mathematical_status": "VERIFIED_THEOREM"
+    },
+    {
+      "item": "index-parity lemma and 446-case consistency replay",
+      "mathematical_status": "VERIFIED_THEOREM"
+    },
+    {
+      "item": "general-e Engine-C normalization and torsion-invariant orientation theorem",
+      "mathematical_status": "VERIFIED_THEOREM",
+      "specializations": [6, 8, 12]
+    }
+  ],
+  "scope": {
+    "included": [
+      "uniform Engine-A theorem with mixed-signature regulator proof and closed product formula",
+      "seven promoted Engine-B packets, including order six and order ten",
+      "generic Q(sqrt(35)) Engine-C closure and exact class-number check",
+      "first e=6 Engine-C tranche",
+      "corrected Q(sqrt(6)) auxiliary-prime closure",
+      "RQ-000458 disjoint theorem-base proof",
+      "absolute-abelian no-go lemma",
+      "genuine-normal-closure index-parity lemma and 446-case audit",
+      "general-e Engine-C normalization/orientation theorem for e=6,8,12",
+      "explicit infinity_2 embedding convention",
+      "seal-order audit and correction history"
+    ],
+    "excluded": [
+      "all census population counts beyond explicitly labeled verification queues",
+      "all FRONTIER counts and conductor trends",
+      "bulk-completeness claims",
+      "unpromoted W2 candidates",
+      "work-queue and process-economics prose"
+    ],
+    "invariance": "No census-population outcome changes a theorem in this manuscript."
+  },
+  "referee_audit": {
+    "artifact": "artifacts/results-paper-referee-audit-v2.json",
+    "sha256": "30f169f2f99b40a000312e2aa24ac6b37bcf5ff7bc0d3e4e1dfb39eaa3d921c2",
+    "outcome": "PASS"
+  },
+  "core_manifest": {
+    "artifact": "artifacts/results-paper-core-manifest-v1.json",
+    "sha256": "c3663bd8dcbe1f1de0b9b1f3cfe5ac173c27017dda82868e84180231e0ce1dbe"
+  },
+  "reserved_doi": {
+    "doi": "10.5281/zenodo.21703306",
+    "state": "UNPUBLISHED_DRAFT"
+  },
+  "failed_runs_preserved": [
+    "artifacts/results-paper-referee-audit-v2.failed-01.txt",
+    "artifacts/results-paper-referee-audit-v2.failed-02.txt",
+    "artifacts/results-paper-referee-audit-v2.failed-03.txt",
+    "artifacts/results-paper-deterministic-build-v3.failed-01.txt",
+    "artifacts/results-paper-deterministic-build-v4.failed-01.txt"
+  ],
+  "next_action": "external referee round; Zenodo publication remains blocked pending explicit user approval"
+}

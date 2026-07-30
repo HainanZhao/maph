@@ -9,6 +9,7 @@
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
 \newcommand{\Q}{\mathbb Q}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\Cl}{\operatorname{Cl}}
@@ -53,7 +54,11 @@ recognition enters a proof.
 
 Let $K$ be real quadratic and let
 \(\mathfrak m=\mathfrak f\infty_2\) be a ray modulus containing one
-real place.  For \(A\in\Cl_{\mathfrak m}(K)\), let \(R\) be the sign
+real place.  For \(K=\Q(\sqrt D)\) with \(D>0\), our convention is
+that \(\infty_2\) is the negative-square-root embedding
+\(\sqrt D\mapsto-\sqrt D\), which is the first real place in the
+pinned PARI ordering; \(\infty_1\) is the positive-square-root
+embedding.  For \(A\in\Cl_{\mathfrak m}(K)\), let \(R\) be the sign
 class and put
 \[
  Z_{\mathfrak m}(s,A)
@@ -134,8 +139,9 @@ For every real quadratic \(K\), every one-place modulus
 \(\mathfrak m=\mathfrak f\infty_2\), and every packet whose
 differenced Fourier support consists only of quadratic characters,
 each \(X_A\) is an explicit rational power of a product of relative
-units.  Formula \emph{(5)} gives the exponents entirely in terms of
-exact class numbers, roots of unity, imprimitive Euler factors, and
+units.  Corollary~\ref{cor:Aclosed} gives one closed product formula
+whose exponents are expressed entirely in terms of exact class
+numbers, roots of unity, imprimitive Euler factors, and
 relative-regulator indices.  No numerical approximation is required
 to state or prove the formula.
 \end{theorem}
@@ -193,7 +199,7 @@ conditional.}
 
 \subsection*{Theorem inventory}
 
-For clarity, the paper's contributions are the following eight
+For clarity, the paper's contributions are the following ten
 items.  The status in this list concerns mathematical proof unless it
 is explicitly prefixed by ``historical'' or ``process.''
 \begin{enumerate}
@@ -238,7 +244,7 @@ The \(\Q(\sqrt{35})\) packet is the first generic Engine-C closure
 in the corpus with \(h_K>1\).  Two imaginary bases of different
 class numbers, \(2\) and \(4\), are forced to the same Artin-labeled
 packet.
-\item \textbf{General-\(e\) CM closure
+\item \textbf{\(\Q(\sqrt6)\) general-\(e\) CM closure
 (\texttt{VERIFIED}).}
 The \(\Q(\sqrt6)\) packet is proved through \(e=8\) and \(e=12\)
 routes after auxiliary-prime enlargement.  Independent primes
@@ -251,6 +257,20 @@ packet over a real quadratic field is governed by an absolutely
 abelian ray field.  It rules out a hidden fourth abelian engine and
 therefore proves a small completeness statement about the method
 taxonomy itself.
+\item \textbf{Index-parity lemma
+(\texttt{VERIFIED\_THEOREM}).}
+Lemma~\ref{lem:parity} proves that nontrivial differenced support
+forces even Shintani index.  As an independent consistency replay,
+all 446 genuinely reconstructed odd-index cases in the census had
+trivial sign class and empty differenced support, with zero
+exceptions.
+\item \textbf{General-\(e\) normalization and orientation
+(\texttt{VERIFIED\_THEOREM}).}
+Theorem~\ref{thm:general-e} proves the Engine-C class-log and
+direct-\(L'\) coefficients and the torsion-invariant Artin
+orientation uniformly in \(e=|\mu(E)|\).  In particular it covers
+\(e=6,8,12\), subject to the explicitly stated \(|S|\ge3\)
+global-unit boundary.
 \end{enumerate}
 
 Theorem~\ref{thm:main} is deliberately a selected-results theorem,
@@ -408,6 +428,35 @@ after the exact factors in (5) have been absorbed into the integers
 Theorem~\ref{thm:A}.
 \end{proof}
 
+\begin{corollary}[Closed packet formula]\label{cor:Aclosed}
+Under the hypotheses of Theorem~\ref{thm:A}, put
+\[
+ c_{A,\chi}
+ =\frac{4}{|G|}\,\chi(A)^{-1}E_\chi
+   \frac{h_{L_\chi}}{h_K}
+   \frac{w_K}{w_{L_\chi}}
+   \frac1{I_\chi}.
+\]
+Then the positive real invariant at the selected embedding is
+\[
+ \boxed{\qquad
+ X_A=\prod_{\chi(R)=-1}
+       |\tau_1u_\chi|^{\,c_{A,\chi}}.
+ \qquad}
+\]
+Every exponent \(c_{A,\chi}\) is rational and is computed by exact
+finite arithmetic.
+\end{corollary}
+
+\begin{remark}
+The word ``uniform'' refers to this single character product, not to
+one field-independent named unit.  For fixed
+\((K,\mathfrak m,A)\), the supported characters form a finite set,
+and substituting their exact class numbers, Euler factors, unit
+kernels, and determinant indices reduces the corollary immediately
+to a concrete product of explicitly computed relative units.
+\end{remark}
+
 The theorem is uniform; its proof does not enumerate the census.
 There are 1,560 nontrivial eligible occurrences in the frozen range,
 involving 2,232 supported character occurrences and 912 distinct
@@ -558,6 +607,49 @@ For the frozen quartic Fourier convention,
  \ell_1-i\ell_\sigma=-\frac e4L'_S(0,\psi).
 \tag{18}
 \]
+
+\begin{theorem}[General-\(e\) CM normalization and orientation]
+\label{thm:general-e}
+Let \(E/k\) be an abelian CM character field over an imaginary
+quadratic field to which Stark's proved rank-one theorem applies, let
+\(|S|\ge3\), and put \(e=|\mu(E)|\).  Then the class logarithms and
+the primitive quartic \(L'\)-value satisfy (17)--(18).  The ordered
+object
+\[
+ \left(
+ [\varepsilon]\in\mathcal O_E^\times/\mu(E),\
+ (\log|g\varepsilon|_{\rm ord})_{g\in\Gal(E/k)},\
+ (N_{E/E^+}(g\varepsilon))_{g\in\Gal(E/k)}
+ \right)
+\]
+where \(E^+\) is the fixed field of complex conjugation, is
+independent of the literal root-of-unity multiple of
+\(\varepsilon\).  If the compatible ray characters are enumerated
+exactly, the finite separating-coefficient procedure (16), followed
+by the exact Artin action, canonically labels this torsion-invariant
+object.  The statement applies without a change of normalization for
+\(e=6,8,12\).
+\end{theorem}
+
+\begin{proof}
+Stark's normalized complex absolute value is
+\(|z|_w=|z|_{\rm ord}^2\).  Substitution in his formula
+\(\zeta'_S(0,g)=-e^{-1}\log|g\varepsilon|_w\) gives (17).
+Fourier inversion for the frozen quartic convention, together with
+\(\ell_{\sigma^2}=-\ell_1\) and
+\(\ell_{\sigma^3}=-\ell_\sigma\), gives (18).
+
+Multiplication by \(\xi\in\mu(E)\) changes neither the ordinary
+magnitudes nor the positive CM norms, so the displayed object is
+well-defined modulo torsion.  Distinct compatible finite ray
+characters have different Hecke \(L\)-series and hence differ at a
+finite Dirichlet coefficient.  Therefore appending coefficients
+until (16) is injective gives an effective finite selector; ordering
+by the selected character's exact Artin generator supplies the
+labels.  Nothing in the argument depends on a special value of \(e\);
+only its exact value in (17)--(18) is used.
+\end{proof}
+
 These are formulas, not interchangeable shorthand.  The \(e=2\)
 anchor cannot distinguish \(2/e\) from \(e/2\); the nontrivial
 normalization check is the \(e=4\) cross-route identity for
@@ -948,6 +1040,12 @@ interchanges them, so they are conjugate in \(G\).  Hence
 involution at the
 omitted place is trivial and the one at the retained place is \(R\).
 Thus the image of \([G,G]\) in \(A/B\) contains \(R\).  Its order is
+the degree of \(H\) over its fixed field.  That fixed field is
+\[
+ H\cap N^{[G,G]}=H\cap\Q^{\rm ab},
+\]
+because \(N^{[G,G]}\) is the maximal abelian subextension of
+\(N/\Q\).  Hence the image has order
 \([H:H\cap\Q^{\rm ab}]\), which is even if \(R\ne1\).
 Finally, characters of a finite abelian group separate a nonidentity
 element of order two, so \(R=1\) is equivalent to empty differenced
@@ -989,6 +1087,8 @@ generic CM packet & \path{artifacts/engine-c-w3-tranche-01-verified-v1.json}\\
 \(\Q(\sqrt6)\) & \path{data/q6-norm8-case-v3.json}\\
 two-route packet & \path{data/rq000458-dual-case-v1.json}\\
 quadratic theorem & \path{data/engine-a-uniform-theorem-v1.json}\\
+general-\(e\) theorem & \path{data/engine-c-general-e-theory-v3.json}\\
+index-parity theorem & \path{artifacts/results-paper-index-parity-lemma-v1.json}\\
 parity audit & \path{artifacts/results-paper-odd-index-parity-audit-v1.json}\\
 seal-order audit & \path{artifacts/results-paper-seal-order-audit-v1.json}\\
 \bottomrule
@@ -1025,9 +1125,9 @@ archive is a hard gate before submission of the paper.  The core file
 list and full SHA-256 values are in
 \path{artifacts/results-paper-core-manifest-v1.json}, whose SHA-256 is
 \[
-\texttt{04ac746fe210d8b501345b242fadc165}
+\texttt{c3663bd8dcbe1f1de0b9b1f3cfe5ac17}
 \quad
-\texttt{fa83c7482b884178114bf6bd6e416f4c}.
+\texttt{3c27017dda82868e84180231e0ce1dbe}.
 \]
 Thus the paper names one content hash even before the DOI resolves;
 the released archive will include the complete repository subset,

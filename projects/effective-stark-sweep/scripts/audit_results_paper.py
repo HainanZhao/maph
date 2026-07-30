@@ -86,6 +86,7 @@ def main() -> None:
     q6_correction = load("artifacts/q6-positive-packet-correction-v2.json")
     dual = load("data/rq000458-dual-case-v1.json")
     engine_a = load("data/engine-a-uniform-theorem-v1.json")
+    theory_original = load("data/engine-c-general-e-theory-v1.json")
     theory = load("data/engine-c-general-e-theory-v3.json")
     parity = load("artifacts/results-paper-index-parity-lemma-v1.json")
     parity_audit = load("artifacts/results-paper-odd-index-parity-audit-v1.json")
@@ -352,6 +353,8 @@ def main() -> None:
     # Structural theorem records.
     if engine_a["claim_tag"] != "VERIFIED_THEOREM":
         raise AssertionError("uniform Engine-A theorem is not banked")
+    if theory_original["claim_tag"] != "VERIFIED_THEOREM":
+        raise AssertionError("general-e Engine-C theorem is not banked")
     if parity["claim_tag"] != "VERIFIED_THEOREM":
         raise AssertionError("parity lemma is not banked")
     if (
@@ -374,7 +377,10 @@ def main() -> None:
     require(
         prose,
         "Uniform quadratic-support theorem",
+        "Closed packet formula",
+        "one closed product formula",
         "Theorem inventory",
+        "following ten items",
         "This is the paper's broadest result",
         "Order six and its replication",
         "Order ten",
@@ -382,8 +388,12 @@ def main() -> None:
         "Uniform Engine-A theorem",
         "Two disjoint theorem routes",
         "Generic CM closure beyond class number one",
-        "General-\\(e\\) CM closure",
+        "general-\\(e\\) CM closure",
+        "General-\\(e\\) normalization and orientation",
         "No-go lemma",
+        "Index-parity lemma",
+        "negative-square-root embedding",
+        "first real place in the pinned PARI ordering",
         "mixed signature",
         "Effective but not uniformly cheap",
         "selected-results theorem",
@@ -400,6 +410,8 @@ def main() -> None:
         paper,
         r"\lambda_L(\epsilon_K)=(a,a,-2a)",
         r"\lambda_L(u_\chi)=(b,-b,0)",
+        r"X_A=\prod_{\chi(R)=-1}",
+        r"H\cap N^{[G,G]}=H\cap\Q^{\rm ab}",
     )
 
     report = {
@@ -422,6 +434,10 @@ def main() -> None:
             "odd_index_consistency": "446/446",
             "seal_order": "PASS",
             "q6_polynomial_correction": "PASS_OLD_ZERO_REAL_NEW_FOUR_POSITIVE",
+            "theorem_inventory": "10/10",
+            "general_e_theorem": "VERIFIED_THEOREM_WITH_V3_SIGN_CORRECTION",
+            "embedding_convention": "INFINITY_2_NEGATIVE_SQRT_PARI_FIRST_REAL_PLACE",
+            "index_parity_fixed_field_step": "PASS",
             "reserved_doi": "10.5281/zenodo.21703306",
             "stark_usage_audit": "PASS",
         },
@@ -453,6 +469,7 @@ def main() -> None:
                 "artifacts/q6-positive-packet-correction-v2.json",
                 "data/rq000458-dual-case-v1.json",
                 "data/engine-a-uniform-theorem-v1.json",
+                "data/engine-c-general-e-theory-v1.json",
                 "data/engine-c-general-e-theory-v3.json",
                 "artifacts/results-paper-index-parity-lemma-v1.json",
                 "artifacts/results-paper-odd-index-parity-audit-v1.json",
