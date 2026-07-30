@@ -7,6 +7,15 @@
   "archimedean_place": "infinity_2",
   "fourier_support_orders": [2, 6],
   "engine": "B",
+  "structural_replication": {
+    "claim_tag": "VERIFIED",
+    "replicates": "Q(sqrt(7)), p_7 infinity_2",
+    "fundamental_totally_positive_unit": "15+4*sqrt(14)",
+    "unit_norm": 1,
+    "unit_congruent_one_mod_p7": true,
+    "safe_exponent": 4032,
+    "interpretation": "The norm-+1, p_7-congruent unit and the same safe exponent reproduce the proved order-six Shintani pattern over a second real quadratic base."
+  },
   "w2": {
     "claim_tag": "VERIFIED",
     "normal_closure_absolute_degree": 24,
@@ -32,8 +41,46 @@
     "two_route_mismatch": false
   },
   "w3": {
-    "claim_tag": "PENDING",
-    "required_gate": "exact packet candidate, ray/Frobenius labels, and Arb height-rigidity closure"
+    "claim_tag": "VERIFIED",
+    "relative_packet_polynomial": "x^6-(13+4*sqrt(14))*x^5+(85+22*sqrt(14))*x^4-(139+38*sqrt(14))*x^3+(85+22*sqrt(14))*x^2-(13+4*sqrt(14))*x+1",
+    "absolute_packet_polynomial": "x^12-26*x^11+115*x^10-24*x^9-23*x^8+6*x^7-105*x^6+6*x^5-23*x^4-24*x^3+115*x^2-26*x+1",
+    "ray_field_identification_over_base": true,
+    "sturm_windows": 6,
+    "split_prime_frobenius_labels": [
+      {"rational_prime": 11, "ray_log": 5},
+      {"rational_prime": 103, "ray_log": 1}
+    ],
+    "cone": {
+      "claim_tag": "VERIFIED",
+      "ray_generator": "(3)",
+      "cone_generator": "(7-sqrt(14))/3^r",
+      "totally_positive_unit": "15+4*sqrt(14)",
+      "lattice_matrix": [[1, 7], [-1, 13]],
+      "determinant": 20,
+      "points_per_class": 20,
+      "complement_symmetry": true
+    },
+    "analytic_arb_enclosure": {
+      "claim_tag": "ENCLOSED",
+      "pari_l_value_in_proof_chain": false,
+      "certified_simpson_panels": 30254689,
+      "powered_height_upper": "7.1465849215402164359665020093023256416202884725979064856190809114708706610637364e-9",
+      "voutier_degree_3_to_24_lower": "5.2279533222268426840964745087334147100498056818126756191023653407956634522264746e-5",
+      "certified_margin_lower": "7315",
+      "degree_1_fallback": "positive rational unit is 1",
+      "degree_2_fallback": "non-torsion height at least (1/2)log(phi), with positivity orienting torsion"
+    },
+    "certificate_hashes": {
+      "exact_candidate_sha256": "99e8acb0653200d40662aaee44ddacd762a60802e567c2c1bcc9e20066a4774a",
+      "arb_certificate_sha256": "2354fc1ace9a49388dfb035d5985bc5d44dd4ac2df95251c44ca6e174d9e6e16",
+      "numerical_recognition_sha256": "368d8b49146f3e59c97fb756438e1d12159e6260592a805ebe8bcddb6d18607f"
+    },
+    "packet_identity_verdict": "VERIFIED"
   },
-  "verdict": "W2_VERIFIED_W3_PENDING"
+  "theorem_claim": {
+    "claim_tag": "VERIFIED",
+    "statement": "This is the second unconditional order-six archimedean Stark instance in the frozen census perimeter.",
+    "boundary": "The numerical bnrL1 recognition is excluded from the proof chain; exact ray identification and the independent Arb cone certificate prove the displayed packet."
+  },
+  "verdict": "VERIFIED"
 }
