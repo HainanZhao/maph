@@ -1,0 +1,58 @@
+{
+  "schema": "effective-stark-results-paper-full-freeze-v2",
+  "recorded_at_utc": "2026-07-30T15:05:00Z",
+  "status": "MATHEMATICAL_REPAIRS_PASS_LOCAL_ARCHIVE_FROZEN_PENDING_PUBLIC_DEPOSIT_AND_HUMAN_REFEREE",
+  "supersedes": "artifacts/results-paper-full-freeze-v1.json",
+  "supersession_reason": "The next referee round found a powered-conjugate notation defect in the height lemma, a missing j(E)=E hypothesis in the CM norm bridge, insufficiently precise Shintani source mapping, an overstrong historical-priority formulation, and the absence of a public companion archive.",
+  "primary_manuscript": {
+    "tex": "paper/effective-stark-results.tex",
+    "tex_sha256": "c77e960b8da0ed607b42d3da6cb01c5d31e95515cbb1dbde12343e9862b3a597",
+    "pdf": "paper/effective-stark-results.pdf",
+    "pdf_sha256": "9497c887d2816c1da252f1bb40b3fa0412359910a674ee32b653f0636fa769fa",
+    "page_count": 16,
+    "latex_passes": 2,
+    "latex_warnings": 0,
+    "source_date_epoch": 1785420000,
+    "independent_builds_byte_identical": true
+  },
+  "mathematical_repairs": {
+    "height_rigidity": "Equation (15) now compares (1/m) log |sigma_v(X_A^m)| with log |sigma_v(alpha_A)|; eta_A=X_A^m/alpha_A^m is the algebraic quotient.",
+    "cm_fixed_field": "Theorem 9 now assumes j(E)=E and j restricted to k is nontrivial before defining E^+=E^{<j>} and N_{E/E^+}.",
+    "shintani_mapping": "Proposition 7 now maps the construction to Shintani's definitions (0-5), (18)-(20), equations (4), (6), (8), (9), and Propositions 4-5 with pages.",
+    "priority": "The text now says only that the author is unaware of earlier unconditional oriented order-six or order-ten examples; the search perimeter must be public."
+  },
+  "shintani_source_map": {
+    "artifact": "artifacts/shintani-1978-source-map-v1.json",
+    "artifact_sha256": "b145c2a7ae22853963586bfb2ea276290d9e8e4c043a5cca44fac2176e0083c0"
+  },
+  "referee_audit": {
+    "script": "scripts/audit_results_paper_full.py",
+    "script_sha256": "bca60e8a5b6b1d19f5166f1b59d266984cc35fbaebbe8f8793999ffab58c7bc2",
+    "artifact": "artifacts/results-paper-full-referee-audit-v1.json",
+    "artifact_sha256": "ca6891452e0ece8711c90bdd627b86acffb42836690d29e356954d9f4b4fb218",
+    "outcome": "PASS"
+  },
+  "companion_archive": {
+    "builder": "scripts/build_results_companion.py",
+    "builder_sha256": "75d88c4e2f71e0a50f9ef150cfa98016004590762fa425910e119947302f8083",
+    "verifier": "scripts/verify_results_companion.py",
+    "verifier_sha256": "94753455e4db72e1407f9b7be4c59479bc4baf5f21451fab4716243b2b384979",
+    "local_freeze": "artifacts/results-paper-companion-local-freeze-v3.json",
+    "local_freeze_sha256": "3a3be6cc5c45563cdbcb346b698a6522d88b6a7ae39bfff6e4cea4c0774aecda",
+    "archive": "dist/effective-stark-results-companion-v3.tar.gz",
+    "archive_sha256": "4133a7cf9be032fe8babd03b0b6a97f3078397b92b94bb6f813cc9ca272d7693",
+    "archive_replay": "PASS",
+    "manifest_file_count": 8395,
+    "public_identifier": null,
+    "status": "LOCAL_FROZEN_NOT_PUBLIC"
+  },
+  "removed_superseded_manuscript": [
+    "paper/effective-stark-cm-major-revision.tex",
+    "paper/effective-stark-cm-major-revision.pdf"
+  ],
+  "publication_gate": {
+    "zenodo": "NO_ACTION_TAKEN",
+    "submission": "BLOCKED_PENDING_PUBLIC_ARCHIVE_AND_NEW_HUMAN_REFEREE_ROUND",
+    "publish_action_allowed": false
+  }
+}
