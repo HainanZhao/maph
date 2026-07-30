@@ -1,0 +1,109 @@
+{
+  "canonical_representative": "RQ-003906",
+  "claim_tag": "VERIFIED_W2",
+  "closure_index": 17,
+  "finite_ideal_hnf": [
+    [
+      9,
+      0
+    ],
+    [
+      0,
+      9
+    ]
+  ],
+  "finite_norm": 81,
+  "member_case_ids": [
+    "RQ-003906"
+  ],
+  "member_occurrence_count": 1,
+  "normal_closure_absolute_field": "x^24 - 6*x^23 - 45*x^22 + 234*x^21 + 1440*x^20 - 5124*x^19 - 30875*x^18 + 68340*x^17 + 470784*x^16 - 572542*x^15 - 5184510*x^14 + 2650809*x^13 + 41540036*x^12 - 266562*x^11 - 240456507*x^10 - 105597299*x^9 + 1038765516*x^8 + 839530923*x^7 - 3412091430*x^6 - 3305170626*x^5 + 8010704571*x^4 + 7584806995*x^3 - 11918240496*x^2 - 12099173481*x + 16148264617",
+  "normal_closure_degree": 24,
+  "real_quadratic_field_d": 97,
+  "run_timestamp_utc": "2026-07-30T05:47:57.611614+00:00",
+  "schema": "effective-stark-engine-b-closure-w2-v1",
+  "selected_divisor_route": {
+    "base_bnfcertify": 1,
+    "base_class_number": 4,
+    "base_polynomial": "x^2 - x + 73",
+    "base_roots_of_unity": 2,
+    "clearing_exponents": "[864, 324, 108, 108]",
+    "conductor_hnf": [
+      [
+        9,
+        3
+      ],
+      [
+        0,
+        3
+      ]
+    ],
+    "distribution_indices": "[18, 9, 3, 1]",
+    "divisor_count": 4,
+    "normal_closure_match": true,
+    "ray_order": 36,
+    "route_index": 2,
+    "safe_exponent": 2592,
+    "selection_rule": "minimum divisor count, then ray order, then route index",
+    "subfield_relative_degree": 12,
+    "w_values": "[2, 1, 1, 1]"
+  },
+  "source_hashes": {
+    "artifacts/engine-b-two-route-analysis-v1.json": "d4838dfb74e91916421752e7b45da27a24c578f57f1f11f35971dec78803542e",
+    "artifacts/post-theorem-bulk-plan-v1.json": "fb63cd8953423a7120330ff259a84edab2225dd0b72ef9eb54aff0b3dadfd114",
+    "scripts/compute_imaginary_divisor_exponent.gp": "ac3fc159bfc6413987e36ebec8adaaf54e9301f48e2450db66f2a1affd75d365",
+    "scripts/screen_engine_b_two_route.gp": "0cb2df03f8df08d0d8bc05ae421181079bab52145b9ba6ba52b2860b46317430"
+  },
+  "transcript": {
+    "path": "artifacts/rq003906-b-closure-w2-v1.transcript",
+    "sha256": "5cba851d0163f1e9ae95c336dcaa7e2890550730815207e5c10e4be63909fa24"
+  },
+  "two_route": {
+    "abelian_imaginary_route_count": 2,
+    "all_routes_reconstruct_identical_closure": true,
+    "matching_route_count": 2,
+    "routes": [
+      {
+        "base_polynomial": "x^2 - x + 1",
+        "conductor_hnf": [
+          [
+            873,
+            291
+          ],
+          [
+            0,
+            291
+          ]
+        ],
+        "divisor_count": 16,
+        "normal_closure_match": true,
+        "ray_order": 27648,
+        "route_index": 1,
+        "subfield_relative_degree": 12
+      },
+      {
+        "base_polynomial": "x^2 - x + 73",
+        "conductor_hnf": [
+          [
+            9,
+            3
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "divisor_count": 4,
+        "normal_closure_match": true,
+        "ray_order": 36,
+        "route_index": 2,
+        "subfield_relative_degree": 12
+      }
+    ]
+  },
+  "w3": {
+    "claim": "No packet identification or analytic equality is claimed by this W2 certificate.",
+    "required_gate": "exact packet plus Arb enclosure at >=100x Voutier margin and explicit d<=2 fallback",
+    "state": "PENDING"
+  }
+}

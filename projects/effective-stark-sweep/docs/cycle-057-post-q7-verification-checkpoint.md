@@ -82,8 +82,10 @@ The frontier counts are `INDEX_GT_2=1100`, `EXPONENT_CAP=502`,
 `REAL_PLACE_SPLITTING_FAIL=2`, and `TOOL_BLOCKED=4`.
 There are 6,375 eligible occurrences beyond the seven anchors, so the
 pre-registered threshold of 15 passes. Frontier shares by
-conductor-norm quartile are 7.08%, 14.79%, 19.66%, and 21.64%,
-strictly increasing. The scope-separated v2 declaration hash is
+conductor-norm quartile in the final post-C/post-B population are
+9.93%, 21.60%, 27.26%, and 31.65%, strictly increasing. The
+scope-and-predicate-separated v3 declaration supersedes v2 for this
+trend. The scope-separated v2 declaration hash is
 `f2be4c87f28842aab96750eedf50b379200689cacc56c00f5041ae53901269a9`.
 The preserved v1 hash
 `5fbd63639fc2c7293dd3942a1c88851e9a004f7ff92619b2990a74454c755207`

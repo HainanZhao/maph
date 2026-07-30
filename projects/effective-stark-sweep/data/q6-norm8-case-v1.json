@@ -39,22 +39,29 @@
     "candidate_norm": 1
   },
   "identification": {
-    "claim_tag": "NUMERICAL",
-    "state": "BLOCKED_BEFORE_ARB: candidate isolated numerically",
-    "required_promotion_gates": [
-      "A written e=8 analogue of Lemma 4 deriving the exact Stark normalization from the ordinary complex absolute-value convention",
-      "An exact orientation procedure that enumerates and uniquely resolves all eight root-of-unity multiples",
-      "An independent Q(sqrt(-3)) imaginary-base reconstruction identifying the same oriented packet"
+    "claim_tag": "VERIFIED_SCOPE_FAILURE_NO_PACKET_PROMOTION",
+    "state": "BLOCKED_THEOREM_SCOPE_RESISTANCE",
+    "discharged_gates": [
+      "The general-e theorem derives normalization 2/e and torsion-invariant orientation for e=8 and e=12",
+      "The independent Q(sqrt(-3)) route is reconstructed exactly with e=12, w_k=6, and character [1,1] selected by a_3=-I",
+      "The two candidate orbits align exactly in the common normal closure through q_8^3=q_12^2 (256 identities)"
     ],
-    "arb_gate_order": "The Arb Shintani/cocycle enclosure may run only after all three gates pass."
+    "active_blocker": "The Q(sqrt(-3)) conductor has one finite prime, so the natural Stark set has |S|=2 and the banked |S|>=3 global-unit clause does not apply.",
+    "required_reopening": [
+      "Prove an |S|=2 S-unit version with exact finite-valuation control",
+      "or enlarge S by an auxiliary prime and carry the Euler factor exactly through both routes"
+    ],
+    "arb_gate_order": "HALT_BEFORE_ARB until one reopening is proved and preregistered.",
+    "scope_certificate": "data/q6-second-base-scope-v1.json"
   },
   "e8_protocol": {
-    "claim_tag": "PREREGISTERED_NOT_PROVED",
+    "claim_tag": "SUPERSEDED_BY_GENERAL_E_AND_SCOPE_AUDIT",
     "normalization_target": "With |x|_w=|x|_ordinary^2 and e=8, the 2/e factor is 1/4; the exact character/Fourier convention must be derived in the written analogue before use.",
     "orientation_target": "Enumerate zeta_8^j times the candidate for j=0,...,7 and require one exact Artin-phase/normal-closure identity to select exactly one.",
     "second_base_target": "The Q(sqrt(-3)) route must independently recover the same packet and orientation, not merely an isomorphic normal closure.",
-    "mismatch_disposition": "HALT_AND_REPORT"
+    "mismatch_disposition": "HALT_AND_REPORT",
+    "resolution": "Normalization and torsion-invariant orientation are proved uniformly in data/engine-c-general-e-theory-v1.json; the independent base aligns algebraically but halts at the |S|=2 theorem boundary recorded in data/q6-second-base-scope-v1.json."
   },
   "verdict": "THEOREM_CANDIDATE_NOT_YET_VERIFIED",
-  "boundary": "All field, conductor, character, Stark-hypothesis, and unit-lattice claims are exact. The equality between the differenced invariant and the displayed candidate unit is not claimed. In particular, an Arb enclosure alone cannot promote the case until the three e=8 gates are discharged."
+  "boundary": "All field, conductor, character, unit-lattice, and cross-route candidate-alignment claims are exact. The equality between the differenced invariant and the displayed candidate unit is not claimed because the second route has |S|=2, outside the banked global-unit theorem. Arb is halted until that theorem-scope issue is resolved."
 }

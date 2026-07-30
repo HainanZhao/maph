@@ -1,0 +1,107 @@
+{
+  "claim_tag": "VERIFIED_STAGING_ONLY",
+  "completed_boundary": [
+    "closure-batched exact e replay (once per packet field)",
+    "exact inventory-e assertion",
+    "per-member modulus and packet-field identity assertion",
+    "exact source/primitive character and reinduction-base staging"
+  ],
+  "missing_promotion_components": [
+    {
+      "available_generic_stage": "geometry screen supplies source and primitive ray characters but not the CM-side exhaustive coefficient table",
+      "component": "exact_character_table",
+      "required": "complete compatible CM ray-character enumeration and injective exact Dirichlet-coefficient signature"
+    },
+    {
+      "available_generic_stage": "no generic certified partial-zeta/L-prime evaluator or unit-lattice isolator exists; current implementations are case-specific anchors",
+      "component": "arb_orbit_isolation",
+      "required": "rigorous Arb evaluation of the analytic target and unique integral logarithmic-unit orbit isolation"
+    },
+    {
+      "available_generic_stage": "geometry proves field-level reinduction bases only; it does not construct member-specific packet identities",
+      "component": "exact_packet_bridge",
+      "required": "Artin-labeled exact normal-closure identities mapping the isolated CM orbit to every real member packet"
+    }
+  ],
+  "promotion_boundary": "No occurrence is promoted without all three missing components as replayable per-case certificates.",
+  "promotion_state": "BLOCKED_MISSING_GENERIC_W3",
+  "recorded_at_utc": "2026-07-30T05:50:38Z",
+  "replay": {
+    "path": "artifacts/engine-c-w3-tranche-01-e-replay-v1.transcript",
+    "sha256": "aed946310c1ba7b1699b2e4933a8e3d714b93ccade07eb91a7e637579a6bf0e4"
+  },
+  "schema": "effective-stark-engine-c-w3-tranche-boundary-v1",
+  "source_hashes": {
+    "artifacts/engine-c-e-inventory-v1.json": "a53be7591753b11fecdad2d96dca4479b99bbfaf732982fc1cf17dcf0ac5ef9b",
+    "artifacts/engine-c-geometry-full-v1.transcript": "0ab3c647d9de69d2cc347a6846298eca30ea3f46adc60270de4f6b67d6f66278",
+    "artifacts/frozen-ideal-census-v1.json": "9fa0f1880ca0c2d263e0235bd4ed83e8e6001b88bfede0927a7197f46f7d4563",
+    "artifacts/post-theorem-bulk-plan-v1.json": "fb63cd8953423a7120330ff259a84edab2225dd0b72ef9eb54aff0b3dadfd114",
+    "data/engine-c-general-e-theory-v1.json": "1067e3cd00cbbb5a33c55b698353a3554d991090f6c4e4997e8d5ebebdf68233",
+    "scripts/screen_engine_c_e_values.gp": "d8e037ac3f34aadb6155742b82a99132658fac47f314189f679cdf256c9af9f4"
+  },
+  "tranche": {
+    "absolute_polynomial": "x^8 + 10*x^6 + 14*x^4 - 20*x^2 + 4",
+    "closure_occurrence_count": 2,
+    "field_index": 1,
+    "inventory_e_assertion": true,
+    "members": [
+      {
+        "D": 35,
+        "case_id": "RQ-001280",
+        "field_discriminant": 140,
+        "finite_ideal_hnf": [
+          [
+            8,
+            4
+          ],
+          [
+            0,
+            4
+          ]
+        ],
+        "finite_norm": 32,
+        "geometry_pass": true,
+        "linear_reinduction_bases": "[x^2 + 10, x^2 + 14]",
+        "packet_index": 1,
+        "primitive_character": "[1, 0]",
+        "primitive_conductor": "[[8, 4; 0, 4], [1, 0]]",
+        "source_character": "[1, 0]",
+        "w3_state": "BLOCKED_MISSING_GENERIC_W3"
+      },
+      {
+        "D": 35,
+        "case_id": "RQ-001297",
+        "field_discriminant": 140,
+        "finite_ideal_hnf": [
+          [
+            8,
+            0
+          ],
+          [
+            0,
+            8
+          ]
+        ],
+        "finite_norm": 64,
+        "geometry_pass": true,
+        "linear_reinduction_bases": "[x^2 + 10, x^2 + 14]",
+        "packet_index": 1,
+        "primitive_character": "[1, 0]",
+        "primitive_conductor": "[[8, 4; 0, 4], [1, 0]]",
+        "source_character": "[1, 0]",
+        "w3_state": "BLOCKED_MISSING_GENERIC_W3"
+      }
+    ],
+    "minimum_e_expected": 2,
+    "route_e_expected": [
+      2,
+      2
+    ],
+    "route_e_replayed": [
+      2,
+      2
+    ],
+    "selection_rule": "first polynomial-sorted distinct packet field with minimum e in {2,4}",
+    "tranche_id": "C-W3-TRANCHE-01"
+  }
+}

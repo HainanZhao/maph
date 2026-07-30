@@ -1,0 +1,19 @@
+Q6 second-base bridge search, preserved failed run v0
+UTC date: 2026-07-30
+
+Command:
+  gp -q scripts/q6_norm8_second_base_bridge_search.gp
+
+Failure:
+  GP parser reported an unexpected end of file at the final print
+  statement and then `run_search(): not a function in function call`.
+
+Cause:
+  The `my(conjugation = lift(galoispermtopol(...)))` declaration was
+  missing the final parenthesis closing `my`.
+
+Disposition:
+  No mathematical computation ran and no verdict was issued.  The
+  parser error was corrected in the versioned source before rerun.
+
+CLAIM_TAG=FAILED_PARSER_RUN_PRESERVED

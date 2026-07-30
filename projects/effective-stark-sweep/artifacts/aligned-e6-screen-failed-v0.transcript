@@ -1,0 +1,15 @@
+PREREGISTRATION_COMMIT=c2c2a01
+CASE_ID=RQ-007674
+PACKET_INDEX=1
+D_VALUE=191
+NOTE=Caller incorrectly supplied the squarefree radicand rather than the frozen field discriminant 760.
+SOURCE_POLYNOMIAL=x^8 - 4*x^7 - 32*x^6 - 4*x^5 + 298*x^4 + 584*x^3 - 672*x^2 - 2736*x - 1674
+PARI_OUTPUT:
+*** Warning: new maximum stack size = 4000002048 (3814.699 Mbytes).
+*** at top-level: run_inventory()
+***               ^---------------
+*** in function run_inventory: ...case_index||!kernel_index,
+*** error("source subgrou
+*** ^---------------------
+*** user error: source subgroups missing
+DISPOSITION=FAILED_CALLER_INPUT_PRESERVED

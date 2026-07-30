@@ -126,7 +126,12 @@ class Cycles021050Test(unittest.TestCase):
             case["verdict"], "THEOREM_CANDIDATE_NOT_YET_VERIFIED"
         )
         self.assertEqual(
-            case["identification"]["claim_tag"], "NUMERICAL"
+            case["identification"]["claim_tag"],
+            "VERIFIED_SCOPE_FAILURE_NO_PACKET_PROMOTION",
+        )
+        self.assertEqual(
+            case["identification"]["state"],
+            "BLOCKED_THEOREM_SCOPE_RESISTANCE",
         )
 
     def test_engine_a_exact_split_and_field_deduplication(self) -> None:

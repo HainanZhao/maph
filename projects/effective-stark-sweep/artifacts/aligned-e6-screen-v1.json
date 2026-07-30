@@ -1,0 +1,36 @@
+{
+  "schema": "effective-stark-aligned-e6-screen-v1",
+  "claim_tag": "VERIFIED_EXACT_INVENTORY",
+  "preregistration_commit": "c2c2a01",
+  "candidate_count": 10,
+  "distinct_packet_field_count": 4,
+  "records": [
+    {
+      "case_ids": ["RQ-007674", "RQ-007682", "RQ-007721", "RQ-007752"],
+      "e_pair": [4, 4],
+      "source": "fresh exact run after preregistration",
+      "bnfcertify": [1, 1]
+    },
+    {
+      "case_ids": ["RQ-004130", "RQ-004147", "RQ-004161", "RQ-004178"],
+      "e_pair": [4, 4],
+      "source": "banked engine-c-e-inventory-v1"
+    },
+    {
+      "case_ids": ["RQ-004842"],
+      "e_pair": [4, 8],
+      "source": "banked engine-c-e-inventory-v1"
+    },
+    {
+      "case_ids": ["RQ-006800"],
+      "e_pair": [4, 8],
+      "source": "banked engine-c-e-inventory-v1"
+    }
+  ],
+  "e6_candidate_count": 0,
+  "task_8_disposition": "SKIP_NO_E6_CANDIDATE",
+  "promotion_boundary": "All ten cases remain alignment-only; no DUAL_PROVED promotion follows from this inventory.",
+  "failed_runs_preserved": [
+    "artifacts/aligned-e6-screen-failed-v0.transcript"
+  ]
+}
