@@ -15,11 +15,11 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "v10"
+VERSION = "v11"
 NAME = f"effective-stark-results-companion-{VERSION}"
 DIST = ROOT / "dist"
 ARCHIVE = DIST / f"{NAME}.tar.gz"
-FREEZE = ROOT / "artifacts/results-paper-companion-local-freeze-v10.json"
+FREEZE = ROOT / "artifacts/results-paper-companion-local-freeze-v11.json"
 
 SEEDS = {
     "paper/effective-stark-results.tex",
@@ -37,6 +37,7 @@ SEEDS = {
     "scripts/audit_engine_c_fourier_convention.py",
     "scripts/screen_engine_a_euler_degeneracy.gp",
     "scripts/certify_engine_b_archimedean_places.gp",
+    "scripts/audit_roblot_sextic_overlap.gp",
     "scripts/correct_engine_c_e6_primitive_packets.py",
     "scripts/run_engine_c_packet_bridge.py",
     "scripts/generic_engine_c_packet_bridge.gp",
@@ -66,6 +67,8 @@ SEEDS = {
     "artifacts/results-paper-odd-index-parity-audit-v1.json",
     "artifacts/results-paper-full-referee-audit-v2.json",
     "artifacts/shintani-1978-source-map-v1.json",
+    "artifacts/roblot-sextic-overlap-audit-v1.json",
+    "artifacts/roblot-sextic-overlap-audit-v1.transcript",
 }
 
 GLOBS = (

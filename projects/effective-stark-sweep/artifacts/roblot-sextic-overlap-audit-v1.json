@@ -1,0 +1,82 @@
+{
+  "cases": [
+    {
+      "A1": true,
+      "A2": true,
+      "A3": true,
+      "case_id": "RQ-000190",
+      "class_number_H": 1,
+      "class_number_indivisible_by_3": true,
+      "roblot_theorem_7_1_applies": true,
+      "wild_above_3": false
+    },
+    {
+      "A1": true,
+      "A2": true,
+      "A3": true,
+      "case_id": "RQ-000419",
+      "class_number_H": 1,
+      "class_number_indivisible_by_3": true,
+      "roblot_theorem_7_1_applies": true,
+      "wild_above_3": false
+    },
+    {
+      "A1": true,
+      "A2": true,
+      "A3": true,
+      "case_id": "RQ-000021",
+      "class_number_H": 1,
+      "class_number_indivisible_by_3": true,
+      "roblot_theorem_7_1_applies": true,
+      "wild_above_3": false
+    },
+    {
+      "A1": true,
+      "A2": true,
+      "A3": true,
+      "case_id": "RQ-002057",
+      "class_number_H": 1,
+      "class_number_indivisible_by_3": true,
+      "relative_ramification_index_above_3": 6,
+      "roblot_theorem_7_1_applies": false,
+      "theorem_7_1_failure": "A prime above 3 is wildly ramified in H/K.",
+      "wild_above_3": true
+    },
+    {
+      "A1": true,
+      "A2": true,
+      "A3": true,
+      "case_id": "RQ-002955",
+      "class_number_H": 1,
+      "class_number_indivisible_by_3": true,
+      "roblot_theorem_7_1_applies": true,
+      "wild_above_3": false
+    }
+  ],
+  "claim_tag": "VERIFIED_EXACT_PRIOR_WORK_OVERLAP",
+  "conclusion": {
+    "applies_count": 4,
+    "does_not_apply_count": 1,
+    "does_not_apply_case": "RQ-002057",
+    "mathematical_distinction": "Roblot supplies weak sextic Stark units up to complex absolute values; the present results identify the full positive packet componentwise, with exact polynomial and Artin labels."
+  },
+  "recorded_at_utc": "2026-07-30T17:00:00Z",
+  "reference": {
+    "arxiv": "1112.2820",
+    "hypotheses": [
+      "A1",
+      "A2",
+      "A3",
+      "3 does not divide h_H",
+      "no prime above 3 is wildly ramified in H/K"
+    ],
+    "paper": "X.-F. Roblot, Index formulae for Stark units and their solutions",
+    "result": "Theorem 7.1"
+  },
+  "schema": "effective-stark-roblot-sextic-overlap-audit-v1",
+  "source_script": "scripts/audit_roblot_sextic_overlap.gp",
+  "source_script_sha256": "d6e57f4cc8dbfbaea730698db9fbafec39efde2ca04139993a79ff3a3493523a",
+  "transcript": "artifacts/roblot-sextic-overlap-audit-v1.transcript",
+  "transcript_sha256": "28cf2ab8b7f634b6f5e330496f548ec0fa3838925955cbe550f5aefd315f41fb",
+  "verdict": "PASS"
+}
