@@ -17,15 +17,16 @@ secondary.
 
 ## Current project status
 
-This project is finished with status
-`FINISHED_WITH_VERIFIED_NO_GO_FOR_FROZEN_MECHANISM`.
+The original Dedekind/squared-multiplier mechanism remains finished
+with status `FINISHED_WITH_VERIFIED_NO_GO_FOR_FROZEN_MECHANISM`.
 
-Do not resume coefficient fitting, enlarge the holdout, or reinterpret
-the vanished Fourier resolvent as an engineering problem. Reopening
-requires a genuinely new branch—currently the only plausible one is an
-intrinsic metaplectic or spin orientation—and that branch must receive
-its own objective, claim boundary, preregistration, and stop condition
-in `PLAN.md` before computation.
+A separate clarification branch is banked and input-blocked under
+`docs/cycles-063-070-preregistration.md`. It may audit the five Roblot
+phase controls, prove the weak-solution/Stark equivalence, and screen a
+frozen Roblot-eligible quartic population for rigorously separated
+counterexamples once its three named input gates close. It may not
+resume coefficient fitting, enlarge the old holdout, or reinterpret the
+vanished Fourier resolvent as an engineering problem.
 
 ## Reporting rule
 

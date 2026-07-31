@@ -213,6 +213,53 @@ class ControlArtifactsTest(unittest.TestCase):
             right["feature_vector_mod_4"],
         )
         self.assertNotEqual(left["dominant_q"], right["dominant_q"])
+
+    def test_phase_clarification_containment_and_census_gate(self):
+        circularity = json.loads(
+            (
+                ROOT / "artifacts" / "circularity-audit-v1.json"
+            ).read_text()
+        )
+        self.assertEqual(
+            circularity["claim_tag"],
+            "CONTAINED_ORIENTATION_CIRCULARITY",
+        )
+        self.assertEqual(
+            circularity["gates"]["dominant_gauge_data_independent"],
+            "PASS",
+        )
+        self.assertEqual(
+            circularity["gates"][
+                "character_orientation_data_independent"
+            ],
+            "FAIL",
+        )
+
+        readiness = json.loads(
+            (
+                ROOT
+                / "artifacts"
+                / "quartic-census-readiness-audit-v1.json"
+            ).read_text()
+        )
+        self.assertEqual(
+            readiness["verdict"], "BLOCKED_BEFORE_TARGET_OPENING"
+        )
+        self.assertFalse(readiness["phase_targets_opened"])
+        self.assertEqual(
+            readiness["population_gate"]["higher_order_row_count"],
+            2704,
+        )
+        self.assertEqual(
+            readiness["rigorous_evaluator_gate"]["weak_unit_side"],
+            "NUMERICAL_FROM_EXACT_UNIT",
+        )
+
+        lemma = (
+            ROOT / "docs" / "roblot-phase-clarification-lemma-v1.md"
+        ).read_text()
+        self.assertIn(r"\chi(h)^{-1}\in\mu_4", lemma)
+        self.assertIn("are equivalent", lemma)
         self.assertFalse(self.field_only_no_go["fit_executed"])
 
     def test_holdout_stays_closed_at_theory_pivot(self):
