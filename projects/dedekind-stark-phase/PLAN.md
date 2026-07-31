@@ -54,6 +54,11 @@ feasibility result, not a reason to manufacture a formula.
 | 018 | Fit on certified controls | NOT_AUTHORIZED | would be tautological |
 | 019 | Run holdout | NOT_AUTHORIZED | target absent |
 | 020 | Bank feasibility verdict and next gate | BANKED | `docs/cycle-020-checkpoint.md` |
+| 021 | Translate Roblot's quartic construction exactly | BANKED | source audit and executable formula |
+| 022 | Genuine (A1)--(A3) screen on five original quartic fields | BANKED | `artifacts/roblot-quartic-gate-sealed-v1.json` |
+| 023 | Seal the first independent constructor | PRESERVED_FAILURE | v1 fixed-lattice proxy |
+| 024 | Replace proxy by genuine embedded \(K^+\)-unit lattice | BANKED | `artifacts/roblot-rq000129-constructor-sealed-v2.json` |
+| 025 | Open the first independent phase defect | BANKED | `artifacts/rq000129-phase-gate-v1.json` |
 
 ## Current finding
 
@@ -64,12 +69,13 @@ by Fourier inversion of the same \(L'\)-values and then identified in
 unit lattices. They certify the packet, but using them to fit a
 Dedekind formula for the defect would be circular.
 
-The next legitimate gate is to implement Roblot's canonical
-index-formula solution on the **original cyclic-quartic subextension
-over the real quadratic base**, verify his hypotheses row by row, and
-construct its coefficient \(c(\eta)\) without reading the certified
-packet or analytic \(L'\)-value. Only then does
-\(\arg L'-\arg c(\eta)\) become a fit-worthy target.
+That gate has now passed for RQ-000129. All five controls satisfy
+Roblot's hypotheses, and one independently constructed coefficient
+has a zero defect modulo \(\pi/2\) after the inverse-character
+convention is aligned. One point validates the target but cannot
+identify a formula. The next gate is to construct the remaining four
+coefficients, freeze a low-complexity feature map before opening their
+defects, and audit the resulting feature-matrix rank.
 
 ## Tags
 

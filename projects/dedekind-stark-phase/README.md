@@ -12,16 +12,17 @@ Start after a crash with:
 1. `PLAN.md`;
 2. `data/preregistration-v1.json`;
 3. `artifacts/control-phase-audit-v1.json`;
-4. `docs/cycle-020-checkpoint.md`;
+4. `docs/cycle-025-checkpoint.md`;
 5. `python3 -m unittest discover -s tests -p 'test_*.py'`.
 
 The certified control packets remain owned by
 `../effective-stark-sweep`; this project records hashes and extracts
 only the fields needed for the phase experiment.
 
-The cycle-20 result is a disciplined feasibility halt, not a fitted
-formula. The five controls prove route invariance and reject raw phase
-quantization, but their archived comparison vectors are derived from
-the same \(L'\)-data. The next experiment is the independently sealed
-five-row Roblot screen in
-`data/roblot-original-quartic-screen-v1.json`.
+The cycle-20 result was a disciplined feasibility halt, not a fitted
+formula. Cycles 21--25 then passed the missing independence gate:
+all five original quartic fields satisfy Roblot's hypotheses, and an
+exactly constructed RQ-000129 weak solution gives a phase defect of
+zero modulo \(\pi/2\). This is one calibration point, so fitting
+remains unauthorized until the remaining four constructors and the
+feature-map freeze are complete.

@@ -22,6 +22,18 @@ class ControlArtifactsTest(unittest.TestCase):
                 / "roblot-original-quartic-screen-v1.json"
             ).read_text()
         )
+        cls.constructor_v2 = json.loads(
+            (
+                ROOT
+                / "artifacts"
+                / "roblot-rq000129-constructor-sealed-v2.json"
+            ).read_text()
+        )
+        cls.phase_gate = json.loads(
+            (
+                ROOT / "artifacts" / "rq000129-phase-gate-v1.json"
+            ).read_text()
+        )
 
     def test_control_population(self):
         self.assertEqual(self.controls["case_count"], 5)
@@ -77,6 +89,28 @@ class ControlArtifactsTest(unittest.TestCase):
             self.assertEqual(row["A1"], "PENDING_GENUINE_CHECK")
             self.assertEqual(row["A2"], "PENDING_GENUINE_CHECK")
             self.assertEqual(row["A3"], "PENDING_GENUINE_CHECK")
+
+    def test_corrected_constructor_uses_genuine_plus_lattice(self):
+        exact = self.constructor_v2["exact_data"]
+        self.assertEqual(exact["norm_index"], 2)
+        self.assertEqual(exact["e_exponent"], 1)
+        self.assertEqual(exact["anti_unit_norm"], 1)
+        self.assertEqual(
+            self.constructor_v2["correction"]["v1_proxy"],
+            "fixed sublattice of U_K modulo torsion",
+        )
+
+    def test_first_independent_phase_gate_passes_without_fit(self):
+        self.assertEqual(self.phase_gate["verdict"], "PASS")
+        self.assertEqual(self.phase_gate["phase_defect_mod_pi_over_2"], 0)
+        checks = self.phase_gate["component_checks"]
+        self.assertTrue(checks["real_contained"])
+        self.assertTrue(checks["imag_contained"])
+        authorization = self.phase_gate["fit_authorization"]
+        self.assertEqual(
+            authorization["independent_defect_values_available"], 1
+        )
+        self.assertFalse(authorization["coefficient_fit_authorized"])
 
 
 if __name__ == "__main__":

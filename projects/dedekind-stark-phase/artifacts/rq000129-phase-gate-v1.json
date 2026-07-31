@@ -1,0 +1,36 @@
+{
+  "schema": "dedekind-stark-rq000129-phase-gate-v1",
+  "recorded_at_utc": "2026-07-30T20:00:00Z",
+  "case_id": "RQ-000129",
+  "verdict": "PASS",
+  "claim_tag": "NUMERICAL_PHASE_MATCH_WITH_CERTIFIED_LPRIME_BALL",
+  "constructor": {
+    "artifact": "artifacts/roblot-rq000129-constructor-sealed-v2.json",
+    "sealed_commit": "30b1adf",
+    "character_convention": "chi(gamma)=i"
+  },
+  "analytic_record": {
+    "artifact": "artifacts/certified-controls-v1.json",
+    "archived_character_relative_to_sealed_generator": "chi^-1",
+    "route_count": 2,
+    "routes_identical": true
+  },
+  "tested_relation": "c(eta) = i * conjugate(Lprime)",
+  "component_checks": {
+    "real_error": "1.0840496314916e-87",
+    "real_ball_radius": "8.63e-87",
+    "real_contained": true,
+    "imag_error": "3.120829070113171468728e-78",
+    "imag_ball_radius": "8.30e-78",
+    "imag_contained": true
+  },
+  "phase_defect_mod_pi_over_2": 0,
+  "interpretation": "The independently constructed Roblot coefficient agrees with a quarter-turn of the inverse-character analytic value. The comparison is numerical because the coefficient logarithms are PARI high-precision points; the Lprime side is a certified ball.",
+  "fit_authorization": {
+    "independent_defect_values_available": 1,
+    "formula_family_may_now_be_frozen": true,
+    "coefficient_fit_authorized": false,
+    "reason": "One independent point validates the target but cannot identify a formula."
+  }
+}
+
