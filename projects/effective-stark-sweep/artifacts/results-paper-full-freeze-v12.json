@@ -1,0 +1,81 @@
+{
+  "schema": "effective-stark-results-paper-full-freeze-v12",
+  "recorded_at_utc": "2026-07-31T00:00:00Z",
+  "status": "LOCAL_V1_4_DOI_BEARING_PREPUBLICATION_FREEZE",
+  "supersedes": "artifacts/results-paper-full-freeze-v11.json",
+  "reserved_doi": "10.5281/zenodo.21712478",
+  "primary_manuscript": {
+    "tex": "paper/effective-stark-results.tex",
+    "tex_sha256": "22479df93285670166b435bc8302a36bbdd9f644384c114cdf1b885533c1d378",
+    "pdf": "paper/effective-stark-results.pdf",
+    "pdf_sha256": "3214bd8797179d09204872fcb881b7d84fd20277cde667907a0843cf2a75af29",
+    "source_date_epoch": 1785420000,
+    "latex_passes": 3,
+    "independent_builds_byte_identical": true,
+    "latex_warnings": 0,
+    "page_count": 18
+  },
+  "supplement": {
+    "tex": "paper/effective-stark-results-supplement.tex",
+    "tex_sha256": "6becd0f6b4f3efbc95f5b8921560a768786944cc4721752e3b65e75697bfa72d",
+    "pdf": "paper/effective-stark-results-supplement.pdf",
+    "pdf_sha256": "919388eca0966dcdebe34848979e98204923e9f2611621959960ab45dbf787ac",
+    "source_delta_from_v1_3": "ARCHIVE_DOI_ONLY"
+  },
+  "rq000013_addendum": {
+    "tex": "paper/effective-stark-results-supplement-rq000013-addendum.tex",
+    "tex_sha256": "db596c23c60a3410e57d3484c10300647b749142b7ad3c95918b3f5e0776da9b",
+    "pdf": "paper/effective-stark-results-supplement-rq000013-addendum.pdf",
+    "pdf_sha256": "be5ad90928c8a2f0cf602fd5a90f38e0ab6a808a370a553872662fd951f315b2"
+  },
+  "release_delta_audit": {
+    "script": "scripts/audit_results_release_doi.py",
+    "script_sha256": "2d8e8f6f514c9cdded2c327ad465e4975d6bcd06bc410eef369d413dfb03793f",
+    "artifact": "artifacts/results-paper-release-doi-audit-v1.json",
+    "artifact_sha256": "3a143ad903955e4614e907ca33004fe2922fae878677b15a4dbfde9c99b5319d",
+    "outcome": "PASS_EXACT_RELEASE_SOURCE_DELTA"
+  },
+  "engine_c_fourier_correction": {
+    "audit_script": "scripts/audit_engine_c_fourier_convention_v3.py",
+    "audit_script_sha256": "9484c054bc13b8bd18b3112e2d61de7b1612cbaa2ba3bc57bb0dc7c6102c8780",
+    "artifact": "artifacts/engine-c-fourier-convention-correction-v3.json",
+    "artifact_sha256": "651f039c178c47b3ca683d6d7a9e8c3660747cb8e8c1b33c5e4a875626ea3731",
+    "outcome": "PASS_SIGMA_POSITIVE_UNCHANGED"
+  },
+  "referee_audit": {
+    "script": "scripts/audit_results_paper_full.py",
+    "script_sha256": "8885ddb384962afcb4076c85d05ca0371e670d9e1263929e9d909c089abbc245",
+    "artifact": "artifacts/results-paper-referee-audit-v4.json",
+    "artifact_sha256": "46310a37ba500de4501d33db77811284c42d2adb63398ae9fa9fa46beba1b2d4",
+    "outcome": "PASS"
+  },
+  "shintani_source_map": {
+    "artifact": "artifacts/shintani-1978-source-map-v1.json",
+    "artifact_sha256": "b145c2a7ae22853963586bfb2ea276290d9e8e4c043a5cca44fac2176e0083c0"
+  },
+  "companion_archive": {
+    "archive": "dist/effective-stark-results-companion-v17.tar.gz",
+    "archive_sha256": "e2a945edaddcec32e3aad10e67f8b960af0bc304b07ba5503ab7be62384b9506",
+    "archive_replay": "PASS_EXTRACTED",
+    "builder": "scripts/build_results_companion_v17.py",
+    "builder_sha256": "0ac9c275b6826b92826d23263a69fee4f03b89e39204e5eba8d676e171083a11",
+    "verifier": "scripts/verify_results_companion_v17.py",
+    "verifier_sha256": "176dc66a905bf567b3dee2c9a6feb1328481dc070923db45c475f85f7a06fbb1",
+    "local_freeze": "artifacts/results-paper-companion-local-freeze-v17.json",
+    "local_freeze_sha256": "25030cc98f6fb49b8402e453f99b9918eebccc189e8c85c0446a66f79c117be4",
+    "status": "LOCAL_DOI_BEARING_NOT_PUBLIC"
+  },
+  "publication": {
+    "concept_doi": "10.5281/zenodo.21703305",
+    "current_public_version": "1.3",
+    "current_public_doi": "10.5281/zenodo.21708121",
+    "proposed_version": "1.4",
+    "draft_deposition_id": 21712478,
+    "reserved_doi": "10.5281/zenodo.21712478",
+    "publication_action_taken": false,
+    "metadata": "artifacts/zenodo-results-record-metadata-v7.json",
+    "metadata_sha256": "e4a305af1a0647afc64c937765e4432bb6466473261980d1d151bc7a48e0af70",
+    "reservation_record": "artifacts/zenodo-results-v1.4-draft-reservation-v1.json",
+    "reservation_record_sha256": "42a770840a6456f1cfe03a36718aa46a20204dae0bd2ba6c31bf4fb126b365b1"
+  }
+}

@@ -11,62 +11,84 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class ResultsPaperTrackA2Test(unittest.TestCase):
-    def test_publication_candidate_v2_hashes_every_top_level_file(self):
+    def test_uploaded_candidate_v4_hashes_every_top_level_file(self):
         candidate = json.loads(
             (
                 ROOT
-                / "artifacts/results-paper-v1.4-publication-candidate-v2.json"
+                / "artifacts/results-paper-v1.4-publication-candidate-v4.json"
             ).read_text()
         )
-        self.assertFalse(candidate["claim_boundary"]["doi_reserved"])
-        self.assertFalse(
-            candidate["claim_boundary"]["publication_action_taken"]
+        self.assertEqual(
+            candidate["status"],
+            "DRAFT_UPLOADED_VERIFIED_AWAITING_EXPLICIT_PUBLISH_APPROVAL",
         )
-        for row in candidate["proposed_top_level_files"]:
-            path = ROOT / row["source"]
+        self.assertFalse(candidate["draft"]["publication_action_taken"])
+        sources = {
+            "effective-stark-results-companion-v17.tar.gz":
+                "dist/effective-stark-results-companion-v17.tar.gz",
+            "effective-stark-results-supplement-rq000013-addendum.pdf":
+                "paper/effective-stark-results-supplement-rq000013-addendum.pdf",
+            "effective-stark-results-supplement-rq000013-addendum.tex":
+                "paper/effective-stark-results-supplement-rq000013-addendum.tex",
+            "effective-stark-results-supplement.pdf":
+                "paper/effective-stark-results-supplement.pdf",
+            "effective-stark-results-supplement.tex":
+                "paper/effective-stark-results-supplement.tex",
+            "effective-stark-results.pdf":
+                "paper/effective-stark-results.pdf",
+            "effective-stark-results.tex":
+                "paper/effective-stark-results.tex",
+        }
+        self.assertEqual(set(sources), {row["filename"] for row in candidate["files"]})
+        for row in candidate["files"]:
+            path = ROOT / sources[row["filename"]]
             self.assertEqual(path.stat().st_size, row["bytes"])
             self.assertEqual(
                 hashlib.sha256(path.read_bytes()).hexdigest(),
-                row["sha256"],
+                row["local_sha256"],
             )
         metadata = candidate["metadata"]
         self.assertEqual(
-            hashlib.sha256((ROOT / metadata["path"]).read_bytes()).hexdigest(),
-            metadata["sha256"],
+            hashlib.sha256(
+                (ROOT / metadata["local_source"]).read_bytes()
+            ).hexdigest(),
+            metadata["local_sha256"],
         )
 
     def test_exact_v13_to_v14_editorial_diff(self):
         completed = subprocess.run(
-            ["python3", "scripts/audit_results_paper_a2.py"],
+            ["python3", "scripts/audit_results_release_doi.py"],
             cwd=ROOT,
             text=True,
             capture_output=True,
             check=False,
         )
         self.assertEqual(completed.returncode, 0, completed.stderr)
-        self.assertIn("RESULTS_PAPER_TRACK_A2_AUDIT=PASS", completed.stdout)
+        self.assertIn("RESULTS_RELEASE_DOI_AUDIT=PASS", completed.stdout)
 
-    def test_v16_pre_doi_companion_replays_after_extraction(self):
+    def test_v17_doi_bearing_companion_replays_after_extraction(self):
         freeze = json.loads(
             (
                 ROOT
-                / "artifacts/results-paper-companion-local-freeze-v16.json"
+                / "artifacts/results-paper-companion-local-freeze-v17.json"
             ).read_text()
         )
-        self.assertEqual(freeze["status"], "LOCAL_FROZEN_PRE_DOI_NOT_PUBLIC")
+        self.assertEqual(
+            freeze["status"], "LOCAL_FROZEN_DOI_BEARING_NOT_PUBLIC"
+        )
         archive = ROOT / freeze["archive"]
         with tempfile.TemporaryDirectory() as temporary:
             target = Path(temporary)
             with tarfile.open(archive, "r:gz") as tar:
                 tar.extractall(target, filter="data")
-            extracted = target / "effective-stark-results-companion-v16"
+            extracted = target / "effective-stark-results-companion-v17"
             completed = subprocess.run(
                 [
                     "python3",
                     str(
                         extracted
                         / "projects/effective-stark-sweep/scripts/"
-                        "verify_results_companion_v16.py"
+                        "verify_results_companion_v17.py"
                     ),
                     str(extracted),
                 ],
@@ -75,7 +97,7 @@ class ResultsPaperTrackA2Test(unittest.TestCase):
                 check=False,
             )
         self.assertEqual(completed.returncode, 0, completed.stderr)
-        self.assertIn("RESULTS_COMPANION_V16=VERIFIED", completed.stdout)
+        self.assertIn("RESULTS_COMPANION_V17=VERIFIED", completed.stdout)
 
 
 if __name__ == "__main__":

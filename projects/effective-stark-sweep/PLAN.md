@@ -77,7 +77,7 @@ case-level PROVED corpus entry
 | Track | State | Current fact | Controlling evidence / file |
 |---|---|---|---|
 | Results paper | `PUBLISHED` | v1.3 adds the exact Engine-A cost anatomy and mixed-support peeling; published at DOI 10.5281/zenodo.21708121 | `paper/effective-stark-results.tex`, `artifacts/zenodo-results-publication-v4.json` |
-| Results v1.4 correction | `HUMAN` | Local pre-DOI freeze includes the withdrawn orientation-replay record, RQ-000013, and the exact Track-A2 pagination correction; DOI reservation/publication awaits credentials and explicit approval | `artifacts/results-paper-v1.4-publication-candidate-v2.json`, `dist/effective-stark-results-companion-v16.tar.gz` |
+| Results v1.4 correction | `HUMAN` | Zenodo draft 21712478 reserves DOI 10.5281/zenodo.21712478; metadata and exactly seven files are uploaded and checksum-verified; explicit immediate publication approval is the sole remaining release gate | `artifacts/results-paper-v1.4-publication-candidate-v4.json`, `artifacts/zenodo-results-v1.4-draft-upload-verification-v1.json` |
 | Results-paper audit | `BANKED` | Versioned full A/B/C prepublication audit and extracted companion replay pass, including exact Engine-A degeneracy and the sigma-positive Engine-C re-audit | `artifacts/results-paper-referee-audit-v3.json`, `artifacts/engine-c-fourier-convention-correction-v2.json` |
 | Genuine routing census v5 | `BANKED` | 8,200/8,200 genuine screens; proxy recovery complete | `artifacts/full-census-yield-declaration-v5.json` |
 | Census-paper range | `BANKED` | Existing maximal-order universe frozen: squarefree radicands 2--200, ideal norm at most 100, 8,200 conjugacy representatives | `data/census-paper-preregistration-v1.json` |
@@ -276,9 +276,15 @@ State: `ACTIVE`
       pages 1022--1045 to 1045--1061.
 - [x] Replace legacy auditors that rewrote v1 records with versioned
       Engine-C v2 and full-referee v3 successor artifacts.
-- [ ] Reserve the v1.4 DOI, insert it into the addendum and metadata,
-      rebuild twice, obtain immediate explicit publication approval,
-      and publish the correction layer.
+- [x] Reserve the v1.4 DOI without publishing: draft 21712478,
+      DOI 10.5281/zenodo.21712478.
+- [x] Insert the DOI into all release-facing sources and metadata;
+      independently rebuild all PDFs and deterministic companion v17.
+- [x] Upload metadata and exactly seven files to the unsubmitted draft;
+      verify requested metadata fields, remote MD5 checksums, byte
+      counts, and local SHA-256 values.
+- [ ] Obtain immediate explicit publication approval and publish the
+      correction layer.
 - [ ] Conduct a new Papers-I/II-style referee pass over every displayed
       theorem, polynomial, exponent, height margin, and citation.
 - [ ] Resolve every resulting mathematical issue.
@@ -531,6 +537,7 @@ control or counterexample for T1/T2.
 | 078 | RQ-000013 closes the first preregistered nonzero imprimitive Engine-A branch with exact \(E_\chi=I_\chi=2\) and \(X_{[0]}=u^2,\ X_{[1]}=u^{-2}\); the `bnrL1` comparison remains quarantined | `BANKED`, `PROVED` | `docs/cycle-078-rq000013-imprimitive-engine-a.md`, `artifacts/rq000013-engine-a-imprimitive-certificate-v1.json` |
 | 079 | Public v1.3 was found to predate the withdrawn oriented-replay correction; deterministic v1.4 layer built and extracted replay passed, but no DOI was reserved or published | `CONTAINED_CORRECTION`, `HUMAN` | `docs/cycle-079-results-v1.4-correction-staging.md`, `artifacts/results-paper-v1.4-publication-candidate-v1.json` |
 | 080 | Exact comparison with immutable v1.3 found the requested wording already present but exposed the incorrect Tangedal--Young pages; the one-line correction, versioned auditors, full replay, and deterministic companion v16 are locally frozen | `CONTAINED_BIBLIOGRAPHIC_CORRECTION`, `HUMAN` | `docs/cycle-080-results-track-a2-correction.md`, `artifacts/results-paper-v1.4-publication-candidate-v2.json` |
+| 081 | Zenodo draft 21712478 reserved DOI 10.5281/zenodo.21712478 without publication; the DOI-bearing main paper, supplement, RQ-000013 addendum, and companion v17 were independently rebuilt, replayed, uploaded as an exact seven-file inventory, and checksum-verified | `DOI_DRAFT_UPLOADED_VERIFIED_UNPUBLISHED`, `HUMAN` | `artifacts/zenodo-results-v1.4-draft-upload-verification-v1.json`, `artifacts/results-paper-v1.4-publication-candidate-v4.json` |
 
 ## Standing integrity rules
 
