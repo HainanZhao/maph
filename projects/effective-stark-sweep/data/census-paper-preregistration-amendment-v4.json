@@ -1,0 +1,38 @@
+{
+  "cap_rule": {
+    "hard_ceiling_decimal_digits": 1048576,
+    "minimum_decimal_digits": 256,
+    "rule": "smallest power of two at least max(256, 2*maximum_observed_B)",
+    "runtime_peak_memory_bytes_per_row": 2147483648,
+    "runtime_wall_seconds_per_row": 300
+  },
+  "claim_boundary": {
+    "analytic_packet_target_opened": false,
+    "claim_tag": "OBSERVED",
+    "packet_polynomials_constructed": false,
+    "purpose": "resource calibration"
+  },
+  "frozen_inputs": {
+    "artifacts/engine-a-euler-degeneracy-v1.json": "f4ead3438d3b305fa42e73e1d979530a04104ce8d642db0b1c9ac85929bac033",
+    "artifacts/w1-full-census-v1.json": "b656a587bea705e8efe817e2870a0ea86cbf2c10fa37c7d9aa03d3868dfa76f1",
+    "data/engine-a-uniform-theorem-v1.json": "54469ec4ff4871bbf30e51f8f9f69037329f893e329009940d84b51026f4e0df",
+    "scripts/census_packet_conventions.gp": "805f53e896335824b762aad2125f3aa9c854fe8f207657e853720d2fdc3fadc6"
+  },
+  "population": {
+    "ordering": "stable RQ order",
+    "q_rows": 1560
+  },
+  "predictor": {
+    "coefficient_digit_predictor": "ceil(max_j(log(binomial(d,j))+min(j,d-j)*H)/log(10))",
+    "height": "H=(2/|G|)*sum_chi(abs(c_chi*log(abs(u_chi))))",
+    "precision_decimal_digits": 100,
+    "zero_effective_character_artin_image_size": 1
+  },
+  "recorded_at_utc": "2026-07-31T00:00:00Z",
+  "schema": "effective-stark-census-paper-preregistration-amendment-v4",
+  "status": "FROZEN_BEFORE_HEIGHT_CALIBRATION",
+  "supersedes": {
+    "file": "data/census-paper-preregistration-amendment-v1.json",
+    "open_item": "coefficient-height calibration rule"
+  }
+}
