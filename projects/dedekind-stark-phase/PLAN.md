@@ -79,16 +79,16 @@ feasibility result, not a reason to manufacture a formula.
 | 043 | Reject the frozen feature family before fitting | BANKED_NEGATIVE | same |
 | 044 | Fix dominant gauge; prove field-only no-go | BANKED_NEGATIVE | `artifacts/field-only-dedekind-family-no-go-v1.json` |
 | 045 | Audit cocycle availability; declare theory pivot | BANKED | `docs/cycle-045-checkpoint.md` |
-| 046 | Freeze ray-class cocycle bridge target and conventions | IN_PROGRESS | `docs/cycles-046-055-preregistration.md` |
-| 047 | Extract dimension-4 bridge | PENDING | |
-| 048 | Extract dimensions 7/8 and compare | PENDING | |
-| 049 | Formulate ray-to-form existence proposition | PENDING | |
-| 050 | Implement universal supplied-tuple arithmetic | PENDING | |
-| 051 | Replay frozen SIC anchors | PENDING | |
-| 052 | Attempt RQ-000129 from ray data alone | PENDING | |
-| 053 | Audit gauge and character covariance | PENDING | |
-| 054 | Test any authorized feature on five controls | PENDING | |
-| 055 | Bank general/restricted/no-bridge verdict | PENDING | |
+| 046 | Freeze ray-class cocycle bridge target and conventions | BANKED | `docs/cycles-046-055-preregistration.md` |
+| 047 | Extract dimension-4 bridge | BANKED | `docs/sic-bridge-extraction-v1.md` |
+| 048 | Extract dimensions 7/8 and compare | BANKED | same |
+| 049 | Formulate ray-to-form existence proposition | BANKED_NEGATIVE | `docs/ray-to-form-obstruction-v1.md` |
+| 050 | Implement universal supplied-tuple arithmetic | BANKED | `src/cocycle.py` |
+| 051 | Replay frozen SIC anchors | BANKED | `artifacts/supplied-tuple-bridge-audit-v1.json` |
+| 052 | Attempt RQ-000129 from ray data alone | BANKED_NEGATIVE | `artifacts/rq000129-ray-to-form-gate-v1.json` |
+| 053 | Audit gauge and character covariance | BANKED | `docs/cocycle-covariance-v1.md` |
+| 054 | Test any authorized feature on five controls | NOT_AUTHORIZED | generic bridge gate failed |
+| 055 | Bank general/restricted/no-bridge verdict | BANKED | `docs/cycle-055-checkpoint.md` |
 
 ## Current finding
 
@@ -112,6 +112,14 @@ repository computes such data only for special SIC tuples; it does not
 contain a generic extractor from an oriented ray character. Therefore
 the empirical fitting track is stopped. The next authorized project is
 a theorem-level ray-class cocycle bridge, not a larger fit.
+
+Cycles 046--055 found that the exact arithmetic does generalize once a
+Kopp tuple is supplied, but the proposed ray-character-to-one-tuple map
+is ill-typed: characters are Fourier objects on all classes, whereas
+the cocycle inputs are class-level. The current verdict is
+`RESTRICTED_SIC_BRIDGE`. The corrected target is a
+representative-independent class multiplier followed by a
+character-level Fourier cocycle resolvent.
 
 ## Tags
 

@@ -1,0 +1,35 @@
+{
+  "schema": "dedekind-stark-supplied-tuple-bridge-audit-v1",
+  "recorded_at_utc": "2026-07-31T04:20:00Z",
+  "claim_tag": "VERIFIED_EXACT_ARITHMETIC",
+  "verdict": "SUPPLIED_TUPLE_BRIDGE_PASS",
+  "rademacher_convention": "Psi(A)=Phi(A)-3*sign(c*(a+d))",
+  "psi_anchors": {
+    "d4_disc5": 0,
+    "d5_disc12": 3,
+    "d7_disc8": 0,
+    "d7_disc32": 9,
+    "d8_disc5": 0
+  },
+  "d4_multiplier": {
+    "theta_exponent": "1/4",
+    "total_exponent": "3/4"
+  },
+  "d5_multiplier": {
+    "characteristics_checked": 24,
+    "identity": "theta=(p^2-4*p*q+q^2)/5 mod 1"
+  },
+  "character_inversion_covariance": {
+    "d4_checked": 1,
+    "d5_checked": 24,
+    "verdict": "PASS"
+  },
+  "source_hashes": {
+    "sic-stark-dimensions-four-five.tex": "688928eff1fd04c8d877d26bf67547e8fc7531cf5e6ea724fd3b39df805a0294",
+    "sic-stark-dimensions-seven-eight.tex": "9b2acaeb9114bfa404260c9ced0e38cefdcb9fc2089520c2fe90af9c9b9e4252",
+    "dimension_seven_phase_audit.py": "a3a7e3447b29061556248af04099bf4ec169702610ae25895b4467a6f8c71c5d",
+    "dimension_seven_maximal_tuple_audit.gp": "ac07cb156add6a30192e474fc407fd5342a9079c29633a7a461c1c9dd012eab5",
+    "dimension_eight_maximal_tuple_audit.gp": "d3802e95238b214be38034d83dba6bc2650403e0610f961bb6ad7d79c5801336"
+  },
+  "generic_ray_to_tuple_claim": false
+}
