@@ -8,6 +8,11 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from dedekind import dedekind_sum, rademacher_phi, sawtooth
+from cocycle import (
+    kopp_theta_exponent,
+    kopp_total_multiplier_exponent,
+    sic_rademacher_invariant,
+)
 
 
 class DedekindTest(unittest.TestCase):
@@ -44,6 +49,39 @@ class DedekindTest(unittest.TestCase):
         self.assertEqual(rademacher_phi(1, 1, 0, 1), 1)  # T
         self.assertEqual(rademacher_phi(0, -1, 1, 0), 0)  # S
         self.assertEqual(rademacher_phi(1, 0, 1, 1), 2)
+
+    def test_sic_rademacher_anchor_values(self):
+        self.assertEqual(
+            sic_rademacher_invariant(((21, -8), (8, -3))), 0
+        )
+        self.assertEqual(
+            sic_rademacher_invariant(((56, -15), (15, -4))), 3
+        )
+        self.assertEqual(
+            sic_rademacher_invariant(((204, -35), (35, -6))), 9
+        )
+
+    def test_dimension_four_kopp_multiplier(self):
+        matrix = ((21, -8), (8, -3))
+        self.assertEqual(
+            kopp_theta_exponent(
+                matrix, Fraction(0), Fraction(1, 4)
+            ),
+            Fraction(1, 4),
+        )
+        self.assertEqual(
+            kopp_total_multiplier_exponent(
+                matrix, Fraction(0), Fraction(1, 4)
+            ),
+            Fraction(3, 4),
+        )
+        inverse = ((-3, 8), (-8, 21))
+        self.assertEqual(
+            kopp_total_multiplier_exponent(
+                inverse, Fraction(0), Fraction(1, 4)
+            ),
+            Fraction(1, 4),
+        )
 
 
 if __name__ == "__main__":

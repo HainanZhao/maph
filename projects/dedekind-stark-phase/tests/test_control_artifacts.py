@@ -63,6 +63,13 @@ class ControlArtifactsTest(unittest.TestCase):
                 / "ray-cocycle-availability-audit-v1.json"
             ).read_text()
         )
+        cls.bridge_verdict = json.loads(
+            (
+                ROOT
+                / "artifacts"
+                / "cycle-055-bridge-verdict-v1.json"
+            ).read_text()
+        )
 
     def test_control_population(self):
         self.assertEqual(self.controls["case_count"], 5)
@@ -207,6 +214,22 @@ class ControlArtifactsTest(unittest.TestCase):
         self.assertEqual(
             self.cocycle_audit["fit_track_status"], "STOPPED"
         )
+
+    def test_restricted_bridge_verdict_preserves_fit_gate(self):
+        self.assertEqual(
+            self.bridge_verdict["verdict"], "RESTRICTED_SIC_BRIDGE"
+        )
+        self.assertEqual(
+            self.bridge_verdict["supplied_tuple_layer"]["status"],
+            "VERIFIED",
+        )
+        self.assertFalse(
+            self.bridge_verdict["five_control_feature_test"]["authorized"]
+        )
+        self.assertFalse(
+            self.bridge_verdict["coefficient_fit_authorized"]
+        )
+        self.assertFalse(self.bridge_verdict["holdout_authorized"])
 
 
 if __name__ == "__main__":
