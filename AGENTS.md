@@ -1,327 +1,165 @@
-# Agent instructions: maph (root)
+# Agent instructions: maph
 
-This file is the shared instructions file for coding agents working
-anywhere in this repository (`CLAUDE.md` and `GEMINI.md` at the repo
-root are symlinks to this file — edit only this file). Individual
-projects under `projects/*/` may have their own `AGENTS.md` for
-project-specific knowledge; this file holds knowledge that's generic
-across the whole repo, most notably **publishing research artifacts to
-Zenodo**, since more than one project here produces a paper or
-reproducibility archive.
+This is the repository-wide instruction file. Root `CLAUDE.md` and
+`GEMINI.md` point here; edit only this file. Projects live independently
+under `projects/*/` and may add a narrower `AGENTS.md`.
 
-## Repository layout
+## 0. Epistemic ground rules
 
-Independent research programs live under `projects/*/`, each
-self-contained (see the root `README.md` for the current list and
-`RESTRUCTURE-NOTE.md` for history). Projects share only repo history
-and top-level ignore rules — no shared source, scripts, or CI. If a
-project needs its own detailed instructions (e.g. a paper-publishing
-procedure specific to its own build scripts), put them in that
-project's own `AGENTS.md` and reference this file for the generic
-parts, rather than duplicating this file's content per-project.
+- Distrust the first answer, including the first trust assessment.
+  Favorable or surprising results increase scrutiny.
+- Tag every material research claim:
+  - `PROVED`: follows from a published theorem whose hypotheses were
+    checked exactly in this run;
+  - `CERTIFIED_NUMERICAL`: rigorous enclosure, with radius and margin;
+  - `RECOGNIZED`: floating-point/lattice identification, never proof;
+  - `OBSERVED`: reproducible empirical pattern;
+  - `CONJECTURED`: unproved mathematical claim.
+  Unlabeled claims are bugs.
+- `UNCONDITIONAL` means only: every identity follows from a proved
+  theorem under exactly checked hypotheses. It never means “confident.”
+- Prefer falsification: state what would refute the working claim and
+  treat a surviving counterexample as a headline result.
 
-## How to work on a research project
+## 1. Project memory and workflow
 
-Every active research project must have a root-level `PLAN.md`. Treat
-that file as the project's authoritative memory and mind map, not as an
-optional planning note.
+Every active research project has a root `PLAN.md`; it is authoritative
+over chat memory. Read it completely, then the nearest `AGENTS.md`,
+before acting.
 
-### Before doing project work
+`PLAN.md` must contain:
 
-1. Read the project's `PLAN.md` completely. Do this even when the
-   conversation contains a recent summary: the file is the crash-safe
-   record and may contain gates or corrections absent from chat.
-2. Read the nearest project-specific `AGENTS.md`, if present.
-3. Check the current git status and recent history. Preserve unrelated
-   user changes and detect concurrent commits before relying on the
-   working tree.
-4. Reconcile the requested work with the active path and open gates in
-   `PLAN.md`. If the request opens a new research branch, add that branch
-   to the graph before running experiments.
-
-### Required contents of `PLAN.md`
-
-Keep these sections current:
-
-- original objective and claim boundary;
-- present status and explicit stop condition;
-- a high-level graph of research paths, including closed, failed,
-  deferred, and superseded branches;
-- preregistered gates and their outcomes;
+- original objective, claim boundary, status, and stop condition;
+- research-path graph, including failed, deferred, and superseded paths;
+- preregistered gates and outcomes;
 - headline theorems, breakthroughs, corrections, and no-go results;
-- a cycle ledger with one row per cycle, recording the actual finding
-  and its evidence—not only the intended task;
-- current open questions and the next authorized action;
-- recovery instructions and links to the controlling artifacts.
+- one finding-and-evidence row per cycle;
+- open questions, next authorized action, and crash recovery commands.
 
-Never silently delete a failed or superseded path. Mark it with its
-status and preserve the evidence so later work does not repeat it.
+Before work: re-read frozen counts and conventions from artifacts, check
+`git status` and recent/fetched history, and preserve unrelated changes.
+Update `PLAN.md` whenever a gate or research path changes. Never erase a
+failed path.
 
-### During a cycle or block
+## 2. Discovery and proof are separate
 
-- Freeze thresholds, formula families, samples, and stop conditions
-  before seeing the corresponding result.
-- Update `PLAN.md` when a gate changes state, a branch closes, or a new
-  finding changes the research graph.
-- Give every material computational predicate an explicit provenance
-  and epistemic tag appropriate to the project.
-- Treat a failed gate as information. Do not route around it by changing
-  the question after seeing the data unless the change is separately
-  preregistered as a new branch.
-- Keep recovery artifacts, hashes, and replay commands current enough
-  that another agent can continue after a crash without reconstructing
-  the research history from chat.
+- Use `discovery/` for heuristics, floats, recognition, conjectural
+  solvers, pattern searches, and AI-proposed identities.
+- Use `proof/` for exact arithmetic, certified enclosures, and pinned
+  proof pipelines. Legacy projects must maintain an explicit equivalent
+  separation until migrated.
+- Discovery may select a candidate; it never closes an identity.
+  Closure requires exact algebra or a rigorous enclosure satisfying a
+  preregistered criterion with explicit margin.
+- Every proof-grade result must be version-pinned, hash-recorded,
+  scripted, and one-command replayable. If it cannot be replayed, it
+  does not exist.
 
-### Cycle and block reports to the user
+## 3. Conventions are code
 
-Lead with outcomes. Whenever a cycle or block banks a major theorem,
-breakthrough, correction, containment event, or structural no-go,
-surface it explicitly in the next user-facing report even if the user
-asked only for general progress. A headline result must never disappear
-inside an artifact list or be omitted because later work has already
-started.
+- Pin every sign, orientation, normalization, ordering, transform
+  direction, generator, embedding/place label, special-function
+  convention, and host-system ordering once in a conventions module.
+  Derive scripts and manuscript displays from it.
+- Certified replay code is the source of truth. If a display disagrees,
+  fix the manuscript and record the discrepancy—never patch proof code
+  merely to match prose.
+- Independently derive every phase/sign/label identity from the pinned
+  conventions.
+- Audit circularity: an “after aligning” step may inspect only the side
+  frozen before the target was computed. Record the audit.
 
-The report must distinguish:
+## 4. Corrections and preregistration
 
-- what is proved or exactly verified;
-- what is enclosure-certified;
-- what remains numerical or conjectural;
-- which gate opened or closed;
-- what the finding changes about the recommended next step.
+- Never silently edit a certified record. Issue a versioned correction
+  artifact stating the error, cause, affected claims, and reruns.
+- A convention change requires regeneration or explicit re-audit of
+  every downstream certificate.
+- Before computing, freeze: ranges, thresholds, margins, samples, RNG
+  seeds, degree/resource caps, formula families, and the rule for failed
+  rows. Post-result choices are `EXPLORATORY`.
+- A failed audit halts the affected branch/table; never drop the row
+  silently.
 
-Before ending a block, reconcile `PLAN.md`, run the relevant replay and
-test suite, update manifests, and commit a crash-safe checkpoint when
-the project uses versioned checkpoints.
+## 5. Redundancy and coverage
 
-## Publishing a paper / reproducibility archive to Zenodo
+- Promote results through two genuinely independent routes when the
+  mechanism permits. Agreement must include labels, not only unlabeled
+  invariants.
+- Map every theorem case split to a certified anchor. Unexercised
+  branches remain open actions.
+- Reconcile every repeated count across papers, supplements, and README
+  from one frozen dataset in a table built before writing.
+- Running the same pipeline twice is replay, not independent
+  verification.
 
-This procedure was developed against `projects/sic-stark/` but nothing
-in it is specific to that project — use it for any project's Zenodo
-submission.
+## 6. Literature and novelty
 
-### Prerequisites and environment gotchas
+- Read reachable primary papers—theorems and hypotheses, not abstracts—
+  and check this program’s companion papers before claiming novelty.
+- Record exact overlap, theorem numbers, applicable cases, and
+  structural limits of prior methods. Concede overlap explicitly.
+- First try to derive a proposed phenomenon from existing results.
+  Reclassify automatic consequences as consistency checks.
+- Scope priority claims to the reviewed evidence; never convert a
+  bounded search into a universal negative.
 
-- **Zenodo API token, never a password.** The user generates a
-  Personal Access Token at
-  `zenodo.org/account/settings/applications` (scopes `deposit:write` +
-  `deposit:actions`) and sets it as an env var (e.g. `ZENODO_TOKEN` in
-  their shell rc file). Never ask for or accept a Zenodo password.
-  Never put the token in a URL query string (`?access_token=...`) —
-  always `-H "Authorization: Bearer $ZENODO_TOKEN"`, so it can't leak
-  into server logs.
-- **GNU `find`/`tar` on macOS.** macOS ships BSD `find`/`tar`, which
-  don't support GNU-only flags like `-regextype`/`-regex` or
-  `--sort=name`/`--mtime` that a deterministic-archive build script is
-  likely to use. Install and prepend to `PATH`:
-  ```bash
-  brew install findutils gnu-tar
-  export PATH="/opt/homebrew/opt/findutils/libexec/gnubin:/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
-  ```
-- **pdflatex on macOS.** Not present by default. `brew install --cask
-  basictex` is much lighter than full MacTeX and has sufficed for
-  every paper we've built this way (common packages — `amsmath`,
-  `amssymb`, `amsthm`, `mathtools`, `geometry`, `hyperref`, `booktabs`
-  — resolved with no extra `tlmgr install` needed). Its installer needs
-  an interactive `sudo` password, so an agent can't install it —
-  the user has to run `! brew install --cask basictex` themselves.
-  After install: `eval "$(/usr/libexec/path_helper)"` or add
-  `/Library/TeX/texbin` to `PATH`.
-- **PARI/GP version pinning — read this if the project uses PARI/GP
-  for exact certificates.** If a project's dependency lock file pins a
-  specific PARI/GP version, take that seriously: certificate scripts
-  often assert exact hardcoded values (polynomials, unit coordinates,
-  etc.), and different PARI versions can legitimately pick different
-  but mathematically equivalent generator conventions for the same
-  object (we hit this for real in sic-stark: `bnrclassfield` returned
-  `x^2 - y` under 2.15.4 vs. `x^2 - (y-1)` under 2.17.4 for the
-  identical ray class field — provably the same field, since the two
-  generators differ by a unit square, but a byte-for-byte test
-  comparison fails). **Never "fix" a failing exact-value test by
-  patching the expected value to match a newer tool's output without
-  first proving the two outputs describe the same object** — that is
-  exactly the kind of change that can silently launder a real error
-  into a passing suite, or paper over a genuine one.
+## 7. Stop and escalate
 
-  Homebrew typically only ships the current release. Old versions are
-  usually archived (for PARI/GP:
-  `https://pari.math.u-bordeaux.fr/pub/pari/OLD/<branch>/pari-<version>.tar.gz`);
-  build from source with `./Configure --prefix=<dir> && make install`.
+Stop the affected branch and surface evidence immediately when:
 
-  **On macOS/arm64, a natively-built PARI/GP 2.15.4 has a real,
-  reproducible bug**: any script calling `default(parisize, N)` or
-  `default(parisizemax, N)` silently truncates execution right after
-  that call — `gp` exits 0 with no error and no further output, as if
-  the rest of the script never existed. This traces into
-  `gp_main_loop`'s stack-resize recovery path in PARI's `src/gp/gp.c` /
-  `src/language/gplib.c` (the `longjmp` taken for `numerr < 0`, i.e.
-  "stack size changed"), and does **not** reproduce on Linux/aarch64
-  with the identical source — a platform-specific interaction, not a
-  bug in whatever certificate scripts call it. Don't attempt a source
-  patch: hand-patching a `longjmp`/buffer-lifecycle bug in a tool whose
-  entire job is verifying exact-value math certificates risks a build
-  that looks fine but silently computes (or drops) the wrong thing,
-  which is the one failure mode to avoid above all others.
+- an independent route disagrees with a certified record;
+- a preregistered audit fails;
+- a candidate counterexample survives initial rigorous checks;
+- documents assign incompatible conventions/claims to one certificate;
+- a novelty claim depends on an unread reachable paper;
+- a resource cap would force an unregistered method substitution;
+- a surprising favorable result has not completed heightened checks.
 
-  **What works**: run the pinned version inside a Linux container. A
-  `podman` (or `docker`) machine with a plain `debian` image is
-  enough — build once per session:
-  ```bash
-  podman run -d --name simbuild -v "$PWD":/repo:ro debian:bookworm sleep infinity
-  podman exec simbuild bash -c "apt-get update -qq && apt-get install -y -qq \
-    build-essential wget libgmp-dev libreadline-dev python3 python3-pip \
-    python3-numpy texlive-latex-base texlive-latex-recommended \
-    texlive-latex-extra texlive-fonts-recommended poppler-utils >/tmp/apt.log 2>&1"
-  podman exec simbuild bash -c "cd /tmp && wget -q \
-    https://pari.math.u-bordeaux.fr/pub/pari/OLD/2.15/pari-2.15.4.tar.gz && \
-    tar xzf pari-2.15.4.tar.gz && cd pari-2.15.4 && \
-    ./Configure --prefix=/usr/local >/tmp/configure.log 2>&1 && \
-    make -j4 >/tmp/build.log 2>&1 && make install >/tmp/install.log 2>&1"
-  ```
-  Copy a writable copy of the repo in (a read-only bind mount isn't
-  enough if the build writes into the tree), run everything from
-  there:
-  ```bash
-  podman exec simbuild bash -c "cp -r /repo /tmp/repo-rw"
-  podman exec simbuild bash -c "cd /tmp/repo-rw && export PATH=/usr/local/bin:\$PATH && \
-    PYTHONPATH=scripts python3 -m unittest discover -s tests -v"
-  ```
-  If a fully local workflow is preferred and the user accepts the
-  tradeoff, a current Homebrew PARI/GP works natively and is fast, but
-  any exact-match test failure must be hand-verified for mathematical
-  equivalence (as above), not treated as pass/fail. Ask the user which
-  they want rather than assuming — don't default to the heavier
-  container path if they've asked for local-only, and don't default to
-  local-only if a non-trivial version mismatch is in play; surface the
-  tradeoff and let them pick.
+## 8. Writing and reporting
 
-### Reserve the DOI before finalizing the manuscript
+- Put the claim boundary first and state what is not proved precisely.
+- Support every theorem row in text with route, candidate, and labels;
+  corpus IDs alone are insufficient.
+- Label non-proof cross-checks as quarantined and explain why.
+- Verify bibliography metadata and cite theorem/page numbers. Uncited
+  entries and dangling references are bugs.
+- Every cycle/block report leads with outcomes and explicitly surfaces
+  newly banked major theorems, breakthroughs, corrections, containment
+  events, and structural no-go results. State tags, gate changes, and
+  implications.
+- Cold outreach: lead with the recipient’s problem, include one result
+  about their work, ask at most three falsifiable questions, disclose AI
+  assistance, and attach the replay archive.
 
-Zenodo lets you create an empty deposit and get its DOI before
-uploading anything — do this first so the DOI can be printed inside
-the PDF itself (in a "reproducibility"/"data availability" section)
-and in a `CITATION.cff`, rather than leaving a "DOI will be inserted
-after deposit" placeholder:
+## 9. Session and compute hygiene
 
-```bash
-curl -s -X POST -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $ZENODO_TOKEN" \
-  "https://zenodo.org/api/deposit/depositions" -d '{}'
-# -> read .id and .metadata.prereserve_doi.doi from the response
-```
+- Re-read a file immediately before editing it.
+- Timebox exploration and preserve negative results as artifacts.
+- Record wall time and peak memory for principal replays.
+- Pin tool/library versions. Different PARI versions may emit different
+  but equivalent generators; prove equivalence before changing expected
+  outputs. Use the pinned Linux/container pipeline when exact byte-level
+  reproduction matters.
+- Check for concurrent commits before release:
+  `git fetch && git log HEAD..origin/main --oneline`.
 
-If there are companion papers that cite each other, cross-reference
-DOIs in both directions once all of them are reserved, then recompile
-every affected manuscript **twice** (LaTeX cross-references need a
-second pass) and confirm the DOI actually rendered, e.g.:
-```bash
-pdflatex -interaction=nonstopmode -halt-on-error paper/your-paper.tex
-pdflatex -interaction=nonstopmode -halt-on-error paper/your-paper.tex
-pdftotext paper/your-paper.pdf - | grep -A1 -B1 '10.5281/zenodo'
-```
+## 10. Publishing and Zenodo
 
-### Build and verify before uploading anything
-
-- If the project has a deterministic-archive build script, build twice
-  into separate output directories and `cmp` the results — they must
-  be byte-identical. If they aren't, something non-deterministic
-  (timestamps, file ordering, uid/gid) is leaking into the archive and
-  must be fixed before this goes anywhere near Zenodo.
-- **Run the test suite against the extracted archive, not just the
-  live repo tree.** A file-selection pattern (e.g. "everything matching
-  `dimension_six_*`") can miss a shared helper script from outside that
-  pattern that something inside it imports — this only surfaces as a
-  `ModuleNotFoundError` (or equivalent) once you've extracted the
-  tarball in isolation, because the live repo has every file so
-  nothing looks missing until then.
-
-### Upload, in this order: metadata → archive → standalone reader files
-
-```bash
-BUCKET=<links.bucket from the reserved deposit>
-DEP_ID=<the deposit id>
-
-# metadata
-curl -X PUT -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $ZENODO_TOKEN" \
-  "https://zenodo.org/api/deposit/depositions/$DEP_ID" \
-  -d "{\"metadata\": $(cat path/to/zenodo-metadata.json)}"
-
-# the reproducibility archive
-curl -X PUT --upload-file dist/your-archive.tar.gz \
-  -H "Authorization: Bearer $ZENODO_TOKEN" "$BUCKET/your-archive.tar.gz"
-
-# ALSO upload a standalone PDF (and source, e.g. .tex) as separate
-# top-level files -- Zenodo can preview a PDF in-browser, but only for
-# a file uploaded at the top level, not one sitting inside a tar.gz.
-# Skipping this means every reader has to download and extract the
-# archive just to read the paper.
-curl -X PUT --upload-file paper/your-paper.pdf \
-  -H "Authorization: Bearer $ZENODO_TOKEN" "$BUCKET/your-paper.pdf"
-curl -X PUT --upload-file paper/your-paper.tex \
-  -H "Authorization: Bearer $ZENODO_TOKEN" "$BUCKET/your-paper.tex"
-```
-
-**Verify every upload before publishing**: the upload response's
-`checksum` (md5) must match the local file's md5 exactly (`md5 -q
-<file>` on macOS, `md5sum <file>` on Linux). Never trust an upload
-without this check — treat a mismatch as a hard stop, not a warning.
-
-**Zenodo's API returns intermittent `504 Gateway Time-out` even on
-writes that actually succeeded.** On a timeout, poll with a plain `GET`
-on the deposition a few seconds later before assuming the write
-failed — don't blindly retry a mutating call without checking state
-first, or you risk double-creating something.
-
-### Publish
-
-```bash
-curl -X POST -H "Authorization: Bearer $ZENODO_TOKEN" \
-  "https://zenodo.org/api/deposit/depositions/$DEP_ID/actions/publish"
-```
-
-**This is irreversible** — the record becomes permanent and public
-under the DOI. Confirm explicitly with the user before calling this,
-every single time, even if they approved a previous paper's publish
-earlier in the same conversation. Always show them the draft's files,
-metadata, and verified checksums first, and let them look at the draft
-URL themselves if they want to.
-
-### Adding or fixing files after publishing
-
-A published deposition is read-only. To add or change files (e.g. the
-standalone-PDF fix above, applied after an initial archive-only
-publish), create a new version first:
-
-```bash
-curl -X POST -H "Authorization: Bearer $ZENODO_TOKEN" \
-  "https://zenodo.org/api/deposit/depositions/$DEP_ID/actions/newversion"
-# -> follow links.latest_draft to the new draft id, which starts as a
-#    copy of the previous version's files
-```
-
-Upload/replace files on the new draft's bucket, verify checksums, then
-publish it the same way. The old version stays intact and citable; the
-concept DOI (`conceptdoi` on the published record) always resolves to
-the latest version. If a manuscript's own text cites a specific version
-DOI (the exact archive it was built and hash-verified against), that's
-fine to leave pointing at that version rather than bumping it forward —
-Zenodo's version selector and the concept DOI both make the latest
-version reachable regardless.
-
-## Watch for concurrent/automated changes to a project you're working in
-
-At least one project in this repo (`sic-stark`) has had commits land
-mid-session from a git identity that isn't the interactive session's
-configured user — meaning something else (a scheduled job, another
-agent, a cron-driven research loop) is actively committing and pushing
-to this exact repository outside of any given conversation. Before
-trusting that a project's working tree reflects only your own edits,
-or before publishing anything from it, check:
-```bash
-git log --format='%h %ad %an <%ae> %s' --date=iso -10
-git fetch && git log HEAD..origin/main --oneline
-```
-If you find commits you didn't make, from an unfamiliar identity, or
-that change the scope of something already published — stop and
-surface it to the user rather than silently building on top of it or
-silently reconciling it yourself.
+- Use `ZENODO_TOKEN` only in an `Authorization: Bearer` header; never
+  expose it in URLs, output, or files.
+- Reserve the DOI first, insert it into paper/source metadata, compile
+  twice, and verify rendered text.
+- Build deterministic archives twice and compare bytes. Test the
+  extracted archive, not only the live tree.
+- Upload metadata, archive, then standalone PDF and source at the
+  deposit root so the main paper previews directly. Verify local and
+  remote checksums.
+- A timeout may hide a successful write; inspect deposition state before
+  retrying mutations.
+- Publishing is irreversible. Always show files, metadata, and verified
+  checksums and obtain explicit user approval immediately before the
+  publish action.
+- After publication, changes require a new Zenodo version.
+- No manuscript circulates as final before its proof archive has an
+  immutable DOI.
