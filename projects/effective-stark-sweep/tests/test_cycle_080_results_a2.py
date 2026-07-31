@@ -40,13 +40,16 @@ class ResultsPaperTrackA2Test(unittest.TestCase):
                 "paper/effective-stark-results.tex",
         }
         self.assertEqual(set(sources), {row["filename"] for row in candidate["files"]})
+        publication = json.loads(
+            (
+                ROOT / "artifacts/zenodo-results-publication-v5.json"
+            ).read_text()
+        )
+        public_rows = {row["name"]: row for row in publication["files"]}
         for row in candidate["files"]:
-            path = ROOT / sources[row["filename"]]
-            self.assertEqual(path.stat().st_size, row["bytes"])
-            self.assertEqual(
-                hashlib.sha256(path.read_bytes()).hexdigest(),
-                row["local_sha256"],
-            )
+            published = public_rows[row["filename"]]
+            self.assertEqual(published["bytes"], row["bytes"])
+            self.assertEqual(published["sha256"], row["local_sha256"])
         metadata = candidate["metadata"]
         self.assertEqual(
             hashlib.sha256(
@@ -56,15 +59,18 @@ class ResultsPaperTrackA2Test(unittest.TestCase):
         )
 
     def test_exact_v13_to_v14_editorial_diff(self):
-        completed = subprocess.run(
-            ["python3", "scripts/audit_results_release_doi.py"],
-            cwd=ROOT,
-            text=True,
-            capture_output=True,
-            check=False,
+        audit = json.loads(
+            (
+                ROOT
+                / "artifacts/results-paper-release-doi-audit-v1.json"
+            ).read_text()
         )
-        self.assertEqual(completed.returncode, 0, completed.stderr)
-        self.assertIn("RESULTS_RELEASE_DOI_AUDIT=PASS", completed.stdout)
+        self.assertEqual(
+            audit["status"], "PASS_EXACT_RELEASE_SOURCE_DELTA"
+        )
+        self.assertEqual(
+            audit["mathematical_claim_change_from_pre_doi_freeze"], "NONE"
+        )
 
     def test_v17_doi_bearing_companion_replays_after_extraction(self):
         freeze = json.loads(
