@@ -12,7 +12,7 @@ Start after a crash with:
 1. `PLAN.md`;
 2. `data/preregistration-v1.json`;
 3. `artifacts/control-phase-audit-v1.json`;
-4. `docs/cycle-055-checkpoint.md`;
+4. `docs/final-project-report.md`;
 5. `python3 -m unittest discover -s tests -p 'test_*.py'`.
 
 The certified control packets remain owned by
@@ -33,3 +33,11 @@ and replayed the SIC anchors, but rejected a generic map from a ray
 character to one tuple. The next possible theorem target is a Fourier
 resolvent of representative-independent class-level cocycle
 multipliers. No fitting or holdout is currently authorized.
+
+The project is now finished. The final exact test shows that the
+descended squared multiplier is sign-class even, whereas the
+differenced Stark support is sign-class odd; every relevant Fourier
+resolvent therefore vanishes. See
+`docs/class-descent-fourier-no-go-v1.md`. This closes the frozen
+mechanism without weakening the independent five-for-five phase
+quantization observation.

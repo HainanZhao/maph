@@ -70,6 +70,13 @@ class ControlArtifactsTest(unittest.TestCase):
                 / "cycle-055-bridge-verdict-v1.json"
             ).read_text()
         )
+        cls.final_no_go = json.loads(
+            (
+                ROOT
+                / "artifacts"
+                / "class-descent-fourier-no-go-v1.json"
+            ).read_text()
+        )
 
     def test_control_population(self):
         self.assertEqual(self.controls["case_count"], 5)
@@ -230,6 +237,26 @@ class ControlArtifactsTest(unittest.TestCase):
             self.bridge_verdict["coefficient_fit_authorized"]
         )
         self.assertFalse(self.bridge_verdict["holdout_authorized"])
+
+    def test_final_fourier_no_go_is_exact(self):
+        self.assertEqual(self.final_no_go["class_descent"], "PASS")
+        exponents = self.final_no_go["multiplier_exponents"]
+        for index in range(4):
+            self.assertEqual(
+                exponents[str(index)], exponents[str(index + 4)]
+            )
+        self.assertEqual(
+            set(self.final_no_go["differenced_support_characters"]),
+            {1, 3, 5, 7},
+        )
+        self.assertEqual(
+            set(self.final_no_go["relevant_fourier_resolvents"].values()),
+            {"0"},
+        )
+        self.assertEqual(
+            self.final_no_go["verdict"],
+            "SQUARED_MULTIPLIER_PHASE_MECHANISM_REJECTED",
+        )
 
 
 if __name__ == "__main__":

@@ -89,7 +89,13 @@ feasibility result, not a reason to manufacture a formula.
 | 053 | Audit gauge and character covariance | BANKED | `docs/cocycle-covariance-v1.md` |
 | 054 | Test any authorized feature on five controls | NOT_AUTHORIZED | generic bridge gate failed |
 | 055 | Bank general/restricted/no-bridge verdict | BANKED | `docs/cycle-055-checkpoint.md` |
-| 056 | Freeze final descent/resolvent stop conditions | IN_PROGRESS | `docs/final-block-preregistration.md` |
+| 056 | Freeze final descent/resolvent stop conditions | BANKED | `docs/final-block-preregistration.md` |
+| 057 | Test multiplier descent on 24 dimension-five characteristics | BANKED | `artifacts/class-descent-fourier-no-go-v1.json` |
+| 058 | Emit exact eight-class multiplier table | BANKED | same |
+| 059 | Test sign-class covariance | BANKED | same |
+| 060 | Form relevant character resolvents | BANKED_NEGATIVE | all four vanish exactly |
+| 061 | Audit square-root/coboundary repair | OUTSIDE_FROZEN_MECHANISM | `docs/class-descent-fourier-no-go-v1.md` |
+| 062 | Apply preregistered stop condition | BANKED | `docs/final-project-report.md` |
 
 ## Current finding
 
@@ -121,6 +127,14 @@ the cocycle inputs are class-level. The current verdict is
 `RESTRICTED_SIC_BRIDGE`. The corrected target is a
 representative-independent class multiplier followed by a
 character-level Fourier cocycle resolvent.
+
+The final block proves that the class multiplier does descend, but is
+invariant under the sign class. Every character in the differenced
+Stark support is odd on that sign class, so the proposed Fourier
+resolvent vanishes identically. An odd square-root lift would require
+the orientation data being sought and is circular. The project is
+finished with status
+`FINISHED_WITH_VERIFIED_NO_GO_FOR_FROZEN_MECHANISM`.
 
 ## Tags
 
