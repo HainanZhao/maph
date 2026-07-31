@@ -99,6 +99,41 @@ class ResultsPaperTrackA2Test(unittest.TestCase):
         self.assertEqual(completed.returncode, 0, completed.stderr)
         self.assertIn("RESULTS_COMPANION_V17=VERIFIED", completed.stdout)
 
+    def test_v14_publication_record_matches_the_frozen_candidate(self):
+        publication = json.loads(
+            (
+                ROOT / "artifacts/zenodo-results-publication-v5.json"
+            ).read_text()
+        )
+        candidate = json.loads(
+            (
+                ROOT
+                / "artifacts/results-paper-v1.4-publication-candidate-v4.json"
+            ).read_text()
+        )
+        self.assertEqual(
+            publication["status"], "PUBLISHED_AND_PUBLICLY_VERIFIED"
+        )
+        self.assertTrue(publication["publication_response"]["submitted"])
+        self.assertEqual(publication["publication_response"]["state"], "done")
+        self.assertEqual(
+            publication["public_download_verdict"],
+            "PASS_7_OF_7_BYTE_MD5_SHA256_MATCH",
+        )
+        published = {
+            row["name"]: (row["bytes"], row["md5"], row["sha256"])
+            for row in publication["files"]
+        }
+        frozen = {
+            row["filename"]: (
+                row["bytes"],
+                row["remote_md5"],
+                row["local_sha256"],
+            )
+            for row in candidate["files"]
+        }
+        self.assertEqual(published, frozen)
+
 
 if __name__ == "__main__":
     unittest.main()

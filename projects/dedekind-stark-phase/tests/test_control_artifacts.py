@@ -77,6 +77,13 @@ class ControlArtifactsTest(unittest.TestCase):
                 / "class-descent-fourier-no-go-v1.json"
             ).read_text()
         )
+        cls.email_readiness = json.loads(
+            (
+                ROOT
+                / "artifacts"
+                / "roblot-email-send-readiness-v1.json"
+            ).read_text()
+        )
 
     def test_control_population(self):
         self.assertEqual(self.controls["case_count"], 5)
@@ -304,6 +311,27 @@ class ControlArtifactsTest(unittest.TestCase):
             self.final_no_go["verdict"],
             "SQUARED_MULTIPLIER_PHASE_MECHANISM_REJECTED",
         )
+
+    def test_roblot_email_is_ready_but_not_claimed_sent(self):
+        readiness = self.email_readiness
+        self.assertEqual(
+            readiness["status"],
+            "READY_AWAITING_AUTHORIZED_MAIL_CHANNEL",
+        )
+        self.assertEqual(readiness["message"]["question_count"], 3)
+        self.assertTrue(readiness["message"]["ai_assistance_disclosed"])
+        self.assertTrue(
+            readiness["message"]["withdrawn_raw_orientation_labels_omitted"]
+        )
+        self.assertEqual(
+            readiness["message"]["public_doi"],
+            "10.5281/zenodo.21712478",
+        )
+        self.assertEqual(
+            readiness["attachment"]["sha256"],
+            "e2a945edaddcec32e3aad10e67f8b960af0bc304b07ba5503ab7be62384b9506",
+        )
+        self.assertFalse(readiness["delivery"]["sent"])
 
 
 if __name__ == "__main__":
