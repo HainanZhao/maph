@@ -106,7 +106,12 @@ failed path.
 
 ## 7. Stop and escalate
 
-Stop the affected branch and surface evidence immediately when:
+The following findings do **not** automatically require stopping the
+active goal or escalating to the user immediately. Record and contain
+the affected claim, preserve the evidence, withhold invalid promotion,
+and continue safe independent work toward the user's request. Highlight
+the issue clearly once the current request, ask, or goal has been
+cleared:
 
 - an independent route disagrees with a certified record;
 - a preregistered audit fails;
@@ -115,6 +120,13 @@ Stop the affected branch and surface evidence immediately when:
 - a novelty claim depends on an unread reachable paper;
 - a resource cap would force an unregistered method substitution;
 - a surprising favorable result has not completed heightened checks.
+
+Use judgment to decide whether the evidence warrants stopping the
+affected branch, opening a separate branch, or formulating a new
+thesis. Surface the issue earlier only when continuing would corrupt
+evidence, create an irreversible or unauthorized change, compromise
+safety, or make meaningful progress on the user's goal impossible.
+Never conceal, erase, or silently work around a listed finding.
 
 ## 8. Writing and reporting
 
