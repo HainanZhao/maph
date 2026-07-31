@@ -89,6 +89,7 @@ feasibility result, not a reason to manufacture a formula.
 | 053 | Audit gauge and character covariance | BANKED | `docs/cocycle-covariance-v1.md` |
 | 054 | Test any authorized feature on five controls | NOT_AUTHORIZED | generic bridge gate failed |
 | 055 | Bank general/restricted/no-bridge verdict | BANKED | `docs/cycle-055-checkpoint.md` |
+| 056 | Freeze final descent/resolvent stop conditions | IN_PROGRESS | `docs/final-block-preregistration.md` |
 
 ## Current finding
 
