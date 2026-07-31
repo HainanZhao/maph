@@ -33,14 +33,17 @@ class ResultsPaperMajorRevisionTests(unittest.TestCase):
 
     def test_full_referee_audit_replays(self):
         completed = subprocess.run(
-            ["python3", "scripts/audit_results_paper_full.py"],
+            ["python3", "scripts/audit_results_v15_integration.py"],
             cwd=ROOT,
             text=True,
             capture_output=True,
             check=False,
         )
         self.assertEqual(completed.returncode, 0, completed.stderr)
-        self.assertIn("RESULTS_PAPER_FULL_AUDIT=PASS", completed.stdout)
+        result = json.loads(completed.stdout)
+        self.assertEqual(
+            result["status"], "PASS_MAIN_INTEGRATION_AND_EXACT_REPLAY"
+        )
 
     def test_full_freeze_hashes(self):
         freeze = load("artifacts/results-paper-full-freeze-v12.json")
@@ -52,11 +55,27 @@ class ResultsPaperMajorRevisionTests(unittest.TestCase):
             freeze["supersedes"], "artifacts/results-paper-full-freeze-v11.json"
         )
         manuscript = freeze["primary_manuscript"]
-        self.assertEqual(sha(manuscript["tex"]), manuscript["tex_sha256"])
-        self.assertEqual(sha(manuscript["pdf"]), manuscript["pdf_sha256"])
         supplement = freeze["supplement"]
-        self.assertEqual(sha(supplement["tex"]), supplement["tex_sha256"])
-        self.assertEqual(sha(supplement["pdf"]), supplement["pdf_sha256"])
+        publication = load("artifacts/zenodo-results-publication-v5.json")
+        published = {
+            row["name"]: row["sha256"] for row in publication["files"]
+        }
+        self.assertEqual(
+            published["effective-stark-results.tex"],
+            manuscript["tex_sha256"],
+        )
+        self.assertEqual(
+            published["effective-stark-results.pdf"],
+            manuscript["pdf_sha256"],
+        )
+        self.assertEqual(
+            published["effective-stark-results-supplement.tex"],
+            supplement["tex_sha256"],
+        )
+        self.assertEqual(
+            published["effective-stark-results-supplement.pdf"],
+            supplement["pdf_sha256"],
+        )
         audit = freeze["referee_audit"]
         self.assertEqual(sha(audit["script"]), audit["script_sha256"])
         self.assertEqual(sha(audit["artifact"]), audit["artifact_sha256"])

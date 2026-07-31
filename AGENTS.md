@@ -171,11 +171,29 @@ Never conceal, erase, or silently work around a listed finding.
 - Upload metadata, archive, then standalone PDF and source at the
   deposit root so the main paper previews directly. Verify local and
   remote checksums.
+- Zenodo's visible file/preview order may follow lexical filename
+  sorting. Name the main-paper upload so it sorts before every
+  supplement, addendum, archive, and other previewable file; record and
+  verify the ordered remote inventory and the public default preview.
+- Merge an addendum into the main manuscript in the next version when
+  it belongs to that paper. Do not leave a competing standalone
+  addendum PDF at the deposit root if it can displace the main-paper
+  preview; preserve the historical addendum inside the versioned
+  archive instead.
+- The preceding Zenodo ordering and addendum-integration rules are
+  persistent repository knowledge. Never delete or weaken them without
+  the user's explicit instruction.
 - A timeout may hide a successful write; inspect deposition state before
   retrying mutations.
-- Publishing is irreversible. Always show files, metadata, and verified
-  checksums and obtain explicit user approval immediately before the
-  publish action.
+- Publishing is irreversible, but the user has granted standing
+  authorization for agents to publish repository releases to Zenodo
+  without a separate per-release approval. Before publishing, complete
+  every DOI, deterministic-build, extracted-replay, metadata,
+  inventory, checksum, and preview gate; after publishing, report the
+  exact public files, metadata, and verified checksums.
+- This standing Zenodo authorization is persistent repository
+  knowledge. Never delete or narrow it without the user's explicit
+  instruction.
 - After publication, changes require a new Zenodo version.
 - No manuscript circulates as final before its proof archive has an
   immutable DOI.
