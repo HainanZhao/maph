@@ -131,6 +131,10 @@ Stop the affected branch and surface evidence immediately when:
 - Cold outreach: lead with the recipient’s problem, include one result
   about their work, ask at most three falsifiable questions, disclose AI
   assistance, and attach the replay archive.
+- Agents never send email, Slack, direct messages, or any other
+  outbound communication. Agents may prepare and verify drafts,
+  recipients, attachments, and handoff instructions; a human performs
+  every send action.
 
 ## 9. Session and compute hygiene
 

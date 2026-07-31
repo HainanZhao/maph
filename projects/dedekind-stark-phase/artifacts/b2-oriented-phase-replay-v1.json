@@ -1,0 +1,57 @@
+{
+  "schema": "dedekind-stark-b2-oriented-phase-replay-v1",
+  "recorded_at_utc": "2026-07-31T00:00:00Z",
+  "status": "PASS_FIVE_EXACT_ORIENTATIONS",
+  "claim_tag": "OBSERVED_FIVE_CASE_ORIENTED_MATCH",
+  "cases": [
+    {
+      "case_id": "RQ-000129",
+      "exact_orientation": "inverse",
+      "matching_rotation": 1,
+      "defect_quarter_turn": 3,
+      "minimum_linf_gap": "-7.5459503685084E-87"
+    },
+    {
+      "case_id": "RQ-001280",
+      "exact_orientation": "inverse",
+      "matching_rotation": 0,
+      "defect_quarter_turn": 0,
+      "minimum_linf_gap": "-5.94689660538535096419E-78"
+    },
+    {
+      "case_id": "RQ-001569",
+      "exact_orientation": "direct",
+      "matching_rotation": 1,
+      "defect_quarter_turn": 3,
+      "minimum_linf_gap": "-9.1116257111020852983E-80"
+    },
+    {
+      "case_id": "RQ-001894",
+      "exact_orientation": "direct",
+      "matching_rotation": 1,
+      "defect_quarter_turn": 3,
+      "minimum_linf_gap": "-9.4563587618699833240767285924724409962412193061232E-49"
+    },
+    {
+      "case_id": "RQ-007519",
+      "exact_orientation": "inverse",
+      "matching_rotation": 0,
+      "defect_quarter_turn": 0,
+      "minimum_linf_gap": "-6.54053334616638318416995094263996E-67"
+    }
+  ],
+  "exact_orientation_source": "artifacts/b2-artin-transport-v1.json",
+  "alternative_orientation_searched": false,
+  "weak_coefficient_certification": "NUMERICAL_POINT_EVALUATION_FROM_EXACT_UNIT",
+  "proof_route": false,
+  "environment": {
+    "python": "3.12.3"
+  },
+  "source_hashes": {
+    "artifacts/b2-artin-transport-v1.json": "f363937519b2073018ecc0007f61ff742f064d65a70af32ed1c80dd593bb672c",
+    "proof/replay_b2_oriented_phase.py": "46cdf95d682fdcc59c7303da2ae0a3fc299161128712fd4cc3504638b05c744f"
+  },
+  "replay": "python3 proof/replay_b2_oriented_phase.py",
+  "submission_or_circulation_authorized": false,
+  "outbound_actions_by_agent": false
+}

@@ -1,0 +1,94 @@
+{
+  "schema": "dedekind-stark-b2-artin-transport-v1",
+  "recorded_at_utc": "2026-07-31T00:00:00Z",
+  "status": "PASS_EXACT_TRANSPORT_WITH_CONTAINED_EXPOSURE",
+  "claim_tag": "PROVED_EXACT_TRANSPORT",
+  "claim_boundary": "The constructor gamma is transported to the frozen analytic source character. No Stark identity or quarter-turn representative is proved here.",
+  "cases": [
+    {
+      "case_id": "RQ-000129",
+      "primary_route": "Qsqrt(-2)",
+      "separator_prime": 3,
+      "source_ray_character": "[1]",
+      "chi_of_constructor_gamma": "-i",
+      "chi_exponent_mod_4": 3,
+      "dedekind_to_analytic_orientation": "inverse"
+    },
+    {
+      "case_id": "RQ-001280",
+      "primary_route": "Qsqrt(-10)",
+      "separator_prime": 5,
+      "source_ray_character": "[1,0]",
+      "chi_of_constructor_gamma": "-i",
+      "chi_exponent_mod_4": 3,
+      "dedekind_to_analytic_orientation": "inverse"
+    },
+    {
+      "case_id": "RQ-001569",
+      "primary_route": "Qsqrt(-7)",
+      "separator_prime": 11,
+      "source_ray_character": "[1,1]",
+      "chi_of_constructor_gamma": "i",
+      "chi_exponent_mod_4": 1,
+      "dedekind_to_analytic_orientation": "direct"
+    },
+    {
+      "case_id": "RQ-001894",
+      "primary_route": "Qsqrt(-15)",
+      "separator_prime": 2,
+      "source_ray_character": "[1,0,1]",
+      "chi_of_constructor_gamma": "i",
+      "chi_exponent_mod_4": 1,
+      "dedekind_to_analytic_orientation": "direct"
+    },
+    {
+      "case_id": "RQ-007519",
+      "primary_route": "Qsqrt(-6)",
+      "separator_prime": 5,
+      "source_ray_character": "[1,1]",
+      "chi_of_constructor_gamma": "-i",
+      "chi_exponent_mod_4": 3,
+      "dedekind_to_analytic_orientation": "inverse"
+    }
+  ],
+  "exact_gates": {
+    "constructor_gamma_is_primitive_separator_frobenius_power_all_cases": true,
+    "frobenius_checked_on_full_integral_basis": true,
+    "source_ray_character_evaluated_on_separator_primes": true,
+    "source_character_values_constant_across_split_separator_primes": true,
+    "nonquarantined_secondary_routes_share_the_same_source_character": true,
+    "old_phase_orientation_strings_consumed_by_replay": false,
+    "lprime_values_consumed_by_replay": false
+  },
+  "preserved_failure": {
+    "case_id": "RQ-007519",
+    "failed_assumption": "Testing the polynomial generator alone determines the separator Frobenius on the packet-field model.",
+    "observed": "At 5 the polynomial generator does not generate the full residue field; the incomplete test produced three congruence matches and incorrectly labeled constructor gamma as the positive Frobenius.",
+    "preliminary_false_result": "chi(gamma)=i, direct orientation, followed by a preregistered numerical halt on RQ-007519",
+    "repair": "Test Frobenius on every element of the PARI integral basis. The true Frobenius is unique and constructor gamma is its inverse, so chi(gamma)=-i.",
+    "claim_impact": "The preliminary RQ-007519 transport is superseded; the corrected exact transport agrees with the archived inverse orientation."
+  },
+  "contained_input_exposure": {
+    "status": "PREREGISTRATION_INPUT_VIOLATION_CONTAINED",
+    "artifact_opened_after_first_successful_five-case_output": "../effective-stark-sweep/artifacts/q6-auxiliary-prime-independence-v1.json",
+    "unintended_field_exposed": "primitive_lprime_ball",
+    "used_by_transport_logic": false,
+    "chronology": "A preliminary five-case output was computed before the exposure, but its RQ-007519 Frobenius test was later found incomplete. The full-integral-basis correction and final exact replay occurred after the exposure.",
+    "consequence": "The final arithmetic replay is code-level target-free and independently reproducible, but its execution chronology is not labeled pristine."
+  },
+  "environment": {
+    "pari_gp": "2.15.4",
+    "python": "3.12.3"
+  },
+  "source_hashes": {
+    "docs/cycles-074-076-b2-artin-transport-preregistration.md": "c1d67ec2e8423abb60f49da45b0e24097b4cfd2e86a3e39dfea57ed351f98a24",
+    "proof/audit_b2_packet_frobenius.gp": "034608f6187d5d272967439b7956a3c968608cc23f44bbb5c45b26b501d7f2c9",
+    "proof/audit_b2_artin_transport.py": "63f2fc0f1869a7e872ed351bdd9e37ea7fef9c3bb6a74310e687b23b6b6ff5c2",
+    "../effective-stark-sweep/data/engine-c-character-selection-cases-v1.json": "0fa72861dec6827e1ac94e50435a4663c717efbea3b311fcb26ef47758849cdf",
+    "../effective-stark-sweep/data/engine-c-e6-tranche-01-selection-v1.json": "f2a2f4c9e3e1421d0668a117b015925a77798bfb5453fe4681f21e8d73e6adc0"
+  },
+  "replay": "python3 proof/audit_b2_artin_transport.py",
+  "target_opening_authorized_after_seal": true,
+  "submission_or_circulation_authorized": false,
+  "outbound_actions_by_agent": false
+}

@@ -1,0 +1,27 @@
+{
+  "schema": "dedekind-stark-b1-action-convention-audit-v1",
+  "recorded_at_utc": "2026-07-31T00:00:00Z",
+  "status": "CONTAINED_NOTATIONAL_CORRECTION",
+  "frozen_fourier_coefficient": "c_chi(u) = (1/2) sum_{r=0}^3 i^r log|u^(gamma^r)|",
+  "signed_element": "a = s gamma^j with s in {+1,-1}",
+  "right_exponent_action": {
+    "definition": "u^a = (u^(gamma^j))^s",
+    "covariance": "c_chi(u^a) = chi(a)^(-1) c_chi(u)"
+  },
+  "left_group_ring_action": {
+    "definition": "a dot u = u^(a^(-1))",
+    "covariance": "c_chi(a dot u) = chi(a) c_chi(u)"
+  },
+  "affected_sources": [
+    "docs/roblot-phase-clarification-lemma-v1.md",
+    "docs/roblot-email-long-draft-v1.md",
+    "docs/cycles-063-070-preregistration.md"
+  ],
+  "unaffected_claims": [
+    "Lprime/c_chi(eta) belongs to mu_4",
+    "the certified-case result is a consequence of Roblot uniqueness",
+    "the uncertified-case quantization statement is equivalent to rank-one Stark"
+  ],
+  "required_successor_notation": "Use h dot u = u^(h^(-1)) whenever writing c_chi(h dot u) = chi(h)c_chi(u).",
+  "source_of_truth": "docs/gauge-ambiguity-lemma-v1.md"
+}

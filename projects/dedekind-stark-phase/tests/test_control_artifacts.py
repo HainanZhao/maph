@@ -1,5 +1,7 @@
 import json
+import hashlib
 from pathlib import Path
+import subprocess
 import unittest
 
 
@@ -82,6 +84,37 @@ class ControlArtifactsTest(unittest.TestCase):
                 ROOT
                 / "artifacts"
                 / "roblot-email-send-readiness-v1.json"
+            ).read_text()
+        )
+        cls.email_handoff = json.loads(
+            (
+                ROOT
+                / "artifacts"
+                / "roblot-email-human-handoff-v2.json"
+            ).read_text()
+        )
+        cls.b1_action_audit = json.loads(
+            (
+                ROOT
+                / "artifacts"
+                / "b1-action-convention-audit-v1.json"
+            ).read_text()
+        )
+        cls.b1_note_audit = json.loads(
+            (
+                ROOT
+                / "artifacts"
+                / "b1-note-audit-v1.json"
+            ).read_text()
+        )
+        cls.b2_transport = json.loads(
+            (
+                ROOT / "artifacts" / "b2-artin-transport-v1.json"
+            ).read_text()
+        )
+        cls.b2_oriented_replay = json.loads(
+            (
+                ROOT / "artifacts" / "b2-oriented-phase-replay-v1.json"
             ).read_text()
         )
 
@@ -332,6 +365,123 @@ class ControlArtifactsTest(unittest.TestCase):
             "e2a945edaddcec32e3aad10e67f8b960af0bc304b07ba5503ab7be62384b9506",
         )
         self.assertFalse(readiness["delivery"]["sent"])
+
+    def test_current_outbound_handoff_is_human_only_and_unsent(self):
+        handoff = self.email_handoff
+        self.assertEqual(handoff["status"], "HUMAN_ONLY_READY_NOT_SENT")
+        self.assertTrue(handoff["delivery"]["handoff_complete"])
+        self.assertFalse(handoff["delivery"]["sent_by_agent"])
+        self.assertFalse(handoff["delivery"]["sent_by_human"])
+        self.assertTrue(
+            handoff["research_scheduling"]["local_track_b_work_authorized"]
+        )
+        self.assertTrue(
+            handoff["research_scheduling"][
+                "no_submission_or_circulation_before_b3"
+            ]
+        )
+
+    def test_b1_action_conventions_are_explicitly_separated(self):
+        audit = self.b1_action_audit
+        self.assertEqual(audit["status"], "CONTAINED_NOTATIONAL_CORRECTION")
+        self.assertEqual(
+            audit["right_exponent_action"]["covariance"],
+            "c_chi(u^a) = chi(a)^(-1) c_chi(u)",
+        )
+        self.assertEqual(
+            audit["left_group_ring_action"]["covariance"],
+            "c_chi(a dot u) = chi(a) c_chi(u)",
+        )
+
+    def test_b1_note_audit_and_frozen_hashes(self):
+        audit = self.b1_note_audit
+        self.assertEqual(audit["status"], "PASS_LOCAL_ONLY_NOT_FOR_CIRCULATION")
+        self.assertTrue(all(audit["exact_checks"].values()))
+        self.assertFalse(audit["circulation"]["authorized"])
+        self.assertFalse(audit["circulation"]["outbound_actions_by_agent"])
+        for relative_path, expected_hash in audit["source_hashes"].items():
+            digest = hashlib.sha256((ROOT / relative_path).read_bytes()).hexdigest()
+            self.assertEqual(digest, expected_hash, relative_path)
+
+    def test_b1_exact_replay(self):
+        replay = subprocess.run(
+            ["python3", "proof/audit_b1_note.py"],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(replay.returncode, 0, replay.stderr)
+        self.assertIn("B1_NOTE_AUDIT=PASS", replay.stderr)
+
+    def test_b2_exact_transport_and_preserved_correction(self):
+        transport = self.b2_transport
+        self.assertEqual(
+            transport["status"],
+            "PASS_EXACT_TRANSPORT_WITH_CONTAINED_EXPOSURE",
+        )
+        self.assertEqual(transport["claim_tag"], "PROVED_EXACT_TRANSPORT")
+        self.assertTrue(
+            transport["exact_gates"]["frobenius_checked_on_full_integral_basis"]
+        )
+        self.assertEqual(
+            {
+                row["case_id"]: row["dedekind_to_analytic_orientation"]
+                for row in transport["cases"]
+            },
+            {
+                "RQ-000129": "inverse",
+                "RQ-001280": "inverse",
+                "RQ-001569": "direct",
+                "RQ-001894": "direct",
+                "RQ-007519": "inverse",
+            },
+        )
+        self.assertEqual(
+            transport["preserved_failure"]["case_id"], "RQ-007519"
+        )
+        self.assertEqual(
+            transport["contained_input_exposure"]["status"],
+            "PREREGISTRATION_INPUT_VIOLATION_CONTAINED",
+        )
+        self.assertFalse(transport["outbound_actions_by_agent"])
+        for relative_path, expected_hash in transport["source_hashes"].items():
+            digest = hashlib.sha256((ROOT / relative_path).read_bytes()).hexdigest()
+            self.assertEqual(digest, expected_hash, relative_path)
+
+    def test_b2_one_orientation_replay_is_observed_not_proof(self):
+        replay = self.b2_oriented_replay
+        self.assertEqual(replay["status"], "PASS_FIVE_EXACT_ORIENTATIONS")
+        self.assertEqual(
+            replay["claim_tag"], "OBSERVED_FIVE_CASE_ORIENTED_MATCH"
+        )
+        self.assertFalse(replay["alternative_orientation_searched"])
+        self.assertFalse(replay["proof_route"])
+        self.assertEqual(len(replay["cases"]), 5)
+        for relative_path, expected_hash in replay["source_hashes"].items():
+            digest = hashlib.sha256((ROOT / relative_path).read_bytes()).hexdigest()
+            self.assertEqual(digest, expected_hash, relative_path)
+
+    def test_b2_exact_and_oriented_replays(self):
+        for command, marker in (
+            (
+                ["python3", "proof/audit_b2_artin_transport.py"],
+                "B2_ARTIN_TRANSPORT_AUDIT=PASS",
+            ),
+            (
+                ["python3", "proof/replay_b2_oriented_phase.py"],
+                "B2_ORIENTED_PHASE_REPLAY=PASS",
+            ),
+        ):
+            replay = subprocess.run(
+                command,
+                cwd=ROOT,
+                check=False,
+                capture_output=True,
+                text=True,
+            )
+            self.assertEqual(replay.returncode, 0, replay.stderr)
+            self.assertIn(marker, replay.stderr)
 
 
 if __name__ == "__main__":
