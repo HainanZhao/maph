@@ -34,6 +34,35 @@ class ControlArtifactsTest(unittest.TestCase):
                 ROOT / "artifacts" / "rq000129-phase-gate-v1.json"
             ).read_text()
         )
+        cls.all_phase_gates = json.loads(
+            (
+                ROOT / "artifacts" / "all-five-phase-gates-v1.json"
+            ).read_text()
+        )
+        cls.frozen_feature_audit = json.loads(
+            (
+                ROOT / "artifacts" / "frozen-feature-family-audit-v1.json"
+            ).read_text()
+        )
+        cls.dominant_gauge = json.loads(
+            (
+                ROOT / "artifacts" / "dominant-gauge-controls-v1.json"
+            ).read_text()
+        )
+        cls.field_only_no_go = json.loads(
+            (
+                ROOT
+                / "artifacts"
+                / "field-only-dedekind-family-no-go-v1.json"
+            ).read_text()
+        )
+        cls.cocycle_audit = json.loads(
+            (
+                ROOT
+                / "artifacts"
+                / "ray-cocycle-availability-audit-v1.json"
+            ).read_text()
+        )
 
     def test_control_population(self):
         self.assertEqual(self.controls["case_count"], 5)
@@ -111,6 +140,73 @@ class ControlArtifactsTest(unittest.TestCase):
             authorization["independent_defect_values_available"], 1
         )
         self.assertFalse(authorization["coefficient_fit_authorized"])
+
+    def test_all_five_independent_phase_gates_quantize(self):
+        self.assertEqual(self.all_phase_gates["case_count"], 5)
+        self.assertEqual(self.all_phase_gates["quantized_count"], 5)
+        self.assertTrue(
+            self.all_phase_gates["all_unique_orientation_matches"]
+        )
+        self.assertEqual(
+            {
+                row["case_id"]: row["defect_quarter_turn"]
+                for row in self.all_phase_gates["cases"]
+            },
+            {
+                "RQ-000129": 3,
+                "RQ-001280": 0,
+                "RQ-001569": 3,
+                "RQ-001894": 3,
+                "RQ-007519": 0,
+            },
+        )
+
+    def test_frozen_feature_family_rejected_before_fit(self):
+        self.assertEqual(
+            self.frozen_feature_audit["status"], "REJECTED_BEFORE_FIT"
+        )
+        nonintegral = [
+            row
+            for row in self.frozen_feature_audit["cases"]
+            if "/" in row["twelve_dedekind_sum"]
+        ]
+        self.assertEqual(
+            {row["case_id"] for row in nonintegral},
+            {"RQ-001894", "RQ-007519"},
+        )
+
+    def test_dominant_gauge_and_exact_field_only_no_go(self):
+        self.assertEqual(
+            {
+                row["case_id"]: row["dominant_q"]
+                for row in self.dominant_gauge["cases"]
+            },
+            {
+                "RQ-000129": 0,
+                "RQ-001280": 1,
+                "RQ-001569": 1,
+                "RQ-001894": 3,
+                "RQ-007519": 3,
+            },
+        )
+        self.assertEqual(
+            self.field_only_no_go["claim_tag"],
+            "VERIFIED_EXACT_NO_SOLUTION",
+        )
+        left, right = self.field_only_no_go["witness_pair"]
+        self.assertEqual(
+            left["feature_vector_mod_4"],
+            right["feature_vector_mod_4"],
+        )
+        self.assertNotEqual(left["dominant_q"], right["dominant_q"])
+        self.assertFalse(self.field_only_no_go["fit_executed"])
+
+    def test_holdout_stays_closed_at_theory_pivot(self):
+        self.assertFalse(self.cocycle_audit["generic_extractor_present"])
+        self.assertFalse(self.cocycle_audit["holdout_authorized"])
+        self.assertEqual(
+            self.cocycle_audit["fit_track_status"], "STOPPED"
+        )
 
 
 if __name__ == "__main__":
