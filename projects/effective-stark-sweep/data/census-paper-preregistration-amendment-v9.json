@@ -1,0 +1,43 @@
+{
+  "field_stage": {
+    "address_space_bytes_per_distinct_key": 2147483648,
+    "certificate_reuse_gate": [
+      "same base radicand",
+      "same primitive conductor",
+      "same primitive kernel HNF"
+    ],
+    "resource_cap_seconds_per_distinct_key": 600,
+    "selection": "distinct primitive-field keys having at least one occurrence passing A3 and S equality"
+  },
+  "preserved_sequential_run": {
+    "attempted_kernels": 119,
+    "exact_screen_complete": 109,
+    "path": "artifacts/roblot-sextic-population-sequential-partial-v0.json",
+    "resource_cap_timeouts": 10,
+    "sha256": "2618e6376ee4169d4b9ec65ed5ce2436fa6da22c42f918e6215874b5138188dc"
+  },
+  "primitive_field_key": [
+    "base radicand",
+    "primitive conductor",
+    "primitive ray cyclic invariants",
+    "primitive kernel HNF"
+  ],
+  "route_stage": {
+    "address_space_bytes_per_kernel": 2147483648,
+    "outputs": [
+      "primitive conductor",
+      "primitive ray cyclic invariants",
+      "primitive character",
+      "primitive kernel HNF",
+      "A3",
+      "S equals S(H/K)"
+    ],
+    "resource_cap_seconds_per_kernel": 60
+  },
+  "schema": "effective-stark-census-paper-preregistration-amendment-v9",
+  "source_hashes": {
+    "data/census-paper-preregistration-amendment-v7.json": "13ccd20b524bb250aea9db747fa1e533c6ed230682b9f260f58f452640e690f0",
+    "data/roblot-sextic-kernel-inventory-v1.json": "3ce1d225e63e3a87c1402271c571a115280e0ee2a58b4aa8ffa14b4887fb7dfd"
+  },
+  "status": "FROZEN_BEFORE_PRIMITIVE_FIELD_KEY_EXTRACTION"
+}
