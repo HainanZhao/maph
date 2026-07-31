@@ -9,11 +9,22 @@ the conjectured phase formula exists.
 
 Start after a crash with:
 
-1. `PLAN.md`;
-2. `data/preregistration-v1.json`;
-3. `artifacts/control-phase-audit-v1.json`;
-4. `docs/final-project-report.md`;
+1. `AGENTS.md`;
+2. `PLAN.md`;
+3. `docs/final-project-report.md`;
+4. `sha256sum -c MANIFEST.sha256`;
 5. `python3 -m unittest discover -s tests -p 'test_*.py'`.
+
+Project map:
+
+- `PLAN.md`: authoritative research graph, gates, headline results, and
+  complete cycle ledger;
+- `docs/`: preregistrations, proofs, checkpoints, and final synthesis;
+- `artifacts/`: immutable machine-readable evidence records;
+- `scripts/`: replayable exact and numerical audits;
+- `src/`: reusable exact arithmetic;
+- `tests/`: artifact and arithmetic regression gates;
+- `MANIFEST.sha256`: integrity map for controlling evidence.
 
 The certified control packets remain owned by
 `../effective-stark-sweep`; this project records hashes and extracts
