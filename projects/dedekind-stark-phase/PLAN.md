@@ -2,7 +2,26 @@
 
 Last reconciled: 2026-07-31 UTC
 
-## Objective
+## Status and recovery
+
+**Status:** `FINISHED_WITH_VERIFIED_NO_GO_FOR_FROZEN_MECHANISM`
+
+This file is the authoritative project memory. Read it completely before
+reopening any branch.
+
+Crash recovery:
+
+1. read this file and `AGENTS.md`;
+2. read `docs/final-project-report.md`;
+3. run `sha256sum -c MANIFEST.sha256`;
+4. run `python3 -m unittest discover -s tests -p 'test_*.py'`;
+5. replay the controlling script linked from the gate being inspected.
+
+There is no currently authorized experimental continuation. A
+metaplectic/spin orientation would be a new project branch and requires
+a new preregistration and stop condition.
+
+## Original objective
 
 Test the conjectural implication
 
@@ -17,6 +36,95 @@ existing certified quartic packets provide an independent calibration
 dataset for such a congruence. A negative answer is a completed
 feasibility result, not a reason to manufacture a formula.
 
+## High-level research graph
+
+```text
+Original Dedekind-phase conjecture
+  |
+  +-- Certified Engine-C controls
+  |     |
+  |     +-- initial controls were circular ------------------ CLOSED
+  |     |
+  |     +-- independent Roblot constructors
+  |             |
+  |             +-- 5/5 quarter-turn quantization ----------- POSITIVE
+  |             |
+  |             +-- raw labels gauge-dependent
+  |                     |
+  |                     +-- dominant-embedding gauge -------- PROVED
+  |                     |
+  |                     +-- field-only Dedekind family ------ EXACT NO-GO
+  |
+  +-- Ray/modulus-specific cocycle pivot
+        |
+        +-- exact supplied-tuple evaluator ------------------ PROVED
+        |
+        +-- ray character -> one Kopp tuple ----------------- ILL-TYPED
+        |
+        +-- class-level multiplier descent ------------------ PROVED
+                |
+                +-- multiplier is sign-class even
+                +-- Stark difference support is sign-class odd
+                +-- relevant Fourier resolvent = 0 ---------- EXACT NO-GO
+                        |
+                        +-- intrinsic metaplectic square root  NEW PROJECT
+```
+
+Closed branches remain in this graph deliberately. Do not silently
+restart them.
+
+## Headline results
+
+These results must be surfaced in the first report after they are
+banked and in any project-level summary:
+
+1. **Five-control phase quantization (`NUMERICAL`).** Five independent
+   Roblot weak solutions match certified \(L'\)-balls after a unique
+   quarter turn. The weak-unit coefficient is a high-precision
+   evaluation of exact unit-lattice data, so this is not tagged as an
+   exact theorem.
+2. **Gauge-ambiguity lemma (`VERIFIED`).** Conjugating a cyclic-quartic
+   weak solution rotates its character coefficient by \(\mu_4\); the
+   raw quarter-turn label is not invariant.
+3. **Dominant-embedding gauge (`VERIFIED`).** For nondegenerate log
+   orbit \((a,b,-a,-b)\), the unique maximum selects a canonical weak
+   solution representative. All five controls are nondegenerate.
+4. **Field-only feature no-go (`VERIFIED_EXACT_NO_SOLUTION`).**
+   RQ-000129 and RQ-001569 have identical frozen field-only features
+   modulo four and different canonical phase labels.
+5. **Supplied-tuple cocycle bridge (`VERIFIED`).** One exact formula
+   replays five SIC Rademacher invariants, the dimension-four
+   multiplier, all 24 dimension-five multipliers, and inversion
+   covariance.
+6. **Ray-to-form obstruction (`VERIFIED_SCOPE_OBSTRUCTION`).** A
+   character-level input does not select the class-level auxiliary
+   data required by Kopp's formula.
+7. **Class descent (`VERIFIED`).** The 24 dimension-five
+   characteristics descend exactly to eight class multipliers.
+8. **Fourier parity no-go (`VERIFIED_NO_GO`).** The descended squared
+   multiplier is sign-class even, while every character in the
+   differenced Stark support is sign-class odd; all four relevant
+   Fourier resolvents vanish exactly.
+
+The eighth item is the project's terminal theorem for the frozen
+mechanism. It does not rule out a metaplectic square-root refinement.
+
+## Preregistered gates and outcomes
+
+| Gate | Frozen question | Outcome | Consequence |
+|---|---|---|---|
+| Independence | Is the comparison object independent of \(L'\)? | Initial controls failed; five Roblot constructors later passed | Fitting remained closed until cycle 035 |
+| Phase opening | Do sealed independent controls quantize? | 5/5 passed | Positive phenomenon banked |
+| Gauge | Is the quarter-turn label intrinsic? | Raw label failed; dominant gauge passed | Canonical response repaired |
+| Frozen feature family | Are all preregistered features integral? | Failed on 2/5 rows | Rejected before fitting |
+| Field-only repair | Can the natural integral repair fit? | Exact two-row collision | Field-only path closed |
+| Cocycle availability | Is a generic extractor already present? | No | Pivoted from fitting to theory |
+| Supplied-tuple replay | Does one exact arithmetic layer cover anchors? | Passed | Restricted bridge proved |
+| Non-SIC bridge | Does \((K,\mathfrak m,\chi)\) determine one tuple? | No; input levels mismatch | General one-tuple bridge rejected |
+| Class descent | Is the multiplier representative-independent? | Passed exactly | Character resolvent authorized |
+| Fourier resolvent | Is it nonzero on Stark support? | All four coefficients vanish | Frozen mechanism rejected |
+| Stop condition | Would repair require new noncanonical structure? | Yes: an intrinsic metaplectic lift | Project finished at cycle 062 |
+
 ## Non-negotiable claim boundary
 
 - The absolute phase of \(L'(0,\chi)\) is not expected to be a rational
@@ -30,111 +138,124 @@ feasibility result, not a reason to manufacture a formula.
 - Formula-family complexity and holdout rows are frozen before fitting.
 - A five-point interpolation is rejected even when exact.
 
-## Twenty-cycle ledger
+## Complete cycle ledger
 
-| Cycle | Task | Status | Evidence |
+Each row records the task and resulting finding. `Evidence` is the
+recovery pointer; failed, blocked, and unauthorized cycles are retained
+because they constrain later work.
+
+| Cycle | Task / finding | Status | Evidence |
 |---:|---|---|---|
-| 001 | Create project and recovery map | BANKED | this file, `README.md` |
-| 002 | Freeze claim boundary and failure criteria | BANKED | `data/preregistration-v1.json` |
-| 003 | Freeze primary-source perimeter | BANKED | `docs/literature-perimeter-v1.md` |
-| 004 | Separate CM-route eligibility from Roblot eligibility | BANKED | `docs/scope-audit-v1.md` |
-| 005 | Identify the five certified packet controls | BANKED | `artifacts/certified-controls-v1.json` |
-| 006 | Extract ten route-level analytic records and hashes | BANKED | same |
-| 007 | Implement exact sawtooth and Dedekind sums | BANKED | `src/dedekind.py` |
-| 008 | Verify classical reciprocity and closed-form controls | BANKED | tests |
-| 009 | Implement a fixed Rademacher-symbol convention | BANKED | `src/dedekind.py` |
-| 010 | Audit generator and cocycle sanity checks | BANKED | tests |
-| 011 | Compute certified-control \(L'\) phases | BANKED | `artifacts/control-phase-audit-v1.json` |
-| 012 | Test raw phase quantization | BANKED_NEGATIVE | same |
-| 013 | Test two-route phase invariance | BANKED | same |
-| 014 | Locate an independent canonical comparison object | BANKED_NEGATIVE | `docs/identifiability-audit-v1.md` |
-| 015 | Freeze the admissible low-complexity formula family | BLOCKED | independent defect unavailable |
-| 016 | Rank/identifiability audit before fitting | BANKED_NEGATIVE | `artifacts/control-phase-audit-v1.json` |
-| 017 | Freeze 50-row holdout | BLOCKED | no independent target variable |
-| 018 | Fit on certified controls | NOT_AUTHORIZED | would be tautological |
-| 019 | Run holdout | NOT_AUTHORIZED | target absent |
-| 020 | Bank feasibility verdict and next gate | BANKED | `docs/cycle-020-checkpoint.md` |
-| 021 | Translate Roblot's quartic construction exactly | BANKED | source audit and executable formula |
-| 022 | Genuine (A1)--(A3) screen on five original quartic fields | BANKED | `artifacts/roblot-quartic-gate-sealed-v1.json` |
-| 023 | Seal the first independent constructor | PRESERVED_FAILURE | v1 fixed-lattice proxy |
-| 024 | Replace proxy by genuine embedded \(K^+\)-unit lattice | BANKED | `artifacts/roblot-rq000129-constructor-sealed-v2.json` |
-| 025 | Open the first independent phase defect | BANKED | `artifacts/rq000129-phase-gate-v1.json` |
-| 026 | Freeze remaining constructors and feature protocol | BANKED | `docs/cycles-026-045-preregistration.md` |
-| 027 | Reconstruct the \(\mathbf Q(\sqrt{35})\) unit data | BANKED | sealed constructor artifact |
-| 028 | Seal RQ-001280 constructor | BANKED | `artifacts/remaining-roblot-constructors-sealed-v1.json` |
-| 029 | Compute RQ-001569 relative class/Fitting data | BANKED | same |
-| 030 | Seal RQ-001569 constructor | BANKED | same |
-| 031 | Compute RQ-007519 relative class/Fitting data | BANKED | same |
-| 032 | Seal RQ-007519 constructor | BANKED | same |
-| 033 | Compute RQ-001894 relative class and norm index | BANKED | same |
-| 034 | Seal RQ-001894 constructor | BANKED | same |
-| 035 | Demonstrate deterministic constructor replay | BANKED | same |
-| 036 | Open the remaining certified phase balls | BANKED | `artifacts/all-five-phase-gates-v1.json` |
-| 037 | Resolve character orientations | BANKED | same |
-| 038 | Bank five-for-five phase quantization | BANKED | same |
-| 039 | Prove weak-solution gauge ambiguity | BANKED | `docs/gauge-ambiguity-lemma-v1.md` |
-| 040 | Replay gauge action on all controls | BANKED | same |
-| 041 | Compute fundamental-unit \(SL_2(\mathbf Z)\) matrices | BANKED | `artifacts/frozen-feature-family-audit-v1.json` |
-| 042 | Compute exact Rademacher/Dedekind features | BANKED | same |
-| 043 | Reject the frozen feature family before fitting | BANKED_NEGATIVE | same |
-| 044 | Fix dominant gauge; prove field-only no-go | BANKED_NEGATIVE | `artifacts/field-only-dedekind-family-no-go-v1.json` |
-| 045 | Audit cocycle availability; declare theory pivot | BANKED | `docs/cycle-045-checkpoint.md` |
-| 046 | Freeze ray-class cocycle bridge target and conventions | BANKED | `docs/cycles-046-055-preregistration.md` |
-| 047 | Extract dimension-4 bridge | BANKED | `docs/sic-bridge-extraction-v1.md` |
-| 048 | Extract dimensions 7/8 and compare | BANKED | same |
-| 049 | Formulate ray-to-form existence proposition | BANKED_NEGATIVE | `docs/ray-to-form-obstruction-v1.md` |
-| 050 | Implement universal supplied-tuple arithmetic | BANKED | `src/cocycle.py` |
-| 051 | Replay frozen SIC anchors | BANKED | `artifacts/supplied-tuple-bridge-audit-v1.json` |
-| 052 | Attempt RQ-000129 from ray data alone | BANKED_NEGATIVE | `artifacts/rq000129-ray-to-form-gate-v1.json` |
-| 053 | Audit gauge and character covariance | BANKED | `docs/cocycle-covariance-v1.md` |
-| 054 | Test any authorized feature on five controls | NOT_AUTHORIZED | generic bridge gate failed |
-| 055 | Bank general/restricted/no-bridge verdict | BANKED | `docs/cycle-055-checkpoint.md` |
-| 056 | Freeze final descent/resolvent stop conditions | BANKED | `docs/final-block-preregistration.md` |
-| 057 | Test multiplier descent on 24 dimension-five characteristics | BANKED | `artifacts/class-descent-fourier-no-go-v1.json` |
-| 058 | Emit exact eight-class multiplier table | BANKED | same |
-| 059 | Test sign-class covariance | BANKED | same |
-| 060 | Form relevant character resolvents | BANKED_NEGATIVE | all four vanish exactly |
-| 061 | Audit square-root/coboundary repair | OUTSIDE_FROZEN_MECHANISM | `docs/class-descent-fourier-no-go-v1.md` |
-| 062 | Apply preregistered stop condition | BANKED | `docs/final-project-report.md` |
+| 001 | Project skeleton and crash-recovery map created | BANKED | this file, `README.md` |
+| 002 | Claim boundary and failure criteria frozen before data | BANKED | `data/preregistration-v1.json` |
+| 003 | Primary-source perimeter frozen | BANKED | `docs/literature-perimeter-v1.md` |
+| 004 | CM-route eligibility shown distinct from Roblot eligibility | BANKED | `docs/scope-audit-v1.md` |
+| 005 | Five certified packet controls identified | BANKED | `artifacts/certified-controls-v1.json` |
+| 006 | Ten route records extracted; two routes exist per control | BANKED | same |
+| 007 | Exact sawtooth and Dedekind arithmetic implemented | BANKED | `src/dedekind.py` |
+| 008 | Reciprocity and closed-form arithmetic controls passed | BANKED | tests |
+| 009 | Plain Rademacher-\(\Phi\) convention fixed | BANKED | `src/dedekind.py` |
+| 010 | Generator and cocycle arithmetic controls passed | BANKED | tests |
+| 011 | Certified \(L'\)-phase balls extracted for ten routes | BANKED | `artifacts/control-phase-audit-v1.json` |
+| 012 | Raw \(L'\) phases are not quarter-turn quantized | BANKED_NEGATIVE | same |
+| 013 | Both proof routes give identical phase balls in all five cases | BANKED | same |
+| 014 | Existing Engine-C comparison vectors found dependent on the same \(L'\) data | BANKED_NEGATIVE | `docs/identifiability-audit-v1.md` |
+| 015 | Formula-family freeze blocked because no independent response existed | BLOCKED | independence gate |
+| 016 | Feature-rank audit rejected fitting as circular | BANKED_NEGATIVE | `artifacts/control-phase-audit-v1.json` |
+| 017 | Fifty-row holdout could not be defined independently | BLOCKED | response absent |
+| 018 | Fitting withheld because it would be tautological | NOT_AUTHORIZED | independence gate |
+| 019 | Holdout withheld because its target was absent | NOT_AUTHORIZED | independence gate |
+| 020 | Feasibility halt banked; independent weak solution named as next gate | BANKED | `docs/cycle-020-checkpoint.md` |
+| 021 | Roblot's quartic construction translated into executable exact steps | BANKED | source audit |
+| 022 | All five original fields passed genuine Roblot (A1)--(A3) screening | BANKED | `artifacts/roblot-quartic-gate-sealed-v1.json` |
+| 023 | First constructor exposed a fixed-lattice proxy error; failed version preserved | PRESERVED_FAILURE | v1 artifact |
+| 024 | Genuine embedded \(K^+\)-unit lattice corrected the norm index to two | BANKED | `artifacts/roblot-rq000129-constructor-sealed-v2.json` |
+| 025 | RQ-000129 gave the first independent quarter-turn phase match | BANKED | `artifacts/rq000129-phase-gate-v1.json` |
+| 026 | Remaining constructors and feature protocol sealed before opening phases | BANKED | `docs/cycles-026-045-preregistration.md` |
+| 027 | \(\mathbf Q(\sqrt{35})\) unit and norm data reconstructed exactly | BANKED | constructor transcript |
+| 028 | RQ-001280 independent constructor sealed | BANKED | `artifacts/remaining-roblot-constructors-sealed-v1.json` |
+| 029 | RQ-001569 relative class/Fitting data computed | BANKED | same |
+| 030 | RQ-001569 independent constructor sealed | BANKED | same |
+| 031 | RQ-007519 relative class/Fitting data computed | BANKED | same |
+| 032 | RQ-007519 independent constructor sealed | BANKED | same |
+| 033 | RQ-001894 norm index found to be four, giving exponent two | BANKED | same |
+| 034 | RQ-001894 independent constructor sealed | BANKED | same |
+| 035 | All four remaining constructors replayed byte-consistently | BANKED | same |
+| 036 | Four remaining phase balls opened only after the seal | BANKED | `artifacts/all-five-phase-gates-v1.json` |
+| 037 | A unique direct/inverse character orientation resolved every control | BANKED | same |
+| 038 | Five of five independent controls passed quarter-turn quantization | BANKED | same |
+| 039 | Gauge-ambiguity lemma proved: weak-solution conjugation rotates by \(\mu_4\) | BANKED | `docs/gauge-ambiguity-lemma-v1.md` |
+| 040 | Gauge action replayed on all five controls | BANKED | same |
+| 041 | Five fundamental-unit \(SL_2(\mathbf Z)\) matrices computed exactly | BANKED | `artifacts/frozen-feature-family-audit-v1.json` |
+| 042 | Exact Rademacher/Dedekind features exposed two nonintegral rows | BANKED | same |
+| 043 | Preregistered feature family rejected before fitting | BANKED_NEGATIVE | same |
+| 044 | Dominant gauge proved; field-only repair failed by an exact two-row collision | BANKED_NEGATIVE | `artifacts/field-only-dedekind-family-no-go-v1.json` |
+| 045 | Existing cocycle code found SIC-specific; project pivoted from fitting to theory | BANKED | `docs/cycle-045-checkpoint.md` |
+| 046 | Ray-class cocycle target, conventions, anchors, and outcomes frozen | BANKED | `docs/cycles-046-055-preregistration.md` |
+| 047 | Dimension-four supplied-tuple multiplier formula extracted exactly | BANKED | `docs/sic-bridge-extraction-v1.md` |
+| 048 | Dimensions 5/7/8 separated universal arithmetic from SIC-specific tuple inputs | BANKED | same |
+| 049 | Proposed ray-character-to-one-tuple map shown to mix character and class levels | BANKED_NEGATIVE | `docs/ray-to-form-obstruction-v1.md` |
+| 050 | Exact supplied-tuple cocycle evaluator implemented | BANKED | `src/cocycle.py` |
+| 051 | Five \(\Psi\) anchors and 25 full multipliers replayed exactly | BANKED | `artifacts/supplied-tuple-bridge-audit-v1.json` |
+| 052 | RQ-000129 lacked canonical Kopp auxiliary data; generic one-tuple gate failed | BANKED_NEGATIVE | `artifacts/rq000129-ray-to-form-gate-v1.json` |
+| 053 | Character inversion proved and replayed to conjugate the multiplier | BANKED | `docs/cocycle-covariance-v1.md` |
+| 054 | Five-control feature test withheld after its prerequisite failed | NOT_AUTHORIZED | generic bridge gate |
+| 055 | `RESTRICTED_SIC_BRIDGE` verdict banked; class Fourier resolvent proposed | BANKED | `docs/cycle-055-checkpoint.md` |
+| 056 | Class-descent, resolvent, repair, and terminal stop conditions frozen | BANKED | `docs/final-block-preregistration.md` |
+| 057 | All three representatives of each dimension-five ray class agreed | BANKED | `artifacts/class-descent-fourier-no-go-v1.json` |
+| 058 | Exact eight-class multiplier table emitted | BANKED | same |
+| 059 | Descended multiplier proved invariant under sign class \(R\) | BANKED | same |
+| 060 | All four Fourier coefficients on the \(R\)-odd Stark support vanished exactly | BANKED_NEGATIVE | same |
+| 061 | Odd square-root repair identified as a new metaplectic theorem, not an in-scope correction | OUTSIDE_FROZEN_MECHANISM | `docs/class-descent-fourier-no-go-v1.md` |
+| 062 | Preregistered stop condition fired; project closed with terminal no-go | BANKED | `docs/final-project-report.md` |
 
-## Current finding
+## Final synthesis
 
-The five certified packets provide ten excellent convention and
-route-invariance controls, but not yet five independent values of the
-proposed phase defect. Their Engine-C comparison vectors are obtained
-by Fourier inversion of the same \(L'\)-values and then identified in
-unit lattices. They certify the packet, but using them to fit a
-Dedekind formula for the defect would be circular.
+The project first rejected its original controls as circular, then
+constructed five independent Roblot weak solutions. All five exhibit a
+unique fourth-root phase relation after character alignment
+(`NUMERICAL` against certified \(L'\)-balls).
 
-The independence gate has now passed for all five controls, and every
-control exhibits a unique fourth-root phase relation after its
-character orientation is aligned. The raw quarter-turn index is not
-invariant under the allowed weak-solution gauge. A canonical
-dominant-embedding gauge repairs that defect, but the simplest
-field-only Dedekind--Rademacher family then fails exactly on a
-two-control collision.
+The raw label is gauge-dependent. A dominant-embedding gauge repairs
+the response, but the field-only Dedekind family fails exactly. The
+subsequent cocycle pivot proves a universal supplied-tuple evaluator
+while showing that a ray character does not select one Kopp tuple.
 
-The missing variable is ray/modulus-specific cocycle data. The current
-repository computes such data only for special SIC tuples; it does not
-contain a generic extractor from an oriented ray character. Therefore
-the empirical fitting track is stopped. The next authorized project is
-a theorem-level ray-class cocycle bridge, not a larger fit.
+The final block proves that the class multiplier nevertheless descends,
+but is invariant under the sign class. Every character in the
+differenced Stark support is odd on that sign class, so the proposed
+Fourier resolvent vanishes identically. Arbitrarily choosing an odd
+square-root lift would insert the desired orientation; constructing one
+intrinsically requires a new metaplectic theorem outside the frozen
+mechanism.
 
-Cycles 046--055 found that the exact arithmetic does generalize once a
-Kopp tuple is supplied, but the proposed ray-character-to-one-tuple map
-is ill-typed: characters are Fourier objects on all classes, whereas
-the cocycle inputs are class-level. The current verdict is
-`RESTRICTED_SIC_BRIDGE`. The corrected target is a
-representative-independent class multiplier followed by a
-character-level Fourier cocycle resolvent.
+Therefore the project is finished with status
+`FINISHED_WITH_VERIFIED_NO_GO_FOR_FROZEN_MECHANISM`: the phase
+quantization phenomenon remains interesting, but this
+Dedekind/squared-multiplier explanation is closed.
 
-The final block proves that the class multiplier does descend, but is
-invariant under the sign class. Every character in the differenced
-Stark support is odd on that sign class, so the proposed Fourier
-resolvent vanishes identically. An odd square-root lift would require
-the orientation data being sought and is circular. The project is
-finished with status
-`FINISHED_WITH_VERIFIED_NO_GO_FOR_FROZEN_MECHANISM`.
+## Evidence map
+
+- final report: `docs/final-project-report.md`;
+- phase controls: `artifacts/all-five-phase-gates-v1.json`;
+- gauge results: `docs/gauge-ambiguity-lemma-v1.md` and
+  `docs/dominant-embedding-gauge-v1.md`;
+- field-only no-go:
+  `artifacts/field-only-dedekind-family-no-go-v1.json`;
+- supplied-tuple theorem:
+  `artifacts/supplied-tuple-bridge-audit-v1.json`;
+- ray-to-form obstruction:
+  `docs/ray-to-form-obstruction-v1.md`;
+- terminal Fourier no-go:
+  `docs/class-descent-fourier-no-go-v1.md` and
+  `artifacts/class-descent-fourier-no-go-v1.json`.
+
+## Next authorized action
+
+None within this finished project. If the phase phenomenon is revisited,
+open a new branch titled “intrinsic metaplectic orientation,” state
+whether Roblot's theorem already forces \(\mu_4\)-quantization, and
+time-box that source-theorem audit before any computation.
 
 ## Tags
 

@@ -20,6 +20,79 @@ procedure specific to its own build scripts), put them in that
 project's own `AGENTS.md` and reference this file for the generic
 parts, rather than duplicating this file's content per-project.
 
+## How to work on a research project
+
+Every active research project must have a root-level `PLAN.md`. Treat
+that file as the project's authoritative memory and mind map, not as an
+optional planning note.
+
+### Before doing project work
+
+1. Read the project's `PLAN.md` completely. Do this even when the
+   conversation contains a recent summary: the file is the crash-safe
+   record and may contain gates or corrections absent from chat.
+2. Read the nearest project-specific `AGENTS.md`, if present.
+3. Check the current git status and recent history. Preserve unrelated
+   user changes and detect concurrent commits before relying on the
+   working tree.
+4. Reconcile the requested work with the active path and open gates in
+   `PLAN.md`. If the request opens a new research branch, add that branch
+   to the graph before running experiments.
+
+### Required contents of `PLAN.md`
+
+Keep these sections current:
+
+- original objective and claim boundary;
+- present status and explicit stop condition;
+- a high-level graph of research paths, including closed, failed,
+  deferred, and superseded branches;
+- preregistered gates and their outcomes;
+- headline theorems, breakthroughs, corrections, and no-go results;
+- a cycle ledger with one row per cycle, recording the actual finding
+  and its evidence—not only the intended task;
+- current open questions and the next authorized action;
+- recovery instructions and links to the controlling artifacts.
+
+Never silently delete a failed or superseded path. Mark it with its
+status and preserve the evidence so later work does not repeat it.
+
+### During a cycle or block
+
+- Freeze thresholds, formula families, samples, and stop conditions
+  before seeing the corresponding result.
+- Update `PLAN.md` when a gate changes state, a branch closes, or a new
+  finding changes the research graph.
+- Give every material computational predicate an explicit provenance
+  and epistemic tag appropriate to the project.
+- Treat a failed gate as information. Do not route around it by changing
+  the question after seeing the data unless the change is separately
+  preregistered as a new branch.
+- Keep recovery artifacts, hashes, and replay commands current enough
+  that another agent can continue after a crash without reconstructing
+  the research history from chat.
+
+### Cycle and block reports to the user
+
+Lead with outcomes. Whenever a cycle or block banks a major theorem,
+breakthrough, correction, containment event, or structural no-go,
+surface it explicitly in the next user-facing report even if the user
+asked only for general progress. A headline result must never disappear
+inside an artifact list or be omitted because later work has already
+started.
+
+The report must distinguish:
+
+- what is proved or exactly verified;
+- what is enclosure-certified;
+- what remains numerical or conjectural;
+- which gate opened or closed;
+- what the finding changes about the recommended next step.
+
+Before ending a block, reconcile `PLAN.md`, run the relevant replay and
+test suite, update manifests, and commit a crash-safe checkpoint when
+the project uses versioned checkpoints.
+
 ## Publishing a paper / reproducibility archive to Zenodo
 
 This procedure was developed against `projects/sic-stark/` but nothing
