@@ -79,6 +79,16 @@ feasibility result, not a reason to manufacture a formula.
 | 043 | Reject the frozen feature family before fitting | BANKED_NEGATIVE | same |
 | 044 | Fix dominant gauge; prove field-only no-go | BANKED_NEGATIVE | `artifacts/field-only-dedekind-family-no-go-v1.json` |
 | 045 | Audit cocycle availability; declare theory pivot | BANKED | `docs/cycle-045-checkpoint.md` |
+| 046 | Freeze ray-class cocycle bridge target and conventions | IN_PROGRESS | `docs/cycles-046-055-preregistration.md` |
+| 047 | Extract dimension-4 bridge | PENDING | |
+| 048 | Extract dimensions 7/8 and compare | PENDING | |
+| 049 | Formulate ray-to-form existence proposition | PENDING | |
+| 050 | Implement universal supplied-tuple arithmetic | PENDING | |
+| 051 | Replay frozen SIC anchors | PENDING | |
+| 052 | Attempt RQ-000129 from ray data alone | PENDING | |
+| 053 | Audit gauge and character covariance | PENDING | |
+| 054 | Test any authorized feature on five controls | PENDING | |
+| 055 | Bank general/restricted/no-bridge verdict | PENDING | |
 
 ## Current finding
 
