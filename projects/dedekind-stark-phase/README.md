@@ -12,17 +12,18 @@ Start after a crash with:
 1. `PLAN.md`;
 2. `data/preregistration-v1.json`;
 3. `artifacts/control-phase-audit-v1.json`;
-4. `docs/cycle-025-checkpoint.md`;
+4. `docs/cycle-045-checkpoint.md`;
 5. `python3 -m unittest discover -s tests -p 'test_*.py'`.
 
 The certified control packets remain owned by
 `../effective-stark-sweep`; this project records hashes and extracts
 only the fields needed for the phase experiment.
 
-The cycle-20 result was a disciplined feasibility halt, not a fitted
-formula. Cycles 21--25 then passed the missing independence gate:
-all five original quartic fields satisfy Roblot's hypotheses, and an
-exactly constructed RQ-000129 weak solution gives a phase defect of
-zero modulo \(\pi/2\). This is one calibration point, so fitting
-remains unauthorized until the remaining four constructors and the
-feature-map freeze are complete.
+The cycle-45 result is a completed feasibility result, not a fitted
+formula. Five independently constructed weak solutions all exhibit a
+unique fourth-root phase relation. The raw phase label is gauge
+dependent; after a canonical gauge repair, the simplest field-only
+Dedekind family fails exactly. The missing datum is a generic
+ray-character-to-cocycle bridge. Fitting and the 50-row holdout remain
+unauthorized until that theorem-level bridge is built and a new feature
+family is pre-registered.

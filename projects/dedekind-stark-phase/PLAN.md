@@ -1,6 +1,6 @@
 # Dedekind-sum phase formula — master plan
 
-Last reconciled: 2026-07-30 UTC
+Last reconciled: 2026-07-31 UTC
 
 ## Objective
 
@@ -59,6 +59,26 @@ feasibility result, not a reason to manufacture a formula.
 | 023 | Seal the first independent constructor | PRESERVED_FAILURE | v1 fixed-lattice proxy |
 | 024 | Replace proxy by genuine embedded \(K^+\)-unit lattice | BANKED | `artifacts/roblot-rq000129-constructor-sealed-v2.json` |
 | 025 | Open the first independent phase defect | BANKED | `artifacts/rq000129-phase-gate-v1.json` |
+| 026 | Freeze remaining constructors and feature protocol | BANKED | `docs/cycles-026-045-preregistration.md` |
+| 027 | Reconstruct the \(\mathbf Q(\sqrt{35})\) unit data | BANKED | sealed constructor artifact |
+| 028 | Seal RQ-001280 constructor | BANKED | `artifacts/remaining-roblot-constructors-sealed-v1.json` |
+| 029 | Compute RQ-001569 relative class/Fitting data | BANKED | same |
+| 030 | Seal RQ-001569 constructor | BANKED | same |
+| 031 | Compute RQ-007519 relative class/Fitting data | BANKED | same |
+| 032 | Seal RQ-007519 constructor | BANKED | same |
+| 033 | Compute RQ-001894 relative class and norm index | BANKED | same |
+| 034 | Seal RQ-001894 constructor | BANKED | same |
+| 035 | Demonstrate deterministic constructor replay | BANKED | same |
+| 036 | Open the remaining certified phase balls | BANKED | `artifacts/all-five-phase-gates-v1.json` |
+| 037 | Resolve character orientations | BANKED | same |
+| 038 | Bank five-for-five phase quantization | BANKED | same |
+| 039 | Prove weak-solution gauge ambiguity | BANKED | `docs/gauge-ambiguity-lemma-v1.md` |
+| 040 | Replay gauge action on all controls | BANKED | same |
+| 041 | Compute fundamental-unit \(SL_2(\mathbf Z)\) matrices | BANKED | `artifacts/frozen-feature-family-audit-v1.json` |
+| 042 | Compute exact Rademacher/Dedekind features | BANKED | same |
+| 043 | Reject the frozen feature family before fitting | BANKED_NEGATIVE | same |
+| 044 | Fix dominant gauge; prove field-only no-go | BANKED_NEGATIVE | `artifacts/field-only-dedekind-family-no-go-v1.json` |
+| 045 | Audit cocycle availability; declare theory pivot | BANKED | `docs/cycle-045-checkpoint.md` |
 
 ## Current finding
 
@@ -69,13 +89,19 @@ by Fourier inversion of the same \(L'\)-values and then identified in
 unit lattices. They certify the packet, but using them to fit a
 Dedekind formula for the defect would be circular.
 
-That gate has now passed for RQ-000129. All five controls satisfy
-Roblot's hypotheses, and one independently constructed coefficient
-has a zero defect modulo \(\pi/2\) after the inverse-character
-convention is aligned. One point validates the target but cannot
-identify a formula. The next gate is to construct the remaining four
-coefficients, freeze a low-complexity feature map before opening their
-defects, and audit the resulting feature-matrix rank.
+The independence gate has now passed for all five controls, and every
+control exhibits a unique fourth-root phase relation after its
+character orientation is aligned. The raw quarter-turn index is not
+invariant under the allowed weak-solution gauge. A canonical
+dominant-embedding gauge repairs that defect, but the simplest
+field-only Dedekind--Rademacher family then fails exactly on a
+two-control collision.
+
+The missing variable is ray/modulus-specific cocycle data. The current
+repository computes such data only for special SIC tuples; it does not
+contain a generic extractor from an oriented ray character. Therefore
+the empirical fitting track is stopped. The next authorized project is
+a theorem-level ray-class cocycle bridge, not a larger fit.
 
 ## Tags
 

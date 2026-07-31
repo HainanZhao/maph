@@ -1,0 +1,61 @@
+{
+  "schema": "dedekind-stark-frozen-feature-family-audit-v1",
+  "recorded_at_utc": "2026-07-31T01:40:00Z",
+  "status": "REJECTED_BEFORE_FIT",
+  "claim_tag": "VERIFIED_EXACT_FEATURE_AUDIT",
+  "frozen_family": "beta0 + beta1*Phi(A_K) + beta2*12*s(a,abs(c)) modulo 4",
+  "cases": [
+    {
+      "D": 6,
+      "case_id": "RQ-000129",
+      "A": [[5, -12], [-2, 5]],
+      "rademacher_phi": -5,
+      "dedekind_sum": "0",
+      "twelve_dedekind_sum": "0",
+      "quarter_turn_label": 3
+    },
+    {
+      "D": 35,
+      "case_id": "RQ-001280",
+      "A": [[6, -35], [-1, 6]],
+      "rademacher_phi": -12,
+      "dedekind_sum": "0",
+      "twelve_dedekind_sum": "0",
+      "quarter_turn_label": 0
+    },
+    {
+      "D": 42,
+      "case_id": "RQ-001569",
+      "A": [[13, -84], [-2, 13]],
+      "rademacher_phi": -13,
+      "dedekind_sum": "0",
+      "twelve_dedekind_sum": "0",
+      "quarter_turn_label": 3
+    },
+    {
+      "D": 51,
+      "case_id": "RQ-001894",
+      "A": [[50, 357], [7, 50]],
+      "rademacher_phi": 10,
+      "dedekind_sum": "5/14",
+      "twelve_dedekind_sum": "30/7",
+      "quarter_turn_label": 3
+    },
+    {
+      "D": 186,
+      "case_id": "RQ-007519",
+      "A": [[7501, -102300], [-550, 7501]],
+      "rademacher_phi": -29,
+      "dedekind_sum": "-79/550",
+      "twelve_dedekind_sum": "-474/275",
+      "quarter_turn_label": 0
+    }
+  ],
+  "rejection_reasons": [
+    "The frozen third feature 12*s(a,abs(c)) is not integral in two of five rows, so reduction modulo 4 is undefined.",
+    "The quarter-turn response is gauge-dependent by the proved trivial-unit action."
+  ],
+  "fit_executed": false,
+  "coefficient_triples_tested": 0,
+  "posthoc_repair_forbidden": true
+}
