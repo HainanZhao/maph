@@ -1,0 +1,21 @@
+{
+  "schema": "effective-stark-census-paper-preregistration-amendment-v15",
+  "status": "FROZEN_BEFORE_B5086_REUSABLE_SOURCE_TRANSPORT_BATCH",
+  "source_case_id": "RQ-001107",
+  "closure_id": "B5-086",
+  "selection": "all seven noncanonical B5-086 members, increasing finite norm then RQ id",
+  "certificate_reuse_rule": "Validate the frozen source data, Arb transcript, and source-program hashes; this is integrity validation, not a fresh Arb route.",
+  "target_acceptance": [
+    "integral source-coprime quotient",
+    "exact cyclic bnrmap isomorphism with recorded identity/generator/sign labels",
+    "Euler-deletion formula with rank-one zero",
+    "positive product/quotient orientation"
+  ],
+  "failure_rule": "Any failed gate remains explicit and unpromoted; no direct Arb rerun or resource-cap change occurs in this batch.",
+  "source_hashes": {
+    "data/q33-p11-order10-case-v1.json": "ed22af50af446b718ffdb55a9767115c083c4966cd14448165aa8ddc0b8b2501",
+    "artifacts/rq001107-w3-arb-certificate-v1.transcript": "edc58d180578674acff86a52fd6e7e52cf0440a2bd4e0fa5e5cf4ae498d15b87",
+    "scripts/certify_rq001107_packet.py": "d14e83e3c0a7d890b5213ac9b9f11046cc72b35b5ca195702b762b1c8fa0b3f0",
+    "artifacts/engine-b-transport-ledger-v3.json": "ee668ca5fb5c62d52d8f26ef6eeda5ad6dc5275d114801812c036139b5b894d5"
+  }
+}

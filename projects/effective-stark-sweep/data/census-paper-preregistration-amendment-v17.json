@@ -1,0 +1,20 @@
+{
+  "schema": "effective-stark-census-paper-preregistration-amendment-v17",
+  "status": "FROZEN_BEFORE_B5025_LABEL_AWARE_CORRECTION_BATCH",
+  "source_case_id": "RQ-000190",
+  "closure_id": "B5-025",
+  "selection": ["RQ-000221", "RQ-000228"],
+  "eligibility_basis": "Each target passed the original exact integral, source-coprime, ray-group, identity, and sign gates.  Its only prior failure was canonical-generator preservation; the exact map is Mat(5), which is covered by the subsequently proved label-aware Euler-deletion proposition.",
+  "certificate_reuse_rule": "Validate the frozen source data, Arb transcript, and source-program hashes; this is integrity validation, not a fresh Arb route.",
+  "target_acceptance": ["integral source-coprime quotient", "exact cyclic bnrmap with identity and sign labels preserved and generator coefficient 5", "label-aware Euler-deletion formula", "positive product/quotient orientation"],
+  "failure_rule": "The source-prime-overlap rows RQ-000216 and RQ-000246 remain excluded.  Any new failed gate remains unpromoted; no direct Arb rerun or resource-cap change occurs.",
+  "source_hashes": {
+    "data/q7-p7-case-v1.json": "f5f68b12163f4a884e860a92ddd2dd0757c138bb9a6fb49ec3ccc780fb3030b7",
+    "artifacts/q7-p7-w3-arb-certificate-v1.txt": "a727ecf67311ab6d1e63f25dca79dc2246e559545cbb14cde3ac967692df18c9",
+    "scripts/certify_q7_p7_packet.py": "81f14ecc11ef8e76de105be39896c4535838a8bde3e5e98e6358fb5be69359e9",
+    "artifacts/engine-b-transport-ledger-v3.json": "ee668ca5fb5c62d52d8f26ef6eeda5ad6dc5275d114801812c036139b5b894d5",
+    "artifacts/b5025-transport-geometry-v1.json": "fbe385260d72ce32b7354bdc559555c1046f19c390bb9902a577353e5e4f6ac1",
+    "docs/cycle-118-b5022-label-aware-transport-proof.md": "8ecfafcb01ac03fa0e104333292d74fdc35fe88c6413ec321fe2ee7781dddfd3",
+    "docs/cycle-123-b5025-label-aware-correction.md": "b45e99b8bf5e348a831f8c4793606d46f3f7aacc27b823a3cddd7a4bad8eea33"
+  }
+}

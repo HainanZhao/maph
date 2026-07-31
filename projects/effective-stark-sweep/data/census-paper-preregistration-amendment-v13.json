@@ -1,0 +1,25 @@
+{
+  "schema": "effective-stark-census-paper-preregistration-amendment-v13",
+  "status": "FROZEN_BEFORE_B5025_REUSABLE_SOURCE_TRANSPORT_BATCH",
+  "source_case_id": "RQ-000190",
+  "closure_id": "B5-025",
+  "selection": "all eight noncanonical B5-025 members, in increasing finite norm then RQ id",
+  "certificate_reuse_rule": {
+    "allowed": "Use the sealed source certificate only after verifying the frozen data record, exact source transcript hash, and source-program hash.",
+    "not_allowed": "Treat hash validation as a fresh independent Arb replay or use it to promote a target whose fresh exact conductor/ray-map gates fail."
+  },
+  "target_acceptance": [
+    "target/source ideal quotient is integral, coprime to the source modulus, and exactly factored",
+    "canonical bnrmap is an isomorphism preserving identity, generator, and sign labels",
+    "the Euler-deletion product is converted into an Artin-labelled packet formula by the Cycle-108 argument",
+    "the formula is a positive quotient/product at the frozen split embedding"
+  ],
+  "failure_rule": "Any failed gate remains visible and unpromoted; no direct Arb rerun, cap extension, or alternative method is used in this batch.",
+  "source_hashes": {
+    "data/q7-p7-case-v1.json": "f5f68b12163f4a884e860a92ddd2dd0757c138bb9a6fb49ec3ccc780fb3030b7",
+    "artifacts/q7-p7-w3-arb-certificate-v1.txt": "a727ecf67311ab6d1e63f25dca79dc2246e559545cbb14cde3ac967692df18c9",
+    "scripts/certify_q7_p7_packet.py": "81f14ecc11ef8e76de105be39896c4535838a8bde3e5e98e6358fb5be69359e9",
+    "artifacts/engine-b-transport-ledger-v1.json": "bfe309b15ce9071ce9f609cc459558cf24383e7d55ade3d0a77bcc38099116fb",
+    "docs/cycle-108-rq000039-engine-b-transport-proof.md": "060a384d58b34d251532aca788ea4ce0bc2e760d3f3e597727d0eeffcf345ab8"
+  }
+}

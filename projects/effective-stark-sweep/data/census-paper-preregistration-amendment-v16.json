@@ -1,0 +1,20 @@
+{
+  "schema": "effective-stark-census-paper-preregistration-amendment-v16",
+  "status": "FROZEN_BEFORE_FINAL_DIRECT_SOURCE_COPRIME_SCREEN",
+  "source_cases": [
+    {"case_id": "RQ-002057", "closure_id": "B5-021", "field_polynomial": "y^2-57", "data": "data/q57-norm27-case-v1.json", "transcript": "artifacts/rq57-norm27-w3-arb-certificate-v1.transcript", "program": "scripts/certify_rq57_norm27_packet.py", "token": "RQ57_NORM27_PACKET_IDENTITY_VERIFIED=1"},
+    {"case_id": "RQ-002955", "closure_id": "B5-033", "field_polynomial": "y^2-77", "data": "data/rq002955-case-v1.json", "transcript": "artifacts/rq002955-w3-arb-certificate-v1.transcript", "program": "scripts/certify_rq002955_packet.py", "token": "RQ002955_PACKET_IDENTITY_VERIFIED=1"}
+  ],
+  "selection": "all five noncanonical members in the two final direct-source closures, increasing closure then finite norm then RQ id",
+  "target_acceptance": ["integral source-coprime quotient", "exact cyclic bnrmap isomorphism with recorded identity/generator/sign labels", "Euler-deletion formula with rank-one zero", "positive product/quotient orientation"],
+  "failure_rule": "Any failed gate remains explicit and unpromoted; no direct Arb rerun or resource-cap change occurs in this final screen.",
+  "source_hashes": {
+    "data/q57-norm27-case-v1.json": "1baf8cb293bd6a92e3fdd8d880e655177718df99bfad42c9729f58ba7a7b2c16",
+    "artifacts/rq57-norm27-w3-arb-certificate-v1.transcript": "76fbc9452a76464379e8aa816ed5f0caff31368caa1867abbff4a2f7d7551be1",
+    "scripts/certify_rq57_norm27_packet.py": "f4e195877d6025b0cba34b6ba64b921e4a4a1d7920e3356169c481bc2701cbce",
+    "data/rq002955-case-v1.json": "fca80622d36320e2080c48c7349357b4817e576212d53c00512e03f2e2d710e6",
+    "artifacts/rq002955-w3-arb-certificate-v1.transcript": "9cf5ee7709018163209dc94d2e89aa4887ddaf1d5f963d5fb7c5fb6597d4cff3",
+    "scripts/certify_rq002955_packet.py": "304a0afeec0738baa41a47289572b5b029f5aaeb5f46180cfa605842fbda682c",
+    "artifacts/engine-b-transport-ledger-v3.json": "ee668ca5fb5c62d52d8f26ef6eeda5ad6dc5275d114801812c036139b5b894d5"
+  }
+}

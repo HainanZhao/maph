@@ -1,0 +1,27 @@
+{
+  "cap_seconds": 10800,
+  "case_id": "RQ-005298",
+  "claim_tag": "OBSERVED_COMPUTE_STATUS",
+  "correction": {
+    "error": "GP emits zero exit status after an intentional interrupt",
+    "evidence": "stderr records user interrupt after reaching the 4 GB cap",
+    "prior_artifact": "artifacts/rq005298-extended-resolvent-v1.json"
+  },
+  "mathematical_verdict": null,
+  "method": "unchanged PARI/GP 2.15.4 exact geometry screen",
+  "packet_index": 4,
+  "returncode": 0,
+  "schema": "effective-stark-rq005298-extended-resolvent-v2",
+  "source_hashes": {
+    "artifacts/rq005298-extended-resolvent-v1.json": "4e88ac215f1252cf13c38f7650205ab2ad2a17d27e9386ad5f031c474282a90c",
+    "docs/cycle-093-quartic-completion-preregistration.md": "7d0c5a5a1a194a94b8dcc907aa96a0d49ac7796e900f5158e3e7f023a72e6984",
+    "scripts/correct_rq005298_partial_v2.py": "de859fbe11effaf6663f83ba35d4e86772bcf2d8a7de477b44e4b688e731f295",
+    "scripts/run_rq005298_extended.py": "a8e5870e4b2c113198883a8557c0643aac29ece7879d74d29c00db85072efdad",
+    "scripts/screen_engine_c_geometry.gp": "fc60dd07e75ec84394f2b942412e8e53f4953b9786d4c94a0c500f6723ef4130"
+  },
+  "started_at_utc": "2026-07-31T11:16:13.053623+00:00",
+  "status": "PARTIAL_RESOURCE_CAP_RUN",
+  "stderr": "\u001b[0;31m  ***   Warning: new maximum stack size = 4000002048 (3814.699 Mbytes).\u001b[0m\n\u001b[0;31m  *** polredbest: Warning: increasing stack size to 16000000.\u001b[0m\n\u001b[0;31m  *** polredbest: Warning: increasing stack size to 32000000.\u001b[0m\n\u001b[0;31m  *** polredbest: Warning: increasing stack size to 64000000.\u001b[0m\n\u001b[0;31m  *** polredbest: Warning: increasing stack size to 128000000.\u001b[0m\n\u001b[0;31m  *** polredbest: Warning: increasing stack size to 256000000.\u001b[0m\n\u001b[0;31m  *** polredbest: Warning: increasing stack size to 512000000.\u001b[0m\n\u001b[0;31m  *** polredbest: Warning: increasing stack size to 1024000000.\u001b[0m\n\u001b[0;31m  *** polredbest: Warning: increasing stack size to 2048000000.\u001b[0m\n\u001b[0;31m  *** polredbest: Warning: increasing stack size to 4000002048.\u001b[0m\n\u001b[0;31m\u001b[0;31m  ***   at top-level:\u001b[0;35m run_screen()\n\u001b[0;31m\u001b[0;31m  ***                 ^------------\n\u001b[0;31m  ***   in function run_screen: ...\u001b[0;35m(order_value==2,my(fixed=\n\u001b[0;31m  ***   \u001b[0;35mpolredbest(galoisfixe\n\u001b[0;31m\u001b[0;31m  ***   ^---------------------\n  *** polredbest: user interrupt after 57min, 56,510 ms cpu time, 58min, 5,471 ms real time\u001b[0m\n",
+  "stdout": "CASE_ID=RQ-005298\nD=130\nFINITE_IDEAL=[24, 8; 0, 4]\nFINITE_NORM=96\nONE_CYC=[4, 4, 2]\nDISTINCT_QUARTIC_KERNELS=6\nPACKET_4_SOURCE_CHARACTER=[3, 1, 0]\nPACKET_4_SOURCE_KERNEL_HNF=[4, 1, 0; 0, 1, 0; 0, 0, 1]\nPACKET_4_PRIMITIVE_CONDUCTOR=[[24, 8; 0, 4], [1, 0]]\nPACKET_4_PRIMITIVE_RAY_CYC=[4, 4, 2]\nPACKET_4_PRIMITIVE_CHARACTER=[3, 1, 0]\nPACKET_4_PRIMITIVE_KERNEL_HNF=[4, 1, 0; 0, 1, 0; 0, 0, 1]\nPACKET_4_RELATIVE_POLYNOMIAL=x^4 + (-16*y - 104)*x^2 + (32*y + 424)\nPACKET_4_ABSOLUTE_POLYNOMIAL=x^8 + 20*x^6 + 62*x^4 - 120*x^2 + 36\nPACKET_4_ABSOLUTE_SIGNATURE=[4, 2]\nPACKET_4_POLGALOIS=[16, 1, 11, \"1/2[2^3]E(4)=Q_8:2\"]\nPACKET_4_NORMAL_CLOSURE_DEGREE=16\n",
+  "wall_seconds": 3485.7197409130167
+}
