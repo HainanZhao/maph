@@ -1,0 +1,29 @@
+{
+  "schema": "dedekind-stark-phase-quartic-census-readiness-audit-v1",
+  "recorded_at_utc": "2026-07-31T00:00:00Z",
+  "verdict": "BLOCKED_BEFORE_TARGET_OPENING",
+  "phase_targets_opened": false,
+  "population_gate": {
+    "status": "FAIL",
+    "higher_order_row_count": 2704,
+    "roblot_eligible_population_status": "NOT_YET_CONSTRUCTED",
+    "engine_c_population_is_not_a_substitute": true,
+    "source": "../effective-stark-sweep/artifacts/census-paper-layer0-reconciliation-v1.json",
+    "source_sha256": "900cad3523b3277182d0c55b031a032e3de3a2d32dbe9d462faa16e994b8dbe3"
+  },
+  "rigorous_evaluator_gate": {
+    "status": "FAIL",
+    "lprime_side": "RIGOROUS_COMPLEX_BALLS_AVAILABLE_FOR_CONTROLS",
+    "weak_unit_side": "NUMERICAL_FROM_EXACT_UNIT",
+    "missing_component": "Arb enclosure of algebraic-unit logarithmic Fourier coefficient"
+  },
+  "scientific_scope": {
+    "positive_overlap": "CERTIFIED_NUMERICAL_CONSISTENCY_ONLY",
+    "separation_from_all_mu4_rotations": "CANDIDATE_STARK_COUNTEREXAMPLE_AND_HALT"
+  },
+  "source_hashes": {
+    "census_preregistration": "a9d9a4941e218d6b86aac2c1fa5ce34af1eb4e588b69e8a18123fc90f1d8c1af",
+    "census_master_plan": "408b9d766735d4a535409dd23cde4f09705a958608c5325dd49796800be2a62b",
+    "weak_constructor_script": "ff9fc159624f3fd5f547706adc071d23785845e5479aaaed565be0a9663b2f6b"
+  }
+}

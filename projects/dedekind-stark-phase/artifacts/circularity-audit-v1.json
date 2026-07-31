@@ -1,0 +1,21 @@
+{
+  "schema": "dedekind-stark-phase-circularity-audit-v1",
+  "recorded_at_utc": "2026-07-31T00:00:00Z",
+  "claim_tag": "CONTAINED_ORIENTATION_CIRCULARITY",
+  "gates": {
+    "weak_unit_sealed_before_lprime": "PASS",
+    "dominant_gauge_data_independent": "PASS",
+    "character_orientation_data_independent": "FAIL",
+    "artin_transport_replay_present": "FAIL"
+  },
+  "affected_record": "artifacts/all-five-phase-gates-v1.json",
+  "affected_claim": "independent fully oriented five-case phase replay",
+  "retained_claim": "for every control, exactly one of the two conjugate character orientations has a numerical quarter-turn match against a certified Lprime ball",
+  "code_evidence": {
+    "comparison_script": "scripts/compare_all_phase_gates.py",
+    "comparison_script_sha256": "b47c1036fa742692642758aabc26be770f118aa99ee6b351bfef0fa36d63a266",
+    "gauge_script": "scripts/canonicalize_phase_gauge.py",
+    "gauge_script_sha256": "4aa7f7f234056831330e9db3f98df1bf92fb09fc839341c46cd69008864d1d51"
+  },
+  "repair_gate": "seal exact real-quartic-to-analytic-character transport before reading Lprime"
+}

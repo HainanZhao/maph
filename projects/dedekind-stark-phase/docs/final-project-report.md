@@ -80,3 +80,24 @@ That is a new project in the metaplectic transformation law, not an
 extension of the present Dedekind-sum regression. It should compete
 against the program's other priorities rather than inherit momentum
 automatically.
+
+## 2026-07-31 clarification addendum
+
+A later provenance audit found that the five-control comparison chose
+between \(\chi\) and \(\chi^{-1}\) after opening the analytic target.
+The independent weak-unit construction and dominant gauge remain
+valid, but the fully oriented replay wording is withdrawn.
+
+The replacement mathematical statement is stronger and cleaner. For a
+certified cyclic-quartic Stark unit \(\epsilon\), Roblot's uniqueness
+gives \(\eta=h\epsilon\) for a trivial group-ring unit \(h\), hence
+\[
+L'(0,\chi)/c_\chi(\eta)=\chi(h)^{-1}\in\mu_4.
+\]
+Under (A1)--(A3), the same quantization in an uncertified case is
+equivalent to the quartic rank-one Stark conjecture. The proposed
+census is therefore a counterexample screen, not a route to proving
+positive rows by finite-precision overlap. It is currently blocked
+before target opening because neither the genuine Roblot-eligible
+census population nor an Arb enclosure evaluator for the weak-unit
+Fourier coefficient has been banked.

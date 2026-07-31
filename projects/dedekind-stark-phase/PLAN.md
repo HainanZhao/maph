@@ -4,7 +4,10 @@ Last reconciled: 2026-07-31 UTC
 
 ## Status and recovery
 
-**Status:** `FINISHED_WITH_VERIFIED_NO_GO_FOR_FROZEN_MECHANISM`
+**Status:** original mechanism
+`FINISHED_WITH_VERIFIED_NO_GO_FOR_FROZEN_MECHANISM`; Roblot phase
+clarification theorem `PROVED`, census screen
+`BLOCKED_BEFORE_TARGET_OPENING`.
 
 This file is the authoritative project memory. Read it completely before
 reopening any branch.
@@ -17,9 +20,10 @@ Crash recovery:
 4. run `python3 -m unittest discover -s tests -p 'test_*.py'`;
 5. replay the controlling script linked from the gate being inspected.
 
-There is no currently authorized experimental continuation. A
-metaplectic/spin orientation would be a new project branch and requires
-a new preregistration and stop condition.
+The only authorized continuation is
+`docs/cycles-063-070-preregistration.md`: a circularity audit, a
+Roblot/Stark clarification lemma pair, and—only if its genuine-input
+gates pass—a counterexample-oriented quartic census screen.
 
 ## Original objective
 
@@ -80,9 +84,12 @@ banked and in any project-level summary:
 
 1. **Five-control phase quantization (`NUMERICAL`).** Five independent
    Roblot weak solutions match certified \(L'\)-balls after a unique
-   quarter turn. The weak-unit coefficient is a high-precision
-   evaluation of exact unit-lattice data, so this is not tagged as an
-   exact theorem.
+   quarter turn for exactly one of the two conjugate character
+   orientations. Cycle 064 found that the archived script selected that
+   orientation from the opened target; the fully oriented
+   “independent replay” is therefore withdrawn pending exact Artin
+   transport. The retained existential two-orientation statement is
+   numerical.
 2. **Gauge-ambiguity lemma (`VERIFIED`).** Conjugating a cyclic-quartic
    weak solution rotates its character coefficient by \(\mu_4\); the
    raw quarter-turn label is not invariant.
@@ -105,6 +112,11 @@ banked and in any project-level summary:
    multiplier is sign-class even, while every character in the
    differenced Stark support is sign-class odd; all four relevant
    Fourier resolvents vanish exactly.
+9. **Roblot phase clarification (`PROVED`).** In a certified cyclic
+   quartic Stark case the weak/Stark ratio is
+   \(\chi(h)^{-1}\in\mu_4\) for a trivial unit \(h\). In an uncertified
+   (A1)--(A3) case, this quantization is equivalent to the quartic
+   rank-one Stark conjecture itself.
 
 The eighth item is the project's terminal theorem for the frozen
 mechanism. It does not rule out a metaplectic square-root refinement.
@@ -208,6 +220,13 @@ because they constrain later work.
 | 060 | All four Fourier coefficients on the \(R\)-odd Stark support vanished exactly | BANKED_NEGATIVE | same |
 | 061 | Odd square-root repair identified as a new metaplectic theorem, not an in-scope correction | OUTSIDE_FROZEN_MECHANISM | `docs/class-descent-fourier-no-go-v1.md` |
 | 062 | Preregistered stop condition fired; project closed with terminal no-go | BANKED | `docs/final-project-report.md` |
+| 063 | Roblot phase clarification branch preregistered; no old fitting or squared-multiplier path reopened | BANKED | `docs/cycles-063-070-preregistration.md` |
+| 064 | Circularity audit: weak unit and dominant gauge pass, but the archived script selected direct/inverse orientation from the opened target | CONTAINED_CORRECTION | `docs/circularity-audit-v1.md`, `artifacts/circularity-audit-v1.json` |
+| 065 | Certified-case lemma: the phase ratio equals \(\chi(h)^{-1}\in\mu_4\) by Roblot uniqueness | PROVED | `docs/roblot-phase-clarification-lemma-v1.md` |
+| 066 | Uncertified-case lemma: phase quantization is equivalent to the cyclic-quartic rank-one Stark conjecture under (A1)--(A3) | PROVED | same |
+| 067 | Census population audit: the 2,704-row H-stratum exists, but the genuine Roblot-eligibility column has not been constructed | BLOCKED_INPUT | `docs/quartic-census-readiness-audit-v1.md` |
+| 068 | Rigorous-evaluator audit: \(L'\) balls exist, but weak-unit Fourier coefficients are point evaluations, not Arb balls | BLOCKED_INPUT | same, `artifacts/quartic-census-readiness-audit-v1.json` |
+| 069 | Phase census halted before target opening under the preregistered population/evaluator gates | GATED_STOP | same |
 
 ## Final synthesis
 
@@ -215,6 +234,14 @@ The project first rejected its original controls as circular, then
 constructed five independent Roblot weak solutions. All five exhibit a
 unique fourth-root phase relation after character alignment
 (`NUMERICAL` against certified \(L'\)-balls).
+
+The clarification branch later found that the archived direct/inverse
+orientation was selected from the opened target. The fully oriented
+independent-replay wording is withdrawn; the weaker two-orientation
+observation remains numerical. More importantly, the exact lemma pair
+shows that the phenomenon is automatic in already certified Stark
+cases and equivalent to the quartic Stark conjecture in uncertified
+ones.
 
 The raw label is gauge-dependent. A dominant-embedding gauge repairs
 the response, but the field-only Dedekind family fails exactly. The
@@ -252,10 +279,10 @@ Dedekind/squared-multiplier explanation is closed.
 
 ## Next authorized action
 
-None within this finished project. If the phase phenomenon is revisited,
-open a new branch titled “intrinsic metaplectic orientation,” state
-whether Roblot's theorem already forces \(\mu_4\)-quantization, and
-time-box that source-theorem audit before any computation.
+Return to the census screen only after the census project has banked a
+genuine Roblot-eligible quartic population, this project has an
+anchor-validated Arb weak-coefficient evaluator, and exact Artin
+transport fixes the analytic orientation before \(L'\) is read.
 
 ## Tags
 
