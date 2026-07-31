@@ -1,0 +1,65 @@
+{
+  "claim_boundary": {
+    "packet_polynomial": "exhaustive 1,560-row Q stratum only",
+    "safe_exponent": "51 certified W2 closures only; not all 88 v5 closures",
+    "tower_norm_compatibility": "no completed v5 transport; no recurrence inferred"
+  },
+  "claim_tag": "OBSERVED_EXACT_FINITE_CENSUS",
+  "packet_polynomial_families": {
+    "common_denominator": {
+      "1": 1491,
+      "2": 69
+    },
+    "degree_over_K": {
+      "1": 346,
+      "2": 930,
+      "4": 242,
+      "8": 42
+    },
+    "q_rows": 1560
+  },
+  "safe_exponent_growth": {
+    "by_normal_closure_degree": {
+      "16": {
+        "closure_count": 1,
+        "maximum": 13810176,
+        "median": "13810176",
+        "minimum": 13810176
+      },
+      "24": {
+        "closure_count": 18,
+        "maximum": 18144,
+        "median": "4608",
+        "minimum": 2016
+      },
+      "32": {
+        "closure_count": 31,
+        "maximum": 577080960,
+        "median": "34560",
+        "minimum": 3840
+      },
+      "40": {
+        "closure_count": 1,
+        "maximum": 63360,
+        "median": "63360",
+        "minimum": 63360
+      }
+    },
+    "closure_scope": 51,
+    "overall_maximum": 577080960,
+    "overall_minimum": 2016
+  },
+  "schema": "effective-stark-w4-completion-v1",
+  "source_hashes": {
+    "artifacts/census-q-packet-corpus-audit-v1.json": "cb903f368f7aa01a12b6af60b964d316d70cdbf040d358ca92a00f867e326824",
+    "artifacts/engine-b-closure-w2-coverage-v1.json": "4f80bd76c2931708116c779e808994615a0a706c4df0078b6a4a32c5b5e9171f",
+    "artifacts/engine-b-transport-manifest-v5.json": "d1b1402025be2585a7a96684a6938e526ef934e078e6dc852a9a89ffe09873b4",
+    "docs/cycle-100-w4-completion-scope.md": "e0540d15dedf99faaf4547575144982ccc7a0c7664427071fb78c0d3c57cd601",
+    "scripts/build_w4_completion.py": "ce9332a98180f9673742504b1717c17f06e7c2bef048ddec3765f042d61b1929"
+  },
+  "tower_norm_compatibility": {
+    "completed_member_transports": 0,
+    "inference": "none",
+    "status": "NO_DATA_GATE"
+  }
+}

@@ -1,8 +1,10 @@
 \documentclass[11pt]{article}
 \usepackage[a4paper,margin=1in]{geometry}
 \usepackage{amsmath,amssymb,amsthm,booktabs,array}
-\usepackage[section]{placeins}
 \usepackage[hidelinks]{hyperref}
+\makeatletter
+\g@addto@macro\UrlBreaks{\do\-}
+\makeatother
 \pdftrailerid{}
 
 \newtheorem{theorem}{Theorem}
@@ -52,8 +54,9 @@ We do not assert results beyond the frozen range.  Eligibility is not a
 packet identity.  In particular, an Engine-B normal-closure group or a
 banked representative does not promote another member: exact conductor,
 ray-class, orientation, and Artin-labelled packet transport are separate
-obligations.  The current v5 transport manifest records 232 eligible rows
-and zero completed member transports.
+obligations.  The v5 scope has 232 eligible rows.  Its successor ledger
+records twelve completed noncanonical member transports; the other 220
+member transports remain open.
 
 We use \emph{PROVED} for exact replay under checked hypotheses and
 \emph{OBSERVED} for descriptive statistics of this finite population.
@@ -189,6 +192,17 @@ exact Roblot applicability decision.  The five incomplete entries of
 Table~\ref{tab:higher} are old quartic construction failures, not
 missing sextic decisions.
 
+The index column uses the genuine derived-subgroup order in the
+common stable modulus, rather than the legacy W1 screening proxy.
+This distinction resolves a potentially misleading control case:
+RQ-005298 has legacy displayed index two, but its certified normal
+closure has relative degree $128$, maximal absolutely abelian subfield
+of relative degree $32$, and therefore derived-subgroup order
+$128/32=4$.  It fails the actual Engine-B index-two predicate; its
+non-eligibility is not an unstated failure of a closure, conductor, or
+transfer condition.  The separately incomplete quartic Engine-C
+resolvent for this row has no mathematical verdict.
+
 The headline wall is RQ-000692 over $\Q(\sqrt{21})$, with finite norm
 36 and support profile $(2,6)$.  Its Shintani index is six.  The
 one-place, local-$S$, and prime-to-three-class-number conditions of
@@ -230,9 +244,33 @@ order & minimal unresolved & minimal all-mechanisms-fail\\\midrule
 The v5 Engine-B population consists of 232 rows in 88 groups by exact
 normal-closure polynomial.  The historical scope had 195 eligible rows
 and 159 pending member identities.  All survive in v5; 37 new eligible
-rows are added.  A scope manifest records each member, its canonical
-closure representative, and its frozen finite ideal, but assigns every
-member the status \texttt{UNSTARTED\_NO\_CASE\_LEVEL\_PACKET\_CLAIM}.
+rows are added.  Its immutable scope manifest records each member, its
+canonical closure representative, and its frozen finite ideal.  A
+successor ledger promotes twelve noncanonical members.  RQ-000039 is
+transported from RQ-000021 by
+\[
+ X_{98}(A)=X_{49}(A)X_{49}(A\mathfrak q^{-1})^{-1},
+\]
+where $\mathfrak q$ is the unique norm-two prime of $\Q(\sqrt2)$.
+The exact ray-class map is the identity on $C_6$, including the sign
+class.  The four targets RQ-000195, RQ-000200, RQ-000205, and
+RQ-000213 are transported from the sealed RQ-000190 packet
+by exact one- or two-prime Euler-deletion products.  This is a
+distribution relation, not equality of packets.  The source-coprime
+RQ-000221 and RQ-000228 use the exact label conversion $a\mapsto5a$
+in the same source $C_6$; their quotient prime powers still each
+delete one local Euler factor.  Five further B5-022
+members are transported from the sealed RQ-000419 packet; three use
+the exact generator relabelling matrix $[5]$ in the source $C_6$.
+The B5-086 direct-source closure shares source prime $11$ in every
+target enlargement, while B5-021 and B5-033 admit no integral
+source-to-target modulus quotient.  These are exact exclusions from
+the coprime Euler-deletion route, not negative packet claims.  The
+label-aware extension is tracked separately from the earlier
+identity-label B5-025 batch.
+The remaining 220
+members retain status
+\texttt{UNSTARTED\_NO\_CASE\_LEVEL\_PACKET\_CLAIM}.
 
 Six historical rows have a different printed normal-closure polynomial
 in the v5 reconstruction.  Both records are retained.  Literal
@@ -261,25 +299,40 @@ quadratic packet corpus.
 The prior-art comparison is deliberately narrow.  Cohen--Roblot study
 Hilbert class fields, whereas the present promoted examples and census
 rows are one-place ray-field objects with nontrivial finite modulus.
-The currently overlapping base discriminants are recorded, but no
-object-level equality is inferred from a common base field.  Likewise,
-Dummit--Sands--Tangedal provide theorem-class antecedents for
-quadratic-character phenomena; this paper makes no priority assertion
-from that overlap.  The detailed comparison table remains an appendix
-artifact rather than an input to any census count.
+An exact four-control subfield audit is mixed: the selected ray normal
+closures for bases $35$, $42$, and $186$ contain the associated Hilbert
+biquadratic field, while the selected base-$51$ closure does not.
+This is a PROVED statement about the four frozen normal closures only;
+it identifies neither a Stark unit nor an Artin-labelled packet and
+does not generalize containment.  Likewise, Dummit--Sands--Tangedal
+provide theorem-class antecedents for quadratic-character phenomena;
+this paper makes no priority assertion from that overlap.  The detailed
+comparison table remains an appendix artifact rather than an input to
+any census count.
 
 \appendix
 \section{Record map and replay boundary}
 
+\begin{sloppypar}
 The trichotomy is in
 \url{artifacts/census-paper-layer0-reconciliation-v1.json}; the
 quadratic audit is in
 \url{artifacts/census-q-packet-corpus-audit-v1.json}; the H matrix is
-in \url{artifacts/census-h-taxonomy-v1.json}; and Engine-B transport
-scope is in \url{artifacts/engine-b-transport-manifest-v5.json}.
-The last artifact's zero completed transports is intentional
-claim-boundary data.  The project checksum manifest and full test suite
+in \url{artifacts/census-h-taxonomy-v2.json}; the preserved v1 record
+used the legacy displayed-index proxy and is corrected by the v2
+provenance fields.  Engine-B transport
+scope is in \url{artifacts/engine-b-transport-manifest-v5.json}; its
+successor ledger is in \url{artifacts/engine-b-transport-ledger-v4.json}.
+The latter records exactly twelve completed member transports.
+The exact direct-source coprime no-go screens are recorded in
+\url{artifacts/b5086-transport-geometry-v1.json} and
+\url{artifacts/final-direct-source-coprime-screen-v1.json}.
+The exact four-control Hilbert/ray object audit is
+in \url{artifacts/b5079-hilbert-ray-containment-v1.json} and
+\url{artifacts/hilbert-ray-containment-tranche-v1.json}; it is field
+containment only.  The project checksum manifest and full test suite
 replay source hashes and schema gates.
+\end{sloppypar}
 
 \begin{thebibliography}{20}
 \raggedright

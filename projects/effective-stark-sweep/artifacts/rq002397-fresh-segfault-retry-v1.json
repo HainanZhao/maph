@@ -1,0 +1,20 @@
+{
+  "cap_seconds": 1200,
+  "case_id": "RQ-002397",
+  "claim_tag": "OBSERVED_COMPUTE_STATUS",
+  "mathematical_verdict": null,
+  "method": "unchanged PARI/GP 2.15.4 exact geometry screen in a fresh process",
+  "packet_index": 2,
+  "returncode": 0,
+  "schema": "effective-stark-rq002397-fresh-segfault-retry-v1",
+  "source_hashes": {
+    "docs/cycle-094-fresh-process-segfault-retry.md": "e78b2eed32b1b69baa1359b60bdeb40ab319c5ffd6c3bc19cea6f61e4b009b7a",
+    "scripts/run_rq002397_fresh_retry.py": "a888e9d1abc5f47ae0575ce436a1becd619ad589537641eb6c3facbdca0f0019",
+    "scripts/screen_engine_c_geometry.gp": "fc60dd07e75ec84394f2b942412e8e53f4953b9786d4c94a0c500f6723ef4130"
+  },
+  "started_at_utc": "2026-07-31T11:41:43.133272+00:00",
+  "status": "COMPLETED",
+  "stderr": "\u001b[0;31m  ***   Warning: new maximum stack size = 4000002048 (3814.699 Mbytes).\u001b[0m\n\u001b[0;31m\u001b[0;31m  ***   at top-level:\u001b[0;35m run_screen()\n\u001b[0;31m\u001b[0;31m  ***                 ^------------\n\u001b[0;31m  ***   in function run_screen: ...\u001b[0;35mNF=\",kernel);my(relative=\n\u001b[0;31m  ***   \u001b[0;35mbnrclassfield(primiti\n\u001b[0;31m\u001b[0;31m  ***   ^---------------------\n  *** bnrclassfield: bug in PARI/GP (Segmentation Fault), please report.\u001b[0m\n",
+  "stdout": "CASE_ID=RQ-002397\nD=65\nFINITE_IDEAL=[8, 0; 0, 8]\nFINITE_NORM=64\nONE_CYC=[4, 2, 2]\nDISTINCT_QUARTIC_KERNELS=2\nPACKET_2_SOURCE_CHARACTER=[1, 1, 1]\nPACKET_2_SOURCE_KERNEL_HNF=[4, 2, 2; 0, 1, 0; 0, 0, 1]\nPACKET_2_PRIMITIVE_CONDUCTOR=[[8, 4; 0, 4], [1, 0]]\nPACKET_2_PRIMITIVE_RAY_CYC=[4, 2]\nPACKET_2_PRIMITIVE_CHARACTER=[1, 1]\nPACKET_2_PRIMITIVE_KERNEL_HNF=[4, 2; 0, 1]\n",
+  "wall_seconds": 0.016702621011063457
+}
