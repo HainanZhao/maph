@@ -1,14 +1,16 @@
-# Roblot email — long draft, not sent
+# Roblot email — long version, publication-ready
 
-Status: `DRAFTED_NOT_SENT`.  
-Publication placeholder: `[RESULTS_V1.4_DOI]`.  
-Attachment: `effective-stark-results-companion-v16.tar.gz`.  
+Status: `READY_AWAITING_AUTHORIZED_MAIL_CHANNEL`.
+Publication DOI: `https://doi.org/10.5281/zenodo.21712478`.
+Attachment: `effective-stark-results-companion-v17.tar.gz`.
 Attachment SHA-256:
-`9e4169375bf862f3d934d7dba0e2dff1c40de54bcecafb59beb3695027415b73`.
+`e2a945edaddcec32e3aad10e67f8b960af0bc304b07ba5503ab7be62384b9506`.
 
-The recipient address should be rechecked on the official Lyon 1 page
-immediately before sending. This draft deliberately omits the withdrawn
-raw quarter-turn labels.
+The recipient address was rechecked on 2026-07-31 against both the
+official Lyon 1 homepage
+`https://math.univ-lyon1.fr/~roblot/` and the Institut Camille Jordan
+staff directory. Both list `roblot@math.univ-lyon1.fr`. This draft
+deliberately omits the withdrawn raw quarter-turn labels.
 
 ---
 
@@ -79,10 +81,10 @@ May I ask three specific questions?
    the weak solution before the analytic target is evaluated?
 
 The correction release and replay archive are available at
-`[RESULTS_V1.4_DOI]`. I would be happy to send a shorter case table or
+`https://doi.org/10.5281/zenodo.21712478`. I would be happy to send a shorter case table or
 the exact PARI transcripts if useful. The attached deterministic
 archive has SHA-256
-`9e4169375bf862f3d934d7dba0e2dff1c40de54bcecafb59beb3695027415b73`.
+`e2a945edaddcec32e3aad10e67f8b960af0bc304b07ba5503ab7be62384b9506`.
 
 For transparency, I used AI systems (OpenAI GPT-5.6 and Anthropic
 Claude) for code review, proof-audit assistance, and editing. I

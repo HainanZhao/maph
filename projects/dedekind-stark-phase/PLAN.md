@@ -8,7 +8,8 @@ Last reconciled: 2026-07-31 UTC
 `FINISHED_WITH_VERIFIED_NO_GO_FOR_FROZEN_MECHANISM`; Roblot phase
 clarification theorem `PROVED`, census screen
 `BLOCKED_BEFORE_TARGET_OPENING`; withdrawn-replay correction
-`LOCALLY_STAGED_FOR_RESULTS_V1.4_NOT_YET_PUBLIC`.
+`PUBLISHED_IN_RESULTS_V1.4`; long Roblot message
+`READY_AWAITING_AUTHORIZED_MAIL_CHANNEL`.
 
 This file is the authoritative project memory. Read it completely before
 reopening any branch.
@@ -230,6 +231,8 @@ because they constrain later work.
 | 069 | Phase census halted before target opening under the preregistered population/evaluator gates | GATED_STOP | same |
 | 070 | Long Roblot outreach draft prepared with three falsifiable questions, AI disclosure, replay hash, the exact \(\mu_4\) corollary, and the withdrawn-orientation boundary; no message sent | DRAFTED_NOT_SENT | `docs/roblot-email-long-draft-v1.md` |
 
+| 071 | Results v1.4 was published; the official Lyon 1 and ICJ pages confirmed the recipient address; the long message and companion v17 pass readiness checks, but no authorized mail channel exists in the environment | READY_AWAITING_AUTHORIZED_MAIL_CHANNEL | `docs/cycle-071-roblot-outreach-readiness.md`, `artifacts/roblot-email-send-readiness-v1.json` |
+
 ## Final synthesis
 
 The project first rejected its original controls as circular, then
@@ -281,18 +284,18 @@ Dedekind/squared-multiplier explanation is closed.
 
 ## Next authorized action
 
-For the correction/publication lane, Zenodo draft 21712478 reserves
-DOI `10.5281/zenodo.21712478` without publication. The DOI-bearing
-sources and deterministic companion v17 are frozen, and the exact
-seven-file draft inventory is uploaded and checksum-verified. Publish
-only after immediate explicit human approval. Evidence is in
-`../effective-stark-sweep/docs/cycle-081-results-v1.4-doi-draft.md`.
-The controlling uploaded-draft candidate is
-`../effective-stark-sweep/artifacts/results-paper-v1.4-publication-candidate-v4.json`.
-The long Roblot draft is `docs/roblot-email-long-draft-v1.md`; replace
-its DOI placeholder and recheck the recipient address only after the
-correction release is public, then send through an authorized mail
-channel.
+For the correction/publication lane, results version 1.4 is public at
+DOI `10.5281/zenodo.21712478`. All seven public downloads match the
+frozen local byte counts, MD5 checksums, and SHA-256 checksums. Evidence
+is in
+`../effective-stark-sweep/artifacts/zenodo-results-publication-v5.json`.
+The next authorized action is the long Roblot email in
+`docs/roblot-email-long-draft-v1.md`: use the public DOI and companion
+v17 and send through an authorized mail channel. The recipient was
+verified on the official Lyon 1 homepage and ICJ directory. No mail
+connector or local SMTP client is present in the current environment,
+so no delivery is claimed. Readiness evidence is in
+`artifacts/roblot-email-send-readiness-v1.json`.
 
 For research, return to the census screen only after the census project
 has banked a genuine Roblot-eligible quartic population, this project
