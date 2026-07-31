@@ -83,6 +83,8 @@ case-level PROVED corpus entry
 | Genuine routing census v5 | `BANKED` | 8,200/8,200 genuine screens; proxy recovery complete | `artifacts/full-census-yield-declaration-v5.json` |
 | Census-paper range | `BANKED` | Existing maximal-order universe frozen: squarefree radicands 2--200, ideal norm at most 100, 8,200 conjugacy representatives | `data/census-paper-preregistration-v1.json` |
 | Census-paper Layer 0 | `BANKED` | Clean PARI enumeration reproduced the backbone; support-first split is T/Q/H = 3,936/1,560/2,704 | `artifacts/census-paper-layer0-reconciliation-v1.json` |
+| Census packet synthesis | `ACTIVE` | Compositum-free trace descent is proved for the ambient formal sign orbit and the dimension-eight \(q=2\) positive lift passes exactly; RQ-000089 failed as a proper-image anchor because one Euler term vanishes, so the pre-unit replacement RQ-000245 is frozen from the banked Euler audit | `artifacts/census-packet-polynomial-synthesis-v1.json`, `docs/census-paper-preregistration-amendment-v3.md` |
+| Census coefficient-height cap | `ACTIVE` | The obsolete absolute-compositum degree-32 cap is superseded; no full Q-polynomial run is authorized until the \(\sum_\chi L'(0,\chi)\) predictor calibrates a frozen numeric height cap | `data/census-paper-preregistration-amendment-v1.json` |
 | Worked imprimitive Engine-A row | `BANKED` | RQ-000013 has exact \(E_\chi=2\), \(I_\chi=2\), and packet \(X_{[0]}=u^2,\ X_{[1]}=u^{-2}\) | `artifacts/rq000013-engine-a-imprimitive-certificate-v1.json` |
 | Census manuscript | `ACTIVE` | Execution plan and older Markdown research draft exist; no journal LaTeX/PDF yet | `docs/census-paper-execution-plan-v1.md`, `paper/effective-stark-sweep-draft.md` |
 | Engine-B occurrence transport | `READY` | Gates case-level transported `PROVED` claims, not structural T/Q/H statistics; scope must be regenerated from v5 | `docs/cycle-070-genuine-census-v5.md` |
@@ -155,6 +157,17 @@ content. This list is a scope ledger, not a substitute for the paper.
 9. `BANKED` — absolutely-abelian no-go lemma.
 10. `BANKED` — Shintani-index parity lemma, checked against 446 genuine
     odd-index cases.
+11. `BANKED_WITH_OPEN_ORBIT_GATE` — compositum-free Engine-A
+    packet-power synthesis:
+    norm-one traces remain in \(K\), the exact resultant recurrence
+    doubles the ambient formal sign orbit without constructing the
+    compositum, and a separate denominator-lift gate is mandatory when
+    the Fourier exponents have common denominator \(q>1\).  The
+    dimension-eight \(q=2\) lift is exact, reciprocal, and irreducible
+    over \(K\).  For \(C_2^3\), four supported characters have only
+    eight Artin sign patterns.  RQ-000089 was preserved as a failed
+    anchor choice because one factor vanishes; RQ-000245 must close
+    the exact Artin-factor gate before corpus promotion.
 
 ### Quarantined or narrowed claims
 
@@ -315,8 +328,19 @@ State: `ACTIVE`
 - [x] Freeze the existing maximal-order range and the RQ registry:
       squarefree radicands \(2\le D\le200\), integral-ideal norm at
       most 100, conjugate one-place pairs identified.
-- [x] Freeze the degree-32 exact-resultant cap and deterministic
-      50-row independent analytic audit.
+- [x] Preserve the historical degree-32 exact-resultant cap and freeze
+      the deterministic 50-row independent analytic audit.
+- [x] Supersede the compositum-degree cap by a versioned trace-descent
+      amendment without rewriting the original preregistration.
+- [x] Prove the trace recurrence for denominator-cleared packet powers
+      and pass the dimension-eight \(q=2\) positive-factor lift.
+- [x] Preserve RQ-000089's failed proper-image anchor selection: one
+      of its four supported terms has zero Euler product.
+- [x] Close the proper-Artin-image factor gate on the corrected
+      four-effective-character anchor RQ-000245.
+- [x] Calibrate the \(\sum_\chi L'(0,\chi)\) coefficient-height
+      predictor and freeze a numeric height cap before the full
+      Q-stratum polynomial run.
 - [x] Rerun the PARI ideal enumeration and reproduce the 121 fields,
       13,939 raw ideals, and 8,200 representatives exactly.
 - [x] Reconcile the structural T/Q/H split. Correct the 37
@@ -325,14 +349,19 @@ State: `ACTIVE`
 - [x] Reconcile the Q-stratum counts: 1,560 rows, 2,232 supported
       quadratic characters, 912 quartic fields, 672 zero Euler
       products, 603 affected rows, and 346 all-vanishing rows.
-- [ ] Build the row-level exact Q corpus under the uniform theorem.
+- [x] Build the row-level exact Q corpus under the uniform theorem:
+      all 1,560 rows pass, with a verified hash-chain root
+      `7c04242b1d4c11293af96f83f4915dbed25f6125c60d82965e533df5c9d81855`.
 - [x] Preselect RQ-000013 as the first one-character, one-removed-prime,
       nonzero imprimitive branch, hence the worked \(E_\chi=2\) row.
 - [x] Complete and print RQ-000013's exact unit/index calculation;
       share its certificate with the census draft and a versioned,
       locally staged results-paper supplement addendum. The published
       v1.3 files remain immutable pending authorization for a new version.
-- [ ] Run the preregistered independent 50-row Arb audit.
+- [x] Run the preregistered independent 50-row Arb audit: the 192-bit
+      initial pass preserved a radius failure at RQ-006617; the
+      unchanged route passes all 50 rows and 101 Artin sign rows at
+      384 bits.
 - [ ] Build the support-order/Engine-B/Engine-C/Roblot/resolution
       matrix for all 2,704 H rows.
 - [ ] Extract the minimal unresolved row at every support order and
@@ -552,6 +581,10 @@ control or counterexample for T1/T2.
 | 082 | After explicit human approval, results v1.4 was published at DOI 10.5281/zenodo.21712478; all seven public downloads match the frozen byte counts, MD5 checksums, and SHA-256 checksums | `PUBLISHED_AND_PUBLICLY_VERIFIED` | `docs/cycle-082-results-v1.4-publication.md`, `artifacts/zenodo-results-publication-v5.json` |
 | 083 | RQ-000013 was merged into the deterministic 19-page v1.5 main paper; the standalone addendum is preserved only inside nested v17, the five-file draft is checksum-verified, and the lexically first main PDF is Zenodo's authenticated draft preview | `DOI_DRAFT_UPLOADED_VERIFIED_UNPUBLISHED`, `HUMAN` | `docs/cycle-083-results-v1.5-main-paper-integration.md`, `artifacts/zenodo-results-v1.5-draft-upload-verification-v1.json` |
 | 084 | Under the standing Zenodo authorization, v1.5 was published at DOI 10.5281/zenodo.21713178; all five public downloads match bytes, MD5, and SHA-256, the concept latest endpoint resolves to v1.5, and the main paper is the public preview | `PUBLISHED_AND_PUBLICLY_VERIFIED` | `docs/cycle-084-results-v1.5-publication.md`, `artifacts/zenodo-results-publication-v6.json` |
+| 085 | The degree-32 compositum cap was superseded by a preregistered trace-descent route.  Exact resultants now synthesize the sign orbit of denominator-cleared packet powers over \(K\); a heightened check corrected the direct-packet claim when \(q>1\).  The dimension-eight \(q=2\) positive reciprocal factor and its irreducible degree-eight absolute polynomial pass exactly; archived numerics are quarantined validation only | `BANKED`, `PROVED` recurrence and lift; `OBSERVED` numerical cross-check | `docs/census-paper-preregistration-amendment-v1.md`, `artifacts/census-packet-polynomial-synthesis-v1.json` |
+| 086 | Heightened checks exposed two further necessary gates: formal sign patterns can exceed the Artin image, and the first four-support anchor RQ-000089 loses one factor to a zero Euler product.  The corrected preregistered anchor RQ-000245 certifies the four-character relation, eight-element Artin image, exact denominator-two lift, unique degree-eight factor over \(K\), and degree-sixteen absolute polynomial without opening an analytic target | `BANKED`, `PROVED`; failed anchor preserved | `docs/census-paper-preregistration-amendment-v2.md`, `docs/census-paper-preregistration-amendment-v3.md`, `artifacts/rq000245-packet-synthesis-v1.json` |
+| 087 | The full 1,560-row height-only calibration observed a maximum 89-digit predictor and froze a 256-digit cap.  An initial unit-lattice square-root route timed out on RQ-001090 and RQ-001697 and was preserved; replacing only that implementation step by exact `nfeltissquare` reduced both rows from 300-second failures to about 0.1 seconds.  The clean hash-chained corpus then certified all 1,560 Q packet polynomials in 43.46 seconds, with degrees 1/2/4/8 occurring 346/930/242/42 times, denominators 1/2 occurring 1,491/69 times, and maximum exact coefficient-coordinate height 62 digits | `BANKED`, `PROVED` finite Q corpus; `OBSERVED` height calibration | `docs/cycle-087-census-q-packet-corpus.md`, `artifacts/census-packet-height-calibration-v1.json`, `artifacts/census-q-packet-corpus-audit-v1.json` |
+| 088 | The deterministic 50-row analytic sample was frozen before values.  A genuinely separate regulator/class-number route, completed before opening corpus traces, passes 43 nonzero character comparisons and 101 Artin sign rows.  The 192-bit initial run's RQ-006617 radius failure is preserved; the unchanged route passes at 384 bits | `BANKED`, `CERTIFIED_NUMERICAL`; initial precision failure preserved | `docs/cycle-088-census-q-independent-arb-audit.md`, `artifacts/census-q-arb-audit-v1.json` |
 
 ## Standing integrity rules
 
@@ -563,7 +596,8 @@ control or counterexample for T1/T2.
 6. Exact route disagreements halt the affected track.
 7. Eligibility is never reported as a proved packet.
 8. A certificate supports a written proof; it does not replace one.
-9. Publication actions require explicit human authorization.
+9. Zenodo publication uses the user's standing authorization after all
+   release gates pass; arXiv submission remains a human action.
 10. Any correction updates this plan, the relevant artifact, the
     manuscript, and the test suite in the same checkpoint.
 

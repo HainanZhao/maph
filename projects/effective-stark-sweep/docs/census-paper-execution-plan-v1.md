@@ -84,8 +84,16 @@ the exact-value-one degeneracy sub-stratum.
    3,936/1,560/2,704 counts and manifest hash.
 2. **Quadratic stratum.** Apply the uniform Engine-A theorem to every
    Q-row. Emit exact per-character exponents, certified quartic unit
-   data, orientation, and Artin labels. Compute exact resultants when
-   the absolute compositum degree is at most 32.
+   data, orientation, and Artin labels.  Synthesize denominator-cleared
+   packet-power orbits over \(K\) by the compositum-free trace
+   recurrence in the versioned amendment.  When the common exponent
+   denominator is \(q>1\), factor \(P(X^q)\) exactly and require the
+   separate positivity/Artin lift before calling a factor the packet
+   polynomial.  When the Artin sign image is smaller than the formal
+   sign cube—as for the four supported characters over \(C_2^3\)—an
+   exact Artin-coset factor gate is required even when \(q=1\).
+   Exact irreducibility and orbit-cardinality gates precede the word
+   “minimal.”
 3. **Parity audit.** Restate the proved parity lemma and report its
    independent replay on all 446 odd-index rows, all in T.
 4. **Higher-order taxonomy.** For every H-row, record support orders,
@@ -101,13 +109,22 @@ the exact-value-one degeneracy sub-stratum.
    `data/census-paper-preregistration-v1.json`.
 2. `BANKED`: clean enumeration and Layer-0 reconciliation in
    `artifacts/census-paper-layer0-reconciliation-v1.json`.
-3. `ACTIVE`: build the exact Q-row corpus and locate a fully worked
-   imprimitive \(E_\chi=2\) row.
-4. `BLOCKED` on 3: run the deterministic 50-row independent Arb audit.
-5. `READY`: construct H eligibility columns and the frontier table.
-6. `READY`: write finite-range distributions and quarantined
+3. `BANKED`: the worked imprimitive \(E_\chi=2\) row RQ-000013.
+4. `BANKED`: prove and replay trace-descent
+   synthesis plus the dimension-eight denominator-two lift.
+5. `BANKED`: close the proper-Artin-image factor gate on corrected
+   four-effective-character anchor RQ-000245.  RQ-000089 remains the
+   preserved failed anchor selection because one Euler term vanishes.
+6. `BANKED`: the full height-only calibration observed a maximum
+   89-digit predictor and mechanically froze the 256-digit cap.
+7. `BANKED`: all 1,560 exact Q-row packet polynomials pass the
+   hash-chain audit; the maximum exact coordinate height is 62 digits.
+8. `BANKED`: the deterministic 50-row independent Arb regulator audit
+   passes at 384 bits after preserving the 192-bit radius failure.
+9. `ACTIVE`: construct H eligibility columns and the frontier table.
+10. `READY`: write finite-range distributions and quarantined
    conjectures.
-7. `BLOCKED` on 3–6: freeze corpus, mint DOI, and compile the journal
+11. `BLOCKED` on 7–10: freeze corpus, mint DOI, and compile the journal
    manuscript.
 
 No manuscript count may be copied from v5 without passing the

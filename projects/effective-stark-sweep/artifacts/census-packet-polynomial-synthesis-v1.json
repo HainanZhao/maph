@@ -1,0 +1,75 @@
+{
+  "claim_boundary": {
+    "full_q_corpus_run": false,
+    "linear_bit_complexity_claimed": false,
+    "packet_factor": "requires exact denominator lift, positivity, reciprocity, irreducibility, and Artin conventions",
+    "raw_recurrence": "sign-orbit polynomial for denominator-cleared packet powers"
+  },
+  "claim_tags": {
+    "algebraic_recurrence": "PROVED",
+    "archived_decimal_and_brute_force_checks": "OBSERVED",
+    "dimension_eight_exact_lift": "PROVED"
+  },
+  "correction_to_proposed_method": {
+    "dimension_eight_common_denominator": 2,
+    "lift": "factor P_2(X^2) over K",
+    "raw_result_is_for": "X_A^2",
+    "selection": "unique factor with the exact positive-root coefficient sign pattern at the frozen split place"
+  },
+  "exact_gates": {
+    "absolute_packet_irreducible": true,
+    "base_bnfcertify": true,
+    "oriented_traces": [
+      "2*y",
+      "8*y+6"
+    ],
+    "packet_factor_degree_over_K": 4,
+    "packet_factor_irreducible_over_K": true,
+    "packet_factor_reciprocal": true,
+    "powered_orbit_degree": 4,
+    "powered_orbit_reciprocal": true,
+    "ramified_real_place": 1,
+    "selected_split_real_place": 2,
+    "source_infinity_vector": [
+      1,
+      0
+    ],
+    "square_lift_factor_count": 2
+  },
+  "independence_wall": {
+    "benchmark_claim_promoted_to_theorem": false,
+    "census_lprime_or_phase_target_artifact_opened": false,
+    "factor_selected_from_archived_decimal": false
+  },
+  "polynomials": {
+    "absolute_packet": "x^8 - 12*x^7 + 42*x^6 - 68*x^5 + 78*x^4 - 68*x^3 + 42*x^2 - 12*x + 1",
+    "base": "y^2-y-1",
+    "positive_packet_factor_over_K": "x^4 + Mod(-4*y - 4, y^2 - y - 1)*x^3 + Mod(10*y + 8, y^2 - y - 1)*x^2 + Mod(-4*y - 4, y^2 - y - 1)*x + 1",
+    "powered_orbit_over_K": "Mod(1, y^2 - y - 1)*x^4 + Mod(-28*y - 16, y^2 - y - 1)*x^3 + Mod(164*y + 102, y^2 - y - 1)*x^2 + Mod(-28*y - 16, y^2 - y - 1)*x + Mod(1, y^2 - y - 1)"
+  },
+  "quarantined_numerical_validation": {
+    "anchor_residual": "-4.87320663086837254945492085140486214827446462688887505061726009111884386533323384916760744751163 E-50",
+    "archived_anchor": "7.3889768541",
+    "brute_force_root_residuals": [
+      "3.439552567074349441 E-136",
+      "-2.0637315402446096646 E-135",
+      "1.6509852321956877316 E-134",
+      "-1.1006568214637918211 E-134"
+    ],
+    "used_for_selection": false
+  },
+  "runtime": {
+    "pari": "[2, 15, 4]",
+    "peak_child_memory_kib": 17664,
+    "python": "3.12.3",
+    "wall_seconds": 0.008865
+  },
+  "schema": "effective-stark-census-packet-synthesis-v1",
+  "source_hashes": {
+    "conventions_sha256": "805f53e896335824b762aad2125f3aa9c854fe8f207657e853720d2fdc3fadc6",
+    "gp_script_sha256": "0228eaf6f69359cd2705f7746d0d35fc9ef64d1351989fa0f9a3866a9b33e858",
+    "preregistration_amendment_sha256": "54dab5f8d381902bcb866515d3a32513ede83019c09c31987fba9ed0788bd229",
+    "stdout_sha256": "023337fb290aa31315b87e0fecdf5dbd6a36fd0cbe67ce5e568d0f8de8a8aeb9"
+  },
+  "status": "PASS_TRACE_DESCENT_AND_DENOMINATOR_TWO_ANCHOR"
+}
