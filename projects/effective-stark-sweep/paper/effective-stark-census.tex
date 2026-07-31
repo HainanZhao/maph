@@ -1,0 +1,308 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array}
+\usepackage[section]{placeins}
+\usepackage[hidelinks]{hyperref}
+\pdftrailerid{}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Cl}{\operatorname{Cl}}
+\newcommand{\Norm}{\operatorname{N}}
+
+\title{A Certified Census of One-Place Stark Invariants over Real Quadratic Fields\\
+\large Taxonomy, Exact Quadratic Stratum, and the Higher-Order Frontier}
+\author{Hainan Zhao\\\small Independent Researcher}
+\date{31 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We give a certified finite census of one-place differenced Stark packets
+over real quadratic fields for squarefree radicands $2\leq D\leq200$
+and finite moduli of norm at most $100$, with conjugate real places
+identified.  The $8{,}200$ representatives split exactly into $3{,}936$
+empty-support rows, $1{,}560$ quadratic-support rows, and $2{,}704$
+higher-order rows.  The quadratic stratum is solved exhaustively:
+every row has an exact packet polynomial over its real quadratic base.
+The higher-order stratum is classified by exact mechanism eligibility
+and an explicit frontier.  These are finite census statements only; we
+claim no asymptotic density and no new higher-order packet identity.
+\end{abstract}
+
+\section{Claim boundary and conventions}
+
+Let $K$ be real quadratic and $\mathfrak m=\mathfrak f\infty_2$ a
+one-place modulus.  With $R$ the real-place sign class, put
+\[
+ Z_{\mathfrak m}(s,A)=\zeta_{\mathfrak m}(s,A)-
+ \zeta_{\mathfrak m}(s,RA),\qquad
+ X_A=\exp Z'_{\mathfrak m}(0,A).
+\]
+The packet is the Artin-indexed tuple $(X_A)_{A\in\Cl_{\mathfrak m}(K)}$.
+The exact Fourier, Artin-action, place-ordering, and positive-orientation
+conventions are those of the companion results paper \cite{ZhaoResults};
+this paper does not introduce a second convention system.
+
+The proved assertions here are the finite trichotomy, the exhaustive
+quadratic packet corpus, and exact higher-order mechanism eligibility.
+We do not assert results beyond the frozen range.  Eligibility is not a
+packet identity.  In particular, an Engine-B normal-closure group or a
+banked representative does not promote another member: exact conductor,
+ray-class, orientation, and Artin-labelled packet transport are separate
+obligations.  The current v5 transport manifest records 232 eligible rows
+and zero completed member transports.
+
+We use \emph{PROVED} for exact replay under checked hypotheses and
+\emph{OBSERVED} for descriptive statistics of this finite population.
+``Unconditional'' means that an asserted identity follows from a proved
+theorem after exact hypothesis checks; it does not prove the general
+Stark conjecture.
+
+\section{Frozen universe and trichotomy}
+
+The universe consists of maximal-order fields $\Q(\sqrt D)$ for
+squarefree $2\leq D\leq200$, integral ideals $\mathfrak f$ with
+$\Norm\mathfrak f\leq100$, and the modulus
+$\mathfrak f\infty_2$.  Conjugation exchanges the two real places, so
+one representative is retained.  A clean PARI replay enumerates 121
+fields, 13,939 raw ideals, and 8,200 representatives.
+
+Let $T$ be empty differenced Fourier support, $Q$ be nonempty quadratic
+support, and $H$ be the remaining higher-order support.  The structural
+sign-class lemmas in \cite{ZhaoResults} show that empty support is
+exactly the trivial packet condition.
+
+\begin{theorem}[Frozen trichotomy]\label{thm:trichotomy}
+In the frozen universe,
+\[
+ |T|=3936,\qquad |Q|=1560,\qquad |H|=2704.
+\]
+Every row belongs to exactly one stratum.  Every packet in $T$ is one.
+\end{theorem}
+
+The earlier v5 routing declaration recorded 3,899 trivial rows.  The
+remaining 37 are empty-support rows that its obsolete routing order
+assigned an exponent-cap label before applying the empty-support theorem.
+The historical record is preserved; Theorem~\ref{thm:trichotomy} uses the
+support-first replay.
+
+\section{The exact quadratic stratum}
+
+For a supported quadratic character, the uniform theorem in
+\cite{ZhaoResults}, based on Tate's rank-one algebraicity theorem
+\cite[Thm.~IV.5.4]{Tate1984}, gives exact exponents from imprimitive Euler
+factors and a relative regulator index.  Conductors, Euler factors,
+relative-unit kernels, orientations, and indices are checked exactly.
+There are 2,232 supported character occurrences: 672 have zero Euler
+factor, and 346 rows have all factors zero and packet polynomial $X-1$.
+
+If $u_i$ is a norm-one relative unit, then
+\[t_i=u_i+u_i^{-1}=\operatorname{Tr}_{L_i/K}(u_i)\in K.\]
+The formal sign-orbit polynomial is therefore synthesized without its
+compositum by
+\begin{equation}\label{eq:trace-descent}
+P_0(x)=x-1,\qquad
+P_i(x)=\operatorname{Res}_z\bigl(P_{i-1}(z),x^2-t_i xz+z^2\bigr).
+\end{equation}
+Each root $z$ is replaced by $zu_i$ and $zu_i^{-1}$, so every intermediate
+polynomial remains over $K$.  The recurrence concerns
+denominator-cleared packet powers.  At denominator two, the positive
+packet factor is selected only after exact square-lift, reciprocity,
+irreducibility, positivity, and Artin-image checks.
+
+\begin{theorem}[Exhaustive quadratic stratum]\label{thm:quadratic}
+Every one of the 1,560 rows of $Q$ has a certified exact packet
+polynomial over its base field.  The stable RQ-ordered row certificates
+have terminal hash-chain root
+\begin{center}\small\texttt{7c04242b1d4c11293af96f83f4915dbed25f6125c60d82965e533df5c9d81855}.\end{center}
+\end{theorem}
+
+\begin{table}[ht]
+\centering
+\caption{Exact quadratic-stratum distributions.}\label{tab:quadratic}
+\begin{tabular}{lr}\toprule
+invariant & count\\\midrule
+packet degree $1,2,4,8$ over $K$ & $346,930,242,42$\\
+common denominator $1,2$ & $1491,69$\\
+all-Euler-zero packet $X-1$ & $346$\\
+maximum coordinate height & $62$ digits\\\bottomrule
+\end{tabular}
+\end{table}
+
+The preregistered height-only predictor had maximum 89 digits, below the
+frozen 256-digit cap.  The full exact run took 43.46 seconds in the
+pinned environment; this is an OBSERVED engineering statistic.  A
+separate frozen 50-row analytic audit passed 43 nonzero character
+comparisons and 101 Artin sign rows at 384 bits.  That is an independent
+certified numerical consistency check, not a proof input.
+
+\subsection{A worked imprimitive row}
+
+RQ-000013 over $\Q(\sqrt2)$ has finite ideal HNF
+$[14,6;0,2]$ of norm 28 and ray group $C_2$.  Its supported character
+has primitive conductor obtained by removing one prime of norm two.
+The exact imprimitive Euler factor and relative index are both two:
+\[ E_\chi=2,\qquad I_\chi=2. \]
+The oriented relative unit has minimal polynomial
+\[u^4-2u^3+u^2-2u+1\]
+and its selected real root lies in $(9/5,19/10)$.  Exact Artin labels
+then give
+\[ X_{[0]}=u^2,\qquad X_{[1]}=u^{-2}. \]
+This is a PROVED application of the uniform theorem, including the
+otherwise easy-to-miss nonzero imprimitive Euler branch.  A numerical
+point-value comparison is retained only as an OBSERVED cross-check.
+
+\section{Higher-order taxonomy and frontier}
+
+For every $H$ row we record Shintani index-two eligibility,
+cyclic-quartic CM eligibility, exact weak-hypothesis coverage of
+Roblot's Theorem~7.1 \cite{Roblot2013}, and any selected certificate in
+the companion results paper.  This is a taxonomy of mechanisms, not a
+claim that an eligible row has acquired a new packet identity.
+
+\begin{table}[ht]
+\centering
+\caption{Exact finite $H$ taxonomy.}\label{tab:higher}
+\begin{tabular}{lr}\toprule
+category & rows\\\midrule
+higher-order rows & 2704\\
+Shintani index-two eligible & 232\\
+cyclic-quartic CM eligible & 881\\
+exclusive frontier & 1591\\
+Roblot full weak coverage & 1079\\
+Roblot hypothesis failure & 405\\
+unsupported support order & 1215\\
+incomplete legacy quartic construction & 5\\
+all registered mechanisms fail & 1359\\\bottomrule
+\end{tabular}
+\end{table}
+
+For order-six support, 764 character/inverse-character kernels reduce
+to 407 primitive-field keys.  Exact local checks remove 25 keys and
+382 require field certificates.  The residual 73 possible
+three-divisible class-number fields are each closed by an exact
+unramified cyclic-cubic certificate.  Thus every sextic kernel has an
+exact Roblot applicability decision.  The five incomplete entries of
+Table~\ref{tab:higher} are old quartic construction failures, not
+missing sextic decisions.
+
+The headline wall is RQ-000692 over $\Q(\sqrt{21})$, with finite norm
+36 and support profile $(2,6)$.  Its Shintani index is six.  The
+one-place, local-$S$, and prime-to-three-class-number conditions of
+Roblot's theorem pass, but a prime above 3 is wildly ramified in the
+relevant sextic extension.  The theorem therefore does not apply.  This
+is an exact limitation of the registered methods, not a non-algebraicity
+theorem.
+
+\subsection{Minimal frontier targets}
+
+The frontier artifact selects the least RQ identifier at each support
+order, independently of the outcome of later mechanism checks.  A
+representative initial segment is given in Table~\ref{tab:frontier}.
+The complete table, including orders through 210, is machine-readable
+in the H-taxonomy artifact.  The distinction between ``unresolved'' and
+``all mechanisms fail'' is retained: an unresolved row can still be
+eligible for one of the registered mechanisms.
+
+\begin{table}[ht]
+\centering
+\caption{First frozen frontier targets by support order.}\label{tab:frontier}
+\begin{tabular}{rll}\toprule
+order & minimal unresolved & minimal all-mechanisms-fail\\\midrule
+4 & RQ-000030 & RQ-000277\\
+6 & RQ-000032 & RQ-000227\\
+8 & RQ-000018 & RQ-000018\\
+10 & RQ-000078 & RQ-000078\\
+12 & RQ-000294 & RQ-000294\\
+14 & RQ-000524 & RQ-000524\\
+16 & RQ-001056 & RQ-001056\\
+18 & RQ-000657 & RQ-000657\\
+20 & RQ-000785 & RQ-000785\\
+24 & RQ-000363 & RQ-000363\\\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Engine-B transport scope}
+
+The v5 Engine-B population consists of 232 rows in 88 groups by exact
+normal-closure polynomial.  The historical scope had 195 eligible rows
+and 159 pending member identities.  All survive in v5; 37 new eligible
+rows are added.  A scope manifest records each member, its canonical
+closure representative, and its frozen finite ideal, but assigns every
+member the status \texttt{UNSTARTED\_NO\_CASE\_LEVEL\_PACKET\_CLAIM}.
+
+Six historical rows have a different printed normal-closure polynomial
+in the v5 reconstruction.  Both records are retained.  Literal
+polynomial equality is not used to infer field identity or packet
+transport.  This is why the present paper reports mechanism eligibility
+separately from case-level higher-order identities.
+
+\section{Reproducibility and relation to earlier work}
+
+Every material assertion has a versioned JSON artifact, input hashes,
+and replay code under PARI/GP 2.15.4.  The primary finite evidence is
+the support-first reconciliation, the row-level quadratic corpus, and
+the H-taxonomy matrix.  The companion paper proves the uniform quadratic
+theorem and selected higher-order identities; this census does not
+reprove or enlarge those higher-order identities.
+
+Tate supplies the rank-one algebraicity input \cite{Tate1984};
+Arakawa \cite{Arakawa1985}, Dummit--Sands--Tangedal
+\cite{DST1997,DST2003}, and Cohen--Roblot \cite{CohenRoblot2000} give
+computational and index-theoretic antecedents.  Roblot's weak theorem is
+not claimed as new: Table~\ref{tab:higher} quantifies its exact coverage
+in this finite range.  The contribution here is a
+provenance-preserving finite classification and an exhaustive exact
+quadratic packet corpus.
+
+The prior-art comparison is deliberately narrow.  Cohen--Roblot study
+Hilbert class fields, whereas the present promoted examples and census
+rows are one-place ray-field objects with nontrivial finite modulus.
+The currently overlapping base discriminants are recorded, but no
+object-level equality is inferred from a common base field.  Likewise,
+Dummit--Sands--Tangedal provide theorem-class antecedents for
+quadratic-character phenomena; this paper makes no priority assertion
+from that overlap.  The detailed comparison table remains an appendix
+artifact rather than an input to any census count.
+
+\appendix
+\section{Record map and replay boundary}
+
+The trichotomy is in
+\url{artifacts/census-paper-layer0-reconciliation-v1.json}; the
+quadratic audit is in
+\url{artifacts/census-q-packet-corpus-audit-v1.json}; the H matrix is
+in \url{artifacts/census-h-taxonomy-v1.json}; and Engine-B transport
+scope is in \url{artifacts/engine-b-transport-manifest-v5.json}.
+The last artifact's zero completed transports is intentional
+claim-boundary data.  The project checksum manifest and full test suite
+replay source hashes and schema gates.
+
+\begin{thebibliography}{20}
+\raggedright
+\bibitem{ZhaoResults} H.~Zhao, \emph{Effective Archimedean Stark
+Theorems over Real Quadratic Fields: Quadratic Support, Shintani
+Transfer, and CM Descent}, version 1.5, 2026,
+\url{https://doi.org/10.5281/zenodo.21713178}.
+\bibitem{Tate1984} J.~Tate, \emph{Les conjectures de Stark sur les
+fonctions $L$ d'Artin en $s=0$}, Progress in Mathematics 47,
+Birkh\"auser, 1984.
+\bibitem{Arakawa1985} T.~Arakawa, \emph{On the Stark--Shintani
+conjecture and certain relative class numbers}, Adv. Stud. Pure Math.
+7 (1985), 1--6.
+\bibitem{DST1997} D.~S.~Dummit, J.~W.~Sands, and B.~A.~Tangedal,
+\emph{Computing Stark units for totally real cubic fields}, Math.
+Comp. 66 (1997), 1239--1267.
+\bibitem{DST2003} D.~S.~Dummit, J.~W.~Sands, and B.~A.~Tangedal,
+\emph{Stark's conjecture in multiquadratic extensions, revisited}, J.
+Th\'eorie des Nombres de Bordeaux 15 (2003), 83--97.
+\bibitem{CohenRoblot2000} H.~Cohen and X.-F.~Roblot, \emph{Computing
+the Hilbert class field of real quadratic fields}, Math. Comp. 69
+(2000), 1229--1244.
+\bibitem{Roblot2013} X.-F.~Roblot, \emph{Index formulae for Stark
+units and their solutions}, Pacific J. Math. 266 (2013), 391--422.
+\end{thebibliography}
+\end{document}
