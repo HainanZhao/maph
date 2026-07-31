@@ -1,0 +1,77 @@
+{
+  "schema": "effective-stark-results-paper-full-freeze-v11",
+  "recorded_at_utc": "2026-07-31T00:00:00Z",
+  "status": "LOCAL_V1_4_PRE_DOI_CORRECTION_FREEZE",
+  "supersedes": "artifacts/results-paper-full-freeze-v10.json",
+  "primary_manuscript": {
+    "tex": "paper/effective-stark-results.tex",
+    "tex_sha256": "5fd43c986c70459cfcd6a347511d780d03374527153701a4137cb6fcc85e1b93",
+    "pdf": "paper/effective-stark-results.pdf",
+    "pdf_sha256": "9ad56d9ab1e2be123f5ddae709c5d9efa6fefbdad77989d33a48bca90e145d8c",
+    "source_date_epoch": 1785420000,
+    "latex_passes": 3,
+    "independent_builds_byte_identical": true,
+    "latex_warnings": 0,
+    "page_count": 18
+  },
+  "supplement": {
+    "tex": "paper/effective-stark-results-supplement.tex",
+    "tex_sha256": "1d02df5032660c7e6e6351e6d4a8ecd2781e344f2f47dc57986acfc0e6085ba9",
+    "pdf": "paper/effective-stark-results-supplement.pdf",
+    "pdf_sha256": "ae363f2bc59f168194afb71e3dde7c6caf4e7550e061d64afe685f74448a685f",
+    "unchanged_from_v1_3": true
+  },
+  "rq000013_addendum": {
+    "tex": "paper/effective-stark-results-supplement-rq000013-addendum.tex",
+    "tex_sha256": "41681f92d106a9bb58b5299458d6075899d38151f6857cf8481d6137e7c02189",
+    "pdf": "paper/effective-stark-results-supplement-rq000013-addendum.pdf",
+    "pdf_sha256": "0e1e617982ca0405370e8065dbd103c360ad6dbb8983b7ba995ccabf007ed164"
+  },
+  "track_a2_audit": {
+    "script": "scripts/audit_results_paper_a2.py",
+    "script_sha256": "49e25614a78d6fb6131986398befe6f761dff678e61810306f654692d89f1d80",
+    "artifact": "artifacts/results-paper-a2-wording-bibliography-audit-v1.json",
+    "artifact_sha256": "f2791b560519c143e6203dba76083ea37022c458eaacf5bfbf554de3383f70f7",
+    "outcome": "PASS_EXACT_EDITORIAL_CORRECTION"
+  },
+  "engine_c_fourier_correction": {
+    "audit_script": "scripts/audit_engine_c_fourier_convention_v2.py",
+    "audit_script_sha256": "bfe5e5fb9ec5d567b6a160a0877d749207aa66de80ce7de30a802f2d6f83383f",
+    "artifact": "artifacts/engine-c-fourier-convention-correction-v2.json",
+    "artifact_sha256": "edff581634c0e2abe3c6a50539e61ac1baca38f0ab1c96a956b89b8c92efe888",
+    "outcome": "PASS_SIGMA_POSITIVE"
+  },
+  "referee_audit": {
+    "script": "scripts/audit_results_paper_full.py",
+    "script_sha256": "eafc1aec954a1cad833ebc64bfa403e427c4a00a552d565f5d5e8d86a96c7e9e",
+    "artifact": "artifacts/results-paper-referee-audit-v3.json",
+    "artifact_sha256": "90d1c4e75cdaa080e8939f57e6496b572ac20c94e5ecf2693fd243385281d3db",
+    "outcome": "PASS"
+  },
+  "shintani_source_map": {
+    "artifact": "artifacts/shintani-1978-source-map-v1.json",
+    "artifact_sha256": "b145c2a7ae22853963586bfb2ea276290d9e8e4c043a5cca44fac2176e0083c0"
+  },
+  "companion_archive": {
+    "archive": "dist/effective-stark-results-companion-v16.tar.gz",
+    "archive_sha256": "9e4169375bf862f3d934d7dba0e2dff1c40de54bcecafb59beb3695027415b73",
+    "archive_replay": "PASS",
+    "builder": "scripts/build_results_companion_v16.py",
+    "builder_sha256": "4588b04c65412449fe39ca664b31f65fa8275f7e8004a294c6d0945c87fa6178",
+    "verifier": "scripts/verify_results_companion_v16.py",
+    "verifier_sha256": "7c4b9954289234386aefe95fcece968f24d979c7fdea13c25725909ca49d9e91",
+    "local_freeze": "artifacts/results-paper-companion-local-freeze-v16.json",
+    "local_freeze_sha256": "c78993ce83685ce6ce5fcf72b110d0565cc9658812b1a3487f0392a6238ff9ba",
+    "status": "LOCAL_PRE_DOI"
+  },
+  "publication": {
+    "concept_doi": "10.5281/zenodo.21703305",
+    "current_public_version": "1.3",
+    "current_public_doi": "10.5281/zenodo.21708121",
+    "proposed_version": "1.4",
+    "reserved_doi": null,
+    "publication_action_taken": false,
+    "metadata": "artifacts/zenodo-results-record-metadata-v6.json",
+    "metadata_sha256": "aa4203ac9ba2abc5ea440ff06b15929fd64b1b7443a93761ffb9fe0b716b2e85"
+  }
+}

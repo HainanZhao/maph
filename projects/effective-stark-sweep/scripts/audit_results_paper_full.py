@@ -14,7 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 PAPER = ROOT / "paper/effective-stark-results.tex"
 SUPPLEMENT = ROOT / "paper/effective-stark-results-supplement.tex"
-OUT = ROOT / "artifacts/results-paper-full-referee-audit-v2.json"
+OUT = ROOT / "artifacts/results-paper-referee-audit-v3.json"
 getcontext().prec = 80
 
 
@@ -134,6 +134,7 @@ def main() -> None:
         "Supplementary Table~S3",
         r"\cite{Zhao45}",
         r"\cite{Zhao78}",
+        r"J.\ Number Theory \textbf{133} (2013), 1045--1061",
         "support order ten",
     )
     reject(
@@ -148,6 +149,7 @@ def main() -> None:
         r"Put \(E^+=E^{\langle j\rangle}\) inside the common normal closure",
         r"\tag{",
         r"e=|\mu(E)|=2,4,6,8",
+        "1022--1045",
         r"\ell_1-i\ell_\sigma",
         r"\sigma^{-r}u",
         r"\begin{center}\scriptsize",
@@ -374,15 +376,15 @@ def main() -> None:
         raise AssertionError("Engine-C scope correction is stale")
 
     convention_output = run(
-        ["python3", "scripts/audit_engine_c_fourier_convention.py"],
-        "ENGINE_C_FOURIER_CONVENTION_AUDIT=VERIFIED",
+        ["python3", "scripts/audit_engine_c_fourier_convention_v2.py"],
+        "ENGINE_C_FOURIER_CONVENTION_V2_AUDIT=VERIFIED",
     )
     convention = load(
-        "artifacts/engine-c-fourier-convention-correction-v1.json"
+        "artifacts/engine-c-fourier-convention-correction-v2.json"
     )
     if (
         convention["claim_tag"]
-        != "VERIFIED_EXACT_CONVENTION_CORRECTION"
+        != "VERIFIED_EXACT_CONVENTION_REAUDIT"
         or convention["verdict"] != "PASS"
         or convention["packet_log_coefficients_m0_m1"]
         != [[-2, 0], [0, -2], [2, 0], [0, 2]]
@@ -420,8 +422,8 @@ def main() -> None:
         raise AssertionError("cyclic-quartic Fourier sign audit failed")
 
     artifact = {
-        "schema": "effective-stark-results-paper-full-referee-audit-v2",
-        "claim_tag": "VERIFIED_MAJOR_REVISION_AUDIT",
+        "schema": "effective-stark-results-paper-full-referee-audit-v3",
+        "claim_tag": "VERIFIED_V1_4_PREPUBLICATION_AUDIT",
         "paper": "paper/effective-stark-results.tex",
         "paper_sha256": sha("paper/effective-stark-results.tex"),
         "supplement": "paper/effective-stark-results-supplement.tex",

@@ -1,0 +1,38 @@
+{
+  "schema": "effective-stark-results-paper-a2-wording-bibliography-audit-v1",
+  "recorded_at_utc": "2026-07-31T00:00:00Z",
+  "status": "PASS_EXACT_EDITORIAL_CORRECTION",
+  "claim_boundary": "No theorem, formula, case row, polynomial, exponent, height margin, or Artin label changed. Relative to the immutable published v1.3 source, the staged v1.4 main source changes exactly one bibliography line.",
+  "published_v1_3": {
+    "archive": "dist/effective-stark-results-companion-v13.tar.gz",
+    "archive_sha256": "1ecca96bd388ab2cafa27c091380121db4749e41ae794c2326439adbbe87b608",
+    "tex_sha256": "29d0deb1da369cbf755bfb38946597978c1408bc62f1a3b2a0e0053e9f0810d3",
+    "tangedal_young_pages": "1022--1045 (superseded bibliographic error)"
+  },
+  "staged_v1_4": {
+    "tex": "paper/effective-stark-results.tex",
+    "tex_sha256": "5fd43c986c70459cfcd6a347511d780d03374527153701a4137cb6fcc85e1b93",
+    "pdf": "paper/effective-stark-results.pdf",
+    "pdf_sha256": "9ad56d9ab1e2be123f5ddae709c5d9efa6fefbdad77989d33a48bca90e145d8c",
+    "independent_triple_builds_byte_identical": true,
+    "latex_warnings": 0,
+    "page_count": 18,
+    "tangedal_young_pages": "1045--1061"
+  },
+  "publisher_evidence": {
+    "doi": "10.1016/j.jnt.2012.04.021",
+    "url": "https://www.sciencedirect.com/science/article/pii/S0022314X12001709",
+    "volume": 133,
+    "issue": 3,
+    "pages": "1045--1061"
+  },
+  "a2_gates": {
+    "historical_scope_back_reference": "PASS",
+    "companion_paper_anchor_citations_zhao45_zhao78": "PASS",
+    "tate_iv_5_4_scope": "PASS",
+    "arakawa_scope": "PASS",
+    "roblot_scope_paragraph": "PASS",
+    "tangedal_young_page_range": "PASS_CORRECTED"
+  },
+  "replay": "python3 scripts/audit_results_paper_a2.py"
+}
