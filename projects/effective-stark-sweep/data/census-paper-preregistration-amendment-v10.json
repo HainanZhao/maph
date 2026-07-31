@@ -1,0 +1,28 @@
+{
+  "class_number_gate": {
+    "computed_order_divisible_by_3": "require full bnfcertify(bnf,0) before deciding",
+    "computed_order_prime_to_3": "bnfcertify(bnf,1)=1 proves actual class group is a quotient, hence actual order is prime to 3",
+    "field_initialization": "bnfinit(P,1)",
+    "required_first_certificate": "bnfcertify(bnf,1)=1"
+  },
+  "claim_boundary": {
+    "certifies": "Roblot Theorem 7.1 class-number nondivisibility gate",
+    "does_not_certify": [
+      "full sextic unit lattice",
+      "sextic regulator",
+      "principal ideal generators",
+      "a Stark packet identity"
+    ]
+  },
+  "profile": {
+    "field_key": "31570b7ac61b18dd001845e42db811b89347e61efb60ad1378c70a91bdec453e",
+    "last_completed_stage_before_60_second_timeout": "ABSOLUTE_BNFINIT",
+    "status": "OBSERVED_STAGE_PROFILE"
+  },
+  "schema": "effective-stark-census-paper-preregistration-amendment-v10",
+  "source_hashes": {
+    "artifacts/roblot-sextic-route-inventory-v1.json": "6d8b873cf8a86d6a1d1502b202e22387dddef1d0ecbe79c184ac202a604a2412",
+    "scripts/screen_roblot-sextic-field-before-v10.gp": "3b85c317371016cc4591451920deee8a949369e854aa2f58b5d78f03651ed4e8"
+  },
+  "status": "FROZEN_BEFORE_QUOTIENT_CERTIFICATE_POPULATION"
+}

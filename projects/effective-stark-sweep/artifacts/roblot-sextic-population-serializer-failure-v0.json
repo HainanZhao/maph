@@ -1,0 +1,18 @@
+{
+  "claim_tag": "OBSERVED",
+  "failure": {
+    "affected_case_id": "RQ-000731",
+    "affected_inventory_offset": 50,
+    "kernel_index": 1,
+    "mathematical_screen_outcome": "RESOURCE_CAP_TIMEOUT",
+    "population_artifact_written": false,
+    "serializer_error": "TimeoutExpired.stderr was bytes despite text mode; a string regular expression raised TypeError"
+  },
+  "preservation_rule": "The failed population run is not evidence for any unattempted kernel. The RQ-000731 cap outcome is retained, and the serializer must be repaired without changing the mathematical screen or frozen resource cap.",
+  "resource_cap": {
+    "address_space_bytes": 2147483648,
+    "wall_seconds": 600
+  },
+  "schema": "effective-stark-roblot-sextic-population-serializer-failure-v0",
+  "status": "CONTAINED_INFRASTRUCTURE_FAILURE"
+}
