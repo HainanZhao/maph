@@ -76,9 +76,9 @@ case-level PROVED corpus entry
 
 | Track | State | Current fact | Controlling evidence / file |
 |---|---|---|---|
-| Results paper | `PUBLISHED` | v1.4 is public at DOI 10.5281/zenodo.21712478; all seven public downloads match the frozen local byte counts, MD5 checksums, and SHA-256 checksums | `paper/effective-stark-results.tex`, `artifacts/zenodo-results-publication-v5.json` |
+| Results paper | `PUBLISHED` | v1.5 is public at DOI 10.5281/zenodo.21713178; the integrated 19-page main paper sorts first and is the default preview | `paper/effective-stark-results.tex`, `artifacts/zenodo-results-publication-v6.json` |
 | Results v1.4 correction | `BANKED` | The withdrawn-orientation correction, Tangedal--Young page correction, and RQ-000013 addendum are published and publicly verified | `artifacts/zenodo-results-publication-v5.json`, `docs/cycle-082-results-v1.4-publication.md` |
-| Results v1.5 integration | `HUMAN` | Unpublished draft 21713178 merges RQ-000013 into the 19-page main paper, omits the standalone addendum at deposit root, and verifies `effective-stark-results-00-main-paper.pdf` as the default preview | `artifacts/zenodo-results-v1.5-draft-upload-verification-v1.json`, `docs/cycle-083-results-v1.5-main-paper-integration.md` |
+| Results v1.5 integration | `BANKED` | Public v1.5 merges RQ-000013 into the 19-page main paper, omits the standalone addendum at deposit root, and verifies `effective-stark-results-00-main-paper.pdf` as the default preview | `artifacts/zenodo-results-publication-v6.json`, `docs/cycle-084-results-v1.5-publication.md` |
 | Results-paper audit | `BANKED` | Versioned full A/B/C audit and extracted companion replay pass, including exact Engine-A degeneracy and the sigma-positive Engine-C re-audit | `artifacts/results-paper-referee-audit-v4.json`, `artifacts/engine-c-fourier-convention-correction-v3.json` |
 | Genuine routing census v5 | `BANKED` | 8,200/8,200 genuine screens; proxy recovery complete | `artifacts/full-census-yield-declaration-v5.json` |
 | Census-paper range | `BANKED` | Existing maximal-order universe frozen: squarefree radicands 2--200, ideal norm at most 100, 8,200 conjugacy representatives | `data/census-paper-preregistration-v1.json` |
@@ -89,8 +89,8 @@ case-level PROVED corpus entry
 | W4 census analysis | `READY` | Support-first finite-range analysis may run; transported-case and safe-exponent claims remain gated separately | `artifacts/census-paper-layer0-reconciliation-v1.json` |
 | DST / Cohen--Roblot comparison | `READY` | Initial perimeter table exists; case-by-case overlap comparison is incomplete | `docs/prior-art-overlap-table-v1.md` |
 | Public certificate archive | `PUBLISHED` | DOI-bearing companion v17 published; SHA-256 `e2a945edaddcec32e3aad10e67f8b960af0bc304b07ba5503ab7be62384b9506` | `artifacts/zenodo-results-publication-v5.json` |
-| v1.5 certificate archive | `HUMAN` | Deterministic companion v18 SHA-256 `4a6d4417610215278d7be7788e2ae7845ee2c75ec5b22690c47b717c15e5b024` is uploaded and extracted-replay verified but unpublished | `artifacts/results-paper-companion-local-freeze-v18.json` |
-| Zenodo / arXiv | `HUMAN` | Results v1.4 remains public; checksum-verified v1.5 awaits immediate explicit approval at reserved DOI 10.5281/zenodo.21713178; arXiv remains a separate human action | `artifacts/results-paper-v1.5-publication-candidate-v1.json` |
+| v1.5 certificate archive | `PUBLISHED` | Deterministic companion v18 SHA-256 `4a6d4417610215278d7be7788e2ae7845ee2c75ec5b22690c47b717c15e5b024` is public and extracted-replay verified | `artifacts/zenodo-results-publication-v6.json` |
+| Zenodo / arXiv | `ZENODO_DONE` | Results v1.5 is published and publicly checksum-verified; arXiv remains a separate human action | DOI `10.5281/zenodo.21713178` |
 
 ### Genuine census v5 routing counts
 
@@ -294,7 +294,7 @@ State: `ACTIVE`
       authenticated draft record that it is Zenodo's default preview.
 - [x] Build and extracted-replay deterministic companion v18; upload
       and checksum-verify the exact five-file v1.5 inventory.
-- [ ] Obtain immediate explicit approval and publish v1.5 DOI
+- [x] Publish and publicly verify v1.5 DOI
       10.5281/zenodo.21713178.
 - [ ] Conduct a new Papers-I/II-style referee pass over every displayed
       theorem, polynomial, exponent, height margin, and citation.
@@ -551,6 +551,7 @@ control or counterexample for T1/T2.
 | 081 | Zenodo draft 21712478 reserved DOI 10.5281/zenodo.21712478 without publication; the DOI-bearing main paper, supplement, RQ-000013 addendum, and companion v17 were independently rebuilt, replayed, uploaded as an exact seven-file inventory, and checksum-verified | `DOI_DRAFT_UPLOADED_VERIFIED_UNPUBLISHED`, `HUMAN` | `artifacts/zenodo-results-v1.4-draft-upload-verification-v1.json`, `artifacts/results-paper-v1.4-publication-candidate-v4.json` |
 | 082 | After explicit human approval, results v1.4 was published at DOI 10.5281/zenodo.21712478; all seven public downloads match the frozen byte counts, MD5 checksums, and SHA-256 checksums | `PUBLISHED_AND_PUBLICLY_VERIFIED` | `docs/cycle-082-results-v1.4-publication.md`, `artifacts/zenodo-results-publication-v5.json` |
 | 083 | RQ-000013 was merged into the deterministic 19-page v1.5 main paper; the standalone addendum is preserved only inside nested v17, the five-file draft is checksum-verified, and the lexically first main PDF is Zenodo's authenticated draft preview | `DOI_DRAFT_UPLOADED_VERIFIED_UNPUBLISHED`, `HUMAN` | `docs/cycle-083-results-v1.5-main-paper-integration.md`, `artifacts/zenodo-results-v1.5-draft-upload-verification-v1.json` |
+| 084 | Under the standing Zenodo authorization, v1.5 was published at DOI 10.5281/zenodo.21713178; all five public downloads match bytes, MD5, and SHA-256, the concept latest endpoint resolves to v1.5, and the main paper is the public preview | `PUBLISHED_AND_PUBLICLY_VERIFIED` | `docs/cycle-084-results-v1.5-publication.md`, `artifacts/zenodo-results-publication-v6.json` |
 
 ## Standing integrity rules
 

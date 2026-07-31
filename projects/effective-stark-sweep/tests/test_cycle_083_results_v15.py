@@ -104,6 +104,43 @@ class ResultsV15IntegrationTest(unittest.TestCase):
         self.assertEqual(completed.returncode, 0, completed.stderr)
         self.assertIn("RESULTS_COMPANION_V18=VERIFIED", completed.stdout)
 
+    def test_v15_publication_matches_the_verified_draft(self):
+        publication = json.loads(
+            (
+                ROOT / "artifacts/zenodo-results-publication-v6.json"
+            ).read_text()
+        )
+        draft = json.loads(
+            (
+                ROOT
+                / "artifacts/zenodo-results-v1.5-draft-upload-verification-v1.json"
+            ).read_text()
+        )
+        self.assertEqual(
+            publication["status"], "PUBLISHED_AND_PUBLICLY_VERIFIED"
+        )
+        self.assertEqual(
+            publication["public_download_verdict"],
+            "PASS_5_OF_5_BYTE_MD5_SHA256_MATCH",
+        )
+        self.assertEqual(
+            publication["preview"]["verdict"],
+            "PASS_MAIN_PAPER_FIRST_AND_DEFAULT_PREVIEW",
+        )
+        published = {
+            row["name"]: (row["bytes"], row["md5"], row["sha256"])
+            for row in publication["files"]
+        }
+        frozen = {
+            row["filename"]: (
+                row["bytes"],
+                row["remote_md5"],
+                row["local_sha256"],
+            )
+            for row in draft["files"]
+        }
+        self.assertEqual(published, frozen)
+
 
 if __name__ == "__main__":
     unittest.main()
