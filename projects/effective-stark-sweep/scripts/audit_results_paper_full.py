@@ -14,7 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 PAPER = ROOT / "paper/effective-stark-results.tex"
 SUPPLEMENT = ROOT / "paper/effective-stark-results-supplement.tex"
-OUT = ROOT / "artifacts/results-paper-referee-audit-v3.json"
+OUT = ROOT / "artifacts/results-paper-referee-audit-v4.json"
 getcontext().prec = 80
 
 
@@ -122,7 +122,7 @@ def main() -> None:
         "Roblot's (A4) is not a hypothesis of these existence theorems",
         "It is not an application of Roblot's squareness criteria",
         "explicitly excludes imaginary quadratic bases",
-        "https://doi.org/10.5281/zenodo.21708121",
+        "https://doi.org/10.5281/zenodo.21712478",
         "PDF and",
         "source are exposed as top-level files",
         "Shintani's Proposition~4 on pp.~154--156",
@@ -376,15 +376,15 @@ def main() -> None:
         raise AssertionError("Engine-C scope correction is stale")
 
     convention_output = run(
-        ["python3", "scripts/audit_engine_c_fourier_convention_v2.py"],
-        "ENGINE_C_FOURIER_CONVENTION_V2_AUDIT=VERIFIED",
+        ["python3", "scripts/audit_engine_c_fourier_convention_v3.py"],
+        "ENGINE_C_FOURIER_CONVENTION_V3_AUDIT=VERIFIED",
     )
     convention = load(
-        "artifacts/engine-c-fourier-convention-correction-v2.json"
+        "artifacts/engine-c-fourier-convention-correction-v3.json"
     )
     if (
         convention["claim_tag"]
-        != "VERIFIED_EXACT_CONVENTION_REAUDIT"
+        != "VERIFIED_EXACT_CONVENTION_DOI_REAUDIT"
         or convention["verdict"] != "PASS"
         or convention["packet_log_coefficients_m0_m1"]
         != [[-2, 0], [0, -2], [2, 0], [0, 2]]
@@ -422,8 +422,8 @@ def main() -> None:
         raise AssertionError("cyclic-quartic Fourier sign audit failed")
 
     artifact = {
-        "schema": "effective-stark-results-paper-full-referee-audit-v3",
-        "claim_tag": "VERIFIED_V1_4_PREPUBLICATION_AUDIT",
+        "schema": "effective-stark-results-paper-full-referee-audit-v4",
+        "claim_tag": "VERIFIED_V1_4_DOI_BEARING_PREPUBLICATION_AUDIT",
         "paper": "paper/effective-stark-results.tex",
         "paper_sha256": sha("paper/effective-stark-results.tex"),
         "supplement": "paper/effective-stark-results-supplement.tex",

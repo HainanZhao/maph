@@ -281,14 +281,14 @@ Dedekind/squared-multiplier explanation is closed.
 
 ## Next authorized action
 
-For the correction/publication lane, reserve and publish the prepared
-results v1.4 correction layer only after credentials and explicit
-human approval are available; evidence is in
-`../effective-stark-sweep/docs/cycle-079-results-v1.4-correction-staging.md`
-and its Track-A2 successor
-`../effective-stark-sweep/docs/cycle-080-results-track-a2-correction.md`.
-The controlling pre-DOI candidate is
-`../effective-stark-sweep/artifacts/results-paper-v1.4-publication-candidate-v2.json`.
+For the correction/publication lane, Zenodo draft 21712478 reserves
+DOI `10.5281/zenodo.21712478` without publication. The DOI-bearing
+sources and deterministic companion v17 are frozen, and the exact
+seven-file draft inventory is uploaded and checksum-verified. Publish
+only after immediate explicit human approval. Evidence is in
+`../effective-stark-sweep/docs/cycle-081-results-v1.4-doi-draft.md`.
+The controlling uploaded-draft candidate is
+`../effective-stark-sweep/artifacts/results-paper-v1.4-publication-candidate-v4.json`.
 The long Roblot draft is `docs/roblot-email-long-draft-v1.md`; replace
 its DOI placeholder and recheck the recipient address only after the
 correction release is public, then send through an authorized mail

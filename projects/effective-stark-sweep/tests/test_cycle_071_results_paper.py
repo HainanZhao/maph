@@ -43,13 +43,13 @@ class ResultsPaperMajorRevisionTests(unittest.TestCase):
         self.assertIn("RESULTS_PAPER_FULL_AUDIT=PASS", completed.stdout)
 
     def test_full_freeze_hashes(self):
-        freeze = load("artifacts/results-paper-full-freeze-v11.json")
+        freeze = load("artifacts/results-paper-full-freeze-v12.json")
         self.assertEqual(
             freeze["status"],
-            "LOCAL_V1_4_PRE_DOI_CORRECTION_FREEZE",
+            "LOCAL_V1_4_DOI_BEARING_PREPUBLICATION_FREEZE",
         )
         self.assertEqual(
-            freeze["supersedes"], "artifacts/results-paper-full-freeze-v10.json"
+            freeze["supersedes"], "artifacts/results-paper-full-freeze-v11.json"
         )
         manuscript = freeze["primary_manuscript"]
         self.assertEqual(sha(manuscript["tex"]), manuscript["tex_sha256"])
@@ -74,7 +74,9 @@ class ResultsPaperMajorRevisionTests(unittest.TestCase):
         self.assertEqual(
             publication["current_public_doi"], "10.5281/zenodo.21708121"
         )
-        self.assertIsNone(publication["reserved_doi"])
+        self.assertEqual(
+            publication["reserved_doi"], "10.5281/zenodo.21712478"
+        )
         self.assertFalse(publication["publication_action_taken"])
         self.assertEqual(
             sha(publication["metadata"]), publication["metadata_sha256"]
