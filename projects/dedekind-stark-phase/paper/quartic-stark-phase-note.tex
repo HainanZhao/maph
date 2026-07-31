@@ -1,0 +1,328 @@
+\documentclass[11pt]{article}
+\pdfinfoomitdate=1
+\pdfsuppressptexinfo=15
+\pdftrailerid{<74A88D7A8A2BB7EE5665765B699AAA62>
+              <74A88D7A8A2BB7EE5665765B699AAA62>}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\muK}{\mu(K)}
+\newcommand{\cchi}{c_\chi}
+\newcommand{\Lprime}{L'_{K/k,S}}
+
+\title{Quartic Stark Phase Quantization as a Weak-Solution Equivalence}
+\author{Hainan Zhao}
+\date{July 31, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent\textbf{Claim boundary.}
+We isolate two \textsc{proved} consequences of Roblot's quartic
+index-solution theorem.  In a cyclic-quartic case where the rank-one
+Stark conjecture is already proved, the phase ratio between a Stark
+derivative and any Roblot weak solution is a fourth root of unity.  In
+an uncertified case satisfying the same algebraic hypotheses, that
+phase quantization is equivalent to the full rank-one Stark
+conjecture; it is not a finite-precision proof mechanism.  We derive
+the root-of-unity factor from the real-place hypothesis and spell out
+the even-character, conjugate-character, Fourier-inversion, and
+abelian-extension steps.  No census result is claimed here, and this
+local draft is not authorized for submission or circulation before
+the preregistered counterexample screen exists as its data section.
+\end{abstract}
+
+\section{Setup and claim boundary}
+
+Let \(K/k\) be cyclic quartic with
+\[
+G=\Gal(K/k)=\langle\gamma\rangle,\qquad
+\tau=\gamma^2,\qquad \chi(\gamma)=i.
+\]
+Let \(S\supseteq S(K/k)\) contain a distinguished real place \(v\) of
+\(k\) which splits completely in \(K/k\), and fix \(w\mid v\).
+We impose Roblot's hypotheses:
+\begin{enumerate}
+\item[(A1)] \(k\) is totally real, the places of \(K\) above \(v\) are
+  real, and the other infinite places of \(K\) are complex;
+\item[(A2)] the maximal totally real subfield \(K^+\) has
+  \([K:K^+]=2\);
+\item[(A3)] every finite prime in \(S\) is ramified or inert in
+  \(K/K^+\).
+\end{enumerate}
+These are exactly the assumptions used in
+\cite[pp.~392--393]{Roblot2013}.  We write \(U_K\) for the global
+units and use the right Galois exponent \(u^g\).
+
+\begin{lemma}[Real-place root-of-unity rider]\label{lem:roots}
+Under \emph{(A1)}, the root-of-unity group of \(K\) is
+\[
+\muK=\{\pm1\}.
+\]
+Consequently the denominator \(e=|\muK|\) in the rank-one Stark
+formula is \(2\).
+\end{lemma}
+
+\begin{proof}
+The place \(w\) gives an embedding \(K\hookrightarrow\mathbb R\).
+An embedding is injective and sends a root of unity to a real root of
+unity.  The only real roots of unity are \(1\) and \(-1\), both of
+which lie in \(K\).  Thus \(\muK=\{\pm1\}\).
+\end{proof}
+
+For any character \(\psi\) of \(G\) and \(u\in U_K\), put
+\[
+c_\psi(u)=\frac12\sum_{g\in G}\psi(g)\log|u^g|_w.
+\tag{1}\label{eq:coefficient}
+\]
+For \(a=s\gamma^j\in\{\pm\gamma^j:0\le j<4\}\), where
+\(s\in\{\pm1\}\), define signed right exponentiation and its character
+value by
+\[
+u^a=(u^{\gamma^j})^s,\qquad
+\chi(a)=s\,i^j.
+\]
+We separately define the left group-ring action
+\[
+a\mathbin{\cdot}u:=u^{a^{-1}}.
+\tag{2}\label{eq:left-action}
+\]
+This distinction removes an inverse-convention ambiguity in the
+earlier project note.
+
+\begin{lemma}[Pinned covariance]\label{lem:covariance}
+For every signed \(a\) and every character \(\psi\),
+\[
+c_\psi(u^a)=\psi(a)^{-1}c_\psi(u),
+\qquad
+c_\psi(a\mathbin{\cdot}u)=\psi(a)c_\psi(u).
+\tag{3}\label{eq:covariance}
+\]
+\end{lemma}
+
+\begin{proof}
+For \(a=s\gamma^j\), reindexing \(t=r+j\) in
+\eqref{eq:coefficient} gives
+\[
+c_\psi(u^{\gamma^j})
+=\frac12\sum_r\psi(\gamma)^r\log|u^{\gamma^{r+j}}|_w
+=\psi(\gamma)^{-j}c_\psi(u).
+\]
+The exponent \(s=-1\) changes every logarithm's sign.  This proves the
+first identity; applying it to \(a^{-1}\) proves the second.
+\end{proof}
+
+Roblot's Theorem~6.1 \cite[pp.~404--405]{Roblot2013} supplies a class
+\(\bar\eta\in\bar U_K^-\) satisfying his index properties (P1) and
+(P2), unique under the signed action \(\{\pm\gamma^j\}\).  We fix a
+representative \(\eta\) for which
+\[
+K(\sqrt\eta)/k\quad\text{is abelian}.
+\tag{4}\label{eq:weak-abelian}
+\]
+The same theorem proves
+\[
+|\Lprime(0,\chi)|=|c_\chi(\eta)|.
+\tag{5}\label{eq:weak-absolute}
+\]
+This is an absolute-value statement, not the oriented Stark identity.
+
+\section{Certified cases}
+
+\begin{theorem}[Certified-case quantization; \textsc{proved}]
+\label{thm:certified}
+Assume \emph{(A1)--(A3)} and assume the rank-one Stark conjecture has
+been proved for \((K/k,S,w)\).  Let \(\epsilon\) be a Stark unit in
+the convention
+\[
+\Lprime(0,\psi)=c_\psi(\epsilon)
+\quad\text{for every character }\psi\text{ of }G.
+\tag{6}\label{eq:stark}
+\]
+Then there is a signed element \(h\in\{\pm\gamma^j\}\) such that
+\(\bar\eta=h\mathbin{\cdot}\bar\epsilon\), and
+\[
+\boxed{\frac{\Lprime(0,\chi)}{c_\chi(\eta)}
+       =\chi(h)^{-1}\in\mu_4.}
+\tag{7}\label{eq:quantized}
+\]
+\end{theorem}
+
+\begin{proof}
+The index formulae for a Stark unit give (P1) and (P2)
+\cite[Thm.~2.3]{Roblot2013}.  The uniqueness clause in Roblot's
+Theorem~6.1 therefore gives
+\(\bar\eta=h\mathbin{\cdot}\bar\epsilon\) for a signed \(h\).
+Lemma~\ref{lem:covariance} and \eqref{eq:stark} give
+\[
+c_\chi(\eta)
+=\chi(h)c_\chi(\epsilon)
+=\chi(h)\Lprime(0,\chi).
+\]
+Since the signed quartic character values are precisely \(\mu_4\),
+rearrangement proves \eqref{eq:quantized}.
+\end{proof}
+
+\begin{remark}[Interpretation]
+Theorem~\ref{thm:certified} is a formal consequence of a proved Stark
+identity and Roblot's uniqueness theorem.  In an already certified
+case it is a convention check, not new evidence for algebraicity.
+\end{remark}
+
+\section{Equivalence in uncertified cases}
+
+\begin{theorem}[Weak-solution/Stark equivalence; \textsc{proved}]
+\label{thm:equivalence}
+Assume \emph{(A1)--(A3)} and fix all conventions above before either
+side is evaluated.  The following are equivalent:
+\begin{enumerate}
+\item the abelian rank-one Stark conjecture holds for \((K/k,S,w)\);
+\item there is a signed \(h\in\{\pm\gamma^j\}\) such that
+  \[
+  \Lprime(0,\chi)=c_\chi(h\mathbin{\cdot}\eta);
+  \tag{8}\label{eq:one-character}
+  \]
+\item the gauge-invariant orbit condition holds:
+  \[
+  \frac{\Lprime(0,\chi)}{c_\chi(\eta)}\in\mu_4.
+  \tag{9}\label{eq:orbit}
+  \]
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+The implication \(1\Rightarrow2\) follows from
+Theorem~\ref{thm:certified} after inverting the signed element if
+necessary.  Lemma~\ref{lem:covariance} gives \(2\Rightarrow3\).
+
+Assume (3).  The values of \(\chi\) on the signed group are all of
+\(\mu_4\), so choose \(h\) with
+\[
+\chi(h)=\frac{\Lprime(0,\chi)}{c_\chi(\eta)}
+\]
+and set \(\bar\epsilon=h\mathbin{\cdot}\bar\eta\).  Then
+\eqref{eq:one-character} holds.  We now verify the three propagation
+steps needed for the full Stark conjecture.
+
+\smallskip
+\noindent\textbf{Step 1: even-component vanishing on both sides.}
+Let \(\nu\) be the trivial or quadratic character.  It is even, so
+\(\nu(\tau)=1\).  Since \(\bar\eta\in\bar U_K^-\), pairing \(g\) with
+\(g\tau\) in \eqref{eq:coefficient} gives
+\[
+c_\nu(\eta)=0,
+\qquad
+c_\nu(\epsilon)=0.
+\]
+For the analytic side, the one-place signature gives
+\[
+\Lprime(0,\nu)=0
+\]
+for both even characters; this is the even-character vanishing used
+explicitly in the proof of Roblot's Theorem~6.1
+\cite[p.~405]{Roblot2013}.  Thus the Stark identity holds on both even
+components.
+
+\smallskip
+\noindent\textbf{Step 2: conjugate-pair determination and Fourier
+inversion.}
+All logarithms in \eqref{eq:coefficient} are real, hence
+\[
+c_{\bar\chi}(\epsilon)=\overline{c_\chi(\epsilon)}.
+\]
+Artin \(L\)-functions satisfy
+\[
+\Lprime(0,\bar\chi)
+=\overline{\Lprime(0,\chi)}.
+\]
+Therefore \eqref{eq:one-character} also gives the identity for
+\(\bar\chi\).  We now have the Stark identity for all four characters
+of \(C_4\).  Fourier inversion on \(G\) determines each component of
+the logarithmic vector
+\[
+\left(\frac12\log|\epsilon^g|_w\right)_{g\in G},
+\]
+so the complete logarithmic part of the rank-one Stark conjecture
+holds.
+
+\smallskip
+\noindent\textbf{Step 3: inheritance of the abelian condition.}
+Choose an actual representative
+\[
+\epsilon=\rho\,\eta^{h^{-1}},
+\qquad \rho\in\{\pm1\}.
+\tag{10}\label{eq:representative}
+\]
+Conjugation and inversion preserve the abelian extension
+\(K(\sqrt\eta)/k\) from \eqref{eq:weak-abelian}: a \(k\)-abelian
+extension is stable under \(G\), and adjoining a square root of
+\(\eta^{-1}\) gives the same quadratic extension.  If \(\rho=1\),
+this proves \(K(\sqrt\epsilon)/k\) is abelian.  If \(\rho=-1\), then
+\[
+K(\sqrt\epsilon)
+\subseteq K(\sqrt\eta)\,k(i).
+\]
+The extension \(k(i)/k\) is quadratic abelian because \(k\) is totally
+real, and a compositum of abelian extensions is abelian.  Hence
+\(K(\sqrt\epsilon)/k\) is abelian in either case.  The representative
+is a global unit because \(\eta\in U_K\).
+
+The logarithmic identity and the abelian square-root condition are
+exactly the abelian rank-one Stark conjecture with \(e=2\), as proved
+in Lemma~\ref{lem:roots}.  Thus \(3\Rightarrow1\).
+\end{proof}
+
+\section{Numerical and circulation boundaries}
+
+The five archived controls provide only the following
+\textsc{observed} statement: after testing both conjugate character
+orientations, each independently constructed weak solution matches
+one fourth-root rotation against certified \(L'\)-balls.  The old
+oriented labels were selected after inspecting the analytic target and
+are withdrawn pending exact Artin transport.  They are not used in
+either proof above.
+
+A future rigorous screen can refute \eqref{eq:orbit} if the enclosed
+analytic value is separated from all four enclosed rotations of the
+weak coefficient.  Ball overlap is only
+\textsc{certified numerical consistency}, never proof of equality.
+No such census screen is contained in this note.
+
+\medskip
+\noindent\textbf{Circulation status.}
+This is a local research draft.  It must not be submitted, posted, or
+circulated before the preregistered B3 screen exists as its data
+section.  All email, messaging, submission, and other outbound actions
+are human-only.
+
+\section*{AI-assistance disclosure}
+
+AI systems assisted with proof auditing, convention checks, code, and
+editing.  The author reviewed the mathematical argument, checked the
+cited hypotheses, and is responsible for the claims.
+
+\begin{thebibliography}{9}
+
+\bibitem{Roblot2013}
+X.-F.~Roblot,
+\emph{Index formulae for Stark units and their solutions},
+Pacific J. Math. \textbf{266} (2013), no.~2, 391--417,
+\href{https://doi.org/10.2140/pjm.2013.266.391}
+{doi:10.2140/pjm.2013.266.391}.
+
+\bibitem{Tate1984}
+J.~Tate,
+\emph{Les conjectures de Stark sur les fonctions \(L\) d'Artin en
+\(s=0\)},
+Progress in Mathematics 47, Birkh\"auser, Boston, 1984.
+
+\end{thebibliography}
+
+\end{document}

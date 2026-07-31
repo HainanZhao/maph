@@ -1,0 +1,73 @@
+{
+  "schema": "dedekind-stark-b1-note-audit-v1",
+  "recorded_at_utc": "2026-07-31T00:00:00Z",
+  "status": "PASS_LOCAL_ONLY_NOT_FOR_CIRCULATION",
+  "claim_tags": {
+    "real_place_root_of_unity_rider": "PROVED",
+    "certified_case_quantization": "PROVED",
+    "weak_solution_stark_equivalence": "PROVED",
+    "five_control_phase_statement": "OBSERVED"
+  },
+  "exact_checks": {
+    "right_covariance_all_signed_c4_actions": true,
+    "left_covariance_all_signed_c4_actions": true,
+    "signed_character_image_is_mu4": true,
+    "c4_fourier_matrix_exactly_invertible": true,
+    "even_characters_cancel_on_anti_unit_orbit": true,
+    "root_of_unity_rider_written_and_proved": true,
+    "conjugate_pair_step_written": true,
+    "abelian_inheritance_step_written": true,
+    "ball_overlap_labeled_nonproof": true,
+    "human_only_outbound_boundary_written": true
+  },
+  "primary_source": {
+    "author": "X.-F. Roblot",
+    "title": "Index formulae for Stark units and their solutions",
+    "journal": "Pacific Journal of Mathematics",
+    "volume": 266,
+    "year": 2013,
+    "pages": "391-417",
+    "doi": "10.2140/pjm.2013.266.391",
+    "checked_items": [
+      "(A1)-(A3), journal pages 392-393",
+      "Theorem 2.3",
+      "Proposition 4.1",
+      "Corollary 4.5",
+      "Theorem 6.1 and proof, journal pages 404-405"
+    ]
+  },
+  "source_hashes": {
+    "paper/quartic-stark-phase-note.tex": "3715c70fdbd6e323bfa3fc1eec85cc5bac2108d433f3f780a8d3c62bf46f800e",
+    "paper/quartic-stark-phase-note.pdf": "bed234c430e72946f30a4695a601e23eaa34e18ad8441cc838ffb6e0f53c02bc",
+    "proof/audit_b1_note.py": "39e592e39cd4337344953410168f8cc45dc4431e0f16ad40fd84635ce1fe980e",
+    "docs/cycles-072-074-b1-preregistration.md": "1a990ffe1a60cfbbe6ec3fb5bf843277894e243d98f77c057784d6d6f30b9694",
+    "docs/cycles-072-074-b1-preregistration-amendment-v1.md": "790ae08a19d94e0ee62b795976241871ebad8dda1d8475fab26cf0900e41e532",
+    "docs/roblot-phase-clarification-correction-v2.md": "61c307219fd2309215599a2155719a471b3857114b9cc07ac5a9c46b5eeb6b1a",
+    "artifacts/b1-action-convention-audit-v1.json": "a68feccdea39361965119c3a12ba8d8806fe76cbb7e764073b06b32201214dbd"
+  },
+  "build": {
+    "python": "3.12.3",
+    "pdftex": "3.141592653-2.6-1.40.25 (TeX Live 2023/Debian)",
+    "source_date_epoch": 1785456000,
+    "passes_per_build": 3,
+    "pdf_bytes": 212995,
+    "warnings": 0,
+    "visual_pages_checked": 4,
+    "deterministic_double_build": "PASS_BYTE_IDENTICAL"
+  },
+  "preserved_build_failure": {
+    "status": "FAILED_THEN_CORRECTED",
+    "first_pdf_sha256": "37955415774c27f9ce83b8359890a12a533ae9cdcab7770689e20e61f205bfb0",
+    "second_pdf_sha256": "d4c4e346c58d3911d71867664c583d782cf36a0f40326b53cea8fa245dad5bb7",
+    "difference_scope": "PDF trailer ID only",
+    "cause": "pdfTeX generated a path-dependent trailer ID",
+    "correction": "pin pdfinfo date suppression, pTeX info suppression, and a version-specific trailer ID in the source",
+    "corrected_pdf_sha256": "bed234c430e72946f30a4695a601e23eaa34e18ad8441cc838ffb6e0f53c02bc"
+  },
+  "circulation": {
+    "authorized": false,
+    "submission_before_b3": false,
+    "outbound_actions_by_agent": false
+  },
+  "replay": "python3 proof/audit_b1_note.py"
+}

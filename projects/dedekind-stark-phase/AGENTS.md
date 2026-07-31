@@ -20,22 +20,25 @@ secondary.
 The original Dedekind/squared-multiplier mechanism remains finished
 with status `FINISHED_WITH_VERIFIED_NO_GO_FOR_FROZEN_MECHANISM`.
 
-A separate clarification branch is banked and input-blocked under
-`docs/cycles-063-070-preregistration.md`. It may audit the five Roblot
-phase controls, prove the weak-solution/Stark equivalence, and screen a
-frozen Roblot-eligible quartic population for rigorously separated
-counterexamples once its three named input gates close. It may not
-resume coefficient fitting, enlarge the old holdout, or reinterpret the
-vanished Fourier resolvent as an engineering problem.
+A separate clarification branch has banked the B1 theorem note and B2
+exact Artin transport. B3 remains input-blocked under
+`docs/cycles-063-070-preregistration.md`: it may screen a frozen
+Roblot-eligible quartic population only after its genuine-population
+and Arb weak-coefficient gates close. It may not resume coefficient
+fitting, enlarge the old holdout, or reinterpret the vanished Fourier
+resolvent as an engineering problem. B1 remains local-only until B3
+supplies its data section.
 
 ## Reporting rule
 
 Every block report must surface newly banked headline mathematics. For
 this project, the standing headline results are listed in `PLAN.md`.
 Their epistemic tags must be repeated accurately: the five-control
-phase quantization is numerical against certified \(L'\)-balls, while
+fixed-orientation match is `OBSERVED` because the weak coefficients
+lack Arb enclosures; B2 Artin transport is `PROVED_EXACT_TRANSPORT`;
 the gauge lemma, supplied-tuple arithmetic, class descent, and Fourier
-cancellation are exact.
+cancellation are exact. Preserve the contained B2 input exposure and
+generator-only Frobenius failure in every relevant summary.
 
 ## Artifact discipline
 

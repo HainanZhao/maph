@@ -9,7 +9,9 @@ Last reconciled: 2026-07-31 UTC
 clarification theorem `PROVED`, census screen
 `BLOCKED_BEFORE_TARGET_OPENING`; withdrawn-replay correction
 `PUBLISHED_IN_RESULTS_V1.4`; long Roblot message
-`READY_AWAITING_AUTHORIZED_MAIL_CHANNEL`.
+`HUMAN_ONLY_READY_NOT_SENT`; B1 standalone note `BANKED_LOCAL_ONLY`;
+B2 exact Artin transport `BANKED_WITH_CONTAINED_EXPOSURE`; B3
+population/evaluator gates `BLOCKED_INPUT`.
 
 This file is the authoritative project memory. Read it completely before
 reopening any branch.
@@ -22,10 +24,15 @@ Crash recovery:
 4. run `python3 -m unittest discover -s tests -p 'test_*.py'`;
 5. replay the controlling script linked from the gate being inspected.
 
-The only authorized continuation is
-`docs/cycles-063-070-preregistration.md`: a circularity audit, a
-Roblot/Stark clarification lemma pair, and—only if its genuine-input
-gates pass—a counterexample-oriented quartic census screen.
+The clarification branch remains governed by
+`docs/cycles-063-070-preregistration.md`. The banked B1 writing branch
+is governed by `docs/cycles-072-074-b1-preregistration.md`; its
+two-theorem standalone note may not be submitted or circulated before
+B3 exists as its data section.
+
+All outbound communication is human-only. Agents may prepare and audit
+drafts, recipients, and attachments, but never send email, Slack,
+direct messages, or other external messages.
 
 ## Original objective
 
@@ -84,14 +91,15 @@ restart them.
 These results must be surfaced in the first report after they are
 banked and in any project-level summary:
 
-1. **Five-control phase quantization (`NUMERICAL`).** Five independent
+1. **Five-control phase quantization (`OBSERVED`).** Five independent
    Roblot weak solutions match certified \(L'\)-balls after a unique
-   quarter turn for exactly one of the two conjugate character
-   orientations. Cycle 064 found that the archived script selected that
-   orientation from the opened target; the fully oriented
-   “independent replay” is therefore withdrawn pending exact Artin
-   transport. The retained existential two-orientation statement is
-   numerical.
+   quarter turn in the exact Artin orientation. Cycle 064 found that
+   the archived script selected that orientation from the opened
+   target; cycles 074--075 reconstruct it exactly without target input.
+   The weak-unit coefficients are still point evaluations rather than
+   Arb enclosures, and the final exact replay occurred after a
+   contained target-bearing artifact exposure, so the claim is not
+   tagged proof, certified numerical, or chronologically pristine.
 2. **Gauge-ambiguity lemma (`VERIFIED`).** Conjugating a cyclic-quartic
    weak solution rotates its character coefficient by \(\mu_4\); the
    raw quarter-turn label is not invariant.
@@ -119,6 +127,18 @@ banked and in any project-level summary:
    \(\chi(h)^{-1}\in\mu_4\) for a trivial unit \(h\). In an uncertified
    (A1)--(A3) case, this quantization is equivalent to the quartic
    rank-one Stark conjecture itself.
+10. **B1 standalone note (`PROVED`, local only).** The four-page note
+    proves the real-place rider \(\mu(K)=\{\pm1\}\), separates right
+    exponentiation from the left group-ring action, and spells out the
+    even-component, conjugate-pair/Fourier, and abelian-inheritance
+    steps in the reverse implication. It is not authorized for
+    circulation or submission before B3.
+11. **B2 Artin transport (`PROVED_EXACT_TRANSPORT`).** Full-integral-
+    basis Frobenius tests give inverse, inverse, direct, direct,
+    inverse orientations in case order RQ-000129, RQ-001280,
+    RQ-001569, RQ-001894, RQ-007519. A preliminary generator-only test
+    misoriented RQ-007519, triggered a correct halt, and was superseded.
+    The contained preregistration input exposure remains recorded.
 
 The eighth item is the project's terminal theorem for the frozen
 mechanism. It does not rule out a metaplectic square-root refinement.
@@ -137,6 +157,7 @@ mechanism. It does not rule out a metaplectic square-root refinement.
 | Non-SIC bridge | Does \((K,\mathfrak m,\chi)\) determine one tuple? | No; input levels mismatch | General one-tuple bridge rejected |
 | Class descent | Is the multiplier representative-independent? | Passed exactly | Character resolvent authorized |
 | Fourier resolvent | Is it nonzero on Stark support? | All four coefficients vanish | Frozen mechanism rejected |
+| Exact Artin transport | Can direct/inverse orientation be fixed without a phase target? | Passed after replacing a false generator-only Frobenius test by a full-integral-basis test | Five oriented rows replayed without orientation search |
 | Stop condition | Would repair require new noncanonical structure? | Yes: an intrinsic metaplectic lift | Project finished at cycle 062 |
 
 ## Non-negotiable claim boundary
@@ -232,6 +253,10 @@ because they constrain later work.
 | 070 | Long Roblot outreach draft prepared with three falsifiable questions, AI disclosure, replay hash, the exact \(\mu_4\) corollary, and the withdrawn-orientation boundary; no message sent | DRAFTED_NOT_SENT | `docs/roblot-email-long-draft-v1.md` |
 
 | 071 | Results v1.4 was published; the official Lyon 1 and ICJ pages confirmed the recipient address; the long message and companion v17 pass readiness checks, but no authorized mail channel exists in the environment | READY_AWAITING_AUTHORIZED_MAIL_CHANNEL | `docs/cycle-071-roblot-outreach-readiness.md`, `artifacts/roblot-email-send-readiness-v1.json` |
+| 072 | Human-only outbound-communication policy frozen; Roblot message handed off unsent; B1 theorem requirements, the real-place root-of-unity rider, three reverse-implication propagation steps, and no-circulation boundary preregistered | ACTIVE_LOCAL_ONLY | `docs/cycles-072-074-b1-preregistration.md`, `artifacts/roblot-email-human-handoff-v2.json` |
+| 073 | Four-page B1 note completed; all signed \(C_4\) covariance and Fourier checks passed exactly; an initial path-dependent PDF trailer-ID failure was preserved and corrected; independent triple-pass builds are byte-identical | BANKED_LOCAL_ONLY | `docs/cycle-073-b1-standalone-note.md`, `artifacts/b1-note-audit-v1.json` |
+| 074 | Preliminary generator-only Frobenius transport misoriented RQ-007519; the preregistered one-orientation replay halted; a target-bearing provenance artifact was then inadvertently opened and the exposure was contained | PRESERVED_FAILURE | `docs/cycle-074-b2-exact-artin-transport.md`, `artifacts/b2-artin-transport-v1.json` |
+| 075 | Full-integral-basis Frobenius correction proved that RQ-007519 constructor \(\gamma\) is the inverse Frobenius; exact orientations are inverse/inverse/direct/direct/inverse and the fixed one-orientation replay matches 5/5 | BANKED_WITH_CONTAINED_EXPOSURE | `docs/cycle-075-b2-integral-basis-correction.md`, `artifacts/b2-oriented-phase-replay-v1.json` |
 
 ## Final synthesis
 
@@ -241,12 +266,14 @@ unique fourth-root phase relation after character alignment
 (`NUMERICAL` against certified \(L'\)-balls).
 
 The clarification branch later found that the archived direct/inverse
-orientation was selected from the opened target. The fully oriented
-independent-replay wording is withdrawn; the weaker two-orientation
-observation remains numerical. More importantly, the exact lemma pair
-shows that the phenomenon is automatic in already certified Stark
-cases and equivalent to the quartic Stark conjecture in uncertified
-ones.
+orientation was selected from the opened target. B2 now reconstructs
+the five orientations exactly through full-integral-basis Frobenius
+transport, and a fixed one-orientation replay matches 5/5. Its
+execution chronology includes a contained target-bearing artifact
+exposure, and the weak coefficients lack Arb enclosures. More
+importantly, the exact lemma pair shows that the phenomenon is
+automatic in already certified Stark cases and equivalent to the
+quartic Stark conjecture in uncertified ones.
 
 The raw label is gauge-dependent. A dominant-embedding gauge repairs
 the response, but the field-only Dedekind family fails exactly. The
@@ -281,6 +308,13 @@ Dedekind/squared-multiplier explanation is closed.
 - terminal Fourier no-go:
   `docs/class-descent-fourier-no-go-v1.md` and
   `artifacts/class-descent-fourier-no-go-v1.json`.
+- corrected phase theorem and B1 note:
+  `docs/roblot-phase-clarification-correction-v2.md`,
+  `paper/quartic-stark-phase-note.tex`, and
+  `artifacts/b1-note-audit-v1.json`.
+- exact Artin transport and fixed-orientation replay:
+  `artifacts/b2-artin-transport-v1.json` and
+  `artifacts/b2-oriented-phase-replay-v1.json`.
 
 ## Next authorized action
 
@@ -289,18 +323,20 @@ DOI `10.5281/zenodo.21712478`. All seven public downloads match the
 frozen local byte counts, MD5 checksums, and SHA-256 checksums. Evidence
 is in
 `../effective-stark-sweep/artifacts/zenodo-results-publication-v5.json`.
-The next authorized action is the long Roblot email in
-`docs/roblot-email-long-draft-v1.md`: use the public DOI and companion
-v17 and send through an authorized mail channel. The recipient was
-verified on the official Lyon 1 homepage and ICJ directory. No mail
-connector or local SMTP client is present in the current environment,
-so no delivery is claimed. Readiness evidence is in
-`artifacts/roblot-email-send-readiness-v1.json`.
+The long Roblot email is a human-only handoff. It remains unsent, and
+agents must never deliver it. The controlling handoff record is
+`artifacts/roblot-email-human-handoff-v2.json`.
 
-For research, return to the census screen only after the census project
-has banked a genuine Roblot-eligible quartic population, this project
-has an anchor-validated Arb weak-coefficient evaluator, and exact
-Artin transport fixes the analytic orientation before \(L'\) is read.
+Track B1 is banked locally under
+`docs/cycles-072-074-b1-preregistration.md`. No submission or
+circulation is authorized.
+
+Track B2 is banked with its preliminary failure and contained exposure
+preserved. The next agent action is Track B3 input construction:
+produce a genuine Roblot-eligible population column and an
+anchor-validated Arb weak-coefficient evaluator before opening any
+census target. B1 remains local-only and cannot be submitted or
+circulated until B3 supplies its data section.
 
 ## Tags
 

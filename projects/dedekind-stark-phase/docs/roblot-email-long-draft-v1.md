@@ -1,6 +1,6 @@
-# Roblot email — long version, publication-ready
+# Roblot email — long version, human handoff
 
-Status: `READY_AWAITING_AUTHORIZED_MAIL_CHANNEL`.
+Status: `HUMAN_ONLY_READY_NOT_SENT`.
 Publication DOI: `https://doi.org/10.5281/zenodo.21712478`.
 Attachment: `effective-stark-results-companion-v17.tar.gz`.
 Attachment SHA-256:
@@ -40,10 +40,12 @@ c_\chi(\eta)=\frac12\sum_{g\in G}\chi(g)\log|\eta^g|_w,
 \]
 let \(\eta\) be the weak solution supplied by Theorem 6.1 and let
 \(\epsilon\) be the proved Stark unit in the same convention.
-Uniqueness gives \(\bar\eta=h\bar\epsilon\) for a trivial group-ring
-unit \(h\). Under the right-action convention used in my replay,
+For a signed group-ring unit \(h\), define the left action by
+\(h\mathbin{\cdot}\bar u=\bar u^{h^{-1}}\). Uniqueness gives
+\(\bar\eta=h\mathbin{\cdot}\bar\epsilon\). Exact reindexing gives
 \[
-c_\chi(h\bar\epsilon)=\chi(h)c_\chi(\bar\epsilon),
+c_\chi(h\mathbin{\cdot}\bar\epsilon)
+   =\chi(h)c_\chi(\bar\epsilon),
 \]
 and hence
 \[
@@ -68,7 +70,7 @@ independently proved Stark packets and your uniqueness theorem.
 
 May I ask three specific questions?
 
-1. With the displayed Fourier and right-action conventions, does
+1. With the displayed Fourier and left-action conventions, does
    Theorem 6.1 indeed imply the ratio
    \(L'(0,\chi)/c_\chi(\eta)=\chi(h)^{-1}\), or is an additional
    hypothesis needed to compare the weak solution with a proved Stark
