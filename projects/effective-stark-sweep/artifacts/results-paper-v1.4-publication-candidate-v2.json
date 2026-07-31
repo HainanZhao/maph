@@ -1,0 +1,103 @@
+{
+  "schema": "effective-stark-results-paper-v1.4-publication-candidate-v2",
+  "recorded_at_utc": "2026-07-31T00:00:00Z",
+  "status": "PRE_DOI_STAGED_BLOCKED_ON_ZENODO_TOKEN_AND_EXPLICIT_APPROVAL",
+  "supersedes": "artifacts/results-paper-v1.4-publication-candidate-v1.json",
+  "claim_boundary": {
+    "local_archive_frozen": true,
+    "external_deposition_created": false,
+    "doi_reserved": false,
+    "publication_action_taken": false,
+    "published_v1_3_remote_files_modified": false,
+    "main_source_change_from_v1_3": "exactly one bibliography line: Tangedal--Young pages 1022--1045 corrected to 1045--1061"
+  },
+  "concept_doi": "10.5281/zenodo.21703305",
+  "current_public_version": {
+    "version": "1.3",
+    "doi": "10.5281/zenodo.21708121"
+  },
+  "proposed_version": "1.4",
+  "metadata": {
+    "path": "artifacts/zenodo-results-record-metadata-v6.json",
+    "sha256": "aa4203ac9ba2abc5ea440ff06b15929fd64b1b7443a93761ffb9fe0b716b2e85"
+  },
+  "proposed_top_level_files": [
+    {
+      "filename": "effective-stark-results.pdf",
+      "source": "paper/effective-stark-results.pdf",
+      "bytes": 396825,
+      "sha256": "9ad56d9ab1e2be123f5ddae709c5d9efa6fefbdad77989d33a48bca90e145d8c",
+      "unchanged_from_v1_3": false
+    },
+    {
+      "filename": "effective-stark-results.tex",
+      "source": "paper/effective-stark-results.tex",
+      "bytes": 62670,
+      "sha256": "5fd43c986c70459cfcd6a347511d780d03374527153701a4137cb6fcc85e1b93",
+      "unchanged_from_v1_3": false
+    },
+    {
+      "filename": "effective-stark-results-supplement.pdf",
+      "source": "paper/effective-stark-results-supplement.pdf",
+      "bytes": 158156,
+      "sha256": "ae363f2bc59f168194afb71e3dde7c6caf4e7550e061d64afe685f74448a685f",
+      "unchanged_from_v1_3": true
+    },
+    {
+      "filename": "effective-stark-results-supplement.tex",
+      "source": "paper/effective-stark-results-supplement.tex",
+      "bytes": 6184,
+      "sha256": "1d02df5032660c7e6e6351e6d4a8ecd2781e344f2f47dc57986acfc0e6085ba9",
+      "unchanged_from_v1_3": true
+    },
+    {
+      "filename": "effective-stark-results-supplement-rq000013-addendum.pdf",
+      "source": "paper/effective-stark-results-supplement-rq000013-addendum.pdf",
+      "bytes": 157079,
+      "sha256": "0e1e617982ca0405370e8065dbd103c360ad6dbb8983b7ba995ccabf007ed164",
+      "unchanged_from_v1_3": false
+    },
+    {
+      "filename": "effective-stark-results-supplement-rq000013-addendum.tex",
+      "source": "paper/effective-stark-results-supplement-rq000013-addendum.tex",
+      "bytes": 3435,
+      "sha256": "41681f92d106a9bb58b5299458d6075899d38151f6857cf8481d6137e7c02189",
+      "unchanged_from_v1_3": false
+    },
+    {
+      "filename": "effective-stark-results-companion-v16.tar.gz",
+      "source": "dist/effective-stark-results-companion-v16.tar.gz",
+      "bytes": 3664259,
+      "sha256": "9e4169375bf862f3d934d7dba0e2dff1c40de54bcecafb59beb3695027415b73",
+      "unchanged_from_v1_3": false
+    }
+  ],
+  "prepublication_gates": {
+    "engine_c_sigma_positive_reaudit": "PASS_VERSIONED_V2",
+    "withdrawn_orientation_replay_correction": "PASS_INCLUDED",
+    "rq000013_exact_replay": "PASS",
+    "track_a2_exact_source_diff": "PASS_ONE_BIBLIOGRAPHY_LINE",
+    "main_paper_independent_triple_builds_byte_identical": "PASS",
+    "main_paper_latex_warnings": 0,
+    "addendum_two_builds_byte_identical": "PASS",
+    "addendum_latex_warnings": 0,
+    "v16_built_twice_byte_identically": "PASS",
+    "v16_extracted_archive_replay": "PASS",
+    "full_effective_stark_unit_suite": "PASS_141_OF_141",
+    "dedekind_manifest": "PASS",
+    "dedekind_unit_suite": "PASS_21_OF_21",
+    "published_v1_3_hash_regression": "PASS",
+    "remote_commit_ahead_check": "PASS_NONE_AT_PRE_DOI_FREEZE_REFRESH_AGAIN_BEFORE_RELEASE"
+  },
+  "remaining_sequence": [
+    "obtain ZENODO_TOKEN and explicit approval to create a new version",
+    "inspect current deposition state before any mutation",
+    "reserve the v1.4 DOI without publishing",
+    "insert the reserved DOI into addendum source and metadata",
+    "compile all changed PDFs twice and rebuild the final archive twice",
+    "refresh git fetch and remote-ahead check",
+    "show final files, metadata, and checksums for immediate publish approval",
+    "upload metadata and files, verify remote checksums, then publish",
+    "record the returned DOI and immutable remote checksums"
+  ]
+}

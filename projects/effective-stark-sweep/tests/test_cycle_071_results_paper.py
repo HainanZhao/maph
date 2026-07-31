@@ -43,13 +43,13 @@ class ResultsPaperMajorRevisionTests(unittest.TestCase):
         self.assertIn("RESULTS_PAPER_FULL_AUDIT=PASS", completed.stdout)
 
     def test_full_freeze_hashes(self):
-        freeze = load("artifacts/results-paper-full-freeze-v10.json")
+        freeze = load("artifacts/results-paper-full-freeze-v11.json")
         self.assertEqual(
             freeze["status"],
-            "PUBLISHED_ZENODO_V1_3_ENGINE_A_COMPLEXITY_AND_PEELING",
+            "LOCAL_V1_4_PRE_DOI_CORRECTION_FREEZE",
         )
         self.assertEqual(
-            freeze["supersedes"], "artifacts/results-paper-full-freeze-v9.json"
+            freeze["supersedes"], "artifacts/results-paper-full-freeze-v10.json"
         )
         manuscript = freeze["primary_manuscript"]
         self.assertEqual(sha(manuscript["tex"]), manuscript["tex_sha256"])
@@ -71,12 +71,14 @@ class ResultsPaperMajorRevisionTests(unittest.TestCase):
             sha(companion["local_freeze"]), companion["local_freeze_sha256"]
         )
         publication = freeze["publication"]
-        self.assertEqual(publication["doi"], "10.5281/zenodo.21708121")
-        self.assertTrue(publication["top_level_pdf_and_tex"])
+        self.assertEqual(
+            publication["current_public_doi"], "10.5281/zenodo.21708121"
+        )
+        self.assertIsNone(publication["reserved_doi"])
+        self.assertFalse(publication["publication_action_taken"])
         self.assertEqual(
             sha(publication["metadata"]), publication["metadata_sha256"]
         )
-        self.assertEqual(sha(publication["record"]), publication["record_sha256"])
 
     def test_cm_theorem_and_nonclaim_boundaries(self):
         paper = (ROOT / "paper/effective-stark-results.tex").read_text()
@@ -230,6 +232,11 @@ class ResultsPaperMajorRevisionTests(unittest.TestCase):
         self.assertIn("Supplementary Table~S3", prose)
         self.assertIn(r"\cite{Zhao45}", paper)
         self.assertIn(r"\cite{Zhao78}", paper)
+        self.assertIn(
+            r"J.\ Number Theory \textbf{133} (2013), 1045--1061",
+            paper,
+        )
+        self.assertNotIn("1022--1045", paper)
         self.assertIn(
             "That order-eight packet is not repeated in the selected tables",
             prose,

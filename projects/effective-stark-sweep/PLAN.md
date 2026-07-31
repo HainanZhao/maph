@@ -1,7 +1,7 @@
 # Effective-Stark master plan
 
 **Role:** authoritative project map and execution ledger  
-**Last reconciled:** 2026-07-30 UTC  
+**Last reconciled:** 2026-07-31 UTC
 **Prior checkpoint:** `c5fa6657db302f8f180bf3e1b435ac83dc5b1be3`  
 **Historical evidence:** `docs/cycle-*.md`, `artifacts/*.json`, and preserved
 failed transcripts
@@ -77,10 +77,12 @@ case-level PROVED corpus entry
 | Track | State | Current fact | Controlling evidence / file |
 |---|---|---|---|
 | Results paper | `PUBLISHED` | v1.3 adds the exact Engine-A cost anatomy and mixed-support peeling; published at DOI 10.5281/zenodo.21708121 | `paper/effective-stark-results.tex`, `artifacts/zenodo-results-publication-v4.json` |
-| Results-paper audit | `BANKED` | Full A/B/C audit and compact companion replay pass, including exact Engine-A degeneracy and Engine-C Fourier-convention audits | `artifacts/results-paper-full-referee-audit-v2.json` |
+| Results v1.4 correction | `HUMAN` | Local pre-DOI freeze includes the withdrawn orientation-replay record, RQ-000013, and the exact Track-A2 pagination correction; DOI reservation/publication awaits credentials and explicit approval | `artifacts/results-paper-v1.4-publication-candidate-v2.json`, `dist/effective-stark-results-companion-v16.tar.gz` |
+| Results-paper audit | `BANKED` | Versioned full A/B/C prepublication audit and extracted companion replay pass, including exact Engine-A degeneracy and the sigma-positive Engine-C re-audit | `artifacts/results-paper-referee-audit-v3.json`, `artifacts/engine-c-fourier-convention-correction-v2.json` |
 | Genuine routing census v5 | `BANKED` | 8,200/8,200 genuine screens; proxy recovery complete | `artifacts/full-census-yield-declaration-v5.json` |
 | Census-paper range | `BANKED` | Existing maximal-order universe frozen: squarefree radicands 2--200, ideal norm at most 100, 8,200 conjugacy representatives | `data/census-paper-preregistration-v1.json` |
 | Census-paper Layer 0 | `BANKED` | Clean PARI enumeration reproduced the backbone; support-first split is T/Q/H = 3,936/1,560/2,704 | `artifacts/census-paper-layer0-reconciliation-v1.json` |
+| Worked imprimitive Engine-A row | `BANKED` | RQ-000013 has exact \(E_\chi=2\), \(I_\chi=2\), and packet \(X_{[0]}=u^2,\ X_{[1]}=u^{-2}\) | `artifacts/rq000013-engine-a-imprimitive-certificate-v1.json` |
 | Census manuscript | `ACTIVE` | Execution plan and older Markdown research draft exist; no journal LaTeX/PDF yet | `docs/census-paper-execution-plan-v1.md`, `paper/effective-stark-sweep-draft.md` |
 | Engine-B occurrence transport | `READY` | Gates case-level transported `PROVED` claims, not structural T/Q/H statistics; scope must be regenerated from v5 | `docs/cycle-070-genuine-census-v5.md` |
 | W4 census analysis | `READY` | Support-first finite-range analysis may run; transported-case and safe-exponent claims remain gated separately | `artifacts/census-paper-layer0-reconciliation-v1.json` |
@@ -266,6 +268,17 @@ State: `ACTIVE`
       Engine-A queue statistics to a separate supplement.
 - [x] Deposit the companion archive under a public immutable
       identifier and put that identifier in the manuscript.
+- [x] Preserve the later five-control direct/inverse circularity
+      finding and build a deterministic v1.4 correction layer.
+- [x] Audit Track A2 against the immutable v1.3 source: retain the
+      historical back-reference, companion-paper anchor citations, and
+      Tate/Arakawa/Roblot scope paragraph; correct Tangedal--Young
+      pages 1022--1045 to 1045--1061.
+- [x] Replace legacy auditors that rewrote v1 records with versioned
+      Engine-C v2 and full-referee v3 successor artifacts.
+- [ ] Reserve the v1.4 DOI, insert it into the addendum and metadata,
+      rebuild twice, obtain immediate explicit publication approval,
+      and publish the correction layer.
 - [ ] Conduct a new Papers-I/II-style referee pass over every displayed
       theorem, polynomial, exponent, height margin, and citation.
 - [ ] Resolve every resulting mathematical issue.
@@ -298,8 +311,10 @@ State: `ACTIVE`
 - [ ] Build the row-level exact Q corpus under the uniform theorem.
 - [x] Preselect RQ-000013 as the first one-character, one-removed-prime,
       nonzero imprimitive branch, hence the worked \(E_\chi=2\) row.
-- [ ] Complete and print RQ-000013's exact unit/index calculation;
-      share its certificate with the results-paper supplement.
+- [x] Complete and print RQ-000013's exact unit/index calculation;
+      share its certificate with the census draft and a versioned,
+      locally staged results-paper supplement addendum. The published
+      v1.3 files remain immutable pending authorization for a new version.
 - [ ] Run the preregistered independent 50-row Arb audit.
 - [ ] Build the support-order/Engine-B/Engine-C/Roblot/resolution
       matrix for all 2,704 H rows.
@@ -508,6 +523,14 @@ The next block should not start five theorem projects simultaneously.
 
 No additional isolated W3 case outranks T1 unless it is a necessary
 control or counterexample for T1/T2.
+
+## Recent execution ledger
+
+| Cycle | Finding | Status | Evidence |
+|---:|---|---|---|
+| 078 | RQ-000013 closes the first preregistered nonzero imprimitive Engine-A branch with exact \(E_\chi=I_\chi=2\) and \(X_{[0]}=u^2,\ X_{[1]}=u^{-2}\); the `bnrL1` comparison remains quarantined | `BANKED`, `PROVED` | `docs/cycle-078-rq000013-imprimitive-engine-a.md`, `artifacts/rq000013-engine-a-imprimitive-certificate-v1.json` |
+| 079 | Public v1.3 was found to predate the withdrawn oriented-replay correction; deterministic v1.4 layer built and extracted replay passed, but no DOI was reserved or published | `CONTAINED_CORRECTION`, `HUMAN` | `docs/cycle-079-results-v1.4-correction-staging.md`, `artifacts/results-paper-v1.4-publication-candidate-v1.json` |
+| 080 | Exact comparison with immutable v1.3 found the requested wording already present but exposed the incorrect Tangedal--Young pages; the one-line correction, versioned auditors, full replay, and deterministic companion v16 are locally frozen | `CONTAINED_BIBLIOGRAPHIC_CORRECTION`, `HUMAN` | `docs/cycle-080-results-track-a2-correction.md`, `artifacts/results-paper-v1.4-publication-candidate-v2.json` |
 
 ## Standing integrity rules
 

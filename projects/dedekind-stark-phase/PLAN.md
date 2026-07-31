@@ -7,7 +7,8 @@ Last reconciled: 2026-07-31 UTC
 **Status:** original mechanism
 `FINISHED_WITH_VERIFIED_NO_GO_FOR_FROZEN_MECHANISM`; Roblot phase
 clarification theorem `PROVED`, census screen
-`BLOCKED_BEFORE_TARGET_OPENING`.
+`BLOCKED_BEFORE_TARGET_OPENING`; withdrawn-replay correction
+`LOCALLY_STAGED_FOR_RESULTS_V1.4_NOT_YET_PUBLIC`.
 
 This file is the authoritative project memory. Read it completely before
 reopening any branch.
@@ -227,6 +228,7 @@ because they constrain later work.
 | 067 | Census population audit: the 2,704-row H-stratum exists, but the genuine Roblot-eligibility column has not been constructed | BLOCKED_INPUT | `docs/quartic-census-readiness-audit-v1.md` |
 | 068 | Rigorous-evaluator audit: \(L'\) balls exist, but weak-unit Fourier coefficients are point evaluations, not Arb balls | BLOCKED_INPUT | same, `artifacts/quartic-census-readiness-audit-v1.json` |
 | 069 | Phase census halted before target opening under the preregistered population/evaluator gates | GATED_STOP | same |
+| 070 | Long Roblot outreach draft prepared with three falsifiable questions, AI disclosure, replay hash, the exact \(\mu_4\) corollary, and the withdrawn-orientation boundary; no message sent | DRAFTED_NOT_SENT | `docs/roblot-email-long-draft-v1.md` |
 
 ## Final synthesis
 
@@ -279,10 +281,23 @@ Dedekind/squared-multiplier explanation is closed.
 
 ## Next authorized action
 
-Return to the census screen only after the census project has banked a
-genuine Roblot-eligible quartic population, this project has an
-anchor-validated Arb weak-coefficient evaluator, and exact Artin
-transport fixes the analytic orientation before \(L'\) is read.
+For the correction/publication lane, reserve and publish the prepared
+results v1.4 correction layer only after credentials and explicit
+human approval are available; evidence is in
+`../effective-stark-sweep/docs/cycle-079-results-v1.4-correction-staging.md`
+and its Track-A2 successor
+`../effective-stark-sweep/docs/cycle-080-results-track-a2-correction.md`.
+The controlling pre-DOI candidate is
+`../effective-stark-sweep/artifacts/results-paper-v1.4-publication-candidate-v2.json`.
+The long Roblot draft is `docs/roblot-email-long-draft-v1.md`; replace
+its DOI placeholder and recheck the recipient address only after the
+correction release is public, then send through an authorized mail
+channel.
+
+For research, return to the census screen only after the census project
+has banked a genuine Roblot-eligible quartic population, this project
+has an anchor-validated Arb weak-coefficient evaluator, and exact
+Artin transport fixes the analytic orientation before \(L'\) is read.
 
 ## Tags
 
