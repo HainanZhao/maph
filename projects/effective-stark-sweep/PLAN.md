@@ -81,13 +81,15 @@ case-level PROVED corpus entry
 | Results v1.5 integration | `BANKED` | Public v1.5 merges RQ-000013 into the 19-page main paper, omits the standalone addendum at deposit root, and verifies `effective-stark-results-00-main-paper.pdf` as the default preview | `artifacts/zenodo-results-publication-v6.json`, `docs/cycle-084-results-v1.5-publication.md` |
 | Results-paper audit | `BANKED` | Versioned full A/B/C audit and extracted companion replay pass, including exact Engine-A degeneracy and the sigma-positive Engine-C re-audit | `artifacts/results-paper-referee-audit-v4.json`, `artifacts/engine-c-fourier-convention-correction-v3.json` |
 | Genuine routing census v5 | `BANKED` | 8,200/8,200 genuine screens; proxy recovery complete | `artifacts/full-census-yield-declaration-v5.json` |
-| Census-paper range | `BANKED` | Existing maximal-order universe frozen: squarefree radicands 2--200, ideal norm at most 100, 8,200 conjugacy representatives | `data/census-paper-preregistration-v1.json` |
+| Census-paper range | `BANKED_CORRECTED_BOUNDARY` | Amendment v18 preserves all 8,200 rows and defines them as finite-ideal conjugacy orbits followed by the pinned \(\infty_2\) choice; they are not the full orbit set of all pointed one-place moduli | `data/census-paper-preregistration-amendment-v18.json`, `artifacts/census-paper-referee-revision-v1.json` |
 | Census-paper Layer 0 | `BANKED` | Clean PARI enumeration reproduced the backbone; support-first split is T/Q/H = 3,936/1,560/2,704 | `artifacts/census-paper-layer0-reconciliation-v1.json` |
 | Census packet synthesis | `BANKED` | Compositum-free trace descent, the RQ-000245 proper-image gate, and all 1,560 exact Q-row packet polynomials pass; the corpus hash-chain root is `7c04242b1d4c11293af96f83f4915dbed25f6125c60d82965e533df5c9d81855` | `artifacts/census-q-packet-corpus-audit-v1.json`, `docs/cycle-087-census-q-packet-corpus.md` |
+| Quadratic Euler-degeneracy theorem | `BANKED` | The deleted-prime cover criterion proves that a quadratic-support packet is one exactly when every supported character has a deleted prime of primitive-character value +1.  It classifies all 346 frozen rows with zero errors.  The apparent four-support obstruction is refuted exactly at norm 252 over Q(sqrt(7)) | `artifacts/q-euler-deleted-prime-cover-theorem-v1.json`, `docs/cycle-128-q-euler-deleted-prime-cover-theorem.md` |
 | Census coefficient-height cap | `BANKED` | The height predictor observed 89 digits, the frozen cap is 256 digits, and the exact corpus maximum is 62 digits | `artifacts/census-packet-height-calibration-v1.json`, `artifacts/census-q-packet-corpus-audit-v1.json` |
 | Census H taxonomy | `ACTIVE_COMPLETION` | The 2,704-row H matrix and per-order frontier are assembled.  V2 corrects its displayed index provenance; five legacy quartic kernels remain incomplete while a separately preregistered completion run is active | `artifacts/census-h-taxonomy-v2.json`, `docs/cycle-092-h-taxonomy-index-provenance-correction.md`, `docs/cycle-093-quartic-completion-preregistration.md` |
 | Worked imprimitive Engine-A row | `BANKED` | RQ-000013 has exact \(E_\chi=2\), \(I_\chi=2\), and packet \(X_{[0]}=u^2,\ X_{[1]}=u^{-2}\) | `artifacts/rq000013-engine-a-imprimitive-certificate-v1.json` |
-| Census manuscript | `BANKED_LOCAL_COMPLETION` | The standalone five-page LaTeX/PDF states the exact finite T/Q/H census, twelve exact Engine-B transports, exact no-go screens, and the preserved H frontier; it remains local, unsubmitted, and not published | `paper/effective-stark-census.tex`, `paper/effective-stark-census.pdf`, `docs/cycle-126-b5025-label-aware-ledger-successor.md` |
+| Census manuscript | `BANKED_LOCAL_THEOREM_REVISION` | The eight-page manuscript now proves the quadratic deleted-prime cover criterion, reports its zero-error 346-row corollary, and preserves the norm-252 four-support counterexample.  All three manuscript/theorem audits and all 174 tests pass; every page is visually checked.  Publication remains halted because the census paper has no immutable DOI | `paper/effective-stark-census.tex`, `artifacts/census-paper-theorem-revision-v2.json`, `docs/cycle-128-q-euler-deleted-prime-cover-theorem.md` |
+| Census Zenodo release | `PUBLISHED_AND_PUBLICLY_VERIFIED` | Version 1.0 is public at DOI `10.5281/zenodo.21729947`; all three downloads match frozen hashes and the main paper is the default preview | `docs/cycle-129-census-zenodo-publication.md`, `artifacts/zenodo-census-publication-v1.json` |
 | Engine-B occurrence transport | `ACTIVE_COMPLETION` | Twelve exact noncanonical transports are sealed, including the B5-025 `Mat(5)` correction.  B5-086/B5-021/B5-033 retain exact no-go screens; 220 member transports remain open under other routes | `artifacts/engine-b-transport-ledger-v4.json`, `artifacts/b5025-label-aware-transports-v1.json`, `artifacts/final-direct-source-coprime-screen-v1.json` |
 | W4 census analysis | `BANKED_WITH_SCOPE_GATES` | All five preregistered descriptive slices are replayed: the 51-closure certified safe-exponent scope and the 1,560-row Q family corpus are exact; the v5 tower slice correctly reports zero completed transports and infers no recurrence | `artifacts/w4-genuine-index-distribution-v1.json`, `artifacts/w4-frontier-norm-v1.json`, `artifacts/w4-completion-v1.json` |
 | DST / Cohen--Roblot comparison | `BANKED_FOR_FOUR_OBJECT_CONTROLS` | Primary-source theorem boundaries are read and four exact Hilbert/ray controls give three containments and one noncontainment; a row-level theorem-hypothesis map remains open | `docs/prior-art-overlap-table-v3.md`, `docs/cycle-105-prior-art-object-controls.md` |
@@ -328,7 +330,17 @@ State: `ACTIVE`
 
 - [x] Freeze the existing maximal-order range and the RQ registry:
       squarefree radicands \(2\le D\le200\), integral-ideal norm at
-      most 100, conjugate one-place pairs identified.
+      most 100, finite ideals deduplicated under field conjugation and
+      then paired with the pinned \(\infty_2\) place.
+- [x] Issue the Cycle-127 range-description amendment: the 8,200 rows
+      are a canonical selected-modulus census, not the full quotient of
+      all pointed one-place moduli.  Do not change the frozen RQ rows.
+- [x] Correct the manuscript's false empty-support/trivial-packet
+      biconditional: empty support is sufficient, while 346 nonempty-Q
+      rows also evaluate to the value-one packet through Euler zeros.
+- [x] Replace the complete-H wording by the exact boundary: 2,699 rows
+      have complete registered-mechanism status and five quartic rows
+      remain tool-incomplete.
 - [x] Preserve the historical degree-32 exact-resultant cap and freeze
       the deterministic 50-row independent analytic audit.
 - [x] Supersede the compositum-degree cap by a versioned trace-descent
@@ -388,8 +400,12 @@ State: `ACTIVE`
   3. safe-exponent growth;
   4. packet-polynomial families;
   5. tower and norm-compatibility signals.
-- [ ] Tag pattern discovery as `CONJECTURAL` until an exact theorem is
+- [x] Tag pattern discovery as `CONJECTURAL` until an exact theorem is
       proved.
+- [x] Characterize the 346 quadratic-support value-one rows from exact
+      deleted-prime local data under Cycle 128; preserve every failed
+      coarse simplification and promote only a bound-independent
+      Euler-factor theorem.
 - [x] Complete the primary-source theorem boundary and the
       preregistered four-control DST / Cohen--Roblot object table.
 - [ ] Run any future row-level theorem-hypothesis comparison as a
@@ -625,6 +641,9 @@ control or counterexample for T1/T2.
 | 122 | Local census completion audit passed under the then-recorded identity-label screen, with ten exact members and 222 explicit unpromoted members.  Its direct-source exhaustion sentence is superseded by Cycle 123; its build/audit results otherwise remain valid | `SUPERSEDED_SCOPE`, exact transport claims unchanged | `docs/cycle-122-local-census-completion-audit.md`, `docs/cycle-123-b5025-label-aware-correction.md` |
 | 123 | Cross-batch comparison corrects the transport-route scope: RQ-000221 and RQ-000228 passed every B5-025 gate except its pre-Cycle-118 identity-generator restriction, and have exact source-coprime `Mat(5)` maps.  They are candidates, not yet promoted; B5-025 source-prime exclusions remain preserved | `CORRECTION_ACTIVE`, no new packet verdict | `artifacts/b5025-transport-geometry-v1.json`, `docs/cycle-118-b5022-label-aware-transport-proof.md`, `docs/cycle-123-b5025-label-aware-correction.md` |
 | 124–126 | The frozen B5-025 label-aware correction batch validates its sealed source, records exact prime-ray logs and `Mat(5)` Artin labels, and promotes RQ-000221 and RQ-000228.  The successor ledger has twelve completed and 220 explicit open transports; source-prime exclusions remain unpromoted | `BANKED`, `PROVED_EXACT_MEMBER_TRANSPORT_BATCH` | `data/census-paper-preregistration-amendment-v17.json`, `artifacts/b5025-label-aware-transports-v1.json`, `artifacts/engine-b-transport-ledger-v4.json`, `docs/cycle-126-b5025-label-aware-ledger-successor.md` |
+| 127 | Referee review exposed and corrected three claim-boundary errors without changing a frozen row: the 8,200-row universe is the finite-ideal conjugacy quotient with pinned \(\infty_2\), empty support is sufficient but not necessary for the value-one packet, and only 2,699 of 2,704 H rows have complete registered-mechanism status.  The repaired seven-page manuscript prints the exact H cross-table, twelve transports, numerical bounds, proof sketches, and prior-theorem boundary.  Both manuscript audits and all 173 tests pass; publication remains contained for lack of a census-paper DOI | `BANKED_LOCAL_CORRECTION`, no census count changed | `data/census-paper-preregistration-amendment-v18.json`, `artifacts/census-paper-referee-revision-v1.json`, `docs/cycle-127-census-referee-revision.md` |
+| 128 | The quadratic deleted-prime cover criterion is proved from the imprimitive Euler product, nonvanishing of the remaining rank-one factor, and exact Fourier inversion.  It classifies all 346 nonempty-support value-one rows with zero errors and permits a pre-regulator decision.  Coarse unlabeled patterns fail.  A preregistered expanded search refutes universal four-support nondegeneracy at norm 252 over \(\mathbb Q(\sqrt7)\).  The first proof replay also caught and contained a mutated-preregistration hash; restored and versioned v2 successors pass.  The revised eight-page paper and all 174 tests pass | `BANKED`, `PROVED_DELETED_PRIME_COVER`; four-support claim `REFUTED` | `artifacts/q-euler-deleted-prime-cover-theorem-v1.json`, `artifacts/census-paper-theorem-revision-v2.json`, `docs/cycle-128-q-euler-deleted-prime-cover-theorem.md` |
+| 129 | Census paper v1.0 was published under the standing Zenodo authorization at DOI `10.5281/zenodo.21729947`.  The frozen three-file inventory is public; independent DOI-bearing PDF and companion builds are byte-identical, the fresh extracted replay passes, all 174 live tests pass, every public download matches local bytes/MD5/SHA-256, and Zenodo selects the lexically first main PDF as the default preview.  The initial PDF build without a frozen epoch failed byte identity and is preserved in the release candidate record; the corrected `SOURCE_DATE_EPOCH` build passes | `PUBLISHED_AND_PUBLICLY_VERIFIED`; theorem tags unchanged | `docs/cycle-129-census-zenodo-publication.md`, `artifacts/zenodo-census-publication-v1.json`, `artifacts/census-paper-release-candidate-v1.json` |
 
 ## Standing integrity rules
 

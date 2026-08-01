@@ -1,0 +1,106 @@
+{
+  "corpus_chain_sha256": "7c04242b1d4c11293af96f83f4915dbed25f6125c60d82965e533df5c9d81855",
+  "falsification_result": {
+    "counterexample": {
+      "base_radicand": 7,
+      "case_id": "XQ-D007-N252-42-0-0-6",
+      "characters": [
+        {
+          "deleted_prime_values": [
+            -1,
+            -1,
+            1
+          ],
+          "ray_character": "[3, 0, 0]"
+        },
+        {
+          "deleted_prime_values": [
+            1,
+            -1
+          ],
+          "ray_character": "[0, 1, 0]"
+        },
+        {
+          "deleted_prime_values": [
+            1
+          ],
+          "ray_character": "[3, 0, 1]"
+        },
+        {
+          "deleted_prime_values": [
+            -1,
+            1
+          ],
+          "ray_character": "[0, 1, 1]"
+        }
+      ],
+      "claim_tag": "PROVED",
+      "conclusion": "four supported characters and four zero Euler products",
+      "finite_ideal_hnf": [
+        [
+          42,
+          0
+        ],
+        [
+          0,
+          6
+        ]
+      ],
+      "finite_norm": 252,
+      "ray_cyc": "[6, 2, 2]",
+      "sign_log": "[3, 1, 0]"
+    },
+    "status": "REFUTED",
+    "withdrawn_candidate": "four supported quadratic characters prevent total Euler degeneracy"
+  },
+  "finite_census_corollary": {
+    "all_zero_rows": 346,
+    "all_zero_support_histogram": {
+      "1": 296,
+      "2": 50
+    },
+    "character_level_false_negatives": 0,
+    "character_level_false_positives": 0,
+    "claim_tag": "PROVED",
+    "deleted_prime_occurrences": 1516,
+    "least_all_zero_case_id": "RQ-000025",
+    "packet_polynomial_equivalence_errors": 0,
+    "row_level_false_negatives": 0,
+    "row_level_false_positives": 0,
+    "rows": 1560,
+    "split_deleted_prime_occurrences": 699,
+    "support_histogram": {
+      "1": 1002,
+      "2": 501,
+      "4": 57
+    },
+    "supported_character_occurrences": 2232,
+    "zero_euler_character_occurrences": 672
+  },
+  "schema": "effective-stark-q-euler-deleted-prime-cover-theorem-v1",
+  "source_hashes": {
+    "artifacts/census-q-packet-corpus-audit-v1.json": "cb903f368f7aa01a12b6af60b964d316d70cdbf040d358ca92a00f867e326824",
+    "artifacts/census-q-packets-v1/manifest.json": "3a6d2d16cbc06ff7ecebddf2e5038ebbc6810f3ea87a1dc8d8713742d19f2d4d",
+    "artifacts/engine-a-euler-degeneracy-v1.json": "f4ead3438d3b305fa42e73e1d979530a04104ce8d642db0b1c9ac85929bac033",
+    "discovery/export_q_euler_local_features.gp": "d02a57114a1dbe48b76f25c67a1ef3f48f1a22e2bc225fc1473ae7d9528036a4",
+    "discovery/q-euler-local-features-v1.json": "94146844206b96723957333e42ecfa763706f90829eb68cd91b9e8dcfc5ace6d",
+    "discovery/q-euler-pattern-analysis-v2.json": "2681cd03a7001b73234de03d5f794d5aca3158741b839b4931160966165fd626",
+    "discovery/q-four-support-counterexample-search-v2.json": "f34a04e1d8ca2bba5c79f1b0eb679c5ca5a45689bfecdc4a3a503b684a6e98f5",
+    "docs/cycle-128-q-euler-degeneracy-pattern-preregistration.md": "b74a6a3b5852b17e854306041f8c5e581dfc710c35f64942e0cdba4199482be5",
+    "proof/audit_q_euler_deleted_prime_cover.py": "b7ddfdbb23103e939e2f29dd619aa2e620999c46da21cf38f5e2c7c7d1217d92"
+  },
+  "status": "PASS_PROVED_THEOREM_AND_FINITE_COROLLARY",
+  "theorem": {
+    "claim_tag": "PROVED",
+    "equivalent_conditions": [
+      "X_A=1 for every ray class A",
+      "every supported imprimitive derivative L'_m(0,chi) is zero",
+      "E_chi=0 for every supported chi",
+      "the deleted split-prime sets cover every supported chi"
+    ],
+    "name": "quadratic deleted-prime cover criterion",
+    "proof_route": "quadratic imprimitive Euler product, positivity/nonvanishing of the remaining class-number/regulator factor, and exact Fourier inversion on the ray class group",
+    "range_dependence": "none beyond the quadratic-support hypotheses",
+    "statement": "In the quadratic-support regime, the entire positive packet is value one if and only if every supported character has a prime deleted from the selected modulus at which its primitive quadratic character has value +1."
+  }
+}

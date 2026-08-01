@@ -1,0 +1,43 @@
+{
+  "schema": "effective-stark-census-paper-preregistration-amendment-v18",
+  "status": "FROZEN_REFEREE_CORRECTION_BEFORE_REVISED_MANUSCRIPT_RESULTS",
+  "recorded_at_utc": "2026-07-31T00:00:00Z",
+  "supersedes_wording_only": "data/census-paper-preregistration-v1.json",
+  "preserves_frozen_rows": true,
+  "correction": {
+    "error": "The manuscript described the 8200 rows as the quotient of pointed one-place moduli by conjugation.",
+    "cause": "The actual enumerator first replaces each finite ideal by the lexicographically smaller normalized HNF of the ideal and its field conjugate, and only then attaches the pinned infinity_2 place.",
+    "correct_universe": "For each squarefree radicand 2 through 200, take every nonzero integral ideal of norm at most 100, quotient finite ideals by field conjugation, choose the lexicographically least normalized HNF in each orbit, and attach the pinned infinity_2 place in the frozen embedding convention.",
+    "excluded_claim": "The 8200 rows are not asserted to be the full isomorphism-class quotient of all pairs (finite ideal, distinguished real place).",
+    "counts_unchanged": true,
+    "raw_ideal_count": 13939,
+    "self_conjugate_raw_ideal_count": 2461,
+    "nonself_conjugate_raw_ideal_count": 11478,
+    "finite_ideal_orbit_count": 8200,
+    "count_identity": "2461 + 11478/2 = 8200"
+  },
+  "support_correction": {
+    "withdrawn": "empty differenced Fourier support is exactly the value-one packet condition",
+    "replacement": "empty support implies the value-one packet; the converse fails in the frozen range because 346 nonempty quadratic-support rows have every supported derivative annihilated by imprimitive Euler factors"
+  },
+  "higher_order_boundary": {
+    "H_rows": 2704,
+    "complete_registered_mechanism_rows": 2699,
+    "incomplete_legacy_quartic_rows": 5,
+    "forbidden_wording": "complete exact mechanism eligibility for every H row"
+  },
+  "required_replay_gates": [
+    "python3 scripts/audit_census_paper.py",
+    "python3 scripts/audit_census_referee_revision.py",
+    "python3 -m unittest discover -s tests"
+  ],
+  "source_hashes": {
+    "data/census-paper-preregistration-v1.json": "a9d9a4941e218d6b86aac2c1fa5ce34af1eb4e588b69e8a18123fc90f1d8c1af",
+    "artifacts/frozen-ideal-census-v1.json": "9fa0f1880ca0c2d263e0235bd4ed83e8e6001b88bfede0927a7197f46f7d4563",
+    "scripts/enumerate_frozen_ideals.py": "1a13e37fb4f0cfe832c8ab61cf998203eed567a87727f3210cb10aa8387525af",
+    "artifacts/census-h-taxonomy-v2.json": "616e3fa91204d7f3f458c32a076a9b33c9b42bfb7fddcb37a30c430eaac6577e",
+    "artifacts/census-q-packet-corpus-audit-v1.json": "cb903f368f7aa01a12b6af60b964d316d70cdbf040d358ca92a00f867e326824",
+    "artifacts/census-q-arb-audit-v1.json": "85f2b5d28933d5d6262be58bf1cf4561e4d41b2233a87e7188fbf8ff2167d4e8",
+    "artifacts/engine-b-transport-ledger-v4.json": "ac71534bd47c6b3fc3ccdf339fd246611045d126be09a0dc43a490f3e893a943"
+  }
+}

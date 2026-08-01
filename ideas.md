@@ -5,6 +5,13 @@ part of an active project plan. Entries are hypotheses and research
 programs, not theorem claims. Before promotion, each needs a literature
 audit, an exact statement, and the usual certificate/proof gate.
 
+## Plan index
+
+- [2-elementary TCC stratum sweep](plans/tcc-2-elementary-stratum-sweep.md)
+  — a staged, proof-oriented scan of AFK admissible tuples whose complete
+  one-place ray packet is quadratic.  The scan is not yet run; Phase 0
+  must first lock the AFK modulus and characteristic conventions.
+
 ## 2026-07-30 — Stark phases, recognition, genus constraints, and index two
 
 ### 1. Phase quantization for quartic rank-one Stark units
