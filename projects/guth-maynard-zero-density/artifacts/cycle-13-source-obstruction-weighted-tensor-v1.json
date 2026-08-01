@@ -1,0 +1,285 @@
+{
+  "artifact_id": "cycle-13-source-obstruction-weighted-tensor-v1",
+  "claim_boundary": "This artifact disproves exact full-detector decomposition into fivefold convolutions supported above one and proves a conditional cellwise weighted-moment theorem. It does not prove a zeta density gain, a prime-interval improvement, a source-valid replacement detector, transformed coefficient norms, or a complete envelope.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "balanced": {
+      "admissible": true,
+      "expected_increments": [
+        "2/5",
+        "2/5",
+        "2/5",
+        "2/5",
+        "2/5"
+      ],
+      "extra_lengths": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "2"
+      ],
+      "factor_exponents": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "moments": {
+        "delta_loss": "24/5",
+        "gain": "4/5",
+        "local_rows": "36/5",
+        "tau": "2/5",
+        "tensor_power": "12/5",
+        "universal_tau_upper_bound": "2/5"
+      },
+      "probabilities": [
+        "1/5",
+        "1/5",
+        "1/5",
+        "1/5",
+        "1/5"
+      ],
+      "q": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "tau": "2/5"
+    },
+    "grid": {
+      "best_cell": [
+        "1",
+        "2",
+        "2"
+      ],
+      "best_gain": "4/5",
+      "checked": 1442,
+      "counts_by_factor_number": {
+        "10": 164,
+        "3": 52,
+        "4": 120,
+        "5": 192,
+        "6": 235,
+        "7": 248,
+        "8": 230,
+        "9": 201
+      },
+      "negative_gain": 34,
+      "singleton_admissible": 978,
+      "singleton_failed": 464,
+      "strict_gain": 927,
+      "weakest_positive_cell": [
+        "1/5",
+        "2/5",
+        "3/5",
+        "3/5",
+        "4/5",
+        "6/5",
+        "6/5"
+      ],
+      "weakest_positive_gain": "1/52",
+      "zero_gain": 17
+    },
+    "registered_rough_failure": {
+      "admissible": false,
+      "factor_exponents": [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "3"
+      ],
+      "moments": {
+        "delta_loss": "4",
+        "gain": "-2",
+        "local_rows": "10",
+        "tau": "0",
+        "tensor_power": "2",
+        "universal_tau_upper_bound": "2/5"
+      },
+      "probabilities": [],
+      "q": [],
+      "reason": "A coordinate with y_i>2 has k_i=0 in every admissible pattern, so no positive uniform tau exists.",
+      "tau": "0"
+    },
+    "registered_unbalanced": {
+      "admissible": true,
+      "expected_increments": [
+        "1/3",
+        "1/3",
+        "1/3",
+        "1/3",
+        "1/3"
+      ],
+      "extra_lengths": [
+        "2",
+        "2",
+        "2",
+        "3/2",
+        "3/2"
+      ],
+      "factor_exponents": [
+        "1/2",
+        "1/2",
+        "1",
+        "3/2",
+        "3/2"
+      ],
+      "moments": {
+        "delta_loss": "14/3",
+        "gain": "1/3",
+        "local_rows": "23/3",
+        "tau": "1/3",
+        "tensor_power": "7/3",
+        "universal_tau_upper_bound": "2/5"
+      },
+      "probabilities": [
+        "1/12",
+        "1/12",
+        "1/6",
+        "1/3",
+        "1/3"
+      ],
+      "q": [
+        4,
+        4,
+        2,
+        1,
+        1
+      ],
+      "tau": "1/3"
+    },
+    "source_support": {
+      "conclusion": "A sum of fivefold convolutions whose factors are supported on integers >=2 cannot equal the full detector on any interval containing a prime above the cutoff.",
+      "fivefold_coefficient_at_prime": 0,
+      "fivefold_support_minimum": 32,
+      "mobius_sum": 1,
+      "normalized_prime_coefficient": "(N/p)^sigma exp(-p/T^(1/2)) != 0",
+      "prime_coefficient": "exp(-p/T^(1/2)) != 0",
+      "prime_divisors_below_cutoff": [
+        1
+      ]
+    }
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/weighted_fractional_tensor_v1.py",
+      "sha256": "61d2ad19f57e3fe3a53da5dc1f19fd845e423ff8a2805e4d2c74b7ca793e6fef"
+    },
+    "cycle12_artifact": {
+      "path": "artifacts/cycle-12-balanced-five-factor-v1.json",
+      "sha256": "2c57bd1f621d7474cea68fd07cd8719c0f8f64c4766cf2cd7fbfcd765921d24d"
+    },
+    "document": {
+      "path": "docs/cycle-13-source-obstruction-weighted-tensor-v1.md",
+      "sha256": "bc28eb1bd8007ce7625b1e81ab1aacbb2ba4a505da181ec36c19eb0fe8f44cb8"
+    },
+    "gm_source": {
+      "path": "artifacts/sources/arxiv-2405.20552v2/LargevaluesDirichlet17.tex",
+      "sha256": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428"
+    },
+    "heath_brown_source": {
+      "path": "artifacts/sources/heath-brown-1982-generalized-vaughan-identity.pdf",
+      "sha256": "b32e586d26dac73cb36a4f6dc7c6a7bf08ea5fa88e8ef8b18a8df2d5e849a807"
+    },
+    "preregistration": {
+      "path": "docs/cycle-13-source-obstruction-weighted-tensor-preregistration-v1.md",
+      "sha256": "da127f1d34088bae8217079409f9db2b0fe6f8a7525d220ca1a21934424e5e9b"
+    },
+    "tests": {
+      "path": "tests/test_cycle_13_source_obstruction_weighted_tensor_v1.py",
+      "sha256": "194e6da8840faebc4bdb278d4ad7a47d215f2d871151031681ffe7e08add5526"
+    }
+  },
+  "grid_census": {
+    "best_cell": [
+      "1",
+      "2",
+      "2"
+    ],
+    "best_gain": "4/5",
+    "checked": 1442,
+    "counts_by_factor_number": {
+      "10": 164,
+      "3": 52,
+      "4": 120,
+      "5": 192,
+      "6": 235,
+      "7": 248,
+      "8": 230,
+      "9": 201
+    },
+    "epistemic_status": "PROVED",
+    "negative_gain": 34,
+    "singleton_admissible": 978,
+    "singleton_failed": 464,
+    "strict_gain": 927,
+    "weakest_positive_cell": [
+      "1/5",
+      "2/5",
+      "3/5",
+      "3/5",
+      "4/5",
+      "6/5",
+      "6/5"
+    ],
+    "weakest_positive_gain": "1/52",
+    "zero_gain": 17
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_13_source_obstruction_weighted_tensor_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_13_source_obstruction_weighted_tensor_v1.py",
+    "write_command": "python3 proof/build_cycle_13_source_obstruction_weighted_tensor_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_13_source_obstruction_weighted_tensor_v1.py",
+    "sha256": "f0a14466b7d3d4973d22bd8ad25de3409efcd199150c677c67c04ca0e42970f5"
+  },
+  "singleton_design": {
+    "epistemic_status": "PROVED",
+    "optimality": "NOT_CLAIMED",
+    "registered_unbalanced": "(1/2,1/2,1,3/2,3/2) gives tau=1/3, local exponent 23/3, and gain 1/3.",
+    "statement": "For max y_i<=2, q_i=floor(2/y_i) and weights proportional to 1/q_i give tau=1/sum_i(1/q_i)."
+  },
+  "source_context": {
+    "epistemic_status": "PROVED",
+    "gm_detector": "TeX lines 2309--2315",
+    "gm_normalization": "TeX lines 2328--2330",
+    "heath_brown_scope": "Pinned primary PDF is reconnaissance for a later detector identity; no theorem is imported here."
+  },
+  "source_obstruction": {
+    "epistemic_status": "PROVED",
+    "scope": "Exact full-coefficient equality only; no large-value assertion about the prime remainder.",
+    "statement": "Above the truncation cutoff the current detector has nonzero prime coefficients, while every sum of fivefold convolutions with all factors supported on integers >=2 vanishes at primes."
+  },
+  "source_redesign": {
+    "epistemic_status": "CONJECTURED",
+    "next_gate": "Derive a source-valid product-cell identity for a prime-weighted or logarithmic-derivative detector, prove transformed coefficient norms cell by cell, and control cells with tau<=2/7 or y_i>2."
+  },
+  "status": "SEALED_SOURCE_OBSTRUCTION_CELLWISE_WEIGHTED_GAIN_ROUGH_REMAINDER_OPEN",
+  "weighted_fractional_tensor": {
+    "conditional_on": "For every selected transformed moment, coefficient-square norm <=v^(12+o(1)) and the standard length-v^12 discrete mean-value input.",
+    "design": "A probability distribution on integer increments k with y dot k<=2 and E(k_i)=tau for every i.",
+    "epistemic_status": "PROVED",
+    "local_row_exponent": "10-7tau",
+    "pointwise_identity": "weighted geometric mean |B_k|=|A|^(2+tau)",
+    "strict_gain_criterion": "tau>2/7",
+    "universal_upper_bound": "tau<=2/5"
+  }
+}
