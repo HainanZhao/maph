@@ -1,0 +1,65 @@
+{
+  "artifact_id": "g1-exact-structural-atlas-hostile-audit-v1",
+  "claim_boundary": "OBSERVED hostile audit of G1 exact structural atlas v1. It independently recomputes the frozen rational grid, formulas, residuals, ties, transfer branches, and anchors; it records a runtime and convention-provenance defect. It proves no new large-values, density, short-interval, extremizer, or saturation theorem and is not a G1 route decision.",
+  "convention_provenance": {
+    "epistemic_status": "OBSERVED",
+    "implication": "Current row arithmetic agrees independently, but v1 does not meet the repository single-source convention requirement and future drift could evade a mere row-count check.",
+    "status": "CONTAINED_DUPLICATED_CONVENTION_OBSERVED",
+    "surface": "The atlas redefines s_grid, n_grid, v_grid, and w_grid rather than deriving them from conventions/g1_atlas_v1.py.",
+    "target_imports_conventions_g1_atlas_v1": false
+  },
+  "decision": {
+    "epistemic_status": "OBSERVED",
+    "mathematical_v1_rows": "RETAINED_AS_EXACTLY_RECOMPUTED",
+    "promotion_boundary": "Do not treat v1 as a fully AGENTS.md-compliant final authority. A versioned v2 successor must reject optimized mode in the preregistration builder, directly verify its source/document/runtime pins before the atlas, and derive frozen grids from the convention module. Preserve v1 unchanged.",
+    "status": "REMEDIATION_REQUIRED"
+  },
+  "epistemic_status": "OBSERVED",
+  "exact_rational_recomputation": {
+    "conditional_scope": "Exact substitution into the preregistered formulas and direct source-hash verification only.",
+    "energy_diagonal_rows": 704,
+    "epistemic_status": "PROVED",
+    "local_rows": 7744,
+    "status": "PASS",
+    "transfer_branches": {
+      "q<=alpha": 429,
+      "q>alpha": 131
+    },
+    "transfer_rows": 560
+  },
+  "execution_mode_checks": {
+    "normal_exact_atlas": {
+      "epistemic_status": "OBSERVED",
+      "status": "PASS"
+    },
+    "normal_preregistration": {
+      "epistemic_status": "OBSERVED",
+      "status": "PASS"
+    },
+    "optimized_exact_atlas": {
+      "epistemic_status": "OBSERVED",
+      "exit_status": 1,
+      "status": "PASS_FAIL_CLOSED"
+    },
+    "optimized_preregistration": {
+      "cause": "CPython -O strips the preregistration builder's bare assert checks.",
+      "epistemic_status": "OBSERVED",
+      "exit_status": 0,
+      "status": "CONTAINED_OPTIMIZATION_BYPASS_OBSERVED"
+    }
+  },
+  "falsifier": "Any changed frozen hash, direct source/document hash failure, formula/residual/tie/transfer mismatch, nonzero complex-probe scope, normal replay failure, failure of the exact atlas to reject -O, or disappearance of the recorded preregistration -O bypass invalidates this bounded audit and requires a new versioned record.",
+  "frozen_hashes": {
+    "conventions": "3d3cef60c32dff2a2e4cbd3c10b229464d74aadbbaef53ba1fccc7158b78d726",
+    "exact_atlas": "16b46d32fbe0b2d24eceda1dceebf51d2591019e36acd92085fe749685fc4023",
+    "exact_atlas_script": "24deb3435082349905d002c030fb8e9a022018c6bf34cdb63d9a516470d0aaea",
+    "preregistration": "227ec1c66b2e109653354b6c3245b4e809fe52692c01514ac10064c23db2b6f8",
+    "preregistration_script": "7383a7c5659d385d6255028b53e9f3b4541624303a0663fc22470f791bd4ccad"
+  },
+  "replay": {
+    "check_command": "python3 projects/guth-maynard-zero-density/proof/audit_g1_exact_structural_atlas_hostile_v1.py --check",
+    "performance_command": "python3 projects/guth-maynard-zero-density/proof/audit_g1_exact_structural_atlas_hostile_v1.py --write-performance",
+    "script_sha256": "bf47a99aebba6e67b776813a9068674cfbc89e57576670ba05fd468ed6b880ff",
+    "write_command": "python3 projects/guth-maynard-zero-density/proof/audit_g1_exact_structural_atlas_hostile_v1.py --write"
+  }
+}

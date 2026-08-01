@@ -1,0 +1,59 @@
+{
+  "artifact_type": "adversarial-stream-c-explicit-formula-v2-v1-audit",
+  "certificate_version": 1,
+  "claim_boundary": "Adversarial source/hypothesis audit only. It does not change ledger v2 or Route B v4, does not declare G0 PASS, and does not dispute the mathematical formula read from the pinned bytes.",
+  "epistemic_status": "OBSERVED",
+  "frozen_hashes": {
+    "formula_pdf": "375d96e65a99d7dbfbdc9ca51aa286bb53af7e77dfffa59e167dfcd9b18b919d",
+    "ledger_v2": "3433e974b9751d310447847d75abbf529e5b4ed7e21e87a0224e4efb8ea0fde3",
+    "ledger_v2_check": "346a7beb7a5c2387b99f5a3e03a78bd0bf9856b38ce0e6bd4da0192d95b95f27",
+    "proof_pdf": "43cbe51ee69fe552078d90d0c21b165456f3ad67ad64c83df71b9cce3d56ae05",
+    "route_b_v4": "a8c7be629b8bff5cce4ce4a7ee5e5c1e52969b0681a45008834f7e548a8db249",
+    "route_b_v4_replay": "1be7195a890046e7aff63069137a5ab224bd2496f180fb87f12de9410723882a"
+  },
+  "licensing_and_provenance": {
+    "formula_provenance": "The official DSpace indexed errorbounds path was identified, but direct DSpace retrieval returned 405/403 in this run.",
+    "license_scope": "No course-specific exception was observed, but absence from inspected pages is not proof that the OCW license applies to each author-hosted mirror byte.",
+    "mirror_identity": "The frozen formula and proof bytes were downloaded from the author-hosted course mirrors. Byte identity with the inaccessible official DSpace formula object was not established.",
+    "official_license_fact": "MIT OCW's official terms state CC BY-NC-SA 4.0 for OCW materials; this general license statement was checked separately.",
+    "proof_provenance": "No official DSpace/OCW object locator for the frozen von-mangoldt.pdf proof byte was located in this audit; the author course calendar links it, which is evidence of course association but not a byte-level OCW provenance proof.",
+    "status": "OBSERVED"
+  },
+  "mathematical_hypotheses": {
+    "half_weight": "The formula defines psi with half weight at integral prime powers.",
+    "multiplicity": "The pinned proof explicitly says that every zero contribution is counted with multiplicity.",
+    "proof_completion": "The pinned proof reaches 'We are done!'.",
+    "remainder": "The stated remainder has x log^2(xT)/T plus the distance-to-other-prime-power term.",
+    "status": "PROVED conditional on the pinned Kedlaya theorem text",
+    "theorem_range": "The pinned formula and proof PDFs state x>=2 and T>0, so both GM choices 2<=T<=x are within their displayed range."
+  },
+  "preregistration_effect": {
+    "result": "The formula theorem/range/error/endpoint/multiplicity/height mathematics has no newly found mathematical counterexample, but the reachable-primary/archival provenance subgate remains open under this hostile audit. G0 is not PASS.",
+    "status": "OBSERVED"
+  },
+  "replay": {
+    "script_sha256": "3070a57ac57419e82f4c2614e7760a55026ad753c5d4d46872caf7bcaad8bf97",
+    "write_command": "python3 projects/guth-maynard-zero-density/proof/audit_cycle2_stream_c_explicit_formula_v2_v1.py --write projects/guth-maynard-zero-density/artifacts/cycle-2-stream-c-explicit-formula-v2-adversarial-audit-v1.json"
+  },
+  "replay_hygiene": {
+    "finding": "The v2 source checker invokes mutool but does not record or verify its version. This run used mutool 1.23.10. The PDF hashes are pinned; the renderer version remains an unpinned extraction dependency.",
+    "status": "OBSERVED"
+  },
+  "route_b_v4_adjudication": {
+    "blockers": [
+      "Obtain a retrievable official OCW/DSpace proof-unit locator or a signed/official manifest tying von-mangoldt.pdf to handle 1721.1/101679.",
+      "Establish byte identity (or official hash) between the frozen author formula mirror and the official DSpace formula object.",
+      "Pin the mutool version or replace renderer-dependent string checks with a version-pinned extraction artifact."
+    ],
+    "effect": "A source-authority strict reading does not license a standalone PROVED archival-source closure from v4. This does not falsify the explicit formula or its endpoint/convention mathematics.",
+    "finding": "Route B v4 labels the licensed source closure PROVED. Its theorem-content and transfer claims are PROVED conditional on the pinned text, but its archival license/mirror-provenance premise remains OBSERVED on the evidence currently recorded.",
+    "status": "OBSERVED"
+  },
+  "transfer_audit": {
+    "constant_terms": "The constant -zeta'(0)/zeta(0) cancels under subtraction; the remaining elementary logarithm changes by O(y/x^3) for u,v asymp x and is harmless.",
+    "endpoint": "For u=ceil(x)-1 and v=floor(x+y), psi_0(v)-psi_0(u) differs from the integer sum on [x,x+y] by at most half endpoint weights, O(log x); v-u=y+O(1).",
+    "height_boundary": "With 0<beta<1 and T>=2, the symmetric difference between |Im rho|<T and literal |rho|<=T lies in unit strips about +/-T. A multiplicity-inclusive O(log T) local count gives O(x log T/T), absorbed by O(x(log x)^3/T).",
+    "prime_power_distance": "At integral u,v, every distinct prime power is an integer at distance at least one. The source distance term is therefore O(log x).",
+    "status": "PROVED conditional on the pinned formula theorem and HSW+Bui local-count node"
+  }
+}

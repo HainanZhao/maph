@@ -1,0 +1,284 @@
+{
+  "activity_counts": {
+    "A_max_tie_counts": {
+      "A1|A2": 440,
+      "A1|A2|A3": 44,
+      "A2": 4400,
+      "A2|A3": 440,
+      "A3": 2420
+    },
+    "C_outer_inner_tie_counts": {
+      "outer=C1;inner=C3": 1496,
+      "outer=C1|min(C2,C3);inner=C2": 220,
+      "outer=C1|min(C2,C3);inner=C2|C3": 44,
+      "outer=C1|min(C2,C3);inner=C3": 44,
+      "outer=min(C2,C3);inner=C2": 3300,
+      "outer=min(C2,C3);inner=C2|C3": 660,
+      "outer=min(C2,C3);inner=C3": 1980
+    },
+    "E_max_tie_counts_on_diagonal": {
+      "E1": 404,
+      "E1|E2|E3": 1,
+      "E1|E3": 1,
+      "E2": 39,
+      "E2|E3": 98,
+      "E3": 161
+    },
+    "off_diagonal_energy_forbidden_rows": 7040
+  },
+  "artifact_id": "g1-envelope-sensitivity-route-a-v1",
+  "claim_boundary": "PROVED exact rational activity, residual, and conditional-exponent algebra, conditional on the directly hash-pinned Guth--Maynard formulas and G1 atlas v2. No improved Theorem 1.1 term, density theorem, short-interval theorem, extremizer, or saturation theorem is claimed.",
+  "counterfactual_sensitivity": {
+    "conditional_left_extension": {
+      "conditional_envelope_coefficient": "3/(13/10+h(mu))",
+      "crossing_equation": "300*h^2+(90-50*mu)*h-65*mu=0",
+      "extra_premise": "The same third-term gain is propagated through a valid zero-detection proof on [7/10-h(mu),7/10], with all non-exponent hypotheses and the complete short-interval argument separately checked.",
+      "extra_premise_tag": "CONJECTURED",
+      "first_order_envelope_coefficient": "30/13-50*mu/39+O(mu^2)",
+      "formal_theta_map_only": "17/30-h(mu)/3 = 17/30-13*mu/54+O(mu^2)",
+      "positive_root": "h(mu)=(50*mu-90+sqrt((90-50*mu)^2+78000*mu))/600",
+      "warning": "The theta display is only the formal density-to-threshold algebra. It is not a short-interval theorem; the full explicit-formula proof is required by PLAN.md."
+    },
+    "critical_anchor": {
+      "LV3_active_range": "0<=mu<=1/10",
+      "absolute_T_exponent_gain": "delta=10*mu/13",
+      "conditional_pointwise_density_coefficient": "30/13-100*mu/39 for 0<=mu<=1/10",
+      "first_order_pointwise_coefficient_gain": "100*mu/39",
+      "next_barrier_after_mu_1_10": "LV2 at 8/13",
+      "post_improvement_max_exponent": "max(6/13,8/13,9/13-10*mu/13)"
+    },
+    "premise": "For a parameter mu>0, replace only the N-exponent 12/5 in the third Theorem 1.1 term by 12/5-mu in a range sufficient for the stated transfer. This is a formal parameterization, not an asserted bound.",
+    "premise_tag": "CONJECTURED",
+    "published_range_no_effect": {
+      "falsifier_for_any_eta": "for 0<eta<30/13 choose 0<h<169*eta/(300-130*eta); then s=7/10-h and 3/(2-s)>30/13-eta",
+      "identity": "30/13-3/(2-s)=30*(7/10-s)/(13*(2-s))",
+      "statement": "A gain confined to s=7/10 or to the published Guth--Maynard side s>=7/10 cannot by itself yield a uniform coefficient 30/13-eta: the retained Ingham side s<7/10 has supremum 30/13.",
+      "status": "PROVED"
+    }
+  },
+  "critical_local_cell": {
+    "A_active": [
+      "A2",
+      "A3"
+    ],
+    "A_terms": {
+      "A1": "1/2",
+      "A2": "2/3",
+      "A3": "2/3"
+    },
+    "C_active": {
+      "inner": [
+        "C2"
+      ],
+      "outer": [
+        "min(C2,C3)"
+      ]
+    },
+    "C_terms": {
+      "C1": "1/2",
+      "C2": "2/3",
+      "C3": "5/6"
+    },
+    "E_active": [
+      "E1",
+      "E2",
+      "E3"
+    ],
+    "E_terms": {
+      "E1": "5/3",
+      "E2": "5/3",
+      "E3": "5/3"
+    },
+    "coordinates": {
+      "n": "5/6",
+      "s": "7/10",
+      "v": "7/10",
+      "w": "2/3"
+    }
+  },
+  "critical_transfer": {
+    "B": "9/13",
+    "B_minus_term": {
+      "LV1": "3/13",
+      "LV2": "1/13",
+      "LV3": "0/1"
+    },
+    "bottleneck": "LV3",
+    "coordinates": {
+      "alpha": "45/52",
+      "branch": "q<=alpha",
+      "ell": "10/13",
+      "k": 2,
+      "n0": "5/13",
+      "provenance": "EXACT_POWER_SCALE",
+      "q": "10/13",
+      "s": "7/10",
+      "u": "15/13"
+    },
+    "term_exponents": {
+      "LV1": "6/13",
+      "LV2": "8/13",
+      "LV3": "9/13"
+    }
+  },
+  "epistemic_status": "PROVED",
+  "falsifier": "Any non-LV3 zero residual, mismatch in the 11 q=ell rows, failure of a stated cleared identity, or a claimed gain that does not extend left of s=7/10 as required by the conditional crossing invalidates the corresponding sensitivity conclusion.",
+  "frozen_inputs": {
+    "hashes": {
+      "atlas_v2": "fd66d17664ca921795617c6bfca76c3be49246ea9351644848a2aadf9e680b08",
+      "guth_maynard_source_tar": "9d34ac093abcb8129f68ff86eaad65f09a09d832fe637ff84d50a69496046bdc",
+      "guth_maynard_tex": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428",
+      "preregistration_v1": "227ec1c66b2e109653354b6c3245b4e809fe52692c01514ac10064c23db2b6f8"
+    },
+    "runtime": {
+      "implementation": "CPython",
+      "optimization": 0,
+      "python": "3.12.3"
+    }
+  },
+  "named_source_term": {
+    "Theorem_1_1_term": "T*N^(12/5)*V^(-4)",
+    "applied_at_zero_detection": "T^(1+q*(12/5-4s))",
+    "label": "LV3",
+    "reason": "At every frozen zero-residual transfer row, and in particular at the critical transfer anchor, LV3 alone equals B(s)."
+  },
+  "replay": {
+    "check_command": "python3 projects/guth-maynard-zero-density/proof/derive_g1_envelope_sensitivity_route_a_v1.py --check",
+    "script_sha256": "014e36f1c9e942a5e298a6c893a3be921f22a3f9b29424ad40e5814b00c30404",
+    "write_command": "python3 projects/guth-maynard-zero-density/proof/derive_g1_envelope_sensitivity_route_a_v1.py --write"
+  },
+  "symbolic_loci": {
+    "A1_minus_A2": "2*n*(v-4/5)",
+    "A1_minus_A3": "n*(2*v-2/5)-1",
+    "A2_minus_A3": "6*n/5-1",
+    "C1_minus_C2": "n-1",
+    "C1_minus_C3": "2*n*(2*v-1)-1",
+    "C2_minus_C3": "n*(4*v-3)",
+    "E1_minus_E2": "n*(3-2*s)-13*w/8-1/4",
+    "E1_minus_E3": "n*(3-2*s)-2*w",
+    "E2_minus_E3": "1/4-3*w/8"
+  },
+  "zero_B_residual_transfer_rows": [
+    {
+      "id": "T:s=7/10;n0=5/13;k=2;q=10/13",
+      "identity": "B(s)-LV3=(4s-12/5)(q-ell(s))=0",
+      "k": 2,
+      "n0": "5/13",
+      "q": "10/13",
+      "s": "7/10",
+      "zero_terms": [
+        "LV3"
+      ]
+    },
+    {
+      "id": "T:s=71/100;n0=50/131;k=2;q=100/131",
+      "identity": "B(s)-LV3=(4s-12/5)(q-ell(s))=0",
+      "k": 2,
+      "n0": "50/131",
+      "q": "100/131",
+      "s": "71/100",
+      "zero_terms": [
+        "LV3"
+      ]
+    },
+    {
+      "id": "T:s=18/25;n0=25/66;k=2;q=25/33",
+      "identity": "B(s)-LV3=(4s-12/5)(q-ell(s))=0",
+      "k": 2,
+      "n0": "25/66",
+      "q": "25/33",
+      "s": "18/25",
+      "zero_terms": [
+        "LV3"
+      ]
+    },
+    {
+      "id": "T:s=73/100;n0=50/133;k=2;q=100/133",
+      "identity": "B(s)-LV3=(4s-12/5)(q-ell(s))=0",
+      "k": 2,
+      "n0": "50/133",
+      "q": "100/133",
+      "s": "73/100",
+      "zero_terms": [
+        "LV3"
+      ]
+    },
+    {
+      "id": "T:s=37/50;n0=25/67;k=2;q=50/67",
+      "identity": "B(s)-LV3=(4s-12/5)(q-ell(s))=0",
+      "k": 2,
+      "n0": "25/67",
+      "q": "50/67",
+      "s": "37/50",
+      "zero_terms": [
+        "LV3"
+      ]
+    },
+    {
+      "id": "T:s=3/4;n0=10/27;k=2;q=20/27",
+      "identity": "B(s)-LV3=(4s-12/5)(q-ell(s))=0",
+      "k": 2,
+      "n0": "10/27",
+      "q": "20/27",
+      "s": "3/4",
+      "zero_terms": [
+        "LV3"
+      ]
+    },
+    {
+      "id": "T:s=19/25;n0=25/68;k=2;q=25/34",
+      "identity": "B(s)-LV3=(4s-12/5)(q-ell(s))=0",
+      "k": 2,
+      "n0": "25/68",
+      "q": "25/34",
+      "s": "19/25",
+      "zero_terms": [
+        "LV3"
+      ]
+    },
+    {
+      "id": "T:s=77/100;n0=50/137;k=2;q=100/137",
+      "identity": "B(s)-LV3=(4s-12/5)(q-ell(s))=0",
+      "k": 2,
+      "n0": "50/137",
+      "q": "100/137",
+      "s": "77/100",
+      "zero_terms": [
+        "LV3"
+      ]
+    },
+    {
+      "id": "T:s=39/50;n0=25/69;k=2;q=50/69",
+      "identity": "B(s)-LV3=(4s-12/5)(q-ell(s))=0",
+      "k": 2,
+      "n0": "25/69",
+      "q": "50/69",
+      "s": "39/50",
+      "zero_terms": [
+        "LV3"
+      ]
+    },
+    {
+      "id": "T:s=79/100;n0=50/139;k=2;q=100/139",
+      "identity": "B(s)-LV3=(4s-12/5)(q-ell(s))=0",
+      "k": 2,
+      "n0": "50/139",
+      "q": "100/139",
+      "s": "79/100",
+      "zero_terms": [
+        "LV3"
+      ]
+    },
+    {
+      "id": "T:s=4/5;n0=5/14;k=2;q=5/7",
+      "identity": "B(s)-LV3=(4s-12/5)(q-ell(s))=0",
+      "k": 2,
+      "n0": "5/14",
+      "q": "5/7",
+      "s": "4/5",
+      "zero_terms": [
+        "LV3"
+      ]
+    }
+  ]
+}

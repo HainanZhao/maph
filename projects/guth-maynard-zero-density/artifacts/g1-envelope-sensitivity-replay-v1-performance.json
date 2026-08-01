@@ -1,0 +1,39 @@
+{
+  "artifact_id": "g1-envelope-sensitivity-replay-v1-performance",
+  "claim_boundary": "OBSERVED single-host timing and cumulative-child peak-RSS measurement of read-only replay commands. It is not a mathematical certificate or a finite-probe resource result.",
+  "command": "python3 projects/guth-maynard-zero-density/proof/run_g1_envelope_sensitivity_v1.py --write-performance",
+  "epistemic_status": "OBSERVED",
+  "reconciliation": {
+    "path": "artifacts/g1-envelope-sensitivity-reconciliation-v1.json",
+    "sha256": "850b825698722d628340b762867c98774dae53443aecde581138c6830993b60e"
+  },
+  "replays": [
+    {
+      "child_ru_maxrss": 87200,
+      "child_ru_maxrss_unit": "KiB on Linux; cumulative maximum over completed child replays",
+      "script": "proof/derive_g1_envelope_sensitivity_route_a_v1.py",
+      "script_sha256": "014e36f1c9e942a5e298a6c893a3be921f22a3f9b29424ad40e5814b00c30404",
+      "wall_seconds": 0.5770018137991428
+    },
+    {
+      "child_ru_maxrss": 87236,
+      "child_ru_maxrss_unit": "KiB on Linux; cumulative maximum over completed child replays",
+      "script": "proof/derive_g1_envelope_sensitivity_route_b_v1.py",
+      "script_sha256": "af65b7d1da0737e74e2f9d183034211ee458cae90e3c0a190caaa448637fbf1e",
+      "wall_seconds": 0.9478253591805696
+    },
+    {
+      "child_ru_maxrss": 87236,
+      "child_ru_maxrss_unit": "KiB on Linux; cumulative maximum over completed child replays",
+      "script": "proof/reconcile_g1_envelope_sensitivity_v1.py",
+      "script_sha256": "e029414e324d3c232f5a119e774b4f62c9c5d9583c91a952baf8679ce4eddc5f",
+      "wall_seconds": 0.06082146195694804
+    }
+  ],
+  "runtime": {
+    "implementation": "CPython",
+    "optimization": 0,
+    "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3"
+  }
+}

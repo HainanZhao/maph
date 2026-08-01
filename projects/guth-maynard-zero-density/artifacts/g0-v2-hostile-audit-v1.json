@@ -1,0 +1,73 @@
+{
+  "artifact_id": "g0-v2-hostile-audit-v1",
+  "claim_boundary": "OBSERVED bounded hostile audit of the corrected G0 v2 package. It validates normal frozen-command replay, v5 source classification, and six-route resource semantics; it records rather than repairs v2's standalone optimization-mode bypass. It proves no zero-density or prime-interval theorem and is not a G0 decision.",
+  "epistemic_status": "OBSERVED",
+  "falsifier": "A normal replay failure, changed v5 Publication/theorem status, missing or non-PASS six-route row, altered strict ceiling, or a changed optimized probe invalidates this bounded audit and requires a new versioned record.",
+  "frozen_hashes": {
+    "published_source_checker_v5": "acd16b2f4c1f083fe62c4316eae61cd488f8f0230d46d26dcdb8082f136fd3d3",
+    "published_source_v5": "04c40acc2ac5a0ac6b1bf4f2380b16c4b9cc95e24dac97ed326b06bb24ee024f",
+    "reconciliation_artifact": "b6c9a8dbe3cff834f42dfa3afaed7650610211360a921a7731e894592cb1306f",
+    "reconciliation_script": "763f32a703abdf5ce19bc9dcfff4f169f4c5a63c9a611f0d775d7c10f62f4125",
+    "runtime_v1": "83e486ad6252435745d8465f143a25d0a16e78bd82076ad5965368065deb645b",
+    "six_route_config": "f8b2b3c32591f5714efe98d1ac95e63c7b49dec093ab0c97ed0f94ce6301a3f8",
+    "six_route_harness": "a42a7af6053c6042d243bd0aa17fe5ca86cfe714880d5e6db0336a60ccf24897",
+    "six_route_performance": "fdd32be5b0129dbaa38439517fd07d03a2d3834a98f4eee4b8ee4324164cd8d2"
+  },
+  "normal_frozen_command": {
+    "command": [
+      "/usr/bin/python3",
+      "proof/reconcile_g0_full_v2.py",
+      "--check"
+    ],
+    "epistemic_status": "OBSERVED",
+    "scope": "The exact normal CPython invocation used by the package replay.",
+    "status": "PASS"
+  },
+  "optimization_mode_probe": {
+    "cause": "v2 delegates its runtime checks to bare Python assert statements, which CPython -O removes.",
+    "command": [
+      "/usr/bin/python3",
+      "-O",
+      "proof/reconcile_g0_full_v2.py",
+      "--check"
+    ],
+    "containment": "The v2 standalone runtime pin is not optimization-robust. A successor runner must use explicit failures and reject sys.flags.optimize != 0 before calling v2; no optimized invocation is an authorized proof replay.",
+    "epistemic_status": "OBSERVED",
+    "result": "exit status 0",
+    "status": "CONTAINED_OPTIMIZATION_BYPASS_OBSERVED"
+  },
+  "published_source_classification": {
+    "epistemic_status": "PROVED",
+    "evidence": "v5 pins an MIT DSpace Publication item and the selected official theorem/proof; it makes no journal-peer-review claim.",
+    "status": "PASS"
+  },
+  "recommendation": {
+    "epistemic_status": "OBSERVED",
+    "normal_replay_permitted": true,
+    "required_successor_boundary": "Explicitly require CPython 3.12.3 and sys.flags.optimize == 0 without bare assert enforcement.",
+    "standalone_optimization_robustness": false,
+    "status": "CONTAINED"
+  },
+  "replay": {
+    "check_command": "python3 projects/guth-maynard-zero-density/proof/audit_g0_v2_hostile_v1.py --check",
+    "script_sha256": "8cbfcc6a2b2e76386000fa90c81661087079f85fa3bb7afaafbc5f5849b6ef9f",
+    "write_command": "python3 projects/guth-maynard-zero-density/proof/audit_g0_v2_hostile_v1.py --write"
+  },
+  "six_route_resource_semantics": {
+    "epistemic_status": "OBSERVED",
+    "performance_scope": "Pinned host-specific measurements only; not a proof-grade mathematical claim.",
+    "route_ids": [
+      "cycle1-route-a-readonly-v1",
+      "cycle1-route-b-readonly-v1",
+      "stream-b-route-a-v3",
+      "stream-b-route-b-v1",
+      "stream-c-route-a-v5",
+      "stream-c-route-b-v5"
+    ],
+    "status": "PASS",
+    "strict_limits": {
+      "max_rss_kib_strictly_less_than": 262144,
+      "wall_seconds_strictly_less_than": 60
+    }
+  }
+}

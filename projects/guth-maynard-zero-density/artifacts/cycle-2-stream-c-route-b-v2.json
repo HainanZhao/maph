@@ -1,0 +1,100 @@
+{
+  "almost_all_replay": {
+    "density_margin": "For eta<=b^2 epsilon/12, (b+eta)(2/b-epsilon/3)-2<=-b epsilon/6.",
+    "epsilon_absorption": "T<=X^(13/15-epsilon/3)=X^(2/b-epsilon/3) once 4(log X)^(1/4)<=(epsilon/6)log X.",
+    "exceptional_conversion": "The cutoff supplies I<<delta^2 X^3 E(X)^-3; splitting, Chebyshev at yE(X)^-1, and delta^2X^3/(y^2X)<=X^-epsilon give O(XE(X)^-1) exceptional starts.",
+    "narrow_conclusion": "Within the GM second-moment argument, pi(x+y)-pi(x)=y/log x+O(yE(X)^-1) outside O(XE(X)^-1) starts.",
+    "pair_reduction": "The pinned multiplicity-inclusive strip count supplies the reciprocal-distance O((log T)^2) used in I<<delta^2(log X)^3 sup_s X^(2s+1)N(s,T).",
+    "parameters": "delta=X^(-13/15+epsilon/2), T=delta^-1 E(X)^4, and delta X=X^(2/15+epsilon/2)<=y.",
+    "range": "X^(2/15+epsilon)<=y<=X^(99/100)",
+    "status": "PROVED"
+  },
+  "artifact_type": "exact-short-interval-stream-c-route-b-dependency-closure-certificate",
+  "certificate_version": 2,
+  "claim_boundary": "PROVED: exact replay of the rational exponent and transfer calculations in Guth--Maynard section 13.2 after checking the listed published external inputs. PASS is narrow: it closes those dependency nodes, not an independent proof of Corollary 1.3 or 1.4 and not a new short-interval theorem.",
+  "epistemic_status": "PROVED",
+  "external_inputs": {
+    "density_lower_branch": {
+      "input": "Guth--Maynard Theorem 1.2: N(s,T) << T^((30/13+o(1))*(1-s)).",
+      "range": "7/10 <= s <= 4/5",
+      "status": "PROVED"
+    },
+    "density_near_one_huxley": {
+      "conclusion": "N(s,T) << T^((30/13)*(1-s))*(log T)^44 on this branch; the log^44 is not discarded.",
+      "exact_coefficient_check": {
+        "b_minus_h_at_4/5": "15/91",
+        "h(1)": "3/2",
+        "h(4/5)": "15/7",
+        "identity": "b-3/(3s-1)=3(30s-23)/(13(3s-1)) >= 15/91"
+      },
+      "input": "Huxley (1.9): N(s,T) << T^(3(1-s)/(3s-1))*(log T)^44 for -T <= gamma <= T.",
+      "range": "4/5 <= s <= 1",
+      "status": "PROVED"
+    },
+    "local_zero_count_and_pair_sum": {
+      "denominator_check": "For Re z>=0 and 0<Re rho<1, |1+z+conjugate(rho)| >= sqrt(1+(Im z-Im rho)^2), so this unit-strip bound applies to the GM pair denominator.",
+      "derivation": "Subtract upper/lower RvM bounds at u+1 and u-1; the main-term difference and both errors are O(log(u+2)), while the compact u-range is bounded by N(e+2). Hence every unit strip contains O(log(T+2)) zeros with multiplicity for |u|<=T. Summing reciprocal distances over O(T) strips gives O((log(T+2))^2).",
+      "multiplicity": "Bui--Heath-Brown explicitly defines N(T) with each zero counted with multiplicity.",
+      "rvm": "Hasanalizade--Shen--Wong Corollary 1.1 gives an explicit Riemann--von Mangoldt error O(log T), T>=e.",
+      "status": "PROVED"
+    },
+    "zero_free_cutoff": {
+      "conclusion": "For all sufficiently large T, no zero has Re rho >= 1-c(log T)^(-5/7), including the formerly open finite-height range.",
+      "high_height": "Ford Theorem 5 applies for |t|>=3 with Vinogradov--Korobov width 1/[57.54(log|t|)^(2/3)(loglog|t|)^(1/3)].",
+      "low_height": "Platt--Trudgian Theorem 1 puts every non-trivial zero with |gamma|<=3,000,175,332,800 on Re=1/2 (by conjugation for negative ordinates).",
+      "status": "PROVED"
+    }
+  },
+  "frozen_parameters": {
+    "almost_all_theta": "2/15",
+    "b": "30/13",
+    "nonvacuous_epsilon_range": "0 < epsilon < 127/300",
+    "subpower_symbol": "E(Z)=exp((log Z)^(1/4))",
+    "uniform_theta": "17/30",
+    "upper_y_exponent": "99/100"
+  },
+  "narrow_pass": {
+    "not_passed": [
+      "An independent re-proof of the full Guth--Maynard corollaries.",
+      "Any improvement of their short-interval exponent."
+    ],
+    "passed": [
+      "Huxley supplies the exact log-uniform near-one branch.",
+      "Riemann--von Mangoldt plus the explicit multiplicity convention supplies the local strip and pair bound.",
+      "Platt--Trudgian closes Ford's finite-height gap.",
+      "All frozen rational exponent and epsilon transfers replay exactly."
+    ],
+    "status": "PROVED"
+  },
+  "replay": {
+    "interpreter_requirement": "Python 3 standard library only",
+    "script_sha256": "9757c4a241ffd6b08abe1f084ca037697d96b714ddf0596e5264ba438e021b5d",
+    "write_command": "python3 projects/guth-maynard-zero-density/proof/replay_short_intervals_stream_c_route_b_v2.py --write projects/guth-maynard-zero-density/artifacts/cycle-2-stream-c-route-b-v2.json"
+  },
+  "source_hashes_checked": {
+    "bui_heath_brown_2013_pdf": "b1c5a4d6cdba59d0fc552a18cb2465c442a8534be0c4e51a23db126316f83077",
+    "bui_heath_brown_2013_source": "a171c6e74be228955df48191675e497ce4934623ae33ddddd9761b8cb1185ca5",
+    "ford_2002": "a43a2c37cf0f34b05bf80d9e58bcef176371437eedf7aae17d72f2c55b04c948",
+    "hasanalizade_shen_wong_2022_pdf": "3fc4c89f49249924e61cb0d289d81559faed53fcbb838628ea32dc7ec6f89fbf",
+    "hasanalizade_shen_wong_2022_source": "8ba8d0eb95e1dd967adf17b7a2e77bdc45a99f6aa283d41d23dd4d0ac4358247",
+    "huxley_1972": "5946d8579810f0754e972d42a09ed2a703604b8fb4e6377f14caaa5dc48f9797",
+    "platt_trudgian_2021_pdf": "3362f66af9fa9373977eee70e2282ec33989d5d8b97e0852df9e32cc25b52885",
+    "platt_trudgian_2021_source": "c4f13cdfca711d2bf90a097147be2a094ff175b0b161647359e174633fd8bf86"
+  },
+  "supersedes": "v1 only for the named dependency closure; v1 is preserved",
+  "uniform_replay": {
+    "cutoff": "5/7-2/3=1/21>0; the zero-free branch gives exp(-c(log x)^(2/7)), absorbing log factors including Huxley's log^44 and E(x)^-1.",
+    "density_margin": "For eta<=b^2 epsilon/4, (b+eta)(1/b-epsilon/2)-1<=-b epsilon/4.",
+    "epsilon_absorption": "T<=x^(13/30-epsilon)*E(x)^2<=x^(1/b-epsilon/2) once 2(log x)^(1/4)<=(epsilon/2)log x.",
+    "narrow_conclusion": "Within the GM explicit-formula argument, psi(x+y)-psi(x)=y+O(yE(x)^-1), then pi(x+y)-pi(x)=y/log x+O(yE(x)^-1).",
+    "range": "x^(17/30+epsilon)<=y<=x^(99/100)",
+    "status": "PROVED",
+    "truncation": "T=x/y*E(x)^2 and x(log x)^3/T=y(log x)^3/E(x)^2=O(yE(x)^-1)."
+  },
+  "v1_correction": {
+    "correction": "The original Huxley scan was directly visually inspected; (1.9), printed p. 164 / PDF p. 173, is the required two-sided log-uniform bound.",
+    "error": "v1 labelled Huxley's density alternative unread.",
+    "preservation": "v1 remains unchanged as its historical OBSERVED record.",
+    "status": "PROVED"
+  }
+}

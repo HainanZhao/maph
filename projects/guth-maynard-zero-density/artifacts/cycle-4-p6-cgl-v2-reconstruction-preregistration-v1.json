@@ -1,0 +1,505 @@
+{
+  "artifact_id": "cycle-4-p6-cgl-v2-reconstruction-preregistration-v1",
+  "claim_boundary": "Bounded preregistration only: no reconstruction is executed, no CGL theorem is proved or repaired, no 7/3 result is promoted, no novelty claim is made, no P7 family is selected, and no zero-density or short-interval theorem follows.",
+  "conventions": {
+    "asymptotic": "o(1) and lessapprox are interpreted as qT->infinity with (qT)^epsilon losses",
+    "character_scope": "Partial LVE primitive; headline zero-density sum all characters; no transfer before Z05/Z06",
+    "detector_domain": "source states X,Y,T>1; uniform q,T and T=1 scope must be audited",
+    "forbidden_repairs": [
+      "q<=T^C",
+      "replace log^2 T by log^2(qT)",
+      "invent T-smooth definition",
+      "supply primitive/all proof without source or proved derivation"
+    ],
+    "fourier": "e(x)=exp(2*pi*i*x); Fourier transform integral f(x)e(-xi*x) dx",
+    "q1": "q1 divides q",
+    "separation": "distinct pairs differ in character or meet the row-specific ordinate gap",
+    "zero_count": "N(sigma,T,chi): sigma<=Re rho<=1 and |Im rho|<=T; multiplicity is an audit obligation"
+  },
+  "epistemic_status": "OBSERVED",
+  "expected_blockers": [
+    {
+      "epistemic_status": "OBSERVED",
+      "id": "S06_EXTERNAL_INPUTS",
+      "reason": "Reachable primary external theorem hypotheses are not closed by the pinned CGL bytes.",
+      "row": "S06"
+    },
+    {
+      "epistemic_status": "OBSERVED",
+      "id": "Z03_TAIL_X_RANGE",
+      "reason": "TeX 2140 uses T-to-infinity and X polynomial in T; TeX 2169 sets X=(qT)^epsilon, while the theorem is uniform and TeX 2412 names T=1 as worst.",
+      "row": "Z03"
+    },
+    {
+      "epistemic_status": "OBSERVED",
+      "group": "PRIMITIVE_TO_ALL",
+      "id": "Z05_PRIMITIVE_EULER_FACTORS",
+      "reason": "The induced-character Euler-factor zero comparison in sigma>1/2 is not supplied at TeX 2109.",
+      "row": "Z05"
+    },
+    {
+      "epistemic_status": "OBSERVED",
+      "group": "PRIMITIVE_TO_ALL",
+      "id": "Z06_CONDUCTOR_SUM_Q1",
+      "reason": "Conductor partition, divisor loss, and q1-sensitive termwise domination are not supplied at TeX 2109.",
+      "row": "Z06"
+    },
+    {
+      "epistemic_status": "OBSERVED",
+      "id": "F08_T_SMOOTH_UNDEFINED",
+      "reason": "T-smooth is used at TeX 182, 2266, and 2346--2350 but is not defined in the complete pinned TeX.",
+      "row": "F08"
+    }
+  ],
+  "expected_reconstruction_outcome": "OPEN_ANALYTIC_INPUT",
+  "falsifier": "Any frozen-byte or tar-member mismatch, row-count/alias inconsistency, missing mandatory subcheck, source-fragment mismatch, runtime/resource violation, silent analytic repair, or historical dependence on mutable operational state invalidates this seal.",
+  "frozen_crossing_formulas": {
+    "B": "(37+3*beta-sqrt(9*beta^2+222*beta-71))/12",
+    "C1": "3*(1+lambda/3)/(1+sigma)",
+    "C2": "3*(1-beta/2)/sigma",
+    "C3": "((21-20*sigma)/6-beta/2)/(1-sigma)",
+    "C4": "15/(3+5*sigma)",
+    "crossing_C1": "(q1^(1/3)*q^2*T^2)^(1-sigma)",
+    "crossing_C2": "(q^3*T^(9/4)*q1^(-3/4))^(1-sigma)",
+    "crossing_C3_polynomial": "20*sigma^2-(43-3*beta)*sigma+24-6*beta=0",
+    "crossing_C4": "sigma=7/10 and coefficient=30/13",
+    "q1_equals_q_reductions": [
+      "q^(7/3)*T^2",
+      "9/4",
+      "(10-sqrt(10))/3",
+      "30/13"
+    ],
+    "uniform_7_over_3_checks": [
+      "2<=7/3",
+      "7/3-9/4=1/12",
+      "sqrt(10)>3 because 10>9",
+      "7/3-30/13=1/39"
+    ]
+  },
+  "frozen_inputs": {
+    "authorization_snapshot": {
+      "path": "artifacts/cycle-4-p6-cgl-v2-authorization-snapshot-v1.json",
+      "sha256": "c8183266cbfab602ba3c05c120a80293b7741284d6c46a08a88c03c3b46f25b3"
+    },
+    "bounded_literature_audit_v1": {
+      "path": "artifacts/g1-current-literature-audit-v1.json",
+      "sha256": "49da2e838ce60699ba870e0c532aab5ec8ba564c560811d9683ac92f0afbe6be"
+    },
+    "bounded_literature_correction_v2": {
+      "path": "artifacts/g1-current-literature-audit-v2-correction.json",
+      "sha256": "f56529c5919971385cc583b51255636022a5b33fb0cfd4857a587f1d3e099076"
+    },
+    "cgl_v2_pdf": {
+      "path": "artifacts/sources/g1-literature-audit-v1/arxiv-2507.08296v2.pdf",
+      "sha256": "adfe65cf0952bbb4eddfdaec7a8d3341130e427827f9159d9da039fc16336058"
+    },
+    "cgl_v2_tar": {
+      "path": "artifacts/sources/g1-literature-audit-v1/arxiv-2507.08296v2.tar",
+      "sha256": "b982cd5afa5b5e8a9abff2c6306519ba558d321b19aadd3fdbe59b3750f8e9ae"
+    },
+    "cgl_v2_tex": {
+      "path": "artifacts/sources/g1-literature-audit-v1/extracted-2507.08296v2/Large_Value_Estimates_for_Dirichlet_Polynomials_with_Characters_and_Zero_Density_of_Dirichlet___L_-Functions.tex",
+      "sha256": "0b9ebb6b604944b7c59a9ec37a75c48f6a08f88611f911ff5f02dc013b848e2f"
+    },
+    "preregistration_document": {
+      "path": "docs/cycle-4-p6-cgl-v2-reconstruction-preregistration-v1.md",
+      "sha256": "2208164bdb207c0322fe376c21553f7dc4f307625328b8542fa2abe358dafd47"
+    }
+  },
+  "gate_rule": {
+    "expected": "OPEN_ANALYTIC_INPUT",
+    "fail_closed": "source mismatch, route disagreement, missing row/subcheck, cap breach, optimized mode, or unregistered repair",
+    "open": "any analytic input remains open, including any expected blocker or unread reachable source",
+    "pass": "all 46 rows and both L12 subchecks close independently by both routes and reconcile exactly"
+  },
+  "historical_replay": {
+    "authorization_source": "immutable authorization snapshot",
+    "mutable_research_plan_hash_pinned": false,
+    "mutable_research_plan_read": false,
+    "operational_preflight": "EXCLUDED_NOT_NEEDED_FOR_HISTORICAL_REPLAY"
+  },
+  "registry_count_correction": {
+    "canonical_count": 46,
+    "canonical_ranges": "S01-S06,L01-L12,M01-M08,Z01-Z10,F01-F10",
+    "draft_arithmetic": "6+13+8+10+10=47, not 46",
+    "no_obligation_dropped": true,
+    "resolution": "L12 has mandatory odd_prime and two_power subchecks; draft L13 is retired alias L12.two_power",
+    "retired_draft_aliases": {
+      "L13": "L12.two_power"
+    }
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_4_p6_cgl_v2_reconstruction_preregistration_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_4_p6_cgl_v2_reconstruction_preregistration_v1.py -v",
+    "write_command": "python3 proof/build_cycle_4_p6_cgl_v2_reconstruction_preregistration_v1.py --write"
+  },
+  "resource_policy": {
+    "floating_point": "PROHIBITED",
+    "method_substitution_after_cap_failure": "PROHIBITED",
+    "network": "PROHIBITED",
+    "peak_rss": "strictly less than 262144 KiB (256 MiB) on linux",
+    "rng": "PROHIBITED",
+    "rss_cap_kib": 262144,
+    "wall_cap_ns": 60000000000,
+    "wall_time": "strictly less than 60 seconds"
+  },
+  "route_b_coordinates": {
+    "alpha": "log(q)/log(qT)",
+    "beta": "lambda+tau=log(q1*T)/log(qT)",
+    "lambda": "log(q1)/log(qT)",
+    "q1_at_least_sqrt_q": "beta>=1/2",
+    "tau": "1-alpha"
+  },
+  "route_design": {
+    "independence": "Route B may not import Route A code, artifacts, intermediate outputs, inferred labels, or repaired formulas.",
+    "reconciliation": "Compare all 46 IDs, both L12 subchecks, locators, hypotheses, formulas, valid regions, blocker labels, and dispositions.",
+    "route_A": "literal source-order theorem chain with exact rational/radical algebra and expanded cited hypotheses",
+    "route_B": "independent alpha/tau/lambda/beta exponent-polytope and prime-by-prime conductor audit using cleared denominators"
+  },
+  "row_registry": [
+    {
+      "id": "S01",
+      "initial_status": "UNEXECUTED",
+      "locator": "entire TeX; tar member; PDF",
+      "obligation": "TeX/tar-member/PDF identity and complete-source boundary",
+      "preregistered_disposition": "UNEXECUTED"
+    },
+    {
+      "id": "S02",
+      "initial_status": "UNEXECUTED",
+      "locator": "77--105",
+      "obligation": "authors, collaboration/version statement, title, and preprint status",
+      "preregistered_disposition": "UNEXECUTED"
+    },
+    {
+      "id": "S03",
+      "initial_status": "UNEXECUTED",
+      "locator": "95--101, 141--148, 158--185",
+      "obligation": "zero-count definition, two-sided height, rectangle, and multiplicity audit",
+      "preregistered_disposition": "UNEXECUTED"
+    },
+    {
+      "id": "S04",
+      "initial_status": "UNEXECUTED",
+      "locator": "114--128, 158--187, 268--270, 2114",
+      "obligation": "domains for q,T,X,Y,sigma, endpoints, and qT-to-infinity interpretation",
+      "preregistered_disposition": "UNEXECUTED"
+    },
+    {
+      "id": "S05",
+      "initial_status": "UNEXECUTED",
+      "locator": "122--126, 268--273",
+      "obligation": "o(1), epsilon, lessapprox, constants, and limiting-order convention",
+      "preregistered_disposition": "UNEXECUTED"
+    },
+    {
+      "id": "S06",
+      "initial_status": "UNEXECUTED",
+      "locator": "133--140, 537--560, 1691--1695, 2112, 2158, 2169, 2414--2467",
+      "obligation": "external-input inventory with exact theorem hypotheses and primary-source locators",
+      "preregistered_disposition": "EXPECTED_OPEN:S06_EXTERNAL_INPUTS"
+    },
+    {
+      "id": "L01",
+      "initial_status": "UNEXECUTED",
+      "locator": "114--123",
+      "obligation": "Partial-LVE primitive-character, coefficient, separation, threshold, and length hypotheses",
+      "preregistered_disposition": "UNEXECUTED"
+    },
+    {
+      "id": "L02",
+      "initial_status": "UNEXECUTED",
+      "locator": "122--124",
+      "obligation": "divisor-sensitive four-term Partial-LVE formula",
+      "preregistered_disposition": "UNEXECUTED"
+    },
+    {
+      "id": "L03",
+      "initial_status": "UNEXECUTED",
+      "locator": "125--127",
+      "obligation": "all-case four-term Partial-LVE formula",
+      "preregistered_disposition": "UNEXECUTED"
+    },
+    {
+      "id": "L04",
+      "initial_status": "UNEXECUTED",
+      "locator": "133--136, 421",
+      "obligation": "low-value qT mean-value comparator and valid range",
+      "preregistered_disposition": "UNEXECUTED"
+    },
+    {
+      "id": "L05",
+      "initial_status": "UNEXECUTED",
+      "locator": "375--443",
+      "obligation": "intermediate-value reduction, three-piece smoothing, and separation thinning",
+      "preregistered_disposition": "UNEXECUTED"
+    },
+    {
+      "id": "L06",
+      "initial_status": "UNEXECUTED",
+      "locator": "137--140, 421, 487--500",
+      "obligation": "high-value HMH comparator and valid range",
+      "preregistered_disposition": "UNEXECUTED"
+    },
+    {
+      "id": "L07",
+      "initial_status": "UNEXECUTED",
+      "locator": "445--448",
+      "obligation": "qT<=N case and epsilon-limit step",
+      "preregistered_disposition": "UNEXECUTED"
+    },
+    {
+      "id": "L08",
+      "initial_status": "UNEXECUTED",
+      "locator": "449--452",
+      "obligation": "N<=qT<=N^(6/5) Auxiliary-proposition case",
+      "preregistered_disposition": "UNEXECUTED"
+    },
+    {
+      "id": "L09",
+      "initial_status": "UNEXECUTED",
+      "locator": "454--478",
+      "obligation": "subdivision case q1>N^(6/5)",
+      "preregistered_disposition": "UNEXECUTED"
+    },
+    {
+      "id": "L10",
+      "initial_status": "UNEXECUTED",
+      "locator": "454--470, 480--485",
+      "obligation": "subdivision case N^(6/5)/T<q1<N^(6/5)",
+      "preregistered_disposition": "UNEXECUTED"
+    },
+    {
+      "id": "L11",
+      "initial_status": "UNEXECUTED",
+      "locator": "454--470, 487--504",
+      "obligation": "subdivision case q1<N^(6/5)/T including HMH combination",
+      "preregistered_disposition": "UNEXECUTED"
+    },
+    {
+      "id": "L12",
+      "initial_status": "UNEXECUTED",
+      "locator": "507--519",
+      "mandatory_subchecks": [
+        "odd_prime",
+        "two_power"
+      ],
+      "obligation": "character subdivision for odd-prime and 2-power moduli",
+      "preregistered_disposition": "UNEXECUTED"
+    },
+    {
+      "id": "M01",
+      "initial_status": "UNEXECUTED",
+      "locator": "375--387",
+      "obligation": "smoothed Auxiliary proposition, bump normalization, hypotheses, and conclusion",
+      "preregistered_disposition": "UNEXECUTED"
+    },
+    {
+      "id": "M02",
+      "initial_status": "UNEXECUTED",
+      "locator": "528--550",
+      "obligation": "matrix and singular-value reductions, trace subtraction, constants, and hypotheses",
+      "preregistered_disposition": "UNEXECUTED"
+    },
+    {
+      "id": "M03",
+      "initial_status": "UNEXECUTED",
+      "locator": "552--660",
+      "obligation": "Hilbert-Schmidt/cubic-trace expansion, Poisson conventions, diagonal subtraction, and errors",
+      "preregistered_disposition": "UNEXECUTED"
+    },
+    {
+      "id": "M04",
+      "initial_status": "UNEXECUTED",
+      "locator": "661--733",
+      "obligation": "S1 partition and estimate with all ranges",
+      "preregistered_disposition": "UNEXECUTED"
+    },
+    {
+      "id": "M05",
+      "initial_status": "UNEXECUTED",
+      "locator": "734--1128",
+      "obligation": "S2, approximate functional equation, dyadic variables, and bound",
+      "preregistered_disposition": "UNEXECUTED"
+    },
+    {
+      "id": "M06",
+      "initial_status": "UNEXECUTED",
+      "locator": "1129--1686",
+      "obligation": "affine/GCD-twist estimate, induction, Fourier decay, and norm comparisons",
+      "preregistered_disposition": "UNEXECUTED"
+    },
+    {
+      "id": "M07",
+      "initial_status": "UNEXECUTED",
+      "locator": "1688--1709, 1963--1971",
+      "obligation": "character-time energy, Heath-Brown input, hypotheses, and closing estimate",
+      "preregistered_disposition": "UNEXECUTED"
+    },
+    {
+      "id": "M08",
+      "initial_status": "UNEXECUTED",
+      "locator": "1974--2105",
+      "obligation": "S3 estimate and dominance calculation closing the Auxiliary proposition",
+      "preregistered_disposition": "UNEXECUTED"
+    },
+    {
+      "id": "Z01",
+      "initial_status": "UNEXECUTED",
+      "locator": "2114--2134",
+      "obligation": "Mellin identity, contour shift, and both residues",
+      "preregistered_disposition": "UNEXECUTED"
+    },
+    {
+      "id": "Z02",
+      "initial_status": "UNEXECUTED",
+      "locator": "2140--2143",
+      "obligation": "weighted Dirichlet-series sum tail beyond Y log^2 Y",
+      "preregistered_disposition": "UNEXECUTED"
+    },
+    {
+      "id": "Z03",
+      "initial_status": "UNEXECUTED",
+      "locator": "2140, 2169, 2411--2413",
+      "obligation": "integral tail, X-versus-T hypothesis, uniform q,T scope, and T=1 endpoint",
+      "preregistered_disposition": "EXPECTED_OPEN:Z03_TAIL_X_RANGE"
+    },
+    {
+      "id": "Z04",
+      "initial_status": "UNEXECUTED",
+      "locator": "2134--2138",
+      "obligation": "principal-character residue and low-height-zero contribution after primitive restriction",
+      "preregistered_disposition": "UNEXECUTED_WITH_WATCH"
+    },
+    {
+      "id": "Z05",
+      "initial_status": "UNEXECUTED",
+      "locator": "2109, 2136--2138",
+      "obligation": "induced-character Euler factors and zero-set equality in sigma>1/2",
+      "preregistered_disposition": "EXPECTED_OPEN:Z05_PRIMITIVE_EULER_FACTORS"
+    },
+    {
+      "id": "Z06",
+      "initial_status": "UNEXECUTED",
+      "locator": "2109, 2148--2152",
+      "obligation": "conductor partition, multiplicity/divisor loss, and q1-sensitive termwise domination",
+      "preregistered_disposition": "EXPECTED_OPEN:Z06_CONDUCTOR_SUM_Q1"
+    },
+    {
+      "id": "Z07",
+      "initial_status": "UNEXECUTED",
+      "locator": "2154--2158",
+      "obligation": "saturated well-spacing selection and local zero-count input",
+      "preregistered_disposition": "UNEXECUTED"
+    },
+    {
+      "id": "Z08",
+      "initial_status": "UNEXECUTED",
+      "locator": "2160--2173",
+      "obligation": "class-II maximizers, shifted spacing, fourth moment, and Y=(qT)^(1/2)",
+      "preregistered_disposition": "UNEXECUTED_WITH_WATCH"
+    },
+    {
+      "id": "Z09",
+      "initial_status": "UNEXECUTED",
+      "locator": "2176--2197",
+      "obligation": "class-I dyadic selection, normalization, representative loss, and length range",
+      "preregistered_disposition": "UNEXECUTED"
+    },
+    {
+      "id": "Z10",
+      "initial_status": "UNEXECUTED",
+      "locator": "2199--2258",
+      "obligation": "bounded k, powered coefficient control, and complete length-case coverage",
+      "preregistered_disposition": "UNEXECUTED_WITH_WATCH"
+    },
+    {
+      "id": "F01",
+      "initial_status": "UNEXECUTED",
+      "locator": "141--149, 2109",
+      "obligation": "outer sigma<=0.7 range via the stated Ingham analogue",
+      "preregistered_disposition": "UNEXECUTED"
+    },
+    {
+      "id": "F02",
+      "initial_status": "UNEXECUTED",
+      "locator": "145--149, 2109",
+      "obligation": "outer sigma>=0.8 range via the stated Huxley analogue",
+      "preregistered_disposition": "UNEXECUTED"
+    },
+    {
+      "id": "F03",
+      "initial_status": "UNEXECUTED",
+      "locator": "2261--2270",
+      "obligation": "middle-range four-term zero-density lemma and hypotheses",
+      "preregistered_disposition": "UNEXECUTED"
+    },
+    {
+      "id": "F04",
+      "initial_status": "UNEXECUTED",
+      "locator": "2276--2310",
+      "obligation": "divisor Case 1 and complete interval coverage",
+      "preregistered_disposition": "UNEXECUTED"
+    },
+    {
+      "id": "F05",
+      "initial_status": "UNEXECUTED",
+      "locator": "2276--2282, 2311--2325",
+      "obligation": "divisor Case 2 and complete interval coverage",
+      "preregistered_disposition": "UNEXECUTED"
+    },
+    {
+      "id": "F06",
+      "initial_status": "UNEXECUTED",
+      "locator": "2276--2282, 2326--2336",
+      "obligation": "divisor Case 3, feasibility, and complete interval coverage",
+      "preregistered_disposition": "UNEXECUTED"
+    },
+    {
+      "id": "F07",
+      "initial_status": "UNEXECUTED",
+      "locator": "2276--2282, 2337--2345",
+      "obligation": "divisor Case 4 and comparison with desired terms",
+      "preregistered_disposition": "UNEXECUTED"
+    },
+    {
+      "id": "F08",
+      "initial_status": "UNEXECUTED",
+      "locator": "182--185, 2266--2269, 2346--2350, 2410",
+      "obligation": "T-smooth definition, divisor-chain existence, endpoints, and coverage",
+      "preregistered_disposition": "EXPECTED_OPEN:F08_T_SMOOTH_UNDEFINED"
+    },
+    {
+      "id": "F09",
+      "initial_status": "UNEXECUTED",
+      "locator": "2357--2410",
+      "obligation": "four coefficient crossings with Ingham including quadratic/radical branch",
+      "preregistered_disposition": "UNEXECUTED"
+    },
+    {
+      "id": "F10",
+      "initial_status": "UNEXECUTED",
+      "locator": "178--187, 2371--2413",
+      "obligation": "q1=q reductions, exact inequalities, uniform 7/3, and worst-T scope",
+      "preregistered_disposition": "UNEXECUTED"
+    }
+  ],
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "platform": "linux",
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_4_p6_cgl_v2_reconstruction_preregistration_v1.py",
+    "sha256": "c7d47109a24f7021653b2b81e8a6d1524c03e628cd2121d5eca4816c3123c008"
+  },
+  "source_disposition": "OBSERVED three-author arXiv:2507.08296v2 preprint and prior work",
+  "source_integrity": {
+    "canonical_tar_member": "Large_Value_Estimates_for_Dirichlet_Polynomials_with_Characters_and_Zero_Density_of_Dirichlet___L_-Functions.tex",
+    "logical_line_count": 2468,
+    "newline_count": 2467,
+    "tar_member_equals_canonical_tex": true
+  },
+  "status": "SEALED_PREREGISTRATION_EXPECTED_OPEN_ANALYTIC_INPUT"
+}

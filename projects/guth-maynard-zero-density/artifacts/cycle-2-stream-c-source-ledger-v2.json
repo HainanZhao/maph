@@ -1,0 +1,98 @@
+{
+  "artifact_id": "cycle-2-stream-c-source-ledger-v2",
+  "created_utc": "2026-08-01",
+  "supersedes": "cycle-2-stream-c-source-ledger-v1 only for the named Stream-C Route-B dependency assessment",
+  "epistemic_status": "PROVED",
+  "claim_boundary": "This ledger closes the four external analytic dependency nodes used by the exact Stream-C Route-B replay. It does not independently prove Guth--Maynard's truncated explicit formula, their short-interval argument, or a new theorem about primes.",
+  "correction": {
+    "corrected_v1_statement": "The v1 ledger called the Huxley alternative unread and left the near-one density node OBSERVED.",
+    "cause": "It overlooked the direct visual inspection and exact locator already recorded in docs/literature-ledger-classical-inputs.md.",
+    "replacement": "Huxley (1.9), printed p. 164 / PDF p. 173, was directly inspected: N(s,T) << T^[3(1-s)/(3s-1)](log T)^44, uniformly for 3/4 <= s <= 1, with ordinates -T <= gamma <= T. On 4/5 <= s <= 1 its exponent coefficient is at most 30/13.",
+    "effect": "The Jutila scan is no longer needed on the near-one branch; the v1 artifact is retained unchanged."
+  },
+  "sources": [
+    {
+      "id": "guth-maynard-section-13-2",
+      "status": "PROVED",
+      "role": "Displayed truncated explicit formula and short-interval deductions being replayed",
+      "path": "artifacts/sources/arxiv-2405.20552v2/LargevaluesDirichlet17.tex",
+      "sha256": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428",
+      "locator": "TeX lines 2407-2471"
+    },
+    {
+      "id": "guth-maynard-theorem-1-2",
+      "status": "PROVED",
+      "role": "Density coefficient 30/13 on 7/10 <= s <= 4/5",
+      "path": "artifacts/sources/arxiv-2405.20552v2/LargevaluesDirichlet17.tex",
+      "sha256": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428",
+      "locator": "Theorem 1.2 and the exact case-split replay cycle-1-route-b-v3-theorem-1-2-case-split.json"
+    },
+    {
+      "id": "huxley-1972-equation-1-9",
+      "status": "PROVED",
+      "role": "Two-sided, logarithmically uniform density bound on the near-one branch",
+      "citation": "M. N. Huxley, The distribution of zeros of the Riemann zeta-function, Invent. Math. 15 (1972), 141-163",
+      "path": "artifacts/sources/huxley-1972-inventiones15-gdz-volume.pdf",
+      "sha256": "5946d8579810f0754e972d42a09ed2a703604b8fb4e6377f14caaa5dc48f9797",
+      "locator": "equation (1.9), printed p. 164 / PDF p. 173; inspected visually",
+      "checked_statement": "N(s,T) << T^(3(1-s)/(3s-1)) (log T)^44 uniformly for 3/4 <= s <= 1, for ordinates -T <= gamma <= T.",
+      "transfer": "For 4/5 <= s <= 1, 3/(3s-1) <= 30/13; the exact (log T)^44 factor is retained."
+    },
+    {
+      "id": "ford-2002-vinogradov-korobov",
+      "status": "PROVED",
+      "role": "Zero-free region above the finite-height verification range",
+      "citation": "Kevin Ford, Zero-free regions for the Riemann zeta function (2002)",
+      "path": "artifacts/sources/ford-2002-zero-free-regions.pdf",
+      "sha256": "a43a2c37cf0f34b05bf80d9e58bcef176371437eedf7aae17d72f2c55b04c948",
+      "locator": "Theorem 5, local PDF p. 4",
+      "checked_statement": "For |t| >= 3, zeta(beta+it) != 0 whenever 1-beta <= 1/[57.54(log|t|)^(2/3)(loglog|t|)^(1/3)]."
+    },
+    {
+      "id": "platt-trudgian-2021-low-height-rh",
+      "status": "PROVED",
+      "role": "Finite-height completion of the zero-free cutoff",
+      "citation": "D. Platt and T. Trudgian, The Riemann hypothesis is true up to 3*10^12, Bull. London Math. Soc. 53 (2021), 792-797",
+      "path_pdf": "artifacts/sources/platt-trudgian-2021-rh-3e12.pdf",
+      "sha256_pdf": "3362f66af9fa9373977eee70e2282ec33989d5d8b97e0852df9e32cc25b52885",
+      "path_source": "artifacts/sources/platt-trudgian-2021-rh-3e12.tar",
+      "sha256_source": "c4f13cdfca711d2bf90a097147be2a094ff175b0b161647359e174633fd8bf86",
+      "locator": "Theorem 1 (arXiv source lines 60-63)",
+      "checked_statement": "All non-trivial zeros through height 3,000,175,332,800 have real part 1/2; the computation is rigorous interval arithmetic."
+    },
+    {
+      "id": "hasanalizade-shen-wong-2022-rvm",
+      "status": "PROVED",
+      "role": "Explicit Riemann-von Mangoldt estimate used to derive the unit-strip count",
+      "citation": "E. Hasanalizade, Q. Shen, and P.-J. Wong, Counting zeros of the Riemann zeta function, J. Number Theory 235 (2022), 219-241",
+      "path_pdf": "artifacts/sources/hasanalizade-shen-wong-2022-counting-zeros.pdf",
+      "sha256_pdf": "3fc4c89f49249924e61cb0d289d81559faed53fcbb838628ea32dc7ec6f89fbf",
+      "path_source": "artifacts/sources/hasanalizade-shen-wong-2022-counting-zeros.tar",
+      "sha256_source": "8ba8d0eb95e1dd967adf17b7a2e77bdc45a99f6aa283d41d23dd4d0ac4358247",
+      "locator": "Corollary 1.1 / (1.4), source lines 255-261; its argument-principle derivation at lines 327-334 and 940-949",
+      "checked_statement": "For T >= e, |N(T)-T/(2pi) log(T/(2pi e))| <= 0.1038 log T+0.2573 loglog T+9.3675."
+    },
+    {
+      "id": "bui-heath-brown-2013-multiplicity-convention",
+      "status": "PROVED",
+      "role": "Pins that the Riemann-von Mangoldt zero count and zero sums use multiplicity",
+      "citation": "H. M. Bui and D. R. Heath-Brown, On simple zeros of the Riemann zeta-function, Bull. London Math. Soc. 45 (2013), 953-961",
+      "path_pdf": "artifacts/sources/bui-heath-brown-2013-simple-zeros.pdf",
+      "sha256_pdf": "b1c5a4d6cdba59d0fc552a18cb2465c442a8534be0c4e51a23db126316f83077",
+      "path_source": "artifacts/sources/bui-heath-brown-2013-simple-zeros.tar",
+      "sha256_source": "a171c6e74be228955df48191675e497ce4934623ae33ddddd9761b8cb1185ca5",
+      "locator": "Introduction, source lines 42-47",
+      "checked_statement": "N(T) counts zeros 0<gamma<T with each zero counted with multiplicity m(rho), explicitly distinguished from the distinct-zero count."
+    }
+  ],
+  "closed_dependency_nodes": [
+    "near-one density and logarithmic uniformity",
+    "Vinogradov-Korobov cutoff above finite height",
+    "finite-height completion of that cutoff",
+    "multiplicity-inclusive unit-height zero count and reciprocal-distance sum"
+  ],
+  "retained_limitations": [
+    "The downloaded Jutila scan remains unread and unused in v2.",
+    "This is a dependency closure and exact-transfer replay, not a new proof of a prime-in-short-interval theorem."
+  ]
+}

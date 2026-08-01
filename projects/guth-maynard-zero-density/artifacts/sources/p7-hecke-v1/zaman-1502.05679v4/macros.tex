@@ -1,0 +1,199 @@
+% This file provides examples of some useful macros for typesetting
+% dissertations.  None of the macros defined here are necessary beyond
+% for the template documentation, so feel free to change, remove, and add
+% your own definitions.
+%
+% We recommend that you define macros to separate the semantics
+% of the things you write from how they are presented.  For example,
+% you'll see definitions below for a macro \file{}: by using
+% \file{} consistently in the text, we can change how filenames
+% are typeset simply by changing the definition of \file{} in
+% this file.
+% 
+%% The following is a directive for TeXShop to indicate the main file
+
+\newcommand{\NA}{\textsc{n/a}}	% for "not applicable"
+\newcommand{\eg}{e.g.,\ }	% proper form of examples (\eg a, b, c)
+\newcommand{\ie}{i.e.,\ }	% proper form for that is (\ie a, b, c)
+\newcommand{\etal}{\emph{et al}}
+
+% Some useful macros for typesetting terms.
+\newcommand{\file}[1]{\texttt{#1}}
+\newcommand{\class}[1]{\texttt{#1}}
+\newcommand{\latexpackage}[1]{\href{http://www.ctan.org/macros/latex/contrib/#1}{\texttt{#1}}}
+\newcommand{\latexmiscpackage}[1]{\href{http://www.ctan.org/macros/latex/contrib/misc/#1.sty}{\texttt{#1}}}
+\newcommand{\env}[1]{\texttt{#1}}
+\newcommand{\BibTeX}{Bib\TeX}
+
+% Define a command \doi{} to typeset a digital object identifier (DOI).
+% Note: if the following definition raise an error, then you likely
+% have an ancient version of url.sty.  Either find a more recent version
+% (3.1 or later work fine) and simply copy it into this directory,  or
+% comment out the following two lines and uncomment the third.
+\DeclareUrlCommand\DOI{}
+\newcommand{\doi}[1]{\href{http://dx.doi.org/#1}{\DOI{doi:#1}}}
+%\newcommand{\doi}[1]{\href{http://dx.doi.org/#1}{doi:#1}}
+
+% Useful macro to reference an online document with a hyperlink
+% as well with the URL explicitly listed in a footnote
+% #1: the URL
+% #2: the anchoring text
+\newcommand{\webref}[2]{\href{#1}{#2}\footnote{\url{#1}}}
+
+% epigraph is a nice environment for typesetting quotations
+\makeatletter
+\newenvironment{epigraph}{%
+	\begin{flushright}
+	\begin{minipage}{\columnwidth-0.75in}
+	\begin{flushright}
+	\@ifundefined{singlespacing}{}{\singlespacing}%
+    }{
+	\end{flushright}
+	\end{minipage}
+	\end{flushright}}
+\makeatother
+
+% \FIXME{} is a useful macro for noting things needing to be changed.
+% The following definition will also output a warning to the console
+\newcommand{\FIXME}[1]{\typeout{**FIXME** #1}\textbf{[FIXME: #1]}}
+
+\crefname{figure}{Figure}{Figures}
+%MATH ENVIRONMENTS
+% \theoremstyle{plain}
+\crefname{thm}{Theorem}{Theorems}
+\crefname{cor}{Corollary}{Corollarys}
+\crefname{cor*}{Corollary}{Corollarys}
+\crefname{lem}{Lemma}{Lemmas}
+\crefname{prop}{Proposition}{Propositions}
+\crefname{defn}{Definition}{Definitions}
+
+
+
+% \theoremstyle{remark}\newtheorem*{remark}{Remark}
+\crefname{rem}{Remark}{Remarks}
+
+\newcommand{\namedthm}[2]{\theoremstyle{plain}
+\newtheorem*{thm#1}{#1}\begin{thm#1}#2\end{thm#1}}
+
+%OTHER ENVIRONMENTS
+\newenvironment{dedication}
+    {\vspace{6ex}\begin{quotation}\begin{flushright}\begin{em}}
+    {\par\end{em}\end{flushright}\end{quotation}  \pagebreak}
+    
+% Macro for 'List of Symbols', 'List of Notations' etc...
+% \newcommand{\listofsymbols}{\input{symbols}}
+\def\addsymbol #1: #2#3{$#1$ \> \parbox{5.4in}{#2 \dotfill \pageref{#3}}\\} 
+\def\addsymbolEND #1: #2#3{$#1$ \> \parbox{5.4in}{#2 \dotfill \pageref{#3}}} 
+\newcommand{\sym}[1]{\refstepcounter{notation} \label{#1}} 
+
+%MATH FORMAT
+\newcommand{\ds}{\displaystyle}
+\newcommand{\fk}[1]{\mathfrak{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\tab}{\vspace{-0.2in} $ $}
+\newcommand{\bd}{\boldsymbol}
+
+%MATH SYMBOLS
+\renewcommand{\1}{ {\bf 1}}
+
+\newcommand{\ka}{\mathfrak{a}}
+\newcommand{\bA}{\mathbb{A}}
+
+\newcommand{\cB}{\mathcal{B}}
+\renewcommand{\bar}{\overline}
+\newcommand{\Lbrace}{\left\lbrace}
+\newcommand{\Rbrace}{\right\rbrace}
+
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\Cl}{\mathrm{Cl}}
+
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\kD}{\mathfrak{D}}
+\newcommand{\kd}{\mathfrak{d}}
+
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\ke}{\mathfrak{e}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\kf}{\mathfrak{f}}
+
+\newcommand{\G}{\Gamma}
+\newcommand{\GL}{ {\rm GL}}
+
+\renewcommand{\H}{\mathbb{H}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\kH}{\mathbb{H}}
+\newcommand{\HQ}{\mathcal{H}}
+
+\newcommand{\bI}{\mathbb{I}}
+
+\newcommand{\cK}{\mathcal{K}}
+
+\newcommand{\cL}{\mathcal{L}}
+
+\renewcommand{\Im}{\mathrm{Im}}
+\newcommand{\km}{\mathfrak{m}}
+\newcommand{\smod}[1]{\, (\mathrm{mod}^*{\, #1} )}
+\renewcommand{\pmod}[1]{\, (\mathrm{mod} {\, #1})}
+\newcommand{\kn}{\mathfrak{n}}
+\newcommand{\N}{\mathrm{N}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\kN}{\mathfrak{N}}
+
+\newcommand{\kp}{\mathfrak{p}}
+\newcommand{\cP}{\mathcal{P}}
+\renewcommand{\Pr}{\mathbb{P}}
+\newcommand{\PGL}{ {\rm PGL}}
+\newcommand{\PO}{ {\rm PO}}
+\newcommand{\PSL}{ {\rm PSL}}
+\newcommand{\PU}{ {\rm PU}}
+
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\ord}{\mathrm{ord}\,}
+
+\newcommand{\kq}{\mathfrak{q}}
+\newcommand{\Q}{\mathbb{Q}}
+
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\kr}{\mathfrak{r}}
+\renewcommand{\Re}{\mathrm{Re}}
+\def\Res{\mathop{\mathrm{Res}}}
+\def\Reg{\mathop{\mathrm{Reg}}}
+
+\newcommand{\bs}{\mathbf{s}}
+\def\sgn{\mathop{\mathrm{sgn}}}
+\newcommand{\stab}{{\rm stab}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\supp}{\mathrm{supp}\,}
+\newcommand{\sumP}{\sideset{}{'}\sum}
+\newcommand{\SL}{ {\rm SL}}
+\newcommand{\SO}{ {\rm SO}}
+\newcommand{\SU}{ {\rm SU}}
+
+\newcommand{\bt}{\mathbf{t}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\Tr}{ \textbf{Tr}}
+
+\newcommand{\cU}{\mathcal{U}}
+
+\newcommand{\kv}{\mathfrak{v}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\vol}{\text{\rm vol}}
+
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\kw}{\mathfrak{w}}
+\newcommand{\wkarrow}{\overset{\text{wk-}\ast}{\longrightarrow}}
+
+\newcommand{\bx}{\mathbf{x}}
+\newcommand{\X}{\mathcal{X}}
+
+\newcommand{\by}{\mathbf{y}}
+\newcommand{\cY}{\mathcal{Y}}
+
+\newcommand{\bz}{\mathbf{z}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\cZ}{\mathcal{Z}}
+% END

@@ -1,0 +1,2175 @@
+{
+  "artifact_id": "cycle-4-p1r-crr-finite-probe-preregistration-v1",
+  "claim_boundary": "Frozen 160-row finite-analogue discovery search only. It proves no CRR compatibility/incompatibility statement, extremizer, saturation theorem, density estimate, or short-interval result. No candidate has been evaluated.",
+  "epistemic_status": "CONJECTURED",
+  "exact_scale_rows": {
+    "1024": {
+      "H": 4096,
+      "Q": 16,
+      "R": 256,
+      "V": 128,
+      "cubic": 68719476736,
+      "rational_height": 64
+    },
+    "2048": {
+      "H": 9410,
+      "Q": 21,
+      "R": 445,
+      "V": 207,
+      "cubic": 833273994645,
+      "rational_height": 97
+    },
+    "256": {
+      "H": 776,
+      "Q": 9,
+      "R": 84,
+      "V": 48,
+      "cubic": 467373274,
+      "rational_height": 27
+    },
+    "512": {
+      "H": 1782,
+      "Q": 12,
+      "R": 147,
+      "V": 78,
+      "cubic": 5667243323,
+      "rational_height": 42
+    }
+  },
+  "execution": {
+    "authorized_after_seal": true,
+    "executed_by_this_builder": false,
+    "future_output_directory": "discovery/",
+    "result_classification": "finite_hits_OBSERVED; complex_scores_RECOGNIZED; no_miss_table_implies_universal_negative"
+  },
+  "family_registry": {
+    "F1-phase-rounded-frame": [
+      {
+        "id": "V1",
+        "phase_denominator": 8
+      },
+      {
+        "id": "V2",
+        "phase_denominator": 12
+      },
+      {
+        "id": "V3",
+        "phase_denominator": 16
+      },
+      {
+        "id": "V4",
+        "phase_denominator": 24
+      }
+    ],
+    "F2-macrocell-resonant-layers": [
+      {
+        "id": "V1",
+        "macrocells": 2
+      },
+      {
+        "id": "V2",
+        "macrocells": 3
+      },
+      {
+        "id": "V3",
+        "macrocells": 4
+      },
+      {
+        "id": "V4",
+        "macrocells": 6
+      }
+    ],
+    "F3-near-product-rational-packet": [
+      {
+        "id": "V1",
+        "packet_denominator": 2
+      },
+      {
+        "id": "V2",
+        "packet_denominator": 3
+      },
+      {
+        "id": "V3",
+        "packet_denominator": 5
+      },
+      {
+        "id": "V4",
+        "packet_denominator": 7
+      }
+    ],
+    "F4-quadratic-modular-chirp": [
+      {
+        "id": "V1",
+        "prime_modulus": 257
+      },
+      {
+        "id": "V2",
+        "prime_modulus": 263
+      },
+      {
+        "id": "V3",
+        "prime_modulus": 269
+      },
+      {
+        "id": "V4",
+        "prime_modulus": 271
+      }
+    ],
+    "F5-symmetric-positive-trace-spectral": [
+      {
+        "id": "V1",
+        "spectral_rank": 2
+      },
+      {
+        "id": "V2",
+        "spectral_rank": 3
+      },
+      {
+        "id": "V3",
+        "spectral_rank": 4
+      },
+      {
+        "id": "V4",
+        "spectral_rank": 5
+      }
+    ]
+  },
+  "finite_surrogate": {
+    "ambient_group": "G_H=Z/HZ, represented by {0,...,H-1}",
+    "cubic_matrix": "B_M(x,y)=1_{x!=y}*2*sum_{m=1}^M(1-m/(M+1))*cos(2*pi*m*(x-y)/H)",
+    "cubic_proxy": "C_M(W)=N^3*tr(B_M^3), a signed finite proxy",
+    "large_value_polynomial": "D_b(t)=sum_{n=0}^{N-1} b_n exp(2*pi*i*n*t/H), with |b_n|<=1",
+    "rational_sum": "R_W(x)=sum_{t in W} exp(2*pi*i*t*x), x in [0,1]",
+    "set_energy": "E_H(W)=#{(a,b,c,d) in W^4:a+b=c+d mod H}"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/crr_finite_analogue_probe_v1.py",
+      "sha256": "489b189e421b2cdfeed7d0bbe532521e56165e3a16cfba4557731f723b42c547"
+    },
+    "document": {
+      "path": "docs/cycle-4-p1r-crr-finite-probe-preregistration-v1.md",
+      "sha256": "c6da4e7d84dd8f3251367d57fc28b22c25796fe0d6d382138de2db5058da4959"
+    },
+    "formalization_v2": {
+      "path": "artifacts/cycle-4-p1r-crr-u-formalization-v2.json",
+      "sha256": "e26be797539eabe53ee765b7067d1c99fe4d440035e27785cf38aa64bc2fc84e"
+    }
+  },
+  "mutation": {
+    "acceptance": "16-node/mode-8 proxy increases by at least 2^-40; otherwise reject",
+    "operation": "one-for-one W swap with forward cyclic collision repair; recompute the family b rule from the same W",
+    "post_result_selection": "PROHIBITED",
+    "proposals_per_row": 128
+  },
+  "predecessor": {
+    "artifact_id": "cycle-4-p1r-crr-u-formalization-v2",
+    "continuing_authorization": "This separate preregistration supplies the formerly missing finite families/ranges/seed/cap/retention details; it does not alter formalization-v2 claims.",
+    "prior_search_status": "PROHIBITED"
+  },
+  "quadrature_and_cubic": {
+    "cubic_relative_disagreement": "1/20",
+    "farey_partition": "all reduced fractions in [0,1] of denominator <=Q, midpoint cells, Gauss-Legendre mapped cellwise",
+    "final_cubic_mode": 12,
+    "final_nodes": 32,
+    "proxy_cubic_mode": 8,
+    "proxy_nodes": 16,
+    "quadrature_relative_disagreement": "1/100",
+    "signed_cubic_positive_sign_required": true
+  },
+  "replay": {
+    "check_command": "python3 discovery/build_cycle_4_p1r_crr_finite_probe_preregistration_v1.py --check",
+    "write_command": "python3 discovery/build_cycle_4_p1r_crr_finite_probe_preregistration_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "NOT_INITIATED; DEFERRED_TO_PAPER_STAGE",
+    "lightweight_checks": [
+      "exact schedule arithmetic",
+      "input hash pins",
+      "byte replay",
+      "claim-boundary check"
+    ]
+  },
+  "resources": {
+    "aggregate_wall_minutes": 55,
+    "aggregate_wall_seconds": 3300,
+    "max_rss_bytes": 1073741824,
+    "max_rss_gib": 1
+  },
+  "retention": {
+    "failed_row_rule": "Every one of the 160 scheduled rows is retained exactly once. No parameter-changing retry is permitted. After a global cap, the active row is RESOURCE_CAP and all unstarted rows are GLOBAL_CAP_UNREACHED.",
+    "failure_codes": [
+      "INIT_INVALID",
+      "COEFFICIENT_BOUND",
+      "SET_CARDINALITY",
+      "SET_DUPLICATE",
+      "SET_DOMAIN",
+      "RESOURCE_CAP",
+      "GLOBAL_CAP_UNREACHED",
+      "NONFINITE",
+      "RECOGNITION_RADIUS",
+      "QUADRATURE_DISAGREEMENT",
+      "CUBIC_PROXY_DISAGREEMENT",
+      "REPLAY_MISMATCH",
+      "NO_RETAINED_HIT"
+    ],
+    "no_universal_negative_from_misses": true,
+    "recognition_ball": "centre=384-bit value; radius=2*max(|384-bit-256-bit|,2^-256*(1+|centre|)); not a rigorous enclosure",
+    "retained_hit_margin": "1/20",
+    "thresholds": {
+      "cubic": "C_8,C_12 > 0 and C_12 >= (1+0.05)*(1/20)*N^(18/5)",
+      "energy": "(1+0.05)*(1/4)*N^2 <= E_H(W) <= 4*N^2/(1+0.05)",
+      "large_value": "min(t in W)|D_b(t)| >= (1+0.05)*(3/4)*N^(7/10)",
+      "rational_height": "Farey-node |R_W(x)| threshold is (1+0.05)*(3/4)*N^(3/5)",
+      "rational_measure": "mu_32 >= (1+0.05)*(1/5)*N^(-2/5)",
+      "recognition_radius": "every retained final value has empirical recognition-ball radius < 10^(-30)*N^(7/10)"
+    }
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "mpmath": "1.2.1",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "scale_exponents": {
+    "H": "6/5",
+    "Q": "2/5",
+    "R": "4/5",
+    "V": "7/10",
+    "cubic": "18/5",
+    "rational_height": "3/5"
+  },
+  "schedule": {
+    "canonical_order": "N, family, variant, replicate",
+    "factorization": "4 N values * 5 families * 4 variants * 2 replicates = 160",
+    "master_seed": "0x43525255424F4C44",
+    "rng": "SplitMix64 unsigned 64-bit wraparound; each row uses the next master-stream output as its fresh row seed",
+    "rows": [
+      {
+        "N": 256,
+        "family": "F1-phase-rounded-frame",
+        "id": "N256-F1-phase-rounded-frame-V1-R0",
+        "replicate": 0,
+        "row_number": 0,
+        "row_seed": "0xBDA8E4574E64BA87",
+        "variant": {
+          "id": "V1",
+          "phase_denominator": 8
+        }
+      },
+      {
+        "N": 256,
+        "family": "F1-phase-rounded-frame",
+        "id": "N256-F1-phase-rounded-frame-V1-R1",
+        "replicate": 1,
+        "row_number": 1,
+        "row_seed": "0xCFFB5808FAF09660",
+        "variant": {
+          "id": "V1",
+          "phase_denominator": 8
+        }
+      },
+      {
+        "N": 256,
+        "family": "F1-phase-rounded-frame",
+        "id": "N256-F1-phase-rounded-frame-V2-R0",
+        "replicate": 0,
+        "row_number": 2,
+        "row_seed": "0x3F05072ECBF8812D",
+        "variant": {
+          "id": "V2",
+          "phase_denominator": 12
+        }
+      },
+      {
+        "N": 256,
+        "family": "F1-phase-rounded-frame",
+        "id": "N256-F1-phase-rounded-frame-V2-R1",
+        "replicate": 1,
+        "row_number": 3,
+        "row_seed": "0xCDD5AE9858229DC9",
+        "variant": {
+          "id": "V2",
+          "phase_denominator": 12
+        }
+      },
+      {
+        "N": 256,
+        "family": "F1-phase-rounded-frame",
+        "id": "N256-F1-phase-rounded-frame-V3-R0",
+        "replicate": 0,
+        "row_number": 4,
+        "row_seed": "0x52DB7271030AE4EB",
+        "variant": {
+          "id": "V3",
+          "phase_denominator": 16
+        }
+      },
+      {
+        "N": 256,
+        "family": "F1-phase-rounded-frame",
+        "id": "N256-F1-phase-rounded-frame-V3-R1",
+        "replicate": 1,
+        "row_number": 5,
+        "row_seed": "0x4454BF4A4E49A58E",
+        "variant": {
+          "id": "V3",
+          "phase_denominator": 16
+        }
+      },
+      {
+        "N": 256,
+        "family": "F1-phase-rounded-frame",
+        "id": "N256-F1-phase-rounded-frame-V4-R0",
+        "replicate": 0,
+        "row_number": 6,
+        "row_seed": "0xCA8578EC493BDD04",
+        "variant": {
+          "id": "V4",
+          "phase_denominator": 24
+        }
+      },
+      {
+        "N": 256,
+        "family": "F1-phase-rounded-frame",
+        "id": "N256-F1-phase-rounded-frame-V4-R1",
+        "replicate": 1,
+        "row_number": 7,
+        "row_seed": "0xC405823D6CDF75F9",
+        "variant": {
+          "id": "V4",
+          "phase_denominator": 24
+        }
+      },
+      {
+        "N": 256,
+        "family": "F2-macrocell-resonant-layers",
+        "id": "N256-F2-macrocell-resonant-layers-V1-R0",
+        "replicate": 0,
+        "row_number": 8,
+        "row_seed": "0x6A1E7587DDBFE5E7",
+        "variant": {
+          "id": "V1",
+          "macrocells": 2
+        }
+      },
+      {
+        "N": 256,
+        "family": "F2-macrocell-resonant-layers",
+        "id": "N256-F2-macrocell-resonant-layers-V1-R1",
+        "replicate": 1,
+        "row_number": 9,
+        "row_seed": "0x3617FF67B5A7C89F",
+        "variant": {
+          "id": "V1",
+          "macrocells": 2
+        }
+      },
+      {
+        "N": 256,
+        "family": "F2-macrocell-resonant-layers",
+        "id": "N256-F2-macrocell-resonant-layers-V2-R0",
+        "replicate": 0,
+        "row_number": 10,
+        "row_seed": "0x8338CEA31246D4E0",
+        "variant": {
+          "id": "V2",
+          "macrocells": 3
+        }
+      },
+      {
+        "N": 256,
+        "family": "F2-macrocell-resonant-layers",
+        "id": "N256-F2-macrocell-resonant-layers-V2-R1",
+        "replicate": 1,
+        "row_number": 11,
+        "row_seed": "0xB2E02A30B5466129",
+        "variant": {
+          "id": "V2",
+          "macrocells": 3
+        }
+      },
+      {
+        "N": 256,
+        "family": "F2-macrocell-resonant-layers",
+        "id": "N256-F2-macrocell-resonant-layers-V3-R0",
+        "replicate": 0,
+        "row_number": 12,
+        "row_seed": "0x4D97DCDDD580F7ED",
+        "variant": {
+          "id": "V3",
+          "macrocells": 4
+        }
+      },
+      {
+        "N": 256,
+        "family": "F2-macrocell-resonant-layers",
+        "id": "N256-F2-macrocell-resonant-layers-V3-R1",
+        "replicate": 1,
+        "row_number": 13,
+        "row_seed": "0xCF2A9D91BD6D7343",
+        "variant": {
+          "id": "V3",
+          "macrocells": 4
+        }
+      },
+      {
+        "N": 256,
+        "family": "F2-macrocell-resonant-layers",
+        "id": "N256-F2-macrocell-resonant-layers-V4-R0",
+        "replicate": 0,
+        "row_number": 14,
+        "row_seed": "0xF40EC3E2D507E58D",
+        "variant": {
+          "id": "V4",
+          "macrocells": 6
+        }
+      },
+      {
+        "N": 256,
+        "family": "F2-macrocell-resonant-layers",
+        "id": "N256-F2-macrocell-resonant-layers-V4-R1",
+        "replicate": 1,
+        "row_number": 15,
+        "row_seed": "0x52A200B3144CC9A1",
+        "variant": {
+          "id": "V4",
+          "macrocells": 6
+        }
+      },
+      {
+        "N": 256,
+        "family": "F3-near-product-rational-packet",
+        "id": "N256-F3-near-product-rational-packet-V1-R0",
+        "replicate": 0,
+        "row_number": 16,
+        "row_seed": "0x01F56D99E72ACA01",
+        "variant": {
+          "id": "V1",
+          "packet_denominator": 2
+        }
+      },
+      {
+        "N": 256,
+        "family": "F3-near-product-rational-packet",
+        "id": "N256-F3-near-product-rational-packet-V1-R1",
+        "replicate": 1,
+        "row_number": 17,
+        "row_seed": "0x49AFF039BF264C01",
+        "variant": {
+          "id": "V1",
+          "packet_denominator": 2
+        }
+      },
+      {
+        "N": 256,
+        "family": "F3-near-product-rational-packet",
+        "id": "N256-F3-near-product-rational-packet-V2-R0",
+        "replicate": 0,
+        "row_number": 18,
+        "row_seed": "0x7780059F72B7A744",
+        "variant": {
+          "id": "V2",
+          "packet_denominator": 3
+        }
+      },
+      {
+        "N": 256,
+        "family": "F3-near-product-rational-packet",
+        "id": "N256-F3-near-product-rational-packet-V2-R1",
+        "replicate": 1,
+        "row_number": 19,
+        "row_seed": "0xA426B11863E5B68C",
+        "variant": {
+          "id": "V2",
+          "packet_denominator": 3
+        }
+      },
+      {
+        "N": 256,
+        "family": "F3-near-product-rational-packet",
+        "id": "N256-F3-near-product-rational-packet-V3-R0",
+        "replicate": 0,
+        "row_number": 20,
+        "row_seed": "0xDC3EAF9722749EBC",
+        "variant": {
+          "id": "V3",
+          "packet_denominator": 5
+        }
+      },
+      {
+        "N": 256,
+        "family": "F3-near-product-rational-packet",
+        "id": "N256-F3-near-product-rational-packet-V3-R1",
+        "replicate": 1,
+        "row_number": 21,
+        "row_seed": "0x7EFAB0B462A81DF3",
+        "variant": {
+          "id": "V3",
+          "packet_denominator": 5
+        }
+      },
+      {
+        "N": 256,
+        "family": "F3-near-product-rational-packet",
+        "id": "N256-F3-near-product-rational-packet-V4-R0",
+        "replicate": 0,
+        "row_number": 22,
+        "row_seed": "0xA659C1C57C503D53",
+        "variant": {
+          "id": "V4",
+          "packet_denominator": 7
+        }
+      },
+      {
+        "N": 256,
+        "family": "F3-near-product-rational-packet",
+        "id": "N256-F3-near-product-rational-packet-V4-R1",
+        "replicate": 1,
+        "row_number": 23,
+        "row_seed": "0xBDEC9FDCE5222D6C",
+        "variant": {
+          "id": "V4",
+          "packet_denominator": 7
+        }
+      },
+      {
+        "N": 256,
+        "family": "F4-quadratic-modular-chirp",
+        "id": "N256-F4-quadratic-modular-chirp-V1-R0",
+        "replicate": 0,
+        "row_number": 24,
+        "row_seed": "0xF0B580A431392BC1",
+        "variant": {
+          "id": "V1",
+          "prime_modulus": 257
+        }
+      },
+      {
+        "N": 256,
+        "family": "F4-quadratic-modular-chirp",
+        "id": "N256-F4-quadratic-modular-chirp-V1-R1",
+        "replicate": 1,
+        "row_number": 25,
+        "row_seed": "0x304CD40E17FDB5A2",
+        "variant": {
+          "id": "V1",
+          "prime_modulus": 257
+        }
+      },
+      {
+        "N": 256,
+        "family": "F4-quadratic-modular-chirp",
+        "id": "N256-F4-quadratic-modular-chirp-V2-R0",
+        "replicate": 0,
+        "row_number": 26,
+        "row_seed": "0x4EB98C9C404E7835",
+        "variant": {
+          "id": "V2",
+          "prime_modulus": 263
+        }
+      },
+      {
+        "N": 256,
+        "family": "F4-quadratic-modular-chirp",
+        "id": "N256-F4-quadratic-modular-chirp-V2-R1",
+        "replicate": 1,
+        "row_number": 27,
+        "row_seed": "0xE52295B410698CE0",
+        "variant": {
+          "id": "V2",
+          "prime_modulus": 263
+        }
+      },
+      {
+        "N": 256,
+        "family": "F4-quadratic-modular-chirp",
+        "id": "N256-F4-quadratic-modular-chirp-V3-R0",
+        "replicate": 0,
+        "row_number": 28,
+        "row_seed": "0xB6FF94F77AB363BC",
+        "variant": {
+          "id": "V3",
+          "prime_modulus": 269
+        }
+      },
+      {
+        "N": 256,
+        "family": "F4-quadratic-modular-chirp",
+        "id": "N256-F4-quadratic-modular-chirp-V3-R1",
+        "replicate": 1,
+        "row_number": 29,
+        "row_seed": "0x5598A16A9AE28858",
+        "variant": {
+          "id": "V3",
+          "prime_modulus": 269
+        }
+      },
+      {
+        "N": 256,
+        "family": "F4-quadratic-modular-chirp",
+        "id": "N256-F4-quadratic-modular-chirp-V4-R0",
+        "replicate": 0,
+        "row_number": 30,
+        "row_seed": "0x836BEB7CA160541D",
+        "variant": {
+          "id": "V4",
+          "prime_modulus": 271
+        }
+      },
+      {
+        "N": 256,
+        "family": "F4-quadratic-modular-chirp",
+        "id": "N256-F4-quadratic-modular-chirp-V4-R1",
+        "replicate": 1,
+        "row_number": 31,
+        "row_seed": "0xA3DF6E429E9CBB4E",
+        "variant": {
+          "id": "V4",
+          "prime_modulus": 271
+        }
+      },
+      {
+        "N": 256,
+        "family": "F5-symmetric-positive-trace-spectral",
+        "id": "N256-F5-symmetric-positive-trace-spectral-V1-R0",
+        "replicate": 0,
+        "row_number": 32,
+        "row_seed": "0x98CB000269F4D138",
+        "variant": {
+          "id": "V1",
+          "spectral_rank": 2
+        }
+      },
+      {
+        "N": 256,
+        "family": "F5-symmetric-positive-trace-spectral",
+        "id": "N256-F5-symmetric-positive-trace-spectral-V1-R1",
+        "replicate": 1,
+        "row_number": 33,
+        "row_seed": "0xE917207417E497C3",
+        "variant": {
+          "id": "V1",
+          "spectral_rank": 2
+        }
+      },
+      {
+        "N": 256,
+        "family": "F5-symmetric-positive-trace-spectral",
+        "id": "N256-F5-symmetric-positive-trace-spectral-V2-R0",
+        "replicate": 0,
+        "row_number": 34,
+        "row_seed": "0xE8E82A8D9D168969",
+        "variant": {
+          "id": "V2",
+          "spectral_rank": 3
+        }
+      },
+      {
+        "N": 256,
+        "family": "F5-symmetric-positive-trace-spectral",
+        "id": "N256-F5-symmetric-positive-trace-spectral-V2-R1",
+        "replicate": 1,
+        "row_number": 35,
+        "row_seed": "0xD3BEE5E7FE3C8603",
+        "variant": {
+          "id": "V2",
+          "spectral_rank": 3
+        }
+      },
+      {
+        "N": 256,
+        "family": "F5-symmetric-positive-trace-spectral",
+        "id": "N256-F5-symmetric-positive-trace-spectral-V3-R0",
+        "replicate": 0,
+        "row_number": 36,
+        "row_seed": "0x46D85F052FAE82BB",
+        "variant": {
+          "id": "V3",
+          "spectral_rank": 4
+        }
+      },
+      {
+        "N": 256,
+        "family": "F5-symmetric-positive-trace-spectral",
+        "id": "N256-F5-symmetric-positive-trace-spectral-V3-R1",
+        "replicate": 1,
+        "row_number": 37,
+        "row_seed": "0x50FB81609F68B509",
+        "variant": {
+          "id": "V3",
+          "spectral_rank": 4
+        }
+      },
+      {
+        "N": 256,
+        "family": "F5-symmetric-positive-trace-spectral",
+        "id": "N256-F5-symmetric-positive-trace-spectral-V4-R0",
+        "replicate": 0,
+        "row_number": 38,
+        "row_seed": "0xBCE80B3A9D1B3324",
+        "variant": {
+          "id": "V4",
+          "spectral_rank": 5
+        }
+      },
+      {
+        "N": 256,
+        "family": "F5-symmetric-positive-trace-spectral",
+        "id": "N256-F5-symmetric-positive-trace-spectral-V4-R1",
+        "replicate": 1,
+        "row_number": 39,
+        "row_seed": "0xE1F1A53BC26CA88E",
+        "variant": {
+          "id": "V4",
+          "spectral_rank": 5
+        }
+      },
+      {
+        "N": 512,
+        "family": "F1-phase-rounded-frame",
+        "id": "N512-F1-phase-rounded-frame-V1-R0",
+        "replicate": 0,
+        "row_number": 40,
+        "row_seed": "0x187D240D2CEB7597",
+        "variant": {
+          "id": "V1",
+          "phase_denominator": 8
+        }
+      },
+      {
+        "N": 512,
+        "family": "F1-phase-rounded-frame",
+        "id": "N512-F1-phase-rounded-frame-V1-R1",
+        "replicate": 1,
+        "row_number": 41,
+        "row_seed": "0x21510A759DD551C0",
+        "variant": {
+          "id": "V1",
+          "phase_denominator": 8
+        }
+      },
+      {
+        "N": 512,
+        "family": "F1-phase-rounded-frame",
+        "id": "N512-F1-phase-rounded-frame-V2-R0",
+        "replicate": 0,
+        "row_number": 42,
+        "row_seed": "0xB7B5A6BC9AD75295",
+        "variant": {
+          "id": "V2",
+          "phase_denominator": 12
+        }
+      },
+      {
+        "N": 512,
+        "family": "F1-phase-rounded-frame",
+        "id": "N512-F1-phase-rounded-frame-V2-R1",
+        "replicate": 1,
+        "row_number": 43,
+        "row_seed": "0x703B1EA7A344C9D9",
+        "variant": {
+          "id": "V2",
+          "phase_denominator": 12
+        }
+      },
+      {
+        "N": 512,
+        "family": "F1-phase-rounded-frame",
+        "id": "N512-F1-phase-rounded-frame-V3-R0",
+        "replicate": 0,
+        "row_number": 44,
+        "row_seed": "0xB1C2F7C9C2B9F126",
+        "variant": {
+          "id": "V3",
+          "phase_denominator": 16
+        }
+      },
+      {
+        "N": 512,
+        "family": "F1-phase-rounded-frame",
+        "id": "N512-F1-phase-rounded-frame-V3-R1",
+        "replicate": 1,
+        "row_number": 45,
+        "row_seed": "0xC701471BF8BFA4FE",
+        "variant": {
+          "id": "V3",
+          "phase_denominator": 16
+        }
+      },
+      {
+        "N": 512,
+        "family": "F1-phase-rounded-frame",
+        "id": "N512-F1-phase-rounded-frame-V4-R0",
+        "replicate": 0,
+        "row_number": 46,
+        "row_seed": "0xA414B5FA02D50256",
+        "variant": {
+          "id": "V4",
+          "phase_denominator": 24
+        }
+      },
+      {
+        "N": 512,
+        "family": "F1-phase-rounded-frame",
+        "id": "N512-F1-phase-rounded-frame-V4-R1",
+        "replicate": 1,
+        "row_number": 47,
+        "row_seed": "0xC8403DC5A26FAE4E",
+        "variant": {
+          "id": "V4",
+          "phase_denominator": 24
+        }
+      },
+      {
+        "N": 512,
+        "family": "F2-macrocell-resonant-layers",
+        "id": "N512-F2-macrocell-resonant-layers-V1-R0",
+        "replicate": 0,
+        "row_number": 48,
+        "row_seed": "0x2181520933773E0D",
+        "variant": {
+          "id": "V1",
+          "macrocells": 2
+        }
+      },
+      {
+        "N": 512,
+        "family": "F2-macrocell-resonant-layers",
+        "id": "N512-F2-macrocell-resonant-layers-V1-R1",
+        "replicate": 1,
+        "row_number": 49,
+        "row_seed": "0xD6EDB7DC162E4211",
+        "variant": {
+          "id": "V1",
+          "macrocells": 2
+        }
+      },
+      {
+        "N": 512,
+        "family": "F2-macrocell-resonant-layers",
+        "id": "N512-F2-macrocell-resonant-layers-V2-R0",
+        "replicate": 0,
+        "row_number": 50,
+        "row_seed": "0x410ED3DE831D617C",
+        "variant": {
+          "id": "V2",
+          "macrocells": 3
+        }
+      },
+      {
+        "N": 512,
+        "family": "F2-macrocell-resonant-layers",
+        "id": "N512-F2-macrocell-resonant-layers-V2-R1",
+        "replicate": 1,
+        "row_number": 51,
+        "row_seed": "0x1D770060427A510F",
+        "variant": {
+          "id": "V2",
+          "macrocells": 3
+        }
+      },
+      {
+        "N": 512,
+        "family": "F2-macrocell-resonant-layers",
+        "id": "N512-F2-macrocell-resonant-layers-V3-R0",
+        "replicate": 0,
+        "row_number": 52,
+        "row_seed": "0x709680813F9D8A40",
+        "variant": {
+          "id": "V3",
+          "macrocells": 4
+        }
+      },
+      {
+        "N": 512,
+        "family": "F2-macrocell-resonant-layers",
+        "id": "N512-F2-macrocell-resonant-layers-V3-R1",
+        "replicate": 1,
+        "row_number": 53,
+        "row_seed": "0x8D418F505A7E46F1",
+        "variant": {
+          "id": "V3",
+          "macrocells": 4
+        }
+      },
+      {
+        "N": 512,
+        "family": "F2-macrocell-resonant-layers",
+        "id": "N512-F2-macrocell-resonant-layers-V4-R0",
+        "replicate": 0,
+        "row_number": 54,
+        "row_seed": "0xDA13E9C99154EDD3",
+        "variant": {
+          "id": "V4",
+          "macrocells": 6
+        }
+      },
+      {
+        "N": 512,
+        "family": "F2-macrocell-resonant-layers",
+        "id": "N512-F2-macrocell-resonant-layers-V4-R1",
+        "replicate": 1,
+        "row_number": 55,
+        "row_seed": "0xD2F6107C6DA83814",
+        "variant": {
+          "id": "V4",
+          "macrocells": 6
+        }
+      },
+      {
+        "N": 512,
+        "family": "F3-near-product-rational-packet",
+        "id": "N512-F3-near-product-rational-packet-V1-R0",
+        "replicate": 0,
+        "row_number": 56,
+        "row_seed": "0x0BF73667D7309615",
+        "variant": {
+          "id": "V1",
+          "packet_denominator": 2
+        }
+      },
+      {
+        "N": 512,
+        "family": "F3-near-product-rational-packet",
+        "id": "N512-F3-near-product-rational-packet-V1-R1",
+        "replicate": 1,
+        "row_number": 57,
+        "row_seed": "0x2C8C9CF057892EAA",
+        "variant": {
+          "id": "V1",
+          "packet_denominator": 2
+        }
+      },
+      {
+        "N": 512,
+        "family": "F3-near-product-rational-packet",
+        "id": "N512-F3-near-product-rational-packet-V2-R0",
+        "replicate": 0,
+        "row_number": 58,
+        "row_seed": "0x5542A3047E8EBD7A",
+        "variant": {
+          "id": "V2",
+          "packet_denominator": 3
+        }
+      },
+      {
+        "N": 512,
+        "family": "F3-near-product-rational-packet",
+        "id": "N512-F3-near-product-rational-packet-V2-R1",
+        "replicate": 1,
+        "row_number": 59,
+        "row_seed": "0x19F790F680333A8F",
+        "variant": {
+          "id": "V2",
+          "packet_denominator": 3
+        }
+      },
+      {
+        "N": 512,
+        "family": "F3-near-product-rational-packet",
+        "id": "N512-F3-near-product-rational-packet-V3-R0",
+        "replicate": 0,
+        "row_number": 60,
+        "row_seed": "0x2316F36C25EDB9CB",
+        "variant": {
+          "id": "V3",
+          "packet_denominator": 5
+        }
+      },
+      {
+        "N": 512,
+        "family": "F3-near-product-rational-packet",
+        "id": "N512-F3-near-product-rational-packet-V3-R1",
+        "replicate": 1,
+        "row_number": 61,
+        "row_seed": "0xB936D29C5E8BE41B",
+        "variant": {
+          "id": "V3",
+          "packet_denominator": 5
+        }
+      },
+      {
+        "N": 512,
+        "family": "F3-near-product-rational-packet",
+        "id": "N512-F3-near-product-rational-packet-V4-R0",
+        "replicate": 0,
+        "row_number": 62,
+        "row_seed": "0x360D7983A25C8675",
+        "variant": {
+          "id": "V4",
+          "packet_denominator": 7
+        }
+      },
+      {
+        "N": 512,
+        "family": "F3-near-product-rational-packet",
+        "id": "N512-F3-near-product-rational-packet-V4-R1",
+        "replicate": 1,
+        "row_number": 63,
+        "row_seed": "0xB6F5F9FD1DA0D587",
+        "variant": {
+          "id": "V4",
+          "packet_denominator": 7
+        }
+      },
+      {
+        "N": 512,
+        "family": "F4-quadratic-modular-chirp",
+        "id": "N512-F4-quadratic-modular-chirp-V1-R0",
+        "replicate": 0,
+        "row_number": 64,
+        "row_seed": "0xAB8E3210AA117C59",
+        "variant": {
+          "id": "V1",
+          "prime_modulus": 257
+        }
+      },
+      {
+        "N": 512,
+        "family": "F4-quadratic-modular-chirp",
+        "id": "N512-F4-quadratic-modular-chirp-V1-R1",
+        "replicate": 1,
+        "row_number": 65,
+        "row_seed": "0xE0392367E37A09B2",
+        "variant": {
+          "id": "V1",
+          "prime_modulus": 257
+        }
+      },
+      {
+        "N": 512,
+        "family": "F4-quadratic-modular-chirp",
+        "id": "N512-F4-quadratic-modular-chirp-V2-R0",
+        "replicate": 0,
+        "row_number": 66,
+        "row_seed": "0x81CE6A932D40EDE4",
+        "variant": {
+          "id": "V2",
+          "prime_modulus": 263
+        }
+      },
+      {
+        "N": 512,
+        "family": "F4-quadratic-modular-chirp",
+        "id": "N512-F4-quadratic-modular-chirp-V2-R1",
+        "replicate": 1,
+        "row_number": 67,
+        "row_seed": "0xCB00C56F68035B6D",
+        "variant": {
+          "id": "V2",
+          "prime_modulus": 263
+        }
+      },
+      {
+        "N": 512,
+        "family": "F4-quadratic-modular-chirp",
+        "id": "N512-F4-quadratic-modular-chirp-V3-R0",
+        "replicate": 0,
+        "row_number": 68,
+        "row_seed": "0xC60D0DD5DB8BD642",
+        "variant": {
+          "id": "V3",
+          "prime_modulus": 269
+        }
+      },
+      {
+        "N": 512,
+        "family": "F4-quadratic-modular-chirp",
+        "id": "N512-F4-quadratic-modular-chirp-V3-R1",
+        "replicate": 1,
+        "row_number": 69,
+        "row_seed": "0x58D1455D263AB868",
+        "variant": {
+          "id": "V3",
+          "prime_modulus": 269
+        }
+      },
+      {
+        "N": 512,
+        "family": "F4-quadratic-modular-chirp",
+        "id": "N512-F4-quadratic-modular-chirp-V4-R0",
+        "replicate": 0,
+        "row_number": 70,
+        "row_seed": "0xD383679A7E877B80",
+        "variant": {
+          "id": "V4",
+          "prime_modulus": 271
+        }
+      },
+      {
+        "N": 512,
+        "family": "F4-quadratic-modular-chirp",
+        "id": "N512-F4-quadratic-modular-chirp-V4-R1",
+        "replicate": 1,
+        "row_number": 71,
+        "row_seed": "0x94AE998B206FD4D3",
+        "variant": {
+          "id": "V4",
+          "prime_modulus": 271
+        }
+      },
+      {
+        "N": 512,
+        "family": "F5-symmetric-positive-trace-spectral",
+        "id": "N512-F5-symmetric-positive-trace-spectral-V1-R0",
+        "replicate": 0,
+        "row_number": 72,
+        "row_seed": "0xC70FB3CC75B6625B",
+        "variant": {
+          "id": "V1",
+          "spectral_rank": 2
+        }
+      },
+      {
+        "N": 512,
+        "family": "F5-symmetric-positive-trace-spectral",
+        "id": "N512-F5-symmetric-positive-trace-spectral-V1-R1",
+        "replicate": 1,
+        "row_number": 73,
+        "row_seed": "0x3BEBA64A446735B1",
+        "variant": {
+          "id": "V1",
+          "spectral_rank": 2
+        }
+      },
+      {
+        "N": 512,
+        "family": "F5-symmetric-positive-trace-spectral",
+        "id": "N512-F5-symmetric-positive-trace-spectral-V2-R0",
+        "replicate": 0,
+        "row_number": 74,
+        "row_seed": "0x62A148C28251C4A1",
+        "variant": {
+          "id": "V2",
+          "spectral_rank": 3
+        }
+      },
+      {
+        "N": 512,
+        "family": "F5-symmetric-positive-trace-spectral",
+        "id": "N512-F5-symmetric-positive-trace-spectral-V2-R1",
+        "replicate": 1,
+        "row_number": 75,
+        "row_seed": "0xCC91A791D8AB46A1",
+        "variant": {
+          "id": "V2",
+          "spectral_rank": 3
+        }
+      },
+      {
+        "N": 512,
+        "family": "F5-symmetric-positive-trace-spectral",
+        "id": "N512-F5-symmetric-positive-trace-spectral-V3-R0",
+        "replicate": 0,
+        "row_number": 76,
+        "row_seed": "0x373423E397EECD6B",
+        "variant": {
+          "id": "V3",
+          "spectral_rank": 4
+        }
+      },
+      {
+        "N": 512,
+        "family": "F5-symmetric-positive-trace-spectral",
+        "id": "N512-F5-symmetric-positive-trace-spectral-V3-R1",
+        "replicate": 1,
+        "row_number": 77,
+        "row_seed": "0xE7CB4CFC88D1B96D",
+        "variant": {
+          "id": "V3",
+          "spectral_rank": 4
+        }
+      },
+      {
+        "N": 512,
+        "family": "F5-symmetric-positive-trace-spectral",
+        "id": "N512-F5-symmetric-positive-trace-spectral-V4-R0",
+        "replicate": 0,
+        "row_number": 78,
+        "row_seed": "0xB7266BF6028B67F5",
+        "variant": {
+          "id": "V4",
+          "spectral_rank": 5
+        }
+      },
+      {
+        "N": 512,
+        "family": "F5-symmetric-positive-trace-spectral",
+        "id": "N512-F5-symmetric-positive-trace-spectral-V4-R1",
+        "replicate": 1,
+        "row_number": 79,
+        "row_seed": "0x98C23196B0BF90C0",
+        "variant": {
+          "id": "V4",
+          "spectral_rank": 5
+        }
+      },
+      {
+        "N": 1024,
+        "family": "F1-phase-rounded-frame",
+        "id": "N1024-F1-phase-rounded-frame-V1-R0",
+        "replicate": 0,
+        "row_number": 80,
+        "row_seed": "0xBCD18657A51C157D",
+        "variant": {
+          "id": "V1",
+          "phase_denominator": 8
+        }
+      },
+      {
+        "N": 1024,
+        "family": "F1-phase-rounded-frame",
+        "id": "N1024-F1-phase-rounded-frame-V1-R1",
+        "replicate": 1,
+        "row_number": 81,
+        "row_seed": "0x87B1EA11B81FCCF6",
+        "variant": {
+          "id": "V1",
+          "phase_denominator": 8
+        }
+      },
+      {
+        "N": 1024,
+        "family": "F1-phase-rounded-frame",
+        "id": "N1024-F1-phase-rounded-frame-V2-R0",
+        "replicate": 0,
+        "row_number": 82,
+        "row_seed": "0xE27403640ABE613B",
+        "variant": {
+          "id": "V2",
+          "phase_denominator": 12
+        }
+      },
+      {
+        "N": 1024,
+        "family": "F1-phase-rounded-frame",
+        "id": "N1024-F1-phase-rounded-frame-V2-R1",
+        "replicate": 1,
+        "row_number": 83,
+        "row_seed": "0xB62C341FA75E34EA",
+        "variant": {
+          "id": "V2",
+          "phase_denominator": 12
+        }
+      },
+      {
+        "N": 1024,
+        "family": "F1-phase-rounded-frame",
+        "id": "N1024-F1-phase-rounded-frame-V3-R0",
+        "replicate": 0,
+        "row_number": 84,
+        "row_seed": "0x9BA3D374ED467AEF",
+        "variant": {
+          "id": "V3",
+          "phase_denominator": 16
+        }
+      },
+      {
+        "N": 1024,
+        "family": "F1-phase-rounded-frame",
+        "id": "N1024-F1-phase-rounded-frame-V3-R1",
+        "replicate": 1,
+        "row_number": 85,
+        "row_seed": "0x652A94712E6AC7FC",
+        "variant": {
+          "id": "V3",
+          "phase_denominator": 16
+        }
+      },
+      {
+        "N": 1024,
+        "family": "F1-phase-rounded-frame",
+        "id": "N1024-F1-phase-rounded-frame-V4-R0",
+        "replicate": 0,
+        "row_number": 86,
+        "row_seed": "0xC08CA32EAB290C2B",
+        "variant": {
+          "id": "V4",
+          "phase_denominator": 24
+        }
+      },
+      {
+        "N": 1024,
+        "family": "F1-phase-rounded-frame",
+        "id": "N1024-F1-phase-rounded-frame-V4-R1",
+        "replicate": 1,
+        "row_number": 87,
+        "row_seed": "0x5A688DB81438C0B3",
+        "variant": {
+          "id": "V4",
+          "phase_denominator": 24
+        }
+      },
+      {
+        "N": 1024,
+        "family": "F2-macrocell-resonant-layers",
+        "id": "N1024-F2-macrocell-resonant-layers-V1-R0",
+        "replicate": 0,
+        "row_number": 88,
+        "row_seed": "0xDBAC059DD018009E",
+        "variant": {
+          "id": "V1",
+          "macrocells": 2
+        }
+      },
+      {
+        "N": 1024,
+        "family": "F2-macrocell-resonant-layers",
+        "id": "N1024-F2-macrocell-resonant-layers-V1-R1",
+        "replicate": 1,
+        "row_number": 89,
+        "row_seed": "0x888F59A7F4782D8C",
+        "variant": {
+          "id": "V1",
+          "macrocells": 2
+        }
+      },
+      {
+        "N": 1024,
+        "family": "F2-macrocell-resonant-layers",
+        "id": "N1024-F2-macrocell-resonant-layers-V2-R0",
+        "replicate": 0,
+        "row_number": 90,
+        "row_seed": "0xBAAD73276937BA8D",
+        "variant": {
+          "id": "V2",
+          "macrocells": 3
+        }
+      },
+      {
+        "N": 1024,
+        "family": "F2-macrocell-resonant-layers",
+        "id": "N1024-F2-macrocell-resonant-layers-V2-R1",
+        "replicate": 1,
+        "row_number": 91,
+        "row_seed": "0x8D4C08CB61C2D4C9",
+        "variant": {
+          "id": "V2",
+          "macrocells": 3
+        }
+      },
+      {
+        "N": 1024,
+        "family": "F2-macrocell-resonant-layers",
+        "id": "N1024-F2-macrocell-resonant-layers-V3-R0",
+        "replicate": 0,
+        "row_number": 92,
+        "row_seed": "0x9053DAEAA185F818",
+        "variant": {
+          "id": "V3",
+          "macrocells": 4
+        }
+      },
+      {
+        "N": 1024,
+        "family": "F2-macrocell-resonant-layers",
+        "id": "N1024-F2-macrocell-resonant-layers-V3-R1",
+        "replicate": 1,
+        "row_number": 93,
+        "row_seed": "0xD3CDE510E156A0B3",
+        "variant": {
+          "id": "V3",
+          "macrocells": 4
+        }
+      },
+      {
+        "N": 1024,
+        "family": "F2-macrocell-resonant-layers",
+        "id": "N1024-F2-macrocell-resonant-layers-V4-R0",
+        "replicate": 0,
+        "row_number": 94,
+        "row_seed": "0x45337D1244E17ABA",
+        "variant": {
+          "id": "V4",
+          "macrocells": 6
+        }
+      },
+      {
+        "N": 1024,
+        "family": "F2-macrocell-resonant-layers",
+        "id": "N1024-F2-macrocell-resonant-layers-V4-R1",
+        "replicate": 1,
+        "row_number": 95,
+        "row_seed": "0x8EF8DD076695286D",
+        "variant": {
+          "id": "V4",
+          "macrocells": 6
+        }
+      },
+      {
+        "N": 1024,
+        "family": "F3-near-product-rational-packet",
+        "id": "N1024-F3-near-product-rational-packet-V1-R0",
+        "replicate": 0,
+        "row_number": 96,
+        "row_seed": "0xA75008370DC8B259",
+        "variant": {
+          "id": "V1",
+          "packet_denominator": 2
+        }
+      },
+      {
+        "N": 1024,
+        "family": "F3-near-product-rational-packet",
+        "id": "N1024-F3-near-product-rational-packet-V1-R1",
+        "replicate": 1,
+        "row_number": 97,
+        "row_seed": "0x5FF2543D1E195479",
+        "variant": {
+          "id": "V1",
+          "packet_denominator": 2
+        }
+      },
+      {
+        "N": 1024,
+        "family": "F3-near-product-rational-packet",
+        "id": "N1024-F3-near-product-rational-packet-V2-R0",
+        "replicate": 0,
+        "row_number": 98,
+        "row_seed": "0xC3A060B97579A5B5",
+        "variant": {
+          "id": "V2",
+          "packet_denominator": 3
+        }
+      },
+      {
+        "N": 1024,
+        "family": "F3-near-product-rational-packet",
+        "id": "N1024-F3-near-product-rational-packet-V2-R1",
+        "replicate": 1,
+        "row_number": 99,
+        "row_seed": "0x890D2E13DAFFFFBE",
+        "variant": {
+          "id": "V2",
+          "packet_denominator": 3
+        }
+      },
+      {
+        "N": 1024,
+        "family": "F3-near-product-rational-packet",
+        "id": "N1024-F3-near-product-rational-packet-V3-R0",
+        "replicate": 0,
+        "row_number": 100,
+        "row_seed": "0xFA5CE555EA9D086C",
+        "variant": {
+          "id": "V3",
+          "packet_denominator": 5
+        }
+      },
+      {
+        "N": 1024,
+        "family": "F3-near-product-rational-packet",
+        "id": "N1024-F3-near-product-rational-packet-V3-R1",
+        "replicate": 1,
+        "row_number": 101,
+        "row_seed": "0xE286337E6AEB8A3A",
+        "variant": {
+          "id": "V3",
+          "packet_denominator": 5
+        }
+      },
+      {
+        "N": 1024,
+        "family": "F3-near-product-rational-packet",
+        "id": "N1024-F3-near-product-rational-packet-V4-R0",
+        "replicate": 0,
+        "row_number": 102,
+        "row_seed": "0xED2BF250882A894F",
+        "variant": {
+          "id": "V4",
+          "packet_denominator": 7
+        }
+      },
+      {
+        "N": 1024,
+        "family": "F3-near-product-rational-packet",
+        "id": "N1024-F3-near-product-rational-packet-V4-R1",
+        "replicate": 1,
+        "row_number": 103,
+        "row_seed": "0x56DFDDFCA00F59F4",
+        "variant": {
+          "id": "V4",
+          "packet_denominator": 7
+        }
+      },
+      {
+        "N": 1024,
+        "family": "F4-quadratic-modular-chirp",
+        "id": "N1024-F4-quadratic-modular-chirp-V1-R0",
+        "replicate": 0,
+        "row_number": 104,
+        "row_seed": "0x83B1234183DD5EB9",
+        "variant": {
+          "id": "V1",
+          "prime_modulus": 257
+        }
+      },
+      {
+        "N": 1024,
+        "family": "F4-quadratic-modular-chirp",
+        "id": "N1024-F4-quadratic-modular-chirp-V1-R1",
+        "replicate": 1,
+        "row_number": 105,
+        "row_seed": "0xD5A4B68BA0DBF4CC",
+        "variant": {
+          "id": "V1",
+          "prime_modulus": 257
+        }
+      },
+      {
+        "N": 1024,
+        "family": "F4-quadratic-modular-chirp",
+        "id": "N1024-F4-quadratic-modular-chirp-V2-R0",
+        "replicate": 0,
+        "row_number": 106,
+        "row_seed": "0xBA065C8E2EFB64E0",
+        "variant": {
+          "id": "V2",
+          "prime_modulus": 263
+        }
+      },
+      {
+        "N": 1024,
+        "family": "F4-quadratic-modular-chirp",
+        "id": "N1024-F4-quadratic-modular-chirp-V2-R1",
+        "replicate": 1,
+        "row_number": 107,
+        "row_seed": "0x6BB815A0726BC5A3",
+        "variant": {
+          "id": "V2",
+          "prime_modulus": 263
+        }
+      },
+      {
+        "N": 1024,
+        "family": "F4-quadratic-modular-chirp",
+        "id": "N1024-F4-quadratic-modular-chirp-V3-R0",
+        "replicate": 0,
+        "row_number": 108,
+        "row_seed": "0xF03FE7539CA6D74D",
+        "variant": {
+          "id": "V3",
+          "prime_modulus": 269
+        }
+      },
+      {
+        "N": 1024,
+        "family": "F4-quadratic-modular-chirp",
+        "id": "N1024-F4-quadratic-modular-chirp-V3-R1",
+        "replicate": 1,
+        "row_number": 109,
+        "row_seed": "0xBFF210C8EAE03073",
+        "variant": {
+          "id": "V3",
+          "prime_modulus": 269
+        }
+      },
+      {
+        "N": 1024,
+        "family": "F4-quadratic-modular-chirp",
+        "id": "N1024-F4-quadratic-modular-chirp-V4-R0",
+        "replicate": 0,
+        "row_number": 110,
+        "row_seed": "0xF10E96BCE7335A95",
+        "variant": {
+          "id": "V4",
+          "prime_modulus": 271
+        }
+      },
+      {
+        "N": 1024,
+        "family": "F4-quadratic-modular-chirp",
+        "id": "N1024-F4-quadratic-modular-chirp-V4-R1",
+        "replicate": 1,
+        "row_number": 111,
+        "row_seed": "0x775718D08D904C76",
+        "variant": {
+          "id": "V4",
+          "prime_modulus": 271
+        }
+      },
+      {
+        "N": 1024,
+        "family": "F5-symmetric-positive-trace-spectral",
+        "id": "N1024-F5-symmetric-positive-trace-spectral-V1-R0",
+        "replicate": 0,
+        "row_number": 112,
+        "row_seed": "0x836DEA9AEE2899CC",
+        "variant": {
+          "id": "V1",
+          "spectral_rank": 2
+        }
+      },
+      {
+        "N": 1024,
+        "family": "F5-symmetric-positive-trace-spectral",
+        "id": "N1024-F5-symmetric-positive-trace-spectral-V1-R1",
+        "replicate": 1,
+        "row_number": 113,
+        "row_seed": "0xFC102C20A77F1E39",
+        "variant": {
+          "id": "V1",
+          "spectral_rank": 2
+        }
+      },
+      {
+        "N": 1024,
+        "family": "F5-symmetric-positive-trace-spectral",
+        "id": "N1024-F5-symmetric-positive-trace-spectral-V2-R0",
+        "replicate": 0,
+        "row_number": 114,
+        "row_seed": "0x5109952B9BFCD89E",
+        "variant": {
+          "id": "V2",
+          "spectral_rank": 3
+        }
+      },
+      {
+        "N": 1024,
+        "family": "F5-symmetric-positive-trace-spectral",
+        "id": "N1024-F5-symmetric-positive-trace-spectral-V2-R1",
+        "replicate": 1,
+        "row_number": 115,
+        "row_seed": "0x00E3EB10EF304509",
+        "variant": {
+          "id": "V2",
+          "spectral_rank": 3
+        }
+      },
+      {
+        "N": 1024,
+        "family": "F5-symmetric-positive-trace-spectral",
+        "id": "N1024-F5-symmetric-positive-trace-spectral-V3-R0",
+        "replicate": 0,
+        "row_number": 116,
+        "row_seed": "0x9131DC07E1FD2868",
+        "variant": {
+          "id": "V3",
+          "spectral_rank": 4
+        }
+      },
+      {
+        "N": 1024,
+        "family": "F5-symmetric-positive-trace-spectral",
+        "id": "N1024-F5-symmetric-positive-trace-spectral-V3-R1",
+        "replicate": 1,
+        "row_number": 117,
+        "row_seed": "0x246B5AAE0290D161",
+        "variant": {
+          "id": "V3",
+          "spectral_rank": 4
+        }
+      },
+      {
+        "N": 1024,
+        "family": "F5-symmetric-positive-trace-spectral",
+        "id": "N1024-F5-symmetric-positive-trace-spectral-V4-R0",
+        "replicate": 0,
+        "row_number": 118,
+        "row_seed": "0x43AF563AEC9B4DE2",
+        "variant": {
+          "id": "V4",
+          "spectral_rank": 5
+        }
+      },
+      {
+        "N": 1024,
+        "family": "F5-symmetric-positive-trace-spectral",
+        "id": "N1024-F5-symmetric-positive-trace-spectral-V4-R1",
+        "replicate": 1,
+        "row_number": 119,
+        "row_seed": "0x851F779A3EFF0421",
+        "variant": {
+          "id": "V4",
+          "spectral_rank": 5
+        }
+      },
+      {
+        "N": 2048,
+        "family": "F1-phase-rounded-frame",
+        "id": "N2048-F1-phase-rounded-frame-V1-R0",
+        "replicate": 0,
+        "row_number": 120,
+        "row_seed": "0x17756484F88AEFDA",
+        "variant": {
+          "id": "V1",
+          "phase_denominator": 8
+        }
+      },
+      {
+        "N": 2048,
+        "family": "F1-phase-rounded-frame",
+        "id": "N2048-F1-phase-rounded-frame-V1-R1",
+        "replicate": 1,
+        "row_number": 121,
+        "row_seed": "0x5DCE967D391EBB36",
+        "variant": {
+          "id": "V1",
+          "phase_denominator": 8
+        }
+      },
+      {
+        "N": 2048,
+        "family": "F1-phase-rounded-frame",
+        "id": "N2048-F1-phase-rounded-frame-V2-R0",
+        "replicate": 0,
+        "row_number": 122,
+        "row_seed": "0x5FE8E20D129F9CE7",
+        "variant": {
+          "id": "V2",
+          "phase_denominator": 12
+        }
+      },
+      {
+        "N": 2048,
+        "family": "F1-phase-rounded-frame",
+        "id": "N2048-F1-phase-rounded-frame-V2-R1",
+        "replicate": 1,
+        "row_number": 123,
+        "row_seed": "0xE164E1CAB217A96E",
+        "variant": {
+          "id": "V2",
+          "phase_denominator": 12
+        }
+      },
+      {
+        "N": 2048,
+        "family": "F1-phase-rounded-frame",
+        "id": "N2048-F1-phase-rounded-frame-V3-R0",
+        "replicate": 0,
+        "row_number": 124,
+        "row_seed": "0xA55F46D4EC0D9406",
+        "variant": {
+          "id": "V3",
+          "phase_denominator": 16
+        }
+      },
+      {
+        "N": 2048,
+        "family": "F1-phase-rounded-frame",
+        "id": "N2048-F1-phase-rounded-frame-V3-R1",
+        "replicate": 1,
+        "row_number": 125,
+        "row_seed": "0x4985861E8D8F58A7",
+        "variant": {
+          "id": "V3",
+          "phase_denominator": 16
+        }
+      },
+      {
+        "N": 2048,
+        "family": "F1-phase-rounded-frame",
+        "id": "N2048-F1-phase-rounded-frame-V4-R0",
+        "replicate": 0,
+        "row_number": 126,
+        "row_seed": "0xCCF012E3016F6A0B",
+        "variant": {
+          "id": "V4",
+          "phase_denominator": 24
+        }
+      },
+      {
+        "N": 2048,
+        "family": "F1-phase-rounded-frame",
+        "id": "N2048-F1-phase-rounded-frame-V4-R1",
+        "replicate": 1,
+        "row_number": 127,
+        "row_seed": "0x14D47CA0ABBEE575",
+        "variant": {
+          "id": "V4",
+          "phase_denominator": 24
+        }
+      },
+      {
+        "N": 2048,
+        "family": "F2-macrocell-resonant-layers",
+        "id": "N2048-F2-macrocell-resonant-layers-V1-R0",
+        "replicate": 0,
+        "row_number": 128,
+        "row_seed": "0x571BBFB78AFF21BE",
+        "variant": {
+          "id": "V1",
+          "macrocells": 2
+        }
+      },
+      {
+        "N": 2048,
+        "family": "F2-macrocell-resonant-layers",
+        "id": "N2048-F2-macrocell-resonant-layers-V1-R1",
+        "replicate": 1,
+        "row_number": 129,
+        "row_seed": "0x8254C72D9B9078EA",
+        "variant": {
+          "id": "V1",
+          "macrocells": 2
+        }
+      },
+      {
+        "N": 2048,
+        "family": "F2-macrocell-resonant-layers",
+        "id": "N2048-F2-macrocell-resonant-layers-V2-R0",
+        "replicate": 0,
+        "row_number": 130,
+        "row_seed": "0x18596ADAE7D188D8",
+        "variant": {
+          "id": "V2",
+          "macrocells": 3
+        }
+      },
+      {
+        "N": 2048,
+        "family": "F2-macrocell-resonant-layers",
+        "id": "N2048-F2-macrocell-resonant-layers-V2-R1",
+        "replicate": 1,
+        "row_number": 131,
+        "row_seed": "0x2D95B1B75C883980",
+        "variant": {
+          "id": "V2",
+          "macrocells": 3
+        }
+      },
+      {
+        "N": 2048,
+        "family": "F2-macrocell-resonant-layers",
+        "id": "N2048-F2-macrocell-resonant-layers-V3-R0",
+        "replicate": 0,
+        "row_number": 132,
+        "row_seed": "0x088CE3610E4131F9",
+        "variant": {
+          "id": "V3",
+          "macrocells": 4
+        }
+      },
+      {
+        "N": 2048,
+        "family": "F2-macrocell-resonant-layers",
+        "id": "N2048-F2-macrocell-resonant-layers-V3-R1",
+        "replicate": 1,
+        "row_number": 133,
+        "row_seed": "0x003DC17A0E15A616",
+        "variant": {
+          "id": "V3",
+          "macrocells": 4
+        }
+      },
+      {
+        "N": 2048,
+        "family": "F2-macrocell-resonant-layers",
+        "id": "N2048-F2-macrocell-resonant-layers-V4-R0",
+        "replicate": 0,
+        "row_number": 134,
+        "row_seed": "0x6E664D4AB3204EF1",
+        "variant": {
+          "id": "V4",
+          "macrocells": 6
+        }
+      },
+      {
+        "N": 2048,
+        "family": "F2-macrocell-resonant-layers",
+        "id": "N2048-F2-macrocell-resonant-layers-V4-R1",
+        "replicate": 1,
+        "row_number": 135,
+        "row_seed": "0xC5F477F1B2F0F3C2",
+        "variant": {
+          "id": "V4",
+          "macrocells": 6
+        }
+      },
+      {
+        "N": 2048,
+        "family": "F3-near-product-rational-packet",
+        "id": "N2048-F3-near-product-rational-packet-V1-R0",
+        "replicate": 0,
+        "row_number": 136,
+        "row_seed": "0x59A1405F829CBFF5",
+        "variant": {
+          "id": "V1",
+          "packet_denominator": 2
+        }
+      },
+      {
+        "N": 2048,
+        "family": "F3-near-product-rational-packet",
+        "id": "N2048-F3-near-product-rational-packet-V1-R1",
+        "replicate": 1,
+        "row_number": 137,
+        "row_seed": "0xB5832F769032F639",
+        "variant": {
+          "id": "V1",
+          "packet_denominator": 2
+        }
+      },
+      {
+        "N": 2048,
+        "family": "F3-near-product-rational-packet",
+        "id": "N2048-F3-near-product-rational-packet-V2-R0",
+        "replicate": 0,
+        "row_number": 138,
+        "row_seed": "0x60735AB085D35906",
+        "variant": {
+          "id": "V2",
+          "packet_denominator": 3
+        }
+      },
+      {
+        "N": 2048,
+        "family": "F3-near-product-rational-packet",
+        "id": "N2048-F3-near-product-rational-packet-V2-R1",
+        "replicate": 1,
+        "row_number": 139,
+        "row_seed": "0x5FE40E89EE1D540F",
+        "variant": {
+          "id": "V2",
+          "packet_denominator": 3
+        }
+      },
+      {
+        "N": 2048,
+        "family": "F3-near-product-rational-packet",
+        "id": "N2048-F3-near-product-rational-packet-V3-R0",
+        "replicate": 0,
+        "row_number": 140,
+        "row_seed": "0x290E439769AD25FC",
+        "variant": {
+          "id": "V3",
+          "packet_denominator": 5
+        }
+      },
+      {
+        "N": 2048,
+        "family": "F3-near-product-rational-packet",
+        "id": "N2048-F3-near-product-rational-packet-V3-R1",
+        "replicate": 1,
+        "row_number": 141,
+        "row_seed": "0x5C6F992DC2772B47",
+        "variant": {
+          "id": "V3",
+          "packet_denominator": 5
+        }
+      },
+      {
+        "N": 2048,
+        "family": "F3-near-product-rational-packet",
+        "id": "N2048-F3-near-product-rational-packet-V4-R0",
+        "replicate": 0,
+        "row_number": 142,
+        "row_seed": "0xDED01FC60F7C683C",
+        "variant": {
+          "id": "V4",
+          "packet_denominator": 7
+        }
+      },
+      {
+        "N": 2048,
+        "family": "F3-near-product-rational-packet",
+        "id": "N2048-F3-near-product-rational-packet-V4-R1",
+        "replicate": 1,
+        "row_number": 143,
+        "row_seed": "0xD5C23E286DCCA8D3",
+        "variant": {
+          "id": "V4",
+          "packet_denominator": 7
+        }
+      },
+      {
+        "N": 2048,
+        "family": "F4-quadratic-modular-chirp",
+        "id": "N2048-F4-quadratic-modular-chirp-V1-R0",
+        "replicate": 0,
+        "row_number": 144,
+        "row_seed": "0xC0819D8C9501C283",
+        "variant": {
+          "id": "V1",
+          "prime_modulus": 257
+        }
+      },
+      {
+        "N": 2048,
+        "family": "F4-quadratic-modular-chirp",
+        "id": "N2048-F4-quadratic-modular-chirp-V1-R1",
+        "replicate": 1,
+        "row_number": 145,
+        "row_seed": "0x01697BD20F502E7E",
+        "variant": {
+          "id": "V1",
+          "prime_modulus": 257
+        }
+      },
+      {
+        "N": 2048,
+        "family": "F4-quadratic-modular-chirp",
+        "id": "N2048-F4-quadratic-modular-chirp-V2-R0",
+        "replicate": 0,
+        "row_number": 146,
+        "row_seed": "0x632B9381D0E2CE94",
+        "variant": {
+          "id": "V2",
+          "prime_modulus": 263
+        }
+      },
+      {
+        "N": 2048,
+        "family": "F4-quadratic-modular-chirp",
+        "id": "N2048-F4-quadratic-modular-chirp-V2-R1",
+        "replicate": 1,
+        "row_number": 147,
+        "row_seed": "0x82878102CB90D64D",
+        "variant": {
+          "id": "V2",
+          "prime_modulus": 263
+        }
+      },
+      {
+        "N": 2048,
+        "family": "F4-quadratic-modular-chirp",
+        "id": "N2048-F4-quadratic-modular-chirp-V3-R0",
+        "replicate": 0,
+        "row_number": 148,
+        "row_seed": "0x567965DB012A656B",
+        "variant": {
+          "id": "V3",
+          "prime_modulus": 269
+        }
+      },
+      {
+        "N": 2048,
+        "family": "F4-quadratic-modular-chirp",
+        "id": "N2048-F4-quadratic-modular-chirp-V3-R1",
+        "replicate": 1,
+        "row_number": 149,
+        "row_seed": "0x350194ECDE3D758D",
+        "variant": {
+          "id": "V3",
+          "prime_modulus": 269
+        }
+      },
+      {
+        "N": 2048,
+        "family": "F4-quadratic-modular-chirp",
+        "id": "N2048-F4-quadratic-modular-chirp-V4-R0",
+        "replicate": 0,
+        "row_number": 150,
+        "row_seed": "0x24EF939983B5DC6D",
+        "variant": {
+          "id": "V4",
+          "prime_modulus": 271
+        }
+      },
+      {
+        "N": 2048,
+        "family": "F4-quadratic-modular-chirp",
+        "id": "N2048-F4-quadratic-modular-chirp-V4-R1",
+        "replicate": 1,
+        "row_number": 151,
+        "row_seed": "0x2C0AD5EFF1F1541F",
+        "variant": {
+          "id": "V4",
+          "prime_modulus": 271
+        }
+      },
+      {
+        "N": 2048,
+        "family": "F5-symmetric-positive-trace-spectral",
+        "id": "N2048-F5-symmetric-positive-trace-spectral-V1-R0",
+        "replicate": 0,
+        "row_number": 152,
+        "row_seed": "0xD0CCBD760E829FAC",
+        "variant": {
+          "id": "V1",
+          "spectral_rank": 2
+        }
+      },
+      {
+        "N": 2048,
+        "family": "F5-symmetric-positive-trace-spectral",
+        "id": "N2048-F5-symmetric-positive-trace-spectral-V1-R1",
+        "replicate": 1,
+        "row_number": 153,
+        "row_seed": "0x867E4C9D437CBCCB",
+        "variant": {
+          "id": "V1",
+          "spectral_rank": 2
+        }
+      },
+      {
+        "N": 2048,
+        "family": "F5-symmetric-positive-trace-spectral",
+        "id": "N2048-F5-symmetric-positive-trace-spectral-V2-R0",
+        "replicate": 0,
+        "row_number": 154,
+        "row_seed": "0x628863FA5546F897",
+        "variant": {
+          "id": "V2",
+          "spectral_rank": 3
+        }
+      },
+      {
+        "N": 2048,
+        "family": "F5-symmetric-positive-trace-spectral",
+        "id": "N2048-F5-symmetric-positive-trace-spectral-V2-R1",
+        "replicate": 1,
+        "row_number": 155,
+        "row_seed": "0x7FC927647A41CE3B",
+        "variant": {
+          "id": "V2",
+          "spectral_rank": 3
+        }
+      },
+      {
+        "N": 2048,
+        "family": "F5-symmetric-positive-trace-spectral",
+        "id": "N2048-F5-symmetric-positive-trace-spectral-V3-R0",
+        "replicate": 0,
+        "row_number": 156,
+        "row_seed": "0x9E7CE63945AEB9BB",
+        "variant": {
+          "id": "V3",
+          "spectral_rank": 4
+        }
+      },
+      {
+        "N": 2048,
+        "family": "F5-symmetric-positive-trace-spectral",
+        "id": "N2048-F5-symmetric-positive-trace-spectral-V3-R1",
+        "replicate": 1,
+        "row_number": 157,
+        "row_seed": "0x87EF0F57BE13F5D4",
+        "variant": {
+          "id": "V3",
+          "spectral_rank": 4
+        }
+      },
+      {
+        "N": 2048,
+        "family": "F5-symmetric-positive-trace-spectral",
+        "id": "N2048-F5-symmetric-positive-trace-spectral-V4-R0",
+        "replicate": 0,
+        "row_number": 158,
+        "row_seed": "0x94CB7EFDF8ED0B29",
+        "variant": {
+          "id": "V4",
+          "spectral_rank": 5
+        }
+      },
+      {
+        "N": 2048,
+        "family": "F5-symmetric-positive-trace-spectral",
+        "id": "N2048-F5-symmetric-positive-trace-spectral-V4-R1",
+        "replicate": 1,
+        "row_number": 159,
+        "row_seed": "0xE1E13DA13EC0A55F",
+        "variant": {
+          "id": "V4",
+          "spectral_rank": 5
+        }
+      }
+    ]
+  },
+  "sealer": {
+    "path": "discovery/build_cycle_4_p1r_crr_finite_probe_preregistration_v1.py",
+    "sha256": "6ef54cb62b3da70c5a8c1e6e3597b43adb2108e3cf6fba58ebeb866047ad28bf"
+  },
+  "status": "SEALED_DISCOVERY_PREREGISTRATION_UNEXECUTED"
+}

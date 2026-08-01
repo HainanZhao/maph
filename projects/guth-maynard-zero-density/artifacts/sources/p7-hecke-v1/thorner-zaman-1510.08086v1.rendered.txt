@@ -1,0 +1,4235 @@
+arXiv:1510.08086v1  [math.NT]  27 Oct 2015
+
+EXPLICIT RESULTS ON THE DISTRIBUTION OF ZEROS OF HECKE
+L-FUNCTIONS
+
+JESSE THORNER AND ASIF ZAMAN
+
+Abstract. We prove an explicit log-free zero density estimate and an explicit version of the
+zero-repulsion phenomenon of Deuring and Heilbronn for Hecke L-functions. In forthcoming
+work of the second author, these estimates will be used to establish explicit bounds on the
+least norm of a prime ideal in a congruence class group and improve upon existing explicit
+bounds for the least norm of a prime ideal in the Chebotarev density theorem.
+
+1. Introduction and Statement of Results
+
+In 1837, Dirichlet proved that if a, q ∈ Z and (a, q) = 1, then there are infinitely many
+primes p ≡ a (mod q). In light of this result, it is natural to ask how big is the first such
+prime, say P(a, q)? Assuming the Generalized Riemann Hypothesis (GRH) for Dirichlet
+L-functions, Lamzouri, Li, and Soundararajan [21] proved that if q ≥ 4, then
+
+(1.1)
+P(a, q) ≤ (ϕ(q) log q)2,
+
+where ϕ is Euler’s totient function. Nontrivial, unconditional upper bounds are significantly
+harder to prove. The first such bound on P(a, q) is due to Linnik [23], who proved that for
+some absolute constant c1 > 0, we have that
+
+(1.2)
+P(a, q) ≪ qc1
+
+with an absolute implied constant. Admissible values of c1 are now known explicitly, with
+the current record being c1 = 5.2 due to Xylouris [32]. For a detailed history, see Section 1
+of Heath-Brown [10] and the sources contained therein.
+In order to obtain small values of c1, one typically requires three principles; for example,
+the following explicit forms of these principles are found in [10, Section 1]:
+• A zero-free region for Dirichlet L-functions [4]: if q is sufficiently large, then the
+product �
+
+χ mod q L(s, χ) has at most one zero in the region
+
+(1.3)
+s = σ + it,
+σ ≥ 1 −
+0.10367
+
+log(q(2 + |t|)).
+
+If such an exceptional zero exists, then it is real and simple and it corresponds with
+a non-trivial real character χ.
+• A “log-free” zero density estimate [12, 16]: If q is sufficiently large, ǫ > 0, and we
+define
+
+N(σ, T, χ) = #{ρ = β + iγ : L(ρ, χ) = 0, |γ| ≤ T, β ≥ σ},
+
+Date: September 10, 2018.
+The second author was supported in part by an NSERC PGS-D scholarship.
+1
+
+
+then
+
+(1.4)
+�
+
+χ mod q
+N(σ, T, χ) ≪ (qT)( 12
+
+5 +ǫ)(1−σ),
+T ≥ 1,
+
+where the implied constant depends on ǫ.
+• The zero repulsion phenomenon of Deuring and Heilbronn [9, Chapter 10]: if q is
+sufficiently large, λ > 0 is sufficiently small, ǫ > 0, and the exceptional zero in the
+region (1.3) exists and equals 1 − λ/ log q, then �
+
+χ (mod q) L(s, χ) has no other zeros
+in the region
+
+(1.5)
+σ ≥ 1 − ( 2
+
+3 − ǫ)(log λ−1)
+log(q(2 + |t|)) .
+
+Weiss [30] considered a generalization of (1.2) in the context of a general number field.
+Let K/Q be a number field with absolute field norm N and absolute discriminant DK, and
+let q be an integral ideal of K. One considers the (narrow) ray class group I(q)/Pq where
+I(q) is the group of fractional ideals of K which are coprime to q and Pq is the subgroup of
+principal ideals (α) with α totally positive and α ≡ 1 (mod q). Let H be a subgroup of I(q)
+containing Pq; we call any such subgroup a congruence class group of K. Weiss proved that
+there exist absolute constants c2 > 0 and c3 > 0 such that each coset of H in I(q) contains
+a prime ideal p satisfying
+
+(1.6)
+Np ≤ 2[K : Q]c2[K:Q](DKNq)c3.
+
+Consequently, each ideal class of K contains a prime ideal p satisfying
+
+Np ≤ 2[K : Q]c2[K:Q]Dc3
+K.
+
+To prove (1.6), Weiss proved variants of (1.3)-(1.5) for Hecke L-functions with completely
+effective field uniformity.
+An even broader generalization of (1.2) lies in the context of the Chebotarev density
+theorem. Let L/F be a Galois extension of number fields with Galois group G. To each
+unramified prime ideal p of F, there corresponds a certain conjugacy class of Frobenius
+automorphisms in G which are attached to the prime ideals of L lying above p. We denote
+this conjugacy class using the Artin symbol [ L/F
+
+p ]. For a fixed conjugacy class C ⊂ G, let
+
+πC(x) := #
+�
+p : p is unramified,
+�L/F
+
+p
+
+�
+= C, Np ≤ x
+�
+,
+
+where N = NF/Q is the absolute norm of F. The Chebotarev density theorem asserts that
+
+πC(x) ∼ |C|
+
+|G|Li(x).
+
+In analogy with (1.2), it is natural to bound the quantity
+
+P(C, L/F) := min
+�
+Np : p is unramified,
+�L/F
+
+p
+
+�
+= C, Np is a rational prime
+�
+.
+
+Under GRH for Hecke L-functions, Bach and Sorenson [1] proved that
+
+(1.7)
+P(C, L/F) ≤ (4 log DL + 2.5[L : Q] + 5)2.
+2
+
+
+We note that if L = Q(e2πi/q) for some integer q ≥ 3 and F = Q, then we recover a bound
+of the same analytic quality as (1.1), though the constants are a bit larger.
+The first nontrivial, unconditional bound on P(C, L/F) is due to Lagarias, Montgomery,
+and Odlyzko [19]; they proved that for some absolute constant c4 > 0, we have that
+
+(1.8)
+P(C, L/F) ≤ 2Dc4
+L
+Equation (1.8) (up to the computation of c4) is commensurate with the best known bounds
+when L = Q(
+√
+
+D) for some fundamental discriminant D, F = Q, and C is the nontrivial
+conjugacy class of G, in which case we are measuring the least quadratic nonresidue modulo
+D (see Burgess [3]). Recently, the second author [35] proved that one may take c4 = 40 for
+DL sufficiently large. We observe, however, that if L = Q(e2πi/q) and F = Q, then (1.8) is
+exponential in q, which is significantly worse than (1.2).
+To explain how (1.6) relates to this Chebotarev setting, we must establish some notation.
+Let A be any abelian subgroup of G such that A ∩ C is nonempty, let �A be the character
+group of A, let fχ = f(χ) be the conductor of a character χ ∈ �A, let IndG
+Aχ be a character of
+�G induced by χ ∈ �A, and let
+
+Q = Q(C, L/F; A) := max
+�
+D[L:F ]/|A|
+F
+Nf(IndG
+Aχ) : χ ∈ �A irreducible
+�
+.
+
+Using the fundamental theorem of class field theory, Deuring’s trick [5], and (1.6), Weiss [30,
+Theorem 6.1] proved that for certain absolute constants c5 > 0 and c6 > 0,
+
+(1.9)
+P(C, L/F) ≤ 2[L : Q]c5[L:Q]/|A|Qc6.
+
+When A is cyclic, we have from the conductor-discriminant formula that
+
+D1/|A|
+L
+≤ Q ≤ D1/ϕ(|A|)
+L
+.
+
+(See [31, Chapter 5, Section 3] for a proof of the upper bound.) Thus Weiss proves a bound
+on P(C, L/F) which provides a “continuous transition” from (1.2) to (1.8) with the potential
+to create significant savings over (1.8) when G has a large abelian subgroup which intersects
+C. In particular, if L is a cyclotomic extension of F = Q, then (1.2) and (1.9) are equivalent.
+The fundamental difference between (1.8) and (1.9) is that the proof of (1.8) does not take
+full advantage of the factorization of the Dedekind zeta function ζL(s) of L into a product
+of Hecke L-functions; this choice affords one the opportunity to use more elementary tools.
+The proof of (1.6), and hence the proof of (1.9), takes advantage of the factorization of ζL(s),
+which requires the use of a log-free zero density estimate as in Linnik’s original work.
+Our goal in this paper is to prove explicit versions of Weiss’ field-uniform variants of (1.4)
+and (1.5). In a forthcoming paper, the second author [33] will employ these explicit results
+to make c2, c3, c5, and c6 explicit. We note that Fogels [6] was the first to prove variants
+of Principles 2 and 3 for Hecke characters, though his proof did not maintain the necessary
+field uniformity. Weiss’ results rely critically on his field-uniform variants of Fogels’ work,
+but Weiss’ results are not explicit.
+In Section 3, we prove an explicit version of Weiss’ variant of (1.4) for Hecke characters
+[30, Corollary 4.4]. To state Weiss’ result, we first introduce some notation. Let H (mod q)
+be a congruence class group of K (that is, H is a subgroup of I(q) containing Pq), let
+nK = [K : Q], and let hH = [I(q) : H]. Define
+
+(1.10)
+Q = QH := max{Nfχ : χ (mod q) satisfying χ(H) = 1},
+3
+
+
+and
+N(σ, T, χ) := #{ρ = β + iγ : L(ρ, χ) = 0, σ < β < 1, |γ| ≤ T}
+
+where the nontrivial zeros ρ of L(s, χ) are counted with multiplicity. Weiss [30, Corollary
+4.4] proved that there exists an absolute constant c7 > 0 such that if
+1
+2 ≤ σ < 1 and
+T ≥ n2
+Kh1/nK
+H
+, then
+
+(1.11)
+�
+
+χ (mod q)
+χ(H)=1
+
+N(σ, T, χ) ≪ (eO(nK)D2
+KQT nK)c7(1−σ)
+
+with an absolute and computable implied constant.
+The first main result of this paper
+exhibits an explicit value of c7.
+
+Theorem 1.1. Let H (mod q) be a congruence class group of K. Let nK = [K : Q] and Q
+be as in (1.10). If 1
+
+2 ≤ σ < 1 and T ≥ max{nKD−2/nK
+K
+Q−3/5nK, 1}, then
+
+(1.12)
+�
+
+χ (mod q)
+χ(H)=1
+
+N(σ, T, χ) ≪ {eO(nK)D2
+KQT nK}81(1−σ)
+
+where all implied constants are absolute and computable. If 1 − 10−3 ≤ σ < 1, then one may
+replace 81 with 74.
+
+Remarks.
+• Theorem 1.1 also contains a noticeable improvement over Weiss’ density estimate
+(1.11) in the range of T. One would expect in many applications that the number
+field K satisfies nnK
+K ≪ D2
+KQ3/5, in which case Theorem 1.1 holds for T ≥ 1. Even
+for arbitrary K, this will result in appreciable numerical savings in the computation
+of c2, c3, c5, and c6 in [33] instead of simply following Weiss’ original arguments [30,
+Sections 5-6].
+• The appearance of eO(nK) in (1.12) may seem unusual for an explicit result but it is
+always a negligible term. If nK = o(log DKQ) for a certain family of number fields
+K then
+eO(nK)D2
+KQT nK = D2+o(1)
+K
+Q1+o(1)T nK
+
+so we may ignore the contribution of eO(nK). Recall a classical bound of Minkowski
+implies nK = O(log DK) so the above scenario is often the case. Otherwise, if nK ≫
+log(DKQ) then (1.12) holds for T ≫ nK in which case
+
+eO(nK)D2
+KQT nK = T {1+o(1)}nK
+
+so we may again ignore eO(nK).
+
+We prove Theorem 1.1 by constructing a Dirichlet polynomial which is bounded away
+from zero when in close proximity to a nontrivial zero of a Hecke L-function. This is ensured
+by using the Tur´an power sum method (cf. Proposition 3.2). The contributions from the
+detected zeros are summed efficiently using a large sieve inequality for Hecke characters (cf.
+Theorem 3.1). In order to maintain desirable field uniformity in our large sieve inequality,
+we use the Selberg sieve instead of the usual duality arguments; see Section 4 for a more
+detailed discussion.
+4
+
+
+In order to bound sums over integral ideals, we are required to smooth the sums using a
+kernel which is nK-times differentiable, where nK = [K : Q]. Unfortunately, the smoothing
+introduces the powers of nKnK (see the comments immediately preceding [30, Section 1]). We
+note that if nK is small in comparison to log DK/ log log DK (i.e., if the root discriminant of
+K is large), then the powers of nKnK may be safely absorbed into the powers of DK. On the
+other hand, if nK is large in comparison to log DK/ log log DK (i.e., if the root discriminant
+of K is small), then nKnK dominates DK; this rare situation happens, for example, when
+considering the infinite p-class tower extensions studied by Golod and ˇSafareviˇc [8].
+We also note that in the case of bounding the least prime in an arithmetic progression,
+Tur´an’s power sum method does not produce the strongest numerical results. Instead, one
+typically constructs a suitable mollifier for Dirichlet L-functions relies on cancellation arising
+from the M¨obius function. However, relying on M¨obius cancellation for Hecke L-functions
+introduces dependence on DK in the implied constant of Theorem 1.1, which is catastrophic
+for bounds for the least prime ideal in a congruence class. To the authors’ knowledge, the
+only device by which one can detect zeros to prove a log-free zero density estimate while
+maintaining suitable field uniformity is the Tur´an power sum. (The Tur´an power sum method
+was recently used by Lemke Oliver and the first author [22] to prove an effective log-free zero
+density estimate for Rankin-Selberg L-functions. Since uniformity in certain parameters was
+crucial for applications, the Tur´an power sum method was used there as well.)
+In Section 6, we prove an explicit variant of the zero repulsion phenomenon of Deuring
+and Heilbronn for Hecke L-functions.
+
+Theorem 1.2. Let ψ (mod q) be a real Hecke character and suppose L(s, ψ) has a real zero
+β1. Let T ≥ 1 be given, and χ (mod q) be an arbitrary Hecke character and let ρ′ = β′ + iγ′
+
+be a zero of L(s, χ) satisfying
+
+(1.13)
+1
+2 ≤ β′ < 1,
+|γ′| ≤ T.
+
+Then
+
+β′ ≤ 1 −
+log
+�
+c
+
+(1 − β1) log(DK · Nq · (T + 20)nK · enK)
+
+�
+
+a1 log DK + a2 log Nq + a3nK log(T + 20) + a4nK + 10
+for some absolute, computable constant c > 0 and
+
+(a1, a2, a3, a4) =
+
+�
+(51, 54, 26, 74)
+if ψ is quadratic,
+(26, 13, 13, 37)
+if ψ is trivial.
+
+Remarks.
+• Let ǫ > 0. If we consider a sequence of number fields K in which nK = o(log DKNq)
+then one may take
+
+(a1, a2, a3, a4) =
+
+�
+(48 + ǫ, 48 + ǫ, 24 + ǫ, 0)
+if ψ is quadratic,
+(24 + ǫ, 12 + ǫ, 12 + ǫ, 0)
+if ψ is trivial
+
+when DKNq is sufficiently large in terms of ǫ. (See the remark at the end of Sec-
+tion 6.2.1 for details.)
+• One may take q to be the least common multiple of the conductors fχ and fψ.
+
+5
+
+
+The proof of Theorem 1.2 is inspired by [19, Theorem 5.1] and its quantitative counterpart
+[35, Theorem 1.2]. Namely, we apply a power sum inequality and carefully estimate various
+sums over zeros of Hecke L-functions.
+Other quantitative versions of Deuring-Heilbronn
+phenomenon have been established by Kadiri and Ng [17] and the second author [35] for the
+zeros of the Dedekind zeta function and by the second author [34] for the zeros of Hecke
+L-functions. The results found in [17, 34] use completely different methods than those used
+here and have much better explicit constants but, instead of assuming (1.13), one must
+restrict to an asymptotically smaller range of β′ and |γ′| ≤ 1.
+In other words, the key
+difference between Theorem 1.2 and the aforementioned results is the wide range of validity
+given by (1.13). Consequently, if the real character ψ has a real zero β1 exceptionally close
+to 1 (often referred to as a Siegel zero), then Theorem 1.2 allows one to take full advantage
+of the repulsion effect.
+The paper proceeds as follows.
+In Section 2, we introduce the relevant notation and
+conventions, review some standard results in the theory of Hecke L-functions, prove some
+explicit estimates involving Hecke L-functions, and bound some standard arithmetic sums
+over integral ideals of K.
+In Section 3, we prove Theorem 1.1 under the assumption of
+Theorem 3.1 (which we prove in Section 4) and Proposition 3.2 (which we prove in Section 5).
+In Section 6, we prove Theorem 1.2.
+
+Acknowlegements. The authors thank John Friedlander and Robert Lemke Oliver for their
+comments and suggestions. The first author conducted work on this paper while visiting
+Centre de Recherches Math´ematiques (hosted by Andrew Granville, Chantal David, and
+Dimitris Koukoulopoulos) and Stanford University (hosted by Kannan Soundararajan and
+Robert Lemke Oliver); he is grateful to these departments and hosts for providing a rich and
+productive work environment.
+
+2. Auxiliary Estimates
+
+2.1. Notation. We will use the following notation throughout the paper:
+• K is a number field.
+• OK is the ring of integers of K.
+• nK = [K : Q] is the degree of K/Q.
+• DK is the absolute value of the discriminant of K.
+• N = NK
+Q is the absolute field norm of K.
+• ζK(s) is the Dedekind zeta function of K.
+• q is an integral ideal of K.
+• Cl(q) = I(q)/Pq is the narrow ray class group of K modulo q.
+• χ, or χ (mod q), is a character of Cl(q), referred to as a Hecke character or ray class
+character of K.
+• δ(χ) is the indicator function of the trivial character.
+• fχ is the conductor of χ; that is, it is the maximal integral ideal such that χ is induced
+from a primitive character χ∗ (mod fχ).
+• Dχ = DKNfχ.
+• L(s, χ) is the Hecke L-function associated to χ.
+• H, or H (mod q), is a subgroup of Cl(q), or equivalently of I(q) containing Pq. The
+group H is referred to as a congruence class group of K.
+6
+
+
+• Q = QH = max{Nfχ : χ (mod q) satisfying χ(H) = 1} is the maximum analytic
+conductor of H.
+• fH = lcm{fχ : χ (mod q) satisfying χ(H) = 1} is the conductor of H.
+• H∗ (mod fH) is the “primitive” congruence class group inducing H.
+• hH = [I(q) : H].
+We also adhere to the convention that all implied constants in all asymptotic inequalities
+f ≪ g or f = O(g) are absolute with respect to K. If an implied constant depends on a
+field-independent parameter, such as ǫ, then we use ≪ǫ and Oǫ to denote that the implied
+constant depends at most on ǫ. All implied constants will be effectively computable.
+
+2.2. Hecke L-functions. For a more detailed reference on Hecke L-functions, see [20, 11]
+for example. Strictly speaking, a Hecke character χ is a function on Cl(q) but, by pulling
+back the domain of χ and extending it by zero, we regard χ as a function on integral ideals
+of K. We will use this convention throughout the paper.
+For the entirety of this section, assume that χ is primitive. The Hecke L-function of χ,
+denoted L(s, χ), is defined as
+
+(2.1)
+L(s, χ) =
+�
+
+n
+χ(n)Nn−s =
+�
+
+p
+
+�
+1 − χ(p)
+
+Nps
+
+�−1
+
+for Re{s} > 1 where the sum is over integral ideals n of K and the product is over prime
+ideals p of K. Define the completed Hecke L-function ξ(s, χ) by
+
+(2.2)
+ξ(s, χ) =
+�
+s(s − 1)
+�δ(χ)Ds/2
+χ γχ(s)L(s, χ),
+
+where Dχ = DKNfχ, δ(χ) equals 1 if χ is trivial and 0 otherwise, and γχ(s) is the gamma
+factor of χ defined by
+
+(2.3)
+γχ(s) =
+�
+π− s
+
+2Γ
+�s
+
+2
+
+��a(χ)
+·
+�
+π− s+1
+
+2 Γ
+�s + 1
+
+2
+
+��b(χ)
+.
+
+Here a(χ) and b(χ) are certain non-negative integers satisfying
+
+(2.4)
+a(χ) + b(χ) = nK.
+
+It is a classical fact that ξ(s, χ) is entire of order 1 and satisfies the functional equation
+
+(2.5)
+ξ(s, χ) = w(χ)ξ(1 − s, χ)
+
+where w(χ) ∈ C is the root number of χ satisfying |w(χ)| = 1. The zeros of ξ(s, χ) are the
+non-trivial zeros ρ of L(s, χ), which satisfy 0 < Re{ρ} < 1. The trivial zeros ω of L(s, χ)
+are given by
+
+(2.6)
+ord
+s=ω L(s, χ) =
+
+
+
+
+
+
+
+
+a(χ) − δ(χ)
+if ω = 0,
+b(χ)
+if ω = −1, −3, −5, . . .
+a(χ)
+if ω = −2, −4, −6, . . .
+
+and arise as poles of the gamma factor of L(s, χ).
+Since ξ(s, χ) is entire of order 1, it admits a Hadamard product factorization given by
+
+(2.7)
+ξ(s, χ) = eA(χ)+B(χ)s �
+
+ρ
+
+�
+1 − s
+
+ρ
+
+�
+es/ρ.
+
+7
+
+
+The zeros ρ of ξ(s, χ) are the non-trivial zeros of L(s, χ) and are known to satisfy 0 <
+Re{ρ} < 1. We now collect some standard results on L(s, χ) which follow from Theorems
+5.6 and Proposition 5.7 of [15].
+
+Lemma 2.1. Let χ be a primitive Hecke character. Then
+
+−Re
+�L′
+
+L (s, χ)
+�
+= 1
+
+2 log Dχ + Re
+� δ(χ)
+
+s − 1 + δ(χ)
+
+s
+
+�
+−
+�
+
+ρ
+Re
+�
+1
+
+s − ρ
+
+�
++ Re
+�γ′
+χ
+
+γχ
+(s)
+�
+.
+
+where the sum is over all non-trivial zeros ρ of L(s, χ).
+
+Proof. See [20, Lemma 5.1] for example.
+□
+
+By similar arguments, there exists an explicit formula for higher derivatives of −L′
+
+L (s, χ).
+
+Lemma 2.2. Let χ be a Hecke character (not necessarily primitive) and k ≥ 1 be a positive
+integer. Then
+
+(−1)k+1
+
+k!
+dk
+
+dsk
+L′
+
+L (s, χ) = 1
+
+k!
+
+�
+
+p
+
+∞
+�
+
+m=1
+(log Np)(log Npm)kχ(p)(Np)−ms
+
+=
+δ(χ)
+
+(s − 1)k+1 −
+�
+
+ω
+
+1
+
+(s − ω)k+1
+
+for Re{s} > 1, where the first sum is over prime ideals p of K and the second sum is over
+all zeros ω of L(s, χ), including trivial ones, counted with multiplicity.
+
+Proof. Using the Hadamard product (2.7) of ξ(s, χ), it follows that
+
+(s − 1)δ(χ)L(s, χ) = srem1+m2s �
+
+ω̸=0
+
+�
+1 − s
+
+ω
+
+�
+es/ω
+
+where m1, m2 are constants depending on χ, the product is over all zeros ω ̸= 0 of L(s, χ),
+including trivial ones, and r = ord
+s=0 L(s, χ). Taking the logarithmic derivative of both sides
+yields
+
+−L′
+
+L (s, χ) = δ(χ)
+
+s − 1 − m2 −
+�
+
+ω̸=0
+
+�
+1
+
+s − ω + 1
+
+ω
+
+�
+− r
+
+s.
+
+On the other hand, the Euler product of L(s, χ) implies
+
+−L′
+
+L (s, χ) =
+�
+
+p
+
+∞
+�
+
+m=1
+(log Np)χ(p)(Np)−ms
+for Re{s} > 1.
+
+Differentiating k times both of these formulas for −L′
+
+L (s, χ) and multiplying by (−1)k/k!
+yields the desired result. Note that the final sum over zeros ω of L(s, χ) includes ω = 0, if
+it exists.
+□
+8
+
+
+2.3. Explicit L-function estimates. In order to obtain explicit results, we must have
+explicit bounds on a few important quantities.
+First, we record a bound for L(s, χ) in
+the critical strip 0 < Re{s} < 1 via a Phragmen-Lindel¨of type convexity estimate due to
+Rademacher.
+
+Lemma 2.3 (Rademacher [29]). Let χ be a primitive Hecke character and η ∈ (0, 1/2]. Then
+for s = σ + it,
+
+|L(s, χ)| ≪
+���1 + s
+1 − s
+
+���
+δ(χ)
+ζQ(1 + η)nK
+�
+Dχ
+
+(2π)nK (3 + |t|)nK
+�(1+η−σ)/2
+
+uniformly in the strip −η ≤ σ ≤ 1 + η.
+
+Next, we record an explicit bound on the digamma function and
+γ′
+χ
+
+γχ(s).
+
+Lemma 2.4. Let s = σ + it with σ > 1 and t ∈ R. Then
+
+Re
+�Γ′
+
+Γ (s)
+�
+≤ log |s| + σ−1
+
+and, for any Hecke character χ,
+
+Re
+�γ′
+χ
+
+γχ
+(s)
+�
+≤ nK
+
+2
+�
+log(|s| + 1) + σ−1 − log π
+�
+.
+
+Proof. The first estimate follows from [28, Lemma 4]. The second estimate is a straightfor-
+ward consequence of the first combined with the definition of γχ(s) in (2.3).
+□
+
+Next, we establish some bounds on the number of zeros of L(s, χ) in a circle.
+
+Lemma 2.5. Let χ be a Hecke character. Let s = σ + it with σ > 1 and t ∈ R. For r > 0,
+denote
+Nχ(r; s) := #{ρ = β + iγ : 0 < β < 1, L(ρ, χ) = 0, |s − ρ| ≤ r},
+then, for 0 < r ≤ 1,
+
+Nχ(r; s) ≤ {4 log DK + 2 log Nfχ + 2nK log(|t| + 3) + 2nK + 4 + 4δ(χ)} · r + 4 + 4δ(χ).
+
+Proof. Observe
+Nχ(r; s) ≤ Nχ(r; 1 + it) ≤ Nχ(2r; 1 + r + it)
+so it suffices to bound the latter quantity. Now, if s0 = 1 + r + it, notice
+
+Nχ(2r; s0) ≤ 4r
+�
+
+|1+it−ρ|≤2r
+Re
+�
+1
+
+s0 − ρ
+
+�
+≤ 4r
+�
+
+ρ
+Re
+�
+1
+
+s0 − ρ
+
+�
+.
+
+Applying Lemma 2.1 and Lemma 2.4 twice and noting Re
+� L′
+
+L (s0, χ)
+�
+≤ −ζ′
+K
+ζK (1 + r), the
+above is
+
+≤ 4r
+�
+Re
+�L′
+
+L (s0, χ)
+�
++ 1
+
+2 log Dχ + Re
+�γ′
+χ
+
+γχ
+(s0)
+�
++ δ(χ)Re
+� 1
+
+s0
++
+1
+
+s0 − 1
+
+��
+
+≤ 4r
+�
+−ζ′
+K
+ζK
+(1 + r) + 1
+
+2 log Dχ + nK
+
+2 log(|s0| + 1) + δ(χ)(1 + r−1)
+�
+
+≤ 4r
+�1
+
+2 log(DKDχ) + nK
+
+2 log(|s0| + 1) + nK
+
+2 + (1 + δ(χ))(1 + r−1)
+�
+
+≤ {4 log DK + 2 log Nfχ + 2nK log(|t| + 3) + 2nK + 4 + 4δ(χ)} · r + 4 + 4δ(χ)
+
+9
+
+
+as Dχ = DKNfχ.
+□
+
+To improve the bound in Lemma 2.5, we exhibit an explicit inequality involving the
+logarithmic derivative of L(s, χ) comparable with [17, Theorem 2] for the Dedekind zeta
+function.
+
+Proposition 2.6. Let 0 < ǫ < 1
+
+4, T ≥ 1 and s = σ + it. For a primitive Hecke character χ,
+define a multiset of non-trivial zeros of L(s, χ) by
+
+Zr,t = {ρ = β + iγ | L(ρ, χ) = 0, |1 + it − ρ| < r}.
+
+Then, for 0 < r < ǫ,
+
+(2.8) −Re
+�L′
+
+L (s, χ)
+�
+≤
+� 1
+
+4 + ǫ
+
+π
+�
+Lχ +4ǫ2L′
+χ +δ(χ)Re
+�
+1
+
+s − 1
+
+�
+−
+�
+
+ρ∈Zr,t
+Re
+�
+1
+
+s − ρ
+
+�
++Oǫ(nK)
+
+and
+
+(2.9)
+− Re
+�L′
+
+L (s, χ)
+�
+≤
+� 1
+
+4 + ǫ
+
+π
+�
+Lχ + δ(χ)Re
+�
+1
+
+s − 1
+
+�
++ Oǫ(nK)
+
+uniformly in the region
+1 < σ ≤ 1 + ǫ,
+|t| ≤ T,
+where Lχ = log Dχ + nK log(T + 3) and L′
+χ = log DK + Lχ.
+
+Proof. This result is a modified version of [34, Lemma 4.3] which is motivated by [10, Lemma
+3.1]. Consequently, we sketch the argument found in [34] highlighting the necessary modi-
+fications. Assume χ is non-trivial. Apply [10, Lemma 3.2] with f( · ) = L( · , χ), a = s and
+R = 1 − η where η = ηs,χ ∈ (0, 1
+
+10) is chosen sufficiently small so that L(w, χ) has no zeros
+on the circle |w − s| = R. Then
+
+(2.10)
+− Re
+�L′
+
+L (s, χ)
+�
+= −
+�
+
+|s−ρ|<R
+Re
+�
+1
+
+s − ρ − s − ρ
+
+R2
+
+�
+− J
+
+where
+
+J :=
+� 2π
+
+0
+
+cos θ
+πR · log |L(s + Reiθ, χ)|dθ.
+
+To lower bound J, write
+
+J =
+� π/2
+
+0
++
+� 3π/2
+
+π/2
++
+� 2π
+
+3π/2
+= J1 + J2 + J3,
+
+say, so we may consider each contribution separately. For J1, notice
+
+log |L(s + Reiθ, χ)| ≤ log ζK(σ + R cos θ) ≪ nK log
+�
+1
+
+σ − 1 + R cos θ
+
+�
+.
+
+Writing [0, π
+
+2] = [0, π
+
+2 − (σ − 1)] ∪ [ π
+
+2 − (σ − 1), π
+
+2] = I1 ∪ I2, say. Then
+
+J1 =
+�
+
+I1
++
+�
+
+I2
+≪ nK
+
+�
+
+I1
+cos θ log(1/ cos θ)dθ + nK log(1/(σ − 1))
+�
+
+I2
+cos θdθ ≪ǫ nK.
+
+A similar argument holds for J3 so
+
+J1 + J3 ≪ǫ nK.
+10
+
+
+For J2, consider θ ∈ [π/2, 3π/2]. As 1 < σ ≤ 1 + ǫ and R < 1,
+
+0 < σ + R cos θ ≤ 1 + ǫ.
+
+Hence, by Lemma 2.3,
+
+log |L(s + Reiθ, χ)| ≤ 1
+
+2Lχ(1 − σ − R cos θ + ǫ) + O(ǫ−1nK)
+
+≤ 1
+
+2Lχ(−R cos θ + ǫ) + O(ǫ−1nK).
+
+Thus,
+
+J2 ≥ Lχ
+
+2πR
+
+� 3π/2
+
+π/2
+−R cos2 θ + ǫ cos θdθ + Oǫ(nK)
+
+yielding overall
+
+(2.11)
+J ≥ −( 1
+
+4 +
+ǫ
+
+πR)Lχ + Oǫ(nK).
+
+For the sum over zeros in (2.10), observe that the terms are non-negative so (2.9) follows
+immediately from (2.10) and (2.11) after taking η → 0 which implies R → 1. To prove (2.8),
+consider 0 < r <
+1
+4. By the same observation, we may restrict our sum over zeros from
+|s − ρ| < R to a smaller circle within it: |1 + it − ρ| < r. As r < ǫ < 1/4 by assumption,
+we discard the zeros outside this smaller circle. For such zeros ρ satisfying |1 + it − ρ| < r,
+notice
+Re{s − ρ} = σ − β < ǫ + r < 2ǫ
+implying, by Lemma 2.5, that
+
+(2.12)
+�
+
+|1+it−ρ|<r
+Re
+�s − ρ
+
+R2 } ≤ 2ǫ
+
+R2 ·
+��
+2L′
+χ + 2nK + 8
+�
+r + 8
+�
+≤ 4ǫ2
+
+R2 L′
+χ + O(nK).
+
+Thus, (2.8) immediately follows upon combining (2.10), (2.11), and (2.12), and taking η → 0
+which implies R → 1. This completes the proof for χ non-trivial. For χ = χ0 trivial, we
+apply the same modifications as described at the end of the proof of [34, Lemma 4.3].
+□
+
+Lemma 2.7. Let χ (mod q) be given and 0 < r < ǫ < 1/4. If s = σ + it and
+
+Nχ(r; s) = #{ρ = β + iγ : L(ρ, χ) = 0, |s − ρ| ≤ r}
+
+then
+
+Nχ(r; s) ≤ {1 + 4
+
+πǫ + 16ǫ2}
+�
+2 log DK + log Nfχ + nK log(|t| + 3) + Oǫ(nK)
+�
+· r + 4 + 4δ(χ).
+
+Proof. The proof is analogous to Lemma 2.5 using Proposition 2.6 in place of Lemmas 2.1
+and 2.4.
+□
+
+2.4. Arithmetic Sums. We estimate various sums over integral ideals of K which requires
+some additional notation. Recall that the Dedekind zeta function ζK(s) is the primitive
+Hecke L-function, defined by (2.1), associated to the trivial character χ0. Namely,
+
+ζK(s) =
+�
+
+n⊆OK
+(Nn)−s =
+�
+
+p
+
+�
+1 −
+1
+
+Nps
+
+�−1
+
+for Re{s} > 1. Since ζK(s) has a simple pole at s = 1, we may define
+
+(2.13)
+κK := Res
+s=1 ζK(s)
+and
+γK := κ−1
+K lim
+s→1
+
+�
+ζK(s) − κK
+
+s − 1
+
+�
+
+11
+
+
+so the Laurent expansion of ζK(s) at s = 1 is given by
+
+ζK(s) =
+κK
+s − 1 + κKγK + OK(|s − 1|).
+
+We refer to γK as the Euler-Kronecker constant of K, which was first introduced by Ihara
+[13]. For further details on γK, see [13, 14, 26] for example.
+
+Lemma 2.8. For x > 0 and η > 0,
+�����
+
+�
+
+Nn≤x
+
+1
+Nn
+
+�
+1 − Nn
+
+x
+
+�nK
+− κK
+
+�
+
+log x −
+
+nK
+�
+
+j=1
+
+1
+j
+
+�
+
+− κKγK
+
+����� ≪ eOη(nK)�
+nnK
+K DK
+� 1
+
+4+ηx− 1
+
+2.
+
+Proof. Without loss, we may assume η ∈ (0, 1/2). Observe
+
+�
+
+Nn≤x
+
+1
+Nn
+
+�
+1 − Nn
+
+x
+
+�nK
+− κK
+
+
+
+log x −
+
+nK
+�
+
+j=1
+
+1
+j
+
+
+
+ − κKγK =
+1
+2πi
+
+� − 1
+
+2 +i∞
+
+− 1
+
+2−i∞
+ζK(s + 1)xs
+
+s
+nK!
+�nK
+j=1(s + j)ds.
+
+Using Lemma 2.3 and noting ζQ(1 + η)nK ≪ eOη(nK), it follows that
+
+1
+2πi
+
+� − 1
+
+2 +i∞
+
+− 1
+
+2−i∞
+ζK(s + 1)xs
+
+s
+nK!
+�nK
+j=1(s + j)ds
+
+≪ eOη(nK)D
+
+1
+4 +η
+K
+x−1/2nK!
+� ∞
+
+−∞
+(1 + |t|)( 1
+
+4+η)nK
+����
+Γ(−1
+
+2 + it)
+
+Γ( 1
+
+2 + nK + it)
+
+���� dt
+
+≪ eOη(nK)D
+
+1
+4 +η
+K
+x−1/2nK!
+� nK
+
+−nK
+(1 + |t|)( 1
+
+4+η)nK
+����
+Γ(−1
+
+2 + it)
+
+Γ( 1
+
+2 + nK + it)
+
+���� dt
+
+≪ eOη(nK)D
+
+1
+4 +η
+K
+x−1/2nK!
+
+Γ(nK + 1
+
+2)
+(nnK
+K )
+1
+4+η
+
+≪ eOη(nK)(nnK
+K DK)
+1
+4+ηx−1/2
+
+as claimed.
+□
+
+Corollary 2.9. Let η > 0 and C1 = C1(η) ≥ 3 be sufficiently large. If
+
+x ≥ C1eOη(nK)�
+nnK
+K DK)1/2+η,
+
+then
+�
+
+Nn≤x
+
+1
+Nn ≫η κK log x.
+
+Proof. If κK ≤ 1/ log x then the claim follows from the trivial bound �
+
+Nn≤x
+1
+Nn ≥ 1. Other-
+wise, we may assume κK ≥ 1/ log x. From Lemma 2.8, it follows
+
+1
+κK
+
+�
+
+Nn≤x
+
+1
+Nn ≥ log x −
+
+nK
+�
+
+j=1
+
+1
+j + γK + O
+�eOη(nK)(nnK
+K DK)1/4+η log x
+√x
+
+�
+.
+
+By [13, Proposition 3] ,
+
+γK ≥ −1
+
+2 log DK + γQ + log 2π
+
+2
+· nK − 1
+
+12
+
+
+where γQ = 0.577 . . . is the classical Euler’s constant. Bounding �
+
+1≤j≤nK j−1 ≤ log nK + 1
+and using the condition on x, we deduce from the previous inequality that
+1
+κK
+
+�
+
+Nn≤x
+
+1
+Nn ≥ (log x){1 + O(C−1/4
+1
+)} − 1
+
+2 log DK + γQ + log 2π
+
+2
+· nK − log nK − 2
+
+≥ (log x){1 + O(C−1/4
+1
+)} − 1
+
+2 log DK − 1
+
+≥ (log x){1 + O(C−1/4
+1
++ (log x)−1)} −
+1
+
+1 + 2η log x
+
+≥ (log x){η + O(C−1/4
+1
++ (log x)−1)}.
+
+Since x ≥ C1 = C1(η) and C1(η) is sufficiently large, the desired bound follows.
+□
+
+Taking the logarithmic derivative of ζK(s) yields in the usual way
+
+(2.14)
+− ζ′
+K
+ζK
+(s) =
+�
+
+n⊆OK
+
+ΛK(n)
+(Nn)s
+
+for Re{s} > 1, where ΛK( · ) is the von Mangoldt Λ-function of the field K defined by
+
+(2.15)
+ΛK(n) =
+
+�
+log Np
+if n is a power of a prime ideal p,
+0
+otherwise.
+
+Using this identity, we prove a simple elementary lemma.
+
+Lemma 2.10. For y ≥ 2,
+�
+
+Nn≤y
+
+ΛK(n)
+
+Nn
+≪ log(DKy).
+
+Proof. Denote σ = 1 +
+1
+
+log y. From (2.14), it follows
+�
+
+Nn≤y
+
+ΛK(n)
+
+Nn
+≤ e
+�
+
+n
+
+ΛK(n)
+Nnσ
+= −ζ′
+K
+ζK
+(σ).
+
+By Lemmas 2.1 and 2.4, the RHS is
+
+≤ 1
+
+2 log DK + log y + 1 −
+�
+
+ρ
+Re
+�
+1
+
+σ − ρ
+
+�
++ O(nK).
+
+As Re{(σ − ρ)−1} ≥ 0 and nK ≪ log DK, the claim follows.
+□
+
+Finally, we end this section with a bound for hH in terms of nK, DK, and Q = QH.
+
+Lemma 2.11. Let H be a congruence class group of K. For ǫ > 0,
+
+hH ≤ eOǫ(nK)D1/2+ǫ
+K
+Q1+ǫ.
+
+Proof. Observe, by the definitions of Q and fH in Section 2.1, that if χ is a Hecke character
+satisfying χ(H) = 1 then fχ | fH and Nfχ ≤ Q. Hence,
+
+hH =
+�
+
+χ (mod fH)
+χ(H)=1
+
+1 ≤
+�
+
+Nf≤Q
+f | fH
+
+�
+
+χ (mod f)
+1 =
+�
+
+Nf≤Q
+f | fH
+
+#Cl(f).
+
+13
+
+
+Recall the classical bound #Cl(f) ≤ 2nKhKNf where hK is the class number of K (in the broad
+sense) from [25, Theorem 1.7], for example. Bounding the class number using Minkowski’s
+bound (see [30, Lemma 1.12] for example), we deduce that
+
+hH ≤
+�
+
+Nf≤Q
+f | fH
+
+eOǫ(nK)D1/2+ǫ
+K
+Nf ≤ eOǫ(nK)D1/2+ǫ
+K
+Q1+ǫ �
+
+f | fH
+
+1
+
+(Nf)ǫ.
+
+For the remaining sum, notice
+�
+
+f | fH
+
+1
+
+(Nf)ǫ ≤
+�
+
+p|fH
+
+�
+1 −
+1
+
+Npǫ
+
+�−1
+≤ exp
+�
+O
+� �
+
+p|fH
+
+1
+
+Npǫ
+
+��
+≤ eO(ω(fH)),
+
+where ω(fH) is the number of prime ideals p dividing fH. From [30, Lemma 1.13], we have
+ω(fH) ≪ Oǫ(nK) + ǫ log(DKQ) whence the desired estimate follows after rescaling ǫ.
+□
+
+Remark. Weiss [30, Lemma 1.16] achieves a comparable bound with Q1+ǫ replaced by NfH.
+This seemingly minor difference will in fact play a key role in improving the range of T in
+Theorem 1.1.
+
+3. Proof of Theorem 1.1
+
+In this section, we deduce Theorem 1.1 from two key results. Without loss, we may assume
+H (mod q) is a primitive congruence class group of K. Recall
+
+nK = [K : Q],
+DK = |disc(K/Q)|
+
+and
+hH = [I(q) : H],
+Q = QH = max{Nfχ : χ(H) = 1}.
+First, we require a mean value theorem for certain Dirichlet polynomials.
+
+Theorem 3.1. Let ǫ > 0 be arbitrary. Let b be a complex-valued function on the prime
+ideals p of K such that
+�
+
+p
+|b(p)| < ∞
+
+and b(p) = 0 when Np ≤ y. Let H (mod q) be a primitive congruence class group of K. If
+T ≥ 1 and
+
+(3.1)
+y ≥
+�
+hHn
+
+5nK
+
+K4
+D
+
+3
+2
+KQ
+1
+2T
+nK
+
+2 +1�1+ǫeOǫ(nK)
+
+then
+�
+
+χ (mod q)
+χ(H)=1
+
+� T
+
+−T
+
+�����
+
+�
+
+p
+b(p)χ(p)Np−it
+�����
+
+2
+dt ≪ǫ
+1
+
+log y
+
+�
+
+p
+Np|b(p)|2.
+
+Remark. Weiss proved essentially the same result [30, Corollary 3.8] as Theorem 3.1 but
+with condition (3.1) replaced by
+
+y ≥ (hHn2nK
+K
+DKQT 2nK)8.
+
+The exponent 8 happens to be large enough so that it inflates c5 and c6 in (1.9). The purpose
+of Theorem 3.1 is to ensure that the size of y in the required large sieve inequality does not
+14
+
+
+affect the exponents in Theorem 1.1. Our proof mostly follows Weiss’ arguments but with
+more careful analysis.
+
+The second ingredient is a method for detecting zeros of Hecke L-functions. To simplify
+its statement, define
+
+(3.2)
+L := 2 log DK + log Q + nK log(T + 3) + ΘnK,
+
+where Θ ≥ 1 is sufficiently large, and let 1(·) be an indicator function.
+
+Proposition 3.2. Let χ be a Hecke character satisfying χ(H) = 1 and ǫ ∈ (0, 1/4) be
+arbitrary. Suppose L(s, χ) has a non-trivial zero ρ satisfying
+
+|1 + iτ − ρ| ≤ r
+
+for
+R
+L < r < r0
+|τ| ≤ T
+
+where T ≥ 1 is arbitrary, R ≥ 1 is sufficiently large, and 0 < r0 <
+ǫ
+3.8. Then
+
+e−73.2φrL ≪ r4L
+� x
+
+y
+
+���
+�
+
+y≤Np<u
+
+χ(p) log Np
+
+Np1+iτ
+
+���
+2du
+
+u + δ(χ)1{|τ|<4r}(τ)
+
+where φ = 1 + 4
+
+πǫ + 16ǫ2 and provided x, y ≥ 1 satisfy
+
+(3.3)
+L ≤ log y ≤ 2.3φL
+and
+122φL ≤ log x ≪ L.
+
+Weiss [30, Lemma 4.2] showed a similar estimate but without any explicit constants.
+As such, the proof of Proposition 3.2, which is contained in Section 5, follows his overall
+arguments using Tur´an power sums but with a more careful numerical analysis.
+Combining these two components allows us to establish Theorem 1.1.
+
+Proof of Theorem 1.1 from Theorem 3.1 and Proposition 3.2: Without loss, we may assume
+H (mod q) is primitive because Q = QH = QH∗ and hH = hH∗ if H∗ induces H. If nK = 1
+then the desired bound follows from the combined works of Huxley [12] and Jutila [16].
+Hence, we may also assume nK ≥ 2.
+First, suppose
+1
+2 ≤ σ ≤ 1 − 0.05
+
+4 .
+
+By a naive application of [19, Lemma 2.1], one can directly verify that for T ≥ 1,
+
+(3.4)
+�
+
+χ(H)=1
+N(σ, T, χ) ≪ hHT log(DKQT nK) ≪ (eO(nK)D2
+KQT nK)81(1−σ)
+
+after bounding hH with Lemma 2.11.
+Now, let ǫ ∈ (0, 1/4) be fixed and denote φ := 1 + 4
+
+πǫ + 16ǫ2. Suppose
+
+(3.5)
+1 − ǫ
+
+4 ≤ σ < 1.
+
+Let R ≥ 1 be fixed and sufficiently large. By applying the bound in Lemma 2.11 to [30,
+Theorem 4.3], we deduce that for T ≥ 1,
+
+(3.6)
+�
+
+χ(H)=1
+N(1 − R
+
+L, T, χ) ≪ 1,
+
+15
+
+
+so it suffices to bound the number of zeros ρ = β + iγ satisfying
+
+(3.7)
+σ < β < 1 − R
+
+L
+|γ| ≤ T.
+
+Fix η ∈ (0, 1) sufficiently small and let r = (1 + η)(1 − σ) so by (3.5), we have r <
+ǫ
+3.8.
+For each zero ρ = β + iγ of L(s, χ) satisfying (3.7), define
+
+Φρ,χ(τ) := 1{|1+iτ−ρ|≤r}(τ)
+
+so by assumption
+
+r−1
+� T
+
+−T
+Φρ,χ(τ)dτ ≫ 1.
+
+Select y = e2.3φL and x = e122φL. By Proposition 3.2, it follows that
+
+e−73.2φrL ≪
+� T
+
+−T
+r−1Φρ,χ(τ)
+�
+r4L
+� x
+
+y
+
+���
+�
+
+y≤Np<u
+
+χ(p) log Np
+
+Np1+iτ
+
+���
+2du
+
+u + δ(χ)1{|τ|<4r}(τ)
+�
+dτ.
+
+Summing over all zeros ρ of L(s, χ) satisfying (3.7) and using (3.6), we have that
+
+(3.8)
+
+e−73.2φrL · N(σ, T, χ) ≪ r4L2
+� x
+
+y
+
+� � T
+
+−T
+
+���
+�
+
+y≤Np<u
+
+χ(p) log Np
+
+Np1+iτ
+
+���
+2
+dτ
+�du
+
+u
+
++ δ(χ)L
+� T
+
+−T
+1{|τ|<4r}(τ)dτ + 1
+
+since, for |τ| ≤ T,
+�
+
+ρ
+L(ρ,χ)=0
+
+Φρ,χ(τ) ≪ Nχ(r; 1 + iτ) ≪ rL
+
+by Lemma 2.5. Summing (3.8) over χ satisfying χ(H) = 1, we obtain
+(3.9)
+
+e−73.2φrL ·
+�
+
+χ(H)=1
+N(σ, T, χ) ≪ r4L2
+� x
+
+y
+
+� �
+
+χ(H)=1
+
+� T
+
+−T
+
+���
+�
+
+y≤Np<u
+
+χ(p) log Np
+
+Np1+iτ
+
+���
+2
+dτ
+�du
+
+u + rL
+
+Observe that, for ν = ν(ǫ) > 0 fixed and sufficiently small, Lemma 2.11 implies
+
+y = e2.3φL ≥ D4.6φ
+K Q2.3φT 2.3φnKe2.3φΘnK ≥ {hHn1.25nK
+K
+D1.5
+K Q0.5T 0.5nK+1}1+νeΘnK
+
+since T ≥ max{nKD−2/nK
+K
+Q−3/5nK, 1}, nK ≥ 2, and Θ ≥ 1 is sufficiently large. Thus y
+satisfies the conditions of Theorem 3.1, so the RHS of (3.9) is
+
+(3.10)
+≪ r4L2
+� x
+
+y
+
+1
+
+log y
+
+�
+
+y≤Np<u
+
+(log Np)2
+
+Np
+du
+u + rL.
+
+For the sum over prime ideals, note by Lemma 2.10
+�
+
+y≤Np<u
+
+(log Np)2
+
+Np
+≪ (log u)2
+
+16
+
+
+since u ≥ y = e2.3φL ≥ 2DK. Hence, the previous expression is
+
+≪ r4L2
+� x
+
+y
+
+(log u)2
+
+u log y du + rL
+
+≪ r4L2(log x)3
+
+log y
++ rL
+
+≪ r4L4
+
+as log y ≍ log x ≍ L. Comparing with (3.9) and (3.10), we have shown
+�
+
+χ(H)=1
+N(σ, T, χ) ≪ (rL)4e73.2φrL ≪ e(73.2φ+η)(1+η)(1−σ)L
+
+as r = (1+η)(1−σ) and (rL)4 ≪ eηrL. In light of (3.4) and (3.5), both cases follow from the
+respective choices ǫ = 0.05 and ǫ = 0.001 and recalling η is fixed and sufficiently small.
+□
+
+4. Mean Value of Dirichlet Polynomials
+
+In [7], Gallagher proves a large sieve inequality of the following form.
+
+Theorem 4.1. Let {an} be a sequence of complex numbers such that �
+
+n≥1 n|an|2 < ∞.
+Assume that an = 0 if n has any prime factor less than R ≥ 2. If T ≥ 1, then
+�
+
+q≤R
+log R
+
+q
+
+�∗
+
+χ mod q
+
+� T
+
+−T
+
+���
+�
+
+n≥1
+anχ(n)nit���
+2
+dt ≪
+�
+
+n≥1
+(R2T + n)|an|2,
+
+where
+�∗ denotes a restriction of the summation to primitive Dirichlet characters.
+
+The log R/q savings, which arises from forcing an = 0 when n has a small prime factor,
+turns out to be decisive in certain applications, such as Bombieri’s proof of (1.2) in [2]. The
+key ingredients in proof of Theorem 4.1 are the duality argument, properties of Gauss sums,
+and the fact that the Farey fractions up to height R are R−2-well-spaced (cf. [15, Sections
+7.3-7.4]); apart from the duality argument, sufficiently strong analogues of these results over
+number fields for the purpose of replacing the Dirichlet characters in Theorem 4.1 with Hecke
+characters do not exist yet. In order to circumvent these deficiencies, we use the Selberg sieve
+to prove a variant of Theorem 4.1 where the log R/q term on the left hand side is translated
+to a (log R)−1 savings on the right hand side. The use of the Selberg sieve introduces several
+sums over integral ideals whose evaluation requires smoothing. Ultimately, this introduces
+the factor of nK the lower bound for T in Theorem 1.1.
+
+4.1. Preparing for the Selberg Sieve. To apply the Selberg sieve, we will require several
+weighted estimates involving Hecke characters. Before we begin, we highlight the necessary
+properties of our weight Ψ.
+
+Lemma 4.2. For T ≥ 1, let A = T√2nK. There exists a weight function Ψ(x) ∈ Cc((0, ∞))
+with Mellin transform �Ψ(s) such that:
+(i) 0 ≤ Ψ(x) ≤ A/2 and Ψ(x) vanishes outside the interval
+
+e−2nK/A ≤ x ≤ e2nK/A
+
+(ii) �Ψ(s) is an entire function and further �Ψ(s) =
+�
+sinh(s/A)
+
+s/A
+�2nK.
+
+17
+
+
+(iii) For all complex s = σ + it,
+
+|�Ψ(s)| ≤
+� A
+
+|s|
+
+�2nKe|σ|/A.
+
+(iv) For |s| ≤ A,
+
+|�Ψ(s)| ≤
+�
+1 + |s|2
+
+5A2
+
+�2nK.
+
+(v) Uniformly for |σ| ≤ A/√2nK,
+
+|�Ψ(s)| ≪ 1.
+
+(vi) Let {bm}m≥1 be a sequence of complex numbers with �
+
+m |bm| < ∞. Then
+� T
+
+−T
+
+���
+�
+
+m
+bmm−it���
+2
+dt ≪
+� ∞
+
+0
+
+���
+�
+
+m
+bmΨ
+� x
+
+m
+����
+2dx
+
+x
+
+Proof. See [30, Lemma 3.2 and Corollary 3.3]; in his notation, Ψ(x) = H2nK(x) with param-
+eter A = T√2nK.
+□
+
+For the remainder of this section, assume:
+• H (mod q) is an arbitrary primitive congruence class group of K.
+• 0 < ǫ < 1/2 and T ≥ 1 is arbitrary.
+• Ψ is the weight function of Lemma 4.2.
+Next, we establish improved analogues of [30, Lemmas 3.4 and 3.6 and Corollary 3.5].
+
+Lemma 4.3. Let χ (mod q) be a Hecke character satisfying χ(H) = 1. For x > 0,
+�����
+
+�
+
+n
+
+χ(n)
+Nn · Ψ
+� x
+
+Nn
+
+�
+− δ(χ)ϕ(q)
+
+Nq κK
+
+����� ≤ eOǫ(nK) ·
+�
+n
+
+nK
+
+4
+K D
+
+1
+2
+KQ
+1
+2T
+nK
+
+2 +1�1+ǫ
+
+Proof. We have
+�
+
+n
+
+χ(n)
+Nn · Ψ
+� x
+
+Nn
+
+�
+− δ(χ)ϕ(q)
+
+Nq κK =
+1
+2πi
+
+� −1+i∞
+
+−1−i∞
+L(s + 1, χ)�Ψ(s)xsds.
+
+If χ (mod q) is induced by the primitive character χ∗ (mod fχ), then
+
+L(s, χ) = L(s, χ∗)
+�
+
+p|q
+p∤fχ
+
+(1 − χ∗(p)Np−s)
+
+implying
+|L(it, χ)| ≤ 2ω(q)|L(it, χ∗)|
+
+where ω(q) is the number of distinct prime ideal divisors of q. Since H (mod q) is primitive,
+
+ω(q) ≤ 6e4/ǫnK + ǫ
+
+2 log(DKQ),
+
+by [30, Lemma 1.13]. Hence, for Re{s} = −1,
+
+|L(s + 1, χ)| ≪ eOǫ(nK)(DKQ)ǫ/2|L(s + 1, χ∗)|
+18
+
+
+Thus, by Lemma 2.3, we have
+����
+1
+2πi
+
+� −1+i∞
+
+−1−i∞
+L(s + 1, χ)�Ψ(s)xsds
+����
+
+≪ eOǫ(nK)(DKQ)
+1
+2+ǫx−1
+� ∞
+
+0
+(1 + |t|)( 1
+
+2 +ǫ)nK|�Ψ(−1 + it)|dt
+
+as Dχ ≤ DKQ. By Lemma 4.2(iii) and (iv), it follows that
+� ∞
+
+0
+(1 + |t|)( 1
+
+2 +ǫ)nK|�Ψ(−1 + it)|dt
+
+=
+�
+A
+2
+
+0
+(1 + |t|)( 1
+
+2 +ǫ)nK|�Ψ(−1 + it)|dt +
+� ∞
+
+A
+2
+(1 + |t|)( 1
+
+2+ǫ)nK|�Ψ(−1 + it)|dt
+
+≪ eO(nK)A( 1
+
+2 +ǫ)nK+1.
+
+Collecting the above estimates, the claimed bound follows upon recalling A = T√2nK.
+□
+
+Corollary 4.4. Let C be a coset of the primitive congruence class group H (mod q), and let
+d be an integral ideal coprime to q. For all x > 0, we have
+��������
+
+�
+
+n∈C
+d|n
+
+1
+NnΨ
+� x
+
+Nn
+
+�
+− ϕ(q)
+
+Nq
+κK
+hH
+· 1
+
+Nd
+
+��������
+
+≤ eOǫ(nK) ·
+�
+n
+
+nK
+
+4
+K D
+
+1
+2
+KQ
+1
+2T
+nK
+2 +1�1+ǫ · 1
+
+x.
+
+Proof. The proof is essentially the same as that of [30, Corollary 3.5], except for the fact
+that we have an improved bound in Lemma 4.3.
+□
+
+We now apply the Selberg sieve. For z ≥ 1, define
+
+(4.1)
+Sz = {n : p | n =⇒ Np > z}
+and
+V (z) =
+�
+
+Nn≤z
+
+1
+Nn.
+
+Lemma 4.5. Let C be a coset of the primitive congruence class group H (mod q). For x > 0
+and z ≥ 1,
+�
+
+n∈C∩Sz
+
+1
+NnΨ
+� x
+
+Nn
+
+�
+≤
+κK
+
+hHV (z) + O
+�Mz2+2ǫ
+
+x
+
+�
+,
+
+where
+
+(4.2)
+M = eOǫ(nK) ·
+�
+n
+
+nK
+
+4
+K D
+
+1
+2
+KQ
+1
+2T
+nK
+2 +1�1+ǫ.
+
+Proof. The proof is essentially the same as that of [30, Lemma 3.6], except for the fact that
+we have an improved bound in Lemma 4.3.
+□
+
+4.2. Proof of Theorem 3.1. Let z be a parameter satisfying 1 ≤ z ≤ y, which we will
+specify later. Applying Lemma 4.2 and writing
+
+bm =
+�
+
+Nn=m
+b(n)χ(n),
+
+19
+
+
+for each Hecke character χ satisfying χ(H) = 1, it follows that
+
+�
+
+χ(H)=1
+
+� T
+
+−T
+
+�����
+
+�
+
+n
+b(n)χ(n)Nn−it
+�����
+
+2
+dt ≪
+� ∞
+
+0
+
+�
+
+χ(H)=1
+
+�����
+
+�
+
+n
+b(n)χ(n)Ψ
+� x
+
+Nn
+
+������
+
+2
+dx
+x .
+
+By the orthogonality of characters and the Cauchy-Schwarz inequality,
+
+�
+
+χ(H)=1
+
+�����
+
+�
+
+n
+b(n)χ(n)Ψ
+� x
+
+Nn
+
+������
+
+2
+≤ hH
+�
+
+C∈I(q)/H
+
+� �
+
+n∈C
+Nn|b(n)|2Ψ
+� x
+
+Nn
+
+� �� �
+
+n∈C∩Sz
+
+1
+NnΨ
+� x
+
+Nn
+
+��
+
+since z ≤ y and b(n) is supported on prime ideals with norm greater than y. By Lemma 4.5,
+the RHS is
+
+≤
+�
+
+C∈I(q)/H
+
+�
+
+n∈C
+Nn|b(n)|2Ψ
+� x
+
+Nn
+
+� � κK
+
+V (z) + hHM′
+
+x
+
+�
+
+≤
+�
+
+n
+Nn|b(n)|2Ψ
+� x
+
+Nn
+
+�� κK
+
+V (z) + hHM′
+
+x
+
+�
+,
+
+where M′ = Mz2+2ǫ. Combining the above estimates yields
+
+�
+
+χ(H)=1
+
+� T
+
+−T
+
+�����
+
+�
+
+p
+b(p)χ(p)Np−it
+�����
+
+2
+dt
+
+≪
+�
+
+n
+Nn|b(n)|2
+� κK
+
+V (z)
+
+� ∞
+
+0
+Ψ
+� x
+
+Nn
+
+�dx
+
+x + hHM′
+� ∞
+
+0
+
+1
+xΨ
+� x
+
+Nn
+
+�dx
+
+x
+
+�
+
+≪
+�
+
+n
+Nn|b(n)|2
+� κK
+
+V (z)|�Ψ(0)| + hHM′
+
+Nn |�Ψ(1)|
+�
+
+≪
+�
+
+n
+Nn|b(n)|2
+� κK
+
+V (z) + hHM′eO(nK)
+
+Nn
+
+�
+.
+
+by Lemma 4.2. Since b(n) is supported on prime ideals whose norm is greater than y, the
+above is
+
+(4.3)
+≪
+�
+
+p
+Np|b(p)|2
+� κK
+
+V (z) + hHMz2+2ǫeOǫ(nK)
+
+y
+
+�
+
+as M′ = Mz2+2ǫ with M defined by (4.2). Now, select z satisfying
+
+(4.4)
+y = hHMeB1nK · z2+4ǫ,
+
+where B1 = B1(ǫ) > 0 is sufficiently large. From (3.1), it follows that 1 ≤ z ≤ y and further,
+
+z ≥ eB2nK(nnK
+K DK)
+1
+2+ǫ
+
+where B2 = B2(ǫ) > 0 is sufficiently large. Hence, after inputting this choice of z into (4.3),
+it follows by Corollary 2.9 that
+
+�
+
+χ(H)=1
+
+� T
+
+−T
+
+�����
+
+�
+
+p
+b(p)χ(p)Np−it
+�����
+
+2
+dt ≪ǫ
+1
+
+log z
+
+�
+
+p
+Np|b(p)|2.
+
+20
+
+
+Finally, from (3.1) and (4.4), one can verify that log z ≫ǫ log y which completes the proof
+after rescaling ǫ > 0 appropriately.
+□
+
+5. Detecting the Zeros of Hecke L-functions
+
+5.1. Setup. The objective of this section is to prove Proposition 3.2 so we fix some notation
+to be used throughout this section.
+Let H (mod q) be a congruence class group and let
+χ (mod q) be a Hecke character, satisfying χ(H) = 1, induced from the primitive character
+χ∗ (mod fχ). Define Q = QH by (1.10), and for T ≥ 1,
+
+(5.1)
+L := 2 log DK + log Q + nK log(T + 3) + ΘnK
+
+where Θ ≥ 1 is sufficiently large. Let R ≥ 1 be sufficiently large and 0 < r0 <
+1
+16. Suppose
+τ ∈ R and r > 0 satisfy
+
+(5.2)
+R
+L ≤ r < r0
+and
+|τ| ≤ T.
+
+Assume L(s, χ) has a non-trivial zero ρ satisfying
+
+(5.3)
+|1 + iτ − ρ| ≤ r.
+
+The proof of Proposition 3.2 is divided into two main steps, with the final arguments
+culminating in Section 5.4. The final arguments critically hinge on the following power sum
+estimate due to Kolesnik and Straus [18].
+
+Theorem 5.1. For any integer M ≥ 0 and complex numbers z1, . . . , zN, there is an integer
+k with M + 1 ≤ k ≤ M + N such that
+
+|zk
+1 + · · · + zk
+N| ≥ 1.007
+�
+N
+
+4e(M + N)
+
+�N
+|z1|k.
+
+Remark. One can verify that the expression
+�
+N
+
+4e(M+N)
+�N is a decreasing function of N.
+
+Any improvement on the constant 4e in Theorem 5.1 would lead to a reduction of the
+exponent 73.2 in Proposition 3.2, but 4e has been shown by Makai [24] to be best possible.
+
+5.2. A Large Derivative. Denote
+
+(5.4)
+F(s) := L′
+
+L (s, χ∗)
+
+and ξ := 1 + r + iτ. Using Theorem 5.1, the goal of this subsection is to show F(s) has a
+large high order derivative, which we establish in the following lemma.
+
+Lemma 5.2. Keeping the above notation, if ǫ ∈ (0, 1/4) and r0 < ǫ/3.8 then
+
+δ(χ) · 1{|τ|<4r}(τ) +
+���(−1)krk+1
+
+k!
+· F (k)(ξ)
+��� ≫ exp(−16.6 · φrL)
+
+2k+1
+
+where φ = 1 + 4
+
+πǫ + 16ǫ2 and for some integer k satisfying
+
+(5.5)
+25.0 · φrL ≤ k ≤ 28.8 · φrL
+
+21
+
+
+Proof. By [30, Lemma 1.10],
+
+F(s) + δ(χ)
+
+s − 1 =
+�
+
+|1+iτ−ρ|<1/2
+
+1
+
+s − ρ + G(s)
+
+uniformly in the region
+|1 + iτ − s| < 1/2,
+where G(s) is analytic and |G(s)| ≪ L in this region. Differentiating the above formula k
+times and evaluating at ξ = 1 + r + iτ, we deduce
+
+(5.6)
+(−1)k
+
+k!
+· F (k)(ξ) +
+δ(χ)
+
+(ξ − 1)k+1 =
+�
+
+|1+iτ−ρ|<1/2
+
+1
+
+(ξ − ρ)k+1 + O(4kL)
+
+for η > 0 and 0 < r < r0 < 1/8. The error term arises from bounding G(k)(ξ) using Cauchy’s
+integral formula with a circle of radius of 1/4.
+Let A ≥ 1 be a fixed absolute parameter to be specified later. For zeros ρ satisfying
+Ar < |1 + iτ − ρ| < 1/2 in (5.6), notice
+
+(A2 + 1)r2 < r2 + |1 + iτ − ρ|2 ≤ |ξ − ρ|2 ≤ (r + |1 + iτ − ρ|)2 ≤ (r + 1/2)2 < 1.
+
+Denoting A1 =
+√
+
+A2 + 1 ≥ 2, it follows by partial summation that
+�
+
+Ar<|1+iτ−ρ|<1/2
+
+1
+
+|ξ − ρ|k+1 ≤
+� 1
+
+A1r
+u−k−1dNχ(u; ξ)
+
+= (k + 1)
+� 1
+
+A1r
+
+Nχ(u; ξ)
+
+uk+2
+du + O(L)
+
+where we bounded Nχ(1; ξ) ≪ L using [19, Lemma 2.2] and recalling rL ≥ R ≫ 1. By
+Lemma 2.5, the above is therefore
+
+(5.7)
+
+≤ (k + 1)
+� ∞
+
+A1r
+
+2uL + 4 + 4δ(χ)
+
+uk+2
+du + O(L)
+
+≤ 2A1rL + 4 + 4δ(χ)
+
+(A1r)k+1
++
+� ∞
+
+A1r
+
+2L
+uk+1du + O(L)
+
+≤ 2{1 + 1
+
+k}A1rL + 4 + 4δ(χ)
+
+(A1r)k+1
++ O(L)
+
+≪
+rL
+
+(A1r)k+1.
+
+By considering cases, one may bound the δ(χ)-term in (5.6) as follows:
+
+(5.8)
+rk+1 ·
+���
+δ(χ)
+
+(ξ − 1)k+1
+
+��� ≤ δ(χ) · 1{|τ|<Ar}(τ) +
+1
+
+Ak+1
+1
+where 1 is an indicator function. Combining (5.6), (5.7) and the above yields
+
+(5.9)
+δ(χ)1{|τ| < Ar} +
+���(−1)krk+1
+
+k!
+· F (k)(ξ)
+���
+
+≥
+���
+�
+
+|1+iτ−ρ|≤Ar
+
+1
+
+(ξ − ρ)k+1
+
+��� · rk+1 − O
+� rL
+
+Ak+1
+1
++ (4r)k+1L
+�
+.
+
+22
+
+
+To lower bound the remaining sum over zeros, we wish to apply Theorem 5.1. Denote
+
+N = Nχ(Ar; 1 + iτ) = #{ρ : L(ρ, χ) = 0, |1 + iτ − ρ| ≤ Ar}.
+
+Let ǫ ∈ (0, 1/4) be fixed. Provided
+
+(5.10)
+r0 < ǫ
+
+A
+then by Lemma 2.7 and the definition of L in (5.1) it follows that
+
+(5.11)
+N ≤ φArL + 4 + 4δ(χ)
+
+as Θ is sufficiently large (depending on ǫ). We require a choice of M which depends on the
+fixed absolute parameters α ∈ (0, 1), ǫ ∈ (0, 1/4) and A ≥ 1, all of which will be specified
+later. Define
+
+(5.12)
+M :=
+�φArL + 4 + 4δ(χ)
+
+α
+
+�
+
+so N ≤ αM by (5.11). Thus, from Theorem 5.1 and (5.3),
+
+(5.13)
+���
+�
+
+|1+iτ−ρ|≤Ar
+
+1
+
+(ξ − ρ)k+1
+
+��� ≥
+�
+α
+
+4e(1 + α)
+
+�αM
+1
+
+(2r)k+1
+
+for some M + 1 ≤ k ≤ (1 + α)M. To simplify the error term in (5.9), notice rL ≪ M ≪ k
+so
+(4r)k+1L ≪ k(4r)k ≪ kA−k
+1 .
+provided
+
+(5.14)
+r0 <
+1
+
+4A1
+.
+
+Moreover, select A ≥ 1 so that A1 =
+√
+
+A2 + 1 is given by
+
+(5.15)
+A1 = 2
+�4e(1 + α)
+
+α
+
+�α
+(1 + η)
+
+where η ∈ (0, 1) is fixed. This choice implies
+
+A−(k+1)
+1
+≤
+�
+α
+
+4e(1 + α)
+
+�αM
+1
+
+2k+1(1 + η)k+1
+
+since αk ≥ αM. Incorporating (5.13) and the subsequent observations into (5.9) yields
+
+(5.16)
+δ(χ)1{|τ| < Ar} +
+���(−1)krk+1
+
+k!
+· F (k)(ξ)
+���
+
+≥
+�
+α
+
+4e(1 + α)
+
+�φArL+8
+·
+1
+
+2k+1
+
+�
+1 − O
+�
+k
+
+(1 + η)k+1
+
+��
+
+after bounding N by (5.11) and assuming (5.10) and (5.14) hold. Since k ≫ M ≫ rL ≫ R,
+we may impose R to be sufficiently large, depending on η ∈ (0, 1), so that the above error term
+is negligible. Finally, we select α = 0.15 and η = 10−4 yielding A = 3.752 . . . by (5.15). With
+these choices, conditions (5.10) and (5.14) are automatically satisfied as r0 < ǫ/3.8 < 1/16 by
+assumption. The desired result follows after inputting these values into (5.16) and recalling
+M + 1 ≤ k ≤ (1 + α)M.
+□
+
+23
+
+
+Remark. Let us motivate our choice of α = 0.15. Ultimately, we will wish to maximize the
+righthand side of (5.16) when k is large; that is, supposing
+
+k ≈ (1 + α)M ≈ (1 + α)A
+
+α · φrL
+
+by (5.12).
+By (5.15), notice A ≈
+�
+
+4C2α − 1 for η ∈ (0, 1) sufficiently small and where
+Cα =
+� 4e(1+α)
+
+α
+�α. Therefore, we select α ∈ (0, 1) which minimizes the quantity
+�
+
+4C2
+α − 1
+α
+
+�
+log Cα + (1 + α) log 2
+�
+
+and this turns out to be roughly α = 0.15.
+
+5.3. Short Sum over Prime Ideals. Defining ΛK by (2.15), it follows by the Euler produt
+for L(s, χ∗) that
+
+F(s) = L′
+
+L (s, χ∗) = −
+�
+
+n
+χ∗(n)ΛK(n)(Nn)−s
+
+for Re{s} > 1. Differentiating the above formula k times, we deduce
+
+(5.17)
+(−1)k+1rk+1
+
+k!
+· F (k)(ξ) =
+�
+
+n
+
+ΛK(n)χ∗(n)
+
+Nn1+iτ
+· rEk(r log Nn)
+
+for any integer k ≥ 1, where ξ = 1 + r + iτ and
+
+(5.18)
+Ek(u) = uke−u
+
+k!
+.
+
+As a preliminary observation, notice from Stirling’s formula in the form
+
+kke−k√
+
+2πk ≤ k! ≤ kke−k√
+
+2πke1/12k
+
+(see [27]), one can verify
+
+(5.19)
+Ek(u) ≤
+
+
+
+
+
+(1 + η)−k
+if u ≤
+k
+
+e(1 + η),
+
+(1 + η)−ke−δu
+if u ≥
+2
+
+1−δ log
+� 2(1+η)
+
+1−δ
+�
+k,
+
+for k ≥ 1, η > 0 and δ ∈ (0, 1). The goal of this subsection is to bound the infinite sum in
+(5.17) by an integral average of short sums over prime ideals.
+
+Lemma 5.3. Keeping the above notation, assume the integer k satisfies (5.5). Then
+���
+�
+
+n
+
+χ∗(n)ΛK(n)
+
+Nn1+iτ
+· rEk(r log Nn)
+��� ≤ r2
+� x
+
+y
+
+���
+�
+
+y≤Np<u
+
+χ∗(p) log Np
+
+Np1+iτ
+
+���du
+
+u + O
+�
+e−16.8φrL(2.01)−k�
+
+provided x, y ≥ 1 satisfy
+
+(5.20)
+log y ≤ 2.3φL
+and
+122φL ≤ log x ≪ L.
+
+Proof. First, divide the sum on the LHS of into four sums:
+�
+
+n
+=
+�
+
+Np<y
++
+�
+
+y≤Np<x
++
+�
+
+Np≥x
++
+�
+
+n not prime
+= S1 + S2 + S3 + S4,
+
+24
+
+
+say. It suffices to show
+
+|S2| ≤ r2
+� x
+
+y
+
+���
+�
+
+y≤Np<u
+
+χ(p) log Np
+
+Np1+iτ
+
+���du
+
+u + O((3.95)−k),
+
+|Sj| ≪ (3.95)−k
+for j = 1, 3, 4,
+
+because, by (5.5),
+
+(3.95)−k = e−k log(3.95/2.01)(2.01)−k ≪ e−25.0 log(3.95/2.01)φrL(2.01)−k ≪ e−16.8φrL(2.01)−k.
+
+Thus, we shall repeatedly use (5.19) with η = 3 and δ = 0.01. These choices, along with
+(5.5) and (5.20), imply that
+
+(5.21)
+Ek(r log Nn) ≤
+
+�
+4−k
+if Nn ≤ y,
+4−k(Nn)−0.01r
+if Nn ≥ x.
+
+Hence, for S1, observe by [30, Lemma 1.11] that
+
+|S1| ≤ r4−k �
+
+Np<y
+
+log Np
+
+Np
+≪ r4−k log(yDK) ≪ rL4−k ≪ k4−k ≪ (3.95)−k
+
+as k ≫ rL ≫ R by (5.5) and R is sufficiently large. Similarly, for S3, we use [30, Lemma
+1.11], Lemma 2.10, and (5.20) to deduce
+
+|S3| ≤ r4−k �
+
+Np≥x
+
+log Np
+
+(Np)1+0.01r
+
+≤ r4−k�
+− ζ′
+K
+ζK
+(1 + 0.01r) −
+�
+
+Np<x
+
+log Np
+
+(Np)1+0.01r
+
+�
+
+≪ r4−k�
+r−1 + log DK + log(DKx)
+�
+
+≪ 4−k + rL4−k
+
+≪ (3.95)−k.
+
+For S4, since �∞
+k=0 Ek(u) = 1, observe
+
+Ek(r log Nn) = (2r)k(Nn)1/2−rEk( 1
+
+2 log Nn) ≤ 4−k(Nn)1/2−r
+
+as r < r0 ≤ 1/8 by assumption. Thus, by [30, Lemma 1.11],
+
+|S4| ≤ r
+�
+
+p
+
+�
+
+m≥2
+
+log Np
+(Npm)Ek(r log Npm)
+
+≤ 4−kr
+�
+
+p
+
+�
+
+m≥2
+
+log Np
+
+(Npm)1/2+r
+
+≪ 4−kr
+�
+r−1 + log DK
+�
+
+≪ k4−k
+
+≪ (3.95)−k.
+
+25
+
+
+Finally, for the main term S2, define
+
+W(u) = Wχ(u; τ) :=
+�
+
+y≤Np<u
+
+χ(p) log Np
+
+Np1+iτ
+,
+
+so by partial summation
+
+(5.22)
+S2 = rW(x)Ek(r log x) − r2
+� x
+
+y
+W(u)E′
+k(r log u)du
+
+u
+
+as W(y) = 0. From (5.21), notice
+
+|rW(x)Ek(r log x)| ≪ r4−kx−0.01r
+�
+
+y≤Np<x
+
+ΛK(n)
+
+Nn
+≪ 4−kr log x ≪ k4−k ≪ (3.95)−k
+
+by [30, Lemma 1.11] and (5.20). One can verify that |E′
+k(u)| = |Ek−1(u)−Ek(u)| ≤ Ek−1(u)+
+Ek(u) ≤ 1 from definition (5.18) so the desired estimate follows from (5.22).
+□
+
+5.4. Proof of Proposition 3.2. From (5.17) and Lemmas 5.2 and 5.3, it follows that
+
+(5.23)
+exp(−36.6φrL) ≪ r2
+� x
+
+y
+
+���
+�
+
+y≤Np<u
+
+χ∗(p) log Np
+
+Np1+iτ
+
+���du
+
+u + δ(χ)1{|τ|<4r}(τ)
+
+since
+exp(−16.6φrL)
+
+2k+1
+≫ exp(−(16.6φrL + k log 2)) ≫ exp(−36.6φrL)
+
+for k satisfying (5.5). As y > eL ≥ Nfχ, it follows χ∗(p) = χ(p) for y ≤ Np < x so we may
+replace χ∗ with χ in (5.23). Squaring both sides of (5.23), replacing χ∗ with χ, and applying
+Cauchy-Schwarz gives the desired result upon noting
+� x
+y
+du
+u ≪ log(x/y) ≪ L by (5.20).
+□
+
+6. Zero Repulsion: The Deuring-Heilbronn Phenomenon
+
+To prove Theorem 1.2 and establish Deuring-Heilbronn phenomenon for L-functions of
+ray class characters, we will critically use the following power sum inequality.
+
+Theorem 6.1 (Lagarias-Montgomery-Odlyzko). Let ǫ > 0 and a sequence of complex num-
+bers {zn}n be given. Let sm = �∞
+n=1 zm
+n and suppose that |zn| ≤ |z1| for all n ≥ 1. Define
+
+(6.1)
+M :=
+1
+|z1|
+
+�
+
+n
+|zn|.
+
+Then there exists m0 with 1 ≤ m0 ≤ (12 + ǫ)M such that
+
+Re{sm0} ≥
+ǫ
+
+48 + 5ǫ|z1|m0.
+
+Proof. This is a modified version of [19, Theorem 4.2]; see [35, Theorem 2.3] for details.
+□
+
+We prepare for the application of this result by establishing a few preliminary estimates
+and then end this section with the proof of Theorem 1.2.
+26
+
+
+6.1. Preliminaries.
+
+Lemma 6.2. Let χ (mod q) be a Hecke character. For σ ≥ 1 and t ∈ R,
+
+�
+
+ω trivial
+
+1
+
+|σ + it − ω|2 ≤
+
+�� 1
+
+2σ +
+1
+σ2
+�
+· nK
+if χ is primitive,
+� 1
+
+2σ +
+1
+σ2
+�
+· nK +
+� 1
+
+2σ +
+2
+
+σ2 log 2
+�
+· log Nq
+unconditionally,
+
+where the sum is over all trivial zeros ω of L(s, χ) counted with multiplicity.
+
+Proof. Suppose χ (mod q) is induced by the primitive character χ∗ (mod fχ). Then
+
+L(s, χ) = P(s, χ)L(s, χ∗)
+where
+P(s, χ) =
+�
+
+p|q
+p∤fχ
+
+�
+1 − χ∗(p)
+
+Nps
+
+�
+
+for all s ∈ C. Thus, the trivial zeros of L(s, χ) are either zeros of the finite Euler product
+P(s, χ) or trivial zeros of L(s, χ∗).
+We consider each separately.
+From (2.6) and (2.4),
+observe
+
+�
+
+ω trivial
+L(ω,χ∗)=0
+
+1
+
+|σ + it − ω|2 ≤ a(χ)
+
+∞
+�
+
+k=0
+
+1
+
+(σ + 2k)2 + t2 + b(χ)
+
+∞
+�
+
+k=0
+
+1
+
+(σ + 2k + 1)2 + t2
+
+≤ nK
+
+∞
+�
+
+k=0
+
+1
+
+(σ + 2k)2 ≤
+� 1
+
+2σ + 1
+
+σ2
+
+�
+nK
+
+Now, if χ is primitive then P(s, χ) ≡ 1 and hence never vanishes. Otherwise, notice the
+zeros of each p-factor in the Euler product of P(s, χ) are totally imaginary and are given by
+
+aχ(p)i + 2πiZ
+
+log Np
+
+for some 0 ≤ aχ(p) < 2π/ log Np. Translating these zeros ω �→ ω + it amounts to choosing
+another representative 0 ≤ bχ(p; t) < 2π/ log Np. Therefore,
+
+�
+
+ω trivial
+P (ω,χ)=0
+
+1
+
+|σ + it − ω|2 ≤ 2
+�
+
+p|q
+p∤fχ
+
+∞
+�
+
+k=0
+
+1
+
+σ2 + (2πk/ log Np)2
+
+≤ 2
+�
+
+p|q
+p∤fχ
+
+� 1
+
+σ2 +
+� ∞
+
+0
+
+1
+
+σ2 + (2πx/ log Np)2dx
+�
+
+≤ 2
+�
+
+p|q
+p∤fχ
+
+�log Np
+
+4σ
++ 1
+
+σ2
+
+�
+
+≤
+� 1
+
+2σ +
+2
+
+σ2 log 2
+
+�
+log Nq,
+
+as required.
+□
+
+27
+
+
+Lemma 6.3. Suppose ψ (mod q) is real and χ (mod q) is arbitrary. For σ = α+1 with α ≥ 1
+and t ∈ R,
+�
+
+ρ
+ζK(ρ)=0
+
+1
+
+|σ − ρ|2 +
+�
+
+ρ
+L(ρ,ψ)=0
+
+1
+
+|σ − ρ|2 +
+�
+
+ρ
+L(ρ,χ)=0
+
+1
+
+|σ + it − ρ|2 +
+�
+
+ρ
+L(ρ,ψχ)=0
+
+1
+
+|σ + it − ρ|2
+
+≤ 1
+
+α ·
+�1
+
+2 log(D3
+KNq2Dψ) +
+�
+log(α + 2) +
+2
+
+α + 1 − 2 log π
+�
+nK
+
++ nK log(α + 2 + |t|) + 4
+
+α +
+4
+
+α + 1
+
+�
+,
+
+where the sums are over all non-trivial zeros of the corresponding L-functions.
+
+Remark. If ψ is trivial, notice that the LHS equals
+
+2
+� �
+
+ρ
+ζK(ρ)=0
+
+1
+
+|σ − ρ|2 +
+�
+
+ρ
+L(ρ,χ)=0
+
+1
+
+|σ + it − ρ|2
+
+�
+.
+
+This additional factor of 2 will be useful to us later.
+
+Proof. Suppose ψ and χ are induced from the primitive characters ψ∗ and χ∗ respectively.
+From the identity
+0 ≤ (1 + ψ∗(n))(1 + Re{χ∗(n)(Nn)−it}),
+
+it follows that
+
+0 ≤ −Re
+�ζ′
+K
+ζK
+(σ) + L′
+
+L (σ, ψ∗) + L′
+
+L (σ + it, χ∗) + L′
+
+L (σ + it, ψ∗χ∗)
+�
+.
+
+Applying Lemmas 2.1 and 2.4 to each term yields
+
+(6.2)
+
+0 ≤ 1
+
+2 log(D3
+KNq2Dψ) + nK log(σ + 1 + |t|) + (log(σ + 1) + 2σ−1 − 2 log π)nK
+
++ 1 + δ(ψ)
+
+α
++ 1 + δ(ψ)
+
+α + 1
++ Re
+�δ(χ) + δ(χψ)
+
+α + it
++ δ(χ) + δ(χψ)
+
+α + 1 + it
+
+�
+
+− Re
+� �
+
+ρ
+ζK(ρ)=0
+
+1
+
+σ − ρ +
+�
+
+ρ
+L(ρ,ψ)=0
+
+1
+
+σ − ρ +
+�
+
+ρ
+L(ρ,χ)=0
+
+1
+
+σ + it − ρ +
+�
+
+ρ
+L(ρ,ψχ)=0
+
+1
+
+σ + it − ρ
+
+�
+
+Since 0 < β < 1, we notice
+
+Re
+�
+1
+
+σ + it − ρ
+
+�
+=
+α + 1 − β
+
+|σ + it − ρ|2 ≥
+α
+
+|σ + it − ρ|2
+
+and
+
+Re
+�
+1
+
+α + it +
+1
+
+α + 1 + it
+
+�
+≤ 1
+
+α +
+1
+
+α + 1.
+
+Rearranging (6.2) and employing these observations gives the desired conclusion.
+□
+
+6.2. Proof of Theorem 1.2. We divide the proof according to whether ψ is quadratic or
+trivial. The arguments in each case are similar but require some minor differences.
+28
+
+
+6.2.1. ψ is quadratic. Let m be a positive integer, α ≥ 1 and σ = α + 1. From the identity
+
+0 ≤ (1 + ψ∗(n))(1 + Re{χ∗(n)(Nn)−iγ′})
+
+and Lemma 2.2 with s = σ + iγ′, it follows
+
+(6.3)
+Re
+�
+∞
+�
+
+n=1
+zm
+n
+�
+≤ 1
+
+αm −
+1
+
+(α + 1 − β1)2m + Re
+�δ(χ) + δ(ψχ)
+
+(α + iγ′)2m −
+δ(χ) + δ(ψχ)
+
+(α + 1 + iγ′ − β1)2m
+
+�
+
+where zn = zn(γ′) satisfies |z1| ≥ |z2| ≥ . . . and runs over the multisets
+
+(6.4)
+
+{(σ − ω)−2 : ω is any zero of ζK(s)},
+
+{(σ − ω)−2 : ω ̸= β1 is any zero of L(s, ψ∗)},
+
+{(σ + iγ′ − ω)−2 : ω ̸= β1 is any zero of L(s, χ∗)},
+
+{(σ + iγ′ − ω)−2 : ω ̸= β1 is any zero of L(s, ψ∗χ∗)}.
+
+Note that the multisets includes trivial zeros of the corresponding L-functions and ψ∗χ∗ is a
+Hecke character (not necessarily primitive) modulo the least common multiple of fχ and fψ.
+With this choice, it follows
+
+(6.5)
+(α + 1/2)−2 ≤ (α + 1 − β′)−2 ≤ |z1| ≤ α−2.
+
+The RHS of (6.3) may be bounded via the observation
+���
+1
+
+(α + it)2m −
+1
+
+(α + it + 1 − β1)2m
+
+��� ≤ α−2m���1 −
+1
+
+(1 + 1−β1
+
+α+it )2m
+
+��� ≪ α−2m−1m(1 − β1),
+
+whence
+
+(6.6)
+Re
+�
+∞
+�
+
+n=1
+zm
+n
+�
+≪ α−2m−1m(1 − β1).
+
+On the other hand, by Theorem 6.1, for ǫ > 0, there exists some m0 = m0(ǫ) with 1 ≤ m0 ≤
+(12 + ǫ)M such that
+
+Re
+�
+∞
+�
+
+n=1
+zm0
+n
+�
+≥
+ǫ
+50|z1|m0 ≥
+ǫ
+50(α + 1 − β′)−2m0 ≥
+ǫ
+50α−2m0 exp(−2m0
+
+α (1 − β′)),
+
+where M = |z1|−1 �∞
+n=1 |zn|. Comparing with (6.6) for m = m0, it follows that
+
+(6.7)
+exp(−(24 + 2ǫ) M
+
+α (1 − β′)) ≪ǫ
+M
+α (1 − β1).
+
+Therefore, it suffices to bound M/α and optimize over α ≥ 1.
+By (6.4), the quantity M is a sum involving non-trivial and trivial zeros of certain L-
+functions. For the non-trivial zeros, we employ Lemma 6.3 with Dψ ≤ DKNq since ψ is qua-
+dratic. For the trivial zeros, apply Lemma 6.2 in the “primitive” case for ζK(s), L(s, ψ∗), L(s, χ∗)
+29
+
+
+and in the “unconditional” case for L(s, ψ∗χ∗). Then from (6.5), it follows that
+
+(6.8)
+
+M
+α ≤ (α + 1/2)2
+
+α2
+·
+�
+2 log DK +
+�3
+
+2 +
+α
+
+2α + 2 +
+2α
+
+(α + 1)2 log 2
+
+�
+log Nq
+
++
+�
+log(α + 2) + 2 − 2 log π +
+4α
+
+(α + 1)2
+
+�
+nK
+
++ nK log(α + 2 + T) + 4
+
+α +
+4
+
+α + 1
+
+�
+,
+
+for α ≥ 1. Selecting α = 18, inputting the resulting bound into (6.7), and fixing ǫ > 0
+sufficiently small completes the proof for ψ quadratic.
+
+Remark. The final choice of α was somewhat arbitrary because the coefficients of log DK, log Nq
+and nK in (6.8) cannot be simultaneously minimized. As α → ∞, it is apparent that the
+coefficients of log DK and log Nq decrease and converge to a minimum but the coefficient of
+nK grows arbitrarily large. Hence, in the interest of having relatively small coefficients of
+comparable size for all quantities, we chose the value α = 18.
+
+6.2.2. ψ is trivial. Now, for ψ trivial, we begin with the identity
+
+0 ≤ 1 + Re{χ∗(n)(Nn)−iγ′}.
+
+This similarly implies
+
+(6.9)
+Re
+�
+∞
+�
+
+n=1
+zm
+n
+�
+≤ 1
+
+αm −
+1
+
+(α + 1 − β1)2m + Re
+�
+δ(χ)
+
+(α + iγ′)2m −
+δ(χ)
+
+(α + 1 + iγ′ − β1)2m
+
+�
+
+for a new choice zn = zn(γ′) satisfying |z1| ≥ |z2| ≥ . . . and which runs over the multisets
+
+(6.10)
+{(σ − ω)−2 : ω ̸= β1 is any zero of ζK(s)},
+
+{(σ + iγ′ − ω)−2 : ω ̸= β1 is any zero of L(s, χ∗)}.
+
+Following the same arguments as before, we may arrive at (6.7) for the new quantity M =
+|z1|−1 �∞
+n=1 |zn|. To bound the non-trivial zeros arising in M, apply Lemma 6.3 with Dψ =
+DK since ψ is trivial. For the trivial zeros, apply Lemma 6.2 in the “primitive” case for both
+ζK(s) and L(s, χ∗). It follows from (6.5) that
+
+(6.11)
+
+M
+α ≤ (α + 1/2)2
+
+α2
+·
+�
+log DK + 1
+
+2 log Nq
+
++
+�1
+
+2 log(α + 2) + 1 − log π −
+1
+
+α + 1
+
+�
+nK
+
++ 1
+
+2nK log
+�
+α + 2 + T
+�
++ 2
+
+α +
+2
+
+α + 1
+
+�
+.
+
+As with the previous case, selecting α = 18, inputting the resulting bound into (6.7), and
+fixing ǫ > 0 sufficiently small yields the desired result.
+□
+
+References
+
+[1] E. Bach and J. Sorenson. Explicit bounds for primes in residue classes. Math. Comp., 65(216):1717–1735,
+1996.
+[2] E. Bombieri. Le grand crible dans la th´eorie analytique des nombres. Soci´et´e Math´ematique de France,
+Paris, 1974. Avec une sommaire en anglais, Ast´erisque, No. 18.
+30
+
+
+[3] D. A. Burgess. The distribution of quadratic residues and non-residues. Mathematika, 4:106–112, 1957.
+[4] J. R. Chen. The exceptional set of Goldbach numbers. II. Sci. Sinica Ser. A, 26(7):714–731, 1983.
+[5] M. Deuring. ¨Uber den Tschebotareffschen Dichtigkeitssatz. Math. Ann., 110(1):414–415, 1935.
+[6] E. Fogels. On the zeros of Hecke’s L-functions. I, II. Acta Arith., 7:87–106, 131–147, 1961/1962.
+[7] P. X. Gallagher. A large sieve density estimate near σ = 1. Invent. Math., 11:329–339, 1970.
+[8] E. S. Golod and I. R. ˇSafareviˇc. On the class field tower. Izv. Akad. Nauk SSSR Ser. Mat., 28:261–272,
+1964.
+[9] S. W. Graham. Applications of sieve methods. ProQuest LLC, Ann Arbor, MI, 1977. Thesis (Ph.D.)–
+University of Michigan.
+[10] D. R. Heath-Brown. Zero-free regions for Dirichlet L-functions, and the least prime in an arithmetic
+progression. Proc. London Math. Soc. (3), 64(2):265–338, 1992.
+[11] H. Heilbronn. Zeta-functions and L-functions. In Algebraic Number Theory (Proc. Instructional Conf.,
+Brighton, 1965), pages 204–230. Thompson, Washington, D.C., 1967.
+[12] M. N. Huxley. Large values of Dirichlet polynomials. III. Acta Arith., 26(4):435–444, 1974/75.
+[13] Y. Ihara. On the Euler-Kronecker constants of global fields and primes with small norms. In Algebraic
+geometry and number theory, volume 253 of Progr. Math., pages 407–451. Birkh¨auser Boston, Boston,
+MA, 2006.
+[14] Y. Ihara. The Euler-Kronecker invariants in various families of global fields. In Arithmetics, geometry,
+and coding theory (AGCT 2005), volume 21 of S´emin. Congr., pages 79–102. Soc. Math. France, Paris,
+2010.
+[15] H. Iwaniec and E. Kowalski. Analytic number theory, volume 53 of American Mathematical Society
+Colloquium Publications. American Mathematical Society, Providence, RI, 2004.
+[16] M. Jutila. On Linnik’s constant. Math. Scand., 41(1):45–62, 1977.
+[17] H. Kadiri and N. Ng. Explicit zero density theorems for Dedekind zeta functions. J. Number Theory,
+132(4):748–775, 2012.
+[18] G. Kolesnik and E. G. Straus. On the sum of powers of complex numbers. In Studies in pure mathematics,
+pages 427–442. Birkh¨auser, Basel, 1983.
+[19] J. C. Lagarias, H. L. Montgomery, and A. M. Odlyzko. A bound for the least prime ideal in the
+Chebotarev density theorem. Invent. Math., 54(3):271–296, 1979.
+[20] J. C. Lagarias and A. M. Odlyzko. Effective versions of the Chebotarev density theorem. In Algebraic
+number fields: L-functions and Galois properties (Proc. Sympos., Univ. Durham, Durham, 1975), pages
+409–464. Academic Press, London, 1977.
+[21] Y. Lamzouri, X. Li, and K. Soundararajan. Conditional bounds for the least quadratic non-residue and
+related problems. Math. Comp., 84(295):2391–2412, 2015.
+[22] R. Lemke Oliver and J. Thorner. Effective log-free zero density estimates for automorphic L-functions
+and the Sato-Tate conjecture. submitted, http://arxiv.org/abs/1505.03122.
+[23] U. V. Linnik. On the least prime in an arithmetic progression. II. The Deuring-Heilbronn phenomenon.
+Rec. Math. [Mat. Sbornik] N.S., 15(57):347–368, 1944.
+[24] E. Makai. On a minimum problem. II. Acta Math. Acad. Sci. Hungar., 15:63–66, 1964.
+[25] J. Milne. Class Field Theory (v4.02). 2013. Available at www.jmilne.org/math/.
+[26] V. K. Murty. The Euler-Kronecker constant of a cyclotomic field. Ann. Sci. Math. Qu´ebec, 35(2):239–
+247, 2011.
+[27] N. I. of Standards and Technology. Digital library of mathematical functions. Version 1.0.5, October 1,
+2012.
+[28] K. Ono and K. Soundararajan. Ramanujan’s ternary quadratic form. Invent. Math., 130(3):415–454,
+1997.
+[29] H. Rademacher. On the Phragm´en-Lindel¨of theorem and some applications. Math. Z, 72:192–204,
+1959/1960.
+[30] A. Weiss. The least prime ideal. J. Reine Angew. Math., 338:56–94, 1983.
+[31] A. R. Weiss. The least prime ideal with prescribed decomposition behaviour. ProQuest LLC, Ann Arbor,
+MI, 1980. Thesis (Ph.D.)–The Ohio State University.
+[32] T. Xylouris. On the least prime in an arithmetic progression and estimates for the zeros of Dirichlet
+L-functions. Acta Arith., 150(1):65–91, 2011.
+
+31
+
+
+[33] A. Zaman. Explicit bounds on the least prime ideal. in preparation.
+[34] A.
+Zaman.
+Explicit
+estimates
+for
+the
+zeros
+of
+Hecke
+L-functions.
+submitted,
+http://arxiv.org/abs/1502.05679.
+[35] A. Zaman. Bounding
+the least prime ideal in the
+Chebotarev density theorem. submitted,
+http://arxiv.org/abs/1508.00287.
+E-mail address: jesse.thorner@gmail.com
+
+E-mail address: asif@math.toronto.edu
+
+32
+
+

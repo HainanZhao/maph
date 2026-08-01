@@ -1,0 +1,63 @@
+{
+  "artifact_id": "p6-s06-primary-input-ledger-v2-lpoly-correction",
+  "claim_boundary": "Versioned correction of L_POLY_A only. It proves no fourth moment, local multiplicity theorem, CGL theorem, density estimate, or short-interval result.",
+  "corrected_input": {
+    "detector_effect": "The qT tail repair may take A=3/2. Gamma decay remains the only tail-decay mechanism; no q<=T^C condition is introduced.",
+    "epistemic_status": "PROVED",
+    "id": "L_POLY_A",
+    "imprimitive_transfer": "If chi is induced by chi* of conductor d|q, its finite Euler quotient has critical-line modulus at most product_{p|q,p not|d}(1+p^(-1/2)) <= 2^omega(q) <= q. Thus |L| << q[d(3+|v|)]^(1/2) <= [q(2+|v|)]^(3/2) up to an absolute constant.",
+    "primitive_specialization": "Set K=Q, n_K=D_K=1, eta=1/2, sigma=1/2 in Thorner--Zaman Lemma Rademacher. For primitive conductor d, this gives |L(1/2+iv,chi*)| << [d(3+|v|)]^(1/2); the trivial-character ratio is at most 3 on the critical line.",
+    "statement": "For every Dirichlet character chi modulo q and every real v, |L(1/2+iv,chi)| << [q(2+|v|)]^(3/2), with an absolute implied constant."
+  },
+  "document": {
+    "path": "docs/p6-s06-primary-input-ledger-v2-lpoly-correction.md",
+    "sha256": "fdfad85c860c7926fe9ce42caee472ba50c9ee6dd0243dcabc460271963dd7bb"
+  },
+  "epistemic_status": "OBSERVED",
+  "hostile_audit": "DEFERRED_TO_PAPER_STAGE",
+  "immutable_v1": {
+    "path": "artifacts/p6-s06-primary-input-ledger-v1.json",
+    "sha256": "1fbb984c3536c45dedbba36992ef8498cccf21fb7d8e9cab7619b5d2cb14b59a"
+  },
+  "replay": "python3 proof/build_p6_s06_primary_input_ledger_v2_lpoly_correction.py --check",
+  "retained_inputs": {
+    "FOURTH_MOMENT_H": {
+      "epistemic_status": "CONJECTURED",
+      "status": "OPEN_EXTERNAL_PRIMARY_THEOREM"
+    },
+    "LOCAL_MULTIPLICITY_COUNT_LC": {
+      "epistemic_status": "CONJECTURED",
+      "status": "OPEN_EXTERNAL_PRIMARY_THEOREM"
+    },
+    "LOW_HEIGHT_MULTIPLICITY_COUNT": {
+      "conditional_on": [
+        "LOCAL_MULTIPLICITY_COUNT_LC"
+      ],
+      "epistemic_status": "PROVED",
+      "source": "ledger-v1 reduction"
+    },
+    "q1_sensitive_intermediate_formulae": {
+      "epistemic_status": "OBSERVED",
+      "status": "RETAINED_UNREPAIRED"
+    }
+  },
+  "sealer": {
+    "path": "proof/build_p6_s06_primary_input_ledger_v2_lpoly_correction.py",
+    "sha256": "b2738537b3c4ff2513e203f5f02400e69bb155f27d56c179732aaac8750c412a"
+  },
+  "source": {
+    "locator": "Lemma Rademacher, TeX 642--651; completed conductor definition TeX 565--585",
+    "pdf": {
+      "path": "artifacts/sources/p7-hecke-v1/thorner-zaman-1510.08086v1.pdf",
+      "sha256": "94ddf7864fe74d266cef42816c9621516079321c48069d848527e7d0067b866d"
+    },
+    "tar": {
+      "path": "artifacts/sources/p7-hecke-v1/thorner-zaman-1510.08086v1.tar",
+      "sha256": "082be65a8fc04b5795290e500e0b2d74dc7a818cb68cc5ddc02131012b178fa2"
+    },
+    "tex": {
+      "path": "artifacts/sources/p7-hecke-v1/thorner-zaman-1510.08086v1/LFZD_manuscript.tex",
+      "sha256": "e77007c73da81c239fa009f6fce8befbc72989a0fd28f2ec4ff6952ff098f8f2"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "artifact_id": "p7-norm-aggregation-route-b-v2-correction",
+  "canonical_witness": {
+    "A_chi_3_17": -2,
+    "A_chi_pi4_17": 2
+  },
+  "claim_boundary": "Versioned label correction only. Route B v1's algebra and all non-promotion boundaries are preserved unchanged.",
+  "correction": {
+    "affected_claims": "none; the integer values and all derivations are unchanged",
+    "cause": "schema spelling mismatch only",
+    "defect": "Route B v1 used parenthesized labels for the two aggregated values while Route A/canonical reconciliation use underscore labels.",
+    "predecessor": {
+      "artifact": {
+        "path": "artifacts/p7-norm-aggregation-route-b-v1.json",
+        "sha256": "627420013029a65fc341c86dc45b0e8f191ec5508442a60762ab320c07ba2aed"
+      },
+      "script": {
+        "path": "proof/run_p7_norm_aggregation_route_b_v1.py",
+        "sha256": "f638c82f9b92c9d996166ab349c990791cdd25863fc4433eacfd0ae7c6d3c900"
+      }
+    },
+    "repair": "record the explicit bijection A_chi_3(17)->A_chi_3_17 and A_chi_pi4(17)->A_chi_pi4_17"
+  },
+  "epistemic_status": "PROVED",
+  "gate": "P7-1-NORM-AGGREGATION",
+  "preserved_v1_values": {
+    "A_chi_3(17)": -2,
+    "A_chi_pi4(17)": 2
+  },
+  "replay": {
+    "check_command": "python3 proof/correct_p7_norm_aggregation_route_b_v2.py --check",
+    "runtime": {
+      "implementation": "CPython",
+      "json_policy": "stdlib json sort_keys=True; UTF-8; LF; trailing newline",
+      "optimize": 0,
+      "version": "3.12.3"
+    },
+    "script": "proof/correct_p7_norm_aggregation_route_b_v2.py",
+    "script_sha256": "2cc5c3ce6bf1c7d1bfc71e94d69976045893b37c2d46e9afa44f9b24ca83b654",
+    "write_command": "python3 proof/correct_p7_norm_aggregation_route_b_v2.py --write"
+  },
+  "resource_contract": {
+    "rss_kib_strictly_less_than": 262144,
+    "wall_seconds_strictly_less_than": 60
+  }
+}

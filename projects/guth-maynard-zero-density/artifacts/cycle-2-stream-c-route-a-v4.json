@@ -1,0 +1,120 @@
+{
+  "artifact_id": "cycle-2-stream-c-route-a-v4",
+  "claim_boundary": "PROVED only as a source-sealed replay of the published GM \u00a713.2 deductions, conditional on GM's published density theorem. It does not independently prove that density theorem, prove a new prime-interval theorem, improve theta, or promote G0.",
+  "epistemic_status": "PROVED",
+  "exact_route_a_arithmetic": {
+    "almost_all": {
+      "delta": "X^(-13/15+epsilon/2)",
+      "endpoint_T_power": "13/15=2/B",
+      "eventual_margin": "T<=X^(13/15-epsilon/3) and 2<=T<=X eventually; this is why the arbitrary-T formula, not the alpha<=1/2 CHJ-I theorem, is used.",
+      "height": "T=delta^(-1) exp(4(log X)^(1/4))",
+      "second_moment": "delta^2 X^3/(y^2 X)<=X^(-epsilon) at y>=X^(2/15+epsilon), so the displayed Cauchy-Schwarz remainder is absorbed before Chebyshev.",
+      "theta": "2/15"
+    },
+    "density_coefficient": "30/13",
+    "formula_conventions": {
+      "height_bridge": "The v2 closure confines |gamma|<T versus literal |rho|<=T to unit boundary strips, absorbed using HSW+Bui local multiplicity counts.",
+      "integer_transfer": "The v2 access/closure records give half-weight endpoint transfer and O(X(log X)^3/T) for 2<=T<=X.",
+      "multiplicity": "The Kedlaya proof-unit residue computation explicitly counts every zero with multiplicity."
+    },
+    "near_one": {
+      "coefficient_certificate": "Exact polynomial coefficient equality: 30(3s-1)-39=3(30s-23).",
+      "range_signs": "For 4/5<=s<1, 30s-23>=1 and 3s-1>=7/5, hence 3/(3s-1)<=30/13.",
+      "universal_factorization": "30/13-3/(3s-1)=3(30s-23)/[13(3s-1)]",
+      "vk": "Ford's 2/3 cutoff is stronger eventually than the GM 5/7 cutoff since 2/3-5/7=-1/21; Platt--Trudgian supplies the finite-height completion."
+    },
+    "uniform": {
+      "endpoint_T_power": "1-theta=13/30=1/B",
+      "eventual_margin": "y>=x^(17/30+epsilon) implies T<x^(13/30-epsilon/2), while 2<=T<=x follows from y<=x^0.99.",
+      "formula_error": "x(log x)^3/T=y(log x)^3 exp(-2(log x)^(1/4))=O(y exp(-(log x)^(1/4))) eventually.",
+      "height": "T=x/y exp(2(log x)^(1/4))",
+      "theta": "17/30"
+    }
+  },
+  "open_blockers": [],
+  "pass_state": "NARROW PASS: Stream-C Route-A source/formula/convention nodes and published endpoint arithmetic are sealed. G0 remains OBSERVED until the separate two-route reconciliation is updated.",
+  "preserved_route_a_v1_v3_identities": {
+    "legacy_exact_replay_sha256": {
+      "route_a_v1": "7aa44f69a585ea5b984ef027e8ace496ae1134e55e8a06b24ea51abbe509f729",
+      "route_a_v2": "3e0e194aab6810a2697f7951058c3ee407fa3dc47e9ce91ba96139f037fc3970",
+      "route_a_v3": "1e0069963e04ae5180e7994f57ad7ced135d8d104bf83d59652fe2c49a489794"
+    },
+    "v1_v2_byte_note": "v1/v2 embed wall_time_ns and are therefore preserved by their stable exact_replay_sha256 identities, not mutable raw bytes.",
+    "v3_byte_sha256": "d9e201c164f1a2cb8a6894c6f786f67e19752c6b048b5ccca5f250f4a87ccccd"
+  },
+  "replay": {
+    "check_command": "python3 projects/guth-maynard-zero-density/proof/replay_cycle2_stream_c_route_a_v4.py --check projects/guth-maynard-zero-density/artifacts/cycle-2-stream-c-route-a-v4.json",
+    "interpreter_requirement": "Python 3 standard library plus pinned mutool PDF text extraction",
+    "script": "proof/replay_cycle2_stream_c_route_a_v4.py",
+    "script_sha256": "0a49b79b7bc07a205205f5ceda0d1f748a3c10e9b08472c8278d0444fb5d95bd",
+    "write_command": "python3 projects/guth-maynard-zero-density/proof/replay_cycle2_stream_c_route_a_v4.py --write projects/guth-maynard-zero-density/artifacts/cycle-2-stream-c-route-a-v4.json"
+  },
+  "result_labels": {
+    "almost_all": "PROVED input compatibility conditional on GM density",
+    "almost_all_theta": "2/15",
+    "uniform": "PROVED input compatibility conditional on GM density",
+    "uniform_theta": "17/30"
+  },
+  "route": "A",
+  "rows": [
+    {
+      "epistemic_status": "PROVED",
+      "falsifier": "A v3 replay that seals those omitted v2 inputs and proof PDF would remove this historical containment.",
+      "id": "SC-A41-v3-source-authority-and-byte-provenance-containment",
+      "statement": "v3's output artifact was deterministic on its tested runtime, but it pinned only access-ledger v1 and the errorbounds PDF; it did not seal access-ledger v2, the v2 source-closure artifact, or the von-Mangoldt proof PDF. Therefore its broader source-authority claim is not reused here. This is a provenance containment, not a claim that v3 output bytes were nondeterministic."
+    },
+    {
+      "epistemic_status": "PROVED",
+      "falsifier": "Any sealed hash or required PDF anchor mismatch invalidates this source node.",
+      "id": "SC-A42-access-and-both-kedlaya-units",
+      "statement": "Access-ledger v2, source-closure v2, and both Kedlaya PDFs are byte-pinned. The formula unit supplies arbitrary T and the distance remainder; the proof unit supplies multiplicity of zero residues."
+    },
+    {
+      "epistemic_status": "PROVED",
+      "falsifier": "A source-hypothesis ledger row not PROVED or a source hash mismatch invalidates its use.",
+      "id": "SC-A43-source-hypotheses",
+      "statement": "GM \u00a713.2, Huxley near-one density, Ford VK, Platt--Trudgian finite-height completion, and HSW/Bui local multiplicity conventions are pinned through direct hashes and the v2 source-hypothesis ledger."
+    },
+    {
+      "epistemic_status": "PROVED",
+      "falsifier": "Failure of B*(13/30)=1 or of the stated eventual height range invalidates this branch.",
+      "id": "SC-A44-uniform-route-a-arithmetic",
+      "statement": "Fresh Fraction arithmetic gives 1/B=13/30 and theta=17/30, the prescribed uniform height margin, and the truncation-error absorption."
+    },
+    {
+      "epistemic_status": "PROVED",
+      "falsifier": "Failure of B*(13/15)=2, of 2<=T<=X eventually, or of the remainder ratio invalidates this branch.",
+      "id": "SC-A45-almost-all-route-a-arithmetic",
+      "statement": "Fresh Fraction arithmetic gives 2/B=13/15 and theta=2/15, validates the arbitrary-T range, and absorbs the Cauchy--Schwarz remainder before the stated Chebyshev conversion."
+    },
+    {
+      "epistemic_status": "PROVED",
+      "falsifier": "A failed coefficient equality or a negative stated range factor invalidates this universal comparison.",
+      "id": "SC-A46-universal-huxley-comparison",
+      "statement": "The Huxley coefficient comparison is certified by exact polynomial coefficient equality, not finite sampling: 30/13-3/(3s-1)=3(30s-23)/[13(3s-1)]>=0 for 4/5<=s<1."
+    }
+  ],
+  "source_inputs": {
+    "artifacts/cycle-2-stream-c-explicit-formula-source-closure-v2.json": "3433e974b9751d310447847d75abbf529e5b4ed7e21e87a0224e4efb8ea0fde3",
+    "artifacts/cycle-2-stream-c-source-ledger-v2.json": "4e2b107194420d97cb949cf2e7934f8fda81bb5f688e63aa2cd49e1b6c3cac5d",
+    "artifacts/sources/arxiv-2405.20552v2/LargevaluesDirichlet17.tex": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428",
+    "artifacts/sources/bui-heath-brown-2013-simple-zeros.tar": "a171c6e74be228955df48191675e497ce4934623ae33ddddd9761b8cb1185ca5",
+    "artifacts/sources/ford-2002-zero-free-regions.pdf": "a43a2c37cf0f34b05bf80d9e58bcef176371437eedf7aae17d72f2c55b04c948",
+    "artifacts/sources/hasanalizade-shen-wong-2022-counting-zeros.tar": "8ba8d0eb95e1dd967adf17b7a2e77bdc45a99f6aa283d41d23dd4d0ac4358247",
+    "artifacts/sources/huxley-1972-inventiones15-gdz-volume.pdf": "5946d8579810f0754e972d42a09ed2a703604b8fb4e6377f14caaa5dc48f9797",
+    "artifacts/sources/kedlaya-2007-errorbounds-author.pdf": "375d96e65a99d7dbfbdc9ca51aa286bb53af7e77dfffa59e167dfcd9b18b919d",
+    "artifacts/sources/kedlaya-2007-von-mangoldt-author.pdf": "43cbe51ee69fe552078d90d0c21b165456f3ad67ad64c83df71b9cce3d56ae05",
+    "artifacts/sources/platt-trudgian-2021-rh-3e12.tar": "c4f13cdfca711d2bf90a097147be2a094ff175b0b161647359e174633fd8bf86",
+    "docs/cycle-2-stream-c-explicit-formula-access-ledger-v2-correction.md": "962acbf93a60eca5340367e02af3bfe7c44693d931726b74ba18ccc7fb661d31"
+  },
+  "stream": "C",
+  "supersedes": {
+    "artifacts": [
+      "cycle-2-stream-c-route-a-v1",
+      "cycle-2-stream-c-route-a-v2",
+      "cycle-2-stream-c-route-a-v3"
+    ],
+    "correction": "v3 source authority is contained because its replay did not seal access-ledger v2, source-closure v2, and both Kedlaya units; v4 does. v3 output-byte determinism itself is not alleged false.",
+    "preservation": "v1/v2/v3 are retained unchanged. v1/v2 are identified by their stable exact_replay_sha256 because their replay metadata contains timing; v3 is additionally byte-sealed. v4 is a correction/additive replay, not an edit of their claims."
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "adjudicator": {
+    "path": "discovery/adjudicate_g1_atlas_v4.py",
+    "sha256": "de2e688b2725df1d60b6946195f0979ea854177ea4ec1ff020115e2e0745b092"
+  },
+  "artifact_id": "cycle-3-g1-atlas-engine-v4-promotion-boundary",
+  "claim_boundary": "OBSERVED pre-run promotion-boundary manifest only. Neither fresh production has run and no finite empirical evidence is promoted.",
+  "correction_document": {
+    "path": "docs/cycle-3-g1-atlas-engine-v4-promotion-boundary.md",
+    "sha256": "696f9d24bc79b9de7bfd88d81e354f69c5123ae6b8f9d1e231761cdbb5bc047a"
+  },
+  "epistemic_status": "OBSERVED",
+  "frozen_protocol_unchanged": true,
+  "per_run_promotion_status": "UNVERIFIED_PENDING_SECOND_FRESH_RUN",
+  "pre_run_status": "READY_FOR_HOSTILE_AUDIT_NOT_EXECUTED",
+  "promotion_requirements": {
+    "complete_checkpoint_driver_chain": true,
+    "complete_row_and_validation_coverage": true,
+    "distinct_fresh_checkpoint_paths": 2,
+    "distinct_observation_paths": 2,
+    "separate_standard_library_adjudicator": true,
+    "timing_independent_observation_bytes": "BYTE_IDENTICAL"
+  },
+  "promotion_result_artifact": "artifacts/cycle-3-g1-atlas-empirical-reconciliation-v1.json",
+  "superseded_v3_manifest": {
+    "path": "artifacts/cycle-3-g1-atlas-engine-v3-replay-correction.json",
+    "preserved": true,
+    "sha256": "3a5336c45ee74ba35cdb2fa3ac0f55e707b4a4185604284e2a1645301ac3ca4f"
+  },
+  "test_evidence": {
+    "focused_tests": 26,
+    "outcome": "PASS",
+    "test_path": "tests/test_g1_atlas_engine_v4.py",
+    "test_sha256": "066a3554287db9de8552a4cccc3837e3c3714149d619165bc492523b36c1bf2a"
+  },
+  "v4_engine": {
+    "path": "discovery/run_g1_atlas_v4.py",
+    "sha256": "e7171c7b4720797b5a9bb87246c10a1e7f26569c9f240f69923de782f262dbd5"
+  }
+}

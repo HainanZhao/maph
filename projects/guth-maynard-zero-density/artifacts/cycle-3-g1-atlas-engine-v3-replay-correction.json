@@ -1,0 +1,33 @@
+{
+  "artifact_id": "cycle-3-g1-atlas-engine-v3-replay-correction",
+  "claim_boundary": "OBSERVED operational replay-boundary correction only. No corrected full screen or replay has run, and no mathematical conclusion is claimed.",
+  "correction_document": {
+    "path": "docs/cycle-3-g1-atlas-engine-v3-replay-correction.md",
+    "sha256": "89d3ad5836affc6a6084b8104bf208b307b72ffefef3d81a3f028872c063bc73"
+  },
+  "epistemic_status": "OBSERVED",
+  "interfaces": {
+    "fresh_full_replay": "Reject existing checkpoint, create an empty v3-bound checkpoint, recompute all scheduled rows, compare observations.",
+    "production": "Fresh or explicit resume checkpoint; atomic per-row checkpoint and final artifacts.",
+    "sealed_assembly_verification": "Read cached rows without writing checkpoint or target; explicitly not replay."
+  },
+  "pre_run_status": "READY_FOR_HOSTILE_AUDIT_NOT_EXECUTED",
+  "preserved_v2_draft": {
+    "correction_manifest_path": "artifacts/cycle-3-g1-atlas-engine-v2-correction.json",
+    "correction_manifest_sha256": "03e5ec5b99b4baad6effd9831f2704e88d8453d48eeb873a481cf8e7d5aa96e4",
+    "engine_path": "discovery/run_g1_atlas_v2.py",
+    "engine_sha256": "62d3b565f4b80f7a7d17d19e779eec5107a1b2df11990cb30db1dc1d07830941",
+    "superseded_reason": "Its check-observations mode conflated cached assembly with replay and mutated the supplied checkpoint."
+  },
+  "replay_commands_source": "docs/cycle-3-g1-atlas-engine-v3-replay-correction.md",
+  "test_evidence": {
+    "focused_tests": 20,
+    "outcome": "PASS",
+    "test_path": "tests/test_g1_atlas_engine_v3.py",
+    "test_sha256": "750a172528984c7a22c49ddc4f4432cbfd22d87a0fabadba2a4d522ba0dc413d"
+  },
+  "v3_engine": {
+    "path": "discovery/run_g1_atlas_v3.py",
+    "sha256": "921f25ae3f6d535899b439b04f310bc91b4278046976b7ad7947c04b6166f06f"
+  }
+}

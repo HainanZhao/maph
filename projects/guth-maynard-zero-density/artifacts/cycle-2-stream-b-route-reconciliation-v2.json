@@ -1,0 +1,144 @@
+{
+  "agreement_summary": {
+    "comparison_nodes": 7,
+    "coverage_gaps_open": 0,
+    "formula_contradictions": 0,
+    "independent_route_pass_permitted": true,
+    "pass_scope": "NARROW PASS: Stream B only; G0 remains OBSERVED."
+  },
+  "artifact_id": "cycle-2-stream-b-route-reconciliation-v2",
+  "canonical_mapping_table": [
+    {
+      "comparison_status": "AGREED",
+      "epistemic_status": "PROVED",
+      "falsifier": "A frozen source hash or range mismatch invalidates this reconciliation.",
+      "id": "R1-source-and-range",
+      "route_a": "Pinned GM tar/TeX and [7/10,4/5] exact audit",
+      "route_b": "Pinned GM/MP sources and [7/10,4/5] exact audit"
+    },
+    {
+      "comparison_status": "AGREED_AFTER_CORRECTION",
+      "epistemic_status": "PROVED",
+      "falsifier": "A beta-dependent MP Type-I detector condition or detector mismatch invalidates agreement.",
+      "id": "R2-complement-and-beta-wording",
+      "route_a": "SB-A21 separates detector identity from the beta>=sigma count restriction.",
+      "route_b": "SB-B1 supplies the complement-to-Type-II transfer."
+    },
+    {
+      "comparison_status": "AGREED",
+      "epistemic_status": "PROVED",
+      "falsifier": "A real non-trivial zero or polynomial-in-T local multiplicity loss refutes the conversion.",
+      "id": "R3-multiplicity-two-sided",
+      "route_a": "Inherited SB-A15/A16 plus SB-A24 no-real-zero and dyadic check.",
+      "route_b": "SB-B2 multiplicity, no-real-zero, and conjugation conversion."
+    },
+    {
+      "comparison_status": "AGREED",
+      "epistemic_status": "PROVED",
+      "falsifier": "A failed residual factorization or branch inequality invalidates this node.",
+      "id": "R4-theorem-1-1-three-terms",
+      "route_a": "SB-A22 explicitly checks L^(2-2sigma), L^(18/5-4sigma), and T L^(12/5-4sigma).",
+      "route_b": "SB-B7 checks the same three structural terms."
+    },
+    {
+      "comparison_status": "AGREED",
+      "epistemic_status": "PROVED",
+      "falsifier": "A nonpositive numerator or denominator on the frozen interval invalidates strictness.",
+      "id": "R5-mvt-strict-residual",
+      "route_a": "SB-A23 records the exact positive residual and all denominator signs.",
+      "route_b": "SB-B9 records the same exact residual and strictness."
+    },
+    {
+      "comparison_status": "AGREED",
+      "epistemic_status": "PROVED",
+      "falsifier": "Failure of 2(1-sigma)<=A(sigma) or non-summable shell control invalidates this node.",
+      "id": "R6-type-ii-and-reassembly",
+      "route_a": "SB-A24 proves A(sigma)-2(1-sigma)>0 and gives positive-shell summation.",
+      "route_b": "SB-B10 combines Type I/II and reassembles dyadic shells."
+    },
+    {
+      "comparison_status": "AGREED_SCOPE_CONTAINED",
+      "epistemic_status": "PROVED",
+      "falsifier": "Any full-G0 promotion from these Stream-B artifacts alone violates their claim boundaries.",
+      "id": "R7-pass-scope",
+      "route_a": "NARROW PASS: all Stream-B application nodes represented by Route A v2 plus the Theorem-1.1 terms, strict MVT residual, and final Type-I/Type-II reassembly are source-pinned and checked. Stream C remains outside this audit.",
+      "route_b": "NARROW PASS: every preregistered Stream-B application node (including MP complement inclusion, multiplicity/two-sided conversion, and MVT branch) is source-pinned and checked. Stream C's external explicit-formula node remains outside this audit."
+    }
+  ],
+  "canonical_status": "PROVED: INDEPENDENT_ROUTE_NARROW_PASS for Stream B only; G0 remains OBSERVED pending Stream C.",
+  "claim_boundary": "PROVED only as a deterministic reconciliation of two pinned-source Stream-B application audits. It does not re-prove GM/MP analytic theorems, establish a new zero-density result, or promote G0; Stream C remains outside scope.",
+  "epistemic_status": "PROVED",
+  "input_identities": {
+    "route_a_new_rows": [
+      "SB-A21-beta-cutoff-wording-correction",
+      "SB-A22-theorem-1-1-three-structural-terms",
+      "SB-A23-mvt-strict-positive-residual",
+      "SB-A24-type-ii-and-dyadic-reassembly"
+    ],
+    "route_a_v3_byte_sha256": "9f576b5ca347b62f2bcba7fe62ad1cdecdbe7ce396c5c34f5437a50d9d2ca297",
+    "route_a_v3_script_sha256": "c70cd55f8224ddd1f49130c2a8cb0eab2e513e53359081083c3e8516400b851b",
+    "route_b_rows": [
+      "SB-B1-complement-to-mp-type-ii",
+      "SB-B10-dyadic-reassembly-and-route-boundary",
+      "SB-B2-multiplicity-and-two-sided-conversion",
+      "SB-B3-type-i-smoothing-and-separated-extraction",
+      "SB-B4-detector-and-powered-coefficient-normalization",
+      "SB-B5-both-k-regimes",
+      "SB-B6-support-blocks-and-threshold",
+      "SB-B7-large-values-structural-terms",
+      "SB-B8-montgomery-discrete-mvt-and-polarity",
+      "SB-B9-mvt-branch-and-strict-residual"
+    ],
+    "route_b_v1_byte_sha256": "927d85a06133692dd75d8f796741cd8a1b5c5a40b91faeecdad8d53556227bd1",
+    "route_b_v1_script_sha256": "6ab19ad3e741f34977e371ab6ddf8171aecf7686ff4be8446f0e32eb21d90974"
+  },
+  "next_authorized_action": "Do not relabel G0. Retain both route artifacts and this reconciliation; any G0 promotion requires the separately scoped Stream-C work.",
+  "replay": {
+    "interpreter_requirement": "Python 3 standard library only",
+    "script": "proof/reconcile_cycle2_stream_b_routes_v2.py",
+    "script_sha256": "90ed534d22405807ece4f7b0d43e6df273a1740f705f7c4835f2aa784e948207",
+    "write_command": "python3 projects/guth-maynard-zero-density/proof/reconcile_cycle2_stream_b_routes_v2.py --write projects/guth-maynard-zero-density/artifacts/cycle-2-stream-b-route-reconciliation-v2.json"
+  },
+  "resolved_prior_gaps": [
+    {
+      "epistemic_status": "PROVED",
+      "falsifier": "Remove or invalidate SB-A22.",
+      "id": "M2-route-a-theorem-1-1-coverage",
+      "resolution": "Route A v3 SB-A22 supplies all three structural terms and exact inequalities.",
+      "workflow_status": "RESOLVED"
+    },
+    {
+      "epistemic_status": "PROVED",
+      "falsifier": "Remove or invalidate SB-A23.",
+      "id": "M3-route-a-mvt-residual-coverage",
+      "resolution": "Route A v3 SB-A23 supplies the positive residual with numerator and denominator range signs.",
+      "workflow_status": "RESOLVED"
+    },
+    {
+      "epistemic_status": "PROVED",
+      "falsifier": "Remove or invalidate SB-A24.",
+      "id": "M4-route-a-reassembly-coverage",
+      "resolution": "Route A v3 SB-A24 supplies the Type-II comparison, no-real-zero check, and dyadic reassembly.",
+      "workflow_status": "RESOLVED"
+    },
+    {
+      "epistemic_status": "PROVED",
+      "falsifier": "Show beta is a condition in MP's Type-I detector definition.",
+      "id": "M5-beta-cutoff-wording",
+      "resolution": "Route A v3 SB-A21 corrects the old wording without changing the inclusion proof.",
+      "workflow_status": "RESOLVED"
+    },
+    {
+      "containment_status": "CONTAINED",
+      "epistemic_status": "OBSERVED",
+      "falsifier": "A full-G0 label in either v3 artifact or this report.",
+      "id": "M1-route-a-pass-scope",
+      "resolution": "The historical v2 label remains preserved; Route A v3 and this reconciliation use NARROW PASS only."
+    }
+  ],
+  "supersedes": {
+    "artifact": "cycle-2-stream-b-route-reconciliation-v1",
+    "byte_sha256": "bab7186a31c7b544b5a61cde39cd6635d169b0c589bec969fa202064c75e27a2",
+    "preservation": "v1 is retained unchanged; its OPEN rows are resolved here rather than erased."
+  }
+}

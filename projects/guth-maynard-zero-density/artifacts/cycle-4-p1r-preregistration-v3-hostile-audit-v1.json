@@ -1,0 +1,46 @@
+{
+  "artifact_id": "cycle-4-p1r-preregistration-v3-hostile-audit-v1",
+  "audited_v3_hashes": {
+    "artifact": "60597c5e6aefd65fa4ce11a1a0c6e9494b048bed0fb4df6e87e26d4f07cab0ee",
+    "builder": "0b75dfac9f69b52d51a84d7db1e05705cd00698e6a129bbfa443b77362fb1807",
+    "preflight": "bf242ed25dc6acd55aaa762332db71ea47abda3229718df2acdc40acca3c4891",
+    "snapshot": "cd42352b145f67af0289aa21b142f40fbc2aac891944bb49d054631384c176d0"
+  },
+  "auditor": {
+    "path": "proof/audit_cycle_4_p1r_preregistration_v3_hostile.py",
+    "sha256": "e508c64174ff8a7075b112a1e639449f9d28e29de0dc5ee7130387a4a2b8e193"
+  },
+  "checks": {
+    "CRR_search_prohibited": "PASS",
+    "FS_unexecuted": "PASS",
+    "documented_CLI": "PASS",
+    "four_term_S3_source_and_range": "PASS",
+    "immutable_snapshot_chain_and_schema": "PASS",
+    "large_values_direct_source_attribution": "FAIL",
+    "large_values_formula_exists_in_GM_source": "PASS",
+    "lifecycle_historical_replay": "PASS",
+    "optimized_O": "PASS",
+    "optimized_OO": "PASS",
+    "overwrite": "PASS",
+    "preflight_observed_only_not_frozen": "PASS",
+    "runtime_zero_PLAN_read": "PASS",
+    "self_tamper": "PASS",
+    "source_tamper": "PASS",
+    "static_zero_PLAN_reference": "PASS",
+    "v1_v2_failure_containment": "PASS"
+  },
+  "claim_boundary": "Read-only audit of v3 lifecycle isolation and source attribution. It decides no P1R mathematical theorem.",
+  "defect": "scale_bookkeeping asserts the large-values exponent vector [6,8,8], which comes from GM Theorem thm:LargeValues and its three-term bound, but v3 SOURCE_FRAGMENTS and source_hypothesis_ledger contain no GM-T1.1 entry or LargeValues fragment. Hash-pinning the full TeX file does not identify the theorem, hypotheses, or permitted use for that material formula.",
+  "epistemic_status": "OBSERVED",
+  "lifecycle_preflight_statuses": {
+    "active": "ELIGIBLE_CURRENT_PLAN",
+    "completed": "INELIGIBLE_CURRENT_PLAN",
+    "later_p2": "INELIGIBLE_CURRENT_PLAN"
+  },
+  "required_correction": [
+    "Add a GM-T1.1 source-ledger row with the exact theorem locator, coefficient/separation hypotheses, and the permitted scale-bookkeeping use.",
+    "Add the thm:LargeValues theorem label and its three-term formula to the source-fragment checks (or an equivalently precise pinned source extractor).",
+    "Retain the v3 lifecycle-decoupling architecture and all preserved v1/v2 hostile failures; this audit does not reopen those corrected defects."
+  ],
+  "status": "FAIL_SOURCE_ATTRIBUTION_COMPLETENESS"
+}

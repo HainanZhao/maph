@@ -1,0 +1,44 @@
+{
+  "artifact_id": "p1r-fs-final-hostile-audit-v1",
+  "audited_package_hashes": {
+    "classical_ledger": "5005dc96deca85d930b710000b1faccdce093e8574dc44f9730fa4a570529f11",
+    "huxley_pdf": "5946d8579810f0754e972d42a09ed2a703604b8fb4e6377f14caaa5dc48f9797",
+    "preregistration_v4": "e2aeec9ec90e1fea0a9eade53d5ff1e57020df48bd92ae852121a941fbadd7f9",
+    "preregistration_v4_hostile": "bdb60d416fee628d309e025a493c45383ccc50e3ee41a9bdb0d6b8a7d73235ad",
+    "reconciliation_artifact": "2fe46ee076df8b17a93876d76c5b223e1425af831b440dd8f0708f084dbec62b",
+    "reconciliation_document": "7a0dde8edfe40b4e803c8b1ce0f171cdbf04312018927b039d54a9e9b73ae0f3",
+    "reconciliation_script": "ff0a126136035c4f42189192977b2ee02b90df10abe2467b2193373af4a80867",
+    "reconciliation_tests": "d23c441e3bea26f4aff5cbd46f5bc8f4a214cedb7a2bd0782fb3298388f642ec",
+    "route_a_artifact": "c1bde2f7aa8675963b27e4b41e04d54717c7d875159d376950ff51240865d342",
+    "route_a_document": "0fc70245c16569fc2e533b35eba4987fe75eba6f5151e43c6781e04e09bcac72",
+    "route_a_script": "ce87441984d5129b250a7a1f51070ffbe190e793fa2680e712fd6ca549bd5560",
+    "route_a_tests": "43419ab347fbda816ff0cd30e5f79b41cd38ec43dde1869b58b6f5ef671d415c",
+    "route_b_artifact": "678df43e0e8b8abf485302410565c1cf3838bd6aea5ab554b20c20bb2bd03880",
+    "route_b_document": "935ee988f3074d0d7e29c2af0833bb0fa812948a65692d85ba92148446c785e7",
+    "route_b_script": "fdcff5384a9d8705cd6b7b862124d6a2e3869b8e4173396335d9481f2ad6cb60",
+    "route_b_tests": "19a323b6b2cb60350fdbf29fd43634501f310aa7b171b4c189a1ee808c0a3a39"
+  },
+  "auditor": {
+    "path": "proof/audit_p1r_fs_final_v1.py",
+    "sha256": "05ef52573f533efea32b54b6b22b824d14d04aeb49ef9742268fcc4d2b855864"
+  },
+  "checks": {
+    "epistemic_tag_and_claim_boundary": "PASS",
+    "exact_real_supremum_and_epsilon_quantifier": "PASS",
+    "extended_real_right_branch": "PASS",
+    "final_package_regression_suite": "PASS",
+    "input_tamper": "PASS",
+    "normal_replays": "PASS",
+    "optimized_O": "PASS",
+    "optimized_OO": "PASS",
+    "overwrite": "PASS",
+    "route_independence": "PASS",
+    "self_tamper": "PASS",
+    "source_range_and_log_factor": "PASS"
+  },
+  "claim_boundary": "Read-only hostile promotion audit. It validates only the exact frozen fixed-splice theorem, not any actual zero-density lower bound, full-method saturation, new density estimate, short-interval theorem, or CRR search.",
+  "conclusion": "PROVED, conditional on the checked Huxley restatement, only for the frozen splice: every uniform coefficient for a function retaining I(sigma)=3/(2-sigma) on 1/2<=sigma<7/10 is at least 30/13. A right-only extended-real replacement cannot certify a smaller uniform coefficient. This is not a claim about the actual zero count or the full Guth--Maynard method.",
+  "epistemic_status": "OBSERVED",
+  "status": "PASS",
+  "theorem_id": "P1R-FS"
+}

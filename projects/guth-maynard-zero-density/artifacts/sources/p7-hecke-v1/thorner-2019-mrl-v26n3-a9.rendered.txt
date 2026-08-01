@@ -1,0 +1,2561 @@
+Math. Res. Lett.
+Volume 26, Number 3, 875–901, 2019
+
+Bounded gaps between primes in
+multidimensional Hecke
+equidistribution problems
+
+Jesse Thorner
+
+We prove an analogue of the classical Bombieri-Vinogradov esti-
+mate for all subsets of the primes whose distribution is determined
+by Hecke Gr¨ossencharaktere. Using this estimate and Maynard’s
+new sieve techniques, we prove the existence of infinitely many
+bounded gaps between primes in all such subsets of the primes. We
+present applications to the study of primes represented by norm
+forms of number fields and the number of Fp-rational points on cer-
+tain abelian varieties. In particular, for any fixed 0 < ϵ < 1
+
+2, there
+exist infinitely many bounded gaps between primes of the form
+p = a2 + b2 such that |a| < ϵ√p. Also, we prove the existence of
+infinitely many bounded gaps between the primes p ≡ 1 (mod 10)
+for which |p + 1 − #C(Fp)| < ϵ√p, where C/Q is the hyperelliptic
+curve y2 = x5 + 1.
+
+1. Introduction and statement of results
+
+Conjectures about primes represented by polynomials of degree greater than
+one have captivated number theorists for well over a century. It is conjectured
+that every irreducible polynomial of degree at least one in Z[x] represents
+infinitely many primes, but this is known unconditionally for only the degree
+one case by Dirichlet’s work in 1837. The simplest degree two polynomial
+to study is x2 + 1. A landmark partial result due to Iwaniec [11] states that
+there are infinitely many integers n such that n2 + 1 is a product of at most
+two primes. By the work of Lemke Oliver [15], the same conclusion holds
+for any irreducible polynomial f(x) of degree two such that f(x) ̸≡ x(x + 1)
+(mod 2).
+By extending the question to consider primes represented by multivari-
+ate polynomials, one can prove much stronger results, especially when one
+considers norm forms of number fields. For example, any positive definite
+
+875
+
+
+876
+Jesse Thorner
+
+binary quadratic form ax2
+1 + bx1x2 + cx2
+2 ∈ Z[x1, x2] of discriminant D rep-
+resents a positive proportion of the primes, where the proportion depends on
+the number of primitive binary quadratic forms of discriminant D. Using so-
+phisticated sieve methods, Friedlander and Iwaniec [7] proved an asymptotic
+formula for the number of primes of the form x2
+1 + x4
+2, and Heath-Brown [10]
+did the same for primes of the form x3
+1 + 2x3
+2.
+As an approximation to understanding the distribution of primes of the
+form n2 + 1, one might ask for the distribution of primes p = x2
+1 + x2
+2 where
+x1 is small in terms of p. More generally, one can ask how the values x1
+√p are
+distributed in [−1, 1] as p varies. A classical result of Hecke states that if
+[α, β] ⊂ [−1, 1] is a fixed subinterval and π(x) := #{p ≤ x}, then
+
+(1.1)
+lim
+x→∞
+1
+
+π(x)#
+�
+p ≤ x : p = x2
+1 + x2
+2, x1
+√p ∈ [α, β]
+�
+= 1
+
+2
+
+� β
+
+α
+
+1
+
+π
+√
+
+1 − t2 dt.
+
+This equidistribution law is equivalent to the statement that L-functions as-
+sociated to Hecke Gr¨ossencharactere (henceforth referred to as Hecke char-
+acters) for the field Q(√−1) have no zeros on the line Re(s) = 1. This bears
+resemblance to the proof of the prime number theorem for arithmetic pro-
+gressions a (mod q), with the role of a residue class modulo q replaced with
+the role of a subinterval of [−1, 1] and the role of Dirichlet L-functions re-
+placed with the role of Hecke L-functions. By taking [α, β] to be a small
+interval centered at 0, Ankeny [1] used the generalized Riemann hypothe-
+sis (GRH) to prove that there are infinitely many primes p = x2
+1 + x2
+2 with
+x = O(log p). Unconditionally, Harman and Lewis [9] proved that there are
+infinitely many primes p = x2
+1 + x2
+2 with x1 = O(pθ) for any θ > 0.119 using
+sieve methods.
+More generally, let K be a number field of degree [K : Q] ≥ 2 and dis-
+criminant DK, and let N = NK/Q denote the absolute field norm of K. Duke
+[5] studied a generalization of the above work by replacing x2 + y2 with a
+more general norm form over K of the shape
+
+(1.2)
+f(⃗x) = N
+
+
+
+
+
+[K:Q]
+�
+
+j=1
+αjxj
+
+
+
+ Na−1,
+⃗x = (x1, . . . , x[K:Q]),
+
+where a is a nonzero integral ideal of K and {α1, . . . , α[K:Q]} is an integral
+basis which satisfies two properties:
+
+1) det |α(i)
+j | = D
+
+1
+2
+KNa, where 1 ≤ i, j ≤ [K : Q] and α(i)
+j
+is the i-th conju-
+gate of αj.
+
+
+Bounded gaps and Hecke equidistribution
+877
+
+2) For some 1 ≤ m ≤ [K : Q], αm is totally positive.
+
+Consider the set of primes given by
+
+Pf,I,K =
+
+�
+
+p: for some ⃗x ∈ Z[K:Q],
+(1.3)
+
+we have f(⃗x) = p and p−
+1
+
+[K:Q]⃗x ∈
+�
+
+I∈I
+I
+
+�
+
+,
+
+where I = {I1, . . . , I[K:Q]} is a collection of subintervals of [−1, 1] (each with
+positive Lebesgue measure), at least one of which is exactly [−1, 1]. Hecke’s
+arguments can be extended to show that the primes in Pf,I,K satisfy an
+equidistribution law which generalizes (1.1). Duke used this equidistribution
+law to prove that
+
+#{p ≤ x : for some ⃗x ∈ Z[K:Q], p = f(⃗x) and |xj| ≤ p
+
+1
+
+[K:Q] −δ for all j ̸= m}
+
+≍ x1−([K:Q]−1)δ
+
+log x
+,
+(1.4)
+
+where 0 ≤ δ <
+1
+
+3[K:Q] and m ∈ {1, . . . , [K : Q]} are fixed and f ≍ g means
+that both f ≪ g and g ≪ f. A key ingredient in Duke’s arguments is a zero
+density estimate for Hecke L-functions; this allowed him to circumvent the
+need for GRH.
+In addition to studying the distribution of primes represented by a single
+multivariate form, one can ask questions about the distribution of primes
+represented simultaneously by several univariate linear forms n + hi, where
+1 ≤ i ≤ k. Setting Hk = {h1, . . . , hk}, we call Hk an admissible set if for
+all primes p there exists an integer np such that �k
+i=1(np + hi) and p are
+coprime. The prime k-tuples conjecture, first conjectured by Hardy and Lit-
+tlewood, asserts that if Hk is admissible, then there exists a positive constant
+S = S(Hk) such that as x → ∞,
+
+(1.5)
+#{n ≤ x : #({n + h1, . . . , n + hk} ∩ P) = k} ∼ S
+x
+
+(log x)k ,
+
+where P is the set of all primes. The twin prime conjecture follows when
+H2 = {0, 2}.
+The prime k-tuples conjecture is completely open for k > 1, but the last
+decade has seen many strong approximations to the conjecture. Goldston,
+
+
+878
+Jesse Thorner
+
+Pintz, and Yıldırım [8] proved one such approximation, namely
+
+lim inf
+n→∞
+pn+1 − pn
+
+log pn
+= 0,
+
+where pn is the n-th prime. This is quite remarkable, considering that the
+average size of pn+1 − pn is log pn by the prime number theorem. By funda-
+mentally improving our understanding of primes in arithmetic progressions,
+Zhang [26] was able to use the framework provided by Goldston, Pintz, and
+Yıldırım to prove for the very first time that there exist infinitely many
+bounded gaps between primes:
+
+lim inf
+n→∞ (pn+1 − pn) ≤ 7 × 107.
+
+Using an approach very different from and more elementary than that
+of Zhang, Maynard [16] proved that lim infn→∞(pn+1 − pn) ≤ 600. Further-
+more, for any m ≥ 1, Maynard’s work yields the bound
+
+lim inf
+n→∞ (pm+n − pn) ≪ m3e4m.
+
+(The underlying improvement to the Selberg sieve which led to this result
+was proven independently by Tao, who arrived at slightly different conclu-
+sions.) By combining and sharpening the methods in [16, 26], the Polymath
+8b project [22] proved
+
+lim inf
+n→∞ (pn+1 − pn) ≤ 246
+and
+
+lim inf
+n→∞ (pm+n − pn) ≪ m exp
+��
+4 − 28
+
+157
+�
+m
+�
+.
+
+Maynad [17] recently proved a strong quantitative approximation of (1.5):
+there exists an absolute constant c ≥ 1 such that for k > c and Hk =
+{h1, . . . , hk} admissible,
+
+#{n ≤ x : #({n + h1, . . . , n + hk} ∩ P) ≥ c−1 log k} ≫
+x
+
+(log x)k .
+
+It is natural to ask to what extent these advances extend to interesting
+subsets of the primes. The author extended the work on bounded gaps be-
+tween primes to the context of the Chebotarev density theorem. Let K/Q
+be a Galois extension of number fields with Galois group G and absolute
+
+
+Bounded gaps and Hecke equidistribution
+879
+
+discriminant DK, and let C ⊂ G be a conjugacy class. Define
+
+PC =
+�
+p ∤ DK :
+�K/Q
+
+p
+
+�
+= C
+�
+,
+
+where [K/Q, p] denotes the Artin symbol, and let ϕ(q) be Euler’s totient
+function. It follows from the author’s work in [25] that there are infinitely
+many positive integers N such that for some n ∈ [N, 2N], we have that
+
+#({n + h1, . . . , n + hk} ∩ PC)
+
+≥
+�
+min
+�1
+
+4, 1
+
+|G|
+
+� |C|
+
+|G|
+ϕ(DK)
+
+DK
++ ok→∞(1)
+�
+log k.
+
+The author explored applications of this result to the distribution of ranks of
+quadratic twists of elliptic curves, congruences for the Fourier coefficients of
+modular forms, and primes represented by binary quadratic forms. Theorem
+3.5 of [17] makes this quantitative: there exists a constant cK ≥ 1 such that
+for k > cK and Hk admissible,
+
+#{n ≤ x : #({n + h1, . . . , n + hk} ∩ PC) ≥ c−1
+K log k} ≫
+x
+
+(log x)k .
+
+We extend of the work of Maynard to the setting of Duke’s work on (1.3)
+by showing that the primes in (1.3) exhibit infinitely many bounded gaps.
+
+Theorem 1.1. Let Pf,I,K be given by (1.3). There exists a constant cf,I,K >
+0 such that if k > cf,I,K and Hk = {h1, . . . , hk} is an admissible set, then
+
+#{n ≤ x : #({n + h1, . . . , n + hk} ∩ Pf,I,K) ≥ c−1
+f,I,K log k} ≫
+x
+
+(log x)k .
+
+By choosing K = Q(√−1) and I = {[−1, 1], [−ϵ, ϵ]} for some 0 < ϵ < 1
+
+2,
+Theorem 1.1 immediately yields the following result.
+
+Corollary 1.2. Fix 0 < ϵ < 1
+
+2, and let Pϵ = {p : p = x2
+1 + x2
+2, |x1| ≤ ϵ√p}.
+There exists a constant cϵ > 0 such that if k > cϵ and Hk = {h1, . . . , hk} is
+an admissible set, then
+
+#{n ≤ x : #({n + h1, . . . , n + hk} ∩ Pϵ) ≥ c−1
+ϵ
+log k} ≫
+x
+
+(log x)k .
+
+
+880
+Jesse Thorner
+
+Another generalization of (1.1) lies in the distribution of the Fourier
+coefficients of holomorphic cuspidal normalized Hecke eigenforms (i.e., new-
+forms) on congruence subgroups of SL2(Z). Let
+
+f(z) =
+
+∞
+�
+
+n=1
+af(n)e2πinz ∈ Z[[e2πiz]]
+
+be a newform of integral weight ℓ ≥ 2 and level N. Suppose further that
+there exists an imaginary quadratic number field K such that a prime p is
+inert in K if and only if af(p) = 0; in this case, we say that f has complex
+multiplication, or CM, by the ring of integers of K. By Deligne’s proof of
+the Weil conjectures,
+
+|af(p)| ≤ 2p
+
+ℓ−1
+
+2
+
+for all primes p. By the methods leading to Hecke’s proof of (1.1), one
+finds that if f has complex multiplication, then for any fixed subinterval
+[α, β] ⊂ [−1, 1],
+
+lim
+x→∞
+1
+
+π(x)#
+
+�
+
+p ≤ x : af(p)
+
+2p
+
+ℓ−1
+
+2
+∈ [α, β]
+
+�
+
+(1.6)
+
+= 1
+
+2
+
+� β
+
+α
+
+1
+
+π
+√
+
+1 − t2 dt +
+
+�
+1
+2
+if 0 ∈ [α, β],
+0
+otherwise.
+
+The results of [1] follow by understanding the error term in (1.6) for the
+weight 2, level 32 newform associated to the congruent number elliptic curve
+E : y2 = x3 − x.
+We prove that the primes considered in (1.6) exhibit infinitely many
+bounded gaps.
+
+Theorem 1.3. Let
+
+f(z) =
+
+∞
+�
+
+n=1
+af(n)e2πinz ∈ Z[[e2πiz]]
+
+be a newform of even integral weight ℓ ≥ 2 and level N that has complex
+multiplication, let I = [α, β] ⊂ [−1, 1], and let
+
+Pf,I =
+
+�
+
+p ∤ N : af(p)
+
+2p
+
+ℓ−1
+
+2
+∈ I
+
+�
+
+.
+
+
+Bounded gaps and Hecke equidistribution
+881
+
+There exists a constant cf,I > 0 such that if k > cf,I and Hk = {h1, . . . , hk}
+is an admissible set, then
+
+{n ≤ x : #({n + h1, . . . , n + hk} ∩ Pf,I) ≥ c−1
+f,I log k} ≫
+x
+
+(log x)k .
+
+When f(z) in Theorem 1.3 is a weight 2 newform with integral coeffi-
+cients, f(z) is the newform associated to an elliptic curve E/Q of conductor
+N with complex multiplication. In this case, for every prime p ∤ N, we have
+that
+af(p) = p + 1 − #E(Fp),
+
+where Fp is the finite field of order p. We can also consider the distribution
+of the number of Fp-rational points on a class of curves C/Q given by
+
+(1.7)
+C : axα + byβ = c,
+
+where a, b, c, α, β ∈ Z \ {0} and α ≥ β ≥ 2. (All elliptic curves of this form
+necessarily have complex multiplication.) Let d = gcd(α, β), let M =
+lcm(α, β), and let
+
+g = (α − 1)(β − 1) − (d − 1)
+
+2
+be the genus of C. Define
+
+aC(p) = p + 1 − Nd − #C(Fp),
+
+Nd =
+
+�
+d
+if − a
+
+b is a d-th power modulo p,
+0
+otherwise.
+
+For each p ≡ 1 (mod M) with p ∤ abc, we have the Hasse bound |aC(p)| ≤
+2g√p. It follows from the work of Hecke that the sequence {aC(p)
+
+2g√p} is equidis-
+tributed in [−1, 1] with respect to a certain probability measure. When g = 1,
+in which case C is an elliptic curve over Q with complex multiplication, this
+measure is that in (1.6). For a discussion of the genus 2 case, see [6]. Duke
+[5] used Hecke’s equidistribution law to study sets of the form
+
+(1.8)
+PC,I =
+�
+p : p ≡ 1
+(mod M), p ∤ abc, and aC(p)
+
+2g√p ∈ I
+�
+,
+
+where I is a subinterval of [−1, 1]. In particular, Duke proved that for any
+fixed 0 ≤ δ < (3ϕ(M))−1, we have
+
+(1.9) #{p ≤ x : p ≡ 1
+(mod M), p ∤ abc, |aC(p)| ≤ 2gp
+
+1
+2 −δ}≫ x1−δϕ(M)/2
+
+log x
+.
+
+
+882
+Jesse Thorner
+
+Theorem 1.4. Let C be a curve given by (1.7). Let PC,I be defined by (1.8).
+There exists a constant cC,I > 0 such that if k > cC,I and Hk = {h1, . . . , hk}
+is an admissible set, then
+
+#{n ≤ x : #({n + h1, . . . , n + hk} ∩ PC,I) ≥ c−1
+C,I log k} ≫
+x
+
+(log x)k .
+
+Remark. By choosing some small ϵ > 0 and setting I = [−ϵ, ϵ], Theo-
+rems 1.3 and 1.4 produce corollaries similar to Corollary 1.2.
+
+As an example, consider the genus 2 curve C : y2 = x5 + 1. Defining
+
+aC(p) := p + 1 − #C(Fp),
+
+we have that if p ≡ 1 (mod 5), then Hasse’s bound applied to C yields
+|aC(p)| ≤ 4√p. We expect that for any fixed t ≡ 6 (mod 10), there are in-
+finitely many primes p ≡ 1 (mod 5) such that aC(p) = t; this is reasonable
+to expect in light of the Lang-Trotter conjecture for elliptic curves [14]. As-
+suming the Generalized Riemann Hypothesis for Hecke characters modulo
+25 over the field Q(e2πi/5), Sarnak [24] proved that
+
+{p ∈ [x, 2x] : p ≡ 1
+(mod 5), |aC(p)| = O(log p)} ≫ √x,
+
+which is analogous to the results in [1]. By Duke’s inequality (1.9), we have
+unconditionally that if 0 < δ < 1
+
+12, then
+
+#{p ≤ x : p ≡ 1
+(mod 5), |aC(p)| ≤ p
+
+1
+2 −δ} ≫ x1−2δ
+
+log x .
+
+Theorem 1.4 tells us that if we fix 0 < ϵ < 1
+
+2 and define
+
+PC,ϵ = {p : p ≡ 1
+(mod 5) and |aC(p)| ≤ ϵ√p},
+
+then there exists a constant cC,ϵ > 0 such that if k > cC,ϵ and Hk =
+{h1, . . . , hk} is an admissible set, then
+
+#{n ≤ x : #{hi ∈ Hk : n + hi ∈ P, |aC(n + hi)| ≤ ϵ√p} ≥ c−1
+C,ϵ log k}
+
+≫
+x
+
+(log x)k .
+
+In order to prove Theorems 1.1, 1.3, and 1.4, we prove a new result,
+Theorem 3.1, on the distribution of primes in arithmetic progressions in the
+
+
+Bounded gaps and Hecke equidistribution
+883
+
+spirit of the Bombieri-Vinogradov estimate which holds for all of the above
+Hecke equidistribution problems. We prove Theorem 3.1 in a manner similar
+to that of Bombieri’s original proof of the Bombieri-Vinogradov theorem [2].
+Specifically, we use Duke’s large sieve inequality for Hecke characters (Theo-
+rem 2.1) to prove a zero density estimate (Theorem 2.3) for families of Hecke
+characters. Once we prove Theorem 2.3 and deduce Theorem 3.1, we prove a
+general result (Theorem 5.3) on the behavior of gaps between primes which
+satisfy a given Hecke equidistribution law using Maynard’s sieve techniques.
+At the level of generality presented in this paper, the Bombieri-Vinogradov
+estimate in Theorem 3.1 appears to be new and may be of independent
+interest.
+
+2. A zero density estimate for Hecke L-functions
+
+In this section, we prove a zero density estimate for Hecke characters twisted
+by ray class characters which are averaged over moduli up to Q. This will be
+an average form of [5, Theorem 2.1] which generalizes the zero density esti-
+mates of Montgomery [18, Theorem 1] for Dirichlet characters. The results
+in this section all follow the method of proof in [5, Section 2].
+
+2.1. The large sieve
+
+Let K/Q be a number field of degree nK := [K : Q] and absolute discrimi-
+nant DK. Let q be an integral ideal, and let ξ be a narrow class character
+modulo q. For a vector m = (m1, m2, . . . , mnK−1) ∈ ZnK−1, we define
+
+(2.1)
+λm =
+
+nK−1
+�
+
+j=1
+λmj
+j ,
+
+where {λ1, . . . , λnK−1} is a basis for the torsion-free Hecke characters modulo
+q. The implied constants in all asymptotic inequalities depend at most on
+DKNq.
+We begin by stating Duke’s large sieve inequality [5, Theorem 1.1].
+
+Theorem 2.1. Let c(a) be a function on the ideals of
+
+K
+and
+∥c∥2 =
+�
+
+Na≤N
+|c(a)|2.
+
+
+884
+Jesse Thorner
+
+There exists a constant A > 0 such that
+
+�
+
+Nq≤Q
+
+�∗
+
+ξ mod q
+
+�
+
+∥m∥∞≤T
+
+� T
+
+−T
+
+������
+
+�
+
+Na≤N
+c(a)ξλm(a)Na−it
+
+������
+
+2
+
+dt
+
+≪ (N + Q2T nK)(log QT)A∥c∥2,
+
+where ∗ denotes summing over primitive characters, A depends in an effec-
+tively computable manner on at most K, and ∥m∥∞ = max1≤j≤nK−1 |mj|.
+
+We can write L( 1
+
+2 + it, ξλm)2 as a Dirichlet polynomial roughly of the
+shape
+
+L( 1
+
+2 + it, ξλm)2 =
+�
+
+a
+d(a)ξλm(a)Na− 1
+
+2 −itg1(Na/x)
+(2.2)
+
++ O
+
+��
+
+a
+d(a)ξλm(a)Na− 1
+
+2 +itg2(Na/y)
+
+�
+
++ O(1),
+
+where g1 and g2 are smooth, compactly supported functions and
+
+xy = (DKNfξ( |t|
+
+2π)nK)2.
+
+Here, fξ is the conductor of ξ. As a straightforward and standard consequence
+of Theorem 2.1 and (2.2), we obtain the following fourth moment estimate
+for the Hecke L-functions L(s, ξλm).
+
+Corollary 2.2. There exists a constant A > 0 such that
+
+�
+
+Nq≤Q
+
+�∗
+
+ξ mod q
+
+�
+
+∥m∥∞≤T
+
+� T
+
+−T
+|L( 1
+
+2 + it, ξλm)|4dt ≪ Q2T nK(log QT)A.
+
+2.2. The density estimate
+
+We now prove a zero density estimate which allows us to average over prim-
+itive characters with modulus up to a given bound.
+
+
+Bounded gaps and Hecke equidistribution
+885
+
+Theorem 2.3. Let Q ≥ 1, T ≥ 2,
+
+N(σ, T, ξλm) := #{ρ = β + iγ : L(ρ, ξλm) = 0, β ≥ σ, |γ| ≤ T},
+
+and
+
+N(σ, Q, T) :=
+�
+
+Nq≤Q
+
+�∗
+
+ξ mod q
+
+�
+
+∥m∥∞≤T
+N(σ, T, ξλm).
+
+Suppose that nK ≥ 2. There exists a constant A > 0, depending in an effec-
+tively computable manner on at most K, such that for all σ ∈ [0, 1], we have
+that
+
+N(σ, Q, T) ≪ (Q2T nK)
+
+3(1−σ)
+
+2−σ (log T)A ≪ (Q2T nK)3(1−σ)(log QT)A.
+
+Proof. The proof proceeds along the same lines as [5, Theorem 2.1]. Let
+
+Mx = Mx(s, ξλm) =
+�
+
+Na≤x
+µ(a)ξλm(a)Na−s,
+
+where µ is the M¨obius function for K, and let
+
+b(a) =
+�
+
+d|a
+Na≤x
+
+µ(d).
+
+Then for ℜ(s) > 1, we have that
+
+Mx(s)L(s, ξλm) = 1 +
+�
+
+Na>x
+b(a)ξλm(a)Na−s.
+
+We now choose y > 0, and we smooth to get
+
+e− 1
+
+y +
+�
+
+Na>x
+b(a)ξλm(a)Na−se−Na/y − Mx(s, ξλm)L(s, ξλm)
+(2.3)
+
+=
+1
+2πi
+
+�
+
+ℜ(w)= 1
+
+2 −σ
+Mx(s + w, ξλm)L(s + w, ξλm)Γ(w)ywdw,
+
+where σ ∈ ( 1
+
+2, 1] and ξλm is nontrivial. If ξλm is trivial, there is another error
+term whose effect is negligible due to the exponential decay of Γ(2 − s) in
+vertical strips.
+
+
+886
+Jesse Thorner
+
+Let ρ = β + iγ be a zero of L(s, ξλm) with β ≥ σ and |γ| ≤ T. From
+(2.3), we have that
+
+�����
+
+�
+
+Na>x
+b(a)ξλm(a)Na−ρe−Na/y
+�����
+
++ y
+
+1
+2 −σ
+� γ+(log T)2
+
+γ−(log T)2 |L( 1
+
+2 + it, ξλm)| · |Mx( 1
+
+2 + it, ξλm)|dt ≫ 1.
+
+There are three possibilities for ρ:
+
+1)
+
+�����
+
+�
+
+Na>x
+b(a)ξλm(a)Na−ρe−Na/y
+����� ≫ 1.
+
+2) For some tρ such that |tρ − γ| < (log T)2, we have |Mx( 1
+
+2 + itρ, ξλm)| >
+xσ− 1
+
+2 .
+
+3)
+
+� γ+(log T)2
+
+γ−(log T)2 |L( 1
+
+2 + it, ξλm)|dt ≫ (y/x)σ− 1
+
+2 .
+
+For j = 1, 2, and 3, let Nj be the number of zeros ρ satisfying conditions 1,
+2, 3, respectively. We choose a subset Rj of zeros from each class for which
+the associated set of Hecke characters
+
+Ωj = {ξλm(a)Na−iγ : ∥m∥∞ ≤ T,
+
+ξ mod q primitive, Nq ≤ Q, ρ = β + iγ ∈ Rj}
+
+is ≫ (log T)2 well spaced and is such that Nj ≪ |Rj|(log T)3 for j = 1, 2, 3.
+Since
+
+3
+�
+
+j=1
+|Nj| ≪ (log T)3
+3
+�
+
+j=1
+|Rj|,
+
+the theorem follows once we show that |Rj| ≪ (Q2T nK)
+
+3(1−σ)
+
+2−σ
+for j = 1, 2, 3.
+For j = 1, let {Ik} be a cover of [x, y] by O(log T) dyadic intervals of
+the form [Nk, 2Nk]. By the Cauchy-Schwarz inequality, Theorem 2.1, and
+
+
+Bounded gaps and Hecke equidistribution
+887
+
+partial summation, we have that
+
+|R1| ≪
+�
+
+Ω1
+
+�����
+
+�
+
+a
+b(a)ξλm(a)Na−β
+�����
+
+2
+
+≪ log T
+�
+
+k
+
+�
+
+Ω1
+
+�����
+
+�
+
+Na∈Ik
+b(a)ξλm(a)Na−β
+�����
+
+2
+
+≪ log T
+�
+
+k
+(|Ik| + Q2T nK(log QT)A)|Ik|1−2σ(log QT)A
+
+≪ (y2−2σ + Q2T nKx1−2σ)(log QT)A.
+
+We conclude that |R1| ≪ (Q2T nK)
+
+3(1−σ)
+
+2−σ (log QT)A by setting y = x3/2 and
+x = (Q2T nK)
+
+1
+
+2−σ . By arguments similar to those in the case of j = 1, we
+conclude that
+
+|R2| ≪ (Q2T nK)
+
+3(1−σ)
+
+2−σ (log QT)A.
+
+To handle the case of j = 3, write lρ = (γ − (log T)2, γ + (log T)2). We
+use H¨older’s inequality and Theorem 2.2 to obtain
+
+|R3|x2σ−1 ≪
+�
+
+ρ∈R3
+
+�����
+
+�
+
+lρ
+|L( 1
+
+2 + it, ξλm)|dt
+
+�����
+
+4
+
+≪ (log T)A �
+
+ρ∈R3
+
+�
+
+lρ
+|L( 1
+
+2 + it, ξλm)|4dt
+
+≪ (log T)A �
+
+Nq≤Q
+
+�
+
+ξλm mod q
+
+�
+
+∥m∥∞≤T
+
+� 2T
+
+−2T
+|L( 1
+
+2 + it, ξλm)|4dt
+
+≪ Q2T nK(log QT)A.
+
+Choosing x as before, we see that |R3| ≪ (Q2T nK)
+
+3(1−σ)
+
+2−σ (log QT)A.
+□
+
+3. A Bombieri-Vinogradov estimate
+
+We now prove a mean value theorem of Bombieri-Vinogradov type for prime
+ideals of a number field K/Q which satisfy an equidistribution law dictated
+by Hecke characters. Let K/Q be a number field of degree nK = [K : Q] and
+discriminant DK with ring of integers OK, and let q be an integral ideal of
+OK. Choose a fixed set of independent Hecke characters H = {λ1, . . . , λJ}
+
+
+888
+Jesse Thorner
+
+modulo q, so 1 ≤ J ≤ nK − 1. If J = 1, suppose that λ1 has infinite order.
+For a prime ideal p ∤ q, define
+
+⃗θH(p) = (θ1(p), . . . , θJ(p)) ∈ (R/Z)J,
+λj(p) = e2πiθj(p) for 1 ≤ j ≤ J.
+
+Let I be a narrow ideal class modulo q. For a collection of closed subintervals
+I = {I1, . . . , IJ} of [0, 1], we consider the set of primes
+(3.1)
+
+PI,I,q =
+
+�
+
+p: there exists p ⊂ OK such that p = Np, p ∈ I, ⃗θH(p) ∈
+�
+
+I∈I
+I
+
+�
+
+,
+
+where θj(p) is equidistributed in Ij with respect to the Lebesgue measure µ
+for all 1 ≤ j ≤ J. We now define the prime counting function
+
+πI,I,q(x; q, a) := #{p ≤ x : p ≡ a
+(mod q), p ∈ PI,I,q}.
+
+Let δI,I,q denote the density of PI,I,q within the set of all primes. One
+computes
+
+δI,I,q =
+1
+
+2rhKϕ(q)
+
+�
+
+I∈I
+µ(I),
+
+where r is a certain positive integer which is no larger than the number of
+real embeddings of K into C, hK is the class number of K, and ϕ(q), which
+is the ideal-theoretic generalization of Euler’s function. (See the proof of [5,
+Theorem 3.1] for further discussion.) The goal of this section is to prove the
+following theorem.
+
+Theorem 3.1. If 0 < θ <
+1
+
+6nK is fixed, then for any fixed D > 0, we have
+that
+�′
+
+q≤xθ
+max
+(a,q)=1 max
+y≤x
+
+����πI,I,q(y; q, a) − δI,I,q
+π(y)
+ϕ(q)
+
+���� ≪
+x
+
+(log x)D ,
+
+where �′ denotes summing over moduli q such that (q, DKNq) = 1.
+
+Theorem 3.1 is a consequence of the following proposition.
+
+
+Bounded gaps and Hecke equidistribution
+889
+
+Proposition 3.2. Fix D > 0, and for any integer k ≥ 0, define
+
+ΘI,I,q(x; q, a, k) =
+�
+
+p≤x
+p≡a
+(mod q)
+p∈PI,I,q
+
+log p
+
+k!
+
+�
+log x
+
+p
+
+�k
+.
+
+If 0 < θ <
+1
+
+6nK , then
+
+�′
+
+q≤xθ
+max
+(a,q)=1 max
+y≤x
+
+����ΘI,I,q(y; q, a, 3nK) − δI,I,q
+y
+
+ϕ(q)
+
+���� ≪
+x
+
+(log x)D .
+
+Assuming Proposition 3.2 (which we will prove later), we prove Theo-
+rem 3.1.
+
+Proof of Theorem 3.1. Since ΘI,I,q(y; q, a, k) is a monotonically increasing
+function of y, it is straightforward to verify that for any 0 < λ ≤ 1,
+
+1
+λ
+
+� y
+
+e−λy
+ΘI,I,q(t; q, a, k − 1)dt
+
+t ≤ ΘI,I,q(y; q, a, k − 1)
+
+≤ 1
+
+λ
+
+� eλy
+
+y
+ΘI,I,q(t; q, a, k − 1)dt
+
+t .
+
+One can evaluate the integrals directly; they are
+
+ΘI,I,q(y; q, a, k) − ΘI,I,q(e−λy; q, a, k)
+and
+
+ΘI,I,q(eλy; q, a, k) − ΘI,I,q(y; q, a, k),
+
+respectively. Defining RI,I,q(y; q, a, k) = ΘI,I,q(y; q, a, k) − δI,I,q
+y
+
+ϕ(q), the
+two integrals are each
+
+(1 + O(λ))δI,I,q
+y
+
+ϕ(q) + O
+� 1
+
+λ max
+y≤ex |RI,I,q(y; q, a, k)|
+�
+.
+
+Thus
+
+max
+y≤x |RI,I,q(y; q, a, k − 1)| ≪ λx
+
+ϕ(q) + 1
+
+λ max
+y≤ex |RI,I,q(y; q, a, k)|.
+
+Using decreasing induction, we conclude that
+
+max
+y≤x |RI,I,q(y; q, a, 0)| ≪ λ1x
+
+ϕ(q) + 1
+
+λ2
+max
+y≤exλ3 |RI,I,q(y; q, a, k)|,
+
+
+890
+Jesse Thorner
+
+where
+
+λ1 = λ
+
+k−1
+�
+
+j=0
+exp
+
+� j
+�
+
+i=1
+λi
+�
+
+,
+λ2 = λk(k+1)/2,
+λ3 =
+
+k
+�
+
+j=1
+λj.
+
+For any D > 0, let λ = (log x)−(D+2). We have λ3 ≤ kλ, and if x is suffi-
+ciently large, then λ1 ≪k λ. Thus
+
+max
+y≤x |RI,I,q(y; q, a, 0)| ≪k (log x)k(k+1)(D+2)/2
+max
+y≤xek/(log x)D+2 |RI,I,q(y; q, a, k)|
+
++
+x
+
+ϕ(q)(log x)D+2 .
+
+Using the bound
+
+(3.2)
+q−1 ≪ ϕ(q)−1 ≪ q−1 log log q,
+
+we have that
+
+(3.3)
+�′
+
+q≤Q
+max
+(a,q)=1 max
+y≤x |RI,I,q(y; q, a, 0)|
+
+is bounded by
+
+Ok
+
+�
+x(log Q)2
+
+(log x)D+2 + (log x)(D+2)k(k+1)/2
+
+×
+�′
+
+q≤Q
+max
+(a,q)=1
+max
+y≤xek/(log x)D+2 |RI,I,q(y; q, a, k)|
+
+�
+
+.
+
+Since ek/(log x)D+2 is bounded when D > 0, (3.3) is
+
+≪k
+x(log Q)2
+
+(log x)D+2 + (log x)(D+2)k(k+1)/2 �′
+
+q≤Q
+max
+(a,q)=1 max
+y≤x |RI,I,q(y; q, a, k)|.
+
+We apply Proposition 3.2 with k = 3nK; thus for any A > 0, (3.3) is
+
+≪
+x
+
+(log x)D + (log x)2nK(3nK+1)(D+2)
+x
+
+(log x)A
+
+when Q = xθ and 0 < θ <
+1
+
+6nK . Choosing A = D + 2nK(3nK + 1)(D + 2),
+we see that (3.3) is ≪ x(log x)−D. Thus we have demonstrated that if 0 <
+
+
+Bounded gaps and Hecke equidistribution
+891
+
+θ <
+1
+
+6nK , then
+
+�′
+
+q≤xθ
+max
+(a,q)=1 max
+y≤x
+
+����ΘI,I,q(y; q, a, 0) − δI,I,q
+y
+
+ϕ(q)
+
+���� ≪
+x
+
+(log x)D .
+
+Theorem 3.1 now follows from a standard partial summation argument.
+□
+
+4. Proof of Proposition 3.2
+
+We begin with a series of reductions which reduce the proof to a calcula-
+tion involving the zero density estimate from Theorem 2.3. Unless otherwise
+specified, all implied constants in this section depend in an effectively com-
+putable manner on at most DKNq. (Certain implied constants will depend
+on J, but J ≤ nK − 1. Dependence on δI,I,q does not affect our calculations
+because δI,I,q ∈ [0, 1].)
+
+4.1. Equidistribution on tori
+
+We need a J-dimensional version of the Erd˝os-Tur´an inequality in order to
+count the primes in PI,I,q. Let e(t) = exp(2πit) and m = (m1, . . . , mJ). Let
+1S denote the indicator function of a set S, and let B = �
+I∈I I.
+
+Lemma 4.1. For each integer k ≥ 0 and all x ≥ 3, we have the bound
+������
+
+�
+
+Np≤x
+1B(⃗θH(p))log Np
+
+k!
+
+�
+log x
+
+Np
+
+�k
+−
+
+��
+
+I∈I
+µ(I)
+
+�
+
+x
+
+������
+(4.1)
+
+≪ x
+
+T +
+�
+
+∥m∥∞≤T
+
+������
+
+�
+
+Np≤x
+λm(p)log Np
+
+k!
+
+�
+log x
+
+Np
+
+�k
+− δ(λm)x
+
+������
+,
+
+where δ(λm) = 1 if λm is the trivial character and δ(λm) = 0 otherwise.
+
+The proof proceeds along familiar lines. One uses the multidimensional
+variant of the Beurling–Selberg construction proved by Cochrane [3, Theo-
+rem 1] to majorize and minorize 1B using explicitly defined finite trigono-
+metric polynomials. This leads to a multidimensional version of the Erd¨os–
+Tur´an inequality [3, Theorem 2]. This is adapted for equidistribution with
+respect to probability measures other than normalized Lebesgue measure
+by adapting the proof of [3, Theorem 2] along the lines of Murty and Sinha
+
+
+892
+Jesse Thorner
+
+[21, Theorem 8]. Since the only noticeable deviation from the calculations
+in [3, 21] is that the bound x
+
+T uses a trivial upper bound for the prime ideal
+counting function (see Lagarias and Odlyzko [13]), we omit the proof.
+
+4.2. From primes to zeros
+
+Let χ be a Dirichlet character modulo q, let λm be as in (2.1), and let ξ be
+a narrow class character modulo q. We will use the narrow class characters
+to isolate the prime ideals p of K whose norm is a prime p, and we will use
+the Dirichlet characters modulo q to isolate the primes p which lie in an
+arithmetic progression a (mod q) with (a, q) = 1. We make the restriction
+(q, DKNq) = 1 so that ξλm ⊗ χ(a) = ξλm(a)χ(Na).
+Define
+
+δ(ξλm ⊗ χ) =
+
+�
+1
+if ξλm ⊗ χ is trivial
+0
+otherwise
+
+and
+
+Λξλm⊗χ(a) =
+
+
+
+
+
+
+
+
+ξλm ⊗ χ(pm) log Np
+if a = pm for some prime
+ideal p and m ≥ 1,
+0
+otherwise.
+
+By a procedure similar to that in [20, Sections 0 and 1], it follows from (4.1)
+and orthogonality of characters that
+
+����ΘI,I,q(x; q, a, k) − δI,I,q
+x
+
+ϕ(q)
+
+����
+
+≪
+1
+
+ϕ(q)
+
+�
+x
+T +
+�∗
+
+χ mod q
+ξ mod q
+
+�
+
+∥m∥∞≤T
+
+�����
+
+�
+
+Np≤x
+
+Λξλm⊗χ(p)
+
+k!
+
+�
+log x
+
+Np
+
+�k
+− δ(ξλm ⊗ χ)x
+
+�����
+
+�
+
+.
+
+
+Bounded gaps and Hecke equidistribution
+893
+
+Now,
+
+������
+
+�
+
+Np≤x
+
+Λξλm⊗χ(p)
+
+k!
+
+�
+log x
+
+Np
+
+�k
+−
+�
+
+Na≤x
+
+Λξλm⊗χ(a)
+
+k!
+
+�
+log x
+
+Na
+
+�k
+������
+
+=
+
+��������
+
+�
+
+v≥2
+Npv≤x
+
+ξλm ⊗ χ(pv) log Np
+
+k!
+
+�
+log
+x
+
+Npv
+
+�k
+��������
+
+≪
+�
+
+v≥2
+Npv≤x
+
+log Np
+
+k!
+
+�
+log
+x
+
+Npv
+
+�k
+≪ 1
+
+k!
+√x.
+
+If the character (ξλm ⊗ χ)′ is induced by a primitive character ξλm ⊗ χ,
+where χ has modulus q, then
+
+�
+
+Na≤x
+Λξλm⊗χ(a)
+�
+log x
+
+Na
+
+�k
+−
+�
+
+Na≤x
+Λ(ξλm⊗χ)′(a)
+�
+log x
+
+Na
+
+�k
+
+≪ (log x)k+1 log q.
+
+By a standard application of Mellin inversion,
+
+(4.2)
+1
+2πi
+
+� 2+i∞
+
+2−i∞
+
+xs
+
+sk+1 ds =
+
+�
+1
+k!(log x)k
+if x ≥ 1,
+0
+if x < 1.
+
+If ξλm ⊗ χ is primitive, then we use (4.2) and the argument principle to
+obtain
+
+�
+
+Na≤x
+
+Λξλm⊗χ(a)
+
+k!
+
+�
+log x
+
+Na
+
+�k
+=
+1
+2πi
+
+� 2+i∞
+
+2−∞
+
+�
+−L′
+
+L (s, ξλm ⊗ χ)
+� xs
+
+sk+1 ds
+
+= δ(ξλm ⊗ χ)x −
+�
+
+0<β<1
+
+xρ
+
+ρk+1 + O((log x)2k),
+
+where the sum extends over the nontrivial zeros ρ = β + iγ of L(s, ξλm ⊗ χ).
+To simplify future expressions, we choose T = xθ for some constant 0 <
+θ < 1
+
+2 (which will be determined later) and q ≤ x. We now combine all of
+
+
+894
+Jesse Thorner
+
+the above estimates in this subsection to obtain
+
+����ΘI,I,q(x; q, a, k) − δI,I,q
+x
+
+ϕ(q)
+
+����
+
+≪
+1
+
+ϕ(q)
+
+
+
+
+
+
+x
+T +
+�∗
+
+χ mod q
+ξ mod q
+
+�
+
+∥m∥∞≤T
+
+
+
+
+
+
+�
+
+0<β<1
+|γ|≤T
+
+xβ
+
+|ρ|k+1 +
+�
+
+0<β<1
+|γ|>T
+
+xβ
+
+|γ|k+1
+
+
+
+
+
+
+
+
+
+
+
+ + T nK√x.
+
+The innermost sums run over the nontrivial zeros ρ = β + iγ of the L-
+function associated to the primitive character that induces ξλm ⊗ χ.
+Let t ∈ R. By [5, Lemma 3.1.3], over all L(s, ξλm ⊗ χ) satisfying ∥m∥∞ ≤
+T, there are ≪ qnKT nK−1 log(q(|t| + 1)) zeros ρ of L(s, ξλm ⊗ χ) such that
+|Im(ρ) − t| < 1. Thus
+
+�∗
+
+χ mod q
+ξ mod q
+
+�
+
+∥m∥∞≤T
+
+�
+
+0<β<1
+|γ|>T
+
+xβ
+
+|γ|k+1 ≪ qnKT nK−1x
+� ∞
+
+T
+
+log(qt)
+
+tk+1 dt
+
+≪ qnKT nK−k−1x log x.
+
+Consider the contribution of the zeros ρ satisfying |ρ| < 1
+
+4. Note that if
+f is the conductor of the primitive character ξλm ⊗ χ, χ has modulus q, and
+(q, DKNq), then Nf ≪ qnK. Applying [5, Lemma 3.1.3] again and noting that
+q ≤ x, we have that there are ≪ qnKT nK−1 log x zeros ρ such that |ρ| < 1
+
+4.
+From the consideration of the corresponding zeros 1 − ρ of the L-function
+which is dual to L(s, ξλm ⊗ χ), we deduce that |ρ|k+1 > x−ϵ for any fixed
+ϵ > 0, provided that q is sufficiently large. (See Bombieri [2] and Prachar [23,
+Chapter 7] for similar arguments.) As such, the contribution arising from
+zeros ρ satisfying |ρ| < 1
+
+4 is
+
+≪
+�
+
+χ mod q
+ξ mod q
+
+�
+
+∥m∥∞≤T
+
+�
+
+|ρ|< 1
+
+4
+
+xρ+ϵ ≪ qnKT nK−1x
+
+1
+4 +ϵ log x.
+
+Regarding the zeros ρ = β + iγ with |ρ| ≥ 1
+
+4, we take only those with
+β ≥ 1
+
+2, as the contribution from the other zeros are safely absorbed into
+our existing error terms. For those zeros, |ρ|k+1 ≫ |γ|k+1 + 1. Therefore, we
+
+
+Bounded gaps and Hecke equidistribution
+895
+
+finally have (for q, T ≤ x) that
+
+max
+(a,q)=1 max
+y≤x
+
+����ΘI,I,q(x; q, a, k) − δI,I,q
+x
+
+ϕ(q)
+
+����
+
+≪
+1
+
+ϕ(q)
+
+
+
+
+
+
+
+x
+T +
+�∗
+
+χ mod q
+ξ mod q
+
+�
+
+∥m∥∞≤T
+
+�
+
+1
+2 ≤β<1
+|γ|≤T
+
+xβ
+
+|γ|k+1 + 1
+
+
+
+
+
+
+
+
++ qnKT nK−1√x
+�
+1 +
+√x
+T k
+
+�
+log x.
+
+4.3. Averaging over progressions
+
+It follows from the above display and (3.2) that
+
+�′
+
+q≤Q
+max
+(a,q)=1 max
+y≤x
+
+����ΘI,I,q(x; q, a, k) − δI,I,q
+x
+
+ϕ(q)
+
+����
+(4.3)
+
+≪
+�′
+
+q≤Q
+
+1
+
+ϕ(q)
+
+�∗
+
+χ mod q
+ξ mod q
+
+�
+
+∥m∥∞≤T
+
+�
+
+1
+2 ≤β<1
+|γ|≤T
+
+xβ
+
+|γ|k+1 + 1
+
++ QnK+1T nK−1√x
+�
+1 +
+√x
+T k
+
+�
+log x + x(log Q)2
+
+T
+.
+
+We dyadically decompose the interval [1, Q] into O(log Q) intervals of the
+shape [2n−1, 2n) and use (3.2) to obtain
+
+�′
+
+q≤Q
+
+1
+
+ϕ(q)
+
+�∗
+
+χ mod q
+ξ mod q
+
+�
+
+∥m∥∞≤T
+
+�
+
+1
+2 ≤β<1
+|γ|≤T
+
+xβ
+
+|γ|k+1 + 1
+(4.4)
+
+≪ (log Q)2 max
+R≤Q
+1
+R
+
+�′
+
+q≤R
+
+�∗
+
+χ mod q
+ξ mod q
+
+�
+
+∥m∥∞≤T
+
+�
+
+1
+2 ≤β<1
+|γ|≤T
+
+xβ
+
+|γ|k+1 + 1.
+
+If χ has modulus q ≤ R and ξ ⊗ χ is primitive, then we may realize ξ ⊗ χ
+as a primitive (narrow) ray class character ω (mod a), where Na ≪ RnK.
+Therefore, we embed (4.4) into a sum over all primitive ray class characters
+ω (mod a) with Na ≪ RnK. Specifically, if ρ = β + iγ is a zero of L(s, ωλm)
+
+
+896
+Jesse Thorner
+
+with ω (mod a) a primitive ray class character, then (4.4) is
+
+≪ max
+R≤Q
+1
+R
+
+�
+
+Na≤RnK
+
+�∗
+
+ω mod a
+
+�
+
+∥m∥∞≤T
+
+�
+
+1
+2 ≤β<1
+|γ|≤T
+
+xβ
+
+|γ|k+1 + 1
+
+≪ log x max
+R≤Q max
+1
+2 ≤σ<1 max
+0≤V ≤T
+xσ
+
+R
+N(σ, RnK, V )
+
+V k+1 + 1
+.
+
+Let 0 < ϵ < 1, and let
+
+(4.5)
+k = 3nK,
+Q = x
+
+1−ϵ
+6nK ,
+and
+T = x
+
+1+ϵ
+6nK .
+
+Collecting all of the above estimates, (4.3) is
+
+≪ x1−
+1
+
+6nK + (log x)3 max
+R≤Q max
+1
+2 ≤σ<1 max
+0≤V ≤T
+xσ
+
+R
+N(σ, RnK, V )
+
+V k+1 + 1
+,
+(4.6)
+
+which we will bound using Theorem 2.3. (We could take k to be larger if we
+wanted, but k = 3nK suffices for our purposes.)
+
+4.4. Finishing the proof
+
+By the zero-free region for Hecke L-functions proven by Coleman [4], there
+exists a constant c > 0 such that if ∥m∥∞ ≤ T, the modulus of ω is at most
+RnK, and
+
+(4.7)
+1 − η(R, x) < σ ≤ 1,
+η(R, x) := c max{log R, (log x)3/4}−1,
+
+then N(σ, RnK, t) is either 0 or 1 for all t ≤ T. If N(σ, RnK, t) = 1, then
+the zero β1 which is counted is a Landau-Siegel zero, which is both real
+and simple. If L(s, ωλm) has a Landau-Siegel zero, then λm is trivial and
+ω is a real character. It follows from the field-uniform version of Siegel’s
+theorem in [20, Section 2] that xβ1 ≪ x(log x)−D−5 for any D > 0 (with an
+ineffective implied constant). Thus it suffices for us to work in the range
+1
+2 ≤ σ ≤ 1 − η(R, x).
+By (4.5), if 1
+
+2 ≤ σ ≤ 1 − η(R, x), it follows from Theorem 2.3 that
+
+max
+0≤V ≤T
+xσ
+
+R
+N(σ, RnK, V )
+
+V k+1 + 1
+≪ xσ
+
+R N(σ, RnK, 2) ≪ xσ
+
+R R6nK(1−σ)(log x)A.
+
+
+Bounded gaps and Hecke equidistribution
+897
+
+Therefore, the second term in (4.6) is bounded by
+
+(log x)A+1 max
+R≤Q
+max
+1
+2 ≤σ<1−η(R,x)
+xσ
+
+R R6nK(1−σ)
+
+= (log x)A+1 max
+R≤Q
+x
+R
+
+�R6nK
+
+x
+
+�η(R,x)
+.
+
+By separately considering the cases when
+
+R ≤ exp((log x)3/4)
+and
+exp((log x)3/4) < R ≤ Q,
+
+we find that
+
+(4.8)
+(log x)A+1 max
+R≤Q
+x
+R
+
+�R6nK
+
+x
+
+�η(R,x)
+≪
+x
+
+(log x)D+5 .
+
+Combining (4.8) and with the contribution from the Landau-Siegel zero (if it
+exists), we see that (4.6), and hence (4.3), is bounded by x(log x)−D for any
+D > 0 once Q = xθ with 0 ≤ θ <
+1
+
+6nK per (4.5). This completes the proof of
+Proposition 3.2.
+
+5. Proofs of Theorems 1.1, 1.3, and 1.4
+
+We will use Theorem 3.1 to prove a very general result on bounded gaps
+between primes in sets of the form (3.1), from which we will deduce the
+theorems in the introduction. Given a set of integers A, a set of primes
+P ⊂ A, and a linear form L(n) = n + h, define
+
+A(x) = {n ∈ A : x < n ≤ 2x},
+A(x; q, a) = {n ∈ A(x) : n ≡ a (mod q)},
+
+L(A) = {L(n) : n ∈ A},
+ϕL(q) = ϕ(hq)/ϕ(h),
+
+PL,A(x, y) = L(A(x)) ∩ P,
+PL,A(x; q, a) = L(A(x; q, a)) ∩ P.
+
+We consider the 6-tuple (A, Lk, P, B, x, θ), where Hk is admissible, Lk =
+{Li(n) = n + hi : hi ∈ Hk}, B ∈ N is constant, x is a large real number, and
+0 ≤ θ < 1. We present a very general hypothesis that Maynard states in
+Section 2 of [17].
+
+Hypothesis 5.1. With the above notation, consider the 6-tuple (A, Lk, P,
+B, x, θ).
+
+
+898
+Jesse Thorner
+
+1) We have
+
+�
+
+q≤xθ
+max
+a
+
+����#A(x; q, a) − #A(x)
+
+q
+
+���� ≪
+#A(x)
+
+(log x)100k2 .
+
+2) For any L ∈ Lk, we have
+
+�
+
+q≤xθ
+(q,B)=1
+
+max
+(L(a),q)=1
+
+����#PL,A(x; q, a) − #PL,A(x)
+
+ϕL(q)
+
+���� ≪ #PL,A(x)
+
+(log x)100k2 .
+
+3) For any q ≤ xθ, we have #A(x; q, a) ≪ #A(x)
+
+q
+.
+
+For (A, Lk, P, B, x, θ) satisfying Hypothesis 5.1, Maynard proves the follow-
+ing in [17].
+
+Theorem 5.2. Let α > 0 and 0 ≤ θ < 1. There is a constant c depending
+only on θ and α so that the following holds. Let (A, Lk, P, B, x, θ) satisfy
+Hypothesis 5.1. Assume that c ≤ k ≤ (log x)α and hi ≤ xα for all 1 ≤ i ≤ k.
+If there exists δ > (log k)−1 such that
+
+1
+k
+ϕ(B)
+
+B
+
+�
+
+Li∈Lk
+#PLi,A(x) ≥ δ#A(x)
+
+log x ,
+
+then
+
+#{n ∈ A(x) : #(Lk(n) ∩ P) ≥ c−1δ log k} ≫
+#A(x)
+
+(log x)k exp(ck).
+
+Using Theorem 5.2, we prove the following result.
+
+Theorem 5.3. Let PI,I,q be a set of the form (3.1). There exists a constant
+cI,I,q > 0 such that if k > cI,I,q and Hk = {h1, . . . , hk} is admissible, then
+
+#{n ≤ x : #({n + h1, . . . , n + hk} ∩ PI,I,q) ≥ c−1
+I,I,q log k} ≫
+x
+
+(log x)k .
+
+Proof. The proof is essentially the same as Theorem 3.5 in [17]. Let θ be as in
+Theorem 3.1. Let A = N, P = PI,I,q, and B = DKNq. Parts (i) and (iii) of
+Hypothesis 5.1 are trivial to check for the 6-tuple (N, Lk, PI,I,q, DKNq, x, θ
+
+2).
+By Theorem 3.1 partial summation, all of Hypothesis 5.1 holds when D and
+x are sufficiently large in terms of k and θ.
+
+
+Bounded gaps and Hecke equidistribution
+899
+
+Given a suitable constant cI,I,q > 0 (computed as in [16] and [25]), we
+let k ≥ cI,I,q. For our choice of A and P, we have the inequality
+
+1
+k
+ϕ(B)
+
+B
+
+�
+
+Li∈Lk
+#PLi,A(x) ≥ (1 + o(1))ϕ(B)
+
+B
+δI,I,q
+#A(x)
+log x
+
+for all sufficiently large x, where the implied constant in 1 + o(1) depends
+only DKNq. Theorem 5.3 now follows directly from Theorem 5.2.
+□
+
+To prove Theorems 1.1, 1.3, and 1.4, it now suffices to show that the sets
+of primes considered in the respective theorems are all of the form (3.1) for
+certain sets of independent Hecke characters. For Theorems 1.1 and 1.4, this
+is accomplished in the proofs of Theorems 3.2 and 3.3 in [5], respectively.
+For Theorem 1.3, the desired correspondence follows from the discussion in
+[12, Chapter 12].
+
+Acknowledgements
+
+The author thanks Michael Griffin, Robert Lemke Oliver, Ken Ono, and
+Frank Thorne for helpful discussions, as well as the anonymous referee.
+
+References
+
+[1] N. C. Ankeny, Representations of primes by quadratic forms, Amer. J.
+Math. 74 (1952), 913–919.
+
+[2] E. Bombieri, On the large sieve, Mathematika 12 (1965), 201–225.
+
+[3] T. Cochrane, Trigonometric approximation and uniform distribution
+modulo one, Proc. Amer. Math. Soc. 103 (1988), no. 3, 695–702.
+
+[4] M. D. Coleman, A zero-free region for the Hecke L-functions, Mathe-
+matika 37 (1990), no. 2, 287–304.
+
+[5] W. Duke, Some problems in multidimensional analytic number theory,
+Acta Arith. 52 (1989), no. 3, 203–228.
+
+[6] F. Fit´e, K. S. Kedlaya, V. Rotger, and A. Sutherland, Sato-Tate distri-
+butions and Galois endomorphism modules in genus 2, Compos. Math.
+148 (2012), no. 5, 1390–1442.
+
+[7] J. Friedlander and H. Iwaniec, The polynomial X2 + Y 4 captures its
+primes, Ann. of Math. (2) 148 (1998), no. 3, 945–1040.
+
+
+900
+Jesse Thorner
+
+[8] D. A. Goldston, J. Pintz, and C. Y. Yıldırım, Primes in tuples. I, Ann.
+of Math. (2) 170 (2009), no. 2, 819–862.
+
+[9] G. Harman and P. Lewis, Gaussian primes in narrow sectors, Mathe-
+matika 48 (2001), no. 1-2, 119–135 (2003).
+
+[10] D. R. Heath-Brown, Primes represented by x3 + 2y3, Acta Math. 186
+(2001), no. 1, 1–84.
+
+[11] H. Iwaniec, Almost-primes represented by quadratic polynomials, Invent.
+Math. 47 (1978), no. 2, 171–188.
+
+[12] H. Iwaniec, Topics in Classical Automorphic Forms, Vol. 17 of Graduate
+Studies in Mathematics, American Mathematical Society, Providence,
+RI (1997), ISBN 0-8218-0777-3.
+
+[13] J. C. Lagarias and A. M. Odlyzko, Effective versions of the Chebotarev
+density theorem, in: Algebraic Number Fields: L-Functions and Galois
+Properties (Proc. Sympos., Univ. Durham, Durham, 1975), 409–464,
+Academic Press, London (1977).
+
+[14] S. Lang and H. Trotter, Frobenius Distributions in GL2-Extensions,
+Lecture Notes in Mathematics, Vol. 504, Springer-Verlag, Berlin-
+New York (1976). Distribution of Frobenius automorphisms in GL2-
+extensions of the rational numbers.
+
+[15] R. J. Lemke Oliver, Almost-primes represented by quadratic polynomi-
+als, Acta Arith. 151 (2012), no. 3, 241–261.
+
+[16] J. Maynard, Small gaps between primes, Ann. of Math. (2) 181 (2015),
+no. 1, 383–413.
+
+[17] J. Maynard, Dense clusters of primes in subsets, Compos. Math. 152
+(2016), no. 7, 1517–1554.
+
+[18] H. L. Montgomery, Zeros of L-functions, Invent. Math. 8 (1969), 346–
+354.
+
+[19] H. L. Montgomery, Ten Lectures on The Interface Between Analytic
+Number Theory and Harmonic Analysis, Vol. 84 of CBMS Regional
+Conference Series in Mathematics, Published for the Conference Board
+of the Mathematical Sciences, Washington, DC; by the American Math-
+ematical Society, Providence, RI (1994), ISBN 0-8218-0737-4.
+
+
+Bounded gaps and Hecke equidistribution
+901
+
+[20] M. R. Murty and K. L. Petersen, A Bombieri-Vinogradov theorem for
+all number fields, Trans. Amer. Math. Soc. 365 (2013), no. 9, 4987–
+5032.
+
+[21] M. R. Murty and Kaneenika Sinha, Effective equidistribution of eigen-
+values of Hecke operators, J. Number Theory 129 (2009), no. 3, 681–
+714.
+
+[22] D. H. J. Polymath, Variants of the Selberg sieve, and bounded intervals
+containing many primes, Res. Math. Sci. 1 (2014), Art. 12, 83.
+
+[23] K. Prachar, Primzahlverteilung, Springer-Verlag, Berlin-G¨ottingen-
+Heidelberg (1957).
+
+[24] P. Sarnak, On the number of points on certain curves and an uncertainty
+principle, in: Number Theory (New York, 1983–84), Vol. 1135 of Lecture
+Notes in Math., 239–253, Springer, Berlin (1985).
+
+[25] J. Thorner, Bounded gaps between primes in Chebotarev sets, Res.
+Math. Sci. 1 (2014), Art. 4, 16.
+
+[26] Y. Zhang, Bounded gaps between primes, Ann. of Math. (2) 179 (2014),
+no. 3, 1121–1174.
+
+Department of Mathematics, Stanford University
+Building 380, Stanford, CA 94305, USA
+E-mail address: jthorner@stanford.edu
+
+Received April 14, 2016
+Accepted July 20, 2018
+
+
+

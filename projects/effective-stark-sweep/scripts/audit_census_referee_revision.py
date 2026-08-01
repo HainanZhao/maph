@@ -79,7 +79,7 @@ def main() -> None:
         "This is a canonical",
         "selected-modulus census",
         "not the full isomorphism-class quotient",
-        "2461+\\frac{11478}{2}=8200",
+        "2461+5739=8200",
         "The converse is false",
         "346-row value-one",
         "packet-value-orbit polynomial",
@@ -90,9 +90,13 @@ def main() -> None:
         "not counted as failures",
         "10^{-38}",
         "RQ-006617",
-        "10.5281/zenodo.21729947",
+        "10.5281/zenodo.21730707",
         "Deleted-prime cover criterion",
         "four-support nondegeneracy",
+        "(iii) and (iv)",
+        "Prop.~4 and Eq.~(9)",
+        "no doubly assigned row",
+        "not a general theorem",
     ))
     if q["population"]["all_zero_X_minus_1_rows"] != 346:
         raise RuntimeError("Q value-one degeneracy changed")

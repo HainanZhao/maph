@@ -1,0 +1,138 @@
+{
+  "artifact_id": "p7-norm-aggregation-route-a-v1",
+  "claim_boundary": "Exact finite ray-quotient and conductor calculation only. It does not establish a joint Hecke large-value, density, or short-interval theorem.",
+  "epistemic_status": "PROVED",
+  "gate": "P7-1-NORM-AGGREGATION",
+  "mod_3": {
+    "character_values": {
+      "4+i": -1,
+      "4-i": -1
+    },
+    "exact_conductor": "(3): only proper divisor is (1), while the quotient character is nontrivial.",
+    "field_cardinality": 9,
+    "fourth_powers": {
+      "1+i": [
+        -4,
+        0
+      ],
+      "1-i": [
+        -4,
+        0
+      ]
+    },
+    "mu4_cardinality": 4,
+    "quotient_cardinality": 2,
+    "status": "PROVED",
+    "unit_cardinality": 8
+  },
+  "mod_pi4": {
+    "character_values": {
+      "4+i": 1,
+      "4-i": 1
+    },
+    "congruences": {
+      "4+i": "i mod (1+i)^4",
+      "4-i": "-i mod (1+i)^4"
+    },
+    "e": 4,
+    "exact_conductor": "(1+i)^4: all proper pi-power quotients after mu_4 are trivial, whereas the displayed quotient has order two.",
+    "mu4_image_cardinality": 4,
+    "quotient_cardinality": 2,
+    "quotient_orbit_sizes": [
+      4,
+      4
+    ],
+    "ring_cardinality": 16,
+    "status": "PROVED",
+    "unit_cardinality": 8
+  },
+  "pi_power_quotients": {
+    "rows": [
+      {
+        "e": 1,
+        "mu4_image_cardinality": 1,
+        "quotient_cardinality": 1,
+        "quotient_orbit_sizes": [
+          1
+        ],
+        "ring_cardinality": 2,
+        "unit_cardinality": 1
+      },
+      {
+        "e": 2,
+        "mu4_image_cardinality": 2,
+        "quotient_cardinality": 1,
+        "quotient_orbit_sizes": [
+          2
+        ],
+        "ring_cardinality": 4,
+        "unit_cardinality": 2
+      },
+      {
+        "e": 3,
+        "mu4_image_cardinality": 4,
+        "quotient_cardinality": 1,
+        "quotient_orbit_sizes": [
+          4
+        ],
+        "ring_cardinality": 8,
+        "unit_cardinality": 4
+      },
+      {
+        "e": 4,
+        "mu4_image_cardinality": 4,
+        "quotient_cardinality": 2,
+        "quotient_orbit_sizes": [
+          4,
+          4
+        ],
+        "ring_cardinality": 16,
+        "unit_cardinality": 8
+      }
+    ],
+    "status": "PROVED"
+  },
+  "ray_class_reduction": {
+    "source_locator": "\u00a71, lines 101--110; \u00a72.1, lines 298--309",
+    "statement": "Since h(Q(i))=1 and there are no real places, Cl(f) is identified with (Z[i]/f)^*/image(mu_4) for the finite moduli used here.",
+    "status": "PROVED"
+  },
+  "replay": {
+    "check_command": "python3 proof/run_p7_norm_aggregation_route_a_v1.py --check",
+    "runtime": {
+      "implementation": "CPython",
+      "json_policy": "stdlib json sort_keys=True; UTF-8; LF; trailing newline",
+      "optimize": 0,
+      "version": "3.12.3"
+    },
+    "script": "proof/run_p7_norm_aggregation_route_a_v1.py",
+    "script_sha256": "9a68612e55dd425b170447bac7bb69db80cef3554daa8fbcbe20b28c0e2274c8",
+    "write_command": "python3 proof/run_p7_norm_aggregation_route_a_v1.py --write"
+  },
+  "resource_contract": {
+    "rss_kib_strictly_less_than": 262144,
+    "wall_seconds_strictly_less_than": 60
+  },
+  "route": "A: exhaustive exact residue-ring quotient calculation",
+  "source_integrity": {
+    "guth_maynard_tex": {
+      "path": "artifacts/sources/arxiv-2405.20552v2/LargevaluesDirichlet17.tex",
+      "sha256": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428"
+    },
+    "p7_preregistration_v2": {
+      "path": "artifacts/p7-hecke-qi-preregistration-v2.json",
+      "sha256": "fa3c98ce481e913f2c8522856114b8cca643d763314e01a36b0aa7cf9110dfc9"
+    },
+    "zaman_tex": {
+      "path": "artifacts/sources/p7-hecke-v1/zaman-1502.05679v4/Explicit_estimates_for_the_zeros_of_Hecke_L-functions.tex",
+      "sha256": "9440e5d28903d641df03e261c5d9f497bfc7f63062d279b082d6077ad8eaf620"
+    }
+  },
+  "witness": {
+    "A_chi_3_17": -2,
+    "A_chi_pi4_17": 2,
+    "factorization": "17=(4+i)(4-i)",
+    "status": "PROVED",
+    "type_mismatch": "The two fixed-character norm-coefficient vectors differ at n=17 (in the dyadic block 16<n<=32)."
+  }
+}

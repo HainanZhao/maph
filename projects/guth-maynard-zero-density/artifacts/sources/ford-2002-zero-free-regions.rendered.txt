@@ -1,0 +1,3994 @@
+ZERO-FREE REGIONS FOR THE RIEMANN ZETA
+FUNCTION
+
+KEVIN FORD
+
+1. Introduction
+
+The methods of Korobov [11] and Vinogradov [25] produce a zero-free
+region for the Riemann zeta function ζ(s) of the following strength: for
+some constant c > 0, there are no zeros of ζ(s) for s = β + it with |t| large
+and
+
+(1.1)
+1 − β ≤
+c
+
+(log |t|)2/3(log log |t|)1/3 .
+
+The principal tool is an upper bound for |ζ(s)| near the line σ = 1. One
+form of this upper bound was given by Richert [17] as
+
+(1.2)
+|ζ(σ + it)| ≤ A|t|B(1−σ)3/2 log2/3 |t|
+(|t| ≥ 3, 1
+
+2 ≤ σ ≤ 1)
+
+with B = 100 and A and unspecified absolute constant.
+Subsequently,
+(1.2) was proved with smaller values of B, the best published value being
+18.497 [12] (the author has a new result [7] that (1.2) holds with B = 4.45,
+A = 76.2).
+Table 1 shows the historical progression of zero-free regions for ζ(s) prior
+to the work of Vinogradov and Korobov.
+
+Zero-free region
+Reference
+
+1 − β ≤
+c
+
+log |t|
+de la Vall´ee Poussin [24], 1899
+
+1 − β ≤ c log log |t|
+
+log |t|
+Littlewood [13], 1922
+
+1 − β ≤
+c
+
+(log |t|)3/4+ε
+Chudakov [5], 1938
+
+Table 1
+
+Research supported in part by National Science Foundation grant DMS-0070618.
+
+1
+
+
+2
+KEVIN FORD
+
+Recently, versions of (1.1) with explicit constants c have been given,
+valid for |t| sufficiently large.
+Popov [15] showed that (1.1) holds with
+c = 0.00006888. Heath-Brown [8] proved (1.1) with c ≈ 0.0269B−2/3, and
+he noted (but did not give details) that the methods of [9] could be used to
+improve 0.0269 to about 0.0467. The main object of this note is to improve
+the constant c as a function of B.
+
+Theorem 1. If (1.2) holds with a certain constant B, then for large |t|,
+ζ(β + it) ̸= 0 for
+
+1 − β ≤
+0.05507B−2/3
+
+(log |t|)2/3(log log |t|)1/3 .
+
+Taking B = 4.45 (from [7]) in Theorem 1 gives the zero-free region (1.1)
+with c =
+1
+
+49.13. In addition, we prove a totally explicit zero-free region of
+type (1.1), with an explicit c and valid for all |t| ≥ 3. This depends on both
+A and B in (1.2)), and may be used to give completely explicit bounds for
+prime counting functions (see e.g. [19], [20], [16]). Cheng [1] proved (1.2)
+with A = 175 and B = 46 and used this to deduce that (1.1) holds for all
+|t| ≥ 3 with the constant c = 1/990. In turn, this result was used to show
+[2] that for all x > 10,
+��π(x) − li(x)
+�� ≤ 11.88x(log x)3/5 exp{− 1
+
+57(log x)3/5(log log x)−1/5},
+
+and that for x ≥ ee44.06, there is a prime between x3 and (x + 1)3 [3].
+
+Theorem 2. Suppose (1.2) holds, T0 ≥ e30000 and
+log T0
+
+log log T0 ≥ 1740
+
+B . Sup-
+pose the zeros β + it of ζ(s) with T0 − 1 ≤ t ≤ T0 all satisfy
+
+(1.3)
+1 − β ≥
+M1B−2/3
+
+(log t)2/3(log log t)1/3 ,
+
+where
+
+M1 = min
+�
+0.05507,
+0.1652
+
+2.9997 + maxt≥T0 X(t)/ log log t
+
+�
+,
+
+and
+
+X(t)=1.1585 log A+0.859+0.2327 log
+�
+B
+
+log log t
+�
++
+�1.313
+
+B4/3 − 2.188
+
+B1/3
+� �
+log log t
+
+log t
+� 1
+
+3 .
+
+Then (1.3) is satisfied for all zeros with t ≥ T0.
+
+Since 0.1652
+
+2.9997 > 0.05507, M1 = 0.05507 when T0 is sufficiently large. By
+classical zero density bounds (see e.g. Chapter 9 of [23]), for some positive
+δ, the number of zeros of ζ(s) is the rectangle 3
+
+4 ≤ ℜs ≤ 1, 0 < ℑs ≤ T
+is O(T 1−δ). Thus for most T0, ζ(s) is zero free in the region 3
+
+4 ≤ ℜs ≤
+1, T0 − 1 ≤ ℑs ≤ T0. Taking such T0 which is sufficiently large, we see that
+Theorem 1 follows from Theorem 2.
+
+
+ZERO-FREE REGIONS FOR THE RIEMANN ZETA FUNCTION
+3
+
+To prove a totally explicit zero-free region of type (1.1) for |t| ≥ 3, we
+make use of classical type (de la Val´ee Poussin type) zero-free regions for
+smaller |t|. These take the form
+
+(1.4)
+1 − β ≤
+c
+
+log |t|
+(|t| ≥ 3).
+
+Stechkin [21] proved (1.4) with c = 1/9.646 (he rounded this to c = 9.65 in
+his Theorem 2). Very tiny refinements were subsequently given by Rosser
+and Schoenfeld [20] and by Ramar´e and Rumely [16]. With an explicit
+version of van der Corput’s bound |ζ(1/2 + it)| ≪ |t|1/6 log |t| for |t| ≥ 3,
+the methods of this paper produce a zero-free region
+
+(1.5)
+1 − β ≤
+1
+
+C1(log |t| + 6 log log |t|) + C2
+,
+(|t| ≥ 3),
+
+with C1 ≈ 3.36 and an explicit C2. Better upper bounds are known for
+|ζ(1/2 + it)| for large t, the best being Oε(|t|89/570+ε) due to Huxley [10].
+The implied constants are too large to improve the zero-free region, how-
+ever. The zero-free region (1.5) also follows from Heath-Brown’s methods
+with the same C1 (and slightly larger C3). In fact, the methods of this pa-
+per do not improve on Heath-Brown’s methods when it comes to classical
+type zero-free regions for ζ(s) or zero-free regions for Dirichlet L-functions
+L(s, χ) when |t| is small and the conductor of χ is large (e.g.
+those in
+[9]). Our methods do improve the Vinogradov-Korobov zero-free regions
+for L(s, χ) when the conductor of χ is fixed and |t| becomes large.
+It is known [14] that all zeros with |ℑρ| ≤ 5.45 × 108 in fact lie on the
+critical line. Still, at t = 5.45 × 108, 6 log log t ≈ 0.895 log t, so improving
+greatly on Stechkin’s region for all |t| ≥ 3 with (1.5) is not possible. Still,
+we can make a modest improvement using the bound
+
+(1.6)
+|ζ(1/2 + it)| ≤ min
+�
+6t1/4 + 57, 3t1/6 log t
+�
+(t ≥ 3).
+
+proved by Cheng and Graham [4] 1.
+
+1[amended July, 2022] The proof in [4] contains an unfixable error, namely Lemma
+3 is false (the best possible estimate in the Lemma was proved by Landau in 1927).
+Since my paper was published in 2002, I became aware of an older bound |ζ(1/2 + it)| ≤
+4(|t|/2π)1/4 for |t| ≥ 128π of R. S. Lehman, Proc. LMS (3) 20 (1970), p. 303–320,
+Lemma 2.
+This is better than the first bound in (1.6) and by itself leads to better
+numerical bounds in Theorem 4. The second bound in (1.6) has been improved recently
+by Trudgian and Hiary, although the published papers also use the erroneous Lemma 3
+from [4]. Correcting the mistake leads to the bound |ζ(1/2+it)| ≤ 0.77t1/6 log |t|, better
+than the 2nd claimed bound in (1.6). For details see the paper by D. Patel, An Explicit
+Upper Bound for |ζ(1 + it)|, arXiv: 2009.00769, and also: Ghaith A. Hiary, Dhir Patel,
+and Andrew Yang, An improved estimate for ζ(1/2 + it), arXiv: 2207.02366
+
+
+4
+KEVIN FORD
+
+Theorem 3. Let T0 = 5.45 × 108 and let
+
+(1.7)
+J(t) = min
+� 1
+
+4 log t + 1.8521, 1
+
+6 log t + log log t + log 3
+�
+.
+
+Then ζ(β + it) ̸= 0 for t ≥ T0 and
+
+(1.8)
+1 − β ≤
+0.04962 −
+0.0196
+
+J(t)+1.15
+
+J(t) + 0.685 + 0.155 log log t.
+
+We note that J(t) is an increasing function of t, and (J(t) + 0.685 +
+0.155 log log t)/ log t is a decreasing function of t. Therefore, we conclude
+as a corollary that
+
+Theorem 4. We have ζ(β + it) ̸= 0 for |t| ≥ 3 and
+
+1 − β ≤
+1
+
+8.463 log |t|.
+
+Further verification that the zeros of ζ(s) for some range of t > 5.45×108
+
+would give an improved constant in Theorem 4, as would an improvement
+in the bound for |ζ(1/2 + it)| in the vicinity of t = T0.
+We now return to the problem of producing a totally explicit zero-free
+regions of Korobov-Vinogradov type. Taking B = 4.45, A = 76.2 (from
+[7]), we find that
+
+1.1585 log A + 0.859 + 0.2327 log
+�
+B
+
+log log t
+�
++
+� 1.313
+
+B4/3 − 2.188
+
+B1/3
+� �
+log log t
+
+log t
+� 1
+
+3
+
+≤ 6.22660 − 0.2327 log log log t − 1.1508
+�log log t
+
+log t
+
+�1/3
+
+≤ 5.6008.
+
+Thus
+
+(1.9)
+M1 ≥ min
+
+�
+
+0.05507,
+0.1652
+
+2.9997 +
+5.6008
+
+log log T0
+
+�
+
+.
+
+We take T0 = e54550, use Theorem 3 for t ≤ T0 + 1, and Theorem 2 plus
+(1.9) for larger t. This gives
+
+Theorem 5. The function ζ(β + it) is nonzero in the region
+
+1 − β ≤
+1
+
+57.54(log |t|)2/3(log log |t|)1/3 ,
+|t| ≥ 3.
+
+2. The zero detector
+
+Lemma 2.1. Suppose f is the quotient of two entire functions of order
+< k, where k is a positive integer, and f(0) ̸= 0. If z is neither a pole nor
+
+
+ZERO-FREE REGIONS FOR THE RIEMANN ZETA FUNCTION
+5
+
+a zero of f, then
+
+f ′(z)
+f(z) =
+�
+
+|ρ|≤2|z|
+
+(z/ρ)k−1
+
+z − ρ
+mρ + Of
+�
+|z|k−1�
+,
+
+��log |f(z)|
+�� ≤
+
+������
+
+�
+
+|ρ|≤2|z|
+log
+���(1 − z/ρ)eg(z/ρ)���
+
+������
++ Of
+�
+|z|k�
+,
+
+where ρ runs over the zeros and poles of f (with multiplicity), g(y) =
+y + 1
+
+2y2 + · · · +
+1
+
+k−1yk−1, and mρ is either 1 (if ρ is a zero of f) or −1 (if
+ρ is a pole of f). The implied constants depend on f.
+
+Proof. By theorems of Weierstrass and Hadamard ([22], Ch. VII, (2.13)
+and (10.1)),
+
+f(z) = ef1(z) �
+
+ρ
+
+�
+(1 − z/ρ)eg(z/ρ)�mρ
+,
+
+where f1 is a polynomial of degree ≤ k. Therefore, assuming that z is not
+a zero or pole of f, we have
+
+log |f(z)| = ℜf1(z) +
+�
+
+ρ
+mρ
+�
+log |(1 − z/ρ)eg(z/ρ)|
+�
+,
+
+f ′(z)
+f(z) = f ′
+1(z) +
+�
+
+ρ
+mρ
+
+�
+1
+
+z − ρ + 1
+
+ρ + z
+
+ρ2 + · · · + zk−2
+
+ρk−1
+
+�
+.
+
+Now suppose |ρ| > 2|z|. We then have
+����
+1
+
+z − ρ + 1
+
+ρ + z
+
+ρ2 + · · · + zk−2
+
+ρk−1
+
+���� =
+����
+(z/ρ)k−1
+
+z − ρ
+
+���� ≤ 2|z|k−1
+
+|ρ|k .
+
+Since �
+ρ 1/|ρ|k converges, the first part of the lemma follows. Similarly
+���(1 − z/ρ)eg(z/ρ)��� ≤ exp{ 2
+
+k| z
+
+ρ|k},
+
+and the second part follows.
+□
+
+The next lemma is the main “zero detector”.
+Instead of integrating
+around a small circle centered at z = z0 (as in [9], Lemma 3.2), we integrate
+over two vertical lines.
+
+Lemma 2.2. Suppose f is the quotient of two entire functions of finite
+order, and does not have a zero or a pole at z = z0 nor at z = 0. Then, for
+all η > 0 except for a set of Lebesgue measure 0 (the exceptional set may
+
+
+6
+KEVIN FORD
+
+depend on f and z0), we have
+
+− ℜf ′(z0)
+
+f(z0) = π
+
+2η
+
+�
+
+|ℜ(z0−ρ)|≤η
+mρℜ cot
+�π(ρ − z0)
+
+2η
+
+�
+
++ 1
+
+4η
+
+� ∞
+
+−∞
+
+log
+��f
+�
+z0 − η + 2ηiu
+
+π
+��� − log
+��f
+�
+z0 + η + 2ηiu
+
+π
+���
+
+cosh2 u
+du,
+
+where ρ runs over the zeros and poles of f (with multiplicity), and mρ is
+either 1 (if ρ is a zero of f) or −1 (if ρ is a pole of f).
+
+Proof. We must exclude η for which the lines ℜz = z0 ±η come “too close”
+to a zero or pole of f, since otherwise the above integral might not converge.
+By hypothesis, for some integer k, f is the quotient of two entire functions
+of order < k. We say a positive real number η is “good” if there is a positive
+number δ such that for every zero/pole ρ of f, |ℜ(ρ − z0) ± η| ≥ δ|ρ|−k.
+The number δ may depend on η. Since �
+
+ρ |ρ|−k converges, the set of η for
+which |ℜ(ρ−z0)±η| ≤ δ|ρ|−k has measure O(δ) (here and throughout this
+proof, implied constants depend on f and z0). Taking δ → 0 shows that
+the measure of “bad” η is 0.
+Suppose now that η is “good” with an associated number δ. We may
+assume that 0 < δ ≤ 1. Let T be a large real number such that T ≥ η,
+T ≥ 2|z0| and for all zeros/poles ρ of f, |ℑ(ρ − z0) ± T| ≥ |ρ|−k. Since
+�
+
+ρ |ρ|−k converges, the set of “bad” T has measure O(1). Consider the
+contour C = C1∪C2∪C3∪C4, where the Cj are the line segments connecting
+the points η − iT, η + iT, −η + iT, −η − iT, η − iT, respectively. Let
+
+I = I1 + I2 + I3 + I4,
+Ij =
+�
+
+Cj
+
+f ′(z + z0)
+f(z + z0) h(z) dz,
+
+where
+
+h(z) = π
+
+2η cot
+�πz
+
+2η
+
+�
+.
+
+By Cauchy’s Residue Theorem,
+
+(2.1)
+I = f ′(z0)
+
+f(z0) +
+�
+
+|ℜ(ρ−z0)|≤η
+|ℑ(ρ−z0)|≤T
+
+mρh(ρ − z0).
+
+There is a holomorphic branch of log f(z + z0) on C∗, the contour C cut
+at the point η. Applying integration by parts, and noting that h(η) = 0,
+
+
+ZERO-FREE REGIONS FOR THE RIEMANN ZETA FUNCTION
+7
+
+we have
+
+I = lim
+ε→0+ [h(z) log f(z + z0)]η−iϵ
+η+iϵ −
+1
+2πi
+
+�
+
+C∗ h′(z) log f(z + z0) dz
+
+= −(J1 + J2 + J3 + J4),
+Jj =
+1
+2πi
+
+�
+
+Cj
+h′(z) log f(z + z0) dz.
+(2.2)
+
+The number of zeros/poles ρ with |ρ| ≤ x is O(xk), and |ρ| ≫ 1 for every ρ.
+By our assumptions about T, when z ∈ C we have |z +z0| ≪ T. Therefore,
+by Lemma 2.1 and our assumption about η,
+����
+f ′(z + z0)
+f(z + z0)
+
+���� ≪ T k−1 +
+�
+
+|ρ|≤2|z|
+
+|(z + z0)/ρ|k−1
+
+|z + z0 − ρ|
+
+≪ T k−1 + T k−1
+
+|ρ|k−1
+|ρ|k
+
+δ
+≪ δ−1T k.
+
+Likewise, using the second part of Lemma 2.1,
+
+| log |f(z + z0)|| = O(T 2k−1 + T k log(Tδ−1))
+
+for z ∈ C. Thus, there is a branch of log f(z + z0) with
+
+| log f(z + z0)| ≪ T 2kδ−1.
+
+This is important to the estimation of J2 and J4. Since
+
+h′(z) = − π2
+
+4η2 csc2
+�πz
+
+2η
+
+�
+,
+
+we have |h′(η ±iT)| ≪ η−2e−πT/(2η). Therefore, |J2|+|J4| → 0 as T → ∞.
+Parameterizing the line segments C1 and C3 with z = ±η+ 2ηiu
+
+π
+and taking
+real parts gives
+
+ℜ(J1 + J3) = 1
+
+4η
+
+�
+πT
+2η
+
+− πT
+
+2η
+
+log
+��f
+�
+z0 − η + 2ηiu
+
+π
+��� − log
+��f
+�
+z0 + η + 2ηiu
+
+π
+���
+
+cosh2 u
+du.
+
+Recalling (2.1) and (2.2), this proves the lemma upon letting T → ∞.
+□
+
+3. Bounds for ζ(s)
+
+Lemma 3.1. Suppose 1 < σ ≤ 1.06 and t is real. Then
+
+1
+
+ζ(σ) ≤ |ζ(σ + it)| ≤ ζ(σ) ≤ 0.6 +
+1
+
+σ − 1
+
+and, for all σ > 1 and real t we have
+����−ζ′
+
+ζ (σ + it)
+���� <
+1
+
+σ − 1.
+
+
+8
+KEVIN FORD
+
+Proof. For the first line of inequalities, we start with
+
+|ζ(σ + it)| ≤
+
+∞
+�
+
+n=1
+n−σ = ζ(σ)
+
+and similarly
+
+|ζ(σ + it)|−1 =
+
+�����
+
+∞
+�
+
+n=1
+µ(n)n−σ−it
+����� ≤
+
+∞
+�
+
+n=1
+n−σ = ζ(σ).
+
+Next, since x−σ is convex and e−y ≤ 1 − y + 1
+
+2y2 for 0 ≤ y ≤ 1, we have
+
+ζ(σ) ≤ 1 +
+� ∞
+
+3/2
+
+du
+uσ = 1 + (3/2)−(σ−1)
+
+σ − 1
+
+≤ 1 +
+1
+
+σ − 1 − log(1.5) + 1
+
+2(σ − 1) log2(1.5)
+
+≤ 0.6 +
+1
+
+σ − 1.
+
+In fact, near σ = 1 we have ζ(σ) =
+1
+
+σ−1 + γ + O(σ − 1), where γ =
+0.5772 · · · is the Euler-Mascheroni constant (see e.g. [23], (2.1.16)). The
+last inequality in the lemma follows from | − ζ′
+
+ζ (σ + it)| ≤ − ζ′
+
+ζ (σ) and
+
+−ζ′(σ) =
+
+∞
+�
+
+n=1
+
+
+
+ �
+
+m≥n+1
+m−σ
+
+
+
+ log
+�n + 1
+
+n
+
+�
+<
+
+∞
+�
+
+n=1
+
+n1−σ
+
+σ − 1
+1
+n = ζ(σ)
+
+σ − 1.
+
+□
+
+Lemma 3.2. For real u,
+����
+ζ′(− 1
+
+2 + iu)
+
+ζ(− 1
+
+2 + iu)
+
+���� ≤ 4.62 + 1
+
+2 log(1 + u2/9).
+
+Proof. (Corrected July, 2022). By the functional equation for ζ(s) (cf. [6],
+Ch. 12, (8)–(10)),
+
+−ζ′(w)
+
+ζ(w) = ζ′(1 − w)
+
+ζ(1 − w) −log π−γ−
+
+∞
+�
+
+n=1
+
+�
+1
+
+w + 2n +
+1
+
+1 − w + 2n − 1
+
+n
+
+�
++
+1
+
+w(w − 1).
+
+Now set w = − 1
+
+2 + iu. A short numerical calculation shows that
+
+max
+u
+
+����− log π − γ +
+1
+
+(−1/2 + iu)(−3/2 + iu)
+
+���� ≤ 1.877
+
+and that
+|ζ′(1 − w)/ζ(w)| ≤ −ζ′(3/2)/ζ(3/2) ≤ 1.506.
+
+
+ZERO-FREE REGIONS FOR THE RIEMANN ZETA FUNCTION
+9
+
+Therefore,
+����
+ζ′(w)
+ζ(w)
+
+���� ≤ 3.383 +
+
+∞
+�
+
+n=1
+
+����
+u2 + n − 3/4 + 2iu
+
+n(4n2 + 2n − 3/4 + u2 + 2iu)
+
+����
+
+≤ 4.383 +
+
+∞
+�
+
+n=1
+
+n − 3/4
+
+n(4n2 + 2n − 3/4) +
+
+∞
+�
+
+n=2
+
+|u2 + 2iu|
+n(4n2 + u2)
+
+≤ 4.542 + |u|
+�
+
+u2 + 4
+� ∞
+
+3/2
+
+dx
+
+x(4x2 + u2)
+
+= 4.542 +
+
+√
+
+u2 + 4
+2|u|
+log(1 + u2/9)
+
+≤ 4.62 + 1
+
+2 log(1 + u2/9),
+
+the last line following from another numerical calculation.
+□
+
+Lemma 3.3. We have
+�
+
+ρ
+
+1
+
+|ρ|2 ≤ 0.0463,
+
+where the sum is over all of the non-trivial zeros of ζ(s).
+
+Proof. By ([6], Ch. 9, (10) an (11)), we have
+�
+
+ρ
+
+ℜρ
+|ρ|2 = 1 + 1
+
+2γ − 1
+
+2 log(4π).
+
+If ζ(ρ) = 0 then ζ(1 − ρ) = 0, and the minimum of |ℑρ| is > 14.1. Thus
+�
+
+ρ
+
+1
+
+|ρ|2 =
+�
+
+ρ
+
+� ℜρ
+
+|ρ|2 +
+ℜρ
+
+|1 − ρ|2
+
+�
+
+≤
+�
+1 +
+�
+
+1 + 1/14.12
+� �
+
+ρ
+
+ℜρ
+|ρ|2
+
+≤ 0.0463.
+
+□
+
+Lemma 3.4. Let us fix σ ∈ [ 1
+
+2, 1), and suppose for all t ≥ 3 we have
+
+(3.1)
+|ζ(σ + iy)| ≤ XtY (log t)Z
+(1 ≤ |y| ≤ t),
+
+where X, Y and Z are positive constants with Y + Z ≥ 0.1. If 0 < a ≤ 1
+
+2,
+t ≥ 100 and 1
+
+2 ≤ σ ≤ 1 − 1/t, then
+� ∞
+
+−∞
+
+log |ζ(σ + it + iau)|
+
+cosh2 u
+du ≤ 2(log X + Y log t + Z log log t).
+
+
+10
+KEVIN FORD
+
+Proof. First, there is no difficulty if ζ(σ + it + iau) = 0 for some points
+along the path of integration. Since all zeros have finite order, the integral
+in the lemma always converges. When − 2t
+
+a ≤ u ≤ −t−1
+
+a
+, (3.1) gives |ζ(σ +
+it + iau)| ≤ XtY (log t)Z. For −t−1
+
+a
+≤ u ≤ −t+3
+
+a
+, we use the identity ([23],
+(2.1.4))
+
+ζ(s) =
+1
+
+s − 1 + 1
+
+2 + s
+� ∞
+
+1
+
+⌊x⌋ − x + 1/2
+
+xs+1
+dx.
+
+Writing s = σ + it + iau, it follows that |s − 1| ≥ 1/t and |s| ≤
+√
+
+10 and
+thus log |ζ(s)| ≤ log(t + 4) for this range of u. For u ≥ 3−t
+
+a , we use the
+inequalities log(1 + x) ≤ x and log(1 + x) ≤ x − 1
+
+2x2 + 1
+
+3x3, both valid for
+all x > −1. Then
+
+log |ζ(σ + it + iau)| ≤ log X + Y log(t + au) + Z log log(t + au)
+
+≤ log(XtY (log t)Z) +
+�
+Y +
+Z
+
+log t
+
+� �au
+
+t − (au)2
+
+2t2
++ (au)3
+
+3t3
+
+�
+.
+
+Similarly, using log(1 + x) ≤ x, for u ≤ − 2t
+
+a
+
+log |ζ(σ + it + iau)| ≤ log(XtY (log t)Z) +
+�
+Y +
+Z
+
+log t
+
+� �−au − 2t
+
+t
+
+�
+.
+
+Combining these estimates together with
+� ∞
+−∞(cosh u)−2 du = 2 yields
+
+� ∞
+
+−∞
+
+log |ζ(σ + it + iau)|
+
+cosh2 u
+du ≤ 2(log X + Y log t + Z log log t) + E,
+
+where
+
+E =
+4 log(t + 4)
+a cosh2 � 3−t
+
+a
+�
+
++
+�
+Y +
+Z
+
+log t
+
+� �� − 2t
+
+a
+
+−∞
+
+−au − 2t
+t cosh2 u du +
+� ∞
+
+3−t
+
+a
+
+au
+t − (au)2
+
+2t2
++ (au)3
+
+3t3
+
+cosh2 u
+du
+
+�
+
+.
+
+Now 1
+
+4e2|u| ≤ cosh2 u ≤ e2|u|, a ≤ 1
+
+2 and t ≥ 100. Hence
+
+ae(t−6)/a ≥ 2e2t−12.
+
+
+ZERO-FREE REGIONS FOR THE RIEMANN ZETA FUNCTION
+11
+
+Therefore
+
+E ≤ 16 log(t + 4)
+
+ae2(t−3)/a
++
+�
+Y +
+Z
+
+log t
+
+� �
+4a
+t e−4t/a
+� ∞
+
+0
+ve−2v dv
+
++
+� ∞
+
+−∞
+
+au
+t − (au)2
+
+2t2
++ (au)3
+
+3t3
+
+cosh2 u
+du +
+� ∞
+
+t−3
+
+a
+
+au
+t + (au)2
+
+2t2
++ (au)3
+
+3t3
+
+1
+4e2u
+du
+�
+
+≤ 32 log(t + 4)
+
+et/a+2t−12
++
+�
+Y +
+Z
+
+log t
+
+� �e−4t/a
+
+t
+− π2a2
+
+12t2 + 8a3
+
+t3
+
+� ∞
+
+2t−6
+u3e−2u du
+�
+
+≤ e−t/a +
+�
+Y +
+Z
+
+log t
+
+� �
+e−4t/a − π2
+
+12
+a2
+
+t2 + 48a3e−4t+12
+�
+
+≤ e−t/a − 0.1
+
+log t
+a2
+
+2t2
+
+≤ 0.
+
+□
+
+4. Detecting zeros of ζ(s)
+
+From now on, ρ will denote a zero of ζ(s) and in summations over the
+zeros, each zero is counted according to its multiplicity. Since ζ(s) = ζ(¯s),
+when proving zero-free regions we restrict our attention to the upper half
+plane.
+
+Lemma 4.1. Suppose (1.2) holds. Let s = σ + it, η > 0, σ − η ≥ 1/2,
+1 ≤ σ ≤ 1 + η and t ≥ 100. If S is any subset of {z : σ − η ≤ ℜz ≤ 1},
+then
+
+−ℜ ζ′(s)
+
+ζ(s) ≤ −
+�
+
+ρ∈S,ζ(ρ)=0
+ℜ π
+
+2η cot
+�π(s − ρ)
+
+2η
+
+�
+
++ 1
+
+2η
+
+�2
+
+3 log log t + B(1 − σ + η)3/2 log t + log A
+�
+
+− 1
+
+4η
+
+� ∞
+
+−∞
+
+log |ζ(s + η + 2ηiu/π)|
+
+cosh2 u
+du.
+
+Proof. We apply Lemma 2.2 with f = ζ and z0 = s, noting that ζ(0) ̸= 0,
+all zeros have real part < 1 and that ℜ cot z ≥ 0 for 0 ≤ ℜz ≤ π
+
+2 . Thus the
+right side in the conclusion of Lemma 2.2 is increased if we omit from the
+sum any subset of the zeros. Then we apply (1.2) and Lemma 3.4 (with
+X = A, Y = B(1 − σ + η)3/2, Z = 2/3, a = 2η/π) to the integral over the
+line ℜz = σ −η. Note also that the integral on the right side in Lemma 4.1
+always converges by Lemma 3.1. Therefore, if η is “bad” with respect to
+Lemma 2.2, we can apply the above argument with a sequence of numbers
+η′ tending to η from above.
+□
+
+
+12
+KEVIN FORD
+
+We next require an upper bound on the number of zeros close to a point
+1 + it. Here N(t, R) denotes the number of zeros ρ with |1 + it − ρ| ≤ R.
+
+Lemma 4.2. Assume (1.2) holds with A > 1 and B > 0.
+Then, for
+0 < R ≤ 1/4, t ≥ 100,
+
+N(t, R) ≤ 1.3478R3/2B log t + 0.49 + log A − log R + 2
+
+3 log log t
+
+1.879
+.
+
+Proof. Apply Lemma 4.1 with s = 1 + 0.6421R + it, η = 2.5R (so that
+σ − η ≥ 1
+
+2) and S = {z : |1 + it − z| ≤ R, ℜz ≤ 1}. These parameters were
+chosen to minimize the first term on the right side of the inequality in the
+lemma. By Lemma 3.1, if v is real then
+����
+ζ′
+
+ζ (s + η + iv)
+���� ≤
+1
+
+3.1421R,
+
+|ζ(s + η + iv)|−1 ≤ ζ(1 + 3.1421R) ≤ 0.6 +
+1
+
+3.1421R.
+(4.1)
+
+Next, in the region U = {z : ℜz ≥ 0.6421, |z − 0.6421| ≤ 1}, we prove
+
+(4.2)
+ℜπ
+
+5 cot
+�πz
+
+5
+
+�
+≥ 0.3758.
+
+By the maximum modulus principle, it suffices to prove (4.2) on the bound-
+ary of U. Using
+
+ℜ cot(x + iy) =
+2 sin(2x)
+
+e2y + e−2y − 2 cos(2x),
+
+the minimum of ℜ cot(x + iy) on the vertical segment x = 0.6421π/5,
+|y| ≤ π/5 occurs at the endpoints. On the semicircular part of the boundary
+of U, we verified (4.2) by a short computation using the computer algebra
+package Maple. In particular, the relative minima on the boundary of U
+occur at z = 1.6421 and z = 0.6421 ± i. Therefore, by (4.1), (4.2) and
+Lemma 4.1,
+
+−
+1
+
+3.1421R ≤ −0.3758N(t, R)
+
+R
++ 1
+
+5R
+
+�2
+
+3 log log t+
+
+(1.8579R)3/2B log t + log A + log
+�
+0.6 +
+1
+
+3.1421R
+��
+.
+
+Since log(0.6 +
+1
+
+3.1421R) ≤ − log(3.1421R) + 1.88526R ≤ − log R − 0.6735,
+the lemma follows.
+□
+
+Remark. A qualitatively similar result may also be proved, in a similar
+way, from Lemma 2 of [8], or from Landau’s lemma (§3.9 of [23]).
+
+
+ZERO-FREE REGIONS FOR THE RIEMANN ZETA FUNCTION
+13
+
+Lemma 4.3. Suppose t ≥ 10000, 0 < v ≤ 1/4, and (1.2) holds with A > 1,
+B > 0. Then
+�
+
+|1+it−ρ|≥v
+
+1
+
+|1 + it − ρ|2 ≤ (6.132 + 5.392B(v−1/2 − 2)) log t + 13.5
+
+− 8.5 log A + 4 log log t +
+
+log A−log v+ 2
+
+3 log log t
+
+1.879
++ 0.224 − N(t, v)
+
+v2
+.
+
+Proof. Divide the zeros with |1 + it − ρ| ≥ v into three sets:
+
+Z1 = {ρ : |ℑρ − t| ≥ 1},
+
+Z2 = {ρ ̸∈ Z1 : |1 + it − ρ| ≥ 1
+
+4 and |it − ρ| ≥ 1
+
+4},
+
+Z3 = {ρ : ρ ̸∈ Z2, ρ ̸∈ Z1 and |1 + it − ρ| ≥ v}.
+
+For i = 1, 2, 3, let Si be the sum over ρ ∈ Zi of |1 + it − ρ|−2. By Theorem
+19 of [18], the number, N(T), of nontrivial zeros of ζ(s) with imaginary
+part in [0, T] satisfies
+
+(4.3)
+N(T) = T
+
+2π log T
+
+2π − T
+
+2π + 7
+
+8 + Q(T),
+
+where
+
+|Q(T)| ≤ 0.137 log T + 0.443 log log T + 1.588
+(T ≥ 2).
+
+Since there are no zeros ρ with |ℑρ| ≤ 14,
+
+S1 ≤
+� ∞
+
+t+1
+
+dN(u)
+(u − t)2 +
+� t−1
+
+14
+
+dN(u)
+(t − u)2 +
+� ∞
+
+14
+
+dN(u)
+(u + t)2 = I1 + I2 + I3.
+
+Since dN(u) =
+1
+2π log u
+
+2π +dQ(u), log(t+x) ≤ log t+ x
+
+t and log log(t+x) ≤
+log log t +
+x
+
+t log t, we have
+
+I1 ≤ 1
+
+2π
+
+� ∞
+
+1
+
+log(t + x) − log 2π
+
+x2
+dx + |Q(t + 1)| + 2
+� ∞
+
+1
+
+|Q(t + x)|
+
+x3
+dx
+
+=
+
+�
+1 + 1
+
+t
+�
+log(1 + t) − log(2π)
+
+2π
++ |Q(t + 1)| + 2
+� ∞
+
+1
+
+|Q(t + x)|
+
+x3
+dx
+
+≤ 0.4332 log t + 0.886 log log t + 2.884 + 2
+� ∞
+
+1
+
+0.1851x/t
+
+x3
+dx
+
+≤ 0.4332 log t + 0.886 log log t + 2.885.
+
+Similarly, noting that Q(14) ≥ 0, we get
+
+I2 ≤ 1
+
+2π log
+� t
+
+2π
+
+�
++ 2
+max
+14≤u≤t−1 |Q(u)|
+
+≤ 0.4332 log t + 0.886 log log t + 2.884
+
+
+14
+KEVIN FORD
+
+and
+
+I3 ≤ 1
+
+2π
+
+� ∞
+
+14
+
+log
+� u+t
+
+2π
+�
+
+(u + t)2 du + 2
+� ∞
+
+14
+
+|Q(u)|
+(u + t)3 du ≤ 0.00014.
+
+Thus
+
+(4.4)
+S1 ≤ 0.8664 log t + 1.772 log log t + 5.77.
+
+Next let N2 = |Z2| and N3 = |Z3|. By (4.3),
+
+N2 + N3 = N(t + 1) − N(t − 1) − N(t, v)
+
+≤ 0.59231 log t + 0.886 log log t + 2.591 − N(t, v).
+(4.5)
+
+In the sum S2, each zero on the critical line contributes ≤ 4 and each pair
+of zeros ρ = β + iγ, ρ′ = 1 − β + iγ with β > 1/2 contributes at most
+42 + (4/3)2 to the sum. Therefore,
+
+S2 ≤ 80N2
+
+9
+.
+
+For S3, N(t, 1/4) of the zeros contribute at most (4/3)2 each, since N3 +
+N(t, v) = 2N(t, 1/4). By partial summation,
+
+S3 ≤ 16N(t, 1/4)
+
+9
++
+� 1/4
+
+v
+
+dN(t, u)
+
+u2
+
+= 160
+
+9 N(t, 1/4) − N(t, v)
+
+v2
++ 2
+� 1/4
+
+v
+
+N(t, u)
+
+u3
+du
+
+= 80N3
+
+9
++
+�80
+
+9 − 1
+
+v2
+
+�
+N(t, v) + 2
+� 1/4
+
+v
+
+N(t, u)
+
+u3
+du.
+
+By Lemma 4.2,
+
+2
+� 1/4
+
+v
+
+N(t, u)
+
+u3
+du ≤
+�log A + 2
+
+3 log log t
+
+1.879
++ 0.49
+� �
+v−2 − 16
+�
+
++ 5.3912B
+�
+v−1/2 − 2
+�
+log t +
+1
+
+1.879
+
+�
+8 − 16 log 4 − 1 + 2 log v
+
+2v2
+
+�
+.
+
+Therefore, using (4.5), we obtain
+
+S2 + S3 ≤ (5.2650 + 5.3912B(v−1/2 − 2)) log t + 2.2 log log t − 8.5 log A
+
++ 7.65 + 1
+
+v2
+
+�log A − log v + 2
+
+3 log log t
+
+1.879
++ 0.224
+�
+− N(t, v)
+
+v2
+.
+
+Combining this with (4.4) gives the lemma.
+□
+
+Lemma 4.4. Suppose that ℜz ≥ 0 and |z| ≤ π/2. Then
+
+ℜ
+�
+cot z − 1
+
+z + 4z
+
+π2
+
+�
+≥ 0.
+
+
+ZERO-FREE REGIONS FOR THE RIEMANN ZETA FUNCTION
+15
+
+Proof. By the maximum modulus principle it suffices to prove the inequal-
+ity on the boundary of the region.
+On the vertical segment z = iy,
+−π/2 ≤ y ≤ π/2, the left side is zero.
+When |z| = π/2, z = x + iy
+and x ≥ 0, the left side is
+2 sin(2x)
+
+e2y + e−2y − 2 cos(2x) −
+x
+
+x2 + y2 + 4x
+
+π2 =
+2 sin(2x)
+
+e2y + e−2y − 2 cos(2x) ≥ 0.
+
+This proves the lemma.
+□
+
+The next two lemmas are related to Heath-Brown’s method for detecting
+zeros from [9]. These give bounds for a “mollified” sum, similar to Lemmas
+5.1 and 5.2 of [9].
+
+Lemma 4.5. Suppose f is a non-negative real function which has contin-
+uous derivative on (0, ∞). Suppose the Laplace transform
+
+F(z) =
+� ∞
+
+0
+f(y)e−zy dy
+
+of f is absolutely convergent for ℜz > 0. Let F0(z) = F(z) − f(0)/z and
+suppose
+
+(4.6)
+|F0(z)| ≤ D
+
+|z|2
+(ℜ z ≥ 0, |z| ≥ η),
+
+where 0 < η ≤ 3
+
+2. If ℜs > 1 and ℑs ≥ 0, then
+
+K(s) :=
+
+∞
+�
+
+n=1
+Λ(n)n−sf(log n)
+
+= −f(0)ζ′(s)
+
+ζ(s) −
+�
+
+ρ
+F0(s − ρ) + F0(s − 1) + E,
+
+where |E| ≤ D(1.72 + 1
+
+3 log(1 + ℑs)).
+
+Proof. We follow the proof of Lemma 5.1 of [9]. Suppose s = σ + it and
+1 < α < σ. Define
+
+I =
+1
+2πi
+
+� α+i∞
+
+α−i∞
+−ζ′(w)
+
+ζ(w) F0(s − w) dw.
+
+Since −ζ′(w)/ζ(w) = �
+
+n Λ(n)n−w, the sum converging uniformly on ℜw =
+α, we may integrate term by term. Thus I = �
+
+n Λ(n)Jn, where
+
+Jn =
+1
+2πi
+
+� α+i∞
+
+α−i∞
+n−wF0(s − w) dw = n−s
+
+2πi
+
+� σ−α+i∞
+
+σ−α−i∞
+nuF0(u) du.
+
+The integral on the right converges absolutely by (4.6). Since
+
+F0(z) = 1
+
+z
+
+� ∞
+
+0
+e−zyf ′(y) dy,
+
+
+16
+KEVIN FORD
+
+we have
+
+Jn = n−s
+
+2πi
+
+� ∞
+
+0
+f ′(y)
+� σ−α+i∞
+
+σ−α−i∞
+
+(ne−y)u
+
+u
+du dy
+
+= n−s
+� log n
+
+0
+f ′(y) dy = n−s (f(log n) − f(0)) .
+
+Thus
+
+(4.7)
+I = K(s) + f(0)ζ′(s)
+
+ζ(s) .
+
+Moving the line of integration to ℜw = −1/2, we have
+
+(4.8) I =
+1
+2πi
+
+� −1/2+i∞
+
+−1/2−i∞
+−ζ′(w)
+
+ζ(w) F0(s − w) dw −
+�
+
+ρ
+F0(s − ρ) + F0(s − 1).
+
+By (4.6) and Lemma 3.2, the integral in (4.8) is ≤ D
+
+2πI′, where
+
+I′ ≤
+� ∞
+
+−∞
+
+4.62 + 1
+
+2 log(1 + u2/9)
+
+9/4 + (u − t)2
+du
+
+= 3.08π + 1
+
+3
+
+� ∞
+
+−∞
+
+log(1 + (t/3 + v/2)2)
+
+1 + v2
+dv
+
+≤ 3.08π + 1
+
+3
+
+� ∞
+
+−∞
+
+log(1 + t2) + log(1 + v2)
+
+1 + v2
+dv
+
+≤ 10.8 + 2π log(1 + t)
+
+3
+.
+
+The lemma now follows from (4.7) and (4.8).
+□
+
+Remarks. Examples of functions f satisfying the conditions of Lemma
+4.5 are those with compact support (say [0, x0]) and with f ′′ continuous
+and bounded on (0, x0).
+These are the functions considered in [9].
+To
+see that (4.6) holds, apply integration by parts twice, noting that f(x0) =
+f ′(x0) = 0. This gives
+
+F0(z) = z−2
+�
+f ′(0+) +
+� x0
+
+0
+e−ztf ′′(t) dt
+�
+.
+
+Lemma 4.6. Suppose 0 < η ≤ 1
+
+2 and (1.2) holds with A > 1, B > 0. Let
+f have compact support and satisfy (4.6). Suppose s = 1+it with t ≥ 1000.
+
+
+ZERO-FREE REGIONS FOR THE RIEMANN ZETA FUNCTION
+17
+
+Then
+
+ℜK(s) ≤ −
+�
+
+|1+it−ρ|≤η
+ℜ
+�
+F(s − ρ) + f(0)
+� π
+
+2η cot
+�π(s − ρ)
+
+2η
+
+�
+−
+1
+
+s − ρ
+
+��
+
++ f(0)
+
+2η
+
+�2 log log t
+
+3
++ Bη3/2 log t + log A − 1
+
+2
+
+� ∞
+
+−∞
+
+log |ζ(s + η + 2ηui
+
+π )|
+
+cosh2 u
+du
+�
+
++ D
+
+
+
+1.8 + log t
+
+3
++
+�
+
+|1+it−ρ|≥η
+
+1
+
+|1 + it − ρ|2
+
+
+
+ .
+
+In addition,
+K(1) ≤ F(0) + 1.8D.
+
+Proof. Suppose that σ > 1. By Lemma 4.5,
+
+K(σ) ≤ −f(0)ζ′(σ)
+
+ζ(σ) + F0(σ − 1) + 1.72D + D
+�
+
+ρ
+
+1
+
+|1 − ρ|2 .
+
+Since ζ(ρ) = 0 implies ζ(1 − ρ) = 0, we may replace |1 − ρ|2 by |ρ|2 in the
+last sum. Using Lemmas 3.1 and 3.3, we obtain
+
+K(σ) ≤ f(0)
+
+σ − 1 + F0(σ − 1) + 1.8D
+
+= F(σ − 1) + 1.8D.
+(4.9)
+
+When t ≥ 1000 and s = σ + it, ℜF0(s − 1) ≤ |F0(s − 1)| ≤ Dt−1 ≤ 0.001D.
+Also by (4.6),
+�
+
+|1+it−ρ|>η
+|F0(s − ρ)| ≤ D
+�
+
+|1+it−ρ|>η
+
+1
+
+|1 + it − ρ|2 .
+
+Therefore, combining Lemma 4.1 (with S = {z : ℜz ≤ 1, |1 + it − z| ≤ η})
+and Lemma 4.5 gives
+
+ℜK(s) ≤ −
+�
+
+|1+it−ρ|≤η
+ℜ
+�
+F(s − ρ) + f(0)
+� π
+
+2η cot
+�π(s − ρ)
+
+2η
+
+�
+−
+1
+
+s − ρ
+
+��
+
++ f(0)
+
+2η
+
+�2
+
+3 log log t + Bη3/2 log t + log A − 1
+
+2
+
+� ∞
+
+−∞
+
+log |ζ(s + η + 2ηui
+
+π )|
+
+cosh2 u
+du
+�
+
++ D
+
+
+
+1.8 + log t
+
+3
++
+�
+
+|1+it−ρ|>η
+
+1
+
+|1 + it − ρ|2
+
+
+
+ .
+
+(4.10)
+
+Since f has compact support, K(s) and F(s) are both entire functions.
+Also, on the right side of (4.10), | log |ζ(α + iβ)|| ≤ | log ζ(α)| when α > 1
+
+
+18
+KEVIN FORD
+
+(by Lemma 3.1). Thus we may let σ → 1+ in (4.9) and (4.10), and this
+proves the lemma.
+□
+
+5. A trigonometric inequality
+
+We use a trigonometric inequality that is very similar to what is used in
+standard treatments. For any real numbers a1, a2 we have
+
+(5.1)
+
+4
+�
+
+j=0
+bj cos(jθ) = 8(cos θ + a1)2(cos θ + a2)2 ≥ 0
+(θ ∈ R),
+
+where
+
+b4 = 1,
+b3 = 4(a1 + a2),
+b2 = 4(1 + a2
+1 + a2
+2 + 4a1a2),
+
+b1 = (a1 + a2)(12 + 16a1a2),
+b0 = b2 − 1 + 8(a1a2)2.
+(5.2)
+
+Lemma 5.1. Suppose a1, a2 are real numbers and define b0, . . . , b4 by (5.2).
+Suppose that η > 0 and t1, t2 are real numbers. Then
+
+� ∞
+
+−∞
+
+1
+
+cosh2 u
+
+4
+�
+
+j=1
+bj log |ζ (1 + η + ijt1 + iut2)| du ≥ −2b0 log ζ(1 + η).
+
+Remark. Lemma 5.1 marks a departure from other treatments, where
+the bound |ζ(1+η +iw)| ≥ ζ(1+η)−1 is used at the outset (in the context
+of a different integral), which in our situation gives
+
+I ≥ −2(b1 + · · · + b4) log ζ(1 + η).
+
+The new idea is to combine the log |ζ(·)| terms using (5.1) to significantly
+reduce this part of the estimation. The idea in Lemma 6.1 accounts for
+the majority of the improvement over Heath-Brown’s zero-free region. See
+also the remarks at the end of section 8.
+
+Proof. Denote by I the integral in the lemma. We begin with the Euler
+product representation for ζ(s) in the form
+
+(5.3)
+log |ζ(s)| = −ℜ
+�
+
+p
+log(1 − p−s) = ℜ
+�
+
+p
+m≥1
+
+1
+mp−ms
+(ℜs > 1).
+
+Next, if y ̸= 0,
+
+(5.4)
+U(y) :=
+� ∞
+
+−∞
+
+eiyu
+
+cosh2 u du =
+πy
+
+sinh(πy/2) ≥ 0,
+
+
+ZERO-FREE REGIONS FOR THE RIEMANN ZETA FUNCTION
+19
+
+which can be proved by contour integration. By (5.2), (5.3) and (5.4),
+
+I =
+�
+
+p,m
+
+1
+mp−m(1+η)ℜ
+
+
+
+
+4
+�
+
+j=1
+bjp−ijmt1
+� ∞
+
+−∞
+
+p−imut2
+
+cosh2 u du
+
+
+
+
+
+=
+�
+
+p,m
+
+1
+mp−m(1+η)U(mt2 log p)
+
+4
+�
+
+j=1
+bj cos(jmt log p)
+
+≥ −b0
+�
+
+p,m
+
+1
+mp−m(1+η)U(mt2 log p).
+
+Since U(y) ≤ 2 for all y, we obtain I ≥ −2b0 log ζ(1 + η), as claimed.
+□
+
+6. The functions f, F and K
+
+Suppose that t ≥ 10000, ζ(β + it) = 0 and λ is a number with 0 < λ ≤
+1 − β such that
+
+(6.1)
+ζ(s) ̸= 0
+(1 − λ < ℜs ≤ 1, t − 1 ≤ ℑs ≤ 4t + 1).
+
+Let f be a function with compact support, define F, F0 and K as in
+Lemma 4.5, and assume that (4.6) holds. Let a1, a2 be real numbers and
+define b0, . . . , b4 by (5.2). Put b5 = b1 + b2 + b3 + b4. By (5.1),
+
+(6.2)
+ℜ
+
+4
+�
+
+j=0
+bjK(1 + ijt) =
+
+∞
+�
+
+n=1
+Λ(n)n−1f(log n)
+
+4
+�
+
+j=0
+bj cos(jt log n) ≥ 0.
+
+We next apply Lemma 4.6 with s = 1 and s = 1 + ijt (j = 1, 2, 3, 4).
+Together with Lemma 5.1 (with t2 = 2η
+
+π ) and (6.2), this gives
+
+0 ≤ − ℜ
+�
+
+1≤j≤4
+|1+ijt−ρ|≤η
+
+bj
+�
+F(1 + ijt − ρ) + f(0)
+�
+π
+2η cot
+�
+π(1+ijt−ρ)
+
+2η
+�
+−
+1
+
+1+ijt−ρ
+��
+
++ f(0)
+
+2η
+
+�
+b5
+�
+2
+3L2 + Bη3/2L1 + log A
+�
++ b0 log ζ(1 + η)
+�
++ b0F(0)
+
++ D
+�
+b5
+�
+1.8 + L1
+
+3
+�
++ 1.8b0 +
+
+4
+�
+
+j=1
+bj
+�
+
+|1+ijt−ρ|≥η
+
+1
+
+|1 + ijt − ρ|2
+
+�
+,
+
+(6.3)
+
+where for brevity we write
+
+L1 = log(4t + 1),
+L2 = log log(4t + 1).
+
+
+20
+KEVIN FORD
+
+We choose a function f which is based on the functions given by Lemma
+7.5 of [9]. Let θ be the unique solution of
+
+(6.4)
+sin2 θ = b1
+
+b0
+(1 − θ cot θ),
+0 < θ < π/2,
+
+and define the real function
+
+(6.5)
+g(u) =
+
+�
+(cos(u tan θ) − cos θ) sec2 θ
+|u| ≤
+θ
+
+tan θ,
+0
+else.
+
+Set w(u) = g ∗ g(u) (the convolution square of g) for u ≥ 0 and
+
+W(z) =
+� ∞
+
+0
+e−zuw(u) du.
+
+From (6.5) we deduce (cf. Lemma 7.1 of [9]) the identities
+
+W(0) = 2 sec2 θ(1 − θ cot θ)2,
+
+W(−1) = 2 tan2 θ + 3 − 3θ(tan θ + cot θ),
+
+w(0) = sec2 θ(θ tan θ + 3θ cot θ − 3).
+
+(6.6)
+
+Then we take (see (6.1))
+
+(6.7)
+f(u) = λeλuw(λu)
+(u ≥ 0)
+
+and
+
+(6.8)
+F(z) =
+� ∞
+
+0
+e−zuf(u) du = W
+� z
+
+λ − 1
+�
+.
+
+For real y,
+
+ℜW(iy) = 2
+�� ∞
+
+0
+w(u) cos(uy) du
+�2
+≥ 0.
+
+Since W(z) → 0 uniformly as |z| → ∞ and ℜz ≥ 0, it follows from the
+maximum modulus principle (applied to e−W (z)) that
+
+(6.9)
+ℜW(z) ≥ 0
+(ℜz ≥ 0).
+
+7. An inequality for the real part of a zero
+
+In this section, we take specific values for a1 and a2 and prove the
+following inequality.
+
+Lemma 7.1. Suppose t ≥ 10000, ζ(β + it) = 0 and (6.1) holds. Suppose
+further that (1.2) holds with B > 0 and A > 6.5, and that
+
+(7.1)
+1 − β ≤ η/2,
+0 < λ ≤ min
+�
+1 − β,
+1
+
+250η
+�
+.
+
+
+ZERO-FREE REGIONS FOR THE RIEMANN ZETA FUNCTION
+21
+
+Then
+1
+λ
+
+�
+0.16521 − 0.1876
+�
+1−β
+
+λ
+− 1
+��
+≤ 1.4711 − β
+
+η2
+
++ 1
+
+2η
+
+�
+666550
+200211
+�
+2
+3L2 + Bη3/2L1 + log A
+�
++ log ζ(1 + η)
+�
+
++ 3.683λ
+
+�
+
+(6.466 + 5.392B(η− 1
+
+2 − 2))L1 + 4L2 +
+
+log(A/η)+ 2
+
+3 L2
+
+1.879
++ 0.224
+
+η2
+
+�
+
+.
+
+Proof. A near optimal choice of parameters is a1 = 0.225, a2 = 0.9. By
+(5.2),
+
+b0 = 10.01055
+b3 = 4.5,
+
+b1 = 17.14500
+b4 = 1.0,
+
+b2 = 10.68250
+b5 = 33.3275,
+
+and by (6.4) and (6.6),
+
+θ = 1.152214629976363048877 . . . ,
+w(0) = 6.82602968445295450905 . . . .
+
+The function W(z) has the explicit formula (found with the aid of Maple)
+
+(7.2)
+W(z) = w(0)
+
+z
++ W0(z),
+
+where
+
+(7.3)
+W0(z) = c0
+�
+c2((z + 1)2e−2(θ/ tan θ)z + z2 − 1) + c1z + c3z3�
+
+z2(z2 + tan2 θ)2
+
+and
+
+c0 =
+1
+
+sin θ cos3 θ = 16.2983216223932350562 . . .
+
+c1 = (1 + 2(θ cos θ − sin θ) cos θ) tan4 θ = 16.2878103682166631825 . . .
+
+c2 = tan3 θ sin2 θ = 9.4813169452950521682 . . .
+
+c3 = (2 − 5 sin θ cos θ + θ + 4θ cos2 θ) tan2 θ = 10.3924962150333624895 . . .
+
+If R ≥ 3, (7.3) implies
+
+(7.4)
+|W0(z)| ≤ H(R)
+
+|z|3
+(ℜz ≥ −1, |z| ≥ R),
+
+where
+
+H(R) =
+c0
+�
+c2
+(R+1)2
+
+R3
+�
+e2θ/ tan θ + 1
+�
++ c1
+
+R2 + c3
+�
+
+�
+1 − tan2 θ
+
+R2
+�2
+.
+
+
+22
+KEVIN FORD
+
+By (6.7), (6.8) and (7.2),
+
+F0(z) = F(z) − f(0)
+
+z
+= W
+� z
+
+λ − 1
+�
+− λw(0)
+
+z
+
+= W0
+� z
+
+λ − 1
+�
++
+λf(0)
+
+z(z − λ).
+
+Suppose ℜz ≥ 0 and |z| ≥ (R +1)λ. Writing z′ = z
+
+λ −1, we have ℜz′ ≥ −1
+and |z′| ≥ R. Thus, by (6.7) and (7.4), we obtain
+
+|F0(z)| ≤ H(R)λ3
+
+|z − λ|3 +
+w(0)λ2
+
+|z(z − λ)| ≤ c4
+λf(0)
+|z|2 ,
+
+where
+
+(7.5)
+c4 = H(R)(R + 1)2
+
+R3w(0)
++ 1 + 1/R.
+
+Therefore, providing that η ≥ (R + 1)λ, (4.6) holds with
+
+(7.6)
+D = c4λf(0).
+
+Next, define
+
+Vc(z) = cw(0)
+�
+cot z − 1
+
+z
+�
++ W
+� z
+
+c − 1
+�
+.
+
+By (6.7) and (6.8),
+
+F(1 + ijt − ρ) + f(0)
+�
+π
+2η cot
+�
+π(1+ijt−ρ)
+
+2η
+�
+−
+1
+
+1+ijt−ρ
+�
+= Vc(z),
+
+where z =
+π
+2η(1 + ijt − ρ) and c = πλ
+
+2η . In order to bound the first double
+sum in (6.3) (leaving only the single term corresponding to ρ = β + it), we
+prove that for 0 < c ≤
+π
+
+2R+2,
+
+(7.7)
+ℜVc(z) ≥ −c5c2w(0)
+�
+ℜz ≥ c, |z| ≤ π
+
+2
+�
+.,
+
+where
+
+(7.8)
+c5 = 4
+
+π2
+
+�
+1 + (R + 1)2H(R)
+
+w(0)R3
+
+�
+= 4
+
+π2 (c4 − 1/R).
+
+By the maximum modulus principle (applied to e−Vc(z)), it suffices to prove
+(7.7) on the boundary of the region. First consider z satisfying ℜz = c,
+|z| ≤ π/2. By Lemma 4.4 and (6.9),
+
+ℜVc(z) ≥ cw(0)ℜ
+�
+cot z − 1
+
+z
+
+�
+≥ −4c2w(0)
+
+π2
+.
+
+
+ZERO-FREE REGIONS FOR THE RIEMANN ZETA FUNCTION
+23
+
+When |z| = π/2 and x = ℜz ≥ c, we have |z/c − 1| ≥ R, so by (7.4),
+|W0(z/c − 1)| ≤ H(R)|z/c − 1|−3. Thus, by (7.2) and Lemma 4.4,
+
+ℜVc(z) ≥ −4cw(0)x
+
+π2
++ cw(0)(x − c)
+
+|z − c|2
+− H(R)c3
+
+|z − c|3
+
+≥ −4cw(0)x
+
+π2
++ cw(0)(x − c)
+
+(π/2)2
+−
+H(R)c3
+
+(π/2 − c)3
+
+= c2w(0)
+�
+− 4
+
+π2 −
+H(R)c
+
+w(0)(π/2 − c)3
+
+�
+.
+
+Noting that c ≤
+π
+
+2R+2 completes the proof of (7.7). In fact, with more
+work one can prove that (7.7) holds with c5 = 1
+
+3.
+By (7.7), we have
+
+−ℜ
+�
+
+1≤j≤4
+|1+ijt−ρ|≤η
+
+bj
+�
+F(1 + ijt − ρ) + f(0)
+�
+π
+2η cot
+�
+π(1+ijt−ρ)
+
+2η
+�
+−
+1
+
+1+ijt−ρ
+��
+
+≤ −b1Vc( π
+
+2η(1 − β)) + c5c2w(0)
+
+4
+�
+
+j=1
+bjN(jt, η).
+
+Combining this last estimate with (6.3), (6.7), (7.6) and Lemma 4.3 gives
+
+0 ≤ b0F(0) − b1Vc
+�
+π
+2η(1 − β)
+�
++ λf(0)
+
+η2
+
+�
+π2c5
+
+4
+− c4
+�
+4
+�
+
+j=1
+bjN(jt, η)
+
++ f(0)
+
+2η
+
+�
+b5
+�
+2
+3L2 + Bη3/2L1 + log A
+�
++ b0 log ζ(1 + η)
+�
+
++ c4λf(0)b5
+
+�
+1.8 + L1
+
+3 + 1.8 b0
+
+b5 +
+�
+6.132 + 5.392B(η− 1
+
+2 − 2)
+�
+L1
+
++ 13.5 − 8.5 log A + 4L2 + 1
+
+η2
+
+�log A − log η + 2
+
+3L2
+
+1.879
++ 0.224
+��
+.
+
+(7.9)
+
+The sum in (7.9) can be ignored because of (7.8). Also, by the lower bound
+on A we have
+
+(7.10)
+1.8 + 1.8 b0
+
+b5 + 13.5 − 8.5 log A < 0.
+
+Put R = 249, and compute H(249) ≤ 171.8 and c4 ≤ 1.106. Since cot x −
+1
+x ≥ −0.348x for 0 < x ≤ π
+
+4 and 1 − β ≤ 1
+
+2η, we have
+
+(7.11)
+Vc
+�
+π
+2η(1 − β)
+�
+≥ F(1 − β) − 0.348f(0) π2
+
+4η2 (1 − β).
+
+
+24
+KEVIN FORD
+
+By (6.6), (6.7) and (6.8),
+
+−b1
+
+b0
+F(1−β) + F(0) = −
+�b1
+
+b0
+W
+�
+1−β
+
+λ
+− 1
+�
+− W(−1)
+�
+
+= −
+�b1
+
+b0
+W(0) − W(−1)
+�
++ b1
+
+b0
+
+�
+W(0) − W
+�
+1−β
+
+λ
+− 1
+��
+
+= −f(0) cos2 θ
+
+λ
++ b1
+
+b0
+
+�
+W(0) − W
+�
+1−β
+
+λ
+− 1
+��
+.
+
+(7.12)
+
+Since W(x) and W ′(x) are both decreasing, we have
+
+W(0) − W
+�
+1−β
+
+λ
+− 1
+�
+≤
+�
+1−β
+
+λ
+− 1
+�
+W ′(0) ≤ 0.7475
+�
+1−β
+
+λ
+− 1
+�
+.
+
+Thus, by (7.11) and (7.12),
+
+F(0) − b1
+
+b0
+Vc
+�
+π
+2η(1 − β)
+�
+≤ 0.348f(0) π2
+
+4η2
+b1
+b0
+(1 − β)
+
++
+f(0)
+
+λ
+
+�
+− cos2 θ + 0.7475b1
+
+b0w(0)
+
+�
+1−β
+
+λ
+− 1
+��
+.
+
+(7.13)
+
+Dividing both sides of (7.9) by b0f(0) and using (7.10), (7.13) and the
+numerical values of b0, b1, b5 and θ completes the proof of the lemma.
+□
+
+8. The proof of Theorem 2
+
+Suppose T0 satisfies the hypotheses of Theorem 2 and let
+
+(8.1)
+M =
+inf
+ζ(β+it)=0
+t≥T0
+
+Z(β, t),
+Z(β, t) := (1 − β)(B log t)
+2
+3 (log log t)
+1
+3 .
+
+By the Korobov-Vinogradov theorem, M > 0.
+If M ≥ M1, then the
+theorem is immediate. Otherwise, suppose that M < M1 ≤ 0.05507. Then
+there is a zero β + it of ζ(s) with t ≥ T0 and
+
+Z(β, t) ∈ [M, M(1 + δ)],
+δ = min
+�
+10−100
+log T0 , M1−M
+
+2M
+�
+.
+
+By (8.1), (6.1) holds with
+
+(8.2)
+λ = ML−2/3
+1
+L−1/3
+2
+B−2/3.
+
+Again we make the abbreviations L1 = log(4t + 1), L2 = log log(4t + 1).
+Define b0, b5 as in the previous section. We apply Lemma 7.1, taking
+
+(8.3)
+η = EB− 2
+
+3
+�L2
+
+L1
+
+� 2
+
+3
+,
+E =
+�4(1 + b0/b5)
+
+3
+
+� 2
+
+3
+=
+�1733522
+
+999825
+
+� 2
+
+3
+.
+
+
+ZERO-FREE REGIONS FOR THE RIEMANN ZETA FUNCTION
+25
+
+The lower bound
+log T0
+
+log log T0 ≥ 1740
+
+B
+ensures that η ≤ 0.01 and
+
+λ ≤ 0.5507(BL1)− 2
+
+3 L
+− 1
+
+2 3
+≤
+η
+250.
+
+The inequalities T0 ≥ e30000 and M1 ≤ 0.05507 ensure that the other
+hypotheses of Lemma 7.1 are met. In addition,
+
+(8.4)
+1 − β
+
+λ
+− 1 ≤ (1 + δ)
+� L1
+
+log t
+
+� 2
+
+3 �
+L2
+
+log log t
+
+� 1
+
+3
+− 1 ≤ 0.97
+
+log T0
+.
+
+By Lemma 3.1,
+
+(8.5)
+log ζ(1 + η) ≤ log(1/η + 0.6) ≤ log(1/η) + 0.006.
+
+We now apply Lemma 7.1, using the upper bounds for (1−β) and λ on the
+right side of the conclusion. First, since − log η ≈ 2
+
+3L2, we have by (8.3),
+
+1
+2η
+
+�b5
+
+b0
+
+�2L2
+
+3
++ Bη
+3
+2 L1
+
+�
++ 2L2
+
+3
+
+�
+= b5
+
+b0
+
+�
+1 + b0
+
+b5
+
+� 1
+
+3 �3B
+
+4
+
+� 2
+
+3
+L
+
+2
+3
+1 L
+
+1
+3
+2
+
+≤ 2.99968(BL1)
+2
+3 L
+
+1
+3
+2 .
+
+(8.6)
+
+This constitutes the main term as t → ∞. Next, since Z(β, t) ≤ M1 and
+by the lower bound on T0,
+
+(8.7)
+1.4711 − β
+
+η2
+≤ 0.039B2/3L2/3
+1
+L−5/3
+2
+≤ 0.0038B2/3
+�L1
+
+L2
+
+�2/3
+.
+
+Using (8.5), the remaining part of the second line in the conclusion of
+Lemma 7.1 is
+
+≤ 1
+
+2η
+
+�
+b5
+b0 log A − log E + 2
+
+3 log(B/L2) + 0.006
+�
+
+≤ B
+2
+3
+
+2E
+
+�L1
+
+L2
+
+� 2
+
+3 �
+3.3293 log A − 0.3608 + 2
+
+3 log(B/L2)
+�
+
+≤
+�BL1
+
+L2
+
+� 2
+
+3
+(1.1534 log A − 0.125 + 0.2310 log(B/L2)) .
+
+(8.8)
+
+
+26
+KEVIN FORD
+
+By (8.2), (8.3), and L2 ≤ 0.00035L1, the third line in the conclusion of
+Lemma 7.1 is
+
+≤ 0.2029L
+− 2
+
+1 3
+L
+− 1
+
+2 3
+B− 2
+
+3
+��
+6.468 + 5.392B
+4
+3
+√
+
+E
+
+�L1
+
+L2
+
+� 1
+
+3
+− 10.784B
+�
+L1
+
++ B
+4
+3
+
+E2
+
+�L1
+
+L2
+
+� 4
+
+3 �log A + 4
+
+3L2 + 2
+
+3 log(B/L2) − log E
+1.879
++ 0.224
+��
+
+≤
+�BL1
+
+L2
+
+� 2
+
+3 �
+0.9798 + 1.313 − 2.188B
+
+B
+4
+3
+
+�L2
+
+L1
+
+� 1
+
+3
+
++ 0.05185
+
+L2
+
+�
+log A + 2
+
+3 log(B/L2) + 0.05401
+��
+
+≤
+�BL1
+
+L2
+
+�2
+
+3 �1.313 − 2.188B
+
+B4/3
+
+�L2
+
+L1
+
+� 1
+
+3
++ 0.0051(log A + 2
+
+3 log( B
+
+L2 )) + 0.9801
+�
+
+(8.9)
+
+Combining (8.4)–(8.9) with Lemma 7.1 gives
+
+1
+λ
+
+�
+0.16521 − 0.182
+
+log T0
+
+�
+≤ (BL1)
+2
+3 L
+
+1
+3
+2
+�
+2.99968 + X(t)
+
+L2
+
+�
+.
+
+By (8.2), this gives
+
+M ≥ 0.16521 − 0.182/ log T0
+
+2.99968 + X(t)/ log log t ≥ M1.
+
+This concludes the proof of Theorem 2.
+
+Remarks. Compared with the methods in [8], there are two improve-
+ments evident in (8.6). First, the factor (3/4)2/3 ≈ 0.82548 replaces the
+factor 2−1/3K2 ≈ 0.843445 from ([8], p. 197). This improvement comes
+from integrating over two vertical lines (Lemma 2.2). The second and larger
+improvement is the factor (1 + b0/b5)1/3, which is 21/3 in the treatment of
+[8], and comes from combining the log |ζ(·)| terms in Lemma 5.1. Together
+these improve the bounds from [8] by about 17%.
+
+9. The proof of Theorem 3
+
+Almost everything in Sections 2–6 is identical. In place of (1.2) we use
+an explicit form of the Van der Corput bound (1.6). We fix η = 1
+
+2, and the
+
+
+ZERO-FREE REGIONS FOR THE RIEMANN ZETA FUNCTION
+27
+
+proof of Lemma 5.1 gives
+
+−
+� ∞
+
+−∞
+
+�4
+j=1 bj log |ζ
+� 3
+
+2 + ijt + iu
+
+π
+�
+|
+
+cosh2 u
+du ≤ b0
+�
+
+p,m
+
+1
+mp− 3
+
+2 mU( m
+
+π log p)
+
+= 2b0
+�
+
+p,m
+
+log p
+
+p2m − pm
+
+= 2b0
+
+∞
+�
+
+n=2
+
+Λ(n)
+n2 − n
+
+≤ 1.702b0.
+
+(9.1)
+
+Let T0 = 545000000 and suppose that ζ(β+it) = 0 with t ≥ T0 (it is known
+that all zeros with |t| < T0 have real part 1
+
+2 [14]). In place of Lemma 3.4
+we use
+
+Lemma 9.1. If t ≥ T0, then
+
+I(t) =
+� ∞
+
+−∞
+
+log |ζ(1/2 + it + iu/π)|
+
+cosh2 u
+du ≤ 2J(t),
+
+where J(t) is given by (1.7).
+
+Proof. From (1.6), |ζ(1/2 + it)| ≤ 3t1/6 log t for t ≥ 3, so by Lemma 3.4,
+I(t) ≤ 2( 1
+
+6 log t + log log t + log 3). Using the first inequality from (1.6), we
+have
+
+I(y) ≤
+� ∞
+
+−∞
+
+log(57 + 6(t + |u|)1/4)
+
+cosh2 u
+du = 2
+� ∞
+
+0
+
+log(57 + 6(t + u)1/4)
+
+cosh2 u
+du.
+
+When 0 ≤ u ≤ log t, the numerator is ≤ log(6.37306t1/4) and when u >
+log t, the numerator is ≤ log(6.4(eu + u)1/4) ≤ u and the denominator is
+≥ 1
+
+4e2u. Therefore,
+
+I(t) ≤ 2 log(6.37306t1/4) + 8
+� ∞
+
+log t
+ue−2u du ≤ log t
+
+2
++ 3.7042.
+
+□
+
+We make the assumption (6.1) as before and take the same values for
+a1, a2 (so b0, . . . , b4, θ, w, f, F, W are the same as in section 7). The only
+change in (6.3) is that the term 2
+
+3 log log t + Bη3/2 log t + log A is replaced
+by J(t). Next, we follow the proof of Lemma 7.1. Using (4.3) (Rosser’s
+
+
+28
+KEVIN FORD
+
+theorem) as in the proof of Lemma 4.3, we obtain for t ≥ 10000
+
+(9.2)
+�
+
+|1+ijt−ρ|≥ 1
+
+2
+
+1
+
+|1 + ijt − ρ|2 ≤ 3.2357 log t + 5.316 log log t
+
++ 16.134 − 4N(t, 1/2).
+
+Assume that
+
+(9.3)
+0 < λ ≤ 1 − β ≤
+1
+
+160.
+
+Let R =
+1
+
+2(1−β) − 1 ≥ 79. By (9.3), η ≤ 80λ. As in the proof of (7.5), we
+deduce that (4.6) holds with
+
+(9.4)
+D = c4λf(0),
+c4 = H(79)(R + 1)2
+
+R3w(0)
++ 1 + 1
+
+R ≤ 1.35.
+
+Also, (7.7) is replaced by
+
+(9.5)
+ℜVc(z) ≥ −c5c2w(0) = −c5π2λf(0)
+(ℜz ≥ c, |z| ≤ π/2),
+
+valid for 0 < c ≤ π(1 − β) with
+
+(9.6)
+c5 = 4
+
+π2 +
+π(1 − β)H(79)
+
+w(0)(π/2 − π(1 − β))2 .
+
+Analogously to (7.9), the inequalities (9.1), (9.2), (9.4), and (9.5) give
+
+0 ≤ b0F(0) − b1Vπλ(π(1 − β)) + (π2c5 − 4c4)λf(0)
+
+4
+�
+
+j=1
+bjN(jt, 1
+
+2)
+
++ f(0) (b5J(4t + 1) + 0.851b0)
+
++ 1.35λf(0)
+�
+b5(1.8 + L1
+
+3 ) + 1.8b0 + b5(3.2357L1 + 5.316L2 + 16.134)
+�
+.
+
+(9.7)
+
+As before we use L1 = log(4t + 1), L2 = log log(4t + 1). By (9.4) and (9.6),
+π2c5 − 4c4 = −4/R < 0, so the sum in (9.7) can be ignored. By (9.3),
+cot x − 1/x ≥ −0.3334x for 0 < x ≤ π(1 − β) and this gives
+
+Vπλ(π(1 − β)) ≥ F(1 − β) − 0.3334π2(1 − β)f(0).
+
+By an argument similar to that leading to (7.13), we obtain
+
+(9.8)
+F(0) − b1
+
+b0
+Vπλ(π(1 − β)) ≤ 0.3334π2(1 − β)b1
+
+b0
+f(0)
+
++ f(0)
+
+λ
+
+�
+− cos2 θ + 0.7475b1
+
+b0w(0)
+
+�1 − β
+
+λ
+− 1
+��
+
+Combining (9.8) with (9.7) gives the following bound.
+
+
+ZERO-FREE REGIONS FOR THE RIEMANN ZETA FUNCTION
+29
+
+Lemma 9.2. Suppose that ζ(β + it) = 0 with t ≥ 545000000 and 1 − β ≤
+1
+
+160. Let λ be a positive number satisfying (6.1). Then
+
+(9.9)
+0.16521 − 0.1876( 1−β
+
+λ
+− 1)
+
+λ
+≤ 5.646(1 − β) + b5
+
+b0
+J(4t + 1)
+
++ 0.851 + 1.35λb5
+
+b0
+(3.5691L1 + 5.316L2 + 18.475).
+
+To prove Theorem 3, first define
+
+(9.10)
+c6 = c6(t) =
+1
+
+J(t) + 1.15.
+
+For a zero β + it of ζ with t ≥ T0, define Y (β, t) by the equation
+
+1 − β = 0.04962 − 0.0196c6(t)
+
+J(t) + Y (β, t)
+.
+
+By the Korobov-Vinogradov theorem, Y (β, t) → −∞ as t → ∞.
+Let
+M = maxt≥T0 Y (β, t). If M ≤ 1.15, Theorem 3 follows. Otherwise, suppose
+β + it is a zero with Y (β, t) = M > 1.15. Then (6.1) holds with
+
+(9.11)
+λ = 0.04962 − 0.0196c6(t)
+
+J(4t + 1) + M
+
+By (9.10) and (9.11),
+
+(9.12)
+1 − β
+
+λ
+− 1 = J(4t + 1) + M
+
+J(t) + M
+− 1 = J(4t + 1) − J(t)
+
+J(t) + M
+≤
+0.3466
+
+J(t) + M .
+
+Apply Lemma 9.2, multiplying both sides of (9.9) by 6b0/b5. By (9.12),
+the left side is
+
+≥ 0.04962 − 0.0196c6(t)
+
+λ
+= J(4t + 1) + M.
+
+Using L1 ≤ log t + log 4 + 1
+
+4t and L2 ≤ log log t + (log 4 + 1
+
+4t)/ log t, we
+conclude that
+
+M ≤ 0.25562 + (1 − β) [1.696 + 1.35(3.5691L1 + 5.316L2 + 18.475)]
+
+≤ 0.25562 + (1 − β) [33.812 + 4.8183 log t + 7.1766 log log t] .
+
+(9.13)
+
+Also, by assumption 1 − β ≤ (0.04962 − 0.0196c6(t))c6(t). Plugging this
+into (9.13), and using a short Maple computation, we find that
+
+M ≤ 0.685 + 0.155 log log t.
+
+In fact, M ≤ 1.7 for all t ≥ T0, but the above bound suffices for our
+purposes. This completes the proof of Theorem 3.
+
+
+30
+KEVIN FORD
+
+Thanks.
+The author thanks D. R. Heath-Brown, D. Kutzarova, O.
+Ramar´e and the referee for helpful suggestions and comments. The author
+also thanks Y. Cheng and S. W. Graham for pre-prints of their work.
+
+References
+
+[1] Y. Cheng, An explicit zero-free region for the Riemann zeta-function, Rocky
+Mountain J. Math. 30 (2000), no. 1, 135–148.
+[2] Y. Cheng, Explicit estimates on prime numbers (pre-print).
+[3] Y. Cheng, On primes between consecutive cubes (pre-print).
+[4] Y. Cheng and S. W. Graham, Explicit estimates for the Riemann zeta function
+(pre-print).
+[5] N. G. Chudakov, On the functions ζ(s) and π(x) C. R. Acad. Sci. USSR, N.S.
+21 (1938), 421–422.
+[6] H. Davenport, Multiplicative Number Theory, 2nd ed., Graduate Texts in Math-
+ematics vol. 74, Springer-Verlag (New York-Berlin), 1980.
+[7] K. Ford, Vinogradov’s integral and bounds for the Riemannn zeta function, Proc.
+London Math. Soc. (to appear).
+[8] D. R. Heath-Brown, Zero-free regions of ζ(s) and L(s, χ), Proceedings of the
+Amalfi confernece on analytic number theory (Maiori, 1989), Univ. Salerno,
+Salerno, Italy, 1992, pp. 195–200.
+[9] D. R. Heath-Brown, Zero-free regions for Dirichlet L-functions, and the least
+prime in an arithmetic progression, Proc. London Math. Soc. (3) 64 (1992),
+265–338.
+[10] M. N. Huxley, Exponential sums and the Riemann zeta function. IV., Proc.
+London Math. Soc. (3) 66 (1993), 1–40.
+[11] N. M. Korobov, Estimates of trigonometric sums and their applications, Uspehi
+Mat. Nauk 13 (1958), 185–192. (Russian)
+[12] M. Kulas, Refinement of an estimate for the Hurwitz zeta function in a neigh-
+bourhood of the line σ = 1, Acta Arith. 89 (1999), 301–309.
+[13] J. E. Littlewood, Researches in the theory of the Riemann ζ-function, Proc.
+London Math. Soc. (2) 20 (1922), XXII–XXVIII (Records, Feb. 10, 1921).
+[14] J. van de Lune, J. J. te Riele, and D. T. Winter, On the zeros of the Riemann
+zeta function in the critical strip. IV , Math. Comp. 46 (1986), 667–681.
+[15] O. V. Popov, A derivation of a modern bound for the zeros of the Riemann zeta
+function by the Hadamard method , Vestnik Moskov. Univ. Ser. I Mat. Mekh.
+(1994), no. 1, 42–45, 96. (Russian)
+[16] O. Ramar´e and R. Rumely, Primes in arithmetic progressions , Math. Comp.
+65 (1996), 397–425.
+[17] H.-E. Richert, Zur Absch¨atzung der Riemannschen Zetafunktion in der N¨ahe
+der Vertikalen σ = 1, Math. Annalen 169 (1967), 97–101. (German)
+[18] J. B. Rosser, Explicit bounds for some functions of prime numbers, Amer. J.
+Math. 63 (1941), 211–232.
+[19] J. B. Rosser and L. Schoenfeld, Approximate formulas for some functions of
+prime numbers, Illinois J. Math. 6 (1962), 64–94.
+[20] J. B. Rosser and L. Schoenfeld, Sharper bounds for the Chebyshev functions θ(x)
+and Ψ(x), Math. Comp. 29 (1975), 243–269.
+[21] S. B. Stechkin, The zeros of the Riemann zeta-function, Mat. Zametki 8 (1970),
+419–429 (Russian); English translation in Math. Notes 8 (1970), 706–711.
+
+
+ZERO-FREE REGIONS FOR THE RIEMANN ZETA FUNCTION
+31
+
+[22] S. Saks and A. Zygmund, Analytic Functions, 2nd ed., enlarged, Polish Scientific
+Publishers (Warszawa), 1965; English translation.
+[23] E. C. Titchmarsh, The theory of the Riemann zeta-function, 2nd ed., Oxford
+University Press, 1986.
+[24] C.-J. de la Vall´ee Poussin, Sur la fonction ζ(s) de Riemann et le nombres des
+nombres premiers inf´erieurs `a une limite donn´ee, M´em. Couronn´es et Autres
+M´em. Publ. Acad. Roy. Sci. des lettres Beaux-Arts Belg. 59 (1899–1900), 1–74.
+[25] I. M. Vinogradov, A new estimate for ζ(1 + it), Izv. Akad. Nauk SSSR, Ser.
+Mat. 22 (1958), 161–164. (Russian)
+
+Department of Mathematics, University of South Carolina, Columbia, SC
+29208, USA
+
+

@@ -1,0 +1,209 @@
+{
+  "actual_farey_kernel": {
+    "actual_labels": "coprime Q<=r,s<2Q, 3/4<=r/s<=5/4; each retains its reduced (r,s) label",
+    "bundle_comparison": "(L/(20Q))*Mcal_v(W)<=A_v(W)<=(2L/Q)*Mcal_v(W)",
+    "epistemic_status": "PROVED",
+    "farey_union_measure": "(1/50)v^-4<=|U_v|<=16v^-4",
+    "positive_semidefinite_reason": "K_F is an integral/sum of rank-one exponential kernels",
+    "ray_kernel_comparison": "(L/(20Q))*K_F <= K_F^ray <= (2L/Q)*K_F",
+    "theta_mass_identity": "1^*K_F*1=Mcal_v(W)=sum_(r,s) integral_(-3)^3 |R_W((r/s)*exp(theta/H))|^2 dtheta",
+    "theta_windows": "I_(r,s)={(r/s)*exp(theta/H): |theta|<=3}",
+    "unweighted_kernel": "(K_F)_(t,t')=sum_(r,s in F_Q) integral_(-3)^3 ((r/s)*exp(theta/H))^(i(t-t')) dtheta"
+  },
+  "artifact_id": "cycle-6-crr-afari-coefficient-coupling-v1",
+  "cfari_target": {
+    "epistemic_status": "CONJECTURED",
+    "meaning": "A phase-sensitive mixed-kernel anti-alignment inequality on the same W, coefficient vector, and actual reduced Farey labels.",
+    "not_claimed": "No proof or disproof of CFARI_eta is supplied.",
+    "statement": "For some fixed eta>0 and all sufficiently large v, every common Base(v) pair (b,W), with a_t=D_v(t)/|D_v(t)|, satisfies (a^*(M_W*M_W^*)a)*(1^*K_F*1)<=v^(40-eta)."
+  },
+  "claim_boundary": "This artifact proves an actual-Farey energy/fourth-moment saturation reduction, a scalar-envelope calibration, and the exact common-coefficient phase bridge. It proves neither F4F_eta, AFARI_eta, CFARI_eta, CRR-U, a compatible witness, a cubic estimate, a density gain, a short-interval theorem, a full-method saturation theorem, or an L-function result.",
+  "coefficient_phase_bridge": {
+    "conditional_on": "one common Base(v) pair (b,W)",
+    "derivation": "Cauchy against b and ||b||_2^2<=L; no separately chosen coefficient vector or row set occurs.",
+    "epistemic_status": "PROVED",
+    "phase": "a_t=D_v(t)/|D_v(t)| with D_v|_W=M_Wb",
+    "phase_identity": "sum_t conjugate(a_t)D_v(t)=sum_t|D_v(t)|>=v^(15-2*delta(v))",
+    "rayleigh_lower": "a^*(M_W*M_W^*)a=||M_W^*a||_2^2>=v^(20-4*delta(v))"
+  },
+  "conditional_implication": {
+    "conclusion": "For all sufficiently large v, CFARI_eta implies AFARI_(eta/2), hence CRR-U through the sealed v2 averaged-jitter reduction.",
+    "conditional_on": "CFARI_eta for any fixed eta>0",
+    "derivation": "phase Rayleigh lower v^(20-4delta) gives Mcal_v(W)<=v^(20-eta+4delta), then A_v(W)<=2v^(26-eta+4delta)",
+    "epistemic_status": "PROVED",
+    "rationalmass_falsifier": "Base(v)+RationalMass(v) forces (a^*(M_W*M_W^*)a)*(1^*K_F*1)>=(15/16)*v^(40-7delta(v)); an asymptotic common witness refutes every covering CFARI_eta."
+  },
+  "energy_restricted_upper": {
+    "bundle_bound": "A_v(W)<<H^(o(1))*L*H^(1/2)*E(W)^(1/2)<=v^(26+o(1))",
+    "cauchy_bound": "Mcal_v(W)<=8Q*H^(1/2)*(integral_(1/2)^(3/2)|R_W(u)|^4du)^(1/2)",
+    "conditional_on": "Base(v) separation/energy hypotheses and the checked GM raw-R Lemma RL4",
+    "epistemic_status": "PROVED",
+    "explicit_base_slack_only": "26+(1/2)*delta(v); the published RL4 subpower factor remains",
+    "jacobian_identity": "Mcal_v(W)=H*integral_(U_v)|R_W(u)|^2 du/u",
+    "scope": "This uses actual Farey windows and Base energy, but it is not AFARI_eta.",
+    "source_bound": "integral_(1/2)^(3/2)|R_W(u)|^4du<=H^(o(1))*E(W)"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "coefficient_phase_at_v8": {
+      "L": 1073741824,
+      "base_cardinality_lower": "v^(8-delta(v))",
+      "base_pointwise_lower": "v^(7-delta(v))",
+      "derivation": "|<a,M_W b>|^2<=||M_W^*a||_2^2||b||_2^2 and ||b||_2^2<=L",
+      "identity": "sum_t conjugate(a_t)D_v(t)=sum_t |D_v(t)|",
+      "phase_definition": "a_t=D_v(t)/|D_v(t)|",
+      "rayleigh_lower": "a^*(M_W M_W^*)a>=v^(20-4*delta(v))"
+    },
+    "exponent_rows": {
+      "base_energy_upper": "20+1*delta",
+      "base_phase_rayleigh_lower": "20-4*delta",
+      "base_rationalmass_phase_farey_product_lower": "40-7*delta",
+      "energy_cauchy_ray_bundle_upper_base_slack_only": "26+1/2*delta",
+      "energy_cauchy_theta_mass_upper_base_slack_only": "20+1/2*delta",
+      "rationalmass_local_l2_lower": "8-3*delta",
+      "rationalmass_local_l4_lower": "20-6*delta",
+      "rationalmass_theta_mass_lower": "20-3*delta",
+      "scalar_envelope_local_l4": "20",
+      "scalar_envelope_ray_bundle": "26",
+      "scalar_envelope_theta_mass": "20"
+    },
+    "farey_windows_at_v8": {
+      "H": 68719476736,
+      "Q": 4096,
+      "actual_label_rule": "coprime Q<=r,s<2Q, 3/4<=r/s<=5/4",
+      "disjointness_source": "v2 theta neighborhoods lie in disjoint [r/s-8/H,r/s+8/H]",
+      "farey_pair_count_lower": "2097152/25",
+      "farey_pair_count_upper": 16777216,
+      "one_window_length_lower": "1/17179869184",
+      "one_window_length_upper": "1/4294967296",
+      "theta_radius": 3,
+      "union_measure_lower": "1/204800",
+      "union_measure_upper": "1/256"
+    },
+    "rationalmass_localization_constants": {
+      "derivation": "A>=(15/8)v^(26-3delta), A<=(2L/Q)*M, M<=2H*I2, I4>=I2^2/|U|, |U|<=16v^-4",
+      "local_l2_lower_from_theta_mass": "15/32",
+      "local_l4_lower_from_cauchy": "225/16384",
+      "theta_mass_lower_from_averaged_bundle": "15/16"
+    },
+    "ray_comparison_at_v8": {
+      "L": 1073741824,
+      "Q": 4096,
+      "loewner_comparison": "(L/(20Q))*K_F <= K_F^ray <= (2L/Q)*K_F",
+      "ray_weight_lower": "65536/5",
+      "ray_weight_upper": "524288"
+    },
+    "scalar_envelope_at_v8": {
+      "H": 68719476736,
+      "Q": 4096,
+      "f_star": "v^10*|U_v|^(-1/2)*1_(U_v)",
+      "integral_f_star_squared": 1152921504606846976,
+      "integral_f_star_squared_lower_bound": "140737488355328/25",
+      "integral_f_star_squared_scope": "exact: integral_U f_star^2 = v^20",
+      "integral_f_star_squared_upper_bound": "4503599627370496",
+      "measure_lower": "1/204800",
+      "measure_upper": "1/256",
+      "scope": "scalar Cauchy-envelope calibration only; f_star is not claimed to be |R_W|^2"
+    },
+    "scales_at_v8": {
+      "H": 68719476736,
+      "L": 1073741824,
+      "Q": 4096,
+      "R": 16777216,
+      "V": 2097152,
+      "v": 8
+    }
+  },
+  "f4f_target": {
+    "conditional_effect": "F4F_eta implies a fixed-power AFARI after Cauchy/ray comparison and contradicts RationalMass at large v.",
+    "epistemic_status": "CONJECTURED",
+    "not_claimed": "No proof or disproof of F4F_eta is supplied.",
+    "statement": "For some fixed eta>0 and all sufficiently large v, every Base(v)-admissible W has integral_(U_v)|R_W(u)|^4du<=v^(20-eta)."
+  },
+  "falsifiers": {
+    "cfari": "An asymptotic common Base-plus-RationalMass family refutes every CFARI_eta that covers it.",
+    "energy_route": "Failure of the checked RL4 hypotheses/source conclusion or of the Base energy bound refutes the stated energy-restricted upper route.",
+    "kernel_reduction": "Failure of actual theta-window disjointness, the exact change of variables, labeled ray comparison, or PSD kernel identity refutes the proved reduction.",
+    "scope": "The scalar f_star calibration is not an AFARI counterexample; it can be refuted as a scalar calibration only by an error in its exact measure/moment arithmetic."
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/crr_afari_coupling_v1.py",
+      "sha256": "8d74815084b859a985de90cd1429bab734269f7373794dd81c5515fad49b6bbf"
+    },
+    "crr_v2_artifact": {
+      "path": "artifacts/cycle-4-p1r-crr-u-formalization-v2.json",
+      "sha256": "e26be797539eabe53ee765b7067d1c99fe4d440035e27785cf38aa64bc2fc84e"
+    },
+    "crr_v2_conventions": {
+      "path": "conventions/crr_formalization_v2.py",
+      "sha256": "0d960b76a4ad03cce43727159cf846696dbee732184df44b2ee0503b9ae18ce8"
+    },
+    "document": {
+      "path": "docs/cycle-6-crr-afari-coefficient-coupling-v1.md",
+      "sha256": "5ed3d0d2c17e0e0766704e59c58d5a013f80a26243d13b8ff96fe6c63d54f9fe"
+    },
+    "farey_log_v2_artifact": {
+      "path": "artifacts/cycle-5-crr-farey-log-gram-reduction-v2-averaged-jitter.json",
+      "sha256": "ce59b777ec02769168d9dc330658a0ab1d46b05cdb7ac5dc8115e248d85f8ce8"
+    },
+    "farey_log_v2_conventions": {
+      "path": "conventions/crr_farey_log_gram_v2.py",
+      "sha256": "25aa0b8642f09a8d9b1752de870105764204470db05a241e9359c0d1a46c7f9a"
+    },
+    "gm_source_tex": {
+      "path": "artifacts/sources/arxiv-2405.20552v2/LargevaluesDirichlet17.tex",
+      "sha256": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428"
+    },
+    "tests": {
+      "path": "tests/test_cycle_6_crr_afari_coefficient_coupling_v1.py",
+      "sha256": "8e29c1a50b69c9e9574578e24f8a5cefa4c1862801efd35d1b0debdffe74bdb7"
+    }
+  },
+  "rationalmass_localization": {
+    "conclusion": "The global RL4/Base-energy upper scale and RationalMass-forced local L4 lower scale both have central exponent 20.",
+    "conditional_on": "the v2 RationalMass(v) predicate and its sealed averaged bundle lower bound",
+    "epistemic_status": "PROVED",
+    "local_l2_lower": "integral_(U_v)|R_W(u)|^2du>=(15/32)*v^(8-3*delta(v))",
+    "local_l4_lower": "integral_(U_v)|R_W(u)|^4du>=(225/16384)*v^(20-6*delta(v))",
+    "no_go_scope": "No fixed power can arise from the displayed scalar global-fourth-moment, Farey-window-measure, and Cauchy route alone.",
+    "theta_mass_lower": "Mcal_v(W)>=(15/16)*v^(20-3*delta(v))"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_6_crr_afari_coefficient_coupling_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_6_crr_afari_coefficient_coupling_v1.py",
+    "write_command": "python3 proof/build_cycle_6_crr_afari_coefficient_coupling_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE_BY_USER_DIRECTION",
+    "lightweight_checks": "primary-source anchors, exact Fraction/integer scale bookkeeping, labeled PSD kernel algebra, replay, and tamper rejection"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "scalar_envelope_calibration": {
+    "critical_scales": "integral_(U_v)f_star(u)du asymp v^8; H*integral_(U_v)f_star(u)du/u asymp v^20; ray-weighted scale asymp v^26",
+    "epistemic_status": "PROVED",
+    "exact_moment": "integral_(U_v)f_star(u)^2du=v^20",
+    "function": "f_star(u)=v^10*|U_v|^(-1/2)*1_(U_v)(u)",
+    "scope_limit": "f_star is not claimed to be |R_W|^2 for any W and has no Base coefficient vector. It proves sharpness only for scalar support/measure/fourth-moment bookkeeping."
+  },
+  "sealer": {
+    "path": "proof/build_cycle_6_crr_afari_coefficient_coupling_v1.py",
+    "sha256": "42091bb6799e9357f840a77efede56b66d5c2c65a613bf3541779646466ec62e"
+  },
+  "source_context": {
+    "actual_rational_net": "coprime Q<=r,s<2Q, 3/4<=r/s<=5/4, intervals of radius 1/(100H)",
+    "base_cardinality": "v^(8-delta(v)) <= |W| <= v^(8+delta(v))",
+    "base_energy_band": "v^(20-delta(v)) <= E(W) <= v^(20+delta(v))",
+    "base_pointwise": "|D_v(t)| >= v^(7-delta(v)) for every t in W",
+    "base_polynomial": "D_v(t)=sum_(n>=1) w(n/L)b_n n^(it)",
+    "base_set": "finite W subset [0,H], H^(1/100)-separated",
+    "gm_rl4_anchor": "LargevaluesDirichlet17.tex, Lemma RL4, lines 1267-1305 in the pinned source",
+    "v2_averaged_lower": "A_v(W)>=(15/8)*v^(26-3*delta(v))",
+    "v2_ray_comparison": "L/(20Q)<=#K_(r,s)<=2L/Q"
+  },
+  "status": "SEALED_COEFFICIENT_FAREY_REDUCTION_LIGHTWEIGHT_CHECKED"
+}

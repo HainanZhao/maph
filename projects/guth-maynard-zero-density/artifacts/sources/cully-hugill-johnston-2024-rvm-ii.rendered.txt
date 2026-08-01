@@ -1,0 +1,2645 @@
+ON THE ERROR TERM IN THE EXPLICIT FORMULA OF
+RIEMANN–VON MANGOLDT II
+
+MICHAELA CULLY-HUGILL AND DANIEL R. JOHNSTON
+
+Abstract. We give an explicit O(x/T) error term for the truncated Riemann–
+von Mangoldt explicit formula. For large x, this provides a modest improve-
+ment over previous work, which we demonstrate via an application to a result
+on primes between consecutive powers.
+
+1. Introduction
+
+This paper gives a new explicit estimate for the error in the truncated Riemann–
+von Mangoldt explicit formula. This is a sequel to [4], which gave a related result.
+In contrast to [4], this new estimate is asymptotically sharper, but allows for less
+control over the point of truncation.
+Let ψ(x) denote the Chebyshev prime-counting function with
+
+ψ(x) =
+�
+
+n≤x
+Λ(n) =
+�
+
+pk≤x
+log p,
+
+where pk are prime powers for any integer k ≥ 1, and Λ(n) is the von Mangoldt
+function. The truncated Riemann–von Mangoldt formula can be written as
+
+ψ(x) = x −
+�
+
+ρ=β+iγ
+|γ|≤T
+
+xρ
+
+ρ + E(x, T),
+(1.1)
+
+where the sum is over all non-trivial zeros ρ = β + iγ of the Riemann zeta-function
+ζ(s) that have |γ| ≤ T, and E(x, T) is an error term.
+In [4, Thm 1.2], the authors prove the following.
+
+Theorem 1.1. For any α ∈ (0, 1/2] there exist constants M and xM such that for
+max{51, log x} < T < (xα − 2)/2,
+
+ψ(x) = x −
+�
+
+|γ|≤T
+
+xρ
+
+ρ + O∗
+�
+M x log x
+
+T
+
+�
+(1.2)
+
+for all x ≥ xM. Some admissible values of xM, α and M are (40, 1/2, 5.03) and
+(103, 1/100, 0.5597), with more given in [4, Table 4].
+
+Date: February 24, 2026.
+Affiliation: School of Science, The University of New South Wales Canberra, Australia
+Corresponding author: Daniel Johnston (daniel.johnston@unsw.edu.au)
+Other author: Michaela Cully-Hugill (m.cully-hugill@unsw.edu.au)
+Key phrases: Riemann-von Mangoldt formula, zero-free regions, primes between powers, ex-
+plicit estimates, Riemann zeta-function
+MSC classes: 11M26 (Primary) 11N05 (Secondary)
+
+1
+
+arXiv:2402.04272v3  [math.NT]  23 Feb 2026
+
+
+2
+MICHAELA CULLY-HUGILL AND DANIEL R. JOHNSTON
+
+This result is reached via the Perron formula, which expresses the partial sums
+of an arithmetic function as an integral over its corresponding Dirichlet series. In
+particular, the truncated Perron formula can be written as (e.g., see [12, Thm. 5.2,
+Cor. 5.3] or [15, Chp. 4.4])
+�
+
+n≤x
+an =
+1
+2πi
+
+� κ+iT
+
+κ−iT
+F(s)xs
+
+s ds + R(x, T).
+(1.3)
+
+Here, R(x, T) is an error term, and the formula is valid for x > 0, any Dirichlet
+series F(s) = �∞
+n=1 ann−s that converges in ℜ(s) > κa, any κ > max(κa, 0), and
+bounded T > 1. The admissible range for the point of truncation T is usually a
+function of x, and can be somewhat adjusted for explicit estimates.
+In Section 3 of [20], Wolke gave a method to estimate the integral in (1.3). This
+was made explicit in [4, Thm. 4] for the case F(s) = �
+n≥1 Λ(n)n−s = −(ζ′/ζ)(s)
+and κ = 1 + 1/ log x.
+The authors then adapted a method of Ramar´e in [18,
+Thm. 1.1, Thm. 2.1] to estimate R(x, T), [4, Thm. 2.1].
+Combining these two
+estimates in (1.3) resulted in Theorem 1.1.
+In [18, Thm. 1.2, Thm. 3.1], Ramar´e then proved a weighted and averaged version
+of (1.3) with an asymptotically sharper estimate for the error term. The purpose of
+this paper is to make this method of Ramar´e explicit, and apply it in the context of
+the Riemann–von Mangoldt formula. Although [18, Thm. 3.1] is already explicit,
+there are several errors in the proofs and statements of Theorems 1.2 and 3.1 of
+[18] that we need to correct or circumvent. For instance, there is a missing factor
+of k + 1 in the error term of [18, Thm. 3.1], a typo in the definition (3.1) of [18],
+and some measure-theoretic problems which were confirmed by Ramar´e through
+private correspondence (see also [19]). After mending these errors, and simplifying
+the result for our purposes, our main theorem is as follows.
+
+Theorem 1.2. For any α ∈ (0, 1/2] and ω ∈ [0, 1] there exist constants M and xM
+such that for some T ∗ ∈ [T, 2T] with max{51, log2 x} < T < (xα − 2)/4, we have
+
+ψ(x) = x −
+�
+
+|γ|≤T ∗
+
+xρ
+
+ρ + O∗
+�
+M x(log x)1−ω
+
+T
+
+�
+(1.4)
+
+for all x ≥ xM. In Table 1, some admissible values of xM and M are given for
+specific choices of α.
+
+Although we now have less control over the point of truncation, for most ap-
+plications Theorem 1.2 implies that the factor of log x in (1.2) can be reduced or
+removed. At first glance, it may seem preferable to just take ω = 1. However, the
+corresponding M may be such that the overall error estimate is larger for a wide
+range of x, compared to the M one obtains with a smaller ω. Hence, for small to
+moderate values of x the best estimate will often come from using some ω < 1.
+It would also be possible to sharpen the explicit result: we see two immediate
+avenues.
+In the proof of Theorem 1.2, one could set κ to be another function
+such as κ = 1 + c/ log x and optimise over c. This would also require reworking
+[4, Thm. 4] for such a choice of κ. Another potential improvement is to modify
+the range for T ∗ (currently [T, 2T]). This would amount to optimising the choice
+of the parameter ξ > 1 which we introduce in §2. Either of these improvements
+would be rather systematic to pursue, but we have chosen not to as they would
+complicate and lengthen this paper for only a small to moderate improvement. In
+
+
+THE ERROR TERM IN THE EXPLICIT FORMULA OF RIEMANN–VON MANGOLDT
+3
+
+Table 1. Some corresponding values of xM, α, λ and M for
+Theorem 1.2. Here λ is a parameter which we optimise over in
+the proof of the theorem. The last two entries are specifically
+used to prove Theorem 1.4
+
+log(xM)
+α
+ω
+λ
+M
+
+40
+1/2
+0
+0.43
+2.894
+
+103
+1/2
+0
+0.42
+1.681
+
+1010
+1/2
+0.3
+0.42
+2.275
+
+1013
+1/2
+1
+10−4
+19.81
+
+103
+1/10
+0.2
+0.07
+1.260
+
+1010
+1/10
+0.9
+10−3
+4.415
+
+103
+1/100
+0.8
+0.07
+3.615
+
+1010
+1/100
+1
+10−3
+9.631
+
+103
+1/85
+0.9
+0.07
+6.391
+
+4 · 103
+1/85
+0.9
+0.05
+5.462
+
+particular, neither of these improvements would improve the asymptotic form of
+(1.4). Moreover, the main error terms in the proof of Theorem 1.2 rely more on
+other results, such as the size of the zero-free region of ζ(s).
+We also have the following variant of Theorem 1.2 for primes in intervals.
+
+Theorem 1.3. Let h = h(x) be any nonnegative function. For any α ∈ (0, 1/2]
+and ω ∈ [0, 1] there exist constants M and xM such that for some T ∗ ∈ [T, 2T] with
+max{51, log2 x} < T < (xα − 2)/4,
+
+ψ(x + h) − ψ(x) = h−
+�
+
+|γ|≤T ∗
+
+(x + h)ρ − xρ
+
+ρ
+
++ O∗
+�
+M x + h
+
+T
+(log(x + h))1−ω + M x
+
+T (log x)1−ω
+�
+.
+
+for all x ≥ xM. In Table 1, some admissible values of xM and M are given for
+specific choices of α.
+
+To demonstrate the power of our new estimates we use Theorem 1.3 to obtain
+the following result.
+
+Theorem 1.4. There is at least one prime between n90 and (n+1)90 for all n ≥ 1.
+
+This improves upon the previous result in [4, Thm. 1.3], which found primes
+between consecutive 140th powers. Here, the main improvement comes from our
+refined error term in Theorem 1.3. However, we have also incorporated some recent
+zero-free regions [1, 14, 21] to ensure that Theorem 1.4 is state-of-the-art.
+
+1.1. Outline of paper. In Section 2 we make explicit a weighted averaged version
+of the truncated Perron formula. From this, we deduce a corollary in Section 3
+
+
+4
+MICHAELA CULLY-HUGILL AND DANIEL R. JOHNSTON
+
+for a “modified” version of the truncated Perron formula for general arithmetic
+functions. This corollary is then used in conjunction with [4, Thm. 4.1] to obtain
+Theorems 1.2 and 1.3 in Section 4. Finally, the proof of Theorem 1.4 is given in
+Section 5 and other supplementary results are given in the appendices A and B.
+We remark that in Sections 3, 4, 5 and Appendix B some computations are
+required. Further details about these computations can be found at
+
+github.com/DJmath1729/Riemann − von − Mangoldt − estimates
+(CODE)
+
+which is linked with the arXiv version of this paper.
+
+2. An averaged, weighted, truncated Perron formula
+
+In this section we prove Theorem 2.1 stated below, which is an error estimate
+for a weighted averaged version of the truncated Perron formula. This result is a
+modification of [18, Thm. 3.1] and its proof also fixes several minor errors appearing
+in [18].
+First, some notation: let k ∈ N, ξ ≥ 1. We call a function w, defined over [1, ξ],
+(k, ξ)-admissible if it has the following properties:
+
+(1) it is k-times differentiable, and w(k) is in L1,
+(2)
+
+� ξ
+1 w(t)dt = 1,
+
+(3) w(ℓ)(1) = w(ℓ)(ξ) = 0 for 0 ≤ ℓ ≤ k − 2. This condition is empty when
+k = 1.
+
+For such a function w, we define
+
+Nk,ξ(w) = 1
+
+2π
+
+
+
+1
+
+ξ |w(k−1)(ξ)| + |w(k−1)(1)| + k!
+�
+
+0≤h≤k
+
+1
+h!
+
+� ξ
+
+1
+
+|w(h)(u)|
+
+u
+du
+
+
+
+ , (2.1)
+
+Lξ(w) = 1
+
+π
+
+� ξ
+
+1
+u|w(u)|du
+(2.2)
+
+and θ′ = θ′
+k,ξ(w) is the positive point of intersection of the two functions
+
+f1(y) = 2Nk,ξ(w)
+
+|y|k+1
+and
+f2(y) = 1 + |y|Lξ(w).
+(2.3)
+
+Note that such a point of intersection exists since Nk,ξ(w) and Lξ(w) are positive.
+Moreover, we remark that θ′ is absent in Ramar´e’s analogous argument in [18].
+Rather, on page 122 of [18], Ramar´e defines a variable T ′ = T/θ, and the optimum
+value of θ is given by θ′ in our notation. Our aim is to prove the following theorem.
+
+Theorem 2.1. Let k ≥ 1 be an integer and let ξ > 1 be a real number. Let w
+be a (k, ξ)-admissible function. Let F(s) = �
+
+n≥1 an/ns be a Dirichlet series that
+converges absolutely for ℜ(s) > κa. For x ≥ 1, T ≥ 1, and κ > κa > 0 we have
+
+�
+
+n≤x
+an =
+1
+2πi
+
+� ξT
+
+T
+
+� κ+it
+
+κ−it
+F(s)xs
+
+s dsw(t/T)
+
+T
+dt
+
++ O∗
+
+
+
+(k + 1)2Nk,ξ(w)
+
+T k+1
+
+� ∞
+
+θ′/T
+
+�
+
+| log(x/n)|≤u
+
+|an|
+nκ
+xκdu
+uk+2
+
+
+
+ .
+(2.4)
+
+
+THE ERROR TERM IN THE EXPLICIT FORMULA OF RIEMANN–VON MANGOLDT
+5
+
+To prove Theorem 2.1 we need the following lemma that uses the function
+
+v(y) =
+
+�
+1
+y ≥ 0
+0
+y < 0,
+
+or more concisely v(y) = 1[0,∞)(y), where 1S(y) is the indicator function of S ⊆ R.
+
+Lemma 2.2. Let w be a (k, ξ)-admissible function. For κ′ > 0 and y ∈ R,
+�����v(y) −
+1
+2πi
+
+� ξ
+
+1
+
+� κ′+iτ
+
+κ′−iτ
+
+eys
+
+s dsw(τ)dτ
+
+����� ≤ ∆(y),
+
+where
+
+∆(y) =
+
+
+
+
+
+
+min
+�
+2eyκ′
+
+|y|k+1 Nk,ξ(w),
+���v(y) − eyκ′
+
+π
+arctan(1/κ′)
+��� + |y|eyκ′Lξ(w)
+�
+,
+y ̸= 0,
+���v(y) − eyκ′
+
+π
+arctan(1/κ′)
+��� + |y|eyκ′Lξ(w),
+y = 0.
+
+(2.5)
+
+Remark. Lemma 2.2 is very similar to Ramar´e’s [18, Lemma 3.2]. However, due to
+some small errors in Ramar´e’s work, we still include a full proof here, For example,
+compared to (2.5), in [18, Lemma 3.2] the factor of 2 in front of Nk,ξ(w) is missing,
+and there is an incorrect factor of 1/π in front of Lξ(w).
+
+Proof. We begin by noting that
+� κ′+iτ
+
+κ′−iτ
+
+eys
+
+s ds = eyκ′ � κ′+iτ
+
+κ′−iτ
+
+1
+sds + ieyκ′ � τ
+
+−τ
+
+eiyt − 1
+κ′ + it dt.
+
+The first integral is equal to 2iarctan(1/κ′). For y ̸= 0, the second integral can be
+bounded by 2τ|y| using the identity
+����
+eiyt − 1
+
+iyt
+
+���� =
+����
+
+� 1
+
+0
+eiytudu
+���� ≤ 1,
+
+and note that the bound |eiyt − 1| ≤ |yt| can be separately verified for y = 0. In
+particular,
+�����
+
+� κ′+iτ
+
+κ′−iτ
+
+eys
+
+s ds − eyκ′
+
+π
+arctan(1/κ′)
+
+����� ≤ 2τ|y|eyκ′,
+
+so that, upon using
+� ξ
+1 w(t)dt = 1,
+�����v(y) −
+1
+2πi
+
+� ξ
+
+1
+
+� κ′+iτ
+
+κ′−iτ
+
+esy
+
+s dsw(τ)dτ
+
+����� ≤
+
+�����v(y) − eyκ′
+
+π arctan(1/κ′)
+
+����� + |y|eyκ′Lξ(w).
+
+for all y ∈ R.
+To prove the other part of the y ̸= 0 case in (2.2), we first consider y < 0. For
+any K > κ′ we have
+�� κ′+iτ
+
+κ′−iτ
++
+� K+iτ
+
+κ′+iτ
++
+� K−iτ
+
+K+iτ
++
+� κ′−iτ
+
+K−iτ
+
+�
+eys
+
+s ds = 0.
+(2.6)
+
+We multiply both sides of (2.6) by w(τ) and integrate over τ from 1 to ξ. The third
+integral can be bounded by
+�����
+
+� ξ
+
+1
+
+� K−iτ
+
+K+iτ
+
+eys
+
+s dsw(τ)dτ
+
+����� =
+� ξ
+
+1
+
+� −τ
+
+τ
+
+iey(K+it)
+
+K + it dtw(τ)dτ
+
+
+6
+MICHAELA CULLY-HUGILL AND DANIEL R. JOHNSTON
+
+≤
+� ξ
+
+1
+
+� τ
+
+−τ
+
+eyK
+
+K dt |w(τ)| dτ ≤ max
+[1,ξ] |w(τ)| · ξ2eyK
+
+K
+, (2.7)
+
+which goes to zero as K → ∞, noting that max[1,ξ] |w(τ)| exists because w(τ) is
+differentiable and thus continuous on [1, ξ]. We now bound the integral from κ′ +iτ
+to K + iτ in the limit K → ∞, and note that the following argument also gives the
+same bound for the integral from K − iτ to κ′ − iτ. We start by writing
+� ξ
+
+1
+
+� K+iτ
+
+κ′+iτ
+
+esy
+
+s dsw(τ)dτ =
+� K
+
+κ′ euy
+� ξ
+
+1
+
+eiτyw(τ)
+
+u + iτ dτdu.
+(2.8)
+
+To deal with the inner integral, we set f(τ) = w(τ)/(u+iτ) and apply the Leibnitz
+formula for the derivative of a product. In particular, for any m ≥ 0 we have
+
+f (m)(τ) =
+�
+
+0≤h≤m
+
+�m
+h
+
+�im−h(m − h)!w(h)(τ)
+
+(u + iτ)m−h+1
+.
+
+Since w(ℓ)(1) = w(ℓ)(ξ) = 0 for 0 ≤ ℓ ≤ k − 2, this implies
+
+f (k−1)(1) = w(k−1)(1)
+
+u + i
+,
+f (k−1)(ξ) = w(k−1)(ξ)
+
+u + iξ
+.
+
+Integrating by parts k times thus gives
+� ξ
+
+1
+
+eiτyw(τ)
+
+u + iτ dτ = (−1)(k−1)f (k−1)(ξ)eξiy
+
+(iy)k
+− (−1)k−1f (k−1)(1)eiy
+
+(iy)k
+
++ (−1)k
+
+(iy)k
+
+� ξ
+
+1
+eiτyf (k)(τ)dτ.
+
+Substituting this into (2.8) gives
+� ξ
+
+1
+
+� K+iτ
+
+κ′+iτ
+
+esy
+
+s dsw(τ)dτ =
+
+(−1)k−1w(k−1)(ξ)
+
+(iy)k
+
+� K
+
+κ′
+e(u+ξi)y
+
+u + iξ du − (−1)k−1w(k−1)(1)
+
+(iy)k
+
+� K
+
+κ′
+e(u+i)y
+
+u + i du
+
++
+�
+
+0≤h≤k
+
+�k
+h
+
+� � ξ
+
+1
+
+(−1)kik−h(k − h)!w(h)(τ)
+
+(iy)k
+
+� K
+
+κ′
+e(u+iτ)y
+
+(u + iτ)k−h+1 dudτ.
+(2.9)
+
+For the first integral, we bound 1/(u + iξ) by 1/ξ and integrate euy to obtain
+�����
+(−1)k−1w(k−1)(ξ)
+
+(iy)k
+
+� K
+
+κ′
+e(u+ξi)y
+
+u + iξ du
+
+����� ≤ |w(k−1)(ξ)|
+
+|y|k
+· eκ′y
+
+ξ|y|
+
+since K → ∞. The other integrals in (2.9) are bounded in analogous ways to give
+� ξ
+
+1
+
+� K+iτ
+
+κ′+iτ
+
+esy
+
+s dsw(τ)dτ ≤ 2πeκ′yNk,ξ(w)
+
+|y|k+1
+.
+
+Using this bound in (2.6) gives
+�����v(y) −
+1
+2πi
+
+� ξ
+
+1
+
+� κ′+iτ
+
+κ′−iτ
+
+eys
+
+s dsw(τ)dτ
+
+����� ≤ 2eyκ′
+
+|y|k+1 Nk,ξ(w).
+
+
+THE ERROR TERM IN THE EXPLICIT FORMULA OF RIEMANN–VON MANGOLDT
+7
+
+The case y > 0 is almost identical, but for K < 0 we begin with
+�� κ′+iτ
+
+κ′−iτ
++
+� K+iτ
+
+κ′+iτ
++
+� K−iτ
+
+K+iτ
++
+� κ′−iτ
+
+K−iτ
+
+�
+eys
+
+s ds = 2πi.
+(2.10)
+
+After multiplying both sides of (2.10) by w(τ) and integrating over τ from 1 to ξ,
+we find that the third integral approaches 0 as K → −∞, as it has the same bound
+as in (2.7). For the integrals from κ′ + iτ to K + iτ and from K − iτ to κ′ − iτ,
+we have the same bounds as before in the limit K → −∞. Using these estimates
+in (2.10) gives
+�����2πi −
+� ξ
+
+1
+
+� κ′+iτ
+
+κ′−iτ
+
+eys
+
+s dsw(τ)dτ
+
+����� ≤ 4πeyκ′
+
+yk+1 Nk,ξ(w),
+
+and thus
+�����v(y) −
+1
+2πi
+
+� ξ
+
+1
+
+� κ′+iτ
+
+κ′−iτ
+
+eys
+
+s dsw(τ)dτ
+
+����� ≤ 2eyκ′
+
+yk+1 Nk,ξ(w).
+□
+
+Proof of Theorem 2.1. We now prove Theorem 2.1. To do this, we need to bound
+������
+
+�
+
+n≥1
+anv(T log(x/n)) −
+1
+
+2πiT
+
+� ξT
+
+T
+
+� κ+it
+
+κ−it
+F(s)xsds
+
+s
+w(t/T)dt
+
+������
+x−κ
+
+for any x ≥ 1, T > 0, and κ > κa > 0, where κa is the abscissa of absolute con-
+vergence of F(s). First, we take κ = κ′T for any κ′ > 0, and use the substitutions
+s = ˜sT and t = τT to obtain
+������
+
+�
+
+n≥1
+anv(T log(x/n)) −
+1
+
+2πiT
+
+� ξT
+
+T
+
+� κ+it
+
+κ−it
+F(s)xsds
+
+s
+w(t/T)dt
+
+������
+x−κ
+
+≤
+�
+
+n≥1
+
+|an|
+nκ
+
+�����v(T log(x/n)) −
+1
+
+2πiT
+
+� ξT
+
+T
+
+� κ+it
+
+κ−it
+
+�x
+
+n
+
+�s ds
+
+s w(t/T)dt
+
+�����
+
+�n
+
+x
+
+�κ
+
+=
+�
+
+n≥1
+
+|an|
+nκ
+
+�����v(T log(x/n)) −
+1
+
+2πiT
+
+� ξ
+
+1
+
+� κ′+iτ
+
+κ′−iτ
+eT log( x
+
+n)˜s d˜s
+
+˜s w(τ)dτ
+
+����� e−κ′T log(x/n).
+
+(2.11)
+
+Next, we apply Lemma 2.2. For θ > 0 we let
+
+cθ =
+max
+0≤|y|<θ ∆(y),
+(2.12)
+
+where ∆(y) is as defined in (2.5). We then set y = T log(x/n) in Lemma 2.2 and
+split the sum in (2.11) at the value of n such that T| log(x/n)| = θ. This gives
+������
+
+�
+
+n≥1
+anv(T log(x/n)) −
+1
+
+2πiT
+
+� ξT
+
+T
+
+� κ+it
+
+κ−it
+F(s)xsds
+
+s
+w(t/T)dt
+
+������
+x−κ
+
+≤ cθ
+�
+
+T | log(x/n)|<θ
+
+|an|
+nκ + 2Nk,ξ(w)
+
+T k+1
+�
+
+T | log(x/n)|≥θ
+
+|an|
+
+nκ| log(x/n)|k+1 .
+
+
+8
+MICHAELA CULLY-HUGILL AND DANIEL R. JOHNSTON
+
+Now, since
+�
+
+T | log(x/n)|≥θ
+
+|an|
+
+nκ| log(x/n)|k+1
+
+=
+�
+
+T | log(x/n)|≥θ
+
+|an|
+nκ
+
+� ∞
+
+| log(x/n)|
+
+(k + 1)
+uk+2 du
+
+= (k + 1)
+� ∞
+
+θ/T
+
+�
+
+θ/T ≤| log(x/n)|≤u
+
+|an|
+nκ
+du
+uk+2
+
+= (k + 1)
+� ∞
+
+θ/T
+
+�
+
+| log(x/n)|≤u
+
+|an|
+nκ
+du
+uk+2 − T k+1
+
+θk+1
+�
+
+| log(x/n)|<θ/T
+
+|an|
+nκ
+
+we have
+������
+
+�
+
+n≤x
+anv(T log(x/n)) −
+1
+
+2πiT
+
+� ξT
+
+T
+
+� κ+it
+
+κ−it
+F(s)xsds
+
+s
+w(t/T)dt
+
+������
+x−κ
+
+≤ (k + 1)2Nk,ξ(w)
+
+T k+1
+
+� ∞
+
+θ/T
+
+�
+
+| log(x/n)|≤u
+
+|an|
+nκ
+du
+uk+2
+
++
+�
+cθ − 2Nk,ξ(w)
+
+θk+1
+
+�
+�
+
+| log(x/n)|<θ/T
+
+|an|
+nκ .
+(2.13)
+
+Note that
+���v(y)e−yκ′ − 1
+
+π arctan(1/κ′)
+��� < 1, so taking θ = θ′ we have
+
+cθ′ < 2Nk,ξ(w)
+
+(θ′)k+1
+
+and the second term in (2.13) is negative. This proves the theorem.
+□
+
+3. A modified Perron formula
+
+As Theorem 2.1 involves an integral from T to ξT, we can set ξ = 2 and use
+a continuity argument to deduce a strong bound for some T ∗ ∈ [T, 2T]. First, we
+need to choose a weight function w(t). Roughly following [18, Sect. 5], we define
+
+w(u) = 6(u − 1)(2 − u).
+(3.1)
+
+for u ∈ [1, 2]. Note that
+� 2
+
+1
+w(u)du = 1
+(3.2)
+
+and w(u) is a (1, 2)-admissible function. With this choice of w(u), we compute the
+functions L2(w), N1,2(w) and θ′
+1,2(w) defined in Section 2.
+
+Lemma 3.1. Let w(u) be as defined in (3.1), and L2(w), N1,2(w) and θ′
+1,2(w) be
+as defined in (2.1), (2.2) and the ensuing text. Then,
+
+L2(w) = 3
+
+2π ,
+
+N1,2(w) = 9 − 18
+�
+log 4
+
+3 − log 3
+
+2
+�
+− 12 log 2
+
+2π
+≤ 0.4461.
+(3.3)
+
+
+THE ERROR TERM IN THE EXPLICIT FORMULA OF RIEMANN–VON MANGOLDT
+9
+
+and
+0.8029 ≤ θ′
+1,2(w) ≤ 0.8030.
+
+Proof. To begin with, L2(w) is computed as an elementary integral
+
+L2(w) = 6
+
+π
+
+� 2
+
+1
+u(u − 1)(2 − u)du = 3
+
+2π .
+(3.4)
+
+To compute N1,2(w), we note that w(1) = w(2) = 0 so that
+
+N1,2(w) = 1
+
+2π
+
+�� 2
+
+1
+
+|w(u)|
+
+u
++
+� 2
+
+1
+
+|w′(u)|
+
+u
+
+�
+,
+(3.5)
+
+which evaluates to (3.3). Finally, to compute θ′
+1,2(w) we use the NSolve function
+in Mathematica with the functions f1(y) and f2(y) defined in (2.3). Full compu-
+tational details, including the evaluation of (3.4) and (3.5), are included in the
+supplementary code for this paper (CODE).
+□
+
+We now substitute this choice of w(u) into Theorem 2.1, giving the following
+result.
+
+Corollary 3.2. Let w and θ′ = θ′
+1,2(w) be as above. Let x ≥ 1 and T > 1. Let
+F(s) = �
+
+n≥1 ann−s be a Dirichlet series and κ > 0 be a real parameter larger than
+κa — the abscissa of absolute convergence of F. For any λ ≥ θ′/T, there exists a
+T ∗ ∈ [T, 2T] such that
+
+�
+
+n≤x
+an =
+1
+2πi
+
+� κ+iT ∗
+
+κ−iT ∗ F(s)xs
+
+s ds + O∗(R),
+(3.6)
+
+where R = R(x, T, κ) satisfies
+
+R ≤ 1.785
+
+T 2
+
+
+
+ xκ
+
+2λ2
+�
+
+n≥1
+
+|an|
+nκ + eκλ
+� λ
+
+θ′/T
+
+�
+
+| log(x/n)|≤u
+
+|an|du
+
+u3
+
+
+
+ .
+(3.7)
+
+Proof. Let ξ = 2 and k = 1 in Theorem 2.1, and set
+
+R′ = 4N1,2(w)
+
+T 2
+
+� ∞
+
+θ′/T
+
+�
+
+| log(x/n)|≤u
+
+|an|
+nκ
+xκdu
+
+u3
+(3.8)
+
+to be the error term in (2.4). A change of variables u = t/T in (3.2) gives
+� 2T
+
+T
+
+w(t/T)
+
+T
+dt = 1.
+(3.9)
+
+Thus, (2.4) can be rewritten as
+
+� 2T
+
+T
+
+
+
+�
+
+n≤x
+an −
+1
+2πi
+
+� κ+it
+
+κ−it
+F(s)xs
+
+s ds
+
+
+
+ w(t/T)
+
+T
+dt = O∗(R′),
+(3.10)
+
+where R′ is defined in (3.8). Let ϵ = 1 − 1/2π and
+
+G(x, t) =
+�
+
+n≤x
+an −
+1
+2πi
+
+� κ+it
+
+κ−it
+F(s)xs
+
+s ds.
+(3.11)
+
+
+10
+MICHAELA CULLY-HUGILL AND DANIEL R. JOHNSTON
+
+Given (3.9) and that G(x, t) is continuous in t, (3.10) implies there exists a
+T ∗ ∈ [T, 2T] with
+|G(x, T ∗)| ≤ R′.
+(3.12)
+In particular, if G(x, t) > R′ for all t ∈ [T, 2T] then
+� 2T
+
+T
+G(x, t)w(t/T)
+
+T
+dt > R′
+� 2T
+
+T
+
+w(t/T)
+
+T
+dt = R′,
+
+which contradicts (3.10).
+Next we note that
+� ∞
+
+λ
+
+�
+
+| log(x/n)|≤u
+
+|an|
+nκ
+xκdu
+
+u3
+≤ xκ �
+
+n≥1
+
+|an|
+nκ
+
+� ∞
+
+λ
+
+1
+u3 du = xκ
+
+2λ2
+�
+
+n≥1
+
+|an|
+nκ .
+
+Hence, splitting the integral in (3.8) at u = λ and using N1,2(w) ≤ 0.4461 gives
+
+|G(x, T ∗)| ≤ R′ ≤ 4 · 0.4461
+
+T 2
+
+
+
+ xκ
+
+2λ2
+�
+
+n≥1
+
+|an|
+nκ +
+� λ
+
+θ′/T
+
+�
+
+| log(x/n)|≤u
+|an|
+�x
+
+n
+
+�κ 1
+
+u3 du
+
+
+
+
+
+≤ 1.785
+
+T 2
+
+
+
+ xκ
+
+2λ2
+�
+
+n≥1
+
+|an|
+nκ + eκλ
+� λ
+
+θ′/T
+
+�
+
+| log(x/n)|≤u
+
+|an|
+u3 du
+
+
+
+ = R,
+
+(3.13)
+
+as desired.
+□
+
+We also have the following variant of Corollary 3.2 for sums �
+
+x<n≤x+h an.
+
+Corollary 3.3. Keep the notation of Corollary 3.2. For any nonnegative function
+h = h(x), we have
+�
+
+x<n≤x+h
+an =
+1
+2πi
+
+� κ+iT ∗
+
+κ−iT ∗ F(s)(x + h)s − xs
+
+s
+ds + O∗(R(x + h, T, κ) + R(x, T, κ)).
+
+(3.14)
+
+Proof. We repeat the argument in the proof of Corollary 3.2 for
+�
+
+x<n≤x+h
+an =
+�
+
+n≤x+h
+an −
+�
+
+n≤x
+an.
+
+In particular, by Theorem 2.1 we have (c.f. (3.10))
+� 2T
+
+T
+
+
+
+
+�
+
+x<n≤x+h
+an −
+1
+2πi
+
+� κ+it
+
+κ−it
+F(s)(x + h)s − xs
+
+s
+ds
+
+
+
+ w(t/T)
+
+T
+dt
+
+= O∗(R′(x + h) + R′(x)),
+(3.15)
+
+where R′(x) = R′ is as defined in (3.8). Then, as in the proof of Corollary 3.2, we
+can set
+
+G(x, t) =
+�
+
+x<n≤x+h
+an −
+1
+2πi
+
+� κ+it
+
+κ−it
+F(s)(x + h)s − xs
+
+s
+ds
+
+and by (3.15) there exists T ∗ ∈ [T, 2T] such that
+
+|G(x, T ∗)| ≤ R′(x + h) + R′(x) ≤ R(x + h, T, κ) + R(x, T, κ),
+
+as required.
+□
+
+
+THE ERROR TERM IN THE EXPLICIT FORMULA OF RIEMANN–VON MANGOLDT
+11
+
+Note that simply applying Corollary 3.2 separately for
+�
+
+n≤x+h
+an
+and
+�
+
+n≤x
+an
+
+is not sufficient to prove Corollary 3.3. This is because we require T ∗ ∈ [T, 2T] to
+be the same value in both the integrals
+� κ+iT ∗
+
+κ−iT ∗ F(s)(x + h)s
+
+s
+ds
+and
+� κ+iT ∗
+
+κ−iT ∗ F(s)(−xs)
+
+s
+ds.
+
+4. Proof of theorems 1.2 and 1.3
+
+To prove Theorem 1.2 we use Corollary 3.2 for an = Λ(n) and κ = 1 + 1/ log x.
+Namely, for x ≥ xM ≥ e40 and max{51, log2 x} < T < xα−2
+
+4
+with any α ∈ (0, 1/2]
+we have that for some T ∗ ∈ [T, 2T]
+
+ψ(x) =
+1
+2πi
+
+� κ+iT ∗
+
+κ−iT ∗
+
+�
+−ζ′
+
+ζ (s)
+� xs
+
+s ds
+
++ O∗
+
+
+
+1.785
+
+T 2
+
+
+
+ xκ
+
+2λ2
+�
+
+n≥1
+
+Λ(n)
+nκ
++ eκλ
+� λ
+
+θ′/T
+
+�
+
+| log(x/n)|≤u
+
+Λ(n)
+
+u3
+
+
+
+ du
+
+
+
+ ,
+
+(4.1)
+
+where λ is a free parameter and θ′ is as defined in Corollary 3.2.
+For the first term, Theorem B.1 in Appendix B implies that for any ω ∈ [0, 1]
+there exists a constant K corresponding to xM (given as xK in Table 2) such that
+
+1
+2πi
+
+� κ+iT ∗
+
+κ−iT ∗
+
+�
+−ζ′
+
+ζ (s)
+� xs
+
+s ds = x −
+�
+
+|γ|≤T ∗
+
+xρ
+
+ρ + O∗ �
+K x
+
+T (log x)1−ω�
+.
+(4.2)
+
+Next, we use that xκ = ex and (see e.g. [6])
+�
+
+n≥1
+
+Λ(n)
+nκ
+= −ζ′
+
+ζ (κ) <
+1
+
+1 − κ = log x
+
+to bound the first sum in (4.1) by
+
+1.785 ·
+xκ
+
+2λ2T 2
+�
+
+n≥1
+
+Λ(n)
+nκ
+< 1.785 · ex log x
+
+2λ2T 2 .
+(4.3)
+
+For the second term in (4.1), the condition | log(x/n)| ≤ u is equivalent to xe−u ≤
+n ≤ xeu. For all u ∈ [0, λ] we have e−u ≥ 1 − u and eu ≤ 1 + (c0 − 1)u with
+
+c0 = c0(λ) = eλ − 1
+
+λ
++ 1.
+
+Hence
+
+1.785eκλ
+
+T 2
+
+� λ
+
+θ′/T
+
+�
+
+| log(x/n)|≤u
+
+Λ(n)
+
+u3 du ≤ 1.785eκλ
+
+T 2
+
+� λ
+
+θ′/T
+
+1
+u3
+�
+
+I(x,u)
+Λ(n)du,
+(4.4)
+
+where
+I(x, u) = {n ≥ 1 : x − ux ≤ n ≤ x + (c0 − 1)ux} .
+
+
+12
+MICHAELA CULLY-HUGILL AND DANIEL R. JOHNSTON
+
+Let x− = max{x − ux, 0} and x+ = x + (c0 − 1)ux for θ′/T ≤ u ≤ λ. Defining
+
+θ(x) =
+�
+
+p≤x
+log p,
+
+we have by an explicit form of the Brun–Titchmarsh theorem [13, Thm. 2],
+
+θ(x+) − θ(x−) ≤
+2 log x+
+
+log(x+ − x−)(x+ − x−)
+
+≤ 2 log(x + (c0 − 1)ux)
+
+log(c0ux)
+c0ux
+
+≤ c0ux · E1(x, T),
+
+where
+
+E1(x, T) = 2 log(x + (c0 − 1)λx)
+
+log(c0θ′x/T)
+.
+
+To obtain the corresponding inequality for ψ, we use [2, Cor. 5.1], which states
+that for all x ≥ e40,
+
+0 < ψ(x) − θ(x) < a1x1/2 + a2x1/3,
+
+with a1 = 1 + 1.93378 · 10−8 and a2 = 1.0432. Thus,
+�
+
+n∈I(x,u)
+Λ(n) ≤ ψ(x+) − ψ(x−) + log x
+
+< c0ux · E1(x, T) + a1
+√x+ + a2
+3√x+ + log x
+
+≤ c0ux · E1(x, T) + E2(x),
+
+where
+
+E2(x) = a1(x + (c0 − 1)λx)1/2 + a2(x + (c0 − 1)λx)1/3 + log x.
+
+Substituting this into (4.4), we obtain
+
+1.785eκλ
+
+T 2
+
+� λ
+
+θ′/T
+
+1
+u3
+�
+
+I(x,u)
+Λ(n)du ≤ 1.785eκλ
+
+T 2
+
+� λ
+
+θ′/T
+
+�c0x · E1(x, T)
+
+u2
++ E2(x)
+
+u3
+
+�
+du
+
+≤ 1.785eκλ
+�c0x · E1(x, T)
+
+θ′T
++ E2(x)
+
+2(θ′)2
+
+�
+.
+(4.5)
+
+Hence, for all x ≥ xM and some T ∗ ∈ [T, 2T] we have
+
+ψ(x) = x −
+�
+
+|γ|≤T ∗
+
+xρ
+
+ρ + O∗
+�
+K x
+
+T (log x)1−ω + 1.785 · ex log x
+
+2λ2T 2
+
+�
+
++ O∗
+�
+1.785eκλ
+�c0x · E1(x, T)
+
+θ′T
++ E2(x)
+
+2(θ′)2
+
+��
+.
+(4.6)
+
+Finally, to obtain Theorem 1.2 and the values in Table 1, we optimise over λ for
+specific xM and ω, using K from [4, Table 3]. Further computational details are
+given in (CODE).
+Theorem 1.3 is proven in the same manner, using Corollary 3.3 in place of Corol-
+lary 3.2.
+
+
+THE ERROR TERM IN THE EXPLICIT FORMULA OF RIEMANN–VON MANGOLDT
+13
+
+5. Application: primes between consecutive powers
+
+In this section we prove Theorem 1.4, which is an explicit result on primes
+between consecutive powers that improves [3, Thm. 1] and [4, Thm. 1.3]. We use a
+similar method to that in [3] and [4], but use our new result for ψ(x + h) − ψ(x) in
+Theorem 1.3. We also make use of some recent improvements to zero-free regions
+for the Riemann zeta-function (listed in Appendix A). See (CODE) for further
+details about the computations used in this section.
+To find primes in the interval (nm, (n + 1)m), we redefine n = x
+1
+m and consider
+the slightly smaller interval (x, x + h] with h = mx1−1/m. Let xM, α, ω, λ and M
+be as in Theorem 1.3 so that for x ≥ xM and max{51, log2 x} < T < (xα − 2)/4,
+there exists a T ∗ ∈ [T, 2T] for which
+
+ψ(x + h) − ψ(x) ≥ h −
+
+������
+
+�
+
+|γ|≤T ∗
+
+(x + h)ρ − xρ
+
+ρ
+
+������
+− M G(x, h)
+
+T
+,
+(5.1)
+
+where G(x, h) = (x + h)(log(x + h))1−ω + x(log x)1−ω. If the right-hand side of
+(5.1) is positive for some range of x, there must be prime powers in (x, x + h] for
+those x. The number of prime powers pk with k ≥ 2 can then be suitably bounded
+so that we are only left with primes.
+To estimate (5.1), we first bound the sum over zeta zeros. The following bounds
+are given in the proof of [3, Thm. 1], where more detail is provided. We have
+����
+(x + h)ρ − xρ
+
+ρ
+
+���� ≤
+� x+h
+
+x
+uβ−1du ≤ hxβ−1,
+
+where β ∈ (0, 1) is the real part of ρ. Hence,
+������
+
+�
+
+|γ|≤T ∗
+
+(x + h)ρ − xρ
+
+ρ
+
+������
+≤ h
+�
+
+|γ|≤2T
+xβ−1.
+
+This sum can then be estimated by writing
+
+�
+
+|γ|≤2T
+(xβ−1 − x−1) =
+�
+
+|γ|≤2T
+
+� β
+
+0
+xσ−1(log x)dσ =
+� 1
+
+0
+
+�
+
+|γ|≤2T
+β≥σ
+
+xσ−1(log x)dσ,
+
+which re-arranges to
+
+�
+
+|γ|≤2T
+xβ−1 = 2
+� 1
+
+0
+xσ−1 log x
+�
+
+0<γ≤2T
+β>σ
+
+1 dσ + 2x−1
+�
+
+0<γ≤2T
+1.
+(5.2)
+
+This expression allows us to use bounds for N(T) and N(σ, T), which respectively
+denote the zero-counting function and zero-density function of ζ(s). We can also
+use zero-free regions for ζ(s) to curtail the upper end-point of the integral.
+The most recent estimate for N(T) is given by [8, Thm. 1.1, (1.4)]; for N(σ, T)
+the most recent is in [11, Thm. 1.1, (1.7)], with updated constants in [10, Table 3].
+For the zero-free region, we use a combination of the current best explicit results:
+see Appendix A. We denote σ ≥ 1 − ν(T) as the region in which ζ(s) has no zeros,
+where ν(T) is defined in (A.2).
+
+
+14
+MICHAELA CULLY-HUGILL AND DANIEL R. JOHNSTON
+
+The same working as in the proof of [3, Thm. 1] follows, beginning with
+
+�
+
+|γ|≤2T
+xβ−1 = 2N(2T)
+
+x
++ 2 log x
+
+x
+
+�� 3/5
+
+0
+N(2T)xσdσ +
+� 1−ν(T )
+
+3/5
+N(σ, 2T)xσdσ
+
+�
+
+.
+
+(5.3)
+
+Choosing to split the integral at 3/5 is a somewhat arbitrary choice: any value
+in [1/2, 1 − ν(T)] would work. However, after some experimentation we found the
+choice had a negligible impact on the final results. Using the previously mentioned
+estimates for N(T) and N(σ, T) gives
+� 3/5
+
+0
+N(2T)xσdσ +
+� 1−ν(2T )
+
+3/5
+N(σ, 2T)xσdσ ≤ 2T log(2T)
+
+2π
+
+�x3/5 − 1
+
+log x
+
+�
+(5.4)
+
++ C1(2T)8/3 log5(2T)
+�W 1−ν(2T ) − W σ1
+
+log W
+
+�
++ C2 log2(2T)
+�x1−ν(2T ) − x3/5
+
+log x
+
+�
+,
+
+where C1 = C1(1) and C2 = C2(3/5) are defined in [11, Thm. 1.1], and
+
+W = x((2T)
+4
+3 log(2T))−2.
+
+Note that the specific values of C1 and C2 are due to C1(σ) being an increasing
+function of σ and C2(σ) being decreasing: see equations (4.72) and (4.73) in [11].
+Next, we choose T = xµ/2 for any µ ∈ (0, 1) that satisfies max{51, log2 x} ≤
+T ≤ (xα − 2)/4. The factor of 1/2 in the choice of T is to account for the sum in
+(5.2) being over |γ| ≤ 2T. We have, with W = x1− 8µ
+
+3 /(µ log x)2,
+
+�
+
+|γ|≤2T
+xβ−1 < F(x) = µ log x
+
+πx2/5−µ + 2C1µ3 �
+W −ν(xµ) − W −2/5�
+log4 x
+
+log W
++ 2C2µ2 log2 x
+
+xν(xµ)
+.
+
+(5.5)
+
+Using this bound in (5.1), we reach
+
+ψ(x + h) − ψ(x) ≥ h − hF(x) − 2M G(x, h)
+
+xµ
+.
+
+This can readily be converted to an inequality for the prime counting function
+θ(x) = �
+
+p≤x log p. In particular, by [2, Corollary 5.1] and the fact that ψ(x + h) > θ(x + h),
+we have
+
+θ(x + h) − θ(x) ≥ h − hF(x) − 2M G(x, h)
+
+xµ
+− E(x),
+
+where E(x) = 1.001(x1/2 + x1/3) provided log x ≥ 100. Therefore, there are primes
+in (x, x + h] for all x ≥ xM satisfying
+
+1 − F(x) − 2M G(x, h)
+
+xµh
+− E(x)
+
+h
+> 0.
+(5.6)
+
+This condition depends on: the choice of power m in h = mx1−1/m, the smallest
+value in the range xM, and the parameters µ, ω, and α.
+It remains to find the smallest m for which (5.6) holds for all x ≥ x0 > 1. This
+involves optimising over µ, and is a similar process to that in [3, Sect. 4, pg. 114].
+For any µ > 1/m, the left-hand side of (5.6) increases to 1 for sufficiently large
+x. The largest-order term is in F(x), and is determined by the zero-free region.
+If (5.6) is true at the point where the zero-free region switches from using Lemma
+A.3 to Lemma A.4, then (5.6) will hold for all x beyond this. There may also be a
+
+
+THE ERROR TERM IN THE EXPLICIT FORMULA OF RIEMANN–VON MANGOLDT
+15
+
+range of µ for which this is true, so the best choice of µ will keep (5.6) positive for
+the widest range of x below this zero-free region crossover point.
+We follow the previous steps for m = 90, as this appears to be the smallest m
+we can achieve with the given constants. From Table 1 we can use M = 6.555 over
+log x ≥ 103, and M = 5.602 over log x ≥ 4 · 103, each with ω = 0.9. Numerically
+optimising over µ, we find that for µ = 0.0113, (5.6) is true for 103 ≤ x ≤ 4 · 103,
+and with µ = 0.0112 (5.6) holds for x ≥ 4 · 103.
+There are a few remaining steps to reach Theorem 1.4. Firstly, the values for M
+come from using α = 1/85 in Theorem 1.2, which restricts T < (x1/85−2)/4. Given
+that we set T = xµ/2, this upper bound on T implies that for a given µ, the result
+will only be valid for sufficiently large x. For µ = 0.0113, this condition implies
+that Theorem 1.2 only holds for log x ≥ 1492. Fortunately, we can supplement this
+result with the interval estimates for primes in [5]. The results in [5] for x ≥ 4·1018
+
+and x ≥ e600 verify that there are primes between consecutive 90th powers for
+log(4·1018) ≤ log x ≤ 2767. This is found by solving for when the interval estimates
+in [5] sit within the consecutive powers interval. Lastly, the computations of [16]
+verify the consecutive 90th powers interval for the remaining x ≥ 1. This proves
+Theorem 1.4.
+
+Acknowledgements
+
+Thanks to our supervisor, Tim Trudgian for his ideas and support when writing
+this paper. We also thank Ethan Lee for some useful comments, and Olivier Ramar´e
+for his correspondence regarding his earlier paper.
+
+
+16
+MICHAELA CULLY-HUGILL AND DANIEL R. JOHNSTON
+
+Appendix A. Current zero-free regions
+
+We use a zero-free region composed of the following four results.
+
+Lemma A.1. [14, Thm. 1.3] For |t| ≥ 2 there are no zeros of ζ(β + it) in the
+region β ≥ 1 − ν1(t), where
+
+ν1(t) =
+1
+
+5.558691 log |t|.
+
+Lemma A.2. [7, Thm. 3] For |t| ≥ 3 there are no zeros of ζ(β + it) in the region
+β ≥ 1 − ν2(t), where
+
+ν2(t) =
+1
+
+R(|t|) log |t|,
+
+with
+
+R(t) = J(t) + 0.685 + 0.155 log log t
+
+log t
+�
+0.04962 −
+0.0196
+
+J(t)+1.15
+� ,
+
+and
+J(t) = 1
+
+6 log t + log log t + log(0.618).
+
+Remark. The expression for J(t) in Lemma A.2 has been updated from [7] by using
+a more recent bound [9, Theorem 1.1].
+
+Lemma A.3. [21, Cor. 1.2] For |t| ≥ 3 there are no zeros of ζ(β +it) in the region
+β ≥ 1 − ν3(t), where
+
+ν3(t) =
+log log |t|
+
+21.233 log |t|.
+
+Lemma A.4. [1, Thm. 1.2] For |t| ≥ 3 there are no zeros of ζ(β +it) in the region
+β ≥ 1 − ν4(t) where
+
+ν4(t) =
+1
+
+53.989 log2/3 |t|(log log |t|)1/3 .
+(A.1)
+
+To get the widest zero-free region at any given T we set
+
+ν(T) =
+
+�
+1
+2,
+if |T| ≤ 3 · 1012,
+max{ν1(T), ν2(T), ν3(T), ν4(T)}
+otherwise,
+(A.2)
+
+where the constant 3 · 1012 comes from Platt and Trudgian’s computational verifi-
+cation of the Riemann hypothesis [17]. Note that ν2(t) ≥ ν1(t) for t ≥ exp(46.3),
+ν3(t) ≥ ν2(t) for t ≥ exp(170.3) and ν4(t) ≥ ν3(t) for t ≥ exp(482036).
+
+
+THE ERROR TERM IN THE EXPLICIT FORMULA OF RIEMANN–VON MANGOLDT
+17
+
+Appendix B. Updating bounds for an integral over ζ′/ζ
+
+In [4, Section 4] the following theorem is proven.
+
+Theorem B.1 ([4, Theorem 4.1]). Let α ∈ (0, 1] and ω ∈ [0, 1].
+There exists
+constants K and xK such that if x ≥ xK and max{51, log x} < T < xα
+
+2 − 1,
+
+1
+2πi
+
+� 1+ε+iT
+
+1+ε−iT
+
+�
+−ζ′
+
+ζ (s)
+� xs
+
+s ds = x −
+�
+
+ρ=β+iγ
+|γ|≤T
+
+xρ
+
+ρ + O∗
+�Kx
+
+T (log x)1−ω
+�
+,
+(B.1)
+
+where ε = 1/ log x.
+
+Here, corresponding values of xK, α, ω and K are given in [4, Table 3]. A key
+component in computing values of K is the use of explicit zero-free regions. As
+there have recently been improvements to explicit zero-free regions (Appendix A),
+the values in [4, Table 3] can be updated. We define ν(T) to be as in (A.2) and
+then use this updated zero-free region in the bounds (4.19) and (4.20) in [4]. This
+gives us the updated table below (Table 2), with values for xK, α, ω and K that
+can be used in Theorem B.1. Further computational details are given in (CODE).
+
+Table 2. Some corresponding values of xK, α, ω and K for
+Theorem B.1 that updates [4, Table 3]. Note that ω and D are
+parameters one optimises over in the original calculation in [4].
+
+log(xK)
+α
+ω
+ω
+D
+K
+
+40
+1/2
+0
+0
+—
+2.033
+
+103
+1/2
+0
+0
+—
+1.645
+
+1010
+1/2
+0.3
+0.3
+0.54
+2.274
+
+1013
+1/2
+1
+1.4
+0.50
+0.6367
+
+103
+1/10
+0.2
+0.2
+0.35
+1.215
+
+1010
+1/10
+0.9
+0.9
+0.53
+3.425
+
+103
+1/100
+0.8
+0.8
+0.46
+1.027
+
+1010
+1/100
+1
+1.5
+0.50
+0.6367
+
+103
+1/85
+0.9
+0.9
+0.50
+1.218
+
+4 · 103
+1/85
+0.9
+0.9
+0.50
+1.176
+
+We remark that the lower bound on T in Theorem B.1 is slightly stronger than
+the bound we desire for Theorem 1.2. In fact, one could weaken the bounds on T
+in Theorem B.1 to get marginally better values for K. However, we chose to keep
+this lower bound unchanged as to maintain consistency between this paper and [4].
+
+
+18
+MICHAELA CULLY-HUGILL AND DANIEL R. JOHNSTON
+
+References
+
+[1]
+C. Bellotti. “Explicit bounds for the Riemann zeta function and a new zero-
+free region”. J. Math. Anal. Appl. 536.2 (2024), p. 128249.
+
+[2]
+S. Broadbent, H. Kadiri, A. Lumley, N. Ng, and K. Wilk. “Sharper bounds
+for the Chebyshev function θ(x)”. Math. Comp. 90.331 (2021), pp. 2281–2315.
+
+[3]
+M. Cully-Hugill. “Primes between consecutive powers”. J. Number Theory
+247 (2023), pp. 100–117.
+
+[4]
+M. Cully-Hugill and D. R. Johnston. “On the error term in the explicit
+formula of Riemann–von Mangoldt”. Int. J. Number Theory 19.6 (2023),
+pp. 1205–1228.
+
+[5]
+M. Cully-Hugill and E. S. Lee. “Corrigendum to ’Explicit interval estimates
+for prime numbers’”. Math. Comp. 93.336 (2024), pp. 1019–1025.
+
+[6]
+H. Delange. “Une remarque sur la d´eriv´ee logarithmique de la fonction zˆeta
+de Riemann”. Colloq. Math. 53.2 (1987), pp. 333–335.
+
+[7]
+K. Ford. “Zero-free regions for the Riemann zeta function”. Number Theory
+for the Millennium, II (Urbana, IL, 2000). A K Peters, Natick, MA, 2002,
+pp. 25–56.
+
+[8]
+E. Hasanalizade, Q. Shen, and P.-J. Wong. “Counting zeros of the Riemann
+zeta function”. J. Number Theory 235 (2022), pp. 219–241.
+
+[9]
+G. A. Hiary, D. Patel, and A. Yang. “An improved explicit estimate for
+ζ(1/2 + it)”. J. Number Theory 256 (2024), pp. 195–217.
+
+[10]
+D. R. Johnston and A. Yang. “Some explicit estimates for the error term in
+the prime number theorem”. J. Math. Anal. Appl. 527.2 (2023), p. 127460.
+
+[11]
+H. Kadiri, A. Lumley, and N. Ng. “Explicit zero density for the Riemann zeta
+function”. J. Math. Anal. Appl. 465.1 (2018), pp. 22–46.
+
+[12]
+H. Montgomery and R. Vaughan. Multiplicative Number Theory I: Classical
+Theory. Cambridge University Press, Cambridge, 2007.
+
+[13]
+H. L. Montgomery and R. C. Vaughan. “The large sieve”. Mathematika 20
+(1973), pp. 119–134.
+
+[14]
+M. J. Mossinghoff, T. S. Trudgian, and A. Yang. “Explicit zero-free regions for
+the Riemann zeta-function”. Research in Number Theory 10.1 (2024), p. 11.
+
+[15]
+M. R. Murty. Problems in Analytic Number Theory. Graduate Texts in Math-
+ematics. Springer New York, 2013.
+
+[16]
+T. Oliveira e Silva, S. Herzog, and S. Pardi. “Empirical verification of the
+even Goldbach conjecture and computation of prime gaps up to 4 · 1018”.
+Math. Comp. 83.288 (2014), pp. 2033–2060.
+
+[17]
+D. Platt and T. Trudgian. “The Riemann hypothesis is true up to 3 · 1012”.
+Bull. Lond. Math. Soc. 53.3 (2021), pp. 792–797.
+
+[18]
+O. Ramar´e. “Modified truncated Perron formulae”. Ann. Math. Blaise Pascal
+23.1 (2016), pp. 109–128.
+
+[19]
+O. Ramar´e. Addendum to Modified truncated Perron formulae. Available at:
+https : / / ramare - olivier . github . io / Maths / TruncatedPerron - 5 -
+Addendum-04.pdf. Visited on 05-Oct-2021. 2021.
+
+[20]
+D. Wolke. “On the explicit formula of Riemann–von Mangoldt, II”. J. London
+Math. Soc. 2.3 (1983), pp. 406–416.
+
+[21]
+A. Yang. “Explicit bounds on ζ(s) in the critical strip and a zero-free region”.
+J. Math. Anal. Appl. (2024), p. 128124.
+
+
+REFERENCES
+19
+
+School of Science, UNSW Canberra, Australia
+Email address: m.cully-hugill@unsw.edu.au
+
+School of Science, UNSW Canberra, Australia
+Email address: daniel.johnston@unsw.edu.au
+
+

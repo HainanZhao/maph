@@ -1,0 +1,148 @@
+LARGE VALUE AND ZERO DENSITY ESTIMATES FOR DIRICHLET L-FUNCTIONS
+57
+
+12.4. Conclusion. Returning to the zero density estimate, combining the above bound
+for |W| (i.e., the estimation of the class-I zeros) with the estimate for the class-II zeros
+in Subsection 12.2, we deduce our general zero density estimate from (12.4) that, for
+any divisor q1 | q,
+�
+
+χ mod q
+N(σ, T, χ) ⪅ (q1/3
+1 qT)
+
+3(1−σ)
+
+1+σ +
+�
+qT(q1T)−1/2� 3(1−σ)
+
+σ
++ (q1T)− 1
+
+2(qT)
+21−20σ
+
+6
++ (qT)
+
+15(1−σ)
+
+3+5σ .
+
+The second part of the theorem states that when q1 | q and q1 ≥ √q, we have that
+�
+
+χ mod q
+N(σ, T, χ) ⪅ (q
+
+1
+3
+1 q2T 2)1−σ + (q3T
+9
+4q
+− 3
+
+4
+1 )1−σ + (qT)B(1−σ) + (qT)
+30
+13 (1−σ),
+(12.6)
+
+where 1
+
+2 < σ < 1 and B =
+37+3β−√
+
+9β2+222β−71
+12
+with β = log q1T
+
+log qT ≥ 1/2.
+This may be deduced by the general zero density estimate with (1.4). Writing each
+term in the general zero density estimate in the form (qT)C(σ)(1−σ), we find that in each
+case C(σ) is decreasing, whereas the exponent 3/(2 − σ) in Ingham’s estimate (1.4)
+is increasing in σ. Thus, after combining these two bounds, the resulting estimate for
+�
+
+χ N(σ, T, χ) is (qT)C(σ0)(1−σ0), where σ0 is determined by C(σ0) = 3/(2 − σ0). As an
+example, we derive the first term in (12.6). We have
+
+(q1/3
+1 qT)
+
+3(1−σ)
+
+1+σ
+= (qT)
+
+3
+
+1+σ
+log(q1/3
+1
+qT )
+
+log(qT )
+(1−σ).
+
+Thus the coefficient to compare with Ingham is
+
+3
+
+1 + σ
+log(q1/3
+1 qT)
+
+log(qT)
+,
+
+which is decreasing in σ. The intersection is given by
+
+3
+
+1 + σ
+log(q1/3
+1 qT)
+
+log(qT)
+=
+3
+
+2 − σ.
+
+Upon rearranging, we find that
+
+3
+
+2 − σ = 1 + log(q1/3
+1 qT)
+
+log(qT)
+.
+
+Therefore the combined contribution of the first term with Ingham is
+
+(qT)
+�
+1+
+log(q1/3
+1
+qT )
+
+log(qT )
+�
+(1−σ) = (q1/3
+1 q2T 2)1−σ.
+
+The other terms in (12.6) are obtained in the same way. For the last part of Theorem
+1.2, we use the last part of Lemma 12.1.
+
+Remark 12.3. The worst case for our zero density estimate is when T = 1 and there
+are no factors q1 that are of an appropriate size; they may be too small (or too large).
+Notably, this happens for prime moduli q. In this case, the critical situation is at
+σ = 5/7 with N = q7/9 and |W| = q2/3. This is a case where our lack of subdivision
+causes us to do worse as the largest term is q4/3N 2−4σ = q2/3, which comes from our
+S3 bound, S3 ⪅ (qT)2|W|3/2. This term corresponds to square root cancellation in the
+
+

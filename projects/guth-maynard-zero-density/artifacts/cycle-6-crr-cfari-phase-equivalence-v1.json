@@ -1,0 +1,124 @@
+{
+  "artifact_id": "cycle-6-crr-cfari-phase-equivalence-v1",
+  "claim_boundary": "This artifact proves the sampled mean-value enclosure for the Base phase factor, fixed-power CFARI/AFARI equivalence, and tensor/Schur identities. It proves neither CFARI, AFARI, F4F, CRR-U, a witness, a cubic estimate, a density gain, a short-interval theorem, a full-method saturation theorem, or an L-function result.",
+  "crr_u_effect": {
+    "epistemic_status": "PROVED",
+    "statement": "The truth status of CRR-U does not advance. A proof of either fixed-saving target would still imply CRR-U through the averaged-jitter reduction."
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "affine_rows": {
+      "Mcal_to_afaris_A": "26",
+      "afari_to_cafari_before_absorption": "40-1*delta",
+      "afaris_A_to_Mcal": "20",
+      "base_phase_rayleigh_lower": "20-4*delta",
+      "cfari_to_Mcal_before_absorption": "20-1*delta",
+      "sampled_mean_value_extra_factor": "C*(1+log(2L))",
+      "sampled_mean_value_phase_upper": "20+1*delta"
+    },
+    "fixed_power_maps": {
+      "afari_eta_to_cafari": "AFARI_eta implies CFARI_(eta/2) for all sufficiently large v",
+      "cfari_eta_to_afari": "CFARI_eta implies AFARI_(eta/2) for all sufficiently large v",
+      "f4f_zeta_to_cafari": "F4F_zeta implies CFARI_(zeta/3) for all sufficiently large v",
+      "scope": "Each map absorbs only fixed constants, delta(v), and logarithmic/subpower factors; it is not an effective finite-v threshold."
+    },
+    "scales_at_v8": {
+      "H": 68719476736,
+      "L": 1073741824,
+      "Q": 4096,
+      "R": 16777216,
+      "v": 8
+    }
+  },
+  "extra_energy_gate": {
+    "epistemic_status": "CONJECTURED",
+    "positive_cubic_boundary": "No proved bridge connects the frozen PositiveCubic predicate to the Base phase or the mixed Schur kernel.",
+    "proved_conditional_effect": "F4F_zeta implies CFARI_(zeta/3) eventually through actual-Farey Cauchy plus the sampled phase upper",
+    "scope": "the least currently isolated non-tautological energy/Farey condition in this Cauchy chain; not claimed logically weakest among all arguments",
+    "statement": "F4F_zeta: integral_(U_v)|R_W(u)|^4du<=v^(20-zeta) for a fixed zeta>0 and every Base-admissible W"
+  },
+  "fixed_power_equivalence": {
+    "afari_to_cafari": "AFARI_eta implies CFARI_(eta/2) eventually, using Mcal<=(20Q/L)A and the sampled phase upper",
+    "cfari_to_afari": "CFARI_eta implies AFARI_(eta/2) eventually, using the Base phase lower and A<=(2L/Q)Mcal",
+    "consequence": "CFARI is a phase-sensitive reformulation, not an independent fixed-power gate beyond AFARI",
+    "epistemic_status": "PROVED",
+    "equivalence": "exists fixed eta>0 CFARI_eta if and only if exists fixed eta>0 AFARI_eta"
+  },
+  "frozen_hashes": {
+    "afari_coupling_artifact": {
+      "path": "artifacts/cycle-6-crr-afari-coefficient-coupling-v1.json",
+      "sha256": "a9b142f8fd22e4fe9ebd4857af4eb7e764aa20ea379170930f6446231e663266"
+    },
+    "conventions": {
+      "path": "conventions/crr_cafari_phase_equivalence_v1.py",
+      "sha256": "62fbe5603f3c5f5024b7745d7196cef3d02f88e6a941f8d141974c74c65ee64e"
+    },
+    "crr_v2_artifact": {
+      "path": "artifacts/cycle-4-p1r-crr-u-formalization-v2.json",
+      "sha256": "e26be797539eabe53ee765b7067d1c99fe4d440035e27785cf38aa64bc2fc84e"
+    },
+    "document": {
+      "path": "docs/cycle-6-crr-cfari-phase-equivalence-v1.md",
+      "sha256": "569a2bea4ad16b2ecab8b40a8ab7578ab3010cbb2c0a4baf8dac727afcb5ad03"
+    },
+    "farey_log_v2_artifact": {
+      "path": "artifacts/cycle-5-crr-farey-log-gram-reduction-v2-averaged-jitter.json",
+      "sha256": "ce59b777ec02769168d9dc330658a0ab1d46b05cdb7ac5dc8115e248d85f8ce8"
+    },
+    "gm_source_tex": {
+      "path": "artifacts/sources/arxiv-2405.20552v2/LargevaluesDirichlet17.tex",
+      "sha256": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428"
+    },
+    "tests": {
+      "path": "tests/test_cycle_6_crr_cafari_phase_equivalence_v1.py",
+      "sha256": "f1185e174fd715eb595f445329e1eb2b331475025f6a30022832e576e1f051a0"
+    }
+  },
+  "literature_boundary": {
+    "boca_radziwill": "The additive complete-Farey matrix e(n*a/q), n<=N, N asymp Q^2 is not the logarithmic-jitter K_F on arbitrary real W subset [0,Q^3]; its eigenvalue-moment result supplies no all-ones or mixed G_W/K_F bound here.",
+    "epistemic_status": "OBSERVED",
+    "not_an_imported_theorem": true,
+    "ramare": "The same additive uniform-weight Farey setting is studied; no direct log-node transfer is asserted."
+  },
+  "phase_scale_enclosure": {
+    "epistemic_status": "PROVED",
+    "lower": "a^*G_W*a>=v^(20-4*delta(v))",
+    "mean_value_translation": "1-separated sampling plus the classical coefficient-l2 Dirichlet mean-value estimate yields ||M_W||_op^2<=C(H+L)(1+log(2L))",
+    "power_scale": "a^*G_W*a=v^(20+o(1)) uniformly on the Base class",
+    "scope": "every Base-admissible common pair; no RationalMass, energy, or PositiveCubic hypothesis enters the upper bound",
+    "upper": "a^*G_W*a<=C*v^(20+delta(v))*(1+log(2L))"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_6_crr_cafari_phase_equivalence_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_6_crr_cafari_phase_equivalence_v1.py",
+    "write_command": "python3 proof/build_cycle_6_crr_cafari_phase_equivalence_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE_BY_USER_DIRECTION",
+    "lightweight_checks": "primary-source anchors, exact scale algebra, finite-dimensional kernel identities, replay, and tamper rejection"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_6_crr_cafari_phase_equivalence_v1.py",
+    "sha256": "5967ca04e9eceaf332477659df5837c66d0015931830b02f74118452c7a903d6"
+  },
+  "source_context": {
+    "base_cardinality": "v^(8-delta(v)) <= |W| <= v^(8+delta(v))",
+    "base_set": "finite W subset [0,H], H^(1/100)-separated",
+    "mean_value_anchor": "LargevaluesDirichlet17.tex, lines 217-225 and 320-333",
+    "phase_lower": "a^*(M_W*M_W^*)a=||M_W^*a||_2^2>=v^(20-4*delta(v))",
+    "ray_comparison": "(L/(20Q))*Mcal<=A<=(2L/Q)*Mcal"
+  },
+  "status": "SEALED_CFARI_AFARI_PHASE_EQUIVALENCE_LIGHTWEIGHT_CHECKED",
+  "tensor_and_schur": {
+    "epistemic_status": "PROVED",
+    "four_linear_structure": "the G pair and K_F pair are independent before a new mixed estimate is introduced",
+    "schur_identity": "(G_W circ K_F)_(t,t')=sum_(n,(r,s),theta)w(n/L)^2*(n*(r/s)*exp(theta/H))^(i(t-t'))",
+    "scope": "the Schur kernel is PSD but it is a diagonal mixed object, not the tensor product above",
+    "tensor_identity": "(a^*G_W*a)(1^*K_F*1)=||(M_W^*a) tensor (F_W*1)||_2^2"
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "artifact_id": "p6-s06-primary-input-ledger-v1",
+  "claim_boundary": "Bounded primary-source ledger and conditional low-height reduction only. It proves no CGL theorem, density estimate, short-interval result, fourth moment, convexity bound, or multiplicity theorem.",
+  "dependencies": {
+    "multiplicity_transfer": {
+      "path": "artifacts/p6-multiplicity-transfer-v1.json",
+      "sha256": "6466eabbd5b43bbc5ccd9937e9080bb8dab4ed77b27e4617b675e3546aa71772"
+    },
+    "primitive_transfer": {
+      "path": "artifacts/p6-primitive-to-all-transfer-v1.json",
+      "sha256": "2edccf46d15229fb8b8ff2c9510d0912f73228da681577ca66d869a8d8acf0d7"
+    },
+    "tail_status_correction": {
+      "path": "artifacts/p6-detector-qt-tail-v2-status-correction.json",
+      "sha256": "5fef3abecd2f2def93693f2e2c849ac8585b6fe22fb930743df690b359fa34ec"
+    }
+  },
+  "document": {
+    "path": "docs/p6-s06-primary-input-ledger-v1.md",
+    "sha256": "5d9d66c393053c59a2fa6b35838611ac8cf6fc1e6f87cda01901a5d8b77485d8"
+  },
+  "epistemic_status": "OBSERVED",
+  "gate_effect": {
+    "epistemic_status": "OBSERVED",
+    "not_promoted": "No CGL-v2 7/3 estimate or downstream theorem is promoted.",
+    "result": "S06 remains open. LOW_HEIGHT_MULTIPLICITY_COUNT is reduced to LC plus the pinned HSW source; L_POLY_A, FOURTH_MOMENT_H, LC, and q1-sensitive obligations remain open."
+  },
+  "hostile_audit": "DEFERRED_TO_PAPER_STAGE",
+  "input_ledger": {
+    "FOURTH_MOMENT_H": {
+      "citation_boundary": "CGL cites Montgomery Theorem 10.3, but the theorem text and its exact hypotheses are not frozen locally. A continuous fourth moment is not silently upgraded to this discrete estimate.",
+      "epistemic_status": "CONJECTURED",
+      "needed_statement": "For selected pairs (gamma_r,chi_r) with |gamma_r|<=H and same-character spacing at least 1, sum_r |L(1/2+i gamma_r,chi_r)|^4 <<_delta (qH)^(1+delta), uniformly for the fixed modulus q and all relevant character labels.",
+      "status": "OPEN_EXTERNAL_PRIMARY_THEOREM"
+    },
+    "LOCAL_MULTIPLICITY_COUNT_LC": {
+      "citation_boundary": "CGL TeX 2158 has cardinalities and cites Davenport Chapter 16, but does not state multiplicity or exact endpoint/uniformity hypotheses.",
+      "epistemic_status": "CONJECTURED",
+      "needed_statement": "For each relevant character and unit strip, the multiplicity-inclusive zero count is O(log(q(|u|+3))) with endpoints matching the application.",
+      "status": "OPEN_EXTERNAL_PRIMARY_THEOREM"
+    },
+    "LOW_HEIGHT_MULTIPLICITY_COUNT": {
+      "conditional_on": [
+        "LOCAL_MULTIPLICITY_COUNT_LC"
+      ],
+      "epistemic_status": "PROVED",
+      "proof_route": "HSW Corollary 1.2 bounds the distinct zeta support by O(H0 log(H0+3)); LC bounds each multiplicity by O(log(H0+3)); the primitive-to-all Euler-factor lemma identifies the Re(s)>0 principal zeros with zeta zeros.",
+      "scope": "Sufficient for a Q^o(1) detector loss; it does not prove LC or a CGL multiplicity convention.",
+      "statement": "For H0=A0 log(Q+3), the principal-character low-height zero contribution is O(log(Q+3)^2) with multiplicity."
+    },
+    "L_POLY_A": {
+      "disposition": "The frozen CGL source does not supply this exact all-modulus statement; do not substitute a remembered convexity theorem or a restricted-conductor result.",
+      "epistemic_status": "CONJECTURED",
+      "needed_statement": "Uniformly for every relevant primitive Dirichlet character modulo q and real v, |L(1/2+iv,chi)| <= C [q(2+|v|)]^A for fixed C,A.",
+      "status": "OPEN_EXTERNAL_PRIMARY_THEOREM"
+    }
+  },
+  "q1_sensitive_overlap": {
+    "epistemic_status": "OBSERVED",
+    "reason": "The proved primitive-to-all transfer applies to monotone final conductor envelopes. It does not termwise transfer q1-sensitive intermediate expressions because q1|q need not survive as a divisor of the primitive conductor d, nor need the source case ranges persist.",
+    "source_locators": [
+      "CGL TeX 122--124",
+      "CGL TeX 159--176",
+      "CGL TeX 454--504"
+    ],
+    "status": "RETAINED_UNREPAIRED"
+  },
+  "replay": "python3 proof/build_p6_s06_primary_input_ledger_v1.py --check",
+  "sealer": {
+    "path": "proof/build_p6_s06_primary_input_ledger_v1.py",
+    "sha256": "d2f3b06d8488e7154ab11e36d9302807042716ffb2e2023676daaec197b1113a"
+  },
+  "source_checks": {
+    "cgl_v2": {
+      "locators": {
+        "fourth_moment_citation_and_output": "TeX 2169--2171",
+        "local_count_and_well_spacing": "TeX 2154--2158",
+        "principal_low_height_claim": "TeX 2137--2139",
+        "q1_sensitive_density": "TeX 159--176",
+        "q1_sensitive_large_values": "TeX 122--124",
+        "tail_and_missing_growth_theorem": "TeX 2140"
+      },
+      "tar": {
+        "path": "artifacts/sources/g1-literature-audit-v1/arxiv-2507.08296v2.tar",
+        "sha256": "b982cd5afa5b5e8a9abff2c6306519ba558d321b19aadd3fdbe59b3750f8e9ae"
+      },
+      "tex": {
+        "path": "artifacts/sources/g1-literature-audit-v1/extracted-2507.08296v2/Large_Value_Estimates_for_Dirichlet_Polynomials_with_Characters_and_Zero_Density_of_Dirichlet___L_-Functions.tex",
+        "sha256": "0b9ebb6b604944b7c59a9ec37a75c48f6a08f88611f911ff5f02dc013b848e2f"
+      }
+    },
+    "hasanalizade_shen_wong_2022": {
+      "checked_statement": "For T>=e, an explicit Riemann--von Mangoldt estimate bounds N_zeta(T) by O(T log(T+3)).",
+      "locator": "Corollary 1.2, source TeX 255--261; definition TeX 188--195",
+      "pdf": {
+        "path": "artifacts/sources/hasanalizade-shen-wong-2022-counting-zeros.pdf",
+        "sha256": "3fc4c89f49249924e61cb0d289d81559faed53fcbb838628ea32dc7ec6f89fbf"
+      },
+      "source_gzip": {
+        "path": "artifacts/sources/hasanalizade-shen-wong-2022-counting-zeros.tar",
+        "sha256": "8ba8d0eb95e1dd967adf17b7a2e77bdc45a99f6aa283d41d23dd4d0ac4358247"
+      }
+    }
+  }
+}

@@ -16,7 +16,8 @@
 \title{A Certified Canonical Census of One-Place Stark Invariants over Real Quadratic Fields\\
 \large Exact Quadratic Value Orbits and the Higher-Order Frontier}
 \author{Hainan Zhao\\\small Independent Researcher}
-\date{1 August 2026\\\small\url{https://doi.org/10.5281/zenodo.21729947}}
+\date{Version 1.1 correction candidate, 1 August 2026\\
+\small Version 1.1: \url{https://doi.org/10.5281/zenodo.21730707}}
 
 \begin{document}
 \maketitle
@@ -58,7 +59,7 @@ this paper does not introduce a second convention system.
 
 The proved assertions here are the finite trichotomy, the exhaustive
 quadratic packet-value-orbit corpus, the quadratic deleted-prime cover
-criterion, and twelve named higher-order member transports.  The
+criterion, and twenty-two named higher-order member transports.  The
 higher-order eligibility table is an exact
 finite-population observation: five quartic rows remain incomplete.
 We do not assert results beyond the frozen selected range.  Eligibility
@@ -66,8 +67,8 @@ is not a packet identity.  In particular, a common normal closure or a
 banked representative does not promote another member: exact conductor,
 ray-class, orientation, and Artin-labelled packet transport are separate
 obligations.  The registered Shintani-transfer scope has 232 eligible
-rows.  Its successor ledger records twelve completed noncanonical member
-transports; the other 220 remain open.
+rows.  Its successor ledger records twenty-two completed noncanonical member
+transports; the other 210 remain open.
 
 We use \emph{PROVED} when a cited theorem applies after exact checks and
 \emph{OBSERVED} for reproducible descriptive statistics of this finite
@@ -93,7 +94,7 @@ A clean PARI replay enumerates 121 fields and 13,939 raw ideals.  Of
 these, 2,461 are self-conjugate and 11,478 are nonself-conjugate, so the
 implemented finite-ideal quotient has
 \begin{equation}\label{eq:universe-count}
- 2461+\frac{11478}{2}=8200
+ 2461+5739=8200
 \end{equation}
 representatives.  No theorem below promotes this selected universe to
 a census of all pointed one-place moduli.
@@ -212,6 +213,8 @@ made imprimitive at $\mathfrak f$.
 \begin{theorem}[Deleted-prime cover criterion]\label{thm:cover}
 In the quadratic-support regime, the following are equivalent:
 \begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
 \item $X_A=1$ for every $A\in G$;
 \item $L'_{\mathfrak m}(0,\chi)=0$ for every $\chi(R)=-1$;
 \item $E_\chi=0$ for every $\chi(R)=-1$;
@@ -231,13 +234,18 @@ The imprimitive factor is
 \]
 Every displayed local value is $1$ or $-1$, because $\chi^\circ$ is
 quadratic and unramified at the deleted prime.  Hence $E_\chi=0$ exactly
-when one such value is $1$, proving the equivalence of (3) and (4).
-The class numbers, roots-of-unity quotient, index, and oriented
-$\log|\tau_1u_\chi|$ in \eqref{eq:quadratic-product} are nonzero, so the
-explicit quadratic formula gives (2) if and only if (3).  Fourier
-inversion gives (2) implies (1).  Conversely, (1) gives
+when one such value is $1$, proving the equivalence of (iii) and (iv).
+The companion paper proves the explicit formula and its regulator
+identity in \cite[Prop.~4 and Eq.~(9)]{ZhaoResults}.  More explicitly,
+$u_\chi$ generates the primitive rank-one norm kernel modulo torsion,
+so it is non-torsion; injectivity of the logarithmic embedding on the
+free unit group makes its relative vector $(b,-b,0)$ have $b\ne0$, and
+the pinned orientation makes $b=\log|\tau_1u_\chi|>0$.  The class
+numbers, roots-of-unity quotient, and index are also nonzero.  Thus the
+explicit quadratic formula gives (ii) if and only if (iii).  Fourier
+inversion gives (ii) implies (i).  Conversely, (i) gives
 $Z'_{\mathfrak m}(0,A)=0$ for every $A$; character orthogonality applied
-to the exact inverse transform recovers (2).
+to the exact inverse transform recovers (ii).
 \end{proof}
 
 The criterion is independent of the census bounds and is an exact
@@ -311,7 +319,12 @@ real-place and unit-congruence gates, and the frozen effective-exponent
 bound.  The cyclic-quartic CM column requires order-four nonquadratic
 support, projective $V_4$ geometry, exact local factors, the registered
 $S$-set condition, roots of unity, and orientation.  These two columns
-record route eligibility, not packet identities.
+record route eligibility, not packet identities.  They are the
+mutually disjoint assignment sets frozen by the v5 declaration: its
+exact set-intersection audit finds no doubly assigned row in this
+finite corpus.  This is not a general theorem that the two mechanisms
+cannot overlap; a future doubly eligible row would require an explicit
+overlap category rather than silent priority assignment.
 
 The Roblot column tests Theorem~7.1 \cite{Roblot2013}: conditions
 (A1)--(A3), equality with the theorem's $S$-set, class number prime to
@@ -342,10 +355,12 @@ not counted as failures.
 
 For order-six support, 764 character/inverse-character kernels reduce
 to 407 primitive-field keys.  Exact local checks remove 25 keys and
-382 require field certificates.  The residual 73 possible
-three-divisible class-number fields are each closed by an exact
-unramified cyclic-cubic certificate.  Thus every sextic kernel has an
-exact Roblot applicability decision.  The five incomplete entries of
+382 require field certificates.  Of those 382, 309 complete the field
+gates directly: 48 reuse full \texttt{bnfcertify} certificates and 261
+use quotient certificates from computed prime-to-three class groups.
+The remaining 73 possible three-divisible class-number fields are each
+closed by an exact unramified cyclic-cubic certificate.  Thus every
+sextic kernel has an exact Roblot applicability decision.  The five incomplete entries of
 Table~\ref{tab:higher} are old quartic construction failures, not
 missing sextic decisions and not mathematical no-go results.
 
@@ -400,7 +415,9 @@ order & minimal unresolved & minimal all-mechanisms-fail\\\midrule
 
 The registered Shintani-transfer population consists of 232 rows in 88
 groups by exact normal-closure polynomial.  A successor ledger promotes
-exactly the twelve noncanonical members in Table~\ref{tab:transport}.
+the first twelve noncanonical members in Table~\ref{tab:transport}; a
+corrected integral-basis batch adds ten further transports in the
+successor ledger.
 For RQ-000039, for example,
 \[
  X_{98}(A)=X_{49}(A)X_{49}(A\mathfrak q^{-1})^{-1},
@@ -414,7 +431,7 @@ prime with source ray log $\ell$ and quotient exponent $e$.
 
 \begin{table}[ht]
 \centering\small
-\caption{All proved noncanonical Engine-B member transports.}
+\caption{First twelve proved noncanonical Engine-B member transports.}
 \label{tab:transport}
 \begin{tabular}{llllll}\toprule
 target & source & closure & $c$ & deleted $(\ell,e)$ & status\\\midrule
@@ -433,11 +450,15 @@ RQ-000465 & RQ-000419 & B5-022 & 5 & $(3,1)$ & PROVED\\\bottomrule
 \end{tabular}
 \end{table}
 
-The B5-086 direct-source closure shares source prime $11$ in every
-target enlargement, while B5-021 and B5-033 admit no integral
-source-to-target modulus quotient.  These are exact exclusions from
-the coprime Euler-deletion route, not negative packet claims.  The
-remaining 220 members retain status
+The earlier B5-086/B5-021/B5-033 direct-source exclusions used
+nonintegral quadratic bases with HNFs expressed in the frozen integral
+bases, and are withdrawn.  The corrected all-closure screen finds ten
+geometrically eligible directions from their certified sources, and
+the label-aware Euler and orientation proofs now promote all ten.
+Across the former 220 unpromoted members, 116 have no incoming direct
+coprime-deletion direction and 104 retained a
+source-or-proof-open direction.  These are route classifications, not
+negative packet claims.  The remaining 210 members retain status
 \texttt{UNSTARTED\_NO\_CASE\_LEVEL\_PACKET\_CLAIM}.
 
 Six historical rows---RQ-000970, RQ-000991, RQ-000993, RQ-001004,
@@ -461,9 +482,10 @@ The quadratic theorem gate is
 \texttt{python3 proof/audit\_q\_euler\_deleted\_prime\_cover.py}.
 The primary finite evidence is the support-first reconciliation, the
 row-level quadratic corpus, the deleted-prime cover certificate, and
-the H-taxonomy matrix.  The deterministic paper-and-replay package is
-archived at \url{https://doi.org/10.5281/zenodo.21729947}.  The companion
-paper proves the uniform
+the H-taxonomy matrix.  The deterministic version-1.0 paper-and-replay
+package is archived at \url{https://doi.org/10.5281/zenodo.21730707}.
+This version-1.1 correction candidate is local and is not represented
+by that immutable version DOI.  The companion paper proves the uniform
 quadratic theorem and selected higher-order identities; this census
 does not reprove or enlarge them.
 
@@ -528,11 +550,12 @@ expanded-range counterexample are in
 \url{artifacts/q-euler-deleted-prime-cover-theorem-v1.json}.
 Engine-B transport
 scope is in \url{artifacts/engine-b-transport-manifest-v5.json}; its
-successor ledger is in \url{artifacts/engine-b-transport-ledger-v4.json}.
-The latter records exactly twelve completed member transports.
-The exact direct-source coprime no-go screens are recorded in
-\url{artifacts/b5086-transport-geometry-v1.json} and
-\url{artifacts/final-direct-source-coprime-screen-v1.json}.
+successor ledger is in \url{artifacts/engine-b-transport-ledger-v5.json}.
+The latter records exactly twenty-two completed member transports.
+The corrected global direct coprime-deletion geometry audit is recorded
+in \url{artifacts/engine-b-global-coprime-geometry-audit-v1.json}; the
+superseded B5-086/B5-021/B5-033 screens remain preserved with their
+integral-basis correction record.
 The exact four-control Hilbert/ray object audit is
 in \url{artifacts/b5079-hilbert-ray-containment-v1.json} and
 \url{artifacts/hilbert-ray-containment-tranche-v1.json}; it is field
@@ -540,7 +563,7 @@ containment only.  The versioned Cycle-127 correction record freezes
 the revised source hashes, audit results, and replay resource use.  The
 release record, including the root-file inventory and public checksums,
 is associated with DOI
-\url{https://doi.org/10.5281/zenodo.21729947}.
+\url{https://doi.org/10.5281/zenodo.21730707}.
 \end{sloppypar}
 
 \begin{thebibliography}{20}

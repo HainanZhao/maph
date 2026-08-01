@@ -1,0 +1,120 @@
+{
+  "adjudicator": {
+    "path": "proof/adjudicate_g1_route_selection_v2.py",
+    "sha256": "7129eab33fd08ede2cf590ef60d5b3afd5e962fa5a7771ef9ad6b414d4a7442a"
+  },
+  "artifact_id": "cycle-3-g1-route-decision-v2",
+  "claim_boundary": "No-selection-only bounded program decision for the sealed zero-retained G1 branch. It is not a theorem, asymptotic obstruction, saturation result, density improvement, or refutation of P2A/P2B/P2C.",
+  "correction": {
+    "contained_defects": [
+      "incomplete affirmative route predicates",
+      "missing adjudicator identity"
+    ],
+    "positive_case_policy": "FAIL_CLOSED_REQUIRES_SEPARATELY_SEALED_LABELED_EVIDENCE",
+    "supersedes_for_promotion": "cycle-3-g1-route-decision-v1"
+  },
+  "decision": "NO_SELECTION",
+  "epistemic_status": "OBSERVED",
+  "evidence_summary": {
+    "completed_rows": 429,
+    "critical_zero_residual_term": "LV3",
+    "exact_local_rows": 7744,
+    "exact_transfer_rows": 560,
+    "failed_rows": 159,
+    "failure_code_counts": {
+      "INFEASIBLE_CARDINALITY": 154,
+      "NONPOSITIVE_VALUE_RATIO": 5
+    },
+    "finite_energy_feasible_rows": 434,
+    "finite_energy_retention_eligible_rows": 0,
+    "retained_rows": 0,
+    "screen_rows": 588,
+    "validation_rows": 0
+  },
+  "falsifier": "Any frozen hash/count/rule mismatch or any retained/validation row invalidates this no-selection-only decision; positive route evidence requires a different sealed adjudicator.",
+  "frozen_hashes": {
+    "empirical_reconciliation_v1": {
+      "path": "artifacts/cycle-3-g1-atlas-empirical-reconciliation-v1.json",
+      "sha256": "4e3adc2885a9c441d0006633355b8be87d39599bc93ca68d1270475b27111a88"
+    },
+    "energy_no_retention_v3": {
+      "path": "artifacts/g1-energy-no-retention-audit-v3.json",
+      "sha256": "bf050f6186ab2bab247cfb18bc628168149354cc64da8773879e95e56a991fc6"
+    },
+    "envelope_sensitivity_v1": {
+      "path": "artifacts/g1-envelope-sensitivity-reconciliation-v1.json",
+      "sha256": "850b825698722d628340b762867c98774dae53443aecde581138c6830993b60e"
+    },
+    "exact_atlas_v2": {
+      "path": "artifacts/cycle-3-g1-exact-structural-atlas-v2.json",
+      "sha256": "fd66d17664ca921795617c6bfca76c3be49246ea9351644848a2aadf9e680b08"
+    },
+    "literature_audit_v1": {
+      "path": "artifacts/g1-current-literature-audit-v1.json",
+      "sha256": "49da2e838ce60699ba870e0c532aab5ec8ba564c560811d9683ac92f0afbe6be"
+    },
+    "literature_correction_v2": {
+      "path": "artifacts/g1-current-literature-audit-v2-correction.json",
+      "sha256": "f56529c5919971385cc583b51255636022a5b33fb0cfd4857a587f1d3e099076"
+    },
+    "preregistration_artifact": {
+      "path": "artifacts/cycle-3-g1-atlas-preregistration-v1.json",
+      "sha256": "227ec1c66b2e109653354b6c3245b4e809fe52692c01514ac10064c23db2b6f8"
+    },
+    "preregistration_document": {
+      "path": "docs/cycle-3-g1-atlas-preregistration-v1.md",
+      "sha256": "0510bb5ced5b3a5fd4377dea57216b226b58b49158ad6ddb6185775c967bfd72"
+    },
+    "superseded_v1_adjudicator": {
+      "path": "proof/adjudicate_g1_route_selection_v1.py",
+      "sha256": "5879cadd61bf23015cbc27ed00d049f3a8792dc75dd09e835dd7321aa307d355"
+    },
+    "superseded_v1_artifact": {
+      "path": "artifacts/cycle-3-g1-route-decision-v1.json",
+      "sha256": "a54115024a6dd1eae5cff7653b1488d9cde05d8063f4769e27eeda7aec702d6b"
+    },
+    "v1_hostile_audit_artifact": {
+      "path": "artifacts/g1-route-decision-v1-hostile-audit-v1.json",
+      "sha256": "98e2019f25ea357221826195c3497984b6213fe29545f05d2135d6b5b706040b"
+    },
+    "v1_hostile_audit_script": {
+      "path": "proof/audit_g1_route_decision_v1_hostile.py",
+      "sha256": "bc35a83080b1d1a4d584b7a8665dd846c3c7cb6fe697a8b37f5b2f19eb197e2d"
+    }
+  },
+  "gate_status": "G1_CLOSED_NO_SELECTION",
+  "next_action_boundary": "A new PLAN-authorized preregistration is required before any P2 theorem search or replacement screen; this decision itself authorizes none.",
+  "preservation": {
+    "failed_rows_retained": true,
+    "rejected_means_not_selected_not_refuted": true,
+    "retuning_permitted": false,
+    "v1_preserved_as_failed_audit_path": true
+  },
+  "routes": {
+    "COMBINATION": {
+      "reason": "No constituent route has separate affirmative labeled evidence.",
+      "selected": false,
+      "status": "NOT_SELECTED"
+    },
+    "P2A": {
+      "reason": "The frozen screen retained no row, so no trace feature absent from the cubic terms was evidenced.",
+      "selected": false,
+      "status": "NOT_SELECTED"
+    },
+    "P2B": {
+      "reason": "The frozen screen retained no row establishing a consistent energy/affine obstruction; finite-scale energy non-retention is not asymptotic classification.",
+      "selected": false,
+      "status": "NOT_SELECTED"
+    },
+    "P2C": {
+      "reason": "LV3 is the exact zero-residual transfer term, but the frozen screen supplies no retained local candidate to propagate.",
+      "selected": false,
+      "status": "NOT_SELECTED"
+    }
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  }
+}

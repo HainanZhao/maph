@@ -1,0 +1,39 @@
+{
+  "artifact_id": "cycle-3-g1-atlas-first-launch-failure-v1",
+  "affected_engine": {
+    "path": "discovery/run_g1_atlas_v1.py",
+    "sha256": "78f5088cbe615237d565854428511cda03e22fc04838d192c64d3215748c28ee"
+  },
+  "claim_boundary": "OBSERVED operational containment record. No screen row, mathematical candidate, theorem, extremizer, or saturation claim is recovered or inferred from this failed launch.",
+  "date_utc": "2026-08-01",
+  "epistemic_status": "OBSERVED",
+  "evidence": {
+    "artifacts_after_exit": {
+      "cycle-3-g1-atlas-observations-v1.json": "ABSENT",
+      "cycle-3-g1-atlas-performance-v1.json": "ABSENT"
+    },
+    "journal_for_child_pid": "NO_ENTRIES",
+    "last_live_sample": {
+      "cpu_percent": "99.9",
+      "elapsed": "00:03:08",
+      "pid": 3476571,
+      "rss_kib": 27552,
+      "state": "R"
+    },
+    "post_finalize_state": "PID_ABSENT",
+    "recoverable_stderr": "UNAVAILABLE",
+    "targeted_reproduction": "Rows G1-S000 through G1-S015 were invoked individually without a reproduced nonzero row exit before the diagnostic was deliberately terminated to avoid an unauthorized full retry."
+  },
+  "failed_launch": {
+    "command": "/usr/bin/time -v python3 projects/guth-maynard-zero-density/discovery/run_g1_atlas_v1.py --run-full --write-observations projects/guth-maynard-zero-density/artifacts/cycle-3-g1-atlas-observations-v1.json --write-performance projects/guth-maynard-zero-density/artifacts/cycle-3-g1-atlas-performance-v1.json",
+    "outcome": "ABANDONED_NO_ARTIFACT",
+    "pid": 3476571
+  },
+  "root_cause_assessment": {
+    "causal_status": "CONJECTURED",
+    "finding": "The long child remained coupled to the agent execution session and was terminated when that agent finalized.",
+    "structural_loss_mechanism_status": "OBSERVED",
+    "structural_loss_mechanism": "Engine v1 assembled and wrote both artifacts only after all screen and validation work, so termination before final assembly preserved no row checkpoint."
+  },
+  "retry_policy": "No silent retry. A separately versioned v2 engine must close runtime, exception-retention, validation-adjudication, and crash-recovery defects and pass hostile audit first."
+}

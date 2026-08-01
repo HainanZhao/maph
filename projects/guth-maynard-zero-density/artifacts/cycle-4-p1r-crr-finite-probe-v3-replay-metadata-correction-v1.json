@@ -1,0 +1,127 @@
+{
+  "artifact_id": "cycle-4-p1r-crr-finite-probe-v3-replay-metadata-correction-v1",
+  "claim_boundary": "Metadata correction only. It does not edit or rerun v3, alter any row, seed, candidate, numerical value, status, resource observation, or mathematical claim.",
+  "correction": {
+    "cause": "v3 wrapper corrected the runner path/hash but inherited literal replay strings from the v2 base payload",
+    "corrected_values": {
+      "check_command": "python3 discovery/run_cycle_4_p1r_crr_finite_probe_v3.py --check",
+      "execution_command": "python3 discovery/run_cycle_4_p1r_crr_finite_probe_v3.py --write",
+      "no_resume": true
+    },
+    "field": "replay.check_command and replay.execution_command",
+    "incorrect_values": {
+      "check_command": "python3 discovery/run_cycle_4_p1r_crr_finite_probe_v2.py --check",
+      "execution_command": "python3 discovery/run_cycle_4_p1r_crr_finite_probe_v2.py --write",
+      "no_resume": true
+    },
+    "write_command_interpretation": "historical-only; immutable result exists and the v3 runner refuses overwrite"
+  },
+  "epistemic_status": "OBSERVED",
+  "immutable_inputs": {
+    "correction_document": {
+      "path": "docs/cycle-4-p1r-crr-finite-probe-v3-replay-metadata-correction-v1.md",
+      "sha256": "cb67f420157858d6ada3497766711fda77e03352f85bd550132d217ff0cd5d87"
+    },
+    "immutable_v3_result": {
+      "path": "discovery/cycle-4-p1r-crr-finite-probe-v3.json",
+      "sha256": "41576b9ad21d44435d251a8fefad1cc64bb038384644ce93c1d1a4314c38a0cb"
+    },
+    "immutable_v3_runner": {
+      "path": "discovery/run_cycle_4_p1r_crr_finite_probe_v3.py",
+      "sha256": "667207f0f690aaf36f33fa498a5b90594e2ac500173c44db64388e2958b4d90f"
+    },
+    "semantic_replay": {
+      "path": "discovery/cycle-4-p1r-crr-finite-probe-v3-semantic-replay-v1.json",
+      "sha256": "8d4524a43220d067d56d2adb36f33fb8580b732ef9b862d47b582d10e3c35721"
+    }
+  },
+  "invariants_verified": {
+    "resources": {
+      "cap_rss_bytes": 1073741824,
+      "cap_seconds": 3300,
+      "peak_rss_bytes": 564809728,
+      "wall_seconds": 713.8161791041493
+    },
+    "row_count": 160,
+    "runner": {
+      "path": "discovery/run_cycle_4_p1r_crr_finite_probe_v3.py",
+      "resource_clock": "time.monotonic",
+      "rss_source": "/proc/self/status:VmRSS",
+      "runtime": {
+        "implementation": "CPython",
+        "mpmath": "1.2.1",
+        "numpy": "1.26.4",
+        "optimization_level": 0,
+        "python": "3.12.3"
+      },
+      "sha256": "667207f0f690aaf36f33fa498a5b90594e2ac500173c44db64388e2958b4d90f"
+    },
+    "status_counts": {
+      "NO_RETAINED_HIT": 160
+    },
+    "unique_row_ids": 160
+  },
+  "post_result_screen_census": {
+    "classification": "OBSERVED/EXPLORATORY binary64 screen census, except cubic rows additionally have recorded RECOGNIZED 256/384 diagnostics",
+    "pass_counts": {
+      "cubic_agreement": 0,
+      "cubic_positive_and_size": 160,
+      "energy_lower": 160,
+      "energy_upper": 147,
+      "large_value": 0,
+      "quadrature_agreement": 10,
+      "rational_measure": 13
+    },
+    "ratios": {
+      "large_value_to_cut": {
+        "max": 0.41158551271551164,
+        "median": 0.15744426497231495,
+        "min": 0.0006198579620411105
+      },
+      "quadrature_disagreement_to_allowed": {
+        "max": 216.56024551334852,
+        "median": 15.105710711346168,
+        "min": 0.9700154228864182
+      },
+      "rational_measure_to_cut": {
+        "max": 1.7049554805701588,
+        "median": 0.2683329500609407,
+        "min": 0.01671097621302214
+      }
+    }
+  },
+  "replay": {
+    "check_command": "python3 discovery/build_cycle_4_p1r_crr_finite_probe_v3_replay_metadata_correction_v1.py --check",
+    "corrected_result_check_command": "python3 discovery/run_cycle_4_p1r_crr_finite_probe_v3.py --check",
+    "write_command": "python3 discovery/build_cycle_4_p1r_crr_finite_probe_v3_replay_metadata_correction_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "NOT_INITIATED; metadata-only lightweight correction",
+    "search_rerun": "PROHIBITED_BY_CORRECTION_SCOPE"
+  },
+  "sealer": {
+    "path": "discovery/build_cycle_4_p1r_crr_finite_probe_v3_replay_metadata_correction_v1.py",
+    "sha256": "7ea8e43234c0a39a0815f4cdba1380d55cb924278b5bb8cf05c251ec1bd7a910"
+  },
+  "semantic_replay": {
+    "comparison": {
+      "all_other_fields_compared_exactly": true,
+      "excluded_variable_fields": [
+        "resources.wall_seconds",
+        "resources.peak_rss_bytes"
+      ],
+      "first_difference": null,
+      "row_count": 160,
+      "status_counts": {
+        "NO_RETAINED_HIT": 160
+      },
+      "unique_row_ids": 160
+    },
+    "resources": {
+      "peak_rss_bytes": 602013696,
+      "wall_seconds": 713.819766420871
+    },
+    "status": "SEMANTIC_REPLAY_MATCH"
+  },
+  "status": "SEALED_METADATA_CORRECTION"
+}

@@ -1,0 +1,401 @@
+{
+  "artifact_id": "p7-fixed-ray-colour-diagonalization-v1",
+  "artifact_identity": {
+    "builder": {
+      "path": "proof/build_p7_fixed_ray_colour_diagonalization_v1.py",
+      "sha256": "953b3a916af67c84a44b5a5711bc77ffa47811a805f9388e745581db7552f801"
+    },
+    "conventions": {
+      "path": "conventions/p7_fixed_ray_colour_diagonalization_v1.py",
+      "sha256": "933296828ccf1a960625397bde41d58bffa1b7fb955c3568544bc8f2b9adf926"
+    },
+    "document": {
+      "path": "docs/p7-fixed-ray-colour-diagonalization-v1.md",
+      "sha256": "f46dc9d36055f18dacb09d4774efb67172fb18fab83c4501b3058c76e73e940e"
+    },
+    "tests": {
+      "path": "tests/test_p7_fixed_ray_colour_diagonalization_v1.py",
+      "sha256": "204481de044cf4baee23642f636df8e69cad19ad4e78f010ed1e54d8daf2d048"
+    }
+  },
+  "claim_boundary": "Exact fixed-modulus coloured Fourier/Gram/cubic identities, sharp completion and fibre-spacing barriers, elementary dyadic-shell accounting, and a conditional character-by-character fallback only. No coloured primitive cubic estimate, Hecke large-value theorem, zero-density theorem, detector, or prime-ideal theorem is proved.",
+  "coloured_energy": {
+    "critical_scope": "A coloured-energy-only substitution into the pinned refined S3 bound has maximal term TN|W|^2 on this permitted scale; this is not a P7 density-exponent calculation.",
+    "exact_identity": "E_col^=(W)=H^-1 sum_{g in G} integral_0^1 |sum_{(chi,t) in W}chi(g)e(t theta)|^4 dtheta.",
+    "fibre_spacing_bound": "E_col^Delta(W)<= (floor(2Delta/delta)+1)|W|^3 for delta-separated character fibres.",
+    "finite_exact_check": {
+      "one_height": {
+        "coloured_energy": 125,
+        "group_order": 5,
+        "maximal_cubic_scale": 125,
+        "sample_cardinality": 5,
+        "times": [
+          0
+        ]
+      },
+      "progression": {
+        "coloured_energy": 1188,
+        "formula": "H^3(2r^3+r)/3",
+        "formula_value": 1188,
+        "group_order": 3,
+        "times": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "spacing_bound": "If every character fibre is delta-separated, fixing three points fixes the fourth colour and leaves at most floor(2Delta/delta)+1 fourth times."
+    },
+    "sharpness": "W=X(f)x{0} has E_col^=|W|^3 although every fibre has one point.",
+    "status": "PROVED"
+  },
+  "complete_group_diagonalization": {
+    "complete_sample_no_loss": "For W=X(f)xS and equal ray-class mass N/H, the diagonal cubic scale is H^3*H*|S|*(N/H)^3=|W|N^3.",
+    "diagonalization_criterion": "B is ray-class diagonal exactly when every A_t is empty or all of X(f).",
+    "finite_exact_check": {
+      "ambient_group": "Z/2",
+      "design_matrix": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          -1,
+          1
+        ]
+      ],
+      "ideal_classes": [
+        0,
+        1,
+        0
+      ],
+      "projector_rows": [
+        {
+          "expected_mixing": "0",
+          "off_diagonal_hs_squared": "0",
+          "projector": [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ],
+          "ray_class_diagonal": true,
+          "selected_cardinality": 0,
+          "selected_characters": []
+        },
+        {
+          "expected_mixing": "1/2",
+          "off_diagonal_hs_squared": "1/2",
+          "projector": [
+            [
+              "1/2",
+              "1/2"
+            ],
+            [
+              "1/2",
+              "1/2"
+            ]
+          ],
+          "ray_class_diagonal": false,
+          "selected_cardinality": 1,
+          "selected_characters": [
+            0
+          ]
+        },
+        {
+          "expected_mixing": "0",
+          "off_diagonal_hs_squared": "0",
+          "projector": [
+            [
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "1"
+            ]
+          ],
+          "ray_class_diagonal": true,
+          "selected_cardinality": 2,
+          "selected_characters": [
+            0,
+            1
+          ]
+        }
+      ],
+      "proper_subset_mixing": "For the one-character subset, the exact off-diagonal Hilbert--Schmidt square is 1/2.",
+      "unitary_transformed_gram": [
+        [
+          "4",
+          "0"
+        ],
+        [
+          "0",
+          "2"
+        ]
+      ],
+      "unnormalized_fourier_matrix": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "unnormalized_transformed_design": [
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          0,
+          2,
+          0
+        ]
+      ]
+    },
+    "full_gram": "U(MM*)U*=H direct_sum_{g in G} C_g.",
+    "positivity": "B is an orthogonal projection and B(direct_sum_g C_g)B is positive semidefinite.",
+    "selected_projection": "B=UP_WU* has B_((g,t),(h,s))=1_(t=s)H^-1 sum_{chi in A_t}chi(hg^-1).",
+    "selected_trace": "tr(K_W^3)=H^3 tr([B(direct_sum_g C_g)B]^3).",
+    "status": "PROVED",
+    "unitary_transform": "U_(g,chi)=H^(-1/2) conjugate(chi(g)); (UM)_((g,t),a)=H^(1/2)c(a)w(Na/N)(Na)^(it)1_[a]=g."
+  },
+  "completion_barrier": {
+    "completion_factor": "kappa_f(W)=|X(f)||pi_t W|/|W| in [1,|X(f)|].",
+    "finite_exact_check": {
+      "colour_complete_support": {
+        "completion_factor": "1",
+        "distinct_time_count": 2,
+        "selected_count": 6
+      },
+      "diagonal_trace_model": {
+        "completed_upper_trace_minus_selected_diagonal": "2058",
+        "expected_uncancelled_diagonal": "2058",
+        "scale": 7,
+        "selected_cubic_excess": "0"
+      },
+      "sharp_disjoint_support": {
+        "completed_count": 9,
+        "completion_factor": "3",
+        "distinct_time_count": 3,
+        "group_order": 3,
+        "selected_count": 3,
+        "selected_points": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            6
+          ]
+        ]
+      }
+    },
+    "implication": "Trace positivity/completion alone does not preserve the Guth--Maynard selected-side diagonal cancellation unless kappa_f(W)=T^o(1) or a new selected-side estimate is proved.",
+    "sharp_example": "One globally separated point at a distinct time for each of H characters has kappa_f(W)=H.",
+    "status": "PROVED",
+    "trace_comparison": "For A=N I_m and a selected R-row compression with m=kappa R, the selected cubic excess is zero but replacing its cubic trace by tr(A^3) leaves (kappa-1)RN^3."
+  },
+  "conditional_shell_reduction": {
+    "conclusion": "For R=sum_f R_f and E=sum_f E_f, sum_f R_f^(3/2)<=R^(3/2) and sum_f R_f^(1/2)E_f^(1/2)<=R^(1/2)E^(1/2); no separate number-of-moduli factor is forced at this formal homogeneous S3 summation step.",
+    "epistemic_status": "PROVED",
+    "finite_exact_check": {
+      "E_total": 29,
+      "E_values": [
+        4,
+        9,
+        16
+      ],
+      "R_total": 14,
+      "R_values": [
+        1,
+        4,
+        9
+      ],
+      "sum_R_three_halves": 36,
+      "sum_sqrt_RE": 20
+    },
+    "hypotheses": [
+      "A selected-side primitive coloured fixed-modulus S3 estimate of source shape.",
+      "A same-scale control of the signed cross-conductor cubic contribution."
+    ]
+  },
+  "dyadic_shell": {
+    "complete_character_bound": "sum_{Q<Nf<=2Q}|X(f)|<12Q^2.",
+    "completion_loss": "Fixed-modulus full-character completion can cost up to 2Q; a raw global uncoloured separation extraction can face O(Q^2) labelled fibres.",
+    "cross_conductor_term": "X_cross(W;c)=tr(K^3)-sum_f tr(K_{W_f}^3) is generally signed and has no common ray-class Fourier group.",
+    "finite_exact_check": [
+      {
+        "Q": 8,
+        "complete_character_upper": 192,
+        "ideals_norm_at_most_2Q": 12,
+        "strict_12Q_squared_bound": 768,
+        "strict_6Q_bound": 48
+      },
+      {
+        "Q": 16,
+        "complete_character_upper": 800,
+        "ideals_norm_at_most_2Q": 25,
+        "strict_12Q_squared_bound": 3072,
+        "strict_6Q_bound": 96
+      },
+      {
+        "Q": 32,
+        "complete_character_upper": 3136,
+        "ideals_norm_at_most_2Q": 49,
+        "strict_12Q_squared_bound": 12288,
+        "strict_6Q_bound": 192
+      }
+    ],
+    "fixed_group_bound": "|X(f)|<=N(f)<=2Q.",
+    "ideal_count_bound": "For Q>=8, fewer than 6Q integral ideals of Z[i] have norm at most 2Q.",
+    "status": "PROVED"
+  },
+  "epistemic_status": "PROVED",
+  "fixed_character_fallback": {
+    "conductor_height_boundary": "If Q=T^vartheta, the crude uniform bound carries T^(2vartheta); it is subpower only under an additional Q=T^o(1) restriction.",
+    "exact_loss_boundary": "F_prim(Q) is unavoidable in this direct nonnegative character-by-character summation. The 12Q^2 bound is not a lower bound for all joint methods.",
+    "finite_exact_check": {
+      "absorption_hypothesis": "N<=T^C for fixed C",
+      "family_multiplier": "F_prim(Q)<=sum_f|X(f)|<12Q^2",
+      "multipliers_after_V_to_V/Delta_N": [
+        "Delta_N^2",
+        "Delta_N^4",
+        "Delta_N^4"
+      ],
+      "threshold_powers": [
+        2,
+        4,
+        4
+      ]
+    },
+    "hypotheses": [
+      "For every selected primitive chi, W_chi is 1-separated in [0,T] and |D_chi(t)|>=V.",
+      "D_chi(t)=sum_{N<n<=2N}A_chi(n)n^(it), with the P7 zero extension and one common dyadic N.",
+      "N<=T^C for a fixed C, so the P7-1 divisor normalization is T^o(1)."
+    ],
+    "non_promotion": "This is an automatic P7-1 plus Guth--Maynard application, not a new Hecke theorem; P7 detector and density implications remain unproved.",
+    "normalization": "b_chi,n=A_chi(n)/Delta_N, Delta_N=max_{N<n<=2N}tau(n), has |b_chi,n|<=1 and changes V to V/Delta_N.",
+    "per_character_bound": "T^o(1)(N^2V^-2+N^(18/5)V^-4+TN^(12/5)V^-4) after the stated N<=T^C absorption.",
+    "status": "PROVED",
+    "summed_bound": "F_prim(Q)T^o(1)(N^2V^-2+N^(18/5)V^-4+TN^(12/5)V^-4), with F_prim(Q)<=sum_f|X(f)|<12Q^2."
+  },
+  "fixed_modulus_coloured_cubic": {
+    "coloured_sum": "R_W(g;v)=sum_{(chi,t) in W} chi(g)v^(it).",
+    "exact_trace": "tr(K^3)=sum_{a,b,c}u(a)u(b)u(c) R_W([a][c]^-1;Na/Nc) R_W([b][a]^-1;Nb/Na) R_W([c][b]^-1;Nc/Nb).",
+    "finite_exact_check": {
+      "ambient_group": "Z/2",
+      "direct_trace": 72,
+      "ideal_classes": [
+        0,
+        1,
+        0
+      ],
+      "identity_mode_explanation": "Only triples with all three ray classes equal survive the full-character coloured sums.",
+      "kernel": [
+        [
+          3,
+          1
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "regrouped_trace": 72,
+      "sample": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    "label_loss": "None in the exact regrouping: all character labels are summed into the three coloured Fourier sums.",
+    "sample": "W is a finite subset of X(f) times R, with the selected P7 primitive sample embedded in the complete ambient X(f).",
+    "status": "PROVED"
+  },
+  "gate": "P7-3-IDEAL-CUBIC-ENERGY",
+  "gate_outcome": "CONTAINED_FIXED_MODULUS_CHARACTER_AWARE_REDUCTION_AND_COMPLETION_LOSS",
+  "missing_analytic_statistic": {
+    "cross_conductor_excess": "X_cross(W;c)=tr(K^3)-sum_f tr(K_{W_f}^3).",
+    "epistemic_status": "CONJECTURED",
+    "not_supplied_by_pinned_sources": "Neither the integer Guth--Maynard theorem nor the P7-2 common-ideal L2 Hecke large sieve supplies the required selected-side primitive cubic estimate.",
+    "required_bound": "A colour-aware affine/Poisson estimate must control both quantities from coloured energy, local cross-character height information, and the exact primitive projector without a kappa completion or signed-projector triangle loss.",
+    "selected_side_excess": "G_f(W;c)=tr(K_{W_f}^3)-[tr(K_{W_f})]^3/|W_f|^2."
+  },
+  "non_promotion": [
+    "No Hecke large-value, zero-density, detector, or prime-ideal interval theorem.",
+    "No assertion that the coloured primitive cubic excess has the Guth--Maynard bound.",
+    "No assertion that primitive character selection can be completed to all characters at subpower cost.",
+    "No assertion for varying fields, angular characters, or a common ray group across conductors."
+  ],
+  "replay": {
+    "check_command": "python3 proof/build_p7_fixed_ray_colour_diagonalization_v1.py --check",
+    "runtime": {
+      "implementation": "CPython",
+      "json_policy": "stdlib json sort_keys=True; UTF-8; LF; trailing newline",
+      "optimize": 0,
+      "version": "3.12.3"
+    },
+    "script": "proof/build_p7_fixed_ray_colour_diagonalization_v1.py",
+    "script_sha256": "953b3a916af67c84a44b5a5711bc77ffa47811a805f9388e745581db7552f801",
+    "write_command": "python3 proof/build_p7_fixed_ray_colour_diagonalization_v1.py --write"
+  },
+  "resource_contract": {
+    "rss_kib_strictly_less_than": 262144,
+    "wall_seconds_strictly_less_than": 60
+  },
+  "review_policy": "LIGHTWEIGHT_SOURCE_ALGEBRA_REPLAY; no hostile audit initiated.",
+  "source_integrity": {
+    "guth_maynard_tex": {
+      "locators": "matrix/spectral reduction lines 477--739; additive energy lines 252--275; refined S3 bound lines 1684--1699; energy discussion lines 1778--1822",
+      "path": "artifacts/sources/arxiv-2405.20552v2/LargevaluesDirichlet17.tex",
+      "sha256": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428"
+    },
+    "p7_common_ideal_cubic_v1": {
+      "locators": "labelled ideal Gram/cubic identity and fixed-modulus coloured energy",
+      "path": "artifacts/p7-common-ideal-cubic-v1.json",
+      "sha256": "5363288906df50df18e96afec0760c1fa8bfec912e61bbf05fa60492c77957f2"
+    },
+    "p7_common_ideal_cubic_v3": {
+      "locators": "latest preserved test-correction boundary for the P7-3 predecessor chain",
+      "path": "artifacts/p7-common-ideal-cubic-v3-test-correction.json",
+      "sha256": "caf4055315ccdcb265263c8594f3511108522494793093ef2cbcf0adf290c0dd"
+    },
+    "p7_norm_status_v3": {
+      "locators": "fixed-character norm collapse and N<=T^C normalization scope",
+      "path": "artifacts/p7-norm-aggregation-v3-status-correction.json",
+      "sha256": "32d3f2a5ffc8c62e985c7b3c156ddd9c0b00b23908d837b583d806e2c0e05aa8"
+    },
+    "p7_preregistration_v2": {
+      "locators": "selected primitive family and frozen P7-3 gate boundary",
+      "path": "artifacts/p7-hecke-qi-preregistration-v2.json",
+      "sha256": "fa3c98ce481e913f2c8522856114b8cca643d763314e01a36b0aa7cf9110dfc9"
+    },
+    "p7_ray_orthogonality_v1": {
+      "locators": "complete ambient ray group, primitive projector, and common-ideal L2 boundary",
+      "path": "artifacts/p7-ray-orthogonality-v1.json",
+      "sha256": "d4ad1fb81ac2cac49f94fb73616b5134f96fadd86e44f0a94975683b2db0387d"
+    }
+  }
+}

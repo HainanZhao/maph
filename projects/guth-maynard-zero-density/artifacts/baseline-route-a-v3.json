@@ -1,0 +1,124 @@
+{
+  "almost_all_short_interval": {
+    "delta_exponent": "-13/15",
+    "epsilon_convention": "published conclusion is theta > 2/15, written y >= X^(2/15+epsilon)",
+    "formula": "theta_almost_all = 1 - 2/b",
+    "theta": "2/15",
+    "two_over_b": "13/15"
+  },
+  "arithmetic": "exact fractions.Fraction only",
+  "artifact_version": 3,
+  "assertions": {
+    "almost_all_endpoint_equal": true,
+    "crossover_equal": true,
+    "uniform_endpoint_equal": true
+  },
+  "claim_boundary": "This artifact exactly verifies rational consequences of the published bounds named in docs/cycle-1-route-a.md; it does not reprove those analytic bounds or their error estimates.",
+  "critical_large_values_cell": {
+    "cell": {
+      "N_in_terms_of_T": "N = T^(4/5)",
+      "V_in_terms_of_N": "V = N^(3/4)",
+      "V_in_terms_of_T": "V = T^(3/5)"
+    },
+    "classical_equation_1_1": {
+      "maximum_T_exponent": "3/5",
+      "minimum_inside_T_times_min": "3/5",
+      "terms": {
+        "N^2*V^-2": "2/5",
+        "T*N*V^-2": "3/5",
+        "T*N^4*V^-6": "3/5"
+      }
+    },
+    "guth_maynard_theorem_1_1": {
+      "maximum_T_exponent": "13/25",
+      "terms": {
+        "N^(18/5)*V^-4": "12/25",
+        "N^2*V^-2": "2/5",
+        "T*N^(12/5)*V^-4": "13/25"
+      }
+    },
+    "strict_gain_in_T_exponent": "2/25"
+  },
+  "crossover": {
+    "difference_at_sigma": "0/1",
+    "difference_identity": "A_I(sigma)-A_GM(sigma) = 30*(sigma-7/10)/((2-sigma)*(3+5*sigma))",
+    "global_density_coefficient_b": "30/13",
+    "guth_maynard_at_sigma": "30/13",
+    "ingham_at_sigma": "30/13",
+    "positive_denominator_at_sigma": "169/20",
+    "sigma": "7/10"
+  },
+  "frozen_source": {
+    "arxiv_identifier": "2405.20552v2",
+    "pdf_sha256": "915392cf7d0ecd108479814a9a1481e23423ef63415776471cec3975ae482cae",
+    "source_tarball_sha256": "9d34ac093abcb8129f68ff86eaad65f09a09d832fe637ff84d50a69496046bdc",
+    "tex_sha256": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428"
+  },
+  "inputs": {
+    "guth_maynard_coefficient": "15/(3+5*sigma)",
+    "ingham_coefficient": "3/(2-sigma)",
+    "sigma_star": "7/10"
+  },
+  "mathematical_certificate_sha256": "07f74b88744ae140efdc436c33c0575e9061e9abfa7a103606ecd026190f2dfd",
+  "replay": {
+    "python_implementation": "CPython",
+    "python_version": "3.12.3",
+    "script": "proof/replay_baseline_route_a.py",
+    "script_sha256": "bb2c3589da8d7f6b1ac48f5a831a30f79c88c14fa870dab4f680dabc8635b203",
+    "wall_time_ns": 888198
+  },
+  "route": "A",
+  "supersedes": {
+    "artifact": "artifacts/baseline-route-a-v2.json",
+    "change": "adds the exact \u00a713.1 zero-density bottleneck-cell evaluation",
+    "mathematical_certificate_sha256": "ef6b7ceaec9ca397b260de3554f444266ec80c971f2603e3e25320edd45812e9"
+  },
+  "uniform_short_interval": {
+    "epsilon_convention": "published conclusion is theta > 17/30, written y >= x^(17/30+epsilon)",
+    "formula": "theta_uniform = 1 - 1/b",
+    "one_over_b": "13/30",
+    "theta": "17/30"
+  },
+  "zero_density_bottleneck_cell": {
+    "claim_boundary": "Exact exponent substitution in the parameter pattern stated in the final Remark of \u00a713.1; not a proof that an extremizing set W or a sharpness obstruction exists.",
+    "parameters": {
+      "L_in_U": "L = U^(5/6)",
+      "local_large_value_count": "|W| = U^(2/3)",
+      "original_N_in_T": "N = T^(5/13)",
+      "random_energy_scale": "|W|^4/U = U^(5/3)",
+      "sigma": "7/10",
+      "squared_polynomial_length": "L = N^2 = T^(10/13)",
+      "stated_energy": "E(W) = |W|^(5/2) = U^(5/3)",
+      "subinterval_length": "U = T^(12/13)",
+      "threshold": "V = L^sigma = U^(7/12)"
+    },
+    "proposition_11_1_energy_bound_at_U": {
+      "common_U_exponent": "5/3",
+      "terms": {
+        "|W|*L^(4-4*sigma)": "5/3",
+        "|W|^(21/8)*U^(1/4)*L^(1-2*sigma)": "5/3",
+        "|W|^3*L^(1-2*sigma)": "5/3"
+      },
+      "tie_pattern": "all three Proposition 11.1 terms tie at U^(5/3)"
+    },
+    "subinterval_aggregation": {
+      "density_target": "T^((30/13)*(1-7/10)) = T^(9/13)",
+      "local_bound": "U^(2/3) = T^(8/13)",
+      "number_of_subintervals": "T/U = T^(1/13)",
+      "total": "T^(1/13)*T^(8/13) = T^(9/13)",
+      "total_T_exponent": "9/13"
+    },
+    "theorem_1_1_at_U": {
+      "maximizing_terms": [
+        "L^(18/5)*V^-4",
+        "U*L^(12/5)*V^-4"
+      ],
+      "maximum_U_exponent": "2/3",
+      "terms": {
+        "L^(18/5)*V^-4": "2/3",
+        "L^2*V^-2": "1/2",
+        "U*L^(12/5)*V^-4": "2/3"
+      }
+    }
+  }
+}

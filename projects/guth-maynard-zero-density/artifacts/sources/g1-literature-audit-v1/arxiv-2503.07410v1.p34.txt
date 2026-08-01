@@ -1,0 +1,60 @@
+34
+LARRY GUTH
+
+|(Mplantv)j| ⪆ N 1/2(T/S)1/2 = N σ.
+
+This planted problem helps us reflect on improving the bound (33), because any proof that
+improves the bound (33) for a random matrix Mran must somehow distinguish the matrix Mran
+from Mplant.
+Many of the proofs we have seen are based on bounded degree polynomials in the entries of
+the matrix. For instance, consider the approach from [DHPT] based on the Schatten tensor. The
+Schatten tensor SM,r has entries that are polynomials in the entries of M. Following [DHPT] (or
+[GM]), we may decompose this tensor into a few other tensors, call them TM. The entries of TM
+will still be polynomials in entries of M. We flatten each TM to get a matrix ˜TM. Next we need
+to estimate the norm ∥ ˜TM∥. One natural way to do this is to look at Trace
+�
+( ˜TM ˜T ∗
+M)ℓ�
+for some
+natural number ℓ. Expanding out, this trace is a polynomial in the entries of M. Let us call the final
+polynomial p. Whenever the method in [DHPT] improves on the basic bound (33), this polynomial
+p distinguishes random matrices Mran from planted matrices Mplant. The polynomial p is always
+non-negative, p(Mran) is small with high probability, and p(Mplant) is large with high probability.
+The degree of p is a large constant (independent of N).
+Low degree testing is a general method for trying to distinguish between a random object and
+an object with planted structure. Roughly speaking, low degree testing asks whether there is any
+low degree polynomial that distinguishes Mran from Mplant - we will give the precise statement
+below. In the paper [MW], Mao and Wein completely analyzed low degree testing for the random
+and planted matrix models described above. We need a little notation to say precisely what they
+proved. Suppose µran is the probability distribution for random matrices Mran above and µplant
+is the probablity distribution for planted matrices Mplant above. We say that a polynomial p is
+normalized if
+
+(34)
+�
+p(M)dµran(M) = 0 and
+�
+|p(M)|2dµran(M) = 1.
+
+Low degree testing asking if there is any normalized polynomial p of degree at most D so that
+
+(35)
+�
+p(M)dµplant(M) > 2.
+
+Mao and Wein analyzed this question precisely, proving
+
+Theorem 8.3. ([MW], Theorem 4.5) Suppose that N, α, σ are given with with 1 < α < 2 and
+1/2 < σ < 1. Let Mran and Mplant be random matrices constructed as above.
+If σ > 1−α/4, then there is a normalized polynomial p obeying (35) with degree at most D(α, σ).
+If σ < 1 − α/4, then there is no normalized polynomial p obeying (35) with degree at most
+(log N)O(1).
+
+For the reader who is not familiar with this subject, the precise definition of low degree testing
+may look a little strange. One might consider formulating low degree testing in other ways. For
+instance, one might ask if there is a polynomial p of degree at most D and a constant c so that
+Probµran[p(M) > c] is very different from Probµplant[p(M) > c]. This latter question is still open
+and would be interesting to understand. There are several motivations for the formulation of low
+degree testing given here. For this survey, we mention two of them.
+
+

@@ -1,0 +1,47 @@
+{
+  "artifact_id": "p6-multiplicity-transfer-v1",
+  "document": {
+    "path": "docs/p6-multiplicity-transfer-v1.md",
+    "sha256": "41448bd0b5afef78b63c2a543ca13c5a89949696cae6a3d890af174811ba9e3c"
+  },
+  "epistemic_status": "PROVED",
+  "external_unproved_input": {
+    "disposition": "Moved to S06_EXTERNAL_INPUTS; exact primary theorem, ranges, endpoints, and uniformity remain to be checked.",
+    "epistemic_status": "CONJECTURED",
+    "id": "LOCAL_MULTIPLICITY_COUNT_LC"
+  },
+  "finite_exact_examples": [
+    {
+      "distinct": 1,
+      "multiplicity_weighted": 1,
+      "upper_bound": 1
+    },
+    {
+      "distinct": 4,
+      "multiplicity_weighted": 9,
+      "upper_bound": 12
+    },
+    {
+      "distinct": 3,
+      "multiplicity_weighted": 21,
+      "upper_bound": 21
+    }
+  ],
+  "gate_effect": "S03 is no longer an independent structural obstruction conditional on LC; no density theorem is promoted.",
+  "hostile_audit": "DEFERRED_TO_PAPER_STAGE",
+  "replay": "python3 proof/p6_multiplicity_transfer_v1.py --check",
+  "sealer": {
+    "path": "proof/p6_multiplicity_transfer_v1.py",
+    "sha256": "1699a10f9f5a584a20827f0174bba9f84c0c19c518b2a901193f98794f97bef9"
+  },
+  "source": {
+    "anchors_only": true,
+    "path": "artifacts/sources/g1-literature-audit-v1/extracted-2507.08296v2/Large_Value_Estimates_for_Dirichlet_Polynomials_with_Characters_and_Zero_Density_of_Dirichlet___L_-Functions.tex",
+    "sha256": "0b9ebb6b604944b7c59a9ec37a75c48f6a08f88611f911ff5f02dc013b848e2f"
+  },
+  "theorem": {
+    "conclusion": "The multiplicity-weighted count is at most L times the distinct-support count; a distinct well-spaced selection therefore transfers without duplicating ordinates.",
+    "density_effect": "When L is polylogarithmic in qT, the transfer changes only the (qT)^o(1) factor.",
+    "hypothesis": "Each distinct labeled zero has multiplicity at most L, supplied by a multiplicity-inclusive local unit-strip zero count."
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "artifact_id": "p6-detector-qt-tail-v1",
+  "claim_boundary": "A narrow conditional repair of P6 Z03 for an amended CGL-style detector. It proves neither the CGL v2 preprint nor any new zero-density/short-interval theorem. It does not change the P6 reconciliation or close S06, S03, F08, or q1-sensitive obligations. No hostile audit is initiated.",
+  "epistemic_status": "PROVED_CONDITIONAL",
+  "exact_algebra": {
+    "general_cutoff": "For every polynomial-growth exponent A>=0, tail target B>0, and 0<eta<1/2, take C=4(A+eta/2+B+2)/pi and U=C log(Q+3). Then pi*C/2=2(A+eta/2+B+2)>A+eta/2+B.",
+    "height_test": "For T>=1, q(T+U)=Q(1+U/T)<=Q(1+C log(Q+3))=Q^(1+o(1)); this includes T=1 and Q=q->infinity.",
+    "illustrative_parameters_only": {
+      "A": "1",
+      "B": "100",
+      "eta": "1/100",
+      "pi_C_over_2": "20601/100",
+      "required_Q_exponent_before_log_factors": "20201/200",
+      "strict_margin": "21001/200"
+    },
+    "spacing_test": "For every fixed eta>0 and C>0 there is Q0(C,eta) with 2C log(Q+3)<=Q^eta/2 for Q>=Q0; hence a Q^eta-spaced source set remains Q^eta/2-spaced after shifts of size at most U."
+  },
+  "lemma": {
+    "claim": "Let Q=qT with q a positive integer and T>=1. In the CGL detector range sigma0=7/10<=beta<1, replace the Mellin cutoff log^2(T) by U=C log(Q+3). Conditional on the stated polynomial critical-line growth and source-used discrete fourth-moment inputs, this makes the Mellin tail Q^{-B} for any prescribed B, keeps the class-II shifts well-spaced, and changes the fourth-moment height by Q^{o(1)}.",
+    "conclusion": {
+      "Z03_effect": "The X/T tail defect is closed for the amended detector, conditional on L_POLY_A and on retaining the source-used fourth-moment/local-count inputs. Its cutoff is Q-dependent, U=C log(qT+3), and no q<=T^c condition or log^2(qT) substitution is made.",
+      "class_II_output": "Under FOURTH_MOMENT_H, the CGL class-II calculation remains |R2_tilde| <<_epsilon Q^(1+epsilon)Y^(2-4sigma), hence Q^(2(1-sigma)+epsilon) at Y=Q^(1/2).",
+      "not_claimed": [
+        "the original CGL-v2 TeX is thereby valid as written",
+        "CGL-v2's 7/3 zero-density theorem",
+        "S06_EXTERNAL_INPUTS",
+        "S03_MULTIPLICITY_NOT_STATED",
+        "F08_T_SMOOTH_UNDEFINED",
+        "any q1-sensitive intermediate estimate",
+        "a new zero-density or short-interval theorem"
+      ],
+      "status": "PROVED_CONDITIONAL"
+    },
+    "conditional_inputs": {
+      "FOURTH_MOMENT_H": {
+        "source_relation": "This is exactly the role CGL assigns to Montgomery Theorem 10.3 at TeX 2169--2171. The current run does not certify that theorem's exact statement or hypotheses.",
+        "statement": "The source-used fourth-moment input applies to the class-II selected pairs (gamma_r,chi_r) when |gamma_r|<=H and, for each fixed character, the ordinates are at least 1 apart; it gives sum_r |L(1/2+i gamma_r,chi_r)|^4 <<_delta (qH)^(1+delta).",
+        "status": "CONDITIONAL_EXTERNAL_INPUT_S06"
+      },
+      "LOW_HEIGHT_MULTIPLICITY_COUNT": {
+        "source_relation": "CGL TeX 2137--2139 asserts this after the Gamma-decay argument. This lemma does not replace that local-zero-count input.",
+        "statement": "The principal-character low-height contribution is bounded with multiplicity by O((log(Q+3))^2) after the principal residue is separated.",
+        "status": "CONDITIONAL_EXTERNAL_INPUT_S06"
+      },
+      "L_POLY_A": {
+        "statement": "For some fixed A>=0 and C_L, uniformly for every Dirichlet character chi modulo q and every real v, |L(1/2+iv,chi)| <= C_L [q(2+|v|)]^A.",
+        "status": "CONDITIONAL_EXTERNAL_INPUT",
+        "use_only": "Any polynomial exponent suffices because the Gamma decay is exponential. A standard convexity/functional-equation estimate is more than sufficient, but its exact primary statement is not certified in this run."
+      },
+      "gamma_vertical_strip": {
+        "statement": "Uniformly for a in [-1/2,-1/5] and real u, |Gamma(a+iu)| <= C_Gamma exp(-pi|u|/2). This follows from Stirling uniformly on the compact pole-free strip; retaining a harmless fixed power of 1+|u| gives the same result.",
+        "status": "PROVED_CLASSICAL_ANALYTIC_INPUT",
+        "why_range_is_pole_free": "a=1/2-beta lies in (-1/2,-1/5] when beta in [7/10,1), so it never meets a Gamma pole."
+      }
+    },
+    "epistemic_status": "PROVED_CONDITIONAL",
+    "falsifiers": [
+      "L_POLY_A fails uniformly for the character family and critical line stated above.",
+      "The source-used fourth moment does not apply at height H=T+C log(qT+3), or needs a spacing condition stronger than Q^eta/2>=1.",
+      "The source's intended zero-count convention cannot transfer its well-spaced selection to multiplicity-weighted counts.",
+      "A later source check shows an unaccounted detector input depends essentially on the former log^2(T) cutoff."
+    ],
+    "range_and_parameters": {
+      "Q": "Q=qT",
+      "detector_lengths": "Choose 0<eta<1/2, X=Q^eta, and Y=Q^(1/2). For any target B>0 and any L-growth exponent A, take C=4(A+eta/2+B+2)/pi and U=C log(Q+3).",
+      "epsilon_budget": "Given any final epsilon>0, choose eta sufficiently smaller than epsilon (for example eta=epsilon/4). Then U X^(1/2)=Q^{o(1)+eta/2} is absorbed in Q^epsilon.",
+      "range": "q in positive integers, T>=1, sigma0=7/10<=sigma<=beta<1, |t|<=T"
+    },
+    "self_contained_steps": {
+      "M_X_bound": [
+        "At Re(s)=1/2, |M_X(s,chi)| <= sum_{n<=X} n^(-1/2) <= 2X^(1/2).",
+        "For |t|<=T and u real, q(2+|t+u|)<=3Q(1+|u|), since T>=1."
+      ],
+      "Mellin_tail": [
+        "On z=1/2-beta+iu, |Y^z|=Y^(1/2-beta)<=1 and the preceding M_X, L_POLY_A, and Gamma bounds give an integrand at most C Q^(A+eta/2)(1+|u|)^A exp(-pi|u|/2).",
+        "The two tails |u|>U are at most C_A Q^(A+eta/2)(1+U)^A exp(-pi U/2).",
+        "With the displayed C this is O_{A,B,eta}(Q^(-B)) for Q sufficiently large. No relation q<=T^c is used."
+      ],
+      "class_II_extraction": [
+        "After the two tails and the separated principal residue are below the detector threshold, a class-II zero has an integral over |u|<=U of size >>1.",
+        "A maximizing gamma=t+u exists on this compact interval. The M_X bound, uniform Gamma bound on |u|<=U, and U X^(1/2)=Q^{o(1)+eta/2} yield 1 <<_epsilon Q^epsilon Y^(1/2-sigma)|L(1/2+i gamma,chi)| after reserving epsilon budget."
+      ],
+      "coefficient_sum_tail": [
+        "CGL TeX 2120 gives |c_n|<<_delta n^delta. For any fixed 0<delta<sigma0, the tail n>Y log^2Y is bounded by C_delta Y^(1-sigma0+delta) exp(-log^2(Y)/2).",
+        "At Y=Q^(1/2) this is O_B(Q^(-B)) for every B after increasing the compact threshold. It is uniform in chi and does not use T->infinity separately."
+      ],
+      "compact_Q": [
+        "Fix Q0 large enough for the preceding inequalities. If 1<=Q<Q0, then q<=Q0 and T<=Q0. The finite constant sum_{q<=Q0} sum_{chi mod q} N(sigma0,Q0,chi), with the frozen multiplicity convention, bounds every such zero count.",
+        "Thus the detector need not be invoked where its original X,Y,T>1 declaration is inconvenient; compact Q is absorbed separately and cannot create a q/T-uniformity gap."
+      ],
+      "fourth_moment_height": [
+        "Every selected gamma has |gamma|<=H:=T+U.",
+        "For T>=1, qH<=Q(1+C log(Q+3))=Q^(1+o(1)). Applying FOURTH_MOMENT_H at H therefore preserves the CGL class-II output up to Q^o(1).",
+        "For T=1 and q=Q->infinity this reads H=1+C log(q+3) and qH=q(1+C log(q+3))=Q^(1+o(1)); fixed/small T is therefore covered rather than being an exception."
+      ],
+      "multiplicity_boundary": [
+        "The analytic tail estimate and the z=0 cancellation hold with multiplicity. But selecting a well-spaced set of distinct ordinates from a multiplicity-weighted zero count needs the source's local multiplicity/selection convention.",
+        "Therefore this repair neither resolves S03_MULTIPLICITY_NOT_STATED nor promotes a multiplicity-weighted CGL theorem without that separate input."
+      ],
+      "principal_residue": [
+        "At a principal character, |M_X(1,chi_0)|<=1+log X and the same Gamma decay makes the z=1-rho residue less than 1/6 when |t|>=A0 log(Q+3), for a suitable absolute A0.",
+        "In Re(s)>0, L(s,chi_0)=zeta(s) product_{p|q}(1-p^(-s)) has the same zero multiset as zeta because the finite factors have zeros only on Re(s)=0. Thus the remaining low-height zero locations are exactly the separate LOW_HEIGHT_MULTIPLICITY_COUNT input.",
+        "The z=0 residue is L(rho,chi)M_X(rho,chi)=0 at every zero rho, including a multiple zero."
+      ],
+      "shifted_spacing": [
+        "If source ordinates t_r,t_s for the same chi obey |t_r-t_s|>=Q^eta and their selected shifts satisfy |u_r|,|u_s|<=U, then |gamma_r-gamma_s|>=Q^eta-2U>=Q^eta/2 for Q>=Q0(C,eta).",
+        "Hence the shifted ordinates are at least 1 apart for Q sufficiently large. This is the missing quantitative justification for the source phrase that their well-spacedness follows from the class-II condition."
+      ]
+    }
+  },
+  "p6_effect": {
+    "proposed_Z03_status": "PROVED_CONDITIONAL_AMENDED_DETECTOR",
+    "remaining_open_obligations": [
+      "S06_EXTERNAL_INPUTS",
+      "S03_MULTIPLICITY_NOT_STATED",
+      "F08_T_SMOOTH_UNDEFINED",
+      "q1-sensitive intermediate formulae"
+    ],
+    "upstream_reconciliation_edited": false
+  },
+  "replay": {
+    "command": "python3 proof/p6_detector_qt_tail_v1.py --check",
+    "optimized": 0,
+    "python_implementation": "cpython",
+    "python_version": "3.12.3",
+    "rss_cap_kib": 262144,
+    "wall_cap_ns": 60000000000
+  },
+  "source_checks": {
+    "cgl_v2_tar": {
+      "locators": {
+        "class_II_maximizer_and_fourth_moment": "TeX 2163--2173",
+        "detector_definition": "TeX 2114--2121",
+        "mellin_identity_and_residues": "TeX 2124--2138",
+        "montgomery_bibliography": "TeX 2456",
+        "old_tail_and_its_X_T_restriction": "TeX 2140",
+        "well_spaced_zero_selection": "TeX 2154--2158"
+      },
+      "path": "artifacts/sources/g1-literature-audit-v1/arxiv-2507.08296v2.tar",
+      "sha256": "b982cd5afa5b5e8a9abff2c6306519ba558d321b19aadd3fdbe59b3750f8e9ae",
+      "tex_member": "Large_Value_Estimates_for_Dirichlet_Polynomials_with_Characters_and_Zero_Density_of_Dirichlet___L_-Functions.tex"
+    },
+    "external_resources_read": {
+      "dirichlet_L_growth": {
+        "resource": "CGL cites Davenport, Multiplicative Number Theory, Chapters 9--10 at TeX 789 and 824.",
+        "scope": "The polynomial vertical-growth estimate is an explicit conditional input below and remains within S06_EXTERNAL_INPUTS until a primary theorem is checked.",
+        "source_anchor": "CGL TeX 2124--2140 supplies the Mellin identity but does not state a uniform critical-line growth estimate needed to quantify a qT-tail."
+      },
+      "gamma_decay": {
+        "resource": "https://dlmf.nist.gov/5.11",
+        "scope": "The lemma records the exact vertical-strip estimate it needs; no external web text is promoted as a proof certificate.",
+        "source_anchor": "CGL TeX 2140 expressly invokes exponential decay of Gamma on vertical lines."
+      },
+      "montgomery_book": {
+        "citation_in_pinned_CGL": "TeX 2169 and 2456: H. L. Montgomery, Topics in multiplicative number theory, LNM 227 (1971), Theorem 10.3.",
+        "resource": "https://doi.org/10.1007/BFb0060851",
+        "scope": "The accessible publisher record identifies Chapter 10 (pp. 69--73) and Chapter 11 (pp. 74--84), but the theorem text was not available in the pinned corpus. Its exact hypotheses remain S06_EXTERNAL_INPUTS."
+      }
+    },
+    "frozen_conventions": {
+      "height": "|Im rho| <= T",
+      "multiplicity": "included",
+      "path": "conventions/baseline.py",
+      "sha256": "249231f3e64c13f4bc4b03148afe7ccfd59f342b71a17e77d9abc955f4a2ad90"
+    },
+    "p6_records": {
+      "preregistration": {
+        "path": "artifacts/cycle-4-p6-cgl-v2-reconstruction-preregistration-v1.json",
+        "sha256": "1f9c195fa2dff8a58b754f10a58357384c5e3840839cc48269dd7b595a8ab36a"
+      },
+      "reconciliation": {
+        "path": "artifacts/p6-cgl-v2-reconciliation-v1.json",
+        "sha256": "cf59aa63b97d69c672fafa0b0ca49221d9005c3da6ccd61f05d37f4bcbc68e49"
+      }
+    }
+  }
+}

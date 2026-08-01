@@ -1,0 +1,82 @@
+{
+  "artifact_id": "cycle-7-crr-phase-lattice-base-saturation-v1-test-correction",
+  "claim_boundary": "This correction records and repairs a literal test expectation only. It changes no mathematical statement, source anchor, convention, actual reduced-Farey label, alias quotient, Base-efficiency identity, v1 artifact field, or replay payload, and it proves no new Base/F4F/AFARI/CFARI/CRR-U result.",
+  "corrected_assertion": "self.assertIn(\"exact aliases can therefore provide at most constant factors\", document)",
+  "correction": {
+    "affected_claims": "none",
+    "artifact_payload_change": "none",
+    "cause": "A semantic paraphrase was encoded as an exact-string assertion.",
+    "epistemic_status": "OBSERVED",
+    "error": "The v1 test expected the literal 'Exact rational aliases offer only constant factors'; the sealed document says 'exact aliases can therefore provide at most constant factors'.",
+    "mathematical_change": "none",
+    "resolution": "Preserve v1 and use a new test that checks the exact sealed phrase.",
+    "source_change": "none"
+  },
+  "epistemic_status": "OBSERVED",
+  "frozen_hashes": {
+    "correction_document": {
+      "path": "docs/cycle-7-crr-phase-lattice-base-saturation-v1-test-correction.md",
+      "sha256": "40a0592f97ebc17a0c131f3f7458be58dd73cde8aa57ce4eb585ff512ec49df4"
+    },
+    "correction_test": {
+      "path": "tests/test_cycle_7_crr_phase_lattice_base_saturation_v1_test_correction.py",
+      "sha256": "b0a2fc66f91d46ea3fb78db672218eff39b4109a8b9abf2cf6f3eee1c146eda7"
+    },
+    "v1_artifact": {
+      "path": "artifacts/cycle-7-crr-phase-lattice-base-saturation-v1.json",
+      "sha256": "3207a7764470d5512d20778e739e0e0bdc31535c0b2ac68b8366707304678534"
+    },
+    "v1_builder": {
+      "path": "proof/build_cycle_7_crr_phase_lattice_base_saturation_v1.py",
+      "sha256": "bcd9d82eeb2cbb142258e166ce8dc29c4476528a59ed432a85701c17aa54f4d7"
+    },
+    "v1_conventions": {
+      "path": "conventions/crr_phase_lattice_base_saturation_v1.py",
+      "sha256": "02d64afcb324858982042cd946ab66111d489eab65b45a9057ac57034e6ec8ef"
+    },
+    "v1_document": {
+      "path": "docs/cycle-7-crr-phase-lattice-base-saturation-v1.md",
+      "sha256": "f6203aa929c354efcd65bce00f5b33864f2ebaccce99af6bf3770298fd364f81"
+    },
+    "v1_test": {
+      "path": "tests/test_cycle_7_crr_phase_lattice_base_saturation_v1.py",
+      "sha256": "614f84fce97194c14ac10b3d2f938a69a3b8c4006f0949e2b4446732720693f6"
+    }
+  },
+  "historical_test_observation": {
+    "command": "python3 -m unittest tests/test_cycle_7_crr_phase_lattice_base_saturation_v1.py",
+    "epistemic_status": "OBSERVED",
+    "result": "one expected literal-string failure; no mathematical assertion failed"
+  },
+  "original_assertion": "self.assertIn(\"Exact rational aliases offer only constant factors\", document)",
+  "preserved_v1": {
+    "artifact_id": "cycle-7-crr-phase-lattice-base-saturation-v1",
+    "artifact_sha256": "3207a7764470d5512d20778e739e0e0bdc31535c0b2ac68b8366707304678534",
+    "statement": "The v1 artifact, builder, conventions, document, and original failing test are immutable inputs to this correction."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_7_crr_phase_lattice_base_saturation_v1_test_correction.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_7_crr_phase_lattice_base_saturation_v1_test_correction.py",
+    "write_command": "python3 proof/build_cycle_7_crr_phase_lattice_base_saturation_v1_test_correction.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE_BY_USER_DIRECTION",
+    "lightweight_checks": "immutable-artifact hash pinning, literal-expectation comparison, v1 replay, contained historical-test replay, corrected replay, and tamper rejection"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealed_phrase": "exact aliases can therefore provide at most constant factors",
+  "sealer": {
+    "path": "proof/build_cycle_7_crr_phase_lattice_base_saturation_v1_test_correction.py",
+    "sha256": "629f7f6be403deca815957e671c4deba59cc250c62d9c26f759a74d3f17cbf6e"
+  },
+  "status": "SEALED_V1_PHASE_LATTICE_BASE_SATURATION_TEST_CORRECTION_LIGHTWEIGHT_CHECKED",
+  "v1_replay": {
+    "command": "python3 proof/build_cycle_7_crr_phase_lattice_base_saturation_v1.py --check",
+    "epistemic_status": "PROVED",
+    "result": "v1 builder --check passed without changing the immutable artifact"
+  }
+}

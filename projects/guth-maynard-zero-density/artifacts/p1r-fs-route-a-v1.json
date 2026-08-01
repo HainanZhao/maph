@@ -1,0 +1,94 @@
+{
+  "architecture": {
+    "global_certificate_semantics": "a uniform coefficient B must upper-bound every retained left value and every right-branch value",
+    "left_coefficient": "I(sigma)=3/(2-sigma)",
+    "left_range": "1/2 <= sigma < 7/10",
+    "right_branch": "arbitrary and permitted to change only for sigma >= 7/10"
+  },
+  "artifact_id": "p1r-fs-route-a-v1",
+  "claim_boundary": "Exact source-anchored theorem for the frozen fixed-splice envelope class only. It is not a lower bound for N(sigma,T), not saturation of the Guth--Maynard method, not a new density estimate, and not a short-interval theorem.",
+  "epistemic_status": "PROVED",
+  "exact_proof": {
+    "endpoint_limit": "lim_{sigma upward 7/10} I(sigma)=3/(2-7/10)=30/13",
+    "epsilon_witness_rule": "For 0<eta<30/13, let H_eta=169 eta/(300-130 eta), h=min(1/10,H_eta/2), sigma=7/10-h; then h<H_eta and I(sigma)>30/13-eta.",
+    "formal_obstruction": "For every eta in (0,30/13), the retained left branch has a value exceeding 30/13-eta. Therefore no modification confined to sigma>=7/10 can certify a strict global coefficient 30/13-eta within this architecture.",
+    "identity_certificate": "After multiplying by the positive 13(2-sigma), both sides have numerator 30(7/10-sigma).",
+    "sampled_witness_regressions": [
+      {
+        "I_sigma": "1799220/779831",
+        "eta": "1/1000",
+        "h": "169/599740",
+        "sigma": "419649/599740",
+        "target_minus_eta": "29987/13000",
+        "threshold": "169/299870"
+      },
+      {
+        "I_sigma": "1740/767",
+        "eta": "1/13",
+        "h": "13/580",
+        "sigma": "393/580",
+        "target_minus_eta": "29/13",
+        "threshold": "13/290"
+      },
+      {
+        "I_sigma": "15/7",
+        "eta": "1/1",
+        "h": "1/10",
+        "sigma": "3/5",
+        "target_minus_eta": "17/13",
+        "threshold": "169/170"
+      },
+      {
+        "I_sigma": "15/7",
+        "eta": "2/1",
+        "h": "1/10",
+        "sigma": "3/5",
+        "target_minus_eta": "4/13",
+        "threshold": "169/20"
+      }
+    ],
+    "strict_left_upper_bound": "I(sigma)<30/13 for every sigma<7/10 in the frozen range.",
+    "supremum": "sup_{1/2<=sigma<7/10} I(sigma)=30/13",
+    "universal_identity": "30/13-I(sigma)=30(7/10-sigma)/(13(2-sigma))"
+  },
+  "falsifier": "A frozen source/range/hash mismatch, a failed universal cross-multiplication identity, a failed epsilon witness, or a claim about an architecture that changes the left branch invalidates promotion.",
+  "frozen_hashes": {
+    "classical_ledger": {
+      "path": "docs/literature-ledger-classical-inputs.md",
+      "sha256": "5005dc96deca85d930b710000b1faccdce093e8574dc44f9730fa4a570529f11"
+    },
+    "envelope_sensitivity": {
+      "path": "artifacts/g1-envelope-sensitivity-reconciliation-v1.json",
+      "sha256": "850b825698722d628340b762867c98774dae53443aecde581138c6830993b60e"
+    },
+    "huxley_pdf": {
+      "path": "artifacts/sources/huxley-1972-inventiones15-gdz-volume.pdf",
+      "sha256": "5946d8579810f0754e972d42a09ed2a703604b8fb4e6377f14caaa5dc48f9797"
+    },
+    "p1r_preregistration_v4": {
+      "path": "artifacts/cycle-4-p1r-preregistration-v4.json",
+      "sha256": "e2aeec9ec90e1fea0a9eade53d5ff1e57020df48bd92ae852121a941fbadd7f9"
+    },
+    "p1r_preregistration_v4_hostile_audit": {
+      "path": "artifacts/cycle-4-p1r-preregistration-v4-hostile-audit-v1.json",
+      "sha256": "bdb60d416fee628d309e025a493c45383ccc50e3ee41a9bdb0d6b8a7d73235ad"
+    }
+  },
+  "out_of_scope": [
+    "changing the left branch",
+    "moving the splice",
+    "a left-neighborhood improvement",
+    "an actual lower bound for zero density",
+    "termwise or method-wide saturation"
+  ],
+  "prover": {
+    "path": "proof/p1r_fs_route_a_v1.py",
+    "sha256": "ce87441984d5129b250a7a1f51070ffbe190e793fa2680e712fd6ca549bd5560"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "theorem_id": "P1R-FS-A"
+}

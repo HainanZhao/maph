@@ -1,0 +1,30 @@
+{
+  "artifact_type": "adversarial-stream-c-explicit-formula-v2-v2-scope-correction",
+  "certificate_version": 2,
+  "claim_boundary": "PROVED scope adjudication: author-hosted primary course sources satisfy the Cycle-2 reachable-primary-source requirement. No byte-identity or author-byte OCW-license claim is made, and G0 is not declared PASS.",
+  "distribution_caveat": {
+    "non_claim": "No assertion is made that the frozen author-hosted PDF bytes are OCW-licensed bytes.",
+    "statement": "Direct DSpace bitstream retrieval and author/DSpace byte identity remain unverified. This concerns distribution/provenance, not the required mathematical primary-source authority.",
+    "status": "OBSERVED"
+  },
+  "epistemic_status": "PROVED",
+  "mathematical_source_authority": {
+    "evidence": "source-closure v3 pins both direct author course PDFs, official course/author metadata, all theorem anchors, and mutool 1.23.10.",
+    "result": "No mathematical source-authority blocker remains for the explicit-formula theorem, its all-T range, half-weight convention, remainder, or multiplicity proof under the stated preregistration.",
+    "status": "PROVED"
+  },
+  "preregistration_effect": {
+    "result": "The explicit-formula source-authority subgate is closed. This correction alone does not establish G0 PASS, which still requires all Stream-A and Stream-C route reconciliation gates.",
+    "status": "PROVED"
+  },
+  "replay": {
+    "script_sha256": "a73f80e90a0edb09ada509f52c519ee8937af24e9f76cff364e0df1ae28846ec",
+    "write_command": "python3 projects/guth-maynard-zero-density/proof/audit_cycle2_stream_c_explicit_formula_v2_v2.py --write projects/guth-maynard-zero-density/artifacts/cycle-2-stream-c-explicit-formula-v2-adversarial-audit-v2.json"
+  },
+  "supersedes": "adversarial audit v1 only for its interpretation of the preregistered source-authority clause; v1 remains preserved",
+  "withdrawn_v1_inference": {
+    "correction": "The preregistration requires a reachable primary source, not byte identity or proof that author-hosted bytes inherit an OCW license. Kedlaya's direct course-hosted PDFs are primary sources; official DSpace metadata independently identifies the same course and author.",
+    "statement": "V1 treated missing byte identity between author-hosted copies and DSpace objects as a mathematical source-authority blocker.",
+    "status": "PROVED"
+  }
+}

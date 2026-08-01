@@ -1,0 +1,41 @@
+{
+  "artifact_id": "p7-common-ideal-cubic-v3-test-correction",
+  "artifact_identity": {
+    "builder": {
+      "path": "proof/build_p7_common_ideal_cubic_v3_test_correction.py",
+      "sha256": "22f723ad5c367111e49ca20cac55ef1f1feb6ba4aacfd7ce88de808bea5a8e6f"
+    },
+    "document": {
+      "path": "docs/p7-common-ideal-cubic-v3-test-correction.md",
+      "sha256": "b0a27c068edae6244851835be63ea3e0985b9ef453682037216b93097bc413a2"
+    },
+    "tests": {
+      "path": "tests/test_p7_common_ideal_cubic_v3_test_correction.py",
+      "sha256": "5ac079036a9efee1b2ba846360a31fb3a95470e3fd878ced5b51f20c85eb205e"
+    }
+  },
+  "defect": "The v2 test searched the unchanged-list for the literal phrase 'remains open'; that list instead says 'the open coloured primitive cubic estimate'. The builder and the substantive integer replay both pass.",
+  "epistemic_status": "OBSERVED",
+  "immutable_v2": {
+    "path": "artifacts/p7-common-ideal-cubic-v2-correction.json",
+    "sha256": "fdf5c03927d8c43b67f18eab1e7b6a84bc9cba979861adfa6acc15e16e4482e4"
+  },
+  "repair": "This v3 test checks the exact corrected integers and the semantic open-estimate phrase, not an accidental literal substring.",
+  "replay": {
+    "check_command": "python3 proof/build_p7_common_ideal_cubic_v3_test_correction.py --check",
+    "runtime": {
+      "implementation": "CPython",
+      "json_policy": "stdlib json sort_keys=True; UTF-8; LF; trailing newline",
+      "optimize": 0,
+      "version": "3.12.3"
+    },
+    "script": "proof/build_p7_common_ideal_cubic_v3_test_correction.py",
+    "script_sha256": "22f723ad5c367111e49ca20cac55ef1f1feb6ba4aacfd7ce88de808bea5a8e6f",
+    "write_command": "python3 proof/build_p7_common_ideal_cubic_v3_test_correction.py --write"
+  },
+  "resource_contract": {
+    "rss_kib_strictly_less_than": 262144,
+    "wall_seconds_strictly_less_than": 60
+  },
+  "unchanged": "No mathematical statement, source pin, v1/v2 artifact, or P7-3 gate boundary changes."
+}

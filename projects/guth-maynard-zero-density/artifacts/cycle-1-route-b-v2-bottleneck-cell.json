@@ -1,0 +1,106 @@
+{
+  "artifact_type": "exact-rational-bottleneck-cell-certificate",
+  "certificate_version": 2,
+  "claim_boundary": "Exact substitution and cleared-linear-form audit conditional on the cited Theorem 1.1, Proposition 11.1, and final section-13.1 Remark. It neither reproves those results nor proves that no improvement to S_3 or the full method exists.",
+  "epistemic_status": "PROVED",
+  "frozen_cell": {
+    "L_in_U": "5/6",
+    "V_equals_L_to_sigma": true,
+    "V_in_U": "7/12",
+    "W_in_U": "2/3",
+    "energy_equivalences": [
+      "|W|^(5/2) = U^(5/3)",
+      "|W|^4/U = U^(5/3)"
+    ],
+    "energy_in_U": "5/3",
+    "local_interval_U_in_T": "12/13",
+    "original_N_in_T": "5/13",
+    "sigma": "7/10",
+    "squared_length_L_in_T": "10/13"
+  },
+  "local_to_global_count": {
+    "combined_T_exponent": "9/13",
+    "exact_match": true,
+    "interpretation": "Up to the source's T^o(1) factors and endpoint bookkeeping, U^(2/3) local points across T/U subintervals give T^(9/13), the Theorem 1.2 target at sigma=7/10.",
+    "local_W_in_T_exponent": "8/13",
+    "number_of_U_subintervals_in_T_exponent": "1/13",
+    "theorem_1_2_density_exponent_at_sigma": "9/13"
+  },
+  "proposition_11_1_energy_table": {
+    "cleared_comparisons": [
+      "12*(5/3) = 20 for each of all three Proposition 11.1 terms",
+      "all three terms tie exactly at U^(5/3)"
+    ],
+    "hypotheses_checked": {
+      "L_in_required_range_U_to_3_4_through_U": true,
+      "one_separation_and_coefficient_bound": "inherited stated hypotheses",
+      "sigma_greater_than_one_half": true
+    },
+    "matches_final_remark_energy": true,
+    "max_U_exponent": "5/3",
+    "rows": [
+      {
+        "U_exponent": "5/3",
+        "cleared_twelfths": "20",
+        "term": "|W|*L^(4-4*sigma)"
+      },
+      {
+        "U_exponent": "5/3",
+        "cleared_twelfths": "20",
+        "term": "|W|^(21/8)*U^(1/4)*L^(1-2*sigma)"
+      },
+      {
+        "U_exponent": "5/3",
+        "cleared_twelfths": "20",
+        "term": "|W|^3*L^(1-2*sigma)"
+      }
+    ]
+  },
+  "replay": {
+    "interpreter_requirement": "Python 3 standard library only",
+    "script_sha256": "0893d6114777d26a73242419783a670d3e85aaa42d7e43dfddd472c7f8ec7e64",
+    "write_command": "python3 projects/guth-maynard-zero-density/proof/replay_bottleneck_cell_route_b_v2.py --write projects/guth-maynard-zero-density/artifacts/cycle-1-route-b-v2-bottleneck-cell.json"
+  },
+  "route": "B",
+  "source_inputs": {
+    "arxiv_version": "2405.20552v2",
+    "checked_locations": [
+      "Theorem 1.1, TeX lines 64--79",
+      "Proposition 11.1 / equation (11.1), TeX lines 1785--1804",
+      "final Remark in section 13.1, TeX line 2398"
+    ],
+    "source_tarball_sha256": "9d34ac093abcb8129f68ff86eaad65f09a09d832fe637ff84d50a69496046bdc",
+    "tex_member": "LargevaluesDirichlet17.tex",
+    "tex_member_sha256": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428"
+  },
+  "theorem_1_1_term_table": {
+    "cleared_comparisons": [
+      "12*(2/3) - 12*(1/2) = 2 > 0",
+      "12*(2/3) - 12*(2/3) = 0 (tie of the second and third terms)"
+    ],
+    "conclusion": "Theorem 1.1 returns the local scale |W| <= U^(2/3+o(1)).",
+    "hypotheses_used": [
+      "|b_n| <= 1",
+      "large-value points are 1-separated in an interval of length U",
+      "the polynomial has length L and values at least V"
+    ],
+    "max_U_exponent": "2/3",
+    "rows": [
+      {
+        "U_exponent": "1/2",
+        "cleared_twelfths": "6",
+        "term": "L^2*V^-2"
+      },
+      {
+        "U_exponent": "2/3",
+        "cleared_twelfths": "8",
+        "term": "L^(18/5)*V^-4"
+      },
+      {
+        "U_exponent": "2/3",
+        "cleared_twelfths": "8",
+        "term": "U*L^(12/5)*V^-4"
+      }
+    ]
+  }
+}

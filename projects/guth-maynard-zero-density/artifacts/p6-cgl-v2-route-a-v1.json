@@ -1,0 +1,576 @@
+{
+  "artifact_id": "p6-cgl-v2-route-a-v1",
+  "claim_boundary": "Literal source-order reconstruction only. It proves no Chen--Gupta--Li theorem, makes no repair (in particular no q<=T^C restriction), promotes no 7/3 result, and proves no new zero-density or short-interval theorem.",
+  "conclusion": "OBSERVED: all 46 registry rows and both L12 subchecks have a source-order trace. PROVED: the stated q1=q exact comparison algebra is correct conditional on the displayed source terms. The reconstruction remains OPEN_ANALYTIC_INPUT because the listed analytic sources and transfer/tail/smoothness obligations are not closed.",
+  "epistemic_status": "OBSERVED",
+  "exact_algebra": {
+    "epistemic_status": "PROVED",
+    "identities": {
+      "2<=7/3": true,
+      "7/3-(10-sqrt(10))/3": "(sqrt(10)-3)/3 > 0",
+      "7/3-30/13": "1/39",
+      "7/3-9/4": "1/12",
+      "B_at_beta_1": "(10-sqrt(10))/3"
+    },
+    "method": "integer/radical comparison; no floating point"
+  },
+  "l12_subcheck_count": 2,
+  "open_blockers": [
+    {
+      "id": "S06_EXTERNAL_INPUTS",
+      "rows": [
+        "S06",
+        "L04",
+        "L06",
+        "M07",
+        "Z04",
+        "Z07",
+        "Z08",
+        "F01",
+        "F02"
+      ],
+      "status": "OPEN_ANALYTIC_INPUT"
+    },
+    {
+      "forbidden_repair": "q<=T^C or log^2(qT) substitution",
+      "id": "Z03_TAIL_X_RANGE",
+      "rows": [
+        "Z03",
+        "F10"
+      ],
+      "status": "OPEN_ANALYTIC_INPUT"
+    },
+    {
+      "id": "PRIMITIVE_TO_ALL",
+      "rows": [
+        "Z05",
+        "Z06"
+      ],
+      "status": "OPEN_ANALYTIC_INPUT"
+    },
+    {
+      "id": "F08_T_SMOOTH_UNDEFINED",
+      "rows": [
+        "F08"
+      ],
+      "status": "OPEN_ANALYTIC_INPUT"
+    }
+  ],
+  "pinned_inputs": {
+    "cgl_arxiv_metadata": {
+      "path": "artifacts/sources/g1-literature-audit-v1/arxiv-2507.08296v2.abs.html",
+      "sha256": "8eafc40c457c6bbb9d78ffd949cee0d5bceef628db14fe1e9a2abde14d33ee6e"
+    },
+    "cgl_pdf": {
+      "path": "artifacts/sources/g1-literature-audit-v1/arxiv-2507.08296v2.pdf",
+      "sha256": "adfe65cf0952bbb4eddfdaec7a8d3341130e427827f9159d9da039fc16336058"
+    },
+    "cgl_tar": {
+      "path": "artifacts/sources/g1-literature-audit-v1/arxiv-2507.08296v2.tar",
+      "sha256": "b982cd5afa5b5e8a9abff2c6306519ba558d321b19aadd3fdbe59b3750f8e9ae"
+    },
+    "cgl_tex": {
+      "path": "artifacts/sources/g1-literature-audit-v1/extracted-2507.08296v2/Large_Value_Estimates_for_Dirichlet_Polynomials_with_Characters_and_Zero_Density_of_Dirichlet___L_-Functions.tex",
+      "sha256": "0b9ebb6b604944b7c59a9ec37a75c48f6a08f88611f911ff5f02dc013b848e2f"
+    },
+    "gm_tar": {
+      "path": "artifacts/sources/arxiv-2405.20552v2.tar",
+      "sha256": "9d34ac093abcb8129f68ff86eaad65f09a09d832fe637ff84d50a69496046bdc"
+    },
+    "gm_tex": {
+      "path": "artifacts/sources/arxiv-2405.20552v2/LargevaluesDirichlet17.tex",
+      "sha256": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428"
+    },
+    "preregistration": {
+      "path": "artifacts/cycle-4-p6-cgl-v2-reconstruction-preregistration-v1.json",
+      "sha256": "1f9c195fa2dff8a58b754f10a58357384c5e3840839cc48269dd7b595a8ab36a"
+    }
+  },
+  "replay": {
+    "command": "python3 proof/reconstruct_p6_cgl_v2_route_a_v1.py --check",
+    "script": "proof/reconstruct_p6_cgl_v2_route_a_v1.py",
+    "script_sha256": "1ea4dee042050963c55b3b69c06b91a20e766fd9d86ba6efb54a72220d06a1c0"
+  },
+  "route": "A: literal CGL-v2 theorem-chain source order",
+  "row_count": 46,
+  "rows": [
+    {
+      "disposition": "SOURCE_IDENTITY_COMPLETE",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "tar member equals pinned TeX; 2468 logical lines",
+      "hypotheses_checked_in_source": "CGL TeX/tar/PDF pinned; no claim that the preprint is published",
+      "id": "S01",
+      "source_anchor": "\\begin{document}",
+      "source_locator": "CGL-v2 TeX lines entire source",
+      "valid_range": "complete source"
+    },
+    {
+      "disposition": "SOURCE_METADATA_COMPLETE_PREPRINT",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "title and abstract claim a 7/3 exponent",
+      "hypotheses_checked_in_source": "three named authors and collaboration statement",
+      "id": "S02",
+      "source_anchor": "subsequent collaboration",
+      "source_locator": "CGL-v2 TeX lines 77--105",
+      "valid_range": "arXiv v2; preprint status"
+    },
+    {
+      "disposition": "OPEN_ANALYTIC_INPUT:S03_MULTIPLICITY_CONVENTION_UNSTATED",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "N(sigma,T,chi) source definition",
+      "hypotheses_checked_in_source": "rectangle sigma<=beta<=1, |t|<=T; source does not state multiplicity",
+      "id": "S03",
+      "source_anchor": "number of zeros",
+      "source_locator": "CGL-v2 TeX lines 95--101,141--148,158--185",
+      "valid_range": "1/2<sigma<1 in theorem"
+    },
+    {
+      "disposition": "OPEN_ANALYTIC_INPUT:S04_LOW_T_ENDPOINT_SCOPE",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "domains are not reconciled at low T",
+      "hypotheses_checked_in_source": "Partial LVE: N>=(qT)^(2/3); detector X,Y,T>1; headline says uniform q,T",
+      "id": "S04",
+      "source_anchor": "Let $X,Y, T > 1$",
+      "source_locator": "CGL-v2 TeX lines 114--128,158--187,2114",
+      "valid_range": "qT->infinity convention; T=1 later called worst"
+    },
+    {
+      "disposition": "SOURCE_TRACE_COMPLETE",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "(qT)^epsilon losses",
+      "hypotheses_checked_in_source": "o(1)/lessapprox are qT-asymptotic",
+      "id": "S05",
+      "source_anchor": "interpreted as $qT \\to \\infty$",
+      "source_locator": "CGL-v2 TeX lines 122--126,268--273",
+      "valid_range": "qT->infinity"
+    },
+    {
+      "disposition": "OPEN_ANALYTIC_INPUT:S06_EXTERNAL_INPUTS",
+      "epistemic_status": "OBSERVED",
+      "formula_or_chain_step": "inventory recorded; external theorem hypotheses not all checked",
+      "hypotheses_checked_in_source": "Iwaniec--Kowalski Thm 9.12; Huxley 1975; Heath-Brown 1979; Montgomery/Davenport books; GM lemmas",
+      "id": "S06",
+      "source_anchor": "\\begin{thebibliography}",
+      "source_locator": "CGL-v2 TeX lines 133--140,537--560,1691--1695,2112,2158,2169,2414--2467",
+      "valid_range": "all cited dependencies actually reached"
+    },
+    {
+      "disposition": "SOURCE_THEOREM_RESTATED_DEPENDS_ON_M01--M08",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "divisor-sensitive Partial LVE",
+      "hypotheses_checked_in_source": "primitive chi mod q; |a_n|<=1; |t|<=T; pair separation; |D_N|>=V; N>=(qT)^(2/3)",
+      "id": "L01",
+      "source_anchor": "where $\\chi$ is a primitive character",
+      "source_locator": "CGL-v2 TeX lines 114--123",
+      "valid_range": "q1|q"
+    },
+    {
+      "disposition": "SOURCE_THEOREM_RESTATED_DEPENDS_ON_M01--M08",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "N^2V^-2+q q1^-1/2 T^1/2 N^3V^-4+q q1^1/3 T N^2V^-4+qT N^(12/5)V^-4",
+      "hypotheses_checked_in_source": "L01 hypotheses and q1|q",
+      "id": "L02",
+      "source_anchor": "qq_1^{-\\frac{1}{2}}",
+      "source_locator": "CGL-v2 TeX lines 122--124",
+      "valid_range": "all q1|q"
+    },
+    {
+      "disposition": "SOURCE_THEOREM_RESTATED_DEPENDS_ON_M01--M08",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "N^2V^-2+(qT)^1/2 N^3V^-4+q^(4/3)TN^2V^-4+qTN^(12/5)V^-4",
+      "hypotheses_checked_in_source": "L01 hypotheses",
+      "id": "L03",
+      "source_anchor": "q^{\\frac{4}{3}}TN^{2}",
+      "source_locator": "CGL-v2 TeX lines 125--127",
+      "valid_range": "all q"
+    },
+    {
+      "disposition": "OPEN_ANALYTIC_INPUT:L04_IK_THM_9_12_UNREAD",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "|W|<=(qT)^o(1)(N^2V^-2+qTNV^-2)",
+      "hypotheses_checked_in_source": "cited IK Thm 9.12; threshold V<N^(7/10)",
+      "id": "L04",
+      "source_anchor": "classical mean value theorem",
+      "source_locator": "CGL-v2 TeX lines 133--136,421",
+      "valid_range": "source applies outside intermediate V range"
+    },
+    {
+      "disposition": "SOURCE_TRACE_COMPLETE_DEPENDS_ON_AUXILIARY",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "W=W1 union W2 union W3 and |W'|>=|W|/(qT)^epsilon",
+      "hypotheses_checked_in_source": "w supported [1,2], equals 1 on [6/5,9/5]; W is thinned from 1 to (qT)^epsilon separation",
+      "id": "L05",
+      "source_anchor": "splitting $D_N$ into three parts",
+      "source_locator": "CGL-v2 TeX lines 375--443",
+      "valid_range": "sigma in [0.7,0.8]; N>=(qT)^(2/3)/2"
+    },
+    {
+      "disposition": "OPEN_ANALYTIC_INPUT:L06_HUXLEY_1975_UNREAD",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "|W|<=(qT)^o(1)(N^2V^-2+qTN^4V^-6)",
+      "hypotheses_checked_in_source": "cited Huxley 1975; V>N^(4/5) and case q1<N^(6/5)/T",
+      "id": "L06",
+      "source_anchor": "Hal\u00e1sz-Montgomery-Huxley",
+      "source_locator": "CGL-v2 TeX lines 137--140,421,487--500",
+      "valid_range": "source's stated regimes"
+    },
+    {
+      "disposition": "SOURCE_TRACE_COMPLETE_DEPENDS_ON_L04",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "|W|<=(qT)^(o(1)+epsilon)N^(2-2sigma); epsilon sent slowly to zero",
+      "hypotheses_checked_in_source": "qT<=N and epsilon thinning",
+      "id": "L07",
+      "source_anchor": "If $qT \\leq N$",
+      "source_locator": "CGL-v2 TeX lines 445--448",
+      "valid_range": "sigma in [0.7,0.8]"
+    },
+    {
+      "disposition": "SOURCE_TRACE_COMPLETE_DEPENDS_ON_M01--M08",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "N^(2-2sigma)+(qT)^1/2 N^(3-4sigma) <= N^(2-2sigma)+qTN^((12-20sigma)/5)",
+      "hypotheses_checked_in_source": "N<=qT<=N^(6/5); Auxiliary proposition",
+      "id": "L08",
+      "source_anchor": "N \\leq qT \\leq N^{6/5}",
+      "source_locator": "CGL-v2 TeX lines 449--452",
+      "valid_range": "sigma in [0.7,0.8]"
+    },
+    {
+      "disposition": "SOURCE_TRACE_COMPLETE_DEPENDS_ON_L12",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "|W| lessapprox q q1^(1/3) T N^(2-4sigma)",
+      "hypotheses_checked_in_source": "N^(6/5)<=qT<=N^(3/2); q1|q; T0=1",
+      "id": "L09",
+      "source_anchor": "Case 1: $q_1 > N^{\\frac{6}{5}}$",
+      "source_locator": "CGL-v2 TeX lines 454--478",
+      "valid_range": "q1>N^(6/5)"
+    },
+    {
+      "disposition": "SOURCE_TRACE_COMPLETE_DEPENDS_ON_L12",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "|W| lessapprox qT N^((12-20sigma)/5)",
+      "hypotheses_checked_in_source": "same subdivision; T0=N^(6/5)/q1",
+      "id": "L10",
+      "source_anchor": "Case 2",
+      "source_locator": "CGL-v2 TeX lines 454--485",
+      "valid_range": "N^(6/5)/T<q1<N^(6/5)"
+    },
+    {
+      "disposition": "SOURCE_TRACE_COMPLETE_DEPENDS_ON_L06_AND_L12",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "|W| lessapprox q q1^-1/2 T^1/2 N^(3-4sigma)",
+      "hypotheses_checked_in_source": "same subdivision; T0=T; HMH comparator",
+      "id": "L11",
+      "source_anchor": "Case 3",
+      "source_locator": "CGL-v2 TeX lines 454--504",
+      "valid_range": "q1<N^(6/5)/T"
+    },
+    {
+      "disposition": "SOURCE_TRACE_COMPLETE",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "chi=chi1 f; #S<=phi(q)/phi(q1)",
+      "hypotheses_checked_in_source": "q1|q; character modulo q; product reduction to prime powers",
+      "id": "L12",
+      "source_anchor": "Character subdivision",
+      "source_locator": "CGL-v2 TeX lines 507--519",
+      "subchecks": [
+        {
+          "disposition": "SOURCE_TRACE_COMPLETE",
+          "epistemic_status": "PROVED",
+          "formula": "a=a1+p^(j-k)a2 gives chi=f chi1",
+          "id": "odd_prime",
+          "locator": "511--518"
+        },
+        {
+          "disposition": "OPEN_ANALYTIC_INPUT:L12_TWO_POWER_DETAILS_NOT_EXPANDED",
+          "epistemic_status": "OBSERVED",
+          "formula": "source says 'may use the same argument' with generators (-1,5)",
+          "id": "two_power",
+          "locator": "518"
+        }
+      ],
+      "valid_range": "odd p^j and 2^j cases"
+    },
+    {
+      "disposition": "SOURCE_PROPOSITION_RESTATED_DEPENDS_ON_M02--M08",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "|W| lessapprox N^(2-2sigma)+(qT)^1/2N^(3-4sigma)+(qT)^(4/3)N^(2-4sigma)",
+      "hypotheses_checked_in_source": "sigma in [7/10,4/5]; primitive chi; 1-bounded b; (qT)^epsilon separation; N>=(qT)^(2/3)/2",
+      "id": "M01",
+      "source_anchor": "\\begin{proposition}",
+      "source_locator": "CGL-v2 TeX lines 375--387",
+      "valid_range": "as stated"
+    },
+    {
+      "disposition": "SOURCE_TRACE_COMPLETE_DEPENDS_ON_GM_LEMMA_4_1",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "large values reduce to s1(M_W) and trace subtraction",
+      "hypotheses_checked_in_source": "matrix rows W, columns n~N; smooth w",
+      "id": "M02",
+      "source_anchor": "largest singular value",
+      "source_locator": "CGL-v2 TeX lines 528--550",
+      "valid_range": "Auxiliary-proposition setting"
+    },
+    {
+      "disposition": "SOURCE_TRACE_COMPLETE",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "Hilbert--Schmidt/cubic trace decomposition with diagonal subtraction",
+      "hypotheses_checked_in_source": "matrix/trace setup, source Fourier convention e(x)=exp(2pi ix)",
+      "id": "M03",
+      "source_anchor": "Poisson summation",
+      "source_locator": "CGL-v2 TeX lines 552--660",
+      "valid_range": "dyadic M variables per source"
+    },
+    {
+      "disposition": "SOURCE_TRACE_COMPLETE",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "source S1 bound used in final auxiliary calculation",
+      "hypotheses_checked_in_source": "source dyadic ranges and smooth cutoffs",
+      "id": "M04",
+      "source_anchor": "$S_1$",
+      "source_locator": "CGL-v2 TeX lines 661--733",
+      "valid_range": "source ranges"
+    },
+    {
+      "disposition": "SOURCE_TRACE_COMPLETE_DEPENDS_ON_EXTERNAL_AFE_INPUT",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "source S2 bound used in final auxiliary calculation",
+      "hypotheses_checked_in_source": "approximate functional equation and dyadic variables as stated",
+      "id": "M05",
+      "source_anchor": "$S_2$",
+      "source_locator": "CGL-v2 TeX lines 734--1128",
+      "valid_range": "source ranges"
+    },
+    {
+      "disposition": "SOURCE_TRACE_COMPLETE",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "affine bound combines M^6 L1^2 and M^4 L2^2-type terms",
+      "hypotheses_checked_in_source": "nonnegative f_b, support u~1, Fourier decay, GCD twist",
+      "id": "M06",
+      "source_anchor": "affine transformations",
+      "source_locator": "CGL-v2 TeX lines 1129--1686",
+      "valid_range": "M_i<=M; source support/decay"
+    },
+    {
+      "disposition": "OPEN_ANALYTIC_INPUT:M07_HEATH_BROWN_HYPOTHESES_UNREAD",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "E(W) lessapprox |W|N^(4-4sigma)+|W|^(21/8)(qT)^(1/4)N^(1-2sigma)+|W|^3N^(1-2sigma)",
+      "hypotheses_checked_in_source": "primitive chi, separation, N range and either |W|>=(qT)^(2/3) or auxiliary energy condition",
+      "id": "M07",
+      "source_anchor": "Heath-Brown",
+      "source_locator": "CGL-v2 TeX lines 1688--1709,1963--1971",
+      "valid_range": "(qT)^(2/3)/2<=N<=qT"
+    },
+    {
+      "disposition": "SOURCE_TRACE_COMPLETE_DEPENDS_ON_M02--M07",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "source combines S1,S2,S3 to the three-term Auxiliary proposition",
+      "hypotheses_checked_in_source": "M01 setting plus M07 energy input",
+      "id": "M08",
+      "source_anchor": "$S_3$",
+      "source_locator": "CGL-v2 TeX lines 1974--2105",
+      "valid_range": "sigma in [7/10,4/5]"
+    },
+    {
+      "disposition": "SOURCE_TRACE_COMPLETE",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "M_X, contour shift, z=0 and principal-character z=1-s residues",
+      "hypotheses_checked_in_source": "X,Y,T>1; 1/2<Re(s)<1",
+      "id": "Z01",
+      "source_anchor": "Mellin inversion",
+      "source_locator": "CGL-v2 TeX lines 2114--2134",
+      "valid_range": "detector domain"
+    },
+    {
+      "disposition": "SOURCE_TRACE_COMPLETE",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "weighted Dirichlet tail is o(1)",
+      "hypotheses_checked_in_source": "Y->infinity; c_n divisor bound",
+      "id": "Z02",
+      "source_anchor": "sum $\\sum_{n > Y\\log^2 Y}$",
+      "source_locator": "CGL-v2 TeX lines 2140--2143",
+      "valid_range": "as Y->infinity"
+    },
+    {
+      "disposition": "OPEN_ANALYTIC_INPUT:Z03_TAIL_X_RANGE",
+      "epistemic_status": "OBSERVED",
+      "formula_or_chain_step": "no q<=T^C imposed; T=1 called worst",
+      "hypotheses_checked_in_source": "integral tail asserted only T->infinity with X polynomial in T; later X=(qT)^epsilon; theorem includes unrestricted q,T",
+      "id": "Z03",
+      "source_anchor": "if $X$ is polynomially bounded in $T$",
+      "source_locator": "CGL-v2 TeX lines 2140,2169,2411--2413",
+      "valid_range": "uniform q,T is not reconciled"
+    },
+    {
+      "disposition": "OPEN_ANALYTIC_INPUT:Z04_ZERO_COUNT_INPUT_UNREAD",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "low-height contribution claimed O((log qT)^2)",
+      "hypotheses_checked_in_source": "principal character identity L(s,chi0)=zeta(s) product_{p|q}(1-p^-s)",
+      "id": "Z04",
+      "source_anchor": "only if $\\chi$ is principal",
+      "source_locator": "CGL-v2 TeX lines 2134--2138",
+      "valid_range": "|t|<=A log(qT)"
+    },
+    {
+      "disposition": "OPEN_ANALYTIC_INPUT:Z05_PRIMITIVE_EULER_FACTORS",
+      "epistemic_status": "OBSERVED",
+      "formula_or_chain_step": "source only announces summing over factors",
+      "hypotheses_checked_in_source": "need Euler-factor comparison between induced and primitive L-functions in sigma>1/2",
+      "id": "Z05",
+      "source_anchor": "non-primitive characters can be included",
+      "source_locator": "CGL-v2 TeX lines 2109,2136--2138",
+      "valid_range": "all characters versus primitive"
+    },
+    {
+      "disposition": "OPEN_ANALYTIC_INPUT:Z06_CONDUCTOR_SUM_Q1",
+      "epistemic_status": "OBSERVED",
+      "formula_or_chain_step": "NOze has sum over all chi but proof restricts primitive",
+      "hypotheses_checked_in_source": "need unique conductor partition, multiplicity/divisor loss and q1-term domination",
+      "id": "Z06",
+      "source_anchor": "applying our final estimate for all factors",
+      "source_locator": "CGL-v2 TeX lines 2109,2148--2152",
+      "valid_range": "q1-sensitive four terms"
+    },
+    {
+      "disposition": "OPEN_ANALYTIC_INPUT:Z07_DAVENPORT_CH16_UNREAD",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "|tilde R_j| gg |R_j|/((qT)^epsilon log(qT))",
+      "hypotheses_checked_in_source": "same-character ordinate gaps (qT)^epsilon; cited Davenport Ch.16 local zero count",
+      "id": "Z07",
+      "source_anchor": "saturated",
+      "source_locator": "CGL-v2 TeX lines 2154--2158",
+      "valid_range": "class I/II"
+    },
+    {
+      "disposition": "OPEN_ANALYTIC_INPUT:Z08_SHIFTED_SPACING_AND_MONTGOMERY_INPUT",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "|R2| lessapprox (qT)^(2(1-sigma)) for Y=(qT)^1/2",
+      "hypotheses_checked_in_source": "class-II maximum gamma_r; shifted ordinates claimed well spaced; Montgomery Thm 10.3",
+      "id": "Z08",
+      "source_anchor": "fourth moment estimate",
+      "source_locator": "CGL-v2 TeX lines 2160--2173",
+      "valid_range": "X=(qT)^epsilon"
+    },
+    {
+      "disposition": "SOURCE_TRACE_COMPLETE_DEPENDS_ON_Z01--Z07",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "|D_N| gtrapprox N^sigma, |a_n|<=1",
+      "hypotheses_checked_in_source": "class-I detector; X<=N<Ylog^2Y; scaled a_n=varpi c_n",
+      "id": "Z09",
+      "source_anchor": "dyadic subdivision",
+      "source_locator": "CGL-v2 TeX lines 2176--2197",
+      "valid_range": "(qT)^epsilon<=N lessapprox(qT)^1/2; sigma in [0.7,0.8]"
+    },
+    {
+      "disposition": "OPEN_ANALYTIC_INPUT:Z10_POWERED_COEFFICIENT_AND_LENGTH_COVERAGE",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "(qT)^a<=N^k<=(qT)^(3a/2) and three length cases",
+      "hypotheses_checked_in_source": "N>=(qT)^epsilon, a in [v,wmax], powered coefficient control needed",
+      "id": "Z10",
+      "source_anchor": "choose $k \\ll_\\epsilon 1$",
+      "source_locator": "CGL-v2 TeX lines 2199--2258",
+      "valid_range": "sigma in [0.7,0.8]"
+    },
+    {
+      "disposition": "OPEN_ANALYTIC_INPUT:F01_INGHAM_ANALOGUE_UNREAD",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "coefficient 3/(2-sigma)",
+      "hypotheses_checked_in_source": "source cites qT mean-value/Ingham analogue",
+      "id": "F01",
+      "source_anchor": "when $\\sigma \\leq 0.7$",
+      "source_locator": "CGL-v2 TeX lines 141--149,2109",
+      "valid_range": "1/2<sigma<=0.7"
+    },
+    {
+      "disposition": "OPEN_ANALYTIC_INPUT:F02_HUXLEY_ANALOGUE_UNREAD",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "coefficient 3/(3sigma-1)",
+      "hypotheses_checked_in_source": "source cites Huxley analogue",
+      "id": "F02",
+      "source_anchor": "when $\\sigma \\geq 0.8$",
+      "source_locator": "CGL-v2 TeX lines 145--149,2109",
+      "valid_range": "0.8<=sigma<1"
+    },
+    {
+      "disposition": "SOURCE_TRACE_COMPLETE_DEPENDS_ON_L01--Z10",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "four terms: 15/(3+5sigma), q1 term, q1^-1/2 term, energy term",
+      "hypotheses_checked_in_source": "well-spaced W, |D_N|>N^sigma, N lessapprox(qT)^1/2, q1|q",
+      "id": "F03",
+      "source_anchor": "p subdiv large values estimate",
+      "source_locator": "CGL-v2 TeX lines 2261--2270",
+      "valid_range": "sigma in [0.7,0.8]"
+    },
+    {
+      "disposition": "SOURCE_TRACE_COMPLETE",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "a=w_q1; derive first and third terms",
+      "hypotheses_checked_in_source": "(qT)^v<=q1^(5/6)",
+      "id": "F04",
+      "source_anchor": "Case 1",
+      "source_locator": "CGL-v2 TeX lines 2276--2310",
+      "valid_range": "source Case 1"
+    },
+    {
+      "disposition": "SOURCE_TRACE_COMPLETE",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "a=v; middle intervals controlled",
+      "hypotheses_checked_in_source": "q1^(5/6)<=(qT)^v<=(q1T)^(5/6)",
+      "id": "F05",
+      "source_anchor": "Case 2",
+      "source_locator": "CGL-v2 TeX lines 2276--2325",
+      "valid_range": "source Case 2"
+    },
+    {
+      "disposition": "SOURCE_TRACE_COMPLETE",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "a=z_q1; q1^-1/2 term retained",
+      "hypotheses_checked_in_source": "(q^((3-sigma)/3)T)^(5/(3(1+sigma)))<(q1T)^(5/6)<=(qT)^v",
+      "id": "F06",
+      "source_anchor": "Case 3",
+      "source_locator": "CGL-v2 TeX lines 2276--2336",
+      "valid_range": "source Case 3"
+    },
+    {
+      "disposition": "SOURCE_TRACE_COMPLETE",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "(qT)^(15(1-sigma)/(3+5sigma))+(q^(4/3)T)^(3(1-sigma)/(1+sigma))",
+      "hypotheses_checked_in_source": "complementary divisor range; set q1=q",
+      "id": "F07",
+      "source_anchor": "Case 4",
+      "source_locator": "CGL-v2 TeX lines 2276--2345",
+      "valid_range": "source Case 4"
+    },
+    {
+      "disposition": "OPEN_ANALYTIC_INPUT:F08_T_SMOOTH_UNDEFINED",
+      "epistemic_status": "OBSERVED",
+      "formula_or_chain_step": "claimed pure 30/13 envelope cannot be reconstructed",
+      "hypotheses_checked_in_source": "required definition and divisor-chain property absent from pinned TeX",
+      "id": "F08",
+      "source_anchor": "If $q$ is $T$-smooth",
+      "source_locator": "CGL-v2 TeX lines 182--185,2266--2269,2346--2350,2410",
+      "valid_range": "T-smooth branch"
+    },
+    {
+      "disposition": "PROVED_EXACT_ALGEBRA_CONDITIONAL_ON_SOURCE_INPUTS",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "C1=3(1+lambda/3)/(1+sigma); C2=3(1-beta/2)/sigma; C3=((21-20sigma)/6-beta/2)/(1-sigma); C4=15/(3+5sigma); C3 crossing polynomial 20sigma^2-(43-3beta)sigma+24-6beta",
+      "hypotheses_checked_in_source": "q1|q and q1>=sqrt(q), so beta=log(q1T)/log(qT)>=1/2",
+      "id": "F09",
+      "source_anchor": "Writing each term",
+      "source_locator": "CGL-v2 TeX lines 2357--2410",
+      "valid_range": "1/2<sigma<1"
+    },
+    {
+      "disposition": "OPEN_ANALYTIC_INPUT:F10_UNIFORM_7_OVER_3_DEPENDS_ON_Z03_Z05_Z06",
+      "epistemic_status": "PROVED",
+      "formula_or_chain_step": "bases/constants q^(7/3)T^2, 9/4, (10-sqrt(10))/3, 30/13; maximum 7/3",
+      "hypotheses_checked_in_source": "q1=q gives beta=1; exact rational/radical comparison",
+      "id": "F10",
+      "source_anchor": "The worst case",
+      "source_locator": "CGL-v2 TeX lines 178--187,2371--2413",
+      "valid_range": "algebraic q1=q specialization; does not repair uniform T scope"
+    }
+  ],
+  "source_disposition": "OBSERVED: CGL-v2 is a three-author arXiv preprint and prior work, not a result of this project.",
+  "status": "OPEN_ANALYTIC_INPUT"
+}

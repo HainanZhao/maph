@@ -1,0 +1,80 @@
+{
+  "artifact_id": "cycle-2-stream-c-explicit-formula-source-closure-v4",
+  "created_utc": "2026-08-01",
+  "supersedes": "cycle-2-stream-c-explicit-formula-source-closure-v3 for official licensed-source access; v1-v3 are preserved",
+  "epistemic_status": "PROVED",
+  "claim_boundary": "PROVED that the frozen official MIT DSpace SWORD archive directly supplies the checked formula and proof PDFs, and that the official course item carries CC BY-NC-SA 3.0 rights. This record makes no author-copy byte-identity or author-byte license assertion and does not establish G0 PASS.",
+  "official_source": {
+    "status": "PROVED",
+    "dspace_item_api_url": "https://dspace.mit.edu/server/api/pid/find?id=1721.1%2F101679",
+    "dspace_handle": "1721.1/101679",
+    "dspace_item_metadata_path": "artifacts/sources/mit-dspace-1721.1-101679-metadata.json",
+    "dspace_item_metadata_sha256": "4c1f262bc51efa23993a561f908871d35245ca462df90271d0bf2127283f24c7",
+    "course": "18.785 Analytic Number Theory, Spring 2007",
+    "author": "Kedlaya, Kiran",
+    "withdrawn": false,
+    "rights": "Usage Restrictions: Attribution-NonCommercial-ShareAlike 3.0 Unported",
+    "license": "CC BY-NC-SA 3.0"
+  },
+  "official_sword_bitstream": {
+    "status": "PROVED",
+    "uuid": "7292f134-d4a7-4063-bd7e-2084259b8fa9",
+    "download_url": "https://dspace.mit.edu/server/api/core/bitstreams/7292f134-d4a7-4063-bd7e-2084259b8fa9/content",
+    "path": "artifacts/sources/mit-ocw-18-785-2007-sword-official.zip",
+    "bytes": 5334292,
+    "sha256": "d559229963960da2087918a95af6efd7ad8999a4ba63942a12aef63c5eceac57"
+  },
+  "official_pdf_members": [
+    {
+      "status": "PROVED",
+      "archive_member": "18-785-spring-2007/contents/lecture-notes/errorbounds.pdf",
+      "member_bytes": 92250,
+      "extracted_path": "artifacts/sources/mit-ocw-18-785-2007-errorbounds-official.pdf",
+      "sha256": "b8b2acfbc4b22b25c898c0af8f74692a0d31bd6cf302e9f2d772d33a34fdd3e4",
+      "page_count": 4,
+      "locator": "Theorem 1, p. 1",
+      "checked": "The all-T half-weighted formula, the |Im rho|<T zero range, and the distance-to-other-prime-power remainder are present."
+    },
+    {
+      "status": "PROVED",
+      "archive_member": "18-785-spring-2007/contents/lecture-notes/von_mangoldt.pdf",
+      "member_bytes": 118273,
+      "extracted_path": "artifacts/sources/mit-ocw-18-785-2007-von-mangoldt-official.pdf",
+      "sha256": "5f705a6d3804d555944298f87a8a53e2e4e5a13188a717679f8fb8b73095210a",
+      "page_count": 6,
+      "locator": "Theorem 1, pp. 1-6; residue computation p. 2",
+      "checked": "The proof states that zeroes are counted with multiplicity and concludes the derivation."
+    }
+  ],
+  "exact_replay_anchors": {
+    "status": "PROVED",
+    "renderer": "mutool version 1.23.10",
+    "formula_pdf": [
+      "Theorem 1 (von Mangoldt’s formula). For x ∼ 2 and T > 0",
+      "n<x",
+      "x log2(xT )",
+      "nearest prime power other than possibly x itself"
+    ],
+    "proof_pdf": [
+      "Theorem 1 (von Mangoldt’s formula). For x √ 2 and T > 0",
+      "counted with multiplicity",
+      "We are done!"
+    ],
+    "extractor_note": "The two official Ghostscript-reprocessed PDFs encode the displayed inequality glyph differently in mutool text output; the literal anchors above are intentionally per-PDF."
+  },
+  "transfer": {
+    "status": "PROVED",
+    "endpoint": "u=ceil(x)-1, v=floor(x+y); half-weight transfer and v-u=y+O(1) cost O(log x).",
+    "remainder": "At integral u,v, the distance to every other prime power is at least one. For 2<=T<=x the endpoint formula errors are O(x(log x)^3/T).",
+    "height_convention": "The |gamma|<T to literal |rho|<=T mismatch is in unit boundary strips and costs O(x log T/T) by the multiplicity-inclusive HSW+Bui count."
+  },
+  "withdrawals_and_corrections": {
+    "status": "PROVED",
+    "v2_withdrawal": "The v2 CC 4.0 and author-byte-license overclaim is withdrawn: the checked official item records CC BY-NC-SA 3.0, and this record does not assign any repository license to author-hosted bytes.",
+    "v3_supersession": "V3's distribution caveat is obsolete: the SWORD bitstream and its two official PDF members are now directly frozen and checked."
+  },
+  "replay": {
+    "command": "python3 proof/check_cycle_2_stream_c_explicit_formula_sources_v4.py",
+    "check_script_sha256": "72107f1f31e51d2aa9d0ea0eb22c247a1643e58a898232a7fd02c3dee5508064"
+  }
+}

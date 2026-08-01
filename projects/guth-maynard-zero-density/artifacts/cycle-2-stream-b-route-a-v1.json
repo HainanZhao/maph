@@ -1,0 +1,203 @@
+{
+  "artifact_id": "cycle-2-stream-b-route-a-v1",
+  "blockers": [
+    "SB-A4-local-zero-count-and-separated-extraction",
+    "SB-A13-mean-value-branch-hypotheses"
+  ],
+  "claim_boundary": "No new zero-density theorem or independent proof of Guth--Maynard Theorem 1.2 is claimed.",
+  "frozen_source": {
+    "arxiv": "2405.20552v2",
+    "notation_locator": "TeX lines 288--290: lessapprox permits T^epsilon for every fixed epsilon and o(1) is T->infinity",
+    "tex_path": "artifacts/sources/arxiv-2405.20552v2/LargevaluesDirichlet17.tex",
+    "tex_sha256": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428"
+  },
+  "mathematical_and_source_audit_sha256": "390e3b268d9203f50dad48b825421ef475ff138b6309ec463163fc7d26e57b45",
+  "pass_state": "NOT PASS: local zero count and mean-value theorem still require pinned primary sources.",
+  "replay": {
+    "python_implementation": "CPython",
+    "python_version": "3.12.3",
+    "script": "proof/audit_cycle2_stream_b_route_a.py",
+    "script_sha256": "ffdcbf578ef004a027d2103d1028a17e533a27cf29d196aa6b30553bc0c01cd9",
+    "wall_time_ns": 1351002
+  },
+  "route": "A",
+  "rows": [
+    {
+      "exact_transfer": "n^(-beta-i gamma)=n^(-sigma-i gamma)psi(log n), hence the displayed Fourier identity has the required integrand.",
+      "hypotheses_checked": [
+        "rho=beta+i gamma is Type I with beta>=sigma",
+        "psi(u)=exp(u(sigma-beta)) on [log N,log 2N]",
+        "n is in the detector support n~N"
+      ],
+      "id": "SB-A1-smoothing-identity",
+      "locator": "GM \u00a713.1, TeX lines 2319--2329",
+      "loss": "none in the pointwise algebra",
+      "scope": "both k regimes",
+      "status": "PROVED"
+    },
+    {
+      "exact_transfer": "For u>0, sup_(a>=0) a^j exp(-a u)=(j/u)^j exp(-j) for j>=1. Leibniz with the scaled cutoff gives ||psi^(j)||_infinity <<_j (log N)^(-j), uniformly in beta. Repeated integration by parts yields a rapidly decaying Fourier tail.",
+      "falsifier": "Failure of beta<=1 or of the stated cutoff derivative bounds would invalidate the uniform tail claim.",
+      "hypotheses_checked": [
+        "nontrivial zeta zero has sigma<=beta<=1",
+        "a=beta-sigma is nonnegative and bounded",
+        "a smooth cutoff eta(u/log N) is supported in [log N/2,2 log N] and equals one on [log N,log 2N]"
+      ],
+      "id": "SB-A2-uniform-smooth-cutoff-and-fourier-tail",
+      "locator": "GM \u00a713.1, TeX lines 2320--2331; notation at lines 288--290",
+      "loss": "||hat(psi)||_1=O(log N); truncating at |xi|<=T^epsilon with sufficiently many integrations by parts costs O(T^-100), for each fixed epsilon>0.",
+      "scope": "both k regimes",
+      "status": "PROVED"
+    },
+    {
+      "exact_transfer": "The triangle inequality for the truncated Fourier integral gives some t=gamma-2pi xi with |D(sigma+i t)| >= T^(-o(1)).",
+      "hypotheses_checked": [
+        "Type-I input |D(rho)|>=1/(3 log T)",
+        "SB-A2 L1 Fourier bound and O(T^-100) tail"
+      ],
+      "id": "SB-A3-type-I-threshold-after-fourier",
+      "locator": "GM \u00a713.1, TeX lines 2315--2331",
+      "loss": "the Type-I 1/log T threshold and ||hat(psi)||_1=O(log N) combine to T^(-o(1)); this is not replaced by a fixed positive constant.",
+      "scope": "both k regimes",
+      "status": "PROVED"
+    },
+    {
+      "blocker": "Full analytic G0 remains blocked until a primary source for the local zero count is pinned and checked.",
+      "conditional_transfer": "Given the stated unit-strip estimate, a maximal 1-separated subset loses at most T^epsilon(log T) points per selected value because the Fourier shift has |xi|<=T^epsilon. Thus R is at least the dyadic Type-I count times T^(-o(1)).",
+      "falsifier": "A local multiplicity-inclusive zero count larger than T^c for a fixed c>0 would destroy the claimed T^o(1) extraction loss.",
+      "hypotheses_checked": [
+        "GM explicitly states O(log T) nontrivial zeros in each unit horizontal strip",
+        "the primary local zero-count theorem, its multiplicity convention, and its uniformity have not yet been pinned"
+      ],
+      "id": "SB-A4-local-zero-count-and-separated-extraction",
+      "locator": "GM \u00a713.1, TeX lines 2331--2337",
+      "loss": "T^epsilon log T, absorbed only in the source's lessapprox/T^o(1) notation.",
+      "scope": "both k regimes",
+      "status": "OBSERVED"
+    },
+    {
+      "exact_transfer": "Selected heights lie in [T-O(T^epsilon),2T+O(T^epsilon)], an interval of length H<=2T for large T. Translation t=t0+u replaces each coefficient a_n by a_n n^(i t0), preserving its modulus and every large-value modulus.",
+      "hypotheses_checked": [
+        "gamma in [T,2T]",
+        "Fourier truncation |xi|<=T^epsilon",
+        "Theorem 1.1 permits a 1-separated set in an interval [0,H]"
+      ],
+      "id": "SB-A5-height-interval-translation",
+      "locator": "GM \u00a713.1, TeX lines 2329--2337; Theorem 1.1, TeX lines 68--81",
+      "loss": "Replacing H by a constant multiple of T changes only constants and T^o(1), not a finite-T power identity.",
+      "scope": "both k regimes",
+      "status": "PROVED"
+    },
+    {
+      "exact_transfer": "Pigeonhole selects one N supporting at least an O(1/log T) proportion of Type-I zeros.",
+      "hypotheses_checked": [
+        "there are O(log T) dyadic choices of N in the Type-I definition"
+      ],
+      "id": "SB-A6-dyadic-detector-choice",
+      "locator": "GM \u00a713.1, TeX lines 2315--2319",
+      "loss": "O(log T)=T^o(1)",
+      "scope": "both k regimes",
+      "status": "PROVED"
+    },
+    {
+      "exact_transfer": "|tilde b_n|<=tau(n)=T^o(1); after a T^o(1) normalization the original detector has coefficient sup norm at most one.",
+      "hypotheses_checked": [
+        "N>=T^(1/100); for N<T^(1/100) every divisor of n~N is included and sum_(d|n)mu(d)=0",
+        "|sum_(d|n,d<=2T^(1/100)) mu(d)|<=tau(n)",
+        "the elementary fixed-order divisor bound tau(n)=n^o(1), uniformly for n<=T^O(1)",
+        "(N/n)^sigma<=1 on n in [N,2N]"
+      ],
+      "id": "SB-A7-original-detector-coefficients",
+      "locator": "GM \u00a713.1, TeX lines 2310--2318 and 2334--2337",
+      "loss": "T^o(1), retained explicitly; no fixed finite-T coefficient-one claim is made before normalization.",
+      "scope": "both k regimes",
+      "status": "PROVED"
+    },
+    {
+      "exact_transfer": "k=ceil(l(sigma)/n) obeys k<=77 because l(sigma)<=10/13 and n>1/100. Hence every k-dependent divisor and dyadic loss remains T^o(1).",
+      "hypotheses_checked": [
+        "n>1/100",
+        "n<=5/(6+10sigma)",
+        "7/10<=sigma<=4/5"
+      ],
+      "id": "SB-A8-bounded-k-small-regime",
+      "locator": "GM \u00a713.1, TeX lines 2339--2345; Cycle-1 case-split v4",
+      "loss": "bounded constants depending on k<=77, hence T^o(1)",
+      "scope": "small-n regime",
+      "status": "PROVED"
+    },
+    {
+      "exact_transfer": "k=2. Thus q=2n>l(sigma), while q<=1+o(1)<=u(sigma)+o(1). The uniform 1/14 gap is retained rather than turned into a finite-T equality.",
+      "hypotheses_checked": [
+        "n>5/(6+10sigma)",
+        "N<=T^(1/2)(log T)^2",
+        "u(sigma)>=15/14"
+      ],
+      "id": "SB-A9-bounded-k-large-regime",
+      "locator": "GM \u00a713.1, TeX lines 2342--2345; Cycle-1 case-split v4",
+      "loss": "the (log T)^2 upper range is an explicit o(1) in q",
+      "scope": "large-n regime",
+      "status": "PROVED"
+    },
+    {
+      "exact_transfer": "Every coefficient of tilde D^k is T^o(1). Divide the powered polynomial by its coefficient sup norm to meet Theorem 1.1's |b_m|<=1 hypothesis; the value threshold is multiplied by T^(-o(1)).",
+      "falsifier": "An unbounded k or a coefficient convolution larger than T^o(1) would invalidate this normalization step.",
+      "hypotheses_checked": [
+        "k<=77 from SB-A8/SB-A9",
+        "each original tilde coefficient is T^o(1)",
+        "a coefficient of tilde D^k is a sum over at most d_k(m) factorizations, with d_k(m)=m^o(1) for fixed k",
+        "m<=T^O(1) on the chosen k window"
+      ],
+      "id": "SB-A10-powered-coefficients-and-normalization",
+      "locator": "GM \u00a713.1, TeX lines 2349--2358; Theorem 1.1 coefficient hypothesis at lines 68--81",
+      "loss": "T^o(1) normalization, retained in V=L^sigma T^(-o(1)).",
+      "scope": "both k regimes",
+      "status": "PROVED"
+    },
+    {
+      "exact_transfer": "Partition [L,2^kL] into O(k) dyadic blocks. If the powered sum is >=L^sigma T^(-o(1)), one block is >=L^sigma T^(-o(1))/O(k). Pigeonhole one fixed block over W. Since M/L is bounded by 2^k, this is M^sigma T^(-o(1)).",
+      "falsifier": "If k were not uniformly bounded, either the block count or M/L comparability could create a non-o(1) loss.",
+      "hypotheses_checked": [
+        "supp(tilde D^k) is contained in [L,2^k L], L=N^k",
+        "k<=77",
+        "Theorem 1.1 is stated for one block [M,2M]"
+      ],
+      "id": "SB-A11-support-dyadic-decomposition-and-threshold-transfer",
+      "locator": "implicit application of Theorem 1.1 at GM \u00a713.1 lines 2349--2358",
+      "loss": "O(k) block count and constant comparability 2^k, both T^o(1).",
+      "scope": "both k regimes",
+      "status": "PROVED"
+    },
+    {
+      "blocker": "Conditional on SB-A4; no new blocker is introduced by the Theorem 1.1 application itself.",
+      "exact_transfer": "All displayed Theorem 1.1 hypotheses are met after the stated normalizations, conditional only on SB-A4's unpinned local-zero-count extraction.",
+      "hypotheses_checked": [
+        "normalized single dyadic block has coefficient sup norm <=1",
+        "extracted subset is 1-separated",
+        "SB-A5 translates it into [0,H] with H=O(T)",
+        "transferred threshold is V=M^sigma T^(-o(1))"
+      ],
+      "id": "SB-A12-theorem-1-1-hypotheses-after-transfer",
+      "locator": "GM Theorem 1.1, TeX lines 68--81; GM \u00a713.1 lines 2349--2358",
+      "loss": "all prior log, divisor, block, and interval losses are T^o(1).",
+      "scope": "q<=alpha regime",
+      "status": "PROVED"
+    },
+    {
+      "blocker": "Full analytic G0 remains blocked on the q>alpha branch.",
+      "conditional_transfer": "The prepared polynomial has the standard bounded-coefficient and separation hypotheses expected for a mean-square large-values estimate, but the exact theorem, support convention, and uniform T^o(1) treatment remain unpinned.",
+      "falsifier": "A pinned mean-value theorem with incompatible support, coefficient, or separation hypotheses would invalidate this branch.",
+      "hypotheses_checked": [
+        "the same normalized, dyadic, 1-separated polynomial preparation as SB-A10--SB-A11",
+        "GM calls the external input the 'usual Mean Value Theorem' without a locator"
+      ],
+      "id": "SB-A13-mean-value-branch-hypotheses",
+      "locator": "GM \u00a713.1, TeX lines 2353--2364",
+      "loss": "not promotable until a precise mean-value theorem is frozen.",
+      "scope": "q>alpha regime",
+      "status": "OBSERVED"
+    }
+  ],
+  "status": "OBSERVED: partial source-level audit; two external-input blockers remain",
+  "stream": "B"
+}

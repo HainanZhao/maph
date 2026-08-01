@@ -1,0 +1,38 @@
+{
+  "artifact_id": "g1-exact-structural-atlas-v2-hostile-audit-v1",
+  "claim_boundary": "OBSERVED post-correction hostile audit. It independently recomputes all v2 rational row data and checks the corrected source/document/runtime/convention boundary. It proves no new analytic theorem and is not a G1 route decision.",
+  "decision": {
+    "epistemic_status": "OBSERVED",
+    "status": "V2_AUTHORITY_REPLAYED",
+    "v1": "Preserved historical artifact and hostile finding; not overwritten.",
+    "v2": "May serve as the exact structural G1 authority within its stated conditional claim boundary."
+  },
+  "epistemic_status": "OBSERVED",
+  "exact_recomputation": {
+    "energy_diagonal_rows": 704,
+    "epistemic_status": "PROVED",
+    "local_rows": 7744,
+    "status": "PASS",
+    "transfer_rows": 560
+  },
+  "falsifier": "Any frozen-hash, source/document/runtime/convention-correction, exact row/residual/tie/anchor, or execution-mode mismatch invalidates this re-audit and requires a new versioned record.",
+  "frozen_hashes": {
+    "atlas": "fd66d17664ca921795617c6bfca76c3be49246ea9351644848a2aadf9e680b08",
+    "corrected_conventions": "642a61fc03e5de6c7f7df5338e88da552ef1c72a7b7d7897898fb23740106ca5",
+    "preregistration": "227ec1c66b2e109653354b6c3245b4e809fe52692c01514ac10064c23db2b6f8",
+    "script": "e082b998a15ee0a595f58a53f568050e97934d245f448d8c030fa4feaedcb3c8"
+  },
+  "hardening": {
+    "convention_correction": "old-to-new identity and full frozen semantic comparison present",
+    "direct_source_document_runtime_convention_pins": "PASS",
+    "epistemic_status": "OBSERVED",
+    "normal_replay": "exit status 0",
+    "optimized_replay": "exit status 1",
+    "status": "PASS"
+  },
+  "replay": {
+    "check_command": "python3 projects/guth-maynard-zero-density/proof/audit_g1_exact_structural_atlas_v2_hostile_v1.py --check",
+    "script_sha256": "2347fb3a29398346972d092dfd06bc2800cbcd9be7a28db1b2d3278e27af32c7",
+    "write_command": "python3 projects/guth-maynard-zero-density/proof/audit_g1_exact_structural_atlas_v2_hostile_v1.py --write"
+  }
+}

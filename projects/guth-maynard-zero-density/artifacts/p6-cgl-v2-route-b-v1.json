@@ -1,0 +1,620 @@
+{
+  "artifact_id": "p6-cgl-v2-route-b-v1",
+  "canonical_row_count": 46,
+  "claim_boundary": "Independent Route B source/exponent/conductor reconstruction only. It proves no CGL theorem, repairs no argument, validates no 7/3 estimate, selects no P7 family, and yields no new zero-density or short-interval theorem.",
+  "epistemic_status": "OBSERVED",
+  "exact_algebra": {
+    "coordinates": {
+      "alpha": "log(q)/log(qT)",
+      "beta": "lambda+tau=log(q1*T)/log(qT)",
+      "domain": "q,T>1; q1|q; q1>=sqrt(q) implies lambda>=alpha/2 and beta>=1/2",
+      "lambda": "log(q1)/log(qT)",
+      "tau": "1-alpha=log(T)/log(qT)"
+    },
+    "crossings": {
+      "C1_in_ingham": "2+lambda/3; hence (q1^(1/3)*q^2*T^2)^(1-sigma)",
+      "C1_sigma": "(3+2*lambda)/(6+lambda)",
+      "C2_in_ingham": "3-3*beta/4; hence (q^3*T^(9/4)*q1^(-3/4))^(1-sigma)",
+      "C2_sigma": "(4-2*beta)/(4-beta)",
+      "C3_in_ingham": "(37+3*beta-sqrt(9*beta^2+222*beta-71))/12",
+      "C3_polynomial": "20*sigma^2-(43-3*beta)*sigma+24-6*beta",
+      "C4_in_ingham": "30/13",
+      "C4_sigma": "7/10"
+    },
+    "middle_coefficients": {
+      "C1": "3*(1+lambda/3)/(1+sigma)",
+      "C2": "3*(1-beta/2)/sigma",
+      "C3": "((21-20*sigma)/6-beta/2)/(1-sigma)",
+      "C4": "15/(3+5*sigma)",
+      "Ingham": "3/(2-sigma)"
+    },
+    "q1_equals_q": {
+      "bases_or_coefficients": [
+        "q^(7/3)*T^2",
+        "9/4",
+        "(10-sqrt(10))/3",
+        "30/13"
+      ],
+      "beta": "1",
+      "uniform_comparisons": [
+        "2<=7/3",
+        "7/3-9/4=1/12",
+        "7/3-(10-sqrt(10))/3=(sqrt(10)-3)/3>0 because 10>9",
+        "7/3-30/13=1/39",
+        "q^(7/3)*T^2 <= (qT)^(7/3) for T>=1"
+      ]
+    }
+  },
+  "frozen_inputs": {
+    "cgl_tex": {
+      "logical_lines": 2468,
+      "path": "artifacts/sources/g1-literature-audit-v1/extracted-2507.08296v2/Large_Value_Estimates_for_Dirichlet_Polynomials_with_Characters_and_Zero_Density_of_Dirichlet___L_-Functions.tex",
+      "sha256": "0b9ebb6b604944b7c59a9ec37a75c48f6a08f88611f911ff5f02dc013b848e2f"
+    },
+    "gm_annals_aam_read_as_reachable_primary_input": {
+      "path": "artifacts/sources/guth-maynard-annals-aam.pdf",
+      "sha256": "4a7b0e294c4b0e8580a3315e6dd418d351a295ebd03e9e2a35d69f0086607099"
+    },
+    "gm_source_tar_read_as_reachable_primary_input": {
+      "path": "artifacts/sources/guth-maynard-2405.20552v2-source.tar",
+      "sha256": "9d34ac093abcb8129f68ff86eaad65f09a09d832fe637ff84d50a69496046bdc"
+    },
+    "preregistration": {
+      "path": "artifacts/cycle-4-p6-cgl-v2-reconstruction-preregistration-v1.json",
+      "sha256": "1f9c195fa2dff8a58b754f10a58357384c5e3840839cc48269dd7b595a8ab36a"
+    }
+  },
+  "mandatory_l12_subchecks": [
+    "L12.odd_prime",
+    "L12.two_power"
+  ],
+  "open_blockers": [
+    "F08_T_SMOOTH_UNDEFINED",
+    "S03_MULTIPLICITY_NOT_STATED",
+    "S06_EXTERNAL_INPUTS",
+    "Z03_TAIL_X_RANGE",
+    "Z05_PRIMITIVE_EULER_FACTORS",
+    "Z06_CONDUCTOR_SUM_Q1"
+  ],
+  "overall_disposition": "OPEN_ANALYTIC_INPUT",
+  "replay": {
+    "command": "python3 proof/p6_cgl_v2_route_b_v1.py --check",
+    "optimized": 0,
+    "platform": "linux",
+    "python": "3.12.3",
+    "resource_measurement": "Each replay enforces and emits wall_ns and peak_rss_kib; variable measurements are intentionally not artifact identity bytes.",
+    "rss_cap_kib": 262144,
+    "wall_cap_ns": 60000000000
+  },
+  "route_independence": "Route B uses only the sealed canonical registry, pinned CGL source, and coordinate/conductor derivation; it imports no Route A artifact, code, intermediate label, or repaired formula.",
+  "rows": [
+    {
+      "blockers": [],
+      "detail": "TeX SHA and tar-member relation are independently rechecked by this route.",
+      "disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+      "formula_or_check": "TeX/tar/PDF byte identity",
+      "hypotheses_checked_from_pinned_CGL_tex": "canonical CGL TeX has 2468 logical lines; tar member identity pinned",
+      "id": "S01",
+      "region": "complete pinned source package",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [],
+      "detail": "No journal publication is inferred.",
+      "disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+      "formula_or_check": "three authors; collaboration statement; arXiv preprint",
+      "hypotheses_checked_from_pinned_CGL_tex": "author/title/status block present",
+      "id": "S02",
+      "region": "TeX 77--105",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [
+        "S03_MULTIPLICITY_NOT_STATED"
+      ],
+      "detail": "The displayed definition does not state a multiplicity convention.",
+      "disposition": "OPEN_ANALYTIC_INPUT_MULTIPLICITY",
+      "formula_or_check": "N(sigma,T,chi): sigma<=Re rho<=1, |Im rho|<=T",
+      "hypotheses_checked_from_pinned_CGL_tex": "two-sided height and rectangle appear",
+      "id": "S03",
+      "region": "TeX 95--101,141--148,158--185",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [
+        "Z03_TAIL_X_RANGE"
+      ],
+      "detail": "The theorem's uniform q,T wording is not reconciled with detector T>1 and its tail limit.",
+      "disposition": "OPEN_ANALYTIC_INPUT_ENDPOINT_SCOPE",
+      "formula_or_check": "LVE has N>=(qT)^(2/3); detector declares X,Y,T>1",
+      "hypotheses_checked_from_pinned_CGL_tex": "o(1) asymptotic qT->infinity",
+      "id": "S04",
+      "region": "TeX 114--128,158--187,2114",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [],
+      "detail": "Constants and limiting order are source-stated.",
+      "disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+      "formula_or_check": "A lessapprox B means C(eps)(qT)^eps B for sufficiently large qT",
+      "hypotheses_checked_from_pinned_CGL_tex": "epsilon and qT->infinity convention stated",
+      "id": "S05",
+      "region": "TeX 268--273",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [
+        "S06_EXTERNAL_INPUTS"
+      ],
+      "detail": "GM source/AAM bytes are pinned and reachable; the full hypotheses of all cited external inputs are not closed here.",
+      "disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY",
+      "formula_or_check": "inventory: IK 9.12, Huxley 1975, Montgomery Chs.10/12, Davenport Chs.9/10/16, Heath-Brown, GM lemmas",
+      "hypotheses_checked_from_pinned_CGL_tex": "CGL citations and bibliography are present",
+      "id": "S06",
+      "region": "TeX 133--140,537--560,1691--1695,2112,2158,2169,2414--2467",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [],
+      "detail": "Route B uses these as the large-value polytope input.",
+      "disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+      "formula_or_check": "primitive chi mod q; |a_n|<=1; pair separation; |D_N|>=V; N>=(qT)^(2/3)",
+      "hypotheses_checked_from_pinned_CGL_tex": "literal theorem hypotheses",
+      "id": "L01",
+      "region": "TeX 114--123",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [],
+      "detail": "Divisor-sensitive four-term source formula transcribed.",
+      "disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+      "formula_or_check": "N^2V^-2 + q q1^-1/2 T^1/2 N^3V^-4 + q q1^1/3 T N^2V^-4 + qT N^(12/5)V^-4",
+      "hypotheses_checked_from_pinned_CGL_tex": "q1|q",
+      "id": "L02",
+      "region": "TeX 122--124",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [],
+      "detail": "No new LVE proof is claimed.",
+      "disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+      "formula_or_check": "N^2V^-2 +(qT)^1/2N^3V^-4+q^(4/3)TN^2V^-4+qTN^(12/5)V^-4",
+      "hypotheses_checked_from_pinned_CGL_tex": "all-case LVE claim",
+      "id": "L03",
+      "region": "TeX 125--127",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [
+        "S06_EXTERNAL_INPUTS"
+      ],
+      "detail": "The source invokes an external theorem whose exact hypotheses remain open.",
+      "disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY",
+      "formula_or_check": "qT MVT: N^2V^-2+qTNV^-2",
+      "hypotheses_checked_from_pinned_CGL_tex": "cited IK Theorem 9.12 and source range",
+      "id": "L04",
+      "region": "TeX 133--140,421",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [],
+      "detail": "Source reduction is mapped; no independent analytic proof of all smoothing constants.",
+      "disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+      "formula_or_check": "three-piece smoothing; W thinning to (qT)^eps separation",
+      "hypotheses_checked_from_pinned_CGL_tex": "sigma in [0.7,0.8]",
+      "id": "L05",
+      "region": "TeX 375--443",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [
+        "S06_EXTERNAL_INPUTS"
+      ],
+      "detail": "External Huxley range/hypotheses not closed in Route B.",
+      "disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY",
+      "formula_or_check": "HMH: N^2V^-2+qTN^4V^-6",
+      "hypotheses_checked_from_pinned_CGL_tex": "cited Huxley comparator",
+      "id": "L06",
+      "region": "TeX 137--140,421,487--500",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [],
+      "detail": "Depends on L04 external MVT.",
+      "disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+      "formula_or_check": "qT<=N implies MVT first term after epsilon thinning",
+      "hypotheses_checked_from_pinned_CGL_tex": "qT<=N",
+      "id": "L07",
+      "region": "TeX 445--448",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [],
+      "detail": "Depends on the source Auxiliary proposition.",
+      "disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+      "formula_or_check": "N<=qT<=N^(6/5) applies Auxiliary proposition",
+      "hypotheses_checked_from_pinned_CGL_tex": "intermediate length",
+      "id": "L08",
+      "region": "TeX 449--452",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [],
+      "detail": "Subdivision exponent relation recorded.",
+      "disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+      "formula_or_check": "q1>N^(6/5): choose T0=1, q q1^(1/3) T N^(2-4sigma)",
+      "hypotheses_checked_from_pinned_CGL_tex": "sigma in [0.7,0.8]",
+      "id": "L09",
+      "region": "TeX 454--478",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [],
+      "detail": "Balances the last two subdivision terms.",
+      "disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+      "formula_or_check": "N^(6/5)/T<q1<N^(6/5): T0=N^(6/5)/q1",
+      "hypotheses_checked_from_pinned_CGL_tex": "sigma in [0.7,0.8]",
+      "id": "L10",
+      "region": "TeX 454--470,480--485",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [
+        "S06_EXTERNAL_INPUTS"
+      ],
+      "detail": "The HMH combination remains conditional on L06.",
+      "disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY",
+      "formula_or_check": "q1<N^(6/5)/T; combine HMH with subdivision",
+      "hypotheses_checked_from_pinned_CGL_tex": "T0=T",
+      "id": "L11",
+      "region": "TeX 454--470,487--504",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [],
+      "detail": "Both mandatory subchecks are recorded below.",
+      "disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+      "formula_or_check": "odd_prime: primitive-root factorization; two_power: (-1,5) decomposition",
+      "hypotheses_checked_from_pinned_CGL_tex": "q=p^j, q1=p^k; CRT reduction",
+      "id": "L12",
+      "region": "TeX 507--519",
+      "route": "B: exponent-polytope/conductor",
+      "subchecks": [
+        {
+          "disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+          "formula": "a=a1+p^(j-k)a2; at most p^(j-k)=phi(q)/phi(q1) 1-bounded factors",
+          "id": "L12.odd_prime"
+        },
+        {
+          "disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+          "formula": "units represented by (-1)^v5^(v'); stated analogous split",
+          "id": "L12.two_power"
+        }
+      ]
+    },
+    {
+      "blockers": [],
+      "detail": "Internal source proposition boundary frozen.",
+      "disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+      "formula_or_check": "smoothed Auxiliary proposition for S_N with N>=(qT)^(2/3)/2",
+      "hypotheses_checked_from_pinned_CGL_tex": "smooth w, 1-bounded b_n, (qT)^eps separation",
+      "id": "M01",
+      "region": "TeX 375--387",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [
+        "S06_EXTERNAL_INPUTS"
+      ],
+      "detail": "GM bytes pinned; cited lemma hypotheses are not fully re-established.",
+      "disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY",
+      "formula_or_check": "matrix M_W; singular-value reduction; trace subtraction",
+      "hypotheses_checked_from_pinned_CGL_tex": "source cites GM Lemmas 4.1--4.2",
+      "id": "M02",
+      "region": "TeX 528--550",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [],
+      "detail": "Transform direction e(-xi x) agrees with source convention.",
+      "disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+      "formula_or_check": "Poisson cubic trace, diagonal removal, hhat decay",
+      "hypotheses_checked_from_pinned_CGL_tex": "(qT)^eps separation",
+      "id": "M03",
+      "region": "TeX 552--660",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [],
+      "detail": "Source proof mapped.",
+      "disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+      "formula_or_check": "S1 is negligible",
+      "hypotheses_checked_from_pinned_CGL_tex": "zero-frequency character orthogonality plus separation",
+      "id": "M04",
+      "region": "TeX 661--733",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [
+        "S06_EXTERNAL_INPUTS"
+      ],
+      "detail": "Functional-equation and MVT dependencies remain source-dependent.",
+      "disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY",
+      "formula_or_check": "S2 lessapprox qT|W|N^(3-2sigma)",
+      "hypotheses_checked_from_pinned_CGL_tex": "approximate functional equation and MVT",
+      "id": "M05",
+      "region": "TeX 734--1128",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [],
+      "detail": "GCD-twisted affine induction and its explicit hypotheses are indexed.",
+      "disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+      "formula_or_check": "J(f) <= phi(q)M^6||f||_1^2+phi(q)^2M^4||f||_2^2",
+      "hypotheses_checked_from_pinned_CGL_tex": "compact support, nonnegative f_b, Fourier decay",
+      "id": "M06",
+      "region": "TeX 1129--1686",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [
+        "S06_EXTERNAL_INPUTS"
+      ],
+      "detail": "Heath-Brown theorem is not independently closed.",
+      "disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY",
+      "formula_or_check": "E(W) bound and Heath-Brown double-zeta input",
+      "hypotheses_checked_from_pinned_CGL_tex": "primitive characters, spacing, N range and alternative energy condition",
+      "id": "M07",
+      "region": "TeX 1688--1709,1963--1971",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [],
+      "detail": "Dominant S3 terms and final Auxiliary proposition are source-mapped.",
+      "disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+      "formula_or_check": "S3 lessapprox (qT)^2|W|^(3/2)+qT|W|N^(3-2sigma)+...",
+      "hypotheses_checked_from_pinned_CGL_tex": "M02--M07 hypotheses",
+      "id": "M08",
+      "region": "TeX 1974--2105",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [],
+      "detail": "Principal residue is separated before the primitive restriction.",
+      "disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+      "formula_or_check": "Mellin identity; residues z=0 and z=1-s for principal chi",
+      "hypotheses_checked_from_pinned_CGL_tex": "X,Y,T>1; 1/2<Re(s)<1",
+      "id": "Z01",
+      "region": "TeX 2114--2134",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [],
+      "detail": "This is distinct from the integral-tail uniformity gap.",
+      "disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+      "formula_or_check": "sum tail beyond Y log^2Y is o(1) as Y->infty",
+      "hypotheses_checked_from_pinned_CGL_tex": "source tail assertion",
+      "id": "Z02",
+      "region": "TeX 2140--2143",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [
+        "Z03_TAIL_X_RANGE"
+      ],
+      "detail": "No replacement log^2(qT), q<=T^C assumption, or low-T repair is made.",
+      "disposition": "OPEN_ANALYTIC_INPUT_TAIL",
+      "formula_or_check": "integral tail uses T->infty if X is polynomially bounded in T; later X=(qT)^eps",
+      "hypotheses_checked_from_pinned_CGL_tex": "headline claims uniform q,T; source calls T=1 worst",
+      "id": "Z03",
+      "region": "TeX 2140,2169,2411--2413",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [
+        "S06_EXTERNAL_INPUTS"
+      ],
+      "detail": "The low-height input is cited rather than closed.",
+      "disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY",
+      "formula_or_check": "principal residue implies |t|<=A log(qT), at most O(log^2(qT)) zeros",
+      "hypotheses_checked_from_pinned_CGL_tex": "requires source factorization and zero count",
+      "id": "Z04",
+      "region": "TeX 2134--2138",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [
+        "Z05_PRIMITIVE_EULER_FACTORS"
+      ],
+      "detail": "Prime-by-prime factorization is displayed elsewhere but zero-set equality/exception control in sigma>1/2 is not supplied here.",
+      "disposition": "OPEN_ANALYTIC_INPUT_PRIMITIVE_TO_ALL",
+      "formula_or_check": "induced L(s,chi)=L(s,chi*) product_{p|q,p not|q*}(1-chi*(p)p^-s)",
+      "hypotheses_checked_from_pinned_CGL_tex": "transfer asserted only in prose",
+      "id": "Z05",
+      "region": "TeX 2109,2136--2138",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [
+        "Z06_CONDUCTOR_SUM_Q1"
+      ],
+      "detail": "A divisor loss or reparameterization could alter the claimed uniform exponent; no silent domination is used.",
+      "disposition": "OPEN_ANALYTIC_INPUT_PRIMITIVE_TO_ALL",
+      "formula_or_check": "sum final primitive estimates over conductor divisors d|q",
+      "hypotheses_checked_from_pinned_CGL_tex": "unique conductor partition and q1-sensitive domination required",
+      "id": "Z06",
+      "region": "TeX 2109,2148--2152",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [
+        "S06_EXTERNAL_INPUTS"
+      ],
+      "detail": "Spacing construction recorded but cited local count remains open.",
+      "disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY",
+      "formula_or_check": "well-spaced subset loses (qT)^eps log(qT)",
+      "hypotheses_checked_from_pinned_CGL_tex": "local zero-count cited from Davenport Ch.16",
+      "id": "Z07",
+      "region": "TeX 2154--2158",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [
+        "S06_EXTERNAL_INPUTS",
+        "Z03_TAIL_X_RANGE"
+      ],
+      "detail": "T>1 / tail conditions cannot be erased.",
+      "disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY",
+      "formula_or_check": "class-II fourth moment, Y=(qT)^(1/2), gives (qT)^(2(1-sigma))",
+      "hypotheses_checked_from_pinned_CGL_tex": "maximizers gamma_r and shifted separation",
+      "id": "Z08",
+      "region": "TeX 2160--2173",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [],
+      "detail": "Representative/dyadic losses remain explicit.",
+      "disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+      "formula_or_check": "class-I dyadic representative, a_n=varpi c_n 1-bounded, N range",
+      "hypotheses_checked_from_pinned_CGL_tex": "sigma in [0.7,0.8]; qT-eps<=N lessapprox (qT)^1/2",
+      "id": "Z09",
+      "region": "TeX 2176--2197",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [],
+      "detail": "Powered coefficient bound and integer-k selection are source-mapped; downstream depends on prior rows.",
+      "disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+      "formula_or_check": "bounded k and three length cases for D_N^k",
+      "hypotheses_checked_from_pinned_CGL_tex": "a in [v,wmax], b=min(15a(1-sigma)/(18-20sigma),1)",
+      "id": "Z10",
+      "region": "TeX 2199--2258",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [
+        "S06_EXTERNAL_INPUTS"
+      ],
+      "detail": "Range and hypotheses are not re-proved.",
+      "disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY",
+      "formula_or_check": "Ingham analogue 3(1-sigma)/(2-sigma) for sigma<=0.7",
+      "hypotheses_checked_from_pinned_CGL_tex": "external comparator",
+      "id": "F01",
+      "region": "TeX 141--149,2109",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [
+        "S06_EXTERNAL_INPUTS"
+      ],
+      "detail": "Range and hypotheses are not re-proved.",
+      "disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY",
+      "formula_or_check": "Huxley analogue 3(1-sigma)/(3sigma-1) for sigma>=0.8",
+      "hypotheses_checked_from_pinned_CGL_tex": "external comparator",
+      "id": "F02",
+      "region": "TeX 145--149,2109",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [
+        "Z03_TAIL_X_RANGE",
+        "Z05_PRIMITIVE_EULER_FACTORS",
+        "Z06_CONDUCTOR_SUM_Q1"
+      ],
+      "detail": "Formula is reconstructed conditionally, not promoted.",
+      "disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+      "formula_or_check": "four middle terms in q1 and qT",
+      "hypotheses_checked_from_pinned_CGL_tex": "sigma in [0.7,0.8], source zero detection",
+      "id": "F03",
+      "region": "TeX 2261--2270,2357--2373",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [],
+      "detail": "Interval test transcribed.",
+      "disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+      "formula_or_check": "Case 1 divisor interval and q1^(1/3) term",
+      "hypotheses_checked_from_pinned_CGL_tex": "(qT)^v<=q1^(5/6)",
+      "id": "F04",
+      "region": "TeX 2276--2310",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [],
+      "detail": "Interval test transcribed.",
+      "disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+      "formula_or_check": "Case 2 and qT term",
+      "hypotheses_checked_from_pinned_CGL_tex": "q1^(5/6)<=(qT)^v<=(q1T)^(5/6)",
+      "id": "F05",
+      "region": "TeX 2276--2282,2311--2325",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [],
+      "detail": "No assertion that the case is nonempty for all parameters.",
+      "disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+      "formula_or_check": "Case 3 and q1T negative-half term",
+      "hypotheses_checked_from_pinned_CGL_tex": "displayed feasibility inequalities",
+      "id": "F06",
+      "region": "TeX 2276--2282,2326--2336",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [],
+      "detail": "Comparison recorded conditional on prior LVE.",
+      "disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+      "formula_or_check": "Case 4 compares q1=q terms",
+      "hypotheses_checked_from_pinned_CGL_tex": "last divisor regime",
+      "id": "F07",
+      "region": "TeX 2276--2282,2337--2345",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [
+        "F08_T_SMOOTH_UNDEFINED"
+      ],
+      "detail": "No after-the-fact definition or endpoint convention is supplied.",
+      "disposition": "OPEN_ANALYTIC_INPUT_UNDEFINED_TERM",
+      "formula_or_check": "T-smooth is used to build divisor chain",
+      "hypotheses_checked_from_pinned_CGL_tex": "definition absent from complete pinned TeX",
+      "id": "F08",
+      "region": "TeX 182--185,2266--2269,2346--2350,2410",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [],
+      "detail": "Independent exact Route-B calculations are stored in exact_algebra.",
+      "disposition": "RECONSTRUCTED_EXACT_ALGEBRA",
+      "formula_or_check": "four C_i/Ingham crossings in alpha,tau,lambda,beta coordinates",
+      "hypotheses_checked_from_pinned_CGL_tex": "q1>=sqrt(q) for beta>=1/2",
+      "id": "F09",
+      "region": "TeX 2357--2410",
+      "route": "B: exponent-polytope/conductor"
+    },
+    {
+      "blockers": [
+        "Z03_TAIL_X_RANGE",
+        "Z05_PRIMITIVE_EULER_FACTORS",
+        "Z06_CONDUCTOR_SUM_Q1",
+        "S06_EXTERNAL_INPUTS"
+      ],
+      "detail": "The algebra is correct conditional on source inputs; it does not validate a uniform theorem.",
+      "disposition": "RECONSTRUCTED_ALGEBRA_BLOCKED_BY_OPEN_INPUT",
+      "formula_or_check": "q1=q reductions; 7/3 comparison margins; T=1 is worst for source discussion",
+      "hypotheses_checked_from_pinned_CGL_tex": "q,T>=1 for elementary base comparison",
+      "id": "F10",
+      "region": "TeX 178--187,2371--2413",
+      "route": "B: exponent-polytope/conductor"
+    }
+  ],
+  "sealer": {
+    "path": "proof/p6_cgl_v2_route_b_v1.py",
+    "sha256": "28192c7314a46aeca211b8c039e7d02a303e6163f3143aa914d6098fc6e878ca"
+  },
+  "unrepaired_gaps": {
+    "external_inputs": "Unclosed cited theorem hypotheses remain external dependencies.",
+    "primitive_to_all": "No asserted zero-set equality, conductor-sum domination, or divisor-loss absorption without a proof.",
+    "smoothness": "No definition of T-smooth is invented.",
+    "tail": "No q<=T^C restriction, log^2(qT) replacement, or T=1 patch."
+  }
+}

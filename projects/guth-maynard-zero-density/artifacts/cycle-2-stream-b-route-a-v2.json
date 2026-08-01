@@ -1,0 +1,86 @@
+{
+  "artifact_id": "cycle-2-stream-b-route-a-v2",
+  "claim_boundary": "This verifies applicability and convention transfers in the published proof. It neither re-proves GM Theorem 1.1/1.2 nor establishes a new zero-density estimate.",
+  "exact_bookkeeping": {
+    "bounded_power": {
+      "large_branch": "k=2",
+      "proof": "ell(sigma)<=10/13 and n>1/100 in the small branch; the large branch is GM's k=2 choice.",
+      "small_branch": "k=ceil(ell(sigma)/n)<=77"
+    },
+    "epsilon_budget": "For a requested epsilon, allocate epsilon/20 to each of the finitely many Fourier-tail, dyadic-choice, strip, divisor, powered-coefficient, support-block, and Montgomery-log losses. Each log^C T is <=T^(epsilon/20) eventually and their product remains T^epsilon.",
+    "mean_value": "Montgomery Theorem 1 with t_r'=-s_r, outer interval (-2T-1,-T+1), and delta>=1 gives sum_W |P(s)|^2 << (T+M log M) log M sum_m |c_m|^2.",
+    "multiplicity_conversion": "A multiplicity at height gamma is at most the multiplicity-inclusive O(log(T+2)) count in its unit strip. Hence a location-count Type-II bound gains at most one log factor; if MP already counts multiplicity, this inequality is still valid.",
+    "mvt_conclusion": "Dividing the mean-square bound by V^2 with V=N^(k sigma)T^-o(1) gives |W|<=T^o(1)(N^(2k-2k sigma)+T N^(k-2k sigma)), exactly GM (13.4).",
+    "powered_coefficients": "For fixed k<=77, |c_m|<=T^o(1) and sum_m|c_m|^2<=N^(k+o(1)); M asymp N^k on a chosen dyadic block.",
+    "range": "7/10 <= sigma <= 4/5; T sufficiently large",
+    "two_sided_conversion": "Conjugation preserves beta and multiplicity. Thus the negative-height dyadic count equals the positive-height count, and N(sigma,T)<=2 sum_{j>=0} R^+_sigma(T/2^(j+1))+O(1)."
+  },
+  "mathematical_and_source_audit_sha256": "56902c1e432507a9d67937c28b6b07be62ebfeac9e3ccf53934eb676d1ba3ce8",
+  "open_blockers": [],
+  "pass_state": "PASS: v1's local-zero and mean-value blockers are closed; all stated normalizations and epsilon transfers are retained as asymptotic T^o(1) losses.",
+  "replay": {
+    "python_implementation": "CPython",
+    "python_version": "3.12.3",
+    "script": "proof/audit_cycle2_stream_b_route_a_v2.py",
+    "script_sha256": "7d86446f82770264483961995d355f07f14147763112026781a4fded8650d557",
+    "wall_time_ns": 48892978
+  },
+  "rows": [
+    {
+      "id": "SB-A14-MP-complement-to-Type-II",
+      "locator": "MP Definition Type I/II, Lemma 23, Lemma 24; GM \u00a713.1",
+      "statement": "GM's complement of Type I is contained in MP Type II by MP Lemma 23, because detector, dyadic N range, threshold, beta cutoff, and positive-height interval agree exactly.",
+      "status": "PROVED"
+    },
+    {
+      "id": "SB-A15-local-strip-and-multiplicity",
+      "locator": "HSW Corollary 1.1; Bui--Heath-Brown introduction; MP cluster convention",
+      "statement": "Subtracting the pinned Riemann--von Mangoldt bounds gives O(log(T+2)) zeros in every unit strip; Bui--Heath-Brown pins multiplicity, converting MP's location treatment at only a logarithmic loss.",
+      "status": "PROVED"
+    },
+    {
+      "id": "SB-A16-positive-to-two-sided",
+      "locator": "GM \u00a713.1 positive dyadic reduction; zeta conjugation symmetry",
+      "statement": "Positive dyadic bounds transfer to |Im rho|<=T with a factor two and a convergent dyadic geometric series; O(1) low-height terms are absorbed asymptotically.",
+      "status": "PROVED"
+    },
+    {
+      "id": "SB-A17-smoothing-and-separated-extraction",
+      "locator": "GM \u00a713.1 plus SB-A15",
+      "statement": "The beta-uniform smooth cutoff, Fourier inversion, rapid tail, and multiplicity-inclusive strip bound yield a 1-separated set after only T^o(1) loss.",
+      "status": "PROVED"
+    },
+    {
+      "id": "SB-A18-coefficients-powered-support",
+      "locator": "GM \u00a713.1; fixed k bookkeeping",
+      "statement": "Detector coefficients, their kth convolution, coefficient-one normalization, and dyadic support selection each cost T^o(1), with all k<=77 dependence fixed.",
+      "status": "PROVED"
+    },
+    {
+      "id": "SB-A19-Montgomery-mean-value",
+      "locator": "Montgomery (1969), Theorem 1 / printed p.335 / frozen PDF p.348, visually checked this run",
+      "statement": "The theorem permits arbitrary complex coefficients, an arbitrary real interval, and separation delta; reflected GM ordinates meet its hypotheses and give GM's two MVT terms.",
+      "status": "PROVED"
+    },
+    {
+      "id": "SB-A20-epsilon-o1-transfer",
+      "locator": "GM notation convention and finite-loss budget",
+      "statement": "Every loss is one of finitely many fixed log powers, bounded-k divisor factors, or source lessapprox terms; epsilon splitting preserves T^o(1) without a finite-T power identity.",
+      "status": "PROVED"
+    }
+  ],
+  "sources": {
+    "HalfIsolatedv2.tex": "ec22dfdb8394b8ab4b228d0f438d19858015fc74330e247d08f36e5830782426",
+    "LargevaluesDirichlet17.tex": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428",
+    "bui-heath-brown-2013-simple-zeros.tar": "a171c6e74be228955df48191675e497ce4934623ae33ddddd9761b8cb1185ca5",
+    "hasanalizade-shen-wong-2022-counting-zeros.tar": "8ba8d0eb95e1dd967adf17b7a2e77bdc45a99f6aa283d41d23dd4d0ac4358247",
+    "maynard-pratt-2206.11729.tar": "b81dbb3bb8bed014588294b5c6d7e8e4b5a14798f445baecb6680b7a9df967d3",
+    "montgomery-1969-inventiones8-gdz-volume.pdf": "b240c7c07d32201ced906bd0fdc4d36cca3c11999084afeb658ffca3f978534e"
+  },
+  "status": "PROVED: Stream-B external dependency closure for the published GM \u00a713.1 transfer",
+  "supersedes": {
+    "artifact": "cycle-2-stream-b-route-a-v1",
+    "audit_sha256": "390e3b268d9203f50dad48b825421ef475ff138b6309ec463163fc7d26e57b45",
+    "preservation": "v1 retained unchanged"
+  }
+}

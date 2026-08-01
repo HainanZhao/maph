@@ -1,0 +1,110 @@
+{
+  "analytic_lemma": {
+    "checked_hypotheses": [
+      "q>=2 excludes the only primitive principal character (modulus 1), hence no pole at s=1",
+      "U>=2 supplies the Bui--Heath--Brown height range",
+      "TZ Rademacher supplies polynomial vertical growth in the closed strip used in the truncated-rectangle limit",
+      "all boundary and intermediate integrals are finite after Gaussian damping"
+    ],
+    "epistemic_status": "PROVED",
+    "name": "finite_gaussian_three_lines_fourth_moment",
+    "self_contained_derivation": [
+      "For each primitive chi modulo q>=2, chi is nonprincipal, so L(s,chi) is holomorphic in the closed strip 1/2<=Re(s)<=3/2. On Re(s)=3/2 its absolutely convergent Dirichlet series gives |L(s,chi)|<=zeta(3/2).",
+      "Multiply L(s,chi) by exp((s/U)^2). Applying the maximum principle to the usual truncated rectangles and then letting their heights tend to infinity gives the finite Gaussian three-lines inequality. With fourth-power exponent on both boundaries, it bounds the weighted L^4 integral at x by the weight-w geometric mean of the weighted boundary integrals, where w=(3/2-x). This is the standard proof, included here as a derivation rather than imported from the submitted corroborating preprint.",
+      "At x=1/2, Bui--Heath-Brown Theorem 1 and conjugation chi<->conjugate(chi) give the required weighted boundary integral: partition the Gaussian tail dyadically, apply its q,V>=2 theorem on each positive interval, and use the elementary divisor bound tau(q)<<_epsilon q^epsilon to absorb omega(q) and q/phi(q) from its displayed formula. The result is <<_epsilon(qU)^(1+epsilon).",
+      "At x=3/2, absolute convergence gives a weighted boundary integral O(phi*(q)U)<=O(qU). Summing the per-character three-lines inequalities and using Holder yields the stated family estimate uniformly in x."
+    ],
+    "statement": "For q>=2, U>=2, and 1/2<=x<=3/2, sum over primitive chi modulo q of integral_{-U}^U |L(x+it,chi)|^4 dt <<_epsilon (qU)^(1+epsilon)."
+  },
+  "artifact_id": "p6-s06-primary-input-ledger-v4-fourth-moment-correction",
+  "claim_boundary": "Versioned correction only for the primitive-character fourth-moment premise actually used by the CGL detector. It does not validate CGL-v2, repair q1-sensitive formulae, or prove a zero-density or short-interval theorem.",
+  "corrected_input": {
+    "all_character_boundary": "This proves exactly the primitive detector premise at CGL TeX 2109. It does not relabel the immutable v1 all-character wording as a separate theorem; that broader form is unnecessary before the pinned conductor transfer.",
+    "compact_and_endpoint_handling": "H>=1 implies U>=2. The disks lie in |Im(s)|<=H+r<U and 1/2-r<=Re(s)<=1/2+r. Their closed disks remain disjoint because r<1/4. The q=1 zeta-only case is not asserted here, because the CGL primitive-detector reduction being repaired is recorded at q>=2.",
+    "discrete_conversion": "Let U=H+1 and r=1/(10 log(q(H+3))). The radius-r disks about the selected critical-line points are disjoint within each character. Subharmonicity of |L|^4 bounds the selected sum by r^(-2) times the two-dimensional strip integral. For Re(s)>=1/2 use the proved finite Gaussian three-lines lemma; for Re(s)<1/2 use the TZ functional equation, which costs [q(H+3)]^(4r)=O(1) after fourth powers. The r^(-2) loss is polylogarithmic and is absorbed into delta.",
+    "epistemic_status": "PROVED",
+    "id": "FOURTH_MOMENT_H",
+    "precise_scope": "q>=2, H>=1, and selected pairs (gamma_r,chi_r) with chi_r primitive modulo the fixed q, |gamma_r|<=H, and |gamma_r-gamma_s|>=1 whenever chi_r=chi_s and r!=s.",
+    "statement": "For every delta>0, sum_r |L(1/2+i gamma_r,chi_r)|^4 <<_delta (qH)^(1+delta)."
+  },
+  "dependency_effect": {
+    "FOURTH_MOMENT_H_for_primitive_detector": {
+      "epistemic_status": "PROVED",
+      "source": "this correction"
+    },
+    "LOW_HEIGHT_MULTIPLICITY_COUNT": {
+      "epistemic_status": "PROVED",
+      "source": "v1 reduction plus v3 LC correction"
+    },
+    "L_POLY_A": {
+      "epistemic_status": "PROVED",
+      "source": "v2 correction"
+    },
+    "gate_status": "OBSERVED: named external analytic inputs for the q>=2 primitive detector are now supplied, but P6 remains RECONCILED_OPEN_INPUTS because independent retained gates are not repaired.",
+    "remaining_p6_boundaries": [
+      "q1-sensitive intermediate formulae",
+      "Z03 tail X-range",
+      "F08 T-smooth definition",
+      "the CGL-v2 theorem and all downstream density/short-interval claims"
+    ]
+  },
+  "document": {
+    "path": "docs/p6-s06-primary-input-ledger-v4-fourth-moment-correction.md",
+    "sha256": "ebcef2b65345712985995d494b9eed923fb869508879cdc4c9140a22967e93c8"
+  },
+  "epistemic_status": "OBSERVED",
+  "hostile_audit": "DEFERRED_TO_PAPER_STAGE",
+  "immutable_predecessors": {
+    "ledger_v1": "1fbb984c3536c45dedbba36992ef8498cccf21fb7d8e9cab7619b5d2cb14b59a",
+    "ledger_v2": "a7846345724c5110bc37d14a1ad712182f80f8e56a42ce73309469589df5b3e0",
+    "ledger_v3": "8566226a67504c91fc2a19e98c7a74c1b805320b825852923b703fb5ce05fb49",
+    "primitive_to_all_transfer": "2edccf46d15229fb8b8ff2c9510d0912f73228da681577ca66d869a8d8acf0d7"
+  },
+  "replay": "python3 proof/build_p6_s06_primary_input_ledger_v4_fourth_moment_correction.py --check",
+  "sealer": {
+    "path": "proof/build_p6_s06_primary_input_ledger_v4_fourth_moment_correction.py",
+    "sha256": "942c0088a5030e71196f66c00227ecd1cc543db5ea57dc3a3b2b947e71d2e5ef"
+  },
+  "source": {
+    "cgl_scope": {
+      "locator": "TeX 2109",
+      "path": "artifacts/sources/g1-literature-audit-v1/arxiv-2507.08296v2.tar",
+      "sha256": "b982cd5afa5b5e8a9abff2c6306519ba558d321b19aadd3fdbe59b3750f8e9ae"
+    },
+    "published_bui_heath_brown": {
+      "citation": "Bui--Heath-Brown, Acta Arith. 141 (2010), 335--344, DOI 10.4064/aa141-4-3",
+      "locator": "Theorem 1, TeX 68--78",
+      "publisher_pdf": {
+        "path": "artifacts/sources/bui-heath-brown-2010-acta-arithmetica.pdf",
+        "sha256": "a9bdfaa0f5190e59d0da5f5edcfa324390cbbefc21e59cebf9bf5e8422475011"
+      },
+      "status": "PROVED_SOURCE",
+      "tex": {
+        "path": "artifacts/sources/bui-heath-brown-0903.4008v1.tex.gz",
+        "sha256": "25e6aa0186dade9b1b71771eb4ca8552e7f1094c88cb12990342cc5cb844a5ca"
+      }
+    },
+    "published_thorner_zaman": {
+      "locators": [
+        "functional equation TeX 580--585",
+        "Rademacher TeX 644--651"
+      ],
+      "status": "PROVED_SOURCE",
+      "tex": {
+        "path": "artifacts/sources/p7-hecke-v1/thorner-zaman-1510.08086v1/LFZD_manuscript.tex",
+        "sha256": "e77007c73da81c239fa009f6fce8befbc72989a0fd28f2ec4ff6952ff098f8f2"
+      }
+    },
+    "submitted_chourasiya_simonic": {
+      "epistemic_status": "OBSERVED",
+      "locator": "Theorem thm:FXbyGabriel, TeX 475--545",
+      "pdf_sha256": "11ebae58b467d14a20835eb732130c2c084f9440ef5e2fdbe38d697ba1e0d261",
+      "role": "corroboration only; not theorem authority",
+      "tar_sha256": "eaac858e0a450fbbd77e02a9b4ac8a4e5fbe8674e74d21233d4e6a02c25de297",
+      "tex": {
+        "path": "artifacts/sources/chourasiya-simonic-2025-explicit-ingham/InghamPostArXiv.tex",
+        "sha256": "94dba3641503540475e1f245af1782cdc197e22750cbd08024cbeaf63b20ddd1"
+      }
+    }
+  }
+}

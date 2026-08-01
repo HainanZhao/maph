@@ -1,0 +1,82 @@
+{
+  "artifact_id": "cycle-8-crr-objective2-energy-only-saturation-audit-v1-test-correction",
+  "claim_boundary": "This correction records and repairs a case-only literal test expectation. It changes no mathematical statement, source anchor, objective-2 assessment, architecture, sharp exponent, exclusion, Base/full-CRR gate, v1 artifact field, or replay payload.",
+  "corrected_assertion": "self.assertIn(\"For every fixed epsilon>0\", v1[\"sharp_eolf4_theorem\"][\"upper_quantifier\"])",
+  "correction": {
+    "affected_claims": "none",
+    "artifact_payload_change": "none",
+    "cause": "A case-sensitive exact-string assertion was not aligned to the sealed sentence capitalization.",
+    "epistemic_status": "OBSERVED",
+    "error": "The v1 test expected lower-case 'for every fixed epsilon>0'; the sealed theorem starts 'For every fixed epsilon>0'.",
+    "mathematical_change": "none",
+    "resolution": "Preserve v1 and use a corrected test that checks the exact capitalized phrase.",
+    "source_change": "none"
+  },
+  "epistemic_status": "OBSERVED",
+  "frozen_hashes": {
+    "correction_document": {
+      "path": "docs/cycle-8-crr-objective-2-energy-only-saturation-audit-v1-test-correction.md",
+      "sha256": "9cef00f9b9d04375ea0d494b47e856065c3b6679cc5179f3d9a45e6d9ea264a2"
+    },
+    "correction_test": {
+      "path": "tests/test_cycle_8_crr_objective2_energy_only_saturation_audit_v1_test_correction.py",
+      "sha256": "32d8899d0fa43da33a23c4ee94742965e1053c9abfcb447a6b90ce364debcee2"
+    },
+    "v1_artifact": {
+      "path": "artifacts/cycle-8-crr-objective2-energy-only-saturation-audit-v1.json",
+      "sha256": "e62388fcd1f62460f438d73743920f6209c71fc353254984f45d74e71e416746"
+    },
+    "v1_builder": {
+      "path": "proof/build_cycle_8_crr_objective2_energy_only_saturation_audit_v1.py",
+      "sha256": "96d45c1686526f220f1720bad65efdc20de97ae83a319dfa88b3b6e1e5dab021"
+    },
+    "v1_conventions": {
+      "path": "conventions/crr_objective2_energy_only_saturation_v1.py",
+      "sha256": "7d435f56ca1a9ce7ec9b97760fb62bc11f1944e470e669575a5a0089e4de0ac1"
+    },
+    "v1_document": {
+      "path": "docs/cycle-8-crr-objective-2-energy-only-saturation-audit-v1.md",
+      "sha256": "c5d70e76808f62589290f5098d813c933d177c0eb714acd756c6ff2bfd3c8f34"
+    },
+    "v1_test": {
+      "path": "tests/test_cycle_8_crr_objective2_energy_only_saturation_audit_v1.py",
+      "sha256": "18a9f8b9943f6e2aaf1184382fa62d17512a22e7f532f4374636877d1fd0dd26"
+    }
+  },
+  "historical_test_observation": {
+    "command": "python3 -m unittest tests/test_cycle_8_crr_objective2_energy_only_saturation_audit_v1.py",
+    "epistemic_status": "OBSERVED",
+    "result": "one expected case-only literal-string failure; no mathematical assertion failed"
+  },
+  "original_assertion": "self.assertIn(\"for every fixed epsilon>0\", theorem[\"upper_quantifier\"])",
+  "preserved_v1": {
+    "artifact_id": "cycle-8-crr-objective2-energy-only-saturation-audit-v1",
+    "artifact_sha256": "e62388fcd1f62460f438d73743920f6209c71fc353254984f45d74e71e416746",
+    "statement": "The v1 artifact, builder, conventions, document, and original failing test are immutable inputs to this correction."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_8_crr_objective2_energy_only_saturation_audit_v1_test_correction.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_8_crr_objective2_energy_only_saturation_audit_v1_test_correction.py",
+    "write_command": "python3 proof/build_cycle_8_crr_objective2_energy_only_saturation_audit_v1_test_correction.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE_BY_USER_DIRECTION",
+    "lightweight_checks": "immutable-artifact hash pinning, literal comparison, v1 replay, contained historical-test replay, corrected replay, and tamper rejection"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealed_phrase": "For every fixed epsilon>0",
+  "sealer": {
+    "path": "proof/build_cycle_8_crr_objective2_energy_only_saturation_audit_v1_test_correction.py",
+    "sha256": "22b2883a60bedf8e4f55269cebbcf97e551cfb92f10faf52064d946a63377047"
+  },
+  "status": "SEALED_V1_EO_LF4_OBJECTIVE2_AUDIT_TEST_CORRECTION_LIGHTWEIGHT_CHECKED",
+  "v1_replay": {
+    "command": "python3 proof/build_cycle_8_crr_objective2_energy_only_saturation_audit_v1.py --check",
+    "epistemic_status": "PROVED",
+    "result": "v1 builder --check passed without changing the immutable artifact"
+  }
+}

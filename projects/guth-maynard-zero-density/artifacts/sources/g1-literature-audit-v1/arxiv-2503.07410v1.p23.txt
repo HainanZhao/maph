@@ -1,0 +1,61 @@
+LARGE VALUE ESTIMATES IN NUMBER THEORY, HARMONIC ANALYSIS, AND COMPUTER SCIENCE 23
+
+Now let us return to MDir. Suppose for a moment that we fix T and N and we are looking for
+a Poly(N) length proof of a large value estimate for MDir. The method we have just described
+using the Schatten tensor gives a proof of length Poly(N) of some large value estimates for MDir.
+It is not known what bounds this method gives for the matrix MDir. My best guess is that if we
+applied the method from [DHPT] to MDir, the bounds that it would give are similar to the bounds
+that it gives for a random matrix. However, it looks difficult to prove this rigorously. For some
+perspective, let’s go back to the MM ∗ method, where we want to estimate the off diagonal entries
+of MM ∗. For a random T × N matrix M, all these off-diagonal entries have norm ⪅ N 1/2. It is
+conjectured that for MDir, the off-diagonal entries of MDirM ∗
+Dir also have norm ⪅ N 1/2, but this
+old conjecture is out of reach. In an analogous way, I would guess that the norms of the auxiliary
+matrices associated to MDir behave similarly to the norms of the auxiliary matrices associated to
+Mran, but this naive conjecture is also out of reach.
+One issue is the almost counterexample we discussed in Section 5.5. Let MAC be the matrix
+from the almost counterexample. Everything we wrote in this section so far applies equally to
+MDir and MAC. In order to prove a bound for MDir which is stronger than the one for MAC, we
+could try to prove a bound for ∥ ˜SMDir,r∥ which is much less than ∥ ˜SMAC,r∥ for some r. In time
+Poly(N) we can compute these two norms to high precision, and then I believe we would find that
+∥ ˜SMDir,r∥ is much less than ∥ ˜SMAC,r∥. But for a proof, we still need to put our finger on a property
+distinguishing MDir from MAC that could be used to bound these norms.
+Eventually, Maynard and I did find a special property of MDir that distinguishes it from MAC
+and we were able to use this to prove Theorem 6.1. We explain these ideas in the next section.
+
+7. Bounds using special features of Dirichlet polynomials
+
+In this section, we outline the main ideas of the proof of Theorem 6.1 from [GM].
+One of the key issues is to distinguish the large value problem for Dirichlet polynomials from
+the almost counterexample in Section 5.5. If we compare the setup of our main question with the
+setup of the almost counterexample, there are two differences.
+
+(1) The frequencies in the trigonometric polynomial D(t) are {log n}2N
+n=N instead of {� n
+
+N }2N
+n=N.
+(2) The coefficients obey |bn| ≤ 1 for all n instead of just �2N
+n=N |bn|2 ≤ N .
+
+In order to improve on the simple bound (14) for our main question when σ ≤ 3/4, the proof
+needs to use at least one of these two features. The proof in [GM] uses both features, although
+either one by itself may be enough.
+Suppose that |bn| ≤ 1 for all n and that |(MDirb)t)| ≥ N σ for t ∈ W ⊂ Z ∩ [0, T]. We want to
+bound |W|.
+There are two cases depending on whether the set W has a lot of additive structure. Notice
+that in the almost counterexample, the set W was an arithmetic progression, which has a lot of
+additive structure. Sets with additive structure have a special relationship with Fourier analysis,
+and they often come up as examples for the large value problem for a matrix M that comes from
+Fourier analysis. We measure additive structure using the additive energy. For a finite set W ⊂ Z,
+we define the additive energy as
+
+(21)
+E(W) := #{t1, t2, t3, t4 ∈ W : t1 + t2 = t3 − t4}
+
+The additive energy lies between |W|2 and |W|3.
+Sets with lots of additive structure, such as
+arithmetic progressions, have E(W) ≈ |W|3.
+On the other hand, random sets typically have
+
+

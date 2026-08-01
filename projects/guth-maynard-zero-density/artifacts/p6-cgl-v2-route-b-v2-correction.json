@@ -1,0 +1,65 @@
+{
+  "artifact_id": "p6-cgl-v2-route-b-v2-correction",
+  "claim_boundary": "Correction of Route B v1's exact-algebra verification only. It does not alter any of the 46 row dispositions, close an analytic input, repair the CGL preprint, or prove a zero-density theorem.",
+  "corrected_exact_checks": {
+    "2<=7/3": {
+      "cleared_integer_check": "2*3<=7",
+      "result": true
+    },
+    "7/3-30/13": {
+      "cleared_integer_check": "7*13-30*3=1",
+      "result": "1/39"
+    },
+    "7/3-9/4": {
+      "cleared_integer_check": "7*4-9*3=1",
+      "result": "1/12"
+    },
+    "B_at_beta_1": {
+      "normalization_check": "40^2-160=1440; sqrt(160)=4sqrt(10)",
+      "result": "(10-sqrt(10))/3"
+    },
+    "sqrt(10)>3": {
+      "radicand_check": "10>9",
+      "result": true
+    }
+  },
+  "defect": {
+    "affected_claim": "Route B v1's machine-checked support for the displayed 1/39 margin.",
+    "containment": "The v1 artifact remains preserved; no theorem was promoted from it.",
+    "tag": "ROUTE_B_V1_MARGIN_CHECK_IRRELEVANT",
+    "v1_assertion": "7 * 13 - 30 == 61",
+    "why_insufficient": "It is true but is not the cleared-denominator identity for 7/3 - 30/13 = 1/39."
+  },
+  "epistemic_status": "PROVED",
+  "preserved_v1": {
+    "artifact": "artifacts/p6-cgl-v2-route-b-v1.json",
+    "artifact_sha256": "d107f496c8fd4e52a91eb2637c7edeab0519537fd91d0c3b8c2bf7da7b79f737",
+    "script": "proof/p6_cgl_v2_route_b_v1.py",
+    "script_sha256": "28192c7314a46aeca211b8c039e7d02a303e6163f3143aa914d6098fc6e878ca"
+  },
+  "replay": {
+    "command": "python3 proof/p6_cgl_v2_route_b_v2_correction.py --check",
+    "optimized": 0,
+    "python_implementation": "cpython",
+    "python_version": "3.12.3",
+    "rss_cap_kib": 262144,
+    "wall_cap_ns": 60000000000
+  },
+  "row_level_effect": {
+    "canonical_row_count_unchanged": 46,
+    "mandatory_l12_subchecks_unchanged": [
+      "L12.odd_prime",
+      "L12.two_power"
+    ],
+    "open_blockers_unchanged": [
+      "F08_T_SMOOTH_UNDEFINED",
+      "S03_MULTIPLICITY_NOT_STATED",
+      "S06_EXTERNAL_INPUTS",
+      "Z03_TAIL_X_RANGE",
+      "Z05_PRIMITIVE_EULER_FACTORS",
+      "Z06_CONDUCTOR_SUM_Q1"
+    ],
+    "overall_disposition_unchanged": "OPEN_ANALYTIC_INPUT"
+  },
+  "supersedes_for_exact_margin_check_only": "p6-cgl-v2-route-b-v1"
+}

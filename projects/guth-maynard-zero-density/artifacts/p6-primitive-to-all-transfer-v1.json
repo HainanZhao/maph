@@ -1,0 +1,107 @@
+{
+  "artifact_id": "p6-primitive-to-all-transfer-v1",
+  "claim_boundary": "A narrow self-contained conductor/Euler-factor transfer lemma. It proves the primitive-to-all reduction for a monotone, uniformly available primitive zero-density envelope; it neither validates nor repairs Chen--Gupta--Li v2, and proves no new zero-density or short-interval theorem. No hostile audit is initiated.",
+  "epistemic_status": "PROVED",
+  "lemma": {
+    "cgl_final_envelope_specialization": {
+      "conditional_primitive_input": "N^*(sigma,T;d) <<_epsilon (dT)^epsilon[(d^(7/3)T^2)^(1-sigma)+(dT)^((30/13)(1-sigma))], uniformly in the stated primitive range, with the same small-dT convention above.",
+      "transferred_all_character_envelope": "sum_{chi mod q}N(sigma,T,chi) <<_epsilon (qT)^epsilon[(q^(7/3)T^2)^(1-sigma)+(qT)^((30/13)(1-sigma))].",
+      "uniform_consequence": "Since T>=1 and 30/13<7/3, this implies the monotone uniform 7/3 envelope (qT)^((7/3)(1-sigma)+epsilon).",
+      "why_monotone": "Both displayed primitive bases are nondecreasing in d, so replacing d by q before the divisor sum is valid."
+    },
+    "conditional_envelope_transfer": {
+      "conclusion": "sum_{chi mod q} N(sigma,T,chi) <<_{epsilon,sigma0} (qT)^(A(1-sigma)+epsilon), uniformly for q,T>=1 and sigma0<=sigma<1.",
+      "divisor_loss": "For every delta>0, tau(q)<<_delta q^delta<= (qT)^delta for q,T>=1. Choosing delta=epsilon/2 gives exponent A(1-sigma)+epsilon.",
+      "large_dT_sum": "sum_{d|q, dT>=K_delta} N^*(sigma,T;d) <= C_delta tau(q)(qT)^(A(1-sigma)+delta).",
+      "small_dT": "For dT<K_delta, necessarily d<=K_delta and T<=K_delta. The finite constant B_{K_delta,sigma0}=sum_{d<=K_delta} sum_{psi primitive mod d} N(sigma0,K_delta,psi) bounds all such terms. It is absorbed because qT>=1. Thus no asymptotic estimate is applied outside its dT range.",
+      "uniform_input": "Fix sigma0>0 and A>=0. Suppose that for every delta>0 there are C_delta,K_delta such that N^*(sigma,T;d)<=C_delta(dT)^(A(1-sigma)+delta) whenever sigma0<=sigma<1, d,T>=1, and dT>=K_delta."
+    },
+    "definitions": {
+      "character_mod_q": "A Dirichlet character modulo q is a group character of (Z/qZ)^* extended by 0 off integers coprime to q.",
+      "primitive_count": "N^*(sigma,T;d)=sum_{psi primitive mod d} N(sigma,T,psi).",
+      "zero_region": "sigma>0, |Im rho|<=T; the P6 application uses sigma>1/2."
+    },
+    "epistemic_status": "PROVED",
+    "euler_factor_zero_transfer": {
+      "derivation": [
+        "For Re(s)>1, divide the two absolutely convergent Euler products: the omitted Euler factors are exactly the primes p|q with p not|d.",
+        "Meromorphic continuation gives the same identity globally. For each such p, |chi*(p)|=1.",
+        "If 1-chi*(p)p^(-s)=0, taking absolute values gives p^(-Re(s))=1, hence Re(s)=0.",
+        "Thus the finite factor is holomorphic and nonvanishing in Re(s)>0, so L(s,chi) and L(s,chi*) have identical zero multisets there, including multiplicities."
+      ],
+      "identity": "L(s,chi)=L(s,chi*) product_{p|q, p not|d}(1-chi*(p)p^(-s)).",
+      "principal_case": "The principal character has d=1 and the same argument applies; poles are also unchanged in Re(s)>0, while the assertion concerns zero multisets."
+    },
+    "exact_partition": {
+      "derivation": [
+        "The unique-conductor map partitions all characters modulo q by d|q.",
+        "Within each conductor class, replace chi by its unique primitive inducer using the preceding zero-multiset equality."
+      ],
+      "identity": "sum_{chi mod q} N(sigma,T,chi)=sum_{d|q} N^*(sigma,T;d), for sigma>0."
+    },
+    "limits": [
+      "This transfer does not justify an arbitrary q1-sensitive intermediate formula: after induction the relevant conductor is d, and a chosen q1 need not divide d or retain its source range.",
+      "It closes the mathematical content of Z05/Z06 only for a separately established primitive envelope that is monotone in the conductor, not for the CGL preprint as a whole.",
+      "Z03_TAIL_X_RANGE, S06_EXTERNAL_INPUTS, F08_T_SMOOTH_UNDEFINED, and S03_MULTIPLICITY_NOT_STATED remain open."
+    ],
+    "primitive_inducer": {
+      "scope": "This uses only finite-group factorization and covers p=2 as well as odd primes; no primitive-root parametrization is needed.",
+      "self_contained_derivation": [
+        "Write q=product_p p^(a_p) and use the Chinese-remainder identification (Z/qZ)^*=product_p (Z/p^(a_p)Z)^*.",
+        "For each local group character, take the least b_p in {0,...,a_p} through which it factors under reduction to (Z/p^(b_p)Z)^*; b_p=0 denotes the trivial modulus-1 factor.",
+        "Their product is a character chi* modulo d=product_p p^(b_p), and extending chi* by zero away from (n,q)=1 gives chi.",
+        "If chi* were induced from a proper divisor of d, one local b_p would not be least. Hence chi* is primitive; least local exponents also prove uniqueness."
+      ],
+      "statement": "Every Dirichlet character chi modulo q has one and only one primitive inducing character chi* of conductor d dividing q."
+    }
+  },
+  "p6_effect": {
+    "Z05": "PROVED_FOR_ZERO_COUNTS_IN_Re_s_GREATER_THAN_0",
+    "Z06": "PROVED_FOR_MONOTONE_PRIMITIVE_ENVELOPES_WITH_UNIFORMITY_AND_SMALL_dT_HANDLED",
+    "not_promoted": [
+      "CGL-v2 zero-density theorem",
+      "q1-sensitive intermediate formulae",
+      "Z03_TAIL_X_RANGE",
+      "S06_EXTERNAL_INPUTS",
+      "F08_T_SMOOTH_UNDEFINED",
+      "S03_MULTIPLICITY_NOT_STATED"
+    ]
+  },
+  "replay": {
+    "command": "python3 proof/p6_primitive_to_all_transfer_v1.py --check",
+    "optimized": 0,
+    "python_implementation": "cpython",
+    "python_version": "3.12.3",
+    "rss_cap_kib": 262144,
+    "wall_cap_ns": 60000000000
+  },
+  "source_checks": {
+    "cgl_v2_tar": {
+      "locators": {
+        "all_character_zero_sum": "TeX 2148--2152",
+        "primitive_reduction_announcement": "TeX 2109",
+        "principal_example_of_finite_euler_factor": "TeX 2136--2138"
+      },
+      "path": "artifacts/sources/g1-literature-audit-v1/arxiv-2507.08296v2.tar",
+      "sha256": "b982cd5afa5b5e8a9abff2c6306519ba558d321b19aadd3fdbe59b3750f8e9ae",
+      "tex_member": "Large_Value_Estimates_for_Dirichlet_Polynomials_with_Characters_and_Zero_Density_of_Dirichlet___L_-Functions.tex"
+    },
+    "frozen_zero_count_conventions": {
+      "height": "|Im rho| <= T",
+      "multiplicity": "included",
+      "path": "conventions/baseline.py",
+      "sha256": "249231f3e64c13f4bc4b03148afe7ccfd59f342b71a17e77d9abc955f4a2ad90",
+      "transfer_note": "The divisor identity is valid both with and without multiplicity if one convention is used on both sides; it does not resolve P6 S03's source wording."
+    },
+    "p6_records": {
+      "preregistration": {
+        "path": "artifacts/cycle-4-p6-cgl-v2-reconstruction-preregistration-v1.json",
+        "sha256": "1f9c195fa2dff8a58b754f10a58357384c5e3840839cc48269dd7b595a8ab36a"
+      },
+      "reconciliation": {
+        "path": "artifacts/p6-cgl-v2-reconciliation-v1.json",
+        "sha256": "cf59aa63b97d69c672fafa0b0ca49221d9005c3da6ccd61f05d37f4bcbc68e49"
+      }
+    }
+  }
+}

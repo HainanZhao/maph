@@ -1,0 +1,115 @@
+{
+  "absolute_wiener_no_go": {
+    "conclusion": "No fixed-power W_Q upper bound exists, so the absolute Fourier-bin/Cauchy energy route cannot prove F4F.",
+    "epistemic_status": "PROVED",
+    "mechanism": "Farey log separation plus the Montgomery--Vaughan Hilbert mean-value lower on [H/10,9H/10], where |J_H|>=1/(2H)",
+    "statement": "W_Q>=1/1000 for all sufficiently large Q"
+  },
+  "artifact_id": "cycle-7-crr-f4f-mellin-farey-reduction-v1",
+  "claim_boundary": "This artifact proves exact logarithmic Farey Fourier and fourth-moment identities, a conditional Wiener sufficient condition, low-frequency continuum scope, and a high-frequency no-go for the absolute energy-bin route. It proves neither F4F_eta, AFARI_eta, CFARI_eta, CRR-U, a Base-compatible counterexample, a cubic estimate, a density gain, a short-interval theorem, a full-method saturation theorem, nor an L-function result.",
+  "continuum_scope": {
+    "boundary": "this is the elementary continuum/Mobius method's breakdown scale, not a theorem locating all discrete large values",
+    "epistemic_status": "PROVED",
+    "estimate": "S_Q(tau)=Q^2 I(tau)/zeta(2)+O(Q+Q(1+|tau|)log(2Q)), I(tau)<<1/(1+|tau|)",
+    "low_frequency_wiener": "sum_low B_m<<Q^(-1)log(2Q)",
+    "valid_uniform_decay_range": "(1+|tau|)^2 log(2Q)<<Q"
+  },
+  "crr_u_effect": {
+    "epistemic_status": "PROVED",
+    "statement": "CRR-U remains open. A fixed-saving F4F theorem would still imply AFARI and CRR-U, but this reduction only rules out one absolute-energy proof route."
+  },
+  "energy_bin_reduction": {
+    "bound": "integral_(U_v)|R_W|^4du<=(3/2)E(W)W_Q",
+    "conditional_effect": "W_Q<=v^(-kappa) implies F4F_(kappa/2) eventually, hence AFARI and CRR-U",
+    "epistemic_status": "PROVED",
+    "wiener_norm": "W_Q=sum_(|m|<=2H+2)sup_(|tau-m|<=1)|J_H(tau)S_Q(tau)|"
+  },
+  "epistemic_status": "PROVED",
+  "exact_log_farey_expansion": {
+    "epistemic_status": "PROVED",
+    "fourth_moment": "I4_log(W)=sum_(t1,t2,t3,t4 in W)mu_hat_v(t1+t2-t3-t4)",
+    "kernel": "mu_hat_v(tau)=J_H(tau)S_Q(tau), J_H(tau)=2*sin(3*tau/H)/tau",
+    "labels": "the sum S_Q keeps each original coprime ordered pair (r,s)"
+  },
+  "exact_replay": {
+    "constants": {
+      "conditional_wiener_to_f4f": "W_Q<=v^(-kappa) implies F4F_(kappa/2) eventually",
+      "eventual_Q_threshold_for_hilbert_lower": "20000",
+      "farey_count_lower": "1/200",
+      "high_band_left_endpoint_over_H": "1/10",
+      "high_band_length_over_H": "4/5",
+      "high_band_right_endpoint_over_H": "9/10",
+      "log_frequency_separation": "1/5",
+      "log_jitter_high_band_lower_numerator": "1/2",
+      "log_jitter_kernel_at_zero": "6",
+      "log_jitter_uniform_upper_numerator": "7",
+      "wiener_no_go_lower": "1/1000"
+    },
+    "scales_at_v8": {
+      "H": 68719476736,
+      "Q": 4096,
+      "R": 16777216,
+      "v": 8
+    }
+  },
+  "frozen_hashes": {
+    "afari_artifact": {
+      "path": "artifacts/cycle-6-crr-afari-coefficient-coupling-v1.json",
+      "sha256": "a9b142f8fd22e4fe9ebd4857af4eb7e764aa20ea379170930f6446231e663266"
+    },
+    "cfari_artifact": {
+      "path": "artifacts/cycle-6-crr-cfari-phase-equivalence-v1.json",
+      "sha256": "00ca4e7f794a06d797b24543d174d86ef6d8a3f99a068d14bb693ce894f16dad"
+    },
+    "conventions": {
+      "path": "conventions/crr_f4f_mellin_farey_v1.py",
+      "sha256": "b61f2c0ec7c9adbb8a0f14e03e172396c9262b2cd24deb89653966f82d059719"
+    },
+    "crr_v2_artifact": {
+      "path": "artifacts/cycle-4-p1r-crr-u-formalization-v2.json",
+      "sha256": "e26be797539eabe53ee765b7067d1c99fe4d440035e27785cf38aa64bc2fc84e"
+    },
+    "document": {
+      "path": "docs/cycle-7-crr-f4f-mellin-farey-reduction-v1.md",
+      "sha256": "c65439916cab0f10f36c8a2b637f2c204783171367271f01669e41dcee038394"
+    },
+    "farey_v2_artifact": {
+      "path": "artifacts/cycle-5-crr-farey-log-gram-reduction-v2-averaged-jitter.json",
+      "sha256": "ce59b777ec02769168d9dc330658a0ab1d46b05cdb7ac5dc8115e248d85f8ce8"
+    },
+    "tests": {
+      "path": "tests/test_cycle_7_crr_f4f_mellin_farey_reduction_v1.py",
+      "sha256": "0e4ff76eb80aeb91ff3252c554a92aae8a92e2def6967aef8c6ccf3ac019819d"
+    }
+  },
+  "mobius_dirichlet_square": {
+    "epistemic_status": "PROVED",
+    "scope": "identifies the high-frequency object; it does not by itself upper-bound the full sharp shell",
+    "statement": "S_(phi,Q)(tau)=sum_d mu(d)|sum_n phi(dn/Q)n^(i tau)|^2 for a smooth core phi supported in [1,9/8]"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_7_crr_f4f_mellin_farey_reduction_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_7_crr_f4f_mellin_farey_reduction_v1.py",
+    "write_command": "python3 proof/build_cycle_7_crr_f4f_mellin_farey_reduction_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE_BY_USER_DIRECTION",
+    "lightweight_checks": "exact Fourier/Mobius algebra, scale/constants bookkeeping, source-artifact checks, replay, and tamper rejection"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_7_crr_f4f_mellin_farey_reduction_v1.py",
+    "sha256": "f4c032d267c67a2176b607c6551372c98073ccb98fc80003984410c4e449dbf6"
+  },
+  "source_context": {
+    "actual_labels": "coprime ordered (r,s) in the frozen Q-shell",
+    "base_energy": "v^(20-delta(v)) <= E(W) <= v^(20+delta(v))",
+    "f4f_prior_status": "CONJECTURED",
+    "farey_lower": "A_v(W)>=(15/8)*v^(26-3*delta(v))"
+  },
+  "status": "SEALED_F4F_MELLIN_FAREY_REDUCTION_LIGHTWEIGHT_CHECKED"
+}

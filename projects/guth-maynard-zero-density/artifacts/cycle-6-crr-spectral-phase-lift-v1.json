@@ -1,0 +1,134 @@
+{
+  "actual_farey_relation": {
+    "epistemic_status": "PROVED",
+    "preserved_identity": "C_theta(sk,rk)=R_W((r/s)*exp(theta/H))",
+    "scope": "The phase lift does not replace actual reduced Farey labels, multiplicative rays, bounded jitter, energy, or RationalMass. It isolates the remaining coefficient-capped all-row condition on the same W."
+  },
+  "artifact_id": "cycle-6-crr-spectral-phase-lift-v1",
+  "central_asymptotic_gate": {
+    "assumptions": [
+      "lambda>=v^(12-ell*delta(v))",
+      "rho>=v^(-r*delta(v))",
+      "phi>=v^(-s*delta(v))",
+      "ell+r+2s<=2-gamma for fixed gamma>0"
+    ],
+    "boundary_limit": "Failure of this sufficient gate is not a no-go for other capped coefficients or for a CRR witness.",
+    "conclusion": "For all sufficiently large v, Gamma(W)>=v^(7-delta(v)).",
+    "epistemic_status": "PROVED",
+    "reason": "N=L-1 and the strict gamma margin absorb the fixed support factor because v^(gamma*delta(v)) tends to infinity.",
+    "scope": "central-cardinality W with |W|=R=v^8 only; energy and RationalMass remain independent requirements"
+  },
+  "claim_boundary": "This artifact proves an exact finite-dimensional coefficient-capped phase-lift/minimax reduction and a leading-eigenvector sufficient certificate for the actual CRR matrix. It proves neither an asymptotic CRR witness nor AFARI/FARI/CRR-U, a cubic estimate, a density gain, a short-interval theorem, or an L-function result.",
+  "context": {
+    "actual_farey_identity": "C_theta(sk,rk)=R_W((r/s)*exp(theta/H))",
+    "afari_status": "CONJECTURED",
+    "base_polynomial": "D_v(t)=sum_(n>=1) w(n/L)b_n n^(it)",
+    "coefficient_cap": "b_n for n>=1 complex with |b_n|<=1",
+    "common_set": "finite W subset [0,H], H^(1/100)-separated"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "exponents": {
+      "base_pointwise_square": [
+        "14",
+        "-2"
+      ],
+      "central_support_over_cardinality": [
+        "2",
+        "0"
+      ],
+      "central_top_eigenvalue": [
+        "12",
+        "0"
+      ],
+      "leading_phase_square": "14-(ell+r+2s)*delta, up to (L-1)/L",
+      "strict_closure_condition": "ell+r+2s<=2-gamma for fixed gamma>0"
+    },
+    "scales": {
+      "H": 68719476736,
+      "L": 1073741824,
+      "R": 16777216,
+      "V": 2097152,
+      "v": 8
+    },
+    "support": {
+      "L": 1073741824,
+      "lower_bound": "N=L-1>=L/2",
+      "nonzero_integer_support": "{n in Z: L<n<2L}",
+      "support_count_N": 1073741823
+    }
+  },
+  "falsifiers": {
+    "leading_gate": "A finite matrix for which the displayed b^ph violates Gamma(W)^2>=lambda*N*rho*phi^2/|W|.",
+    "phase_lift": "An orientation error in the polydisc support function, failure of the finite separation argument, or a finite counterexample to the stated identity."
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/crr_spectral_phase_lift_v1.py",
+      "sha256": "fca37d6df1b34d32681f79faa2d6fe2d3282228b2afa59e7c461b013a411d235"
+    },
+    "crr_v2_artifact": {
+      "path": "artifacts/cycle-4-p1r-crr-u-formalization-v2.json",
+      "sha256": "e26be797539eabe53ee765b7067d1c99fe4d440035e27785cf38aa64bc2fc84e"
+    },
+    "document": {
+      "path": "docs/cycle-6-crr-spectral-phase-lift-v1.md",
+      "sha256": "f3dce0bb969074bf009a0ed2a4f47910acdef0474c6a68319fad0d683b19ff92"
+    },
+    "farey_log_v1_artifact": {
+      "path": "artifacts/cycle-5-crr-farey-log-gram-reduction-v1.json",
+      "sha256": "8f204d56a5609fa9c8a93b152a969a038bc13463d3a36ca746e842bfe21e5f40"
+    },
+    "farey_log_v2_artifact": {
+      "path": "artifacts/cycle-5-crr-farey-log-gram-reduction-v2-averaged-jitter.json",
+      "sha256": "ce59b777ec02769168d9dc330658a0ab1d46b05cdb7ac5dc8115e248d85f8ce8"
+    }
+  },
+  "leading_eigenvector_gate": {
+    "certificate": "Gamma(W)^2>=lambda*N*rho*phi^2/|W|",
+    "definitions": {
+      "b_phase": "b_n^ph=x_n/|x_n|, with 0 when x_n=0",
+      "lambda": "lambda_max(M_W M_W^*)",
+      "phi": "sqrt(|W|)*min_(t in W)|(M_W b^ph)_t|/||M_W b^ph||_2",
+      "rho": "||x||_1^2/N",
+      "u": "a unit top left eigenvector",
+      "x": "M_W^*u/sqrt(lambda), a unit top right eigenvector"
+    },
+    "epistemic_status": "PROVED",
+    "interpretation": "rho is the coefficient-cap/delocalization loss and phi is the all-row flatness loss; lambda alone is not enough.",
+    "range": "0<=rho<=1 and 0<=phi<=1"
+  },
+  "next_gate": {
+    "construction": "Construct an actual-Farey/RationalMass-relevant W with the strict leading gate, or solve the exact phase program directly.",
+    "obstruction": "Prove an inverse bound for the exact max_z min_p phase program on the relevant actual-Farey class.",
+    "status": "OPEN"
+  },
+  "phase_lift": {
+    "capped_value": "Gamma(W)=max_(|b_n|<=1) min_(t in W)|(M_W b)_t|",
+    "common_object_rule": "One fixed W is used in M_W, in Gamma(W), and in every coefficient vector; no separately optimized set is allowed.",
+    "epistemic_status": "PROVED",
+    "exact_identity": "Gamma(W)=max_(z in T^W) min_(p in Delta(W)) sum_(n in I_L)|(M_W^*(p z))_n|",
+    "matrix": "M_W(t,n)=w(n/L)n^(it) on I_L={n in Z:L<n<2L}",
+    "minimum_value_warning": "Uniform p is only one lower-level diagnostic; the inner min over p is indispensable for an all-row certificate.",
+    "proof_mechanism": "finite compact-convex separation for the row-margin vector, followed by the coordinatewise complex-polydisc support function"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_6_crr_spectral_phase_lift_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_6_crr_spectral_phase_lift_v1.py",
+    "write_command": "python3 proof/build_cycle_6_crr_spectral_phase_lift_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE_BY_USER_DIRECTION",
+    "lightweight_checks": "finite-dimensional algebra, explicit separation proof, exact scale arithmetic, antecedent-hash replay, and tamper rejection"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_6_crr_spectral_phase_lift_v1.py",
+    "sha256": "04f878bd221fc1696e725f92b9ea78bec6806d5874ea5b4110634fe39a066e17"
+  },
+  "status": "SEALED_CAPPED_SPECTRAL_REDUCTION_LIGHTWEIGHT_CHECKED"
+}

@@ -1,0 +1,34 @@
+{
+  "artifact_id": "g1-route-decision-v2-hostile-audit-v1",
+  "audited_package_hashes": {
+    "adjudicator": "7129eab33fd08ede2cf590ef60d5b3afd5e962fa5a7771ef9ad6b414d4a7442a",
+    "artifact": "87e697850dea074664227f6be5b187cc12ab4491bad6d2bda0065ee9df1b3872",
+    "document": "92cd2ce9ef1ed06d0201d97becd74ff436ae7bfd888a014ad0ae098079b4f683",
+    "tests": "e33bacb8172b28a7aba1822862a252da3bab266d1dc31b978a95930b31769014"
+  },
+  "auditor": {
+    "path": "proof/audit_g1_route_decision_v2_hostile.py",
+    "sha256": "f63a2fbc2f911f13bb045df4609a608ee195f75c7c934541822aa1dd751c1966"
+  },
+  "checks": {
+    "actual_frozen_input_tamper_fail_closed": "PASS",
+    "actual_zero_retained_branch": "PASS",
+    "document_artifact_boundary": "PASS",
+    "optimized_OO_fail_closed": "PASS",
+    "optimized_O_fail_closed": "PASS",
+    "retained_counterfactual_fail_closed": "PASS",
+    "sealed_normal_replay": "PASS",
+    "self_identity_binding": "PASS",
+    "unauthorized_next_action": "PASS",
+    "validation_counterfactual_fail_closed": "PASS"
+  },
+  "claim_boundary": "Read-only hostile audit of the sealed G1 route-decision v2 program decision. It certifies neither a mathematical theorem nor a route refutation.",
+  "conclusion": "G1 is legitimately closed only as OBSERVED NO_SELECTION for the sealed zero-retained branch. P2A/P2B/P2C and combinations are not selected and not refuted; the package authorizes no P2 theorem search.",
+  "epistemic_status": "OBSERVED",
+  "replay_returncodes": {
+    "normal": 0,
+    "optimized": 1,
+    "optimized_twice": 1
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,82 @@
+{
+  "almost_all_short_interval": {
+    "delta_exponent": "-13/15",
+    "epsilon_convention": "published conclusion is theta > 2/15, written y >= X^(2/15+epsilon)",
+    "formula": "theta_almost_all = 1 - 2/b",
+    "theta": "2/15",
+    "two_over_b": "13/15"
+  },
+  "arithmetic": "exact fractions.Fraction only",
+  "artifact_version": 2,
+  "assertions": {
+    "almost_all_endpoint_equal": true,
+    "crossover_equal": true,
+    "uniform_endpoint_equal": true
+  },
+  "claim_boundary": "This artifact exactly verifies rational consequences of the published bounds named in docs/cycle-1-route-a.md; it does not reprove those analytic bounds or their error estimates.",
+  "critical_large_values_cell": {
+    "cell": {
+      "N_in_terms_of_T": "N = T^(4/5)",
+      "V_in_terms_of_N": "V = N^(3/4)",
+      "V_in_terms_of_T": "V = T^(3/5)"
+    },
+    "classical_equation_1_1": {
+      "maximum_T_exponent": "3/5",
+      "minimum_inside_T_times_min": "3/5",
+      "terms": {
+        "N^2*V^-2": "2/5",
+        "T*N*V^-2": "3/5",
+        "T*N^4*V^-6": "3/5"
+      }
+    },
+    "guth_maynard_theorem_1_1": {
+      "maximum_T_exponent": "13/25",
+      "terms": {
+        "N^(18/5)*V^-4": "12/25",
+        "N^2*V^-2": "2/5",
+        "T*N^(12/5)*V^-4": "13/25"
+      }
+    },
+    "strict_gain_in_T_exponent": "2/25"
+  },
+  "crossover": {
+    "difference_at_sigma": "0/1",
+    "difference_identity": "A_I(sigma)-A_GM(sigma) = 30*(sigma-7/10)/((2-sigma)*(3+5*sigma))",
+    "global_density_coefficient_b": "30/13",
+    "guth_maynard_at_sigma": "30/13",
+    "ingham_at_sigma": "30/13",
+    "positive_denominator_at_sigma": "169/20",
+    "sigma": "7/10"
+  },
+  "frozen_source": {
+    "arxiv_identifier": "2405.20552v2",
+    "pdf_sha256": "915392cf7d0ecd108479814a9a1481e23423ef63415776471cec3975ae482cae",
+    "source_tarball_sha256": "9d34ac093abcb8129f68ff86eaad65f09a09d832fe637ff84d50a69496046bdc",
+    "tex_sha256": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428"
+  },
+  "inputs": {
+    "guth_maynard_coefficient": "15/(3+5*sigma)",
+    "ingham_coefficient": "3/(2-sigma)",
+    "sigma_star": "7/10"
+  },
+  "mathematical_certificate_sha256": "ef6b7ceaec9ca397b260de3554f444266ec80c971f2603e3e25320edd45812e9",
+  "replay": {
+    "python_implementation": "CPython",
+    "python_version": "3.12.3",
+    "script": "proof/replay_baseline_route_a.py",
+    "script_sha256": "1575864e8870138e19fc0cb63e3b88aee16e0b6a346ff5bee215fe3348de1c38",
+    "wall_time_ns": 729622
+  },
+  "route": "A",
+  "supersedes": {
+    "artifact": "artifacts/baseline-route-a-v1.json",
+    "change": "adds the exact Theorem 1.1 and classical (1.1) critical-cell evaluation",
+    "mathematical_certificate_sha256": "87ac7c52776294cdbe29491bc1e9c23e31a0f8283ff05421a43b907eac042749"
+  },
+  "uniform_short_interval": {
+    "epsilon_convention": "published conclusion is theta > 17/30, written y >= x^(17/30+epsilon)",
+    "formula": "theta_uniform = 1 - 1/b",
+    "one_over_b": "13/30",
+    "theta": "17/30"
+  }
+}

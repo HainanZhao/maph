@@ -1,0 +1,43 @@
+{
+  "artifact_id": "cycle-4-p1r-preregistration-v1-hostile-audit-v1",
+  "audited_v1_hashes": {
+    "artifact": "c6491407fb3cc5096610ddda8a8db952ffe0e002441d105024368f6486e39a5b",
+    "builder": "9010102782404cf63eb669714dadfb1a0f4b67005f895c3175ec669c60c94059",
+    "document": "675708d31772f9483f3d6d53c5975908d40fe6ab76d9a5c189170c7a332899f8",
+    "plan": "ce8cfb2c4c196b53a0e823667da2ce4e840d7ce18c754a9be1423064d9fce479",
+    "tests": "779f504a333dcbfda1ed7f06d380a20b369919a3a494004e974621e6fc97e8b4"
+  },
+  "auditor": {
+    "path": "proof/audit_cycle_4_p1r_preregistration_v1_hostile.py",
+    "sha256": "8852bb954e77a20679033ea841f084ee2991643fe152c8b5856d3913baf9b5dc"
+  },
+  "authorization": "FS execution is authorized by the current PLAN after this preregistration; CRR discovery/search remains forbidden until a separate formalization preregistration seals every listed field.",
+  "checks": {
+    "CRR_search_forbidden": "PASS",
+    "FS_authorized_after_preregistration": "PASS",
+    "FS_status_wording": "FAIL",
+    "actual_check_command": "PASS",
+    "documented_check_command_verbatim": "FAIL",
+    "four_term_S3_source_locator_and_hypothesis": "FAIL",
+    "mutable_live_PLAN_replay_lifecycle": "FAIL",
+    "optimized_OO_fail_closed": "PASS",
+    "optimized_O_fail_closed": "PASS",
+    "overwrite_fail_closed": "PASS",
+    "self_identity_binding": "PASS"
+  },
+  "claim_boundary": "Read-only audit of P1R preregistration v1. It records program/source-record defects and does not decide either P1R-FS or P1R-CRR mathematical target.",
+  "defects": {
+    "documented_replay": "The document supplies --check followed by an artifact path, but v1 accepts only a boolean --check; the literal documented command exits nonzero.",
+    "fs_status": "p1r_fs is tagged PROVED while its own gate says UNEXECUTED and requires two independent routes plus hostile audit. It must remain an unexecuted target/premise until that gate passes.",
+    "mutable_plan": "The sealer hashes the live mutable PLAN.md. Repository policy requires PLAN updates at gate changes, so a legitimate future P1R-FS gate update makes the v1 artifact unreplayable.",
+    "source_s3": "The cited Refined S3 proposition prpstnS3 is two-term. The v1 four-term scale algebra instead uses the later S3 Bound prpstn:S3, whose N>=T^(3/4) condition is not pinned in the v1 source ledger."
+  },
+  "epistemic_status": "OBSERVED",
+  "required_correction": [
+    "Create a v2 artifact with a frozen PLAN snapshot or an explicitly archived plan-byte input; do not make replay depend on live PLAN.md after later mandatory gate updates.",
+    "Make the documented and parser replay commands identical, and add a verbatim-command regression.",
+    "Replace the GM-S3 four-term source pin with Proposition prpstn:S3 and its N>=T^(3/4) gate, while separately retaining prpstnS3 only for its two-term statement if needed.",
+    "Downgrade the P1R-FS branch from PROVED to an unexecuted route target until its required independent routes, reconciliation, and hostile audit close."
+  ],
+  "status": "FAIL_REPLAY_LIFECYCLE_SOURCE_AND_STATUS"
+}

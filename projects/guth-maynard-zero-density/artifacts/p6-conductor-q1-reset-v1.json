@@ -1,0 +1,60 @@
+{
+  "artifact_id": "p6-conductor-q1-reset-v1",
+  "document": {
+    "path": "docs/p6-conductor-q1-reset-v1.md",
+    "sha256": "1f0ed17e856cde87affe8523b5268a28ee65fccc319b58ba2cdfb25987db512a"
+  },
+  "epistemic_status": "PROVED",
+  "exact_exponent_rows": [
+    {
+      "first_q_exponent": "7/6",
+      "first_t_exponent": "1",
+      "second_qt_exponent": "15/13",
+      "sigma": "1/2",
+      "uniform_qt_exponent": "7/6"
+    },
+    {
+      "first_q_exponent": "7/10",
+      "first_t_exponent": "3/5",
+      "second_qt_exponent": "9/13",
+      "sigma": "7/10",
+      "uniform_qt_exponent": "7/10"
+    },
+    {
+      "first_q_exponent": "7/15",
+      "first_t_exponent": "2/5",
+      "second_qt_exponent": "6/13",
+      "sigma": "4/5",
+      "uniform_qt_exponent": "7/15"
+    },
+    {
+      "first_q_exponent": "7/30",
+      "first_t_exponent": "1/5",
+      "second_qt_exponent": "3/13",
+      "sigma": "9/10",
+      "uniform_qt_exponent": "7/30"
+    }
+  ],
+  "external_input": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "The primitive CGL-style analytic estimate with q1'=d and all source hypotheses."
+  },
+  "frozen_inputs": {
+    "artifacts/p6-cgl-v2-reconciliation-v1.json": "cf59aa63b97d69c672fafa0b0ca49221d9005c3da6ccd61f05d37f4bcbc68e49",
+    "artifacts/p6-primitive-to-all-transfer-v1.json": "2edccf46d15229fb8b8ff2c9510d0912f73228da681577ca66d869a8d8acf0d7",
+    "artifacts/sources/g1-literature-audit-v1/extracted-2507.08296v2/Large_Value_Estimates_for_Dirichlet_Polynomials_with_Characters_and_Zero_Density_of_Dirichlet___L_-Functions.tex": "0b9ebb6b604944b7c59a9ec37a75c48f6a08f88611f911ff5f02dc013b848e2f"
+  },
+  "gate_effect": "Z06 q1-sensitive termwise domination is removed as an independent conductor-transfer obligation; prescribed-q1 intermediate uses and S06 remain open.",
+  "hostile_audit": "DEFERRED_TO_PAPER_STAGE",
+  "replay": "python3 proof/p6_conductor_q1_reset_v1.py --check",
+  "sealer": {
+    "path": "proof/p6_conductor_q1_reset_v1.py",
+    "sha256": "a4b35ce8f703a4e460cdf11e3349dc9281f2814b4be3883497868b2c6de009dd"
+  },
+  "theorem": {
+    "all_character_envelope": "tau(q)*(qT)^o(1)*(q^(7a/3)T^(2a)+(qT)^(30a/13)), a=1-sigma",
+    "conclusion": "Apply the final monotone d-envelope before summing conductors; no original q1|q must divide d or be dominated termwise.",
+    "hypothesis": "For every exact conductor d|q, the primitive estimate is available after the fresh admissible choice q1'=d.",
+    "uniform_consequence": "(qT)^((7/3)(1-sigma)+o(1)) conditional on the primitive input"
+  }
+}

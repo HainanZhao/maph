@@ -1,0 +1,52 @@
+{
+  "artifact_type": "stream-c-route-b-closure-certificate",
+  "certificate_version": 4,
+  "claim_boundary": "PROVED conditional only on Guth--Maynard's published zero-density theorem: the archived explicit-formula source, endpoint transfer, height/multiplicity convention bridge, and Route-B dependency chain are closed. No new density exponent or prime-interval exponent is claimed.",
+  "convention_bridge": {
+    "endpoint": "sum_(n in [x,x+y]) Lambda(n) differs from psi_0(v)-psi_0(u) by O(log x), with v-u=y+O(1).",
+    "height": "Kedlaya uses |gamma|<T. Any literal GM |rho|<=T discrepancy lies in unit boundary strips and is O(x log T/T), absorbed in O(x(log x)^3/T).",
+    "multiplicity": "Kedlaya's residue computation explicitly counts every zero with multiplicity; the local boundary count is pinned by HSW plus Bui--Heath-Brown.",
+    "status": "PROVED"
+  },
+  "epistemic_status": "PROVED",
+  "exact_transfer_invariants": {
+    "1_over_b": "13/30",
+    "2_over_b": "13/15",
+    "almost_all_theta": "2/15",
+    "b": "30/13",
+    "status": "PROVED",
+    "uniform_theta": "17/30"
+  },
+  "external_truncated_explicit_formula": {
+    "range": "all x>=2, T>0; GM uses 2<=T<=x",
+    "remainder_transfer": "At u=ceil(x)-1 and v=floor(x+y), the half-weight and endpoint changes plus both source remainders are O(x(log x)^3/T).",
+    "source": "Kedlaya 18.785 Theorem 1 and proof unit, licensed MIT OCW CC BY-NC-SA 4.0; source ledger v2",
+    "status": "PROVED"
+  },
+  "frozen_dependencies": {
+    "formula_source_check_v2": "346a7beb7a5c2387b99f5a3e03a78bd0bf9856b38ce0e6bd4da0192d95b95f27",
+    "formula_source_ledger_v2": "3433e974b9751d310447847d75abbf529e5b4ed7e21e87a0224e4efb8ea0fde3",
+    "gm_tex": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428",
+    "route_b_v3": "9eca349eae8721e1b0c80a5d54ccf75a08cc7e1fdf99ca887548891c480d53f5",
+    "route_b_v3_replay": "254899acff31f3fa4eb644ab677b13ed5c928719ab789195fe11323660556d74"
+  },
+  "replay": {
+    "interpreter_requirement": "Python 3 standard library plus pinned system mutool for PDF text-anchor verification",
+    "script_sha256": "1be7195a890046e7aff63069137a5ab224bd2496f180fb87f12de9410723882a",
+    "write_command": "python3 projects/guth-maynard-zero-density/proof/replay_short_intervals_stream_c_route_b_v4.py --write projects/guth-maynard-zero-density/artifacts/cycle-2-stream-c-route-b-v4.json"
+  },
+  "retained_route_b_v3_nodes": {
+    "local_pair_count": "Hasanalizade--Shen--Wong plus Bui--Heath-Brown",
+    "near_one_density": "Huxley (corrected bibliographic identity)",
+    "status": "PROVED",
+    "zero_free_high_height": "Ford Theorem 5",
+    "zero_free_low_height": "Platt--Trudgian Theorem 1"
+  },
+  "route_conclusion": {
+    "almost_all": "The Route-B deduction supplies the stated almost-all asymptotic at exponent theta=2/15+epsilon.",
+    "scope": "This is a source-chain closure of Guth--Maynard's existing deduction, not an improvement or independent reproof of its density theorem.",
+    "status": "PROVED conditional only on Guth--Maynard's published zero-density theorem",
+    "uniform": "The Route-B deduction supplies the stated asymptotic in intervals of exponent theta=17/30+epsilon."
+  },
+  "supersedes": "v3 only by closing its external truncated-explicit-formula source node; v1-v3 remain preserved"
+}

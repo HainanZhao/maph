@@ -1,0 +1,153 @@
+{
+  "artifact_id": "p7-norm-aggregation-route-b-v1",
+  "claim_boundary": "Exact ray-character hand calculation, norm identity, and conditional epsilon bookkeeping only; no Hecke-family large-value or density theorem follows.",
+  "epistemic_status": "PROVED",
+  "gate": "P7-1-NORM-AGGREGATION",
+  "norm_aggregation": {
+    "derivation": [
+      "Both sides are multiplicative by unique ideal factorization and divisor convolution.",
+      "p=2: one ideal of norm 2^e and sum_{j=0}^e chi_-4(2)^j=1.",
+      "p=1 mod 4: p=ppbar, so e+1 ideals of norm p^e and sum_{j=0}^e 1=e+1.",
+      "p=3 mod 4: p is a prime ideal of norm p^2, so there is one ideal for even e and none for odd e; sum_{j=0}^e(-1)^j has exactly that value."
+    ],
+    "finite_local_crosscheck": [
+      {
+        "exponents_checked": "0..8",
+        "prime": 2,
+        "splitting": "ramified"
+      },
+      {
+        "exponents_checked": "0..8",
+        "prime": 3,
+        "splitting": "inert"
+      },
+      {
+        "exponents_checked": "0..8",
+        "prime": 5,
+        "splitting": "split"
+      }
+    ],
+    "identity": "a_Q(i)(n)=sum_{d|n} chi_-4(d)",
+    "inequality": "0<=a_Q(i)(n)<=tau(n), because chi_-4(d) is in {-1,0,1} and the local formulas are nonnegative.",
+    "status": "PROVED"
+  },
+  "normalization": {
+    "epsilon_lemma": "For each delta>0, D_N<<_delta N^delta. If N<=T^C for fixed C, then D_N^4<<_{delta,C}T^(4C delta)=T^o(1); choose delta after the desired o(1) allowance. Hence all three multipliers are absorbed into the existing T^o(1).",
+    "exact_threshold_substitution": "V becomes V/D_N, yielding multipliers D_N^2, D_N^4, D_N^4 on the three Theorem-1.1 terms.",
+    "gm_proof_regime": "The pinned proof explicitly reduces the nontrivial use of Theorem 1.1 to N<T, which is covered with C=1.",
+    "normalization": "D_N=max_{N<n<=2N} tau(n); b_n=A_chi(n)/D_N has |b_n|<=1 and F_chi=D_N F_b.",
+    "precise_outcome": "EXPONENT_HARMLESS_IN_THE_POLYNOMIAL_LENGTH_HEIGHT_REGIME",
+    "separate_family_cost": "Even in N<=T^C this only normalizes each fixed chi polynomial. It does not supply a common coefficient vector or pay the cost of summing over chi.",
+    "stated_estimate": {
+      "bound": "R<=T^(o(1)) (N^2 V^-2 + N^(18/5)V^-4 + T N^(12/5)V^-4)",
+      "coefficient_hypothesis": "|b_n|<=1",
+      "height_length_condition_for_absorption": "N<=T^C for a fixed C; the GM proof's nontrivial reduction uses N<T",
+      "sample_hypothesis": "1-separated t_r in [0,T]",
+      "threshold_powers": [
+        2,
+        4,
+        4
+      ]
+    },
+    "status": "PROVED_CONDITIONAL_ON_LENGTH_HEIGHT_RELATION",
+    "unconditional_limit": "NOT_ESTABLISHED for an arbitrary two-parameter use of the displayed theorem with no relation between N and T: N^o(1) need not be T^o(1)."
+  },
+  "ray_character_calculation": {
+    "aggregated_values": {
+      "A_chi_3(17)": -2,
+      "A_chi_pi4(17)": 2
+    },
+    "class_number_one_reduction": "For h(Q(i))=1, a coprime ideal (alpha) is evaluated through alpha modulo f, modulo the generator ambiguity mu_4.",
+    "mod_3": {
+      "exact_conductor": "The only proper divisor of (3) is (1); its ray quotient is trivial.",
+      "fourth_power_calculation": {
+        "(1+i)^4": "-4=-1 mod (3)",
+        "(1-i)^4": "-4=-1 mod (3)"
+      },
+      "mu4_image_count": 4,
+      "quotient_count": 2,
+      "unit_count": 8,
+      "values": {
+        "4+i": -1,
+        "4-i": -1
+      }
+    },
+    "mod_pi4": {
+      "congruences": {
+        "4+i": "i mod (4)",
+        "4-i": "-i mod (4)"
+      },
+      "values": {
+        "4+i": 1,
+        "4-i": 1
+      }
+    },
+    "pi_power": {
+      "exact_conductor": "The nontrivial e=4 quotient character cannot factor through e<4 because all those quotients are trivial.",
+      "formula": "|(O/(1+i)^e)^*|=2^(e-1), with |image(mu_4)|=1,2,4,4 for e=1,2,3,4.",
+      "rows": [
+        {
+          "e": 1,
+          "mu4_image_count": 1,
+          "quotient_count": 1,
+          "unit_count": 1
+        },
+        {
+          "e": 2,
+          "mu4_image_count": 2,
+          "quotient_count": 1,
+          "unit_count": 2
+        },
+        {
+          "e": 3,
+          "mu4_image_count": 4,
+          "quotient_count": 1,
+          "unit_count": 4
+        },
+        {
+          "e": 4,
+          "mu4_image_count": 4,
+          "quotient_count": 2,
+          "unit_count": 8
+        }
+      ]
+    },
+    "status": "PROVED"
+  },
+  "replay": {
+    "check_command": "python3 proof/run_p7_norm_aggregation_route_b_v1.py --check",
+    "runtime": {
+      "implementation": "CPython",
+      "json_policy": "stdlib json sort_keys=True; UTF-8; LF; trailing newline",
+      "optimize": 0,
+      "version": "3.12.3"
+    },
+    "script": "proof/run_p7_norm_aggregation_route_b_v1.py",
+    "script_sha256": "f638c82f9b92c9d996166ab349c990791cdd25863fc4433eacfd0ae7c6d3c900",
+    "write_command": "python3 proof/run_p7_norm_aggregation_route_b_v1.py --write"
+  },
+  "resource_contract": {
+    "rss_kib_strictly_less_than": 262144,
+    "wall_seconds_strictly_less_than": 60
+  },
+  "route": "B: local splitting, explicit generator, and threshold-homogeneity derivation",
+  "source_integrity": {
+    "guth_maynard_tex": {
+      "path": "artifacts/sources/arxiv-2405.20552v2/LargevaluesDirichlet17.tex",
+      "sha256": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428"
+    },
+    "p7_preregistration_v2": {
+      "path": "artifacts/p7-hecke-qi-preregistration-v2.json",
+      "sha256": "fa3c98ce481e913f2c8522856114b8cca643d763314e01a36b0aa7cf9110dfc9"
+    },
+    "zaman_tex": {
+      "path": "artifacts/sources/p7-hecke-v1/zaman-1502.05679v4/Explicit_estimates_for_the_zeros_of_Hecke_L-functions.tex",
+      "sha256": "9440e5d28903d641df03e261c5d9f497bfc7f63062d279b082d6077ad8eaf620"
+    }
+  },
+  "type_mismatch": {
+    "non_no_go": "This does not exclude a character-aware, ideal-indexed, or separately summed theorem with a separately proved family accounting.",
+    "statement": "The two fixed-character A_chi differ at n=17. A theorem whose input is one coefficient vector b_n shared across all samples cannot be invoked verbatim on their joint (chi,t) sample collection.",
+    "status": "PROVED"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "artifact_id": "cycle-6-crr-afari-coefficient-coupling-v1-test-correction",
+  "claim_boundary": "This correction records and repairs a literal test expectation only. It changes no mathematical statement, source anchor, convention, v1 artifact field, or replay payload, and it proves no new AFARI/CFARI/CRR-U result.",
+  "corrected_assertion": "self.assertIn(\"proves neither\", v1[\"claim_boundary\"])",
+  "correction": {
+    "affected_claims": "none",
+    "artifact_payload_change": "none",
+    "cause": "A semantic paraphrase was encoded as an exact-string assertion.",
+    "epistemic_status": "OBSERVED",
+    "error": "The v1 test expected the literal substring 'does not prove'; the sealed v1 claim boundary says 'proves neither'.",
+    "mathematical_change": "none",
+    "resolution": "Preserve v1; use a new corrected test that checks the exact sealed phrase 'proves neither'.",
+    "source_change": "none"
+  },
+  "epistemic_status": "OBSERVED",
+  "frozen_hashes": {
+    "correction_document": {
+      "path": "docs/cycle-6-crr-afari-coefficient-coupling-v1-test-correction.md",
+      "sha256": "aa06602d62891627656fc9ed9429d5a6e2874ecbbbe1ab517b95efd3c8606b1a"
+    },
+    "correction_test": {
+      "path": "tests/test_cycle_6_crr_afari_coefficient_coupling_v1_test_correction.py",
+      "sha256": "07bfebc481cda3c3099b185ff41911e726c2c2bd1327314b8713cbdf6bb7973a"
+    },
+    "v1_artifact": {
+      "path": "artifacts/cycle-6-crr-afari-coefficient-coupling-v1.json",
+      "sha256": "a9b142f8fd22e4fe9ebd4857af4eb7e764aa20ea379170930f6446231e663266"
+    },
+    "v1_builder": {
+      "path": "proof/build_cycle_6_crr_afari_coefficient_coupling_v1.py",
+      "sha256": "42091bb6799e9357f840a77efede56b66d5c2c65a613bf3541779646466ec62e"
+    },
+    "v1_conventions": {
+      "path": "conventions/crr_afari_coupling_v1.py",
+      "sha256": "8d74815084b859a985de90cd1429bab734269f7373794dd81c5515fad49b6bbf"
+    },
+    "v1_document": {
+      "path": "docs/cycle-6-crr-afari-coefficient-coupling-v1.md",
+      "sha256": "5ed3d0d2c17e0e0766704e59c58d5a013f80a26243d13b8ff96fe6c63d54f9fe"
+    },
+    "v1_test": {
+      "path": "tests/test_cycle_6_crr_afari_coefficient_coupling_v1.py",
+      "sha256": "8e29c1a50b69c9e9574578e24f8a5cefa4c1862801efd35d1b0debdffe74bdb7"
+    }
+  },
+  "original_assertion": "self.assertIn(\"does not prove\", data[\"claim_boundary\"])",
+  "preserved_v1": {
+    "artifact_id": "cycle-6-crr-afari-coefficient-coupling-v1",
+    "artifact_sha256": "a9b142f8fd22e4fe9ebd4857af4eb7e764aa20ea379170930f6446231e663266",
+    "statement": "The v1 artifact, builder, conventions, document, and original failing test are immutable inputs to this correction."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_6_crr_afari_coefficient_coupling_v1_test_correction.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_6_crr_afari_coefficient_coupling_v1_test_correction.py",
+    "write_command": "python3 proof/build_cycle_6_crr_afari_coefficient_coupling_v1_test_correction.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE_BY_USER_DIRECTION",
+    "lightweight_checks": "immutable-artifact hash pinning, literal-expectation check, v1 replay, corrected replay, and tamper rejection"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_6_crr_afari_coefficient_coupling_v1_test_correction.py",
+    "sha256": "016590e57cd58639cce55a074679a2ef19f482f230a0581612fb8a0bac0ee644"
+  },
+  "status": "SEALED_V1_TEST_CORRECTION_LIGHTWEIGHT_CHECKED",
+  "v1_claim_boundary": "This artifact proves an actual-Farey energy/fourth-moment saturation reduction, a scalar-envelope calibration, and the exact common-coefficient phase bridge. It proves neither F4F_eta, AFARI_eta, CFARI_eta, CRR-U, a compatible witness, a cubic estimate, a density gain, a short-interval theorem, a full-method saturation theorem, or an L-function result.",
+  "v1_replay": {
+    "command": "python3 proof/build_cycle_6_crr_afari_coefficient_coupling_v1.py --check",
+    "epistemic_status": "PROVED",
+    "result": "v1 builder --check passed without changing the immutable artifact"
+  }
+}

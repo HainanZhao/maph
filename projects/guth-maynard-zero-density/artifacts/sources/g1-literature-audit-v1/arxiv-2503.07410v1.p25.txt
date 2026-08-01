@@ -1,0 +1,74 @@
+LARGE VALUE ESTIMATES IN NUMBER THEORY, HARMONIC ANALYSIS, AND COMPUTER SCIENCE 25
+
+�
+
+ξ1,ξ2∈Φ
+| ˆW(ξ1 − ξ2)|2,
+
+and the terms in the sum are all positive. This sum measures the size of ˆW on the difference set
+Φ − Φ. But when r ≥ 3, the terms of (24) are not all positive and it is necessary to show that
+there is significant cancellation between them in order to get new large value estimates in the range
+σ ≤ 3/4. This is tricky because we need to prove a bound for all sets W. The case r = 2 involves
+the difference set Φ − Φ, and the case of larger r involves a generalization which we call a cyclic
+difference set of order r:
+
+(25)
+DrΦ := {(ξ1 − xi2, ξ2 − ξ3, ..., ξr − ξ1) : ξ1, ..., ξr ∈ Φ}.
+
+Then we can rewrite (24) as
+
+(26)
+�
+
+i
+si(MΦ,W )2r =
+�
+
+(τ1,...,τr)∈DrΦ
+ˆW(τ1) ˆW(τ2)... ˆW(τr) =
+�
+
+τ∈DrΦ
+ˆW ⊗r(τ).
+
+(In this setup, DrΦ is really a multi-set – a set with multiplicities – and the sum above includes
+the multiplicities.)
+The way the set DrΦ is distributed plays a role in bounding this sum. When Φ = {log n}2N
+n=N,
+the set DrΦ is distributed in a special way which will allow us to prove cancellation in the formula
+above. We can see this special structure already for the difference set Φ − Φ. To get a perspective,
+let us compare honest Dirichlet polynomials with the almost counterexample. We write
+
+ΦDir := {log n}2N
+n=N, ΦAC :=
+�� n
+
+N
+
+�2N
+
+n=N
+.
+
+Let us compare the difference sets ΦAC − ΦAC and ΦDir − ΦDir.
+Since |ΦAC| = N, |ΦAC − ΦAC| = N 2. In the difference set ΦAC − ΦAC, the number 0 appears
+with multiplicity N, and there are no other elements in a neighborhood around 0 of radius ∼ 1/N.
+Other than that, I believe that the set ΦAC − ΦAC appears quite random. For instance, the typical
+spacing between consecutive elements is ∼ 1/N 2, but by the birthday paradox we expect to see
+some very nearby elements with spacing ∼ 1/N 4.
+For our purposes, it’s important to understand the density of the set ΦAC −ΦAC at the scale 1/T,
+which we will write as ρ1/T,AC. You can think of this density as smoothing out the set ΦAC − ΦAC
+at scale 1/T. Technically, this is defined as follows. Let η1/T be a smooth function which is roughly
+constant on B1/T and rapidly decacying off of it, and normalized to have integral 1. Then we have
+
+ρ1/T,AC(ξ) :=
+�
+
+τ∈ΦAC−ΦAC
+η1/T (ξ − τ).
+
+We will be interested in T significantly bigger than N but much smaller than N 2, say T = N 6/5.
+The density ρ1/T,AC has a large spike near 0. Other than that, it roughly follows a smooth profile
+but with a significant amount of random noise. Here is a rough sketch.
+
+

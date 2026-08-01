@@ -1,0 +1,57 @@
+20
+LARRY GUTH
+
+no information for σ ≤ 3/4. For the matrix MAC, there would be a phase transition when σ crosses
+3/4. For σ > 3/4, the sharp bound would be |W| ⪅ N 2−2σ, while for σ ≤ 3/4, the sharp bound is
+|W| ⪅ T 2N −2σ.
+In the next sections, we will explain some of the ideas from [GM] and [DHPT] that lead to some
+further progress on large value problems in this regime.
+
+6. The Schatten tensor
+
+In [GM], Maynard and I made progress on the large value problem for Dirichlet polynomials for
+σ a little less than 3/4. In [DHPT], Diakonikoas, Hopkins, Pensia, and Tiegel made progress on
+certifying large value estimates for random matrices for σ a little less than 3/4. Some of the proof
+ideas are related to each other (and were discovered independently).
+Let us first state the results a little more precisely. The main theorem in [GM] applies to the
+case T = N 6/5.
+
+Theorem 6.1. (Theorem 1.1 in [GM]) Recall that MDir is the T × N matrix from Section 1.
+Suppose that T = N 6/5 and σ ≤ 3/4.
+Suppose that |bn| ≤ 1 for all n and that |(MDirb)t| ≥ N σ for all t ∈ W ⊂ {1, .., T}. Then
+
+|W| ⪅ N
+18
+5 −4σ.
+
+This theorem improves on the basic bound (14) when σ > 7/10. If σ = 3/4, then the basic
+bound (14) gives |W| ⪅ N 7/10, the bound in [GM] gives |W| ⪅ N 6/10, and Conjecture 3.3 predicts
+that |W| ⪅ N 5/10. These bounds for the case T = N 6/5 also imply new bounds for some other
+values of T.
+The results in [DHPT] work equally well for all values of T from N to N 2.
+If you plug in
+T = N 6/5, the bounds in [DHPT] match the bounds in [GM].
+
+Theorem 6.2. (Theorem 4.4 in [DHPT]) Suppose that N ≤ T ≤ N 2 and suppose that M is
+a random T × N matrix, where each entry is chosen independently from the standard Gaussian
+N(0, 1).
+For any ϵ > 0, there is a polynomial time algorithm for proving bounds for the large value problem
+for M with running time N D(ϵ). With high probability, this algorithm will prove that M obeys the
+following bounds.
+If ∥b∥2
+2 ≤ N, and if |(Mb)t| ≥ N σ for all t ∈ W, and if σ ≤ 3/4, then
+
+|W| ≤ C(ϵ)N ϵN 3−4σT 1/2.
+
+As mentioned above, if we plug in T = N 6/5, then the bound in Theorem 6.2 from [DHPT]
+matches the bound in Theorem 6.1 from [GM]. For other values of T, the bounds in [DHPT] are
+stronger than the bounds in [GM]. If T = N α, then the bound in Theorem 6.2 improves on the
+basic bound (14) when σ > 1 − α/4.
+The Schatten tensor is a key ingredient in both proofs, discovered independently by the two
+groups.
+Recall that M is a matrix. If W is a subset of the rows of M, then we write MW for the minor
+of M containing the rows in W. Our goal is to understand the norm of MW as a function of W.
+One classical way to find the norm of a matrix M is to look at (M ∗M)r or (MM ∗)r for a large
+power r. We can make this relationship precise using singular values. We let s1(M) ≥ s2(M) ≥ ...
+
+

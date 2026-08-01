@@ -1,0 +1,129 @@
+{
+  "artifact_id": "cycle-7-crr-phase-lattice-base-saturation-v1",
+  "base_necessary_saturation": {
+    "consequences": "Every Base-compatible phase lattice has lambda_(P,A)>=v^(12-3delta(v)) and Xi_(P,A)>=v^(-3delta(v))/(2C(1+log(2L)))=v^(-o(1)).",
+    "epistemic_status": "PROVED",
+    "fixed_power_exclusion": "For any fixed kappa>0, lambda<=v^(12-kappa) or Xi<=v^(-kappa) eventually excludes Base on that phase lattice.",
+    "lower_product": "Base cardinality plus pointwise values force lambda_(P,A)*Xi_(P,A)>=v^(12-3delta(v)).",
+    "mean_value_upper": "lambda_(P,A)<=C(H+L)(1+log(2L))<=2C v^12(1+log(2L)) for a phase lattice in [0,H]."
+  },
+  "base_saturation_efficiency": {
+    "base_equivalence": "The common capped Base pointwise condition is equivalent to lambda_(P,A)*Xi_(P,A)>=m*v^(14-2delta(v))/N_L.",
+    "definition": "Xi_(P,A)=m*Gamma_(P,A)^2/(N_L*lambda_(P,A)), where m=|A| and N_L=L-1",
+    "epistemic_status": "PROVED",
+    "exact_identity": "Gamma_(P,A)^2=N_L*lambda_(P,A)*Xi_(P,A)/m",
+    "range": "0<=Xi_(P,A)<=1"
+  },
+  "claim_boundary": "This artifact proves an exact actual-rational phase-alias quotient, constant alias-class bounds, and the exact capped Base-saturation functional for phase lattices. It proves neither a fixed-power distinct-phase norm/efficiency bound, a full phase-lattice Base exclusion, a Base-compatible phase-lattice witness, RationalMass, PositiveCubic, F4F, AFARI, CFARI, CRR-U, a density gain, a short-interval theorem, a full-method saturation theorem, nor an L-function result.",
+  "crr_u_effect": {
+    "epistemic_status": "PROVED",
+    "statement": "CRR-U remains open. This is a sharp phase-lattice/Base coupling reduction only."
+  },
+  "epistemic_status": "PROVED",
+  "exact_alias_quotient": {
+    "alias_relation": "z_n=z_m iff n/m=(s_Q/r_Q)^k for some integer k",
+    "capped_program": "Gamma_(P_Q,A)=max_(|q_C|<=omega_C)min_(a in A)|sum_C q_C z_C^a|, omega_C=sum_(n in C)w_n",
+    "class_bound": "Every exact alias class in I_L has at most four columns because (6/5)^4>2.",
+    "conclusion": "Exact rational aliases offer only constant factors; the unresolved problem is the distinct-phase quotient.",
+    "epistemic_status": "PROVED",
+    "operator_bound": "M_(A,P)=Mbar_(A,P)B and lambda_(P,A)<=4||Mbar_(A,P)||_op^2"
+  },
+  "exact_replay": {
+    "actual_anchor_at_v8": {
+      "r": 4097,
+      "s": 5121
+    },
+    "constants": {
+      "alias_capped_value_factor": 4,
+      "alias_operator_square_factor": 4,
+      "base_equivalence": "Gamma>=V_- iff lambda*Xi>=m*V_-^2/N_L",
+      "base_product_delta_loss": 3,
+      "base_product_main_exponent": 12,
+      "beta_lower": "6/5",
+      "beta_upper_strict": "5/4",
+      "max_exact_alias_class_size": 4,
+      "phase_lattice_efficiency": "Xi_(P,A)=m*Gamma_(P,A)^2/(N_L*lambda_(P,A))"
+    },
+    "scales_at_v8": {
+      "H": 68719476736,
+      "L": 1073741824,
+      "Q": 4096,
+      "R": 16777216,
+      "V": 2097152,
+      "v": 8
+    }
+  },
+  "frozen_hashes": {
+    "cfari_artifact": {
+      "path": "artifacts/cycle-6-crr-cfari-phase-equivalence-v1.json",
+      "sha256": "00ca4e7f794a06d797b24543d174d86ef6d8a3f99a068d14bb693ce894f16dad"
+    },
+    "conventions": {
+      "path": "conventions/crr_phase_lattice_base_saturation_v1.py",
+      "sha256": "02d64afcb324858982042cd946ab66111d489eab65b45a9057ac57034e6ec8ef"
+    },
+    "crr_v2_artifact": {
+      "path": "artifacts/cycle-4-p1r-crr-u-formalization-v2.json",
+      "sha256": "e26be797539eabe53ee765b7067d1c99fe4d440035e27785cf38aa64bc2fc84e"
+    },
+    "document": {
+      "path": "docs/cycle-7-crr-phase-lattice-base-saturation-v1.md",
+      "sha256": "f6203aa929c354efcd65bce00f5b33864f2ebaccce99af6bf3770298fd364f81"
+    },
+    "phase_flatness_artifact": {
+      "path": "artifacts/cycle-6-crr-phase-flatness-v1.json",
+      "sha256": "28990f2c703e0f8bfba8e25fb40ecc3d8231392e564653a01fcf5330a52b83ff"
+    },
+    "signed_extremizer_artifact": {
+      "path": "artifacts/cycle-7-crr-f4f-signed-projection-extremizer-v1.json",
+      "sha256": "9616ef55eec03f2f11ba2b625fd9e8cbd3c4ad581900a8a441ce9ed130d05796"
+    },
+    "spectral_phase_lift_artifact": {
+      "path": "artifacts/cycle-6-crr-spectral-phase-lift-v1.json",
+      "sha256": "165aff6e15a9c2177b1a69d7a2ce32ff9ba3b2d651aba6683d9f5ecca21403e4"
+    },
+    "tests": {
+      "path": "tests/test_cycle_7_crr_phase_lattice_base_saturation_v1.py",
+      "sha256": "614f84fce97194c14ac10b3d2f938a69a3b8c4006f0949e2b4446732720693f6"
+    }
+  },
+  "leading_vector_link": {
+    "epistemic_status": "PROVED",
+    "statement": "The sealed phase-rounded leading-vector certificate gives Xi_(P,A)>=rho*phi^2; the phase-flatness gate gives Xi_(P,A)>=rho*((1-kappa_0)^2/(1+kappa_0^2))*mu_top when chi_ph<=kappa_0<1."
+  },
+  "phase_lattice_rephasing": {
+    "epistemic_status": "PROVED",
+    "statement": "For W_(tau_0,A)={tau_0+P_Q a}, b_n -> b_n*n^(i*tau_0) preserves the cap and reduces the common coefficient problem exactly to D_b(P_Q a)=sum_n w_n b_n z_n^a."
+  },
+  "remaining_gate": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Prove a fixed-power bound for the distinct-phase quotient norm or Xi to exclude Base, or construct one common capped vector satisfying the exact product condition together with the row-set/energy conditions to witness Base compatibility."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_7_crr_phase_lattice_base_saturation_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_7_crr_phase_lattice_base_saturation_v1.py",
+    "write_command": "python3 proof/build_cycle_7_crr_phase_lattice_base_saturation_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE_BY_USER_DIRECTION",
+    "lightweight_checks": "exact phase-alias algebra, cap/scale bookkeeping, source-artifact checks, replay, and tamper rejection"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_7_crr_phase_lattice_base_saturation_v1.py",
+    "sha256": "bcd9d82eeb2cbb142258e166ce8dc29c4476528a59ed432a85701c17aa54f4d7"
+  },
+  "source_context": {
+    "base_cardinality": "v^(8-delta(v)) <= |W| <= v^(8+delta(v))",
+    "base_pointwise": "|D_v(t)| >= v^(7-delta(v)) for every t in W",
+    "base_set": "finite W subset [0,H], H^(1/100)-separated",
+    "mean_value": "lambda<=C(H+L)(1+log(2L)) for the separated actual matrix",
+    "phase_lift": "exact capped max-min program on one common W",
+    "signed_extremizer_boundary": "energy/cardinality/separation do not supply Base coefficients"
+  },
+  "status": "SEALED_PHASE_LATTICE_BASE_SATURATION_REDUCTION_LIGHTWEIGHT_CHECKED"
+}

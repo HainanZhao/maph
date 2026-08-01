@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 from pathlib import Path
 import subprocess
@@ -15,16 +16,19 @@ LAYER0 = ROOT / "artifacts/census-paper-layer0-reconciliation-v1.json"
 Q_AUDIT = ROOT / "artifacts/census-q-packet-corpus-audit-v1.json"
 H_TAXONOMY = ROOT / "artifacts/census-h-taxonomy-v2.json"
 TRANSPORT = ROOT / "artifacts/engine-b-transport-manifest-v5.json"
-TRANSPORT_LEDGER = ROOT / "artifacts/engine-b-transport-ledger-v4.json"
+TRANSPORT_LEDGER = ROOT / "artifacts/engine-b-transport-ledger-v5.json"
 IMPRIMITIVE = ROOT / "artifacts/rq000013-engine-a-imprimitive-certificate-v1.json"
 HILBERT_B5079 = ROOT / "artifacts/b5079-hilbert-ray-containment-v1.json"
 HILBERT_TRANCHE = ROOT / "artifacts/hilbert-ray-containment-tranche-v1.json"
-B5086 = ROOT / "artifacts/b5086-transport-geometry-v1.json"
-FINAL_DIRECT = ROOT / "artifacts/final-direct-source-coprime-screen-v1.json"
+GLOBAL_COPRIME = ROOT / "artifacts/engine-b-global-coprime-geometry-audit-v1.json"
 FROZEN_UNIVERSE = ROOT / "artifacts/frozen-ideal-census-v1.json"
 RANGE_AMENDMENT = ROOT / "data/census-paper-preregistration-amendment-v18.json"
 Q_ARB = ROOT / "artifacts/census-q-arb-audit-v1.json"
 COVER = ROOT / "artifacts/q-euler-deleted-prime-cover-theorem-v1.json"
+V5 = ROOT / "artifacts/full-census-yield-declaration-v5.json"
+V5_SCRIPT = ROOT / "scripts/declare_census_v5.py"
+SEXTIC_FIELDS = ROOT / "artifacts/roblot-sextic-field-inventory-v1.json"
+SEXTIC_3CLASS = ROOT / "artifacts/roblot-sextic-3class-v1.json"
 
 
 def require(text: str, snippets: tuple[str, ...]) -> None:
@@ -43,12 +47,14 @@ def main() -> None:
     imprimitive = json.loads(IMPRIMITIVE.read_text(encoding="utf-8"))
     b5079 = json.loads(HILBERT_B5079.read_text(encoding="utf-8"))
     tranche = json.loads(HILBERT_TRANCHE.read_text(encoding="utf-8"))
-    b5086 = json.loads(B5086.read_text(encoding="utf-8"))
-    final_direct = json.loads(FINAL_DIRECT.read_text(encoding="utf-8"))
+    global_coprime = json.loads(GLOBAL_COPRIME.read_text(encoding="utf-8"))
     frozen = json.loads(FROZEN_UNIVERSE.read_text(encoding="utf-8"))
     amendment = json.loads(RANGE_AMENDMENT.read_text(encoding="utf-8"))
     q_arb = json.loads(Q_ARB.read_text(encoding="utf-8"))
     cover = json.loads(COVER.read_text(encoding="utf-8"))
+    v5 = json.loads(V5.read_text(encoding="utf-8"))
+    sextic_fields = json.loads(SEXTIC_FIELDS.read_text(encoding="utf-8"))
+    sextic_3class = json.loads(SEXTIC_3CLASS.read_text(encoding="utf-8"))
 
     split = layer0["structural_trichotomy"]
     require(source, (
@@ -84,7 +90,16 @@ def main() -> None:
         "[42,0;0,6]",
         "four-support nondegeneracy",
         "q-euler-deleted-prime-cover-theorem-v1.json",
-        "10.5281/zenodo.21729947",
+        "10.5281/zenodo.21730707",
+        "2461+5739=8200",
+        "(iii) and (iv)",
+        "Prop.~4 and Eq.~(9)",
+        "no doubly assigned row",
+        "not a general theorem",
+        "Of those 382, 309 complete",
+        "48 reuse full \\texttt{bnfcertify}",
+        "261",
+        "remaining 73",
     ))
     if (
         cover["status"] != "PASS_PROVED_THEOREM_AND_FINITE_COROLLARY"
@@ -95,6 +110,26 @@ def main() -> None:
         or cover["falsification_result"]["counterexample"]["finite_norm"] != 252
     ):
         raise RuntimeError("quadratic deleted-prime theorem artifact drifted")
+    if (
+        v5["histogram"]["ENGINE_B_ELIGIBLE"] != 232
+        or v5["histogram"]["ENGINE_C_ELIGIBLE"] != 881
+        or hashlib.sha256(V5_SCRIPT.read_bytes()).hexdigest()
+        != v5["source_hashes"]["scripts/declare_census_v5.py"]
+        or "engine populations overlap" not in V5_SCRIPT.read_text()
+    ):
+        raise RuntimeError("v5 disjoint assignment audit drifted")
+    if (
+        sextic_fields["counts"]["required_distinct_field_keys"] != 382
+        or sextic_fields["counts"]["reused_sequential_field_certificates"] != 48
+        or sextic_fields["counts"]["new_deduplicated_field_screens"] != 334
+        or sextic_fields["counts"]["status"] != {
+            "EXACT_FIELD_GATES_COMPLETE": 309,
+            "NEEDS_STRONG_3_CLASS_CERTIFICATE": 73,
+        }
+        or sextic_3class["counts"]["residual_fields"] != 73
+        or sextic_3class["counts"]["failures"] != 0
+    ):
+        raise RuntimeError("sextic field-certificate partition drifted")
     if (
         frozen["raw_ideal_count"],
         frozen["self_conjugate_raw_count"],
@@ -110,25 +145,18 @@ def main() -> None:
         raise RuntimeError("immutable v5 scope manifest drifted")
     if transport_ledger["counts"] != {
         "v5_engine_b_rows": 232,
-        "member_transport_completed": 12,
-        "member_transport_open": 220,
+        "member_transport_completed": 22,
+        "member_transport_open": 210,
     }:
         raise RuntimeError("Engine-B transport successor ledger drifted")
     completed_transport = [row for row in transport_ledger["members"]
                            if row["transport_status"] == "PROVED_EXACT_MEMBER_TRANSPORT"]
-    if sorted(row["case_id"] for row in completed_transport) != [
-            "RQ-000039", "RQ-000195", "RQ-000200", "RQ-000205", "RQ-000213",
-            "RQ-000221", "RQ-000228",
-            "RQ-000425", "RQ-000436", "RQ-000457", "RQ-000459", "RQ-000465"]:
+    if len(completed_transport) != 22 or not {"RQ-002079", "RQ-002964", "RQ-002983", "RQ-001115", "RQ-001125", "RQ-001132", "RQ-001133", "RQ-001149", "RQ-001164", "RQ-001172"} <= {row["case_id"] for row in completed_transport}:
         raise RuntimeError("unexpected Engine-B member promotion")
-    if (b5086["claim_tag"], b5086["eligible_count"], len(b5086["records"])) != (
-            "PROVED_EXACT_TRANSPORT_GEOMETRY", 0, 7):
-        raise RuntimeError("B5-086 no-go screen drifted")
-    direct_counts = {row["closure_id"]: row["eligible_count"]
-                     for row in final_direct["closures"]}
-    if (final_direct["claim_tag"] != "PROVED_EXACT_TRANSPORT_GEOMETRY"
-            or direct_counts != {"B5-021": 0, "B5-033": 0}):
-        raise RuntimeError("final direct-source no-go screen drifted")
+    if (global_coprime["status"] != "PASS_EXACT_GEOMETRY_CLASSIFICATION"
+            or global_coprime["open_member_partition"]["route_obstructed_direct_coprime"] != 116
+            or global_coprime["open_member_partition"]["source_or_proof_open"] != 104):
+        raise RuntimeError("global direct-source geometry screen drifted")
     if (b5079["claim_tag"], b5079["hilbert_field_match_count"],
             b5079["hilbert_field_contained"]) != (
                 "PROVED_EXACT_SUBFIELD_TEST", 1, True):
@@ -192,7 +220,7 @@ def main() -> None:
         "Deleted-prime cover criterion",
         "four-support nondegeneracy",
         "Engine-B transport scope",
-        "All proved noncanonical Engine-B member transports",
+        "First twelve proved noncanonical Engine-B member transports",
         "UNSTARTED NO CASE LEVEL PACKET CLAIM",
         "A worked imprimitive row",
         "RQ-005298",
@@ -203,9 +231,15 @@ def main() -> None:
         "RQ-000221",
         "RQ-000228",
         "B5-022",
-        "B5-086 direct-source closure shares source prime 11",
-        "B5-021 and B5-033 admit no integral",
-        "10.5281/zenodo.21729947",
+        "earlier B5-086/B5-021/B5-033 direct-source exclusions used",
+        "116 have no incoming direct coprime-deletion direction",
+        "104 retained a",
+        "10.5281/zenodo.21730707",
+        "2461 + 5739 = 8200",
+        "equivalence of (iii) and",
+        "(iv). The companion paper",
+        "finds no doubly",
+        "assigned row in this finite corpus",
     ))
     print("CENSUS_PAPER_AUDIT=PASS")
 

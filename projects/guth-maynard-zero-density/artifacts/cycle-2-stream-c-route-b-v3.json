@@ -1,0 +1,63 @@
+{
+  "artifact_type": "versioned-stream-c-route-b-correction-certificate",
+  "certificate_version": 3,
+  "claim_boundary": "OBSERVED for the full route: its external truncated-explicit-formula source has not been independently checked. PROVED within the artifact: the Huxley bibliographic correction, the unchanged rational density arithmetic, and the status containment of the other v2 nodes.",
+  "correction_1_huxley_bibliography": {
+    "affected_claims": "bibliographic metadata only; the theorem statement, two-sided height convention, log^44 factor, and exponent calculations are unchanged.",
+    "cause": "citation identity was copied incorrectly; the frozen source and Guth--Maynard bibliography identify the correct article.",
+    "correct_citation": "M. N. Huxley, On the difference between consecutive primes, Invent. Math. 15 (1972), 164-170.",
+    "frozen_locator": "(1.9), printed p. 164 / PDF p. 173",
+    "status": "PROVED",
+    "v2_incorrect_citation": "M. N. Huxley, The distribution of zeros of the Riemann zeta-function, Invent. Math. 15 (1972), 141-163."
+  },
+  "correction_2_explicit_formula_status": {
+    "consequence": "No full Stream-C Route-B PASS or G0 PASS is licensed in v3.",
+    "external_dependency_status": "OBSERVED",
+    "observed_display": "GM TeX lines 2407-2417 displays the formula and cites Davenport Chapter 17.",
+    "status": "PROVED",
+    "unverified_items": [
+      "external theorem statement and its precise hypotheses",
+      "endpoint and zero-sum conventions",
+      "multiplicity and truncation convention",
+      "uniformity of O(x(log x)^3/T) in the employed range"
+    ]
+  },
+  "epistemic_status": "OBSERVED",
+  "exact_transfer_invariants": {
+    "1_over_b": "13/30",
+    "2_over_b": "13/15",
+    "almost_all_theta": "2/15",
+    "b": "30/13",
+    "status": "PROVED exact rational arithmetic only; downstream use remains contingent on the OBSERVED formula node.",
+    "uniform_theta": "17/30"
+  },
+  "next_authorized_dependency_action": "Incorporate and independently check the literature agent's formula ledger before changing external_truncated_explicit_formula from OBSERVED.",
+  "replay": {
+    "interpreter_requirement": "Python 3 standard library only",
+    "script_sha256": "254899acff31f3fa4eb644ab677b13ed5c928719ab789195fe11323660556d74",
+    "write_command": "python3 projects/guth-maynard-zero-density/proof/replay_short_intervals_stream_c_route_b_v3.py --write projects/guth-maynard-zero-density/artifacts/cycle-2-stream-c-route-b-v3.json"
+  },
+  "retained_v2_nodes": {
+    "local_pair_count": "Hasanalizade--Shen--Wong RvM with Bui--Heath-Brown multiplicity convention remains checked.",
+    "near_one_density": "Huxley (corrected citation) remains checked.",
+    "scope": "These are partial dependency closures, not a route-level PASS.",
+    "status": "PROVED",
+    "zero_free_high_height": "Ford Theorem 5 remains checked.",
+    "zero_free_low_height": "Platt--Trudgian Theorem 1 remains checked."
+  },
+  "source_hashes_checked": {
+    "guth_maynard_tex": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428",
+    "huxley_volume": "5946d8579810f0754e972d42a09ed2a703604b8fb4e6377f14caaa5dc48f9797"
+  },
+  "supersedes": "v2 only for the two explicitly listed corrections; v2 remains preserved",
+  "unchanged_huxley_math": {
+    "near_one_coefficient": {
+      "b": "30/13",
+      "b_minus_h(4/5)": "15/91",
+      "h(4/5)": "15/7",
+      "identity": "b-3/(3s-1)=3(30s-23)/(13(3s-1)) >= 15/91 on [4/5,1]"
+    },
+    "statement": "N(s,T) << T^(3(1-s)/(3s-1))(log T)^44 uniformly for 3/4<=s<=1 and -T<=gamma<=T.",
+    "status": "PROVED"
+  }
+}

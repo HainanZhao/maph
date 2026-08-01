@@ -1,0 +1,82 @@
+{
+  "artifact_id": "cycle-5-conditional-density-to-short-interval-map-v1",
+  "claim_boundary": "Exact endpoint algebra conditional on a proof-grade global density coefficient and every G0 explicit-formula/near-one/zero-free/multiplicity/range input. No density gain or new prime theorem is proved.",
+  "conditional_input": "B_eta=30/13-eta with 0<eta<4/13, uniformly available throughout the frozen explicit-formula density range with the G0 logarithmic controls",
+  "epistemic_status": "PROVED",
+  "exact_rows": [
+    {
+      "almost_all_improvement": "169/44805",
+      "almost_all_theta": "387/2987",
+      "density_coefficient": "2987/1300",
+      "eta": "1/100",
+      "uniform_improvement": "169/89610",
+      "uniform_theta": "1687/2987"
+    },
+    {
+      "almost_all_improvement": "169/8805",
+      "almost_all_theta": "67/587",
+      "density_coefficient": "587/260",
+      "eta": "1/20",
+      "uniform_improvement": "169/17610",
+      "uniform_theta": "327/587"
+    },
+    {
+      "almost_all_improvement": "169/4305",
+      "almost_all_theta": "27/287",
+      "density_coefficient": "287/130",
+      "eta": "1/10",
+      "uniform_improvement": "169/8610",
+      "uniform_theta": "157/287"
+    },
+    {
+      "almost_all_improvement": "169/1605",
+      "almost_all_theta": "3/107",
+      "density_coefficient": "107/52",
+      "eta": "1/4",
+      "uniform_improvement": "169/3210",
+      "uniform_theta": "55/107"
+    }
+  ],
+  "frozen_hashes": {
+    "cycle-2-stream-c-two-route-reconciliation-v2.json": {
+      "path": "artifacts/cycle-2-stream-c-two-route-reconciliation-v2.json",
+      "sha256": "b69e0caeb5d5ed5c8072acb62263d15c2b02470df0c10889287508837c9e706d"
+    },
+    "cycle-5-conditional-density-to-short-interval-map-v1.md": {
+      "path": "docs/cycle-5-conditional-density-to-short-interval-map-v1.md",
+      "sha256": "12375068aa4ce7424403817629c245185acf04a992009736e267e057cc7c86b5"
+    },
+    "g0-full-reconstruction-v3.json": {
+      "path": "artifacts/g0-full-reconstruction-v3.json",
+      "sha256": "5a3ec153c843d0c89d9a987ad043cdf9513a171d581f98447a9c12930d26cc4f"
+    }
+  },
+  "general_map": {
+    "almost_all": "theta=1-2/B",
+    "uniform": "theta=1-1/B"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_5_conditional_short_interval_map_v1.py --check",
+    "test_command": "python3 -m unittest tests.test_cycle_5_conditional_short_interval_map_v1 -v"
+  },
+  "research_stage_review_policy": {
+    "checks": "exact Fraction algebra, G0 anchors, hashes, replay",
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_5_conditional_short_interval_map_v1.py",
+    "sha256": "313b66c64eb9c6c0a9746450b6bd019eda2685e3e59d65e0a9d60abc18d771ca"
+  },
+  "status": "SEALED_CONDITIONAL_PROPAGATION_LIGHTWEIGHT_CHECKED",
+  "symbolic_identities": {
+    "almost_all_gain": "169*eta/[15*(30-13*eta)]",
+    "almost_all_theta": "(4-13*eta)/(30-13*eta)",
+    "uniform_gain": "169*eta/[30*(30-13*eta)]",
+    "uniform_theta": "(17-13*eta)/(30-13*eta)"
+  }
+}

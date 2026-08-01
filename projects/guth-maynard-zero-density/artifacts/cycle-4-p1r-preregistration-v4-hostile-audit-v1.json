@@ -1,0 +1,38 @@
+{
+  "artifact_id": "cycle-4-p1r-preregistration-v4-hostile-audit-v1",
+  "audited_v4_hashes": {
+    "artifact": "e2aeec9ec90e1fea0a9eade53d5ff1e57020df48bd92ae852121a941fbadd7f9",
+    "builder": "4dd7c196085ce60f5174072020b1c6b726338f53316a0746968c273f956c6e6c",
+    "document": "511569062b0a2efa0e565b94374d3ed40246800dcef4cc6b6a02189ab1fe6a28",
+    "tests": "265744a93d87691c57d862ae31b3a7453a51c509eb69de2a1e7d49662a117990"
+  },
+  "auditor": {
+    "path": "proof/audit_cycle_4_p1r_preregistration_v4_hostile.py",
+    "sha256": "44974dfdb092ad6e5536f5111c58ad0e5b8767418c799800b82d3de32bb6fa05"
+  },
+  "checks": {
+    "CRR_search_prohibited": "PASS",
+    "FS_unexecuted": "PASS",
+    "GM_T1_1_exact_formula_hypotheses_and_permitted_use": "PASS",
+    "S3_source_and_range": "PASS",
+    "documented_CLI": "PASS",
+    "immutable_snapshot_and_prior_failure_chain": "PASS",
+    "independent_6_8_8_substitution": "PASS",
+    "optimized_O": "PASS",
+    "optimized_OO": "PASS",
+    "overwrite": "PASS",
+    "preflight_not_frozen": "PASS",
+    "runtime_zero_PLAN_read": "PASS",
+    "self_tamper": "PASS",
+    "source_tamper": "PASS",
+    "static_zero_PLAN_reference": "PASS",
+    "v3_sole_failure_pinned": "PASS",
+    "v4_regression_test": "PASS",
+    "v4_regression_test_identity_audit_pinned": "PASS"
+  },
+  "claim_boundary": "Read-only audit of v4 source attribution and replay integrity. It proves no P1R mathematical theorem and authorizes no CRR discovery.",
+  "conclusion": "The sole v3 defect is corrected: the direct GM theorem, hypotheses, three-term formula, variable relabeling, and exact [6,8,8] calculation are all present and independently checked. No new mathematical conclusion follows.",
+  "epistemic_status": "OBSERVED",
+  "status": "PASS",
+  "test_binding_assessment": "The sealed v4 artifact need not use its post-seal regression test as a mathematical/source input: --check is its self-contained historical replay. This hostile audit hash-pins and executes the v4 regression test, so the test byte used for this verification is independently replayable."
+}

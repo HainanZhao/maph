@@ -1,0 +1,154 @@
+{
+  "arithmetic": "exact fractions.Fraction only",
+  "artifact_version": 4,
+  "claim_boundary": "Exact exponent audit conditional on the cited zero-detection lemma, Theorem 1.1, and mean-value theorem; it is not an independent proof of those analytic inputs.",
+  "construction_audit": {
+    "contained_pre_artifact_failure": "a hand-entered midpoint margin 3/52 was rejected by an exact assertion",
+    "corrected_value": "at s=3/4 the source margin formula evaluates to 1/54",
+    "status": "corrected before the first v4 artifact was written"
+  },
+  "coverage": {
+    "all_branch_labels_exercised": true,
+    "o_one_containment_retained": true,
+    "q_branches": [
+      "q <= alpha(s)",
+      "q > alpha(s)"
+    ]
+  },
+  "definitions": {
+    "B(s)": "15(1-s)/(3+5s)",
+    "alpha(s)": "B(s)/d(s)",
+    "d(s)": "18/5-4s",
+    "l(s)": "10/(6+10s)",
+    "u(s)": "15/(6+10s)"
+  },
+  "frozen_source": {
+    "arxiv_identifier": "2405.20552v2",
+    "source_locations": "source lines 2307--2399, proof of Theorem 1.2",
+    "source_tarball_sha256": "9d34ac093abcb8129f68ff86eaad65f09a09d832fe637ff84d50a69496046bdc",
+    "tex_sha256": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428"
+  },
+  "guth_maynard_branch_q_le_alpha": {
+    "condition": "q <= alpha(s)",
+    "exact_endpoint_substitutions": {
+      "first": [
+        "9/13",
+        "3/7"
+      ],
+      "second": [
+        "9/13",
+        "3/7"
+      ],
+      "third": [
+        "9/13",
+        "3/7"
+      ]
+    },
+    "first_term": {
+      "boundary_identity": "2u(s)(1-s)=B(s)",
+      "conclusion": "2q(1-s) <= B(s)+o(1); exact in the small-n regime",
+      "exponent": "2q(1-s)",
+      "monotonicity_in_q": "increasing"
+    },
+    "second_term": {
+      "boundary_identity": "d(s)alpha(s)=B(s)",
+      "conclusion": "d(s)q <= B(s)",
+      "exponent": "d(s)q",
+      "monotonicity_in_q": "increasing because d(s)>0"
+    },
+    "third_term": {
+      "boundary_identity": "1+(12/5-4s)l(s)=B(s)",
+      "conclusion": "1+(12/5-4s)q <= B(s)",
+      "exponent": "1+(12/5-4s)q",
+      "monotonicity_in_q": "decreasing because 12/5-4s<0"
+    }
+  },
+  "integer_choice": {
+    "large_n": {
+      "choice": "k=2",
+      "condition": "n > l(s)/2",
+      "contained_conclusion": "q <= u(s)+o(1), and q<u(s) eventually; no finite-T exact q<=u claim is made",
+      "exact_lower": "q=2n > l(s)",
+      "source_upper": "q <= 1+o(1)",
+      "uniform_slack": "u(s)-1 >= 1/14 > 0"
+    },
+    "power_scale_n_range": "1/100 < n <= 1/2+o(1)",
+    "small_n": {
+      "boundedness": "k <= 77",
+      "choice": "k=ceil(l(s)/n)",
+      "conclusion": "l(s) <= q=k*n < l(s)+n <= 3l(s)/2=u(s)",
+      "condition": "n <= l(s)/2 = 5/(6+10s)"
+    }
+  },
+  "mathematical_certificate_sha256": "e7b3853709d73f59325bf431d48e30bf6fb48db631a89c88ba2e87c2175e988c",
+  "mean_value_branch_q_gt_alpha": {
+    "condition": "q > alpha(s)",
+    "first_term": {
+      "conclusion": "2q(1-s) <= B(s)+o(1); exact in the small-n regime",
+      "exponent": "2q(1-s)"
+    },
+    "second_term": {
+      "exact_margin_at_7_10_3_4_4_5": [
+        "1/26",
+        "1/54",
+        "1/14"
+      ],
+      "exponent": "1+(1-2s)q",
+      "margin_identity": "B(s)-[1+(1-2s)alpha(s)]=[250(s-3/4)^2+3/8]/[2(3+5s)(9-10s)]>0",
+      "monotonicity_in_q": "strictly decreasing because 1-2s<0",
+      "strict_conclusion": "1+(1-2s)q < B(s)"
+    }
+  },
+  "monotonicity_and_endpoints": {
+    "endpoint_values": {
+      "B(7/10), B(4/5)": [
+        "9/13",
+        "3/7"
+      ],
+      "d(7/10), d(4/5)": [
+        "4/5",
+        "2/5"
+      ],
+      "l(7/10), l(4/5)": [
+        "10/13",
+        "5/7"
+      ],
+      "u(7/10), u(4/5)": [
+        "15/13",
+        "15/14"
+      ],
+      "uniform_gap_u_minus_1": "1/14"
+    },
+    "interval": "7/10 <= s <= 4/5",
+    "monotonicity": {
+      "B": "B'(s)=-120/(3+5s)^2 < 0",
+      "d": "d'(s)=-4 < 0",
+      "l": "l'(s)=-100/(6+10s)^2 < 0",
+      "u": "u'(s)=-150/(6+10s)^2 < 0"
+    },
+    "positive_denominators": [
+      "6+10s >= 13 > 0",
+      "3+5s >= 13/2 > 0",
+      "9-10s >= 1 > 0",
+      "d(s)=18/5-4s >= 2/5 > 0"
+    ]
+  },
+  "replay": {
+    "python_implementation": "CPython",
+    "python_version": "3.12.3",
+    "script": "proof/replay_theorem_1_2_case_split_route_a_v4.py",
+    "script_sha256": "34b61b16fb7cd3e92dd555d2875e7d971fc79701a39096e9fc2345e01e0d3272",
+    "wall_time_ns": 1145070
+  },
+  "route": "A",
+  "type_ii": {
+    "conclusion": "2(1-s) <= B(s) on 7/10 <= s <= 4/5",
+    "residual_at_frozen_endpoints": [
+      "6/65",
+      "1/35"
+    ],
+    "residual_identity": "B(s)-2(1-s)=(1-s)(9-10s)/(3+5s)",
+    "source_bound_exponent": "2(1-s)",
+    "valid_source_range": "s <= 9/10"
+  }
+}

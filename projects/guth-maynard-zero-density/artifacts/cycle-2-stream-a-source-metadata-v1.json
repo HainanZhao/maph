@@ -1,0 +1,36 @@
+{
+  "artifact_id": "cycle-2-stream-a-source-metadata-v1",
+  "created_utc": "2026-08-01",
+  "status": "source-freeze and locator audit; no new zero-density theorem",
+  "epistemic_status": "OBSERVED",
+  "sources": [
+    {
+      "id": "MP-arxiv-v2",
+      "citation": "James Maynard and Kevin Pratt, Half-isolated zeros and zero-density estimates, arXiv:2206.11729v2 (29 May 2023).",
+      "journal_metadata": "International Mathematics Research Notices 2024 (19), 12978-13014; DOI 10.1093/imrn/rnae191.",
+      "pdf_url": "https://arxiv.org/pdf/2206.11729v2",
+      "source_url": "https://arxiv.org/e-print/2206.11729v2",
+      "pdf": {"path": "artifacts/sources/maynard-pratt-2206.11729.pdf", "sha256": "e6407c953c4ddcbf9daa2fa941d1a84bf9db90f19a96e50ee8796bf9aea5947a", "pages": 39},
+      "source": {"path": "artifacts/sources/maynard-pratt-2206.11729.tar", "sha256": "b81dbb3bb8bed014588294b5c6d7e8e4b5a14798f445baecb6680b7a9df967d3", "main_tex": "artifacts/sources/maynard-pratt-2206.11729/HalfIsolatedv2.tex", "main_tex_sha256": "ec22dfdb8394b8ab4b228d0f438d19858015fc74330e247d08f36e5830782426"},
+      "locators": {"support_convention": "PDF p. 6; TeX lines 338-344", "type_definitions": "PDF p. 16; TeX lines 975-999", "lemma_23": "PDF p. 16; TeX lines 1003-1005", "lemma_24": "PDF p. 16; TeX lines 1017-1022", "lemma_24_proof": "PDF p. 37; TeX lines 2132-2166", "multiplicity_remark": "PDF p. 14; TeX line 869"}
+    },
+    {
+      "id": "GM-arxiv-v2",
+      "citation": "Larry Guth and James Maynard, New large value estimates for Dirichlet polynomials, arXiv:2405.20552v2 (7 Apr 2026).",
+      "pdf": {"path": "artifacts/sources/arxiv-2405.20552v2.pdf", "sha256": "915392cf7d0ecd108479814a9a1481e23423ef63415776471cec3975ae482cae", "pages": 52},
+      "source": {"main_tex": "artifacts/sources/arxiv-2405.20552v2/LargevaluesDirichlet17.tex", "main_tex_sha256": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428"},
+      "locators": {"support_convention": "PDF p. 3; TeX lines 174-176", "section_13_1_detector_and_mp_transfer": "PDF p. 48; TeX lines 2310-2318", "mvt_branch": "PDF p. 49; TeX lines 2353-2363"}
+    },
+    {
+      "id": "Montgomery-1969-MVT",
+      "citation": "H. L. Montgomery, Mean and Large Values of Dirichlet Polynomials, Inventiones mathematicae 8 (1969), 334-345, DOI 10.1007/BF01404637.",
+      "gdz_record": "https://gdz.sub.uni-goettingen.de/id/PPN356556735_0008",
+      "local_pdf": {"path": "artifacts/sources/montgomery-1969-inventiones8-gdz-volume.pdf", "sha256": "b240c7c07d32201ced906bd0fdc4d36cca3c11999084afeb658ffca3f978534e", "pages": 369},
+      "article_pdf_pages": "347-358",
+      "article_print_pages": "334-345",
+      "locator": "Theorem 1 (Davenport), formula (7), PDF p. 348 / printed p. 335",
+      "inspection": "The formula and page-number mapping were visually inspected in the frozen GDZ scan. The scan has no usable embedded text for source-anchor matching."
+    }
+  ],
+  "replay": {"command": "python3 proof/check_cycle_2_stream_a_sources.py", "scope": "hash and source-anchor verification only"}
+}
