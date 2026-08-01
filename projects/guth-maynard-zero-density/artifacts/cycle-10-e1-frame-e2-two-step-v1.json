@@ -1,0 +1,259 @@
+{
+  "artifact_id": "cycle-10-e1-frame-e2-two-step-v1",
+  "claim_boundary": "This artifact proves the E1 weighted-frame trace inequality with explicit K^r colour cost, the pure-colouring no-gain boundary, the E2 two-step-return identity and spectral alternative, a raw-NB4 sign countermodel, and the resulting necessary Base dichotomy. It proves no saving for either dichotomy branch, no large-value or zero-density improvement, no shorter prime interval, no Base/CRR incompatibility, and no L-function theorem.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "statement": "Neither branch in the Base dichotomy is bounded below the necessary scale, so no density or interval propagation is authorized.",
+    "status": "NO_ANALYTIC_GAIN"
+  },
+  "e1_frame_trace": {
+    "colour_cost": "If one of K uniformly weighted detectors is V-large on each row, then |S|V^(2r)<=K^r tr(K_B^r).",
+    "epistemic_status": "PROVED",
+    "kernel": "B=sum_j omega_j b_j b_j^*, K_B=M B M^*, q_t=(K_B)_(t,t)",
+    "missing_input": "A source-derived dictionary must give a mixed-trace saving larger than the explicit colour loss.",
+    "pure_colouring_boundary": "With no cross-detector structure, partitioning and largest-colour pigeonholing both give |S|<=K F; K=T^o(1) changes no fixed power exponent.",
+    "theorem": "If q_t>=V^2 on S, then |S|V^(2r)<=sum_t q_t^r<=tr(K_B^r) for every integer r>=1."
+  },
+  "e2_two_step": {
+    "base_dichotomy": "For all sufficiently large v, Base forces max_i r_i>=(1/8)v^(24-6delta(v)) or ||C_2||_op>=(1/8)v^(24-6delta(v)).",
+    "definitions": "A=G-dI, r_i=sum_(j!=i)|A_ij|^2, R=diag(r_i), C_2=A^2-R",
+    "epistemic_status": "PROVED",
+    "identity": "||C_2||_F^2=tr(A^4)-sum_i r_i^2",
+    "spectral_bound": "lambda_max(G)<=d+sqrt(max_i r_i+||C_2||_op)<=d+sqrt(max_i r_i+||C_2||_F)"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "e1_rows": {
+      "1": {
+        "diagonal_power_sum": "7",
+        "margin": "0",
+        "trace_power": "7"
+      },
+      "2": {
+        "diagonal_power_sum": "299/9",
+        "margin": "22/9",
+        "trace_power": "107/3"
+      },
+      "3": {
+        "diagonal_power_sum": "183",
+        "margin": "20",
+        "trace_power": "203"
+      },
+      "4": {
+        "diagonal_power_sum": "83603/81",
+        "margin": "12238/81",
+        "trace_power": "10649/9"
+      }
+    },
+    "e2_example": {
+      "c2": [
+        [
+          "0",
+          "1",
+          "1",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "-1"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "-1",
+          "1",
+          "0"
+        ]
+      ],
+      "c2_frobenius_square": "8",
+      "edge_fourth_sum": "10",
+      "nb4": "-8",
+      "return_square_sum": "26",
+      "row_returns": [
+        "2",
+        "3",
+        "3",
+        "2"
+      ],
+      "trace_a4": "34"
+    },
+    "frame_kernel": [
+      [
+        "17/3",
+        "1",
+        "-1/3"
+      ],
+      [
+        "1",
+        "1/3",
+        "1/3"
+      ],
+      [
+        "-1/3",
+        "1/3",
+        "1"
+      ]
+    ],
+    "nb4_search": {
+      "counts": {
+        "3": 125,
+        "4": 5
+      },
+      "edges": [
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        2
+      ],
+      "matrix": [
+        [
+          "0",
+          "-2",
+          "-2",
+          "-2"
+        ],
+        [
+          "-2",
+          "0",
+          "-2",
+          "-2"
+        ],
+        [
+          "-2",
+          "-2",
+          "0",
+          "2"
+        ],
+        [
+          "-2",
+          "-2",
+          "2",
+          "0"
+        ]
+      ],
+      "nb4": "-128",
+      "order": 4,
+      "status": "NB4_SIGN_COUNTERMODEL"
+    }
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/e1_e2_engine_v1.py",
+      "sha256": "dd2033cdd7eed37c49bc0f90783b7e597465e860dbe4968559bd308055022384"
+    },
+    "crr_v2": {
+      "path": "artifacts/cycle-4-p1r-crr-u-formalization-v2.json",
+      "sha256": "e26be797539eabe53ee765b7067d1c99fe4d440035e27785cf38aa64bc2fc84e"
+    },
+    "document": {
+      "path": "docs/cycle-10-e1-frame-e2-two-step-v1.md",
+      "sha256": "256a7b8d1d588f318d6d1cc6cd79f304acb2f717a64a792c22c36ea30dc3abb9"
+    },
+    "phase_base": {
+      "path": "artifacts/cycle-7-crr-phase-lattice-base-saturation-v1.json",
+      "sha256": "3207a7764470d5512d20778e739e0e0bdc31535c0b2ac68b8366707304678534"
+    },
+    "preregistration": {
+      "path": "docs/cycle-10-e1-e2-engine-preregistration-v1.md",
+      "sha256": "7c815ed40267bc6320e3783a0d1f4a1b611158b1620583cdad99040509d863d6"
+    },
+    "signed_extremizer": {
+      "path": "artifacts/cycle-7-crr-f4f-signed-projection-extremizer-v1.json",
+      "sha256": "9616ef55eec03f2f11ba2b625fd9e8cbd3c4ad581900a8a441ce9ed130d05796"
+    },
+    "source": {
+      "path": "artifacts/sources/arxiv-2405.20552v2/LargevaluesDirichlet17.tex",
+      "sha256": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428"
+    },
+    "tests": {
+      "path": "tests/test_cycle_10_e1_frame_e2_two_step_v1.py",
+      "sha256": "dbd740ebc6829730e5b48f490f2e344ff962b3da2e7a2ed375b719547179a9eb"
+    }
+  },
+  "nb4_sign": {
+    "countermodel": {
+      "counts": {
+        "3": 125,
+        "4": 5
+      },
+      "edges": [
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        2
+      ],
+      "matrix": [
+        [
+          "0",
+          "-2",
+          "-2",
+          "-2"
+        ],
+        [
+          "-2",
+          "0",
+          "-2",
+          "-2"
+        ],
+        [
+          "-2",
+          "-2",
+          "0",
+          "2"
+        ],
+        [
+          "-2",
+          "-2",
+          "2",
+          "0"
+        ]
+      ],
+      "nb4": "-128",
+      "order": 4,
+      "status": "NB4_SIGN_COUNTERMODEL"
+    },
+    "epistemic_status": "PROVED",
+    "identity": "NB4=tr(A^4)-2sum_i r_i^2+sum_(i!=j)|A_ij|^4",
+    "implication": "Raw NB4 is not a universal nonnegative spectral surrogate; positive two-step squares and refined centring remain live."
+  },
+  "next_hybrid_gate": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Apply return deletion to a source-derived frame kernel and prove that frame diversity lowers both row returns and coherent two-step excess by more than the K^r colour cost."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_10_e1_frame_e2_two_step_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_10_e1_frame_e2_two_step_v1.py",
+    "write_command": "python3 proof/build_cycle_10_e1_frame_e2_two_step_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE",
+    "lightweight_checks": "source inspection, exact algebra, deterministic countermodel search, replay, and tamper rejection"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_10_e1_frame_e2_two_step_v1.py",
+    "sha256": "37725fbbbe78faa4d8eae34a8e5d129a049b12b4cb8c972013d7db6cb2772084"
+  },
+  "source_overlap": {
+    "crr_base": "lambda>=v^(12-3delta(v)) is necessary after lambda*Xi>=v^(12-3delta(v)) and Xi<=1",
+    "epistemic_status": "PROVED",
+    "gm_detector": "TeX lines 2309--2330: O(log T) dyadic lengths, largest Type-I family, Fourier translation, one fixed coefficient vector",
+    "gm_spectral": "TeX lines 497--587: Gram singular-value bound, trace powers, and scalar-centred cubic statistic"
+  },
+  "status": "SEALED_E1_FRAME_IDENTITY_E2_TWO_STEP_IDENTITY_NB4_COUNTERMODEL_LIGHTWEIGHT_CHECKED"
+}

@@ -547,3 +547,555 @@ python3 proof/build_p7_ray_orthogonality_v1.py --check
   preserved for the signed extremizer, phase-lattice Base gate, and Objective
   2 audit; their versioned correction suites are the green checks. The RFDI
   v1 current-input mismatch is intentional and superseded by replayable v2.
+
+## Cycle 9 — creative engine portfolio redesign (2026-08-01)
+
+- `OBSERVED`: the superseded 24-month allocation placed 65% of planned effort
+  on the already isolated `lambda*Xi` Base seam. It named higher trace,
+  energy refinement, and zero detection as contingencies but did not specify
+  new mathematical mechanisms or toy theorems for them.
+- `OBSERVED`: no new theorem is claimed in this strategy cycle. The banked
+  EO-LF4 theorem licenses moving beyond coefficient-free fourth-moment
+  optimization; it does not privilege Base as the unique route forward.
+- `CONJECTURED`: `30/13` may be a fixed point of three coupled design choices:
+  a single common detector, an uncentred low trace, and scalar energy that
+  forgets logarithmic/multiplicative structure. A successful method may need
+  to alter two choices together.
+- `OBSERVED`: PLAN now incubates six engines: E1 polyphonic zero detection,
+  E2 centred nonbacktracking trace, E3 log-Farey curvature/inverse rigidity,
+  E4 prime-block entropy amplification, E5 density-feedback renormalization,
+  and E6 direct explicit-formula cancellation. E1+E2 and E3+E4 are the first
+  planned hybrids.
+- `OBSERVED`: research-stage route policy now forbids elimination from a
+  failed bounded experiment. Each engine begins with an exact source bridge,
+  a toy theorem, and a genuine countermodel; hostile audit remains deferred
+  until a concrete manuscript theorem is frozen.
+
+## Cycle 10 — E1 frame detector and E2 two-step centring (2026-08-01)
+
+### Headline outcomes
+
+- `PROVED`: for the weighted detector frame
+  `B=sum_j omega_j b_j b_j^*`, `K_B=M B M^*`, and
+  `q_t=(K_B)_(t,t)`, every integer `r>=1` satisfies
+  `|S|V^(2r)<=sum_t q_t^r<=tr(K_B^r)` when `q_t>=V^2` on
+  `S`. If each row is covered by one of `K` uniformly weighted detectors,
+  the exact cost is `K^r`.
+- `PROVED`: pure colouring by unrelated detectors gives `|S|<=K F` by both
+  summation and largest-colour pigeonholing. Since the pinned zero detector
+  already has only `O(log T)` dyadic choices, repackaging those choices as
+  E1 changes no fixed power exponent. E1 remains live only with additional
+  source-derived frame geometry.
+- `PROVED`: for a constant-diagonal Hermitian Gram matrix, put
+  `A=G-dI`, `r_i=sum_(j!=i)|A_ij|^2`, and
+  `C_2=A^2-diag(r_i)`. Then
+  `||C_2||_F^2=tr(A^4)-sum_i r_i^2` and
+  `lambda_max(G)<=d+sqrt(max_i r_i+||C_2||_op)`.
+- `PROVED`: at the frozen Base scales, the preceding inequality forces
+  `max_i r_i>=(1/8)v^(24-6delta(v))` or
+  `||C_2||_op>=(1/8)v^(24-6delta(v))` for all sufficiently large `v`.
+  Neither side is bounded below this scale, so `OBSERVED`: no density or
+  short-interval propagation is authorized.
+- `PROVED`: the raw length-four nonbacktracking polynomial
+  `tr(A^4)-2sum r_i^2+sum_(i!=j)|A_ij|^4` is signed. The preregistered
+  exact search checked 125 order-three matrices and found the fifth
+  order-four matrix, with edge list `[-2,-2,-2,-2,-2,2]`, giving
+  `NB4=-128`. This contains raw-NB4 positivity only; positive two-step
+  squares, even dilations, and alias-conditional centring remain live.
+
+### Evidence, replay, and gate effect
+
+- Primary artifact SHA-256:
+  `ca1e179cb2b39c2fe8c243aba0d6557b61f4d1dee3a02927bdac528030cb2246`.
+- Preregistration:
+  `docs/cycle-10-e1-e2-engine-preregistration-v1.md`.
+- Theorem note:
+  `docs/cycle-10-e1-frame-e2-two-step-v1.md`.
+- Exact conventions and deterministic sign search:
+  `conventions/e1_e2_engine_v1.py` and
+  `discovery/search_cycle_10_nb4_countermodel.py`.
+- Replay commands:
+
+  ```sh
+  python3 proof/build_cycle_10_e1_frame_e2_two_step_v1.py --check
+  python3 -m unittest tests/test_cycle_10_e1_frame_e2_two_step_v1.py
+  ```
+
+- `OBSERVED`: builder write/check each used about `0.07` seconds and
+  `18,944` KiB peak RSS; four focused tests passed in `0.533` seconds with
+  `31,772` KiB peak RSS.
+- Gate change: E1 is `FRAME_IDENTITY_COMPLETE_HYBRID_OPEN`; E2 is
+  `TWO_STEP_IDENTITY_COMPLETE_HYBRID_OPEN`. The next gate is a source-derived
+  E1+E2 frame kernel whose return and coherent-two-step bounds beat the
+  explicit colour cost. E3 remains the independent co-primary incubation.
+
+## Cycle 11 — E1+E2 block-variance reduction (2026-08-01)
+
+### Headline outcomes
+
+- `PROVED`: for block value vectors `d_j`, their sum `d`, and raw frame `F`,
+  the exact decomposition is
+  `F=sum_j d_jd_j^*=dd*/K+Z`, where
+  `Z=sum_j(d_j-d/K)(d_j-d/K)^*>=0`. Its diagonal is the pointwise block
+  variance. The vector model `d_j=d/K` has `Z=0` despite arbitrary largeness
+  of `d`, so detector largeness alone cannot force frame diversity.
+- `PROVED`: for every integer `r>=1`,
+  `tr(F^r)>=tr((dd*/K)^r)=(||d||_2^2/K)^r`. On `R` rows with
+  `|d_t|>=V`, this is at least `(RV^2/K)^r`, a factor `R^(r-1)` above the
+  Cycle-10 diagonal threshold. Raw mixed Schatten traces therefore retain
+  the original common-detector obstruction at full strength.
+- `PROVED`: the rank-one term realizes the coherent E2 branch. If
+  `|d_t|^2/K>=a`, then its return-deleted two-step operator satisfies
+  `||C_2||_op>=(R-1)(R-2)a^2`. At the frozen bands
+  `R>=v^(8-delta)`, `V>=v^(7-delta)`, `K<=v^delta`, this gives
+  `lambda>=v^(22-4delta)` and
+  `||C_2||_op>=(1/4)v^(44-8delta)` for sufficiently large `v`.
+- `PROVED`: independent uniform random colouring of coefficients satisfies
+  the exact expectation
+  `E F_chi=dd*/K+(1-1/K)G_c`. Random colouring preserves rather than removes
+  the forced rank-one detector kernel. All colourings were enumerated exactly
+  for coefficient-set sizes 2 through 5 and `K in {2,3}`.
+- `OBSERVED`: no analytic saving follows. The E1+E2 gate is now the
+  arithmetic size and dispersion of `Z`, or construction of an ensemble
+  without the old forced rank-one component. This refines the engine rather
+  than terminating it.
+
+### Evidence, replay, and gate effect
+
+- Primary artifact SHA-256:
+  `fa6264fc8d040f0e0164b1256ec97f07a6637c7688b94f794096cb6bdef04a8a`.
+- Preregistration and theorem note:
+  `docs/cycle-11-e1-e2-block-variance-preregistration-v1.md` and
+  `docs/cycle-11-e1-e2-block-variance-v1.md`.
+- Exact conventions:
+  `conventions/e1_e2_block_variance_v1.py`.
+- Replay:
+
+  ```sh
+  python3 proof/build_cycle_11_e1_e2_block_variance_v1.py --check
+  python3 -m unittest tests/test_cycle_11_e1_e2_block_variance_v1.py
+  ```
+
+- `OBSERVED`: builder write/check used `0.08` seconds and at most `20,224`
+  KiB peak RSS. Four focused tests passed in `0.563` seconds with `31,780`
+  KiB peak RSS.
+- Gate change: E1+E2 is `RAW_FRAME_SATURATED_VARIANCE_OPEN`. E3/E4 now owns
+  the affirmative question whether actual prime/multiplicative blocks force
+  variance or entropy after the detector rank-one component is removed.
+
+## Cycle 12 — balanced five-factor fractional tensor (2026-08-01)
+
+### Headline outcomes
+
+- `PROVED` conditional on the frozen balanced-product and coefficient-norm
+  hypotheses: if the critical length-`v^5` detector is a product of five
+  length-`v` Dirichlet polynomials, then on every row one of ten moments that
+  cube two factors and square three is at least the detector to power `12/5`.
+  Every such moment has length exactly `v^12=H`.
+- `PROVED` conditional local theorem: the discrete mean-value bound for the
+  selected moment gives
+  `|W|<=v^(36/5+(24/5)delta+o(1))`. The main local exponent `36/5` improves
+  the frozen exponent `8` by exactly `4/5`.
+- `PROVED`: the uniform ten-moment design is balanced iff all five factor
+  length exponents equal one. The sum of all pair exponents forces this
+  algebraically. A registered grid checked 306 sorted rational fifths and
+  retained only `(1,1,1,1,1)`; the tuple
+  `(1/2,1/2,1,3/2,3/2)` has moment lengths from `v^11` to `v^13`.
+- `PROVED` conditional anchor algebra: applying the local bound in `v` global
+  subintervals would give exponent `41/5` at `sigma=7/10`, anchor density
+  coefficient `82/39`, gain `8/39`, and formal interval target `43/82`.
+  `OBSERVED`: none is promoted because the source factorization, left
+  neighborhood, and full envelope remain open.
+- `CONJECTURED`: the exact next source gate is a decomposition of the
+  normalized critical Type-I detector into `v^o(1)` balanced fivefold
+  products with coefficient square norms `v^(12+o(1))` after the ten moment
+  transforms. Rough/prime-dominated integers and coefficient multiplicity are
+  registered adverse cases, not silently discarded.
+
+### Evidence, replay, and gate effect
+
+- Primary artifact SHA-256:
+  `2c57bd1f621d7474cea68fd07cd8719c0f8f64c4766cf2cd7fbfcd765921d24d`.
+- Preregistration and theorem note:
+  `docs/cycle-12-balanced-five-factor-preregistration-v1.md` and
+  `docs/cycle-12-balanced-five-factor-v1.md`.
+- Exact conventions:
+  `conventions/balanced_five_factor_v1.py`.
+- Replay:
+
+  ```sh
+  python3 proof/build_cycle_12_balanced_five_factor_v1.py --check
+  python3 -m unittest tests/test_cycle_12_balanced_five_factor_v1.py
+  ```
+
+- `OBSERVED`: builder write/check each used `0.06` seconds and `18,944` KiB
+  peak RSS. Four focused tests passed in `0.477` seconds with `31,912` KiB
+  peak RSS.
+- Gate change: E3+E4 is `CONDITIONAL_LOCAL_GAIN_FACTORIZATION_OPEN`, the
+  first portfolio engine with a strict theorem-scale exponent budget. No P3
+  density propagation is authorized yet.
+
+## Cycle 13 — source obstruction and weighted fractional tensor (2026-08-01)
+
+### Headline outcomes
+
+- `PROVED`: the Cycle-12 proposed exact source gate is false for the full
+  current detector. For every prime above the truncated-Mobius cutoff, its
+  coefficient is nonzero; every sum of fivefold Dirichlet convolutions whose
+  factors are supported on integers at least two vanishes at primes. This is
+  a coefficient-support obstruction, not a large-value theorem about the
+  prime remainder.
+- `PROVED` conditional on the registered transformed coefficient-square
+  norms: for factor exponents `y_i>0` summing to five, a probability design
+  on integer increments `k` with `y dot k<=2` and `E k_i=tau` gives exact
+  pointwise tensor power `2+tau` and local row exponent `10-7tau`. Strict gain
+  is equivalent to `tau>2/7`, while every such design has `tau<=2/5`.
+- `PROVED`: when every `y_i<=2`, singleton increments
+  `q_i e_i`, `q_i=floor(2/y_i)`, give
+  `tau=1/sum_i(1/q_i)`. The former unbalanced countermodel
+  `(1/2,1/2,1,3/2,3/2)` now gives `tau=1/3`, local exponent `23/3`, and gain
+  `1/3`.
+- `PROVED`: the registered exact fifth-grid contains 1,442 sorted cells with
+  three through ten factors. The singleton certificate is admissible on 978
+  and yields strict gain on 927, equality on 17, and negative formal gain on
+  34. The other 464 have a factor exponent above two, which forces zero
+  uniform increment in this architecture. The census is sufficient, not an
+  optimum linear-program census.
+- `OBSERVED`: no density or interval result is promoted. A source-valid
+  prime-weighted or logarithmic-derivative detector identity, transformed
+  coefficient norms, and control of the rough/non-gain cells remain open.
+
+### Evidence, replay, and gate effect
+
+- Primary artifact SHA-256:
+  `c1c057b089ed8626d3d049520eeb1a5ec1709bc55e24db1b0374f09a05588ecf`.
+- Preregistration and theorem note:
+  `docs/cycle-13-source-obstruction-weighted-tensor-preregistration-v1.md`
+  and `docs/cycle-13-source-obstruction-weighted-tensor-v1.md`.
+- Exact conventions:
+  `conventions/weighted_fractional_tensor_v1.py`.
+- Pinned Heath--Brown 1982 primary PDF SHA-256:
+  `b32e586d26dac73cb36a4f6dc7c6a7bf08ea5fa88e8ef8b18a8df2d5e849a807`;
+  it is reconnaissance only and no theorem from it is imported in Cycle 13.
+- Replay:
+
+  ```sh
+  python3 proof/build_cycle_13_source_obstruction_weighted_tensor_v1.py --check
+  python3 -m unittest tests/test_cycle_13_source_obstruction_weighted_tensor_v1.py
+  ```
+
+- `OBSERVED`: builder write/check used about `0.14/0.13` seconds and
+  `20,096` KiB peak RSS; four tests passed in `0.106` seconds with `16,512`
+  KiB peak RSS.
+- Gate change: E3+E4 is `CELLWISE_GAIN_SOURCE_IDENTITY_OPEN`. The false
+  exact-factorization conjecture is superseded by a component program:
+  source-valid product cells feed the weighted tensor; prime/rough cells feed
+  detector redesign or a second analytic engine.
+
+## Cycle 14 — prime-atom integer-moment quantization (2026-08-01)
+
+### Headline outcomes
+
+- `PROVED`: for the length-`v^5` prime atom at local time `v^12` and
+  threshold `v^(7/2-delta)`, the standard `2k`-moment model gives local
+  exponent `max(12-2k,3k)+2k delta`. Its continuous minimum is `36/5` at
+  `k=12/5`, but its integer minimum is exactly `8` at `k=2`; `k=3` gives
+  `9`. The integer quantization penalty is `4/5`.
+- `PROVED`: ordinary log-convex interpolation between the fourth-moment
+  exponent `22` and sixth-moment exponent `30` gives moment exponent `126/5`
+  at order `24/5`, hence local exponent `42/5`. Interpolation does not realize
+  the lower continuous envelope.
+- `PROVED` from the pinned Maynard--Pratt statements: the unconditional
+  smooth `Lambda` detector applies to `Y`-half-isolated zeros, and their
+  stated consequence already bounds half-isolated zeros by
+  `T^(2(1-sigma)+o(1))`. It is not a source-valid replacement detector for
+  arbitrary critical Type-I zeros.
+- `CONJECTURED`: a prime-specific restricted weak-type estimate or moment
+  bound `int_H |P|^(24/5)<=v^(24+o(1))` would give local exponent `36/5` for
+  the unfactorable prime component. The target must use prime/logarithmic
+  structure; it is not asserted for generic Dirichlet polynomials.
+- `OBSERVED`: no density or interval promotion occurs. The new gate is a
+  fractional prime restriction theorem plus a bridge from the relevant
+  clustered zero class to a prime-supported detector.
+
+### Evidence, replay, and gate effect
+
+- Primary artifact SHA-256:
+  `8cd7f58a5972031553708e9efc1f0d8f4a613a232ffbcecc85bb659d085b5152`.
+- Preregistration and theorem note:
+  `docs/cycle-14-prime-atom-fractional-moment-preregistration-v1.md` and
+  `docs/cycle-14-prime-atom-fractional-moment-v1.md`.
+- Exact conventions:
+  `conventions/prime_atom_fractional_moment_v1.py`.
+- Replay:
+
+  ```sh
+  python3 proof/build_cycle_14_prime_atom_fractional_moment_v1.py --check
+  python3 -m unittest tests/test_cycle_14_prime_atom_fractional_moment_v1.py
+  ```
+
+- `OBSERVED`: builder write/check each used about `0.04` seconds and `19,072`
+  KiB peak RSS; four tests passed in under `0.05` seconds with `15,872` KiB
+  peak RSS.
+- Gate change: E3+E4 is
+  `CELLWISE_GAIN_FRACTIONAL_PRIME_TARGET_OPEN`. Product cells retain the
+  weighted-tensor route; the prime atom now has its own exact target rather
+  than being left as an undifferentiated rough remainder.
+
+## Cycle 15 — prime phase transition and rank-one semiprime reduction (2026-08-01)
+
+### Headline outcomes
+
+- `PROVED`: two different coefficient constructions force prime moment lower
+  scales `m^p` and `H m^(p/2)`. The first is a coherent spike obtained by
+  aligning all prime phases at one ordinate. The second follows from the
+  exact Steinhaus identity `E|P(t)|^4=2m^2-m`, deterministic selection, and
+  monotonicity of normalized `L^p` norms.
+- `PROVED`: at `H=X^(12/5)` these lower exponents meet uniquely at
+  `p=24/5`, where both have exponent `X^(24/5-o(1))`. Thus the proposed global
+  fractional moment upper is power-sharp against two structurally opposite
+  mechanisms.
+- `PROVED`: `P_a^2` has diagonal coefficients `a_p^2` and off-diagonal
+  coefficients `2a_pa_q`; its coefficient-square norm is exactly `2m^2-m`
+  and its semiprime coefficient matrix is symmetric rank one. Two dyadic
+  support pieces cost only a constant colour factor.
+- `PROVED`: applying the checked generic GM theorem at
+  `N=X^2,T=X^(12/5),V=X^(7/5)` gives term exponents
+  `6/5,8/5,8/5` in `X`. The desired local count is `X^(36/25)`, so the exact
+  restricted rank-one theorem needs saving `4/25` in `X`, equivalently
+  `4/5` in `v`.
+- `OBSERVED`: a global `L^(24/5)` theorem is sufficient but unnecessarily
+  strong. The principal target is the ordinary integer-power GM problem on
+  the symmetric rank-one semiprime coefficient class.
+
+### Evidence and replay
+
+- Artifact SHA-256:
+  `49a5a573b00f3d56e75b7537dee36792751b877b63bef8d5bfee667fb42b51d1`.
+- Preregistration/theorem:
+  `docs/cycle-15-prime-phase-transition-rank-one-preregistration-v1.md` and
+  `docs/cycle-15-prime-phase-transition-rank-one-v1.md`.
+- Replay:
+
+  ```sh
+  python3 proof/build_cycle_15_prime_phase_transition_rank_one_v1.py --check
+  python3 -m unittest tests/test_cycle_15_prime_phase_transition_rank_one_v1.py
+  ```
+
+- `OBSERVED`: builder write/check each used about `0.05` seconds and `18,816`
+  KiB peak RSS; four tests passed in `0.015` seconds with `15,872` KiB RSS.
+
+## Cycle 16 — separable tensor gate (2026-08-01)
+
+### Headline outcomes
+
+- `PROVED`: if the tensor-square sampling operator `S` has rows
+  `u_t tensor u_t`, then `S(a tensor a)=(Ua)^2`, its row Gram is the Schur
+  square `(UU^*) circle (UU^*)`, and the prime fourth moment is the Rayleigh
+  quotient of `S^*S` on the Veronese cone `{a tensor a}`.
+- `PROVED`: the desired rank-one count follows from separable norm exponent
+  `56/25`; the generic fourth-moment exponent is `12/5`, leaving exactly the
+  same `4/25` saving in `X`.
+- `PROVED`: for a spectral cutoff `L`, a unit rank-one tensor with Rayleigh
+  quotient `A>L` has squared overlap at least
+  `(A-L)/(lambda_max-L)` with the spectrum above `L`. Within this architecture
+  a failed bound therefore has exactly two ingredients: high spectrum and
+  overlap of the same common coefficient tensor. This is not a claim about
+  every possible method.
+- `PROVED`: identical sampling rows satisfy
+  `Sep(S^*S)=lambda_max(S^*S)=R||u||^4`. Rank-one coefficients alone force no
+  saving; arithmetic separation of actual prime phases is indispensable.
+- `OBSERVED`: no prime-phase spectral or overlap loss is yet proved, and no
+  density result is promoted.
+
+### Evidence and replay
+
+- Artifact SHA-256:
+  `633342875545cf2cb7886356de5dd9beed0a8dcac9b171d1f35a47ce7be9d6ea`.
+- Preregistration/theorem:
+  `docs/cycle-16-separable-tensor-gate-preregistration-v1.md` and
+  `docs/cycle-16-separable-tensor-gate-v1.md`.
+- Exact conventions: `conventions/separable_tensor_gate_v1.py`.
+- Replay:
+
+  ```sh
+  python3 proof/build_cycle_16_separable_tensor_gate_v1.py --check
+  python3 -m unittest tests/test_cycle_16_separable_tensor_gate_v1.py
+  ```
+
+- `OBSERVED`: builder write/check each used about `0.04` seconds and `18,560`
+  KiB peak RSS; four tests passed in `0.008` seconds with `16,128` KiB RSS.
+- Gate change: E3+E4 is `RANK_ONE_SEMIPRIME_SEPARABLE_GATE_OPEN`.
+
+## Cycle 17 — finite prime-phase separable search (2026-08-01)
+
+### Headline outcomes
+
+- `OBSERVED`: all 80 preregistered alternating-optimization runs and 35
+  deterministic coefficient families completed in 74.492 seconds with
+  55,192 KiB peak RSS. The immutable result status is
+  `BASELINE_APPROACHED`.
+- `OBSERVED`: the best row is the alternating-sign family at `m=16`, with
+  count 67 and per-size exponent `1.516522`; this exceeds both the target
+  `36/25` and the registered `3/2` baseline marker. Optimized random seed 2
+  at `m=24` gives count 101 and exponent `1.452185`, also above the target.
+- `OBSERVED`: no registered family crosses `36/25` at `m=32,48,64`; their
+  best count exponents are approximately `1.322942,1.214218,1.227720`.
+  The largest values in the best rows occur in short consecutive clusters.
+- `EXPLORATORY`: post-result log-log slopes for best count versus `m` range
+  from roughly `0.47` to `0.72` depending on the fitted suffix. These fits
+  were not preregistered and do not weaken the formal adverse outcome.
+- `OBSERVED`: no asymptotic countermodel or analytic saving follows. The next
+  gate is to isolate coherent clusters analytically before testing diffuse
+  high-spectrum/Veronese overlap.
+
+### Evidence and gate effect
+
+- Result SHA-256:
+  `8ce4a5592b1ce895b62c659b4568e10992f84f92574db9f2b3f799d1189b89f6`.
+- Search/preregistration SHA-256:
+  `13d194106631511d69fe71ec28aad7f4ca1ca583763a863d2aa214e292372dfc`
+  and
+  `e6b46f7dd33f19fd606289a38860a6731b00813ad5bcad823c2ae8c91fbe666f`.
+- Result note: `docs/cycle-17-prime-phase-separable-search-v1.md`.
+- Integrity/semantic replay:
+
+  ```sh
+  python3 proof/check_cycle_17_prime_phase_separable_search_v1.py
+  python3 -m unittest tests/test_cycle_17_prime_phase_separable_search_v1.py
+  ```
+
+- Gate change: E3+E4 is
+  `RANK_ONE_SEMIPRIME_CLUSTER_DECOMPOSITION_OPEN`. The finite crossings are
+  retained as adverse cases; they motivate a coherent-cluster/diffuse split
+  rather than terminating the rank-one engine.
+
+## Cycle 18 — coherent-cluster skeleton reduction (2026-08-01)
+
+### Headline outcomes
+
+- `PROVED`: the checked classical large-values estimate, localized to an
+  interval of length `Y`, gives
+  `R(J)<=X^(o(1))(X^(3/5)+Y X^(-2/5))` at threshold `X^(7/10)`.
+  Hence every interval of length `2X^(3/5)` contains at most
+  `X^(3/5+o(1))` one-separated critical rows.
+- `PROVED`: if `C` is a maximal `X^(3/5)`-separated subset of the full row
+  set `W`, its radius-`X^(3/5)` intervals cover `W`, and
+  `|W|<=X^(3/5+o(1))|C|`.
+- `PROVED`: the desired count `|W|<=X^(36/25+o(1))` is therefore reduced to
+  the recurrence-skeleton target `|C|<=X^(21/25+o(1))`. The generic
+  `X^(8/5)` count gives only skeleton exponent `1`; the required saving is
+  still exactly `4/25`.
+- `OBSERVED`: cluster removal is a lossless compression, not an analytic
+  saving. The open object is a widely separated set of ordinates on which
+  one common prime coefficient vector repeatedly has size `X^(7/10)`.
+
+### Evidence and gate effect
+
+- Artifact SHA-256:
+  `2aab1890a1e68efc58dcc9ad45dc636766760a610de8299a7f52afb605138936`.
+- Preregistration/theorem:
+  `docs/cycle-18-coherent-cluster-skeleton-preregistration-v1.md` and
+  `docs/cycle-18-coherent-cluster-skeleton-v1.md`.
+- Exact conventions: `conventions/coherent_cluster_skeleton_v1.py`.
+- Replay:
+
+  ```sh
+  python3 proof/build_cycle_18_coherent_cluster_skeleton_v1.py --check
+  python3 -m unittest tests/test_cycle_18_coherent_cluster_skeleton_v1.py
+  ```
+
+- `OBSERVED`: write/check used about `0.04` seconds and `19,072` KiB peak
+  RSS; four focused tests passed.
+- Gate change: E3+E4 is `SEPARATED_RECURRENCE_SKELETON_OPEN`. The next
+  principal attempts are phase-code entropy and popular-difference inverse
+  theorems; determinant rigidity and detector surgery are independent
+  high-risk alternatives.
+
+## Cycle 19 — synchronization graph and abstract boundary (2026-08-01)
+
+### Headline outcomes
+
+- `PROVED`: if `R` sampling rows of squared norm `M` have common projections
+  at least `V` against a vector of squared norm `A`, phase alignment and
+  Cauchy--Schwarz force synchronized Gram mass at least `R^2V^2/A`.
+- `PROVED`: writing `w=V^2/A`, if `Rw>=2M`, at least
+  `R^2w/(4M)` ordered pairs have phase-aligned real kernel at least `w/4`.
+  Their symmetric graph has at least `E^2/R` ordered two-step paths.
+- `PROVED`: at `A=M=X`, `V=X^(7/10)`, and the target
+  `R=X^(21/25)`, the forced ordered-edge, average-degree, and two-step-path
+  exponents are `27/25`, `6/25`, and `33/25`.
+- `PROVED`: a positive-definite common-component simplex realizes every
+  off-diagonal kernel at exactly `w` for arbitrary `R`; its labels may be
+  arbitrarily separated, and all synchronized mass may lie in one coordinate
+  block. Consequently scalar coherence, graph density, separation labels,
+  and high values alone imply neither the skeleton bound nor positive
+  phase-code entropy.
+- `OBSERVED`: the exact open seam is arithmetic. For prime rows, a new lemma
+  must forbid the forced two-step path count, make popular edges close under
+  endpoint differencing, or force multiblock structure usable by E10.
+
+### Evidence and gate effect
+
+- Artifact SHA-256:
+  `3c68ee97a31f7a7cb2612769f58c2645b4a58332aeceaa856d7082de635aeb63`.
+- Preregistration/theorem:
+  `docs/cycle-19-synchronization-graph-preregistration-v1.md` and
+  `docs/cycle-19-synchronization-graph-v1.md`.
+- Exact conventions: `conventions/synchronization_graph_v1.py`.
+- Replay:
+
+  ```sh
+  python3 proof/build_cycle_19_synchronization_graph_v1.py --check
+  python3 -m unittest tests/test_cycle_19_synchronization_graph_v1.py
+  ```
+
+- `OBSERVED`: write/check each used about `0.04` seconds and `18,536` KiB
+  peak RSS; five focused tests passed in about `0.04` seconds and `15,872`
+  KiB peak RSS.
+- Gate change: E7--E10 is `PRIME_LOG_TWO_STEP_CLOSURE_OPEN`. E7 cannot start
+  from entropy forced by high values alone; E9 now has an exact graph and
+  exponent budget on which a prime-specific closure theorem can act.
+
+## Cycle 20 — sharp exterior-volume collapse (2026-08-01)
+
+### Headline outcomes
+
+- `PROVED`: if `k` rows of squared norm `M` share projections at least `V`
+  against a vector of squared norm `A`, then, with
+  `w=V^2/A`, `rho=w/M`, and `kw>=M`,
+  `det(G)/M^k <= k rho[k(1-rho)/(k-1)]^(k-1)`.
+- `PROVED`: the determinant bound is sharp in the abstract Hilbert
+  architecture. A two-eigenvalue Gram matrix has diagonal `M`, top
+  eigenvalue `kw`, remaining eigenvalue `k(M-w)/(k-1)`, and an exact
+  common-projection witness of squared norm `A`.
+- `PROVED`: at `k=X^(21/25)` and `rho=X^(-3/5)`, the normalized logarithmic
+  volume is at most `-X^(6/25+o(1))`.
+- `PROVED` conditional reduction: a uniform lower bound
+  `det(G_C/M)>=exp(-X^(theta+o(1)))` for any fixed `theta<6/25` on every
+  target-sized, `X^(3/5)`-separated prime-phase row set would contradict the
+  forced collapse and prove the skeleton target.
+- `PROVED`: Cauchy--Binet rewrites the determinant as the sum of squared
+  generalized prime Vandermonde minors. `OBSERVED`: no adequate lower bound
+  for that minor sum is yet proved.
+
+### Evidence and gate effect
+
+- Artifact SHA-256:
+  `5d647c7ccd850cdae77cb04bb5287d175cb210f1d546ab5f5341b50c4f185b5c`.
+- Preregistration/theorem:
+  `docs/cycle-20-exterior-volume-preregistration-v1.md` and
+  `docs/cycle-20-exterior-volume-v1.md`.
+- Exact conventions: `conventions/exterior_volume_v1.py`.
+- Replay:
+
+  ```sh
+  python3 proof/build_cycle_20_exterior_volume_v1.py --check
+  python3 -m unittest tests/test_cycle_20_exterior_volume_v1.py
+  ```
+
+- `OBSERVED`: write/check each used about `0.04` seconds and `18,540` KiB
+  peak RSS; five tests passed in `0.06` seconds with `16,000` KiB peak RSS.
+- Gate change: E7--E10 is `PRIME_LOG_VOLUME_OR_TWO_STEP_OPEN`. E8 now has an
+  exact sufficient exponent and a sharp abstract boundary, parallel to E9's
+  prime-specific two-step closure gate.

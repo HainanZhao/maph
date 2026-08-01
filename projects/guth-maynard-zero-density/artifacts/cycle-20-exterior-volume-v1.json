@@ -1,0 +1,94 @@
+{
+  "artifact_id": "cycle-20-exterior-volume-v1",
+  "claim_boundary": "This artifact proves a sharp abstract determinant upper bound forced by common large projections and its critical exponent translation. It does not prove a determinant lower bound for prime-phase rows, the skeleton target, a density improvement, or an interval result.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "cauchy_binet": "det(UU*)=sum_(|S|=k)|det(U_S)|^2",
+    "critical_exponents": {
+      "A": "1",
+      "M": "1",
+      "V": "7/10",
+      "k_rho": "6/25",
+      "rho": "-3/5",
+      "rows": "21/25",
+      "sufficient_lower_bound_exponent_strictly_below": "6/25",
+      "w": "2/5"
+    },
+    "determinant_theorem": "det(G)/M^k <= k rho [k(1-rho)/(k-1)]^(k-1) when kw>=M",
+    "log_bound": "log D <= log(k rho)+1-(k-1)rho",
+    "prime_gate": "a uniform normalized determinant lower bound exp(-X^(theta+o(1))) with theta<6/25 implies the target skeleton bound",
+    "sharp_finite_model": {
+      "A": "25",
+      "M": "16",
+      "V_squared": "100",
+      "collapse_formula": "2541865828329/4398046511104",
+      "diagonal": "16",
+      "k": 9,
+      "minimum_witness_norm_squared": "25",
+      "normalized_determinant": "2541865828329/4398046511104",
+      "residual_eigenvalue": "27/2",
+      "rho": "1/4",
+      "top_eigenvalue": "36",
+      "w": "4"
+    }
+  },
+  "exterior_volume": {
+    "critical_log_collapse_scale": "-X^(6/25+o(1))",
+    "epistemic_status": "PROVED",
+    "sharp_in_abstract_hilbert_architecture": true,
+    "statement": "If k equal-norm rows share a V-large coefficient vector and kw>=M, det(G)/M^k <= k rho [k(1-rho)/(k-1)]^(k-1)."
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/exterior_volume_v1.py",
+      "sha256": "1c6e653bcc8b7c13bc13b7a2485bfef89693fd92566518820701f990d802ab1f"
+    },
+    "cycle19": {
+      "path": "artifacts/cycle-19-synchronization-graph-v1.json",
+      "sha256": "3c68ee97a31f7a7cb2612769f58c2645b4a58332aeceaa856d7082de635aeb63"
+    },
+    "document": {
+      "path": "docs/cycle-20-exterior-volume-v1.md",
+      "sha256": "688b96ce3f5c161ce4b9ea48046ce3776a41985f9547575ea2a7b4ea14235963"
+    },
+    "preregistration": {
+      "path": "docs/cycle-20-exterior-volume-preregistration-v1.md",
+      "sha256": "21845cb6e2c0eb7e3ebd29f8ef2fcc8582c55156bf96c17b8fe876d57ee1341e"
+    },
+    "tests": {
+      "path": "tests/test_cycle_20_exterior_volume_v1.py",
+      "sha256": "b4f435e1431fcc050a38ee54b577722deab18f0adb59bc873bfd141ce4c1e1ae"
+    }
+  },
+  "prime_determinant_gate": {
+    "epistemic_status": "CONJECTURED",
+    "equivalent_search_form": "Use Cauchy--Binet to lower-bound one generalized Vandermonde minor or the collective squared-minor sum.",
+    "sufficient_statement": "Uniformly lower-bound det(G_C/M) by exp(-X^(theta+o(1))) for some theta<6/25 on every target-sized X^(3/5)-separated prime-phase row set."
+  },
+  "prior_context": {
+    "cycle19_role": "common-projection synchronization input and abstract-coherence boundary",
+    "epistemic_status": "PROVED"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_20_exterior_volume_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_20_exterior_volume_v1.py",
+    "write_command": "python3 proof/build_cycle_20_exterior_volume_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_20_exterior_volume_v1.py",
+    "sha256": "5c7b3e5cbbe2cbe6f29c6112fd4d0b1ef6f04dc7dd5e876dfc59028b0a4ad7a0"
+  },
+  "status": "SEALED_SHARP_EXTERIOR_VOLUME_COLLAPSE_PRIME_DETERMINANT_LOWER_BOUND_OPEN"
+}

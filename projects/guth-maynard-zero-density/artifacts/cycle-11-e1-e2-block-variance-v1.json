@@ -1,0 +1,635 @@
+{
+  "artifact_id": "cycle-11-e1-e2-block-variance-v1",
+  "block_variance": {
+    "diagonal": "Z_tt=sum_j|d_j(t)-d(t)/K|^2",
+    "epistemic_status": "PROVED",
+    "identity": "F=P+Z with F=sum_j d_jd_j^*, P=dd^*/K, d=sum_j d_j, Z=sum_j(d_j-d/K)(d_j-d/K)^*>=0",
+    "zero_variance_model": "d_j=d/K for every j gives Z=0 despite arbitrary largeness of d"
+  },
+  "claim_boundary": "This artifact proves the exact block-frame decomposition into the original detector rank-one kernel and a PSD variance kernel, raw Schatten saturation by the rank-one term, its coherent two-step scale, and the exact random-colouring expectation. It proves no arithmetic lower bound for variance, analytic saving, density improvement, shorter interval, Base/CRR incompatibility, or L-function theorem.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "statement": "The arithmetic size/dispersion of Z is open, so no density or interval propagation is authorized.",
+    "status": "NO_ANALYTIC_GAIN"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "constant_rank_one": {
+      "lambda_a_other": "-7/3",
+      "lambda_a_top": "28/3",
+      "lambda_c2_other": "-49/3",
+      "lambda_c2_top": "196/3",
+      "lambda_p": "35/3",
+      "return": "196/9"
+    },
+    "decomposition": {
+      "frame": [
+        [
+          "5",
+          "0",
+          "7"
+        ],
+        [
+          "0",
+          "21",
+          "-9"
+        ],
+        [
+          "7",
+          "-9",
+          "14"
+        ]
+      ],
+      "rank_one": [
+        [
+          "3",
+          "5",
+          "2"
+        ],
+        [
+          "5",
+          "25/3",
+          "10/3"
+        ],
+        [
+          "2",
+          "10/3",
+          "4/3"
+        ]
+      ],
+      "total": [
+        "3",
+        "5",
+        "2"
+      ],
+      "variance": [
+        [
+          "2",
+          "-5",
+          "5"
+        ],
+        [
+          "-5",
+          "38/3",
+          "-37/3"
+        ],
+        [
+          "5",
+          "-37/3",
+          "38/3"
+        ]
+      ],
+      "variance_diagonal": [
+        "2",
+        "38/3",
+        "38/3"
+      ]
+    },
+    "nonconstant_rank_one": {
+      "a": [
+        [
+          "0",
+          "2",
+          "3",
+          "4"
+        ],
+        [
+          "2",
+          "0",
+          "6",
+          "8"
+        ],
+        [
+          "3",
+          "6",
+          "0",
+          "12"
+        ],
+        [
+          "4",
+          "8",
+          "12",
+          "0"
+        ]
+      ],
+      "c2": [
+        [
+          "0",
+          "50",
+          "60",
+          "52"
+        ],
+        [
+          "50",
+          "0",
+          "102",
+          "80"
+        ],
+        [
+          "60",
+          "102",
+          "0",
+          "60"
+        ],
+        [
+          "52",
+          "80",
+          "60",
+          "0"
+        ]
+      ],
+      "p": [
+        [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        [
+          "2",
+          "4",
+          "6",
+          "8"
+        ],
+        [
+          "3",
+          "6",
+          "9",
+          "12"
+        ],
+        [
+          "4",
+          "8",
+          "12",
+          "16"
+        ]
+      ],
+      "returns": [
+        "29",
+        "104",
+        "189",
+        "224"
+      ],
+      "total_mass": "30"
+    },
+    "random_colouring": {
+      "n2_k2": {
+        "colour_count": 2,
+        "colourings": 4,
+        "expectation": [
+          [
+            "21",
+            "24",
+            "15"
+          ],
+          [
+            "24",
+            "31",
+            "15"
+          ],
+          [
+            "15",
+            "15",
+            "12"
+          ]
+        ],
+        "formula": [
+          [
+            "21",
+            "24",
+            "15"
+          ],
+          [
+            "24",
+            "31",
+            "15"
+          ],
+          [
+            "15",
+            "15",
+            "12"
+          ]
+        ],
+        "width": 2
+      },
+      "n2_k3": {
+        "colour_count": 3,
+        "colourings": 9,
+        "expectation": [
+          [
+            "59/3",
+            "71/3",
+            "40/3"
+          ],
+          [
+            "71/3",
+            "33",
+            "40/3"
+          ],
+          [
+            "40/3",
+            "40/3",
+            "32/3"
+          ]
+        ],
+        "formula": [
+          [
+            "59/3",
+            "71/3",
+            "40/3"
+          ],
+          [
+            "71/3",
+            "33",
+            "40/3"
+          ],
+          [
+            "40/3",
+            "40/3",
+            "32/3"
+          ]
+        ],
+        "width": 2
+      },
+      "n3_k2": {
+        "colour_count": 2,
+        "colourings": 8,
+        "expectation": [
+          [
+            "15",
+            "15",
+            "-9/2"
+          ],
+          [
+            "15",
+            "108",
+            "21"
+          ],
+          [
+            "-9/2",
+            "21",
+            "13"
+          ]
+        ],
+        "formula": [
+          [
+            "15",
+            "15",
+            "-9/2"
+          ],
+          [
+            "15",
+            "108",
+            "21"
+          ],
+          [
+            "-9/2",
+            "21",
+            "13"
+          ]
+        ],
+        "width": 3
+      },
+      "n3_k3": {
+        "colour_count": 3,
+        "colourings": 27,
+        "expectation": [
+          [
+            "56/3",
+            "12",
+            "-8"
+          ],
+          [
+            "12",
+            "96",
+            "16"
+          ],
+          [
+            "-8",
+            "16",
+            "43/3"
+          ]
+        ],
+        "formula": [
+          [
+            "56/3",
+            "12",
+            "-8"
+          ],
+          [
+            "12",
+            "96",
+            "16"
+          ],
+          [
+            "-8",
+            "16",
+            "43/3"
+          ]
+        ],
+        "width": 3
+      },
+      "n4_k2": {
+        "colour_count": 2,
+        "colourings": 16,
+        "expectation": [
+          [
+            "31",
+            "-25/2",
+            "31/2"
+          ],
+          [
+            "-25/2",
+            "165",
+            "175/2"
+          ],
+          [
+            "31/2",
+            "175/2",
+            "71"
+          ]
+        ],
+        "formula": [
+          [
+            "31",
+            "-25/2",
+            "31/2"
+          ],
+          [
+            "-25/2",
+            "165",
+            "175/2"
+          ],
+          [
+            "31/2",
+            "175/2",
+            "71"
+          ]
+        ],
+        "width": 4
+      },
+      "n4_k3": {
+        "colour_count": 3,
+        "colourings": 81,
+        "expectation": [
+          [
+            "115/3",
+            "-89/3",
+            "32/3"
+          ],
+          [
+            "-89/3",
+            "491/3",
+            "220/3"
+          ],
+          [
+            "32/3",
+            "220/3",
+            "184/3"
+          ]
+        ],
+        "formula": [
+          [
+            "115/3",
+            "-89/3",
+            "32/3"
+          ],
+          [
+            "-89/3",
+            "491/3",
+            "220/3"
+          ],
+          [
+            "32/3",
+            "220/3",
+            "184/3"
+          ]
+        ],
+        "width": 4
+      },
+      "n5_k2": {
+        "colour_count": 2,
+        "colourings": 32,
+        "expectation": [
+          [
+            "257",
+            "176",
+            "-15"
+          ],
+          [
+            "176",
+            "143",
+            "20"
+          ],
+          [
+            "-15",
+            "20",
+            "165"
+          ]
+        ],
+        "formula": [
+          [
+            "257",
+            "176",
+            "-15"
+          ],
+          [
+            "176",
+            "143",
+            "20"
+          ],
+          [
+            "-15",
+            "20",
+            "165"
+          ]
+        ],
+        "width": 5
+      },
+      "n5_k3": {
+        "colour_count": 3,
+        "colourings": 243,
+        "expectation": [
+          [
+            "772/3",
+            "496/3",
+            "-68"
+          ],
+          [
+            "496/3",
+            "403/3",
+            "-37/3"
+          ],
+          [
+            "-68",
+            "-37/3",
+            "193"
+          ]
+        ],
+        "formula": [
+          [
+            "772/3",
+            "496/3",
+            "-68"
+          ],
+          [
+            "496/3",
+            "403/3",
+            "-37/3"
+          ],
+          [
+            "-68",
+            "-37/3",
+            "193"
+          ]
+        ],
+        "width": 5
+      }
+    },
+    "rank_one_trace_powers": {
+      "1": "38/3",
+      "2": "1444/9",
+      "3": "54872/27",
+      "4": "2085136/81"
+    },
+    "zero_variance": {
+      "frame": [
+        [
+          "3",
+          "6",
+          "-3"
+        ],
+        [
+          "6",
+          "12",
+          "-6"
+        ],
+        [
+          "-3",
+          "-6",
+          "3"
+        ]
+      ],
+      "rank_one": [
+        [
+          "3",
+          "6",
+          "-3"
+        ],
+        [
+          "6",
+          "12",
+          "-6"
+        ],
+        [
+          "-3",
+          "-6",
+          "3"
+        ]
+      ],
+      "total": [
+        "3",
+        "6",
+        "-3"
+      ],
+      "variance": [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "variance_diagonal": [
+        "0",
+        "0",
+        "0"
+      ]
+    }
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/e1_e2_block_variance_v1.py",
+      "sha256": "d96837822581d785249571838810ea7254d1b932bcfb035e4f68a09b3dbce6d4"
+    },
+    "crr_v2": {
+      "path": "artifacts/cycle-4-p1r-crr-u-formalization-v2.json",
+      "sha256": "e26be797539eabe53ee765b7067d1c99fe4d440035e27785cf38aa64bc2fc84e"
+    },
+    "cycle10_artifact": {
+      "path": "artifacts/cycle-10-e1-frame-e2-two-step-v1.json",
+      "sha256": "ca1e179cb2b39c2fe8c243aba0d6557b61f4d1dee3a02927bdac528030cb2246"
+    },
+    "document": {
+      "path": "docs/cycle-11-e1-e2-block-variance-v1.md",
+      "sha256": "80cb85be068597596e3e36050c14a081fdd654b461a86b6be5259443b648f0fe"
+    },
+    "preregistration": {
+      "path": "docs/cycle-11-e1-e2-block-variance-preregistration-v1.md",
+      "sha256": "c4046cdafbcd545135632c8c897b4f11a1c4081f4dd67cb90da781d80eafb8b8"
+    },
+    "tests": {
+      "path": "tests/test_cycle_11_e1_e2_block_variance_v1.py",
+      "sha256": "4869425aa79bbc3165ec7469149855c6395712360c577eedb1900b8096a9e60b"
+    }
+  },
+  "next_gate": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Use actual multiplicative/prime blocks to force quantitative variance or build a detector ensemble without the old rank-one forced component."
+  },
+  "random_colouring": {
+    "epistemic_status": "PROVED",
+    "finite_exact_coverage": "All colourings for coefficient-set sizes 2 through 5 and K in {2,3}; 8 rows, no RNG.",
+    "identity": "E_chi sum_j D_j(t)conj(D_j(s))=D(t)conj(D(s))/K+(1-1/K)G_c(t,s)",
+    "implication": "Random colouring preserves the forced rank-one detector kernel in expectation."
+  },
+  "rank_one_two_step": {
+    "constant_spectrum": "For constant a: spec(C_2)={(R-1)(R-2)a^2,(2-R)a^2 with multiplicity R-1}.",
+    "critical_eigenvalue": "lambda_max(P)>=v^(22-4delta) for R>=v^(8-delta), V>=v^(7-delta), K<=v^delta.",
+    "critical_lower": "For sufficiently large v, ||C_2(P)||_op>=(1/4)v^(44-8delta).",
+    "epistemic_status": "PROVED",
+    "general_lower": "If |d_t|^2/K>=a on R>=3 rows, then ||C_2(P)||_op>=(R-1)(R-2)a^2."
+  },
+  "raw_trace_boundary": {
+    "epistemic_status": "PROVED",
+    "excess_factor": "The forced rank-one lower is R^(r-1) times the Cycle-10 row-diagonal threshold R(V^2/K)^r.",
+    "implication": "An uncentred mixed Schatten trace retains the original common-detector obstruction; it cannot measure diversity without removing P.",
+    "statement": "For every integer r>=1, tr(F^r)>=tr(P^r)=(||d||_2^2/K)^r>=(RV^2/K)^r when |d_t|>=V."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_11_e1_e2_block_variance_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_11_e1_e2_block_variance_v1.py",
+    "write_command": "python3 proof/build_cycle_11_e1_e2_block_variance_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE",
+    "lightweight_checks": "exact algebra, exhaustive registered finite colouring checks, replay, and tamper rejection"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_11_e1_e2_block_variance_v1.py",
+    "sha256": "8d57a4e12dc5028f7f8376227e3345e16e01f99ddb174cdf9df3cbcbe5275a9a"
+  },
+  "source_context": {
+    "critical_rows": {
+      "R_lower": "v^(8-delta)",
+      "V_lower": "v^(7-delta)",
+      "registered_K_upper": "v^delta"
+    },
+    "cycle10": "weighted-frame K^r cost and two-step-return identity"
+  },
+  "status": "SEALED_BLOCK_VARIANCE_DECOMPOSITION_RANK_ONE_COHERENT_SATURATION_RANDOM_COLOUR_EXPECTATION"
+}

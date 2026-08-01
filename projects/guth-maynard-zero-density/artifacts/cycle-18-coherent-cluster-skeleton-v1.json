@@ -1,0 +1,93 @@
+{
+  "artifact_id": "cycle-18-coherent-cluster-skeleton-v1",
+  "claim_boundary": "This artifact proves a covering reduction using the checked classical large-values estimate. It does not bound the separated skeleton, prove a rank-one semiprime saving, select a prime component on zero rows, improve density, or improve intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "covering_statement": "A maximal D-separated subset has D-neighborhoods covering W; each 2D interval contains X^(3/5+o(1)) rows.",
+    "local_large_values": {
+      "cluster_exponent": "3/5",
+      "first_term": "3/5",
+      "high_branch": "-1/5",
+      "local_interval_term": "1/5",
+      "mean_branch": "-2/5",
+      "radius": "3/5",
+      "selected_branch": "-2/5",
+      "threshold": "7/10"
+    },
+    "skeleton_translation": {
+      "cluster": "3/5",
+      "generic_count": "8/5",
+      "generic_skeleton": "1",
+      "required_saving": "4/25",
+      "target_count": "36/25",
+      "target_skeleton": "21/25"
+    }
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/coherent_cluster_skeleton_v1.py",
+      "sha256": "da415df6b9377c9a1187ab2b4e2de33335b74fd43f8ba243e9b17dea63644366"
+    },
+    "cycle17_result": {
+      "path": "artifacts/cycle-17-prime-phase-separable-search-v1.json",
+      "sha256": "8ce4a5592b1ce895b62c659b4568e10992f84f92574db9f2b3f799d1189b89f6"
+    },
+    "document": {
+      "path": "docs/cycle-18-coherent-cluster-skeleton-v1.md",
+      "sha256": "726d4a5c0dccde95c7a48947661fa8c1b16380877a5ac20a9eae7657dd2127a7"
+    },
+    "gm_source": {
+      "path": "artifacts/sources/arxiv-2405.20552v2/LargevaluesDirichlet17.tex",
+      "sha256": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428"
+    },
+    "preregistration": {
+      "path": "docs/cycle-18-coherent-cluster-skeleton-preregistration-v1.md",
+      "sha256": "ae6b429a8c3981c1c4b2ca1799d048e5d335f16cb36f82ec180e756313cb894a"
+    },
+    "tests": {
+      "path": "tests/test_cycle_18_coherent_cluster_skeleton_v1.py",
+      "sha256": "4e8e0c815df94d62270e50f0cd5dfbd87581d0341031ffae66d6f93ebb0cf98f"
+    }
+  },
+  "local_cluster": {
+    "epistemic_status": "PROVED",
+    "statement": "Every interval of length 2X^(3/5) contains at most X^(3/5+o(1)) one-separated rows with |P|>=X^(7/10)."
+  },
+  "recurrence_gate": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Bound the number of X^(3/5)-separated recurrences of one common prime coefficient vector at threshold X^(7/10) by X^(21/25+o(1))."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_18_coherent_cluster_skeleton_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_18_coherent_cluster_skeleton_v1.py",
+    "write_command": "python3 proof/build_cycle_18_coherent_cluster_skeleton_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_18_coherent_cluster_skeleton_v1.py",
+    "sha256": "27efa6dbce22a4dc7e5d409ec649176f3efc9bdd5245f3b65227954a5121fa3f"
+  },
+  "skeleton_reduction": {
+    "epistemic_status": "PROVED",
+    "required_saving_in_X": "4/25",
+    "statement": "A maximal X^(3/5)-separated subset C covers W by radius-X^(3/5) intervals and |W|<=X^(3/5+o(1))|C|.",
+    "target": "It suffices to prove |C|<=X^(21/25+o(1))."
+  },
+  "source_context": {
+    "classical_large_values": "GM equation ClassicalLargeValue, TeX lines 84--87",
+    "cycle17_role": "finite clustered adverse evidence only",
+    "epistemic_status": "PROVED"
+  },
+  "status": "SEALED_COHERENT_CLUSTER_COST_SEPARATED_RECURRENCE_SKELETON_OPEN"
+}

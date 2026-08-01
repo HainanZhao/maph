@@ -1,0 +1,105 @@
+{
+  "abstract_boundary": {
+    "epistemic_status": "PROVED",
+    "statement": "A positive-definite common-component simplex has every off-diagonal kernel exactly w for arbitrary R and may have zero block entropy; scalar coherence and separation labels alone cannot bound the skeleton."
+  },
+  "artifact_id": "cycle-19-synchronization-graph-v1",
+  "claim_boundary": "This artifact proves abstract synchronization, popular-pair, two-step path, and common-component countermodel statements. It does not prove a prime-log closure lemma, the separated skeleton bound, a density improvement, or an interval result.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "closure_gap": "two popular edges sharing a vertex do not abstractly force their endpoint pair to be popular",
+    "critical_exponents": {
+      "average_degree": "6/25",
+      "coefficient_norm_squared": "1",
+      "correlation_scale": "2/5",
+      "diagonal_transition": "3/5",
+      "ordered_two_step_paths": "33/25",
+      "popular_ordered_pairs": "27/25",
+      "row_norm_squared": "1",
+      "target_rows": "21/25",
+      "threshold": "7/10"
+    },
+    "finite_common_component_simplex": {
+      "A": "25",
+      "M": "16",
+      "R": 9,
+      "V_squared": "100",
+      "cauchy_lower": "324",
+      "diagonal_sum": "144",
+      "half_lower": "162",
+      "large_gram_eigenvalue": "48",
+      "off_diagonal_lower": "180",
+      "off_diagonal_sum": "288",
+      "ordered_two_step_paths": 576,
+      "path_lower": "576",
+      "phase_code_entropy": "0",
+      "popular_ordered_pairs": 72,
+      "registered_pair_lower": "81/16",
+      "small_gram_eigenvalue": "12",
+      "synchronized_sum": "432",
+      "w": "4"
+    },
+    "popular_pair_bound": "if Rw>=2M then E_(Re phase*K>=w/4) >= R^2w/(4M)",
+    "synchronization_identity": "R^2 V^2/A <= sum_(t,s) z_t conjugate(z_s) K(t,s)",
+    "two_generation_bound": "sum_t d_t^2 >= E^2/R"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/synchronization_graph_v1.py",
+      "sha256": "1f9698b3a1bf62f727ed995e3369546a2eeec9dcecc68dbebd69757cfcec52b7"
+    },
+    "cycle18": {
+      "path": "artifacts/cycle-18-coherent-cluster-skeleton-v1.json",
+      "sha256": "2aab1890a1e68efc58dcc9ad45dc636766760a610de8299a7f52afb605138936"
+    },
+    "document": {
+      "path": "docs/cycle-19-synchronization-graph-v1.md",
+      "sha256": "395d98a35d49ad868ec0ba7a10aa053d548e21c3d2064addc38ef9bf33478b0d"
+    },
+    "preregistration": {
+      "path": "docs/cycle-19-synchronization-graph-preregistration-v1.md",
+      "sha256": "cdbd9d196f714325c14e6e9aa2ae79d5b41b0d193b1defaa8817935ef7134e4d"
+    },
+    "tests": {
+      "path": "tests/test_cycle_19_synchronization_graph_v1.py",
+      "sha256": "6e620489cb346fbc6346940b8ab6419ba247de4ebe1fd3734aecda3b03a2f977"
+    }
+  },
+  "prime_log_gate": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Use the actual prime phase curve to forbid the two-step graph, close endpoint differences, or force multiblock structure usable by detector surgery."
+  },
+  "prior_context": {
+    "cycle18_role": "source of the separated skeleton target only",
+    "epistemic_status": "PROVED"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_19_synchronization_graph_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_19_synchronization_graph_v1.py",
+    "write_command": "python3 proof/build_cycle_19_synchronization_graph_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_19_synchronization_graph_v1.py",
+    "sha256": "11a811369e3be2977d4feac4628ba4b8822a09b40f5fd3a942b180108720a838"
+  },
+  "status": "SEALED_SYNCHRONIZATION_GRAPH_ABSTRACT_BOUNDARY_PRIME_LOG_CLOSURE_OPEN",
+  "synchronization_graph": {
+    "critical_average_degree_exponent": "6/25",
+    "critical_edge_exponent": "27/25",
+    "critical_two_step_path_exponent": "33/25",
+    "epistemic_status": "PROVED",
+    "statement": "Common V-large projections force phase-aligned Gram mass at least R^2V^2/A; if Rw>=2M, at least R^2w/(4M) ordered pairs have aligned real kernel at least w/4."
+  }
+}
