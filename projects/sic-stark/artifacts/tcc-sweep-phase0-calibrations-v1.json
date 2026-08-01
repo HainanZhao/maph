@@ -1,0 +1,57 @@
+{
+  "claim_tag": "PROVED",
+  "containment": {
+    "statement": "These controls do not justify a tuple-only maximal-order scan: AFK's general squared-overlap formula is indexed by Clt_{d infinity_2}(O_f), so a nonmaximal form conductor changes the ray object.",
+    "tag": "PROVED"
+  },
+  "controls": {
+    "D4": {
+      "complete_quadratic_support": true,
+      "conductor": 1,
+      "field": "Q(sqrt(5))",
+      "modulus": "(4) infinity_2",
+      "ray_invariant_factors": [
+        2
+      ],
+      "sign_class_log": 1,
+      "source_certificate_modulus": "(4) infinity_2",
+      "support_character_orders": [
+        2
+      ]
+    },
+    "D5": {
+      "complete_quadratic_support": false,
+      "conductor": 1,
+      "field": "Q(sqrt(3))",
+      "modulus": "(5) infinity_2",
+      "ray_invariant_factors": [
+        8
+      ],
+      "reason": "all four characters in the 1-R support have order eight",
+      "sign_class_log": 4,
+      "support_character_orders": [
+        8,
+        8,
+        8,
+        8
+      ]
+    }
+  },
+  "embedding_convention": {
+    "meaning": "the increasing-root embedding, i.e. infinity_2 with sqrt(D)<0 in the two controls",
+    "pari_real_place_selector": "[1,0]"
+  },
+  "pari": {
+    "command": "gp -q",
+    "version": "[2, 15, 4]"
+  },
+  "predicate_used_for_controls": "For a cyclic ray group C_N=<g>, the support of 1-g^a is exactly the characters k with k*a not congruent to 0 mod N.",
+  "schema": "tcc-sweep-phase0-calibrations-v1",
+  "scope": "conductor-one maximal-order controls only",
+  "source_hashes": {
+    "certificates/dimension-five-character-support.json": "959fb4e479ca7bd3a67e0abc4eb8f9c8aeef8d7a07062258926cb6b1f9197418",
+    "certificates/dimension-four-certificate.json": "996a76e6ca96084b2430e4a27d153811405647629385c5904b7e6a4ae7135749",
+    "proof/verify_tcc_sweep_phase0_calibrations.py": "deb4aeb1821ccf31bc9ec516979aeceb3887e299d0992acec16c6877c706076b"
+  },
+  "wall_seconds": 0.022725708782672882
+}

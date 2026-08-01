@@ -1,0 +1,78 @@
+{
+  "schema": "tcc-flat-monoid-p1-preregistration-v2",
+  "claim_tag": "PREREGISTRATION",
+  "recorded_utc": "2026-08-01",
+  "supersedes_for_decisive_local_test": "tcc-flat-monoid-p1-preregistration-v1.json",
+  "reason_for_successor": "The v1 d=7,f=2 control has gcd(d,f)=1 and its exact finite monoid algebra is semisimple. It does not exercise the conductor-modulus overlap where nonmaximal local pathology can occur.",
+  "purpose": "Freeze the first AFK nonmaximal pilot with form conductor sharing a finite prime with the AFK modulus before any target functional evaluation.",
+  "claim_boundary": "This pilot may validate an adapter or certify a radical value for its single frozen row. It cannot establish quadratic support, an AFK packet identification, or TCC.",
+  "pilot": {
+    "selection_rule": "lexicographically first frozen positive-conductor tuple/conductor row with gcd(d,form_conductor)>1",
+    "tuple": {
+      "d": 12,
+      "r": 1,
+      "n": 13,
+      "field_radicand": 13,
+      "fundamental_discriminant": 13,
+      "f_j": 3,
+      "form_conductor": 3
+    },
+    "frozen_ledger_row": {
+      "local_verdict": "NONQUADRATIC_WITNESS",
+      "local_nonquadratic_witness": {
+        "quotient_order": 6,
+        "residue": [1, 1]
+      },
+      "sign_class_representative": [11, 0],
+      "sign_class_nontrivial": true
+    },
+    "calibrations": [
+      {
+        "name": "D4 primitive ray group",
+        "d": 4,
+        "field_radicand": 5,
+        "form_conductor": 1
+      },
+      {
+        "name": "v1 benign nonmaximal control",
+        "d": 7,
+        "field_radicand": 2,
+        "form_conductor": 2
+      }
+    ]
+  },
+  "required_before_target_evaluation": [
+    "Exact multiplication table of the AFK flat O_f-invertible ray monoid, with a stable basis order.",
+    "Independent reproduction of the frozen d=12 tuple and f=3 order data.",
+    "Independent reproduction of the AFK squared-overlap class labels for a declared finite characteristic sample.",
+    "Exact rational basis for the Jacobson radical of the monoid algebra, independently checked by trace form, ideal closure, and nilpotence.",
+    "A source-derived exact formula or separately preregistered rigorous enclosure method for the AFK differenced partial-zeta functional."
+  ],
+  "evaluation_rule": {
+    "no_target_functional_evaluation_before_all_required_checks_pass": true,
+    "nonzero_rule": "A nonzero radical value requires exact arithmetic or a rigorous complex enclosure excluding zero with its radius and margin recorded.",
+    "zero_rule": "Vanishing on this pilot is a single-row result only and does not promote a uniform descent claim.",
+    "failed_check_rule": "Retain a versioned failed-row artifact and halt the pilot."
+  },
+  "resource_cap": {
+    "wall_seconds_per_exact_stage": 300,
+    "memory_mib": 2048,
+    "substitution_rule": "No unregistered numerical or heuristic substitute is permitted after a cap."
+  },
+  "software": {
+    "python": "3.12.3",
+    "pari_gp": "2.15.4"
+  },
+  "input_sha256": {
+    "afk_main_v2_tex": "93a9f24403d761e29c019d0ad290d3fd8beba1bbf9d6834010639d3b04306e2d",
+    "tuple_skeleton": "4d082a8cb6ce288dd24c5c84b79843788afbcbe0ef2036b7dde5ca99a1018198",
+    "local_kernel_ledger": "b0572c5ae53e4b15de153a776c9ef358567c9dedba14578ee6dc5e044b466650",
+    "phase0_conventions": "61cb7bb7c37a4989e149fba876a990be00440e8a9f9b861938ff3ad0522a9664",
+    "v1_adapter": "8f1ed187f36c4d526c6aceae32c603416696ddee69d3cddf687ea1d0fce8ca7a"
+  },
+  "planned_outputs": [
+    "projects/sic-stark/discovery/tcc-flat-monoid-p1-overlap-adapter-v1.json",
+    "projects/sic-stark/artifacts/tcc-flat-monoid-p1-overlap-adapter-audit-v1.json",
+    "projects/sic-stark/docs/tcc-flat-monoid-p1-overlap-result-v1.md"
+  ]
+}

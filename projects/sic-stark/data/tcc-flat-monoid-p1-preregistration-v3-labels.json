@@ -1,0 +1,44 @@
+{
+  "schema": "tcc-flat-monoid-p1-preregistration-v3-labels",
+  "claim_tag": "PREREGISTRATION",
+  "recorded_utc": "2026-08-01",
+  "predecessor": "tcc-flat-monoid-p1-preregistration-v2.json",
+  "purpose": "Freeze the full AFK characteristic-to-flat-monoid label derivation for the d=12,f=3 overlap pilot before producing label results.",
+  "form": {
+    "coefficients": [1, -11, 1],
+    "discriminant": 117,
+    "fundamental_discriminant": 13,
+    "conductor": 3,
+    "fixed_point": "(11+3*sqrt(13))/2",
+    "order_basis_relation": "beta=-14+theta_3, where theta_3=3*(13+sqrt(13))/2",
+    "stabilizer": [[0, 1], [-1, 11]]
+  },
+  "universe": {
+    "characteristics": "all p in (Z/12Z)^2, lexicographically ordered by (p1,p2)",
+    "label_formula": "Upsilon_12O3^{-1}(p/12,beta)=[(p2*beta-p1)O3] after a totally-positive lift",
+    "residue_sign_representative": "(-p1-14*p2, p2, +1) modulo 12, modulo the frozen global-unit action"
+  },
+  "acceptance_checks": [
+    "Q has fundamental discriminant 13 and conductor 3, hence is admissible for the frozen d=12 triple.",
+    "The stated stabilizer fixes beta and acts on every characteristic modulo 12.",
+    "Each stabilizer orbit has one and only one flat-monoid label under the formula.",
+    "The orbit-to-monoid-label map is bijective.",
+    "The zero characteristic maps to the monoid zero class."
+  ],
+  "claim_boundary": "A passing label map only identifies AFK characteristics with flat-monoid classes. It does not evaluate partial zeta values, establish radical annihilation, identify a packet, or prove TCC.",
+  "resource_cap": {
+    "wall_seconds": 300,
+    "memory_mib": 2048
+  },
+  "input_sha256": {
+    "overlap_adapter": "b58faf31408edcc23292d270f16bf75817e3c5566fd733002d752eb77083a239",
+    "overlap_adapter_verifier": "3a984adada601afe13d2993a5e09f66f124b77cbd96d8f4d0424d72858e6860b",
+    "afk_main_v2_tex": "93a9f24403d761e29c019d0ad290d3fd8beba1bbf9d6834010639d3b04306e2d",
+    "kopp_2411_source": "87d273e270259af93ea27189001bebc4d540f5d28f0f173a799b1257faaac746"
+  },
+  "planned_outputs": [
+    "projects/sic-stark/discovery/tcc-flat-monoid-p1-overlap-labels-v1.json",
+    "projects/sic-stark/proof/verify_tcc_flat_monoid_p1_overlap_labels.py",
+    "projects/sic-stark/docs/tcc-flat-monoid-p1-overlap-labels-v1.md"
+  ]
+}
