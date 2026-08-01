@@ -13,25 +13,31 @@
 \newcommand{\Cl}{\operatorname{Cl}}
 \newcommand{\Norm}{\operatorname{N}}
 
-\title{A Certified Census of One-Place Stark Invariants over Real Quadratic Fields\\
-\large Taxonomy, Exact Quadratic Stratum, and the Higher-Order Frontier}
+\title{A Certified Canonical Census of One-Place Stark Invariants over Real Quadratic Fields\\
+\large Exact Quadratic Value Orbits and the Higher-Order Frontier}
 \author{Hainan Zhao\\\small Independent Researcher}
-\date{31 July 2026}
+\date{1 August 2026\\\small\url{https://doi.org/10.5281/zenodo.21729947}}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-We give a certified finite census of one-place differenced Stark packets
-over real quadratic fields for squarefree radicands $2\leq D\leq200$
-and finite moduli of norm at most $100$, with conjugate real places
-identified.  The $8{,}200$ representatives split exactly into $3{,}936$
+We give a certified finite census of canonically selected one-place
+differenced Stark packets over real quadratic fields.  For squarefree
+radicands $2\leq D\leq200$ and finite-ideal norm at most $100$, we first
+quotient finite ideals by field conjugation, choose the least normalized
+HNF in each orbit, and then attach the pinned real place $\infty_2$.
+This gives $8{,}200$ selected moduli, which split exactly into $3{,}936$
 empty-support rows, $1{,}560$ quadratic-support rows, and $2{,}704$
-higher-order rows.  The quadratic stratum is solved exhaustively:
-every row has an exact packet polynomial over its real quadratic base.
-The higher-order stratum is classified by exact mechanism eligibility
-and an explicit frontier.  These are finite census statements only; we
-claim no asymptotic density and no new higher-order packet identity.
+higher-order rows.  Every quadratic row has an exact squarefree
+polynomial for its distinct packet-value orbit over the real quadratic
+base.  A deleted-prime cover criterion decides, before any regulator or
+unit computation, exactly when the whole quadratic packet is one.  The
+higher-order table has complete registered-mechanism status
+for $2{,}699$ rows and preserves five tool-incomplete quartic rows.
+These are statements about the selected finite universe only: we claim
+neither a census of all pointed one-place moduli, an asymptotic density,
+nor a new higher-order packet identity.
 \end{abstract}
 
 \section{Claim boundary and conventions}
@@ -43,40 +49,62 @@ one-place modulus.  With $R$ the real-place sign class, put
  \zeta_{\mathfrak m}(s,RA),\qquad
  X_A=\exp Z'_{\mathfrak m}(0,A).
 \]
-The packet is the Artin-indexed tuple $(X_A)_{A\in\Cl_{\mathfrak m}(K)}$.
+Here $\Cl_{\mathfrak m}(K)$ is the ray class group for the indicated
+finite and infinite modulus.  The packet is the Artin-indexed tuple
+$(X_A)_{A\in\Cl_{\mathfrak m}(K)}$.
 The exact Fourier, Artin-action, place-ordering, and positive-orientation
 conventions are those of the companion results paper \cite{ZhaoResults};
 this paper does not introduce a second convention system.
 
 The proved assertions here are the finite trichotomy, the exhaustive
-quadratic packet corpus, and exact higher-order mechanism eligibility.
-We do not assert results beyond the frozen range.  Eligibility is not a
-packet identity.  In particular, an Engine-B normal-closure group or a
+quadratic packet-value-orbit corpus, the quadratic deleted-prime cover
+criterion, and twelve named higher-order member transports.  The
+higher-order eligibility table is an exact
+finite-population observation: five quartic rows remain incomplete.
+We do not assert results beyond the frozen selected range.  Eligibility
+is not a packet identity.  In particular, a common normal closure or a
 banked representative does not promote another member: exact conductor,
 ray-class, orientation, and Artin-labelled packet transport are separate
-obligations.  The v5 scope has 232 eligible rows.  Its successor ledger
-records twelve completed noncanonical member transports; the other 220
-member transports remain open.
+obligations.  The registered Shintani-transfer scope has 232 eligible
+rows.  Its successor ledger records twelve completed noncanonical member
+transports; the other 220 remain open.
 
-We use \emph{PROVED} for exact replay under checked hypotheses and
-\emph{OBSERVED} for descriptive statistics of this finite population.
+We use \emph{PROVED} when a cited theorem applies after exact checks and
+\emph{OBSERVED} for reproducible descriptive statistics of this finite
+population.  The tag \texttt{CERTIFIED\_NUMERICAL} denotes a rigorous
+enclosure with a printed radius criterion.
 ``Unconditional'' means that an asserted identity follows from a proved
 theorem after exact hypothesis checks; it does not prove the general
 Stark conjecture.
 
 \section{Frozen universe and trichotomy}
 
-The universe consists of maximal-order fields $\Q(\sqrt D)$ for
-squarefree $2\leq D\leq200$, integral ideals $\mathfrak f$ with
-$\Norm\mathfrak f\leq100$, and the modulus
-$\mathfrak f\infty_2$.  Conjugation exchanges the two real places, so
-one representative is retained.  A clean PARI replay enumerates 121
-fields, 13,939 raw ideals, and 8,200 representatives.
+The selected universe consists of maximal-order fields $\Q(\sqrt D)$
+for squarefree $2\leq D\leq200$ and nonzero integral ideals
+$\mathfrak f$ with $\Norm\mathfrak f\leq100$.  In the frozen integral
+basis, replace $\mathfrak f$ by the lexicographically smaller normalized
+HNF of $\mathfrak f$ and $\overline{\mathfrak f}$, then attach the
+pinned place $\infty_2$.  Thus conjugation is applied to the finite
+ideal before the distinguished place is fixed.  This is a canonical
+selected-modulus census; it is not the full isomorphism-class quotient
+of all pairs $(\mathfrak f,\infty_i)$.
 
-Let $T$ be empty differenced Fourier support, $Q$ be nonempty quadratic
-support, and $H$ be the remaining higher-order support.  The structural
-sign-class lemmas in \cite{ZhaoResults} show that empty support is
-exactly the trivial packet condition.
+A clean PARI replay enumerates 121 fields and 13,939 raw ideals.  Of
+these, 2,461 are self-conjugate and 11,478 are nonself-conjugate, so the
+implemented finite-ideal quotient has
+\begin{equation}\label{eq:universe-count}
+ 2461+\frac{11478}{2}=8200
+\end{equation}
+representatives.  No theorem below promotes this selected universe to
+a census of all pointed one-place moduli.
+
+Let $T$ be empty differenced Fourier support; let $Q$ be nonempty
+support in which every supported character has order two; and let $H$
+be nonempty support containing a character of order greater than two.
+The structural sign-class lemmas in \cite{ZhaoResults} show that empty
+support implies $X_A=1$ for every $A$.  The converse is false: a
+nonempty supported term can be annihilated by an imprimitive Euler
+factor.
 
 \begin{theorem}[Frozen trichotomy]\label{thm:trichotomy}
 In the frozen universe,
@@ -86,11 +114,25 @@ In the frozen universe,
 Every row belongs to exactly one stratum.  Every packet in $T$ is one.
 \end{theorem}
 
+\begin{proof}
+The clean enumerator certifies every quadratic base field and applies
+the canonicalization in \eqref{eq:universe-count}.  Exact character
+inversion computes the differenced support of every retained row.
+The three predicates above are disjoint and exhaustive; their audited
+counts are $3936$, $1560$, and $2704$.  If the support is empty, Fourier
+inversion gives $Z_{\mathfrak m}(s,A)=0$ identically, hence $X_A=1$.
+\end{proof}
+
 The earlier v5 routing declaration recorded 3,899 trivial rows.  The
 remaining 37 are empty-support rows that its obsolete routing order
 assigned an exponent-cap label before applying the empty-support theorem.
 The historical record is preserved; Theorem~\ref{thm:trichotomy} uses the
 support-first replay.
+
+The set $T$ is therefore a structural empty-support stratum, not the
+set of all rows whose evaluated packet is one.  In particular, the
+quadratic stratum below contains a disjoint 346-row value-one
+degeneracy sub-stratum.
 
 \section{The exact quadratic stratum}
 
@@ -101,6 +143,15 @@ factors and a relative regulator index.  Conductors, Euler factors,
 relative-unit kernels, orientations, and indices are checked exactly.
 There are 2,232 supported character occurrences: 672 have zero Euler
 factor, and 346 rows have all factors zero and packet polynomial $X-1$.
+
+More explicitly, for $G=\Cl_{\mathfrak m}(K)$ the theorem gives
+\begin{equation}\label{eq:quadratic-product}
+ X_A=\prod_{\chi(R)=-1}|\tau_1u_\chi|^{c_{A,\chi}},\qquad
+ c_{A,\chi}=\frac{4}{|G|}\chi(A)^{-1}E_\chi
+ \frac{h_{L_\chi}}{h_K}\frac{w_K}{w_{L_\chi}}\frac1{I_\chi}.
+\end{equation}
+Every quantity in the exponent and every oriented relative unit is
+computed by exact arithmetic.
 
 If $u_i$ is a norm-one relative unit, then
 \[t_i=u_i+u_i^{-1}=\operatorname{Tr}_{L_i/K}(u_i)\in K.\]
@@ -116,12 +167,96 @@ denominator-cleared packet powers.  At denominator two, the positive
 packet factor is selected only after exact square-lift, reciprocity,
 irreducibility, positivity, and Artin-image checks.
 
+For a quadratic row define its \emph{packet-value-orbit polynomial} by
+\[
+ F_{\mathfrak m}(x)=\prod_{v\in\{X_A:A\in G\}_{\rm distinct}}(x-v).
+\]
+This squarefree polynomial records the distinct effective Artin orbit;
+it is not, by itself, a class-to-root labelling.  The exact ray-group
+coordinates, sign-class log, supported characters, and exponents in
+\eqref{eq:quadratic-product} are retained so that the Artin-labelled
+tuple can be reconstructed on replay.  Only the worked row below prints
+that full labelling in the present article.
+
 \begin{theorem}[Exhaustive quadratic stratum]\label{thm:quadratic}
-Every one of the 1,560 rows of $Q$ has a certified exact packet
-polynomial over its base field.  The stable RQ-ordered row certificates
-have terminal hash-chain root
+Every one of the 1,560 rows of $Q$ has a certified exact squarefree
+packet-value-orbit polynomial $F_{\mathfrak m}(x)$ over its base field.
+Its degree equals the exact effective Artin-image size.  The stable
+RQ-ordered row certificates have terminal hash-chain root
 \begin{center}\small\texttt{7c04242b1d4c11293af96f83f4915dbed25f6125c60d82965e533df5c9d81855}.\end{center}
 \end{theorem}
+
+\begin{proof}
+Apply \eqref{eq:quadratic-product} character by character.  Clear the
+common rational denominator, synthesize the formal sign orbit by
+\eqref{eq:trace-descent}, and restrict it to the exact Artin sign image.
+For the 69 denominator-two rows, exact squareness in the full ray field
+selects the positive lift.  Each retained factor is then checked for
+reciprocity, squarefreeness, irreducibility over $K$, positive real-root
+signature, and equality of its degree with the effective Artin-image
+size.  All 1,560 row checks pass.  The hash chain protects the ordered
+corpus against later alteration; it is an integrity record, not a
+substitute for these algebraic checks.
+\end{proof}
+
+For a supported quadratic character $\chi$, let $\chi^\circ$ be its
+primitive character, let $\mathfrak f_\chi$ be its finite conductor,
+and put
+\[
+ \mathcal D_\chi=\{\mathfrak p:\mathfrak p\mid\mathfrak f,
+                    \ \mathfrak p\nmid\mathfrak f_\chi\}.
+\]
+These are the prime ideals deleted when the primitive $L$-function is
+made imprimitive at $\mathfrak f$.
+
+\begin{theorem}[Deleted-prime cover criterion]\label{thm:cover}
+In the quadratic-support regime, the following are equivalent:
+\begin{enumerate}
+\item $X_A=1$ for every $A\in G$;
+\item $L'_{\mathfrak m}(0,\chi)=0$ for every $\chi(R)=-1$;
+\item $E_\chi=0$ for every $\chi(R)=-1$;
+\item for every $\chi(R)=-1$ there is a
+      $\mathfrak p\in\mathcal D_\chi$ with
+      $\chi^\circ(\mathfrak p)=1$.
+\end{enumerate}
+Equivalently, the deleted primes that split in the quadratic extension
+cut out by $\chi^\circ$ cover every supported character.
+\end{theorem}
+
+\begin{proof}
+The imprimitive factor is
+\[
+ E_\chi=\prod_{\mathfrak p\in\mathcal D_\chi}
+              (1-\chi^\circ(\mathfrak p)).
+\]
+Every displayed local value is $1$ or $-1$, because $\chi^\circ$ is
+quadratic and unramified at the deleted prime.  Hence $E_\chi=0$ exactly
+when one such value is $1$, proving the equivalence of (3) and (4).
+The class numbers, roots-of-unity quotient, index, and oriented
+$\log|\tau_1u_\chi|$ in \eqref{eq:quadratic-product} are nonzero, so the
+explicit quadratic formula gives (2) if and only if (3).  Fourier
+inversion gives (2) implies (1).  Conversely, (1) gives
+$Z'_{\mathfrak m}(0,A)=0$ for every $A$; character orthogonality applied
+to the exact inverse transform recovers (2).
+\end{proof}
+
+The criterion is independent of the census bounds and is an exact
+pre-regulator decision test.  In the frozen range its deleted-prime
+export checks 2,232 supported character occurrences and 1,516 deleted
+prime occurrences.  Exactly 699 deleted occurrences have local value
+$1$, and the resulting cover holds on exactly 346 rows: 296 with one
+supported character and 50 with two.  It has zero character-level and
+row-level classification errors, and agrees with $F_{\mathfrak m}=x-1$
+on all 1,560 exact packet polynomials.
+
+No four-support row in the frozen range is covered, but this is not a
+general theorem.  A preregistered falsification search finds the exact
+counterexample $K=\Q(\sqrt7)$ and finite-ideal HNF $[42,0;0,6]$ of norm
+252.  Its ray group is $C_6\times C_2\times C_2$, its sign log is
+$(3,1,0)$, and its four supported characters all have a deleted prime
+with local value $1$.  Thus all four Euler products vanish and the
+packet is one.  This row lies outside the frozen census and refutes the
+tempting universal ``four-support nondegeneracy'' pattern.
 
 \begin{table}[ht]
 \centering
@@ -131,16 +266,25 @@ invariant & count\\\midrule
 packet degree $1,2,4,8$ over $K$ & $346,930,242,42$\\
 common denominator $1,2$ & $1491,69$\\
 all-Euler-zero packet $X-1$ & $346$\\
-maximum coordinate height & $62$ digits\\\bottomrule
+maximum coefficient-coordinate size & $62$ digits\\\bottomrule
 \end{tabular}
 \end{table}
 
-The preregistered height-only predictor had maximum 89 digits, below the
-frozen 256-digit cap.  The full exact run took 43.46 seconds in the
-pinned environment; this is an OBSERVED engineering statistic.  A
-separate frozen 50-row analytic audit passed 43 nonzero character
-comparisons and 101 Artin sign rows at 384 bits.  That is an independent
-certified numerical consistency check, not a proof input.
+Here the coefficient-coordinate size is the maximum decimal digit count
+of the numerator or denominator of either coordinate in the frozen
+basis $1,y$ of $K$.  The preregistered height-only predictor had maximum
+89 digits, below the frozen 256-digit cap.  The full exact run took
+43.46 seconds under PARI/GP 2.15.4; this is an OBSERVED engineering
+statistic, not a portable benchmark.
+
+A separately frozen 50-row audit used the independent analytic
+class-number/regulator formula before opening the corpus traces.  At
+384 bits all 43 nonzero character comparisons and 101 Artin sign rows
+pass the preregistered $10^{-38}$ difference-radius cap; the independent
+balls were inflated by $10^{-45}$.  This is a CERTIFIED\_NUMERICAL
+consistency check, not a proof input.  The initial 192-bit run failed
+the radius gate at RQ-006617; that failure is preserved rather than
+discarded.
 
 \subsection{A worked imprimitive row}
 
@@ -160,28 +304,41 @@ point-value comparison is retained only as an OBSERVED cross-check.
 
 \section{Higher-order taxonomy and frontier}
 
-For every $H$ row we record Shintani index-two eligibility,
-cyclic-quartic CM eligibility, exact weak-hypothesis coverage of
-Roblot's Theorem~7.1 \cite{Roblot2013}, and any selected certificate in
-the companion results paper.  This is a taxonomy of mechanisms, not a
-claim that an eligible row has acquired a new packet identity.
+For every $H$ row we record the status of three registered mechanisms.
+The Shintani-transfer column requires the exact operational predicates
+used in the companion theorem: derived-subgroup order two, the
+real-place and unit-congruence gates, and the frozen effective-exponent
+bound.  The cyclic-quartic CM column requires order-four nonquadratic
+support, projective $V_4$ geometry, exact local factors, the registered
+$S$-set condition, roots of unity, and orientation.  These two columns
+record route eligibility, not packet identities.
+
+The Roblot column tests Theorem~7.1 \cite{Roblot2013}: conditions
+(A1)--(A3), equality with the theorem's $S$-set, class number prime to
+three, and absence of wild ramification above three.  Its conclusion is
+the theorem's weak cyclic-sextic statement up to absolute values, not an
+Artin-labelled positive packet.  The registered-mechanism status is
+complete on 2,699 rows; five old quartic constructions remain
+tool-incomplete.  Every sextic applicability decision is complete.
 
 \begin{table}[ht]
 \centering
-\caption{Exact finite $H$ taxonomy.}\label{tab:higher}
-\begin{tabular}{lr}\toprule
-category & rows\\\midrule
-higher-order rows & 2704\\
-Shintani index-two eligible & 232\\
-cyclic-quartic CM eligible & 881\\
-exclusive frontier & 1591\\
-Roblot full weak coverage & 1079\\
-Roblot hypothesis failure & 405\\
-unsupported support order & 1215\\
-incomplete legacy quartic construction & 5\\
-all registered mechanisms fail & 1359\\\bottomrule
+\caption{Route-by-Roblot cross-table for the finite $H$ stratum.}
+\label{tab:higher}
+\begin{tabular}{lrrrrr}\toprule
+registered route & weak coverage & hyp. fail & unsupported & incomplete & total\\\midrule
+Shintani transfer & 70 & 45 & 117 & 0 & 232\\
+cyclic-quartic CM & 782 & 99 & 0 & 0 & 881\\
+exclusive frontier & 227 & 261 & 1098 & 5 & 1591\\\midrule
+total & 1079 & 405 & 1215 & 5 & 2704\\\bottomrule
 \end{tabular}
 \end{table}
+
+Thus 1,359 rows---the 261 hypothesis failures and 1,098 unsupported
+orders in the exclusive frontier---fail every completed registered
+mechanism.  The 227 frontier rows with Roblot weak coverage are not
+Artin-labelled packet identifications, and the five incomplete rows are
+not counted as failures.
 
 For order-six support, 764 character/inverse-character kernels reduce
 to 407 primitive-field keys.  Exact local checks remove 25 keys and
@@ -190,7 +347,7 @@ three-divisible class-number fields are each closed by an exact
 unramified cyclic-cubic certificate.  Thus every sextic kernel has an
 exact Roblot applicability decision.  The five incomplete entries of
 Table~\ref{tab:higher} are old quartic construction failures, not
-missing sextic decisions.
+missing sextic decisions and not mathematical no-go results.
 
 The index column uses the genuine derived-subgroup order in the
 common stable modulus, rather than the legacy W1 screening proxy.
@@ -241,60 +398,105 @@ order & minimal unresolved & minimal all-mechanisms-fail\\\midrule
 
 \section{Engine-B transport scope}
 
-The v5 Engine-B population consists of 232 rows in 88 groups by exact
-normal-closure polynomial.  The historical scope had 195 eligible rows
-and 159 pending member identities.  All survive in v5; 37 new eligible
-rows are added.  Its immutable scope manifest records each member, its
-canonical closure representative, and its frozen finite ideal.  A
-successor ledger promotes twelve noncanonical members.  RQ-000039 is
-transported from RQ-000021 by
+The registered Shintani-transfer population consists of 232 rows in 88
+groups by exact normal-closure polynomial.  A successor ledger promotes
+exactly the twelve noncanonical members in Table~\ref{tab:transport}.
+For RQ-000039, for example,
 \[
  X_{98}(A)=X_{49}(A)X_{49}(A\mathfrak q^{-1})^{-1},
 \]
 where $\mathfrak q$ is the unique norm-two prime of $\Q(\sqrt2)$.
-The exact ray-class map is the identity on $C_6$, including the sign
-class.  The four targets RQ-000195, RQ-000200, RQ-000205, and
-RQ-000213 are transported from the sealed RQ-000190 packet
-by exact one- or two-prime Euler-deletion products.  This is a
-distribution relation, not equality of packets.  The source-coprime
-RQ-000221 and RQ-000228 use the exact label conversion $a\mapsto5a$
-in the same source $C_6$; their quotient prime powers still each
-delete one local Euler factor.  Five further B5-022
-members are transported from the sealed RQ-000419 packet; three use
-the exact generator relabelling matrix $[5]$ in the source $C_6$.
+Every row uses exact Euler deletion and a positive product or quotient
+at the frozen split embedding; this is a distribution relation, not
+equality of packets.  In the table, $c$ means that target label $a$
+maps to source label $ca$ in $C_6$, and $(\ell,e)$ records a deleted
+prime with source ray log $\ell$ and quotient exponent $e$.
+
+\begin{table}[ht]
+\centering\small
+\caption{All proved noncanonical Engine-B member transports.}
+\label{tab:transport}
+\begin{tabular}{llllll}\toprule
+target & source & closure & $c$ & deleted $(\ell,e)$ & status\\\midrule
+RQ-000039 & RQ-000021 & B5-015 & 1 & $(1,1)$ & PROVED\\
+RQ-000195 & RQ-000190 & B5-025 & 1 & $(1,1)$ & PROVED\\
+RQ-000200 & RQ-000190 & B5-025 & 1 & $(2,1)$ & PROVED\\
+RQ-000205 & RQ-000190 & B5-025 & 1 & $(1,2)$ & PROVED\\
+RQ-000213 & RQ-000190 & B5-025 & 1 & $(1,1),(2,1)$ & PROVED\\
+RQ-000221 & RQ-000190 & B5-025 & 5 & $(1,3)$ & PROVED\\
+RQ-000228 & RQ-000190 & B5-025 & 5 & $(5,2)$ & PROVED\\
+RQ-000425 & RQ-000419 & B5-022 & 1 & $(4,1)$ & PROVED\\
+RQ-000436 & RQ-000419 & B5-022 & 5 & $(1,1)$ & PROVED\\
+RQ-000457 & RQ-000419 & B5-022 & 5 & $(4,1),(4,1)$ & PROVED\\
+RQ-000459 & RQ-000419 & B5-022 & 1 & $(5,1)$ & PROVED\\
+RQ-000465 & RQ-000419 & B5-022 & 5 & $(3,1)$ & PROVED\\\bottomrule
+\end{tabular}
+\end{table}
+
 The B5-086 direct-source closure shares source prime $11$ in every
 target enlargement, while B5-021 and B5-033 admit no integral
 source-to-target modulus quotient.  These are exact exclusions from
 the coprime Euler-deletion route, not negative packet claims.  The
-label-aware extension is tracked separately from the earlier
-identity-label B5-025 batch.
-The remaining 220
-members retain status
+remaining 220 members retain status
 \texttt{UNSTARTED\_NO\_CASE\_LEVEL\_PACKET\_CLAIM}.
 
-Six historical rows have a different printed normal-closure polynomial
-in the v5 reconstruction.  Both records are retained.  Literal
+Six historical rows---RQ-000970, RQ-000991, RQ-000993, RQ-001004,
+RQ-002416, and RQ-004845---have a different printed normal-closure
+polynomial in the reconstruction.  Both records are retained.  Literal
 polynomial equality is not used to infer field identity or packet
-transport.  This is why the present paper reports mechanism eligibility
-separately from case-level higher-order identities.
+transport, and none of these discrepancies is used as a case-level
+identity.  This is why mechanism eligibility remains separate from
+higher-order packet proof.
 
 \section{Reproducibility and relation to earlier work}
 
 Every material assertion has a versioned JSON artifact, input hashes,
-and replay code under PARI/GP 2.15.4.  The primary finite evidence is
-the support-first reconciliation, the row-level quadratic corpus, and
-the H-taxonomy matrix.  The companion paper proves the uniform quadratic
-theorem and selected higher-order identities; this census does not
-reprove or enlarge those higher-order identities.
+and replay code under PARI/GP 2.15.4.  From the project root, the local
+revision gates are
+\begin{center}\small
+\texttt{python3 scripts/audit\_census\_paper.py}\quad and\quad
+\texttt{python3 scripts/audit\_census\_referee\_revision.py}.
+\end{center}
+The quadratic theorem gate is
+\texttt{python3 proof/audit\_q\_euler\_deleted\_prime\_cover.py}.
+The primary finite evidence is the support-first reconciliation, the
+row-level quadratic corpus, the deleted-prime cover certificate, and
+the H-taxonomy matrix.  The deterministic paper-and-replay package is
+archived at \url{https://doi.org/10.5281/zenodo.21729947}.  The companion
+paper proves the uniform
+quadratic theorem and selected higher-order identities; this census
+does not reprove or enlarge them.
 
-Tate supplies the rank-one algebraicity input \cite{Tate1984};
-Arakawa \cite{Arakawa1985}, Dummit--Sands--Tangedal
-\cite{DST1997,DST2003}, and Cohen--Roblot \cite{CohenRoblot2000} give
-computational and index-theoretic antecedents.  Roblot's weak theorem is
-not claimed as new: Table~\ref{tab:higher} quantifies its exact coverage
-in this finite range.  The contribution here is a
-provenance-preserving finite classification and an exhaustive exact
-quadratic packet corpus.
+Table~\ref{tab:prior} states the exact comparison boundary.  No row
+count is assigned to a prior theorem without a row-level map of its
+extension, $S$-set, distinguished place, normalization, and conclusion.
+
+\begin{table}[ht]
+\centering\small
+\caption{Prior-theorem boundary used in this census.}\label{tab:prior}
+\begin{tabular}{>{\raggedright\arraybackslash}p{2.5cm}
+                >{\raggedright\arraybackslash}p{3.5cm}
+                >{\raggedright\arraybackslash}p{6.6cm}}\toprule
+source & theorem/object & use and remaining boundary\\\midrule
+Tate \cite{Tate1984} & Thm.~IV.5.4, rank one & Algebraicity input for
+the quadratic formula after exact conductor, Euler, class-number,
+unit-index, and orientation checks.\\
+Dummit--Sands--Tangedal \cite{DST2003} & Thms.~2 and 4 & Refined
+multiquadratic and full biquadratic antecedents; no census-row coverage
+count is claimed without the still-open row-level hypothesis map.\\
+Roblot \cite{Roblot2013} & Thms.~5.5, 6.1, 7.1 & Quadratic, cyclic
+quartic, and conditional cyclic-sextic weak results.
+Table~\ref{tab:higher} counts only exact Theorem~7.1 weak coverage,
+never Artin-labelled packet identification.\\
+Cohen--Roblot \cite{CohenRoblot2000} & Hilbert class-field algorithm &
+The objects differ from one-place ray moduli.  Four exact subfield
+controls test field containment only, not unit or packet overlap.\\\bottomrule
+\end{tabular}
+\end{table}
+
+Arakawa's relative-index formula \cite{Arakawa1985} and the explicit
+computational work of Dummit--Sands--Tangedal \cite{DST1997} are further
+antecedents, but neither is assigned a census-row count here.
 
 The prior-art comparison is deliberately narrow.  Cohen--Roblot study
 Hilbert class fields, whereas the present promoted examples and census
@@ -304,11 +506,10 @@ closures for bases $35$, $42$, and $186$ contain the associated Hilbert
 biquadratic field, while the selected base-$51$ closure does not.
 This is a PROVED statement about the four frozen normal closures only;
 it identifies neither a Stark unit nor an Artin-labelled packet and
-does not generalize containment.  Likewise, Dummit--Sands--Tangedal
-provide theorem-class antecedents for quadratic-character phenomena;
-this paper makes no priority assertion from that overlap.  The detailed
-comparison table remains an appendix artifact rather than an input to
-any census count.
+does not generalize containment.  This paper makes no priority assertion
+from any of these comparisons.  The contribution claimed here is the
+canonical finite classification and the exhaustive quadratic
+packet-value-orbit corpus within its corrected boundary.
 
 \appendix
 \section{Record map and replay boundary}
@@ -318,9 +519,14 @@ The trichotomy is in
 \url{artifacts/census-paper-layer0-reconciliation-v1.json}; the
 quadratic audit is in
 \url{artifacts/census-q-packet-corpus-audit-v1.json}; the H matrix is
-in \url{artifacts/census-h-taxonomy-v2.json}; the preserved v1 record
+in \url{artifacts/census-h-taxonomy-v2.json}; the range-description
+correction is in
+\url{data/census-paper-preregistration-amendment-v18.json}; the preserved v1 record
 used the legacy displayed-index proxy and is corrected by the v2
-provenance fields.  Engine-B transport
+provenance fields.  The quadratic deleted-prime theorem and its
+expanded-range counterexample are in
+\url{artifacts/q-euler-deleted-prime-cover-theorem-v1.json}.
+Engine-B transport
 scope is in \url{artifacts/engine-b-transport-manifest-v5.json}; its
 successor ledger is in \url{artifacts/engine-b-transport-ledger-v4.json}.
 The latter records exactly twelve completed member transports.
@@ -330,12 +536,16 @@ The exact direct-source coprime no-go screens are recorded in
 The exact four-control Hilbert/ray object audit is
 in \url{artifacts/b5079-hilbert-ray-containment-v1.json} and
 \url{artifacts/hilbert-ray-containment-tranche-v1.json}; it is field
-containment only.  The project checksum manifest and full test suite
-replay source hashes and schema gates.
+containment only.  The versioned Cycle-127 correction record freezes
+the revised source hashes, audit results, and replay resource use.  The
+release record, including the root-file inventory and public checksums,
+is associated with DOI
+\url{https://doi.org/10.5281/zenodo.21729947}.
 \end{sloppypar}
 
 \begin{thebibliography}{20}
 \raggedright
+\footnotesize
 \bibitem{ZhaoResults} H.~Zhao, \emph{Effective Archimedean Stark
 Theorems over Real Quadratic Fields: Quadratic Support, Shintani
 Transfer, and CM Descent}, version 1.5, 2026,

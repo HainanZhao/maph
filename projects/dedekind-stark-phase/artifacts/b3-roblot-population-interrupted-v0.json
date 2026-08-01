@@ -1,0 +1,23 @@
+{
+  "schema": "dedekind-stark-b3-roblot-population-interrupted-v0",
+  "status": "PRESERVED_OPERATIONAL_FAILURE_NO_SCIENTIFIC_VERDICT",
+  "claim_tag": "OBSERVED",
+  "completed_before_interruption": 800,
+  "blocked_inventory_offset": 800,
+  "blocked_case_id": "RQ-003614",
+  "blocked_kernel_index": 1,
+  "blocked_row": {
+    "d": 91,
+    "finite_ideal_hnf": [[42, 14], [0, 2]],
+    "one_cyc": [12, 2],
+    "source_character": [3, 1]
+  },
+  "blocked_kernel_wall_seconds_lower_bound": 600,
+  "failure": "The first full runner kept completed rows only in memory. It was manually interrupted after the named exact field certification exceeded ten minutes so independent rows could be checkpointed and continued.",
+  "scientific_boundary": {
+    "eligibility_verdict_for_blocked_row": null,
+    "phase_or_lprime_target_opened": false,
+    "completed_rows_silently_dropped": false
+  },
+  "repair": "Run deterministic checkpointed segments excluding offset 800, then run offset 800 alone under the original 3600-second cap and merge every record."
+}

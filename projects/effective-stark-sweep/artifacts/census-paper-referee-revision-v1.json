@@ -1,0 +1,58 @@
+{
+  "schema": "effective-stark-census-paper-referee-revision-v1",
+  "status": "BANKED_LOCAL_CORRECTION",
+  "recorded_at_utc": "2026-07-31T17:02:32Z",
+  "claim_boundary": {
+    "universe": "Finite integral ideals in the frozen range modulo field conjugation, followed by attachment of the pinned infinity_2 place; not the full conjugacy quotient of pointed one-place moduli.",
+    "row_count": 8200,
+    "row_count_tag": "PROVED",
+    "support_implication": "Empty differenced Fourier support implies the value-one packet, but the converse fails for 346 nonempty quadratic-support rows annihilated by imprimitive Euler factors.",
+    "support_implication_tag": "PROVED",
+    "higher_order_complete_rows": 2699,
+    "higher_order_incomplete_rows": 5,
+    "higher_order_status_tag": "OBSERVED",
+    "publication_boundary": "The corrected census manuscript and archive remain local and have no immutable census-paper DOI."
+  },
+  "rendered_manuscript": {
+    "pages": 7,
+    "bytes": 307545,
+    "tex_warnings_overfull_undefined_or_errors": 0,
+    "visual_pages_checked": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "replay": {
+    "python": "Python 3.12.3",
+    "tex": "pdfTeX 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian)",
+    "commands": [
+      {
+        "command": "python3 scripts/audit_census_referee_revision.py",
+        "result": "CENSUS_REFEREE_REVISION_AUDIT=PASS"
+      },
+      {
+        "command": "python3 scripts/audit_census_paper.py",
+        "result": "CENSUS_PAPER_AUDIT=PASS"
+      },
+      {
+        "command": "python3 -m unittest discover -s tests",
+        "result": "Ran 173 tests in 33.273s; OK",
+        "elapsed_wall_seconds": 33.43,
+        "peak_rss_kib": 75064
+      }
+    ]
+  },
+  "sha256": {
+    "paper/effective-stark-census.tex": "fd875dd28a7fc919740672687196d2bcb25af4db0e73d99dd63418163bc583c0",
+    "paper/effective-stark-census.pdf": "c2b69616dd99a0631e88e5975e8d95e14698ba8a596051d2a90686d44644f855",
+    "data/census-paper-preregistration-amendment-v18.json": "b1e8bcc06794f527d183686a5962e28b477a5799f3cbed7c0a08a648998471f1",
+    "scripts/audit_census_paper.py": "e6787a0b956311bd49681d03f3797aac8447c7468684718ee692728239c49823",
+    "scripts/audit_census_referee_revision.py": "2dbef0c6181368d6206cd2e2298879c45798a6df79b1c8b4a25b001fc972c3f0",
+    "tests/test_census_paper_manuscript.py": "cbdc76e9502cc55ee95634b2900eee442d916cd868e9649fb4c1f1d65220d496"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "schema": "effective-stark-census-paper-theorem-revision-v2",
+  "status": "BANKED_LOCAL_THEOREM_REVISION",
+  "supersedes_current_manuscript_hashes_in": "artifacts/census-paper-referee-revision-v1.json",
+  "recorded_at_utc": "2026-07-31T17:41:37Z",
+  "theorem_revision": {
+    "name": "quadratic deleted-prime cover criterion",
+    "claim_tag": "PROVED",
+    "frozen_census_all_zero_rows": 346,
+    "character_level_errors": 0,
+    "row_level_errors": 0,
+    "packet_polynomial_equivalence_errors": 0,
+    "computational_consequence": "value-one packets can be decided from exact conductors and deleted-prime character values before regulator and unit computations"
+  },
+  "falsification": {
+    "withdrawn_candidate": "four supported quadratic characters prevent total Euler degeneracy",
+    "status": "REFUTED",
+    "counterexample": "XQ-D007-N252-42-0-0-6",
+    "counterexample_claim_tag": "PROVED"
+  },
+  "provenance_correction": {
+    "initial_proof_audit": "FAILED_SOURCE_HASH_AFTER_APPENDED_PREREGISTRATION_AMENDMENT",
+    "containment": "No theorem was promoted from the failed chain. The original preregistration was restored byte-for-byte and separate v2 analysis/search records were replayed under a versioned amendment.",
+    "superseded_discovery_records": [
+      "discovery/q-euler-pattern-analysis-v1.json",
+      "discovery/q-four-support-counterexample-search-v1.json"
+    ]
+  },
+  "rendered_manuscript": {
+    "pages": 8,
+    "bytes": 314846,
+    "tex_warnings_overfull_undefined_or_errors": 0,
+    "visual_pages_checked": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  "replay": {
+    "commands": [
+      {
+        "command": "python3 proof/audit_q_euler_deleted_prime_cover.py",
+        "result": "Q_EULER_DELETED_PRIME_COVER_THEOREM=PASS; Q_FOUR_SUPPORT_NONDEGENERACY=REFUTED"
+      },
+      {
+        "command": "python3 scripts/audit_census_referee_revision.py",
+        "result": "CENSUS_REFEREE_REVISION_AUDIT=PASS"
+      },
+      {
+        "command": "python3 scripts/audit_census_paper.py",
+        "result": "CENSUS_PAPER_AUDIT=PASS"
+      },
+      {
+        "command": "python3 -m unittest discover -s tests",
+        "result": "Ran 174 tests in 32.954s; OK",
+        "elapsed_wall_seconds": 33.11,
+        "peak_rss_kib": 75140
+      }
+    ]
+  },
+  "sha256": {
+    "paper/effective-stark-census.tex": "ba110761194013da91df135efabf97c64efa0035dbe2af937a06e11ac59ef727",
+    "paper/effective-stark-census.pdf": "e5223747c10f836359a59b8457ae369e32dd611b79b869c659874afcc8d9fd90",
+    "artifacts/q-euler-deleted-prime-cover-theorem-v1.json": "2c60dbde71fccb9a5c24e400b3f281ece9b92ad0b98bd19a7bf91bda7d7994ea",
+    "discovery/q-euler-local-features-v1.json": "94146844206b96723957333e42ecfa763706f90829eb68cd91b9e8dcfc5ace6d",
+    "discovery/q-euler-pattern-analysis-v2.json": "2681cd03a7001b73234de03d5f794d5aca3158741b839b4931160966165fd626",
+    "discovery/q-four-support-counterexample-search-v2.json": "f34a04e1d8ca2bba5c79f1b0eb679c5ca5a45689bfecdc4a3a503b684a6e98f5",
+    "proof/audit_q_euler_deleted_prime_cover.py": "b7ddfdbb23103e939e2f29dd619aa2e620999c46da21cf38f5e2c7c7d1217d92",
+    "scripts/audit_census_paper.py": "ee01c07f673f1b28afa5c0c775e6fa55ba7ba64347292b64dfcb7bb46dc2aac9",
+    "scripts/audit_census_referee_revision.py": "4ecb70de61fdad71dd5b88a34ac0331b033e053bdc7a050eb2503389dbe31034",
+    "tests/test_census_paper_manuscript.py": "2a943c1e7cae19148e40ea6fce8327b6319d26be91b515831d3421fe16f79013",
+    "docs/cycle-128-q-euler-deleted-prime-cover-theorem.md": "a4e080ceba724af2ec09ce9bf04191fe525f3feef1a20f05285d6ca963696f94"
+  }
+}

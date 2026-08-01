@@ -21,6 +21,39 @@ class CensusPaperManuscriptTest(unittest.TestCase):
         self.assertEqual(completed.returncode, 0, completed.stderr)
         self.assertIn("CENSUS_PAPER_AUDIT=PASS", completed.stdout)
 
+    def test_cycle_127_referee_boundary(self):
+        completed = subprocess.run(
+            ["python3", "scripts/audit_census_referee_revision.py"],
+            cwd=ROOT,
+            text=True,
+            capture_output=True,
+            check=False,
+            timeout=60,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr)
+        self.assertIn(
+            "CENSUS_REFEREE_REVISION_AUDIT=PASS", completed.stdout
+        )
+
+    def test_quadratic_deleted_prime_cover_theorem(self):
+        completed = subprocess.run(
+            ["python3", "proof/audit_q_euler_deleted_prime_cover.py"],
+            cwd=ROOT,
+            text=True,
+            capture_output=True,
+            check=False,
+            timeout=60,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr)
+        self.assertIn(
+            "Q_EULER_DELETED_PRIME_COVER_THEOREM=PASS",
+            completed.stdout,
+        )
+        self.assertIn(
+            "Q_FOUR_SUPPORT_NONDEGENERACY=REFUTED",
+            completed.stdout,
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

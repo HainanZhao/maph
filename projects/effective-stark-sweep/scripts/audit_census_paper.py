@@ -21,6 +21,10 @@ HILBERT_B5079 = ROOT / "artifacts/b5079-hilbert-ray-containment-v1.json"
 HILBERT_TRANCHE = ROOT / "artifacts/hilbert-ray-containment-tranche-v1.json"
 B5086 = ROOT / "artifacts/b5086-transport-geometry-v1.json"
 FINAL_DIRECT = ROOT / "artifacts/final-direct-source-coprime-screen-v1.json"
+FROZEN_UNIVERSE = ROOT / "artifacts/frozen-ideal-census-v1.json"
+RANGE_AMENDMENT = ROOT / "data/census-paper-preregistration-amendment-v18.json"
+Q_ARB = ROOT / "artifacts/census-q-arb-audit-v1.json"
+COVER = ROOT / "artifacts/q-euler-deleted-prime-cover-theorem-v1.json"
 
 
 def require(text: str, snippets: tuple[str, ...]) -> None:
@@ -41,6 +45,10 @@ def main() -> None:
     tranche = json.loads(HILBERT_TRANCHE.read_text(encoding="utf-8"))
     b5086 = json.loads(B5086.read_text(encoding="utf-8"))
     final_direct = json.loads(FINAL_DIRECT.read_text(encoding="utf-8"))
+    frozen = json.loads(FROZEN_UNIVERSE.read_text(encoding="utf-8"))
+    amendment = json.loads(RANGE_AMENDMENT.read_text(encoding="utf-8"))
+    q_arb = json.loads(Q_ARB.read_text(encoding="utf-8"))
+    cover = json.loads(COVER.read_text(encoding="utf-8"))
 
     split = layer0["structural_trichotomy"]
     require(source, (
@@ -50,15 +58,54 @@ def main() -> None:
         str(q["chain"]["row_count"]),
         q["chain"]["final_sha256"],
         str(h["counts"]["H_rows"]),
-        str(h["counts"]["all_known_mechanisms_fail"]),
+        f"{h['counts']['all_known_mechanisms_fail']:,}",
         str(transport_ledger["counts"]["member_transport_completed"]),
         str(transport_ledger["counts"]["member_transport_open"]),
-        "no new higher-order packet identity",
+        "nor a new higher-order packet identity",
         "does not promote another member",
         imprimitive["case_id"],
         f"E_\\chi={imprimitive['exact_result']['E_chi']}",
         f"I_\\chi={imprimitive['exact_result']['I_chi']}",
+        "This is a canonical",
+        "selected-modulus census",
+        "not the full isomorphism-class quotient",
+        "The converse is false",
+        "346-row value-one",
+        "packet-value-orbit polynomial",
+        "complete on 2,699 rows",
+        "five old quartic constructions remain",
+        "not counted as failures",
+        "10^{-38}",
+        "RQ-006617",
+        "census-paper-preregistration-amendment-v18.json",
+        "Deleted-prime cover criterion",
+        "1,516 deleted",
+        "Exactly 699 deleted",
+        "[42,0;0,6]",
+        "four-support nondegeneracy",
+        "q-euler-deleted-prime-cover-theorem-v1.json",
+        "10.5281/zenodo.21729947",
     ))
+    if (
+        cover["status"] != "PASS_PROVED_THEOREM_AND_FINITE_COROLLARY"
+        or cover["finite_census_corollary"]["all_zero_rows"] != 346
+        or cover["finite_census_corollary"]["row_level_false_positives"] != 0
+        or cover["finite_census_corollary"]["row_level_false_negatives"] != 0
+        or cover["falsification_result"]["status"] != "REFUTED"
+        or cover["falsification_result"]["counterexample"]["finite_norm"] != 252
+    ):
+        raise RuntimeError("quadratic deleted-prime theorem artifact drifted")
+    if (
+        frozen["raw_ideal_count"],
+        frozen["self_conjugate_raw_count"],
+        frozen["nonself_conjugate_raw_count"],
+        frozen["deduplicated_case_count"],
+    ) != (13939, 2461, 11478, 8200):
+        raise RuntimeError("frozen universe count changed")
+    if amendment["correction"]["count_identity"] != "2461 + 11478/2 = 8200":
+        raise RuntimeError("range correction identity drifted")
+    if q_arb["claim_tag"] != "CERTIFIED_NUMERICAL" or q_arb["precision"]["bits"] != 384:
+        raise RuntimeError("Q Arb certification boundary drifted")
     if transport["counts"]["member_transport_completed"] != 0:
         raise RuntimeError("immutable v5 scope manifest drifted")
     if transport_ledger["counts"] != {
@@ -107,10 +154,12 @@ def main() -> None:
         "neither a Stark unit nor an Artin-labelled packet",
         "hilbert-ray-containment-tranche-v1.json",
     ))
-    if "all registered mechanisms fail & 1359" not in source:
-        raise RuntimeError("H all-mechanisms-fail table cell drifted")
-    if "incomplete legacy quartic construction & 5" not in source:
-        raise RuntimeError("H incomplete-quartic table cell drifted")
+    require(source, (
+        "Shintani transfer & 70 & 45 & 117 & 0 & 232",
+        "cyclic-quartic CM & 782 & 99 & 0 & 0 & 881",
+        "exclusive frontier & 227 & 261 & 1098 & 5 & 1591",
+        "total & 1079 & 405 & 1215 & 5 & 2704",
+    ))
     rq5298 = next(
         row for row in h["records"] if row["case_id"] == "RQ-005298"
     )
@@ -134,22 +183,29 @@ def main() -> None:
         timeout=60,
     ).stdout
     require(rendered, (
-        "A Certified Census of One-Place Stark Invariants",
+        "A Certified Canonical Census of One-Place Stark Invariants",
+        "canonical selected-modulus census",
+        "not the full isomorphism-class quotient",
+        "The converse is false",
+        "packet-value-orbit polynomial",
         "Exhaustive quadratic stratum",
+        "Deleted-prime cover criterion",
+        "four-support nondegeneracy",
         "Engine-B transport scope",
-        "twelve completed noncanonical member transports",
-        "member transports remain open",
-        "transports remain open",
+        "All proved noncanonical Engine-B member transports",
+        "UNSTARTED NO CASE LEVEL PACKET CLAIM",
         "A worked imprimitive row",
         "RQ-005298",
         "128/32 = 4",
         "base-51 closure does not",
-        "RQ-000039 is transported from RQ-000021",
-        "RQ-000195, RQ-000200, RQ-000205, and",
-        "000221 and RQ-000228 use the exact label conversion",
+        "RQ-000039",
+        "RQ-000195",
+        "RQ-000221",
+        "RQ-000228",
         "B5-022",
         "B5-086 direct-source closure shares source prime 11",
         "B5-021 and B5-033 admit no integral",
+        "10.5281/zenodo.21729947",
     ))
     print("CENSUS_PAPER_AUDIT=PASS")
 
