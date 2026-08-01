@@ -1,0 +1,63 @@
+40
+LARRY GUTH
+
+When d = 2, both versions of the Kakeya conjecture (Conjecture 9.1 and Conjecture 9.2) were
+proven by Davies around 1980. For d ≥ 3, both versions of the Kakeya problem were open for a
+long time. Very recently in [WZ], Wang and Zahl announced a proof of Conjecture 9.1 for d = 3.
+Several related problems have also been solved, including the finite field analogue (Dvir [D]), the
+p-adic analogue (Arsovski [A] and Dhar-Dvir [DD]), and the Furstenberg set problem (Ren-Wang
+[RW] and Orponen-Shmerkin [OS]). It’s not yet clear how much the methods in these works will
+say about the Bourgain-Kakeya problem.
+It is also worth mentioning that assuming the Bourgain-Kakeya conjecture as a black box does
+not currently lead to any improvements in the known bounds on the large value problem for Dirichlet
+polynomials.
+
+10. Examples from harmonic analysis
+
+In harmonic analysis, researchers have studied p-to-q norm estimates and large value estimates for
+many different matrices M. There is a particularly close parallel between the large value problem for
+Dirichlet polynomials and the area of Fourier analysis called restriction theory. Broadly speaking,
+restriction theory can be defined as the study of the matrices MΦ for some set of frequencies Φ. In
+restriction theory, the set of frequencies Φ usually has a geometric structure, like a submanifold of
+Rd.
+The classical methods from Section 5 are used widely in harmonic analysis and especially in
+restriction theory. The operator norm method is applied very broadly, where the operator norm
+of M is often estimated using orthogonality, as in Plancherel’s theorem. The power method and
+the MM ∗ method are also used broadly. These general methods give estimates for many different
+problems. Sometimes these estimates are sharp, but often they are not. We will discuss some
+problems where the special structure of the matrix M can be used to go beyond these methods.
+
+10.1. Restriction theory. Suppose that S ⊂ Rd is a submanifold, such as the unit sphere or the
+paraboloid defined by ωd = �d−1
+j=1 ω2
+j . We let dµS be the volume measure on S. We define the
+operator ES by
+
+(38)
+ESg(x) :=
+�
+e2πiωxg(ω)dµS(ω).
+
+Here g is a function on S and ESg is a function on Rd. One motivation for this comes from linear
+PDE. A solution to a given linear PDE can be written in the form ES, where the submanifold S
+encodes the PDE. For example, if we think of xd as a time coordinate t, then a solution to the
+free Schrodinger equation ∂tu(x, t) = i �d−1
+j=1 ∂2
+j u can be written in the form ES where S is the
+
+paraboloid ωd = �d−1
+j=1 ω2
+j .
+In the late 60s, Stein raised the question of the p-to-q norm of the linear operator ES for different
+surfaces S beginning with the unit sphere. The main question here is to determine all exponents
+p, q so that
+
+(39)
+∥ESd−1g∥Lq(Rd) ≲ ∥g∥Lp(Sd−1).
+
+Stein noticed that curved submanifolds behave differently from flat submanifolds and made an
+influential conjecture about the behavior of ∥ES∥p→q, called the restriction conjecture.
+The linear operator ES is described in a continuous way, but we can discretize the situation to
+make a matrix Ms which essentially captures the behavior of the linear operator ES. For example,
+
+

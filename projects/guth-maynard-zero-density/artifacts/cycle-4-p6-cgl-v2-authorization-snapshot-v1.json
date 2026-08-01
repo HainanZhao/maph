@@ -1,0 +1,43 @@
+{
+  "artifact_id": "cycle-4-p6-cgl-v2-authorization-snapshot-v1",
+  "captured_utc": "2026-08-01",
+  "claim_boundary": "OBSERVED immutable authorization snapshot only. It authorizes a bounded preregistration package and subsequent reconstruction audit; it proves no Chen--Gupta--Li theorem, repairs no source argument, makes no novelty claim, and selects no P7 family.",
+  "epistemic_status": "OBSERVED",
+  "historical_replay": {
+    "live_plan_hash_pinned": false,
+    "live_plan_read_required": false,
+    "mutable_operational_state_excluded": true,
+    "policy": "Historical replay pins this immutable snapshot and frozen source bytes only. Any later operational eligibility check is separate and replaceable."
+  },
+  "registry_count_correction": {
+    "canonical_count": 46,
+    "canonical_ranges": "S01-S06, L01-L12, M01-M08, Z01-Z10, F01-F10",
+    "draft_arithmetic": "6+13+8+10+10=47, not 46",
+    "draft_inconsistency": "The prior prose separately proposed L12 for the odd-prime character-subdivision case and L13 for the 2-power case while also calling the registry 46 rows.",
+    "no_obligation_dropped": true,
+    "resolution": "Canonical L12 contains two mandatory labeled subchecks, L12.odd_prime and L12.two_power. Draft label L13 is retained only as a retired alias for L12.two_power and is not a 47th executable row.",
+    "retired_draft_aliases": {
+      "L13": "L12.two_power"
+    }
+  },
+  "semantic_authorization": {
+    "expected_gate_outcome": "OPEN_ANALYTIC_INPUT",
+    "next_action": "Seal exactly 46 Chen--Gupta--Li v2 reconstruction rows before theorem-by-theorem execution.",
+    "required_special_gates": [
+      "primitive-to-all-character transfer",
+      "stated X/q/T range without silently imposing q <= T^C",
+      "T-smooth definition and divisor-chain endpoints",
+      "reachable external theorem hypotheses"
+    ],
+    "source_status": "arXiv:2507.08296v2 is a three-author preprint and prior work; retain that status and concede overlap.",
+    "prohibitions": [
+      "no reconstruction execution in the preregistration package",
+      "no theorem promotion",
+      "no source repair",
+      "no implicit q <= T^C assumption",
+      "no P7 selection"
+    ],
+    "two_route_requirement": "Route A literal theorem-chain reconstruction and Route B independent exponent-polytope/conductor reconstruction must reconcile all 46 canonical labels before any gate promotion."
+  },
+  "status": "IMMUTABLE_AUTHORIZATION_SNAPSHOT"
+}

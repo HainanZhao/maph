@@ -1,0 +1,69 @@
+{
+  "artifact_id": "p7-common-ideal-cubic-v2-correction",
+  "artifact_identity": {
+    "builder": {
+      "path": "proof/build_p7_common_ideal_cubic_v2_correction.py",
+      "sha256": "225cc56b90bf2dcd1dbc1f315927073c3f288ee05cbc359eabd58fb774880b0b"
+    },
+    "document": {
+      "path": "docs/p7-common-ideal-cubic-v2-correction.md",
+      "sha256": "497eefaa3289da13e1774da335be9a7907d1203d388cd59ca7692474fe101065"
+    },
+    "tests": {
+      "path": "tests/test_p7_common_ideal_cubic_v2_correction.py",
+      "sha256": "4cfb336a6155d14687e2a601ea2bd593f9bc6c72107ff70af69f113fd616b45b"
+    }
+  },
+  "corrected_claim": {
+    "epistemic_status": "PROVED",
+    "integer_replay": {
+      "coloured_energy": 34,
+      "orthogonality_parseval_count": 34,
+      "uncoloured_time_energy_with_multiplicity": 62
+    },
+    "statement": "For b_chi(n)=Sum_{Na=n}c(a)chi(a), |b_chi(n)|^2 <= a_Q(i)(n) Sum_{Na=n}|c(a)|^2 1_{(a,f_chi)=1}; and the finite Z/2 coloured Parseval count is exactly the integer 34."
+  },
+  "correction_type": "integer_replay_and_display_correction",
+  "defects": [
+    "The v1 finite Z/2 Parseval count was serialized as 34.0 because Python evaluates (-1)**negative_integer as a float, despite the exact intended count being the integer 34.",
+    "The v1 artifact rendered the coprimality factor in the single-character fibre bound as 1_(a,f)=1 instead of the unambiguous 1_{(a,f)=1}."
+  ],
+  "epistemic_status": "OBSERVED",
+  "immutable_v1": {
+    "path": "artifacts/p7-common-ideal-cubic-v1.json",
+    "sha256": "5363288906df50df18e96afec0760c1fa8bfec912e61bbf05fa60492c77957f2"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_p7_common_ideal_cubic_v2_correction.py --check",
+    "runtime": {
+      "implementation": "CPython",
+      "json_policy": "stdlib json sort_keys=True; UTF-8; LF; trailing newline",
+      "optimize": 0,
+      "version": "3.12.3"
+    },
+    "script": "proof/build_p7_common_ideal_cubic_v2_correction.py",
+    "script_sha256": "225cc56b90bf2dcd1dbc1f315927073c3f288ee05cbc359eabd58fb774880b0b",
+    "write_command": "python3 proof/build_p7_common_ideal_cubic_v2_correction.py --write"
+  },
+  "resource_contract": {
+    "rss_kib_strictly_less_than": 262144,
+    "wall_seconds_strictly_less_than": 60
+  },
+  "review_policy": "LIGHTWEIGHT_SOURCE_ALGEBRA_REPLAY; no hostile audit initiated.",
+  "source_integrity": {
+    "conventions": {
+      "path": "conventions/p7_common_ideal_cubic_v1.py",
+      "sha256": "12a80cac0688915d738ae2b624ce4da561c3023d1c513699133c097e4c5c02b0"
+    },
+    "p7_common_ideal_cubic_v1": {
+      "path": "artifacts/p7-common-ideal-cubic-v1.json",
+      "sha256": "5363288906df50df18e96afec0760c1fa8bfec912e61bbf05fa60492c77957f2"
+    }
+  },
+  "unchanged": [
+    "the P7-3 exact labelled-ideal Gram identity and its finite check",
+    "the fixed-modulus coloured Parseval formula",
+    "the scoped non-verbatim-import boundary",
+    "the non-promotion boundary and the open coloured primitive cubic estimate"
+  ]
+}

@@ -1,0 +1,254 @@
+{
+  "agreement_summary": {
+    "agreed_or_agreed_with_caveat": 12,
+    "coverage_gaps": 3,
+    "formula_contradictions": 0,
+    "label_scope_mismatches": 1
+  },
+  "artifact_id": "cycle-2-stream-b-route-reconciliation-v1",
+  "canonical_mapping_table": [
+    {
+      "falsifier": "Any unequal hash for a shared source invalidates comparison.",
+      "id": "R1-source-hashes",
+      "ledger": "source locators and versions frozen",
+      "prereg_requirement": "freeze hashes and source versions",
+      "route_a": "GM/MP/Montgomery/HSW/Bui hashes checked",
+      "route_b": "same sources checked, with additional HSW/Bui PDF hashes",
+      "status": "AGREED"
+    },
+    {
+      "falsifier": "A source range excluding the frozen sigma interval, or an unconverted height convention, refutes the route.",
+      "id": "R2-range-and-height",
+      "ledger": "MP's local positive interval and the outer two-sided convention are distinguished",
+      "prereg_requirement": "7/10<=sigma<=4/5 and multiplicity-counted |Im rho|<=T",
+      "route_a": "7/10 <= sigma <= 4/5; T sufficiently large",
+      "route_b": "[7/10,4/5]",
+      "status": "AGREED_AFTER_CONVERSION"
+    },
+    {
+      "falsifier": "Detector, dyadic range, or threshold mismatch refutes complement inclusion.",
+      "id": "R3-detector-and-complement",
+      "ledger": "detector/range/threshold agree; MP types may overlap",
+      "prereg_requirement": "MP must cover GM detector and Type-II transfer",
+      "route_a": "PROVED; calls beta cutoff part of exact agreement",
+      "route_b": "PROVED; separately identifies GM-complement implication",
+      "status": "AGREED_WITH_WORDING_CAVEAT"
+    },
+    {
+      "falsifier": "A unit strip with multiplicity T^c for fixed c>0 invalidates the o(1) conversion.",
+      "id": "R4-multiplicity-local-count",
+      "ledger": "initially OBSERVED before HSW/Bui conversion",
+      "prereg_requirement": "multiplicity convention and local zero count checked",
+      "route_a": "PROVED",
+      "route_b": "PROVED",
+      "status": "AGREED_AFTER_EXTERNAL_COMPLETION"
+    },
+    {
+      "falsifier": "A real non-trivial zero or failure of conjugation/multiplicity preservation would refute the exact factor-two step.",
+      "id": "R5-two-sided-and-dyadic-heights",
+      "ledger": "initial source ledger left this OBSERVED",
+      "prereg_requirement": "convert positive local proof to |Im rho|<=T",
+      "route_a": "PROVED",
+      "route_b": "PROVED plus PROVED",
+      "status": "AGREED_WITH_ROUTE_B_STRONGER_JUSTIFICATION"
+    },
+    {
+      "falsifier": "A non-uniform Fourier tail or extraction loss T^c invalidates the transfer.",
+      "id": "R6-smoothing-and-extraction",
+      "ledger": "outside Stream A scope",
+      "prereg_requirement": "beta-dependent smoothing, tail, and 1-separated extraction",
+      "route_a": "PROVED",
+      "route_b": "PROVED",
+      "status": "AGREED"
+    },
+    {
+      "falsifier": "Powered coefficients exceeding T^o(1) for bounded k invalidate normalization.",
+      "id": "R7-coefficients-and-power",
+      "ledger": "outside Stream A scope",
+      "prereg_requirement": "original/powered coefficient and normalization losses",
+      "route_a": "PROVED",
+      "route_b": "PROVED",
+      "status": "AGREED"
+    },
+    {
+      "falsifier": "If k is unbounded, support and divisor losses cease to be T^o(1).",
+      "id": "R8-both-k-regimes",
+      "ledger": "outside Stream A scope",
+      "prereg_requirement": "both Cycle-1 integer-k regimes",
+      "route_a": {
+        "large_branch": "k=2",
+        "proof": "ell(sigma)<=10/13 and n>1/100 in the small branch; the large branch is GM's k=2 choice.",
+        "small_branch": "k=ceil(ell(sigma)/n)<=77"
+      },
+      "route_b": "PROVED; ell_max=10/13, upper_min=15/14",
+      "status": "AGREED"
+    },
+    {
+      "falsifier": "An unbounded block count or non-comparable M/N^k invalidates the threshold transfer.",
+      "id": "R9-support-blocks-and-threshold",
+      "ledger": "outside Stream A scope",
+      "prereg_requirement": "admissible dyadic block and threshold after normalization",
+      "route_a": "PROVED (coalesced row)",
+      "route_b": "PROVED",
+      "status": "AGREED_COARSE_ROUTE_A"
+    },
+    {
+      "falsifier": "A claimed independent agreement requires Route A to enumerate and check L^(2-2s), L^(18/5-4s), and T L^(12/5-4s).",
+      "id": "R10-theorem-1-1-three-terms",
+      "ledger": "outside Stream A scope",
+      "prereg_requirement": "Theorem 1.1 application hypotheses and structural terms",
+      "route_a": "NOT EXPLICIT in v2; v2 is a v1-blocker closure and has no row/formula for all three terms",
+      "route_b": "PROVED",
+      "status": "ROUTE_A_COVERAGE_GAP"
+    },
+    {
+      "falsifier": "Failure of endpoint spacing or polarity conversion invalidates the MVT application.",
+      "id": "R11-montgomery-theorem-and-polarity",
+      "ledger": "printed formula (7), arbitrary coefficients, delta convention",
+      "prereg_requirement": "pin reachable mean-value theorem and all hypotheses",
+      "route_a": "PROVED",
+      "route_b": "PROVED",
+      "status": "AGREED"
+    },
+    {
+      "falsifier": "If coefficient l2 norm exceeds N^(k+o(1)), these terms are not licensed.",
+      "id": "R12-mvt-structural-terms",
+      "ledger": "derives the same two terms conditionally",
+      "prereg_requirement": "exact mean-value branch",
+      "route_a": "Dividing the mean-square bound by V^2 with V=N^(k sigma)T^-o(1) gives |W|<=T^o(1)(N^(2k-2k sigma)+T N^(k-2k sigma)), exactly GM (13.4).",
+      "route_b": "PROVED",
+      "status": "AGREED"
+    },
+    {
+      "falsifier": "Independent agreement requires the positive residual, not merely a displayed GM conclusion.",
+      "id": "R13-mvt-strict-residual",
+      "ledger": "outside Stream A scope",
+      "prereg_requirement": "no finite-T endpoint upgrade and all branch losses visible",
+      "route_a": "NOT EXPLICIT in v2",
+      "route_b": "PROVED; exact positive residual retained",
+      "status": "ROUTE_A_COVERAGE_GAP"
+    },
+    {
+      "falsifier": "An unbounded number of loss sources or a fixed power loss invalidates epsilon allocation.",
+      "id": "R14-epsilon-and-o1-losses",
+      "ledger": "final MP log power not explicit",
+      "prereg_requirement": "all fixed losses visible; no finite-T power upgrade",
+      "route_a": "PROVED; epsilon/20 finite budget",
+      "route_b": "all rows retain T^o(1); no finite-T equality",
+      "status": "AGREED"
+    },
+    {
+      "falsifier": "Independent agreement requires an explicit domination check 2(1-sigma)<=A(sigma) and positive-shell summation.",
+      "id": "R15-final-dyadic-reassembly",
+      "ledger": "positive local result only",
+      "prereg_requirement": "all branch/reassembly conditions checked",
+      "route_a": "only positive-to-two-sided geometric shell statement",
+      "route_b": "PROVED; explicitly combines Type I and II",
+      "status": "ROUTE_A_COVERAGE_GAP"
+    },
+    {
+      "falsifier": "Using Route A's unqualified PASS as a G0 PASS contradicts the preregistration and Stream-C blocker record.",
+      "id": "R16-pass-label-scope",
+      "ledger": "does not promote G0",
+      "prereg_requirement": "full G0 PASS requires every node and all downstream conditions",
+      "route_a": "PASS: v1's local-zero and mean-value blockers are closed; all stated normalizations and epsilon transfers are retained as asymptotic T^o(1) losses.",
+      "route_b": "NARROW PASS: every preregistered Stream-B application node (including MP complement inclusion, multiplicity/two-sided conversion, and MVT branch) is source-pinned and checked. Stream C's external explicit-formula node remains outside this audit.",
+      "status": "LABEL_SCOPE_MISMATCH"
+    }
+  ],
+  "canonical_status": "STREAM_B_NARROW_PASS only; G0 remains OBSERVED pending Stream C and the three Route-A coverage rows.",
+  "claim_boundary": "Hostile evidence reconciliation only. It detects no contradictory checked formula, but it does not certify independent two-route agreement where Route A v2 omits a node.",
+  "epistemic_status": "OBSERVED",
+  "frozen_source_hashes": {
+    "bui_tar": "a171c6e74be228955df48191675e497ce4934623ae33ddddd9761b8cb1185ca5",
+    "gm_tar": "9d34ac093abcb8129f68ff86eaad65f09a09d832fe637ff84d50a69496046bdc",
+    "gm_tex": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428",
+    "hsw_tar": "8ba8d0eb95e1dd967adf17b7a2e77bdc45a99f6aa283d41d23dd4d0ac4358247",
+    "montgomery_pdf": "b240c7c07d32201ced906bd0fdc4d36cca3c11999084afeb658ffca3f978534e",
+    "mp_tar": "b81dbb3bb8bed014588294b5c6d7e8e4b5a14798f445baecb6680b7a9df967d3",
+    "mp_tex": "ec22dfdb8394b8ab4b228d0f438d19858015fc74330e247d08f36e5830782426"
+  },
+  "historical_reproducibility_defect": {
+    "affected_input": "cycle-2-stream-b-route-a-v2.json",
+    "cause": "Route A v2 embeds replay.wall_time_ns, so a successful rerun changes its artifact bytes while preserving its canonical mathematical_and_source_audit_sha256.",
+    "containment": "This reconciliation compares Route A by the asserted canonical audit hash and records the current-at-seal byte hash only as provenance. Byte drift is not a mathematical mismatch.",
+    "status": "OBSERVED"
+  },
+  "input_byte_hashes_at_seal": {
+    "preregistration": "e07ecf8783983d20ad435bdcd1c4b0922eee0c6419b26bdd34d7a34b92a2fb63",
+    "route_a_v2_artifact": "d3b86e4715ffdb8c6403781b1bafa82333950a211e706ac275ff93ce7c9a2b24",
+    "route_a_v2_script": "7d86446f82770264483961995d355f07f14147763112026781a4fded8650d557",
+    "route_b_v1_artifact": "927d85a06133692dd75d8f796741cd8a1b5c5a40b91faeecdad8d53556227bd1",
+    "route_b_v1_script": "6ab19ad3e741f34977e371ab6ddf8171aecf7686ff4be8446f0e32eb21d90974",
+    "stream_a_ledger": "e1cb48f1855eeb308798ea3df7867ab94e7b61115b377b632afd27ffc388a40a"
+  },
+  "mismatch_and_falsifier_rows": [
+    {
+      "effect": "Canonical status is STREAM_B_NARROW_PASS; G0 remains OBSERVED.",
+      "evidence": "Route A says PASS, while Route B says NARROW PASS and preregistration requires Stream C before G0 PASS.",
+      "falsifier": "Any release labeling G0 PASS from Route A alone fails this reconciliation.",
+      "id": "M1-route-a-pass-scope",
+      "kind": "label mismatch",
+      "status": "CONTAINED"
+    },
+    {
+      "effect": "The routes are not independently agreeing on this node.",
+      "evidence": "Route A v2 has no explicit all-three-terms Theorem 1.1 row; Route B B7 has it.",
+      "falsifier": "Add a Route-A-v3 exact structural-term row or withdraw independent-agreement language.",
+      "id": "M2-route-a-theorem-1-1-coverage",
+      "kind": "coverage mismatch",
+      "status": "OPEN"
+    },
+    {
+      "effect": "No independent two-route confirmation of the strict MVT margin.",
+      "evidence": "Route A v2 gives the two MVT structural terms but no positive residual; Route B B9 checks it exactly.",
+      "falsifier": "Add a Route-A-v3 residual identity with denominator/range sign checks.",
+      "id": "M3-route-a-mvt-residual-coverage",
+      "kind": "coverage mismatch",
+      "status": "OPEN"
+    },
+    {
+      "effect": "No independent two-route confirmation of the final application assembly.",
+      "evidence": "Route A records a two-sided shell inequality but not the Type-I/Type-II exponent comparison and final reassembly; Route B B10 does.",
+      "falsifier": "Add a Route-A-v3 reassembly row including 2(1-sigma)<=15(1-sigma)/(3+5sigma).",
+      "id": "M4-route-a-reassembly-coverage",
+      "kind": "coverage mismatch",
+      "status": "OPEN"
+    },
+    {
+      "effect": "No mathematical inclusion failure; canonical wording separates detector identity from R_II(sigma,T)'s beta restriction.",
+      "evidence": "Route A calls a beta cutoff part of exact detector agreement; beta>=sigma is imposed in the GM/MP counting restriction, not in MP's Type-I detector definition.",
+      "falsifier": "A source detector condition depending on beta would require a new detector comparison.",
+      "id": "M5-beta-cutoff-wording",
+      "kind": "wording mismatch",
+      "status": "CONTAINED"
+    },
+    {
+      "effect": "No hash conflict; future route reports should record both when claiming preregistered-source closure.",
+      "evidence": "Both routes hash the extracted GM TeX, while preregistration freezes the parent tar. This reconciliation verifies both hashes and their expected values.",
+      "falsifier": "A mismatch of the tar or extracted TeX hash invalidates the frozen-source link.",
+      "id": "M6-gm-tar-route-coverage",
+      "kind": "source-freeze coverage",
+      "status": "CONTAINED"
+    },
+    {
+      "effect": "Route A is compared by canonical audit hash; the byte hash is recorded only at seal time.",
+      "evidence": "Route A v2 stores replay.wall_time_ns, so its raw artifact hash changes after a successful replay although mathematical_and_source_audit_sha256 remains stable.",
+      "falsifier": "A changed canonical audit hash, rather than a changed timing field, requires a new mathematical reconciliation.",
+      "id": "M7-route-a-byte-reproducibility",
+      "kind": "historical reproducibility defect",
+      "status": "CONTAINED"
+    }
+  ],
+  "next_authorized_action": "Open a versioned Route A continuation only if independent two-route agreement is required; add its Theorem-1.1 terms, strict MVT residual, and full reassembly. Do not alter either frozen route artifact.",
+  "replay": {
+    "interpreter_requirement": "Python 3 standard library only",
+    "script_sha256": "645d5889adb6aa49df60cd1c678a64a7bf7aac03e27d1b34b475f2cd167a80f9",
+    "write_command": "python3 projects/guth-maynard-zero-density/proof/reconcile_cycle2_stream_b_routes_v1.py --write projects/guth-maynard-zero-density/artifacts/cycle-2-stream-b-route-reconciliation-v1.json"
+  },
+  "semantic_route_identities": {
+    "route_a_v2_canonical_audit_hash": "56902c1e432507a9d67937c28b6b07be62ebfeac9e3ccf53934eb676d1ba3ce8",
+    "route_b_v1_artifact_hash_at_seal": "927d85a06133692dd75d8f796741cd8a1b5c5a40b91faeecdad8d53556227bd1",
+    "route_b_v1_script_hash": "6ab19ad3e741f34977e371ab6ddf8171aecf7686ff4be8446f0e32eb21d90974"
+  }
+}

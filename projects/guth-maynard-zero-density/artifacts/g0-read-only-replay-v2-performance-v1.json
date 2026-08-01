@@ -1,0 +1,23 @@
+{
+  "artifact_id": "g0-read-only-replay-v2-performance-v1",
+  "claim_boundary": "OBSERVED host-specific performance of the complete 16-check read-only G0 replay. This record neither adjudicates G0 nor proves a theorem.",
+  "command": [
+    "/usr/bin/time",
+    "-v",
+    "python3",
+    "proof/run_g0_replay_v2.py"
+  ],
+  "environment": {
+    "mutool_version": "mutool version 1.23.10",
+    "python_version": "Python 3.12.3",
+    "time_version": "time (GNU Time) UNKNOWN"
+  },
+  "epistemic_status": "OBSERVED",
+  "exit_status": 0,
+  "harness_sha256": "69b65fea195af05a7c07d7fc0e7713a2462664e63d0f8033c549e8833ab2641a",
+  "max_rss_kib": 52608,
+  "reconciliation_artifact_sha256": "6d12eb62c516198d7292a29fe6dd6e6a1dbdc9957f992564cce6e51e12ea692d",
+  "reconciliation_script_sha256": "4a58d005a1ef4af8524187001e5a041660857b987fd459313b459d73fcac1fe3",
+  "replay_result": "PASS",
+  "wall_seconds": "9.39"
+}

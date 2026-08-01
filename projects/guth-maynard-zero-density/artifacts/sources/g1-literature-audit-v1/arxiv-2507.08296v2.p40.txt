@@ -1,0 +1,100 @@
+40
+BIN CHEN, VISHAL GUPTA, AND YUNG CHI LI
+
+=
+�
+
+(ti,χi)∈W, 1≤i≤4
+χ1χ2=χ3χ4
+
+(qT)ϵ ˆψ
+�(qT)ϵ(t3 + t4 − t1 − t2)
+
+2π
+
+�
+ϕ(q).
+
+The last line follows by the orthogonality of characters. Due to the rapid decay of
+ˆψ, the summation can be restricted to |t1 + t2 − t3 − t4| ≤ 1, incurring an error of
+Oϵ((qT)−100).
+The proof is then completed by observing that the remaining terms
+contribute ⪅ ϕ(q)E(W).
+□
+
+10. Energy bound
+
+We recall the definition of the energy for a finite set W of pairs (t, χ):
+
+E(W) := #{(t1, χ1), (t2, χ2), (t3, χ3), (t4, χ4) ∈ W : |t1 +t2 −t3 −t4| ≤ 1, χ1χ2 = χ3χ4}.
+
+The goal of this section is to establish the following bound for the energy of W. Our
+approach is based on Heath-Brown’s bound for double zeta sums.
+
+Theorem 10.1 (Heath-Brown, [6]). Let T be a set of pairs (t, χ), where χ is a primitive
+character modulo q and t is a real number with |t| ≤ T such that for (t, χ) ̸= (t′, χ′)
+either χ ̸= χ′ or |t − t′| ≥ 1. Then
+�
+
+(t1,χ1),(t2,χ2)∈T
+
+����
+�
+
+n∼N
+cnχ1(n)χ2(n)ni(t1−t2)
+����
+
+2
+⪅ (|T |N 2 + |T |2N + |T |
+5
+4(qT)
+1
+2N) max
+n∼N |cn|2.
+
+We aim to prove the following bound:
+
+Proposition 10.2. Let
+
+DN(t, χ) =
+�
+
+N<n≤2N
+anχ(n)nit,
+
+where χ is a primitive character modulo q and |an| ≤ 1. Suppose that W is a finite set
+of pairs (t, χ), where |t| ≤ T and for (t, χ) ̸= (t′, χ′) either χ ̸= χ′ or |t − t′| ≥ (qT)ϵ.
+Assume that
+|DN(t, χ)| ≥ N σ/6
+
+for all (t, χ) ∈ W and (qT)2/3/2 ≤ N ≤ qT. Assume that either |W| ≥ (qT)
+2
+3 or that
+E(W)
+1
+8N ≥ (qT)
+1
+2|W|
+5
+8. Then we have
+
+E(W) ⪅ϵ |W|N 4−4σ + |W|21/8(qT)1/4N 1−2σ + |W|3N 1−2σ.
+
+Remark 10.3. The extra assumption allows us to weaken the lower bound on N; it
+can be compared to the condition T
+3
+4 < N in Guth-Maynard’s Proposition 11.1. For
+T > N
+6
+5, they can use subdivision so weakening this lower bound is not useful for them
+but is of value in this case.
+Ultimately, we only need an upper bound for S3 and this additional assumption
+does not affect the final bound.
+Suppose that |W| < (qT)2/3 and E(W)1/8N <
+(qT)1/2|W|5/8. Then (qT)2|W|3/2 > qTN|W|1/2E(W)1/2. Indeed, the second assump-
+tion gives E(W)1/2 < (qT)2|W|5/2N −4, and hence
+
+qTN|W|1/2E(W)1/2 < (qT)3|W|3N −3 < qT|W|3 < (qT)2|W|3/2.
+
+

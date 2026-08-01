@@ -1,0 +1,201 @@
+{
+  "actual_farey_geometry": {
+    "cells_disjoint_at_frozen_scales": true,
+    "central_count_lower": "#F_Q >= Q^2/200 for Q>=4096",
+    "cover_measure_scale": "Q^2/H=Q^-1=v^-4",
+    "epistemic_status": "PROVED",
+    "net": "coprime Q<=r,s<2Q, 3/4<=r/s<=5/4, with radius-1/(100H) cells",
+    "reduced_center_gap_lower": "1/(4Q^2)",
+    "scope": "actual reduced fractions only; no logarithmic alias substitution"
+  },
+  "artifact_id": "cycle-5-crr-farey-log-gram-reduction-v1",
+  "base_coefficient_coupling": {
+    "coefficient_norm": "||b||_2^2<=L on the nonzero support of w",
+    "common_object_rule": "The bundle and spectral lower bound use the same measurement matrix M_W; they are not separately optimized models.",
+    "conditional_on": "the CRR-v2 Base(v) predicate for the same W and b",
+    "derivation": "|W|*v^(14-2delta)/L >= v^(12-3delta)",
+    "epistemic_status": "PROVED",
+    "identity": "D_v|_W=M_W b",
+    "spectral_lower": "lambda_max(M_W M_W^*)>=v^(12-3*delta(v))"
+  },
+  "claim_boundary": "This artifact proves an exact actual-Farey cell/jittered-node/multiplicative-ray reduction and a conditional FARI implication. It proves neither FARI nor CRR-U, and gives no witness, cubic lower bound, density estimate, prime-interval theorem, saturation theorem, or L-function result.",
+  "conditional_incompatibility_reduction": {
+    "conclusion": "For sufficiently large v with 3*delta(v)<eta, Base(v) and RationalMass(v) cannot hold together; hence FARI_eta implies CRR-U.",
+    "conditional_on": "FARI_eta for any fixed eta>0",
+    "epistemic_status": "PROVED",
+    "scope": "PositiveCubic(v) is not needed for this conditional contradiction; this does not prove FARI_eta or CRR-U."
+  },
+  "context": {
+    "alias_exclusion": "No ordinary Farey nodes r/s or actual CRR-v2 rational net are constructed.",
+    "crr_v2_status": "SEALED_ANALYTIC_FORMALIZATION_LIGHTWEIGHT_CHECKED",
+    "finite_probe_scope": "Metadata correction only. It does not edit or rerun v3, alter any row, seed, candidate, numerical value, status, resource observation, or mathematical claim.",
+    "montgomery_scope": "This artifact proves exact exponent algebra and finite-threshold implications conditional on two explicitly CONJECTURED premises. It proves neither Montgomery's conjecture nor CRR-U, and it gives no density, prime-interval, saturation, or L-function theorem."
+  },
+  "distinctions_from_prior_work": {
+    "finite_probe": "The equal-weight finite surrogate did not test this continuous cross-Gram/FARI condition and supplies no universal negative.",
+    "generic_alias_barrier": "The pinned alias barrier excludes actual Farey nodes; its generic no-go is not invoked here.",
+    "montgomery": "The pinned Montgomery reduction remains conditional on a separate large-values conjecture; this artifact supplies an unconditional algebraic reduction to a different, explicitly CONJECTURED inequality."
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "actual_farey_cells_at_v8": {
+      "H": 68719476736,
+      "Q": 4096,
+      "all_cells_measure_scale": "1/4096",
+      "cell_diameter": "1/3435973836800",
+      "central_farey_count_lower": "2097152/25",
+      "central_integer_interval_length": 1024,
+      "reduced_fraction_gap_lower": "1/67108864"
+    },
+    "affine_factorization": {
+      "M": 64,
+      "Q": 4096,
+      "identity": "(d*(r/(d*e))+m2)/m3=(r+e*m2)/(e*m3)",
+      "scale": "if d,e,m2,m3 asymp M and r asymp Q, numerator and denominator are asymp Q",
+      "scope": "dyadic-scale compatibility only; no exact-shell closure or coprimality preservation is asserted"
+    },
+    "exponent_rows": {
+      "activated_actual_farey_cells": "8-1*delta",
+      "base_coefficient_spectral_lambda_lower": "12-3*delta",
+      "farey_log_gram_bundle_lower": "26-3*delta",
+      "jittered_raw_amplitude": "6-1*delta",
+      "jittered_raw_square": "12-2*delta",
+      "plateau_ray_multiplicity": "6"
+    },
+    "farey_union_bound_certificate": {
+      "conclusion": "#F_Q >= Q^2/200 for Q>=4096",
+      "harmonic_bound": "sum_(p<=2Q) 1/p <= 1+log(2Q)",
+      "log_two_upper": "7/10",
+      "minimum_Q": 4096,
+      "prime_square_sum_upper": "3/4",
+      "residual_margin_at_Q0": "1343/100",
+      "residual_per_Q_upper_at_Q0": "141/20"
+    },
+    "jitter_constants": {
+      "cell_radius_times_H": "1/100",
+      "jitter_log_radius": 3,
+      "log_shift_times_H_upper": "202/75",
+      "raw_square_loss": "1/2",
+      "raw_window_radius_times_H": 1,
+      "reason": "0<=psi1,psi2<=1 and supp(psi1) subset [-1,1]",
+      "relative_shift_times_H_upper": "101/75"
+    },
+    "plateau_rays_at_v8": {
+      "L": 1073741824,
+      "Q": 4096,
+      "continuous_k_interval_width_lower": "786432/25",
+      "integer_k_count_lower": "65536/5",
+      "plateau": "[6L/5,9L/5]",
+      "ray_count_exponent_in_v": 6
+    },
+    "scales_at_v8": {
+      "H": 68719476736,
+      "L": 1073741824,
+      "M": 64,
+      "Q": 4096,
+      "R": 16777216,
+      "V": 2097152,
+      "v": 8
+    }
+  },
+  "falsifiers": {
+    "fari": "An asymptotic Base-plus-RationalMass family satisfying the forced bundle lower bound refutes every FARI_eta that covers it.",
+    "reduction": "A failure of Farey-cell disjointness, the smoothing selector, the plateau-ray count, or the labeled cross-Gram identity would refute the proved reduction."
+  },
+  "fari_target": {
+    "arithmetic_content": "actual reduced Farey nodes, bounded archimedean jitter, multiplicative rays, and one common Dirichlet measurement matrix",
+    "epistemic_status": "CONJECTURED",
+    "not_claimed": "No proof or disproof of this restricted inverse inequality is supplied.",
+    "statement": "For some fixed eta>0 and all sufficiently large v, every H^(1/100)-separated Base-admissible W satisfies B_v(W)<=v^(26-eta)."
+  },
+  "forced_bundle_lower": {
+    "conditional_on": "RationalMass(v)",
+    "definition": "B_v(W)=sum_(r,s in F_Q) sup_(|theta|<=3) sum_(k in K_(r,s)) |C_theta(sk,rk)|^2",
+    "does_not_use": [
+      "generic spacing",
+      "additive-energy upper bound",
+      "positive cubic sign or size"
+    ],
+    "epistemic_status": "PROVED",
+    "exponent_derivation": "(8-delta)+(12-2delta)+6=26-3delta",
+    "lower_bound": "B_v(W)>=(5/4)*v^(26-3*delta(v))"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/crr_farey_log_gram_v1.py",
+      "sha256": "d2301a36dd25cd73702a9e5220c2ad5e3c5d820444d6775f0aeea3d9a4783d73"
+    },
+    "crr_v2_artifact": {
+      "path": "artifacts/cycle-4-p1r-crr-u-formalization-v2.json",
+      "sha256": "e26be797539eabe53ee765b7067d1c99fe4d440035e27785cf38aa64bc2fc84e"
+    },
+    "crr_v2_conventions": {
+      "path": "conventions/crr_formalization_v2.py",
+      "sha256": "0d960b76a4ad03cce43727159cf846696dbee732184df44b2ee0503b9ae18ce8"
+    },
+    "document": {
+      "path": "docs/cycle-5-crr-farey-log-gram-reduction-v1.md",
+      "sha256": "c5d89a3c5e5a7871919fbe8dbdc6aa0f17ba7973883774c14e0039cb3327223e"
+    },
+    "finite_probe_correction": {
+      "path": "artifacts/cycle-4-p1r-crr-finite-probe-v3-replay-metadata-correction-v1.json",
+      "sha256": "3aedf729001c3d91810035d3d8c30d41540f9c12d077534edcb8a7d4cbbde686"
+    },
+    "generic_alias_barrier": {
+      "path": "artifacts/cycle-4-crr-alias-model-barrier-v1.json",
+      "sha256": "be9422f9afaa179129f5c46a21ae71220d38545c70ef43c3f293d43e6745b80d"
+    },
+    "gm_source_tex": {
+      "path": "artifacts/sources/arxiv-2405.20552v2/LargevaluesDirichlet17.tex",
+      "sha256": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428"
+    },
+    "montgomery_reduction": {
+      "path": "artifacts/cycle-4-crr-montgomery-reduction-v1.json",
+      "sha256": "5d0b5b14df5e6aed5fd28dc1094c36a0b6c6de83da2605a75cbd5d9163154190"
+    }
+  },
+  "multiplicative_ray_cross_gram": {
+    "cross_gram": "C_theta=M_W^* P_theta M_W",
+    "entry_injectivity": "(r,s,k)->(sk,rk) is injective for reduced positive r/s",
+    "epistemic_status": "PROVED",
+    "labeled_entry_identity": "C_theta(sk,rk)=R_W((r/s)*exp(theta/H))",
+    "measurement_matrix": "M_W(t,n)=w(n/L)n^(it)",
+    "ray": "K_(r,s)={k>0: 6L/5<=rk,sk<=9L/5}",
+    "ray_count_lower": "#K_(r,s)>=L/(20Q)=v^6/20",
+    "row_modulation": "P_theta(t,t)=exp(i*theta*t/H)"
+  },
+  "rationalmass_to_jittered_farey_lift": {
+    "activated_fraction_count_lower": "50*v^(8-delta(v))",
+    "conditional_on": "the CRR-v2 RationalMass(v) predicate for v>=8",
+    "epistemic_status": "PROVED",
+    "raw_amplitude_lower": "2^(-1/2)*v^(6-delta(v))",
+    "raw_node_form": "x_(r,s)=(r/s)*exp(theta_(r,s)/H)",
+    "selection_note": "The jitter is retained; positive smoothing alone does not center x_(r,s) at r/s.",
+    "theta_range": "|theta_(r,s)|<3"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_5_crr_farey_log_gram_reduction_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_5_crr_farey_log_gram_reduction_v1.py",
+    "write_command": "python3 proof/build_cycle_5_crr_farey_log_gram_reduction_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE_BY_USER_DIRECTION",
+    "lightweight_checks": "source anchors, exact Fraction/integer geometry, labeled matrix algebra, replay, and tamper rejection"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_5_crr_farey_log_gram_reduction_v1.py",
+    "sha256": "9f00151ad1d7d51c6cd68715669c94b8e81978cac98088246a37922644e05539"
+  },
+  "source_affine_scale_relation": {
+    "critical_scale": "Q=M^2, so d,e,m2,m3 asymp M and r asymp Q produce numerator and denominator asymp Q",
+    "epistemic_status": "PROVED",
+    "identity": "(d*(r/(d*e))+m2)/m3=(r+e*m2)/(e*m3)",
+    "scope_limit": "This is dyadic scale compatibility only; it neither preserves the exact [Q,2Q] shell/coprimality nor proves a CRR configuration."
+  },
+  "status": "SEALED_ACTUAL_FAREY_LOG_GRAM_REDUCTION_LIGHTWEIGHT_CHECKED"
+}

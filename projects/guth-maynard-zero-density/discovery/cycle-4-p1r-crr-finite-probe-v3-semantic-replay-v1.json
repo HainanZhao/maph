@@ -1,0 +1,41 @@
+{
+  "artifact_id": "cycle-4-p1r-crr-finite-probe-v3-semantic-replay-v1",
+  "claim_boundary": "Deterministic replay only. It neither changes nor reruns the immutable result artifact and makes no continuous CRR claim.",
+  "comparison": {
+    "all_other_fields_compared_exactly": true,
+    "excluded_variable_fields": [
+      "resources.wall_seconds",
+      "resources.peak_rss_bytes"
+    ],
+    "first_difference": null,
+    "row_count": 160,
+    "status_counts": {
+      "NO_RETAINED_HIT": 160
+    },
+    "unique_row_ids": 160
+  },
+  "epistemic_status": "OBSERVED",
+  "harness": {
+    "path": "discovery/replay_cycle_4_p1r_crr_finite_probe_v3_semantic_v1.py",
+    "sha256": "633f63bf356657a64322f9f03713a4fb808d762f646a031956b5e62522fdd657"
+  },
+  "immutable_inputs": {
+    "result": {
+      "path": "discovery/cycle-4-p1r-crr-finite-probe-v3.json",
+      "sha256": "41576b9ad21d44435d251a8fefad1cc64bb038384644ce93c1d1a4314c38a0cb"
+    },
+    "runner": {
+      "path": "discovery/run_cycle_4_p1r_crr_finite_probe_v3.py",
+      "sha256": "667207f0f690aaf36f33fa498a5b90594e2ac500173c44db64388e2958b4d90f"
+    }
+  },
+  "replay": {
+    "check_command": "python3 discovery/replay_cycle_4_p1r_crr_finite_probe_v3_semantic_v1.py --check",
+    "write_command": "python3 discovery/replay_cycle_4_p1r_crr_finite_probe_v3_semantic_v1.py --write"
+  },
+  "replay_resources": {
+    "peak_rss_bytes": 602013696,
+    "wall_seconds": 713.819766420871
+  },
+  "status": "SEMANTIC_REPLAY_MATCH"
+}

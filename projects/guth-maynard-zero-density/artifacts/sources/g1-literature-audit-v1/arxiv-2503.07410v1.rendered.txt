@@ -1,0 +1,236 @@
+LARGE VALUE ESTIMATES IN NUMBER THEORY, HARMONIC ANALYSIS,
+AND COMPUTER SCIENCE
+
+LARRY GUTH
+
+1. Introduction
+
+The large value problem for a matrix M asks: if v is an input vector with a given norm, how
+many entries of Mv can have size at least some threshold λ? Large value problems come up in
+many parts of math, including analytic number theory, harmonic analysis / PDE, and computer
+science. There are many longstanding open questions about them. In this survey, we explore what
+we know about large value problems and what makes them difficult.
+One of our main examples will be the large value problem for Dirichlet polynomials – a problem
+in analytic number theory related to the zeroes of the Riemann zeta function. This problem boils
+down to a large value estimate for a particular matrix MDir. Recently, James Maynard and I made
+a little progress on this problem [GM]. My original plan for this survey was to discuss different
+methods for the large value problem for Dirichlet polynomials.
+But I gradually decided that it makes sense to focus on large value problems in general. I believe
+that most of the issues about the large value problem for Dirichlet polynomials are issues about large
+value problems in general. Mathematicians in several different fields have run into these issues and
+grappled with them. The issues are by no means resolved, but I think each field has an interesting
+perspective on them, and I will try to share perspectives from analytic number theory, harmonic
+analysis, and computer science.
+One of our goals is to survey different methods for studying large value problems. There are
+three fundamental techniques to prove large value estimates, and they seem to have been discovered
+independently by mathematicians in several fields. We will call them
+
+(1) The operator norm method, based on the operator norm of M.
+(2) The power method. This is based on taking some type of tensor power of M and studying
+its operator norm.
+(3) The MM ∗ method. Based on studying the entries of MM ∗.
+
+These techniques are quite general and they give some bounds for the large value problem for
+many matrices M. Sometimes the bounds are sharp, but often they are not. In each field, it has
+been a significant problem to go beyond these techniques, and in each field people have found a
+way to do so.
+In the early 90’s, in [B3], Bourgain proved new large value estimates for a matrix MS that
+describes solutions to the Schrodinger equation. This remarkable work is based on a special structure
+for that matrix, called a wave packet structure. This work was followed up by lots more exploration
+using wave packets in harmonic analysis. In a striking example from 2014, Bourgain and Demeter
+[BD] proved sharp large value estimates for a matrix MP S which describes periodic solutions to the
+Schrodinger equation. This work is all based on the special wave packet structure that appears in
+
+1
+
+arXiv:2503.07410v1  [math.NT]  10 Mar 2025
+
+
+2
+LARRY GUTH
+
+these matrices, and the method doesn’t adapt to other matrices such as MDir or matrices coming
+from computer science.
+Recently, in [GM], James Maynard and I improved on the techniques above for Dirichlet poly-
+nomials. At almost the same time, in [DHPT], Diakonikoas, Hopkins, Pensia, and Tiegel improved
+on the techniques above for a large value problem from computer science. Some of the proof ideas
+are related to each other (and were discovered independently). One of our main goals is to describe
+some ideas from these recent works.
+Our other main goal is to describe the issues and difficulties in trying to prove large value
+estimates. There is a large range of parameters where the operator norm method is the best known
+method in the large value problem for Dirichlet polynomials. This proof is based on orthogonality,
+it takes less than a page, and it was known a hundred years ago. I find it striking that it is really
+hard to improve on this one page argument. The work in [GM] improves on the operator norm
+method for some new range of the parameters, but there remains today a large range of parameters
+where this one page argument gives the best known bound.
+Given a large matrix M, solving the large value problem for M is a difficult computational
+problem. There is no known polynomial time algorithm that gives a good approximation to the
+answer.
+I think that the difficulty of this computational problem is related to the difficulty of
+proving sharp large value estimates in analytic number theory and harmonic analysis. So we will
+survey what is known about this problem from the point of view of computational complexity.
+One interesting direction here concerns a problem about matrices with planted structure, which
+we call the planted large value problem. Let us introduce the problem in the following way. Analytic
+number theorists have spent a long time wondering, “how do we know that there isn’t a sneaky
+vector v so that MDirv has many large components? If there were such a sneaky vector v, how
+would we find it?” The planted large value problem turns this vague question into a precise question.
+Imagine you are given a matrix M that was constructed in one of two ways. It might be a
+random matrix M, which obeys very strong large value estimates. Or it might be a matrix with a
+planted structure, designed so that there is a sneaky input vector v such that Mv has many large
+components. Since the random matrix does not have any sneaky vector v, you can check whether
+the given matrix has a planted structure by exhaustive search, which takes exponential time. The
+planted large value problem asks whether we can detect the planted structure in polynomial time.
+We will survey what is known about the planted large value problem. The problem is not fully
+understood, but there is an interesting conjectural picture related to the sum of squares hierarchy
+in computational complexity theory. Based on ideas in this story, Mao and Wein [MW] proved
+that in a certain range of parameters, the planted large value problem cannot be solved using an
+algebraic method called low degree testing. In fact, they show that in this range of parameters, low
+degree testing cannot do better than the simple one page operator norm method discussed above.
+There is a conjecture in computer science called the low degree testing conjecture which predicts
+that for certain types of problems, no polynomial time algorithm can do better than low degree
+testing. So if the low degree testing conjecture is true, then in this range of parameters, the planted
+large value problem cannot be solved in polynomial time.
+I think that it is interesting to compare the planted large value problem with the large value
+problem for Dirichlet polynomials. We will review the known methods for these two problems and
+we will see that the methods and the results are quite similar.
+This comparison raises an important question. The planted large value problem is about com-
+paring a random matrix to a matrix with planted structure. But matrices that occur in pure math,
+
+
+LARGE VALUE ESTIMATES IN NUMBER THEORY, HARMONIC ANALYSIS, AND COMPUTER SCIENCE
+3
+
+such as MDir, are not random matrices. They may have special structure, and that special structure
+might be key to proving large value estimates.
+We will also discuss matrices with special structure and how special structures have been used
+to prove large value estimates. In this direction, we will focus on the work in harmonic analysis
+using wave packets that we discussed above – Bourgain’s work [B3] on the restriction problem, and
+Bourgain-Demeter’s work [BD] on decoupling, which gives sharp large value estimates for certain
+special matrices. This work is a striking example of a large value estimate based on the special
+structure of a particular matrix.
+The situation for the matrix MDir is not so clear. As we will see, the matrix MDir has some
+special structures that are relevant to the large value problem, but it’s not clear whether these
+special structures have a major impact on what bounds we can prove.
+
+Here is an outline of the essay.
+
+In Section 2, we state the large value problem and survey how large value problems appear in
+different parts of math.
+In Section 3, we work through some examples and use them to motivate the main conjectures
+about the large value problem for Dirichlet polynomials.
+In Section 4, we give an overview of what is known about approximately solving the large value
+problem computationally.
+Next we discuss the main methods for proving large value estimates.
+In Section 5, we explain the three fundamental techniques for proving large value estimates
+mentioned above, and we discuss their limitations.
+In Sections 6-7, we discuss the recent work in [GM] and [DHPT] that goes a little beyond the
+techniques from Section 5.
+Next we discuss some barriers to proving sharp large value estimates.
+In Section 8, we discuss large value problems from the point of view of computational complexity,
+including the planted large value problem.
+In Section 9, we discuss another barrier to proving sharp large value estimates for Dirichlet
+polynomials, which is related to the Kakeya problem in goemetric measure theory. This barrier was
+discovered by Bourgain in [B5].
+In Section 10, we discuss some special structures that appear in harmonic analysis and which
+lead to stronger large value estimates for some special matrices.
+
+Acknowledgements. Thanks to James Maynard, Sam Hopkins, and Tim Hsieh for interesting
+conversations about these topics.
+
+Notation.
+
+If v ∈ CN is a vector, we write ∥v∥ for the Euclidean norm
+
+∥v∥ =
+
+
+
+�
+
+j
+|vj|2
+
+
+
+
+
+1/2
+
+,
+
+and ∥v∥p for the ℓp norm:
+
+
+4
+LARRY GUTH
+
+∥v∥p =
+
+
+
+�
+
+j
+|vj|p
+
+
+
+
+
+1/p
+
+.
+
+Throughout the paper, we will assume that M is a T × N matrix and that N ≤ T ≤ N O(1).
+We write A ≲ B to mean that there is a constant c so that A ≤ cB.
+We write A ⪅ B to mean that for every ϵ > 0, there is a constant cϵ so that A ≤ cϵN ϵB.
+
+2. Large value problems in different parts of math
+
+2.1. Quantitative linear algebra. The most fundamental object in quantitative linear algebra
+is the operator norm of a matrix M and the closely related singular value decomposition of the
+matrix M. Recall that we write ∥v∥ = ∥v∥2 for the standard Euclidean norm of v. The operator
+norm of M is defined by
+
+(1)
+∥M∥ = max
+∥b∥=1 ∥Mb∥.
+
+We write the singular values of M as s1(M) ≥ s2(M) ≥ ... so that s1(M) = ∥M∥.
+There is an efficient algorithm to compute ∥M∥ and to compute the singular value decomposition
+of M. Partly related to that, we can often estimate the operator norm of matrices that appear in
+pure math.
+The large value problem is part of a circle of more complex questions in quantitative linear
+algebra.
+Suppose that M is a matrix.
+The large value problem asks, if the input vector v is
+normalized in some way, then how many entries of the output Mv can have norm bigger than some
+threshold. We make this precise in the following definition.
+
+Definition 2.1. If M is a T × N matrix, then
+
+LVM,ℓp(λ) :=
+max
+∥v∥p=N 1/p #{i : |(Mv)i| > λ}.
+
+The normalization ∥v∥p = N 1/p is just a convention. It has the feature that if |vj| = 1 for every
+j, then v is normalized for every choice of p.
+Estimating LVM,ℓp(λ) is more complex than estimating the norm ∥M∥. For a large matrix M,
+there is a brute force algorithm to approximate LVM,ℓp(λ) in exponential time, but there is no
+known polynomial time algorithm that gives a good approximation. In pure math, there are many
+specific matrices for which the large value problem is not understood, even after a lot of effort.
+Let us briefly explain why large value estimates are more difficult to understand than the operator
+norm. Suppose that W is a subset of the rows of M, and suppose we want to know whether there
+is a vector b with ∥b∥2 normalized so that |(Mb)j| is big for j ∈ W. Let MW be the sub-matrix
+of M that includes only the rows of W. By computing ∥MW ∥, we can get good information about
+the size of |(Mb)j| for j ∈ W. However, we do not know which set W to examine. To get good
+information about the large value problem with this method, we would have to examine every set
+W, and this takes exponential time. Optimizing over the choice of W was explicitly considered in
+[DHPT]. For any η ∈ [0, 1], they defined the η-sparse singular value of M as
+
+(2)
+SSVη(M) :=
+max
+|W |≤ηT ∥MW ∥
+
+

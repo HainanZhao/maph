@@ -1,0 +1,26 @@
+{
+  "artifact_id": "cycle-1-replay-performance-v2",
+  "created_utc": "2026-08-01",
+  "claim_boundary": "Runtime and memory observation for one successful replay; not mathematical proof and not an independent verification route.",
+  "epistemic_status": "OBSERVED",
+  "command": "projects/guth-maynard-zero-density/proof/run_cycle1_replay.sh",
+  "timing_wrapper": "/usr/bin/time -v",
+  "result": {
+    "exit_status": 0,
+    "tests_run": 31,
+    "tests_failed": 0,
+    "elapsed_wall_seconds": "1.17",
+    "user_seconds": "0.86",
+    "system_seconds": "0.31",
+    "maximum_resident_set_kib": 21928
+  },
+  "resource_caps": {
+    "per_route_wall_seconds": 60,
+    "per_route_memory_mib": 256,
+    "aggregate_replay_is_within_both_per-route_caps": true
+  },
+  "supersedes_for_current_coverage": {
+    "artifact": "artifacts/cycle-1-replay-performance-v1.json",
+    "reason": "v2 includes the Route A v4 and Route B v3 complete Theorem 1.2 case-split tests; the historical v1 observation is retained."
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "artifact_id": "p7-detector-local-occupancy-v3-correction",
+  "artifact_identity": {
+    "builder": {
+      "path": "proof/build_p7_detector_local_occupancy_v3.py",
+      "sha256": "838fa85d1731afd3d4abbd0cb770cbaf902a5b6ebffa0a05c2d1d83030cb8ff7"
+    },
+    "conventions": {
+      "path": "conventions/p7_detector_local_occupancy_v3.py",
+      "sha256": "1634340928164cf02da6de5e5b61db2c16a89937826422699fd7e69d2e792445"
+    },
+    "corrected_companion": {
+      "path": "docs/p7-detector-local-occupancy-v2.md",
+      "sha256": "6e37712c11bfc091c2897176e42163eb1d501c5e077855b67c23b76f1fb5b6bf"
+    },
+    "document": {
+      "path": "docs/p7-detector-local-occupancy-v3-correction.md",
+      "sha256": "ec38ed351f416d6c645834e4685b9ee3669cbf8ade388f4bb2b7d93b09e87f50"
+    },
+    "tests": {
+      "path": "tests/test_p7_detector_local_occupancy_v3.py",
+      "sha256": "4010b38f68960c82c2f3b4a8da57c4aa69e46a8bdda34da596a2b0ef860c0071"
+    }
+  },
+  "claim_boundary": "Versioned correction of one remaining v2 regression-test prose assertion only. The v1 mathematical result, v2 corrected companion document, source pins, exact-conductor convention, zero extension, and gate assessment are unchanged.",
+  "conditional_common_detector_sampling": {
+    "current_status": "P7 has no source-checked detector furnishing this common c, uniform V, and range. Hence this is a conditional reduction, not an achieved source-scale D_Delta estimate.",
+    "difference_consequence": "D_Delta(T)<<_K m L_loc(N,Q)||c||_2^2/V^2.",
+    "exact_required_detector_strength": "To meet any prescribed difference target D_target, it is sufficient that one common detector has L_loc(N,Q)||c||_2^2/V^2 <<_K D_target/m. For the fixed-ray Thorner cubic budget, D_target is the prior H z_B^2/(Gamma_Th||u_f||_2^2) scale.",
+    "finite_exact_bookkeeping_check": {
+      "deduced_selected_time_count": 3,
+      "exact_counting_step": "If every selected representative has |D_chi(t)|^2>=V^2 and the joint sampled L2 mass is at most L||c||_2^2, then M_Delta V^2<=L||c||_2^2.",
+      "finite_continuous_mass_bound": 21,
+      "finite_threshold_squared_V2": 7,
+      "local_source_window": "With Delta=r=1/4, Sobolev intervals for a 1-separated character fibre are disjoint and lie in [-1/2,1/2] after translation; enlarge to the source interval [-2,2].",
+      "source_scale": "L_loc(N,Q)=(4+(1/2)log^2(2N))(2N+16Q^2)(log(4Q))^A, from Thorner Theorem 2.1 with source cutoff 2N, conductor cutoff 2Q, height 2, and m=0.",
+      "translation": "For a local center u, replace c(a) by c_u(a)=c(a)(Na)^(-iu). Its l2 norm and support are unchanged, and chi(a)=0 off (a,f)=1 remains exactly the frozen zero extension."
+    },
+    "hypotheses": [
+      "Every exact-character fibre W_chi is 1-separated.",
+      "One common ideal coefficient function c(a), supported on N<Na<=2N and retaining the frozen zero extension, satisfies |D_chi(t)|>=V for every detector row, where D_chi(t)=sum c(a)chi(a)(Na)^(-it).",
+      "The local source specialization is taken with conductor cutoff 2Q, height 2, and m=0 after translating by the local center u."
+    ],
+    "localized_joint_bound": "M_Delta(T)V^2 <<_K L_loc(N,Q)||c||_2^2, where L_loc=(4+(1/2)log^2(2N))(2N+16Q^2)(log(4Q))^A for Delta=1/4.",
+    "status": "PROVED"
+  },
+  "correction": {
+    "affected_claims": "None. The defect is confined to one v2 regression assertion; the v1/v2 builders, source pins, algebraic checks, corrected companion document, and mathematical statements remain valid.",
+    "cause": "One remaining test inspected an incidental prose phrase rather than the semantic zero-extension convention.",
+    "defect": "The v2 test expected the literal phrase 'zero extension' in an artifact field whose mathematically equivalent wording ends 'this extension'.",
+    "remedy": "The v3 test checks the invariant chi(a)=0 off the exact conductor's coprime ideals together with the field's explicit extension wording, rather than requiring an incidental adjacent phrase.",
+    "status": "PROVED",
+    "supersedes": {
+      "artifact": "p7-detector-local-occupancy-v2-correction.json",
+      "sha256": "98562bf5f90b818dbc0332bff0941dcb1533ea90873ea4ce94cf05679186dba5"
+    }
+  },
+  "epistemic_status": "PROVED",
+  "exact_conductor_and_extension": {
+    "selected_rows": "W is a set of (f,chi,t) with Q<N(f)<=2Q and chi primitive of exact finite conductor f; no row is replaced by an imprimitive character at another modulus.",
+    "source_indexing": "Thorner's star sum is primitive, so each exact conductor is indexed once in the shell restriction.",
+    "status": "PROVED",
+    "zero_extension": "Every polynomial retains chi(a)=0 when (a,f)!=1. The local phase c_u(a)=c(a)(Na)^(-iu) changes neither the support nor this extension."
+  },
+  "existing_joint_l2": {
+    "status": "PROVED",
+    "unconditional_constant_polynomial_consequence": "Taking c to be supported on the unit ideal gives D_chi(t)=1 for every exact primitive row. The localized P7-2 sampling argument consequently gives only M_Delta(T)<<_K(1+16Q^2)(log(4Q))^A (after choosing one row per distinct time), which is cardinality scale rather than subpower when Q is a fixed power of T.",
+    "why_it_does_not_close_the_gate": "The existing joint L2 theorem bounds values of a chosen common polynomial; by itself it supplies no detector threshold that is strong enough to beat the Q or Q^2 family factor."
+  },
+  "gate": "P7-3-IDEAL-CUBIC-ENERGY",
+  "gate_assessment": {
+    "analytic_effect": "This result materially sharpens the diagnosis and records the exact detector-side missing hypothesis, but it does not supply an unconditional source-scale local occupancy bound.",
+    "gate_effect": "P7-3 remains open. Even a successful D_Delta input would still require the separate common averaged-block A_0 cubic estimate recorded by the predecessor.",
+    "status": "OBSERVED"
+  },
+  "gate_outcome": "CONTAINED_DETECTOR_SIDE_OCCUPANCY_OBSTRUCTION_GATE_REMAINS_OPEN",
+  "individual_local_zero_count": {
+    "bound": "For q=N(f_chi), Z_chi(u)<=L_0(q,u)=3 log q+6 log(|u|+3)+6 log 4+34.",
+    "definition": "Z_chi(u) is the number of nontrivial zeros in the zero multiset of L(s,chi) with |Im(rho)-u|<=1/2.",
+    "detector_thinning_consequence": "If each selected time is assigned to a zero of the same exact primitive L(s,chi) within alpha, at most b selected times are assigned to one zero, and alpha+Delta<=1/2, then a single fibre contributes at most bL_0(q,u) times to a radius-Delta window about u.",
+    "finite_exact_geometry_check": {
+      "circle_center": "21/20+i*u",
+      "circle_radius": "3/4",
+      "circle_radius_squared": "9/16",
+      "derivation_scope": "The source circle lemma is applied to the exact primitive conductor f_chi, with q=N(f_chi), D_K=4, n_K=2, and delta(chi)<=1. It bounds the zero multiset and hence also distinct zero ordinates.",
+      "functional_equation_transport": "A nontrivial zero beta+i*gamma of chi with beta<1/2 maps to 1-beta-i*gamma of bar(chi), so its ordinate lies in the reflected unit window centered at -u.",
+      "maximum_distance_squared": "221/400",
+      "per_half_bound": "L_circ(q,u)=(3/4)(4 log 4+2 log q+4 log(|u|+3)+12)+8=3 log 4+(3/2)log q+3 log(|u|+3)+17.",
+      "right_half_zero_region": "beta>=1/2 and |gamma-u|<=1/2",
+      "strict_margin": "1/100",
+      "unit_window_bound": "Z_chi(u)<=L_0(q,u):=3 log q+6 log(|u|+3)+6 log 4+34."
+    },
+    "method": "Apply the pinned circle-zero lemma at 21/20+i*u with radius 3/4 to beta>=1/2, then use xi(s,chi)=w(chi)xi(1-s,bar(chi)) for beta<1/2.",
+    "status": "PROVED"
+  },
+  "non_promotion": [
+    "The v1 mathematical result and v2 corrected companion document are unchanged.",
+    "The v3 correction does not create an unconditional source-scale D_Delta bound or a P7 detector.",
+    "P7-3 remains open, including the separate averaged-block A_0 cubic input."
+  ],
+  "replay": {
+    "check_command": "python3 proof/build_p7_detector_local_occupancy_v3.py --check",
+    "runtime": {
+      "implementation": "CPython",
+      "json_policy": "stdlib json sort_keys=True; UTF-8; LF; trailing newline",
+      "optimize": 0,
+      "version": "3.12.3"
+    },
+    "script": "proof/build_p7_detector_local_occupancy_v3.py",
+    "script_sha256": "838fa85d1731afd3d4abbd0cb770cbaf902a5b6ebffa0a05c2d1d83030cb8ff7",
+    "write_command": "python3 proof/build_p7_detector_local_occupancy_v3.py --write"
+  },
+  "resource_contract": {
+    "rss_kib_strictly_less_than": 262144,
+    "wall_seconds_strictly_less_than": 60
+  },
+  "review_policy": "LIGHTWEIGHT_SOURCE_ALGEBRA_REPLAY; no hostile audit initiated.",
+  "sharp_detector_geometry_obstruction": {
+    "finite_exact_check": {
+      "blocks_J": 4,
+      "colours_P": 3,
+      "conclusion": "Even per-character unit-window count one and 1-separation allow D_Delta=mP. Therefore individual local zero counts and primitive-family cardinality alone cannot remove the cross-character factor P.",
+      "local_difference_multiplicity_D_Delta": 36,
+      "minimum_same_colour_gap": "3",
+      "model_status": "COMBINATORIAL_ONLY: this is not an assertion about actual zeros or a constructed P7 detector.",
+      "per_colour_unit_window_count": 1,
+      "radius_Delta": "1/4",
+      "sharp_upper_bound_m_times_M": 36,
+      "time_projection_size_m": 12,
+      "times_by_colour": {
+        "0": [
+          "0",
+          "3",
+          "6",
+          "9"
+        ],
+        "1": [
+          "1/24",
+          "73/24",
+          "145/24",
+          "217/24"
+        ],
+        "2": [
+          "1/12",
+          "37/12",
+          "73/12",
+          "109/12"
+        ]
+      },
+      "uncoloured_local_occupancy_M_Delta": 3
+    },
+    "scope": "The finite construction proves a logical obstruction for the stated counting/separation hypotheses only. It does not manufacture zeros of Hecke L-functions or a detector sample.",
+    "statement": "Fibrewise one-separation, per-character unit-window count one, and primitive-family cardinality P permit D_Delta(T)=mP. Therefore those data do not imply any o(mP) local difference bound.",
+    "status": "PROVED"
+  },
+  "source_integrity": {
+    "p7_detector_local_occupancy_v2": {
+      "locators": "sealed v2 correction; v3 corrects one remaining prose-substring regression assertion only",
+      "path": "artifacts/p7-detector-local-occupancy-v2-correction.json",
+      "sha256": "98562bf5f90b818dbc0332bff0941dcb1533ea90873ea4ce94cf05679186dba5"
+    },
+    "v2_p7_detector_local_occupancy_v1": {
+      "locators": "sealed v1 result; v2 corrects only two case-sensitive regression-test assertions",
+      "path": "artifacts/p7-detector-local-occupancy-v1.json",
+      "sha256": "3d8d9971ce48104b27390aa26ce3f1bfd1a11a95aeb7d4cab4ba545995539ce4"
+    },
+    "v2_v1_p7_fixed_ray_colour_v1": {
+      "locators": "|X(f)|<=N(f)<=2Q and shell family bound sum_f|X(f)|<12Q^2",
+      "path": "artifacts/p7-fixed-ray-colour-diagonalization-v1.json",
+      "sha256": "426681db11b09b52dad029a2e0a5931e430a5a5224d55c8f4ca5908b26564027"
+    },
+    "v2_v1_p7_fixed_ray_discrepancy_transfer_v1": {
+      "locators": "D_Delta definition, fixed-ray transfer, and cubic-budget target",
+      "path": "artifacts/p7-fixed-ray-discrepancy-transfer-v1.json",
+      "sha256": "c943ef3b946c2a1392f226a080711a24b094d9e4cddbb141b2290375afeecc96"
+    },
+    "v2_v1_p7_preregistration_v2": {
+      "locators": "selected exact-finite-conductor primitive Q(i) family and P7-3 boundary",
+      "path": "artifacts/p7-hecke-qi-preregistration-v2.json",
+      "sha256": "fa3c98ce481e913f2c8522856114b8cca643d763314e01a36b0aa7cf9110dfc9"
+    },
+    "v2_v1_p7_ray_orthogonality_v1": {
+      "locators": "exact primitive indexing, zero extension, and m=0 Thorner specialization",
+      "path": "artifacts/p7-ray-orthogonality-v1.json",
+      "sha256": "d4ad1fb81ac2cac49f94fb73616b5134f96fadd86e44f0a94975683b2db0387d"
+    },
+    "v2_v1_p7_selected_gram_excess_v1": {
+      "locators": "selected time projection and the exact cubic discrepancy budget context",
+      "path": "artifacts/p7-selected-gram-excess-v1.json",
+      "sha256": "fac0f8bb8206ce7d0b008363ab9715859e4b5ed2d9932af5f86b684c52c2db5a"
+    },
+    "v2_v1_thorner_2019_rendered": {
+      "locators": "Theorem 2.1, printed pp.883--884: primitive Hecke large sieve",
+      "path": "artifacts/sources/p7-hecke-v1/thorner-2019-mrl-v26n3-a9.rendered.txt",
+      "sha256": "69cdec98f836569683371d73972bc6541fcf33c6ec902c384dbecb3273eb2bb3"
+    },
+    "v2_v1_thorner_zaman_lfzd_tex": {
+      "locators": "FunctionalEquation and ZerosInCircle-Classical, source TeX lines 580--586 and 668--699",
+      "path": "artifacts/sources/p7-hecke-v1/thorner-zaman-1510.08086v1/LFZD_manuscript.tex",
+      "sha256": "e77007c73da81c239fa009f6fce8befbc72989a0fd28f2ec4ff6952ff098f8f2"
+    }
+  },
+  "weakest_cross_character_occupancy_input": {
+    "direct_pairwise_minimum": "The logically weakest input for the present L2-to-discrete route is the target statement D_Delta(T)<=D_target itself (or a different localized theorem that bypasses this route).",
+    "labelled_detector_variant": "The stronger labelled condition sup_u #{(f,chi,t) in W: |t-u|<=Delta}<=M also suffices, but unlabelled OCC is weaker because repeated character labels at one height are irrelevant to T.",
+    "sharpness": "The finite P-colour/J-block model realizes equality D_Delta=mM, so a universal improvement to this occupancy-to-difference implication is false.",
+    "status": "PROVED",
+    "target_form": "For a given D_target, the required occupancy hypothesis is OCC_Delta(D_target/m). The diagonal floor D_Delta>=m shows that no such route can have D_target<m.",
+    "weakest_one_point_form": "Among uncoloured one-point height hypotheses, impose OCC_Delta(M): M_Delta(T)=sup_u #(T intersect [u-Delta,u+Delta])<=M. It gives D_Delta(T)<=mM, sharply."
+  },
+  "what_zero_counts_and_cardinality_give": {
+    "fixed_modulus": "At one f, P<=|X(f)|<=N(f)<=2Q, so D_Delta(T)<=2mQ.",
+    "status": "PROVED",
+    "subpower_assessment": "If Q=T^vartheta with fixed vartheta>0, the fixed-modulus factor is T^vartheta and the shell factor is T^(2vartheta), up to logarithms. They are subpower only after the additional restriction Q=T^o(1), which is not frozen P7 data.",
+    "uncoloured_projection": "Let T=pi_t(W), m=|T|, and M_Delta(T)=sup_u # (T intersect [u-Delta,u+Delta]). Then D_Delta(T)<=m M_Delta(T), while D_Delta(T)>=m from the diagonal pairs.",
+    "whole_shell": "Across the selected shell, P<=F_prim(Q)<=sum_{Q<Nf<=2Q}|X(f)|<12Q^2, so D_Delta(T)<12mQ^2.",
+    "with_one_separated_fibres": "For Delta<1/2, one-separated exact-character fibres already give M_Delta(T)<=P, where P is the number of characters that occur. The local-zero bound cannot improve the factor 1 per fibre.",
+    "without_a_separated_thinning": "The zero-assignment hypothesis alone gives M_Delta(T)<=bP L_0(2Q,T+alpha), which is weaker than P when the standard one-separated thinning is available."
+  }
+}

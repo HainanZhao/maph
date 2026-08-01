@@ -1,0 +1,255 @@
+{
+  "artifact_id": "cycle-4-p1r-crr-u-formalization-v2",
+  "claim_boundary": "Corrected CRR-U definition and exact slack bookkeeping only. CRR-U remains CONJECTURED; no witness, incompatibility theorem, density result, short-interval theorem, or method saturation is proved, and no discovery search is authorized.",
+  "classification": {
+    "branch": "CRR-U_UNIVERSAL_INCOMPATIBILITY",
+    "epistemic_status": "CONJECTURED",
+    "falsifier": "A sequence of integers v_j tending to infinity with one common-pair witness (b^(j),W_j) at every v_j.",
+    "finite_witness_policy": "A finite witness neither proves nor refutes the asymptotic statement.",
+    "statement": "There exists v0 such that no witness exists for any integer v>=v0."
+  },
+  "conventions": {
+    "exponential": "e(x)=exp(2*pi*i*x)",
+    "fourier": "hat(f)(xi)=integral_R f(u) exp(-2*pi*i*xi*u) du",
+    "s3_reality_involution": "conjugate(I_(m1,m2,m3))=I_(-m3,-m2,-m1), after reversing t2 and t3",
+    "scale_exponents": {
+      "affine_scale_M": 2,
+      "cardinality_center_R": 8,
+      "global_height_T0": 13,
+      "large_value_center_V": 7,
+      "local_height_H": 12,
+      "polynomial_length_L": 10,
+      "rational_height_Q": 4
+    },
+    "separation_exponent_in_H": "1/100",
+    "sigma_for_admitted_base": "7/10-1/10*delta",
+    "slack": "delta(v)=1/sqrt(log(v)) for integer v>=3",
+    "smooth_functions": {
+      "eta": "eta(x)=0 for x<=0; eta(x)=exp(-1/x) for x>0",
+      "psi1": "psi1(x)=eta(1-x^2)/eta(1)",
+      "psi2": "psi2(u)=eta(1-4*(u-1)^2)/eta(1)",
+      "step": "step(x)=eta(x)/(eta(x)+eta(1-x))",
+      "w": "w(u)=step(5*(u-1))*step(5*(2-u))"
+    },
+    "support_and_plateau": {
+      "psi1": "psi1>=0; supp(psi1) subset [-1,1]; psi1(0)=1",
+      "psi2": "psi2>=0; supp(psi2) subset [1/2,3/2]; psi2(1)=1",
+      "w": "0<=w<=1; supp(w) subset [1,2]; w=1 on [6/5,9/5]"
+    }
+  },
+  "correction": {
+    "defects_corrected": [
+      "source-threshold slack",
+      "rational/affine slack",
+      "full Fourier phase involution",
+      "arbitrary-bump RL4 bridge"
+    ],
+    "failure_record": "cycle-4-p1r-crr-u-formalization-v1-hostile-audit-v1",
+    "preserves_v1": true,
+    "v1_status": "CONTAINED_FAIL",
+    "witness_class_narrowed": false
+  },
+  "epistemic_status": "OBSERVED",
+  "exact_slack_bookkeeping": {
+    "central_delta_zero_limits": {
+      "energy_upper_at_cardinality_upper": [
+        "20",
+        "20",
+        "20"
+      ],
+      "large_values_upper": [
+        "6",
+        "8",
+        "8"
+      ],
+      "rational_induced_affine_lower": [
+        "28",
+        "28"
+      ],
+      "rational_lower_moments": [
+        "8",
+        "20"
+      ],
+      "s3_upper_at_cardinality_upper": [
+        "36",
+        "36",
+        "36",
+        "36"
+      ],
+      "source_affine_upper_from_base": [
+        "28",
+        "28"
+      ]
+    },
+    "epistemic_status": "PROVED",
+    "implication": "All displayed source upper and witness lower bands are leading-exponent compatible; no contradiction follows from these rows alone.",
+    "non_implication": "The rows do not construct common coefficients/W and do not prove sharpness or incompatibility.",
+    "range_check": "L=v^10=H^(5/6)>=H^(3/4)",
+    "rows": {
+      "energy_upper_at_cardinality_upper": [
+        "20+5*delta",
+        "20+37/8*delta",
+        "20+5*delta"
+      ],
+      "large_values_upper": [
+        "6+2*delta",
+        "8+4*delta",
+        "8+4*delta"
+      ],
+      "rational_induced_affine_lower": [
+        "28-6*delta",
+        "28-5*delta"
+      ],
+      "rational_lower_moments": [
+        "8-3*delta",
+        "20-5*delta"
+      ],
+      "s3_upper_at_cardinality_upper": [
+        "36+3/2*delta",
+        "36+3*delta",
+        "36+3*delta",
+        "36+45/16*delta"
+      ],
+      "source_affine_upper_from_base": [
+        "28+2*delta",
+        "28+1*delta"
+      ]
+    }
+  },
+  "first_analytic_subbranches": [
+    "energy-versus-rational-mass incompatibility",
+    "rational-mass-versus-positive-signed-cubic incompatibility"
+  ],
+  "frozen_hashes": {
+    "gm_tex": {
+      "path": "artifacts/sources/arxiv-2405.20552v2/LargevaluesDirichlet17.tex",
+      "sha256": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428"
+    },
+    "v1_artifact": {
+      "path": "artifacts/cycle-4-p1r-crr-u-formalization-v1.json",
+      "sha256": "7eadb2a66e957cceaac4031614cddaebfd3d5df12cde45155ae26f6ed43e9b72"
+    },
+    "v1_builder": {
+      "path": "proof/build_cycle_4_p1r_crr_u_formalization_v1.py",
+      "sha256": "25022535a7f3d5679dbb687422d5641960df4515651a2a41b2bf3209a13fff84"
+    },
+    "v1_conventions": {
+      "path": "conventions/crr_formalization_v1.py",
+      "sha256": "eb0ee6e84bdfa3b87f5fffdc2901192db1b75b700a3d9621b10c670458ffd42b"
+    },
+    "v1_document": {
+      "path": "docs/cycle-4-p1r-crr-u-formalization-v1.md",
+      "sha256": "b0aaf464540f9c41eb8414dc38d7be4a7680c0ac1148eadf0a6a61f4836471ed"
+    },
+    "v1_fail_artifact": {
+      "path": "artifacts/cycle-4-p1r-crr-u-formalization-v1-hostile-audit-v1.json",
+      "sha256": "9cea180d4a649df219d6e8ee9c6a490a279bda7889972e7c9dc70076d584d02f"
+    },
+    "v1_fail_document": {
+      "path": "docs/cycle-4-p1r-crr-u-formalization-v1-hostile-audit-v1.md",
+      "sha256": "684eb0856775503729038d71ff81945fcb590321c4fd2e348bf5168f8b9665b6"
+    },
+    "v1_fail_script": {
+      "path": "proof/audit_cycle_4_p1r_crr_u_formalization_v1.py",
+      "sha256": "03b48cddd9255302a0cad28babd7fbfd74d800b60268d765103780c4fcb3e5d4"
+    },
+    "v1_fail_tests": {
+      "path": "tests/test_cycle_4_p1r_crr_u_formalization_v1_hostile_audit_v1.py",
+      "sha256": "5e12ac419cb15cd2898b7a7a800c0d7dd3d450383649ca80fc67d79316f90e76"
+    },
+    "v1_tests": {
+      "path": "tests/test_cycle_4_p1r_crr_u_formalization_v1.py",
+      "sha256": "5096615eab239570b766e00a4c5afb8115977145bea4501b3a8519a07f2b6c2a"
+    },
+    "v2_conventions": {
+      "path": "conventions/crr_formalization_v2.py",
+      "sha256": "0d960b76a4ad03cce43727159cf846696dbee732184df44b2ee0503b9ae18ce8"
+    },
+    "v2_document": {
+      "path": "docs/cycle-4-p1r-crr-u-formalization-v2-correction.md",
+      "sha256": "00bd9e1a20e79fda774301495ffa032e8e61c67d6e8a0475980e2ceefce3f5e0"
+    }
+  },
+  "gate": {
+    "formalization": "RESEARCH_STAGE_SEALED_LIGHTWEIGHT_CHECKED",
+    "mathematical_classification": "OPEN",
+    "paper_stage_hostile_audit": "PENDING",
+    "search": "PROHIBITED"
+  },
+  "historical_replay": {
+    "current_plan_eligibility": "EXCLUDED_FROM_HISTORICAL_ARTIFACT",
+    "current_plan_read": false
+  },
+  "independent_analytic_obligations": [
+    "uniform Base(v) pointwise and separation hypotheses",
+    "both energy-band inequalities",
+    "explicit rational-mass measure inequality",
+    "signed cubic convergence, reality, positivity, and size",
+    "uniform handling of delta(v) and every source subpower loss",
+    "two independent proof routes or a documented mechanism-specific reason independence is impossible"
+  ],
+  "moment_bridge": {
+    "consequence": "RationalMass plus Base yields only the critical sandwich integral F=v^(8+o(1)), integral F^2=v^(20+o(1)), E(W)=v^(20+o(1)); no incompatibility.",
+    "epistemic_status": "PROVED",
+    "identity": "For A=integral psi1 and F=Rtilde^2: integral F=A integral psi2|R|^2 and integral F^2<=A^2 integral psi2^2|R|^4.",
+    "source_use": "Apply the published raw-R RL2/RL4 arguments on the fixed psi2 support; do not identify the explicit bumps with the existential S3Expansion pair."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_4_p1r_crr_u_formalization_v2.py --check",
+    "write_command": "python3 proof/build_cycle_4_p1r_crr_u_formalization_v2.py --write"
+  },
+  "research_stage_review_policy": {
+    "effect": "research findings may remain CONJECTURED/OBSERVED without a hostile promotion gate; proof-grade manuscript claims still require paper-stage hostile audit",
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE_BY_USER_DIRECTION",
+    "lightweight_checks": "required now: exact algebra, source anchors, replay, tamper rejection, and explicit claim boundaries"
+  },
+  "resource_policy": {
+    "certification_margin": null,
+    "coefficient_families": [],
+    "discovery_search_authorized": false,
+    "failed_row_rule": "No rows may be generated under v1. Any computation represented as CRR evidence is an unauthorized exploratory result and cannot be promoted.",
+    "future_search_rule": "A new versioned preregistration must freeze all families, ranges, seed, cap, failed-row handling, and rigorous margin before any finite probe.",
+    "mode": "ANALYTIC_ONLY",
+    "rng_seed": null,
+    "row_cap": 0,
+    "set_families": []
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_4_p1r_crr_u_formalization_v2.py",
+    "sha256": "49bbe04308e77097362056dc4ce8c1beee7a8117967326ee479b15874db194b5"
+  },
+  "status": "SEALED_ANALYTIC_FORMALIZATION_LIGHTWEIGHT_CHECKED",
+  "witness_schema": {
+    "base": {
+      "cardinality": "v^(8-delta(v)) <= |W| <= v^(8+delta(v))",
+      "coefficients": "b_n for n>=1 complex with |b_n|<=1",
+      "energy_band": "v^(20-delta(v)) <= E(W) <= v^(20+delta(v))",
+      "energy_definition": "ordered quadruples in W^4 with |t1+t2-t3-t4|<=1",
+      "pointwise": "|D_v(t)| >= v^(7-delta(v)) for every t in W",
+      "polynomial": "D_v(t)=sum_(n>=1) w(n/L)b_n n^(it)",
+      "set": "finite W subset [0,H], H^(1/100)-separated"
+    },
+    "common_object_rule": "One common pair (b,W) must satisfy Base(v), RationalMass(v), and PositiveCubic(v); no separately optimized W is admissible.",
+    "positive_cubic": {
+      "I_m": "L^3 times the W^3 sum of the three cyclic Fourier factors at m_i L",
+      "S3_signed": "sum over integer triples with m1*m2*m3 nonzero",
+      "convergence": "absolute for each finite W by rapid Fourier decay of fixed compactly supported smooth h_t",
+      "h": "h_t(u)=w(u)^2u^(it)",
+      "reality": "conjugate(I_(m1,m2,m3))=I_(-m3,-m2,-m1), after reversing t2 and t3; the all-nonzero-coordinate lattice is invariant",
+      "threshold": "S3_signed >= v^(36-delta(v))"
+    },
+    "rational_mass": {
+      "R": "R_W(u)=sum_(t in W)|u|^(it)",
+      "circularity_audit": "Predicate uses only frozen constants, explicit bumps, the rational net, and W; it does not inspect S3 or computed candidates.",
+      "rational_net": "coprime Q<=r,s<2Q, 3/4<=r/s<=5/4, intervals of radius 1/(100H)",
+      "smoothing": "Rtilde_W(u)^2=integral_R H psi1(H(u-u')) psi2(u') |R_W(u')|^2 du'",
+      "threshold": "measure({u in Q_v:Rtilde_W(u)>=v^(6-delta(v))}) >= v^(-4-delta(v))",
+      "upper_moment_bridge": "For A=integral psi1 and F=Rtilde^2, Fubini/Cauchy give integral F=A integral psi2|R|^2 and integral F^2<=A^2 integral psi2^2|R|^4; apply the raw-R RL2/RL4 arguments, not the source's existential smoothed pair."
+    }
+  }
+}

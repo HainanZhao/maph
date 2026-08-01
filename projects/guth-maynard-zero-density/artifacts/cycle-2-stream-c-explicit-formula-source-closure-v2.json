@@ -1,0 +1,51 @@
+{
+  "artifact_id": "cycle-2-stream-c-explicit-formula-source-closure-v2",
+  "created_utc": "2026-08-01",
+  "supersedes": "cycle-2-stream-c-explicit-formula-source-closure-v1 for the archival-source access gate only; v1 is preserved",
+  "epistemic_status": "PROVED",
+  "claim_boundary": "PROVED source-license, theorem, convention, and endpoint-transfer audit. No new zero-density theorem or prime-interval exponent is claimed.",
+  "ocw_license": {
+    "status": "PROVED",
+    "official_url": "https://ocw.mit.edu/pages/privacy-and-terms-of-use/",
+    "checked_text": "MIT OCW is an online publication of course materials; its Creative Commons License is Attribution-NonCommercial-ShareAlike 4.0 International and permits sharing/copying subject to the stated terms.",
+    "scope": "Frozen copies retain attribution to K. S. Kedlaya, 18.785 Analytic Number Theory, MIT Spring 2007, and CC BY-NC-SA 4.0 provenance."
+  },
+  "course_provenance": {
+    "status": "PROVED",
+    "official_handle": "https://dspace.mit.edu/handle/1721.1/101679",
+    "official_indexed_formula_path": "https://dspace.mit.edu/bitstream/handle/1721.1/101679/18-785-spring-2007/contents/lecture-notes/errorbounds.pdf",
+    "author_course_landing": "https://kskedlaya.org/18.785/",
+    "calendar": "https://kskedlaya.org/18.785/calendar.html",
+    "author_formula_mirror": "https://kskedlaya.org/18.785/errorbounds.pdf",
+    "author_proof_mirror": "https://kskedlaya.org/18.785/von-mangoldt.pdf",
+    "retrieval_status": "OBSERVED: direct DSpace HTTP 405/403 in this run; no course-specific license exception visible in the course landing/calendar."
+  },
+  "frozen_oa_course_units": [
+    {
+      "id": "kedlaya-errorbounds",
+      "status": "PROVED",
+      "path": "artifacts/sources/kedlaya-2007-errorbounds-author.pdf",
+      "sha256": "375d96e65a99d7dbfbdc9ca51aa286bb53af7e77dfffa59e167dfcd9b18b919d",
+      "locator": "Theorem 1, p. 1",
+      "checked_theorem": "For x>=2 and T>0, the half-weighted psi formula is truncated at |Im rho|<T with the stated distance-to-prime-power remainder."
+    },
+    {
+      "id": "kedlaya-von-mangoldt-proof",
+      "status": "PROVED",
+      "path": "artifacts/sources/kedlaya-2007-von-mangoldt-author.pdf",
+      "sha256": "43cbe51ee69fe552078d90d0c21b165456f3ad67ad64c83df71b9cce3d56ae05",
+      "locator": "Theorem 1, pp. 1-6; residue computation p. 2",
+      "checked_proof": "Every zero rho is counted with multiplicity; the proof reaches 'We are done!'."
+    }
+  ],
+  "transfer": {
+    "status": "PROVED",
+    "endpoint": "u=ceil(x)-1, v=floor(x+y); half-weight transfer and v-u=y+O(1) cost O(log x).",
+    "remainder": "At integral u,v the distance to every other prime power is at least 1; for 2<=T<=x, two endpoint remainders are O(x(log x)^3/T).",
+    "height_convention": "The |gamma|<T to literal |rho|<=T mismatch is in unit boundary strips and costs O(x log T/T), using the HSW+Bui multiplicity-inclusive local count."
+  },
+  "replay": {
+    "command": "python3 proof/check_cycle_2_stream_c_explicit_formula_sources_v2.py",
+    "check_script_sha256": "346a7beb7a5c2387b99f5a3e03a78bd0bf9856b38ce0e6bd4da0192d95b95f27"
+  }
+}

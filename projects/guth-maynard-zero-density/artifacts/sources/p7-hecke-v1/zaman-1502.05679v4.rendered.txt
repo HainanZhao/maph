@@ -1,0 +1,8503 @@
+arXiv:1502.05679v4  [math.NT]  29 Mar 2016
+
+EXPLICIT ESTIMATES FOR THE ZEROS OF HECKE L-FUNCTIONS
+
+ASIF ZAMAN
+
+Abstract. Let K be a number field and, for an integral ideal q of K, let χ be a character of
+the narrow ray class group modulo q. We establish various new and improved explicit results,
+with effective dependence on K, q and χ, regarding the zeros of the Hecke L-function L(s, χ),
+such as zero-free regions, Deuring-Heilbronn phenomenon, and zero density estimates.
+
+Contents
+
+1.
+Introduction
+1
+2.
+Preliminaries
+6
+2.1.
+Hecke L-functions
+6
+2.2.
+Elementary Estimates
+8
+3.
+Zero-Free Gap and Labelling of Zeros
+9
+4.
+Classical Explicit Inequality
+12
+5.
+Polynomial Explicit Inequality
+15
+6.
+Smoothed Explicit Inequality
+19
+7.
+Numerical Zero Density Estimate
+24
+8.
+Zero Repulsion: χ1 and ρ1 are real
+27
+8.1.
+Bounds for λ′
+28
+8.2.
+Bounds for λ2
+36
+9.
+Zero Repulsion: χ1 or ρ1 is complex
+40
+9.1.
+Bounds for λ′
+40
+9.2.
+Bounds for λ2
+45
+10.
+Zero-Free Region
+48
+References
+52
+
+1. Introduction
+
+Let K be a number field of degree nK = [K : Q] with absolute discriminant dK =
+|disc(K/Q)| and ring of integers OK. For an integral ideal q ⊆ OK, the (narrow) ray class
+group modulo q is defined to be Cl(q) := I(q)/Pq where I(q) is the group of fractional ideals
+of K relatively prime to q, and Pq is the subgroup of principal ideals (α) of K such that
+α ≡ 1 (mod∗ q). Recall α ≡ 1 (mod∗ q) if and only if α is totally positive and v(α −1) ≥ v(q)
+for all discrete valuations v of K/Q. Characters χ of the ray class group will be referred to
+as Hecke characters, which we will often denote χ (mod q). Let ord χ be the multiplicative
+order of χ in Cl(q).
+
+The author was supported in part by an NSERC PGS-D scholarship.
+1
+
+
+A Hecke character χ (mod q) possesses an associated L-function defined by
+
+L(s, χ) :=
+�
+
+p∤q
+
+�
+1 − χ(p)
+
+(Np)s
+
+�−1
+for σ > 1,
+
+where s = σ + it, N = NK
+Q is the absolute norm on integral ideals of K, and the product is
+over prime ideals p ⊆ OK. In the special case q = OK and χ = χ0 the principal character,
+the associated L-function is the Dedekind zeta function of K given by
+
+ζK(s) =
+�
+
+p
+
+�
+1 −
+1
+
+(Np)s
+
+�−1
+for σ > 1.
+
+It is well known that the zeros of Hecke L-functions are intimately related with the distribu-
+tion of prime ideals of K amongst the equivalence classes of Cl(q) and, by class field theory,
+with prime ideal decompositions in abelian extensions of K. Indeed, the analytic properties
+of Hecke L-functions have been widely studied by many authors such as Fogels [Fog62].
+However, the known results on zeros of Hecke L-functions do not typically have explicit
+dependence on the field K with explicit absolute constants. In the last few years, there has
+been some progress in this direction with explicit results on the zero-free regions of ζK(s) by
+Kadiri [Kad12] and zero-free regions for Hecke L-functions by Ahn and Kwon [AK14]. Kadiri
+and Ng [KN12] have also proved a form of quantitative Deuring-Heilbronn phenomenon and
+explicit zero density estimates for ζK(s), the latter of which was subsequently improved by
+Trudgian [Tru15]. The aim of this paper is to provide improved and several new explicit
+results on the zeros of Hecke L-functions such as improved zero-free regions, the Deuring-
+Heilbronn phenomenon for real Hecke characters, and zero density estimates.
+In the classical case K = Q and q = (q), Hecke L-functions are the familiar Dirichlet
+L-functions modulo q and prime ideals in equivalence classes of Cl(q) naturally correspond
+to primes in arithmetic progressions modulo q. There is a vast literature on the zeros of
+Dirichlet L-functions, including many with explicit constants, and of particular importance
+to us is the landmark paper of Heath-Brown [HB95].
+For the statement of the main theorems, note that ν(x) is any fixed increasing real-variable
+function ≥ 4 such that ν(x) ≫ log(x + 4) for x ≥ 1.
+
+Theorem 1.1. Suppose dK(Nq)nnK
+K
+is sufficiently large and let r ≥ 1 be an integer. Then
+the function
+�
+
+χ (mod q)
+ord χ≥r
+
+L(s, χ) has at most 1 zero, counting with multiplicity, in the rectangle
+
+σ ≥ 1 −
+c
+
+log dK + 3
+
+4 log Nq + nK · ν(nK),
+|t| ≤ 1
+
+where s = σ + it and
+
+c =
+
+
+
+
+
+
+
+
+
+
+
+
+0.1764
+if r ≥ 6,
+0.1489
+if r = 5,
+0.1227
+if r = 2, 3, 4,
+0.0875
+if r = 1.
+
+Moreover, if this exceptional zero ρ1 exists, then it and its associated character χ1 are both
+real.
+2
+
+
+Corollary 1.2. The Dedekind zeta function ζK(s) has at most 1 zero, counting with multi-
+plicity, in the rectangle
+
+σ ≥ 1 −
+0.0875
+
+log dK + nK · ν(nK),
+|t| ≤ 1,
+
+where s = σ + it and provided dKnnK
+K
+is sufficiently large. If this exceptional zero exists, it
+is real.
+
+Remark. For general number fields K, it is possible that the exceptional character χ1 is
+principal. That is, the Dedekind zeta function ζK(s) may have a real zero exceptionally
+close to s = 1.
+
+As already mentioned, some explicit results have been shown by Kadiri [Kad12] and Ahn
+and Kwon [AK14] for zero-free regions of L(s, χ) of the form
+
+(1.1)
+σ ≥ 1 −
+c0
+
+log dK + log Nq,
+|t| ≤ 0.13.
+
+Note that the dependence on the degree nK has been “absorbed” into log dK. It has been
+shown that L(s, χ) is zero-free (except possibly for one real zero when χ is real) in the
+rectangle (1.1) for
+
+c0 =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+0.1149
+if ord χ ≥ 5 [AK14],
+0.1004
+if ord χ = 4 [AK14],
+0.0662
+if ord χ = 3 [AK14],
+0.0392
+if ord χ = 2 and dK is sufficiently large [Kad12]1,
+0.0784
+if ord χ = 1 and dK is sufficiently large [Kad12].
+
+Note that the results of [Kad12] also allow for |t| ≤ 1 to be used in (1.1). Comparing the
+above known values for c0 with Theorem 1.1, if a given family of number fields K satisfies
+
+(1.2)
+nK = O
+�
+log(dKNq)
+
+log log(dKNq)
+
+�
+,
+
+then, for a suitable choice of ν(x), Theorem 1.1 is superior to all previously known cases,
+especially in the Nq-aspect. A classical theorem of Minkowski states, for any number field
+K,
+nK = O(log dK)
+so, unless nK is unusually large, one would expect that (1.2) typically holds. For example,
+given a fixed rational prime p, one can verify that the family of p-power cyclotomic fields
+K = Q(e2πi/pm) satisfies (1.2).
+We also establish a result, similar to those of [Gra81] and [HB95] for Dirichlet L-functions,
+giving a larger zero-free region but allowing more zeros.
+
+Theorem 1.3. Suppose dK(Nq)nnK
+K is sufficiently large. Then
+�
+
+χ (mod q)
+L(s, χ) has at most 2
+
+zeros, counting with multiplicity, in the rectangle
+
+σ ≥ 1 −
+0.2866
+
+log dK + 3
+
+4 log Nq + nK · ν(nK)
+|t| ≤ 1.
+
+1This case is not explicitly written in the cited paper but is directly implied by the case ord χ = 1.
+3
+
+
+Moreover, the Dedekind zeta function ζK(s) has at most 2 zeros, counting with multiplicity,
+in the rectangle
+
+σ ≥ 1 −
+0.2909
+
+log dK + nK · ν(nK)
+|t| ≤ 1.
+
+When an exceptional zero ρ1 from Theorem 1.1 exists, we prove an explicit version of the
+well-known Deuring-Heilbronn phenomenon.
+
+Theorem 1.4. Let χ1 (mod q) be a real character. Suppose
+
+β1 = 1 −
+λ1
+
+log dK + 3
+
+4 log Nq + nK · ν(nK)
+
+is a real zero of L(s, χ1) with λ1 > 0 .
+Then, provided dK(Nq)nnK
+K
+is sufficiently large
+(depending on R ≥ 1 and possibly ǫ > 0), the function
+�
+
+χ (mod q)
+L(s, χ) has only the one zero
+
+β1, counting with multiplicity, in the rectangle
+
+σ ≥ 1 −
+min{c1 log(1/λ1), R}
+
+log dK + 3
+
+4 log Nq + nK · ν(nK),
+|t| ≤ 1,
+
+where s = σ + it and
+
+c1 =
+
+
+
+
+
+
+
+
+
+
+
+
+1
+2 − ǫ
+if χ1 is quadratic and λ1 ≤ 10−10,
+0.2103
+if χ1 is quadratic and λ1 ≤ 0.1227,
+1 − ǫ
+if χ1 is principal and λ1 ≤ 10−5,
+0.7399
+if χ1 is principal and λ1 ≤ 0.0875.
+
+In the classical case K = Q and q = (q), Linnik [Lin44] was the pioneer of the Deuring-
+Heilbronn phenomenon. For other number fields, a non-explicit K-uniform variant of Theo-
+rem 1.4 is due to Lagarias-Montgomery-Odlyzko [LMO79] in the case of the Dedekind zeta
+function ζK(s) and to Weiss [Wei83] for general Hecke L-functions. Kadiri and Ng [KN12]
+have recently established an explicit version of the Deuring-Heilbronn phenomenon for zeros
+of the Dedekind zeta function ζK(s) with
+
+c1 =
+
+�
+0.9045
+if λ1 ≤ 10−6,
+0.6546
+if λ1 ≤ 0.0784.
+
+Hence, Theorem 1.4 improves upon their result when (1.2) holds and when the primary term
+c1 log(1/λ1) dominates, as normally is the case.
+We also establish explicit bounds related to the zero density of Hecke L-functions. For
+λ > 0, define N(λ) to be the number of non-principal characters χ (mod q) with a zero in
+the region
+
+(1.3)
+σ ≥ 1 −
+λ
+
+log dK + 3
+
+4 log Nq + nK · ν(nK),
+|t| ≤ 1.
+
+In the classical case K = Q and q = (q), this quantity has been analyzed by [Gra81, HB95]
+for a slowly growing range (λ ≪ log log log q) and by [HB95] for a bounded range (λ ≤ 2).
+We establish a result in the same vein as the latter. To do so, we require some technical
+assumptions.
+4
+
+
+Let 0 < λ ≤ 2 be given. Let f ∈ C2
+c ([0, ∞)) have Laplace transform F(z) =
+� ∞
+0 f(t)e−ztdt.
+Suppose f satisfies all of the following:
+
+(1.4)
+f(t) ≥ 0 for t ≥ 0;
+Re{F(z)} ≥ 0 for Re{z} ≥ 0;
+
+F(λ) > 1
+
+3f(0);
+�
+F(λ) − 1
+
+3f(0)
+�2
+> 1
+
+3f(0)
+�
+1
+4f(0) + F(0)
+�
+.
+
+Then we have the following result.
+
+Theorem 1.5. Let ǫ > 0 and 0 < λ ≤ 2. Suppose f ∈ C2
+c ([0, ∞)) satisfies (1.4). Then
+unconditionally,
+
+N(λ) ≤
+
+�
+1
+4f(0) + F(0)
+��
+F(0) − 1
+
+12f(0)
+�
+
+�
+F(λ) − 1
+
+3f(0)
+�2
+− 1
+
+3f(0)
+�
+1
+4f(0) + F(0)
+� + ǫ
+
+for dK(Nq)nnK
+K
+sufficiently large depending on ǫ and f.
+
+Remark. Let ρ1 be a certain zero of a Hecke L-function L(s, χ1) with the property that
+Re{ρ1} ≥ Re{ρχ} for any zero ρχ in the rectangle (1.3) of any χ (mod q). By introducing
+dependence on ρ1, the bound on N(λ) in Theorem 1.5 can be improved. See Section 3 for
+the choice of ρ1 and Theorem 7.1 for further details.
+
+Theorem 1.5 and its proof are inspired by [HB95, Section 12] and so similarly, the obtained
+bounds are non-trivial only for a narrow range of λ. By choosing2 f roughly optimally, we
+exhibit a table of bounds derived from Theorem 1.5 below.
+
+λ
+.100
+.125
+.150
+.175
+.200
+.225
+.250
+.275
+.300
+.325
+.350
+.375
+.400
+.425
+
+N(λ)
+2
+2
+3
+3
+4
+4
+5
+6
+7
+9
+11
+15
+22
+46
+
+One can see that the estimates obtained are comparable to Theorems 1.1 and 1.3 which
+respectively imply that N(0.1227) ≤ 1 and N(0.2866) ≤ 2 .
+In the classical case K = Q, Heath-Brown substantially improved upon all preceding
+work for zeros of Dirichlet L-functions and so, for general number fields K, we have taken
+advantage of the innovations founded in [HB95] to improve on the existing aforementioned
+results and also to establish new explicit estimates. As such, the general structure of this
+paper is reminiscent of his work and is subject to small improvements similar to those
+suggested in [HB95, Section 16]. Xylouris implemented a number of those suggestions in
+[Xyl11] so in principle one could refine the results here by the same methods.
+Finally, we describe the organization of the paper.
+Section 2 covers well-known facts
+about Hecke L-functions and some elementary estimates.
+In Section 3, we specify some
+frequently-used notation and identify zeros of Hecke L-functions which will play a key role
+throughout the paper. Sections 4, 5 and 6 establish several different “explicit inequalities”
+related to −L′
+
+L (s, χ) by involving classical arguments, higher derivatives of −L′
+
+L (s, χ), and
+smooth weights. The results therein form the technical crux of all subsequent proofs and
+applications.
+Section 7 provides bounds for the zero density quantity N(λ).
+Section 8
+quantifies Deuring-Heilbronn phenomenon for the exceptional case. Section 9 deals with the
+
+2See the discussion following the proof of Theorem 7.1 for details.
+5
+
+
+milder zero repulsion in the non-exceptional case. Section 10 establishes a zero-free region
+for Hecke L-functions.
+For the reader who wishes to proceed quickly to the proofs of the theorems:
+• Theorem 1.1 and Corollary 1.2 are proved in Section 10.
+• Theorem 1.3 is an immediate corollary of Propositions 8.7, 8.13, 9.4 and 9.10.
+• Theorem 1.4 is an immediate corollary of Propositions 8.7 and 8.13.
+• Theorem 1.5 is a special case of Theorem 7.1.
+
+Acknowledgements. It is my pleasure to gratefully acknowledge the support and guidance
+of my advisor, Prof. John Friedlander, who initially suggested this problem to me and with
+whom I have had many helpful discussions. I would also like to thank the referee for a careful
+reading of the paper and many valuable suggestions.
+
+2. Preliminaries
+
+2.1. Hecke L-functions. Recall Hecke characters are characters χ of the ray class group
+Cl(q) = I(q)/Pq. We often write χ (mod q) to indicate this relationship. For notational
+convenience, we pullback the domain of χ to I(q) and then extend it to all of I(O) by zero;
+that is, χ(n) is defined for all integral ideals n ⊆ O and χ(n) = 0 for (n, q) ̸= 1. The
+conductor fχ of a Hecke character χ (mod q) is the maximal integral ideal such that χ is
+the push-forward of a Hecke character modulo fχ. It follows that fχ divides q. We say χ is
+primitive modulo q if fχ = q.
+Thus, the Hecke L-function associated to χ (mod q) may be written as
+
+L(s, χ) =
+�
+
+n⊆O
+χ(n)(Nn)−s =
+�
+
+p
+
+�
+1 − χ(p)
+
+(Np)s
+
+�−1
+for σ > 1
+
+where s = σ+it ∈ C. Unless otherwise specified, we shall henceforth refer to Hecke characters
+as characters.
+
+Functional Equation. Let χ (mod fχ) be a primitive character. Recall that the L-function of
+χ at infinity is given by
+
+(2.1)
+L∞(s, χ) :=
+�
+π−s/2Γ
+�s
+
+2
+
+��a(χ)
+·
+�
+π− s+1
+
+2 Γ
+�s + 1
+
+2
+
+��b(χ)
+
+where Γ(s) is the Gamma function and a(χ), b(χ) are certain non-negative integers satisfying
+
+a(χ) + b(χ) = [K : Q] = nK.
+
+Then the completed L-function of L(s, χ) is defined to be
+
+(2.2)
+ξ(s, χ) :=
+
+
+
+
+
+
+
+
+(dKNfχ)s/2L(s, χ)L∞(s, χ)
+if χ ̸= χ0,
+
+(dKNfχ)s/2L(s, χ)L∞(s, χ) · s(1 − s)
+if χ = χ0.
+
+With an appropriate choice of a(χ) and b(χ), it is well-known that ξ(s, χ) is an entire function
+satisfying the functional equation
+
+(2.3)
+ξ(s, χ) = ε(χ) · ξ(1 − s, χ)
+
+where ε(χ) ∈ C is the global root number having absolute value 1. See [LO77, Section 5] for
+details.
+6
+
+
+Convexity Bound.
+
+Lemma 2.1. Let δ ∈ (0, 1
+
+2) be given. Suppose χ is a primitive non-principal Hecke character
+modulo fχ. Then
+
+|L(s, χ)| ≪ ζQ(1 + δ)nK
+� dKNfχ
+
+(2π)nK (1 + |s|)nK
+�(1−σ+δ)/2
+
+and
+
+|(s − 1) · ζK(s)| ≪ ζQ(1 + δ)nK
+�
+dK
+
+(2π)nK (1 + |s|)nK
+�(1−σ+δ)/2
+
+uniformly in the region
+−δ ≤ σ ≤ 1 + δ.
+
+Proof. This is a version of [Rad60, Theorem 5] which has been simplified for our purposes.
+In his notation, the constants vq, ap, ap+r2, vp are all zero for characters of Cl(q). Recall that
+ζQ( · ) is the classical Riemann zeta function.
+□
+
+Explicit Formula. Using the Hadamard product for ξ(s, χ), one may derive an explicit for-
+mula for the logarithmic derivative of L(s, χ).
+Before recording this classical result, we
+introduce an additional piece of notation which will be used throughout the paper:
+
+(2.4)
+E0(χ) :=
+
+�
+1
+if χ is principal,
+0
+otherwise.
+
+Lemma 2.2. Let χ be a primitive Hecke character modulo fχ. Then for all s ∈ C away from
+zeros of ξ(s, χ),
+
+−L′
+
+L (s, χ) = E0(χ)
+
+s − 1 + E0(χ)
+
+s
++ 1
+
+2 log(dKNq) + L′
+∞
+
+L∞
+(s, χ) − B(χ) −
+�
+
+ρ
+
+�
+1
+
+s − ρ + 1
+
+ρ
+
+�
+,
+
+where B(χ) ∈ C is a constant depending on χ and the conditionally convergent sum is over
+all zeros ρ of ξ(s, χ). Moreover,
+
+Re{B(χ)} = −1
+
+2
+
+�
+
+ρ
+
+�
+1
+
+1 − ρ + 1
+
+ρ
+
+�
+= −
+�
+
+ρ
+Re1
+
+ρ < 0.
+
+Proof. See [LO77, Section 5] for a proof. Note “
+�
+
+ρ
+” denotes “ lim
+T→∞
+
+�
+
+|Imρ|≤T
+”.
+□
+
+Lemma 2.2 gives the desired formula for −L′
+
+L (s, χ) with only L′
+∞
+
+L∞(s, χ) to be estimated.
+
+Lemma 2.3. Let χ be a primitive Hecke character. If Re{s} ≥ 1/8, then
+
+L′
+∞
+
+L∞
+(s, χ) ≪ nK log(2 + |s|).
+
+Proof. See [LO77, Lemma 5.3].
+□
+
+7
+
+
+2.2. Elementary Estimates.
+
+Lemma 2.4. Let q be an integral ideal. Then, for ǫ > 0,
+�
+
+p|q
+
+log Np
+
+Np
+≤
+�
+
+nK log Nq ≤ 1
+
+2
+
+�nK
+
+ǫ + ǫ log Nq
+�
+
+where is sum is over prime ideals p dividing q.
+
+Proof. The second inequality follows from (x + y)/2 ≥ √xy for x, y ≥ 0. It suffices to prove
+the first estimate. Write q = �r
+i=1 pei
+i in its unique ideal factorization where pi are distinct
+prime ideals and ei ≥ 1. Denote qi = Npi and am = #{i : qi = m}. Observe that am = 0
+unless m is a power of a rational prime p. Since the principal ideal (p) factors into at most
+nK prime ideals in K, it follows am ≤ nK for m ≥ 1. Thus, by Cauchy-Schwarz,
+�
+
+p|q
+
+log Np
+
+Np
+=
+
+r
+�
+
+i=1
+
+log qi
+
+qi
+≤
+�
+r
+�
+
+i=1
+
+log qi
+
+q2
+i
+
+�1/2�
+r
+�
+
+i=1
+log qi
+�1/2
+
+=
+� �
+
+m≥1
+am
+log m
+
+m2
+
+�1/2�
+r
+�
+
+i=1
+log qi
+�1/2
+
+≤ n1/2
+K
+� �
+
+m≥1
+
+log m
+
+m2
+
+�1/2�
+r
+�
+
+i=1
+ei log qi
+�1/2
+
+=
+� �
+
+m≥1
+
+log m
+
+m2
+
+�1/2�
+
+nK log Nq
+
+Since �
+
+m≥1
+log m
+
+m2 < 1, the result follows.
+□
+
+Lemma 2.5. For σ > 1,
+
+ζK(σ) ≤ ζ(σ)nK ≤
+�
+σ
+
+σ − 1
+
+�nK,
+
+log ζK(σ) ≤ nK log
+�
+σ
+
+σ − 1
+
+�
+,
+
+−ζ′
+K
+ζK
+(σ) ≤ −nK
+ζ′
+
+ζ (σ) ≤
+nK
+
+σ − 1.
+
+where ζ(s) = ζQ(s) is the classical Riemann zeta function.
+
+Proof. For the first inequality, observe
+
+ζK(σ) =
+�
+
+p
+(1 − (Np)−σ)−1 =
+�
+
+p
+
+�
+
+(p)⊆p
+(1 − (Np)−σ)−1 ≤
+�
+
+p
+(1 − p−σ)−nK = ζ(σ)nK
+
+and note ζ(σ) ≤
+�
+σ
+
+σ−1
+�
+from [MV07, Corollary 1.14]. The second inequality follows easily
+from the first. The third inequality follows by an argument similar to that of the first and
+additionally noting −ζ′
+
+ζ (σ) <
+1
+
+σ−1 by [Lou92, Lemma (a)] for example.
+□
+
+Lemma 2.6. Let k ≥ 1 and χ (mod q) be a Hecke character. Then
+
+1
+k!
+dk
+
+dsk
+L′
+∞
+
+L∞
+(s, χ) ≪ nK
+
+8
+
+
+provided Re{s} > 1.
+
+Proof. Denote ψ(k)( · ) =
+dk
+dsk
+Γ′
+Γ ( · ). From (2.1), we have that
+
+(2.5)
+dk
+
+dsk
+L′
+∞
+
+L∞
+(s, χ) = a(χ)
+
+2k+1 · ψ(k)�s
+
+2
+
+�
++ b(χ)
+
+2k+1 · ψ(k)�s + 1
+
+2
+
+�
+.
+
+Since a(χ) + b(χ) = nK, it suffices to bound ψ(k)(z) for Re{z} > 1/2. From the well-known
+logarithmic derivative of the Gamma function (see [MV07, (C.10)] for example), observe
+���ψ(k)(z)
+
+k!
+
+��� =
+���(−1)k
+∞
+�
+
+n=1
+
+1
+
+(n + z)k+1
+
+��� ≤ 2k+1 �
+
+n odd
+
+1
+
+nk+1 = (2k+1 − 1)ζQ(k + 1)
+
+for Re{z} > 1/2, which yields the desired result when combined with (2.5) as ζQ(k + 1) ≤
+ζQ(2) = π2/6.
+□
+
+3. Zero-Free Gap and Labelling of Zeros
+
+The main goal of this section is to show that there is a thin rectangle inside the critical
+strip above which there is a zero-free gap for
+
+Z(s) :=
+�
+
+χ (mod q)
+L(s, χ).
+
+Afterwards, we label important zeros of Z(s) which we will refer to throughout the paper.
+This zero-free gap is necessary for the proof of Lemma 6.3 – a crucial component for later
+sections.
+
+Let ϑ ∈ [ 3
+
+4, 1] be fixed3 and let ν(x), η(x) be any fixed increasing functions for x ∈ [1, ∞)
+such that
+
+(3.1)
+ν(x) ∈ [4, ∞),
+ν(x) ≫ log(x + 4),
+
+η(x) ∈ [2, ∞),
+η(x) → ∞ as x → ∞,
+and
+x
+
+η(x) log(x+1) is increasing.
+
+One could take η(x) = 1
+
+2 log x + 2, for example. Denote
+
+(3.2)
+
+L := log dK + ϑ · log Nq + nK · ν(nK),
+L∗ := log dK + ϑ · log Nq,
+
+T := (L∗)1/η(nK) log(nK+1) + ν(nK).
+
+Similarly, for a Hecke character χ (mod q) with conductor fχ, define
+
+(3.3)
+
+Lχ := log dK + log Nfχ + nK · ν(nK),
+L∗
+χ := log dK + log Nfχ
+L0 := Lχ0 = log dK + nK · ν(nK)
+
+For the remainder of the paper, we shall maintain this notation because these quantities will
+be ubiquitous in all of our estimates. Henceforth, all implicit constants will be absolute (in
+particular, independent of K, q and all Hecke characters χ modulo q) and will only implicitly
+
+3For the purposes of this paper, setting ϑ = 3
+
+4 would be sufficient but we wish to maintain flexibility for
+possible future investigations of Hecke L-functions.
+9
+
+
+depend on the fixed ϑ, ν and η.
+
+First, we record some simple relationships between the quantities defined in (3.2) and
+(3.3).
+
+Lemma 3.1. For the quantities defined in (3.2) and (3.3), all of the following hold:
+(i) 4 ≤ T ≤ L.
+(ii) nK log T = o(L).
+(iii) L∗ + nK log T ≤ L + o(L)
+and
+L∗
+χ + nK log T ≤ Lχ + o(L).
+(iv) T → ∞ if and only if L → ∞.
+(v) aL0 + bLχ ≤ (a + b)L provided 0 ≤ b ≤ 3a.
+
+Proof. Statements (i) and (iii) follow easily from (ii) and/or the definitions of T , L and L∗.
+For (ii), observe that
+
+nK log T ≤
+nK log L∗
+
+η(nK) log(nK + 1) + nK log ν(nK) + nK log 2
+
+The second and third terms are o(L) as ν(x) is increasing. For the first term, note that
+nK
+
+η(nK) log(nK+1) is increasing as a function nK by (3.1) and so plugging in the upper bound
+nK = O(log dK) = O(L∗) from Minkowski’s theorem we deduce
+
+nK log T ≪
+L∗
+
+η(L∗) + o(L) = o(L)
+
+since η(x) → ∞ as x → ∞ and L∗ ≤ L. For (iv), if nK is bounded, then necessarily L∗ → ∞
+in which case both T and L approach infinity. Otherwise, if nK → ∞, then both T and L
+approach infinity since ν(x) → ∞ as x → ∞. For (v), the claim follows from the fact that
+ϑ ≥ 3
+
+4.
+□
+
+Next, we establish the desired zero-free gap which motivates the choice of L and its related
+quantities.
+
+Lemma 3.2. Let C0 > 0 be a sufficiently large absolute constant and let T be defined as
+in (3.2). For L sufficiently large, there exists a positive integer T0 = T0(q) ≤ T
+
+10 such that
+�
+
+χ (mod q) L(s, χ) has no zeros in the region
+
+1 − log log T
+
+C0L
+≤ σ ≤ 1,
+T0 ≤ |t| ≤ 10T0.
+
+Proof. For 0 ≤ α ≤ 1 and T ≥ 0, denote
+
+Nq(α, T) =
+�
+
+χ (mod q)
+#{ρ ∈ C | L(ρ, χ) = 0,
+α ≤ β ≤ 1,
+0 ≤ |γ| ≤ T}
+
+where we count zeros with multiplicity. We shall apply a simplified version of a result of Weiss
+[Wei83, Theorem 4.3]; in his notation, we restrict to the case H = Pq and Q = nnK
+K dKNq
+from which it follows hH = #I(q)/H ≤ eO(L) by [Wei83, Lemma 1.16] and also Q ≤ eO(L)
+
+since ν(x) ≫ log(x + 4) by (3.1). Therefore, by [Wei83, Theorem 4.3], for c6 ≤ α ≤ 1 − c7
+
+L ,
+we have
+
+(3.4)
+Nq(α, T) ≪ (eL · T nK)c8(1−α)
+
+10
+
+
+for some absolute constants 0 < c6 < 1, c7 > 0, c8 > 0 and provided T and L are sufficiently
+large. Now suppose, for a contradiction, that no such T0 exists. Setting α = 1 − log log T
+
+C0L , it
+follows that every region
+α ≤ σ ≤ 1,
+10j ≤ |t| ≤ 10j+1,
+
+for 0 ≤ j < J where J :=
+� log T
+
+log 10
+�
+, contains at least one zero of �
+
+χ (mod q) L(s, χ). Hence,
+
+Nq(α, T ) ≥ J ≫ log T .
+
+On the other hand, by (3.4) with T = T sufficiently large, our choice of α implies
+
+Nq(α, T ) ≪
+�
+e4L/3T nK�c8(1−α) ≪ exp
+� c8
+
+C0
+
+�
+4
+3 log log T + nK log T log log T
+
+L
+
+��
+.
+
+From Lemma 3.1, nK log T = o(L) so for some absolute constant c9 > 0
+
+Nq(α, T ) ≪ exp
+� c9
+
+C0
+log log T
+�
+≪ (log T )
+c9
+C0 .
+
+Upon taking C0 = 2c9, we obtain a contradiction for T sufficiently large. From Lemma 3.1,
+we may equivalently ask that L is sufficiently large.
+□
+
+Using the zero-free gap from Lemma 3.2, we label important “bad” zeros of Z(s) =
+�
+
+χ (mod q) L(s, χ). These zeros will be referred to throughout the paper. A typical zero of
+L(s, χ) will be denoted ρ = β + iγ or ρχ = βχ + iγχ when necessary.
+
+Worst Zero of each Character
+Consider the rectangle
+
+R = R(q) := {s ∈ C : 1 − log log T
+
+C0L
+≤ σ ≤ 1,
+|t| ≤ T0}
+
+for T0 = T0(q) ∈ [1, T
+
+10] and C0 > 0 defined by Lemma 3.2. Denote Z to be the multiset of
+zeros of Z(s) contained in R. Choose finitely many zeros ρ1, ρ2, . . . from Z as follows:
+(1) Pick ρ1 such that β1 is maximal, and let χ1 be the corresponding character. Remove
+all zeros of L(s, χ1) and L(s, χ1) from Z.
+(2) Pick ρ2 such that β2 is maximal, and let χ2 be the corresponding character. Remove
+all zeros of L(s, χ2) and L(s, χ2) from Z.
+...
+Continue in this fashion until R has no more zeros to choose. Then if χ ̸= χi, χi for 1 ≤ i < k,
+then by Lemma 3.2 every zero ρ of L(s, χ) satisfies:
+
+(3.5)
+Re(ρ) ≤ Re(ρk)
+or
+|Im(ρ)| ≥ 10T0.
+
+For convenience of notation, denote
+
+ρk = βk + iγk,
+βk = 1 − λk
+
+L ,
+γk = µk
+
+L .
+
+Second Worst Zero of the Worst Character
+11
+
+
+Suppose L(s, χ1) has a zero ρ′ ̸= ρ1, ρ1 in the rectangle R, or possibly a repeated real zero
+ρ′ = ρ1. Choose ρ′ with Re(ρ′) maximal and write
+
+ρ′ = β′ + iγ′,
+β′ = 1 − λ′
+
+L ,
+γ′ = µ′
+
+L .
+
+4. Classical Explicit Inequality
+
+In this section, we prove an inequality for −Re{ L′
+
+L (s, χ)} based on a bound for L(s, χ) in
+the critical strip and a type of Jensen’s formula employed by Heath-Brown in [HB95, Section
+3]. First, we deal with non-primitive characters.
+
+Lemma 4.1. Suppose χ (mod q) is induced by the character χ∗ (mod f). Then for ǫ > 0, we
+have
+L′
+
+L (s, χ) = L′
+
+L (s, χ∗) + O
+�nK
+
+ǫ + ǫL∗�
+
+uniformly in the range σ > 1.
+
+Proof. Observe
+���L′
+
+L (s, χ) − L′
+
+L (s, χ∗)
+��� ≤
+�
+
+p|q
+
+�
+
+j≥1
+
+log Np
+(Np)j ≤ 2
+�
+
+p|q
+
+log Np
+
+Np
+.
+
+The desired result then follows from Lemma 2.4.
+□
+
+Next, we give a bound for L(s, χ) in a relevant region of the critical strip.
+
+Lemma 4.2. Let χ (mod q) be non-principal and induced by the primitive character χ∗ (mod fχ).
+There exists an absolute constant φ > 0 such that for ǫ > 0, we have
+
+|L(s, χ∗)| ≤ exp
+�
+2φLχ(1 − σ + ǫ) + oǫ(L)
+�
+
+and
+|(s − 1) · ζK(s)| ≤ exp
+�
+2φL0(1 − σ + ǫ) + oǫ(L)
+�
+
+uniformly in the region
+1
+2 ≤ σ ≤ 1 + log L
+
+L
+,
+|t| ≤ T .
+
+In particular, we may take φ = 1
+
+4.
+
+Remark. The term oǫ(L)/L goes to zero as L → ∞ but the rate of convergence depends on
+ǫ > 0.
+
+Proof. Take φ = 1
+
+4. From Lemma 2.1, we have
+
+L(s, χ∗) ≪ ζ(1 + ǫ)nK
+� dKNfχ
+
+(2π)nK (1 + |s|)nK
+�2φ(1−σ+ǫ)
+
+uniformly in the region −ǫ ≤ σ ≤ 1 + ǫ. Noting 1 + |s| ≤ 3 + T and using Lemma 2.5, the
+above is therefore
+
+≪ exp
+�
+(L∗
+χ + nK log(T + 3)) · 2φ(1 − σ + ǫ) + Oǫ(nK)
+�
+
+From Lemma 3.1, it follows L∗
+χ+nK log(T +3) ≤ Lχ+o(L). Substituting this into the above,
+the desired result then follows upon noting nK = o(L). The proof for ζK(s) is similar.
+□
+12
+
+
+Any improvement on the constant φ will have a crucial effect on the final result. For
+example, the Lindel¨of hypothesis for Hecke L-functions gives φ = ǫ. For the remainder of
+this paper, we set
+
+φ := 1
+
+4.
+
+We may now establish the main result of this section.
+
+Lemma 4.3. Let χ (mod q) be arbitrary. For any ǫ > 0, there exists a δ = δ(ǫ) > 0 such
+that
+
+−ReL′
+
+L (s, χ) ≤ (φ + ǫ)Lχ + Re
+�E0(χ)
+
+s − 1
+
+�
+−
+�
+
+|1+it−ρ|≤δ
+Re
+�
+1
+
+s − ρ
+
+�
++ oǫ(L)
+
+uniformly for
+
+1 +
+1
+
+L log L ≤ σ ≤ 1 + log L
+
+L
+,
+|t| ≤ T .
+
+Remark. When K = Q, Heath-Brown showed the same inequality in [HB95, Lemma 3.1]
+with φ = 1
+
+6 instead of φ = 1
+
+4 by leveraging Burgess’ estimate for character sums. Note that
+Heath-Brown’s notation for φ differs by a factor of 2 with our notation.
+
+Proof. We closely follow the arguments leading to the proof of [HB95, Lemma 3.1]. Assume
+without loss that ǫ ∈ (0, 1/2). Suppose χ (mod q) is induced from a non-principal primitive
+character χ∗ (mod f). Apply [HB95, Lemma 3.2] with f( · ) = L( · , χ∗) with a = s and R = 1
+
+2.
+Then
+
+(4.1)
+− ReL′
+
+L (s, χ∗) = −
+�
+
+|s−ρ|< 1
+
+2
+
+Re
+�
+1
+
+s − ρ − 4(s − ρ)
+�
+− J
+
+where
+
+J := 2
+
+π
+
+� 2π
+
+0
+(cos θ) · log |L(s + 1
+
+2eiθ, χ∗)|dθ.
+
+We require a lower bound for J so we divide the contribution of the integral into three
+separate intervals depending on the sign of cos θ.
+• For θ ∈ [0, π/2], by Lemma 2.5 it follows that
+
+log |L(s + 1
+
+2eiθ, χ∗)| ≤ log ζK(σ + 1
+
+2 cos θ) ≤ nK log
+�
+2
+
+σ − 1 + 1
+
+2 cos θ
+
+�
+
+On the interval I1 := [0, π
+
+2 − (σ − 1)], as σ − 1 ≥ 0, the contribution of the integral
+J is
+
+≪ nK
+
+� π/2
+
+0
+(cos θ) log(4/ cos θ)dθ ≪ nK.
+
+On the interval I2 := [ π
+
+2 − (σ − 1), π
+
+2], as cos θ ≥ 0, the contribution of the integral J
+is
+
+≪ nK log(2/(σ − 1))
+�
+
+I2
+(cos θ)dθ ≪ nK(σ − 1) log(2/(σ − 1)) ≪ nK(log L)2
+
+L
+≪ (log L)2
+
+because (L log L)−1 ≤ σ − 1 ≤ L−1 log L and nK ≪ L.
+13
+
+
+• For θ ∈ [π/2, 3π/2], notice
+
+1
+2 ≤ σ − 1
+
+2 ≤ σ + 1
+
+2 cos θ ≤ σ ≤ 1 + log L
+
+L
+.
+
+Hence, we may use Lemma 4.2 to see that
+
+log |L(s + 1
+
+2eiθ, χ∗)| ≤ 2φLχ(1 − σ − 1
+
+2 cos θ + ǫ) + oǫ(L)
+
+≤ 2φLχ(−1
+
+2 cos θ + ǫ) + oǫ(L).
+
+This implies that
+� 3π/2
+
+π/2
+(cos θ) · log |L(s + 1
+
+2eiθ, χ)|dθ ≥ 2φLχ
+
+� 3π/2
+
+π/2
+
+�
+− 1
+
+2 cos2 θ + ǫ cos θ
+�
+dθ + oǫ(L)
+
+= φLχ
+�
+− π
+
+2 − 4ǫ
+�
++ oǫ(L).
+
+• For θ ∈ [3π/2, 2π], we obtain the same contribution as θ ∈ [0, π/2] by a similar
+argument.
+Combining all contributions, we have
+
+(4.2)
+J ≥
+�
+− φ − 2ǫ
+
+π
+
+�
+Lχ + oǫ(L)
+
+since nK = o(L). For the sum over zeros in (4.1), notice that we may arbitrarily discard
+zeros from the sum since for |s − ρ| < 1
+
+2,
+
+Re
+�
+1
+
+s − ρ − 4(s − ρ)
+�
+= (σ − β)
+�
+1
+
+|s − ρ|2 −
+1
+
+( 1
+
+2)2
+
+�
+≥ 0.
+
+Thus, for any 0 < δ < 1
+
+2 − log L
+
+L , we may restrict our sum over zeros from |s − ρ| < 1
+
+2 to a
+smaller circle within it: |1 + it − ρ| ≤ δ. From our previous observation, we may discard
+zeros outside of this smaller circle. As L ≥ 4 by Lemma 3.1, we may instead impose that
+0 < δ < 1
+
+8.
+Now, from [LMO79, Lemma 2.1] and Lemma 3.1, we have that
+
+#{ρ : |1 + it − ρ| ≤ δ} ≪ L∗
+χ + nK log(T + 3) ≪ Lχ + o(L).
+
+Further, for such zeros ρ satisfying |1 + it − ρ| ≤ δ, notice
+
+Re{s − ρ} = σ − β ≤ log L
+
+L
++ δ
+
+implying, for some absolute constant c0 ≥ 1,
+
+(4.3)
+�
+
+|1+it−ρ|≤δ
+Re{4(s − ρ)
+�
+≤ 4c0(Lχ + o(L))
+�log L
+
+L
++ δ
+�
+= 4c0δLχ + O(log L).
+
+Combining these observations, from (4.1), (4.2), and (4.3) and Lemma 4.1 we see that
+
+−ReL′
+
+L (s, χ) ≤ −
+�
+
+|1+it−ρ|≤δ
+Re
+�
+1
+
+s − ρ − 4(s − ρ)
+�
++
+�
+φ + 2ǫ
+
+π
+�
+Lχ + oǫ(L)
+
+≤ −
+�
+
+|1+it−ρ|≤δ
+Re
+�
+1
+
+s − ρ
+
+�
++
+�
+φ + 2ǫ
+
+π + 4c0δ
+�
+Lχ + oǫ(L).
+
+14
+
+
+Taking δ = ǫ/4c0, note δ ∈ (0, 1/8) as ǫ < 1/2 by assumption and c0 ≥ 1. Rescaling ǫ
+appropriately completes the proof for χ non-principal.
+If χ = χ0 is principal, then we proceed in the same manner, applying Lemma 3.2 of [HB95]
+with f( · ) = (s − 1)ζK( · ). This choice gives rise to the additional term
+1
+
+s−1, but otherwise
+we continue with the same argument. The only other difference occurs in the analysis of the
+integral J for θ ∈ [0, π/2] ∪ [3π/2, 2] where we must instead estimate
+
+log
+�
+|s − 1 + 1
+
+2eiθ| · |ζK(s + 1
+
+2eiθ)|
+�
+.
+
+As |s−1+ 1
+
+2eiθ| ≥ 1
+
+2, the contribution to the integral J will be bounded and hence ignored.
+□
+
+5. Polynomial Explicit Inequality
+
+By including higher derivatives of −L′
+
+L (s, χ), the goal of this section is establish a gener-
+alization of the “classical explicit inequality” based on techniques in [HB95, Section 4]. Let
+χ (mod q) be a Hecke character. For a polynomial P(X) = �d
+k=1 akXk ∈ R[X] of degree
+d ≥ 1, define a real-valued function
+
+(5.1)
+P(s, χ) = P(s, χ; P) :=
+�
+
+n⊆O
+
+ΛK(n)
+(Nn)σ
+
+�
+d
+�
+
+k=1
+ak
+
+�
+(σ − 1) log Nn
+�k−1
+
+(k − 1)!
+
+�
+· Re
+� χ(n)
+
+(Nn)it
+
+�
+
+for σ > 1 and where ΛK( · ) is the von Mangoldt Λ-function on integral ideals of OK defined
+by
+
+ΛK(n) =
+
+�
+log Np
+if n is a power of a prime ideal p,
+0
+otherwise.
+
+From the classical formula
+
+−L′
+
+L (s, χ) =
+�
+
+n⊆O
+ΛK(n)χ(n)(Nn)−s
+for σ > 1,
+
+it is straightforward to deduce that
+
+(5.2)
+P(s, χ) =
+
+d
+�
+
+k=1
+ak(σ − 1)k−1 · Re
+� (−1)k
+
+(k − 1)!
+dk−1
+
+dsk−1
+L′
+
+L (s, χ)
+�
+for σ > 1.
+
+To prove an explicit inequality using P(s, χ), we first reduce the problem to primitive char-
+acters.
+
+Lemma 5.1. Let χ (mod q) be induced from the primitive character χ∗ (mod fχ). Let P(X) ∈
+R[X] be a polynomial with P(0) = 0. Then, for ǫ > 0,
+
+P(s, χ) = P(s, χ∗) + OP(ǫ−1nK + ǫL)
+
+uniformly in the region
+
+1 < σ ≤ 1 + 100
+
+L .
+
+Proof. Denote d = deg P. Observe
+���P(s, χ) − P(s, χ∗)
+��� ≪P
+�
+
+(n,q)̸=1
+
+ΛK(n)
+
+Nn
+
+�log Nn
+
+L
+
+�d−1
+≪P
+�
+
+p|q
+
+�
+
+j≥1
+
+log Np
+(Np)j ·
+�j log Np
+
+L
+
+�d−1
+.
+
+15
+
+
+For p | q, note log Np ≪ log Nq ≪ L and so the above is
+
+≪P
+�
+
+p|q
+
+�
+
+j≥1
+
+jd−1 log Np
+
+(Np)j
+≪P
+�
+
+p|q
+
+log Np
+
+Np
+.
+
+The desired result then follows from Lemma 2.4.
+□
+
+Proposition 5.2. Let χ (mod q) and ǫ > 0 be arbitrary. Suppose the polynomial P(X) =
+�d
+k=1 akXk of degree d ≥ 1 has non-negative real coefficients. Then there exists δ = δ(ǫ, P) >
+0, such that
+
+(5.3)
+1
+L · P(s, χ) ≤ Re
+�P
+� σ−1
+
+s−1
+�
+
+σ − 1 E0(χ) −
+�
+
+|1+it−ρχ|≤δ
+
+P
+� σ−1
+
+s−ρχ
+�
+
+σ − 1
+
+�
+· 1
+
+L + a1φ Lχ
+
+L + ǫ
+
+uniformly in the region
+
+1 +
+1
+
+L log L ≤ σ ≤ 1 + 100
+
+L ,
+|t| ≤ T
+
+provided L is sufficiently large depending on ǫ and P.
+
+Proof. Let χ∗ (mod fχ) be the primitive character inducing χ (mod q). From Lemma 5.1 and
+the observation nK = o(L), it follows
+
+1
+LP(s, χ) = 1
+
+LP(s, χ∗) + ǫ
+
+for L sufficiently large depending on ǫ and P. Thus, it suffices to show (5.3) with P(s, χ∗)
+instead of P(s, χ). Define
+
+P2(X) :=
+
+d
+�
+
+k=2
+akXk = P(X) − a1X.
+
+Using Lemma 2.2 and Lemma 2.6, we see for k ≥ 2 and σ > 1 that
+
+(−1)k
+
+(k − 1)!
+dk−1
+
+dsk−1
+L′
+
+L (s, χ∗) =
+E0(χ)
+(s − 1)k −
+�
+
+ρχ
+
+1
+
+(s − ρχ)k + E0(χ)
+
+sk
+− (−1)k
+
+(k − 1)!
+dk−1
+
+dsk−1
+L′
+∞
+
+L∞
+(s, χ∗)
+
+=
+E0(χ)
+(s − 1)k −
+�
+
+ρχ
+
+1
+
+(s − ρχ)k + O(nK).
+
+Substituting these formulae into P(s, χ∗; P2) defined via (5.2), it follows for σ > 1 that
+
+(5.4)
+P(s, χ∗; P2) =
+1
+
+σ − 1
+
+d
+�
+
+k=2
+akRe
+��σ − 1
+
+s − 1
+
+�k
+E0(χ) −
+�
+
+ρχ
+
+� σ − 1
+
+s − ρχ
+
+�k�
++ OP(nK).
+
+16
+
+
+Obtain δ = δ(ǫ) from Lemma 4.3. Since σ < 1 + 100
+
+L , we see by the zero density estimate
+[LMO79, Lemma 2.1] and Lemma 3.1 that
+�
+
+|1+it−ρχ|≥δ
+
+��� σ − 1
+s − ρχ
+
+���
+k
+≪
+�100
+
+L
+
+�k
+�
+
+|1+it−ρχ|≥δ
+
+1
+
+|s − ρχ|k ≪δ
+�100
+
+L
+
+�k �
+
+ρχ
+
+1
+
+1 + |t − γχ|2
+
+≪δ
+�100
+
+L
+
+�k
+· (L∗ + nK log T )
+
+≪δ
+(100)k
+
+Lk−1 ≪δ,P
+1
+L.
+
+Hence,
+
+1
+
+σ − 1
+
+d
+�
+
+k=2
+akRe
+�
+�
+
+|1+it−ρχ|≥δ
+
+� σ − 1
+
+s − ρχ
+
+�k�
+≪ǫ,P log L
+
+since σ > 1 +
+1
+
+L log L and δ depends only on ǫ. Removing this contribution in (5.4) implies
+that
+
+P(s, χ∗; P2) =
+1
+
+σ − 1
+
+d
+�
+
+k=2
+akRe
+��σ − 1
+
+s − 1
+
+�k
+E0(χ) −
+�
+
+|1+it−ρχ|≤δ
+
+� σ − 1
+
+s − ρχ
+
+�k�
++ Oǫ,P(nK + log L)
+
+= Re
+�P2( σ−1
+
+s−1)}
+
+σ − 1
+E0(χ) −
+�
+
+|1+it−ρχ|≤δ
+
+P2( σ−1
+
+s−ρχ)
+
+σ − 1
+
+�
++ Oǫ,P(nK + log L).
+
+For the linear polynomial P1(X) := a1X, we apply Lemma 4.3 directly to find that
+
+P(s, χ∗; P1) ≤ a1
+�
+φ + ǫ
+�
+Lχ + Re
+�P1
+� σ−1
+
+s−1
+�
+
+σ − 1 E0(χ) −
+�
+
+|1+it−ρχ|≤δ
+
+P1
+� σ−1
+
+s−ρχ
+�
+
+σ − 1
+
+�
++ oǫ,P(L)
+
+for L sufficiently large depending on ǫ.
+Finally, from (5.2), we see that P(s, χ∗; P) = P(s, χ∗; P1)+P(s, χ∗; P2) since P = P1 +P2,
+so combining the above inequality with the previous equation we conclude
+
+P(s, χ∗) ≤ a1
+�
+φ + ǫ
+�
+Lχ + Re
+�P
+�σ−1
+
+s−1
+�
+
+σ − 1 E0(χ) −
+�
+
+|1+it−ρχ|≤δ
+
+P
+� σ−1
+
+s−ρχ
+�
+
+σ − 1
+
+�
+
++ Oǫ,P(nK + log L) + oǫ,P(L).
+
+Dividing both sides by L and taking L sufficiently large depending on ǫ and P, the errors
+may be made arbitrarily small. Choosing a new ǫ yields the desired result.
+□
+
+We wish to use Proposition 5.2 in many contexts but typically we want to restrict the sum
+over zeros ρ to just a few specified zeros. To do so, we impose an additional condition on
+P(X).
+
+Definition 5.3. A polynomial P(X) ∈ R≥0[X] is admissible if P(0) = 0 and
+
+Re
+�
+P
+�1
+
+z
+
+��
+≥ 0
+when Re{z} ≥ 1.
+
+Now we establish a general lemma which we will repeatedly apply in varying circumstances.
+17
+
+
+Lemma 5.4. Let ǫ > 0 and 0 < λ < 100 be arbitrary, and let s = σ + it with
+
+σ = 1 + λ
+
+L,
+|t| ≤ T .
+
+Let χ (mod q) be an arbitrary Hecke character and let Z := { ˜ρ1, ˜ρ2, . . . , ˜ρJ} be a finite multiset
+of zeros of L(s, χ) (called the extracted zeros) where
+
+˜ρj = ˜βj + i ˜γj =
+�
+1 −
+˜λj
+L
+
+�
++ i · ˜µj
+
+L ,
+1 ≤ j ≤ J.
+
+Suppose P(X) = �d
+k=1 akXk is an admissible polynomial. Then
+
+λ
+L · P(s, χ) ≤ Re
+�
+E0(χ)P
+�
+λ
+
+λ + iµ
+
+�
+−
+
+J
+�
+
+j=1
+P
+�
+λ
+
+λ + ˜λj + i(µ − ˜µj)
+
+��
++ a1λφ Lχ
+
+L + ǫ
+
+for L sufficiently large depending only on ǫ, λ, the polynomial P, and the number of extracted
+zeros J.
+
+Proof. From Proposition 5.2 and the admissibility of p, it follows that
+(5.5)
+
+λ
+LP(s, χ) ≤ a1λφ Lχ
+
+L + ǫ + Re
+�
+E0(χ)P
+�
+λ
+
+λ + iµ
+
+�
+−
+�
+
+|1+it−ρχ|≤δ
+ρχ∈Z
+
+P
+�
+λ
+
+λ + λχ + i(µ − µχ)
+
+��
+
+for some δ = δ(ǫ, p) and L sufficiently large depending on ǫ, P and λ. Note the admissibility
+of P was used to restrict the sum over zeros further by throwing out ρχ ̸∈ Z satisfying
+|1 + it − ρχ| ≤ δ. For the remaining sum, consider ˜ρj ∈ Z. If |1 + it − ˜ρj| ≥ δ, then
+|˜µj − µ| ≫δ L or ˜λj ≫δ L. As P(0) = 0, it follows
+
+Re
+�
+P
+�
+λ
+
+λ + ˜λj + i(µ − ˜µj)
+
+��
+≪ǫ,p,λ L−1.
+
+Hence, in the sum over zeros in (5.5), we may include each extracted zero ˜ρj with error
+Oǫ,P,λ(L−1) implying
+
+�
+
+|1+it−ρχ|≤δ
+ρχ∈Z
+
+Re
+�
+P
+�
+λ
+
+λ + λχ + i(µ − µχ)
+
+��
+=
+
+J
+�
+
+j=1
+Re
+�
+P
+�
+λ
+
+λ + ˜λj + i(µ − ˜µj)
+
+��
++ Oǫ,P,λ(L−1J).
+
+Using this estimate in (5.5) and taking L sufficiently large depending on ǫ, λ, p and J, we
+have the desired result upon choosing a new ǫ.
+□
+
+During computations, we will employ Lemma 5.4 with P(X) = P4(X) as given in [HB95].
+That is, for the remainder of this paper, denote
+
+(5.6)
+P4(X) := X + X2 + 4
+
+5X3 + 2
+
+5X4.
+
+We establish a key property of P4(X) in Lemma 5.6 using the following observation.
+
+Lemma 5.5. Let V, W ≥ 0 be arbitrary and m ≥ 1 be a positive integer. Define
+
+Gm(x, y, z) := V ·
+xm
+
+(x2 + z2)m + W ·
+ym
+
+(y2 + z2)m −
+1
+
+(1 + z2)m.
+
+18
+
+
+for x, y, z ∈ R. If x, y ≥ 1 then
+
+Gm(x, y, z) ≥ 0
+provided
+V
+xm + W
+
+ym ≥ 1.
+
+Proof. Notice
+
+Gm(x, y, z) =
+V/xm
+
+(1 + (z/x)2)m +
+W/ym
+
+(1 + (z/y)2)m −
+1
+
+(1 + z2)m ≥
+� V
+
+xm + W
+
+ym − 1
+�
+1
+
+(1 + z2)m.
+
+□
+
+Lemma 5.6. The polynomial P4(X) is admissible. Additionally, if 0 < a ≤ b ≤ c, A > 0,
+and B, C ≥ 0, then
+
+(5.7)
+Re{C · P4
+�
+a
+
+c + it
+�
++ B · P4
+�
+a
+
+b + it
+�
+− A · P4
+�
+a
+
+a + it
+�
+} ≥ 0
+
+provided
+C
+c4 + B
+
+b4 ≥ A
+
+a4.
+
+Proof. The proof that P4(X) is admissible is given in [HB95, Section 4]. It remains to prove
+(5.7). By direct computation, one can verify that
+
+(5.8)
+Re{P4
+�
+a
+
+b + it
+�
+} = 16
+
+5
+(ab)4
+
+(b2 + t2)4 +
+a(b − a)
+
+5(b2 + t2)3Q(a, b, t),
+
+where Q(a, b, t) = 5t4 + 2(5b2 + 5ab − a2)t2 + b2(5b2 + 10ab + 14a2) is clearly positive for
+0 < a ≤ b and t ∈ R. Thus, for 0 < a ≤ b and t ∈ R, we have
+
+(5.9)
+Re{P4
+�
+a
+
+b + it
+�
+} ≥ 16
+
+5
+(ab)4
+
+(b2 + t2)4.
+
+Now, consider the LHS of (5.7). Apply (5.9) to the first and second term and (5.8) to the
+third term deducing that the LHS of (5.7) is
+
+(5.10)
+≥ 16a4
+
+5
+·
+�
+C ·
+c4
+
+(c2 + t2)4 + B ·
+b4
+
+(b2 + t2)4 − A ·
+a4
+
+(a2 + t2)4
+
+�
+≥ 16A
+
+5
+· G4
+� c
+
+a, b
+
+a, t
+
+a
+�
+
+where G4(x, y, z) is defined in Lemma 5.5 with V = C/A, W = B/A. Applying Lemma 5.5
+to G4
+� c
+
+a, b
+
+a, t
+
+a
+�
+immediately implies (5.7) with the desired condition.
+□
+
+6. Smoothed Explicit Inequality
+
+We further generalize the “classical explicit inequality” to smoothly weighted versions
+of −L′
+
+L (s, χ), similar to the well-known Weil’s explicit formula. For any Hecke character
+χ (mod q) and function f : [0, ∞) → R with compact support, define
+
+W(s, χ; f) :=
+�
+
+n⊆O
+ΛK(n)χ(n)(Nn)−sf
+�log(Nn)
+
+L
+
+�
+for σ > 1,
+
+K(s, χ; f) := Re{W(s, χ; f)}.
+
+We begin with the same setup as [HB95, Section 5]. Assume f satisfies the following condi-
+tion:
+
+19
+
+
+Condition 1 Let f be a continuous function from [0, ∞) to R, supported in [0, x0) and
+bounded absolutely by M, and let f be twice differentiable on (0, x0), with f ′′ being continu-
+ous and bounded by B.
+
+Recall that the Laplace transform of f is given by
+
+(6.1)
+F(z) :=
+� ∞
+
+0
+e−ztf(t)dt,
+z ∈ C.
+
+Note F(z) is entire since f has compact support. For Re(z) > 0, we have
+
+(6.2)
+F(z) = 1
+
+zf(0) + F0(z),
+
+where
+
+(6.3)
+|F0(z)| ≤ |z|−2A(f)
+
+with
+
+A(f) = 3Bx0 + 2|f(0)|
+
+x0
+.
+
+Define the content of f to be
+
+(6.4)
+C = C(f) := (x0, M, B, f(0)).
+
+For the purposes of generality, estimates in this section will depend only on the content of
+f. For all subsequent sections, we will ignore this distinction and allow dependence on f in
+general. We first reduce our analysis to primitive characters and then prove the main result.
+
+Lemma 6.1. Suppose χ (mod q) is induced from χ∗ (mod fχ). For ǫ > 0 and f satisfying
+Condition 1,
+W(s, χ; f) = W(s, χ∗; f) + OC
+�nK
+√ǫ + ǫL∗�
+
+uniformly in the region σ > 1.
+
+Proof. Observe
+���W(s, χ; f) − W(s, χ∗; f)
+��� ≤
+�
+
+(n,q)̸=1
+
+ΛK(n)
+
+Nn |f(L−1(log Nn))|
+
+≤ M
+�
+
+(n,q)̸=1
+
+ΛK(n)
+
+Nn
+= M
+�
+
+p|q
+
+�
+
+j≥1
+
+log Np
+(Np)j ≤ 2M
+�
+
+p|q
+
+log Np
+
+Np
+.
+
+The desired result then follows from Lemma 2.4.
+□
+
+Proposition 6.2. Let χ (mod q) and ǫ > 0 be arbitrary, and suppose s = σ + it satisfies
+
+|σ − 1| ≤ (log L)1/2
+
+L
+,
+|t| ≤ T .
+
+Suppose f satisfies Condition 1 and that f(0) ≥ 0. Then there exists δ = δ(C, ǫ) ∈ (0, 1)
+depending only on ǫ and the content of f (and independent of χ, q, K and s) such that
+
+(6.5)
+
+1
+L · K(s, χ; f) ≤ E0(χ) · Re{F((s − 1)L)} −
+�
+
+|1+it−ρ|≤δ
+Re{F((s − ρ)L)}
+
++ f(0)φ Lχ
+
+L + ǫ
+20
+
+
+provided L is sufficiently large depending on ǫ and the content of f.
+
+Proof. The proof will closely follow the arguments of [HB95, Lemma 5.2]. Let χ∗ (mod fχ)
+be the primitive character inducing χ. From Lemma 6.1,
+
+K(s, χ; f) = K(s, χ∗; f) + OC(ǫ−1nK + ǫL∗).
+
+Dividing both sides by L and recalling nK = o(L), it follows that
+
+L−1K(s, χ; f) ≤ L−1K(s, χ∗; f) + ǫ
+
+for L sufficiently large depending on ǫ and the content of f. Thus, we may prove (6.5) with
+K(s, χ∗; f) instead of K(s, χ; f).
+Let σ ≥ 1 + 2L−1 and set σ0 := 1 + L−1 so σ0 < σ. Consider
+
+(6.6)
+I :=
+1
+2πi
+
+� σ0+i∞
+
+σ0−i∞
+
+�
+− L′
+
+L (w, χ∗)
+�
+F0((s − w)L)dw.
+
+Since F0 satisfies (6.3) and
+
+−L′
+
+L (w, χ∗) ≪ |ζ′
+K
+ζK
+(σ0)| ≪ nK(σ0 − 1)−1
+
+by Lemma 2.5, the integral converges absolutely. Hence, we may compute I by interchanging
+the summation and integration, and calculating the integral against (Nn)−w term-wise. That
+is to say,
+
+(6.7)
+I =
+�
+
+n⊆O
+Λ(n)χ∗(n)
+� 1
+
+2πi
+
+� σ0+i∞
+
+σ0−i∞
+(Nn)−wF0((s − w)L)dw
+�
+.
+
+Arguing as in [HB95, Section 5, p.21] and using Lebesgue’s Dominated Convergence Theo-
+rem, one can verify
+
+1
+2πi
+
+� σ0+i∞
+
+σ0−i∞
+(Nn)−wF0((s − w)L)dw = (Nn)−s
+
+L
+·
+�
+f(L−1 log Nn) − f(0)
+�
+
+since f satisfies Condition 1. Substituting this result into (6.7), we see that
+
+(6.8)
+I = 1
+
+L
+
+�
+W(s, χ∗; f) + L′
+
+L (s, χ∗)f(0)
+�
+.
+
+Returning to (6.6), we shift the line of integration from (σ0 ± ∞) to (−1
+
+2 ± ∞) yielding
+
+(6.9)
+
+I = E0(χ)F0((s − 1)L) −
+�
+
+ρ
+F0((s − ρ)L)
+
+− r(χ)F0(sL) + 1
+
+2πi
+
+� − 1
+
+2+i∞
+
+− 1
+
+2−i∞
+
+�
+− L′
+
+L (w, χ∗)
+�
+F0((s − w)L)dw
+
+where the sum is over the non-trivial zeros of L(w, χ) and r(χ) ≥ 0 is the order of the trivial
+zero w = 0 of L(w, χ∗). From (2.1), notice r(χ) ≤ nK so by (6.3),
+
+r(χ)|F0(sL)| ≪ nKA(f)
+
+|sL|2
+≪ nKA(f)
+
+L2
+≪ A(f)
+
+L .
+
+21
+
+
+To bound the remaining integral in (6.9), we apply the functional equation (2.3) of L(w, χ∗)
+and Lemma 2.3; namely, we note for Re{w} = −1/2 that
+
+−L′
+
+L (w, χ∗) = L∗
+χ + L′
+
+L (1 − w, χ∗) + O(nK log(2 + |w|)) = L∗
+χ + O(nK log(2 + |w|))
+
+using Lemma 2.5 since Re{1 − w} = 3/2. From (6.3), we therefore find that
+
+1
+2πi
+
+� − 1
+
+2+i∞
+
+− 1
+
+2−i∞
+
+�
+− L′
+
+L (w, χ∗)
+�
+F0((s − w)L)dw
+
+= L∗
+χ
+
+2πi
+
+� − 1
+
+2 +i∞
+
+− 1
+
+2−i∞
+F0((s − w)L)dw + O
+�A(f)
+
+L2
+
+� − 1
+
+2+i∞
+
+− 1
+
+2 −i∞
+
+nK · log(2 + |w|)
+
+|s − w|2
+dw
+�
+
+Since F0 is entire and satisfies (6.3), we may pull the line of integration in the first integral
+as far left as we desire, concluding that the first integral vanishes. One can readily verify
+that integral in the error term is
+
+≪ A(f)
+
+L2
+· nK log(2 + |s|) ≪ A(f)nK log T
+
+L2
+≪ A(f)
+
+L
+by Lemma 3.1. Combining these bounds into (6.9) and comparing with (6.8), we deduce
+(6.10)
+
+1
+L · W(s, χ∗; f) = −L′
+
+L (s, χ∗)f(0) 1
+
+L + E0(χ) · F0((s − 1)L) −
+�
+
+ρ
+F0((s − ρ)L) + O
+�A(f)
+
+L
+
+�
+.
+
+We wish to apply Lemma 4.3 giving δ = δ(ǫ), but we must discard zeros in the above sum
+where |1 + it − ρ| ≥ δ. By (6.3), [LMO79, Lemma 2.1], and Lemma 3.1, this discard induces
+an error
+
+≪
+�
+
+|1+it−ρ|≥δ
+
+A(f)
+
+L2|s − ρ|2 ≪δ
+A(f)
+L2
+�
+
+ρ
+
+1
+
+1 + |t − γ|2 ≪δ
+A(f)
+
+L2 (L∗ + nK log T ) ≪δ
+A(f)
+
+L .
+
+Hence, taking real parts of (6.10), applying Lemma 4.3, and using (6.2), we find
+
+K(s, χ∗; f)
+
+L
+≤ E0(χ)Re
+�
+F((s − 1)L) −
+�
+
+|1+it−ρ|<δ
+F((s − ρ)L)
+�
++ f(0)
+�
+φ + ǫ
+� Lχ
+
+L + Oδ,C
+�
+L−1�
+.
+
+Taking L sufficiently large depending on ǫ and the content of f, the error term may be made
+arbitrarily small. Upon choosing a new ǫ, we have established (6.5) in the range
+
+1 + 2L−1 ≤ σ ≤ 1 + (log L)1/2L−1.
+
+Similar to the discussion in [HB95, Section 5, p.22-23], one may show (6.5) holds in the
+desired extended range by considering g(t) = eαtf(t) for 0 ≤ α ≤ (log L)/3x0.
+□
+
+In analogy with Proposition 5.2 and Lemma 5.4, we would like to use Proposition 6.2
+restricting the sum over zeros ρ to just a few specified zeros. To do so, we require our weight
+f to satisfy an additional condition which was introduced in [HB95, Section 6].
+
+Condition 2 The function f is non-negative. Moreover, its Laplace transform F satisfies
+
+Re{F(z)} ≥ 0 for Re(z) ≥ 0.
+
+22
+
+
+Condition 2 implies that, viewed as a real-variable function of t ∈ R, F(t) is a positive de-
+creasing real-valued function. We may now give a more convenient version of Proposition 6.2
+in the following lemma.
+
+Lemma 6.3. Let ǫ ∈ (0, 1) be arbitrary, and let s = σ + it with
+
+|σ − 1| ≤ log log T
+
+C0L
+,
+|t| ≤ 5T0
+
+where constants C0 > 0 and T0 ≥ 1 come from Lemma 3.2. Write σ = 1−λ/L and t = µ/L.
+Let χ (mod q) be an arbitrary Hecke character and let Z := {˜ρ1, ˜ρ2, . . . , ˜ρJ} be a finite,
+possibly empty, multiset of zeros of L(s, χ) (called the extracted zeros) containing the multiset
+
+{ρχ : σ < βχ ≤ 1,
+|γχ| ≤ T0}.
+
+Write ˜ρj = ˜βj + i ˜γj =
+�
+1 −
+˜λj
+L
+
+�
++ i · ˜µj
+
+L for 1 ≤ j ≤ J and suppose f satisfies Conditions 1
+and 2. Then
+
+L−1 · K(s, χ; f) ≤ E0(χ) · Re{F(−λ + iµ)} −
+
+J
+�
+
+j=1
+Re{F( ˜λj − λ − i( ˜µj − µ))} + f(0)φ Lχ
+
+L + ǫ
+
+for L sufficiently large depending only on ǫ, the content of f, and the number of extracted
+zeros J.
+
+Remark. The dependence of “sufficiently large” on J is insignificant for our purposes, as we
+will employ the lemma with 0 ≤ J ≤ 10 in all of our applications.
+
+Proof. From Proposition 6.2, it follows that
+
+(6.11)
+
+K(s, χ; f)
+
+L
+≤ f(0)
+�
+φ Lχ
+
+L + ǫ
+�
++ E0(χ) · Re{F(−λ + iµ)}
+
+−
+�
+
+|1+it−ρ|≤δ
+Re{F((s − ρ)L)}
+
+for some δ = δ(ǫ, C). We consider the sum over zeros depending on whether ρ ∈ Z or not.
+For any ρ = ˜ρj ∈ Z, if |1 + it − ˜ρj| ≥ δ, then |˜µj − µ| ≫δ L or ˜λj ≫δ L. From (6.2) and
+(6.3), it follows that
+Re{F((s − ˜ρj)L)} ≪ǫ,C L−1.
+
+implying
+
+(6.12)
+�
+
+|1+it−ρ|≤δ
+ρ∈Z
+
+Re{F((s − ρ)L)} =
+
+J
+�
+
+j=1
+Re{F( ˜λj − λ − i( ˜µj − µ))} + Oǫ,C(JL−1).
+
+Next, for all zeros ρ = β + iγ ̸∈ Z satisfying |1 + it − ρ| ≤ δ, we claim β ≤ σ. Assuming the
+claim, it follows by Condition 2 that
+
+(6.13)
+�
+
+|1+it−ρ|≤δ
+ρ̸∈Z
+
+Re{F((s − ρ)L)} ≥ 0.
+
+23
+
+
+To see the claim, assume for a contradiction that σ ≤ β ≤ 1 for some zero ρ = β + iγ
+occurring in (6.13). As |1 + it − ρ| ≤ δ, it follows that
+
+|γ| ≤ |t| + δ ≤ 5T0 + 1 ≤ 6T0.
+
+From Lemma 3.2, either
+
+|γ| ≤ T0
+or
+β ≤ 1 − log log T
+
+C0L
+.
+
+In the latter case, it follows β ≤ σ which is a contradiction, so it must be that |γ| ≤ T0 and
+σ ≤ β ≤ 1. By the assumptions of the lemma, it follows ρ ∈ Z, which is also a contradiction.
+This proves the claim.
+Therefore, combining (6.12) and (6.13), we may conclude
+
+−
+�
+
+|1+it−ρ|≤δ
+Re{F((s − ρ)L)} ≤ −
+
+J
+�
+
+j=1
+Re{F( ˜λj − λ − i( ˜µj − µ))} + Oǫ,C(JL−1).
+
+Using this bound in (6.11) and taking L sufficiently large depending on ǫ, C and J, we have
+the desired result upon choosing a new ǫ.
+□
+
+We also record a lemma useful for applications of Lemma 6.3 in Sections 8 and 9.
+
+Lemma 6.4. Suppose f satisfies Conditions 1 and 2. For a, b ≥ 0 and y ∈ R, we have that
+
+Re{F(−a + iy) − F(iy) − F(b − a + iy)} ≤
+
+�
+F(−a) − F(0)
+if b ≥ a,
+F(−a) − F(b − a)
+if b ≤ a.
+
+Proof. If b ≥ a, then by Condition 2, Re{F(b − a + iy)} ≥ 0 so the LHS of the desired
+inequality is
+
+≤ Re{F(−a + iy) − F(iy)} =
+� ∞
+
+0
+f(t)(eat − 1) cos(yt)dt ≤
+� ∞
+
+0
+f(t)(eat − 1)dt = F(−a) − F(0)
+
+since f(t) ≥ 0 and a ≥ 0. A similar argument holds for b ≤ a, except we exclude Re{F(iy)}
+in this case.
+□
+
+7. Numerical Zero Density Estimate
+
+Let us first introduce some notation intended only for this section.
+
+Worst Low-lying Zeros of each Character
+Consider the rectangle
+{s ∈ C : 0 ≤ σ ≤ 1,
+|t| ≤ 1}.
+For each character with a zero in this rectangle, index it χ(k) for k = 1, 2, . . . with a zero
+ρ(k) in this rectangle defined by:
+
+Re(ρ(k)) = max{Re(ρ) : L(ρ, χ(k)) = 0, |γ| ≤ 1},
+
+so χ(j) ̸= χ(k) for j ̸= k. Write
+
+ρ(k) := β(k) + iγ(k),
+β(k) = 1 − λ(k)
+
+L ,
+γ(k) = µ(k)
+
+L .
+
+Without loss, we may assume λ(1) ≤ λ(2) ≤ . . . and so on.
+24
+
+
+Remark. Upon comparing with the indexing given in Section 3, we always have the bound
+λk ≤ λ(k) for all k where both quantities exist.
+
+Low-lying Zero Density
+For λ ≥ 0, consider the rectangle
+
+S = S(λ) := {s ∈ C : 1 − λ
+
+L ≤ σ ≤ 1,
+|t| ≤ 1}.
+
+Define
+
+N = N(λ) := #{χ ̸= χ0 (mod q) | L(s, χ) has a zero in S(λ)} =
+�
+
+λ(k)≤λ
+χ(k)̸=χ0
+
+1
+
+Below is the main result of this section which gives bounds on N(λ) using the smoothed
+explicit inequality.
+
+Theorem 7.1. Suppose f satisfies Conditions 1 and 2 and let ǫ > 0. Assume λ1 ≥ b for
+some b ≥ 0. For λ ≥ 0, if
+F(λ − b) > 1
+
+ϑf(0)φ,
+
+and
+�
+F(λ − b) − 1
+
+ϑf(0)φ
+�2
+> 1
+
+ϑf(0)φ
+�
+f(0)φ + F(−b)
+�
+
+then unconditionally,
+
+(7.1)
+N(λ) ≤
+
+�
+f(0)φ + F(−b)
+��
+F(−b) − ( 1
+
+ϑ − 1)f(0)φ
+�
+
+�
+F(λ − b) − 1
+
+ϑf(0)φ
+�2
+− 1
+
+ϑf(0)φ
+�
+f(0)φ + F(−b)
+� + ǫ
+
+for L sufficiently large depending on ǫ and f.
+
+Remark. Recall ϑ ∈ [ 3
+
+4, 1] by the definition of L in Section 3.
+
+Remark. If ζK(s) has a real zero in S(λ), then one can extract this zero from K(σ, χ0; f) in
+the argument below and hence improve (7.1) to
+
+N(λ) ≤
+
+�
+f(0)φ + F(−b) − F(λ − b)
+��
+F(−b) − F(λ − b) − ( 1
+
+ϑ − 1)f(0)φ
+�
+
+�
+F(λ − b) − 1
+
+ϑf(0)φ
+�2
+− 1
+
+ϑf(0)φ
+�
+f(0)φ + F(−b) − F(λ − b)
+�
++ ǫ
+
+with naturally modified assumptions. The utility of such a bound is not entirely clear. If
+the real zero is exceptional, then the Deuring-Heilbronn phenomenon from Section 8 would
+likely be a better substitute.
+
+Proof. We closely follow the arguments in [HB95, Section 12]. Let χ (mod q) denote a non-
+principal character with a zero ˜ρ = ˜β + i˜γ in S(λ); that is, b ≤ λ1 ≤ ˜λ ≤ λ. Applying
+Lemma 6.3 with s = σ + i˜γ where σ = 1 − b
+
+L and Z = {˜ρ} we find that
+
+(7.2)
+L−1 · K(σ + i˜γ, χ; f) ≤ f(0)φ Lχ
+
+L − F(˜λ − b) + ǫ
+25
+
+
+for L sufficiently large depending on ǫ and the content of f.
+Since F is decreasing by
+Condition 2, it follows that F(˜λ − b) ≥ F(λ − b). Also recalling that Lχ
+
+L ≤ ϑ−1 by (3.2) and
+(3.3), we see that (7.2) implies:
+
+(7.3)
+L−1 · K(σ + i˜γ, χ; f) ≤ f(0) 1
+
+ϑφ − F(λ − b) + ǫ.
+
+Summing (7.3) over χ = χ(j) (which are non-principal by construction) and ˜γ = γ(j) for
+j = 1, . . . , N where N = N(λ), we deduce that
+(7.4)
+�
+F(λ − b) − f(0) 1
+
+ϑφ − ǫ
+�
+NL ≤ −
+�
+
+j≤N
+K(σ + iγ(j), χ(j); f)
+
+= −
+�
+
+(n,q)=1
+Λ(n)(Nn)−σf
+�log Nn
+
+L
+
+�
+Re
+� �
+
+j≤N
+χ(j)(n)(Nn)−iγ(j)�
+
+≤
+�
+
+(n,q)=1
+Λ(n)(Nn)−σf
+�log Nn
+
+L
+
+����
+�
+
+j≤N
+χ(j)(n)(Nn)−iγ(j)���.
+
+The LHS of (7.4) is positive by assumption so after squaring both sides of (7.4), we apply
+Cauchy-Schwarz to the last expression on the RHS implying
+�
+LHS of (7.4)
+�2 ≤ S1S2
+where
+
+S1 =
+�
+
+(n,q)=1
+Λ(n)(Nn)−σf
+�log Nn
+
+L
+
+�
+= K(β, χ0; f),
+
+and
+S2 =
+�
+
+(n,q)=1
+Λ(n)(Nn)−σf
+�log Nn
+
+L
+
+����
+�
+
+j≤N
+χ(j)(n)(Nn)−iγ(j)���
+2
+
+=
+�
+
+j,k≤N
+K(σ + i(γ(j) − γ(k)), χ(j)χ(k); f).
+
+The 1 term from S1 and the N terms in S2 with j = k give
+
+K(σ, χ0; f) ≤ L
+�
+f(0)φ + F(−b) + ǫ
+�
+
+by Lemma 6.3. For the N2 − N terms in S2 with j ̸= k, apply Lemma 6.3 extracting no
+zeros to see that
+K(σ + i(γ(j) − γ(k)), χ(j)χ(k); f) ≤ L
+�
+f(0) 1
+
+ϑφ + ǫ
+�
+.
+Therefore, from (7.4), we conclude
+�
+F(λ − b) − f(0) 1
+
+ϑφ − ǫ
+�2
+N2L2
+
+≤ L
+�
+f(0)φ + ǫ + F(−b)
+�
+× L
+��
+f(0)φ + ǫ + F(−b)
+�
+N +
+�
+f(0) 1
+
+ϑφ + ǫ
+�
+(N2 − N)
+�
+
+Dividing both sides by NL2, solving the inequality, and choosing a new ǫ > 0 depending on
+f, we find
+
+N ≤
+
+�
+f(0)φ + F(−b)
+��
+F(−b) − ( 1
+
+ϑ − 1)f(0)φ
+�
+
+�
+F(λ − b) − 1
+
+ϑf(0)φ
+�2
+− 1
+
+ϑf(0)φ
+�
+f(0)φ + F(−b)
+� + ǫ
+
+26
+
+
+λ1 ≥ 0
+λ1 ≥ .0875
+λ1 ≥ .1
+λ1 ≥ .1227
+λ1 ≥ .15
+λ1 ≥ .20
+λ1 ≥ .25
+λ1 ≥ .30
+λ1 ≥ .35
+
+λ
+N(λ)
+N(λ)
+N(λ)
+N(λ)
+N(λ)
+N(λ)
+N(λ)
+N(λ)
+N(λ)
+
+.1
+2
+2
+
+.125
+2
+2
+2
+2
+
+.150
+3
+3
+3
+3
+
+.175
+3
+3
+3
+3
+3
+
+.200
+4
+4
+4
+3
+3
+
+.225
+4
+4
+4
+4
+4
+4
+
+.250
+5
+5
+5
+5
+4
+4
+
+.275
+6
+6
+5
+5
+5
+5
+5
+
+.300
+7
+6
+6
+6
+6
+6
+5
+
+.325
+9
+8
+7
+7
+7
+7
+6
+6
+
+.350
+11
+9
+9
+9
+8
+8
+7
+7
+
+.375
+15
+11
+11
+10
+10
+9
+8
+8
+7
+
+.400
+22
+15
+14
+13
+12
+11
+10
+9
+8
+
+.425
+46
+22
+20
+18
+16
+14
+12
+11
+10
+
+.450
+∞
+41
+36
+29
+24
+19
+16
+13
+12
+
+.475
+1087
+207
+85
+51
+30
+22
+18
+15
+
+.500
+∞
+∞
+∞
+∞
+90
+40
+27
+21
+
+.525
+∞
+413
+61
+34
+
+.550
+∞
+∞
+127
+
+.575
+∞
+
+.600
+
+Table 1. Bounds for N(λ)
+
+provided the denominator is > 0 which is one of our hypotheses.
+□
+
+To demonstrate the utility of Theorem 7.1, we produce a table of numerical bounds for
+N(λ). Just as in Heath-Brown’s case [HB95, Table 13], it turns out that the acquired bounds
+only hold for certain bounded ranges of λ ∈ [0, λb] depending on λ1 ≥ b. However, for small
+values of λ, the resulting bounds are expected to be better than an explicit version of classical
+zero density estimates which has yet to be established.
+We apply Theorem 7.1 using ϑ =
+3
+4.
+From the definitions of L, N(λ) and S(λ), it is
+immediate that the same bounds hold for all ϑ ∈ [ 3
+
+4, 1]. Choose the weight f = fˆθ,ˆλ from
+[HB95, Lemma 7.1] with parameters ˆθ and ˆλ, say, taking
+
+ˆθ = 1.63 + 1.28b − 4.35λ,
+ˆλ = λ.
+
+This is roughly optimal based on numerical experimentation and produces Table 1. Only
+non-trivial bounds are displayed since trivially N(λ) ≤ 1 for λ < λ1.
+
+8. Zero Repulsion: χ1 and ρ1 are real
+
+Recall the indexing of zeros from Section 3. Throughout this section, we assume χ1 and ρ1
+are real. We wish to quantify the zero repulsion (also called Deuring-Heilbronn phenomenon)
+of ρ1 with ρ′ and ρ2 using the results of Sections 5 and 6 along with various trigonometric
+27
+
+
+identities analogous to the classical one: 3 + 4 cos θ + cos 2θ ≥ 0. We emphasize that χ1 can
+be quadratic or possibly principal.
+We will primarily use the smoothed explicit inequality (Lemma 6.3) and so we assume that
+the weight function f continues to satisfy Conditions 1 and 2. For simplicity, henceforth
+denote K(s, χ) = K(s, χ; f). Suppose characters χ, χ∗ have zeros ρ, ρ∗ respectively.
+Our
+starting point is the trigonometric identity
+
+0 ≤ χ0(n)
+�
+1 + Re{χ(n)(Nn)iγ}
+��
+1 + Re{χ∗(n)(Nn)iγ∗}
+�
+.
+
+Multiplying by Λ(n)f(L−1 log Nn)(Nn)−σ and summing over n, it follows that
+
+(8.1)
+0 ≤ K(σ, χ0) + K(σ + iγ, χ) + K(σ + iγ∗, χ∗)
+
++ 1
+
+2K(σ + iγ + iγ∗, χχ∗) + 1
+
+2K(σ + iγ − iγ∗, χχ∗)
+for σ > 0.
+
+In some cases, we will use a simpler trigonometric identity:
+
+0 ≤ χ0(n) + Re{χ(n)(Nn)iγ}
+
+which similarly yields
+
+(8.2)
+0 ≤ K(σ, χ0) + K(σ + iγ, χ)
+for σ > 0.
+
+8.1. Bounds for λ′. We establish zero repulsion results for ρ′ in terms of ρ1, using different
+methods depending on various ranges of λ1. In this subsection, we intentionally include
+more details to proofs but in later subsections we shall omit these extra explanations as the
+arguments will be similar to those found here.
+
+Lemma 8.1. Assume χ1 and ρ1 are real. Let ǫ > 0 and suppose f satisfies Conditions 1
+and 2. Provided L is sufficiently large depending on ǫ and f, the following holds:
+(a) If χ1 is quadratic and λ′ ≤ λ2, then with ψ = 4φ it follows that
+
+0 ≤
+F(−λ′) − F(0) − F(λ1 − λ′) + Re{F(−λ′ + iµ′) − F(iµ′) − F(λ1 − λ′ + iµ′)} + f(0)ψ + ǫ.
+
+(b) If χ1 is principal, then with ψ = 2φ it follows that
+
+0 ≤
+F(−λ′) − F(0) − F(λ1 − λ′) + Re{F(−λ′ + iµ′) − F(iµ′) − F(λ1 − λ′ + iµ′)} + f(0)ψ + ǫ.
+
+Proof. (a) In (8.1), choose χ = χ∗ = χ1, ρ = ρ′ and ρ∗ = ρ1 with σ = β′ in (8.1) giving
+
+(8.3)
+0 ≤ K(β′, χ0) + K(β′ + iγ′, χ1) + K(β′, χ1) + K(β′ + iγ′, χ0).
+
+Apply Lemma 6.3 to each K(∗, ∗) term and extract the relevant zeros as follows:
+• For K(β′, χ0) and K(β′+iγ′, χ0), extract no zeros since by assumption λ′ ≤ λ2 yielding
+
+(8.4)
+L−1K(β′, χ0) ≤ f(0)φ L0
+
+L + F(−λ′) + ǫ,
+
+L−1K(β′ + iγ′, χ0) ≤ f(0)φ L0
+
+L + Re{F(−λ′ + iµ′)} + ǫ.
+
+• For K(β′ + iγ′, χ1) and K(β′, χ1), extract {ρ1, ρ′} implying
+
+(8.5)
+L−1K(β′ + iγ′, χ1) ≤ f(0)φ
+Lχ1
+
+L − F(0) − Re{F(λ1 − λ′ + iµ′)} + ǫ,
+
+L−1K(β′, χ1) ≤ f(0)φ
+Lχ1
+
+L − F(λ1 − λ′) − Re{F(iµ′)} + ǫ.
+
+28
+
+
+Using (8.4) and (8.5) in (8.3) and rescaling ǫ, the desired inequality follows from except with
+ψ = φ ·
+2L0+2Lχ1
+
+L
+. From Lemma 3.1, ψ ≤ 4φ so we may use ψ = 4φ instead.
+(b) Use (8.2) with χ = χ0, σ = β′ and ρ = ρ′, from which we deduce
+
+0 ≤ K(β′, χ0) + K(β′ + iγ′, χ0)
+for σ > 0.
+
+Similar to (a), for both K(∗, χ0) terms, apply Lemma 6.3 extracting both zeros {ρ1, ρ′}
+yielding
+
+L−1K(β′, χ0) ≤ f(0)φ L0
+
+L + F(−λ′) − F(λ1 − λ′) − Re{F(iµ′)} + ǫ
+
+L−1K(β′ + iγ′, χ0) ≤ f(0)φ L0
+
+L + Re{F(−λ′ + iµ′) − F(λ1 − λ′ + iµ′)} − F(0) + ǫ
+
+Combined with the previous inequality, this yields the desired result with ψ = 2φ · L0
+
+L . By
+Lemma 3.1, we may use ψ = 2φ instead.
+□
+
+8.1.1. λ1 very small. We now obtain a preliminary version of the Deuring-Heilbronn phe-
+nomenon for zeros of L(s, χ1).
+
+Lemma 8.2. Assume χ1 and ρ1 are real. Let ǫ > 0 and suppose L is sufficiently large
+depending on ǫ.
+(a) If χ1 is quadratic and λ′ ≤ λ2, then either λ′ < 4e or
+
+λ′ ≥
+�1
+
+2 − ǫ
+�
+log(λ−1
+1 ),
+
+which is non-trivial for λ1 ≤ 3.5 × 10−10.
+(b) If χ1 is principal, then either λ′ < 4e or
+
+λ′ ≥
+�
+1 − ǫ
+�
+log(λ−1
+1 ),
+
+which is non-trivial for λ1 ≤ 1.8 × 10−5.
+
+Proof. The proof is a close adaptation of [HB95, p. 37]. From Lemma 6.4 and Lemma 8.1,
+we have that
+0 ≤ 2F(−λ′) − F(0) − 2F(λ1 − λ′) + f(0)(ψ + ǫ).
+where ψ depends on the cases in Lemma 8.1 and we assume f(0) > 0. As in [HB95, p. 37],
+choose
+
+f(t) =
+
+�
+x0 − t
+0 ≤ t ≤ x0
+0
+t ≥ x0
+for which Conditions 1 and 2 hold. Then by the same calculations, we see that
+
+2F(−λ′) − 2F(λ1 − λ′) ≤ 2x0λ1 exp(x0λ′)
+
+(λ′)2
+,
+F(0) = 1
+
+2x2
+0,
+f(0) = x0,
+
+and so from the first inequality, we have that
+
+2x0λ1(λ′)−2 exp(x0λ′) − 1
+
+2x2
+0 + x0(ψ + ǫ) ≥ 0.
+
+Choose x0 := 2ψ + 1
+
+λ′ + 2ǫ so that the dependence on f is uniform for λ′ ≥ 1. With this
+choice, our inequality above then leads to
+
+λ1 ≥ λ′
+
+4 exp(−x0λ′) = λ′
+
+4e exp(−(2ψ + 2ǫ)λ′).
+
+29
+
+
+When λ′ ≥ 4e, we conclude
+λ′ ≥ ( 1
+
+2ψ − ǫ) log(λ−1
+1 ).
+
+The result in each case follows from the value of ψ given in Lemma 8.1 and noting φ =
+1/4.
+□
+
+8.1.2. λ1 small. Here we create a “numerical version” of Lemma 8.1.
+
+Lemma 8.3. Let ǫ > 0 and for b ≥ 0, assume 0 < λ1 ≤ b and retain the assumptions of
+Lemma 8.1. Suppose, for some λ′
+b > 0, we have
+
+(8.6)
+2F(−λ′
+b) − 2F(b − λ′
+b) − F(0) + f(0)ψ ≤ 0
+
+where ψ = 4φ or 2φ if χ1 is quadratic or principal respectively. Then λ′ ≥ λ′
+b − ǫ for L
+sufficiently large depending on ǫ, b and f.
+
+Proof. Lemma 8.1 and Lemma 6.4 imply that
+
+0 ≤ 2F(−λ′) − 2F(λ1 − λ′) − F(0) + f(0)ψ + ǫ.
+
+Now, by Conditions 1 and 2, the function
+
+F(−λ) − F(b − λ) =
+� ∞
+
+0
+f(t)eλ(1 − e−b)dt
+
+is an increasing function of λ and also of b. Hence, the previous inequality implies that
+
+0 ≤ 2F(−λ′) − 2F(b − λ′) − F(0) + f(0)ψ + ǫ.
+
+On the other hand, from the increasing behaviour of F(−λ)−F(b−λ), we may deduce that,
+if (8.6) holds for some λ′
+b, then
+
+0 ≤ 2F(−λ) − 2F(b − λ) − F(0) + f(0)ψ
+only if λ ≥ λ′
+b.
+
+Comparing with the previous inequality and choosing a new value of ǫ, we conclude λ′ ≥
+λ′
+b − ǫ. See [KN12, p.773] for details on this last argument.
+□
+
+In each case, employing Lemma 8.3 for various values of b requires a choice of f depending
+on b which maximizes the computed value of λ′
+b. Based on numerical experimentation, we
+choose f = fλ from [HB95, Lemma 7.2] with parameter λ = λ(b). This produces Tables 2
+and 3. Note that the bounds in Table 2 are applicable in a later subsection for bounds on
+λ2.
+
+8.1.3. λ1 medium. As a first attempt, we use techniques similar to before.
+
+Lemma 8.4. Assume χ1 and ρ1 are real. Provided L is sufficiently large, it follows that if
+ρ′ is real then
+
+λ′ ≥
+
+�
+0.6069
+if χ1 is quadratic and λ′ ≤ λ2,
+1.2138
+if χ1 is principal,
+
+and if ρ′ is complex then
+
+λ′ ≥
+
+�
+0.1722
+if χ1 is quadratic and λ′ ≤ λ2,
+0.3444
+if χ1 is principal.
+
+30
+
+
+λ1 ≤
+1
+2 log λ−1
+1
+≥
+λ⋆ ≥
+λ
+
+10−10
+11.51
+10.99
+.8010
+10−9
+10.36
+9.920
+.7975
+10−8
+9.210
+8.838
+.7930
+10−7
+8.059
+7.740
+.7873
+10−6
+6.908
+6.623
+.7796
+10−5
+5.756
+5.481
+.7687
+10−4
+4.605
+4.303
+.7521
+.001
+3.454
+3.075
+.7239
+.005
+2.649
+2.176
+.6896
+.010
+2.303
+1.778
+.6679
+.015
+2.100
+1.542
+.6522
+.020
+1.956
+1.374
+.6394
+.025
+1.844
+1.244
+.6283
+
+λ1 ≤
+1
+2 log λ−1
+1
+≥
+λ⋆ ≥
+λ
+
+.030
+1.753
+1.137
+.6183
+.035
+1.676
+1.048
+.6092
+.040
+1.609
+.9699
+.6007
+.045
+1.551
+.9016
+.5927
+.050
+1.498
+.8407
+.5852
+.055
+1.450
+.7859
+.5780
+.060
+1.407
+.7362
+.5711
+.065
+1.367
+.6906
+.5644
+.070
+1.330
+.6487
+.5580
+.075
+1.295
+.6098
+.5517
+.080
+1.263
+.5738
+.5457
+.085
+1.233
+.5401
+.5397
+
+Table 2. Bounds for λ⋆ = λ′ with χ1 quadratic, ρ1 real and λ1 small;
+and for λ⋆ = λ2 with χ1 quadratic, ρ1 real, χ2 principal and λ1 small.
+
+λ1 ≤
+log λ−1
+1
+≥
+λ′ ≥
+λ
+
+10−5
+11.51
+11.66
+1.545
+10−4
+9.210
+9.324
+1.516
+.001
+6.908
+6.902
+1.468
+.005
+5.298
+5.135
+1.413
+.010
+4.605
+4.352
+1.379
+.015
+4.200
+3.887
+1.355
+.020
+3.912
+3.555
+1.336
+.025
+3.689
+3.297
+1.319
+.030
+3.507
+3.084
+1.304
+.035
+3.352
+2.905
+1.291
+.040
+3.219
+2.749
+1.279
+.045
+3.101
+2.611
+1.267
+.050
+2.996
+2.488
+1.257
+.055
+2.900
+2.377
+1.246
+.060
+2.813
+2.275
+1.237
+.065
+2.733
+2.181
+1.227
+.070
+2.659
+2.095
+1.218
+.075
+2.590
+2.015
+1.210
+.080
+2.526
+1.940
+1.201
+
+λ1 ≤
+log λ−1
+1
+≥
+λ′ ≥
+λ
+
+.085
+2.465
+1.869
+1.193
+.0875
+2.436
+1.836
+1.189
+.090
+2.408
+1.803
+1.185
+.095
+2.354
+1.741
+1.178
+.100
+2.303
+1.681
+1.170
+.105
+2.254
+1.625
+1.163
+.110
+2.207
+1.572
+1.156
+.115
+2.163
+1.521
+1.149
+.120
+2.120
+1.472
+1.142
+.125
+2.079
+1.426
+1.135
+.130
+2.040
+1.381
+1.129
+.135
+2.002
+1.338
+1.122
+.140
+1.966
+1.297
+1.116
+.145
+1.931
+1.258
+1.110
+.150
+1.897
+1.220
+1.103
+.155
+1.864
+1.183
+1.097
+.160
+1.833
+1.148
+1.091
+.165
+1.802
+1.113
+1.085
+.170
+1.772
+1.080
+1.079
+
+Table 3. Bounds for λ′ with χ1 principal, ρ1 real and λ1 small.
+
+Proof. If ρ′ is real, then µ′ = 0. From Lemma 8.1 it follows that
+
+0 ≤ F(−λ′) − F(0) − F(λ1 − λ′) + 1
+
+2f(0)ψ + ǫ
+
+where ǫ, f, ψ are specified in Lemma 8.1. Since F is decreasing by Condition 2,
+
+0 ≤ F(−λ′) − 2F(0) + 1
+
+2f(0)ψ + ǫ.
+31
+
+
+We select the function from [HB95, Lemma 7.5] corresponding to k = 2. Hence,
+
+1
+λ′ cos2 θ ≤ 1
+
+2ψ + ǫ.
+
+For k = 2, we find θ = 0.9873... and so λ′ ≥ 0.6069
+
+ψ
+for an appropriate choice of ǫ. If ρ′ is com-
+plex, then we follow a similar argument selecting f from [HB95, Lemma 7.5] corresponding
+to k = 3
+
+2 (i.e. θ = 1.2729...).
+□
+
+For ρ′ complex, a method based on Section 5 leads to better bounds than Lemma 8.4.
+
+Lemma 8.5. Assume χ1 and ρ1 is real and also suppose ρ′ is complex. Let λ > 0 and J > 0.
+If L is sufficiently large depending on ǫ, λ and J then
+
+0 ≤ (J2 + 1
+
+2)
+�
+P4(1) − P4
+�
+λ
+
+λ + λ1
+
+��
+− 2J · P4
+�
+λ
+
+λ + λ′
+�
++
+
+�
+2φ(J + 1)2λ + ǫ
+if χ1 is quadratic,
+φ(J + 1)2λ + ǫ
+if χ1 is principal,
+
+provided
+
+(8.7)
+J0
+
+(λ + λ′)4 +
+1
+
+(λ + λ1)4 > 1
+
+λ4
+with J0 = min{ J
+
+2 +
+1
+2J , 4J}.
+
+Remark. Recall P4(X) is a fixed polynomial throughout the paper and is defined by (5.6).
+
+Proof. For an admissible polynomial P(X) = �d
+k=1 akXk, we begin with the inequality
+
+0 ≤ χ0(n)(1 + χ1(n))
+�
+J + Re{χ1(n)(Nn)−iγ′}
+�2
+
+= (J2 + 1
+
+2)
+�
+χ0(n) + χ1(n)
+�
++ 2J ·
+�
+Re{χ0(n)(Nn)−iγ′} + Re{χ1(n)(Nn)−iγ′}
+�
+
++ 1
+
+2 ·
+�
+Re{χ0(n)(Nn)−2iγ′} + Re{χ1(n)(Nn)−2iγ′}
+�
+.
+
+To introduce P(s, χ) = P(s, χ; P), we multiply the above inequality by
+
+Λ(n)
+(Nn)σ
+
+�
+d
+�
+
+k=1
+ak
+
+�
+(σ − 1) log Nn
+�k−1
+
+(k − 1)!
+
+�
+
+with σ = 1 + λ
+
+L and sum over ideals n yielding
+
+(8.8)
+0 ≤ (J2 + 1
+
+2)
+�
+P(σ, χ0) + P(σ, χ1)
+�
++ 2J ·
+�
+P(σ + iγ′, χ0) + P(σ + iγ′, χ1)
+�
+
++ 1
+
+2 ·
+�
+P(σ + 2iγ′, χ0) + P(σ + 2iγ′, χ1)
+�
+.
+
+Taking P(X) = P4(X) so a1 = 1, we consider the two cases depending on χ1.
+
+(a) χ1 is quadratic: Apply Lemma 5.4 to each P(∗, ∗) term in (8.8) extracting the pole from
+χ0-terms and the zeros ρ1, ρ′ (and possibly ρ′) from the χ1-terms. Each of these applications
+32
+
+
+yields the following:
+
+L−1 · P(σ, χ0) ≤ φ L0
+
+L + ǫ + P4(1)
+
+λ
+,
+
+L−1 · P(σ, χ1) ≤ φ
+Lχ1
+
+L + ǫ − 1
+
+λ ·
+�
+P4
+�
+λ
+
+λ + λ1
+
+�
++ Re
+�
+P4
+�
+λ
+
+λ + λ′ + iµ′
+���
+,
+
+L−1 · P(σ + iγ′, χ0) ≤ φ L0
+
+L + ǫ + 1
+
+λ · Re
+�
+P4
+�
+λ
+
+λ + iµ′
+��
+,
+
+L−1 · P(σ + iγ′, χ1) ≤ φ
+Lχ1
+
+L + ǫ − 1
+
+λ ·
+�
+P4
+�
+λ
+
+λ + λ′
+�
++ Re
+�
+P4
+�
+λ
+
+λ + λ1 + iµ′
+�
++ P4
+�
+λ
+
+λ + λ′ + 2iµ′
+���
+,
+
+L−1 · P(σ + 2iγ′, χ0) ≤ φ L0
+
+L + ǫ + 1
+
+λ · Re
+�
+P4
+�
+λ
+
+λ + 2iµ′
+��
+,
+
+L−1 · P(σ + 2iγ′, χ1) ≤ φ
+Lχ1
+
+L + ǫ − 1
+
+λ · Re
+�
+P4
+�
+λ
+
+λ + λ1 + 2iµ′
+�
++ P4
+�
+λ
+
+λ + λ′ + iµ′
+��
+,
+
+provided L is sufficiently large depending on ǫ and λ.
+For the term P(σ + iγ′, χ1) we
+extracted all 3 zeros of χ1, i.e. that µ′ ̸= 0. Substituting into (8.8) and noting
+L0+Lχ1
+
+L
+≤ 2
+by Lemma 3.1, we find
+
+(8.9)
+0 ≤ (J2 + 1
+
+2)
+�
+P4(1) − P4
+�
+λ
+
+λ + λ1
+
+��
+− 2JP4
+�
+λ
+
+λ + λ′
+�
+− A − B + 2φ(J + 1)2λ + ǫ
+
+where
+
+A = Re
+�
+(J2 + 1) · P4
+�
+λ
+
+λ + λ′ + iµ′
+��
++ 2J · P4
+�
+λ
+
+λ + λ1 + iµ′
+�
+− 2J · P4
+�
+λ
+
+λ + iµ′
+��
+,
+
+B = Re
+�
+2J · P4
+�
+λ
+
+λ + λ′ + 2iµ′
+�
++ 1
+
+2 · P4
+�
+λ
+
+λ + λ1 + 2iµ′
+�
+− 1
+
+2 · P4
+�
+λ
+
+λ + 2iµ′
+��
+.
+
+From Lemma 5.6, we see that A, B ≥ 0 provided
+
+J2 + 1
+
+(λ + λ′)4 +
+2J
+
+(λ + λ1)4 > 2J
+
+λ4
+and
+2J
+
+(λ + λ′)4 +
+1/2
+
+(λ + λ1)4 > 1/2
+
+λ4 .
+
+Assumption (8.7) implies both of these inequalities.
+
+(b) χ1 is principal: Then (8.8) becomes
+
+0 ≤ (2J2 + 1)P(σ, χ0) + 4J · P(σ + iγ′, χ0) + P(σ + 2iγ′, χ0).
+
+We similarly apply Lemma 5.4 to each term above extracting the pole and zeros ρ1, ρ′
+
+(and possibly ρ′). Each of these applications yields the following:
+
+L−1 · P(σ, χ0) ≤ φ L0
+
+L + ǫ + 1
+
+λ
+
+�
+P4(1) − P4
+�
+λ
+
+λ + λ1
+
+�
++ Re
+�
+P4
+�
+λ
+
+λ + λ′ + iµ′
+���
+,
+
+L−1 · P(σ + iγ′, χ0) ≤ φ L0
+
+L + ǫ + 1
+
+λ
+
+�
+− P4
+�
+λ
+
+λ + λ′
+�
++ Re
+�
+P4
+�
+λ
+
+λ + iµ′
+�
+− P4
+�
+λ
+
+λ + λ1 + iµ′
+�
+
+− P4
+�
+λ
+
+λ + λ′ + 2iµ′
+���
+,
+
+L−1 · P(σ + 2iγ′, χ0) ≤ φ L0
+
+L + ǫ + 1
+
+λ · Re
+�
+P4
+�
+λ
+
+λ + 2iµ′
+�
+− P4
+�
+λ
+
+λ + λ1 + 2iµ′
+�
+− P4
+�
+λ
+
+λ + λ′ + iµ′
+��
+.
+
+33
+
+
+λ1 ≤
+1
+2 log(1/λ1)
+λ⋆ ≥
+λ
+J
+
+.09
+1.204
+.5261
+1.239
+.8837
+.10
+1.151
+.5063
+1.265
+.8793
+.11
+1.104
+.4880
+1.289
+.8752
+.12
+1.060
+.4709
+1.310
+.8714
+.1227
+1.049
+.4665
+1.316
+.8704
+.13
+1.020
+.4549
+1.330
+.8677
+.14
+.9831
+.4398
+1.348
+.8642
+.15
+.9486
+.4257
+1.364
+.8608
+.16
+.9163
+.4122
+1.379
+.8575
+.17
+.8860
+.3995
+1.393
+.8544
+.18
+.8574
+.3874
+1.405
+.8513
+
+λ1 ≤
+1
+2 log(1/λ1)
+λ⋆ ≥
+λ
+J
+
+.19
+.8304
+.3759
+1.417
+.8483
+.20
+.8047
+.3649
+1.428
+.8454
+.21
+.7803
+.3544
+1.438
+.8426
+.22
+.7571
+.3443
+1.447
+.8398
+.23
+.7348
+.3347
+1.455
+.8370
+.24
+.7136
+.3254
+1.463
+.8343
+.25
+.6931
+.3165
+1.471
+.8316
+.26
+.6735
+.3080
+1.477
+.8289
+.27
+.6547
+.2998
+1.483
+.8263
+.28
+.6365
+.2918
+1.489
+.8237
+.2866
+.6248
+.2868
+1.493
+.8220
+
+Table 4. Bounds for λ⋆ = λ′ with χ1 quadratic, ρ1 real and λ1 medium;
+and for λ⋆ = λ2 with χ1 quadratic, ρ1 real, χ2 principal, and ρ2 complex.
+
+Substituting these into the previous inequality, noting L0
+
+L ≤ 1 and dividing by 2, we obtain
+(8.9) except with 2φ replaced by φ. Following the same argument, we obtain the desired
+result.
+□
+
+Again, we exhibit a “numerical version” of Lemma 8.5.
+
+Corollary 8.6. Assume χ1 and ρ1 is real and suppose ρ′ is complex. Let ǫ > 0. Suppose
+0 < λ1 ≤ b, λ > 0, J > 0 and that there exists λ′
+b ∈ [0, ∞) satisfying
+
+(J2 + 1
+
+2)
+�
+P4(1) − P4
+�
+λ
+
+λ + b
+��
+− 2J · P4
+�
+λ
+
+λ + λ′
+b
+
+�
++ ψ(J + 1)2λ ≤ 0
+
+where ψ = 2φ or φ if χ1 is quadratic or principal respectively. Then it follows that λ′ ≥ λ′
+b−ǫ
+for L sufficiently large depending on ǫ, λ and J provided
+
+J0
+
+(λ + λ′
+b)4 +
+1
+
+(λ + b)4 > 1
+
+λ4
+where J0 = min{ J
+
+2 +
+1
+2J , 4J}.
+
+Proof. From Lemma 8.5,
+
+0 ≤ (J2 + 1
+
+2)
+�
+P4(1) − P4
+�
+λ
+
+λ + λ1
+
+��
+− 2J · P4
+�
+λ
+
+λ + λ′
+�
++ (2 − E0(χ1)) · φ(J + 1)2λ + ǫ.
+
+Since P4 has non-negative coefficients and P4(0) = 0, the above expression is increasing with
+λ1 and λ′. From this observation, the desired result follows.
+□
+
+Corollary 8.6 gives lower bounds for λ′ for certain ranges of λ1. For each range 0 < λ1 ≤ b,
+we choose λ = λ(b) > 0, J = J(b) > 0 to produce an optimal lower bound λ′
+b for λ′. This
+produces Tables 4 and 5.
+
+8.1.4. Summary of bounds on λ′. We collect the results of the previous subsections for each
+range of λ1 into a single result for ease of use.
+
+Proposition 8.7. Assume χ1 and ρ1 are real. Suppose L is sufficiently large depending on
+ǫ > 0. Then:
+34
+
+
+λ1 ≤
+log(1/λ1) ≥
+λ′ ≥
+λ
+J
+
+.18
+1.715
+1.052
+2.478
+.8837
+.19
+1.661
+1.032
+2.505
+.8815
+.20
+1.609
+1.013
+2.530
+.8793
+.21
+1.561
+.9939
+2.555
+.8772
+.22
+1.514
+.9759
+2.578
+.8752
+.23
+1.470
+.9586
+2.600
+.8733
+.24
+1.427
+.9418
+2.621
+.8714
+.25
+1.386
+.9255
+2.641
+.8695
+.26
+1.347
+.9098
+2.660
+.8677
+.27
+1.309
+.8945
+2.678
+.8659
+.28
+1.273
+.8797
+2.695
+.8642
+.29
+1.238
+.8653
+2.712
+.8625
+.30
+1.204
+.8513
+2.728
+.8608
+.31
+1.171
+.8377
+2.743
+.8592
+.32
+1.139
+.8245
+2.758
+.8575
+.33
+1.109
+.8116
+2.772
+.8560
+.34
+1.079
+.7990
+2.785
+.8544
+.35
+1.050
+.7867
+2.798
+.8528
+.36
+1.022
+.7748
+2.811
+.8513
+.37
+.9943
+.7631
+2.822
+.8498
+.38
+.9676
+.7517
+2.834
+.8483
+
+λ1 ≤
+log(1/λ1) ≥
+λ′ ≥
+λ
+J
+
+.39
+.9416
+.7406
+2.845
+.8469
+.40
+.9163
+.7297
+2.855
+.8454
+.41
+.8916
+.7191
+2.866
+.8440
+.42
+.8675
+.7087
+2.875
+.8426
+.43
+.8440
+.6985
+2.885
+.8412
+.44
+.8210
+.6886
+2.894
+.8398
+.45
+.7985
+.6788
+2.903
+.8384
+.46
+.7765
+.6693
+2.911
+.8370
+.47
+.7550
+.6600
+2.919
+.8356
+.48
+.7340
+.6508
+2.927
+.8343
+.49
+.7133
+.6418
+2.934
+.8329
+.50
+.6931
+.6330
+2.941
+.8316
+.51
+.6733
+.6244
+2.948
+.8303
+.52
+.6539
+.6159
+2.955
+.8289
+.53
+.6349
+.6076
+2.961
+.8276
+.54
+.6162
+.5995
+2.967
+.8263
+.55
+.5978
+.5915
+2.973
+.8250
+.56
+.5798
+.5837
+2.978
+.8237
+.57
+.5621
+.5760
+2.984
+.8224
+.5733
+.5563
+.5735
+2.985
+.8220
+
+Table 5. Bounds for λ′ with χ1 principal, ρ1 real and λ1 medium.
+
+(a) Suppose χ1 is quadratic and λ′ ≤ λ2. Then
+
+λ′ ≥
+
+�
+( 1
+
+2 − ǫ) log λ−1
+1
+if λ1 ≤ 10−10
+
+0.2103 log λ−1
+1
+if λ1 ≤ 0.1227
+
+and if λ1 > 0.1227 then the bounds in Table 4 apply and λ′ ≥ 0.2866.
+(b) Suppose χ1 is principal. If λ1 ≤ 0.0875, then
+
+λ′ ≥
+
+�
+(1 − ǫ) log λ−1
+1
+if λ1 ≤ 10−5
+
+0.7399 log λ−1
+1
+if λ1 ≤ 0.0875
+
+and if λ1 > 0.0875 then the bounds in Tables 3 and 5 apply and λ′ ≥ 0.5733.
+
+Remark. The constants 0.1227 and 0.0875 come a posteriori from the corresponding zero-free
+regions established in Section 10.
+
+Proof. (a) Suppose λ1 ≤ 10−10. From Table 2, we see that λ′ ≥ 10.99 > 4e and so the
+desired bound follows from Lemma 8.2. Suppose λ1 ≤ 0.1227. One compares Lemma 8.4
+and Table 4 and finds that the latter gives weaker bounds. Thus, we only consider Tables 2
+and 4 for this range of λ1. For the subinterval λ1 ∈ [0.12, 0.1227], it follows that
+
+λ′ ≥ 0.4663 ≥
+0.4663
+
+log 1/0.12 log λ−1
+1
+≥ 0.2200 log λ−1
+1 .
+
+35
+
+
+Repeat this process for each subinterval [10−10, 10−9], [10−9, 10−8], . . . , [0.85, 0.9], . . . , [0.12, 0.1227]
+to obtain the desired bound. For λ1 > 0.1227, one again compares Lemma 8.4 and Table 4
+and finds that the latter gives weaker bounds. For (b), we argue analogous to (a) except we
+only use Table 3 for λ1 ≤ 0.0875.
+□
+
+8.2. Bounds for λ2. We follow the same general approach as λ′ with natural modifications.
+Throughout, we shall assume λ2 ≤ λ′; otherwise, we may use the bounds from Section 8.1
+on λ′.
+
+Lemma 8.8. Assume χ1 and ρ1 are real and also that λ2 ≤ λ′. Suppose f satisfies Conditions
+1 and 2. For ǫ > 0, provided L is sufficiently large depending on ǫ and f, the following holds:
+(a) If χ1, χ2 are non-principal, then with ψ = 4φ it follows that
+
+0 ≤ F(−λ2) − F(0) − F(λ1 − λ2) + f(0)ψ + ǫ.
+
+(b) If χ1 is principal, then χ2 is necessarily non-principal and with ψ = 2φ it follows that
+
+0 ≤
+F(−λ2) − F(0) − F(λ1 − λ2) + f(0)ψ + ǫ.
+
+(c) If χ2 is principal, then χ1 is necessarily non-principal and with ψ = 4φ it follows that
+
+0 ≤
+F(−λ2) − F(0) − F(λ1 − λ2) + Re{F(−λ2 + iµ2) − F(iµ2) − F(λ1 − λ2 + iµ2)} + f(0)ψ + ǫ.
+
+Proof. In (8.1), set (χ, ρ) = (χ1, ρ1) and (χ∗, ρ∗) = (χ2, ρ2) and σ = β2, which gives
+(8.10)
+0 ≤ K(β2, χ0) + K(β2, χ1) + K(β2 + iγ2, χ2) + 1
+
+2K(β2 + iγ2, χ1χ2) + 1
+
+2K(β2 − iγ2, χ1χ2).
+
+The arguments involved are entirely analogous to Lemma 8.1 so we omit the details here. For
+all cases, one applies Lemma 6.3 to each K(∗, ∗) term, extracting ρ1 or ρ2 whenever possible.
+We remark that χ1χ2 and χ1χ2 are always non-principal by construction (see Section 3).
+□
+
+8.2.1. λ1 very small. We include the final result here without proof for the sake of brevity.
+
+Lemma 8.9. Assume χ1 and ρ1 are real and λ2 ≤ λ′.
+Suppose L is sufficiently large
+depending on ǫ > 0.
+(a) If χ1, χ2 are non-principal, then either λ2 < 2e or
+
+λ2 ≥
+�1
+
+2 − ǫ
+�
+log(λ−1
+1 ),
+
+which is non-trivial for λ1 ≤ 1.8 × 10−5.
+(b) If χ1 is principal, then χ2 is necessarily non-principal and either λ2 < 2e or
+
+λ2 ≥
+�
+1 − ǫ
+�
+log(λ−1
+1 ),
+
+which is non-trivial for λ1 ≤ 4.3 × 10−3.
+(c) If χ2 is principal, then χ1 is necessarily non-principal and either λ2 < 4e or
+
+λ2 ≥
+�1
+
+2 − ǫ
+�
+log(λ−1
+1 ),
+
+which is non-trivial for λ1 ≤ 3.5 × 10−10.
+
+Proof. Analogous to Lemma 8.2 using Lemma 8.8 in place of Lemma 8.1. We omit the details
+for brevity.
+□
+
+36
+
+
+8.2.2. λ1 small.
+
+Lemma 8.10. Assume χ1 and ρ1 are real and also that λ2 ≤ λ′. Suppose f satisfies Condi-
+tions 1 and 2. Let ǫ > 0 and assume 0 < λ1 ≤ b for some b > 0. Suppose, for some ˜λb > 0,
+we have
+F(−˜λb) − F(b − ˜λb) − F(0) + 4φf(0) ≤ 0
+if χ1, χ2 are non-principal,
+
+F(−˜λb) − F(b − ˜λb) − F(0) + 2φf(0) ≤ 0
+if χ1 is principal,
+
+2F(−˜λb) − 2F(b − ˜λb) − F(0) + 4φf(0) ≤ 0
+if χ2 is principal
+
+Then, according to the above cases, λ2 ≥ ˜λb − ǫ provided L is sufficiently large depending on
+ǫ, b and f.
+
+Proof. Analogous to Lemma 8.3 using Lemma 8.8 in place of Lemma 8.1. Hence, we omit
+the proof.
+□
+
+As before, Lemma 8.10 requires a choice of f depending on b which maximizes the com-
+puted value of ˜λb. Based on numerical experimentation, we choose f = fλ from [HB95,
+Lemma 7.2] with parameter λ = λ(b) for all cases. This produces Tables 2, 6 and 7.
+
+8.2.3. λ1 medium. We first deal with the case when ρ2 is real and χ2 is principal, i.e. µ2 = 0.
+
+Lemma 8.11. Assume χ1 and ρ1 are real. Suppose L is sufficiently large. If ρ2 is real, then
+
+λ2 ≥
+
+�
+0.3034
+if χ1, χ2 are non-principal,
+0.6069
+otherwise.
+
+If ρ2 is complex, then
+
+λ2 ≥
+
+
+
+
+
+
+
+
+0.3034
+if χ1, χ2 are non-principal,
+0.6069
+if χ1 is principal,
+0.1722
+if χ2 is principal.
+
+Proof. Analogous to Lemma 8.4 using Lemma 8.8 in place of Lemma 8.1. The arguments
+lead to selecting f from [HB95, Lemma 7.5] corresponding to k = 2 (i.e. θ = 0.9873...) when
+ρ2 is real or χ2 is non-principal, and to k = 3/2 (i.e. θ = 1.2729...) when ρ2 is complex and
+χ2 is principal.
+□
+
+For χ2 principal and ρ2 complex, the “polynomial method” of Section 5 yields better
+bounds.
+
+Lemma 8.12. Assume χ1 is quadratic and ρ1 is real. Further suppose χ2 is principal and
+ρ2 is complex. Let λ > 0 and J > 0. If L is sufficiently large depending on ǫ, λ and J, then
+
+0 ≤ (J2 + 1
+
+2)
+�
+P4(1) − P4
+�
+λ
+
+λ + λ1
+
+��
+− 2JP4
+�
+λ
+
+λ + λ2
+
+�
++ 2φ(J + 1)2λ + ǫ
+
+provided
+
+(8.11)
+J0
+
+(λ + λ2)4 +
+1
+
+(λ + λ1)4 > 1
+
+λ4.
+
+with J0 = min{ J
+
+2 +
+1
+2J , 4J}.
+37
+
+
+λ1 ≤
+1
+2 log λ−1
+1
+≥
+λ2 ≥
+λ
+
+10−5
+5.756
+5.828
+.7725
+10−4
+4.605
+4.662
+.7579
+.001
+3.454
+3.451
+.7342
+.005
+2.649
+2.569
+.7065
+.010
+2.303
+2.178
+.6896
+.015
+2.100
+1.947
+.6776
+.020
+1.956
+1.783
+.6679
+.025
+1.844
+1.654
+.6596
+.030
+1.753
+1.550
+.6522
+.035
+1.676
+1.461
+.6455
+.040
+1.609
+1.384
+.6394
+.045
+1.551
+1.317
+.6337
+.050
+1.498
+1.256
+.6283
+.055
+1.450
+1.202
+.6232
+.060
+1.407
+1.152
+.6183
+.065
+1.367
+1.107
+.6137
+.070
+1.330
+1.065
+.6092
+.075
+1.295
+1.026
+.6049
+.080
+1.263
+.9895
+.6007
+.085
+1.233
+.9555
+.5967
+.090
+1.204
+.9236
+.5928
+.095
+1.177
+.8935
+.5890
+.100
+1.151
+.8652
+.5853
+.105
+1.127
+.8383
+.5816
+.110
+1.104
+.8127
+.5781
+.115
+1.081
+.7884
+.5746
+.120
+1.060
+.7653
+.5712
+.125
+1.040
+.7432
+.5679
+.130
+1.020
+.7221
+.5646
+.135
+1.001
+.7019
+.5613
+.140
+.9831
+.6825
+.5582
+.145
+.9655
+.6639
+.5550
+.150
+.9486
+.6460
+.5520
+
+λ1 ≤
+1
+2 log λ−1
+1
+≥
+λ2 ≥
+λ
+
+.155
+.9322
+.6288
+.5489
+.160
+.9163
+.6122
+.5459
+.165
+.9009
+.5962
+.5429
+.170
+.8860
+.5808
+.5400
+.175
+.8715
+.5659
+.5371
+.180
+.8574
+.5515
+.5342
+.185
+.8437
+.5376
+.5314
+.190
+.8304
+.5242
+.5286
+.195
+.8174
+.5111
+.5258
+.200
+.8047
+.4985
+.5231
+.205
+.7924
+.4863
+.5203
+.210
+.7803
+.4744
+.5176
+.215
+.7686
+.4629
+.5150
+.220
+.7571
+.4517
+.5123
+.225
+.7458
+.4408
+.5097
+.230
+.7348
+.4302
+.5070
+.235
+.7241
+.4200
+.5044
+.240
+.7136
+.4100
+.5018
+.245
+.7032
+.4002
+.4993
+.250
+.6931
+.3908
+.4967
+.255
+.6832
+.3816
+.4942
+.260
+.6735
+.3726
+.4916
+.265
+.6640
+.3638
+.4891
+.270
+.6547
+.3553
+.4866
+.275
+.6455
+.3470
+.4841
+.280
+.6365
+.3389
+.4817
+.285
+.6276
+.3310
+.4792
+.290
+.6189
+.3233
+.4768
+.295
+.6104
+.3158
+.4743
+.300
+.6020
+.3084
+.4719
+
+Table 6. Bounds for λ2 with χ1 quadratic, ρ1 real, χ2 non-principal and λ1 small.
+
+Proof. This is analogous to Lemma 8.5 so we give a brief outline here. We begin with the
+inequality
+
+0 ≤ χ0(n)(1 + χ1(n))
+�
+J + Re{(Nn)−iγ2}
+�2
+
+= (J2 + 1
+
+2)
+�
+χ0(n) + χ1(n)
+�
++ 2J ·
+�
+Re{(Nn)−iγ2} + Re{χ1(n)(Nn)−iγ2}
+�
+
++ 1
+
+2 ·
+�
+Re{(Nn)−2iγ2} + Re{χ1(n)(Nn)−2iγ2}
+�
+.
+
+38
+
+
+λ1 ≤
+log λ−1
+1
+≥
+λ2 ≥
+λ
+
+.004
+5.521
+6.150
+1.448
+.006
+5.116
+5.705
+1.434
+.008
+4.828
+5.386
+1.422
+.010
+4.605
+5.137
+1.413
+.015
+4.200
+4.682
+1.394
+.020
+3.912
+4.357
+1.379
+.025
+3.689
+4.103
+1.366
+.03
+3.507
+3.895
+1.355
+.04
+3.219
+3.565
+1.336
+.05
+2.996
+3.309
+1.319
+.06
+2.813
+3.099
+1.304
+.07
+2.659
+2.922
+1.291
+.08
+2.526
+2.769
+1.279
+.0875
+2.436
+2.666
+1.270
+.10
+2.303
+2.513
+1.257
+.12
+2.120
+2.304
+1.237
+.14
+1.966
+2.130
+1.218
+.16
+1.833
+1.979
+1.201
+.18
+1.715
+1.847
+1.186
+.20
+1.609
+1.730
+1.171
+.22
+1.514
+1.625
+1.156
+
+λ1 ≤
+log λ−1
+1
+≥
+λ2 ≥
+λ
+
+.24
+1.427
+1.531
+1.142
+.26
+1.347
+1.444
+1.129
+.28
+1.273
+1.365
+1.116
+.30
+1.204
+1.292
+1.104
+.32
+1.139
+1.224
+1.092
+.34
+1.079
+1.162
+1.080
+.36
+1.022
+1.103
+1.068
+.38
+.9676
+1.048
+1.057
+.40
+.9163
+.9970
+1.046
+.42
+.8675
+.9488
+1.035
+.44
+.8210
+.9033
+1.025
+.46
+.7765
+.8605
+1.014
+.48
+.7340
+.8199
+1.004
+.50
+.6931
+.7816
+.9934
+.52
+.6539
+.7452
+.9833
+.54
+.6162
+.7106
+.9733
+.56
+.5798
+.6778
+.9633
+.58
+.5447
+.6466
+.9535
+.60
+.5108
+.6168
+.9438
+.6068
+.4996
+.6070
+.9405
+
+Table 7. Bounds for λ2 with χ1 principal, ρ1 real and λ1 small.
+
+We introduce P(s, χ) = P(s, χ; P4) in the usual way with σ = 1 + λ
+
+L, yielding
+
+(8.12)
+0 ≤ (J2 + 1
+
+2)
+�
+P(σ, χ0) + P(σ, χ1)
+�
++ 2J ·
+�
+P(σ + iγ2, χ0) + P(σ + iγ2, χ1)
+�
+
++ 1
+
+2 ·
+�
+P(σ + 2iγ2, χ0) + P(σ + 2iγ2, χ1)
+�
+.
+
+Next, apply Lemma 5.4 to each P(∗, ∗) term in (8.12) extracting the zero ρ2 from χ0-terms
+and the zero ρ1 from the χ1-terms. One also extracts both zeros {ρ2, ρ2} from P(σ+iγ2, χ0).
+Noting
+L0+Lχ1
+
+L
+≤ 2 by Lemma 3.1 and choosing a new ǫ, these applications yield the following:
+
+(8.13)
+0 ≤ (J2 + 1
+
+2)
+�
+P4(1) − P4
+�
+λ
+
+λ + λ1
+
+��
+− 2JP4
+�
+λ
+
+λ + λ2
+
+�
+− A − B + 2φ(J + 1)2λ + ǫ
+
+provided L is sufficiently large depending on ǫ and λ and where
+
+A = (J2 + 1)Re
+�
+P4
+�
+λ
+
+λ + λ2 + iµ2
+
+��
++ 2J · Re
+�
+P4
+�
+λ
+
+λ + λ1 + iµ2
+
+��
+− 2J · Re
+�
+P4
+�
+λ
+
+λ + iµ2
+
+��
+,
+
+B = 2J · Re
+�
+P4
+�
+λ
+
+λ + λ2 + 2iµ2
+
+��
++ 1
+
+2 · Re
+�
+P4
+�
+λ
+
+λ + λ1 + 2iµ2
+
+��
+− 1
+
+2 · Re
+�
+P4
+�
+λ
+
+λ + 2iµ2
+
+��
+.
+
+Assumption (8.11) implies A, B ≥ 0 by Lemma 5.6 yielding the desired result from (8.13).
+□
+
+With an appropriate numerical version of Lemma 8.12, analogous to Corollary 8.6, we
+obtain lower bounds for λ2 for λ1 ∈ [0, b] and fixed b > 0. Optimally choosing λ = λ(b) >
+0, J = J(b) > 0 produces Table 4 again.
+39
+
+
+8.2.4. Summary of bounds on λ2. We collect the estimates of the previous subsections for
+each range of λ1 into a one result for ease of use.
+
+Proposition 8.13. Assume χ1 and ρ1 are real. Suppose L is sufficiently large depending on
+ǫ > 0:
+(a) Suppose χ1 is quadratic and λ2 ≤ λ′. Then
+
+λ2 ≥
+
+�
+( 1
+
+2 − ǫ) log λ−1
+1
+if λ1 ≤ 10−10
+
+0.2103 log λ−1
+1
+if λ1 ≤ 0.1227
+
+and if λ1 > 0.1227 then the bounds in Table 4 apply and λ2 ≥ 0.2866.
+(b) Suppose χ1 is principal. Then
+
+λ2 ≥ (1 − ǫ) log λ−1
+1
+if λ1 ≤ 0.0875.
+
+and if λ1 > 0.0875 then the bounds in Table 7 apply and λ2 ≥ 0.6069.
+
+Remark. After comparing Propositions 8.7 and 8.13 in the case when χ1 is quadratic, we
+realize that the additional assumptions λ′ ≤ λ2 or λ2 ≤ λ′ are superfluous.
+
+Proof. (a) First, suppose χ2 is non-principal.
+For λ1 ≤ 10−5, we see from Table 6 that
+λ2 ≥ 5.828 > 2e so the desired bound follows form Lemma 8.9.
+For 10−5 ≤ λ1 ≤
+0.1227, consider Table 6. Apply the same process as in Proposition 8.7 to each subinterval
+[10−5, 10−4], . . . , [0.12, 0.125] to obtain
+
+λ2 ≥ 0.3506 log λ−1
+1 .
+
+Now, suppose χ2 is principal. For λ1 ≤ 10−10, we see from Table 2 that λ2 ≥ 10.99 > 4e so
+the desired bound follows from Lemma 8.9. For 10−10 ≤ λ1 ≤ 0.1227, consider Tables 2 and 4.
+Apply the same process as in Proposition 8.7 to each subinterval [10−10, 10−9], . . . , [0.85, 0.9], . . .[0.12, 0.1227
+and obtain
+λ2 ≥ 0.2103 log λ−1
+1 .
+
+Upon comparing the two cases, the latter gives weaker results in the range λ1 ≤ 0.1227. For
+λ1 > 0.1227, we compare Lemma 8.11 and Tables 4 and 6 and see that last one gives the
+weakest bounds.
+(b) Similar to (a) except we use Table 7 in conjunction with Lemma 8.9. The range λ1 ≤
+0.004 gives the bound λ2 ≥ (1 − ǫ) log λ−1
+1 . The range 0.004 ≤ λ1 ≤ 0.0875 turns out to give
+a better bound but we opt to write a bound uniform for λ1 ≤ 0.0875. For λ1 > 0.0875, we
+use Lemma 8.11 and Table 7.
+□
+
+9. Zero Repulsion: χ1 or ρ1 is complex
+
+When χ1 or ρ1 is complex, the effect of zero repulsion is lesser than when χ1 and ρ1
+are real. Nonetheless we will follow the same general outline as the previous section, but
+with modified trigonometric identities and more frequently using the “polynomial method”
+of Section 5. Also, whether χ1 is principal naturally affects our arguments in a significant
+manner so for clarity we further subdivide our results on this condition.
+
+9.1. Bounds for λ′.
+40
+
+
+9.1.1. χ1 non-principal.
+
+Lemma 9.1. Assume χ1 or ρ1 is complex with χ1 non-principal. Let λ > 0, J ≥ 1
+
+4. If L is
+sufficiently large depending on ǫ, λ and J then
+
+0 ≤ (J2 + 1
+
+2)P4(1) − (J2 + 1
+
+2) · P4
+�
+λ
+
+λ + λ′
+�
+− 2J · P4
+�
+λ
+
+λ + λ1
+
+�
++ 2(J + 1)2φλ + ǫ
+
+provided
+
+(9.1)
+J0
+
+(λ + λ1)4 +
+1
+
+(λ + λ′)4 > 1
+
+λ4
+with J0 = min{J +
+3
+4J , 4J}.
+
+Proof. For simplicity, denote P(s, χ) = P(s, χ; P4). Our starting point is the trigonometric
+identity
+0 ≤ χ0(n)
+�
+1 + Re{χ1(n)(Nn)iγ′}
+��
+J + Re{χ1(n)(Nn)iγ1}
+�2.
+In the usual way, it follows that
+
+(9.2)
+
+0 ≤ (J2 + 1
+
+2)
+�
+P(σ, χ0) + P(σ + iγ′, χ1)
+�
++
+
++ JP(σ + i(γ1 + γ′), χ2
+1) + 2JP(σ + iγ1, χ1) + JP(σ + i(γ1 − γ′), χ0)
+
++ 1
+
+4P(σ + i(2γ1 + γ′), χ3
+1) + 1
+
+2P(σ + 2iγ1, χ2
+1) + 1
+
+4P(σ + i(2γ1 − γ′), χ1)
+
+where σ = 1 + λ
+
+L.
+To each term P( · , χr
+1) above, we apply Lemma 5.4 extracting zeros
+depending on the order of χ1 and the value of r. We divide our argument into cases.
+(i) (ord χ1 ≥ 4) Extract {ρ1, ρ′} from P( · , χr
+1) when r = 1. From (9.2), we deduce
+
+(9.3)
+0 ≤(J2 + 1
+
+2)P4(1) − (J2 + 1
+
+2)P4
+�
+λ
+
+λ + λ′
+�
+− 2JP4
+�
+λ
+
+λ + λ1
+
+�
+− A + λψ + ǫ
+
+where ψ = (J2 + 3J + 3
+
+2)φ
+Lχ1
+
+L + (J2 + J + 1
+
+2)φ L0
+
+L , and
+
+A = Re
+�
+(J2 + 3
+
+4)P4
+�
+λ
+
+λ + λ1 + it1
+
+�
++ 2J · P4
+�
+λ
+
+λ + λ′ + it1
+
+�
+− J · P4
+�
+λ
+
+λ + it1
+
+��
+
+with t1 = µ′ − µ1. One can easily verify that J2 + 3J + 3
+
+2 ≤ 3 · (J2 + J + 1
+
+2) and so
+by Lemma 3.1, we may more simply take ψ = 2(J + 1)2φ in (9.3). By Lemma 5.6,
+assumption (9.1) implies A ≥ 0, completing the proof of case (i).
+
+(ii) (ord χ1 = 3) Extract {ρ1, ρ′} or {ρ1, ρ′} from P( · , χr
+1) when r = 1 or 2 respectively.
+Then by (9.2),
+
+(9.4)
+0 ≤(J2 + 1
+
+2)P4(1) − (J2 + 1
+
+2)P4
+�
+λ
+
+λ + λ′
+�
+− 2JP4
+�
+λ
+
+λ + λ1
+
+�
+− A − B + λψ + ǫ
+
+where ψ = (J2 + 3J + 5
+
+4)φ
+Lχ1
+
+L + (J2 + J + 3
+
+4)φ L0
+
+L , the quantity A is as defined in case
+(i), and
+
+B = Re
+�
+J · P4
+�
+λ
+
+λ + λ1 + it2
+
+�
++ 1
+
+2 · P4
+�
+λ
+
+λ + λ′ + it2
+
+�
+− 1
+
+4 · P4
+�
+λ
+
+λ + it2
+
+��
+
+with t2 = µ′ + 2µ1. Again, one can check that J2 + 3J + 5
+
+4 ≤ 3 · (J2 + J + 3
+
+4) and so
+by Lemma 3.1, we may take ψ = 2(J + 1)2φ in (9.4). Similar to (i), Lemma 5.6 and
+assumption (9.1) imply A, B ≥ 0.
+41
+
+
+(iii) (ord χ1 = 2) Extract {ρ1, ρ1, ρ′} from P( · , χr
+1) when r = 1 or 3. Again, apply Lemma 5.4
+to the terms in (9.2) except with a slightly more careful analysis. We outline these mod-
+ifications here.
+• Write 2J ·P(σ +iγ1, χ1) = J ·P(σ +iγ1, χ1)+J ·P(σ +iγ1, χ1). Extract {ρ1, ρ1, ρ′}
+from the first term and extract {ρ1, ρ1, ρ′} from the second term.
+• For 1
+
+4P(σ +i(2γ1 +γ′), χ1) and 1
+
+4P(σ +i(2γ1 −γ′), χ1), extract {ρ1, ρ′} and {ρ1, ρ′}
+respectively.
+With these modifications, (9.2) overall yields
+
+(9.5)
+
+0 ≤(J2 + 1
+
+2)P4(1) − (J2 + 1
+
+2)P4
+�
+λ
+
+λ + λ′
+�
+− 2JP4
+�
+λ
+
+λ + λ1
+
+�
++ λ(ψ + ǫ)
+
+− Re
+�
+(J2 + 3
+
+4)P4
+�
+λ
+
+λ + λ1 + it1
+
+�
++ J · P4
+�
+λ
+
+λ + λ′ + it1
+
+�
+− J · P4
+�
+λ
+
+λ + it1
+
+��
+
+− Re
+�
+(J2 + 3
+
+4) · P4
+�
+λ
+
+λ + λ1 + it3
+
+�
++ J · P4
+�
+λ
+
+λ + λ′ + it3
+
+�
+− J · P4
+�
+λ
+
+λ + it3
+
+��
+
+− Re
+�
+2J · P4
+�
+λ
+
+λ + λ1 + it4
+
+�
++ 1
+
+2 · P4
+�
+λ
+
+λ + λ′ + it4
+
+�
+− 1
+
+2 · P4
+�
+λ
+
+λ + it4
+
+��
+
+where t1 = µ′−µ1; t3 = µ′+µ1; t4 = 2µ1; and ψ = (J2+2J +1)φ
+Lχ1
+
+L +(J2+2J +1)φ L0
+
+L .
+Trivially J2 + 2J + 1 ≤ 3 · (J2 + 2J + 1) and so by Lemma 3.1, we may more simply
+take ψ = 2(J + 1)2φ. The three terms Re{. . . } in (9.5) are all ≥ 0 by Lemma 5.6 and
+(9.1) and hence can be ignored.
+This completes the proof in all cases.
+□
+
+A suitable numerical version of Lemma 9.1 produces Table 8.
+
+9.1.2. χ1 principal.
+
+Lemma 9.2. Assume χ1 is principal, ρ1 is complex, and ρ′ is real. Suppose f satisfies
+Conditions 1 and 2. For ǫ > 0, provided L is sufficiently large depending on ǫ and f, the
+following holds:
+0 ≤ 2F(−λ′) − 2F(λ1 − λ′) − F(0) + 2φf(0) + ǫ.
+
+Proof. This is analogous to Lemma 8.1. To be brief, use (8.2) with (χ, γ) = (χ0, γ1) and
+σ = β′ and apply Lemma 6.3 extracting {ρ′, ρ1, ρ1} from K(β′, χ0) and {ρ′, ρ1} from K(β′ +
+iγ1, χ0).
+□
+
+A numerical version of Lemma 9.2 yields bounds for λ′ with f = fλ taken from [HB95,
+Lemma 7.2], producing Table 9. The remaining case consists of χ1 principal with both ρ1
+and ρ′ complex.
+
+Lemma 9.3. Assume χ1 is principal, ρ1 is complex and ρ′ is complex. Let λ > 0 and J > 0.
+If L is sufficiently large depending on ǫ, λ and J then
+
+0 ≤ (J2 + 1
+
+2)P4(1) − (J2 + 1
+
+2) · P4
+�
+λ
+
+λ + λ1
+
+�
+− 2J · P4
+�
+λ
+
+λ + λ′
+�
++ 2(J + 1)2φλ + ǫ
+
+provided both of the following hold:
+
+(9.6)
+1
+
+(λ + λ1)4 +
+J0
+
+(λ + λ′)4 > 1
+
+λ4
+and
+2
+
+(λ + λ1)4 +
+J1
+
+(λ + λ′)4 > 1
+
+λ4,
+
+42
+
+
+λ1 ≤
+λ′ ≥
+λ
+J
+
+.1227
+.7391
+1.097
+.7788
+.125
+.7266
+1.104
+.7797
+.130
+.7007
+1.120
+.7817
+.135
+.6766
+1.135
+.7836
+.140
+.6540
+1.149
+.7854
+.145
+.6328
+1.162
+.7872
+.150
+.6128
+1.174
+.7889
+.155
+.5939
+1.185
+.7906
+.160
+.5759
+1.195
+.7923
+.165
+.5589
+1.204
+.7939
+.170
+.5427
+1.213
+.7955
+.175
+.5272
+1.221
+.7971
+.180
+.5124
+1.229
+.7986
+.185
+.4982
+1.236
+.8001
+.190
+.4846
+1.242
+.8016
+.195
+.4715
+1.249
+.8030
+.200
+.4590
+1.254
+.8045
+.205
+.4469
+1.259
+.8059
+
+λ1 ≤
+λ′ ≥
+λ
+J
+
+.210
+.4353
+1.264
+.8073
+.215
+.4241
+1.269
+.8087
+.220
+.4132
+1.273
+.8100
+.225
+.4027
+1.276
+.8114
+.230
+.3926
+1.280
+.8127
+.235
+.3828
+1.283
+.8140
+.240
+.3733
+1.285
+.8153
+.245
+.3641
+1.288
+.8166
+.250
+.3552
+1.290
+.8179
+.255
+.3465
+1.292
+.8191
+.260
+.3381
+1.294
+.8204
+.265
+.3300
+1.295
+.8216
+.270
+.3220
+1.296
+.8229
+.275
+.3143
+1.297
+.8241
+.280
+.3068
+1.298
+.8253
+.285
+.2995
+1.299
+.8265
+.290
+.2924
+1.299
+.8277
+.2909
+.2911
+1.299
+.8279
+
+Table 8. Bounds for λ′ with χ1 or ρ1 complex and χ1 non-principal
+
+λ1 ≤
+λ′ ≥
+λ
+
+.0875
+1.836
+1.189
+.09
+1.803
+1.185
+.10
+1.681
+1.170
+.11
+1.572
+1.156
+.12
+1.472
+1.142
+.13
+1.381
+1.129
+.14
+1.297
+1.116
+.15
+1.220
+1.103
+.16
+1.148
+1.091
+.17
+1.080
+1.079
+.18
+1.017
+1.068
+.19
+.9578
+1.056
+.20
+.9020
+1.045
+.21
+.8493
+1.034
+
+λ1 ≤
+λ′ ≥
+λ
+
+.22
+.7994
+1.023
+.23
+.7522
+1.013
+.24
+.7073
+1.002
+.25
+.6646
+.9917
+.26
+.6239
+.9813
+.27
+.5851
+.9711
+.28
+.5480
+.9609
+.29
+.5126
+.9508
+.30
+.4787
+.9407
+.31
+.4462
+.9307
+.32
+.4150
+.9208
+.33
+.3851
+.9108
+.34
+.3565
+.9009
+.3443
+.3445
+.8966
+
+Table 9. Bounds for λ′ with χ1 principal, ρ1 complex and ρ′ real
+
+where J0 = min{J +
+3
+4J , 4J} and J1 = 4J/(J2 + 1).
+
+Proof. Analogous to Lemma 9.1 but we exchange the roles of ρ1 and ρ′ using the trigonometric
+identity
+
+0 ≤ χ0(n)
+�
+1 + Re{(Nn)iγ1}
+��
+J + Re{(Nn)iγ′}
+�2.
+43
+
+
+Writing P(s) = P(s, χ0; P4), it follows in the usual way that
+(9.7)
+0 ≤ (J2 + 1
+
+2)
+�
+P(σ) + P(σ + iγ1)
+�
++ JP(σ + i(γ′ + γ1)) + 2JP(σ + iγ′) + JP(σ + i(γ′ − γ1))
+
++ 1
+
+4P(σ + i(2γ′ + γ1)) + 1
+
+2P(σ + 2iγ′) + 1
+
+4P(σ + i(2γ′ − γ1))
+
+where σ = 1 + λ
+
+L. Next, apply Lemma 5.4 to each term according to the following outline:
+
+• P(σ) and P(σ + iγ′) extract all 4 zeros {ρ1, ρ1, ρ′, ρ′}.
+• P(σ + iγ1) and P(σ + i(γ′ + γ1)) extract only {ρ1, ρ′, ρ′}.
+• P(σ + i(γ′ − γ1)) extract only {ρ1, ρ′, ρ′}.
+• P(σ + i(2γ′ + γ1)) and P(σ + i(2γ′ − γ1)) extract {ρ1, ρ′} and {ρ1, ρ′} respectively.
+• P(σ + 2iγ′) extract only {ρ1, ρ1, ρ′}.
+
+When necessary, we utilize that P4(X) = P4(X). Then overall we obtain:
+
+(9.8)
+
+0 ≤(J2 + 1
+
+2)P4(1) − (J2 + 1
+
+2)P4
+�
+λ
+
+λ + λ1
+
+�
+− 2J · P4
+�
+λ
+
+λ + λ′
+�
++ 2φ(J + 1)2λ + ǫ
+
+−
+
+7
+�
+
+r=1
+Re
+�
+Ar · P4
+�
+λ
+
+λ + λ1 + itr
+
+�
++ Br · P4
+�
+λ
+
+λ + λ′ + itr
+
+�
+− Cr · P4
+�
+λ
+
+λ + itr
+
+��
+
+where
+
+r
+1
+2
+3
+4
+5
+6
+7
+
+tr
+µ1
+µ′
+µ′ + µ1
+µ′ − µ1
+2µ′
+2µ′ + µ1
+2µ′ − µ1
+
+Ar
+2J2 + 1
+2J
+2J
+2J
+1/2
+1/2
+1/2
+
+Br
+2J
+2J2 + 3/2
+J2 + 3/4
+J2 + 3/4
+2J
+J
+J
+
+Cr
+J2 + 1/2
+2J
+J
+J
+1/2
+1/4
+1/4
+
+It suffices to show the sum over r in (9.8) is non-negative. By Lemma 5.6, the sum is ≥ 0
+provided
+Ar
+
+(λ + λ1)4 +
+Br
+
+(λ + λ′)4 > Cr
+
+λ4
+for r = 1, 2, . . . , 7.
+
+After inspection, the most stringent conditions are r = 1, 2 and 5, which are implied by
+assumption (9.6).
+□
+
+This produces Table 10 in the usual fashion.
+
+9.1.3. Summary of bounds. We collect the results in the subsection into a single proposition
+for the reader’s convenience.
+
+Proposition 9.4. Assume χ1 or ρ1 is complex. Provided L is sufficiently large, we have the
+following:
+
+(a) If χ1 is non-principal then λ′ ≥ 0.2909 and the bounds for λ′ in Table 8 apply.
+(b) If χ1 is principal then λ′ ≥ 0.2909 and the bounds for λ′ in Table 10 apply.
+
+Proof. If χ1 is non-principal, then the only bounds available come from Table 8. If χ1 is
+principal, then upon comparing Tables 9 and 10, one finds that the latter gives weaker
+bounds.
+□
+44
+
+
+λ1 ≤
+λ′ ≥
+λ
+J
+
+.0875
+.5330
+1.155
+.8815
+.090
+.5278
+1.161
+.8804
+.095
+.5179
+1.171
+.8782
+.100
+.5083
+1.181
+.8762
+.105
+.4991
+1.190
+.8742
+.110
+.4902
+1.198
+.8723
+.115
+.4817
+1.206
+.8704
+.120
+.4734
+1.213
+.8686
+.125
+.4654
+1.220
+.8669
+.130
+.4577
+1.226
+.8652
+.135
+.4502
+1.232
+.8636
+.140
+.4429
+1.238
+.8620
+.145
+.4359
+1.243
+.8605
+.150
+.4290
+1.248
+.8590
+.155
+.4223
+1.252
+.8576
+.160
+.4159
+1.257
+.8562
+.165
+.4096
+1.261
+.8548
+.170
+.4034
+1.265
+.8534
+.175
+.3974
+1.268
+.8521
+.180
+.3916
+1.271
+.8509
+.185
+.3859
+1.274
+.8496
+.190
+.3804
+1.277
+.8484
+
+λ1 ≤
+λ′ ≥
+λ
+J
+
+.195
+.3749
+1.280
+.8472
+.200
+.3696
+1.282
+.8460
+.205
+.3645
+1.284
+.8449
+.210
+.3594
+1.286
+.8437
+.215
+.3545
+1.288
+.8426
+.220
+.3497
+1.290
+.8415
+.225
+.3449
+1.291
+.8405
+.230
+.3403
+1.293
+.8394
+.235
+.3358
+1.294
+.8384
+.240
+.3314
+1.295
+.8374
+.245
+.3270
+1.296
+.8364
+.250
+.3228
+1.297
+.8354
+.255
+.3186
+1.297
+.8344
+.260
+.3145
+1.298
+.8335
+.265
+.3106
+1.298
+.8326
+.270
+.3066
+1.299
+.8317
+.275
+.3028
+1.299
+.8308
+.280
+.2990
+1.299
+.8299
+.285
+.2953
+1.299
+.8290
+.290
+.2917
+1.299
+.8281
+.2909
+.2911
+1.299
+.8280
+
+Table 10. Bounds for λ′ with χ1 principal, ρ1 complex and ρ′ complex
+
+9.2. Bounds for λ2. Before dividing into cases, we begin with the following lemma analo-
+gous to Lemma 9.1.
+
+Lemma 9.5. Assume χ1 or ρ1 is complex. Suppose f satisfies Conditions 1 and 2. For
+ǫ > 0, provided L is sufficiently large depending on ǫ and f, the following holds:
+(a) If χ1, χ2 are non-principal, then
+
+0 ≤ F(−λ1) − F(0) − F(λ2 − λ1) + 4φf(0) + ǫ.
+
+(b) If χ1 is principal, then ρ1 is complex, χ2 is non-principal and
+
+0 ≤
+F(−λ1) − F(0) − F(λ2 − λ1) + Re{F(−λ1 + iµ1) − F(iµ1) − F(λ2 − λ1 + iµ1)} + 4φf(0) + ǫ.
+
+(c) If χ2 is principal, then χ1 is non-principal and
+
+0 ≤
+F(−λ1) − F(0) − F(λ2 − λ1) + Re{F(−λ1 + iµ2) − F(iµ2) − F(λ2 − λ1 + iµ2)} + 4φf(0) + ǫ.
+
+Proof. The arguments involved are very similar to Lemma 8.1 and Lemma 8.8 so we omit
+most of the details. Briefly, use (8.1) by setting (χ, ρ) = (χ1, ρ1) and (χ∗, ρ∗) = (χ2, ρ2) and
+σ = β1, which gives
+
+(9.9)
+0 ≤ K(β1, χ0) + K(β1 + iγ1, χ1) + K(β1 + iγ2, χ2)
+
++ 1
+
+2K(β1 + i(γ1 + γ2), χ1χ2) + 1
+
+2K(β1 + i(γ1 − γ2), χ1χ2).
+45
+
+
+λ1 ≤
+λ2 ≥
+λ
+
+.1227
+.4890
+.3837
+.13
+.4779
+.3888
+.135
+.4706
+.3922
+.140
+.4635
+.3955
+.145
+.4566
+.3986
+.150
+.4499
+.4017
+.155
+.4433
+.4047
+.160
+.4370
+.4077
+.165
+.4308
+.4105
+.170
+.4247
+.4133
+.175
+.4188
+.4160
+.180
+.4131
+.4187
+.185
+.4075
+.4213
+.190
+.4020
+.4238
+.195
+.3966
+.4263
+.200
+.3914
+.4287
+.205
+.3862
+.4311
+.210
+.3812
+.4334
+.215
+.3763
+.4357
+
+λ1 ≤
+λ2 ≥
+λ
+
+.220
+.3715
+.4380
+.225
+.3668
+.4402
+.230
+.3622
+.4423
+.235
+.3576
+.4444
+.240
+.3532
+.4465
+.245
+.3488
+.4486
+.250
+.3446
+.4506
+.255
+.3404
+.4526
+.260
+.3363
+.4545
+.265
+.3322
+.4564
+.270
+.3283
+.4583
+.275
+.3244
+.4602
+.280
+.3205
+.4620
+.285
+.3168
+.4638
+.290
+.3131
+.4656
+.295
+.3094
+.4673
+.300
+.3059
+.4690
+.3034
+.3035
+.4702
+
+Table 11. Bounds for λ2 with χ1 or ρ1 complex and χ1, χ2 non-principal
+
+Apply Lemma 6.3 to each K(∗, ∗) term, extracting zeros ρ1 or ρ2 whenever possible, de-
+pending on the cases. Recall χ1χ2 and χ1χ2 are always non-principal by construction (see
+Section 3).
+□
+
+9.2.1. χ1 and χ2 non-principal. A numerical version of Lemma 9.5 suffices here.
+
+Lemma 9.6. Assume χ1 or ρ1 is complex with χ1, χ2 non-principal. Let ǫ > 0 and for b > 0,
+assume 0 < λ1 ≤ b. Suppose, for some ˜λb > 0, we have
+
+F(−b) − F(0) − F(˜λb − b) + 4φf(0) ≤ 0
+
+Then λ2 ≥ ˜λb − ǫ provided L is sufficiently large depending on ǫ and f.
+
+Proof. Analogous to Lemma 8.10 using Lemma 9.5 in place of Lemma 8.8. Hence, we omit
+the proof.
+□
+
+This produces Table 11 by taking f = fλ from [HB95, Lemma 7.2] with parameter λ =
+λ(b).
+
+9.2.2. χ1 principal or χ2 is principal. When χ2 is principal and ρ2 is real, a numerical version
+of Lemma 9.5 suffices.
+
+Lemma 9.7. Assume χ1 or ρ1 is complex. Further assume χ2 is principal and ρ2 is real.
+Let ǫ > 0 and for b > 0, assume 0 < λ1 ≤ b. Suppose, for some ˜λb > 0, we have
+
+F(−b) − F(0) − F(˜λb − b) + 2φf(0) ≤ 0
+
+Then λ2 ≥ ˜λb − ǫ provided L is sufficiently large depending on ǫ and f.
+46
+
+
+λ1 ≤
+λ2 ≥
+λ
+
+.1227
+1.221
+.6530
+.13
+1.203
+.6620
+.15
+1.155
+.6846
+.17
+1.112
+.7049
+.19
+1.073
+.7234
+.21
+1.037
+.7403
+.23
+1.003
+.7560
+.25
+.9710
+.7707
+.27
+.9412
+.7844
+.29
+.9132
+.7973
+.31
+.8867
+.8095
+.33
+.8615
+.8210
+.35
+.8377
+.8320
+
+λ1 ≤
+λ2 ≥
+λ
+
+.37
+.8149
+.8425
+.39
+.7932
+.8526
+.41
+.7725
+.8622
+.43
+.7526
+.8714
+.45
+.7335
+.8803
+.47
+.7152
+.8889
+.49
+.6977
+.8971
+.51
+.6807
+.9051
+.53
+.6644
+.9128
+.55
+.6487
+.9203
+.57
+.6336
+.9276
+.59
+.6189
+.9346
+.6068
+.6070
+.9404
+
+Table 12. Bounds for λ2 with χ1 or ρ1 complex and χ2 principal and ρ2 real
+
+This produces Table 12 by taking f from [HB95, Lemma 7.2] with parameter λ = λ(b).
+Now, when χ1 is principal or when χ2 is principal and ρ2 is complex, we employ the “poly-
+nomial method”.
+
+Lemma 9.8. Suppose χj is principal and ρj is complex, and let χk ̸= χj. Let ǫ, λ, J > 0. If
+L is sufficiently large depending on ǫ, λ and J, then
+
+0 ≤ (J2 + 1
+
+2)
+�
+P4(1) − P4
+�
+λ
+
+λ + λk
+
+��
+− 2JP4
+�
+λ
+
+λ + λj
+
+�
++ 2φ(J + 1)2λ + ǫ
+
+provided
+
+(9.10)
+J0
+
+(λ + λj)4 +
+1
+
+(λ + λk)4 > 1
+
+λ4
+with J0 = min{J +
+3
+4J , 4J}.
+
+Proof. Write P(s, χ) = P(s, χ; P4). We begin with the inequality
+
+0 ≤ χ0(n)
+�
+1 + Re{χk(n)(Nn)−iγk}
+��
+J + Re{(Nn)−iγj}
+�2
+
+It follows in the usual fashion that
+
+(9.11)
+
+0 ≤ (J2 + 1
+
+2)
+�
+P(σ, χ0) + P(σ + iγk, χk)
+�
++
+
++ JP(σ + i(γj + γk), χk) + 2JP(σ + iγj, χ0) + JP(σ + i(γj − γk), χk)
+
++ 1
+
+4P(σ + i(2γj + γk), χk) + 1
+
+2P(σ + 2iγj, χ0) + 1
+
+4P(σ + i(2γj − γk), χk)
+
+where σ = 1 + λ
+
+L. Next,apply Lemma 5.4 to each P(∗, ∗) term in (9.11) extracting {ρj, ρj}
+from χ0-terms, ρk from the χk-terms, and ρk from χk-terms. When necessary, we also use
+that P4(X) = P4(X). Then overall
+
+(9.12)
+0 ≤(J2 + 1
+
+2)P4(1) − (J2 + 1
+
+2)P4
+�
+λ
+
+λ + λk
+
+�
+− 2JP4
+�
+λ
+
+λ + λj
+
+�
++ ψλ + ǫ − A − B
+
+47
+
+
+where
+
+A = Re
+�
+(2J2 + 3
+
+2)P4
+�
+λ
+
+λ + λj + iµj
+
+�
++ 2J · P4
+�
+λ
+
+λ + λk + iµj
+
+�
+− 2J · P4
+�
+λ
+
+λ + iµj
+
+��
+,
+
+B = Re
+�
+2J · P4
+�
+λ
+
+λ + λj + 2iµj
+
+�
++ 1
+
+2 · P4
+�
+λ
+
+λ + λk + 2iµj
+
+�
+− 1
+
+2 · P4
+�
+λ
+
+λ + 2iµj
+
+��
+,
+
+and ψ = (J2 + 2J + 1)φ
+Lχk
+
+L + (J2 + 2J + 1)φ L0
+
+L . Trivially J2 + 2J + 1 ≤ 3 · (J2 + 2J + 1) and
+so by Lemma 3.1, we may more simply take ψ = 2(J + 1)2φ in (9.12). From Lemma 5.6 and
+(9.10), it follows A, B ≥ 0.
+□
+
+We record a numerical version of Lemma 9.8 without proof.
+
+Corollary 9.9. Suppose χ1 or ρ1 is complex. For b > 0, assume 0 < λ1 ≤ b and let λ, J > 0.
+Denote J0 := min{J +
+3
+4J , 4J}. Assume one of the following holds:
+
+(a) χ1 is principal, ρ1 is complex. Further there exists ˜λb ∈ [0, ∞) satisfying
+
+0 = (J2 + 1
+
+2)
+�
+P4(1) − P4
+�
+λ
+
+λ + ˜λb
+
+��
+− 2J · P4
+�
+λ
+
+λ + b
+�
++ 2φ(J + 1)2λ + ǫ.
+
+and
+J0
+
+(λ + b)4 +
+1
+
+(λ + ˜λb)4 > 1
+
+λ4.
+
+(b) χ2 is principal, ρ2 is complex. Further there exists ˜λb ∈ [0, ∞) satisfying
+
+0 = (J2 + 1
+
+2)
+�
+P4(1) − P4
+�
+λ
+
+λ + b
+��
+− 2J · P4
+�
+λ
+
+λ + ˜λb
+
+�
++ 2φ(J + 1)2λ + ǫ
+
+and
+1
+
+(λ + b)4 +
+J0
+
+(λ + ˜λb)4 > 1
+
+λ4.
+
+Then, in either case, λ2 ≥ ˜λb − ǫ for L sufficiently large depending on ǫ, b, λ and J.
+
+This produces Tables 13 and 14.
+
+9.2.3. Summary of bounds. We collect the results in the subsection into a single proposition
+for the reader’s convenience.
+
+Proposition 9.10. Assume χ1 or ρ1 is complex. Provided L is sufficiently large, the follow-
+ing holds:
+(a) If χ1 is non-principal, then λ2 ≥ 0.2909 and the bounds for λ2 in Table 14 apply.
+(b) If χ1 is principal, then λ2 ≥ 0.2909 and the bounds for λ2 in Table 13 apply.
+
+Proof. If χ1 is non-principal then one compares Table 11, Table 12 and Table 14 and finds
+that the last one gives the weakest bounds. If χ1 is principal, then the only bounds available
+come from Table 13.
+□
+
+10. Zero-Free Region
+
+Proof of Theorem 1.1: If χ1 and ρ1 are both real, then Theorem 1.1 is implied by Proposi-
+tions 8.7 and 8.13. Thus, it remains to consider when χ1 or ρ1 is complex, dividing our cases
+according to the order of χ1.
+48
+
+
+λ1 ≤
+λ2 ≥
+λ
+J
+
+.0875
+1.017
+.9321
+.7627
+.090
+.9892
+.9474
+.7640
+.095
+.9385
+.9760
+.7666
+.100
+.8937
+1.002
+.7690
+.105
+.8537
+1.026
+.7713
+.110
+.8175
+1.048
+.7735
+.115
+.7846
+1.069
+.7757
+.120
+.7544
+1.087
+.7777
+.125
+.7266
+1.104
+.7797
+.130
+.7007
+1.120
+.7817
+.135
+.6766
+1.135
+.7836
+.140
+.6540
+1.149
+.7854
+.145
+.6328
+1.162
+.7872
+.150
+.6128
+1.174
+.7889
+.155
+.5939
+1.185
+.7906
+.160
+.5759
+1.195
+.7923
+.165
+.5589
+1.204
+.7939
+.170
+.5427
+1.213
+.7955
+.175
+.5272
+1.221
+.7971
+.180
+.5124
+1.229
+.7986
+.185
+.4982
+1.236
+.8001
+.190
+.4846
+1.242
+.8016
+
+λ1 ≤
+λ2 ≥
+λ
+J
+
+.195
+.4715
+1.249
+.8030
+.200
+.4590
+1.254
+.8045
+.205
+.4469
+1.259
+.8059
+.210
+.4353
+1.264
+.8073
+.215
+.4241
+1.269
+.8087
+.220
+.4132
+1.273
+.8100
+.225
+.4027
+1.276
+.8114
+.230
+.3926
+1.280
+.8127
+.235
+.3828
+1.283
+.8140
+.240
+.3733
+1.285
+.8153
+.245
+.3641
+1.288
+.8166
+.250
+.3552
+1.290
+.8179
+.255
+.3465
+1.292
+.8191
+.260
+.3381
+1.294
+.8204
+.265
+.3300
+1.295
+.8216
+.270
+.3220
+1.296
+.8229
+.275
+.3143
+1.297
+.8241
+.280
+.3068
+1.298
+.8253
+.285
+.2995
+1.299
+.8265
+.290
+.2924
+1.299
+.8277
+.2909
+.2911
+1.299
+.8279
+
+Table 13. Bounds for λ2 with χ1 principal and ρ1 complex
+
+χ1 has order ≥ 5. We begin with the inequality
+
+(10.1)
+0 ≤ χ0(n)
+�
+3 + 10 · Re{χ1(n)(Nn)−iγ1}
+�2�
+9 + 10 · Re{χ1(n)(Nn)−iγ1}
+�2
+
+which was also used in [HB95, Section 9]. This will also be roughly optimal for our purposes.
+We shall use the smoothed explicit inequality with a weight f satisfying Conditions 1 and
+2. By the usual arguments, we expand out the above identity, multiply by the appropriate
+factor and sum over n. Overall this yields
+
+(10.2)
+0 ≤ 14379 · K(σ, χ0) + 24480 · K(σ + iγ1, χ1) + 14900 · K(σ + 2iγ1, χ2
+1)
+
++ 6000 · K(σ + 3iγ1, χ3
+1) + 1250 · K(σ + 4iγ1, χ4
+1)
+
+where K(s, χ) = K(s, χ; f) and σ = 1 − λ⋆
+
+L with constant λ⋆ satisfying
+
+λ1 ≤ λ⋆ ≤ min{λ′, λ2}.
+
+Now, apply Lemma 6.3 to each term in (10.2) and consider cases depending on ord χ1. For
+K(σ + niγ1, χn
+1):
+• (ord χ1 ≥ 6) Extract {ρ1} if n = 1 only.
+• (ord χ1 = 5) Set λ⋆ = λ1 and extract {ρ1} if n = 1 only.
+It follows that
+
+(10.3)
+0 ≤ 14379 · F(−λ⋆) − 24480 · F
+�
+λ1 − λ⋆�
++ Bf(0)φ + ǫ
+49
+
+
+λ1 ≤
+λ2 ≥
+λ
+J
+
+.1227
+.4691
+1.217
+.8677
+.125
+.4654
+1.220
+.8669
+.130
+.4577
+1.226
+.8652
+.135
+.4502
+1.232
+.8636
+.140
+.4429
+1.238
+.8620
+.145
+.4359
+1.243
+.8605
+.150
+.4290
+1.248
+.8590
+.155
+.4223
+1.252
+.8576
+.160
+.4159
+1.257
+.8562
+.165
+.4096
+1.261
+.8548
+.170
+.4034
+1.265
+.8534
+.175
+.3974
+1.268
+.8521
+.180
+.3916
+1.271
+.8509
+.185
+.3859
+1.274
+.8496
+.190
+.3804
+1.277
+.8484
+.195
+.3749
+1.280
+.8472
+.200
+.3696
+1.282
+.8460
+.205
+.3645
+1.284
+.8449
+.210
+.3594
+1.286
+.8437
+
+λ1 ≤
+λ2 ≥
+λ
+J
+
+.215
+.3545
+1.288
+.8426
+.220
+.3497
+1.290
+.8415
+.225
+.3449
+1.291
+.8405
+.230
+.3403
+1.293
+.8394
+.235
+.3358
+1.294
+.8384
+.240
+.3314
+1.295
+.8374
+.245
+.3270
+1.296
+.8364
+.250
+.3228
+1.297
+.8354
+.255
+.3186
+1.297
+.8344
+.260
+.3145
+1.298
+.8335
+.265
+.3106
+1.298
+.8326
+.270
+.3066
+1.299
+.8317
+.275
+.3028
+1.299
+.8308
+.280
+.2990
+1.299
+.8299
+.285
+.2953
+1.299
+.8290
+.290
+.2917
+1.299
+.8281
+.2909
+.2911
+1.299
+.8280
+
+Table 14. Bounds for λ2 with χ1 or ρ1 complex and χ2 principal and ρ2 complex
+
+where B = 14379 · L0
+
+L + 46630 ·
+Lχ1
+
+L . From Lemma 3.1, B ≤ 57516 + 3493
+Lχ1
+
+L
+≤ 62174 so
+(10.3) reduces to
+
+(10.4)
+0 ≤ 14379 · F(−λ⋆) − 24480 · F
+�
+λ1 − λ⋆�
++ 62174φf(0) + ǫ.
+
+We now consider cases.
+
+• (ord χ1 ≥ 6) Without loss, we may assume λ1 ≤ 0.180.
+From Propositions 9.4
+and 9.10, we may take λ⋆ = 0.3916. Choose f according to [HB95, Lemma 7.1] with
+parameters θ = 1 and λ = 0.243. Then (10.4) implies λ1 ≥ 0.1764.
+• (ord χ1 = 5) Since λ⋆ = λ1 in this case, (10.4) becomes
+
+0 ≤ 14379 · F(−λ1) − 24480 · F(0) + 62174f(0)φ + ǫ.
+
+We choose f according to [HB95, Lemma 7.5] with k = 24480/14379 giving θ =
+1.1580... and
+
+λ−1
+1 cos2 θ ≤ 1
+
+4 · 62174
+
+14379 + ǫ
+
+whence λ1 ≥ 0.1489.
+
+Remark. To bound the quantity B for ord χ1 ≥ 5, the proof above uses that ϑ ≥ 3
+
+4 leading
+to some minor loss in the lower bound for λ1. If one uses ϑ = 1, say, then one can slightly
+improve this lower bound.
+
+50
+
+
+χ1 has order 2, 3 or 4. We use the same identity (10.1) but instead will apply the “poly-
+nomial method” with P4(X). In the usual way, it follows from (10.1) that
+
+(10.5)
+0 ≤ 14379 · P(σ, χ0) + 24480 · P(σ + iγ1, χ1) + 14900 · P(σ + 2iγ1, χ2
+1)
+
++ 6000 · P(σ + 3iγ1, χ3
+1) + 1250 · P(σ + 4iγ1, χ4
+1)
+
+where σ = 1 + λ
+
+L with λ > 0. The above identity will be roughly optimal for our purposes.
+Now, we apply Lemma 5.4 to each term above and consider cases depending on ord χ1. For
+each term P(σ + niγ1, χn
+1):
+
+• (ord χ1 = 4) Extract {ρ1} if n = 1 and {ρ1} if n = 3.
+• (ord χ1 = 3) Extract {ρ1} if n = 1 or 4 and {ρ1} if n = 2.
+• (ord χ1 = 2) Extract {ρ1, ρ1} if n = 1 or 3 since ρ1 is necessarily complex.
+
+It then follows that
+
+(10.6)
+0 ≤ 14379 · P4(1) − 24480 · P4
+�
+λ
+
+λ + λ1
+
+�
++ Aχ1 + Bχ1φλ + ǫ
+
+with
+
+Aχ1 =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Re{1250 · P4
+�
+λ
+
+λ + 4iµ1
+
+�
+− 6000 · P4
+�
+λ
+
+λ + λ1 + 4iµ1
+
+�
+},
+ord χ1 = 4,
+
+Re{6000 · P4
+�
+λ
+
+λ + 3iµ1
+
+�
+− 16150 · P4
+�
+λ
+
+λ + λ1 + 3iµ1
+
+�
+},
+ord χ1 = 3,
+
+Re{14900 · P4
+�
+λ
+
+λ + 2iµ1
+
+�
+− 30480 · P4
+�
+λ
+
+λ + λ1 + 2iµ1
+
+�
+}
+ord χ1 = 2.
+
++Re{1250 · P4
+�
+λ
+
+λ + 4iµ1
+
+�
+− 6000 · P4
+�
+λ
+
+λ + λ1 + 4iµ1
+
+�
+},
+
+and
+
+Bχ1 =
+
+
+
+
+
+
+
+
+
+
+
+
+15629 · L0
+
+L + 45380 ·
+Lχ1
+
+L
+if ord χ1 = 4,
+
+20379 · L0
+
+L + 40630 ·
+Lχ1
+
+L
+if ord χ1 = 3,
+
+30529 · L0
+
+L + 30480 ·
+Lχ1
+
+L
+if ord χ1 = 2.
+
+By Lemma 3.1, we observe Bχ1 ≤ 61009. Furthermore, applying Lemma 5.6 to Aχ1, it follows
+that Aχ1 ≤ 0 in all cases provided
+
+(10.7)
+14900
+
+λ4
+−
+30480
+
+(λ + λ1)4 ≤ 0.
+
+Thus, (10.6) implies
+
+0 ≤ 14379 · P4(1) − 24480 · P4
+�
+λ
+
+λ + λ1
+
+�
++ 61009φλ + ǫ
+
+provided (10.7) holds. Taking λ = 0.9421 yields λ1 ≥ 0.1227.
+51
+
+
+χ1 is principal. Recall in this case we assume ρ1 is complex. We begin with a slightly
+different inequality:
+
+0 ≤ χ0(n)
+�
+0 + 10 · Re{(Nn)−iγ1}
+�2�
+7 + 10 · Re{(Nn)−iγ1}
+�2.
+
+Again using the “polynomial method” with P4(X), it similarly follows that
+
+(10.8)
+0 ≤ 620 · P(σ, χ0) + 1050 · P(σ + iγ1, χ0) + 745 · P(σ + 2iγ1, χ0)
+
++ 350 · P(σ + 3iγ1, χ0) + 125 · P(σ + 4iγ1, χ0)
+
+where σ = 1+ λ
+
+L with λ > 0. Apply Lemma 5.4 to each term above, extracting {ρ1, ρ1} since
+ρ1 is necessarily complex. It then follows that
+
+(10.9)
+0 ≤ 620 · P4(1) − 1050 · P4
+�
+λ
+
+λ + λ1
+
+�
++ A0 + 2890φλ + ǫ
+
+since L0 ≤ L, and where
+
+A0 = Re{1050 · P4
+�
+λ
+
+λ + iµ1
+
+�
+− 1365 · P4
+�
+λ
+
+λ + λ1 + iµ1
+
+�
+}
+
++ Re{745 · P4
+�
+λ
+
+λ + 2iµ1
+
+�
+− 1400 · P4
+�
+λ
+
+λ + λ1 + 2iµ1
+
+�
+}
+
++ Re{350 · P4
+�
+λ
+
+λ + 3iµ1
+
+�
+− 870 · P4
+�
+λ
+
+λ + λ1 + 3iµ1
+
+�
+}
+
++ Re{125 · P4
+�
+λ
+
+λ + 4iµ1
+
+�
+− 350 · P4
+�
+λ
+
+λ + λ1 + 4iµ1
+
+�
+}.
+
+Applying Lemma 5.6 to each term of A0, it follows that A0 ≤ 0 provided
+
+(10.10)
+1050
+λ4
+−
+1365
+
+(λ + λ1)4 ≤ 0.
+
+Thus, (10.9) implies
+
+0 ≤ 620 · P4(1) − 1050 · P4
+�
+λ
+
+λ + λ1
+
+�
++ 2890φλ + ǫ
+
+provided (10.10) is satisfied. Taking λ = 1.291 yields λ1 ≥ 0.0875. This completes the proof
+of Theorem 1.1.
+□
+
+References
+
+[AK14]
+J-H. Ahn and S-H. Kwon. Some explicit zero-free regions for Hecke L-functions. J. Number Theory,
+145:433–473, 2014.
+[Fog62]
+E. Fogels. On the zeros of Hecke’s L-functions. I, II. Acta Arith., 7:87–106, 131–147, 1961/1962.
+[Gra81]
+S. Graham. On Linnik’s constant. Acta. Arith., 39(2):163–179, 1981.
+[HB95]
+D.R. Heath-Brown. Zero-free regions for Dirichlet L-functions, and the least prime in an arithmetic
+progressions. Proc. London Math. Soc.., 64(2):265–338, 1995.
+[Kad12]
+H. Kadiri. Explicit zero-free regions for Dedekind Zeta functions. Int. J. of Number Theory.,
+8(1):1–23, 2012.
+[KN12]
+H. Kadiri and N. Ng. Explicit zero density theorems for Dedekind Zeta functions. J. of Number
+Theory., 132:748–775, 2012.
+[Lin44]
+Y. V. Linnik. On the least prime in an arithmetical progression. II. The Deuring-Heilbronn phe-
+nomenon. Rec. Math. [Mat. Sbornik], 15:347–368, 1944.
+52
+
+
+[LMO79] J. C. Lagarias, H. L. Montgomery, and A. M. Odlyzko. A bound for the least prime ideal in the
+Chebotarev density theorem. Invent. Math., 54(3):271–296, 1979.
+[LO77]
+J. C. Lagarias and A. M. Odlyzko. Effective versions of the Chebotarev density theorem. In Alge-
+braic number fields: L-functions and Galois properties (Proc. Sympos., Univ. Durham, Durham,
+1975), pages 409–464. Academic Press, London, 1977.
+[Lou92]
+St´ephane Louboutin. Minoration au point 1 des fonctions L et d´etermination des corps sextiques
+ab´eliens totalement imaginaires principaux. Acta Arith., 62(2):109–124, 1992.
+[MV07]
+H. Montgomery and R. Vaughan. Multiplicative Number Theory I. Classical Theory. Cambridge
+advanced studies in mathematics. Cambridge University Press, 2007.
+[Rad60]
+H. Rademacher. On the Phragm´en-Lindel¨of theorem and some applications. Math. Z, 72:192–204,
+1959/1960.
+[Tru15]
+T. S. Trudgian. An improved upper bound for the error in the zero-counting formulae for Dirichlet
+L-functions and Dedekind zeta-functions. Math. Comp., 84(293):1439–1450, 2015.
+[Wei83]
+A. Weiss. The least prime ideal. J. Reine Angew. Math., 338:56–94, 1983.
+[Xyl11]
+T. Xylouris. On the least prime in an arithmetic progression and estimates for the zeros of Dirichlet
+L-functions. Acta Arith., 150(1):65–91, 2011.
+
+Department of Mathematics, University of Toronto, Room 6290, 40 St.
+George St.,
+M5S2E4, Toronto, ON, Canada
+E-mail address: asif@math.toronto.edu
+
+53
+
+

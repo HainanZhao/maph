@@ -1,0 +1,128 @@
+{
+  "artifact_id": "cycle-2-stream-c-route-a-v1",
+  "blockers": [
+    "SC-A1-GM-explicit-formula",
+    "SC-A2-near-one-density",
+    "SC-A4-uniform-density-supremum",
+    "SC-A5-local-zero-and-pair-kernel-bound",
+    "SC-A7-almost-all-second-moment"
+  ],
+  "claim_boundary": "No independent proof of Corollary 1.3 or 1.4, and no new short-interval exponent, is claimed.",
+  "exact_bookkeeping": {
+    "almost_all": {
+      "Cauchy_Schwarz_remainder": "delta^2 X^3 <= y^2 X exp(-3(log X)^(1/4)) eventually because y/(delta X) >= X^(epsilon/2)",
+      "Chebyshev_conversion": "an L2 bound y^2 X exp(-3A) gives at most O(X exp(-A)) points with error > y exp(-A), A=(log X)^(1/4)",
+      "T_power_before_subpower_factor": "13/15",
+      "delta": "delta=X^(-13/15+epsilon/2)",
+      "delta_times_X_power": "2/15",
+      "epsilon_bookkeeping": "T=delta^(-1)exp(4(log X)^(1/4)) <= X^(13/15-epsilon/3) eventually",
+      "key_identity": "B*(13/15)=2",
+      "theta": "2/15"
+    },
+    "density_coefficient": "30/13",
+    "uniform": {
+      "T_power_from_x_over_y_at_endpoint": "13/30",
+      "density_condition": "T < x^(1/B-epsilon/2) = x^(13/30-epsilon/2)",
+      "epsilon_bookkeeping": "y >= x^(17/30+epsilon) gives T=x/y*exp(2(log x)^(1/4)) < x^(13/30-epsilon/2) for sufficiently large x",
+      "theta": "17/30",
+      "truncation_error": "x(log x)^3/T = y(log x)^3 exp(-2(log x)^(1/4)) <= y exp(-(log x)^(1/4)) eventually"
+    },
+    "upper_ranges": {
+      "almost_all": "y <= X^0.99 is retained from the published statement; the lower y bound supplies the Cauchy--Schwarz remainder domination",
+      "uniform": "y <= x^0.99 gives T >= x^0.01 exp(2(log x)^(1/4)), hence log T is comparable to log x and 2<=T<=x eventually"
+    },
+    "vk_absorption": {
+      "decay_comparison": "(log X)^(2/7) dominates (log X)^(1/4)",
+      "justification": "(log T)^(1/21)/(log log T)^(1/3) tends to infinity, so the source cutoff contains the weaker one for sufficiently large T",
+      "source_cutoff": "1-sigma >= c(log T)^(-2/3)(log log T)^(-1/3)",
+      "weaker_cutoff": "1-sigma >= c'(log T)^(-5/7)"
+    }
+  },
+  "exact_replay_sha256": "7aa44f69a585ea5b984ef027e8ace496ae1134e55e8a06b24ea51abbe509f729",
+  "pass_state": "NOT PASS: explicit formula, uniform near-one density, and local zero/pair-count inputs remain unpinned or indirect.",
+  "replay": {
+    "python_implementation": "CPython",
+    "python_version": "3.12.3",
+    "script": "proof/replay_cycle2_stream_c_route_a.py",
+    "script_sha256": "c3cac2924fda4303dd7691704d2c4b27c0a81121234cf86a24b3a34eb30df632",
+    "wall_time_ns": 2015144
+  },
+  "result_labels": {
+    "almost_all_conclusion": "conditional replay of y >= X^(2/15+epsilon), y<=X^0.99 with O(X exp(-(log X)^(1/4))) exceptions",
+    "almost_all_theta": "2/15",
+    "uniform_conclusion": "conditional replay of y >= x^(17/30+epsilon), y<=x^0.99",
+    "uniform_theta": "17/30"
+  },
+  "route": "A",
+  "rows": [
+    {
+      "blocker": "Davenport Chapter 17 is not locally pinned; endpoint convention, uniformity, and multiplicity treatment are not independently verified.",
+      "checked": "The exact displayed GM statement, its truncation range, and its subsequent choice of T were checked.",
+      "falsifier": "An explicit-formula version with a truncation error or height convention incompatible with the displayed choice of T breaks both downstream routes.",
+      "id": "SC-A1-GM-explicit-formula",
+      "locator": "GM \u00a713.2, TeX lines 2407--2417; citation Davenport, Chapter 17",
+      "statement_used": "sum_[x,x+y] Lambda(n)=y-sum_[|rho|<=T]((x+y)^rho-x^rho)/rho+O(x(log x)^3/T), 2<=T<=x",
+      "status": "OBSERVED"
+    },
+    {
+      "blocker": "The visible Jutila epsilon-form estimate does not by itself supply a uniform logarithmic-loss bound in the VK strip 1-sigma as small as (log T)^(-5/7); its multiplicity wording is also not explicit in the inspected corollary. GM's alternative Montgomery citation remains unpinned.",
+      "checked": "The reachable Jutila scan states N(alpha,T) <<_{epsilon,k} T^(A_3(alpha)(1-alpha)+epsilon) and A_3(alpha)=2 for alpha>=11/14; its displayed N(alpha,T) uses two-sided |t|<=T.",
+      "falsifier": "If no pinned theorem provides the required uniform near-one/logarithmic-loss statement, the density supremum cannot be promoted from the GM display to an independent proof.",
+      "id": "SC-A2-near-one-density",
+      "locator": "GM \u00a713.2, TeX lines 2419--2423; Jutila, Acta Arith. XXXII (1977), printed p. 57, Corollary (1.8)",
+      "statement_used": "GM requires a single near-one density estimate with at most logarithmic loss: N(sigma,T) << T^((30/13+o(1))(1-sigma))(log T)^O(1).",
+      "status": "OBSERVED"
+    },
+    {
+      "checked": "Ford's accessible primary paper gives the needed VK shape; its later zero sums state that zeros are counted with multiplicity.",
+      "id": "SC-A3-vinogradov-korobov-zero-free",
+      "locator": "Ford, Zero-free regions for the Riemann zeta function (2002), Theorem 5, PDF p. 4; GM cites Montgomery Cor. 11.4",
+      "statement_used": "zeta(beta+it) is nonzero for |t|>=3 when 1-beta <= 1/[57.54(log|t|)^(2/3)(log log|t|)^(1/3)].",
+      "status": "PROVED",
+      "transfer": "The exact comparison in the replay weakens this to the GM cutoff exponent -5/7 for sufficiently large T."
+    },
+    {
+      "blocker": "Depends on SC-A2's unpinned uniform near-one density statement (and SC-A1 for its use inside the explicit formula).",
+      "checked": "The exponent condition and VK absorption are replayed exactly in the Route A bookkeeping artifact.",
+      "id": "SC-A4-uniform-density-supremum",
+      "locator": "GM \u00a713.2, TeX lines 2419--2432",
+      "statement_used": "sup_sigma x^(sigma-1)N(sigma,T) <= exp(-(log x)^(1/4)) under T<x^(13/30-epsilon/2).",
+      "status": "OBSERVED"
+    },
+    {
+      "blocker": "The local zero count is the unpinned Stream-B blocker SB-A4, so this pair estimate is conditional rather than promoted.",
+      "checked": "Given the local multiplicity-inclusive O(log T) estimate, the harmonic summation argument yields the displayed pair-kernel bound; beta>=0 keeps the real part of the denominator positive.",
+      "falsifier": "A non-T^o(1) local zero clustering loss invalidates the second-moment bound.",
+      "id": "SC-A5-local-zero-and-pair-kernel-bound",
+      "locator": "GM \u00a713.2, TeX lines 2451--2464",
+      "statement_used": "O(log T) zeros per unit horizontal strip implies sum_[|rho_2|<T]|1+z+conj(rho_2)|^-1 << (log T)^2 for |z|<T, Re z>=0.",
+      "status": "OBSERVED"
+    },
+    {
+      "checked": "All endpoint, truncation, upper-range, and epsilon inequalities are exact/asymptotic consequences recorded by the replay.",
+      "conditional_on": [
+        "SC-A1",
+        "SC-A4"
+      ],
+      "id": "SC-A6-uniform-truncation-and-error",
+      "locator": "GM \u00a713.2, TeX lines 2407--2432",
+      "statement_used": "T=x/y*exp(2(log x)^(1/4)); y in [x^(17/30+epsilon),x^0.99].",
+      "status": "PROVED"
+    },
+    {
+      "blocker": "Depends on SC-A1, SC-A2, and SC-A5; the full L2 derivation is not promoted while those inputs remain indirect.",
+      "checked": "The delta/T exponents, Cauchy--Schwarz remainder, density supremum exponent, and Chebyshev exceptional-set conversion are replayed exactly/asymptotically.",
+      "id": "SC-A7-almost-all-second-moment",
+      "locator": "GM \u00a713.2, TeX lines 2434--2471",
+      "statement_used": "delta=X^(-13/15+epsilon/2), T=delta^-1 exp(4(log X)^(1/4)), followed by the stated L2 reduction and zero-pair expansion.",
+      "status": "OBSERVED"
+    }
+  ],
+  "sources": {
+    "ford_2002_pdf_sha256": "a43a2c37cf0f34b05bf80d9e58bcef176371437eedf7aae17d72f2c55b04c948",
+    "guth_maynard_tex_sha256": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428",
+    "jutila_1977_pdf_sha256": "cbe2d1e7115717cf28f9ffaffdc1fe232958595b17c5c2ee59fc968e8ff0d5a1"
+  },
+  "status": "OBSERVED: full exponent/epsilon replay conditional on three retained external-input blockers",
+  "stream": "C"
+}

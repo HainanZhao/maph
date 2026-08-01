@@ -1,0 +1,64 @@
+{
+  "artifact_id": "cycle-2-g0-per-route-resource-gate-config-v1",
+  "claim_boundary": "Deterministic operational gate configuration only. Passing these resource limits does not establish any mathematical theorem or G0 PASS.",
+  "epistemic_status": "OBSERVED",
+  "limits": {
+    "max_rss_kib_strictly_less_than": 262144,
+    "max_rss_mib_strictly_less_than": 256,
+    "wall_seconds_strictly_less_than": 60
+  },
+  "measurement": {
+    "arguments": [
+      "-v"
+    ],
+    "parse_fields": [
+      "Elapsed (wall clock) time",
+      "Maximum resident set size (kbytes)",
+      "Exit status"
+    ],
+    "program": "/usr/bin/time"
+  },
+  "non_promotion": "This gate does not claim G0 PASS; it only checks the preregistered per-route resource ceiling.",
+  "required_outcome": "Every route command must exit zero, yield parseable GNU-time fields, have wall_seconds<60, and have max_rss_kib<262144. Any other result is fail-closed.",
+  "routes": [
+    {
+      "command": [
+        "python3",
+        "proof/audit_cycle2_stream_b_route_a_v3.py",
+        "--check",
+        "artifacts/cycle-2-stream-b-route-a-v3.json"
+      ],
+      "id": "stream-b-route-a-v3",
+      "sealed_source_check": "Route-A v3 check hashes and anchors its GM source input."
+    },
+    {
+      "command": [
+        "python3",
+        "proof/replay_cycle2_stream_b_route_b.py",
+        "--check",
+        "artifacts/cycle-2-stream-b-route-b-v1.json"
+      ],
+      "id": "stream-b-route-b-v1",
+      "sealed_source_check": "Route-B v1 check verifies frozen sources and source anchors."
+    },
+    {
+      "command": [
+        "python3",
+        "proof/replay_cycle2_stream_c_route_a_v5.py",
+        "--check",
+        "artifacts/cycle-2-stream-c-route-a-v5.json"
+      ],
+      "id": "stream-c-route-a-v5",
+      "sealed_source_check": "Route-A v5 check verifies official SWORD, official PDFs, metadata, source-closure v4, and mutool 1.23.10."
+    },
+    {
+      "command": [
+        "python3",
+        "proof/replay_short_intervals_stream_c_route_b_v5.py",
+        "--check"
+      ],
+      "id": "stream-c-route-b-v5",
+      "sealed_source_check": "Route-B v5 check invokes the official source checker and independent SWORD audit."
+    }
+  ]
+}

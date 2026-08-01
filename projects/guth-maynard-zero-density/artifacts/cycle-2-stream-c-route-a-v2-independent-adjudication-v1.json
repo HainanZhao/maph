@@ -1,0 +1,88 @@
+{
+  "artifact_id": "cycle-2-stream-c-route-a-v2-independent-adjudication-v1",
+  "created_utc": "2026-08-01",
+  "epistemic_status": "OBSERVED",
+  "claim_boundary": "Independent hostile audit of Route-A v2. PROVED labels are restricted to the frozen-source text comparisons and exact exponent arithmetic. This record does not alter v2, does not close the archival published-primary formula gate, and does not promote Stream C or G0.",
+  "route_a_v2_replay_design": {
+    "status": "OBSERVED",
+    "observed_post_writer_byte_sha256": "aae9ebd55f57bf49fedf4ad7d7a75f008cefe6e9a8a46702014c2773b12f3b07",
+    "prior_observed_byte_sha256": "72547b973d6c9d7075b72d880a1ec2d50bd5f4787cd3fe71d0aefc6712574dde",
+    "stable_semantic_exact_replay_sha256": "3e0e194aab6810a2697f7951058c3ee407fa3dc47e9ce91ba96139f037fc3970",
+    "finding": "The v2 writer embeds wall_time_ns, so its byte artifact changes on replay. This is a reproducibility-design defect, not an unexplained content mutation. This audit pins only the stable semantic identity.",
+    "safe_remediation": "A future version should put performance timing in a separate artifact or compare a canonical form excluding timing; v2 is preserved."
+  },
+  "chj_i_scope": {
+    "status": "PROVED",
+    "source": "M. Cully-Hugill and D. R. Johnston, On the error term in the explicit formula of Riemann--von Mangoldt, IJNT 19 (2023), Theorem 1.2; frozen arXiv 2111.10001v5 source.",
+    "source_hash": "53f5380061ab371849f4805deed7884b887134cc586fbeec18f2ab444cb84953",
+    "statement_checked": "For any alpha in (0,1/2], max{51,log z}<T<(z^alpha-2)/2, psi(z)=z-sum_(|gamma|<=T)z^rho/rho+O*(M z log z/T).",
+    "structural_limit_checked": "The source explicitly records that alpha>1/2 cannot be taken."
+  },
+  "height_adjudication": {
+    "uniform": {
+      "status": "PROVED",
+      "choice": "T_u=x/y exp(2(log x)^(1/4))",
+      "bound": "for y>=x^(17/30+epsilon), T_u<=x^(13/30-epsilon) exp(2(log x)^(1/4))=o(x^(1/2))",
+      "endpoint_result": "Eventually admissible at both x and x+y under CHJ-I."
+    },
+    "almost_all": {
+      "status": "PROVED",
+      "choice": "delta=X^(-13/15+epsilon/2), T_a=delta^(-1)exp(4(log X)^(1/4))",
+      "power_exponent": "13/15-epsilon/2 > 1/2 for 0<epsilon<11/15",
+      "conclusion": "T_a is eventually outside CHJ-I's alpha<=1/2 range at endpoints z in [X,3X]."
+    },
+    "route_a_v2_promotion": {
+      "status": "OBSERVED",
+      "conclusion": "The assertion that CHJ-I Theorem 1.2 alone closes the prescribed-height explicit formula is unsupported for the almost-all branch. A full Route-A-v2 PASS is not licensed by CHJ-I alone."
+    }
+  },
+  "endpoint_and_convention_audit": {
+    "endpoint": {
+      "status": "PROVED",
+      "finding": "CHJ-I's psi(z)=sum_(n<=z)Lambda(n) subtracts to a half-open interval; conversion to GM's [x,x+y] costs O(log x) at an integral endpoint."
+    },
+    "height_notation": {
+      "status": "PROVED",
+      "finding": "CHJ-I truncates by |gamma|<=T; GM TeX prints |rho|<=T. Literal complex-modulus reading needs a separate thin-boundary bridge."
+    },
+    "multiplicity": {
+      "status": "OBSERVED",
+      "finding": "CHJ-I says all non-trivial zeros but its frozen source contains no explicit multiplicity statement. Ford's convention cannot by itself assign a convention to CHJ-I."
+    }
+  },
+  "safe_common_source_node": {
+    "status": "PROVED conditional on the stated Iwaniec theorem; source-access status OBSERVED",
+    "node": "cycle-2-stream-c-explicit-formula-source-closure-v1",
+    "mechanism": "Iwaniec arbitrary-height theorem plus endpoint half-weights, HSW's unit count, Bui--Heath-Brown's multiplicity convention, and the thin-boundary transfer.",
+    "frozen_cc_corroboration": {
+      "status": "OBSERVED",
+      "course": "K. S. Kedlaya, MIT 18.785, spring 2007",
+      "errorbounds_pdf_sha256": "375d96e65a99d7dbfbdc9ca51aa286bb53af7e77dfffa59e167dfcd9b18b919d",
+      "proof_pdf_sha256": "43cbe51ee69fe552078d90d0c21b165456f3ad67ad64c83df71b9cce3d56ae05",
+      "checked_content": "The theorem is for all x>=2,T>0; the proof says every zero residue is counted with multiplicity.",
+      "license_provenance": "Course identifier is MIT OCW handle 1721.1/101679; the official DSpace download endpoint returned HTTP 405 in this run, and the author-hosted course copies were frozen."
+    },
+    "archival_published_primary_gate": {
+      "status": "OBSERVED open",
+      "finding": "No lawfully archivable published-primary source with the full fixed-height theorem was frozen in this audit. The CC course source corroborates but does not replace that primary-source requirement."
+    }
+  },
+  "route_b_v4": {
+    "status": "OBSERVED not issued",
+    "reason": "Without a replayable published-primary formula node, a closure would violate the archival gate. Route-B v3 remains the controlling containment record."
+  },
+  "frozen_hashes": {
+    "gm_tex": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428",
+    "chj_i_tar": "53f5380061ab371849f4805deed7884b887134cc586fbeec18f2ab444cb84953",
+    "explicit_formula_ledger": "24248e58028651ba2903b023fe2b9f660ab5dff9606b2ca2c879f462dd94b297",
+    "explicit_formula_ledger_check": "2a7191d966c7c3717f88829111dd63ea8449981c65f5b7be6eb2f7381d07f46c",
+    "route_a_v2_doc": "4423b10307dfa318ee82bb4742119f6123ae972ebf4cabd24ac740a8a37f1b1f",
+    "route_a_v2_script": "5d0c939b8ce7e06f25da4790a05f52a5fd92b754d8b60d4dddee2c3e3a6a1f54",
+    "adjudication_doc": "9291dbf545f477abb4e561a6f0e8bd65e24624006009580ead156fc4804242a0",
+    "adjudication_check": "518fb913917d1a1b2b0c9167b5e9c8f1017615478209ffe2813a5faa4281c4a7"
+  },
+  "replay": {
+    "command": "python3 proof/check_cycle_2_stream_c_route_a_v2_adjudication.py",
+    "test": "python3 -m unittest tests/test_cycle2_stream_c_route_a_v2_adjudication.py"
+  }
+}

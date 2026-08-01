@@ -1,0 +1,236 @@
+{
+  "artifact_id": "p7-fixed-ray-discrepancy-transfer-v1",
+  "artifact_identity": {
+    "builder": {
+      "path": "proof/build_p7_fixed_ray_discrepancy_transfer_v1.py",
+      "sha256": "8c2bf785041e0d5ff8eecc33667d65e3ef60265c32cb01727183faffdef88b1f"
+    },
+    "conventions": {
+      "path": "conventions/p7_fixed_ray_discrepancy_transfer_v1.py",
+      "sha256": "414b0ae4d7e9773cf6625eb31b0b6fb501b154de1da57e52ef145ec67084e80d"
+    },
+    "document": {
+      "path": "docs/p7-fixed-ray-discrepancy-transfer-v1.md",
+      "sha256": "a928811fb91b38dac3236b9bababb1c3f52da23a2a46dc1db5d106f27b9de5dc"
+    },
+    "tests": {
+      "path": "tests/test_p7_fixed_ray_discrepancy_transfer_v1.py",
+      "sha256": "2b0aac283a035cf51b89594c27fb18d287085f15c00a879774235d6bd481d9d1"
+    }
+  },
+  "claim_boundary": "Exact fixed-ray complete-to-primitive L2 transfer, local difference sampling reduction, elementary norm-collapsed companion, and sharp fibrewise/difference-energy containment only. No selected primitive Guth--Maynard-shaped cubic estimate, Hecke large-value theorem, density theorem, detector, or prime-ideal theorem is proved.",
+  "complete_to_primitive_transfer": {
+    "continuous_L2": "sum_{eta in X} integral_-B^B |F_eta(v)|^2 dv <<_K (2N+q^2B^2)(log(qB))^A ||u_f||_2^2.",
+    "derivative": "The same bound for F_eta' has an additional log^2(2N), since the common coefficient is u_f(a)log Na.",
+    "exact_identity": "F_eta(v)=sum_a u(a)eta(a)(Na)^(iv)=sum_a u_f(a)eta_star(a)(Na)^(iv).",
+    "finite_zero_extension_check": {
+      "complete_zero_extended_F_eta_at_v_zero": "2",
+      "conclusion": "The exact reindexing requires u_f=u*1_(a,f)=1; retaining u would change the polynomial.",
+      "formal_modulus": "f=pq with primitive ancestor d=p dividing f",
+      "ideal_rows": [
+        {
+          "coprime_to_f": true,
+          "eta_mod_f": "1",
+          "eta_star_mod_d": "1",
+          "label": "a_0",
+          "u": "2",
+          "u_f": "2"
+        },
+        {
+          "coprime_to_d_but_not_f": true,
+          "eta_mod_f": "0",
+          "eta_star_mod_d": "-1",
+          "label": "a_1",
+          "u": "3",
+          "u_f": "0"
+        }
+      ],
+      "incorrect_unrestricted_primitive_expression_at_v_zero": "-1",
+      "primitive_reindexed_F_eta_star_with_u_f_at_v_zero": "2"
+    },
+    "loss_accounting": "No tau(f), 2^omega(f), completion factor, signed primitive-projector triangle inequality, or altered zero extension enters this fixed-modulus L2 transfer.",
+    "setup": "Fix f, X=Cl(f)^, H=|X|, q=Nf, and u_f(a)=u(a)1_(a,f)=1. Every eta in X has one primitive exact conductor d_eta|f and primitive ancestor eta_star modulo d_eta.",
+    "status": "PROVED",
+    "thorner_reindexing": "The map eta -> (d_eta,eta_star) is injective into Thorner's primitive m=0 family with Nd_eta<=q. Enlarge this nonnegative subcollection to all primitive conductors <=q before applying Theorem 2.1 with ideal cutoff 2N and height B.",
+    "zero_extension_reason": "On (a,f)=1 the two character values agree. On the complement u_f vanishes, which exactly reproduces eta modulo f without inflating eta_star."
+  },
+  "difference_energy_boundary": {
+    "coloured_energy_boundary": "The preceding P7 coloured energy has a character-product equation and does not bound this uncoloured difference statistic under the frozen hypotheses.",
+    "definition": "E_diff_(2Delta)(T)=#{(t1,t2,t3,t4): |(t1-t2)-(t3-t4)|<=2Delta}.",
+    "finite_exact_check": {
+      "asymptotic_sampling_loss": "E_diff^(1/2)/D_Delta is asymptotic to a constant times m^(1/2).",
+      "energy_square_root_over_exact_multiplicity_squared": "85/25",
+      "exact_formula": "(2m^3+m)/3",
+      "formula_value": 85,
+      "local_difference_energy_at_2Delta": 85,
+      "local_difference_multiplicity": 5,
+      "radius": "1/4",
+      "times": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    "progression_countercost": "For T={0,...,m-1}, Delta=1/4, D_Delta=m but E_diff_(2Delta)=(2m^3+m)/3. Replacing D by E_diff^(1/2) costs m^(1/2) in delta_2^2 and m^(1/4) in the perturbative cubic error.",
+    "sharp_sampling_message": "The L2-to-discrete transfer weights local continuous mass by an L-infinity difference multiplicity. Energy gives only its square-root upper bound unless a higher-moment/local-distribution input is added.",
+    "status": "PROVED",
+    "universal_relation": "D_Delta(T)^2<=E_diff_(2Delta)(T)."
+  },
+  "difference_sampling": {
+    "definition": "D_Delta(T)=sup_v #{(t,s) in T^2: |t-s-v|<=Delta}, with 0<Delta<1/2 and T=pi_t W subset [0,T_height].",
+    "exact_reduction": "Summing local Sobolev over t-s and using D_Delta yields delta_2^2 <= H^-1 D_Delta times the complete-character continuous L2-plus-derivative mass.",
+    "local_sobolev": "|F(x)|^2<=Delta^-1 integral_(x-Delta)^(x+Delta)|F|^2+2Delta integral_(x-Delta)^(x+Delta)|F'|^2.",
+    "scope": "This is a completion-free raw L2 discrepancy estimate, not the source-shaped selected cubic estimate.",
+    "status": "PROVED",
+    "thorner_bound": "delta_2^2 <<_K H^-1 D_Delta Gamma_Th(N,q,B,Delta)||u_f||_2^2, B=T_height+Delta, Gamma_Th=(Delta^-1+2Delta log^2(2N))(2N+q^2B^2)(log(qB))^A."
+  },
+  "epistemic_status": "PROVED",
+  "gate": "P7-3-IDEAL-CUBIC-ENERGY",
+  "gate_outcome": "ADVANCED_COMPLETE_TO_PRIMITIVE_L2_TRANSFER_DIFFERENCE_SAMPLING_OPEN",
+  "non_promotion": [
+    "No selected primitive cubic estimate of Guth--Maynard source shape is proved.",
+    "No Hecke large-value, zero-density, detector, or prime-ideal interval theorem is proved.",
+    "No assertion that per-character separation controls the required uncoloured difference sampling statistic.",
+    "No assertion that the finite combinatorial sharpness models are detector or zero examples.",
+    "No assertion for a common ray group across different exact conductors."
+  ],
+  "norm_collapsed_companion": {
+    "cancellation": "The H from complete-character norm aggregation cancels the H^-1 in the exact discrepancy identity.",
+    "complete_character_norm_bound": "sum_eta sum_n|b_eta(n)|^2 <= H Delta_K(N)||u_f||_2^2, Delta_K(N)=max_{N<n<=2N}a_Q(i)(n)<=max tau(n).",
+    "discrepancy_bound": "delta_2^2 << D_Delta Gamma_MV(N,B,Delta)||u_f||_2^2, Gamma_MV=(Delta^-1+2Delta log^2(2N))(B+N(1+log(2N)))Delta_K(N).",
+    "elementary_mean_value": "integral_-B^B |sum b(n)n^(iv)|^2 dv << (B+N(1+log(2N)))sum|b(n)|^2, by expansion plus the harmonic-series Schur bound.",
+    "non_promotion": "This companion remains a raw L2/difference-sampling bound; it supplies neither a selected primitive cubic estimate nor an L-infinity large-value theorem.",
+    "norm_coefficients": "b_eta(n)=sum_{Na=n}u_f(a)eta(a), so F_eta(v)=sum_{N<n<=2N}b_eta(n)n^(iv).",
+    "normalization_scope": "If N<=T_height^C for fixed C, then Delta_K(N)=T_height^o(1) by the already pinned P7-1 divisor normalization.",
+    "status": "PROVED"
+  },
+  "per_character_separation": {
+    "bound": "If each exact-primitive-character fibre is 1-separated and P_f colours can occur, then D_Delta(T)<=|T|P_f for Delta<1/2; in particular D_Delta<=|T|H.",
+    "finite_exact_check": {
+      "blocks_J": 4,
+      "colours_P": 3,
+      "fibrewise_upper_bound_mP": 36,
+      "local_difference_multiplicity": 36,
+      "minimum_same_colour_gap": 3,
+      "radius": "1/4",
+      "sharpness": "All within-block differences lie in the radius-1/4 window about zero; no better bound follows from fibrewise separation alone.",
+      "time_projection_size_m": 12,
+      "times_by_colour": {
+        "0": [
+          "0",
+          "3",
+          "6",
+          "9"
+        ],
+        "1": [
+          "1/24",
+          "73/24",
+          "145/24",
+          "217/24"
+        ],
+        "2": [
+          "1/12",
+          "37/12",
+          "73/12",
+          "109/12"
+        ]
+      }
+    },
+    "implication": "Per-character separation permits a fixed-power cross-character clustering loss and cannot by itself make D_Delta subpower.",
+    "reason": "A length-2Delta interval contains at most one time from each fibre. For fixed t the admissible s values lie in one such interval.",
+    "sharpness": "The exact P-colour/J-block construction t_(j,c)=3j+c/(8P) realizes D_(1/4)=|T|P while every fibre is 3-separated.",
+    "status": "PROVED"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_p7_fixed_ray_discrepancy_transfer_v1.py --check",
+    "runtime": {
+      "implementation": "CPython",
+      "json_policy": "stdlib json sort_keys=True; UTF-8; LF; trailing newline",
+      "optimize": 0,
+      "version": "3.12.3"
+    },
+    "script": "proof/build_p7_fixed_ray_discrepancy_transfer_v1.py",
+    "script_sha256": "8c2bf785041e0d5ff8eecc33667d65e3ef60265c32cb01727183faffdef88b1f",
+    "write_command": "python3 proof/build_p7_fixed_ray_discrepancy_transfer_v1.py --write"
+  },
+  "resource_contract": {
+    "rss_kib_strictly_less_than": 262144,
+    "wall_seconds_strictly_less_than": 60
+  },
+  "review_policy": "LIGHTWEIGHT_SOURCE_ALGEBRA_REPLAY; no hostile audit initiated.",
+  "scoped_no_go": {
+    "minimal_missing_statistic": "A source-scale local uncoloured difference-sampling bound D_Delta(T)<=D_target, with D_target set by the displayed cubic-budget gate, or a localized higher-moment/ray-class distribution theorem that bypasses this L2 sampling step.",
+    "non_overclaim": "This does not rule out additional detector arithmetic, an ideal-class Poisson theorem, or a new higher-moment method. The finite sharpness constructions are not P7 detector or zero examples.",
+    "reason": "Their strongest deterministic combination is the displayed D_Delta bounds. Fibrewise separation permits the sharp |T|P_f scale, and energy alone can lose an extra square-root multiplicity.",
+    "statement": "Complete-to-primitive reindexing, Thorner L2, the elementary norm-collapsed L2 bound, per-character separation, and an unlocalized difference energy do not imply a Guth--Maynard-shaped selected cubic excess bound under the frozen P7 hypotheses.",
+    "status": "PROVED"
+  },
+  "selected_cubic_budget": {
+    "additional_open_input": "A source-shaped bound for the averaged block A_0 is separately required; the displayed D_Delta condition controls only the discrepancy perturbation.",
+    "budget_root": "For target discrepancy budget B>0, define z_B(a_3,H)>0 by 3H^3 z_B(a_3+z_B)^2=B.",
+    "exponent_cost": "If D_Delta=T^kappa relative to a subpower benchmark, delta_2 gains T^(kappa/2). The perturbative cubic term gains T^(kappa/2), while the delta-dominant cubic term gains T^(3kappa/2).",
+    "finite_exact_check": {
+      "definition": "z_B is the positive root of 3H^3 z(a_3+z)^2=B.",
+      "delta_dominant_cubic_multiplier": 64,
+      "delta_multiplier": 4,
+      "delta_squared_multiplier": 16,
+      "difference_multiplier_ratio": 16,
+      "exact_budget_3H_cubed_delta_a3_plus_delta_squared": 864,
+      "exponent_rule": "If D_Delta gains T^kappa, then delta gains T^(kappa/2); the cubic perturbation gains T^(kappa/2) when delta<=a_3 and T^(3kappa/2) when delta>=a_3.",
+      "perturbative_cubic_multiplier": 4,
+      "representative_class_average_parameters": {
+        "H": 2,
+        "a_3": 5,
+        "delta": 1
+      }
+    },
+    "mean_value_difference_gate": "The norm-collapsed route meets B if D_Delta is at most a constant times z_B^2/(Gamma_MV||u_f||_2^2).",
+    "predecessor_inequality": "G(K_W)<=H^3(G(A_0)+3delta_2(a_3+delta_2)^2), a_3=||A_0||_S3.",
+    "status": "PROVED",
+    "thorner_difference_gate": "The Thorner route meets B if D_Delta is at most a K-constant times H z_B^2/(Gamma_Th||u_f||_2^2)."
+  },
+  "source_integrity": {
+    "guth_maynard_tex": {
+      "locators": "selected cubic subtraction lines 477--739 and refined S3 source shape lines 1684--1764",
+      "path": "artifacts/sources/arxiv-2405.20552v2/LargevaluesDirichlet17.tex",
+      "sha256": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428"
+    },
+    "p7_fixed_ray_colour_v1": {
+      "locators": "fixed-ray Fourier blocks, coloured energy boundary, and exact-conductor selection",
+      "path": "artifacts/p7-fixed-ray-colour-diagonalization-v1.json",
+      "sha256": "426681db11b09b52dad029a2e0a5931e430a5a5224d55c8f4ca5908b26564027"
+    },
+    "p7_norm_status_v3": {
+      "locators": "a_Q(i)(n)<=tau(n) norm-collapse scope and N<=T^C subpower normalization",
+      "path": "artifacts/p7-norm-aggregation-v3-status-correction.json",
+      "sha256": "32d3f2a5ffc8c62e985c7b3c156ddd9c0b00b23908d837b583d806e2c0e05aa8"
+    },
+    "p7_preregistration_v2": {
+      "locators": "selected exact-conductor primitive Q(i) family and P7-3 gate boundary",
+      "path": "artifacts/p7-hecke-qi-preregistration-v2.json",
+      "sha256": "fa3c98ce481e913f2c8522856114b8cca643d763314e01a36b0aa7cf9110dfc9"
+    },
+    "p7_ray_orthogonality_v1": {
+      "locators": "P7-2 projector, zero extension, and checked Thorner Theorem 2.1 specialization",
+      "path": "artifacts/p7-ray-orthogonality-v1.json",
+      "sha256": "d4ad1fb81ac2cac49f94fb73616b5134f96fadd86e44f0a94975683b2db0387d"
+    },
+    "p7_selected_gram_excess_v1": {
+      "locators": "delta_2 Parseval identity and class-average cubic perturbation inequality",
+      "path": "artifacts/p7-selected-gram-excess-v1.json",
+      "sha256": "fac0f8bb8206ce7d0b008363ab9715859e4b5ed2d9932af5f86b684c52c2db5a"
+    },
+    "thorner_2019_rendered": {
+      "locators": "Theorem 2.1, rendered lines 650--719 / printed pp.883--884",
+      "path": "artifacts/sources/p7-hecke-v1/thorner-2019-mrl-v26n3-a9.rendered.txt",
+      "sha256": "69cdec98f836569683371d73972bc6541fcf33c6ec902c384dbecb3273eb2bb3"
+    },
+    "zaman_tex": {
+      "locators": "lines 101--110 (ray group) and 298--303 (zero extension and conductor divides modulus)",
+      "path": "artifacts/sources/p7-hecke-v1/zaman-1502.05679v4/Explicit_estimates_for_the_zeros_of_Hecke_L-functions.tex",
+      "sha256": "9440e5d28903d641df03e261c5d9f497bfc7f63062d279b082d6077ad8eaf620"
+    }
+  }
+}

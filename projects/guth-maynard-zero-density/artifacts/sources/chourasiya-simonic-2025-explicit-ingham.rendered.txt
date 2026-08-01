@@ -1,0 +1,8169 @@
+AN EXPLICIT FORM OF INGHAM’S ZERO DENSITY ESTIMATE
+
+SHASHI CHOURASIYA AND ALEKSANDER SIMONIˇC
+
+Abstract. Ingham (1940) proved that N(σ, T) ≪ T 3(1−σ)/(2−σ) log5 T, where N(σ, T) counts the
+number of the non-trivial zeros ρ of the Riemann zeta-function with ℜ{ρ} ≥ σ ≥ 1/2 and 0 < ℑ{ρ} ≤ T.
+We provide an explicit version of this result with the exponent (7−5σ)/(2−σ) of the logarithmic factor.
+In addition, we also provide an explicit estimate with asymptotically correct main term for the fourth
+power moment of the Riemann zeta-function on the critical line.
+
+1. Introduction
+
+Let ζ(s) be the Riemann zeta-function and let ρ = β + iγ be its non-trivial zero, that is, ζ(ρ) = 0
+with 0 ≤ β ≤ 1 and γ ∈ R. Let N(T) be the number (counted with multiplicities) of all non-trivial
+zeros with 0 < γ ≤ T, while for σ ≥ 0 and T > 0 define N(σ, T) := # {ρ: ζ(ρ) = 0, β ≥ σ, 0 < γ ≤ T},
+where the zeros are again counted with multiplicities. Trivially, the function N(σ, T) is decreasing in σ
+and increasing in T, N(σ, T) ≤ N(T) ∼
+1
+2πT log T for 0 ≤ σ ≤ 1/2, N(σ, T) ≤ 1
+
+2N(T) for 1/2 < σ < 1
+and N(σ, T) = 0 for σ ≥ 1, while the Riemann Hypothesis (RH) asserts that N(σ, T) = N(T) for
+0 ≤ σ ≤ 1/2 and N(σ, T) = 0 for σ > 1/2. Since RH has been verified up to HRH := 3 · 1012 by Platt
+and Trudgian [PT21], we have N(σ, T) = 0 for σ > 1/2 and T ≤ HRH. Consequently, we can restrict
+ourselves to the range of 1/2 ≤ σ ≤ 1 and T ≥ HRH throughout this paper.
+Loosely speaking, a non-trivial estimate on N(σ, T) is known as zero density estimate. Estimates of
+the form1
+
+N(σ, T) ≪ T A(σ)(1−σ) logB T
+or
+N(σ, T) ≪ε T A(σ)(1−σ)+ε
+(1)
+with A(σ) ≤ 1/(1 − σ), B ≥ 0, ε > 0 and the implied constants being uniform in σ and T, are of great
+interest in the distribution theory of prime numbers [Ivi03, Sta26]. The Lindel¨of Hypothesis (LH), which
+is believed to be a weaker statement than RH, implies A(σ) ≤ 2 in the expression on the right-hand
+side of (1) for all2 σ ≥ 1/2, and this is known as the density hypothesis [Ivi03, p. 47]. Bourgain [Bou00]
+showed that the density hypothesis holds for σ ≥ 25/32 = 0.78125, and substantial progress has been
+made in obtaining much better upper bounds for A(σ) in this region, see [TTY25, Table 2 on p. 33] for
+the current best results. On the other hand, region 1/2 ≤ σ < 19/25 = 0.76 is dominated by two results,
+namely that
+
+A(σ) ≤ min
+ß
+3
+
+2 − σ ,
+15
+
+5σ + 3
+
+™
+,
+
+which is due to Ingham [Ing40] and Guth–Maynard [GM24], respectively. Note that 3/(2−σ) ≤ 15/(5σ+
+3) for σ ∈ [1/2, 0.7]. This means that, apart from Selberg’s zero density estimate3 [Sel46] (see also [Bal17,
+Sim20]), Huxley’s refinement [Hux72, Chapter 23]
+
+N(σ, T) ≪
+Å
+σ − 1
+
+2
+
+ã− 1
+
+3
+T
+
+3(1−σ)
+
+2−σ (log T)
+
+6
+
+2−σ
+(2)
+
+of Ingham’s later 4 zero density estimate is currently the best known result on N(σ, T) for 1/2 < σ ≤ 0.7.
+In order to obtain effective and unconditional results that are related to the distribution of prime
+numbers, explicit versions of (1) are often required, see [FKS23, JY23, CHJ23, CHJ25]. Recently, several
+
+2020 Mathematics Subject Classification. 11M06, 11M26.
+Key words and phrases. Riemann zeta-function, Zero density estimates, Moments of the Riemann zeta-function.
+1As usual, A(σ) is defined as “infimum of all such exponents”, see [TTY25, Definition 37] for a precise definition.
+2It is known that LH guarantees even A(σ) = 0 for σ ≥ 3
+
+4 + δ and δ > 0 fixed.
+3His result is sharper than [Ing40] for σ close to the critical line, e.g., when 0 ≤ σ − 1/2 ≪ log log T/ log T.
+4This is to distinguish between N(σ, T) ≪ T 3(1−σ)/(2−σ) log5 T and Ingham’s earlier zero density estimates, see [Ing37],
+such as N(σ, T) ≪ T 8(1−σ)/3 log5 T.
+
+arXiv:2507.15184v2  [math.NT]  30 Sep 2025
+
+
+2
+SHASHI CHOURASIYA AND ALEKSANDER SIMONIˇC
+
+relevant results have appeared in the literature, see [Kad13, KLN18, Bel25, Cho24] for example. The
+aim of this paper is to provide the first explicit version of (2), see Corollary 1, where we also made an
+improvement over the logarithmic factor.
+
+Corollary 1. Let T ≥ HRH. Then
+
+N(σ, T) ≤ B1T
+
+3(1−σ)
+
+2−σ (log T)
+
+7−5σ
+2−σ + B2 log2 T + B3 log T
+(3)
+
+for σ1 ≤ σ ≤ σ2, where the values for B1, B2 and B3 are given by Table 1.
+
+Note that (7 − 5σ)/(2 − σ) is a decreasing function in σ ∈ [1/2, 1] that has the range [2, 3] there. The
+intervals [σ1, σ2] in Table 1 are elements of the set {[n/32, (n + 1)/32]: n ∈ {16, . . . , 31}}. This choice is
+justified by the fact that (3) is asymptotically better than N(σ, T) ≪ T 8(1−σ)/3 log5 T for σ ∈ [1/2, 0.875]
+and the latter zero density estimate5 is asymptotically better than the trivial one for σ ∈ (0.625, 1).
+Corollary 1 implies that
+
+N(σ, T) ≤ 8.185 · T
+
+3(1−σ)
+
+2−σ (log T)
+
+7−5σ
+2−σ + 9.461 log2 T + 167.8 log T,
+σ ∈ [0.500, 0.625], T ≥ 3 · 1012,
+
+N(σ, T) ≤ 21.77 · T
+
+3(1−σ)
+
+2−σ (log T)
+
+7−5σ
+2−σ + 8.290 log2 T + 147.0 log T,
+σ ∈ [0.625, 0.875], T ≥ 3 · 1012.
+
+The above estimates improve [Cho24, Theorem 1.1 and Table 1] for σ ∈ [0.5, 0.667], and the latter
+improves (119) for σ ∈ [0.625, 0.8575] while it is also better for σ ∈ (0.8575, 0.875] and T ≥ 1061.3.
+
+σ1
+σ2
+B1
+B2
+B3
+d
+κ
+δ
+log10 A0
+
+0.50000
+0.53125
+5.069
+9.461
+167.8
+0.28
+0.34
+0.012
+11.25
+0.53125
+0.56250
+6.046
+9.168
+162.6
+0.28
+0.32
+0.025
+11.26
+0.56250
+0.59375
+7.077
+8.875
+157.4
+0.28
+0.30
+0.038
+11.27
+0.59375
+0.62500
+8.185
+8.582
+152.2
+0.28
+0.29
+0.052
+11.27
+0.62500
+0.65625
+9.387
+8.290
+147.0
+0.28
+0.27
+0.066
+11.28
+0.65625
+0.68750
+10.70
+7.997
+141.9
+0.28
+0.25
+0.081
+11.29
+0.68750
+0.71875
+12.11
+7.704
+136.7
+0.28
+0.23
+0.097
+11.30
+0.71875
+0.75000
+13.66
+7.411
+131.5
+0.28
+0.21
+0.114
+11.31
+0.75000
+0.78125
+15.35
+7.118
+126.3
+0.28
+0.20
+0.132
+11.32
+0.78125
+0.81250
+17.21
+6.826
+121.1
+0.28
+0.18
+0.150
+11.33
+0.81250
+0.84375
+19.31
+6.533
+115.9
+0.28
+0.16
+0.170
+11.35
+0.84375
+0.87500
+21.77
+6.240
+110.7
+0.28
+0.14
+0.192
+11.36
+0.87500
+0.90625
+24.83
+5.745
+101.9
+0.29
+0.13
+0.215
+11.37
+0.90625
+0.93750
+29.01
+5.463
+96.87
+0.29
+0.11
+0.241
+11.40
+0.93750
+0.96875
+35.35
+5.180
+91.86
+0.29
+0.09
+0.270
+11.42
+0.96875
+1.00000
+46.06
+4.897
+86.84
+0.29
+0.07
+0.303
+11.46
+
+Table 1. The values for B1, B2 and B3 from Corollary 1 for the corresponding σ ∈ [σ1, σ2], as well as
+the optimized values of several parameters from Theorem 1.
+
+The precise result from which Corollary 1 follows is stated as Theorem 1 in Section 2.1. Its proof is
+based on Ingham’s original approach [Ing40], and relies6 on an upper bound for the fourth power moment
+of ζ(s) on the critical line. Let k be a positive real number and 0 ≤ A ≤ B, and define
+
+Mk(A, B) :=
+� B
+
+A
+
+����ζ
+Å1
+
+2 + it
+ã����
+
+2k
+dt.
+(4)
+
+In particular, we set Mk(T) := Mk(0, T) for T ≥ 0. The LH trivially implies Mk(T) ≪ε T 1+ε, and
+if the latter is true for some strictly increasing and unbounded sequence of k’s, then LH holds [Tit86,
+Theorem 13.2]. However, much stronger statement
+
+Mk(T) ≍k T (log T)k2
+(5)
+
+5We are comparing our result to an improved version (see Section 6) of [KLN18, Theorem 1.1 and Table 1], see
+also [CHJ23, Lemma 7.1], where a variant of such a zero density estimate was proved.
+6Two other important ingredients are Gabriel’s convexity theorem (Theorem 4) and inequality (32) that is implied by
+Littlewood’s lemma. One can avoid them, usually for the cost of producing worse log-factor in (2), see [Ivi03, Chapter 11]
+and also [Mon71, Chapter 12] for generalisations to Dirichlet L-functions. In fact, Huxley established (2) for this class of
+L-functions.
+
+
+AN EXPLICIT FORM OF INGHAM’S ZERO DENSITY ESTIMATE
+3
+
+is believed to be true. Unconditionally, the upper bound in (5) is known to hold for 0 < k ≤ 2, see [HRS19],
+while the lower bound is true for all k ≥ 1, see [RS13]. On RH, the upper bound in (5) also holds for
+k > 2, see [Har13], while the lower bound is also true for 0 < k < 1, see [HB81]. Random matrix theory
+predicts the asymptotic form of (5) for k ∈ N, that is,
+
+Mk(T) = Tpk(log T) + Oε
+Ä
+T 1/2+εä
+(6)
+
+for ε > 0, where pk(x) is a polynomial of degree k2 whose coefficients can be effectively computed,
+see [CFK+05]. Polynomials pk(x) from (6) are known only for k ∈ {1, 2}: p1(x) = x + 2γ − 1 − log (2π)
+where γ is the Euler–Mascheroni constant, is due to Ingham [Ing26], and p2(x) =
+1
+
+2π2 x4+�4
+k=1 a4−kx4−k
+
+is due to Heath-Brown [HB79], where his7 values for ak, k ∈ {0, 1, 2, 3}, coincide with those predicted by
+the random matrix theory. It should be mentioned that Ingham proved in the same paper [Ing26] that
+p2(x) =
+1
+
+2π2 x4 + O(x3), i.e.,
+
+M2(T) =
+1
+
+2π2 T log4 T + O �T log3 T� ,
+(7)
+
+thus providing an asymptotic formula for M2(T).
+Recently, explicit estimates for the second power
+moment M1(T) appeared in [DZA22] and [SS23] that are of the form (6) but with better error terms.
+To the best of the authors’ knowledge, no explicit estimates for the fourth power moment M2(T) have
+appeared in the literature. In this paper, we are providing them in Corollary 2.
+
+Corollary 2. We have
+
+M2(T) ≤ 1
+
+π2 T log4 T
+
+2 + 20.7225 · T log
+7
+2 T
+
+2 + 1.9532 · 106
+(8)
+
+for T ≥ 3 · 103, and
+
+−
+
+Ç
+
+M1(T0) + 2 log 2
+
+π2
++ T0 log T
+
+2
+
+π2T
+
+å
+
+T log3 T
+
+2 ≤ M2(T) −
+1
+
+2π2 T log4 T
+
+2 ≤ M1(T0)T log3 T
+
+2 + M2(T0) (9)
+
+for T ≥ T0, where the values for M1(T0) and M2(T0) are given by Table 2.
+
+The precise result from which Corollary 2 follows is stated as Corollary 4 in Section 2.2, which in turn
+is a further consequence of Theorem 2. Our proof of Theorem 2 follows Ramachandra’s proof [Ram75],
+see Section 5.1 for details. In addition to zero density estimates, results on the fourth power moment, as
+well as other higher power moments, are used in the Dirichlet divisor problem [Tit86, Section 12.3] and
+also to count integral ideals in abelian number fields [LLM25].
+
+T0
+M1(T0)
+M2(T0)
+M2(T0) ≤
+M2(T0, 2T0) ≤
+
+104
+59.300
+1.3796 · 109
+3.8095 · 108
+9.9857 · 108
+
+105
+48.801
+2.8051 · 1010
+8.7748 · 109
+1.9276 · 1010
+
+106
+43.230
+4.1722 · 1011
+1.3688 · 1011
+2.8034 · 1011
+
+107
+39.720
+5.8170 · 1012
+1.8478 · 1012
+3.9692 · 1012
+
+108
+37.550
+7.9793 · 1013
+2.5002 · 1013
+5.4791 · 1013
+
+109
+36.211
+1.0629 · 1015
+3.3317 · 1014
+7.2965 · 1014
+
+1010
+34.842
+1.3897 · 1016
+4.3883 · 1015
+9.5079 · 1015
+
+1015
+31.170
+4.4328 · 1021
+1.4174 · 1021
+3.0154 · 1021
+
+1020
+29.364
+9.6675 · 1026
+3.1233 · 1026
+6.5442 · 1026
+
+Table 2. The values for M1(T0) and M2(T0) from Corollaries 2 and 3, as well as upper bounds for
+M2(T0) and M2(T0, 2T0) that are used in the proof of Corollary 2.
+
+As an easy consequence of [DZA22] and Corollary 2 we also derive an explicit upper bound for the
+third power moment, see Corollary 3.
+
+Corollary 3. We have
+
+M 3
+
+2 (T) ≤
+Å 1
+
+2π2 + M1(T0)
+
+log T
++ M2(T0)
+
+T log4 T
+
+ã 1
+
+2
+T log
+5
+2 T
+
+7His error term is of order T 7/8+ε. This was improved in [IM95], see also [PT25], to T 2/3+ε by using methods from the
+spectral theory of the Riemann zeta-function.
+
+
+4
+SHASHI CHOURASIYA AND ALEKSANDER SIMONIˇC
+
+for T ≥ T0 ≥ 106, where the values for M1(T0) and M2(T0) are given by Table 2.
+
+The exponent of the logarithm is for 1/4 larger than the conjectured value, see (5). It is interesting
+that this is still the best known unconditional result on M 3
+
+2 (T).
+Although not pursued here, Corollary 1 can be generalized to Dirichlet L-functions by following the
+approach presented here; however, substantial work should be done on generalizing Lemmas 5–8 and 13.
+These and possible extensions to other L-functions are currently under investigation.
+The outline of this paper is as follows. In Section 2 we state the main results, namely Theorem 1
+for the zero density estimate and Theorem 2 for the fourth power moment estimate, and prove the
+above corollaries. In Section 3 we prove Gabriel’s convexity theorem, together with two applications
+(Corollaries 6 and 7), and in Section 4 we prove Theorem 1.
+Section 5 is dedicated to the proof of
+Theorem 2, while in Section 6 we state an improved explicit version of Ingham’s earlier zero density
+estimate.
+
+Acknowledgements. The authors thank Andrew Yang, Tim Trudgian, Olivier Ramar´e and Daniel
+Johnston for their interest in the work.
+
+2. The main results
+
+In this section, we are stating the precise results that are related to a zero density estimate (3), see
+Theorem 1, and to the fourth power moment estimates (8) and (9), see Theorem 2. In addition, proofs
+of Corollaries 1, 2 and 3 are also provided.
+
+2.1. The zero density estimate. The proof of Theorem 1 will be presented in Section 4.
+
+Theorem 1. Let T ≥ H ≥ H0 ≥ 1002, T ≥ T0 ≥ max �e2d, ee� for d > 0, 0 < δ ≤
+1
+20 log (hT0) for
+h ≥ 3 · 1010/T0, and κ > 0. Then
+
+N(σ, T) − N(σ, H) ≤ T
+
+3(1−σ)
+
+2−σ
+Å A1
+
+2πd (log (hT))
+
+1
+
+2−σ (log T)
+
+6−5σ
+2−σ + A2
+
+2πd (log (hT))
+
+2σ−1
+2−σ log T
+ã
+
++ (A3 · log (HT) + A4 · log (hT) + A5) log T
+
+for 1/2 + d/ log T < σ1 ≤ σ ≤ σ2 ≤ 1. Functions A1 and A2 are defined by
+
+A1 = A1(σ1, σ2, T0, d, L0, L1, K1, K3) := L1 exp
+Å
+d
+Å
+3 + 4 log log T0
+
+log T0
+
+ãã
+max
+ß
+1, L
+−
+2d
+
+log T0
+0
+
+™
+×
+
+× max
+ß
+1, K
+−
+3d
+
+log T0
+3
+
+™
+max
+ß
+1, K
+
+3d
+
+log T0
+1
+
+™
+max
+ß
+L
+
+2
+
+2−σ1
+0
+, L
+
+2
+
+2−σ2
+0
+
+™
+×
+
+× max
+ß
+K
+
+2σ1−1
+32−σ1
+, K
+
+2σ2−1
+2−σ2
+3
+
+™
+max
+ß
+K
+
+3(1−σ1)
+
+1 2−σ1
+, K
+
+3(1−σ2)
+
+2−σ2
+1
+
+™
+
+and
+
+A2 = A2(σ1, σ2, T0, d, L0, L2, K2, K3) := L2e3d max
+ß
+1, K
+
+3d
+
+log T0
+2
+
+™
+max
+ß
+1, L
+−
+2d
+
+log T0
+0
+
+™
+×
+
+× max
+ß
+1, K
+−
+3d
+
+log T0
+3
+
+™
+max
+ß
+L
+
+2
+
+2−σ1
+0
+, L
+
+2
+
+2−σ2
+0
+
+™
+max
+ß
+K
+
+2σ1−1
+32−σ1
+, K
+
+2σ2−1
+2−σ2
+3
+
+™
+max
+ß
+K
+
+3(1−σ1)
+
+2 2−σ1
+, K
+
+3(1−σ2)
+
+2−σ2
+2
+
+™
+,
+
+where K1 = K1(T0, A0, κ, h), K2 = K2(T0, A0, κ) and K3 = K3(T0, κ, h, δ) are defined by (37), (38)
+and (36), respectively, while L0 = L0(T0, H0, κ, h, δ), L1 = L1(T0, K1, K3, h, δ) and L2 = L2(T0, K2, K3, h, δ)
+are defined by (35), (39) and (40), respectively. Moreover,
+
+A3(σ1, T0, d) :=
+1
+
+π log 2
+
+Å3 − 2σ1
+
+2d
++
+1
+
+log T0
+
+ã
+,
+A4(σ1, T0, d) :=
+3
+
+2 log 2
+
+Å3 − 2σ1
+
+2d
++
+1
+
+log T0
+
+ã
+,
+
+A5(σ1, T0, H0, d, h) := C6
+
+2π
+
+Å3 − 2σ1
+
+2d
++
+1
+
+log T0
+
+ã
++ C5
+
+2πd,
+
+where C5 = C5(hT0, h) and C6 = C6(hT0, H0) are defined by (33) and (34), respectively.
+
+
+AN EXPLICIT FORM OF INGHAM’S ZERO DENSITY ESTIMATE
+5
+
+Proof of Corollary 1. We are using Theorem 1 with T0 = H0 = H = HRH, h = 1 and 0 < d ≤ 0.89. Then
+
+N(σ, T) ≤
+1
+
+2πd
+
+�
+A1 + A2 · (log HRH)− 6(1−σ2)
+
+2−σ2
+�
+T
+
+3(1−σ)
+
+2−σ (log T)
+
+7−5σ
+2−σ
+
++ (A3 + A4) log2 T + (A3 log HRH + A5) log T
+(10)
+
+under the conditions of Theorem 1. Note that the functions An, n ∈ {1, . . . , 5}, are decreasing in σ1.
+This implies that (10) holds for σ ∈ (1/2+d/ log T, 0.53125] with σ1 = 1/2 and σ2 = 0.53125. The values
+for the parameters d, κ, δ and A0 were obtained (see Table 1) in a way that the main term in (10) is the
+smallest possible. Because the conditions of Theorem 1 are then satisfied, this implies
+
+N(σ, T) ≤ 5.069 · T
+
+3(1−σ)
+
+2−σ (log T)
+
+7−5σ
+2−σ + 9.461 log2 T + 167.8 log T
+
+for σ ∈ (1/2 + 0.28/ log T, 0.53125] and T ≥ HRH. The above estimate is true also for σ ∈ [1/2, 1/2 +
+0.28/ log T] since
+
+N(T) ≤ T
+
+2π log T
+
+2πe + 0.43 log T ≤ 5.069 exp
+
+Ç
+−0.56
+
+3
+2 −
+0.28
+
+log HRH
+
+å
+
+T log2 T + 9.461 log2 T + 167.8 log T
+(11)
+
+holds for all T ≥ HRH and
+
+T exp
+
+Ç
+−0.56
+
+3
+2 −
+0.28
+log T0
+
+å
+
+≤ T
+
+3(1−σ)
+
+2−σ
+
+holds for σ ∈ [1/2, 1/2 + 0.28/ log T] and T ≥ HRH, while the first inequality in (11) follows by [BW24].
+This proves (3) for σ ∈ [1/2, 0.53125]. For the other ranges, the procedure is similar: the values for the
+parameters d, κ, δ and A0 are obtained for each interval so that the main term in (10) is the smallest
+possible; see Table 1. In each case, the conditions of Theorem 1 are satisfied, so (10) holds. The proof is
+thus complete.
+■
+
+2.2. The fourth power moment estimate. The proof of Theorem 2 will be presented in Section 5.
+The 2k-th power moment Mk(A, B) is defined by (4).
+
+Theorem 2. Assume the following notation and conditions:
+
+(1) T ≥ T0 ≥ 55;
+(2) c = (c1, c2) with c1 ∈ (−1, −1/2) and c2 ∈ (0, 1/2);
+(3) σ = (σ1, σ′, σ′′) with σ1 ∈ [0, 1/2), σ′ = (σ2, σ3) with σ2 ∈ (1/2, 1] and σ3 ∈ [0, 1/2), and
+σ′′ = (σ4, σ5) with σ4 ∈ (1/2, |c1|) and σ5 ∈ (1/2 − c2, 1/2);
+
+(4) a = (a1, a2) with a1 > 0 and a2 > 1, and b = (b1, b2) with b1 > 0 and b2 > 1;
+(5) T − a1 (log T)a2 ≥ T0 − a1 (log T0)a2 ≥ 2, (log T)a2 /T ≤ (log T0)a2 /T0 and a1 (log T0)a2−1 ≥ 1;
+(6) T − b1 (log T)b2 ≥ T0 − b1 (log T0)b2 ≥ 2, (log T)b2 /T ≤ (log T0)b2 /T0 and b1 (log T0)b2−1 ≥ 2.
+Then
+����M2(T, 2T) −
+1
+
+2π2 T log4 T
+���� ≤ F1 (T0, c, σ, a, b) T log3 T
+(12)
+
+and
+
+M2(T, 2T) ≤ 1
+
+π2 T log4 T +
+
+�
+
+2
+
+6
+�
+
+n=3
+
+ÅJn
+
+π2 log T + 2J1Jn
+
+ã 1
+
+2
++ F2 (T0, c, a, b)
+
+�
+
+T log3 T,
+(13)
+
+where
+
+F1 (T0, c, σ, a, b) := J0 + J1 + J2,1 + 2J2,2 +
+
+6
+�
+
+n=3
+Jn + 2
+� �
+
+3≤n<m≤6
+(JnJm)
+
+1
+2
+
+and
+
+F2 (T0, c, a, b) = J0 + 2J1 +
+
+6
+�
+
+n=3
+Jn + 2
+� �
+
+3≤n<m≤6
+(JnJm)
+
+1
+2 .
+
+Here, Jn = Jn(T0) for n ∈ {1, 3, 4} are defined by (77), (108) and (109), respectively, while J0 =
+J0 (T0, c, a, b), J2,1 = J2,1(T0, σ1), J2,2 = J2,2 (T0, σ′, σ′′, c, a, b), J5 = J5 (T0, c1, a) and J6 = J6 (T0, c2, b)
+are defined by (118), (80), (107), (110) and (111), respectively.
+
+
+6
+SHASHI CHOURASIYA AND ALEKSANDER SIMONIˇC
+
+Corollary 4. Assume the notation and conditions of Theorem 2. Then
+
+M2(T0, T) ≤
+1
+
+2π2 T log4 T
+
+2 + F1 (T0, c, σ, a, b) T log3 T
+
+2 + M2(T0, 2T0)
+(14)
+
+and
+
+M2(T0, T) ≥
+1
+
+2π2 T log4 T
+
+2 −
+Å2 log 2
+
+π2
++ F1 (T0, c, σ, a, b)
+ã
+T log3 T
+
+2 − T0
+
+π2 log4 T
+
+2 .
+(15)
+
+Furthermore,
+
+M2(T0, T) ≤ 1
+
+π2 T log4 T
+
+2 +
+
+�
+
+2
+
+6
+�
+
+n=3
+
+ÅJn
+
+π2 log T
+
+2 + 2J1Jn
+
+ã 1
+
+2
++ F2 (T0, c, a, b)
+
+�
+
+T log3 T
+
+2 + M2(T0, 2T0).
+
+(16)
+
+Proof. It is clear that all three estimates hold for T ∈ [T0, 2T0], so we can assume T ≥ 2T0. Let n0 ≥ 1
+be an integer such that 2−n0T ≥ T0 but 2−n0−1T < T0. We then have
+
+M2(T0, T) = M2
+
+Å
+T0, T
+
+2n0
+
+ã
++
+
+n0−1
+�
+
+n=0
+M2
+
+Å T
+
+2n+1 , T
+
+2n
+
+ã
+
+by a dyadic partition. We can use the estimates from Theorem 2 to bound the above sum due to our
+conditions. Then the upper bounds from Corollary 4 immediately follow. The lower bound is derived as
+follows. Using (1 − x)4 − 1 ≥ −4x, which is valid for x ≥ 0, we obtain
+
+1
+
+2π2
+
+n0−1
+�
+
+n=0
+
+T
+
+2n+1
+
+Å
+log
+T
+
+2n+1
+
+ã4
+≥
+1
+
+2π2
+
+�n0−1
+�
+
+n=0
+
+1
+
+2n+1
+
+�
+
+T log4 T
+
+2 − 2 log 2
+
+π2
+
+�n0−1
+�
+
+n=0
+
+n
+
+2n+1
+
+�
+
+T log3 T
+
+2
+
+≥
+1
+
+2π2
+
+Å
+1 − 2T0
+
+T
+
+ã
+T log4 T
+
+2 − 2 log 2
+
+π2
+T log3 T
+
+2 .
+
+The result now follows from (12).
+■
+
+Corollary 5. Let A0 ≥ 1010. Then we have M2(A0) ≤ a1(A0) and M2(A0, T) ≤ a2(A0)T log4 T for
+every T ≥ A0, where
+
+a1(A0) :=
+1
+
+2π2 A0 log4 A0
+
+2 + 34.842A0 log3 A0
+
+2 + 1.3897 · 1016
+
+and
+
+a2(A0) :=
+1
+
+2π2
+
+Å
+1 − log 2
+
+log A0
+
+ã4
++ 34.842
+
+log A0
+
+Å
+1 − log 2
+
+log A0
+
+ã3
++ 9.5079 · 1015
+
+A0 log4 A0
+.
+
+Proof. The first estimate follows by the second inequality in (9) of Corollary 2. Because M2 (A0, T) ≤
+M2
+�1010, T� and M2
+�1010, 2 · 1010� ≤ 9.5079 · 1015 by Table 2, we have M2(A0, T) ≤ a2(T)T log4 T
+by (18), see the proof of Corollary 2. The derivative analysis shows that a2(T) is a decreasing function
+for T ≥ 105, implying that a2(T) ≤ a2(A0). This gives the second estimate.
+■
+
+Proof of Corollary 2. Assume T ≥ T ′
+0 = T0 ≥ 55, and also that the conditions from Theorem 2 are
+satisfied. By (16) we have
+
+M2(T ′
+0, T) ≤ 1
+
+π2 T log4 T
+
+2 + C1 (T ′
+0, c, a, b) T log
+7
+2 T
+
+2 + M2(T ′
+0, 2T ′
+0)
+
+for T ≥ T ′
+0, where
+
+C1 (T ′
+0, c, a, b) := 2
+
+6
+�
+
+n=3
+
+ÅJn
+
+π2 +
+2J1Jn
+
+log (T ′
+0/2)
+
+ã 1
+
+2
++ F2 (T ′
+0, c, a, b)
+
+log1/2 (T ′
+0/2)
+.
+
+We are taking T ′
+0 = 3 · 103 because for this value the calculations via numerical integration are still
+reasonably fast. We obtain 7.031 · 105 < M2(T ′
+0) < 7.032 · 105 and 1.249 · 106 < M2(T ′
+0, 2T ′
+0) < 1.25 · 106.
+For the choices c = (−0.923364, 0.161176), a = (0.531241, 1.52906) and b = (0.754804, 1.68921), the
+
+
+AN EXPLICIT FORM OF INGHAM’S ZERO DENSITY ESTIMATE
+7
+
+value of C1(T ′
+0, c, a, b) is 20.7225, which is as small8 as possible. We can also see that the conditions (5)
+and (6) from Theorem 2 are satisfied by this choice of parameters. Therefore, Corollary 4 implies that
+
+M2 (T ′
+0, T) ≤ 1
+
+π2 T log4 T
+
+2 + 20.7225 · T log
+7
+2 T
+
+2 + 1.25 · 106
+(17)
+
+for T ≥ T ′
+0 = 3 · 103. Inequality (8) now easily follows from (17) since M2(T) = M2 (T ′
+0, T) + M2 (T ′
+0).
+Assume T ≥ T ′′
+0 = T0 ≥ T ′
+0 = 3 · 103, and also that the conditions from Theorem 2 are satisfied. Then
+
+M2 (T ′′
+0 , T) ≤
+1
+
+2π2 T log4 T
+
+2 + F1 (T ′′
+0 , c, σ, a, b) T log3 T
+
+2 + M2 (T ′′
+0 , 2T ′′
+0 )
+(18)
+
+by (14). Also, M2 (T ′′
+0 , 2T ′′
+0 ) ≤ M2 (T ′
+0, 2T ′′
+0 ) ≤ C2 (T ′′
+0 ) and M2 (T ′′
+0 ) ≤ C2 (T ′′
+0 /2) + 7.032 · 105 by (17)
+and (8), respectively, where
+
+C2 (T ′′
+0 ) := 2
+
+π2 T ′′
+0 log4 T ′′
+0 + 20.7225
+Ä
+2T ′′
+0 log
+7
+2 T ′′
+0
+ä
++ 1.25 · 106.
+
+Trivially, M2(T) = M2 (T ′′
+0 ) + M2 (T ′′
+0 , T). We take the values for T ′′
+0 as indicated in Table 3. Finding
+a global minimum for F1 (T ′′
+0 , c, σ, a, b) for each T ′′
+0 is a computationally very complex problem, since
+we need to optimize 11 parameters that satisfy the conditions (2)–(4) from Theorem 2. To simplify the
+process, we used randomization; we generate 50 trials where for each trial we randomly choose 100 sets
+of values for these parameters, then we select an element from this set such that F1 (T ′′
+0 , c, σ, a, b) is
+minimal, and finally the “minimal” set from all trials. The values we obtained with such a method are
+listed in Table 3.
+
+T ′′
+0
+c
+σ
+a
+b
+
+104
+(−0.879, 0.1809)
+(0.3545, (0.7898, 0.4008), (0.5456, 0.3933))
+(0.339, 1.7553)
+(1.7215, 1.303)
+105
+(−0.938, 0.194)
+(0.368, (0.718, 0.435), (0.629, 0.3654))
+(1.99, 1.44)
+(1.33, 1.45)
+106
+(−0.9295, 0.1721)
+(0.4077, (0.6957, 0.3413), (0.5672, 0.4288))
+(1.6769, 1.5632)
+(1.6891, 1.6748)
+107
+(−0.9273, 0.2061)
+(0.4104, (0.6263, 0.3536), (0.5743, 0.41))
+(1.8473, 1.8288)
+(1.649, 1.9094)
+108
+(−0.9266, 0.1637)
+(0.3561, (0.7103, 0.3381), (0.5645, 0.4285))
+(0.6164, 1.9123)
+(1.0018, 1.9929)
+109
+(−0.834, 0.22985)
+(0.3964, (0.9479, 0.3927), (0.5846, 0.4235))
+(1.3609, 1.1367)
+(0.7112, 1.8455)
+1010
+(−0.8303, 0.1676)
+(0.3985, (0.668, 0.4088), (0.551, 0.386))
+(1.4356, 1.28)
+(1.5563, 1.6332)
+1015
+(−0.813, 0.221)
+(0.3464, (0.8268, 0.4263), (0.5698, 0.3511))
+(1.0851, 1.0245)
+(0.8137, 1.8276)
+1020
+(−0.875, 0.1936)
+(0.3785, (0.8615, 0.45), (0.619, 0.393))
+(0.1917, 1.525)
+(1.1358, 1.717)
+
+Table 3. Our choice of the values for the parameters c, σ, a and b.
+
+We obtain F1 (T ′′
+0 , c, σ, a, b) ≤ M1 (T ′′
+0 ), where the values for M1 (T ′′
+0 ) are listed in Table 2. The
+conditions (5) and (6) from Theorem 2 are clearly satisfied for each T ′′
+0 by the above choice of parameters.
+The first inequality in (9) thus follows from (15) since M2(T) ≥ M2 (T ′′
+0 , T). Now, M2
+�104, 2 · 104� ≤
+9.9857 · 108 and M2
+�104� ≤ 3.8095 · 108, confirming the values listed in Table 2. This gives M2
+�104� +
+M2
+�104, 2 · 104� ≤ M2
+�104�, where the value for M2
+�104� is as in Table 2. The proof of (9) for T0 = 104
+
+is thus complete. For other values of T0 we proceed as follows. For n ∈ {5, . . . , 10} ∪ {15} ∪ {20}, let
+An := {1, . . . , n − 4} if n ∈ {5, . . . , 10}, An := {5, . . . , 11} if n = 15, and An := {5} ∪ {10, . . . , 16} if
+n = 20. Then
+
+M2 (10n, 2 · 10n) ≤ min
+ß
+C2 (10n) ,
+
+min
+i∈An
+
+ß10n
+
+π2 log4 10n + (2 · 10n) M1
+�10n−i� log3 10n + M2
+�10n−i, 2 · 10n−i�™™
+
+and
+
+M2 (10n) ≤ min
+ß
+C2
+
+Å10n
+
+2
+
+ã
++ 7.032 · 105,
+
+min
+i∈An
+
+ß10n
+
+2π2 log4 10n
+
+2
++ M1
+�10n−i� 10n log3 10n
+
+2
++ M2
+�10n−i�™™
+.
+
+8According to the method FindMinimum from Mathematica. It should also be noted that all computations in this paper
+were performed with this software system.
+
+
+8
+SHASHI CHOURASIYA AND ALEKSANDER SIMONIˇC
+
+With this we recursively verify that M2 (10n) + M2 (10n, 2 · 10n) ≤ M2 (10n), where the values for
+M2 (10n) are listed in Table 2. The proof of Corollary 2 is thus complete.
+■
+
+Proof of Corollary 3. We have
+
+M1(T) ≤ T log T,
+M2(T) ≤
+Å 1
+
+2π2 + M1(T0)
+
+log T
++ M2(T0)
+
+T log4 T
+
+ã
+T log4 T
+
+for T ≥ T0 ≥ 106 by [DZA22, Theorem 3.4] for the first inequality, and by Corollary 2 for the second
+inequality.
+The result now follows by the Cauchy-Bunyakovsky-Schwarz (CBS) inequality since then
+M2/3(T) ≤ (M1(T)M2(T))1/2.
+■
+
+3. Gabriel’s convexity theorem and applications
+
+Gabriel [Gab27, Theorem 2] found an interesting two-variable convexity estimate for integrals of holo-
+morphic functions along vertical lines in the strip, see Lemma 3.
+
+Lemma 3. Let f(z) be a holomorphic function in the strip α < ℜ{z} < β for α < β with continuous
+extension to the boundary ℜ{z} = α, ℜ{z} = β. Assume that
+
+lim
+|y|→∞
+y∈R
+|f(x + iy)| = 0
+
+uniformly in x ∈ [α, β]. For c > 0 define
+
+Gf(x, c) :=
+Å� ∞
+
+−∞
+|f(x + iy)|
+
+1
+c dy
+ãc
+.
+(19)
+
+Then
+Gf(x, w1λ + w2µ) ≤ Gw1
+f (α, λ)Gw2
+f (β, µ)
+(20)
+
+for x ∈ [α, β], where
+
+w1 = w1(x, α, β) := β − x
+
+β − α,
+w2 = w2(x, α, β) := x − α
+
+β − α,
+(21)
+
+and λ and µ are arbitrary positive numbers.
+
+Proof. See, e.g., [KV92, pp. 381–384].
+■
+
+This result should be compared with [HIP27, Theorem 7], where (20) with λ = µ = 1/p was proved
+under different growth conditions on f(z).
+Let y �→ f(x + iy) be a continuous function for some fixed x ∈ R and A ≤ y ≤ B. Then
+
+If(x, A, B, c) :=
+� B
+
+A
+|f(x + iy)|
+
+1
+c dy
+(22)
+
+exists for every c > 0. The next theorem shows how we can replace, under certain mild conditions on
+f(z), the infinite integral (19) with the finite integral (22), and still more or less preserve the form of
+Gabriel’s inequality (20).
+
+Theorem 4. Let 1/2 ≤ α < β and consider a holomorphic function f(z) in {z ∈ C: α < ℜ{z} < β}\{1}
+with continuous extension to the vertical lines ℜ{z} = α and ℜ{z} = β such that:
+
+(1) If β > 1, then f(z) has a pole of order m ≥ 0 at z = 1. If β ≤ 1, we set m = 0.
+(2) For any fixed d > 0, lim|y|→∞,y∈R e−dy2|f(x + iy)| = 0 uniformly in x ∈ [α, β].
+(3) For x ∈ {α, β} and for any fixed a ≥ 0, b > 0 and c > 0, lim|u|→∞,u∈R e−u2If(x, a, bu, c) = 0.
+Also, let T > H ≥ 0, κ > 0, A1 ≥ 0, and A2 ≥ 0, and let λ and µ be arbitrary positive numbers. Then
+
+(If (x, −T, −H, w1λ + w2µ) + If (x, H, T, w1λ + w2µ))w1λ+w2µ ≤
+Å(x − 1)2 + H2
+
+x2 + H2
+
+ã− m
+
+2
+×
+
+× exp
+
+Ç
+
+κ
+
+Ç
+
+1 +
+Åβ − α
+
+2T
+
+ã2åå
+
+(J (α, A1, λ))w1λ (J (β, A2, µ))w2µ
+(23)
+
+
+AN EXPLICIT FORM OF INGHAM’S ZERO DENSITY ESTIMATE
+9
+
+for x ∈ [α, β], where
+
+J (a, b, c) := If(a, −b, b, c) +
+� ∞
+
+κ
+c ( b
+
+T )
+2 e−u
+Å
+If
+
+Å
+a, −T
+…cu
+
+κ , −b, c
+ã
++ If
+
+Å
+a, b, T
+…cu
+
+κ , c
+ãã
+du,
+(24)
+
+w1 = w1(x, α, β) and w2 = w2(x, α, β) are given by (21), and H > 0 if x = 1 and m ̸= 0.
+
+Proof. Write z = x + iy for (x, y) ∈ R2 and define
+
+g(z) :=
+Åz − 1
+
+z
+
+ãm
+exp
+Å
+κ
+� z
+
+T
+
+�2ã
+,
+ϕ(z) := g(z)f(z),
+
+where m is from the condition (1) of Theorem 4. It is clear that ϕ(z) is a holomorphic function in the
+strip α < x < β with continuous extension to the vertical lines x = α and y = β. By a slight modification
+of [KLN18, Lemma 3.7] we have |g(z)| ≤ ω1(x)e−κ(|y|/T )2 for x ≥ 1/2, y ∈ R, and |g(z)| ≥ ω2(x) for
+x ≥ 1/2, |y| ∈ [H, T], where
+
+ω1(x) := exp
+Å
+κ
+� x
+
+T
+
+�2ã
+,
+ω2(x) :=
+Å(x − 1)2 + H2
+
+x2 + H2
+
+ã m
+
+2
+exp
+Å
+κ
+� x
+
+T
+
+�2
+− κ
+ã
+.
+
+This also shows that lim|y|→∞ |ϕ(x + iy)| = 0, uniformly in x ∈ [α, β], due to the condition (2). Therefore,
+Lemma 3 can be applied for ϕ(z). We are going to provide upper and lower bounds for Gϕ(x, c), where
+this function is defined by (19). For A ≥ 0, x ∈ {α, β} and c > 0 we have
+
+Gϕ(x, c) ≤ ω1(x)
+Å� ∞
+
+−∞
+exp
+Å
+−κ
+
+c
+
+� y
+
+T
+
+�2ã
+|f(x + iy)|
+
+1
+c dy
+ãc
+
+= ω1(x)
+Å� ∞
+
+−∞
+e−v2 Å d
+
+dv If
+
+Å
+x, A, T
+… c
+
+κv, c
+ãã
+dv
+ãc
+(25)
+
+= ω1(x)
+Å� ∞
+
+−∞
+2ve−v2If
+
+Å
+x, A, T
+… c
+
+κv, c
+ã
+dv
+ãc
+(26)
+
+≤ ω1(x) (J (x, A, c))c ,
+(27)
+
+where J (a, b, c) is defined by (24). Equality (25) follows by taking y = Tv
+�
+
+c/κ and noticing that
+
+d
+dv If
+
+Å
+x, A, T
+… c
+
+κv, c
+ã
+= T
+… c
+
+κ
+∂
+∂B If(x, A, B, c)
+����
+B=T√ c
+
+κ v
+= T
+… c
+
+κ
+
+����f
+Å
+x + iT
+… c
+
+κv
+ã����
+
+1
+c
+,
+
+while (26) follows by integration by parts and the condition (3). Inequality (27) follows by splitting the
+integral, taking v2 = u and observing that
+
+If
+
+Å
+x, −T
+…cu
+
+κ , A, c
+ã
+= If
+
+Å
+x, −T
+…cu
+
+κ , −A, c
+ã
++ If (x, −A, A, c) ,
+
+and also that If(x, A, T
+�
+
+cu/κ, c) ≤ 0 and If(x, −T
+�
+
+cu/κ, −A, c) ≤ 0 for u ∈ [0, (κ/c)(A/T)2]. On the
+other hand,
+
+Gϕ(x, c1) ≥ ω2(x)
+
+ÇÇ� −H
+
+−T
++
+� T
+
+H
+
+å
+
+|f(x + iy)|
+
+1
+c1 dy
+
+åc1
+= ω2(x) (If(x, −T, −H, c1) + If(x, H, T, c1))c1
+
+(28)
+for x ∈ [α, β], c1 > 0 and T > H > 0 if x = 1 and m ̸= 0. To obtain an upper bounds for Gϕ(α, λ) and
+Gϕ(β, µ) from (20), we are using (27) with x = α, c = λ and A = A1 for the former function, and with
+x = β, c = µ and A = A2 for the latter function. Lower bound for Gϕ(x, w1λ + w2µ) from (20) is given
+by (28) for c1 = w1λ + w2µ. The claim of Theorem 4 now follows by Lemma 3 and
+
+α2(β − x) + β2(x − α) − x2(β − α) ≤ 1
+
+4(β − α)3.
+
+The latter is true since the function on the left-hand side of the above inequality in the variable x ∈ [α, β]
+attains the maximum value at x = (α + β)/2.
+■
+
+
+10
+SHASHI CHOURASIYA AND ALEKSANDER SIMONIˇC
+
+Our main application of Theorem 4 is to the mollifier fX(s) of the Riemann zeta-function. Let X ≥ 1
+be some parameter, independent of a complex variable s = σ + it, and define
+
+fX(s) := ζ(s)MX(s) − 1,
+MX(s) :=
+�
+
+n≤X
+
+µ(n)
+ns ,
+(29)
+
+where µ(n) is the M¨obius function. Clearly, fX(s) is a holomorphic function on C \ {1} with a simple
+pole at s = 1, fX(¯s) = fX(s), and also that fX(s) ≪ X|t| for σ ≥ 0 and large |t|. For 0 ≤ A ≤ B and
+c > 0 define
+
+FX(σ, A, B, c) :=
+� B
+
+A
+|fX(σ + it)|
+
+1
+c dt.
+
+This function is well-defined for all σ ∈ R if A > 0, and for all σ ∈ R \ {1} if A = 0. The next corollary is
+essentially a slightly simplified inequality (23) for the mollifier fX(s). This result is crucial in the proof
+of Theorem 1.
+
+Corollary 6. Let 1/2 ≤ α < 1 < β ≤ 3/2, T ≥ H > 1, κ > 0, A ≥ 0, and also let λ and µ be arbitrary
+positive numbers. Then
+
+(FX (σ, H, T, w1λ + w2µ))w1λ+w2µ ≤
+Å
+1 − 1
+
+H
+
+ã−1
+exp
+
+Ç
+
+κ
+
+Ç
+
+1 +
+Åβ − α
+
+2T
+
+ã2åå
+
+×
+
+Ç
+
+FX(α, 0, A, λ) +
+� ∞
+
+κ
+λ( A
+
+T )
+2 e−uFX
+
+Ç
+
+α, A, T
+
+…
+
+λu
+κ , λ
+
+å
+
+du
+
+åw1λ Å� ∞
+
+0
+e−uFX
+
+Å
+β, 0, T
+…µu
+
+κ , µ
+ã
+du
+ãw2µ
+
+(30)
+
+for σ ∈ [α, β], where w1 = w1(σ, α, β) and w2 = w2(σ, α, β) are given by (21).
+
+Proof. Inequality (30) is obviously true in the case H = T, so we can assume that T > H > 1. The claim
+then follows by Theorem 4 for f = fX(s), m = 1, A1 = A and A2 = 0 since fX(¯s) = fX(s),
+
+(σ − 1)2 + H2
+
+σ2 + H2
+≥ 1 −
+8
+
+9 + (2H)2 ≥
+Å
+1 − 1
+
+H
+
+ã2
+
+for σ ∈ [1/2, 3/2] and H > 1. Note that all the conditions of Theorem 4 are satisfied by the properties of
+fX(s) mentioned before.
+■
+
+Theorem 4 can also be used to prove a convexity property for the power moments of holomorphic
+functions in a strip.
+
+Corollary 7. Let T ≥ T0 ≥ 2 and 1/2 ≤ α < β < 1. Assume that f(z) is a holomorphic function in the
+strip x = ℜ{z} ∈ (α, β) with continuous extension to the boundary, such that the conditions (2) and (3)
+from Theorem 4 are satisfied. Assume also that
+� T
+
+−T
+|f(α + iy)|b1 dy ≤ M1T a1 (log T)c1 ,
+� T
+
+−T
+|f(β + iy)|b2 dy ≤ M2T a2 (log T)c2
+
+for all T ≥ T0, where Mi > 0, ai > 0, bi ≥ 1 and ci ≥ 0, i ∈ {1, 2}, are some constants that may depend
+on f(z). Then
+� T
+
+−T
+|f(x + iy)|µ(b1,b2;x) dy ≤ M(x)T µ(a1,a2;x) (log T)µ(c1,c2;x)
+
+for all T ≥ T0 and x ∈ [α, β], where
+
+µ(k, l; x) := kb2(β − x) + lb1(x − α)
+
+b2(β − x) + b1(x − α)
+and, for κ > 0,
+
+M(x) := exp
+
+Ç
+
+κµ(b1, b2; x)
+
+Ç
+
+1 +
+Åβ − α
+
+2T0
+
+ã2åå
+
+Cµ(1,0;x)
+1
+Cµ(0,1;x)
+2
+,
+
+Ci := Mi
+
+Ñ
+
+1 +
+� ∞
+
+0
+e−u
+Å u
+
+κbi
+
+ã ai
+
+2
+Ñ
+
+1 +
+log
+Ä
+1 +
+u
+κbi
+ä
+
+2 log T0
+
+éci
+
+du
+
+é
+
+.
+
+
+AN EXPLICIT FORM OF INGHAM’S ZERO DENSITY ESTIMATE
+11
+
+Proof. We are using Theorem 4 with m = 0, H = 0, A1 = A2 = T0, λ = 1/b1 and µ = 1/b2. By the
+assumptions we have If (α, −T0, T0, 1/b1) ≤ M1T a1 (log T)c1 and
+
+If
+
+Å
+α, −T
+… u
+
+κb1
+, −T0, 1
+
+b1
+
+ã
++ If
+
+Å
+α, T0, T
+… u
+
+κb1
+, 1
+
+b1
+
+ã
+≤
+� T√
+u
+
+κb1
+
+−T√
+u
+
+κb1
+|f(α + iy)|bi dy
+
+≤ M1T a1 (log T)c1
+Å u
+
+κb1
+
+ã a1
+
+2
+Ñ
+
+1 +
+log
+Ä
+1 +
+u
+
+κb1
+ä
+
+2 log T0
+
+éc1
+
+(31)
+
+since u ≥ κb1 (T0/T)2. Both inequalities hold also for β, M2, a2, b2 and c2 in place of α, M1, a1, b1
+and c1, respectively. Observe that the right-hand side of (31) is non-negative for all u ≥ 0. The result
+now follows since 1/ (w1λ + w2µ) = µ(b1, b2; x), w1λ/ (w1λ + w2µ) = µ(1, 0; x), w2µ/ (w1λ + w2µ) =
+µ(0, 1; x), kµ(1, 0; x) + lµ(0, 1; x) = µ(k, l; x), and µ(1, 1; x) = 1.
+■
+
+It should be noted that Corollary 7 also holds for β ≥ 1 if f(z) is holomorphic in the new extended
+strip. It can be applied to general L-functions that belong to the Selberg class or are defined as in [IK04,
+Chapter 5] since for these functions the growth conditions from Theorem 4 are satisfied by the convexity
+estimates. In the case of the Riemann zeta-function, Corollary 7 is related to some results from [Ivi03,
+Sections 8.2 and 8.5] and [Tit86, Section 7.8], and could have some effective applications to the generalized
+divisor problem [BY24].
+
+4. Proof of Theorem 1
+
+As is customary in the classical theory of zero density estimates, let
+
+hX(s) := 1 − f 2
+X(s) = (2 − ζ(s)MX(s)) ζ(s)MX(s),
+
+where fX(s) and MX(s) are defined by (29). Note that the zeros of ζ(s) are also the zeros of hX(s). Let
+1/2 < σ′ < 1 < σ′′ and 0 < H ≤ T. Assume that hX(s) does not vanish on the boundary of the open
+rectangle {z ∈ C: σ′ < ℜ{z} < σ′′, H < ℑ{z} < T}. Then, by Littlewood’s lemma [Tit86, Section 9.9],
+
+N(σ, T) − N(σ, H) ≤
+1
+
+2π (σ − σ′)
+
+�� T
+
+H
+log |hX (σ′ + it)|dt −
+� T
+
+H
+log |hX (σ′′ + it)|dt
+
++
+� σ′′
+
+σ′
+arg hX (u + iT)du −
+� σ′′
+
+σ′
+arg hX (u + iH)du
+
+�
+
+(32)
+
+for σ ∈ [σ′, σ′′]. Before proceeding to the proof of Theorem 1, we need a few technical results. Corollary 6
+is used for the estimation of the first integral, see Lemma 9, where two additional results on the second
+power moments of MX(1/2 + it) and fX(1 + δ/ log X + it) are needed, see Lemmas 5 and 6. Estimates
+for the rest of the integrals in (32) are provided by Lemmas 7 and 8.
+
+Lemma 5. Let T > 0, X ≥ X0 ≥ 109. Then
+� T
+
+0
+
+����MX
+
+Å1
+
+2 + it
+ã����
+
+2
+dt ≤ (C1(X0)T + C2(X0)X) log X,
+
+where
+
+C1(X0) := 6
+
+π2 +
+b2
+
+log X0
+,
+C2(X0) := πm0b1
+
+log X0
++ 6m0
+
+πX0
++
+πm0b2
+
+X0 log X0
+,
+
+with b1 := 0.62, b2 := 1.048, and m0 :=
+»
+
+1 + (2/3)
+�
+
+6/5 < 1.31541.
+
+Proof. See [KLN18, Lemma 4.1].
+■
+
+Lemma 6. Let T > 0, X ≥ X0 ≥ 3 · 1010, and 0 < δ ≤
+1
+20 log X. Then
+
+FX
+
+Å
+1 +
+δ
+
+log X , 0, T, 1
+
+2
+
+ã
+≤
+Å
+C3(X0, δ) + C4(X0, δ) (T + πm0)
+
+X
+
+ã
+log X,
+
+where
+
+C3(X0, δ) := πm0b4
+
+2δ
+exp
+Å 2δγ
+
+log X0
+
+ã
+,
+C4(X0, δ) :=
+b4
+
+5δeδ + b3e−2δ
+
+log X0
+,
+
+
+12
+SHASHI CHOURASIYA AND ALEKSANDER SIMONIˇC
+
+with b3 := 0.605, b4 := 0.54, and m0 as in Lemma 5.
+
+Proof. For τ ∈ (1, 11/10] and X ≥ 3 · 1010 we have9
+
+∞
+�
+
+n=1
+
+λ2
+X(n)
+nτ
+≤
+�
+
+n≤X
+
+1
+nτ
+
+Ü
+
+�
+
+d|n
+d≤X
+
+µ(d)
+
+ê2
+
++
+�
+
+n>X
+
+λ2
+X(n)
+nτ
+= ζ(τ)
+�
+
+d1≤X
+
+�
+
+d2≤X
+
+µ(d1)µ(d2)
+
+[d1, d2]τ
+≤ b4eγ(τ−1)
+
+τ − 1
+,
+
+where λX(n) are Dirichlet coefficients of fX(s). The proof now closely follows that of [KLN18, Lemmas 3.4
+and 4.3], namely that
+
+FX
+
+Å
+σ, 0, T, 1
+
+2
+
+ã
+≤ πm0
+
+∞
+�
+
+n=1
+
+λ2
+X(n)
+
+n2σ−1 + (T + πm0)
+
+∞
+�
+
+n=1
+
+λ2
+X(n)
+n2σ
+
+≤ πm0b4
+
+2
+e2γ(σ−1)
+
+σ − 1
++ T + πm0
+
+X
+
+�
+b3
+
+X2(σ−1) +
+1
+
+5(5X)σ−1
+
+∞
+�
+
+n=1
+
+λ2
+X(n)
+nσ
+
+�
+
+≤
+Åπm0b4
+
+2
+e2γ(σ−1) +
+Å(σ − 1)b3
+
+X2(σ−1) +
+b4
+
+5(5X)σ−1 eγ(σ−1)
+ã T + πm0
+
+X
+
+ã
+1
+
+σ − 1
+
+for σ ∈ (1, 21/20] and X ≥ 3 · 1010. The proof now follows by taking σ = 1 + δ/ log X in the above
+inequality.
+■
+
+Lemma 7. Let T ≥ H ≥ 2πm0, T ≥ T0 > 0 and X = hT for h ≥ 109/T0. Then
+
+−
+� T
+
+H
+log
+����hX
+
+Å3
+
+2 + it
+ã����dt ≤ C5(hT0, h),
+
+where
+
+C5(u, h) := − log
+
+�
+
+1 − 9
+
+Ç
+
+1 + 2 + γ +
+7
+
+36u
+
+log u
+
+å2 log2 u
+
+u
+
+�� 3
+
+h + 8πm0
+� Ä
+1 + 3.31
+
+log u
+ä
+
+9
+�
+1 + 2+γ+
+7
+
+36u
+
+log u
+�2
+log u
+(33)
+
+with m0 as in Lemma 5.
+
+Proof. We closely follow the proofs of Corollary 4.11 and Lemma 4.13 from [KLN18]. Note that Corol-
+lary 4.11 is valid also for η = 1/2 by the continuation principle. Then |fX(3/2 + it)| ≤ b6(X0, 1/2) for
+X ≥ X0 ≥ 109, where the function b6(X, η) is from [KLN18, Equation (4.45)]. Our conditions imply
+X0 ≥ 109 by setting X0 = hT0. Then
+
+− log
+����hX
+
+Å3
+
+2 + it
+ã���� ≤ −log �1 − b6(hT0, 1/2)2�
+
+b6(hT0, 1/2)2
+
+����fX
+
+Å3
+
+2 + it
+ã����
+
+2
+.
+
+Moreover,
+� T
+
+H
+
+����fX
+
+Å3
+
+2 + it
+ã����
+
+2
+dt ≤
+Å 3
+
+h + 8πm0
+
+ã Å
+1 +
+3.31
+
+log (hT0)
+
+ã log3(hT0)
+
+hT0
+by the proof of [KLN18, Lemma 4.13], where we notice that T −H+2πm0 ≤ T and b11(X, 3) ≤ b11(X, 2) ≤
+1+3.31/ log X for X ≥ 109, where b11(X, τ) is from [KLN18, Equation (4.68)]. The statement of Lemma 7
+now easily follows.
+■
+
+Remark 1. Note that, for fixed h, 0 < C5(u, h) ∼ (3/h + 8πm0) u−1 log3 u → 0 as u → ∞.
+
+Lemma 8. Let T ≥ H ≥ H0 ≥ 1002, T ≥ T0 ≥ e2d for d > 0, 1/2 + d/ log T ≤ σ ≤ 1 and X = hT for
+h ≥ 109/T0. Then
+�����
+
+�
+3
+2
+
+σ−
+d
+
+log T
+arg hX(u + iT)du −
+�
+3
+2
+
+σ−
+d
+
+log T
+arg hX(u + iH)du
+
+����� ≤
+Å3
+
+2 − σ +
+d
+
+log T0
+
+ã
+×
+
+×
+Å
+C6 (hT0, H0) +
+2
+
+log 2 log (HT) + 3π
+
+log 2 log (hT)
+ã
+,
+
+9The second inequality through a private communication with Prof. Ramar´e, since he and Zuniga Alterman had recently
+proved it and their result will be soon announced.
+
+
+AN EXPLICIT FORM OF INGHAM’S ZERO DENSITY ESTIMATE
+13
+
+where
+
+C6(u, H0) := 220 +
+π
+
+log 2 log
+Å
+1 +
+1
+
+u3/2
+
+ã
++
+4
+
+log 2 log
+
+�
+1
+2π
+
+ Å 5
+
+2H0
+
+ã2
++
+Å
+1 + 2
+
+H0
+
+ã2�
+
+− 2π
+
+log 2 log
+
+�
+
+1 − 9
+
+Ç
+
+1 + 2 + γ +
+7
+
+36u
+
+log u
+
+å2 log2 u
+
+u
+
+�
+
+.
+(34)
+
+Proof. This follows by the proof of Lemma 4.12 from [KLN18], by using similar arguments as in the proof
+of Lemma 7, and by several numerical simplifications.
+■
+
+Lemma 9. Let T ≥ H ≥ H0 > 1, T ≥ T0 ≥ ee, and κ > 0. Also, let X = hT for h ≥ 3 · 1010/T0, and
+let w1 = w1 (σ, 1/2, 1 + δ/ log X) and w2 = w2 (σ, 1/2, 1 + δ/ log X) for 0 < δ ≤
+1
+20 log (hT0) and with w1
+and w2 as in (21). Then
+
+FX
+
+Å
+σ, H, T, 3
+
+4w1 + 1
+
+2w2
+
+ã
+≤ L
+
+2
+
+2−σ
+0
+K
+
+2σ−1
+32−σ
+�
+L1 · (K1T)
+
+3(1−σ)
+
+2−σ (log T)
+
+4(1−σ)
+
+2−σ (log (hT))
+
+1
+
+2−σ
+
++L2 · (K2T)
+
+3(1−σ)
+
+2−σ (log (hT))
+
+2σ−1
+2−σ
+�
+
+for 1/2 ≤ σ ≤ 1. Functions L0 and K3 are defined by
+
+L0 = L0(T0, H0, κ, h, δ) :=
+exp
+�
+κ
+�
+1 +
+Ä
+1
+
+4T0
+Ä
+1 +
+2δ
+
+log (hT0)
+ää2��
+
+1 − H−1
+0
+,
+(35)
+
+and
+
+K3 = K3(T0, κ, h, δ) :=
+� ∞
+
+0
+e−u
+Å
+C3(hT0, δ) + C4(hT0, δ)
+
+h
+
+Å… u
+
+2κ + πm0
+
+T0
+
+ãã
+du,
+(36)
+
+where C3(X0, δ), C4(X0, δ) and m0 are from Lemma 6. Moreover,
+
+K1 = K1(T0, A0, κ, h) :=
+
+Ç
+
+2a2(A0)
+
+…
+
+3
+4κ
+
+å 1
+
+3 � ∞
+
+0
+e−uu
+1
+6
+Ç
+
+1 + log �1 + 3u
+
+4κ
+�
+
+2 log T0
+
+å 4
+
+3
+×
+
+×
+
+Ç
+
+C1(hT0)
+
+…
+
+3u
+4κ + hC2(hT0)
+
+å 2
+
+3
+du +
+(2a1(A0))
+
+1
+3 Ä
+hC2(hT0) + A0C1(hT0)
+
+T0
+ä 2
+
+3
+
+T
+
+1
+3
+0 log
+4
+3 T0
+(37)
+
+with C1(X0) and C2(X0) as in Lemma 5, and a1(A0), a2(A0) and A0 as in Corollary 5, while
+
+K2 = K2(T0, A0, κ) := 2
+1
+3
+…
+
+3
+4κ
+
+� ∞
+
+0
+e−u√udu + 2
+1
+3 4κ
+
+3
+
+ÅA0
+
+T0
+
+ã3
+.
+(38)
+
+Finally,
+
+L1 = L1(T0, K1, K3, h, δ) := max
+ß
+1, K
+
+3δ
+
+log (hT0)
+1
+
+™
+max
+ß
+1, K
+−
+3δ
+
+log (hT0)
+3
+
+™
+×
+
+× exp
+Å
+3δ max
+ß
+1,
+log T0
+
+log (hT0)
+
+™
++ 4δ max
+ßlog log T0
+
+log (hT0) , log log T0
+
+log T0
+
+™ã
+(39)
+
+and
+
+L2 = L2(T0, K2, K3, h, δ) := max
+ß
+1, K
+
+3δ
+
+log (hT0)
+2
+
+™
+max
+ß
+1, K
+−
+3δ
+
+log (hT0)
+3
+
+™
+exp
+Å
+3δ max
+ß
+1,
+log T0
+
+log (hT0)
+
+™ã
+,
+
+(40)
+where K1, K2 and K3 are given by (37), (38) and (36), respectively.
+
+Proof. We are using Corollary 6 with A = A0, α = 1/2, β = 1 + δ/ log X, λ = 3/4 and µ = 1/2. Firstly,
+we estimate the first term in the second line of (30). Note that
+
+FX (α, U, V, λ) ≤ 2
+1
+3 M2(U, V )
+1
+3
+Ç� V
+
+0
+
+����MX
+
+Å1
+
+2 + it
+ã����
+
+2
+dt
+
+å 2
+
+3
++ 2
+1
+3 (V − U)
+(41)
+
+
+14
+SHASHI CHOURASIYA AND ALEKSANDER SIMONIˇC
+
+for V ≥ U ≥ 0 by Minkowski’s and H¨older’s inequalities. Take U = A0 and V = T
+�
+
+λu/κ. Note that
+u ≥ (κ/λ)(A/T)2 due to the domain of integration in (30), implying V ≥ U. Then
+
+M2(U, V ) ≤ a2(A0)
+
+…
+
+3u
+4κ
+
+Ç
+
+1 + log �1 + 3u
+
+4κ
+�
+
+2 log T0
+
+å4
+T log4 T
+
+by Corollary 5, and
+� V
+
+0
+
+����MX
+
+Å1
+
+2 + it
+ã����
+
+2
+dt ≤
+
+Ç
+
+C1(hT0)
+
+…
+
+3u
+4κ + hC2(hT0)
+
+å
+
+T log (hT)
+
+by Lemma 5, where we set X0 = hT0. Also,
+
+FX (α, 0, A, λ) ≤ (2a1(A0))
+
+1
+3
+Å
+hC2(hT0) + A0C1(hT0)
+
+T0
+
+ã 2
+
+3
+T
+2
+3 log
+2
+3 (hT) + 2
+1
+3 A0
+
+by (41) for U = 0 and V = A0, and then again by Corollary 5 and Lemma 5. Therefore,
+
+FX (α, 0, A, λ) +
+� ∞
+
+κ
+λ( A
+
+T )
+2 e−uFX
+
+Ç
+
+α, A, T
+
+…
+
+λu
+κ , λ
+
+å
+
+du ≤ K1T log
+4
+3 T · log
+2
+3 (hT) + K2T,
+
+where K1 and K2 are defined by (37) and (38), respectively. Secondly, for the second term in the second
+line of (30) we simply have
+� ∞
+
+κ
+µ( A
+
+T )
+2 e−uFX
+
+Å
+β, 0, T
+…µu
+
+κ , µ
+ã
+du ≤ K3 log(hT)
+
+by Lemma 6, where K3 is defined by (36). Remembering that (a + b)x ≤ ax + bx for x ∈ (0, 1] and
+a, b ≥ 0, and writing w = 3
+
+4w1 + 1
+
+2w2, we obtain
+
+FX (σ, H, T, w) ≤
+
+Ö
+exp
+�
+κ
+�
+1 +
+Ä
+1
+4T
+Ä
+1 +
+2δ
+
+log (hT )
+ää2��
+
+1 − H−1
+
+è 1
+
+w
+
+×
+
+×
+
+ÇÇ
+
+K
+
+3
+4 w1
+
+1 w
+K
+
+1
+2 w2
+
+w
+3
+
+å
+
+T
+
+3
+4 w1
+
+w
+(log T)
+
+w1
+w (log (hT))
+
+1
+2 (w1+w2)
+
+w
++
+
+Ç
+
+K
+
+3
+4 w1
+
+2 w
+K
+
+1
+2 w2
+
+w
+3
+
+å
+
+T
+
+3
+4 w1
+
+w
+(log (hT))
+
+1
+2 w2
+
+w
+å
+
+(42)
+
+by Corollary 6. We need to estimate the resulting terms on the right-hand side of (42). In what follows,
+remember that σ ∈ [1/2, 1]. Because
+
+3(1 − σ)
+
+2 − σ
+≤
+
+3
+4w1
+w
+=
+3(1 − σ) +
+3δ
+
+log (hT )
+
+2 − σ +
+3δ
+
+log (hT )
+≤ 3(1 − σ)
+
+2 − σ
++
+3δ
+
+log (hT0),
+
+we have
+
+K
+
+3
+4 w1
+
+1 w
+≤ max
+ß
+1, K
+
+3δ
+
+log (hT0)
+1
+
+™
+K
+
+3(1−σ)
+
+1 2−σ
+(43)
+
+and
+
+T
+
+3
+4 w1
+
+w
+≤ exp
+Å 3δ log T
+
+log (hT)
+
+ã
+T
+
+3(1−σ)
+
+2−σ
+≤ exp
+Å
+3δ max
+ß
+1,
+log T0
+
+log (hT0)
+
+™ã
+T
+
+3(1−σ)
+
+2−σ .
+(44)
+
+Inequality (43) also holds for K2 in place of K1. Furthermore, because
+
+2σ − 1
+2 − σ −
+3δ
+
+log (hT0) ≤
+
+1
+2w2
+w
+=
+2σ − 1
+
+2 − σ +
+3δ
+
+log (hT )
+≤ 2σ − 1
+
+2 − σ ,
+
+we also have
+
+K
+
+1
+2 w2
+
+3 w
+≤ max
+ß
+1, K
+−
+3δ
+
+log (hT0)
+3
+
+™
+K
+
+2σ−1
+32−σ
+,
+(log (hT))
+
+1
+2 w2
+
+w
+≤ (log (hT))
+
+2σ−1
+2−σ
+(45)
+
+since log (hT) ≥ 1. Turning to the other log-terms, because log T ≥ 1 and
+
+w1
+w =
+4(1 − σ) +
+4δ
+
+log (hT )
+
+2 − σ +
+3δ
+
+log (hT )
+≤ 4(1 − σ)
+
+2 − σ
++
+4δ
+
+log (hT),
+
+
+AN EXPLICIT FORM OF INGHAM’S ZERO DENSITY ESTIMATE
+15
+
+we have
+
+(log T)
+
+w1
+w ≤ exp
+Å4δ log log T
+
+log (hT)
+
+ã
+(log T)
+
+4(1−σ)
+
+2−σ
+≤ exp
+Å
+4δ max
+ßlog log T0
+
+log (hT0) , log log T0
+
+log T0
+
+™ã
+(log T)
+
+4(1−σ)
+
+2−σ ,
+
+(46)
+where we also used T0 ≥ ee. Moreover, w1 + w2 = 1 and
+
+1
+w =
+2 +
+4δ
+
+log (hT )
+
+2 − σ +
+3δ
+
+log (hT )
+≤
+2
+
+2 − σ ,
+(47)
+
+which implies
+
+(log (hT))
+
+1
+2 (w1+w2)
+
+w
+≤ (log (hT))
+
+1
+
+2−σ .
+(48)
+
+In addition, estimate (47) is used to bound the first term on the right-hand side of (42), and this
+contributes L0 from (35) to the final estimate. Inequalities (43)–(46) and (48) contribute to L1 from (39),
+while inequalities (43) (for K2 in place of K1), (44) and (45), contribute to L2 from (40). The proof of
+Lemma 9 is thus complete.
+■
+
+Proof of Theorem 1. We are using (32) with σ′ = σ − d/ log T and σ′′ = 3/2. Note that σ′ ∈ (1/2, 1).
+Temporarily assume the non-vanishing condition on hX(s). The second integral in (32) is estimated by
+Lemma 7, while the last two integrals are estimated by Lemma 8. Note that the conditions of the lemmas
+are satisfied by the conditions of Theorem 1. Therefore, it remains to estimate the first integral in (32).
+Because log �1 + u2� ≤ ua for u ≥ 0 and a ∈ [4/3, 2], we have
+
+log |hX(s)| ≤ log
+Ä
+1 + |fX(s)|2ä
+≤ |fX(s)|
+
+1
+w ,
+w = 3
+
+4w1
+
+Å
+σ′, 1
+
+2, 1 +
+δ
+
+log X
+
+ã
++ 1
+
+2w2
+
+Å
+σ′, 1
+
+2, 1 +
+δ
+
+log X
+
+ã
+
+for δ > 0, and with w1 and w2 as in (21). Thus,
+� T
+
+H
+log |hX (σ′ + it)|dt ≤ FX (σ′, H, T, w) .
+
+Taking X = hT, we can see that all other conditions of Lemma 9 are satisfied by the conditions of
+Theorem 1. Therefore,
+
+FX (σ′, H, T, w) ≤ max
+ß
+1, L
+−
+2d
+
+log T0
+0
+
+™
+max
+ß
+1, K
+−
+3d
+
+log T0
+3
+
+™
+L
+
+2
+
+2−σ
+0
+K
+
+2σ−1
+32−σ
+×
+
+×
+Å
+L1 max
+ß
+1, K
+
+3d
+
+log T0
+1
+
+™
+exp
+Å
+d
+Å
+3 + 4 log log T0
+
+log T0
+
+ãã
+(K1T)
+
+3(1−σ)
+
+2−σ (log T)
+
+4(1−σ)
+
+2−σ (log (hT))
+
+1
+
+2−σ
+
++L2e3d max
+ß
+1, K
+
+3d
+
+log T0
+2
+
+™
+(K2T)
+
+3(1−σ)
+
+2−σ (log (hT))
+
+2σ−1
+2−σ
+ã
+,
+
+where L0, L1, L2 and K1, K2, K3 are as in Lemma 9. It is not hard to see that the statement of Theorem 1
+now follows after combining all estimates. Also, the non-vanishing condition can be removed by invoking
+the standard perturbation argument since the right-hand side of the main estimate of Theorem 1 is a
+continuous function in σ, T and H.
+■
+
+5. The fourth power moment of ζ(s) on the critical line
+
+In this section, we prove Theorem 2. The proof, which is presented through several subsections in
+Section 5.3, is technically quite involved and requires estimates on various sums that include the divisor
+function d(n) and its square. These results, which might be of interest in their own right, are gathered
+in Section 5.2. Finally, we present the method together with the plan of the proof of Theorem 2 in the
+following section.
+
+5.1. The method. Ingham’s proof of (7) is based on an approximate functional equation for ζ2(s) in
+symmetric form and is relatively complicated. A shorter proof based on a Tauberian theorem for integrals
+but that produces only an asymptotic estimate (without an error term) can be found in [Tit86, Section 7].
+However, a very elegant proof of (7) was found by Ramachandra [Ram75]. His proof, which is reproduced
+and extended in [Ivi03, Section 5.3], is based on a qualitative version of the following mean value theorem
+for Dirichlet polynomials.
+
+
+16
+SHASHI CHOURASIYA AND ALEKSANDER SIMONIˇC
+
+Lemma 10. Let T2 ≥ T1 > 0 and let {an}∞
+n=1 be a sequence of complex numbers. Then
+������
+
+� T2
+
+T1
+
+�����
+
+∞
+�
+
+n=1
+annit
+�����
+
+2
+dt − (T2 − T1)
+
+∞
+�
+
+n=1
+|an|2
+
+������
+≤ 2πm0
+
+∞
+�
+
+n=1
+
+Å
+n + 1
+
+2
+
+ã
+|an|2,
+(49)
+
+where m0 is from Lemma 5, provided that �∞
+n=1 |an| (1 + n|an|) converges.
+
+Proof. Let X ≥ 1. We have
+
+� T2
+
+T1
+
+������
+
+�
+
+n≤X
+annit
+
+������
+
+2
+
+dt = (T2 − T1)
+�
+
+n≤X
+|an|2 − i
+� �
+
+1≤n̸=m≤X
+anam
+(n/m)iT2 − (n/m)iT1
+
+log n − log m
+.
+
+Inequality (49) now follows after employing [Pre84, Inequality (D)] twice on the above double sum,
+noticing that �log n+1
+
+n
+�−1 ≤ n + 1
+
+2 for all n ∈ N, and then taking X → ∞ since all series are convergent
+due to the assumption.
+■
+
+The functional equation for ζ(s) can be written as ζ(s) = χ(s)ζ(1 − s), where
+
+χ(s) :=
+(2π)s
+
+2Γ(s) cos � πs
+
+2
+�.
+(50)
+
+This is a meromorphic function on C with only simple poles at s = 2k − 1 for k ∈ N.
+Also note
+that the functional equation implies χ(1/2 + it)χ(1/2 − it) = |χ(1/2 ± it)|2 = 1. The starting point in
+Ramachandra’s proof (which itself resembles the reflection principle [Ivi03, Section 4.4] or a half-way
+derivation of a weighted approximate functional equation [Ivi13, Section 4.5]) is to use the Mellin integral
+for e−x to get
+∞
+�
+
+n=1
+
+d(n)
+
+n1/2+it e−n/T =
+1
+2πi
+
+� 2+i∞
+
+2−i∞
+ζ2
+Å1
+
+2 + it + z
+ã
+Γ(z)T zdz
+
+for T ≥ 1. By moving the line of integration to ℜ{z} = c1 ∈ (−1, −1/2) we get in addition to
+
+1
+2πi
+
+� c1+i∞
+
+c1−i∞
+ζ2
+Å1
+
+2 + it + z
+ã
+Γ(z)T zdz
+(51)
+
+also two terms that come from the simple pole of Γ(z) at z = 0 and double pole of ζ2(1/2 + it + z) at
+z = 1/2 − it. Next, the integral (51) can be written as
+
+1
+2πi
+
+� c1+i∞
+
+c1−i∞
+χ2
+Å1
+
+2 + it + z
+ã
+Γ(z)T z
+
+ÑÑ
+�
+
+n≤T
++
+�
+
+n>T
+
+é
+d(n)
+
+n1/2−it−z
+
+é
+
+dz
+(52)
+
+due to the functional equation. By moving the line of integration to ℜ{z} = c2 ∈ (0, 1/2) only for the
+first integral (implied by the first sum) in (52) we get, beside the new integral, also another term that
+comes from the simple pole of Γ(z) at z = 0. After multiplying the final equation by χ−1(1/2 + it), and
+then truncating some sums and integrals, it is not hard to see that we obtain
+
+χ−1(1/2 + it)ζ2(1/2 + it) = |ζ(1/2 + it)|2 =
+
+6
+�
+
+k=0
+Jk(t),
+(53)
+
+where
+
+J1(t) := χ
+Å1
+
+2 + it
+ã �
+
+n≤T
+
+d(n)
+
+n1/2−it ,
+J2(t) := J1(t),
+J3(t) := χ
+Å1
+
+2 − it
+ã �
+
+n>T
+
+d(n)
+
+n1/2+it e−n/T ,
+
+J4(t) := χ
+Å1
+
+2 − it
+ã �
+
+n≤T
+
+d(n)
+
+n1/2+it
+Ä
+e−n/T − 1
+ä
+,
+J5(t) := − 1
+
+2π χ
+Å1
+
+2 − it
+ã � a1(log T )a2
+
+−a1(log T )a2 P(0, 1, c1; u)du,
+
+J6(t) := − 1
+
+2π χ
+Å1
+
+2 − it
+ã � b1(log T )b2
+
+−b1(log T )b2 P(1, 0, c2; u)du
+
+and
+
+
+AN EXPLICIT FORM OF INGHAM’S ZERO DENSITY ESTIMATE
+17
+
+J0(t) := − 1
+
+2π χ
+Å1
+
+2 − it
+ã�Ç� −a1(log T )a2
+
+−∞
++
+� ∞
+
+a1(log T )a2
+
+å
+
+P(0, 1, c1; u)du
+
++
+
+�� −b1(log T )b2
+
+−∞
++
+� ∞
+
+b1(log T )b2
+
+�
+
+P(1, 0, c2; u)du + 2π Res
+z= 1
+
+2 −it
+
+Å
+ζ2
+Å1
+
+2 + it + z
+ã
+Γ(z)T z
+ã�
+
+for a1 > 0, a2 > 1, b1 > 0, b2 > 1 and
+
+P(a, b, c; u) := χ2
+Å1
+
+2 + c + i(t + u)
+ã
+Γ (c + iu) T c+iu
+
+ÑÑ
+
+a
+�
+
+n≤T
++b
+�
+
+n>T
+
+é
+d(n)
+
+n
+1
+2 −c−i(t+u)
+
+é
+
+.
+
+Squaring (53), and then integrating the result from T to 2T gives
+
+M2(T, 2T) = 2
+� 2T
+
+T
+|J1(t)|2 dt
+�
+��
+�
+I. part
+
++
+� 2T
+
+T
+
+�J2
+1(t) + J2
+2(t)� dt
+�
+��
+�
+II. part
+
++R,
+(54)
+
+where
+
+|R| ≤ 2
+
+6
+�
+
+k=3
+
+�����
+
+� 2T
+
+T
+(J1(t) + J2(t)) Jk(t)dt
+
+�����
+�
+��
+�
+III. part
+
++
+
+6
+�
+
+k=3
+
+� 2T
+
+T
+|Jk(t)|2 dt
+
+�
+��
+�
+IV. part
+
++ 2
+� �
+
+3≤n<m≤6
+
+� 2T
+
+T
+|Jn(t)Jm(t)| dt
+
+�
+��
+�
+V. part
+
++ 2
+� 2T
+
+T
+|J0(t)| ·
+����ζ
+Å1
+
+2 + it
+ã����
+
+2
+dt +
+� 2T
+
+T
+|J0(t)|2 dt
+�
+��
+�
+VI. part
+
+.
+(55)
+
+The curly brackets in (54) and (55) indicate the plan of the proof of Theorem 2. Precisely, the seemingly
+unnatural appearance of the second and the third part allows us to obtain an asymptotically correct
+estimate (12) since we can show that all terms, except the first one, are ≪ T log3 T. However, if one were
+interested in obtaining just an upper bound like (13), then (54) and (55) can be simplified to
+
+M2(T, 2T) ≤ 4
+� 2T
+
+T
+|J1(t)|2 dt +
+
+6
+�
+
+k=3
+
+� 2T
+
+T
+|Jk(t)|2 dt + 4
+
+6
+�
+
+k=3
+
+� 2T
+
+T
+|J1(t)Jk(t)| dt
+
++ 2
+� �
+
+3≤n<m≤6
+
+� 2T
+
+T
+|Jn(t)Jm(t)| dt + 2
+� 2T
+
+T
+|J0(t)| ·
+����ζ
+Å1
+
+2 + it
+ã����
+
+2
+dt +
+� 2T
+
+T
+|J0(t)|2 dt.
+(56)
+
+Before proceeding to the proof, we need first some auxiliary results for various sums that contain d(n)
+and d2(n), together with some estimates for the moduli of Γ(z), χ(z) and ζ(1/2 + it).
+
+5.2. Some results on various sums that contain d(n) and d2(n). In this section, we are going to
+prove several estimates on sums that involve d(n) and d2(n), and are crucial for the estimation of terms
+in (54) and (55).
+
+Lemma 11. Let x ≥ x0 ≥ 2. Then
+�
+
+n≤x
+
+d(n)
+nσ
+≤ D1(x0, σ0)
+
+1 − σ
+x1−σ log x,
+σ0 ≤ σ ≤ 1/2, σ0 ≤ 0,
+
+and
+�
+
+n>x
+
+d(n)
+nσ
+≤ D2(x0, σ0)
+
+(σ0 − 1)2 x1−σ log x,
+σ ≥ σ0 > 1,
+
+where
+
+D1(x0, σ0) := 1 +
+2γ − 1 −
+σ0
+
+1−σ0
+
+log x0
++ (1 − σ0) � 1
+
+2 + |σ0| − σ0
+�
+
+√x0
++ 1 − 2γσ0
+√x0 log x0
+,
+(57)
+
+D2(x0, σ0) := σ0 − 1 + 1 + 2γ(σ0 − 1)
+
+log x0
++
+4σ0 − 1
+
+(2σ0 − 1)√x0 log x0
+(58)
+
+
+18
+SHASHI CHOURASIYA AND ALEKSANDER SIMONIˇC
+
+and γ is the Euler–Mascheroni constant.
+
+Proof. By [BBR12, Theorem 1.1] we have �
+
+n≤x d(n) = x log x + (2γ − 1)x + ∆(x) with |∆(x)| ≤ √x for
+x ≥ 1. Let 1 ≤ X ≤ Y . By partial summation,
+
+�
+
+X<n≤Y
+
+d(n)
+nσ
+= Y −σ �
+
+n≤Y
+d(n) − X−σ �
+
+n≤X
+d(n) + σ
+� Y
+
+X
+
+�
+
+n≤u d(n)
+
+u1+σ
+du.
+(59)
+
+The statement of Lemma 11 for σ0 ≤ σ ≤ 1/2, σ0 ≤ 0 now follows by taking X = 1 and Y = x in (59),
+by straightforward integration, by noticing that
+
+σ �1 − x1−σ�
+
+(1 − σ)2
+≤
+
+® 0,
+σ ∈ [0, 1),
+−σx1−σ
+(1−σ)2 ,
+σ < 0,
+
+and by the mean-value estimate
+
+(1 + 2 (|σ| − σ)) x1/2−σ − 2|σ|
+
+1 − 2σ
+≤ 1 +
+Å1
+
+2 + |σ| − σ
+ã
+x
+1
+2 −σ log x
+
+that is valid for all σ < 1/2. The corresponding result for σ ≥ σ0 > 1 simply follows by taking X = x
+and Y → ∞ in (59), while observing that (σ − 1)−2D2(x0, σ) is a decreasing function in σ > 1.
+■
+
+Remark 2. Although there exist better explicit estimates for |∆(x)|, e.g., of the form ∆(x) ≪ x
+1
+3 log x
+as in [BBR12], the above weaker version serves our purpose.
+
+Lemma 12. Let x ≥ x0 ≥ 2 and σ ∈ [0, 1]. Then
+�
+
+n≤x
+
+d(n)
+nσ
+�1 − e− n
+
+x � ≤ D1(x0, σ − 1)
+
+2 − σ
+x1−σ log x,
+�
+
+n>x
+
+d(n)
+nσ e− n
+
+x ≤ D3(x0)x1−σ log x,
+
+where D1(x0, σ0) is defined by (57) and
+
+D3(x0) := 1
+
+e + 1 + 2γ
+
+e log x0
++
+5
+
+2e√x0 log x0
+,
+(60)
+
+where γ is the Euler–Mascheroni constant.
+
+Proof. The first inequality simply follows from Lemma 11 due to the fact that |1 − e−u| ≤ u for u ∈ [0, 1]
+and σ − 1 ∈ [−1, 0]. Concerning the second inequality, we have
+�
+
+n>x
+
+d(n)
+nσ e− n
+
+x ≤ 1
+
+xσ
+�
+
+n>x
+d(n)e− n
+
+x ,
+σ ≥ 0,
+
+and
+�
+
+n>x
+d(n)e− n
+
+x = −1
+
+e
+
+�
+
+n≤x
+d(n) + 1
+
+x
+
+� ∞
+
+x
+e− u
+
+x �
+
+n≤u
+d(n)du
+
+by partial summation. Now,
+
+1
+x
+
+� ∞
+
+x
+e− u
+
+x �
+
+n≤u
+d(n)du = 1
+
+x
+
+� ∞
+
+x
+e− u
+
+x (u log u + (2γ − 1)u) du + 1
+
+x
+
+� ∞
+
+x
+e− u
+
+x ∆(u)du
+
+≤ 2
+
+ex log x + 4γ
+
+e x + 3
+
+2e
+√x,
+
+where we have used
+� ∞
+
+x
+e− u
+
+x uα(log u)kdu = 1 + α
+
+e
+x1+α(log x)k + α(α − 1)x2
+� ∞
+
+x
+e− u
+
+x uα−2(log u)kdu
+
++ αkx2
+� ∞
+
+x
+e− u
+
+x uα−2(log u)k−1du + kx
+� ∞
+
+x
+e− u
+
+x uα−1(log u)k−1du,
+
+which is valid for all α ∈ R and k ∈ R. The stated result now easily follows.
+■
+
+
+AN EXPLICIT FORM OF INGHAM’S ZERO DENSITY ESTIMATE
+19
+
+Lemma 13. Let x ≥ 2. Then
+�
+
+n≤x
+d2(n) = D1x log3 x + D2x log2 x + D3x log x + D4x + D0(x),
+
+where D1 = 1/π2, 0.744341 < D2 < 0.744342, 0.823265 < D3 < 0.823266, 0.460323 < D4 < 0.460324
+and |D0(x)| ≤ 9.73x3/4 log x.
+
+Proof. This is [CHT21, Theorem 2].
+■
+
+Lemma 14. Let x ≥ x0 ≥ 2. Then
+�
+
+n≤x
+
+d2(n)
+
+nσ
+≤ D4(x0, σ)x1−σ log3 x,
+σ ∈ [−3, 1),
+
+and
+�
+
+n>x
+
+d2(n)
+
+nσ
+≤ D5(x0, σ)
+
+(σ − 1)4 x1−σ log3 x,
+σ > 1,
+
+where
+
+D4(x0, σ) :=
+ß D41(x0, σ),
+σ ∈ [−3, 0),
+1
+
+1−σD42(x0, σ),
+σ ∈ [0, 1)
+(61)
+
+with
+
+D41(x0, σ) :=
+1
+
+(1 − σ)π2 +
+Å
+−
+3σ
+
+(1 − σ)2π2 + 0.744342
+
+1 − σ
+
+ã
+1
+
+log x0
+
++
+Å
+6σ
+
+(1 − σ)3π2 − 1.488684σ
+
+(1 − σ)2
++ 0.823266
+
+1 − σ
+
+ã
+1
+
+log2 x0
+
++
+Å
+−
+6σ
+
+(1 − σ)4π2 + 1.488684σ
+
+(1 − σ)3
+− 0.823266σ
+
+(1 − σ)2
++ 0.460324
+
+1 − σ
+
+ã
+1
+
+log3 x0
++
+17.52
+
+x1/4
+0
+log2 x0
+,
+
+and
+
+D42(x0, σ) := 1
+
+π2 + 0.744342
+
+log x0
++ 0.823266
+
+log2 x0
++ 0.460324
+
+log3 x0
++
+9.73σ(1 − σ)
+
+xmin{1/4,1−σ}
+0
+log x0
++ 9.73(1 − σ)
+
+x1/4
+0
+log2 x0
+,
+
+while
+
+D5(x0, σ) := (σ − 1)3
+
+π2
++ (σ − 1)2
+Å3σ
+
+π2 + 0.744342(σ − 1)
+ã
+1
+
+log x0
+
++ (σ − 1)
+Å6σ
+
+π2 + 1.488684σ(σ − 1) + 0.823266(σ − 1)2
+ã
+1
+
+log2 x0
+
++
+Å6σ
+
+π2 + 1.488684σ(σ − 1) + 0.823266σ(σ − 1)2 + 0.460324(σ − 1)3
+ã
+1
+
+log3 x0
+
++
+Å
+1 +
+σ
+
+σ − 3/4
+
+Å
+1 +
+1
+
+(σ − 3/4) log x0
+
+ãã 9.73(σ − 1)4
+
+x1/4
+0
+log2 x0
+.
+(62)
+
+Proof. Let 2 ≤ X ≤ Y , σ ∈ R \ {1} and k ≥ 0. Note that
+� Y
+
+X
+u−σ (log u)k du =
+logk Y
+
+(1 − σ)Y σ−1 −
+logk X
+
+(1 − σ)Xσ−1 −
+k
+
+1 − σ
+
+� Y
+
+X
+u−σ (log u)k−1 du.
+
+Repeated use of the above recursive relation, in combination with partial summation and Lemma 13,
+gives
+�
+
+X<n≤Y
+
+d2(n)
+
+nσ
+= Y −σ �
+
+n≤Y
+d2(n) − X−σ �
+
+n≤X
+d2(n) + σ
+� Y
+
+X
+
+�
+
+n≤u d2(n)
+
+u1+σ
+du
+
+=
+
+4
+�
+
+k=1
+DkY 1−σ (log Y )4−k + σZ(Y, σ) −
+
+4
+�
+
+k=1
+DkX1−σ (log X)4−k − σZ(X, σ)
+
++ Y −σD0(Y ) − X−σD0(X) + σ
+� Y
+
+X
+
+D0(u)
+u1+σ du,
+(63)
+
+
+20
+SHASHI CHOURASIYA AND ALEKSANDER SIMONIˇC
+
+where
+
+Z(Z, σ) :=
+D1 log3 Z
+
+(1 − σ)Zσ−1 +
+Å
+−
+3D1
+
+(1 − σ)2 +
+D2
+
+1 − σ
+
+ã log2 Z
+
+Zσ−1 +
+Å
+6D1
+
+(1 − σ)3 −
+2D2
+
+(1 − σ)2 +
+D3
+
+1 − σ
+
+ã log Z
+
+Zσ−1
+
++
+Å
+−
+6D1
+
+(1 − σ)4 +
+2D2
+
+(1 − σ)3 −
+D3
+
+(1 − σ)2 +
+D4
+
+1 − σ
+
+ã
+1
+
+Zσ−1 .
+(64)
+
+Also,
+
+Z(Y, σ) − Z(X, σ) ≤ �D1 log3 Y + D2 log2 Y + D3 log Y + D4
+� Y 1−σ − X1−σ
+
+1 − σ
+.
+(65)
+
+Let σ ∈ [−3, 0], X = 2 and Y = x. Then (63) and (64) imply
+�
+
+n≤x
+
+d2(n)
+
+nσ
+≤
+Å D1
+
+1 − σ +
+Å
+− 3σD1
+
+(1 − σ)2 +
+D2
+
+1 − σ
+
+ã
+1
+
+log x +
+Å 6σD1
+
+(1 − σ)3 −
+2σD2
+
+(1 − σ)2 +
+D3
+
+1 − σ
+
+ã
+1
+
+log2 x
+
++
+Å
+− 6σD1
+
+(1 − σ)4 +
+2σD2
+
+(1 − σ)3 −
+σD3
+
+(1 − σ)2 +
+D4
+
+1 − σ
+
+ã
+1
+
+log3 x
+
+ã
+x1−σ log3 x
+
++ 1 − 2−σ − σZ(2, σ) + 9.73x
+3
+4 −σ log x + 9.73|σ|
+� x
+
+2
+
+log u
+u1/4+σ du.
+(66)
+
+Note that
+� x
+
+2
+
+log u
+u1/4+σ du ≤ x3/4−σ − 23/4−σ
+
+3/4 − σ
+log x ≤ xmax{3/4−σ,0} log2 x − 2−1/4 log 2 log x
+(67)
+
+for σ ∈ (−∞, 1] by the mean-value theorem. The values of the expressions in the inner brackets of (66) are
+positive, while the last line in (66) is ≤ 17.52x3/4−σ log x by the first inequality in (67). The corresponding
+result of Lemma 14 now easily follows.
+Next, consider σ ∈ [0, 1), X = 2 and Y = x.
+It follows
+from (63), (65) and (67) that
+
+�
+
+n≤x
+
+d2(n)
+
+nσ
+≤ x1−σ
+
+1 − σ
+
+4
+�
+
+k=1
+Dk (log x)4−k + 1 − 2−σ −
+σ
+
+1 − σ
+
+4
+�
+
+k=1
+Dk (log 2)4−k
+
++ 9.73x
+3
+4 −σ log x + 9.73σxmax{3/4−σ,0} log2 x − 9.73σ2−1/4 log2 2.
+
+The sum of those terms on the right-hand side of the above inequality that do not depend on x is not
+positive. The corresponding result of Lemma 14 now easily follows. Finally, let σ > 1, X = x and
+Y → ∞. The result follows from (63) and (64), together with
+� ∞
+
+x
+
+log u
+u1/4+σ du =
+1
+
+(σ − 3/4)xσ−3/4
+
+Å
+log x +
+1
+
+σ − 3/4
+
+ã
+.
+
+The proof is thus complete.
+■
+
+Lemma 15. Let x ≥ x0 ≥ 2. Then
+������
+
+�
+
+n≤x
+
+d2(n)
+
+n
+−
+1
+
+4π2 log4 x
+
+������
+≤ D6(x0) log3 x,
+
+where
+D6(x0) := 0.349436 + 1.155975
+
+log x0
++ 1.28359
+
+log2 x0
++
+154
+
+log3 x0
++
+9.73
+
+x1/4
+0
+log2 x0
+.
+(68)
+
+Proof. The result follows by straightforward integration, using the first equality in (63) for σ = 1, X = 2
+and Y = x in combination with Lemma 13.
+■
+
+Lemma 16. Let x ≥ x0 ≥ e4 and σ ≥ −1. Then
+�
+
+n>x
+
+d2(n)
+
+nσ e− 2n
+
+x ≤ D7(x0)x1−σ log3 x,
+
+where
+D7(x0) :=
+3
+
+(2eπ)2 + 0.12441
+
+log x0
++ 0.364
+
+log2 x0
++
+0.3
+
+log3 x0
++
+4.61
+
+x1/4
+0
+log2 x0
+.
+(69)
+
+
+AN EXPLICIT FORM OF INGHAM’S ZERO DENSITY ESTIMATE
+21
+
+Proof. We are going to show that
+�
+
+n>x
+nd2(n)e− 2n
+
+x ≤ D7(x0)x2 log3 x.
+(70)
+
+Then the result will follow since
+�
+
+n>x
+
+d2(n)
+
+nσ e− 2n
+
+x ≤
+1
+
+x1+σ
+�
+
+n>x
+nd2(n)e− 2n
+
+x
+
+for σ ≥ −1. We have
+�
+
+n>x
+nd2(n)e− 2n
+
+x = −e−2x
+�
+
+n≤x
+d2(n) +
+� ∞
+
+x
+
+Å2u
+
+x − 1
+ã
+e− 2u
+
+x �
+
+n≤u
+d2(n)du
+
+= −e−2x2
+4
+�
+
+k=1
+Dk(log x)4−k +
+
+4
+�
+
+k=1
+Dk
+
+� ∞
+
+x
+
+Å 2
+
+xu2 − u
+ã
+e− 2u
+
+x (log u)4−kdu
+
+− e−2xD0(x) +
+� ∞
+
+x
+
+Å2u
+
+x − 1
+ã
+e− 2u
+
+x D0(u)du
+(71)
+
+by partial summation and Lemma 13. Repeated use of integration by parts gives
+� ∞
+
+x
+e− 2u
+
+x uα(log u)kdu = α2 + α + 4
+
+8e2
+x1+α(log x)k + k(2α + 1)
+
+8e2
+x1+α(log x)k−1 + k(k − 1)
+
+8e2
+x1+α(log x)k−2
+
++ α(α − 1)(α − 2)
+
+8
+x3
+� ∞
+
+x
+e− 2u
+
+x (log u)k
+
+u3−α du + k �3α2 − 6α + 2�
+
+8
+x3
+� ∞
+
+x
+e− 2u
+
+x (log u)k−1
+
+u3−α
+du
+
++ 3(α − 1)k(k − 1)
+
+8
+x3
+� ∞
+
+x
+e− 2u
+
+x (log u)k−2
+
+u3−α
+du + k(k − 1)(k − 2)
+
+8
+x3
+� ∞
+
+x
+e− 2u
+
+x (log u)k−3
+
+u3−α
+du
+
+for any α ∈ R and k ∈ R. Then
+
+−e−2xD0(x) +
+� ∞
+
+x
+
+Å2u
+
+x − 1
+ã
+e− 2u
+
+x D0(u)du ≤ 9.73
+
+e2 x
+7
+4 log x + 19.46 log x
+
+x5/4
+
+� ∞
+
+x
+e− 2u
+
+x u2du
+
+≤ 4.61x
+7
+4 log x.
+(72)
+
+Using
+� ∞
+
+x
+e− 2u
+
+x (log u)k
+
+uα
+du ≤
+1
+2e2 x1−α(log x)k,
+k ≤ 2, α ≥ 1,
+
+we also obtain
+� ∞
+
+x
+
+Å 2
+
+xu2 − u
+ã
+e− 2u
+
+x (log u)3du ≤
+7
+4e2 x2(log x)3 +
+57
+16e2 x2(log x)2 + 3
+
+e2 x2 log x + 3
+
+4e2 x2,
+� ∞
+
+x
+
+Å 2
+
+xu2 − u
+ã
+e− 2u
+
+x (log u)2du ≤
+7
+4e2 x2(log x)2 + 19
+
+8e2 x2 log x + 1
+
+e2 x2,
+� ∞
+
+x
+
+Å 2
+
+xu2 − u
+ã
+e− 2u
+
+x log udu ≤
+7
+4e2 x2 log x + 19
+
+16e2 x2,
+� ∞
+
+x
+
+Å 2
+
+xu2 − u
+ã
+e− 2u
+
+x du ≤
+7
+4e2 x2.
+
+Therefore,
+
+− e−2x2
+4
+�
+
+k=1
+Dk(log x)4−k +
+
+4
+�
+
+k=1
+Dk
+
+� ∞
+
+x
+
+Å 2
+
+xu2 − u
+ã
+e− 2u
+
+x (log u)4−kdu ≤ 3D1
+
+4e2 x2(log x)3
+
++
+Å57D1
+
+16e2 + 3D2
+
+4e2
+
+ã
+x2(log x)2 +
+Å3D1
+
+e2
++ 19D2
+
+8e2
++ 3D3
+
+4e2
+
+ã
+x2 log x +
+Å3D1
+
+4e2 + D2
+
+e2 + 19D3
+
+16e2 + 3D4
+
+4e2
+
+ã
+x2.
+
+(73)
+
+It is straightforward to verify that (70) is valid by considering (72) and (73) in (71).
+■
+
+
+22
+SHASHI CHOURASIYA AND ALEKSANDER SIMONIˇC
+
+Lemma 17. Let x ≥ x0 ≥ 2. Then
+�
+
+n≤x
+
+d2(n)
+
+nσ
+�e− n
+
+x − 1�2 ≤ D4(x0, σ − 2)x1−σ log3 x
+
+for σ ∈ [−1, 2], where D4(x0, σ) is defined by (61).
+
+Proof. We have
+�
+
+n≤x
+
+d2(n)
+
+nσ
+�e− n
+
+x − 1�2 ≤ 1
+
+x2
+�
+
+n≤x
+d2(n)n2−σ
+
+since |e−u − 1| ≤ u for u ∈ [0, 1]. The result now follows by Lemma 14.
+■
+
+Remark 3. The main terms in the estimates from Lemmas 12, 16 and 17 can be improved for certain
+σ’s, e.g., essentially the same method as in the proof of Lemma 16 gives
+�
+
+n>x
+d2(n)e− 2n
+
+x =
+1
+
+2(eπ)2 x log3 x + O �x log2 x� .
+
+However, there are some technical difficulties to obtain asymptotically correct estimates when σ is not an
+integer. Note that the above also shows that the first estimate of [Ivi03, p. 138] is not correct, although
+this does not change the final result.
+
+5.3. Proof of Theorem 2. In this section, we provide the proof of Theorem 2 by estimating each of
+the six parts in (54) and (55). In order to simplify some expressions throughout the following sections,
+we define
+η(T0) := 1 + πm0
+
+T0
+,
+
+where m0 is from Lemma 5. In addition, we assume the notation and conditions (1)–(6) from Theorem 2.
+Before proceeding to the proof, we need two additional results that are related to the Gamma function.
+
+Lemma 18. Let z = x + iy with x ∈ [−1, 1] and |y| ≥ y0 ≥ 2. Then
+
+exp
+Å
+− 1
+
+2y2
+0
+
+ã
+≤
+|Γ(z)|
+√
+
+2π|z|x− 1
+
+2 e− π
+
+2 |y| ≤ exp
+Å 1
+
+2y2
+0
+
+ã
+(74)
+
+and
+
+U−(y0) ≤
+Å|z|
+
+2π
+
+ãx− 1
+
+2
+|χ(z)| ≤ U+(y0),
+U±(y0) := �1 ∓ e−πy0�−1 exp
+Å
+± 1
+
+2y2
+0
+
+ã
+.
+(75)
+
+In addition, |χ(z)| ≤ 0.4|y|1/2−x + 16 for x ∈ [−1/2, 0] and y ∈ R, while |χ(z)| ≤ 6.31/(1 − x) for
+x ∈ [1/2, 1) and y ∈ R.
+
+Proof. Inequalities (74) follow from [DZA22, Theorem 2.1 (B2)] with θ = arctan 2. Inequalities (75)
+follow from (50), (74) and
+
+1 − e−πy0 ≤ 2e− π
+
+2 |y| ���cos
+�πz
+
+2
+
+���� ≤ 1 + e−πy0,
+
+with the last inequalities true by [DZA22, Proposition 2.2]. For the second part, one can use (75) to
+obtain |χ(z)| ≤ 0.4|y|1/2−x for x ∈ [−1/2, 0] and |y| ≥ 102, while the maximum principle and numerical
+verification show that |χ(z)| ≤ 16 holds for x ∈ [−1/2, 0] and |y| ≤ 102.
+Finally, |χ(z)| ≤ 1.1 for
+x ∈ [1/2, 1] and |y| ≥ 2π, while |(z − 1)χ(z)| ≤ 6.31 for x ∈ [1/2, 1] and |y| ≤ 2π by the maximum
+modulus principle and numerical verification.
+■
+
+Lemma 19. Let t ≥ T ≥ 5. Then
+����� Res
+z= 1
+
+2 −it
+
+Å
+ζ2
+Å1
+
+2 + it + z
+ã
+Γ(z)T z
+ã����� ≤ 12
+√
+
+Te− π
+
+2 T log T.
+
+Proof. The Laurent expansion of ζ(s) at s = 1 gives (s − 1)2ζ2(s) = 1 + 2γ(s − 1) + (s − 1)2h(s) for some
+entire function h(s), where γ is the Euler–Mascheroni constant. Note that the preceding equality is valid
+for all s ∈ C. Therefore,
+
+Res
+z= 1
+
+2 −it
+
+Å
+ζ2
+Å1
+
+2 + it + z
+ã
+Γ(z)T z
+ã
+=
+lim
+z→ 1
+
+2 −it
+d
+dz
+
+ÇÅ
+z − 1
+
+2 + it
+ã2
+ζ2
+Å1
+
+2 + it + z
+ã
+Γ(z)T z
+å
+
+
+AN EXPLICIT FORM OF INGHAM’S ZERO DENSITY ESTIMATE
+23
+
+=
+Å
+2γ + Γ′
+
+Γ
+
+Å1
+
+2 − it
+ã
++ log T
+ã
+T
+1
+2 −itΓ
+Å1
+
+2 − it
+ã
+.
+
+By [Olv74, Exercise 4.2 on p. 295] we have
+����
+Γ′
+
+Γ
+
+Å1
+
+2 − it
+ã���� ≤ log t + π
+
+2 + 1
+
+2 log
+Å
+1 +
+1
+
+4T 2
+
+ã
++ 1
+
+2T +
+1
+
+3
+√
+
+2T 2 ≤ log t + 1.7.
+
+By (74) we also have |Γ (1/2 − it)| ≤ 3e− π
+
+2 t. The stated inequality now follows since 2γ + 1.7 + log T ≤
+3 log t and e−πt/2 log t is a decreasing function for t ≥ 5.
+■
+
+5.3.1. I. part. By Lemmas 10, 14 and 15 we have
+�����2
+� 2T
+
+T
+|J1(t)|2 dt −
+1
+
+2π2 T log4 T
+
+����� ≤ J1(T0)T log3 T,
+(76)
+
+where
+
+J1(T0) := 2η(T0)D6(T0) + 4πm0D4(T0, 0) + m0 log T0
+
+2πT0
+,
+(77)
+
+and D6(x0) and D4(x0, σ) are defined by (68) and (61), respectively. This shows that the main con-
+tribution in (12) comes from this part. In the subsequent sections, we show that all other terms are
+≪ T log3 T.
+
+5.3.2. II. part. Let f(z) := χ−1(z) �
+
+n≤T n−zd(n).
+It is clear that this is a holomorphic function in
+{z ∈ C: |ℑ{z}| > 1}. By Cauchy’s theorem,
+
+i
+� 2T
+
+T
+
+�J2
+1(t) + J2
+2(t)� dt =
+
+Ç�
+1
+2 +2iT
+
+1
+2 +iT
++
+�
+1
+2 −iT
+
+1
+2 −2iT
+
+å
+
+f 2(z)dz
+
+=
+
+Ç� σ1+2iT
+
+σ1+iT
++
+� σ1−iT
+
+σ1−2iT
+
+å
+
+f 2(z)dz
+
++
+
+Ç� σ1+iT
+
+1
+2 +iT
++
+� σ1−2iT
+
+1
+2 −2iT
+
+å
+
+f 2(z)dz +
+
+Ç�
+1
+2 +2iT
+
+σ1+2iT
++
+�
+1
+2 −iT
+
+σ1−iT
+
+å
+
+f 2(z)dz.
+(78)
+
+We have
+�����
+
+Ç� σ1+iT
+
+1
+2 +iT
++
+� σ1−2iT
+
+1
+2 −2iT
+
+å
+
+f 2(z)dz
+
+����� ≤
+�
+1
+2
+
+σ1
+
+Ä
+|χ(u + iT)|−2 + |χ(u + 2iT)|−2ä
+Ñ
+�
+
+n≤T
+n−ud(n)
+
+é2
+
+du
+
+≤
+ÅD1(T0, 0)
+
+U−(T0)
+
+ã2 Ç�
+1
+2
+
+σ1
+
+(2π)1−2u + π1−2u
+
+(1 − u)2
+du
+
+å
+
+T log2 T
+
+by Lemmas 11 and 18, with the same upper bound holding also for the modulus of the last pair of
+integrals in (78). Next,
+�����
+
+Ç� σ1+2iT
+
+σ1+iT
++
+� σ1−iT
+
+σ1−2iT
+
+å
+
+f 2(z)dz
+
+����� ≤ 2
+� 2T
+
+T
+|χ(σ1 + iu)|−2
+������
+
+�
+
+n≤T
+
+d(n)
+nσ1+iu
+
+������
+
+2
+
+du
+
+≤
+2
+
+(U−(T0))2
+
+Å T
+
+2π
+
+ã2σ1−1 � 2T
+
+T
+
+������
+
+�
+
+n≤T
+
+d(n)
+nσ1+iu
+
+������
+
+2
+
+du
+
+≤ 2(2π)1−2σ1
+
+(U−(T0))2 (η(T0)D4(T0, 2σ1) + 2πm0D4(T0, 2σ1 − 1)) T log3 T
+
+by Lemmas 18, 10 and 14. Therefore,
+� 2T
+
+T
+
+�J2
+1(t) + J2
+2(t)� dt ≤ J2,1(T0, σ1)T log3 T,
+(79)
+
+where
+
+
+24
+SHASHI CHOURASIYA AND ALEKSANDER SIMONIˇC
+
+J2,1(T0, σ1) := 2(2π)1−2σ1
+
+(U−(T0))2 (η(T0)D4(T0, 2σ1) + 2πm0D4(T0, 2σ1 − 1))
+
++
+2
+
+log T0
+
+ÅD1(T0, 0)
+
+U−(T0)
+
+ã2 �
+1
+2
+
+σ1
+
+(2π)1−2u + π1−2u
+
+(1 − u)2
+du,
+(80)
+
+and D4(x0, σ), D1(x0, σ0) and U−(y0) are defined by (61), (57) and (75), respectively.
+
+5.3.3. III. part. This part is the most challenging to estimate, and we need to divide it into several new
+terms. First, we estimate it for k ∈ {3, 4}. Let
+
+g1(z) := χ(z)−1 �
+
+n>T
+
+d(n)
+nz e−n/T ,
+g2(z) := χ(z)−1 �
+
+n≤T
+
+d(n)
+nz
+Ä
+e−n/T − 1
+ä
+.
+
+It is clear that g1(z) and g2(z) are holomorphic functions in {z ∈ C: |ℑ{z}| > 1}.
+Define F(z) :=
+F1(z)+F2(z), where F1(z) := f(1−z) (g1(z) + g2(z)) and F2(z) := f(z) (g1(z) + g2(z)) with f(z) defined
+as in Section 5.3.2. By Cauchy’s theorem,
+
+i
+� 2T
+
+T
+(J1(t) + J2(t)) (J3(t) + J4(t)) dt =
+�
+1
+2 +2iT
+
+1
+2 +iT
+F(z)dz =
+� σ2+2iT
+
+σ2+iT
+F1(z)dz +
+� σ3+2iT
+
+σ3+iT
+F2(z)dz
+
++
+
+Ç� σ2+iT
+
+1
+2 +iT
++
+�
+1
+2 +2iT
+
+σ2+2iT
+
+å
+
+F1(z)dz +
+
+Ç� σ3+iT
+
+1
+2 +iT
++
+�
+1
+2 +2iT
+
+σ3+2iT
+
+å
+
+F2(z)dz.
+(81)
+
+We need to estimate the moduli of each of the above terms. Starting with the first two terms on the
+right-hand side of (81), we have
+
+�����
+
+� σ2+2iT
+
+σ2+iT
+F1(z)dz
+
+����� ≤
+1
+
+(U−(T0))2
+
+Å
+2 + 1
+
+T0
+
+ãσ2− 1
+
+2
+Ñ� 2T
+
+T
+
+������
+
+�
+
+n≤T
+
+d(n)
+
+n1−σ2+iu
+
+������
+
+2
+
+du
+
+é 1
+
+2
+
+×
+
+×
+
+Ö�� 2T
+
+T
+
+�����
+
+�
+
+n>T
+
+d(n)
+nσ2+iu e−n/T
+�����
+
+2
+du
+
+� 1
+
+2
++
+
+Ñ� 2T
+
+T
+
+������
+
+�
+
+n≤T
+
+d(n)
+nσ2+iu
+Ä
+e−n/T − 1
+ä
+������
+
+2
+
+du
+
+é 1
+
+2 è
+
+and
+
+�����
+
+� σ3+2iT
+
+σ3+iT
+F2(z)dz
+
+����� ≤
+1
+
+(U−(T0))2
+
+Å2π
+
+T
+
+ã1−2σ3
+Ñ� 2T
+
+T
+
+������
+
+�
+
+n≤T
+
+d(n)
+nσ3+iu
+
+������
+
+2
+
+du
+
+é 1
+
+2
+
+×
+
+×
+
+Ö�� 2T
+
+T
+
+�����
+
+�
+
+n>T
+
+d(n)
+nσ3+iu e−n/T
+�����
+
+2
+du
+
+� 1
+
+2
++
+
+Ñ� 2T
+
+T
+
+������
+
+�
+
+n≤T
+
+d(n)
+nσ3+iu
+Ä
+e−n/T − 1
+ä
+������
+
+2
+
+du
+
+é 1
+
+2 è
+
+by the CBS inequality and Lemma 18. Then
+�����
+
+� 1+2iT
+
+1+iT
+F1(z)dz +
+� 2iT
+
+iT
+F2(z)dz
+
+����� ≤ G1 (T0, σ′) T log3 T
+(82)
+
+by Lemmas 10, 14, 16 and 17, where
+
+G1 (T0, σ′) :=
+1
+
+(U−(T0))2
+
+Å
+2 + 1
+
+T0
+
+ãσ2− 1
+
+2
+(η(T0)D4(T0, 2 − 2σ2) + 2πm0D4(T0, 1 − 2σ2))
+
+1
+2 ×
+
+×
+Ä
+(η(T0) + 2πm0)
+
+1
+2 D7(T0)
+1
+2 + (η(T0)D4(T0, 2σ2 − 2) + 2πm0D4(T0, 2σ2 − 3))
+
+1
+2 ä
+
++ (2π)1−2σ3
+
+(U−(T0))2 (η(T0)D4(T0, 2σ3) + 2πm0D4(T0, 2σ3 − 1))
+
+1
+2 ×
+
+×
+Ä
+(η(T0) + 2πm0)
+
+1
+2 D7(T0)
+1
+2 + (η(T0)D4(T0, 2σ3 − 2) + 2πm0D4(T0, 2σ3 − 3))
+
+1
+2 ä
+.
+(83)
+
+
+AN EXPLICIT FORM OF INGHAM’S ZERO DENSITY ESTIMATE
+25
+
+Here, D4(x0, σ), D7(x0) and U−(y0) are defined by (61), (69) and (75), respectively. Turning to the last
+two terms in (81), we have
+�����
+
+Ç� σ2+iT
+
+1
+2 +iT
++
+�
+1
+2 +2iT
+
+σ2+2iT
+
+å
+
+F1(z)dz
+
+����� ≤
+1
+
+(U−(T0))2
+
+� σ2
+
+1
+2
+
+ÇÅ
+1 + 1
+
+T0
+
+ãu− 1
+
+2
++
+Å
+1 +
+1
+
+2T0
+
+ãu− 1
+
+2 å
+
+×
+
+×
+
+Ñ
+�
+
+n>T
+
+d(n)
+nu e−n/T +
+�
+
+n≤T
+
+d(n)
+nu
+Ä
+1 − e−n/T ä
+é
+�
+
+n≤T
+
+d(n)
+n1−u du
+
+and
+�����
+
+Ç� σ3+iT
+
+1
+2 +iT
++
+�
+1
+2 +2iT
+
+σ3+2iT
+
+å
+
+F2(z)dz
+
+����� ≤
+1
+
+(U−(T0))2
+
+�
+1
+2
+
+σ3
+
+�(2π)1−2u + π1−2u� T 2u−1×
+
+×
+
+Ñ
+�
+
+n>T
+
+d(n)
+nu e−n/T +
+�
+
+n≤T
+
+d(n)
+nu
+Ä
+1 − e−n/T ä
+é
+�
+
+n≤T
+
+d(n)
+nu du
+
+by Lemma 18. Then
+�����
+
+Ç� σ2+iT
+
+1
+2 +iT
++
+�
+1
+2 +2iT
+
+σ2+2iT
+
+å
+
+F1(z)dz +
+
+Ç� σ3+iT
+
+1
+2 +iT
++
+�
+1
+2 +2iT
+
+σ3+2iT
+
+å
+
+F2(z)dz
+
+����� ≤ G2 (T0, σ′) T log2 T
+(84)
+
+by Lemmas 11 and 12, where
+
+G2 (T0, σ′) := D1(T0, 0)
+
+(U−(T0))2
+
+� σ2
+
+1
+2
+
+ÇÅ
+1 + 1
+
+T0
+
+ãu− 1
+
+2
++
+Å
+1 +
+1
+
+2T0
+
+ãu− 1
+
+2 å ÅD1(T0, u − 1)
+
+2 − u
++ D3(T0)
+ã du
+
+u
+
++ D1(T0, 0)
+
+(U−(T0))2
+
+�
+1
+2
+
+σ3
+
+�(2π)1−2u + π1−2u� ÅD1(T0, u − 1)
+
+2 − u
++ D3(T0)
+ã
+du
+
+1 − u.
+(85)
+
+Here, D1(x0, σ0), D3(x0) and U−(y0) are defined by (57), (60) and (75), respectively.
+It remains to estimate the third part also for k ∈ {5, 6}, and the procedure is very similar to the one
+in the preceding section. Define
+
+g3(z) := − 1
+
+2π χ−1(z)
+� a1(log T )a2
+
+−a1(log T )a2
+χ2(z + c1 + iu)Γ(c1 + iu)T c1+iu �
+
+n>T
+
+d(n)
+
+n1−z−c1−iu du,
+
+g4(z) := − 1
+
+2π χ−1(z)
+� b1(log T )b2
+
+−b1(log T )b2
+χ2(z + c2 + iu)Γ(c2 + iu)T c2+iu �
+
+n≤T
+
+d(n)
+
+n1−z−c2−iu du.
+
+It is clear that g3(z) and g4(z) are holomorphic functions in {z ∈ C: 1/2 − c2 < ℜ{z} < |c1|, ℑ{z} >
+1 + b1(log T)b2}. Define G(z) := G1(z) + G2(z), where G1(z) := f(1 − z) (g3(z) + g4(z)) and G2(z) :=
+f(z) (g3(z) + g4(z)) with f(z) defined as in Section 5.3.2. By Cauchy’s theorem,
+
+i
+� 2T
+
+T
+(J1(t) + J2(t)) (J5(t) + J6(t)) dt =
+�
+1
+2 +2iT
+
+1
+2 +iT
+G(z)dz =
+� σ4+2iT
+
+σ4+iT
+G1(z)dz +
+� σ5+2iT
+
+σ5+iT
+G2(z)dz
+
++
+
+Ç� σ4+iT
+
+1
+2 +iT
++
+�
+1
+2 +2iT
+
+σ4+2iT
+
+å
+
+G1(z)dz +
+
+Ç� σ5+iT
+
+1
+2 +iT
++
+�
+1
+2 +2iT
+
+σ5+2iT
+
+å
+
+G2(z)dz.
+(86)
+
+We need to estimate the moduli of each of the above terms. Starting with the first term on the right-hand
+side of (86), note that 0 < 1 − σ4 < 1/2. By the CBS inequality and Lemma 18 we then have
+
+�����
+
+� σ4+2iT
+
+σ4+iT
+G1(z)dz
+
+����� ≤
+1
+
+U−(T0)
+
+Å2π
+
+T
+
+ãσ4− 1
+
+2
+Ñ� 2T
+
+T
+
+������
+
+�
+
+n≤T
+
+d(n)
+
+n1−σ4−it
+
+������
+
+2
+
+dt
+
+é 1
+
+2
+
+×
+
+×
+
+ÑÇ� 2T
+
+T
+|g3(σ4 + it)|2 dt
+
+å 1
+
+2
++
+
+Ç� 2T
+
+T
+|g4(σ4 + it)|2 dt
+
+å 1
+
+2
+é
+
+.
+(87)
+
+
+26
+SHASHI CHOURASIYA AND ALEKSANDER SIMONIˇC
+
+We estimate the second integral on the right-hand side of (87). Note that −1/2 < c1 + σ4 < 0, implying
+|c1 +σ4 +i(t+u)| ≤ 1/2+2T +a1(log T)a2 since t ∈ [T, 2T] and |u| ≤ a1 (log T)a2. By the CBS inequality
+and Lemma 18 we thus have
+� 2T
+
+T
+|g3(σ4 + it)|2 dt ≤
+T 1−2σ4+2|c1|
+
+(2π · U−(T0))2
+
+Å 1
+
+π +
+1
+
+2πT0
+
+ã2σ4−1 Ç
+1
+π +
+
+1
+2 + a1(log T0)a2
+
+2πT0
+
+å2(1−2σ4)+4|c1|
+×
+
+× �U+ (T0 − a1(log T0)a2)�4 � ∞
+
+−∞
+|Γ(c1 + iu)| du×
+
+×
+� a1(log T )a2
+
+−a1(log T )a2 |Γ(c1 + iu)|
+
+�� 2T
+
+T
+
+�����
+
+�
+
+n>T
+
+d(n)
+
+n1−σ4−c1−i(t+u)
+
+�����
+
+2
+dt
+
+�
+
+du.
+
+Moreover,
+
+� a1(log T )a2
+
+−a1(log T )a2 |Γ(c1 + iu)|
+
+�� 2T
+
+T
+
+�����
+
+�
+
+n>T
+
+d(n)
+
+n1−σ4−c1−i(t+u)
+
+�����
+
+2
+dt
+
+�
+
+du ≤
+� ∞
+
+−∞
+|Γ(c1 + iu)| du×
+
+×
+
+Ç
+η(T0)D5 (T0, 2 − 2σ4 + 2|c1|)
+
+(1 − 2σ4 + 2|c1|)4
++ 2πm0D5 (T0, 1 − 2σ4 + 2|c1|)
+
+(2|c1| − 2σ4)4
+
+å
+
+T 2σ4−2|c1| log3 T
+
+by Lemmas 10 and 14. Therefore,
+� 2T
+
+T
+|g3(σ4 + it)|2 dt ≤ g1 (T0, σ4, c1, a) T log3 T,
+(88)
+
+where
+
+g1 (T0, σ4, c1, a) :=
+1
+
+(U−(T0))2
+
+Å 1
+
+π +
+1
+
+2πT0
+
+ã2σ4−1 Ç
+1
+π +
+
+1
+2 + a1(log T0)a2
+
+2πT0
+
+å2(1−2σ4)+4|c1|
+×
+
+× �U+ (T0 − a1(log T0)a2)�4 Å� ∞
+
+−∞
+|Γ(c1 + iu)| du
+ã2
+×
+
+×
+
+Ç
+η(T0)D5 (T0, 2 − 2σ4 + 2|c1|)
+
+(2π)2(1 − 2σ4 + 2|c1|)4
++ m0D5 (T0, 1 − 2σ4 + 2|c1|)
+
+2π (2|c1| − 2σ4)4
+
+å
+
+.
+(89)
+
+Here, D5(x0, σ) and U±(y0) are defined by (62) and (75), respectively. Turning to the third integral on
+the right-hand side of (87), note that 1/2 < c2 + σ4 < 3/2 and |σ4 + c2 + i(t + u)| ≥ T − b1(log T)b2 since
+t ∈ [T, 2T] and |u| ≤ b1 (log T)b2. Also, −1 < 2(1 − σ4 − c2) < 1. Similarly as before, the CBS inequality
+and Lemmas 10, 14 and 18 imply
+� 2T
+
+T
+|g4(σ4 + it)|2 dt ≤ g2 (T0, σ4, c2, b) T log3 T,
+(90)
+
+where
+
+g2 (T0, σ4, c2, b) :=
+1
+
+(U−(T0))2
+
+Å 1
+
+π +
+1
+
+2πT0
+
+ã2σ4−1 Ç
+1
+2π − b1 (log T0)b2
+
+2πT0
+
+å2(1−2(σ4+c2))
+×
+
+×
+Ä
+U+ Ä
+T0 − b1 (log T0)b2ää4 Å� ∞
+
+−∞
+|Γ(c2 + iu)| du
+ã2
+×
+
+×
+Åη(T0)D4 (T0, 2 (1 − σ4 − c2))
+
+(2π)2
++ m0D4 (T0, 1 − 2 (σ4 + c2))
+
+2π
+
+ã
+.
+(91)
+
+Here, D4(x0, σ) and U±(y0) are defined by (61) and (75), respectively. Note that (88) and (90) also
+hold for σ4 = 1/2. This fact will be used in Section 5.3.4. Using (88) and (90) in (87), together with
+Lemmas 10 and 14 to estimate the first integral on the right-hand side of (87), gives
+�����
+
+� σ4+2iT
+
+σ4+iT
+G1(z)dz
+
+����� ≤ G3 (T0, σ4, c, a, b) T log3 T,
+(92)
+
+
+AN EXPLICIT FORM OF INGHAM’S ZERO DENSITY ESTIMATE
+27
+
+where
+
+G3 (T0, σ4, c, a, b) := (2π)σ4
+
+U−(T0)
+
+Åη(T0)
+
+2π D4(T0, 2(1 − σ4)) + m0D4(T0, 1 − 2σ4)
+ã 1
+
+2
+×
+
+×
+Ä
+g1 (T0, σ4, c1, a)
+
+1
+2 + g2 (T0, σ4, c2, b)
+
+1
+2 ä
+.
+(93)
+
+Here, D4(x0, σ), U−(y0), g1 (T0, σ4, c1, a) and g2 (T0, σ4, c2, b) are defined by (61), (75), (89) and (91),
+respectively. Moving to the second term on the right-hand side of (86), we have
+
+�����
+
+� σ5+2iT
+
+σ5+iT
+G2(z)dz
+
+����� ≤
+1
+
+U−(T0)
+
+Å2π
+
+T
+
+ã 1
+
+2 −σ5
+Ñ� 2T
+
+T
+
+������
+
+�
+
+n≤T
+
+d(n)
+nσ5+it
+
+������
+
+2
+
+dt
+
+é 1
+
+2
+
+×
+
+×
+
+ÑÇ� 2T
+
+T
+|g3(σ5 + it)|2 dt
+
+å 1
+
+2
++
+
+Ç� 2T
+
+T
+|g4(σ5 + it)|2 dt
+
+å 1
+
+2
+é
+
+by the CBS inequality and Lemma 18 since 0 < σ5 < 1/2. Estimation of the second and the third integral
+is similar as before. We obtain
+� 2T
+
+T
+|g3(σ5 + it)|2 dt ≤ g3 (T0, σ5, c1, a) T log3 T
+
+and
+� 2T
+
+T
+|g4(σ5 + it)|2 dt ≤ g4 (T0, σ5, c2, b) T log3 T
+
+by Lemmas 10, 14 and 18, where
+
+g3 (T0, σ5, c1, a) :=
+1
+
+(2π)1+2σ5 (U−(T0))2
+
+Å 1
+
+π + 1 + a1 (log T0)a2
+
+2πT0
+
+ã2(1−2σ5)+4|c1|
+×
+
+× �U+ (T0 − a1(log T0)a2)�4 Å� ∞
+
+−∞
+|Γ(c1 + iu)| du
+ã2
+×
+
+×
+
+Ç
+η(T0)D5(T0, 2 − 2σ5 + 2|c1|)
+
+(1 − 2σ5 + 2|c1|)4
++ 2πm0D5(T0, 1 − 2σ5 + 2|c1|)
+
+(2|c1| − 2σ5)4
+
+å
+
+(94)
+
+and
+
+g4 (T0, σ5, c2, b) :=
+1
+
+(2π)1+2σ5 (U−(T0))2
+
+Ç
+1
+2π − b1 (log T0)b2
+
+2πT0
+
+å2(1−2(σ5+c2))
+×
+
+×
+Ä
+U+ Ä
+T0 − b1 (log T0)b2ää4 Å� ∞
+
+−∞
+|Γ(c2 + iu)| du
+ã2
+×
+
+× (η(T0)D4 (T0, 2 (1 − σ5 − c2)) + 2πm0D4 (T0, 1 − 2 (σ5 + c2))) .
+(95)
+
+Here, D5(x0, σ), D4(x0, σ) and U±(y0) are defined by (62), (61) and (75), respectively. Therefore,
+�����
+
+� σ5+2iT
+
+σ5+iT
+G2(z)dz
+
+����� ≤ G4 (T0, σ5, c, a, b) T log3 T,
+(96)
+
+where
+
+G4 (T0, σ5, c, a, b) := (2π)
+1
+2 −σ5
+
+U−(T0) (η(T0)D4(T0, 2σ5) + 2πm0D4(T0, 2σ5 − 1))
+
+1
+2 ×
+
+×
+Ä
+g3 (T0, σ5, c1, a)
+
+1
+2 + g4 (T0, σ5, c2, b)
+
+1
+2 ä
+.
+(97)
+
+Here, D4(x0, σ), U−(y0), g3 (T0, σ5, c1, a) and g4 (T0, σ5, c2, b) are defined by (61), (75), (94) and (95),
+respectively. It remains to estimate the last two terms on the right-hand side of (86). Beginning with
+the first such term, note that by writing z = σ + iT in the case of the first integral and z = σ + 2iT in
+the case of the second integral, we have σ ∈ [1/2, σ4], implying −1/2 < σ + c1 < 0, 1/2 < σ + c2 < 3/2,
+
+
+28
+SHASHI CHOURASIYA AND ALEKSANDER SIMONIˇC
+
+|σ + c1 + i(u + kT)| ≤ 1/2 + kT + a1(log T)a2 for k > 0 and |u| ≤ a1(log T)a2, and |σ + c2 + i(u + kT)| ≥
+kT − b1(log T)b2 for k > 0 and |u| ≤ b1(log T)b2. Define
+
+g5 (T0, σ4, c1, a) :=
+� σ4
+
+1
+2
+
+�Å
+1 + 1
+
+T0
+
+ãσ− 1
+
+2 Ç
+1
+2π +
+
+1
+2 + a1(log T0)a2
+
+2πT0
+
+å1−2(σ−|c1|)
+
++
+Å
+1 +
+1
+
+2T0
+
+ãσ− 1
+
+2 Ç
+1
+π +
+
+1
+2 + a1(log T0)a2
+
+2πT0
+
+å1−2(σ−|c1|)�
+D2(T0, 1 − σ + |c1|)
+
+σ (σ − |c1|)2
+dσ,
+(98)
+
+where D2(x0, σ) is defined by (58), and
+
+g6 (T0, σ4, c2, b) :=
+� σ4
+
+1
+2
+
+�Å
+1 + 1
+
+T0
+
+ãσ− 1
+
+2 Ç
+1
+2π − b1(log T0)b2
+
+2πT0
+
+å1−2(σ+c2)
+
++
+Å
+1 +
+1
+
+2T0
+
+ãσ− 1
+
+2 Ç
+1
+π − b1(log T0)b2
+
+2πT0
+
+å1−2(σ+c2)�
+dσ
+
+σ(σ + c2).
+(99)
+
+By Lemmas 11 and 18 we thus have
+�����
+
+Ç� σ4+iT
+
+1
+2 +iT
++
+�
+1
+2 +2iT
+
+σ4+2iT
+
+å
+
+G1(z)dz
+
+����� ≤ G5 (T0, σ4, c, a, b) T log2 T,
+(100)
+
+where
+
+G5 (T0, σ4, c, a, b) := D1(T0, 0)
+
+2π
+
+ÅU+ (T0 − a1(log T0)a2)
+
+U−(T0)
+
+ã2
+g5 (T0, σ4, c1, a)
+� ∞
+
+−∞
+|Γ(c1 + iu)| du
+
++ D1(T0, 0)D1(T0, −1/2)
+
+2π
+
+Ç
+U+ �T0 − b1(log T0)b2�
+
+U−(T0)
+
+å2
+g6 (T0, σ4, c2, b)
+� ∞
+
+−∞
+|Γ(c2 + iu)| du.
+(101)
+
+Here, D1(x0, σ0), U±(y0), g5 (T0, σ4, c1, a) and g6 (T0, σ4, c2, b) are defined by (57), (75), (98) and (99),
+respectively. Turning to the second term on the right-hand side of (86), we have, similarly as before, that
+σ ∈ [σ5, 1/2], implying −1 < σ + c1 < 0, 1/2 < σ + c2 < 1, |σ + c1 + i(u + kT)| ≤ 1 + kT + a1(log T)a2 for
+k > 0 and |u| ≤ a1(log T)a2, and |σ + c2 + i(u + kT)| ≥ kT − b1(log T)b2 for k > 0 and |u| ≤ b1(log T)b2.
+Define
+
+g7 (T0, σ5, c1, a) :=
+�
+1
+2
+
+σ5
+
+Ç
+
+(2π)1−2σ
+Å 1
+
+2π + 1 + a1(log T0)a2
+
+2πT0
+
+ã1−2(σ−|c1|)
+
++π1−2σ
+Å 1
+
+π + 1 + a1(log T0)a2
+
+2πT0
+
+ã1−2(σ−|c1|)å
+D2(T0, 1 − σ + |c1|)
+
+(1 − σ) (σ − |c1|)2 dσ,
+(102)
+
+where D2(x0, σ) is defined by (58), and
+
+g8 (T0, σ5, c2, b) :=
+�
+1
+2
+
+σ5
+
+�
+
+(2π)1−2σ
+Ç
+1
+2π − b1(log T0)b2
+
+2πT0
+
+å1−2(σ+c2)
+
++π1−2σ
+Ç
+1
+π − b1(log T0)b2
+
+2πT0
+
+å1−2(σ+c2)�
+dσ
+
+(1 − σ)(σ + c2).
+(103)
+
+By Lemmas 11 and 18 we thus have
+�����
+
+Ç� σ5+iT
+
+1
+2 +iT
++
+�
+1
+2 +2iT
+
+σ5+2iT
+
+å
+
+G2(z)dz
+
+����� ≤ G6 (T0, σ5, c, a, b) T log2 T,
+(104)
+
+where
+
+G6 (T0, σ5, c, a, b) := D1(T0, 0)
+
+2π
+
+ÅU+ (T0 − a1(log T0)a2)
+
+U−(T0)
+
+ã2
+g7 (T0, σ5, c1, a)
+� ∞
+
+−∞
+|Γ(c1 + iu)| du
+
+
+AN EXPLICIT FORM OF INGHAM’S ZERO DENSITY ESTIMATE
+29
+
++ 1
+
+2π
+
+Ç
+D1(T0, 0) · U+ �T0 − b1(log T0)b2�
+
+U−(T0)
+
+å2
+g8 (T0, σ5, c2, b)
+� ∞
+
+−∞
+|Γ(c2 + iu)| du.
+(105)
+
+Here, D1(x0, σ0), U±(y0), g7 (T0, σ5, c1, a) and g8 (T0, σ5, c2, b) are defined by (57), (75), (102) and (103),
+respectively.
+Finally, it remains to collect the relevant estimates in order to bound the left-hand sides of (81)
+and (86).
+For the former equality, we are using (82) and (84), while for the latter equality we are
+using (92), (96), (100) and (104). The final result is that
+
+2
+
+6
+�
+
+k=3
+
+�����
+
+� 2T
+
+T
+(J1(t) + J2(t)) Jk(t)dt
+
+����� ≤ 2J2,2 (T0, σ′, σ′′, c, a, b) T log3 T,
+(106)
+
+where
+
+J2,2 (T0, σ′, σ′′, c, a, b) = G1 (T0, σ′) + G3 (T0, σ4, c, a, b) + G4 (T0, σ5, c, a, b)
+
++
+1
+
+log T0
+(G2 (T0, σ′) + G5 (T0, σ4, c, a, b) + G6 (T0, σ5, c, a, b)) .
+(107)
+
+Here, the functions G1, . . . , G6 are defined by (83), (85), (93), (97), (101) and (105), respectively.
+
+5.3.4. IV. part. By Lemmas 10, 16 and 17 we have
+
+1
+
+T log3 T
+
+� 2T
+
+T
+|J3(t)|2 dt ≤ J3(T0) := (η(T0) + 2πm0) D7(T0),
+(108)
+
+where D7(x0) is defined by (69), and
+
+1
+
+T log3 T
+
+� 2T
+
+T
+|J4(t)|2 dt ≤ J4(T0) := η(T0)D4(T0, −1) + 2πm0D4(T0, −2),
+(109)
+
+where D4(x0, σ) is defined by (61). Turning to the integral of |J5(t)|2, observe that
+
+1
+
+T log3 T
+
+� 2T
+
+T
+|J5(t)|2 dt =
+1
+
+T log3 T
+
+� 2T
+
+T
+
+����g3
+
+Å1
+
+2 + it
+ã����
+
+2
+dt ≤ J5 (T0, c1, a) := g1
+
+Å
+T0, 1
+
+2, c1, a
+ã
+(110)
+
+by (88), where g1 (T0, σ4, c1, a) is defined by (89). Similarly,
+
+1
+
+T log3 T
+
+� 2T
+
+T
+|J6(t)|2dt =
+1
+
+T log3 T
+
+� 2T
+
+T
+
+����g4
+
+Å1
+
+2 + it
+ã����
+
+2
+dt ≤ J6 (T0, c2, b) := g2
+
+Å
+T0, 1
+
+2, c2, b
+ã
+(111)
+
+by (90), where g2 (T0, σ4, c2, b) is defined by (91).
+
+5.3.5. V. part. Using estimates (108)–(111), we obtain
+
+2
+� �
+
+3≤n<m≤6
+
+� 2T
+
+T
+|Jn(t)Jm(t)| dt ≤
+
+Ñ
+
+2
+� �
+
+3≤n<m≤6
+(JnJm)
+
+1
+2
+
+é
+
+T log3 T
+(112)
+
+by the CBS inequality, where we borrowed the shorter notation for Jn from Theorem 2.
+
+5.3.6. VI. part. By Lemma 18 we have
+����χ
+Å1
+
+2 + c1 + i(t + u)
+ã���� ≤ (2T)|c1|
+�
+
+0.4 +
+16
+
+�2T0 + a1 (log T0)a2�|c1|
+
+� Å
+1 + |u|
+
+2T0
+
+ã|c1|
+
+and
+
+|Γ(c1 + iu)| ≤
+√
+
+2π exp
+
+Ç
+1
+
+2a2
+1 (log T0)2a2
+
+å
+
+T −a1(log T )a2−1
+e−|u|/2
+
+|u||c1|+1/2
+
+since c1 ∈ (−1, −1/2), t ∈ [T, 2T] and |u| ≥ a1(log T)a2. Therefore,
+
+1
+2π
+
+�����
+
+Ç� −a1(log T )a2
+
+−∞
++
+� ∞
+
+a1(log T )a2
+
+å
+
+P(0, 1, c1; u)du
+
+����� ≤ J01 (T0, c1, a) T
+1
+2 −a1(log T )a2−1 log T
+(113)
+
+by Lemma 11, where
+
+
+30
+SHASHI CHOURASIYA AND ALEKSANDER SIMONIˇC
+
+J01 (T0, c1, a) := 22|c1|
+…
+
+2
+π
+
+�
+
+0.4 +
+16
+
+�2T0 + a1 (log T0)a2�|c1|
+
+�2
+
+exp
+
+Ç
+1
+
+2a2
+1 (log T0)2a2
+
+å
+
+×
+
+× D2
+�T0, 1
+
+2 + |c1|�
+
+�|c1| − 1
+
+2
+�2
+
+� ∞
+
+4
+
+Å
+1 +
+u
+2T0
+
+ã2|c1| e− 1
+
+2 u
+
+u|c1|+ 1
+
+2 du
+(114)
+
+since a1 (log T0)a2 ≥ log T0 ≥ 4. Here, D2(x0, σ0) is defined by (58). By Lemma 18 we also have
+����χ
+Å1
+
+2 + c1 + i(t + u)
+ã���� ≤
+6.31
+
+1
+2 − c2
+
+and
+
+|Γ(c2 + iu)| ≤
+√
+
+2π exp
+
+Ç
+1
+
+2b2
+1 (log T0)2b2
+
+å Ä
+b1 (log T0)b2äc2− 1
+
+2 T −b1(log T )b2−1e− 1
+
+2 |u|
+
+since c2 ∈ (0, 1/2), t ∈ [T, 2T] and |u| ≥ b1 (log T)b2. Therefore,
+
+1
+2π
+
+�����
+
+�� −b1(log T )b2
+
+−∞
++
+� ∞
+
+b1(log T )b2
+
+�
+
+P(1, 0, c2; u)du
+
+����� ≤ J02 (T0, c2, b) T
+1
+2 +2c2−b1(log T )b2−1 log T
+(115)
+
+by Lemma 11, where
+
+J02 (T0, c2, b) := 2
+
+e4
+
+…
+
+2
+π
+
+Ç
+6.31
+
+1
+2 − c2
+
+å2
+exp
+
+Ç
+1
+
+2b2
+1 (log T0)2b2
+
+å Ä
+b1 (log T0)b2äc2− 1
+
+2 D1(T0, 0)
+
+1
+2 + c2
+(116)
+
+since b1 (log T0)b2 ≥ 2 log T0 ≥ 8. Here, D1(x0, σ0) is defined by (57). Then we have
+
+2
+� 2T
+
+T
+|J0(t)| ·
+����ζ
+Å1
+
+2 + it
+ã����
+
+2
+dt +
+� 2T
+
+T
+|J0(t)|2 dt ≤ J0 (T0, c, a, b) T log3 T,
+(117)
+
+where
+
+J0 (T0, c, a, b) := 7
+
+2
+
+ÅÅ
+1 + 3
+
+14J01 (T0, c1, a)
+ã
+J01 (T0, c1, a) T 1−a1(log T0)a2−1
+
+0
+
++
+Å
+1 + 3
+
+14J02 (T0, c2, b)
+ã
+J02 (T0, c2, b) T 2−b1(log T0)b2−1
+
+0
++ 12.1T0e− π
+
+2 T0
+ã
+,
+(118)
+
+and J01 (T0, c1, a) and J02 (T0, c2, b) are defined by (114) and (116), respectively.
+In the derivation
+of (117), we have used inequalities (113) and (115), together with Lemma 19 and |ζ(1/2 + it)| ≤
+0.618t
+1
+6 log t ≤ (2T)1/6 log (2T) for t ∈ [T, 2T], see [HPY24, Theorem 1.1].
+
+5.3.7. Proof of estimate (12). First, by (76) we have
+����M2(T, 2T) −
+1
+
+2π2 T log4 T
+���� ≤ J1(T0)T log3 T +
+
+�����M2(T, 2T) − 2
+� 2T
+
+T
+|J1(t)|2 dt
+
+����� ,
+
+where J1(T0) is defined by (77). We are using (54) and (55) in order to estimate the last term in the last
+inequality. Then (12) follows by (79), (106), (108), (109), (110), (111), (112) and (117).
+
+5.3.8. Proof of estimate (13). We are using (56). By (76) we have
+
+4
+� 2T
+
+T
+|J1(t)|2 dt ≤ 1
+
+π2 T log4 T + 2J1(T0)T log3 T.
+
+Also, the above inequality, together with the CBS inequality and the inequalities from Section 5.3.4,
+implies
+
+4
+
+6
+�
+
+k=3
+
+� 2T
+
+T
+|J1(t)Jk(t)| dt ≤ 2
+
+Ç
+
+4
+� 2T
+
+T
+|J1(t)|2 dt
+
+å 1
+
+2
+6
+�
+
+k=3
+
+Ç� 2T
+
+T
+|Jk(t)|2 dt
+
+å 1
+
+2
+
+≤ 2 �T log3 T�
+6
+�
+
+k=3
+
+ÅJk
+
+π2 log T + 2J1Jk
+
+ã 1
+
+2
+.
+
+
+AN EXPLICIT FORM OF INGHAM’S ZERO DENSITY ESTIMATE
+31
+
+Other terms in (56) are estimated as in the proof of (12), that is, we are using estimates from Sec-
+tions 5.3.4, 5.3.5 and 5.3.6. The proof is thus complete.
+
+6. Appendix
+
+The main purpose of this section is to state an improved zero density estimate from [KLN18]. Lemma
+6 can be used instead of [KLN18, Lemma 4.3], which then implies
+
+N(σ, T) ≤ C1
+
+2πdT
+8
+3 (1−σ) log(kT) (log T)5−4σ + C2
+
+2πd log2 T
+
+for T ≥ H0 = 3.0610046 · 1010, where 109/H0 ≤ k ≤ 1, d > 0, and C1 = C1 (α, d, δ, k, H0 − 1, σ) and
+C2 = C2 (d, η, k, H0 − 1, µ, σ) are functions defined by [KLN18, Equations (4.72) and (4.73)] and depend
+on several variables, see [KLN18, Lemma 4.14] and [CHJ23, pp. 1223–1224] for details.
+We choose
+k = 1, µ = 1.2363 and η = 0.25345. The parameters α, δ, and d are calculated such that the value for
+C1 (α, d, δ, k, H0 − 1, σ2) /(2πd) is the smallest possible for each of σ2, see Table 4. The final result is that
+
+N(σ, T) ≤ A · T
+8
+3 (1−σ) (log T)2(3−2σ) + B · log2 T
+(119)
+
+for T ≥ 3 · 1012 and σ ∈ [σ1, σ2], where the values for A and B are given by Table 4.
+
+σ1
+σ2
+A
+B
+α
+δ
+d
+
+0.62500
+0.65625
+2.900
+5.027
+0.242
+0.324
+0.344
+0.65625
+0.68750
+3.474
+4.789
+0.224
+0.324
+0.343
+0.68750
+0.71875
+4.149
+4.536
+0.206
+0.324
+0.343
+0.71875
+0.75000
+4.940
+4.296
+0.189
+0.324
+0.342
+0.75000
+0.78125
+5.860
+4.042
+0.171
+0.324
+0.342
+0.78125
+0.81250
+6.925
+3.800
+0.153
+0.324
+0.341
+0.81250
+0.84375
+8.148
+3.546
+0.136
+0.324
+0.341
+0.84375
+0.87500
+9.543
+3.301
+0.119
+0.324
+0.340
+0.87500
+0.90625
+11.12
+3.055
+0.102
+0.324
+0.339
+0.90625
+0.93750
+12.88
+2.807
+0.086
+0.324
+0.338
+0.93750
+0.96875
+14.81
+2.558
+0.070
+0.325
+0.337
+0.96875
+0.97500
+15.21
+2.301
+0.067
+0.325
+0.337
+0.97500
+0.98125
+15.62
+2.249
+0.064
+0.325
+0.337
+0.98125
+0.98750
+16.04
+2.204
+0.061
+0.325
+0.336
+0.98750
+0.99375
+16.46
+2.153
+0.058
+0.325
+0.336
+0.99375
+1.00000
+16.89
+2.101
+0.056
+0.325
+0.336
+
+Table 4. The values for A and B from (119) for the corresponding σ ∈ [σ1, σ2].
+
+References
+
+[Bal17]
+S. A. C. Baluyot, On the Zeros of Riemann’s Zeta-function, ProQuest LLC, Ann Arbor, MI, 2017, Thesis
+(Ph.D.)–University of Rochester.
+
+[Bel25]
+C. Bellotti, An explicit log-free zero density estimate for the Riemann zeta-function, J. Number Theory 269
+(2025), 37–77.
+
+[BW24]
+C. Bellotti and P.-J. Wong, Improved estimates for the argument and zero-counting of Riemann zeta-function,
+Math. Comp., DOI: https://doi.org/10.1090/mcom/4133.
+
+[BY24]
+C. Bellotti and A. Yang, On the generalised Dirichlet divisor problem, Bull. Lond. Math. Soc. 56 (2024), no. 5,
+1859–1878.
+
+[BBR12]
+D. Berkane, O. Bordell`es, and O. Ramar´e, Explicit upper bounds for the remainder term in the divisor problem,
+Math. Comp. 81 (2012), no. 278, 1025–1051.
+
+[Bou00]
+J. Bourgain, On large values estimates for Dirichlet polynomials and the density hypothesis for the Riemann
+zeta function, Internat. Math. Res. Notices (2000), no. 3, 133–146.
+
+[Cho24]
+S. Chourasiya, An explicit version of Carlson’s theorem, preprint available at arXiv:2412.02068 (2024).
+
+[CFK+05] J. B. Conrey, D. W. Farmer, J. P. Keating, M. O. Rubinstein, and N. C. Snaith, Integral moments of L-functions,
+Proc. London Math. Soc. (3) 91 (2005), no. 1, 33–104.
+
+[CHJ23]
+M. Cully-Hugill and D. R. Johnston, On the error term in the explicit formula of Riemann–von Mangoldt, Int.
+J. Number Theory 19 (2023), no. 6, 1205–1228.
+
+[CHJ25]
+M. Cully-Hugill and D. R. Johnston, On the error term in the explicit formula of Riemann-von Mangoldt II,
+Funct. Approx. Comment. Math. (2025), 1–20.
+
+[CHT21]
+M. Cully-Hugill and T. Trudgian, Two explicit divisor sums, Ramanujan J. 56 (2021), no. 1, 141–149.
+
+
+32
+SHASHI CHOURASIYA AND ALEKSANDER SIMONIˇC
+
+[DZA22]
+D. Dona and S. Zuniga Alterman, On the Atkinson formula for the ζ function, J. Math. Anal. Appl. 516 (2022),
+no. 2, Paper No. 126478, 34.
+
+[FKS23]
+A. Fiori, H. Kadiri, and J. Swidinsky, Sharper bounds for the Chebyshev function ψ(x), J. Math. Anal. Appl.
+527 (2023), no. 2, 127426.
+
+[Gab27]
+R. M. Gabriel, Some results concerning the integrals of moduli of regular functions along certain curves., J.
+Lond. Math. Soc. 2 (1927), 112–117.
+
+[GM24]
+L. Guth and J. Maynard,
+New large value estimates for Dirichlet polynomials,
+preprint available at
+arXiv:2405.20552 (2024).
+
+[HIP27]
+G. H. Hardy, A. E. Ingham, and G. P´olya, Theorems concerning mean values of analytic functions, Proc. R.
+Soc. Lond., Ser. A 113 (1927), 542–569.
+
+[Har13]
+A. J. Harper, Sharp conditional bounds for moments of the Riemann zeta function, preprint available at
+arXiv:1305.4618 (2013).
+
+[HRS19]
+W. Heap, M. Radziwi�l�l, and K. Soundararajan, Sharp upper bounds for fractional moments of the Riemann
+zeta function, Q. J. Math. 70 (2019), no. 4, 1387–1396.
+
+[HB79]
+D. R. Heath-Brown, The fourth power moment of the Riemann zeta function, Proc. London Math. Soc. (3) 38
+(1979), no. 3, 385–422.
+
+[HB81]
+, Fractional moments of the Riemann zeta function, J. London Math. Soc. (2) 24 (1981), no. 1, 65–78.
+
+[HPY24]
+G. A. Hiary, D. Patel, and A. Yang, An improved explicit estimate for ζ(1/2 + it), J. Number Theory 256
+(2024), 195–217.
+
+[Hux72]
+M. N. Huxley, The distribution of prime numbers: Large sieves and zero-density theorems, Oxford Mathematical
+Monographs, Clarendon Press, Oxford, 1972.
+
+[Ing26]
+A. E. Ingham, Mean-Value Theorems in the Theory of the Riemann Zeta-Function, Proc. London Math. Soc.
+(2) 27 (1926), 273–300.
+
+[Ing37]
+, On the difference between consecutive primes, The Quarterly Journal of Mathematics (1937), no. 1,
+255–266.
+
+[Ing40]
+, On the estimation of N(σ, T), Q. J. Math. 1 (1940), 201–202.
+
+[Ivi03]
+A. Ivi´c, The Riemann zeta-function, Dover Publications, Inc., Mineola, NY, 2003.
+
+[Ivi13]
+, The theory of Hardy’s Z-function, Cambridge Tracts in Mathematics, vol. 196, Cambridge University
+Press, Cambridge, 2013.
+
+[IM95]
+A. Ivi´c and Y. Motohashi, On the fourth power moment of the Riemann zeta-function, J. Number Theory 51
+(1995), no. 1, 16–45.
+
+[IK04]
+H. Iwaniec and E. Kowalski, Analytic number theory, American Mathematical Society Colloquium Publications
+53, AMS, Providence, RI, 2004.
+
+[JY23]
+D. R. Johnston and A. Yang, Some explicit estimates for the error term in the prime number theorem, J. Math.
+Anal. Appl. 527 (2023), no. 2, 127460.
+
+[Kad13]
+H. Kadiri, A zero density result for the Riemann zeta function, Acta Arith. 160 (2013), no. 2, 185–200.
+
+[KLN18]
+H. Kadiri, A. Lumley, and N. Ng, Explicit zero density for the Riemann zeta function, J. Math. Anal. Appl.
+465 (2018), no. 1, 22–46.
+
+[KV92]
+A. A. Karatsuba and S. M. Voronin, The Riemann zeta-function, De Gruyter Expositions in Mathematics,
+vol. 5, Walter de Gruyter & Co., Berlin, 1992.
+
+[LLM25]
+A. Languasco, R. Lunia, and P. Moree, Counting ideals in abelian number fields, preprint available at
+arXiv:2504.09469 (2025).
+
+[Mon71]
+H. L. Montgomery, Topics in multiplicative number theory, Lecture Notes in Mathematics, vol. 227, Springer-
+Verlag, Berlin-New York, 1971.
+
+[Olv74]
+F. W. J. Olver, Asymptotics and special functions, Academic Press, New York, 1974.
+
+[PT25]
+N. Paloj¨arvi and T. Trudgian, On the error term of the fourth moment of the Riemann zeta-function, preprint
+available at arXiv:2506.16766 (2025).
+
+[PT21]
+D. Platt and T. Trudgian, The Riemann hypothesis is true up to 3 · 1012, Bull. Lond. Math. Soc. 53 (2021),
+no. 3, 792–797.
+
+[Pre84]
+E. Preissmann, Sur une in´egalit´e de Montgomery-Vaughan, Enseign. Math. (2) 30 (1984), no. 1-2, 95–113.
+
+[RS13]
+M. Radziwi�l�l and K. Soundararajan, Continuous lower bounds for moments of zeta and L-functions, Mathe-
+matika 59 (2013), no. 1, 119–128.
+
+[Ram75]
+K. Ramachandra, Application of a theorem of Montgomery and Vaughan to the zeta-function, J. London Math.
+Soc. (2) 10 (1975), no. 4, 482–486.
+
+[Sel46]
+A. Selberg, Contribution to the theory of the Riemann zeta-function, Arch. Math. Naturvidensk. 48.5 (1946),
+89–155.
+
+[Sim20]
+A. Simoniˇc, Explicit zero density estimate for the Riemann zeta-function near the critical line, J. Math. Anal.
+Appl. 491 (2020), no. 1, 124303, 41 pp.
+
+[SS23]
+A. Simoniˇc and V. V. Starichkova, Atkinson’s formula for the mean square of ζ(s) with an explicit error term,
+J. Number Theory 244 (2023), 111–168.
+
+[Sta26]
+V. Starichkova, A note on zero-density approaches for the difference between consecutive primes, J. Number
+Theory 278 (2026), 245–266.
+
+[TTY25]
+T. Tao, T. Trudgian, and A. Yang, New exponent pairs, zero density estimates, and zero additive energy
+estimates: a systematic approach, Math. Comp., DOI: https://doi.org/10.1090/mcom/4138.
+
+
+AN EXPLICIT FORM OF INGHAM’S ZERO DENSITY ESTIMATE
+33
+
+[Tit86]
+E. C. Titchmarsh, The theory of the Riemann zeta-function, 2nd ed., The Clarendon Press, Oxford University
+Press, New York, 1986.
+
+SC: School of Science, University of New South Wales (Canberra), Northcott Drive, Campbell, ACT 2600,
+Australia
+Email address: s.chourasiya@unsw.edu.au
+
+AS: Faculty of Mathematics, Natural Sciences and Information Technologies, University of Primorska,
+Glagoljaˇska 8, 6000 Koper, Slovenia
+Email address: aleksander.simonic@famnit.upr.si
+
+

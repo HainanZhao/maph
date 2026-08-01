@@ -1,0 +1,242 @@
+{
+  "actual_log_gram": {
+    "constant_diagonal": "G_W(t,t)=S_L=sum_(L<n<2L)w(n/L)^2",
+    "epistemic_status": "PROVED",
+    "gram": "G_W(t,s)=sum_(L<n<2L)w(n/L)^2*n^(i(t-s))",
+    "matrix": "M_W(t,n)=w(n/L)n^(it)",
+    "plateau_bounds": {
+      "L": 1073741824,
+      "derivation": "S_L=sum_(L<n<2L)w(n/L)^2; plateau gives S_L>=3L/5-1>=L/2",
+      "gram_diagonal_S_lower": "536870912",
+      "gram_diagonal_S_upper": "1073741824",
+      "plateau": "w=1 on [6/5,9/5]",
+      "plateau_integer_count_lower": "3221225467/5",
+      "weight_range": "0<=w<=1 on L<n<2L"
+    },
+    "source_anchor": "LargevaluesDirichlet17.tex lines 425-426 and 484-487 in the pinned source"
+  },
+  "artifact_id": "cycle-6-crr-row-deletion-inverse-v1",
+  "claim_boundary": "This artifact proves actual-log row-deletion and Gram-projection reductions, plus a scoped diagonal-Cauchy limitation and Farey deletion accounting. It proves neither an RFDI theorem nor an actual witness, AFARI/FARI/CFARI/CRR-U, a cubic estimate, a density gain, a short-interval theorem, a saturation theorem, or an L-function result.",
+  "conditional_actual_gate": {
+    "assumptions": [
+      "lambda>=v^(12-ell*delta(v))",
+      "rho>=v^(-r*delta(v))",
+      "DelCov(W)>=v^(-2*s*delta(v))",
+      "eta_ph*(R*S_L/(lambda*DelCov(W))-1)<=kappa^2 for fixed 0<=kappa<1",
+      "ell+r+2*s<=2-gamma for fixed gamma>0",
+      "the same W obeys the frozen CRR separation/cardinality/energy predicates and RationalMass(v)"
+    ],
+    "common_object_rule": "The same actual W supplies M_W, G_W, DelCov, RationalMass, the actual Farey kernel, and b^ph. The coefficient is capped coordinatewise and is not separately optimized.",
+    "conclusion": "For all sufficiently large v, b^ph has |b_n^ph|<=1 and min_(t in W)|(M_W b^ph)_t|>=v^(7-delta(v)).",
+    "epistemic_status": "PROVED",
+    "farey_preservation": "C_theta(sk,rk)=R_W((r/s)*exp(theta/H)) and all actual reduced labels, rays, and bounded jitter are retained."
+  },
+  "context": {
+    "actual_farey_identity": "C_theta(sk,rk)=R_W((r/s)*exp(theta/H))",
+    "base_polynomial": "D_v(t)=sum_(n>=1) w(n/L)b_n n^(it)",
+    "coefficient_cap": "b_n for n>=1 complex with |b_n|<=1",
+    "common_set": "finite W subset [0,H], H^(1/100)-separated",
+    "phase_flatness_lower": "phi>=((1-kappa)/sqrt(1+kappa^2))*sqrt(mu_top) whenever chi_ph<=kappa<1",
+    "rationalmass_theta_mass": "sum_(r,s) integral_(-3)^3 |R_W((r/s)*exp(theta/H))|^2 dtheta >= (75/2)*H*v^(8-3*delta(v))",
+    "weight_plateau": "0<=w<=1; supp(w) subset [1,2]; w=1 on [6/5,9/5]"
+  },
+  "diagonal_cauchy_limitation": {
+    "conditional_regime": "If lambda<=v^(12+a*delta(v)) for fixed a>=0, then R*S_L/(lambda*DelCov)-1>=(1/2)*v^(6-a*delta(v))-1.",
+    "epistemic_status": "PROVED",
+    "meaning": "The displayed projection/Cauchy certificate for chi_ph<=kappa then requires eta_ph<=kappa^2/((1/2)*v^(6-a*delta(v))-1). This is a limitation of that certificate, not a no-go for the exact chi_ph."
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "cancellation_projection_calibration": {
+      "chi_ph_square": "1",
+      "eta_ph": "243/169",
+      "lambda": "1",
+      "mu_top": "1",
+      "projection_factor": "169/243",
+      "row_diagonal_S": "206/243",
+      "rows": "2",
+      "statement": "eta_ph*(m*S/(lambda*mu_top)-1)=chi_ph^2=1 in the exact cancellation family."
+    },
+    "deletion_rows": {
+      "actual_constant_diagonal": "G_tt=S_L for M_W(t,n)=w(n/L)n^(it)",
+      "closure": "DelCov>=v^(-2*s*delta), combined_projection<=kappa^2, and ell+r+2*s<=2-gamma imply the prior all-row gate",
+      "combined_projection": "chi_ph^2<=eta_ph*(|W|*S_L/(lambda*DelCov(W))-1) when DelCov(W)>0",
+      "coordinate_lower": "|u_t|^2>=d_t^2/(d_t^2+beta_t^2), with 0/0 interpreted as 0",
+      "deletion_coverage": "DelCov(W)=|W|*min_t d_t^2/(d_t^2+beta_t^2)<=mu_top(W)",
+      "deletion_deficit": "d_t=lambda-lambda_max(G_(W minus {t}))",
+      "off_row_correlation": "beta_t=||G_(W minus {t},t)||_2",
+      "phase_projection": "chi_ph^2<=eta_ph*max_t(G_tt/(lambda|u_t|^2)-1)"
+    },
+    "farey_deletion_rows": {
+      "deletion": "Delta_F(t)=Mcal_v(W)-Mcal_v(W minus {t})=(K_F)_(t,t)+2*Re sum_(s!=t)(K_F)_(t,s)",
+      "kernel": "(K_F)_(t,t')=sum_(a in F_Q) integral_(-3)^3 (a*exp(theta/H))^(i(t-t')) dtheta",
+      "mass": "Mcal_v(W)=1^*K_F*1",
+      "rationalmass_average": "RationalMass gives Mcal_v(W)>=(75/2)*H*v^(8-3*delta), hence average Delta_F>=75*v^(12-3*delta)-6*v^8",
+      "sum": "sum_t Delta_F(t)=2*Mcal_v(W)-tr(K_F)",
+      "trace": "tr(K_F)=6*|W|*|F_Q|"
+    },
+    "plateau_l2_bounds": {
+      "L": 1073741824,
+      "derivation": "S_L=sum_(L<n<2L)w(n/L)^2; plateau gives S_L>=3L/5-1>=L/2",
+      "gram_diagonal_S_lower": "536870912",
+      "gram_diagonal_S_upper": "1073741824",
+      "plateau": "w=1 on [6/5,9/5]",
+      "plateau_integer_count_lower": "3221225467/5",
+      "weight_range": "0<=w<=1 on L<n<2L"
+    },
+    "rank_one_sharpness": {
+      "coordinate_squares": [
+        "1/14",
+        "2/7",
+        "9/14"
+      ],
+      "coordinates": [
+        "1",
+        "2",
+        "3"
+      ],
+      "deletion_lower_bounds": [
+        "1/14",
+        "2/7",
+        "9/14"
+      ],
+      "lambda": "14",
+      "minimum_top_leverage": "3/14",
+      "statement": "For G=a a^*, d_t=|a_t|^2 and beta_t^2=|a_t|^2(lambda-|a_t|^2), so the deletion lower bound is exact."
+    },
+    "scales": {
+      "H": 68719476736,
+      "L": 1073741824,
+      "Q": 4096,
+      "R": 16777216,
+      "v": 8
+    }
+  },
+  "falsifiers": {
+    "actual_context": "A mismatch in the pinned w plateau, actual M_W label, common-W rule, Farey identity, or RationalMass theta-mass antecedent invalidates the actual-log specialization.",
+    "deletion_lemma": "A finite PSD Gram matrix violating the block eigenvector inequality or its rank-one equality case refutes the reduction.",
+    "projection_lemma": "A finite matrix violating the orthogonal projection identity or the displayed chi_ph upper bound refutes the reduction."
+  },
+  "farey_deletion_accounting": {
+    "abstract_scope_limit": "J_(R-1) direct_sum [1] has total mass asymptotic to R^2 but minimum deletion influence one. It is not asserted to be the actual Farey kernel.",
+    "epistemic_status": "PROVED",
+    "identities": {
+      "deletion": "Delta_F(t)=Mcal_v(W)-Mcal_v(W minus {t})=(K_F)_(t,t)+2*Re sum_(s!=t)(K_F)_(t,s)",
+      "kernel": "(K_F)_(t,t')=sum_(a in F_Q) integral_(-3)^3 (a*exp(theta/H))^(i(t-t')) dtheta",
+      "mass": "Mcal_v(W)=1^*K_F*1",
+      "rationalmass_average": "RationalMass gives Mcal_v(W)>=(75/2)*H*v^(8-3*delta), hence average Delta_F>=75*v^(12-3*delta)-6*v^8",
+      "sum": "sum_t Delta_F(t)=2*Mcal_v(W)-tr(K_F)",
+      "trace": "tr(K_F)=6*|W|*|F_Q|"
+    },
+    "rationalmass_consequence": "RationalMass implies only the average Farey deletion lower bound 75*v^(12-3*delta(v))-6*v^8, not a minimum row bound or a transfer to DelCov(G_W)."
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/crr_row_deletion_inverse_v1.py",
+      "sha256": "7938c06a2fc5824d0fa5505f4448257df0b738d5e7b0db17417233c53e1761fe"
+    },
+    "crr_v2_artifact": {
+      "path": "artifacts/cycle-4-p1r-crr-u-formalization-v2.json",
+      "sha256": "e26be797539eabe53ee765b7067d1c99fe4d440035e27785cf38aa64bc2fc84e"
+    },
+    "crr_v2_conventions": {
+      "path": "conventions/crr_formalization_v2.py",
+      "sha256": "0d960b76a4ad03cce43727159cf846696dbee732184df44b2ee0503b9ae18ce8"
+    },
+    "document": {
+      "path": "docs/cycle-6-crr-row-deletion-inverse-v1.md",
+      "sha256": "810063aacffc777f134fd39c30b7268f26f9e1e0d0a059a259a7b6fae1a2f689"
+    },
+    "farey_log_v2_artifact": {
+      "path": "artifacts/cycle-5-crr-farey-log-gram-reduction-v2-averaged-jitter.json",
+      "sha256": "ce59b777ec02769168d9dc330658a0ab1d46b05cdb7ac5dc8115e248d85f8ce8"
+    },
+    "gm_source_tex": {
+      "path": "artifacts/sources/arxiv-2405.20552v2/LargevaluesDirichlet17.tex",
+      "sha256": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428"
+    },
+    "phase_flatness_artifact": {
+      "path": "artifacts/cycle-6-crr-phase-flatness-v1.json",
+      "sha256": "28990f2c703e0f8bfba8e25fb40ecc3d8231392e564653a01fcf5330a52b83ff"
+    }
+  },
+  "phase_projection": {
+    "combined_actual_test": "DelCov>0 and eta_ph*(|W|*S_L/(lambda*DelCov)-1)<=kappa^2 imply chi_ph<=kappa",
+    "definitions": {
+      "eta_ph": "||q||_2^2/||x||_1^2=(||b^ph||_2^2-||x||_1^2)/||x||_1^2",
+      "q": "b^ph-||x||_1*x",
+      "r": "M_W*q"
+    },
+    "epistemic_status": "PROVED",
+    "relative_bound": "chi_ph^2<=eta_ph*max_t(S_L/(lambda|u_t|^2)-1)<=eta_ph*(|W|*S_L/(lambda*mu_top)-1)",
+    "rho_relation": "eta_ph=(1-rho)/rho if x has full support; always eta_ph<=(1-rho)/rho",
+    "row_bound": "|r_t|^2<=(S_L-lambda|u_t|^2)||q||_2^2",
+    "sharpness_calibration": {
+      "chi_ph_square": "1",
+      "eta_ph": "243/169",
+      "lambda": "1",
+      "mu_top": "1",
+      "projection_factor": "169/243",
+      "row_diagonal_S": "206/243",
+      "rows": "2",
+      "statement": "eta_ph*(m*S/(lambda*mu_top)-1)=chi_ph^2=1 in the exact cancellation family."
+    }
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_6_crr_row_deletion_inverse_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_6_crr_row_deletion_inverse_v1.py",
+    "write_command": "python3 proof/build_cycle_6_crr_row_deletion_inverse_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE_BY_USER_DIRECTION",
+    "lightweight_checks": "exact finite-dimensional spectral algebra, pinned source/convention anchors, rational scale bookkeeping, replay, and tamper rejection"
+  },
+  "rfd_inverse_target": {
+    "conditional_effect": "Together with the lambda/rho rows and ell+r+2*s<2, this implies the prior capped all-row Base construction on the same W.",
+    "epistemic_status": "CONJECTURED",
+    "statement": "Every actual W satisfying frozen RationalMass, separation, cardinality, and energy has DelCov(W)>=v^(-2*s*delta(v)) and eta_ph*(R*S_L/(lambda*DelCov(W))-1)<=kappa^2 for fixed s,kappa with kappa<1.",
+    "what_it_must_control": "Each actual row's spectral deletion deficit relative to its aggregate off-row log correlation, plus phase-rounding projection; total Farey mass alone is insufficient."
+  },
+  "row_deletion_leverage": {
+    "consequence": "mu_top(W)>=DelCov(W)",
+    "coordinate_lower": "|u_t|^2>=d_t^2/(d_t^2+beta_t^2)",
+    "definitions": {
+      "DelCov": "|W|*min_t d_t^2/(d_t^2+beta_t^2), with 0/0 interpreted as 0",
+      "actual_beta_square": "beta_t^2=sum_(s in W,s!=t)|sum_(L<n<2L)w(n/L)^2*n^(i(t-s))|^2=(G_W^2)_(t,t)-S_L^2",
+      "beta_t": "||G_(W minus {t},t)||_2",
+      "d_t": "lambda-lambda_minus_t",
+      "lambda_minus_t": "lambda_max(G_(W minus {t}))"
+    },
+    "epistemic_status": "PROVED",
+    "sharpness": {
+      "coordinate_squares": [
+        "1/14",
+        "2/7",
+        "9/14"
+      ],
+      "coordinates": [
+        "1",
+        "2",
+        "3"
+      ],
+      "deletion_lower_bounds": [
+        "1/14",
+        "2/7",
+        "9/14"
+      ],
+      "lambda": "14",
+      "minimum_top_leverage": "3/14",
+      "statement": "For G=a a^*, d_t=|a_t|^2 and beta_t^2=|a_t|^2(lambda-|a_t|^2), so the deletion lower bound is exact."
+    }
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_6_crr_row_deletion_inverse_v1.py",
+    "sha256": "2f2823dbac52a1218b82d1d4206629e0812cf2d40fbeaef84c693ee3c2d6f2c4"
+  },
+  "status": "SEALED_ACTUAL_LOG_ROW_DELETION_REDUCTION_LIGHTWEIGHT_CHECKED"
+}

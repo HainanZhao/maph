@@ -1,0 +1,68 @@
+{
+  "artifact_id": "g0-six-route-resource-gate-config-v2",
+  "claim_boundary": "Deterministic six-route resource configuration. It corrects v1's omission of the two independent Cycle-1 routes and does not itself adjudicate G0.",
+  "epistemic_status": "OBSERVED",
+  "limits": {
+    "max_rss_kib_strictly_less_than": 262144,
+    "wall_seconds_strictly_less_than": 60
+  },
+  "required_outcome": "Every listed route exits zero and is measured strictly below both ceilings; any missing/unparseable/at-ceiling row fails closed.",
+  "routes": [
+    {
+      "command": [
+        "python3",
+        "proof/replay_cycle1_route_a_readonly_v1.py"
+      ],
+      "id": "cycle1-route-a-readonly-v1",
+      "scope": "Cycle-1 independent Route A baseline, bottleneck, and complete case split."
+    },
+    {
+      "command": [
+        "python3",
+        "proof/replay_cycle1_route_b_readonly_v1.py"
+      ],
+      "id": "cycle1-route-b-readonly-v1",
+      "scope": "Cycle-1 independent Route B baseline, bottleneck, and complete case split."
+    },
+    {
+      "command": [
+        "python3",
+        "proof/audit_cycle2_stream_b_route_a_v3.py",
+        "--check",
+        "artifacts/cycle-2-stream-b-route-a-v3.json"
+      ],
+      "id": "stream-b-route-a-v3",
+      "scope": "Cycle-2 Stream-B Route A."
+    },
+    {
+      "command": [
+        "python3",
+        "proof/replay_cycle2_stream_b_route_b.py",
+        "--check",
+        "artifacts/cycle-2-stream-b-route-b-v1.json"
+      ],
+      "id": "stream-b-route-b-v1",
+      "scope": "Cycle-2 Stream-B Route B."
+    },
+    {
+      "command": [
+        "python3",
+        "proof/replay_cycle2_stream_c_route_a_v5.py",
+        "--check",
+        "artifacts/cycle-2-stream-c-route-a-v5.json"
+      ],
+      "id": "stream-c-route-a-v5",
+      "scope": "Cycle-2 Stream-C Route A."
+    },
+    {
+      "command": [
+        "python3",
+        "proof/replay_short_intervals_stream_c_route_b_v5.py",
+        "--check"
+      ],
+      "id": "stream-c-route-b-v5",
+      "scope": "Cycle-2 Stream-C Route B."
+    }
+  ],
+  "supersedes": "cycle-2-g0-per-route-resource-gate-config-v1 for complete G0 coverage; v1 is preserved"
+}

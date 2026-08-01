@@ -1,0 +1,126 @@
+{
+  "ambient_projection_no_go": {
+    "epistemic_status": "PROVED",
+    "finite_diagnostics": "Any finite collection of homogeneous continuous linear functionals leaves a nonzero 1-eigenvector in their common kernel.",
+    "normalized_operator": "P_(E_v)=(2*pi)^(-1)K_v=F^(-1)M_(1_(log U_v))F on unrestricted L^2(R)",
+    "scope": "This is an ambient L^2/finite-rank no-go; atomic self-convolution profiles are a stricter nonlinear class.",
+    "spectrum": "P_(E_v) is an orthogonal projection with norm exactly one and infinite-dimensional 1-eigenspace."
+  },
+  "artifact_id": "cycle-7-crr-f4f-signed-projection-extremizer-v1",
+  "claim_boundary": "This artifact proves the exact actual-Farey signed pair-sum PSD form, the norm-one unrestricted Fourier-projection boundary including finite homogeneous continuous linear diagnostics, an equal-weight actual-cell phase-lattice extremizer satisfying the CRR cardinality/separation/energy band, and a one-cell inverse lattice lemma. It proves neither Base-admissibility of that extremizer, F4F_eta on Base, AFARI, CFARI, CRR-U, a Base-compatible counterexample, a cubic estimate, a density gain, a short-interval theorem, a full-method saturation theorem, nor an L-function result.",
+  "crr_u_effect": {
+    "epistemic_status": "PROVED",
+    "statement": "CRR-U remains open. The result sharpens only the energy-only signed F4F boundary."
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "actual_anchor_at_v8": {
+      "r": 4097,
+      "s": 5121
+    },
+    "constants": {
+      "close_pair_existence_constant": 1216,
+      "close_pair_expectation_constant": 304,
+      "close_pair_q_exponent": "103/100",
+      "energy_existence_upper_constant": 65536,
+      "energy_expectation_upper_constant": 16384,
+      "finite_diagnostic_scope": "finite homogeneous continuous linear functionals on unrestricted L^2(R)",
+      "local_fourth_moment_lower_constant": "1/20",
+      "period_strict_lower": 24,
+      "period_strict_upper": 38,
+      "projection_normalization": "P_E=(2*pi)^(-1)K_E=F^(-1)M_(1_E)F",
+      "random_subset_multiplier": 2,
+      "safe_minimum_Q": 1048576
+    },
+    "scales_at_v8": {
+      "H": 68719476736,
+      "Q": 4096,
+      "R": 16777216,
+      "v": 8
+    }
+  },
+  "frozen_hashes": {
+    "afari_artifact": {
+      "path": "artifacts/cycle-6-crr-afari-coefficient-coupling-v1.json",
+      "sha256": "a9b142f8fd22e4fe9ebd4857af4eb7e764aa20ea379170930f6446231e663266"
+    },
+    "cfari_artifact": {
+      "path": "artifacts/cycle-6-crr-cfari-phase-equivalence-v1.json",
+      "sha256": "00ca4e7f794a06d797b24543d174d86ef6d8a3f99a068d14bb693ce894f16dad"
+    },
+    "conventions": {
+      "path": "conventions/crr_f4f_signed_projection_extremizer_v1.py",
+      "sha256": "62e569e2e63ecd4b02671157866f0b71872264d4367e0ff8d443cde9fae582a1"
+    },
+    "crr_v2_artifact": {
+      "path": "artifacts/cycle-4-p1r-crr-u-formalization-v2.json",
+      "sha256": "e26be797539eabe53ee765b7067d1c99fe4d440035e27785cf38aa64bc2fc84e"
+    },
+    "document": {
+      "path": "docs/cycle-7-crr-f4f-signed-projection-extremizer-v1.md",
+      "sha256": "fabe2df4b91d4b38eca3cfb9e2357f430033ae4ad1c671beb341775b463340a2"
+    },
+    "f4f_mellin_artifact": {
+      "path": "artifacts/cycle-7-crr-f4f-mellin-farey-reduction-v1.json",
+      "sha256": "18fefc631e63a622cf780c927cd6aad185d5cc310f9e908c09ccb9de1fefc7a4"
+    },
+    "farey_v2_artifact": {
+      "path": "artifacts/cycle-5-crr-farey-log-gram-reduction-v2-averaged-jitter.json",
+      "sha256": "ce59b777ec02769168d9dc330658a0ab1d46b05cdb7ac5dc8115e248d85f8ce8"
+    },
+    "tests": {
+      "path": "tests/test_cycle_7_crr_f4f_signed_projection_extremizer_v1.py",
+      "sha256": "a063e0abbcfbac9568f0317681e4335ead39561ff394c4347ce3d3fcf05ffbf5"
+    }
+  },
+  "one_cell_inverse": {
+    "endpoint": "The phase-lattice extremizer has epsilon=0 at its actual alpha_Q.",
+    "epistemic_status": "PROVED",
+    "statement": "If |R_W(alpha)|>=(1-epsilon)|W|, then for 0<lambda<=pi at most pi^2*epsilon*|W|/(2lambda^2) rows lie angular distance more than lambda from one phase-lattice coset modulo 2*pi/|log(alpha)|."
+  },
+  "phase_lattice_extremizer": {
+    "actual_label": "r_Q=Q+1, s_Q=5Q/4+1, alpha_Q=r_Q/s_Q, gcd(r_Q,s_Q)=1",
+    "conclusion": "F4F_eta fails on the energy/spaced/cardinality class for every fixed eta>0 along an unbounded even sequence; this is not a disproof on the full Base class.",
+    "epistemic_status": "PROVED",
+    "local_lower": "integral_(U_v)|R_(W_Q)(u)|^4du>=(1/20)v^20",
+    "properties": "W_Q subset [0,H], |W_Q|=R, W_Q is H^(1/100)-separated, and v^(20-delta(v))<=E(W_Q)<=v^(20+delta(v)) eventually",
+    "quantifier": "every sufficiently large even v",
+    "row_set": "W_Q={P_Q a:a in A}, P_Q=2*pi/log(s_Q/r_Q), with A obtained by the sealed random-subset/deletion argument"
+  },
+  "remaining_gate": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "A signed F4F advance must exploit nonlinear equal-weight atomic self-convolution realizability and/or the common Base coefficient vector to exclude or control the phase-lattice profiles; generic PSD and finite-dimensional spectral data cannot do so."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_7_crr_f4f_signed_projection_extremizer_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_7_crr_f4f_signed_projection_extremizer_v1.py",
+    "write_command": "python3 proof/build_cycle_7_crr_f4f_signed_projection_extremizer_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE_BY_USER_DIRECTION",
+    "lightweight_checks": "exact Fourier/projection algebra, integer scale and random-subset constants, source-artifact checks, replay, and tamper rejection"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_7_crr_f4f_signed_projection_extremizer_v1.py",
+    "sha256": "3778d85bca3559861b3fb0167b2d0b65eb8ead9e7a9b50e1685d3326fe2477c1"
+  },
+  "signed_pair_sum_form": {
+    "epistemic_status": "PROVED",
+    "labels": "K_v retains every actual coprime ordered Farey label and true bounded logarithmic jitter",
+    "positivity": "K_v is positive semidefinite despite the signed S_Q expansion.",
+    "statement": "For nu_W=(sum_(t in W)delta_t)*(sum_(t in W)delta_t), I4_log(W)=<nu_W,K_v nu_W>=integral_(log U_v)|nu_hat_W(x)|^2dx, with K_v(s,s')=J_H(s-s')S_Q(s-s')."
+  },
+  "source_context": {
+    "actual_labels": "coprime ordered (r,s) in the frozen Q-shell with true |theta|<=3 jitter",
+    "base_energy": "v^(20-delta(v)) <= E(W) <= v^(20+delta(v))",
+    "base_energy_definition": "ordered quadruples in W^4 with |t1+t2-t3-t4|<=1",
+    "base_set": "finite W subset [0,H], H^(1/100)-separated",
+    "prior_f4f_status": "CONJECTURED"
+  },
+  "status": "SEALED_SIGNED_F4F_PROJECTION_AND_ENERGY_ONLY_NO_GO_LIGHTWEIGHT_CHECKED"
+}

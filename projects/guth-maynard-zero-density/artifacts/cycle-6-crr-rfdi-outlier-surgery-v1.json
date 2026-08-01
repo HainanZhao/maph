@@ -1,0 +1,177 @@
+{
+  "actual_log_outlier_selection": {
+    "circularity_audit": "The time tau is selected from the fixed core eigenvector and actual M_A before inspecting G_W's top eigenvector, deletion statistic, phase rounding, or Farey outcome.",
+    "coupling": "f(tau)=u_A^*G_(A,tau)=sqrt(Lambda)D_c(tau), where D_c(tau)=sum_(L<n<2L) conjugate(x_n)w(n/L)n^(-i*tau) and sum|c_n|^2<=1.",
+    "elementary_average": "(1/|I|)integral_I|D_c(tau)|^2dtau<=C_v:=1+32L(1+log L)/H, so a tau in I has |f(tau)|^2<=Lambda*C_v.",
+    "epistemic_status": "PROVED_CONDITIONAL_ON_THE_CORE",
+    "large_v_constant": "For v>=64, C_v<=2 by log(v)<=sqrt(v) and L/H=v^(-2)."
+  },
+  "artifact_id": "cycle-6-crr-rfdi-outlier-surgery-v1",
+  "claim_boundary": "This artifact proves a conditional actual-log/Farey one-row surgery theorem. It does not construct its surplus/spectral core, refute RFDI, establish the full Base pointwise coefficient condition after surgery, prove an actual CRR witness, AFARI/FARI/CFARI/CRR-U, a cubic estimate, a density gain, a short-interval theorem, a saturation theorem, or an L-function result.",
+  "conditional_core": {
+    "boundary": "No existence theorem for this core is supplied; it is an explicit conditional antecedent, not an actual counterexample to RFDI.",
+    "epistemic_status": "CONJECTURED",
+    "geometry": "A has R-1 rows in [0,H/4], is H^(1/100)-separated, and has E(A) in [v^(20-delta(v)),v^(20+delta(v))-(4R-3)].",
+    "rationalmass_surplus": "On a rational set E of measure at least v^(-4-delta(v)), F_A>=(1+epsilon)*v^(12-2*delta(v)) for fixed epsilon>0.",
+    "spectral": "lambda_1(G_A)=Lambda, lambda_2(G_A)<=(1-g)Lambda, Lambda>=v^(12-ell*delta(v)), and S_L+sqrt(Lambda*S_L)<=g*Lambda/2 for fixed 0<g<=1."
+  },
+  "context": {
+    "actual_farey_identity": "C_theta(sk,rk)=R_W((r/s)*exp(theta/H))",
+    "base_cardinality": "v^(8-delta(v)) <= |W| <= v^(8+delta(v))",
+    "base_energy": "v^(20-delta(v)) <= E(W) <= v^(20+delta(v))",
+    "base_energy_definition": "ordered quadruples in W^4 with |t1+t2-t3-t4|<=1",
+    "base_set": "finite W subset [0,H], H^(1/100)-separated",
+    "common_object_rule": "One common pair (b,W) must satisfy Base(v), RationalMass(v), and PositiveCubic(v); no separately optimized W is admissible.",
+    "rationalmass_theta_mass": "sum_(r,s) integral_(-3)^3 |R_W((r/s)*exp(theta/H))|^2 dtheta >= (75/2)*H*v^(8-3*delta(v))",
+    "rationalmass_threshold": "measure({u in Q_v:Rtilde_W(u)>=v^(6-delta(v))}) >= v^(-4-delta(v))",
+    "row_deletion_consequence": "mu_top(W)>=DelCov(W)",
+    "smoothing": "psi1>=0; supp(psi1) subset [-1,1]; psi1(0)=1; psi2>=0; supp(psi2) subset [1/2,3/2]; psi2(1)=1",
+    "weight": "0<=w<=1; supp(w) subset [1,2]; w=1 on [6/5,9/5]"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "farey_kernel_rows": {
+      "actual_labels": "C_theta(sk,rk)=R_W((r/s)*exp(theta/H)) remains an identity for the one common W.",
+      "diagonal": "(K_F)_(t,t)=6*|F_Q|<=6*Q^2=6*v^8",
+      "feature": "Phi_t(a,theta)=(a*exp(theta/H))^(i*t), so K_F is a Gram kernel",
+      "kernel": "(K_F)_(t,s)=sum_(a in F_Q) integral_(-3)^3 (a*exp(theta/H))^(i*(t-s)) dtheta",
+      "mass": "Mcal(W)=1^*K_F*1=||sum_(t in W) Phi_t||_2^2",
+      "one_row_change": "|Mcal(A union {tau})-Mcal(A)-6|F_Q||<=2*sqrt(6|F_Q|*Mcal(A))"
+    },
+    "large_v_mean_value_coarse_tail_at_v64": "81/128",
+    "mean_value_rows": {
+      "average_bound": "(1/|I|) integral_I |D_c(tau)|^2 dtau<=C_v:=1+32*L*(1+log L)/H",
+      "harmonic_bound": "sum_(n!=m)|c_n||c_m|/|n-m|<=2(1+log L)*sum_n|c_n|^2",
+      "interval": "I=[3H/4,H], |I|=H/4",
+      "kernel_integral": "|integral_I exp(-i*tau*log(n/m)) dtau|<=2/|log(n/m)| for n!=m",
+      "log_spacing": "1/|log(n/m)|<=2L/|n-m| for L<n,m<2L and n!=m",
+      "polynomial": "D_c(tau)=sum_(L<n<2L) c_n n^(-i*tau), with sum_n |c_n|^2<=1",
+      "selection": "There exists tau in I with |D_c(tau)|^2<=C_v.",
+      "simple_large_v_bound": "For v>=64, C_v<=2, using log v<=sqrt(v) and L/H=v^(-2)."
+    },
+    "outlier_windows": {
+      "core_to_outlier_distance_lower": "2361183241434822606848",
+      "core_window": "A subset [0,H/4]",
+      "energy_increment": 1125899906842621,
+      "energy_increment_derivation": "For |A|=R-1 and unit-separated A, E(A union {tau})=E(A)+4|A|+1=E(A)+4R-3.",
+      "outlier_interval_length": "1180591620717411303424",
+      "outlier_window": "I=[3H/4,H]",
+      "pair_sum_class_gap_lower": "1180591620717411303424",
+      "pair_sum_classes": "A+A, tau+A=A+tau, and {2tau}"
+    },
+    "rationalmass_surplus_rows": {
+      "conclusion": "The same E proves the frozen RationalMass(v) predicate for A union {tau}; no new set of rational cells is selected.",
+      "core_surplus": "F_A(u)>=(1+epsilon)*T_v on a rational set E of measure at least v^(-4-delta(v))",
+      "kernel_mass": "J(u):=H integral psi1(H(u-u'))psi2(u')du' satisfies 0<=J(u)<=2",
+      "one_row_bound": "F_(A union {tau})(u)>=F_A(u)-2*sqrt(2*F_A(u))",
+      "sufficient_size": "If T_v>=max(2,8*(1+epsilon)/epsilon^2), then the core surplus implies F_(A union {tau})(u)>=T_v on E.",
+      "threshold": "T_v=v^(12-2*delta(v))"
+    },
+    "scales": {
+      "H": 4722366482869645213696,
+      "L": 1152921504606846976,
+      "Q": 16777216,
+      "R": 281474976710656,
+      "v": 64
+    },
+    "spectral_surgery_rows": {
+      "asymptotic_failure": "For fixed g,ell,s, the last bound is <v^(-2*s*delta(v)) for all sufficiently large v.",
+      "central_failure": "If Lambda>=v^(12-ell*delta(v)) and v>=64, DelCov(W)<=8*g^(-2)*v^(-4+ell*delta(v)).",
+      "complement_bound": "||B||<=lambda_2(G_A)+S_L+sqrt(Lambda*S_L)<=Lambda-g*Lambda/2",
+      "core_hypothesis": "lambda_1(G_A)=Lambda and lambda_2(G_A)<=(1-g)*Lambda for fixed 0<g<=1",
+      "coupling": "f(tau)=u_A^*G_(A,tau)=sqrt(Lambda)*D_c(tau), with sum |c_n|^2<=1",
+      "deletion_consequence": "DelCov(W)<=mu_top(W)<=4*R*C_v/(g^2*Lambda)",
+      "scale_condition": "S_L+sqrt(Lambda*S_L)<=g*Lambda/2",
+      "selected_coupling": "|f(tau)|^2<=Lambda*C_v",
+      "top_coordinate": "For every unit top eigenvector u_W, |(u_W)_tau|^2<=4*C_v/(g^2*Lambda)"
+    }
+  },
+  "falsifiers": {
+    "actual_log": "A sign/orientation error in the expansion of f(tau), the integral/log-spacing bound, or the harmonic estimate refutes the actual-row selection lemma.",
+    "energy": "A failure of the pair-sum class separation or of E(A union {tau})=E(A)+4R-3 refutes the scalar-preservation lemma.",
+    "rationalmass": "A failure of the pinned smoothing positivity/support bound J<=2 or of the Cauchy estimate refutes the RationalMass-preservation lemma.",
+    "scope": "An actual proof that no core meets the listed antecedents changes the research route but does not refute this conditional theorem.",
+    "spectral": "A block matrix satisfying the stated core gap and scale condition but violating the top-coordinate or DelCov bound refutes the spectral surgery lemma."
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/crr_rfdi_outlier_surgery_v1.py",
+      "sha256": "6e9183c18458904a2f90d4f2100c8723640c03f6a6e17418291e78930699d328"
+    },
+    "crr_v2_artifact": {
+      "path": "artifacts/cycle-4-p1r-crr-u-formalization-v2.json",
+      "sha256": "e26be797539eabe53ee765b7067d1c99fe4d440035e27785cf38aa64bc2fc84e"
+    },
+    "crr_v2_conventions": {
+      "path": "conventions/crr_formalization_v2.py",
+      "sha256": "0d960b76a4ad03cce43727159cf846696dbee732184df44b2ee0503b9ae18ce8"
+    },
+    "document": {
+      "path": "docs/cycle-6-crr-rfdi-outlier-surgery-v1.md",
+      "sha256": "2e199ab232334f9faceeca9a2690debf21d745e6c191fba6d482c4a17a9685c2"
+    },
+    "farey_log_v2_artifact": {
+      "path": "artifacts/cycle-5-crr-farey-log-gram-reduction-v2-averaged-jitter.json",
+      "sha256": "ce59b777ec02769168d9dc330658a0ab1d46b05cdb7ac5dc8115e248d85f8ce8"
+    },
+    "gm_source_tex": {
+      "path": "artifacts/sources/arxiv-2405.20552v2/LargevaluesDirichlet17.tex",
+      "sha256": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428"
+    },
+    "phase_flatness_artifact": {
+      "path": "artifacts/cycle-6-crr-phase-flatness-v1.json",
+      "sha256": "28990f2c703e0f8bfba8e25fb40ecc3d8231392e564653a01fcf5330a52b83ff"
+    },
+    "row_deletion_artifact": {
+      "path": "artifacts/cycle-6-crr-row-deletion-inverse-v1.json",
+      "sha256": "9b0d74235c587d8624879626703efc9577020ebb8770defe022108914c35e832"
+    }
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_6_crr_rfdi_outlier_surgery_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_6_crr_rfdi_outlier_surgery_v1.py",
+    "write_command": "python3 proof/build_cycle_6_crr_rfdi_outlier_surgery_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE_BY_USER_DIRECTION",
+    "lightweight_checks": "exact row/Gram algebra, elementary integral and harmonic estimates, frozen source/convention anchors, rational scale bookkeeping, replay, and tamper rejection"
+  },
+  "row_deletion_failure": {
+    "actual_deletion_bound": "DelCov(W)<=mu_top(W)<=4RC_v/(g^2Lambda).",
+    "block_gap": "||B||<=Lambda-gLambda/2 in the [u_A] direct-sum complement decomposition of G_W.",
+    "central_bound": "For v>=64 and Lambda>=v^(12-ell*delta(v)), DelCov(W)<=8g^(-2)v^(-4+ell*delta(v)).",
+    "epistemic_status": "PROVED_CONDITIONAL_ON_THE_CORE",
+    "rfd_failure": "For any fixed g,ell,s, this is <v^(-2s*delta(v)) for all sufficiently large v, so the deletion half of RFDI_(s,kappa) fails independently of kappa.",
+    "top_coordinate": "For every unit top eigenvector u_W, |(u_W)_tau|^2<=4C_v/(g^2Lambda)."
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "scalar_and_farey_preservation": {
+    "epistemic_status": "PROVED_CONDITIONAL_ON_THE_CORE",
+    "farey": "The actual K_F feature identity and C_theta(sk,rk)=R_W((r/s)*exp(theta/H)) remain attached to this same W; no alias or row-set replacement is made.",
+    "farey_rows": {
+      "actual_labels": "C_theta(sk,rk)=R_W((r/s)*exp(theta/H)) remains an identity for the one common W.",
+      "diagonal": "(K_F)_(t,t)=6*|F_Q|<=6*Q^2=6*v^8",
+      "feature": "Phi_t(a,theta)=(a*exp(theta/H))^(i*t), so K_F is a Gram kernel",
+      "kernel": "(K_F)_(t,s)=sum_(a in F_Q) integral_(-3)^3 (a*exp(theta/H))^(i*(t-s)) dtheta",
+      "mass": "Mcal(W)=1^*K_F*1=||sum_(t in W) Phi_t||_2^2",
+      "one_row_change": "|Mcal(A union {tau})-Mcal(A)-6|F_Q||<=2*sqrt(6|F_Q|*Mcal(A))"
+    },
+    "outlier_window": "tau is selected in [3H/4,H], so W=A union {tau} is one common actual row set.",
+    "rationalmass": "F_W(u)>=F_A(u)-2sqrt(2F_A(u)); if v^(12-2delta(v))>=max(2,8(1+epsilon)/epsilon^2), the same rational set E proves RationalMass(v) for W.",
+    "separation_cardinality_energy": "E(W)=E(A)+4R-3; the displayed core interior energy band gives the frozen Base separation/cardinality/energy predicates for W."
+  },
+  "sealer": {
+    "path": "proof/build_cycle_6_crr_rfdi_outlier_surgery_v1.py",
+    "sha256": "a3dac8b689b27ed28e25158ed2fd258c486af94f694092d1525361cd955f0bbd"
+  },
+  "status": "SEALED_CONDITIONAL_ACTUAL_LOG_FAREY_RFDI_OUTLIER_OBSTRUCTION_LIGHTWEIGHT_CHECKED",
+  "structural_consequence": {
+    "epistemic_status": "PROVED_CONDITIONAL_ON_THE_CORE",
+    "not_a_no_go": "This does not say the full Base/RationalMass/PositiveCubic witness class admits the core, nor that RFDI is false.",
+    "statement": "A set-only RFDI proof cannot use only scalar/hereditary properties preserved by this surgery. It must exploit an all-row log/Farey mechanism, exclude the isolated-core configuration, or use the non-hereditary coefficient/pointwise portion of Base."
+  }
+}

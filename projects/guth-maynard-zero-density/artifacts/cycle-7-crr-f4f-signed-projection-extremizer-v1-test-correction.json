@@ -1,0 +1,82 @@
+{
+  "artifact_id": "cycle-7-crr-f4f-signed-projection-extremizer-v1-test-correction",
+  "claim_boundary": "This correction records and repairs a literal test expectation only. It changes no mathematical statement, source anchor, convention, actual Farey label, jitter interval, v1 artifact field, or replay payload, and it proves no new F4F/AFARI/CFARI/CRR-U result.",
+  "corrected_assertion": "self.assertIn(\"of `F4F_eta` fails on this energy/spaced/cardinality class\", document)",
+  "correction": {
+    "affected_claims": "none",
+    "artifact_payload_change": "none",
+    "cause": "A semantically related paraphrase was encoded as an exact-string assertion.",
+    "epistemic_status": "OBSERVED",
+    "error": "The v1 test expected an unformatted literal; the sealed document says 'of `F4F_eta` fails on this energy/spaced/cardinality class'.",
+    "mathematical_change": "none",
+    "resolution": "Preserve v1 and use a new test that checks the exact sealed formatted phrase.",
+    "source_change": "none"
+  },
+  "epistemic_status": "OBSERVED",
+  "frozen_hashes": {
+    "correction_document": {
+      "path": "docs/cycle-7-crr-f4f-signed-projection-extremizer-v1-test-correction.md",
+      "sha256": "22f159dd953e9a4bb5b80a6bb38f580e6354fbbc602c4b7c238253246945cd9d"
+    },
+    "correction_test": {
+      "path": "tests/test_cycle_7_crr_f4f_signed_projection_extremizer_v1_test_correction.py",
+      "sha256": "39332402637c7a98c9cba53ef7b499c97d5f9080646226f7188f9b955cdb4304"
+    },
+    "v1_artifact": {
+      "path": "artifacts/cycle-7-crr-f4f-signed-projection-extremizer-v1.json",
+      "sha256": "9616ef55eec03f2f11ba2b625fd9e8cbd3c4ad581900a8a441ce9ed130d05796"
+    },
+    "v1_builder": {
+      "path": "proof/build_cycle_7_crr_f4f_signed_projection_extremizer_v1.py",
+      "sha256": "3778d85bca3559861b3fb0167b2d0b65eb8ead9e7a9b50e1685d3326fe2477c1"
+    },
+    "v1_conventions": {
+      "path": "conventions/crr_f4f_signed_projection_extremizer_v1.py",
+      "sha256": "62e569e2e63ecd4b02671157866f0b71872264d4367e0ff8d443cde9fae582a1"
+    },
+    "v1_document": {
+      "path": "docs/cycle-7-crr-f4f-signed-projection-extremizer-v1.md",
+      "sha256": "fabe2df4b91d4b38eca3cfb9e2357f430033ae4ad1c671beb341775b463340a2"
+    },
+    "v1_test": {
+      "path": "tests/test_cycle_7_crr_f4f_signed_projection_extremizer_v1.py",
+      "sha256": "a063e0abbcfbac9568f0317681e4335ead39561ff394c4347ce3d3fcf05ffbf5"
+    }
+  },
+  "historical_test_observation": {
+    "command": "python3 -m unittest tests/test_cycle_7_crr_f4f_signed_projection_extremizer_v1.py",
+    "epistemic_status": "OBSERVED",
+    "result": "one expected literal-string failure; no mathematical assertion failed"
+  },
+  "original_assertion": "self.assertIn(\"F4F_eta fails on this energy/spaced/cardinality class\", document)",
+  "preserved_v1": {
+    "artifact_id": "cycle-7-crr-f4f-signed-projection-extremizer-v1",
+    "artifact_sha256": "9616ef55eec03f2f11ba2b625fd9e8cbd3c4ad581900a8a441ce9ed130d05796",
+    "statement": "The v1 artifact, builder, conventions, document, and original failing test are immutable inputs to this correction."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_7_crr_f4f_signed_projection_extremizer_v1_test_correction.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_7_crr_f4f_signed_projection_extremizer_v1_test_correction.py",
+    "write_command": "python3 proof/build_cycle_7_crr_f4f_signed_projection_extremizer_v1_test_correction.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE_BY_USER_DIRECTION",
+    "lightweight_checks": "immutable-artifact hash pinning, literal-expectation comparison, v1 replay, contained historical-test replay, corrected replay, and tamper rejection"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealed_phrase": "of `F4F_eta` fails on this energy/spaced/cardinality class",
+  "sealer": {
+    "path": "proof/build_cycle_7_crr_f4f_signed_projection_extremizer_v1_test_correction.py",
+    "sha256": "53392adaf643f6fc1cb89324005adaa12a6e290f4b8f80386c6f7fc1d8b471c2"
+  },
+  "status": "SEALED_V1_SIGNED_F4F_EXTREMIZER_TEST_CORRECTION_LIGHTWEIGHT_CHECKED",
+  "v1_replay": {
+    "command": "python3 proof/build_cycle_7_crr_f4f_signed_projection_extremizer_v1.py --check",
+    "epistemic_status": "PROVED",
+    "result": "v1 builder --check passed without changing the immutable artifact"
+  }
+}

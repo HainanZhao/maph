@@ -1,0 +1,134 @@
+{
+  "artifact_id": "p7-norm-aggregation-v2-correction",
+  "artifact_identity": {
+    "conventions": {
+      "path": "conventions/p7_norm_aggregation_v1.py",
+      "sha256": "4c330c837b8cdec42d5e1be40dadac5969099cc465c56bb01cbbc6db7d438d5b"
+    },
+    "document": {
+      "path": "docs/p7-norm-aggregation-v2-correction.md",
+      "sha256": "29250227f4662cf92c5612b7074be4c86037a279259eade617e6d89cd72719d5"
+    },
+    "prior_reconciliation": {
+      "path": "artifacts/p7-norm-aggregation-v1.json",
+      "sha256": "25b55dfda03ea1e45bd19b5828b5ba8271403210b873c11600c0db874ebd40f7"
+    },
+    "route_a_artifact": {
+      "path": "artifacts/p7-norm-aggregation-route-a-v1.json",
+      "sha256": "c82a04c4de34c6d0ffb00df80fa6e76fc335162b0ff2f9b345f5180b7fc036a3"
+    },
+    "route_a_script": {
+      "path": "proof/run_p7_norm_aggregation_route_a_v1.py",
+      "sha256": "9a68612e55dd425b170447bac7bb69db80cef3554daa8fbcbe20b28c0e2274c8"
+    },
+    "route_b_artifact": {
+      "path": "artifacts/p7-norm-aggregation-route-b-v1.json",
+      "sha256": "627420013029a65fc341c86dc45b0e8f191ec5508442a60762ab320c07ba2aed"
+    },
+    "route_b_correction_artifact": {
+      "path": "artifacts/p7-norm-aggregation-route-b-v2-correction.json",
+      "sha256": "145e6f0513ae8613e42109d7bf773f7e9fc7ca7e892ce701d8dad49265c49ebd"
+    },
+    "route_b_correction_script": {
+      "path": "proof/correct_p7_norm_aggregation_route_b_v2.py",
+      "sha256": "2cc5c3ce6bf1c7d1bfc71e94d69976045893b37c2d46e9afa44f9b24ca83b654"
+    },
+    "route_b_script": {
+      "path": "proof/run_p7_norm_aggregation_route_b_v1.py",
+      "sha256": "f638c82f9b92c9d996166ab349c990791cdd25863fc4433eacfd0ae7c6d3c900"
+    },
+    "tests": {
+      "path": "tests/test_p7_norm_aggregation_v2.py",
+      "sha256": "8075a5c563005ab050f467bd4028baef2600281476fc5e6f7c4f9e47eb83e333"
+    }
+  },
+  "claim_boundary": "The finite witness, norm identity, and fixed-character normalization check only. No joint character-family large-value, zero-density, or prime-ideal theorem is proved.",
+  "contained_test_issues": [
+    "Route B v1 parenthesized-label schema mismatch, corrected in its preserved v2 correction.",
+    "P7-1 v1 reconciliation's literal-substring test mismatch, corrected here.",
+    "Pre-existing P7 preregistration-v2 test list-element mismatch; its builder replay remains valid and no sealed preregistration byte was edited."
+  ],
+  "correction": {
+    "defect": "v1's test used an accidental exact-string assertion after the values had already been reconciled by a versioned label correction",
+    "mathematical_effect": "none",
+    "predecessor": {
+      "path": "artifacts/p7-norm-aggregation-v1.json",
+      "sha256": "25b55dfda03ea1e45bd19b5828b5ba8271403210b873c11600c0db874ebd40f7"
+    },
+    "repair": "v2 checks the exact mathematical boundary and records both prior label/test defects without changing predecessor bytes"
+  },
+  "epistemic_status": "PROVED",
+  "gate": "P7-1-NORM-AGGREGATION",
+  "gate_outcome": "PASS_SCOPED_TYPE_MISMATCH_AND_NORMALIZATION",
+  "non_promotion": [
+    "This gate proves no Hecke-family large-value theorem, density theorem, or prime-ideal result.",
+    "Different A_chi block only verbatim common-coefficient import to joint (chi,t) samples.",
+    "The result does not rule out a character-aware, ideal-indexed, or separately summed method with its own accounting."
+  ],
+  "reconciliation": {
+    "direct_import_boundary": "Because A_chi differs, a theorem assuming one common coefficient vector cannot be invoked verbatim on joint (chi,t) samples.",
+    "exact_conductors": [
+      "(3)",
+      "(1+i)^4"
+    ],
+    "non_no_go": "This does not exclude a character-aware, ideal-indexed, or separately summed theorem with a separately proved family accounting.",
+    "norm_identity": "a_Q(i)(n)=sum_{d|n} chi_-4(d)",
+    "normalization": {
+      "covered_regime": "N<=T^C fixed C, including the source proof's N<T reduction",
+      "outcome": "EXPONENT_HARMLESS_IN_THE_POLYNOMIAL_LENGTH_HEIGHT_REGIME",
+      "uncovered_regime": "NOT_ESTABLISHED for an arbitrary two-parameter use of the displayed theorem with no relation between N and T: N^o(1) need not be T^o(1)."
+    },
+    "ray_quotients": {
+      "mod_3": 2,
+      "pi_power_e_1_through_4": [
+        1,
+        1,
+        1,
+        2
+      ]
+    },
+    "status": "PROVED",
+    "witness": {
+      "A_chi_3_17": -2,
+      "A_chi_pi4_17": 2
+    }
+  },
+  "replay": {
+    "check_command": "python3 proof/reconcile_p7_norm_aggregation_v2_correction.py --check",
+    "runtime": {
+      "implementation": "CPython",
+      "json_policy": "stdlib json sort_keys=True; UTF-8; LF; trailing newline",
+      "optimize": 0,
+      "version": "3.12.3"
+    },
+    "script": "proof/reconcile_p7_norm_aggregation_v2_correction.py",
+    "script_sha256": "e0be205a33f1f714b71a2d490ca9bfedeb8c0c5fe0952711b0a57e835346ff63",
+    "write_command": "python3 proof/reconcile_p7_norm_aggregation_v2_correction.py --write"
+  },
+  "resource_contract": {
+    "rss_kib_strictly_less_than": 262144,
+    "wall_seconds_strictly_less_than": 60
+  },
+  "review_policy": "LIGHTWEIGHT_SOURCE_ALGEBRA_REPLAY_RECONCILIATION; no hostile audit initiated.",
+  "route_independence": {
+    "preserved_label_correction": true,
+    "route_a": "exact finite residue-ring multiplication tables",
+    "route_b": "local splitting/cardinality and generator calculation",
+    "shared_implementation": false,
+    "status": "OBSERVED"
+  },
+  "source_integrity": {
+    "guth_maynard_tex": {
+      "path": "artifacts/sources/arxiv-2405.20552v2/LargevaluesDirichlet17.tex",
+      "sha256": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428"
+    },
+    "p7_preregistration_v2": {
+      "path": "artifacts/p7-hecke-qi-preregistration-v2.json",
+      "sha256": "fa3c98ce481e913f2c8522856114b8cca643d763314e01a36b0aa7cf9110dfc9"
+    },
+    "zaman_tex": {
+      "path": "artifacts/sources/p7-hecke-v1/zaman-1502.05679v4/Explicit_estimates_for_the_zeros_of_Hecke_L-functions.tex",
+      "sha256": "9440e5d28903d641df03e261c5d9f497bfc7f63062d279b082d6077ad8eaf620"
+    }
+  }
+}

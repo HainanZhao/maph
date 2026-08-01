@@ -1,0 +1,50 @@
+{
+  "artifact_id": "cycle-3-g1-atlas-engine-v2-correction",
+  "claim_boundary": "OBSERVED operational correction manifest only. The v2 full screen has not run, and this artifact proves no mathematical claim or G1 route selection.",
+  "correction_document": {
+    "path": "docs/cycle-3-g1-atlas-engine-v2-correction.md",
+    "sha256": "ed3ff9ce1dcfc441a6820e92fb33bdfd6fdfe14396e952597133ac5a4395dd49"
+  },
+  "epistemic_status": "OBSERVED",
+  "failed_launch_record": {
+    "path": "artifacts/cycle-3-g1-atlas-first-launch-failure-v1.json",
+    "sha256": "adce171c50fc08737429c9c1b398d204ee6da1493df27d88c53069dc90a47697"
+  },
+  "frozen_protocol_unchanged": {
+    "families": true,
+    "grid": true,
+    "precision": true,
+    "resource_caps": true,
+    "retention_thresholds": true,
+    "rng": true,
+    "row_count": 588,
+    "scales": true
+  },
+  "pre_run_status": "READY_FOR_HOSTILE_AUDIT_NOT_EXECUTED",
+  "replay": {
+    "integrity_command": "python3 projects/guth-maynard-zero-density/discovery/run_g1_atlas_v2.py --check-integrity",
+    "optimized_fail_closed_command": "python3 -O projects/guth-maynard-zero-density/discovery/run_g1_atlas_v2.py --check-integrity",
+    "test_command": "python3 -m unittest projects/guth-maynard-zero-density/tests/test_g1_atlas_engine_v2.py projects/guth-maynard-zero-density/tests/test_g1_atlas_engine_v1.py projects/guth-maynard-zero-density/tests/test_g1_atlas_preregistration_v1.py -v"
+  },
+  "runtime_pin": {
+    "implementation": "CPython",
+    "mpmath": "1.2.1",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "test_evidence": {
+    "focused_tests": 16,
+    "outcome": "PASS",
+    "test_path": "tests/test_g1_atlas_engine_v2.py",
+    "test_sha256": "d144e01cd04265d99beed5881d0c4b80fdfa0e99a1fb642de6c82d6d34291fae"
+  },
+  "v1_engine": {
+    "path": "discovery/run_g1_atlas_v1.py",
+    "preserved": true,
+    "sha256": "78f5088cbe615237d565854428511cda03e22fc04838d192c64d3215748c28ee"
+  },
+  "v2_engine": {
+    "path": "discovery/run_g1_atlas_v2.py",
+    "sha256": "62d3b565f4b80f7a7d17d19e779eec5107a1b2df11990cb30db1dc1d07830941"
+  }
+}

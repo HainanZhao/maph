@@ -1,0 +1,152 @@
+{
+  "alias_and_smoothing": {
+    "epistemic_status": "PROVED",
+    "fourier_count": "Parseval sum|Ahat|^2=Km and sum|Ahat|^4=K E_(Z/KZ)(A)<=3Km^2 give >=K/12 good residues; eight cycles give >=2K/3 good node indices.",
+    "nodes": "u_j=exp(2*pi*j/(C K)), 0<=j<8K; all lie in [3/4,5/4] because y_j<pi/64<1/20",
+    "packet": "A disjoint union U_q of core intervals has measure asymp K/H=asymp q^(-1), integral_U F_H >>q^2, and integral_U F_H^2 >>q^5.",
+    "positive_smoothing": "The fixed v2 positive kernel H psi1(H(u-u')) psi2(u') has height asymp H and width asymp H^(-1); restricting to a positive core transfers the raw lower bound to F_H(u) >> L^2m.",
+    "raw_alias_lower": "For |log(u/u_j)|<=1/(100H), |R_W(u)| >= (9/10)L sqrt(m/2)."
+  },
+  "artifact_id": "cycle-4-crr-alias-model-barrier-v1",
+  "claim_boundary": "This is an elementary logarithmic-alias countermodel to a deduction from generic spacing, real energy, and positive H^(-1) smoothing alone. It is not an actual Farey/rational-net construction; it proves neither a CRR witness nor CRR-U, and it gives no coefficient, cubic, density, prime-interval, saturation, or L-function result.",
+  "construction": {
+    "cardinality": "q^2/2<=|W|=mL<=q^2",
+    "epistemic_status": "PROVED",
+    "hard_core": "A has gap >=6q+1 and A subset [0,K/4); W=C(A+K{0,...,L-1}) has gap >=C(6q+1) and lies in [0,H]",
+    "jittered_A": "a_i=8q*i+r_i with independent r_i in {0,...,2q-1}; choose a realization with E(A)<=3m^2",
+    "parameterization": "m=floor(q/64), K=q^2, L=64q, C=1024, H=16CKL=2^20 q^3",
+    "real_energy": {
+      "definition": "E_R,1(W)=#{w1,w2,w3,w4 in W: |w1+w2-w3-w4|<=1}",
+      "exact_formula": "E_R,1(W)=E(A)*(2L^3+L)/3",
+      "no_carry_factorization": "A+A subset [0,K/2) forces separately a1+a2=a3+a4 and l1+l2=l3+l4 in every block equation.",
+      "scale": "E_R,1(W) asymp q^5",
+      "tolerance_reduction": "W subset 1024 Z, so tolerance <=1 is exact equality; this is not modular energy."
+    }
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "q_exponents": {
+      "H": "3",
+      "K": "2",
+      "L": "1",
+      "alias_amplitude": "3/2",
+      "alias_packet_measure": "-1",
+      "cardinality_R": "2",
+      "first_smoothed_moment": "2",
+      "real_energy": "5",
+      "second_smoothed_moment": "5"
+    },
+    "samples": [
+      {
+        "A_max_upper": 6655,
+        "H": 17592186044416,
+        "K": 65536,
+        "L": 16384,
+        "Paley_good_alias_index_lower": "131072/3",
+        "cardinality": 65536,
+        "expected_A_energy_upper": "3595/128",
+        "interval_energy": 2932031012864,
+        "m": 4,
+        "minimum_A_gap": 1537,
+        "q": 256
+      },
+      {
+        "A_max_upper": 6681,
+        "H": 17799150829568,
+        "K": 66049,
+        "L": 16448,
+        "Paley_good_alias_index_lower": "132098/3",
+        "cardinality": 65792,
+        "expected_A_energy_upper": "7218/257",
+        "interval_energy": 2966525143744,
+        "m": 4,
+        "minimum_A_gap": 1543,
+        "q": 257
+      },
+      {
+        "A_max_upper": 124927,
+        "H": 1125899906842624,
+        "K": 1048576,
+        "L": 65536,
+        "Paley_good_alias_index_lower": "2097152/3",
+        "cardinality": 1048576,
+        "expected_A_energy_upper": "63659/128",
+        "interval_energy": 187649984495616,
+        "m": 16,
+        "minimum_A_gap": 6145,
+        "q": 1024
+      },
+      {
+        "A_max_upper": 2072575,
+        "H": 72057594037927936,
+        "K": 16777216,
+        "L": 262144,
+        "Paley_good_alias_index_lower": "33554432/3",
+        "cardinality": 16777216,
+        "expected_A_energy_upper": "1043115/128",
+        "interval_energy": 12009599006408704,
+        "m": 64,
+        "minimum_A_gap": 24577,
+        "q": 4096
+      }
+    ]
+  },
+  "frozen_hashes": {
+    "alias_conventions": {
+      "path": "conventions/crr_alias_model_barrier_v1.py",
+      "sha256": "69126ff3a4291e3e625556e72079e1e4c222dc72481a18139d64b6ee7a683724"
+    },
+    "crr_v2_artifact": {
+      "path": "artifacts/cycle-4-p1r-crr-u-formalization-v2.json",
+      "sha256": "e26be797539eabe53ee765b7067d1c99fe4d440035e27785cf38aa64bc2fc84e"
+    },
+    "crr_v2_conventions": {
+      "path": "conventions/crr_formalization_v2.py",
+      "sha256": "0d960b76a4ad03cce43727159cf846696dbee732184df44b2ee0503b9ae18ce8"
+    },
+    "document": {
+      "path": "docs/cycle-4-crr-alias-model-barrier-v1.md",
+      "sha256": "ce616e72cac5cbc1a811e9414ac996e7ac47da94f9c2c004e6aa687b00e534b1"
+    },
+    "gm_source_tex": {
+      "path": "artifacts/sources/arxiv-2405.20552v2/LargevaluesDirichlet17.tex",
+      "sha256": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428"
+    }
+  },
+  "logical_barrier": {
+    "epistemic_status": "PROVED",
+    "falsifier": "A proposed generic implication with either fixed-power upper saving, applied to the constructed W and U_q, is refuted for sufficiently large q.",
+    "statement": "For every fixed delta>0, the generic conditions listed in claim_boundary cannot by themselves imply a q^(2-delta) first-moment or q^(5-delta) second-moment upper bound on every logarithmic-alias packet."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_4_crr_alias_model_barrier_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_4_crr_alias_model_barrier_v1.py",
+    "write_command": "python3 proof/build_cycle_4_crr_alias_model_barrier_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE_BY_USER_DIRECTION",
+    "lightweight_checks": "source-context transcription, exact integer carry/energy algebra, exact Fourier-moment count, frozen hashes, and replay"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "scope_exclusions": [
+    "No ordinary Farey nodes r/s or actual CRR-v2 rational net are constructed.",
+    "No coefficient sequence b_n or Dirichlet-polynomial large-value condition is supplied.",
+    "No positive cubic contribution, Base predicate, CRR witness, or CRR-U conclusion is supplied.",
+    "No statement asserts that Guth--Maynard's affine proposition is saturated or improvable."
+  ],
+  "sealer": {
+    "path": "proof/build_cycle_4_crr_alias_model_barrier_v1.py",
+    "sha256": "20012daea6feaad073232eaf4168b99020a0afa0d8e89064d965dc103be7f041"
+  },
+  "source_context": {
+    "actual_GM_rational_example_locator": "LargevaluesDirichlet17.tex, lines 1433-1441",
+    "critical_GM_remark_locator": "LargevaluesDirichlet17.tex, lines 2398-2399",
+    "epistemic_status": "PROVED",
+    "source_relation": "The source's rational example and its H^(-1)-scale smoothing motivate the model only; their rational r/s net is not substituted by these aliases."
+  },
+  "status": "SEALED_ANALYTIC_BARRIER_LIGHTWEIGHT_CHECKED"
+}

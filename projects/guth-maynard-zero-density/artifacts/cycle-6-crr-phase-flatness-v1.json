@@ -1,0 +1,172 @@
+{
+  "actual_log_conditional_gate": {
+    "assumptions": [
+      "lambda>=v^(12-ell*delta(v))",
+      "rho>=v^(-r*delta(v))",
+      "mu_top>=v^(-2*s*delta(v))",
+      "chi_ph<=kappa<1",
+      "ell+r+2*s<=2-gamma for fixed gamma>0",
+      "the same W satisfies the frozen CRR separation/cardinality/energy conditions and RationalMass(v)"
+    ],
+    "common_object_rule": "The same W supplies M_W, RationalMass, the actual Farey kernel, and the capped coefficient b^ph; no separately optimized coefficient or row set is used.",
+    "conclusion": "For all sufficiently large v, b^ph has |b_n^ph|<=1 and min_(t in W)|(M_W b^ph)_t|>=v^(7-delta(v)).",
+    "epistemic_status": "PROVED",
+    "farey_preservation": "The actual reduced labels, bounded jitter, rays, and C_theta(sk,rk)=R_W((r/s)*exp(theta/H)) identity remain untouched; no generic alias model is substituted.",
+    "matrix": "M_W(t,n)=w(n/L)n^(it) on the exact support L<n<2L",
+    "missing_statement": "It is CONJECTURED, not proved here, that the RationalMass-relevant actual-Farey class forces the displayed mu_top and chi_ph bounds."
+  },
+  "artifact_id": "cycle-6-crr-phase-flatness-v1",
+  "claim_boundary": "This artifact proves a finite-dimensional rowwise phase-flatness lemma for the actual CRR matrix conditional on explicit row statistics, and scoped abstract countermodels. It proves neither AFARI/FARI/CFARI nor CRR-U, a compatible witness, a cubic estimate, a density gain, a short-interval theorem, a saturation theorem, or an L-function result.",
+  "context": {
+    "actual_farey_identity": "C_theta(sk,rk)=R_W((r/s)*exp(theta/H))",
+    "base_polynomial": "D_v(t)=sum_(n>=1) w(n/L)b_n n^(it)",
+    "coefficient_cap": "b_n for n>=1 complex with |b_n|<=1",
+    "common_set": "finite W subset [0,H], H^(1/100)-separated",
+    "leading_certificate": "Gamma(W)^2>=lambda*N*rho*phi^2/|W|"
+  },
+  "countermodel_minimum_top_leverage": {
+    "epistemic_status": "PROVED",
+    "exact_sample": {
+      "epsilon": "1/100",
+      "lambda_top_lower": "10000/101",
+      "left_l1_participation_lower": "98010000/98990201",
+      "m": 101,
+      "n": 100,
+      "phi_square_upper": "101/980100",
+      "relative_phase_leakage": "0",
+      "right_rho": "1",
+      "row_diagonal": "1",
+      "scope": "abstract finite matrix only; not asserted to be a Dirichlet measurement matrix",
+      "tau": "1/100",
+      "top_coordinate_ratio_square_upper": "1/980100"
+    },
+    "family": "K_(tau,epsilon)=(J_(m-1) direct_sum [1] with tau cross block + epsilon I)/(1+epsilon), factored after a right unitary makes the top right vector flat",
+    "properties": "full rank, every Gram diagonal equals one, every cross-block entry is positive, rho=1, chi_ph=0, but phi^2=mu_top can tend to zero",
+    "scope": "abstract matrix countermodel only; it is not a Dirichlet/Farey/RationalMass configuration"
+  },
+  "countermodel_phase_cancellation": {
+    "epistemic_status": "PROVED",
+    "exact_data": {
+      "columns_N": 4,
+      "lambda_second": "169/243",
+      "lambda_top": "1",
+      "minimum_top_leverage": "1",
+      "phi_square": "0",
+      "relative_phase_leakage": "1",
+      "right_rho": "169/412",
+      "row_diagonal": "206/243",
+      "rows_m": 2,
+      "scope": "abstract finite matrix only; not asserted to be a Dirichlet measurement matrix",
+      "spectral_gap": "74/243"
+    },
+    "family": "two-row, four-column SVD factor with x=(10,1,1,1)/sqrt(103), flat u=(1,1)/sqrt(2), and second singular-square 169/243",
+    "properties": "lambda=1, fixed spectral gap 74/243, equal row diagonal 206/243, rho=169/412, mu_top=1, chi_ph=1, but phi=0 by exact row cancellation",
+    "scope": "abstract matrix countermodel only; it is not a Dirichlet/Farey/RationalMass configuration"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "block_countermodel": {
+      "epsilon": "1/100",
+      "lambda_top_lower": "10000/101",
+      "left_l1_participation_lower": "98010000/98990201",
+      "m": 101,
+      "n": 100,
+      "phi_square_upper": "101/980100",
+      "relative_phase_leakage": "0",
+      "right_rho": "1",
+      "row_diagonal": "1",
+      "scope": "abstract finite matrix only; not asserted to be a Dirichlet measurement matrix",
+      "tau": "1/100",
+      "top_coordinate_ratio_square_upper": "1/980100"
+    },
+    "cancellation_countermodel": {
+      "columns_N": 4,
+      "lambda_second": "169/243",
+      "lambda_top": "1",
+      "minimum_top_leverage": "1",
+      "phi_square": "0",
+      "relative_phase_leakage": "1",
+      "right_rho": "169/412",
+      "row_diagonal": "206/243",
+      "rows_m": 2,
+      "scope": "abstract finite matrix only; not asserted to be a Dirichlet measurement matrix",
+      "spectral_gap": "74/243"
+    },
+    "phase_flatness_rows": {
+      "conclusion": "Gamma(W)>=v^(7-delta(v)) for all sufficiently large v",
+      "derived_flatness": "phi>=((1-kappa)/sqrt(1+kappa^2))*sqrt(mu_top)",
+      "minimum_top_leverage": "mu_top>=v^(-2*s*delta)",
+      "relative_phase_leakage": "chi_ph<=kappa<1",
+      "right_delocalization": "rho>=v^(-r*delta)",
+      "strict_closure": "ell+r+2*s<=2-gamma for fixed gamma>0",
+      "top_eigenvalue": "lambda>=v^(12-ell*delta)"
+    },
+    "scales": {
+      "H": 68719476736,
+      "L": 1073741824,
+      "R": 16777216,
+      "V": 2097152,
+      "v": 8
+    }
+  },
+  "falsifiers": {
+    "actual_gate": "An orientation error in M_W(t,n), a changed coefficient cap, a changed W, or a generic-alias replacement would invalidate the CRR conditional gate.",
+    "block_countermodel": "An algebraic failure of positive definiteness, equal diagonal, top singular-vector construction, or the stated rational phi/participation bounds refutes that scoped countermodel.",
+    "lemma": "A finite matrix violating the displayed decomposition, orthogonality identity, or phase-flatness lower bound refutes the lemma."
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/crr_phase_flatness_v1.py",
+      "sha256": "bc7bdb000f77ed47253fc436b79c82daa7a7a0450a070c64c8cb3f60f9748c22"
+    },
+    "crr_v2_artifact": {
+      "path": "artifacts/cycle-4-p1r-crr-u-formalization-v2.json",
+      "sha256": "e26be797539eabe53ee765b7067d1c99fe4d440035e27785cf38aa64bc2fc84e"
+    },
+    "document": {
+      "path": "docs/cycle-6-crr-phase-flatness-v1.md",
+      "sha256": "a5b9f1078bde2cdaaafaea231c1e34bc1c23a0b92ec3b7830ad32d7df4048df4"
+    },
+    "farey_log_v2_artifact": {
+      "path": "artifacts/cycle-5-crr-farey-log-gram-reduction-v2-averaged-jitter.json",
+      "sha256": "ce59b777ec02769168d9dc330658a0ab1d46b05cdb7ac5dc8115e248d85f8ce8"
+    },
+    "spectral_phase_lift_artifact": {
+      "path": "artifacts/cycle-6-crr-spectral-phase-lift-v1.json",
+      "sha256": "165aff6e15a9c2177b1a69d7a2ce32ff9ba3b2d651aba6683d9f5ecca21403e4"
+    }
+  },
+  "necessity_boundary": {
+    "coordinatewise_leakage": "The cancellation family has mu_top=1 but chi_ph=1 and phi=0, so a global spectral-gap or averaged-residual bound cannot by itself give an all-row lower bound.",
+    "epistemic_status": "PROVED",
+    "minimum_leverage": "When r=0, phi^2=mu_top exactly, so global participation cannot replace minimum top leverage.",
+    "next_target": "An actual-Farey inverse theorem must exploit the actual logarithmic matrix/Farey interaction to establish mu_top and chi_ph, or solve the exact phase program directly."
+  },
+  "phase_flatness_lemma": {
+    "decomposition": "M b^ph=||x||_1*sqrt(lambda)*u+r with r=M(b^ph-||x||_1*x) and ||M b^ph||_2^2=lambda||x||_1^2+||r||_2^2",
+    "epistemic_status": "PROVED",
+    "lower_bound": "phi>=((1-kappa)/sqrt(1+kappa^2))*sqrt(mu_top) whenever chi_ph<=kappa<1",
+    "minimum_top_leverage": "mu_top(M,u)=m*min_t|u_t|^2",
+    "relative_phase_leakage": "chi_ph(M,u)=max_t |r_t|/(||x||_1*sqrt(lambda)*|u_t|), with +infinity if some u_t=0",
+    "scope": "valid for every finite complex matrix; its CRR use below retains the actual M_W and one common W"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_6_crr_phase_flatness_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_6_crr_phase_flatness_v1.py",
+    "write_command": "python3 proof/build_cycle_6_crr_phase_flatness_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE_BY_USER_DIRECTION",
+    "lightweight_checks": "finite-dimensional algebra, exact rational countermodel bounds, antecedent-hash replay, and tamper rejection"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_6_crr_phase_flatness_v1.py",
+    "sha256": "d2889b400581b6f643d0aaf82ed1815d7d1fb5976060f7a07b3a5b1ab84067f5"
+  },
+  "status": "SEALED_ALL_ROW_PHASE_FLATNESS_REDUCTION_LIGHTWEIGHT_CHECKED"
+}

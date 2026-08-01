@@ -1,0 +1,29 @@
+{
+  "artifact_id": "p7-norm-aggregation-v3-status-correction",
+  "corrected_claim": {
+    "conclusion": "The recorded divisor normalization is exponent-harmless in the cited single-polynomial theorem, including the pinned N<T regime.",
+    "epistemic_status": "PROVED",
+    "hypothesis": "N<=T^C for a fixed C",
+    "uncovered": "No unrestricted independent-(N,T) absorption or Hecke-family density theorem."
+  },
+  "correction": "Replace the v2 document's noncanonical compound tag by PROVED conditional on the explicit hypothesis N<=T^C for fixed C.",
+  "document": {
+    "path": "docs/p7-norm-aggregation-v3-status-correction.md",
+    "sha256": "776ba3628600d96e0388fe1015d0e544ccb037303b707072b364ec2a843b2b9a"
+  },
+  "epistemic_status": "OBSERVED",
+  "hostile_audit": "DEFERRED_TO_PAPER_STAGE",
+  "immutable_v2": {
+    "path": "artifacts/p7-norm-aggregation-v2-correction.json",
+    "sha256": "200f4328c72e2af2ffe08a9fd3b9901bbbf6b2977c18a34e20a20fb020f033d0"
+  },
+  "immutable_v2_document": {
+    "path": "docs/p7-norm-aggregation-v2-correction.md",
+    "sha256": "29250227f4662cf92c5612b7074be4c86037a279259eade617e6d89cd72719d5"
+  },
+  "replay": "python3 proof/p7_norm_aggregation_v3_status_correction.py --check",
+  "sealer": {
+    "path": "proof/p7_norm_aggregation_v3_status_correction.py",
+    "sha256": "ac55d1bd646f4a584a8ecdb42d930b0a65d52ce2c11f35486d335e11317a4183"
+  }
+}

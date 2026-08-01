@@ -1,0 +1,127 @@
+{
+  "artifact_id": "g0-six-route-resource-gate-performance-v2",
+  "claim_boundary": "Host-specific measurements of all six independent G0 routes; operational evidence only.",
+  "config_sha256": "f8b2b3c32591f5714efe98d1ac95e63c7b49dec093ab0c97ed0f94ce6301a3f8",
+  "environment": {
+    "implementation": "CPython",
+    "python": "3.12.3",
+    "python_executable": "/usr/bin/python3"
+  },
+  "epistemic_status": "OBSERVED",
+  "harness_sha256": "a42a7af6053c6042d243bd0aa17fe5ca86cfe714880d5e6db0336a60ccf24897",
+  "resource_gate": {
+    "gate_status": "PASS"
+  },
+  "route_results": [
+    {
+      "command": [
+        "python3",
+        "proof/replay_cycle1_route_a_readonly_v1.py"
+      ],
+      "epistemic_status": "OBSERVED",
+      "gate_status": "PASS",
+      "id": "cycle1-route-a-readonly-v1",
+      "max_rss_kib": 17280,
+      "parse_error": null,
+      "scope": "Cycle-1 independent Route A baseline, bottleneck, and complete case split.",
+      "stderr": "",
+      "stdout": "{\"artifact_id\": \"cycle1-route-a-readonly-replay-v1\", \"baseline_mathematical_sha256\": \"07f74b88744ae140efdc436c33c0575e9061e9abfa7a103606ecd026190f2dfd\", \"case_split_mathematical_sha256\": \"e7b3853709d73f59325bf431d48e30bf6fb48db631a89c88ba2e87c2175e988c\", \"claim_boundary\": \"Exact read-only replay of Cycle-1 Route A arithmetic only, conditional on its frozen published analytic inputs.\", \"epistemic_status\": \"PROVED\", \"status\": \"PASS\"}\n",
+      "subprocess_returncode": 0,
+      "time_exit_status": 0,
+      "wall_seconds": "0.03"
+    },
+    {
+      "command": [
+        "python3",
+        "proof/replay_cycle1_route_b_readonly_v1.py"
+      ],
+      "epistemic_status": "OBSERVED",
+      "gate_status": "PASS",
+      "id": "cycle1-route-b-readonly-v1",
+      "max_rss_kib": 18560,
+      "parse_error": null,
+      "scope": "Cycle-1 independent Route B baseline, bottleneck, and complete case split.",
+      "stderr": "",
+      "stdout": "{\"artifact_id\": \"cycle1-route-b-readonly-replay-v1\", \"checks\": [[\"proof/replay_baseline_route_b.py\", \"--check\", \"artifacts/cycle-1-route-b-baseline.json\"], [\"proof/replay_bottleneck_cell_route_b_v2.py\", \"--check\", \"artifacts/cycle-1-route-b-v2-bottleneck-cell.json\"], [\"proof/replay_theorem_1_2_case_split_route_b_v3.py\", \"--check\", \"artifacts/cycle-1-route-b-v3-theorem-1-2-case-split.json\"]], \"claim_boundary\": \"Exact read-only replay of Cycle-1 Route B arithmetic only, conditional on its frozen published analytic inputs.\", \"epistemic_status\": \"PROVED\", \"status\": \"PASS\"}\n",
+      "subprocess_returncode": 0,
+      "time_exit_status": 0,
+      "wall_seconds": "0.16"
+    },
+    {
+      "command": [
+        "python3",
+        "proof/audit_cycle2_stream_b_route_a_v3.py",
+        "--check",
+        "artifacts/cycle-2-stream-b-route-a-v3.json"
+      ],
+      "epistemic_status": "OBSERVED",
+      "gate_status": "PASS",
+      "id": "stream-b-route-a-v3",
+      "max_rss_kib": 19200,
+      "parse_error": null,
+      "scope": "Cycle-2 Stream-B Route A.",
+      "stderr": "",
+      "stdout": "",
+      "subprocess_returncode": 0,
+      "time_exit_status": 0,
+      "wall_seconds": "0.04"
+    },
+    {
+      "command": [
+        "python3",
+        "proof/replay_cycle2_stream_b_route_b.py",
+        "--check",
+        "artifacts/cycle-2-stream-b-route-b-v1.json"
+      ],
+      "epistemic_status": "OBSERVED",
+      "gate_status": "PASS",
+      "id": "stream-b-route-b-v1",
+      "max_rss_kib": 52736,
+      "parse_error": null,
+      "scope": "Cycle-2 Stream-B Route B.",
+      "stderr": "",
+      "stdout": "",
+      "subprocess_returncode": 0,
+      "time_exit_status": 0,
+      "wall_seconds": "0.08"
+    },
+    {
+      "command": [
+        "python3",
+        "proof/replay_cycle2_stream_c_route_a_v5.py",
+        "--check",
+        "artifacts/cycle-2-stream-c-route-a-v5.json"
+      ],
+      "epistemic_status": "OBSERVED",
+      "gate_status": "PASS",
+      "id": "stream-c-route-a-v5",
+      "max_rss_kib": 44640,
+      "parse_error": null,
+      "scope": "Cycle-2 Stream-C Route A.",
+      "stderr": "",
+      "stdout": "",
+      "subprocess_returncode": 0,
+      "time_exit_status": 0,
+      "wall_seconds": "0.14"
+    },
+    {
+      "command": [
+        "python3",
+        "proof/replay_short_intervals_stream_c_route_b_v5.py",
+        "--check"
+      ],
+      "epistemic_status": "OBSERVED",
+      "gate_status": "PASS",
+      "id": "stream-c-route-b-v5",
+      "max_rss_kib": 43392,
+      "parse_error": null,
+      "scope": "Cycle-2 Stream-C Route B.",
+      "stderr": "",
+      "stdout": "{\"artifact\": \"cycle-2-stream-c-route-b-v5.json\", \"verified\": true}\n",
+      "subprocess_returncode": 0,
+      "time_exit_status": 0,
+      "wall_seconds": "0.34"
+    }
+  ],
+  "supersedes": "cycle-2-g0-per-route-resource-gate-performance-v1 for complete G0 coverage; v1 is preserved"
+}

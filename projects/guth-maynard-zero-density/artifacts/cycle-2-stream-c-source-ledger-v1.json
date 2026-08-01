@@ -1,0 +1,58 @@
+{
+  "artifact_id": "cycle-2-stream-c-source-ledger-v1",
+  "created_utc": "2026-08-01",
+  "epistemic_status": "OBSERVED",
+  "claim_boundary": "Source freeze and accessibility ledger; it does not promote the short-interval proof.",
+  "sources": [
+    {
+      "id": "guth-maynard-section-13-2",
+      "status": "PROVED",
+      "role": "Displayed truncated explicit-formula and short-interval deductions",
+      "path": "artifacts/sources/arxiv-2405.20552v2/LargevaluesDirichlet17.tex",
+      "sha256": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428",
+      "locator": "TeX lines 2407-2471"
+    },
+    {
+      "id": "ford-2002-vinogradov-korobov",
+      "status": "PROVED",
+      "role": "Exact reachable zero-free theorem",
+      "citation": "Kevin Ford, Zero-free regions for the Riemann zeta function (2002)",
+      "url": "https://www.ford126.web.illinois.edu/wwwpapers/zeros.pdf",
+      "path": "artifacts/sources/ford-2002-zero-free-regions.pdf",
+      "sha256": "a43a2c37cf0f34b05bf80d9e58bcef176371437eedf7aae17d72f2c55b04c948",
+      "locator": "Theorem 5, local PDF page 4",
+      "checked_statement": "No zeros for |t|>=3 and 1-beta <= 1/[57.54(log|t|)^(2/3)(loglog|t|)^(1/3)].",
+      "scope_limit": "Low-height completion for the all-ordinates N(s,T) cutoff remains unchecked."
+    },
+    {
+      "id": "jutila-1977-near-one-density",
+      "status": "OBSERVED",
+      "role": "First-choice near-one density source named by Guth--Maynard",
+      "citation": "Matti Jutila, Zero-density estimates for L-functions, Acta Arithmetica 32 (1977), 55-62",
+      "url": "http://matwbn.icm.edu.pl/ksiazki/aa/aa32/aa3216.pdf",
+      "path": "artifacts/sources/jutila-1977-zero-density-estimates-l-functions.pdf",
+      "sha256": "cbe2d1e7115717cf28f9ffaffdc1fe232958595b17c5c2ee59fc968e8ff0d5a1",
+      "limitation": "PDF has no usable text layer; theorem statement, hypotheses, and convention conversion remain unread."
+    },
+    {
+      "id": "huxley-1972-density-alternative",
+      "status": "OBSERVED",
+      "role": "Potential alternate near-one density source",
+      "path": "artifacts/sources/huxley-1972-inventiones15-gdz-volume.pdf",
+      "sha256": "5946d8579810f0754e972d42a09ed2a703604b8fb4e6377f14caaa5dc48f9797",
+      "limitation": "Retrieved volume is scanned/non-textual; no exact theorem locator or log-uniformity has been checked."
+    },
+    {
+      "id": "almost-all-local-zero-count",
+      "status": "OBSERVED",
+      "role": "Unit-height zero count and reciprocal-distance sum in the second moment",
+      "source": "Guth--Maynard TeX lines 2453-2460",
+      "limitation": "No exact external primary statement was uniquely cited or checked."
+    }
+  ],
+  "promotion_blockers": [
+    "Near-one density theorem with exact log factors and all-ordinate convention is unread.",
+    "Almost-all local zero-counting/correlation input is not externally pinned.",
+    "Ford's exact theorem does not by itself complete the low-height part of GM's cutoff statement."
+  ]
+}

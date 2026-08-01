@@ -1,0 +1,175 @@
+26
+BIN CHEN, VISHAL GUPTA, AND YUNG CHI LI
+
+Using Cauchy-Schwarz and noting that |R(1/v2, b−1)| = |R(v2, b)|, the inner v2 integral
+is bounded by
+�
+�
+
+|v2− m1v1+m3
+
+−m2
+|≤ (qT )ϵq
+
+NM2
+v2∈[1/2, 2]
+
+����R
+�v2
+
+v1
+, b−1
+1 b2
+
+�����
+
+2
+dv2
+
+� 1
+
+2�
+�
+
+|v2− m1v1+m3
+
+−m2
+|≤ (qT )ϵq
+
+NM2
+v2∈[1/2, 2]
+
+|R(v2, b2)|2 dv2
+
+� 1
+
+2
+
+≤
+q
+
+NM2
+˜RM2
+
+�m1v1 + m3
+
+−m2v1
+, b−1
+1 b2
+
+�
+˜RM2
+
+�m1v1 + m3
+
+−m2
+, b2
+
+�
+.
+
+We therefore obtain
+
+|I′
+m1,m2,m3| ≪ϵ
+N 2
+
+q2M2
+˜Im1,−m2,m3 + Oϵ((qT)−200).
+
+Since we are summing over m2 with |m2| ∼ M2, we can replace −m2 with m2 without
+altering the overall sum. Inserting this in (7.6) then gives the result.
+□
+
+With Proposition 7.2 established, three additional tools are required to ultimately
+derive the S3 bound: a sharp estimate for summing over affine transformations with
+GCD twists, moment bounds for ˜R and R and the energy bound5 for W. These will
+be developed in the following three sections.
+
+8. Summing over affine transformations with GCD twists
+
+For parameters satisfying 0 < M ≤ (qT)ϖ with 0 < ϖ < 1 and given a sequence of
+compactly supported smooth functions −→f = {fb}1≤b≤q
+(b,q)=1
+, we define
+
+J(−→f ) :=
+sup
+0<Mi<M
+1≤i≤3
+
+�
+
+R
+
+�
+
+1≤a≤q
+(a,q)=1
+
+� �
+
+1≤b≤q
+(b,q)=1
+
+�
+
+|m1|∼M1
+m2∼M2
+|m3|≪M3
+
+fb
+
+�m1u + m3
+
+m2
+
+�
+(am1 + bm2 + m3, q)
+�2
+du,
+
+which is an average of sums of affine transformations with GCD twists. The objective
+of this section is to establish
+
+Proposition 8.1. Suppose that −→f
+= {fb}1≤b≤q
+(b,q)=1
+is a sequence of smooth functions
+
+such that each fb(u) is non-negative and supported on |u| ≪ 1 and �
+1≤b≤q
+(b,q)=1
+| ˆfb(ξ)| ⪅j
+
+(T/|ξ|)jϕ(q) supb,u fb(u) for all j ∈ N. Then
+
+J(−→f ) ⪅ ϕ(q)M 6
+� �
+
+R
+
+�
+
+1≤b≤q
+(b,q)=1
+
+fb(u) du
+�2
++ ϕ(q)2M 4
+�
+
+R
+
+�
+
+1≤b≤q
+(b,q)=1
+
+fb(u)2 du.
+
+5For a finite set W of pairs (t, χ), we define its energy E(W) as
+
+E(W) := #{(t1, χ1), (t2, χ2), (t3, χ3), (t4, χ4) ∈ W : |t1 + t2 − t3 − t4| ≤ 1, χ1χ2 = χ3χ4}.
+
+

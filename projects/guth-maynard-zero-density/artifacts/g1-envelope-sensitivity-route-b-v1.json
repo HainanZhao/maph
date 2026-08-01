@@ -1,0 +1,184 @@
+{
+  "activity_count_replay": {
+    "A_max_tie_counts": {
+      "A1|A2": 440,
+      "A1|A2|A3": 44,
+      "A2": 4400,
+      "A2|A3": 440,
+      "A3": 2420
+    },
+    "C_outer_inner_tie_counts": {
+      "outer=C1;inner=C3": 1496,
+      "outer=C1|min(C2,C3);inner=C2": 220,
+      "outer=C1|min(C2,C3);inner=C2|C3": 44,
+      "outer=C1|min(C2,C3);inner=C3": 44,
+      "outer=min(C2,C3);inner=C2": 3300,
+      "outer=min(C2,C3);inner=C2|C3": 660,
+      "outer=min(C2,C3);inner=C3": 1980
+    },
+    "E_max_tie_counts_on_diagonal": {
+      "E1": 404,
+      "E1|E2|E3": 1,
+      "E1|E3": 1,
+      "E2": 39,
+      "E2|E3": 98,
+      "E3": 161
+    }
+  },
+  "artifact_id": "g1-envelope-sensitivity-route-b-v1",
+  "claim_boundary": "PROVED cleared-rational-identity audit conditional on the hash-pinned source and atlas. The formal mu parameter below assumes, but does not establish, a strengthened third Theorem 1.1 term; it gives no density or short-interval theorem.",
+  "cleared_identity_map": {
+    "A": [
+      "A1-A2=2n(v-4/5)",
+      "A1-A3=n(2v-2/5)-1",
+      "A2-A3=6n/5-1"
+    ],
+    "C": [
+      "C1-C2=n-1",
+      "C1-C3=2n(2v-1)-1",
+      "C2-C3=n(4v-3)"
+    ],
+    "E": [
+      "E1-E2=n(3-2s)-13w/8-1/4",
+      "E1-E3=n(3-2s)-2w",
+      "E2-E3=1/4-3w/8"
+    ],
+    "transfer": [
+      "B-LV1=2(1-s)(u-q)",
+      "B-LV2=(18/5-4s)(alpha-q)",
+      "B-LV3=(4s-12/5)(q-ell)"
+    ]
+  },
+  "critical_barrier": {
+    "B_minus_LV1": "3/13",
+    "B_minus_LV2": "1/13",
+    "B_minus_LV3": "0/1",
+    "critical_transfer_id": "T:s=7/10;n0=5/13;k=2;q=10/13",
+    "formal_mu_cap_before_LV2": "mu<=1/10, since LV3 falls by (10/13)mu and LV2 slack is 1/13.",
+    "required_term": "Theorem 1.1 third term T*N^(12/5)*V^(-4) (LV3)."
+  },
+  "endpoint_and_conditional_propagation": {
+    "formal_mu_model": {
+      "first_order": {
+        "formal_theta": "17/30-13mu/54+O(mu^2)",
+        "global_density_coefficient": "30/13-50mu/39+O(mu^2)",
+        "h": "13mu/18+O(mu^2)"
+      },
+      "junction_polynomial": "300h^2+(90-50mu)h-65mu=0",
+      "necessary_left_extent": "at least h(mu)>0, the positive root of the stated polynomial; currently this is not supplied by the published s>=7/10 branch.",
+      "premise_tag": "CONJECTURED",
+      "term_change": "12/5 -> 12/5-mu in LV3, with a valid left-neighborhood zero-detection propagation assumed separately"
+    },
+    "published_endpoint_no_effect": {
+      "conclusion": "The unchanged Ingham side has left supremum 30/13, so endpoint-only or right-only improvement cannot lower the uniform global coefficient.",
+      "identity": "30/13-3/(2-(7/10-h))=300h/(169+130h)",
+      "status": "PROVED"
+    }
+  },
+  "epistemic_status": "PROVED",
+  "falsifier": "A different zero-residual label, failure of a cleared residual identity, an atlas-label disagreement, or a proposed third-term gain without the separately necessary left extension refutes the respective conclusion.",
+  "frozen_inputs": {
+    "hashes": {
+      "atlas_v2": "fd66d17664ca921795617c6bfca76c3be49246ea9351644848a2aadf9e680b08",
+      "guth_maynard_source_tar": "9d34ac093abcb8129f68ff86eaad65f09a09d832fe637ff84d50a69496046bdc",
+      "guth_maynard_tex": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428",
+      "preregistration_v1": "227ec1c66b2e109653354b6c3245b4e809fe52692c01514ac10064c23db2b6f8"
+    },
+    "runtime": {
+      "implementation": "CPython",
+      "optimization": 0,
+      "python": "3.12.3"
+    }
+  },
+  "replay": {
+    "check_command": "python3 projects/guth-maynard-zero-density/proof/derive_g1_envelope_sensitivity_route_b_v1.py --check",
+    "script_sha256": "af65b7d1da0737e74e2f9d183034211ee458cae90e3c0a190caaa448637fbf1e",
+    "write_command": "python3 projects/guth-maynard-zero-density/proof/derive_g1_envelope_sensitivity_route_b_v1.py --write"
+  },
+  "zero_B_residuals": {
+    "all_characterization": "For each frozen s, exactly n0=ell(s)/2 and k=2 give q=ell(s), hence B-LV3=0.",
+    "all_term_labels": [
+      "LV3"
+    ],
+    "count": 11,
+    "rows": [
+      {
+        "ell": "10/13",
+        "id": "T:s=7/10;n0=5/13;k=2;q=10/13",
+        "q": "10/13",
+        "s": "7/10",
+        "term": "LV3"
+      },
+      {
+        "ell": "100/131",
+        "id": "T:s=71/100;n0=50/131;k=2;q=100/131",
+        "q": "100/131",
+        "s": "71/100",
+        "term": "LV3"
+      },
+      {
+        "ell": "25/33",
+        "id": "T:s=18/25;n0=25/66;k=2;q=25/33",
+        "q": "25/33",
+        "s": "18/25",
+        "term": "LV3"
+      },
+      {
+        "ell": "100/133",
+        "id": "T:s=73/100;n0=50/133;k=2;q=100/133",
+        "q": "100/133",
+        "s": "73/100",
+        "term": "LV3"
+      },
+      {
+        "ell": "50/67",
+        "id": "T:s=37/50;n0=25/67;k=2;q=50/67",
+        "q": "50/67",
+        "s": "37/50",
+        "term": "LV3"
+      },
+      {
+        "ell": "20/27",
+        "id": "T:s=3/4;n0=10/27;k=2;q=20/27",
+        "q": "20/27",
+        "s": "3/4",
+        "term": "LV3"
+      },
+      {
+        "ell": "25/34",
+        "id": "T:s=19/25;n0=25/68;k=2;q=25/34",
+        "q": "25/34",
+        "s": "19/25",
+        "term": "LV3"
+      },
+      {
+        "ell": "100/137",
+        "id": "T:s=77/100;n0=50/137;k=2;q=100/137",
+        "q": "100/137",
+        "s": "77/100",
+        "term": "LV3"
+      },
+      {
+        "ell": "50/69",
+        "id": "T:s=39/50;n0=25/69;k=2;q=50/69",
+        "q": "50/69",
+        "s": "39/50",
+        "term": "LV3"
+      },
+      {
+        "ell": "100/139",
+        "id": "T:s=79/100;n0=50/139;k=2;q=100/139",
+        "q": "100/139",
+        "s": "79/100",
+        "term": "LV3"
+      },
+      {
+        "ell": "5/7",
+        "id": "T:s=4/5;n0=5/14;k=2;q=5/7",
+        "q": "5/7",
+        "s": "4/5",
+        "term": "LV3"
+      }
+    ]
+  }
+}

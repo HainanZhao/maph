@@ -1,0 +1,68 @@
+{
+  "adjudicator": {
+    "path": "discovery/adjudicate_g1_atlas_v4.py",
+    "sha256": "de2e688b2725df1d60b6946195f0979ea854177ea4ec1ff020115e2e0745b092"
+  },
+  "agreement": {
+    "local_structural_rows": 7744,
+    "observations_sha256": "ce8fe1868a91d6f2cf63e6adfcb092a70202e881273bbd00b46e7c80492232aa",
+    "retained_rows": 0,
+    "screen_rows": 588,
+    "timing_independent_observations": "BYTE_IDENTICAL",
+    "transfer_structural_rows": 560,
+    "validation_rows": 0
+  },
+  "artifact_id": "cycle-3-g1-atlas-empirical-reconciliation-v1",
+  "cached_assembly_alone_cannot_promote": true,
+  "claim_boundary": "Two-run deterministic finite empirical reconciliation only. It is not an independent mathematical proof, theorem, extremizer, saturation result, or density improvement.",
+  "engine_chain": {
+    "preregistration": "227ec1c66b2e109653354b6c3245b4e809fe52692c01514ac10064c23db2b6f8",
+    "v1": "78f5088cbe615237d565854428511cda03e22fc04838d192c64d3215748c28ee",
+    "v2": "62d3b565f4b80f7a7d17d19e779eec5107a1b2df11990cb30db1dc1d07830941",
+    "v3": "921f25ae3f6d535899b439b04f310bc91b4278046976b7ad7947c04b6166f06f",
+    "v4": "e7171c7b4720797b5a9bb87246c10a1e7f26569c9f240f69923de782f262dbd5"
+  },
+  "epistemic_status": "OBSERVED",
+  "promotion_scope": "G1 finite discovery evidence only",
+  "runs": [
+    {
+      "checkpoint": "/root/projects/maph/projects/guth-maynard-zero-density/artifacts/cycle-3-g1-atlas-run-a-checkpoint-v4.json",
+      "checkpoint_sha256": "af3fea0ee5c8c43aa4a092b10762831b21b521def8c9ca8752265c8f567169fe",
+      "fresh": true,
+      "label": "A",
+      "observations": "/root/projects/maph/projects/guth-maynard-zero-density/artifacts/cycle-3-g1-atlas-observations-a-v4.json",
+      "observations_sha256": "ce8fe1868a91d6f2cf63e6adfcb092a70202e881273bbd00b46e7c80492232aa"
+    },
+    {
+      "checkpoint": "/root/projects/maph/projects/guth-maynard-zero-density/artifacts/cycle-3-g1-atlas-run-b-checkpoint-v4.json",
+      "checkpoint_sha256": "2e244cbd6ed074e1f822e0ec26afb6859a0c498e99c18fce3c049b37cd80417d",
+      "fresh": true,
+      "label": "B",
+      "observations": "/root/projects/maph/projects/guth-maynard-zero-density/artifacts/cycle-3-g1-atlas-observations-b-v4.json",
+      "observations_sha256": "ce8fe1868a91d6f2cf63e6adfcb092a70202e881273bbd00b46e7c80492232aa"
+    }
+  ],
+  "screen_outcome_summary": {
+    "claim_boundary": "Complete finite frozen-screen accounting only; no universal construction or asymptotic claim.",
+    "completed_rows": 429,
+    "epistemic_status": "OBSERVED",
+    "failed_rows": 159,
+    "failure_code_counts": {
+      "INFEASIBLE_CARDINALITY": 154,
+      "NONPOSITIVE_VALUE_RATIO": 5
+    },
+    "feasible_rows_by_declared_energy_regime": {
+      "high": 126,
+      "intermediate": 303,
+      "low": 0
+    },
+    "low_regime_status": "NO_FEASIBLE_LOW_REGIME_ROWS",
+    "no_retuning": true,
+    "retained_row_ids": [],
+    "retained_rows": 0,
+    "retention_status": "NO_RETAINED",
+    "scheduled_rows": 588,
+    "validation_rows": 0
+  },
+  "status": "EMPIRICALLY_RECONCILED"
+}

@@ -1,0 +1,106 @@
+LARGE VALUE ESTIMATES IN NUMBER THEORY, HARMONIC ANALYSIS, AND COMPUTER SCIENCE 39
+
+ways to make this precise. One way is to try to maximize the Lp norm ∥ �
+θ 1θ∗+xθ∥Lp for different
+p. A second way is to try to minimize the volume of the union ∪θ(θ∗ + xθ).
+If we choose xθ = 0 for every θ, then we find that the tubes fill Bd
+R and the volume of the union
+is Rd. Around 1920, Besicovitch found a clever arrangement of tubes with volume ∼ (log R)−1Rd.
+But no one has even found an arrangement of volume Rd−ϵ. The Kakeya conjecture for volume
+asserts that there is no such arrangement.
+
+Conjecture 9.1. Fix a dimension d ≥ 2 and let θ and θ∗ be as above. For every ϵ > 0, there is a
+constant Cϵ,d so that for every choice of xθ,
+�����
+
+�
+
+θ
+(θ∗ + xθ)
+
+����� ≥ Cϵ,dRd−ϵ.
+
+There is a similar conjecture for Lp norms. If we choose all xθ = 0, then it is straightforward to
+check that
+
+� �����
+
+�
+
+θ
+1θ∗(x)
+
+�����
+
+p
+
+dx ≈ R(d−1)p + Rd.
+
+The contribution R(d−1)p comes from the unit ball around 0, which lies in all Rd−1 tubes. The
+contribution Rd comes because the integrand is 1 at most points of BR. The Lp version of the
+Kakeya conjecture says that up to factors of the form Rϵ, the Lp norm is always bounded by this
+example.
+
+Conjecture 9.2. Fix a dimension d ≥ 2 and let θ and θ∗ be as above. For every ϵ > 0 there is a
+constant C(ϵ, d) so that for every p ≥ 1 and every choice of xθ,
+
+� �����
+
+�
+
+θ
+1θ∗+xθ(x)
+
+�����
+
+p
+
+dx ≤ C(ϵ, d)Rϵ �
+R(d−1)p + Rd�
+.
+
+These Kakeya conjectures about tubes have natural analogues in the setting of fat arithmetic
+progressions. The Lp version is the following.
+
+Conjecture 9.3. Fix α ∈ (1, 2) and suppose that T = N α. Divide {N + 1, ..., 2N} into intervals I
+of length ∼ NT −1/2. Let I∗ be as above. There is a constant C(ϵ, α) so that for every N and every
+p ≥ 1 and every choice of tI ∈ [0, T],
+
+(36)
+� T
+
+0
+
+��
+
+I
+1I∗+tI
+
+�p/2
+
+≤ C(ϵ)N ϵ
+� T
+
+0
+
+��
+
+I
+1I∗
+
+�p/2
+
+.
+
+An easy corollary of Conjecture 9.3 is that for any choice of tI,
+
+(37)
+| ∪I I∗ + tI| ≥ C(ϵ)N −ϵT ≈ | ∪I I∗|.
+
+By considering the special examples above, Bourgain showed that Conjecture 3.4 implies Con-
+jecture 9.3 and hence (37). He also showed that these conjectures imply Conjecture 9.1, the original
+Kakeya conjecture for tubes. Because of Bourgain’s work introducing this problem, I propose to
+call this question the Bourgain-Kakeya problem and to call Conjecture 9.3 the Bourgain-Kakeya
+conjecture.
+
+

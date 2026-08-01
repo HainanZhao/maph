@@ -1,0 +1,129 @@
+{
+  "actual_labels": {
+    "dirichlet": "D_b(t)=sum_(L<n<2L)w(n/L)b_n n^(it)",
+    "farey": "gcd(r,s)=1, Q<=r,s<2Q, 3/4<=r/s<=5/4, theta in {-3,0,3}",
+    "inherited_cross_gram": "C_theta(sk,rk)=R_W((r/s)*exp(theta/H))",
+    "ray_score": "A_disc(W)=sum_(r,s,theta)#K_(r,s)|R_W((r/s)exp(theta/H))|^2"
+  },
+  "artifact_id": "cycle-6-crr-actual-log-spectral-probe-preregistration-v1",
+  "claim_boundary": "A three-row bounded actual-log discovery protocol only. It proves no continuous CRR compatibility/incompatibility statement, AFARI/FARI result, extremizer, saturation theorem, density theorem, or short-interval consequence. A hit is OBSERVED and a miss is not a universal negative.",
+  "common_object_rule": "Within every row, each reported b and W are the same final pair; no coefficient, W, energy, or Farey diagnostic may be optimized on a separately chosen row object.",
+  "context": {
+    "actual_farey_identity": "C_theta(sk,rk)=R_W((r/s)*exp(theta/H))",
+    "phase_lift_status": "PROVED"
+  },
+  "epistemic_status": "CONJECTURED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/crr_actual_log_spectral_probe_v1.py",
+      "sha256": "d15cb5a290236823a657227d28e43c7d530fdd3a92a7c38f6a584e0c5db92bca"
+    },
+    "document": {
+      "path": "docs/cycle-6-crr-actual-log-spectral-probe-preregistration-v1.md",
+      "sha256": "7eb7b2ce799d5cb6eed60e096c41add58d458021adf6e1e034548d95c634d9c1"
+    },
+    "farey_log_v1": {
+      "path": "artifacts/cycle-5-crr-farey-log-gram-reduction-v1.json",
+      "sha256": "8f204d56a5609fa9c8a93b152a969a038bc13463d3a36ca746e842bfe21e5f40"
+    },
+    "spectral_phase_lift": {
+      "path": "artifacts/cycle-6-crr-spectral-phase-lift-v1.json",
+      "sha256": "165aff6e15a9c2177b1a69d7a2ce32ff9ba3b2d651aba6683d9f5ecca21403e4"
+    }
+  },
+  "frozen_rows": {
+    "H": 4096,
+    "L": 1024,
+    "Q": 16,
+    "R": 256,
+    "central_value": 128,
+    "energy_center_R4_over_H": 1048576,
+    "farey_pair_count": 95,
+    "macrocells": 16,
+    "minimum_separation": 2,
+    "points_per_macrocell": 16,
+    "raw_farey_amplitude": 64,
+    "ray_count_maximum": 32,
+    "ray_count_minimum": 8,
+    "smooth_support_count": 1023,
+    "smooth_weight_maximum": 1.0,
+    "smooth_weight_minimum": 3.1111114688127658e-89,
+    "theta_nodes": [
+      -3.0,
+      0.0,
+      3.0
+    ],
+    "v": 2
+  },
+  "iteration": {
+    "farey_power_iterations": 32,
+    "fixed_p_property": "For the fixed p,z used in one update, the coordinatewise phase replacement cannot decrease the weighted linear phase functional; no global monotonicity is claimed after p changes.",
+    "joint_outer_iterations": 2,
+    "joint_selector": "equal-weight sum of normalized literal-Farey power score and normalized |D_b(t)| score, followed by the frozen stratified selector",
+    "minimum_update": "z=phase(M_W b); p_t proportional to 1/max(|(M_W b)_t|,2^-40); b<-phase(M_W^*(p z))",
+    "minimum_value_iterations": 16
+  },
+  "numerics": {
+    "algorithm": "NumPy binary64/complex128; exact Python-integer energy and ray labels",
+    "not_certified": "No floating result is an interval enclosure or a proof-grade continuous claim.",
+    "status": "RECOGNIZED"
+  },
+  "replay": {
+    "check_command": "python3 discovery/build_cycle_6_crr_actual_log_spectral_probe_preregistration_v1.py --check",
+    "runner_check_command": "python3 discovery/run_cycle_6_crr_actual_log_spectral_probe_v1.py --check",
+    "runner_write_command": "python3 discovery/run_cycle_6_crr_actual_log_spectral_probe_v1.py --write",
+    "write_command": "python3 discovery/build_cycle_6_crr_actual_log_spectral_probe_preregistration_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE_BY_USER_DIRECTION",
+    "lightweight_checks": "literal label construction, exact integer ray/energy checks, fixed deterministic iteration, preregistration replay, and tamper rejection"
+  },
+  "resources": {
+    "failure_rule": "On a cap, retain the active row as RESOURCE_CAP and all later rows once as GLOBAL_CAP_UNREACHED; do not resume or alter a parameter.",
+    "rng": "NONE",
+    "rss_bytes_cap": 1073741824,
+    "wall_seconds_cap": 600
+  },
+  "retention": {
+    "all_rows_rule": "Every scheduled row is retained exactly once as OBSERVED_JOINT_PROXY_HIT, NO_RETAINED_HIT, RESOURCE_CAP, or GLOBAL_CAP_UNREACHED.",
+    "hit_gates": {
+      "central_energy_band": "R^4/(4H)<=E_1(W)<=4R^4/H",
+      "central_minimum_value": "min_t|D_b(t)|>=128",
+      "coefficient_cap": "max_n|b_n|<=1+2^-40",
+      "discrete_farey_activity": "at least 1/8 of frozen (r,s,theta) labels have |R_W|>=64",
+      "leading_certificate": "the numerical leading-phase lower root sqrt(lambda*N*rho*phi^2/R) is at least 128"
+    },
+    "miss_interpretation": "A NO_RETAINED_HIT is a bounded diagnostic outcome only and is not evidence for AFARI, FARI, CRR-U, or any universal incompatibility."
+  },
+  "row_schedule": [
+    {
+      "coefficient_design": "top-left-eigenvector capped phase",
+      "id": "F0-farey-leading-phase",
+      "initial_W": "literal-Farey power-vector stratified selector",
+      "joint_reselections": 0
+    },
+    {
+      "coefficient_design": "top-left-eigenvector phase followed by 16 inverse-row-weighted updates",
+      "id": "F1-farey-leading-minimum",
+      "initial_W": "literal-Farey power-vector stratified selector",
+      "joint_reselections": 0
+    },
+    {
+      "coefficient_design": "two fixed joint reselections, each after 16 inverse-row-weighted updates, then final 16 updates",
+      "id": "F2-joint-reselection-minimum",
+      "initial_W": "literal-Farey power-vector stratified selector",
+      "joint_reselections": 2
+    }
+  ],
+  "runtime": {
+    "implementation": "CPython",
+    "numpy": "1.26.4",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "discovery/build_cycle_6_crr_actual_log_spectral_probe_preregistration_v1.py",
+    "sha256": "f536a5e40243d811a323bfcc0ee7d5d584d6e27a911da70633a2426742090526"
+  },
+  "status": "SEALED_DISCOVERY_PREREGISTRATION_EXECUTABLE"
+}

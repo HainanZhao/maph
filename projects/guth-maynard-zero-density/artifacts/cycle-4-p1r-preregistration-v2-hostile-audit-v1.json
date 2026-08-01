@@ -1,0 +1,41 @@
+{
+  "artifact_id": "cycle-4-p1r-preregistration-v2-hostile-audit-v1",
+  "audited_v2_hashes": {
+    "artifact": "2f988a4feea44f0bf88b7519d7eff80f120575c64c13c975a6660ee6d6f01853",
+    "builder": "bee4c5fd044d4fed4db5c6907524e48c7c4a2c553beffce683dff685fa16cab0",
+    "document": "31865f458d751c8a39258fb12e92b55e31b4fa0591a866c230efdef9220c11de",
+    "snapshot": "cd42352b145f67af0289aa21b142f40fbc2aac891944bb49d054631384c176d0",
+    "tests": "132b4c0f82566c786d4514e7a341afae5145374390d8bd63e0778430e89c60f2"
+  },
+  "auditor": {
+    "path": "proof/audit_cycle_4_p1r_preregistration_v2_hostile.py",
+    "sha256": "ed9e7b2e49e0d68300c9bfe502b249719ee24770c18e0cb0d6cf15e9edf54e6d"
+  },
+  "checks": {
+    "CRR_search_forbidden": "PASS",
+    "FS_status": "PASS",
+    "actual_source_tamper": "PASS",
+    "documented_cli": "PASS",
+    "four_term_source_and_range": "PASS",
+    "future_P1R_complete_replay": "FAIL",
+    "future_affirmative_P2_replay": "FAIL",
+    "optimized_O": "PASS",
+    "optimized_OO": "PASS",
+    "overwrite": "PASS",
+    "self_identity": "PASS",
+    "snapshot_hash_and_schema": "PASS"
+  },
+  "claim_boundary": "Read-only audit of P1R v2. It records replay-lifecycle coupling and decides no P1R mathematical target.",
+  "defect": "Although the authorization snapshot is immutable, v2 still executes a live PLAN semantic predicate requiring P1R ACTIVE and no P2 selection. Both are expected to change after legitimate future gates, so historic preregistration replay remains coupled to mutable operational state.",
+  "epistemic_status": "OBSERVED",
+  "future_errors": {
+    "later_affirmative_p2": "current PLAN semantic clause missing: no_p2_selection",
+    "p1r_complete": "current PLAN semantic clause missing: p1r_active"
+  },
+  "required_correction": [
+    "For historical preregistration replay, validate only the immutable authorization snapshot and frozen source inputs; remove current PLAN state predicates from --check.",
+    "Move live PLAN authorization compatibility into a separate operational preflight command that reports current eligibility but is not required to reproduce historic bytes.",
+    "Add regressions for P1R ACTIVE->COMPLETE and later affirmative P2 selection, both of which must preserve historical replay while allowing operational preflight to change state."
+  ],
+  "status": "FAIL_PLAN_LIFECYCLE_SEMANTIC_COUPLING"
+}

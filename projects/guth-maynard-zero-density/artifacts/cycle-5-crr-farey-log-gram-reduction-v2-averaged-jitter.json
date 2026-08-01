@@ -1,0 +1,185 @@
+{
+  "afari_target": {
+    "epistemic_status": "CONJECTURED",
+    "not_claimed": "No proof or disproof of AFARI_eta is supplied. The v^(26+o(1)) raw-RL2 bound is not AFARI_eta.",
+    "statement": "For some fixed eta>0 and all sufficiently large v, every H^(1/100)-separated Base-admissible W satisfies A_v(W)<=v^(26-eta)."
+  },
+  "artifact_id": "cycle-5-crr-farey-log-gram-reduction-v2-averaged-jitter",
+  "averaged_actual_farey_bundle": {
+    "actual_nodes": "coprime Q<=r,s<2Q, 3/4<=r/s<=5/4; no generic logarithmic-alias substitution",
+    "definition": "A_v(W)=sum_(r,s in F_Q) integral_(-3)^3 sum_(k in K_(r,s)) |C_theta(sk,rk)|^2 dtheta",
+    "entry_injectivity": "(r,s,k)->(sk,rk) is injective for reduced positive r/s",
+    "epistemic_status": "PROVED",
+    "jitter": "theta is integrated over [-3,3], not optimized cell-by-cell",
+    "labeled_identity": "C_theta(sk,rk)=R_W((r/s)*exp(theta/H))"
+  },
+  "averaged_actual_farey_lower": {
+    "conditional_on": "the CRR-v2 RationalMass(v) predicate for v>=8",
+    "epistemic_status": "PROVED",
+    "expanded_cells": "J_(r,s)^+=[r/s-101/(100H),r/s+101/(100H)] are pairwise disjoint",
+    "exponent_derivation": "(8-3delta)+12+6=26-3delta",
+    "lower_bound": "A_v(W)>=(15/8)*v^(26-3*delta(v))",
+    "raw_actual_farey_l2_sum_lower": "sum_(r,s) integral_(J_(r,s)^+) |R_W(u)|^2 du >= 50*v^(8-3*delta(v))",
+    "ray_multiplicity_lower": "#K_(r,s)>=L/(20Q)=v^6/20",
+    "smoothing_incidence_upper": "H*measure({u in union J_(r,s): |u-u'|<=1/H})<=2/100",
+    "theta_cover": "J_(r,s)^+ subset {(r/s)*exp(theta/H): |theta|<=3}",
+    "theta_mass_lower": "sum_(r,s) integral_(-3)^3 |R_W((r/s)*exp(theta/H))|^2 dtheta >= (75/2)*H*v^(8-3*delta(v))"
+  },
+  "claim_boundary": "This artifact proves, conditional on frozen RationalMass/Base predicates and the checked published raw-R L2 lemma, an averaged actual-Farey lower bound and the matching uncoupled global-L2 upper scale. It proves neither AFARI nor v1 FARI, CRR-U, a compatible witness, a cubic estimate, a density gain, a short-interval theorem, a full-method saturation theorem, or an L-function result.",
+  "conditional_incompatibility_reduction": {
+    "conclusion": "For sufficiently large v with 3*delta(v)<eta, RationalMass(v) and Base(v) cannot hold together; hence AFARI_eta implies CRR-U.",
+    "conditional_on": "AFARI_eta for any fixed eta>0",
+    "epistemic_status": "PROVED",
+    "scope": "PositiveCubic(v) is not needed for this conditional contradiction; this does not prove AFARI_eta, v1 FARI_eta, or CRR-U."
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "averaged_geometry_at_v8": {
+      "H": 68719476736,
+      "Q": 4096,
+      "expanded_cell_diameter": "101/3435973836800",
+      "expanded_cell_radius": "101/6871947673600",
+      "lower_theta_cover_margin": "8521215114961/354177486230685273292800",
+      "raw_cell_u_upper": "4/3",
+      "reduced_fraction_gap_lower": "1/67108864",
+      "rl2_containing_interval": "[1/2,3/2]",
+      "theta_cover": "J_(r,s)^+ subset {(r/s)*exp(theta/H): |theta|<=3}",
+      "theta_neighborhood_diameter": "1/4294967296",
+      "theta_neighborhood_radius": "1/8589934592",
+      "upper_theta_cover_margin": "31/25"
+    },
+    "averaged_lower_constants": {
+      "averaged_bundle_prefactor": "15/8",
+      "raw_cell_sum_factor": "50",
+      "ray_factor": "1/20",
+      "smoothing_incidence_upper": "1/50",
+      "theta_change_of_variables": "du=(u/H)dtheta and u<=4/3 on J_(r,s)^+",
+      "theta_jacobian_factor": "3/4"
+    },
+    "exponent_rows": {
+      "averaged_actual_farey_bundle_lower": "26-3*delta",
+      "rationalmass_integral_over_cells": "8-3*delta",
+      "raw_actual_farey_l2_cell_sum_lower": "8-3*delta",
+      "raw_rl2_global_upper_under_base": "26+1*delta",
+      "theta_parameter_mass_lower": "20-3*delta"
+    },
+    "ray_rows_at_v8": {
+      "L": 1073741824,
+      "Q": 4096,
+      "integer_k_count_lower": "65536/5",
+      "integer_k_count_upper": "524288",
+      "lower_count_derivation": "width>=3L/(25Q), then subtract one endpoint",
+      "plateau": "[6L/5,9L/5]",
+      "upper_count_derivation": "#K<=9L/(5Q)<=2L/Q"
+    },
+    "scales_at_v8": {
+      "H": 68719476736,
+      "L": 1073741824,
+      "M": 64,
+      "Q": 4096,
+      "R": 16777216,
+      "V": 2097152,
+      "v": 8
+    }
+  },
+  "falsifiers": {
+    "afari": "An asymptotic Base-plus-RationalMass family meeting the lower scale refutes every AFARI_eta that applies to it.",
+    "lower_reduction": "A failure of expanded-cell disjointness, the smoothing-incidence estimate, the theta cover/Jacobian bound, the ray lower count, or the inherited labeled identity refutes the stated lower reduction.",
+    "raw_rl2_route": "A failure of the source RL2 hypotheses, theta-neighborhood disjointness, or ray upper count refutes the stated global upper route."
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/crr_farey_log_gram_v2.py",
+      "sha256": "25aa0b8642f09a8d9b1752de870105764204470db05a241e9359c0d1a46c7f9a"
+    },
+    "crr_v2_artifact": {
+      "path": "artifacts/cycle-4-p1r-crr-u-formalization-v2.json",
+      "sha256": "e26be797539eabe53ee765b7067d1c99fe4d440035e27785cf38aa64bc2fc84e"
+    },
+    "crr_v2_conventions": {
+      "path": "conventions/crr_formalization_v2.py",
+      "sha256": "0d960b76a4ad03cce43727159cf846696dbee732184df44b2ee0503b9ae18ce8"
+    },
+    "document": {
+      "path": "docs/cycle-5-crr-farey-log-gram-reduction-v2-averaged-jitter.md",
+      "sha256": "a2cf217d616feab889e48783b477454038c60ca006afb6775126532167f972f2"
+    },
+    "farey_log_v1_artifact": {
+      "path": "artifacts/cycle-5-crr-farey-log-gram-reduction-v1.json",
+      "sha256": "8f204d56a5609fa9c8a93b152a969a038bc13463d3a36ca746e842bfe21e5f40"
+    },
+    "farey_log_v1_builder": {
+      "path": "proof/build_cycle_5_crr_farey_log_gram_reduction_v1.py",
+      "sha256": "9f00151ad1d7d51c6cd68715669c94b8e81978cac98088246a37922644e05539"
+    },
+    "farey_log_v1_conventions": {
+      "path": "conventions/crr_farey_log_gram_v1.py",
+      "sha256": "d2301a36dd25cd73702a9e5220c2ad5e3c5d820444d6775f0aeea3d9a4783d73"
+    },
+    "farey_log_v1_document": {
+      "path": "docs/cycle-5-crr-farey-log-gram-reduction-v1.md",
+      "sha256": "c5d89a3c5e5a7871919fbe8dbdc6aa0f17ba7973883774c14e0039cb3327223e"
+    },
+    "farey_log_v1_tests": {
+      "path": "tests/test_cycle_5_crr_farey_log_gram_reduction_v1.py",
+      "sha256": "93cadfec064e9fd60ca172a9031b4675c61c32e53ece88fa4b0326296c1b3133"
+    },
+    "gm_source_tex": {
+      "path": "artifacts/sources/arxiv-2405.20552v2/LargevaluesDirichlet17.tex",
+      "sha256": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428"
+    }
+  },
+  "preserves_v1": {
+    "epistemic_status": "PROVED",
+    "statement": "v1 is retained as an immutable, hash-pinned supremum-over-jitter reduction; v2 adds a distinct averaged statistic.",
+    "v1_artifact_id": "cycle-5-crr-farey-log-gram-reduction-v1",
+    "v1_artifact_sha256": "8f204d56a5609fa9c8a93b152a969a038bc13463d3a36ca746e842bfe21e5f40"
+  },
+  "raw_rl2_global_upper": {
+    "conditional_on": "the CRR-v2 Base(v) separation/cardinality conditions and source Lemma RL2",
+    "epistemic_status": "PROVED",
+    "exponent_derivation": "12+6+(8+delta)=26+delta",
+    "global_bound": "A_v(W) << (L/Q)*H*|W| << v^(26+delta(v))=v^(26+o(1))",
+    "hypotheses_checked": "W is H^(1/100)-separated and contained in an interval of length H",
+    "raw_parameter_bound": "sum_(r,s) integral_(-3)^3 |R_W((r/s)*exp(theta/H))|^2 dtheta << H*|W|",
+    "ray_multiplicity_upper": "#K_(r,s)<=9L/(5Q)<=2L/Q",
+    "source_anchor": "LargevaluesDirichlet17.tex, Lemma RL2, lines 1242-1243 in the pinned source",
+    "theta_neighborhoods": "{(r/s)*exp(theta/H): |theta|<=3} lie in disjoint [r/s-8/H,r/s+8/H] subsets of [1/2,3/2]"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_5_crr_farey_log_gram_reduction_v2.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_5_crr_farey_log_gram_reduction_v2.py",
+    "write_command": "python3 proof/build_cycle_5_crr_farey_log_gram_reduction_v2.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE_BY_USER_DIRECTION",
+    "lightweight_checks": "primary-source anchor, exact Fraction/integer geometry, labeled matrix identities inherited from v1, replay, and tamper rejection"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_5_crr_farey_log_gram_reduction_v2.py",
+    "sha256": "e222bd7c640d16fcbaaab105d63d0fb73dcabdf27913981b2579466718747005"
+  },
+  "source_context": {
+    "base_cardinality": "v^(8-delta(v)) <= |W| <= v^(8+delta(v))",
+    "base_set": "finite W subset [0,H], H^(1/100)-separated",
+    "gm_rl2_label": "RL2",
+    "gm_rl2_source_lines": "1242-1243",
+    "preserved_v1_fari_status": "CONJECTURED",
+    "preserved_v1_identity": "C_theta(sk,rk)=R_W((r/s)*exp(theta/H))",
+    "rational_net": "coprime Q<=r,s<2Q, 3/4<=r/s<=5/4, intervals of radius 1/(100H)",
+    "rationalmass_threshold": "measure({u in Q_v:Rtilde_W(u)>=v^(6-delta(v))}) >= v^(-4-delta(v))"
+  },
+  "status": "SEALED_AVERAGED_JITTER_EXTENSION_LIGHTWEIGHT_CHECKED",
+  "uncoupled_global_l2_saturation": {
+    "epistemic_status": "PROVED",
+    "not_a_no_go": "This is not a proof that AFARI, v1 FARI, or another method lacks a fixed power gain, and not a full-method saturation theorem.",
+    "required_new_information_for_fixed_power_gain": "A fixed power saving cannot come from the displayed raw global RL2/cardinality estimate alone; a proof must use Base/coefficient coupling or a stronger arithmetic/restricted-L2 input.",
+    "scope": "This isolates the critical saturation of the uncoupled global-RL2 step after the Base coefficient vector is discarded except for |W|.",
+    "statement": "The RationalMass lower route gives central exponent 26-3delta, while raw RL2 plus Base cardinality gives 26+delta; their displayed exponent gap is 4delta=o(1)."
+  }
+}

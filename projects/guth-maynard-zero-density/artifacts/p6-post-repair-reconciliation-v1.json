@@ -1,0 +1,920 @@
+{
+  "artifact_id": "p6-post-repair-reconciliation-v1",
+  "claim_boundary": "A bounded post-repair status reconciliation of the immutable 46-row CGL-v2 record. It reports repaired deductions and remaining boundaries; it neither edits CGL-v2 nor promotes a new density or short-interval theorem.",
+  "document": {
+    "path": "docs/p6-post-repair-reconciliation-v1.md",
+    "sha256": "dd306d393f76ed9b098908e18f9a8c965ec041025c929ce82d1618d48a157425"
+  },
+  "epistemic_status": "OBSERVED",
+  "frozen_inputs": {
+    "detector_tail_v1": {
+      "path": "artifacts/p6-detector-qt-tail-v1.json",
+      "sha256": "c672dc559dbbd81b2b30f1a0c8e37354517e43af8da389b89a055504778a118d"
+    },
+    "detector_tail_v2_status": {
+      "path": "artifacts/p6-detector-qt-tail-v2-status-correction.json",
+      "sha256": "5fef3abecd2f2def93693f2e2c849ac8585b6fe22fb930743df690b359fa34ec"
+    },
+    "g0_zeta_route": {
+      "path": "artifacts/g0-full-reconstruction-v3.json",
+      "sha256": "5a3ec153c843d0c89d9a987ad043cdf9513a171d581f98447a9c12930d26cc4f"
+    },
+    "multiplicity_transfer": {
+      "path": "artifacts/p6-multiplicity-transfer-v1.json",
+      "sha256": "6466eabbd5b43bbc5ccd9937e9080bb8dab4ed77b27e4617b675e3546aa71772"
+    },
+    "original_46_row_reconciliation": {
+      "path": "artifacts/p6-cgl-v2-reconciliation-v1.json",
+      "sha256": "cf59aa63b97d69c672fafa0b0ca49221d9005c3da6ccd61f05d37f4bcbc68e49"
+    },
+    "primitive_to_all": {
+      "path": "artifacts/p6-primitive-to-all-transfer-v1.json",
+      "sha256": "2edccf46d15229fb8b8ff2c9510d0912f73228da681577ca66d869a8d8acf0d7"
+    },
+    "q1_reset": {
+      "path": "artifacts/p6-conductor-q1-reset-v1.json",
+      "sha256": "b4c9a30bac20f8b59ecf7e8fdbcb060119d21e29376c3ce6c5ec0cd5335c8d4d"
+    },
+    "s06_v1": {
+      "path": "artifacts/p6-s06-primary-input-ledger-v1.json",
+      "sha256": "1fbb984c3536c45dedbba36992ef8498cccf21fb7d8e9cab7619b5d2cb14b59a"
+    },
+    "s06_v2_lpoly": {
+      "path": "artifacts/p6-s06-primary-input-ledger-v2-lpoly-correction.json",
+      "sha256": "a7846345724c5110bc37d14a1ad712182f80f8e56a42ce73309469589df5b3e0"
+    },
+    "s06_v3_lc": {
+      "path": "artifacts/p6-s06-primary-input-ledger-v3-lc-correction.json",
+      "sha256": "8566226a67504c91fc2a19e98c7a74c1b805320b825852923b703fb5ce05fb49"
+    },
+    "s06_v4_fourth": {
+      "path": "artifacts/p6-s06-primary-input-ledger-v4-fourth-moment-correction.json",
+      "sha256": "50330941b45a28e5d248162c5c22a1cb4a0ffe27290c9ae2fd7c6859230ed044"
+    },
+    "tsmooth_v1": {
+      "path": "artifacts/p6-tsmooth-corrected-hypothesis-repair-v1.json",
+      "sha256": "5097609783b4e076b268255445e94caeb08bc23f93ad2540703c43e1401ca8af"
+    },
+    "tsmooth_v2_status": {
+      "path": "artifacts/p6-tsmooth-corrected-hypothesis-repair-v2-status-correction.json",
+      "sha256": "c8ee4e20a8e96a435e9e2031d5ed126372d8d2a2a9bb0edd4e8e7cf735ebf037"
+    }
+  },
+  "general_7_over_3_envelope": {
+    "conclusion": "No general 7/3 envelope has been reconstructed solely from checked published/derived P6 inputs.",
+    "epistemic_status": "CONJECTURED",
+    "missing_dependencies": [
+      "primitive CGL-style analytic envelope",
+      "L04/L06/M05/M07 inputs",
+      "F01/F02 Dirichlet outer envelopes",
+      "full middle-range assembly F03"
+    ],
+    "proved_conditional_deduction": "If the primitive two-term envelope is established at every exact conductor d with the needed comparison ranges, then q1 reset and primitive-to-all transfer give the all-character (qT)^((7/3)(1-sigma)+o(1)) envelope.",
+    "verdict": "NOT_PROMOTED"
+  },
+  "hostile_audit": "DEFERRED_TO_PAPER_STAGE",
+  "original_registry": {
+    "artifact_sha256": "cf59aa63b97d69c672fafa0b0ca49221d9005c3da6ccd61f05d37f4bcbc68e49",
+    "count": 46,
+    "ids": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "L01",
+      "L02",
+      "L03",
+      "L04",
+      "L05",
+      "L06",
+      "L07",
+      "L08",
+      "L09",
+      "L10",
+      "L11",
+      "L12",
+      "M01",
+      "M02",
+      "M03",
+      "M04",
+      "M05",
+      "M06",
+      "M07",
+      "M08",
+      "Z01",
+      "Z02",
+      "Z03",
+      "Z04",
+      "Z05",
+      "Z06",
+      "Z07",
+      "Z08",
+      "Z09",
+      "Z10",
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08",
+      "F09",
+      "F10"
+    ]
+  },
+  "overall_disposition": "OBSERVED: P6 remains RECONCILED_OPEN_INPUTS. The named detector inputs are substantially repaired for the amended q>=2 primitive path, but the core primitive large-value/comparator route remains open.",
+  "proved_repairs": [
+    "L_POLY_A for all Dirichlet characters",
+    "LC local multiplicity count and derived LOW_HEIGHT_MULTIPLICITY_COUNT",
+    "primitive-to-all zero multiset and conductor partition transfer",
+    "q1 reset conditional on a primitive monotone envelope",
+    "amended qT detector tail",
+    "q>=2 primitive discrete FOURTH_MOMENT_H",
+    "amended q>=2 primitive class-II step",
+    "corrected T-smooth divisor chain and its stated conditional smooth branch",
+    "F09 exact crossings"
+  ],
+  "q_equals_one": {
+    "epistemic_status": "PROVED",
+    "non_promotion": "G0 supplies no P6 general 7/3 theorem.",
+    "statement": "The pinned G0 route certifies the published Guth--Maynard zeta zero-density/envelope path at exponent 30/13, including its source-gate adjudication. This is a separate zeta route, not an all-character P6 7/3 reconstruction and not a replacement for v4's deliberately q>=2 primitive scope.",
+    "verdict": "SEPARATELY_COVERED_BY_G0_AT_30_OVER_13"
+  },
+  "remaining_obligations": {
+    "epistemic_status": "CONJECTURED",
+    "external_or_unchecked": [
+      "L04 low-value qT comparator",
+      "L06 HMH comparator",
+      "M05 approximate-functional-equation/S2 source input",
+      "M07 Heath-Brown character-time energy input",
+      "F01 Dirichlet Ingham analogue",
+      "F02 Dirichlet Huxley analogue",
+      "the primitive CGL-style large-value/two-term envelope required by F03/F10 and the q1 reset"
+    ],
+    "source_text_gaps": [
+      "CGL multiplicity wording",
+      "CGL domain/tail wording",
+      "saturated selection construction",
+      "undefined T-smooth terminology",
+      "q1-sensitive prescribed intermediate formulae"
+    ],
+    "why_not_closed": "The new repairs do not prove the core primitive large-value and comparison theorem chain."
+  },
+  "replay": "python3 proof/build_p6_post_repair_reconciliation_v1.py --check",
+  "row_reconciliation": [
+    {
+      "id": "S01",
+      "obligation": "TeX/tar-member/PDF identity and complete-source boundary",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_IDENTITY_COMPLETE",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "post_repair": {
+        "boundary": "The source row is preserved, but no new proof of its internal analytic argument is claimed.",
+        "classification": "SOURCE_TEXT_RECORDED_OR_UNAUDITED",
+        "epistemic_status": "OBSERVED"
+      }
+    },
+    {
+      "id": "S02",
+      "obligation": "authors, collaboration/version statement, title, and preprint status",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_METADATA_COMPLETE_PREPRINT",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "post_repair": {
+        "boundary": "The source row is preserved, but no new proof of its internal analytic argument is claimed.",
+        "classification": "SOURCE_TEXT_RECORDED_OR_UNAUDITED",
+        "epistemic_status": "OBSERVED"
+      }
+    },
+    {
+      "id": "S03",
+      "obligation": "zero-count definition, two-sided height, rectangle, and multiplicity audit",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "OPEN_ANALYTIC_INPUT:S03_MULTIPLICITY_CONVENTION_UNSTATED",
+        "route_a_normalized": "OPEN_ANALYTIC_INPUT",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_MULTIPLICITY",
+        "route_b_normalized": "OPEN_ANALYTIC_INPUT"
+      },
+      "post_repair": {
+        "boundary": "This does not rewrite CGL's cardinality language.",
+        "classification": "SOURCE_MULTIPLICITY_WORDING_REMAINS_A_GAP",
+        "epistemic_status": "OBSERVED",
+        "mathematical_repair": "PROVED: v3 supplies LC and the multiplicity-transfer artifact supplies the label-preserving consequence."
+      }
+    },
+    {
+      "id": "S04",
+      "obligation": "domains for q,T,X,Y,sigma, endpoints, and qT-to-infinity interpretation",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "OPEN_ANALYTIC_INPUT:S04_LOW_T_ENDPOINT_SCOPE",
+        "route_a_normalized": "OPEN_ANALYTIC_INPUT",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_ENDPOINT_SCOPE",
+        "route_b_normalized": "OPEN_ANALYTIC_INPUT"
+      },
+      "post_repair": {
+        "boundary": "The original TeX is not certified as written.",
+        "classification": "SOURCE_DOMAIN_WORDING_REMAINS_A_GAP",
+        "epistemic_status": "OBSERVED",
+        "mathematical_repair": "PROVED for the amended q>=2 detector: v1 tail plus v2 status and S06 v2--v4 inputs give qT-uniform transport for T>=1."
+      }
+    },
+    {
+      "id": "S05",
+      "obligation": "o(1), epsilon, lessapprox, constants, and limiting-order convention",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "post_repair": {
+        "boundary": "The source row is preserved, but no new proof of its internal analytic argument is claimed.",
+        "classification": "SOURCE_TEXT_RECORDED_OR_UNAUDITED",
+        "epistemic_status": "OBSERVED"
+      }
+    },
+    {
+      "id": "S06",
+      "obligation": "external-input inventory with exact theorem hypotheses and primary-source locators",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "OPEN_ANALYTIC_INPUT:S06_EXTERNAL_INPUTS",
+        "route_a_normalized": "OPEN_ANALYTIC_INPUT",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY",
+        "route_b_normalized": "OPEN_ANALYTIC_INPUT"
+      },
+      "post_repair": {
+        "boundary": "The inventory as a whole is not closed.",
+        "classification": "PARTIALLY_REPAIRED_EXTERNAL_INVENTORY",
+        "epistemic_status": "CONJECTURED",
+        "mathematical_repair": "PROVED: L_POLY_A, LC, low height, and the q>=2 primitive fourth moment. Remaining L04/L06/M05/M07/F01/F02 inputs are open."
+      }
+    },
+    {
+      "id": "L01",
+      "obligation": "Partial-LVE primitive-character, coefficient, separation, threshold, and length hypotheses",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_THEOREM_RESTATED_DEPENDS_ON_M01--M08",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "post_repair": {
+        "boundary": "The source row is preserved, but no new proof of its internal analytic argument is claimed.",
+        "classification": "SOURCE_TEXT_RECORDED_OR_UNAUDITED",
+        "epistemic_status": "OBSERVED"
+      }
+    },
+    {
+      "id": "L02",
+      "obligation": "divisor-sensitive four-term Partial-LVE formula",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_THEOREM_RESTATED_DEPENDS_ON_M01--M08",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "post_repair": {
+        "boundary": "The source row is preserved, but no new proof of its internal analytic argument is claimed.",
+        "classification": "SOURCE_TEXT_RECORDED_OR_UNAUDITED",
+        "epistemic_status": "OBSERVED"
+      }
+    },
+    {
+      "id": "L03",
+      "obligation": "all-case four-term Partial-LVE formula",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_THEOREM_RESTATED_DEPENDS_ON_M01--M08",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "post_repair": {
+        "boundary": "The source row is preserved, but no new proof of its internal analytic argument is claimed.",
+        "classification": "SOURCE_TEXT_RECORDED_OR_UNAUDITED",
+        "epistemic_status": "OBSERVED"
+      }
+    },
+    {
+      "id": "L04",
+      "obligation": "low-value qT mean-value comparator and valid range",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "OPEN_ANALYTIC_INPUT:L04_IK_THM_9_12_UNREAD",
+        "route_a_normalized": "OPEN_ANALYTIC_INPUT",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY",
+        "route_b_normalized": "OPEN_ANALYTIC_INPUT"
+      },
+      "post_repair": {
+        "boundary": "No checked published/derived P6 input closes this row.",
+        "classification": "OPEN_EXTERNAL_OR_UNCHECKED_ANALYTIC_INPUT",
+        "epistemic_status": "CONJECTURED"
+      }
+    },
+    {
+      "id": "L05",
+      "obligation": "intermediate-value reduction, three-piece smoothing, and separation thinning",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE_DEPENDS_ON_AUXILIARY",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "post_repair": {
+        "boundary": "The source row is preserved, but no new proof of its internal analytic argument is claimed.",
+        "classification": "SOURCE_TEXT_RECORDED_OR_UNAUDITED",
+        "epistemic_status": "OBSERVED"
+      }
+    },
+    {
+      "id": "L06",
+      "obligation": "high-value HMH comparator and valid range",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "OPEN_ANALYTIC_INPUT:L06_HUXLEY_1975_UNREAD",
+        "route_a_normalized": "OPEN_ANALYTIC_INPUT",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY",
+        "route_b_normalized": "OPEN_ANALYTIC_INPUT"
+      },
+      "post_repair": {
+        "boundary": "No checked published/derived P6 input closes this row.",
+        "classification": "OPEN_EXTERNAL_OR_UNCHECKED_ANALYTIC_INPUT",
+        "epistemic_status": "CONJECTURED"
+      }
+    },
+    {
+      "id": "L07",
+      "obligation": "qT<=N case and epsilon-limit step",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE_DEPENDS_ON_L04",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "post_repair": {
+        "boundary": "The source row is preserved, but no new proof of its internal analytic argument is claimed.",
+        "classification": "SOURCE_TEXT_RECORDED_OR_UNAUDITED",
+        "epistemic_status": "OBSERVED"
+      }
+    },
+    {
+      "id": "L08",
+      "obligation": "N<=qT<=N^(6/5) Auxiliary-proposition case",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE_DEPENDS_ON_M01--M08",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "post_repair": {
+        "boundary": "The source row is preserved, but no new proof of its internal analytic argument is claimed.",
+        "classification": "SOURCE_TEXT_RECORDED_OR_UNAUDITED",
+        "epistemic_status": "OBSERVED"
+      }
+    },
+    {
+      "id": "L09",
+      "obligation": "subdivision case q1>N^(6/5)",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE_DEPENDS_ON_L12",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "post_repair": {
+        "boundary": "The source row is preserved, but no new proof of its internal analytic argument is claimed.",
+        "classification": "SOURCE_TEXT_RECORDED_OR_UNAUDITED",
+        "epistemic_status": "OBSERVED"
+      }
+    },
+    {
+      "id": "L10",
+      "obligation": "subdivision case N^(6/5)/T<q1<N^(6/5)",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE_DEPENDS_ON_L12",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "post_repair": {
+        "boundary": "The source row is preserved, but no new proof of its internal analytic argument is claimed.",
+        "classification": "SOURCE_TEXT_RECORDED_OR_UNAUDITED",
+        "epistemic_status": "OBSERVED"
+      }
+    },
+    {
+      "id": "L11",
+      "obligation": "subdivision case q1<N^(6/5)/T including HMH combination",
+      "original_normalized_status": {
+        "comparison": "ROUTE_STATUS_DIFFERENCE_RETAINED",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE_DEPENDS_ON_L06_AND_L12",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY",
+        "route_b_normalized": "OPEN_ANALYTIC_INPUT"
+      },
+      "post_repair": {
+        "boundary": "Route B's external-input concern was not independently resolved; no source-normalization claim is made.",
+        "classification": "ROUTE_DISAGREEMENT_RETAINED",
+        "epistemic_status": "OBSERVED"
+      }
+    },
+    {
+      "id": "L12",
+      "obligation": "character subdivision for odd-prime and 2-power moduli",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "post_repair": {
+        "boundary": "The source row is preserved, but no new proof of its internal analytic argument is claimed.",
+        "classification": "SOURCE_TEXT_RECORDED_OR_UNAUDITED",
+        "epistemic_status": "OBSERVED"
+      }
+    },
+    {
+      "id": "M01",
+      "obligation": "smoothed Auxiliary proposition, bump normalization, hypotheses, and conclusion",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_PROPOSITION_RESTATED_DEPENDS_ON_M02--M08",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "post_repair": {
+        "boundary": "The source row is preserved, but no new proof of its internal analytic argument is claimed.",
+        "classification": "SOURCE_TEXT_RECORDED_OR_UNAUDITED",
+        "epistemic_status": "OBSERVED"
+      }
+    },
+    {
+      "id": "M02",
+      "obligation": "matrix and singular-value reductions, trace subtraction, constants, and hypotheses",
+      "original_normalized_status": {
+        "comparison": "ROUTE_STATUS_DIFFERENCE_RETAINED",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE_DEPENDS_ON_GM_LEMMA_4_1",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY",
+        "route_b_normalized": "OPEN_ANALYTIC_INPUT"
+      },
+      "post_repair": {
+        "boundary": "The route-specific missing hypothesis is not repaired.",
+        "classification": "ROUTE_DISAGREEMENT_RETAINED",
+        "epistemic_status": "OBSERVED"
+      }
+    },
+    {
+      "id": "M03",
+      "obligation": "Hilbert-Schmidt/cubic-trace expansion, Poisson conventions, diagonal subtraction, and errors",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "post_repair": {
+        "boundary": "The source row is preserved, but no new proof of its internal analytic argument is claimed.",
+        "classification": "SOURCE_TEXT_RECORDED_OR_UNAUDITED",
+        "epistemic_status": "OBSERVED"
+      }
+    },
+    {
+      "id": "M04",
+      "obligation": "S1 partition and estimate with all ranges",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "post_repair": {
+        "boundary": "The source row is preserved, but no new proof of its internal analytic argument is claimed.",
+        "classification": "SOURCE_TEXT_RECORDED_OR_UNAUDITED",
+        "epistemic_status": "OBSERVED"
+      }
+    },
+    {
+      "id": "M05",
+      "obligation": "S2, approximate functional equation, dyadic variables, and bound",
+      "original_normalized_status": {
+        "comparison": "ROUTE_STATUS_DIFFERENCE_RETAINED",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE_DEPENDS_ON_EXTERNAL_AFE_INPUT",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY",
+        "route_b_normalized": "OPEN_ANALYTIC_INPUT"
+      },
+      "post_repair": {
+        "boundary": "No checked published/derived P6 input closes this row.",
+        "classification": "OPEN_EXTERNAL_OR_UNCHECKED_ANALYTIC_INPUT",
+        "epistemic_status": "CONJECTURED"
+      }
+    },
+    {
+      "id": "M06",
+      "obligation": "affine/GCD-twist estimate, induction, Fourier decay, and norm comparisons",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "post_repair": {
+        "boundary": "The source row is preserved, but no new proof of its internal analytic argument is claimed.",
+        "classification": "SOURCE_TEXT_RECORDED_OR_UNAUDITED",
+        "epistemic_status": "OBSERVED"
+      }
+    },
+    {
+      "id": "M07",
+      "obligation": "character-time energy, Heath-Brown input, hypotheses, and closing estimate",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "OPEN_ANALYTIC_INPUT:M07_HEATH_BROWN_HYPOTHESES_UNREAD",
+        "route_a_normalized": "OPEN_ANALYTIC_INPUT",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY",
+        "route_b_normalized": "OPEN_ANALYTIC_INPUT"
+      },
+      "post_repair": {
+        "boundary": "No checked published/derived P6 input closes this row.",
+        "classification": "OPEN_EXTERNAL_OR_UNCHECKED_ANALYTIC_INPUT",
+        "epistemic_status": "CONJECTURED"
+      }
+    },
+    {
+      "id": "M08",
+      "obligation": "S3 estimate and dominance calculation closing the Auxiliary proposition",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE_DEPENDS_ON_M02--M07",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "post_repair": {
+        "boundary": "The source row is preserved, but no new proof of its internal analytic argument is claimed.",
+        "classification": "SOURCE_TEXT_RECORDED_OR_UNAUDITED",
+        "epistemic_status": "OBSERVED"
+      }
+    },
+    {
+      "id": "Z01",
+      "obligation": "Mellin identity, contour shift, and both residues",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "post_repair": {
+        "boundary": "The source row is preserved, but no new proof of its internal analytic argument is claimed.",
+        "classification": "SOURCE_TEXT_RECORDED_OR_UNAUDITED",
+        "epistemic_status": "OBSERVED"
+      }
+    },
+    {
+      "id": "Z02",
+      "obligation": "weighted Dirichlet-series sum tail beyond Y log^2 Y",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "post_repair": {
+        "boundary": "The source row is preserved, but no new proof of its internal analytic argument is claimed.",
+        "classification": "SOURCE_TEXT_RECORDED_OR_UNAUDITED",
+        "epistemic_status": "OBSERVED"
+      }
+    },
+    {
+      "id": "Z03",
+      "obligation": "integral tail, X-versus-T hypothesis, uniform q,T scope, and T=1 endpoint",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "OPEN_ANALYTIC_INPUT:Z03_TAIL_X_RANGE",
+        "route_a_normalized": "OPEN_ANALYTIC_INPUT",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_TAIL",
+        "route_b_normalized": "OPEN_ANALYTIC_INPUT"
+      },
+      "post_repair": {
+        "boundary": "This is a repaired detector, not the CGL text as written.",
+        "classification": "AMENDED_QT_UNIFORM_DETECTOR_TAIL",
+        "epistemic_status": "PROVED",
+        "scope": "q positive, T>=1; applied to the primitive q>=2 detector after S06 v2--v4 supply its named inputs."
+      }
+    },
+    {
+      "id": "Z04",
+      "obligation": "principal-character residue and low-height-zero contribution after primitive restriction",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "OPEN_ANALYTIC_INPUT:Z04_ZERO_COUNT_INPUT_UNREAD",
+        "route_a_normalized": "OPEN_ANALYTIC_INPUT",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY",
+        "route_b_normalized": "OPEN_ANALYTIC_INPUT"
+      },
+      "post_repair": {
+        "boundary": "No source wording is altered.",
+        "classification": "LOW_HEIGHT_REPAIR",
+        "epistemic_status": "PROVED",
+        "scope": "v1 reduction combined with v3 LC and the pinned primitive-to-all zero-multiset transfer."
+      }
+    },
+    {
+      "id": "Z05",
+      "obligation": "induced-character Euler factors and zero-set equality in sigma>1/2",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "OPEN_ANALYTIC_INPUT:Z05_PRIMITIVE_EULER_FACTORS",
+        "route_a_normalized": "OPEN_ANALYTIC_INPUT",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_PRIMITIVE_TO_ALL",
+        "route_b_normalized": "OPEN_ANALYTIC_INPUT"
+      },
+      "post_repair": {
+        "boundary": "It does not establish a primitive density estimate.",
+        "classification": "PRIMITIVE_TO_ALL_ZERO_MULTISET_TRANSFER",
+        "epistemic_status": "PROVED",
+        "scope": "Re(s)>0, including multiplicities."
+      }
+    },
+    {
+      "id": "Z06",
+      "obligation": "conductor partition, multiplicity/divisor loss, and q1-sensitive termwise domination",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "OPEN_ANALYTIC_INPUT:Z06_CONDUCTOR_SUM_Q1",
+        "route_a_normalized": "OPEN_ANALYTIC_INPUT",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_PRIMITIVE_TO_ALL",
+        "route_b_normalized": "OPEN_ANALYTIC_INPUT"
+      },
+      "post_repair": {
+        "boundary": "That primitive analytic envelope is still open; prescribed-q1 intermediate formulae are not justified.",
+        "classification": "CONDUCTOR_PARTITION_AND_Q1_RESET",
+        "epistemic_status": "PROVED",
+        "scope": "Conditional only on a primitive monotone envelope re-run at each exact conductor d with q1'=d."
+      }
+    },
+    {
+      "id": "Z07",
+      "obligation": "saturated well-spacing selection and local zero-count input",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "OPEN_ANALYTIC_INPUT:Z07_DAVENPORT_CH16_UNREAD",
+        "route_a_normalized": "OPEN_ANALYTIC_INPUT",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY",
+        "route_b_normalized": "OPEN_ANALYTIC_INPUT"
+      },
+      "post_repair": {
+        "boundary": "The CGL selection construction itself is not independently promoted.",
+        "classification": "LC_REPAIRED_SELECTION_TEXT_REMAINS_UNAUDITED",
+        "epistemic_status": "OBSERVED",
+        "mathematical_repair": "PROVED: LC and multiplicity transfer remove the multiplicity factor once a saturated distinct-zero selection is available."
+      }
+    },
+    {
+      "id": "Z08",
+      "obligation": "class-II maximizers, shifted spacing, fourth moment, and Y=(qT)^(1/2)",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "OPEN_ANALYTIC_INPUT:Z08_SHIFTED_SPACING_AND_MONTGOMERY_INPUT",
+        "route_a_normalized": "OPEN_ANALYTIC_INPUT",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY",
+        "route_b_normalized": "OPEN_ANALYTIC_INPUT"
+      },
+      "post_repair": {
+        "boundary": "No full CGL detector theorem is promoted; source class-II prose remains unrewritten.",
+        "classification": "AMENDED_PRIMITIVE_CLASS_II_STEP",
+        "epistemic_status": "PROVED",
+        "scope": "q>=2, H>=1: v4 fourth moment plus v2 L_POLY_A, v3 LC/low-height, and amended qT tail."
+      }
+    },
+    {
+      "id": "Z09",
+      "obligation": "class-I dyadic selection, normalization, representative loss, and length range",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE_DEPENDS_ON_Z01--Z07",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "post_repair": {
+        "boundary": "The source row is preserved, but no new proof of its internal analytic argument is claimed.",
+        "classification": "SOURCE_TEXT_RECORDED_OR_UNAUDITED",
+        "epistemic_status": "OBSERVED"
+      }
+    },
+    {
+      "id": "Z10",
+      "obligation": "bounded k, powered coefficient control, and complete length-case coverage",
+      "original_normalized_status": {
+        "comparison": "ROUTE_STATUS_DIFFERENCE_RETAINED",
+        "route_a_disposition": "OPEN_ANALYTIC_INPUT:Z10_POWERED_COEFFICIENT_AND_LENGTH_COVERAGE",
+        "route_a_normalized": "OPEN_ANALYTIC_INPUT",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "post_repair": {
+        "boundary": "The source row is preserved, but no new proof of its internal analytic argument is claimed.",
+        "classification": "SOURCE_TEXT_RECORDED_OR_UNAUDITED",
+        "epistemic_status": "OBSERVED"
+      }
+    },
+    {
+      "id": "F01",
+      "obligation": "outer sigma<=0.7 range via the stated Ingham analogue",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "OPEN_ANALYTIC_INPUT:F01_INGHAM_ANALOGUE_UNREAD",
+        "route_a_normalized": "OPEN_ANALYTIC_INPUT",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY",
+        "route_b_normalized": "OPEN_ANALYTIC_INPUT"
+      },
+      "post_repair": {
+        "boundary": "No checked published/derived P6 input closes this row.",
+        "classification": "OPEN_EXTERNAL_OR_UNCHECKED_ANALYTIC_INPUT",
+        "epistemic_status": "CONJECTURED"
+      }
+    },
+    {
+      "id": "F02",
+      "obligation": "outer sigma>=0.8 range via the stated Huxley analogue",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "OPEN_ANALYTIC_INPUT:F02_HUXLEY_ANALOGUE_UNREAD",
+        "route_a_normalized": "OPEN_ANALYTIC_INPUT",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY",
+        "route_b_normalized": "OPEN_ANALYTIC_INPUT"
+      },
+      "post_repair": {
+        "boundary": "No checked published/derived P6 input closes this row.",
+        "classification": "OPEN_EXTERNAL_OR_UNCHECKED_ANALYTIC_INPUT",
+        "epistemic_status": "CONJECTURED"
+      }
+    },
+    {
+      "id": "F03",
+      "obligation": "middle-range four-term zero-density lemma and hypotheses",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE_DEPENDS_ON_L01--Z10",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "post_repair": {
+        "boundary": "Its repaired detector/conductor substeps do not supply the unverified primitive large-value and auxiliary-proposition chain.",
+        "classification": "MIDDLE_RANGE_SOURCE_LEMMA_NOT_RECONSTRUCTED",
+        "epistemic_status": "CONJECTURED"
+      }
+    },
+    {
+      "id": "F04",
+      "obligation": "divisor Case 1 and complete interval coverage",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "post_repair": {
+        "boundary": "The source row is preserved, but no new proof of its internal analytic argument is claimed.",
+        "classification": "SOURCE_TEXT_RECORDED_OR_UNAUDITED",
+        "epistemic_status": "OBSERVED"
+      }
+    },
+    {
+      "id": "F05",
+      "obligation": "divisor Case 2 and complete interval coverage",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "post_repair": {
+        "boundary": "The source row is preserved, but no new proof of its internal analytic argument is claimed.",
+        "classification": "SOURCE_TEXT_RECORDED_OR_UNAUDITED",
+        "epistemic_status": "OBSERVED"
+      }
+    },
+    {
+      "id": "F06",
+      "obligation": "divisor Case 3, feasibility, and complete interval coverage",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "post_repair": {
+        "boundary": "The source row is preserved, but no new proof of its internal analytic argument is claimed.",
+        "classification": "SOURCE_TEXT_RECORDED_OR_UNAUDITED",
+        "epistemic_status": "OBSERVED"
+      }
+    },
+    {
+      "id": "F07",
+      "obligation": "divisor Case 4 and comparison with desired terms",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "post_repair": {
+        "boundary": "The source row is preserved, but no new proof of its internal analytic argument is claimed.",
+        "classification": "SOURCE_TEXT_RECORDED_OR_UNAUDITED",
+        "epistemic_status": "OBSERVED"
+      }
+    },
+    {
+      "id": "F08",
+      "obligation": "T-smooth definition, divisor-chain existence, endpoints, and coverage",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "OPEN_ANALYTIC_INPUT:F08_T_SMOOTH_UNDEFINED",
+        "route_a_normalized": "OPEN_ANALYTIC_INPUT",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_UNDEFINED_TERM",
+        "route_b_normalized": "OPEN_ANALYTIC_INPUT"
+      },
+      "post_repair": {
+        "boundary": "CGL does not define T-smooth; no original-source definition is inferred.",
+        "classification": "CORRECTED_T_SMOOTH_BRANCH",
+        "epistemic_status": "PROVED",
+        "scope": "Under the amended definition every p|q has p<=T, and conditional on the stated primitive large-value/comparison inputs plus the repaired detector and transfer."
+      }
+    },
+    {
+      "id": "F09",
+      "obligation": "four coefficient crossings with Ingham including quadratic/radical branch",
+      "original_normalized_status": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "PROVED_EXACT_ALGEBRA_CONDITIONAL_ON_SOURCE_INPUTS",
+        "route_a_normalized": "EXACT_ALGEBRA_CONDITIONAL",
+        "route_b_disposition": "RECONSTRUCTED_EXACT_ALGEBRA",
+        "route_b_normalized": "EXACT_ALGEBRA_CONDITIONAL"
+      },
+      "post_repair": {
+        "boundary": "This remains algebra only, not a density theorem.",
+        "classification": "EXACT_ALGEBRA",
+        "epistemic_status": "PROVED"
+      }
+    },
+    {
+      "id": "F10",
+      "obligation": "q1=q reductions, exact inequalities, uniform 7/3, and worst-T scope",
+      "original_normalized_status": {
+        "comparison": "ROUTE_STATUS_DIFFERENCE_RETAINED",
+        "route_a_disposition": "OPEN_ANALYTIC_INPUT:F10_UNIFORM_7_OVER_3_DEPENDS_ON_Z03_Z05_Z06",
+        "route_a_normalized": "OPEN_ANALYTIC_INPUT",
+        "route_b_disposition": "RECONSTRUCTED_ALGEBRA_BLOCKED_BY_OPEN_INPUT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "post_repair": {
+        "boundary": "The primitive envelope and outer Dirichlet comparison inputs are not closed, so no general 7/3 theorem is promoted.",
+        "classification": "CONDITIONAL_UNIFORM_ENVELOPE_ALGEBRA",
+        "epistemic_status": "PROVED",
+        "scope": "Conditional on the primitive two-term envelope and the repaired conductor reset, the 7/3 domination is exact."
+      }
+    }
+  ],
+  "sealer": {
+    "path": "proof/build_p6_post_repair_reconciliation_v1.py",
+    "sha256": "97e57fed528ab6a694b037dd8eabcf46e3b970bd2bd637dfed34869edaa7a416"
+  }
+}

@@ -1,0 +1,7413 @@
+LARGE VALUE ESTIMATES FOR DIRICHLET POLYNOMIALS
+WITH CHARACTERS AND ZERO DENSITY OF DIRICHLET
+L-FUNCTIONS
+
+BIN CHEN, VISHAL GUPTA, AND YUNG CHI LI
+
+Abstract. It is proved that
+�
+
+χ mod q
+N(σ, T, χ) ≪ϵ (qT)7(1−σ)/3+ϵ,
+
+where N(σ, T, χ) denotes the number of zeros ρ = β + it of L(s, χ) in the rectangle
+σ ≤ β ≤ 1, |t| ≤ T. The exponent 7/3 improves upon Huxley’s earlier exponent of
+12/5.
+The key innovation lies in deriving a sharp upper bound for sums over affine trans-
+formations of functions with a GCD twist, which arises from our adaptation of the
+Guth–Maynard method. As applications of the zero density estimates obtained in
+this paper, we derive a new upper bound for the least Goldbach number in arith-
+metic progressions modulo a prime and establish new results on primes in arithmetic
+progressions in short intervals, in particular for prime-power moduli.
+
+1. Introduction
+
+The primary objective of this paper is to extend the Guth-Maynard method to study
+the distribution of Dirichlet polynomials twisted by primitive Dirichlet characters. This
+yields improved large values estimates for such Dirichlet polynomials of length N,
+taking values of size close to N 3/4. Specifically, we prove
+
+Theorem 1.1 (Large value estimate for Dirichlet polynomials with characters). Let
+
+DN(t, χ) =
+�
+
+N<n≤2N
+anχ(n)nit,
+
+where χ is a primitive character modulo q and |an| ≤ 1. Suppose that W is a finite
+set of pairs (t, χ), where |t| ≤ T and for (t, χ) ̸= (t′, χ′) either χ ̸= χ′ or |t − t′| ≥ 1.
+Assume that
+|DN(t, χ)| ≥ V
+
+2020 Mathematics Subject Classification. Primary 11M06, 11M26; Secondary 11N05, 11N13.
+Key words and phrases. Large value estimates; The Guth-Maynard method; Zero-density estimate
+for Dirichlet L-functions; Distribution of primes.
+
+After the preprint [2] by the first author was released, the other authors informed BC that they
+had independently obtained the exponent 7/3 in the zero density estimate. The present version is the
+result of the authors’ subsequent collaboration on this topic.
+
+1
+
+arXiv:2507.08296v2  [math.NT]  27 Jul 2026
+
+
+2
+BIN CHEN, VISHAL GUPTA, AND YUNG CHI LI
+
+for all (t, χ) ∈ W and N ≥ (qT)
+2
+3. Then for any divisor q1 | q, we have
+
+|W| ≤ (qT)o(1)(N 2V −2 + qq
+− 1
+
+2
+1 T
+1
+2N 3V −4 + qq
+
+1
+3
+1 TN 2V −4 + qTN
+12
+5 V −4).
+
+In all cases, we have
+
+|W| ≤ (qT)o(1)(N 2V −2 + (qT)
+1
+2N 3V −4 + q
+4
+3TN 2V −4 + qTN
+12
+5 V −4).
+
+When q = 1, in the key range N < T 5/6, Theorem 1.1 recovers a recent bound of
+Guth-Maynard [5], which this work is based on:
+
+|W| ≤ T o(1)(N 2V −2 + TN
+12
+5 V −4).
+(1.1)
+
+To properly contextualize the strength of Theorem 1.1, we compare it with two standard
+large values estimates in the literature. First, the qT-analogue of the classical mean
+value theorem [11, Thm 9.12] yields the bound
+
+(1.2)
+|W| ≤ (qT)o(1)(N 2V −2 + qTNV −2),
+
+while the Hal´asz-Montgomery-Huxley method [8] gives
+
+(1.3)
+|W| ≤ (qT)o(1)(N 2V −2 + qTN 4V −6).
+
+Zero-density estimates for the Riemann zeta function and Dirichlet L-functions occupy
+a central role in multiplicative number theory. These estimates yield important arith-
+metic consequences, particularly in prime number theory; we refer to [9, Chapter 12]
+and [16, Chapter 15] for comprehensive discussions of their applications. Large values
+estimates such as (1.2) and (1.3) are important tools in establishing zero density esti-
+mates for Dirichlet L-functions. Let N(σ, T, χ) denote the number of zeros ρ = β + it
+of L(s, χ) in the rectangle σ ≤ β ≤ 1, |t| ≤ T. Then (1.2) yields
+
+(1.4)
+�
+
+χ mod q
+N(σ, T, χ) ≤ (qT)
+
+3(1−σ)
+
+2−σ +o(1),
+
+whereas (1.3) gives the estimate
+
+(1.5)
+�
+
+χ mod q
+N(σ, T, χ) ≤ (qT)
+
+3(1−σ)
+3σ−1 +o(1)
+
+that performs better than (1.4) when σ > 3/4. When σ = 3/4, the bounds (1.4)
+and (1.5) coincide. This threshold case corresponds to Dirichlet polynomials of length
+N = (qT)4/5 attaining values of size V = N 3/4, for which both estimates yield |W| ≤
+(qT)3/5+o(1). In this critical situation, Theorem 1.1 gives us the estimate
+
+|W| ≤ (qT)o(1)(qT(q1T)−1/2 + q1/3
+1 (qT)1/5 + (qT)13/25)
+
+for any divisor q1 | q. We may always choose q1 = q and get
+
+|W| ≤ (qT)o(1)(q1/3(qT)1/5 + (qT)13/25) ≤ (qT)
+8
+15 +o(1),
+
+giving an improvement for all moduli q. Employing Theorem 1.1 within the zero density
+machinery leads to the following zero density estimate.
+
+
+LARGE VALUE AND ZERO DENSITY ESTIMATES FOR DIRICHLET L-FUNCTIONS
+3
+
+Theorem 1.2 (Zero-density estimate). For any divisor q1 | q and 1/2 < σ < 1, we
+have
+�
+
+χ mod q
+N(σ, T, χ) ≤ (qT)o(1)((q
+
+1
+3
+1 qT)
+
+3(1−σ)
+
+1+σ + (qT(q1T)− 1
+
+2)
+3(1−σ)
+
+σ
++ (q1T)− 1
+
+2(qT)
+21−20σ
+
+6
++ (qT)
+
+15(1−σ)
+
+3+5σ ).
+
+If q1 | q and q1 ≥ √q, we also have
+�
+
+χ mod q
+N(σ, T, χ) ≤ (qT)o(1)((q
+
+1
+3
+1 q2T 2)1−σ + (q3T
+9
+4q
+− 3
+
+4
+1 )1−σ + (qT)B(1−σ) + (qT)
+30
+13 (1−σ)),
+
+where B =
+37+3β−√
+
+9β2+222β−71
+12
+and β = log q1T
+
+log qT .
+In all cases, we have
+�
+
+χ mod q
+N(σ, T, χ) ≤ (qT)o(1)(q
+7
+3 (1−σ)T 2(1−σ) + (qT)
+30
+13 (1−σ)).
+
+If q is T-smooth, then
+�
+
+χ mod q
+N(σ, T, χ) ≤ (qT)
+30
+13 (1−σ)+o(1).
+
+The best exponent A in �
+
+χ mod q N(σ, T, χ) ≤ (qT)A(1−σ)+o(1) that we get from Theo-
+rem 1.2 uniformly in q and T is A = 7/3. The exponent 7/3 represents an improvement
+over previous results: Huxley [8] obtained A = 12/5, Jutila [13] obtained A = 2.460 . . . ,
+Forti and Viola [4] obtained A = 2.463 . . . and Montgomery [16, Thm. 12.1] obtained
+A = 2.5. This enhanced exponent leads to important consequences in prime number
+theory1. One such application, building on the work of Jutila [13], is the following
+corollary.
+
+Corollary 1.3. Let p be an odd prime, (p, k) = 1 and let G(p, k) be the least Goldbach’s
+number (a number of the form p1+p2 with p1, p2 primes) that is congruent to k modulo
+p. Then
+G(p, k) ≪ϵ p7/6+ϵ.
+
+Zero density estimates for the Riemann zeta function have important consequences
+for the distribution of primes. Similarly, zero density estimates for Dirichlet L-functions
+have important consequences for the distribution of primes in arithmetic progressions,
+particularly in short intervals. In contrast to the Riemann zeta function, a key difficulty
+for Dirichlet L-functions is the lack of a sufficiently strong zero-free region in the q-
+aspect. In particular, there is the possibility of an exceptional real and simple zero
+ρ of L(s, χ) such that β ≥ 1 −
+c
+
+log 3q for an absolute constant c and a non-trivial real
+primitive Dirichlet character modulo q [11, Theorem 5.26].
+
+1Igor Shparlinski informed us that the current best value L = 2.1115 of the Linnik constant for
+primes in arithmetic progressions modulo powers of a fixed prime [1] may be further improved using
+our new exponent 7/3. We do not pursue this application here.
+
+
+4
+BIN CHEN, VISHAL GUPTA, AND YUNG CHI LI
+
+Even if such exceptional zeroes do not exist, the Vinogradov-Korobov zero-free region
+[17, p. 176], which states that L(s, χ) ̸= 0 if
+
+σ > 1 −
+c
+
+log q + (log(|t| + 2))
+2
+3(log log(|t| + 2))
+1
+3 ,
+
+is not strong enough in the q-aspect. This restricts our ability to prove asymptotics for
+primes in arithmetic progressions for short intervals. However, improvements to the
+zero-free region are available for specific moduli q such as powerful moduli, as shown
+by Postnikov [18]. If the zero-free region can be made wide enough for the relevant
+heights, we have the following asymptotic for primes in arithmetic progressions:
+
+Corollary 1.4 (Primes in arithmetic progressions under a good zero-free region). Let
+h ≤ x, q1 | q with q1 ≥ √q and (a, q) = 1. Suppose that �
+
+χ mod q L(s, χ) ̸= 0 for
+σ ≥ 1−η(q, T) when |Im(s)| ≤ T and that η(q, xϵ/3T0) log x → ∞ as x → ∞ uniformly
+for q < h/x17/30−ϵ, where T0 = (x/h)1+o(1). Then
+
+ψ(x + h; q, a) − ψ(x; q, a) = (1 + oη,ϵ(1)) h
+
+ϕ(q),
+(1.6)
+
+provided that
+
+h
+
+ϕ(q) ≥ x
+1
+2 +ϵq
+
+1
+6
+1 + x
+5
+9 +ϵq
+1
+3q
+− 1
+
+1 3
++ x
+
+2
+3 − 1
+
+30
+
+�
+
+10+45 log(q1/q)
+
+log x
++ϵ + x
+17
+30 +ϵ.
+
+If q is x13/30−ϵ/2q−1-smooth, then we have (1.6) provided that
+
+h
+
+ϕ(q) ≥ x
+17
+30 +ϵ.
+
+For all h and q, we have (1.6) provided that
+
+h
+
+ϕ(q) ≥ x
+1
+2 +ϵq
+1
+6 + x
+17
+30 +ϵ.
+
+This can be deduced from Theorem 1.2 via a smoothed version of the explicit formula.
+Combining this with the zero-free region for powerful moduli by Iwaniec [10], we have
+the following corollary:
+
+Corollary 1.5 (Primes in arithmetic progressions for prime-power moduli). Let h ≤ x
+and suppose that q = qn
+1 for some prime q1 such that q1 ≤ (log x)A for some absolute
+constant A. Let (a, q) = 1. Then
+
+ψ(x + h; q, a) − ψ(x; q, a) = (1 + oϵ,A(1)) h
+
+ϕ(q)
+
+provided that
+h
+
+ϕ(q) ≥ x
+17
+30 +ϵ.
+
+In this case, exceptional zeroes are ruled out except for characters of conductor q1
+as the modulus of real primitive characters is squarefree up to a factor of 4.
+
+
+LARGE VALUE AND ZERO DENSITY ESTIMATES FOR DIRICHLET L-FUNCTIONS
+5
+
+Acknowledgements. BC is grateful to Igor Shparlinski for his comments. VG would
+like to thank James Maynard for many helpful discussions, comments and suggestions.
+YCL would like to thank Maksym Radziwi�l�l for many insightful comments and sugges-
+tions. BC is supported by Ghent University through a postdoctoral fellowship (grant
+number BOF24/PDO/020). VG is supported by the Martingale Scholarship.
+
+1.1. Notation and Conventions. We write A ≪ B or A = O(B) to mean that
+A ≤ CB for some absolute constant C. If the constant C depends on a parameter
+z, we write A ≪z B or A = Oz(B). We say A ≍ B if both A ≪ B and B ≪ A
+hold, meaning A and B are comparable up to absolute constants. The notation A ∼ B
+signifies the stronger condition B < A ≤ 2B. Similarly, we write A ⪅ B to indicate
+that for any ϵ > 0, there exists a constant C(ϵ) > 0, depending only on ϵ, such that
+A ≤ C(ϵ)(qT)ϵB for all sufficiently large qT. If the constant C also depends on a
+parameter z, we write A ⪅z B. Asymptotic quantities such as o(1) are interpreted as
+qT → ∞.
+Throughout this paper, we denote by ϕ and µ the Euler totient function and the
+M¨obius function respectively, write #A for the cardinality of a finite set A, use (a, b)
+for the greatest common divisor of integers a and b and let 1S represent the indicator
+function of a set S. We write e(x) := e2πix for x ∈ R to denote the complex exponential
+and write ed(n) = e(n/d) for n ∈ Z/dZ.
+We write Cq(m) = �
+a mod q
+(a,q)=1
+eq(am) for
+
+Ramanujan’s sum. We write χ0 for the principal Dirichlet character, with the modulus
+being clear from the context. The Fourier transform of an integrable function f is
+defined as ˆf(ξ) := F(f)(ξ) =
+�
+
+R f(x)e(−ξx) dx.
+
+2. Sketch outline
+
+Our argument follows that of Guth-Maynard [5], with some differences. Here we
+outline the differences and new ideas that are involved. For the sake of this sketch,
+we consider the case where σ = 3/4, N = (qT)1−δ for 0 < δ ≤ 1/3. We aim to beat
+the bound |W| ⪅ qTN − 1
+
+2 coming from (1.2). We consider a set W consisting of pairs
+(t, χ) of real numbers t ∈ [0, T] and primitive Dirichlet characters modulo q such that
+if (t1, χ1) ̸= (t2, χ2) then if χ1 ̸= χ2, we have that |t1 − t2| ≥ 1. We suppose that
+|DN(t, χ)| ≥ N
+3
+4 for each (t, χ) ∈ W, where
+
+DN(t, χ) =
+�
+
+n∼N
+anχ(n)nit
+
+and |an| ≤ 1. We suppress many technical details, such as the presence of smoothing
+in most sums.
+Let M be the |W| × N matrix with entries
+
+M(t,χ),n = χ(n)nit.
+
+Set a = (an)n∼N, then DN(t, χ) = (Ma)(t,χ). Since |DN(t, χ)| ≥ N 3/4 for each (t, χ) ∈
+W, we have that
+
+|W|N 3/2 ≤
+�
+
+(t,χ)∈W
+|DN(t, χ)|2 = ||Ma||2
+2 ≤ ||M||2||a||2
+2 ≤ N||M||2,
+
+
+6
+BIN CHEN, VISHAL GUPTA, AND YUNG CHI LI
+
+as |an| ≤ 1. Therefore to beat the bound |W| ⪅ qTN − 1
+
+2, we aim to beat ||M|| ⪅ (qT)
+1
+2.
+We recall that ∥M∥ = s1(M), where s1(M) denotes the largest singular value of M.
+Equivalently, s1(M) is the square root of the largest eigenvalue of MM ∗. A possible
+starting point is the simple bound
+
+s1(M) ≤ tr
+�
+(MM ∗)r�1/2r.
+
+We make two observations. First, the case r = 1 only gives a trivial estimate while the
+case r = 2 is closely related to the Hal´asz–Montgomery method. Second, this bound
+can be quite lossy, especially when the eigenvalues of MM ∗ are all of comparable size.
+We therefore take r = 3, but use instead the refined bound
+
+s1(M) ≪
+�
+tr
+�
+(MM ∗)3�
+− tr(MM ∗)3
+
+|W|2
+
+�1/6
++
+�tr(MM ∗)
+
+|W|
+
+�1/2
+.
+
+This inequality leads to a bound of the following shape:
+
+s1(M)6 ⪅
+����
+�
+
+(ti,χi)∈W
+1≤i≤3, not all equal
+
+�
+
+n1,n2,n3∼N
+ni(t1−t2)
+1
+ni(t2−t3)
+2
+ni(t3−t1)
+3
+χ1χ2(n1)χ2χ3(n2)χ3χ1(n3)
+����.
+
+To beat |W| ⪅ qTN −1/2, we aim to show that the right hand side is smaller than (qT)3.
+We apply Poisson summation on the n1, n2, n3 sums without simplifying the Fourier
+integrals. This yields a bound of roughly
+�N
+
+q
+
+�3
+�
+
+(ti,χi)∈W
+1≤i≤3
+not all equal
+
+�
+
+|m1|,|m2|,|m3|∼ qT
+
+N
+
+�
+
+[1,2]3 e
+�
+− N
+
+q
+−→
+m · −→u
+�
+ui(t1−t2)
+1
+ui(t2−t3)
+2
+ui(t3−t1)
+3
+d−→u
+
+�
+
+c1,c2,c3 mod q
+(c1c2c3,q)=1
+
+eq(−→c · −→
+m)χ1(c1c−1
+3 )χ2(c2c−1
+1 )χ3(c3c−1
+2 ).
+
+This can be written as
+�N
+
+q
+
+�3 �
+
+|−
+→
+m|∼ qT
+
+N
+
+�
+
+[1,2]3
+
+�
+
+c1,c2,c3 mod q
+(c1c2c3,q)=1
+
+R
+�u1
+
+u3
+, c1c−1
+3
+
+�
+R
+�u2
+
+u1
+, c2c−1
+1
+
+�
+R
+�u3
+
+u2
+, c3c−1
+2
+
+�
+e
+�
+− N
+
+q
+−→
+m · −→u
+�
+d−→u
+
+eq(−→c · −→
+m),
+(2.1)
+
+where for v ∈ R>0 and b ∈ Z/qZ,
+
+R(v, b) =
+�
+
+(t,χ)∈W
+vitχ(b).
+
+In the expression (2.1), both of the arguments of the R functions lie in a 2 dimensional
+subvariety of the form z1z2z3 = 1 so a change of variables in both arguments gives us
+the expression
+
+
+LARGE VALUE AND ZERO DENSITY ESTIMATES FOR DIRICHLET L-FUNCTIONS
+7
+
+�N
+
+q
+
+�3 �
+
+|−
+→
+m|∼ qT
+
+N
+
+�
+
+[1/2,2]2
+
+�
+
+b1,b2 mod q
+(b1b2,q)=1
+
+R(v1, b1)R
+�v2
+
+v1
+, b2b−1
+1
+
+�
+R
+� 1
+
+v2
+, b−1
+2
+
+�
+dv1dv2
+
+� �
+
+[1,2]
+e
+�
+− Nu3(m1v1 + m2v2 + m3)
+
+q
+
+�
+du3
+
+�
+·
+�
+�
+
+c3 mod q
+(c3,q)=1
+
+eq((m1b1 + m2b2 + m3)c3)
+�
+.
+
+This is the key step in the argument. In the Fourier integral over u3, there is a huge
+amount of cancellation unless |m1v1 + m2v2 + m3| ≈ 0. However, in the (Ramanujan)
+sum over c3, we get varying amounts of cancellation as its typical size is roughly
+(m1b1 + m2b2 + m3, q), which is an upper bound. We take this upper bound and now
+aim to bound an expression of the form
+N 3
+
+q3T
+
+�
+
+|−
+→
+m|∼ qT
+
+N
+
+�
+
+v1∈[1/2,2]
+
+�
+
+b1,b2 mod q
+(b1b2,q)=1
+
+����R(v1, b1)R
+�m1v1 + m3
+
+m2v1
+, b2b−1
+1
+
+�
+R
+�m1v1 + m3
+
+m2
+, b2
+
+����� dv1
+
+(m1b1 − m2b2 + m3, q)
+(2.2)
+
+In (2.2), we make use of the averaging over −→
+m by establishing a sharp upper bound for
+sums over affine transformations of functions with a GCD twist. This gives the bound
+
+s1(M)6 ⪅ (qT)2|W|3/2 + qTN|W|1/2E(W)1/2,
+(2.3)
+
+where
+
+E(W) = #{(t1, χ1), (t2, χ2), (t3, χ3), (t4, χ4) ∈ W : |t1 + t2 − t3 − t4| ≤ 1, χ1χ2 = χ3χ4}
+
+is the additive energy of W.
+Next, we prove a bound for E(W) using the following estimate due to Heath-Brown
+for 1-bounded bn:
+�
+
+(t1,χ1),(t2,χ2)∈W
+
+����
+�
+
+n∼N
+bnni(t1−t2)χ1χ2(n)
+����
+
+2
+⪅ |W|2N + |W|N 2 + (qT)1/2|W|5/4N.
+
+After inserting the resulting bound for E(W) into (2.3), we finally obtain
+
+|W| ⪅ (qT)1/2 + (qT)4/3N −1.
+(2.4)
+
+This improves on the target bound |W| ⪅ qTN −1/2 when N = (qT)1−δ for 0 < δ ≤ 1/3,
+covering the critical case when N = (qT)4/5.
+An analogous estimate is also produced by the Guth-Maynard argument,
+
+|W| ⪅ T 1/2 + T 4/3N −1,
+(2.5)
+
+and here a major difference arises. When T ≥ N 6/5, the dominating term is T 4/3N −1.
+To refine the estimate, we can perform subdivision. That is, we let T0 be the value of
+T that balances the two terms T 1/2 and T 4/3N −1 and then cut up our interval [0, T]
+into T/T0 intervals and apply the bound (2.5) to each piece. This gives the bound
+
+|W| ⪅ T 1/2 + TN −3/5
+
+
+8
+BIN CHEN, VISHAL GUPTA, AND YUNG CHI LI
+
+which yields a further improvement to the resulting zero density estimate. Subdivi-
+sion in the q-aspect involves splitting q into its factors. For general moduli q, this is
+not available. However, when the factors of q are of an ideal size, we can do some
+subdivision and get some further improvements to the bound (2.4).
+This is analogous to the Hal´asz-Montgomery-Huxley large values estimate [7] where
+initially this was proved using subdivision and so, only directly applicable to the Rie-
+mann ζ function.
+Later, Huxley [8] developed a technique based on his reflection
+method that allowed for a q-analogue with the same strength bound to be proved, even
+when subdivision was not available. It appears to be difficult to find an analogous ar-
+gument to Huxley’s in this setting to improve the estimate when there is no subdivision
+available. However, as above the Guth-Maynard argument can be run without per-
+forming any subdivision at all and we still get a non-trivial improvement to the critical
+case σ = 3/4, giving us a zero density estimate of �
+
+χ mod q N(σ, T, χ) ≤ (qT)
+7
+3 (1−σ)+o(1)
+
+in all cases.
+
+3. Reduction to main proposition
+
+Throughout the paper we fix a smooth function w : R → R≥0, supported on [1, 2],
+such that ∥w(j)∥∞ = Oj(1) for all j ∈ N and w(t) = 1 for t ∈ [6/5, 9/5]. We reduce our
+main theorem to the following similar theorem which is technically more convenient as
+we have smoothing in the n variable.
+
+Proposition 3.1. Let σ ∈ [7/10, 4/5] and
+
+SN(t, χ) =
+�
+
+n∈Z
+w
+� n
+
+N
+
+�
+bnχ(n)nit,
+
+where χ is a primitive character modulo q and |bn| ≤ 1. Suppose that W is a finite set
+of pairs (t, χ), where |t| ≤ T and for (t, χ) ̸= (t′, χ′) either χ ̸= χ′ or |t − t′| ≥ (qT)ϵ.
+If
+|SN(t, χ)| ≥ N σ/6
+
+for all (t, χ) ∈ W and N ≥ (qT)
+2
+3/2, we have
+
+|W| ⪅ϵ N 2−2σ + (qT)
+1
+2N 3−4σ + (qT)
+4
+3N 2−4σ.
+
+We will use this proposition to prove Theorem 1.1, whose statement we recall:
+
+Theorem 1.1. Let
+DN(t, χ) =
+�
+
+N<n≤2N
+anχ(n)nit,
+
+where χ is a primitive character modulo q and |an| ≤ 1. Suppose that W is a finite
+set of pairs (t, χ), where |t| ≤ T and for (t, χ) ̸= (t′, χ′) either χ ̸= χ′ or |t − t′| ≥ 1.
+Assume that
+|DN(t, χ)| ≥ V
+
+for all (t, χ) ∈ W and N ≥ (qT)
+2
+3. Then for any divisor q1 | q, we have
+
+|W| ≤ (qT)o(1)(N 2V −2 + qq
+− 1
+
+2
+1 T
+1
+2N 3V −4 + qq
+
+1
+3
+1 TN 2V −4 + qTN
+12
+5 V −4).
+
+
+LARGE VALUE AND ZERO DENSITY ESTIMATES FOR DIRICHLET L-FUNCTIONS
+9
+
+Remark 3.2. If the dominating term is N 2−2σ then we have the optimal bound as
+conjectured by Montgomery (see [6, Equation (4)]). If this is not the dominant term
+then the dominant term is decided by the size of q1. If q1 > N
+6
+5 then the dominating
+term is qq
+
+1
+3
+1 TN 2V −4. If
+N6/5
+
+T
+< q1 < N
+6
+5 then the dominating term is qTN
+12
+5 V −4.
+
+Lastly, if q1 < N6/5
+
+T , then the term qq
+− 1
+
+2
+1 T
+1
+2N 3V −4 dominates.
+
+Proof of Theorem 1.1 assuming Proposition 3.1: The result follows from Ingham (1.2)
+and Huxley’s estimates (1.3) in the cases that V < N 7/10 or if V > N 4/5, so we may
+focus our analysis on the intermediate regime V = N σ, σ ∈ [7/10, 4/5]. This is because
+qTN 1−2σ ≤ qTN
+12−20σ
+
+5
+for σ ≤ 0.7 and qTN 4−6σ ≤ qTN
+12−20σ
+
+5
+for σ ≥ 0.8. By splitting
+DN into three parts and applying the triangle inequality, we get
+
+|DN(t, χ)| ≤
+����
+�
+
+N<n< 6
+
+5 N
+anχ(n)nit
+���� +
+����
+�
+
+6
+5 N≤n≤ 9
+
+5 N
+anχ(n)nit
+���� +
+����
+�
+
+9
+5 N<n≤2N
+anχ(n)nit
+����
+
+=: |D(1)
+N (t, χ)| + |D(2)
+N (t, χ)| + |D(3)
+N (t, χ)|.
+
+It is clear that we can write
+W = W1 ∪ W2 ∪ W3,
+
+where
+Wi = {(t, χ) ∈ W, |D(i)
+N (t, χ)| ≥ N σ/3},
+1 ≤ i ≤ 3.
+
+It suffices to show that whenever σ ∈ [0.7, 0.8], (bn) is a 1-bounded complex sequence
+and W is a 1-separated set of pairs (t, χ) such that
+����
+�
+
+n
+w
+� n
+
+N
+
+�
+bnχ(n)nit
+���� ≥ N σ/6
+
+for each (t, χ) ∈ W and N ≥ (qT)2/3/2, we have
+
+|W| ≤ (qT)o(1)(N 2−2σ + qq
+− 1
+
+2
+1 T
+1
+2N 3−4σ + qq
+
+1
+3
+1 TN 2−4σ + qTN
+12−20σ
+
+5
+).
+
+This is because we can apply this estimate with bn = an for 6N/5 ≤ n ≤ 9N/5 and
+bn = 0 for n /∈ [6N/5, 9N/5] and noting that D(2)
+N (t, χ) = SN(t, χ), we find that |W2|
+satisfies the desired estimation. Similarly, by replacing N by 11N/15 (respectively,
+19N/15) in the proposition and appropriately choosing bn, we obtain the same upper
+bound for |W1| (respectively, |W3|).
+We now fix ϵ > 0 and choose a subset W ′ ⊂ W such that |W ′| ≥ |W|/(qT)ϵ and for
+any two distinct pairs (t, χ), (t′, χ′) ∈ W ′, either χ ̸= χ′ or |t − t′| ≥ (qT)ϵ. This can be
+done for each character appearing in a pair in W, we choose the smallest t in the set
+{t : (t, χ) ∈ W} and let (t, χ) ∈ W ′ and then repeatedly do this for the next smallest
+element that is at least (qT)ϵ away from all the chosen elements.
+If qT ≤ N then by (1.2), we have
+
+|W| ≤ (qT)ϵ|W ′| ≤ (qT)o(1)+ϵN 2−2σ
+
+
+10
+BIN CHEN, VISHAL GUPTA, AND YUNG CHI LI
+
+and letting ϵ → 0 sufficiently slowly gives the result in this case. If N ≤ qT ≤ N 6/5,
+then we apply Proposition 3.1 to bound |W ′|, which gives
+
+|W| ⪅ϵ N 2−2σ + (qT)
+1
+2N 3−4σ ⪅ N 2−2σ + qTN
+12−20σ
+
+5
+.
+
+We now suppose that N
+6
+5 ≤ qT ≤ N
+3
+2. Let q1 | q and 1 ≤ T0 ≤ T. We perform
+subdivision in both the q and T-aspects. It is proved in Lemma 3.3 that we may write
+χ = χ1f for some Dirichlet character χ1 modulo q1, while f is a 1-bounded function
+belonging to a set S depending only on q and q1, with #S ≤ ϕ(q)/ϕ(q1).
+This lets us split W ′ into at most ϕ(q)/ϕ(q1) sets W ′
+f for some choice of f ∈ S such
+that if (t, ψ) ∈ W ′
+f then (t, fψ) ∈ W ′. Thus
+
+|W ′| =
+�
+
+f
+|W ′
+f| ≤ ϕ(q)
+
+ϕ(q1)|W ′
+g|,
+
+for some particular g ∈ S. We can also perform subdivision in T. We can split up W ′
+g
+into sets Wj so that all of the real numbers t in (t, χ) ∈ Wj (for j = 0, . . . , ⌊T/T0⌋)
+belong to some interval of length T0 such that 1 ≤ T0 ≤ T, so that
+
+|W ′
+g| ≤
+�
+
+j
+|Wj| ≪ T
+
+T0
+|Wk|,
+
+for some particular choice of 0 ≤ k ≤ ⌊T/T0⌋. Now, Wk is still a (qT)ϵ-separated set
+because if (t1, ψ1), (t2, ψ2) ∈ Wk are distinct then if ψ1 = ψ2, we have gψ1 = gψ2 and
+(t1, gψ1), (t2, gψ2) ∈ W ′ so we have that |t1 − t2| ≥ (qT)ϵ.
+We now have a Dirichlet polynomial S′
+N with 1-bounded coefficients b′
+n for which
+|S′
+N(t, χ)| ≥ N σ/6 for (t, χ) ∈ Wk, where t is a real number belonging to an interval
+of length T0 ≥ 1 and χ is a Dirichlet character modulo q1, which is not necessarily
+primitive. An imprimitive character χ is of some conductor q∗
+1 | q1 and q∗
+1 | q too.
+We can partition our set Wk = ⊔d|q1Sd where Sd consists of pairs (t, χ) for which χ is
+induced by a primitive character modulo d. Since (dT0)2/3 ≤ (qT)2/3, we may apply
+Proposition 3.1 to each Sd and sum over each d | q1, giving us
+
+|W| ⪅ (qT)1+ϵ
+
+q1T0
+(N 2−2σ + (q1T0)
+1
+2N 3−4σ + (q1T0)
+4
+3N 2−4σ).
+(3.1)
+
+The dominant term is determined by the size of q1, the three cases being q1 > N
+6
+5,
+
+N
+6
+5
+
+T
+< q1 < N
+6
+5 and q1 < N
+6
+5
+
+T .
+Case 1: q1 > N
+6
+5.
+In this case, (q1T0)
+4
+3N 2−4σ > (q1T0)
+1
+2N 3−4σ. Also for any T0 ≥ 1, (q1T0)
+4
+3N 2−4σ >
+N
+18−20σ
+
+5
+≥ N 2−2σ for σ ∈ [0.7, 0.8]. So (q1T0)
+4
+3N 2−4σ is the dominant term for any
+choice of T0 ≥ 1 so we choose T0 = 1 and get
+
+|W| ⪅ (qT)ϵqq
+
+1
+3
+1 TN 2−4σ.
+
+Case 2:
+N
+6
+5
+
+T
+< q1 < N
+6
+5.
+
+
+LARGE VALUE AND ZERO DENSITY ESTIMATES FOR DIRICHLET L-FUNCTIONS
+11
+
+In this case, T0 = N
+6
+5
+
+q1 can be chosen to make the last two terms in (3.1) balance,
+
+giving us qTN
+12−20σ
+
+5
+. Note that qTN
+12−20σ
+
+5
+> N
+18−20σ
+
+5
+≥ N 2−2σ for σ ∈ [0.7, 0.8]. This
+yields the bound
+
+|W| ⪅ (qT)1+ϵN
+12−20σ
+
+5
+.
+
+Case 3: q1 < N
+6
+5
+
+T .
+We choose T0 = T. Since q1T < N
+6
+5, we have that (q1T)
+4
+3N 2−4σ < (q1T)
+1
+2N 3−4σ.
+Then we have the bound
+
+|W| ⪅ (qT)ϵ
+� q
+
+q1
+N 2−2σ + qq
+− 1
+
+2
+1 T
+1
+2N 3−4σ
+�
+.
+
+Note that
+
+min
+� q
+
+q1
+N 2−2σ, qTN 4−6σ
+�
+≪ qq
+− 1
+
+2
+1 T
+1
+2N 3−4σ.
+
+Therefore by combining with (1.3), our estimate for |W| in this case is
+
+|W| ⪅ (qT)ϵqq
+− 1
+
+2
+1 T
+1
+2N 3−4σ.
+
+Our overall estimate for |W| is, upon sending ϵ → 0 sufficiently slowly,
+
+|W| ⪅ N 2−2σ + qTN
+12−20σ
+
+5
++ qq
+
+1
+3
+1 TN 2−4σ + qq
+− 1
+
+2
+1 T
+1
+2N 3−4σ.
+□
+
+Lemma 3.3 (Character subdivision). Let q1 | q and χ be a character modulo q. Then
+there exists a set S depending only on q and q1 of size at most ϕ(q)/ϕ(q1) consisting of
+1-bounded functions f such that χ = χ1f for some character χ1 modulo q1.
+
+Proof. Let χ be a character modulo q. When (n, q) > 1, we impose f(n) = 0. By the
+decomposition of Dirichlet characters, we may reduce the proof to the case where q is
+a prime power. Thus, let q = pj and q1 = pk, with 0 ≤ k ≤ j.
+For an odd prime p, let v be a primitive root mod pj. Then χ is determined entirely
+by the choice of 0 ≤ a < pj−1(p − 1), where χ(v) = e
+�
+a
+
+pj−1(p−1)
+�
+. Let a = a1 + pj−ka2,
+
+where 0 ≤ a1 < pj−k and 0 ≤ a2 < pk−1(p − 1). Then
+
+χ(n) = χ(vr) = e
+�
+a1r
+
+pj−1(p − 1)
+
+�
+e
+�
+a2r
+
+pk−1(p − 1)
+
+�
+= f(n)χ1(n).
+
+Here χ1 is a character modulo q1 = pk that only depends on the choice of a2 and f
+is a 1-bounded function purely determined by a1, of which there are at most pj−k =
+ϕ(q)/ϕ(q1) choices. For a character modulo 2j we may use the same argument upon
+writing χ(n) = e
+� av
+
+2 + a′v′
+
+2j−2
+�
+where n ≡ (−1)v5v′ mod 2j where v, v′ are generators for
+the group (Z/2jZ)×.
+□
+
+
+12
+BIN CHEN, VISHAL GUPTA, AND YUNG CHI LI
+
+4. The matrix MW and its singular values
+
+To prove Proposition 3.1, we work with the Dirichlet polynomial SN(t, χ) with
+smoothed coefficients, defined as
+
+SN(t, χ) =
+�
+
+n∈Z
+w
+� n
+
+N
+
+�
+bnχ(n)nit,
+
+where w is a smooth bump supported on [1, 2], as defined in the previous section.
+Given a set W = {(t, χ)}, let M = MW be the |W| × N matrix with entries
+
+(4.1)
+M(t,χ),n = w(n/N)χ(n)nit,
+
+where (t, χ) ∈ W and n ∼ N. The following lemma [5, Lemma 4.1], as a straightforward
+application of the singular value decomposition theorem, reduces the study of large
+value estimates for Dirichlet polynomials to the examination of the largest singular
+value of MW.
+
+Lemma 4.1. Let M be the matrix defined in (4.1) and s1(M) its largest singular value.
+If |SN(t, χ)| ≥ N σ/6 for all (t, χ) ∈ W and |bn| ≤ 1, then we have
+
+|W| ≪ N 1−2σs1(M)2.
+
+Our next lemma [5, Lemma 4.2] establishes an upper bound for the largest singular
+value in terms of the traces of the matrices MM ∗ and (MM ∗)3.
+
+Lemma 4.2. We have
+
+s1(M) ≤ 2
+�
+tr((MM ∗)3) − tr(MM ∗)3
+
+|W|2
+
+�1/6
++ 2
+�tr(MM ∗)
+
+|W|
+
+�1/2
+.
+
+We will expand the trace tr(MM ∗) and tr((MM ∗)3) and apply Poisson summation
+to estimate the sums that appear.
+Later, we will see that these sums involve the
+function
+ht(u) := w(u)2uit.
+To this end, we provide basic estimates for its Fourier transform. The proof (cf. [5,
+Lemma 4.3]) relies on the properties of the function w(u) and repeated applications of
+integration by parts.
+
+Lemma 4.3. The following bounds hold for ˆht(ξ):
+
+(1) For any integer j ≥ 0,
+ˆht(ξ) ≪j (1 + |t|)j/|ξ|j.
+
+(2) For any integer j ≥ 0,
+ˆht(ξ) ≪j (1 + |ξ|)j/|t|j.
+
+We now estimate tr(MM ∗) and tr((MM ∗)3).
+
+Lemma 4.4. (Hilbert-Schmidt Norm estimate) We have
+
+tr(MM ∗) = |W|N
+
+q
+
+�
+
+m∈Z
+
+�
+
+a mod q
+(a,q)=1
+
+eq(am)ˆh0
+
+�Nm
+
+q
+
+�
+
+
+LARGE VALUE AND ZERO DENSITY ESTIMATES FOR DIRICHLET L-FUNCTIONS
+13
+
+Proof. Expanding the trace and using χ(n) = 0 unless (n, q) = 1, we have
+
+tr(MM ∗) =
+�
+
+(t,χ)∈W
+
+�
+
+(n,q)=1
+w
+� n
+
+N
+
+�2
+
+= |W|
+�
+
+(n,q)=1
+h0
+
+� n
+
+N
+
+�
+
+We have the result upon performing Poisson summation.
+□
+
+Similarly, we expand the cubic trace.
+
+Lemma 4.5 (Expansion of the cubic trace). Let W be a finite set of pairs (t, χ), where
+|t| ≤ T and for (t, χ) ̸= (t′, χ′) either χ ̸= χ′ or |t − t′| ≥ (qT)ϵ. Then we have
+
+tr((MM ∗)3) = |W|
+�N
+
+q
+
+�
+
+m∈Z
+
+�
+
+a mod q
+(a,q)=1
+
+eq(am)ˆh0
+
+�Nm
+
+q
+
+��3
++
+�
+
+−
+→
+m∈Z3\{0}
+I−
+→
+m + Oϵ((qT)−100),
+
+where
+
+I−
+→
+m = N 3
+
+q3
+�
+
+(t1,χ1),(t2,χ2),(t3,χ3)∈W
+not all equal
+
+�
+
+a1,a2,a3 mod q
+(a1a2a3,q)=1
+
+χ1(a1)χ2(a1)χ2(a2)χ3(a2)χ3(a3)χ1(a3)eq(−→a · −→
+m)
+
+ˆht1−t2
+
+�Nm1
+
+q
+
+�
+ˆht2−t3
+
+�Nm2
+
+q
+
+�
+ˆht3−t1
+
+�Nm3
+
+q
+
+�
+.
+
+Proof. By expanding the cubic trace, we see that tr((MM ∗)3) is equal to
+�
+
+(ti,χi)∈W
+1≤i≤3
+
+�
+
+n1,n2,n3∈Z
+ht1−t2
+
+�n1
+
+N
+
+�
+χ1χ2(n1)ht2−t3
+
+�n2
+
+N
+
+�
+χ2χ3(n2)ht3−t1
+
+�n3
+
+N
+
+�
+χ3χ1(n3).
+
+Performing Poisson summation in the n1-sum gives
+�
+
+n1∈Z
+ht1−t2
+
+�n1
+
+N
+
+�
+χ1χ2(n1) =
+�
+
+a1 mod q
+
+�
+
+n1∈Z
+n1≡a1 mod q
+
+ht1−t2
+
+�n1
+
+N
+
+�
+χ1χ2(n1)
+
+= N
+
+q
+
+�
+
+a1 mod q
+
+�
+
+m1∈Z
+ˆht1−t2
+
+�Nm1
+
+q
+
+�
+eq(a1m1)χ1χ2(a1).
+
+We derive analogous expressions for the n2-sum and the n3-sum, ultimately concluding
+that
+
+tr((MM ∗)3) =
+�
+
+−
+→
+m∈Z3
+
+N 3
+
+q3
+�
+
+(ti,χi)∈W
+1≤i≤3
+
+�
+
+a1,a2,a3 mod q
+(a1a2a3,q)=1
+
+χ1(a1)χ2(a1)χ2(a2)χ3(a2)χ3(a3)χ1(a3)eq(−→a · −→
+m)
+
+ˆht1−t2
+
+�Nm1
+
+q
+
+�
+ˆht2−t3
+
+�Nm2
+
+q
+
+�
+ˆht3−t1
+
+�Nm3
+
+q
+
+�
+.
+
+
+14
+BIN CHEN, VISHAL GUPTA, AND YUNG CHI LI
+
+Now we take out Z, the term coming from (t1, χ1) = (t2, χ2) = (t3, χ3):
+
+Z :=
+�
+
+−
+→
+m∈Z3
+
+N 3
+
+q3 |W|
+�
+
+a1,a2,a3 mod q
+(a1a2a3,q)=1
+
+χ0(a1)χ0(a2)χ0(a3)ˆh0
+
+�Nm1
+
+q
+
+�
+ˆh0
+
+�Nm2
+
+q
+
+�
+ˆh0
+
+�Nm3
+
+q
+
+�
+eq(−→a · −→
+m).
+
+This may be factored so that
+
+Z = |W|
+�N
+
+q
+
+�
+
+m∈Z
+
+�
+
+a mod q
+(a,q)=1
+
+eq(am)ˆh0
+
+�Nm
+
+q
+
+��3
+.
+
+We further separate the terms with −→
+m = 0, which gives
+
+tr((MM ∗)3) = Z + Z′ +
+�
+
+−
+→
+m∈Z3\{0}
+I−
+→
+m,
+
+where
+
+Z′ := N 3
+
+q3
+�
+
+(t1,χ1),(t2,χ2),(t3,χ3)∈W
+not all equal
+
+�
+
+a1,a2,a3 mod q
+(a1a2a3,q)=1
+
+χ1χ2(a1)χ2χ3(a2)χ3χ1(a3)ˆht1−t2(0)ˆht2−t3(0)ˆht3−t1(0).
+
+We consider the term Z′. Since �
+
+a mod q χ(a) = 0 unless χ = χ0, we have that χ1 =
+χ2 = χ3. Since (t1, χ1), (t2, χ2), (t3, χ3) are not all equal, without loss of generality, we
+have t1 ̸= t2. Since χ1 = χ2, we thus have |t1 − t2| ≥ (qT)ϵ. By Lemma 4.3 (2), we
+have that |ˆht1−t2(0)| ≪ϵ (qT)−200 so
+
+tr
+�
+(MM ∗)3�
+= Z +
+�
+
+−
+→
+m∈Z3\{0}
+I−
+→
+m + Oϵ
+�
+(qT)−100�
+.
+□
+
+Combining Lemmas 4.1-4.5, we establish the following proposition:
+
+Proposition 4.6. Let W be a finite set of pairs (t, χ), where |t| ≤ T and for (t, χ) ̸=
+(t′, χ′) either χ ̸= χ′ or |t − t′| ≥ (qT)ϵ.
+Assume that |SN(t, χ)| ≥ N σ/6 for all
+(t, χ) ∈ W. Then we have that
+
+|W| ≪ϵ N 2−2σ + N 1−2σ
+�
+�
+
+−
+→
+m∈Z3\{0}
+I−
+→
+m
+
+� 1
+
+3
+,
+
+where I−
+→
+m is defined as in Lemma 4.5.
+
+The first term above corresponds to the best possible estimate, |W| ≪ϵ N 2−2σ,
+from Montgomery’s large value conjecture [6, Equation (4)]. Therefore, the following
+sections focus on obtaining a more precise estimate for the sum I−
+→
+m. If N ≥ qT, then
+by (1.2) we have that |W| ⪅ϵ N 2−2σ so we suppose that (qT)
+2
+3 ≤ N ≤ qT (as we have
+already assumed that (qT)
+2
+3 ≤ N).
+
+
+LARGE VALUE AND ZERO DENSITY ESTIMATES FOR DIRICHLET L-FUNCTIONS
+15
+
+5. The components of the sum S and the contribution of S1
+
+Recall from Proposition 4.6, we have
+
+|W|3 ≪ϵ N 6−6σ + N 3−6σ
+�
+
+−
+→
+m∈Z3\{0}
+I−
+→
+m,
+
+where
+
+I−
+→
+m = N 3
+
+q3
+�
+
+(t1,χ1),(t2,χ2),(t3,χ3)∈W
+not all equal
+
+�
+
+a1,a2,a3 mod q
+(a1a2a3,q)=1
+
+χ1χ2(a1)χ2χ3(a2)χ3χ1(a3)eq(−→a · −→
+m)
+
+ˆht1−t2
+
+�Nm1
+
+q
+
+�
+ˆht2−t3
+
+�Nm2
+
+q
+
+�
+ˆht3−t1
+
+�Nm3
+
+q
+
+�
+.
+
+Things simplify when mi = 0 for some i = 1, 2, 3. Indeed, since �
+
+a mod q χ(a) = 0
+unless χ = χ0, one of the arithmetic sums vanishes unless the corresponding ratio of
+two characters is principal. Thus at least two of the characters must be equal. Also,
+by Lemma 4.3 (2), if χ1 = χ2 but t1 ̸= t2, then
+
+(5.1)
+|ˆht1−t2(0)| ≪ϵ (qT)−100.
+
+However, if t1 = t2 then we have
+
+ˆht1−t2(0) = ˆh0(0) =
+�
+w(u)2 du ≍ 1.
+
+These bounds and the fact that the characters are forced to be equal makes such I−
+→
+m
+easier to deal with. Taking this into account, we split the sum into three components
+
+(5.2)
+�
+
+−
+→
+m∈Z3\{0}
+I−
+→
+m = S1 + S2 + S3,
+
+where S1 consists of terms with exactly one nonzero mi, S2 consists of terms with
+exactly two nonzero mi and S3 consists of terms with all three mi being nonzero.
+We will close this section by establishing a bound for S1. In the next section, we
+will bound S2 using the approximate functional equation and the mean value theorem
+for Dirichlet polynomials. The main part of the paper (Sections 7–11) focuses on S3,
+which will be most challenging.
+
+Proposition 5.1 (S1 bound). We have
+
+S1 ≪ϵ (qT)−10.
+
+Proof. By symmetry,
+
+S1 = 3N 3
+
+q3
+�
+
+(t1,χ1),(t2,χ2),(t3,χ3)∈W
+not all equal
+
+�
+
+m3̸=0
+ˆht1−t2(0)ˆht2−t3(0)ˆht3−t1
+
+�m3N
+
+q
+
+�
+
+�
+
+a1,a2,a3 mod q
+(a1a2a3,q)=1
+
+χ1χ2(a1)χ2χ3(a2)χ3χ1(a3)eq(a3m3).
+
+
+16
+BIN CHEN, VISHAL GUPTA, AND YUNG CHI LI
+
+Since �
+
+a mod q χ(a) = 0 unless χ = χ0, the sums over a1 and a2 vanish unless χ1χ2 = χ0
+and χ2χ3 = χ0. Thus we may restrict to the case χ1 = χ2 = χ3. Since the summation
+is restricted to triples for which the pairs (ti, χi) are not all equal, it follows that at
+least one of t1 ̸= t2 or t2 ̸= t3 must hold. Hence, by (5.1), either |ˆht1−t2(0)| ≪ϵ (qT)−100
+
+or |ˆht2−t3(0)| ≪ϵ (qT)−100. Inserting this bound and estimating the remaining sums
+trivially gives the desired result.
+□
+
+6. The contribution of S2
+
+The purpose of this section is to derive the following bound for the sum S2.
+
+Proposition 6.1 (S2 bound). We have
+
+S2 ⪅ϵ qT|W|N 3−2σ.
+
+One of the key ingredients in proving this proposition is the approximate functional
+equation, also known as the reflection principle for Dirichlet polynomials (cf.
+[14,
+Lemma 1]).
+
+Lemma 6.2 (Approximate functional equation). Let χ be a Dirichlet character modulo
+q. For any t with 2T ≥ |t| ∼ T0 ≥ (qT)ϵ, we have
+����
+�
+
+a mod q
+
+�
+
+m∈Z
+χ(a)eq(am)ˆht
+
+�Nm
+
+q
+
+�����
+
+≪
+q
+
+N 1/2
+
+�
+
+|u|≤(qT)ϵ/2
+
+����
+�
+
+1≤m≤(qT)2ϵqT0/N
+χ(m)m−1/2+i(t−u)
+���� du + Oϵ((qT)−100).
+
+Additionally, if |t| ≤ (qT)ϵ and χ is not principal, we have
+����
+�
+
+a mod q
+(a,q)=1
+
+�
+
+m∈Z
+χ(a)eq(am)ˆht
+
+�Nm
+
+q
+
+�����
+
+≪
+q
+
+N 1/2
+
+�
+
+|u|≤(qT)ϵ/2
+
+����
+�
+
+1≤m≤(qT)2ϵq/N
+χ(m)m−1/2+i(t−u)
+���� du + Oϵ((qT)−100).
+
+Proof. We first observe, by the Poisson summation formula, that
+
+q
+N
+
+�
+
+n∈Z
+ht
+
+� n
+
+N
+
+�
+χ(n) = q
+
+N
+
+�
+
+a mod q
+
+�
+
+n∈Z
+n≡a mod q
+
+ht
+
+� n
+
+N
+
+�
+χ(a)
+
+=
+�
+
+a mod q
+χ(a)
+�
+
+m∈Z
+eq(am)ˆht
+
+�Nm
+
+q
+
+�
+.
+(6.1)
+
+Let H(s) :=
+�
+
+R w(u)2us−1du be the Mellin transform of w2, which is entire and satisfies
+
+(6.2)
+|H(s)| =
+����
+
+� ∞
+
+0
+w(u)2uσ+it−1 du
+���� =
+����
+
+�
+
+R
+w(ev)2ev(σ+it) dv
+���� ≪σ,j |t|−j.
+
+
+LARGE VALUE AND ZERO DENSITY ESTIMATES FOR DIRICHLET L-FUNCTIONS
+17
+
+By Mellin inversion
+
+w(u)2 =
+1
+2πi
+
+� 2+i∞
+
+2−i∞
+H(s)u−s ds,
+
+we see that from (6.1)
+
+�
+
+a mod q
+(a,q)=1
+
+χ(a)
+�
+
+m∈Z
+eq(am)ˆht
+
+�Nm
+
+q
+
+�
+=
+q
+
+N 1+it
+�
+
+n∈Z
+w
+� n
+
+N
+
+�2
+χ(n)nit
+
+=
+q
+
+N 1+it
+�
+
+n∈Z
+
+1
+2πi
+
+� 2+i∞
+
+2−i∞
+H(s)
+� n
+
+N
+
+�−s
+χ(n)nit ds
+
+=
+q
+
+N 1+it
+1
+2πi
+
+� 2+i∞
+
+2−i∞
+H(s)N sL(s − it, χ) ds.
+
+The right hand side is equal to
+
+q
+
+N 1+it
+1
+2πi
+
+� 2+i∞
+
+2−i∞
+H(s)N sL(s − it, χ∗)
+�
+
+p|q, p∤q∗
+
+�
+1 − χ∗(p)
+
+ps−it
+
+�
+ds,
+(6.3)
+
+by the factorization of L(s − it, χ), where χ is induced by a primitive character χ∗
+
+modulo q∗.
+By shifting the line of integration to Re(s) = −1 and picking up the
+residue at s = 1 + it when L(s − it, χ∗) = ζ(s − it) (i.e., χ is principal), (6.3) is equal
+to
+
+ε(χ)ϕ(q)
+
+q
+H(1 + it)N 1+it + 1
+
+2πi
+
+� −1+i∞
+
+−1−i∞
+H(s)N sL(s − it, χ∗)
+�
+
+p|q, p∤q∗
+
+�
+1 − χ∗(p)
+
+ps−it
+
+�
+ds,
+
+where ε(χ) = 1 when χ is principal and ε(χ) = 0 otherwise. In the case ε(χ) = 1 and
+|t| ∼ T0 ≥ (qT)ϵ, we see that by (6.2)
+
+ϕ(q)
+
+q
+H(1 + it)N 1+it ≪ϵ (qT)−100.
+
+Inserting this in the above equation, using the functional equation of L(s − it, χ∗) (cf.
+[3, Chapter 9]) and the factorization of L(1 − s + it, χ), one has
+
+1
+2πi
+
+� 2+i∞
+
+2−i∞
+H(s)N sL(s − it, χ∗)
+�
+
+p|q, p∤q∗
+
+�
+1 − χ∗(p)
+
+ps−it
+
+�
+ds
+
+= 1
+
+2πi
+
+� −1+i∞
+
+−1−i∞
+H(s)N sG(s − it, χ∗)L(1 − s + it, χ∗)
+�
+
+p|q, p∤q∗
+
+�
+1 − χ∗(p)
+
+ps−it
+
+�
+ds + Oϵ((qT)−100)
+
+= 1
+
+2πi
+
+� −1+i∞
+
+−1−i∞
+H(s)N sG(s − it)P(s − it)L(1 − s + it, χ) ds + Oϵ((qT)−100).
+
+
+18
+BIN CHEN, VISHAL GUPTA, AND YUNG CHI LI
+
+where
+
+G(s − it) =
+�q∗
+
+π
+
+� 1
+
+2 −s+it τ(χ∗)
+
+iδ√q∗
+Γ( 1−s+it+δ
+
+2
+)
+
+Γ( s−it+δ
+
+2
+) ,
+P(s − it) =
+�
+
+p|q, p∤q∗
+
+1 − χ∗(p)
+
+ps−it
+
+1 −
+χ∗(p)
+
+p1−s+it
+
+and
+
+τ(χ∗) =
+�
+
+a mod q∗
+χ∗(a)eq∗(a),
+δ =
+�
+0
+if χ∗(−1) = 1,
+1
+if χ∗(−1) = −1.
+
+We define M = (qT)2ϵqT0/N.
+If |t| ≤ (qT)ϵ, we instead set M = (qT)2ϵq/N.
+Additionally, we write
+
+L(1 − s + it, χ) =
+�
+
+1≤m≤M
+
+χ(m)
+m1−s+it +
+�
+
+m>M
+
+χ(m)
+m1−s+it.
+
+Substituting this expression into the integral above and shifting the contour of the
+integral involving terms with m ≤ M to Re(s) = 1/2, while shifting the integral
+involving terms with m > M to Re(s) = −2k for a large k ∈ N, one concludes that
+
+(6.4)
+1
+2πi
+
+� −1+i∞
+
+−1−i∞
+H(s)N sG(s − it)P(s − it)L(1 − s + it, χ) ds = I1 + I2,
+
+where
+
+I1 := 1
+
+2π
+
+� ∞
+
+−∞
+H(1/2 + iu)N
+1
+2 +iuG(1/2 + i(u − t))P(1/2 + iu − it)
+�
+
+1≤m≤M
+
+χ(m)
+
+m1/2−iu+it du
+
+and
+
+I2 := 1
+
+2π
+
+� ∞
+
+−∞
+H(−2k + iv)N −2k+ivG(−2k + iv − it)P(−2k + iv − it)
+�
+
+m>M
+
+χ(m)
+
+m2k+1−iv+it dv.
+
+Thanks to the rapid decay of H(s) (see (6.2)), we can truncate the integrals to |u|, |v| ≤
+(qT)ϵ/2 at the cost of an Oϵ,k((qT)−200) error term. Using the basic estimate and the
+functional equation of the Gamma function (cf. [3, Chapter 10]), as well as the property
+|τ(χ∗)| = √q∗, we deduce that for |u|, |v| ≤ (qT)ϵ/2, |t| ∼ T0 ≥ (qT)ϵ,
+
+|G(−2k + i(v − t))| =
+�q∗
+
+π
+
+� 1
+
+2 +2k����
+Γ( 1+2k+i(t−v)+δ
+
+2
+)
+
+Γ( −2k+i(v−t)+δ
+
+2
+)
+
+����
+
+=
+�q∗
+
+π
+
+� 1
+
+2 +2k����
+Γ( 1+2k+i(t−v)+δ
+
+2
+)
+
+Γ( 2k+i(v−t)+δ
+
+2
+)
+
+����
+
+k
+�
+
+j=−k+1
+
+���� − j + i(v − t)
+
+2
++ δ
+
+2
+
+����
+
+≪k (q∗T0)
+1
+2 +2k.
+
+Also, we have that
+
+|G(1/2 + i(u − t))| =
+����
+Γ( 1/2+i(t−u)+δ
+
+2
+)
+
+Γ( 1/2+i(u−t)+δ
+
+2
+)
+
+���� ≪ 1.
+
+
+LARGE VALUE AND ZERO DENSITY ESTIMATES FOR DIRICHLET L-FUNCTIONS
+19
+
+It is also clear that when |u|, |v| ≤ (qT)ϵ/2, |t| ≤ (qT)ϵ,
+
+|G(−2k + i(v − t))| ≪k (q∗)
+1
+2 +2k(qT)ϵ( 1
+
+2 +2k),
+
+|G(1/2 + i(u − t))| ≪ 1.
+
+Inserting these bounds into the expressions for I1 and I2
+2, we obtain that when |t| ∼
+T0 ≥ (qT)ϵ,
+
+|I2| ≪k
+(qT)ϵ/2N −2k(q∗T0)1/2+2k
+
+((qT)2ϵqT0/N)2k
+
+� q
+
+q∗
+
+�2k+2
++ Oϵ,k((qT)−200)
+
+and when |t| ≤ (qT)ϵ
+
+|I2| ≪k
+(qT)ϵ/2N −2k(q∗)1/2+2k(qT)ϵ(1/2+2k)
+
+((qT)2ϵq/N)2k
+
+� q
+
+q∗
+
+�2k+2
++ Oϵ,k((qT)−200)
+
+and finally
+
+|I1| ≪ N
+1
+2
+�
+
+|u|≤(qT)ϵ/2
+
+����
+�
+
+1≤m≤M
+
+χ(m)
+
+m
+1
+2 −iu+it
+
+���� du + Oϵ((qT)−200).
+
+By selecting k sufficiently large in terms of ϵ, we then see that I2 = Oϵ((qT)−200).
+Finally, substituting these bounds into (6.4) and recalling (6.3) yields the result.
+□
+
+Proposition 6.1 is readily established by combining the preceding lemma with the
+mean value theorem for Dirichlet polynomials.
+
+Proof of Proposition 6.1. By symmetry and the orthogonality of characters, we have
+
+S2 = 3N 3
+
+q3
+�
+
+m1, m2̸=0
+
+�
+
+(ti,χi)∈W
+1≤i≤3
+not all equal
+
+�
+
+a1,a2,a3 mod q
+(a1a2a3,q)=1
+
+χ1χ2(a1)χ2χ3(a2)χ3χ1(a3)eq(a1m1 + a2m2)
+
+· ˆht1−t2
+
+�Nm1
+
+q
+
+�
+ˆht2−t3
+
+�Nm2
+
+q
+
+�
+ˆht3−t1(0)
+
+= 3ϕ(q)N 3
+
+q3
+�
+
+m1, m2̸=0
+
+�
+
+χ1=χ3
+(ti,χi)∈W, 1≤i≤3
+not all equal
+
+�
+
+a1,a2 mod q
+(a1a2,q)=1
+
+χ1χ2(a1)χ2χ3(a2)eq(a1m1 + a2m2)
+
+· ˆht1−t2
+
+�Nm1
+
+q
+
+�
+ˆht2−t3
+
+�Nm2
+
+q
+
+�
+ˆht3−t1(0).
+
+When χ1 = χ3, the condition t1 ̸= t3 implies |t1 − t3| ≥ (qT)ϵ.
+In this case, it
+follows from (5.1) that |ˆht3−t1(0)| = Oϵ((qT)−100). Additionally, applying the bound
+ˆht(u) ≪ (1 + |t|2)/|u|2 from Lemma 4.3 (1) to ˆht1−t2(Nm1/q) and ˆht2−t3(Nm2/q), we
+
+2Here, we applied the crude bounds
+����1 −
+χ∗(p)
+
+p−2k+iv−it
+
+���� ≤ p2k+1 and
+����1 −
+χ∗(p)
+
+p1+2k−iv+it
+
+����
+
+−1
+≤ p to control
+
+the product factors in estimating I2.
+
+
+20
+BIN CHEN, VISHAL GUPTA, AND YUNG CHI LI
+
+find that the terms with t1 ̸= t3 contribute Oϵ((qT)−10) in total. The condition on the
+sum over W now becomes (t1, χ1) ̸= (t2, χ2). Thus, we conclude that
+
+S2 = 3ϕ(q)N 3ˆh0(0)
+
+q3
+�
+
+m1, m2̸=0
+
+�
+
+(t1,χ1)̸=(t2,χ2)
+
+�
+
+a1,a2 mod q
+(a1a2,q)=1
+
+χ1χ2(a1)χ2χ1(a2)eq(a1m1 + a2m2)
+
+· ˆht1−t2
+
+�Nm1
+
+q
+
+�
+ˆht2−t1
+
+�Nm2
+
+q
+
+�
++ Oϵ((qT)−10).
+
+Recalling ht(u) = w(u)2uit, we observe that h−t(u) = ht(u), which implies ˆh−t(ξ) =
+ˆht(−ξ). In particular, this yields the relation:
+
+ˆht2−t1
+
+�Nm2
+
+q
+
+�
+= ˆht1−t2
+
+�−Nm2
+
+q
+
+�
+.
+
+Consequently, we have
+
+S2 = 3ϕ(q)N 3ˆh0(0)
+
+q3
+�
+
+(t1.χ1)̸=(t2,χ2)
+
+����
+�
+
+m̸=0
+
+�
+
+a mod q
+(a,q)=1
+
+χ1χ2(a)eq(am)ˆht1−t2
+
+�Nm
+
+q
+
+�����
+
+2
++ Oϵ((qT)−10).
+
+First, we note that if |t1 − t2| ≤ (qT)ϵ then χ1 ̸= χ2. We split the sum according to
+this condition and then split the sum over |t1 − t2| ≥ (qT)ϵ dyadically so that
+
+S2 ≪ S2,1 + S2,2 + Oϵ((qT)−10),
+
+where
+
+S2,1 := ϕ(q)N 3
+
+q3
+�
+
+(t1,χ1),(t2,χ2)∈W
+χ1̸=χ2
+|t1−t2|≤(qT)ϵ
+
+����
+�
+
+m̸=0
+
+�
+
+a mod q
+(a,q)=1
+
+χ1χ2(a)eq(am)ˆht1−t2
+
+�Nm
+
+q
+
+�����
+
+2
+
+and
+
+S2,2 := ϕ(q)N 3T ϵ
+
+q3
+sup
+
+1≤j≤⌈ log 2T
+
+log 2 ⌉+1
+
+�
+
+(t1,χ1),(t2,χ2)∈W
+|t1−t2|∼(qT)ϵ2j−1
+
+����
+�
+
+m̸=0
+
+�
+
+a mod q
+(a,q)=1
+
+χ1χ2(a)eq(am)ˆht1−t2
+
+�Nm
+
+q
+
+�����
+
+2
+.
+
+We work with S2,2 first, the analysis for S2,1 is very similar. By Lemma 6.2, we have3
+
+for |t1 − t2| ∼ (qT)ϵ2j−1
+����
+�
+
+m̸=0
+
+�
+
+a mod q
+(a,q)=1
+
+χ1χ2(a)eq(am)ˆht1−t2
+
+�Nm
+
+q
+
+�����
+
+≪
+q
+
+N 1/2
+
+�
+
+|u|≤(qT)ϵ/2
+
+����
+�
+
+1≤m≤(qT)2ϵq(qT)ϵ2j−1/N
+χ1χ2(m)m−1/2+i(t1−t2−u)
+���� du + Oϵ((qT)−100).
+
+3The terms with m = 0 can be safely excluded, introducing only an acceptable error term of
+Oϵ((qT)−100), as guaranteed by the bound in (5.1).
+
+
+LARGE VALUE AND ZERO DENSITY ESTIMATES FOR DIRICHLET L-FUNCTIONS
+21
+
+Squaring and summing over (t1, χ1), (t2, χ2) ∈ W with |t1 − t2| ∼ (qT)ϵ2j−1 yields that
+S2,2 is
+
+≪ N 2T 2ϵ
+sup
+
+1≤j≤⌈ log 2T
+
+log 2 ⌉+1
+
+|u|≤(qT)ϵ/2
+
+�
+
+(t1,χ1),(t2,χ2)∈W
+|t1−t2|∼(qT)ϵ2j−1
+
+����
+�
+
+1≤m≤ (qT )3ϵq2j−1
+
+N
+
+χ1χ2(m)
+
+m1/2+i(t2−t1+u)
+
+����
+
+2
++ Oϵ((qT)−10).
+
+We can relax the condition of the outer sum to (t1, χ1), (t2, χ2) ∈ W to derive an upper
+bound. We split the summation range over m into dyadic ranges. The dyadic range
+when m ∼ 1 gives a contribution that dominates the error term so we may absorb it
+into the main term. Then we have
+
+S2,2 ≪ϵ (qT)3ϵN 2
+�
+
+(t1,χ1),(t2,χ2)∈W
+
+����
+�
+
+m∼M
+
+amχ1χ2(m)
+m1/2+i(t2−t1)
+
+����
+
+2
+,
+
+for some choice of coefficients |am| ≤ 1 and some choice of M ≤ (qT)3ϵqT/N. Similarly4,
+the same estimate holds for S2,1. Hence, we arrive at
+
+(6.5)
+S2 ⪅ϵ
+N 2
+
+M
+
+�
+
+(t1,χ1),(t2,χ2)∈W
+
+����
+�
+
+m∼M
+
+amχ1χ2(m)
+
+mi(t2−t1)
+
+����
+
+2
+,
+
+where |am| ≤ 1 and M ≤ (qT)3ϵqT/N.
+Now we proceed with an argument based on the mean value theorem. Notice that
+|�
+
+n∼N w(n/N)bnnit2χ2(n)| ≥ N σ for (t2, χ2) ∈ W. We have
+
+S2 ⪅ϵ
+N 2−2σ
+
+M
+
+�
+
+(t1,χ1),(t2,χ2)∈W
+
+����
+�
+
+m∼M
+ammi(t2−t1)χ2χ1(m)
+����
+
+2
+·
+����
+�
+
+n∼N
+w
+� n
+
+N
+
+�
+bnnit2χ2(n)
+����
+
+2
+
+≤ |W|N 2−2σ
+
+M
+sup
+(t1,χ1)∈W
+
+�
+
+(t2,χ2)∈W
+
+����
+�
+
+MN<l≤4NM
+c(t1,χ1)
+l
+lit2χ2(l)
+����
+
+2
+,
+
+for some coefficients cl depending on (t1, χ1) such that |c(t1,χ1)
+l
+| ⪅ 1, by the divisor
+bound. Then by the mean value theorem for Dirichlet polynomials with characters [11,
+Theorem 9.12], we have that
+
+S2 ⪅ϵ
+|W|N 2−2σ
+
+M
+(N 2M 2 + qTNM) ⪅ϵ qT|W|N 3−2σ,
+
+since NM ⪅ϵ qT.
+□
+
+Remark 6.3. This argument to bound S2 differs from the argument given by Guth-
+Maynard to prove their analogous Proposition 6.1. In particular, we reintroduce our
+large Dirichlet polynomial here whereas their proof only depended on the 1-separation
+of W. This is because the term qT|W|N 3−2σ will appear in our bound for S3 and
+therefore this slightly strengthens Proposition 3.1. This simplifies our application of
+subdivision in the proof of Theorem 1.1 and slightly strengthens the result.
+
+4The orthogonality relation for Dirichlet characters allows us to exclude the m = 0 terms in the
+application of Lemma 6.2 as for S2,1, we have χ1 ̸= χ2.
+
+
+22
+BIN CHEN, VISHAL GUPTA, AND YUNG CHI LI
+
+7. The contribution of S3
+
+The purpose of this section is to begin the analysis of the S3 term. Let us first recall
+that
+S3 =
+�
+
+m1,m2,m3̸=0
+I−
+→
+m,
+
+where
+
+I−
+→
+m = N 3
+
+q3
+�
+
+(t1,χ1),(t2,χ2),(t3,χ3)∈W
+not all equal
+
+�
+
+a1,a2,a3 mod q
+(a1a2a3,q)=1
+
+χ1χ2(a1)χ2χ3(a2)χ3χ1(a3)eq(−→a · −→
+m)
+
+· ˆht1−t2
+
+�Nm1
+
+q
+
+�
+ˆht2−t3
+
+�Nm2
+
+q
+
+�
+ˆht3−t1
+
+�Nm3
+
+q
+
+�
+.
+
+By Lemma 4.3 (1), we have |ˆht(ξ)| ≪j (1 + |t|)j/|ξ|j. This implies that I−
+→
+m is negligible
+unless |mi| ≤ (qT)ϵqT/N for 1 ≤ i ≤ 3. Therefore, we can write
+
+S3 =
+�
+
+0<|m1|,|m2|,|m3|≤(qT)ϵqT/N
+I−
+→
+m + Oϵ((qT)−100).
+
+We now aim to bound |I−
+→
+m|. Before we do this, we remove the condition that (t1, χ1),
+(t2, χ2), (t3, χ3) are not equal to each other so that we can separate the sums over W.
+That is, we want a bound for S3 in terms of I′−
+→
+m (for m1, m2, m3 ̸= 0), where
+
+I′−
+→
+m = N 3
+
+q3
+�
+
+(t1,χ1),(t2,χ2),(t3,χ3)∈W
+
+�
+
+a1,a2,a3 mod q
+(a1a2a3,q)=1
+
+χ1χ2(a1)χ2χ3(a2)χ3χ1(a3)eq(−→a · −→
+m)
+
+· ˆht1−t2
+
+�Nm1
+
+q
+
+�
+ˆht2−t3
+
+�Nm2
+
+q
+
+�
+ˆht3−t1
+
+�Nm3
+
+q
+
+�
+.
+
+This can be done by removing the terms when (t1, χ1) = (t2, χ2) = (t3, χ3):
+
+S3 =
+�
+
+0<|m1|,|m2|,|m3|≤(qT)ϵ qT
+
+N
+
+I′−
+→
+m−Z′ + Oϵ((qT)−100),
+
+where
+
+Z′ := |W|
+�N
+
+q
+
+�
+
+0<|m|≤(qT)ϵ qT
+
+N
+
+ˆh0
+
+�Nm
+
+q
+
+� �
+
+a mod q
+(a,q)=1
+
+eq(am)
+�3
+.
+
+Fortunately, the condition m ̸= 0 makes this term small. By Lemma 4.3(1), for m ̸= 0,
+|ˆh0(Nm/q)| ≪
+q
+
+N|m|. On the other hand, the arithmetic sum is the Ramanujan sum
+Cq(m) and |Cq(m)| ≤ (m, q). It follows that
+
+|Z′| ≪ |W|
+�
+�
+
+0<m≤(qT)ϵqT/N
+
+(m, q)
+
+m
+
+�3
+⪅ϵ |W|.
+
+
+LARGE VALUE AND ZERO DENSITY ESTIMATES FOR DIRICHLET L-FUNCTIONS
+23
+
+Therefore we have
+
+|S3| ⪅ϵ
+�
+
+0<|m1|,|m2|,|m3|≤(qT)ϵ qT
+
+N
+
+|I′−
+→
+m| + |W|,
+(7.1)
+
+where the error term has been absorbed as it is dominated by |W|. Our first step is to
+establish an upper bound for I′−
+→
+m. Before stating the result, we introduce the function
+
+(7.2)
+R(v, a) :=
+�
+
+(t,χ)∈W
+vitχ(a),
+v > 0, a ∈ Z/qZ,
+
+which plays a crucial role throughout this section.
+
+Proposition 7.1. We have
+
+|I′−
+→
+m| ≪ϵ
+N 3
+
+q3
+
+�
+
+|m1v1+m2v2+m3|≤(qT)ϵq/N
+v1,v2∈[1/2,2]
+
+�
+
+b1 mod q
+(b1,q)=1
+
+�
+
+b2 mod q
+(b2,q)=1
+
+����R(v1, b1)R
+�v2
+
+v1
+, b−1
+1 b2
+
+�
+R
+� 1
+
+v2
+, b−1
+2
+
+�����
+
+·(b1m1 + b2m2 + m3, q) dv1dv2 + Oϵ((qT)−200),
+
+Proof. Expanding the definition of ˆh as an integral and interchanging the order of
+summation and integration, one finds
+
+I′−
+→
+m = N 3
+
+q3
+�
+
+(ti,χi)∈W
+1≤i≤3
+
+�
+
+a1,a2,a3 mod q
+(a1a2a3,q)=1
+
+�
+
+R3 χ1(a1)χ2(a1)χ2(a2)χ3(a2)χ3(a3)χ1(a3)eq(−→a · −→
+m)
+
+· e
+�
+− N
+
+q
+−→
+m · −→u
+�
+w1(−→u )ui(t1−t2)
+1
+ui(t2−t3)
+2
+ui(t3−t1)
+3
+du1du2du3
+
+= N 3
+
+q3
+�
+
+a1,a2,a3 mod q
+(a1a2a3,q)=1
+
+�
+
+R3 eq(−→a · −→
+m)e
+�
+− N
+
+q
+−→
+m · −→u
+�
+w1(−→u )
+
+· R
+�u1
+
+u3
+, a1a−1
+3
+
+�
+R
+�u2
+
+u1
+, a2a−1
+1
+
+�
+R
+�u3
+
+u2
+, a3a−1
+2
+
+�
+du1du2du3,
+
+where
+w1(−→u ) = w(u1)2w(u2)2w(u3)2.
+As pointed out in [5, p. 21], a key observation is that the arguments of the R functions
+above are restricted to a two-dimensional subvariety defined by z1z2z3 = 1. Addition-
+ally, (a1a−1
+3 ) · (a2a−1
+1 ) · (a3a−1
+2 ) ≡ 1 mod q. With this in mind, we make the change of
+variables
+v1 = u1
+
+u3
+,
+v2 = u2
+
+u3
+,
+b1 = a1a−1
+3 ,
+b2 = a2a−1
+3 ,
+
+and note that
+
+e
+�
+− N
+
+q
+−→
+m · −→u
+�
+= e
+�
+− N
+
+q (m1u1 + m2u2 + m3u3)
+�
+= e
+�
+− N
+
+q (m1v1 + m2v2 + m3)u3
+
+�
+,
+
+eq(−→a · −→
+m) = eq(a1m1 + a2m2 + a3m3) = eq((b1m1 + b2m2 + m3)a3)
+
+
+24
+BIN CHEN, VISHAL GUPTA, AND YUNG CHI LI
+
+and
+du1du2du3 = u2
+3dv1dv2du3.
+
+Then our equation becomes
+
+I′−
+→
+m = N 3
+
+q3
+�
+
+b1,b2,a3 mod q
+(b1b2,q)=1
+(a3,q)=1
+
+�
+
+R3 e
+�
+− N
+
+q (m1v1 + m2v2 + m3)u3
+
+�
+eq((b1m1 + b2m2 + m3)a3)
+
+· w(v1u3)2w(v2u3)2w(u3)2R(v1, b1)R
+�v2
+
+v1
+, b2b−1
+1
+
+�
+R
+� 1
+
+v2
+, b−1
+2
+
+�
+u2
+3 dv1dv2du3.
+
+Since the R factors do not depend on u3, a3, performing the u3 integral and the a3
+summation first yields
+
+I′−
+→
+m = N 3
+
+q3
+�
+
+b1,b2 mod q
+(b1b2,q)=1
+
+�
+
+R2 Cq(b1m1 + b2m2 + m3)R(v1, b1)R
+�v2
+
+v1
+, b2b−1
+1
+
+�
+R
+� 1
+
+v2
+, b−1
+2
+
+�
+
+·
+� �
+
+R
+e
+�
+− N
+
+q (m1v1 + m2v2 + m3)u3
+
+�
+w(v1u3)2w(v2u3)2w(u3)2u2
+3 du3
+
+�
+dv1dv2.
+
+(7.3)
+
+As w(u) is a smooth bump supported on [1, 2], we observe that
+
+w(v1u3)2w(v2u3)2w(u3)2u2
+3
+
+vanishes unless v1, v2 ∈ [1/2, 2].
+Furthermore, its jth derivative with respect to u3
+is bounded by Oj(1). Thus, by repeated integration by parts, the inner integral is
+Oϵ((qT)−300) unless |m1v1 + m2v2 + m3| ≤ (qT)ϵq/N and v1, v2 ∈ [1/2, 2]. On the
+other hand, the inner integral is O(1) trivially. Inserting these bounds into (7.3) and
+applying the triangle inequality along with the fact that |Cq(m)| ≤ (m, q), yields the
+desired result.
+□
+
+We now introduce a smooth approximation of |R| which is defined as follows. Let
+˜ψ0(x) be a non-negative smooth bump supported on [−2, 2] such that ˜ψ0(x) = 1 for
+|x| ≤ 1, || ˜ψ(j)
+0 ||∞ ≪j 1 and
+
+˜ψ(x) = ˜ψ0
+
+�
+x
+
+2(qT)ϵ
+
+�
+(7.4)
+
+For a given parameter M2 > 0, we define
+
+(7.5)
+˜RM2(u, a) :=
+�
+�
+
+u′∈[1/2, 2]
+
+NM2
+
+q
+˜ψ
+�NM2
+
+q
+(u − u′)
+�
+|R(u′, a)|2 du′
+� 1
+
+2
+.
+
+The following proposition provides an expansion of S3 in terms of integrals involving
+˜R and R.
+
+
+LARGE VALUE AND ZERO DENSITY ESTIMATES FOR DIRICHLET L-FUNCTIONS
+25
+
+Proposition 7.2. There is a choice of 0 < M1 ≤ M3 ≤ M2 ≤ (qT)ϵqT/N such that
+
+S3 ⪅ϵ
+N 2
+
+q2M2
+
+�
+
+|mi|∼Mi
+1≤i≤3
+
+˜I−
+→
+m + |W|,
+
+where
+
+˜I−
+→
+m :=
+�
+
+v1∈[1/2,2]
+
+�
+
+b1,b2 mod q
+(b1b2,q)=1
+
+����R(v1, b1) ˜RM2
+
+�m1v1 + m3
+
+m2v1
+, b−1
+1 b2
+
+�
+˜RM2
+
+�m1v1 + m3
+
+m2
+, b2
+
+�����
+
+·(b1m1 − b2m2 + m3, q) dv1.
+
+Proof. From (7.1) we have that
+
+|S3| ⪅ϵ
+�
+
+0<|m1|,|m2|,|m3|≤(qT)ϵqT/N
+|I′−
+→
+m| + |W|,
+
+where, as shown in the first equation of the proof of Proposition 7.1,
+
+I′−
+→
+m = N 3
+
+q3
+�
+
+a1,a2,a3 mod q
+(a1a2a3,q)=1
+
+�
+
+R3 eq(−→a · −→
+m)e
+�
+− N
+
+q
+−→
+m · −→u
+�
+w1(−→u )
+
+· R
+�u1
+
+u3
+, a1a−1
+3
+
+�
+R
+�u2
+
+u1
+, a2a−1
+1
+
+�
+R
+�u3
+
+u2
+, a3a−1
+2
+
+�
+du1du2du3.
+
+From the definition of R(v, a), it follows that (see (7.2))
+
+R
+�1
+
+v, a−1
+�
+= R(v, a).
+
+Consequently, we have the relation I′
+m1,m2,m3 = ¯I′−m2,−m1,−m3. Similarly, we also find:
+I′
+m1,m2,m3 = ¯I′−m1,−m3,−m2, I′
+m1,m2,m3 = ¯I′−m3,−m2,−m1.
+These symmetries allow us
+to reduce the estimation to the case |m1| ≤ |m3| ≤ |m2| at the cost of a factor 6.
+Furthermore, by selecting dyadic scales to maximize the right-hand side, we arrive at
+
+(7.6)
+|S3| ⪅ϵ
+�
+
+|mi|∼Mi, 1≤i≤3
+|I′−
+→
+m| + |W|,
+
+where M1 ≤ M3 ≤ M2 ≤ (qT)ϵqT/N. Applying Proposition 7.1 gives, for |m2| ∼ M2,
+
+|I′−
+→
+m| ≪ϵ
+N 3
+
+q3
+
+�
+
+v1∈[1/2, 2]
+
+�
+
+b1 mod q
+(b1,q)=1
+
+�
+
+b2 mod q
+(b2,q)=1
+
+|R(v1, b1)|(b1m1 + b2m2 + m3, q)
+
+·
+�
+
+|v2− m1v1+m3
+
+−m2
+|≤ (qT )ϵq
+
+NM2
+v2∈[1/2, 2]
+
+����R
+�v2
+
+v1
+, b−1
+1 b2
+
+�
+R
+� 1
+
+v2
+, b−1
+2
+
+����� dv2dv1 + Oϵ((qT)−200).
+
+
+26
+BIN CHEN, VISHAL GUPTA, AND YUNG CHI LI
+
+Using Cauchy-Schwarz and noting that |R(1/v2, b−1)| = |R(v2, b)|, the inner v2 integral
+is bounded by
+�
+�
+
+|v2− m1v1+m3
+
+−m2
+|≤ (qT )ϵq
+
+NM2
+v2∈[1/2, 2]
+
+����R
+�v2
+
+v1
+, b−1
+1 b2
+
+�����
+
+2
+dv2
+
+� 1
+
+2�
+�
+
+|v2− m1v1+m3
+
+−m2
+|≤ (qT )ϵq
+
+NM2
+v2∈[1/2, 2]
+
+|R(v2, b2)|2 dv2
+
+� 1
+
+2
+
+≤
+q
+
+NM2
+˜RM2
+
+�m1v1 + m3
+
+−m2v1
+, b−1
+1 b2
+
+�
+˜RM2
+
+�m1v1 + m3
+
+−m2
+, b2
+
+�
+.
+
+We therefore obtain
+
+|I′
+m1,m2,m3| ≪ϵ
+N 2
+
+q2M2
+˜Im1,−m2,m3 + Oϵ((qT)−200).
+
+Since we are summing over m2 with |m2| ∼ M2, we can replace −m2 with m2 without
+altering the overall sum. Inserting this in (7.6) then gives the result.
+□
+
+With Proposition 7.2 established, three additional tools are required to ultimately
+derive the S3 bound: a sharp estimate for summing over affine transformations with
+GCD twists, moment bounds for ˜R and R and the energy bound5 for W. These will
+be developed in the following three sections.
+
+8. Summing over affine transformations with GCD twists
+
+For parameters satisfying 0 < M ≤ (qT)ϖ with 0 < ϖ < 1 and given a sequence of
+compactly supported smooth functions −→f = {fb}1≤b≤q
+(b,q)=1
+, we define
+
+J(−→f ) :=
+sup
+0<Mi<M
+1≤i≤3
+
+�
+
+R
+
+�
+
+1≤a≤q
+(a,q)=1
+
+� �
+
+1≤b≤q
+(b,q)=1
+
+�
+
+|m1|∼M1
+m2∼M2
+|m3|≪M3
+
+fb
+
+�m1u + m3
+
+m2
+
+�
+(am1 + bm2 + m3, q)
+�2
+du,
+
+which is an average of sums of affine transformations with GCD twists. The objective
+of this section is to establish
+
+Proposition 8.1. Suppose that −→f
+= {fb}1≤b≤q
+(b,q)=1
+is a sequence of smooth functions
+
+such that each fb(u) is non-negative and supported on |u| ≪ 1 and �
+1≤b≤q
+(b,q)=1
+| ˆfb(ξ)| ⪅j
+
+(T/|ξ|)jϕ(q) supb,u fb(u) for all j ∈ N. Then
+
+J(−→f ) ⪅ ϕ(q)M 6
+� �
+
+R
+
+�
+
+1≤b≤q
+(b,q)=1
+
+fb(u) du
+�2
++ ϕ(q)2M 4
+�
+
+R
+
+�
+
+1≤b≤q
+(b,q)=1
+
+fb(u)2 du.
+
+5For a finite set W of pairs (t, χ), we define its energy E(W) as
+
+E(W) := #{(t1, χ1), (t2, χ2), (t3, χ3), (t4, χ4) ∈ W : |t1 + t2 − t3 − t4| ≤ 1, χ1χ2 = χ3χ4}.
+
+
+LARGE VALUE AND ZERO DENSITY ESTIMATES FOR DIRICHLET L-FUNCTIONS
+27
+
+8.1. Reduction to an iterative bound for J(f). Proposition 8.1 plays a crucial
+role in estimating S3 and will be proved using an induction argument, supported by
+the following iterative bound for J(−→f ).
+
+Lemma 8.2. Let −→f = {fb} be as in Proposition 8.1. Then there is a bump function
+ψ(x) supported on |x| ≪ 1 such that
+
+J(−→f ) ⪅ ϕ(q)M 6
+� �
+
+R
+
+�
+
+1≤b≤q
+(b,q)=1
+
+fb(u) du
+�2
++ ϕ(q)
+�
+M 4
+�
+
+R
+
+�
+
+1≤b≤q
+(b,q)=1
+
+fb(u)2 du
+�1/2
+J(
+−→˜f )1/2,
+
+where
+−→˜f = { ˜fb} and ˜fb(u) =
+�
+
+R Tψ(T(u − u′))fb(u′) du′.
+
+Proof of Proposition 8.1 assuming Lemma 8.2. We wish to show that for any ϵ > 0
+there is a C(ϵ) > 0 such that
+(8.1)
+
+J(−→f ) ≤ C(ϵ)(qT)ϵ
+�
+ϕ(q)M 6
+� �
+
+R
+
+�
+
+1≤b≤q
+(b,q)=1
+
+fb(u) du
+�2
++ ϕ(q)2M 4
+�
+
+R
+
+�
+
+1≤b≤q
+(b,q)=1
+
+fb(u)2 du
+�
+.
+
+We prove the statement via downward induction on ϵ. The base case ϵ = 100 holds
+trivially. For the inductive step, we assume (8.1) holds with parameter 3ϵ/2 and aim
+to establish it for ϵ. Application of Lemma 8.2 gives
+
+J(−→f ) ⪅ ϕ(q)M 6
+� �
+
+R
+
+�
+
+1≤b≤q
+(b,q)=1
+
+fb(u) du
+�2
++ ϕ(q)
+�
+M 4
+�
+
+R
+
+�
+
+1≤b≤q
+(b,q)=1
+
+fb(u)2 du
+�1/2
+J(
+−→˜f )1/2.
+
+The compact support conditions |u| ≪ 1 for fb(u) and |x| ≪ 1 for ψ(x) ensure that
+the modified function ˜fb(u) maintains the same support restriction |u| ≪ 1. Moreover,
+the Fourier transform of ˜fb also satisfies the desired decay. Thus by the induction
+hypothesis, we have that
+
+J(
+−→˜f ) ≪ϵ (qT)3ϵ/2
+�
+ϕ(q)M 6
+� �
+
+R
+
+�
+
+1≤b≤q
+(b,q)=1
+
+˜fb(u) du
+�2
++ ϕ(q)2M 4
+�
+
+R
+
+�
+
+1≤b≤q
+(b,q)=1
+
+˜fb(u)2 du
+�
+.
+
+Since ˜fb is a smoothed version of fb, we have the L1 and L2 norm comparisons:
+� ˜fb(u) du ≪
+�
+fb(u) du and
+� ˜fb(u)2 du ≪
+�
+fb(u)2 du. Inserting these bounds into
+our bound for J(−→f ) yields
+
+J(−→f ) ⪅ϵ (qT)3ϵ/4
+�
+ϕ(q)M 6
+� �
+
+R
+
+�
+
+1≤b≤q
+(b,q)=1
+
+fb(u) du
+�2
++ ϕ(q)2M 4
+�
+
+R
+
+�
+
+1≤b≤q
+(b,q)=1
+
+fb(u)2 du
+�
+.
+
+Thus (8.1) holds for C(ϵ) sufficiently large, which completes the induction.
+□
+
+It remains to prove Lemma 8.2.
+
+
+28
+BIN CHEN, VISHAL GUPTA, AND YUNG CHI LI
+
+8.2. Proof of Lemma 8.2.
+
+8.2.1. Setup for the argument.
+By rescaling we may assume that supb,u fb(u) ≍ 1. Let ψ1(x) be a smooth bump func-
+tion supported on |x| ≪ 1, such that ψ1(m3/M3) majorizes the summation condition
+|m3| ≪ M3. Then we can bound the inner double sum in J(−→f ) by
+
+ga(u) :=
+�
+
+1≤b≤q
+(b,q)=1
+
+�
+
+|m1|∼M1
+m2∼M2
+
+�
+
+m3∈Z
+ψ1
+
+�m3
+
+M3
+
+�
+fb
+
+�m1u + m3
+
+m2
+
+�
+(am1 + bm2 + m3, q).
+
+By applying Plancherel’s theorem for the choice of M1, M2, M3 that achieves the supre-
+mum, we obtain
+
+J(−→f ) ≤
+�
+
+1≤a≤q
+(a,q)=1
+
+�
+
+R
+|ga(u)|2 du =
+�
+
+1≤a≤q
+(a,q)=1
+
+�
+
+R
+|ˆga(ξ)|2 dξ.
+
+This reduces our task to estimating ˆga(ξ), the Fourier transform of ga(u). Notice that
+ˆga(ξ) is equal to
+
+�
+
+1≤b≤q
+(b,q)=1
+
+�
+
+|m1|∼M1
+m2∼M2
+
+�
+
+R
+
+�
+
+m3∈Z
+ψ1
+
+�m3
+
+M3
+
+�
+fb
+
+�m1u + m3
+
+m2
+
+�
+(am1 + bm2 + m3, q)e(−ξu) du.
+
+By making the change of variables u = ˜u − m3
+
+m1, we get
+
+ˆga(ξ) =
+�
+
+1≤b≤q
+(b,q)=1
+
+�
+
+|m1|∼M1
+m2∼M2
+
+� �
+
+R
+fb
+
+�m1˜u
+
+m2
+
+�
+e(−ξ˜u) d˜u
+�
+
+·
+� �
+
+m3∈Z
+ψ1
+
+�m3
+
+M3
+
+�
+(am1 + bm2 + m3, q)e
+�m3
+
+m1
+ξ
+��
+.
+
+The integral over ˜u is given by m2
+
+m1 ˆfb( m2
+
+m1ξ), and the last sum, according to the Poisson
+summation formula, is
+
+�
+
+d mod q
+(am1 + bm2 + d, q)
+�
+
+m3≡d (mod q)
+ψ1
+
+�m3
+
+M3
+
+�
+e
+�m3
+
+m1
+ξ
+�
+
+=
+�
+
+d mod q
+(am1 + bm2 + d, q)
+�
+
+n∈Z
+
+M3
+q eq(dn) ˆψ1
+
+��n
+
+q − ξ
+
+m1
+
+�
+M3
+
+�
+.
+
+Lastly, we map d → d + am1 + bm2. We therefore arrive at
+
+ˆga(ξ) =
+�
+
+1≤b≤q
+(b,q)=1
+
+�
+
+|m1|∼M1
+m2∼M2
+
+m2
+m1
+ˆfb
+
+�m2
+
+m1
+ξ
+� �
+
+d mod q
+(d, q)
+�
+
+n∈Z
+
+M3
+q eq((d − am1 − bm2)n) ˆψ1
+
+��n
+
+q − ξ
+
+m1
+
+�
+M3
+
+�
+.
+
+
+LARGE VALUE AND ZERO DENSITY ESTIMATES FOR DIRICHLET L-FUNCTIONS
+29
+
+We have to estimate
+�
+
+R
+�
+
+a |ˆga(ξ)|2 dξ. If |ξ| > (qT)2, because �
+
+b | ˆfb(ξ)| is rapidly de-
+caying for |ξ| > T, it follows that �
+
+b ˆfb( m2
+
+m1ξ) is negligible and |ˆga(ξ)| ≪ (qT)−101|ξ|−2.
+As a result, we have
+�
+
+|ξ|>(qT)2
+
+�
+
+1≤a≤q
+(a,q)=1
+
+|ˆga(ξ)|2 dξ = O((qT)−100).
+
+Thus, the contribution from the region |ξ| > (qT)2 is negligible and our analysis can
+focus on the range |ξ| ≤ (qT)2. On the other hand, as ˆψ1 is rapidly decaying, ˆψ1(( n
+
+q −
+
+ξ
+m1)M3) is negligible unless |ξ − nm1
+
+q | ⪅ M1
+
+M3, it follows that
+
+ˆga(ξ) = M3
+�
+
+1≤b≤q
+(b,q)=1
+
+�
+
+|m1|∼M1
+m2∼M2
+
+m2
+m1
+ˆfb
+
+�m2
+
+m1
+ξ
+� �
+
+d mod q
+
+(d, q)
+
+q
+
+·
+�
+
+n:|ξ− nm1
+
+q
+|⪅ M1
+
+M3
+
+eq((d − am1 − bm2)n) ˆψ1
+
+��n
+
+q − ξ
+
+m1
+
+�
+M3
+
+�
++ O((qT)−103).
+(8.2)
+
+We separate the terms on the right-hand side of (8.2) where q ∤ n to define ˆga,1(ξ) and
+define ˆga,2(ξ) using the remaining terms. That is,
+
+ˆga,1(ξ) =M3
+�
+
+1≤b≤q
+(b,q)=1
+
+�
+
+|m1|∼M1
+m2∼M2
+
+m2
+m1
+ˆfb
+
+�m2
+
+m1
+ξ
+� �
+
+d mod q
+
+(d, q)
+
+q
+
+·
+�
+
+n:|ξ− nm1
+
+q
+|⪅ M1
+
+M3
+q∤n
+
+eq((d − am1 − bm2)n) ˆψ1
+
+��n
+
+q − ξ
+
+m1
+
+�
+M3
+
+�
+(8.3)
+
+and
+
+ˆga,2(ξ) =M3
+�
+
+1≤b≤q
+(b,q)=1
+
+�
+
+|m1|∼M1
+m2∼M2
+
+m2
+m1
+ˆfb
+
+�m2
+
+m1
+ξ
+�
+�
+
+ℓ:|ξ−ℓm1|⪅ M1
+
+M3
+
+ˆψ1
+
+��
+ℓ − ξ
+
+m1
+
+�
+M3
+
+�
+.
+(8.4)
+
+Note that we have defined ˆga,2(ξ) with no sum over d. This is because in ˆga(ξ), when
+q | n, the only dependence on d is (d, q) and we have that �
+
+d mod q
+(d,q)
+
+q
+⪅ 1. Next, we
+have that
+�
+
+1≤a≤q
+(a,q)=1
+
+�
+
+R
+|ˆga(ξ)|2 dξ ≪
+�
+
+1≤a≤q
+(a,q)=1
+
+� (qT)2
+
+−(qT)2 |ˆga,1(ξ)|2 + |ˆga,2(ξ)|2 dξ + O((qT)−100).
+
+For a small η > 0, we decompose the above integrals as follows:
+�
+
+|ξ|≤(qT)2
+
+�
+
+1≤a≤q
+(a,q)=1
+
+|ˆga,2(ξ)|2 dξ = I + II,
+
+
+30
+BIN CHEN, VISHAL GUPTA, AND YUNG CHI LI
+
+where
+
+I :=
+�
+
+|ξ|≤(qT)η M1
+
+M3
+
+�
+
+1≤a≤q
+(a,q)=1
+
+|ˆga,2(ξ)|2 dξ,
+II :=
+�
+
+(qT)η M1
+
+M3 ≤|ξ|≤(qT)2
+
+�
+
+1≤a≤q
+(a,q)=1
+
+|ˆga,2(ξ)|2 dξ
+
+and
+�
+
+|ξ|≤(qT)2
+
+�
+
+1≤a≤q
+(a,q)=1
+
+|ˆga,1(ξ)|2 dξ = I′ + II′,
+
+where
+
+I′ :=
+�
+
+|ξ|≤q−4
+
+�
+
+1≤a≤q
+(a,q)=1
+
+|ˆga,1(ξ)|2 dξ,
+II′ :=
+�
+
+q−4≤|ξ|≤(qT)2
+
+�
+
+1≤a≤q
+(a,q)=1
+
+|ˆga,1(ξ)|2 dξ.
+
+Based on the above, we have that
+
+(8.5)
+J(−→f ) ≪ I + II + I′ + II′ + O((qT)−100).
+
+Consequently, our objective is reduced to estimating I, II, I′ and II′ respectively.
+
+8.2.2. The contribution of II′. Notice that
+
+ˆga,1(ξ) =M3
+�
+
+1≤b≤q
+(b,q)=1
+
+�
+
+|m1|∼M1
+m2∼M2
+
+m2
+m1
+ˆfb
+
+�m2
+
+m1
+ξ
+� �
+
+d mod q
+
+(d, q)
+
+q
+
+·
+�
+
+n:|ξ− nm1
+
+q
+|⪅ M1
+
+M3
+q∤n
+
+eq((d − am1 − bm2)n) ˆψ1
+
+��n
+
+q − ξ
+
+m1
+
+�
+M3
+
+�
+
+=M3
+�
+
+|m1|∼M1
+
+�
+
+n:|ξ− nm1
+
+q
+|⪅ M1
+
+M3
+q∤n
+
+�
+
+d mod q
+
+(d, q)
+
+q
+ˆψ1
+
+��n
+
+q − ξ
+
+m1
+
+�
+M3
+
+�
+eq((d − am1)n)
+
+·
+�
+
+m2∼M2
+
+�
+
+1≤b≤q
+(b,q)=1
+
+m2
+m1
+ˆfb
+
+�m2
+
+m1
+ξ
+�
+eq(−bm2n).
+
+We therefore have
+�
+
+1≤a≤q
+(a,q)=1
+
+|ˆga,1(ξ)|2 =
+�
+
+1≤a≤q
+(a,q)=1
+
+M 2
+3
+�
+
+|m1|∼M1
+
+�
+
+n:|ξ− nm1
+
+q
+|⪅ M1
+
+M3
+q∤n
+
+�
+
+d mod q
+
+�
+
+|m′
+1|∼M1
+
+�
+
+n′:|ξ−
+n′m′
+1
+
+q
+|⪅ M1
+
+M3
+q∤n′
+
+�
+
+d′ mod q
+
+(d, q)
+
+q
+
+· (d′, q)
+
+q
+ˆψ1
+
+��n
+
+q − ξ
+
+m1
+
+�
+M3
+
+�
+
+ˆψ1
+
+��n′
+
+q − ξ
+
+m′
+1
+
+�
+M3
+
+�
+eq(dn − d′n′)eq((m′
+1n′ − m1n)a)
+� �
+
+m2∼M2
+
+�
+
+1≤b≤q
+(b,q)=1
+
+m2
+m1
+ˆfb
+
+�m2
+
+m1
+ξ
+�
+eq(−bm2n)
+�� �
+
+m′
+2∼M2
+
+�
+
+1≤b′≤q
+(b′,q)=1
+
+m′
+2
+
+m′
+1
+
+ˆf b
+
+�m′
+2
+
+m′
+1
+ξ
+�
+eq(bm′
+2n′)
+�
+.
+
+
+LARGE VALUE AND ZERO DENSITY ESTIMATES FOR DIRICHLET L-FUNCTIONS
+31
+
+For the a-sum, we apply the basic estimate |Cq(m)| ≤ (m, q) for Ramanujan’s sum,
+which gives: | �
+
+(a,q)=1 eq((m′
+1n′ − m1n)a)| ≤ (m′
+1n′ − m1n, q). We then impose the
+condition m′
+1n′ − m1n ≡ h mod q, allowing h to range over a complete residue system
+modulo q. This reformulation allows us to express (m′
+1n′ − m1n, q) as (h, q) and factor
+the h-sum out. Doing this along with a use of the triangle inequality gives us the bound
+�
+
+1≤a≤q
+(a,q)=1
+
+|ˆga,1(ξ)|2 ≤ M 2
+3
+�
+
+h mod q
+(h, q)
+�
+
+|m1|∼M1
+
+�
+
+n:|ξ− nm1
+
+q
+|⪅ M1
+
+M3
+q∤n
+
+�
+
+d mod q
+
+�
+
+|m′
+1|∼M1
+
+�
+
+n′:|ξ−
+n′m′
+1
+
+q
+|⪅ M1
+
+M3 ,q∤n′
+
+m′
+1n′−m1n≡h mod q
+
+�
+
+d′ mod q
+
+· (d, q)
+
+q
+(d′, q)
+
+q
+
+���� ˆψ1
+
+��n
+
+q − ξ
+
+m1
+
+�
+M3
+
+����� ·
+���� ˆψ1
+
+��n′
+
+q − ξ
+
+m′
+1
+
+�
+M3
+
+�����
+����
+�
+
+m2∼M2
+
+�
+
+1≤b≤q
+(b,q)=1
+
+m2
+m1
+ˆfb
+
+�m2
+
+m1
+ξ
+�
+eq(−bm2n)
+���� ·
+����
+�
+
+m′
+2∼M2
+
+�
+
+1≤b′≤q
+(b′,q)=1
+
+m′
+2
+
+m′
+1
+
+ˆf b′
+�m′
+2
+
+m′
+1
+ξ
+�
+eq(bm′
+2n′)
+����.
+
+After the use of the triangle inequality, the only terms depending on d, d′ are (d, q), (d′, q)
+and we have that �
+
+d mod q
+(d,q)
+
+q
+⪅ 1 and the similarly for d′. Next, by Cauchy-Schwarz
+we have that �
+1≤a≤q
+(a,q)=1
+|ˆga,1(ξ)|2 is bounded by M 2
+3G1(ξ)1/2G2(ξ)1/2, where
+
+G1(ξ) :=
+�
+
+h mod q
+(h, q)
+�
+
+|m1|∼M1
+
+�
+
+n:|ξ− nm1
+
+q
+|⪅ M1
+
+M3
+q∤n
+
+�
+
+|m′
+1|∼M1
+
+�
+
+n′:|ξ−
+n′m′
+1
+
+q
+|⪅ M1
+
+M3 , q∤n′
+
+m′
+1n′−m1n≡h(mod q)
+
+���� ˆψ1
+
+��n
+
+q − ξ
+
+m1
+
+�
+M3
+
+�����
+
+2
+
+·
+
+�����
+
+�
+
+m2∼M2
+
+�
+
+1≤b≤q
+(b,q)=1
+
+m2
+m1
+ˆfb
+
+�m2
+
+m1
+ξ
+�
+eq(−bm2n)
+
+�����
+
+2
+
+and
+
+G2(ξ) :=
+�
+
+h mod q
+(h, q)
+�
+
+|m1|∼M1
+
+�
+
+n:|ξ− nm1
+
+q
+|⪅ M1
+
+M3
+q∤n
+
+�
+
+|m′
+1|∼M1
+
+�
+
+n′:|ξ−
+n′m′
+1
+
+q
+|⪅ M1
+
+M3 , q∤n′
+
+m′
+1n′−m1n≡h(mod q)
+
+���� ˆψ1
+
+��n′
+
+q − ξ
+
+m′
+1
+
+�
+M3
+
+�����
+
+2
+
+·
+
+�����
+
+�
+
+m′
+2∼M2
+
+�
+
+1≤b′≤q
+(b′,q)=1
+
+m′
+2
+
+m′
+1
+
+ˆf b′
+�m′
+2
+
+m′
+1
+ξ
+�
+eq(bm′
+2n′)
+
+�����
+
+2
+
+Note that since |z| = |¯z|, upon mapping (m1, n, m′
+1, n′) → (−m′
+1, n′, −m1, n), we have
+G2(ξ) = G1(−ξ). By the Cauchy-Schwarz inequality again, we arrive at
+�
+
+q−4≤|ξ|≤(qT)2
+
+�
+
+1≤a≤q
+(a,q)=1
+
+|ˆga,1(ξ)|2 dξ ≤
+�
+M 2
+3
+
+�
+
+R
+G1(ξ) dξ
+�1/2�
+M 2
+3
+
+�
+
+R
+G2(ξ) dξ
+�1/2
+
+
+32
+BIN CHEN, VISHAL GUPTA, AND YUNG CHI LI
+
+so that
+
+II′ ≤ M 2
+3
+
+�
+G1(ξ)dξ.
+(8.6)
+
+We now estimate M 2
+3
+�
+
+R G1(ξ) dξ. Notice that | ˆψ| ≪ 1. Moreover, the double sum
+�
+
+m′
+1
+�
+
+n′ 1 is bounded by ⪅ 1 + M1/M3. To see this, write s = m′
+1n′. Then s is a non-
+zero integer lying in a fixed residue class modulo q, and it is contained in a ⪅ qM1/M3
+neighborhood of qξ. Thus there are at most ⪅ 1 + M1/M3 possibilities for s, giving
+the claim. It follows that M 2
+3
+�
+
+R G1(ξ)dξ is bounded by
+
+⪅ M3
+
+�
+
+R
+
+�
+
+h mod q
+(h, q)
+�
+
+|m1|∼M1
+
+�
+
+n: |ξ− nm1
+
+q
+|⪅ M1
+
+M3
+q∤n
+
+(M1 + M3)
+����
+�
+
+m2∼M2
+
+�
+
+1≤b≤q
+(b,q)=1
+
+m2
+m1
+ˆfb
+
+�m2
+
+m1
+ξ
+�
+eq(−bm2n)
+����
+
+2
+dξ
+
+⪅ qM3(M1 + M3)
+�
+
+|m1|∼M1
+
+�
+
+n∈Z
+
+�
+
+|ξ− nm1
+
+q
+|⪅ M1
+
+M3
+
+����
+�
+
+m2∼M2
+
+�
+
+1≤b≤q
+(b,q)=1
+
+m2
+m1
+ˆfb
+
+�m2
+
+m1
+ξ
+�
+eq(−bm2n)
+����
+
+2
+dξ, (8.7)
+
+since �
+
+h mod q(h, q) ⪅ q. By making a change of variables ξ = m1n
+
+q
++ m1
+
+M3τ, the only
+m1 dependence in the inner double sum is a 1/m1 term. Then the above expression is
+bounded by
+
+⪅ q(M1 + M3)
+�
+
+|m1|∼M1
+
+�
+
+n∈Z
+
+�
+
+|τ|⪅1
+
+����
+�
+
+m2∼M2
+
+�
+
+1≤b≤q
+(b,q)=1
+
+m2
+m1
+ˆfb
+
+�m2n
+
+q
++ m2
+
+M3
+τ
+�
+eq(−bm2n)
+����
+
+2
+m1 dτ
+
+⪅ q(M1 + M3)
+�
+
+n∈Z
+
+�
+
+|τ|⪅1
+
+����
+�
+
+m2∼M2
+
+�
+
+1≤b≤q
+(b,q)=1
+
+m2 ˆfb
+
+�m2n
+
+q
++ m2
+
+M3
+τ
+�
+eq(−bm2n)
+����
+
+2
+dτ.
+
+Since �
+
+b | ˆfb(ξ)| = O((qT)−200) unless |ξ| ⪅ T, we can restrict6 the sum over n to the
+range |n| ⪅ qT/M2 at the cost of a negligible error. We introduce7 a bump function ψ2
+supported on |x| ⪅ 1 so that ψ2( M2n
+
+qT ) majorises this summation condition and obtain
+
+M 2
+3
+
+�
+
+R
+G1(ξ) dξ ⪅ q(M1 + M3)ΣII + O((qT)−100),
+(8.8)
+
+where
+
+ΣII :=
+�
+
+n∈Z
+ψ2
+
+�M2n
+
+qT
+
+� �
+
+|τ|⪅1
+
+����
+�
+
+m2∼M2
+
+�
+
+1≤b≤q
+(b,q)=1
+
+m2 ˆfb
+
+�m2n
+
+q
++ m2
+
+M3
+τ
+�
+eq(−bm2n)
+����
+
+2
+dτ.
+
+6The selection of M3 must satisfy the lower bound M3 ≫ M as dictated by the definition of J(−→f )
+as the larger M3 is, the greater the inner double sum in J(−→f ) is.
+7One might choose ψ2(x) = ψ0(x/(qT)η), where ψ0(x) is a smooth bump supported on [−2, 2] and
+identically equal to 1 for |x| ≤ 1.
+
+
+LARGE VALUE AND ZERO DENSITY ESTIMATES FOR DIRICHLET L-FUNCTIONS
+33
+
+We write out ˆfb as an integral, expand out the square and bring the summation over
+n and integration over τ on the inside to get
+
+ΣII =
+� �
+�
+
+m2∼M2
+
+�
+
+m′
+2∼M2
+
+�
+
+1≤b≤q
+(b,q)=1
+
+�
+
+1≤b′≤q
+(b′,q)=1
+
+m2m′
+2fb(u)fb′(u′)Σ1Σ2 du′ du,
+
+where
+
+Σ1 =
+�
+
+|τ|⪅1
+e
+��m′
+2
+
+M3
+u′ − m2
+
+M3
+u
+�
+τ
+�
+dτ,
+
+Σ2 =
+�
+
+n∈Z
+ψ2
+
+�M2n
+
+qT
+
+�
+eq((m′
+2u′ − m2u + b′m′
+2 − bm2)n).
+
+Trivially we have Σ1 ⪅ 1. By Poisson summation and the rapid decay of the Fourier
+transform ˆψ2, we have
+
+Σ2 = qT
+
+M2
+
+�
+
+j∈Z
+ˆψ2
+
+�j − m′
+2u′−m2u+b′m′
+2−bm2
+
+q
+
+M2/qT
+
+�
+
+= qT
+
+M2
+
+�
+
+��j−
+m′
+2u′−m2u+b′m′
+2−bm2
+
+q
+��≪ M2
+
+qT
+
+ˆψ2
+
+�j − m′
+2u′−m2u+b′m′
+2−bm2
+
+q
+
+M2/qT
+
+�
++ O((qT)−100).
+
+Inserting this back into our expression for ΣII, we find
+
+ΣII ⪅ qTM2
+
+�
+�
+
+1≤b≤q
+(b,q)=1
+
+�
+
+1≤b′≤q
+(b′,q)=1
+
+fb(u)
+�
+
+m2∼M2
+
+�
+
+m′
+2∼M2
+
+�
+
+j∈Z
+
+�
+
+��u′−
+qj+m2u+bm2−b′m′
+2
+
+m′
+2
+��≪ 1
+
+T
+
+fb′(u′) du′ du
+
++O((qT)−50).
+
+Putting this bound for ΣII into (8.8), we get
+
+M 2
+3
+
+�
+
+R
+G1(ξ) dξ ⪅ q2TM2(M1 + M3)
+�
+�
+
+1≤b≤q
+(b,q)=1
+
+�
+
+1≤b′≤q
+(b′,q)=1
+
+fb(u)
+
+�
+
+m2∼M2
+
+�
+
+m′
+2∼M2
+
+�
+
+j∈Z
+
+�
+
+��u′−
+qj+m2u+bm2−b′m′
+2
+
+m′
+2
+��≪ 1
+
+T
+
+fb′(u′) du′ du + O((qT)−20).
+
+Let ψ(x) be a smooth bump function supported on |x| ≪ 1 and define
+
+˜fb′(u) :=
+�
+
+R
+Tψ(T(u − v))fb′(v) dv.
+
+We can then bound the above integral over u′ by ˜fb′( qj+m2u+bm2−b′m′
+2
+
+m′
+2
+). Thus, combining
+the bounds M1, M2, M3 ≤ M with the Cauchy-Schwarz inequality and observing that
+
+
+34
+BIN CHEN, VISHAL GUPTA, AND YUNG CHI LI
+
+˜fb′(u) is supported on |u| ≪ 1, we have the following bound for M 2
+3
+�
+
+R G1(ξ)dξ,
+
+⪅ q2M 2
+� �
+�
+
+1≤b≤q
+(b,q)=1
+
+� �
+
+1≤b′≤q
+(b′,q)=1
+
+�
+
+m2,m′
+2∼M2
+j∈Z
+
+˜fb′
+�qj + m2u + bm2 − b′m′
+2
+
+m′
+2
+
+��2
+du
+� 1
+
+2
+
+·
+� �
+�
+
+1≤b≤q
+(b,q)=1
+
+fb(u)2 du
+� 1
+
+2
++ O((qT)−20)
+
+⪅ qM 2
+� �
+�
+
+1≤b≤q
+(b,q)=1
+
+� �
+
+1≤b′≤q
+(b′,q)=1
+
+�
+
+m2,m′
+2∼M2
+m3≡bm2−b′m′
+2 mod q
+
+˜fb′
+�m2u + m3
+
+m′
+2
+
+�
+(−bm2 + b′m′
+2 + m3, q)
+�2
+du
+� 1
+
+2
+
+·
+� �
+�
+
+1≤b≤q
+(b,q)=1
+
+fb(u)2 du
+� 1
+
+2
++ O((qT)−20).
+
+In the final line we have introduced a sum over m3 such that m3 = qj + bm2 − b′m′
+2
+for some integer j.
+Since our sum over j is over all integers, this is the same as
+summing over all m3 such that m3 ≡ bm2 − b′m′
+2 mod q. We also absorb a factor
+of q to bring in the gcd factor since given this modular constraint on m3, we have
+q = (−bm2 + b′m′
+2 + m3, q). Continuing, since ˜fb is supported on |u| ≪ 1, we have that
+|m3| ≪ M2. Therefore the above is bounded by
+
+⪅ qM 2
+� �
+�
+
+1≤b≤q
+(b,q)=1
+
+� �
+
+1≤b′≤q
+(b′,q)=1
+
+�
+
+m2,m′
+2∼M2
+|m3|≪M2
+
+˜fb′
+�m2u + m3
+
+m′
+2
+
+�
+(−bm2 + b′m′
+2 + m3, q)
+�2
+du
+� 1
+
+2
+
+·
+� �
+�
+
+1≤b≤q
+(b,q)=1
+
+fb(u)2 du
+� 1
+
+2
++ O((qT)−20).
+
+⪅ ϕ(q)
+�
+M 4
+�
+
+R
+
+�
+
+1≤b≤q
+(b,q)=1
+
+fb(u)2 du
+�1/2
+J(
+−→˜f )1/2.
+
+Combining these estimates with (8.6), we conclude that
+
+(8.9)
+II′ ⪅ ϕ(q)
+�
+M 4
+�
+
+R
+
+�
+
+1≤b≤q
+(b,q)=1
+
+fb(u)2 du
+�1/2
+J(
+−→˜f )1/2.
+
+8.2.3. The contribution of II. The estimate for the term II follows from adapting
+the method in the preceding subsection with minor adjustments. By the definition of
+
+
+LARGE VALUE AND ZERO DENSITY ESTIMATES FOR DIRICHLET L-FUNCTIONS
+35
+
+ˆga,2(ξ) (cf. (8.4)), we have
+
+ˆga,2(ξ) = M3
+�
+
+|m1|∼M1
+
+�
+
+ℓ:|ξ−ℓm1|⪅ M1
+
+M3
+
+ˆψ1
+
+��
+ℓ − ξ
+
+m1
+
+�
+M3
+
+� �
+
+m2∼M2
+
+�
+
+1≤b≤q
+(b,q)=1
+
+m2
+m1
+ˆfb
+
+�m2
+
+m1
+ξ
+�
+.
+
+There is no dependence on a in ˆga,2. Therefore
+
+�
+
+1≤a≤q
+(a,q)=1
+
+|ˆga,2(ξ)|2 ⪅ qM 2
+3
+�
+
+|m1|,|m′
+1|∼M1
+
+�
+
+ℓ:|ξ−ℓm1|⪅ M1
+
+M3
+ℓ′:|ξ−ℓ′m′
+1|⪅ M1
+
+M3
+
+ˆψ1
+
+��
+ℓ − ξ
+
+m1
+
+�
+M3
+
+�
+
+ˆψ1
+
+��
+ℓ′ − ξ
+
+m′
+1
+
+�
+M3
+
+�
+
+·
+� �
+
+m2∼M2
+
+�
+
+1≤b≤q
+(b,q)=1
+
+m2
+m1
+ˆfb
+
+�m2
+
+m1
+ξ
+��� �
+
+m′
+2∼M2
+
+�
+
+1≤b′≤q
+(b′,q)=1
+
+m′
+2
+
+m′
+1
+
+ˆf b′
+�m′
+2
+
+m′
+1
+ξ
+��
+.
+
+Next, we apply Cauchy-Schwarz to find that �
+1≤a≤q
+(a,q)=1
+|ˆga,2(ξ)|2 is bounded by M 2
+3H1(ξ)1/2H2(ξ)1/2,
+
+where
+
+H1(ξ) := q
+�
+
+|m1|,|m′
+1|∼M1
+
+�
+
+ℓ:|ξ−lm1|⪅ M1
+
+M3
+ℓ′:|ξ−l′m′
+1|⪅ M1
+
+M3
+
+���� ˆψ1
+
+��
+ℓ − ξ
+
+m1
+
+�
+M3
+
+�����
+
+2����
+�
+
+m2∼M2
+
+�
+
+1≤b≤q
+(b,q)=1
+
+m2
+m1
+ˆfb
+
+�m2
+
+m1
+ξ
+�����
+
+2
+
+and
+
+H2(ξ) := q
+�
+
+|m1|,|m′
+1|∼M1
+
+�
+
+ℓ:|ξ−lm1|⪅ M1
+
+M3
+ℓ′:|ξ−l′m′
+1|⪅ M1
+
+M3
+
+���� ˆψ1
+
+��
+ℓ′ − ξ
+
+m′
+1
+
+�
+M3
+
+�����
+
+2����
+�
+
+m′
+2∼M2
+
+�
+
+1≤b≤q
+(b,q)=1
+
+m′
+2
+
+m′
+1
+
+ˆf b′
+�m′
+2
+
+m′
+1
+ξ
+�����
+
+2
+.
+
+Note that under the change of variables (m1, ℓ, m′
+1, ℓ′) → (−m′
+1, ℓ′, −m1, ℓ) we have
+that H2(ξ) = H1(−ξ). Also, we have that | ˆψ| ≪ 1 and that the double sum �
+
+m′
+1
+�
+
+ℓ′ 1
+is bounded by ⪅ 1 + M1/M3 so
+
+H1(ξ) ≤ q
+�
+1 + M1
+
+M3
+
+�
+�
+
+|m1|∼M1
+
+�
+
+ℓ:|ξ−lm1|⪅ M1
+
+M3
+
+����
+�
+
+m2∼M2
+
+�
+
+1≤b≤q
+(b,q)=1
+
+m2
+m1
+ˆfb
+
+�m2
+
+m1
+ξ
+�����
+
+2
+.
+
+Now by the Cauchy-Schwarz inequality again, we have that
+� (qT)2
+
+(qT)η M1
+
+M3
+
+�
+
+1≤a≤q
+(a,q)=1
+
+|ˆga,2(ξ)|2 dξ ≤
+�
+M 2
+3
+
+�
+
+R
+H1(ξ) dξ
+�1/2�
+M 2
+3
+
+�
+
+R
+H2(ξ) dξ
+�1/2
+= M 2
+3
+
+�
+
+R
+H1(ξ)dξ.
+
+Therefore
+
+II ≤ M 2
+3
+
+�
+
+R
+H1(ξ)dξ.
+(8.10)
+
+
+36
+BIN CHEN, VISHAL GUPTA, AND YUNG CHI LI
+
+We now show that M 2
+3
+�
+
+R H1(ξ) dξ can be written in a form similar to the bound
+(8.7) for M 2
+3
+�
+
+R G1(ξ)dξ from the previous section, by reintroducing n = lq. We have
+that M 2
+3
+�
+
+R H1(ξ)dξ is bounded by
+
+⪅ qM3(M1 + M3)
+�
+
+R
+
+�
+
+|m1|∼M1
+
+�
+
+ℓ:|ξ−lm1|⪅ M1
+
+M3
+
+����
+�
+
+m2∼M2
+
+�
+
+1≤b≤q
+(b,q)=1
+
+m2
+m1
+ˆfb
+
+�m2
+
+m1
+ξ
+�����
+
+2
+dξ.
+
+= qM3(M1 + M3)
+�
+
+R
+
+�
+
+|m1|∼M1
+
+�
+
+n:|ξ− nm1
+
+q
+|⪅ M1
+
+M3
+q|n
+
+����
+�
+
+m2∼M2
+
+�
+
+1≤b≤q
+(b,q)=1
+
+m2
+m1
+ˆfb
+
+�m2
+
+m1
+ξ
+�
+eq(−bm2n)
+����
+
+2
+dξ
+
+⪅ qM3(M1 + M3)
+�
+
+|m1|∼M1
+
+�
+
+n∈Z
+
+�
+
+|ξ− nm1
+
+q
+|⪅ M1
+
+M3
+
+�����
+
+�
+
+m2∼M2
+
+�
+
+1≤b≤q
+(b,q)=1
+
+m2
+m1
+ˆfb
+
+�m2
+
+m1
+ξ
+�
+eq(−bm2n)
+
+�����
+
+2
+dξ.
+
+The final expression coincides precisely with the integral representation M 2
+3
+�
+
+R G1(ξ)dξ
+established in the previous subsection (see (8.7)). Therefore the same approach yields
+the estimate:
+
+M 2
+3
+
+�
+
+R
+H1(ξ) dξ ⪅ ϕ(q)
+�
+M 4
+�
+
+R
+
+�
+
+1≤b≤q
+(b,q)=1
+
+fb(u)2 du
+�1/2
+J(
+−→˜f )1/2.
+
+Thus by (8.10), we conclude that
+
+(8.11)
+II ⪅ ϕ(q)
+�
+M 4
+�
+
+R
+
+�
+
+1≤b≤q
+(b,q)=1
+
+fb(u)2 du
+�1/2
+J(
+−→˜f )1/2.
+
+8.2.4. The contribution of I′. Recalling the definition of ˆga,1(ξ),
+
+ˆga,1(ξ) = M3
+�
+
+1≤b≤q
+(b,q)=1
+
+�
+
+|m1|∼M1
+m2∼M2
+
+m2
+m1
+ˆfb
+
+�m2
+
+m1
+ξ
+� �
+
+d mod q
+
+(d, q)
+
+q
+
+·
+�
+
+n:|ξ− nm1
+
+q
+|⪅ M1
+
+M3
+q∤n
+
+eq((d − am1 − bm2)n) ˆψ1
+
+��n
+
+q − ξ
+
+m1
+
+�
+M3
+
+�
+
+Since | ˆψ| ≪ 1, we have by the triangle inequality that
+
+|ˆga,1(ξ)| ≪ M3
+�
+
+1≤b≤q
+(b,q)=1
+
+�
+
+n:|ξ− nm1
+
+q
+|⪅ M1
+
+M3
+q∤n
+
+�
+
+|m1|∼M1
+m2∼M2
+
+m2
+m1
+sup
+ξ
+| ˆfb(ξ)|
+�
+
+d mod q
+
+(d, q)
+
+q
+.
+
+
+LARGE VALUE AND ZERO DENSITY ESTIMATES FOR DIRICHLET L-FUNCTIONS
+37
+
+The number of summands in the sum over n is ⪅ 1 +
+q
+
+M3 so we have
+
+|ˆga,1(ξ)| ⪅ M 2
+2(M3 + q)
+�
+
+1≤b≤q
+(b,q)=1
+
+sup
+ξ
+| ˆfb(ξ)| ≤ qM 3 �
+
+1≤b≤q
+(b,q)=1
+
+�
+fb(u) du,
+
+since fb is a non-negative function. We conclude that
+
+I′ =
+�
+
+|ξ|≤q−4
+
+�
+
+1≤a≤q
+(a,q)=1
+
+|ˆga,1(ξ)|2 dξ ⪅ ϕ(q)M 6
+� �
+
+1≤b≤q
+(b,q)=1
+
+�
+fb(u) du
+�2
+.
+(8.12)
+
+8.2.5. The contribution of I. By the definition of ˆga,2(ξ), we see that
+
+|ˆga,2(ξ)| = M3
+
+����
+�
+
+1≤b≤q
+(b,q)=1
+
+�
+
+|m1|∼M1
+m2∼M2
+
+m2
+m1
+ˆfb
+
+�m2
+
+m1
+ξ
+�
+�
+
+ℓ:|ξ−ℓm1|⪅ M1
+
+M3
+
+ˆψ1
+
+��
+ℓ − ξ
+
+m1
+
+�
+M3
+
+�����
+
+≤ M3
+�
+
+1≤b≤q
+(b,q)=1
+
+�
+
+|m1|∼M1
+m2∼M2
+
+m2
+m1
+
+���� ˆfb
+
+�m2
+
+m1
+ξ
+�����
+�
+
+ℓ:|ξ−ℓm1|⪅ M1
+
+M3
+
+���� ˆψ1
+
+��
+ℓ − ξ
+
+m1
+
+�
+M3
+
+�����.
+
+It follows from the Cauchy-Schwarz inequality and the positivity of fb that
+
+|ˆga,2(ξ)|2 ⪅ M1M 2
+3
+�
+
+|m1|∼M1
+
+�
+
+ℓ:|ξ−ℓm1|⪅ M1
+
+M3
+
+� �
+
+m2∼M2
+
+�
+
+1≤b≤q
+(b,q)=1
+
+m2
+m1
+
+���� ˆfb
+
+�m2
+
+m1
+ξ
+�����
+
+�2
+
+⪅ M 4
+2M 2
+3
+
+� �
+
+1≤b≤q
+(b,q)=1
+
+sup
+ξ
+| ˆfb(ξ)|
+�2
+
+⪅ M 4
+2M 2
+3
+
+� �
+
+1≤b≤q
+(b,q)=1
+
+�
+fb(u) du
+�2
+.
+
+Since M1, M2, M3 ≤ M, we conclude that
+
+(8.13)
+I =
+�
+
+|ξ|≤(qT)η M1
+
+M3
+
+�
+
+1≤a≤q
+(a,q)=1
+
+|ˆga,2(ξ)|2 dξ ⪅ ϕ(q)M 6
+� �
+
+1≤b≤q
+(b,q)=1
+
+�
+fb(u) du
+�2
+.
+
+8.2.6. Completion of the proof of Lemma 8.2. Substituting the contributions of II′, II,
+I′ and I (see (8.9), (8.11), (8.12) and (8.13)) into (8.5) yields the desired result.
+□
+
+9. Bounds for the second and fourth moments of R
+
+In this section, we prove two key lemmas controlling the moments of R and ˜R. Our
+analysis adapts the methodology developed in [5, Section 8], with necessary modifica-
+tions to account for the character sums in our setting. Recall from (7.2) that R(v, a)
+
+
+38
+BIN CHEN, VISHAL GUPTA, AND YUNG CHI LI
+
+is defined as:
+R(v, a) :=
+�
+
+(t,χ)∈W
+vitχ(a),
+v > 0, a ∈ Z/qZ.
+
+Lemma 9.1. Let W be a finite set of pairs (t, χ), where |t| ≤ T and for (t, χ) ̸= (t′, χ′)
+either χ ̸= χ′ or |t − t′| ≥ (qT)ϵ. For any M2 > 0, we have
+�
+
+v≍1
+
+�
+
+a mod q
+(a,q)=1
+
+|R(v, a)|2 dv ≪ϵ ϕ(q)|W|
+and
+�
+
+v≍1
+
+�
+
+a mod q
+(a,q)=1
+
+| ˜RM2(v, a)|2 dv ⪅ ϕ(q)|W|.
+
+Proof. From the definition of ˜R (see (7.5)) we find
+�
+
+v≍1
+| ˜RM2(v, a)|2 dv =
+�
+
+v≍1
+
+�
+
+u′∈[1/2, 2]
+
+NM2
+
+q
+˜ψ
+�NM2
+
+q
+(v − u′)
+�
+|R(u′, a)|2 du′ dv
+
+⪅
+�
+
+u′∈[1/2, 2]
+
+|R(u′, a)|2 du′.
+
+Thus, it suffices to prove the result for R. Let ψ1(v) be a smooth bump function that
+majorizes the range of integration in the integral described in the lemma, with support
+restricted to v ≍ 1.
+�
+
+v≍1
+
+�
+
+a mod q
+(a,q)=1
+
+|R(v, a)|2 dv ≤
+�
+�
+
+a mod q
+(a,q)=1
+
+ψ1(v)|R(v, a)|2 dv
+
+=
+�
+�
+
+a mod q
+(a,q)=1
+
+ψ1(v)
+����
+�
+
+(t,χ)∈W
+vitχ(a)
+����
+
+2
+dv.
+
+By making the change of variables v = eτ and defining ψ2(τ) := eτψ1(eτ), we obtain
+�
+
+v≍1
+
+�
+
+a mod q
+(a,q)=1
+
+ψ1(v)
+����
+�
+
+(t,χ)∈W
+vitχ(a)
+����
+
+2
+dv =
+�
+
+τ≍1
+
+�
+
+a mod q
+(a,q)=1
+
+eτψ1(eτ)
+����
+�
+
+(t,χ)∈W
+eitτχ(a)
+����
+
+2
+dτ
+
+=
+�
+
+(t1,χ1),(t2,χ2)∈W
+
+�
+
+a mod q
+(a,q)=1
+
+χ1(a)χ2(a) ˆψ2
+
+�t2 − t1
+
+2π
+
+�
+
+=
+�
+
+(t1,χ1),(t2,χ2)∈W
+χ1=χ2
+
+ϕ(q) ˆψ2
+
+�t2 − t1
+
+2π
+
+�
+.
+
+The final equality follows from the orthogonality of characters. Observe that ψ2 is
+a smooth bump function satisfying ∥ψ(j)
+2 ∥∞ = Oj(1) for any j ∈ N. Consequently,
+repeated integration by parts yields | ˆψ2(ξ)| ≪j |ξ|−j for any j ∈ N. In particular,
+when |t1 − t2| ≥ (qT)ϵ, we have ˆψ2( t1−t2
+
+2π ) ≪ϵ (qT)−100. Thus, the terms with t1 ̸= t2
+
+
+LARGE VALUE AND ZERO DENSITY ESTIMATES FOR DIRICHLET L-FUNCTIONS
+39
+
+are negligible. Finally, the terms with t1 = t2 contribute ≪ ϕ(q)|W| to the sum. This
+concludes the proof.
+□
+
+The following lemma controls the fourth moments of R and ˜R by the energy of W.
+
+Lemma 9.2. Let W be a finite set of pairs (t, χ), where |t| ≤ T and for (t, χ) ̸= (t′, χ′)
+either χ ̸= χ′ or |t − t′| ≥ (qT)ϵ. For any M2 > 0, we have
+�
+
+v≍1
+
+�
+
+a mod q
+(a,q)=1
+
+|R(v, a)|4 dv ⪅ ϕ(q)E(W)
+and
+�
+
+v≍1
+
+�
+
+a mod q
+(a,q)=1
+
+| ˜RM2(v, a)|4 dv ⪅ϵ ϕ(q)E(W).
+
+Proof. From the definition of ˜R (see (7.5)) and by applying the Cauchy-Schwarz in-
+equality, it follows that
+�
+
+v≍1
+| ˜RM2(v, a)|4 dv =
+�
+
+v≍1
+
+�
+�
+
+u′∈[1/2, 2]
+
+NM2
+
+q
+˜ψ
+�NM2
+
+q
+(v − u′)
+�
+|R(u′, a)|2 du′
+�2
+dv
+
+≤
+�NM2
+
+q
+
+�2 �
+
+v≍1
+
+� �
+˜ψ
+�NM2
+
+q
+(v − u′)
+�2
+du′
+��
+�
+
+|u′−v|≤ 4(qT )ϵq
+
+M2N
+u′∈[1/2, 2]
+
+|R(u′, a)|4 du′
+�
+dv
+
+≪
+�NM2
+
+q
+
+�2�
+q
+
+NM2
+
+�
+(qT)ϵ
+�
+
+v≍1
+
+�
+
+|u′−v|≤ 4(qT )ϵq
+
+M2N
+u′∈[1/2, 2]
+
+|R(u′, a)|4 du′ dv
+
+⪅
+�
+
+u′∈[1/2, 2]
+
+|R(u′, a)|4 du′.
+
+Thus, it suffices to prove the result for R. By making the change of variables v = eτ,
+we have
+�
+
+v≍1
+
+�
+
+a mod q
+(a,q)=1
+
+|R(v, a)|4 dv =
+�
+
+|τ|≪1
+
+�
+
+a mod q
+(a,q)=1
+
+����
+�
+
+(t,χ)∈W
+eitτχ(a)
+����
+
+4
+eτ dτ.
+
+Let ψ(τ) be a smooth bump function supported on |τ| ≪ 1 such that ψ(τ/(qT)ϵ)
+majorizes the range of integration. It follows that the above expression is bounded by
+
+≤
+�
+�
+
+a mod q
+(a,q)=1
+
+ψ
+�
+τ
+
+(qT)ϵ
+
+�����
+�
+
+(t,χ)∈W
+eitτχ(a)
+����
+
+4
+eτ dτ
+
+=
+�
+
+(ti,χi)∈W
+1≤i≤4
+
+�
+
+a mod q
+(a,q)=1
+
+�
+ψ
+�
+τ
+
+(qT)ϵ
+
+�
+eiτ(t1+t2−t3−t4)χ1(a)χ2(a)χ3(a)χ4(a) dτ
+
+=
+�
+
+(ti,χi)∈W
+1≤i≤4
+
+�
+
+a mod q
+(a,q)=1
+
+(qT)ϵ ˆψ
+�(qT)ϵ(t3 + t4 − t1 − t2)
+
+2π
+
+�
+χ1(a)χ2(a)χ3(a)χ4(a)
+
+
+40
+BIN CHEN, VISHAL GUPTA, AND YUNG CHI LI
+
+=
+�
+
+(ti,χi)∈W, 1≤i≤4
+χ1χ2=χ3χ4
+
+(qT)ϵ ˆψ
+�(qT)ϵ(t3 + t4 − t1 − t2)
+
+2π
+
+�
+ϕ(q).
+
+The last line follows by the orthogonality of characters. Due to the rapid decay of
+ˆψ, the summation can be restricted to |t1 + t2 − t3 − t4| ≤ 1, incurring an error of
+Oϵ((qT)−100).
+The proof is then completed by observing that the remaining terms
+contribute ⪅ ϕ(q)E(W).
+□
+
+10. Energy bound
+
+We recall the definition of the energy for a finite set W of pairs (t, χ):
+
+E(W) := #{(t1, χ1), (t2, χ2), (t3, χ3), (t4, χ4) ∈ W : |t1 +t2 −t3 −t4| ≤ 1, χ1χ2 = χ3χ4}.
+
+The goal of this section is to establish the following bound for the energy of W. Our
+approach is based on Heath-Brown’s bound for double zeta sums.
+
+Theorem 10.1 (Heath-Brown, [6]). Let T be a set of pairs (t, χ), where χ is a primitive
+character modulo q and t is a real number with |t| ≤ T such that for (t, χ) ̸= (t′, χ′)
+either χ ̸= χ′ or |t − t′| ≥ 1. Then
+�
+
+(t1,χ1),(t2,χ2)∈T
+
+����
+�
+
+n∼N
+cnχ1(n)χ2(n)ni(t1−t2)
+����
+
+2
+⪅ (|T |N 2 + |T |2N + |T |
+5
+4(qT)
+1
+2N) max
+n∼N |cn|2.
+
+We aim to prove the following bound:
+
+Proposition 10.2. Let
+
+DN(t, χ) =
+�
+
+N<n≤2N
+anχ(n)nit,
+
+where χ is a primitive character modulo q and |an| ≤ 1. Suppose that W is a finite set
+of pairs (t, χ), where |t| ≤ T and for (t, χ) ̸= (t′, χ′) either χ ̸= χ′ or |t − t′| ≥ (qT)ϵ.
+Assume that
+|DN(t, χ)| ≥ N σ/6
+
+for all (t, χ) ∈ W and (qT)2/3/2 ≤ N ≤ qT. Assume that either |W| ≥ (qT)
+2
+3 or that
+E(W)
+1
+8N ≥ (qT)
+1
+2|W|
+5
+8. Then we have
+
+E(W) ⪅ϵ |W|N 4−4σ + |W|21/8(qT)1/4N 1−2σ + |W|3N 1−2σ.
+
+Remark 10.3. The extra assumption allows us to weaken the lower bound on N; it
+can be compared to the condition T
+3
+4 < N in Guth-Maynard’s Proposition 11.1. For
+T > N
+6
+5, they can use subdivision so weakening this lower bound is not useful for them
+but is of value in this case.
+Ultimately, we only need an upper bound for S3 and this additional assumption
+does not affect the final bound.
+Suppose that |W| < (qT)2/3 and E(W)1/8N <
+(qT)1/2|W|5/8. Then (qT)2|W|3/2 > qTN|W|1/2E(W)1/2. Indeed, the second assump-
+tion gives E(W)1/2 < (qT)2|W|5/2N −4, and hence
+
+qTN|W|1/2E(W)1/2 < (qT)3|W|3N −3 < qT|W|3 < (qT)2|W|3/2.
+
+

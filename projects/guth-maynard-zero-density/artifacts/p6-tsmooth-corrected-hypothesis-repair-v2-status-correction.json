@@ -1,0 +1,42 @@
+{
+  "artifact_id": "p6-tsmooth-corrected-hypothesis-repair-v2-status-correction",
+  "corrected_claims": {
+    "divisor_and_subdivision": {
+      "conditional_on": [
+        "AMENDED_T_SMOOTH_HYPOTHESIS",
+        "DISPLAYED_PRIMITIVE_LARGE_VALUE_SUBDIVISION_INEQUALITY"
+      ],
+      "epistemic_status": "PROVED"
+    },
+    "smooth_density_envelope": {
+      "conditional_on": [
+        "PRIMITIVE_LARGE_VALUE_INPUT",
+        "QT_DETECTOR_AND_NAMED_EXTERNAL_MULTIPLICITY_INPUTS",
+        "COMPARISON_ENVELOPES_IN_EXACT_RANGES",
+        "PRIMITIVE_TO_ALL_TRANSFER"
+      ],
+      "epistemic_status": "PROVED",
+      "not_promoted": "No unconditional density theorem and no validation of CGL-v2's undefined F08 wording."
+    }
+  },
+  "correction": "Replace v1 noncanonical aggregate tags by PROVED deductions conditional on their explicit hypothesis lists.",
+  "document": {
+    "path": "docs/p6-tsmooth-corrected-hypothesis-repair-v2-status-correction.md",
+    "sha256": "b902fe850f2cbfb0ae47115ddcbbcc5b0353c3024feface8bad29bfab2616848"
+  },
+  "epistemic_status": "OBSERVED",
+  "hostile_audit": "DEFERRED_TO_PAPER_STAGE",
+  "immutable_v1": {
+    "path": "artifacts/p6-tsmooth-corrected-hypothesis-repair-v1.json",
+    "sha256": "5097609783b4e076b268255445e94caeb08bc23f93ad2540703c43e1401ca8af"
+  },
+  "immutable_v1_document": {
+    "path": "docs/p6-tsmooth-corrected-hypothesis-repair-v1.md",
+    "sha256": "248ea39d4055fce8ebc4abba1480bad72766ba583ec8ce122a290af499eec603"
+  },
+  "replay": "python3 proof/p6_tsmooth_corrected_hypothesis_repair_v2_status_correction.py --check",
+  "sealer": {
+    "path": "proof/p6_tsmooth_corrected_hypothesis_repair_v2_status_correction.py",
+    "sha256": "f5c771440b01307ea631d23e70b0079ff46f041a5d990d92de871b53d30ee4df"
+  }
+}

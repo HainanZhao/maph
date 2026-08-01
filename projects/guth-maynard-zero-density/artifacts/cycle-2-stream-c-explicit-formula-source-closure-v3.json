@@ -1,0 +1,63 @@
+{
+  "artifact_id": "cycle-2-stream-c-explicit-formula-source-closure-v3",
+  "created_utc": "2026-08-01",
+  "supersedes": "cycle-2-stream-c-explicit-formula-source-closure-v2 for source-authority scope and renderer pinning only; v1 and v2 are preserved",
+  "epistemic_status": "PROVED",
+  "claim_boundary": "PROVED that the pinned author-hosted PDFs are direct primary course sources satisfying the preregistration's reachable-primary-source requirement, with theorem hypotheses and proof convention checked. No byte identity with an OCW/DSpace object and no CC license claim for the author-hosted bytes is made.",
+  "primary_source_scope": {
+    "status": "PROVED",
+    "author_source": "K. S. Kedlaya's own 18.785 course landing and calendar directly host/link the formula and proof course units.",
+    "course_identity": "Both frozen PDFs identify themselves as '18.785: Analytic Number Theory, MIT, spring 2007 (K.S. Kedlaya)'.",
+    "official_independent_metadata": "Pinned DSpace API item metadata for handle 1721.1/101679 names the same course and Kedlaya as author and marks the item a non-withdrawn publication.",
+    "preregistration_effect": "The Cycle-2 requirement is one reachable primary source. It does not require proving byte identity between an author-hosted primary copy and a repository mirror."
+  },
+  "official_course_metadata": {
+    "status": "PROVED",
+    "api_url": "https://dspace.mit.edu/server/api/pid/find?id=1721.1%2F101679",
+    "path": "artifacts/sources/mit-dspace-1721.1-101679-metadata.json",
+    "sha256": "4c1f262bc51efa23993a561f908871d35245ca462df90271d0bf2127283f24c7",
+    "handle": "1721.1/101679",
+    "title": "18.785 Analytic Number Theory, Spring 2007",
+    "author": "Kedlaya, Kiran",
+    "course_specific_rights": "Attribution-NonCommercial-ShareAlike 3.0 Unported"
+  },
+  "distribution_caveat": {
+    "status": "OBSERVED",
+    "statement": "Direct DSpace bitstream retrieval was unavailable in this run, and byte identity between the frozen author-hosted PDFs and any DSpace bitstream was not established. This is a distribution/provenance caveat outside the preregistered mathematical source-authority requirement.",
+    "non_claim": "This record does not assert that author-hosted bytes inherit the OCW/DSpace CC license."
+  },
+  "frozen_primary_units": [
+    {
+      "status": "PROVED",
+      "path": "artifacts/sources/kedlaya-2007-errorbounds-author.pdf",
+      "sha256": "375d96e65a99d7dbfbdc9ca51aa286bb53af7e77dfffa59e167dfcd9b18b919d",
+      "url": "https://kskedlaya.org/18.785/errorbounds.pdf",
+      "locator": "Theorem 1, p. 1",
+      "checked": "For every x>=2,T>0, half-weighted psi formula with |Im rho|<T and the distance-to-other-prime-power remainder."
+    },
+    {
+      "status": "PROVED",
+      "path": "artifacts/sources/kedlaya-2007-von-mangoldt-author.pdf",
+      "sha256": "43cbe51ee69fe552078d90d0c21b165456f3ad67ad64c83df71b9cce3d56ae05",
+      "url": "https://kskedlaya.org/18.785/von-mangoldt.pdf",
+      "locator": "Theorem 1, pp. 1-6; residue computation p. 2",
+      "checked": "Every zero residue is counted with multiplicity; the proof completes."
+    }
+  ],
+  "transfer": {
+    "status": "PROVED",
+    "endpoint": "u=ceil(x)-1, v=floor(x+y); half-weight transfer and v-u=y+O(1) cost O(log x).",
+    "remainder": "At integral u,v, the distance to every other prime power is at least one. For 2<=T<=x the endpoint formula errors are O(x(log x)^3/T).",
+    "height_convention": "The |gamma|<T to literal |rho|<=T mismatch is in unit boundary strips and costs O(x log T/T) by the multiplicity-inclusive HSW+Bui count."
+  },
+  "renderer": {
+    "status": "PROVED",
+    "tool": "mutool",
+    "version": "1.23.10",
+    "role": "Extract pinned PDF text for replayed anchors."
+  },
+  "replay": {
+    "command": "python3 proof/check_cycle_2_stream_c_explicit_formula_sources_v3.py",
+    "check_script_sha256": "0ccb071e86f84e9c5eacffac47f503c1520c73395eb05406123937b4ae7e49f8"
+  }
+}

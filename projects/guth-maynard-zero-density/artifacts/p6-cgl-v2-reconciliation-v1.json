@@ -1,0 +1,1665 @@
+{
+  "artifact_id": "p6-cgl-v2-reconciliation-v1",
+  "canonical_registry": {
+    "all_ids_agree": true,
+    "count": 46,
+    "ids": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "L01",
+      "L02",
+      "L03",
+      "L04",
+      "L05",
+      "L06",
+      "L07",
+      "L08",
+      "L09",
+      "L10",
+      "L11",
+      "L12",
+      "M01",
+      "M02",
+      "M03",
+      "M04",
+      "M05",
+      "M06",
+      "M07",
+      "M08",
+      "Z01",
+      "Z02",
+      "Z03",
+      "Z04",
+      "Z05",
+      "Z06",
+      "Z07",
+      "Z08",
+      "Z09",
+      "Z10",
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08",
+      "F09",
+      "F10"
+    ]
+  },
+  "claim_boundary": "Lightweight reconciliation of Route A-v1 and Route B-v2 only. It does not validate, repair, or promote the CGL preprint; it proves no new zero-density or short-interval result and does not initiate a paper-stage hostile audit.",
+  "conclusion": "OBSERVED: both routes retain all 46 canonical IDs and both L12 branches, and their overall disposition remains OPEN_ANALYTIC_INPUT. PROVED: the q1=q rational/radical margins are checked by Route A-v1 and the B-v2 correction. The L12 two-power treatment and granular row-status vocabulary differ and remain explicitly contained.",
+  "epistemic_status": "OBSERVED",
+  "exact_algebra_reconciliation": {
+    "boundary": "These formulae are exact conditional algebra from displayed source terms. They do not close the CGL zero-density theorem because the analytic and transfer inputs remain open.",
+    "crossings_from_route_b_v1_retained_and_correction_scoped": {
+      "C1_base": "(q1^(1/3)*q^2*T^2)^(1-sigma)",
+      "C1_sigma": "(3+2*lambda)/(6+lambda)",
+      "C2_base": "(q^3*T^(9/4)*q1^(-3/4))^(1-sigma)",
+      "C2_sigma": "(4-2*beta)/(4-beta)",
+      "C3_coefficient": "(37+3*beta-sqrt(9*beta^2+222*beta-71))/12",
+      "C3_polynomial": "20*sigma^2-(43-3*beta)*sigma+24-6*beta",
+      "C4_coefficient": "30/13",
+      "C4_sigma": "7/10"
+    },
+    "route_a_v1_identities": {
+      "2<=7/3": true,
+      "7/3-(10-sqrt(10))/3": "(sqrt(10)-3)/3 > 0",
+      "7/3-30/13": "1/39",
+      "7/3-9/4": "1/12",
+      "B_at_beta_1": "(10-sqrt(10))/3"
+    },
+    "route_b_v2_corrected_checks": {
+      "2<=7/3": {
+        "cleared_integer_check": "2*3<=7",
+        "result": true
+      },
+      "7/3-30/13": {
+        "cleared_integer_check": "7*13-30*3=1",
+        "result": "1/39"
+      },
+      "7/3-9/4": {
+        "cleared_integer_check": "7*4-9*3=1",
+        "result": "1/12"
+      },
+      "B_at_beta_1": {
+        "normalization_check": "40^2-160=1440; sqrt(160)=4sqrt(10)",
+        "result": "(10-sqrt(10))/3"
+      },
+      "sqrt(10)>3": {
+        "radicand_check": "10>9",
+        "result": true
+      }
+    },
+    "status": "PROVED_EXACT_CONDITIONAL_ALGEBRA_ONLY"
+  },
+  "l12_subcheck_reconciliation": {
+    "canonical_row": "L12",
+    "consequence": "The two-power subcheck is not promoted. Route A leaves its details open, while Route B records the source's analogous decomposition.",
+    "subcheck_label_mapping": {
+      "L12.odd_prime": {
+        "route_a_id": "odd_prime",
+        "route_b_id": "L12.odd_prime"
+      },
+      "L12.two_power": {
+        "route_a_id": "two_power",
+        "route_b_id": "L12.two_power"
+      }
+    },
+    "subchecks": [
+      {
+        "comparison": "BOTH_RECORD_ODD_PRIME_FACTORIZATION",
+        "id": "L12.odd_prime",
+        "route_a": {
+          "disposition": "SOURCE_TRACE_COMPLETE",
+          "epistemic_status": "PROVED",
+          "formula": "a=a1+p^(j-k)a2 gives chi=f chi1",
+          "id": "odd_prime",
+          "locator": "511--518"
+        },
+        "route_b": {
+          "disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+          "formula": "a=a1+p^(j-k)a2; at most p^(j-k)=phi(q)/phi(q1) 1-bounded factors",
+          "id": "L12.odd_prime"
+        }
+      },
+      {
+        "comparison": "DISAGREEMENT_RETAINED_ROUTE_A_OPEN_ROUTE_B_RECORDED_SOURCE_DEPENDENT",
+        "id": "L12.two_power",
+        "route_a": {
+          "disposition": "OPEN_ANALYTIC_INPUT:L12_TWO_POWER_DETAILS_NOT_EXPANDED",
+          "epistemic_status": "OBSERVED",
+          "formula": "source says 'may use the same argument' with generators (-1,5)",
+          "id": "two_power",
+          "locator": "518"
+        },
+        "route_b": {
+          "disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+          "formula": "units represented by (-1)^v5^(v'); stated analogous split",
+          "id": "L12.two_power"
+        }
+      }
+    ]
+  },
+  "open_analytic_obligations": {
+    "additional_route_b_v2_retained_obligation": "S03_MULTIPLICITY_NOT_STATED",
+    "forbidden_repairs_preserved": [
+      "no q<=T^C restriction",
+      "no log^2(qT) substitution",
+      "no invented T-smooth definition",
+      "no unsupported primitive-to-all conductor transfer"
+    ],
+    "required_preregistered_obligations": [
+      "S06_EXTERNAL_INPUTS",
+      "Z03_TAIL_X_RANGE",
+      "Z05_PRIMITIVE_EULER_FACTORS",
+      "Z06_CONDUCTOR_SUM_Q1",
+      "F08_T_SMOOTH_UNDEFINED"
+    ],
+    "result": "OPEN_ANALYTIC_INPUT",
+    "route_a_directly_open_rows": [
+      "S03",
+      "S04",
+      "S06",
+      "L04",
+      "L06",
+      "M07",
+      "Z03",
+      "Z04",
+      "Z05",
+      "Z06",
+      "Z07",
+      "Z08",
+      "Z10",
+      "F01",
+      "F02",
+      "F08",
+      "F10"
+    ],
+    "route_a_normalized_labels": [
+      "F08_T_SMOOTH_UNDEFINED",
+      "S06_EXTERNAL_INPUTS",
+      "Z03_TAIL_X_RANGE",
+      "Z05_PRIMITIVE_EULER_FACTORS",
+      "Z06_CONDUCTOR_SUM_Q1"
+    ],
+    "route_a_top_level_raw_labels": [
+      "F08_T_SMOOTH_UNDEFINED",
+      "PRIMITIVE_TO_ALL",
+      "S06_EXTERNAL_INPUTS",
+      "Z03_TAIL_X_RANGE"
+    ],
+    "route_b_v1_directly_open_rows_inherited_by_v2": [
+      "S03",
+      "S04",
+      "S06",
+      "L04",
+      "L06",
+      "L11",
+      "M02",
+      "M05",
+      "M07",
+      "Z03",
+      "Z04",
+      "Z05",
+      "Z06",
+      "Z07",
+      "Z08",
+      "F01",
+      "F02",
+      "F08"
+    ],
+    "route_b_v2_inherited_raw_labels": [
+      "F08_T_SMOOTH_UNDEFINED",
+      "S03_MULTIPLICITY_NOT_STATED",
+      "S06_EXTERNAL_INPUTS",
+      "Z03_TAIL_X_RANGE",
+      "Z05_PRIMITIVE_EULER_FACTORS",
+      "Z06_CONDUCTOR_SUM_Q1"
+    ],
+    "shared_open_after_label_normalization": [
+      "S06_EXTERNAL_INPUTS",
+      "Z03_TAIL_X_RANGE",
+      "Z05_PRIMITIVE_EULER_FACTORS",
+      "Z06_CONDUCTOR_SUM_Q1",
+      "F08_T_SMOOTH_UNDEFINED"
+    ]
+  },
+  "overall_disposition": "OPEN_ANALYTIC_INPUT",
+  "reconciled_authorities": {
+    "preregistration": {
+      "artifact": "artifacts/cycle-4-p6-cgl-v2-reconstruction-preregistration-v1.json",
+      "sha256": "1f9c195fa2dff8a58b754f10a58357384c5e3840839cc48269dd7b595a8ab36a"
+    },
+    "route_a": {
+      "artifact": "artifacts/p6-cgl-v2-route-a-v1.json",
+      "sha256": "f94a7b58f88ccd53ec637349a820bf7df6b86da894a9f9fe48bee58e56d732bd",
+      "version": "v1"
+    },
+    "route_b": {
+      "authority_statement": "B-v1 row reconstruction with B-v2 required for the q1=q exact-margin check.",
+      "exact_margin_correction": {
+        "artifact": "artifacts/p6-cgl-v2-route-b-v2-correction.json",
+        "sha256": "42484c02cd9d0defc83224acdc8a6c6763507661c5d0f0875ab934c45b3fa670",
+        "version": "v2"
+      },
+      "source_reconstruction": {
+        "artifact": "artifacts/p6-cgl-v2-route-b-v1.json",
+        "sha256": "d107f496c8fd4e52a91eb2637c7edeab0519537fd91d0c3b8c2bf7da7b79f737",
+        "version": "v1"
+      }
+    }
+  },
+  "replay": {
+    "command": "python3 proof/reconcile_p6_cgl_v2_routes_v1.py --check",
+    "optimized": 0,
+    "python_implementation": "cpython",
+    "python_version": "3.12.3",
+    "rss_cap_kib": 262144,
+    "wall_cap_ns": 60000000000
+  },
+  "route_b_v1_defect_contained": {
+    "affected_claim": "Route B v1's machine-checked support for the displayed 1/39 margin.",
+    "containment": "The v1 artifact remains preserved; no theorem was promoted from it.",
+    "tag": "ROUTE_B_V1_MARGIN_CHECK_IRRELEVANT",
+    "v1_assertion": "7 * 13 - 30 == 61",
+    "why_insufficient": "It is true but is not the cleared-denominator identity for 7/3 - 30/13 = 1/39."
+  },
+  "route_status_difference_rows": [
+    "L11",
+    "M02",
+    "M05",
+    "Z10",
+    "F10"
+  ],
+  "row_comparisons": [
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "tar member equals pinned TeX; 2468 logical lines",
+        "route_b_formula_or_check": "TeX/tar/PDF byte identity"
+      },
+      "id": "S01",
+      "obligation": "TeX/tar-member/PDF identity and complete-source boundary",
+      "route_b_row_blockers": [],
+      "source_locator_comparison": {
+        "comparison": "LOCATOR_COMPARISON_NEEDS_MANUAL_FOLLOW_UP",
+        "preregistration_locator": "entire TeX; tar member; PDF",
+        "route_a_locator": "CGL-v2 TeX lines entire source",
+        "route_b_region": "complete pinned source package"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_IDENTITY_COMPLETE",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "title and abstract claim a 7/3 exponent",
+        "route_b_formula_or_check": "three authors; collaboration statement; arXiv preprint"
+      },
+      "id": "S02",
+      "obligation": "authors, collaboration/version statement, title, and preprint status",
+      "route_b_row_blockers": [],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "77--105",
+        "route_a_locator": "CGL-v2 TeX lines 77--105",
+        "route_b_region": "TeX 77--105"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_METADATA_COMPLETE_PREPRINT",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "N(sigma,T,chi) source definition",
+        "route_b_formula_or_check": "N(sigma,T,chi): sigma<=Re rho<=1, |Im rho|<=T"
+      },
+      "id": "S03",
+      "obligation": "zero-count definition, two-sided height, rectangle, and multiplicity audit",
+      "route_b_row_blockers": [
+        "S03_MULTIPLICITY_NOT_STATED"
+      ],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "95--101, 141--148, 158--185",
+        "route_a_locator": "CGL-v2 TeX lines 95--101,141--148,158--185",
+        "route_b_region": "TeX 95--101,141--148,158--185"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "OPEN_ANALYTIC_INPUT:S03_MULTIPLICITY_CONVENTION_UNSTATED",
+        "route_a_normalized": "OPEN_ANALYTIC_INPUT",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_MULTIPLICITY",
+        "route_b_normalized": "OPEN_ANALYTIC_INPUT"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_MULTIPLICITY"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "domains are not reconciled at low T",
+        "route_b_formula_or_check": "LVE has N>=(qT)^(2/3); detector declares X,Y,T>1"
+      },
+      "id": "S04",
+      "obligation": "domains for q,T,X,Y,sigma, endpoints, and qT-to-infinity interpretation",
+      "route_b_row_blockers": [
+        "Z03_TAIL_X_RANGE"
+      ],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "114--128, 158--187, 268--270, 2114",
+        "route_a_locator": "CGL-v2 TeX lines 114--128,158--187,2114",
+        "route_b_region": "TeX 114--128,158--187,2114"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "OPEN_ANALYTIC_INPUT:S04_LOW_T_ENDPOINT_SCOPE",
+        "route_a_normalized": "OPEN_ANALYTIC_INPUT",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_ENDPOINT_SCOPE",
+        "route_b_normalized": "OPEN_ANALYTIC_INPUT"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_ENDPOINT_SCOPE"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "(qT)^epsilon losses",
+        "route_b_formula_or_check": "A lessapprox B means C(eps)(qT)^eps B for sufficiently large qT"
+      },
+      "id": "S05",
+      "obligation": "o(1), epsilon, lessapprox, constants, and limiting-order convention",
+      "route_b_row_blockers": [],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "122--126, 268--273",
+        "route_a_locator": "CGL-v2 TeX lines 122--126,268--273",
+        "route_b_region": "TeX 268--273"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "inventory recorded; external theorem hypotheses not all checked",
+        "route_b_formula_or_check": "inventory: IK 9.12, Huxley 1975, Montgomery Chs.10/12, Davenport Chs.9/10/16, Heath-Brown, GM lemmas"
+      },
+      "id": "S06",
+      "obligation": "external-input inventory with exact theorem hypotheses and primary-source locators",
+      "route_b_row_blockers": [
+        "S06_EXTERNAL_INPUTS"
+      ],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "133--140, 537--560, 1691--1695, 2112, 2158, 2169, 2414--2467",
+        "route_a_locator": "CGL-v2 TeX lines 133--140,537--560,1691--1695,2112,2158,2169,2414--2467",
+        "route_b_region": "TeX 133--140,537--560,1691--1695,2112,2158,2169,2414--2467"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "OPEN_ANALYTIC_INPUT:S06_EXTERNAL_INPUTS",
+        "route_a_normalized": "OPEN_ANALYTIC_INPUT",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY",
+        "route_b_normalized": "OPEN_ANALYTIC_INPUT"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "OBSERVED",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "divisor-sensitive Partial LVE",
+        "route_b_formula_or_check": "primitive chi mod q; |a_n|<=1; pair separation; |D_N|>=V; N>=(qT)^(2/3)"
+      },
+      "id": "L01",
+      "obligation": "Partial-LVE primitive-character, coefficient, separation, threshold, and length hypotheses",
+      "route_b_row_blockers": [],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "114--123",
+        "route_a_locator": "CGL-v2 TeX lines 114--123",
+        "route_b_region": "TeX 114--123"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_THEOREM_RESTATED_DEPENDS_ON_M01--M08",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "N^2V^-2+q q1^-1/2 T^1/2 N^3V^-4+q q1^1/3 T N^2V^-4+qT N^(12/5)V^-4",
+        "route_b_formula_or_check": "N^2V^-2 + q q1^-1/2 T^1/2 N^3V^-4 + q q1^1/3 T N^2V^-4 + qT N^(12/5)V^-4"
+      },
+      "id": "L02",
+      "obligation": "divisor-sensitive four-term Partial-LVE formula",
+      "route_b_row_blockers": [],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "122--124",
+        "route_a_locator": "CGL-v2 TeX lines 122--124",
+        "route_b_region": "TeX 122--124"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_THEOREM_RESTATED_DEPENDS_ON_M01--M08",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "N^2V^-2+(qT)^1/2 N^3V^-4+q^(4/3)TN^2V^-4+qTN^(12/5)V^-4",
+        "route_b_formula_or_check": "N^2V^-2 +(qT)^1/2N^3V^-4+q^(4/3)TN^2V^-4+qTN^(12/5)V^-4"
+      },
+      "id": "L03",
+      "obligation": "all-case four-term Partial-LVE formula",
+      "route_b_row_blockers": [],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "125--127",
+        "route_a_locator": "CGL-v2 TeX lines 125--127",
+        "route_b_region": "TeX 125--127"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_THEOREM_RESTATED_DEPENDS_ON_M01--M08",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "|W|<=(qT)^o(1)(N^2V^-2+qTNV^-2)",
+        "route_b_formula_or_check": "qT MVT: N^2V^-2+qTNV^-2"
+      },
+      "id": "L04",
+      "obligation": "low-value qT mean-value comparator and valid range",
+      "route_b_row_blockers": [
+        "S06_EXTERNAL_INPUTS"
+      ],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "133--136, 421",
+        "route_a_locator": "CGL-v2 TeX lines 133--136,421",
+        "route_b_region": "TeX 133--140,421"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "OPEN_ANALYTIC_INPUT:L04_IK_THM_9_12_UNREAD",
+        "route_a_normalized": "OPEN_ANALYTIC_INPUT",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY",
+        "route_b_normalized": "OPEN_ANALYTIC_INPUT"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "W=W1 union W2 union W3 and |W'|>=|W|/(qT)^epsilon",
+        "route_b_formula_or_check": "three-piece smoothing; W thinning to (qT)^eps separation"
+      },
+      "id": "L05",
+      "obligation": "intermediate-value reduction, three-piece smoothing, and separation thinning",
+      "route_b_row_blockers": [],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "375--443",
+        "route_a_locator": "CGL-v2 TeX lines 375--443",
+        "route_b_region": "TeX 375--443"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE_DEPENDS_ON_AUXILIARY",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "|W|<=(qT)^o(1)(N^2V^-2+qTN^4V^-6)",
+        "route_b_formula_or_check": "HMH: N^2V^-2+qTN^4V^-6"
+      },
+      "id": "L06",
+      "obligation": "high-value HMH comparator and valid range",
+      "route_b_row_blockers": [
+        "S06_EXTERNAL_INPUTS"
+      ],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "137--140, 421, 487--500",
+        "route_a_locator": "CGL-v2 TeX lines 137--140,421,487--500",
+        "route_b_region": "TeX 137--140,421,487--500"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "OPEN_ANALYTIC_INPUT:L06_HUXLEY_1975_UNREAD",
+        "route_a_normalized": "OPEN_ANALYTIC_INPUT",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY",
+        "route_b_normalized": "OPEN_ANALYTIC_INPUT"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "|W|<=(qT)^(o(1)+epsilon)N^(2-2sigma); epsilon sent slowly to zero",
+        "route_b_formula_or_check": "qT<=N implies MVT first term after epsilon thinning"
+      },
+      "id": "L07",
+      "obligation": "qT<=N case and epsilon-limit step",
+      "route_b_row_blockers": [],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "445--448",
+        "route_a_locator": "CGL-v2 TeX lines 445--448",
+        "route_b_region": "TeX 445--448"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE_DEPENDS_ON_L04",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "N^(2-2sigma)+(qT)^1/2 N^(3-4sigma) <= N^(2-2sigma)+qTN^((12-20sigma)/5)",
+        "route_b_formula_or_check": "N<=qT<=N^(6/5) applies Auxiliary proposition"
+      },
+      "id": "L08",
+      "obligation": "N<=qT<=N^(6/5) Auxiliary-proposition case",
+      "route_b_row_blockers": [],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "449--452",
+        "route_a_locator": "CGL-v2 TeX lines 449--452",
+        "route_b_region": "TeX 449--452"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE_DEPENDS_ON_M01--M08",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "|W| lessapprox q q1^(1/3) T N^(2-4sigma)",
+        "route_b_formula_or_check": "q1>N^(6/5): choose T0=1, q q1^(1/3) T N^(2-4sigma)"
+      },
+      "id": "L09",
+      "obligation": "subdivision case q1>N^(6/5)",
+      "route_b_row_blockers": [],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "454--478",
+        "route_a_locator": "CGL-v2 TeX lines 454--478",
+        "route_b_region": "TeX 454--478"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE_DEPENDS_ON_L12",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "|W| lessapprox qT N^((12-20sigma)/5)",
+        "route_b_formula_or_check": "N^(6/5)/T<q1<N^(6/5): T0=N^(6/5)/q1"
+      },
+      "id": "L10",
+      "obligation": "subdivision case N^(6/5)/T<q1<N^(6/5)",
+      "route_b_row_blockers": [],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "454--470, 480--485",
+        "route_a_locator": "CGL-v2 TeX lines 454--485",
+        "route_b_region": "TeX 454--470,480--485"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE_DEPENDS_ON_L12",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "|W| lessapprox q q1^-1/2 T^1/2 N^(3-4sigma)",
+        "route_b_formula_or_check": "q1<N^(6/5)/T; combine HMH with subdivision"
+      },
+      "id": "L11",
+      "obligation": "subdivision case q1<N^(6/5)/T including HMH combination",
+      "route_b_row_blockers": [
+        "S06_EXTERNAL_INPUTS"
+      ],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "454--470, 487--504",
+        "route_a_locator": "CGL-v2 TeX lines 454--504",
+        "route_b_region": "TeX 454--470,487--504"
+      },
+      "status_comparison": {
+        "comparison": "ROUTE_STATUS_DIFFERENCE_RETAINED",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE_DEPENDS_ON_L06_AND_L12",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY",
+        "route_b_normalized": "OPEN_ANALYTIC_INPUT"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "chi=chi1 f; #S<=phi(q)/phi(q1)",
+        "route_b_formula_or_check": "odd_prime: primitive-root factorization; two_power: (-1,5) decomposition"
+      },
+      "id": "L12",
+      "obligation": "character subdivision for odd-prime and 2-power moduli",
+      "route_b_row_blockers": [],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "507--519",
+        "route_a_locator": "CGL-v2 TeX lines 507--519",
+        "route_b_region": "TeX 507--519"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "|W| lessapprox N^(2-2sigma)+(qT)^1/2N^(3-4sigma)+(qT)^(4/3)N^(2-4sigma)",
+        "route_b_formula_or_check": "smoothed Auxiliary proposition for S_N with N>=(qT)^(2/3)/2"
+      },
+      "id": "M01",
+      "obligation": "smoothed Auxiliary proposition, bump normalization, hypotheses, and conclusion",
+      "route_b_row_blockers": [],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "375--387",
+        "route_a_locator": "CGL-v2 TeX lines 375--387",
+        "route_b_region": "TeX 375--387"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_PROPOSITION_RESTATED_DEPENDS_ON_M02--M08",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "large values reduce to s1(M_W) and trace subtraction",
+        "route_b_formula_or_check": "matrix M_W; singular-value reduction; trace subtraction"
+      },
+      "id": "M02",
+      "obligation": "matrix and singular-value reductions, trace subtraction, constants, and hypotheses",
+      "route_b_row_blockers": [
+        "S06_EXTERNAL_INPUTS"
+      ],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "528--550",
+        "route_a_locator": "CGL-v2 TeX lines 528--550",
+        "route_b_region": "TeX 528--550"
+      },
+      "status_comparison": {
+        "comparison": "ROUTE_STATUS_DIFFERENCE_RETAINED",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE_DEPENDS_ON_GM_LEMMA_4_1",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY",
+        "route_b_normalized": "OPEN_ANALYTIC_INPUT"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "Hilbert--Schmidt/cubic trace decomposition with diagonal subtraction",
+        "route_b_formula_or_check": "Poisson cubic trace, diagonal removal, hhat decay"
+      },
+      "id": "M03",
+      "obligation": "Hilbert-Schmidt/cubic-trace expansion, Poisson conventions, diagonal subtraction, and errors",
+      "route_b_row_blockers": [],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "552--660",
+        "route_a_locator": "CGL-v2 TeX lines 552--660",
+        "route_b_region": "TeX 552--660"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "source S1 bound used in final auxiliary calculation",
+        "route_b_formula_or_check": "S1 is negligible"
+      },
+      "id": "M04",
+      "obligation": "S1 partition and estimate with all ranges",
+      "route_b_row_blockers": [],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "661--733",
+        "route_a_locator": "CGL-v2 TeX lines 661--733",
+        "route_b_region": "TeX 661--733"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "source S2 bound used in final auxiliary calculation",
+        "route_b_formula_or_check": "S2 lessapprox qT|W|N^(3-2sigma)"
+      },
+      "id": "M05",
+      "obligation": "S2, approximate functional equation, dyadic variables, and bound",
+      "route_b_row_blockers": [
+        "S06_EXTERNAL_INPUTS"
+      ],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "734--1128",
+        "route_a_locator": "CGL-v2 TeX lines 734--1128",
+        "route_b_region": "TeX 734--1128"
+      },
+      "status_comparison": {
+        "comparison": "ROUTE_STATUS_DIFFERENCE_RETAINED",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE_DEPENDS_ON_EXTERNAL_AFE_INPUT",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY",
+        "route_b_normalized": "OPEN_ANALYTIC_INPUT"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "affine bound combines M^6 L1^2 and M^4 L2^2-type terms",
+        "route_b_formula_or_check": "J(f) <= phi(q)M^6||f||_1^2+phi(q)^2M^4||f||_2^2"
+      },
+      "id": "M06",
+      "obligation": "affine/GCD-twist estimate, induction, Fourier decay, and norm comparisons",
+      "route_b_row_blockers": [],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "1129--1686",
+        "route_a_locator": "CGL-v2 TeX lines 1129--1686",
+        "route_b_region": "TeX 1129--1686"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "E(W) lessapprox |W|N^(4-4sigma)+|W|^(21/8)(qT)^(1/4)N^(1-2sigma)+|W|^3N^(1-2sigma)",
+        "route_b_formula_or_check": "E(W) bound and Heath-Brown double-zeta input"
+      },
+      "id": "M07",
+      "obligation": "character-time energy, Heath-Brown input, hypotheses, and closing estimate",
+      "route_b_row_blockers": [
+        "S06_EXTERNAL_INPUTS"
+      ],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "1688--1709, 1963--1971",
+        "route_a_locator": "CGL-v2 TeX lines 1688--1709,1963--1971",
+        "route_b_region": "TeX 1688--1709,1963--1971"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "OPEN_ANALYTIC_INPUT:M07_HEATH_BROWN_HYPOTHESES_UNREAD",
+        "route_a_normalized": "OPEN_ANALYTIC_INPUT",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY",
+        "route_b_normalized": "OPEN_ANALYTIC_INPUT"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "source combines S1,S2,S3 to the three-term Auxiliary proposition",
+        "route_b_formula_or_check": "S3 lessapprox (qT)^2|W|^(3/2)+qT|W|N^(3-2sigma)+..."
+      },
+      "id": "M08",
+      "obligation": "S3 estimate and dominance calculation closing the Auxiliary proposition",
+      "route_b_row_blockers": [],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "1974--2105",
+        "route_a_locator": "CGL-v2 TeX lines 1974--2105",
+        "route_b_region": "TeX 1974--2105"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE_DEPENDS_ON_M02--M07",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "M_X, contour shift, z=0 and principal-character z=1-s residues",
+        "route_b_formula_or_check": "Mellin identity; residues z=0 and z=1-s for principal chi"
+      },
+      "id": "Z01",
+      "obligation": "Mellin identity, contour shift, and both residues",
+      "route_b_row_blockers": [],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "2114--2134",
+        "route_a_locator": "CGL-v2 TeX lines 2114--2134",
+        "route_b_region": "TeX 2114--2134"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "weighted Dirichlet tail is o(1)",
+        "route_b_formula_or_check": "sum tail beyond Y log^2Y is o(1) as Y->infty"
+      },
+      "id": "Z02",
+      "obligation": "weighted Dirichlet-series sum tail beyond Y log^2 Y",
+      "route_b_row_blockers": [],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "2140--2143",
+        "route_a_locator": "CGL-v2 TeX lines 2140--2143",
+        "route_b_region": "TeX 2140--2143"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "no q<=T^C imposed; T=1 called worst",
+        "route_b_formula_or_check": "integral tail uses T->infty if X is polynomially bounded in T; later X=(qT)^eps"
+      },
+      "id": "Z03",
+      "obligation": "integral tail, X-versus-T hypothesis, uniform q,T scope, and T=1 endpoint",
+      "route_b_row_blockers": [
+        "Z03_TAIL_X_RANGE"
+      ],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "2140, 2169, 2411--2413",
+        "route_a_locator": "CGL-v2 TeX lines 2140,2169,2411--2413",
+        "route_b_region": "TeX 2140,2169,2411--2413"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "OPEN_ANALYTIC_INPUT:Z03_TAIL_X_RANGE",
+        "route_a_normalized": "OPEN_ANALYTIC_INPUT",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_TAIL",
+        "route_b_normalized": "OPEN_ANALYTIC_INPUT"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "OBSERVED",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_TAIL"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "low-height contribution claimed O((log qT)^2)",
+        "route_b_formula_or_check": "principal residue implies |t|<=A log(qT), at most O(log^2(qT)) zeros"
+      },
+      "id": "Z04",
+      "obligation": "principal-character residue and low-height-zero contribution after primitive restriction",
+      "route_b_row_blockers": [
+        "S06_EXTERNAL_INPUTS"
+      ],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "2134--2138",
+        "route_a_locator": "CGL-v2 TeX lines 2134--2138",
+        "route_b_region": "TeX 2134--2138"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "OPEN_ANALYTIC_INPUT:Z04_ZERO_COUNT_INPUT_UNREAD",
+        "route_a_normalized": "OPEN_ANALYTIC_INPUT",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY",
+        "route_b_normalized": "OPEN_ANALYTIC_INPUT"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "source only announces summing over factors",
+        "route_b_formula_or_check": "induced L(s,chi)=L(s,chi*) product_{p|q,p not|q*}(1-chi*(p)p^-s)"
+      },
+      "id": "Z05",
+      "obligation": "induced-character Euler factors and zero-set equality in sigma>1/2",
+      "route_b_row_blockers": [
+        "Z05_PRIMITIVE_EULER_FACTORS"
+      ],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "2109, 2136--2138",
+        "route_a_locator": "CGL-v2 TeX lines 2109,2136--2138",
+        "route_b_region": "TeX 2109,2136--2138"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "OPEN_ANALYTIC_INPUT:Z05_PRIMITIVE_EULER_FACTORS",
+        "route_a_normalized": "OPEN_ANALYTIC_INPUT",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_PRIMITIVE_TO_ALL",
+        "route_b_normalized": "OPEN_ANALYTIC_INPUT"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "OBSERVED",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_PRIMITIVE_TO_ALL"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "NOze has sum over all chi but proof restricts primitive",
+        "route_b_formula_or_check": "sum final primitive estimates over conductor divisors d|q"
+      },
+      "id": "Z06",
+      "obligation": "conductor partition, multiplicity/divisor loss, and q1-sensitive termwise domination",
+      "route_b_row_blockers": [
+        "Z06_CONDUCTOR_SUM_Q1"
+      ],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "2109, 2148--2152",
+        "route_a_locator": "CGL-v2 TeX lines 2109,2148--2152",
+        "route_b_region": "TeX 2109,2148--2152"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "OPEN_ANALYTIC_INPUT:Z06_CONDUCTOR_SUM_Q1",
+        "route_a_normalized": "OPEN_ANALYTIC_INPUT",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_PRIMITIVE_TO_ALL",
+        "route_b_normalized": "OPEN_ANALYTIC_INPUT"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "OBSERVED",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_PRIMITIVE_TO_ALL"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "|tilde R_j| gg |R_j|/((qT)^epsilon log(qT))",
+        "route_b_formula_or_check": "well-spaced subset loses (qT)^eps log(qT)"
+      },
+      "id": "Z07",
+      "obligation": "saturated well-spacing selection and local zero-count input",
+      "route_b_row_blockers": [
+        "S06_EXTERNAL_INPUTS"
+      ],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "2154--2158",
+        "route_a_locator": "CGL-v2 TeX lines 2154--2158",
+        "route_b_region": "TeX 2154--2158"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "OPEN_ANALYTIC_INPUT:Z07_DAVENPORT_CH16_UNREAD",
+        "route_a_normalized": "OPEN_ANALYTIC_INPUT",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY",
+        "route_b_normalized": "OPEN_ANALYTIC_INPUT"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "|R2| lessapprox (qT)^(2(1-sigma)) for Y=(qT)^1/2",
+        "route_b_formula_or_check": "class-II fourth moment, Y=(qT)^(1/2), gives (qT)^(2(1-sigma))"
+      },
+      "id": "Z08",
+      "obligation": "class-II maximizers, shifted spacing, fourth moment, and Y=(qT)^(1/2)",
+      "route_b_row_blockers": [
+        "S06_EXTERNAL_INPUTS",
+        "Z03_TAIL_X_RANGE"
+      ],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "2160--2173",
+        "route_a_locator": "CGL-v2 TeX lines 2160--2173",
+        "route_b_region": "TeX 2160--2173"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "OPEN_ANALYTIC_INPUT:Z08_SHIFTED_SPACING_AND_MONTGOMERY_INPUT",
+        "route_a_normalized": "OPEN_ANALYTIC_INPUT",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY",
+        "route_b_normalized": "OPEN_ANALYTIC_INPUT"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "|D_N| gtrapprox N^sigma, |a_n|<=1",
+        "route_b_formula_or_check": "class-I dyadic representative, a_n=varpi c_n 1-bounded, N range"
+      },
+      "id": "Z09",
+      "obligation": "class-I dyadic selection, normalization, representative loss, and length range",
+      "route_b_row_blockers": [],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "2176--2197",
+        "route_a_locator": "CGL-v2 TeX lines 2176--2197",
+        "route_b_region": "TeX 2176--2197"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE_DEPENDS_ON_Z01--Z07",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "(qT)^a<=N^k<=(qT)^(3a/2) and three length cases",
+        "route_b_formula_or_check": "bounded k and three length cases for D_N^k"
+      },
+      "id": "Z10",
+      "obligation": "bounded k, powered coefficient control, and complete length-case coverage",
+      "route_b_row_blockers": [],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "2199--2258",
+        "route_a_locator": "CGL-v2 TeX lines 2199--2258",
+        "route_b_region": "TeX 2199--2258"
+      },
+      "status_comparison": {
+        "comparison": "ROUTE_STATUS_DIFFERENCE_RETAINED",
+        "route_a_disposition": "OPEN_ANALYTIC_INPUT:Z10_POWERED_COEFFICIENT_AND_LENGTH_COVERAGE",
+        "route_a_normalized": "OPEN_ANALYTIC_INPUT",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "coefficient 3/(2-sigma)",
+        "route_b_formula_or_check": "Ingham analogue 3(1-sigma)/(2-sigma) for sigma<=0.7"
+      },
+      "id": "F01",
+      "obligation": "outer sigma<=0.7 range via the stated Ingham analogue",
+      "route_b_row_blockers": [
+        "S06_EXTERNAL_INPUTS"
+      ],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "141--149, 2109",
+        "route_a_locator": "CGL-v2 TeX lines 141--149,2109",
+        "route_b_region": "TeX 141--149,2109"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "OPEN_ANALYTIC_INPUT:F01_INGHAM_ANALOGUE_UNREAD",
+        "route_a_normalized": "OPEN_ANALYTIC_INPUT",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY",
+        "route_b_normalized": "OPEN_ANALYTIC_INPUT"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "coefficient 3/(3sigma-1)",
+        "route_b_formula_or_check": "Huxley analogue 3(1-sigma)/(3sigma-1) for sigma>=0.8"
+      },
+      "id": "F02",
+      "obligation": "outer sigma>=0.8 range via the stated Huxley analogue",
+      "route_b_row_blockers": [
+        "S06_EXTERNAL_INPUTS"
+      ],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "145--149, 2109",
+        "route_a_locator": "CGL-v2 TeX lines 145--149,2109",
+        "route_b_region": "TeX 145--149,2109"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "OPEN_ANALYTIC_INPUT:F02_HUXLEY_ANALOGUE_UNREAD",
+        "route_a_normalized": "OPEN_ANALYTIC_INPUT",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY",
+        "route_b_normalized": "OPEN_ANALYTIC_INPUT"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_EXTERNAL_DEPENDENCY"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "four terms: 15/(3+5sigma), q1 term, q1^-1/2 term, energy term",
+        "route_b_formula_or_check": "four middle terms in q1 and qT"
+      },
+      "id": "F03",
+      "obligation": "middle-range four-term zero-density lemma and hypotheses",
+      "route_b_row_blockers": [
+        "Z03_TAIL_X_RANGE",
+        "Z05_PRIMITIVE_EULER_FACTORS",
+        "Z06_CONDUCTOR_SUM_Q1"
+      ],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "2261--2270",
+        "route_a_locator": "CGL-v2 TeX lines 2261--2270",
+        "route_b_region": "TeX 2261--2270,2357--2373"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE_DEPENDS_ON_L01--Z10",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "a=w_q1; derive first and third terms",
+        "route_b_formula_or_check": "Case 1 divisor interval and q1^(1/3) term"
+      },
+      "id": "F04",
+      "obligation": "divisor Case 1 and complete interval coverage",
+      "route_b_row_blockers": [],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "2276--2310",
+        "route_a_locator": "CGL-v2 TeX lines 2276--2310",
+        "route_b_region": "TeX 2276--2310"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "a=v; middle intervals controlled",
+        "route_b_formula_or_check": "Case 2 and qT term"
+      },
+      "id": "F05",
+      "obligation": "divisor Case 2 and complete interval coverage",
+      "route_b_row_blockers": [],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "2276--2282, 2311--2325",
+        "route_a_locator": "CGL-v2 TeX lines 2276--2325",
+        "route_b_region": "TeX 2276--2282,2311--2325"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "a=z_q1; q1^-1/2 term retained",
+        "route_b_formula_or_check": "Case 3 and q1T negative-half term"
+      },
+      "id": "F06",
+      "obligation": "divisor Case 3, feasibility, and complete interval coverage",
+      "route_b_row_blockers": [],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "2276--2282, 2326--2336",
+        "route_a_locator": "CGL-v2 TeX lines 2276--2336",
+        "route_b_region": "TeX 2276--2282,2326--2336"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "(qT)^(15(1-sigma)/(3+5sigma))+(q^(4/3)T)^(3(1-sigma)/(1+sigma))",
+        "route_b_formula_or_check": "Case 4 compares q1=q terms"
+      },
+      "id": "F07",
+      "obligation": "divisor Case 4 and comparison with desired terms",
+      "route_b_row_blockers": [],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "2276--2282, 2337--2345",
+        "route_a_locator": "CGL-v2 TeX lines 2276--2345",
+        "route_b_region": "TeX 2276--2282,2337--2345"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "SOURCE_TRACE_COMPLETE",
+        "route_a_normalized": "SOURCE_DEPENDENT_RECORDED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "RECONSTRUCTED_SOURCE_DEPENDENT"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "RAW_DUAL_ROUTE_FORMULAE_RETAINED_NOT_STRING_NORMALIZED",
+        "route_a_formula_or_chain_step": "claimed pure 30/13 envelope cannot be reconstructed",
+        "route_b_formula_or_check": "T-smooth is used to build divisor chain"
+      },
+      "id": "F08",
+      "obligation": "T-smooth definition, divisor-chain existence, endpoints, and coverage",
+      "route_b_row_blockers": [
+        "F08_T_SMOOTH_UNDEFINED"
+      ],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "182--185, 2266--2269, 2346--2350, 2410",
+        "route_a_locator": "CGL-v2 TeX lines 182--185,2266--2269,2346--2350,2410",
+        "route_b_region": "TeX 182--185,2266--2269,2346--2350,2410"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "OPEN_ANALYTIC_INPUT:F08_T_SMOOTH_UNDEFINED",
+        "route_a_normalized": "OPEN_ANALYTIC_INPUT",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_UNDEFINED_TERM",
+        "route_b_normalized": "OPEN_ANALYTIC_INPUT"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "OBSERVED",
+        "route_b_disposition": "OPEN_ANALYTIC_INPUT_UNDEFINED_TERM"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "EXACT_CROSSINGS_COMPARED_IN_EXACT_ALGEBRA_BLOCK",
+        "route_a_formula_or_chain_step": "C1=3(1+lambda/3)/(1+sigma); C2=3(1-beta/2)/sigma; C3=((21-20sigma)/6-beta/2)/(1-sigma); C4=15/(3+5sigma); C3 crossing polynomial 20sigma^2-(43-3beta)sigma+24-6beta",
+        "route_b_formula_or_check": "four C_i/Ingham crossings in alpha,tau,lambda,beta coordinates"
+      },
+      "id": "F09",
+      "obligation": "four coefficient crossings with Ingham including quadratic/radical branch",
+      "route_b_row_blockers": [],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "2357--2410",
+        "route_a_locator": "CGL-v2 TeX lines 2357--2410",
+        "route_b_region": "TeX 2357--2410"
+      },
+      "status_comparison": {
+        "comparison": "SAME_NORMALIZED_STATUS",
+        "route_a_disposition": "PROVED_EXACT_ALGEBRA_CONDITIONAL_ON_SOURCE_INPUTS",
+        "route_a_normalized": "EXACT_ALGEBRA_CONDITIONAL",
+        "route_b_disposition": "RECONSTRUCTED_EXACT_ALGEBRA",
+        "route_b_normalized": "EXACT_ALGEBRA_CONDITIONAL"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "RECONSTRUCTED_EXACT_ALGEBRA"
+      }
+    },
+    {
+      "canonical_id_agreement": true,
+      "formula_comparison": {
+        "comparison": "EXACT_Q1_EQUALS_Q_COMPARISON_CHECKED_IN_CORRECTED_BLOCK",
+        "route_a_formula_or_chain_step": "bases/constants q^(7/3)T^2, 9/4, (10-sqrt(10))/3, 30/13; maximum 7/3",
+        "route_b_formula_or_check": "q1=q reductions; 7/3 comparison margins; T=1 is worst for source discussion"
+      },
+      "id": "F10",
+      "obligation": "q1=q reductions, exact inequalities, uniform 7/3, and worst-T scope",
+      "route_b_row_blockers": [
+        "Z03_TAIL_X_RANGE",
+        "Z05_PRIMITIVE_EULER_FACTORS",
+        "Z06_CONDUCTOR_SUM_Q1",
+        "S06_EXTERNAL_INPUTS"
+      ],
+      "source_locator_comparison": {
+        "comparison": "THREE_WAY_NUMERIC_LOCATOR_OVERLAP",
+        "preregistration_locator": "178--187, 2371--2413",
+        "route_a_locator": "CGL-v2 TeX lines 178--187,2371--2413",
+        "route_b_region": "TeX 178--187,2371--2413"
+      },
+      "status_comparison": {
+        "comparison": "ROUTE_STATUS_DIFFERENCE_RETAINED",
+        "route_a_disposition": "OPEN_ANALYTIC_INPUT:F10_UNIFORM_7_OVER_3_DEPENDS_ON_Z03_Z05_Z06",
+        "route_a_normalized": "OPEN_ANALYTIC_INPUT",
+        "route_b_disposition": "RECONSTRUCTED_ALGEBRA_BLOCKED_BY_OPEN_INPUT",
+        "route_b_normalized": "SOURCE_DEPENDENT_RECORDED"
+      },
+      "tag_comparison": {
+        "comparison": "ROUTE_SPECIFIC_TAGS_RETAINED",
+        "route_a_epistemic_status": "PROVED",
+        "route_b_disposition": "RECONSTRUCTED_ALGEBRA_BLOCKED_BY_OPEN_INPUT"
+      }
+    }
+  ],
+  "source_locator_followups": [
+    "S01"
+  ]
+}

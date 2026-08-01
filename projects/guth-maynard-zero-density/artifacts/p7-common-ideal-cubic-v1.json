@@ -1,0 +1,174 @@
+{
+  "artifact_id": "p7-common-ideal-cubic-v1",
+  "artifact_identity": {
+    "builder": {
+      "path": "proof/build_p7_common_ideal_cubic_v1.py",
+      "sha256": "d11d6a7ad70ee77550c0bf6b319fcd5ff5e0c08b29c188934809f634213fa8aa"
+    },
+    "conventions": {
+      "path": "conventions/p7_common_ideal_cubic_v1.py",
+      "sha256": "12a80cac0688915d738ae2b624ce4da561c3023d1c513699133c097e4c5c02b0"
+    },
+    "document": {
+      "path": "docs/p7-common-ideal-cubic-v1.md",
+      "sha256": "736312854f4cd65c237857f5a978bcd0042fc30937f6a7ce694c545915020dfb"
+    },
+    "tests": {
+      "path": "tests/test_p7_common_ideal_cubic_v1.py",
+      "sha256": "ae3bf63f0e82a45c9c1cbf8799553e3ee9a811979e19d8f72066e471364b5c06"
+    }
+  },
+  "claim_boundary": "Exact labelled-ideal Gram and fixed-modulus coloured-energy identities, plus a scoped source-hypothesis/type boundary. No P7 cubic large-value inequality is proved.",
+  "epistemic_status": "PROVED",
+  "exact_ideal_gram_bridge": {
+    "cubic_trace": "tr(K^3)=Sum_{x,y,z in W} Sum_{a,b,c} u(a)u(b)u(c) chi_x(a/c)chi_y(b/a)chi_z(c/b)(Na/Nc)^(i t_x)(Nb/Na)^(i t_y)(Nc/Nb)^(i t_z), with u(a)=|c(a)|^2w(Na/N)^2 and every quotient notation meaning the displayed product of character values, including zero extensions.",
+    "finite_exact_check": {
+      "character_labels": [
+        0,
+        1,
+        1
+      ],
+      "direct_trace_K_cubed": 297,
+      "equal_norm_distinct_ideals": [
+        0,
+        1
+      ],
+      "expanded_labelled_ideal_trace": 297,
+      "field_model": "formal Z/2 character group; integer-valued exact check",
+      "ideal_norms": [
+        5,
+        5,
+        7
+      ],
+      "kernel": [
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          1,
+          3,
+          3
+        ],
+        [
+          1,
+          3,
+          3
+        ]
+      ]
+    },
+    "gram_kernel": "K_xy=Sum_a |c(a)|^2 w(Na/N)^2 chi_x(a) conjugate(chi_y(a)) (Na)^(i(t_x-t_y)). K=M M^* is positive semidefinite.",
+    "norm_fibre_formula": "K_xy=Sum_n n^(i(t_x-t_y)) B_xy(n), where B_xy(n)=Sum_{Na=n}|c(a)|^2w(n/N)^2chi_x(a)conjugate(chi_y(a)).",
+    "polynomial": "D_x=Sum_a c(a) chi_x(a) w(Na/N) (Na)^(i t_x), with x=(f_x,chi_x,t_x), |c(a)|<=1 and chi_x(a)=0 if (a,f_x)!=1.",
+    "repeated_norm_statement": "Na=Nb removes only the t-phase. Distinct ideals of equal norm remain separate in B_xy(n); repeated norms themselves have the recorded divisor-bounded L2 cost, while the unresolved obstruction is the surviving pair-label dependence and coloured sample geometry.",
+    "single_character_l2_fibre_bound": "For b_chi(n)=Sum_{Na=n}c(a)chi(a), Cauchy gives |b_chi(n)|^2 <= a_Q(i)(n) Sum_{Na=n}|c(a)|^2 1_(a,f)=1. Since a_Q(i)(n)<=tau(n)=N^(o(1)) on n~N, norm collapse has only an N^(o(1)) L2 loss (and is T^(o(1)) in the already pinned N<=T^C regime)."
+  },
+  "fixed_modulus_coloured_energy": {
+    "ambient_group": "For one modulus f, G_f=Cl(f) and its full character group Ghat_f are used as the ambient colour group; W may be a subset of primitive labels.",
+    "comparison": "E_col^=(W) is at most the uncoloured exact additive energy of the time multiset, not of a de-duplicated time set.",
+    "definition": "E_col^=(W)=#{(x1,x2,x3,x4) in W^4: t1+t2=t3+t4 and chi1 chi2=chi3 chi4 in Ghat_f}.",
+    "finite_exact_check": {
+      "colour_group": "Z/2",
+      "coloured_energy": 34,
+      "orthogonality_parseval_count": 34.0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "same_height_distinct_colours": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "uncoloured_time_energy_with_multiplicity": 62
+    },
+    "parseval_identity": "E_col^=(W)=|G_f|^(-1) Sum_{g in G_f} Integral_0^1 |Sum_{(chi,t) in W} chi(g)e(t theta)|^4 dtheta for integral t; a smooth real-height version replaces the exact time diagonal by the Fourier weight.",
+    "primitive_not_group": "Exact-conductor primitive characters need not be closed under multiplication. For f=(3), the unique nontrivial primitive order-two character squares to the conductor-one character. The Parseval identity therefore uses the complete ambient group, not a fictional primitive character group."
+  },
+  "gate": "P7-3-IDEAL-CUBIC-ENERGY",
+  "gate_outcome": "PASS_EXACT_IDEAL_IDENTITIES_CONTAINED_COMMON_SAMPLE_CUBIC_OPEN",
+  "missing_estimate_for_next_gate": {
+    "must_control": [
+      "same-height different-character collisions",
+      "cross-conductor triple terms",
+      "the signed primitive projector without termwise positivity",
+      "the loss from any common-modulus inflation or conductor-by-conductor decomposition"
+    ],
+    "not_supplied_by_sources": "Neither the checked Guth--Maynard integer cubic-trace result nor Thorner's cited L2 Hecke large sieve supplies this estimate.",
+    "required_object": "A family-uniform bound for the off-diagonal labelled cubic trace (or an equivalent large-value inequality) for common ideal c, with colour-local height separation, repeated norm fibres B_xy(n), and primitive exact-conductor indexing retained."
+  },
+  "non_promotion": [
+    "No common-sample ideal cubic/energy inequality, Hecke large-value theorem, zero-density theorem, detector, or prime-ideal interval theorem.",
+    "No verbatim application of the Guth--Maynard integer Poisson/cubic argument to the joint primitive (chi,t) sample.",
+    "No claim that the scoped obstruction excludes a character-aware, coloured, or conductor-by-conductor cubic theorem.",
+    "No assertion for angular characters, varying fields, or varying discriminants."
+  ],
+  "replay": {
+    "check_command": "python3 proof/build_p7_common_ideal_cubic_v1.py --check",
+    "runtime": {
+      "implementation": "CPython",
+      "json_policy": "stdlib json sort_keys=True; UTF-8; LF; trailing newline",
+      "optimize": 0,
+      "version": "3.12.3"
+    },
+    "script": "proof/build_p7_common_ideal_cubic_v1.py",
+    "script_sha256": "d11d6a7ad70ee77550c0bf6b319fcd5ff5e0c08b29c188934809f634213fa8aa",
+    "write_command": "python3 proof/build_p7_common_ideal_cubic_v1.py --write"
+  },
+  "resource_contract": {
+    "rss_kib_strictly_less_than": 262144,
+    "wall_seconds_strictly_less_than": 60
+  },
+  "review_policy": "LIGHTWEIGHT_SOURCE_ALGEBRA_REPLAY; no hostile audit initiated.",
+  "sample_convention": "x=(f_x,chi_x,t_x), with chi_x primitive of exact finite conductor f_x; W is a finite subset of these labelled points. Separation is imposed inside each fixed (f,chi) fibre unless a new global-separation argument is supplied.",
+  "scoped_verbatim_import_failure": {
+    "failure_1_pair_coefficients": "After norm grouping, the exact coefficient is B_xy(n), depending on the pair of character labels, rather than one common b_n. P7-1 already gives two unequal one-character norm aggregates in one conductor shell.",
+    "failure_2_colour_collisions": "The density family naturally gives separation within each character fibre, while two distinct characters may contribute the same height. Such points are distinct elements of W but are not globally separated in the uncoloured t-coordinate, so the cited m=0 diagonal reduction cannot be invoked verbatim.",
+    "failure_3_varying_moduli": "There is no single ray-class character group for varying exact conductors. Inflating every character to a common multiple F changes zero-extended values on ideals coprime to its own conductor but not to F, unless c is globally restricted to (a,F)=1; that restriction is an unproved new loss.",
+    "gm_hypothesis": "The pinned Guth--Maynard cubic trace is for one integer coefficient sequence and one globally separated uncoloured W subset of R; its Poisson step uses sums over all integers n in a common block.",
+    "positivity_boundary": "K is positive semidefinite, but the displayed labelled cubic summands and the primitive Moebius projector are signed/complex. Positivity of the whole trace is not a positive primitive projector or a replacement for the missing coloured affine estimate.",
+    "scope": "This proves only that the cited integer argument's hypotheses are absent for the joint family. It does not rule out a new character-aware, coloured, or conductor-by-conductor argument."
+  },
+  "source_integrity": {
+    "guth_maynard_tex": {
+      "locators": "Theorem 1.1 lines 62--79; additive energy lines 252--275; cubic trace lines 608--730; R(v) and S3 lines 1025--1065; refined S3 bound lines 1680--1698",
+      "path": "artifacts/sources/arxiv-2405.20552v2/LargevaluesDirichlet17.tex",
+      "sha256": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428"
+    },
+    "p7_norm_status_v3": {
+      "locators": "repeated-norm witness and N<=T^C normalization scope",
+      "path": "artifacts/p7-norm-aggregation-v3-status-correction.json",
+      "sha256": "32d3f2a5ffc8c62e985c7b3c156ddd9c0b00b23908d837b583d806e2c0e05aa8"
+    },
+    "p7_preregistration_v2": {
+      "locators": "selected family and the frozen P7-3 pass/fail boundary",
+      "path": "artifacts/p7-hecke-qi-preregistration-v2.json",
+      "sha256": "fa3c98ce481e913f2c8522856114b8cca643d763314e01a36b0aa7cf9110dfc9"
+    },
+    "p7_ray_orthogonality_v1": {
+      "locators": "exact primitive projector and the common-ideal L2 boundary",
+      "path": "artifacts/p7-ray-orthogonality-v1.json",
+      "sha256": "d4ad1fb81ac2cac49f94fb73616b5134f96fadd86e44f0a94975683b2db0387d"
+    }
+  }
+}

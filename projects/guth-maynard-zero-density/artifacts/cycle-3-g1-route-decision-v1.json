@@ -1,0 +1,91 @@
+{
+  "artifact_id": "cycle-3-g1-route-decision-v1",
+  "claim_boundary": "Bounded program decision obtained by literal application of the frozen G1 clauses. It is not a theorem, asymptotic obstruction, saturation result, density improvement, or refutation of P2A/P2B/P2C.",
+  "decision": "NO_SELECTION",
+  "epistemic_status": "OBSERVED",
+  "evidence_summary": {
+    "completed_rows": 429,
+    "critical_zero_residual_term": "LV3",
+    "exact_local_rows": 7744,
+    "exact_transfer_rows": 560,
+    "failed_rows": 159,
+    "failure_code_counts": {
+      "INFEASIBLE_CARDINALITY": 154,
+      "NONPOSITIVE_VALUE_RATIO": 5
+    },
+    "finite_energy_feasible_rows": 434,
+    "finite_energy_retention_eligible_rows": 0,
+    "retained_rows": 0,
+    "screen_rows": 588,
+    "validation_rows": 0
+  },
+  "falsifier": "Any frozen hash/count/rule mismatch, surviving retained row, or affirmative constituent-route predicate invalidates this decision.",
+  "frozen_hashes": {
+    "empirical_reconciliation_v1": {
+      "path": "artifacts/cycle-3-g1-atlas-empirical-reconciliation-v1.json",
+      "sha256": "4e3adc2885a9c441d0006633355b8be87d39599bc93ca68d1270475b27111a88"
+    },
+    "energy_no_retention_v3": {
+      "path": "artifacts/g1-energy-no-retention-audit-v3.json",
+      "sha256": "bf050f6186ab2bab247cfb18bc628168149354cc64da8773879e95e56a991fc6"
+    },
+    "envelope_sensitivity_v1": {
+      "path": "artifacts/g1-envelope-sensitivity-reconciliation-v1.json",
+      "sha256": "850b825698722d628340b762867c98774dae53443aecde581138c6830993b60e"
+    },
+    "exact_atlas_v2": {
+      "path": "artifacts/cycle-3-g1-exact-structural-atlas-v2.json",
+      "sha256": "fd66d17664ca921795617c6bfca76c3be49246ea9351644848a2aadf9e680b08"
+    },
+    "literature_audit_v1": {
+      "path": "artifacts/g1-current-literature-audit-v1.json",
+      "sha256": "49da2e838ce60699ba870e0c532aab5ec8ba564c560811d9683ac92f0afbe6be"
+    },
+    "literature_correction_v2": {
+      "path": "artifacts/g1-current-literature-audit-v2-correction.json",
+      "sha256": "f56529c5919971385cc583b51255636022a5b33fb0cfd4857a587f1d3e099076"
+    },
+    "preregistration_artifact": {
+      "path": "artifacts/cycle-3-g1-atlas-preregistration-v1.json",
+      "sha256": "227ec1c66b2e109653354b6c3245b4e809fe52692c01514ac10064c23db2b6f8"
+    },
+    "preregistration_document": {
+      "path": "docs/cycle-3-g1-atlas-preregistration-v1.md",
+      "sha256": "0510bb5ced5b3a5fd4377dea57216b226b58b49158ad6ddb6185775c967bfd72"
+    }
+  },
+  "gate_status": "G1_CLOSED_NO_SELECTION",
+  "next_action_boundary": "A new PLAN-authorized preregistration is required before any P2 theorem search or replacement screen; this decision itself authorizes none.",
+  "preservation": {
+    "failed_rows_retained": true,
+    "rejected_means_not_selected_not_refuted": true,
+    "retuning_permitted": false
+  },
+  "routes": {
+    "COMBINATION": {
+      "reason": "No constituent route has separate affirmative labeled evidence.",
+      "selected": false,
+      "status": "NOT_SELECTED"
+    },
+    "P2A": {
+      "reason": "No retained row isolates a trace feature absent from the cubic terms.",
+      "selected": false,
+      "status": "NOT_SELECTED"
+    },
+    "P2B": {
+      "reason": "No retained row establishes a consistent energy/affine obstruction; the finite energy certificate is not an asymptotic classification.",
+      "selected": false,
+      "status": "NOT_SELECTED"
+    },
+    "P2C": {
+      "reason": "The exact transfer map names LV3, but no retained local candidate exists to propagate as required by the frozen clause.",
+      "selected": false,
+      "status": "NOT_SELECTED"
+    }
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  }
+}

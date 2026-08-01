@@ -1,0 +1,87 @@
+24
+LARRY GUTH
+
+E(W) ≈ |W|2. (A bit more precisely, if W ⊂ {1, ..., T} is a random set of cardinality at most
+T 1/2, then with high probability E(W) ≲ |W|2.) The additive energy is closely related to Fourier
+analysis. For a set W ⊂ Z, define
+
+(22)
+ˆW(ξ) =
+�
+
+t∈W
+eiξt
+
+The additive energy can be rewritten in terms of ˆW:
+
+(23)
+E(W) = 1
+
+2π
+
+� 2π
+
+0
+| ˆW(ξ)|4dξ
+
+If the set W has small additive energy, then we will use the Schatten tensor method to estimate
+|W|. A key observation is that the Schatten tensor SMDir,r has a special structure: if we rewrite the
+Schatten tensor SMDir,r using the Fourier transform, then it is surprisingly sparse. For comparison,
+the tensor SMAC,r is not sparse. This part of the proof distinguishes MDir from MAC. In this part
+of the proof, we only require �
+
+n |bn|2 ≤ N, not |bn| ≤ 1 for all n.
+If the set W has large additive energy, then we use work of Heath-Brown from the late 70s, [HB].
+This part of the proof uses that |bn| ≤ 1 for every n.
+For the purposes of understanding the main ideas, we focus on two special cases.
+
+• The case with no additive structure. In this case E(W) ≈ |W|2. Sometimes we consider an
+even more special case when | ˆW(ξ)| ≈ |W|1/2 except when |ξ| ⪅ 1/T.
+• The case with maximal additive structure. In this case E(W) ≈ |W|3.
+
+We will explain each of these cases. There is actually one further idea in [GM], needed to handle
+intermediate energies, but we leave it out of this survey.
+
+7.1. The case with no additive structure. In this section, we use the Schatten tensor ap-
+proach, and we find a special feature of the matrix MDir and the tensor S∆
+MDir,3. This special
+structure depends on the fact that the frequencies in a Dirichlet polynomial are exactly log n, and
+it distinguishes honest Dirichlet polynomials from the almost counterexample.
+Suppose M = MΦ is the matrix encoding trigonometric polynomials with frequency set Φ. So
+the rows of MΦ are indexed by t ∈ {1, ..., T} and the columns of MΦ are indexed by ξ ∈ Φ, and
+the entry (MΦ)t,ξ = eitξ. In this situation, Trace
+�
+(M ∗
+Φ,W MΦ,W )r�
+has a special form which can be
+described in terms of the Fourier transforms of the set W. We write
+
+ˆW(ξ) =
+�
+
+t∈W
+e−itξ.
+
+We know that �
+
+i si(MΦ,W )2r = Trace
+�
+(M ∗
+Φ,W MΦ,W )r�
+. Writing down the formula for MΦ,W
+and expanding out the formula for the trace, we get
+
+(24)
+�
+
+i
+si(MΦ,W )2r =
+�
+
+ξ1,...,ξr∈Φ
+ˆW(ξ1 − ξ2) ˆW(ξ2 − ξ3)... ˆW(ξr − ξ1).
+
+This formula describes the tensor SMΦ,r(1W , 1W , ..., 1W ), but we are writing the tensor in terms
+of ˆW instead of W. When r = 2, the formula (24) simplifies to
+
+

@@ -1,0 +1,66 @@
+{
+  "artifact_id": "g1-route-decision-v1-hostile-audit-v1",
+  "audited_package_hashes": {
+    "adjudicator": "5879cadd61bf23015cbc27ed00d049f3a8792dc75dd09e835dd7321aa307d355",
+    "artifact": "a54115024a6dd1eae5cff7653b1488d9cde05d8063f4769e27eeda7aec702d6b",
+    "document": "8eddc8d1dc7624937e81ad89d7bd933ea815c9c7a2a0e9982fd98a6cb105ea7c",
+    "tests": "4e24bb3524c31c81a92b4fcb148c9c6aecb6fb3643fcd0a3c998338730bc6435"
+  },
+  "claim_boundary": "Read-only audit of the sealed G1 route-decision v1 package. This records a program-decision defect, not a mathematical result or route selection.",
+  "containment": "Do not promote G1_CLOSED_NO_SELECTION from v1. The empirical 0-retained observation remains valid, but a v2 adjudicator must fail on any retained row unless separately sealed evidence proves each frozen route predicate.",
+  "epistemic_status": "OBSERVED",
+  "findings": {
+    "adjudicator_identity": {
+      "detail": "The v1 artifact pins only its inputs. It does not record the adjudicator path/SHA-256, so the artifact cannot bind the executable which purportedly made the decision.",
+      "status": "FAIL"
+    },
+    "frozen_input_hashes": "PASS",
+    "normal_replay": "PASS",
+    "optimized_mode": "PASS_FAIL_CLOSED",
+    "route_predicates": {
+      "detail": "The v1 code equates any retained row with P2A evidence and combines that proxy with fixed LV3/energy booleans for P2B/P2C/COMBINATION. The frozen clauses require distinct trace, energy/affine, named decomposition/branch, and separate labeled-evidence predicates; a retained row alone does not establish them.",
+      "status": "FAIL"
+    }
+  },
+  "replay": {
+    "normal": {
+      "command": [
+        "/usr/bin/python3",
+        "/root/projects/maph/projects/guth-maynard-zero-density/proof/adjudicate_g1_route_selection_v1.py",
+        "--check",
+        "/root/projects/maph/projects/guth-maynard-zero-density/artifacts/cycle-3-g1-route-decision-v1.json"
+      ],
+      "returncode": 0,
+      "stderr": ""
+    },
+    "optimized": {
+      "command": [
+        "/usr/bin/python3",
+        "-O",
+        "/root/projects/maph/projects/guth-maynard-zero-density/proof/adjudicate_g1_route_selection_v1.py",
+        "--check",
+        "/root/projects/maph/projects/guth-maynard-zero-density/artifacts/cycle-3-g1-route-decision-v1.json"
+      ],
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/root/projects/maph/projects/guth-maynard-zero-density/proof/adjudicate_g1_route_selection_v1.py\", line 164, in <module>\n    raise SystemExit(main())\n                     ^^^^^^\n  File \"/root/projects/maph/projects/guth-maynard-zero-density/proof/adjudicate_g1_route_selection_v1.py\", line 150, in main\n    result = adjudicate()\n             ^^^^^^^^^^^^\n  File \"/root/projects/maph/projects/guth-maynard-zero-density/proof/adjudicate_g1_route_selection_v1.py\", line 61, in adjudicate\n    runtime = check_runtime()\n              ^^^^^^^^^^^^^^^\n  File \"/root/projects/maph/projects/guth-maynard-zero-density/proof/adjudicate_g1_route_selection_v1.py\", line 56, in check_runtime\n    require(record == {\"implementation\": \"CPython\", \"python\": EXPECTED_PYTHON, \"optimization_level\": 0}, \"G1 route adjudication requires non-optimized CPython 3.12.3\")\n  File \"/root/projects/maph/projects/guth-maynard-zero-density/proof/adjudicate_g1_route_selection_v1.py\", line 37, in require\n    raise RuntimeError(message)\nRuntimeError: G1 route adjudication requires non-optimized CPython 3.12.3\n"
+    },
+    "optimized_twice": {
+      "command": [
+        "/usr/bin/python3",
+        "-OO",
+        "/root/projects/maph/projects/guth-maynard-zero-density/proof/adjudicate_g1_route_selection_v1.py",
+        "--check",
+        "/root/projects/maph/projects/guth-maynard-zero-density/artifacts/cycle-3-g1-route-decision-v1.json"
+      ],
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/root/projects/maph/projects/guth-maynard-zero-density/proof/adjudicate_g1_route_selection_v1.py\", line 164, in <module>\n    raise SystemExit(main())\n                     ^^^^^^\n  File \"/root/projects/maph/projects/guth-maynard-zero-density/proof/adjudicate_g1_route_selection_v1.py\", line 150, in main\n    result = adjudicate()\n             ^^^^^^^^^^^^\n  File \"/root/projects/maph/projects/guth-maynard-zero-density/proof/adjudicate_g1_route_selection_v1.py\", line 61, in adjudicate\n    runtime = check_runtime()\n              ^^^^^^^^^^^^^^^\n  File \"/root/projects/maph/projects/guth-maynard-zero-density/proof/adjudicate_g1_route_selection_v1.py\", line 56, in check_runtime\n    require(record == {\"implementation\": \"CPython\", \"python\": EXPECTED_PYTHON, \"optimization_level\": 0}, \"G1 route adjudication requires non-optimized CPython 3.12.3\")\n  File \"/root/projects/maph/projects/guth-maynard-zero-density/proof/adjudicate_g1_route_selection_v1.py\", line 37, in require\n    raise RuntimeError(message)\nRuntimeError: G1 route adjudication requires non-optimized CPython 3.12.3\n"
+    }
+  },
+  "required_correction": [
+    "Make the v2 no-selection adjudicator explicitly no-selection-only: require zero retained rows and set every route predicate false; a nonzero retained count must fail closed rather than auto-select any route.",
+    "For any future affirmative route decision, require separately versioned, labeled evidence for the exact frozen P2A/P2B/P2C predicates and for a combination.",
+    "Record the v2 adjudicator path and SHA-256 in its decision artifact and have --check recompute that identity.",
+    "Add normal, -O, -OO, frozen-input-tamper, and retained-row counterfactual regressions."
+  ],
+  "status": "FAIL_ROUTE_PREDICATE_COMPLETENESS"
+}

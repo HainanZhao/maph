@@ -1,0 +1,65 @@
+{
+  "artifact_id": "cycle-2-stream-c-source-ledger-v3",
+  "created_utc": "2026-08-01",
+  "supersedes": "cycle-2-stream-c-source-ledger-v2 for the bibliographic correction and whole-route status only; v2 remains immutable",
+  "epistemic_status": "OBSERVED",
+  "claim_boundary": "This is a versioned correction ledger. The near-one density, zero-free, finite-height, and local-count nodes remain individually PROVED as in v2. The external truncated-explicit-formula source node remains OBSERVED, so neither full Stream C nor G0 is promoted to PASS here.",
+  "corrections": [
+    {
+      "id": "huxley-bibliographic-identity",
+      "status": "PROVED",
+      "v2_error": "v2 cited the frozen Huxley (1.9) source as 'The distribution of zeros of the Riemann zeta-function,' Invent. Math. 15 (1972), 141-163.",
+      "correct_identity": "M. N. Huxley, 'On the difference between consecutive primes,' Invent. Math. 15 (1972), 164-170.",
+      "cause": "A bibliographic identity was transcribed incorrectly despite the frozen volume, the original article pagination, and Guth--Maynard's bibliography identifying the article correctly.",
+      "affected_claims": "Only bibliographic identity and citation metadata in v2. The visually inspected equation (1.9), locator printed p. 164 / PDF p. 173, conventions, inequality, and all exponent arithmetic are unchanged.",
+      "containment": "V2 is preserved. V3 replaces its Huxley citation wherever this route is reported."
+    },
+    {
+      "id": "external-explicit-formula-status",
+      "status": "PROVED",
+      "v2_error": "v2 labelled the whole dependency closure PROVED and narrow PASS although the cited external truncated-explicit-formula source (Davenport, Chapter 17) had not been checked.",
+      "correct_status": "OBSERVED external node pending a separately pinned formula ledger with endpoint, zero-sum, error, and convention hypotheses checked.",
+      "affected_claims": "The full Stream-C Route-B and G0 PASS labels in v2 are withdrawn. The internal algebraic replay and the other four external nodes are unaffected.",
+      "containment": "V3 reports a partial closure only and lists the formula ledger as the next authorized dependency action."
+    }
+  ],
+  "sources": [
+    {
+      "id": "huxley-1972-equation-1-9",
+      "status": "PROVED",
+      "role": "Two-sided logarithmically uniform near-one density theorem",
+      "citation": "M. N. Huxley, On the difference between consecutive primes, Invent. Math. 15 (1972), 164-170.",
+      "path": "artifacts/sources/huxley-1972-inventiones15-gdz-volume.pdf",
+      "sha256": "5946d8579810f0754e972d42a09ed2a703604b8fb4e6377f14caaa5dc48f9797",
+      "locator": "equation (1.9), printed p. 164 / PDF p. 173; direct visual inspection",
+      "checked_statement": "N(s,T) << T^(3(1-s)/(3s-1))(log T)^44 uniformly on 3/4 <= s <= 1, with -T <= gamma <= T."
+    },
+    {
+      "id": "guth-maynard-explicit-formula-display",
+      "status": "OBSERVED",
+      "role": "Displayed short-interval formula quoted from an external reference",
+      "path": "artifacts/sources/arxiv-2405.20552v2/LargevaluesDirichlet17.tex",
+      "sha256": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428",
+      "locator": "lines 2407-2417; citation [D, Chapter 17]",
+      "display_observed": "For 2 <= T <= x, psi(x+y)-psi(x)=y-sum_(|rho|<=T)((x+y)^rho-x^rho)/rho+O(x(log x)^3/T).",
+      "blocker": "The cited external source, endpoint conventions, zero-sum multiplicity/convergence convention, uniformity, and the stated error have not yet been independently pinned and checked."
+    },
+    {
+      "id": "ford-platt-trudgian-hsw-bui",
+      "status": "PROVED",
+      "role": "Other v2 dependency nodes retained unchanged",
+      "transfer": "Ford supplies high-height VK; Platt--Trudgian supplies finite-height RH verification; Hasanalizade--Shen--Wong plus Bui--Heath-Brown supplies the multiplicity-inclusive local strip count. Their paths and frozen hashes are retained in cycle-2-stream-c-source-ledger-v2.json."
+    }
+  ],
+  "status_by_node": {
+    "guth_maynard_density_on_7_10_to_4_5": "PROVED",
+    "huxley_near_one_density": "PROVED",
+    "high_height_zero_free_region": "PROVED",
+    "finite_height_completion": "PROVED",
+    "local_pair_count": "PROVED",
+    "external_truncated_explicit_formula": "OBSERVED",
+    "full_stream_c_route_b": "OBSERVED",
+    "g0": "OBSERVED"
+  },
+  "next_authorized_dependency_action": "Read and check the literature agent's pinned truncated-explicit-formula ledger before any full Stream-C/G0 PASS claim."
+}

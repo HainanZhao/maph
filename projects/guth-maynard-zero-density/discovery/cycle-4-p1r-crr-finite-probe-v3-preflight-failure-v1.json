@@ -1,0 +1,18 @@
+{
+  "artifact_id": "cycle-4-p1r-crr-finite-probe-v3-preflight-failure-v1",
+  "epistemic_status": "OBSERVED",
+  "claim_boundary": "Preflight implementation record only. No scheduled finite-probe row, RNG word, candidate, quadrature value, or result artifact was produced.",
+  "attempted_command": "python3 discovery/run_cycle_4_p1r_crr_finite_probe_v3.py --write",
+  "failure": {
+    "stage": "sealed-preregistration validation before row 0",
+    "exception": "KeyError: 'v2_conventions'",
+    "cause": "The v3 wrapper inherited the v2 runner's frozen-hash key instead of selecting v3_conventions."
+  },
+  "containment": "The immutable v3 scientific preregistration is unchanged. The post-seal runner wrapper was corrected and must pass a v3-key regression test before relaunch.",
+  "row_effect": {
+    "scheduled_rows_started": 0,
+    "rng_words_consumed": 0,
+    "result_artifact_written": false
+  },
+  "hostile_audit": "NOT_INITIATED; research-stage lightweight correction only"
+}

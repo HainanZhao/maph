@@ -1,0 +1,48 @@
+{
+  "artifact_id": "guth-maynard-source-metadata-v1",
+  "created_utc": "2026-08-01",
+  "status": "source-freeze; no new mathematical result",
+  "epistemic_status": "OBSERVED",
+  "primary_work": {
+    "authors": ["Larry Guth", "James Maynard"],
+    "title": "New large value estimates for Dirichlet polynomials",
+    "doi": "10.4007/annals.2026.203.2.6",
+    "journal": "Annals of Mathematics",
+    "volume": "203",
+    "issue": "2",
+    "year": 2026,
+    "printed_pages": "623-675",
+    "journal_landing_page": "https://annals.math.princeton.edu/2026/203-2/p06"
+  },
+  "local_sources": [
+    {
+      "id": "arxiv-v2-pdf",
+      "url": "https://arxiv.org/pdf/2405.20552v2",
+      "path": "artifacts/sources/arxiv-2405.20552v2.pdf",
+      "sha256": "915392cf7d0ecd108479814a9a1481e23423ef63415776471cec3975ae482cae",
+      "pdf_pages": 52,
+      "version_mark": "arXiv:2405.20552v2 [math.NT] 7 Apr 2026"
+    },
+    {
+      "id": "arxiv-v2-source",
+      "url": "https://arxiv.org/e-print/2405.20552v2",
+      "path": "artifacts/sources/arxiv-2405.20552v2.tar",
+      "sha256": "9d34ac093abcb8129f68ff86eaad65f09a09d832fe637ff84d50a69496046bdc",
+      "main_tex": "artifacts/sources/arxiv-2405.20552v2/LargevaluesDirichlet17.tex"
+    },
+    {
+      "id": "oxford-accepted-manuscript",
+      "url": "https://ora.ox.ac.uk/objects/uuid:ad11b8bf-ad2b-4ebf-a627-647f023c378f/files/s73666708v",
+      "path": "artifacts/sources/ora-accepted-manuscript.pdf",
+      "sha256": "4a7b0e294c4b0e8580a3315e6dd418d351a295ebd03e9e2a35d69f0086607099",
+      "pdf_pages": 52,
+      "repository_label": "Accepted manuscript"
+    }
+  ],
+  "replay": {
+    "page_count": "mutool info <pdf>",
+    "text_extract": "mutool draw -F txt -o <out.txt> <pdf> 1-52",
+    "hash": "sha256sum <file>"
+  },
+  "pagination_policy": "Exact page locators in the ledger refer to arXiv v2 PDF pages. The journal's bibliographic range 623-675 is verified from its landing page, but a publisher-layout PDF was not locally retrieved; no inferred affine conversion is labelled a verified printed page."
+}

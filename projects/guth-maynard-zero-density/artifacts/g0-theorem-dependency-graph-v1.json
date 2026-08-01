@@ -1,0 +1,168 @@
+{
+  "artifact_id": "g0-theorem-dependency-graph-v1",
+  "created_utc": "2026-08-01",
+  "status": "source dependency map; no new theorem",
+  "epistemic_status": "OBSERVED",
+  "frozen_source": {
+    "id": "arxiv:2405.20552v2",
+    "pdf_sha256": "915392cf7d0ecd108479814a9a1481e23423ef63415776471cec3975ae482cae",
+    "tex_sha256_parent_tar": "9d34ac093abcb8129f68ff86eaad65f09a09d832fe637ff84d50a69496046bdc",
+    "tex_path": "artifacts/sources/arxiv-2405.20552v2/LargevaluesDirichlet17.tex"
+  },
+  "nodes": [
+    {
+      "id": "GM-T1.1",
+      "kind": "published theorem",
+      "locator": "Theorem 1.1, PDF p. 1, TeX lines 68-81",
+      "hypotheses": "|b_n| <= 1; t_r are 1-separated in [0,T]; |sum_{N<=n<=2N} b_n n^{it_r}| >= V",
+      "conclusion": "R <= T^{o(1)}(N^2V^{-2}+N^{18/5}V^{-4}+TN^{12/5}V^{-4})",
+      "blocks_g0_arithmetic": false,
+      "blocks_full_analytic_reconstruction": false
+    },
+    {
+      "id": "GM-ZD-TYPE-SPLIT",
+      "kind": "internal reduction",
+      "locator": "Section 13.1, PDF p. 48, TeX lines 2305-2318",
+      "hypotheses": "zero rho=beta+i gamma with beta>=sigma and gamma in [T,2T]; dyadic N in [T^{1/100},T^{1/2}(log T)^2]",
+      "conclusion": "all non-Type-I zeros are Type II and are delegated to MP Lemma 24",
+      "blocks_g0_arithmetic": false,
+      "blocks_full_analytic_reconstruction": true
+    },
+    {
+      "id": "EXT-MP-L24",
+      "kind": "external unread dependency",
+      "citation": "J. Maynard and K. Pratt, Half-isolated zeros and zero-density estimates, IMRN 2024, no. 19, 12978-13014, Lemma 24",
+      "locator_in_GM": "TeX line 2317; PDF p. 48",
+      "claimed_use": "Type II zeros <= T^{2-2sigma}(log T)^{O(1)}",
+      "required_hypotheses_not_checked": "the exact definition of Type II, range of sigma and T, zero-count convention, multiplicity convention, and uniformity of the implied constant",
+      "blocks_g0_arithmetic": false,
+      "blocks_full_analytic_reconstruction": true
+    },
+    {
+      "id": "GM-ZD-SMOOTH-SEPARATE",
+      "kind": "internal reduction with unexpanded standard inputs",
+      "locator": "Section 13.1, PDF p. 49, TeX lines 2319-2337",
+      "claimed_use": "Fourier smoothing removes beta; rapid Fourier decay and an O(log T) local zero-count produce a 1-separated W with |W| comparable up to T^{o(1)} to the dyadic zero count",
+      "required_hypotheses_not_fully_audited": "construction and derivative bounds for psi depending on beta; Fourier normalization; truncation uniformity; the O(log T) count of zeros in every unit horizontal strip; translation [T,2T] to a theorem interval [0,T]",
+      "blocks_g0_arithmetic": false,
+      "blocks_full_analytic_reconstruction": true
+    },
+    {
+      "id": "GM-ZD-APPLY-T1.1",
+      "kind": "internal application",
+      "locator": "Section 13.1, PDF pp. 49-50, TeX lines 2338-2364",
+      "claimed_use": "apply Theorem 1.1 to tilde D^k when N^k<=T^alpha, with alpha=15(1-sigma)/((3+5sigma)(18/5-4sigma)); use the usual mean-value theorem otherwise",
+      "required_hypotheses_not_fully_audited": "bounded-coefficient normalization for the divisor-sum b_n and coefficients of tilde D^k; dyadic decomposition of support [N^k,(2N)^k]; value-threshold transfer; bounded integer k existence; mean-value theorem statement and its uniformity",
+      "blocks_g0_arithmetic": false,
+      "blocks_full_analytic_reconstruction": true
+    },
+    {
+      "id": "EXT-MVT",
+      "kind": "external unread dependency",
+      "locator_in_GM": "TeX line 2353; PDF p. 50",
+      "claimed_use": "the usual mean-value theorem yields the displayed two-term large-values estimate in the N^k>T^alpha branch",
+      "required_hypotheses_not_checked": "precise mean-value theorem, polynomial length/support, coefficient norm, point separation and the treatment of T^{o(1)} losses",
+      "blocks_g0_arithmetic": false,
+      "blocks_full_analytic_reconstruction": true
+    },
+    {
+      "id": "INGHAM",
+      "kind": "published classical input",
+      "locator_in_GM": "equation (1.2), PDF p. 2, TeX lines 96-101; Section 13.1 line 2307",
+      "checked_source": "docs/literature-ledger-classical-inputs.md, ING-HUX and ING-MOD",
+      "claimed_use": "covers the lower branch 1/2<=sigma<=7/10 for the 30/13 envelope",
+      "blocks_g0_arithmetic": false,
+      "blocks_full_analytic_reconstruction": true
+    },
+    {
+      "id": "HUXLEY",
+      "kind": "published classical input",
+      "locator_in_GM": "equation (1.3), PDF p. 2, TeX lines 103-110; Section 13.1 line 2307",
+      "checked_source": "docs/literature-ledger-classical-inputs.md, HUX-1.9",
+      "claimed_use": "covers the upper branch sigma>=8/10 while the new proof handles [7/10,8/10]",
+      "blocks_g0_arithmetic": false,
+      "blocks_full_analytic_reconstruction": false
+    },
+    {
+      "id": "GM-T1.2",
+      "kind": "published theorem",
+      "locator": "Theorem 1.2, PDF p. 2, TeX lines 118-125",
+      "conclusion": "N(sigma,T)<=T^{15(1-sigma)/(3+5sigma)+o(1)} under the source's two-sided zero-count convention",
+      "blocks_g0_arithmetic": false,
+      "blocks_full_analytic_reconstruction": false
+    },
+    {
+      "id": "GM-ENV-30-13",
+      "kind": "published consequence plus exact algebra",
+      "locator": "equation (1.4), PDF p. 2, TeX lines 127-132",
+      "conclusion": "combine GM-T1.2 with Ingham at sigma=7/10 to obtain the 30/13 envelope",
+      "blocks_g0_arithmetic": false,
+      "blocks_full_analytic_reconstruction": true
+    },
+    {
+      "id": "EXT-EXPLICIT-FORMULA",
+      "kind": "external unread dependency",
+      "citation": "H. Davenport, Multiplicative Number Theory, third ed. (2000), Chapter 17",
+      "locator_in_GM": "Section 13.2, PDF p. 50, TeX lines 2407-2417",
+      "claimed_use": "explicit formula for sum_{n in [x,x+y]} Lambda(n) with truncation error O(x(log x)^3/T)",
+      "required_hypotheses_not_checked": "endpoint convention, uniformity in x,y,T, treatment of prime powers, zero multiplicities and zero-height convention",
+      "blocks_g0_arithmetic": false,
+      "blocks_full_analytic_reconstruction": true
+    },
+    {
+      "id": "EXT-NEAR-ONE-DENSITY",
+      "kind": "external unread dependency",
+      "citation": "M. Jutila, Acta Arith. 32 (1977), or H. Montgomery, Topics in Multiplicative Number Theory, Theorem 12.1",
+      "locator_in_GM": "TeX lines 2419-2423; PDF p. 50",
+      "claimed_use": "a stronger estimate near sigma=1 losing at most logarithmic factors, used to pass from (1.4) to a uniform density estimate in the explicit-formula supremum",
+      "required_hypotheses_not_checked": "GM offers alternatives rather than fixing a single theorem; range, constants, zero convention, and exact logarithmic loss are therefore not frozen",
+      "blocks_g0_arithmetic": false,
+      "blocks_full_analytic_reconstruction": true
+    },
+    {
+      "id": "EXT-VK-ZERO-FREE",
+      "kind": "external unread dependency",
+      "citation": "H. Montgomery, Topics in Multiplicative Number Theory, Corollary 11.4",
+      "locator_in_GM": "TeX lines 2425-2432; PDF p. 51",
+      "claimed_use": "N(sigma,T)=0 for sigma >= 1-c(log T)^(-2/3)(log log T)^(-1/3)",
+      "required_hypotheses_not_checked": "the exact constant c, threshold in T, zero convention and derivation of the weaker -5/7 cutoff used in the displayed supremum",
+      "blocks_g0_arithmetic": false,
+      "blocks_full_analytic_reconstruction": true
+    },
+    {
+      "id": "GM-C1.3",
+      "kind": "published corollary",
+      "locator": "Corollary 1.3, PDF pp. 2-3, TeX lines 140-150; proof PDF pp. 50-51, TeX lines 2405-2432",
+      "conclusion": "uniform PNT asymptotic for x^(17/30+epsilon)<=y<=x^0.99",
+      "blocks_g0_arithmetic": false,
+      "blocks_full_analytic_reconstruction": true
+    },
+    {
+      "id": "GM-C1.4",
+      "kind": "published corollary",
+      "locator": "Corollary 1.4, PDF p. 3, TeX lines 155-164; proof PDF pp. 51-52, TeX lines 2434-2473",
+      "conclusion": "almost-all PNT asymptotic for X^(2/15+epsilon)<=y<=X^0.99",
+      "blocks_g0_arithmetic": false,
+      "blocks_full_analytic_reconstruction": true
+    }
+  ],
+  "edges": [
+    ["GM-T1.1", "GM-ZD-APPLY-T1.1"],
+    ["EXT-MP-L24", "GM-ZD-TYPE-SPLIT"],
+    ["GM-ZD-TYPE-SPLIT", "GM-T1.2"],
+    ["GM-ZD-SMOOTH-SEPARATE", "GM-T1.2"],
+    ["GM-ZD-APPLY-T1.1", "GM-T1.2"],
+    ["EXT-MVT", "GM-ZD-APPLY-T1.1"],
+    ["INGHAM", "GM-ENV-30-13"],
+    ["GM-T1.2", "GM-ENV-30-13"],
+    ["HUXLEY", "GM-T1.2"],
+    ["GM-ENV-30-13", "GM-C1.3"],
+    ["GM-ENV-30-13", "GM-C1.4"],
+    ["EXT-EXPLICIT-FORMULA", "GM-C1.3"],
+    ["EXT-EXPLICIT-FORMULA", "GM-C1.4"],
+    ["EXT-NEAR-ONE-DENSITY", "GM-C1.3"],
+    ["EXT-NEAR-ONE-DENSITY", "GM-C1.4"],
+    ["EXT-VK-ZERO-FREE", "GM-C1.3"],
+    ["EXT-VK-ZERO-FREE", "GM-C1.4"]
+  ]
+}

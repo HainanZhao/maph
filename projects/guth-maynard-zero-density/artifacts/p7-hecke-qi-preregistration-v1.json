@@ -1,0 +1,258 @@
+{
+  "artifact_id": "p7-hecke-qi-preregistration-v1",
+  "artifact_identity": {
+    "builder": {
+      "path": "proof/build_p7_hecke_qi_preregistration_v1.py",
+      "sha256": "88bb9e38e39a57ae40b1dba9f3cb4b5766d46f9711819cbd9a6596c730c399df"
+    },
+    "conventions": {
+      "path": "conventions/p7_hecke_qi_v1.py",
+      "sha256": "fa080fdb82f4000bd05e10e9070909884cbe9e5294b25b5e96e2eb0169fc843d"
+    },
+    "document": {
+      "path": "docs/p7-hecke-qi-preregistration-v1.md",
+      "sha256": "15fb00c5c8322318aafed206affafb582e7f441787a767ba3f5950c11ff21dd4"
+    }
+  },
+  "claim_boundary": "This source-pinned preregistration selects one finite-order Hecke family and freezes transfer gates. It proves no new Hecke zero-density estimate, no Guth--Maynard transfer, no prime-ideal short-interval theorem, and no bounded-gap theorem. It initiates no hostile audit and authorizes no theorem search.",
+  "collective_count": "N_F(sigma,T;Q)=sum_{f:Q<Nf<=2Q} sum_{chi primitive mod f} N(sigma,T,chi), with each zero counted with multiplicity and each exact-conductor character pair counted once.",
+  "dependency_graph": {
+    "analytic_chain": [
+      "P7-2-RAY-CLASS-ORTHOGONALITY",
+      "P7-3-IDEAL-CUBIC-ENERGY",
+      "P7-4-DETECTOR-TAIL",
+      "P7-5-PRIME-IDEAL-SHORT-INTERVALS"
+    ],
+    "edges": [
+      [
+        "P7-0-SOURCE-FAMILY",
+        "P7-1-NORM-AGGREGATION"
+      ],
+      [
+        "P7-1-NORM-AGGREGATION",
+        "P7-2-RAY-CLASS-ORTHOGONALITY"
+      ],
+      [
+        "P7-2-RAY-CLASS-ORTHOGONALITY",
+        "P7-3-IDEAL-CUBIC-ENERGY"
+      ],
+      [
+        "P7-3-IDEAL-CUBIC-ENERGY",
+        "P7-4-DETECTOR-TAIL"
+      ],
+      [
+        "P7-3-IDEAL-CUBIC-ENERGY",
+        "P7-5-PRIME-IDEAL-SHORT-INTERVALS"
+      ],
+      [
+        "P7-4-DETECTOR-TAIL",
+        "P7-5-PRIME-IDEAL-SHORT-INTERVALS"
+      ]
+    ],
+    "first_branch": "P7-1-NORM-AGGREGATION",
+    "start": "P7-0-SOURCE-FAMILY"
+  },
+  "epistemic_status": "OBSERVED",
+  "gates": [
+    {
+      "failure_rule": "Contain the family statement and do not aggregate sources or begin a theorem search.",
+      "id": "P7-0-SOURCE-FAMILY",
+      "pass_rule": "Every exact-conductor, height, multiplicity, Euler-product, and archimedean convention agrees with the frozen conventions module; all departures receive a versioned correction.",
+      "purpose": "Check the selected Q(i) finite-ray-class family against the pinned source definitions and exclude angular characters.",
+      "state": "UNEXECUTED"
+    },
+    {
+      "direct_import_boundary": "The Guth--Maynard single-polynomial theorem has one coefficient vector shared by all sample points. Here A_chi varies with chi, so it cannot be applied verbatim to the joint set of (chi,t) samples. Applying it separately in chi and summing is a distinct route with a separate family-size accounting gate.",
+      "failure_rule": "If the epsilon normalization is not stable, label COEFFICIENT_LOSS_NOT_HARMLESS. If the fixed witness arithmetic fails, label WITNESS_OR_CONVENTION_ERROR and issue a correction; neither outcome licenses a density claim.",
+      "first_falsifiable_gate": true,
+      "frozen_identities": [
+        "A_chi(n)=sum_{Na=n}chi(a), |A_chi(n)|<=a_K(n)=sum_{d|n}chi_{-4}(d)<=tau(n)",
+        "for every epsilon>0, max_{n<=2N}tau(n)<<_epsilon N^epsilon",
+        "for split p=pi*pi_bar with p not dividing f, A_chi(p)=chi(pi)+chi(pi_bar)"
+      ],
+      "id": "P7-1-NORM-AGGREGATION",
+      "pass_rule": "Prove that the exact prospective ideal/character large-value inequality is stable under the displayed N^epsilon normalization, and verify the fixed Q=8 witness. Record PASS_TYPE_MISMATCH if its two aggregated coefficients differ; that outcome blocks only a direct single-coefficient-vector import, not an adapted character theorem.",
+      "preselected_witness": {
+        "aggregated_coefficients": {
+          "A_chi_3(17)": -2,
+          "A_chi_4(17)": 2
+        },
+        "characters": "choose the unique nontrivial character in each displayed order-two quotient; both have exact displayed conductor",
+        "conclusion": "two members of the same Q=8 shell give different aggregated coefficients at the repeated norm 17",
+        "evaluations": {
+          "chi_3": "(1+i)^4=-1 in F_9, hence chi_3((4+i))=chi_3((4-i))=-1",
+          "chi_4": "4+i=i and 4-i=-i modulo (4), both in mu_4, hence chi_4((4+i))=chi_4((4-i))=1"
+        },
+        "moduli": [
+          "f_3=(3)",
+          "f_4=(1+i)^4=(4) up to a unit"
+        ],
+        "ray_class_quotients": {
+          "f_3": "(Z[i]/(3))^*/mu_4 has order 2",
+          "f_4": "(Z[i]/(1+i)^4)^*/mu_4 has order 2; every proper pi-power quotient is trivial after dividing by mu_4"
+        },
+        "shell": "Q=8, so N(3)=9 and N((1+i)^4)=16 both lie in (Q,2Q]",
+        "split_prime": "17=(4+i)(4-i)"
+      },
+      "purpose": "Determine whether divisor-bounded norm aggregation can be absorbed in the target epsilon bookkeeping while recording why it does not supply a direct joint-character application of a single-polynomial Guth--Maynard theorem.",
+      "state": "UNEXECUTED"
+    },
+    {
+      "failure_rule": "If primitive inclusion-exclusion or its local conductor factors are unresolved, retain PRIMITIVE_PROJECTOR_OPEN and do not claim family orthogonality.",
+      "id": "P7-2-RAY-CLASS-ORTHOGONALITY",
+      "pass_rule": "State and prove the complete-character identity sum_chi chi(a)conj(chi(b))=|Cl(f)| times the ray-class diagonal, then derive the primitive projector without silently replacing it by the complete one.",
+      "purpose": "Build the correct complete- and primitive-character projectors over Cl(f), including exact-conductor inclusion-exclusion and all ideal coprimality conditions.",
+      "state": "UNEXECUTED"
+    },
+    {
+      "failure_rule": "If equal-norm ideals or primitive projection introduce an uncontrolled term, retain IDEAL_ENERGY_OPEN; no cubic transfer is licensed.",
+      "id": "P7-3-IDEAL-CUBIC-ENERGY",
+      "pass_rule": "Give an exact common sample space, separation convention, ideal-product/ratio relation, diagonal convention for equal norms, and an error term that includes repeated norms rather than treating them as integer diagonals.",
+      "purpose": "Formulate ideal-indexed large values, cubic trace, and energy with character orthogonality before any Guth--Maynard comparison.",
+      "state": "UNEXECUTED"
+    },
+    {
+      "failure_rule": "Retain DETECTOR_OR_TAIL_OPEN; do not use a formal large-value result to state a density estimate.",
+      "id": "P7-4-DETECTOR-TAIL",
+      "pass_rule": "A pinned theorem/proof supplies a detector with every length, smoothness, conductor, and tail hypothesis checked for primitive finite-order Q(i) characters.",
+      "purpose": "Check a zero detector and its ideal-sum tail uniformly in the frozen Q,T,sigma ranges, including principal/pole and low-height conventions.",
+      "state": "UNEXECUTED"
+    },
+    {
+      "failure_rule": "Retain SHORT_INTERVAL_BRIDGE_OPEN. Existing Bombieri--Vinogradov or bounded-gap results are not substitutes for this uniform short-interval gate.",
+      "id": "P7-5-PRIME-IDEAL-SHORT-INTERVALS",
+      "pass_rule": "Check the explicit formula, zero-free/exceptional-zero treatment, prime-power remainder, exact family average, and uniformity in the interval [x,x+x^theta] before naming theta.",
+      "purpose": "Translate only a proof-grade density result into a clearly defined prime-ideal interval statement.",
+      "state": "UNEXECUTED"
+    }
+  ],
+  "non_promotion": [
+    "No direct import of the single-coefficient-vector Guth--Maynard large-value theorem to the joint (chi,t) family.",
+    "No new Hecke zero-density estimate, zero-free region, Bombieri--Vinogradov theorem, bounded-gap theorem, or short-interval theorem.",
+    "No assertion that a tau(n) loss is harmless until the exact target large-value statement and its epsilon bookkeeping are checked.",
+    "No treatment of angular characters, variable fields, varying discriminants, or arbitrary Hecke characters."
+  ],
+  "prior_work_conceded": [
+    "Zaman arXiv:1502.05679v4 supplies explicit zero-free/near-one-density context for ray-class Hecke L-functions; it is not a Guth--Maynard theorem.",
+    "Thorner--Zaman arXiv:1510.08086v1 proves an explicit log-free Hecke zero-density estimate by a Hecke large sieve and Turan detector; no improvement or replacement is claimed here.",
+    "Thorner, MRL 2019, proves a Hecke-character large sieve/averaged density result and a Bombieri--Vinogradov/Maynard bounded-gap application; those are prior work, not downstream consequences of P7.",
+    "BGL is retained only as a rejected comparison and supplies no authority for the selected family."
+  ],
+  "replay": {
+    "command": "python3 proof/build_p7_hecke_qi_preregistration_v1.py --check",
+    "optimized": 0,
+    "python_implementation": "cpython",
+    "python_version": "3.12.3",
+    "rss_cap_kib": 262144,
+    "wall_cap_ns": 60000000000
+  },
+  "selection": {
+    "L_function": {
+      "ideal_count": "a_K(n)=#{a integral ideal of Z[i]: Na=n}=sum_{d|n} chi_{-4}(d)<=tau(n)",
+      "ideal_euler_product": "product_p (1-chi(p)(Np)^(-s))^(-1) over prime ideals p",
+      "ideal_series": "L(s,chi)=sum_a chi(a)(Na)^(-s), with chi(a)=0 when (a,f)!=1",
+      "norm_aggregation": "A_chi(n)=sum_{Na=n} chi(a), so L(s,chi)=sum_{n>=1} A_chi(n)n^(-s)"
+    },
+    "deferred": [
+      "angular characters",
+      "varying K",
+      "varying discriminant",
+      "higher-degree or automorphic families"
+    ],
+    "family": {
+      "Q_range": "real Q>=8; lower endpoint strict and upper endpoint inclusive",
+      "archimedean_type": "trivial; no angular parameter m is allowed",
+      "character_multiplicity": "characters are counted as distinct functions on ideals; do not quotient by conjugation, inverse, Galois action, or a choice of ideal representative",
+      "characters": "one primitive character of the finite ray class group Cl(f) for each character whose exact finite conductor is f",
+      "infinity": "K has no real places, so narrow and ordinary finite ray-class conventions agree here",
+      "moduli": "nonzero integral ideals f of Z[i] with Q<Nf<=2Q",
+      "modulus_multiplicity": "each pair (f,chi) occurs once, indexed by its exact conductor f"
+    },
+    "field": {
+      "absolute_discriminant": 4,
+      "class_number": 1,
+      "complex_places": 1,
+      "degree": 2,
+      "label": "K=Q(i)",
+      "real_places": 0,
+      "ring_of_integers": "Z[i]"
+    },
+    "selected_family": "primitive finite-order ray-class Hecke L-functions over fixed K=Q(i), trivial at infinity, Q<Nf_chi<=2Q",
+    "selection_rationale": "The field is fixed of degree two and class number one; finite ray-class characters give a finite conductor aspect and ideal-indexed coefficients, while excluding angular characters avoids an unregistered archimedean spectral parameter.",
+    "zero_count": {
+      "height_range": "T>=2",
+      "multiplicity": "included",
+      "region": "sigma<=Re(rho)<1 and |Im(rho)|<=T",
+      "sigma_range": "1/2<=sigma<1",
+      "zero_set": "nontrivial zeros of the uncompleted L(s,chi) in 0<Re(s)<1"
+    }
+  },
+  "source_checks": {
+    "bgl_rejected_comparison": {
+      "reason": "The selected finite ray-class family is not the BGL comparison family. No theorem, definition, or transfer claim in this preregistration relies on BGL.",
+      "status": "NOT_USED_AS_AUTHORITY"
+    },
+    "thorner_mrl_2019": {
+      "checked_locators": {
+        "averaged_density": "Theorem 2.3, PDF p.11 (printed p.885)",
+        "fixed_K_hecke_context": "PDF pp.2--3 (printed pp.876--877)",
+        "hecke_large_sieve": "Theorem 2.1, PDF pp.9--10 (printed pp.883--884)",
+        "primitive_ray_class_embedding": "PDF p.21 (printed p.895)",
+        "title_abstract_bv_and_bounded_gaps": "PDF p.1 (printed p.875)"
+      },
+      "primary_source": "J. Thorner, Math. Res. Lett. 26 (2019), 875--901",
+      "publisher_pdf": {
+        "pages": 28,
+        "path": "artifacts/sources/p7-hecke-v1/thorner-2019-mrl-v26n3-a9.pdf",
+        "sha256": "463bd56afd679444e4cf3417228230e9996b1202daeac47c3b436b4b2776d1b3"
+      },
+      "role": "prior Hecke large-sieve/density, Bombieri--Vinogradov, and bounded-gap work to concede"
+    },
+    "thorner_zaman_1510_08086v1": {
+      "checked_locators": {
+        "detector_and_hecke_large_sieve_mechanism": "TeX 468--472; PDF pp.4--5",
+        "explicit_log_free_density": "Theorem 1.1, TeX 441--449; PDF p.4",
+        "finite_euler_factor_for_induction": "TeX 1162--1166",
+        "zero_count_and_multiplicity": "TeX 425--448; PDF p.4"
+      },
+      "pdf": {
+        "pages": 32,
+        "path": "artifacts/sources/p7-hecke-v1/thorner-zaman-1510.08086v1.pdf",
+        "sha256": "94ddf7864fe74d266cef42816c9621516079321c48069d848527e7d0067b866d"
+      },
+      "primary_source": "arXiv:1510.08086v1 (27 Oct 2015)",
+      "role": "prior log-free density, primitive/conductor conventions, and detector comparison only",
+      "source_tar": {
+        "path": "artifacts/sources/p7-hecke-v1/thorner-zaman-1510.08086v1.tar",
+        "sha256": "082be65a8fc04b5795290e500e0b2d74dc7a818cb68cc5ddc02131012b178fa2"
+      },
+      "tex_member": {
+        "name": "LFZD_manuscript.tex",
+        "sha256": "e77007c73da81c239fa009f6fce8befbc72989a0fd28f2ec4ff6952ff098f8f2"
+      }
+    },
+    "zaman_1502_05679v4": {
+      "checked_locators": {
+        "explicit_near_one_density_scope": "TeX 225--253; PDF pp.3--4",
+        "primitive_exact_conductor_and_zero_extension": "TeX 295--303; PDF p.6",
+        "ray_class_and_euler_product": "TeX 68--91; PDF p.1"
+      },
+      "pdf": {
+        "pages": 53,
+        "path": "artifacts/sources/p7-hecke-v1/zaman-1502.05679v4.pdf",
+        "sha256": "ca1ab8d8844994b999f99d7a97dfa0ae4770a8f8687f07886e81946f94d25941"
+      },
+      "primary_source": "arXiv:1502.05679v4 (29 Mar 2016)",
+      "role": "family definitions and prior explicit near-one zero-density context only",
+      "source_tar": {
+        "path": "artifacts/sources/p7-hecke-v1/zaman-1502.05679v4.tar",
+        "sha256": "f530b910a9aa7bed81f6fb9ed6119cdb619f8e78b4c49593ec0a2a32d8707746"
+      },
+      "tex_member": {
+        "name": "Explicit_estimates_for_the_zeros_of_Hecke_L-functions.tex",
+        "sha256": "9440e5d28903d641df03e261c5d9f497bfc7f63062d279b082d6077ad8eaf620"
+      }
+    }
+  },
+  "status": "PREREGISTERED_UNEXECUTED"
+}

@@ -1,0 +1,138 @@
+{
+  "artifact_type": "exact-rational-baseline-certificate",
+  "certificate_version": 1,
+  "claim_boundary": "Exact algebraic audit conditional on the cited published zero-density estimates and the stated sufficient criteria in their short-interval proof. It is not an independent proof of those analytic estimates or of either short-interval theorem.",
+  "critical_large_values_cell": {
+    "classical_equation_1_1": {
+      "max_T_exponent": "3/5",
+      "min_branch_equality": "15/25 = 15/25",
+      "terms_before_minimum": {
+        "N^2*V^-2": "2/5",
+        "T*N*V^-2": "3/5",
+        "T*N^4*V^-6": "3/5"
+      }
+    },
+    "guth_maynard_theorem_1_1": {
+      "max_T_exponent": "13/25",
+      "term_order_certificate": [
+        "13/25 - 12/25 = 1/25 > 0",
+        "12/25 - 10/25 = 2/25 > 0"
+      ],
+      "terms": {
+        "N^(18/5)*V^-4": "12/25",
+        "N^2*V^-2": "2/5",
+        "T*N^(12/5)*V^-4": "13/25"
+      }
+    },
+    "parameterization": {
+      "N": "T^(4/5)",
+      "V": "N^(3/4) = T^(3/5)"
+    },
+    "published_hypotheses_used": [
+      "|b_n| <= 1",
+      "the t_r are 1-separated points in [0,T]",
+      "|sum_(n=N)^(2N) b_n n^(i*t_r)| >= V for every r"
+    ],
+    "strict_gain": {
+      "classical_minus_guth_maynard": "2/25",
+      "conclusion": "T^(13/25+o(1)) versus T^(3/5+o(1)); gain 2/25 in the T exponent."
+    }
+  },
+  "epistemic_status": "PROVED",
+  "exact_case_analysis": {
+    "comparison_to_global_coefficient": [
+      {
+        "case": "Ingham on [1/2,7/10]",
+        "cleared_numerator_for_b-Ingham": "21-30*sigma",
+        "conclusion": "3/(2-sigma) <= 30/13",
+        "denominator": "13*(2-sigma) > 0"
+      },
+      {
+        "case": "Guth--Maynard on [7/10,4/5]",
+        "cleared_numerator_for_b-Guth--Maynard": "150*sigma-105",
+        "conclusion": "15/(3+5*sigma) <= 30/13",
+        "denominator": "13*(3+5*sigma) > 0"
+      },
+      {
+        "case": "Huxley on [4/5,1]",
+        "cleared_numerator_for_b-Huxley": "90*sigma-69",
+        "conclusion": "3/(3*sigma-1) <= 30/13",
+        "denominator": "13*(3*sigma-1) > 0"
+      }
+    ],
+    "crossover": {
+      "cleared_numerator_for_ingham_minus_guth_maynard": "30*sigma-21",
+      "equation": "3/(2-sigma) = 15/(3+5*sigma)",
+      "sign_conclusion": "Ingham <= Guth--Maynard for sigma <= 7/10; Guth--Maynard <= Ingham for sigma >= 7/10.",
+      "unique_root_in_domain": "7/10",
+      "value_at_root": "30/13"
+    },
+    "global_envelope": {
+      "attained_at": "7/10",
+      "b": "30/13",
+      "conclusion": "A(sigma) <= 30/13 in every stated case."
+    }
+  },
+  "frozen_hypotheses": {
+    "almost_all_sufficient_criterion": "As used in the cited proof: T=delta^(-1) times a subpower factor must satisfy T < X^(2/b-epsilon), and the reduction requires y >= delta*X.",
+    "counting_convention": "N(sigma,T) counts zeros rho of zeta with Re(rho)>=sigma and |Im(rho)|<=T, with multiplicity.",
+    "exponent_format": "N(sigma,T) <= T^(A(sigma)*(1-sigma)+o(1))",
+    "published_zero_density_inputs": [
+      {
+        "coefficient_A_sigma": "3/(2-sigma)",
+        "label": "Ingham",
+        "used_on": "1/2 <= sigma <= 7/10"
+      },
+      {
+        "coefficient_A_sigma": "15/(3+5*sigma)",
+        "label": "Guth--Maynard Theorem 1.2",
+        "used_on": "7/10 <= sigma <= 4/5"
+      },
+      {
+        "coefficient_A_sigma": "3/(3*sigma-1)",
+        "label": "Huxley",
+        "used_on": "4/5 <= sigma <= 1"
+      }
+    ],
+    "sigma_domain_for_case_split": "1/2 <= sigma <= 1",
+    "uniform_short_interval_sufficient_criterion": "As used in the cited proof: with b the uniform density coefficient and T=x/y times a subpower factor, it is enough that T < x^(1/b-epsilon)."
+  },
+  "replay": {
+    "interpreter_requirement": "Python 3 standard library only",
+    "script_sha256": "90298b58c1baab0a824ba7393165e5ec4b37f67a9df2744b2ba0f19ec8e5bbd1",
+    "write_command": "python3 projects/guth-maynard-zero-density/proof/replay_baseline_route_b.py --write projects/guth-maynard-zero-density/artifacts/cycle-1-route-b-baseline.json"
+  },
+  "route": "B",
+  "short_interval_thresholds": {
+    "almost_all": {
+      "classification": "REPLAYED from the source's stated almost-all reduction; only its rational exponent conversion is independently checked here. This certificate does not independently derive the mean-square/explicit-formula argument.",
+      "delta_exponent": "-2/b",
+      "density_input_b": "30/13",
+      "exact_value": "13/15",
+      "source_criterion_exponent": "2/b",
+      "theta": "2/15",
+      "theta_formula_from_y>=delta*X": "1-2/b"
+    },
+    "uniform": {
+      "classification": "PROVED exact consequence of the stated sufficient criterion; the underlying explicit-formula criterion is a cited analytic input.",
+      "density_input_b": "30/13",
+      "exact_value": "13/30",
+      "source_criterion_exponent": "1/b",
+      "theta": "17/30",
+      "theta_formula": "1-1/b"
+    }
+  },
+  "source_inputs": {
+    "checked_locations": [
+      "introduction, source lines 96--160 (Ingham, Huxley, Theorem 1.2, Corollaries 1.3--1.4)",
+      "introduction, source lines 64--91 (Theorem 1.1 and classical equation (1.1))",
+      "source lines 2307--2402 (case ranges in proof of Theorem 1.2)",
+      "source lines 2407--2471 (explicit-formula deductions)"
+    ],
+    "citation": "Larry Guth and James Maynard, New large value estimates for Dirichlet polynomials, arXiv:2405.20552v2; published Annals of Mathematics 203 (2026), 623--675, DOI 10.4007/annals.2026.203.2.6.",
+    "source_archive_url": "https://export.arxiv.org/e-print/2405.20552v2",
+    "source_tarball_sha256": "9d34ac093abcb8129f68ff86eaad65f09a09d832fe637ff84d50a69496046bdc",
+    "tex_member": "LargevaluesDirichlet17.tex",
+    "tex_member_sha256": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428"
+  }
+}

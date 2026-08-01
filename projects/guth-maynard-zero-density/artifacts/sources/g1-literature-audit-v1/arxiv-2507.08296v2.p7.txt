@@ -1,0 +1,159 @@
+LARGE VALUE AND ZERO DENSITY ESTIMATES FOR DIRICHLET L-FUNCTIONS
+7
+
+�N
+
+q
+
+�3 �
+
+|−
+→
+m|∼ qT
+
+N
+
+�
+
+[1/2,2]2
+
+�
+
+b1,b2 mod q
+(b1b2,q)=1
+
+R(v1, b1)R
+�v2
+
+v1
+, b2b−1
+1
+
+�
+R
+� 1
+
+v2
+, b−1
+2
+
+�
+dv1dv2
+
+� �
+
+[1,2]
+e
+�
+− Nu3(m1v1 + m2v2 + m3)
+
+q
+
+�
+du3
+
+�
+·
+�
+�
+
+c3 mod q
+(c3,q)=1
+
+eq((m1b1 + m2b2 + m3)c3)
+�
+.
+
+This is the key step in the argument. In the Fourier integral over u3, there is a huge
+amount of cancellation unless |m1v1 + m2v2 + m3| ≈ 0. However, in the (Ramanujan)
+sum over c3, we get varying amounts of cancellation as its typical size is roughly
+(m1b1 + m2b2 + m3, q), which is an upper bound. We take this upper bound and now
+aim to bound an expression of the form
+N 3
+
+q3T
+
+�
+
+|−
+→
+m|∼ qT
+
+N
+
+�
+
+v1∈[1/2,2]
+
+�
+
+b1,b2 mod q
+(b1b2,q)=1
+
+����R(v1, b1)R
+�m1v1 + m3
+
+m2v1
+, b2b−1
+1
+
+�
+R
+�m1v1 + m3
+
+m2
+, b2
+
+����� dv1
+
+(m1b1 − m2b2 + m3, q)
+(2.2)
+
+In (2.2), we make use of the averaging over −→
+m by establishing a sharp upper bound for
+sums over affine transformations of functions with a GCD twist. This gives the bound
+
+s1(M)6 ⪅ (qT)2|W|3/2 + qTN|W|1/2E(W)1/2,
+(2.3)
+
+where
+
+E(W) = #{(t1, χ1), (t2, χ2), (t3, χ3), (t4, χ4) ∈ W : |t1 + t2 − t3 − t4| ≤ 1, χ1χ2 = χ3χ4}
+
+is the additive energy of W.
+Next, we prove a bound for E(W) using the following estimate due to Heath-Brown
+for 1-bounded bn:
+�
+
+(t1,χ1),(t2,χ2)∈W
+
+����
+�
+
+n∼N
+bnni(t1−t2)χ1χ2(n)
+����
+
+2
+⪅ |W|2N + |W|N 2 + (qT)1/2|W|5/4N.
+
+After inserting the resulting bound for E(W) into (2.3), we finally obtain
+
+|W| ⪅ (qT)1/2 + (qT)4/3N −1.
+(2.4)
+
+This improves on the target bound |W| ⪅ qTN −1/2 when N = (qT)1−δ for 0 < δ ≤ 1/3,
+covering the critical case when N = (qT)4/5.
+An analogous estimate is also produced by the Guth-Maynard argument,
+
+|W| ⪅ T 1/2 + T 4/3N −1,
+(2.5)
+
+and here a major difference arises. When T ≥ N 6/5, the dominating term is T 4/3N −1.
+To refine the estimate, we can perform subdivision. That is, we let T0 be the value of
+T that balances the two terms T 1/2 and T 4/3N −1 and then cut up our interval [0, T]
+into T/T0 intervals and apply the bound (2.5) to each piece. This gives the bound
+
+|W| ⪅ T 1/2 + TN −3/5
+
+

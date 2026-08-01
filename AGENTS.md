@@ -23,23 +23,36 @@ under `projects/*/` and may add a narrower `AGENTS.md`.
 
 ## 1. Project memory and workflow
 
-Every active research project has a root `PLAN.md`; it is authoritative
-over chat memory. Read it completely, then the nearest `AGENTS.md`,
-before acting.
+Every active research project has a root `PLAN.md`; it is the concise,
+authoritative strategic state over chat memory. Read it completely, then
+the nearest `AGENTS.md`, before acting. Detailed chronological memory lives
+in a sibling `RESEARCH_LOG.md`; consult the relevant entries when a task
+depends on prior cycles, corrections, or artifact identities.
 
 `PLAN.md` must contain:
 
 - original objective, claim boundary, status, and stop condition;
-- research-path graph, including failed, deferred, and superseded paths;
-- preregistered gates and outcomes;
-- headline theorems, breakthroughs, corrections, and no-go results;
-- one finding-and-evidence row per cycle;
+- a high-level research-path graph and current gate states;
+- short headline theorem, breakthrough, correction, and no-go summaries;
 - open questions, next authorized action, and crash recovery commands.
+
+Keep `PLAN.md` short enough to reread routinely. Do not store per-cycle row
+registries, long correction narratives, exhaustive hashes, test transcripts,
+or detailed replay histories there.
+
+`RESEARCH_LOG.md` is append-oriented and must contain:
+
+- one concise finding-and-evidence summary per cycle;
+- failed, deferred, superseded, and corrected paths without erasure;
+- exact artifact identities/hashes, replay commands, resource observations,
+  and detailed gate evidence when material;
+- links back to the high-level path or gate affected in `PLAN.md`.
 
 Before work: re-read frozen counts and conventions from artifacts, check
 `git status` and recent/fetched history, and preserve unrelated changes.
-Update `PLAN.md` whenever a gate or research path changes. Never erase a
-failed path.
+Update `PLAN.md` only when strategy, status, a headline result, an open
+question, or the next authorized action changes. Append cycle-level findings
+to `RESEARCH_LOG.md`. Never erase a failed path from the research log.
 
 ## 2. Discovery and proof are separate
 
@@ -78,8 +91,14 @@ failed path.
 - Before computing, freeze: ranges, thresholds, margins, samples, RNG
   seeds, degree/resource caps, formula families, and the rule for failed
   rows. Post-result choices are `EXPLORATORY`.
-- A failed audit halts the affected branch/table; never drop the row
-  silently.
+- During research, a failed lightweight check contains the affected
+  claim/table and is logged, but it does not automatically terminate a broader
+  speculative branch. Never drop the row silently.
+- Do not initiate hostile audits during research. Hostile audits begin only
+  when concrete claims enter manuscript/paper-stage promotion. During
+  discovery and theorem development, use lightweight source, algebra, replay,
+  and consistency checks so bold ideas are not killed prematurely. Preserve
+  contrary evidence for the later paper-stage audit.
 
 ## 5. Redundancy and coverage
 
@@ -136,7 +155,7 @@ Never conceal, erase, or silently work around a listed finding.
 - Label non-proof cross-checks as quarantined and explain why.
 - Verify bibliography metadata and cite theorem/page numbers. Uncited
   entries and dangling references are bugs.
-- Every cycle/block report leads with outcomes and explicitly surfaces
+- Every cycle/block entry in `RESEARCH_LOG.md` leads with outcomes and explicitly surfaces
   newly banked major theorems, breakthroughs, corrections, containment
   events, and structural no-go results. State tags, gate changes, and
   implications.

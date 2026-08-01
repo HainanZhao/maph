@@ -1,0 +1,116 @@
+{
+  "artifact_id": "cycle-2-stream-c-route-a-v5",
+  "claim_boundary": "PROVED only as an official-source-sealed Route-A replay of the published GM \u00a713.2 deductions, conditional on GM's published density theorem. It neither proves that density theorem, improves either theta, establishes a new prime theorem, nor promotes G0.",
+  "epistemic_status": "PROVED",
+  "exact_route_a_arithmetic": {
+    "almost_all": {
+      "delta": "X^(-13/15+epsilon/2)",
+      "height": "T=delta^(-1) exp(4(log X)^(1/4))",
+      "identity": "2/B=13/15 and 1-2/B=2/15",
+      "range": "2<=T<=X and T<=X^(13/15-epsilon/3) eventually",
+      "second_moment": "delta^2 X^3/(y^2 X)<=X^(-epsilon) for y>=X^(2/15+epsilon).",
+      "theta": "2/15"
+    },
+    "density_coefficient": "30/13",
+    "formula": {
+      "conventions": "The closure v4 transfer uses integral endpoints and HSW+Bui boundary strips; no author/official byte identity is used or asserted.",
+      "official_only": "The official SWORD members, not author-hosted copies, supply the all-T formula, multiplicity proof, endpoint transfer, and height bridge."
+    },
+    "huxley": {
+      "certificate": "Exact coefficient equality 30(3s-1)-39=3(30s-23), not finite samples.",
+      "identity": "30/13-3/(3s-1)=3(30s-23)/[13(3s-1)]",
+      "range_signs": "For 4/5<=s<1, 30s-23>=1 and 3s-1>=7/5, so the difference is nonnegative."
+    },
+    "uniform": {
+      "error": "x(log x)^3/T=O(y exp(-(log x)^(1/4))) eventually.",
+      "height": "T=x/y exp(2(log x)^(1/4))",
+      "identity": "1/B=13/30 and 1-1/B=17/30",
+      "range": "y>=x^(17/30+epsilon), y<=x^0.99 gives 2<=T<=x and T<x^(13/30-epsilon/2) eventually",
+      "theta": "17/30"
+    }
+  },
+  "legacy_route_a_identities": {
+    "timing_note": "v1-v2 have timing-mutable raw bytes and are preserved by semantic identities; timing is absent from v5's mathematical artifact.",
+    "v1_v3_exact_replay_sha256": {
+      "route_a_v1": "7aa44f69a585ea5b984ef027e8ace496ae1134e55e8a06b24ea51abbe509f729",
+      "route_a_v2": "3e0e194aab6810a2697f7951058c3ee407fa3dc47e9ce91ba96139f037fc3970",
+      "route_a_v3": "1e0069963e04ae5180e7994f57ad7ced135d8d104bf83d59652fe2c49a489794"
+    },
+    "v4_byte_sha256": "eca84d439a7895a8d781ba54ba030fb2c8c76dc09082cbdb60282fe349543512"
+  },
+  "official_source_inputs": {
+    "artifacts/cycle-2-mit-sword-official-bitstream-audit-v1.json": "6b4bd931a33a075d39aefc905e27e24767a9a0f08b82947afdfea46accefc4b7",
+    "artifacts/cycle-2-stream-c-explicit-formula-source-closure-v4.json": "1c4ecc54be6f681be788084c3637f1101996869e09015edac8cf41e6ab39d5f0",
+    "artifacts/cycle-2-stream-c-source-ledger-v2.json": "4e2b107194420d97cb949cf2e7934f8fda81bb5f688e63aa2cd49e1b6c3cac5d",
+    "artifacts/sources/arxiv-2405.20552v2/LargevaluesDirichlet17.tex": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428",
+    "artifacts/sources/bui-heath-brown-2013-simple-zeros.tar": "a171c6e74be228955df48191675e497ce4934623ae33ddddd9761b8cb1185ca5",
+    "artifacts/sources/ford-2002-zero-free-regions.pdf": "a43a2c37cf0f34b05bf80d9e58bcef176371437eedf7aae17d72f2c55b04c948",
+    "artifacts/sources/hasanalizade-shen-wong-2022-counting-zeros.tar": "8ba8d0eb95e1dd967adf17b7a2e77bdc45a99f6aa283d41d23dd4d0ac4358247",
+    "artifacts/sources/huxley-1972-inventiones15-gdz-volume.pdf": "5946d8579810f0754e972d42a09ed2a703604b8fb4e6377f14caaa5dc48f9797",
+    "artifacts/sources/mit-dspace-1721.1-101679-metadata.json": "4c1f262bc51efa23993a561f908871d35245ca462df90271d0bf2127283f24c7",
+    "artifacts/sources/mit-ocw-18-785-2007-errorbounds-official.pdf": "b8b2acfbc4b22b25c898c0af8f74692a0d31bd6cf302e9f2d772d33a34fdd3e4",
+    "artifacts/sources/mit-ocw-18-785-2007-sword-official.zip": "d559229963960da2087918a95af6efd7ad8999a4ba63942a12aef63c5eceac57",
+    "artifacts/sources/mit-ocw-18-785-2007-von-mangoldt-official.pdf": "5f705a6d3804d555944298f87a8a53e2e4e5a13188a717679f8fb8b73095210a",
+    "artifacts/sources/platt-trudgian-2021-rh-3e12.tar": "c4f13cdfca711d2bf90a097147be2a094ff175b0b161647359e174633fd8bf86",
+    "proof/check_cycle_2_stream_c_explicit_formula_sources_v4.py": "72107f1f31e51d2aa9d0ea0eb22c247a1643e58a898232a7fd02c3dee5508064"
+  },
+  "open_blockers": [],
+  "pass_state": "NARROW PASS: Stream-C Route-A official-source, convention, and endpoint-arithmetic nodes are checked. G0 remains OBSERVED pending the separately scoped full reconciliation.",
+  "replay": {
+    "check_command": "python3 projects/guth-maynard-zero-density/proof/replay_cycle2_stream_c_route_a_v5.py --check projects/guth-maynard-zero-density/artifacts/cycle-2-stream-c-route-a-v5.json",
+    "interpreter_requirement": "Python 3 standard library and mutool version 1.23.10",
+    "script": "proof/replay_cycle2_stream_c_route_a_v5.py",
+    "script_sha256": "34cc195040d61ea7bd5bb142ad244ae21fc3a1f86b7c093cdfa00fbd5f3bf076",
+    "write_command": "python3 projects/guth-maynard-zero-density/proof/replay_cycle2_stream_c_route_a_v5.py --write projects/guth-maynard-zero-density/artifacts/cycle-2-stream-c-route-a-v5.json"
+  },
+  "result_labels": {
+    "almost_all": "PROVED input compatibility conditional on GM density",
+    "almost_all_theta": "2/15",
+    "uniform": "PROVED input compatibility conditional on GM density",
+    "uniform_theta": "17/30"
+  },
+  "route": "A",
+  "rows": [
+    {
+      "epistemic_status": "PROVED",
+      "falsifier": "Any v5 source path that relies on an author-copy license or byte identity invalidates this containment.",
+      "id": "SC-A51-v2-v4-provenance-corrections",
+      "statement": "v2's CC 4.0/author-byte license inference is withdrawn; v3's author-copy distribution caveat is superseded; v4 Route-A's dependence on source-closure v2 is not reused. V5 uses only official SWORD archive members and course metadata, and makes no author-copy identity claim."
+    },
+    {
+      "epistemic_status": "PROVED",
+      "falsifier": "A SWORD/member/metadata/checker hash mismatch, mutool-version mismatch, or missing official-PDF anchor invalidates this node.",
+      "id": "SC-A52-official-formula-and-proof-authority",
+      "statement": "The pinned DSpace SWORD ZIP, its official formula and proof members, course metadata, source-closure v4, and its checker establish the all-T formula, remainder, half-weight convention, and multiplicity proof from official bytes. mutool version 1.23.10 is checked before literal anchor extraction."
+    },
+    {
+      "epistemic_status": "PROVED",
+      "falsifier": "A pinned source hash or required source-ledger status mismatch invalidates the relevant hypothesis.",
+      "id": "SC-A53-other-route-a-source-hypotheses",
+      "statement": "GM \u00a713.2, Huxley, Ford, Platt--Trudgian, HSW, and Bui--Heath-Brown inputs are separately byte-pinned; the Route-A source-hypothesis checks do not invoke Route-B derivations."
+    },
+    {
+      "epistemic_status": "PROVED",
+      "falsifier": "Failure of either exact B identity or stated eventual range invalidates this arithmetic node.",
+      "id": "SC-A54-route-a-endpoint-arithmetic",
+      "statement": "Fresh exact Fraction arithmetic reproduces 17/30 and 2/15, their height ranges, truncation-error absorption, and the Cauchy--Schwarz remainder condition."
+    },
+    {
+      "epistemic_status": "PROVED",
+      "falsifier": "A failed coefficient equality or a negative range factor invalidates this universal comparison.",
+      "id": "SC-A55-universal-near-one-comparison",
+      "statement": "The Huxley coefficient inequality is global, certified by polynomial coefficient equality 30(3s-1)-39=3(30s-23) and range signs on 4/5<=s<1."
+    }
+  ],
+  "stream": "C",
+  "supersedes": {
+    "artifacts": [
+      "cycle-2-stream-c-route-a-v1",
+      "cycle-2-stream-c-route-a-v2",
+      "cycle-2-stream-c-route-a-v3",
+      "cycle-2-stream-c-route-a-v4"
+    ],
+    "preservation": "v1-v4 are retained unchanged. v1-v3 semantic identities and deterministic v4 bytes are checked before v5 is issued.",
+    "provenance_correction": "Official source-closure v4 replaces all author-copy authority paths; it withdraws v2's CC 4.0/author-byte premise and makes author/official byte identity unnecessary and unasserted."
+  }
+}

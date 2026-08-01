@@ -1,0 +1,124 @@
+{
+  "artifact_id": "cycle-2-g0-per-route-resource-gate-performance-v1",
+  "claim_boundary": "Host-specific runtime/RSS observations for the four preregistered route checks. They are operational evidence only and do not establish G0 PASS.",
+  "config_sha256": "8b4df0a64085f58a5fd21444ecb28317e70fee145d356f25c7f54052483f1378",
+  "environment": {
+    "mutool_version": "mutool version 1.23.10",
+    "python_executable": "/usr/bin/python3",
+    "python_implementation": "CPython",
+    "python_version": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
+    "time_version": "time (GNU Time) UNKNOWN\nCopyright (C) 2018 Free Software Foundation, Inc.\nLicense GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.\nThis is free software: you are free to change and redistribute it.\nThere is NO WARRANTY, to the extent permitted by law.\n\nWritten by David Keppel, David MacKenzie, and Assaf Gordon."
+  },
+  "epistemic_status": "OBSERVED",
+  "harness_sha256": "60627c41eb28347cb3ee321d7d256f973c8481643a25d5a8842bfafc3c6a6533",
+  "limits": {
+    "max_rss_kib_strictly_less_than": 262144,
+    "max_rss_mib_strictly_less_than": 256,
+    "wall_seconds_strictly_less_than": 60
+  },
+  "replay": {
+    "check_config_command": "python3 projects/guth-maynard-zero-density/proof/run_cycle2_g0_resource_gate_v1.py --check-config projects/guth-maynard-zero-density/artifacts/cycle-2-g0-per-route-resource-gate-config-v1.json",
+    "write_command": "python3 projects/guth-maynard-zero-density/proof/run_cycle2_g0_resource_gate_v1.py --write-performance projects/guth-maynard-zero-density/artifacts/cycle-2-g0-per-route-resource-gate-performance-v1.json"
+  },
+  "resource_gate": {
+    "gate_status": "PASS",
+    "non_promotion": "Even PASS is not G0 PASS; the analytic and reconciliation gates remain separately required."
+  },
+  "route_results": [
+    {
+      "command": [
+        "python3",
+        "proof/audit_cycle2_stream_b_route_a_v3.py",
+        "--check",
+        "artifacts/cycle-2-stream-b-route-a-v3.json"
+      ],
+      "epistemic_status": "OBSERVED",
+      "gate_status": "PASS",
+      "id": "stream-b-route-a-v3",
+      "max_rss_kib": 19072,
+      "parse_error": null,
+      "sealed_source_check": "Route-A v3 check hashes and anchors its GM source input.",
+      "stderr": "",
+      "stdout": "",
+      "strict_limits": {
+        "max_rss_kib": "< 262144",
+        "wall_seconds": "< 60"
+      },
+      "subprocess_returncode": 0,
+      "time_exit_status": 0,
+      "time_v_report": "\tCommand being timed: \"python3 proof/audit_cycle2_stream_b_route_a_v3.py --check artifacts/cycle-2-stream-b-route-a-v3.json\"\n\tUser time (seconds): 0.03\n\tSystem time (seconds): 0.01\n\tPercent of CPU this job got: 100%\n\tElapsed (wall clock) time (h:mm:ss or m:ss): 0:00.04\n\tAverage shared text size (kbytes): 0\n\tAverage unshared data size (kbytes): 0\n\tAverage stack size (kbytes): 0\n\tAverage total size (kbytes): 0\n\tMaximum resident set size (kbytes): 19072\n\tAverage resident set size (kbytes): 0\n\tMajor (requiring I/O) page faults: 0\n\tMinor (reclaiming a frame) page faults: 2410\n\tVoluntary context switches: 1\n\tInvoluntary context switches: 0\n\tSwaps: 0\n\tFile system inputs: 0\n\tFile system outputs: 0\n\tSocket messages sent: 0\n\tSocket messages received: 0\n\tSignals delivered: 0\n\tPage size (bytes): 4096\n\tExit status: 0\n",
+      "wall_seconds": "0.040000"
+    },
+    {
+      "command": [
+        "python3",
+        "proof/replay_cycle2_stream_b_route_b.py",
+        "--check",
+        "artifacts/cycle-2-stream-b-route-b-v1.json"
+      ],
+      "epistemic_status": "OBSERVED",
+      "gate_status": "PASS",
+      "id": "stream-b-route-b-v1",
+      "max_rss_kib": 52608,
+      "parse_error": null,
+      "sealed_source_check": "Route-B v1 check verifies frozen sources and source anchors.",
+      "stderr": "",
+      "stdout": "",
+      "strict_limits": {
+        "max_rss_kib": "< 262144",
+        "wall_seconds": "< 60"
+      },
+      "subprocess_returncode": 0,
+      "time_exit_status": 0,
+      "time_v_report": "\tCommand being timed: \"python3 proof/replay_cycle2_stream_b_route_b.py --check artifacts/cycle-2-stream-b-route-b-v1.json\"\n\tUser time (seconds): 0.05\n\tSystem time (seconds): 0.03\n\tPercent of CPU this job got: 98%\n\tElapsed (wall clock) time (h:mm:ss or m:ss): 0:00.09\n\tAverage shared text size (kbytes): 0\n\tAverage unshared data size (kbytes): 0\n\tAverage stack size (kbytes): 0\n\tAverage total size (kbytes): 0\n\tMaximum resident set size (kbytes): 52608\n\tAverage resident set size (kbytes): 0\n\tMajor (requiring I/O) page faults: 0\n\tMinor (reclaiming a frame) page faults: 10969\n\tVoluntary context switches: 1\n\tInvoluntary context switches: 0\n\tSwaps: 0\n\tFile system inputs: 0\n\tFile system outputs: 0\n\tSocket messages sent: 0\n\tSocket messages received: 0\n\tSignals delivered: 0\n\tPage size (bytes): 4096\n\tExit status: 0\n",
+      "wall_seconds": "0.090000"
+    },
+    {
+      "command": [
+        "python3",
+        "proof/replay_cycle2_stream_c_route_a_v5.py",
+        "--check",
+        "artifacts/cycle-2-stream-c-route-a-v5.json"
+      ],
+      "epistemic_status": "OBSERVED",
+      "gate_status": "PASS",
+      "id": "stream-c-route-a-v5",
+      "max_rss_kib": 44636,
+      "parse_error": null,
+      "sealed_source_check": "Route-A v5 check verifies official SWORD, official PDFs, metadata, source-closure v4, and mutool 1.23.10.",
+      "stderr": "",
+      "stdout": "",
+      "strict_limits": {
+        "max_rss_kib": "< 262144",
+        "wall_seconds": "< 60"
+      },
+      "subprocess_returncode": 0,
+      "time_exit_status": 0,
+      "time_v_report": "\tCommand being timed: \"python3 proof/replay_cycle2_stream_c_route_a_v5.py --check artifacts/cycle-2-stream-c-route-a-v5.json\"\n\tUser time (seconds): 0.09\n\tSystem time (seconds): 0.06\n\tPercent of CPU this job got: 100%\n\tElapsed (wall clock) time (h:mm:ss or m:ss): 0:00.16\n\tAverage shared text size (kbytes): 0\n\tAverage unshared data size (kbytes): 0\n\tAverage stack size (kbytes): 0\n\tAverage total size (kbytes): 0\n\tMaximum resident set size (kbytes): 44636\n\tAverage resident set size (kbytes): 0\n\tMajor (requiring I/O) page faults: 0\n\tMinor (reclaiming a frame) page faults: 12589\n\tVoluntary context switches: 18\n\tInvoluntary context switches: 3\n\tSwaps: 0\n\tFile system inputs: 0\n\tFile system outputs: 0\n\tSocket messages sent: 0\n\tSocket messages received: 0\n\tSignals delivered: 0\n\tPage size (bytes): 4096\n\tExit status: 0\n",
+      "wall_seconds": "0.160000"
+    },
+    {
+      "command": [
+        "python3",
+        "proof/replay_short_intervals_stream_c_route_b_v5.py",
+        "--check"
+      ],
+      "epistemic_status": "OBSERVED",
+      "gate_status": "PASS",
+      "id": "stream-c-route-b-v5",
+      "max_rss_kib": 43520,
+      "parse_error": null,
+      "sealed_source_check": "Route-B v5 check invokes the official source checker and independent SWORD audit.",
+      "stderr": "",
+      "stdout": "{\"artifact\": \"cycle-2-stream-c-route-b-v5.json\", \"verified\": true}\n",
+      "strict_limits": {
+        "max_rss_kib": "< 262144",
+        "wall_seconds": "< 60"
+      },
+      "subprocess_returncode": 0,
+      "time_exit_status": 0,
+      "time_v_report": "\tCommand being timed: \"python3 proof/replay_short_intervals_stream_c_route_b_v5.py --check\"\n\tUser time (seconds): 0.26\n\tSystem time (seconds): 0.12\n\tPercent of CPU this job got: 100%\n\tElapsed (wall clock) time (h:mm:ss or m:ss): 0:00.38\n\tAverage shared text size (kbytes): 0\n\tAverage unshared data size (kbytes): 0\n\tAverage stack size (kbytes): 0\n\tAverage total size (kbytes): 0\n\tMaximum resident set size (kbytes): 43520\n\tAverage resident set size (kbytes): 0\n\tMajor (requiring I/O) page faults: 0\n\tMinor (reclaiming a frame) page faults: 26831\n\tVoluntary context switches: 56\n\tInvoluntary context switches: 5\n\tSwaps: 0\n\tFile system inputs: 0\n\tFile system outputs: 0\n\tSocket messages sent: 0\n\tSocket messages received: 0\n\tSignals delivered: 0\n\tPage size (bytes): 4096\n\tExit status: 0\n",
+      "wall_seconds": "0.380000"
+    }
+  ]
+}

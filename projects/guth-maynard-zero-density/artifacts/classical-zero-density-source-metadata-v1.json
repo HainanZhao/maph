@@ -1,0 +1,41 @@
+{
+  "artifact_id": "classical-zero-density-source-metadata-v1",
+  "created_utc": "2026-08-01",
+  "status": "source-freeze; no new mathematical result",
+  "epistemic_status": "OBSERVED",
+  "huxley_primary": {
+    "citation": "M. N. Huxley, On the Difference between Consecutive Primes, Inventiones mathematicae 15 (1972), 164-170.",
+    "doi": "10.1007/BF01418933",
+    "gdz_record": "https://gdz.sub.uni-goettingen.de/id/PPN356556735_0015",
+    "eudml_record": "https://eudml.org/doc/142126",
+    "local_path": "artifacts/sources/huxley-1972-inventiones15-gdz-volume.pdf",
+    "sha256": "5946d8579810f0754e972d42a09ed2a703604b8fb4e6377f14caaa5dc48f9797",
+    "pdf_pages": 356,
+    "article_pdf_pages": "173-179",
+    "article_print_pages": "164-170",
+    "mapping_evidence": "The scanned PDF's p. 173 visibly bears the title and printed p. 164; p. 179 visibly bears printed p. 170."
+  },
+  "ingham_original": {
+    "citation": "A. E. Ingham, On the Estimation of N(σ,T), The Quarterly Journal of Mathematics, Oxford Series 11 (1940), 291-292.",
+    "doi": "10.1093/qmath/os-11.1.201",
+    "publisher_pdf_url": "https://academic.oup.com/qjmath/article-pdf/os-11/1/201/4478185/os-11-1-201.pdf",
+    "retrieval_status": "not locally retrievable in this run: repeated direct publisher requests returned HTTP 403",
+    "pagination_conflict": "The OUP landing metadata/search result labels the DOI as os-11(1), 201-202, while Huxley's own reference 3, Guth-Maynard's bibliography, and later bibliographies give 11 (1940), 291-292. No source file was retrieved to resolve this conflict."
+  },
+  "modern_ingham_restatement": {
+    "citation": "S. Chourasiya and A. Simonič, An explicit form of Ingham's zero density estimate, arXiv:2507.15184v2 (2025).",
+    "status": "preprint; used only as a modern restatement and not as a replacement for the original published source",
+    "pdf_url": "https://arxiv.org/pdf/2507.15184",
+    "source_url": "https://arxiv.org/e-print/2507.15184",
+    "local_pdf": "artifacts/sources/chourasiya-simonic-2025-explicit-ingham.pdf",
+    "local_source": "artifacts/sources/chourasiya-simonic-2025-explicit-ingham.tar",
+    "pdf_sha256": "11ebae58b467d14a20835eb732130c2c084f9440ef5e2fdbe38d697ba1e0d261",
+    "source_sha256": "eaac858e0a450fbbd77e02a9b4ac8a4e5fbe8674e74d21233d4e6a02c25de297",
+    "pdf_pages": 33
+  },
+  "replay": {
+    "hash": "sha256sum <file>",
+    "huxley_visual_source": "mutool draw -r 150 -o /tmp/huxley-%d.png artifacts/sources/huxley-1972-inventiones15-gdz-volume.pdf 173-179",
+    "modern_text_source": "mutool draw -F txt -o /tmp/ingham-modern.txt artifacts/sources/chourasiya-simonic-2025-explicit-ingham.pdf 1-33"
+  }
+}

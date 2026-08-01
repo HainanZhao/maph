@@ -1,0 +1,68 @@
+{
+  "artifact_id": "g1-envelope-sensitivity-reconciliation-v1",
+  "claim_boundary": "PROVED exact reconciliation of two independently written rational-identity routes, conditional on pinned published formulas and the finite G1 structural atlas. It does not assert any new large-values, zero-density, or short-interval inequality, and it makes no G1 route selection.",
+  "contained_no_effect": {
+    "epistemic_status": "PROVED",
+    "falsifier": "A proposed global gain must provide a valid bound on a left neighborhood of 7/10, or improve/replace the Ingham side; otherwise it fails this exact implication gate.",
+    "statement": "Within the existing split (Ingham only for s<7/10 and Guth--Maynard only for s>=7/10), a critical-point or right-side-only gain cannot lower the strict uniform 30/13 envelope because the Ingham left limit is 30/13."
+  },
+  "epistemic_status": "PROVED",
+  "falsifier": "Any hash mismatch, route-label/count disagreement, non-LV3 zero residual, changed critical residual, or attempted endpoint-only propagation invalidates this reconciliation or the scoped conclusion it supports.",
+  "formal_conditional_margin": {
+    "critical_local": "delta=10mu/13; LV3 remains the active local term only through mu=1/10, after which LV2 is the local barrier.",
+    "first_order_global_density": "30/13-50mu/39+O(mu^2)",
+    "formal_threshold_only": "17/30-13mu/54+O(mu^2); no short-interval result follows without a full replay.",
+    "left_extension_crossing": "300h^2+(90-50mu)h-65mu=0",
+    "premise": "A decrease mu>0 in the N exponent of LV3, with a separately valid left-neighborhood zero-detection propagation.",
+    "premise_tag": "CONJECTURED"
+  },
+  "frozen_hashes": {
+    "atlas_v2": "fd66d17664ca921795617c6bfca76c3be49246ea9351644848a2aadf9e680b08",
+    "route_a_artifact": "40ea902852d319e0c6a2562e1bde07bd925cf46827c7ecb167e9bc16556c3cda",
+    "route_a_script": "014e36f1c9e942a5e298a6c893a3be921f22a3f9b29424ad40e5814b00c30404",
+    "route_b_artifact": "8f2649be1e543e321972a994471b5a147f9d6fd5df9a0245d94f2c18b72ad2a0",
+    "route_b_script": "af65b7d1da0737e74e2f9d183034211ee458cae90e3c0a190caaa448637fbf1e"
+  },
+  "independence": {
+    "route_a": "direct term evaluation then exact atlas-label comparison",
+    "route_b": "cleared pairwise and transfer residual factorizations then atlas-label comparison",
+    "shared_inputs_only": [
+      "sealed G1 preregistration",
+      "G1 exact structural atlas v2",
+      "pinned Guth--Maynard TeX/tar"
+    ]
+  },
+  "reconciled_map": {
+    "active_count_maps": "identical across A/C/E labels",
+    "critical_cell": {
+      "A_active": [
+        "A2",
+        "A3"
+      ],
+      "C_active": [
+        "min(C2,C3) via C2"
+      ],
+      "E_active": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "local": "(s,n,v,w)=(7/10,5/6,7/10,2/3)",
+      "residuals": {
+        "LV1": "3/13",
+        "LV2": "1/13",
+        "LV3": "0/1"
+      },
+      "transfer": "(s,n0,k,q)=(7/10,5/13,2,10/13)"
+    },
+    "required_improvement_target": "Only the source's named third Theorem 1.1 term T*N^(12/5)*V^(-4) can create first-order slack at the critical transfer; the first two have positive residuals.",
+    "zero_B_residual_rows": 11,
+    "zero_residual_characterization": "q=ell(s), n0=ell(s)/2, k=2 for every one of the 11 frozen s values",
+    "zero_residual_term": "LV3 only"
+  },
+  "replay": {
+    "check_command": "python3 projects/guth-maynard-zero-density/proof/reconcile_g1_envelope_sensitivity_v1.py --check",
+    "script_sha256": "e029414e324d3c232f5a119e774b4f62c9c5d9583c91a952baf8679ce4eddc5f",
+    "write_command": "python3 projects/guth-maynard-zero-density/proof/reconcile_g1_envelope_sensitivity_v1.py --write"
+  }
+}

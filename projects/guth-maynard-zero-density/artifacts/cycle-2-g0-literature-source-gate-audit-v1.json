@@ -1,0 +1,107 @@
+{
+  "artifact_id": "cycle-2-g0-literature-source-gate-audit-v1",
+  "claim_boundary": "PROVED bounded audit of literature/source hypotheses only. It recommends the source-hypothesis gate status; it neither proves the cited analytic theorems nor declares G0 PASS.",
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "bui_source": "a171c6e74be228955df48191675e497ce4934623ae33ddddd9761b8cb1185ca5",
+    "classical_source_metadata": "5b34b80d08898a5a0092b05c1a11344f3e8c28304eecaa92d3fba824b3f3f426",
+    "ford_pdf": "a43a2c37cf0f34b05bf80d9e58bcef176371437eedf7aae17d72f2c55b04c948",
+    "gm_source_metadata": "720da7b4ab8e3290c27df44b466eb74099daadd3eb010ae9ec32ae34914fd963",
+    "gm_tex": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428",
+    "hsw_source": "8ba8d0eb95e1dd967adf17b7a2e77bdc45a99f6aa283d41d23dd4d0ac4358247",
+    "huxley_scan": "5946d8579810f0754e972d42a09ed2a703604b8fb4e6377f14caaa5dc48f9797",
+    "montgomery_scan": "b240c7c07d32201ced906bd0fdc4d36cca3c11999084afeb658ffca3f978534e",
+    "mp_tex": "ec22dfdb8394b8ab4b228d0f438d19858015fc74330e247d08f36e5830782426",
+    "official_formula_checker": "72107f1f31e51d2aa9d0ea0eb22c247a1643e58a898232a7fd02c3dee5508064",
+    "official_formula_closure": "1c4ecc54be6f681be788084c3637f1101996869e09015edac8cf41e6ab39d5f0",
+    "platt_source": "c4f13cdfca711d2bf90a097147be2a094ff175b0b161647359e174633fd8bf86",
+    "stream_a_source_metadata": "378c12a69ba24dd3dae105c87b6960c9909e7b00935ca73f6180d2404572c980",
+    "stream_b_reconciliation": "5aa163187d8365a72bfbc662e3e3d64a1efbdf18cdc26f150e6dee7b19e3c052",
+    "stream_b_reconciliation_replay": "90ed534d22405807ece4f7b0d43e6df273a1740f705f7c4835f2aa784e948207",
+    "stream_c_source_ledger": "4e2b107194420d97cb949cf2e7934f8fda81bb5f688e63aa2cd49e1b6c3cac5d"
+  },
+  "recommendation": {
+    "non_promotion": "This PASS recommendation is not G0 PASS.",
+    "not_evaluated": [
+      "per-route resource/performance gate",
+      "any non-source mathematical reconstruction beyond the pinned route audits",
+      "global G0 status"
+    ],
+    "scope": "All eight listed literature/source-hypothesis gates are closed in the bounded source audit.",
+    "source_hypothesis_gate": "PASS",
+    "status": "PROVED"
+  },
+  "replay": {
+    "check_command": "python3 projects/guth-maynard-zero-density/proof/audit_g0_literature_source_gates_v1.py --check",
+    "script_sha256": "7bb8b6de5cfff2acaaa2bab215b9c3a0fc8abd8e646476d858d6f1019c3b5366",
+    "write_command": "python3 projects/guth-maynard-zero-density/proof/audit_g0_literature_source_gates_v1.py --write"
+  },
+  "source_gates": [
+    {
+      "closure": "The raw MP lemma does not state multiplicity; the separately pinned Stream-B two-route R3 conversion closes multiplicity/two-sided reassembly without treating the omission as implicit.",
+      "hypotheses_and_conventions": "positive height [T,2T], beta>=sigma count restriction, exact Type-I detector, GM-complement-to-MP-Type-II inclusion, sigma>=1/2+1/log T in the proof, and log-loss granularity are checked.",
+      "id": "MP-L24-and-GM-type-transfer",
+      "locator": "MP TeX lines 975-1022 and 2132-2164; GM TeX lines 2307-2318",
+      "status": "PROVED"
+    },
+    {
+      "closure": "The final GM MVT branch and strict residual are included in the pinned Stream-B two-route reconciliation.",
+      "hypotheses_and_conventions": "real T0,T with T>0; ordered points in (T0,T0+T); delta minimum spacing; arbitrary complex coefficients; absolute implied constant. GM polarity is handled by negating ordinates.",
+      "id": "Montgomery-discrete-MVT",
+      "locator": "Montgomery 1969 printed pp. 334-335 / frozen scan PDF pp. 347-348, Theorem 1 (Davenport), formulae (5)-(7)",
+      "status": "PROVED"
+    },
+    {
+      "closure": "Pinned Stream-B reconciliation v2 has zero coverage gaps across the two independent application audits.",
+      "hypotheses_and_conventions": "[T,2T] local height, beta>=sigma, N range, 1-separated W, N^k split, and visible T^{o(1)}/log losses are retained.",
+      "id": "GM-internal-transfers",
+      "locator": "GM TeX lines 2307-2364: detector, smooth psi/Fourier truncation, separated extraction, powered polynomial, and MVT branch",
+      "status": "PROVED"
+    },
+    {
+      "closure": "The unread original Ingham article is not used as a direct source; Huxley's published restatement is the sole frozen lower-branch authority.",
+      "hypotheses_and_conventions": "two-sided N(alpha,T) in alpha<=beta<=1 and -T<=gamma<=T; 1/2<=alpha<=3/4; T^{3(1-alpha)/(2-alpha)}(log T)^5. This covers the selected lower branch through 7/10.",
+      "id": "Ingham-via-Huxley-restatement",
+      "locator": "Huxley printed p. 164 / frozen scan PDF p. 173, (1.8)",
+      "status": "PROVED"
+    },
+    {
+      "closure": "Jutila is excluded; no Jutila/Montgomery disjunction remains on this path.",
+      "hypotheses_and_conventions": "same two-sided N(alpha,T); 3/4<=alpha<=1; exponent 3(1-alpha)/(3alpha-1) and log^44 retained. The promoted near-one branch is Huxley on 4/5<=alpha<=1.",
+      "id": "Huxley-near-one",
+      "locator": "Huxley printed p. 164 / frozen scan PDF p. 173, (1.9)",
+      "status": "PROVED"
+    },
+    {
+      "closure": "No Montgomery Corollary 11.4 source is used directly.",
+      "hypotheses_and_conventions": "Ford: |t|>=3 and the stated 57.54 VK region. Platt--Trudgian: all nontrivial zeros through height 3,000,175,332,800 have Re rho=1/2. Together they cover the all-height cutoff used after asymptotic weakening.",
+      "id": "Ford-plus-Platt-VK",
+      "locator": "Ford PDF p. 4, Theorem 5; Platt--Trudgian source lines 46-64, Theorem 1",
+      "status": "PROVED"
+    },
+    {
+      "closure": "Multiplicity is explicit rather than inferred from a simple-zero or distinct-zero count.",
+      "hypotheses_and_conventions": "HSW is valid for T>=e with explicit Riemann-von Mangoldt error; Bui explicitly defines N(T) with each zero counted with multiplicity. These support the unit-strip and reciprocal-distance conversion.",
+      "id": "HSW-Bui-local-multiplicity",
+      "locator": "HSW source lines 255-261, Corollary 1.1; Bui--Heath-Brown source line 43",
+      "status": "PROVED"
+    },
+    {
+      "closure": "Official DSpace SWORD bytes and CC BY-NC-SA 3.0 item metadata are pinned; author-copy identity/license is not used.",
+      "hypotheses_and_conventions": "all x>=2,T>0; half-weight and distance remainder; official proof says zeroes are counted with multiplicity; v4 transfer pins integral endpoints and the |gamma|<T to |rho|<=T bridge.",
+      "id": "official-Kedlaya-formula-proof",
+      "locator": "official SWORD archive members errorbounds.pdf Theorem 1 p. 1 and von_mangoldt.pdf Theorem 1 pp. 1-6/residue computation p. 2",
+      "status": "PROVED"
+    }
+  ],
+  "unread_or_disjunctive_source_audit": {
+    "bibliographic_containment": "OBSERVED: cycle-2-stream-c-source-ledger-v2 has stale Huxley title metadata, but its frozen PDF hash and p. 173/(1.9) locator identify the actual Huxley article. This is a record-maintenance issue, not a disjunctive or unread source on the selected path.",
+    "excluded": [
+      "Original Ingham paper: unread locally, but not directly used; Huxley (1.8) is the selected published restatement.",
+      "Jutila near-one alternative: unread and unused; Huxley (1.9) is the selected single branch.",
+      "Montgomery Topics Corollary 11.4 and Davenport Chapter 17: not used directly; Ford+Platt and official Kedlaya respectively replace them."
+    ],
+    "result": "NO UNREAD OR DISJUNCTIVE SOURCE ON THE SELECTED PROMOTED PATH",
+    "status": "PROVED"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "artifact_id": "cycle-2-stream-c-explicit-formula-source-closure-v1",
+  "created_utc": "2026-08-01",
+  "status": "source access, convention, and endpoint-transfer audit; no new prime theorem",
+  "epistemic_status": "OBSERVED",
+  "primary_restricted_source": {
+    "citation": "H. Iwaniec, Lectures on the Riemann Zeta Function, University Lecture Series 62, AMS, 2014.",
+    "doi": "10.1090/ulect/062",
+    "official_catalogue": "https://bookstore.ams.org/ULECT/62",
+    "locator": "Theorem 10.1, pp. 37-38",
+    "access": "view-only personally purchased AMS PDF; watermarked and duplication prohibited",
+    "repository_policy": "No PDF, OCR, page image, text extract, or copied excerpt is stored in this repository."
+  },
+  "published_corroboration_not_frozen": {
+    "citation": "C. Y. Yıldırım, The distribution of primes: conjectures vs. hitherto provables, Further Progress in Analysis, World Scientific, 2009, pp. 75-107.",
+    "doi": "10.1142/9789812837332_0004",
+    "locator": "equation (18), printed p. 82",
+    "status": "OBSERVED",
+    "access_note": "Reachable on a third-party host, but publisher authorisation of that host was not verified; it is neither downloaded nor treated as an OA source freeze."
+  },
+  "locally_frozen_reconciliation_sources": [
+    {
+      "id": "cully-hugill-johnston-rvm-ii",
+      "citation": "M. Cully-Hugill and D. R. Johnston, On the error term in the explicit formula of Riemann-von Mangoldt II, arXiv:2402.04272v3.",
+      "pdf": {"path": "artifacts/sources/cully-hugill-johnston-2024-rvm-ii.pdf", "sha256": "9bf784f264970a5bb82e54547c2dbd68b1a4cc6a69ee679b8fc2159d006a565c", "pages": 19},
+      "source": {"path": "artifacts/sources/cully-hugill-johnston-2024-rvm-ii.tar", "sha256": "2d118982a210b43ff4884c88fb285f79fcaa3e22395ec8f83f0061af1b86c9a3"},
+      "locators": {"intro_formula": "main.tex lines 108-113", "fixed_T_predecessor": "lines 115-120", "some_T_star_theorem": "lines 128-133"},
+      "limitation": "The fixed-T predecessor has T below x^alpha for alpha<=1/2; the main theorem selects some T* in [T,2T]. It is not a replacement for GM's fixed truncation."
+    },
+    {
+      "id": "hasanalizade-shen-wong-rvm",
+      "citation": "E. Hasanalizade, Q. Shen, and P.-J. Wong, Counting zeros of the Riemann zeta function, J. Number Theory 235 (2022), 219-241.",
+      "pdf": {"path": "artifacts/sources/hasanalizade-shen-wong-2022-counting-zeros.pdf", "sha256": "3fc4c89f49249924e61cb0d289d81559faed53fcbb838628ea32dc7ec6f89fbf"},
+      "source": {"path": "artifacts/sources/hasanalizade-shen-wong-2022-counting-zeros.tar", "sha256": "8ba8d0eb95e1dd967adf17b7a2e77bdc45a99f6aa283d41d23dd4d0ac4358247"},
+      "locator": "Corollary 1.1 / (1.4), source lines 255-261; argument-principle setup lines 327-334",
+      "role": "yields the O(log T) one-unit positive-height count by differencing"
+    },
+    {
+      "id": "bui-heath-brown-multiplicity",
+      "citation": "H. M. Bui and D. R. Heath-Brown, On simple zeros of the Riemann zeta-function, Bull. London Math. Soc. 45 (2013), 953-961.",
+      "pdf": {"path": "artifacts/sources/bui-heath-brown-2013-simple-zeros.pdf", "sha256": "b1c5a4d6cdba59d0fc552a18cb2465c442a8534be0c4e51a23db126316f83077"},
+      "source": {"path": "artifacts/sources/bui-heath-brown-2013-simple-zeros.tar", "sha256": "a171c6e74be228955df48191675e497ce4934623ae33ddddd9761b8cb1185ca5"},
+      "locator": "Introduction, source lines 42-47",
+      "role": "pins the standard Riemann-von Mangoldt convention that N(T) counts multiplicities"
+    }
+  ],
+  "proved_transfer": {
+    "endpoint_choice": "u=ceil(x)-1, v=floor(x+y)",
+    "half_weight_cost": "O(log x) at each integral endpoint",
+    "integer_distance": "distance to any distinct prime power is at least 1",
+    "error_absorption": "for 2<=T<=x and u,v asymp x, the two Iwaniec endpoint remainders are O(x(log x)^3/T)",
+    "literal_modulus_boundary": "if GM |rho| means complex modulus rather than ordinate, the mismatch lies in T-1/T<|gamma|<=T and costs O(x log T/T) by the unit-strip count",
+    "status": "PROVED conditional on the stated Iwaniec theorem; the source-access status itself remains OBSERVED"
+  },
+  "replay": {"command": "python3 proof/check_cycle_2_stream_c_explicit_formula_sources.py", "scope": "local hashes and source anchors; not restricted-source reproduction"}
+}

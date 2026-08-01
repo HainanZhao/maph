@@ -1,0 +1,78 @@
+LARGE VALUE ESTIMATES IN NUMBER THEORY, HARMONIC ANALYSIS, AND COMPUTER SCIENCE 21
+
+denote the singular values of M. Recall that the norm of M is ∥M∥ = s1(M), and recall that for
+p ≥ 1, the Schatten p-norm of M is
+
+(18)
+∥M∥Sp :=
+
+��
+
+i
+si(M)p
+�1/p
+
+Finally recall that for any natural number r, we have
+
+Trace [(M ∗M)r] =
+�
+
+i
+si(M)2r = ∥M∥2r
+S2r.
+
+If we are given a matrix M and a fixed W, then we can efficiently compute Trace [(M ∗
+W MW )r]
+and use it to estimate ∥MW ∥. As r increases, this gives us more and more accurate estimates for
+∥MW ∥. The main problem is that we want to estimate the maximum of ∥MW ∥ over all W of a
+given size S. Unless S is very small, there are too many possibilities to check them one at a time
+in total time Poly(N). So we have to understand how Trace [(M ∗
+W MW )r] depends on W.
+When we expand out the expression Trace [(M ∗
+W MW )r], it naturally has the form of an r-linear
+tensor. Recall that an r-linear tensor on a complex vector space V is a map A : V r → C that
+is linear in each component. In our case, the vector space V is CT and we associate each subset
+W ⊂ {1, ..., T} with the vector 1W whose components are (1W )i = 1 if i ∈ W and (1W )i = 0 if
+i /∈ W. If we just expand out Trace [(M ∗
+W MW )r], then we find that there is an r-linear tensor SM,r
+so that
+
+Trace [(M ∗
+W MW )r] = SM,r(1W , ..., 1W ).
+
+We call the tensor SM,r the Schatten r-tensor of the matrix M.
+The paper [GM] carefully studies the tensor SMDir,3. The paper [DHPT] carefully studies the
+tensor SMran,r for all r ≥ 2.
+For r = 2, SM,2 is a 2-linear tensor, which means it is a matrix. To study this matrix, one might
+find its operator norm or its singular value decomposition. However, studying the matrix SM,2 is
+closely related to the MM ∗ method, and it doesn’t lead to any new estimates for the large value
+problem. So we have to study the tensor SM,r for r ≥ 3.
+There is a natural notion of the norm of an r-linear tensor for any r:
+
+(19)
+∥S∥ :=
+max
+∥v1∥ℓ2=...=∥vr∥ℓ2=1 |S(v1, .., vr)|.
+
+In studying a tensor, it is usually a good first step to estimate its norm. But in some cases,
+we can get a better understanding by breaking up the tensor into pieces. We will write SM,r as a
+sum of a simple tensor and a leftover piece, and then bound the norm of the leftover piece. Let
+us present one such decomposition, following [GM]. To motivate the decomposition, let us try to
+make an educated guess about the value of �
+i si(MW )2r for a typical set W of a given size. Recall
+that the Hilbert-Schmidt norm of a matrix M is given by
+
+∥M∥2
+HS =
+�
+
+i
+si(M)2 =
+�
+
+i,j
+|Mi,j|2.
+
+So if every entry of M has norm 1, then
+
+

@@ -1,0 +1,246 @@
+LARGE VALUE AND ZERO DENSITY ESTIMATES FOR DIRICHLET L-FUNCTIONS
+13
+
+Proof. Expanding the trace and using χ(n) = 0 unless (n, q) = 1, we have
+
+tr(MM ∗) =
+�
+
+(t,χ)∈W
+
+�
+
+(n,q)=1
+w
+� n
+
+N
+
+�2
+
+= |W|
+�
+
+(n,q)=1
+h0
+
+� n
+
+N
+
+�
+
+We have the result upon performing Poisson summation.
+□
+
+Similarly, we expand the cubic trace.
+
+Lemma 4.5 (Expansion of the cubic trace). Let W be a finite set of pairs (t, χ), where
+|t| ≤ T and for (t, χ) ̸= (t′, χ′) either χ ̸= χ′ or |t − t′| ≥ (qT)ϵ. Then we have
+
+tr((MM ∗)3) = |W|
+�N
+
+q
+
+�
+
+m∈Z
+
+�
+
+a mod q
+(a,q)=1
+
+eq(am)ˆh0
+
+�Nm
+
+q
+
+��3
++
+�
+
+−
+→
+m∈Z3\{0}
+I−
+→
+m + Oϵ((qT)−100),
+
+where
+
+I−
+→
+m = N 3
+
+q3
+�
+
+(t1,χ1),(t2,χ2),(t3,χ3)∈W
+not all equal
+
+�
+
+a1,a2,a3 mod q
+(a1a2a3,q)=1
+
+χ1(a1)χ2(a1)χ2(a2)χ3(a2)χ3(a3)χ1(a3)eq(−→a · −→
+m)
+
+ˆht1−t2
+
+�Nm1
+
+q
+
+�
+ˆht2−t3
+
+�Nm2
+
+q
+
+�
+ˆht3−t1
+
+�Nm3
+
+q
+
+�
+.
+
+Proof. By expanding the cubic trace, we see that tr((MM ∗)3) is equal to
+�
+
+(ti,χi)∈W
+1≤i≤3
+
+�
+
+n1,n2,n3∈Z
+ht1−t2
+
+�n1
+
+N
+
+�
+χ1χ2(n1)ht2−t3
+
+�n2
+
+N
+
+�
+χ2χ3(n2)ht3−t1
+
+�n3
+
+N
+
+�
+χ3χ1(n3).
+
+Performing Poisson summation in the n1-sum gives
+�
+
+n1∈Z
+ht1−t2
+
+�n1
+
+N
+
+�
+χ1χ2(n1) =
+�
+
+a1 mod q
+
+�
+
+n1∈Z
+n1≡a1 mod q
+
+ht1−t2
+
+�n1
+
+N
+
+�
+χ1χ2(n1)
+
+= N
+
+q
+
+�
+
+a1 mod q
+
+�
+
+m1∈Z
+ˆht1−t2
+
+�Nm1
+
+q
+
+�
+eq(a1m1)χ1χ2(a1).
+
+We derive analogous expressions for the n2-sum and the n3-sum, ultimately concluding
+that
+
+tr((MM ∗)3) =
+�
+
+−
+→
+m∈Z3
+
+N 3
+
+q3
+�
+
+(ti,χi)∈W
+1≤i≤3
+
+�
+
+a1,a2,a3 mod q
+(a1a2a3,q)=1
+
+χ1(a1)χ2(a1)χ2(a2)χ3(a2)χ3(a3)χ1(a3)eq(−→a · −→
+m)
+
+ˆht1−t2
+
+�Nm1
+
+q
+
+�
+ˆht2−t3
+
+�Nm2
+
+q
+
+�
+ˆht3−t1
+
+�Nm3
+
+q
+
+�
+.
+
+
