@@ -1,0 +1,40 @@
+{
+  "candidate": {
+    "d": 12,
+    "field": "Q(sqrt(13))",
+    "form_conductor": 1,
+    "modulus": "(12) infinity_2",
+    "r": 1
+  },
+  "claim_boundary": "Exact Engine-A packet construction only; no AFK characteristic-to-ray bridge, multiplier comparison, signed reconstruction, or TCC conclusion.",
+  "claim_tag": "EXPLORATORY",
+  "exact_engine_a_output": {
+    "ABSOLUTE_PACKET_RESULTANT": "x^8 - 16*x^7 + 59*x^6 - 54*x^5 + 29*x^4 - 54*x^3 + 59*x^2 - 16*x + 1",
+    "CHARACTER_RECORDS": "[[[0, 1, 0], 0, [[12, 0; 0, 4], [1, 0]], 0, 0], [[1, 1, 0], 0, [[4, 0; 0, 4], [1, 0]], 0, 0], [[0, 0, 1], 4, [[3, 2; 0, 1], [1, 0]], 2, 1], [[1, 0, 1], 1, [[12, 0; 0, 12], [1, 0]], 1, 1]]",
+    "COEFFICIENT_COORDINATE_DECIMAL_DIGITS": "2",
+    "COMMON_DENOMINATOR": "1",
+    "EFFECTIVE_CHARACTERS": "[[0, 0, 1], [1, 0, 1]]",
+    "PACKET_FACTOR_DEGREE": "4",
+    "PACKET_FACTOR_IRREDUCIBLE_OVER_K": "1",
+    "PACKET_FACTOR_OVER_K": "x^4 + Mod(-4*y - 6, y^2 - y - 3)*x^3 + Mod(13*y + 17, y^2 - y - 3)*x^2 + Mod(-4*y - 6, y^2 - y - 3)*x + 1",
+    "PACKET_FACTOR_POSITIVE_ROOT_SIGN_PATTERN": "1",
+    "PACKET_POLYNOMIAL_SYNTHESIS": "PASS",
+    "POWERED_EXPONENTS": "[1, 1]",
+    "POWERED_TRACES": "[Mod(y, y^2 - y - 3), Mod(2*y + 2, y^2 - y - 3)]",
+    "RAY_CYC": "[2, 2, 2]",
+    "SIGN_LOG": "[0, 1, 1]",
+    "SUPPORTED_CHARACTERS": "[[0, 1, 0], [1, 1, 0], [0, 0, 1], [1, 0, 1]]"
+  },
+  "gp_stderr": "\u001b[0;31m  ***   Warning: new maximum stack size = 1500000256 (1430.512 Mbytes).\u001b[0m\n",
+  "replay": {
+    "command": "python3 discovery/certify_tcc_sweep_d12_engine_a_exploratory.py",
+    "pari_version": "[2, 15, 4]",
+    "wall_seconds": 0.03980030305683613
+  },
+  "schema": "tcc-sweep-d12-engine-a-packet-exploratory-v1",
+  "source_hashes": {
+    "/root/projects/maph/projects/effective-stark-sweep/scripts/census_packet_conventions.gp": "dc4f868383b8f73d843741cb777cd9ff2eea58390667d33ea3e406c7748f6c6b",
+    "/root/projects/maph/projects/effective-stark-sweep/scripts/certify_census_q_packet.gp": "88058f7e9717758e40b2b73e5ff7532ef7b02874b57bf1698d6ac8c4798ed66b",
+    "/root/projects/maph/projects/sic-stark/discovery/certify_tcc_sweep_d12_engine_a_exploratory.py": "3704ec36d75575a619a9c3320e0912c186b6a7e5e57cc79e7d5dfd25889f39f4"
+  }
+}

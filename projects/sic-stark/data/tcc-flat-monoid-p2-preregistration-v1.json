@@ -1,0 +1,50 @@
+{
+  "schema": "tcc-flat-monoid-p2-preregistration-v1",
+  "claim_tag": "PREREGISTRATION",
+  "recorded_utc": "2026-08-01",
+  "purpose": "Freeze the first rigorous AFK radical-annihilation test for the d=12,f=3 overlap pilot.",
+  "target": {
+    "selection_rule": "The lexicographically first stored radical basis vector in tcc-flat-monoid-p1-overlap-adapter-v1.json.",
+    "radical_vector": {
+      "coefficient_minus_one_monoid_element": 0,
+      "coefficient_plus_one_monoid_element": 3
+    },
+    "zero_class_rule": "The monoid element 0 is the zero class, whose differenced partial zeta derivative is zero by Kopp's zero-class proposition.",
+    "nonzero_class_characteristic": [4, 10],
+    "reduced_hj_data": {
+      "beta": "(11+3*sqrt(13))/2",
+      "period_word": [11],
+      "stabilizer_power": 3,
+      "r_cycle": [[-2, 3], [-1, 3], [-1, 6]],
+      "w_cycle": [
+        "5*beta/6+2/3",
+        "5*beta/6+1/6",
+        "beta/3+1/6"
+      ]
+    }
+  },
+  "formula": "Z'_12infinity2(A_3)=-2*sum_{w in w_cycle} log(Sin_2(w,beta)); the factor 2 is the one-place fiber cardinality because O_3 has no negative-norm unit.",
+  "enclosure_policy": {
+    "precision_decimal_digits": 80,
+    "per_factor_tolerance": "1e-12",
+    "near_zero_cutoff": "1e-6",
+    "tail_cutoff": 120,
+    "required_margin": "The resulting interval for Z'_12infinity2(A_3) must exclude zero.",
+    "failure_rule": "If any enclosure or source-hypothesis check fails, retain the failed artifact and make no radical conclusion."
+  },
+  "resource_cap": {
+    "wall_seconds": 300,
+    "memory_mib": 2048
+  },
+  "input_sha256": {
+    "overlap_adapter": "b58faf31408edcc23292d270f16bf75817e3c5566fd733002d752eb77083a239",
+    "overlap_labels": "6fbc86c71b94dae9eb0d465a407977b0e6120e4af9e96547517d538a03a2f508",
+    "label_verifier": "c5b362c26292685e7248783509b6254dbe396e9b75ec70475d982107ae7a2025",
+    "kopp_2411_source": "87d273e270259af93ea27189001bebc4d540f5d28f0f173a799b1257faaac746"
+  },
+  "planned_outputs": [
+    "projects/sic-stark/artifacts/tcc-flat-monoid-p2-radical-counterexample-v1.json",
+    "projects/sic-stark/proof/certify_tcc_flat_monoid_p2_radical_counterexample.py",
+    "projects/sic-stark/docs/tcc-flat-monoid-p2-radical-counterexample-v1.md"
+  ]
+}
