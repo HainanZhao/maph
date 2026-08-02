@@ -24,30 +24,30 @@ Read the listed record and its linked preregistration, proof document, conventio
 
 ## Index coverage
 
-- Cycle artifact files found in the working tree: 273
-- Cycle artifacts present in the Git index: 272
-- Artifacts by top-level epistemic status: CONJECTURED=6, LEGACY_UNTAGGED=10, OBSERVED=56, PROVED=201
-- Recursively tagged fields indexed for search (not independent claims): 23600
+- Cycle artifact files found in the working tree: 275
+- Cycle artifacts present in the Git index: 274
+- Artifacts by top-level epistemic status: CONJECTURED=6, LEGACY_UNTAGGED=10, OBSERVED=56, PROVED=203
+- Recursively tagged fields indexed for search (not independent claims): 23606
 
 ## Current gate
 
-- Latest record: `cycle-174-adaptive-slack-transport-v1` (Cycle 174, `PROVED`)
-- Status: `SEALED_CAPACITY_SATURATED_BOUNDED_SLACK_TRANSPORT_OR_LABELLED_DEFICIT_BANK`
-- Boundary: This proves a finite adaptive-slack classifier: capacity-saturated forward edges transport at fixed constant C0+4Y*C1, and every other admissible edge has a labelled dyadic capacity-deficit class. It proves no actual population, target-local packet, recurrence, skeleton, density, or interval gain.
-- Next mathematical target: Force mass of complete compatible pairs into the capacity-saturated bounded-slack branch, or quantitatively control the labelled dyadic capacity-deficit banks.
+- Latest record: `cycle-175-affine-eligibility-grid-v1` (Cycle 175, `PROVED`)
+- Status: `SEALED_FULL_AFFINE_ELIGIBILITY_GRID_OR_LABELLED_DISCREPANCY_BANK`
+- Boundary: This proves a finite full-affine eligibility-grid/discrepancy classifier. It proves no actual breadth lower bound, target packet, recurrence, skeleton, density, or interval gain.
+- Next mathematical target: Use actual exponential/fibre information to lower-bound eligible breadth or turn a massed range/residue/capacity discrepancy bank into a quantitative inverse theorem.
 
 ## Recent sealed records
 
 | Cycle | Record | Tag | Gate | Next target |
 |---:|---|---|---|---|
+| 175 | `cycle-175-affine-eligibility-grid-v1` | `PROVED` | `SEALED_FULL_AFFINE_ELIGIBILITY_GRID_OR_LABELLED_DISCREPANCY_BANK` | Use actual exponential/fibre information to lower-bound eligible breadth or turn a massed range/residue/capacity discrepancy bank into a quantitative inverse theorem. |
+| 174 | `cycle-174-adaptive-slack-transport-v1-format-correction` | `PROVED` | `SEALED_FORMAT_CORRECTION` | None |
 | 174 | `cycle-174-adaptive-slack-transport-v1` | `PROVED` | `SEALED_CAPACITY_SATURATED_BOUNDED_SLACK_TRANSPORT_OR_LABELLED_DEFICIT_BANK` | Force mass of complete compatible pairs into the capacity-saturated bounded-slack branch, or quantitatively control the labelled dyadic capacity-deficit banks. |
 | 173 | `cycle-173-positive-forward-balance-v1` | `PROVED` | `SEALED_POSITIVE_FORWARD_CONSERVATIVE_BALANCE_GATE_EMPTY` | Develop reverse-orientation, quantified-slack, or genuinely new transport/coupling machinery on the actual positive exponential curve. |
 | 172 | `cycle-172-primitive-eligible-fibre-moment-v1` | `PROVED` | `SEALED_PRIMITIVE_LOCAL_INTERFACE_DOES_NOT_FORCE_DIVISOR_MOMENT_SURPLUS` | On the actual positive exponential curve, use a global exponential/fibre invariant to force numerator/denominator divisor incidence or quantify its absence in the complete labelled banks. |
 | 171 | `cycle-171-eligibility-weighted-projective-content-v1` | `PROVED` | `SEALED_ELIGIBILITY_WEIGHTED_PROJECTIVE_CONTENT_DIVISOR_WEB_AND_SHARP_TRANSFER` | Prove an actual lower bound for the complete labelled eligible divisor-content moment, or quantitatively bank seed/range, error, capacity, source-core, numerator-absorption, or denominator-absorption mass. |
 | 170 | `cycle-170-projective-packet-lift-v1` | `PROVED` | `SEALED_PROJECTIVE_LIFT_SEEDED_TARGET_PACKET_OR_ERROR_CONTENT_ADMISSIBILITY_CLASSIFIER` | Force a population of compatible source packet/cross-edge pairs into the seeded-deep branch, or bound/structure every low-content, error-load, and capacity obstruction bank. |
 | 169 | `cycle-169-source-coupled-label-energy-v1` | `PROVED` | `SEALED_COMMON_SOURCE_MARGINALS_DO_NOT_FORCE_TARGET_LABEL_ENERGY` | Use an actual exponential/fibre invariant to force common target labels, or convert the realized labelled separator into a quantitative structural inverse. |
-| 168 | `cycle-168-edge-packet-join-v1` | `PROVED` | `SEALED_EDGE_PACKET_COMPATIBILITY_OR_TYPED_SUPPORT_SEPARATION` | Prove a label-faithful lower bound for the bipartite edge/packet compatibility form, or establish a typed support-separation inverse for the actual Cycle-165--167 populations. |
-| 167 | `cycle-167-affine-fibre-transport-v1-scope-correction` | `PROVED` | `SEALED_REDUCED_RATIONAL_SCOPE_CORRECTION` | Join an eligible cross-label edge to a retained target-local packet, or construct a labelled closed loop yielding an equivalent local relation. |
 
 ## Useful queries
 
