@@ -1,0 +1,80 @@
+{
+  "artifact_id": "cycle-161-high-cell-refinement-v1",
+  "claim_boundary": "This artifact conditionally refines a Cycle-160 high effective-codegree cell into coefficient-weighted positive-real four-distinct-atom mass or a labelled effective-degree star. It does not prove Cycle-89 excess, a rational web, a transport seed, a fourth-moment estimate, density, or intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/high_cell_refinement_v1.py",
+      "sha256": "aa004bb414f573bb42e7a60a33f40f4f83ab56513d962f2d6034be05b6454983"
+    },
+    "cycle160": {
+      "path": "artifacts/cycle-160-colored-four-cycle-condenser-v1.json",
+      "sha256": "4a24ed36bc62ef718d33cf1bb5ac3eeaf744f45bbb29d94ee0670313dbcbe83b"
+    },
+    "document": {
+      "path": "docs/cycle-161-high-cell-refinement-v1.md",
+      "sha256": "70cd0f7190475addc97f6021843c03cc6b2c725f2ffbf951213c26deebafff07"
+    },
+    "preregistration": {
+      "path": "docs/cycle-161-high-cell-refinement-preregistration-v1.md",
+      "sha256": "04d9e001cbd48aab66e8e99260ad4974c0e2ad39f2fb6f4660016ce1c5c8e510"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_161_high_cell_refinement_v1.py",
+      "sha256": "c5b4c0afdc1aa88aa99ab80fb3c3e58ee8a6ae618c975ee6743a9092143e10d6"
+    }
+  },
+  "high_cell_refinement": {
+    "boundary": "this conditional combinatorial refinement does not prove that Cycle-89 excess occurs, a rational web, a transport seed, a fourth-moment estimate, density, or intervals",
+    "epistemic_status": "PROVED",
+    "finite_refinement": "after discarding zero-weight edges, a 24-by-12 half-open circular difference/phase refinement has B=288 classes; some selected class has effective multiplicity at least the original cell multiplicity divided by B",
+    "nondegenerate_case": "for x_r=|b_r|, L=sum_r x_r, and D_x=sum_(r incident to x)x_r, if max_x D_x<tau L then the weighted ordered mass of pairs of edges with four distinct endpoints is at least (1-2tau)L^2",
+    "phase_alignment": "within one difference subcell and one coefficient-phase sector, |delta_r-delta_s|<=1/(24K) and the coefficient-phase gap is at most pi/6; for every integer k in the frozen nonnegative cutoff support K<=k<=2K the combined angle is at most pi/3, so Re(b_r conjugate(b_s)e(k(delta_r-delta_s)))>=|b_r b_s|/2",
+    "star_case": "if D_x>=tau L, one incoming or outgoing labelled common-anchor fan has incidence at least D_x/2 and effective neighbor degree at least (D_x/2)^2/E_j, hence at least tau^2/4 times the retained-cell effective multiplicity"
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "compile the actual labelled positive-real four-cycle population to a moment gain, or classify the labelled star as a rational web or admissible obstruction"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_161_high_cell_refinement_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_161_high_cell_refinement_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_161_high_cell_refinement_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sample": {
+    "disjoint_pair_mass_lower_bound": "15",
+    "epistemic_status": "PROVED",
+    "hub_effective_neighbor_lower_bound": "9/8",
+    "refinement": {
+      "best_refined_effective_multiplicity": "2",
+      "class_count": "2",
+      "global_effective_multiplicity": "4",
+      "retained_lower_bound": "2"
+    }
+  },
+  "sealer": {
+    "path": "proof/build_cycle_161_high_cell_refinement_v1.py",
+    "sha256": "e9aa1f39ae9e25ed02797ccaf42c98a36953679db5c757b189ff83f038451b25"
+  },
+  "status": "SEALED_PHASE_ALIGNED_FOUR_CYCLE_OR_LABELLED_STAR_DEGENERACY_BANKED"
+}
