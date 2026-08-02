@@ -25,3 +25,15 @@ Example:
 .venv/bin/python /root/projects/maph/tools/research_records.py \
   --project research-records.json rebuild
 ```
+
+For ordinary work, change into a profiled project and use the short wrapper:
+
+```sh
+cd projects/guth-maynard-zero-density
+../../tools/research rebuild
+../../tools/research check
+../../tools/research cycle 151
+../../tools/research search negative-tail
+../../tools/research db tables
+../../tools/research db sql "SELECT status, count(*) FROM artifacts GROUP BY status"
+```

@@ -1,0 +1,29 @@
+#!/usr/bin/env sh
+# Project-aware shortcut for the shared immutable research-record tools.
+set -eu
+
+SEARCH_DIR=$(pwd)
+while [ ! -f "$SEARCH_DIR/research-records.json" ]; do
+  PARENT_DIR=$(dirname "$SEARCH_DIR")
+  if [ "$PARENT_DIR" = "$SEARCH_DIR" ]; then
+    echo "research: no research-records.json found above the current directory" >&2
+    exit 2
+  fi
+  SEARCH_DIR=$PARENT_DIR
+done
+
+TOOLS_ROOT=$(CDPATH= cd -- "$(dirname "$0")" && pwd)
+if [ -x "$SEARCH_DIR/.venv/bin/python" ]; then
+  PYTHON_BIN=$SEARCH_DIR/.venv/bin/python
+else
+  PYTHON_BIN=python3
+fi
+
+if [ "${1:-}" = "db" ]; then
+  shift
+  exec "$PYTHON_BIN" "$TOOLS_ROOT/duckdb_tools.py" \
+    --database "$SEARCH_DIR/.research/index.duckdb" "$@"
+fi
+
+exec "$PYTHON_BIN" "$TOOLS_ROOT/research_records.py" \
+  --project "$SEARCH_DIR/research-records.json" "$@"
