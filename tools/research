@@ -25,5 +25,15 @@ if [ "${1:-}" = "db" ]; then
     --database "$SEARCH_DIR/.research/index.duckdb" "$@"
 fi
 
+if [ "${1:-}" = "prereg" ]; then
+  shift
+  if [ "${1:-}" != "check" ]; then
+    echo "usage: research prereg check <preregistration.md> [--expected-cycle N]" >&2
+    exit 2
+  fi
+  shift
+  exec "$PYTHON_BIN" "$TOOLS_ROOT/preregistration_check.py" "$@"
+fi
+
 exec "$PYTHON_BIN" "$TOOLS_ROOT/research_records.py" \
   --project "$SEARCH_DIR/research-records.json" "$@"

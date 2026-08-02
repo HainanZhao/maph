@@ -2,8 +2,8 @@
 
 ## Purpose, boundary, and status
 
-- Project cap: Cycle 500. Cycle 182 is the latest sealed cycle, so the
-  remaining authorized cycle labels are 183--500.
+- Project cap: Cycle 500. Cycle 183 is the latest sealed cycle, so the
+  remaining authorized cycle labels are 184--500.
 - Objective: obtain either (i) an explicit improvement on the `30/13`
   zero-density coefficient that survives the complete density and
   short-interval ledger, (ii) a sharp saturation/inverse theorem for a
@@ -162,6 +162,14 @@ the root `AGENTS.md`; they are not duplicated here.
   denominator divides the primitive slope denominator, its rows have one
   base residue and step, and its depth is bounded by `1+H/U`. This is a
   fixed-packet capacity engine, not a census bound.
+- `PROVED`: Cycle 183 clears the common intercept and retains every stable
+  rectangle as an integral primitive-ray pair. In one frozen seven-field
+  `(N_ell,N_m,U,V,k,q,r)` box, the determinant is
+  `D=k*q*v*(w*A-u*B)` with nonzero primitive factor comparable to
+  `rUV/(vDelta)`; a critical C181 packet supplies
+  `X^(21/25-o(1))` actual ordered rectangles in one such box. This is a
+  populated candidate saturation class, not an in-box bound, recurrence,
+  density gain, or interval result.
 
 ## Research-path graph
 
@@ -173,7 +181,8 @@ published reconstruction P0 [complete]
         +-- heavy actual fibres --> seeded recurrence [complete]
         +-- exact-rational cross-label towers [subcritical by C179]
         +-- low-product rectangles [subcritical by C180]
-        +-- stable determinant shells --> intercept packets --> primitive lines [active]
+        +-- stable determinant shells --> intercept packets --> primitive lines
+            --> populated primitive ray boxes [active]
         +-- Cycles 165--176 terminal inverse toolkit [parked until population]
         +-- E14 unsigned incidence [volume limit; inverse input]
         +-- E14D-L signed Mellin aliases [deferred]
@@ -187,7 +196,7 @@ published reconstruction P0 [complete]
 
 | Gate | State | Advance condition |
 |---|---|---|
-| E13 / Cycle 63 | `PRIMITIVE_LINE_PACKET_CENSUS_ACTIVE` | Prove a coefficient-preserving bound for stable cross-label rectangles in one primitive common-intercept line packet sufficient for a strict direct triple margin, or construct a genuine nonrational packet saturator. The individual heavy-fibre route is proved but is not yet an aggregate E7/E9 recurrence bound. Raw pairs, exact-rational towers, low-product rectangles, a packet partition, or line rigidity without an in-packet estimate are disallowed as progress. |
+| E13 / Cycle 63 | `POPULATED_PRIMITIVE_RAY_BOX_CENSUS_ACTIVE` | Prove a coefficient-preserving bound for stable cross-label rectangles in one populated primitive-ray box sufficient for a strict direct triple margin, force a seeded recurrence from its exact determinant/orbit constraints, or construct a genuine nonrational box saturator. The individual heavy-fibre route is proved but is not yet an aggregate E7/E9 recurrence bound. Raw pairs, exact-rational towers, low-product rectangles, a packet/line/box partition, or ray rigidity without an in-box estimate are disallowed as progress. |
 | E14 | `UNSIGNED_VOLUME_LIMIT_REACHED` | Use only for inverse structure. |
 | E14D-L | `DEFERRED_AT_SCALE_LABEL_INFORMATION_LOSS` | Reopen only by restoring `t`/ordered atoms in a coefficient-preserving selector or proving a genuinely `t`-independent factorization. |
 | E14D-L mask cone | `RAW_ZERO_DIAGONAL_GRAM_OBSTRUCTION_BANKED_COEFFICIENT_NEGATIVE_SPECTRAL_ALIGNMENT_OPEN` | Concentrate actual negative spectral energy in a fixed labelled block family or prove a robust labelled block-complexity inverse. |
@@ -203,8 +212,8 @@ published reconstruction P0 [complete]
 
 | Route | Banked evidence | Missing evidence | Decision |
 |---|---|---|---|
-| Improved density / intervals | `PROVED` complete baseline ledger, explicit strict exponent targets, heavy-fibre extraction, intercept packets, and primitive-line rigidity | Any fixed-power primitive-line-packet census saving surviving reinsertion | Continue only through the Cycle-63 sprint; intervals remain downstream. |
-| Larger saturation theorem | `PROVED` `EO-LF4` exponent-20 sharpness, `lambda*Xi` reduction, C177 pair saturator, C178 heavy-fibre extraction, C179 rational no-go, C180 shell reduction, C181 intercept exactification, and C182 line rigidity | Exhaustiveness for a materially larger coefficient-sensitive class or a nonrational primitive-line packet saturator | Test the beta-sensitive line packet directly. |
+| Improved density / intervals | `PROVED` complete baseline ledger, explicit strict exponent targets, heavy-fibre extraction, intercept packets, primitive-line rigidity, and one populated primitive-ray box | Any fixed-power box census saving or seeded recurrence surviving reinsertion | Continue only through the Cycle-63 sprint; intervals remain downstream. |
+| Larger saturation theorem | `PROVED` `EO-LF4` exponent-20 sharpness, `lambda*Xi` reduction, C177 pair saturator, C178 heavy-fibre extraction, C179 rational no-go, C180 shell reduction, C181 intercept exactification, C182 line rigidity, and C183 populated ray box | Exhaustiveness for a materially larger coefficient-sensitive class or a nonrational primitive-ray box saturator | Test the exact determinant/orbit constraints directly. |
 | Terminal web / skeleton | `PROVED` conditional Cycles 165--176 inverse toolkit | Actual census or branch population | Park; no further finite classifier without population. |
 | E11/E12 | `PROVED` exact ANOVA decomposition and strict `>3/50` target | Complete-form restriction saving or recurrence inverse | First fallback after the Cycle-63 engine gate. |
 | L-function transfer | No conductor-accounted transferred mechanism | A source theorem with strict margin | Defer; transfer cannot create the missing margin. |
@@ -220,7 +229,7 @@ saturator.
 
 | Cycle range | Deliverable | Decision rule |
 |---|---|---|
-| 177--216 | Cycles 177--182 saturated raw pairs, extracted heavy fibres, excluded exact-rational towers and low products, and reduced light critical mass to primitive common-intercept line packets. Test their dyadic `(U,N)` mass ledger by coefficient-preserving congruence/spacing engines and nonrational actual saturator prototypes. | At Cycle 216 retain E13 only if a mechanism has a quantified path to fixed-power triple margin, aggregate recurrence control, or a materially larger actual primitive-line-packet saturation theorem. No new terminal classifier counts as progress. |
+| 177--216 | Cycles 177--183 saturated raw pairs, extracted heavy fibres, excluded exact-rational towers and low products, and reduced light critical mass to populated primitive common-intercept ray boxes. Test the exact equation `w*A-u*B=F` jointly with the two retained rational-slope orbit conditions, seeking an in-box coefficient-preserving bound, a seeded recurrence, or a nonrational actual saturator. | At Cycle 216 retain E13 only if a mechanism has a quantified path to fixed-power triple margin, aggregate recurrence control, or a materially larger actual primitive-ray-box saturation theorem. No new terminal classifier counts as progress. |
 | 217--296 | Pursue exactly one analytic route: the surviving E13 mechanism, or E11/E12 complete autocorrelation--ANOVA after an E13 miss. | Require a strict Cycle-63 census margin, a complete-form `>3/50` saving/recurrence inverse, or a materially larger actual saturation theorem. |
 | 297--336 | Reinsert the strongest result into the complete powered-coordinate and density ledger; conduct the mid-cap portfolio gate. | If no strict gain or materially larger saturation theorem exists by Cycle 336, skip glue and propagation and move directly to scoped no-go synthesis and manuscript preparation. |
 | 337--400 | Conditional compiler/glue across E16 and E7/E9, or—after a failed Cycle-336 gate—final saturation/no-go synthesis. | Compiler work is authorized only when fed by a surviving analytic margin; otherwise strengthen and delimit the final theorem. |
@@ -229,29 +238,30 @@ saturator.
 
 ## Open questions and next action
 
-1. Can a dyadic primitive denominator/depth `(U,N)` ledger force a
-   depth-`X^(6/25)` seeded fibre or bound the remaining stable line packet
-   strongly enough for `T<X^(16/25)`?
-2. Does the actual positive exponential admit a **nonrational**
-   common-intercept stable-packet saturator at the critical four-row scale?
+1. Do the exact equation `w*A-u*B=F`, the stable size of `F`, and the two
+   retained orbit widths bound one populated primitive-ray box, or force a
+   depth-`X^(6/25)` seeded fibre strongly enough for `T<X^(16/25)`?
+2. Does the actual positive exponential admit a **nonrational** populated
+   common-intercept primitive-ray-box saturator at the critical four-row scale?
 3. Can the coefficient-faithful nonnegative autocorrelation ANOVA save
    strictly more than `3/50` in the complete form, or force two-scale
    recurrence?
 4. Only after actual population enters Cycles 165--176: which existing
    terminal branch carries a recoverable fixed-power share?
 
-Cycle 182 is sealed at
-`artifacts/cycle-182-fibre-line-rigidity-v1.json`. The session mentor
-confirmed the full-fibre boundary: a packet-member pair identifies the
-intercept, then primitive-slope rigidity extends it to every actual row and
-the extreme rows complete the lattice segment. Next authorized action:
-preregister one substantive Cycle-183 dyadic `(U,N)` line-packet block. It
-must retain the intercept, primitive slopes, base residues, full fibres,
-labels, four-row determinant/product shells, and residuals; its advance is a
-quantified in-packet bound, a forced seeded fibre, or a scoped nonrational
-saturator—not a line partition, scalar denominator count, raw pair,
-exact-rational tower, low-product rectangle, or terminal classifier. Cycles
-165--176 remain reference constraints, not the active derivation target.
+Cycle 183 is sealed at
+`artifacts/cycle-183-intercept-cleared-ray-box-v1.json`. The session mentor
+approved the boundary: `u|h`, `D=k*q*v*(w*A-u*B)`, nonzero primitive factor,
+stable comparison, and all seven frozen box fields are retained. Next
+authorized action: preregister one substantive Cycle-184 exact
+determinant/orbit attack on a populated ray box. It must retain the
+intercept, primitive slopes, base residues, full fibres, labels, pair
+multipliers, determinant/product shell, residuals, and both orbit widths;
+its advance is a quantified in-box bound, a forced seeded recurrence, or a
+scoped nonrational actual saturator—not a box partition, scalar determinant
+count, raw pair, exact-rational tower, low-product rectangle, or terminal
+classifier. Cycles 165--176 remain reference constraints, not the active
+derivation target.
 
 ## Crash recovery
 
@@ -264,6 +274,7 @@ cd projects/guth-maynard-zero-density
 research check
 research cycle 63
 research cycle 182
+research cycle 183
 research cycle 181
 research cycle 180
 research cycle 179
@@ -278,6 +289,7 @@ python3 proof/build_cycle_179_cross_label_geometric_area_v1.py --check
 python3 proof/build_cycle_180_cross_label_pair_determinant_v1.py --check
 python3 proof/build_cycle_181_common_intercept_packet_v1.py --check
 python3 proof/build_cycle_182_fibre_line_rigidity_v1.py --check
+python3 proof/build_cycle_183_intercept_cleared_ray_box_v1.py --check
 python3 proof/build_cycle_176_physical_row_modular_web_v1.py --check
 cat docs/cycle-63-log-transport-v1.md
 ```
