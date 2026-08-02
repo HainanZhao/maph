@@ -1,0 +1,88 @@
+{
+  "artifact_id": "cycle-171-wild-c3-module-v1",
+  "budget_ordinal": "B009",
+  "claim_boundary": "This exact finite result falsifies only the anchored canonical length-two indecomposable F3[C3] module lift. It does not identify the actual modulus-6 local unit filtration or rule out other wild-local, global, or analytic engines.",
+  "cycle": 171,
+  "epistemic_status": "PROVED",
+  "exact_prototype": {
+    "equations": 5340,
+    "inconsistent": true,
+    "module_dimension": 2,
+    "rank": 72,
+    "source_output": "discovery/cycle-171-wild-c3-module-prototype-v1.json",
+    "states": 36,
+    "wild_module_lift_exists": false
+  },
+  "frozen_hashes": {
+    "cycle_170_barrier": {
+      "path": "artifacts/cycle-170-projective-c2-twist-v1.json",
+      "sha256": "c6237a8de805866ce26872445da8b06a94b120ff7139708e0bb36bb1bef13549"
+    },
+    "output": {
+      "path": "discovery/cycle-171-wild-c3-module-prototype-v1.json",
+      "sha256": "21c1a67d3a21aab72feb34d507c38cbb831cc0ae6923f5a693e2cf999407bb59"
+    },
+    "preregistration": {
+      "path": "docs/cycle-171-wild-c3-module-preregistration-v1.md",
+      "sha256": "6e3e5d8277fabd99d3990ef682c1e5419e97c0e4dd42f3df4fca29fcb4da7acc"
+    },
+    "project_instructions": {
+      "path": "AGENTS.md",
+      "sha256": "363495f0dbbe93e244b460c8eafb13247a8fb1f41be24f94c037ae9f6400c6f2"
+    },
+    "replay": {
+      "path": "proof/verify_cycle_171_wild_c3_module.py",
+      "sha256": "c2c26e43d3232b5fa28f8771411ead2cb9dd114ad507150c2ac8106c94c4e28c"
+    },
+    "sealing_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    },
+    "test": {
+      "path": "tests/test_cycle_171_wild_c3_module.py",
+      "sha256": "944afcd50783a095a24de2fc5166560dbd57fc22cc08ded536ff902f3a4f643f"
+    }
+  },
+  "gate_outcome": {
+    "d6_interface": "CANONICAL_WILD_MODULE_FALSIFIED_ACTUAL_LOCAL_FILTRATION_REQUIRED",
+    "disallowed_pseudo_progress": [
+      "calling a chosen module the actual local filtration",
+      "more arbitrary module variants",
+      "claiming a wild-local or TCC no-go"
+    ],
+    "remaining_bottleneck": "Derive the oriented 3-adic ray-unit filtration and Artin action from RQ-000692 before selecting any coefficient module."
+  },
+  "outcome": {
+    "epistemic_status": "PROVED",
+    "statement": "The full 5,340-equation canonical wild-module system is inconsistent at rank 72."
+  },
+  "preregistration_preflight": {
+    "cycle": 171,
+    "manifest_sha256": "6e3e5d8277fabd99d3990ef682c1e5419e97c0e4dd42f3df4fca29fcb4da7acc",
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Cycle 172/B010: extract the oriented 3-adic ray-unit filtration and Artin action for RQ-000692, then derive its exact coefficient module."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_171_wild_c3_module_v1.py --check",
+    "preflight_command": "research prereg check docs/cycle-171-wild-c3-module-preregistration-v1.md --expected-cycle 171 --allow-head-drift",
+    "prototype_command": "python3 proof/verify_cycle_171_wild_c3_module.py --output discovery/cycle-171-wild-c3-module-prototype-v1.json",
+    "test_command": "python3 -m unittest tests.test_cycle_171_wild_c3_module -v",
+    "write_command": "python3 proof/build_cycle_171_wild_c3_module_v1.py --write"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_171_wild_c3_module_v1.py",
+    "sha256": "60a08cb139883f64a8b240ab4058abb7d92dc525b2c464473a0c45ba60d22120"
+  },
+  "status": "SEALED_CANONICAL_WILD_C3_MODULE_FALSIFIED"
+}

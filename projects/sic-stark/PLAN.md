@@ -10,11 +10,9 @@
   scopes in dimensions 4, 5, 7, and 8. No dimension-six TCC identity,
   coefficient-to-ray map, fusion-continuity theorem, or boundary-limit theorem
   is proved. `CERTIFIED_NUMERICAL` packet growth is not a nonexistence theorem.
-- Current state: Cycle 170 / `B008` proves the certified scalar `C2` kernel
-  supplies no nontrivial `C3` projective extension or character twist. Cycle
-  171 / `B009` therefore shifts to the independent oriented wild-local
-  non-scalar module route; no coefficient-to-logarithm operation, AFK law, or
-  fusion theorem exists yet.
+- Current state: Cycle 171 / `B009` falsifies the canonical wild `F3[C3]`
+  module lift. The next engine must derive, rather than choose, the actual
+  oriented 3-adic ray-unit filtration and Artin action of RQ-000692.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -27,8 +25,8 @@
 ## Budget, accounting, and stop condition
 
 - Total forward budget: 200 substantive research cycles, counted `B001/200`
-  through `B200/200`; the counter is currently `B008/200`.
-- Cycle 171 is `B009`. Repository cycle numbers and budget ordinals advance
+  through `B200/200`; the counter is currently `B009/200`.
+- Cycle 172 is `B010`. Repository cycle numbers and budget ordinals advance
   together unless a non-counted record intervenes; the budget ordinal is the
   authoritative campaign counter.
 - A cycle counts only when it is a preregistered substantive research block
@@ -154,7 +152,8 @@ Budget B001--B200
   |    |                        `-- canonical carry 2-cocycle [FALSIFIED]
   |    |                             `-- normalized equivariant cohomology [OBSTRUCTED]
   |    |                                  `-- scalar projective twist [OBSTRUCTED]
-  |    |                                       `-- oriented wild-local C3 module [NEXT GATE]
+  |    |                                       `-- canonical wild C3 module [FALSIFIED]
+  |    |                                            `-- derived 3-adic filtration [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -199,8 +198,8 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `B008_OF_200` | Seal Cycle 171 as `B009`, then increment only for substantive research blocks. | Counting workflow or archive-only work. |
-| D6 interface | `WILD_LOCAL_NONSCALAR_MODULE_ENGINE` | Test an oriented wild-local non-scalar `C3`-module extension with frozen action and anchors. | Repeating scalar extension variants; fitting the module action to the defect; treating finite data as a logarithm map. |
+| Project budget | `B009_OF_200` | Seal Cycle 172 as `B010`, then increment only for substantive research blocks. | Counting workflow or archive-only work. |
+| D6 interface | `DERIVED_WILD_LOCAL_FILTRATION_ENGINE` | Extract the actual oriented 3-adic ray-unit filtration and Artin action before testing its module. | Choosing a module from the defect; repeating prototype modules; treating local data as a logarithm map. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
@@ -217,17 +216,16 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 171 / `B009`
+## Next goal: Cycle 172 / `B010`
 
 Preregister one substantive block with this question:
 
-> Can an oriented wild-local non-scalar `C3` module extension carry the
-> frozen transport and anchors without a new obstruction class?
+> What exact oriented 3-adic ray-unit filtration and Artin action does the
+> RQ-000692 ray field induce?
 
-Cycle 171 must freeze the local module, `C3` action, orientation, anchors,
-exact obstruction complex, and failure rule before executable work. A
-defect-fitted action, scalar reparameterization, or AFK label without a checked
-coefficient operation does not advance the gate.
+Cycle 172 must freeze the local field, unit filtration, Artin convention,
+orientation, extraction algorithm, and failure rule before executable work.
+No guessed module or defect-fitted action advances the gate.
 
 ## Recovery
 
