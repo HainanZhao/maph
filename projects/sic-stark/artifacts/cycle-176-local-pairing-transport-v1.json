@@ -1,0 +1,91 @@
+{
+  "artifact_id": "cycle-176-local-pairing-transport-v1",
+  "budget_ordinal": "B014",
+  "claim_boundary": "This exact finite result composes the sealed multiplier-torsor section with the frozen local F3 pairing. It defines no additive coefficient operation, AFK interface, regulator equality, fusion theorem, or TCC identity.",
+  "cycle": 176,
+  "epistemic_status": "PROVED",
+  "exact_prototype": {
+    "source_output": "discovery/cycle-176-local-pairing-transport-prototype-v1.json",
+    "summary": {
+      "all_row_covariances": true,
+      "base_rows_checked": 36,
+      "local_states_checked": 108,
+      "local_third_return": true,
+      "orientation_anchors": {
+        "3,4": 1,
+        "3,5": 2
+      }
+    }
+  },
+  "frozen_hashes": {
+    "instructions": {
+      "path": "AGENTS.md",
+      "sha256": "363495f0dbbe93e244b460c8eafb13247a8fb1f41be24f94c037ae9f6400c6f2"
+    },
+    "output": {
+      "path": "discovery/cycle-176-local-pairing-transport-prototype-v1.json",
+      "sha256": "4cdd00dfec2a558e7de70fc4907bd89e1f9b66463a056ae66d7a738d14596feb"
+    },
+    "pairing": {
+      "path": "artifacts/cycle-175-leading-residue-pairing-v1.json",
+      "sha256": "9ec7b4bf1a8a8ca87e586988e6e6d14e85aa597e163be032c9e668d128c593bb"
+    },
+    "prereg": {
+      "path": "docs/cycle-176-local-pairing-transport-preregistration-v1.md",
+      "sha256": "679974a0c567cc9af47bdfd508dd4a8652e04bedefa6a0af4e0c8858916e562e"
+    },
+    "replay": {
+      "path": "proof/verify_cycle_176_local_pairing_transport.py",
+      "sha256": "0aa9ba169db1bfa7435fa97525bff484bafefdb73a6ae17926abe44679e49c74"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    },
+    "torsor": {
+      "path": "artifacts/cycle-166-fibre-torsor-v1.json",
+      "sha256": "cd0cf07f8ded432a7f53c18126d26b5054b3fddadb530375483c7adbc753991e"
+    }
+  },
+  "gate_outcome": {
+    "d6_interface": "LOCAL_PAIRING_CONSISTENT_BUT_NO_INDEPENDENT_CHARACTERISTIC_TO_RAY_MAP",
+    "disallowed_pseudo_progress": [
+      "calling inherited torsor covariance an interface advance",
+      "using s or d as inputs to the proposed map",
+      "fitting a local-to-ray map from target labels"
+    ],
+    "remaining_bottleneck": "Define an arithmetic local-to-ray reciprocity map directly from the 36 characteristics, without s or d inputs, and test recovery of local-pairing values, ray labels, and anchors."
+  },
+  "outcome": {
+    "epistemic_status": "PROVED",
+    "statement": "The direct local-pairing projection is total on 36 rows, preserves both anchors, and has order-three transport on all 108 local states; its covariance is inherited from the sealed torsor section."
+  },
+  "preregistration_preflight": {
+    "cycle": 176,
+    "manifest_sha256": "679974a0c567cc9af47bdfd508dd4a8652e04bedefa6a0af4e0c8858916e562e",
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Cycle 177/B015: preregister an arithmetic characteristic-to-local-to-ray reciprocity map independent of s,d, then test all 36 labels and both anchors."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_176_local_pairing_transport_v1.py --check",
+    "preflight_command": "research prereg check docs/cycle-176-local-pairing-transport-preregistration-v1.md --expected-cycle 176 --allow-head-drift",
+    "prototype_command": "python3 proof/verify_cycle_176_local_pairing_transport.py --output discovery/cycle-176-local-pairing-transport-prototype-v1.json",
+    "write_command": "python3 proof/build_cycle_176_local_pairing_transport_v1.py --write"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_176_local_pairing_transport_v1.py",
+    "sha256": "76a2c02b2f601373544932a6d334aa30ba5413fe1be383f9bc32a3516ae49fc8"
+  },
+  "status": "SEALED_LOCAL_PAIRING_TRANSPORT_CONSISTENCY_ONLY"
+}

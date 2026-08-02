@@ -10,10 +10,10 @@
   scopes in dimensions 4, 5, 7, and 8. No dimension-six TCC identity,
   coefficient-to-ray map, fusion-continuity theorem, or boundary-limit theorem
   is proved. `CERTIFIED_NUMERICAL` packet growth is not a nonexistence theorem.
-- Current state: Cycle 175 / `B013` derives a frozen F3-valued wild
-  leading-residue pairing with distinct nonzero values on the two anchors.
-  Cycle 176 / `B014` must test an outcome-blind all-36-row map into this
-  pairing before any transport claim.
+- Current state: Cycle 176 / `B014` proves that the direct local-pairing
+  projection is a total, anchor-preserving finite transport, but this is
+  inherited torsor consistency rather than interface evidence. Cycle 177 /
+  `B015` must seek a direct arithmetic characteristic-to-local-to-ray map.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -26,8 +26,8 @@
 ## Budget, accounting, and stop condition
 
 - Total forward budget: 200 substantive research cycles, counted `B001/200`
-  through `B200/200`; the counter is currently `B013/200`.
-- Cycle 176 is `B014`. Repository cycle numbers and budget ordinals advance
+  through `B200/200`; the counter is currently `B014/200`.
+- Cycle 177 is `B015`. Repository cycle numbers and budget ordinals advance
   together unless a non-counted record intervenes; the budget ordinal is the
   authoritative campaign counter.
 - A cycle counts only when it is a preregistered substantive research block
@@ -117,6 +117,11 @@
   Its frozen bilinear local pairing gives the two anchors `g^1,g^2` the
   distinct values `2,1`. This is local finite data only. See
   `artifacts/cycle-175-leading-residue-pairing-v1.json`.
+- `PROVED`: Cycle 176 composes the sealed multiplier torsor with that local
+  pairing on all 36 rows and 108 local states, preserving both anchors.
+  Its covariance is a scaled consequence of the already sealed section law,
+  so it is a finite consistency check—not an independent interface advance.
+  See `artifacts/cycle-176-local-pairing-transport-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -178,7 +183,8 @@ Budget B001--B200
   |    |                                                      `-- explicit deeper local action / break [SEALED]
   |    |                                                           `-- orientation-sensitive O/P^4 quotient [SEALED]
   |    |                                                                `-- leading residue + local pairing [SEALED]
-  |    |                                                                     `-- outcome-blind 36-row transport test [NEXT GATE]
+  |    |                                                                     `-- outcome-blind 36-row transport test [CONSISTENT ONLY]
+  |    |                                                                          `-- characteristic-to-local-to-ray map [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -223,16 +229,16 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `B013_OF_200` | Seal Cycle 176 as `B014`, then increment only for substantive research blocks. | Counting workflow or archive-only work. |
-| D6 interface | `LOCAL_ANCHOR_PAIRING_CONSTRUCTED_36_ROW_TRANSPORT_TEST_REQUIRED` | Define an outcome-blind all-36-row map into the frozen local pairing and test totality, T-transport compatibility, and both anchors. | Changing the pairing; fitting row assignments from outcomes; treating local data as a logarithm map. |
+| Project budget | `B014_OF_200` | Seal Cycle 177 as `B015`, then increment only for substantive research blocks. | Counting workflow or archive-only work. |
+| D6 interface | `LOCAL_PAIRING_CONSISTENT_BUT_NO_INDEPENDENT_CHARACTERISTIC_TO_RAY_MAP` | Define an arithmetic map directly from the 36 characteristics to local pairing/ray data, independent of `s,d`, then test all labels and anchors. | Using `s,d` as map inputs; fitting from target labels; treating local consistency as an interface. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Can an outcome-blind map from all 36 multiplier rows into the frozen local
-  pairing preserve totality, T-transport, and both anchors?
+- Is there an arithmetic characteristic-to-local-to-ray map, independent of
+  the sealed torsor labels, that recovers all 36 local/ray labels and anchors?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -241,23 +247,23 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 176 / `B014`
+## Next goal: Cycle 177 / `B015`
 
 Preregister one substantive block with this question:
 
-> Can a frozen outcome-blind map from all 36 multiplier rows into the local
-> `F3` pairing preserve totality, `T`-transport, and both labelled anchors?
+> Can an arithmetic map directly from all 36 characteristics to local pairing
+> and ray data recover every label and both anchors without using `s` or `d`?
 
-Cycle 176 must freeze the row-source data, map family, outcome-blind selector,
-transport convention, anchors, and failure rule before executable work. No
-post-result row assignments, defect-fitted transport, or changed pairing
-advances the gate.
+Cycle 177 must freeze the arithmetic characteristic source, local/ray target,
+candidate map family, selection rule, anchors, and failure rule before
+executable work. No torsor-label input, post-result row assignment, or
+target-fitted map advances the gate.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 175
+research cycle 176
 sed -n '1,260p' PLAN.md
-python3 proof/build_cycle_175_leading_residue_pairing_v1.py --check
+python3 proof/build_cycle_176_local_pairing_transport_v1.py --check
 ```
