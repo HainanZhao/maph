@@ -10,11 +10,10 @@
   scopes in dimensions 4, 5, 7, and 8. No dimension-six TCC identity,
   coefficient-to-ray map, fusion-continuity theorem, or boundary-limit theorem
   is proved. `CERTIFIED_NUMERICAL` packet growth is not a nonexistence theorem.
-- Current state: Cycle 168 / `B006` exactly falsified the canonical
-  bilinear-plus-coordinate-carry `C6` cocycle family. Of 46,656 associative
-  candidates, one passes the six fixed identifying probes and it fails both
-  full graph and transport tests. Cycle 169 / `B007` moves from parameter
-  expansion to an action-groupoid cohomological obstruction; no
+- Current state: Cycle 169 / `B007` proves the graph defect is nontrivial in
+  the normalized `T`-invariant action-groupoid quotient: the full system is
+  inconsistent over both CRT factors. Cycle 170 / `B008` tests projective
+  equivariance via a central extension and frozen character twist; no
   coefficient-to-logarithm operation, AFK law, or fusion theorem exists yet.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
@@ -28,8 +27,8 @@
 ## Budget, accounting, and stop condition
 
 - Total forward budget: 200 substantive research cycles, counted `B001/200`
-  through `B200/200`; the counter is currently `B006/200`.
-- Cycle 169 is `B007`. Repository cycle numbers and budget ordinals advance
+  through `B200/200`; the counter is currently `B007/200`.
+- Cycle 170 is `B008`. Repository cycle numbers and budget ordinals advance
   together unless a non-counted record intervenes; the budget ordinal is the
   authoritative campaign counter.
 - A cycle counts only when it is a preregistered substantive research block
@@ -94,6 +93,9 @@
   carry normalized `C6` cocycles. Its one probe-compatible candidate fails
   both full identities. This rejects that standard representative family only.
   See `artifacts/cycle-168-carry-cocycle-v1.json`.
+- `PROVED`: Cycle 169 proves no normalized `T`-invariant `C6` cochain kills
+  the graph defect: the complete 1,335-equation system is inconsistent over
+  both `F2` and `F3`. See `artifacts/cycle-169-equivariant-coboundary-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -147,7 +149,8 @@ Budget B001--B200
   |    |              `-- fibre-resolved C6 torsor / multiplier lift [SEALED]
   |    |                   `-- bilinear C6-twisted convolution [FALSIFIED]
   |    |                        `-- canonical carry 2-cocycle [FALSIFIED]
-  |    |                             `-- action-groupoid defect cohomology [NEXT GATE]
+  |    |                             `-- normalized equivariant cohomology [OBSTRUCTED]
+  |    |                                  `-- projective central extension [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -192,17 +195,16 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `B006_OF_200` | Seal Cycle 169 as `B007`, then increment only for substantive research blocks. | Counting workflow or archive-only work. |
-| D6 interface | `ACTION_GROUPOID_COHOMOLOGY_ENGINE` | Define the full transport-compatible defect class and test coboundary under independent normalization constraints. | Taking the graph defect itself as the operation; another unguided parameter-family expansion; claiming a cohomology result is a logarithm map. |
+| Project budget | `B007_OF_200` | Seal Cycle 170 as `B008`, then increment only for substantive research blocks. | Counting workflow or archive-only work. |
+| D6 interface | `PROJECTIVE_CENTRAL_EXTENSION_ENGINE` | Test a preregistered projectively `T`-equivariant central extension with an independently frozen character twist. | Fitting a twist to the graph defect; treating a finite extension as a logarithm map; quotienting away the fibre. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Is the full transport-compatible action-groupoid defect class a coboundary
-  under independently fixed normalization, or does it give a structural finite
-  obstruction to this interface route?
+- Can a frozen projective character twist eliminate the normalized equivariant
+  defect in a central extension without being fitted to the graph?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -211,24 +213,24 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 169 / `B007`
+## Next goal: Cycle 170 / `B008`
 
 Preregister one substantive block with this question:
 
-> Is the transport-compatible defect class of the full finite action groupoid
-> a coboundary under an independently fixed normalization?
+> Can a projectively `T`-equivariant central extension with a frozen character
+> twist eliminate the normalized equivariant defect class?
 
-Cycle 169 must freeze the action groupoid, cochain and coboundary complexes,
-normalization, transport compatibility, exact solver, and failure rule before
-executable work. A graph-derived cochain, a post-defect normalization, or an
-AFK label without a checked coefficient operation does not advance the gate.
+Cycle 170 must freeze the extension, projective action, character twist,
+normalization, exact compatibility test, and failure rule before executable
+work. A graph-fitted twist, graph-derived cochain, or AFK label without a
+checked coefficient operation does not advance the gate.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 168
+research cycle 169
 sed -n '1,260p' PLAN.md
-python3 proof/build_cycle_168_carry_cocycle_v1.py --check
-python3 -m unittest tests.test_cycle_168_carry_cocycle -v
+python3 proof/build_cycle_169_equivariant_coboundary_v1.py --check
+python3 -m unittest tests.test_cycle_169_equivariant_coboundary -v
 ```

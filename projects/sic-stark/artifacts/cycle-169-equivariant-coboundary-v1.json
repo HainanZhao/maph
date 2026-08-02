@@ -1,0 +1,91 @@
+{
+  "artifact_id": "cycle-169-equivariant-coboundary-v1",
+  "budget_ordinal": "B007",
+  "claim_boundary": "This exact finite result proves nontriviality only in the normalized T-invariant C6 action-groupoid coboundary quotient of the frozen Cycle-166 graph defect. It does not rule out projective equivariance, larger groupoids, higher fibres, or analytic coefficient operations.",
+  "cycle": 169,
+  "epistemic_status": "PROVED",
+  "exact_prototype": {
+    "defect_equations": 1296,
+    "defect_nonzero_count": 1027,
+    "f2_inconsistent": true,
+    "f2_rank": 36,
+    "f3_inconsistent": true,
+    "f3_rank": 36,
+    "normalized_t_invariant_coboundary_exists": false,
+    "source_output": "discovery/cycle-169-equivariant-coboundary-prototype-v1.json",
+    "states": 36,
+    "total_equations": 1335
+  },
+  "frozen_hashes": {
+    "cycle_168_falsifier": {
+      "path": "artifacts/cycle-168-carry-cocycle-v1.json",
+      "sha256": "5bd68acba19ae45f14db099e3d72f1256f90ed0973ab625d2332276bc60c2bae"
+    },
+    "output": {
+      "path": "discovery/cycle-169-equivariant-coboundary-prototype-v1.json",
+      "sha256": "27e5ef8b288b98ad80dcedb109fcb4aa812ca673ad83ea507dfcfaf9233e8c25"
+    },
+    "preregistration": {
+      "path": "docs/cycle-169-equivariant-coboundary-preregistration-v1.md",
+      "sha256": "c4ffb9f60933c2b8b12b2e6eaa5540935d79c8fc98449cf7aed3e0319ba8b753"
+    },
+    "project_instructions": {
+      "path": "AGENTS.md",
+      "sha256": "363495f0dbbe93e244b460c8eafb13247a8fb1f41be24f94c037ae9f6400c6f2"
+    },
+    "replay": {
+      "path": "proof/verify_cycle_169_equivariant_coboundary.py",
+      "sha256": "80c9395830b48e24e72aaaafcf8dcf42e6185cdf65c5d68ff12de1e49e9dd7a3"
+    },
+    "sealing_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    },
+    "test": {
+      "path": "tests/test_cycle_169_equivariant_coboundary.py",
+      "sha256": "f163970a91d4331dcd56a15d5a60e863a7f9342f30ef063c2171542cdb99fc19"
+    }
+  },
+  "gate_outcome": {
+    "d6_interface": "NORMALIZED_EQUIVARIANT_COHOMOLOGY_OBSTRUCTION_PROJECTIVE_EXTENSION_REQUIRED",
+    "disallowed_pseudo_progress": [
+      "treating ordinary graph coboundarity as equivariant closure",
+      "claiming a TCC no-go",
+      "reusing the T-invariant quotient under new notation"
+    ],
+    "remaining_bottleneck": "Test a projectively T-equivariant central extension with an independently frozen character twist."
+  },
+  "outcome": {
+    "epistemic_status": "PROVED",
+    "statement": "The 1,335-equation normalized T-invariant system is inconsistent over both F2 and F3, hence has no C6 solution."
+  },
+  "preregistration_preflight": {
+    "cycle": 169,
+    "manifest_sha256": "c4ffb9f60933c2b8b12b2e6eaa5540935d79c8fc98449cf7aed3e0319ba8b753",
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Cycle 170/B008: preregister a projectively T-equivariant central-extension engine with a frozen character twist and test whether it kills the defect class."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_169_equivariant_coboundary_v1.py --check",
+    "preflight_command": "research prereg check docs/cycle-169-equivariant-coboundary-preregistration-v1.md --expected-cycle 169 --allow-head-drift",
+    "prototype_command": "python3 proof/verify_cycle_169_equivariant_coboundary.py --output discovery/cycle-169-equivariant-coboundary-prototype-v1.json",
+    "test_command": "python3 -m unittest tests.test_cycle_169_equivariant_coboundary -v",
+    "write_command": "python3 proof/build_cycle_169_equivariant_coboundary_v1.py --write"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_169_equivariant_coboundary_v1.py",
+    "sha256": "27805fb0bba7ec4286da511192b377d1ea86457b6b563b8a72583b324035461f"
+  },
+  "status": "SEALED_NORMALIZED_EQUIVARIANT_COBOUNDARY_OBSTRUCTION"
+}
