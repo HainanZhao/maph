@@ -2,8 +2,8 @@
 
 ## Purpose, boundary, and status
 
-- Project cap: Cycle 500. Cycle 177 is the latest sealed cycle, so the
-  remaining authorized cycle labels are 178--500.
+- Project cap: Cycle 500. Cycle 178 is the latest sealed cycle, so the
+  remaining authorized cycle labels are 179--500.
 - Objective: obtain either (i) an explicit improvement on the `30/13`
   zero-density coefficient that survives the complete density and
   short-interval ledger, (ii) a sharp saturation/inverse theorem for a
@@ -42,7 +42,7 @@
 - `STRATEGIC_DECISION`: the standing session mentor recommended this same
   within-project pivot because the current route optimized interfaces without
   proving the population theorem needed to enter them; that recommendation is
-  adopted. The project itself is not abandoned: 324 authorized cycle labels
+  adopted. The project itself is not abandoned: 322 authorized cycle labels
   remain, its baseline reconstruction and `EO-LF4` sharpness are banked, and
   two genuinely analytic routes remain. A new flagship-project decision is
   deferred until the Cycle-63 sprint and the E11/E12 fallback have both faced
@@ -137,6 +137,12 @@ the root `AGENTS.md`; they are not duplicated here.
   one-label triple contribution is only `X^(11/25+o(1))`. This is a
   pair-route saturation/no-go, not a density result or a full-census
   counterexample; see `artifacts/cycle-177-actual-curve-rational-root-saturator-v1.json`.
+- `PROVED`: Cycle 178 converts every heavy **actual fixed-beta** fibre into
+  a primitive seeded packet with its numerator and approximation error
+  retained. At the direct critical scale, failure is therefore either a
+  critical seeded-packet branch or ordered genuinely cross-label mass of size
+  `>>X^(32/25)`; this is a reduction, not a cross-label estimate. Its ordered
+  normalization is fixed by the linked correction artifact.
 
 ## Research-path graph
 
@@ -145,7 +151,8 @@ published reconstruction P0 [complete]
   +-- EO-LF4 sharpness [complete, scoped] -- lambda*Xi [diagnostic]
   `-- E13 actual positive-exponential census [PRIMARY THROUGH C216]
         +-- raw Cycle 63 pair census [SATURATED BY C177]
-        +-- diagonal-aware triple census / heavy-packet routing [active]
+        +-- heavy actual fibres --> seeded recurrence [complete]
+        +-- ordered cross-label triple mass [active]
         +-- Cycles 165--176 terminal inverse toolkit [parked until population]
         +-- E14 unsigned incidence [volume limit; inverse input]
         +-- E14D-L signed Mellin aliases [deferred]
@@ -159,7 +166,7 @@ published reconstruction P0 [complete]
 
 | Gate | State | Advance condition |
 |---|---|---|
-| E13 / Cycle 63 | `RAW_PAIR_TARGET_SATURATED_DIAGONAL_AWARE_REPLACEMENT_ACTIVE` | Prove a strict direct triple-census margin after extracting same-label heavy packets, or route every heavy actual packet with its seed and error into a recurrence bound strong enough for E7/E9. A uniform raw pair bound is disallowed. |
+| E13 / Cycle 63 | `HEAVY_FIBRE_ROUTING_PROVED_CROSS_LABEL_ANALYTIC_REMAINDER_ACTIVE` | Prove a coefficient-preserving bound for ordered cross-label mass sufficient for a strict direct triple margin, or construct a genuine actual cross-label saturator. The individual heavy-fibre route is proved but is not yet an aggregate E7/E9 recurrence bound. A uniform raw pair bound is disallowed. |
 | E14 | `UNSIGNED_VOLUME_LIMIT_REACHED` | Use only for inverse structure. |
 | E14D-L | `DEFERRED_AT_SCALE_LABEL_INFORMATION_LOSS` | Reopen only by restoring `t`/ordered atoms in a coefficient-preserving selector or proving a genuinely `t`-independent factorization. |
 | E14D-L mask cone | `RAW_ZERO_DIAGONAL_GRAM_OBSTRUCTION_BANKED_COEFFICIENT_NEGATIVE_SPECTRAL_ALIGNMENT_OPEN` | Concentrate actual negative spectral energy in a fixed labelled block family or prove a robust labelled block-complexity inverse. |
@@ -175,8 +182,8 @@ published reconstruction P0 [complete]
 
 | Route | Banked evidence | Missing evidence | Decision |
 |---|---|---|---|
-| Improved density / intervals | `PROVED` complete baseline ledger and explicit strict exponent targets | Any fixed-power analytic saving surviving reinsertion | Continue only through the Cycle-63 sprint; intervals remain downstream. |
-| Larger saturation theorem | `PROVED` `EO-LF4` exponent-20 sharpness, `lambda*Xi` reduction, and Cycle-177 raw-pair saturator | Exhaustiveness for a materially larger coefficient-sensitive class or a density-relevant inverse theorem | Cycle 177 is a scoped pair-route no-go; retain it as a structured exception, not as the project stop theorem. |
+| Improved density / intervals | `PROVED` complete baseline ledger, explicit strict exponent targets, and heavy-fibre diagonal extraction | Any fixed-power analytic cross-label saving surviving reinsertion | Continue only through the Cycle-63 sprint; intervals remain downstream. |
+| Larger saturation theorem | `PROVED` `EO-LF4` exponent-20 sharpness, `lambda*Xi` reduction, Cycle-177 raw-pair saturator, and Cycle-178 heavy-fibre extraction | Exhaustiveness for a materially larger coefficient-sensitive class or an actual cross-label saturation theorem | Retain C177 as a pair-route no-go and test cross-label geometry directly. |
 | Terminal web / skeleton | `PROVED` conditional Cycles 165--176 inverse toolkit | Actual census or branch population | Park; no further finite classifier without population. |
 | E11/E12 | `PROVED` exact ANOVA decomposition and strict `>3/50` target | Complete-form restriction saving or recurrence inverse | First fallback after the Cycle-63 engine gate. |
 | L-function transfer | No conductor-accounted transferred mechanism | A source theorem with strict margin | Defer; transfer cannot create the missing margin. |
@@ -192,7 +199,7 @@ saturator.
 
 | Cycle range | Deliverable | Decision rule |
 |---|---|---|
-| 177--216 | Cycle 177 has saturated the raw pair route. Test an anchored/cross-label diagonal-aware triple statistic and heavy-actual-packet-to-seeded-recurrence routing; prove the strongest surviving band when possible. | At Cycle 216 retain E13 only if a mechanism has a quantified path to fixed-power triple margin or recurrence control. No new terminal classifier counts as progress. |
+| 177--216 | Cycles 177--178 saturated the raw pair route and extracted heavy fixed-beta fibres to seeded packets. Test ordered cross-label triple mass by a coefficient-preserving determinant/spacing engine and by actual saturator prototypes. | At Cycle 216 retain E13 only if a mechanism has a quantified path to fixed-power triple margin, aggregate recurrence control, or a materially larger actual cross-label saturation theorem. No new terminal classifier counts as progress. |
 | 217--296 | Pursue exactly one analytic route: the surviving E13 mechanism, or E11/E12 complete autocorrelation--ANOVA after an E13 miss. | Require a strict Cycle-63 census margin, a complete-form `>3/50` saving/recurrence inverse, or a materially larger actual saturation theorem. |
 | 297--336 | Reinsert the strongest result into the complete powered-coordinate and density ledger; conduct the mid-cap portfolio gate. | If no strict gain or materially larger saturation theorem exists by Cycle 336, skip glue and propagation and move directly to scoped no-go synthesis and manuscript preparation. |
 | 337--400 | Conditional compiler/glue across E16 and E7/E9, or—after a failed Cycle-336 gate—final saturation/no-go synthesis. | Compiler work is authorized only when fed by a surviving analytic margin; otherwise strengthen and delimit the final theorem. |
@@ -201,25 +208,28 @@ saturator.
 
 ## Open questions and next action
 
-1. Can an anchored or cross-label statistic remove same-label rational-root
-   packet spikes while retaining a direct strict `T<X^(16/25)` census target?
-2. Can every heavy actual packet be routed, with its beta seed and exact error,
-   into a recurrence bound sufficient for the E7/E9 skeleton?
+1. Can a coefficient-preserving cross-label determinant, bilinear spacing, or
+   new invariant bound the ordered mass left after Cycle 178's heavy-fibre
+   extraction strongly enough for `T<X^(16/25)`?
+2. Does the actual positive exponential admit a cross-label rational-root or
+   other structured saturator at the critical ordered mass scale?
 3. Can the coefficient-faithful nonnegative autocorrelation ANOVA save
    strictly more than `3/50` in the complete form, or force two-scale
    recurrence?
 4. Only after actual population enters Cycles 165--176: which existing
    terminal branch carries a recoverable fixed-power share?
 
-Cycle 177 is sealed at
-`artifacts/cycle-177-actual-curve-rational-root-saturator-v1.json`. The
-session mentor approved the seal and recommended abandoning the unqualified
-beta-free pair route. Next authorized action: preregister one substantive
-Cycle-178 anchored/cross-label diagonal-aware census block. Freeze a statistic
-that explicitly excludes or retains same-label heavy packets, its exact
-relation to the total triple census, and a genuine cross-label saturator or
-fixed-power advance criterion. Cycles 165--176 remain reference constraints,
-not the active derivation target.
+Cycle 178 is sealed at
+`artifacts/cycle-178-diagonal-aware-fibre-extraction-v1.json`, with its
+ordered-cross-mass convention frozen at
+`artifacts/cycle-178-diagonal-aware-fibre-extraction-v1-normalization-correction.json`.
+The session mentor recommended—and the correction records—this explicit
+normalization. Next authorized action: preregister one substantive Cycle-179
+ordered cross-label analytic block. It must freeze a coefficient-preserving
+state space/invariant and a minimal actual cross-label saturator prototype;
+its advance is a strict cross-label bound or a scoped actual cross-label
+saturator, not another same-label packet or terminal classifier. Cycles
+165--176 remain reference constraints, not the active derivation target.
 
 ## Crash recovery
 
@@ -231,10 +241,13 @@ cat projects/guth-maynard-zero-density/STATUS.md
 cd projects/guth-maynard-zero-density
 research check
 research cycle 63
+research cycle 178
 research cycle 177
 research cycle 176
 python3 proof/build_cycle_63_log_transport_census_v1.py --check
 python3 proof/build_cycle_177_actual_curve_rational_root_saturator_v1.py --check
+python3 proof/build_cycle_178_diagonal_aware_fibre_extraction_v1.py --check
+python3 proof/build_cycle_178_diagonal_aware_fibre_extraction_normalization_correction_v1.py --check
 python3 proof/build_cycle_176_physical_row_modular_web_v1.py --check
 cat docs/cycle-63-log-transport-v1.md
 ```
