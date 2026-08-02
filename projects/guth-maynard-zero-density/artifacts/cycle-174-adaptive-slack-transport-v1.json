@@ -1,0 +1,79 @@
+{
+  "adaptive_slack": {
+    "boundary": "This is a finite adaptive-slack classifier. It proves no actual saturated population, target-local packet, recurrence, skeleton, density, or interval gain.",
+    "deficit": "2^(-(r+1))H<qK<=2^(-r)H retains labelled deficit index r and forces rho>=2^r(1+alpha)",
+    "epistemic_status": "PROVED",
+    "identity": "target residual equals source residual minus rho*(qE-a), with rho=h(1+alpha)/(aK)=h_plus(1+alpha)/(qK)",
+    "saturated": "qK>=H/2 implies rho<=4Y, so the fixed strip constant C0+4Y*C1 is valid and Cycle67 keeps its depth exponent"
+  },
+  "artifact_id": "cycle-174-adaptive-slack-transport-v1",
+  "claim_boundary": "This proves a finite adaptive-slack classifier: capacity-saturated forward edges transport at fixed constant C0+4Y*C1, and every other admissible edge has a labelled dyadic capacity-deficit class. It proves no actual population, target-local packet, recurrence, skeleton, density, or interval gain.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "boundary": "This is a finite adaptive-slack classifier. It proves no actual saturated population, target-local packet, recurrence, skeleton, density, or interval gain.",
+    "deficit": "2^(-(r+1))H<qK<=2^(-r)H retains labelled deficit index r and forces rho>=2^r(1+alpha)",
+    "identity": "target residual equals source residual minus rho*(qE-a), with rho=h(1+alpha)/(aK)=h_plus(1+alpha)/(qK)",
+    "saturated": "qK>=H/2 implies rho<=4Y, so the fixed strip constant C0+4Y*C1 is valid and Cycle67 keeps its depth exponent"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/adaptive_slack_transport_v1.py",
+      "sha256": "8aa296eace1d89c629370c13ed57d9af0da6c8e06b8e4752b9c595ad5184ee2d"
+    },
+    "cycle170": {
+      "path": "artifacts/cycle-170-projective-packet-lift-v1.json",
+      "sha256": "7d0769218a734d80cd80bfcdb962656f918a7df5156efbc44042cfd50a2491b9"
+    },
+    "cycle173": {
+      "path": "artifacts/cycle-173-positive-forward-balance-v1.json",
+      "sha256": "f32a73c74ceecd4c7fae5794799e26fb4ffbfd79cf182d5fe7c71d1eff9010b8"
+    },
+    "document": {
+      "path": "docs/cycle-174-adaptive-slack-transport-v1.md",
+      "sha256": "08ea6ab22894a7b0aeaed21cb8b92ee81fc0ff8f56a005aa7f8002ca2a4ba01c"
+    },
+    "preregistration": {
+      "path": "docs/cycle-174-adaptive-slack-transport-preregistration-v1.md",
+      "sha256": "1547680fe66ccfd5a4b7a180f5382b776a895af30d787e1b829585bfc9f737b7"
+    },
+    "sealing_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "tests": {
+      "path": "tests/test_cycle_174_adaptive_slack_transport_v1.py",
+      "sha256": "541ecc0c8c31129cbdf173253d354db9d7d2ce98255ca47805a5039bae7bad53"
+    }
+  },
+  "prior_context": {
+    "cycle170_role": "accepts the saturated edge by replacing its edge error constant with 4Y*C1 in the projective lift ledger",
+    "cycle173_role": "closes the unit conservative forward budget, motivating exact fixed row-local slack",
+    "epistemic_status": "PROVED"
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Force mass of complete compatible pairs into the capacity-saturated bounded-slack branch, or quantitatively control the labelled dyadic capacity-deficit banks."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_174_adaptive_slack_transport_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_174_adaptive_slack_transport_v1.py",
+    "write_command": "python3 proof/build_cycle_174_adaptive_slack_transport_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_174_adaptive_slack_transport_v1.py",
+    "sha256": "7beff6983dc4444430ea04acd7ae22d119890cfd1107f5329acae6a1ef4c9e33"
+  },
+  "status": "SEALED_CAPACITY_SATURATED_BOUNDED_SLACK_TRANSPORT_OR_LABELLED_DEFICIT_BANK"
+}

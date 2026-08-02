@@ -154,6 +154,10 @@ research db tables
   forward direct-map conservative balance gate is empty: simultaneous row
   ranges force `a/q<=2`, while balance and admissibility force `a/q>2`.
   Reverse orientation, extra slack, and different maps remain open.
+- `PROVED`: Cycle 174 replaces the unit forward error budget by an exact
+  row-local ledger. Capacity-saturated edges transport with fixed constant
+  `C0+4Y*C1`; all other edges retain a dyadic capacity-deficit label. No
+  population of either branch is proved.
 
 ## Research-path graph
 
@@ -177,7 +181,7 @@ published reconstruction P0 [complete]
 | E14 | `UNSIGNED_VOLUME_LIMIT_REACHED` | Use only for inverse structure. |
 | E14D-L | `TIMEBOXED_AT_SCALE_LABEL_INFORMATION_LOSS` | Reopen only by restoring `t`/ordered atoms in a coefficient-preserving selector or proving a genuinely `t`-independent factorization. |
 | E14D-L mask cone | `RAW_ZERO_DIAGONAL_GRAM_OBSTRUCTION_BANKED_COEFFICIENT_NEGATIVE_SPECTRAL_ALIGNMENT_OPEN` | Concentrate actual negative spectral energy in a fixed labelled block family or prove a robust labelled block-complexity inverse. |
-| E14D-H | `POST_FORWARD_GATE_TRANSPORT_OR_COUPLING_OPEN` | Develop reverse-orientation, justified row-local-slack, or non-direct positive-exponential transport/coupling machinery; the frozen forward conservative gate is empty. |
+| E14D-H | `SATURATED_TRANSPORT_MASS_OR_DYADIC_DEFICIT_WEB_OPEN` | Force complete-pair mass into Cycle-174 capacity-saturated bounded-slack transport, or turn a massed labelled dyadic capacity-deficit bank into a quantitative web/obstruction. |
 | E15 | `ANCHOR_REQUIRED` | Classify anchored almost-eigenfunctions. |
 | E16 | `EXACT_VALUATION_WEB_BANKED` | Compile relation-rich structure to a genuine transport seed. |
 | E11/E12 | `AUTOCORRELATION_ANOVA_OPEN` | Save `>3/50` in complete form or force enough recurrence. |
@@ -234,6 +238,9 @@ published reconstruction P0 [complete]
 - `PROVED` Cycle 173: positivity makes the direct forward conservative
   balance/range/admissibility ledger inconsistent. This closes only that
   direct gate; it does not turn the no-go into a universal transport theorem.
+- `PROVED` Cycle 174: exact row-local slack recovers fixed-constant transport
+  on the capacity-saturated branch and preserves a dyadic deficit ledger
+  otherwise. The missing input is population, not another constant ledger.
 - `CONJECTURED` E15/E16: classify anchored shifted-strip almost-eigenfunctions
   and turn high-codegree alias structure into a seed with an explicit phase
   error budget. A seedless target-sized anchored graph is itself structural
@@ -335,9 +342,12 @@ moment surplus from the signed abstract local interface only; its negative
 alpha family is outside the actual curve. Cycle 173 is sealed at
 `artifacts/cycle-173-positive-forward-balance-v1.json`: it proves the frozen
 positive forward conservative direct-map gate empty. Next authorized action:
-preregister and execute one reverse-orientation, quantified row-local-slack,
-or non-direct positive-exponential transport/coupling engine. No E7/E9 or
-density claim is authorized.
+Cycle 174 is sealed at
+`artifacts/cycle-174-adaptive-slack-transport-v1.json`: it gives bounded-slack
+capacity-saturated transport or a labelled deficit bank, but no population.
+Next authorized action: preregister and execute one mass-forcing or
+deficit-web engine for these complete labelled banks. No E7/E9 or density
+claim is authorized.
 
 ## Crash recovery
 
