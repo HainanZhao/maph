@@ -1,0 +1,116 @@
+{
+  "artifact_id": "cycle-188-nonrational-root-tower-v1",
+  "claim_boundary": "This rules out only the corrected light rational-root tower family as a critical packet saturator.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/nonrational_root_tower_v1.py",
+      "sha256": "af77822bc417740629c418e03c14a61b3d7c75dbd0068913f8eb876251585210"
+    },
+    "cycle184correction": {
+      "path": "artifacts/cycle-184-phase-shift-correction-v1.json",
+      "sha256": "2509f737c60a9e2a71bb640a1567676beb7dfe68db33c08a9257924b0259fa89"
+    },
+    "document": {
+      "path": "docs/cycle-188-nonrational-root-tower-v1.md",
+      "sha256": "5a6c4ffc483ac28297549d4d53839ee883d4063a857c7810838d94e9e9aa5e21"
+    },
+    "preregistration": {
+      "path": "docs/cycle-188-nonrational-root-tower-preregistration-v1.md",
+      "sha256": "f2a6a5926d4c21e856307bd9a3852c8b910c9db9cbc78614c322288eb7e01c7e"
+    },
+    "sealing_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "tests": {
+      "path": "tests/test_cycle_188_nonrational_root_tower_v1.py",
+      "sha256": "e5733dcef9f9d1ada65b3a70500a334f71fa468964d1f33cd84b02317251e2b5"
+    }
+  },
+  "preregistration_preflight": {
+    "cycle": 188,
+    "input_hashes": [
+      {
+        "path": "artifacts/cycle-184-phase-shift-correction-v1.json",
+        "sha256": "2509f737c60a9e2a71bb640a1567676beb7dfe68db33c08a9257924b0259fa89"
+      },
+      {
+        "path": "artifacts/cycle-187-separated-packing-v1.json",
+        "sha256": "4e2e7da78462809a4e2d31caf3dc0fcc0e20c62f7738a2b7cce5d0e0b2cb7bae"
+      },
+      {
+        "path": "proof/cycle_seal_v1.py",
+        "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+      },
+      {
+        "path": "../../tools/preregistration_check.py",
+        "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+      }
+    ],
+    "manifest_sha256": "f2a6a5926d4c21e856307bd9a3852c8b910c9db9cbc78614c322288eb7e01c7e",
+    "parameters": {
+      "light_regime": {
+        "kind": "expression",
+        "rationale": "A candidate must stay below the seed depth.",
+        "value": "V=T^a, a>=10, H=T^22, hence N_1<=T^12+1"
+      },
+      "target": {
+        "kind": "expression",
+        "rationale": "C183 packet critical scale in T coordinates.",
+        "value": "T^42=X^(21/25)"
+      },
+      "tower": {
+        "kind": "expression",
+        "rationale": "One actual positive exponential, multiple separated labels.",
+        "value": "z=r^(1/n), labels j*n, alpha_(jn)=r^j-1, q=(3V+1)/(2V)"
+      }
+    }
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_188_nonrational_root_tower_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_188_nonrational_root_tower_v1.py"
+  },
+  "root_tower_result": {
+    "boundary": "No arbitrary actual-exponential distribution conclusion follows.",
+    "epistemic_status": "PROVED",
+    "samples": {
+      "T3_a10": {
+        "boundary": "This is only the corrected rational-root tower family, not all actual positive exponentials.",
+        "fibres": {
+          "N1": 531442,
+          "N2": 10,
+          "N3": 1
+        },
+        "mass": {
+          "critical_scale": "T^42",
+          "ordered_cross_mass": 12709353056490,
+          "upper_scale": "T^(88-6a)<=T^28"
+        },
+        "parameters": {
+          "H": 31381059609,
+          "T": 3,
+          "V": 59049,
+          "a": 10,
+          "critical_target": 109418989131512359209
+        },
+        "phase": "z=r^(1/n), alpha_(jn)=r^j-1; q^j-1 has denominator V^j and residuals can be made <X^-1 by the C184 perturbation scale"
+      }
+    },
+    "subcritical_tower": "Every corrected nonrational rational-root tower in the frozen light regime has only labels n and 2n with non-singleton fibres, and ordered cross mass <=T^28<T^42."
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_188_nonrational_root_tower_v1.py",
+    "sha256": "852657ffa5d685688682789a37e04cf53dc47581c91d26c42c9365260850c345"
+  },
+  "status": "SEALED_SUBCRITICAL_CORRECTED_NONRATIONAL_ROOT_TOWER"
+}
