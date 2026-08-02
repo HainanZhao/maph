@@ -126,6 +126,15 @@ is allowed and must be recorded. Do not block routine computation,
 exploration, or reversible drafting on the companion. This protocol
 complements the paper-stage hostile audit; it does not start one early.
 
+Liveness is an explicit checkpoint, not an assumption. Before every critical
+decision, inspect the session companion's live status. If it is idle or has
+completed, reactivate the same stable task identity with the frozen decision
+brief and obtain its current recommendation before committing. If it is
+running, deliver the checkpoint brief and wait for its response. Record the
+status check and response in the relevant readable decision record. A missing
+or failed companion invocation is a reason to defer that critical decision,
+not to silently proceed; routine reversible work may continue.
+
 ## 2. Discovery and proof are separate
 
 - Use `discovery/` for heuristics, floats, recognition, conjectural
