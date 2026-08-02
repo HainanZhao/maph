@@ -187,6 +187,14 @@ Failure must transfer a quantitative, reason-labelled mass to a finite
 coefficient-transport, boundary, phase-changing, nonsmooth, unbounded-tail,
 or other registered escape class; do not absorb it into `C`.
 
+First subgate: prove or reject a one-witness positive-majorant bound for the
+complete smooth symbol, of the form
+`|<T(G),w_h>|<=C_dom KQ^2/h` for a nonnegative dominating amplitude `G` and
+fixed `C_dom`. Only then may a fixed-accuracy `O_kappa(1)` tensor expansion
+put its remainder below the Cycle-153 mass threshold. Without this bound,
+fixed symbol error remains an explicitly labelled tensor-remainder escape,
+not a negligible term.
+
 ## Crash recovery
 
 ```sh
