@@ -1,0 +1,77 @@
+{
+  "aggregate_output": {
+    "actual_exponent": "19/30",
+    "epistemic_status": "PROVED",
+    "statement": "sum of all generic strong critical fibers is <=8 K_L Q T_M sqrt(M)."
+  },
+  "artifact_id": "cycle-101-generic-critical-packing-v1",
+  "claim_boundary": "This artifact proves the aggregate generic strong-critical bound Q*M^(1/2+o(1))=X^(19/30+o(1)). It proves no cross-valuation, weak, simple-root, alias-moment, density, or interval bound.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/generic_critical_packing_v1.py",
+      "sha256": "d82b4d0f043774bca0301fcb1974682a7af34b0d73fe40a6df43d4dfa1e2be20"
+    },
+    "cycle100": {
+      "path": "artifacts/cycle-100-critical-fiber-atlas-v1.json",
+      "sha256": "2b5de8802840ce6411ef9b1eef887d4619ecb04d1c71fe520491db4cb01b2da1"
+    },
+    "discovery_candidate": {
+      "path": "discovery/cycle-101-generic-packing-candidate-v1.md",
+      "sha256": "a87d3d1ffec6ad5a4a8b23ffe08ca2b2ffce44662cc1145d5628fb929d2f1b0c"
+    },
+    "document": {
+      "path": "docs/cycle-101-generic-critical-packing-v1.md",
+      "sha256": "134decdfeb7c9bde54bb84ea421176c5b822e25c5b06ae11c106eec29ead7e13"
+    },
+    "preregistration": {
+      "path": "docs/cycle-101-generic-packing-preregistration-v1.md",
+      "sha256": "034ef56841580153c77b207a41683454747b65c5a0f3d90cb88a2fdc89a02396"
+    },
+    "tests": {
+      "path": "tests/test_cycle_101_generic_critical_packing_v1.py",
+      "sha256": "7f89cdd360b86e94bbe9b914f03d818e45ce64835fe3b67723b23fa9fa831b60"
+    }
+  },
+  "packing_theorem": {
+    "actual_exponent": "Q*M^(1/2+o(1))=X^(19/30+o(1))",
+    "aggregate": "sum_j F_generic(j)<=4*K_L*Q*T_M*sqrt(J)",
+    "boundary": "cross-valuation, weak, and simple-root rows are excluded",
+    "cycle100_input": "F_generic(j)<=2*Q*tau(abs(w_j))/z_j",
+    "epistemic_status": "PROVED",
+    "height_count": "#{j:min(N_j,R_j)<=Y}<=K_L^2*Y^2",
+    "ordered_height": "z_j>=sqrt(j)/K_L",
+    "reciprocal_sum": "sum_j 1/z_j<=2*K_L*sqrt(J)",
+    "uniform": "J<=4*M gives <=8*K_L*Q*T_M*sqrt(M)"
+  },
+  "prior_context": {
+    "cycle100_role": "supply the labelwise generic fiber bound and exceptional split",
+    "epistemic_status": "PROVED"
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Control cross-valuation webs, weak near-double rows, and simple-root averages."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_101_generic_critical_packing_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_101_generic_critical_packing_v1.py",
+    "write_command": "python3 proof/build_cycle_101_generic_critical_packing_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_101_generic_critical_packing_v1.py",
+    "sha256": "db82d0019df52f89b388e198cb70e12c7fa441a6db8b19f2a7493aebe018a243"
+  },
+  "status": "SEALED_GENERIC_STRONG_CRITICAL_AGGREGATE_X19_30_EXCEPTIONAL_OPEN"
+}

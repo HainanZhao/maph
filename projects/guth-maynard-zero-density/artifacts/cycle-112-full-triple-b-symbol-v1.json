@@ -1,0 +1,95 @@
+{
+  "artifact_id": "cycle-112-full-triple-b-symbol-v1",
+  "claim_boundary": "This artifact restores the paired Cycle-81 outer amplitude at the corrected stationary points, proves uniform smooth-symbol anchor dependence, and combines support absorption with Cycle 110 to bound the strong smooth perfect-power arithmetic multiplicity by X^(3/5+o(1)). Other root and payload branches remain open.",
+  "closed_branch": {
+    "epistemic_status": "PROVED",
+    "statement": "registered smooth strong perfect-power arithmetic multiplicity is X^(3/5+o(1)), below X^(19/30+o(1)) by 1/30"
+  },
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/full_triple_b_symbol_v1.py",
+      "sha256": "3ccdf397660c6f5f9ee16101aac4e465fd7574d7cb94ebc961012452815a2246"
+    },
+    "cycle110": {
+      "path": "artifacts/cycle-110-perfect-power-split-sum-v1.json",
+      "sha256": "cfcedf8145cf6ef70fb88b1a722067460236dfb7a04061d75db325e093746c42"
+    },
+    "cycle111": {
+      "path": "artifacts/cycle-111-k-stationary-correction-v1.json",
+      "sha256": "22bb8d5a5d9eb581f66776b3fe9a88f9677e15173422c323ba4108138e7ae5c1"
+    },
+    "cycle81": {
+      "path": "artifacts/cycle-81-exact-q-transform-v1.json",
+      "sha256": "0753d455a2e9428b28f1b9dac59b04fd57008db562370202a300a38a818631a4"
+    },
+    "cycle90": {
+      "path": "artifacts/cycle-90-equal-height-bprocess-v1.json",
+      "sha256": "a24a63110e26fff4672c8b8e2cca27569a00885dec7b8c934f8ca3971967c3de"
+    },
+    "document": {
+      "path": "docs/cycle-112-full-triple-b-symbol-v1.md",
+      "sha256": "d50064bd8e46ff445b3d3300d505d5abce0696bcfc04f823755bb71acf423e82"
+    },
+    "preregistration": {
+      "path": "docs/cycle-112-full-symbol-preregistration-v1.md",
+      "sha256": "bf4eda703e03560fb63a3b9e0bc04143fc9818f85d1531afa343fe41d9cb99f9"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_112_full_triple_b_symbol_v1.py",
+      "sha256": "81fbbc5d737743923af9490d4312d45f7989d5a46c79a253c5b2b669cd6fb370"
+    }
+  },
+  "full_symbol_theorem": {
+    "V_arguments": [
+      "n/Q",
+      "n'/Q"
+    ],
+    "W_arguments": [
+      "beta^(-1)*log(H*m/(n*Delta*c0))",
+      "beta^(-1)*log((H-Delta)*m/(n'*Delta*c0))"
+    ],
+    "aggregate": "one injective strong label per signed mode and 4*tau(|w|) split weight give M^(1+o(1)) arithmetic multiplicity, a 1/30 exponent saving over X^(19/30)",
+    "anchor_absorption": "if B0,C0<=Q and the V-support has n',m>=aQ, then every supported actual scale satisfies lambda>=a*max(p0,q0)",
+    "anchor_role": "c0 only translates the two logarithmic W arguments; it is not a size prefactor",
+    "boundary": "the closure is for the registered smooth perfect-power strong branch only; nonsmooth payloads, irrational large degree, weak/simple roots, moments, density, and intervals remain open",
+    "chart_amplitude": "c^2*sqrt(k/(r*r'))/sqrt(m*n*n')",
+    "epistemic_status": "PROVED",
+    "full_amplitude": "c^(3/2)*sqrt(Delta)/(m*sqrt(H*(H-Delta)))",
+    "weighted_core": "the anchor factor p0*sqrt(q0)/lambda^(3/2) is O_a(1), so Cycle 110's normalized split sum applies uniformly"
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "control irrational large-degree cores and weak/simple-root branches, then assemble the signed moment"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_112_full_triple_b_symbol_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_112_full_triple_b_symbol_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_112_full_triple_b_symbol_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_112_full_triple_b_symbol_v1.py",
+    "sha256": "04fb6b71a79daebad3af2b015c20e13af56336b668b1956e0f5ff9cf384d7f54"
+  },
+  "status": "SEALED_SMOOTH_PERFECT_POWER_STRONG_BRANCH_X3_5_ARITHMETIC_MULTIPLICITY"
+}

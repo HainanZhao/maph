@@ -1,0 +1,79 @@
+{
+  "artifact_id": "cycle-129-continued-fraction-jump-v1",
+  "claim_boundary": "This artifact proves that every collision forces a continued-fraction convergent and a fixed-power next partial quotient. It proves no averaged jump theorem, collision or simple-root closure, complete moment, density, or intervals.",
+  "continued_fraction_jump_theorem": {
+    "averaged_target": "for every dyadic M, it suffices to show that at most O((Q/M)X^epsilon) modes a have a convergent q<<Q/M whose next partial quotient is >>KM^2/Q",
+    "boundary": "no averaged large-partial-quotient theorem, collision or simple-root closure, complete moment, density, or prime intervals is proved",
+    "collision_input": "for alpha=g^a, a reduced collision label p/q satisfies |alpha-p/q|<<1/(KQ) and q<<Q/M",
+    "convergent_error": "for consecutive convergent denominators q,q_next, |alpha-p/q|>1/[q(q+q_next)]",
+    "epistemic_status": "PROVED",
+    "legendre": "2q^2|alpha-p/q|<<Q/(KM^2)=X^(-(xi+2mu-1/3)); the minimum margin is 23/75, so Legendre's criterion makes p/q a continued-fraction convergent uniformly",
+    "next_denominator": "q_next>1/(q|alpha-p/q|)-q>>KM; the subtraction is absorbed by the same positive Legendre margin",
+    "partial_quotient": "q_next=A_next q+q_previous forces A_next>>KM^2/Q, with X-exponent xi+2mu-1/3>=23/75"
+  },
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/continued_fraction_jump_v1.py",
+      "sha256": "7c5d853e13d0e7c74798337e155117eda6ab34ebdacb142db219c53e9f0c7765"
+    },
+    "cycle128": {
+      "path": "artifacts/cycle-128-sampled-mellin-profiler-v1.json",
+      "sha256": "ade56d2370748ecc7e0365e7134f11ec6775840a799f4b3e280b7d7a3ef01136"
+    },
+    "cycle92": {
+      "path": "artifacts/cycle-92-collision-ray-inverse-v1.json",
+      "sha256": "e4d20db8df77672cd8622abd891b0bc97cbb0914c538e95682c19cf98e48f43e"
+    },
+    "document": {
+      "path": "docs/cycle-129-continued-fraction-jump-v1.md",
+      "sha256": "e8fe7d790e9250d1c014c970193f97ec389554d884376c562f8f3def480bfebf"
+    },
+    "preregistration": {
+      "path": "docs/cycle-129-continued-fraction-jump-preregistration-v1.md",
+      "sha256": "46b0a6bc17fe235bd1aaafa5e86d1cea3f017bad1640073fa2508e398478edfe"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_129_continued_fraction_jump_v1.py",
+      "sha256": "9f705afe8ed98d127a9cfe428ef71fd2aa590be78f1dc14416d1860ba2242ecf"
+    }
+  },
+  "minimum_jump_margin": {
+    "epistemic_status": "PROVED",
+    "exponent": "23/75"
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "bound the number of exponential modes with a convergent followed by a partial quotient >>KM^2/Q, or classify their common structure"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_129_continued_fraction_jump_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_129_continued_fraction_jump_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_129_continued_fraction_jump_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_129_continued_fraction_jump_v1.py",
+    "sha256": "6fd4beb6f5768f0da34316c0edfa369a226dcc9c17c9a3763f50687173ae2acb"
+  },
+  "status": "SEALED_COLLISIONS_FORCE_POWER_PARTIAL_QUOTIENT_AVERAGE_OPEN"
+}

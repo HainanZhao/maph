@@ -1,0 +1,81 @@
+{
+  "analytic_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Prove C_tot<=Q X^epsilon, or compile the exported injective ray web into an original transport seed."
+  },
+  "artifact_id": "cycle-92-collision-ray-inverse-v1",
+  "claim_boundary": "This artifact proves fixed-a ray uniqueness, cross-a injectivity, multiplicity versus primitive denominator, and dyadic web extraction. It proves no collision bound, transport seed, equal-height closure, full moment, density gain, or interval gain.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "analytic_or_web": "either C_tot<=Q*X^epsilon or a dyadic rational-ray web is exported; the web is not yet a transport seed",
+    "collision": "|n'-n*exp(beta*a/D)|<=C/K",
+    "cross_a_injectivity": "spacing Omega(D^-1) of exp(beta*a/D) and error O((KQ)^-1) prevent one label from serving distinct a",
+    "dyadic_extraction": "C_tot collisions yield some dyadic M with >>C_tot/(M log Q) distinct a and injective labels q<<Q/M",
+    "gate": "equal-height collision count or rational-ray web to E16",
+    "minimum_cross_a_margin": "28/75",
+    "minimum_same_a_margin": "23/75",
+    "multiplicity_contract": "class degree M implies primitive denominator q<<Q/M",
+    "primitive_label": "(p,q)=(n'/g,n/g), g=gcd(n,n')",
+    "same_a_rigidity": "Farey spacing Omega(Q^-2) and error O((KQ)^-1) force one primitive rational label for each a"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/collision_ray_inverse_v1.py",
+      "sha256": "d79b735744abada4dfcb725c366e53dbdb7216df4a0cd7969a9a0a43df1df7fd"
+    },
+    "cycle90": {
+      "path": "artifacts/cycle-90-equal-height-bprocess-v1.json",
+      "sha256": "a24a63110e26fff4672c8b8e2cca27569a00885dec7b8c934f8ca3971967c3de"
+    },
+    "discovery_candidate": {
+      "path": "discovery/cycle-92-collision-ray-candidate-v1.md",
+      "sha256": "4a5e532c728007b1564f5e234d033347290076bbc88898a1eaf100242f8ba183"
+    },
+    "document": {
+      "path": "docs/cycle-92-collision-ray-inverse-v1.md",
+      "sha256": "ddc415c929318dec64040803ec83bafc7a31f865f522db7842266ee63036d6f7"
+    },
+    "preregistration": {
+      "path": "docs/cycle-92-collision-ray-preregistration-v1.md",
+      "sha256": "5dcddb85e5b74fc224fb9724a5337a20648430dfa85579b703519bce2a4014a1"
+    },
+    "tests": {
+      "path": "tests/test_cycle_92_collision_ray_inverse_v1.py",
+      "sha256": "b453cff66bdb549736566ded426273d01d5f6bb2a872df6aade4bdf237b5daea"
+    }
+  },
+  "inverse_output": {
+    "epistemic_status": "PROVED",
+    "statement": "C_tot collisions yield a dyadic multiplicity M, at least a constant times C_tot/(M log Q) distinct a values, and injective primitive labels of denominator O(Q/M)."
+  },
+  "prior_context": {
+    "cycle90_role": "supply the saddle collision relation and lower-band parameter margins",
+    "epistemic_status": "PROVED"
+  },
+  "ray_rigidity": {
+    "epistemic_status": "PROVED",
+    "statement": "All collisions at fixed a are multiples of one primitive rational ray, and distinct a values have distinct primitive labels."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_92_collision_ray_inverse_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_92_collision_ray_inverse_v1.py",
+    "write_command": "python3 proof/build_cycle_92_collision_ray_inverse_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_92_collision_ray_inverse_v1.py",
+    "sha256": "af4d4debd0ea13755e64193cdd3992f6825c429f4191e538b65d75cb748906c9"
+  },
+  "status": "SEALED_EQUAL_HEIGHT_ANALYTIC_BOUND_OR_INJECTIVE_RAY_WEB_TO_E16_OPEN"
+}

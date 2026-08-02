@@ -1,0 +1,75 @@
+{
+  "artifact_id": "cycle-115-local-turnover-v1",
+  "claim_boundary": "This artifact replaces the global weak-turnover ledger by a local Newton/critical trichotomy. Below an explicit constant times S2/D^2, no weak middle remains. The actual stationary tolerance comparison and simple-root average remain open.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/local_turnover_v1.py",
+      "sha256": "8509a6da2a94c01227fc26e1e9ffe9037c1c472afb8cdf2e3448837dea3949c2"
+    },
+    "cycle114": {
+      "path": "artifacts/cycle-114-coupled-anchor-scale-v1.json",
+      "sha256": "bec19431e36affe22633ce2095db8537205b5dcd2525e29abb7a0ab79271d596"
+    },
+    "cycle97": {
+      "path": "artifacts/cycle-97-projective-algebraic-root-v1.json",
+      "sha256": "5af4394e8a8f48b70cff4f1b32e9a213640df499f273f701bc0ffe5ffd0d2644"
+    },
+    "document": {
+      "path": "docs/cycle-115-local-turnover-v1.md",
+      "sha256": "7dc1556f1594f4a62de7e2a1d8c178ab011b6d323307dd2ada8676cfb55a29d4"
+    },
+    "preregistration": {
+      "path": "docs/cycle-115-local-turnover-preregistration-v1.md",
+      "sha256": "7f78ce52ebc6b8081e41ea63b84edcce8e7a2d59adce10dc1dbe10f15adf1298"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_115_local_turnover_v1.py",
+      "sha256": "4e48cc347dacba9e6a5d3402c39e8cccb4d8c5f102d259f59d8b745337c175af"
+    }
+  },
+  "local_turnover_theorem": {
+    "boundary": "the actual stationary tolerance has not yet been checked against c_abs*S2/D^2; simple-root averages and moment closure remain open",
+    "critical": "eta<=ell_x*x/2 excludes same-sign modes and gives the unique critical point within eta/ell_x",
+    "curvature": "ell_x=S2*exp(-3Mx/2)<=|f''|<=L_x=S2*exp(3Mx/2)",
+    "entropy_specialization": "for x=2pi/D and M<=D, the floor is at least c_abs*S2/D^2 with c_abs=pi^2*exp(-9pi)/4",
+    "epistemic_status": "PROVED",
+    "local_interval": "I=[x/2,3x/2]",
+    "simple": "eta>=max(4delta/x,2sqrt(L_x delta)) gives a real root within 2delta/eta",
+    "transition_floor": "the remaining transition implies delta>ell_x^2*x^2/(16L_x)"
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "compare the exact stationary tolerance to c_abs*S2/D^2 and aggregate the simple-root output"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_115_local_turnover_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_115_local_turnover_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_115_local_turnover_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_115_local_turnover_v1.py",
+    "sha256": "d910c025fcb50422fb868cf1e94e02f8845a46a363f1599a6d7ef507b1f1afca"
+  },
+  "status": "SEALED_LOCAL_SIMPLE_OR_CRITICAL_BELOW_S2_D2_TOLERANCE_COMPARISON_OPEN"
+}

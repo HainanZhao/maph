@@ -1,0 +1,72 @@
+{
+  "artifact_id": "cycle-121-projective-amplitude-v1",
+  "claim_boundary": "This artifact derives the projective leading amplitude and a fixed-chart summed stationary remainder. It proves no cancellation across arithmetic labels, simple-root closure, complete moment, density, or intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/projective_amplitude_v1.py",
+      "sha256": "fcc554f213fb2beab747c690b281b6704444368921d8f0a0c811a34ba21efe95"
+    },
+    "cycle120": {
+      "path": "artifacts/cycle-120-projective-radial-phase-v1.json",
+      "sha256": "cd584128c1624c8ced2d91c71ff7cb370a7bab7a57f8441b7a8e7b994b5c66cd"
+    },
+    "document": {
+      "path": "docs/cycle-121-projective-amplitude-v1.md",
+      "sha256": "9951408ba077e33b710a7f03b0df762d772e9cb07a64f421f87907602da6f785"
+    },
+    "preregistration": {
+      "path": "docs/cycle-121-projective-amplitude-preregistration-v1.md",
+      "sha256": "431898ba32a2e253a10503ad37bf1695f465db551fd0cca56948534cd3a9a8a6"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_121_projective_amplitude_v1.py",
+      "sha256": "c345154a9b40ff1ec1d9e614e1dbe66ae12ce69c8dc4a3c6bee824e58a05a0fa"
+    }
+  },
+  "projective_amplitude_theorem": {
+    "amplitude_collapse": "the leading z-saddle amplitude is e(1/8)c z_v/m; since C=q0m, c z_v/m=c q0 g^v/(B+Cg^v), with no remaining power of H",
+    "boundary": "no arithmetic cancellation in the radial-profile sum, simple-root closure, complete moment, density, or prime intervals is proved",
+    "cutoffs": "V(n/Q),V(n'/Q), W(beta^-1 log(m/(n z c0))), and W(beta^-1 log((1-z)m/(n' z c0))) are independent of H",
+    "epistemic_status": "PROVED",
+    "input_symbol": "A*=c^(3/2)sqrt(Delta)/(m sqrt(H(H-Delta))) becomes c^(3/2)sqrt(z)/(m sqrt(1-z)sqrt(H))",
+    "jacobian": "dH dDelta=H dH dz, so the projective integrand amplitude is c^(3/2)H^(1/2)sqrt(z/(1-z))/m",
+    "radial_profile": "for a dyadic U(H/H0), the leading radial factor is H0 hat(U)(-H0 P(z_v))",
+    "remainder": "on a fixed compact z-chart with fixed smooth symbol norms, the z-stationary remainder is O(1/(mH)); integration over H~H0 is O(1/m)",
+    "stationary_factor": "for parameter Hc and normalized curvature 1/[z(1-z)], the positive-signature factor is e(1/8)sqrt(z(1-z)/(Hc))"
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "prove the X^(14/15-xi) saving for the explicit weighted radial Fourier-profile operator, or extract a phase-aware inverse"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_121_projective_amplitude_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_121_projective_amplitude_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_121_projective_amplitude_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_121_projective_amplitude_v1.py",
+    "sha256": "610f4bdf245366a7aa31d86e601b70d4b523d2672337877af8177ed81d28dfb2"
+  },
+  "status": "SEALED_PROJECTIVE_AMPLITUDE_COLLAPSE_RADIAL_OPERATOR_BOUND_OPEN"
+}

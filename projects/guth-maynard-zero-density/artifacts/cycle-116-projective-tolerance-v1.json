@@ -1,0 +1,75 @@
+{
+  "artifact_id": "cycle-116-projective-tolerance-v1",
+  "claim_boundary": "This artifact reconstructs the projective Laurent tolerance as O(1/K) and confines every weak turnover to S2<<D^2/K, hence mode exponent at most 7/25. The reduced sector is not yet summed.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/projective_tolerance_v1.py",
+      "sha256": "581333b60590140e7e4163bd5add60adfadebbf7c514d8d4d05990a013591936"
+    },
+    "cycle115": {
+      "path": "artifacts/cycle-115-local-turnover-v1.json",
+      "sha256": "cfc45ce92d0a986fca7d5708f1fd6a71befe47e07c1d6c95fe2a1059a72f029d"
+    },
+    "cycle95": {
+      "path": "artifacts/cycle-95-projective-entropy-modes-v1.json",
+      "sha256": "73c1a220bd5bbacd2c813a7cbb36611c88bcc4e9e0e84bc8de97c95d6364128f"
+    },
+    "document": {
+      "path": "docs/cycle-116-projective-tolerance-v1.md",
+      "sha256": "0f2814d46a8287cb5d171df18347f271ef0f661ceebc273d9dbfea3a1ac84d17"
+    },
+    "preregistration": {
+      "path": "docs/cycle-116-projective-tolerance-preregistration-v1.md",
+      "sha256": "22a131857efb6633e33146ec9672523f1a3fc65fb1c3ab1a6ce82f1195ae1b10"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_116_projective_tolerance_v1.py",
+      "sha256": "1cee340a541d5da13bbe186db00098b55836fda22173662ff0c5625158e8c1c8"
+    }
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "sum the low-energy weak sector with coefficient weights and aggregate simple roots"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_116_projective_tolerance_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_116_projective_tolerance_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_116_projective_tolerance_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_116_projective_tolerance_v1.py",
+    "sha256": "0cb4af42f249a21bd3a3cea641930cf18b541668a0920c3ba0ecded0a911ec60"
+  },
+  "status": "SEALED_WEAK_TRANSITION_ENERGY_CAP_MODE_EXPONENT_7_25_AGGREGATE_OPEN",
+  "tolerance_theorem": {
+    "boundary": "the reduced weak sector has not yet been summed with coefficient and simple-root weights; moment, density, and intervals remain open",
+    "epistemic_status": "PROVED",
+    "exact_elimination": "A-B*g^u*exp(G1)-C*g^(u+v)*exp(G1+G2)=0",
+    "gradient_window": "with H0~KQ/D and c=D/(2pi), a surviving smooth Poisson cell has |G1|+|G2|<<1/(cH0)<<1/(KQ)",
+    "laurent_tolerance": "for small gradients and B,C<=Q, |A-Bg^u-Cg^(u+v)|<<1/K",
+    "mode_cap": "if B,C are at least coefficient height Zc, max(|a|,|b|)<<D/sqrt(K*Zc)",
+    "transition_energy": "Cycle 115 then confines every weak transition to S2<<D^2/K",
+    "worst_exponent": "for K>=X^(16/25) and Zc>=1, the weak-mode exponent is at most 3/5-8/25=7/25"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "artifact_id": "cycle-120-projective-radial-phase-v1",
+  "claim_boundary": "This artifact derives the exact projective saddle and signed radial frequency. It proves no cancellation estimate, simple-root sum, complete moment, density coefficient, or prime-interval improvement.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/projective_radial_phase_v1.py",
+      "sha256": "68832b9d53f67e055f325136414b94fc3a303c8bdf32da67d559820eea47026d"
+    },
+    "cycle119": {
+      "path": "artifacts/cycle-119-simple-root-volume-v1.json",
+      "sha256": "d101504a18724dc79c143a0d485790584478e282c9544cfab8be2349212d50e9"
+    },
+    "document": {
+      "path": "docs/cycle-120-projective-radial-phase-v1.md",
+      "sha256": "26314b4a1ae2b995d061df31fcd6b480ae311347cf7415b1148f9658ad2888cc"
+    },
+    "preregistration": {
+      "path": "docs/cycle-120-projective-radial-phase-preregistration-v1.md",
+      "sha256": "7ebaba8f1b001e6be54da745bc0400b20959ad6344982d3e254895c04129ca18"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_120_projective_radial_phase_v1.py",
+      "sha256": "b6df06a870669158147aea90af166ced520e34173517d9ff2179c2c356ab8b7b"
+    }
+  },
+  "projective_radial_theorem": {
+    "boundary": "no cancellation estimate for the radial kernel, simple-root sum, complete moment, density, or prime intervals is proved",
+    "coherence": "on H~H0~KQ/D with A~Q and c~D, H0|P(z_v)|=O(1) is equivalent up to fixed constants to |R|=O(1/K)",
+    "curvature": "P''(z_v)=c/[z_v(1-z_v)]>0",
+    "epistemic_status": "PROVED",
+    "normal_form": "with Delta=zH, cF(H,Delta)-uH-vDelta=H P_(u,v)(z), P=c[z log(c0 z/m)+log n+(1-z)log((1-z)/n')]-u-vz",
+    "projective_saddle": "P'(z)=0 iff z=z_v=C g^v/(B+C g^v), for (A,B,C)=(p0 n,p0 n',q0 m)",
+    "radial_frequency": "P(z_v)=c log(A/(B g^u+C g^(u+v)))",
+    "residual_orientation": "for R=A-Bg^u-Cg^(u+v) and |R|<=A/2, sign(P(z_v))=sign(R) and (2c/(3A))|R|<=|P(z_v)|<=2c|R|/A",
+    "signed_kernel": "after projective stationary phase the radial factor is a smooth Fourier transform evaluated at H0 P(z_v), retaining residual sign"
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "bound the phase-aware sum of radial Fourier profiles with saving X^(14/15-xi), retaining sign sectors and projective amplitudes"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_120_projective_radial_phase_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_120_projective_radial_phase_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_120_projective_radial_phase_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_120_projective_radial_phase_v1.py",
+    "sha256": "dbb52474c979bec85169df472ef8a8fedb9acd216bc25e43508b741072eeaa31"
+  },
+  "status": "SEALED_PROJECTIVE_CURVATURE_RADIAL_SIGNED_KERNEL_OPEN"
+}

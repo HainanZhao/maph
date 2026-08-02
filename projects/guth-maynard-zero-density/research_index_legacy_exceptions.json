@@ -1,0 +1,36 @@
+{
+  "schema": "research-index-legacy-exceptions-v1",
+  "untagged_artifacts": [
+    "cycle-1-route-reconciliation-v1",
+    "cycle-1-route-reconciliation-v2",
+    "cycle-1-route-reconciliation-v3",
+    "cycle-2-stream-b-route-a-v1",
+    "cycle-2-stream-b-route-a-v2",
+    "cycle-2-stream-c-route-a-v1",
+    "cycle-2-stream-c-route-a-v2",
+    "cycle-2-stream-c-route-a-v3",
+    "cycle-2-stream-c-route-a-v3-performance",
+    "cycle-4-crr-montgomery-reduction-v1"
+  ],
+  "untagged_reason": "These ten preserved records predate mandatory top-level epistemic tags. They are exposed as LEGACY_UNTAGGED and are not counted as proved claims. Every new artifact must carry a valid top-level tag.",
+  "evidence_exceptions": [
+    {
+      "artifact_id": "cycle-4-p1r-preregistration-v1",
+      "evidence_key": "plan",
+      "path": "PLAN.md",
+      "reason": "The legacy preregistration hashed the then-current mutable strategic plan. Its cycle artifact is preserved, but the historical PLAN.md bytes were not retained as a separate immutable file. Future cycles must hash only immutable cycle records."
+    },
+    {
+      "artifact_id": "cycle-6-crr-rfdi-outlier-surgery-v1",
+      "evidence_key": "conventions",
+      "path": "conventions/crr_rfdi_outlier_surgery_v1.py",
+      "reason": "The v1 convention was superseded by the preserved v2 correction before the immutable-record migration; the v1 artifact hash no longer matches the live path."
+    },
+    {
+      "artifact_id": "cycle-6-crr-rfdi-outlier-surgery-v1",
+      "evidence_key": "document",
+      "path": "docs/cycle-6-crr-rfdi-outlier-surgery-v1.md",
+      "reason": "The v1 document was superseded by docs/cycle-6-crr-rfdi-outlier-surgery-v2-correction.md before the immutable-record migration; the v1 artifact hash no longer matches the live path."
+    }
+  ]
+}

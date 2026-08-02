@@ -1,0 +1,88 @@
+{
+  "artifact_id": "cycle-132-unimodular-endpoint-lift-v1",
+  "claim_boundary": "This artifact closes only the endpoint zeroth-mode volume and proves a determinant-labelled cluster inverse. The nonzero Fourier norm, endpoint, low-multiplicity, simple-root, complete moment, density, and prime intervals remain open.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/unimodular_endpoint_lift_v1.py",
+      "sha256": "1a72c6e7205e16dd7e358aa37eb5f1c5f743d9c07e259759857107bf60f3c19f"
+    },
+    "cycle129": {
+      "path": "artifacts/cycle-129-continued-fraction-jump-v1.json",
+      "sha256": "8be0a48187028ba3ca4ddf46a2c80d4e682207855cc86a1756b25c607de861bf"
+    },
+    "cycle131": {
+      "path": "artifacts/cycle-131-order-three-denominator-bridge-v1.json",
+      "sha256": "1fa3645c6cf6c59abc35604de076412cf413593ea49d5e5a214f9dee0aa99e55"
+    },
+    "document": {
+      "path": "docs/cycle-132-unimodular-endpoint-lift-v1.md",
+      "sha256": "9a17f63677c05a42fe37b0d856588ce3b55559a0e30f8dab1b800bd19c52cfbb"
+    },
+    "preregistration": {
+      "path": "docs/cycle-132-unimodular-endpoint-preregistration-v1.md",
+      "sha256": "fa954c04667d34c4ed6704b6a99ce9fa4281a7fd336a25f28f1ef5a7c8e61278"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_132_unimodular_endpoint_lift_v1.py",
+      "sha256": "1de156bf9f6c6d2282398583932a7c64557b7009ae1a404ce606622b6490d208"
+    }
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "prove the Cycle-132 logarithmic Fourier norm or feed its determinant-labelled cluster graph into the recurrence compiler"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_132_unimodular_endpoint_lift_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_132_unimodular_endpoint_lift_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_132_unimodular_endpoint_lift_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_132_unimodular_endpoint_lift_v1.py",
+    "sha256": "66a074daf5d7882709ca44e4d36c65c860229f641cb4ba513e420d47cfd0a13d"
+  },
+  "status": "SEALED_ENDPOINT_VOLUME_CLOSED_DETERMINANT_CLUSTER_NORM_OPEN",
+  "unimodular_endpoint_theorem": {
+    "block_ledger": "for q~N=X^rho and R~S=X^tau the natural bandwidth is H=NS/D, the candidate-label count is O(N^2), and the restored volume M*N^2/H has exponent mu+rho-tau+3/5",
+    "boundary": "the volume term is closed but the Fourier norm is not proved; no endpoint, low-multiplicity, simple-root, complete-moment, density, or prime-interval closure follows",
+    "cluster_threshold": "a clustered-large-sieve proof may allow local multiplicity X^(2(1/3-mu-rho)+epsilon); at the full endpoint rho=1/3-mu this becomes only X^epsilon",
+    "epistemic_status": "PROVED",
+    "fourier_norm": "after the volume term, a sufficient endpoint estimate is H^{-1} sum_{1<=|h|<=H}|sum_{p/q in V} e(hD log(p/q)/(2pi))| << Q/M, with smooth dyadic weights allowed",
+    "inverse_graph": "if a block contains more than Q/M hits, those hit vertices form a cluster graph whose edge (v,v') carries d=a-a' and satisfies |p q'/(p' q)-g^d|<<1/(NS)<=1/(KQ); every vertex also carries the matrix [[P,p],[R,q]] of determinant s",
+    "shell_telescope": "for fixed p/q and s, denominators R in one dyadic block occupy one residue class modulo q; their consecutive error shells tile, so all hits lie in a logarithmic-mode interval of length O(D/(qS))",
+    "unimodular_lift": "if p/q and P/R are consecutive convergents, then s=Pq-pR is +1 or -1, R=-s*p^{-1} (mod q), and 1/[q(q+R)]<|alpha-p/q|<1/(qR)",
+    "volume_closure": "R>>KQ/N implies tau>=xi+1/3-rho; throughout the Cycle-131 endpoint the restored volume is at most X^(14/15-xi-mu), below X^(1/3) by xi+mu-3/5>=1/25"
+  },
+  "worst_endpoint_ledger": {
+    "cluster_allowance": "0",
+    "epistemic_status": "PROVED",
+    "fourier_bandwidth": "28/75",
+    "mu": "0",
+    "ray_tolerance": "-73/75",
+    "restored_volume": "22/75",
+    "rho": "1/3",
+    "tau": "16/25",
+    "volume_margin": "1/25",
+    "xi": "16/25"
+  }
+}

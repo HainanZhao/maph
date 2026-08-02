@@ -1,0 +1,892 @@
+{
+  "artifact_id": "cycle-128-sampled-mellin-profiler-v1",
+  "claim_boundary": "This artifact records a finite 80-decimal profiler. It proves no asymptotic sparsity, continued-fraction classification, sampled-Mellin estimate, collision bound, density, or intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "OBSERVED",
+  "finding": {
+    "epistemic_status": "OBSERVED",
+    "statement": "all frozen aliases have ray multiplicity one and are continued-fraction convergents; every grid remains below target Q"
+  },
+  "frozen_hashes": {
+    "cycle127": {
+      "path": "artifacts/cycle-127-low-multiplicity-log-saddle-v1.json",
+      "sha256": "0dc33bc38ac1e3edf85b98abeffcdcf162fe6c6f6f335c3cc0f9bf268d78955a"
+    },
+    "discovery_output": {
+      "path": "discovery/cycle-128-sampled-mellin-profiler-v1.json",
+      "sha256": "5aaf8f962329d29fd395bf358b40655c132790e31246c4d2415c63549f11aa34"
+    },
+    "discovery_script": {
+      "path": "discovery/run_cycle_128_sampled_mellin_profiler_v1.py",
+      "sha256": "121f1a239fe0a0919ce70eca18a4334cad082870084ec42602c8797ae963cfbf"
+    },
+    "document": {
+      "path": "docs/cycle-128-sampled-mellin-profiler-v1.md",
+      "sha256": "3f94acb22b792c34f95faa8e689aab904f69644b1cd5a7067cf2d413edde8473"
+    },
+    "preregistration": {
+      "path": "docs/cycle-128-sampled-mellin-profiler-preregistration-v1.md",
+      "sha256": "b29205c2e6a9c4dc29df1a874bcc6a520512f0482f0c0bd5c232bd0643c4ee80"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_128_sampled_mellin_profiler_v1.py",
+      "sha256": "72b660b864421d992ba3b36ed67b9e4aabac808b7777cba6b786d8ee651898c1"
+    }
+  },
+  "profiler": {
+    "artifact_id": "cycle-128-sampled-mellin-profiler-v1",
+    "decimal_digits": 80,
+    "epistemic_status": "OBSERVED",
+    "mpmath_version": "1.2.1",
+    "rng": null,
+    "rows": [
+      {
+        "D": 72,
+        "K": 96,
+        "Q": 11,
+        "additive_energy": 15,
+        "cycle125_threshold": 1.9296418326012772,
+        "longest_popular_chain": 1,
+        "max_ray_multiplicity": 1,
+        "mode_cap": 7,
+        "multi_label_modes": 0,
+        "nonconvergent_rays": 0,
+        "occupied_modes": 3,
+        "popular_difference": 2,
+        "popular_difference_edges": 1,
+        "radius": 1,
+        "ray_count": 3,
+        "rays_above_cycle125_threshold": 0,
+        "representative_rays": [
+          {
+            "a": -4,
+            "multiplicity": 1,
+            "p": 12,
+            "q": 17
+          },
+          {
+            "a": -1,
+            "multiplicity": 1,
+            "p": 11,
+            "q": 12
+          },
+          {
+            "a": 1,
+            "multiplicity": 1,
+            "p": 12,
+            "q": 11
+          }
+        ],
+        "target": 11,
+        "total_hits": 3,
+        "volume_proxy": 8.25,
+        "xi": "16/25"
+      },
+      {
+        "D": 72,
+        "K": 96,
+        "Q": 11,
+        "additive_energy": 90,
+        "cycle125_threshold": 1.9296418326012772,
+        "longest_popular_chain": 1,
+        "max_ray_multiplicity": 1,
+        "mode_cap": 7,
+        "multi_label_modes": 0,
+        "nonconvergent_rays": 0,
+        "occupied_modes": 6,
+        "popular_difference": 1,
+        "popular_difference_edges": 2,
+        "radius": 4,
+        "ray_count": 6,
+        "rays_above_cycle125_threshold": 0,
+        "representative_rays": [
+          {
+            "a": -5,
+            "multiplicity": 1,
+            "p": 11,
+            "q": 17
+          },
+          {
+            "a": -4,
+            "multiplicity": 1,
+            "p": 12,
+            "q": 17
+          },
+          {
+            "a": -1,
+            "multiplicity": 1,
+            "p": 11,
+            "q": 12
+          },
+          {
+            "a": 1,
+            "multiplicity": 1,
+            "p": 12,
+            "q": 11
+          },
+          {
+            "a": 4,
+            "multiplicity": 1,
+            "p": 17,
+            "q": 12
+          },
+          {
+            "a": 5,
+            "multiplicity": 1,
+            "p": 17,
+            "q": 11
+          }
+        ],
+        "target": 11,
+        "total_hits": 6,
+        "volume_proxy": 33.0,
+        "xi": "16/25"
+      },
+      {
+        "D": 72,
+        "K": 147,
+        "Q": 11,
+        "additive_energy": 6,
+        "cycle125_threshold": 1.7346632596492793,
+        "longest_popular_chain": 1,
+        "max_ray_multiplicity": 1,
+        "mode_cap": 7,
+        "multi_label_modes": 0,
+        "nonconvergent_rays": 0,
+        "occupied_modes": 2,
+        "popular_difference": 2,
+        "popular_difference_edges": 1,
+        "radius": 1,
+        "ray_count": 2,
+        "rays_above_cycle125_threshold": 0,
+        "representative_rays": [
+          {
+            "a": -1,
+            "multiplicity": 1,
+            "p": 11,
+            "q": 12
+          },
+          {
+            "a": 1,
+            "multiplicity": 1,
+            "p": 12,
+            "q": 11
+          }
+        ],
+        "target": 11,
+        "total_hits": 2,
+        "volume_proxy": 5.387755102040816,
+        "xi": "7/10"
+      },
+      {
+        "D": 72,
+        "K": 147,
+        "Q": 11,
+        "additive_energy": 90,
+        "cycle125_threshold": 1.7346632596492793,
+        "longest_popular_chain": 1,
+        "max_ray_multiplicity": 1,
+        "mode_cap": 7,
+        "multi_label_modes": 0,
+        "nonconvergent_rays": 0,
+        "occupied_modes": 6,
+        "popular_difference": 1,
+        "popular_difference_edges": 2,
+        "radius": 4,
+        "ray_count": 6,
+        "rays_above_cycle125_threshold": 0,
+        "representative_rays": [
+          {
+            "a": -5,
+            "multiplicity": 1,
+            "p": 11,
+            "q": 17
+          },
+          {
+            "a": -4,
+            "multiplicity": 1,
+            "p": 12,
+            "q": 17
+          },
+          {
+            "a": -1,
+            "multiplicity": 1,
+            "p": 11,
+            "q": 12
+          },
+          {
+            "a": 1,
+            "multiplicity": 1,
+            "p": 12,
+            "q": 11
+          },
+          {
+            "a": 4,
+            "multiplicity": 1,
+            "p": 17,
+            "q": 12
+          },
+          {
+            "a": 5,
+            "multiplicity": 1,
+            "p": 17,
+            "q": 11
+          }
+        ],
+        "target": 11,
+        "total_hits": 6,
+        "volume_proxy": 21.551020408163264,
+        "xi": "7/10"
+      },
+      {
+        "D": 72,
+        "K": 236,
+        "Q": 11,
+        "additive_energy": 6,
+        "cycle125_threshold": 1.5410492311201645,
+        "longest_popular_chain": 1,
+        "max_ray_multiplicity": 1,
+        "mode_cap": 7,
+        "multi_label_modes": 0,
+        "nonconvergent_rays": 0,
+        "occupied_modes": 2,
+        "popular_difference": 2,
+        "popular_difference_edges": 1,
+        "radius": 1,
+        "ray_count": 2,
+        "rays_above_cycle125_threshold": 0,
+        "representative_rays": [
+          {
+            "a": -1,
+            "multiplicity": 1,
+            "p": 11,
+            "q": 12
+          },
+          {
+            "a": 1,
+            "multiplicity": 1,
+            "p": 12,
+            "q": 11
+          }
+        ],
+        "target": 11,
+        "total_hits": 2,
+        "volume_proxy": 3.3559322033898304,
+        "xi": "23/30"
+      },
+      {
+        "D": 72,
+        "K": 236,
+        "Q": 11,
+        "additive_energy": 53,
+        "cycle125_threshold": 1.5410492311201645,
+        "longest_popular_chain": 1,
+        "max_ray_multiplicity": 1,
+        "mode_cap": 7,
+        "multi_label_modes": 0,
+        "nonconvergent_rays": 0,
+        "occupied_modes": 5,
+        "popular_difference": 3,
+        "popular_difference_edges": 2,
+        "radius": 4,
+        "ray_count": 5,
+        "rays_above_cycle125_threshold": 0,
+        "representative_rays": [
+          {
+            "a": -5,
+            "multiplicity": 1,
+            "p": 11,
+            "q": 17
+          },
+          {
+            "a": -4,
+            "multiplicity": 1,
+            "p": 12,
+            "q": 17
+          },
+          {
+            "a": -1,
+            "multiplicity": 1,
+            "p": 11,
+            "q": 12
+          },
+          {
+            "a": 1,
+            "multiplicity": 1,
+            "p": 12,
+            "q": 11
+          },
+          {
+            "a": 4,
+            "multiplicity": 1,
+            "p": 17,
+            "q": 12
+          }
+        ],
+        "target": 11,
+        "total_hits": 5,
+        "volume_proxy": 13.423728813559322,
+        "xi": "23/30"
+      },
+      {
+        "D": 108,
+        "K": 148,
+        "Q": 13,
+        "additive_energy": 6,
+        "cycle125_threshold": 1.9628724765926147,
+        "longest_popular_chain": 1,
+        "max_ray_multiplicity": 1,
+        "mode_cap": 11,
+        "multi_label_modes": 0,
+        "nonconvergent_rays": 0,
+        "occupied_modes": 2,
+        "popular_difference": 6,
+        "popular_difference_edges": 1,
+        "radius": 1,
+        "ray_count": 2,
+        "rays_above_cycle125_threshold": 0,
+        "representative_rays": [
+          {
+            "a": -3,
+            "multiplicity": 1,
+            "p": 21,
+            "q": 25
+          },
+          {
+            "a": 3,
+            "multiplicity": 1,
+            "p": 25,
+            "q": 21
+          }
+        ],
+        "target": 13,
+        "total_hits": 2,
+        "volume_proxy": 9.486486486486486,
+        "xi": "16/25"
+      },
+      {
+        "D": 108,
+        "K": 148,
+        "Q": 13,
+        "additive_energy": 389,
+        "cycle125_threshold": 1.9628724765926147,
+        "longest_popular_chain": 3,
+        "max_ray_multiplicity": 1,
+        "mode_cap": 11,
+        "multi_label_modes": 0,
+        "nonconvergent_rays": 0,
+        "occupied_modes": 9,
+        "popular_difference": 1,
+        "popular_difference_edges": 6,
+        "radius": 4,
+        "ray_count": 9,
+        "rays_above_cycle125_threshold": 0,
+        "representative_rays": [
+          {
+            "a": -7,
+            "multiplicity": 1,
+            "p": 2,
+            "q": 3
+          },
+          {
+            "a": -4,
+            "multiplicity": 1,
+            "p": 19,
+            "q": 24
+          },
+          {
+            "a": -3,
+            "multiplicity": 1,
+            "p": 21,
+            "q": 25
+          },
+          {
+            "a": -2,
+            "multiplicity": 1,
+            "p": 8,
+            "q": 9
+          },
+          {
+            "a": -1,
+            "multiplicity": 1,
+            "p": 17,
+            "q": 18
+          },
+          {
+            "a": 1,
+            "multiplicity": 1,
+            "p": 18,
+            "q": 17
+          },
+          {
+            "a": 2,
+            "multiplicity": 1,
+            "p": 9,
+            "q": 8
+          },
+          {
+            "a": 3,
+            "multiplicity": 1,
+            "p": 25,
+            "q": 21
+          },
+          {
+            "a": 4,
+            "multiplicity": 1,
+            "p": 24,
+            "q": 19
+          }
+        ],
+        "target": 13,
+        "total_hits": 9,
+        "volume_proxy": 37.945945945945944,
+        "xi": "16/25"
+      },
+      {
+        "D": 108,
+        "K": 236,
+        "Q": 13,
+        "additive_energy": 1,
+        "cycle125_threshold": 1.746745018956159,
+        "longest_popular_chain": 0,
+        "max_ray_multiplicity": 1,
+        "mode_cap": 11,
+        "multi_label_modes": 0,
+        "nonconvergent_rays": 0,
+        "occupied_modes": 1,
+        "popular_difference": 0,
+        "popular_difference_edges": 0,
+        "radius": 1,
+        "ray_count": 1,
+        "rays_above_cycle125_threshold": 0,
+        "representative_rays": [
+          {
+            "a": -3,
+            "multiplicity": 1,
+            "p": 21,
+            "q": 25
+          }
+        ],
+        "target": 13,
+        "total_hits": 1,
+        "volume_proxy": 5.9491525423728815,
+        "xi": "7/10"
+      },
+      {
+        "D": 108,
+        "K": 236,
+        "Q": 13,
+        "additive_energy": 6,
+        "cycle125_threshold": 1.746745018956159,
+        "longest_popular_chain": 1,
+        "max_ray_multiplicity": 1,
+        "mode_cap": 11,
+        "multi_label_modes": 0,
+        "nonconvergent_rays": 0,
+        "occupied_modes": 2,
+        "popular_difference": 6,
+        "popular_difference_edges": 1,
+        "radius": 4,
+        "ray_count": 2,
+        "rays_above_cycle125_threshold": 0,
+        "representative_rays": [
+          {
+            "a": -3,
+            "multiplicity": 1,
+            "p": 21,
+            "q": 25
+          },
+          {
+            "a": 3,
+            "multiplicity": 1,
+            "p": 25,
+            "q": 21
+          }
+        ],
+        "target": 13,
+        "total_hits": 2,
+        "volume_proxy": 23.796610169491526,
+        "xi": "7/10"
+      },
+      {
+        "D": 108,
+        "K": 397,
+        "Q": 13,
+        "additive_energy": 0,
+        "cycle125_threshold": 1.5337687592290232,
+        "longest_popular_chain": 0,
+        "max_ray_multiplicity": 0,
+        "mode_cap": 11,
+        "multi_label_modes": 0,
+        "nonconvergent_rays": 0,
+        "occupied_modes": 0,
+        "popular_difference": 0,
+        "popular_difference_edges": 0,
+        "radius": 1,
+        "ray_count": 0,
+        "rays_above_cycle125_threshold": 0,
+        "representative_rays": [],
+        "target": 13,
+        "total_hits": 0,
+        "volume_proxy": 3.536523929471033,
+        "xi": "23/30"
+      },
+      {
+        "D": 108,
+        "K": 397,
+        "Q": 13,
+        "additive_energy": 6,
+        "cycle125_threshold": 1.5337687592290232,
+        "longest_popular_chain": 1,
+        "max_ray_multiplicity": 1,
+        "mode_cap": 11,
+        "multi_label_modes": 0,
+        "nonconvergent_rays": 0,
+        "occupied_modes": 2,
+        "popular_difference": 6,
+        "popular_difference_edges": 1,
+        "radius": 4,
+        "ray_count": 2,
+        "rays_above_cycle125_threshold": 0,
+        "representative_rays": [
+          {
+            "a": -3,
+            "multiplicity": 1,
+            "p": 21,
+            "q": 25
+          },
+          {
+            "a": 3,
+            "multiplicity": 1,
+            "p": 25,
+            "q": 21
+          }
+        ],
+        "target": 13,
+        "total_hits": 2,
+        "volume_proxy": 14.146095717884132,
+        "xi": "23/30"
+      },
+      {
+        "D": 162,
+        "K": 227,
+        "Q": 17,
+        "additive_energy": 36,
+        "cycle125_threshold": 2.1569010741917274,
+        "longest_popular_chain": 1,
+        "max_ray_multiplicity": 1,
+        "mode_cap": 17,
+        "multi_label_modes": 0,
+        "nonconvergent_rays": 0,
+        "occupied_modes": 4,
+        "popular_difference": 2,
+        "popular_difference_edges": 2,
+        "radius": 1,
+        "ray_count": 4,
+        "rays_above_cycle125_threshold": 0,
+        "representative_rays": [
+          {
+            "a": -10,
+            "multiplicity": 1,
+            "p": 19,
+            "q": 28
+          },
+          {
+            "a": -8,
+            "multiplicity": 1,
+            "p": 11,
+            "q": 15
+          },
+          {
+            "a": 8,
+            "multiplicity": 1,
+            "p": 15,
+            "q": 11
+          },
+          {
+            "a": 10,
+            "multiplicity": 1,
+            "p": 28,
+            "q": 19
+          }
+        ],
+        "target": 17,
+        "total_hits": 4,
+        "volume_proxy": 12.13215859030837,
+        "xi": "16/25"
+      },
+      {
+        "D": 162,
+        "K": 227,
+        "Q": 17,
+        "additive_energy": 354,
+        "cycle125_threshold": 2.1569010741917274,
+        "longest_popular_chain": 2,
+        "max_ray_multiplicity": 1,
+        "mode_cap": 17,
+        "multi_label_modes": 0,
+        "nonconvergent_rays": 0,
+        "occupied_modes": 10,
+        "popular_difference": 2,
+        "popular_difference_edges": 4,
+        "radius": 4,
+        "ray_count": 10,
+        "rays_above_cycle125_threshold": 0,
+        "representative_rays": [
+          {
+            "a": -14,
+            "multiplicity": 1,
+            "p": 18,
+            "q": 31
+          },
+          {
+            "a": -10,
+            "multiplicity": 1,
+            "p": 19,
+            "q": 28
+          },
+          {
+            "a": -8,
+            "multiplicity": 1,
+            "p": 11,
+            "q": 15
+          },
+          {
+            "a": -6,
+            "multiplicity": 1,
+            "p": 19,
+            "q": 24
+          },
+          {
+            "a": -2,
+            "multiplicity": 1,
+            "p": 25,
+            "q": 27
+          },
+          {
+            "a": -1,
+            "multiplicity": 1,
+            "p": 25,
+            "q": 26
+          },
+          {
+            "a": 1,
+            "multiplicity": 1,
+            "p": 26,
+            "q": 25
+          },
+          {
+            "a": 2,
+            "multiplicity": 1,
+            "p": 27,
+            "q": 25
+          },
+          {
+            "a": 8,
+            "multiplicity": 1,
+            "p": 15,
+            "q": 11
+          },
+          {
+            "a": 10,
+            "multiplicity": 1,
+            "p": 28,
+            "q": 19
+          }
+        ],
+        "target": 17,
+        "total_hits": 10,
+        "volume_proxy": 48.52863436123348,
+        "xi": "16/25"
+      },
+      {
+        "D": 162,
+        "K": 378,
+        "Q": 17,
+        "additive_energy": 6,
+        "cycle125_threshold": 1.8987323117250257,
+        "longest_popular_chain": 1,
+        "max_ray_multiplicity": 1,
+        "mode_cap": 17,
+        "multi_label_modes": 0,
+        "nonconvergent_rays": 0,
+        "occupied_modes": 2,
+        "popular_difference": 20,
+        "popular_difference_edges": 1,
+        "radius": 1,
+        "ray_count": 2,
+        "rays_above_cycle125_threshold": 0,
+        "representative_rays": [
+          {
+            "a": -10,
+            "multiplicity": 1,
+            "p": 19,
+            "q": 28
+          },
+          {
+            "a": 10,
+            "multiplicity": 1,
+            "p": 28,
+            "q": 19
+          }
+        ],
+        "target": 17,
+        "total_hits": 2,
+        "volume_proxy": 7.285714285714286,
+        "xi": "7/10"
+      },
+      {
+        "D": 162,
+        "K": 378,
+        "Q": 17,
+        "additive_energy": 36,
+        "cycle125_threshold": 1.8987323117250257,
+        "longest_popular_chain": 1,
+        "max_ray_multiplicity": 1,
+        "mode_cap": 17,
+        "multi_label_modes": 0,
+        "nonconvergent_rays": 0,
+        "occupied_modes": 4,
+        "popular_difference": 2,
+        "popular_difference_edges": 2,
+        "radius": 4,
+        "ray_count": 4,
+        "rays_above_cycle125_threshold": 0,
+        "representative_rays": [
+          {
+            "a": -10,
+            "multiplicity": 1,
+            "p": 19,
+            "q": 28
+          },
+          {
+            "a": -8,
+            "multiplicity": 1,
+            "p": 11,
+            "q": 15
+          },
+          {
+            "a": 8,
+            "multiplicity": 1,
+            "p": 15,
+            "q": 11
+          },
+          {
+            "a": 10,
+            "multiplicity": 1,
+            "p": 28,
+            "q": 19
+          }
+        ],
+        "target": 17,
+        "total_hits": 4,
+        "volume_proxy": 29.142857142857142,
+        "xi": "7/10"
+      },
+      {
+        "D": 162,
+        "K": 666,
+        "Q": 17,
+        "additive_energy": 0,
+        "cycle125_threshold": 1.6480414624213782,
+        "longest_popular_chain": 0,
+        "max_ray_multiplicity": 0,
+        "mode_cap": 17,
+        "multi_label_modes": 0,
+        "nonconvergent_rays": 0,
+        "occupied_modes": 0,
+        "popular_difference": 0,
+        "popular_difference_edges": 0,
+        "radius": 1,
+        "ray_count": 0,
+        "rays_above_cycle125_threshold": 0,
+        "representative_rays": [],
+        "target": 17,
+        "total_hits": 0,
+        "volume_proxy": 4.135135135135135,
+        "xi": "23/30"
+      },
+      {
+        "D": 162,
+        "K": 666,
+        "Q": 17,
+        "additive_energy": 36,
+        "cycle125_threshold": 1.6480414624213782,
+        "longest_popular_chain": 1,
+        "max_ray_multiplicity": 1,
+        "mode_cap": 17,
+        "multi_label_modes": 0,
+        "nonconvergent_rays": 0,
+        "occupied_modes": 4,
+        "popular_difference": 2,
+        "popular_difference_edges": 2,
+        "radius": 4,
+        "ray_count": 4,
+        "rays_above_cycle125_threshold": 0,
+        "representative_rays": [
+          {
+            "a": -10,
+            "multiplicity": 1,
+            "p": 19,
+            "q": 28
+          },
+          {
+            "a": -8,
+            "multiplicity": 1,
+            "p": 11,
+            "q": 15
+          },
+          {
+            "a": 8,
+            "multiplicity": 1,
+            "p": 15,
+            "q": 11
+          },
+          {
+            "a": 10,
+            "multiplicity": 1,
+            "p": 28,
+            "q": 19
+          }
+        ],
+        "target": 17,
+        "total_hits": 4,
+        "volume_proxy": 16.54054054054054,
+        "xi": "23/30"
+      }
+    ]
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "prove a convergent-minor-arc count with the Freiman compiler as the structured high-multiplicity output"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_128_sampled_mellin_profiler_v1.py --check",
+    "discovery_command": "python3 discovery/run_cycle_128_sampled_mellin_profiler_v1.py",
+    "test_command": "python3 -m unittest tests/test_cycle_128_sampled_mellin_profiler_v1.py tests/test_cycle_seal_v1.py"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_128_sampled_mellin_profiler_v1.py",
+    "sha256": "915ff0ba9b5181f3a6248bd15f3dd9ba1b8ede6164144e6818f36c22ce0e7512"
+  },
+  "status": "SEALED_DISCOVERY_MELLIN_ALIASES_PRIMITIVE_CONVERGENT_MINOR_MAJOR_SPLIT_OPEN"
+}

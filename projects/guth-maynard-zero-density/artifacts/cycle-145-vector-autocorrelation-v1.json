@@ -1,0 +1,71 @@
+{
+  "artifact_id": "cycle-145-vector-autocorrelation-v1",
+  "claim_boundary": "This artifact proves an exact vector-valued Taylor compiler and the complete-difference autocorrelation identity. It proves no saving for the selected arithmetic mask, paired norm, endpoint, complete moment, density, or intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/vector_autocorrelation_v1.py",
+      "sha256": "7f510a3029cd922728df835ce9d3c9fe30ff2d5ef87cad7ae2b8eb72bcb6b6da"
+    },
+    "cycle144": {
+      "path": "artifacts/cycle-144-actual-edge-coefficient-v1.json",
+      "sha256": "c8260b7152a02b9d2b61ee1f60340b79c4eea40542311c64057af88c7a5ebf3c"
+    },
+    "document": {
+      "path": "docs/cycle-145-vector-autocorrelation-v1.md",
+      "sha256": "911c4d7b5144ff234a8a154cba941470a940ba22d74020df28c9619186ad0acc"
+    },
+    "preregistration": {
+      "path": "docs/cycle-145-vector-autocorrelation-preregistration-v1.md",
+      "sha256": "3773ba1a82e607bb64bfb8cf939a8f9bb630e04e79672a48e722b7c68cdf84bd"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_145_vector_autocorrelation_v1.py",
+      "sha256": "b58b064f501c76fb5aac9e9913c9816fd1dcb85d0c6cdf17c3362ac8df38b654"
+    }
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "bound the vector-valued selected autocorrelation for the actual continued-fraction/tail mask, or factor that mask as a controlled Gram kernel"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_145_vector_autocorrelation_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_145_vector_autocorrelation_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_145_vector_autocorrelation_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_145_vector_autocorrelation_v1.py",
+    "sha256": "a386c7fe79ccb9d5cb4de2143ebf9bcbef679a169ffb471fdcb7abca5d715918"
+  },
+  "status": "SEALED_ARITHMETIC_SELECTION_MASK_AUTOCORRELATION_OPEN",
+  "vector_autocorrelation_theorem": {
+    "boundary": "the compiler is exact but supplies no bound for the selected autocorrelation, paired norm, endpoint, complete moment, density, or intervals",
+    "epistemic_status": "PROVED",
+    "fixed_phase_adverse_chart": "on any edge block where c_a has one common phase and nonnegative magnitude, every unweighted selected zeroth product is nonnegative; smooth local amplitude alone cannot supply cancellation there",
+    "next_gate": "prove cancellation or a Gram factorization for the actual arithmetic selection mask in the vector-valued zeroth autocorrelation; otherwise retain the resulting fixed-phase selected block as inverse data",
+    "selection_mask": "the arithmetic inverse replaces the complete autocorrelation by a selected one sum_a chi_(a,d,ell)c_(a+d)(ell)conjugate(c_a(ell)); the positive-definite identity survives only if the mask has a separately proved Gram or convolution factorization",
+    "taylor_compiler": "if |x_e|<=B, |ell|<=L, and z=2pi|kappa|LB, then for every R>=1, ||F||_2 is at most sum_(m<R)(2pi|kappa|)^m/m! ||D^m M_m||_2 plus exp(z)z^R/R! times ||(sum_e|C_e(ell)|)_ell||_2",
+    "vector_moments": "for C_e(ell), define M_m(ell)=sum_e C_e(ell)x_e^m; the frequency multiplier D^m acts as (D^m M_m)(ell)=ell^m M_m(ell)",
+    "zeroth_autocorrelation": "for a complete difference-d class, M_0(d;ell)=sum_a c_(a+d)(ell)conjugate(c_a(ell)); its Fourier series in d is |sum_a c_a(ell)e(-a theta)|^2 and is therefore nonnegative"
+  }
+}

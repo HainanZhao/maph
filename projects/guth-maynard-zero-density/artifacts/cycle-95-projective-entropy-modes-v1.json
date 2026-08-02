@@ -1,0 +1,84 @@
+{
+  "artifact_id": "cycle-95-projective-entropy-modes-v1",
+  "claim_boundary": "This artifact proves the exact projective entropy mode classification using Gelfond-Schneider. It proves no quantitative near-mode lower bound, alias estimate, moment theorem, density gain, or interval gain.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_classification": {
+    "epistemic_status": "PROVED",
+    "statement": "The Laurent stationary equation has a solution exactly only for u=v=0 and p0(n-n')=q0m."
+  },
+  "exact_replay": {
+    "exact_mode_classification": "exact stationarity iff u=v=0 and p0*(n-n')=q0*m",
+    "exponentiated_relation": "c0*n-c0*n'*g^u-m*g^(u+v)=0",
+    "g": "g=exp(2*pi/D)",
+    "gate": "exact noncentral stationary modes excluded; quantitative near-modes open",
+    "integer_laurent_relation": "p0*n-p0*n'*g^u-q0*m*g^(u+v)=0",
+    "noncentral_boundary": "qualitative transcendence gives no uniform lower bound for near-zero Laurent trinomials as D grows",
+    "poisson_phase": "c*F-u*h-v*Delta, c=D/(2*pi)",
+    "stationary_derivatives": "F_h=2*pi*u/D, F_Delta=2*pi*v/D",
+    "transcendence": "Gelfond-Schneider with (-1)^(-2i/D) proves g transcendental"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/projective_entropy_modes_v1.py",
+      "sha256": "5af2f8787333270a03fa2cef6292c1b083fb8b3b560700e77990057f4fc52bfb"
+    },
+    "cycle94": {
+      "path": "artifacts/cycle-94-triple-b-entropy-v1.json",
+      "sha256": "9b6fc5021af3622821729f72966fcb15a4c9b74d0ef668d14ccc6f32349266a5"
+    },
+    "discovery_candidate": {
+      "path": "discovery/cycle-95-projective-mode-candidate-v1.md",
+      "sha256": "678a753e14c8f6960d27cbdfc53ff1f7731dd083e131fc7d71ed9f9dbf00e82c"
+    },
+    "document": {
+      "path": "docs/cycle-95-projective-entropy-modes-v1.md",
+      "sha256": "b59e02901ec20fabed2a75add7134314e0cbf9e9fd0b4907b6a8c689d9717b8d"
+    },
+    "preregistration": {
+      "path": "docs/cycle-95-projective-mode-preregistration-v1.md",
+      "sha256": "d7cd4fa07e1e2a67769a7f3b0a661548a18daf5a1a1c7b86f4f72f0bf7655417"
+    },
+    "source_ledger": {
+      "path": "docs/cycle-95-gelfond-schneider-source-v1.md",
+      "sha256": "de9a7a5e0b42a105e63f1c4ba09f9c9bd728af23df84b6cdc8ec51ba74ece142"
+    },
+    "tests": {
+      "path": "tests/test_cycle_95_projective_entropy_modes_v1.py",
+      "sha256": "71c80e4074bd5de640089968f84e6bd660578781696cd2b170553a5d63b23757"
+    }
+  },
+  "prior_context": {
+    "cycle94_role": "supply the entropy phase and its Poisson-mode stationary derivatives",
+    "epistemic_status": "PROVED"
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Obtain a uniform lower bound or inverse theorem for near-zero noncentral Laurent trinomials as D and the modes grow."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_95_projective_entropy_modes_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_95_projective_entropy_modes_v1.py",
+    "write_command": "python3 proof/build_cycle_95_projective_entropy_modes_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_95_projective_entropy_modes_v1.py",
+    "sha256": "13f878a5282607352bef273951c4c4a714837fa32a17886fffa20e656dbca049"
+  },
+  "status": "SEALED_EXACT_ALIASES_CENTRAL_NEAR_PROJECTIVE_MODES_QUANTITATIVE_OPEN",
+  "transcendence_input": {
+    "epistemic_status": "PROVED",
+    "statement": "Gelfond-Schneider applied to (-1)^(-2i/D) proves exp(2pi/D) transcendental for every positive integer D."
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "artifact_id": "cycle-147-strict-core-signed-cell-v1",
+  "claim_boundary": "This artifact proves a positive real lower bound for a scoped strict-core signed cell under a nonnegative dyadic cutoff and a fixed coefficient-phase chart. It does not prove that the cell has target-sized mass and proves no paired norm, endpoint, complete moment, density, or intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/strict_core_signed_cell_v1.py",
+      "sha256": "209b31e881f260aae039276608a7bc58637782998c11b0da524ee78799c0ea13"
+    },
+    "cycle123": {
+      "path": "artifacts/cycle-123-joint-radial-alias-v1.json",
+      "sha256": "e700c21a422413abb6f35882d8d5a67b4ae4095b23c157da6397417b08f4da79"
+    },
+    "cycle146": {
+      "path": "artifacts/cycle-146-balanced-highpass-mask-v1.json",
+      "sha256": "f78ab979c956af5932e5998d635d0844156fa9158169bb4294f453bd6f8f6d28"
+    },
+    "document": {
+      "path": "docs/cycle-147-strict-core-signed-cell-v1.md",
+      "sha256": "687bc417d1e3b7145c38a1f44ce71d489a864fa4d00605ea201c79176df029c2"
+    },
+    "preregistration": {
+      "path": "docs/cycle-147-strict-core-signed-cell-preregistration-v1.md",
+      "sha256": "ba444a6577d0f4c4e7660d16de89495f54a7ba48e884ea55160c154d00b18ebe"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_147_strict_core_signed_cell_v1.py",
+      "sha256": "312087d0aa26156ed8043708da0ac55d08f68267d767feb273646bb83271fe26"
+    }
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "construct coefficient-faithful balanced core--halo bundles and prove a signed bundle estimate or a target-mass obstruction"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_147_strict_core_signed_cell_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_147_strict_core_signed_cell_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_147_strict_core_signed_cell_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_147_strict_core_signed_cell_v1.py",
+    "sha256": "600fdf02f96fa3d8428e1e82d9c18ef62e458782055fbfabcab475b15aa04c4b"
+  },
+  "status": "SEALED_COEFFICIENT_FAITHFUL_CORE_HALO_BUNDLE_OPEN",
+  "strict_core_signed_cell_theorem": {
+    "actual_chart_scope": "Cycle 123's leading smooth coefficient has one explicit common phase and positive algebraic/Jacobian factors; a real nonzero interior symbol admits such a fixed-phase subchart, but its share of the full operator is not bounded below here",
+    "boundary": "this is a scoped adverse signed-cell estimate; no paired norm, endpoint, complete moment, density, or intervals is proved",
+    "epistemic_status": "PROVED",
+    "mass_boundary": "no theorem here says that a fixed-phase strict core carries a target-sized fraction of the original excessive quadratic form",
+    "negative_halo_gap": "for exact common-phase coefficients, Re e(kt)>=0 throughout ||t||<=1/(4bK); any negative contribution capable of cancelling the strict core must therefore use a residual outside that wider collar",
+    "next_gate": "construct balanced core--halo bundles using the exact periodic kernel and prove either a bundle estimate or a target-mass inverse",
+    "phase_wedge": "if atom coefficients lie within phase phi of one common ray, each oriented correlation product has phase at most 2phi; for phi<=pi/12 the real signed core is at least one half of frequency weight times the total pair-magnitude mass",
+    "single_cell_obstruction": "an isolated strict endpoint core cannot obtain cancellation from the high-pass frequency sum; Cycle 146's signed cells must be grouped with coefficient-faithful halo cells before an upper estimate is attempted",
+    "strict_core": "for a nonnegative dyadic cutoff supported on 0<k<=bK and circle residual ||t_e||<=1/(12bK), every Fourier phase has absolute argument at most pi/6"
+  }
+}

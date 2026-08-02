@@ -1,0 +1,76 @@
+{
+  "artifact_id": "cycle-93-nonstationary-mellin-branch-v1",
+  "claim_boundary": "This artifact proves arbitrary power decay only on the strict buffered sub-alias branch. The transition, stationary aliases, equal-height analytic bound, full moment, density gain, and interval gain remain open.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "full_branch": "for every B, O_B(X^-B) after all polynomial support sums",
+    "gate": "strict sub-alias branch closed; transition and integer aliases open",
+    "kernel_decay": "for every A, O_A(K*D^-A)",
+    "m_nonzero_derivative": "t/x-m*K with magnitude >> (1+|m|)K",
+    "m_zero_derivative": "t/x with |t|>=D/(2*pi)",
+    "minimum_mellin_frequency_exponent": "3/5",
+    "open_transition": "|Delta h|~K/D and every nonzero stationary alias remain open",
+    "phase_after_rescaling": "t*log(K*x)-m*K*x",
+    "strict_branch": "0<|Delta h|<=c_*K/D with fixed stationary buffer"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/nonstationary_mellin_branch_v1.py",
+      "sha256": "f306904bb79b2256a8a16af47d0a6e861d9776d8f12bbd3b34a8bc5266528d30"
+    },
+    "cycle87": {
+      "path": "artifacts/cycle-87-mellin-alias-atlas-v1.json",
+      "sha256": "68b88ccd4ce3e5371906e3b0da3c254056b79bad9504880ebbff04b9cebce8ca"
+    },
+    "discovery_candidate": {
+      "path": "discovery/cycle-93-nonstationary-branch-candidate-v1.md",
+      "sha256": "bb6a2c7e26981edf1b68ba00a4bee10dad10f48bf8fdd3e40fa107ec2e17ec8e"
+    },
+    "document": {
+      "path": "docs/cycle-93-nonstationary-mellin-branch-v1.md",
+      "sha256": "26e906cbe3b8350355c6fb20bf561c17f52179fcb9e694f8bfb641cc3fb7b887"
+    },
+    "preregistration": {
+      "path": "docs/cycle-93-nonstationary-branch-preregistration-v1.md",
+      "sha256": "b121c55f2fe4da8b840f8658f8dd75298a4f39a5d9f2abb2324b979f31a073a1"
+    },
+    "tests": {
+      "path": "tests/test_cycle_93_nonstationary_mellin_branch_v1.py",
+      "sha256": "3f0f425934871ff5c08ad44aff4f9f758005332e9b3448837c420b5ba956ac12"
+    }
+  },
+  "nonstationary_closure": {
+    "epistemic_status": "PROVED",
+    "statement": "For every fixed B, the complete strict branch 0<|Delta h|<=c_*K/D contributes O_B(X^-B) after all support sums."
+  },
+  "prior_context": {
+    "cycle87_role": "supply the sub-alias height range and crossed Mellin phase",
+    "epistemic_status": "PROVED"
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Handle the transition |Delta h|~K/D and all stationary integer aliases, while routing equal-height excess through the Cycle-92 ray web."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_93_nonstationary_mellin_branch_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_93_nonstationary_mellin_branch_v1.py",
+    "write_command": "python3 proof/build_cycle_93_nonstationary_mellin_branch_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_93_nonstationary_mellin_branch_v1.py",
+    "sha256": "ba9968ad53b3839d7d2f41c3a474ff970dcaceb76b2bd35b3b0e42ed5f1a03b6"
+  },
+  "status": "SEALED_STRICT_SUB_ALIAS_POWER_NEGLIGIBLE_TRANSITION_AND_ALIASES_OPEN"
+}

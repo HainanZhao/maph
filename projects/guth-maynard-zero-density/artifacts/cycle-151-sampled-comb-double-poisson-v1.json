@@ -1,0 +1,80 @@
+{
+  "artifact_id": "cycle-151-sampled-comb-double-poisson-v1",
+  "claim_boundary": "This artifact proves the lcm resonance lattice and fixed-chart tail-transform formula for smooth halo denominators a fixed power below Q. It does not bound the gcd-weighted negative-lobe population or boundary denominators and proves no full moment, endpoint, density, or intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/sampled_comb_double_poisson_v1.py",
+      "sha256": "9fe253b4f9654025e23e0f38a641be6d67b18d17c54ff9a3f849252070ba17e5"
+    },
+    "cycle150": {
+      "path": "artifacts/cycle-150-divisor-comb-sign-test-v1.json",
+      "sha256": "1039725acb7e764e1d352a7506756f5c6b620b232bfddeaf6c0cb1b0e73f1269"
+    },
+    "document": {
+      "path": "docs/cycle-151-sampled-comb-double-poisson-v1.md",
+      "sha256": "6dca9b595141bc4a47c8fbc7974fe18b8f28d1ec236194d42ef55896310d3e5c"
+    },
+    "preregistration": {
+      "path": "docs/cycle-151-sampled-comb-double-poisson-preregistration-v1.md",
+      "sha256": "684feff0d41e5c423991bcd8d211ff82098294362636aeb191dc12561166280f"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_151_sampled_comb_double_poisson_v1.py",
+      "sha256": "35e95a77518b724facc3f01fc416832cc44ba6016944d2d0dd18fb4dea460782"
+    }
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "bound the gcd-weighted population of endpoint tails in negative transform lobes and treat denominators within a fixed power of Q"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_151_sampled_comb_double_poisson_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_151_sampled_comb_double_poisson_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_151_sampled_comb_double_poisson_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sample_exponent_ledger": {
+    "epistemic_status": "PROVED",
+    "lcm": "7/20",
+    "per_mode_correlation": "61/60",
+    "relative_to_witness": "-3/20",
+    "resonance_exists_margin": "7/20"
+  },
+  "sampled_comb_double_poisson_theorem": {
+    "boundary": "the weighted gcd/negative-lobe population and boundary denominators are not bounded here; no full second moment, endpoint, density, or intervals is proved",
+    "boundary_denominator": "when h_b lies within a fixed power of Q, nonmultiple Poisson decay is not power-saving and the formula is not asserted",
+    "empty_lattice": "if lcm(h,h_b) exceeds the upper frequency support, no common rational resonance exists and the strict-denominator contribution is power-negligible",
+    "epistemic_status": "PROVED",
+    "gcd_capacity": "relative to the one-witness scale KQ^2/h, one halo mode has capacity gcd(h,h_b)/h_b; target negative mass therefore forces a weighted sum of these gcd ratios of order one",
+    "lcm_lattice": "on k=h ell, the rational phase of a reduced r_b/h_b is integral exactly when lcm(h,h_b) divides k; the lcm is hh_b/gcd(h,h_b)",
+    "negative_lobe": "positive mode weights can contribute negative correlation only when Re B(tau_b) is negative beyond the explicit O(L_b/K+1/Q) error; the strict tau neighborhood is positive by Cycle 147",
+    "nonresonant_removal": "for h_b<=QX^(-delta), every nonmultiple of h_b is power-negligible by the Cycle-148 exact Poisson estimate",
+    "structural_implication": "a smooth halo anti-aligner must simultaneously have lcm(h,h_b)<=K, large aggregate gcd capacity, and tail parameters in negative lobes",
+    "tail_transform": "if L_b=lcm(h,h_b)<=cK and tau_b=KQ epsilon_b is bounded, the sampled correlation equals KQ^2/L_b times the fixed transform B(tau_b)=int int U(x)V(y)e(tau_bxy)dxdy, up to relative O(L_b/K+1/Q) from smooth Riemann summation"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_151_sampled_comb_double_poisson_v1.py",
+    "sha256": "fc8a8dcbf58392b2ce4ed9e9346a0cb610c5f46be69e19652e71c3d36654e4c4"
+  },
+  "status": "SEALED_GCD_WEIGHTED_NEGATIVE_TAIL_LOBE_OR_BOUNDARY_OPEN"
+}

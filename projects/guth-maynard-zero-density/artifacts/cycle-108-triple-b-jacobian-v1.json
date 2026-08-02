@@ -1,0 +1,83 @@
+{
+  "artifact_id": "cycle-108-triple-b-jacobian-v1",
+  "claim_boundary": "This artifact proves scale invariance of the stationary points, the exact ell^(-3/2) triple-B Jacobian law, and absolute/BV summability of the leading scale ray. Arithmetic payload weights, non-invariant cutoffs, remainders, other cores, moments, density, and intervals remain open.",
+  "closed_leading_sector": {
+    "epistemic_status": "PROVED",
+    "statement": "the leading perfect-power scale sum is <=3 J0 sup|omega_ell| and loses no power under a subpower residual envelope"
+  },
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/triple_b_jacobian_v1.py",
+      "sha256": "33c5260601c3db8bb026d64985fcb37e8e699f46682d5201c6ea7446b0a9baac"
+    },
+    "cycle107": {
+      "path": "artifacts/cycle-107-actual-scale-phase-v1.json",
+      "sha256": "189d2515ac835f25b14ff060604317c0a5210050b0c4ec06be567935caf28319"
+    },
+    "discovery_candidate": {
+      "path": "discovery/cycle-108-triple-b-jacobian-candidate-v1.md",
+      "sha256": "aaa6db705e732adfab054b8875ebc1ecdc3afc569018f3bc548f9f39f1f908a2"
+    },
+    "document": {
+      "path": "docs/cycle-108-triple-b-jacobian-v1.md",
+      "sha256": "fbd72a1510b3fd8236e47c7d1e3489fe89d128c45412641edc8f5fe25026eea7"
+    },
+    "preregistration": {
+      "path": "docs/cycle-108-triple-b-jacobian-preregistration-v1.md",
+      "sha256": "823fefeeaf48012f6536f245f16d389b21deb57f5a5b81569f2066b0e2c0d00c"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_108_triple_b_jacobian_v1.py",
+      "sha256": "bc62c174c862a589809a5bae0e777ad338a5dc81194572831868ba569fcdd27c"
+    }
+  },
+  "jacobian_theorem": {
+    "absolute_sum": "sum_{ell<=L}ell^(-3/2)<3",
+    "boundary": "arithmetic payload weights, non-invariant cutoff factors, and nonleading B-process remainders are untraced",
+    "bv": "L^(-3/2)+sum_{ell<L}(ell^(-3/2)-(ell+1)^(-3/2))=1",
+    "epistemic_status": "PROVED",
+    "implication": "a subpower residual envelope removes the raw Lambda multiplicity from the leading term",
+    "jacobian": "J=c^(3/2)*sqrt(Delta*H*(H-Delta))/(m*n*n') and J_ell=ell^(-3/2)J0",
+    "stationary_points": "k*=c*c0*Delta/m, r*=c*H/n, r'*=c*(H-Delta)/n' are scale invariant",
+    "weighted": "sum|omega_ell*J_ell|<=3*J0*sup|omega_ell|"
+  },
+  "prior_context": {
+    "cycle107_role": "supply the actual scale ray and geometric stationary phase",
+    "epistemic_status": "PROVED"
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "trace and bound the actual arithmetic payload envelope and uniform stationary-phase remainders, then aggregate different cores"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_108_triple_b_jacobian_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_108_triple_b_jacobian_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_108_triple_b_jacobian_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_108_triple_b_jacobian_v1.py",
+    "sha256": "ececa237f6a367190e7262d8e36d5323230df8d9f4ced9fba9fcbb3974935f6e"
+  },
+  "status": "SEALED_LEADING_PERFECT_POWER_SCALE_SUMMABLE_PAYLOAD_REMAINDERS_OPEN"
+}

@@ -1,0 +1,85 @@
+{
+  "artifact_id": "cycle-136-common-multiplier-scalar-v1",
+  "claim_boundary": "This artifact proves the paired diagonal bound only away from one scalar exception and compiles exceptions to continued-fraction jumps only in the strict S>>N^3 region. It proves no averaged exclusion, full paired norm, endpoint, moment, density, or intervals.",
+  "common_multiplier_scalar_theorem": {
+    "boundary": "no averaged exclusion of exceptional r_d, full paired norm, endpoint, moment, density, or prime-interval theorem is proved",
+    "common_multiplier": "in the exact Cycle-133 region, the rectangle (a+d)+c=(c+d)+a gives x_{a+d}/x_a=x_{c+d}/x_c; hence one reduced rational r_d serves every edge of difference d",
+    "continued_fraction": "r_d has reduced denominator <<N^2; when S>>N^3 the exceptional bound satisfies Legendre with margin S^2/N^6, so r_d is a convergent of g^d",
+    "epistemic_status": "PROVED",
+    "jump": "the next convergent denominator is >>S^2/N^4 and the next partial quotient is >>S^2/N^6",
+    "large_sieve": "with kappa_d=NS(r_d-g^d), L=S/N, and distinct rational labels separated by >>N^{-2}, the paired second moment is <<(L+N^2/|kappa_d|)|E_d| up to X^epsilon",
+    "residual_factorization": "the paired residual factors exactly as x_{a+d}-g^d x_a=(r_d-g^d)x_a",
+    "scalar_dichotomy": "the diagonal target follows unless |kappa_d|<<N^3/S; an exceptional multiplier satisfies |r_d-g^d|<<N^2/S^2"
+  },
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/common_multiplier_scalar_v1.py",
+      "sha256": "f376f8c8e723fcd623a421bf7c03a6f30e21ffa2363d8b2195ef65d5f0cd71a6"
+    },
+    "cycle133": {
+      "path": "artifacts/cycle-133-determinant-cluster-energy-v1.json",
+      "sha256": "c837c041cc796ec2553a97074d66707ad6fb339bcc6530beddc242eb06d56427"
+    },
+    "cycle135": {
+      "path": "artifacts/cycle-135-tail-coupled-transition-v1.json",
+      "sha256": "fa5dcd292a3076e865ffaf7b40f7bef595b803688c37bcc6df7d65be83a76464"
+    },
+    "document": {
+      "path": "docs/cycle-136-common-multiplier-scalar-v1.md",
+      "sha256": "baf74ed31cac4cfe9123d41e40344246ba27388c7cfc6c0df920872c4c27830f"
+    },
+    "preregistration": {
+      "path": "docs/cycle-136-common-multiplier-preregistration-v1.md",
+      "sha256": "53b29de2ed32b30758fa286ca1cc796cbdec142e252fe81cee7c2da9828baa70"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_136_common_multiplier_scalar_v1.py",
+      "sha256": "d75ff1e0b4b32602786079946c9d2be0c758bb94176f276da38717fb2e6a1aac"
+    }
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "average the exceptional convergent jumps of g^d over popular differences d, retaining r_d and the original phase anchor"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_136_common_multiplier_scalar_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_136_common_multiplier_scalar_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_136_common_multiplier_scalar_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sample_strict_ledger": {
+    "epistemic_status": "PROVED",
+    "legendre_margin": "1/10",
+    "mu": "0",
+    "next_denominator_floor": "1/2",
+    "next_partial_quotient_floor": "1/10",
+    "rho": "1/5",
+    "tau": "13/20",
+    "xi": "7/10"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_136_common_multiplier_scalar_v1.py",
+    "sha256": "0f12ce1d922b1e483c40cdbb48e5eebff8c1934e6074c427fb037b7008b9861b"
+  },
+  "status": "SEALED_PAIRED_NORM_SCALAR_DICHOTOMY_EXCEPTIONAL_MULTIPLIER_AVERAGE_OPEN"
+}

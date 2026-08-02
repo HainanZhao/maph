@@ -1,0 +1,85 @@
+{
+  "artifact_id": "cycle-140-fiber-saturation-inverse-v1",
+  "claim_boundary": "This artifact closes sufficiently large height slack and extracts a divisor-class seed from survivors. It does not force subpower slack and proves no recurrence, full paired norm, endpoint, moment, density, or prime intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "fiber_saturation_theorem": {
+    "amplified_jump": "a survivor has Legendre margin 2tau+2j+2zeta-6rho, next denominator exponent 2tau-4rho+j+zeta, and next partial quotient exponent 2tau-6rho+2j+2zeta",
+    "boundary": "no theorem forces zeta=o(1) in every survivor, and no recurrence, full paired norm, endpoint, moment, density, or prime intervals is proved",
+    "closure_threshold": "the block closes if zeta exceeds both 2rho-1/3+mu and 3rho-tau+mu-1/30",
+    "divisor_seed": "one class u|A, v|B with uv~H carries J X^{-epsilon} edges; there p=v*p0, q=u*q0 and the paired reduced labels are v*p0/(u*q0) and (A/u)*p0/((B/v)*q0), with signed tails retained",
+    "epistemic_status": "PROVED",
+    "near_saturation": "when zeta=o(1), that divisor class occupies an X^{-o(1)} fraction of its capacity JZ and is a genuine fiber-saturation seed",
+    "slack_parameter": "write the actual multiplier height as H=N^2/(JZ), Z=X^zeta>=1",
+    "weighted_count": "the exceptional weighted discretization and volume exponents are 4rho-2zeta and 3/5+6rho-2tau-2zeta"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/fiber_saturation_inverse_v1.py",
+      "sha256": "7ff444ecb2eb460a467e85b75df6e3de4ffd8ad1dfd10298ffab9274a53b780a"
+    },
+    "cycle138": {
+      "path": "artifacts/cycle-138-multiplier-fiber-height-v1.json",
+      "sha256": "d1eacac468da23239faa829ec6fb509dbba083dafbd2855ee55b84f8174029a6"
+    },
+    "cycle139": {
+      "path": "artifacts/cycle-139-multiplier-curvature-v1.json",
+      "sha256": "7f78a648ef0126918ab4487c9947d84fc04c51bdd7fe459d9b04ef7ab55776ca"
+    },
+    "document": {
+      "path": "docs/cycle-140-fiber-saturation-inverse-v1.md",
+      "sha256": "940110fbb61981ce42cb0d665c492359c6a43f3d776c15d98a69709cbd818a7d"
+    },
+    "preregistration": {
+      "path": "docs/cycle-140-fiber-saturation-preregistration-v1.md",
+      "sha256": "1562d3dbe9eec857ffc4b51de30e4a8ae359d0c02d7b13b5a2023c441103f61b"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_140_fiber_saturation_inverse_v1.py",
+      "sha256": "6d04e8d7aa30555eee3abe92454f97cb60387777e219407eea0abf8af2d7e87b"
+    }
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "couple the common divisor class and signed tails across popular differences to force a Cycle-126 recurrence seed"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_140_fiber_saturation_inverse_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_140_fiber_saturation_inverse_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_140_fiber_saturation_inverse_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sample_threshold_ledger": {
+    "edge": "1/20",
+    "epistemic_status": "PROVED",
+    "mu": "0",
+    "next_partial_quotient_floor": "19/30",
+    "rho": "1/5",
+    "slack_threshold": "1/15",
+    "tau": "4/5",
+    "xi": "16/25"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_140_fiber_saturation_inverse_v1.py",
+    "sha256": "a7d1b1406d1c83e8e33b005e7783c951e22aa49c376a83e6423f209f68f35442"
+  },
+  "status": "SEALED_HEIGHT_SLACK_CLOSED_DIVISOR_FIBER_SEED_RECURRENCE_OPEN"
+}

@@ -1,0 +1,102 @@
+{
+  "artifact_id": "cycle-98-gaudron-direct-ledger-v1",
+  "claim_boundary": "This artifact proves only that direct worst-case insertion into Gaudron Theorem 1.1 gives exp(-X^(12/5+o(1))), too weak for a power separation. It proves no saturation for sparse, averaged, low-degree, or critical-point methods and no moment, density, or interval theorem.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "direct_insertion": {
+    "cost": {
+      "coefficient_weight_exponent": "1/3",
+      "comparison": "DIRECT_WORST_CASE_GUARANTEE_TOO_WEAK_FOR_POWER_SEPARATION",
+      "costs": {
+        "auxiliary_integer_a0": "3/5",
+        "log_b_plus_a0": "3/5",
+        "squared_degree_height": "6/5"
+      },
+      "direct_lower_bound": "exp(-X^(12/5+o(1)))",
+      "field_degree_exponent": "3/5",
+      "gaudron_n": 2,
+      "gaudron_t": 1,
+      "mode_exponent": "3/5",
+      "negative_log_exponent": "12/5",
+      "required_lower_bound": "X^(-C)=exp(-C*log(X))",
+      "scope": "Gaudron Theorem 1.1 inserted with d<=4M and M<<D; no saturation claim for sparse or averaged refinements"
+    },
+    "epistemic_status": "PROVED",
+    "support": {
+      "dyadic_support": "all logarithm arguments lie in fixed compact subsets of (0,infinity)",
+      "field_degree": "[Q(i,alpha):Q]<=2deg(alpha)<=4M",
+      "mode_radius": "max(|u|,|u+v|)<<D=X^(3/5+o(1))",
+      "root_degree": "deg(alpha)<=2M",
+      "u_equation": "2*pi*u/D=log((h-Delta)*n/(h*n'))",
+      "v_equation": "2*pi*v/D=log(c0*Delta*n'/(m*(h-Delta)))"
+    }
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/gaudron_direct_ledger_v1.py",
+      "sha256": "ffb186bb2cfb23f97bef9a6d227b4a84a2b82330680186343c236b5b880ef3d4"
+    },
+    "cycle97": {
+      "path": "artifacts/cycle-97-projective-algebraic-root-v1.json",
+      "sha256": "5af4394e8a8f48b70cff4f1b32e9a213640df499f273f701bc0ffe5ffd0d2644"
+    },
+    "discovery_candidate": {
+      "path": "discovery/cycle-98-linear-form-ledger-candidate-v1.md",
+      "sha256": "7cd569fedf1640c38b785b9ec5f251624345c6f4c967ff52a47026591c294419"
+    },
+    "document": {
+      "path": "docs/cycle-98-gaudron-direct-ledger-v1.md",
+      "sha256": "b24e38304b4271e47a17fcad682cc5d58fff8055bd3bba58beca8c12caef39df"
+    },
+    "preregistration": {
+      "path": "docs/cycle-98-linear-form-ledger-preregistration-v1.md",
+      "sha256": "09b8e2b64768e1572c41f75517fcc05e4a922bc5d176026024e9e1d718ca8d5e"
+    },
+    "source_ledger": {
+      "path": "docs/cycle-98-gaudron-source-v1.md",
+      "sha256": "2fc5ff268d74bcc2e57736ec02bec696ceaada1a3ccd15dcbf084223b243fd47"
+    },
+    "tests": {
+      "path": "tests/test_cycle_98_gaudron_direct_ledger_v1.py",
+      "sha256": "acb73229cb08c2180a82231ad47b223dc68ae53e91a6fef769f95deb00afccac"
+    }
+  },
+  "prior_context": {
+    "cycle97_role": "supply algebraic roots, degree/height envelope, and linear-form target",
+    "epistemic_status": "PROVED"
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Build an averaged sparse-trinomial/critical-point counting theorem on actual support."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_98_gaudron_direct_ledger_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_98_gaudron_direct_ledger_v1.py",
+    "write_command": "python3 proof/build_cycle_98_gaudron_direct_ledger_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_98_gaudron_direct_ledger_v1.py",
+    "sha256": "d9d6adc0c9a2e2a3156754b4e3cd19e27fc3bae42161e324d3610a59877ffb9a"
+  },
+  "source_input": {
+    "epistemic_status": "PROVED",
+    "statement": "Gaudron arXiv:1004.3652, Theorem 1.1, specialized with n=2,t=1 and k=Q(i,alpha)."
+  },
+  "status": "SEALED_DIRECT_POINTWISE_TRANSCENDENCE_TOO_WEAK_SPARSE_AVERAGED_CRITICAL_OPEN",
+  "structural_no_go": {
+    "epistemic_status": "PROVED",
+    "implication": "retain sparse trinomial structure, average modes, or count critical relations",
+    "scope": "direct generic-degree pointwise use of Gaudron Theorem 1.1 only"
+  }
+}

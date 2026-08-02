@@ -1,0 +1,108 @@
+{
+  "artifact_id": "cycle-113-irrational-weighted-split-v1",
+  "claim_boundary": "This artifact proves subpower normalized split weight for every compact reduced label, including irrational large-degree cores. It corrects Cycle 112 by withholding its X^(3/5) aggregate: pointwise anchor absorption does not sum the support window.",
+  "correction": {
+    "affected_artifact": "cycle-112-full-triple-b-symbol-v1",
+    "epistemic_status": "PROVED",
+    "survives": "full-symbol identity, cutoff coordinates, and pointwise anchor absorption",
+    "withheld": "X^(3/5+o(1)) aggregate closure"
+  },
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "falsifier": {
+    "epistemic_status": "OBSERVED",
+    "maximum": 0.9868365652513905,
+    "proof_role": "none",
+    "rows": 522053,
+    "scaled_growth_witness": [
+      119,
+      44,
+      75,
+      0.7392321714655499
+    ],
+    "witness": [
+      7,
+      3,
+      4
+    ]
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/irrational_weighted_split_v1.py",
+      "sha256": "a9bf727f1a9006cb9142c77ac01bc8254eab85b56b5b6f3c80717ff9679fdb05"
+    },
+    "cycle104": {
+      "path": "artifacts/cycle-104-radical-alias-separation-v1.json",
+      "sha256": "be9acdb96e8d8708ccdc1625e273f9fd092ad505125b058f6162ceae0715ed5b"
+    },
+    "cycle112": {
+      "path": "artifacts/cycle-112-full-triple-b-symbol-v1.json",
+      "sha256": "e6f890eaae72a99c53dbd07cea7bd69d050f4df5c93d40e27245f71503f6954c"
+    },
+    "discovery_output": {
+      "path": "discovery/cycle-113-irrational-weighted-falsifier-v1.json",
+      "sha256": "f7a12782639cc6912bfbd9819f9b662a1c077ec524c47a8d1f8578209cbefdca"
+    },
+    "discovery_script": {
+      "path": "discovery/run_cycle_113_irrational_weighted_falsifier_v1.py",
+      "sha256": "1040dae8bbef6ba4a0f0568246295bdc07f091d612e5205a2b3749f9c795d8c1"
+    },
+    "document": {
+      "path": "docs/cycle-113-irrational-weighted-split-v1.md",
+      "sha256": "fd42559fbfb3f99ce5b10c0d2724c6273bf581e7ff1829323791341eac0a40db"
+    },
+    "preregistration": {
+      "path": "docs/cycle-113-irrational-weighted-preregistration-v1.md",
+      "sha256": "2e71a15c0e646035fae06b34312f6dcef8e3310938a9a8649f300f3e94598bac"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_113_irrational_weighted_split_v1.py",
+      "sha256": "0a251e87af1daf5110d74f81a9b204a4daa6fe65d91b18ac4c62482e3610f4d4"
+    }
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "bound the coupled anchor-scale-label tail, then weak and simple-root branches"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_113_irrational_weighted_split_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_113_irrational_weighted_split_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_113_irrational_weighted_split_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_113_irrational_weighted_split_v1.py",
+    "sha256": "bdd421bb88e4c313f8da61ad93f516edbae000bf38e379200b95727debfc2850"
+  },
+  "status": "SEALED_GENERAL_STRONG_SPLIT_SUBPOWER_ANCHOR_SCALE_AGGREGATE_OPEN",
+  "weighted_split_theorem": {
+    "aggregate": "the split entropy is subpower, but the coupled anchor-scale-label factor remains open",
+    "boundary": "anchor-scale aggregation, weak localization, simple roots, nonsmooth payload variants, the complete moment, density, and intervals remain open",
+    "compact_weight": "when N/R is in a fixed compact positive interval and Z=min(N,R), J is comparable to (xy)^(3/2)/(Z^(3/2)*sqrt(d*u*v))",
+    "correction": "Cycle 112's pointwise anchor absorption does not control this summed tail; its X^(3/5+o(1)) aggregate promotion is withheld",
+    "epistemic_status": "PROVED",
+    "large_height": "if Z>=d^(1/3), dyadically freeze u,v and exact divisors x|R,y|N; the congruence pair has at most 1+d/(xy) solutions and each divisor-pair cell is O_L(1)",
+    "product": "(K B0 C0)^d=(d*u*v)^d*N^(d+u)*R^(2d-u)/(x*y)^(3d)",
+    "scale_sum": "writing lambda=lambda_BC*ell and E for the first supported ell, absolute summation costs at most 3*p0*sqrt(q0)/(lambda_BC^(3/2)*sqrt(E)) times 1/sqrt(K B0 C0)",
+    "small_height": "if Z<=d^(1/3), x,y<=Z and the full split sum is O_L(Z^(3/2)/sqrt(d))=O_L(1)",
+    "split_sum": "sum over primitive u+v=d of (K B0 C0)^(-1/2) is (d*N*R)^o(1) uniformly on the compact ratio chart"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "artifact_id": "cycle-146-balanced-highpass-mask-v1",
+  "balanced_highpass_theorem": {
+    "balanced_real_part": "Re Psi_K has integral zero, so its positive and negative L1 masses are equal; any nonnegative replacement discards the compensating halo",
+    "boundary": "the signed partition is an exact interface only; no arithmetic cell bound, paired norm, endpoint, complete moment, density, or intervals is proved",
+    "coefficient_preservation": "define each q_C before absolute values using the original Fourier frequency, oriented product c_j' conjugate(c_j), and phase difference; continued-fraction, orientation, anchor, and tail labels may then be attached without changing the signed equality",
+    "epistemic_status": "PROVED",
+    "gram_feature": "when U(k/K)>=0, the pair kernel is the Gram kernel of features sqrt(U(k/K))e(kz); the missing k=0 coordinate is exactly the removed volume mode",
+    "highpass_kernel": "Psi_K(t)=sum_k U(k/K)e(kt)=K sum_m hat U(K(m-t)); because the frequency block is supported away from zero, its circle mean is U(0)=0",
+    "majorant_cost": "a nonnegative replacement of height at least one on a collision core of circle width w has mean at least w; after the natural K scaling, a width 1/K core contributes a constant zero-mode cost per atom pair",
+    "next_gate": "construct an arithmetic partition whose charged entropy still leaves a target-sized signed cell, then estimate or invert that cell while retaining its high-pass Fourier feature",
+    "signed_partition": "if a deterministic partition has P cells with real signed contributions q_C and sum_C q_C=E, then one cell has q_C>=E/P; the exact factor P must be charged in the exponent ledger"
+  },
+  "claim_boundary": "This artifact proves the exact high-pass mean-zero identity, the conditional Gram representation for a nonnegative dyadic cutoff, the zero-mode cost of positive majorants, and a signed cell averaging interface. It proves no arithmetic-cell estimate, paired norm, endpoint, complete moment, density, or intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/balanced_highpass_mask_v1.py",
+      "sha256": "ae4244ca2061823523987cd5b32f6214b77115bf214393e5c378caa4b5c7051c"
+    },
+    "cycle145": {
+      "path": "artifacts/cycle-145-vector-autocorrelation-v1.json",
+      "sha256": "5989739fe7de6e80782e98d38b60226b0eb5aa95e630a10587427dc12a77d41a"
+    },
+    "cycle87": {
+      "path": "artifacts/cycle-87-mellin-alias-atlas-v1.json",
+      "sha256": "68b88ccd4ce3e5371906e3b0da3c254056b79bad9504880ebbff04b9cebce8ca"
+    },
+    "document": {
+      "path": "docs/cycle-146-balanced-mask-v1.md",
+      "sha256": "189d39c42b28ccb8901e48b18733bfeb156f819691e57ba41af9b4c4cb35c385"
+    },
+    "preregistration": {
+      "path": "docs/cycle-146-balanced-mask-preregistration-v1.md",
+      "sha256": "333112a863094a625c39a9639617b1ff7a5f258980749f3e674542b9b697074d"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_146_balanced_highpass_mask_v1.py",
+      "sha256": "86225c97b3bf7bff4003bce3523a56611d93856c0034ce94c338b7ac8d6b0a1e"
+    }
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "build an affordable hierarchical arithmetic partition retaining the signed high-pass feature and estimate or invert its terminal cell"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_146_balanced_highpass_mask_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_146_balanced_highpass_mask_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_146_balanced_highpass_mask_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_146_balanced_highpass_mask_v1.py",
+    "sha256": "a75642eda982618c70b8dd7a41046a99b98364c81b1178d71a558dcfb35ff2cc"
+  },
+  "status": "SEALED_SIGNED_HIGH_PASS_CELL_ENTROPY_OPEN"
+}

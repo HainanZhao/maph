@@ -1,0 +1,87 @@
+{
+  "artifact_id": "cycle-133-determinant-cluster-energy-v1",
+  "claim_boundary": "This artifact proves exact multiplicative energy only for tau>3rho and identifies an integral transition cocycle. It proves no transition concentration, recurrence seed, endpoint or lower-moment closure, density, or prime intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "determinant_cluster_theorem": {
+    "boundary": "no transition concentration, recurrence seed, endpoint, lower moment, density, or prime-interval theorem is proved",
+    "energy": "a hit set of size L has additive energy at least L^4/(2D-1); at L=Q/M its exponent is 11/15-4mu",
+    "epistemic_status": "PROVED",
+    "forced_region": "because S>>KQ/N, exactness is automatic for rho<(xi+1/3)/4; this exceeds the Cycle-131 ceiling by at least 79/900",
+    "integer_forcing": "an additive mode quadruple has rational-label product error O(1/(NS)); a nonzero difference of products has size >>N^{-4}, so S>>N^3 forces x1*x2=x3*x4 exactly",
+    "matrix_cocycle": "U_a=[[P_a,p_a],[R_a,q_a]] lies in GL_2(Z), and T_{a,b}=U_b U_a^{-1} obeys T_{b,c}T_{a,b}=T_{a,c} with det(T_{a,b})=s_a*s_b",
+    "missing_invariant": "energy and the cocycle law do not force a repeated-difference transition T_{a,a+d} to recur; chain depth needs concentration of these transition matrices, or an equivalent phase-anchored edge invariant",
+    "remaining_width": "between the exactness ceiling and rho=1/3-mu, the exponent width is exactly (1-xi)/4-mu and vanishes at maximal low multiplicity",
+    "valuation_web": "inside the exact region every prime valuation of x_a is a Freiman 2-homomorphism on the additive quadruples of the hit set"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/determinant_cluster_energy_v1.py",
+      "sha256": "9d7ec8efbf61de098dc7ba779edac35c4f982d33e98f5c3c9181771bedfdeb88"
+    },
+    "cycle125": {
+      "path": "artifacts/cycle-125-freiman-ray-web-v1.json",
+      "sha256": "28112cb9c4e676719d1637b5ca650c49917b28ddcd2f43f04f93b54288802785"
+    },
+    "cycle126": {
+      "path": "artifacts/cycle-126-freiman-recurrence-v1.json",
+      "sha256": "c228988b1549f129522a68f5b10698768ae3581b367166a9253048b67aeb92e5"
+    },
+    "cycle132": {
+      "path": "artifacts/cycle-132-unimodular-endpoint-lift-v1.json",
+      "sha256": "aeab0475962728918ab08c2b78e87dcef4bed7840c57e376557bcdcdfb434cee"
+    },
+    "document": {
+      "path": "docs/cycle-133-determinant-cluster-energy-v1.md",
+      "sha256": "e4c70a61eb8c2eb966005f93a454375a279a8e7e3080298054eda55b7594447e"
+    },
+    "preregistration": {
+      "path": "docs/cycle-133-determinant-cluster-energy-preregistration-v1.md",
+      "sha256": "71520f458ec5e9d24598fef0203858a73f5e4496c382485bfe0da6b867ef0284"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_133_determinant_cluster_energy_v1.py",
+      "sha256": "50d4d5c8e43ca078b3d7fca1fd69431b538b7d61003af00abcb942e7814e6040"
+    }
+  },
+  "lower_endpoint_ledger": {
+    "epistemic_status": "PROVED",
+    "exact_ceiling": "73/300",
+    "extension_beyond_hs": "79/900",
+    "nonexact_width": "9/100",
+    "threshold_energy_exponent": "11/15"
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "prove concentration of repeated-difference GL_2(Z) transitions, or construct a phase-anchored invariant that forces Cycle-126 chain depth"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_133_determinant_cluster_energy_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_133_determinant_cluster_energy_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_133_determinant_cluster_energy_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_133_determinant_cluster_energy_v1.py",
+    "sha256": "aa6347bb04b3cb48d1522ce86981f410b58e9b7aa46b4fc4aa95aace151c0083"
+  },
+  "status": "SEALED_EXACT_DETERMINANT_FREIMAN_SUBRANGE_TRANSITION_CONCENTRATION_OPEN"
+}

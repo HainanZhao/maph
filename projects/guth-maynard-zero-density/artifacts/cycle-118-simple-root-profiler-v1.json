@@ -1,0 +1,270 @@
+{
+  "artifact_id": "cycle-118-simple-root-profiler-v1",
+  "claim_boundary": "This artifact records a reproducible floating profiler which falsifies jet-collapse on the frozen grid. It proves no asymptotic simple-root count.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "OBSERVED",
+  "finding": {
+    "epistemic_status": "OBSERVED",
+    "statement": "dominant simple rows have J0 and J1 both nonzero in both sign sectors"
+  },
+  "frozen_hashes": {
+    "cycle117": {
+      "path": "artifacts/cycle-117-weighted-weak-sector-v1.json",
+      "sha256": "2594773d6768fd46aa46da2e424cb2c06ab49fada984fd9b3c7315ff521b56ea"
+    },
+    "cycle97": {
+      "path": "artifacts/cycle-97-projective-algebraic-root-v1.json",
+      "sha256": "5af4394e8a8f48b70cff4f1b32e9a213640df499f273f701bc0ffe5ffd0d2644"
+    },
+    "discovery_output": {
+      "path": "discovery/cycle-118-simple-root-profiler-v1.json",
+      "sha256": "f4772a297acc8b15dd3f117b819cb5e4210fa3a79ef4873f052eb10ea3e1a1d6"
+    },
+    "discovery_script": {
+      "path": "discovery/run_cycle_118_simple_root_profiler_v1.py",
+      "sha256": "82f27e9b62973f0f33bcde085eb81c7db6044061b2c2442467f3810c2e82baf9"
+    },
+    "document": {
+      "path": "docs/cycle-118-simple-root-profiler-v1.md",
+      "sha256": "3dec0b18b4c1e0814b98c78bfebe658c8cd188eb73e433c3bc011a336194afb6"
+    },
+    "preregistration": {
+      "path": "docs/cycle-118-simple-root-profiler-preregistration-v1.md",
+      "sha256": "1fb10578f3b86b6860907e40b29a73ce14bd6f0a9cb6a61e070ce1a21ea45de2"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_118_simple_root_profiler_v1.py",
+      "sha256": "9b9514be1ee03e99b3b64f76341eec5fc7b2706bae48333e9b078fa21342ee8a"
+    }
+  },
+  "profiler": {
+    "decimal_precision": 80,
+    "epistemic_status": "OBSERVED",
+    "mpmath_version": "1.2.1",
+    "proof_role": "none",
+    "rows": [
+      {
+        "D": 24,
+        "K": 30,
+        "Q": 6,
+        "examples": {
+          "J0_NONZERO/J1_NONZERO/OPPOSITE": {
+            "A": 203,
+            "B": 1,
+            "C": 4,
+            "J0": 198,
+            "J1": 36,
+            "a": -24,
+            "b": 15,
+            "delta": "0.01794548967145039817",
+            "eta": "3045.1963520785351444",
+            "gcd_modes": 3
+          },
+          "J0_NONZERO/J1_NONZERO/SAME": {
+            "A": 1,
+            "B": 3,
+            "C": 4,
+            "J0": -6,
+            "J1": -57,
+            "a": -11,
+            "b": -6,
+            "delta": "0.000042587568149210260647",
+            "eta": "6.8419400097351205162",
+            "gcd_modes": 1
+          },
+          "J0_NONZERO/J1_ZERO/OPPOSITE": {
+            "A": 1071,
+            "B": 2,
+            "C": 2,
+            "J0": 1067,
+            "J1": 0,
+            "a": -24,
+            "b": 24,
+            "delta": "0.012954065007111016272",
+            "eta": "25703.509827937585369",
+            "gcd_modes": 24
+          },
+          "J0_ZERO/J1_NONZERO/OPPOSITE": {
+            "A": 7,
+            "B": 6,
+            "C": 1,
+            "J0": 0,
+            "J1": -41,
+            "a": -8,
+            "b": 7,
+            "delta": "0.011042665158703011536",
+            "eta": "37.839677347577096892",
+            "gcd_modes": 1
+          }
+        },
+        "retained": 4360,
+        "signatures": {
+          "J0_NONZERO/J1_NONZERO/OPPOSITE": 1916,
+          "J0_NONZERO/J1_NONZERO/SAME": 1491,
+          "J0_NONZERO/J1_ZERO/OPPOSITE": 36,
+          "J0_ZERO/J1_NONZERO/OPPOSITE": 18
+        },
+        "simple": 3461
+      },
+      {
+        "D": 36,
+        "K": 46,
+        "Q": 7,
+        "examples": {
+          "J0_NONZERO/J1_NONZERO/OPPOSITE": {
+            "A": 162,
+            "B": 1,
+            "C": 7,
+            "J0": 154,
+            "J1": 90,
+            "a": -36,
+            "b": 18,
+            "delta": "0.013284127813408971082",
+            "eta": "2915.6600437918464071",
+            "gcd_modes": 18
+          },
+          "J0_NONZERO/J1_NONZERO/SAME": {
+            "A": 1,
+            "B": 5,
+            "C": 3,
+            "J0": -7,
+            "J1": -109,
+            "a": -17,
+            "b": -8,
+            "delta": "0.00016774582878968320905",
+            "eta": "10.314105042464854788",
+            "gcd_modes": 1
+          },
+          "J0_NONZERO/J1_ZERO/OPPOSITE": {
+            "A": 1071,
+            "B": 2,
+            "C": 2,
+            "J0": 1067,
+            "J1": 0,
+            "a": -36,
+            "b": 36,
+            "delta": "0.012954065007111016272",
+            "eta": "38555.264741906378053",
+            "gcd_modes": 36
+          },
+          "J0_ZERO/J1_NONZERO/OPPOSITE": {
+            "A": 7,
+            "B": 5,
+            "C": 2,
+            "J0": 0,
+            "J1": -76,
+            "a": -18,
+            "b": 7,
+            "delta": "0.0021781043569135214637",
+            "eta": "43.613506947526863428",
+            "gcd_modes": 1
+          }
+        },
+        "retained": 9584,
+        "signatures": {
+          "J0_NONZERO/J1_NONZERO/OPPOSITE": 4320,
+          "J0_NONZERO/J1_NONZERO/SAME": 3004,
+          "J0_NONZERO/J1_ZERO/OPPOSITE": 48,
+          "J0_ZERO/J1_NONZERO/OPPOSITE": 28
+        },
+        "simple": 7400
+      },
+      {
+        "D": 48,
+        "K": 62,
+        "Q": 9,
+        "examples": {
+          "J0_NONZERO/J1_NONZERO/OPPOSITE": {
+            "A": 57,
+            "B": 3,
+            "C": 8,
+            "J0": 46,
+            "J1": -24,
+            "a": -48,
+            "b": 15,
+            "delta": "0.00091340604835720130601",
+            "eta": "854.63335223298183209",
+            "gcd_modes": 3
+          },
+          "J0_NONZERO/J1_NONZERO/SAME": {
+            "A": 2,
+            "B": 9,
+            "C": 7,
+            "J0": -14,
+            "J1": -302,
+            "a": -25,
+            "b": -11,
+            "delta": "0.000127868426141218959",
+            "eta": "26.775482741879568371",
+            "gcd_modes": 1
+          },
+          "J0_NONZERO/J1_ZERO/OPPOSITE": {
+            "A": 1071,
+            "B": 2,
+            "C": 2,
+            "J0": 1067,
+            "J1": 0,
+            "a": -48,
+            "b": 48,
+            "delta": "0.012954065007111016272",
+            "eta": "51407.019655875170737",
+            "gcd_modes": 48
+          },
+          "J0_ZERO/J1_NONZERO/OPPOSITE": {
+            "A": 3,
+            "B": 1,
+            "C": 2,
+            "J0": 0,
+            "J1": -19,
+            "a": -25,
+            "b": 3,
+            "delta": "0.00014283922202829737332",
+            "eta": "7.9380405279856658235",
+            "gcd_modes": 1
+          }
+        },
+        "retained": 21477,
+        "signatures": {
+          "J0_NONZERO/J1_NONZERO/OPPOSITE": 9184,
+          "J0_NONZERO/J1_NONZERO/SAME": 6754,
+          "J0_NONZERO/J1_ZERO/OPPOSITE": 78,
+          "J0_ZERO/J1_NONZERO/OPPOSITE": 112
+        },
+        "simple": 16128
+      }
+    ]
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "prove a derivative-weighted discrepancy/covering theorem for the sparse exponential surface"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_118_simple_root_profiler_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_118_simple_root_profiler_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_118_simple_root_profiler_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_118_simple_root_profiler_v1.py",
+    "sha256": "7d4655cbf79719dc9b4a091ee1385e4f94c04e3d34ebe7e84dfb5672c1a95ef1"
+  },
+  "status": "SEALED_DISCOVERY_SIMPLE_ROOT_JET_COLLAPSE_FALSIFIED_DISCREPANCY_ENGINE_OPEN"
+}
