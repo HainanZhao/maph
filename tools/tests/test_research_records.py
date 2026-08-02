@@ -9,6 +9,7 @@ from tools import research_records
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
 GUTH_PROFILE = REPOSITORY_ROOT / "projects/guth-maynard-zero-density/research-records.json"
+SIC_STARK_PROFILE = REPOSITORY_ROOT / "projects/sic-stark/research-records.json"
 
 
 class ResearchRecordsTest(unittest.TestCase):
@@ -42,3 +43,14 @@ class ResearchRecordsTest(unittest.TestCase):
             )
         )
         self.assertEqual(rows, [("artifact", "PROVED", "concise boundary")])
+
+    def test_profile_can_omit_generated_status(self) -> None:
+        research_records.configure(SIC_STARK_PROFILE)
+        self.assertIsNone(research_records.STATUS)
+        with tempfile.TemporaryDirectory() as temporary:
+            database = Path(temporary) / "index.duckdb"
+            research_records.rebuild(database)
+            con = research_records.duckdb.connect(str(database), read_only=True)
+            self.assertIn("Newest immutable record", research_records.render_status(con))
+            self.assertEqual(research_records.check(con), 0)
+            con.close()
