@@ -13,21 +13,21 @@
     },
     "why_active_gate_matters": {
       "epistemic_status": "PROVED",
-      "statement": "Cycle 159 proves that primitive-ray compression loses the multiplier needed to reconstruct nonconstant Cycle-124 coefficient products. E14D-L is timeboxed at this information loss through Cycles 160--162. The active E14D-H task is a phase-anchored coefficient-weighted colored four-cycle condenser for upper-band fourth-moment excess."
+      "statement": "Cycle 159 proves that primitive-ray compression loses the multiplier needed to reconstruct nonconstant Cycle-124 coefficient products. E14D-L is timeboxed at this information loss through Cycles 160--162. Cycle 160 proves that a conditional upper-band fourth-moment excess yields an actual labelled coefficient-weighted heavy pair-difference cell; it does not yet yield phase alignment or a colored four-cycle."
     },
     "progress_criterion": {
       "epistemic_status": "CONJECTURED",
-      "statement": "Cycle 160 advances E14D-H only by proving that actual coefficient-weighted pair-difference cells of codegree at most X^(1/150+o(1)) force M4<<K(DQ)^2X^(1/150+o(1)), or by an explicit admissible family with M4 excess X^(1/75-o(1)) despite all cells below that threshold. A generic fourth-moment expansion, unweighted codegree, an unlabelled residual, or inability to prove the bound does not advance the gate."
+      "statement": "Cycle 161 advances E14D-H only by refining Cycle 160's actual heavy coefficient-weighted pair-difference cell into a fixed-proportion positive-real population of phase-aligned disjoint four-atom configurations or a labelled hub of effective neighbor degree X^(1/300-o(1)). An unweighted edge count, coefficient-free aligned family, generic fourth-moment expansion, or an unlabelled residual does not advance the gate."
     },
     "deferred_work": "Boundary denominators within a fixed power of Q are a separate branch; paper-stage hostile audit begins only after a manuscript theorem is frozen.",
     "start_commands": [
       "source ../../tools/dev-env.sh",
       "research rebuild",
       "research check",
-      "research cycle 159",
+      "research cycle 160",
       "research search \"colored four cycle\"",
-      "python3 proof/build_cycle_159_coefficient_selector_information_loss_v1.py --check",
-      "cat docs/cycle-160-colored-four-cycle-condenser-preregistration-v1.md"
+      "python3 proof/build_cycle_160_colored_four_cycle_condenser_v1.py --check",
+      "cat docs/cycle-161-high-cell-refinement-preregistration-v1.md"
     ]
   },
   "query_examples": [

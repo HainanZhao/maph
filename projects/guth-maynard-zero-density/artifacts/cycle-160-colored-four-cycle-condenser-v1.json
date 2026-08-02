@@ -1,0 +1,85 @@
+{
+  "artifact_id": "cycle-160-colored-four-cycle-condenser-v1",
+  "claim_boundary": "This artifact proves a coefficient-weighted off-diagonal fourth-moment condenser and conditional high-codegree pair-cell inverse. It does not prove Cycle-89 excess, a phase-aligned colored four-cycle, a fourth-moment estimate, density, or intervals.",
+  "colored_four_cycle_condenser": {
+    "boundary": "this condenser does not prove the Cycle-89 fourth-moment excess, a low-codegree hypothesis, a phase-aligned nondegenerate colored four-cycle, a moment, density, or intervals",
+    "colored_configuration": "two ordered pairs in one retained cell obey ||(z_u-z_v)-(z_u'-z_v')||=O(1/K), equivalently the candidate phase relation z_u+z_v'=z_u'+z_v+O(1/K); coincident vertices are retained as labelled degenerate rows, so this is not yet a phase-aligned colored four-cycle",
+    "epistemic_status": "PROVED",
+    "exact_pair_difference": "|S_k|^2=A_2+P_off(k), where A_2=sum_u|a_u|^2 and P_off is the sum over ordered u!=v of a_u conjugate(a_v)e(k(z_u-z_v))",
+    "excess_inverse": "therefore M4<=C K A_2^2(1+max_I C_I); an M4 excess X^(1/75-o(1)) over K A_2^2 forces a labelled off-diagonal cell with effective codegree X^(1/75-o(1)), hence in particular X^(1/150-o(1))",
+    "schur_condenser": "a frozen smooth nonnegative cutoff has kernel |L_K(t)|<=C_U K(1+K||t||)^(-A); the finite-overlap cell Schur bound gives sum_k U(k/K)|P_off(k)|^2<=C K(max_I C_I)sum_(u!=v)|a_u a_v|^2<=C K(max_I C_I)A_2^2",
+    "weighted_codegree": "for a K^(-1)-scale pair-difference cell I, rho_I=sum_(r in I)|b_r|^2 and C_I=(sum_(r in I)|b_r|)^2/rho_I, with C_I=0 when rho_I=0"
+  },
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/colored_four_cycle_condenser_v1.py",
+      "sha256": "31143d357be67b92e5969e72b8a97aadecbc3d3023ff4dd4ce3f7827dcc4b03f"
+    },
+    "cycle159": {
+      "path": "artifacts/cycle-159-coefficient-selector-information-loss-v1.json",
+      "sha256": "4891fc7ba34340a4ff76cd6cdf26d76ac45ca65ad3042e460e0ef1681a0c52ea"
+    },
+    "cycle87": {
+      "path": "artifacts/cycle-87-mellin-alias-atlas-v1.json",
+      "sha256": "68b88ccd4ce3e5371906e3b0da3c254056b79bad9504880ebbff04b9cebce8ca"
+    },
+    "cycle89": {
+      "path": "artifacts/cycle-89-moment-concentration-gate-v1.json",
+      "sha256": "93e22952845f8e5b21ad841d79604a09eccc26ca9ca083bf1f65ac0a60de5dc8"
+    },
+    "document": {
+      "path": "docs/cycle-160-colored-four-cycle-condenser-v1.md",
+      "sha256": "72046d3fc6d18271b36c85ad1c2052a666e11a7ab8f201bb2343adec0e3e6c3b"
+    },
+    "preregistration": {
+      "path": "docs/cycle-160-colored-four-cycle-condenser-preregistration-v1.md",
+      "sha256": "ec681027c027074cdffb411456f00c2688f35a11b696cb74c80a6790a7d75b25"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_160_colored_four_cycle_condenser_v1.py",
+      "sha256": "6144c5dbe80aab17eab724ed3432a795f386761d7afb917725cba0e738878b02"
+    }
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "turn a labelled high effective-codegree pair-difference cell into a phase-aligned colored four-cycle or rational web, or exhibit an admissible condenser falsifier"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_160_colored_four_cycle_condenser_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_160_colored_four_cycle_condenser_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_160_colored_four_cycle_condenser_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sample": {
+    "diagonal_baseline_over_k": "9",
+    "effective_codegree": "2",
+    "epistemic_status": "PROVED",
+    "fourth_moment_bound_over_k": "50",
+    "off_diagonal_bound_over_k": "16"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_160_colored_four_cycle_condenser_v1.py",
+    "sha256": "9ab45b2188dd97044c373b004ad06040967b0a802d225ae05db2217aadb0c325"
+  },
+  "status": "SEALED_COEFFICIENT_WEIGHTED_OFF_DIAGONAL_CONDENSER_HIGH_CODEGREE_PAIR_CELL_OPEN"
+}
