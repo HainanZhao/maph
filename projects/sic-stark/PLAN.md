@@ -10,14 +10,12 @@
   scopes in dimensions 4, 5, 7, and 8. No dimension-six TCC identity,
   coefficient-to-ray map, fusion-continuity theorem, or boundary-limit theorem
   is proved. `CERTIFIED_NUMERICAL` packet growth is not a nonexistence theorem.
-- Current state: Cycle 167 / `B005` exactly falsified the full
-  translation-invariant bilinear `C6`-twisted convolution family on the
-  sealed torsor: no one of 1,296 matrices passes either graph multiplicativity
-  or transport-automorphism census. The finite torsor still survives, but no
-  additive coefficient operation exists in that class. Cycle 168 / `B006`
-  must test a genuinely state-dependent, independently constrained cocycle
-  completion; no coefficient-to-logarithm operation, AFK law, or fusion theorem
-  exists yet.
+- Current state: Cycle 168 / `B006` exactly falsified the canonical
+  bilinear-plus-coordinate-carry `C6` cocycle family. Of 46,656 associative
+  candidates, one passes the six fixed identifying probes and it fails both
+  full graph and transport tests. Cycle 169 / `B007` moves from parameter
+  expansion to an action-groupoid cohomological obstruction; no
+  coefficient-to-logarithm operation, AFK law, or fusion theorem exists yet.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -30,8 +28,8 @@
 ## Budget, accounting, and stop condition
 
 - Total forward budget: 200 substantive research cycles, counted `B001/200`
-  through `B200/200`; the counter is currently `B005/200`.
-- Cycle 168 is `B006`. Repository cycle numbers and budget ordinals advance
+  through `B200/200`; the counter is currently `B006/200`.
+- Cycle 169 is `B007`. Repository cycle numbers and budget ordinals advance
   together unless a non-counted record intervenes; the budget ordinal is the
   authoritative campaign counter.
 - A cycle counts only when it is a preregistered substantive research block
@@ -92,6 +90,10 @@
   `C6` twists, checking 1,679,616 pairs for each of graph multiplicativity and
   transport covariance. No matrix passes either identity. This rejects that
   named operation class only. See `artifacts/cycle-167-bilinear-convolution-v1.json`.
+- `PROVED`: Cycle 168 exhausts the 46,656 canonical bilinear-plus-coordinate-
+  carry normalized `C6` cocycles. Its one probe-compatible candidate fails
+  both full identities. This rejects that standard representative family only.
+  See `artifacts/cycle-168-carry-cocycle-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -144,7 +146,8 @@ Budget B001--B200
   |    |         `-- pointwise section pushforward [FALSIFIED: fibre instability]
   |    |              `-- fibre-resolved C6 torsor / multiplier lift [SEALED]
   |    |                   `-- bilinear C6-twisted convolution [FALSIFIED]
-  |    |                        `-- state-dependent constrained 2-cocycle [NEXT GATE]
+  |    |                        `-- canonical carry 2-cocycle [FALSIFIED]
+  |    |                             `-- action-groupoid defect cohomology [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -189,17 +192,17 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `B005_OF_200` | Seal Cycle 168 as `B006`, then increment only for substantive research blocks. | Counting workflow or archive-only work. |
-| D6 interface | `STATE_DEPENDENT_COCOCYCLE_ENGINE` | Test a preregistered, independently constrained state-dependent 2-cocycle family for associativity, graph/product, and transport compatibility. | Deriving the cocycle from the graph defect; calling a finite pass a coefficient-to-logarithm operation; quotienting away the fibre. |
+| Project budget | `B006_OF_200` | Seal Cycle 169 as `B007`, then increment only for substantive research blocks. | Counting workflow or archive-only work. |
+| D6 interface | `ACTION_GROUPOID_COHOMOLOGY_ENGINE` | Define the full transport-compatible defect class and test coboundary under independent normalization constraints. | Taking the graph defect itself as the operation; another unguided parameter-family expansion; claiming a cohomology result is a logarithm map. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Can an independently constrained state-dependent `C6` 2-cocycle complete
-  the sealed torsor algebra while preserving associativity, graph
-  multiplicativity, and frozen Shintani transport?
+- Is the full transport-compatible action-groupoid defect class a coboundary
+  under independently fixed normalization, or does it give a structural finite
+  obstruction to this interface route?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -208,27 +211,24 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 168 / `B006`
+## Next goal: Cycle 169 / `B007`
 
 Preregister one substantive block with this question:
 
-> Can an independently constrained state-dependent `C6` 2-cocycle define an
-> associative torsor algebra whose graph is multiplicative and whose frozen
-> Shintani transport is an algebra automorphism?
+> Is the transport-compatible defect class of the full finite action groupoid
+> a coboundary under an independently fixed normalization?
 
-Cycle 168 must freeze an outcome-blind state-dependent cocycle family and its
-normalization, all associativity, graph/product, and transport identities, the
-candidate census or constraint solver, and the failure rule before executable
-work. A coboundary taken from the observed graph defect, a post-defect family,
-a quotient that discards the fibre, or an AFK label without a checked
-coefficient operation does not advance the gate.
+Cycle 169 must freeze the action groupoid, cochain and coboundary complexes,
+normalization, transport compatibility, exact solver, and failure rule before
+executable work. A graph-derived cochain, a post-defect normalization, or an
+AFK label without a checked coefficient operation does not advance the gate.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 167
+research cycle 168
 sed -n '1,260p' PLAN.md
-python3 proof/build_cycle_167_bilinear_convolution_v1.py --check
-python3 -m unittest tests.test_cycle_167_bilinear_convolution -v
+python3 proof/build_cycle_168_carry_cocycle_v1.py --check
+python3 -m unittest tests.test_cycle_168_carry_cocycle -v
 ```
