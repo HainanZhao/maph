@@ -39,6 +39,10 @@ irreversible strategy/gate changes.
 When a sealed-interface cut is found, treat it as a design problem, not a
 terminal barrier: the next block must attempt a new payload-preserving bridge,
 invariant, lift, or discriminating countermodel before any saturation claim.
+The program is expressly authorized to invent the missing engine from the
+ground up; known theorems constrain and test that engine, rather than defining
+the boundary of permissible ideas. Each proposed engine starts as the smallest
+falsifiable prototype with a stated invariant and failure signature.
 
 Rebuild and inspect the local index:
 

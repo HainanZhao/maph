@@ -127,6 +127,13 @@ engine: a new invariant, lift, duality, completion, local-to-global
 principle, inverse theorem, or a discriminating countermodel. State what the
 new engine would have to preserve and what evidence would falsify it. Existing
 artifacts are constraints and launch points, not a ceiling on invention.
+The purpose of exploration is not merely to recombine available theorems.
+When the decisive bridge is absent, give the proposed construction equal
+standing with any literature route: formulate its state space and invariant,
+build the smallest falsifiable prototype, and seek a new proof mechanism
+before declaring the program saturated. A negative result may constrain that
+engine, but must not be recast as evidence that only existing building blocks
+are legitimate.
 
 ## 1a. Critical-decision companion
 
