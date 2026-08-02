@@ -159,25 +159,23 @@ no responsibility for the primary derivation.
 The companion is a mentor/checkpoint tracker, not a duplicate implementer or
 a hostile auditor. It maintains a short decision ledger: the frozen premise,
 alternatives considered, decisive evidence and tags, the recommended next
-action, and any unexamined assumption. Consult it at each critical checkpoint
-before committing the decision. Critical checkpoints include changing
-`PLAN.md`; selecting, dropping, or materially reranking a research path;
-changing a gate or its advance condition; preregistering a new theorem
-search; promoting or containing a material claim; and choosing the next
-authorized cycle. Record its recommendation and whether it was adopted in
-the relevant readable session/cycle decision record; a reasoned disagreement
-is allowed and must be recorded. Do not block routine computation,
-exploration, or reversible drafting on the companion. This protocol
-complements the paper-stage hostile audit; it does not start one early.
+action, and any unexamined assumption. It operates asynchronously by default:
+send one compact session brief at start, then batch material deltas into a
+single checkpoint packet. Each packet asks for at most five short items:
+recommendation, decisive reason, flaw, falsifier, and next action. Do not
+poll or wait during reversible derivations, candidate engines, routine
+computations, or amendments within an already active cycle; notify the
+companion and continue.
 
-Liveness is an explicit checkpoint, not an assumption. Before every critical
-decision, inspect the session companion's live status. If it is idle or has
-completed, reactivate the same stable task identity with the frozen decision
-brief and obtain its current recommendation before committing. If it is
-running, deliver the checkpoint brief and wait for its response. Record the
-status check and response in the relevant readable decision record. A missing
-or failed companion invocation is a reason to defer that critical decision,
-not to silently proceed; routine reversible work may continue.
+Blocking consultation is reserved for an irreversible or strategic decision:
+changing `PLAN.md`, changing a gate or advance condition, sealing/committing
+a material claim, starting or abandoning a cycle, promoting/containing a
+material theorem, or external publication. Before one of these decisions,
+inspect the companion status and reactivate the same identity if needed. If
+it is running, deliver the batched packet and await one concise response;
+otherwise routine work continues. Record only the final recommendation and
+adopt/reject reason in the relevant decision record. This protocol
+complements the paper-stage hostile audit; it does not start one early.
 
 At session start, perform and record a liveness rehearsal: send the companion
 its role and first checkpoint, then, if the platform permits an agent to
