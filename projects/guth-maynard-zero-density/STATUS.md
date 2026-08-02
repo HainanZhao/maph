@@ -7,7 +7,7 @@ Canonical evidence is the Git-tracked per-cycle artifact and its linked files; `
 
 - Project outcome (PROVED): No improved zero-density coefficient, prime-interval endpoint, or L-function-family transfer is proved. The checked baseline remains density coefficient 30/13, with uniform and almost-all interval endpoints 17/30 and 2/15.
 - Why the active gate matters (PROVED): Cycle 159 proves that primitive-ray compression loses the multiplier needed to reconstruct nonconstant Cycle-124 coefficient products. Conditional on upper-band excess, Cycles 160--162 now yield either globally massed coefficient-weighted positive-real four-distinct-atom configurations or literal weighted labelled oriented-star mass with high effective degree; neither output is yet a coordinate pullback, rational web, or moment gain.
-- Progress criterion (CONJECTURED): Cycle 163 advances E14D-H only by splitting each globally massed labelled star's effective degree into integer-wrap complexity or a common-wrap logarithmic rational web through z_(d,q)=c0q exp(2pi d/D). An unweighted edge count, coefficient-free aligned family, generic fourth-moment expansion, or an unlabelled residual does not advance the gate.
+- Progress criterion (CONJECTURED): The next E14D-H step must compile the labelled Cycle-163 common-wrap logarithmic web or bound its labelled integer-wrap complexity alternative, while retaining the globally massed four-cycle arm. An unweighted edge count, coefficient-free aligned family, generic fourth-moment expansion, or an unlabelled residual does not advance the gate.
 - Explicitly deferred: Boundary denominators within a fixed power of Q are a separate branch; paper-stage hostile audit begins only after a manuscript theorem is frozen.
 
 ### Start here (from this project directory)
@@ -15,31 +15,32 @@ Canonical evidence is the Git-tracked per-cycle artifact and its linked files; `
 - `source ../../tools/dev-env.sh`
 - `research rebuild`
 - `research check`
-- `research cycle 162`
+- `research cycle 163`
 - `research search "colored four cycle"`
-- `python3 proof/build_cycle_162_mass_sensitive_high_cell_v1.py --check`
-- `cat docs/cycle-163-star-wrap-fiber-preregistration-v1.md`
+- `python3 proof/build_cycle_163_star_wrap_fiber_v1.py --check`
+- `cat docs/cycle-163-star-wrap-fiber-v1.md`
 
 Read the listed record and its linked preregistration, proof document, conventions, builder, and test before changing mathematics or code. Do not infer a theorem from this handoff; its claim tags and boundaries are in the canonical record.
 
 ## Index coverage
 
-- Cycle artifact files found in the working tree: 260
+- Cycle artifact files found in the working tree: 261
 - Cycle artifacts present in the Git index: 260
-- Artifacts by top-level epistemic status: CONJECTURED=6, LEGACY_UNTAGGED=10, OBSERVED=56, PROVED=188
-- Recursively tagged fields indexed for search (not independent claims): 23537
+- Artifacts by top-level epistemic status: CONJECTURED=6, LEGACY_UNTAGGED=10, OBSERVED=56, PROVED=189
+- Recursively tagged fields indexed for search (not independent claims): 23541
 
 ## Current gate
 
-- Latest record: `cycle-162-mass-sensitive-high-cell-v1` (Cycle 162, `PROVED`)
-- Status: `SEALED_GLOBAL_ALIGNED_FOUR_CYCLE_MASS_OR_WEIGHTED_HIGH_DEGREE_STAR_INVERSE_BANKED`
-- Boundary: This artifact conditionally extracts global four-cycle mass or literal weighted star-edge mass from Cycle-89 excess. It does not prove excess, coordinate pullback, rational web, moment, density, or intervals.
-- Next mathematical target: pull back one globally massed labelled output through the actual (d,q) coordinate map, or construct an admissible labelled obstruction
+- Latest record: `cycle-163-star-wrap-fiber-v1` (Cycle 163, `PROVED`)
+- Status: `SEALED_STAR_WRAP_COMPLEXITY_OR_COMMON_WRAP_LOG_WEB`
+- Boundary: This conditionally classifies Cycle-162 star degree into wrap complexity or a common-wrap log web. It does not prove transport, moment, density, or intervals.
+- Next mathematical target: compile the common-wrap log web or bound the labelled wrap-complexity alternative
 
 ## Recent sealed records
 
 | Cycle | Record | Tag | Gate | Next target |
 |---:|---|---|---|---|
+| 163 | `cycle-163-star-wrap-fiber-v1` | `PROVED` | `SEALED_STAR_WRAP_COMPLEXITY_OR_COMMON_WRAP_LOG_WEB` | compile the common-wrap log web or bound the labelled wrap-complexity alternative |
 | 162 | `cycle-162-mass-sensitive-high-cell-v1` | `PROVED` | `SEALED_GLOBAL_ALIGNED_FOUR_CYCLE_MASS_OR_WEIGHTED_HIGH_DEGREE_STAR_INVERSE_BANKED` | pull back one globally massed labelled output through the actual (d,q) coordinate map, or construct an admissible labelled obstruction |
 | 161 | `cycle-161-high-cell-refinement-v1` | `PROVED` | `SEALED_PHASE_ALIGNED_FOUR_CYCLE_OR_LABELLED_STAR_DEGENERACY_BANKED` | compile the actual labelled positive-real four-cycle population to a moment gain, or classify the labelled star as a rational web or admissible obstruction |
 | 160 | `cycle-160-colored-four-cycle-condenser-v1` | `PROVED` | `SEALED_COEFFICIENT_WEIGHTED_OFF_DIAGONAL_CONDENSER_HIGH_CODEGREE_PAIR_CELL_OPEN` | turn a labelled high effective-codegree pair-difference cell into a phase-aligned colored four-cycle or rational web, or exhibit an admissible condenser falsifier |
@@ -47,7 +48,6 @@ Read the listed record and its linked preregistration, proof document, conventio
 | 157 | `cycle-157-selection-mask-negative-spectral-v1` | `PROVED` | `SEALED_RAW_ZERO_DIAGONAL_GRAM_OBSTRUCTION_COEFFICIENT_NEGATIVE_SPECTRAL_ALIGNMENT_OPEN` | prove the actual negative spectral energy concentrates in a fixed labelled block family, or preserve a quantitative block-complexity inverse with the coefficient and anchor labels |
 | 156 | `cycle-156-divisor-comb-norm-majorant-v1` | `PROVED` | `SEALED_EXACT_DIVISOR_COMB_NORM_MAJORANT_ACTUAL_FINITE_PARTITION_OPEN` | construct or reject Cycle 155's actual exact fixed finite reason-labelled coefficient-escape partition; then Cycle 154 localizes a class with this now-fixed norm constant |
 | 154 | `cycle-154-coefficient-escape-localization-v1` | `PROVED` | `SEALED_CONDITIONAL_FINITE_LABELLED_ESCAPE_LOCALIZATION` | derive or reject the actual finite coefficient-escape partition and fixed comb-norm majorant; then analyze the selected class or prove O_kappa(1) positive fixed-phase transport |
-| 153 | `cycle-153-actual-mass-routing-v1` | `PROVED` | `SEALED_ACTUAL_MASS_ROUTING_TO_STRICT_BRANCH_OR_LABELLED_ESCAPE` | prove the actual strict branch has normalized positive weights and a uniform complete per-mode bound so Cycle 152 yields an actual bounded-multiplier fan, or analyze the quantitative labelled escape obligation |
 
 ## Useful queries
 

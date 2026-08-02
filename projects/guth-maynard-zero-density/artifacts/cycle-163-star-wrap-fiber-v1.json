@@ -1,0 +1,64 @@
+{
+  "artifact_id": "cycle-163-star-wrap-fiber-v1",
+  "claim_boundary": "This conditionally classifies Cycle-162 star degree into wrap complexity or a common-wrap log web. It does not prove transport, moment, density, or intervals.",
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/star_wrap_fiber_v1.py",
+      "sha256": "d717c049ba0e7e7b454796fc09719c14821058672c0be4796763af358d7d0adf"
+    },
+    "cycle162": {
+      "path": "artifacts/cycle-162-mass-sensitive-high-cell-v1.json",
+      "sha256": "e90f2a132807cdbd75c55f7a59b97b89888efa7e440302dbb9b9b561bc496edc"
+    },
+    "document": {
+      "path": "docs/cycle-163-star-wrap-fiber-v1.md",
+      "sha256": "28a374571c78c37979b8898a69fe7ba9e02fe1f79350d441a417b09b90f60fd3"
+    },
+    "preregistration": {
+      "path": "docs/cycle-163-star-wrap-fiber-preregistration-v1.md",
+      "sha256": "c6aaa7116443f908b244b3a627edfe87548a0500f02b1216601a380e39aa67b8"
+    },
+    "preregistration_correction": {
+      "path": "docs/cycle-163-star-wrap-fiber-preregistration-v1-correction.md",
+      "sha256": "7e57d28460b9bff8bbe3d8f600e241b2b555abaa7ec29f072a784951c3492bc4"
+    },
+    "tests": {
+      "path": "tests/test_cycle_163_star_wrap_fiber_v1.py",
+      "sha256": "f03db905fd5de886b3eee6fec0b86148a0881482ad9b5fec0719975421c30e08"
+    }
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "compile the common-wrap log web or bound the labelled wrap-complexity alternative"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_163_star_wrap_fiber_v1.py --check",
+    "write_command": "python3 proof/build_cycle_163_star_wrap_fiber_v1.py --write"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sample": {
+    "D": "3",
+    "E": "3",
+    "R": "3",
+    "R_fiber": "5/3",
+    "R_wrap": "9/5",
+    "epistemic_status": "PROVED",
+    "wrap_square_mass": "5"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_163_star_wrap_fiber_v1.py",
+    "sha256": "2564ca407aea1b2ffd3c77cdf92a3f7129263f3b10a6b81d714bc41e77383f01"
+  },
+  "star_wrap_fiber": {
+    "boundary": "this conditional pullback does not prove a rational web closes transport, a moment bound, density, or intervals",
+    "common_wrap": "in the complementary arm R_s^wrap<H, sum_mD_(s,m)^2=D_s^2/R_s^wrap>D_s^2/H and R_s^fiber>=H; after the D_s^2-weighted global split, common-wrap mass is aggregate rather than one-fiber mass; a common wrap gives |log(q_v/q_w)+2pi(d_v-d_w)/D|<<1/(KQ)",
+    "epistemic_status": "PROVED",
+    "factorization": "R_s=R_s^wrap R_s^fiber exactly"
+  },
+  "status": "SEALED_STAR_WRAP_COMPLEXITY_OR_COMMON_WRAP_LOG_WEB"
+}
