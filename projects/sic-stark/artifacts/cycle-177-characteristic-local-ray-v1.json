@@ -1,0 +1,205 @@
+{
+  "artifact_id": "cycle-177-characteristic-local-ray-v1",
+  "budget_ordinal": "B015",
+  "claim_boundary": "This exact finite result tests only whether the preregistered ramified local record determines the conductor-lowered ray label. It defines no additive coefficient operation, AFK interface, regulator equality, fusion theorem, or TCC identity.",
+  "cycle": 177,
+  "epistemic_status": "PROVED",
+  "exact_prototype": {
+    "collisions": [
+      {
+        "local_record": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "ray_labels": [
+          0,
+          1,
+          3,
+          5
+        ]
+      },
+      {
+        "local_record": [
+          0,
+          0,
+          2,
+          1
+        ],
+        "ray_labels": [
+          0,
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "local_record": [
+          0,
+          1,
+          0,
+          1
+        ],
+        "ray_labels": [
+          0,
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "local_record": [
+          0,
+          1,
+          2,
+          1
+        ],
+        "ray_labels": [
+          0,
+          1,
+          3,
+          5
+        ]
+      },
+      {
+        "local_record": [
+          0,
+          2,
+          0,
+          1
+        ],
+        "ray_labels": [
+          0,
+          1,
+          3,
+          5
+        ]
+      },
+      {
+        "local_record": [
+          0,
+          2,
+          1,
+          1
+        ],
+        "ray_labels": [
+          0,
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "local_record": [
+          1,
+          0,
+          2,
+          1
+        ],
+        "ray_labels": [
+          0,
+          1
+        ]
+      },
+      {
+        "local_record": [
+          1,
+          2,
+          0,
+          1
+        ],
+        "ray_labels": [
+          0,
+          1
+        ]
+      }
+    ],
+    "source_output": "discovery/cycle-177-characteristic-local-ray-prototype-v1.json",
+    "summary": {
+      "collision_count": 8,
+      "distinct_local_records": 16,
+      "map_determinacy": false,
+      "orientation_anchors": {
+        "3,4": 2,
+        "3,5": 1
+      },
+      "rows_checked": 36
+    }
+  },
+  "frozen_hashes": {
+    "instructions": {
+      "path": "AGENTS.md",
+      "sha256": "363495f0dbbe93e244b460c8eafb13247a8fb1f41be24f94c037ae9f6400c6f2"
+    },
+    "output": {
+      "path": "discovery/cycle-177-characteristic-local-ray-prototype-v1.json",
+      "sha256": "fd45282f8db0cb4327ef037a224acac80c533e05f5b96a9a934dee88e33cd3a4"
+    },
+    "pairing": {
+      "path": "artifacts/cycle-175-leading-residue-pairing-v1.json",
+      "sha256": "9ec7b4bf1a8a8ca87e586988e6e6d14e85aa597e163be032c9e668d128c593bb"
+    },
+    "prereg": {
+      "path": "docs/cycle-177-characteristic-local-ray-preregistration-v1.md",
+      "sha256": "1cd0f214f53462ce855cf9265853fb038f961f48967e3ccc90e0eccacc01400f"
+    },
+    "replay": {
+      "path": "proof/verify_cycle_177_characteristic_local_ray.py",
+      "sha256": "987e05f080a1b32216bbdc637da6a54abbe72f89db2390deede5364b060dd341"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    },
+    "section": {
+      "path": "artifacts/cycle-164-oriented-ray-monoid-section-v1.json",
+      "sha256": "f1815f8641780570c15c7e9c6b40f9de8390358fb3dec0ac93aa311b78a6a26d"
+    },
+    "transport": {
+      "path": "artifacts/cycle-176-local-pairing-transport-v1.json",
+      "sha256": "b6e2d894d2f9f4f3434c1da08e655ed4e14ba3814e8ef14c84e96049909e1e74"
+    }
+  },
+  "gate_outcome": {
+    "d6_interface": "P3_LOCAL_RECORD_INSUFFICIENT_FOR_SELECTED_EXPONENT_FULL_CRT_SET_TEST_REQUIRED",
+    "disallowed_pseudo_progress": [
+      "calling the section-dependent collision an intrinsic ray-class no-go",
+      "using s or d in the source record",
+      "adding target-derived local features"
+    ],
+    "remaining_bottleneck": "Use a p2\u00d7p3 CRT local record and compare equal-record fibres with functorially defined admissible ray-exponent sets, not the least-exponent section."
+  },
+  "outcome": {
+    "epistemic_status": "PROVED",
+    "statement": "Eight preregistered p3-local records occur with distinct conductor-lowered least ray exponents, falsifying that named record-to-selected-exponent map."
+  },
+  "preregistration_preflight": {
+    "cycle": 177,
+    "manifest_sha256": "1cd0f214f53462ce855cf9265853fb038f961f48967e3ccc90e0eccacc01400f",
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Cycle 178/B016: preregister the full modulus-6 CRT local record and test equal-record fibres against admissible exponent sets with no section selection."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_177_characteristic_local_ray_v1.py --check",
+    "preflight_command": "research prereg check docs/cycle-177-characteristic-local-ray-preregistration-v1.md --expected-cycle 177 --allow-head-drift",
+    "prototype_command": "python3 proof/verify_cycle_177_characteristic_local_ray.py --output discovery/cycle-177-characteristic-local-ray-prototype-v1.json",
+    "write_command": "python3 proof/build_cycle_177_characteristic_local_ray_v1.py --write"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_177_characteristic_local_ray_v1.py",
+    "sha256": "8db2e46a704c552b95a50b2949b58927cadf18f53f372ce0b59dd7a96bbc3664"
+  },
+  "status": "SEALED_P3_LOCAL_RECORD_TO_LEAST_EXPONENT_FALSIFIED"
+}

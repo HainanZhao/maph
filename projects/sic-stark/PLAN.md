@@ -10,10 +10,10 @@
   scopes in dimensions 4, 5, 7, and 8. No dimension-six TCC identity,
   coefficient-to-ray map, fusion-continuity theorem, or boundary-limit theorem
   is proved. `CERTIFIED_NUMERICAL` packet growth is not a nonexistence theorem.
-- Current state: Cycle 176 / `B014` proves that the direct local-pairing
-  projection is a total, anchor-preserving finite transport, but this is
-  inherited torsor consistency rather than interface evidence. Cycle 177 /
-  `B015` must seek a direct arithmetic characteristic-to-local-to-ray map.
+- Current state: Cycle 177 / `B015` falsifies the ramified-prime local record
+  as a determinant of the chosen lowered ray exponent. Cycle 178 / `B016`
+  must add the prime-2 CRT component and test intrinsic admissible exponent
+  sets rather than a chosen section.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -26,8 +26,8 @@
 ## Budget, accounting, and stop condition
 
 - Total forward budget: 200 substantive research cycles, counted `B001/200`
-  through `B200/200`; the counter is currently `B014/200`.
-- Cycle 177 is `B015`. Repository cycle numbers and budget ordinals advance
+  through `B200/200`; the counter is currently `B015/200`.
+- Cycle 178 is `B016`. Repository cycle numbers and budget ordinals advance
   together unless a non-counted record intervenes; the budget ordinal is the
   authoritative campaign counter.
 - A cycle counts only when it is a preregistered substantive research block
@@ -122,6 +122,11 @@
   Its covariance is a scaled consequence of the already sealed section law,
   so it is a finite consistency check—not an independent interface advance.
   See `artifacts/cycle-176-local-pairing-transport-v1.json`.
+- `PROVED`: Cycle 177 computes a source-side normalized prime-3 local record
+  for every positive-lift characteristic and finds eight records with multiple
+  chosen lowered ray exponents. It falsifies that finite record-to-selected-
+  exponent map only; nonunique lowered-modulus exponent sets remain intrinsic
+  data. See `artifacts/cycle-177-characteristic-local-ray-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -184,7 +189,8 @@ Budget B001--B200
   |    |                                                           `-- orientation-sensitive O/P^4 quotient [SEALED]
   |    |                                                                `-- leading residue + local pairing [SEALED]
   |    |                                                                     `-- outcome-blind 36-row transport test [CONSISTENT ONLY]
-  |    |                                                                          `-- characteristic-to-local-to-ray map [NEXT GATE]
+  |    |                                                                          `-- p3 local-to-selected-ray map [FALSIFIED]
+  |    |                                                                               `-- CRT local-to-admissible-ray-set map [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -229,16 +235,17 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `B014_OF_200` | Seal Cycle 177 as `B015`, then increment only for substantive research blocks. | Counting workflow or archive-only work. |
-| D6 interface | `LOCAL_PAIRING_CONSISTENT_BUT_NO_INDEPENDENT_CHARACTERISTIC_TO_RAY_MAP` | Define an arithmetic map directly from the 36 characteristics to local pairing/ray data, independent of `s,d`, then test all labels and anchors. | Using `s,d` as map inputs; fitting from target labels; treating local consistency as an interface. |
+| Project budget | `B015_OF_200` | Seal Cycle 178 as `B016`, then increment only for substantive research blocks. | Counting workflow or archive-only work. |
+| D6 interface | `P3_LOCAL_RECORD_INSUFFICIENT_FOR_SELECTED_EXPONENT_FULL_CRT_SET_TEST_REQUIRED` | Define a p2×p3 CRT record from the characteristics and test its fibres against admissible ray-exponent sets without choosing a section. | Treating a selected exponent as intrinsic; using `s,d`; target-derived record features. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Is there an arithmetic characteristic-to-local-to-ray map, independent of
-  the sealed torsor labels, that recovers all 36 local/ray labels and anchors?
+- Does the complete finite-modulus CRT local record determine a functorial
+  admissible ray-exponent set for every characteristic, independent of a
+  chosen section?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -247,23 +254,24 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 177 / `B015`
+## Next goal: Cycle 178 / `B016`
 
 Preregister one substantive block with this question:
 
-> Can an arithmetic map directly from all 36 characteristics to local pairing
-> and ray data recover every label and both anchors without using `s` or `d`?
+> Does a fixed prime-2 × prime-3 CRT local record of every characteristic
+> determine its admissible conductor-lowered ray-exponent set without using
+> `s`, `d`, or a selected exponent?
 
-Cycle 177 must freeze the arithmetic characteristic source, local/ray target,
-candidate map family, selection rule, anchors, and failure rule before
-executable work. No torsor-label input, post-result row assignment, or
-target-fitted map advances the gate.
+Cycle 178 must freeze the arithmetic characteristic source, both local prime
+records, admissible-set target, comparison rule, anchors, and failure rule
+before executable work. No torsor-label input, selected exponent, or
+target-fitted local feature advances the gate.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 176
+research cycle 177
 sed -n '1,260p' PLAN.md
-python3 proof/build_cycle_176_local_pairing_transport_v1.py --check
+python3 proof/build_cycle_177_characteristic_local_ray_v1.py --check
 ```
