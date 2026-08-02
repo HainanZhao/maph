@@ -6,8 +6,8 @@ Canonical evidence is the Git-tracked per-cycle artifact and its linked files; `
 ## Cold-start handoff
 
 - Project outcome (PROVED): No improved zero-density coefficient, prime-interval endpoint, or L-function-family transfer is proved. The checked baseline remains density coefficient 30/13, with uniform and almost-all interval endpoints 17/30 and 2/15.
-- Why the active gate matters (PROVED): Cycle 154 banks a conditional finite-class escape-localization implication: an actual fixed finite reason-labelled partition plus a fixed comb-norm majorant would identify one high-projection escape class. Neither prerequisite is proved. The live E14D-L obstruction is to derive an actual fixed finite coefficient partition or a quantified coefficient-complexity inverse, while positive strict transport remains open.
-- Progress criterion (CONJECTURED): Cycle 155 advances E14D-L only by deriving the actual exact disjoint exhaustive coefficient-escape partition with fixed J=O_kappa(1), retaining its labels, or by preserving an explicit quantitative coefficient-complexity inverse. A conditional localization lemma, an X^(o(1)) class count, an unlabelled residual, heuristic cancellation, a scalar collision bound, or isolated endpoint norm aggregation does not advance the actual gate.
+- Why the active gate matters (PROVED): Cycle 156 banks the exact divisor-comb norm majorant under a frozen anchor ratio h<=C_hK. Cycle 154 then turns an actual fixed finite reason-labelled escape partition into one high-projection, one-ray-L2 class once that anchor ratio is instantiated. The actual partition and positive strict transport remain open.
+- Progress criterion (CONJECTURED): Cycle 155 advances E14D-L only by deriving the actual exact disjoint exhaustive coefficient-escape partition with fixed J=O_kappa(1), retaining its labels, or by preserving an explicit quantitative coefficient-complexity inverse. It must also instantiate the fixed anchor ratio used by Cycle 156 before invoking the one-ray-L2 conclusion. A conditional localization lemma, an X^(o(1)) class count, an unlabelled residual, heuristic cancellation, a scalar collision bound, or isolated endpoint norm aggregation does not advance the actual gate.
 - Explicitly deferred: Boundary denominators within a fixed power of Q are a separate branch; paper-stage hostile audit begins only after a manuscript theorem is frozen.
 
 ### Start here (from this project directory)
@@ -15,31 +15,32 @@ Canonical evidence is the Git-tracked per-cycle artifact and its linked files; `
 - `source ../../tools/dev-env.sh`
 - `research rebuild`
 - `research check`
-- `research cycle 154`
-- `research search "escape localization"`
-- `python3 proof/build_cycle_154_coefficient_escape_localization_v1.py --check`
+- `research cycle 156`
+- `research search "comb norm"`
+- `python3 proof/build_cycle_156_divisor_comb_norm_majorant_v1.py --check`
 - `cat docs/cycle-155-actual-coefficient-escape-partition-preregistration-v1.md`
 
 Read the listed record and its linked preregistration, proof document, conventions, builder, and test before changing mathematics or code. Do not infer a theorem from this handoff; its claim tags and boundaries are in the canonical record.
 
 ## Index coverage
 
-- Cycle artifact files found in the working tree: 254
-- Cycle artifacts present in the Git index: 254
-- Artifacts by top-level epistemic status: CONJECTURED=6, LEGACY_UNTAGGED=10, OBSERVED=56, PROVED=182
-- Recursively tagged fields indexed for search (not independent claims): 23507
+- Cycle artifact files found in the working tree: 255
+- Cycle artifacts present in the Git index: 255
+- Artifacts by top-level epistemic status: CONJECTURED=6, LEGACY_UNTAGGED=10, OBSERVED=56, PROVED=183
+- Recursively tagged fields indexed for search (not independent claims): 23512
 
 ## Current gate
 
-- Latest record: `cycle-154-coefficient-escape-localization-v1` (Cycle 154, `PROVED`)
-- Status: `SEALED_CONDITIONAL_FINITE_LABELLED_ESCAPE_LOCALIZATION`
-- Boundary: This artifact proves only the conditional finite labelled escape localization lemma. It does not establish an actual coefficient partition, a comb-norm majorant, positive transport, a bounded fan, a moment, density, or intervals.
-- Next mathematical target: derive or reject the actual finite coefficient-escape partition and fixed comb-norm majorant; then analyze the selected class or prove O_kappa(1) positive fixed-phase transport
+- Latest record: `cycle-156-divisor-comb-norm-majorant-v1` (Cycle 156, `PROVED`)
+- Status: `SEALED_EXACT_DIVISOR_COMB_NORM_MAJORANT_ACTUAL_FINITE_PARTITION_OPEN`
+- Boundary: This artifact proves an exact fixed-constant norm majorant for the selected divisor comb only. It does not establish an actual finite coefficient partition, escape projection, positive transport, bounded fan, moment, density, or intervals.
+- Next mathematical target: construct or reject Cycle 155's actual exact fixed finite reason-labelled coefficient-escape partition; then Cycle 154 localizes a class with this now-fixed norm constant
 
 ## Recent sealed records
 
 | Cycle | Record | Tag | Gate | Next target |
 |---:|---|---|---|---|
+| 156 | `cycle-156-divisor-comb-norm-majorant-v1` | `PROVED` | `SEALED_EXACT_DIVISOR_COMB_NORM_MAJORANT_ACTUAL_FINITE_PARTITION_OPEN` | construct or reject Cycle 155's actual exact fixed finite reason-labelled coefficient-escape partition; then Cycle 154 localizes a class with this now-fixed norm constant |
 | 154 | `cycle-154-coefficient-escape-localization-v1` | `PROVED` | `SEALED_CONDITIONAL_FINITE_LABELLED_ESCAPE_LOCALIZATION` | derive or reject the actual finite coefficient-escape partition and fixed comb-norm majorant; then analyze the selected class or prove O_kappa(1) positive fixed-phase transport |
 | 153 | `cycle-153-actual-mass-routing-v1` | `PROVED` | `SEALED_ACTUAL_MASS_ROUTING_TO_STRICT_BRANCH_OR_LABELLED_ESCAPE` | prove the actual strict branch has normalized positive weights and a uniform complete per-mode bound so Cycle 152 yields an actual bounded-multiplier fan, or analyze the quantitative labelled escape obligation |
 | 152 | `cycle-152-bounded-multiplier-divisor-fan-v1-scope-correction` | `PROVED` | `SEALED_CONDITIONAL_BOUNDED_MULTIPLIER_DIVISOR_FAN_INVERSE` | route the actual Cycle-149--151 negative correlation into normalized strict-halo mass meeting the Cycle-152 hypotheses, or quantify the residual boundary, phase-changing, nonsmooth, or unbounded-tail escape mass |
@@ -47,12 +48,11 @@ Read the listed record and its linked preregistration, proof document, conventio
 | 151 | `cycle-151-sampled-comb-double-poisson-v1` | `PROVED` | `SEALED_GCD_WEIGHTED_NEGATIVE_TAIL_LOBE_OR_BOUNDARY_OPEN` | bound the gcd-weighted population of endpoint tails in negative transform lobes and treat denominators within a fixed power of Q |
 | 150 | `cycle-150-divisor-comb-sign-test-v1` | `PROVED` | `SEALED_HALO_BOUNDARY_DIVISOR_COMB_ESTIMATE_OPEN` | bound the halo and boundary-denominator negative divisor-comb projection, retaining phase-changing and nonsmooth payload separately |
 | 149 | `cycle-149-target-mass-comb-inverse-v1` | `PROVED` | `SEALED_DIVISOR_COMB_ANTIALIGNMENT_EXCLUSION_OR_MODEL_OPEN` | exclude the retained negative divisor-comb correlation using the complement phase geometry, or construct an explicit actual model |
-| 148 | `cycle-148-endpoint-major-arc-comb-v1` | `PROVED` | `SEALED_CROSS_ENDPOINT_COMB_CANCELLATION_OR_INVERSE_OPEN` | prove cancellation between rational endpoint combs using their common coefficient vector, or extract a target-mass comb obstruction |
 
 ## Useful queries
 
 ```sh
-python /root/projects/maph/tools/research_records.py --project research-records.json cycle 154
-python /root/projects/maph/tools/research_records.py --project research-records.json search "escape localization"
+python /root/projects/maph/tools/research_records.py --project research-records.json cycle 156
+python /root/projects/maph/tools/research_records.py --project research-records.json search "comb norm"
 python /root/projects/maph/tools/research_records.py --project research-records.json check
 ```

@@ -107,8 +107,12 @@ continues.
   fixed threshold, to a quantitative labelled escape obligation.
 - `PROVED`: a finite reason-labelled escape partition with a fixed comb-norm
   bound localizes its negative projection to one retained class, with a
-  one-ray `L2` lower bound. The actual partition and comb-norm majorant are
-  not yet proved.
+  one-ray `L2` lower bound. The actual partition and its anchor-constant
+  instantiation are not yet proved.
+- `PROVED`: the selected divisor comb has exact squared norm at most
+  `(1+C_h)KQ^2/h` under a frozen anchor ratio `h<=C_hK` (and constant `2`
+  when `h<=K`). Instantiating its actual anchor constant and constructing the
+  finite coefficient partition remain open.
 
 ## Research-path graph
 
@@ -130,7 +134,7 @@ published reconstruction P0 [complete]
 | Gate | State | Advance condition |
 |---|---|---|
 | E14 | `UNSIGNED_VOLUME_LIMIT_REACHED` | Use only for inverse structure. |
-| E14D-L | `CONDITIONAL_ESCAPE_LOCALIZATION_BANKED_ACTUAL_COEFFICIENT_PARTITION_OPEN` | Derive an actual fixed finite coefficient-escape partition or expose a quantified coefficient-complexity inverse; separately prove positive transport to activate the bounded fan. |
+| E14D-L | `EXACT_DIVISOR_COMB_NORM_MAJORANT_LEMMA_BANKED_ACTUAL_PARTITION_OPEN` | Instantiate the frozen anchor ratio and derive an actual fixed finite coefficient-escape partition, or expose a quantified coefficient-complexity inverse; separately prove positive transport to activate the bounded fan. |
 | E14D-H | `MOMENT_CONCENTRATION_OR_SATURATION_INVERSE_OPEN` | Classify/exclude excess `2xi-116/75` with its phase anchor. |
 | E15 | `ANCHOR_REQUIRED` | Classify anchored almost-eigenfunctions. |
 | E16 | `EXACT_VALUATION_WEB_BANKED` | Compile relation-rich structure to a genuine transport seed. |
@@ -142,11 +146,12 @@ published reconstruction P0 [complete]
 ## Principal engines and falsifiers
 
 - `CONJECTURED` E14D-L: Cycles 152--154 bank a conditional fan, an exact
-  actual-mass router, and a conditional finite-class escape localizer. Cycle
-  155 must derive the actual fixed finite coefficient partition or expose its
-  quantified complexity inverse. Positive strict transport still needs its
-  normalized weights and uniform complete capacity bound before spacing/order-
-  three curvature can attack an actual bounded fan.
+  actual-mass router, a conditional finite-class escape localizer, and an
+  exact anchor-bounded comb-norm lemma. Cycle 155 must derive the actual fixed
+  finite coefficient partition or expose its quantified complexity inverse.
+  Positive strict transport still needs its normalized weights and uniform
+  complete capacity bound before spacing/order-three curvature can attack an
+  actual bounded fan.
 - `CONJECTURED` E14D-H: encode required `M4` excess as a colored four-cycle
   problem. Low codegree should exclude excess; high codegree should expose an
   anchored rational web. A raw-target example without either output enlarges
@@ -190,8 +195,8 @@ coefficient, frequency, anchor, degree, rational-tail, and payload labels.
 If fixed `J` fails, record a quantitative chart/degree/tensor/frequency/tail
 complexity inverse; an `X^(o(1))` class count is not fixed localization.
 Only after an actual partition may Cycle 154 identify a real high-projection
-class; only after a separate fixed comb-norm majorant may it yield its
-one-ray `L2` obstruction. Positive transport and the Cycle-152 bounded fan
+class. Cycle 156 supplies its norm constant once the actual frozen anchor
+ratio is instantiated. Positive transport and the Cycle-152 bounded fan
 remain a parallel, unclosed route.
 
 ## Crash recovery
@@ -216,4 +221,5 @@ python3 proof/build_cycle_152_bounded_multiplier_divisor_fan_v1.py --check
 python3 proof/build_cycle_152_bounded_multiplier_divisor_fan_scope_correction_v1.py --check
 python3 proof/build_cycle_153_actual_mass_routing_v1.py --check
 python3 proof/build_cycle_154_coefficient_escape_localization_v1.py --check
+python3 proof/build_cycle_156_divisor_comb_norm_majorant_v1.py --check
 ```
