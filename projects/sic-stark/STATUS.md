@@ -21,22 +21,23 @@ Then read the listed record and its linked preregistration, proof document, conv
 
 ## Index coverage
 
-- Cycle artifact files found in the working tree: 3
+- Cycle artifact files found in the working tree: 4
 - Cycle artifacts present in the Git index: 3
-- Artifacts by top-level epistemic status: PROVED=3
-- Recursively tagged fields indexed for search (not independent claims): 10
+- Artifacts by top-level epistemic status: PROVED=4
+- Recursively tagged fields indexed for search (not independent claims): 13
 
 ## Latest sealed record
 
-- Latest record: `cycle-163-spectral-ray-interface-v2` (Cycle 163, `PROVED`)
-- Status: `SEALED_FIXED_FULL_RAY_SELECTOR_METADATA_CORRECTION`
-- Boundary: This correction adds the generated-handoff target omitted from Cycle 163 v1. It changes no mathematical result, count, orientation anchor, gate boundary, or budget accounting.
-- Next mathematical target: Cycle 164/B002: preregister and test an orientation-preserving characteristic-dependent conductor-lowering/ray-monoid state space with an explicit map from every reduced object to one common arithmetic-Frobenius-oriented C6 primitive target.
+- Latest record: `cycle-164-oriented-ray-monoid-section-v1` (Cycle 164, `PROVED`)
+- Status: `SEALED_CONDUCTOR_LOWERED_RAY_MONOID_SECTION`
+- Boundary: This exact finite result constructs only a convention-pinned conductor-lowered ray-monoid section. It proves no additive coefficient-to-logarithm operation, finite part, AFK cocycle compatibility, Stark identity, fusion theorem, or dimension-six TCC identity.
+- Next mathematical target: Cycle 165/B003: preregister an outcome-blind additive-to-logarithmic operation class on the sealed section and seek exact compatibility or an exact falsifier of that named class.
 
 ## Recent sealed records
 
 | Cycle | Record | Tag | Gate | Next target |
 |---:|---|---|---|---|
+| 164 | `cycle-164-oriented-ray-monoid-section-v1` | `PROVED` | `SEALED_CONDUCTOR_LOWERED_RAY_MONOID_SECTION` | Cycle 165/B003: preregister an outcome-blind additive-to-logarithmic operation class on the sealed section and seek exact compatibility or an exact falsifier of that named class. |
 | 163 | `cycle-163-spectral-ray-interface-v2` | `PROVED` | `SEALED_FIXED_FULL_RAY_SELECTOR_METADATA_CORRECTION` | Cycle 164/B002: preregister and test an orientation-preserving characteristic-dependent conductor-lowering/ray-monoid state space with an explicit map from every reduced object to one common arithmetic-Frobenius-oriented C6 primitive target. |
 | 163 | `cycle-163-spectral-ray-interface-v1` | `PROVED` | `SEALED_FIXED_FULL_RAY_SELECTOR_FALSIFIED` | None |
 | 162 | `cycle-162-workflow-migration-v1` | `PROVED` | `SEALED_ACCELERATED_WORKFLOW_AND_INTERFACE_FIRST_PROGRAM` | Construct and test a convention-pinned finite-characteristic coefficient-to-cocycle/ray-logarithm interface with explicit selection, operation, branches, finite part, and AFK identification; determine whether an oriented wild-local extension at RQ-000692 supplies any part of it. |

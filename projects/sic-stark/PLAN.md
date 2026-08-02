@@ -10,13 +10,14 @@
   scopes in dimensions 4, 5, 7, and 8. No dimension-six TCC identity,
   coefficient-to-ray map, fusion-continuity theorem, or boundary-limit theorem
   is proved. `CERTIFIED_NUMERICAL` packet growth is not a nonexistence theorem.
-- Current state: Cycle 163 / `B001` exactly falsified the positive-lift,
-  fixed-full-modulus direct-selector class: only 18 of 36 characteristics
-  are eligible for `(6)infinity_2`. The coefficient-to-cocycle/ray-log
-  interface remains open, with Cycle 164 / `B002` authorized to test an
-  orientation-preserving characteristic-dependent conductor-lowering /
-  ray-monoid state space. Fusion continuity remains downstream. The raw
-  componentwise `BF_6` route remains retired.
+- Current state: Cycle 164 / `B002` exactly constructed a total,
+  characteristic-dependent conductor-lowered ray-monoid section from all 36
+  frozen characteristics into one arithmetic-Frobenius-oriented `C6` source.
+  The 18 full-modulus rows recover their direct logs and both anchors persist.
+  This settles the finite state-space subgate, but no outcome-blind additive
+  coefficient-to-logarithm operation or AFK compatibility law exists yet.
+  Fusion continuity remains downstream. The raw componentwise `BF_6` route
+  remains retired.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -29,8 +30,8 @@
 ## Budget, accounting, and stop condition
 
 - Total forward budget: 200 substantive research cycles, counted `B001/200`
-  through `B200/200`; the counter is currently `B001/200`.
-- Cycle 164 is `B002`. Repository cycle numbers and budget ordinals advance
+  through `B200/200`; the counter is currently `B002/200`.
+- Cycle 165 is `B003`. Repository cycle numbers and budget ordinals advance
   together unless a non-counted record intervenes; the budget ordinal is the
   authoritative campaign counter.
 - A cycle counts only when it is a preregistered substantive research block
@@ -70,6 +71,12 @@
   falsifies that direct-selector class only; the orientation anchors
   `(3,5)->g^1` and `(3,4)->g^2` remain eligible. See
   `artifacts/cycle-163-spectral-ray-interface-v1.json`.
+- `PROVED`: Cycle 164 exactly lowers each frozen positive-lift principal ideal
+  to a one-place ray object and gives an outcome-blind least-exponent section
+  from all 36 reduced objects into the oriented full `C6` source. It recovers
+  every direct full-modulus log and the two anchors. This is finite ray-class
+  state space only, not an additive-to-logarithmic operation or AFK interface.
+  See `artifacts/cycle-164-oriented-ray-monoid-section-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -118,7 +125,8 @@ Budget B001--B200
   +-- dimension 6
   |    +-- analytic interface: 36 additive values -> 3 ray logs -> AFK cocycle
   |    |    +-- fixed-full-ray selector [FALSIFIED: 18/36 domain]
-  |    |    `-- conductor-lowered ray-monoid lift [NEXT GATE]
+  |    |    `-- conductor-lowered ray-monoid lift [SEALED: total finite section]
+  |    |         `-- outcome-blind additive-to-logarithmic operation [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -163,40 +171,40 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `B001_OF_200` | Seal Cycle 164 as `B002`, then increment only for substantive research blocks. | Counting workflow or archive-only work. |
-| D6 interface | `ACTIVE_CONDUCTOR_LOWERING_ENGINE` | Convention-pinned reduced-object state space plus an exact orientation-preserving common-target map. | Treating the 18-row fixed-ray failure as a global no-go; raw/gauged packet extensions or undefined “spectral periodization.” |
+| Project budget | `B002_OF_200` | Seal Cycle 165 as `B003`, then increment only for substantive research blocks. | Counting workflow or archive-only work. |
+| D6 interface | `FINITE_RAY_MONOID_SECTION_SEALED_ADDITIVE_OPERATION_REQUIRED` | Define an outcome-blind additive-to-logarithmic operation class on the sealed section and prove exact compatibility or exactly falsify that named class. | Treating a set-theoretic finite label as an AFK/TCC interface; post-result changes to the section; raw/gauged packet extensions. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- What canonical construction maps the 36 finite additive coefficients to the
-  three primitive norm-37 ray-logarithm/cocycle values?
+- What outcome-blind operation maps the 36 finite additive coefficients,
+  through the sealed section, to the three primitive norm-37
+  ray-logarithm/cocycle values?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
-- Can characteristic-dependent conductor lowering supply an oriented
-  common-target map for the 18 fixed-modulus-ineligible rows?
 - After interface closure, can flow invariance plus the two pinned invariants
   force fusion continuity or reduce it to a certified compact inequality?
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 164 / `B002`
+## Next goal: Cycle 165 / `B003`
 
 Preregister one substantive block with this question:
 
-> Can an explicitly convention-pinned characteristic-dependent
-> conductor-lowering/ray-monoid state space map every fixed-modulus-ineligible
-> row into one common, arithmetic-Frobenius-oriented primitive target?
+> Can an outcome-blind additive-to-logarithmic operation class on the sealed
+> conductor-lowered ray-monoid section satisfy an exact finite compatibility
+> criterion, or can that named class be exactly falsified?
 
-Cycle 164 must freeze the reduced ideals/moduli, positive-lift convention,
-one-place orientation, transition maps, common primitive target, exact
-prototype, and failure rule before executable work. It must preserve the two
-Cycle-163 anchors and say how each reduced ray object maps back to the same
-`C_6` primitive target. Lowered absolute values, a merely local ray log,
-more packet numerics, or an unspecified lift do not advance the gate.
+Cycle 165 must freeze the additive input family, the operation class, its
+domain/codomain and branch/normalization conventions, its relationship to the
+sealed section, the exact compatibility identity, the finite target data, and
+the failure rule before executable work. Re-labeling the section, fitting
+weights after inspecting a target value, packet numerics without an operation,
+or invoking AFK terminology without a checked identity do not advance the
+gate.
 
 ## Recovery
 
@@ -204,9 +212,9 @@ more packet numerics, or an unspecified lift do not advance the gate.
 source ../../tools/dev-env.sh
 research rebuild
 research check
-research cycle 163
+research cycle 164
 sed -n '1,260p' PLAN.md
-sed -n '1,240p' docs/cycle-163-spectral-ray-interface-v1.md
-python3 proof/build_cycle_163_spectral_ray_interface_v1.py --check
-python3 -m unittest tests.test_cycle_163_fixed_full_ray_selector -v
+sed -n '1,240p' docs/cycle-164-oriented-ray-monoid-section-v1.md
+python3 proof/build_cycle_164_oriented_ray_monoid_section_v1.py --check
+python3 -m unittest tests.test_cycle_164_oriented_ray_monoid_section -v
 ```
