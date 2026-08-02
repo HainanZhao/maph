@@ -1,77 +1,129 @@
-# Cycle 162: workflow migration and dimension-six interface gate
+# Cycle 162: workflow migration and accelerated dimension-six program
 
 ## Outcome and claim boundary
 
-`PROVED`: the project now has a current-format plan, immutable-record profile,
-legacy exception declaration, pinned derived-index dependency, preregistered
-Cycle-162 record, deterministic verifier, and generated cold-start status.
-This is a workflow theorem only: it makes no new analytic, algebraic, or TCC
-claim.
+`PROVED`: the project has a current-format plan, immutable-record profile,
+pinned index dependency, preregistered Cycle-162 record, deterministic
+verifier, and generated cold-start status. Mutable operational files are not
+artifact evidence. This is a workflow/strategy result only; it proves no new
+analytic, algebraic, or TCC statement.
 
 `PROVED`: the project-level mathematical boundary remains unchanged. The
 preserved certificate packages prove the documented dimensions 4, 5, 7, and 8
-formal TCC cases. Dimension 6 remains open. The legacy Cycles 1--161 and
-`artifacts/tcc-*.json` are legacy-unprotected evidence and are not renamed,
-retagged, or otherwise rewritten by this cycle.
+formal TCC cases. Dimension 6 remains open. Cycles 1--161 and
+`artifacts/tcc-*.json` remain legacy-unprotected evidence.
 
-## Frozen migration result
+## Reattached background
 
-The verified inventory pins the nearest decisive legacy documents and
-certificates:
+`PROVED`: Papers I--II use safe Shintani exponents `5760` and `16128`.
+Dimension eight also has a `V_4` projective CM-descent gate and exact linear
+reinduction through `Q(sqrt(-6))`. Dimension six instead has an order-three
+projective quotient and a conditional primitive order-six boundary problem
+over `Q(sqrt(21))`. The 36-characteristic ledger has
+`psi^2(A_6)=-1`, and the rigid endpoint uses `tau+tau^(-1)=5` and
+`sqrt(21)`.
 
-- `docs/sic-stark-cycle157.md` and
-  `certificates/dimension-six-cycle157-fourier-normalization-audit.json`;
-- `docs/sic-stark-cycle161.md` and
-  `certificates/dimension-seven-cycle161-discriminant-eight-closure.json`;
-- the repository and project workflow instructions, profile, and shared
-  preregistration/index tools.
+`PROVED`: Cycle 157 found that the draft never defines the map from its 36
+additive Fourier coefficients to the three primitive ray-class logarithms,
+including selection, nonlinear/logarithmic operation, branches, finite part,
+and AFK-cocycle identification. The ordinary Fourier gauge does not supply
+that map.
 
-The verifier checks these bytes, the record profile's exact legacy boundary,
-the cold-start handoff's gate/criterion/deferred-work fields, and the
-Cycle-162 preregistration freeze. The profile indexes only `cycle-*.json`;
-this is intentional until a future cycle provides new canonical evidence.
+`CERTIFIED_NUMERICAL`: selected Fourier-normalized packets grow on the frozen
+finite ladder with stable two-precision agreement. This rejects a naive
+bounded-component target but neither disproves fusion continuity nor settles
+dimension-six TCC.
 
-## Dimension-six gate
+## Effective Stark Sweep dependency
 
-`PROVED`: Cycle 157 established a gap between the 36 additive spectral
-coefficients and the three ray-class logarithms/AFK cocycle values. It also
-checked the ordinary Fourier gauge; that normalization does not supply the
-missing map.
+`PROVED`: the published v1.5 results paper, *Effective Archimedean Stark
+Theorems over Real Quadratic Fields: Quadratic Support, Shintani Transfer, and
+CM Descent* (DOI `10.5281/zenodo.21713178`), supplies three reusable engines
+and five order-six packet closures. Its `Q(sqrt(7))` closure shows that
+character order six is not the obstruction; its `Q(sqrt(57))` ramified-
+3-power closure shows that this conductor feature alone is not the
+obstruction either.
 
-`CERTIFIED_NUMERICAL`: the audited ladder has high/low precision agreement and
-growth for its selected transformed coefficients. This observation does not
-prove that TCC is false, that no boundary limit exists, or that every possible
-interface fails.
+`PROVED`: the sweep's `RQ-000692` dossier identifies the exact shared
+`Q(sqrt(21))`, modulus-6, `C_6` ray field, with the census and SIC polynomials
+related by `X -> -X`. Its relative ramification index above 3 and Shintani
+index are both 6. The wild-prime hypothesis in Roblot's sextic theorem fails,
+while the other audited gates pass.
 
-`CONJECTURED`: the next substantive engine should define a state space
+`CONJECTURED`: a wild-local replacement retaining the oriented primitive
+order-six regulator and exact labels is a legitimate Phase-0 engine. A weak
+absolute-value index theorem is insufficient, and even an oriented arithmetic
+closure must still feed the operational interface before the TCC replay.
+The frozen dependency summary is
+`docs/effective-stark-sweep-context-v1.md`.
 
-```text
-(finite characteristics, additive coefficients, selector, nonlinear/log map,
- branch convention, boundary finite part, cocycle/ray-class labels)
-```
+## Accelerated plan and correction to the proposed order
 
-and preserve the pinned Fourier and ray-class labels. Its smallest
-finite-frequency prototype must either produce the exact target value or a
-specified mismatch. A missing component, label change, branch ambiguity, or
-prototype failure falsifies that candidate interface.
+`STRATEGIC_DECISION`: adopt the user's accelerated schedule with an
+interface-first Phase 0:
 
-## Gate decision
+1. August 2026: define and falsify the coefficient-to-cocycle/ray-logarithm
+   interface on the smallest exact finite-frequency prototype.
+2. Test the sweep's `RQ-000692` wild-local arithmetic replacement as an
+   independent oriented engine and possible source for part of the interface.
+3. If the interface passes, immediately run the direct-attempt protocol on fusion
+   continuity along the attracting `A_6` geodesic.
+4. September 2026: prepare Paper III v2. Paper III v1 is already published at
+   DOI `10.5281/zenodo.21682631`, so this is a new version. Full proof framing
+   requires Phase-0 closure; otherwise v2 remains a scope-accurate research
+   note centered on the reduction and named open target.
+5. If Phase 0 does not close the theorem, open a Q4 campaign of exactly 100
+   substantive cycles. No Class-A reduction at `100/100` freezes dimension six
+   and redirects the primary effort to cross-dimension pattern mining.
 
-| Item | Status | Decision |
+A Class-A reduction is proof-grade and replayable, reaches an explicitly
+compact/finitely covered parameter theorem, pins all conventions, and has a
+strict exact or certified margin. Another interface-free estimate or numerical
+ladder is not Class A.
+
+## Astra-derived tactics: bounded use
+
+`OBSERVED`: OpenAI released ten mathematical results on 1 August 2026 and a
+separate 62-page set of AI-generated retrospective discovery narratives.
+Those notes emphasize initial reductions, failed routes, changes of invariant,
+counterexamples, and decisive structural pivots. They are useful as hypotheses
+for organizing the Q4 campaign, not as evidence that a model will close this
+bridge and not as proof-process ground truth.
+
+Sources:
+
+- <https://cdn.openai.com/pdf/ten-proofs-oai.pdf>
+- <https://cdn.openai.com/pdf/reasoning-walkthroughs.pdf>
+
+## Gate state
+
+| Gate | Status | Advance condition |
 |---|---|---|
-| Current raw/gauged boundary-packet route | `PROVED` formulation gap | Stop; no more numerical extension is authorized. |
-| Existing conditional downstream algebra | `PROVED` conditional material | Preserve; it may be reused only after an interface closes. |
-| New interface construction | `CONJECTURED` design problem | Next authorized substantive research cycle. |
-| Paper III | `RESEARCH_NOTE_ONLY` | Do not promote or publish it as a theorem package. |
+| D6 interface | `PHASE0_ACTIVE` | Complete definition plus exact smallest prototype. |
+| RQ-000692 wild-local engine | `PHASE0_PARALLEL_DESIGN` | Oriented regulator equality with exact labels and an explicit interface consequence. |
+| Fusion continuity | `BLOCKED_BY_INTERFACE` | Interface passes, then proof or Class-A compact reduction. |
+| Paper III v2 | `SEPTEMBER_TARGET` | Scope follows Phase 0 and all new-version publication gates pass. |
+| Q4 campaign | `CONDITIONAL_0_OF_100` | Opens only after Phase-0 nonclosure. |
+| Pattern mining | `ONGOING_SECONDARY` | Falsifiable engine classifier across proved and frontier cases. |
+
+## Falsifiers and next action
+
+An interface candidate fails on any undefined characteristic selection,
+branch, finite part, label change, or exact prototype mismatch. The accelerated
+strategy fails to advance if it produces only heuristic reformulations,
+floating-point patterns, or a compact inequality without the interface.
+
+Next authorized action: Cycle 163 is one substantive Phase-0 block for the
+interface state space, smallest exact prototype, and—only if that prototype
+passes—the direct fusion-continuity attempt.
 
 ## Replay
 
 ```sh
 source ../../tools/dev-env.sh
 research prereg check docs/cycle-162-workflow-migration-preregistration-v1.md --expected-cycle 162 --allow-head-drift
-python proof/build_cycle_162_workflow_migration_v1.py --check
-python proof/verify_cycle_162_workflow_migration.py
-python -m unittest tests.test_research_workflow_migration -v
+python3 proof/build_cycle_162_workflow_migration_v1.py --check
+python3 -m unittest tests.test_research_workflow_migration -v
 research rebuild
 research check
 ```

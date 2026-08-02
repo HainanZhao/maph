@@ -5,10 +5,10 @@ Canonical evidence is the Git-tracked per-cycle artifact and its linked files; `
 
 ## Cold-start handoff
 
-- Project outcome (PROVED): Formal TCC identities are closed in dimensions 4, 5, 7, and 8 by the preserved certificate suites. No dimension-six TCC identity is proved; its present boundary-packet formulation is retired rather than refuted.
-- Why the active gate matters (PROVED): Cycle 157 verified the ordinary Fourier normalization but found no defined map from 36 additive spectral coefficients to three ray-class logarithms or AFK cocycle values. Without that map, neither the existing numerical growth nor the conditional downstream algebra can establish dimension-six TCC.
-- Progress criterion (CONJECTURED): Advance only with an independently derived, convention-pinned coefficient-to-cocycle/ray-logarithm interface that specifies finite-characteristic selection, nonlinear/logarithmic operation, branches, boundary subtraction, and identification with the AFK cocycle; then test the smallest falsifiable finite-frequency prototype before reopening boundary-packet estimates.
-- Explicitly deferred: Further raw or ordinary-gauge boundary-packet numerics, a BF_6=>MFC_6 implication, Paper III release preparation, and any claim that dimension-six TCC is false are deferred. Legacy cycles 1--161 remain immutable and legacy-unprotected; they are evidence, not current-format records.
+- Project outcome (PROVED): Formal TCC identities are closed in dimensions 4, 5, 7, and 8 by preserved certificate suites. Dimension six is not proved or disproved; August 2026 Phase 0 is active on the missing operational interface and, conditionally, fusion continuity.
+- Why the active gate matters (PROVED): Cycle 157 found no defined map from 36 additive spectral coefficients to three ray-class logarithms or AFK cocycle values. The published Effective Stark Sweep paper supplies order-six and ramified-3 controls, while its RQ-000692 dossier identifies the exact Q(sqrt(21)) wall as index-6/wild-3; neither replaces the missing oriented interface.
+- Progress criterion (CONJECTURED): Phase 0 advances by proving a convention-pinned coefficient-to-cocycle/ray-log interface and exact prototype, or by deriving an oriented wild-local RQ-000692 engine that feeds that interface; it then closes fusion continuity or obtains a Class-A compact/finitely covered reduction. If Phase 0 does not close the theorem, Q4 receives exactly 100 substantive cycles.
+- Explicitly deferred: Raw or ordinary-gauge packet extensions, BF_6=>MFC_6 without the missing map, and any claim that dimension-six TCC is false remain barred. Paper III v1 is already published; September means a new version whose scope follows Phase 0. The conditional Q4 100-cycle campaign does not open before Phase 0 completes.
 
 ### Start here (from this project directory)
 
@@ -16,10 +16,11 @@ Canonical evidence is the Git-tracked per-cycle artifact and its linked files; `
 - `research rebuild`
 - `research check`
 - `research cycle 162`
-- `python proof/verify_cycle_162_workflow_migration.py`
-- `python -m unittest tests.test_research_workflow_migration -v`
+- `python3 proof/build_cycle_162_workflow_migration_v1.py --check`
+- `python3 -m unittest tests.test_research_workflow_migration -v`
+- `sed -n '1,240p' docs/effective-stark-sweep-context-v1.md`
 - `sed -n '1,240p' docs/cycle-162-workflow-migration-v1.md`
-- `sed -n '1,240p' PLAN.md`
+- `sed -n '1,260p' PLAN.md`
 
 Read the listed record and its linked preregistration, proof document, conventions, builder, and test before changing mathematics or code. Do not infer a theorem from this handoff; its claim tags and boundaries are in the canonical record.
 
@@ -28,25 +29,25 @@ Read the listed record and its linked preregistration, proof document, conventio
 - Cycle artifact files found in the working tree: 1
 - Cycle artifacts present in the Git index: 1
 - Artifacts by top-level epistemic status: PROVED=1
-- Recursively tagged fields indexed for search (not independent claims): 4
+- Recursively tagged fields indexed for search (not independent claims): 5
 
 ## Latest sealed record
 
 - Latest record: `cycle-162-workflow-migration-v1` (Cycle 162, `PROVED`)
-- Status: `SEALED_WORKFLOW_MIGRATION_AND_INTERFACE_GATE`
-- Boundary: This proves only the current record-workflow migration and its frozen dimension-six handoff; it proves no mathematical theorem, dimension-six TCC identity, boundary limit, or nonexistence claim.
-- Next mathematical target: Construct and test a convention-pinned finite-characteristic coefficient-to-cocycle/ray-logarithm interface with explicit selection, operation, branches, finite part, and AFK identification.
+- Status: `SEALED_ACCELERATED_WORKFLOW_AND_INTERFACE_FIRST_PROGRAM`
+- Boundary: This proves only the replayed workflow attachment, immutable evidence inventory, and scope-accurate strategic handoff; it proves no mathematical theorem, dimension-six TCC identity, fusion-continuity bridge, wild-local extension, boundary limit, or nonexistence claim.
+- Next mathematical target: Construct and test a convention-pinned finite-characteristic coefficient-to-cocycle/ray-logarithm interface with explicit selection, operation, branches, finite part, and AFK identification; determine whether an oriented wild-local extension at RQ-000692 supplies any part of it.
 
 ## Recent sealed records
 
 | Cycle | Record | Tag | Gate | Next target |
 |---:|---|---|---|---|
-| 162 | `cycle-162-workflow-migration-v1` | `PROVED` | `SEALED_WORKFLOW_MIGRATION_AND_INTERFACE_GATE` | Construct and test a convention-pinned finite-characteristic coefficient-to-cocycle/ray-logarithm interface with explicit selection, operation, branches, finite part, and AFK identification. |
+| 162 | `cycle-162-workflow-migration-v1` | `PROVED` | `SEALED_ACCELERATED_WORKFLOW_AND_INTERFACE_FIRST_PROGRAM` | Construct and test a convention-pinned finite-characteristic coefficient-to-cocycle/ray-logarithm interface with explicit selection, operation, branches, finite part, and AFK identification; determine whether an oriented wild-local extension at RQ-000692 supplies any part of it. |
 
 ## Useful queries
 
 ```sh
-python ../../tools/research_records.py --project research-records.json cycle 162
-python ../../tools/research_records.py --project research-records.json search "coefficient-to-cocycle"
-python ../../tools/research_records.py --project research-records.json check
+python3 ../../tools/research_records.py --project research-records.json cycle 162
+python3 ../../tools/research_records.py --project research-records.json search "Class-A"
+python3 ../../tools/research_records.py --project research-records.json check
 ```
