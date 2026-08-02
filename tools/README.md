@@ -5,6 +5,11 @@ read-only and provides `tables`, `schema`, and one-statement read-only `sql`.
 Each project owns the code that builds its database and any domain-specific
 commands.
 
+`research_records.py` builds, validates, and queries the standard immutable
+cycle-record schema. A project supplies only `research-records.json`, which
+declares record paths, local index/status locations, legacy migration
+exceptions, and status presentation.
+
 Install the shared pin in a project virtual environment:
 
 ```sh
@@ -16,4 +21,7 @@ Example:
 ```sh
 .venv/bin/python /root/projects/maph/tools/duckdb_tools.py \
   --database .research/index.duckdb tables
+
+.venv/bin/python /root/projects/maph/tools/research_records.py \
+  --project research-records.json rebuild
 ```

@@ -30,14 +30,11 @@ rebuildable query index. The historical aggregate ledger is frozen at
 Rebuild and inspect the local index:
 
 ```sh
-cd /root/projects/maph/projects/guth-maynard-zero-density
-.venv/bin/python research_index.py rebuild
-.venv/bin/python research_index.py check
-.venv/bin/python research_index.py cycle 151
-.venv/bin/python research_index.py search 'negative-tail'
-.venv/bin/python research_db.py summary
-.venv/bin/python research_db.py gates
-.venv/bin/python research_db.py deps cycle-151-sampled-comb-double-poisson-v1
+cd /root/projects/maph
+projects/guth-maynard-zero-density/.venv/bin/python tools/research_records.py --project projects/guth-maynard-zero-density/research-records.json rebuild
+projects/guth-maynard-zero-density/.venv/bin/python tools/research_records.py --project projects/guth-maynard-zero-density/research-records.json check
+projects/guth-maynard-zero-density/.venv/bin/python tools/research_records.py --project projects/guth-maynard-zero-density/research-records.json cycle 151
+projects/guth-maynard-zero-density/.venv/bin/python tools/research_records.py --project projects/guth-maynard-zero-density/research-records.json search negative-tail
 ```
 
 ## Frozen baseline
@@ -164,9 +161,9 @@ cd /root/projects/maph
 git status --short --branch
 cat projects/guth-maynard-zero-density/PLAN.md
 cat projects/guth-maynard-zero-density/STATUS.md
+projects/guth-maynard-zero-density/.venv/bin/python tools/research_records.py --project projects/guth-maynard-zero-density/research-records.json check
+projects/guth-maynard-zero-density/.venv/bin/python tools/research_records.py --project projects/guth-maynard-zero-density/research-records.json cycle 151
 cd projects/guth-maynard-zero-density
-.venv/bin/python research_index.py check
-.venv/bin/python research_index.py cycle 151
 python3 proof/build_cycle_144_actual_edge_coefficient_v1.py --check
 python3 proof/build_cycle_145_vector_autocorrelation_v1.py --check
 python3 proof/build_cycle_146_balanced_highpass_mask_v1.py --check
