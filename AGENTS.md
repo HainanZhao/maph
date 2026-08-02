@@ -135,6 +135,14 @@ status check and response in the relevant readable decision record. A missing
 or failed companion invocation is a reason to defer that critical decision,
 not to silently proceed; routine reversible work may continue.
 
+At session start, perform and record a liveness rehearsal: send the companion
+its role and first checkpoint, then, if the platform permits an agent to
+complete, reactivate that same stable identity once and obtain an
+acknowledgement. This tests the recovery path rather than assuming that a
+completed agent will remain reachable. The primary keeps the companion task
+identity and the latest checkpoint brief in the session decision record; it
+must not silently replace the companion with a new, unbriefed agent.
+
 ## 2. Discovery and proof are separate
 
 - Use `discovery/` for heuristics, floats, recognition, conjectural
