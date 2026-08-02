@@ -121,6 +121,10 @@ and commit once per completed research block—not after each lemma. An early
 seal is justified only by a correction, falsifier, externally useful result,
 or an irreversible strategy/gate decision. Batch routine checks locally.
 
+
+Validate the generated `STATUS.md` handoff and recovery commands before the
+one final seal; use a metadata-only correction only for a genuine post-seal
+defect, never as routine completion of the same research block.
 ### One live document set per cycle
 
 While a cycle is in progress, keep exactly one canonical preregistration and
