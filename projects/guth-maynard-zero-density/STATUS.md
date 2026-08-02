@@ -6,9 +6,9 @@ Canonical evidence is the Git-tracked per-cycle artifact and its linked files; `
 ## Cold-start handoff
 
 - Project outcome (PROVED): No improved zero-density coefficient, prime-interval endpoint, or L-function-family transfer is proved. The checked baseline remains density coefficient 30/13, with uniform and almost-all interval endpoints 17/30 and 2/15.
-- Why the active gate matters (PROVED): Cycles 177--182 separate the diagonal mechanisms exactly: Cycle 177 saturates raw beta-free pairs, Cycle 178 routes heavy fixed-beta fibres to seeded packets, Cycle 179 excludes exact-rational beta-zero towers, Cycle 180 excludes low-product rectangles, Cycle 181 exactifies common rational-intercept packets, and Cycle 182 makes every participating fibre a primitive rational-line segment. The active bottleneck is now a primitive-line-packet bound or a nonrational saturator—not raw pairs, same-label packets, exact-rational towers, low-product rectangles, packet/line partition alone, or terminal classifiers.
-- Progress criterion (CONJECTURED): By the Cycle-216 gate, the project must either prove a coefficient-preserving primitive-line-packet estimate yielding a strict direct triple-census margin, prove an aggregate heavy-packet-to-E7/E9 recurrence theorem, or delimit a materially larger nonrational primitive-line saturation class. Cycles 177--182 already dispose of raw pairs, individual heavy fibres, exact-rational towers, low products, beta-free ambiguity, and unstructured fibre multiplicity; another such result or a finite transport/interface classifier without actual population is non-progress. If no viable mechanism survives, promote E11/E12 and target a complete-form saving strictly greater than 3/50. Cycle 500 is the hard terminal project cap.
-- Explicitly deferred: The raw beta-free pair route is saturated by Cycle 177; same-label heavy fibres are structurally routed by Cycle 178; exact-rational beta-zero towers and low-product cross-label rectangles are subcritical by Cycles 179--180; beta-free shell aggregation is superseded by Cycle-181 intercept packets; unstructured fibre counts are superseded by Cycle-182 primitive-line segments. Cycles 165--176 remain parked as a conditional inverse toolkit until aggregate recurrence or other actual population enters an existing terminal branch. E14D-L, boundary denominators, direct interval propagation, and L-function transfer are deferred. Paper-stage hostile audit begins only after a manuscript theorem is frozen.
+- Why the active gate matters (PROVED): Cycles 177--183 separate the diagonal mechanisms exactly: Cycle 177 saturates raw beta-free pairs, Cycle 178 routes heavy fixed-beta fibres to seeded packets, Cycle 179 excludes exact-rational beta-zero towers, Cycle 180 excludes low-product rectangles, Cycle 181 exactifies common rational-intercept packets, Cycle 182 makes every participating fibre a primitive rational-line segment, and Cycle 183 retains a critical packet in one populated seven-field primitive-ray box. The active bottleneck is now an in-box coefficient-preserving bound, seeded recurrence, or nonrational box saturator—not raw pairs, same-label packets, exact-rational towers, low-product rectangles, or a packet/line/box partition alone.
+- Progress criterion (CONJECTURED): By the Cycle-216 gate, the project must either prove a coefficient-preserving populated primitive-ray-box estimate yielding a strict direct triple-census margin, force an aggregate heavy-packet-to-E7/E9 seeded recurrence, or delimit a materially larger nonrational primitive-ray-box saturation class. Cycles 177--183 already dispose of raw pairs, individual heavy fibres, exact-rational towers, low products, beta-free ambiguity, unstructured fibre multiplicity, and unpopulated box interfaces; another such result or a finite transport/interface classifier without actual population is non-progress. If no viable mechanism survives, promote E11/E12 and target a complete-form saving strictly greater than 3/50. Cycle 500 is the hard terminal project cap.
+- Explicitly deferred: The raw beta-free pair route is saturated by Cycle 177; same-label heavy fibres are structurally routed by Cycle 178; exact-rational beta-zero towers and low-product cross-label rectangles are subcritical by Cycles 179--180; beta-free shell aggregation is superseded by Cycle-181 intercept packets; unstructured fibre counts are superseded by Cycle-182 primitive-line segments; and an unpopulated dyadic interface is superseded by Cycle-183's populated ray box. Cycles 165--176 remain parked as a conditional inverse toolkit until aggregate recurrence or other actual population enters an existing terminal branch. E14D-L, boundary denominators, direct interval propagation, and L-function transfer are deferred. Paper-stage hostile audit begins only after a manuscript theorem is frozen.
 
 ### Start here (from this project directory)
 
@@ -16,34 +16,36 @@ Canonical evidence is the Git-tracked per-cycle artifact and its linked files; `
 - `research rebuild`
 - `research check`
 - `research cycle 63`
+- `research cycle 183`
 - `research cycle 182`
-- `research cycle 181`
+- `research prereg check docs/cycle-183-intercept-cleared-ray-box-preregistration-v1.md --expected-cycle 183 --allow-head-drift`
+- `python3 proof/build_cycle_183_intercept_cleared_ray_box_v1.py --check`
 - `python3 proof/build_cycle_182_fibre_line_rigidity_v1.py --check`
-- `python3 proof/build_cycle_181_common_intercept_packet_v1.py --check`
+- `cat docs/cycle-183-intercept-cleared-ray-box-v1.md`
 - `cat docs/cycle-182-fibre-line-rigidity-v1.md`
-- `cat docs/cycle-181-common-intercept-packet-v1.md`
 - `cat PLAN.md`
 
 Read the listed record and its linked preregistration, proof document, conventions, builder, and test before changing mathematics or code. Do not infer a theorem from this handoff; its claim tags and boundaries are in the canonical record.
 
 ## Index coverage
 
-- Cycle artifact files found in the working tree: 283
-- Cycle artifacts present in the Git index: 282
-- Artifacts by top-level epistemic status: CONJECTURED=6, LEGACY_UNTAGGED=10, OBSERVED=56, PROVED=211
-- Recursively tagged fields indexed for search (not independent claims): 23648
+- Cycle artifact files found in the working tree: 284
+- Cycle artifacts present in the Git index: 283
+- Artifacts by top-level epistemic status: CONJECTURED=6, LEGACY_UNTAGGED=10, OBSERVED=56, PROVED=212
+- Recursively tagged fields indexed for search (not independent claims): 23653
 
 ## Latest sealed record
 
-- Latest record: `cycle-182-fibre-line-rigidity-v1` (Cycle 182, `PROVED`)
-- Status: `SEALED_COMMON_INTERCEPT_FIBRE_LINE_RIGIDITY_AND_DENOMINATOR_CAPACITY`
-- Boundary: This proves rational-line rigidity, lattice completion, and primitive-denominator capacity for one common-intercept packet. It proves no in-packet census bound, aggregate recurrence, density gain, or interval result.
-- Next mathematical target: Prove a coefficient-preserving upper bound for stable cross-label rectangles in one primitive common-intercept line packet, or construct a nonrational actual saturator for it. Fibre-line rigidity alone is not a census bound or recurrence.
+- Latest record: `cycle-183-intercept-cleared-ray-box-v1` (Cycle 183, `PROVED`)
+- Status: `SEALED_INTERCEPT_CLEARED_PRIMITIVE_RAY_BOX_SATURATION_CLASS`
+- Boundary: This proves an exact populated primitive-ray candidate saturation class inside one common-intercept stable packet. It proves no upper bound inside that class, aggregate recurrence, density gain, or interval result.
+- Next mathematical target: Bound a populated primitive-ray box coefficient-preservingly, force its mass into a seeded recurrence, or construct it as a genuine nonrational actual exponential saturator. A dyadic box selection alone is not density or interval progress.
 
 ## Recent sealed records
 
 | Cycle | Record | Tag | Gate | Next target |
 |---:|---|---|---|---|
+| 183 | `cycle-183-intercept-cleared-ray-box-v1` | `PROVED` | `SEALED_INTERCEPT_CLEARED_PRIMITIVE_RAY_BOX_SATURATION_CLASS` | Bound a populated primitive-ray box coefficient-preservingly, force its mass into a seeded recurrence, or construct it as a genuine nonrational actual exponential saturator. A dyadic box selection alone is not density or interval progress. |
 | 182 | `cycle-182-fibre-line-rigidity-v1` | `PROVED` | `SEALED_COMMON_INTERCEPT_FIBRE_LINE_RIGIDITY_AND_DENOMINATOR_CAPACITY` | Prove a coefficient-preserving upper bound for stable cross-label rectangles in one primitive common-intercept line packet, or construct a nonrational actual saturator for it. Fibre-line rigidity alone is not a census bound or recurrence. |
 | 181 | `cycle-181-common-intercept-packet-v1` | `PROVED` | `SEALED_COMMON_INTERCEPT_EXACTIFICATION_AND_STABLE_PACKET_REDUCTION` | Prove a coefficient-preserving upper bound inside a fixed common-intercept stable packet, or construct a nonrational actual saturator for such a packet. A packet decomposition alone is not recurrence, density, or interval progress. |
 | 180 | `cycle-180-cross-label-pair-determinant-v1` | `PROVED` | `SEALED_NONZERO_CROSS_LABEL_PAIR_DETERMINANT_AND_STABLE_SHELL_REDUCTION` | Prove a coefficient-preserving upper bound for the stable nonzero-determinant shell census, or construct a nonrational actual saturator for that census. Scalar product counts, raw pairs, exact-rational towers, and low-product rectangles are non-progress. |
@@ -51,14 +53,13 @@ Read the listed record and its linked preregistration, proof document, conventio
 | 178 | `cycle-178-diagonal-aware-fibre-extraction-v1-normalization-correction` | `PROVED` | `SEALED_ORDERED_CROSS_LABEL_NORMALIZATION_CORRECTION` | None |
 | 178 | `cycle-178-diagonal-aware-fibre-extraction-v1` | `PROVED` | `SEALED_FIXED_BETA_HEAVY_FIBRE_SEEDED_PACKET_OR_CROSS_LABEL_REMAINDER` | Prove a coefficient-preserving upper bound for the retained cross-label mass, or construct a genuine actual positive-exponential cross-label saturator. The combinatorial dichotomy alone is not an E13 advance. |
 | 177 | `cycle-177-actual-curve-rational-root-saturator-v1` | `PROVED` | `SEALED_ACTUAL_POSITIVE_EXPONENTIAL_RAW_PAIR_CENSUS_SATURATOR` | Replace the raw pair route by a diagonal-aware direct triple census after extracting heavy seeded packets, or prove a heavy-actual-packet-to-seeded-recurrence theorem strong enough for E7/E9. Any further pair statistic must exclude or explicitly retain same-label rational-root rays. |
-| 176 | `cycle-176-physical-row-modular-web-v1` | `PROVED` | `SEALED_PHYSICAL_ROW_DIVISOR_INCIDENCE_OR_SUPPORT_SEPARATION_WEB` | Force actual physical-row reuse or quantitatively control the labelled support-separation, common-numerator, distinct-avoidance, or gcd-energy webs. |
 
 ## Useful queries
 
 ```sh
 python /root/projects/maph/tools/research_records.py --project research-records.json cycle 63
+python /root/projects/maph/tools/research_records.py --project research-records.json cycle 183
 python /root/projects/maph/tools/research_records.py --project research-records.json cycle 182
-python /root/projects/maph/tools/research_records.py --project research-records.json cycle 181
-python /root/projects/maph/tools/research_records.py --project research-records.json search "primitive line"
+python /root/projects/maph/tools/research_records.py --project research-records.json search "primitive ray box"
 python /root/projects/maph/tools/research_records.py --project research-records.json check
 ```

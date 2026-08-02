@@ -129,6 +129,30 @@ or versioned document only after a cycle has sealed, or when an immutable
 certificate actually needs correction. The working ledger records rejected
 routes and compact reasons, not full derivational scratch.
 
+### Executable preregistration preflight
+
+For every new cycle, the canonical preregistration must contain exactly one
+embedded `research-freeze-v1` JSON manifest before executable discovery,
+proof, test, or replay code is created or run. It is the machine-readable
+freeze layer *inside that same preregistration*, not a second specification.
+It declares typed parameters and resource caps (or explicitly justified
+`not_applicable` entries), formula families, selection and failure rules,
+the pre-execution UTC/Git boundary, and all frozen input paths. Run the shared
+preflight first:
+
+```sh
+research prereg check docs/cycle-<n>-<slug>-preregistration-v1.md \
+  --expected-cycle <n>
+```
+
+The builder freezes both the preregistration and validator hashes and records
+the checked manifest hash. A manifest-head mismatch blocks initial execution;
+only deterministic replay after a later commit may use `--allow-head-drift`.
+Do not retrofit a sealed record: legacy pre-manifest cycles are explicitly
+unprotected, not silently repaired. A prose rule, placeholder value,
+post-result cap, or executable input that disagrees with the manifest fails
+preflight and halts that unsealed branch until corrected.
+
 ### Missing-bridge research rule
 
 An absent theorem, constructor, or interface is not a terminal research
@@ -328,6 +352,10 @@ Never conceal, erase, or silently work around a listed finding.
 - Re-read a file immediately before editing it.
 - Timebox exploration and preserve negative results as artifacts.
 - Record wall time and peak memory for principal replays.
+- Treat a transient slow-server, spinner, or dismissible wait notice as
+  already dismissed: continue safe local work or wait/retry silently. Surface
+  it only after it has become a real blocker under the ordinary escalation
+  rules, not merely because the interface is slow.
 - Pin tool/library versions. Different PARI versions may emit different
   but equivalent generators; prove equivalence before changing expected
   outputs. Use the pinned Linux/container pipeline when exact byte-level
