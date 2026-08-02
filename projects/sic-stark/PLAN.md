@@ -10,9 +10,9 @@
   scopes in dimensions 4, 5, 7, and 8. No dimension-six TCC identity,
   coefficient-to-ray map, fusion-continuity theorem, or boundary-limit theorem
   is proved. `CERTIFIED_NUMERICAL` packet growth is not a nonexistence theorem.
-- Current state: Cycle 171 / `B009` falsifies the canonical wild `F3[C3]`
-  module lift. The next engine must derive, rather than choose, the actual
-  oriented 3-adic ray-unit filtration and Artin action of RQ-000692.
+- Current state: Cycle 172 / `B010` extracts the actual first 3-adic
+  ray-unit graded quotient and local ramification data. Cycle 173 / `B011`
+  must derive its oriented Artin action before a coefficient module is tested.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -25,8 +25,8 @@
 ## Budget, accounting, and stop condition
 
 - Total forward budget: 200 substantive research cycles, counted `B001/200`
-  through `B200/200`; the counter is currently `B009/200`.
-- Cycle 172 is `B010`. Repository cycle numbers and budget ordinals advance
+  through `B200/200`; the counter is currently `B010/200`.
+- Cycle 173 is `B011`. Repository cycle numbers and budget ordinals advance
   together unless a non-counted record intervenes; the budget ordinal is the
   authoritative campaign counter.
 - A cycle counts only when it is a preregistered substantive research block
@@ -198,8 +198,8 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `B009_OF_200` | Seal Cycle 172 as `B010`, then increment only for substantive research blocks. | Counting workflow or archive-only work. |
-| D6 interface | `DERIVED_WILD_LOCAL_FILTRATION_ENGINE` | Extract the actual oriented 3-adic ray-unit filtration and Artin action before testing its module. | Choosing a module from the defect; repeating prototype modules; treating local data as a logarithm map. |
+| Project budget | `B010_OF_200` | Seal Cycle 173 as `B011`, then increment only for substantive research blocks. | Counting workflow or archive-only work. |
+| D6 interface | `DERIVED_WILD_LOCAL_ARTIN_ENGINE` | Derive the oriented Artin action on the extracted quotient before testing its module. | Choosing a module from the defect; repeating prototype modules; treating local data as a logarithm map. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
@@ -216,16 +216,16 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 172 / `B010`
+## Next goal: Cycle 173 / `B011`
 
 Preregister one substantive block with this question:
 
-> What exact oriented 3-adic ray-unit filtration and Artin action does the
-> RQ-000692 ray field induce?
+> What oriented Artin action does RQ-000692 induce on its extracted first
+> 3-adic ray-unit quotient?
 
-Cycle 172 must freeze the local field, unit filtration, Artin convention,
-orientation, extraction algorithm, and failure rule before executable work.
-No guessed module or defect-fitted action advances the gate.
+Cycle 173 must freeze the local field, quotient, Artin convention, orientation,
+action-extraction algorithm, and failure rule before executable work. No guessed
+module or defect-fitted action advances the gate.
 
 ## Recovery
 
