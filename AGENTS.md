@@ -102,6 +102,22 @@ question, or the next authorized action changes. Seal cycle-level findings in
 their individual record and regenerate the compact status view. Never erase a
 failed path from the cycle record set.
 
+### Research-block cadence
+
+A research cycle is a substantive block, not a single algebraic observation.
+Preregister one question with a real advance condition, then pursue all
+closely dependent derivations, counterexamples, and exact checks needed to
+answer it before sealing. A normal cycle should contain multiple lemmas or a
+genuine bound-or-obstruction decision; do not create a new cycle merely to
+name an intermediate decomposition, factorization, or bookkeeping repair.
+
+Keep intermediate work in a short `discovery/` or readable working-decision
+ledger, tagged `CONJECTURED`/`OBSERVED` as appropriate. Promote it only with
+the enclosing cycle's immutable record. Run replay, profile/status rebuild,
+and commit once per completed research block—not after each lemma. An early
+seal is justified only by a correction, falsifier, externally useful result,
+or an irreversible strategy/gate decision. Batch routine checks locally.
+
 ## 1a. Critical-decision companion
 
 Every research session in this repository starts one companion at the same
