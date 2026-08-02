@@ -1,0 +1,79 @@
+{
+  "artifact_id": "cycle-154-coefficient-escape-localization-v1",
+  "claim_boundary": "This artifact proves only the conditional finite labelled escape localization lemma. It does not establish an actual coefficient partition, a comb-norm majorant, positive transport, a bounded fan, a moment, density, or intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "finite_labelled_escape_localization": {
+    "boundary": "this localizes an assumed finite labelled escape projection and a frozen comb-norm bound; it does not prove the partition, bound the class, or prove a full moment, density, or intervals",
+    "epistemic_status": "PROVED",
+    "finite_class_pigeonhole": "if -Re<F,w_h>/W_h>=kappa and F is an additive partition into J labelled classes, one class has negative normalized projection at least kappa/J",
+    "label_retention": "the chosen class retains its frozen escape reason and all coefficient, rational-tail, and payload labels",
+    "one_ray_l2": "if the frozen comb norm satisfies ||w_h||_2^2<=A W_h with fixed A, Cauchy turns a class projection at least (kappa/J)W_h into L2 norm squared at least (kappa/J)^2 W_h/A"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/coefficient_escape_localization_v1.py",
+      "sha256": "c5790ac5ec34850415b64a1dbce79874c6e206f42018151f72b7cfb8b6181c91"
+    },
+    "cycle153": {
+      "path": "artifacts/cycle-153-actual-mass-routing-v1.json",
+      "sha256": "aed7046d0019dbf13178aee549da8abcec23bbb747b101a88b846ff56a6769e9"
+    },
+    "document": {
+      "path": "docs/cycle-154-coefficient-escape-localization-v1.md",
+      "sha256": "8b872b4c38f065403fae90accb8f3ddde2041f6e870f27cc1b7a40b1e86172c8"
+    },
+    "preregistration": {
+      "path": "docs/cycle-154-coefficient-transport-preregistration-v1.md",
+      "sha256": "ddc37e517a93fd34bb56b4dee8ebf8dc3825342df6db85076b4ba44fcaa7eac5"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_154_coefficient_escape_localization_v1.py",
+      "sha256": "b4268bd06b2b82c51bcb96229f1cd51d392713f8c68bc6b46f300351915d2cd5"
+    }
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "derive or reject the actual finite coefficient-escape partition and fixed comb-norm majorant; then analyze the selected class or prove O_kappa(1) positive fixed-phase transport"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_154_coefficient_escape_localization_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_154_coefficient_escape_localization_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_154_coefficient_escape_localization_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sample": {
+    "chosen_class_index": "2",
+    "chosen_class_negative_projection": "9/10",
+    "class_count": "3",
+    "epistemic_status": "PROVED",
+    "one_ray_l2_squared_over_scale_lower_bound": "1/18",
+    "per_class_lower_bound": "1/3",
+    "sum_class_negative_parts": "1",
+    "total_negative_projection": "1",
+    "witness_norm_squared_over_scale": "2"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_154_coefficient_escape_localization_v1.py",
+    "sha256": "4ac2a694f4718beb71b85fd70079c4df82f54da7d96a08f5f50fe3ace831579e"
+  },
+  "status": "SEALED_CONDITIONAL_FINITE_LABELLED_ESCAPE_LOCALIZATION"
+}
