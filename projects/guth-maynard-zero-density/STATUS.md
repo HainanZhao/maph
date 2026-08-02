@@ -6,8 +6,8 @@ Canonical evidence is the Git-tracked per-cycle artifact and its linked files; `
 ## Cold-start handoff
 
 - Project outcome (PROVED): No improved zero-density coefficient, prime-interval endpoint, or L-function-family transfer is proved. The checked baseline remains density coefficient 30/13, with uniform and almost-all interval endpoints 17/30 and 2/15.
-- Why the active gate matters (PROVED): Cycles 165--172 turn any critical fixed-beta Cycle-63 census into a massed terminal web, classify cross-label transport and joins, rule out marginal-only overlap, and give an exact seeded projective lift plus eligibility-weighted divisor moment transfer. Cycle 172 rules out only a signed abstract local surplus. The active bottleneck is the actual positive-exponential primitive-fibre geometry.
-- Progress criterion (CONJECTURED): The next advance must use the actual positive exponential curve with complete beta-anchor, range, and multiplicity labels to force normalized eligible divisor-moment gain, or build a countermodel satisfying those genuine constraints. A signed abstract model, source-marginal calculation, compatibility calculus, direct edge, web count, finite lift example, scalar gcd average, unanchored recurrence, beta-free packet, or deduplicated plane count alone is non-progress.
+- Why the active gate matters (PROVED): Cycles 165--173 turn any critical fixed-beta Cycle-63 census into a massed terminal web, classify cross-label transport and joins, rule out marginal-only overlap, and give an exact seeded projective lift plus eligibility-weighted divisor moment transfer. Cycle 173 closes the frozen positive forward conservative direct-map gate. The active bottleneck is post-forward positive-exponential transport/coupling.
+- Progress criterion (CONJECTURED): The next advance must deliberately leave Cycle 173's empty forward conservative gate via reverse orientation, quantitatively justified row-local strip slack, or a non-direct actual positive-exponential transport/coupling map with complete labels. A signed abstract model, forward conservative direct edge, source-marginal calculation, compatibility calculus, web count, finite lift example, scalar gcd average, unanchored recurrence, beta-free packet, or deduplicated plane count alone is non-progress.
 - Explicitly deferred: Boundary denominators within a fixed power of Q are a separate branch; paper-stage hostile audit begins only after a manuscript theorem is frozen.
 
 ### Start here (from this project directory)
@@ -15,31 +15,32 @@ Canonical evidence is the Git-tracked per-cycle artifact and its linked files; `
 - `source ../../tools/dev-env.sh`
 - `research rebuild`
 - `research check`
-- `research cycle 172`
-- `python3 proof/build_cycle_172_primitive_eligible_fibre_moment_v1.py --check`
-- `cat docs/cycle-172-primitive-eligible-fibre-moment-v1.md`
-- `cat discovery/cycle-172-primitive-eligible-fibre-moment-working-v1.md`
+- `research cycle 173`
+- `python3 proof/build_cycle_173_positive_forward_balance_v1.py --check`
+- `cat docs/cycle-173-positive-forward-balance-v1.md`
+- `cat discovery/cycle-173-positive-forward-balance-working-v1.md`
 
 Read the listed record and its linked preregistration, proof document, conventions, builder, and test before changing mathematics or code. Do not infer a theorem from this handoff; its claim tags and boundaries are in the canonical record.
 
 ## Index coverage
 
-- Cycle artifact files found in the working tree: 271
-- Cycle artifacts present in the Git index: 270
-- Artifacts by top-level epistemic status: CONJECTURED=6, LEGACY_UNTAGGED=10, OBSERVED=56, PROVED=199
-- Recursively tagged fields indexed for search (not independent claims): 23590
+- Cycle artifact files found in the working tree: 272
+- Cycle artifacts present in the Git index: 271
+- Artifacts by top-level epistemic status: CONJECTURED=6, LEGACY_UNTAGGED=10, OBSERVED=56, PROVED=200
+- Recursively tagged fields indexed for search (not independent claims): 23595
 
 ## Current gate
 
-- Latest record: `cycle-172-primitive-eligible-fibre-moment-v1` (Cycle 172, `PROVED`)
-- Status: `SEALED_PRIMITIVE_LOCAL_INTERFACE_DOES_NOT_FORCE_DIVISOR_MOMENT_SURPLUS`
-- Boundary: This proves a finite signed abstract labelled local-interface countermodel and typed denominator-capacity obstruction family. Its negative alpha values lie outside the actual positive exponential curve, so it proves no statement about the actual global census, recurrence, skeleton, density, or intervals.
-- Next mathematical target: On the actual positive exponential curve, use a global exponential/fibre invariant to force numerator/denominator divisor incidence or quantify its absence in the complete labelled banks.
+- Latest record: `cycle-173-positive-forward-balance-v1` (Cycle 173, `PROVED`)
+- Status: `SEALED_POSITIVE_FORWARD_CONSERVATIVE_BALANCE_GATE_EMPTY`
+- Boundary: This proves that the actual positive forward direct-map branch cannot satisfy the frozen Cycle-167 conservative balance, admissibility, and simultaneous dyadic-range gate. It does not rule out reverse orientation, extra strip slack, different maps, global coupling, recurrence, density, or intervals.
+- Next mathematical target: Develop reverse-orientation, quantified-slack, or genuinely new transport/coupling machinery on the actual positive exponential curve.
 
 ## Recent sealed records
 
 | Cycle | Record | Tag | Gate | Next target |
 |---:|---|---|---|---|
+| 173 | `cycle-173-positive-forward-balance-v1` | `PROVED` | `SEALED_POSITIVE_FORWARD_CONSERVATIVE_BALANCE_GATE_EMPTY` | Develop reverse-orientation, quantified-slack, or genuinely new transport/coupling machinery on the actual positive exponential curve. |
 | 172 | `cycle-172-primitive-eligible-fibre-moment-v1` | `PROVED` | `SEALED_PRIMITIVE_LOCAL_INTERFACE_DOES_NOT_FORCE_DIVISOR_MOMENT_SURPLUS` | On the actual positive exponential curve, use a global exponential/fibre invariant to force numerator/denominator divisor incidence or quantify its absence in the complete labelled banks. |
 | 171 | `cycle-171-eligibility-weighted-projective-content-v1` | `PROVED` | `SEALED_ELIGIBILITY_WEIGHTED_PROJECTIVE_CONTENT_DIVISOR_WEB_AND_SHARP_TRANSFER` | Prove an actual lower bound for the complete labelled eligible divisor-content moment, or quantitatively bank seed/range, error, capacity, source-core, numerator-absorption, or denominator-absorption mass. |
 | 170 | `cycle-170-projective-packet-lift-v1` | `PROVED` | `SEALED_PROJECTIVE_LIFT_SEEDED_TARGET_PACKET_OR_ERROR_CONTENT_ADMISSIBILITY_CLASSIFIER` | Force a population of compatible source packet/cross-edge pairs into the seeded-deep branch, or bound/structure every low-content, error-load, and capacity obstruction bank. |
@@ -47,7 +48,6 @@ Read the listed record and its linked preregistration, proof document, conventio
 | 168 | `cycle-168-edge-packet-join-v1` | `PROVED` | `SEALED_EDGE_PACKET_COMPATIBILITY_OR_TYPED_SUPPORT_SEPARATION` | Prove a label-faithful lower bound for the bipartite edge/packet compatibility form, or establish a typed support-separation inverse for the actual Cycle-165--167 populations. |
 | 167 | `cycle-167-affine-fibre-transport-v1-scope-correction` | `PROVED` | `SEALED_REDUCED_RATIONAL_SCOPE_CORRECTION` | Join an eligible cross-label edge to a retained target-local packet, or construct a labelled closed loop yielding an equivalent local relation. |
 | 167 | `cycle-167-affine-fibre-transport-v1` | `PROVED` | `SEALED_DIRECT_AFFINE_CROSS_LABEL_TRANSPORT_OR_OBSTRUCTION_CLASSIFIER` | Join an eligible cross-label edge to a retained target-local packet, or construct a labelled closed transport loop that yields an equivalent local relation while preserving beta and all range labels. |
-| 166 | `cycle-166-terminal-bank-entropy-v1` | `PROVED` | `SEALED_MASSED_BETA_ANCHORED_SHIFT_OR_SEEDED_PACKET_WEB` | Control one massed web, or turn a seeded packet/shift web into a strict E7/E9 skeleton margin while retaining beta, divisibility, and h-range labels. |
 
 ## Useful queries
 

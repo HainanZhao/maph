@@ -150,6 +150,10 @@ research db tables
   with primitive packets, valid local seed/range/balance labels, and no
   divisor-moment surplus. Its negative alpha values are outside the actual
   positive exponential curve, so it does not constrain the actual census.
+- `PROVED`: on the actual positive branch, Cycle 173 proves the frozen
+  forward direct-map conservative balance gate is empty: simultaneous row
+  ranges force `a/q<=2`, while balance and admissibility force `a/q>2`.
+  Reverse orientation, extra slack, and different maps remain open.
 
 ## Research-path graph
 
@@ -173,7 +177,7 @@ published reconstruction P0 [complete]
 | E14 | `UNSIGNED_VOLUME_LIMIT_REACHED` | Use only for inverse structure. |
 | E14D-L | `TIMEBOXED_AT_SCALE_LABEL_INFORMATION_LOSS` | Reopen only by restoring `t`/ordered atoms in a coefficient-preserving selector or proving a genuinely `t`-independent factorization. |
 | E14D-L mask cone | `RAW_ZERO_DIAGONAL_GRAM_OBSTRUCTION_BANKED_COEFFICIENT_NEGATIVE_SPECTRAL_ALIGNMENT_OPEN` | Concentrate actual negative spectral energy in a fixed labelled block family or prove a robust labelled block-complexity inverse. |
-| E14D-H | `POSITIVE_EXPONENTIAL_PRIMITIVE_FIBRE_MOMENT_OR_COUNTERMODEL_OPEN` | On the actual positive exponential curve, force normalized eligible divisor-moment gain from complete labelled fibres, or construct a countermodel preserving genuine curve, beta-anchor, range, and multiplicity constraints. |
+| E14D-H | `POST_FORWARD_GATE_TRANSPORT_OR_COUPLING_OPEN` | Develop reverse-orientation, justified row-local-slack, or non-direct positive-exponential transport/coupling machinery; the frozen forward conservative gate is empty. |
 | E15 | `ANCHOR_REQUIRED` | Classify anchored almost-eigenfunctions. |
 | E16 | `EXACT_VALUATION_WEB_BANKED` | Compile relation-rich structure to a genuine transport seed. |
 | E11/E12 | `AUTOCORRELATION_ANOVA_OPEN` | Save `>3/50` in complete form or force enough recurrence. |
@@ -227,6 +231,9 @@ published reconstruction P0 [complete]
   beta-retaining, range/balance-valid affine fibre with `u=v=1` and `M=W/2`.
   It is deliberately outside the positive exponential curve. Any real
   moment theorem must use that curve or its global fibre geometry.
+- `PROVED` Cycle 173: positivity makes the direct forward conservative
+  balance/range/admissibility ledger inconsistent. This closes only that
+  direct gate; it does not turn the no-go into a universal transport theorem.
 - `CONJECTURED` E15/E16: classify anchored shifted-strip almost-eigenfunctions
   and turn high-codegree alias structure into a seed with an explicit phase
   error budget. A seedless target-sized anchored graph is itself structural
@@ -325,11 +332,12 @@ gives the exact eligible divisor moment and sharp transfer but no actual
 moment surplus. Cycle 172 is sealed at
 `artifacts/cycle-172-primitive-eligible-fibre-moment-v1.json`: it rules out a
 moment surplus from the signed abstract local interface only; its negative
-alpha family is outside the actual curve. Next authorized action: preregister
-and execute one actual positive-exponential primitive-fibre engine that forces
-a normalized divisor-moment gain or supplies a genuine-curve countermodel
-with beta anchor, range, and multiplicity retained. No E7/E9 or density claim
-is authorized.
+alpha family is outside the actual curve. Cycle 173 is sealed at
+`artifacts/cycle-173-positive-forward-balance-v1.json`: it proves the frozen
+positive forward conservative direct-map gate empty. Next authorized action:
+preregister and execute one reverse-orientation, quantified row-local-slack,
+or non-direct positive-exponential transport/coupling engine. No E7/E9 or
+density claim is authorized.
 
 ## Crash recovery
 
