@@ -1,0 +1,81 @@
+{
+  "artifact_id": "cycle-168-edge-packet-join-v1",
+  "claim_boundary": "This proves an exact edge/local-packet compatibility calculus and typed nonjoin partition. It does not lower-bound overlap for actual populations or prove a recurrence, skeleton, density, or interval gain.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "boundary": "This is an exact compatibility calculus. It does not lower-bound overlap for actual edge and packet populations or prove a recurrence, skeleton, density, or interval result.",
+    "composition": "a compatible target edge seeds the local packet and realizes the Cycle-67 progression at strip constant C_edge+C_packet",
+    "loop": "a same-label direct affine loop has trivial integer holonomy; it does not create a nonzero local packet step",
+    "overlap": "the exact join count is the bipartite form sum_(e,p) weight(e)*weight(p)*1_Comp(e,p), not a product of global masses or a diagonal common-key product",
+    "separation": "target-label, target-range, packet-admissibility, subcritical-depth, and strip-constant failures are an exhaustive ordered partition for this join interface"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/edge_packet_join_v1.py",
+      "sha256": "3cabd49847031829460d8de73732e82a44cb7eac1564b0b1662c0f918335a262"
+    },
+    "cycle167_correction": {
+      "path": "artifacts/cycle-167-affine-fibre-transport-v1-scope-correction.json",
+      "sha256": "e2173286dd40f32f19fb1ba433bb2242c929f1eb2150de7e754ba1209fdeb00b"
+    },
+    "cycle67": {
+      "path": "artifacts/cycle-67-seeded-packet-recurrence-v1.json",
+      "sha256": "85bd999fca3e1d675c0b3096a6cd287866d9e1aef227239b42b94b39ff585d02"
+    },
+    "document": {
+      "path": "docs/cycle-168-edge-packet-join-v1.md",
+      "sha256": "c7f0340f7e3f4c83889d815ab4cbe60e48ffd2631e0edcaf524bc9f61c887b34"
+    },
+    "preregistration": {
+      "path": "docs/cycle-168-edge-packet-join-preregistration-v1.md",
+      "sha256": "aaa05a69f126e807b8a6acebd392d58b717df576a96bd838efd809062d383fdc"
+    },
+    "sealing_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "tests": {
+      "path": "tests/test_cycle_168_edge_packet_join_v1.py",
+      "sha256": "b403ec67b09fd42b0a0a2aebbd9e0fcc9c96b3b286347170386d15508ea192b8"
+    }
+  },
+  "join_calculus": {
+    "boundary": "This is an exact compatibility calculus. It does not lower-bound overlap for actual edge and packet populations or prove a recurrence, skeleton, density, or interval result.",
+    "composition": "a compatible target edge seeds the local packet and realizes the Cycle-67 progression at strip constant C_edge+C_packet",
+    "epistemic_status": "PROVED",
+    "loop": "a same-label direct affine loop has trivial integer holonomy; it does not create a nonzero local packet step",
+    "overlap": "the exact join count is the bipartite form sum_(e,p) weight(e)*weight(p)*1_Comp(e,p), not a product of global masses or a diagonal common-key product",
+    "separation": "target-label, target-range, packet-admissibility, subcritical-depth, and strip-constant failures are an exhaustive ordered partition for this join interface"
+  },
+  "prior_context": {
+    "cycle167_role": "provides only reduced-rational cross-label edges, not target-local packets",
+    "cycle67_role": "supplies propagation after one genuine target seed is joined to a local packet",
+    "epistemic_status": "PROVED"
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Prove a label-faithful lower bound for the bipartite edge/packet compatibility form, or establish a typed support-separation inverse for the actual Cycle-165--167 populations."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_168_edge_packet_join_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_168_edge_packet_join_v1.py",
+    "write_command": "python3 proof/build_cycle_168_edge_packet_join_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_168_edge_packet_join_v1.py",
+    "sha256": "546e08b8b6ce51de106eb01a814e88e39c2d7c3a31ec4988c871c49d78e3fb24"
+  },
+  "status": "SEALED_EDGE_PACKET_COMPATIBILITY_OR_TYPED_SUPPORT_SEPARATION"
+}
