@@ -350,8 +350,11 @@ Cycle 175 is preregistered at
 complete massed affine fibre to its exact eligibility breadth and common
 capacity class, or bank range/residue/discrepancy obstruction. It is now
 sealed at `artifacts/cycle-175-affine-eligibility-grid-v1.json`. Next
-authorized action: a genuinely multi-state aggregate-breadth or
-residue-avoidance-web engine. No E7/E9 or density claim is authorized.
+authorized action is Cycle 176, preregistered at
+`docs/cycle-176-physical-row-modular-web-preregistration-v1.md`: aggregate
+residue avoidance only through physical-row reuse, or retain a labelled
+support-separation/modular-complexity web. No E7/E9 or density claim is
+authorized.
 
 ## Crash recovery
 
