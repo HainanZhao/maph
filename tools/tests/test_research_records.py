@@ -18,7 +18,7 @@ class ResearchRecordsTest(unittest.TestCase):
             database = Path(temporary) / "index.duckdb"
             research_records.rebuild(database)
             con = research_records.duckdb.connect(str(database), read_only=True)
-            self.assertEqual(con.execute("SELECT count(*) FROM artifacts").fetchone()[0], 250)
+            self.assertEqual(con.execute("SELECT count(*) FROM artifacts").fetchone()[0], 252)
             self.assertEqual(
                 con.execute("SELECT status FROM artifacts WHERE cycle_number = 151").fetchone()[0],
                 "SEALED_GCD_WEIGHTED_NEGATIVE_TAIL_LOBE_OR_BOUNDARY_OPEN",
@@ -26,6 +26,14 @@ class ResearchRecordsTest(unittest.TestCase):
             status = research_records.render_status(con)
             self.assertIn("## Cold-start handoff", status)
             self.assertIn("No improved zero-density coefficient", status)
-            self.assertIn("research cycle 151", status)
+            self.assertIn("research cycle 152", status)
             self.assertEqual(research_records.check(con), 0)
             con.close()
+
+    def test_top_level_claim_prefers_claim_boundary(self) -> None:
+        rows = list(
+            research_records.tagged_claims(
+                {"epistemic_status": "PROVED", "claim_boundary": "concise boundary"}
+            )
+        )
+        self.assertEqual(rows, [("artifact", "PROVED", "concise boundary")])
