@@ -1,0 +1,197 @@
+{
+  "artifact_id": "cycle-180-cross-label-pair-determinant-v1",
+  "claim_boundary": "This proves a nonzero labelled cross-pair determinant, critical light-branch rectangle population, and low-product exclusion/stable-shell reduction. It proves no upper bound for the stable shell census, no recurrence, density gain, or interval result.",
+  "critical_rectangle_reduction": {
+    "epistemic_status": "PROVED",
+    "statement": "Under the Cycle-178 light branch and X>=2^38, T>=X^(16/25) forces at least X^(32/25)/32 ordered distinct-label rectangles. Each retains two physical pairs, has D!=0, and obeys |D-de(alpha_ell-alpha_m)|<=4CH/X."
+  },
+  "cross_label_pair_determinant": {
+    "boundary": "This is a full four-row determinant and product-split reduction. It proves no upper bound for its labelled stable-rectangle census, no recurrence, density gain, or interval result.",
+    "determinant": "For distinct labels separated by more than 4C/X, two actual pairs give a nonzero integer D=e*a-d*b with |D-de(alpha_ell-alpha_m)|<=4CH/X.",
+    "epistemic_status": "PROVED",
+    "population": "In the light branch, W_cross>=P(P-2R^2), where P=sum binom(N_ell,2)>=(T-L)/2. At the frozen critical scale X>=2^38 this gives W_cross>=T^2/32.",
+    "product_split": "The ordered-label r*d*e<K0 rectangle range has at most 8R^2 L times the ordered triple-divisor count. Above K0=4CHDelta/(pi X), the nonzero determinant is comparable to r*d*e/Delta.",
+    "samples": {
+      "determinant": {
+        "beta": "1/2",
+        "determinant_error": "0",
+        "determinant_error_bound": "3/250",
+        "determinant_integer": 2,
+        "label_spacing": "1/4",
+        "labels": {
+          "absolute_gap": 1,
+          "left": 1,
+          "right": 2
+        },
+        "left_pair": {
+          "a": 1,
+          "d": 2,
+          "difference_error": "0",
+          "h1": 21,
+          "h2": 23
+        },
+        "phase": "2",
+        "right_pair": {
+          "b": 1,
+          "difference_error": "0",
+          "e": 4,
+          "h1": 22,
+          "h2": 26
+        }
+      },
+      "low_product": {
+        "label_capacity": 3,
+        "low_product_rectangle_bound": 2400,
+        "ordered_gap_triples": 25,
+        "product_limit": 6,
+        "threshold": 2
+      },
+      "population": {
+        "label_capacity": 3,
+        "light_rectangle_lower_bound": 9,
+        "ordered_cross_label_rectangles": 54,
+        "threshold": 2,
+        "total_rows": 9,
+        "total_unordered_same_label_pairs": 9
+      },
+      "stable": {
+        "determinant": 20,
+        "determinant_lower_bound": "10",
+        "determinant_upper_bound": "30",
+        "error_bound": "2/25",
+        "phase": "20",
+        "product": 100,
+        "stable_cutoff": "4/5"
+      }
+    }
+  },
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "boundary": "This is a full four-row determinant and product-split reduction. It proves no upper bound for its labelled stable-rectangle census, no recurrence, density gain, or interval result.",
+    "determinant": "For distinct labels separated by more than 4C/X, two actual pairs give a nonzero integer D=e*a-d*b with |D-de(alpha_ell-alpha_m)|<=4CH/X.",
+    "population": "In the light branch, W_cross>=P(P-2R^2), where P=sum binom(N_ell,2)>=(T-L)/2. At the frozen critical scale X>=2^38 this gives W_cross>=T^2/32.",
+    "product_split": "The ordered-label r*d*e<K0 rectangle range has at most 8R^2 L times the ordered triple-divisor count. Above K0=4CHDelta/(pi X), the nonzero determinant is comparable to r*d*e/Delta.",
+    "samples": {
+      "determinant": {
+        "beta": "1/2",
+        "determinant_error": "0",
+        "determinant_error_bound": "3/250",
+        "determinant_integer": 2,
+        "label_spacing": "1/4",
+        "labels": {
+          "absolute_gap": 1,
+          "left": 1,
+          "right": 2
+        },
+        "left_pair": {
+          "a": 1,
+          "d": 2,
+          "difference_error": "0",
+          "h1": 21,
+          "h2": 23
+        },
+        "phase": "2",
+        "right_pair": {
+          "b": 1,
+          "difference_error": "0",
+          "e": 4,
+          "h1": 22,
+          "h2": 26
+        }
+      },
+      "low_product": {
+        "label_capacity": 3,
+        "low_product_rectangle_bound": 2400,
+        "ordered_gap_triples": 25,
+        "product_limit": 6,
+        "threshold": 2
+      },
+      "population": {
+        "label_capacity": 3,
+        "light_rectangle_lower_bound": 9,
+        "ordered_cross_label_rectangles": 54,
+        "threshold": 2,
+        "total_rows": 9,
+        "total_unordered_same_label_pairs": 9
+      },
+      "stable": {
+        "determinant": 20,
+        "determinant_lower_bound": "10",
+        "determinant_upper_bound": "30",
+        "error_bound": "2/25",
+        "phase": "20",
+        "product": 100,
+        "stable_cutoff": "4/5"
+      }
+    }
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/cross_label_pair_determinant_v1.py",
+      "sha256": "0995b4243e6d0c8c9d36a28d6b70ccdbb1987f73c0cce737d6ec19bf59a5741d"
+    },
+    "cycle178": {
+      "path": "artifacts/cycle-178-diagonal-aware-fibre-extraction-v1.json",
+      "sha256": "72797b1e97002d532b7bff28305330cea6f35f2b0e3192b87f7fb4adf99b0e9a"
+    },
+    "cycle179": {
+      "path": "artifacts/cycle-179-cross-label-geometric-tower-and-area-v1.json",
+      "sha256": "384d1b55bb2bd6bb797b9b3e727fca42a7fedb06aa145d7cb4df05d30f2adef5"
+    },
+    "document": {
+      "path": "docs/cycle-180-cross-label-pair-determinant-v1.md",
+      "sha256": "adfa52275997e867bdbba009be645d95a8601c7a587a7f032b92bec329441617"
+    },
+    "preregistration": {
+      "path": "docs/cycle-180-cross-label-pair-determinant-preregistration-v1.md",
+      "sha256": "e6ebc55b7f16c79ffca9e291d54ad51126715910604f821472ad5591fdb9099b"
+    },
+    "sealing_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "tests": {
+      "path": "tests/test_cycle_180_cross_label_pair_determinant_v1.py",
+      "sha256": "0cd507bb9c63d49f6ddcf1bb2a88b06b42dffa1eef76d8592885fc25d44b7fb0"
+    }
+  },
+  "low_product_exclusion": {
+    "epistemic_status": "PROVED",
+    "statement": "The ordered-label r*d*e<(4C/pi)HDelta/X range has O(R^2 Delta K log^2 K)=X^(28/25+o(1)) rectangles, so it cannot carry the critical population."
+  },
+  "mentor_checkpoint": {
+    "initial_flaw": "The first checkpoint asked whether D!=0 required stable-product scope.",
+    "recommendation": "APPROVE SEAL",
+    "resolution": "For D=0, the exact common slope a/d=b/e and the two row-specific pair errors force |alpha_ell-alpha_m|<=4C/X, contradicting the frozen distinct-label spacing globally; no product lower bound is used."
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Prove a coefficient-preserving upper bound for the stable nonzero-determinant shell census, or construct a nonrational actual saturator for that census. Scalar product counts, raw pairs, exact-rational towers, and low-product rectangles are non-progress."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_180_cross_label_pair_determinant_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_180_cross_label_pair_determinant_v1.py",
+    "write_command": "python3 proof/build_cycle_180_cross_label_pair_determinant_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_180_cross_label_pair_determinant_v1.py",
+    "sha256": "fc60a0a840594680ba2792d04ae545da313995b4a96d4d054c966bd5c0a8c332"
+  },
+  "stable_shell": {
+    "epistemic_status": "PROVED",
+    "statement": "Every surviving stable rectangle has pi*r*d*e/Delta <= |D| <= (2pi*exp(2pi*c)+pi)*r*d*e/Delta. The remaining census must retain the complete labelled rectangle and its D/product shells."
+  },
+  "status": "SEALED_NONZERO_CROSS_LABEL_PAIR_DETERMINANT_AND_STABLE_SHELL_REDUCTION"
+}

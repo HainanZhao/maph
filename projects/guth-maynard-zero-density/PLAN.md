@@ -2,8 +2,8 @@
 
 ## Purpose, boundary, and status
 
-- Project cap: Cycle 500. Cycle 179 is the latest sealed cycle, so the
-  remaining authorized cycle labels are 180--500.
+- Project cap: Cycle 500. Cycle 180 is the latest sealed cycle, so the
+  remaining authorized cycle labels are 181--500.
 - Objective: obtain either (i) an explicit improvement on the `30/13`
   zero-density coefficient that survives the complete density and
   short-interval ledger, (ii) a sharp saturation/inverse theorem for a
@@ -42,7 +42,7 @@
 - `STRATEGIC_DECISION`: the standing session mentor recommended this same
   within-project pivot because the current route optimized interfaces without
   proving the population theorem needed to enter them; that recommendation is
-  adopted. The project itself is not abandoned: 321 authorized cycle labels
+  adopted. The project itself is not abandoned: 320 authorized cycle labels
   remain, its baseline reconstruction and `EO-LF4` sharpness are banked, and
   two genuinely analytic routes remain. A new flagship-project decision is
   deferred until the Cycle-63 sprint and the E11/E12 fallback have both faced
@@ -148,6 +148,10 @@ the root `AGENTS.md`; they are not duplicated here.
   mass `O(X^(22/25))`. It also converts any remaining critical light census
   into `>>X^(32/25)` labelled approximate affine-area resonances; no upper
   bound for that new census is proved.
+- `PROVED`: Cycle 180 refines the remaining light population to four-row
+  cross-label rectangles with globally nonzero integer determinant. Its
+  low-product region is `X^(28/25+o(1))`, leaving critical stable determinant
+  shells with `|D|asymp |ell-m|de/Delta`; their upper bound is open.
 
 ## Research-path graph
 
@@ -158,7 +162,8 @@ published reconstruction P0 [complete]
         +-- raw Cycle 63 pair census [SATURATED BY C177]
         +-- heavy actual fibres --> seeded recurrence [complete]
         +-- exact-rational cross-label towers [subcritical by C179]
-        +-- labelled affine-area resonance census [active]
+        +-- low-product rectangles [subcritical by C180]
+        +-- stable nonzero determinant shells [active]
         +-- Cycles 165--176 terminal inverse toolkit [parked until population]
         +-- E14 unsigned incidence [volume limit; inverse input]
         +-- E14D-L signed Mellin aliases [deferred]
@@ -172,7 +177,7 @@ published reconstruction P0 [complete]
 
 | Gate | State | Advance condition |
 |---|---|---|
-| E13 / Cycle 63 | `EXACT_RATIONAL_CROSS_LABEL_NO_GO_AFFINE_AREA_CENSUS_ACTIVE` | Prove a coefficient-preserving bound for the labelled approximate affine-area census sufficient for a strict direct triple margin, or construct a genuine nonrational actual area-resonance saturator. The individual heavy-fibre route is proved but is not yet an aggregate E7/E9 recurrence bound. Raw pair bounds and exact-rational towers are disallowed as obstruction candidates. |
+| E13 / Cycle 63 | `STABLE_NONZERO_DETERMINANT_SHELL_CENSUS_ACTIVE` | Prove a coefficient-preserving bound for the stable labelled determinant shells sufficient for a strict direct triple margin, or construct a genuine nonrational stable-shell saturator. The individual heavy-fibre route is proved but is not yet an aggregate E7/E9 recurrence bound. Raw pairs, exact-rational towers, and low-product rectangles are disallowed as obstruction candidates. |
 | E14 | `UNSIGNED_VOLUME_LIMIT_REACHED` | Use only for inverse structure. |
 | E14D-L | `DEFERRED_AT_SCALE_LABEL_INFORMATION_LOSS` | Reopen only by restoring `t`/ordered atoms in a coefficient-preserving selector or proving a genuinely `t`-independent factorization. |
 | E14D-L mask cone | `RAW_ZERO_DIAGONAL_GRAM_OBSTRUCTION_BANKED_COEFFICIENT_NEGATIVE_SPECTRAL_ALIGNMENT_OPEN` | Concentrate actual negative spectral energy in a fixed labelled block family or prove a robust labelled block-complexity inverse. |
@@ -188,8 +193,8 @@ published reconstruction P0 [complete]
 
 | Route | Banked evidence | Missing evidence | Decision |
 |---|---|---|---|
-| Improved density / intervals | `PROVED` complete baseline ledger, explicit strict exponent targets, heavy-fibre extraction, and affine-area reduction | Any fixed-power affine-area census saving surviving reinsertion | Continue only through the Cycle-63 sprint; intervals remain downstream. |
-| Larger saturation theorem | `PROVED` `EO-LF4` exponent-20 sharpness, `lambda*Xi` reduction, C177 pair saturator, C178 heavy-fibre extraction, and C179 exact-rational cross-label no-go | Exhaustiveness for a materially larger coefficient-sensitive class or a nonrational actual area-resonance saturator | Test approximate cross-label geometry directly. |
+| Improved density / intervals | `PROVED` complete baseline ledger, explicit strict exponent targets, heavy-fibre extraction, and stable-shell reduction | Any fixed-power stable-shell census saving surviving reinsertion | Continue only through the Cycle-63 sprint; intervals remain downstream. |
+| Larger saturation theorem | `PROVED` `EO-LF4` exponent-20 sharpness, `lambda*Xi` reduction, C177 pair saturator, C178 heavy-fibre extraction, C179 rational no-go, and C180 low-product exclusion | Exhaustiveness for a materially larger coefficient-sensitive class or a nonrational stable-shell saturator | Test stable approximate cross-label geometry directly. |
 | Terminal web / skeleton | `PROVED` conditional Cycles 165--176 inverse toolkit | Actual census or branch population | Park; no further finite classifier without population. |
 | E11/E12 | `PROVED` exact ANOVA decomposition and strict `>3/50` target | Complete-form restriction saving or recurrence inverse | First fallback after the Cycle-63 engine gate. |
 | L-function transfer | No conductor-accounted transferred mechanism | A source theorem with strict margin | Defer; transfer cannot create the missing margin. |
@@ -205,7 +210,7 @@ saturator.
 
 | Cycle range | Deliverable | Decision rule |
 |---|---|---|
-| 177--216 | Cycles 177--179 saturated the raw pair route, extracted heavy fixed-beta fibres, and reduced light critical mass to labelled affine-area resonances while excluding exact-rational cross-label towers. Test the area census by coefficient-preserving spacing/determinant engines and nonrational actual saturator prototypes. | At Cycle 216 retain E13 only if a mechanism has a quantified path to fixed-power triple margin, aggregate recurrence control, or a materially larger actual area-resonance saturation theorem. No new terminal classifier counts as progress. |
+| 177--216 | Cycles 177--180 saturated raw pairs, extracted heavy fibres, excluded exact-rational towers and low products, and reduced light critical mass to stable nonzero determinant shells. Test those shells by coefficient-preserving spacing/inverse engines and nonrational actual saturator prototypes. | At Cycle 216 retain E13 only if a mechanism has a quantified path to fixed-power triple margin, aggregate recurrence control, or a materially larger actual stable-shell saturation theorem. No new terminal classifier counts as progress. |
 | 217--296 | Pursue exactly one analytic route: the surviving E13 mechanism, or E11/E12 complete autocorrelation--ANOVA after an E13 miss. | Require a strict Cycle-63 census margin, a complete-form `>3/50` saving/recurrence inverse, or a materially larger actual saturation theorem. |
 | 297--336 | Reinsert the strongest result into the complete powered-coordinate and density ledger; conduct the mid-cap portfolio gate. | If no strict gain or materially larger saturation theorem exists by Cycle 336, skip glue and propagation and move directly to scoped no-go synthesis and manuscript preparation. |
 | 337--400 | Conditional compiler/glue across E16 and E7/E9, or—after a failed Cycle-336 gate—final saturation/no-go synthesis. | Compiler work is authorized only when fed by a surviving analytic margin; otherwise strengthen and delimit the final theorem. |
@@ -214,26 +219,26 @@ saturator.
 
 ## Open questions and next action
 
-1. Can a coefficient-preserving spacing, determinant, or inverse theorem
-   bound the labelled affine-area census from Cycle 179 strongly enough for
-   `T<X^(16/25)`?
-2. Does the actual positive exponential admit a **nonrational** approximate
-   affine-area saturator at the critical triangle scale?
+1. Can a coefficient-preserving spacing or inverse theorem bound the stable
+   determinant-shell census from Cycle 180 strongly enough for `T<X^(16/25)`?
+2. Does the actual positive exponential admit a **nonrational** stable-shell
+   saturator at the critical four-row rectangle scale?
 3. Can the coefficient-faithful nonnegative autocorrelation ANOVA save
    strictly more than `3/50` in the complete form, or force two-scale
    recurrence?
 4. Only after actual population enters Cycles 165--176: which existing
    terminal branch carries a recoverable fixed-power share?
 
-Cycle 179 is sealed at
-`artifacts/cycle-179-cross-label-geometric-tower-and-area-v1.json`. The
-session mentor approved its exact-rational scope and area reduction. Next
-authorized action: preregister one substantive Cycle-180 labelled
-affine-area-census block. It must retain both labels, all three rows, the
-orientation, and the residual width; its advance is a strict area-census
-bound or a scoped nonrational actual saturator, not an exact-rational tower,
-same-label packet, or terminal classifier. Cycles 165--176 remain reference
-constraints, not the active derivation target.
+Cycle 180 is sealed at
+`artifacts/cycle-180-cross-label-pair-determinant-v1.json`. The session mentor
+confirmed global nonvanishing of its determinant from the two row-specific
+errors. Next authorized action: preregister one substantive Cycle-181 stable
+determinant-shell block. It must retain both labels, both physical pairs, the
+determinant and product shells, orientations, and individual residuals; its
+advance is a strict shell-census bound or a scoped nonrational saturator, not
+a raw pair, exact-rational tower, low-product rectangle, or terminal
+classifier. Cycles 165--176 remain reference constraints, not the active
+derivation target.
 
 ## Crash recovery
 
@@ -245,6 +250,7 @@ cat projects/guth-maynard-zero-density/STATUS.md
 cd projects/guth-maynard-zero-density
 research check
 research cycle 63
+research cycle 180
 research cycle 179
 research cycle 178
 research cycle 177
@@ -254,6 +260,7 @@ python3 proof/build_cycle_177_actual_curve_rational_root_saturator_v1.py --check
 python3 proof/build_cycle_178_diagonal_aware_fibre_extraction_v1.py --check
 python3 proof/build_cycle_178_diagonal_aware_fibre_extraction_normalization_correction_v1.py --check
 python3 proof/build_cycle_179_cross_label_geometric_area_v1.py --check
+python3 proof/build_cycle_180_cross_label_pair_determinant_v1.py --check
 python3 proof/build_cycle_176_physical_row_modular_web_v1.py --check
 cat docs/cycle-63-log-transport-v1.md
 ```
