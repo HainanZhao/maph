@@ -1,0 +1,117 @@
+{
+  "artifact_id": "cycle-174-deeper-local-action-v1",
+  "budget_ordinal": "B012",
+  "claim_boundary": "This exact result constructs only the oriented action on the local truncated ring O_L/P^4 and its ramification filtration. It provides no regulator equality, coefficient map, AFK interface, fusion theorem, or TCC identity.",
+  "cycle": 174,
+  "epistemic_status": "PROVED",
+  "exact_prototype": {
+    "conductor_crosscheck": {
+      "lower_filtration": "G_0=C6, G_1=G_2=C3, G_3=1",
+      "p3_exponents_for_characters_0_to_5": [
+        0,
+        2,
+        2,
+        1,
+        2,
+        2
+      ],
+      "upper_filtration": "G^0=C6, G^u=C3 for 0<u<=1, G^u=1 for u>1"
+    },
+    "explicit_action": {
+      "frobenius_cycle_indices": [
+        1,
+        5,
+        2,
+        4,
+        6,
+        3
+      ],
+      "g_index": 5,
+      "g_inverse_index": 3,
+      "uniformizer": "PARI-certified principal generator of P",
+      "vP_g2_minus_pi": 3,
+      "vP_g_inverse_minus_pi": 1,
+      "vP_g_inverse_plus_pi": 2,
+      "vP_g_minus_g_inverse": 3,
+      "vP_g_minus_pi": 1,
+      "vP_g_plus_pi": 2,
+      "wild_indices": [
+        2,
+        6
+      ]
+    },
+    "orientation_sensitive_quotient": {
+      "first_distinguishing_depth": 4,
+      "minimality": "g(pi)=g^-1(pi) mod P^3 but not mod P^4",
+      "quotient": "O_L/P^4"
+    },
+    "source_output": "discovery/cycle-174-deeper-local-action-prototype-v1.json"
+  },
+  "frozen_hashes": {
+    "instructions": {
+      "path": "AGENTS.md",
+      "sha256": "363495f0dbbe93e244b460c8eafb13247a8fb1f41be24f94c037ae9f6400c6f2"
+    },
+    "output": {
+      "path": "discovery/cycle-174-deeper-local-action-prototype-v1.json",
+      "sha256": "b99f775a337e1b2b718b4a866b70a8697583ba32476b8c34eb014a8bdc7756b3"
+    },
+    "prereg": {
+      "path": "docs/cycle-174-deeper-local-action-preregistration-v1.md",
+      "sha256": "79333e3675f295db3955e8cf3b860e792296da8d4c6e4c7b3281dc5ccc759021"
+    },
+    "prior": {
+      "path": "artifacts/cycle-173-local-artin-action-v2.json",
+      "sha256": "ddf13a934fed3f7cc16d316cab6f4835b20f44f4fdd9814b87ede91cdfa102d6"
+    },
+    "replay": {
+      "path": "proof/verify_cycle_174_deeper_local_action.py",
+      "sha256": "165da8aaa15c350162e13d193fc8b8647f1a756f478d833651943a2496185c57"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    }
+  },
+  "gate_outcome": {
+    "d6_interface": "ORIENTATION_SENSITIVE_LOCAL_QUOTIENT_CONSTRUCTED_LEADING_RESIDUE_REQUIRED",
+    "disallowed_pseudo_progress": [
+      "calling O_L/P^4 a regulator equality",
+      "fitting a transport from the convolution defect",
+      "treating local orientation as the coefficient-to-ray map"
+    ],
+    "remaining_bottleneck": "Derive the normalized leading residue of (g(pi)-g^-1(pi))/pi^3 and test a frozen local pairing against both anchors before proposing finite transport."
+  },
+  "outcome": {
+    "epistemic_status": "PROVED",
+    "statement": "The first exact local quotient distinguishing the oriented Artin elements is O_L/P^4, with g(pi)-g^-1(pi) of valuation 3."
+  },
+  "preregistration_preflight": {
+    "cycle": 174,
+    "manifest_sha256": "79333e3675f295db3955e8cf3b860e792296da8d4c6e4c7b3281dc5ccc759021",
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Cycle 175/B013: derive the normalized leading residue of (g(pi)-g^-1(pi))/pi^3 mod P, its generator behavior, and a frozen local pairing against the two anchors."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_174_deeper_local_action_v1.py --check",
+    "preflight_command": "research prereg check docs/cycle-174-deeper-local-action-preregistration-v1.md --expected-cycle 174 --allow-head-drift",
+    "prototype_command": "python3 proof/verify_cycle_174_deeper_local_action.py --output discovery/cycle-174-deeper-local-action-prototype-v1.json",
+    "write_command": "python3 proof/build_cycle_174_deeper_local_action_v1.py --write"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_174_deeper_local_action_v1.py",
+    "sha256": "8e33123f61ad0876e1962b1b78217f855d816cd93477feb31f56df99726fa500"
+  },
+  "status": "SEALED_ORIENTATION_SENSITIVE_DEEPER_LOCAL_QUOTIENT"
+}

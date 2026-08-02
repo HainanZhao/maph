@@ -10,11 +10,10 @@
   scopes in dimensions 4, 5, 7, and 8. No dimension-six TCC identity,
   coefficient-to-ray map, fusion-continuity theorem, or boundary-limit theorem
   is proved. `CERTIFIED_NUMERICAL` packet growth is not a nonexistence theorem.
-- Current state: Cycle 173 / `B011` derives the actual first-graded local
-  Artin action: its wild `C3` is trivial and its tame quotient acts by `-1`,
-  so this quotient loses the orientation. Cycle 174 / `B012` must construct
-  the explicit local generator action and first ramification break where an
-  oriented invariant could survive.
+- Current state: Cycle 174 / `B012` derives the complete local ramification
+  filtration and constructs the first orientation-sensitive quotient
+  `O_L/P^4`. Cycle 175 / `B013` must derive its normalized leading residue
+  and test a frozen local pairing against the two anchors.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -27,8 +26,8 @@
 ## Budget, accounting, and stop condition
 
 - Total forward budget: 200 substantive research cycles, counted `B001/200`
-  through `B200/200`; the counter is currently `B011/200`.
-- Cycle 174 is `B012`. Repository cycle numbers and budget ordinals advance
+  through `B200/200`; the counter is currently `B012/200`.
+- Cycle 175 is `B013`. Repository cycle numbers and budget ordinals advance
   together unless a non-counted record intervenes; the budget ordinal is the
   authoritative campaign counter.
 - A cycle counts only when it is a preregistered substantive research block
@@ -105,7 +104,14 @@
   fixes `g` by the norm-37 arithmetic Frobenius, and derives on `U_L^1/U_L^2`
   the action `g=-1`, `g^2=1`. Thus the first quotient cannot distinguish `g`
   from `g^-1`; this is a scoped first-graded obstruction only. See
-  `artifacts/cycle-173-local-artin-action-v1.json`.
+  `artifacts/cycle-173-local-artin-action-v2.json`.
+- `PROVED`: Cycle 174 enumerates all local conductor exponents
+  `[0,2,2,1,2,2]`, deriving `G_0=C6`, `G_1=G_2=C3`, `G_3=1`. Its
+  Frobenius-labelled uniformizer has
+  `v_P(g^2(pi)-pi)=v_P(g(pi)-g^-1(pi))=3`; hence `O_L/P^4` is the first
+  quotient distinguishing `g` from `g^-1`. This is an oriented local
+  quotient only, not a regulator or interface. See
+  `artifacts/cycle-174-deeper-local-action-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -164,7 +170,9 @@ Budget B001--B200
   |    |                                       `-- canonical wild C3 module [FALSIFIED]
   |    |                                            `-- derived 3-adic filtration [SEALED]
   |    |                                                 `-- first graded Artin action [ORIENTATION-BLIND]
-  |    |                                                      `-- explicit deeper local action / break [NEXT GATE]
+  |    |                                                      `-- explicit deeper local action / break [SEALED]
+  |    |                                                           `-- orientation-sensitive O/P^4 quotient [SEALED]
+  |    |                                                                `-- leading residue + local pairing [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -209,17 +217,17 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `B011_OF_200` | Seal Cycle 174 as `B012`, then increment only for substantive research blocks. | Counting workflow or archive-only work. |
-| D6 interface | `FIRST_GRADED_ACTION_ORIENTATION_BLIND_DEEPER_ENGINE_REQUIRED` | Construct the explicit local generator action, ramification break, and minimal deeper quotient or refined pairing that can distinguish `g` from `g^-1`. | Reusing `U_L^1/U_L^2`; choosing a deeper module from the defect; treating local data as a logarithm map. |
+| Project budget | `B012_OF_200` | Seal Cycle 175 as `B013`, then increment only for substantive research blocks. | Counting workflow or archive-only work. |
+| D6 interface | `ORIENTATION_SENSITIVE_LOCAL_QUOTIENT_CONSTRUCTED_LEADING_RESIDUE_REQUIRED` | Derive the normalized leading residue of `(g(pi)-g^-1(pi))/pi^3`, its generator behavior, and a frozen pairing against both anchors. | Treating only a valuation as a pairing; fitting transport from the defect; treating local data as a logarithm map. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- At which first ramification break can an explicit local Artin action
-  distinguish `g` from `g^-1`, and can its minimal quotient carry finite
-  transport data while preserving the two anchors?
+- What is the normalized leading residue of the first oriented local
+  difference, how does it transform under `g`, and can its frozen pairing
+  preserve both anchors?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -228,24 +236,24 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 174 / `B012`
+## Next goal: Cycle 175 / `B013`
 
 Preregister one substantive block with this question:
 
-> What is the first explicit deeper local quotient or ramification-break
-> invariant of RQ-000692 on which the oriented Artin elements `g` and `g^-1`
-> can differ?
+> What is the normalized leading residue of
+> `(g(pi)-g^-1(pi))/pi^3 mod P`, how does it transform under the oriented
+> generator, and can its local pairing preserve both frozen anchors?
 
-Cycle 174 must freeze the local field, uniformizer/action construction,
-ramification-break convention, quotient/pairing family, orientation, and failure
-rule before executable work. No guessed module, defect-fitted action, or reuse of
-the first quotient advances the gate.
+Cycle 175 must freeze the uniformizer normalization, residue identification,
+generator action, pairing family, anchors, and failure rule before executable
+work. No post-result residue normalization, defect-fitted transport, or
+orientation-free pairing advances the gate.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 173
+research cycle 174
 sed -n '1,260p' PLAN.md
-python3 proof/build_cycle_173_local_artin_action_v1.py --check
+python3 proof/build_cycle_174_deeper_local_action_v1.py --check
 ```
