@@ -1,0 +1,44 @@
+{
+  "artifact_id": "cycle-174-adaptive-slack-transport-v1-format-correction",
+  "claim_boundary": "This correction records a post-seal trailing-whitespace removal only. It changes no mathematical content.",
+  "corrects": {
+    "artifact": "artifacts/cycle-174-adaptive-slack-transport-v1.json",
+    "artifact_sha256": "a2060558bfc48723a2d5bb418d60252c27fe8f4f45a94031ccb233daadaaab41",
+    "cause": "format check detected trailing whitespace after sealing",
+    "mathematical_content_changed": false
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "correction_document": {
+      "path": "docs/cycle-174-adaptive-slack-transport-format-correction-v1.md",
+      "sha256": "0bd57568d0a8f685064c2a8d757cfa1532bbc7800edb2a5f9b8de76324ac7223"
+    },
+    "original": {
+      "path": "artifacts/cycle-174-adaptive-slack-transport-v1.json",
+      "sha256": "a2060558bfc48723a2d5bb418d60252c27fe8f4f45a94031ccb233daadaaab41"
+    },
+    "sealing_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "tests": {
+      "path": "tests/test_cycle_174_adaptive_slack_transport_format_correction_v1.py",
+      "sha256": "d5a3b5a305a3608a49215a02755d3e0226ca26fec1adcde4504d97f14fb09c3c"
+    }
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_174_adaptive_slack_transport_format_correction_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_174_adaptive_slack_transport_format_correction_v1.py",
+    "write_command": "python3 proof/build_cycle_174_adaptive_slack_transport_format_correction_v1.py --write"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_174_adaptive_slack_transport_format_correction_v1.py",
+    "sha256": "43c234397709e379847ac59521285c66cb90d5a7c6b027e075c80e14e3cbd51c"
+  },
+  "status": "SEALED_FORMAT_CORRECTION"
+}
