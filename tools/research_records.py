@@ -28,7 +28,7 @@ except ModuleNotFoundError as exc:  # pragma: no cover - depends on local setup
 ROOT: Path
 ARTIFACTS: Path
 DATABASE: Path
-STATUS: Path
+STATUS: Path | None
 LEGACY_EXCEPTIONS: Path
 CYCLE_RE: re.Pattern[str]
 PROFILE: dict[str, Any]
@@ -43,7 +43,8 @@ def configure(profile_path: Path) -> None:
     ROOT = profile_path.parent
     ARTIFACTS = ROOT / PROFILE["artifact_glob"].split("/")[0]
     DATABASE = ROOT / PROFILE["database_path"]
-    STATUS = ROOT / PROFILE["status_path"]
+    status_path = PROFILE.get("status_path")
+    STATUS = ROOT / status_path if status_path else None
     LEGACY_EXCEPTIONS = ROOT / PROFILE["legacy_exceptions_path"]
     CYCLE_RE = re.compile(PROFILE.get("cycle_pattern", r"^cycle-(\d+)(?:-|$)"))
 
@@ -297,10 +298,7 @@ def main() -> int:
     configure(args.project)
     if args.command == "rebuild":
         rebuild()
-        con = connect()
-        STATUS.write_text(render_status(con))
-        con.close()
-        print(f"rebuilt {DATABASE.relative_to(ROOT)} and {STATUS.name}")
+        print(f"rebuilt {DATABASE.relative_to(ROOT)}")
         return 0
     con = connect()
     if args.command == "check":
@@ -308,6 +306,9 @@ def main() -> int:
     if args.command == "status":
         rendered = render_status(con)
         if args.write:
+            if STATUS is None:
+                print("status: this profile has no generated STATUS.md", file=sys.stderr)
+                return 2
             STATUS.write_text(rendered)
         else:
             print(rendered, end="")

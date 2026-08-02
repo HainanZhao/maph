@@ -90,7 +90,9 @@ strategy or results. Do not regenerate it during ordinary research.
 Before work: read only the frozen counts, conventions, and records needed for
 the next authorized question; check `git status` and preserve unrelated
 changes. Update `PLAN.md` only when strategy, gate, budget, stop condition,
-or next action changes. Never use it as a progress log.
+or next action changes. Never use it as a progress log. `PLAN.md` is a mutable
+strategic source and must never be frozen as an artifact input: archive the
+specific mathematical premise or prior artifact instead.
 
 ### Research-block cadence
 
@@ -157,12 +159,16 @@ are legitimate.
 ## 1a. Critical-decision companion
 
 Use one named companion only for a strategic fork, sealing a material claim,
-or publication. It is a mentor, not a duplicate worker. Send one packet under
-150 words stating the decision, frozen claim/gate and tag, decisive evidence,
-known flaw, and the requested recommendation, flaw, falsifier, and next
-action. Do not notify, poll, or wait during routine cycles. If no reply is
-available at the irreversible decision, defer that decision rather than create
-process work around it.
+choosing the next cycle after a material result, or publication. It is a
+mentor, not a duplicate worker. A material seal and its next-cycle choice
+normally share one review packet under 200 words: state the decision, frozen
+claim/gate and tag, decisive evidence, known flaw, the completed work to
+review, and the plausible next engines. Request five short items: an evidence
+and scope review, recommendation, flaw, falsifier, and next action. The
+companion must assess the work and alternatives, rather than merely approve or
+reject the proposed choice. Do not notify, poll, or wait during routine
+cycles. If no reply is available at the irreversible decision, defer that
+decision rather than create process work around it.
 
 ## 2. Discovery and proof are separate
 
