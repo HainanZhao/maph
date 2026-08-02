@@ -1,0 +1,87 @@
+{
+  "artifact_id": "cycle-152-bounded-multiplier-divisor-fan-v1",
+  "bounded_multiplier_divisor_fan_theorem": {
+    "boundary": "this is a conditional concentration inverse only; it does not bound the divisor fan, boundary denominators, phase-changing charts, nonsmooth payload, a full moment, density, or prime intervals",
+    "bounded_multiplier": "one m_0<=ceil(2C/kappa) carries at least kappa/(2 ceil(2C/kappa)) negative mass",
+    "divisor_fan": "for d_b=gcd(h,h_b) and m_b=h_b/d_b, every extracted mode has h_b=m_0 d_b, d_b|h, and gcd(m_0,h/d_b)=1",
+    "epistemic_status": "PROVED",
+    "label_retention": "the inverse retains b,d_b,m_0,r_b,tau_b,w_b,n_b and does not replace the actual negative-lobe condition by an unlabelled count",
+    "tail_concentration": "if sum_b w_b<=1, 0<=n_b<=C w_b/m_b, and sum_b n_b>=kappa, then m_b<=ceil(2C/kappa) retains at least kappa/2 negative mass"
+  },
+  "claim_boundary": "This artifact proves a conditional bounded-multiplier divisor-fan inverse for the licensed smooth strict halo. It does not bound or exclude that fan, treat boundary denominators or other escape classes, or prove a full moment, density, or intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/bounded_multiplier_divisor_fan_v1.py",
+      "sha256": "48985ab3ab77bb8fd6c4fa0c4b2e3c05b426871dbc7127a42bb6485993ae51ba"
+    },
+    "cycle151": {
+      "path": "artifacts/cycle-151-sampled-comb-double-poisson-v1.json",
+      "sha256": "9a7cff91d70b5d7d9da91f7f718fd0e8ee68808b81f8e3ee89d9d5ecdda6245c"
+    },
+    "document": {
+      "path": "docs/cycle-152-bounded-multiplier-divisor-fan-v1.md",
+      "sha256": "bbd46f328a97d27fe6589e5a396a8312957b3ff3e244def9f021494bcb4d42b3"
+    },
+    "preregistration": {
+      "path": "docs/cycle-152-bounded-multiplier-divisor-fan-preregistration-v1.md",
+      "sha256": "4f603efdbdc7f8eec7bb7d26f4b9914a33e5d1c851ae6d8320c7728b7dfbd82a"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_152_bounded_multiplier_divisor_fan_v1.py",
+      "sha256": "282a9caff8e074cc42ac7200657821a0c651f93f05e31cd0d67e4f153a5b60bd"
+    }
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "bound the labelled bounded-multiplier negative-tail divisor fan by spacing or order-three curvature, or classify a surviving fan with its actual coefficient and tail labels"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_152_bounded_multiplier_divisor_fan_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_152_bounded_multiplier_divisor_fan_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_152_bounded_multiplier_divisor_fan_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sample_compiler": {
+    "bounded_multiplier_mass": "3/2",
+    "chosen_multiplier": "1",
+    "chosen_multiplier_lower_bound": "1/8",
+    "chosen_multiplier_mass": "1",
+    "epistemic_status": "PROVED",
+    "large_multiplier_mass_upper_bound": "1/2",
+    "multiplier_cap": "4",
+    "total_negative_mass": "3/2",
+    "total_weight": "1"
+  },
+  "sample_fan_row": {
+    "epistemic_status": "PROVED",
+    "gcd": 20,
+    "mode_denominator": 80,
+    "multiplier": 4,
+    "witness_denominator": 60
+  },
+  "sealer": {
+    "path": "proof/build_cycle_152_bounded_multiplier_divisor_fan_v1.py",
+    "sha256": "6772826302796feb2c95f0110dd27d5c26fddc6026b7cab4aa1e26e7a6506248"
+  },
+  "status": "SEALED_BOUNDED_MULTIPLIER_DIVISOR_FAN_TAIL_INCIDENCE_OR_FAN_ANALYSIS_OPEN"
+}

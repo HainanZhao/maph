@@ -98,7 +98,10 @@ continues.
   diagonal strength in a fixed `rho<1/3` band.
 - `PROVED`: any smooth halo anti-aligner must have an admissible lcm,
   gcd-weighted capacity of order one, and a negative tail-transform lobe.
-  This is the active obstruction, not a density theorem.
+- `PROVED`: conditional on normalized strict smooth-halo negative mass, that
+  mass has a bounded-multiplier labelled divisor-fan inverse. The actual
+  complement-to-strict-halo mass bridge remains open; this is not a density
+  theorem.
 
 ## Research-path graph
 
@@ -108,7 +111,7 @@ published reconstruction P0 [complete]
   `-- E13 critical transport [principal]
         +-- E14 unsigned incidence [volume limit; inverse input]
         +-- E14D-L signed Mellin aliases [principal]
-        |     `-- gcd-weighted negative tails / boundary denominators [active]
+        |     `-- actual strict-halo mass -> bounded fan or escape [active]
         +-- E14D-H fourth-moment condenser <--- E17 extremizer foundry
         +-- E15 anchored shifted-ratio spectrometer
         `-- E16 alias-to-seed compiler --> E7/E9 prime skeleton
@@ -120,7 +123,7 @@ published reconstruction P0 [complete]
 | Gate | State | Advance condition |
 |---|---|---|
 | E14 | `UNSIGNED_VOLUME_LIMIT_REACHED` | Use only for inverse structure. |
-| E14D-L | `GCD_WEIGHTED_NEGATIVE_TAIL_LOBE_OR_BOUNDARY_OPEN` | Bound the simultaneous lcm/gcd/negative-lobe population, or produce a divisor-fan inverse. |
+| E14D-L | `ACTUAL_STRICT_HALO_MASS_TO_BOUNDED_FAN_OR_ESCAPE_OPEN` | Route actual negative mass into the conditional bounded fan, or quantify the boundary/phase/payload/tail escape mass. |
 | E14D-H | `MOMENT_CONCENTRATION_OR_SATURATION_INVERSE_OPEN` | Classify/exclude excess `2xi-116/75` with its phase anchor. |
 | E15 | `ANCHOR_REQUIRED` | Classify anchored almost-eigenfunctions. |
 | E16 | `EXACT_VALUATION_WEB_BANKED` | Compile relation-rich structure to a genuine transport seed. |
@@ -131,10 +134,12 @@ published reconstruction P0 [complete]
 
 ## Principal engines and falsifiers
 
-- `CONJECTURED` E14D-L: prove the signed two-dimensional equal-height
-  discrepancy or compile its labelled ray web; the current first theorem is
-  the gcd-weighted negative-tail incidence problem. A target-sized signed
-  family evading every alias branch falsifies that formulation only.
+- `CONJECTURED` E14D-L: Cycle 152 banks a conditional bounded-multiplier
+  divisor fan. Cycle 153 must prove or reject its actual normalized-mass and
+  uniform-complete-bound hypotheses, then estimate the labelled fan by
+  spacing/order-three curvature or quantify the residual escape class. An
+  actual target-sized family outside every registered class enlarges the
+  decomposition rather than falsifying a bound silently.
 - `CONJECTURED` E14D-H: encode required `M4` excess as a colored four-cycle
   problem. Low codegree should exclude excess; high codegree should expose an
   anchored rational web. A raw-target example without either output enlarges
@@ -169,13 +174,15 @@ published reconstruction P0 [complete]
 5. Can a relation-rich web produce a genuine transport seed and then the
    `X^(21/25+o(1))` prime skeleton?
 
-Next authorized cycle: preregister Cycle 152 as a gcd-weighted negative-tail
-incidence theorem. Expand `gcd(h,h_b)` over divisors of `h`, freeze
-`m=h_b/gcd(h,h_b)` dyadically, retain the actual negative-lobe condition on
-`KQ(c0g^b-r_b/h_b)`, and apply spacing or order-three curvature before any
-absolute aggregation. A strict weighted bound on a nonempty denominator
-region or an explicit divisor-fan inverse advances the gate; boundary
-denominators remain separate.
+Next authorized cycle: preregister Cycle 153 as an actual-mass routing
+compiler. Starting from the Cycle-149--151 forced negative divisor-comb
+correlation, freeze the coefficient normalization, the complete per-mode
+constant `C` (including aggregate errors), the literal strict range
+`h_b<=QX^(-delta)`, and a target strict-halo mass `kappa`. Prove either that
+these data yield an actual Cycle-152 labelled bounded-multiplier fan ready
+for spacing/order-three curvature, or a quantitative lower obligation on the
+boundary-denominator, phase-changing, nonsmooth, or unbounded-tail escape
+class. Do not replace the strict range by a `Q`-power sufficient hypothesis.
 
 ## Crash recovery
 
@@ -195,4 +202,6 @@ python3 proof/build_cycle_148_endpoint_major_arc_comb_v1.py --check
 python3 proof/build_cycle_149_target_mass_comb_inverse_v1.py --check
 python3 proof/build_cycle_150_divisor_comb_sign_test_v1.py --check
 python3 proof/build_cycle_151_sampled_comb_double_poisson_v1.py --check
+python3 proof/build_cycle_152_bounded_multiplier_divisor_fan_v1.py --check
+python3 proof/build_cycle_152_bounded_multiplier_divisor_fan_scope_correction_v1.py --check
 ```

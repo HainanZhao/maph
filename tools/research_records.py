@@ -96,7 +96,12 @@ def tagged_claims(value: Any, prefix: str = "") -> Iterator[tuple[str, str, str]
     if isinstance(value, dict):
         tag = value.get("epistemic_status")
         if tag in VALID_TAGS:
-            statement = value.get("statement") or value.get("boundary") or text_of(value)
+            statement = (
+                value.get("statement")
+                or value.get("claim_boundary")
+                or value.get("boundary")
+                or text_of(value)
+            )
             yield prefix or "artifact", tag, str(statement)
         for key, child in value.items():
             child_prefix = f"{prefix}.{key}" if prefix else key

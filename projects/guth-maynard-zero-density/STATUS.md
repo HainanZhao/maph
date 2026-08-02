@@ -6,8 +6,8 @@ Canonical evidence is the Git-tracked per-cycle artifact and its linked files; `
 ## Cold-start handoff
 
 - Project outcome (PROVED): No improved zero-density coefficient, prime-interval endpoint, or L-function-family transfer is proved. The checked baseline remains density coefficient 30/13, with uniform and almost-all interval endpoints 17/30 and 2/15.
-- Why the active gate matters (PROVED): Within the explored coefficient-sensitive lower signed-alias route, smooth-halo anti-alignment can survive only through simultaneous lcm resonance, gcd-weighted capacity, and a negative tail-transform lobe. Bounding that population or classifying its divisor-fan extremizers is the present route to a genuine signed estimate.
-- Progress criterion (CONJECTURED): Cycle 152 advances E14D-L only with either a strict weighted bound on a nonempty, explicitly frozen denominator region or a proved explicit divisor-fan inverse; a heuristic cancellation, a scalar collision bound, or isolated endpoint norm aggregation does not advance the gate.
+- Why the active gate matters (PROVED): Cycle 152 proves that any normalized, order-one negative mass in the licensed strict smooth halo concentrates on a bounded-multiplier labelled divisor fan. The live obstruction is now earlier: route the actual Cycle-149--151 negative correlation into that controlled strict class, or quantify the mass forced into an explicit escape class.
+- Progress criterion (CONJECTURED): Cycle 153 advances E14D-L only by proving that the actual coefficient-faithful complement has normalized strict-halo mass satisfying the Cycle 152 hypotheses and yielding an actual labelled fan, or by giving a quantitative lower obligation for boundary-denominator, phase-changing, nonsmooth, or unbounded-tail escape mass. A conditional fan alone, heuristic cancellation, a scalar collision bound, or isolated endpoint norm aggregation does not advance the actual gate.
 - Explicitly deferred: Boundary denominators within a fixed power of Q are a separate branch; paper-stage hostile audit begins only after a manuscript theorem is frozen.
 
 ### Start here (from this project directory)
@@ -15,43 +15,43 @@ Canonical evidence is the Git-tracked per-cycle artifact and its linked files; `
 - `source ../../tools/dev-env.sh`
 - `research rebuild`
 - `research check`
-- `research cycle 151`
-- `research search gcd-weighted`
-- `python3 proof/build_cycle_151_sampled_comb_double_poisson_v1.py --check`
+- `research cycle 152`
+- `research search "strict smooth"`
+- `python3 proof/build_cycle_152_bounded_multiplier_divisor_fan_scope_correction_v1.py --check`
 
 Read the listed record and its linked preregistration, proof document, conventions, builder, and test before changing mathematics or code. Do not infer a theorem from this handoff; its claim tags and boundaries are in the canonical record.
 
 ## Index coverage
 
-- Cycle artifact files found in the working tree: 250
-- Cycle artifacts present in the Git index: 250
-- Artifacts by top-level epistemic status: CONJECTURED=6, LEGACY_UNTAGGED=10, OBSERVED=56, PROVED=178
-- Recursively tagged fields indexed for search (not independent claims): 23486
+- Cycle artifact files found in the working tree: 252
+- Cycle artifacts present in the Git index: 252
+- Artifacts by top-level epistemic status: CONJECTURED=6, LEGACY_UNTAGGED=10, OBSERVED=56, PROVED=180
+- Recursively tagged fields indexed for search (not independent claims): 23496
 
 ## Current gate
 
-- Latest record: `cycle-151-sampled-comb-double-poisson-v1` (Cycle 151, `PROVED`)
-- Status: `SEALED_GCD_WEIGHTED_NEGATIVE_TAIL_LOBE_OR_BOUNDARY_OPEN`
-- Boundary: This artifact proves the lcm resonance lattice and fixed-chart tail-transform formula for smooth halo denominators a fixed power below Q. It does not bound the gcd-weighted negative-lobe population or boundary denominators and proves no full moment, endpoint, density, or intervals.
-- Next mathematical target: bound the gcd-weighted population of endpoint tails in negative transform lobes and treat denominators within a fixed power of Q
+- Latest record: `cycle-152-bounded-multiplier-divisor-fan-v1-scope-correction` (Cycle 152, `PROVED`)
+- Status: `SEALED_CONDITIONAL_BOUNDED_MULTIPLIER_DIVISOR_FAN_INVERSE`
+- Boundary: This correction narrows Cycle 152's status to its conditional strict smooth-halo inverse. It does not prove that the actual complement supplies the normalized mass and uniform-bound hypotheses, and it proves no incidence bound, full moment, density, or intervals.
+- Next mathematical target: route the actual Cycle-149--151 negative correlation into normalized strict-halo mass meeting the Cycle-152 hypotheses, or quantify the residual boundary, phase-changing, nonsmooth, or unbounded-tail escape mass
 
 ## Recent sealed records
 
 | Cycle | Record | Tag | Gate | Next target |
 |---:|---|---|---|---|
+| 152 | `cycle-152-bounded-multiplier-divisor-fan-v1-scope-correction` | `PROVED` | `SEALED_CONDITIONAL_BOUNDED_MULTIPLIER_DIVISOR_FAN_INVERSE` | route the actual Cycle-149--151 negative correlation into normalized strict-halo mass meeting the Cycle-152 hypotheses, or quantify the residual boundary, phase-changing, nonsmooth, or unbounded-tail escape mass |
+| 152 | `cycle-152-bounded-multiplier-divisor-fan-v1` | `PROVED` | `SEALED_BOUNDED_MULTIPLIER_DIVISOR_FAN_TAIL_INCIDENCE_OR_FAN_ANALYSIS_OPEN` | bound the labelled bounded-multiplier negative-tail divisor fan by spacing or order-three curvature, or classify a surviving fan with its actual coefficient and tail labels |
 | 151 | `cycle-151-sampled-comb-double-poisson-v1` | `PROVED` | `SEALED_GCD_WEIGHTED_NEGATIVE_TAIL_LOBE_OR_BOUNDARY_OPEN` | bound the gcd-weighted population of endpoint tails in negative transform lobes and treat denominators within a fixed power of Q |
 | 150 | `cycle-150-divisor-comb-sign-test-v1` | `PROVED` | `SEALED_HALO_BOUNDARY_DIVISOR_COMB_ESTIMATE_OPEN` | bound the halo and boundary-denominator negative divisor-comb projection, retaining phase-changing and nonsmooth payload separately |
 | 149 | `cycle-149-target-mass-comb-inverse-v1` | `PROVED` | `SEALED_DIVISOR_COMB_ANTIALIGNMENT_EXCLUSION_OR_MODEL_OPEN` | exclude the retained negative divisor-comb correlation using the complement phase geometry, or construct an explicit actual model |
 | 148 | `cycle-148-endpoint-major-arc-comb-v1` | `PROVED` | `SEALED_CROSS_ENDPOINT_COMB_CANCELLATION_OR_INVERSE_OPEN` | prove cancellation between rational endpoint combs using their common coefficient vector, or extract a target-mass comb obstruction |
 | 147 | `cycle-147-strict-core-signed-cell-v1` | `PROVED` | `SEALED_COEFFICIENT_FAITHFUL_CORE_HALO_BUNDLE_OPEN` | construct coefficient-faithful balanced core--halo bundles and prove a signed bundle estimate or a target-mass obstruction |
 | 146 | `cycle-146-balanced-highpass-mask-v1` | `PROVED` | `SEALED_SIGNED_HIGH_PASS_CELL_ENTROPY_OPEN` | build an affordable hierarchical arithmetic partition retaining the signed high-pass feature and estimate or invert its terminal cell |
-| 145 | `cycle-145-vector-autocorrelation-v1` | `PROVED` | `SEALED_ARITHMETIC_SELECTION_MASK_AUTOCORRELATION_OPEN` | bound the vector-valued selected autocorrelation for the actual continued-fraction/tail mask, or factor that mask as a controlled Gram kernel |
-| 144 | `cycle-144-actual-edge-coefficient-v1` | `PROVED` | `SEALED_COEFFICIENT_PRESERVING_WEIGHTED_COLLISION_INVERSE_OPEN` | transport the complex frequency-dependent edge measure through a weighted collision inverse, or prove a controlled scalar factorization |
 
 ## Useful queries
 
 ```sh
-python /root/projects/maph/tools/research_records.py --project research-records.json cycle 151
-python /root/projects/maph/tools/research_records.py --project research-records.json search negative-tail
+python /root/projects/maph/tools/research_records.py --project research-records.json cycle 152
+python /root/projects/maph/tools/research_records.py --project research-records.json search "strict smooth"
 python /root/projects/maph/tools/research_records.py --project research-records.json check
 ```
