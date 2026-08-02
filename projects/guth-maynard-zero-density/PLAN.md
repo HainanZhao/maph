@@ -176,14 +176,16 @@ published reconstruction P0 [complete]
 5. Can a relation-rich web produce a genuine transport seed and then the
    `X^(21/25+o(1))` prime skeleton?
 
-Next authorized cycle: preregister Cycle 154 as the actual strict-halo
-antecedent compiler. Starting with the Cycle-153 strict branch, derive or
-reject the actual positive coefficient-weight normalization and a uniform
-complete bound `0<=n_b<=Cw_b/m_b`, including Riemann/Poisson and aggregate
-errors. Success composes with Cycle 152 into an actual bounded-multiplier
-labelled fan. Failure must transfer a quantitative, reason-labelled mass to a
-finite boundary, phase-changing, nonsmooth, unbounded-tail, or other
-registered escape class; do not absorb it into `C`.
+Cycle 154 is preregistered at
+`docs/cycle-154-coefficient-transport-preregistration-v1.md`. Next
+authorized action: implement its actual strict-halo coefficient-transport or
+labelled-escape compiler. Derive or reject the actual positive
+coefficient-weight normalization and a uniform complete bound
+`0<=n_b<=Cw_b/m_b`, including Riemann/Poisson and aggregate errors. Success
+composes with Cycle 152 into an actual bounded-multiplier labelled fan.
+Failure must transfer a quantitative, reason-labelled mass to a finite
+coefficient-transport, boundary, phase-changing, nonsmooth, unbounded-tail,
+or other registered escape class; do not absorb it into `C`.
 
 ## Crash recovery
 
