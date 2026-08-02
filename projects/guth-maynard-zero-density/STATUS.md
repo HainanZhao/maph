@@ -6,8 +6,8 @@ Canonical evidence is the Git-tracked per-cycle artifact and its linked files; `
 ## Cold-start handoff
 
 - Project outcome (PROVED): No improved zero-density coefficient, prime-interval endpoint, or L-function-family transfer is proved. The checked baseline remains density coefficient 30/13, with uniform and almost-all interval endpoints 17/30 and 2/15.
-- Why the active gate matters (PROVED): Cycle 159 proves that primitive-ray compression loses the multiplier needed to reconstruct nonconstant Cycle-124 coefficient products. Conditional on upper-band excess, Cycles 160--162 now yield either globally massed coefficient-weighted positive-real four-distinct-atom configurations or literal weighted labelled oriented-star mass with high effective degree; neither output is yet a coordinate pullback, rational web, or moment gain.
-- Progress criterion (CONJECTURED): Cycle 164 advances E14D-H only by retaining high common-wrap fibers and classifying their comparable-weight leaf sets as an exact valuation web or a globally massed weighted-Sidon obstruction. An unweighted edge count, coefficient-free aligned family, generic fourth-moment expansion, or an unlabelled residual does not advance the gate.
+- Why the active gate matters (PROVED): Cycle 165 converts any critical fixed-beta Cycle-63 census into X^(38/25-o(1)) labelled four-anchor witnesses, each classified as a rank-one resonance, a genuinely seeded high-content packet, or a low-content rational plane. No terminal bank is yet bounded, so this is an inverse theorem rather than a census gain.
+- Progress criterion (CONJECTURED): Advance only by bounding the actual-curve rank-one and low-content labelled banks strictly below the critical census threshold, or by carrying a retained high-content branch through E7/E9 with a strict skeleton margin. An unanchored global-detector witness, a beta-free packet, or a count of distinct planes with discarded multiplicity does not advance the gate.
 - Explicitly deferred: Boundary denominators within a fixed power of Q are a separate branch; paper-stage hostile audit begins only after a manuscript theorem is frozen.
 
 ### Start here (from this project directory)
@@ -15,31 +15,32 @@ Canonical evidence is the Git-tracked per-cycle artifact and its linked files; `
 - `source ../../tools/dev-env.sh`
 - `research rebuild`
 - `research check`
-- `research cycle 163`
-- `research search "colored four cycle"`
-- `python3 proof/build_cycle_163_star_wrap_fiber_v1.py --check`
-- `cat docs/cycle-164-wrap-valuation-sidon-preregistration-v1.md`
+- `research cycle 165`
+- `python3 proof/build_cycle_165_anchored_fibre_product_determinant_v1.py --check`
+- `cat docs/cycle-165-seed-factorization-v1.md`
+- `cat docs/cycle-165-seed-factorization-preregistration-v1.md`
 
 Read the listed record and its linked preregistration, proof document, conventions, builder, and test before changing mathematics or code. Do not infer a theorem from this handoff; its claim tags and boundaries are in the canonical record.
 
 ## Index coverage
 
-- Cycle artifact files found in the working tree: 262
-- Cycle artifacts present in the Git index: 261
-- Artifacts by top-level epistemic status: CONJECTURED=6, LEGACY_UNTAGGED=10, OBSERVED=56, PROVED=190
-- Recursively tagged fields indexed for search (not independent claims): 23544
+- Cycle artifact files found in the working tree: 263
+- Cycle artifacts present in the Git index: 262
+- Artifacts by top-level epistemic status: CONJECTURED=6, LEGACY_UNTAGGED=10, OBSERVED=56, PROVED=191
+- Recursively tagged fields indexed for search (not independent claims): 23551
 
 ## Current gate
 
-- Latest record: `cycle-164-wrap-valuation-sidon-v1` (Cycle 164, `PROVED`)
-- Status: `SEALED_WRAP_VALUATION_WEB_OR_WEIGHTED_SIDON_CLASSIFICATION`
-- Boundary: This conditionally classifies high common-wrap fibers as exact valuation web or weighted Sidon. It does not prove a transport seed, moment, density, or intervals.
-- Next mathematical target: compile a valuation web through E16 or bound the weighted-Sidon and wrap-complexity alternatives
+- Latest record: `cycle-165-anchored-fibre-product-determinant-v1` (Cycle 165, `PROVED`)
+- Status: `SEALED_BETA_ANCHORED_FOUR_ANCHOR_PACKET_OR_RESONANCE_PLANE_CLASSIFICATION`
+- Boundary: Conditional on a critical fixed-beta Cycle-63 census, this classifies labelled four-anchor witnesses. It does not bound the census or terminal banks and proves no transport, density, or interval gain.
+- Next mathematical target: Bound every terminal bank strictly below the Cycle-63 critical census threshold, or compile a retained high-content packet into the E7/E9 skeleton with a strict margin.
 
 ## Recent sealed records
 
 | Cycle | Record | Tag | Gate | Next target |
 |---:|---|---|---|---|
+| 165 | `cycle-165-anchored-fibre-product-determinant-v1` | `PROVED` | `SEALED_BETA_ANCHORED_FOUR_ANCHOR_PACKET_OR_RESONANCE_PLANE_CLASSIFICATION` | Bound every terminal bank strictly below the Cycle-63 critical census threshold, or compile a retained high-content packet into the E7/E9 skeleton with a strict margin. |
 | 164 | `cycle-164-wrap-valuation-sidon-v1` | `PROVED` | `SEALED_WRAP_VALUATION_WEB_OR_WEIGHTED_SIDON_CLASSIFICATION` | compile a valuation web through E16 or bound the weighted-Sidon and wrap-complexity alternatives |
 | 163 | `cycle-163-star-wrap-fiber-v1` | `PROVED` | `SEALED_STAR_WRAP_COMPLEXITY_OR_COMMON_WRAP_LOG_WEB` | compile the common-wrap log web or bound the labelled wrap-complexity alternative |
 | 162 | `cycle-162-mass-sensitive-high-cell-v1` | `PROVED` | `SEALED_GLOBAL_ALIGNED_FOUR_CYCLE_MASS_OR_WEIGHTED_HIGH_DEGREE_STAR_INVERSE_BANKED` | pull back one globally massed labelled output through the actual (d,q) coordinate map, or construct an admissible labelled obstruction |
@@ -47,12 +48,11 @@ Read the listed record and its linked preregistration, proof document, conventio
 | 160 | `cycle-160-colored-four-cycle-condenser-v1` | `PROVED` | `SEALED_COEFFICIENT_WEIGHTED_OFF_DIAGONAL_CONDENSER_HIGH_CODEGREE_PAIR_CELL_OPEN` | turn a labelled high effective-codegree pair-difference cell into a phase-aligned colored four-cycle or rational web, or exhibit an admissible condenser falsifier |
 | 159 | `cycle-159-coefficient-selector-information-loss-v1` | `PROVED` | `SEALED_PRIMITIVE_RAY_MULTIPLIER_INFORMATION_LOSS_COEFFICIENT_PRESERVING_SELECTOR_OPEN` | construct a multiplier-resolved coefficient-preserving collision measure with target mass, or timebox E14D-L and activate E14D-H |
 | 157 | `cycle-157-selection-mask-negative-spectral-v1` | `PROVED` | `SEALED_RAW_ZERO_DIAGONAL_GRAM_OBSTRUCTION_COEFFICIENT_NEGATIVE_SPECTRAL_ALIGNMENT_OPEN` | prove the actual negative spectral energy concentrates in a fixed labelled block family, or preserve a quantitative block-complexity inverse with the coefficient and anchor labels |
-| 156 | `cycle-156-divisor-comb-norm-majorant-v1` | `PROVED` | `SEALED_EXACT_DIVISOR_COMB_NORM_MAJORANT_ACTUAL_FINITE_PARTITION_OPEN` | construct or reject Cycle 155's actual exact fixed finite reason-labelled coefficient-escape partition; then Cycle 154 localizes a class with this now-fixed norm constant |
 
 ## Useful queries
 
 ```sh
-python /root/projects/maph/tools/research_records.py --project research-records.json cycle 159
-python /root/projects/maph/tools/research_records.py --project research-records.json search "colored four cycle"
+python /root/projects/maph/tools/research_records.py --project research-records.json cycle 165
+python /root/projects/maph/tools/research_records.py --project research-records.json search "seeded packet"
 python /root/projects/maph/tools/research_records.py --project research-records.json check
 ```

@@ -114,6 +114,11 @@ research db tables
   `(1+C_h)KQ^2/h` under a frozen anchor ratio `h<=C_hK` (and constant `2`
   when `h<=K`). Instantiating its actual anchor constant and constructing the
   finite coefficient partition remain open.
+- `PROVED`: conditional on a critical fixed-beta Cycle-63 census, Cycle 165
+  supplies `X^(38/25-o(1))` labelled four-anchor witnesses and routes every
+  one, with multiplicity, to a rank-one resonance, a genuinely seeded
+  high-content packet, or a rank-two low-content rational plane. It bounds no
+  terminal bank and has no density or interval consequence yet.
 
 ## Research-path graph
 
@@ -137,7 +142,7 @@ published reconstruction P0 [complete]
 | E14 | `UNSIGNED_VOLUME_LIMIT_REACHED` | Use only for inverse structure. |
 | E14D-L | `TIMEBOXED_AT_SCALE_LABEL_INFORMATION_LOSS` | Reopen only by restoring `t`/ordered atoms in a coefficient-preserving selector or proving a genuinely `t`-independent factorization. |
 | E14D-L mask cone | `RAW_ZERO_DIAGONAL_GRAM_OBSTRUCTION_BANKED_COEFFICIENT_NEGATIVE_SPECTRAL_ALIGNMENT_OPEN` | Concentrate actual negative spectral energy in a fixed labelled block family or prove a robust labelled block-complexity inverse. |
-| E14D-H | `MASS_ALIGNED_FOUR_CYCLE_OR_GLOBALLY_MASSED_COMMON_WRAP_LOG_WEB_OR_INTEGER_WRAP_COMPLEXITY_OPEN` | Compile the labelled common-wrap web or bound the labelled wrap-complexity inverse without discarding the four-cycle arm. |
+| E14D-H | `ANCHORED_TERMINAL_BANK_BOUND_OPEN` | Cycle 165 sealed the fixed-beta four-anchor inverse. Bound its rank-one and low-content banks, or pass a genuinely seeded high-content branch through the E7/E9 skeleton. |
 | E15 | `ANCHOR_REQUIRED` | Classify anchored almost-eigenfunctions. |
 | E16 | `EXACT_VALUATION_WEB_BANKED` | Compile relation-rich structure to a genuine transport seed. |
 | E11/E12 | `AUTOCORRELATION_ANOVA_OPEN` | Save `>3/50` in complete form or force enough recurrence. |
@@ -230,7 +235,16 @@ Cycle-155 partition remains a parallel output only if it is actual and
 fixed-size; an `X^(o(1))` class count is not fixed localization. Cycle 156
 supplies its norm constant once the actual frozen anchor ratio is
 instantiated. Positive transport and the Cycle-152 bounded fan remain
-unclosed.
+unclosed. Cycle 165 is sealed at
+`artifacts/cycle-165-anchored-fibre-product-determinant-v1.json`: conditional
+on a critical fixed-beta census, it gives `X^(38/25-o(1))` labelled
+four-anchor witnesses and an exhaustive rank-one/high-content/low-plane
+classification. Its first global
+compact-detector graph did not preserve the original fixed beta anchor and is
+therefore restricted to an unseeded diagnostic. The active replacement is the
+next terminal-bank task: use the actual exponential curve either to bound the
+rank-one and low-content banks or to turn a retained high-content seeded
+packet into an E7/E9 skeleton input with a strict margin.
 
 ## Crash recovery
 
