@@ -1,0 +1,200 @@
+{
+  "affected_artifact": {
+    "disposition": "immutable; the original unshifted curvature theorem, its K syzygy, and its depth exactification are withheld. The abstract AP-free mass/capacity/stable-shell no-go is unaffected.",
+    "path": "artifacts/cycle-185-three-label-curvature-v1.json",
+    "sha256": "b636e04db7b64e0cbc1ce3dc932905bd64b3491475501b835df487c477ee049f"
+  },
+  "artifact_id": "cycle-185-three-label-curvature-convention-correction-v1",
+  "claim_boundary": "This correction withholds Cycle 185's unshifted alpha curvature claim and proves only the shifted-numerator local identity. It proves no actual-exponential distribution theorem, populated-box bound, seeded recurrence, density gain, or interval result.",
+  "corrected_local_result": {
+    "corrected_local_result": "For B_i=A_i+U_i and z_i=1+alpha_i, the AP product gives a v^2-divisible integer K_plus with the retained primitive pair-determinant syzygy. Any depth exactification must use a chart cap for z_i.",
+    "epistemic_status": "PROVED",
+    "original_claim_disposition": "WITHHELD: alpha_ell=z^ell-1 does not obey alpha_-*alpha_+=alpha_0^2.",
+    "samples": {
+      "shifted_curvature": {
+        "A": {
+          "minus": 6,
+          "plus": 147,
+          "zero": 45
+        },
+        "B": {
+          "minus": 12,
+          "plus": 168,
+          "zero": 60
+        },
+        "K_plus": 0,
+        "K_plus_prime": 0,
+        "U": {
+          "minus": 6,
+          "plus": 21,
+          "zero": 15
+        },
+        "epsilon": {
+          "minus": "0",
+          "plus": "0",
+          "zero": "0"
+        },
+        "expanded_value": "0",
+        "expansion": "K_plus/(U_-*U_+*U_0^2)=z_-*delta_++z_+*delta_-+delta_-*delta_+-2*z_0*delta_0-delta_0^2",
+        "formula": "K_plus=U_0^2*B_-*B_+-U_-*U_+*B_0^2=v^2*K_plus_prime",
+        "shift_cancellation": "u_j*(A_i+v*u_i)-u_i*(A_j+v*u_j)=u_j*A_i-u_i*A_j",
+        "syzygy": "K_plus_prime=u_0*B_+*F_-0(A)-u_-*B_0*F_0+(A)"
+      },
+      "unshifted_failure": {
+        "alpha_minus": "1",
+        "alpha_plus": "7",
+        "alpha_zero": "3",
+        "unshifted_difference": "-2",
+        "z": "2"
+      }
+    },
+    "unchanged_boundary": "The Cycle 185 AP-free occupancy is abstract and non-exponential; it remains only a mass/capacity/stable-shell no-go."
+  },
+  "correction": {
+    "cause": "The pinned ray slope is alpha_ell=z^ell-1, but the original record applied the product identity for z^ell directly to alpha_ell.",
+    "corrected_invariant": "K_plus=U_0^2*(A_-+U_-)*(A_++U_+)-U_-*U_+*(A_0+U_0)^2",
+    "required_downstream_action": "Use only this correction's shifted-numerator result; rederive any downstream use of Cycle 185 before promotion.",
+    "unaffected": "The AP-free occupancy and its claim boundary do not invoke the false alpha product identity."
+  },
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "corrected_local_result": "For B_i=A_i+U_i and z_i=1+alpha_i, the AP product gives a v^2-divisible integer K_plus with the retained primitive pair-determinant syzygy. Any depth exactification must use a chart cap for z_i.",
+    "original_claim_disposition": "WITHHELD: alpha_ell=z^ell-1 does not obey alpha_-*alpha_+=alpha_0^2.",
+    "samples": {
+      "shifted_curvature": {
+        "A": {
+          "minus": 6,
+          "plus": 147,
+          "zero": 45
+        },
+        "B": {
+          "minus": 12,
+          "plus": 168,
+          "zero": 60
+        },
+        "K_plus": 0,
+        "K_plus_prime": 0,
+        "U": {
+          "minus": 6,
+          "plus": 21,
+          "zero": 15
+        },
+        "epsilon": {
+          "minus": "0",
+          "plus": "0",
+          "zero": "0"
+        },
+        "expanded_value": "0",
+        "expansion": "K_plus/(U_-*U_+*U_0^2)=z_-*delta_++z_+*delta_-+delta_-*delta_+-2*z_0*delta_0-delta_0^2",
+        "formula": "K_plus=U_0^2*B_-*B_+-U_-*U_+*B_0^2=v^2*K_plus_prime",
+        "shift_cancellation": "u_j*(A_i+v*u_i)-u_i*(A_j+v*u_j)=u_j*A_i-u_i*A_j",
+        "syzygy": "K_plus_prime=u_0*B_+*F_-0(A)-u_-*B_0*F_0+(A)"
+      },
+      "unshifted_failure": {
+        "alpha_minus": "1",
+        "alpha_plus": "7",
+        "alpha_zero": "3",
+        "unshifted_difference": "-2",
+        "z": "2"
+      }
+    },
+    "unchanged_boundary": "The Cycle 185 AP-free occupancy is abstract and non-exponential; it remains only a mass/capacity/stable-shell no-go."
+  },
+  "frozen_hashes": {
+    "affected_artifact": {
+      "path": "artifacts/cycle-185-three-label-curvature-v1.json",
+      "sha256": "b636e04db7b64e0cbc1ce3dc932905bd64b3491475501b835df487c477ee049f"
+    },
+    "affected_conventions": {
+      "path": "conventions/three_label_curvature_v1.py",
+      "sha256": "767e24ef170fb3f5e292dfbcbe700fc426ec25f988fa16dab9c35fed1c2e34e6"
+    },
+    "correction_conventions": {
+      "path": "conventions/three_label_curvature_convention_correction_v1.py",
+      "sha256": "797f0bc400da978ee6fb452eea5fec6575e65f99e2452823ba9f04a041d2d3ae"
+    },
+    "correction_tests": {
+      "path": "tests/test_cycle_185_three_label_curvature_convention_correction_v1.py",
+      "sha256": "ed83ddaf1b8a0cd1ee9811d28e3118af5fb7e3acdcaab927190d232aaccd0737"
+    },
+    "document": {
+      "path": "docs/cycle-185-three-label-curvature-convention-correction-v1.md",
+      "sha256": "e4d6dca79a7f02822a6ecf002e2f24451c2d36d569ec3f12022a7e7711606cea"
+    },
+    "preregistration": {
+      "path": "docs/cycle-185-three-label-curvature-convention-correction-preregistration-v1.md",
+      "sha256": "2df7259d22b224f1676af45a6796dc4aad6e33972b14b7b5e3b1e642d216d39b"
+    },
+    "sealing_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    }
+  },
+  "preflight_validator": {
+    "path": "../../tools/preregistration_check.py",
+    "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+  },
+  "preregistration_preflight": {
+    "cycle": 185,
+    "input_hashes": [
+      {
+        "path": "artifacts/cycle-185-three-label-curvature-v1.json",
+        "sha256": "b636e04db7b64e0cbc1ce3dc932905bd64b3491475501b835df487c477ee049f"
+      },
+      {
+        "path": "conventions/three_label_curvature_v1.py",
+        "sha256": "767e24ef170fb3f5e292dfbcbe700fc426ec25f988fa16dab9c35fed1c2e34e6"
+      },
+      {
+        "path": "proof/cycle_seal_v1.py",
+        "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+      },
+      {
+        "path": "../../tools/preregistration_check.py",
+        "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+      }
+    ],
+    "manifest_sha256": "2df7259d22b224f1676af45a6796dc4aad6e33972b14b7b5e3b1e642d216d39b",
+    "parameters": {
+      "affected_claim": {
+        "kind": "expression",
+        "rationale": "The source record must remain immutable while this correction names precisely the invalid assertion.",
+        "value": "alpha_(ell-r)*alpha_(ell+r)=alpha_ell^2 for alpha_ell=z^ell-1"
+      },
+      "corrected_invariant": {
+        "kind": "expression",
+        "rationale": "The actual geometric identity applies only after the pinned +1 shift.",
+        "value": "K_plus=U_0^2*(A_-+U_-)*(A_++U_+)-U_-*U_+*(A_0+U_0)^2"
+      },
+      "retained_state": {
+        "kind": "symbolic",
+        "rationale": "The correction may not discard C183 pair-determinant or fibre state.",
+        "value": "(N_i,U_i,A_i,B_i,primitive pair determinants, fibres,residuals,labels,stable shells)"
+      }
+    },
+    "schema": "research-preregistration-freeze-v1"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_185_three_label_curvature_convention_correction_v1.py --check",
+    "preflight_command": "research prereg check docs/cycle-185-three-label-curvature-convention-correction-preregistration-v1.md --expected-cycle 185",
+    "test_command": "python3 -m unittest tests/test_cycle_185_three_label_curvature_convention_correction_v1.py",
+    "write_command": "python3 proof/build_cycle_185_three_label_curvature_convention_correction_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_185_three_label_curvature_convention_correction_v1.py",
+    "sha256": "874f01b66225257ba83aa0089555b3e4f77453308ecc3a52b4f1651c6adc27d7"
+  },
+  "status": "SEALED_CORRECTION_SHIFTED_EXPONENTIAL_CURVATURE_AND_ORIGINAL_CLAIM_WITHHELD"
+}
