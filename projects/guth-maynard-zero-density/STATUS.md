@@ -24,22 +24,23 @@ Read the listed record and its linked preregistration, proof document, conventio
 
 ## Index coverage
 
-- Cycle artifact files found in the working tree: 261
+- Cycle artifact files found in the working tree: 262
 - Cycle artifacts present in the Git index: 261
-- Artifacts by top-level epistemic status: CONJECTURED=6, LEGACY_UNTAGGED=10, OBSERVED=56, PROVED=189
-- Recursively tagged fields indexed for search (not independent claims): 23541
+- Artifacts by top-level epistemic status: CONJECTURED=6, LEGACY_UNTAGGED=10, OBSERVED=56, PROVED=190
+- Recursively tagged fields indexed for search (not independent claims): 23544
 
 ## Current gate
 
-- Latest record: `cycle-163-star-wrap-fiber-v1` (Cycle 163, `PROVED`)
-- Status: `SEALED_STAR_WRAP_COMPLEXITY_OR_COMMON_WRAP_LOG_WEB`
-- Boundary: This conditionally classifies Cycle-162 star degree into wrap complexity or a common-wrap log web. It does not prove transport, moment, density, or intervals.
-- Next mathematical target: compile the common-wrap log web or bound the labelled wrap-complexity alternative
+- Latest record: `cycle-164-wrap-valuation-sidon-v1` (Cycle 164, `PROVED`)
+- Status: `SEALED_WRAP_VALUATION_WEB_OR_WEIGHTED_SIDON_CLASSIFICATION`
+- Boundary: This conditionally classifies high common-wrap fibers as exact valuation web or weighted Sidon. It does not prove a transport seed, moment, density, or intervals.
+- Next mathematical target: compile a valuation web through E16 or bound the weighted-Sidon and wrap-complexity alternatives
 
 ## Recent sealed records
 
 | Cycle | Record | Tag | Gate | Next target |
 |---:|---|---|---|---|
+| 164 | `cycle-164-wrap-valuation-sidon-v1` | `PROVED` | `SEALED_WRAP_VALUATION_WEB_OR_WEIGHTED_SIDON_CLASSIFICATION` | compile a valuation web through E16 or bound the weighted-Sidon and wrap-complexity alternatives |
 | 163 | `cycle-163-star-wrap-fiber-v1` | `PROVED` | `SEALED_STAR_WRAP_COMPLEXITY_OR_COMMON_WRAP_LOG_WEB` | compile the common-wrap log web or bound the labelled wrap-complexity alternative |
 | 162 | `cycle-162-mass-sensitive-high-cell-v1` | `PROVED` | `SEALED_GLOBAL_ALIGNED_FOUR_CYCLE_MASS_OR_WEIGHTED_HIGH_DEGREE_STAR_INVERSE_BANKED` | pull back one globally massed labelled output through the actual (d,q) coordinate map, or construct an admissible labelled obstruction |
 | 161 | `cycle-161-high-cell-refinement-v1` | `PROVED` | `SEALED_PHASE_ALIGNED_FOUR_CYCLE_OR_LABELLED_STAR_DEGENERACY_BANKED` | compile the actual labelled positive-real four-cycle population to a moment gain, or classify the labelled star as a rational web or admissible obstruction |
@@ -47,7 +48,6 @@ Read the listed record and its linked preregistration, proof document, conventio
 | 159 | `cycle-159-coefficient-selector-information-loss-v1` | `PROVED` | `SEALED_PRIMITIVE_RAY_MULTIPLIER_INFORMATION_LOSS_COEFFICIENT_PRESERVING_SELECTOR_OPEN` | construct a multiplier-resolved coefficient-preserving collision measure with target mass, or timebox E14D-L and activate E14D-H |
 | 157 | `cycle-157-selection-mask-negative-spectral-v1` | `PROVED` | `SEALED_RAW_ZERO_DIAGONAL_GRAM_OBSTRUCTION_COEFFICIENT_NEGATIVE_SPECTRAL_ALIGNMENT_OPEN` | prove the actual negative spectral energy concentrates in a fixed labelled block family, or preserve a quantitative block-complexity inverse with the coefficient and anchor labels |
 | 156 | `cycle-156-divisor-comb-norm-majorant-v1` | `PROVED` | `SEALED_EXACT_DIVISOR_COMB_NORM_MAJORANT_ACTUAL_FINITE_PARTITION_OPEN` | construct or reject Cycle 155's actual exact fixed finite reason-labelled coefficient-escape partition; then Cycle 154 localizes a class with this now-fixed norm constant |
-| 154 | `cycle-154-coefficient-escape-localization-v1` | `PROVED` | `SEALED_CONDITIONAL_FINITE_LABELLED_ESCAPE_LOCALIZATION` | derive or reject the actual finite coefficient-escape partition and fixed comb-norm majorant; then analyze the selected class or prove O_kappa(1) positive fixed-phase transport |
 
 ## Useful queries
 
