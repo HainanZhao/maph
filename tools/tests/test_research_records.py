@@ -18,7 +18,8 @@ class ResearchRecordsTest(unittest.TestCase):
             database = Path(temporary) / "index.duckdb"
             research_records.rebuild(database)
             con = research_records.duckdb.connect(str(database), read_only=True)
-            self.assertEqual(con.execute("SELECT count(*) FROM artifacts").fetchone()[0], 276)
+            expected_count = len(list(GUTH_PROFILE.parent.glob("artifacts/cycle-*.json")))
+            self.assertEqual(con.execute("SELECT count(*) FROM artifacts").fetchone()[0], expected_count)
             self.assertEqual(
                 con.execute("SELECT status FROM artifacts WHERE cycle_number = 151").fetchone()[0],
                 "SEALED_GCD_WEIGHTED_NEGATIVE_TAIL_LOBE_OR_BOUNDARY_OPEN",
@@ -28,7 +29,7 @@ class ResearchRecordsTest(unittest.TestCase):
             self.assertIn("No improved zero-density coefficient", status)
             self.assertIn("## Latest sealed record", status)
             self.assertIn("research cycle 63", status)
-            self.assertIn("upstream analytic census", status)
+            self.assertIn("diagonal-aware direct triple census", status)
             self.assertEqual(research_records.check(con), 0)
             con.close()
 

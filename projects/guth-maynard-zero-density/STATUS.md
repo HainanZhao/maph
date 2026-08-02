@@ -6,9 +6,9 @@ Canonical evidence is the Git-tracked per-cycle artifact and its linked files; `
 ## Cold-start handoff
 
 - Project outcome (PROVED): No improved zero-density coefficient, prime-interval endpoint, or L-function-family transfer is proved. The checked baseline remains density coefficient 30/13, with uniform and almost-all interval endpoints 17/30 and 2/15.
-- Why the active gate matters (PROVED): Cycle 63 isolates the actual positive-exponential weighted pair census whose strict X^(17/25) improvement would advance E13. Cycles 165--176 conditionally compile a critical fixed-beta census into terminal webs and exact transport/divisor classifiers, but none proves the census or actual branch population. The upstream analytic census, not another terminal classifier, is now the active bottleneck.
-- Progress criterion (CONJECTURED): By the Cycle-216 gate, the pivot must prove P<=X^(17/25-epsilon) for some fixed epsilon>0, prove an equivalent strict actual-curve census margin that survives reinsertion, or rigorously realize an actual positive-exponential saturator supporting a materially larger saturation theorem. Cycles 177--216 test determinant/large-sieve and bilinear-spacing mechanisms plus adversarial saturators. A new finite transport/interface classifier without actual population is non-progress; if no viable mechanism or saturator survives, promote E11/E12 and target a complete-form saving strictly greater than 3/50. Cycle 500 is the hard terminal project cap.
-- Explicitly deferred: Cycles 165--176 are parked as a conditional inverse toolkit until actual population enters an existing terminal branch. E14D-L, boundary denominators, direct interval propagation, and L-function transfer are deferred. Paper-stage hostile audit begins only after a manuscript theorem is frozen.
+- Why the active gate matters (PROVED): Cycle 177 proves that the raw Cycle-63 beta-free pair target is false on a continuous-scale actual positive-exponential rational-root subsequence: one same-label packet gives X^(22/25-o(1)) pair mass. That spike is a seeded deep packet but contributes only X^(11/25+o(1)) triple rows at its label. The active bottleneck is now a diagonal-aware direct triple census or a theorem routing every heavy actual packet into recurrence, not another raw pair bound or terminal classifier.
+- Progress criterion (CONJECTURED): By the Cycle-216 gate, the project must prove a strict direct triple-census margin after explicitly extracting same-label heavy packets, or route every heavy actual packet with its beta seed and error into recurrence strong enough for E7/E9. Cycle 177 has already supplied the raw-pair saturator; another unqualified raw-pair bound is non-progress. A finite transport/interface classifier without actual population is also non-progress. If no viable triple/recurrence mechanism survives, promote E11/E12 and target a complete-form saving strictly greater than 3/50. Cycle 500 is the hard terminal project cap.
+- Explicitly deferred: The raw beta-free pair route is saturated by Cycle 177. Cycles 165--176 remain parked as a conditional inverse toolkit until actual population enters an existing terminal branch. E14D-L, boundary denominators, direct interval propagation, and L-function transfer are deferred. Paper-stage hostile audit begins only after a manuscript theorem is frozen.
 
 ### Start here (from this project directory)
 
@@ -16,8 +16,11 @@ Canonical evidence is the Git-tracked per-cycle artifact and its linked files; `
 - `research rebuild`
 - `research check`
 - `research cycle 63`
+- `research cycle 177`
 - `research cycle 176`
 - `python3 proof/build_cycle_63_log_transport_census_v1.py --check`
+- `python3 proof/build_cycle_177_actual_curve_rational_root_saturator_v1.py --check`
+- `cat docs/cycle-177-actual-curve-census-v1.md`
 - `cat docs/cycle-63-log-transport-v1.md`
 - `cat PLAN.md`
 
@@ -25,22 +28,23 @@ Read the listed record and its linked preregistration, proof document, conventio
 
 ## Index coverage
 
-- Cycle artifact files found in the working tree: 276
-- Cycle artifacts present in the Git index: 276
-- Artifacts by top-level epistemic status: CONJECTURED=6, LEGACY_UNTAGGED=10, OBSERVED=56, PROVED=204
-- Recursively tagged fields indexed for search (not independent claims): 23610
+- Cycle artifact files found in the working tree: 277
+- Cycle artifacts present in the Git index: 277
+- Artifacts by top-level epistemic status: CONJECTURED=6, LEGACY_UNTAGGED=10, OBSERVED=56, PROVED=205
+- Recursively tagged fields indexed for search (not independent claims): 23617
 
 ## Latest sealed record
 
-- Latest record: `cycle-176-physical-row-modular-web-v1` (Cycle 176, `PROVED`)
-- Status: `SEALED_PHYSICAL_ROW_DIVISOR_INCIDENCE_OR_SUPPORT_SEPARATION_WEB`
-- Boundary: This proves a finite physical-row modular-web classifier. It proves no actual row-reuse lower bound, eligible mass, target packet, recurrence, skeleton, density, or interval gain.
-- Next mathematical target: Force actual physical-row reuse or quantitatively control the labelled support-separation, common-numerator, distinct-avoidance, or gcd-energy webs.
+- Latest record: `cycle-177-actual-curve-rational-root-saturator-v1` (Cycle 177, `PROVED`)
+- Status: `SEALED_ACTUAL_POSITIVE_EXPONENTIAL_RAW_PAIR_CENSUS_SATURATOR`
+- Boundary: This proves a continuous-scale actual-positive-exponential rational-root family with raw Cycle-63 pair mass X^(22/25-o(1)). It disproves the uniform raw pair target X^(17/25+o(1)), but does not bound or refute the full fixed-beta triple census, prove a density gain, or prove an interval result.
+- Next mathematical target: Replace the raw pair route by a diagonal-aware direct triple census after extracting heavy seeded packets, or prove a heavy-actual-packet-to-seeded-recurrence theorem strong enough for E7/E9. Any further pair statistic must exclude or explicitly retain same-label rational-root rays.
 
 ## Recent sealed records
 
 | Cycle | Record | Tag | Gate | Next target |
 |---:|---|---|---|---|
+| 177 | `cycle-177-actual-curve-rational-root-saturator-v1` | `PROVED` | `SEALED_ACTUAL_POSITIVE_EXPONENTIAL_RAW_PAIR_CENSUS_SATURATOR` | Replace the raw pair route by a diagonal-aware direct triple census after extracting heavy seeded packets, or prove a heavy-actual-packet-to-seeded-recurrence theorem strong enough for E7/E9. Any further pair statistic must exclude or explicitly retain same-label rational-root rays. |
 | 176 | `cycle-176-physical-row-modular-web-v1` | `PROVED` | `SEALED_PHYSICAL_ROW_DIVISOR_INCIDENCE_OR_SUPPORT_SEPARATION_WEB` | Force actual physical-row reuse or quantitatively control the labelled support-separation, common-numerator, distinct-avoidance, or gcd-energy webs. |
 | 175 | `cycle-175-affine-eligibility-grid-v1` | `PROVED` | `SEALED_FULL_AFFINE_ELIGIBILITY_GRID_OR_LABELLED_DISCREPANCY_BANK` | Use actual exponential/fibre information to lower-bound eligible breadth or turn a massed range/residue/capacity discrepancy bank into a quantitative inverse theorem. |
 | 174 | `cycle-174-adaptive-slack-transport-v1-format-correction` | `PROVED` | `SEALED_FORMAT_CORRECTION` | None |
@@ -48,12 +52,12 @@ Read the listed record and its linked preregistration, proof document, conventio
 | 173 | `cycle-173-positive-forward-balance-v1` | `PROVED` | `SEALED_POSITIVE_FORWARD_CONSERVATIVE_BALANCE_GATE_EMPTY` | Develop reverse-orientation, quantified-slack, or genuinely new transport/coupling machinery on the actual positive exponential curve. |
 | 172 | `cycle-172-primitive-eligible-fibre-moment-v1` | `PROVED` | `SEALED_PRIMITIVE_LOCAL_INTERFACE_DOES_NOT_FORCE_DIVISOR_MOMENT_SURPLUS` | On the actual positive exponential curve, use a global exponential/fibre invariant to force numerator/denominator divisor incidence or quantify its absence in the complete labelled banks. |
 | 171 | `cycle-171-eligibility-weighted-projective-content-v1` | `PROVED` | `SEALED_ELIGIBILITY_WEIGHTED_PROJECTIVE_CONTENT_DIVISOR_WEB_AND_SHARP_TRANSFER` | Prove an actual lower bound for the complete labelled eligible divisor-content moment, or quantitatively bank seed/range, error, capacity, source-core, numerator-absorption, or denominator-absorption mass. |
-| 170 | `cycle-170-projective-packet-lift-v1` | `PROVED` | `SEALED_PROJECTIVE_LIFT_SEEDED_TARGET_PACKET_OR_ERROR_CONTENT_ADMISSIBILITY_CLASSIFIER` | Force a population of compatible source packet/cross-edge pairs into the seeded-deep branch, or bound/structure every low-content, error-load, and capacity obstruction bank. |
 
 ## Useful queries
 
 ```sh
 python /root/projects/maph/tools/research_records.py --project research-records.json cycle 63
+python /root/projects/maph/tools/research_records.py --project research-records.json cycle 177
 python /root/projects/maph/tools/research_records.py --project research-records.json cycle 176
 python /root/projects/maph/tools/research_records.py --project research-records.json search "fixed-beta census"
 python /root/projects/maph/tools/research_records.py --project research-records.json check
