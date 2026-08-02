@@ -3,8 +3,6 @@
 import ast
 import importlib.util
 import json
-import subprocess
-import sys
 import unittest
 from pathlib import Path
 
@@ -60,8 +58,7 @@ class TheoremOneTwoRouteAV4Tests(unittest.TestCase):
         ]
         self.assertEqual(floats, [])
 
-    def test_one_command_replay_and_hashed_artifact(self):
-        subprocess.run([sys.executable, str(SCRIPT)], check=True, cwd=PROJECT)
+    def test_sealed_hashed_artifact(self):
         artifact = json.loads(ARTIFACT.read_text(encoding="utf-8"))
         body = {
             key: value

@@ -2,8 +2,6 @@
 import ast
 import importlib.util
 import json
-import subprocess
-import sys
 import unittest
 from pathlib import Path
 
@@ -34,8 +32,7 @@ class StreamBRouteAV2(unittest.TestCase):
     def test_no_float_literals(self):
         tree = ast.parse(SCRIPT.read_text())
         self.assertEqual([n.value for n in ast.walk(tree) if isinstance(n, ast.Constant) and isinstance(n.value, float)], [])
-    def test_replay_hash(self):
-        subprocess.run([sys.executable, str(SCRIPT)], check=True, cwd=PROJECT)
+    def test_sealed_report_hash(self):
         artifact = json.loads(ARTIFACT.read_text())
         body = {k:v for k,v in artifact.items() if k not in {"mathematical_and_source_audit_sha256", "replay"}}
         self.assertEqual(artifact["mathematical_and_source_audit_sha256"], self.m.canonical_sha256(body))

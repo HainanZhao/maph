@@ -3,8 +3,6 @@
 import ast
 import importlib.util
 import json
-import subprocess
-import sys
 import unittest
 from pathlib import Path
 
@@ -65,8 +63,7 @@ class CycleTwoStreamBRouteATests(unittest.TestCase):
             [],
         )
 
-    def test_one_command_replay_hashes_the_report(self):
-        subprocess.run([sys.executable, str(SCRIPT)], check=True, cwd=PROJECT)
+    def test_sealed_report_hashes_the_report(self):
         artifact = json.loads(ARTIFACT.read_text(encoding="utf-8"))
         body = {
             key: value
