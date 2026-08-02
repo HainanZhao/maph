@@ -18,6 +18,32 @@
   checks during research. Hostile referee simulation begins only once a
   manuscript theorem is frozen.
 
+### Portfolio decision — 2 August 2026
+
+- `STRATEGIC_DECISION`: continue the project, but pivot the primary effort
+  away from extending the Cycle-165--176 terminal-web classifier chain.
+- `PROVED`: that chain is a conditional inverse toolkit: it begins only after
+  a critical fixed-beta Cycle-63 census is assumed and ends without an actual
+  census bound, branch-population lower bound, recurrence, density gain, or
+  interval gain.
+- `OBSERVED`: Cycles 167--176 repeatedly sharpened interfaces and obstruction
+  labels without improving the upstream analytic exponent. Another finite
+  classifier is disallowed as primary progress unless new actual-curve mass
+  has first entered the toolkit.
+- `CONJECTURED`: the highest-value 90-day test is the actual positive-
+  exponential Cycle-63 census. It must produce either a fixed-power census
+  margin or a realized saturator strong enough to support a materially larger
+  saturation theorem. If neither survives the frozen 90-day gate, E11/E12
+  autocorrelation--ANOVA becomes the primary route.
+- `STRATEGIC_DECISION`: the standing session mentor recommended this same
+  within-project pivot because the current route optimized interfaces without
+  proving the population theorem needed to enter them; that recommendation is
+  adopted. The project itself is not abandoned: its two-year horizon starts
+  now, its baseline reconstruction and `EO-LF4` sharpness are banked, and two
+  genuinely analytic routes remain. A new flagship-project decision is
+  deferred until the Cycle-63 sprint and the E11/E12 fallback have both faced
+  their gates.
+
 ## Memory model
 
 `PLAN.md` is strategic state, not a laboratory notebook. The canonical
@@ -27,34 +53,8 @@ is generated from those records. `.research/index.duckdb` is an ignored,
 rebuildable query index. The historical aggregate ledger is frozen at
 `archive/RESEARCH_LOG-through-cycle-151.md`; do not append to it.
 
-## Research-block cadence
-
-Cycles are substantive research blocks: one preregistered question, several
-dependent lemmas/counterexamples, and one bound-or-obstruction gate. Keep
-intermediate bookkeeping in a compact working ledger; seal, rebuild status,
-and commit only when the block's advance condition is resolved. Early seals
-are reserved for corrections, falsifiers, externally useful theorems, or
-irreversible strategy/gate changes.
-
-When a sealed-interface cut is found, treat it as a design problem, not a
-terminal barrier: the next block must attempt a new payload-preserving bridge,
-invariant, lift, or discriminating countermodel before any saturation claim.
-The program is expressly authorized to invent the missing engine from the
-ground up; known theorems constrain and test that engine, rather than defining
-the boundary of permissible ideas. Each proposed engine starts as the smallest
-falsifiable prototype with a stated invariant and failure signature.
-
-Rebuild and inspect the local index:
-
-```sh
-cd /root/projects/maph/projects/guth-maynard-zero-density
-source ../../tools/dev-env.sh
-research rebuild
-research check
-research cycle 151
-research search negative-tail
-research db tables
-```
+Repository-wide workflow, cycle cadence, memory, and companion rules live in
+the root `AGENTS.md`; they are not duplicated here.
 
 ## Frozen baseline
 
@@ -114,247 +114,99 @@ research db tables
   `(1+C_h)KQ^2/h` under a frozen anchor ratio `h<=C_hK` (and constant `2`
   when `h<=K`). Instantiating its actual anchor constant and constructing the
   finite coefficient partition remain open.
-- `PROVED`: conditional on a critical fixed-beta Cycle-63 census, Cycle 165
-  supplies `X^(38/25-o(1))` labelled four-anchor witnesses and routes every
-  one, with multiplicity, to a rank-one resonance, a genuinely seeded
-  high-content packet, or a rank-two low-content rational plane. It bounds no
-  terminal bank and has no density or interval consequence yet.
-- `PROVED`: conditional on the same census, Cycle 166 converts one complete
-  terminal branch into a massed labelled web: rank-one/low-plane shift states
-  have `X^(1/25-o(1))` parents and beta-seeded packet states have
-  `X^(2/25-o(1))` parents. The result controls neither a web nor the census
-  and has no E7/E9, density, or interval consequence.
-- `PROVED`: within the reduced rational one-step architecture, Cycle 167
-  classifies every beta-preserving cross-label edge by exact affine-fibre
-  residue, range, and balance conditions. A cross-label edge is not a
-  target-local Cycle-67 packet; the three arithmetic failures are independent
-  within that architecture. Its top-level scope is authoritatively narrowed
-  by `artifacts/cycle-167-affine-fibre-transport-v1-scope-correction.json`.
-- `PROVED`: Cycle 168 gives the exact bipartite edge/local-packet join
-  calculus and an exhaustive typed nonjoin partition. Separate edge and
-  packet masses do not imply overlap; direct affine loops have trivial
-  holonomy and cannot replace a local packet.
-- `PROVED`: Cycle 169 shows that common source provenance and prescribed total
-  marginal masses alone cannot force common target labels: the mixed energy is
-  a two-source-copy form and admits a sharp two-label anticorrelation model.
-- `PROVED`: Cycle 170 gives an exact signed projective lift of a seeded local
-  packet through a compatible exponential cross edge. It retains the beta
-  seed and classifies every target as seeded-deep or as a seed/range, content,
-  amplified-error, or denominator-capacity obstruction. It proves no actual
-  compatible population or density consequence.
-- `PROVED`: Cycle 171 factors eligible projective content as a labelled
-  source-core/numerator/denominator divisor web and proves a sharp conditional
-  content-moment-to-seeded-deep-mass transfer. It supplies no actual moment
-  surplus or compatible-pair population.
-- `PROVED`: Cycle 172 gives a signed abstract local-interface avoidance family
-  with primitive packets, valid local seed/range/balance labels, and no
-  divisor-moment surplus. Its negative alpha values are outside the actual
-  positive exponential curve, so it does not constrain the actual census.
-- `PROVED`: on the actual positive branch, Cycle 173 proves the frozen
-  forward direct-map conservative balance gate is empty: simultaneous row
-  ranges force `a/q<=2`, while balance and admissibility force `a/q>2`.
-  Reverse orientation, extra slack, and different maps remain open.
-- `PROVED`: Cycle 174 replaces the unit forward error budget by an exact
-  row-local ledger. Capacity-saturated edges transport with fixed constant
-  `C0+4Y*C1`; all other edges retain a dyadic capacity-deficit label. No
-  population of either branch is proved.
+- `PROVED`: conditional on a critical fixed-beta Cycle-63 census, Cycles
+  165--166 produce `X^(38/25-o(1))` four-anchor witnesses and a massed
+  beta-anchored terminal web with `X^(1/25-o(1))` or `X^(2/25-o(1))` parent
+  multiplicity.
+- `PROVED`: Cycles 167--176 give exact cross-label, join, projective-content,
+  adaptive-slack, affine-eligibility, and physical-row incidence classifiers,
+  together with sharp local countermodels. They prove no actual compatible
+  population. The canonical boundaries are the individual records in
+  `artifacts/cycle-167-*` through `artifacts/cycle-176-*`.
+- `PROVED`: the positive forward conservative direct gate is empty; adaptive
+  slack reopens only a capacity-saturated branch or a dyadic-deficit bank.
+  This is a scoped architectural result, not a global exponential no-go.
 
 ## Research-path graph
 
 ```text
 published reconstruction P0 [complete]
   +-- EO-LF4 sharpness [complete, scoped] -- lambda*Xi [diagnostic]
-  `-- E13 critical transport [principal]
+  `-- E13 actual positive-exponential census [PRIMARY 90-DAY PIVOT]
+        +-- Cycle 63 weighted pair census / realized saturator [active]
+        +-- Cycles 165--176 terminal inverse toolkit [parked until population]
         +-- E14 unsigned incidence [volume limit; inverse input]
-        +-- E14D-L signed Mellin aliases [principal]
-        |     `-- actual strict antecedent -> bounded fan / escape control [active]
-        +-- E14D-H fourth-moment condenser <--- E17 extremizer foundry
+        +-- E14D-L signed Mellin aliases [deferred]
+        +-- E14D-H fourth-moment condenser [parked conditional toolkit]
         +-- E15 anchored shifted-ratio spectrometer
         `-- E16 alias-to-seed compiler --> E7/E9 prime skeleton
-  +-- E11/E12 autocorrelation--ANOVA [co-primary]
+  +-- E11/E12 autocorrelation--ANOVA [90-DAY FALLBACK]
   `-- E5/E6 feedback/direct zero cancellation [incubation]
         `-- P3/P5 intervals; P6/P7 L-function transfer
 ```
 
 | Gate | State | Advance condition |
 |---|---|---|
+| E13 / Cycle 63 | `PRIMARY_90_DAY_ACTUAL_CURVE_SPRINT` | Prove `P<=X^(17/25-epsilon)` for some fixed `epsilon>0`, prove the equivalent strict census margin needed downstream, or construct and rigorously analyze an actual positive-exponential saturator. |
 | E14 | `UNSIGNED_VOLUME_LIMIT_REACHED` | Use only for inverse structure. |
-| E14D-L | `TIMEBOXED_AT_SCALE_LABEL_INFORMATION_LOSS` | Reopen only by restoring `t`/ordered atoms in a coefficient-preserving selector or proving a genuinely `t`-independent factorization. |
+| E14D-L | `DEFERRED_AT_SCALE_LABEL_INFORMATION_LOSS` | Reopen only by restoring `t`/ordered atoms in a coefficient-preserving selector or proving a genuinely `t`-independent factorization. |
 | E14D-L mask cone | `RAW_ZERO_DIAGONAL_GRAM_OBSTRUCTION_BANKED_COEFFICIENT_NEGATIVE_SPECTRAL_ALIGNMENT_OPEN` | Concentrate actual negative spectral energy in a fixed labelled block family or prove a robust labelled block-complexity inverse. |
-| E14D-H | `SATURATED_TRANSPORT_MASS_OR_DYADIC_DEFICIT_WEB_OPEN` | Force complete-pair mass into Cycle-174 capacity-saturated bounded-slack transport, or turn a massed labelled dyadic capacity-deficit bank into a quantitative web/obstruction. |
+| E14D-H / Cycles 165--176 | `PARKED_CONDITIONAL_INVERSE_TOOLKIT` | Reopen only after an actual fixed-power census/population result enters one existing terminal branch, or an actual-curve saturator falsifies the current routing. |
 | E15 | `ANCHOR_REQUIRED` | Classify anchored almost-eigenfunctions. |
 | E16 | `EXACT_VALUATION_WEB_BANKED` | Compile relation-rich structure to a genuine transport seed. |
-| E11/E12 | `AUTOCORRELATION_ANOVA_OPEN` | Save `>3/50` in complete form or force enough recurrence. |
+| E11/E12 | `FALLBACK_AFTER_CYCLE63_GATE` | If the first 30-day Cycle-63 engine sprint yields neither a viable fixed-power mechanism nor a realized saturator, promote this route and save `>3/50` in complete form or force enough recurrence. |
 | E7/E9 | `SKELETON_RECURRENCE_OPEN` | Prove the `X^(21/25+o(1))` skeleton bound. |
 | P3/P5 | `PENDING_GAIN` | Reinsert only a strict proof-grade analytic margin. |
 | Paper audit | `DEFERRED` | Start after a manuscript theorem freezes. |
 
-## Principal engines and falsifiers
+## Decision scorecard and falsifiers
 
-- `CONJECTURED` E14D-L: Cycles 152--154 bank a conditional fan, an exact
-  actual-mass router, a conditional finite-class escape localizer, and an
-  exact anchor-bounded comb-norm lemma. Cycle 155 must derive the actual fixed
-  finite coefficient partition or expose its quantified complexity inverse.
-  Cycle 157 rules out exact raw-mask Gram transport and Cycle 159 proves that
-  primitive-ray compression loses the multiplier needed by coefficient
-  products. E14D-L is timeboxed for Cycles 160--162. Positive strict
-  transport still needs its normalized weights and uniform complete capacity
-  bound before spacing/order-three curvature can attack an actual bounded fan.
-- `CONJECTURED` E14D-H: Cycles 160--163 turn conditional upper-band `M4`
-  excess into a globally massed four-atom/star inverse, then classify the
-  star by literal wrap complexity or an aggregate common-wrap logarithmic
-  web. The next step must compile one labelled output or preserve an
-  admissible obstruction. A raw-target example without either output enlarges
-  the inverse class.
-- `PROVED` Cycle 166: a complete Cycle-165 terminal branch has a massed
-  beta-anchored shift or seeded-packet web with the stated `1/25` or `2/25`
-  labelled-parent exponent. The next bridge must preserve beta, divisibility,
-  and `h`-range; an unanchored recurrence or deduplicated web is non-progress.
-- `PROVED` Cycle 167: in the reduced rational direct-map architecture, an
-  eligible affine-fibre row gives only a beta-preserving cross-label edge.
-  Residue, transformed-range, and `aK` balance are necessary exact labels;
-  the missing bridge is a target-local packet join or a closed labelled loop.
-- `PROVED` Cycle 168: the join is an exact bipartite compatibility form, not
-  a diagonal denominator/depth match; its five typed nonjoin cuts are
-  exhaustive. The closed-loop alternative has trivial holonomy. The remaining
-  task is actual overlap or a quantitative labelled separation inverse.
-- `PROVED` Cycle 169: common source and total marginal masses cannot supply
-  that overlap; a two-label anticorrelation model is sharp. The next engine
-  must exploit actual exponential/fibre geometry or a typed separator.
-- `PROVED` Cycle 170: a compatible source packet/cross edge has a signed
-  projective target relation and beta-seed transport. Its usable depth is the
-  minimum of content/error depth and denominator capacity; high content alone
-  is not progress. The next engine must force population into its seeded-deep
-  branch or give a quantitative labelled bank for every obstruction type.
-- `PROVED` Cycle 171: among seed/range-valid pairs, the exact content
-  threshold simultaneously enforces Cycle-170 error and capacity depth. Its
-  divisor moment has an automatic `H/L` cap and a sharp population transfer.
-  The next missing input is an actual moment surplus, not another scalar-gcd
-  identity.
-- `PROVED` Cycle 172: the signed local rules alone permit a primitive,
-  beta-retaining, range/balance-valid affine fibre with `u=v=1` and `M=W/2`.
-  It is deliberately outside the positive exponential curve. Any real
-  moment theorem must use that curve or its global fibre geometry.
-- `PROVED` Cycle 173: positivity makes the direct forward conservative
-  balance/range/admissibility ledger inconsistent. This closes only that
-  direct gate; it does not turn the no-go into a universal transport theorem.
-- `PROVED` Cycle 174: exact row-local slack recovers fixed-constant transport
-  on the capacity-saturated branch and preserves a dyadic deficit ledger
-  otherwise. The missing input is population, not another constant ledger.
-- `CONJECTURED` E15/E16: classify anchored shifted-strip almost-eigenfunctions
-  and turn high-codegree alias structure into a seed with an explicit phase
-  error budget. A seedless target-sized anchored graph is itself structural
-  output.
-- `CONJECTURED` E17: search exact finite alias operators for adversarial
-  extremizers. All numerical output remains discovery-only.
+| Route | Banked evidence | Missing evidence | Decision |
+|---|---|---|---|
+| Improved density / intervals | `PROVED` complete baseline ledger and explicit strict exponent targets | Any fixed-power analytic saving surviving reinsertion | Continue only through the Cycle-63 sprint; intervals remain downstream. |
+| Larger saturation theorem | `PROVED` `EO-LF4` exponent-20 sharpness and `lambda*Xi` reduction | An actual-curve saturator or exhaustiveness for a materially larger coefficient-sensitive class | Treat a realized Cycle-63 saturator as a first-class sprint outcome. |
+| Terminal web / skeleton | `PROVED` conditional Cycles 165--176 inverse toolkit | Actual census or branch population | Park; no further finite classifier without population. |
+| E11/E12 | `PROVED` exact ANOVA decomposition and strict `>3/50` target | Complete-form restriction saving or recurrence inverse | First fallback after the Cycle-63 engine gate. |
+| L-function transfer | No conductor-accounted transferred mechanism | A source theorem with strict margin | Defer; transfer cannot create the missing margin. |
+
+The pivot is falsified if `PROVED` actual exponential geometry forces critical
+mass into one existing terminal web with a recoverable fixed-power margin; in
+that event, resume Cycles 165--176 immediately. The decision to continue the
+whole project is falsified if both the Cycle-63 sprint and the E11/E12 fallback
+fail their preregistered analytic gates and yield no materially larger actual
+saturator.
 
 ## Two-year execution plan
 
 | Dates | Deliverable | Decision rule |
 |---|---|---|
-| Aug--Oct 2026 | E14D-L negative-tail theorem; E17 finite extremizer atlas. | Bank a compact signed theorem or preserve its explicit saturator. |
-| Nov 2026--Apr 2027 | Widest lower-band `M2` closure; narrow-band E14D-H concentration theorem. | Promote only a proved band closure or a real inverse class. |
+| 2 Aug--1 Sep 2026 | Freeze the Cycle-63 exponent scorecard; test actual-curve determinant/large-sieve and bilinear-spacing engines in parallel with an adversarial saturator search. | Continue the route only if one mechanism has a quantified path to a fixed-power margin, or an actual saturator survives exact checks. |
+| 2 Sep--1 Oct 2026 | Prove the strongest surviving census band or rigorous actual-curve saturator theorem. | No new terminal classifier counts as progress. |
+| 2 Oct--1 Nov 2026 | Reinsert the result into the complete powered-coordinate and density ledger. | Keep Cycle 63 primary only if a strict margin survives; otherwise promote E11/E12. |
+| Nov 2026--Apr 2027 | E11/E12 complete autocorrelation--ANOVA restriction or recurrence inverse if Cycle 63 misses; otherwise widen the proved Cycle-63 band. | Require `>3/50` in the complete form, a strict Cycle-63 census margin, or a materially larger saturation theorem. |
 | May--Jul 2027 | E16 compiler from the strongest structured output. | Year-one target: lower band closure plus upper inverse theorem, or complete signed-projector saturation. |
 | Aug 2027--Jan 2028 | Glue across the atlas; test E7/E9, E11/E12, E5, and E6 ledgers. | Freeze only a complete raw-form, skeleton, density, or direct-interval candidate. |
 | Feb--Jul 2028 | Propagate a surviving margin; then conduct source review, independent derivation, hostile audit, replay, and paper preparation. | Transfer only with strict conductor/occupancy margin. |
 
 ## Open questions and next action
 
-1. Can the gcd-weighted negative-tail population be bounded below the
-   anti-alignment threshold away from boundary denominators?
-2. Can a denominator near `Q` contribute a coherent negative lobe without
-   yielding a new explicit divisor-fan model?
-3. Does the coefficient-faithful vector autocorrelation produce a fixed-power
-   lower-band saving, or only a larger saturation theorem?
-4. Can forced upper-band fourth-moment excess be converted to colored
-   four-cycles retaining the phase anchor?
-5. Can a relation-rich web produce a genuine transport seed and then the
-   `X^(21/25+o(1))` prime skeleton?
+1. Can the weighted actual-curve pair census
+   `P=sum_d(H-d)#{ell:||d alpha_ell||<=2C/X}` beat `X^(17/25)` by a fixed
+   power using determinant/large-sieve or bilinear spacing?
+2. If not, what actual positive-exponential family saturates the best bound,
+   and does it license a saturation theorem beyond `EO-LF4`?
+3. Can the coefficient-faithful nonnegative autocorrelation ANOVA save
+   strictly more than `3/50` in the complete form, or force two-scale
+   recurrence?
+4. Only after actual population enters Cycles 165--176: which existing
+   terminal branch carries a recoverable fixed-power share?
 
-Cycle 154 banks only the conditional finite-class localization compiler.
-Cycle 155 is preregistered at
-`docs/cycle-155-actual-coefficient-escape-partition-preregistration-v1.md`.
-Cycle 157 is preregistered at
-`docs/cycle-157-selection-mask-cone-preregistration-v1.md`. Next authorized
-action is Cycle 159, preregistered at
-`docs/cycle-159-coefficient-selector-reconstruction-preregistration-v1.md`:
-reconstruct the actual coefficient-preserving selection kernel through the
-Cycle 124--136 maps, or prove the first information-loss map and its minimal
-missing label. It ended in the primitive-ray multiplier-loss alternative.
-E14D-L is therefore timeboxed through Cycles 160--162. Next authorized
-action: execute Cycle 160, preregistered at
-`docs/cycle-160-colored-four-cycle-condenser-preregistration-v1.md`, proving
-the `1/150` low-codegree condenser bound or preserving an actual high-codegree
-pair-cell inverse/falsifier. Cycle 161 is preregistered at
-`docs/cycle-161-high-cell-refinement-preregistration-v1.md`: refine the high
-cell into coefficient-weighted phase-aligned disjoint four-atom mass or a
-labelled effective-degree star; it is now sealed. Next authorized action is
-Cycle 162, preregistered at
-`docs/cycle-162-mass-sensitive-high-cell-preregistration-v1.md`, is sealed:
-it retains a fixed share of the conditional forced excess in a dyadic
-high-codegree layer and exports either globally massed positive-real
-four-cycle mass or literal weighted labelled oriented-star mass. Next
-authorized action is Cycle 163, preregistered at
-`docs/cycle-163-star-wrap-fiber-preregistration-v1.md`: pull back the
-weighted star family through `z_(d,q)=c0q exp(2pi d/D)` by the exact
-wrap/fiber effective-degree factorization, producing a common-wrap log web
-or explicit wrap-complexity inverse; it is now sealed. Next authorized action
-is Cycle 164, preregistered at
-`docs/cycle-164-wrap-valuation-sidon-preregistration-v1.md`: retain high
-common-wrap fibers and prove an exact valuation-web versus weighted-Sidon
-classification. Cycle
-158's concentration theorem remains deferred until a selector
-is real rather than formal. The older
-Cycle-155 partition remains a parallel output only if it is actual and
-fixed-size; an `X^(o(1))` class count is not fixed localization. Cycle 156
-supplies its norm constant once the actual frozen anchor ratio is
-instantiated. Positive transport and the Cycle-152 bounded fan remain
-unclosed. Cycle 165 is sealed at
-`artifacts/cycle-165-anchored-fibre-product-determinant-v1.json`: conditional
-on a critical fixed-beta census, it gives `X^(38/25-o(1))` labelled
-four-anchor witnesses and an exhaustive rank-one/high-content/low-plane
-classification. Its first global
-compact-detector graph did not preserve the original fixed beta anchor and is
-therefore restricted to an unseeded diagnostic. Cycle 166 is now sealed at
-`artifacts/cycle-166-terminal-bank-entropy-v1.json`: it converts every
-retained terminal branch into a massed beta-anchored shift or seeded-packet
-web, with labelled parent exponent `1/25` or `2/25`. Next authorized action:
-Cycle 167 is sealed at
-`artifacts/cycle-167-affine-fibre-transport-v1.json`: its reduced-rational
-classifier proves the direct map can make only a cross-label edge, not a
-Cycle-67 packet; its scope correction is
-`artifacts/cycle-167-affine-fibre-transport-v1-scope-correction.json`.
-Cycle 168 is sealed at
-`artifacts/cycle-168-edge-packet-join-v1.json`: it proves the compatibility
-calculus, but not overlap. Next authorized action: preregister a quantitative
-compatibility-form lower-bound engine or a labelled support-separation inverse
-for the actual banks. Cycle 169 is sealed at
-`artifacts/cycle-169-source-coupled-label-energy-v1.json`: common provenance
-and total masses do not force label energy. Cycle 170 is sealed at
-`artifacts/cycle-170-projective-packet-lift-v1.json`: compatible packet/cross
-edge data lift exactly to a seeded projective target, but actual population is
-unproved. Cycle 171 is sealed at
-`artifacts/cycle-171-eligibility-weighted-projective-content-v1.json`: it
-gives the exact eligible divisor moment and sharp transfer but no actual
-moment surplus. Cycle 172 is sealed at
-`artifacts/cycle-172-primitive-eligible-fibre-moment-v1.json`: it rules out a
-moment surplus from the signed abstract local interface only; its negative
-alpha family is outside the actual curve. Cycle 173 is sealed at
-`artifacts/cycle-173-positive-forward-balance-v1.json`: it proves the frozen
-positive forward conservative direct-map gate empty. Next authorized action:
-Cycle 174 is sealed at
-`artifacts/cycle-174-adaptive-slack-transport-v1.json`: it gives bounded-slack
-capacity-saturated transport or a labelled deficit bank, but no population.
-Cycle 175 is preregistered at
-`docs/cycle-175-affine-eligibility-grid-preregistration-v1.md`: pull back a
-complete massed affine fibre to its exact eligibility breadth and common
-capacity class, or bank range/residue/discrepancy obstruction. It is now
-sealed at `artifacts/cycle-175-affine-eligibility-grid-v1.json`. Next
-authorized action is Cycle 176, preregistered at
-`docs/cycle-176-physical-row-modular-web-preregistration-v1.md`: aggregate
-residue avoidance only through physical-row reuse, or retain a labelled
-support-separation/modular-complexity web. No E7/E9 or density claim is
-authorized.
+Next authorized action: preregister one substantive Cycle-177 actual-curve
+census block covering the full first 30-day engine sprint. Freeze the exponent
+scorecard, parameter ranges, allowed determinant/large-sieve and bilinear
+families, adversarial-saturator search, and the rule that a new finite
+transport/interface classifier is non-progress. Consult Cycle 63 first;
+Cycles 165--176 are reference constraints, not the active derivation target.
 
 ## Crash recovery
 
@@ -365,20 +217,9 @@ cat projects/guth-maynard-zero-density/PLAN.md
 cat projects/guth-maynard-zero-density/STATUS.md
 cd projects/guth-maynard-zero-density
 research check
-research cycle 151
-python3 proof/build_cycle_144_actual_edge_coefficient_v1.py --check
-python3 proof/build_cycle_145_vector_autocorrelation_v1.py --check
-python3 proof/build_cycle_146_balanced_highpass_mask_v1.py --check
-python3 proof/build_cycle_147_strict_core_signed_cell_v1.py --check
-python3 proof/build_cycle_148_endpoint_major_arc_comb_v1.py --check
-python3 proof/build_cycle_149_target_mass_comb_inverse_v1.py --check
-python3 proof/build_cycle_150_divisor_comb_sign_test_v1.py --check
-python3 proof/build_cycle_151_sampled_comb_double_poisson_v1.py --check
-python3 proof/build_cycle_152_bounded_multiplier_divisor_fan_v1.py --check
-python3 proof/build_cycle_152_bounded_multiplier_divisor_fan_scope_correction_v1.py --check
-python3 proof/build_cycle_153_actual_mass_routing_v1.py --check
-python3 proof/build_cycle_154_coefficient_escape_localization_v1.py --check
-python3 proof/build_cycle_156_divisor_comb_norm_majorant_v1.py --check
-python3 proof/build_cycle_157_selection_mask_negative_spectral_v1.py --check
-python3 proof/build_cycle_159_coefficient_selector_information_loss_v1.py --check
+research cycle 63
+research cycle 176
+python3 proof/build_cycle_63_log_transport_census_v1.py --check
+python3 proof/build_cycle_176_physical_row_modular_web_v1.py --check
+cat docs/cycle-63-log-transport-v1.md
 ```
