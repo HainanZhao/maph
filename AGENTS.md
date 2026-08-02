@@ -56,10 +56,11 @@ search, dependency queries, and generated status. The database binary is
 ignored and never canonical; commit its schema, pinned dependency, rebuild
 script, tests, and generated text status only. Do not create or append a
 monolithic `RESEARCH_LOG.md`. An existing one is historical archive only.
-When a project provides a shared research-database API or CLI, use it for
-routine cycle, claim, gate, dependency, evidence, and SQL queries. Extend and
-test that common interface when a query pattern recurs; do not create a new
-one-off database script for each cycle.
+Use `tools/duckdb_tools.py` for schema-agnostic read-only DuckDB inspection.
+When a project provides domain-specific research-database queries, use and
+extend that project adapter for routine cycle, claim, gate, dependency, and
+evidence queries. Test a common interface when a query pattern recurs; do not
+create a new one-off database script for each cycle.
 
 Before work: re-read frozen counts and conventions from artifacts, check
 `git status` and recent/fetched history, and preserve unrelated changes.
