@@ -134,9 +134,9 @@ published reconstruction P0 [complete]
 | Gate | State | Advance condition |
 |---|---|---|
 | E14 | `UNSIGNED_VOLUME_LIMIT_REACHED` | Use only for inverse structure. |
-| E14D-L | `EXACT_DIVISOR_COMB_NORM_MAJORANT_LEMMA_BANKED_ACTUAL_PARTITION_OPEN` | Instantiate the frozen anchor ratio and derive an actual fixed finite coefficient-escape partition, or expose a quantified coefficient-complexity inverse; separately prove positive transport to activate the bounded fan. |
+| E14D-L | `TIMEBOXED_AT_SCALE_LABEL_INFORMATION_LOSS` | Reopen only by restoring `t`/ordered atoms in a coefficient-preserving selector or proving a genuinely `t`-independent factorization. |
 | E14D-L mask cone | `RAW_ZERO_DIAGONAL_GRAM_OBSTRUCTION_BANKED_COEFFICIENT_NEGATIVE_SPECTRAL_ALIGNMENT_OPEN` | Concentrate actual negative spectral energy in a fixed labelled block family or prove a robust labelled block-complexity inverse. |
-| E14D-H | `MOMENT_CONCENTRATION_OR_SATURATION_INVERSE_OPEN` | Classify/exclude excess `2xi-116/75` with its phase anchor. |
+| E14D-H | `ACTIVE_PHASE_ANCHORED_COLORED_FOUR_CYCLE_CONDENSER` | Prove a low-codegree fourth-moment bound with fixed power margin or a labelled high-codegree inverse. |
 | E15 | `ANCHOR_REQUIRED` | Classify anchored almost-eigenfunctions. |
 | E16 | `EXACT_VALUATION_WEB_BANKED` | Compile relation-rich structure to a genuine transport seed. |
 | E11/E12 | `AUTOCORRELATION_ANOVA_OPEN` | Save `>3/50` in complete form or force enough recurrence. |
@@ -150,16 +150,16 @@ published reconstruction P0 [complete]
   actual-mass router, a conditional finite-class escape localizer, and an
   exact anchor-bounded comb-norm lemma. Cycle 155 must derive the actual fixed
   finite coefficient partition or expose its quantified complexity inverse.
-  Cycle 157 rules out exact raw-mask Gram transport and routes actual negative
-  mask correlation to coefficient-weighted negative spectral energy. Cycle
-  158 must concentrate that energy or expose robust labelled complexity.
-  Positive strict transport still needs its normalized weights and uniform
-  complete capacity bound before spacing/order-three curvature can attack an
-  actual bounded fan.
-- `CONJECTURED` E14D-H: encode required `M4` excess as a colored four-cycle
-  problem. Low codegree should exclude excess; high codegree should expose an
-  anchored rational web. A raw-target example without either output enlarges
-  the inverse class.
+  Cycle 157 rules out exact raw-mask Gram transport and Cycle 159 proves that
+  primitive-ray compression loses the multiplier needed by coefficient
+  products. E14D-L is timeboxed for Cycles 160--162. Positive strict
+  transport still needs its normalized weights and uniform complete capacity
+  bound before spacing/order-three curvature can attack an actual bounded fan.
+- `CONJECTURED` E14D-H: Cycle 160 encodes the needed upper-band `M4` excess
+  as an actual phase-anchored, coefficient-weighted colored four-cycle
+  problem. Low codegree should exclude excess with a fixed `1/150` margin;
+  high codegree should expose an anchored rational web. A raw-target example
+  without either output enlarges the inverse class.
 - `CONJECTURED` E15/E16: classify anchored shifted-strip almost-eigenfunctions
   and turn high-codegree alias structure into a seed with an explicit phase
   error budget. A seedless target-sized anchored graph is itself structural
@@ -195,15 +195,20 @@ Cycle 155 is preregistered at
 `docs/cycle-155-actual-coefficient-escape-partition-preregistration-v1.md`.
 Cycle 157 is preregistered at
 `docs/cycle-157-selection-mask-cone-preregistration-v1.md`. Next authorized
-action is Cycle 158, preregistered at
-`docs/cycle-158-spectral-energy-concentration-preregistration-v1.md`:
-derive a finite-resolution labelled block map for the actual coefficient
-object, then prove either `J_*=ceil(8/kappa_*)` blocks capture 75% of its
-negative spectral energy or every such block set misses at least 25%.
-The older Cycle-155 partition remains a parallel output only if it is actual
-and fixed-size; an `X^(o(1))` class count is not fixed localization. Only
-after an actual partition may Cycle 154 identify a real high-projection class.
-Cycle 156 supplies its norm constant once the actual frozen anchor ratio is
+action is Cycle 159, preregistered at
+`docs/cycle-159-coefficient-selector-reconstruction-preregistration-v1.md`:
+reconstruct the actual coefficient-preserving selection kernel through the
+Cycle 124--136 maps, or prove the first information-loss map and its minimal
+missing label. It ended in the primitive-ray multiplier-loss alternative.
+E14D-L is therefore timeboxed through Cycles 160--162. Next authorized
+action: execute Cycle 160, preregistered at
+`docs/cycle-160-colored-four-cycle-condenser-preregistration-v1.md`, proving
+the `1/150` low-codegree condenser bound or preserving an actual high-codegree
+colored four-cycle inverse/falsifier. Cycle 158's concentration theorem
+remains deferred until a selector is real rather than formal. The older
+Cycle-155 partition remains a parallel output only if it is actual and
+fixed-size; an `X^(o(1))` class count is not fixed localization. Cycle 156
+supplies its norm constant once the actual frozen anchor ratio is
 instantiated. Positive transport and the Cycle-152 bounded fan remain
 unclosed.
 
@@ -231,4 +236,5 @@ python3 proof/build_cycle_153_actual_mass_routing_v1.py --check
 python3 proof/build_cycle_154_coefficient_escape_localization_v1.py --check
 python3 proof/build_cycle_156_divisor_comb_norm_majorant_v1.py --check
 python3 proof/build_cycle_157_selection_mask_negative_spectral_v1.py --check
+python3 proof/build_cycle_159_coefficient_selector_information_loss_v1.py --check
 ```
