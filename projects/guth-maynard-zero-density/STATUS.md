@@ -7,7 +7,7 @@ Canonical evidence is the Git-tracked per-cycle artifact and its linked files; `
 
 - Project outcome (PROVED): No improved zero-density coefficient, prime-interval endpoint, or L-function-family transfer is proved. The checked baseline remains density coefficient 30/13, with uniform and almost-all interval endpoints 17/30 and 2/15.
 - Why the active gate matters (PROVED): Cycle 159 proves that primitive-ray compression loses the multiplier needed to reconstruct nonconstant Cycle-124 coefficient products. Conditional on upper-band excess, Cycles 160--162 now yield either globally massed coefficient-weighted positive-real four-distinct-atom configurations or literal weighted labelled oriented-star mass with high effective degree; neither output is yet a coordinate pullback, rational web, or moment gain.
-- Progress criterion (CONJECTURED): The next E14D-H step must compile the labelled Cycle-163 common-wrap logarithmic web or bound its labelled integer-wrap complexity alternative, while retaining the globally massed four-cycle arm. An unweighted edge count, coefficient-free aligned family, generic fourth-moment expansion, or an unlabelled residual does not advance the gate.
+- Progress criterion (CONJECTURED): Cycle 164 advances E14D-H only by retaining high common-wrap fibers and classifying their comparable-weight leaf sets as an exact valuation web or a globally massed weighted-Sidon obstruction. An unweighted edge count, coefficient-free aligned family, generic fourth-moment expansion, or an unlabelled residual does not advance the gate.
 - Explicitly deferred: Boundary denominators within a fixed power of Q are a separate branch; paper-stage hostile audit begins only after a manuscript theorem is frozen.
 
 ### Start here (from this project directory)
@@ -18,14 +18,14 @@ Canonical evidence is the Git-tracked per-cycle artifact and its linked files; `
 - `research cycle 163`
 - `research search "colored four cycle"`
 - `python3 proof/build_cycle_163_star_wrap_fiber_v1.py --check`
-- `cat docs/cycle-163-star-wrap-fiber-v1.md`
+- `cat docs/cycle-164-wrap-valuation-sidon-preregistration-v1.md`
 
 Read the listed record and its linked preregistration, proof document, conventions, builder, and test before changing mathematics or code. Do not infer a theorem from this handoff; its claim tags and boundaries are in the canonical record.
 
 ## Index coverage
 
 - Cycle artifact files found in the working tree: 261
-- Cycle artifacts present in the Git index: 260
+- Cycle artifacts present in the Git index: 261
 - Artifacts by top-level epistemic status: CONJECTURED=6, LEGACY_UNTAGGED=10, OBSERVED=56, PROVED=189
 - Recursively tagged fields indexed for search (not independent claims): 23541
 
