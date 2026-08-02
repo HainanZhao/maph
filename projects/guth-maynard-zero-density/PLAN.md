@@ -105,6 +105,10 @@ continues.
 - `PROVED`: every post-error forced negative divisor-comb correlation routes
   either to labelled strict-halo negative mass or, if that branch is below its
   fixed threshold, to a quantitative labelled escape obligation.
+- `PROVED`: a finite reason-labelled escape partition with a fixed comb-norm
+  bound localizes its negative projection to one retained class, with a
+  one-ray `L2` lower bound. The actual partition and comb-norm majorant are
+  not yet proved.
 
 ## Research-path graph
 
@@ -126,7 +130,7 @@ published reconstruction P0 [complete]
 | Gate | State | Advance condition |
 |---|---|---|
 | E14 | `UNSIGNED_VOLUME_LIMIT_REACHED` | Use only for inverse structure. |
-| E14D-L | `ACTUAL_MASS_ROUTING_BANKED_STRICT_ANTECEDENT_COMPILER_AND_ESCAPE_CONTROL_OPEN` | Prove the actual strict-halo antecedent for the bounded fan, or control a finite labelled escape decomposition. |
+| E14D-L | `CONDITIONAL_ESCAPE_LOCALIZATION_BANKED_ACTUAL_COEFFICIENT_PARTITION_OPEN` | Derive an actual fixed finite coefficient-escape partition or expose a quantified coefficient-complexity inverse; separately prove positive transport to activate the bounded fan. |
 | E14D-H | `MOMENT_CONCENTRATION_OR_SATURATION_INVERSE_OPEN` | Classify/exclude excess `2xi-116/75` with its phase anchor. |
 | E15 | `ANCHOR_REQUIRED` | Classify anchored almost-eigenfunctions. |
 | E16 | `EXACT_VALUATION_WEB_BANKED` | Compile relation-rich structure to a genuine transport seed. |
@@ -137,11 +141,12 @@ published reconstruction P0 [complete]
 
 ## Principal engines and falsifiers
 
-- `CONJECTURED` E14D-L: Cycles 152--153 bank a conditional fan and an exact
-  actual-mass router. Cycle 154 must derive the strict branch's actual
-  positive-weight normalization and uniform complete capacity bound, or give
-  a finite labelled escape decomposition with quantitative obligations. Only
-  then can spacing/order-three curvature attack an actual bounded fan.
+- `CONJECTURED` E14D-L: Cycles 152--154 bank a conditional fan, an exact
+  actual-mass router, and a conditional finite-class escape localizer. Cycle
+  155 must derive the actual fixed finite coefficient partition or expose its
+  quantified complexity inverse. Positive strict transport still needs its
+  normalized weights and uniform complete capacity bound before spacing/order-
+  three curvature can attack an actual bounded fan.
 - `CONJECTURED` E14D-H: encode required `M4` excess as a colored four-cycle
   problem. Low codegree should exclude excess; high codegree should expose an
   anchored rational web. A raw-target example without either output enlarges
@@ -176,24 +181,18 @@ published reconstruction P0 [complete]
 5. Can a relation-rich web produce a genuine transport seed and then the
    `X^(21/25+o(1))` prime skeleton?
 
-Cycle 154 is preregistered at
-`docs/cycle-154-coefficient-transport-preregistration-v1.md`. Next
-authorized action: implement its actual strict-halo coefficient-transport or
-labelled-escape compiler. Derive or reject the actual positive
-coefficient-weight normalization and a uniform complete bound
-`0<=n_b<=Cw_b/m_b`, including Riemann/Poisson and aggregate errors. Success
-composes with Cycle 152 into an actual bounded-multiplier labelled fan.
-Failure must transfer a quantitative, reason-labelled mass to a finite
-coefficient-transport, boundary, phase-changing, nonsmooth, unbounded-tail,
-or other registered escape class; do not absorb it into `C`.
-
-First subgate: prove or reject a one-witness positive-majorant bound for the
-complete smooth symbol, of the form
-`|<T(G),w_h>|<=C_dom KQ^2/h` for a nonnegative dominating amplitude `G` and
-fixed `C_dom`. Only then may a fixed-accuracy `O_kappa(1)` tensor expansion
-put its remainder below the Cycle-153 mass threshold. Without this bound,
-fixed symbol error remains an explicitly labelled tensor-remainder escape,
-not a negligible term.
+Cycle 154 banks only the conditional finite-class localization compiler.
+Cycle 155 is preregistered at
+`docs/cycle-155-actual-coefficient-escape-partition-preregistration-v1.md`.
+Next authorized action: derive or reject an exact, disjoint, exhaustive
+actual coefficient-escape partition with fixed `J=O_kappa(1)`, retaining all
+coefficient, frequency, anchor, degree, rational-tail, and payload labels.
+If fixed `J` fails, record a quantitative chart/degree/tensor/frequency/tail
+complexity inverse; an `X^(o(1))` class count is not fixed localization.
+Only after an actual partition may Cycle 154 identify a real high-projection
+class; only after a separate fixed comb-norm majorant may it yield its
+one-ray `L2` obstruction. Positive transport and the Cycle-152 bounded fan
+remain a parallel, unclosed route.
 
 ## Crash recovery
 
@@ -216,4 +215,5 @@ python3 proof/build_cycle_151_sampled_comb_double_poisson_v1.py --check
 python3 proof/build_cycle_152_bounded_multiplier_divisor_fan_v1.py --check
 python3 proof/build_cycle_152_bounded_multiplier_divisor_fan_scope_correction_v1.py --check
 python3 proof/build_cycle_153_actual_mass_routing_v1.py --check
+python3 proof/build_cycle_154_coefficient_escape_localization_v1.py --check
 ```
