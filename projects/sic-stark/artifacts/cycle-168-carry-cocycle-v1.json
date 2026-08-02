@@ -1,0 +1,145 @@
+{
+  "artifact_id": "cycle-168-carry-cocycle-v1",
+  "budget_ordinal": "B006",
+  "claim_boundary": "This exact finite result falsifies only canonical normalized bilinear-plus-coordinate-carry C6 cocycles on the sealed torsor. It does not rule out general state-dependent, nonlocal, higher-fibre, characteristic-dependent, or analytic coefficient operations.",
+  "cycle": 168,
+  "epistemic_status": "PROVED",
+  "exact_prototype": {
+    "basis_cocycle_associativity_checks": 279936,
+    "basis_cocycle_normalization_checks": 432,
+    "carry_cocycle_completion_exists": false,
+    "cocycle_candidates_checked": 46656,
+    "compatible_parameter_count": 0,
+    "first_graph_failure": {
+      "actual_product_label": 0,
+      "expected_graph_label": 1,
+      "left": [
+        0,
+        1
+      ],
+      "parameters": [
+        0,
+        5,
+        5,
+        0,
+        3,
+        3
+      ],
+      "right": [
+        0,
+        3
+      ]
+    },
+    "first_transport_failure": {
+      "actual_product_of_transports_label": 0,
+      "expected_transported_product_label": 3,
+      "left": [
+        0,
+        1
+      ],
+      "parameters": [
+        0,
+        5,
+        5,
+        0,
+        3,
+        3
+      ],
+      "right": [
+        1,
+        0
+      ]
+    },
+    "fixed_probe_pairs": 6,
+    "full_graph_identity_checks": 1296,
+    "full_transport_identity_checks": 1296,
+    "graph_passing_parameter_count": 0,
+    "probe_evaluations": 55986,
+    "probe_survivor_count": 1,
+    "probe_survivors": [
+      [
+        0,
+        5,
+        5,
+        0,
+        3,
+        3
+      ]
+    ],
+    "source_output": "discovery/cycle-168-carry-cocycle-prototype-v1.json",
+    "transport_passing_parameter_count": 0
+  },
+  "frozen_hashes": {
+    "census_output": {
+      "path": "discovery/cycle-168-carry-cocycle-prototype-v1.json",
+      "sha256": "07901fa8003c69efdebf099f9e619d18f8a8a92fbc6bdf2b54255cfb99fd0367"
+    },
+    "census_replay": {
+      "path": "proof/verify_cycle_168_carry_cocycle.py",
+      "sha256": "15550b55af55776fcd0cd5b1f5aabfa7c32132b027bb77772883e30abf92307a"
+    },
+    "cycle_167_falsifier": {
+      "path": "artifacts/cycle-167-bilinear-convolution-v1.json",
+      "sha256": "0bd6aa9149e9e027ee74d3edff7ce98c45dde4e7e05044500f852c26ce03018a"
+    },
+    "preregistration": {
+      "path": "docs/cycle-168-carry-cocycle-preregistration-v1.md",
+      "sha256": "9cd5d722748cd68568c8a20b6ecc554cf11798ed629f3cd6dc29fce9e1ff4e5b"
+    },
+    "project_instructions": {
+      "path": "AGENTS.md",
+      "sha256": "363495f0dbbe93e244b460c8eafb13247a8fb1f41be24f94c037ae9f6400c6f2"
+    },
+    "sealing_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    },
+    "test": {
+      "path": "tests/test_cycle_168_carry_cocycle.py",
+      "sha256": "d088be6e67d983433a09c09b654110e332dc7d503f1d570a19b803ff4a3178f8"
+    }
+  },
+  "gate_outcome": {
+    "d6_interface": "CANONICAL_COCOCYCLE_FAMILY_FALSIFIED_COHOMOLOGICAL_OBSTRUCTION_REQUIRED",
+    "disallowed_pseudo_progress": [
+      "enlarging another parameter family without a cohomological invariant",
+      "taking the graph defect as the operation",
+      "calling this scoped result an AFK or TCC no-go"
+    ],
+    "falsified_operation_class": "canonical bilinear-plus-coordinate-carry normalized C6 cocycle representatives",
+    "remaining_bottleneck": "Determine the full action-groupoid defect cohomology class without fitting a graph coboundary."
+  },
+  "outcome": {
+    "epistemic_status": "PROVED",
+    "statement": "All 46,656 canonical carry-cocycle representatives are associative, but their sole probe-compatible member [0,5,5,0,3,3] fails both full graph and transport identities."
+  },
+  "preregistration_preflight": {
+    "cycle": 168,
+    "manifest_sha256": "9cd5d722748cd68568c8a20b6ecc554cf11798ed629f3cd6dc29fce9e1ff4e5b",
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Cycle 169/B007: preregister a full action-groupoid defect cohomology construction and test exactly whether its transport-compatible class is a coboundary under independent normalization constraints."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_168_carry_cocycle_v1.py --check",
+    "preflight_command": "research prereg check docs/cycle-168-carry-cocycle-preregistration-v1.md --expected-cycle 168 --allow-head-drift",
+    "prototype_command": "python3 proof/verify_cycle_168_carry_cocycle.py --output discovery/cycle-168-carry-cocycle-prototype-v1.json",
+    "test_command": "python3 -m unittest tests.test_cycle_168_carry_cocycle -v",
+    "write_command": "python3 proof/build_cycle_168_carry_cocycle_v1.py --write"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_168_carry_cocycle_v1.py",
+    "sha256": "410273aebbc606feb1c348aae57eae6889f71d5b9dece28f725969b2e8defc26"
+  },
+  "status": "SEALED_CANONICAL_CARRY_COCOCYCLE_FALSIFIED"
+}
