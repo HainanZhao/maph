@@ -13,33 +13,33 @@
     },
     "why_active_gate_matters": {
       "epistemic_status": "PROVED",
-      "statement": "Cycles 177--183 separate the diagonal mechanisms exactly: Cycle 177 saturates raw beta-free pairs, Cycle 178 routes heavy fixed-beta fibres to seeded packets, Cycle 179 excludes exact-rational beta-zero towers, Cycle 180 excludes low-product rectangles, Cycle 181 exactifies common rational-intercept packets, Cycle 182 makes every participating fibre a primitive rational-line segment, and Cycle 183 retains a critical packet in one populated seven-field primitive-ray box. The active bottleneck is now an in-box coefficient-preserving bound, seeded recurrence, or nonrational box saturator—not raw pairs, same-label packets, exact-rational towers, low-product rectangles, or a packet/line/box partition alone."
+      "statement": "Cycles 177--184 separate the diagonal mechanisms exactly: Cycle 177 saturates raw beta-free pairs, Cycle 178 routes heavy fixed-beta fibres to seeded packets, Cycle 179 excludes exact-rational beta-zero towers, Cycle 180 excludes low-product rectangles, Cycle 181 exactifies common rational-intercept packets, Cycle 182 makes every participating fibre a primitive rational-line segment, Cycle 183 retains a critical packet in one populated seven-field primitive-ray box, and Cycle 184 proves the pairwise LCM resonance adds no independent error and gives a subcritical nonrational local deformation. The active bottleneck is now population-sensitive compatibility across labels/boxes—not raw pairs, same-label packets, exact-rational towers, low-product rectangles, a packet/line/box partition, or an LCM-only identity."
     },
     "progress_criterion": {
       "epistemic_status": "CONJECTURED",
-      "statement": "By the Cycle-216 gate, the project must either prove a coefficient-preserving populated primitive-ray-box estimate yielding a strict direct triple-census margin, force an aggregate heavy-packet-to-E7/E9 seeded recurrence, or delimit a materially larger nonrational primitive-ray-box saturation class. Cycles 177--183 already dispose of raw pairs, individual heavy fibres, exact-rational towers, low products, beta-free ambiguity, unstructured fibre multiplicity, and unpopulated box interfaces; another such result or a finite transport/interface classifier without actual population is non-progress. If no viable mechanism survives, promote E11/E12 and target a complete-form saving strictly greater than 3/50. Cycle 500 is the hard terminal project cap."
+      "statement": "By the Cycle-216 gate, the project must either prove a coefficient-preserving population-compatible primitive-ray-box estimate yielding a strict direct triple-census margin, force an aggregate heavy-packet-to-E7/E9 seeded recurrence, or delimit a materially larger genuinely critical nonrational primitive-ray-box saturation class. Cycles 177--184 already dispose of raw pairs, individual heavy fibres, exact-rational towers, low products, beta-free ambiguity, unstructured fibre multiplicity, unpopulated box interfaces, and LCM-only two-orbit compression; another such result or a finite transport/interface classifier without actual population is non-progress. If no viable mechanism survives, promote E11/E12 and target a complete-form saving strictly greater than 3/50. Cycle 500 is the hard terminal project cap."
     },
-    "deferred_work": "The raw beta-free pair route is saturated by Cycle 177; same-label heavy fibres are structurally routed by Cycle 178; exact-rational beta-zero towers and low-product cross-label rectangles are subcritical by Cycles 179--180; beta-free shell aggregation is superseded by Cycle-181 intercept packets; unstructured fibre counts are superseded by Cycle-182 primitive-line segments; and an unpopulated dyadic interface is superseded by Cycle-183's populated ray box. Cycles 165--176 remain parked as a conditional inverse toolkit until aggregate recurrence or other actual population enters an existing terminal branch. E14D-L, boundary denominators, direct interval propagation, and L-function transfer are deferred. Paper-stage hostile audit begins only after a manuscript theorem is frozen.",
+    "deferred_work": "The raw beta-free pair route is saturated by Cycle 177; same-label heavy fibres are structurally routed by Cycle 178; exact-rational beta-zero towers and low-product cross-label rectangles are subcritical by Cycles 179--180; beta-free shell aggregation is superseded by Cycle-181 intercept packets; unstructured fibre counts are superseded by Cycle-182 primitive-line segments; an unpopulated dyadic interface is superseded by Cycle-183's populated ray box; and an LCM-only two-orbit compression is banked as redundant by Cycle 184. Cycles 165--176 remain parked as a conditional inverse toolkit until aggregate recurrence or other actual population enters an existing terminal branch. E14D-L, boundary denominators, direct interval propagation, and L-function transfer are deferred. Paper-stage hostile audit begins only after a manuscript theorem is frozen.",
     "start_commands": [
       "source ../../tools/dev-env.sh",
       "research rebuild",
       "research check",
       "research cycle 63",
+      "research cycle 184",
       "research cycle 183",
-      "research cycle 182",
-      "research prereg check docs/cycle-183-intercept-cleared-ray-box-preregistration-v1.md --expected-cycle 183 --allow-head-drift",
+      "research prereg check docs/cycle-184-ray-box-determinant-orbit-preregistration-v1.md --expected-cycle 184 --allow-head-drift",
+      "python3 proof/build_cycle_184_ray_box_determinant_orbit_v1.py --check",
       "python3 proof/build_cycle_183_intercept_cleared_ray_box_v1.py --check",
-      "python3 proof/build_cycle_182_fibre_line_rigidity_v1.py --check",
+      "cat docs/cycle-184-ray-box-determinant-orbit-v1.md",
       "cat docs/cycle-183-intercept-cleared-ray-box-v1.md",
-      "cat docs/cycle-182-fibre-line-rigidity-v1.md",
       "cat PLAN.md"
     ]
   },
   "query_examples": [
     "python /root/projects/maph/tools/research_records.py --project research-records.json cycle 63",
+    "python /root/projects/maph/tools/research_records.py --project research-records.json cycle 184",
     "python /root/projects/maph/tools/research_records.py --project research-records.json cycle 183",
-    "python /root/projects/maph/tools/research_records.py --project research-records.json cycle 182",
-    "python /root/projects/maph/tools/research_records.py --project research-records.json search \"primitive ray box\"",
+    "python /root/projects/maph/tools/research_records.py --project research-records.json search \"LCM resonance\"",
     "python /root/projects/maph/tools/research_records.py --project research-records.json check"
   ]
 }
