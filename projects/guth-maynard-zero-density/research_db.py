@@ -15,38 +15,29 @@ scripts. Use ``--format table`` for a compact human-readable view.
 from __future__ import annotations
 
 import argparse
-import json
+import sys
 from pathlib import Path
-from typing import Any, Iterable, Sequence
+from typing import Any
 
 import research_index
 
+REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
+if str(REPOSITORY_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPOSITORY_ROOT))
 
-class ResearchDB:
+from tools.duckdb_tools import DuckDBReader, emit
+
+
+class ResearchDB(DuckDBReader):
     """Read-only convenience interface over the rebuildable research index."""
 
     def __init__(self, database: Path | str = research_index.DATABASE, *, rebuild_if_missing: bool = True) -> None:
-        self.database = Path(database)
-        if not self.database.exists():
+        database_path = Path(database)
+        if not database_path.exists():
             if not rebuild_if_missing:
-                raise FileNotFoundError(self.database)
-            research_index.rebuild(self.database)
-        self.connection = research_index.duckdb.connect(str(self.database), read_only=True)
-
-    def close(self) -> None:
-        self.connection.close()
-
-    def __enter__(self) -> "ResearchDB":
-        return self
-
-    def __exit__(self, *_: object) -> None:
-        self.close()
-
-    def query(self, sql: str, parameters: Sequence[Any] | None = None) -> list[dict[str, Any]]:
-        """Run one read-only query and return dictionaries keyed by column."""
-        cursor = self.connection.execute(sql, list(parameters or []))
-        columns = [item[0] for item in cursor.description]
-        return [dict(zip(columns, row, strict=True)) for row in cursor.fetchall()]
+                raise FileNotFoundError(database_path)
+            research_index.rebuild(database_path)
+        super().__init__(database_path)
 
     def summary(self) -> dict[str, Any]:
         latest = self.query("""
@@ -126,27 +117,6 @@ class ResearchDB:
             SELECT evidence_key, path, sha256, exists_now, sha256_matches
             FROM evidence WHERE artifact_id = ? {suffix} ORDER BY evidence_key
         """, [artifact_id])
-
-
-def emit(rows: Any, output_format: str) -> None:
-    if output_format == "json":
-        print(json.dumps(rows, indent=2, sort_keys=True, default=str))
-        return
-    if isinstance(rows, dict):
-        rows = [rows]
-    if not rows:
-        return
-    columns = list(rows[0])
-    if output_format == "tsv":
-        print("\t".join(columns))
-        for row in rows:
-            print("\t".join(str(row.get(column, "")) for column in columns))
-        return
-    widths = {column: max(len(column), *(len(str(row.get(column, ""))) for row in rows)) for column in columns}
-    print("  ".join(column.ljust(widths[column]) for column in columns))
-    print("  ".join("-" * widths[column] for column in columns))
-    for row in rows:
-        print("  ".join(str(row.get(column, "")).ljust(widths[column]) for column in columns))
 
 
 def add_limit(parser: argparse.ArgumentParser, default: int = 50) -> None:
