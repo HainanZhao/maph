@@ -162,38 +162,41 @@ alternatives considered, decisive evidence and tags, the recommended next
 action, and any unexamined assumption. It operates asynchronously by default:
 start it and send one compact session brief without waiting, then batch
 material deltas into one checkpoint packet. Routine deltas are notification
-only and request no reply. A decision packet is under 250 words and uses one
-fixed interface: decision sought; frozen claim/gate and tag; at most three
-decisive evidence or change bullets; known flaw; and requested disposition.
-Link a changed excerpt, artifact, or hash instead of asking for a project
-reread. Ask for exactly four short items in reply: recommendation, flaw,
-falsifier, and next action. The companion must not re-derive the live work or
-inspect unrelated files unless that packet asks it to. Do not poll or wait
-during reversible derivations, candidate engines, routine computations, or
-amendments within an already active cycle; notify the companion and continue.
+only and request no reply. A decision packet is normally under 150 words (and
+never over 250) and uses one fixed interface: decision sought; frozen
+claim/gate and tag; at most three decisive evidence or change bullets; known
+flaw; and requested disposition. Link a changed excerpt, artifact, or hash
+instead of asking for a project reread. Ask for exactly four short items in
+reply: recommendation, flaw, falsifier, and next action. The companion must
+not re-derive the live work or inspect unrelated files unless that packet asks
+it to. Do not poll or wait during reversible derivations, candidate engines,
+routine computations, or amendments within an already active cycle; notify
+the companion and continue.
 
 Blocking consultation is reserved for an irreversible or strategic decision:
 changing the strategic status, claim boundary, gate, or advance condition in
 `PLAN.md`; starting or abandoning a path not already authorized by the plan;
 sealing/committing a material claim; promoting/containing a material theorem;
 or external publication. A routine cycle start already authorized by the
-current plan is notify-only, not a blocking checkpoint. Before a blocking
-decision, inspect the companion status and reactivate the same identity if
-needed. Deliver one batched packet and await one concise response; do not
-iterate unless its stated falsifier or flaw is triggered. Record only the
-final recommendation and adopt/reject reason in the relevant decision record.
+current plan is notify-only, not a blocking checkpoint. Use one fast
+checkpoint flow for every blocking decision:
+
+1. Send one batched packet to the stable identity as soon as the decision is
+   foreseeable, then continue all reversible work.
+2. At the actual decision point, consume its concise reply. Do not first
+   inspect status, run a liveness rehearsal, or solicit an acknowledgement.
+3. If no reply is available, reactivate that *same* identity once with the
+   unchanged packet and a short response request. Continue reversible work
+   while it responds. If it still fails, defer only that critical decision;
+   record the timeout and do not substitute a new, unbriefed companion.
+
+Do not iterate after a reply unless its stated falsifier or flaw is triggered.
+Record only the final recommendation and adopt/reject reason in the relevant
+decision record. The primary keeps the companion task identity and latest
+compact packet there. A completed companion is an idle mentor, not a failure:
+`followup_task` reactivates that stable identity when its next packet is ready.
 This protocol complements the paper-stage hostile audit; it does not start
 one early.
-
-At session start, perform a nonblocking liveness rehearsal: send the role and
-first checkpoint, then inspect/reactivate that same stable identity at the
-first natural strategic checkpoint (or when it has completed). Do not delay
-exploration merely to obtain an acknowledgement. This tests the recovery path
-rather than assuming that a completed agent will remain reachable. The
-primary keeps the companion task identity and latest compact packet in the
-session decision record; it must not silently replace the companion with a
-new, unbriefed agent. A completed companion is an idle mentor, not a failure:
-reactivate its stable identity only when the next checkpoint is ready.
 
 ## 2. Discovery and proof are separate
 
