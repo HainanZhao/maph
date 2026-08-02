@@ -135,7 +135,7 @@ published reconstruction P0 [complete]
 |---|---|---|
 | E14 | `UNSIGNED_VOLUME_LIMIT_REACHED` | Use only for inverse structure. |
 | E14D-L | `EXACT_DIVISOR_COMB_NORM_MAJORANT_LEMMA_BANKED_ACTUAL_PARTITION_OPEN` | Instantiate the frozen anchor ratio and derive an actual fixed finite coefficient-escape partition, or expose a quantified coefficient-complexity inverse; separately prove positive transport to activate the bounded fan. |
-| E14D-L mask cone | `ACTUAL_SELECTION_MASK_GRAM_FACTORIZATION_OR_COEFFICIENT_COMPLEXITY_INVERSE_OPEN` | Prove a bounded positive-Gram transport in actual coefficient geometry or extract a labelled weighted dual/negative-spectral witness. |
+| E14D-L mask cone | `RAW_ZERO_DIAGONAL_GRAM_OBSTRUCTION_BANKED_COEFFICIENT_NEGATIVE_SPECTRAL_ALIGNMENT_OPEN` | Concentrate actual negative spectral energy in a fixed labelled block family or prove a robust labelled block-complexity inverse. |
 | E14D-H | `MOMENT_CONCENTRATION_OR_SATURATION_INVERSE_OPEN` | Classify/exclude excess `2xi-116/75` with its phase anchor. |
 | E15 | `ANCHOR_REQUIRED` | Classify anchored almost-eigenfunctions. |
 | E16 | `EXACT_VALUATION_WEB_BANKED` | Compile relation-rich structure to a genuine transport seed. |
@@ -150,10 +150,12 @@ published reconstruction P0 [complete]
   actual-mass router, a conditional finite-class escape localizer, and an
   exact anchor-bounded comb-norm lemma. Cycle 155 must derive the actual fixed
   finite coefficient partition or expose its quantified complexity inverse.
-  Cycle 157 attacks that latter alternative in the actual Hermitian selection
-  mask rather than the smooth-model taxonomy. Positive strict transport still
-  needs its normalized weights and uniform complete capacity bound before
-  spacing/order-three curvature can attack an actual bounded fan.
+  Cycle 157 rules out exact raw-mask Gram transport and routes actual negative
+  mask correlation to coefficient-weighted negative spectral energy. Cycle
+  158 must concentrate that energy or expose robust labelled complexity.
+  Positive strict transport still needs its normalized weights and uniform
+  complete capacity bound before spacing/order-three curvature can attack an
+  actual bounded fan.
 - `CONJECTURED` E14D-H: encode required `M4` excess as a colored four-cycle
   problem. Low codegree should exclude excess; high codegree should expose an
   anchored rational web. A raw-target example without either output enlarges
@@ -193,13 +195,15 @@ Cycle 155 is preregistered at
 `docs/cycle-155-actual-coefficient-escape-partition-preregistration-v1.md`.
 Cycle 157 is preregistered at
 `docs/cycle-157-selection-mask-cone-preregistration-v1.md`. Next authorized
-action: derive a bounded positive-Gram factorization of the actual Hermitian
-selection mask in coefficient-weighted geometry, or a labelled weighted dual,
-rectangle, or negative-spectral complexity witness. The older Cycle-155
-partition remains a parallel output only if it is actual and fixed-size; an
-`X^(o(1))` class count is not fixed localization. Only after an actual
-partition may Cycle 154 identify a real high-projection class. Cycle 156
-supplies its norm constant once the actual frozen anchor ratio is
+action is Cycle 158, preregistered at
+`docs/cycle-158-spectral-energy-concentration-preregistration-v1.md`:
+derive a finite-resolution labelled block map for the actual coefficient
+object, then prove either `J_*=ceil(8/kappa_*)` blocks capture 75% of its
+negative spectral energy or every such block set misses at least 25%.
+The older Cycle-155 partition remains a parallel output only if it is actual
+and fixed-size; an `X^(o(1))` class count is not fixed localization. Only
+after an actual partition may Cycle 154 identify a real high-projection class.
+Cycle 156 supplies its norm constant once the actual frozen anchor ratio is
 instantiated. Positive transport and the Cycle-152 bounded fan remain
 unclosed.
 
@@ -226,4 +230,5 @@ python3 proof/build_cycle_152_bounded_multiplier_divisor_fan_scope_correction_v1
 python3 proof/build_cycle_153_actual_mass_routing_v1.py --check
 python3 proof/build_cycle_154_coefficient_escape_localization_v1.py --check
 python3 proof/build_cycle_156_divisor_comb_norm_majorant_v1.py --check
+python3 proof/build_cycle_157_selection_mask_negative_spectral_v1.py --check
 ```
