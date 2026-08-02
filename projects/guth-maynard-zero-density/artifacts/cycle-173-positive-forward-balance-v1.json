@@ -1,0 +1,79 @@
+{
+  "artifact_id": "cycle-173-positive-forward-balance-v1",
+  "claim_boundary": "This proves that the actual positive forward direct-map branch cannot satisfy the frozen Cycle-167 conservative balance, admissibility, and simultaneous dyadic-range gate. It does not rule out reverse orientation, extra strip slack, different maps, global coupling, recurrence, density, or intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "boundary": "This proves a positive-forward conservative-gate obstruction. It does not prove that every actual beta-preserving transport or global coupling is impossible.",
+    "endpoint": "Y=C_*=1 gives only the formal h=2H,h_plus=H,a/q=2 endpoint, excluded by the positive branch",
+    "obstruction": "on alpha_ell>0 with Y>=1+alpha_ell>1 and C_*>=1, the forward conservative balance/admissibility/range ledger is inconsistent",
+    "scope": "forward orientation and the frozen conservative balance gate only; reverse orientation, extra strip slack, and different maps remain open"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/positive_forward_balance_v1.py",
+      "sha256": "ca3bf523d0b7df5a75b983d661638fec74aa8e0b4f1ca5214cd2db5efb797823"
+    },
+    "cycle167": {
+      "path": "artifacts/cycle-167-affine-fibre-transport-v1.json",
+      "sha256": "7ba12c9d0534c0d0d151bce753fa24191c4e174af839ca12b86d65911779ed1b"
+    },
+    "cycle172": {
+      "path": "artifacts/cycle-172-primitive-eligible-fibre-moment-v1.json",
+      "sha256": "d375edd17584e89c5824cc5bb2a43511d99eda03ece86a9f123b338bceda5a5d"
+    },
+    "document": {
+      "path": "docs/cycle-173-positive-forward-balance-v1.md",
+      "sha256": "db38814992841f68556acd06f40e1b2c6dcaae651194ff71bb4de831e549daee"
+    },
+    "preregistration": {
+      "path": "docs/cycle-173-positive-forward-balance-preregistration-v1.md",
+      "sha256": "c80186ba1b5f419606dbde63af6bb6ae3cae5c0568627645eabb85c00922187c"
+    },
+    "sealing_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "tests": {
+      "path": "tests/test_cycle_173_positive_forward_balance_v1.py",
+      "sha256": "89e0e5c398e9de7c2a3715ee4da56399be712ad07cd7938cdec98893fa2c1063"
+    }
+  },
+  "positive_forward_obstruction": {
+    "boundary": "This proves a positive-forward conservative-gate obstruction. It does not prove that every actual beta-preserving transport or global coupling is impossible.",
+    "endpoint": "Y=C_*=1 gives only the formal h=2H,h_plus=H,a/q=2 endpoint, excluded by the positive branch",
+    "epistemic_status": "PROVED",
+    "obstruction": "on alpha_ell>0 with Y>=1+alpha_ell>1 and C_*>=1, the forward conservative balance/admissibility/range ledger is inconsistent",
+    "scope": "forward orientation and the frozen conservative balance gate only; reverse orientation, extra strip slack, and different maps remain open"
+  },
+  "prior_context": {
+    "cycle167_role": "supplies the direct forward affine map and conservative balance ledger",
+    "cycle172_role": "shows that a signed abstract local countermodel does not settle the positive curve; positivity is used here",
+    "epistemic_status": "PROVED"
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Develop reverse-orientation, quantified-slack, or genuinely new transport/coupling machinery on the actual positive exponential curve."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_173_positive_forward_balance_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_173_positive_forward_balance_v1.py",
+    "write_command": "python3 proof/build_cycle_173_positive_forward_balance_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_173_positive_forward_balance_v1.py",
+    "sha256": "05d346e9e2ff5c8d2d5af07683bc3c6f12c299a36ccd9055ecdd594dab563435"
+  },
+  "status": "SEALED_POSITIVE_FORWARD_CONSERVATIVE_BALANCE_GATE_EMPTY"
+}
