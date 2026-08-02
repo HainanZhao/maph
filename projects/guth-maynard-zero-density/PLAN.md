@@ -2,7 +2,8 @@
 
 ## Purpose, boundary, and status
 
-- Project horizon: August 2026 through July 2028.
+- Project cap: Cycle 500. Cycle 176 is the latest sealed cycle, so the
+  remaining authorized cycle labels are 177--500.
 - Objective: obtain either (i) an explicit improvement on the `30/13`
   zero-density coefficient that survives the complete density and
   short-interval ledger, (ii) a sharp saturation/inverse theorem for a
@@ -12,13 +13,16 @@
   L-function family.
 - Claim boundary: no improved density coefficient, uniform prime-interval
   endpoint, almost-all endpoint, or family transfer is proved yet.
-- Stop condition: a strict gain survives the full ledger, or a sharp theorem
-  covers an architecture materially larger than `EO-LF4`.
+- Stop condition: stop early when a strict gain survives the full ledger or a
+  sharp theorem covers an architecture materially larger than `EO-LF4`.
+  Otherwise Cycle 500 is a hard terminal cap: seal the strongest scoped
+  theorem/no-go, finish its replayable manuscript package, and do not open a
+  Cycle 501 for this project without a new explicit user decision.
 - Review policy: use lightweight source, algebra, replay, and consistency
   checks during research. Hostile referee simulation begins only once a
   manuscript theorem is frozen.
 
-### Portfolio decision — 2 August 2026
+### Portfolio decision — after Cycle 176
 
 - `STRATEGIC_DECISION`: continue the project, but pivot the primary effort
   away from extending the Cycle-165--176 terminal-web classifier chain.
@@ -30,17 +34,17 @@
   labels without improving the upstream analytic exponent. Another finite
   classifier is disallowed as primary progress unless new actual-curve mass
   has first entered the toolkit.
-- `CONJECTURED`: the highest-value 90-day test is the actual positive-
+- `CONJECTURED`: the highest-value next test is the actual positive-
   exponential Cycle-63 census. It must produce either a fixed-power census
   margin or a realized saturator strong enough to support a materially larger
-  saturation theorem. If neither survives the frozen 90-day gate, E11/E12
+  saturation theorem. If neither survives the Cycle-216 gate, E11/E12
   autocorrelation--ANOVA becomes the primary route.
 - `STRATEGIC_DECISION`: the standing session mentor recommended this same
   within-project pivot because the current route optimized interfaces without
   proving the population theorem needed to enter them; that recommendation is
-  adopted. The project itself is not abandoned: its two-year horizon starts
-  now, its baseline reconstruction and `EO-LF4` sharpness are banked, and two
-  genuinely analytic routes remain. A new flagship-project decision is
+  adopted. The project itself is not abandoned: 324 authorized cycle labels
+  remain, its baseline reconstruction and `EO-LF4` sharpness are banked, and
+  two genuinely analytic routes remain. A new flagship-project decision is
   deferred until the Cycle-63 sprint and the E11/E12 fallback have both faced
   their gates.
 
@@ -132,7 +136,7 @@ the root `AGENTS.md`; they are not duplicated here.
 ```text
 published reconstruction P0 [complete]
   +-- EO-LF4 sharpness [complete, scoped] -- lambda*Xi [diagnostic]
-  `-- E13 actual positive-exponential census [PRIMARY 90-DAY PIVOT]
+  `-- E13 actual positive-exponential census [PRIMARY THROUGH C216]
         +-- Cycle 63 weighted pair census / realized saturator [active]
         +-- Cycles 165--176 terminal inverse toolkit [parked until population]
         +-- E14 unsigned incidence [volume limit; inverse input]
@@ -140,21 +144,21 @@ published reconstruction P0 [complete]
         +-- E14D-H fourth-moment condenser [parked conditional toolkit]
         +-- E15 anchored shifted-ratio spectrometer
         `-- E16 alias-to-seed compiler --> E7/E9 prime skeleton
-  +-- E11/E12 autocorrelation--ANOVA [90-DAY FALLBACK]
+  +-- E11/E12 autocorrelation--ANOVA [C216 FALLBACK]
   `-- E5/E6 feedback/direct zero cancellation [incubation]
         `-- P3/P5 intervals; P6/P7 L-function transfer
 ```
 
 | Gate | State | Advance condition |
 |---|---|---|
-| E13 / Cycle 63 | `PRIMARY_90_DAY_ACTUAL_CURVE_SPRINT` | Prove `P<=X^(17/25-epsilon)` for some fixed `epsilon>0`, prove the equivalent strict census margin needed downstream, or construct and rigorously analyze an actual positive-exponential saturator. |
+| E13 / Cycle 63 | `PRIMARY_ACTUAL_CURVE_SPRINT_THROUGH_C216` | Prove `P<=X^(17/25-epsilon)` for some fixed `epsilon>0`, prove the equivalent strict census margin needed downstream, or construct and rigorously analyze an actual positive-exponential saturator. |
 | E14 | `UNSIGNED_VOLUME_LIMIT_REACHED` | Use only for inverse structure. |
 | E14D-L | `DEFERRED_AT_SCALE_LABEL_INFORMATION_LOSS` | Reopen only by restoring `t`/ordered atoms in a coefficient-preserving selector or proving a genuinely `t`-independent factorization. |
 | E14D-L mask cone | `RAW_ZERO_DIAGONAL_GRAM_OBSTRUCTION_BANKED_COEFFICIENT_NEGATIVE_SPECTRAL_ALIGNMENT_OPEN` | Concentrate actual negative spectral energy in a fixed labelled block family or prove a robust labelled block-complexity inverse. |
 | E14D-H / Cycles 165--176 | `PARKED_CONDITIONAL_INVERSE_TOOLKIT` | Reopen only after an actual fixed-power census/population result enters one existing terminal branch, or an actual-curve saturator falsifies the current routing. |
 | E15 | `ANCHOR_REQUIRED` | Classify anchored almost-eigenfunctions. |
 | E16 | `EXACT_VALUATION_WEB_BANKED` | Compile relation-rich structure to a genuine transport seed. |
-| E11/E12 | `FALLBACK_AFTER_CYCLE63_GATE` | If the first 30-day Cycle-63 engine sprint yields neither a viable fixed-power mechanism nor a realized saturator, promote this route and save `>3/50` in complete form or force enough recurrence. |
+| E11/E12 | `FALLBACK_AFTER_C216_GATE` | If Cycles 177--216 yield neither a viable fixed-power Cycle-63 mechanism nor a realized saturator, promote this route and save `>3/50` in complete form or force enough recurrence. |
 | E7/E9 | `SKELETON_RECURRENCE_OPEN` | Prove the `X^(21/25+o(1))` skeleton bound. |
 | P3/P5 | `PENDING_GAIN` | Reinsert only a strict proof-grade analytic margin. |
 | Paper audit | `DEFERRED` | Start after a manuscript theorem freezes. |
@@ -176,17 +180,16 @@ whole project is falsified if both the Cycle-63 sprint and the E11/E12 fallback
 fail their preregistered analytic gates and yield no materially larger actual
 saturator.
 
-## Two-year execution plan
+## Cycle-budget execution plan
 
-| Dates | Deliverable | Decision rule |
+| Cycle range | Deliverable | Decision rule |
 |---|---|---|
-| 2 Aug--1 Sep 2026 | Freeze the Cycle-63 exponent scorecard; test actual-curve determinant/large-sieve and bilinear-spacing engines in parallel with an adversarial saturator search. | Continue the route only if one mechanism has a quantified path to a fixed-power margin, or an actual saturator survives exact checks. |
-| 2 Sep--1 Oct 2026 | Prove the strongest surviving census band or rigorous actual-curve saturator theorem. | No new terminal classifier counts as progress. |
-| 2 Oct--1 Nov 2026 | Reinsert the result into the complete powered-coordinate and density ledger. | Keep Cycle 63 primary only if a strict margin survives; otherwise promote E11/E12. |
-| Nov 2026--Apr 2027 | E11/E12 complete autocorrelation--ANOVA restriction or recurrence inverse if Cycle 63 misses; otherwise widen the proved Cycle-63 band. | Require `>3/50` in the complete form, a strict Cycle-63 census margin, or a materially larger saturation theorem. |
-| May--Jul 2027 | E16 compiler from the strongest structured output. | Year-one target: lower band closure plus upper inverse theorem, or complete signed-projector saturation. |
-| Aug 2027--Jan 2028 | Glue across the atlas; test E7/E9, E11/E12, E5, and E6 ledgers. | Freeze only a complete raw-form, skeleton, density, or direct-interval candidate. |
-| Feb--Jul 2028 | Propagate a surviving margin; then conduct source review, independent derivation, hostile audit, replay, and paper preparation. | Transfer only with strict conductor/occupancy margin. |
+| 177--216 | Freeze the Cycle-63 exponent scorecard; test actual-curve determinant/large-sieve and bilinear-spacing engines together with an adversarial saturator search; prove the strongest surviving band when possible. | At Cycle 216 retain E13 only if a mechanism has a quantified path to fixed-power margin or an actual saturator survives exact checks. No new terminal classifier counts as progress. |
+| 217--296 | Pursue exactly one analytic route: the surviving E13 mechanism, or E11/E12 complete autocorrelation--ANOVA after an E13 miss. | Require a strict Cycle-63 census margin, a complete-form `>3/50` saving/recurrence inverse, or a materially larger actual saturation theorem. |
+| 297--336 | Reinsert the strongest result into the complete powered-coordinate and density ledger; conduct the mid-cap portfolio gate. | If no strict gain or materially larger saturation theorem exists by Cycle 336, skip glue and propagation and move directly to scoped no-go synthesis and manuscript preparation. |
+| 337--400 | Conditional compiler/glue across E16 and E7/E9, or—after a failed Cycle-336 gate—final saturation/no-go synthesis. | Compiler work is authorized only when fed by a surviving analytic margin; otherwise strengthen and delimit the final theorem. |
+| 401--450 | Conditional density, interval, or one-family conductor transfer, or manuscript completion for the strongest no-go theorem. | Transfer only with a strict proof-grade margin. Open no unrelated exploratory branch. |
+| 451--500 | Mandatory completion: source review, independent derivation, hostile paper audit, replay archive, manuscript, and final project decision. | No new exploratory branch after Cycle 450 except a correction required to preserve validity. Cycle 500 is terminal. |
 
 ## Open questions and next action
 
@@ -202,7 +205,7 @@ saturator.
    terminal branch carries a recoverable fixed-power share?
 
 Next authorized action: preregister one substantive Cycle-177 actual-curve
-census block covering the full first 30-day engine sprint. Freeze the exponent
+census block opening the Cycle-177--216 engine sprint. Freeze the exponent
 scorecard, parameter ranges, allowed determinant/large-sieve and bilinear
 families, adversarial-saturator search, and the rule that a new finite
 transport/interface classifier is non-progress. Consult Cycle 63 first;
