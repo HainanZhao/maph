@@ -142,6 +142,10 @@ research db tables
   seed and classifies every target as seeded-deep or as a seed/range, content,
   amplified-error, or denominator-capacity obstruction. It proves no actual
   compatible population or density consequence.
+- `PROVED`: Cycle 171 factors eligible projective content as a labelled
+  source-core/numerator/denominator divisor web and proves a sharp conditional
+  content-moment-to-seeded-deep-mass transfer. It supplies no actual moment
+  surplus or compatible-pair population.
 
 ## Research-path graph
 
@@ -165,7 +169,7 @@ published reconstruction P0 [complete]
 | E14 | `UNSIGNED_VOLUME_LIMIT_REACHED` | Use only for inverse structure. |
 | E14D-L | `TIMEBOXED_AT_SCALE_LABEL_INFORMATION_LOSS` | Reopen only by restoring `t`/ordered atoms in a coefficient-preserving selector or proving a genuinely `t`-independent factorization. |
 | E14D-L mask cone | `RAW_ZERO_DIAGONAL_GRAM_OBSTRUCTION_BANKED_COEFFICIENT_NEGATIVE_SPECTRAL_ALIGNMENT_OPEN` | Concentrate actual negative spectral energy in a fixed labelled block family or prove a robust labelled block-complexity inverse. |
-| E14D-H | `PROJECTIVE_LIFT_POPULATION_OR_TYPED_OBSTRUCTION_OPEN` | Force compatible source-packet/cross-edge mass into the seeded-deep projective-lift branch, or quantitatively bank its seed/range, content, error, or capacity obstruction. |
+| E14D-H | `ELIGIBLE_DIVISOR_MOMENT_SURPLUS_OR_TYPED_OBSTRUCTION_OPEN` | Prove an actual complete-pair eligibility-weighted divisor moment `M>W`, forcing seeded-deep lift mass, or quantitatively bank seed/range, error, capacity, source-core, numerator, or denominator mass. |
 | E15 | `ANCHOR_REQUIRED` | Classify anchored almost-eigenfunctions. |
 | E16 | `EXACT_VALUATION_WEB_BANKED` | Compile relation-rich structure to a genuine transport seed. |
 | E11/E12 | `AUTOCORRELATION_ANOVA_OPEN` | Save `>3/50` in complete form or force enough recurrence. |
@@ -210,6 +214,11 @@ published reconstruction P0 [complete]
   minimum of content/error depth and denominator capacity; high content alone
   is not progress. The next engine must force population into its seeded-deep
   branch or give a quantitative labelled bank for every obstruction type.
+- `PROVED` Cycle 171: among seed/range-valid pairs, the exact content
+  threshold simultaneously enforces Cycle-170 error and capacity depth. Its
+  divisor moment has an automatic `H/L` cap and a sharp population transfer.
+  The next missing input is an actual moment surplus, not another scalar-gcd
+  identity.
 - `CONJECTURED` E15/E16: classify anchored shifted-strip almost-eigenfunctions
   and turn high-codegree alias structure into a seed with an explicit phase
   error budget. A seedless target-sized anchored graph is itself structural
@@ -302,10 +311,13 @@ for the actual banks. Cycle 169 is sealed at
 and total masses do not force label energy. Cycle 170 is sealed at
 `artifacts/cycle-170-projective-packet-lift-v1.json`: compatible packet/cross
 edge data lift exactly to a seeded projective target, but actual population is
-unproved. Next authorized action: preregister and execute one geometric
-population-or-obstruction engine that either forces compatible mass into the
-seeded-deep Cycle-170 branch or gives a quantitative labelled lower bound for
-its first obstruction bank. No E7/E9 or density claim is authorized.
+unproved. Cycle 171 is sealed at
+`artifacts/cycle-171-eligibility-weighted-projective-content-v1.json`: it
+gives the exact eligible divisor moment and sharp transfer but no actual
+moment surplus. Next authorized action: preregister and execute one
+complete-labelled-bank engine that derives `M>W` or quantitatively retains the
+first seed/range, error, capacity, source-core, numerator, or denominator
+obstruction bank. No E7/E9 or density claim is authorized.
 
 ## Crash recovery
 

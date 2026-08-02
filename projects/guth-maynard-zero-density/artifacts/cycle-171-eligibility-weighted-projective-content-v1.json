@@ -1,0 +1,87 @@
+{
+  "artifact_id": "cycle-171-eligibility-weighted-projective-content-v1",
+  "claim_boundary": "This proves a finite eligibility-weighted projective-content divisor classifier and a conditional sharp moment-to-deep-population transfer. It proves no actual compatible mass or moment lower bound, recurrence, skeleton, density, or interval gain.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "eligibility_weighted_content": {
+    "boundary": "This is a finite eligibility-weighted divisor-content classifier and conditional moment transfer. It proves no actual moment lower bound, compatible population, recurrence, skeleton, density, or interval gain.",
+    "cap": "g/G_req<=H/L because g divides D and G_req>=|D|L/H",
+    "divisor_expansion": "g=sum_{r|cuv} phi(r), with every divisor row retaining its original eligible pair label and factor triple",
+    "eligibility": "for seed/range-valid pairs, g>=ceil(max(L Lambda,L|D|/H)) iff both Cycle-170 depths reach L, including Lambda=0",
+    "epistemic_status": "PROVED",
+    "exhaustive_cases": 9520,
+    "factorization": "gcd(|qd|,|a(d+b)-qd|)=c*u*v with c=gcd(|d|,|b|), u=gcd(|d/c|,a), v=gcd(q,|d/c+b/c|); gcd(u,v)=1, while c may share primes with either factor",
+    "obstruction": "below required content, retain Cycle 170's error-before-capacity failure and independently route the factor deficit by an exhaustive frozen source-core/numerator-absorption/denominator-absorption order",
+    "transfer": "if M=sum w g/G_req and W=sum w on an eligible bank with H>L, deep mass is at least max(0,(M-W)/(H/L-1)); this is supremally sharp as subcritical normalized content tends to 1 from below and deep content tends to H/L"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "boundary": "This is a finite eligibility-weighted divisor-content classifier and conditional moment transfer. It proves no actual moment lower bound, compatible population, recurrence, skeleton, density, or interval gain.",
+    "cap": "g/G_req<=H/L because g divides D and G_req>=|D|L/H",
+    "divisor_expansion": "g=sum_{r|cuv} phi(r), with every divisor row retaining its original eligible pair label and factor triple",
+    "eligibility": "for seed/range-valid pairs, g>=ceil(max(L Lambda,L|D|/H)) iff both Cycle-170 depths reach L, including Lambda=0",
+    "exhaustive_cases": 9520,
+    "factorization": "gcd(|qd|,|a(d+b)-qd|)=c*u*v with c=gcd(|d|,|b|), u=gcd(|d/c|,a), v=gcd(q,|d/c+b/c|); gcd(u,v)=1, while c may share primes with either factor",
+    "obstruction": "below required content, retain Cycle 170's error-before-capacity failure and independently route the factor deficit by an exhaustive frozen source-core/numerator-absorption/denominator-absorption order",
+    "transfer": "if M=sum w g/G_req and W=sum w on an eligible bank with H>L, deep mass is at least max(0,(M-W)/(H/L-1)); this is supremally sharp as subcritical normalized content tends to 1 from below and deep content tends to H/L"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/eligibility_weighted_projective_content_v1.py",
+      "sha256": "1bb331586861ff8cb62a0f136381fa83ad27dd84f3abcc02912f473133c3ccc9"
+    },
+    "cycle169": {
+      "path": "artifacts/cycle-169-source-coupled-label-energy-v1.json",
+      "sha256": "b79f6a8800bcb5dd6a2d58f9f71e6e89fb783bf1a562054196767a2f5ea7c008"
+    },
+    "cycle170": {
+      "path": "artifacts/cycle-170-projective-packet-lift-v1.json",
+      "sha256": "7d0769218a734d80cd80bfcdb962656f918a7df5156efbc44042cfd50a2491b9"
+    },
+    "document": {
+      "path": "docs/cycle-171-eligibility-weighted-projective-content-v1.md",
+      "sha256": "9d4ea4afa8a1a6c09588750bec0be1cd05c39ba30f85b61842465efa3a8673bb"
+    },
+    "preregistration": {
+      "path": "docs/cycle-171-eligibility-weighted-projective-content-preregistration-v1.md",
+      "sha256": "1b5eafa9e682156c316c19840d36721af27ccd4326758dc922c6606f4c6abd22"
+    },
+    "sealing_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "tests": {
+      "path": "tests/test_cycle_171_eligibility_weighted_projective_content_v1.py",
+      "sha256": "dede22063d585fae082f90a665a754c6ae59fe8a3775f2cb09d6d64265a1b06d"
+    }
+  },
+  "prior_context": {
+    "cycle169_role": "rules out total-marginal forcing, so the moment is explicitly conditioned on complete eligible labelled pairs",
+    "cycle170_role": "supplies the exact seed/range, error, and capacity gates compressed by the required-content threshold",
+    "epistemic_status": "PROVED"
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Prove an actual lower bound for the complete labelled eligible divisor-content moment, or quantitatively bank seed/range, error, capacity, source-core, numerator-absorption, or denominator-absorption mass."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_171_eligibility_weighted_projective_content_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_171_eligibility_weighted_projective_content_v1.py",
+    "write_command": "python3 proof/build_cycle_171_eligibility_weighted_projective_content_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_171_eligibility_weighted_projective_content_v1.py",
+    "sha256": "a5862e91faf54bc7cca38a4bb7d94dc62eeeff54406d47bcd3c960f724050e27"
+  },
+  "status": "SEALED_ELIGIBILITY_WEIGHTED_PROJECTIVE_CONTENT_DIVISOR_WEB_AND_SHARP_TRANSFER"
+}
