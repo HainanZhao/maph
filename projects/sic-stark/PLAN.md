@@ -10,11 +10,11 @@
   scopes in dimensions 4, 5, 7, and 8. No dimension-six TCC identity,
   coefficient-to-ray map, fusion-continuity theorem, or boundary-limit theorem
   is proved. `CERTIFIED_NUMERICAL` packet growth is not a nonexistence theorem.
-- Current state: Cycle 169 / `B007` proves the graph defect is nontrivial in
-  the normalized `T`-invariant action-groupoid quotient: the full system is
-  inconsistent over both CRT factors. Cycle 170 / `B008` tests projective
-  equivariance via a central extension and frozen character twist; no
-  coefficient-to-logarithm operation, AFK law, or fusion theorem exists yet.
+- Current state: Cycle 170 / `B008` proves the certified scalar `C2` kernel
+  supplies no nontrivial `C3` projective extension or character twist. Cycle
+  171 / `B009` therefore shifts to the independent oriented wild-local
+  non-scalar module route; no coefficient-to-logarithm operation, AFK law, or
+  fusion theorem exists yet.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -27,8 +27,8 @@
 ## Budget, accounting, and stop condition
 
 - Total forward budget: 200 substantive research cycles, counted `B001/200`
-  through `B200/200`; the counter is currently `B007/200`.
-- Cycle 170 is `B008`. Repository cycle numbers and budget ordinals advance
+  through `B200/200`; the counter is currently `B008/200`.
+- Cycle 171 is `B009`. Repository cycle numbers and budget ordinals advance
   together unless a non-counted record intervenes; the budget ordinal is the
   authoritative campaign counter.
 - A cycle counts only when it is a preregistered substantive research block
@@ -96,6 +96,9 @@
 - `PROVED`: Cycle 169 proves no normalized `T`-invariant `C6` cochain kills
   the graph defect: the complete 1,335-equation system is inconsistent over
   both `F2` and `F3`. See `artifacts/cycle-169-equivariant-coboundary-v1.json`.
+- `PROVED`: Cycle 170 proves every normalized central `C2` extension of `C3`
+  splits and every `C3 -> C2` scalar character is trivial. See
+  `artifacts/cycle-170-projective-c2-twist-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -150,7 +153,8 @@ Budget B001--B200
   |    |                   `-- bilinear C6-twisted convolution [FALSIFIED]
   |    |                        `-- canonical carry 2-cocycle [FALSIFIED]
   |    |                             `-- normalized equivariant cohomology [OBSTRUCTED]
-  |    |                                  `-- projective central extension [NEXT GATE]
+  |    |                                  `-- scalar projective twist [OBSTRUCTED]
+  |    |                                       `-- oriented wild-local C3 module [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -195,16 +199,16 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `B007_OF_200` | Seal Cycle 170 as `B008`, then increment only for substantive research blocks. | Counting workflow or archive-only work. |
-| D6 interface | `PROJECTIVE_CENTRAL_EXTENSION_ENGINE` | Test a preregistered projectively `T`-equivariant central extension with an independently frozen character twist. | Fitting a twist to the graph defect; treating a finite extension as a logarithm map; quotienting away the fibre. |
+| Project budget | `B008_OF_200` | Seal Cycle 171 as `B009`, then increment only for substantive research blocks. | Counting workflow or archive-only work. |
+| D6 interface | `WILD_LOCAL_NONSCALAR_MODULE_ENGINE` | Test an oriented wild-local non-scalar `C3`-module extension with frozen action and anchors. | Repeating scalar extension variants; fitting the module action to the defect; treating finite data as a logarithm map. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Can a frozen projective character twist eliminate the normalized equivariant
-  defect in a central extension without being fitted to the graph?
+- Can an oriented wild-local non-scalar `C3` module carry the missing finite
+  transport data while preserving the two anchors?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -213,24 +217,24 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 170 / `B008`
+## Next goal: Cycle 171 / `B009`
 
 Preregister one substantive block with this question:
 
-> Can a projectively `T`-equivariant central extension with a frozen character
-> twist eliminate the normalized equivariant defect class?
+> Can an oriented wild-local non-scalar `C3` module extension carry the
+> frozen transport and anchors without a new obstruction class?
 
-Cycle 170 must freeze the extension, projective action, character twist,
-normalization, exact compatibility test, and failure rule before executable
-work. A graph-fitted twist, graph-derived cochain, or AFK label without a
-checked coefficient operation does not advance the gate.
+Cycle 171 must freeze the local module, `C3` action, orientation, anchors,
+exact obstruction complex, and failure rule before executable work. A
+defect-fitted action, scalar reparameterization, or AFK label without a checked
+coefficient operation does not advance the gate.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 169
+research cycle 170
 sed -n '1,260p' PLAN.md
-python3 proof/build_cycle_169_equivariant_coboundary_v1.py --check
-python3 -m unittest tests.test_cycle_169_equivariant_coboundary -v
+python3 proof/build_cycle_170_projective_c2_twist_v1.py --check
+python3 -m unittest tests.test_cycle_170_projective_c2_twist -v
 ```
