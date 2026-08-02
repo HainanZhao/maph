@@ -102,6 +102,9 @@ continues.
   mass has a bounded-multiplier labelled divisor-fan inverse. The actual
   complement-to-strict-halo mass bridge remains open; this is not a density
   theorem.
+- `PROVED`: every post-error forced negative divisor-comb correlation routes
+  either to labelled strict-halo negative mass or, if that branch is below its
+  fixed threshold, to a quantitative labelled escape obligation.
 
 ## Research-path graph
 
@@ -111,7 +114,7 @@ published reconstruction P0 [complete]
   `-- E13 critical transport [principal]
         +-- E14 unsigned incidence [volume limit; inverse input]
         +-- E14D-L signed Mellin aliases [principal]
-        |     `-- actual strict-halo mass -> bounded fan or escape [active]
+        |     `-- actual strict antecedent -> bounded fan / escape control [active]
         +-- E14D-H fourth-moment condenser <--- E17 extremizer foundry
         +-- E15 anchored shifted-ratio spectrometer
         `-- E16 alias-to-seed compiler --> E7/E9 prime skeleton
@@ -123,7 +126,7 @@ published reconstruction P0 [complete]
 | Gate | State | Advance condition |
 |---|---|---|
 | E14 | `UNSIGNED_VOLUME_LIMIT_REACHED` | Use only for inverse structure. |
-| E14D-L | `ACTUAL_STRICT_HALO_MASS_TO_BOUNDED_FAN_OR_ESCAPE_OPEN` | Route actual negative mass into the conditional bounded fan, or quantify the boundary/phase/payload/tail escape mass. |
+| E14D-L | `ACTUAL_MASS_ROUTING_BANKED_STRICT_ANTECEDENT_COMPILER_AND_ESCAPE_CONTROL_OPEN` | Prove the actual strict-halo antecedent for the bounded fan, or control a finite labelled escape decomposition. |
 | E14D-H | `MOMENT_CONCENTRATION_OR_SATURATION_INVERSE_OPEN` | Classify/exclude excess `2xi-116/75` with its phase anchor. |
 | E15 | `ANCHOR_REQUIRED` | Classify anchored almost-eigenfunctions. |
 | E16 | `EXACT_VALUATION_WEB_BANKED` | Compile relation-rich structure to a genuine transport seed. |
@@ -134,12 +137,11 @@ published reconstruction P0 [complete]
 
 ## Principal engines and falsifiers
 
-- `CONJECTURED` E14D-L: Cycle 152 banks a conditional bounded-multiplier
-  divisor fan. Cycle 153 must prove or reject its actual normalized-mass and
-  uniform-complete-bound hypotheses, then estimate the labelled fan by
-  spacing/order-three curvature or quantify the residual escape class. An
-  actual target-sized family outside every registered class enlarges the
-  decomposition rather than falsifying a bound silently.
+- `CONJECTURED` E14D-L: Cycles 152--153 bank a conditional fan and an exact
+  actual-mass router. Cycle 154 must derive the strict branch's actual
+  positive-weight normalization and uniform complete capacity bound, or give
+  a finite labelled escape decomposition with quantitative obligations. Only
+  then can spacing/order-three curvature attack an actual bounded fan.
 - `CONJECTURED` E14D-H: encode required `M4` excess as a colored four-cycle
   problem. Low codegree should exclude excess; high codegree should expose an
   anchored rational web. A raw-target example without either output enlarges
@@ -174,15 +176,14 @@ published reconstruction P0 [complete]
 5. Can a relation-rich web produce a genuine transport seed and then the
    `X^(21/25+o(1))` prime skeleton?
 
-Next authorized cycle: preregister Cycle 153 as an actual-mass routing
-compiler. Starting from the Cycle-149--151 forced negative divisor-comb
-correlation, freeze the coefficient normalization, the complete per-mode
-constant `C` (including aggregate errors), the literal strict range
-`h_b<=QX^(-delta)`, and a target strict-halo mass `kappa`. Prove either that
-these data yield an actual Cycle-152 labelled bounded-multiplier fan ready
-for spacing/order-three curvature, or a quantitative lower obligation on the
-boundary-denominator, phase-changing, nonsmooth, or unbounded-tail escape
-class. Do not replace the strict range by a `Q`-power sufficient hypothesis.
+Next authorized cycle: preregister Cycle 154 as the actual strict-halo
+antecedent compiler. Starting with the Cycle-153 strict branch, derive or
+reject the actual positive coefficient-weight normalization and a uniform
+complete bound `0<=n_b<=Cw_b/m_b`, including Riemann/Poisson and aggregate
+errors. Success composes with Cycle 152 into an actual bounded-multiplier
+labelled fan. Failure must transfer a quantitative, reason-labelled mass to a
+finite boundary, phase-changing, nonsmooth, unbounded-tail, or other
+registered escape class; do not absorb it into `C`.
 
 ## Crash recovery
 
@@ -204,4 +205,5 @@ python3 proof/build_cycle_150_divisor_comb_sign_test_v1.py --check
 python3 proof/build_cycle_151_sampled_comb_double_poisson_v1.py --check
 python3 proof/build_cycle_152_bounded_multiplier_divisor_fan_v1.py --check
 python3 proof/build_cycle_152_bounded_multiplier_divisor_fan_scope_correction_v1.py --check
+python3 proof/build_cycle_153_actual_mass_routing_v1.py --check
 ```
