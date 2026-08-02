@@ -1,0 +1,55 @@
+{
+  "artifact_id": "cycle-178-diagonal-aware-fibre-extraction-v1-normalization-correction",
+  "claim_boundary": "This correction explicitly fixes Cycle 178's U_cross as the ordered sum over ell!=ell'. It does not alter the heavy-fibre inverse, cross-label bound, or any density/interval boundary.",
+  "correction": {
+    "affected_claims": "None mathematically: U_cross=sum_(ell!=ell') is ordered. The correction prevents applying its constant to the unordered sum.",
+    "cause": "The displayed formula was ordered, but the prose did not make that convention maximally explicit.",
+    "epistemic_status": "PROVED",
+    "mentor_disposition": "REFINE accepted: freeze ordered versus unordered normalization before commit.",
+    "ordered_statement": "U_cross=T^2-sum N_ell^2>=T(T-2R) in the light branch; hence U_cross>=X^(32/25)/2 under the Cycle-178 large-X direct-target failure assumptions.",
+    "unordered_conversion": "sum_(ell<ell')N_ell N_ell'=U_cross/2, so its corresponding bound is X^(32/25)/4."
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "factor": 2,
+    "ordered": 22,
+    "sample_counts": [
+      1,
+      2,
+      3
+    ],
+    "unordered": 11
+  },
+  "frozen_hashes": {
+    "correction_document": {
+      "path": "docs/cycle-178-diagonal-aware-fibre-extraction-normalization-correction-v1.md",
+      "sha256": "9b28c150eda0eaedc57cdb0c44b5ae78cbb082261589611237b27b9ea9ebb066"
+    },
+    "cycle178": {
+      "path": "artifacts/cycle-178-diagonal-aware-fibre-extraction-v1.json",
+      "sha256": "72797b1e97002d532b7bff28305330cea6f35f2b0e3192b87f7fb4adf99b0e9a"
+    },
+    "cycle178_tests": {
+      "path": "tests/test_cycle_178_diagonal_aware_fibre_extraction_v1.py",
+      "sha256": "980ca4b1f3ddb078dc0dafb73e736d47e36ae579404ee7a3829aa72243705f39"
+    },
+    "sealing_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    }
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_178_diagonal_aware_fibre_extraction_normalization_correction_v1.py --check",
+    "write_command": "python3 proof/build_cycle_178_diagonal_aware_fibre_extraction_normalization_correction_v1.py --write"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_178_diagonal_aware_fibre_extraction_normalization_correction_v1.py",
+    "sha256": "8eb02f78069add61706e5ca6f195fd5c89eeb74b3ced6acaed5c81ad209f4662"
+  },
+  "status": "SEALED_ORDERED_CROSS_LABEL_NORMALIZATION_CORRECTION"
+}
