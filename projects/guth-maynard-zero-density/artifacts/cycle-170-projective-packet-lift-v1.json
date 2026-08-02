@@ -1,0 +1,83 @@
+{
+  "artifact_id": "cycle-170-projective-packet-lift-v1",
+  "claim_boundary": "This proves a finite signed projective packet-lift classifier for one compatible source packet/cross edge. It does not prove any compatible population, deep packet in the actual census, recurrence, skeleton, density, or interval gain.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "boundary": "This is a finite projective-lift classifier. It does not prove a compatible population, a mass lower bound, recurrence, skeleton, density, or interval gain.",
+    "classifier": "seed/range, content, error-supported depth, and denominator capacity are ordered obstruction gates",
+    "depth": "error-supported depth floor(g/Lambda), interpreted as infinity when Lambda=0, and denominator capacity floor(H/Q) are separate; their minimum certifies both the packet inequality and QK<=H",
+    "error": "under |delta|<=C_S/(K_S X)<=1 and |qE-a|<=C_E/(K_E X), the full lifted error is at most Lambda/X and the reduced error at most Lambda/(gX)",
+    "identity": "D alpha_L-N=a delta+(qE-a)(d+b+delta), with Q=|D|/g and A=sgn(D)N/g",
+    "seed": "an integral reduced-rational edge carries the original beta seed to the target with its exact transported residual"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/projective_packet_lift_v1.py",
+      "sha256": "19ace16e5f0e0b62662860fdd41cbe2c4367a736a1a5d1ea29740a03cfd07852"
+    },
+    "cycle169": {
+      "path": "artifacts/cycle-169-source-coupled-label-energy-v1.json",
+      "sha256": "b79f6a8800bcb5dd6a2d58f9f71e6e89fb783bf1a562054196767a2f5ea7c008"
+    },
+    "cycle67": {
+      "path": "artifacts/cycle-67-seeded-packet-recurrence-v1.json",
+      "sha256": "85bd999fca3e1d675c0b3096a6cd287866d9e1aef227239b42b94b39ff585d02"
+    },
+    "document": {
+      "path": "docs/cycle-170-projective-packet-lift-v1.md",
+      "sha256": "d5acc7e05b46c033cba9043a9fa27d98512bf27b7012b018d9ef8e9ddd28ede0"
+    },
+    "preregistration": {
+      "path": "docs/cycle-170-projective-packet-lift-preregistration-v1.md",
+      "sha256": "c64020891722b63017fd0560d33324707771a862658171b4e27a007155d5b89f"
+    },
+    "sealing_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "tests": {
+      "path": "tests/test_cycle_170_projective_packet_lift_v1.py",
+      "sha256": "850ecd9858f8e2621ee0ea0345f9bb0695f656ef5cacac3a48495014d7c07c5f"
+    }
+  },
+  "prior_context": {
+    "cycle169_role": "rules out marginal-only coupling, motivating the actual exponential projective identity",
+    "cycle67_role": "provides recurrence after a deep target packet has a retained beta seed",
+    "epistemic_status": "PROVED"
+  },
+  "projective_lift": {
+    "boundary": "This is a finite projective-lift classifier. It does not prove a compatible population, a mass lower bound, recurrence, skeleton, density, or interval gain.",
+    "classifier": "seed/range, content, error-supported depth, and denominator capacity are ordered obstruction gates",
+    "depth": "error-supported depth floor(g/Lambda), interpreted as infinity when Lambda=0, and denominator capacity floor(H/Q) are separate; their minimum certifies both the packet inequality and QK<=H",
+    "epistemic_status": "PROVED",
+    "error": "under |delta|<=C_S/(K_S X)<=1 and |qE-a|<=C_E/(K_E X), the full lifted error is at most Lambda/X and the reduced error at most Lambda/(gX)",
+    "identity": "D alpha_L-N=a delta+(qE-a)(d+b+delta), with Q=|D|/g and A=sgn(D)N/g",
+    "seed": "an integral reduced-rational edge carries the original beta seed to the target with its exact transported residual"
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Force a population of compatible source packet/cross-edge pairs into the seeded-deep branch, or bound/structure every low-content, error-load, and capacity obstruction bank."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_170_projective_packet_lift_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_170_projective_packet_lift_v1.py",
+    "write_command": "python3 proof/build_cycle_170_projective_packet_lift_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_170_projective_packet_lift_v1.py",
+    "sha256": "588fdfdf745316cbf95f81b2c6a3213375e35e98023719a0de6a266efe681b60"
+  },
+  "status": "SEALED_PROJECTIVE_LIFT_SEEDED_TARGET_PACKET_OR_ERROR_CONTENT_ADMISSIBILITY_CLASSIFIER"
+}
