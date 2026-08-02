@@ -224,8 +224,10 @@ authorized action is Cycle 163, preregistered at
 weighted star family through `z_(d,q)=c0q exp(2pi d/D)` by the exact
 wrap/fiber effective-degree factorization, producing a common-wrap log web
 or explicit wrap-complexity inverse; it is now sealed. Next authorized action
-is a companion-selected compilation or obstruction analysis of one labelled
-Cycle-163 arm. Cycle
+is Cycle 164, preregistered at
+`docs/cycle-164-wrap-valuation-sidon-preregistration-v1.md`: retain high
+common-wrap fibers and prove an exact valuation-web versus weighted-Sidon
+classification. Cycle
 158's concentration theorem remains deferred until a selector
 is real rather than formal. The older
 Cycle-155 partition remains a parallel output only if it is actual and
