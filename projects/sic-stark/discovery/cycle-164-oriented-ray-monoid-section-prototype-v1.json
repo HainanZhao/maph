@@ -1,0 +1,1305 @@
+{
+  "claim_boundary": "This exact finite computation constructs and tests a conductor-lowered ray-monoid section only. It defines no additive coefficient-to-logarithm operation, finite part, AFK cocycle, Stark identity, fusion theorem, or TCC identity.",
+  "conventions": {
+    "common_target": "G6=Cl_{(6)infinity_2} with g=[(4beta+1)]",
+    "field": "Q(sqrt(21)); beta^2-5*beta+1=0",
+    "lowering": "c=(6)+(gamma); m_ab=(6)/c; a_ab=(gamma)/c",
+    "one_place_modulus": "the beta' real place, PARI selector [1,0]",
+    "positive_lift": "largest p*=a mod 6 with b*beta'-p*>0",
+    "principal_representative": "gamma=b*beta-p*",
+    "section": "least e in {0,...,5} with pi_ab(g^e)=[a_ab]",
+    "selected_embedding": "beta'=(5-sqrt(21))/2"
+  },
+  "epistemic_status": "PROVED",
+  "replay": {
+    "command": "python3 proof/verify_cycle_164_oriented_ray_monoid_section.py",
+    "pari_version": "2.15.4",
+    "python_version": "3.12.3"
+  },
+  "rows": [
+    {
+      "characteristic": [
+        0,
+        0
+      ],
+      "common_ideal_norm": 36,
+      "direct_full_ray_log": -1,
+      "least_section_exponent": 0,
+      "matching_source_exponents": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "norm_gamma": 36,
+      "positive_lift": -6,
+      "reduced_finite_modulus_hnf": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "reduced_finite_modulus_norm": 1,
+      "reduced_ideal_hnf": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "reduced_ideal_ray_log": [],
+      "reduced_ray_cyc": []
+    },
+    {
+      "characteristic": [
+        0,
+        1
+      ],
+      "common_ideal_norm": 1,
+      "direct_full_ray_log": [
+        0
+      ],
+      "least_section_exponent": 0,
+      "matching_source_exponents": [
+        0
+      ],
+      "norm_gamma": 1,
+      "positive_lift": 0,
+      "reduced_finite_modulus_hnf": [
+        6,
+        0,
+        0,
+        6
+      ],
+      "reduced_finite_modulus_norm": 36,
+      "reduced_ideal_hnf": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "reduced_ideal_ray_log": [
+        0
+      ],
+      "reduced_ray_cyc": [
+        6
+      ]
+    },
+    {
+      "characteristic": [
+        0,
+        2
+      ],
+      "common_ideal_norm": 4,
+      "direct_full_ray_log": -1,
+      "least_section_exponent": 0,
+      "matching_source_exponents": [
+        0,
+        2,
+        4
+      ],
+      "norm_gamma": 4,
+      "positive_lift": 0,
+      "reduced_finite_modulus_hnf": [
+        3,
+        0,
+        0,
+        3
+      ],
+      "reduced_finite_modulus_norm": 9,
+      "reduced_ideal_hnf": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "reduced_ideal_ray_log": [
+        0
+      ],
+      "reduced_ray_cyc": [
+        2
+      ]
+    },
+    {
+      "characteristic": [
+        0,
+        3
+      ],
+      "common_ideal_norm": 9,
+      "direct_full_ray_log": -1,
+      "least_section_exponent": 0,
+      "matching_source_exponents": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "norm_gamma": 9,
+      "positive_lift": 0,
+      "reduced_finite_modulus_hnf": [
+        2,
+        0,
+        0,
+        2
+      ],
+      "reduced_finite_modulus_norm": 4,
+      "reduced_ideal_hnf": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "reduced_ideal_ray_log": [],
+      "reduced_ray_cyc": []
+    },
+    {
+      "characteristic": [
+        0,
+        4
+      ],
+      "common_ideal_norm": 4,
+      "direct_full_ray_log": -1,
+      "least_section_exponent": 1,
+      "matching_source_exponents": [
+        1,
+        3,
+        5
+      ],
+      "norm_gamma": 16,
+      "positive_lift": 0,
+      "reduced_finite_modulus_hnf": [
+        3,
+        0,
+        0,
+        3
+      ],
+      "reduced_finite_modulus_norm": 9,
+      "reduced_ideal_hnf": [
+        2,
+        0,
+        0,
+        2
+      ],
+      "reduced_ideal_ray_log": [
+        1
+      ],
+      "reduced_ray_cyc": [
+        2
+      ]
+    },
+    {
+      "characteristic": [
+        0,
+        5
+      ],
+      "common_ideal_norm": 1,
+      "direct_full_ray_log": [
+        3
+      ],
+      "least_section_exponent": 3,
+      "matching_source_exponents": [
+        3
+      ],
+      "norm_gamma": 25,
+      "positive_lift": 0,
+      "reduced_finite_modulus_hnf": [
+        6,
+        0,
+        0,
+        6
+      ],
+      "reduced_finite_modulus_norm": 36,
+      "reduced_ideal_hnf": [
+        5,
+        0,
+        0,
+        5
+      ],
+      "reduced_ideal_ray_log": [
+        3
+      ],
+      "reduced_ray_cyc": [
+        6
+      ]
+    },
+    {
+      "characteristic": [
+        1,
+        0
+      ],
+      "common_ideal_norm": 1,
+      "direct_full_ray_log": [
+        3
+      ],
+      "least_section_exponent": 3,
+      "matching_source_exponents": [
+        3
+      ],
+      "norm_gamma": 25,
+      "positive_lift": -5,
+      "reduced_finite_modulus_hnf": [
+        6,
+        0,
+        0,
+        6
+      ],
+      "reduced_finite_modulus_norm": 36,
+      "reduced_ideal_hnf": [
+        5,
+        0,
+        0,
+        5
+      ],
+      "reduced_ideal_ray_log": [
+        3
+      ],
+      "reduced_ray_cyc": [
+        6
+      ]
+    },
+    {
+      "characteristic": [
+        1,
+        1
+      ],
+      "common_ideal_norm": 3,
+      "direct_full_ray_log": -1,
+      "least_section_exponent": 1,
+      "matching_source_exponents": [
+        1,
+        3,
+        5
+      ],
+      "norm_gamma": 51,
+      "positive_lift": -5,
+      "reduced_finite_modulus_hnf": [
+        6,
+        2,
+        0,
+        2
+      ],
+      "reduced_finite_modulus_norm": 12,
+      "reduced_ideal_hnf": [
+        17,
+        7,
+        0,
+        1
+      ],
+      "reduced_ideal_ray_log": [
+        1
+      ],
+      "reduced_ray_cyc": [
+        2
+      ]
+    },
+    {
+      "characteristic": [
+        1,
+        2
+      ],
+      "common_ideal_norm": 1,
+      "direct_full_ray_log": [
+        4
+      ],
+      "least_section_exponent": 4,
+      "matching_source_exponents": [
+        4
+      ],
+      "norm_gamma": 79,
+      "positive_lift": -5,
+      "reduced_finite_modulus_hnf": [
+        6,
+        0,
+        0,
+        6
+      ],
+      "reduced_finite_modulus_norm": 36,
+      "reduced_ideal_hnf": [
+        79,
+        44,
+        0,
+        1
+      ],
+      "reduced_ideal_ray_log": [
+        4
+      ],
+      "reduced_ray_cyc": [
+        6
+      ]
+    },
+    {
+      "characteristic": [
+        1,
+        3
+      ],
+      "common_ideal_norm": 1,
+      "direct_full_ray_log": [
+        5
+      ],
+      "least_section_exponent": 5,
+      "matching_source_exponents": [
+        5
+      ],
+      "norm_gamma": 109,
+      "positive_lift": -5,
+      "reduced_finite_modulus_hnf": [
+        6,
+        0,
+        0,
+        6
+      ],
+      "reduced_finite_modulus_norm": 36,
+      "reduced_ideal_hnf": [
+        109,
+        40,
+        0,
+        1
+      ],
+      "reduced_ideal_ray_log": [
+        5
+      ],
+      "reduced_ray_cyc": [
+        6
+      ]
+    },
+    {
+      "characteristic": [
+        1,
+        4
+      ],
+      "common_ideal_norm": 3,
+      "direct_full_ray_log": -1,
+      "least_section_exponent": 1,
+      "matching_source_exponents": [
+        1,
+        3,
+        5
+      ],
+      "norm_gamma": 141,
+      "positive_lift": -5,
+      "reduced_finite_modulus_hnf": [
+        6,
+        2,
+        0,
+        2
+      ],
+      "reduced_finite_modulus_norm": 12,
+      "reduced_ideal_hnf": [
+        47,
+        15,
+        0,
+        1
+      ],
+      "reduced_ideal_ray_log": [
+        1
+      ],
+      "reduced_ray_cyc": [
+        2
+      ]
+    },
+    {
+      "characteristic": [
+        1,
+        5
+      ],
+      "common_ideal_norm": 1,
+      "direct_full_ray_log": [
+        0
+      ],
+      "least_section_exponent": 0,
+      "matching_source_exponents": [
+        0
+      ],
+      "norm_gamma": 1,
+      "positive_lift": 1,
+      "reduced_finite_modulus_hnf": [
+        6,
+        0,
+        0,
+        6
+      ],
+      "reduced_finite_modulus_norm": 36,
+      "reduced_ideal_hnf": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "reduced_ideal_ray_log": [
+        0
+      ],
+      "reduced_ray_cyc": [
+        6
+      ]
+    },
+    {
+      "characteristic": [
+        2,
+        0
+      ],
+      "common_ideal_norm": 4,
+      "direct_full_ray_log": -1,
+      "least_section_exponent": 1,
+      "matching_source_exponents": [
+        1,
+        3,
+        5
+      ],
+      "norm_gamma": 16,
+      "positive_lift": -4,
+      "reduced_finite_modulus_hnf": [
+        3,
+        0,
+        0,
+        3
+      ],
+      "reduced_finite_modulus_norm": 9,
+      "reduced_ideal_hnf": [
+        2,
+        0,
+        0,
+        2
+      ],
+      "reduced_ideal_ray_log": [
+        1
+      ],
+      "reduced_ray_cyc": [
+        2
+      ]
+    },
+    {
+      "characteristic": [
+        2,
+        1
+      ],
+      "common_ideal_norm": 1,
+      "direct_full_ray_log": [
+        5
+      ],
+      "least_section_exponent": 5,
+      "matching_source_exponents": [
+        5
+      ],
+      "norm_gamma": 37,
+      "positive_lift": -4,
+      "reduced_finite_modulus_hnf": [
+        6,
+        0,
+        0,
+        6
+      ],
+      "reduced_finite_modulus_norm": 36,
+      "reduced_ideal_hnf": [
+        37,
+        6,
+        0,
+        1
+      ],
+      "reduced_ideal_ray_log": [
+        5
+      ],
+      "reduced_ray_cyc": [
+        6
+      ]
+    },
+    {
+      "characteristic": [
+        2,
+        2
+      ],
+      "common_ideal_norm": 12,
+      "direct_full_ray_log": -1,
+      "least_section_exponent": 1,
+      "matching_source_exponents": [
+        1,
+        3,
+        5
+      ],
+      "norm_gamma": 60,
+      "positive_lift": -4,
+      "reduced_finite_modulus_hnf": [
+        3,
+        1,
+        0,
+        1
+      ],
+      "reduced_finite_modulus_norm": 3,
+      "reduced_ideal_hnf": [
+        5,
+        4,
+        0,
+        1
+      ],
+      "reduced_ideal_ray_log": [
+        1
+      ],
+      "reduced_ray_cyc": [
+        2
+      ]
+    },
+    {
+      "characteristic": [
+        2,
+        3
+      ],
+      "common_ideal_norm": 1,
+      "direct_full_ray_log": [
+        4
+      ],
+      "least_section_exponent": 4,
+      "matching_source_exponents": [
+        4
+      ],
+      "norm_gamma": 85,
+      "positive_lift": -4,
+      "reduced_finite_modulus_hnf": [
+        6,
+        0,
+        0,
+        6
+      ],
+      "reduced_finite_modulus_norm": 36,
+      "reduced_ideal_hnf": [
+        85,
+        60,
+        0,
+        1
+      ],
+      "reduced_ideal_ray_log": [
+        4
+      ],
+      "reduced_ray_cyc": [
+        6
+      ]
+    },
+    {
+      "characteristic": [
+        2,
+        4
+      ],
+      "common_ideal_norm": 4,
+      "direct_full_ray_log": -1,
+      "least_section_exponent": 0,
+      "matching_source_exponents": [
+        0,
+        2,
+        4
+      ],
+      "norm_gamma": 112,
+      "positive_lift": -4,
+      "reduced_finite_modulus_hnf": [
+        3,
+        0,
+        0,
+        3
+      ],
+      "reduced_finite_modulus_norm": 9,
+      "reduced_ideal_hnf": [
+        14,
+        6,
+        0,
+        2
+      ],
+      "reduced_ideal_ray_log": [
+        0
+      ],
+      "reduced_ray_cyc": [
+        2
+      ]
+    },
+    {
+      "characteristic": [
+        2,
+        5
+      ],
+      "common_ideal_norm": 3,
+      "direct_full_ray_log": -1,
+      "least_section_exponent": 0,
+      "matching_source_exponents": [
+        0,
+        2,
+        4
+      ],
+      "norm_gamma": 141,
+      "positive_lift": -4,
+      "reduced_finite_modulus_hnf": [
+        6,
+        2,
+        0,
+        2
+      ],
+      "reduced_finite_modulus_norm": 12,
+      "reduced_ideal_hnf": [
+        47,
+        31,
+        0,
+        1
+      ],
+      "reduced_ideal_ray_log": [
+        0
+      ],
+      "reduced_ray_cyc": [
+        2
+      ]
+    },
+    {
+      "characteristic": [
+        3,
+        0
+      ],
+      "common_ideal_norm": 9,
+      "direct_full_ray_log": -1,
+      "least_section_exponent": 0,
+      "matching_source_exponents": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "norm_gamma": 9,
+      "positive_lift": -3,
+      "reduced_finite_modulus_hnf": [
+        2,
+        0,
+        0,
+        2
+      ],
+      "reduced_finite_modulus_norm": 4,
+      "reduced_ideal_hnf": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "reduced_ideal_ray_log": [],
+      "reduced_ray_cyc": []
+    },
+    {
+      "characteristic": [
+        3,
+        1
+      ],
+      "common_ideal_norm": 1,
+      "direct_full_ray_log": [
+        4
+      ],
+      "least_section_exponent": 4,
+      "matching_source_exponents": [
+        4
+      ],
+      "norm_gamma": 25,
+      "positive_lift": -3,
+      "reduced_finite_modulus_hnf": [
+        6,
+        0,
+        0,
+        6
+      ],
+      "reduced_finite_modulus_norm": 36,
+      "reduced_ideal_hnf": [
+        25,
+        5,
+        0,
+        1
+      ],
+      "reduced_ideal_ray_log": [
+        4
+      ],
+      "reduced_ray_cyc": [
+        6
+      ]
+    },
+    {
+      "characteristic": [
+        3,
+        2
+      ],
+      "common_ideal_norm": 1,
+      "direct_full_ray_log": [
+        5
+      ],
+      "least_section_exponent": 5,
+      "matching_source_exponents": [
+        5
+      ],
+      "norm_gamma": 43,
+      "positive_lift": -3,
+      "reduced_finite_modulus_hnf": [
+        6,
+        0,
+        0,
+        6
+      ],
+      "reduced_finite_modulus_norm": 36,
+      "reduced_ideal_hnf": [
+        43,
+        25,
+        0,
+        1
+      ],
+      "reduced_ideal_ray_log": [
+        5
+      ],
+      "reduced_ray_cyc": [
+        6
+      ]
+    },
+    {
+      "characteristic": [
+        3,
+        3
+      ],
+      "common_ideal_norm": 9,
+      "direct_full_ray_log": -1,
+      "least_section_exponent": 0,
+      "matching_source_exponents": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "norm_gamma": 63,
+      "positive_lift": -3,
+      "reduced_finite_modulus_hnf": [
+        2,
+        0,
+        0,
+        2
+      ],
+      "reduced_finite_modulus_norm": 4,
+      "reduced_ideal_hnf": [
+        7,
+        3,
+        0,
+        1
+      ],
+      "reduced_ideal_ray_log": [],
+      "reduced_ray_cyc": []
+    },
+    {
+      "characteristic": [
+        3,
+        4
+      ],
+      "common_ideal_norm": 1,
+      "direct_full_ray_log": [
+        2
+      ],
+      "least_section_exponent": 2,
+      "matching_source_exponents": [
+        2
+      ],
+      "norm_gamma": 85,
+      "positive_lift": -3,
+      "reduced_finite_modulus_hnf": [
+        6,
+        0,
+        0,
+        6
+      ],
+      "reduced_finite_modulus_norm": 36,
+      "reduced_ideal_hnf": [
+        85,
+        24,
+        0,
+        1
+      ],
+      "reduced_ideal_ray_log": [
+        2
+      ],
+      "reduced_ray_cyc": [
+        6
+      ]
+    },
+    {
+      "characteristic": [
+        3,
+        5
+      ],
+      "common_ideal_norm": 1,
+      "direct_full_ray_log": [
+        1
+      ],
+      "least_section_exponent": 1,
+      "matching_source_exponents": [
+        1
+      ],
+      "norm_gamma": 109,
+      "positive_lift": -3,
+      "reduced_finite_modulus_hnf": [
+        6,
+        0,
+        0,
+        6
+      ],
+      "reduced_finite_modulus_norm": 36,
+      "reduced_ideal_hnf": [
+        109,
+        68,
+        0,
+        1
+      ],
+      "reduced_ideal_ray_log": [
+        1
+      ],
+      "reduced_ray_cyc": [
+        6
+      ]
+    },
+    {
+      "characteristic": [
+        4,
+        0
+      ],
+      "common_ideal_norm": 4,
+      "direct_full_ray_log": -1,
+      "least_section_exponent": 0,
+      "matching_source_exponents": [
+        0,
+        2,
+        4
+      ],
+      "norm_gamma": 4,
+      "positive_lift": -2,
+      "reduced_finite_modulus_hnf": [
+        3,
+        0,
+        0,
+        3
+      ],
+      "reduced_finite_modulus_norm": 9,
+      "reduced_ideal_hnf": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "reduced_ideal_ray_log": [
+        0
+      ],
+      "reduced_ray_cyc": [
+        2
+      ]
+    },
+    {
+      "characteristic": [
+        4,
+        1
+      ],
+      "common_ideal_norm": 3,
+      "direct_full_ray_log": -1,
+      "least_section_exponent": 1,
+      "matching_source_exponents": [
+        1,
+        3,
+        5
+      ],
+      "norm_gamma": 15,
+      "positive_lift": -2,
+      "reduced_finite_modulus_hnf": [
+        6,
+        2,
+        0,
+        2
+      ],
+      "reduced_finite_modulus_norm": 12,
+      "reduced_ideal_hnf": [
+        5,
+        4,
+        0,
+        1
+      ],
+      "reduced_ideal_ray_log": [
+        1
+      ],
+      "reduced_ray_cyc": [
+        2
+      ]
+    },
+    {
+      "characteristic": [
+        4,
+        2
+      ],
+      "common_ideal_norm": 4,
+      "direct_full_ray_log": -1,
+      "least_section_exponent": 1,
+      "matching_source_exponents": [
+        1,
+        3,
+        5
+      ],
+      "norm_gamma": 28,
+      "positive_lift": -2,
+      "reduced_finite_modulus_hnf": [
+        3,
+        0,
+        0,
+        3
+      ],
+      "reduced_finite_modulus_norm": 9,
+      "reduced_ideal_hnf": [
+        7,
+        3,
+        0,
+        1
+      ],
+      "reduced_ideal_ray_log": [
+        1
+      ],
+      "reduced_ray_cyc": [
+        2
+      ]
+    },
+    {
+      "characteristic": [
+        4,
+        3
+      ],
+      "common_ideal_norm": 1,
+      "direct_full_ray_log": [
+        1
+      ],
+      "least_section_exponent": 1,
+      "matching_source_exponents": [
+        1
+      ],
+      "norm_gamma": 43,
+      "positive_lift": -2,
+      "reduced_finite_modulus_hnf": [
+        6,
+        0,
+        0,
+        6
+      ],
+      "reduced_finite_modulus_norm": 36,
+      "reduced_ideal_hnf": [
+        43,
+        17,
+        0,
+        1
+      ],
+      "reduced_ideal_ray_log": [
+        1
+      ],
+      "reduced_ray_cyc": [
+        6
+      ]
+    },
+    {
+      "characteristic": [
+        4,
+        4
+      ],
+      "common_ideal_norm": 12,
+      "direct_full_ray_log": -1,
+      "least_section_exponent": 0,
+      "matching_source_exponents": [
+        0,
+        2,
+        4
+      ],
+      "norm_gamma": 60,
+      "positive_lift": -2,
+      "reduced_finite_modulus_hnf": [
+        3,
+        1,
+        0,
+        1
+      ],
+      "reduced_finite_modulus_norm": 3,
+      "reduced_ideal_hnf": [
+        5,
+        0,
+        0,
+        1
+      ],
+      "reduced_ideal_ray_log": [
+        0
+      ],
+      "reduced_ray_cyc": [
+        2
+      ]
+    },
+    {
+      "characteristic": [
+        4,
+        5
+      ],
+      "common_ideal_norm": 1,
+      "direct_full_ray_log": [
+        2
+      ],
+      "least_section_exponent": 2,
+      "matching_source_exponents": [
+        2
+      ],
+      "norm_gamma": 79,
+      "positive_lift": -2,
+      "reduced_finite_modulus_hnf": [
+        6,
+        0,
+        0,
+        6
+      ],
+      "reduced_finite_modulus_norm": 36,
+      "reduced_ideal_hnf": [
+        79,
+        34,
+        0,
+        1
+      ],
+      "reduced_ideal_ray_log": [
+        2
+      ],
+      "reduced_ray_cyc": [
+        6
+      ]
+    },
+    {
+      "characteristic": [
+        5,
+        0
+      ],
+      "common_ideal_norm": 1,
+      "direct_full_ray_log": [
+        0
+      ],
+      "least_section_exponent": 0,
+      "matching_source_exponents": [
+        0
+      ],
+      "norm_gamma": 1,
+      "positive_lift": -1,
+      "reduced_finite_modulus_hnf": [
+        6,
+        0,
+        0,
+        6
+      ],
+      "reduced_finite_modulus_norm": 36,
+      "reduced_ideal_hnf": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "reduced_ideal_ray_log": [
+        0
+      ],
+      "reduced_ray_cyc": [
+        6
+      ]
+    },
+    {
+      "characteristic": [
+        5,
+        1
+      ],
+      "common_ideal_norm": 1,
+      "direct_full_ray_log": [
+        3
+      ],
+      "least_section_exponent": 3,
+      "matching_source_exponents": [
+        3
+      ],
+      "norm_gamma": 7,
+      "positive_lift": -1,
+      "reduced_finite_modulus_hnf": [
+        6,
+        0,
+        0,
+        6
+      ],
+      "reduced_finite_modulus_norm": 36,
+      "reduced_ideal_hnf": [
+        7,
+        3,
+        0,
+        1
+      ],
+      "reduced_ideal_ray_log": [
+        3
+      ],
+      "reduced_ray_cyc": [
+        6
+      ]
+    },
+    {
+      "characteristic": [
+        5,
+        2
+      ],
+      "common_ideal_norm": 3,
+      "direct_full_ray_log": -1,
+      "least_section_exponent": 0,
+      "matching_source_exponents": [
+        0,
+        2,
+        4
+      ],
+      "norm_gamma": 15,
+      "positive_lift": -1,
+      "reduced_finite_modulus_hnf": [
+        6,
+        2,
+        0,
+        2
+      ],
+      "reduced_finite_modulus_norm": 12,
+      "reduced_ideal_hnf": [
+        5,
+        0,
+        0,
+        1
+      ],
+      "reduced_ideal_ray_log": [
+        0
+      ],
+      "reduced_ray_cyc": [
+        2
+      ]
+    },
+    {
+      "characteristic": [
+        5,
+        3
+      ],
+      "common_ideal_norm": 1,
+      "direct_full_ray_log": [
+        2
+      ],
+      "least_section_exponent": 2,
+      "matching_source_exponents": [
+        2
+      ],
+      "norm_gamma": 25,
+      "positive_lift": -1,
+      "reduced_finite_modulus_hnf": [
+        6,
+        0,
+        0,
+        6
+      ],
+      "reduced_finite_modulus_norm": 36,
+      "reduced_ideal_hnf": [
+        25,
+        19,
+        0,
+        1
+      ],
+      "reduced_ideal_ray_log": [
+        2
+      ],
+      "reduced_ray_cyc": [
+        6
+      ]
+    },
+    {
+      "characteristic": [
+        5,
+        4
+      ],
+      "common_ideal_norm": 1,
+      "direct_full_ray_log": [
+        1
+      ],
+      "least_section_exponent": 1,
+      "matching_source_exponents": [
+        1
+      ],
+      "norm_gamma": 37,
+      "positive_lift": -1,
+      "reduced_finite_modulus_hnf": [
+        6,
+        0,
+        0,
+        6
+      ],
+      "reduced_finite_modulus_norm": 36,
+      "reduced_ideal_hnf": [
+        37,
+        30,
+        0,
+        1
+      ],
+      "reduced_ideal_ray_log": [
+        1
+      ],
+      "reduced_ray_cyc": [
+        6
+      ]
+    },
+    {
+      "characteristic": [
+        5,
+        5
+      ],
+      "common_ideal_norm": 3,
+      "direct_full_ray_log": -1,
+      "least_section_exponent": 0,
+      "matching_source_exponents": [
+        0,
+        2,
+        4
+      ],
+      "norm_gamma": 51,
+      "positive_lift": -1,
+      "reduced_finite_modulus_hnf": [
+        6,
+        2,
+        0,
+        2
+      ],
+      "reduced_finite_modulus_norm": 12,
+      "reduced_ideal_hnf": [
+        17,
+        9,
+        0,
+        1
+      ],
+      "reduced_ideal_ray_log": [
+        0
+      ],
+      "reduced_ray_cyc": [
+        2
+      ]
+    }
+  ],
+  "schema": "sic-stark-cycle-164-oriented-ray-monoid-section-prototype-v1",
+  "source": {
+    "generator_log": [
+      1
+    ],
+    "ray_cyc": [
+      6
+    ]
+  },
+  "summary": {
+    "all_rows_in_projected_source_image": true,
+    "full_modulus_recovery": true,
+    "full_modulus_rows": 18,
+    "lowered_modulus_rows": 18,
+    "orientation_anchors": {
+      "3,4": 2,
+      "3,5": 1
+    },
+    "rows_checked": 36,
+    "section_exponent_histogram": {
+      "0": 14,
+      "1": 10,
+      "2": 3,
+      "3": 3,
+      "4": 3,
+      "5": 3
+    }
+  }
+}
