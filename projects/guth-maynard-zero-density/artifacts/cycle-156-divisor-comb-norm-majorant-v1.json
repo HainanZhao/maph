@@ -1,0 +1,88 @@
+{
+  "artifact_id": "cycle-156-divisor-comb-norm-majorant-v1",
+  "claim_boundary": "This artifact proves an exact fixed-constant norm majorant for the selected divisor comb only. It does not establish an actual finite coefficient partition, escape projection, positive transport, bounded fan, moment, density, or intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "divisor_comb_norm_majorant": {
+    "boundary": "this exact counting lemma concerns only the selected divisor comb; it does not prove an actual escape partition, negative projection, positive transport, bounded fan, moment, density, or intervals",
+    "cycle154_interface": "this supplies the comb-norm hypothesis in Cycle 154; an actual finite labelled escape partition is still required before that cycle localizes a class",
+    "epistemic_status": "PROVED",
+    "exact_count": "for w_h(k)=Q 1_(h|k) on integer K<=k<=2K, ||w_h||_2^2/Q^2 equals floor(2K/h)-ceil(K/h)+1",
+    "fixed_majorant": "if h<=C_h K for a frozen fixed C_h>0, the exact count is at most K/h+1 and hence ||w_h||_2^2<=(1+C_h)KQ^2/h",
+    "special_case": "if h<=K, take C_h=1 and the fixed majorant constant is A=2"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/divisor_comb_norm_majorant_v1.py",
+      "sha256": "b8bbd8bb173b843cca728b9052684e3119273db00b01ef493297624b4ff21765"
+    },
+    "cycle150": {
+      "path": "artifacts/cycle-150-divisor-comb-sign-test-v1.json",
+      "sha256": "1039725acb7e764e1d352a7506756f5c6b620b232bfddeaf6c0cb1b0e73f1269"
+    },
+    "cycle154": {
+      "path": "artifacts/cycle-154-coefficient-escape-localization-v1.json",
+      "sha256": "3d17a6773aa714d83c12bc7beddbde5bfefc499f82ba7848f79cdf3cd7f28184"
+    },
+    "document": {
+      "path": "docs/cycle-156-divisor-comb-norm-v1.md",
+      "sha256": "01002a20685abfd681d440960f3b413049f046c7b1b179265a55df15e457ac25"
+    },
+    "preregistration": {
+      "path": "docs/cycle-156-divisor-comb-norm-preregistration-v1.md",
+      "sha256": "e18503890a96f7fa78451068ed0d33b29d88ea5093d40d24bf255a3ff768f90d"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_156_divisor_comb_norm_majorant_v1.py",
+      "sha256": "30c6bc1a97bd2a7fd34d2a666f88d064fff16d2cb9821204102040e17cffaf61"
+    }
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "construct or reject Cycle 155's actual exact fixed finite reason-labelled coefficient-escape partition; then Cycle 154 localizes a class with this now-fixed norm constant"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_156_divisor_comb_norm_majorant_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_156_divisor_comb_norm_majorant_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_156_divisor_comb_norm_majorant_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "samples": {
+    "epistemic_status": "PROVED",
+    "fixed_anchor_ratio": {
+      "anchor_ratio": "3/2",
+      "multiple_count": "1",
+      "norm_squared_majorant_constant": "5/2",
+      "scale_without_q_squared": "2/3"
+    },
+    "h_at_most_k": {
+      "anchor_ratio": "1",
+      "multiple_count": "3",
+      "norm_squared_majorant_constant": "2",
+      "scale_without_q_squared": "5/2"
+    }
+  },
+  "sealer": {
+    "path": "proof/build_cycle_156_divisor_comb_norm_majorant_v1.py",
+    "sha256": "d960da7b0d433b5d1cc8a90386aaa039d83fa0143b12d0e6ff7a499d7716edd9"
+  },
+  "status": "SEALED_EXACT_DIVISOR_COMB_NORM_MAJORANT_ACTUAL_FINITE_PARTITION_OPEN"
+}
