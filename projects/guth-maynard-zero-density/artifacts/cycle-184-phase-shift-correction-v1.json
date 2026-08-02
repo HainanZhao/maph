@@ -1,0 +1,131 @@
+{
+  "affected_artifact": {
+    "disposition": "immutable; LCM algebra unaffected, deformation wording superseded by shifted slopes.",
+    "path": "artifacts/cycle-184-ray-box-determinant-orbit-v1.json",
+    "sha256": "02a9c3e61166c6a265dd5f14dd80043daf8f6de5063594161cb435b68a340e25"
+  },
+  "artifact_id": "cycle-184-phase-shift-correction-v1",
+  "claim_boundary": "This corrects C184's deformation convention only; it proves no critical-box bound, recurrence, density gain, or interval result.",
+  "corrected_result": {
+    "boundary": "The LCM-resonance redundancy remains valid. This corrected two-label subcritical deformation proves no critical-box saturation or density consequence.",
+    "corrected_deformation": "The same nonrational two-label family has shifted rational slopes q-1 and q^2-1, unchanged residual bounds, the same nonzero stable determinant, and the same sub-seed box scale.",
+    "epistemic_status": "PROVED",
+    "original_deformation_disposition": "WITHHELD only as written: alpha_j=z^j conflicts with the pinned alpha_j=z^j-1 convention.",
+    "samples": {
+      "T3": {
+        "determinant": {
+          "F": -4169326806020538,
+          "formula": "V^2*(B-V)-V*(B^2-V^2)=V*B*(V-B)"
+        },
+        "phase": "z=r^(1/n), alpha_n=r-1, alpha_2n=r^2-1",
+        "residual_transfer": "h*((q-1)-(r-1))=h*(q-r), and similarly at 2n; original residual bounds are unchanged",
+        "shifted_slopes": {
+          "left": "88574/177147",
+          "right": "39226590232/31381059609"
+        },
+        "surviving_original_ledger": {
+          "fibres": {
+            "all_depths_below_seed": true,
+            "beta": "0",
+            "intercept": "0",
+            "left_count": 177148,
+            "left_denominator": 177147,
+            "left_residual_bound": "2/14130386091738734504764811067",
+            "left_slope": "265721/177147",
+            "right_count": 2,
+            "right_denominator": 31381059609,
+            "right_residual_bound": "2/4710128697246244834921603689",
+            "right_slope": "70607649841/31381059609"
+          },
+          "populated_box": {
+            "all_ordered_label_pair_rectangles": 15690618378,
+            "critical_scale": "X^(21/25-o(1))",
+            "frozen_k_bins": 18,
+            "one_box_lower_bound": 871701021,
+            "scale": "X^(11/25-o(1))"
+          }
+        }
+      }
+    }
+  },
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "affected_artifact": {
+      "path": "artifacts/cycle-184-ray-box-determinant-orbit-v1.json",
+      "sha256": "02a9c3e61166c6a265dd5f14dd80043daf8f6de5063594161cb435b68a340e25"
+    },
+    "conventions": {
+      "path": "conventions/cycle_184_phase_shift_correction_v1.py",
+      "sha256": "7bd4f0a032d60b5983177983579f34c15747ccbfe5f45be92c5f22a636868864"
+    },
+    "document": {
+      "path": "docs/cycle-184-phase-shift-correction-v1.md",
+      "sha256": "34ebde2f4e1cb34462eeddb12fa5896ad3b724e739f044897f14c0b4d0c70655"
+    },
+    "preregistration": {
+      "path": "docs/cycle-184-phase-shift-correction-preregistration-v1.md",
+      "sha256": "a7cc179cd5a73bcba641b55c35043de2bc575738504783ea3ecce2a22258fa60"
+    },
+    "sealing_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "tests": {
+      "path": "tests/test_cycle_184_phase_shift_correction_v1.py",
+      "sha256": "457f73efa12a9519d6c9fc97a80f697d047d632d139bed1accd6baaa84c6bcb2"
+    }
+  },
+  "preregistration_preflight": {
+    "cycle": 184,
+    "input_hashes": [
+      {
+        "path": "artifacts/cycle-184-ray-box-determinant-orbit-v1.json",
+        "sha256": "02a9c3e61166c6a265dd5f14dd80043daf8f6de5063594161cb435b68a340e25"
+      },
+      {
+        "path": "conventions/ray_box_determinant_orbit_v1.py",
+        "sha256": "67b868651fd4a1e0404a9ee14bca894533088181c5d01411ab36a74a0f4ab3fe"
+      },
+      {
+        "path": "proof/cycle_seal_v1.py",
+        "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+      },
+      {
+        "path": "../../tools/preregistration_check.py",
+        "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+      }
+    ],
+    "manifest_sha256": "a7cc179cd5a73bcba641b55c35043de2bc575738504783ea3ecce2a22258fa60",
+    "parameters": {
+      "affected_claim": {
+        "kind": "expression",
+        "rationale": "Name the mismatch precisely.",
+        "value": "alpha_j=z^j in the nonrational deformation"
+      },
+      "corrected_slopes": {
+        "kind": "expression",
+        "rationale": "Use the pinned phase convention.",
+        "value": "A_left/V=(B-V)/V, A_right/V^2=(B^2-V^2)/V^2"
+      }
+    }
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_184_phase_shift_correction_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_184_phase_shift_correction_v1.py",
+    "write_command": "python3 proof/build_cycle_184_phase_shift_correction_v1.py --write"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_184_phase_shift_correction_v1.py",
+    "sha256": "026f70e447e6f5d38ea13358a7ce97ee77ead789ce4b0c30e06e057b3ba6e111"
+  },
+  "status": "SEALED_CORRECTION_SHIFTED_SLOPES_NONRATIONAL_TWO_RAY_DEFORMATION"
+}
