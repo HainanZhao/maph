@@ -6,8 +6,8 @@ Canonical evidence is the Git-tracked per-cycle artifact and its linked files; `
 ## Cold-start handoff
 
 - Project outcome (PROVED): No improved zero-density coefficient, prime-interval endpoint, or L-function-family transfer is proved. The checked baseline remains density coefficient 30/13, with uniform and almost-all interval endpoints 17/30 and 2/15.
-- Why the active gate matters (PROVED): Cycle 157 proves that nonzero fixed-difference raw selection masks cannot be exactly Gram-positive and routes any actual negative mask correlation to coefficient-weighted negative spectral energy. The live obstruction is to concentrate that actual energy in finitely many labelled blocks or prove a robust labelled complexity inverse; the actual partition and positive strict transport remain open.
-- Progress criterion (CONJECTURED): Cycle 158 advances E14D-L only if its actual negative spectral energy is captured 75% by at most J_*=ceil(8/kappa_*) frozen labelled blocks, yielding a fixed-mass block, or if every such J_*-block set misses at least 25%, yielding a robust labelled complexity lower bound. A raw-mask PSD obstruction, unweighted rank claim, X^(o(1)) class count, unlabelled residual, heuristic cancellation, scalar collision bound, or isolated endpoint norm aggregation does not advance the actual gate.
+- Why the active gate matters (PROVED): Cycle 159 proves that primitive-ray compression loses the multiplier needed to reconstruct nonconstant Cycle-124 coefficient products. E14D-L is timeboxed at this information loss through Cycles 160--162. The active E14D-H task is a phase-anchored coefficient-weighted colored four-cycle condenser for upper-band fourth-moment excess.
+- Progress criterion (CONJECTURED): Cycle 160 advances E14D-H only by proving that actual coefficient-weighted pair-difference cells of codegree at most X^(1/150+o(1)) force M4<<K(DQ)^2X^(1/150+o(1)), or by an explicit admissible family with M4 excess X^(1/75-o(1)) despite all cells below that threshold. A generic fourth-moment expansion, unweighted codegree, an unlabelled residual, or inability to prove the bound does not advance the gate.
 - Explicitly deferred: Boundary denominators within a fixed power of Q are a separate branch; paper-stage hostile audit begins only after a manuscript theorem is frozen.
 
 ### Start here (from this project directory)
@@ -15,31 +15,32 @@ Canonical evidence is the Git-tracked per-cycle artifact and its linked files; `
 - `source ../../tools/dev-env.sh`
 - `research rebuild`
 - `research check`
-- `research cycle 157`
-- `research search "negative spectral"`
-- `python3 proof/build_cycle_157_selection_mask_negative_spectral_v1.py --check`
-- `cat docs/cycle-158-spectral-energy-concentration-preregistration-v1.md`
+- `research cycle 159`
+- `research search "colored four cycle"`
+- `python3 proof/build_cycle_159_coefficient_selector_information_loss_v1.py --check`
+- `cat docs/cycle-160-colored-four-cycle-condenser-preregistration-v1.md`
 
 Read the listed record and its linked preregistration, proof document, conventions, builder, and test before changing mathematics or code. Do not infer a theorem from this handoff; its claim tags and boundaries are in the canonical record.
 
 ## Index coverage
 
-- Cycle artifact files found in the working tree: 256
-- Cycle artifacts present in the Git index: 256
-- Artifacts by top-level epistemic status: CONJECTURED=6, LEGACY_UNTAGGED=10, OBSERVED=56, PROVED=184
-- Recursively tagged fields indexed for search (not independent claims): 23517
+- Cycle artifact files found in the working tree: 257
+- Cycle artifacts present in the Git index: 257
+- Artifacts by top-level epistemic status: CONJECTURED=6, LEGACY_UNTAGGED=10, OBSERVED=56, PROVED=185
+- Recursively tagged fields indexed for search (not independent claims): 23522
 
 ## Current gate
 
-- Latest record: `cycle-157-selection-mask-negative-spectral-v1` (Cycle 157, `PROVED`)
-- Status: `SEALED_RAW_ZERO_DIAGONAL_GRAM_OBSTRUCTION_COEFFICIENT_NEGATIVE_SPECTRAL_ALIGNMENT_OPEN`
-- Boundary: This artifact proves a raw fixed-difference Gram obstruction and conditional coefficient-weighted negative spectral localization. It does not prove actual eigenspace alignment, finite block concentration, an approximate Gram transport, a coefficient partition, a moment, density, or intervals.
-- Next mathematical target: prove the actual negative spectral energy concentrates in a fixed labelled block family, or preserve a quantitative block-complexity inverse with the coefficient and anchor labels
+- Latest record: `cycle-159-coefficient-selector-information-loss-v1` (Cycle 159, `PROVED`)
+- Status: `SEALED_PRIMITIVE_RAY_MULTIPLIER_INFORMATION_LOSS_COEFFICIENT_PRESERVING_SELECTOR_OPEN`
+- Boundary: This artifact proves a coefficient-interface information-loss theorem for nonconstant ray fibres with two admissible multipliers. It does not show target mass in such a fibre, construct the actual selector, prove spectral concentration, a moment, density, or intervals.
+- Next mathematical target: construct a multiplier-resolved coefficient-preserving collision measure with target mass, or timebox E14D-L and activate E14D-H
 
 ## Recent sealed records
 
 | Cycle | Record | Tag | Gate | Next target |
 |---:|---|---|---|---|
+| 159 | `cycle-159-coefficient-selector-information-loss-v1` | `PROVED` | `SEALED_PRIMITIVE_RAY_MULTIPLIER_INFORMATION_LOSS_COEFFICIENT_PRESERVING_SELECTOR_OPEN` | construct a multiplier-resolved coefficient-preserving collision measure with target mass, or timebox E14D-L and activate E14D-H |
 | 157 | `cycle-157-selection-mask-negative-spectral-v1` | `PROVED` | `SEALED_RAW_ZERO_DIAGONAL_GRAM_OBSTRUCTION_COEFFICIENT_NEGATIVE_SPECTRAL_ALIGNMENT_OPEN` | prove the actual negative spectral energy concentrates in a fixed labelled block family, or preserve a quantitative block-complexity inverse with the coefficient and anchor labels |
 | 156 | `cycle-156-divisor-comb-norm-majorant-v1` | `PROVED` | `SEALED_EXACT_DIVISOR_COMB_NORM_MAJORANT_ACTUAL_FINITE_PARTITION_OPEN` | construct or reject Cycle 155's actual exact fixed finite reason-labelled coefficient-escape partition; then Cycle 154 localizes a class with this now-fixed norm constant |
 | 154 | `cycle-154-coefficient-escape-localization-v1` | `PROVED` | `SEALED_CONDITIONAL_FINITE_LABELLED_ESCAPE_LOCALIZATION` | derive or reject the actual finite coefficient-escape partition and fixed comb-norm majorant; then analyze the selected class or prove O_kappa(1) positive fixed-phase transport |
@@ -47,12 +48,11 @@ Read the listed record and its linked preregistration, proof document, conventio
 | 152 | `cycle-152-bounded-multiplier-divisor-fan-v1-scope-correction` | `PROVED` | `SEALED_CONDITIONAL_BOUNDED_MULTIPLIER_DIVISOR_FAN_INVERSE` | route the actual Cycle-149--151 negative correlation into normalized strict-halo mass meeting the Cycle-152 hypotheses, or quantify the residual boundary, phase-changing, nonsmooth, or unbounded-tail escape mass |
 | 152 | `cycle-152-bounded-multiplier-divisor-fan-v1` | `PROVED` | `SEALED_BOUNDED_MULTIPLIER_DIVISOR_FAN_TAIL_INCIDENCE_OR_FAN_ANALYSIS_OPEN` | bound the labelled bounded-multiplier negative-tail divisor fan by spacing or order-three curvature, or classify a surviving fan with its actual coefficient and tail labels |
 | 151 | `cycle-151-sampled-comb-double-poisson-v1` | `PROVED` | `SEALED_GCD_WEIGHTED_NEGATIVE_TAIL_LOBE_OR_BOUNDARY_OPEN` | bound the gcd-weighted population of endpoint tails in negative transform lobes and treat denominators within a fixed power of Q |
-| 150 | `cycle-150-divisor-comb-sign-test-v1` | `PROVED` | `SEALED_HALO_BOUNDARY_DIVISOR_COMB_ESTIMATE_OPEN` | bound the halo and boundary-denominator negative divisor-comb projection, retaining phase-changing and nonsmooth payload separately |
 
 ## Useful queries
 
 ```sh
-python /root/projects/maph/tools/research_records.py --project research-records.json cycle 157
-python /root/projects/maph/tools/research_records.py --project research-records.json search "negative spectral"
+python /root/projects/maph/tools/research_records.py --project research-records.json cycle 159
+python /root/projects/maph/tools/research_records.py --project research-records.json search "colored four cycle"
 python /root/projects/maph/tools/research_records.py --project research-records.json check
 ```
