@@ -36,12 +36,6 @@ and commit only when the block's advance condition is resolved. Early seals
 are reserved for corrections, falsifiers, externally useful theorems, or
 irreversible strategy/gate changes.
 
-During an active cycle, use one canonical preregistration and one compact
-working-decision ledger only. Amend those files in place with a short
-amendment log; Git history supplies the revision trail. Do not create
-same-cycle `v2`/`v3` addenda for evolving exploratory engines. Separate
-versioned documents are for sealed-record corrections, not live work.
-
 When a sealed-interface cut is found, treat it as a design problem, not a
 terminal barrier: the next block must attempt a new payload-preserving bridge,
 invariant, lift, or discriminating countermodel before any saturation claim.
