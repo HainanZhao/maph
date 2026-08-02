@@ -5,10 +5,10 @@ Canonical evidence is the Git-tracked per-cycle artifact and its linked files; `
 
 ## Cold-start handoff
 
-- Project outcome (PROVED): Formal TCC identities are closed in dimensions 4, 5, 7, and 8 by preserved certificate suites. Dimension six is not proved or disproved; August 2026 Phase 0 is active on the missing operational interface and, conditionally, fusion continuity.
+- Project outcome (PROVED): Formal TCC identities are closed in dimensions 4, 5, 7, and 8 by preserved certificate suites. Dimension six is not proved or disproved. The forward project budget is B000/200; Cycle 163 is B001 and starts at the missing operational interface.
 - Why the active gate matters (PROVED): Cycle 157 found no defined map from 36 additive spectral coefficients to three ray-class logarithms or AFK cocycle values. The published Effective Stark Sweep paper supplies order-six and ramified-3 controls, while its RQ-000692 dossier identifies the exact Q(sqrt(21)) wall as index-6/wild-3; neither replaces the missing oriented interface.
-- Progress criterion (CONJECTURED): Phase 0 advances by proving a convention-pinned coefficient-to-cocycle/ray-log interface and exact prototype, or by deriving an oriented wild-local RQ-000692 engine that feeds that interface; it then closes fusion continuity or obtains a Class-A compact/finitely covered reduction. If Phase 0 does not close the theorem, Q4 receives exactly 100 substantive cycles.
-- Explicitly deferred: Raw or ordinary-gauge packet extensions, BF_6=>MFC_6 without the missing map, and any claim that dimension-six TCC is false remain barred. Paper III v1 is already published; September means a new version whose scope follows Phase 0. The conditional Q4 100-cycle campaign does not open before Phase 0 completes.
+- Progress criterion (CONJECTURED): The project advances by passing an exact convention-pinned coefficient-to-cocycle/ray-log prototype, deriving an oriented wild-local RQ-000692 engine that feeds that interface, closing fusion continuity, or obtaining a Class-A compact/finitely covered reduction. Exactly 200 substantive cycles are budgeted, with checkpoints at B040, B140, B180, and B200.
+- Explicitly deferred: Raw or ordinary-gauge packet extensions, BF_6=>MFC_6 without the missing map, and any claim that dimension-six TCC is false remain barred. Fusion continuity is downstream of interface closure. Workflow and archive-only records do not consume the 200-cycle research budget.
 
 ### Start here (from this project directory)
 
@@ -16,11 +16,11 @@ Canonical evidence is the Git-tracked per-cycle artifact and its linked files; `
 - `research rebuild`
 - `research check`
 - `research cycle 162`
+- `sed -n '1,300p' PLAN.md`
 - `python3 proof/build_cycle_162_workflow_migration_v1.py --check`
 - `python3 -m unittest tests.test_research_workflow_migration -v`
 - `sed -n '1,240p' docs/effective-stark-sweep-context-v1.md`
 - `sed -n '1,240p' docs/cycle-162-workflow-migration-v1.md`
-- `sed -n '1,260p' PLAN.md`
 
 Read the listed record and its linked preregistration, proof document, conventions, builder, and test before changing mathematics or code. Do not infer a theorem from this handoff; its claim tags and boundaries are in the canonical record.
 
