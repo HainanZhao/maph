@@ -1,0 +1,95 @@
+{
+  "artifact_id": "cycle-166-terminal-bank-entropy-v1",
+  "claim_boundary": "Conditional on a critical fixed-beta Cycle-63 census through Cycle 165, this forces one massed labelled terminal web. It does not bound the census or a web, prove E7/E9, density, or intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "packet_forced_fibre_exponent": "2/25",
+    "packet_state_exponent": "36/25",
+    "rank_or_plane_forced_fibre_exponent": "1/25",
+    "rank_or_plane_state_exponent": "37/25",
+    "registered_target": "151/100",
+    "strip_error_exponent": "-1",
+    "subcritical_packet_bound": "29/20",
+    "subcritical_rank_or_plane_bound": "149/100",
+    "transverse_increment_exponent": "-99/100"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/terminal_bank_entropy_v1.py",
+      "sha256": "5cf711d212b2b94daf73a140500a5625427ffed2866a84f0e428ebc0fa0d4a01"
+    },
+    "cycle165": {
+      "path": "artifacts/cycle-165-anchored-fibre-product-determinant-v1.json",
+      "sha256": "506035a1ecc01b50df74926cdffbe32fc081d4140d889f4cb34d9e9951ee5ee9"
+    },
+    "document": {
+      "path": "docs/cycle-166-terminal-bank-entropy-v1.md",
+      "sha256": "807a3cd3ff50b2258457ac322741c744270f5efdec561805d70736204830a4d7"
+    },
+    "preregistration": {
+      "path": "docs/cycle-166-terminal-bank-entropy-preregistration-v1.md",
+      "sha256": "677a57583b9c082a1ef5d52b72320fdb0a931b6eed49d13a5fe4eaa99b8c5aa8"
+    },
+    "sealing_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "tests": {
+      "path": "tests/test_cycle_166_terminal_bank_entropy_v1.py",
+      "sha256": "413e964615c3d585f5798c3899b24edb6a26f81aab276b141ba054f3dada0c59"
+    }
+  },
+  "massed_web_output": {
+    "epistemic_status": "PROVED",
+    "statement": "A rank-one or plane-induced shift state has X^(1/25-o(1)) parents, or a beta-seeded packet state has X^(2/25-o(1)) parents."
+  },
+  "prior_context": {
+    "cycle165_role": "provides the labelled rank-one/high-packet/low-plane terminal partition at X^(38/25-o(1))",
+    "epistemic_status": "PROVED"
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Control one massed web, or turn a seeded packet/shift web into a strict E7/E9 skeleton margin while retaining beta, divisibility, and h-range labels."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_166_terminal_bank_entropy_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_166_terminal_bank_entropy_v1.py",
+    "write_command": "python3 proof/build_cycle_166_terminal_bank_entropy_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_166_terminal_bank_entropy_v1.py",
+    "sha256": "e11f67e640b453017788924864ed25d175f6968c2250a3fc5d0652e9ce7a22e4"
+  },
+  "status": "SEALED_MASSED_BETA_ANCHORED_SHIFT_OR_SEEDED_PACKET_WEB",
+  "terminal_entropy_inverse": {
+    "boundary": "This conditional inverse forces one massed labelled web. It does not bound the original census, control the web, prove E7/E9, density, or intervals.",
+    "epistemic_status": "PROVED",
+    "near_shift": "the bounded exponential range forces B=r-s+t=0 in the near branch; reduction gives a labelled rational shift packet",
+    "packet_state": "canonical maximal depth is determined by (ell,a/q), so it adds no entropy coordinate",
+    "plane_shift": "R=D+N and S=D+N' obey |S-E_u R|=O(H/X), so fixed (u,R) has at most one S",
+    "state_ledger": {
+      "packet_forced_fibre_exponent": "2/25",
+      "packet_state_exponent": "36/25",
+      "rank_or_plane_forced_fibre_exponent": "1/25",
+      "rank_or_plane_state_exponent": "37/25",
+      "registered_target": "151/100",
+      "strip_error_exponent": "-1",
+      "subcritical_packet_bound": "29/20",
+      "subcritical_rank_or_plane_bound": "149/100",
+      "transverse_increment_exponent": "-99/100"
+    },
+    "transverse": "with no high projection fibre, each (u,r,s,t) has at most one ell and then t is unique"
+  }
+}

@@ -119,6 +119,11 @@ research db tables
   one, with multiplicity, to a rank-one resonance, a genuinely seeded
   high-content packet, or a rank-two low-content rational plane. It bounds no
   terminal bank and has no density or interval consequence yet.
+- `PROVED`: conditional on the same census, Cycle 166 converts one complete
+  terminal branch into a massed labelled web: rank-one/low-plane shift states
+  have `X^(1/25-o(1))` parents and beta-seeded packet states have
+  `X^(2/25-o(1))` parents. The result controls neither a web nor the census
+  and has no E7/E9, density, or interval consequence.
 
 ## Research-path graph
 
@@ -142,7 +147,7 @@ published reconstruction P0 [complete]
 | E14 | `UNSIGNED_VOLUME_LIMIT_REACHED` | Use only for inverse structure. |
 | E14D-L | `TIMEBOXED_AT_SCALE_LABEL_INFORMATION_LOSS` | Reopen only by restoring `t`/ordered atoms in a coefficient-preserving selector or proving a genuinely `t`-independent factorization. |
 | E14D-L mask cone | `RAW_ZERO_DIAGONAL_GRAM_OBSTRUCTION_BANKED_COEFFICIENT_NEGATIVE_SPECTRAL_ALIGNMENT_OPEN` | Concentrate actual negative spectral energy in a fixed labelled block family or prove a robust labelled block-complexity inverse. |
-| E14D-H | `ANCHORED_TERMINAL_BANK_BOUND_OPEN` | Cycle 165 sealed the fixed-beta four-anchor inverse. Bound its rank-one and low-content banks, or pass a genuinely seeded high-content branch through the E7/E9 skeleton. |
+| E14D-H | `MASSED_BETA_ANCHORED_SHIFT_OR_SEEDED_PACKET_WEB_BANKED` | Compile one retained web through a new beta-preserving bridge, or prove a labelled obstruction with all divisibility and range coordinates retained. |
 | E15 | `ANCHOR_REQUIRED` | Classify anchored almost-eigenfunctions. |
 | E16 | `EXACT_VALUATION_WEB_BANKED` | Compile relation-rich structure to a genuine transport seed. |
 | E11/E12 | `AUTOCORRELATION_ANOVA_OPEN` | Save `>3/50` in complete form or force enough recurrence. |
@@ -167,6 +172,10 @@ published reconstruction P0 [complete]
   web. The next step must compile one labelled output or preserve an
   admissible obstruction. A raw-target example without either output enlarges
   the inverse class.
+- `PROVED` Cycle 166: a complete Cycle-165 terminal branch has a massed
+  beta-anchored shift or seeded-packet web with the stated `1/25` or `2/25`
+  labelled-parent exponent. The next bridge must preserve beta, divisibility,
+  and `h`-range; an unanchored recurrence or deduplicated web is non-progress.
 - `CONJECTURED` E15/E16: classify anchored shifted-strip almost-eigenfunctions
   and turn high-codegree alias structure into a seed with an explicit phase
   error budget. A seedless target-sized anchored graph is itself structural
@@ -241,10 +250,13 @@ on a critical fixed-beta census, it gives `X^(38/25-o(1))` labelled
 four-anchor witnesses and an exhaustive rank-one/high-content/low-plane
 classification. Its first global
 compact-detector graph did not preserve the original fixed beta anchor and is
-therefore restricted to an unseeded diagnostic. The active replacement is the
-next terminal-bank task: use the actual exponential curve either to bound the
-rank-one and low-content banks or to turn a retained high-content seeded
-packet into an E7/E9 skeleton input with a strict margin.
+therefore restricted to an unseeded diagnostic. Cycle 166 is now sealed at
+`artifacts/cycle-166-terminal-bank-entropy-v1.json`: it converts every
+retained terminal branch into a massed beta-anchored shift or seeded-packet
+web, with labelled parent exponent `1/25` or `2/25`. Next authorized action:
+preregister and test a genuinely beta-preserving transport bridge (starting
+with the multiplicative beta-transport prototype), or bank a labelled
+divisibility/range obstruction. No E7/E9 or density claim is authorized.
 
 ## Crash recovery
 

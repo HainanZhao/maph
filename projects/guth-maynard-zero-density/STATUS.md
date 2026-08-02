@@ -6,8 +6,8 @@ Canonical evidence is the Git-tracked per-cycle artifact and its linked files; `
 ## Cold-start handoff
 
 - Project outcome (PROVED): No improved zero-density coefficient, prime-interval endpoint, or L-function-family transfer is proved. The checked baseline remains density coefficient 30/13, with uniform and almost-all interval endpoints 17/30 and 2/15.
-- Why the active gate matters (PROVED): Cycle 165 converts any critical fixed-beta Cycle-63 census into X^(38/25-o(1)) labelled four-anchor witnesses, each classified as a rank-one resonance, a genuinely seeded high-content packet, or a low-content rational plane. No terminal bank is yet bounded, so this is an inverse theorem rather than a census gain.
-- Progress criterion (CONJECTURED): Advance only by bounding the actual-curve rank-one and low-content labelled banks strictly below the critical census threshold, or by carrying a retained high-content branch through E7/E9 with a strict skeleton margin. An unanchored global-detector witness, a beta-free packet, or a count of distinct planes with discarded multiplicity does not advance the gate.
+- Why the active gate matters (PROVED): Cycles 165--166 convert any critical fixed-beta Cycle-63 census into a massed labelled terminal web: rank-one/low-plane exponential-shift states retain X^(1/25-o(1)) parents, while beta-seeded packet states retain X^(2/25-o(1)). The active bottleneck is to control or transport one such web without dropping beta, divisibility, or h-range labels.
+- Progress criterion (CONJECTURED): The next advance must either compile a massed web into a strict E7/E9 skeleton input with beta, divisibility, and h-range preserved, or prove a labelled obstruction to that compilation. A web count alone, an unanchored recurrence, a beta-free packet, or a deduplicated plane count is non-progress.
 - Explicitly deferred: Boundary denominators within a fixed power of Q are a separate branch; paper-stage hostile audit begins only after a manuscript theorem is frozen.
 
 ### Start here (from this project directory)
@@ -15,31 +15,32 @@ Canonical evidence is the Git-tracked per-cycle artifact and its linked files; `
 - `source ../../tools/dev-env.sh`
 - `research rebuild`
 - `research check`
-- `research cycle 165`
-- `python3 proof/build_cycle_165_anchored_fibre_product_determinant_v1.py --check`
-- `cat docs/cycle-165-seed-factorization-v1.md`
-- `cat docs/cycle-165-seed-factorization-preregistration-v1.md`
+- `research cycle 166`
+- `python3 proof/build_cycle_166_terminal_bank_entropy_v1.py --check`
+- `cat docs/cycle-166-terminal-bank-entropy-v1.md`
+- `cat discovery/cycle-166-terminal-bank-entropy-working-v1.md`
 
 Read the listed record and its linked preregistration, proof document, conventions, builder, and test before changing mathematics or code. Do not infer a theorem from this handoff; its claim tags and boundaries are in the canonical record.
 
 ## Index coverage
 
-- Cycle artifact files found in the working tree: 263
-- Cycle artifacts present in the Git index: 262
-- Artifacts by top-level epistemic status: CONJECTURED=6, LEGACY_UNTAGGED=10, OBSERVED=56, PROVED=191
-- Recursively tagged fields indexed for search (not independent claims): 23551
+- Cycle artifact files found in the working tree: 264
+- Cycle artifacts present in the Git index: 263
+- Artifacts by top-level epistemic status: CONJECTURED=6, LEGACY_UNTAGGED=10, OBSERVED=56, PROVED=192
+- Recursively tagged fields indexed for search (not independent claims): 23557
 
 ## Current gate
 
-- Latest record: `cycle-165-anchored-fibre-product-determinant-v1` (Cycle 165, `PROVED`)
-- Status: `SEALED_BETA_ANCHORED_FOUR_ANCHOR_PACKET_OR_RESONANCE_PLANE_CLASSIFICATION`
-- Boundary: Conditional on a critical fixed-beta Cycle-63 census, this classifies labelled four-anchor witnesses. It does not bound the census or terminal banks and proves no transport, density, or interval gain.
-- Next mathematical target: Bound every terminal bank strictly below the Cycle-63 critical census threshold, or compile a retained high-content packet into the E7/E9 skeleton with a strict margin.
+- Latest record: `cycle-166-terminal-bank-entropy-v1` (Cycle 166, `PROVED`)
+- Status: `SEALED_MASSED_BETA_ANCHORED_SHIFT_OR_SEEDED_PACKET_WEB`
+- Boundary: Conditional on a critical fixed-beta Cycle-63 census through Cycle 165, this forces one massed labelled terminal web. It does not bound the census or a web, prove E7/E9, density, or intervals.
+- Next mathematical target: Control one massed web, or turn a seeded packet/shift web into a strict E7/E9 skeleton margin while retaining beta, divisibility, and h-range labels.
 
 ## Recent sealed records
 
 | Cycle | Record | Tag | Gate | Next target |
 |---:|---|---|---|---|
+| 166 | `cycle-166-terminal-bank-entropy-v1` | `PROVED` | `SEALED_MASSED_BETA_ANCHORED_SHIFT_OR_SEEDED_PACKET_WEB` | Control one massed web, or turn a seeded packet/shift web into a strict E7/E9 skeleton margin while retaining beta, divisibility, and h-range labels. |
 | 165 | `cycle-165-anchored-fibre-product-determinant-v1` | `PROVED` | `SEALED_BETA_ANCHORED_FOUR_ANCHOR_PACKET_OR_RESONANCE_PLANE_CLASSIFICATION` | Bound every terminal bank strictly below the Cycle-63 critical census threshold, or compile a retained high-content packet into the E7/E9 skeleton with a strict margin. |
 | 164 | `cycle-164-wrap-valuation-sidon-v1` | `PROVED` | `SEALED_WRAP_VALUATION_WEB_OR_WEIGHTED_SIDON_CLASSIFICATION` | compile a valuation web through E16 or bound the weighted-Sidon and wrap-complexity alternatives |
 | 163 | `cycle-163-star-wrap-fiber-v1` | `PROVED` | `SEALED_STAR_WRAP_COMPLEXITY_OR_COMMON_WRAP_LOG_WEB` | compile the common-wrap log web or bound the labelled wrap-complexity alternative |
@@ -47,12 +48,11 @@ Read the listed record and its linked preregistration, proof document, conventio
 | 161 | `cycle-161-high-cell-refinement-v1` | `PROVED` | `SEALED_PHASE_ALIGNED_FOUR_CYCLE_OR_LABELLED_STAR_DEGENERACY_BANKED` | compile the actual labelled positive-real four-cycle population to a moment gain, or classify the labelled star as a rational web or admissible obstruction |
 | 160 | `cycle-160-colored-four-cycle-condenser-v1` | `PROVED` | `SEALED_COEFFICIENT_WEIGHTED_OFF_DIAGONAL_CONDENSER_HIGH_CODEGREE_PAIR_CELL_OPEN` | turn a labelled high effective-codegree pair-difference cell into a phase-aligned colored four-cycle or rational web, or exhibit an admissible condenser falsifier |
 | 159 | `cycle-159-coefficient-selector-information-loss-v1` | `PROVED` | `SEALED_PRIMITIVE_RAY_MULTIPLIER_INFORMATION_LOSS_COEFFICIENT_PRESERVING_SELECTOR_OPEN` | construct a multiplier-resolved coefficient-preserving collision measure with target mass, or timebox E14D-L and activate E14D-H |
-| 157 | `cycle-157-selection-mask-negative-spectral-v1` | `PROVED` | `SEALED_RAW_ZERO_DIAGONAL_GRAM_OBSTRUCTION_COEFFICIENT_NEGATIVE_SPECTRAL_ALIGNMENT_OPEN` | prove the actual negative spectral energy concentrates in a fixed labelled block family, or preserve a quantitative block-complexity inverse with the coefficient and anchor labels |
 
 ## Useful queries
 
 ```sh
-python /root/projects/maph/tools/research_records.py --project research-records.json cycle 165
+python /root/projects/maph/tools/research_records.py --project research-records.json cycle 166
 python /root/projects/maph/tools/research_records.py --project research-records.json search "seeded packet"
 python /root/projects/maph/tools/research_records.py --project research-records.json check
 ```
