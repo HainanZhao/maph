@@ -1,0 +1,127 @@
+{
+  "artifact_id": "cycle-167-bilinear-convolution-v1",
+  "budget_ordinal": "B005",
+  "claim_boundary": "This exact finite result falsifies only translation-invariant bilinear C6-twisted convolutions on the sealed Cycle-166 torsor. It does not rule out nonlinear, non-translation-invariant, higher-fibre, or analytic coefficient operations.",
+  "cycle": 167,
+  "epistemic_status": "PROVED",
+  "exact_prototype": {
+    "basis_pairs_per_matrix": 1296,
+    "bilinear_convolution_exists": false,
+    "compatible_matrix_count": 0,
+    "first_graph_failure": {
+      "actual_product_label": 0,
+      "expected_graph_label": 1,
+      "left": [
+        0,
+        1
+      ],
+      "matrix": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "right": [
+        0,
+        3
+      ]
+    },
+    "first_transport_failure": {
+      "actual_product_of_transports_label": 2,
+      "expected_transported_product_label": 4,
+      "left": [
+        0,
+        1
+      ],
+      "matrix": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "right": [
+        1,
+        0
+      ]
+    },
+    "graph_identity_checks": 1679616,
+    "graph_passing_matrix_count": 0,
+    "matrices_checked": 1296,
+    "source_output": "discovery/cycle-167-bilinear-convolution-prototype-v1.json",
+    "transport_identity_checks": 1679616,
+    "transport_passing_matrix_count": 0
+  },
+  "frozen_hashes": {
+    "census_output": {
+      "path": "discovery/cycle-167-bilinear-convolution-prototype-v1.json",
+      "sha256": "fa8115bca61b5cf18d01d37bef2f2ba3cebfbd846b7994d18dbd0a64702ca69f"
+    },
+    "census_replay": {
+      "path": "proof/verify_cycle_167_bilinear_convolution.py",
+      "sha256": "e38dd4011edb87a8c8bd4e5a449b35ce2b873a2d5f798f3f1e5f528c8127b48e"
+    },
+    "cycle_166_torsor": {
+      "path": "artifacts/cycle-166-fibre-torsor-v1.json",
+      "sha256": "cd0cf07f8ded432a7f53c18126d26b5054b3fddadb530375483c7adbc753991e"
+    },
+    "preregistration": {
+      "path": "docs/cycle-167-bilinear-convolution-preregistration-v1.md",
+      "sha256": "6cbd1c131dcb883a5b4b2ce1cdd304f9de4aa7a2bb20894075f6536ca03c057f"
+    },
+    "project_instructions": {
+      "path": "AGENTS.md",
+      "sha256": "363495f0dbbe93e244b460c8eafb13247a8fb1f41be24f94c037ae9f6400c6f2"
+    },
+    "sealing_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    },
+    "test": {
+      "path": "tests/test_cycle_167_bilinear_convolution.py",
+      "sha256": "4af470dc81cd3b39d819953b9de51d792b6f6e0ec1c67cd095e7a35fc3ebb3a5"
+    }
+  },
+  "gate_outcome": {
+    "d6_interface": "BILINEAR_TWISTED_CONVOLUTION_FALSIFIED_NONLINEAR_ENGINE_REQUIRED",
+    "disallowed_pseudo_progress": [
+      "choosing the graph coboundary after inspecting its defect",
+      "calling this scoped falsifier an AFK or TCC no-go",
+      "repeating the same bilinear census under changed notation"
+    ],
+    "falsified_operation_class": "translation-invariant bilinear C6-twisted convolutions on the sealed torsor",
+    "remaining_bottleneck": "A genuinely new, outcome-blind nonlinear or other non-bilinear finite operation must be independently specified before it can be tested."
+  },
+  "outcome": {
+    "epistemic_status": "PROVED",
+    "statement": "No one of the 1,296 bilinear C6 twists makes the frozen torsor graph multiplicative or its Shintani transport an algebra automorphism; hence none meets both conditions."
+  },
+  "preregistration_preflight": {
+    "cycle": 167,
+    "manifest_sha256": "6cbd1c131dcb883a5b4b2ce1cdd304f9de4aa7a2bb20894075f6536ca03c057f",
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Cycle 168/B006: preregister an independent constrained nonlinear 2-cocycle or another genuinely new outcome-blind finite operation family, with an exact multiplicativity-or-falsifier test."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_167_bilinear_convolution_v1.py --check",
+    "preflight_command": "research prereg check docs/cycle-167-bilinear-convolution-preregistration-v1.md --expected-cycle 167 --allow-head-drift",
+    "prototype_command": "python3 proof/verify_cycle_167_bilinear_convolution.py --output discovery/cycle-167-bilinear-convolution-prototype-v1.json",
+    "test_command": "python3 -m unittest tests.test_cycle_167_bilinear_convolution -v",
+    "write_command": "python3 proof/build_cycle_167_bilinear_convolution_v1.py --write"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_167_bilinear_convolution_v1.py",
+    "sha256": "cc096db69790c3b9e777a2cf11141316f7a517645c52581ab03eb81fb282e8f9"
+  },
+  "status": "SEALED_BILINEAR_TWISTED_CONVOLUTION_FALSIFIED"
+}
