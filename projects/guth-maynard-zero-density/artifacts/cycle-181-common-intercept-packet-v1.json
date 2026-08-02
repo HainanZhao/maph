@@ -1,0 +1,214 @@
+{
+  "artifact_id": "cycle-181-common-intercept-packet-v1",
+  "claim_boundary": "This proves exact common-intercept compatibility and a large stable common-intercept packet under the Cycle-180 critical light branch. It proves no in-packet upper bound, aggregate recurrence, density gain, or interval result.",
+  "common_intercept_exactification": {
+    "boundary": "This is an exact common-intercept packet reduction. It proves no upper bound inside a packet, recurrence, density gain, or interval result.",
+    "epistemic_status": "PROVED",
+    "intercept_exactification": "For every retained rectangle, I=e*q-d*q' is an integer of absolute value at most 10*C*H^2/X; below the frozen cutoff it vanishes, so q/d=q'/e.",
+    "packet_consequence": "A stable rectangle population W partitions into at most H common-intercept packets, so one packet has at least ceil(W/H) rectangles while retaining both pairs, labels, residuals, product, and slope determinant.",
+    "packet_partition": "Every stable rectangle is indexed by its reduced common intercept rho=p/v, with v dividing both pair gaps and |p+v*beta|<=5*C*H/X. There are at most H eligible rho.",
+    "samples": {
+      "eligible_intercepts": 1,
+      "packet_lower_bound": 33,
+      "rectangle": {
+        "common_intercept": {
+          "denominator": 2,
+          "numerator": -1,
+          "value": "-1/2"
+        },
+        "intercept_determinant": 0,
+        "labels": {
+          "absolute_gap": 1,
+          "left": 1,
+          "right": 2
+        },
+        "left_pair": {
+          "gap": 2,
+          "intercept_error": "0",
+          "intercept_error_bound": "11/25000",
+          "intercept_numerator": -1,
+          "numerator_gap": 1,
+          "pair": {
+            "h1": 21,
+            "h2": 23,
+            "j1": 10,
+            "j2": 11
+          },
+          "residuals": {
+            "first": "0",
+            "second": "0"
+          },
+          "slope_error": "0",
+          "uniform_intercept_error_bound": "1/1000"
+        },
+        "phase_state": {
+          "alpha_left": "1/2",
+          "alpha_right": "1/4",
+          "beta": "1/2",
+          "height": 20,
+          "strip_constant": 1,
+          "x": 100000
+        },
+        "product": 8,
+        "reduced_beta_error": "0",
+        "right_pair": {
+          "gap": 4,
+          "intercept_error": "0",
+          "intercept_error_bound": "3/6250",
+          "intercept_numerator": -2,
+          "numerator_gap": 1,
+          "pair": {
+            "h1": 22,
+            "h2": 26,
+            "j1": 5,
+            "j2": 6
+          },
+          "residuals": {
+            "first": "0",
+            "second": "0"
+          },
+          "slope_error": "0",
+          "uniform_intercept_error_bound": "1/1000"
+        },
+        "slope_determinant": 2,
+        "stable_product_cutoff": 8
+      }
+    }
+  },
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "boundary": "This is an exact common-intercept packet reduction. It proves no upper bound inside a packet, recurrence, density gain, or interval result.",
+    "intercept_exactification": "For every retained rectangle, I=e*q-d*q' is an integer of absolute value at most 10*C*H^2/X; below the frozen cutoff it vanishes, so q/d=q'/e.",
+    "packet_consequence": "A stable rectangle population W partitions into at most H common-intercept packets, so one packet has at least ceil(W/H) rectangles while retaining both pairs, labels, residuals, product, and slope determinant.",
+    "packet_partition": "Every stable rectangle is indexed by its reduced common intercept rho=p/v, with v dividing both pair gaps and |p+v*beta|<=5*C*H/X. There are at most H eligible rho.",
+    "samples": {
+      "eligible_intercepts": 1,
+      "packet_lower_bound": 33,
+      "rectangle": {
+        "common_intercept": {
+          "denominator": 2,
+          "numerator": -1,
+          "value": "-1/2"
+        },
+        "intercept_determinant": 0,
+        "labels": {
+          "absolute_gap": 1,
+          "left": 1,
+          "right": 2
+        },
+        "left_pair": {
+          "gap": 2,
+          "intercept_error": "0",
+          "intercept_error_bound": "11/25000",
+          "intercept_numerator": -1,
+          "numerator_gap": 1,
+          "pair": {
+            "h1": 21,
+            "h2": 23,
+            "j1": 10,
+            "j2": 11
+          },
+          "residuals": {
+            "first": "0",
+            "second": "0"
+          },
+          "slope_error": "0",
+          "uniform_intercept_error_bound": "1/1000"
+        },
+        "phase_state": {
+          "alpha_left": "1/2",
+          "alpha_right": "1/4",
+          "beta": "1/2",
+          "height": 20,
+          "strip_constant": 1,
+          "x": 100000
+        },
+        "product": 8,
+        "reduced_beta_error": "0",
+        "right_pair": {
+          "gap": 4,
+          "intercept_error": "0",
+          "intercept_error_bound": "3/6250",
+          "intercept_numerator": -2,
+          "numerator_gap": 1,
+          "pair": {
+            "h1": 22,
+            "h2": 26,
+            "j1": 5,
+            "j2": 6
+          },
+          "residuals": {
+            "first": "0",
+            "second": "0"
+          },
+          "slope_error": "0",
+          "uniform_intercept_error_bound": "1/1000"
+        },
+        "slope_determinant": 2,
+        "stable_product_cutoff": 8
+      }
+    }
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/common_intercept_packet_v1.py",
+      "sha256": "0834c169168e345e3307926e31ab0ac0ee5b7bae3d721ef0ccddc389bec65333"
+    },
+    "cycle180": {
+      "path": "artifacts/cycle-180-cross-label-pair-determinant-v1.json",
+      "sha256": "cdf34df41021fd1b0eab05f34202b23ea3fec96f010fbf3f0467328084b0d91a"
+    },
+    "document": {
+      "path": "docs/cycle-181-common-intercept-packet-v1.md",
+      "sha256": "566a21ff7bc20af6979d9967b42cb993de86e3ab5bf560a1d6f92127238927b9"
+    },
+    "preregistration": {
+      "path": "docs/cycle-181-common-intercept-packet-preregistration-v1.md",
+      "sha256": "936a5fecb9ac0d62afc26681d6f30186f2336720c047ad3ae69f0c29e2e8cd41"
+    },
+    "sealing_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "tests": {
+      "path": "tests/test_cycle_181_common_intercept_packet_v1.py",
+      "sha256": "13b7d06a3e11f135039ca187d410bc6adcefae19d3bb16d88725d8f4c4ddbd6f"
+    }
+  },
+  "mentor_checkpoint": {
+    "known_flaw": "The first-row height factor changes the exactification constants from the initial 3/6 proposal to 5/10; the corrected cutoff is frozen in the preregistration.",
+    "next_action": "Analyze the X^(21/25) common-intercept packet through v|d,e, retained slopes, and base-row congruences, or construct its actual saturator.",
+    "recommendation": "APPROVE SEAL",
+    "resolution": "The height ledger explicitly uses h1,h2,s1,s2 in [H,2H], giving the safe 10*C*H^2/X cutoff. Exactification is global; only the packet pigeonhole is applied after the Cycle-180 stable split."
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Prove a coefficient-preserving upper bound inside a fixed common-intercept stable packet, or construct a nonrational actual saturator for such a packet. A packet decomposition alone is not recurrence, density, or interval progress."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_181_common_intercept_packet_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_181_common_intercept_packet_v1.py",
+    "write_command": "python3 proof/build_cycle_181_common_intercept_packet_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_181_common_intercept_packet_v1.py",
+    "sha256": "e6eff2a66a33bb23bac78889f7f0f949fb64ee772c7bbefb742d9b5563028373"
+  },
+  "stable_packet_reduction": {
+    "epistemic_status": "PROVED",
+    "statement": "When 10*C*H^2/X<1 and 5*C*H/X<1/2, every Cycle-180 stable rectangle has a shared reduced intercept rho=p/v with v dividing both pair gaps and |p+v*beta|<=5*C*H/X. Thus at most H intercept packets occur and a stable population >=X^(32/25)/64 yields one complete labelled packet >=X^(21/25)/64."
+  },
+  "status": "SEALED_COMMON_INTERCEPT_EXACTIFICATION_AND_STABLE_PACKET_REDUCTION"
+}
