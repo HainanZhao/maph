@@ -1,0 +1,14 @@
+{
+  "schema": "research-record-profile-v1",
+  "artifact_glob": "artifacts/cycle-*.json",
+  "database_path": ".research/index.duckdb",
+  "status_path": "STATUS.md",
+  "legacy_exceptions_path": "research_index_legacy_exceptions.json",
+  "cycle_pattern": "^cycle-(\\d+)(?:-|$)",
+  "status_title": "Research status (generated)",
+  "query_examples": [
+    "python /root/projects/maph/tools/research_records.py --project research-records.json cycle 151",
+    "python /root/projects/maph/tools/research_records.py --project research-records.json search negative-tail",
+    "python /root/projects/maph/tools/research_records.py --project research-records.json check"
+  ]
+}
