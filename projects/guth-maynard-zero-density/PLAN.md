@@ -134,6 +134,9 @@ research db tables
   calculus and an exhaustive typed nonjoin partition. Separate edge and
   packet masses do not imply overlap; direct affine loops have trivial
   holonomy and cannot replace a local packet.
+- `PROVED`: Cycle 169 shows that common source provenance and prescribed total
+  marginal masses alone cannot force common target labels: the mixed energy is
+  a two-source-copy form and admits a sharp two-label anticorrelation model.
 
 ## Research-path graph
 
@@ -157,7 +160,7 @@ published reconstruction P0 [complete]
 | E14 | `UNSIGNED_VOLUME_LIMIT_REACHED` | Use only for inverse structure. |
 | E14D-L | `TIMEBOXED_AT_SCALE_LABEL_INFORMATION_LOSS` | Reopen only by restoring `t`/ordered atoms in a coefficient-preserving selector or proving a genuinely `t`-independent factorization. |
 | E14D-L mask cone | `RAW_ZERO_DIAGONAL_GRAM_OBSTRUCTION_BANKED_COEFFICIENT_NEGATIVE_SPECTRAL_ALIGNMENT_OPEN` | Concentrate actual negative spectral energy in a fixed labelled block family or prove a robust labelled block-complexity inverse. |
-| E14D-H | `EDGE_PACKET_OVERLAP_OR_TYPED_SUPPORT_SEPARATION_OPEN` | Prove a label-faithful positive lower bound for the compatibility form, or extract a quantitative support-separation inverse from its failure. |
+| E14D-H | `GEOMETRIC_COUPLING_OR_TYPED_SUPPORT_SEPARATION_OPEN` | Use an actual exponential/fibre invariant to force compatible mass, or extract a quantitative labelled separator from its geometric failure. |
 | E15 | `ANCHOR_REQUIRED` | Classify anchored almost-eigenfunctions. |
 | E16 | `EXACT_VALUATION_WEB_BANKED` | Compile relation-rich structure to a genuine transport seed. |
 | E11/E12 | `AUTOCORRELATION_ANOVA_OPEN` | Save `>3/50` in complete form or force enough recurrence. |
@@ -194,6 +197,9 @@ published reconstruction P0 [complete]
   a diagonal denominator/depth match; its five typed nonjoin cuts are
   exhaustive. The closed-loop alternative has trivial holonomy. The remaining
   task is actual overlap or a quantitative labelled separation inverse.
+- `PROVED` Cycle 169: common source and total marginal masses cannot supply
+  that overlap; a two-label anticorrelation model is sharp. The next engine
+  must exploit actual exponential/fibre geometry or a typed separator.
 - `CONJECTURED` E15/E16: classify anchored shifted-strip almost-eigenfunctions
   and turn high-codegree alias structure into a seed with an explicit phase
   error budget. A seedless target-sized anchored graph is itself structural
@@ -281,7 +287,11 @@ Cycle 168 is sealed at
 `artifacts/cycle-168-edge-packet-join-v1.json`: it proves the compatibility
 calculus, but not overlap. Next authorized action: preregister a quantitative
 compatibility-form lower-bound engine or a labelled support-separation inverse
-for the actual banks. No E7/E9 or density claim is authorized.
+for the actual banks. Cycle 169 is sealed at
+`artifacts/cycle-169-source-coupled-label-energy-v1.json`: common provenance
+and total masses do not force label energy. Next authorized action: select a
+genuinely exponential/fibre geometric coupling invariant or a quantitative
+typed-separation engine. No E7/E9 or density claim is authorized.
 
 ## Crash recovery
 
