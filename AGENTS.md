@@ -118,6 +118,17 @@ and commit once per completed research block—not after each lemma. An early
 seal is justified only by a correction, falsifier, externally useful result,
 or an irreversible strategy/gate decision. Batch routine checks locally.
 
+### One live document set per cycle
+
+While a cycle is in progress, keep exactly one canonical preregistration and
+one compact working-decision ledger for that cycle. Amend the canonical files
+in place under a short dated/amendment log; do not create `v2`, `v3`, or other
+same-cycle addendum documents merely because an engine, formula, or gate
+evolves. Git history preserves intermediate states. Create a new correction
+or versioned document only after a cycle has sealed, or when an immutable
+certificate actually needs correction. The working ledger records rejected
+routes and compact reasons, not full derivational scratch.
+
 ### Missing-bridge research rule
 
 An absent theorem, constructor, or interface is not a terminal research
