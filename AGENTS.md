@@ -118,6 +118,16 @@ and commit once per completed research block—not after each lemma. An early
 seal is justified only by a correction, falsifier, externally useful result,
 or an irreversible strategy/gate decision. Batch routine checks locally.
 
+### Missing-bridge research rule
+
+An absent theorem, constructor, or interface is not a terminal research
+answer. Treat it as a named design problem. Before promoting a scoped
+interface cut or saturation barrier, attempt at least one genuinely new
+engine: a new invariant, lift, duality, completion, local-to-global
+principle, inverse theorem, or a discriminating countermodel. State what the
+new engine would have to preserve and what evidence would falsify it. Existing
+artifacts are constraints and launch points, not a ceiling on invention.
+
 ## 1a. Critical-decision companion
 
 Every research session in this repository starts one companion at the same

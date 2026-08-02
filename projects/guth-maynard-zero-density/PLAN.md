@@ -36,6 +36,10 @@ and commit only when the block's advance condition is resolved. Early seals
 are reserved for corrections, falsifiers, externally useful theorems, or
 irreversible strategy/gate changes.
 
+When a sealed-interface cut is found, treat it as a design problem, not a
+terminal barrier: the next block must attempt a new payload-preserving bridge,
+invariant, lift, or discriminating countermodel before any saturation claim.
+
 Rebuild and inspect the local index:
 
 ```sh
