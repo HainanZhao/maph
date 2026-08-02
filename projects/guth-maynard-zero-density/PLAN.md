@@ -41,16 +41,18 @@ research db tables
 
 ## Critical-decision companion
 
-Every substantive Cycle 152+ branch starts its mentor companion at the same
-time as the primary worker, before calculations or path selection. Where a
-more capable model is available, use it; otherwise use an independent agent
-with a fresh brief. The companion is not a second proof engine and does not
-run a hostile audit. Its narrow job is to track the preregistered checkpoint:
-frozen premise, alternatives, tagged decisive evidence, recommendation, and
-unexamined assumptions. Consult it before changing this plan, choosing or
-dropping an engine, revising a gate/advance criterion, preregistering a cycle,
-or deciding the next authorized action. Put its recommendation and the
-primary worker's adopt/reject reason in that cycle's readable decision record.
+Every research session for this project starts one mentor companion alongside
+the primary worker, before calculations or path selection. It remains the
+same session companion across all Cycle 152+ branches and decisions; do not
+replace it with a fresh per-cycle reviewer. Where a more capable model is
+available, use it; otherwise use an independent agent with a fresh brief. The
+companion is not a second proof engine and does not run a hostile audit. Its
+narrow job is to track the preregistered checkpoint: frozen premise,
+alternatives, tagged decisive evidence, recommendation, and unexamined
+assumptions. Consult it before changing this plan, choosing or dropping an
+engine, revising a gate/advance criterion, preregistering a cycle, or deciding
+the next authorized action. Put its recommendation and the primary worker's
+adopt/reject reason in the relevant readable session/cycle decision record.
 Routine reversible exploration may proceed without waiting for it.
 
 ## Frozen baseline
