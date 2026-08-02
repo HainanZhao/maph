@@ -1,0 +1,80 @@
+{
+  "artifact_id": "cycle-135-tail-coupled-transition-v1",
+  "claim_boundary": "This artifact proves only that tail-only projection telescopes to the Cycle-132 discrepancy and derives the exact paired-edge target. It proves no paired-tail bound, transition concentration, seed, endpoint, moment, density, or prime intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/tail_coupled_transition_v1.py",
+      "sha256": "be48a9104a056f9dd062c59051cc6bdc70e3b604e4f4641ee3b2cc58bdb90200"
+    },
+    "cycle132": {
+      "path": "artifacts/cycle-132-unimodular-endpoint-lift-v1.json",
+      "sha256": "aeab0475962728918ab08c2b78e87dcef4bed7840c57e376557bcdcdfb434cee"
+    },
+    "cycle134": {
+      "path": "artifacts/cycle-134-transition-entropy-v1.json",
+      "sha256": "02141cd02825052f2de39cb1edff0499f9d073c1f7c00e748eaa7d3f98722202"
+    },
+    "document": {
+      "path": "docs/cycle-135-tail-coupled-transition-v1.md",
+      "sha256": "029232eff6347070355a3377f090b45321899029dccff2fec333dce360f99a14"
+    },
+    "preregistration": {
+      "path": "docs/cycle-135-tail-coupled-transition-preregistration-v1.md",
+      "sha256": "adc3b14a3ccdc54c77135c53305169ad1062183e65ab6b8c565d3b0041eef3dd"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_135_tail_coupled_transition_v1.py",
+      "sha256": "a15c0bb9a2fcf0d9102608a693807dcde6cc19ebd31c91ee2e7a22501d596dd2"
+    }
+  },
+  "full_endpoint_frequency_ledger": {
+    "epistemic_status": "PROVED",
+    "normalized_residual_scale": "73/75",
+    "raw_residual_frequency": "32/25",
+    "tail_frequency": "23/75"
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "prove the fixed-difference paired-tail diagonal second moment at L=S/N or invert its excess into a phase-anchored chain"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_135_tail_coupled_transition_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_135_tail_coupled_transition_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_135_tail_coupled_transition_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_135_tail_coupled_transition_v1.py",
+    "sha256": "8c888b2bcd2c3f3005a85fad78087838973aa4a95c22eccbec27749bbc1e08e8"
+  },
+  "status": "SEALED_TAIL_MARGINAL_SELF_DUAL_PAIRED_EDGE_NORM_OPEN",
+  "tail_coupled_transition_theorem": {
+    "boundary": "the paired-tail norm is not proved; no transition concentration, seed, endpoint, moment, density, or prime-interval theorem follows",
+    "edge_identity": "for b=a+d, x_b-g^d x_a equals g^d*s_a/[q_a(R_a+theta_a q_a)] minus s_b/[q_b(R_b+theta_b q_b)] exactly",
+    "epistemic_status": "PROVED",
+    "frequency_scale": "after normalizing the edge residual by NS, theta changes it on scale N/S; resolving the tail requires frequency L=S/N, equivalently raw residual frequency S^2",
+    "marginal_no_gain": "Fourier projection in theta alone therefore cancels only internal shear boundaries and reproduces the Cycle-132 logarithmic-center discrepancy; it yields no independent transition-entropy saving",
+    "paired_norm": "the next proof target is the fixed-difference diagonal estimate sum_{|ell|<=L}|sum_{a in E_d} w_a e(ell Omega_d(a))|^2 << L|E_d|X^epsilon, where Omega_d=NS(x_{a+d}-g^d x_a) and L=S/N",
+    "tail_tiling": "with Y=1/(q|alpha-p/q|) and R=r+tq, the conditions R<Y<R+q tile exactly over consecutive t; a complete shear block is one interval with only its two outer boundaries"
+  }
+}

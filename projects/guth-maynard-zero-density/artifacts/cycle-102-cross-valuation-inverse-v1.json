@@ -1,0 +1,74 @@
+{
+  "artifact_id": "cycle-102-cross-valuation-inverse-v1",
+  "claim_boundary": "This artifact proves an exact coprime-core parametrization and a weighted side/prime-power concentration threshold. It proves no exceptional-mass bound, phase cancellation, common anchor, weak/simple-root estimate, alias moment, density gain, or interval gain.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "e16_interface": {
+    "epistemic_status": "PROVED",
+    "statement": "each exceptional split retains side, full prime powers, both dyadic cross-gcd scales, distinct w, and an unchanged stationary/anchor payload"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/cross_valuation_inverse_v1.py",
+      "sha256": "4d29bc48686c062422547a88902ee0d27104e37ca88103cab275bc7b697d13db"
+    },
+    "cycle101": {
+      "path": "artifacts/cycle-101-generic-critical-packing-v1.json",
+      "sha256": "3c4e6a34b839df06028233e127a01001e094dc16665c833f43ec370642d3c4d1"
+    },
+    "discovery_candidate": {
+      "path": "discovery/cycle-102-cross-valuation-candidate-v1.md",
+      "sha256": "cfafb207998e9d66962ef9c2510c85fe69ed511bcb853201c991bced2df4094e"
+    },
+    "document": {
+      "path": "docs/cycle-102-cross-valuation-inverse-v1.md",
+      "sha256": "c3646c142dd6ab3a1bc668ca8b91cb039e12a69ac6ca5fa5f63cb2f99386f6cb"
+    },
+    "preregistration": {
+      "path": "docs/cycle-102-cross-valuation-preregistration-v1.md",
+      "sha256": "a2060fdbf763c3c14bb7dacc7aca20b3cd1b9ea96eecb6f2b889e5f5c0fb3e2c"
+    },
+    "tests": {
+      "path": "tests/test_cycle_102_cross_valuation_inverse_v1.py",
+      "sha256": "60245b9b7eaffc9cd2193a782793af9d6e366515905f7bd866b6a552bb65313a"
+    }
+  },
+  "inverse_atlas": {
+    "boundary": "the conclusion needs total nonnegative mass E and a per-w cap A; it proves no phase cancellation or common anchor",
+    "coprimality": "(s2,R2)=(t2,N2)=(x,y)=(y*N2,x*R2)=1",
+    "core": "s1=x*s2, R=x*R2, t1=y*t2, N=y*N2 gives B0=t2*R2, C0=s2*N2 and W=g0*(x*s2+y*t2)",
+    "epistemic_status": "PROVED",
+    "refined_concentration": "retaining both dyadic cross-gcd indices gives support at least E/(2*P(2M)*L_M^2*A)",
+    "unrefined_concentration": "some side/full-prime-power colour supports at least E/(2*P(2M)*A) distinct w",
+    "valuation_signature": "q|x divides s/g0 and R but not t/g0 or N; q|y has the side-reversed signature"
+  },
+  "prior_context": {
+    "cycle101_role": "supply the generic aggregate and isolate cross-valuation exceptions",
+    "epistemic_status": "PROVED"
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "obtain a strong per-w mass cap or phase cancellation, then compile any threshold-exceeding colour class into a genuine anchored seed"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_102_cross_valuation_inverse_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_102_cross_valuation_inverse_v1.py",
+    "write_command": "python3 proof/build_cycle_102_cross_valuation_inverse_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_102_cross_valuation_inverse_v1.py",
+    "sha256": "b59de593dc611df2048883aae82e025572b099b393d2e1a384558e97c446666a"
+  },
+  "status": "SEALED_EXACT_CROSS_VALUATION_CORE_CONDITIONAL_COLOUR_CONCENTRATION"
+}

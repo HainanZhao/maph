@@ -1,0 +1,85 @@
+{
+  "artifact_id": "cycle-139-multiplier-curvature-v1",
+  "claim_boundary": "This artifact extends only low-edge exceptional-average cells through rho<17/90-2mu/3. It proves no high-edge or all-multiplicity extension, full paired norm, endpoint, moment, density, or prime intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/multiplier_curvature_v1.py",
+      "sha256": "a7e9ce507bd086bc59a1e7c60c50ec915ea4f2c7680deac018c4f24028fc1188"
+    },
+    "cycle131": {
+      "path": "artifacts/cycle-131-order-three-denominator-bridge-v1.json",
+      "sha256": "1fa3645c6cf6c59abc35604de076412cf413593ea49d5e5a214f9dee0aa99e55"
+    },
+    "cycle138": {
+      "path": "artifacts/cycle-138-multiplier-fiber-height-v1.json",
+      "sha256": "d1eacac468da23239faa829ec6fb509dbba083dafbd2855ee55b84f8174029a6"
+    },
+    "document": {
+      "path": "docs/cycle-139-multiplier-curvature-v1.md",
+      "sha256": "ee4ea568ad5db65bbb919b9df9c7161dbe9da60bac6ea3c98e43aef5ccc3dffb"
+    },
+    "preregistration": {
+      "path": "docs/cycle-139-multiplier-curvature-preregistration-v1.md",
+      "sha256": "f5140ac973139a83946cf4b95fe757f04c3ca5b61405d81a0dcc798da69cb145"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_139_multiplier_curvature_v1.py",
+      "sha256": "216a4ed66263ac967ad9081c8b8fa5ee7e827f1159efe2869bb0de9b5b1ecb9e"
+    }
+  },
+  "multiplier_curvature_theorem": {
+    "boundary": "no high-edge or all-multiplicity extension, full paired norm, endpoint, moment, density, or prime-interval theorem is proved",
+    "edge_ceiling": "the derivative and constant terms require respectively j<17/15-4mu-6rho and j<2/3-2mu-2rho",
+    "epistemic_status": "PROVED",
+    "high_edge_limit": "the derivative term grows as j/2 and the constant term as j; order three does not extend the Cycle-138 all-edge ceiling",
+    "regional_extension": "the derivative ceiling is positive for rho<17/90-2mu/3, extending beyond 1/6-mu/2 by 1/45-mu/6, which remains positive",
+    "secondary_terms": "at rho=17/90-2mu/3 and tau=xi+1/3-rho, the tube, ratio, and constant margins are uniformly positive in the registered range",
+    "specialization": "with H=N^2/J and delta=D N^2/S^2, the order-three total terms before edge weight are D^(1/6)H^(3/2), H^2 delta^(1/3), H^2(delta/D)^(1/3), and H",
+    "weighted_terms": "after multiplying by J^2 the exponents are 1/10+3rho+j/2, 1/5+14rho/3-2tau/3, 14rho/3-2tau/3, and 2rho+j"
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "control high-edge classes beyond rho=1/6-mu/2 using a multiplicative-energy inverse or a phase-anchored recurrence"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_139_multiplier_curvature_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_139_multiplier_curvature_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_139_multiplier_curvature_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_139_multiplier_curvature_v1.py",
+    "sha256": "8a992e05c2afc5806b355e549e237afb1fa64d4c195b192a86240170be9f98cc"
+  },
+  "status": "SEALED_LOW_EDGE_CURVATURE_TO_17_90_MINUS_2MU_3_HIGH_EDGE_OPEN",
+  "worst_extension_ledger": {
+    "constant_margin": "103/450",
+    "epistemic_status": "PROVED",
+    "extension": "13/1800",
+    "mu": "9/100",
+    "new_low_edge_ceiling": "29/225",
+    "ratio_margin": "121/270",
+    "tube_margin": "67/270",
+    "xi": "16/25"
+  }
+}

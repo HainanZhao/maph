@@ -1,0 +1,76 @@
+{
+  "artifact_id": "cycle-126-freiman-recurrence-v1",
+  "claim_boundary": "This artifact compiles each represented difference into a common rational multiplier and quantifies chain depth and phase error. It proves no long chain from energy alone, seed realization, low-multiplicity bound, simple-root closure, complete moment, density, or intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "freiman_recurrence_theorem": {
+    "anchor_gate": "the recurrence retains d,rho_d and rational labels, but E16 must still tie one chain vertex to the original packet anchor and verify that the required depth is supplied",
+    "approximation": "rho_d=g^d(1+O(1/(KQ))); on a supported J<=D chain, rho_d^J=g^(Jd)(1+O(J/(KQ))) and the worst total error is O(D/(KQ))=X^(-(xi-4/15)+o(1))",
+    "boundary": "no long chain follows from energy alone; no seed realization, low-multiplicity bound, simple-root closure, complete moment, density, or prime intervals is proved",
+    "chain_bound": "the d-edge graph is a disjoint union of paths; with R vertices and L_d edges, one path has at least ceil(L_d/(R-L_d)) edges",
+    "depth_gate": "L_d>=ceil(JR/(J+1)) is sufficient for a J-edge chain; popular-edge pigeonholing alone does not approach this density unless A is nearly full",
+    "difference_multiplier": "for E_d={a in A:a+d in A}, Freiman multiplicativity applied to (a+d)+b=a+(b+d) makes rho_d=r_(a+d)/r_a independent of a in E_d",
+    "epistemic_status": "PROVED",
+    "geometric_chain": "on a chain a0,a0+d,...,a0+Jd, one has exactly r_(a0+jd)=r_a0 rho_d^j",
+    "popular_difference": "if A has R points in D consecutive integers, some nonzero d has L_d>=ceil(R(R-1)/(2D-2)) oriented edges"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/freiman_recurrence_v1.py",
+      "sha256": "b7c82f5bfac0da4b760dc6d2a9f677e31b4dea60c7cb9b3e01037074799ea840"
+    },
+    "cycle125": {
+      "path": "artifacts/cycle-125-freiman-ray-web-v1.json",
+      "sha256": "28112cb9c4e676719d1637b5ca650c49917b28ddcd2f43f04f93b54288802785"
+    },
+    "document": {
+      "path": "docs/cycle-126-freiman-recurrence-v1.md",
+      "sha256": "9ee2302837ee197a223029b0fd24cd7bd33ee9ad74339ad04f8dbb47ebc7be25"
+    },
+    "preregistration": {
+      "path": "docs/cycle-126-freiman-recurrence-preregistration-v1.md",
+      "sha256": "7311b26d1df61dfcb912f7669130684ad7cce3be1f00e70930b77193ae129ff8"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_126_freiman_recurrence_v1.py",
+      "sha256": "52980f330989ec4e81811a892ae106c0c7c91fb99d67f91d43496f39ab50443b"
+    }
+  },
+  "minimum_chain_error_margin": {
+    "epistemic_status": "PROVED",
+    "exponent": "28/75"
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "force near-unit edge density for a represented difference or obtain the required E16 anchor/depth by a different graph extraction"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_126_freiman_recurrence_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_126_freiman_recurrence_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_126_freiman_recurrence_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_126_freiman_recurrence_v1.py",
+    "sha256": "d7e9de1eb2dea7e2e8ddbd74af33bd66676cbcc1f0447cc0b973580f6b249968"
+  },
+  "status": "SEALED_COMMON_RATIONAL_MULTIPLIER_CHAIN_DEPTH_ANCHOR_OPEN"
+}

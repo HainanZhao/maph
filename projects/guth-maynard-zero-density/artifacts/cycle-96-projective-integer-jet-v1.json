@@ -1,0 +1,85 @@
+{
+  "actual_entropy_effect": {
+    "epistemic_status": "PROVED",
+    "statement": "Under (A,B,C,a,b,x)=(p0n,p0n',q0m,u,u+v,2pi/D), the registered jet inequalities quantitatively separate noncentral modes."
+  },
+  "artifact_id": "cycle-96-projective-integer-jet-v1",
+  "claim_boundary": "This artifact proves explicit lower bounds in four integer-jet sectors. It does not prove that they exhaust the Poisson support, a complete alias estimate, a moment theorem, a density gain, or an interval gain.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/projective_integer_jet_v1.py",
+      "sha256": "0d35b0d628f4f6bcc674077fe79e646d50493eb68c707a4056ac4f3b992fbdc9"
+    },
+    "cycle95": {
+      "path": "artifacts/cycle-95-projective-entropy-modes-v1.json",
+      "sha256": "73c1a220bd5bbacd2c813a7cbb36611c88bcc4e9e0e84bc8de97c95d6364128f"
+    },
+    "discovery_candidate": {
+      "path": "discovery/cycle-96-integer-jet-candidate-v1.md",
+      "sha256": "450e5679ccc69556438f7f99af5520a27d088c5201066d001a961ab29f6f96a5"
+    },
+    "document": {
+      "path": "docs/cycle-96-projective-integer-jet-v1.md",
+      "sha256": "ea2543fbf4b1d53c232cd1128baf112302ae0d361f2e359aac185c296ebf8cf6"
+    },
+    "preregistration": {
+      "path": "docs/cycle-96-integer-jet-preregistration-v1.md",
+      "sha256": "d034e8bc25187cca83076d67a888d0c9c991012eeb2b9edd61529c087f12867d"
+    },
+    "tests": {
+      "path": "tests/test_cycle_96_projective_integer_jet_v1.py",
+      "sha256": "e1eb92220f90f92ea0297f1bc68dfe4806a34e4e253ffee8546e52ff2a51de9b"
+    }
+  },
+  "integer_jet_theorem": {
+    "actual_substitution": "(A,B,C,a,b,x)=(p0*n,p0*n',q0*m,u,u+v,2*pi/D)",
+    "boundary": "no claim that registered sectors exhaust the projective Poisson support",
+    "cases": {
+      "J0_nonzero": "x*exp(x*M)*S1<=1/2 implies |f(x)|>=1/2",
+      "J0_zero_J1_negative": "x*exp(x*M)*S2<=1/2 implies |f(x)|>=x/2",
+      "J0_zero_J1_positive": "|f(x)|>=x",
+      "both_jets_zero": "|f(x)|>=exp(-x*M)*x^2*S2/2"
+    },
+    "derivatives": [
+      "f'(t)=-B*a*exp(a*t)-C*b*exp(b*t)",
+      "f''(t)=-B*a^2*exp(a*t)-C*b^2*exp(b*t)<0"
+    ],
+    "epistemic_status": "PROVED",
+    "integer_jets": [
+      "J0=A-B-C",
+      "J1=B*a+C*b"
+    ],
+    "residual": "f(x)=A-B*exp(a*x)-C*exp(b*x)"
+  },
+  "prior_context": {
+    "cycle95_role": "supply the exact Laurent residual and central/noncentral split",
+    "epistemic_status": "PROVED"
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Control the constant-jet large-displacement and negative-linear-jet turnover sectors, then reinsert all jet lower bounds into the oscillatory integral."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_96_projective_integer_jet_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_96_projective_integer_jet_v1.py",
+    "write_command": "python3 proof/build_cycle_96_projective_integer_jet_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_96_projective_integer_jet_v1.py",
+    "sha256": "cbf28e70147a19293c5b64d70fa9e424d0da296b6b999f0e421b0724689fab7e"
+  },
+  "status": "SEALED_INTEGER_JET_SMALL_MODE_SEPARATION_TURNOVER_SECTORS_OPEN"
+}

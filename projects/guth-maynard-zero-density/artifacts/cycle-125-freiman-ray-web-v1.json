@@ -1,0 +1,81 @@
+{
+  "artifact_id": "cycle-125-freiman-ray-web-v1",
+  "claim_boundary": "This artifact compiles high-multiplicity collision rays into an exact valuation-labelled Freiman web. It proves no low-multiplicity bound, seed realization, simple-root closure, complete moment, density, or intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "freiman_ray_web_theorem": {
+    "boundary": "no low-multiplicity collision bound, seed realization, simple-root closure, complete moment, density, or prime intervals is proved",
+    "collision_web": "for each occupied a, Cycle 92 supplies one injective reduced label r_a=p_a/q_a with |r_a-g^a|<<1/(KQ) and q_a<<Q/M",
+    "energy": "for R occupied modes in an interval of D consecutive integers, E_plus(A)>=R^4/(2D-1); every one of these quadruples is an exact multiplicative-label quadruple in the high-multiplicity range",
+    "epistemic_status": "PROVED",
+    "integer_forcing": "a nonzero rational product difference is >>M^4/Q^4; therefore M^4K>>Q^3 forces r_a1 r_a2=r_a3 r_a4",
+    "quadruple_comparison": "if a1+a2=a3+a4 then |r_a1 r_a2-r_a3 r_a4|<<1/(KQ)",
+    "seed_gate": "energy alone does not give an anchored transport seed; E16 still requires a popular-difference/codegree extraction and a phase-error budget tied to the original packet anchor",
+    "threshold": "with M=X^mu and K=X^xi, the high-multiplicity condition is mu>(1-xi)/4; otherwise mu<=(1-xi)/4 up to the frozen constant buffer",
+    "valuation_web": "for every prime p and additive quadruple, nu_p(r_a1)+nu_p(r_a2)=nu_p(r_a3)+nu_p(r_a4); the full valuation vector is a Freiman 2-homomorphism on the occupied mode set"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/freiman_ray_web_v1.py",
+      "sha256": "b8693f7e1ef08f4bd63be075cb973c25a030151b056ab7b5c7fa37875245a368"
+    },
+    "cycle124": {
+      "path": "artifacts/cycle-124-bilinear-self-duality-v1.json",
+      "sha256": "d057acb6807a58be37e42a5bb1869de62e33e873dd0aebdb6033aad6b2e1f2b8"
+    },
+    "cycle92": {
+      "path": "artifacts/cycle-92-collision-ray-inverse-v1.json",
+      "sha256": "e4d20db8df77672cd8622abd891b0bc97cbb0914c538e95682c19cf98e48f43e"
+    },
+    "document": {
+      "path": "docs/cycle-125-freiman-ray-web-v1.md",
+      "sha256": "51823d9950a4f6d15a848b9d556589cd7524cfd8731730efafe873ccaeed8c43"
+    },
+    "preregistration": {
+      "path": "docs/cycle-125-freiman-ray-web-preregistration-v1.md",
+      "sha256": "42c6d46c0c72de27c9eeabf1aaa2eb2520397a5131d02d85379d2f3658d30fdf"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_125_freiman_ray_web_v1.py",
+      "sha256": "7c74cef57d17f93a190dfdd9e2cb616397857c147e73ef8d99a7a38c352e70ea"
+    }
+  },
+  "lower_endpoint_threshold": {
+    "condition": "strictly greater, with frozen constant buffer",
+    "epistemic_status": "PROVED",
+    "multiplicity_exponent": "9/100"
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "control the complementary low-multiplicity rays or extract a popular-difference anchored seed from the Freiman web"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_125_freiman_ray_web_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_125_freiman_ray_web_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_125_freiman_ray_web_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_125_freiman_ray_web_v1.py",
+    "sha256": "c6702068f957891eb37dd6ba25074f1d802a1e610a405a4cb75b334dfbfd4b5f"
+  },
+  "status": "SEALED_HIGH_MULTIPLICITY_FREIMAN_WEB_LOW_MULTIPLICITY_SEED_GATE_OPEN"
+}

@@ -1,0 +1,78 @@
+{
+  "artifact_id": "cycle-124-bilinear-self-duality-v1",
+  "bilinear_self_duality_theorem": {
+    "bilinear_reduction": "the Cycle-123 operator is, up to X^epsilon separated terms and power-negligible error, sum_(ell~K) T_1(ell)T_alpha(ell)",
+    "boundary": "self-duality is scoped to tensor separation plus Cauchy and diagonal second moments; it does not exclude correlated bilinear cancellation or prove simple-root closure, a complete moment, density, or intervals",
+    "cauchy_target": "if sum|T_1|^2 and sum|T_alpha|^2 are both O(KDQ X^epsilon), Cauchy gives O(KDQ X^epsilon), exactly the Cycle-87 target",
+    "epistemic_status": "PROVED",
+    "inverse": "if one separated bilinear term exceeds L*K*D*Q, then at least one of its two normalized second moments exceeds diagonal size by a factor at least L, yielding a labelled pair-collision energy witness",
+    "mode_change": "a=u,b=u+v, alpha=q0/p0; the phase is e(-ell n'g^a)e(-ell alpha m g^b)",
+    "polynomial": "T_alpha(ell)=sum_(a,n) w_alpha(a,n;ell)e(-ell alpha n g^a), with a-length D and n-length Q",
+    "self_duality": "T_alpha is the Cycle-87 primal sparse-exponential polynomial with a bounded rational anchor, up to sign, smooth weights, and tensor-frequency shifts; the transform is norm-neutral at the diagonal second-moment level",
+    "tensor_separation": "every fixed smooth compact coupled symbol in (ell/K,n'g^a/Q,alpha m g^b/Q) has, for each epsilon,A>0, a tensor expansion of rank O(X^epsilon), l1 coefficient norm O(X^epsilon), and uniform error O(X^(-A))"
+  },
+  "claim_boundary": "This artifact proves norm-level self-duality only after smooth tensor separation, Cauchy, and separate diagonal second moments. It does not exclude correlated bilinear cancellation or prove simple-root closure, a complete moment, density, or intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/bilinear_self_duality_v1.py",
+      "sha256": "106756438c7c88fb75c4f5a6f40ab58f659ec0910324661de7c3e0f043fdb04d"
+    },
+    "cycle123": {
+      "path": "artifacts/cycle-123-joint-radial-alias-v1.json",
+      "sha256": "e700c21a422413abb6f35882d8d5a67b4ae4095b23c157da6397417b08f4da79"
+    },
+    "document": {
+      "path": "docs/cycle-124-bilinear-self-duality-v1.md",
+      "sha256": "34088c4a5aa2638afdc7ea850730581396437b8006805333c16808f323d5cecc"
+    },
+    "preregistration": {
+      "path": "docs/cycle-124-bilinear-self-duality-preregistration-v1.md",
+      "sha256": "b3d88f76413cf1992b4858c0fdb7ce184d4ea6fb425e99edf394c92164d0cb9c"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_124_bilinear_self_duality_v1.py",
+      "sha256": "5b41b61abf94aedaf56e24567de9dd46802cc7d9e47cd853479a2040bb75a5a3"
+    }
+  },
+  "left_endpoint_ledger": {
+    "alias_target": "118/75",
+    "diagonal_second_moment": "118/75",
+    "epistemic_status": "PROVED",
+    "required_trivial_saving": "14/15"
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "exploit correlated bilinear structure beyond separate Cauchy, or compile a labelled excess second moment into the collision-web inverse"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_124_bilinear_self_duality_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_124_bilinear_self_duality_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_124_bilinear_self_duality_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_124_bilinear_self_duality_v1.py",
+    "sha256": "91941f52702522eae07a327cf95b685febab2745bfa8b17f8339ef0b6459c937"
+  },
+  "status": "SEALED_TENSOR_CAUCHY_NORM_SELF_DUAL_COLLISION_INVERSE_OPEN"
+}

@@ -1,0 +1,82 @@
+{
+  "artifact_id": "cycle-138-multiplier-fiber-height-v1",
+  "claim_boundary": "This artifact closes the exceptional-multiplier weighted average for every edge multiplicity only under the two strict regional conditions. It proves no full paired norm, endpoint, moment, density, or prime intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/multiplier_fiber_height_v1.py",
+      "sha256": "827c0ed58bf931f8d74d2feff2794fcf3ccc4e37da3540df6fbf873b37d6bcbf"
+    },
+    "cycle137": {
+      "path": "artifacts/cycle-137-exceptional-multiplier-average-v1.json",
+      "sha256": "305d9dfe39e0f3c2b18d7969eecc2e6b8f898aefe8565f03bcd7925cf4cf4359"
+    },
+    "document": {
+      "path": "docs/cycle-138-multiplier-fiber-height-v1.md",
+      "sha256": "fb7b216164b86511fc9be967c38305af656d7987eb38e2d0a07291f2d012cf69"
+    },
+    "preregistration": {
+      "path": "docs/cycle-138-multiplier-fiber-preregistration-v1.md",
+      "sha256": "615c9d80e8199d94a9f091681e204859be5d24b7d2d9c9b1fdc9f13e53e2131a"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_138_multiplier_fiber_height_v1.py",
+      "sha256": "d0079582ed19cef776a1611d05c37a6310ba981fe33afa11a6339949e5a58819"
+    }
+  },
+  "multiplier_fiber_height_theorem": {
+    "boundary": "this closes only the exceptional-multiplier weighted average in the stated region; no full paired norm, endpoint, moment, density, or prime-interval theorem is proved",
+    "cancellation_identity": "for coprime A,B and coprime p,q, gcd(Ap,Bq)=gcd(A,q)gcd(B,p)",
+    "closure_region": "all edge multiplicities meet the exceptional-average diagonal budget when rho<1/6-mu/2 and tau-3rho>mu-1/30",
+    "epistemic_status": "PROVED",
+    "fiber_bound": "if A/B has compact height H and both p/q and (A/B)(p/q) have compact height N, divisor-class summation gives at most N^2 H^{-1}X^epsilon possible primitive p/q",
+    "height_descent": "an edge class |E_d|~J therefore forces height(r_d) <<N^2 J^{-1}X^epsilon",
+    "regional_width": "the rho ceiling exceeds 7/45-2mu/3 by 1/90+mu/6>=1/90",
+    "weighted_count": "the exceptional count becomes B_exc<<X^epsilon(N^4/J^2+D N^6/(J^2 S^2)); after multiplying by J^2 the edge multiplicity cancels exactly"
+  },
+  "registered_cell": {
+    "discretization_margin": "1/45",
+    "epistemic_status": "PROVED",
+    "extension_beyond_hs": "1/90",
+    "mu": "0",
+    "rho": "29/180",
+    "rho_ceiling": "1/6",
+    "tau": "4/5",
+    "volume_margin": "7/10",
+    "xi": "16/25"
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "control rho>=1/6-mu/2 by curvature across multiplier denominators or compile the surviving high-height ratio graph"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_138_multiplier_fiber_height_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_138_multiplier_fiber_height_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_138_multiplier_fiber_height_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_138_multiplier_fiber_height_v1.py",
+    "sha256": "8df8ac8e7276542978d9edc0af40f7425f3ad576cca78d0c7c4e5d2c7ce7fefd"
+  },
+  "status": "SEALED_ALL_EDGE_MULTIPLICITIES_TO_1_6_MINUS_MU_2_UPPER_FAREY_RANGE_OPEN"
+}

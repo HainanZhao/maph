@@ -1,0 +1,106 @@
+{
+  "analytic_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Bound every Schwartz-weighted saddle-collision annulus by X^(1/3+o(1)), or export an explicit anchored collision web."
+  },
+  "artifact_id": "cycle-90-equal-height-bprocess-v1",
+  "bprocess_reduction": {
+    "epistemic_status": "PROVED",
+    "statement": "The equal-height length-K Mellin polynomial B-transforms to length Q; its diagonal has exponent xi+14/15 and the smooth B-process remainder has margin 1/3."
+  },
+  "claim_boundary": "This artifact proves the equal-height quadratic form, smooth B-process map, exponent ledger, and nondegenerate saddle-collision target. It proves no saddle collision bound, full equal-height bound, diagonal second moment, Fourier-band closure, density gain, or interval gain.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "analytic_target": "Schwartz-weighted saddle collisions are <=X^(1/3+o(1)) on every fixed annulus",
+    "bprocess_remainder_exponent": "xi+3/5",
+    "bprocess_remainder_margin": "1/3",
+    "collision": "|n'-n*exp(beta*a/D)|<<1/K",
+    "collision_margin": "xi-3/5",
+    "collision_surface": "F(a,n)=n*exp(beta*a/D)",
+    "collision_target_exponent": "1/3",
+    "collision_volume_exponent": "14/15-xi",
+    "dual_cross_phase": "(h*D/beta)*log(n/n')",
+    "dual_diagonal_exponent": "xi+14/15",
+    "dual_length_exponent": "1/3",
+    "gate": "prove two-dimensional saddle discrepancy or export a collision web",
+    "h_exponent": "xi-4/15",
+    "mellin_phase": "-t*log(r), t=h*D/beta",
+    "minimum_sample_surplus": "1/25",
+    "poisson_phase": "-t*log(r)+n*r",
+    "range": "16/25<=xi<58/75",
+    "same_h_form": "sum_k U(k/K) sum_h |sum_r A_(k,h,r)|^2",
+    "sample_surplus": "xi-3/5",
+    "stationary_amplitude": "sqrt(t)/n",
+    "stationary_hessian": "n^2/t",
+    "stationary_point": "r=t/n",
+    "stationary_value": "t*(1-log(t/n))",
+    "surface_determinant": "-(beta^2/D^2)*exp(2*beta*a/D)",
+    "surface_hessian": "F_aa=(beta^2*n/D^2)exp(beta*a/D), F_an=(beta/D)exp(beta*a/D), F_nn=0"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/equal_height_bprocess_v1.py",
+      "sha256": "4b9cb36d00feafb445ca64761b8b714829a0e239e0dedea0ec36ba4165603853"
+    },
+    "cycle69": {
+      "path": "artifacts/cycle-69-stationary-transport-dual-v1.json",
+      "sha256": "4f868a07381d89ccfafe72f80553a63b9457447a848408d22cb4493d4726a04c"
+    },
+    "cycle81": {
+      "path": "artifacts/cycle-81-exact-q-transform-v1.json",
+      "sha256": "0753d455a2e9428b28f1b9dac59b04fd57008db562370202a300a38a818631a4"
+    },
+    "cycle87": {
+      "path": "artifacts/cycle-87-mellin-alias-atlas-v1.json",
+      "sha256": "68b88ccd4ce3e5371906e3b0da3c254056b79bad9504880ebbff04b9cebce8ca"
+    },
+    "discovery_candidate": {
+      "path": "discovery/cycle-90-equal-height-bprocess-candidate-v1.md",
+      "sha256": "7e45e6e5cb000b6cdf9f91c19bb9f7b750e90e998198da2dce0551c69023dadf"
+    },
+    "document": {
+      "path": "docs/cycle-90-equal-height-bprocess-v1.md",
+      "sha256": "77eef98dcd888e306ed9f952f34d70567bcf4e071b9c3db9f98726e93e6b3588"
+    },
+    "preregistration": {
+      "path": "docs/cycle-90-equal-height-bprocess-preregistration-v1.md",
+      "sha256": "603e22f484c648eae533f2a81d452d444417e50c3cc625ceff2efcf83e2ca233"
+    },
+    "tests": {
+      "path": "tests/test_cycle_90_equal_height_bprocess_v1.py",
+      "sha256": "1ffde005c542a42438ca8cb3bebda38b7f9fdba43aef53bd589b8600fa5c916c"
+    }
+  },
+  "prior_context": {
+    "cycle69_role": "supply the registered smooth one-dimensional B-process convention",
+    "cycle81_role": "supply the exact dual leading amplitude and support",
+    "cycle87_role": "identify equal height as a separate second-moment branch",
+    "epistemic_status": "PROVED"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_90_equal_height_bprocess_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_90_equal_height_bprocess_v1.py",
+    "write_command": "python3 proof/build_cycle_90_equal_height_bprocess_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "saddle_contract": {
+    "epistemic_status": "PROVED",
+    "statement": "The dual off-diagonal localizes to |n'-n exp(2pi a/D)|<<1/K. Its volume-to-target margin is xi-3/5>=1/25 and its affine Hessian determinant is nonzero."
+  },
+  "sealer": {
+    "path": "proof/build_cycle_90_equal_height_bprocess_v1.py",
+    "sha256": "5adf4552231150e17de894e13470895a1c5e8480e4150b5cd2e995c81d123758"
+  },
+  "status": "SEALED_EQUAL_HEIGHT_BPROCESS_SADDLE_DISCREPANCY_OR_WEB_OPEN"
+}

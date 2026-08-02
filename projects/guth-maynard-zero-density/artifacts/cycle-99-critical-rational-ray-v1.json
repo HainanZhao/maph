@@ -1,0 +1,82 @@
+{
+  "artifact_id": "cycle-99-critical-rational-ray-v1",
+  "claim_boundary": "This artifact compiles strongly localized near-double rows into unique injective critical rational rays. It proves no fiber bound, weak-row estimate, complete alias moment, density gain, or interval gain.",
+  "critical_ray_theorem": {
+    "boundary": "no bound for the factorization fiber or weak near-double rows",
+    "critical_label": "r=-C*b/(B*a)=C*abs(b)/(B*abs(a))=exp(w*t*)",
+    "cross_w_injectivity": "E*abs(w)*rho<exp(-L)*(exp(x)-1)/2 for every row",
+    "cycle97_substitution": "rho<=2*eta/ell gives 2*E*abs(w)*eta/ell below both thresholds",
+    "epistemic_status": "PROVED",
+    "fiber": "C*abs(b)*R=B*abs(a)*N, a-b=w, orientation retained",
+    "fixed_w_uniqueness": "E*abs(w)*rho<1/(2*H^2)",
+    "height": "reduced numerator and denominator are <=H=Q*M",
+    "mode": "w=a-b, 1<=abs(w)<=2*M",
+    "ray_error": "|r-exp(w*x)|<=E*abs(w)*rho"
+  },
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/critical_rational_ray_v1.py",
+      "sha256": "5b0b52da864c3d508b0d50bc269d8d66d357afe03f7fe75253e8bd0be6d77693"
+    },
+    "cycle97": {
+      "path": "artifacts/cycle-97-projective-algebraic-root-v1.json",
+      "sha256": "5af4394e8a8f48b70cff4f1b32e9a213640df499f273f701bc0ffe5ffd0d2644"
+    },
+    "cycle98": {
+      "path": "artifacts/cycle-98-gaudron-direct-ledger-v1.json",
+      "sha256": "9ac5bba45e11798b592b94250ee52d3b89d632125f116754188580ff8f55c160"
+    },
+    "discovery_candidate": {
+      "path": "discovery/cycle-99-critical-ray-candidate-v1.md",
+      "sha256": "29cbbf8ca2b81f4b324ad7f77729b966660a00692b4c00d9033cb86692895b59"
+    },
+    "document": {
+      "path": "docs/cycle-99-critical-rational-ray-v1.md",
+      "sha256": "3b961dfcabae0ae4164b3f9de5fb5fef84b837088d9d2a2e1c6152b69b114f24"
+    },
+    "preregistration": {
+      "path": "docs/cycle-99-critical-ray-preregistration-v1.md",
+      "sha256": "f9007b616fe4d14fb65842d01209a3a8965227a11df0f2389c0bf68fa2fc395a"
+    },
+    "tests": {
+      "path": "tests/test_cycle_99_critical_rational_ray_v1.py",
+      "sha256": "6d4450385d00f2cb86cfa065e43231b296d8717d9898278b17705bcb79961369"
+    }
+  },
+  "inverse_output": {
+    "epistemic_status": "PROVED",
+    "statement": "At the registered strong threshold, labels (w,N,R) are unique and injective; all multiplicity lies in C|b|R=B|a|N with orientation retained."
+  },
+  "prior_context": {
+    "cycle97_role": "supply the critical point and distance rho<=2eta/ell",
+    "cycle98_role": "force a sparse/averaged/critical alternative to generic pointwise bounds",
+    "epistemic_status": "PROVED"
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Bound the factorization fiber with signed/Mobius weights and treat weak near-double rows."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_99_critical_rational_ray_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_99_critical_rational_ray_v1.py",
+    "write_command": "python3 proof/build_cycle_99_critical_rational_ray_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_99_critical_rational_ray_v1.py",
+    "sha256": "d7357a33c2a4416665dd86d9b9c9c3745d166941a2a261671d681bea32b209c5"
+  },
+  "status": "SEALED_STRONG_NEAR_DOUBLE_CRITICAL_RAYS_WEAK_AND_FIBER_OPEN"
+}

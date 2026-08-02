@@ -1,0 +1,97 @@
+{
+  "affected_artifact": {
+    "disposition": "immutable; stationary-point display superseded by this artifact",
+    "path": "artifacts/cycle-108-triple-b-jacobian-v1.json"
+  },
+  "artifact_id": "cycle-111-k-stationary-correction-v1",
+  "claim_boundary": "This versioned correction replaces Cycle 108's k*=c*c0*Delta/m by k*=c*Delta/m. The anchor-bearing stationary value, Hessian amplitude, entropy, and scale laws survive; cutoff evaluations at the old point are withheld.",
+  "correction": {
+    "anchor_location": "c0 is constant under k differentiation and remains in the stationary value",
+    "boundary": "this correction does not yet provide the full outer-prefactor and anchor normalization ledger",
+    "corrected_record": "Cycle 108's displayed k*=c*c0*Delta/m is replaced by k*=c*Delta/m",
+    "epistemic_status": "PROVED",
+    "hessian": "Phi''(k*)=-m^2/(c*Delta)",
+    "phase": "c*Delta*log(k*c0)-m*k",
+    "reaudit_required": "any smooth cutoff or symbol norm evaluated using the Cycle 108 k-location must be rederived from the corrected point",
+    "stationary_point": "k*=c*Delta/m",
+    "stationary_value": "c*Delta*(log(c*c0*Delta/m)-1)",
+    "unaffected": "Cycle 94 entropy and anchor relation, Cycle 108 Hessian amplitude and ell^(-3/2) scale law, Cycle 109 curvature bound, and Cycle 110 normalized split identity"
+  },
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/k_stationary_correction_v1.py",
+      "sha256": "f337ae0f8124230a4dd0734a46e0ada951199b76d8b9297dcdbec7cbae9ac9d9"
+    },
+    "cycle108": {
+      "path": "artifacts/cycle-108-triple-b-jacobian-v1.json",
+      "sha256": "c030327447462241e056c593bc799e7fec472d6663faf17d5f8a9dbab8424813"
+    },
+    "cycle109": {
+      "path": "artifacts/cycle-109-uniform-triple-b-v1.json",
+      "sha256": "da481a16c7a9e027d53104282410e2bad73fcaf6157a9ea3fe61ffeb8d74f432"
+    },
+    "cycle110": {
+      "path": "artifacts/cycle-110-perfect-power-split-sum-v1.json",
+      "sha256": "cfcedf8145cf6ef70fb88b1a722067460236dfb7a04061d75db325e093746c42"
+    },
+    "cycle81": {
+      "path": "artifacts/cycle-81-exact-q-transform-v1.json",
+      "sha256": "0753d455a2e9428b28f1b9dac59b04fd57008db562370202a300a38a818631a4"
+    },
+    "cycle87": {
+      "path": "artifacts/cycle-87-mellin-alias-atlas-v1.json",
+      "sha256": "68b88ccd4ce3e5371906e3b0da3c254056b79bad9504880ebbff04b9cebce8ca"
+    },
+    "cycle94": {
+      "path": "artifacts/cycle-94-triple-b-entropy-v1.json",
+      "sha256": "9b6fc5021af3622821729f72966fcb15a4c9b74d0ef668d14ccc6f32349266a5"
+    },
+    "document": {
+      "path": "docs/cycle-111-k-stationary-correction-v1.md",
+      "sha256": "d9dec8d9318ee53b8716917f02572bed72da837405d9b0cd8c00a4bb30182b59"
+    },
+    "preregistration": {
+      "path": "docs/cycle-111-k-stationary-correction-preregistration-v1.md",
+      "sha256": "5f06836e61d784fee39b9ec23b3149f22fd97bcd1920cb9181030303859a000c"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_111_k_stationary_correction_v1.py",
+      "sha256": "ff2dd11f77807222d754726689bae9b76ce3ed097460c9ea1c4500de06d020b6"
+    }
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "complete the corrected outer-prefactor, symbol-norm, and anchor normalization ledger"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_111_k_stationary_correction_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_111_k_stationary_correction_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_111_k_stationary_correction_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_111_k_stationary_correction_v1.py",
+    "sha256": "a743c6de30078f46324252a379fa6739e794fefaac146efda9a83409256786fe"
+  },
+  "status": "SEALED_CORRECTION_K_LOCATION_ENTROPY_AND_SCALE_LAWS_SURVIVE"
+}

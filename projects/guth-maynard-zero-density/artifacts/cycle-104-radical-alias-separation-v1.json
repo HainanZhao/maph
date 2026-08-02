@@ -1,0 +1,80 @@
+{
+  "artifact_id": "cycle-104-radical-alias-separation-v1",
+  "claim_boundary": "This artifact proves the radical collapse, exact rational-alias classification, and an elementary norm-separated one-scale sector. It proves no closure for all radical degrees, aggregate exceptional-web bound, weak/simple-root estimate, complete moment, density, or interval gain.",
+  "closed_sector": {
+    "epistemic_status": "PROVED",
+    "statement": "an irrational core with 2epsilon below the rational safe norm bound has no q<=Lambda alias and at most one surviving coefficient scale"
+  },
+  "containment": {
+    "epistemic_status": "OBSERVED",
+    "statement": "three initial fixture expectations were corrected; the nontrivial 9/4 square label confirms the predicted perfect-power class"
+  },
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/radical_alias_separation_v1.py",
+      "sha256": "01edb5f8bfb89f15e3a710dc396750faed0c7444bad9c3e3f54a75750eb33b47"
+    },
+    "cycle103": {
+      "path": "artifacts/cycle-103-critical-scale-alias-v1.json",
+      "sha256": "93514b9668c49beec4a11d3892af1ae6d4f0b80125bd927edb9f378c8eba5e15"
+    },
+    "discovery_candidate": {
+      "path": "discovery/cycle-104-radical-alias-candidate-v1.md",
+      "sha256": "31e3ecfaaec48261d9bc322709fdb0eb64d8c347e9a20fe8cf3d54a2675ab325"
+    },
+    "document": {
+      "path": "docs/cycle-104-radical-alias-separation-v1.md",
+      "sha256": "36492a449f1bfb10364a854a4007787e55029c857a1639dbced9195eff8ca8e5"
+    },
+    "preregistration": {
+      "path": "docs/cycle-104-radical-alias-preregistration-v1.md",
+      "sha256": "f9f6477a9665159ca34f88774a3eb11b8bc489d40f16d1a5f9f19a2303e929c0"
+    },
+    "tests": {
+      "path": "tests/test_cycle_104_radical_alias_separation_v1.py",
+      "sha256": "d0a2ff8b88e35a9a13742ec606ecb076e0ae7d4f21488ceef82e519d851f9642"
+    }
+  },
+  "prior_context": {
+    "cycle103_role": "supply K and the one-hit-or-short-alias inverse",
+    "epistemic_status": "PROVED"
+  },
+  "radical_alias_theorem": {
+    "boundary": "large radical degree and aggregation across cores remain open",
+    "closure": "2epsilon below the safe bound implies no q<=Lambda alias and at most one scale hit",
+    "epistemic_status": "PROVED",
+    "norm_separation": "|qK-m|>=1/(S*(qK+abs(m))^(d-1))",
+    "power": "K^d=(d*R2/y)^d*(N/R)^u=P/S in lowest terms",
+    "primitive_degree": "h=(s,t), u=s/h, v=t/h, d=u+v=W/h, (u,d)=1",
+    "rational_classification": "K is rational iff N and R are both perfect dth powers",
+    "safe_separation": "|qK-m|>=1/(S*(2*Lambda*U+1/2)^(d-1)), U=max(1,P/S)",
+    "single_radical": "K=(W/t)*B0*r^(s/W)=(d*R2/y)*r^(u/d)"
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "aggregate large-degree and perfect-power radical cores with actual phases"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_104_radical_alias_separation_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_104_radical_alias_separation_v1.py",
+    "write_command": "python3 proof/build_cycle_104_radical_alias_separation_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_104_radical_alias_separation_v1.py",
+    "sha256": "5707467d1ef29ab3188ffb3c19c28621caff801f55803ffd336054abe0536308"
+  },
+  "status": "SEALED_SINGLE_RADICAL_RATIONAL_CLASSIFICATION_AND_NORM_SECTOR"
+}

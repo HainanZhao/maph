@@ -1,0 +1,82 @@
+{
+  "artifact_id": "cycle-150-divisor-comb-sign-test-v1",
+  "claim_boundary": "This artifact proves that strict positive endpoint modes cannot supply the Cycle-149 negative divisor-comb correlation and forces a quantified escape-class norm. It does not bound or exclude the escape class and proves no full second moment, endpoint, complete moment, density, or intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "divisor_comb_sign_test_theorem": {
+    "boundary": "the escape class is not bounded or excluded here; no full second moment, endpoint, complete moment, density, or intervals is proved",
+    "epistemic_status": "PROVED",
+    "escape_correlation": "if Cycle 149 forces Re<R,w_h><=-M and the strict part P has Re<P,w_h>>=-eta, then H=R-P satisfies Re<H,w_h><=-(M-eta)",
+    "escape_norm": "Cauchy gives ||H||_2>=(M-eta)/||w_h||_2, where ||w_h||_2 is comparable to Qsqrt(K/h)",
+    "escape_split": "any negative anti-aligner must leave the strict class through at least one of: endpoint error beyond c/(KQ), denominator within a fixed power of Q, coefficient phase outside the positive wedge, or nonsmooth/untransported payload",
+    "no_strict_antialignment": "strict positive endpoint combs with denominators <=QX^(-delta) reinforce rather than cancel one another on every retained modulus",
+    "one_ray_scale": "when endpoint weights are bounded and the Cycle-149 witness is inserted, the forced escape norm squared has the one-ray comb scale KQ^2/N, exceeding one-mode diagonal KQ by Q/N",
+    "strict_sign_test": "on sampled frequencies k=h ell, every other strict positive endpoint mode is either resonant, in which case its real coefficient sum is >>Q, or nonresonant, in which case exact Poisson summation makes it power-negligible; hence its divisor-comb correlation is nonnegative up to a power-negligible error",
+    "structural_implication": "a diagonal full moment with supercritical strict endpoint mass forces a quantitatively large halo, boundary-denominator, sign-changing, or nonsmooth component; another strict endpoint population cannot be the canceler"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/divisor_comb_sign_test_v1.py",
+      "sha256": "07695886b7643ef972fceb334d148b8962bdd4d971ba83b666320f27fd8bb575"
+    },
+    "cycle148": {
+      "path": "artifacts/cycle-148-endpoint-major-arc-comb-v1.json",
+      "sha256": "9549454a2cefd60d37673ecd9b7f012bb8d18bcb24ff7f439c99005e99604cbb"
+    },
+    "cycle149": {
+      "path": "artifacts/cycle-149-target-mass-comb-inverse-v1.json",
+      "sha256": "2e7b318892e5ee0807d30a2d548b515a837a54757a3596223df5097c86564a48"
+    },
+    "document": {
+      "path": "docs/cycle-150-divisor-comb-sign-test-v1.md",
+      "sha256": "0779438399729435bd8bb86114c75bf1775d3f334971b938d19a419f9305034a"
+    },
+    "preregistration": {
+      "path": "docs/cycle-150-divisor-comb-sign-test-preregistration-v1.md",
+      "sha256": "3435448be32780993a9b81b94afda02ca106fb545fc966043c1b78a7b30f7144"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_150_divisor_comb_sign_test_v1.py",
+      "sha256": "2e9c27d4e60f9fc3f50ebfc73216f76fa248afe2da4e9500aad83630e987ab1a"
+    }
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "bound the halo and boundary-denominator negative divisor-comb projection, retaining phase-changing and nonsmooth payload separately"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_150_divisor_comb_sign_test_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_150_divisor_comb_sign_test_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_150_divisor_comb_sign_test_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sample_exponent_ledger": {
+    "epistemic_status": "PROVED",
+    "escape_norm_squared": "7/6",
+    "excess": "2/15",
+    "one_mode_diagonal": "31/30"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_150_divisor_comb_sign_test_v1.py",
+    "sha256": "d0b36de26a9675b4f7fe3e60226fe602b9145f8adbfb31e8500e761e1c1e36d1"
+  },
+  "status": "SEALED_HALO_BOUNDARY_DIVISOR_COMB_ESTIMATE_OPEN"
+}

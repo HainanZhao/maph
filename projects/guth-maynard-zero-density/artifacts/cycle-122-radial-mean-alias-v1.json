@@ -1,0 +1,78 @@
+{
+  "artifact_id": "cycle-122-radial-mean-alias-v1",
+  "claim_boundary": "This artifact removes the continuous n-Poisson mode and derives the nonzero ell~K saddle map. It proves no bound for those aliases, simple-root closure, complete moment, density, or intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/radial_mean_alias_v1.py",
+      "sha256": "54ed6e7daebfd45c872729cc0ac4c6c8f0c22359dc1ab89a206799f256ef8661"
+    },
+    "cycle121": {
+      "path": "artifacts/cycle-121-projective-amplitude-v1.json",
+      "sha256": "5c003a1ce44fc5a87d7997fa80d71c18729ad3c89d857f09955a7baf0110317f"
+    },
+    "document": {
+      "path": "docs/cycle-122-radial-mean-alias-v1.md",
+      "sha256": "c0b307139f1e5513336791d8717156fe7fad32bbb6a6e14e54d7767c89447094"
+    },
+    "preregistration": {
+      "path": "docs/cycle-122-radial-mean-alias-preregistration-v1.md",
+      "sha256": "95d16b2d50fe98c54368fc99fe60192c19acaa26af91f0cfd3393f744259ca46"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_122_radial_mean_alias_v1.py",
+      "sha256": "d1a8dd59ac250081e9d118b373e3074bb9714df1be4a002b0f8a871aec95cbe7"
+    }
+  },
+  "left_endpoint_ledger": {
+    "Hc_scale": "73/75",
+    "alias_order": "16/25",
+    "epistemic_status": "PROVED",
+    "stationary_amplitude": "-23/150"
+  },
+  "radial_mean_alias_theorem": {
+    "alias_support": "n~Q and H~H0~KQ/D with c~D force ell~K",
+    "boundary": "the continuous volume term is removed, but no bound for the nonzero ell~K aliases, simple-root sum, complete moment, density, or prime intervals is proved",
+    "epistemic_status": "PROVED",
+    "kernel": "K_H0(y)=H0 hat(U)(-H0 y), with U smooth and compactly supported in (0,infinity)",
+    "nonzero_geometry": "Phi_ell(n*)=Hc[log(p0Hc/(ell S))-1], |Phi_ell''(n*)|=ell^2/(Hc), and stationary amplitude sqrt(Hc)/ell=n*/sqrt(Hc)~sqrt(Q/K)",
+    "nonzero_phase": "Phi_ell(n)=Hc log(p0 n/S)-ell n",
+    "nonzero_saddle": "a stationary point exists only for ell>0 and is n*=Hc/ell, equivalently A*=p0Hc/ell",
+    "vanishing_moments": "int y^j K_H0(y)dy=0 for every j>=0 because U^(j)(0)=0",
+    "zero_mode": "after y=c log(p0 n/S), the zero n-Poisson mode is O_N((Q/c)(cH0)^(-N)) for every N, uniformly for bounded p0 and fixed smooth compact supports"
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "bound the ell~K entropy aliases with the Cycle-121 arithmetic weight or extract a phase-aware inverse"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_122_radial_mean_alias_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_122_radial_mean_alias_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_122_radial_mean_alias_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_122_radial_mean_alias_v1.py",
+    "sha256": "045eb6ab35dd2d2ac910e65a439f7da48c0489e24d4b5b9f2a67b14a1583cc16"
+  },
+  "status": "SEALED_RADIAL_ZERO_MODE_REMOVED_K_ALIAS_OPERATOR_OPEN"
+}

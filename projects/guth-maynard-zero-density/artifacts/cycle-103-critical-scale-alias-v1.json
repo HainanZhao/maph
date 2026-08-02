@@ -1,0 +1,80 @@
+{
+  "artifact_id": "cycle-103-critical-scale-alias-v1",
+  "claim_boundary": "This artifact proves critical-value homogeneity, algebraicity of K, and the one-hit-or-short-alias inverse. It proves no irrationality measure, aggregate exceptional-web bound, phase cancellation, weak/simple-root estimate, complete moment, density gain, or interval gain.",
+  "containment": {
+    "epistemic_status": "OBSERVED",
+    "statement": "two initial test expectations were arithmetically wrong; corrected fixtures leave theorem formulas unchanged"
+  },
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "e16_interface": {
+    "epistemic_status": "PROVED",
+    "statement": "J critical-value hits produce q<=floor((Lambda-1)/(J-1)) with ||qK||<=2epsilon, retaining the full cross core"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/critical_scale_alias_v1.py",
+      "sha256": "db35d90f9cf24336caf1a2fd9c7467324901fa918f29bbc391e0cbf6cff90b39"
+    },
+    "cycle102": {
+      "path": "artifacts/cycle-102-cross-valuation-inverse-v1.json",
+      "sha256": "1f4d27e5e1c269b04d3779634d6deaaa5ae21eb3f9352de781bc33b396c002ff"
+    },
+    "discovery_candidate": {
+      "path": "discovery/cycle-103-critical-scale-alias-candidate-v1.md",
+      "sha256": "934e11dece50f61d92416ae313b7d840654c4a76df72a34c755b3b1fbc335a65"
+    },
+    "document": {
+      "path": "docs/cycle-103-critical-scale-alias-v1.md",
+      "sha256": "91b76391d55a2c1339f63afe9d31a420a3abdbe78b9a2c7231dad9f76546e97b"
+    },
+    "preregistration": {
+      "path": "docs/cycle-103-critical-scale-alias-preregistration-v1.md",
+      "sha256": "1859399f4bd966154b129e793917fcaf313911769d0f440298ac3bf11a257277"
+    },
+    "tests": {
+      "path": "tests/test_cycle_103_critical_scale_alias_v1.py",
+      "sha256": "e42c2eceb6d3694806cce8a4fdb0b4d68c663c189a288cae88002118017d6532"
+    }
+  },
+  "prior_context": {
+    "cycle102_role": "supply exact primitive cross cores and lambda ranges",
+    "epistemic_status": "PROVED"
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "separate K quantitatively, count short-alias cores, or exploit the actual stationary phases before aggregating splits"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_103_critical_scale_alias_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_103_critical_scale_alias_v1.py",
+    "write_command": "python3 proof/build_cycle_103_critical_scale_alias_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "scale_alias_theorem": {
+    "algebraicity": "K lies in Q(r^(1/W)), hence deg(K)<=W",
+    "boundary": "no useful irrationality measure, aggregate core count, phase cancellation, or density/interval gain is proved",
+    "critical_number": "K=B0*r^(s/W)+C0*r^(-t/W)>0",
+    "critical_point": "t*=log(N/R)/W is independent of lambda",
+    "epistemic_status": "PROVED",
+    "homogeneity": "B=lambda*B0, C=lambda*C0 gives f(t*)=A-lambda*K",
+    "inverse": "J>=2 hits force 1<=q<=floor((Lambda-1)/(J-1)) and ||qK||<=2epsilon",
+    "least_alias_bound": "J<=1+floor((Lambda-1)/q_epsilon), or J<=1 if no q_epsilon exists",
+    "near_double_transfer": "Cycle 97 gives |A-lambda*K|<=delta+2eta^2/ell+2Leta^2/ell^2"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_103_critical_scale_alias_v1.py",
+    "sha256": "baa58b53166a4d47ea212c8a97ca8ef756dda236620adb26c11d81ea5069f45e"
+  },
+  "status": "SEALED_CRITICAL_SCALE_ONE_HIT_OR_SHORT_ALGEBRAIC_ALIAS"
+}

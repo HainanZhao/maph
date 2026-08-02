@@ -1,0 +1,80 @@
+{
+  "artifact_id": "cycle-131-order-three-denominator-bridge-v1",
+  "claim_boundary": "This artifact closes denominator blocks only through rho<=7/45-2mu/3. It proves no endpoint-denominator, full low-multiplicity or simple-root closure, complete moment, density, or intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/order_three_denominator_bridge_v1.py",
+      "sha256": "9fdcbade003c3d1e8c5e0e85123f9705a8b2e6f3dc6f74dbc1976c6e1e7a90d2"
+    },
+    "cycle127": {
+      "path": "artifacts/cycle-127-low-multiplicity-log-saddle-v1.json",
+      "sha256": "0dc33bc38ac1e3edf85b98abeffcdcf162fe6c6f6f335c3cc0f9bf268d78955a"
+    },
+    "cycle130": {
+      "path": "artifacts/cycle-130-broad-cf-cylinder-v1.json",
+      "sha256": "07cbb17383fbc224b3a122540ce2c70ea15a01e0413a63f0b7018c2f882860ab"
+    },
+    "document": {
+      "path": "docs/cycle-131-order-three-denominator-bridge-v1.md",
+      "sha256": "6e2ce62a4e2e8fb50f537579f4b04a0b88b9d975cb89c3b54eb5d75c5246e8d5"
+    },
+    "preregistration": {
+      "path": "docs/cycle-131-order-three-bridge-preregistration-v1.md",
+      "sha256": "b35cd3f9dcb0119f4aed086e50ba83e121800e9056f6345960cc1c089ddefc31"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_131_order_three_denominator_bridge_v1.py",
+      "sha256": "1db2a07bb973d28477d8cf3d47e56c6db24d07dcec448eedb3ad78b85c08609f"
+    }
+  },
+  "lower_endpoint_ledger": {
+    "epistemic_status": "PROVED",
+    "extension_beyond_broad": "2/225",
+    "hs_ceiling": "7/45",
+    "remaining_endpoint_width": "8/45"
+  },
+  "order_three_bridge_theorem": {
+    "block_terms": "after summing q~X^rho and restoring M, the order-three exponents are mu+1/10+3rho/2, mu+2rho+4/45-xi/3, mu+2rho-xi/3-1/9, and mu+rho",
+    "boundary": "no endpoint-denominator, full low-multiplicity or simple-root closure, complete moment, density, or prime intervals is proved",
+    "broad_extension": "rho_HS exceeds the Cycle-130 broad cutoff by xi/2+mu/3-14/45>=2/225",
+    "closure_ceiling": "the derivative term reaches target 1/3 at rho_HS=7/45-2mu/3; all four terms are <=1/3 for rho<=rho_HS",
+    "epistemic_status": "PROVED",
+    "remaining_width": "the unresolved endpoint rho_HS<rho<=1/3-mu has width 8/45-mu/3>=133/900",
+    "secondary_margins": "at rho_HS, tube margin=(xi+mu)/3-1/15, ratio margin=2/15+(xi+mu)/3, and constant margin=8/45-mu/3, all positive"
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "control 7/45-2mu/3<rho<=1/3-mu by joint endpoint discrepancy or extract a narrow-cylinder relation graph"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_131_order_three_denominator_bridge_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_131_order_three_denominator_bridge_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_131_order_three_denominator_bridge_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_131_order_three_denominator_bridge_v1.py",
+    "sha256": "31542c9734ac4e7b9c6ec10896a4de46b3a57a2d368969490c20691118da27d7"
+  },
+  "status": "SEALED_DENOMINATORS_TO_7_45_MINUS_2MU_3_ENDPOINT_OPEN"
+}

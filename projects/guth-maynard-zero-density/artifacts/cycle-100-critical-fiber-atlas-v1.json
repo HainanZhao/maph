@@ -1,0 +1,81 @@
+{
+  "artifact_id": "cycle-100-critical-fiber-atlas-v1",
+  "claim_boundary": "This artifact proves the exact fiber formula, valuation factorization, and generic bound. It proves no exceptional-web bound, weak-row estimate, alias moment, density gain, or interval gain, and imports no unproved Mobius sign.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "fiber_theorem": {
+    "boundary": "no bound for the cross-valuation web or weak near-double rows",
+    "epistemic_status": "PROVED",
+    "exact_count": "sum_{s=1}^{W-1} floor(Q*gcd(s*N,(W-s)*R)/max(s*N,(W-s)*R))",
+    "exceptional_web": "gcd(s/g0,R)>1 or gcd(t/g0,N)>1, with side and prime powers retained",
+    "fiber_equation": "C*t*R=B*s*N",
+    "gcd_factorization": "gcd(s*N,t*R)=g0*gcd(s/g0,R)*gcd(t/g0,N), g0=gcd(s,t)",
+    "generic_bound": "F_generic<=2*Q*tau(W)/min(N,R)",
+    "orientation": "signed w fixes orientation; s=abs(a), t=abs(b), s+t=abs(w)",
+    "sign_boundary": "no Mobius sign is inherited; later work must reinsert actual stationary phases/amplitudes",
+    "solutions": "B=lambda*t*R/g, C=lambda*s*N/g, lambda<=Q*g/max(s*N,t*R)"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/critical_fiber_atlas_v1.py",
+      "sha256": "d432247621bd6c736496eadcf681d88b18936b36005b5d3d3855d1992e39eecf"
+    },
+    "cycle99": {
+      "path": "artifacts/cycle-99-critical-rational-ray-v1.json",
+      "sha256": "69e453fea12a404c17078169ac605c17b05109b99c74e0dd82f830e1ecdf2ee6"
+    },
+    "discovery_candidate": {
+      "path": "discovery/cycle-100-critical-fiber-candidate-v1.md",
+      "sha256": "2a283fdb5af445b309d051ee5ceb9eb38fe6a6a4ef8d4cbabf6ddf6d1f8d2882"
+    },
+    "document": {
+      "path": "docs/cycle-100-critical-fiber-atlas-v1.md",
+      "sha256": "96336e7a03ecfca1abce166a45e52b9d7c01971dc74316081a752f79a8065ba3"
+    },
+    "preregistration": {
+      "path": "docs/cycle-100-critical-fiber-preregistration-v1.md",
+      "sha256": "63fa5b39e638ef95a7bc24bcbe059c2c2c65d59623d3b6e2ff01b158f5ba29ae"
+    },
+    "tests": {
+      "path": "tests/test_cycle_100_critical_fiber_atlas_v1.py",
+      "sha256": "00ae5a54357c5a35e97929cbcb71d814b78c9e1d2ee1594d50a838afb675a4b6"
+    }
+  },
+  "generic_output": {
+    "epistemic_status": "PROVED",
+    "statement": "F_generic<=2Q tau(|w|)/min(N,R)."
+  },
+  "inverse_output": {
+    "epistemic_status": "PROVED",
+    "statement": "Every nongeneric split carries a side-labelled cross-valuation prime-power web."
+  },
+  "prior_context": {
+    "cycle99_role": "supply unique labels and the oriented factorization fiber",
+    "epistemic_status": "PROVED"
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Bound low-height labels and cross-valuation webs with actual stationary phases/amplitudes."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_100_critical_fiber_atlas_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_100_critical_fiber_atlas_v1.py",
+    "write_command": "python3 proof/build_cycle_100_critical_fiber_atlas_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_100_critical_fiber_atlas_v1.py",
+    "sha256": "ae6855b521cf4bf5ff182d63281e7fa2457b3d65374821549d93517971e5f1e7"
+  },
+  "status": "SEALED_GENERIC_CRITICAL_FIBER_BOUND_CROSS_VALUATION_AND_LOW_HEIGHT_OPEN"
+}

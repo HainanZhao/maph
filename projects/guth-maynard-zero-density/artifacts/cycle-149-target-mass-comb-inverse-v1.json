@@ -1,0 +1,78 @@
+{
+  "artifact_id": "cycle-149-target-mass-comb-inverse-v1",
+  "claim_boundary": "This artifact proves the exact endpoint occupancy threshold and a coefficient-sensitive Hilbert anti-alignment inverse, including one retained denominator witness. It does not exclude anti-alignment and proves no full second moment, endpoint, complete moment, density, or intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/target_mass_comb_inverse_v1.py",
+      "sha256": "aaf8e1193cd4b4788ee32cc9a71427086911a16dd49bfb3794ca352428c1f38c"
+    },
+    "cycle148": {
+      "path": "artifacts/cycle-148-endpoint-major-arc-comb-v1.json",
+      "sha256": "9549454a2cefd60d37673ecd9b7f012bb8d18bcb24ff7f439c99005e99604cbb"
+    },
+    "document": {
+      "path": "docs/cycle-149-target-mass-comb-inverse-v1.md",
+      "sha256": "80952c11f36eb6062b5915b34fbea6bde10d13d4cbd7febcac367f6e425c15f4"
+    },
+    "preregistration": {
+      "path": "docs/cycle-149-target-mass-comb-inverse-preregistration-v1.md",
+      "sha256": "a3b099d71c4331f88d60c1da51b735d4a5d01a4ca168e217ab993081cad4939f"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_149_target_mass_comb_inverse_v1.py",
+      "sha256": "7c43bbc5f3fc5268efef19797b4339c7d311875536eae0beefe85aa75e5d63c6"
+    }
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "exclude the retained negative divisor-comb correlation using the complement phase geometry, or construct an explicit actual model"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_149_target_mass_comb_inverse_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_149_target_mass_comb_inverse_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_149_target_mass_comb_inverse_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sample_exponent_ledger": {
+    "comb_to_global_diagonal": "1/30",
+    "endpoint_mode_exponent": "1/2",
+    "epistemic_status": "PROVED",
+    "relative_antialignment_exponent": "-1/60",
+    "threshold_exponent": "7/15"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_149_target_mass_comb_inverse_v1.py",
+    "sha256": "d3392c0cf00dd6892ea469d5b1d66a349d2ef171c47a951305ba33f3c328a298"
+  },
+  "status": "SEALED_DIVISOR_COMB_ANTIALIGNMENT_EXCLUSION_OR_MODEL_OPEN",
+  "target_mass_comb_inverse_theorem": {
+    "boundary": "anti-alignment is not excluded here; no full second moment, endpoint, complete moment, density, or intervals is proved",
+    "coefficient_scope": "the endpoint operator and complement are formed from one fixed polynomial before norms; the inverse retains the common coefficient vector, rational anchor, endpoint denominators, and frequency block",
+    "epistemic_status": "PROVED",
+    "hilbert_inverse": "if ||F||_2^2<=C_diag B0 and ||C||_2^2>=Lambda B0 for F=C+R, then ||R+C||_2/||C||_2<=sqrt(C_diag/Lambda); for Lambda=X^omega the complement is X^(-omega/2)-close to the negative comb",
+    "modulus_witness": "for the ideal comb C_comb=Q sum_h A_h 1_(h|k), A_h>=0, near anti-alignment implies sum_h A_h Re<R,Q1_(h|k)> is at most -(1-epsilon)||C_comb||_2^2; hence one retained denominator h has negative correlation of magnitude at least (1-epsilon)||C_comb||_2^2/sum_h A_h",
+    "norm_balance": "the same triangle inequality gives | ||R||_2/||C||_2-1 | <=sqrt(C_diag/Lambda)",
+    "occupancy_threshold": "Cycle 148 gives ||C||_2^2>>KQ^2R_C/N while the global diagonal budget is B0=KDQ; their ratio is Lambda=(R_C/D)(Q/N), so the critical endpoint fraction is R_C/D=N/Q",
+    "structural_implication": "a supercritical strict-endpoint population can coexist with a diagonal full moment only through near-perfect cross-endpoint or core--halo anti-alignment on a specific divisor comb"
+  }
+}

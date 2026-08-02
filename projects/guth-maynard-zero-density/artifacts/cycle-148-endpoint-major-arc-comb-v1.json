@@ -1,0 +1,84 @@
+{
+  "artifact_id": "cycle-148-endpoint-major-arc-comb-v1",
+  "claim_boundary": "This artifact proves a Q/N super-diagonal lower bound for one strict positive endpoint operator in every fixed rho<1/3 band. It proves neither target mass for that operator nor absence of cross-cell cancellation, and proves no full second moment, endpoint, complete moment, density, or intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "endpoint_major_arc_comb_theorem": {
+    "anchor_denominator": "for c0=A/B and reduced p/q, the reduced denominator h of c0p/q satisfies q/A<=h<=Bq; bounded rational anchors preserve the denominator exponent",
+    "boundary": "no full second moment, endpoint, complete moment, density, or intervals is proved",
+    "comb_lower_bound": "for positive fixed-chart mode weights u_a, summing the squared resonant incidence function gives M2(C)>>KQ^2/N sum_a u_a^2",
+    "cycle132_input": "Cycle 132 gives |g^a-p/q|<1/(qS); a strict shell with S>>KQ/q supplies the required O(1/(KQ)) endpoint buffer",
+    "diagonal_comparison": "the cell diagonal is comparable to KQ sum_a u_a^2, so the isolated endpoint operator has a Q/N=X^(1/3-rho) major-arc excess",
+    "epistemic_status": "PROVED",
+    "mass_boundary": "the theorem does not show that one endpoint class carries a target-sized share of the full fixed polynomial, and it does not exclude cross-cell cancellation",
+    "poisson_nonmultiples": "if h does not divide k, then ||k r/h||>=1/h; under h<<N<=QX^(-delta) and |c0g^a-r/h|<<1/(KQ), exact Poisson summation makes the length-Q smooth coefficient sum O_A(Q(Q/N)^(-A)) for every fixed A",
+    "resonant_multiples": "if h divides k and K<=k<=2K, the rational phase is integral; with a sufficiently small fixed endpoint buffer, the residual phase lies in a common pi/6 wedge and the real coefficient sum is >>Q",
+    "structural_implication": "a proof that decomposes into endpoint operators and sums their second-moment norms cannot reach diagonal strength in any fixed rho<1/3 band; cancellation must occur between endpoint cells or through the full common coefficient vector"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/endpoint_major_arc_comb_v1.py",
+      "sha256": "9fe4bbe25d463babb89dfded2bfaad694b03f34a1187479ead12429130fcba31"
+    },
+    "cycle132": {
+      "path": "artifacts/cycle-132-unimodular-endpoint-lift-v1.json",
+      "sha256": "aeab0475962728918ab08c2b78e87dcef4bed7840c57e376557bcdcdfb434cee"
+    },
+    "cycle147": {
+      "path": "artifacts/cycle-147-strict-core-signed-cell-v1.json",
+      "sha256": "95671bb99fb4f070b15e8c8210d7c69a6f9c4241d6ec5bd17434a3ab1e5116b8"
+    },
+    "document": {
+      "path": "docs/cycle-148-endpoint-major-arc-comb-v1.md",
+      "sha256": "9427b81f88cde54d0341d7d521b39a0cc58c891df882216a1493e7ef81ad49e6"
+    },
+    "preregistration": {
+      "path": "docs/cycle-148-endpoint-major-arc-comb-preregistration-v1.md",
+      "sha256": "f288c07188fa6d4cf5aad278e323cb0cd7c01335f771224f871f84319e5fdf3b"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_148_endpoint_major_arc_comb_v1.py",
+      "sha256": "479263919dee61cecd23408cc159a27e061bd43bd82444f4bbc5598c2921abbb"
+    }
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "prove cancellation between rational endpoint combs using their common coefficient vector, or extract a target-mass comb obstruction"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_148_endpoint_major_arc_comb_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_148_endpoint_major_arc_comb_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_148_endpoint_major_arc_comb_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sample_exponent_ledger": {
+    "comb_count": "1/2",
+    "comb_lower": "17/12",
+    "diagonal": "77/60",
+    "epistemic_status": "PROVED",
+    "excess": "2/15"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_148_endpoint_major_arc_comb_v1.py",
+    "sha256": "2f7a09acc2c38f857b92a476006b34a2d2754eccae3cd050857e97f0038a9061"
+  },
+  "status": "SEALED_CROSS_ENDPOINT_COMB_CANCELLATION_OR_INVERSE_OPEN"
+}

@@ -1,8 +1,8 @@
 # Agent instructions: maph
 
-This is the repository-wide instruction file. Root `CLAUDE.md` and
-`GEMINI.md` point here; edit only this file. Projects live independently
-under `projects/*/` and may add a narrower `AGENTS.md`.
+This is the repository-wide instruction file. Root `CLAUDE.md` points here;
+edit only this file. Projects live independently under `projects/*/` and may
+add a narrower `AGENTS.md`.
 
 ## 0. Epistemic ground rules
 
@@ -25,9 +25,10 @@ under `projects/*/` and may add a narrower `AGENTS.md`.
 
 Every active research project has a root `PLAN.md`; it is the concise,
 authoritative strategic state over chat memory. Read it completely, then
-the nearest `AGENTS.md`, before acting. Detailed chronological memory lives
-in a sibling `RESEARCH_LOG.md`; consult the relevant entries when a task
-depends on prior cycles, corrections, or artifact identities.
+the nearest `AGENTS.md`, before acting. Detailed cycle memory lives in
+committed, individually named cycle records; consult the relevant artifact
+and linked documents when a task depends on prior cycles, corrections, or
+artifact identities.
 
 `PLAN.md` must contain:
 
@@ -40,19 +41,28 @@ Keep `PLAN.md` short enough to reread routinely. Do not store per-cycle row
 registries, long correction narratives, exhaustive hashes, test transcripts,
 or detailed replay histories there.
 
-`RESEARCH_LOG.md` is append-oriented and must contain:
+Each sealed cycle must instead have a committed, immutable record:
 
-- one concise finding-and-evidence summary per cycle;
-- failed, deferred, superseded, and corrected paths without erasure;
-- exact artifact identities/hashes, replay commands, resource observations,
-  and detailed gate evidence when material;
-- links back to the high-level path or gate affected in `PLAN.md`.
+- `artifacts/cycle-<n>-<slug>-v<version>.json` is the canonical
+  machine-readable finding, claim boundary, tags, frozen hashes, replay, and
+  gate outcome;
+- `docs/cycle-<n>-<slug>-v<version>.md` and its preregistration document are
+  the readable derivation and decision record;
+- failed, deferred, superseded, and corrected paths remain as records; a
+  correction creates a new record and never mutates a sealed one.
+
+Projects may maintain a local DuckDB index built from those records for
+search, dependency queries, and generated status. The database binary is
+ignored and never canonical; commit its schema, pinned dependency, rebuild
+script, tests, and generated text status only. Do not create or append a
+monolithic `RESEARCH_LOG.md`. An existing one is historical archive only.
 
 Before work: re-read frozen counts and conventions from artifacts, check
 `git status` and recent/fetched history, and preserve unrelated changes.
 Update `PLAN.md` only when strategy, status, a headline result, an open
-question, or the next authorized action changes. Append cycle-level findings
-to `RESEARCH_LOG.md`. Never erase a failed path from the research log.
+question, or the next authorized action changes. Seal cycle-level findings in
+their individual record and regenerate the compact status view. Never erase a
+failed path from the cycle record set.
 
 ## 2. Discovery and proof are separate
 
@@ -67,6 +77,14 @@ to `RESEARCH_LOG.md`. Never erase a failed path from the research log.
 - Every proof-grade result must be version-pinned, hash-recorded,
   scripted, and one-command replayable. If it cannot be replayed, it
   does not exist.
+- Reuse a project-local, versioned sealing scaffold for routine artifact
+  mechanics: runtime checks, frozen-input hashes, prior-status validation,
+  deterministic JSON rendering, and immutable `--write`/`--check` behavior.
+  Cycle builders should contain only cycle-specific inputs, theorem checks,
+  claim boundaries, and payload fields. Freeze the scaffold and its tests as
+  artifact inputs. Never rewrite a scaffold used by an existing artifact;
+  create the next version instead. Do not mechanically refactor already
+  sealed builders, because their recorded hashes are part of the replay.
 
 ## 3. Conventions are code
 
@@ -155,7 +173,7 @@ Never conceal, erase, or silently work around a listed finding.
 - Label non-proof cross-checks as quarantined and explain why.
 - Verify bibliography metadata and cite theorem/page numbers. Uncited
   entries and dangling references are bugs.
-- Every cycle/block entry in `RESEARCH_LOG.md` leads with outcomes and explicitly surfaces
+- Every cycle record leads with outcomes and explicitly surfaces
   newly banked major theorems, breakthroughs, corrections, containment
   events, and structural no-go results. State tags, gate changes, and
   implications.

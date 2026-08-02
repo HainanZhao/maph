@@ -1,0 +1,74 @@
+{
+  "artifact_id": "cycle-123-joint-radial-alias-v1",
+  "claim_boundary": "This artifact derives the fully normalized joint-saddle leading operator and fixed-chart remainder scale. It proves no bilinear estimate, simple-root closure, complete moment, density, or intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/joint_radial_alias_v1.py",
+      "sha256": "c23de73a82ee7e4d26c96b1db33b3770fa9f144638c0138a7d1dfac7be642972"
+    },
+    "cycle122": {
+      "path": "artifacts/cycle-122-radial-mean-alias-v1.json",
+      "sha256": "c419446735481e49ceef40c66296ad0ae6d0efe5bdef90cf4b3e173711a86a95"
+    },
+    "document": {
+      "path": "docs/cycle-123-joint-radial-alias-v1.md",
+      "sha256": "cb17a7208fb10524c7aab1eb74ec590065d9cbabfb1dd6ce5eff70c5df09de77"
+    },
+    "preregistration": {
+      "path": "docs/cycle-123-joint-radial-alias-preregistration-v1.md",
+      "sha256": "f5590c50be3f7c5422eb339a54e0d0385590892ecd6c789ab74616ed63a10885"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_123_joint_radial_alias_v1.py",
+      "sha256": "049e1cb6f7b7490029ed92e663c650e333678efff158a0f5a4428eccd4e5b24f"
+    }
+  },
+  "joint_alias_theorem": {
+    "boundary": "no bilinear estimate for the ell~K operator, simple-root closure, complete moment, density, or prime intervals is proved",
+    "cutoffs": "at the saddle, V(n/Q)=V(S/(p0Q)); the logarithmic W arguments are -(u+v)/D and -v/D; U is evaluated at ell S/(p0cH0)",
+    "epistemic_status": "PROVED",
+    "factorization": "e(-ell S/p0)=e(-ell n'g^u)e(-ell(q0/p0)m g^(u+v))",
+    "hessian": "Hess=[[0,c/n],[c/n,-Hc/n^2]], det=-(c/n)^2; it has one positive and one negative eigenvalue, hence signature zero",
+    "joint_amplitude": "|det Hess|^(-1/2)=n*/c=S/(p0c)",
+    "joint_saddle": "n*=S/p0 and H*=ell S/(p0c); interior support forces ell~K",
+    "phase": "Phi_ell(H,n)=Hc log(p0n/S)-ell n, S=p0n'g^u+q0m g^(u+v)",
+    "remainder": "after H=H0 h,n=Qx, the large parameter is H0c~KQ and the fixed-chart two-dimensional remainder is smaller than the leading stationary scale by O((KQ)^(-1))",
+    "stationary_value": "Phi_ell(H*,n*)=-ell S/p0=-ell n'g^u-ell(q0/p0)m g^(u+v)",
+    "total_amplitude": "multiplying the Cycle-121 factor e(1/8)c z_v/m gives e(1/8)(q0/p0)g^(u+v)"
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "prove the required weighted bilinear estimate for the separable ell~K phase or extract a phase-aware additive-energy inverse"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_123_joint_radial_alias_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_123_joint_radial_alias_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_123_joint_radial_alias_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_123_joint_radial_alias_v1.py",
+    "sha256": "788d408cf6e7a66415358ff698a908581aaf4ce291fe5d5bd9348c96f11bfabf"
+  },
+  "status": "SEALED_JOINT_ALIAS_AMPLITUDE_PHASE_FACTORIZATION_BILINEAR_OPEN"
+}

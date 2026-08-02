@@ -1,0 +1,82 @@
+{
+  "artifact_id": "cycle-105-powered-ray-compiler-v1",
+  "claim_boundary": "This artifact compiles perfect-power aliases to anchored powered rays with a root-error and exponent budget. It neither fills missing exponents nor produces a realized packet seed, complete moment, density, or interval gain.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "e16_interface": {
+    "epistemic_status": "PROVED",
+    "statement": "repeated bases retain exact exponent set, arithmetic mode multiples, geometric labels, phase error, and payloads"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/powered_ray_compiler_v1.py",
+      "sha256": "83cd7576f495fb8b40506810c24fb33c33f1a099ee4685d35661ef9e76374484"
+    },
+    "cycle104": {
+      "path": "artifacts/cycle-104-radical-alias-separation-v1.json",
+      "sha256": "be9acdb96e8d8708ccdc1625e273f9fd092ad505125b058f6162ceae0715ed5b"
+    },
+    "discovery_candidate": {
+      "path": "discovery/cycle-105-powered-ray-candidate-v1.md",
+      "sha256": "6ab604537243be099a7581474a7e97ed8a93f80b1414be31bbeb4b926cd688d4"
+    },
+    "document": {
+      "path": "docs/cycle-105-powered-ray-compiler-v1.md",
+      "sha256": "0a35f1c1e1f356c19c2fe756185465b4c72400b90607f140801fe29107862998"
+    },
+    "preregistration": {
+      "path": "docs/cycle-105-powered-ray-preregistration-v1.md",
+      "sha256": "80ca7e355e6cf80d6afcccd8459870746704f727bc9ec7c6809d59ec976bb026"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_105_powered_ray_compiler_v1.py",
+      "sha256": "5ed236e4bee8a437be094eedb9345f23cd0a614e4a803363fd90f89f1310d84e"
+    }
+  },
+  "powered_ray_theorem": {
+    "boundary": "missing exponents are not filled and a powered ray is not yet a realized packet seed",
+    "epistemic_status": "PROVED",
+    "frozen_envelope": "if |h*d*x|<=L and delta<=exp(-L)/2, the minimum base is at least (exp(-L)/2)^(1/d)",
+    "height_cap": "d<=floor(log(H)/log(Z)) for nonunit base height Z",
+    "powered_ray": "N/R=(n0/r0)^d and w=h*d",
+    "repeated_output": "modes h*d and labels (n0/r0)^d on the exact observed exponent set",
+    "root_error": "|n0/r0-exp(h*x)|<=delta/(d*min(n0/r0,exp(h*x))^(d-1))"
+  },
+  "prior_context": {
+    "cycle104_role": "classify rational aliases as perfect-power labels",
+    "epistemic_status": "PROVED"
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "turn repeated powered rays into realized packet seeds and pack singleton/large-degree cores"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_105_powered_ray_compiler_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_105_powered_ray_compiler_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_105_powered_ray_compiler_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_105_powered_ray_compiler_v1.py",
+    "sha256": "1ce2861bc8ae258fa0c4fe92adb2fa00262911924f63b91e3e02424a4b4cfa16"
+  },
+  "status": "SEALED_PERFECT_POWER_ALIAS_TO_ANCHORED_POWERED_RAY"
+}

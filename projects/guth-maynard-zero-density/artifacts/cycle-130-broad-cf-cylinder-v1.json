@@ -1,0 +1,78 @@
+{
+  "artifact_id": "cycle-130-broad-cf-cylinder-v1",
+  "broad_cylinder_theorem": {
+    "boundary": "no narrow-cylinder bound, full low-multiplicity or simple-root closure, complete moment, density, or prime intervals is proved",
+    "broad_count": "summing p~q and q<=q0 gives O(q0^2+(D/A0)log q0)=O((D/A0)X^epsilon) occupied modes",
+    "cylinder_cover": "a convergent p/q with next partial quotient >=cA0 lies in an interval of length O(1/(A0q^2)) about p/q",
+    "epistemic_status": "PROVED",
+    "grid_spacing": "on the fixed compact mode chart, consecutive g^a are separated by asymp 1/D, so an interval J contains O(1+D|J|) modes",
+    "parameters": "A0=KM^2/Q, q0=sqrt(D/A0), L=Q/M",
+    "range_margins": "q0 has exponent 7/15-xi/2-mu; it is positive by at least 7/300, while L/q0 has exponent xi/2-2/15>=14/75",
+    "remaining_range": "only narrow cylinders sqrt(DQ/(KM^2))<q<<Q/M remain in the low-multiplicity denominator branch",
+    "weighted_count": "multiplication by M gives DQ/(KM) X^epsilon with exponent 14/15-xi-mu, below Q by xi+mu-3/5>=1/25"
+  },
+  "claim_boundary": "This artifact closes only convergent cylinders with q<=sqrt(DQ/(KM^2)). It proves no narrow-cylinder, full low-multiplicity or simple-root closure, complete moment, density, or intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/broad_cf_cylinder_v1.py",
+      "sha256": "a17f2dfe6d854b236227af89e89b4a5a3b18dc7e32a87b3eaaa3be75ec1132eb"
+    },
+    "cycle129": {
+      "path": "artifacts/cycle-129-continued-fraction-jump-v1.json",
+      "sha256": "8be0a48187028ba3ca4ddf46a2c80d4e682207855cc86a1756b25c607de861bf"
+    },
+    "document": {
+      "path": "docs/cycle-130-broad-cf-cylinder-v1.md",
+      "sha256": "decebd4469ab8dca709924b301ed8724017a8bf3d0c7959a275c845b728c2a06"
+    },
+    "preregistration": {
+      "path": "docs/cycle-130-broad-cylinder-preregistration-v1.md",
+      "sha256": "376db1015de56f89816b7ffae18388ed78feab5c3c9e3a48ebbf73fb3d33bea2"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_130_broad_cf_cylinder_v1.py",
+      "sha256": "7d79e1878a90ce487b9fa61f85622096651f34c385eb3209d393e87345ed9eb4"
+    }
+  },
+  "lower_endpoint_ledger": {
+    "broad_denominator_ceiling": "11/75",
+    "epistemic_status": "PROVED",
+    "narrow_range_width": "14/75",
+    "target_margin": "1/25"
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "control narrow cylinders sqrt(DQ/(KM^2))<q<<Q/M by endpoint discrepancy or compile their relation graph"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_130_broad_cf_cylinder_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_130_broad_cf_cylinder_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_130_broad_cf_cylinder_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_130_broad_cf_cylinder_v1.py",
+    "sha256": "69f263a6f1fb5fbf4ef30ffc3d83838a74fe31ff78ddd492a4baeb6208452bb2"
+  },
+  "status": "SEALED_BROAD_CF_CYLINDERS_VOLUME_CLOSED_NARROW_ENDPOINT_OPEN"
+}

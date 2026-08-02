@@ -1,0 +1,107 @@
+{
+  "artifact_id": "cycle-110-perfect-power-split-sum-v1",
+  "claim_boundary": "This artifact proves a uniform bound below four for the normalized Jacobian weight over every primitive split of one perfect-power label, and a 4*tau(W) bound over all degrees at one strong mode. The common chart/anchor prefactor and nonsmooth payload remain open.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "finite_falsifier": {
+    "box": "2<=d<=80, 1<=n0,r0<=12, gcd(n0,r0)=1",
+    "epistemic_status": "OBSERVED",
+    "maximum": 0.816496580927726,
+    "proof_role": "none",
+    "rows": 7189,
+    "witness": [
+      3,
+      1,
+      1
+    ]
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/perfect_power_split_sum_v1.py",
+      "sha256": "5fb8c7afd5af68527b7ff6ed9a0d7136e5392aee888f3c76bc7813b4c02c8ed8"
+    },
+    "cycle102": {
+      "path": "artifacts/cycle-102-cross-valuation-inverse-v1.json",
+      "sha256": "1f4d27e5e1c269b04d3779634d6deaaa5ae21eb3f9352de781bc33b396c002ff"
+    },
+    "cycle106": {
+      "path": "artifacts/cycle-106-beta-free-saturation-v1.json",
+      "sha256": "0e681ebf90d531a9564677779016642afbb73cf6c0cc47760b4b17db4b2bf3d1"
+    },
+    "cycle109": {
+      "path": "artifacts/cycle-109-uniform-triple-b-v1.json",
+      "sha256": "da481a16c7a9e027d53104282410e2bad73fcaf6157a9ea3fe61ffeb8d74f432"
+    },
+    "cycle99": {
+      "path": "artifacts/cycle-99-critical-rational-ray-v1.json",
+      "sha256": "69e453fea12a404c17078169ac605c17b05109b99c74e0dd82f830e1ecdf2ee6"
+    },
+    "discovery_candidate": {
+      "path": "discovery/cycle-110-perfect-power-split-candidate-v1.md",
+      "sha256": "0e9692107c814e359fef715404810089b7b0dfa269f8deb09ad97c7bd7c7bac1"
+    },
+    "document": {
+      "path": "docs/cycle-110-perfect-power-split-sum-v1.md",
+      "sha256": "0258325c3534534a78b565fda2c23f4f87ff015a3e29724fa1eed7c7ec669c07"
+    },
+    "preregistration": {
+      "path": "docs/cycle-110-perfect-power-split-preregistration-v1.md",
+      "sha256": "f1d09ed297aacca521bc2546c344a4c0f0f43213f0077e971e285389c383cda2"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_110_perfect_power_split_sum_v1.py",
+      "sha256": "ed881eb56205e15db9a2b0795af7cfe9ddf3134ba39a55c437af4e52f6c3b916"
+    }
+  },
+  "prior_context": {
+    "epistemic_status": "PROVED",
+    "roles": {
+      "cycle102": "exact primitive split and cross factors",
+      "cycle106": "perfect-power coefficient formulas",
+      "cycle109": "absolute summability along each actual scale ray",
+      "cycle99": "injective strong critical label per signed mode"
+    }
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "make the chart/anchor prefactor uniform across modes and then close the irrational large-degree, weak, and simple-root branches"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_110_perfect_power_split_sum_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_110_perfect_power_split_sum_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_110_perfect_power_split_sum_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_110_perfect_power_split_sum_v1.py",
+    "sha256": "dbb271018bfc988d0d2da51ccacf4ec5dffa28eb33fcda99725e589492a264be"
+  },
+  "split_sum_theorem": {
+    "actual_scale": "the actual-scale lattice contributes lambda0^(-3/2)<=1 before the summable ell ray",
+    "boundary": "the compact-chart/anchor prefactor and nonsmooth payload are not bounded here; large-degree irrational, weak, simple-root, moment, density, and interval claims remain open",
+    "coefficient_product": "K*B0*C0=d*u*v*n0^(u+d)*r0^(v+d)/(x*y)^3, x=gcd(u,r0^d), y=gcd(v,n0^d)",
+    "degree_aggregation": "for a fixed mode W and its injective strong label, d divides W, so all perfect-power primitive splits have total normalized weight at most 4*tau(W)",
+    "epistemic_status": "PROVED",
+    "split_weight": "J(u,v)=1/sqrt(K*B0*C0)",
+    "uniform_split_sum": "sum over primitive u+v=d of J(u,v) is less than 4, uniformly in d,n0,r0"
+  },
+  "status": "SEALED_PERFECT_POWER_SPLIT_WEIGHT_UNIFORMLY_SUMMABLE"
+}

@@ -1,0 +1,96 @@
+{
+  "artifact_id": "cycle-94-triple-b-entropy-v1",
+  "central_web": {
+    "epistemic_status": "PROVED",
+    "statement": "Central stationarity forces h'/h=n'/n and m=c0(n-n'); for rational c0=p0/q0 this is q0 m=p0(n-n')."
+  },
+  "claim_boundary": "This artifact proves the triple-B entropy phase, central stationary anchor-difference relation, and projective Hessian degeneracy. It proves no full stationary-alias bound, moment theorem, density gain, or interval gain.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "F_Delta": "log(c0*Delta*n'/(m*(h-Delta)))",
+    "F_h": "log((h-Delta)*n/(h*n'))",
+    "central_anchor_difference": "m=c0*(n-n')",
+    "central_ratio": "(h-Delta)/h=n'/n",
+    "combined_phase": "F=Delta*log(c0*Delta/m)-h*log(h/n)+(h-Delta)*log((h-Delta)/n')",
+    "gate": "central anchor-difference web banked; projective entropy aliases open",
+    "hessian": [
+      [
+        "1/(h-Delta)-1/h",
+        "-1/(h-Delta)"
+      ],
+      [
+        "-1/(h-Delta)",
+        "1/Delta+1/(h-Delta)"
+      ]
+    ],
+    "hessian_determinant": "0 identically",
+    "homogeneity": "F(lambda*h,lambda*Delta)=lambda*F(h,Delta)",
+    "open_modes": "nonzero Poisson modes in h and Delta create projective entropy aliases and are not covered by the central relation"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/triple_b_entropy_v1.py",
+      "sha256": "e39d9ab1dc977f1fa343ed115cd6ee5ae4cbed7cc7aff81def7c19b5b94e22f8"
+    },
+    "cycle90": {
+      "path": "artifacts/cycle-90-equal-height-bprocess-v1.json",
+      "sha256": "a24a63110e26fff4672c8b8e2cca27569a00885dec7b8c934f8ca3971967c3de"
+    },
+    "cycle93": {
+      "path": "artifacts/cycle-93-nonstationary-mellin-branch-v1.json",
+      "sha256": "5dd299f0a0c67774f65b30cffd1e2ee48aace17b07eb6c3c6e1700b1e306cd3d"
+    },
+    "discovery_candidate": {
+      "path": "discovery/cycle-94-triple-b-entropy-candidate-v1.md",
+      "sha256": "a06cd061cc6850245a3aee5df3fbe2573e72f7dfcc047127225f810f1cd78477"
+    },
+    "document": {
+      "path": "docs/cycle-94-triple-b-entropy-v1.md",
+      "sha256": "4b2a022c9bb4a11851ff7c8e5078e17685235988e91c22e0befa39ed4b3583a3"
+    },
+    "preregistration": {
+      "path": "docs/cycle-94-triple-b-entropy-preregistration-v1.md",
+      "sha256": "71bdcbd85195c0faa70cf1468077e5cbb5ddf0e5b91810104fc9ad68f07d4126"
+    },
+    "tests": {
+      "path": "tests/test_cycle_94_triple_b_entropy_v1.py",
+      "sha256": "f03327b3dc98b57361fa6c4d82e32be8966b96695555e3a901cba11b704b9cb6"
+    }
+  },
+  "prior_context": {
+    "cycle90_role": "supply the logarithmic r and r' B-process signs",
+    "cycle93_role": "leave only transition and stationary integer aliases after strict nonstationary closure",
+    "epistemic_status": "PROVED"
+  },
+  "projective_boundary": {
+    "epistemic_status": "PROVED",
+    "statement": "The entropy phase is degree-one homogeneous in (h,Delta) and its Hessian determinant vanishes identically."
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Bound nonzero projective entropy aliases or show that each produces a translated anchor-difference web."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_94_triple_b_entropy_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_94_triple_b_entropy_v1.py",
+    "write_command": "python3 proof/build_cycle_94_triple_b_entropy_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3",
+    "sympy": "1.12"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_94_triple_b_entropy_v1.py",
+    "sha256": "8813d0667bbd6a630dd54d312be82342d55892f24a330033cf952c5f4366dc6a"
+  },
+  "status": "SEALED_CENTRAL_ANCHOR_DIFFERENCE_WEB_PROJECTIVE_ENTROPY_ALIASES_OPEN"
+}

@@ -1,0 +1,86 @@
+{
+  "artifact_id": "cycle-142-changing-color-walk-v1",
+  "changing_color_walk_theorem": {
+    "boundary": "this is not a no-go for analytic cancellation across sparse components; no paired norm, endpoint, moment, density, or prime intervals is proved",
+    "density_gate": "if Lambda is the logarithmic chain ceiling, the path-forest bound forces a contradiction only from L>=ceil((Lambda+1)R/(Lambda+2)); the required density is 1-O(1/log N)",
+    "deterministic_colors": "the cross-gcd color z_t is determined by the current reduced label; changing colors do not create an independent recurrence parameter",
+    "epistemic_status": "PROVED",
+    "height_ceiling": "for nontrivial A/B, a supported rational geometric chain at height N has O(log N) edges by the Cycle-78 lower bound height(x_0(A/B)^t)>=2^t/(C^2N^2)",
+    "reduction_walk": "for reduced x_t=p_t/q_t and r=A/B, z_t=gcd(Ap_t,Bq_t)=gcd(A,q_t)gcd(B,p_t), and p_{t+1}=Ap_t/z_t, q_{t+1}=Bq_t/z_t",
+    "remaining_object": "sparse path components must be controlled in the original paired Fourier norm, retaining component starts, r_d-g^d, and signed tails",
+    "scoped_saturation": "the fixed-multiplier divisor/continuation compiler yields at most a logarithmic contradiction and no fixed-power saving unless an independent theorem forces near-complete edge density",
+    "valuation_walk": "primewise, with alpha=v_l(A), beta=v_l(B), alpha*beta=0, z=min(alpha,v_l(q_t))+min(beta,v_l(p_t)); subtract z from both updated numerator and denominator valuations"
+  },
+  "claim_boundary": "This artifact proves a logarithmic-depth saturation theorem only for the fixed-multiplier divisor/continuation compiler. It does not obstruct analytic cancellation across sparse components and proves no paired norm, endpoint, moment, density, or prime intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/changing_color_walk_v1.py",
+      "sha256": "8ce849c3c2e3659ef848b10c1da797a4e0c6ece102f9e75ed09751eecc65a594"
+    },
+    "cycle141": {
+      "path": "artifacts/cycle-141-divisor-seed-recurrence-v1.json",
+      "sha256": "eb030677c760ea337daadaf326bfec568f5328e5d87b0d820834753309ef11a8"
+    },
+    "cycle78": {
+      "path": "artifacts/cycle-78-freiman-phase-web-v1.json",
+      "sha256": "bbff3b63005b7ef468ee23289e9e3f4b7d0f30cfe79374dcb3df0622aec23d5a"
+    },
+    "document": {
+      "path": "docs/cycle-142-changing-color-walk-v1.md",
+      "sha256": "125cd1f939239de005175e81f24b11df2fc8420a72c8a72ebb8c709213cf0072"
+    },
+    "preregistration": {
+      "path": "docs/cycle-142-changing-color-walk-preregistration-v1.md",
+      "sha256": "5a3a6ea1c930b8e3cbb7813e55c97ad5f033423f2e6a5228f62aa43b201634fe"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_142_changing_color_walk_v1.py",
+      "sha256": "e44ad02ca9793f016758a6bccfc5f8169bcd6e456032f490ee3fb3162cbfbda1"
+    }
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "bound the original paired Fourier norm after decomposing each exceptional difference into logarithmic rational-geometric paths"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_142_changing_color_walk_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_142_changing_color_walk_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_142_changing_color_walk_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sample_density_ledger": {
+    "allowed_edge_deficit": 285,
+    "chain_ceiling": 33,
+    "epistemic_status": "PROVED",
+    "forbidden_depth": 34,
+    "height": 1024,
+    "required_density": 0.9715,
+    "required_edges": 9715,
+    "vertices": 10000
+  },
+  "sealer": {
+    "path": "proof/build_cycle_142_changing_color_walk_v1.py",
+    "sha256": "9ec93ce68a483545562581f7ff58a4a59fda64c36a1e895882a2672c216f7d8a"
+  },
+  "status": "SEALED_RECURRENCE_LOG_DEPTH_SATURATION_SPARSE_COMPONENT_NORM_OPEN"
+}

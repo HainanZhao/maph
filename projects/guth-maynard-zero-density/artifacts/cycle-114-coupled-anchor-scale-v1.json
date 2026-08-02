@@ -1,0 +1,84 @@
+{
+  "artifact_id": "cycle-114-coupled-anchor-scale-v1",
+  "claim_boundary": "This artifact couples coefficient bounds, stationary support, scale windows, and cross-gcd sums to bound all registered smooth strong near-double cores by the arithmetic factor X^(13/30+o(1)) after the common chart factor. Weak, simple-root, nonsmooth, moment, density, and interval branches remain open.",
+  "correction_resolution": {
+    "epistemic_status": "PROVED",
+    "statement": "Cycle 113's anchor-scale warning is resolved by using B,C<=Q jointly with n',m~Q; Cycle 112's X3/5 route is superseded by the X13/30 coupled route"
+  },
+  "coupled_theorem": {
+    "aggregate": "all degrees at one strong mode cost Q^(-1/2)*X^o(1); summing |w|<=2M gives M*Q^(-1/2)*X^o(1)=X^(13/30+o(1)) after the common analytic chart factor",
+    "anchor_bound": "B=p0*n'<=Q and C=q0*m<=Q with n',m>=aQ imply p0,q0<=1/a",
+    "boundary": "weak localization, simple roots, nonsmooth payload variants, full moment assembly, density, and intervals remain open",
+    "coefficient_comparability": "simultaneous support and a small near-hit make K,B0,C0 comparable to Zc=Q/lambda",
+    "epistemic_status": "PROVED",
+    "gcd_bound": "splitting at Z=min(N,R)<=d or >=d bounds the gcd sum by d*Z*(d*N*R)^o(1)",
+    "gcd_identity": "sum_u gcd(u,R)gcd(d-u,N) expands with phi(a)phi(b) over a|R,b|N and at most 1+d/(ab) solutions",
+    "scale_window": "a fixed core has O(Q/Zc) supported scales, each full coefficient kernel is O(Q^(-3/2)), so its scale sum is O(1/(sqrt(Q)*Zc))",
+    "split_reduction": "support comparability forces u,v comparable to d and Zc comparable to d*Z/(x*y), reducing the split sum to sum gcd(u,R)gcd(d-u,N)/(d*Z*sqrt(Q))"
+  },
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/coupled_anchor_scale_v1.py",
+      "sha256": "b92c6723700f9302c286144cb9aa4fcf63b423878a3af042cbac23ad46caf1ac"
+    },
+    "cycle112": {
+      "path": "artifacts/cycle-112-full-triple-b-symbol-v1.json",
+      "sha256": "e6f890eaae72a99c53dbd07cea7bd69d050f4df5c93d40e27245f71503f6954c"
+    },
+    "cycle113": {
+      "path": "artifacts/cycle-113-irrational-weighted-split-v1.json",
+      "sha256": "2d29b2600e9b123ded335a2be83c656361c6ba46e3d74117d00bdf9253ebe393"
+    },
+    "cycle99": {
+      "path": "artifacts/cycle-99-critical-rational-ray-v1.json",
+      "sha256": "69e453fea12a404c17078169ac605c17b05109b99c74e0dd82f830e1ecdf2ee6"
+    },
+    "document": {
+      "path": "docs/cycle-114-coupled-anchor-scale-v1.md",
+      "sha256": "686c4ddb63d03246c4004cd17f43aa3f1b8cdee28f63c505cfc8dd058589cd73"
+    },
+    "preregistration": {
+      "path": "docs/cycle-114-coupled-anchor-scale-preregistration-v1.md",
+      "sha256": "5f644a3043d206975dd807b2f48d22d8f1c9fdd1c98907351c72df11ffdf8d10"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_114_coupled_anchor_scale_v1.py",
+      "sha256": "ef1acc9d764a4f3c3d9e657880b846ad6026afd6aad30858a087875f1683e298"
+    }
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "control weak localization and simple-root averages, then assemble the full signed moment"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_114_coupled_anchor_scale_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_114_coupled_anchor_scale_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_114_coupled_anchor_scale_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_114_coupled_anchor_scale_v1.py",
+    "sha256": "18ad77e011ef5055116a6e07c7c94284e4a424ea7679eb5dbd92794c46b68d1e"
+  },
+  "status": "SEALED_ALL_SMOOTH_STRONG_CORES_WEIGHTED_X13_30_WEAK_SIMPLE_OPEN"
+}
