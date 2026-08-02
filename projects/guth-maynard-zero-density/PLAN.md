@@ -2,8 +2,8 @@
 
 ## Purpose, boundary, and status
 
-- Project cap: Cycle 500. Cycle 176 is the latest sealed cycle, so the
-  remaining authorized cycle labels are 177--500.
+- Project cap: Cycle 500. Cycle 177 is the latest sealed cycle, so the
+  remaining authorized cycle labels are 178--500.
 - Objective: obtain either (i) an explicit improvement on the `30/13`
   zero-density coefficient that survives the complete density and
   short-interval ledger, (ii) a sharp saturation/inverse theorem for a
