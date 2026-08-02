@@ -9,31 +9,28 @@
   "cold_start_handoff": {
     "project_outcome": {
       "epistemic_status": "PROVED",
-      "statement": "Formal TCC identities are closed in dimensions 4, 5, 7, and 8 by preserved certificate suites. Dimension six is not proved or disproved. The forward project budget is B000/200; Cycle 163 is B001 and starts at the missing operational interface."
+      "statement": "Formal TCC identities are closed in dimensions 4, 5, 7, and 8 by preserved certificate suites. Dimension six is not proved or disproved. The latest immutable record below is authoritative for the active gate, budget ordinal, and next target."
     },
     "why_active_gate_matters": {
       "epistemic_status": "PROVED",
-      "statement": "Cycle 157 found no defined map from 36 additive spectral coefficients to three ray-class logarithms or AFK cocycle values. The published Effective Stark Sweep paper supplies order-six and ramified-3 controls, while its RQ-000692 dossier identifies the exact Q(sqrt(21)) wall as index-6/wild-3; neither replaces the missing oriented interface."
+      "statement": "Cycle 157 found no defined map from 36 additive spectral coefficients to three ray-class logarithms or AFK cocycle values. The published Effective Stark Sweep paper supplies order-six and ramified-3 controls, while RQ-000692 identifies the Q(sqrt(21)) wall as index-6/wild-3; neither itself supplies the missing oriented interface. The latest immutable record states the currently surviving construction class."
     },
     "progress_criterion": {
       "epistemic_status": "CONJECTURED",
-      "statement": "The project advances by passing an exact convention-pinned coefficient-to-cocycle/ray-log prototype, deriving an oriented wild-local RQ-000692 engine that feeds that interface, closing fusion continuity, or obtaining a Class-A compact/finitely covered reduction. Exactly 200 substantive cycles are budgeted, with checkpoints at B040, B140, B180, and B200."
+      "statement": "The project advances only through a convention-pinned operational-interface prototype, an oriented wild-local RQ-000692 engine that explicitly feeds that interface, fusion closure, or a Class-A compact/finitely covered reduction. Exactly 200 substantive cycles are budgeted, with checkpoints at B040, B140, B180, and B200; the latest record gives the immediate advance criterion."
     },
-    "deferred_work": "Raw or ordinary-gauge packet extensions, BF_6=>MFC_6 without the missing map, and any claim that dimension-six TCC is false remain barred. Fusion continuity is downstream of interface closure. Workflow and archive-only records do not consume the 200-cycle research budget.",
+    "deferred_work": "Raw or ordinary-gauge packet extensions, BF_6=>MFC_6 without the missing map, and any claim that dimension-six TCC is false remain barred. Fusion continuity is downstream of interface closure. Workflow and archive-only records do not consume the 200-cycle research budget; the latest record may add scoped exclusions.",
     "start_commands": [
       "source ../../tools/dev-env.sh",
       "research rebuild",
       "research check",
-      "research cycle 162",
+      "research db sql \"SELECT artifact_id, status, remaining_target FROM artifacts ORDER BY cycle_number DESC, artifact_id DESC LIMIT 1\"",
       "sed -n '1,300p' PLAN.md",
-      "python3 proof/build_cycle_162_workflow_migration_v1.py --check",
-      "python3 -m unittest tests.test_research_workflow_migration -v",
-      "sed -n '1,240p' docs/effective-stark-sweep-context-v1.md",
-      "sed -n '1,240p' docs/cycle-162-workflow-migration-v1.md"
+      "sed -n '1,240p' docs/effective-stark-sweep-context-v1.md"
     ]
   },
   "query_examples": [
-    "python3 ../../tools/research_records.py --project research-records.json cycle 162",
+    "research db sql \"SELECT artifact_id, status, remaining_target FROM artifacts ORDER BY cycle_number DESC, artifact_id DESC LIMIT 1\"",
     "python3 ../../tools/research_records.py --project research-records.json search \"Class-A\"",
     "python3 ../../tools/research_records.py --project research-records.json check"
   ]

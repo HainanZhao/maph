@@ -5,49 +5,48 @@ Canonical evidence is the Git-tracked per-cycle artifact and its linked files; `
 
 ## Cold-start handoff
 
-- Project outcome (PROVED): Formal TCC identities are closed in dimensions 4, 5, 7, and 8 by preserved certificate suites. Dimension six is not proved or disproved. The forward project budget is B000/200; Cycle 163 is B001 and starts at the missing operational interface.
-- Why the active gate matters (PROVED): Cycle 157 found no defined map from 36 additive spectral coefficients to three ray-class logarithms or AFK cocycle values. The published Effective Stark Sweep paper supplies order-six and ramified-3 controls, while its RQ-000692 dossier identifies the exact Q(sqrt(21)) wall as index-6/wild-3; neither replaces the missing oriented interface.
-- Progress criterion (CONJECTURED): The project advances by passing an exact convention-pinned coefficient-to-cocycle/ray-log prototype, deriving an oriented wild-local RQ-000692 engine that feeds that interface, closing fusion continuity, or obtaining a Class-A compact/finitely covered reduction. Exactly 200 substantive cycles are budgeted, with checkpoints at B040, B140, B180, and B200.
-- Explicitly deferred: Raw or ordinary-gauge packet extensions, BF_6=>MFC_6 without the missing map, and any claim that dimension-six TCC is false remain barred. Fusion continuity is downstream of interface closure. Workflow and archive-only records do not consume the 200-cycle research budget.
+- Project outcome (PROVED): Formal TCC identities are closed in dimensions 4, 5, 7, and 8 by preserved certificate suites. Dimension six is not proved or disproved. The latest immutable record below is authoritative for the active gate, budget ordinal, and next target.
+- Why the active gate matters (PROVED): Cycle 157 found no defined map from 36 additive spectral coefficients to three ray-class logarithms or AFK cocycle values. The published Effective Stark Sweep paper supplies order-six and ramified-3 controls, while RQ-000692 identifies the Q(sqrt(21)) wall as index-6/wild-3; neither itself supplies the missing oriented interface. The latest immutable record states the currently surviving construction class.
+- Progress criterion (CONJECTURED): The project advances only through a convention-pinned operational-interface prototype, an oriented wild-local RQ-000692 engine that explicitly feeds that interface, fusion closure, or a Class-A compact/finitely covered reduction. Exactly 200 substantive cycles are budgeted, with checkpoints at B040, B140, B180, and B200; the latest record gives the immediate advance criterion.
+- Explicitly deferred: Raw or ordinary-gauge packet extensions, BF_6=>MFC_6 without the missing map, and any claim that dimension-six TCC is false remain barred. Fusion continuity is downstream of interface closure. Workflow and archive-only records do not consume the 200-cycle research budget; the latest record may add scoped exclusions.
 
 ### Start here (from this project directory)
 
 - `source ../../tools/dev-env.sh`
 - `research rebuild`
 - `research check`
-- `research cycle 162`
+- `research db sql "SELECT artifact_id, status, remaining_target FROM artifacts ORDER BY cycle_number DESC, artifact_id DESC LIMIT 1"`
 - `sed -n '1,300p' PLAN.md`
-- `python3 proof/build_cycle_162_workflow_migration_v1.py --check`
-- `python3 -m unittest tests.test_research_workflow_migration -v`
 - `sed -n '1,240p' docs/effective-stark-sweep-context-v1.md`
-- `sed -n '1,240p' docs/cycle-162-workflow-migration-v1.md`
 
 Read the listed record and its linked preregistration, proof document, conventions, builder, and test before changing mathematics or code. Do not infer a theorem from this handoff; its claim tags and boundaries are in the canonical record.
 
 ## Index coverage
 
-- Cycle artifact files found in the working tree: 1
-- Cycle artifacts present in the Git index: 1
-- Artifacts by top-level epistemic status: PROVED=1
-- Recursively tagged fields indexed for search (not independent claims): 5
+- Cycle artifact files found in the working tree: 3
+- Cycle artifacts present in the Git index: 3
+- Artifacts by top-level epistemic status: PROVED=3
+- Recursively tagged fields indexed for search (not independent claims): 10
 
 ## Latest sealed record
 
-- Latest record: `cycle-162-workflow-migration-v1` (Cycle 162, `PROVED`)
-- Status: `SEALED_ACCELERATED_WORKFLOW_AND_INTERFACE_FIRST_PROGRAM`
-- Boundary: This proves only the replayed workflow attachment, immutable evidence inventory, and scope-accurate strategic handoff; it proves no mathematical theorem, dimension-six TCC identity, fusion-continuity bridge, wild-local extension, boundary limit, or nonexistence claim.
-- Next mathematical target: Construct and test a convention-pinned finite-characteristic coefficient-to-cocycle/ray-logarithm interface with explicit selection, operation, branches, finite part, and AFK identification; determine whether an oriented wild-local extension at RQ-000692 supplies any part of it.
+- Latest record: `cycle-163-spectral-ray-interface-v2` (Cycle 163, `PROVED`)
+- Status: `SEALED_FIXED_FULL_RAY_SELECTOR_METADATA_CORRECTION`
+- Boundary: This correction adds the generated-handoff target omitted from Cycle 163 v1. It changes no mathematical result, count, orientation anchor, gate boundary, or budget accounting.
+- Next mathematical target: Cycle 164/B002: preregister and test an orientation-preserving characteristic-dependent conductor-lowering/ray-monoid state space with an explicit map from every reduced object to one common arithmetic-Frobenius-oriented C6 primitive target.
 
 ## Recent sealed records
 
 | Cycle | Record | Tag | Gate | Next target |
 |---:|---|---|---|---|
+| 163 | `cycle-163-spectral-ray-interface-v2` | `PROVED` | `SEALED_FIXED_FULL_RAY_SELECTOR_METADATA_CORRECTION` | Cycle 164/B002: preregister and test an orientation-preserving characteristic-dependent conductor-lowering/ray-monoid state space with an explicit map from every reduced object to one common arithmetic-Frobenius-oriented C6 primitive target. |
+| 163 | `cycle-163-spectral-ray-interface-v1` | `PROVED` | `SEALED_FIXED_FULL_RAY_SELECTOR_FALSIFIED` | None |
 | 162 | `cycle-162-workflow-migration-v1` | `PROVED` | `SEALED_ACCELERATED_WORKFLOW_AND_INTERFACE_FIRST_PROGRAM` | Construct and test a convention-pinned finite-characteristic coefficient-to-cocycle/ray-logarithm interface with explicit selection, operation, branches, finite part, and AFK identification; determine whether an oriented wild-local extension at RQ-000692 supplies any part of it. |
 
 ## Useful queries
 
 ```sh
-python3 ../../tools/research_records.py --project research-records.json cycle 162
+research db sql "SELECT artifact_id, status, remaining_target FROM artifacts ORDER BY cycle_number DESC, artifact_id DESC LIMIT 1"
 python3 ../../tools/research_records.py --project research-records.json search "Class-A"
 python3 ../../tools/research_records.py --project research-records.json check
 ```

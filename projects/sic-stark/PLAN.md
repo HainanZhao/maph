@@ -10,10 +10,13 @@
   scopes in dimensions 4, 5, 7, and 8. No dimension-six TCC identity,
   coefficient-to-ray map, fusion-continuity theorem, or boundary-limit theorem
   is proved. `CERTIFIED_NUMERICAL` packet growth is not a nonexistence theorem.
-- Current state: the next substantive record is Cycle 163, project-budget cycle
-  `B001`. Its gate is the undefined coefficient-to-cocycle/ray-logarithm
-  interface found by Cycle 157. Fusion continuity remains downstream of that
-  interface. The raw componentwise `BF_6` route remains retired.
+- Current state: Cycle 163 / `B001` exactly falsified the positive-lift,
+  fixed-full-modulus direct-selector class: only 18 of 36 characteristics
+  are eligible for `(6)infinity_2`. The coefficient-to-cocycle/ray-log
+  interface remains open, with Cycle 164 / `B002` authorized to test an
+  orientation-preserving characteristic-dependent conductor-lowering /
+  ray-monoid state space. Fusion continuity remains downstream. The raw
+  componentwise `BF_6` route remains retired.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -26,8 +29,8 @@
 ## Budget, accounting, and stop condition
 
 - Total forward budget: 200 substantive research cycles, counted `B001/200`
-  through `B200/200`; the counter is currently `B000/200`.
-- Cycle 163 is `B001`. Repository cycle numbers and budget ordinals advance
+  through `B200/200`; the counter is currently `B001/200`.
+- Cycle 164 is `B002`. Repository cycle numbers and budget ordinals advance
   together unless a non-counted record intervenes; the budget ordinal is the
   authoritative campaign counter.
 - A cycle counts only when it is a preregistered substantive research block
@@ -62,6 +65,11 @@
   descent but found no supplied map from 36 additive coefficients to the three
   ray-class logarithms or AFK cocycle values. Its displayed `MFC_6` is therefore
   conceptual, not operationally testable.
+- `PROVED`: Cycle 163 exactly enumerated the frozen positive-lift
+  fixed-full-ray selector and found 18 eligible and 18 noncoprime rows. It
+  falsifies that direct-selector class only; the orientation anchors
+  `(3,5)->g^1` and `(3,4)->g^2` remain eligible. See
+  `artifacts/cycle-163-spectral-ray-interface-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -109,7 +117,8 @@ Terminal outcomes are:
 Budget B001--B200
   +-- dimension 6
   |    +-- analytic interface: 36 additive values -> 3 ray logs -> AFK cocycle
-  |    |    `-- smallest exact prototype [FIRST GATE]
+  |    |    +-- fixed-full-ray selector [FALSIFIED: 18/36 domain]
+  |    |    `-- conductor-lowered ray-monoid lift [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -154,8 +163,8 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `B000_OF_200` | Seal Cycle 163 as `B001`, then increment only for substantive research blocks. | Counting workflow or archive-only work. |
-| D6 interface | `ACTIVE_FIRST_GATE` | Convention-pinned construction plus exact smallest prototype. | Raw/gauged packet extensions or undefined “spectral periodization.” |
+| Project budget | `B001_OF_200` | Seal Cycle 164 as `B002`, then increment only for substantive research blocks. | Counting workflow or archive-only work. |
+| D6 interface | `ACTIVE_CONDUCTOR_LOWERING_ENGINE` | Convention-pinned reduced-object state space plus an exact orientation-preserving common-target map. | Treating the 18-row fixed-ray failure as a global no-go; raw/gauged packet extensions or undefined “spectral periodization.” |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
@@ -167,29 +176,27 @@ than pretending fusion continuity is operational.
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
-- Which smallest exact finite-frequency row falsifies an interface candidate
-  before asymptotic continuity work?
+- Can characteristic-dependent conductor lowering supply an oriented
+  common-target map for the 18 fixed-modulus-ineligible rows?
 - After interface closure, can flow invariance plus the two pinned invariants
   force fusion continuity or reduce it to a certified compact inequality?
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 163 / `B001`
+## Next goal: Cycle 164 / `B002`
 
 Preregister one substantive block with this question:
 
-> Can an explicitly convention-pinned map from the 36 finite additive
-> coefficients to the three primitive norm-37 ray-logarithm/AFK-cocycle values
-> be constructed and pass the smallest exact finite-frequency prototype?
+> Can an explicitly convention-pinned characteristic-dependent
+> conductor-lowering/ray-monoid state space map every fixed-modulus-ineligible
+> row into one common, arithmetic-Frobenius-oriented primitive target?
 
-Cycle 163 must freeze the state space, characteristic selection, nonlinear or
-logarithmic operation, branches, finite part, ray labels, exact prototype, and
-candidate failure rule before executable work. It may use the `RQ-000692`
-wild-local route only through an explicit map into this interface. Advancement
-requires either an exact passing prototype or an exact falsifier that eliminates
-a named construction class and launches a genuinely new engine. Model
-noncompletion, more packet numerics, or an undefined formal transform does not
-advance the gate.
+Cycle 164 must freeze the reduced ideals/moduli, positive-lift convention,
+one-place orientation, transition maps, common primitive target, exact
+prototype, and failure rule before executable work. It must preserve the two
+Cycle-163 anchors and say how each reduced ray object maps back to the same
+`C_6` primitive target. Lowered absolute values, a merely local ray log,
+more packet numerics, or an unspecified lift do not advance the gate.
 
 ## Recovery
 
@@ -197,9 +204,9 @@ advance the gate.
 source ../../tools/dev-env.sh
 research rebuild
 research check
-research cycle 162
+research cycle 163
 sed -n '1,260p' PLAN.md
-sed -n '1,240p' docs/effective-stark-sweep-context-v1.md
-python3 proof/build_cycle_162_workflow_migration_v1.py --check
-python3 -m unittest tests.test_research_workflow_migration -v
+sed -n '1,240p' docs/cycle-163-spectral-ray-interface-v1.md
+python3 proof/build_cycle_163_spectral_ray_interface_v1.py --check
+python3 -m unittest tests.test_cycle_163_fixed_full_ray_selector -v
 ```

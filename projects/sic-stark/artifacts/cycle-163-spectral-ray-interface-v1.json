@@ -1,0 +1,179 @@
+{
+  "artifact_id": "cycle-163-spectral-ray-interface-v1",
+  "budget_ordinal": "B001",
+  "claim_boundary": "This exact finite result falsifies only the positive-lift, fixed-full-modulus direct-selector class. It proves no logarithm, finite part, AFK-cocycle identification, ray-monoid lift, Stark identity, fusion theorem, or dimension-six TCC identity.",
+  "cycle": 163,
+  "epistemic_status": "PROVED",
+  "exact_prototype": {
+    "eligible_rows": 18,
+    "fixed_full_ray_total": false,
+    "ineligible_characteristics": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        5,
+        5
+      ]
+    ],
+    "ineligible_rows": 18,
+    "orientation_anchors": {
+      "3,4": {
+        "eligible": true,
+        "frozen_ray_log": 2
+      },
+      "3,5": {
+        "eligible": true,
+        "frozen_ray_log": 1
+      }
+    },
+    "rows_checked": 36,
+    "source_output": "discovery/cycle-163-fixed-full-ray-selector-prototype-v1.json"
+  },
+  "frozen_hashes": {
+    "decision_record": {
+      "path": "docs/cycle-163-spectral-ray-interface-v1.md",
+      "sha256": "24ab14474a2104d1ad85ddc1f817ec28d8caa54c2ba1e1d397872c67080f9c21"
+    },
+    "preregistration": {
+      "path": "docs/cycle-163-spectral-ray-interface-preregistration-v1.md",
+      "sha256": "c09fd5abdab877553efd3456e5ee1db09fb6d470feca24546aaf0eb27e202f46"
+    },
+    "project_instructions": {
+      "path": "AGENTS.md",
+      "sha256": "363495f0dbbe93e244b460c8eafb13247a8fb1f41be24f94c037ae9f6400c6f2"
+    },
+    "sealing_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    },
+    "selector_output": {
+      "path": "discovery/cycle-163-fixed-full-ray-selector-prototype-v1.json",
+      "sha256": "bc20b72a5ef5a1db5711c2caac9687db09d3d7158c8651a502ad2befaf587dd4"
+    },
+    "selector_replay": {
+      "path": "proof/verify_cycle_163_fixed_full_ray_selector.py",
+      "sha256": "4a5f07439f7e47545fc3cb4f5b5d43228f8f045ab0a97bc321140d9143f30c3b"
+    },
+    "test": {
+      "path": "tests/test_cycle_163_fixed_full_ray_selector.py",
+      "sha256": "50f6e87938cf689e35e0f61fa72d0884fb38e736851bcff95a75dda7db481e4a"
+    }
+  },
+  "gate_outcome": {
+    "d6_interface": "ACTIVE_NEW_ENGINE_REQUIRED",
+    "disallowed_pseudo_progress": [
+      "treating the 18 noncoprime rows as a global interface or TCC no-go",
+      "using lowered absolute values without an oriented common-target map",
+      "returning to undefined packet numerics"
+    ],
+    "falsified_construction_class": "positive_lift_fixed_full_ray_direct_selector",
+    "next_authorized_action": "Cycle 164/B002: preregister an orientation-preserving characteristic-dependent conductor-lowering/ray-monoid state space with an explicit common primitive-target map."
+  },
+  "mentor_checkpoint": {
+    "falsifier": "Any sealed claim extending the 18 noncoprime rows beyond the preregistered positive-lift construction class.",
+    "identity": "/root/decision_companion_2",
+    "known_flaw": "The result does not exclude characteristic-dependent lifts, conductor changes, or an analytic coefficient-to-cocycle interface.",
+    "next_action": "Preregister a convention-pinned conductor-lowering state space and invariant preserving both orientation anchors.",
+    "recommendation": "Seal Cycle 163/B001 as an exact obstruction to the fixed positive full-ray selector; authorize the conductor-lowering/ray-monoid engine.",
+    "resolution": "ADOPTED"
+  },
+  "outcome": {
+    "epistemic_status": "PROVED",
+    "orientation_anchors": {
+      "(3,4)": "eligible with frozen ray log 2",
+      "(3,5)": "eligible with frozen ray log 1"
+    },
+    "statement": "Exactly 18 of 36 frozen characteristics are eligible for a fixed (6)infinity_2 ray label; fixed-full-ray totality therefore fails."
+  },
+  "preregistration_preflight": {
+    "cycle": 163,
+    "manifest_sha256": "c09fd5abdab877553efd3456e5ee1db09fb6d470feca24546aaf0eb27e202f46",
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_163_spectral_ray_interface_v1.py --check",
+    "preflight_command": "research prereg check docs/cycle-163-spectral-ray-interface-preregistration-v1.md --expected-cycle 163 --allow-head-drift",
+    "prototype_command": "python3 proof/verify_cycle_163_fixed_full_ray_selector.py --output discovery/cycle-163-fixed-full-ray-selector-prototype-v1.json",
+    "test_command": "python3 -m unittest tests.test_cycle_163_fixed_full_ray_selector -v",
+    "write_command": "python3 proof/build_cycle_163_spectral_ray_interface_v1.py --write"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_163_spectral_ray_interface_v1.py",
+    "sha256": "0375d8e3c84485dd4b89bdf820d4c55fcc7a84bdf94212612dba4ea164163627"
+  },
+  "status": "SEALED_FIXED_FULL_RAY_SELECTOR_FALSIFIED"
+}

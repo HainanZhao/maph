@@ -11,6 +11,14 @@ knowledge applies to any project in this monorepo that publishes to
 Zenodo, not just this one. This file only covers what's specific to
 sic-stark.
 
+## Preregistration presentation
+
+The embedded `research-freeze-v1` manifest is the sole authoritative list of
+frozen parameters, formulas, selection rules, resource caps, and failure
+rules. Keep the prose around it to the question, claim boundary, and a short
+plain-language interpretation; do not repeat the same specification in a
+second human-readable list.
+
 ## What this project is
 
 A companion-paper series proving (or, for dimension six, exploring
