@@ -1,0 +1,125 @@
+{
+  "artifact_id": "cycle-177-actual-curve-rational-root-saturator-v1",
+  "claim_boundary": "This proves a continuous-scale actual-positive-exponential rational-root family with raw Cycle-63 pair mass X^(22/25-o(1)). It disproves the uniform raw pair target X^(17/25+o(1)), but does not bound or refute the full fixed-beta triple census, prove a density gain, or prove an interval result.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "boundary": "This is a continuous-scale actual-positive-exponential rational-root family. It disproves a uniform raw Cycle-63 pair target, but its one-label triple mass is only X^(11/25+o(1)); it proves no density or interval result.",
+    "exponents": {
+      "critical_packet_depth": "6/25",
+      "direct_triple_mass": "11/25",
+      "height": "11/25",
+      "packet_depth_surplus": "1/5",
+      "pair_mass": "22/25",
+      "pair_target": "17/25",
+      "pair_target_gap": "1/5",
+      "seeded_packet_depth": "11/25",
+      "triple_target": "16/25",
+      "triple_target_gap": "1/5"
+    },
+    "packet": "For H>=8r, a central beta-zero seed gives an exact q=r, a=1 packet of depth floor(H/(4r)) wholly inside the row interval.",
+    "pair": "All d=kr<=H are exact pair hits and have total weight at least H^2/(8r) for H>=4r.",
+    "rational_root": "For Delta=2*pi*L/log(1+1/r), ell=L has alpha_ell=1/r exactly.",
+    "triple": "At beta=0, exact strip rows in [H,2H] are precisely the multiples of r and number H/r+O(1)."
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/actual_curve_rational_root_saturator_v1.py",
+      "sha256": "cf62665f7d316ebc67aefeda16aad8b984a972b40f21a039d9df8f5400001c04"
+    },
+    "cycle63": {
+      "path": "artifacts/cycle-63-log-transport-census-v1.json",
+      "sha256": "d5dc9dd9ff3f5636c98980d35f6f973d72f9e62c04644fe510b4f0de06d4f153"
+    },
+    "cycle64": {
+      "path": "artifacts/cycle-64-farey-packet-transport-v1.json",
+      "sha256": "60a78bc81f2916e594221a1258a35024b96e67ecf5d2af6bc9a53731d1cdc76f"
+    },
+    "cycle65": {
+      "path": "artifacts/cycle-65-depth-packet-ledger-v1.json",
+      "sha256": "f86cecfa996a7583990a24a6060167a700fa8cca54c199ec92cdf2f3c8637a2d"
+    },
+    "cycle67": {
+      "path": "artifacts/cycle-67-seeded-packet-recurrence-v1.json",
+      "sha256": "85bd999fca3e1d675c0b3096a6cd287866d9e1aef227239b42b94b39ff585d02"
+    },
+    "document": {
+      "path": "docs/cycle-177-actual-curve-census-v1.md",
+      "sha256": "b4ed10cf48bdbf21eb3d4fc072a5c828d1445ef189584cb7c199db28a91458ad"
+    },
+    "preregistration": {
+      "path": "docs/cycle-177-actual-curve-census-preregistration-v1.md",
+      "sha256": "34969772328ce8b5c816d01ad70306d99d35013c338ad2103898b4f2f42085c0"
+    },
+    "sanity_scan": {
+      "path": "discovery/cycle_177_actual_curve_rational_root_scan_v1.py",
+      "sha256": "e195abaad3b7c0ca5dd91f4b1e1fa4fdd9e909995dc88da1569a73d6d66058f0"
+    },
+    "sealing_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "tests": {
+      "path": "tests/test_cycle_177_actual_curve_rational_root_saturator_v1.py",
+      "sha256": "b9949f868c6190ce3933e401372e3334c4fd22ceb6a74197feebbb08287fc1bc"
+    }
+  },
+  "rational_root_saturator": {
+    "boundary": "This is a continuous-scale actual-positive-exponential rational-root family. It disproves a uniform raw Cycle-63 pair target, but its one-label triple mass is only X^(11/25+o(1)); it proves no density or interval result.",
+    "epistemic_status": "PROVED",
+    "exponents": {
+      "critical_packet_depth": "6/25",
+      "direct_triple_mass": "11/25",
+      "height": "11/25",
+      "packet_depth_surplus": "1/5",
+      "pair_mass": "22/25",
+      "pair_target": "17/25",
+      "pair_target_gap": "1/5",
+      "seeded_packet_depth": "11/25",
+      "triple_target": "16/25",
+      "triple_target_gap": "1/5"
+    },
+    "packet": "For H>=8r, a central beta-zero seed gives an exact q=r, a=1 packet of depth floor(H/(4r)) wholly inside the row interval.",
+    "pair": "All d=kr<=H are exact pair hits and have total weight at least H^2/(8r) for H>=4r.",
+    "rational_root": "For Delta=2*pi*L/log(1+1/r), ell=L has alpha_ell=1/r exactly.",
+    "triple": "At beta=0, exact strip rows in [H,2H] are precisely the multiples of r and number H/r+O(1)."
+  },
+  "raw_pair_no_go": {
+    "epistemic_status": "PROVED",
+    "statement": "For every fixed 0<c<1, a fixed rational root r and the continuous subsequence Delta_L=2*pi*L/log(1+1/r), X_L=Delta_L^(5/3) give an admissible label ell=L with P>>_c X_L^(22/25), so an unqualified uniform raw pair bound below X^(17/25) is false."
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Replace the raw pair route by a diagonal-aware direct triple census after extracting heavy seeded packets, or prove a heavy-actual-packet-to-seeded-recurrence theorem strong enough for E7/E9. Any further pair statistic must exclude or explicitly retain same-label rational-root rays."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_177_actual_curve_rational_root_saturator_v1.py --check",
+    "discovery_command": "python3 discovery/cycle_177_actual_curve_rational_root_scan_v1.py",
+    "test_command": "python3 -m unittest tests/test_cycle_177_actual_curve_rational_root_saturator_v1.py",
+    "write_command": "python3 proof/build_cycle_177_actual_curve_rational_root_saturator_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sanity_scan": {
+    "epistemic_status": "RECOGNIZED",
+    "statement": "The frozen 100-decimal scan on r in {1,2,3,5,8} and L in {10,100,1000} found every prescribed rational-root label inside the c=1/4 chart and no failed multiplier; the scan is not used for the proof."
+  },
+  "sealer": {
+    "path": "proof/build_cycle_177_actual_curve_rational_root_saturator_v1.py",
+    "sha256": "a3eb7d223e56d481843854a8c63eee6320e2c14f58569c345550f72eb420c8a9"
+  },
+  "status": "SEALED_ACTUAL_POSITIVE_EXPONENTIAL_RAW_PAIR_CENSUS_SATURATOR",
+  "structured_exception": {
+    "epistemic_status": "PROVED",
+    "statement": "At beta=0 the constructed label has X^(11/25+o(1)) exact triple rows and a central exact seeded q=r,a=1 packet of depth X^(11/25+o(1)); this is a one-label structured exception, not a lower bound for the complete triple census."
+  }
+}
