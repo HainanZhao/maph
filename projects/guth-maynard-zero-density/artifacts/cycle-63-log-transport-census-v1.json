@@ -1,0 +1,89 @@
+{
+  "analytic_gate": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Use two-dimensional spacing, determinant, or bilinear-sieve structure to beat the beta-free pair census exponent 17/25 with strict margin, or prove the triple census directly."
+  },
+  "artifact_id": "cycle-63-log-transport-census-v1",
+  "claim_boundary": "This artifact proves a two-dimensional transport reduction and exponent targets only. It does not prove the pair/triple census, a powered saving, LCAM, density, or interval gains.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "analytic_gate": "prove_weighted_beta_free_pair_census_below_X^17_25_or_direct_triple_census_below_X^16_25",
+    "transport": {
+      "crude_hs_pair_census": "6/5",
+      "delta_exponent": "3/5",
+      "desired_average_wrap_open_endpoint": "1/5",
+      "desired_pair_census_open_endpoint": "17/25",
+      "desired_total_census_open_endpoint": "16/25",
+      "h_exponent": "11/25",
+      "hessian_determinant": "-(2pi/Delta)^2 exp(4pi ell/Delta)",
+      "hessian_determinant_exponent": "-6/5",
+      "mixed_derivative": "F_(h ell)=(2pi/Delta)exp(2pi ell/Delta)",
+      "pair_condition": "||d alpha_ell||<=2C/X",
+      "pointwise_hs_count": "8/25",
+      "random_difference_pair_volume": "12/25",
+      "random_volume_census": "1/25",
+      "saving_beyond_summed_hs_required": "3/25",
+      "strip_width_exponent": "-1",
+      "summed_pointwise_census": "19/25",
+      "surface": "F(h,ell)=h(exp(2pi ell/Delta)-1)",
+      "transport_difference": "F(h+d,ell)-F(h,ell)=d alpha_ell"
+    }
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/log_transport_census_v1.py",
+      "sha256": "f98ce11b67ae05928ab827c1d06f238789f9bd22e231d024232c3280ea90f2ff"
+    },
+    "cycle48": {
+      "path": "artifacts/cycle-48-hs-joint-sieve-v1.json",
+      "sha256": "2c0522bee7f7d287dbadfc3d6268316a5f87a0c67725379ea399cfa1583d580f"
+    },
+    "cycle58": {
+      "path": "artifacts/cycle-58-strict-hybrid-margin-correction-v1.json",
+      "sha256": "0bde0caa82cda62b8a61af9902e6eecc00d89442d41779826bb52a59e6a3dcef"
+    },
+    "document": {
+      "path": "docs/cycle-63-log-transport-v1.md",
+      "sha256": "02e8e988b026f6fcee3b985a6388552fc222c214f461bfcf7602122bcd8feb8b"
+    },
+    "preregistration": {
+      "path": "docs/cycle-63-log-transport-preregistration-v1.md",
+      "sha256": "65df49241db40aeff0d703b8bf252b32fd6982006ef96a6e902e1e77b0dfbdf9"
+    },
+    "tests": {
+      "path": "tests/test_cycle_63_log_transport_census_v1.py",
+      "sha256": "5e72ebd15bd86769389b193841b33d72943e6aa18cf572e223e7cce73d44fda6"
+    }
+  },
+  "prior_context": {
+    "cycle48_role": "pointwise 7/50 saving",
+    "cycle58_role": "strict powered target above 1/5",
+    "epistemic_status": "PROVED"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_63_log_transport_census_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_63_log_transport_census_v1.py",
+    "write_command": "python3 proof/build_cycle_63_log_transport_census_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_63_log_transport_census_v1.py",
+    "sha256": "4106f3e7be8ea6a6ed2a216f015e38f3b3a65e40bd770967fb0ab3277a6435a3"
+  },
+  "status": "SEALED_LOG_TRANSPORT_PAIR_CENSUS_LT_17_25_OPEN",
+  "transport_reduction": {
+    "epistemic_status": "PROVED",
+    "statement": "Averaged wrap multiplicity is a triple strip census on a saddle surface; h-differencing removes beta and reduces the desired total exponent <16/25 to a sufficient weighted pair exponent <17/25."
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "actual_prime_witness": {
+    "epistemic_status": "PROVED",
+    "statement": "A normalized restricted row p^(-it0) is exactly flat and lies exactly in any row span containing t0; its augmented Gram determinant is zero."
+  },
+  "artifact_id": "cycle-33-anchor-aware-correction-v1",
+  "claim_boundary": "This artifact disproves only universal flat-vector distance or augmented-determinant lower bounds and replaces them by an anchor-aware alternative. It does not bound either anchor or transverse branch, close the skeleton target, improve zero density, or improve intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "dimension_boundary": {
+    "epistemic_status": "PROVED",
+    "statement": "For full column rank with k>=N, every detector lies in the row span; invertibility confirms rather than excludes reconstruction."
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "anchor_reformulation": {
+      "anchor_branch": "small alpha_r gives a weighted sum of restricted prime kernels K_S(t-t_a)",
+      "anchor_cap": "r=X^o(1)",
+      "anchor_statistic": "alpha_r(d)=min_{|A|<=r} dist(d,span{x_t:t in A})",
+      "one_anchor_identity": "if d_p=c p^(-it0) on S, then <x_t,d> is conjugate(c) K_S(t-t0) up to the pinned inner-product convention",
+      "transverse_branch": "positive alpha_r plus full-span reconstruction requires a many-row arithmetic theorem"
+    },
+    "correction": "universal flat-vector distance lower bound is false on actual prime rows",
+    "flat_phase_row": {
+      "augmented_determinant": "0",
+      "augmented_gram": [
+        [
+          "3",
+          "3"
+        ],
+        [
+          "3",
+          "3"
+        ]
+      ],
+      "distance_to_row_span_squared": "0",
+      "norm_squared": "3",
+      "normalized_coordinate_squared": "1/3",
+      "primes": [
+        2,
+        3,
+        5
+      ],
+      "t0": 0,
+      "unnormalized_row": [
+        "1",
+        "1",
+        "1"
+      ]
+    },
+    "full_column_rank": {
+      "N": 2,
+      "coefficients": [
+        "2",
+        "3",
+        "0"
+      ],
+      "detector": [
+        "2",
+        "3"
+      ],
+      "k": 3,
+      "reconstruction": [
+        "2",
+        "3"
+      ],
+      "row_span_is_full_coordinate_space": true,
+      "rows": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "1"
+        ]
+      ]
+    }
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/anchor_aware_correction_v1.py",
+      "sha256": "b04d6745bc5b3af40f72f8f5988080b6b497b383873446967829091e496c6090"
+    },
+    "cycle31": {
+      "path": "artifacts/cycle-31-variable-rank-self-dual-v1.json",
+      "sha256": "7c6f3a75cbe0d16ebe729260cbc7ac42fee4b86e00b80fb832926317e8f11784"
+    },
+    "cycle32": {
+      "path": "artifacts/cycle-32-flat-support-modulation-v1.json",
+      "sha256": "be844d4e3967573eb7e00464e6be3a85a10d37c943c3a6e3e8607734b04bfa22"
+    },
+    "document": {
+      "path": "docs/cycle-33-anchor-aware-correction-v1.md",
+      "sha256": "43eb1e5211a7feee7530870db67be95d685e2e17b3d984adfc26a1045c6e81f6"
+    },
+    "preregistration": {
+      "path": "docs/cycle-33-anchor-aware-correction-preregistration-v1.md",
+      "sha256": "2d123d641c15c90e308334c167735ce16e329b881ca7ab6414d6029d82b8a8f6"
+    },
+    "tests": {
+      "path": "tests/test_cycle_33_anchor_aware_correction_v1.py",
+      "sha256": "92df161a1d403d2d201d97398634377262e0facde56bfaff552f6a966839f28a"
+    }
+  },
+  "prior_context": {
+    "epistemic_status": "PROVED",
+    "prior_role": "flat-support ladder retained; universal square-rung distance gate corrected"
+  },
+  "replacement_gate": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Few-anchor reconstruction must yield a weighted restricted-prime-kernel recurrence bound; reconstruction transverse to every X^o(1)-anchor span must yield a many-row arithmetic exterior-volume bound."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_33_anchor_aware_correction_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_33_anchor_aware_correction_v1.py",
+    "write_command": "python3 proof/build_cycle_33_anchor_aware_correction_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_33_anchor_aware_correction_v1.py",
+    "sha256": "f4c19bf40690443c2cb05351fce34b738f05b267fdf0d0e302541155f6ae546d"
+  },
+  "status": "SEALED_ANCHOR_WITNESS_UNIVERSAL_DISTANCE_GATE_FALSE"
+}

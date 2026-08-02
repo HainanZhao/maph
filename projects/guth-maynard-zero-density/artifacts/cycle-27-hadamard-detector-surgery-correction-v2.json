@@ -1,0 +1,68 @@
+{
+  "artifact_id": "cycle-27-hadamard-detector-surgery-correction-v2",
+  "claim_effect": "For J=X^o(1), the detector-value and mass losses are o(1) relatively at the critical scales, so the v1 fixed-power conclusions survive with V replaced by V-O(J).",
+  "correction": "The v1 exposition omitted that the dyadic prime count need not be divisible by J. Retain J floor(M/J) coordinates and discard fewer than J.",
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "exponents": {
+      "block_count": "X^o(1)",
+      "detector": "7/10",
+      "detector_relative_loss_exponent": "-7/10",
+      "discard_over_detector": "X^(-7/10+o(1))",
+      "discard_over_mass": "X^(-1+o(1))",
+      "mass": "1",
+      "mass_relative_loss_exponent": "-1"
+    },
+    "finite_remainder": {
+      "blocks": 4,
+      "discarded": 3,
+      "prime_count": 11,
+      "retained": 8
+    },
+    "repair": "retain J floor(M/J), discard r<J, replace V by V-r"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/hadamard_detector_surgery_correction_v2.py",
+      "sha256": "5614d0d19a9501699dd13f2c78c4848f587f0b96b34f5de580496611d1083689"
+    },
+    "cycle27_v1": {
+      "path": "artifacts/cycle-27-hadamard-detector-surgery-v1.json",
+      "sha256": "4a62765a22c0a2ca7a70d5917925859029faad155827a031efee90918c703c53"
+    },
+    "document": {
+      "path": "docs/cycle-27-hadamard-detector-surgery-correction-v2.md",
+      "sha256": "23948482c0beb5af85a5ef56d216a72d4322afb84ccf30e53e885efe6e0ce0c3"
+    },
+    "preregistration": {
+      "path": "docs/cycle-27-hadamard-detector-surgery-correction-preregistration-v2.md",
+      "sha256": "82d05ead85aa9e929f9bf00be1836e3e9f23482b3e652f8c77280b0bc595e5cd"
+    },
+    "tests": {
+      "path": "tests/test_cycle_27_hadamard_detector_surgery_correction_v2.py",
+      "sha256": "83027a322cadab6096bbb3930bf03578eae7f52b404d2b3cc8a1ed06d9ab02a8"
+    }
+  },
+  "prior_context": {
+    "epistemic_status": "PROVED",
+    "v1_effect": "conditional equal-mass theorem unchanged; arbitrary prime-count application repaired"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_27_hadamard_detector_surgery_correction_v2.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_27_hadamard_detector_surgery_correction_v2.py",
+    "write_command": "python3 proof/build_cycle_27_hadamard_detector_surgery_correction_v2.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_27_hadamard_detector_surgery_correction_v2.py",
+    "sha256": "a9d99ed59f9264b034278adb6c05f55e438d5560a077cf0a66f737fb478f9bad"
+  },
+  "status": "SEALED_PRIME_COUNT_REMAINDER_CORRECTION_V1_THEOREM_UNCHANGED"
+}

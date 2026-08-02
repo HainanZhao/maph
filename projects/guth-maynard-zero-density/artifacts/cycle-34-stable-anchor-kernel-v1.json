@@ -1,0 +1,106 @@
+{
+  "artifact_id": "cycle-34-stable-anchor-kernel-v1",
+  "claim_boundary": "This artifact reduces stable anchor reconstruction of the original detector to an unweighted prime-kernel large-values theorem. It does not prove that theorem, handle unstable/transverse reconstruction, close the skeleton target, improve zero density, or improve intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "exponents": {
+      "generic_skeleton": "1",
+      "height": "12/5",
+      "missing_saving": "4/25",
+      "normalized_kernel": "-3/10",
+      "prime_mass": "1",
+      "rho": "-3/5",
+      "separation": "3/5",
+      "target_skeleton": "21/25",
+      "target_statement": "unweighted prime-kernel large-value count <=X^(21/25+o(1))",
+      "unnormalized_kernel": "7/10"
+    },
+    "kernel_identity": "H(t,a)=M^(-1)K(t-a)",
+    "multi_anchor": {
+      "coefficients": [
+        "1/2",
+        "1/3",
+        "1/6"
+      ],
+      "colour_cost": "|A|=X^o(1)",
+      "forced_kernel": "3/5",
+      "l1_norm": "1",
+      "weighted_sum_lower": "3/5"
+    },
+    "one_anchor": {
+      "coarse_lower": "3/10",
+      "epsilon": "1/20",
+      "evaluation_floor": "3/5",
+      "gamma_upper": "21/20",
+      "kernel_lower": "11/21"
+    }
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/stable_anchor_kernel_v1.py",
+      "sha256": "38749985ba07a728afc9b4c4de8155b45adb4d6ed6c5735f00f9c8ebc541b4a6"
+    },
+    "cycle18": {
+      "path": "artifacts/cycle-18-coherent-cluster-skeleton-v1.json",
+      "sha256": "2aab1890a1e68efc58dcc9ad45dc636766760a610de8299a7f52afb605138936"
+    },
+    "cycle26": {
+      "path": "artifacts/cycle-26-detector-reconstruction-v1.json",
+      "sha256": "6082d255ea07383913f30ceb5d9835e5f902245972d208af66b95acd27dcc64e"
+    },
+    "cycle33_v2": {
+      "path": "artifacts/cycle-33-anchor-aware-scope-correction-v2.json",
+      "sha256": "dbe25f01bdf8a49aa4f6cace91dcce773a8c76ebc2f9a3879ca185028274ef75"
+    },
+    "document": {
+      "path": "docs/cycle-34-stable-anchor-kernel-v1.md",
+      "sha256": "8a610ae65c25ac45a571cf7615586a4898cbd789dd5fe988a3308153ce2621ed"
+    },
+    "preregistration": {
+      "path": "docs/cycle-34-stable-anchor-kernel-preregistration-v1.md",
+      "sha256": "1e3731212d268df0ea940b106f9c18df35490a8590605f2153a3c88effa7332a"
+    },
+    "tests": {
+      "path": "tests/test_cycle_34_stable_anchor_kernel_v1.py",
+      "sha256": "2c2e15ddf4f8170d566881cbcbae8d617e0c0560e3b8d22ec2f60b5ee15cf6ca"
+    }
+  },
+  "one_anchor": {
+    "epistemic_status": "PROVED",
+    "statement": "If b is o(sqrt(rho))-close to one anchor row, every translated skeleton row has unweighted prime-kernel value at least X^(7/10-o(1))."
+  },
+  "prior_context": {
+    "epistemic_status": "PROVED",
+    "prior_role": "valid original-detector anchor branch reduced to an unweighted prime-kernel skeleton"
+  },
+  "remaining_gate": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Bound X^(3/5)-separated h with |K(h)|>=X^(7/10-o(1)) by X^(21/25+o(1)); the generic skeleton exponent is 1 and the missing saving is 4/25."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_34_stable_anchor_kernel_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_34_stable_anchor_kernel_v1.py",
+    "write_command": "python3 proof/build_cycle_34_stable_anchor_kernel_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_34_stable_anchor_kernel_v1.py",
+    "sha256": "d276b0d06493055dc66af1ff06f33bff1968397548c24f39028234a4d200e5d5"
+  },
+  "stable_multi_anchor": {
+    "epistemic_status": "PROVED",
+    "statement": "X^o(1) anchors with X^o(1) l1 coefficient norm reduce by coloring to one anchor without fixed-power loss."
+  },
+  "status": "SEALED_STABLE_ANCHOR_TO_UNWEIGHTED_PRIME_KERNEL_REDUCTION"
+}

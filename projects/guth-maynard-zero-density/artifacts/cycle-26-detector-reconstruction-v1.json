@@ -1,0 +1,138 @@
+{
+  "artifact_id": "cycle-26-detector-reconstruction-v1",
+  "claim_boundary": "This artifact reinterprets large inverse leverage as detector reconstruction and splits a singular residual into exact reconstruction or exact row dependence. It does not construct a source-valid complementary detector, exclude exact row dependence, prove the skeleton target, improve zero density, or improve intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "critical_exponents": {
+      "k_rho": "6/25",
+      "leverage_exponent_fraction": "1/4",
+      "leverage_lower": "exp(k rho/4)/2",
+      "reconstruction_error_exponent_fraction": "1/8",
+      "reconstruction_error_upper": "sqrt(2) exp(-k rho/8)",
+      "rho": "-3/5",
+      "rows": "21/25"
+    },
+    "matrix_identity": "D^(-1)X=s b*+W",
+    "positive_definite_check": {
+      "B": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "L": "5",
+      "c": [
+        "1",
+        "2"
+      ],
+      "c_star_s": "5",
+      "norm_c_star_W_squared": "5",
+      "normalized_error_squared": "1/5",
+      "s": [
+        "1",
+        "2"
+      ]
+    },
+    "reconstruction_identity": "||(B^(-1)s)^*D^(-1)X/L-b*||=L^(-1/2)",
+    "singular_identity": "c in ker(B) implies c*D^(-1)X=(c*s)b*",
+    "singular_split_check": {
+      "B": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "annihilating_s": [
+        "1",
+        "0"
+      ],
+      "annihilation_coefficient": "0",
+      "null_vector": [
+        "0",
+        "1"
+      ],
+      "reconstructing_s": [
+        "0",
+        "2"
+      ],
+      "reconstruction_coefficient": "2"
+    }
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/detector_reconstruction_v1.py",
+      "sha256": "f597325cfd6e124c4bfb0572a8ca362efd67e0afcc26c4577f194dbf3c8bb638"
+    },
+    "cycle23": {
+      "path": "artifacts/cycle-23-residual-spectral-shift-v1.json",
+      "sha256": "605e7a3eb5ac5b4e342b512e4465762d43b1b919051e4dafd01058e7ae14121b"
+    },
+    "cycle24": {
+      "path": "artifacts/cycle-24-leverage-pruning-v1.json",
+      "sha256": "939b0d39d4976be5b3dfbbef4e5797b3130504945825eb43cc9b5ed7516f5531"
+    },
+    "cycle25": {
+      "path": "artifacts/cycle-25-near-cauchy-exclusion-v1.json",
+      "sha256": "a550a56484243f2e3b3cc4b237d41f91e794618a79630afdaac21c6426fa4392"
+    },
+    "document": {
+      "path": "docs/cycle-26-detector-reconstruction-v1.md",
+      "sha256": "569b0da894d90f2c03a0a2fb8fd035d6b98769b9f98b7265bc9f44c2aa8d6bbb"
+    },
+    "preregistration": {
+      "path": "docs/cycle-26-detector-reconstruction-preregistration-v1.md",
+      "sha256": "08d43d84ce7f76af4a32a33bebe69af4f9889647ccce66b3d0e54b65b0346a62"
+    },
+    "tests": {
+      "path": "tests/test_cycle_26_detector_reconstruction_v1.py",
+      "sha256": "3b6e247b8a87a8c9013db6fdcabfcc0d548ad6e09250102c83bdc5a4b97f1b53"
+    }
+  },
+  "positive_definite_duality": {
+    "critical_error": "sqrt(2) exp(-k rho/8)=exp(-X^(6/25-o(1))/8+O(1))",
+    "epistemic_status": "PROVED",
+    "statement": "For c=B^(-1)s and L=s*B^(-1)s, the scaled-row combination (c*/L)D^(-1)X reconstructs b* with exact error L^(-1/2)."
+  },
+  "prior_context": {
+    "epistemic_status": "PROVED",
+    "prior_role": "large leverage and singular residual reinterpreted after near-Cauchy exclusion"
+  },
+  "remaining_gate": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Use approximate/exact detector reconstruction to build a source-valid complementary detector, and treat exact prime-row dependence via E8 or E9."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_26_detector_reconstruction_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_26_detector_reconstruction_v1.py",
+    "write_command": "python3 proof/build_cycle_26_detector_reconstruction_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_26_detector_reconstruction_v1.py",
+    "sha256": "83af89d67a0a7f94b80871e062418cd961a250b616b3b334185e76c9bbd9a4e4"
+  },
+  "singular_split": {
+    "epistemic_status": "PROVED",
+    "statement": "A residual null vector either reconstructs b* exactly or is an exact dependence among the scaled prime rows."
+  },
+  "status": "SEALED_INVERSE_LEVERAGE_DETECTOR_RECONSTRUCTION_EXACT_DEPENDENCE_OPEN"
+}

@@ -1,0 +1,116 @@
+{
+  "analytic_gate": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Use joint p-k curvature/sieve averaging or prove nonlattice row decay; one-variable derivative tests are not allocated as the closing engine."
+  },
+  "artifact_id": "cycle-44-beatty-derivative-v1",
+  "claim_boundary": "This artifact checks the cited fixed-slope Beatty hypotheses and exact derivative-test exponent ledger. It does not delimit all Beatty, exponent-pair, sieve, or joint p-k methods and proves no density or interval gain.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "derivative_boundary": {
+    "epistemic_status": "PROVED",
+    "statement": "At Fourier resolution 11/25, the best saving from the checked explicit d-th derivative theorem is 12/175 at d=4, below both closure margins."
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "best_registered_saving": "12/175",
+    "cycle39_margin_r2": "17/50",
+    "cycle39_margin_r4": "7/50",
+    "low_mode_d3": {
+      "D": 8,
+      "derivative_exponent": "-4/5",
+      "fourier_exponent": "0",
+      "guaranteed_saving": "2/15",
+      "order": 3,
+      "term_a_saving": "3/20",
+      "term_b_saving": "2/15",
+      "term_c_saving": "1/4"
+    },
+    "resolution": "11/25",
+    "resolved_d3": {
+      "D": 8,
+      "derivative_exponent": "-9/25",
+      "fourier_exponent": "11/25",
+      "guaranteed_saving": "3/50",
+      "order": 3,
+      "term_a_saving": "3/20",
+      "term_b_saving": "3/50",
+      "term_c_saving": "9/25"
+    },
+    "resolved_d4": {
+      "D": 16,
+      "derivative_exponent": "-24/25",
+      "fourier_exponent": "11/25",
+      "guaranteed_saving": "12/175",
+      "order": 4,
+      "term_a_saving": "3/40",
+      "term_b_saving": "12/175",
+      "term_c_saving": "9/50"
+    },
+    "resolved_d5": {
+      "D": 32,
+      "derivative_exponent": "-39/25",
+      "fourier_exponent": "11/25",
+      "guaranteed_saving": "3/80",
+      "order": 5,
+      "term_a_saving": "3/80",
+      "term_b_saving": "13/250",
+      "term_c_saving": "9/100"
+    }
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/beatty_derivative_v1.py",
+      "sha256": "cf6fb6fa82ce8bddb24a4c2096f90cfd3cd123935ccb6850102c6aa20ce52ab8"
+    },
+    "cycle43": {
+      "path": "artifacts/cycle-43-row-lattice-beatty-v1.json",
+      "sha256": "96af26c677f43d4998cd25190456202d6c61d1297c9a493259048337ab7144b9"
+    },
+    "document": {
+      "path": "docs/cycle-44-beatty-derivative-v1.md",
+      "sha256": "00ffc665b4683d80defe31dc2acd337b172cb82f0ebf3d2f1057dee5bf83f080"
+    },
+    "preregistration": {
+      "path": "docs/cycle-44-beatty-derivative-preregistration-v1.md",
+      "sha256": "752ac573a947e2102ad9c1b2667d1bc4931219da6d6e4ef5ab6ff623fb74e163"
+    },
+    "tests": {
+      "path": "tests/test_cycle_44_beatty_derivative_v1.py",
+      "sha256": "381bb0e4851ea3f510adf7b3a6777f954760e09eb31c51f1b82a5ea818bdefa5"
+    }
+  },
+  "prior_context": {
+    "epistemic_status": "PROVED",
+    "prior_role": "test fixed-slope Beatty theorems and one-variable derivative estimates against the curved strip"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_44_beatty_derivative_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_44_beatty_derivative_v1.py",
+    "write_command": "python3 proof/build_cycle_44_beatty_derivative_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_44_beatty_derivative_v1.py",
+    "sha256": "3658d43301f1b699802f27740d2f74559d5fd4f8ada040d448171410a47e8b3e"
+  },
+  "source_boundary": {
+    "epistemic_status": "PROVED",
+    "sources": [
+      "https://arxiv.org/abs/0708.1015",
+      "https://arxiv.org/abs/1612.01468",
+      "https://arxiv.org/abs/2407.02094"
+    ],
+    "statement": "Banks-Shparlinski fixes an irrational finite-type slope with slope-dependent constants; Banks-Guo prime pairs additionally assume strong Hardy-Littlewood. Neither supplies the shrinking-slope unconditional input."
+  },
+  "status": "SEALED_FIXED_BEATTY_AND_DERIVATIVE_TEST_INSUFFICIENT_JOINT_PK_OPEN"
+}

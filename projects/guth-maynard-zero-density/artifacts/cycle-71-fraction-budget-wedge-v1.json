@@ -1,0 +1,73 @@
+{
+  "artifact_id": "cycle-71-fraction-budget-wedge-v1",
+  "boundary": {
+    "epistemic_status": "PROVED",
+    "statement": "The line 2theta+kappa=6/25 ties the strict target and is not closed without an additional margin."
+  },
+  "claim_boundary": "This artifact closes only the strict fraction-budget wedge. The boundary and residual packet atlas remain open; no powered, density, or interval gain is proved.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "boundary": "2theta+kappa=6/25 ties and needs a logarithmic or constant margin",
+    "closed_wedge": "2theta+kappa<6/25",
+    "fraction_count": "N(theta,kappa)<=sum_(q~Q)O(q)=X^(2theta+o(1))",
+    "gate": "apply unfurled curvature only on the residual region; route kappa>=6/25 through the seeded structured branch",
+    "residual_shallow_region": "2theta+kappa>=6/25, theta+kappa<=11/25, 0<=kappa<=6/25",
+    "weighted_pair_bound": "11/25+kappa+2theta<17/25"
+  },
+  "fraction_wedge": {
+    "epistemic_status": "PROVED",
+    "statement": "Primitive packet injectivity and O(Q^2) available fractions close every cell with 2theta+kappa<6/25, both in packet count and weighted pair census."
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/fraction_budget_wedge_v1.py",
+      "sha256": "38b5c7c6586a97aea17a913babe022ec1051062d9e2e82101cbfe940d86c9101"
+    },
+    "cycle70": {
+      "path": "artifacts/cycle-70-unfurled-stationary-curvature-v1.json",
+      "sha256": "2218be784434352a97037a865a40acd43969562f3430df22944b23adbbde6acc"
+    },
+    "document": {
+      "path": "docs/cycle-71-fraction-budget-v1.md",
+      "sha256": "9ffc93fc6d6890ee2965b0a91dbb3172f52d8979ec0a92acdafa5ee154cde303"
+    },
+    "preregistration": {
+      "path": "docs/cycle-71-fraction-budget-preregistration-v1.md",
+      "sha256": "ade0e8381312d252a8ff53b5ad27831511782df6ac62a54b0a0e405191462206"
+    },
+    "tests": {
+      "path": "tests/test_cycle_71_fraction_budget_wedge_v1.py",
+      "sha256": "26e740c2e4f6ff403f15296002b9562d6cabc137a4658a0bd9ab1c91fd27967b"
+    }
+  },
+  "literature_scope": {
+    "epistemic_status": "OBSERVED",
+    "statement": "Huang arXiv:1403.7388 definition (1.1) and Theorem 1 use a common denominator for both rational coordinates and do not directly cover the mixed grid-denominator packets here."
+  },
+  "prior_context": {
+    "epistemic_status": "PROVED",
+    "prior_role": "remove cells that close before the unfurled-curvature estimate is needed"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_71_fraction_budget_wedge_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_71_fraction_budget_wedge_v1.py",
+    "write_command": "python3 proof/build_cycle_71_fraction_budget_wedge_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_71_fraction_budget_wedge_v1.py",
+    "sha256": "79f0d036372b6803f46cfdd613078a43194482624f3dd6d16389f09215807829"
+  },
+  "status": "SEALED_FRACTION_WEDGE_2THETA_PLUS_KAPPA_LT_6_25_CLOSED"
+}

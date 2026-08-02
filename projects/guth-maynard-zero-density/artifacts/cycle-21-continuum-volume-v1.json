@@ -1,0 +1,90 @@
+{
+  "artifact_id": "cycle-21-continuum-volume-v1",
+  "claim_boundary": "This artifact proves a continuous-frame determinant lower bound and a conditional prime operator-discrepancy bridge. It does not prove that discrepancy for primes, the skeleton target, a density improvement, or an interval result.",
+  "continuum_frame": {
+    "epistemic_status": "PROVED",
+    "statement": "For Delta-separated log-frequency rows, det(H_0)>=(1-4H_(k-1)/(B Delta))^k whenever the bracket is positive."
+  },
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "conditional_bridge": "eta=o(X^(-3/5)) gives log det(H_P)=-o(kX^(-3/5)) and contradicts Cycle 20",
+    "critical_exponents": {
+      "base_separation": "3/5",
+      "color_loss": "0",
+      "colored_rows": "21/25",
+      "colored_separation": "3/5",
+      "continuum_error_power": "-3/5",
+      "continuum_log_improvement": "1/log X",
+      "required_prime_operator_discrepancy": "o(X^(-3/5))",
+      "rho": "-3/5",
+      "skeleton_rows": "21/25",
+      "volume_collapse_scale": "6/25"
+    },
+    "finite_frame_check": {
+      "B": "1",
+      "continuum_row_sum": "1/12",
+      "determinant_lower_factor": "3125/7776",
+      "harmonic_number": "25/12",
+      "k": 5,
+      "prime_operator_discrepancy": "1/12",
+      "separation": "100",
+      "total_error": "1/6"
+    },
+    "gershgorin_bound": "epsilon <= 4H_(k-1)/(B Delta)",
+    "kernel_bound": "|B^-1 integral_0^B exp(-ihy)dy| <= 2/(B|h|)",
+    "perturbed_determinant": "det(H_P)>=(1-epsilon-eta)^k"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/continuum_volume_v1.py",
+      "sha256": "0c1adb0d678d6bdc7a9f3c5bb2c04ff73c56d5d1b6e9f338494c12d74df57520"
+    },
+    "cycle20": {
+      "path": "artifacts/cycle-20-exterior-volume-v1.json",
+      "sha256": "5d647c7ccd850cdae77cb04bb5287d175cb210f1d546ab5f5341b50c4f185b5c"
+    },
+    "document": {
+      "path": "docs/cycle-21-continuum-volume-v1.md",
+      "sha256": "f276d1b2c9c6eb272815eb4204f34ca80fff660b72761052d96a90d009c50d42"
+    },
+    "preregistration": {
+      "path": "docs/cycle-21-continuum-volume-preregistration-v1.md",
+      "sha256": "301a4ed42e7528ab19821085d493d92c74ac58c81524f4eee95b124118e6f82e"
+    },
+    "tests": {
+      "path": "tests/test_cycle_21_continuum_volume_v1.py",
+      "sha256": "45b3e3cac09b80f06a6aac6178d59fd139db061ed9c5f642e9736faaf543c90e"
+    }
+  },
+  "prime_perturbation": {
+    "analytic_input_status": "CONJECTURED_OPEN",
+    "conditional_statement": "If eta_C=||H_P-H_0||_op=o(X^(-3/5)) after log-squared coloring, the prime determinant lower bound contradicts Cycle 20 and yields the target skeleton bound.",
+    "epistemic_status": "PROVED"
+  },
+  "prior_context": {
+    "cycle20_role": "sharp determinant upper bound to contradict",
+    "epistemic_status": "PROVED"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_21_continuum_volume_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_21_continuum_volume_v1.py",
+    "write_command": "python3 proof/build_cycle_21_continuum_volume_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_21_continuum_volume_v1.py",
+    "sha256": "9b2212d125d370646ac18e6349c749dc3da54f5b2e67d62ee99fcce82dce077e"
+  },
+  "status": "SEALED_CONTINUUM_VOLUME_THEOREM_PRIME_OPERATOR_QUADRATURE_OPEN"
+}

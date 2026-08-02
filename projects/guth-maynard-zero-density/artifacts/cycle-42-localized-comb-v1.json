@@ -1,0 +1,83 @@
+{
+  "analytic_gate": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Bound LCAM_3 or LCAM_4 at the diagonal exponent s+31/10 without replacing R_C by its cardinality."
+  },
+  "artifact_id": "cycle-42-localized-comb-v1",
+  "claim_boundary": "This artifact proves the localized-comb identities, Fourier factorization, relaxation loss, and diagonal ledger. It does not prove LCAM_s, a kernel count, a density gain, or an interval gain.",
+  "comb_correction": {
+    "epistemic_status": "PROVED",
+    "statement": "Replacing the localized comb by B times the full annulus loses exponent 9/10, exceeding both closure margins."
+  },
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "s3": {
+      "amplifier": 3,
+      "full_annulus_comb_mass": "27/10",
+      "full_annulus_relaxation_loss": "9/10",
+      "lcam_target": "61/10",
+      "localized_comb_mass": "9/5",
+      "localized_diagonal_vector": "61/10"
+    },
+    "s4": {
+      "amplifier": 4,
+      "full_annulus_comb_mass": "27/10",
+      "full_annulus_relaxation_loss": "9/10",
+      "lcam_target": "71/10",
+      "localized_comb_mass": "9/5",
+      "localized_diagonal_vector": "71/10"
+    }
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/localized_comb_v1.py",
+      "sha256": "ba534f803cb178c3751d4f7fab83eaf2283aa0506fc010e76b9554875ca987c1"
+    },
+    "cycle41": {
+      "path": "artifacts/cycle-41-annular-sampling-v1.json",
+      "sha256": "b10715ee78b090b432b0b2f928eb20153967b162ace7c9323df9e42e290de343"
+    },
+    "document": {
+      "path": "docs/cycle-42-localized-comb-v1.md",
+      "sha256": "caa9f4bce6e57ec94054d8ad495abe722e416914333dbdc7af8b3e70ababc5d7"
+    },
+    "preregistration": {
+      "path": "docs/cycle-42-localized-comb-preregistration-v1.md",
+      "sha256": "a5edb486916bdea0a6867a725ece0d6d6e0c3d51be6975084d8391dda343f246"
+    },
+    "tests": {
+      "path": "tests/test_cycle_42_localized_comb_v1.py",
+      "sha256": "342df25915e075ec54467dabaf3a63fb00a7e5472f62041cb19e37b2aee2160b"
+    }
+  },
+  "prior_context": {
+    "epistemic_status": "PROVED",
+    "prior_role": "retain the exact localized sampling weight rather than spend the full-annulus relaxation loss"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_42_localized_comb_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_42_localized_comb_v1.py",
+    "write_command": "python3 proof/build_cycle_42_localized_comb_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "row_resonance": {
+    "epistemic_status": "PROVED",
+    "statement": "The localized form factors into prime-monomial coefficient pairs, a smooth frequency cutoff, and the row Fourier sum R_C(log(n/n'))."
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_42_localized_comb_v1.py",
+    "sha256": "0eea56c751894cd429d169520a11071d91f23d6c5020dca0f665d4f0a724e4f6"
+  },
+  "status": "SEALED_LOCALIZED_COMB_DIAGONAL_SHARP_ROW_RESONANCE_OPEN"
+}

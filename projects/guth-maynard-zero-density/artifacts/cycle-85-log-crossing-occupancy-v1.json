@@ -1,0 +1,99 @@
+{
+  "analytic_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Construct signed high-frequency cancellation on 16/25<=xi<=83/75 using the exact logarithmic projector, routing valuation webs to E16."
+  },
+  "artifact_id": "cycle-85-log-crossing-occupancy-v1",
+  "claim_boundary": "This artifact proves logarithmic crossing occupancy and closes only 43/75<=xi<16/25. The endpoint, all higher frequencies, signed cancellation, packet closure, density gain, and interval gain remain open.",
+  "crossing_occupancy": {
+    "epistemic_status": "PROVED",
+    "statement": "Order-three Huxley--Sargos on g_j(r)=D/(2pi)log(r/(jc0)) gives crossing exponent min(nu,1/10+nu/2), with derivative-over-tube margin at least 8/225."
+  },
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "annular_decay_power": 5,
+    "band_width": "1/15",
+    "block_l1_exponent": "xi+3/5",
+    "crossing_curve": "g_j(r)=D/(2*pi)*log(r/(j*c0))",
+    "crossing_exponent": "min(nu,1/10+nu/2)",
+    "endpoint": "xi=16/25 ties 31/25 and is not promoted",
+    "gate": "unsigned incidence reaches volume limit; signed high-frequency cancellation open",
+    "hs_terms": {
+      "constant": "0",
+      "derivative": "1/10+nu/2",
+      "ratio": "(2nu-xi)/3",
+      "tube": "1/5+2nu/3-xi/3"
+    },
+    "max_j_plus_crossing": "3/5 at nu=1/3",
+    "minimum_derivative_over_tube_margin": "8/225",
+    "new_band": "43/75<=xi<16/25",
+    "new_cutoff": "16/25",
+    "old_cutoff": "43/75",
+    "tolerance": "delta=D/(j*K)"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/log_crossing_occupancy_v1.py",
+      "sha256": "6c31a3b80a256c7bba469216070502977dce6bd63339ed0062d8ba82414b319c"
+    },
+    "cycle47_source_ledger": {
+      "path": "artifacts/cycle-47-near-curve-gap-v1.json",
+      "sha256": "209dd38186cefbfad2f286b1fbc6400745425fb6fc8555bd8e06ac5547174a55"
+    },
+    "cycle84": {
+      "path": "artifacts/cycle-84-averaged-resonance-v1.json",
+      "sha256": "b7f67aa9613891c0de006711fc07475085aab0114fd44808a701cf57fe79ca9b"
+    },
+    "discovery_candidate": {
+      "path": "discovery/cycle-85-log-crossing-candidate-v1.md",
+      "sha256": "a77f1dc1e9bc7181eba551a1289d8d197b3693f72e344cc4aa23f90fe3e5e95d"
+    },
+    "document": {
+      "path": "docs/cycle-85-log-crossing-occupancy-v1.md",
+      "sha256": "310c60cb7278c15aa537f83c69402df31faab8f193bf93480fba0ba6481e1b92"
+    },
+    "preregistration": {
+      "path": "docs/cycle-85-log-crossing-preregistration-v1.md",
+      "sha256": "9db940d9bfa08acf7ddc90ef51e090937b0dad8f1e303bf2320456a04a173e9f"
+    },
+    "tests": {
+      "path": "tests/test_cycle_85_log_crossing_occupancy_v1.py",
+      "sha256": "9d66ca11df8ee8ca832902de2a3ba265406d347a5e6fbe96ec619850cbde0c4f"
+    }
+  },
+  "new_band": {
+    "epistemic_status": "PROVED",
+    "statement": "The block exponent is xi+3/5, closing 43/75<=xi<16/25; width 1/15. The endpoint ties."
+  },
+  "prior_context": {
+    "cycle47_role": "supply the checked order-three near-integer theorem and hypotheses",
+    "cycle84_role": "supply the occupied-crossing reduction and prior cutoff",
+    "epistemic_status": "PROVED"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_85_log_crossing_occupancy_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_85_log_crossing_occupancy_v1.py",
+    "write_command": "python3 proof/build_cycle_85_log_crossing_occupancy_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_85_log_crossing_occupancy_v1.py",
+    "sha256": "5dc5e196a59fedbd1e07b7d30e3279d9ab7a6f514c5bd1b2cc5e284268e99e85"
+  },
+  "status": "SEALED_UNSIGNED_INCIDENCE_VOLUME_LIMIT_SIGNED_RESONANCE_OPEN",
+  "structural_boundary": {
+    "epistemic_status": "PROVED",
+    "statement": "Unsigned smooth incidence has reached its volume limit at xi=16/25; higher frequencies require signed cancellation or structured inverse output."
+  }
+}

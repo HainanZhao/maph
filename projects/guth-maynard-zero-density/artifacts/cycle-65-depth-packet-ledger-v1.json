@@ -1,0 +1,83 @@
+{
+  "analytic_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Prove depth-packet discrepancy on shallow scales or route an X^(6/25)-deep low-denominator packet to arithmetic-progression recurrence with approximation error retained."
+  },
+  "artifact_id": "cycle-65-depth-packet-ledger-v1",
+  "claim_boundary": "This artifact proves an exact depth-weighted exponent ledger. It does not prove packet discrepancy, recurrence, powered, LCAM, density, or interval gains.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "depth_reduction": {
+    "epistemic_status": "PROVED",
+    "statement": "At q=X^theta and depth K=X^kappa, packet weight has exponent 11/25+kappa and sufficient packet count is strictly below X^(6/25-kappa)."
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "admissible_region": "theta+kappa<=11/25",
+    "constants": {
+      "dangerous_depth_threshold": "6/25",
+      "deep_packet_denominator_threshold": "1/5",
+      "delta_exponent": "3/5",
+      "h_exponent": "11/25",
+      "pair_target_exponent_open": "17/25"
+    },
+    "dyadic_count_target": "N(theta,kappa)<X^(6/25-kappa) with strict margin",
+    "dyadic_packet_weight_exponent": "11/25+kappa",
+    "exact_packet_weight": "W(q,K)=K*H-q*K*(K+1)/2",
+    "gate": "prove depth-packet discrepancy on shallow scales or route X^6/25-deep low-denominator packets to AP recurrence",
+    "maximal_depth_count_target": "N(theta,11/25-theta)<X^(theta-1/5)",
+    "random_count_exponent": "theta-kappa-2/5",
+    "random_margin": "16/25-theta>=1/5",
+    "structural_branch": "a single target-reaching packet requires kappa>=6/25 and hence theta<=1/5; strict excess requires theta<1/5"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/depth_packet_ledger_v1.py",
+      "sha256": "bb13f7c1a325cba90bef813873da459d149d6b1c203cd40d0b2af33fc00dac9e"
+    },
+    "cycle64": {
+      "path": "artifacts/cycle-64-farey-packet-transport-v1.json",
+      "sha256": "60a78bc81f2916e594221a1258a35024b96e67ecf5d2af6bc9a53731d1cdc76f"
+    },
+    "document": {
+      "path": "docs/cycle-65-depth-packet-v1.md",
+      "sha256": "a6c8d3356417b140f72c1edfd9607d8b807efd47a71e4a2e6d7b619c03a32b6d"
+    },
+    "preregistration": {
+      "path": "docs/cycle-65-depth-packet-preregistration-v1.md",
+      "sha256": "8ac12435ed50fd894126764b1580d5c53a87354e139d2b34ce493a22db799327"
+    },
+    "tests": {
+      "path": "tests/test_cycle_65_depth_packet_ledger_v1.py",
+      "sha256": "5d4f11d5bb21c5d4c128763cef95f06fa2cc4b03f3103a2b2b132296b0ed5b61"
+    }
+  },
+  "prior_context": {
+    "epistemic_status": "PROVED",
+    "prior_role": "refine the harmonic packet envelope by retaining multiplicative depth"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_65_depth_packet_ledger_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_65_depth_packet_ledger_v1.py",
+    "write_command": "python3 proof/build_cycle_65_depth_packet_ledger_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_65_depth_packet_ledger_v1.py",
+    "sha256": "11c7d81b977442e5fb41a8e9a662fbc16132b535dc4964f3ef59dbc28d3afdcc"
+  },
+  "status": "SEALED_LOG_DEPTH_PACKET_DISCREPANCY_OR_X6_25_AP_RECURRENCE_OPEN",
+  "threshold_interface": {
+    "epistemic_status": "PROVED",
+    "statement": "One packet reaches the pair target only at depth at least X^(6/25), possible only for denominator at most X^(1/5); strict versions require strict margins."
+  }
+}

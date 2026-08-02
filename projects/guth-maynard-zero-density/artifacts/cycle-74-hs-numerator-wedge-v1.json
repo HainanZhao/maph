@@ -1,0 +1,80 @@
+{
+  "analytic_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Exploit cancellation across q, preferably through the nonzero two-variable curvature or the shifted Dirichlet-correlation form, on the remaining cells."
+  },
+  "artifact_id": "cycle-74-hs-numerator-wedge-v1",
+  "claim_boundary": "This artifact closes only a strict band of numerator-resolved cells by a fixed-denominator order-three estimate. The q-average residual, powered saving, density gain, and interval gain remain open.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "fixed_q_bound": "w=min(alpha,max(0,alpha+1/10-theta/2))",
+    "gate": "remove the HS numerator wedge; average in q is still required on the residual cells",
+    "lower_piece_closure": "if alpha<=theta/2-1/10, require theta+kappa<6/25",
+    "new_cell": "(theta,kappa,alpha)=(11/50,0,1/50) ties raw count at 6/25 but HS gives 23/100",
+    "summed_bound": "theta+w",
+    "transition": "theta=1/5",
+    "upper_piece_closure": "if alpha>=theta/2-1/10, require alpha+theta/2+kappa<7/50"
+  },
+  "fixed_denominator_bound": {
+    "epistemic_status": "PROVED",
+    "statement": "w(theta,alpha)=min(alpha,max(0,alpha+1/10-theta/2)); summing q gives exponent theta+w."
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/hs_numerator_wedge_v1.py",
+      "sha256": "b4dfe2db110c0a79dc067ce3202e066b561328f07353dcfec429e46041708d64"
+    },
+    "cycle47_source_ledger": {
+      "path": "artifacts/cycle-47-near-curve-gap-v1.json",
+      "sha256": "209dd38186cefbfad2f286b1fbc6400745425fb6fc8555bd8e06ac5547174a55"
+    },
+    "cycle73": {
+      "path": "artifacts/cycle-73-numerator-resolved-atlas-v1.json",
+      "sha256": "fdad9eae285d61f8782b8e6e18809d559fee87ffcf2fddeca53a002b807b6685"
+    },
+    "document": {
+      "path": "docs/cycle-74-hs-numerator-v1.md",
+      "sha256": "0def9a7ba3435000b5639c31650a951fb55708dd36bc9850f3467df5013a1c41"
+    },
+    "preregistration": {
+      "path": "docs/cycle-74-hs-numerator-preregistration-v1.md",
+      "sha256": "e9cb862efdbd4e9f57ffc8558277340533cb17313ae1807279456dc0794dbdc1"
+    },
+    "tests": {
+      "path": "tests/test_cycle_74_hs_numerator_wedge_v1.py",
+      "sha256": "8d8deeb86da4e33764656bc73dd15250f52dbdab40857b3a9d4b4bd2c22d91a9"
+    }
+  },
+  "new_wedge": {
+    "epistemic_status": "PROVED",
+    "statement": "For theta>1/5, the lower piece closes when theta+kappa<6/25 and the upper piece closes when alpha+theta/2+kappa<7/50.",
+    "witness": "(theta,kappa,alpha)=(11/50,0,1/50) improves a raw tie at 6/25 to 23/100."
+  },
+  "prior_context": {
+    "cycle47_role": "supply the checked order-three near-integer theorem and primary-source chain",
+    "cycle73_role": "supply the numerator-resolved atlas and raw fraction budget",
+    "epistemic_status": "PROVED"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_74_hs_numerator_wedge_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_74_hs_numerator_wedge_v1.py",
+    "write_command": "python3 proof/build_cycle_74_hs_numerator_wedge_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_74_hs_numerator_wedge_v1.py",
+    "sha256": "0cebfbe4592707b10f32a75291845cc2f6586c57df7e73eae5ab3159c5e921c8"
+  },
+  "status": "SEALED_HS_NUMERATOR_WEDGE_CLOSED_Q_AVERAGE_RESIDUAL_OPEN"
+}

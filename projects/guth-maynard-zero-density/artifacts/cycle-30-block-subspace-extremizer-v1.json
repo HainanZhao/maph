@@ -1,0 +1,129 @@
+{
+  "artifact_id": "cycle-30-block-subspace-extremizer-v1",
+  "claim_boundary": "This artifact proves saturation only for arbitrary Hilbert rows with block-subspace projections and arbitrary separated labels. It does not assert an actual prime-phase extremizer, prove the skeleton target, improve zero density, or improve intervals.",
+  "critical_instance": {
+    "epistemic_status": "PROVED",
+    "statement": "At k=X^(21/25), rho=X^(-3/5), J=X^(1/25), the residual small eigenvalue and reconstruction error are stretched exponential on scale X^(6/25)."
+  },
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "block_synchronization": {
+      "J": 4,
+      "contributions_divided_by_sqrt_rho": [
+        "1/4",
+        "1/4",
+        "1/4",
+        "1/4"
+      ],
+      "nontrivial_hadamard_values": [
+        "0",
+        "0",
+        "0"
+      ],
+      "signed_values_divided_by_sqrt_rho": [
+        "1",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "construction": "x_t=sqrt(rho)b+sqrt(1-rho)r_t with Gram(r)=B_epsilon",
+    "critical_exponents": {
+      "detector_dimension": "1/25",
+      "epsilon": "exp(-X^(6/25+o(1)))",
+      "k_rho": "6/25",
+      "k_rho_squared": "-9/25",
+      "label_spacing": "arbitrary, including X^(3/5)",
+      "reconstruction_error": "exp(-X^(6/25+o(1))/2)",
+      "rho": "-3/5",
+      "rows": "21/25"
+    },
+    "finite_extremizer": {
+      "L_target": "175/81",
+      "epsilon": "108/175",
+      "full_gram_off_diagonal": "27/175",
+      "k": 4,
+      "leverage": "175/81",
+      "multiplicative_determinant_ratio": "1",
+      "one_minus_rho": "3/4",
+      "reconstruction_error_squared": "81/175",
+      "residual_off_diagonal": "-67/525",
+      "residual_other_eigenvalue": "592/525",
+      "rho": "1/4"
+    },
+    "scope": "arbitrary Hilbert rows and separated labels; actual prime phase curve excluded"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/block_subspace_extremizer_v1.py",
+      "sha256": "cb1378643956b06fcd7771693a3a98ef01238be470fde8a7c29e7dca6a4c0839"
+    },
+    "cycle19": {
+      "path": "artifacts/cycle-19-synchronization-graph-v1.json",
+      "sha256": "3c68ee97a31f7a7cb2612769f58c2645b4a58332aeceaa856d7082de635aeb63"
+    },
+    "cycle23": {
+      "path": "artifacts/cycle-23-residual-spectral-shift-v1.json",
+      "sha256": "605e7a3eb5ac5b4e342b512e4465762d43b1b919051e4dafd01058e7ae14121b"
+    },
+    "cycle27": {
+      "path": "artifacts/cycle-27-hadamard-detector-surgery-v1.json",
+      "sha256": "4a62765a22c0a2ca7a70d5917925859029faad155827a031efee90918c703c53"
+    },
+    "cycle28": {
+      "path": "artifacts/cycle-28-rank-j-spectral-shift-v1.json",
+      "sha256": "53d2c7eca302b3fd02ff499578657c533a1747077f4e21439587ecc56614a576"
+    },
+    "cycle29": {
+      "path": "artifacts/cycle-29-polynomial-block-subspace-v1.json",
+      "sha256": "bec07567ef2855c27f67bcb05f21268873fdaa7b1f87a540e38047820029aed8"
+    },
+    "document": {
+      "path": "docs/cycle-30-block-subspace-extremizer-v1.md",
+      "sha256": "177232a8b011c06dec04201d4d3d66fefa16b52d227272d9d5045a11f3fa1faa"
+    },
+    "preregistration": {
+      "path": "docs/cycle-30-block-subspace-extremizer-preregistration-v1.md",
+      "sha256": "7c5ed08ae64b47bf30dc3b54e95ab4a5daa2ab2643843fd3aa17bba63016e4fc"
+    },
+    "tests": {
+      "path": "tests/test_cycle_30_block_subspace_extremizer_v1.py",
+      "sha256": "d52c145c0d566248b9926e0003bb680eda798dc045ce4e5b52cf4c18966f39fd"
+    }
+  },
+  "prior_context": {
+    "epistemic_status": "PROVED",
+    "prior_role": "all abstract synchronization, shift, reconstruction, and block-subspace gates realized simultaneously"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_30_block_subspace_extremizer_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_30_block_subspace_extremizer_v1.py",
+    "write_command": "python3 proof/build_cycle_30_block_subspace_extremizer_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "saturation_scope": {
+    "architecture": "arbitrary Hilbert rows + separated labels + block-flat detector + Hadamard surgery + residual spectral shift/reconstruction",
+    "epistemic_status": "PROVED",
+    "missing_input": "actual prime phase curve, logarithmic curvature, unique factorization, or source identity"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_30_block_subspace_extremizer_v1.py",
+    "sha256": "ff836e0cb94eadda7f4f9ee746c1ee04c09103fd74728d78b2ddbeb352fc66f7"
+  },
+  "simultaneous_extremizer": {
+    "epistemic_status": "PROVED",
+    "statement": "A block-flat common detector plus a tuned simplex residual has perfect multiblock synchronization, zero nontrivial Hadamard values, exact determinant-shift cancellation, and detector reconstruction error L_target^(-1/2) for arbitrary k and J in the stated range."
+  },
+  "status": "SEALED_ABSTRACT_BLOCK_SUBSPACE_RESIDUAL_SHIFT_SATURATION"
+}

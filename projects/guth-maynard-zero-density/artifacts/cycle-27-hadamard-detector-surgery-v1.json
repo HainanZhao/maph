@@ -1,0 +1,162 @@
+{
+  "artifact_id": "cycle-27-hadamard-detector-surgery-v1",
+  "claim_boundary": "This artifact proves an algebraic detector-surgery dichotomy for equal-mass prime blocks. It does not bound the synchronized branch, close the full large-values argument, prove the skeleton target, improve zero density, or improve intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "branches": {
+      "high_variance": {
+        "complement_energy": "12",
+        "forced_max_squared": "1/48",
+        "max_nontrivial_squared": "4",
+        "threshold": "1/16"
+      },
+      "low_variance": {
+        "aligned_real_lower": "3/4",
+        "block_error_bound": "1/4",
+        "complement_energy": "0"
+      }
+    },
+    "dichotomy": "orthogonal signed detector >=V/(4J), or every aligned block real part >=3V/(4J)",
+    "hadamard": {
+      "block_norm_squared": "3/4",
+      "matrix": [
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          -1,
+          1,
+          -1
+        ],
+        [
+          1,
+          1,
+          -1,
+          -1
+        ],
+        [
+          1,
+          -1,
+          -1,
+          1
+        ]
+      ],
+      "order": 4,
+      "row_gram": [
+        [
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          4
+        ]
+      ],
+      "signed_detector_norm_squared": "3"
+    },
+    "parseval": {
+      "block_energy": "84",
+      "complement_energy": "55",
+      "total_energy": "84",
+      "transform": [
+        "(5+2j)",
+        "(-5+4j)",
+        "(1+0j)",
+        "(3+2j)"
+      ],
+      "variance_energy": "55",
+      "z": [
+        "(1+2j)",
+        "(2-1j)",
+        "(-1+1j)",
+        "(3+0j)"
+      ]
+    },
+    "subpower_rule": "J=X^o(1)"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/hadamard_detector_surgery_v1.py",
+      "sha256": "196f7ff2b0861aa2b3e895e5fc8b24738d6fbbab0dd07731e8e8ae37c9f30a52"
+    },
+    "cycle11": {
+      "path": "artifacts/cycle-11-e1-e2-block-variance-v1.json",
+      "sha256": "fa6264fc8d040f0e0164b1256ec97f07a6637c7688b94f794096cb6bdef04a8a"
+    },
+    "cycle26": {
+      "path": "artifacts/cycle-26-detector-reconstruction-v1.json",
+      "sha256": "6082d255ea07383913f30ceb5d9835e5f902245972d208af66b95acd27dcc64e"
+    },
+    "document": {
+      "path": "docs/cycle-27-hadamard-detector-surgery-v1.md",
+      "sha256": "2b400f80a28cfa650250064101121449e1cc4113716f69471d22d38793423aeb"
+    },
+    "preregistration": {
+      "path": "docs/cycle-27-hadamard-detector-surgery-preregistration-v1.md",
+      "sha256": "f4204657fada5c738f4f41137d63de35197c83e6a5f4fcd3245031c0dfd83ce3"
+    },
+    "tests": {
+      "path": "tests/test_cycle_27_hadamard_detector_surgery_v1.py",
+      "sha256": "fca7a6659e49825de2263b5f2ca2b24187b0baf3f2890a500becb89f52ee5d98"
+    }
+  },
+  "orthogonal_surgery": {
+    "epistemic_status": "PROVED",
+    "statement": "Hadamard signings of equal-mass blocks are orthogonal equal-norm detector vectors; block variance forces a non-original detector value at least V/(4J)."
+  },
+  "prior_context": {
+    "epistemic_status": "PROVED",
+    "prior_role": "block variance converted into an orthogonal signed-detector or multiblock-synchronization dichotomy"
+  },
+  "remaining_gate": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Bound separated rows simultaneously large and phase-aligned on every one of J=X^o(1) multiplicatively independent prime blocks."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_27_hadamard_detector_surgery_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_27_hadamard_detector_surgery_v1.py",
+    "write_command": "python3 proof/build_cycle_27_hadamard_detector_surgery_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_27_hadamard_detector_surgery_v1.py",
+    "sha256": "f08ea2cc565d602d23b74b508cb8618f487a48a77cdc7b4aff7c0f41f61a4dea"
+  },
+  "status": "SEALED_ORTHOGONAL_SIGNED_DETECTOR_OR_MULTIBLOCK_SYNCHRONIZATION",
+  "synchronized_branch": {
+    "analytic_status": "MULTIBLOCK_PRIME_LOG_BOUND_OPEN",
+    "epistemic_status": "PROVED",
+    "statement": "Failure of complementary energy forces every aligned block contribution to have real part greater than 3V/(4J)."
+  }
+}

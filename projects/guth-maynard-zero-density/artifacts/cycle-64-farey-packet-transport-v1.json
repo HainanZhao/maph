@@ -1,0 +1,83 @@
+{
+  "artifact_id": "cycle-64-farey-packet-transport-v1",
+  "claim_boundary": "This artifact proves packet uniqueness and a weighted reduction only. It does not bound packet mass or prove pair, powered, LCAM, density, or interval gains.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "analytic_gate": "prove_harmonic_packet_mass_below_X^-1_5_with_strict_margin_or_extract_low_denominator_recurrence",
+    "packet": {
+      "curve_spacing_exponent": "-3/5",
+      "delta_exponent": "3/5",
+      "farey_separation_exponent": "-22/25",
+      "h_exponent": "11/25",
+      "harmonic_packet_mass_target_open": "-1/5",
+      "multiple_definition": "d=kq, j=ka",
+      "packet_definition": "(ell,a/q) reduced with |alpha_ell-a/q|<=C/(qX)",
+      "packet_weight_prefactor_exponent": "22/25",
+      "pair_target_exponent_open": "17/25",
+      "random_harmonic_packet_mass_exponent": "-2/5",
+      "random_margin_to_target": "1/5",
+      "ratio_window_exponent_worst": "-1",
+      "unique_ell_per_reduced_approximant": true,
+      "unique_reduced_approximant_per_ell": true,
+      "weighted_multiples_upper": "sum_(k<=H/q)(H-kq)<=H^2/(2q)",
+      "window_smaller_than_curve_gap_margin": "2/5",
+      "window_smaller_than_farey_gap_margin": "3/25"
+    }
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/farey_packet_transport_v1.py",
+      "sha256": "d9ecdc6a21904b85cc72694421b6b7aec408efaca9419f6f73ecf173faf38f80"
+    },
+    "cycle63": {
+      "path": "artifacts/cycle-63-log-transport-census-v1.json",
+      "sha256": "d5dc9dd9ff3f5636c98980d35f6f973d72f9e62c04644fe510b4f0de06d4f153"
+    },
+    "document": {
+      "path": "docs/cycle-64-farey-packet-v1.md",
+      "sha256": "afaad92a12b6aed8d53bad95d4ad7a5a0ef66532dee26285b51e490cf2d242ff"
+    },
+    "preregistration": {
+      "path": "docs/cycle-64-farey-packet-preregistration-v1.md",
+      "sha256": "7ddbda60349a2f46cc1c853da47d47b6b2827b58b31bd2e4405d920bba104e5f"
+    },
+    "tests": {
+      "path": "tests/test_cycle_64_farey_packet_transport_v1.py",
+      "sha256": "1fdf9161e62033c07ad90074a6b78278a60e2f19fd5546950eaa810774a4e6db"
+    }
+  },
+  "packet_reduction": {
+    "epistemic_status": "PROVED",
+    "statement": "Every beta-free resonance belongs to one injective reduced Farey packet; its weighted multiples cost at most H^2/(2q), reducing pair exponent <17/25 to harmonic packet mass <X^-1/5."
+  },
+  "prior_context": {
+    "epistemic_status": "PROVED",
+    "prior_role": "compress the beta-free weighted pair census by reduced rational packets"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_64_farey_packet_transport_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_64_farey_packet_transport_v1.py",
+    "write_command": "python3 proof/build_cycle_64_farey_packet_transport_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_64_farey_packet_transport_v1.py",
+    "sha256": "3cdbd33a2a4a7ccbdc31e8121cb81134c9770ef74ac3d305b1e7ee9433057074"
+  },
+  "status": "SEALED_LOG_FAREY_PACKET_MASS_OR_LOW_DENOMINATOR_RECURRENCE_OPEN",
+  "structured_exception": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Either the packet mass has a strict X^-1/5 bound or a heavy low-denominator packet is extracted and routed to recurrence/detector surgery; uniform small mass without exceptions is not asserted."
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "artifact_id": "cycle-22-volume-noise-v1",
+  "claim_boundary": "This artifact proves an abstract square-root-noise obstruction to generic full-operator and absolute-volume formulations. It does not prove actual prime rows realize the model, refute every determinant method, prove the skeleton target, improve density, or improve intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "critical_exponents": {
+      "bulk_log_volume": "17/25",
+      "bulk_minus_signal": "11/25",
+      "common_vector_log_volume": "6/25",
+      "cycle21_requested_operator": "-3/5",
+      "entry_noise": "-1/2",
+      "k": "21/25",
+      "m": "1",
+      "operator_noise": "-2/25",
+      "operator_power_gap": "13/25"
+    },
+    "exact_model": "H=I+sqrt(n/m)[[0,U],[U*,0]] with flat unitary U",
+    "finite_block_unitary": {
+      "delta_squared": "1/4",
+      "determinant": "81/256",
+      "diagonal": "1",
+      "each_eigenvalue_multiplicity": 4,
+      "k": 8,
+      "m": 16,
+      "n": 4,
+      "negative_eigenvalue": "1-sqrt(n/m)",
+      "off_diagonal_squared": "1/16",
+      "positive_eigenvalue": "1+sqrt(n/m)"
+    },
+    "replacement_gate": "control a bulk-renormalized log-volume or spectral shift at the smaller common-vector scale X^(6/25)",
+    "route_boundary": "square-root entry cancellation alone cannot supply the Cycle-21 full operator gate or Cycle-20 absolute volume lower bound"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/volume_noise_v1.py",
+      "sha256": "a06ec5339f50ac28317d656639b6b86b3d4b2eb32492f9232d0e9930d8d5945b"
+    },
+    "cycle21_correction": {
+      "path": "artifacts/cycle-21-continuum-volume-correction-v2.json",
+      "sha256": "2d326ad019096f23c9a15c3bf1a9d4b1f860fe5d3241a1dbbc78b9bb8c462971"
+    },
+    "document": {
+      "path": "docs/cycle-22-volume-noise-v1.md",
+      "sha256": "6c60a626d445a53dff8dc7c7773e25fd11c26975cea48c8a206ce15f590c1936"
+    },
+    "preregistration": {
+      "path": "docs/cycle-22-volume-noise-preregistration-v1.md",
+      "sha256": "d1fbf416acb698943f28a373ac14810bf122ef98a275d16de996c0622c698f09"
+    },
+    "tests": {
+      "path": "tests/test_cycle_22_volume_noise_v1.py",
+      "sha256": "65fd85311a9d9f76a68dcc76ea8ffdd43d15dcb9ab79fa9838905c5ac8ab1322"
+    }
+  },
+  "prior_context": {
+    "cycle21_role": "full operator-discrepancy target stress-tested by square-root noise",
+    "epistemic_status": "PROVED"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_22_volume_noise_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_22_volume_noise_v1.py",
+    "write_command": "python3 proof/build_cycle_22_volume_noise_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "route_effect": {
+    "epistemic_status": "PROVED",
+    "next_gate": "Define and control a bulk-renormalized log-volume or spectral-shift statistic at common-vector scale X^(6/25).",
+    "statement": "Square-root entry cancellation alone cannot deliver the Cycle-21 full operator gate or the Cycle-20 absolute determinant lower bound."
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_22_volume_noise_v1.py",
+    "sha256": "dbf4c867aa7d8e2dd80662531a4ffdb0591cad21e49136b0d85588e58c4657f9"
+  },
+  "status": "SEALED_SQRT_NOISE_FULL_VOLUME_NO_GO_RENORMALIZED_SPECTRAL_SHIFT_OPEN",
+  "volume_noise": {
+    "bulk_volume_gap_over_common_vector": "11/25",
+    "epistemic_status": "PROVED",
+    "operator_gap_from_cycle21": "13/25",
+    "statement": "A flat block-unitary Gram perturbation has entry scale X^-1/2, operator scale X^-2/25, and negative log-volume scale X^17/25 at k=X^21/25."
+  }
+}

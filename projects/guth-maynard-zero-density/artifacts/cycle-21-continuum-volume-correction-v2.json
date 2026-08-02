@@ -1,0 +1,92 @@
+{
+  "artifact_id": "cycle-21-continuum-volume-correction-v2",
+  "claim_boundary": "This correction supplies the natural weighted prime continuum reference and preserves the exponent bridge. It does not prove the prime operator discrepancy, the skeleton target, a density improvement, or an interval result.",
+  "correction_record": {
+    "affected_claim": "uniform log measure was used as the strategic prime reference frame",
+    "correction": "replace uniform dy by e^y dy on [0,log 2]",
+    "epistemic_status": "OBSERVED",
+    "unaffected_claim": "the v1 uniform continuous-frame theorem and its explicit conditional implication remain valid"
+  },
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "corrected_gershgorin_bound": "epsilon_nu<=6H_(k-1)/Delta",
+    "corrected_kernel": "H_nu(h)=(2^(1-ih)-1)/(1-ih)",
+    "corrected_kernel_bound": "|H_nu(h)|<=3/|h|",
+    "correction_scope": "v1 uniform-frame theorem remains valid; its reference measure is superseded for prime comparison",
+    "critical_exponents": {
+      "required_prime_operator_discrepancy": "o(X^(-3/5))",
+      "rho": "-3/5",
+      "rows": "21/25",
+      "separation": "3/5",
+      "volume_collapse_scale": "6/25",
+      "weighted_continuum_error_power": "-3/5",
+      "weighted_continuum_log_improvement": "1/log X"
+    },
+    "finite_weighted_check": {
+      "determinant_lower_factor": "243/1024",
+      "harmonic_number": "25/12",
+      "k": 5,
+      "kernel_numerator_bound": "3",
+      "prime_operator_discrepancy": "1/8",
+      "reference_measure": "e^y dy on [0,log 2]",
+      "separation": "100",
+      "total_error": "1/4",
+      "weighted_row_sum": "1/8"
+    }
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/weighted_continuum_volume_v2.py",
+      "sha256": "eba4b266607d5921182421444647d7cf2052ac59c7f0eacaf4d207640b3a4f61"
+    },
+    "document": {
+      "path": "docs/cycle-21-continuum-volume-correction-v2.md",
+      "sha256": "d56db8a1768d654138232fa835be19d602326ea739be6ef44664aa7c46a6ae45"
+    },
+    "preregistration": {
+      "path": "docs/cycle-21-continuum-volume-correction-preregistration-v2.md",
+      "sha256": "c9b8b197d016a6d44bb3c53e957e52f984238dae7a15f05062e1e37bb5fb135c"
+    },
+    "superseded_v1_artifact": {
+      "path": "artifacts/cycle-21-continuum-volume-v1.json",
+      "sha256": "ed5f391adb5d767ec5c769043ea884633d09d65192057af8995104032dfdd391"
+    },
+    "tests": {
+      "path": "tests/test_cycle_21_continuum_volume_correction_v2.py",
+      "sha256": "5aa77132ca43e842105778a358b01338173f71312088c1cec1618b2b57636eac"
+    }
+  },
+  "prime_perturbation": {
+    "analytic_input_status": "CONJECTURED_OPEN",
+    "conditional_statement": "If ||H_P-H_nu||_op=o(X^(-3/5)) after log-squared coloring, the weighted determinant lower bound contradicts Cycle 20.",
+    "epistemic_status": "PROVED"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_21_continuum_volume_correction_v2.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_21_continuum_volume_correction_v2.py",
+    "write_command": "python3 proof/build_cycle_21_continuum_volume_correction_v2.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_21_continuum_volume_correction_v2.py",
+    "sha256": "ee76dedeefc391aab67d2a8c5e61acd40ae0c7217903e6ea30640dddb6b84208"
+  },
+  "status": "SEALED_WEIGHTED_CONTINUUM_CORRECTION_PRIME_OPERATOR_QUADRATURE_OPEN",
+  "weighted_continuum": {
+    "epistemic_status": "PROVED",
+    "kernel": "(2^(1-ih)-1)/(1-ih)",
+    "reference_measure": "e^y dy on [0,log 2]",
+    "row_sum_bound": "6H_(k-1)/Delta"
+  }
+}

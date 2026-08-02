@@ -1,0 +1,84 @@
+{
+  "analytic_gate": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Prove ASAM_3 or ASAM_4 by cancellation in the signed annular prime-monomial form."
+  },
+  "artifact_id": "cycle-41-annular-sampling-v1",
+  "claim_boundary": "This artifact proves smooth hollow sampling, leakage margins, and the exact signed annular kernel. It does not prove ASAM_s, a kernel count, a density gain, or an interval gain.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "annular_vector_target_s3": "61/10",
+    "annular_vector_target_s4": "71/10",
+    "decay_order": 9,
+    "s3": {
+      "amplifier": 3,
+      "ampr_target": "61/10",
+      "decay_order": 9,
+      "leakage_exponent": "47/10",
+      "leakage_margin": "7/5"
+    },
+    "s4": {
+      "amplifier": 4,
+      "ampr_target": "71/10",
+      "decay_order": 9,
+      "leakage_exponent": "67/10",
+      "leakage_margin": "2/5"
+    }
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/annular_sampling_v1.py",
+      "sha256": "b391baf436508211019b812425ea435033000819e864c92b4b574f3819dda111"
+    },
+    "cycle40": {
+      "path": "artifacts/cycle-40-hollow-notch-v1.json",
+      "sha256": "d8a2c9cabc9834dc26ec7850e1f9268e136b2e2b13d1ddc6690195553b646254"
+    },
+    "document": {
+      "path": "docs/cycle-41-annular-sampling-v1.md",
+      "sha256": "89d16d3ae1e1b3321887992e28efd798e1f243647abeee87662db33766aa9c02"
+    },
+    "preregistration": {
+      "path": "docs/cycle-41-annular-sampling-preregistration-v1.md",
+      "sha256": "5998251a3429894921699e9abef65d5c57f8072f8d51098a8138cc6fb45eb3d7"
+    },
+    "tests": {
+      "path": "tests/test_cycle_41_annular_sampling_v1.py",
+      "sha256": "80967c01dabdd19be26bae81012826c3246187abd108c59d2258c9f676fda1cb"
+    }
+  },
+  "prior_context": {
+    "epistemic_status": "PROVED",
+    "prior_role": "construct the required notch instead of applying a raw positive global collision mean"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_41_annular_sampling_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_41_annular_sampling_v1.py",
+    "write_command": "python3 proof/build_cycle_41_annular_sampling_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sampling_reduction": {
+    "epistemic_status": "PROVED",
+    "statement": "A bandwidth-B exponential polynomial sampled on hollow Delta-separated rows is bounded by B times its enlarged-annulus mean square plus Schwartz leakage; N=9 makes total leakage power-negligible for s=3,4."
+  },
+  "sealer": {
+    "path": "proof/build_cycle_41_annular_sampling_v1.py",
+    "sha256": "1c80eb85ab1ef73ee52f8b7b7066f474ec9e438784bd471d52f47cd85a8e1c18"
+  },
+  "signed_kernel": {
+    "epistemic_status": "PROVED",
+    "statement": "The annular mean has kernel 2(sin(bu)-sin(au))/u, which changes sign and must not be replaced by its absolute value."
+  },
+  "status": "SEALED_SMOOTH_ANNULAR_SAMPLING_SIGNED_COLLISION_OPEN"
+}

@@ -1,0 +1,85 @@
+{
+  "analytic_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Improve the fixed-center integer-resonance count, rather than worst-interval occupancy, on 94/225<=xi<=83/75."
+  },
+  "artifact_id": "cycle-82-smooth-phase-projector-v1",
+  "claim_boundary": "This artifact proves |S_k|<=X^(37/45+o(1)) and closes only 163/450<=xi<94/225 beyond Cycle 80. The endpoint, higher frequencies, packet closure, density gain, and interval gain remain open.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "band_width": "1/18",
+    "endpoint": "xi=94/225 ties 31/25 and is not promoted",
+    "gate": "smooth projector band closed; fixed-center resonance occupancy open",
+    "new_band": "163/450<=xi<94/225",
+    "new_cutoff": "94/225",
+    "occupancy_sum": "sum_d |Theta_Q(x_d)|<<Q*A_k",
+    "old_cutoff": "163/450",
+    "per_k_exponent": "37/45",
+    "projector": "Theta_Q(x)=Q*sum_m hatV(Q*(m-x)); |Theta_Q(x)|<<Q*(1+Q*||x||)^(-A)"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/smooth_phase_projector_v1.py",
+      "sha256": "0ddfcb60bc4812045f00724efe0aaec00e020af493c3f6f7eb0c6c1b2da963f3"
+    },
+    "cycle80": {
+      "path": "artifacts/cycle-80-phase-occupancy-v1.json",
+      "sha256": "751e8edde6469dabe637a17d8bc2cad491a9ed2caa49f099ce60020ef0a069d7"
+    },
+    "cycle81": {
+      "path": "artifacts/cycle-81-exact-q-transform-v1.json",
+      "sha256": "0753d455a2e9428b28f1b9dac59b04fd57008db562370202a300a38a818631a4"
+    },
+    "discovery_candidate": {
+      "path": "discovery/cycle-82-smooth-projector-candidate-v1.md",
+      "sha256": "67dc0276044241d6bc034945d015d85356bacf10e80cf756c14d5321f65ea57f"
+    },
+    "document": {
+      "path": "docs/cycle-82-smooth-phase-projector-v1.md",
+      "sha256": "9ccf8b8c17b976f5b2e40170c41178dca42f008e5477f13b1613266496428afa"
+    },
+    "preregistration": {
+      "path": "docs/cycle-82-smooth-projector-preregistration-v1.md",
+      "sha256": "a086501de5d2ce2c4082e32c93208c2713a5c1cf50971e2fa149b399e8a623c2"
+    },
+    "tests": {
+      "path": "tests/test_cycle_82_smooth_phase_projector_v1.py",
+      "sha256": "bf5792789798ff9c81a5914e6ada3de44233740654300092c14679b9115e6900"
+    }
+  },
+  "new_band": {
+    "epistemic_status": "PROVED",
+    "statement": "The per-k exponent is 37/45, so all xi<94/225 close strictly; the new width beyond 163/450 is 1/18 and the endpoint ties."
+  },
+  "prior_context": {
+    "cycle80_role": "supply A_k<=X^(22/45+o(1)) uniformly in interval center",
+    "cycle81_role": "supply the smooth q-projector and frozen Fourier sign",
+    "epistemic_status": "PROVED"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_82_smooth_phase_projector_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_82_smooth_phase_projector_v1.py",
+    "write_command": "python3 proof/build_cycle_82_smooth_phase_projector_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_82_smooth_phase_projector_v1.py",
+    "sha256": "ba05aa203071ea5a6bfa7bfd718740203e44ac8182a38418ea2ead09c6fed759"
+  },
+  "smooth_projector": {
+    "epistemic_status": "PROVED",
+    "statement": "Smooth Poisson summation gives |Theta_Q(x)|<<Q(1+Q||x||)^(-A), and occupancy annuli give |S_k|<<Q A_k without Cauchy-Schwarz."
+  },
+  "status": "SEALED_SMOOTH_PROJECTOR_BAND_FIXED_CENTER_RESONANCE_OPEN"
+}

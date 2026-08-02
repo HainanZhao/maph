@@ -1,0 +1,114 @@
+{
+  "analytic_fork": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Either prove the complete Hilbert edge-cumulant restriction directly or add a prime-specific graph amplification before Cycle 52 recurrence extraction."
+  },
+  "artifact_id": "cycle-59-trigger-to-recurrence-v1",
+  "claim_boundary": "This artifact proves a conditional exponent interface only. It does not prove a cumulant estimate, graph amplification, AMPR, density, or interval gains.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "full_contraction_target_rows": {
+      "all_edges_insufficient": true,
+      "average_degree_exponent": "47/50",
+      "desired_deficit": "7/50",
+      "desired_deficit_forced": true,
+      "generic_condition": "eta>r-mu",
+      "minimum_deficit_open_endpoint": "-1/10",
+      "popular_edge_count_exponent": "89/50",
+      "required_surplus_open_endpoint": "7/10",
+      "row_exponent": "21/25",
+      "trigger_surplus": "47/50"
+    },
+    "full_contraction_uniform_rows": {
+      "all_edges_insufficient": false,
+      "average_degree_exponent": "47/50",
+      "desired_deficit": "7/50",
+      "desired_deficit_forced": true,
+      "generic_condition": "eta>r-mu",
+      "minimum_deficit_open_endpoint": "3/50",
+      "popular_edge_count_exponent": "97/50",
+      "required_surplus_open_endpoint": "43/50",
+      "row_exponent": "1",
+      "trigger_surplus": "47/50"
+    },
+    "hybrid_total_saving_for_target_7_50_open": "19/25",
+    "hybrid_total_saving_for_uniform_7_50_open": "23/25",
+    "status": "GRAPH_AMPLIFICATION_NEEDED_FOR_BARE_TRIGGER",
+    "target_rows": {
+      "all_edges_insufficient": false,
+      "average_degree_exponent": "0",
+      "desired_deficit": "7/50",
+      "desired_deficit_forced": false,
+      "generic_condition": "eta>r-mu",
+      "minimum_deficit_open_endpoint": "21/25",
+      "popular_edge_count_exponent": "21/25",
+      "required_surplus_open_endpoint": "7/10",
+      "row_exponent": "21/25",
+      "trigger_surplus": "0"
+    },
+    "uniform_rows": {
+      "all_edges_insufficient": false,
+      "average_degree_exponent": "0",
+      "desired_deficit": "7/50",
+      "desired_deficit_forced": false,
+      "generic_condition": "eta>r-mu",
+      "minimum_deficit_open_endpoint": "1",
+      "popular_edge_count_exponent": "1",
+      "required_surplus_open_endpoint": "43/50",
+      "row_exponent": "1",
+      "trigger_surplus": "0"
+    }
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/trigger_to_recurrence_v1.py",
+      "sha256": "4b722ed091ba71eca9397ff6f40fe4ac011ff17dc3edcc37e20d09572e97656d"
+    },
+    "cycle58": {
+      "path": "artifacts/cycle-58-strict-hybrid-margin-correction-v1.json",
+      "sha256": "0bde0caa82cda62b8a61af9902e6eecc00d89442d41779826bb52a59e6a3dcef"
+    },
+    "document": {
+      "path": "docs/cycle-59-trigger-to-recurrence-v1.md",
+      "sha256": "745290e96623e4952323c91c79fe9068317e3b4f5a1f2fd89384805c0580366f"
+    },
+    "preregistration": {
+      "path": "docs/cycle-59-trigger-to-recurrence-preregistration-v1.md",
+      "sha256": "a04a68b7d4c69d9645672535f05c736c55246f4d43f6d507b49301348d3e4b7e"
+    },
+    "tests": {
+      "path": "tests/test_cycle_59_trigger_to_recurrence_v1.py",
+      "sha256": "2abddee6b01212db750f8ad6edb3c2eaabc2668db8a92bb64c229d9cc91a8f86"
+    }
+  },
+  "prior_context": {
+    "epistemic_status": "PROVED",
+    "prior_role": "translate the strict trigger surplus into popular-correlation strength"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_59_trigger_to_recurrence_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_59_trigger_to_recurrence_v1.py",
+    "write_command": "python3 proof/build_cycle_59_trigger_to_recurrence_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_59_trigger_to_recurrence_v1.py",
+    "sha256": "4e93e7e4c1d37e4945dc5b9c56738e30545921a520531fef75b691c71445e055"
+  },
+  "status": "SEALED_DIRECT_RESTRICTION_OR_GRAPH_AMPLIFICATION_OPEN",
+  "trigger_recurrence_boundary": {
+    "epistemic_status": "PROVED",
+    "statement": "A trigger surplus mu generically forces correlation deficit eta only for eta>r-mu; eta=7/50 needs mu>7/10 at r=21/25 and mu>43/50 uniformly for r<=1."
+  }
+}

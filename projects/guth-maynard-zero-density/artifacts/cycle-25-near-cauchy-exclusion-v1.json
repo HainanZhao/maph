@@ -1,0 +1,122 @@
+{
+  "artifact_id": "cycle-25-near-cauchy-exclusion-v1",
+  "claim_boundary": "This artifact excludes Cycle 24's near-Cauchy alternative for full dyadic prime phase rows at polynomial height. It does not exclude residual singularity or stretched-exponential residual ill-conditioning, prove the skeleton target, improve zero density, or improve prime intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "asymptotic_separation": {
+      "contradiction_for_large_X": true,
+      "dominance": "X^(6/25-o(1))/(log X)^3 tends to infinity",
+      "lower_log_form": "exp(-O((log X)^3))",
+      "upper_log_form": "exp(-k rho/16+O(log X))"
+    },
+    "concentration_constants": {
+      "angular_error_upper": "2 pi sqrt(M delta)",
+      "angular_multiplier": "pi/2",
+      "mean_deficit_multiplier": 2,
+      "mean_modulus_lower": "1-2 delta",
+      "pointwise_distance_multiplier": 2,
+      "pointwise_distance_upper": "2 sqrt(M delta)",
+      "ratio_distance_multiplier": 4,
+      "ratio_distance_upper": "4 sqrt(M delta)",
+      "squared_distance_multiplier": 4,
+      "sum_squared_distance_upper": "4 M delta"
+    },
+    "critical_exponents": {
+      "delta_exponent_fraction": "1/8",
+      "integer_coefficient_exponent": "12/5",
+      "k_rho": "6/25",
+      "matveev_log_power": 3,
+      "phase_error_exponent_fraction": "1/16",
+      "rational_height_exponent": "1",
+      "rho": "-3/5",
+      "rows": "21/25"
+    },
+    "multiplicative_form": "(p/q)^n (r/q)^(-m) != 1 by unique factorization",
+    "prime_intervals": {
+      "alpha_bounds": "log(14/11)<=log(p/q)<=log(3/2)",
+      "beta_bounds": "log(18/11)<=log(r/q)<=log(19/10)",
+      "p_over_X": [
+        "7/5",
+        "3/2"
+      ],
+      "q_over_X": [
+        "1",
+        "11/10"
+      ],
+      "r_over_X": [
+        "9/5",
+        "19/10"
+      ]
+    }
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/near_cauchy_exclusion_v1.py",
+      "sha256": "7cba1fd7e48a50445b5520db86adcfdeb039e9c0ac74f2b64df4d423c7299620"
+    },
+    "cycle24": {
+      "path": "artifacts/cycle-24-leverage-pruning-v1.json",
+      "sha256": "939b0d39d4976be5b3dfbbef4e5797b3130504945825eb43cc9b5ed7516f5531"
+    },
+    "document": {
+      "path": "docs/cycle-25-near-cauchy-exclusion-v1.md",
+      "sha256": "70b576dc59c943ff8951e0cebf69304823e84141de4425f68d2d2e5d968b7c45"
+    },
+    "evertse_source": {
+      "path": "artifacts/sources/evertse-linear-forms-logarithms-ch5.pdf",
+      "sha256": "1f7f41e3b3292e380651baf4b30ed8717c3411909202dc0409a0d41ed4f149f0"
+    },
+    "preregistration": {
+      "path": "docs/cycle-25-near-cauchy-exclusion-preregistration-v1.md",
+      "sha256": "d704ff883888fb7fada6ecb546a4bb7de73f7b861c4d33ca24165b41a3ea1bc4"
+    },
+    "tests": {
+      "path": "tests/test_cycle_25_near_cauchy_exclusion_v1.py",
+      "sha256": "88a16784e678f4db2ad1ff005444d6c38e02b3350da3ace2e3222b636951d658"
+    }
+  },
+  "phase_concentration": {
+    "epistemic_status": "PROVED",
+    "statement": "Mean modulus at least 1-2delta forces every prime-ratio phase within 4 sqrt(M delta) of one."
+  },
+  "prior_context": {
+    "cycle24_role": "near-Cauchy arm excluded; residual dependence arms retained",
+    "epistemic_status": "PROVED"
+  },
+  "remaining_gate": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Detect the negative residual shift or exclude singular/stretched-exponentially ill-conditioned normalized prime residuals via a generalized Vandermonde principle."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_25_near_cauchy_exclusion_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_25_near_cauchy_exclusion_v1.py",
+    "write_command": "python3 proof/build_cycle_25_near_cauchy_exclusion_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_25_near_cauchy_exclusion_v1.py",
+    "sha256": "e13124f3fcfecf58e313461312355e969c64cdcf5f647d88ea70d0eb6d7d1b79"
+  },
+  "source_scope": {
+    "derived_scale": "rational heights <=2X and B<=X^(12/5+o(1)) give exp(-O((log X)^3))",
+    "epistemic_status": "PROVED",
+    "statement": "Theorem 5.4 of the pinned Evertse notes states the explicit rational Matveev bound used here; only its m=2 rational specialization is imported."
+  },
+  "status": "SEALED_NEAR_CAUCHY_PRIME_RECURRENCE_EXCLUDED_RESIDUAL_DEPENDENCE_OPEN",
+  "three_prime_exclusion": {
+    "critical_scale": "k rho=X^(6/25-o(1))",
+    "epistemic_status": "PROVED",
+    "statement": "Three primes in fixed separated proportional intervals produce a nonzero two-logarithm form with upper exp(-k rho/16+O(log X)), contradicting the Matveev lower exp(-O((log X)^3))."
+  }
+}

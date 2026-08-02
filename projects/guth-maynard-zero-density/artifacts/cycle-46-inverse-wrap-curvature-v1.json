@@ -1,0 +1,77 @@
+{
+  "analytic_gate": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Prove the uniform inverse-log near-lattice count ILC at h^(7/11+o(1)), or use nonlattice row decay."
+  },
+  "artifact_id": "cycle-46-inverse-wrap-curvature-v1",
+  "claim_boundary": "This artifact proves the inverse-wrap equivalence and exact curvature/tube/count ledger. It does not prove ILC, de-aliasing, LCAM_s, density, or interval gain.",
+  "critical_transition": {
+    "epistemic_status": "PROVED",
+    "statement": "At h=X^(11/25), curvature is X^(-7/25), tube width X^(-21/25), and the required count X^(7/25) equals reciprocal curvature scale."
+  },
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "critical_inverse_curve": {
+      "curvature": "-7/25",
+      "curve_height": "3/5",
+      "fourier_exponent": "11/25",
+      "j_length": "11/25",
+      "reciprocal_curvature": "7/25",
+      "slope": "4/25",
+      "target_count": "7/25",
+      "tube_width": "-21/25"
+    }
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/inverse_wrap_curvature_v1.py",
+      "sha256": "cd85b91416d0605819012c42db84afc3c20efa6bc8abb838328ac137b064906c"
+    },
+    "cycle45": {
+      "path": "artifacts/cycle-45-joint-pk-large-sieve-v1.json",
+      "sha256": "7927eab818a98871417d94ef595310de4cb0c3ef1eb9eea5293328a1f5edeabf"
+    },
+    "document": {
+      "path": "docs/cycle-46-inverse-wrap-curvature-v1.md",
+      "sha256": "24feac3eaf8d66f9f1ac291d613b014d327b8a6a88317f817fce72b639f5c8db"
+    },
+    "preregistration": {
+      "path": "docs/cycle-46-inverse-wrap-curvature-preregistration-v1.md",
+      "sha256": "57d1bdbdb6f7f558b31b9410c72a36a5ef8e1e9252275158add879d8ea5c7de6"
+    },
+    "tests": {
+      "path": "tests/test_cycle_46_inverse_wrap_curvature_v1.py",
+      "sha256": "bb526482bc28ee114f5395d353ce22c95431a0ceea35a4d95a4eacdbbb515017"
+    }
+  },
+  "inverse_wrap": {
+    "epistemic_status": "PROVED",
+    "statement": "Frequency clustering in a 1/X arc is equivalent up to absolute window constants to near-integer points on (Delta/2pi)log(1+(j+beta)/h)."
+  },
+  "prior_context": {
+    "epistemic_status": "PROVED",
+    "prior_role": "translate the h^(7/11) wrap de-aliasing gate into an exact near-lattice curve count"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_46_inverse_wrap_curvature_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_46_inverse_wrap_curvature_v1.py",
+    "write_command": "python3 proof/build_cycle_46_inverse_wrap_curvature_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_46_inverse_wrap_curvature_v1.py",
+    "sha256": "e3c5e99a32dd1bb1eaa3828def4431247cfe3f603f6763d71109dcd69716c72b"
+  },
+  "status": "SEALED_INVERSE_LOG_CURVE_RECIPROCAL_CURVATURE_OPEN"
+}

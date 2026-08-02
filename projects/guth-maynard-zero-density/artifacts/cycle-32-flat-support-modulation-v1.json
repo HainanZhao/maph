@@ -1,0 +1,157 @@
+{
+  "artifact_id": "cycle-32-flat-support-modulation-v1",
+  "claim_boundary": "This artifact reduces arbitrary reconstructed modulation to a near-flat dyadic support and quantifies its support ladder. It does not exclude any rung, prove a prime-Vandermonde bound, close the skeleton target, improve zero density, or improve intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "dyadic_flattening": {
+    "epistemic_status": "PROVED",
+    "statement": "A dyadic level carries squared mass at least 3/(4L), has normalized block amplitudes between 1/(2sqrt(s)) and 2/sqrt(s), and preserves reconstruction error exp(-X^(2/25-o(1)))."
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "bin_count": "L=ceil(log_2(2sqrt(J)))+1=O(log X)",
+    "finite_dyadic": {
+      "J": 16,
+      "discard_threshold_squared": "1/64",
+      "discarded_mass": "1/16",
+      "error_amplification_squared": "4/3",
+      "flat_lower_squared": "1/16",
+      "flat_upper_squared": "1",
+      "normalized_squared_magnitudes": [
+        "1/4",
+        "1/4",
+        "1/4",
+        "1/4"
+      ],
+      "selected_indices": [
+        12,
+        13,
+        14,
+        15
+      ],
+      "selected_mass": "3/4",
+      "squared_magnitudes": [
+        "1/128",
+        "1/128",
+        "1/128",
+        "1/128",
+        "1/128",
+        "1/128",
+        "1/128",
+        "1/128",
+        "3/64",
+        "3/64",
+        "3/64",
+        "3/64",
+        "3/16",
+        "3/16",
+        "3/16",
+        "3/16"
+      ],
+      "support_size": 4
+    },
+    "normalized_error": "sqrt(4L/3) exp(-X^(2/25-o(1)))=exp(-X^(2/25-o(1)))",
+    "selected_mass_lower": "mu^2>=3/(4L)",
+    "support_ladder": [
+      {
+        "coordinate_excess": "0",
+        "lambda": "0",
+        "per_prime_magnitude": "-21/50",
+        "prime_coordinate_support": "21/25",
+        "rows": "21/25",
+        "support_blocks": "0"
+      },
+      {
+        "coordinate_excess": "1/25",
+        "lambda": "1/25",
+        "per_prime_magnitude": "-11/25",
+        "prime_coordinate_support": "22/25",
+        "rows": "21/25",
+        "support_blocks": "1/25"
+      },
+      {
+        "coordinate_excess": "2/25",
+        "lambda": "2/25",
+        "per_prime_magnitude": "-23/50",
+        "prime_coordinate_support": "23/25",
+        "rows": "21/25",
+        "support_blocks": "2/25"
+      },
+      {
+        "coordinate_excess": "3/25",
+        "lambda": "3/25",
+        "per_prime_magnitude": "-12/25",
+        "prime_coordinate_support": "24/25",
+        "rows": "21/25",
+        "support_blocks": "3/25"
+      },
+      {
+        "coordinate_excess": "4/25",
+        "lambda": "4/25",
+        "per_prime_magnitude": "-1/2",
+        "prime_coordinate_support": "1",
+        "rows": "21/25",
+        "support_blocks": "4/25"
+      }
+    ]
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/flat_support_modulation_v1.py",
+      "sha256": "39bbc928ee4ca6268dfca96d05b2e64b7a93f7347b1bf5fceb1f82b33f7e35ed"
+    },
+    "cycle29": {
+      "path": "artifacts/cycle-29-polynomial-block-subspace-v1.json",
+      "sha256": "bec07567ef2855c27f67bcb05f21268873fdaa7b1f87a540e38047820029aed8"
+    },
+    "cycle31": {
+      "path": "artifacts/cycle-31-variable-rank-self-dual-v1.json",
+      "sha256": "7c6f3a75cbe0d16ebe729260cbc7ac42fee4b86e00b80fb832926317e8f11784"
+    },
+    "document": {
+      "path": "docs/cycle-32-flat-support-modulation-v1.md",
+      "sha256": "b40d91a45ca4318970d8ac7aaad22905067d4beadeeebbd2c1c6d8ae22a8dc45"
+    },
+    "preregistration": {
+      "path": "docs/cycle-32-flat-support-modulation-preregistration-v1.md",
+      "sha256": "d30bf3e596e15e5854d97ab62c218f22ecdcfa71b2fd655be5a250c51dc03303"
+    },
+    "tests": {
+      "path": "tests/test_cycle_32_flat_support_modulation_v1.py",
+      "sha256": "33949e8a6667392e1ceaa4249a1fa6d47df62973bfd0610187c213e6c0b2eda0"
+    }
+  },
+  "prior_context": {
+    "epistemic_status": "PROVED",
+    "prior_role": "adaptive block modulation flattened at the self-dual scale"
+  },
+  "remaining_gate": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Prove a generalized prime-Vandermonde lower bound on the lambda=0 square rung and multiplicative-energy/support-pruning bounds for lambda>0."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_32_flat_support_modulation_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_32_flat_support_modulation_v1.py",
+    "write_command": "python3 proof/build_cycle_32_flat_support_modulation_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_32_flat_support_modulation_v1.py",
+    "sha256": "c7c13b881993152ef8f9831b851b79218ce54adf1de33fc0c0dcfae19b538c05"
+  },
+  "status": "SEALED_FLAT_SUPPORT_MODULATION_LADDER",
+  "support_ladder": {
+    "epistemic_status": "PROVED",
+    "square_rung": "lambda=0",
+    "statement": "For s=X^(lambda+o(1)), 0<=lambda<=4/25, prime-coordinate exponent is 21/25+lambda while row exponent is 21/25."
+  }
+}

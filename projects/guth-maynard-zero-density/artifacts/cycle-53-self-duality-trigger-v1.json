@@ -1,0 +1,80 @@
+{
+  "analytic_gate": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Expose prime coordinates successively or use a centered higher trace, then apply the Cycle 52 inverse recurrence."
+  },
+  "artifact_id": "cycle-53-self-duality-trigger-v1",
+  "claim_boundary": "This artifact proves the one-shot trigger gaps only. It does not obstruct multilinear or centered-trace uses of self-duality and proves no analytic or density gain.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "required_redesign": "coordinatewise_Bessel_or_centered_higher_trace",
+    "s3": {
+      "ampr_total": "61/10",
+      "one_shot_trigger": "8",
+      "s": 3,
+      "selected_r_plus_2v": "29/5",
+      "status": "NEEDS_MULTILINEARIZATION",
+      "trigger_gap": "11/5"
+    },
+    "s4": {
+      "ampr_total": "71/10",
+      "one_shot_trigger": "10",
+      "s": 4,
+      "selected_r_plus_2v": "34/5",
+      "status": "NEEDS_MULTILINEARIZATION",
+      "trigger_gap": "16/5"
+    }
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/self_duality_trigger_v1.py",
+      "sha256": "3b992431a3a3c290a868c298c4b5d9d47fda270d7a1e8360b4f0a8000b84a458"
+    },
+    "cycle52": {
+      "path": "artifacts/cycle-52-support-kernel-self-duality-v1.json",
+      "sha256": "bec97f88a9d9602d28cb5ee528dab803c854022c35f8c3fd9187c302bc793cc6"
+    },
+    "document": {
+      "path": "docs/cycle-53-self-duality-trigger-v1.md",
+      "sha256": "ea81409dd2d99c16b2b71b3809e8f4e109048d658b8b5b47c618de429cc8f616"
+    },
+    "preregistration": {
+      "path": "docs/cycle-53-self-duality-trigger-preregistration-v1.md",
+      "sha256": "bbb756668134df98fc6172c3949ba34c8413914fb3eb2b1543855eefa205818a"
+    },
+    "tests": {
+      "path": "tests/test_cycle_53_self_duality_trigger_v1.py",
+      "sha256": "289692e84650a2a7415566ba59ad34a7d3d1c11d0b86cddc8c11c9f3c2b9901a"
+    }
+  },
+  "prior_context": {
+    "epistemic_status": "PROVED",
+    "prior_role": "check whether AMPR failure reaches the one-shot support-correlation trigger"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_53_self_duality_trigger_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_53_self_duality_trigger_v1.py",
+    "write_command": "python3 proof/build_cycle_53_self_duality_trigger_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_53_self_duality_trigger_v1.py",
+    "sha256": "829b73f4f9d40601f624e697b598c1569918c141854f2cca3f46542c0e16f158"
+  },
+  "status": "SEALED_ONE_SHOT_TRIGGER_INSUFFICIENT_MULTILINEAR_TRIGGER_OPEN",
+  "trigger_boundary": {
+    "epistemic_status": "PROVED",
+    "statement": "After harmonic selection, AMPR failure lies below the one-shot Halasz--Montgomery off-diagonal trigger by 11/5 for s=3 and 16/5 for s=4."
+  }
+}

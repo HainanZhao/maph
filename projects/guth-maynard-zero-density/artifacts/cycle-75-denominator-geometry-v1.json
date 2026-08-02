@@ -1,0 +1,96 @@
+{
+  "affine_geometry": {
+    "epistemic_status": "PROVED",
+    "statement": "Both singular values of the unit-box Hessian are comparable to Delta*A/Q=X^(lambda+o(1)); relative tube width is X^(-1-alpha-kappa+o(1))."
+  },
+  "analytic_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Prove an affine-normalized E14 or shifted-strip E15 saving on the combined residual, routing structured failures to E16."
+  },
+  "artifact_id": "cycle-75-denominator-geometry-v1",
+  "claim_boundary": "This artifact proves the exact affine geometry, primitive-ray reduction, combined residual atlas, and additional-saving contract. It proves no denominator-average estimate, seed extraction, powered saving, density gain, or interval gain.",
+  "combined_atlas": {
+    "epistemic_status": "PROVED",
+    "statement": "The banked exponent is B=min(lambda,theta+w), the live residual is B+kappa>=6/25, and the maximal deficit is 7/15 at the unique point (1/3,1/3,8/75)."
+  },
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "discovery_quarantine": {
+    "epistemic_status": "OBSERVED",
+    "statement": "The exploratory candidate selected identities for independent exact derivation; it is not used as proof."
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "banked_bound": "B=min(lambda,theta+w)",
+    "determinant": "-C^2/(q^2*(a+q)^2)",
+    "gate": "attempt an affine-normalized E14 estimate and shifted-strip E15 estimate on the combined live residual",
+    "hessian_aq": "C*[[-1/(a+q)^2,-1/(a+q)^2],[-1/(a+q)^2,1/q^2-1/(a+q)^2]]",
+    "hessian_nq": "C*diag(-1/n^2,1/q^2)",
+    "live_residual": "B+kappa>=6/25",
+    "normalized_curvature_unit": "C*A/Q=X^(lambda+o(1))",
+    "normalized_singular_value_bounds": "(C*A/Q)/832 <= s_min <= s_max <= 13*(C*A/Q)",
+    "primitive_ray": "gcd(a,q)=gcd(n,q)=1 removes every nontrivial exact radial repetition",
+    "relative_tube": "X^(-1-alpha-kappa+o(1))",
+    "shifted_phase": "e(kY)=(n/q)^(i*k*Delta)",
+    "worst_required_saving": "strictly more than 7/15, uniquely at (theta,alpha,kappa)=(1/3,1/3,8/75)"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/denominator_geometry_v1.py",
+      "sha256": "9afea41088ad40544be198b48aaa9780009e2bf0aff19842ff84ccdebc7cbbc9"
+    },
+    "cycle70": {
+      "path": "artifacts/cycle-70-unfurled-stationary-curvature-v1.json",
+      "sha256": "2218be784434352a97037a865a40acd43969562f3430df22944b23adbbde6acc"
+    },
+    "cycle74": {
+      "path": "artifacts/cycle-74-hs-numerator-wedge-v1.json",
+      "sha256": "57869f9a6506076198b54bb877417eecaf96682ff8ada606ab8d39ab4cc9e1ae"
+    },
+    "discovery_candidate": {
+      "path": "discovery/cycle-75-denominator-geometry-candidate-v1.md",
+      "sha256": "0acda47404f42fbcf1a869bd168b00f4ae06be658876820c05ba186b5da6bf18"
+    },
+    "document": {
+      "path": "docs/cycle-75-denominator-geometry-v1.md",
+      "sha256": "07f5969def52304aa71221b3526f0a39d514d9e2ca07f5f0d9c2252b65c74fb9"
+    },
+    "preregistration": {
+      "path": "docs/cycle-75-denominator-geometry-preregistration-v1.md",
+      "sha256": "5374a5a7f0dd55f7296364112bff41754100fd9d152bc62c8c5f63d2f0815092"
+    },
+    "tests": {
+      "path": "tests/test_cycle_75_denominator_geometry_v1.py",
+      "sha256": "ce0cdc04c4e4cd39b24319ab003e631cd7cfaf242a746a7fe8578923fe66bc2b"
+    }
+  },
+  "primitive_shifted_form": {
+    "epistemic_status": "PROVED",
+    "statement": "gcd(a,q)=gcd(a+q,q), primitive pairs have unique exact rays, and e(kY)=((a+q)/q)^(i*k*Delta)."
+  },
+  "prior_context": {
+    "cycle70_role": "supply curve-index injectivity and the unfurled curvature identity",
+    "cycle74_role": "supply the fixed-denominator Huxley--Sargos count",
+    "epistemic_status": "PROVED"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_75_denominator_geometry_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_75_denominator_geometry_v1.py",
+    "write_command": "python3 proof/build_cycle_75_denominator_geometry_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_75_denominator_geometry_v1.py",
+    "sha256": "0e073d3292c97fe856b9310028c32447f84903e9e6debff80ccf6159ff30850f"
+  },
+  "status": "SEALED_AFFINE_CURVATURE_CONTRACT_E14_E15_ANALYTIC_GAIN_OPEN"
+}

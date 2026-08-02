@@ -1,0 +1,82 @@
+{
+  "artifact_id": "cycle-45-joint-pk-large-sieve-v1",
+  "claim_boundary": "This artifact proves wrap coloring, the checked classical large-sieve application, and the de-aliasing exponent ledger. It does not prove the de-aliasing target, a prime-pair bound, LCAM_s, density, or interval gain.",
+  "dealiasing_gate": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Reduce effective wrap multiplicity from h to h^(7/11+o(1)) or better to recover saving 4/25."
+  },
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "alias_threshold_for_4_25": "7/11",
+    "alias_threshold_for_7_50": "8/11",
+    "full_dealiasing": {
+      "alias_exponent": "0",
+      "fourier_exponent": "11/25",
+      "joint_bound": "13/10",
+      "large_sieve_energy": "2",
+      "saving": "3/10",
+      "trivial_joint_sum": "8/5"
+    },
+    "naive_wrap_coloring": {
+      "alias_exponent": "1",
+      "fourier_exponent": "11/25",
+      "joint_bound": "38/25",
+      "large_sieve_energy": "61/25",
+      "saving": "2/25",
+      "trivial_joint_sum": "8/5"
+    },
+    "resolution": "11/25"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/joint_pk_large_sieve_v1.py",
+      "sha256": "2098713c55c534e970566282d408ff1adc67c0cc3ca932f0355c86812cd43a1d"
+    },
+    "cycle44": {
+      "path": "artifacts/cycle-44-beatty-derivative-v1.json",
+      "sha256": "8271c9f5a84cc576a3ab088247697d341de67795f2bf04d7665e40e3b55177a7"
+    },
+    "document": {
+      "path": "docs/cycle-45-joint-pk-large-sieve-v1.md",
+      "sha256": "06cffe446a900c3a34b55f7bb86f56b591475e423f8eb9b5534945e140a648ce"
+    },
+    "preregistration": {
+      "path": "docs/cycle-45-joint-pk-large-sieve-preregistration-v1.md",
+      "sha256": "df573b2e354a9f38452a5431f873e8a5534f6b8f13f9e8b6a02a42f36155fc98"
+    },
+    "tests": {
+      "path": "tests/test_cycle_45_joint_pk_large_sieve_v1.py",
+      "sha256": "79d479ba2b0d8a36da4f143f906934f753085e16809b71c037cde5bbc7c90e6a"
+    }
+  },
+  "joint_gain": {
+    "epistemic_status": "PROVED",
+    "statement": "At Fourier resolution 11/25, O(h) wrap coloring plus the separated-frequency large sieve gives joint-sum saving 2/25."
+  },
+  "prior_context": {
+    "epistemic_status": "PROVED",
+    "prior_role": "replace one-variable derivative estimates by a joint prime-resonance large sieve"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_45_joint_pk_large_sieve_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_45_joint_pk_large_sieve_v1.py",
+    "write_command": "python3 proof/build_cycle_45_joint_pk_large_sieve_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_45_joint_pk_large_sieve_v1.py",
+    "sha256": "6fe66bc00170a9bf77a8ae3aa910e1a0d6a2752d54e59d1b11dcc976b92fb0ba"
+  },
+  "status": "SEALED_JOINT_PK_SAVING_2_25_WRAP_DEALIASING_OPEN"
+}

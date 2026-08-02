@@ -1,0 +1,107 @@
+{
+  "analytic_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Show a power-saving fraction of integer crossings are occupied or classify saturation as an anchor/valuation web; use signed cancellation beyond xi=16/25."
+  },
+  "artifact_id": "cycle-84-averaged-resonance-v1",
+  "claim_boundary": "This artifact proves the joint (k,d) resonance incidence bound and closes only 37/75<=xi<43/75. The endpoint, higher frequencies, packet closure, density gain, and interval gain remain open.",
+  "crossing_lemma": {
+    "epistemic_status": "PROVED",
+    "statement": "Smooth k-projection and monotonicity give |B_j|<<D+jK, including rational-anchor multiples."
+  },
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "annular_decay_power": 5,
+    "band_width": "2/25",
+    "bilinear_sum": "B_j=sum_(k~K,d~D)e(j*k*c0*exp(2*pi*d/D))",
+    "crossing_bound": "|B_j|<<D+j*K",
+    "crossing_gap_to_volume": "1/15",
+    "endpoint": "xi=43/75 ties 31/25 and is not promoted",
+    "gate": "averaged resonance band closed; crossing-discretization inverse theorem open",
+    "incidence": "I_L<<K*D*L/Q+D+K*Q/L",
+    "joint_fejer": "I_L<<K*D*L/Q+(L/Q)*sum_(j<=Q/L)|B_j|",
+    "l1_terms_at_L1": {
+      "crossing": "xi+2/3",
+      "length": "14/15",
+      "volume": "xi+3/5"
+    },
+    "new_band": "37/75<=xi<43/75",
+    "new_cutoff": "43/75",
+    "old_cutoff": "37/75",
+    "volume_only_cutoff": "16/25"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/averaged_resonance_v1.py",
+      "sha256": "03ee059552c97e9acd69b9963c868459ac865dfad1fab144d9cabfefd3dfc3c9"
+    },
+    "cycle81": {
+      "path": "artifacts/cycle-81-exact-q-transform-v1.json",
+      "sha256": "0753d455a2e9428b28f1b9dac59b04fd57008db562370202a300a38a818631a4"
+    },
+    "cycle82": {
+      "path": "artifacts/cycle-82-smooth-phase-projector-v1.json",
+      "sha256": "5faff9b1b6a94da3df33e0b68423d0b9a0663a62c480d5713e2cea8a21ec4b11"
+    },
+    "cycle83": {
+      "path": "artifacts/cycle-83-fejer-vdc-resonance-v1.json",
+      "sha256": "e946bcc64e4601a0822e81dfc6c0e5ee8296f46187af743716b8bd2cfde8fafe"
+    },
+    "discovery_candidate": {
+      "path": "discovery/cycle-84-averaged-resonance-candidate-v1.md",
+      "sha256": "6f94f04e143d51abe2296ad339d44886183955de61177f3e7c87c020a9d7ab10"
+    },
+    "document": {
+      "path": "docs/cycle-84-averaged-resonance-v1.md",
+      "sha256": "9ae5f0c0bf6370c1e97ac4b3cc4643689bf4e7d799f65ada277bcddb5cf69177"
+    },
+    "preregistration": {
+      "path": "docs/cycle-84-averaged-resonance-preregistration-v1.md",
+      "sha256": "acbd72c66872e1c4fc3a7fd4f31fc0166a810082746677471ba083093b7058b6"
+    },
+    "tests": {
+      "path": "tests/test_cycle_84_averaged_resonance_v1.py",
+      "sha256": "cce46be019eef4dfc23ef0f185baf0483b79f5546e73543aa2420af96abeeb12"
+    }
+  },
+  "incidence_bound": {
+    "epistemic_status": "PROVED",
+    "statement": "At projector radius L/Q, I_L<<KDL/Q+D+KQ/L; fixed Schwartz decay preserves the L=1 exponents."
+  },
+  "new_band": {
+    "epistemic_status": "PROVED",
+    "statement": "The block exponent is max(xi+3/5,14/15,xi+2/3), closing 37/75<=xi<43/75; width 2/25. The endpoint ties."
+  },
+  "prior_context": {
+    "cycle81_role": "supply exact smooth Fourier conventions",
+    "cycle82_role": "supply the projector and annular decomposition",
+    "cycle83_role": "supply the prior cutoff and fixed-center comparison",
+    "epistemic_status": "PROVED"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_84_averaged_resonance_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_84_averaged_resonance_v1.py",
+    "write_command": "python3 proof/build_cycle_84_averaged_resonance_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_84_averaged_resonance_v1.py",
+    "sha256": "f0c53520c7e138968f9d86dc546b83ee255075683b5650b6113596e67c4e1a0e"
+  },
+  "status": "SEALED_AVERAGED_RESONANCE_BAND_CROSSING_INVERSE_OPEN",
+  "structural_lock": {
+    "epistemic_status": "PROVED",
+    "statement": "The crossing-discretization term stops unsigned incidence at 43/75, exactly 1/15 before its volume-only cutoff 16/25."
+  }
+}

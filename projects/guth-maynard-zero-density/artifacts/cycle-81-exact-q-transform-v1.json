@@ -1,0 +1,90 @@
+{
+  "analytic_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Treat the inner smooth h-sum as a logarithmic resonance projector and bound the resulting (k,r) resonant set on 163/450<=xi<=83/75."
+  },
+  "artifact_id": "cycle-81-exact-q-transform-v1",
+  "claim_boundary": "This artifact proves the exact smooth q-transform, its central O(D/(Qr^2)) error, O(1) per-k summed remainder, negligible nonstationary tails, and 2/15 global error margin. It proves no dual cancellation, remaining-band closure, packet closure, density gain, or interval gain.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "accumulated_error_exponent": "83/75",
+    "central_error": "O_(W,V)(D/(Q*r^2))",
+    "exact_kernel": "D/(beta*r)*e((h*D/beta)*log(k*c0/r))*int hatV(-y)*[r/(r+y/Q)]*W(x_r+beta^(-1)*log(1+y/(Q*r)))*e(-(h*D/beta)*log(1+y/(Q*r)))dy",
+    "fourier_convention": "hatV(y)=int V(t)e(-y*t)dt; V(a)=int hatV(y)e(a*y)dy",
+    "gate": "stationary remainder removed; logarithmic dual cancellation open",
+    "h_ceiling": "21/25",
+    "leading_term": "D/(beta*r)*W(x_r)*V(a)*e((h*D/beta)*log(k*c0/r))",
+    "per_k_error_exponent": "0",
+    "raw_target": "31/25",
+    "strict_margin": "2/15"
+  },
+  "exact_transform": {
+    "epistemic_status": "PROVED",
+    "statement": "Linearity in q gives an exact one-variable Fourier kernel whose leading term is the Cycle-79 logarithmic saddle with weight V(hD/(beta Qr))."
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/exact_q_transform_v1.py",
+      "sha256": "f15b75902d4830511139944b88ff4e18642ab630a3f4dc85e17e4a2583c57499"
+    },
+    "cycle79": {
+      "path": "artifacts/cycle-79-double-b-process-v1.json",
+      "sha256": "855bd15a08f78433e09edf2b3e66ef67abea109d69d55a763132ef3a8c084eb2"
+    },
+    "cycle80": {
+      "path": "artifacts/cycle-80-phase-occupancy-v1.json",
+      "sha256": "751e8edde6469dabe637a17d8bc2cad491a9ed2caa49f099ce60020ef0a069d7"
+    },
+    "discovery_candidate": {
+      "path": "discovery/cycle-81-exact-q-transform-candidate-v1.md",
+      "sha256": "6244e79c9ae3072ac3b3d7ee49d3e23e1b8f688d3575f0cb569bf70adfc5ef37"
+    },
+    "document": {
+      "path": "docs/cycle-81-exact-q-transform-v1.md",
+      "sha256": "736441b06acc044219c9370f188858100e2f2e39be9d4fe3d509c6e0dc622559"
+    },
+    "preregistration": {
+      "path": "docs/cycle-81-exact-q-transform-preregistration-v1.md",
+      "sha256": "e1dfaf723b69b1357efc179c32d5d3de844d5183635b7d378118a6243ec2abd1"
+    },
+    "tests": {
+      "path": "tests/test_cycle_81_exact_q_transform_v1.py",
+      "sha256": "d0b8dba21798fac9722130c123cbbf6ec81f13d7496206ac5d0b78a37fa59242"
+    }
+  },
+  "global_margin": {
+    "epistemic_status": "PROVED",
+    "statement": "Accumulating the error through k<=X^(83/75+o(1)) costs exponent 83/75, margin 2/15 to 31/25."
+  },
+  "prior_context": {
+    "cycle79_role": "supply the raw Fourier target and formal logarithmic saddle",
+    "cycle80_role": "restrict the active dual range to xi>=163/450",
+    "epistemic_status": "PROVED"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_81_exact_q_transform_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_81_exact_q_transform_v1.py",
+    "write_command": "python3 proof/build_cycle_81_exact_q_transform_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_81_exact_q_transform_v1.py",
+    "sha256": "5cc78ca38c6eae30726948a8314212e603d7b11923eb9cba87600eee30204d1b"
+  },
+  "status": "SEALED_EXACT_Q_TRANSFORM_LOG_RESONANCE_PROJECTOR_OPEN",
+  "uniform_remainder": {
+    "epistemic_status": "PROVED",
+    "statement": "The central error is O_(W,V)(D/(Qr^2)), summing to X^o(1) per k; smooth nonstationary tails are O_A(X^-A)."
+  }
+}

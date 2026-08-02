@@ -1,0 +1,94 @@
+{
+  "analytic_gate": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Prove a 3/50 Hilbert-valued edge-cumulant restriction estimate or extract simultaneous approximate multiplicativity at scales 1,m."
+  },
+  "artifact_id": "cycle-57-cumulant-support-collapse-v1",
+  "claim_boundary": "This artifact proves constant-cost Hilbert-valued frequency collapse only. It does not prove a restriction estimate, 3/50 saving, AMPR, density, or interval gains.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "analytic_gate": "prove_3_50_edge_cumulant_restriction_or_extract_two_scale_approximate_multiplicativity",
+    "s3": {
+      "fiber_bound_uniform_m_ge_2": 12,
+      "normalized_collapsed_energy_upper": "3072/625",
+      "normalized_precollapse_energy": "256/625",
+      "prime_count": 5,
+      "raw_collapsed_energy_upper": 3072,
+      "raw_energy_exponent_in_M": 4,
+      "raw_precollapse_energy": 256,
+      "s": 3,
+      "status": "CONSTANT_COST",
+      "support_collapse_power_loss": "0"
+    },
+    "s4": {
+      "fiber_bound_uniform_m_ge_2": 72,
+      "normalized_collapsed_energy_upper": "73728/3125",
+      "normalized_precollapse_energy": "1024/3125",
+      "prime_count": 5,
+      "raw_collapsed_energy_upper": 73728,
+      "raw_energy_exponent_in_M": 5,
+      "raw_precollapse_energy": 1024,
+      "s": 4,
+      "status": "CONSTANT_COST",
+      "support_collapse_power_loss": "0"
+    },
+    "uniform_statement": "sum_n||a_n||^2<=D_s sum_tau||c_tau||^2 for every m>=2"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/cumulant_support_collapse_v1.py",
+      "sha256": "72378e1057f14487105d552ab5e5bdf561ad5caf4c417d620cb2725a9d83eb44"
+    },
+    "cycle39": {
+      "path": "artifacts/cycle-39-moment-amplified-prime-monomial-v1.json",
+      "sha256": "3b83385d1d7e7ed447cafe0f7e42be1badb1bb26ba42cc458cf3fa3b8f204826"
+    },
+    "cycle56": {
+      "path": "artifacts/cycle-56-prime-edge-cumulant-v1.json",
+      "sha256": "3e38876a10cf4c5696b40eb69a77825569ec225566b6799f029f337cb4879d23"
+    },
+    "document": {
+      "path": "docs/cycle-57-cumulant-support-collapse-v1.md",
+      "sha256": "aeab9348057d5a0fcf82da8edcd619b1885dab8bbf5343d378cff9240e6d79a6"
+    },
+    "preregistration": {
+      "path": "docs/cycle-57-cumulant-support-collapse-preregistration-v1.md",
+      "sha256": "6f04e7e9e051940af1d7e051335433f460c006b00bbc9f8e05f9fa44186940e0"
+    },
+    "tests": {
+      "path": "tests/test_cycle_57_cumulant_support_collapse_v1.py",
+      "sha256": "24ca0a2574b955527606dd3842a97007edd06a2dc099cb9595fe6502160c2daf"
+    }
+  },
+  "prior_context": {
+    "cycle39_role": "uniform prime-monomial fiber bound",
+    "cycle56_role": "ordered-coordinate centered tensor",
+    "epistemic_status": "PROVED"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_57_cumulant_support_collapse_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_57_cumulant_support_collapse_v1.py",
+    "write_command": "python3 proof/build_cycle_57_cumulant_support_collapse_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_57_cumulant_support_collapse_v1.py",
+    "sha256": "bad6daf24779fa12df40973deea8a5de9883f8e82fa636cd0a4c322d4021a3f8"
+  },
+  "status": "SEALED_HILBERT_EDGE_CUMULANT_RESTRICTION_3_50_OPEN",
+  "support_collapse": {
+    "epistemic_status": "PROVED",
+    "statement": "The coordinate-centered tensor has fixed Hilbert coefficients on labels q^m p_1...p_s, and collision collapse costs at most D_s=12 or 72 for s=3 or 4, uniformly in m>=2."
+  }
+}

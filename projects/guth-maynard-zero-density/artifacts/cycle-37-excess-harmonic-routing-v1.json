@@ -1,0 +1,87 @@
+{
+  "artifact_id": "cycle-37-excess-harmonic-routing-v1",
+  "claim_boundary": "This artifact proves a scoped abstract histogram no-go and exact routing ledger. It does not construct actual prime rows, control the full harmonic vector, prove the kernel count, improve density, or improve intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "finite_model": {
+      "entropy": "E(q) is comparable to a^2 when qstar/u is bounded and |a| is small",
+      "first_harmonic": "preserved exactly by cyclic orthogonality",
+      "mass": "preserved for 2<=m<=L-2",
+      "new_harmonics": "hat(q-qstar)(m)=hat(q-qstar)(L-m)=a",
+      "perturbation": "q_j=qstar_j+(2a/L)cos(2pi*m*j/L)"
+    },
+    "registered_scales": {
+      "r2_excess": {
+        "arc_count": "3/10",
+        "excess_decay": "3/5",
+        "harmonic_color_loss": "3/10",
+        "kernel_harmonic": "11/20",
+        "normalized_harmonic": "-9/20"
+      },
+      "r4_excess": {
+        "arc_count": "3/10",
+        "excess_decay": "6/5",
+        "harmonic_color_loss": "3/10",
+        "kernel_harmonic": "1/4",
+        "normalized_harmonic": "-3/4"
+      }
+    }
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/excess_harmonic_routing_v1.py",
+      "sha256": "e10e6ab2bfc46879cc5b0d1be02b5c3f3e340d69819067c6937b455e8a4607b2"
+    },
+    "cycle36": {
+      "path": "artifacts/cycle-36-information-projection-v1.json",
+      "sha256": "a80600191a8dd58642b6bf9bc72a40c6946c4503b36db213cdee5ec0037b027d"
+    },
+    "document": {
+      "path": "docs/cycle-37-excess-harmonic-routing-v1.md",
+      "sha256": "8846c97bca418cadc4e3cdf70cbe3159b91f674da262747f89036f582b71aa69"
+    },
+    "preregistration": {
+      "path": "docs/cycle-37-excess-harmonic-routing-preregistration-v1.md",
+      "sha256": "204c65893c3ed469f1e457a97cea4100b22978259fd9c295fd05975a13b4a6b7"
+    },
+    "tests": {
+      "path": "tests/test_cycle_37_excess_harmonic_routing_v1.py",
+      "sha256": "c636eff0da0d34fbb4eb81fdc78b13513f4f6f4874259e2f3cb89adde6942715"
+    }
+  },
+  "harmonic_hiding": {
+    "epistemic_status": "PROVED",
+    "scope": "ABSTRACT_HISTOGRAM_NOT_ACTUAL_PRIME_PHASES",
+    "statement": "Positive cyclic histograms can preserve mass and first Fourier coefficient while placing KL-comparable new mass at any order 2<=m<=L-2."
+  },
+  "prior_context": {
+    "epistemic_status": "PROVED",
+    "prior_role": "route the only new Cycle 36 statistic, entropy excess, into harmonic information"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_37_excess_harmonic_routing_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_37_excess_harmonic_routing_v1.py",
+    "write_command": "python3 proof/build_cycle_37_excess_harmonic_routing_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "routing_loss": {
+    "epistemic_status": "PROVED",
+    "statement": "At L=X^(3/10), scalar Fourier pigeonholing costs X^(3/10), exceeding the missing 4/25; r^4 and r^2 excess route only to kernel exponents 1/4 and 11/20."
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_37_excess_harmonic_routing_v1.py",
+    "sha256": "e4d5de9f42508bc311106cc70107510a3db8af5d394ee5234a95a62bbbc0a531"
+  },
+  "status": "SEALED_ENTROPY_EXCESS_ARBITRARY_HARMONIC_HIDING_VECTOR_ROUTE_OPEN"
+}

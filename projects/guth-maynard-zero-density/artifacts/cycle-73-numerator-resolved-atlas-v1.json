@@ -1,0 +1,76 @@
+{
+  "analytic_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Prove the factored two-variable estimate only on theta+alpha+kappa>=6/25 with the cellwise determinant loss."
+  },
+  "artifact_id": "cycle-73-numerator-resolved-atlas-v1",
+  "cellwise_curvature": {
+    "epistemic_status": "PROVED",
+    "statement": "The curve-index relation alpha=theta+lambda-3/5 makes the factored Hessian loss exactly theta-alpha."
+  },
+  "claim_boundary": "This artifact closes only strict numerator-resolved cells and sharpens their curvature ledger. The boundary and residual atlas remain open; no powered, density, or interval gain is proved.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "boundary": "theta+alpha+kappa=6/25 ties",
+    "cell_count": "N(theta,kappa,alpha)<=X^(theta+alpha+o(1))",
+    "closed_region": "theta+alpha+kappa<6/25",
+    "gate": "apply factored curvature only on the numerator-resolved residual atlas",
+    "hessian": "det asymp ell/Delta asymp a/q=X^(alpha-theta)",
+    "hessian_loss": "theta-alpha",
+    "residual_atlas": "theta+alpha+kappa>=6/25, 0<=alpha<=theta, theta+kappa<=11/25",
+    "scale_relation": "alpha=theta+lambda-3/5",
+    "weighted_pair": "11/25+kappa+theta+alpha<17/25 on the same open region"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/numerator_resolved_atlas_v1.py",
+      "sha256": "39b5703cea6c9509aeb383f547c63ae793f200de305722afba32f164fc4651f4"
+    },
+    "cycle72": {
+      "path": "artifacts/cycle-72-positive-numerator-cutoff-v1.json",
+      "sha256": "547bb719c76df324c2dfda63f12c6a2a3c83ace3bbfd4d8eb5b941895296a7ef"
+    },
+    "document": {
+      "path": "docs/cycle-73-numerator-atlas-v1.md",
+      "sha256": "0c6087cac2de107226cb94ac37222ce9c5c9d6b440dcc24d8437c3a1771ea50a"
+    },
+    "preregistration": {
+      "path": "docs/cycle-73-numerator-atlas-preregistration-v1.md",
+      "sha256": "a2ebb7420254f56d09515b2895fffc665f20a0e9fb4027272bb84dac6e744a56"
+    },
+    "tests": {
+      "path": "tests/test_cycle_73_numerator_resolved_atlas_v1.py",
+      "sha256": "eb4c8c45fb1dc72c5c4cb30a62e25019dd7736794aca681f123175c17ad43074"
+    }
+  },
+  "numerator_wedge": {
+    "epistemic_status": "PROVED",
+    "statement": "The cell count X^(theta+alpha) closes packet and pair targets whenever theta+alpha+kappa<6/25."
+  },
+  "prior_context": {
+    "epistemic_status": "PROVED",
+    "prior_role": "resolve the positive numerator to close more cells and sharpen curvature cellwise"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_73_numerator_resolved_atlas_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_73_numerator_resolved_atlas_v1.py",
+    "write_command": "python3 proof/build_cycle_73_numerator_resolved_atlas_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_73_numerator_resolved_atlas_v1.py",
+    "sha256": "6fd0c3cdfba8508b1d73c54769f25168bd68d729d12c0b04941a1cae73eea704"
+  },
+  "status": "SEALED_NUMERATOR_WEDGE_CLOSED_RESIDUAL_CURVATURE_OPEN"
+}
