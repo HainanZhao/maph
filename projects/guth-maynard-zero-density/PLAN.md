@@ -204,8 +204,11 @@ E14D-L is therefore timeboxed through Cycles 160--162. Next authorized
 action: execute Cycle 160, preregistered at
 `docs/cycle-160-colored-four-cycle-condenser-preregistration-v1.md`, proving
 the `1/150` low-codegree condenser bound or preserving an actual high-codegree
-colored four-cycle inverse/falsifier. Cycle 158's concentration theorem
-remains deferred until a selector is real rather than formal. The older
+pair-cell inverse/falsifier. Cycle 161 is preregistered at
+`docs/cycle-161-high-cell-refinement-preregistration-v1.md`: refine the high
+cell into coefficient-weighted phase-aligned disjoint four-atom mass or a
+labelled effective-degree star. Cycle 158's concentration theorem remains
+deferred until a selector is real rather than formal. The older
 Cycle-155 partition remains a parallel output only if it is actual and
 fixed-size; an `X^(o(1))` class count is not fixed localization. Cycle 156
 supplies its norm constant once the actual frozen anchor ratio is
