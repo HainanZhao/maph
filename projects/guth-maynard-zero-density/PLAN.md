@@ -345,9 +345,13 @@ positive forward conservative direct-map gate empty. Next authorized action:
 Cycle 174 is sealed at
 `artifacts/cycle-174-adaptive-slack-transport-v1.json`: it gives bounded-slack
 capacity-saturated transport or a labelled deficit bank, but no population.
-Next authorized action: preregister and execute one mass-forcing or
-deficit-web engine for these complete labelled banks. No E7/E9 or density
-claim is authorized.
+Cycle 175 is preregistered at
+`docs/cycle-175-affine-eligibility-grid-preregistration-v1.md`: pull back a
+complete massed affine fibre to its exact eligibility breadth and common
+capacity class, or bank range/residue/discrepancy obstruction. It is now
+sealed at `artifacts/cycle-175-affine-eligibility-grid-v1.json`. Next
+authorized action: a genuinely multi-state aggregate-breadth or
+residue-avoidance-web engine. No E7/E9 or density claim is authorized.
 
 ## Crash recovery
 
