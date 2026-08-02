@@ -255,7 +255,7 @@ def render_status(con: duckdb.DuckDBPyConnection) -> str:
         "- Artifacts by top-level epistemic status: " + ", ".join(f"{tag}={number}" for tag, number in artifact_tags),
         f"- Recursively tagged fields indexed for search (not independent claims): {indexed_fields}",
         "",
-        "## Current gate",
+        "## Latest sealed record",
         "",
         f"- Latest record: `{latest[0]}` (Cycle {latest[1]}, `{latest[2]}`)",
         f"- Status: `{latest[3]}`",
