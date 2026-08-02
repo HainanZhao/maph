@@ -24,11 +24,9 @@ add a narrower `AGENTS.md`.
 ## 1. Project memory and workflow
 
 Every active research project has a root `PLAN.md`; it is the concise,
-authoritative strategic state over chat memory. Read it completely, then
-the nearest `AGENTS.md`, before acting. Detailed cycle memory lives in
-committed, individually named cycle records; consult the relevant artifact
-and linked documents when a task depends on prior cycles, corrections, or
-artifact identities.
+authoritative strategic state over chat memory. Read the current gate and the
+one relevant prior artifact before acting. Do not reread historical material
+unless the next question depends on it.
 
 `PLAN.md` must contain:
 
@@ -41,15 +39,16 @@ Keep `PLAN.md` short enough to reread routinely. Do not store per-cycle row
 registries, long correction narratives, exhaustive hashes, test transcripts,
 or detailed replay histories there.
 
-Each sealed cycle must instead have a committed, immutable record:
+Each substantive research block has exactly two durable records:
 
-- `artifacts/cycle-<n>-<slug>-v<version>.json` is the canonical
-  machine-readable finding, claim boundary, tags, frozen hashes, replay, and
-  gate outcome;
-- `docs/cycle-<n>-<slug>-v<version>.md` and its preregistration document are
-  the readable derivation and decision record;
-- failed, deferred, superseded, and corrected paths remain as records; a
-  correction creates a new record and never mutates a sealed one.
+- one preregistration with its embedded freeze manifest before executable work;
+- one immutable `artifacts/cycle-<n>-<slug>-v<version>.json` containing the
+  finding, claim boundary, frozen hashes, replay, and gate outcome.
+
+Create a separate readable decision document only for paper/publication work,
+a correction, or when the artifact cannot state the decision clearly. Keep
+failed, deferred, superseded, and corrected paths as artifacts; a correction
+creates a new record and never mutates a sealed one.
 
 Projects may maintain a local DuckDB index built from those records for
 search, dependency queries, and generated status. The database binary is
@@ -84,24 +83,14 @@ Project-specific code belongs only in its declarative profile or in a proven
 new record type; do not create per-project index/query scripts for routine
 cycle, claim, gate, dependency, or evidence queries.
 
-`STATUS.md` is the generated cold-start action card, not a second strategic
-summary. `PLAN.md` is the sole concise source for the project outcome, claim
-boundary, active gate, advance condition, and deferred work. `STATUS.md` must
-link to that plan, identify the newest immutable record and its immediate
-target, and give the ordered recovery commands. Its profile contains only
-stable paths and commands, never a copied narrative of the plan. Regenerate
-`STATUS.md` after a seal; change its profile only when those stable recovery
-instructions change.
+`STATUS.md` is optional, generated only for an intentional handoff. It points
+to `PLAN.md`, the newest artifact, and recovery commands; it never repeats
+strategy or results. Do not regenerate it during ordinary research.
 
-Before work: re-read frozen counts and conventions from artifacts, check
-`git status` and recent/fetched history, and preserve unrelated changes.
-Put routine research updates in their immutable cycle record and the
-generated `STATUS.md` handoff. Update `PLAN.md` only for a significant
-change to the strategic path, active gate, claim boundary, budget, stop
-condition, headline result, open question, or next authorized action; never
-use it as a per-cycle progress log. Seal cycle-level findings in their
-individual record and regenerate the compact status view. Never erase a
-failed path from the cycle record set.
+Before work: read only the frozen counts, conventions, and records needed for
+the next authorized question; check `git status` and preserve unrelated
+changes. Update `PLAN.md` only when strategy, gate, budget, stop condition,
+or next action changes. Never use it as a progress log.
 
 ### Research-block cadence
 
@@ -112,27 +101,17 @@ answer it before sealing. A normal cycle should contain multiple lemmas or a
 genuine bound-or-obstruction decision; do not create a new cycle merely to
 name an intermediate decomposition, factorization, or bookkeeping repair.
 
-Keep intermediate work in a short `discovery/` or readable working-decision
-ledger, tagged `CONJECTURED`/`OBSERVED` as appropriate. Promote it only with
-the enclosing cycle's immutable record. Run replay, profile/status rebuild,
-and commit once per completed research block—not after each lemma. An early
-seal is justified only by a correction, falsifier, externally useful result,
-or an irreversible strategy/gate decision. Batch routine checks locally.
+Keep scratch in `discovery/` and promote only the conclusion. Run the relevant
+replay and commit once per completed research block—not after each lemma. An
+early seal is justified only by a correction, falsifier, externally useful
+result, or irreversible strategy/gate decision. Use a correction only for a
+genuine post-seal defect.
 
+### One live specification per cycle
 
-Validate the generated `STATUS.md` handoff and recovery commands before the
-one final seal; use a metadata-only correction only for a genuine post-seal
-defect, never as routine completion of the same research block.
-### One live document set per cycle
-
-While a cycle is in progress, keep exactly one canonical preregistration and
-one compact working-decision ledger for that cycle. Amend the canonical files
-in place under a short dated/amendment log; do not create `v2`, `v3`, or other
-same-cycle addendum documents merely because an engine, formula, or gate
-evolves. Git history preserves intermediate states. Create a new correction
-or versioned document only after a cycle has sealed, or when an immutable
-certificate actually needs correction. The working ledger records rejected
-routes and compact reasons, not full derivational scratch.
+Keep one preregistration while a cycle is live. Amend it in place; Git history
+preserves intermediate states. Do not create ledgers, addenda, or same-cycle
+versions unless needed for a correction or publication decision.
 
 ### Executable preregistration preflight
 
@@ -177,55 +156,13 @@ are legitimate.
 
 ## 1a. Critical-decision companion
 
-Every research session in this repository starts one companion at the same
-time as the primary worker, before exploration begins. The companion belongs
-to the session, not to a cycle, branch, or individual decision: it remains
-the mentor/checkpoint tracker across every cycle and project decision made in
-that session. Use a more capable available model for this companion when the
-platform permits. Otherwise use an independent agent with a fresh brief and
-no responsibility for the primary derivation.
-
-The companion is a mentor/checkpoint tracker, not a duplicate implementer or
-a hostile auditor. It maintains a short decision ledger: the frozen premise,
-alternatives considered, decisive evidence and tags, the recommended next
-action, and any unexamined assumption. It operates asynchronously by default:
-start it and send one compact session brief without waiting, then batch
-material deltas into one checkpoint packet. Routine deltas are notification
-only and request no reply. A decision packet is normally under 150 words (and
-never over 250) and uses one fixed interface: decision sought; frozen
-claim/gate and tag; at most three decisive evidence or change bullets; known
-flaw; and requested disposition. Link a changed excerpt, artifact, or hash
-instead of asking for a project reread. Ask for exactly four short items in
-reply: recommendation, flaw, falsifier, and next action. The companion must
-not re-derive the live work or inspect unrelated files unless that packet asks
-it to. Do not poll or wait during reversible derivations, candidate engines,
-routine computations, or amendments within an already active cycle; notify
-the companion and continue.
-
-Blocking consultation is reserved for an irreversible or strategic decision:
-changing the strategic status, claim boundary, gate, or advance condition in
-`PLAN.md`; starting or abandoning a path not already authorized by the plan;
-sealing/committing a material claim; promoting/containing a material theorem;
-or external publication. A routine cycle start already authorized by the
-current plan is notify-only, not a blocking checkpoint. Use one fast
-checkpoint flow for every blocking decision:
-
-1. Send one batched packet to the stable identity as soon as the decision is
-   foreseeable, then continue all reversible work.
-2. At the actual decision point, consume its concise reply. Do not first
-   inspect status, run a liveness rehearsal, or solicit an acknowledgement.
-3. If no reply is available, reactivate that *same* identity once with the
-   unchanged packet and a short response request. Continue reversible work
-   while it responds. If it still fails, defer only that critical decision;
-   record the timeout and do not substitute a new, unbriefed companion.
-
-Do not iterate after a reply unless its stated falsifier or flaw is triggered.
-Record only the final recommendation and adopt/reject reason in the relevant
-decision record. The primary keeps the companion task identity and latest
-compact packet there. A completed companion is an idle mentor, not a failure:
-`followup_task` reactivates that stable identity when its next packet is ready.
-This protocol complements the paper-stage hostile audit; it does not start
-one early.
+Use one named companion only for a strategic fork, sealing a material claim,
+or publication. It is a mentor, not a duplicate worker. Send one packet under
+150 words stating the decision, frozen claim/gate and tag, decisive evidence,
+known flaw, and the requested recommendation, flaw, falsifier, and next
+action. Do not notify, poll, or wait during routine cycles. If no reply is
+available at the irreversible decision, defer that decision rather than create
+process work around it.
 
 ## 2. Discovery and proof are separate
 
