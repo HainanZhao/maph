@@ -156,6 +156,10 @@ must not silently replace the companion with a new, unbriefed agent.
 - Every proof-grade result must be version-pinned, hash-recorded,
   scripted, and one-command replayable. If it cannot be replayed, it
   does not exist.
+- Regression tests must not invoke a mode that overwrites a sealed canonical
+  artifact. Test deterministic payload construction in-process or direct a
+  replay at a disposable target; use the immutable builder's `--check` mode
+  for the canonical artifact.
 - Reuse a project-local, versioned sealing scaffold for routine artifact
   mechanics: runtime checks, frozen-input hashes, prior-status validation,
   deterministic JSON rendering, and immutable `--write`/`--check` behavior.

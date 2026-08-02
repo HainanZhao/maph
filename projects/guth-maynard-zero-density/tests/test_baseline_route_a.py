@@ -3,8 +3,6 @@
 import ast
 import importlib.util
 import json
-import subprocess
-import sys
 import unittest
 from fractions import Fraction
 from pathlib import Path
@@ -108,8 +106,7 @@ class BaselineRouteATest(unittest.TestCase):
         ]
         self.assertEqual(float_literals, [])
 
-    def test_replay_writes_an_artifact_consistent_with_the_certificate(self):
-        subprocess.run([sys.executable, str(SCRIPT)], check=True, cwd=PROJECT_ROOT)
+    def test_sealed_artifact_is_consistent_with_the_certificate(self):
         artifact = json.loads(ARTIFACT.read_text(encoding="utf-8"))
         certificate = self.route_a.compute_certificate()
         self.assertEqual(artifact["artifact_version"], 3)
