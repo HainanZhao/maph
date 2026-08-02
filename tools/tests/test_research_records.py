@@ -27,9 +27,11 @@ class ResearchRecordsTest(unittest.TestCase):
             status = research_records.render_status(con)
             self.assertIn("## Start here", status)
             self.assertIn("Strategic state, claim boundary, active gate, and deferred work: `PLAN.md`", status)
-            self.assertIn("## Latest sealed record", status)
+            self.assertIn("## Current evidence", status)
             self.assertIn("research cycle 63", status)
-            self.assertIn("The newest immutable record and its next target are listed below", status)
+            self.assertIn("Newest immutable record", status)
+            self.assertNotIn("## Recent sealed records", status)
+            self.assertNotIn("- Boundary:", status)
             self.assertEqual(research_records.check(con), 0)
             con.close()
 

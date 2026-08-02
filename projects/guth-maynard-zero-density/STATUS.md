@@ -24,39 +24,7 @@ Canonical evidence is the Git-tracked per-cycle artifact and its linked files; `
 
 Then read the listed record and its linked preregistration, proof document, conventions, builder, and test. Do not infer a theorem from this action card.
 
-## Index coverage
+## Current evidence
 
-- Cycle artifact files found in the working tree: 292
-- Cycle artifacts present in the Git index: 292
-- Artifacts by top-level epistemic status: CONJECTURED=6, LEGACY_UNTAGGED=10, OBSERVED=56, PROVED=220
-- Recursively tagged fields indexed for search (not independent claims): 23682
-
-## Latest sealed record
-
-- Latest record: `cycle-189-temporary-archive-v1` (Cycle 189, `PROVED`)
-- Status: `SEALED_TEMPORARY_RESTART_ARCHIVE`
-- Boundary: This is a replayable handoff, not an analytic advance.
-- Next mathematical target: None
-
-## Recent sealed records
-
-| Cycle | Record | Tag | Gate | Next target |
-|---:|---|---|---|---|
-| 189 | `cycle-189-temporary-archive-v1` | `PROVED` | `SEALED_TEMPORARY_RESTART_ARCHIVE` | None |
-| 188 | `cycle-188-nonrational-root-tower-v1` | `PROVED` | `SEALED_SUBCRITICAL_CORRECTED_NONRATIONAL_ROOT_TOWER` | None |
-| 187 | `cycle-187-separated-packing-v1` | `PROVED` | `SEALED_SEPARATED_WEIGHTED_LOCAL_PACKING_NO_GO` | A future E13 continuation needs a global actual-exponential distribution theorem across separated labels or denominator windows; local triple exclusion and weighted occupancy alone are exhausted. |
-| 186 | `cycle-186-actual-curve-convexity-v1` | `PROVED` | `SEALED_ACTUAL_CURVE_LOCAL_CONVEXITY_GRID_EXCLUSION` | Either amplify the local exclusion with full rectangle weights to a strict critical-box saving, or preserve a separated-support model proving that local crowding exclusion alone cannot do so. |
-| 185 | `cycle-185-three-label-curvature-v1` | `PROVED` | `SEALED_THREE_LABEL_EXACTIFIER_AND_MASS_ONLY_AP_FREE_NO_GO` | A viable C186 engine must constrain the actual-exponential distribution of high-depth rational approximants or impose a cross-box coefficient relation that defeats the AP-free occupancy. A curvature identity or weighted AP count without that analytic input is non-progress for density. |
-| 185 | `cycle-185-three-label-curvature-convention-correction-v1` | `PROVED` | `SEALED_CORRECTION_SHIFTED_EXPONENTIAL_CURVATURE_AND_ORIGINAL_CLAIM_WITHHELD` | None |
-| 184 | `cycle-184-ray-box-determinant-orbit-v1` | `PROVED` | `SEALED_LCM_RESONANCE_AND_SUBSEED_NONRATIONAL_LOCAL_DEFORMATION` | A viable C185 engine must use three-label/shared-fibre compatibility or cross-box coefficient entropy to bound or transfer a populated family of varying LCM resonances, or construct a genuinely critical nonrational ray-box saturator. A single LCM relation or two-label deformation is non-progress for density. |
-| 184 | `cycle-184-phase-shift-correction-v1` | `PROVED` | `SEALED_CORRECTION_SHIFTED_SLOPES_NONRATIONAL_TWO_RAY_DEFORMATION` | None |
-
-## Useful queries
-
-```sh
-python /root/projects/maph/tools/research_records.py --project research-records.json cycle 63
-python /root/projects/maph/tools/research_records.py --project research-records.json cycle 184
-python /root/projects/maph/tools/research_records.py --project research-records.json cycle 183
-python /root/projects/maph/tools/research_records.py --project research-records.json search "LCM resonance"
-python /root/projects/maph/tools/research_records.py --project research-records.json check
-```
+- Newest immutable record: `cycle-189-temporary-archive-v1` (Cycle 189, `PROVED`).
+- Its recorded immediate target: None

@@ -211,18 +211,10 @@ def connect() -> duckdb.DuckDBPyConnection:
 
 
 def render_status(con: duckdb.DuckDBPyConnection) -> str:
-    count = con.execute("SELECT count(*) FROM artifacts").fetchone()[0]
-    tracked_count = len(tracked_artifact_paths())
     latest = con.execute("""
-        SELECT artifact_id, cycle_number, epistemic_status, status, claim_boundary, remaining_target
+        SELECT artifact_id, cycle_number, epistemic_status, remaining_target
         FROM artifacts ORDER BY cycle_number DESC NULLS LAST, artifact_id DESC LIMIT 1
     """).fetchone()
-    artifact_tags = con.execute("SELECT coalesce(epistemic_status, 'LEGACY_UNTAGGED'), count(*) FROM artifacts GROUP BY 1 ORDER BY 1").fetchall()
-    indexed_fields = con.execute("SELECT count(*) FROM claims").fetchone()[0]
-    recent = con.execute("""
-        SELECT cycle_number, artifact_id, epistemic_status, status, remaining_target
-        FROM artifacts ORDER BY cycle_number DESC NULLS LAST, artifact_id DESC LIMIT 8
-    """).fetchall()
     handoff = PROFILE.get("cold_start_handoff", {})
     lines = [
         PROFILE.get("status_title", "Research status (generated)"),
@@ -246,34 +238,12 @@ def render_status(con: duckdb.DuckDBPyConnection) -> str:
             "",
         ]
     lines += [
-        "## Index coverage",
+        "## Current evidence",
         "",
-        f"- Cycle artifact files found in the working tree: {count}",
-        f"- Cycle artifacts present in the Git index: {tracked_count}",
-        "- Artifacts by top-level epistemic status: " + ", ".join(f"{tag}={number}" for tag, number in artifact_tags),
-        f"- Recursively tagged fields indexed for search (not independent claims): {indexed_fields}",
-        "",
-        "## Latest sealed record",
-        "",
-        f"- Latest record: `{latest[0]}` (Cycle {latest[1]}, `{latest[2]}`)",
-        f"- Status: `{latest[3]}`",
-        f"- Boundary: {latest[4]}",
-        f"- Next mathematical target: {latest[5]}",
-        "",
-        "## Recent sealed records",
-        "",
-        "| Cycle | Record | Tag | Gate | Next target |",
-        "|---:|---|---|---|---|",
+        f"- Newest immutable record: `{latest[0]}` (Cycle {latest[1]}, `{latest[2]}`).",
+        f"- Its recorded immediate target: {latest[3]}",
     ]
-    for number, artifact_id, tag, gate, target in recent:
-        lines.append(f"| {number} | `{artifact_id}` | `{tag}` | `{gate}` | {target} |")
     lines += [
-        "",
-        "## Useful queries",
-        "",
-        "```sh",
-        *PROFILE.get("query_examples", []),
-        "```",
         "",
     ]
     return "\n".join(lines)
