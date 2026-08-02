@@ -1,0 +1,279 @@
+{
+  "artifact_id": "cycle-184-ray-box-determinant-orbit-v1",
+  "claim_boundary": "This proves only exact LCM-resonance redundancy and a scale-matched nonrational two-label local deformation below the seed and critical box scales. It proves no bound, saturation, or impossibility theorem for a critical populated ray box, aggregate recurrence, density gain, or interval result.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "determinant_orbit_result": {
+    "boundary": "This isolates only LCM-resonance redundancy: the local data cannot by itself force rational phases or a critical seeded fibre. It proves no upper bound for a critical populated box and does not rule out a population-sensitive critical-box estimate, aggregate recurrence, density gain, or interval result.",
+    "epistemic_status": "PROVED",
+    "lcm_resonance": "For g=gcd(u,w) and L=lcm(U,V), F/g-L*(alpha_l-alpha_m)=(w/g)*epsilon_l-(u/g)*epsilon_m exactly. The determinant supplies an LCM resonance but no independent error beyond the two retained orbits.",
+    "nonrational_deformation": "For every sufficiently large odd T, a two-label actual positive exponential has a common-intercept primitive-ray configuration with one nonrational phase, nonzero stable determinant, complete fibres of depths below X^(6/25), and one frozen dyadic box of X^(11/25-o(1)) rectangles.",
+    "samples": {
+      "family_T3": {
+        "determinant": {
+          "A": 265721,
+          "B": 70607649841,
+          "D": -4169326806020538,
+          "F": -4169326806020538,
+          "formula": "F=w*A-u*B=V*B*(V-B), D=F",
+          "stable_cutoff_coarse_upper": 216,
+          "stable_product": 1144561273430837494885949696427,
+          "u": 177147,
+          "w": 31381059609
+        },
+        "fibres": {
+          "all_depths_below_seed": true,
+          "beta": "0",
+          "intercept": "0",
+          "left_count": 177148,
+          "left_denominator": 177147,
+          "left_residual_bound": "2/14130386091738734504764811067",
+          "left_slope": "265721/177147",
+          "right_count": 2,
+          "right_denominator": 31381059609,
+          "right_residual_bound": "2/4710128697246244834921603689",
+          "right_slope": "70607649841/31381059609"
+        },
+        "parameters": {
+          "Delta": "2*pi*T^30/log(r)",
+          "H": 31381059609,
+          "T": 3,
+          "X": 717897987691852588770249,
+          "label_left": 205891132094649,
+          "label_right": 411782264189298
+        },
+        "phase": {
+          "chart": "1/3<log(r)<1, hence 2n/Delta=log(r)/pi<1/2 for c=1/2",
+          "definition": "r=sqrt(q^2+1/M), z=r^(1/n), alpha_j=z^j",
+          "nonrational": "r^2=(B^2*T^58+1)/T^80 has a square denominator and numerator strictly between consecutive squares",
+          "q": "265721/177147",
+          "r_squared": "332571117761208356256299441959085863450/147808829414345923316083210206383297601"
+        },
+        "populated_box": {
+          "all_ordered_label_pair_rectangles": 15690618378,
+          "critical_scale": "X^(21/25-o(1))",
+          "frozen_k_bins": 18,
+          "one_box_lower_bound": 871701021,
+          "scale": "X^(11/25-o(1))"
+        }
+      },
+      "lcm": {
+        "F": 1,
+        "U": 2,
+        "V": 4,
+        "gcd_u_w": 1,
+        "identity": "F/g-L*(alpha_left-alpha_right)=(w/g)*epsilon_left-(u/g)*epsilon_right",
+        "lcm_U_V": 4,
+        "left_side": "0",
+        "right_side": "0",
+        "u": 1,
+        "v": 2,
+        "w": 2
+      }
+    }
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "boundary": "This isolates only LCM-resonance redundancy: the local data cannot by itself force rational phases or a critical seeded fibre. It proves no upper bound for a critical populated box and does not rule out a population-sensitive critical-box estimate, aggregate recurrence, density gain, or interval result.",
+    "lcm_resonance": "For g=gcd(u,w) and L=lcm(U,V), F/g-L*(alpha_l-alpha_m)=(w/g)*epsilon_l-(u/g)*epsilon_m exactly. The determinant supplies an LCM resonance but no independent error beyond the two retained orbits.",
+    "nonrational_deformation": "For every sufficiently large odd T, a two-label actual positive exponential has a common-intercept primitive-ray configuration with one nonrational phase, nonzero stable determinant, complete fibres of depths below X^(6/25), and one frozen dyadic box of X^(11/25-o(1)) rectangles.",
+    "samples": {
+      "family_T3": {
+        "determinant": {
+          "A": 265721,
+          "B": 70607649841,
+          "D": -4169326806020538,
+          "F": -4169326806020538,
+          "formula": "F=w*A-u*B=V*B*(V-B), D=F",
+          "stable_cutoff_coarse_upper": 216,
+          "stable_product": 1144561273430837494885949696427,
+          "u": 177147,
+          "w": 31381059609
+        },
+        "fibres": {
+          "all_depths_below_seed": true,
+          "beta": "0",
+          "intercept": "0",
+          "left_count": 177148,
+          "left_denominator": 177147,
+          "left_residual_bound": "2/14130386091738734504764811067",
+          "left_slope": "265721/177147",
+          "right_count": 2,
+          "right_denominator": 31381059609,
+          "right_residual_bound": "2/4710128697246244834921603689",
+          "right_slope": "70607649841/31381059609"
+        },
+        "parameters": {
+          "Delta": "2*pi*T^30/log(r)",
+          "H": 31381059609,
+          "T": 3,
+          "X": 717897987691852588770249,
+          "label_left": 205891132094649,
+          "label_right": 411782264189298
+        },
+        "phase": {
+          "chart": "1/3<log(r)<1, hence 2n/Delta=log(r)/pi<1/2 for c=1/2",
+          "definition": "r=sqrt(q^2+1/M), z=r^(1/n), alpha_j=z^j",
+          "nonrational": "r^2=(B^2*T^58+1)/T^80 has a square denominator and numerator strictly between consecutive squares",
+          "q": "265721/177147",
+          "r_squared": "332571117761208356256299441959085863450/147808829414345923316083210206383297601"
+        },
+        "populated_box": {
+          "all_ordered_label_pair_rectangles": 15690618378,
+          "critical_scale": "X^(21/25-o(1))",
+          "frozen_k_bins": 18,
+          "one_box_lower_bound": 871701021,
+          "scale": "X^(11/25-o(1))"
+        }
+      },
+      "lcm": {
+        "F": 1,
+        "U": 2,
+        "V": 4,
+        "gcd_u_w": 1,
+        "identity": "F/g-L*(alpha_left-alpha_right)=(w/g)*epsilon_left-(u/g)*epsilon_right",
+        "lcm_U_V": 4,
+        "left_side": "0",
+        "right_side": "0",
+        "u": 1,
+        "v": 2,
+        "w": 2
+      }
+    }
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/ray_box_determinant_orbit_v1.py",
+      "sha256": "67b868651fd4a1e0404a9ee14bca894533088181c5d01411ab36a74a0f4ab3fe"
+    },
+    "cycle180": {
+      "path": "artifacts/cycle-180-cross-label-pair-determinant-v1.json",
+      "sha256": "cdf34df41021fd1b0eab05f34202b23ea3fec96f010fbf3f0467328084b0d91a"
+    },
+    "cycle181": {
+      "path": "artifacts/cycle-181-common-intercept-packet-v1.json",
+      "sha256": "1d7402f3233e5c2eebf5f391fcae98037ea63a543b868dd850a3744673cef21c"
+    },
+    "cycle182": {
+      "path": "artifacts/cycle-182-fibre-line-rigidity-v1.json",
+      "sha256": "ec2aa8e41ea5682b8c3bcf7818d26205700121ef097cb34ef4344a03a0e593a8"
+    },
+    "cycle183": {
+      "path": "artifacts/cycle-183-intercept-cleared-ray-box-v1.json",
+      "sha256": "4d74a23710ae5b48b6e0fc0ea99fc30a660c5b52efb2ef2f8179ad586dd9604f"
+    },
+    "document": {
+      "path": "docs/cycle-184-ray-box-determinant-orbit-v1.md",
+      "sha256": "d284f32eac014f7d062b916246b334bcdd9372d784607f659fcc88808f06174a"
+    },
+    "preregistration": {
+      "path": "docs/cycle-184-ray-box-determinant-orbit-preregistration-v1.md",
+      "sha256": "c01c60438a7531d0acefdc5e7565d868769f3f2aacbef3dfc6917179d899a428"
+    },
+    "sealing_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "tests": {
+      "path": "tests/test_cycle_184_ray_box_determinant_orbit_v1.py",
+      "sha256": "bfd2a5075819fcec2616be170432952189dc1ceef2e2b77636bcf2b57d1f7171"
+    }
+  },
+  "local_no_go": {
+    "epistemic_status": "PROVED",
+    "statement": "Within the C183 local determinant/orbit architecture, gcd(u,w)|F is exactly the LCM resonance generated by the two orbit errors; the nonrational deformation has all depths below X^(6/25) and one box only X^(11/25-o(1)). This rules out only an LCM-only forcing argument, not a population-sensitive critical-box theorem."
+  },
+  "mentor_checkpoint": {
+    "falsifier": "A frozen orbit configuration violating the LCM identity, or failure of positivity, common intercept, stability, sub-seed depth, or box count in the deformation.",
+    "known_flaw": "The X^(11/25-o(1)) deformation is subcritical and cannot establish saturation or impossibility for a critical X^(21/25-o(1)) box.",
+    "next_action": "Test genuinely population-sensitive three-label/shared-fibre compatibility or cross-box coefficient entropy.",
+    "recommendation": "REFINE_THEN_SEAL",
+    "resolution": "Adopted: the claim is narrowed to LCM_RESONANCE_REDUNDANCY only; the deformation is evidence against an LCM-only forcing step, not a critical-box barrier."
+  },
+  "preflight_validator": {
+    "path": "../../tools/preregistration_check.py",
+    "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+  },
+  "preregistration_preflight": {
+    "cycle": 184,
+    "input_hashes": [
+      {
+        "path": "artifacts/cycle-180-cross-label-pair-determinant-v1.json",
+        "sha256": "cdf34df41021fd1b0eab05f34202b23ea3fec96f010fbf3f0467328084b0d91a"
+      },
+      {
+        "path": "artifacts/cycle-181-common-intercept-packet-v1.json",
+        "sha256": "1d7402f3233e5c2eebf5f391fcae98037ea63a543b868dd850a3744673cef21c"
+      },
+      {
+        "path": "artifacts/cycle-182-fibre-line-rigidity-v1.json",
+        "sha256": "ec2aa8e41ea5682b8c3bcf7818d26205700121ef097cb34ef4344a03a0e593a8"
+      },
+      {
+        "path": "artifacts/cycle-183-intercept-cleared-ray-box-v1.json",
+        "sha256": "4d74a23710ae5b48b6e0fc0ea99fc30a660c5b52efb2ef2f8179ad586dd9604f"
+      },
+      {
+        "path": "conventions/intercept_cleared_ray_box_v1.py",
+        "sha256": "f0acf34e0e7c2e205595fd92fccd41fa9153973d3b7f6192fcefd96e544087e6"
+      },
+      {
+        "path": "proof/cycle_seal_v1.py",
+        "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+      },
+      {
+        "path": "../../tools/preregistration_check.py",
+        "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+      }
+    ],
+    "manifest_sha256": "c01c60438a7531d0acefdc5e7565d868769f3f2aacbef3dfc6917179d899a428",
+    "parameters": {
+      "box_fields": {
+        "kind": "symbolic",
+        "rationale": "The candidate class must retain coefficient-sensitive depth, denominator, multiplier, and label-gap scales.",
+        "value": "(N_ell,N_m,U,V,k,q,r)"
+      },
+      "determinant_relation": {
+        "kind": "expression",
+        "rationale": "C183's exact primitive determinant is the proposed new engine's integer state equation.",
+        "value": "F=w*A-u*B; D=k*q*v*F; F!=0"
+      },
+      "orbit_widths": {
+        "kind": "expression",
+        "rationale": "Both sides must retain the depth-sensitive actual exponential information.",
+        "value": "||U*alpha_ell||<=2C/((N_ell-1)X), ||V*alpha_m||<=2C/((N_m-1)X)"
+      },
+      "stable_factor_window": {
+        "kind": "expression",
+        "rationale": "The primitive determinant must remain at the inherited stable physical scale, not be replaced by a scalar surrogate.",
+        "value": "pi*r*U*V/(v*Delta)<=|F|<=(2*pi*exp(2*pi*c)+pi)*r*U*V/(v*Delta), 0<c<1"
+      }
+    },
+    "schema": "research-preregistration-freeze-v1"
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "A viable C185 engine must use three-label/shared-fibre compatibility or cross-box coefficient entropy to bound or transfer a populated family of varying LCM resonances, or construct a genuinely critical nonrational ray-box saturator. A single LCM relation or two-label deformation is non-progress for density."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_184_ray_box_determinant_orbit_v1.py --check",
+    "preflight_command": "research prereg check docs/cycle-184-ray-box-determinant-orbit-preregistration-v1.md --expected-cycle 184",
+    "test_command": "python3 -m unittest tests/test_cycle_184_ray_box_determinant_orbit_v1.py",
+    "write_command": "python3 proof/build_cycle_184_ray_box_determinant_orbit_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_184_ray_box_determinant_orbit_v1.py",
+    "sha256": "4f4fb2dbe651b0c29157c1711fdeab37e945ccde8e40c23b3809779fbcf59629"
+  },
+  "status": "SEALED_LCM_RESONANCE_AND_SUBSEED_NONRATIONAL_LOCAL_DEFORMATION"
+}
