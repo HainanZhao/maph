@@ -141,7 +141,7 @@ published reconstruction P0 [complete]
 | E14 | `UNSIGNED_VOLUME_LIMIT_REACHED` | Use only for inverse structure. |
 | E14D-L | `TIMEBOXED_AT_SCALE_LABEL_INFORMATION_LOSS` | Reopen only by restoring `t`/ordered atoms in a coefficient-preserving selector or proving a genuinely `t`-independent factorization. |
 | E14D-L mask cone | `RAW_ZERO_DIAGONAL_GRAM_OBSTRUCTION_BANKED_COEFFICIENT_NEGATIVE_SPECTRAL_ALIGNMENT_OPEN` | Concentrate actual negative spectral energy in a fixed labelled block family or prove a robust labelled block-complexity inverse. |
-| E14D-H | `ACTIVE_GLOBAL_ALIGNED_FOUR_CYCLE_MASS_OR_WEIGHTED_HIGH_DEGREE_STAR_INVERSE` | Bank globally massed aligned four-cycle configurations or an actual weighted oriented star family with individual effective degree `X^(1/300-o(1))`. |
+| E14D-H | `MASS_ALIGNED_FOUR_CYCLE_OR_GLOBALLY_MASSED_COMMON_WRAP_LOG_WEB_OR_INTEGER_WRAP_COMPLEXITY_OPEN` | Compile the labelled common-wrap web or bound the labelled wrap-complexity inverse without discarding the four-cycle arm. |
 | E15 | `ANCHOR_REQUIRED` | Classify anchored almost-eigenfunctions. |
 | E16 | `EXACT_VALUATION_WEB_BANKED` | Compile relation-rich structure to a genuine transport seed. |
 | E11/E12 | `AUTOCORRELATION_ANOVA_OPEN` | Save `>3/50` in complete form or force enough recurrence. |
@@ -160,12 +160,12 @@ published reconstruction P0 [complete]
   products. E14D-L is timeboxed for Cycles 160--162. Positive strict
   transport still needs its normalized weights and uniform complete capacity
   bound before spacing/order-three curvature can attack an actual bounded fan.
-- `CONJECTURED` E14D-H: Cycles 160--161 turn the needed upper-band `M4`
-  excess into a conditional coefficient-weighted pair-cell, then a local
-  positive-real four-atom/star dichotomy. Cycle 162 must retain a fixed share
-  of the global forced mass in one dyadic codegree layer before either output
-  is pulled back to the `(d,q)` coordinates. A raw-target example without
-  either mass-sensitive output enlarges the inverse class.
+- `CONJECTURED` E14D-H: Cycles 160--163 turn conditional upper-band `M4`
+  excess into a globally massed four-atom/star inverse, then classify the
+  star by literal wrap complexity or an aggregate common-wrap logarithmic
+  web. The next step must compile one labelled output or preserve an
+  admissible obstruction. A raw-target example without either output enlarges
+  the inverse class.
 - `CONJECTURED` E15/E16: classify anchored shifted-strip almost-eigenfunctions
   and turn high-codegree alias structure into a seed with an explicit phase
   error budget. A seedless target-sized anchored graph is itself structural
@@ -223,7 +223,9 @@ authorized action is Cycle 163, preregistered at
 `docs/cycle-163-star-wrap-fiber-preregistration-v1.md`: pull back the
 weighted star family through `z_(d,q)=c0q exp(2pi d/D)` by the exact
 wrap/fiber effective-degree factorization, producing a common-wrap log web
-or explicit wrap-complexity inverse. Cycle
+or explicit wrap-complexity inverse; it is now sealed. Next authorized action
+is a companion-selected compilation or obstruction analysis of one labelled
+Cycle-163 arm. Cycle
 158's concentration theorem remains deferred until a selector
 is real rather than formal. The older
 Cycle-155 partition remains a parallel output only if it is actual and
