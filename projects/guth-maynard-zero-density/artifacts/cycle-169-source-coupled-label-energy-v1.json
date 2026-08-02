@@ -1,0 +1,74 @@
+{
+  "artifact_id": "cycle-169-source-coupled-label-energy-v1",
+  "claim_boundary": "This proves a source-pushforward label-energy identity and sharp anticorrelation no-go. It does not use actual exponential geometry or prove overlap, compatibility, recurrence, skeleton, density, or intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "boundary": "This is a source-pushforward calculus/no-go. It does not use the actual exponential geometry and does not lower-bound label energy, compatibility, recurrence, density, or intervals.",
+    "diagonal_warning": "the same-source diagonal is not the mixed energy; disjoint branch selection can make it zero",
+    "identity": "sum_L E_L P_L equals the two-independent-source-copy labelled pair sum before any normalization",
+    "no_go": "with two target labels, arbitrary prescribed nonnegative total edge and packet masses admit a common-source anticorrelated model with zero mixed label energy"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/source_coupled_label_energy_v1.py",
+      "sha256": "3492582887a8d64b383c85a9a0cd057965c17cd119e356d4e4fa3aa51fded2f7"
+    },
+    "cycle168": {
+      "path": "artifacts/cycle-168-edge-packet-join-v1.json",
+      "sha256": "d0f914b7fb00b968ba76195862ccdf248dcdce08904b43fac2ebf1c3939f50d4"
+    },
+    "document": {
+      "path": "docs/cycle-169-source-coupled-label-energy-v1.md",
+      "sha256": "562e9ab168fca10f047c236d5a6451af7891cafee2be718c26c6426ebddce342"
+    },
+    "preregistration": {
+      "path": "docs/cycle-169-source-coupled-label-energy-preregistration-v1.md",
+      "sha256": "5c743dd327a69800fae3de9e65a602464f390343059dfb1ea764400dac768a37"
+    },
+    "sealing_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "tests": {
+      "path": "tests/test_cycle_169_source_coupled_label_energy_v1.py",
+      "sha256": "e06230448fb8746f804c5dc4255d64cca087041ecf903740d6881e2bea75a66d"
+    }
+  },
+  "label_energy_no_go": {
+    "boundary": "This is a source-pushforward calculus/no-go. It does not use the actual exponential geometry and does not lower-bound label energy, compatibility, recurrence, density, or intervals.",
+    "diagonal_warning": "the same-source diagonal is not the mixed energy; disjoint branch selection can make it zero",
+    "epistemic_status": "PROVED",
+    "identity": "sum_L E_L P_L equals the two-independent-source-copy labelled pair sum before any normalization",
+    "no_go": "with two target labels, arbitrary prescribed nonnegative total edge and packet masses admit a common-source anticorrelated model with zero mixed label energy"
+  },
+  "prior_context": {
+    "cycle168_role": "defines the compatibility form whose label-overlap precondition is now shown not to follow from marginals",
+    "epistemic_status": "PROVED"
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Use an actual exponential/fibre invariant to force common target labels, or convert the realized labelled separator into a quantitative structural inverse."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_169_source_coupled_label_energy_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_169_source_coupled_label_energy_v1.py",
+    "write_command": "python3 proof/build_cycle_169_source_coupled_label_energy_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_169_source_coupled_label_energy_v1.py",
+    "sha256": "4c150b009c7d49f37d2d309919300fd739aabfba48a2e1fc143cc1dc8715088c"
+  },
+  "status": "SEALED_COMMON_SOURCE_MARGINALS_DO_NOT_FORCE_TARGET_LABEL_ENERGY"
+}

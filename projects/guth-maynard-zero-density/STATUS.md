@@ -6,8 +6,8 @@ Canonical evidence is the Git-tracked per-cycle artifact and its linked files; `
 ## Cold-start handoff
 
 - Project outcome (PROVED): No improved zero-density coefficient, prime-interval endpoint, or L-function-family transfer is proved. The checked baseline remains density coefficient 30/13, with uniform and almost-all interval endpoints 17/30 and 2/15.
-- Why the active gate matters (PROVED): Cycles 165--168 turn any critical fixed-beta Cycle-63 census into a massed labelled terminal web, classify direct cross-label transport, and give its exact edge/local-packet compatibility calculus. The active bottleneck is a positive lower bound for the labelled compatibility form, or a quantitative typed support-separation inverse.
-- Progress criterion (CONJECTURED): The next advance must prove a positive labelled compatibility-form lower bound or a quantitative typed support-separation inverse for actual banks. A compatibility calculus, direct edge, web count, unanchored recurrence, beta-free packet, or deduplicated plane count alone is non-progress.
+- Why the active gate matters (PROVED): Cycles 165--169 turn any critical fixed-beta Cycle-63 census into a massed terminal web, classify cross-label transport and joins, and prove that common provenance plus total marginal masses cannot force target-label overlap. The active bottleneck needs a genuinely exponential/fibre geometric coupling invariant or a quantitative typed separator.
+- Progress criterion (CONJECTURED): The next advance must use actual exponential/fibre geometry to force compatible mass, or prove a quantitative typed support-separation inverse. A source-marginal calculation, compatibility calculus, direct edge, web count, unanchored recurrence, beta-free packet, or deduplicated plane count alone is non-progress.
 - Explicitly deferred: Boundary denominators within a fixed power of Q are a separate branch; paper-stage hostile audit begins only after a manuscript theorem is frozen.
 
 ### Start here (from this project directory)
@@ -15,31 +15,32 @@ Canonical evidence is the Git-tracked per-cycle artifact and its linked files; `
 - `source ../../tools/dev-env.sh`
 - `research rebuild`
 - `research check`
-- `research cycle 168`
-- `python3 proof/build_cycle_168_edge_packet_join_v1.py --check`
-- `cat docs/cycle-168-edge-packet-join-v1.md`
-- `cat discovery/cycle-168-edge-packet-join-working-v1.md`
+- `research cycle 169`
+- `python3 proof/build_cycle_169_source_coupled_label_energy_v1.py --check`
+- `cat docs/cycle-169-source-coupled-label-energy-v1.md`
+- `cat discovery/cycle-169-source-coupled-label-energy-working-v1.md`
 
 Read the listed record and its linked preregistration, proof document, conventions, builder, and test before changing mathematics or code. Do not infer a theorem from this handoff; its claim tags and boundaries are in the canonical record.
 
 ## Index coverage
 
-- Cycle artifact files found in the working tree: 267
-- Cycle artifacts present in the Git index: 266
-- Artifacts by top-level epistemic status: CONJECTURED=6, LEGACY_UNTAGGED=10, OBSERVED=56, PROVED=195
-- Recursively tagged fields indexed for search (not independent claims): 23570
+- Cycle artifact files found in the working tree: 268
+- Cycle artifacts present in the Git index: 267
+- Artifacts by top-level epistemic status: CONJECTURED=6, LEGACY_UNTAGGED=10, OBSERVED=56, PROVED=196
+- Recursively tagged fields indexed for search (not independent claims): 23575
 
 ## Current gate
 
-- Latest record: `cycle-168-edge-packet-join-v1` (Cycle 168, `PROVED`)
-- Status: `SEALED_EDGE_PACKET_COMPATIBILITY_OR_TYPED_SUPPORT_SEPARATION`
-- Boundary: This proves an exact edge/local-packet compatibility calculus and typed nonjoin partition. It does not lower-bound overlap for actual populations or prove a recurrence, skeleton, density, or interval gain.
-- Next mathematical target: Prove a label-faithful lower bound for the bipartite edge/packet compatibility form, or establish a typed support-separation inverse for the actual Cycle-165--167 populations.
+- Latest record: `cycle-169-source-coupled-label-energy-v1` (Cycle 169, `PROVED`)
+- Status: `SEALED_COMMON_SOURCE_MARGINALS_DO_NOT_FORCE_TARGET_LABEL_ENERGY`
+- Boundary: This proves a source-pushforward label-energy identity and sharp anticorrelation no-go. It does not use actual exponential geometry or prove overlap, compatibility, recurrence, skeleton, density, or intervals.
+- Next mathematical target: Use an actual exponential/fibre invariant to force common target labels, or convert the realized labelled separator into a quantitative structural inverse.
 
 ## Recent sealed records
 
 | Cycle | Record | Tag | Gate | Next target |
 |---:|---|---|---|---|
+| 169 | `cycle-169-source-coupled-label-energy-v1` | `PROVED` | `SEALED_COMMON_SOURCE_MARGINALS_DO_NOT_FORCE_TARGET_LABEL_ENERGY` | Use an actual exponential/fibre invariant to force common target labels, or convert the realized labelled separator into a quantitative structural inverse. |
 | 168 | `cycle-168-edge-packet-join-v1` | `PROVED` | `SEALED_EDGE_PACKET_COMPATIBILITY_OR_TYPED_SUPPORT_SEPARATION` | Prove a label-faithful lower bound for the bipartite edge/packet compatibility form, or establish a typed support-separation inverse for the actual Cycle-165--167 populations. |
 | 167 | `cycle-167-affine-fibre-transport-v1-scope-correction` | `PROVED` | `SEALED_REDUCED_RATIONAL_SCOPE_CORRECTION` | Join an eligible cross-label edge to a retained target-local packet, or construct a labelled closed loop yielding an equivalent local relation. |
 | 167 | `cycle-167-affine-fibre-transport-v1` | `PROVED` | `SEALED_DIRECT_AFFINE_CROSS_LABEL_TRANSPORT_OR_OBSTRUCTION_CLASSIFIER` | Join an eligible cross-label edge to a retained target-local packet, or construct a labelled closed transport loop that yields an equivalent local relation while preserving beta and all range labels. |
@@ -47,12 +48,11 @@ Read the listed record and its linked preregistration, proof document, conventio
 | 165 | `cycle-165-anchored-fibre-product-determinant-v1` | `PROVED` | `SEALED_BETA_ANCHORED_FOUR_ANCHOR_PACKET_OR_RESONANCE_PLANE_CLASSIFICATION` | Bound every terminal bank strictly below the Cycle-63 critical census threshold, or compile a retained high-content packet into the E7/E9 skeleton with a strict margin. |
 | 164 | `cycle-164-wrap-valuation-sidon-v1` | `PROVED` | `SEALED_WRAP_VALUATION_WEB_OR_WEIGHTED_SIDON_CLASSIFICATION` | compile a valuation web through E16 or bound the weighted-Sidon and wrap-complexity alternatives |
 | 163 | `cycle-163-star-wrap-fiber-v1` | `PROVED` | `SEALED_STAR_WRAP_COMPLEXITY_OR_COMMON_WRAP_LOG_WEB` | compile the common-wrap log web or bound the labelled wrap-complexity alternative |
-| 162 | `cycle-162-mass-sensitive-high-cell-v1` | `PROVED` | `SEALED_GLOBAL_ALIGNED_FOUR_CYCLE_MASS_OR_WEIGHTED_HIGH_DEGREE_STAR_INVERSE_BANKED` | pull back one globally massed labelled output through the actual (d,q) coordinate map, or construct an admissible labelled obstruction |
 
 ## Useful queries
 
 ```sh
-python /root/projects/maph/tools/research_records.py --project research-records.json cycle 168
+python /root/projects/maph/tools/research_records.py --project research-records.json cycle 169
 python /root/projects/maph/tools/research_records.py --project research-records.json search "seeded packet"
 python /root/projects/maph/tools/research_records.py --project research-records.json check
 ```
