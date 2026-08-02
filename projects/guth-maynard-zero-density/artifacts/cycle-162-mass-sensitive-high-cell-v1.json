@@ -1,0 +1,73 @@
+{
+  "artifact_id": "cycle-162-mass-sensitive-high-cell-v1",
+  "claim_boundary": "This artifact conditionally extracts global four-cycle mass or literal weighted star-edge mass from Cycle-89 excess. It does not prove excess, coordinate pullback, rational web, moment, density, or intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/mass_sensitive_high_cell_v1.py",
+      "sha256": "014407dab7fba3cd543b019844db04f59bf22ec2d874b91caddc015db4ea55cd"
+    },
+    "cycle161": {
+      "path": "artifacts/cycle-161-high-cell-refinement-v1.json",
+      "sha256": "9765ae4ffd580711089301078ea295a85e50d236e40415a3a9542f875e7229ff"
+    },
+    "document": {
+      "path": "docs/cycle-162-mass-sensitive-high-cell-v1.md",
+      "sha256": "61bb9001eb39058d23e2fd5cd8750543f76d8acd7a6df35f1508a01bbe483584"
+    },
+    "preregistration": {
+      "path": "docs/cycle-162-mass-sensitive-high-cell-preregistration-v1.md",
+      "sha256": "0b6263b24e2c6972d0a07f3f725d8e12232db2b1574f74699d96bbf38700c0b1"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_162_mass_sensitive_high_cell_v1.py",
+      "sha256": "0e35320f7b4fc5c94199cea03f384cefb57be98c42a81bc66c48de358035c0c1"
+    }
+  },
+  "mass_sensitive_high_cell": {
+    "aggregate_dichotomy": "four-atom mass is >>_B A2^2 X^(1/75-o(1)); star squared edge mass is >>_B A2^2 X^(1/150-o(1)) with degree X^(1/300-o(1))",
+    "boundary": "this conditional extraction does not prove Cycle-89 excess, a coordinate pullback, rational web, moment bound, density, or intervals",
+    "epistemic_status": "PROVED",
+    "mass_sensitive_extraction": "conditional Cycle-89 excess and Cycle-160 local Schur force sum_I L_I^2 >> A2^2 X^(1/75-o(1)); one high dyadic level retains that scale",
+    "refinement_retention": "for B=288, sum_j L_(I,j)^2>=L_I^2/B; high refined classes retain at least L_I^2/(2B)"
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "pull back one globally massed labelled output through the actual (d,q) coordinate map, or construct an admissible labelled obstruction"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_162_mass_sensitive_high_cell_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_162_mass_sensitive_high_cell_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_162_mass_sensitive_high_cell_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sample": {
+    "epistemic_status": "PROVED",
+    "oriented_star_square": "1",
+    "refined_high_l1_square": "1"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_162_mass_sensitive_high_cell_v1.py",
+    "sha256": "9c1337478be0a396f307ac292bd9c69073e06c70bbcb656a8bc8b11f6ecdd015"
+  },
+  "status": "SEALED_GLOBAL_ALIGNED_FOUR_CYCLE_MASS_OR_WEIGHTED_HIGH_DEGREE_STAR_INVERSE_BANKED"
+}
