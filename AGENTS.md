@@ -59,19 +59,27 @@ monolithic `RESEARCH_LOG.md`. An existing one is historical archive only.
 Use `tools/research_records.py` with a project `research-records.json` profile
 to build, validate, and query standard immutable cycle records. Use
 `tools/duckdb_tools.py` for schema-agnostic read-only DuckDB inspection.
-For routine use from inside a profiled project, prefer the short wrapper:
+Once per shell, activate the repository tools from any directory in the
+checkout:
 
 ```sh
-../../tools/research rebuild
-../../tools/research check
-../../tools/research cycle 151
-../../tools/research search negative-tail
-../../tools/research db tables
-../../tools/research db sql "SELECT status, count(*) FROM artifacts GROUP BY status"
+source "$(git rev-parse --show-toplevel)/tools/dev-env.sh"
+```
+
+For routine use from inside a profiled project, use the short wrapper:
+
+```sh
+research rebuild
+research check
+research cycle 151
+research search negative-tail
+research db tables
+research db sql "SELECT status, count(*) FROM artifacts GROUP BY status"
 ```
 
 The wrapper finds `research-records.json`, uses the project `.venv` when
-present, and dispatches `db` to the generic read-only DuckDB interface.
+present, and dispatches `db` to the generic read-only DuckDB interface. If a
+shell cannot be initialized, `../../tools/research` remains equivalent.
 Project-specific code belongs only in its declarative profile or in a proven
 new record type; do not create per-project index/query scripts for routine
 cycle, claim, gate, dependency, or evidence queries.

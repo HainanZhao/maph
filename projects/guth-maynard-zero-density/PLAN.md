@@ -31,11 +31,12 @@ Rebuild and inspect the local index:
 
 ```sh
 cd /root/projects/maph/projects/guth-maynard-zero-density
-../../tools/research rebuild
-../../tools/research check
-../../tools/research cycle 151
-../../tools/research search negative-tail
-../../tools/research db tables
+source ../../tools/dev-env.sh
+research rebuild
+research check
+research cycle 151
+research search negative-tail
+research db tables
 ```
 
 ## Frozen baseline
@@ -163,8 +164,8 @@ git status --short --branch
 cat projects/guth-maynard-zero-density/PLAN.md
 cat projects/guth-maynard-zero-density/STATUS.md
 cd projects/guth-maynard-zero-density
-../../tools/research check
-../../tools/research cycle 151
+research check
+research cycle 151
 python3 proof/build_cycle_144_actual_edge_coefficient_v1.py --check
 python3 proof/build_cycle_145_vector_autocorrelation_v1.py --check
 python3 proof/build_cycle_146_balanced_highpass_mask_v1.py --check

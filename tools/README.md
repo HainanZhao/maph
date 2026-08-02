@@ -29,11 +29,12 @@ Example:
 For ordinary work, change into a profiled project and use the short wrapper:
 
 ```sh
+source "$(git rev-parse --show-toplevel)/tools/dev-env.sh"
 cd projects/guth-maynard-zero-density
-../../tools/research rebuild
-../../tools/research check
-../../tools/research cycle 151
-../../tools/research search negative-tail
-../../tools/research db tables
-../../tools/research db sql "SELECT status, count(*) FROM artifacts GROUP BY status"
+research rebuild
+research check
+research cycle 151
+research search negative-tail
+research db tables
+research db sql "SELECT status, count(*) FROM artifacts GROUP BY status"
 ```
