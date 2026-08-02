@@ -102,6 +102,28 @@ question, or the next authorized action changes. Seal cycle-level findings in
 their individual record and regenerate the compact status view. Never erase a
 failed path from the cycle record set.
 
+## 1a. Critical-decision companion
+
+For research work that can reach a critical decision, start a companion at
+the same time as the primary worker, before exploration begins. A critical
+decision includes changing `PLAN.md`; selecting, dropping, or materially
+reranking a research path; changing a gate or its advance condition;
+preregistering a new theorem search; promoting or containing a material
+claim; and choosing the next authorized cycle. Use a more capable available
+model for this companion when the platform permits. Otherwise use an
+independent agent with a fresh brief and no responsibility for the primary
+derivation.
+
+The companion is a mentor/checkpoint tracker, not a duplicate implementer or
+a hostile auditor. It maintains a short decision ledger: the frozen premise,
+alternatives considered, decisive evidence and tags, the recommended next
+action, and any unexamined assumption. Consult it at each critical checkpoint
+before committing the decision. Record its recommendation and whether it was
+adopted in the cycle's readable decision record; a reasoned disagreement is
+allowed and must be recorded. Do not block routine computation, exploration,
+or reversible drafting on the companion. This protocol complements the
+paper-stage hostile audit; it does not start one early.
+
 ## 2. Discovery and proof are separate
 
 - Use `discovery/` for heuristics, floats, recognition, conjectural
