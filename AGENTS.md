@@ -84,16 +84,14 @@ Project-specific code belongs only in its declarative profile or in a proven
 new record type; do not create per-project index/query scripts for routine
 cycle, claim, gate, dependency, or evidence queries.
 
-`STATUS.md` is the cold-start operational handoff, not merely an index
-summary. A code-start agent must be able to begin the next authorized cycle
-without reading a historical aggregate log. Its generated profile content
-must state, with epistemic tags: the present project-level outcome and claim
-boundary; why the active gate is now the bottleneck; the exact criterion that
-would advance it (including disallowed pseudo-progress); explicitly deferred
-work; and the ordered first commands/record to inspect. Keep this compact and
-link to canonical records rather than duplicating their derivations. Update
-the profile and regenerate `STATUS.md` whenever any of those handoff facts
-change.
+`STATUS.md` is the generated cold-start action card, not a second strategic
+summary. `PLAN.md` is the sole concise source for the project outcome, claim
+boundary, active gate, advance condition, and deferred work. `STATUS.md` must
+link to that plan, identify the newest immutable record and its immediate
+target, and give the ordered recovery commands. Its profile contains only
+stable paths and commands, never a copied narrative of the plan. Regenerate
+`STATUS.md` after a seal; change its profile only when those stable recovery
+instructions change.
 
 Before work: re-read frozen counts and conventions from artifacts, check
 `git status` and recent/fetched history, and preserve unrelated changes.

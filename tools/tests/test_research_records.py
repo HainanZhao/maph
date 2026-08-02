@@ -25,11 +25,11 @@ class ResearchRecordsTest(unittest.TestCase):
                 "SEALED_GCD_WEIGHTED_NEGATIVE_TAIL_LOBE_OR_BOUNDARY_OPEN",
             )
             status = research_records.render_status(con)
-            self.assertIn("## Cold-start handoff", status)
-            self.assertIn("No improved zero-density coefficient", status)
+            self.assertIn("## Start here", status)
+            self.assertIn("Strategic state, claim boundary, active gate, and deferred work: `PLAN.md`", status)
             self.assertIn("## Latest sealed record", status)
             self.assertIn("research cycle 63", status)
-            self.assertIn("diagonal-aware direct triple census", status)
+            self.assertIn("The newest immutable record and its next target are listed below", status)
             self.assertEqual(research_records.check(con), 0)
             con.close()
 

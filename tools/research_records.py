@@ -233,18 +233,16 @@ def render_status(con: duckdb.DuckDBPyConnection) -> str:
     ]
     if handoff:
         lines += [
-            "## Cold-start handoff",
+            "## Start here",
             "",
-            f"- Project outcome ({handoff['project_outcome']['epistemic_status']}): {handoff['project_outcome']['statement']}",
-            f"- Why the active gate matters ({handoff['why_active_gate_matters']['epistemic_status']}): {handoff['why_active_gate_matters']['statement']}",
-            f"- Progress criterion ({handoff['progress_criterion']['epistemic_status']}): {handoff['progress_criterion']['statement']}",
-            f"- Explicitly deferred: {handoff['deferred_work']}",
+            f"- Strategic state, claim boundary, active gate, and deferred work: `{handoff.get('plan_path', 'PLAN.md')}`.",
+            "- The newest immutable record and its next target are listed below; read that record before changing mathematics or code.",
             "",
-            "### Start here (from this project directory)",
+            "### Recovery commands (from this project directory)",
             "",
             *[f"- `{command}`" for command in handoff["start_commands"]],
             "",
-            "Read the listed record and its linked preregistration, proof document, conventions, builder, and test before changing mathematics or code. Do not infer a theorem from this handoff; its claim tags and boundaries are in the canonical record.",
+            "Then read the listed record and its linked preregistration, proof document, conventions, builder, and test. Do not infer a theorem from this action card.",
             "",
         ]
     lines += [
