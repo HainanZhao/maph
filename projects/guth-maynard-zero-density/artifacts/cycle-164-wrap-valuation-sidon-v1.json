@@ -1,0 +1,51 @@
+{
+  "artifact_id": "cycle-164-wrap-valuation-sidon-v1",
+  "claim_boundary": "This conditionally classifies high common-wrap fibers as exact valuation web or weighted Sidon. It does not prove a transport seed, moment, density, or intervals.",
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/wrap_valuation_sidon_v1.py",
+      "sha256": "9b1e5add65f0820f92809db7d6ba0f8cde93a651b5cba30f89f801c090ff5981"
+    },
+    "cycle163": {
+      "path": "artifacts/cycle-163-star-wrap-fiber-v1.json",
+      "sha256": "7219b6d39f4a3c7c7fd26051567ee800ebf79761fbacb712d3a23dea19afdc53"
+    },
+    "document": {
+      "path": "docs/cycle-164-wrap-valuation-sidon-v1.md",
+      "sha256": "3b2cc2186a22211a6b25163e0dc1bd5183c3207f3d78eca143fd76691340a15d"
+    },
+    "preregistration": {
+      "path": "docs/cycle-164-wrap-valuation-sidon-preregistration-v1.md",
+      "sha256": "471bd66bd266b88725fb7001b9709a0c73039b24264f6669ee226b24ec4f2946"
+    },
+    "tests": {
+      "path": "tests/test_cycle_164_wrap_valuation_sidon_v1.py",
+      "sha256": "a955b57affab69d576f7c9ac63592e502e29a4450374a0cd6d4d013aba281bf1"
+    }
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "compile a valuation web through E16 or bound the weighted-Sidon and wrap-complexity alternatives"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_164_wrap_valuation_sidon_v1.py --check",
+    "write_command": "python3 proof/build_cycle_164_wrap_valuation_sidon_v1.py --write"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_164_wrap_valuation_sidon_v1.py",
+    "sha256": "b972700e02417ea2e97271e5faa3b90ff8cc54a81d9b312be596589a2514e2ac"
+  },
+  "status": "SEALED_WRAP_VALUATION_WEB_OR_WEIGHTED_SIDON_CLASSIFICATION",
+  "wrap_valuation_sidon": {
+    "boundary": "this conditional web-or-Sidon classification does not prove a transport seed, moment, density, or intervals",
+    "epistemic_status": "PROVED",
+    "high_fibers": "if sum D_m^2/sum E_m>=H, fibers with D_m^2/E_m>=H/2 carry at least half of sum D_m^2",
+    "integer_forcing": "a fixed-wrap additive d quadruple has |q1q2-q3q4|<<Q/K<1 and hence q1q2=q3q4"
+  }
+}
