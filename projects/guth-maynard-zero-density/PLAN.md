@@ -27,6 +27,15 @@ is generated from those records. `.research/index.duckdb` is an ignored,
 rebuildable query index. The historical aggregate ledger is frozen at
 `archive/RESEARCH_LOG-through-cycle-151.md`; do not append to it.
 
+## Research-block cadence
+
+Cycles are substantive research blocks: one preregistered question, several
+dependent lemmas/counterexamples, and one bound-or-obstruction gate. Keep
+intermediate bookkeeping in a compact working ledger; seal, rebuild status,
+and commit only when the block's advance condition is resolved. Early seals
+are reserved for corrections, falsifiers, externally useful theorems, or
+irreversible strategy/gate changes.
+
 Rebuild and inspect the local index:
 
 ```sh
