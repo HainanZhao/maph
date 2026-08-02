@@ -1,0 +1,87 @@
+{
+  "affine_transport_classifier": {
+    "balance": "with h<=2H and |qE-a|<=C1/(KX), the extra strip constant is at most 2*H*y_upper*C1/(aK)",
+    "boundary": "This is a single cross-label edge classifier. It supplies neither a target-local Cycle-67 packet nor an E7/E9 recurrence.",
+    "deconvolution": "P(N)<=binom(|N|,4), so parent multiplicity gives a fourth-root distinct-parameter lower bound only",
+    "eligibility": "a|h0+r n is soluble iff gcd(a,r)|h0 and then one residue class is intersected with both exact row ranges",
+    "epistemic_status": "PROVED",
+    "rigidity": "within the reduced rational ansatz B=q/a and j_plus=j+A h, error factorization uniquely forces A=1-q/a; coprimality makes integrality equivalent to a|h",
+    "transport": "the exact target residual equals the source residual minus h*y*(qE-a)/a"
+  },
+  "artifact_id": "cycle-167-affine-fibre-transport-v1",
+  "claim_boundary": "Within the one-step affine multiplicative architecture, this classifies beta-preserving cross-label edges. It proves no eligible actual Cycle-166 fibre, target-local packet, recurrence, E7/E9 skeleton, density, or interval gain.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "balance": "with h<=2H and |qE-a|<=C1/(KX), the extra strip constant is at most 2*H*y_upper*C1/(aK)",
+    "boundary": "This is a single cross-label edge classifier. It supplies neither a target-local Cycle-67 packet nor an E7/E9 recurrence.",
+    "deconvolution": "P(N)<=binom(|N|,4), so parent multiplicity gives a fourth-root distinct-parameter lower bound only",
+    "eligibility": "a|h0+r n is soluble iff gcd(a,r)|h0 and then one residue class is intersected with both exact row ranges",
+    "rigidity": "within the reduced rational ansatz B=q/a and j_plus=j+A h, error factorization uniquely forces A=1-q/a; coprimality makes integrality equivalent to a|h",
+    "transport": "the exact target residual equals the source residual minus h*y*(qE-a)/a"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/affine_fibre_transport_v1.py",
+      "sha256": "b2c06be11b0d2f80b25097e75e19d48c1eef9de28ad39acb32a316c9fab131f5"
+    },
+    "cycle166": {
+      "path": "artifacts/cycle-166-terminal-bank-entropy-v1.json",
+      "sha256": "9bc9b95a2ccd7e675681f8f1e5f771394a4ab82b359104f6d1259163a6bfa6eb"
+    },
+    "cycle67": {
+      "path": "artifacts/cycle-67-seeded-packet-recurrence-v1.json",
+      "sha256": "85bd999fca3e1d675c0b3096a6cd287866d9e1aef227239b42b94b39ff585d02"
+    },
+    "document": {
+      "path": "docs/cycle-167-affine-fibre-transport-v1.md",
+      "sha256": "2577f4931165ed66ce71d656cdd252c16fc93e19cb0f8324bb6aedcc8bc285ca"
+    },
+    "preregistration": {
+      "path": "docs/cycle-167-affine-fibre-transport-preregistration-v1.md",
+      "sha256": "4d22d86453ab226cef0905750ecabea1dda4926bd232ab765c306b14e7739eb9"
+    },
+    "sealing_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "tests": {
+      "path": "tests/test_cycle_167_affine_fibre_transport_v1.py",
+      "sha256": "ef5e2f6898537ffb72a508138d577ea085b4f96d5bf7ea046a786879f7cce3ba"
+    }
+  },
+  "independence_countermodels": {
+    "epistemic_status": "PROVED",
+    "statement": "Finite exact affine fibres separately realize residue failure, transformed-range failure, and unbounded balance; parent multiplicity alone cannot force direct transport in this architecture."
+  },
+  "prior_context": {
+    "cycle166_role": "provides conditional massed beta-anchored shift/packet webs but not distinct-anchor eligibility",
+    "cycle67_role": "requires a genuine target-local packet and seed; a cross-label edge alone is insufficient",
+    "epistemic_status": "PROVED"
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Join an eligible cross-label edge to a retained target-local packet, or construct a labelled closed transport loop that yields an equivalent local relation while preserving beta and all range labels."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_167_affine_fibre_transport_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_167_affine_fibre_transport_v1.py",
+    "write_command": "python3 proof/build_cycle_167_affine_fibre_transport_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_167_affine_fibre_transport_v1.py",
+    "sha256": "c2b5f6aaffdf88a14edc967c25eea31fe9a679442a3ec50f26743cdb3e5233e6"
+  },
+  "status": "SEALED_DIRECT_AFFINE_CROSS_LABEL_TRANSPORT_OR_OBSTRUCTION_CLASSIFIER"
+}

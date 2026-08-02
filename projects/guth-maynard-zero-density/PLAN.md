@@ -124,6 +124,12 @@ research db tables
   have `X^(1/25-o(1))` parents and beta-seeded packet states have
   `X^(2/25-o(1))` parents. The result controls neither a web nor the census
   and has no E7/E9, density, or interval consequence.
+- `PROVED`: within the reduced rational one-step architecture, Cycle 167
+  classifies every beta-preserving cross-label edge by exact affine-fibre
+  residue, range, and balance conditions. A cross-label edge is not a
+  target-local Cycle-67 packet; the three arithmetic failures are independent
+  within that architecture. Its top-level scope is authoritatively narrowed
+  by `artifacts/cycle-167-affine-fibre-transport-v1-scope-correction.json`.
 
 ## Research-path graph
 
@@ -147,7 +153,7 @@ published reconstruction P0 [complete]
 | E14 | `UNSIGNED_VOLUME_LIMIT_REACHED` | Use only for inverse structure. |
 | E14D-L | `TIMEBOXED_AT_SCALE_LABEL_INFORMATION_LOSS` | Reopen only by restoring `t`/ordered atoms in a coefficient-preserving selector or proving a genuinely `t`-independent factorization. |
 | E14D-L mask cone | `RAW_ZERO_DIAGONAL_GRAM_OBSTRUCTION_BANKED_COEFFICIENT_NEGATIVE_SPECTRAL_ALIGNMENT_OPEN` | Concentrate actual negative spectral energy in a fixed labelled block family or prove a robust labelled block-complexity inverse. |
-| E14D-H | `MASSED_BETA_ANCHORED_SHIFT_OR_SEEDED_PACKET_WEB_BANKED` | Compile one retained web through a new beta-preserving bridge, or prove a labelled obstruction with all divisibility and range coordinates retained. |
+| E14D-H | `CROSS_LABEL_EDGE_CLASSIFIED_TARGET_PACKET_OR_LOOP_OPEN` | Join an eligible labelled edge to a target-local packet, or construct a closed labelled transport loop yielding an equivalent local relation. |
 | E15 | `ANCHOR_REQUIRED` | Classify anchored almost-eigenfunctions. |
 | E16 | `EXACT_VALUATION_WEB_BANKED` | Compile relation-rich structure to a genuine transport seed. |
 | E11/E12 | `AUTOCORRELATION_ANOVA_OPEN` | Save `>3/50` in complete form or force enough recurrence. |
@@ -176,6 +182,10 @@ published reconstruction P0 [complete]
   beta-anchored shift or seeded-packet web with the stated `1/25` or `2/25`
   labelled-parent exponent. The next bridge must preserve beta, divisibility,
   and `h`-range; an unanchored recurrence or deduplicated web is non-progress.
+- `PROVED` Cycle 167: in the reduced rational direct-map architecture, an
+  eligible affine-fibre row gives only a beta-preserving cross-label edge.
+  Residue, transformed-range, and `aK` balance are necessary exact labels;
+  the missing bridge is a target-local packet join or a closed labelled loop.
 - `CONJECTURED` E15/E16: classify anchored shifted-strip almost-eigenfunctions
   and turn high-codegree alias structure into a seed with an explicit phase
   error budget. A seedless target-sized anchored graph is itself structural
@@ -254,9 +264,14 @@ therefore restricted to an unseeded diagnostic. Cycle 166 is now sealed at
 `artifacts/cycle-166-terminal-bank-entropy-v1.json`: it converts every
 retained terminal branch into a massed beta-anchored shift or seeded-packet
 web, with labelled parent exponent `1/25` or `2/25`. Next authorized action:
-preregister and test a genuinely beta-preserving transport bridge (starting
-with the multiplicative beta-transport prototype), or bank a labelled
-divisibility/range obstruction. No E7/E9 or density claim is authorized.
+Cycle 167 is sealed at
+`artifacts/cycle-167-affine-fibre-transport-v1.json`: its reduced-rational
+classifier proves the direct map can make only a cross-label edge, not a
+Cycle-67 packet; its scope correction is
+`artifacts/cycle-167-affine-fibre-transport-v1-scope-correction.json`.
+Next authorized action: choose and preregister either a
+target-local-packet join or a closed labelled-loop engine. No E7/E9 or density
+claim is authorized.
 
 ## Crash recovery
 
