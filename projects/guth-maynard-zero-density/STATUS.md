@@ -7,7 +7,7 @@ Canonical evidence is the Git-tracked per-cycle artifact and its linked files; `
 
 - Project outcome (PROVED): No improved zero-density coefficient, prime-interval endpoint, or L-function-family transfer is proved. The checked baseline remains density coefficient 30/13, with uniform and almost-all interval endpoints 17/30 and 2/15.
 - Why the active gate matters (PROVED): Cycle 156 banks the exact divisor-comb norm majorant under a frozen anchor ratio h<=C_hK. Cycle 154 then turns an actual fixed finite reason-labelled escape partition into one high-projection, one-ray-L2 class once that anchor ratio is instantiated. The actual partition and positive strict transport remain open.
-- Progress criterion (CONJECTURED): Cycle 155 advances E14D-L only by deriving the actual exact disjoint exhaustive coefficient-escape partition with fixed J=O_kappa(1), retaining its labels, or by preserving an explicit quantitative coefficient-complexity inverse. It must also instantiate the fixed anchor ratio used by Cycle 156 before invoking the one-ray-L2 conclusion. A conditional localization lemma, an X^(o(1)) class count, an unlabelled residual, heuristic cancellation, a scalar collision bound, or isolated endpoint norm aggregation does not advance the actual gate.
+- Progress criterion (CONJECTURED): Cycle 157 advances E14D-L only by a bounded positive-Gram factorization of the actual Hermitian selection mask in coefficient-weighted geometry, with labelled small residual, or by a labelled weighted dual/rectangle/negative-spectral coefficient-complexity witness. The parallel Cycle-155 partition must be exact, disjoint, exhaustive, and fixed-size. An unweighted rank claim, an X^(o(1)) class count, an unlabelled residual, heuristic cancellation, a scalar collision bound, or isolated endpoint norm aggregation does not advance the actual gate.
 - Explicitly deferred: Boundary denominators within a fixed power of Q are a separate branch; paper-stage hostile audit begins only after a manuscript theorem is frozen.
 
 ### Start here (from this project directory)
@@ -16,9 +16,9 @@ Canonical evidence is the Git-tracked per-cycle artifact and its linked files; `
 - `research rebuild`
 - `research check`
 - `research cycle 156`
-- `research search "comb norm"`
+- `research search "selection mask"`
 - `python3 proof/build_cycle_156_divisor_comb_norm_majorant_v1.py --check`
-- `cat docs/cycle-155-actual-coefficient-escape-partition-preregistration-v1.md`
+- `cat docs/cycle-157-selection-mask-cone-preregistration-v1.md`
 
 Read the listed record and its linked preregistration, proof document, conventions, builder, and test before changing mathematics or code. Do not infer a theorem from this handoff; its claim tags and boundaries are in the canonical record.
 
@@ -53,6 +53,6 @@ Read the listed record and its linked preregistration, proof document, conventio
 
 ```sh
 python /root/projects/maph/tools/research_records.py --project research-records.json cycle 156
-python /root/projects/maph/tools/research_records.py --project research-records.json search "comb norm"
+python /root/projects/maph/tools/research_records.py --project research-records.json search "selection mask"
 python /root/projects/maph/tools/research_records.py --project research-records.json check
 ```
