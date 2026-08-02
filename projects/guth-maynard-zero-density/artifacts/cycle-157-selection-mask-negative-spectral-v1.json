@@ -1,0 +1,79 @@
+{
+  "artifact_id": "cycle-157-selection-mask-negative-spectral-v1",
+  "claim_boundary": "This artifact proves a raw fixed-difference Gram obstruction and conditional coefficient-weighted negative spectral localization. It does not prove actual eigenspace alignment, finite block concentration, an approximate Gram transport, a coefficient partition, a moment, density, or intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/selection_mask_negative_spectral_v1.py",
+      "sha256": "539f690bab5eb234d98da7aff5daa92c8b051be47e1dbdd2281e30e5c55e8f67"
+    },
+    "cycle145": {
+      "path": "artifacts/cycle-145-vector-autocorrelation-v1.json",
+      "sha256": "5989739fe7de6e80782e98d38b60226b0eb5aa95e630a10587427dc12a77d41a"
+    },
+    "cycle154": {
+      "path": "artifacts/cycle-154-coefficient-escape-localization-v1.json",
+      "sha256": "3d17a6773aa714d83c12bc7beddbde5bfefc499f82ba7848f79cdf3cd7f28184"
+    },
+    "document": {
+      "path": "docs/cycle-157-selection-mask-negative-spectral-v1.md",
+      "sha256": "f66ea5cc18ce68bc8db6e9f20a0e824630918d0b2b11fee87ef60ed4cd39a69b"
+    },
+    "preregistration": {
+      "path": "docs/cycle-157-selection-mask-cone-preregistration-v1.md",
+      "sha256": "9b374064ac5ef96d889e8989e75c7c4d59654e394be05e6282f07991a322620b"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_157_selection_mask_negative_spectral_v1.py",
+      "sha256": "c105ac8c61698e7769a203c099ba42e60159e8ca8b4c3e7694ad76a114b2b4d0"
+    }
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "prove the actual negative spectral energy concentrates in a fixed labelled block family, or preserve a quantitative block-complexity inverse with the coefficient and anchor labels"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_157_selection_mask_negative_spectral_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_157_selection_mask_negative_spectral_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_157_selection_mask_negative_spectral_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sample": {
+    "epistemic_status": "PROVED",
+    "negative_spectral_energy": "2",
+    "positive_spectral_energy": "3/2",
+    "real_hermitian_correlation": "-1/2"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_157_selection_mask_negative_spectral_v1.py",
+    "sha256": "5098787ef4cf44508c948e4ddd031ccbd89531c41339fc4505312370085f35cb"
+  },
+  "selection_mask_negative_spectral_theorem": {
+    "boundary": "this does not establish coefficient alignment with a negative eigenspace, finite block concentration, a Gram approximation, a coefficient partition, a moment, density, or intervals",
+    "epistemic_status": "PROVED",
+    "hermitianization": "for a fixed nonzero d, K^(d)(a,a')=chi(a,d,ell)1_(a'=a+d) and H^(d)=(K^(d)+K^(d)* )/2, c^*H^(d)c equals Re(c^*K^(d)c); there is no extra factor of two in this convention",
+    "label_retention": "every spectral row retains its anchor, tail, orientation, tensor-frequency, fixed-difference, and external-weight labels",
+    "negative_spectral_localization": "if q_(ell,d)>=0 and -sum q c_ell^*H^(d)_ell c_ell>=kappa W_h, then sum q ||H_(ell,d),-^(1/2)c_ell||_2^2>=kappa W_h",
+    "zero_diagonal_obstruction": "for fixed nonzero difference, a nonzero Hermitian raw selection mask has zero diagonal and is not PSD; if H_ab is nonzero then the two-by-two principal compression and interlacing give lambda_min(H)<=-|H_ab|"
+  },
+  "status": "SEALED_RAW_ZERO_DIAGONAL_GRAM_OBSTRUCTION_COEFFICIENT_NEGATIVE_SPECTRAL_ALIGNMENT_OPEN"
+}
