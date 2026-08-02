@@ -1,0 +1,99 @@
+{
+  "analytic_gate": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Bound the vector sum of |K(t)K(mt)|^2 at X^(91/25+o(1)) or X^(76/25+o(1)) under the corresponding actual harmonic-energy branch without using ambient X^(m+1)."
+  },
+  "artifact_id": "cycle-38-vector-harmonic-two-scale-v1",
+  "claim_boundary": "This artifact proves exact collision, injectivity, norm, and conditional vector-energy ledgers. It does not prove the required vector mean value, transfer all entropy excess to actual harmonic energy, close the kernel count, improve density, or improve intervals.",
+  "collision_boundary": {
+    "epistemic_status": "PROVED",
+    "statement": "A Delta-separated rescaling fan has A pairs (t_m,m) with one common mt; at A=X^(3/10) flattening loses more than 4/25."
+  },
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "prime_monomial": {
+      "ambient_support": "[X^(m+1),2^(m+1)X^(m+1)]",
+      "cardinality": "M^2",
+      "coefficient_square_norm": "M^2",
+      "injectivity": "prime valuations distinguish exponent 1 from exponent m; p=q has the unique exponent m+1",
+      "map": "(p,q)->p*q^m",
+      "range": "prime p,q and integer m>=2"
+    },
+    "registered_scales": {
+      "geometry": {
+        "collision_multiplicity": "3/10",
+        "expanded_height": "27/10",
+        "fan_height": "9/10",
+        "harmonic_range": "3/10",
+        "height": "12/5",
+        "spacing": "3/5"
+      },
+      "r2_energy": {
+        "coefficient_square_norm": "2",
+        "harmonic_energy_decay": "3/5",
+        "per_row_two_scale_energy": "14/5",
+        "prime_monomial_cardinality": "2",
+        "target_vector_bound": "91/25"
+      },
+      "r4_energy": {
+        "coefficient_square_norm": "2",
+        "harmonic_energy_decay": "6/5",
+        "per_row_two_scale_energy": "11/5",
+        "prime_monomial_cardinality": "2",
+        "target_vector_bound": "76/25"
+      }
+    }
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/vector_harmonic_two_scale_v1.py",
+      "sha256": "f064e52a7dd405c182692834f500a820bbc36f4ad222c11bef5a8fe38021809b"
+    },
+    "cycle37": {
+      "path": "artifacts/cycle-37-excess-harmonic-routing-v1.json",
+      "sha256": "4877fa4480dd6834253be58be82f981f2600002f9c385079acbccd288fc7dd43"
+    },
+    "document": {
+      "path": "docs/cycle-38-vector-harmonic-two-scale-v1.md",
+      "sha256": "5ad47bd90c2cc67f275818362f3ee1c2b8ee4245d83530b143cae3cc9a782a59"
+    },
+    "preregistration": {
+      "path": "docs/cycle-38-vector-harmonic-two-scale-preregistration-v1.md",
+      "sha256": "17b17e2abbbe06658fe5f7bb1919d74762753f680577e6942926c5aaa54cde52"
+    },
+    "tests": {
+      "path": "tests/test_cycle_38_vector_harmonic_two_scale_v1.py",
+      "sha256": "d3167e64d25a56b5564a72382a2175f427d907e0a46c7a3e01110d9b32f30b49"
+    }
+  },
+  "prior_context": {
+    "epistemic_status": "PROVED",
+    "prior_role": "retain the Cycle 37 full harmonic vector without scalar colour selection"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_38_vector_harmonic_two_scale_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_38_vector_harmonic_two_scale_v1.py",
+    "write_command": "python3 proof/build_cycle_38_vector_harmonic_two_scale_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_38_vector_harmonic_two_scale_v1.py",
+    "sha256": "dac3acd65210c79dbbb0648e12a94d4b1d026bba390e32adf0903fdcf5caec1c"
+  },
+  "status": "SEALED_VECTOR_RESCALING_COLLISION_TWO_SCALE_PRIME_MONOMIAL_OPEN",
+  "two_scale_lift": {
+    "epistemic_status": "PROVED",
+    "statement": "For m>=2, K(t)K(mt) has M^2 injectively labelled coefficients p*q^m and exact coefficient-square norm M^2."
+  }
+}

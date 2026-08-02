@@ -1,0 +1,157 @@
+{
+  "adaptive_reconstruction": {
+    "epistemic_status": "PROVED",
+    "statement": "Avoiding shift -K/2 reconstructs a top-leverage direction in the detector subspace with error at most sqrt(2)exp(-K/(4J))."
+  },
+  "artifact_id": "cycle-28-rank-j-spectral-shift-v1",
+  "claim_boundary": "This artifact extends residual shift and reconstruction to an orthonormal detector subspace and verifies the Hadamard exponent ledger. It does not bound multiblock synchronization or exact row dependence, prove the skeleton target, improve zero density, or improve intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "critical_ledger": {
+      "K_lower": "k rho/(16J^2)",
+      "base_rho": "-3/5",
+      "frame_rho": "rho/(16J^2)",
+      "frame_rho_constant": "1/16",
+      "k_rho": "6/25",
+      "negative_shift_constant": "1/32",
+      "negative_shift_lower": "k rho/(32J^2)",
+      "reconstruction_constant": "1/64",
+      "reconstruction_error_upper": "sqrt(2) exp(-k rho/(64J^3))",
+      "retained_exponential_scale": "X^(6/25-o(1))",
+      "rows": "21/25",
+      "subpower_dimension": "J=X^o(1)"
+    },
+    "determinant_example": {
+      "B_det": "1",
+      "D_product": "1/10",
+      "D_squared": [
+        "1/2",
+        "1/5"
+      ],
+      "H_det": "1",
+      "H_diagonal": [
+        "1",
+        "1"
+      ],
+      "L_diagonal": [
+        "1",
+        "4"
+      ],
+      "det_I_plus_L": "10"
+    },
+    "determinant_identity": "det(XX*)/det(B)=product(1-rho_t) det(I_J+S*B^(-1)S)",
+    "reconstruction_example": {
+      "c": [
+        "0",
+        "2"
+      ],
+      "c_star_S": [
+        "0",
+        "4"
+      ],
+      "error_squared": "1/4",
+      "residual_norm_squared": "4",
+      "top_eigenvalue": "4",
+      "y": [
+        "0",
+        "1"
+      ]
+    },
+    "singular_examples": {
+      "B_diagonal": [
+        "1",
+        "0"
+      ],
+      "annihilating_c_star_S": [
+        "0",
+        "0"
+      ],
+      "null_vector": [
+        "0",
+        "1"
+      ],
+      "reconstructing_c_star_S": [
+        "0",
+        "2"
+      ]
+    },
+    "singular_identity": "c in ker(B) implies c*D^(-1)X=(c*S)E*"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/rank_j_spectral_shift_v1.py",
+      "sha256": "effe89932b669122a4014c363f09f2665bc02b865cef1bb5f1808d1a5ea2552a"
+    },
+    "cycle23": {
+      "path": "artifacts/cycle-23-residual-spectral-shift-v1.json",
+      "sha256": "605e7a3eb5ac5b4e342b512e4465762d43b1b919051e4dafd01058e7ae14121b"
+    },
+    "cycle26": {
+      "path": "artifacts/cycle-26-detector-reconstruction-v1.json",
+      "sha256": "6082d255ea07383913f30ceb5d9835e5f902245972d208af66b95acd27dcc64e"
+    },
+    "cycle27_v1": {
+      "path": "artifacts/cycle-27-hadamard-detector-surgery-v1.json",
+      "sha256": "4a62765a22c0a2ca7a70d5917925859029faad155827a031efee90918c703c53"
+    },
+    "cycle27_v2": {
+      "path": "artifacts/cycle-27-hadamard-detector-surgery-correction-v2.json",
+      "sha256": "3010bb6b8f32fad2d10630c8ce9fc15682393ecc54d0567bfa82597582d7c4e5"
+    },
+    "document": {
+      "path": "docs/cycle-28-rank-j-spectral-shift-v1.md",
+      "sha256": "95ffeb060bbbf4aeb4df35913ef3c8a66cc8e888c7dcc9832fdca53e464ffbe9"
+    },
+    "preregistration": {
+      "path": "docs/cycle-28-rank-j-spectral-shift-preregistration-v1.md",
+      "sha256": "c145e8bf7a727b8de721cb8d7d0547893a71859fb5a4957cd0e1c7f482550851"
+    },
+    "tests": {
+      "path": "tests/test_cycle_28_rank_j_spectral_shift_v1.py",
+      "sha256": "6acaac4faa73911f75f1ee84111f4f12a9f58248cbd24be6d875e719010c5907"
+    }
+  },
+  "hadamard_ledger": {
+    "epistemic_status": "PROVED",
+    "scale_for_subpower_J": "X^(6/25-o(1))",
+    "statement": "With surgery threshold V/(4J), either shift magnitude is at least k rho/(32J^2) or reconstruction error is at most sqrt(2)exp(-k rho/(64J^3))."
+  },
+  "prior_context": {
+    "epistemic_status": "PROVED",
+    "prior_role": "rank-one shift/reconstruction upgraded to the corrected Hadamard detector subspace"
+  },
+  "rank_j_identity": {
+    "epistemic_status": "PROVED",
+    "statement": "det(XX*)/det(B)=product_t(1-rho_t) det(I_J+S*B^(-1)S)."
+  },
+  "remaining_gate": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Iterate adaptive detector-subspace reconstruction or prove prime arithmetic for multiblock synchronization and exact row dependence."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_28_rank_j_spectral_shift_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_28_rank_j_spectral_shift_v1.py",
+    "write_command": "python3 proof/build_cycle_28_rank_j_spectral_shift_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_28_rank_j_spectral_shift_v1.py",
+    "sha256": "69402e5a6875737d99d1758aabf93780f3262e32c13162407b35a3d141b4d06f"
+  },
+  "singular_split": {
+    "epistemic_status": "PROVED",
+    "statement": "Residual singularity gives exact detector-subspace reconstruction or exact scaled-row dependence."
+  },
+  "status": "SEALED_RANK_J_SHIFT_OR_ADAPTIVE_DETECTOR_RECONSTRUCTION"
+}

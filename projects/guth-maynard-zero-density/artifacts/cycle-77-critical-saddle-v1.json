@@ -1,0 +1,92 @@
+{
+  "analytic_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Prove ACSI uniformly with exponent below 2/15, or turn every failure into a phase-bearing web for E16."
+  },
+  "anchored_reduction": {
+    "epistemic_status": "PROVED",
+    "statement": "Relative to one packet, the critical family is equivalent up to absolute tube constants to integer points within X^(-83/75) of n=c0*q*exp(2*pi*d/Delta), with target count X^(2/15)."
+  },
+  "artifact_id": "cycle-77-critical-saddle-v1",
+  "claim_boundary": "This artifact proves the anchored-saddle equivalence and exponent contracts at the unique worst cell. It proves no ACSI bound, full packet closure, seed extraction, powered saving, density gain, or interval gain.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "discovery_quarantine": {
+    "epistemic_status": "OBSERVED",
+    "statement": "The exploratory candidate selected the anchored observable; all promoted identities and exponents were independently derived exactly."
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "anchored_incidence": "|n-c0*q*exp(2*pi*d/Delta)|<<X^(-83/75)",
+    "anchored_target": "uniform count <X^(2/15+o(1))",
+    "common_denominator_boundary": "even granting integer Delta, height 14/15 leaves best exponent 14/15, gap 4/5",
+    "gate": "prove an anisotropic anchored-saddle incidence theorem or a seed-aware shifted-strip operator bound",
+    "normalized_hessian": "det=-(2*pi*c0*exp(2*pi*x))^2",
+    "normalized_surface": "z=c0*y*exp(2*pi*x) on mesh (Delta^-1,Q^-1,Q^-1)",
+    "ratio_census": "|U-exp(2*pi*d/Delta)*V|<<X^(-58/75), U,V product-supported at X^(2/3)",
+    "ratio_loss": "formal volume 37/75 versus pair target 4/15; anchor loss 17/75"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/critical_saddle_v1.py",
+      "sha256": "59cbc753765509eedef3d338b117f69dc5a26d3d92c3f164a24dccb3fb8fc776"
+    },
+    "cycle71_source_boundary": {
+      "path": "artifacts/cycle-71-fraction-budget-wedge-v1.json",
+      "sha256": "f6711801f4f6b521a801933d6cfe596f2953821a56daa6baab206cb27557ef35"
+    },
+    "cycle76": {
+      "path": "artifacts/cycle-76-hs-denominator-wedge-v1.json",
+      "sha256": "4f4c2c3a1829dd829f991147a41c22d8a75dc499c8c43e2d7ae0bed45b1a4219"
+    },
+    "discovery_candidate": {
+      "path": "discovery/cycle-77-critical-saddle-candidate-v1.md",
+      "sha256": "bc1933db171327605021f943cb46e80300e6aede04131e37f3edf792e8a2f3d5"
+    },
+    "document": {
+      "path": "docs/cycle-77-critical-saddle-v1.md",
+      "sha256": "5e5d9d4f439dfa7e1fe197ce451089e6c97677bc9fcf255be736a52d74751f05"
+    },
+    "preregistration": {
+      "path": "docs/cycle-77-critical-saddle-preregistration-v1.md",
+      "sha256": "41e620dfbcedca71b02549c4358ea1b99be35583691f79781ce6011f2959e496"
+    },
+    "tests": {
+      "path": "tests/test_cycle_77_critical_saddle_v1.py",
+      "sha256": "ee4d88231a4d521057dd575a0c41706144f58379d328cf4cd177914ff4830fdf"
+    }
+  },
+  "prior_context": {
+    "cycle71_role": "supply the checked common-denominator source boundary",
+    "cycle76_role": "supply the twice-compressed residual and unique surviving worst point",
+    "epistemic_status": "PROVED"
+  },
+  "ratio_boundary": {
+    "epistemic_status": "PROVED",
+    "statement": "The anchor-free ratio census has formal volume 37/75 against pair target 4/15, quantifying a 17/75 anchor loss."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_77_critical_saddle_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_77_critical_saddle_v1.py",
+    "write_command": "python3 proof/build_cycle_77_critical_saddle_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_77_critical_saddle_v1.py",
+    "sha256": "b87d8dec0483e306c608181e0b25bef1a5b1a372f63ae9c8ad251eca5a2842b0"
+  },
+  "source_boundary": {
+    "epistemic_status": "OBSERVED",
+    "statement": "Checked rational-point theorems use a common denominator; the direct embedding erases the anisotropic mesh and leaves a 4/5 exponent gap."
+  },
+  "status": "SEALED_CRITICAL_ANCHORED_SADDLE_ACSI_OR_PHASE_WEB_OPEN"
+}

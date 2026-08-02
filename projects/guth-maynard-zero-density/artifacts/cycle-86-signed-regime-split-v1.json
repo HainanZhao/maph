@@ -1,0 +1,94 @@
+{
+  "analytic_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Prove the diagonal-strength signed moment below 58/75 and a sparse-large-value/inverse theorem above it."
+  },
+  "artifact_id": "cycle-86-signed-regime-split-v1",
+  "claim_boundary": "This artifact proves the signed projector zero mode and exact moment/large-value target split. It proves no second moment, large-value estimate, new Fourier-band closure, packet closure, density gain, or interval gain.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "atom_exponent": "14/15",
+    "cauchy_block_exponent": "xi+7/15",
+    "ceiling_average_allowance": "2/15",
+    "diagonal_second_moment": "sum_(k~K)|S_k|^2<=X^(xi+14/15+o(1))",
+    "gate": "prove diagonal-strength moment below 58/75 and sparse large values above",
+    "large_value_regime": "58/75<=xi<=83/75",
+    "moment_boundary": "58/75",
+    "moment_endpoint": "xi=58/75 ties 31/25 and is not promoted",
+    "moment_regime": "16/25<=xi<58/75",
+    "projector_zero_mode": "int_(R/Z)Theta_Q(x)dx=V(0)=0",
+    "required_saving_formula": "xi-16/25 over unsigned volume",
+    "signed_saving_over_unsigned": "2/15",
+    "square_root_exponent": "7/15",
+    "unsigned_boundary": "16/25"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/signed_regime_split_v1.py",
+      "sha256": "2c16c4a9618a8a947243ad40501ae39ea9fdc6f78edf5d1f64792c9e5d7f522f"
+    },
+    "cycle81": {
+      "path": "artifacts/cycle-81-exact-q-transform-v1.json",
+      "sha256": "0753d455a2e9428b28f1b9dac59b04fd57008db562370202a300a38a818631a4"
+    },
+    "cycle85": {
+      "path": "artifacts/cycle-85-log-crossing-occupancy-v1.json",
+      "sha256": "c35f1fb2425f9e54497225907e66b69d0176fdc4f4030c8c721bf82d66d3c2e9"
+    },
+    "discovery_candidate": {
+      "path": "discovery/cycle-86-signed-regime-candidate-v1.md",
+      "sha256": "8df135dbd2a4b07260c81fbedf5f5ea4327d4b2303225a21fe25692455a106ef"
+    },
+    "document": {
+      "path": "docs/cycle-86-signed-regime-split-v1.md",
+      "sha256": "bfa77256c12c10ebd226b085b851cb8fa27de4bd357974716d6efff8cf611fab"
+    },
+    "preregistration": {
+      "path": "docs/cycle-86-signed-regime-preregistration-v1.md",
+      "sha256": "7eb35b66522850c4e7aa285fcf95772dd91b206ad60a4035300de00669698c05"
+    },
+    "tests": {
+      "path": "tests/test_cycle_86_signed_regime_split_v1.py",
+      "sha256": "d904d66cdcf5f4f271eac28de73dc40a8daf9e0c58817069d7eec513a2ca76a9"
+    }
+  },
+  "large_value_contract": {
+    "epistemic_status": "PROVED",
+    "statement": "For 58/75<=xi<=83/75 pointwise square-root size is insufficient; dyadic large values must satisfy s+log_X M_xi(s)<31/25. The ceiling average allowance is 2/15."
+  },
+  "moment_contract": {
+    "epistemic_status": "PROVED",
+    "statement": "A diagonal-strength second moment gives block exponent xi+7/15 and would close 16/25<=xi<58/75; the endpoint ties."
+  },
+  "prior_context": {
+    "cycle81_role": "supply exact projector convention and dual transform",
+    "cycle85_role": "supply the unsigned volume boundary 16/25",
+    "epistemic_status": "PROVED"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_86_signed_regime_split_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_86_signed_regime_split_v1.py",
+    "write_command": "python3 proof/build_cycle_86_signed_regime_split_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_86_signed_regime_split_v1.py",
+    "sha256": "107d211fb850efcbf23ff79bdafe993ca2818df5694dbb15e963dcaca8687597"
+  },
+  "status": "SEALED_SIGNED_REGIME_SPLIT_MOMENT_AND_LARGE_VALUES_OPEN",
+  "zero_mode": {
+    "epistemic_status": "PROVED",
+    "statement": "The smooth q-projector has circle mean V(0)=0 because its dyadic weight is supported in (0,infinity)."
+  }
+}

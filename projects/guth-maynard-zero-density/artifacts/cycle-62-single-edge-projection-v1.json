@@ -1,0 +1,105 @@
+{
+  "analytic_gate": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Use nonnegative rank-one autocorrelation and a target-violating separated row set to prove ANOVA restriction or extract recurrence."
+  },
+  "artifact_id": "cycle-62-single-edge-projection-v1",
+  "claim_boundary": "This artifact proves a pointwise projection boundary only. It does not obstruct estimates using nonnegative multi-edge autocorrelation vectors and proves no AMPR, density, or interval gain.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "analytic_gate": "use_nonnegative_multi_edge_convolution_and_row_set_structure_not_pointwise_projection",
+    "asymptotic_statement": "if |k(h)|<=X^-alpha and |k(mh)|<=X^-beta then loss<=sX^-2alpha+X^-2beta=o(1)",
+    "s3": {
+      "genuine_edge_nonnegative": true,
+      "genuine_edge_vector": "beta_n=sum_(t,u)z_t conj(z_u)n^(-i(t-u))=|sum_t z_t n^(-it)|^2",
+      "lost_fraction": "102073/765625",
+      "lost_fraction_union_upper": "172/1225",
+      "ordinary_kernel_square": "1/25",
+      "pointwise_status": "SINGLE_EDGE_SATURATES_AS_KERNELS_VANISH",
+      "powered_kernel_square": "1/49",
+      "retained_fraction": "663552/765625",
+      "s": 3,
+      "union_bound_verified": true
+    },
+    "s4": {
+      "genuine_edge_nonnegative": true,
+      "genuine_edge_vector": "beta_n=sum_(t,u)z_t conj(z_u)n^(-i(t-u))=|sum_t z_t n^(-it)|^2",
+      "lost_fraction": "3215377/19140625",
+      "lost_fraction_union_upper": "221/1225",
+      "ordinary_kernel_square": "1/25",
+      "pointwise_status": "SINGLE_EDGE_SATURATES_AS_KERNELS_VANISH",
+      "powered_kernel_square": "1/49",
+      "retained_fraction": "15925248/19140625",
+      "s": 4,
+      "union_bound_verified": true
+    },
+    "zero_kernel_endpoint": {
+      "genuine_edge_nonnegative": true,
+      "genuine_edge_vector": "beta_n=sum_(t,u)z_t conj(z_u)n^(-i(t-u))=|sum_t z_t n^(-it)|^2",
+      "lost_fraction": "0",
+      "lost_fraction_union_upper": "0",
+      "ordinary_kernel_square": "0",
+      "pointwise_status": "SINGLE_EDGE_SATURATES_AS_KERNELS_VANISH",
+      "powered_kernel_square": "0",
+      "retained_fraction": "1",
+      "s": 4,
+      "union_bound_verified": true
+    }
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/single_edge_projection_v1.py",
+      "sha256": "0e2b384f69b61991e6f37ee7a8643f127153cfd939fa55ef422fab9317fd27d1"
+    },
+    "cycle61": {
+      "path": "artifacts/cycle-61-coefficient-projection-inverse-v1.json",
+      "sha256": "d44a5144f06d51336c0be81e89bf24d4007939d1cacdaab498251adc708164ff"
+    },
+    "document": {
+      "path": "docs/cycle-62-single-edge-projection-v1.md",
+      "sha256": "845435ce3813b86758b03810b2d332f69c48be2c2a682c393dd19093f76e9fb8"
+    },
+    "preregistration": {
+      "path": "docs/cycle-62-single-edge-projection-preregistration-v1.md",
+      "sha256": "2ba2f881cdce721eea9641749b488e0c068655258eb29972ca5ce4403ccaed19"
+    },
+    "tests": {
+      "path": "tests/test_cycle_62_single_edge_projection_v1.py",
+      "sha256": "aab377017b2439d5e1800fb535b30561267861fe7502db2a458c41dcd1749567"
+    }
+  },
+  "prior_context": {
+    "epistemic_status": "PROVED",
+    "prior_role": "stress-test universal marginal capture on one Fourier edge"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_62_single_edge_projection_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_62_single_edge_projection_v1.py",
+    "write_command": "python3 proof/build_cycle_62_single_edge_projection_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_62_single_edge_projection_v1.py",
+    "sha256": "8ea4c97b26ccd04155fe92806c9696478dc527eb0fd1e851522642f14540fd3d"
+  },
+  "single_edge_boundary": {
+    "epistemic_status": "PROVED",
+    "statement": "Full coordinate centering retains fraction (1-|k(mh)|^2)(1-|k(h)|^2)^s of one Fourier edge, hence 1-o(1) when normalized kernels are polynomially small."
+  },
+  "status": "SEALED_NONNEGATIVE_AUTOCORRELATION_ANOVA_OR_RECURRENCE_OPEN",
+  "valid_vector_structure": {
+    "epistemic_status": "PROVED",
+    "statement": "Phase-aligned edge vectors satisfy beta_n=|sum_t z_t n^(-it)|^2>=0 and couple all row differences; this structure is absent from the single-edge stress model."
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "analytic_gate": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Prove fixed-power marginal capture for actual edge Fourier vectors or turn simultaneous small marginals into a prime-log annihilator/recurrence/detector-surgery theorem."
+  },
+  "artifact_id": "cycle-61-coefficient-projection-inverse-v1",
+  "claim_boundary": "This artifact proves operator factorization, Bessel bounds, and a scoped inverse condition. It does not exclude annihilators or prove a power saving, AMPR, density, or interval gains.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "inverse_gate": "exclude_simultaneously_small_prime_coordinate_marginals_for_actual_edge_Fourier_vectors_or_exploit_them_as_annihilators",
+    "s3": {
+      "bessel_operator_bound": 12,
+      "bessel_statement": "||A beta||^2<=D_s sum_n|beta_n|^2",
+      "coordinate_count": 4,
+      "exact_defect": "||B beta||^2-||A beta||^2=sum_(J proper)||C_J B beta||^2",
+      "fiber_bound": 12,
+      "full_projection": "C=P_q tensor P_p1 tensor ... tensor P_ps",
+      "hilbert_synthesis": "A=C B",
+      "label_coefficient": "a_n=C 1_(L^(-1)(n))",
+      "near_saturation_implication": "if ||A beta||^2>=(1-delta)||B beta||^2 then every raw coordinate marginal has energy<=delta||B beta||^2",
+      "ordered_lift": "(B beta)_(q,p_1,...,p_s)=beta_(q^m p_1...p_s)",
+      "ordinary_coordinate_marginal": "sum_e omega_e k(h_e) q^(-imh_e) product_(l!=j)p_l^(-ih_e)",
+      "powered_coordinate_marginal": "sum_e omega_e k(mh_e) product_j p_j^(-ih_e)",
+      "proper_anova_component_count": 15,
+      "s": 3
+    },
+    "s4": {
+      "bessel_operator_bound": 72,
+      "bessel_statement": "||A beta||^2<=D_s sum_n|beta_n|^2",
+      "coordinate_count": 5,
+      "exact_defect": "||B beta||^2-||A beta||^2=sum_(J proper)||C_J B beta||^2",
+      "fiber_bound": 72,
+      "full_projection": "C=P_q tensor P_p1 tensor ... tensor P_ps",
+      "hilbert_synthesis": "A=C B",
+      "label_coefficient": "a_n=C 1_(L^(-1)(n))",
+      "near_saturation_implication": "if ||A beta||^2>=(1-delta)||B beta||^2 then every raw coordinate marginal has energy<=delta||B beta||^2",
+      "ordered_lift": "(B beta)_(q,p_1,...,p_s)=beta_(q^m p_1...p_s)",
+      "ordinary_coordinate_marginal": "sum_e omega_e k(h_e) q^(-imh_e) product_(l!=j)p_l^(-ih_e)",
+      "powered_coordinate_marginal": "sum_e omega_e k(mh_e) product_j p_j^(-ih_e)",
+      "proper_anova_component_count": 31,
+      "s": 4
+    }
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/coefficient_projection_inverse_v1.py",
+      "sha256": "8dbe534c6c35fd4226fb9934db08019f284cd40fe643e7689ad17eff32c174e5"
+    },
+    "cycle39": {
+      "path": "artifacts/cycle-39-moment-amplified-prime-monomial-v1.json",
+      "sha256": "3b83385d1d7e7ed447cafe0f7e42be1badb1bb26ba42cc458cf3fa3b8f204826"
+    },
+    "cycle60": {
+      "path": "artifacts/cycle-60-coordinate-anova-v1.json",
+      "sha256": "69f032ddd9d6d22fdca9c55a2078f274baca900a98b281046d694ba77c1c2d8a"
+    },
+    "document": {
+      "path": "docs/cycle-61-coefficient-projection-v1.md",
+      "sha256": "9b4fe5cd439c6816d1ec4e3e27fd8a38ccad631390880c00b361839fc4f022c4"
+    },
+    "preregistration": {
+      "path": "docs/cycle-61-coefficient-projection-preregistration-v1.md",
+      "sha256": "ee4fe79d438bf161ca256aa66a88c17e09c7ba9b44e5d548c50a91824c3b6c99"
+    },
+    "tests": {
+      "path": "tests/test_cycle_61_coefficient_projection_inverse_v1.py",
+      "sha256": "8c66bd6941bf3ca979c1f8f6b21f16fb5eddcc9f3930325ab16e65f3eedcdc61"
+    }
+  },
+  "prior_context": {
+    "cycle39_role": "fiber multiplicity",
+    "cycle60_role": "coordinate ANOVA routing",
+    "epistemic_status": "PROVED"
+  },
+  "projection_theorem": {
+    "epistemic_status": "PROVED",
+    "statement": "Hilbert synthesis factors as A=C B with C the full coordinate-centering projection; A*A<=D_s I, and near-saturation forces every prime-coordinate marginal of the lifted Fourier vector small."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_61_coefficient_projection_inverse_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_61_coefficient_projection_inverse_v1.py",
+    "write_command": "python3 proof/build_cycle_61_coefficient_projection_inverse_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_61_coefficient_projection_inverse_v1.py",
+    "sha256": "1552c582a20917da61881e13893bd54e262a054474ad124c2300cfa80bcba88d"
+  },
+  "status": "SEALED_PRIME_COORDINATE_MARGINAL_CAPTURE_OR_ANNIHILATOR_INVERSE_OPEN"
+}

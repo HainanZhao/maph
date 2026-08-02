@@ -1,0 +1,89 @@
+{
+  "analytic_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Control stationary remainders and prove cancellation in the high-frequency signed (k,h,r) logarithmic saddle, separating Cycle-78 valuation webs."
+  },
+  "artifact_id": "cycle-79-double-b-process-v1",
+  "claim_boundary": "This artifact proves the exact Fourier target, stationary maps, Hessians, support ledger, and trivial low-frequency closure. It proves no uniform stationary remainder, high-frequency dual bound, ACSI, packet closure, powered saving, density gain, or interval gain.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "discovery_quarantine": {
+    "epistemic_status": "OBSERVED",
+    "statement": "The exploratory note proposed the dual map; all promoted signs, determinants, and exponents were independently derived exactly."
+  },
+  "double_b_geometry": {
+    "epistemic_status": "PROVED",
+    "statement": "The dual phase is (hDelta/(2pi))log(kc0/r), with r~k, h~kQ/Delta, amplitude Delta/(2pi r), and nonzero logarithmic-saddle determinant."
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "dual_determinant": "-(hD/beta)^2/(k^2*r^2)",
+    "dual_phase": "Psi=(hD/beta)log(k*c0/r)",
+    "dual_support": "r~k, h~kQ/D; h_max=X^(21/25+o(1))",
+    "fourier_contract": "N<<eta*(D*Q+sum_(1<=k<=eta^-1)|S_k|); require L1 exponent <31/25",
+    "gate": "control stationary remainders and prove cancellation in the high-frequency dual logarithmic saddle",
+    "inverse_map": "d=(D/beta)log(r/(k*c0)), q=hD/(beta*r)",
+    "low_frequency": "k<D/Q=X^(4/15) is trivially <=X^(6/5), margin 1/25 to raw target",
+    "primal_determinant": "-(beta*r/D)^2",
+    "stationary_amplitude": "D/(beta*r)",
+    "stationary_map": "r=k*c0*exp(beta*d/D), h=beta*q*r/D"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/double_b_process_v1.py",
+      "sha256": "4c5453c6c7babb19f1fa483a254ab20b1f160b4c68dd091127b94bc0c7cc0fec"
+    },
+    "cycle78": {
+      "path": "artifacts/cycle-78-freiman-phase-web-v1.json",
+      "sha256": "bbff3b63005b7ef468ee23289e9e3f4b7d0f30cfe79374dcb3df0622aec23d5a"
+    },
+    "discovery_candidate": {
+      "path": "discovery/cycle-79-double-b-process-candidate-v1.md",
+      "sha256": "aac672fb863a94482c94197f4bd55556c4587e45bd0d82039a4445b2fd0e5bbf"
+    },
+    "document": {
+      "path": "docs/cycle-79-double-b-process-v1.md",
+      "sha256": "626ca3ccb0c5606d291a6ea5a4f1e3f8160ac9242792ae8cae8f0e7904a6fa04"
+    },
+    "preregistration": {
+      "path": "docs/cycle-79-double-b-process-preregistration-v1.md",
+      "sha256": "77919a944fb8082dbec44a6171a591496b46161ebe54b6602e1ba8f9785b4cac"
+    },
+    "tests": {
+      "path": "tests/test_cycle_79_double_b_process_v1.py",
+      "sha256": "369b310e1a89a33f1aa41c6f50664f39263642c623a077ac906db217e9df2a81"
+    }
+  },
+  "low_frequency_closure": {
+    "epistemic_status": "PROVED",
+    "statement": "All k<Delta/Q contribute at most X^(6/5+o(1)), margin 1/25 to the X^(31/25) raw target."
+  },
+  "prior_context": {
+    "cycle78_role": "supply the relation-rich web branch and isolate sparse ACSI",
+    "epistemic_status": "PROVED"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_79_double_b_process_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_79_double_b_process_v1.py",
+    "write_command": "python3 proof/build_cycle_79_double_b_process_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "scale_match": {
+    "epistemic_status": "PROVED",
+    "statement": "The maximum dual h exponent is 21/25, matching the frozen prime-row skeleton scale."
+  },
+  "sealer": {
+    "path": "proof/build_cycle_79_double_b_process_v1.py",
+    "sha256": "f3c22361f874410665c51f301a6fa0d7b8c6676f698cbeacf181b888261dedfa"
+  },
+  "status": "SEALED_DOUBLE_B_HIGH_FREQUENCY_LOG_SADDLE_OPEN"
+}

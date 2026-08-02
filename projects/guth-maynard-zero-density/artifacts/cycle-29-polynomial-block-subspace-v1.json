@@ -1,0 +1,125 @@
+{
+  "artifact_id": "cycle-29-polynomial-block-subspace-v1",
+  "claim_boundary": "This artifact amplifies the detector to J=X^(1/25+o(1)) block directions, excludes a half-sized near-subspace packet, and retains shift/reconstruction/dependence alternatives. It does not exploit block modulation, exclude exact row dependence, prove the skeleton target, improve zero density, or improve intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "asymptotic_alternatives": {
+      "matveev_lower_form": "exp(-O((log X)^3))",
+      "near_subspace_status": "EXCLUDED_FOR_SUFFICIENTLY_LARGE_X",
+      "near_subspace_upper_form": "exp(-k rho/32+O(log X))",
+      "regular_alternatives": "shift<=-k rho/4, approximate/exact block-modulated detector reconstruction, or exact scaled-row dependence"
+    },
+    "exponents": {
+      "block_count": "J=X^(1/25+o(1))",
+      "block_length": "24/25",
+      "checked_pnt_endpoint": "17/30",
+      "delta_exponent_fraction": "1/8",
+      "k_rho": "6/25",
+      "kappa": "1/25",
+      "negative_shift": "-k rho/4",
+      "point_error_exponent_fraction": "1/32",
+      "reconstruction_error": "sqrt(2) exp(-k rho/(8J))",
+      "reconstruction_exponent": "1/5",
+      "rho": "-3/5",
+      "rows": "21/25"
+    },
+    "markov": {
+      "bad_count_upper": "10",
+      "bad_fraction_upper": "1/12",
+      "block_size": 120,
+      "good_per_subinterval_lower": "30",
+      "mean_squared_error": "1/144",
+      "point_error_threshold": "mean_squared_error^(1/4)",
+      "squared_bad_threshold": "1/12",
+      "subinterval_size": 40
+    },
+    "no_loss_projection": {
+      "block_mass_fractions": [
+        "1/4",
+        "1/4",
+        "1/4",
+        "1/4"
+      ],
+      "generic_projection_monotonicity": "||E*x||^2>=|<x,b>|^2 because b is in range(E)",
+      "original_detector_energy_in_subspace": "1"
+    }
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/polynomial_block_subspace_v1.py",
+      "sha256": "89704fc302e474f01a8dfcadc26c45b98655beee59150e4095b0c07951ca02e9"
+    },
+    "cycle25": {
+      "path": "artifacts/cycle-25-near-cauchy-exclusion-v1.json",
+      "sha256": "a550a56484243f2e3b3cc4b237d41f91e794618a79630afdaac21c6426fa4392"
+    },
+    "cycle28": {
+      "path": "artifacts/cycle-28-rank-j-spectral-shift-v1.json",
+      "sha256": "53d2c7eca302b3fd02ff499578657c533a1747077f4e21439587ecc56614a576"
+    },
+    "document": {
+      "path": "docs/cycle-29-polynomial-block-subspace-v1.md",
+      "sha256": "1538702c4d113e862c6d42523af66e8781e2c5f3e6f7cc2f246f310aca079dc3"
+    },
+    "evertse_source": {
+      "path": "artifacts/sources/evertse-linear-forms-logarithms-ch5.pdf",
+      "sha256": "1f7f41e3b3292e380651baf4b30ed8717c3411909202dc0409a0d41ed4f149f0"
+    },
+    "g0": {
+      "path": "artifacts/g0-theorem-dependency-graph-v1.json",
+      "sha256": "14f80b35774a3994c93e1a08de34afb2aefff7023e1797932e6fb4d78af1281b"
+    },
+    "preregistration": {
+      "path": "docs/cycle-29-polynomial-block-subspace-preregistration-v1.md",
+      "sha256": "a37cf036e876368111515c526e178b62b336ab88ee13c70776b03e7b2b079614"
+    },
+    "tests": {
+      "path": "tests/test_cycle_29_polynomial_block_subspace_v1.py",
+      "sha256": "b94aca4c0459ed883dd8a7e34f10d16d73e4b098d878a66d1d247e152a8b76d9"
+    }
+  },
+  "near_subspace_exclusion": {
+    "epistemic_status": "PROVED",
+    "statement": "A half-sized near-block-constant packet yields a nonzero two-logarithm form with upper exp(-k rho/32+O(log X)), contradicting Matveev's exp(-O((log X)^3)) lower bound."
+  },
+  "no_loss_amplification": {
+    "dimension": "J=X^(1/25+o(1))",
+    "epistemic_status": "PROVED",
+    "statement": "The original detector belongs to the block-constant subspace, so every row retains projection at least rho with no J loss."
+  },
+  "prior_context": {
+    "epistemic_status": "PROVED",
+    "prior_role": "baseline short-interval PNT supplies block primes; Matveev excludes near-subspace recurrence; rank-J shift handles regular rows"
+  },
+  "regular_alternatives": {
+    "approximate_reconstruction_error": "exp(-X^(1/5-o(1)))",
+    "epistemic_status": "PROVED",
+    "statement": "The regular subsystem has shift<=-k rho/4, approximate or exact block-modulated detector reconstruction, or exact scaled-row dependence."
+  },
+  "remaining_gate": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Exploit the support/entropy profile of the reconstructed polynomial-dimensional block modulation; separately treat shift and exact row dependence."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_29_polynomial_block_subspace_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_29_polynomial_block_subspace_v1.py",
+    "write_command": "python3 proof/build_cycle_29_polynomial_block_subspace_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_29_polynomial_block_subspace_v1.py",
+    "sha256": "b11807521129116d5e3e233311295f80ac9b05cd4b93f78ae645bbcc236b600f"
+  },
+  "status": "SEALED_POLYNOMIAL_BLOCK_SUBSPACE_NEAR_PACKET_EXCLUDED"
+}

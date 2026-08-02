@@ -1,0 +1,86 @@
+{
+  "analytic_gate": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Prove RRD_4 at coefficient-energy scale and combine it with the Cycle 48 structured exceptional branch."
+  },
+  "artifact_id": "cycle-49-row-fourier-exceptional-v1",
+  "claim_boundary": "This artifact proves a scalar row-Fourier exceptional-set bound and an absolute-pairing obstruction. It does not prove RRD_s, LCAM_s, density, or interval gain.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "absolute_lcam_gaps": {
+      "s3_at_17_50": "27/10",
+      "s4_at_7_50": "39/10"
+    },
+    "exceptional_measure_exponents": {
+      "full_missing": "-11/50",
+      "s3_margin": "7/50",
+      "s4_margin": "-13/50"
+    },
+    "mean_square": {
+      "diagonal": "57/50",
+      "off_diagonal_absolute_bound": "6/25",
+      "off_diagonal_gap_below_diagonal": "9/10"
+    },
+    "thresholds": {
+      "full_missing": "4/25",
+      "s3_margin": "17/50",
+      "s4_margin": "7/50"
+    }
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/row_fourier_exceptional_v1.py",
+      "sha256": "083c8520ab9abe71b5099ca07bad71439029d7b01a1e8715b0102a310bc313fa"
+    },
+    "cycle48": {
+      "path": "artifacts/cycle-48-hs-joint-sieve-v1.json",
+      "sha256": "2c0522bee7f7d287dbadfc3d6268316a5f87a0c67725379ea399cfa1583d580f"
+    },
+    "document": {
+      "path": "docs/cycle-49-row-fourier-exceptional-v1.md",
+      "sha256": "3e319b269e14c7b593b1f21edc5b5638f4b623e83c420ced0c2cc446e360651a"
+    },
+    "preregistration": {
+      "path": "docs/cycle-49-row-fourier-exceptional-preregistration-v1.md",
+      "sha256": "c58609e10b2fb227f48fd5211da00ef51db413564dd4620f0ac341eff4902f82"
+    },
+    "tests": {
+      "path": "tests/test_cycle_49_row_fourier_exceptional_v1.py",
+      "sha256": "72cc0b3b9723c0f510adb4d38d628be943a4e6bd5cdff28b11b49745e6907be6"
+    }
+  },
+  "prior_context": {
+    "epistemic_status": "PROVED",
+    "prior_role": "separate the nonlattice row-Fourier budget from the structured Huxley--Sargos branch"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_49_row_fourier_exceptional_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_49_row_fourier_exceptional_v1.py",
+    "write_command": "python3 proof/build_cycle_49_row_fourier_exceptional_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "row_fourier_theorem": {
+    "epistemic_status": "PROVED",
+    "statement": "At target row size, the set where |R_C| exceeds R X^(-7/50) has measure at most X^(-13/50+o(1))."
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "scope_boundary": {
+    "epistemic_status": "PROVED",
+    "statement": "Absolute pairing with prime-monomial coefficient mass exceeds LCAM_4 by X^(39/10); a signed or L2 row--ratio discrepancy theorem is mandatory."
+  },
+  "sealer": {
+    "path": "proof/build_cycle_49_row_fourier_exceptional_v1.py",
+    "sha256": "c142a1cbdf8b9ad0a941484a0fe2895b6052ae82d4d7575fe5c89ceaadf4eb71"
+  },
+  "status": "SEALED_EXCEPTIONAL_MEASURE_SMALL_ABSOLUTE_PAIRING_FAILS_RRD_OPEN"
+}

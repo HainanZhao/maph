@@ -1,0 +1,91 @@
+{
+  "alias_atlas": {
+    "epistemic_status": "PROVED",
+    "statement": "Dual cross terms split into same h, nonstationary 0<|Delta h|<<K/D, and stationary aliases k=D Delta h/(2pi m) with 1<<|m|<<Q and amplitude sqrt(K/|m|)."
+  },
+  "analytic_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Bound the three branches jointly by X^(xi+14/15+o(1)) or export explicit alias data as a valuation/anchor web."
+  },
+  "artifact_id": "cycle-87-mellin-alias-atlas-v1",
+  "claim_boundary": "This artifact proves the exact primal pair kernel, atom diagonal, and dual same-h/nonstationary/stationary-alias trichotomy. It proves no diagonal-strength second moment, new band, large-value theorem, packet closure, density gain, or interval gain.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "amplitude": "|Phi''|^(-1/2)=sqrt(|t|)/|m|~sqrt(K/|m|)",
+    "atom_diagonal_exponent": "xi+14/15",
+    "dual_support": "r~K, h~KQ/D",
+    "first_derivative": "Phi'(k)=t/k-m",
+    "gate": "bound all three Mellin-alias branches or export a structured alias web",
+    "hessian_at_stationary": "Phi''(t/m)=-m^2/t",
+    "inverse": "k=t/m=D*(h-h')/(2*pi*m)",
+    "moment_target": "total same-h + nonstationary + alias contribution <=X^(xi+14/15+o(1))",
+    "nonstationary_branch": "0<|h-h'|<<K/D has no nonzero stationary m",
+    "pair_zero_mode": "int_(R/Z) kernel(Delta z)dDelta z=U(0)=0",
+    "phase": "Phi(k)=t*log(k)-m*k, t=D*(h-h')/(2*pi)",
+    "primal_pair_kernel": "sum_k U(k/K)e(k*Delta z)=K*sum_m hatU(K*(m-Delta z))",
+    "same_h_branch": "h=h' must be treated as a logarithmic r-correlation, not atom diagonal",
+    "second_derivative": "Phi''(k)=-t/k^2",
+    "stationary_alias_branch": "K/D<<|h-h'|<<KQ/D maps to 1<<|m|<<Q"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/mellin_alias_atlas_v1.py",
+      "sha256": "4aea18e04382939105bd35cdab455e8f87720574ec4add520df02638c3f96934"
+    },
+    "cycle81": {
+      "path": "artifacts/cycle-81-exact-q-transform-v1.json",
+      "sha256": "0753d455a2e9428b28f1b9dac59b04fd57008db562370202a300a38a818631a4"
+    },
+    "cycle86": {
+      "path": "artifacts/cycle-86-signed-regime-split-v1.json",
+      "sha256": "4d6f78f433b052c6d3497d46d67b015d6963fe67f862e0d6c52124c6d26a3dd4"
+    },
+    "discovery_candidate": {
+      "path": "discovery/cycle-87-mellin-alias-candidate-v1.md",
+      "sha256": "2880bf28dc4c2ece82afe991c29f204a3e2cc906f37a5c80fc36318ffa58135d"
+    },
+    "document": {
+      "path": "docs/cycle-87-mellin-alias-atlas-v1.md",
+      "sha256": "99bd3e0c9e72b9eb91df2ea9f40e5e1d9ec1a9ee96b45b3375deaba95811975a"
+    },
+    "preregistration": {
+      "path": "docs/cycle-87-mellin-alias-preregistration-v1.md",
+      "sha256": "44afc90487f23068722f499fa64f136204c21530d3a6b55620878372ace6acf0"
+    },
+    "tests": {
+      "path": "tests/test_cycle_87_mellin_alias_atlas_v1.py",
+      "sha256": "6ccaef27642fe86a9512f18948c317b9e57ca33f52facb6a411561628ce60d23"
+    }
+  },
+  "pair_kernel": {
+    "epistemic_status": "PROVED",
+    "statement": "The primal pair kernel is K sum_m hatU(K(m-Delta z)); its atom diagonal has exponent xi+14/15 and its continuous zero mode is U(0)=0."
+  },
+  "prior_context": {
+    "cycle81_role": "supply exact dual logarithmic columns and support",
+    "cycle86_role": "supply the diagonal second-moment target and signed range",
+    "epistemic_status": "PROVED"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_87_mellin_alias_atlas_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_87_mellin_alias_atlas_v1.py",
+    "write_command": "python3 proof/build_cycle_87_mellin_alias_atlas_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_87_mellin_alias_atlas_v1.py",
+    "sha256": "40c5ee246dea06bed2cc5acd44c764df50ddcd483323d4d5b6ac64a1d689d4ff"
+  },
+  "status": "SEALED_MELLIN_ALIAS_TRICHOTOMY_BOUND_OR_WEB_OPEN"
+}

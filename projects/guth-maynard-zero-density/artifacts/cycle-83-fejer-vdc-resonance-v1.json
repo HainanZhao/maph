@@ -1,0 +1,99 @@
+{
+  "analytic_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Beat the square-root derivative term using an exponent pair, k-average, or an inverse theorem on 37/75<=xi<=83/75."
+  },
+  "annular_extension": {
+    "epistemic_status": "PROVED",
+    "statement": "Bandwidth Q/L at radius L/Q and fixed Schwartz decay preserve the central resonance exponent."
+  },
+  "artifact_id": "cycle-83-fejer-vdc-resonance-v1",
+  "claim_boundary": "This artifact proves the fixed-center Fejer--second-derivative resonance estimate and closes only 94/225<=xi<37/75. The endpoint, higher frequencies, packet closure, density gain, and interval gain remain open.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "active_dominant_exponent": "xi/2+1/6",
+    "annular_decay_power": 5,
+    "band_width": "17/225",
+    "block_exponent": "3xi/2+1/2",
+    "central_resonance": "R_k<<D/Q+sqrt(kQ)+D/sqrt(kQ)",
+    "derivative_ceiling_at_endpoint": "-28/75",
+    "endpoint": "xi=37/75 ties 31/25 and is not promoted",
+    "fejer": "R_k(L)<<D*L/Q+(Q/L)^(-1)*sum_(j<=Q/L)|E_j|",
+    "gate": "Fejer-VdC band closed; higher-frequency exponent-pair or averaging gain open",
+    "new_band": "94/225<=xi<37/75",
+    "new_cutoff": "37/75",
+    "old_cutoff": "94/225",
+    "per_k_exponent": "xi/2+1/2",
+    "vdc": "E_j<<sqrt(j*k)+D/sqrt(j*k)"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/fejer_vdc_resonance_v1.py",
+      "sha256": "113b5d99c56e42825c995d9f93be170c502956fb5cd0634fc6666b27c7d3490b"
+    },
+    "cycle81": {
+      "path": "artifacts/cycle-81-exact-q-transform-v1.json",
+      "sha256": "0753d455a2e9428b28f1b9dac59b04fd57008db562370202a300a38a818631a4"
+    },
+    "cycle82": {
+      "path": "artifacts/cycle-82-smooth-phase-projector-v1.json",
+      "sha256": "5faff9b1b6a94da3df33e0b68423d0b9a0663a62c480d5713e2cea8a21ec4b11"
+    },
+    "discovery_candidate": {
+      "path": "discovery/cycle-83-fejer-vdc-candidate-v1.md",
+      "sha256": "2f2c655ec6dc611b7c8c4be45da8f4b8a797b7a9029d0c85e486cde5c54f0742"
+    },
+    "document": {
+      "path": "docs/cycle-83-fejer-vdc-resonance-v1.md",
+      "sha256": "04081ef7f814c1b7c1afee90625139f2a42f2b61283d2aee3f2ffeef7806988d"
+    },
+    "gm_primary_source": {
+      "path": "artifacts/sources/arxiv-2405.20552v2/LargevaluesDirichlet17.tex",
+      "sha256": "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428"
+    },
+    "preregistration": {
+      "path": "docs/cycle-83-fejer-vdc-preregistration-v1.md",
+      "sha256": "42924d6ea6ac024527da2878fcdfa49056d66027c1f7807bab3c031de05e0716"
+    },
+    "tests": {
+      "path": "tests/test_cycle_83_fejer_vdc_resonance_v1.py",
+      "sha256": "de2c3215e12cd9abd78576807888338f18e945b50caf32462d776c027116cacd"
+    }
+  },
+  "new_band": {
+    "epistemic_status": "PROVED",
+    "statement": "The Fourier block exponent is 3xi/2+1/2, closing 94/225<=xi<37/75; width 17/225. The endpoint ties."
+  },
+  "prior_context": {
+    "cycle81_role": "supply the exact smooth transform and sign convention",
+    "cycle82_role": "supply the projector-to-resonance reduction and prior cutoff",
+    "epistemic_status": "PROVED",
+    "source_role": "record primary Guth--Maynard use of the classical first/second derivative bounds"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_83_fejer_vdc_resonance_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_83_fejer_vdc_resonance_v1.py",
+    "write_command": "python3 proof/build_cycle_83_fejer_vdc_resonance_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "resonance_bound": {
+    "epistemic_status": "PROVED",
+    "statement": "Fejer plus the second-derivative test gives R_k<<D/Q+sqrt(kQ)+D/sqrt(kQ), with the sqrt(kQ) term dominant on the active range."
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_83_fejer_vdc_resonance_v1.py",
+    "sha256": "8b6c3697124090df088a0bf8e84eff8de3c847e2d0b3f07ca256d3ee208dd7b2"
+  },
+  "status": "SEALED_FEJER_VDC_BAND_HIGH_FREQUENCY_EXPONENT_PAIR_OPEN"
+}

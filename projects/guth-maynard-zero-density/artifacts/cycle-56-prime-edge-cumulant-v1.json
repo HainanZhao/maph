@@ -1,0 +1,200 @@
+{
+  "analytic_gate": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Push the cumulant through integer-frequency support partitions, then gain 3/50 or extract simultaneous approximate multiplicativity at scales 1,m."
+  },
+  "artifact_id": "cycle-56-prime-edge-cumulant-v1",
+  "claim_boundary": "This artifact proves ordered-coordinate edge-cumulant algebra and positivity. It does not prove support-collapse control, an analytic saving, AMPR, density, or interval gains.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "edge_cumulant": {
+    "epistemic_status": "PROVED",
+    "statement": "Coordinatewise centering gives PSD kernel C_m(h,g)C(h,g)^s, annihilates diagonal edges, and has constant-cost signed expansions for s=3,4."
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "analytic_gate": "bound_the_edge_cumulant_spectrum_or_extract_approximate_multiplicativity_with_3_50_margin",
+    "s3": {
+      "coefficient_l1": 16,
+      "coefficient_sum": 0,
+      "diagonal": "E_(m,s)(h,h)=(1-|k(mh)|^2)(1-|k(h)|^2)^s",
+      "ordinary_covariance": "C(h,g)=k(h-g)-k(h)conj(k(g))",
+      "positive_semidefinite": true,
+      "powered_covariance": "C_m(h,g)=k(m(h-g))-k(mh)conj(k(mg))",
+      "s": 3,
+      "signed_terms": [
+        {
+          "coefficient": 1,
+          "ordinary_difference_power": 3,
+          "ordinary_product_power": 0,
+          "powered_factor": "k_m(h-g)"
+        },
+        {
+          "coefficient": -3,
+          "ordinary_difference_power": 2,
+          "ordinary_product_power": 1,
+          "powered_factor": "k_m(h-g)"
+        },
+        {
+          "coefficient": 3,
+          "ordinary_difference_power": 1,
+          "ordinary_product_power": 2,
+          "powered_factor": "k_m(h-g)"
+        },
+        {
+          "coefficient": -1,
+          "ordinary_difference_power": 0,
+          "ordinary_product_power": 3,
+          "powered_factor": "k_m(h-g)"
+        },
+        {
+          "coefficient": -1,
+          "ordinary_difference_power": 3,
+          "ordinary_product_power": 0,
+          "powered_factor": "k_m(h)conj(k_m(g))"
+        },
+        {
+          "coefficient": 3,
+          "ordinary_difference_power": 2,
+          "ordinary_product_power": 1,
+          "powered_factor": "k_m(h)conj(k_m(g))"
+        },
+        {
+          "coefficient": -3,
+          "ordinary_difference_power": 1,
+          "ordinary_product_power": 2,
+          "powered_factor": "k_m(h)conj(k_m(g))"
+        },
+        {
+          "coefficient": 1,
+          "ordinary_difference_power": 0,
+          "ordinary_product_power": 3,
+          "powered_factor": "k_m(h)conj(k_m(g))"
+        }
+      ],
+      "tensor_gram": "E_(m,s)(h,g)=C_m(h,g)C(h,g)^s",
+      "term_count": 8,
+      "zero_edge": "E_(m,s)(0,g)=E_(m,s)(h,0)=0"
+    },
+    "s4": {
+      "coefficient_l1": 32,
+      "coefficient_sum": 0,
+      "diagonal": "E_(m,s)(h,h)=(1-|k(mh)|^2)(1-|k(h)|^2)^s",
+      "ordinary_covariance": "C(h,g)=k(h-g)-k(h)conj(k(g))",
+      "positive_semidefinite": true,
+      "powered_covariance": "C_m(h,g)=k(m(h-g))-k(mh)conj(k(mg))",
+      "s": 4,
+      "signed_terms": [
+        {
+          "coefficient": 1,
+          "ordinary_difference_power": 4,
+          "ordinary_product_power": 0,
+          "powered_factor": "k_m(h-g)"
+        },
+        {
+          "coefficient": -4,
+          "ordinary_difference_power": 3,
+          "ordinary_product_power": 1,
+          "powered_factor": "k_m(h-g)"
+        },
+        {
+          "coefficient": 6,
+          "ordinary_difference_power": 2,
+          "ordinary_product_power": 2,
+          "powered_factor": "k_m(h-g)"
+        },
+        {
+          "coefficient": -4,
+          "ordinary_difference_power": 1,
+          "ordinary_product_power": 3,
+          "powered_factor": "k_m(h-g)"
+        },
+        {
+          "coefficient": 1,
+          "ordinary_difference_power": 0,
+          "ordinary_product_power": 4,
+          "powered_factor": "k_m(h-g)"
+        },
+        {
+          "coefficient": -1,
+          "ordinary_difference_power": 4,
+          "ordinary_product_power": 0,
+          "powered_factor": "k_m(h)conj(k_m(g))"
+        },
+        {
+          "coefficient": 4,
+          "ordinary_difference_power": 3,
+          "ordinary_product_power": 1,
+          "powered_factor": "k_m(h)conj(k_m(g))"
+        },
+        {
+          "coefficient": -6,
+          "ordinary_difference_power": 2,
+          "ordinary_product_power": 2,
+          "powered_factor": "k_m(h)conj(k_m(g))"
+        },
+        {
+          "coefficient": 4,
+          "ordinary_difference_power": 1,
+          "ordinary_product_power": 3,
+          "powered_factor": "k_m(h)conj(k_m(g))"
+        },
+        {
+          "coefficient": -1,
+          "ordinary_difference_power": 0,
+          "ordinary_product_power": 4,
+          "powered_factor": "k_m(h)conj(k_m(g))"
+        }
+      ],
+      "tensor_gram": "E_(m,s)(h,g)=C_m(h,g)C(h,g)^s",
+      "term_count": 10,
+      "zero_edge": "E_(m,s)(0,g)=E_(m,s)(h,0)=0"
+    }
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/prime_edge_cumulant_v1.py",
+      "sha256": "626276ba56a8238973d232ca344dae3318e5e9aa014f3ec5af470f30923c6f97"
+    },
+    "cycle55": {
+      "path": "artifacts/cycle-55-centered-trace-boundary-v1.json",
+      "sha256": "50a66a5d1aea0e9173e4c23bc8bf262e0c937b162a86942e957065635c6c53ab"
+    },
+    "document": {
+      "path": "docs/cycle-56-prime-edge-cumulant-v1.md",
+      "sha256": "af9298d5eccea6997825e7699db9456a8d67e8ee78cbec2d19ea646bf33df55a"
+    },
+    "preregistration": {
+      "path": "docs/cycle-56-prime-edge-cumulant-preregistration-v1.md",
+      "sha256": "2236ec31ea62c6f8e4a422687a803d3ccaeb98cb878b78909bdd1e12545df1f7"
+    },
+    "tests": {
+      "path": "tests/test_cycle_56_prime_edge_cumulant_v1.py",
+      "sha256": "e28767a3662b3e60c8f89705bb581bb132cf80a353b1b2d5b48379e0d701a5d1"
+    }
+  },
+  "prior_context": {
+    "epistemic_status": "PROVED",
+    "prior_role": "replace scalar post-collapse centering by actual prime-coordinate centering"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_56_prime_edge_cumulant_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_56_prime_edge_cumulant_v1.py",
+    "write_command": "python3 proof/build_cycle_56_prime_edge_cumulant_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_56_prime_edge_cumulant_v1.py",
+    "sha256": "a3160f05482d2f16974ab39ed3273e9f65a47381d3534ce500ae77ff604c401b"
+  },
+  "status": "SEALED_EDGE_CUMULANT_SUPPORT_COLLAPSE_3_50_OPEN"
+}

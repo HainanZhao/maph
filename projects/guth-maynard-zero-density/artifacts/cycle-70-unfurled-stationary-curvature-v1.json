@@ -1,0 +1,77 @@
+{
+  "analytic_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Prove a two-variable oscillatory estimate on the unbalanced (r,q') box that absorbs the quantified determinant loss."
+  },
+  "artifact_id": "cycle-70-unfurled-stationary-curvature-v1",
+  "claim_boundary": "This artifact proves the factored Hessian and trivial small-endpoint split only. It proves no two-variable sum, full packet, recurrence, powered, density, or interval gain.",
+  "curvature_restoration": {
+    "epistemic_status": "PROVED",
+    "statement": "For fixed stationary k, det Hess_(r,q') Psi(rq',k)=exp(4pi x)-1, positive off the ell=0 endpoint."
+  },
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "endpoint_split": {
+    "epistemic_status": "PROVED",
+    "statement": "Packet uniqueness makes ell blocks below exponent 6/25-kappa subcritical; the weakest surviving determinant exponent is -9/25-kappa."
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "derivative_identity": {
+      "product_hessian": "det=-(psi')^2-2m psi' psi''=(u/m)^2-1",
+      "psi_prime": "u/m-1",
+      "psi_second": "-u/m^2",
+      "stationary_value": "u/m=exp(2*pi*x)"
+    },
+    "gate": "prove a two-variable factored exponential-sum estimate with determinant loss X^(9/25+kappa), or improve the small-endpoint split",
+    "nondegeneracy": "positive for every x>0; asymptotic to 4*pi*x as x tends to zero",
+    "small_ell_branch": "ell blocks with lambda<6/25-kappa contain fewer packets than the target by uniqueness alone",
+    "surviving_curvature": "on lambda>=6/25-kappa, determinant exponent is at least -9/25-kappa"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/unfurled_stationary_curvature_v1.py",
+      "sha256": "1e8afc97f2becf439d7da8c6be141813c0bf8049b5907ecc04060a84251ccf08"
+    },
+    "cycle69": {
+      "path": "artifacts/cycle-69-stationary-transport-dual-v1.json",
+      "sha256": "4f868a07381d89ccfafe72f80553a63b9457447a848408d22cb4493d4726a04c"
+    },
+    "document": {
+      "path": "docs/cycle-70-unfurled-curvature-v1.md",
+      "sha256": "ef1d9f477d36922f2eddef1d5f799777a98c25ba7878b5617f696c205d4cdb20"
+    },
+    "preregistration": {
+      "path": "docs/cycle-70-unfurled-curvature-preregistration-v1.md",
+      "sha256": "22ed400d762fdf7f3688628e8bbee23e525efc9693ee7245c59c8ad84c7898b7"
+    },
+    "tests": {
+      "path": "tests/test_cycle_70_unfurled_stationary_curvature_v1.py",
+      "sha256": "2f6b03497baa24d7f819a057f93dcdcf90be03744b1078ca3e955f25f4ad1d53"
+    }
+  },
+  "prior_context": {
+    "epistemic_status": "PROVED",
+    "prior_role": "restore a product variable projected away by complete frequency folding"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_70_unfurled_stationary_curvature_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_70_unfurled_stationary_curvature_v1.py",
+    "write_command": "python3 proof/build_cycle_70_unfurled_stationary_curvature_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_70_unfurled_stationary_curvature_v1.py",
+    "sha256": "ffb8bc94952a7e0ad2b1100345335c1f66548745602b7442af72b0309c0c39ee"
+  },
+  "status": "SEALED_FACTORED_R_QPRIME_CURVATURE_WITH_ENDPOINT_LOSS_OPEN"
+}

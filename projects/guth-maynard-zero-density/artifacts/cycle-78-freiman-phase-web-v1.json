@@ -1,0 +1,78 @@
+{
+  "analytic_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Route relation-rich ACSI failures into valuation webs, and prove ACSI on the relation-poor branch."
+  },
+  "artifact_id": "cycle-78-freiman-phase-web-v1",
+  "claim_boundary": "This artifact proves exact additive-to-multiplicative relation transfer and logarithmic length for complete arithmetic progressions of critical hits. It does not force relations in a sparse packet set and proves no ACSI, packet closure, powered saving, density gain, or interval gain.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "cross_error": "Q^4*(eta/Q)=Q^3*eta=X^(-8/75+o(1))",
+    "exact_relation": "ell1+ell2=ell3+ell4 implies r1*r2=r3*r4",
+    "gate": "use exact valuation webs as the structured output of an ACSI failure, while attacking sparse relation-poor sets analytically",
+    "progression_image": "r_j=r_0*g^j on every complete arithmetic progression of hit indices",
+    "progression_length": "O(log Q), since reduced height(r_0*g^j)>=2^j/(C^2 Q^2) unless g=1",
+    "scope_boundary": "no additive relation is forced at packet cardinality X^(2/15); sparse Sidon-type sets remain possible",
+    "valuation_web": "v_p(r1)+v_p(r2)=v_p(r3)+v_p(r4) for every prime p"
+  },
+  "freiman_transfer": {
+    "epistemic_status": "PROVED",
+    "statement": "Every additive quadruple of hit indices yields exact multiplicative equality of reduced rational labels, with integer-forcing margin X^(-8/75+o(1))."
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/freiman_phase_web_v1.py",
+      "sha256": "ad3c228b6b283786afd3589b3664035c7b526a52617e4ae91d3cd71b4e79ba3f"
+    },
+    "cycle77": {
+      "path": "artifacts/cycle-77-critical-saddle-v1.json",
+      "sha256": "c68cc89eb163d81d85374a61986c62c4004f1b5c195a5088a7063fb9ed670dbd"
+    },
+    "document": {
+      "path": "docs/cycle-78-freiman-phase-web-v1.md",
+      "sha256": "15be85dcea0d252aa52e317a84b4f82cc82e90665c9c9e034d8e9fbd4b849256"
+    },
+    "preregistration": {
+      "path": "docs/cycle-78-freiman-phase-web-preregistration-v1.md",
+      "sha256": "87188e407b4877f1700ccdb06d5ae7b952daa8dfc83c8440721203e9d0b77556"
+    },
+    "tests": {
+      "path": "tests/test_cycle_78_freiman_phase_web_v1.py",
+      "sha256": "ec4294a1bca2804b0e1905b16b0e8705e0cb9505cecee706ca441512b2aa70ee"
+    }
+  },
+  "prior_context": {
+    "cycle77_role": "supply the critical packet scales, anchored form, and ratio error",
+    "epistemic_status": "PROVED"
+  },
+  "progression_rigidity": {
+    "epistemic_status": "PROVED",
+    "statement": "A complete arithmetic progression maps to r_j=r_0*g^j and has length O(log Q)."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_78_freiman_phase_web_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_78_freiman_phase_web_v1.py",
+    "write_command": "python3 proof/build_cycle_78_freiman_phase_web_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "scope_boundary": {
+    "epistemic_status": "PROVED",
+    "statement": "At target cardinality X^(2/15), additive-energy pigeonholing need not produce any nontrivial relation; sparse Sidon-type sets remain an analytic branch."
+  },
+  "sealer": {
+    "path": "proof/build_cycle_78_freiman_phase_web_v1.py",
+    "sha256": "ce7e64b7adbd0b41abe870e8fc88b400f5d9d41e5428583e2d72ec11eded3570"
+  },
+  "status": "SEALED_EXACT_FREIMAN_WEB_OR_SPARSE_ACSI_OPEN"
+}

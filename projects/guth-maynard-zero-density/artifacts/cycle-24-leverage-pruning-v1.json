@@ -1,0 +1,99 @@
+{
+  "artifact_id": "cycle-24-leverage-pruning-v1",
+  "claim_boundary": "This artifact refines inverse leverage into near-Cauchy recurrence, negative shift, residual singularity, or stretched-exponential residual ill-conditioning. It does not exclude any branch for primes, prove the skeleton target, improve density, or improve intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "critical_exponents": {
+      "k_rho": "6/25",
+      "near_cauchy_deficit_exponential_scale": "6/25",
+      "rho": "-3/5",
+      "rows": "21/25",
+      "small_eigenvalue_exponential_scale": "6/25"
+    },
+    "finite_near_cauchy_check": {
+      "aligned_common_term": "7/8",
+      "delta": "1/8",
+      "kernel_lower": "3/4",
+      "rho_t": "7/8",
+      "worst_residual_term": "1/8"
+    },
+    "finite_regular_check": {
+      "delta": "1/4",
+      "k": 8,
+      "lambda_min_upper": "4",
+      "leverage_lower": "8",
+      "n": 4,
+      "s_norm_squared_upper": "32"
+    },
+    "frozen_constants": {
+      "delta": "exp(-k rho/8)",
+      "delta_exponent_fraction": "1/8",
+      "large_k_condition": "k rho/4>=log 2",
+      "leverage_lower_exponent_fraction": "1/4",
+      "shift_fraction": "1/2",
+      "small_eigenvalue_exponent_fraction": "1/8"
+    },
+    "trichotomy": "half-size near-Cauchy complete recurrence, shift<=-n rho/2, residual singularity, or lambda_min(B)<=2k exp(-k rho/8)"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/leverage_pruning_v1.py",
+      "sha256": "3bdf4977be9f2a83f84596516239d9c4f43e2d3b54f23129ab8ed3da5a9eea7a"
+    },
+    "cycle23": {
+      "path": "artifacts/cycle-23-residual-spectral-shift-v1.json",
+      "sha256": "605e7a3eb5ac5b4e342b512e4465762d43b1b919051e4dafd01058e7ae14121b"
+    },
+    "document": {
+      "path": "docs/cycle-24-leverage-pruning-v1.md",
+      "sha256": "7bfcc58effbb39ebf63da6a28973b925161034f443e7c5717778e328521350ec"
+    },
+    "preregistration": {
+      "path": "docs/cycle-24-leverage-pruning-preregistration-v1.md",
+      "sha256": "605e026a9eefd43067266a2f496ce4cb49f2c71d444d5a7b539411c66c1cc2ec"
+    },
+    "tests": {
+      "path": "tests/test_cycle_24_leverage_pruning_v1.py",
+      "sha256": "9763771faf870213589e9c99851e074972729f4476db269dec5c06e73e85f059"
+    }
+  },
+  "near_cauchy": {
+    "epistemic_status": "PROVED",
+    "statement": "If at least half the rows have rho_t>=1-exp(-k rho/8), every pair in that subsystem has normalized kernel at least 1-2exp(-k rho/8)."
+  },
+  "prime_gate": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Exclude near-maximal prime-kernel recurrence and stretched-exponential residual dependence, or route either structure into E10 detector surgery."
+  },
+  "prior_context": {
+    "cycle23_role": "exact shift/inverse-leverage dichotomy refined by amplitude pruning",
+    "epistemic_status": "PROVED"
+  },
+  "regular_residual": {
+    "critical_structure_scale": "X^(6/25)",
+    "epistemic_status": "PROVED",
+    "statement": "On a half-sized regular subsystem, either shift<=-n rho/2, the residual is singular, or lambda_min(B)<=2k exp(-k rho/8)."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_24_leverage_pruning_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_24_leverage_pruning_v1.py",
+    "write_command": "python3 proof/build_cycle_24_leverage_pruning_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_24_leverage_pruning_v1.py",
+    "sha256": "5e06a2d4c8f7db33b83fae875d9a97a30a49cf2fcae3bda50ed0646708c981ce"
+  },
+  "status": "SEALED_NEAR_CAUCHY_OR_RESIDUAL_ILL_CONDITIONING_TRICHOTOMY_PRIME_EXCLUSION_OPEN"
+}

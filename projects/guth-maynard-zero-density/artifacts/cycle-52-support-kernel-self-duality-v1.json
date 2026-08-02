@@ -1,0 +1,133 @@
+{
+  "analytic_gate": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Convert a large off-diagonal into popular two-scale difference edges and then into progression-like structure or a nonlattice saving."
+  },
+  "artifact_id": "cycle-52-support-kernel-self-duality-v1",
+  "claim_boundary": "This artifact proves the support-kernel leading term and inverse deficit implication. It does not prove popularity, additive structure, ADK_s, AMPR_s, LCAM_s, density, or interval gain.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "collision_gap": "1",
+    "error_prime_exponent": "s",
+    "finite_counts": {
+      "M4_s3": {
+        "all_distinct_support": 4,
+        "collision_support": 76,
+        "full_support": 80,
+        "ordered_collision_tuples": 232
+      },
+      "M5_s3": {
+        "all_distinct_support": 20,
+        "collision_support": 155,
+        "full_support": 175,
+        "ordered_collision_tuples": 505
+      },
+      "M5_s4": {
+        "all_distinct_support": 5,
+        "collision_support": 345,
+        "full_support": 350,
+        "ordered_collision_tuples": 3005
+      },
+      "M6_s3": {
+        "all_distinct_support": 60,
+        "collision_support": 276,
+        "full_support": 336,
+        "ordered_collision_tuples": 936
+      },
+      "M6_s4": {
+        "all_distinct_support": 30,
+        "collision_support": 726,
+        "full_support": 756,
+        "ordered_collision_tuples": 7056
+      },
+      "M7_s3": {
+        "all_distinct_support": 140,
+        "collision_support": 448,
+        "full_support": 588,
+        "ordered_collision_tuples": 1561
+      },
+      "M7_s4": {
+        "all_distinct_support": 105,
+        "collision_support": 1365,
+        "full_support": 1470,
+        "ordered_collision_tuples": 14287
+      },
+      "M8_s4": {
+        "all_distinct_support": 280,
+        "collision_support": 2360,
+        "full_support": 2640,
+        "ordered_collision_tuples": 26048
+      }
+    },
+    "inverse_s4_at_4_25": {
+      "K_h_max_deficit": "1/25",
+      "K_mh_max_deficit": "4/25",
+      "collision_gap": "1",
+      "weighted_deficit": "4/25"
+    },
+    "inverse_s4_at_7_50": {
+      "K_h_max_deficit": "7/200",
+      "K_mh_max_deficit": "7/50",
+      "collision_gap": "1",
+      "weighted_deficit": "7/50"
+    },
+    "leading_term": "K(mh) K(h)^s / s!",
+    "main_prime_exponent": "s+1"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/support_kernel_self_duality_v1.py",
+      "sha256": "b51a06f5f60e1cdf7a082e377ad54a3151dedbc15d929d2628e44b76a478b408"
+    },
+    "cycle51": {
+      "path": "artifacts/cycle-51-all-m-support-partition-v1.json",
+      "sha256": "3608f1e6048d13dfbd8a8e619127518c4355bcc5dd80e578498014e8e0a20304"
+    },
+    "document": {
+      "path": "docs/cycle-52-support-kernel-self-duality-v1.md",
+      "sha256": "bdaef9db6d9f224ab81bc3d32079de520b3080b355097eeb445a7919b4e6d1cd"
+    },
+    "preregistration": {
+      "path": "docs/cycle-52-support-kernel-self-duality-preregistration-v1.md",
+      "sha256": "e1e0731696370f06987d61e939e6e2c9471ce5bc47db0e7ceaa315a846b4bd39"
+    },
+    "tests": {
+      "path": "tests/test_cycle_52_support_kernel_self_duality_v1.py",
+      "sha256": "63d883baaf19a046d6a6dc888817852bdff609c5027c668ab978b9a6c62528d3"
+    }
+  },
+  "inverse_recurrence": {
+    "epistemic_status": "PROVED",
+    "statement": "Correlation deficit eta<1 forces s alpha+beta<=eta+o(1); at s=4, eta=7/50 forces K(h) deficit at most 7/200 and K(mh) deficit at most 7/50."
+  },
+  "prior_context": {
+    "epistemic_status": "PROVED",
+    "prior_role": "extract the universal top distinct-prime stratum and derive its two-scale inverse recurrence"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_52_support_kernel_self_duality_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_52_support_kernel_self_duality_v1.py",
+    "write_command": "python3 proof/build_cycle_52_support_kernel_self_duality_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_52_support_kernel_self_duality_v1.py",
+    "sha256": "a8a1f0ed6ae615992773806d08a4306ef3582d950f3f21edda5148f26a4c3d39"
+  },
+  "self_duality": {
+    "epistemic_status": "PROVED",
+    "statement": "Uniformly in m>=2, the support correlation is K(mh)K(h)^s/s! plus O_s(M^s), a full prime-coordinate power below the main scale."
+  },
+  "status": "SEALED_TWO_SCALE_SELF_DUALITY_POPULAR_DIFFERENCE_STRUCTURE_OPEN"
+}

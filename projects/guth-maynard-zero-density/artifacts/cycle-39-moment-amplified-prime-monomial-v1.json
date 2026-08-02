@@ -1,0 +1,131 @@
+{
+  "analytic_gate": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "For hollow Delta-separated rows, prove sum_t sum_m |K(t)^s K(mt)|^2 <= X^(s+31/10+o(1)) for s=3,4, uniformly over 2<=m<=X^(3/10)."
+  },
+  "artifact_id": "cycle-39-moment-amplified-prime-monomial-v1",
+  "claim_boundary": "This artifact proves fixed-s coefficient multiplicity and the conditional closure ledger. It does not prove AMPR_s, a kernel-count gain, a density gain, or an interval gain.",
+  "coefficient_theorem": {
+    "epistemic_status": "PROVED",
+    "statement": "For fixed s and every m>=2, coefficients of K(t)^s K(mt) are at most C_s=(1+floor(s/2))*s!, and their square norm lies between M^(s+1) and C_s*M^(s+1)."
+  },
+  "conditional_reduction": {
+    "epistemic_status": "PROVED",
+    "statement": "AMPR_3 gives count exponent 1/2 with margin 17/50 on the e=3/5 branch; AMPR_4 gives 7/10 with margin 7/50 on the e=6/5 branch."
+  },
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "closing_r2": {
+      "amplifier": 3,
+      "closing_margin": "17/50",
+      "conditional_count_bound": "1/2",
+      "energy_decay": "3/5",
+      "per_row_energy": "28/5",
+      "restriction_target": "61/10",
+      "target_count": "21/25"
+    },
+    "closing_r4": {
+      "amplifier": 4,
+      "closing_margin": "7/50",
+      "conditional_count_bound": "7/10",
+      "energy_decay": "6/5",
+      "per_row_energy": "32/5",
+      "restriction_target": "71/10",
+      "target_count": "21/25"
+    },
+    "coefficients_s3": {
+      "amplifier": 3,
+      "candidate_q_bound": 2,
+      "coefficient_bound": 12,
+      "coefficient_square_norm_lower": "M^(s+1)",
+      "coefficient_square_norm_upper": "C_s*M^(s+1)",
+      "coefficient_sum": "M^(s+1)",
+      "ordered_residual_bound": 6,
+      "uniform_harmonic_range": "every integer m>=2"
+    },
+    "coefficients_s4": {
+      "amplifier": 4,
+      "candidate_q_bound": 3,
+      "coefficient_bound": 72,
+      "coefficient_square_norm_lower": "M^(s+1)",
+      "coefficient_square_norm_upper": "C_s*M^(s+1)",
+      "coefficient_sum": "M^(s+1)",
+      "ordered_residual_bound": 24,
+      "uniform_harmonic_range": "every integer m>=2"
+    },
+    "scale": {
+      "harmonic_range": "3/10",
+      "height": "12/5",
+      "mass": "1",
+      "spacing": "3/5",
+      "target_count": "21/25",
+      "threshold": "7/10"
+    },
+    "unamplified_r2": {
+      "amplifier": 1,
+      "closing_margin": "-23/50",
+      "conditional_count_bound": "13/10",
+      "energy_decay": "3/5",
+      "per_row_energy": "14/5",
+      "restriction_target": "41/10",
+      "target_count": "21/25"
+    },
+    "unamplified_r4": {
+      "amplifier": 1,
+      "closing_margin": "-53/50",
+      "conditional_count_bound": "19/10",
+      "energy_decay": "6/5",
+      "per_row_energy": "11/5",
+      "restriction_target": "41/10",
+      "target_count": "21/25"
+    }
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/moment_amplified_prime_monomial_v1.py",
+      "sha256": "6932c2ebae9f1b210e3ffd468827c443ebbdae26668d9f7516f31eb28f758bb2"
+    },
+    "cycle38": {
+      "path": "artifacts/cycle-38-vector-harmonic-two-scale-v1.json",
+      "sha256": "0da5a1791b7228a19651db15ecf3bce1909bbc2c57b985bee107e8787010de52"
+    },
+    "document": {
+      "path": "docs/cycle-39-moment-amplified-prime-monomial-v1.md",
+      "sha256": "59ac1d3864e713ac998c037cd3d3973c3af9063ec12c212da42871e9f5879080"
+    },
+    "preregistration": {
+      "path": "docs/cycle-39-moment-amplified-prime-monomial-preregistration-v1.md",
+      "sha256": "1dcd275102049dee34c5c5325eeb0468978326cedd9c4c311c7813fa45e2063b"
+    },
+    "tests": {
+      "path": "tests/test_cycle_39_moment_amplified_prime_monomial_v1.py",
+      "sha256": "1c44a189808d9edfe4705bed6d8d5d830e5b583ce22c3eab63a9facba9eccfbe"
+    }
+  },
+  "prior_context": {
+    "epistemic_status": "PROVED",
+    "prior_role": "amplify the two-scale prime-monomial lift instead of applying an unamplified vector mean square"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_39_moment_amplified_prime_monomial_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_39_moment_amplified_prime_monomial_v1.py",
+    "write_command": "python3 proof/build_cycle_39_moment_amplified_prime_monomial_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_39_moment_amplified_prime_monomial_v1.py",
+    "sha256": "dbbca1bba23242e711dae00d9a1ccdc1b6a26597b11ad84df43ac476da9e7c04"
+  },
+  "status": "SEALED_MOMENT_AMPLIFIED_PRIME_MONOMIAL_RESTRICTION_OPEN"
+}

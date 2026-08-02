@@ -1,0 +1,89 @@
+{
+  "artifact_id": "cycle-48-hs-joint-sieve-v1",
+  "bridge_gate": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Restore the complete LCAM_4 off-diagonal expansion with only subpower loss, or save the residual power in logarithmic major arcs/nonlattice rows."
+  },
+  "claim_boundary": "This artifact proves auxiliary joint-sum saving 7/50. It does not prove LCAM_4, a density estimate, or an interval theorem.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "comparisons": {
+      "cycle45_saving": "2/25",
+      "full_missing": "4/25",
+      "gain_over_cycle45": "3/50",
+      "gap_to_full_missing": "1/50",
+      "s3_margin": "17/50",
+      "s4_margin": "7/50"
+    },
+    "endpoint": {
+      "energy": "58/25",
+      "energy_direct": "58/25",
+      "energy_spacing": "37/25",
+      "joint": "73/50",
+      "nu": "11/25",
+      "saving": "7/50",
+      "wrap": "8/25"
+    },
+    "transition": {
+      "energy": "11/5",
+      "energy_direct": "11/5",
+      "energy_spacing": "8/5",
+      "joint": "7/5",
+      "nu": "1/5",
+      "saving": "1/5",
+      "wrap": "1/5"
+    }
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/hs_joint_sieve_v1.py",
+      "sha256": "294bf8cd626511791273a0efa037cfdfc5f9d6e28c8bc75755f2edc08ff77c0c"
+    },
+    "cycle47": {
+      "path": "artifacts/cycle-47-near-curve-gap-v1.json",
+      "sha256": "209dd38186cefbfad2f286b1fbc6400745425fb6fc8555bd8e06ac5547174a55"
+    },
+    "document": {
+      "path": "docs/cycle-48-hs-joint-sieve-v1.md",
+      "sha256": "592a930c156aaaf3fcc10b8133a38585e2955af12cbb3b5bb7968810ec1c5f2d"
+    },
+    "preregistration": {
+      "path": "docs/cycle-48-hs-joint-sieve-preregistration-v1.md",
+      "sha256": "649d0e2d3f8abb927f5d7b1a537282aee672f51ac23f4a0148a895051bc42230"
+    },
+    "tests": {
+      "path": "tests/test_cycle_48_hs_joint_sieve_v1.py",
+      "sha256": "43a431e82ef991dd3638105d66a85173f6c2093629d2ace2b482fb0da245f31c"
+    }
+  },
+  "prior_context": {
+    "epistemic_status": "PROVED",
+    "prior_role": "insert the proved X^(8/25) wrap count into the full two-term joint large-sieve ledger"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_48_hs_joint_sieve_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_48_hs_joint_sieve_v1.py",
+    "write_command": "python3 proof/build_cycle_48_hs_joint_sieve_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_48_hs_joint_sieve_v1.py",
+    "sha256": "3bad801d79c2cf0b5c56d592f8fedd55ef8604370f4640205fc0bc918731f270"
+  },
+  "status": "SEALED_AUXILIARY_S4_MARGIN_7_50_LCAM4_BRIDGE_OPEN",
+  "threshold_event": {
+    "epistemic_status": "PROVED",
+    "statement": "The checked near-curve wrap count improves the joint saving from 2/25 to exactly 7/50, matching the Cycle 39 s=4 auxiliary margin and remaining 1/50 below 4/25."
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "analytic_gate": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Control weighted curved Beatty prime pairs on lattice-like rows, or prove nonlattice row Fourier decay on enough prime-monomial ratios."
+  },
+  "artifact_id": "cycle-43-row-lattice-beatty-v1",
+  "claim_boundary": "This artifact proves the AP-row resonance formula and its curved Beatty-strip translation. It does not reduce arbitrary rows to APs, prove the prime-pair estimate, close LCAM_s, or improve density or intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "maximal_occupancy": {
+      "integer_shift_window": "-7/5",
+      "linearization_error": "-1/5",
+      "log_resonance_window": "-12/5",
+      "row_exponent": "9/5",
+      "small_k_shift_scale": "2/5",
+      "spacing": "3/5"
+    },
+    "target": {
+      "integer_shift_window": "-11/25",
+      "linearization_error": "-1/5",
+      "log_resonance_window": "-36/25",
+      "row_exponent": "21/25",
+      "small_k_shift_scale": "2/5",
+      "spacing": "3/5"
+    }
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/row_lattice_beatty_v1.py",
+      "sha256": "6b70274cbdc244784f2eae9923dd7ca86351c63ec758ccfd88fcf64dd252744a"
+    },
+    "cycle42": {
+      "path": "artifacts/cycle-42-localized-comb-v1.json",
+      "sha256": "c109b790a235080fc0b6130a78e4f647fc54951217fe37c7f84e0b8b94090369"
+    },
+    "document": {
+      "path": "docs/cycle-43-row-lattice-beatty-v1.md",
+      "sha256": "33edc59324b365a8a730f4634858d44f77a2ba80cdcbc41643330ef2c8cd0b4f"
+    },
+    "preregistration": {
+      "path": "docs/cycle-43-row-lattice-beatty-preregistration-v1.md",
+      "sha256": "43d52637fe8fb4436e9b942f88f85402c8c2b5aaf65112c4a4f17e9908659b17"
+    },
+    "tests": {
+      "path": "tests/test_cycle_43_row_lattice_beatty_v1.py",
+      "sha256": "153668efc28c2ff1bf10eb2507a784f880785b30904d977066c41415b2f350d0"
+    }
+  },
+  "linearization_boundary": {
+    "epistemic_status": "PROVED",
+    "statement": "For fixed small k the shift scale is X^(2/5), but the first-order center has error X^(-1/5), larger than the admissible X^(-11/25) strip width."
+  },
+  "prior_context": {
+    "epistemic_status": "PROVED",
+    "prior_role": "stress-test the row Fourier factor on the sharp arithmetic-progression resonance model"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_43_row_lattice_beatty_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_43_row_lattice_beatty_v1.py",
+    "write_command": "python3 proof/build_cycle_43_row_lattice_beatty_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_43_row_lattice_beatty_v1.py",
+    "sha256": "e63c3799cb025c498f8b228628e3ea64b3236313fce125977f4b91a323fa4a41"
+  },
+  "status": "SEALED_AP_ROW_RESONANCE_CURVED_BEATTY_PRIME_PAIR_OPEN",
+  "stress_reduction": {
+    "epistemic_status": "PROVED",
+    "statement": "At target row exponent 21/25, full AP-row resonance for log((p+r)/p) confines r to a curved Beatty strip of width X^(-11/25)."
+  }
+}

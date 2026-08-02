@@ -1,0 +1,81 @@
+{
+  "analytic_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Bound the signed primitive M\u00f6bius--Poisson form below X^(31/25), or extract its structured major arcs into the deep-packet recurrence branch."
+  },
+  "artifact_id": "cycle-66-primitive-poisson-contract-v1",
+  "claim_boundary": "This artifact proves a primitive M\u00f6bius--Poisson identity and exponent contract only. It does not bound the off-diagonal or prove packet, recurrence, powered, density, or interval gains.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "analytic_gate": "bound the signed primitive Mobius-Poisson off-diagonal by X^(31/25-epsilon), or extract its structured major arcs",
+    "exponents": {
+      "diagonal": "theta-kappa-2/5",
+      "diagonal_margin": "16/25-theta>=1/5",
+      "frequency_ceiling": "1+theta+kappa<=36/25",
+      "packet_target": "6/25-kappa",
+      "raw_off_diagonal_target": "31/25 independent of theta,kappa"
+    },
+    "identity": {
+      "coprimality": "1_gcd(a,q)=1=sum_(b|a,b|q)mu(b)",
+      "majorant": "f_C(u)=A_C*sinc(u/(2C))^4>=1 for |u|<=C",
+      "poisson": "sum_a' f_C(b*K*X*(q'*alpha-a'))=(b*K*X)^-1 sum_r fhat_C(r/(b*K*X))*e(r*q'*alpha)",
+      "primitive_form": "(KX)^-1 sum_(b,q': bq'~Q) mu(b)/b sum_r fhat_C(r/(bKX)) sum_ell e(rq'alpha_ell)"
+    }
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/primitive_poisson_contract_v1.py",
+      "sha256": "705c7280d5e4334115c2d1de0561a17db3616210ae4062c44d40a431c7c571a9"
+    },
+    "cycle65": {
+      "path": "artifacts/cycle-65-depth-packet-ledger-v1.json",
+      "sha256": "f86cecfa996a7583990a24a6060167a700fa8cca54c199ec92cdf2f3c8637a2d"
+    },
+    "document": {
+      "path": "docs/cycle-66-primitive-poisson-v1.md",
+      "sha256": "41ec4fee394832df59a2f9f4ae8b83e867b08b79ade981398bd597cf11cec49c"
+    },
+    "preregistration": {
+      "path": "docs/cycle-66-primitive-poisson-preregistration-v1.md",
+      "sha256": "39f4b33a7e856bc95aa58f022c3706345515db96d2d4cbd1f0e49a9c842713a4"
+    },
+    "tests": {
+      "path": "tests/test_cycle_66_primitive_poisson_contract_v1.py",
+      "sha256": "fbc300cb4811b529dfb54b423961e9ec55a2957773c3b260fb66a300a37e7e52"
+    }
+  },
+  "primitive_dual": {
+    "epistemic_status": "PROVED",
+    "statement": "M\u00f6bius inversion before Poisson summation preserves primitive numerator-denominator labels and separates a diagonal from a signed exponential form."
+  },
+  "prior_context": {
+    "epistemic_status": "PROVED",
+    "prior_role": "dualize the depth-refined primitive packet count without losing coprimality"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_66_primitive_poisson_contract_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_66_primitive_poisson_contract_v1.py",
+    "write_command": "python3 proof/build_cycle_66_primitive_poisson_contract_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "scale_invariant_target": {
+    "epistemic_status": "PROVED",
+    "statement": "The diagonal has at least 1/5 exponent margin; after the (KX)^-1 prefactor, the raw off-diagonal target is strictly below X^(31/25) on every admissible scale, with frequencies at most X^(36/25+o(1))."
+  },
+  "sealer": {
+    "path": "proof/build_cycle_66_primitive_poisson_contract_v1.py",
+    "sha256": "70a16ef338aa4c56a44d8ed16efdf173d43d218d73e804007a5c7afacf01c892"
+  },
+  "status": "SEALED_PRIMITIVE_POISSON_X31_25_OR_DEEP_PACKET_RECURRENCE_OPEN"
+}

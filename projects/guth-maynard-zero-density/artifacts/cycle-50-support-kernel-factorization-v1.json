@@ -1,0 +1,121 @@
+{
+  "analytic_gate": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Prove the aggregate factored difference-kernel estimate DK_4 and treat m=2,3,4 separately."
+  },
+  "artifact_id": "cycle-50-support-kernel-factorization-v1",
+  "claim_boundary": "This artifact proves support injectivity, symmetric-polynomial factorization, and the large-value reduction for m>s. It does not prove DK_s, the small-m cases, AMPR_s, LCAM_s, density, or interval gain.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "exceptional_harmonics": {
+      "s3": [
+        2,
+        3
+      ],
+      "s4": [
+        2,
+        3,
+        4
+      ]
+    },
+    "finite_checks": [
+      {
+        "alphabet_size": 1,
+        "h3": "8",
+        "h4": "16"
+      },
+      {
+        "alphabet_size": 2,
+        "h3": "15",
+        "h4": "31"
+      },
+      {
+        "alphabet_size": 3,
+        "h3": "50",
+        "h4": "161"
+      },
+      {
+        "alphabet_size": 4,
+        "h3": "1745/8",
+        "h4": "18465/16"
+      }
+    ],
+    "identities": {
+      "h3": "(P1^3+3 P1 P2+2 P3)/6",
+      "h4": "(P1^4+6 P1^2 P2+3 P2^2+8 P1 P3+6 P4)/24"
+    },
+    "injective_range": "m>s",
+    "norm_example_M4_s4": {
+      "coefficient_mass": 1024,
+      "coefficient_square_lower": 1024,
+      "coefficient_square_upper": 73728,
+      "support_size": 140
+    },
+    "support_sizes": {
+      "M1_s3": 1,
+      "M1_s4": 1,
+      "M2_s3": 8,
+      "M2_s4": 10,
+      "M3_s3": 30,
+      "M3_s4": 45,
+      "M4_s3": 80,
+      "M4_s4": 140
+    }
+  },
+  "factorization": {
+    "epistemic_status": "PROVED",
+    "statement": "For m>s, the distinct-support correlation is exactly K(mh) times the complete homogeneous degree-s symmetric polynomial in the prime phases."
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/support_kernel_factorization_v1.py",
+      "sha256": "93591122ef31c36347505ba7be300e3690cc754f0b8bcfff776bcc22c4756d1e"
+    },
+    "cycle49": {
+      "path": "artifacts/cycle-49-row-fourier-exceptional-v1.json",
+      "sha256": "ea00b6ff9791a4d389e9e2431e3bdec7cc185538e07ffd86f9873c7e90899f5a"
+    },
+    "document": {
+      "path": "docs/cycle-50-support-kernel-factorization-v1.md",
+      "sha256": "bf96bcb2f3d275e936a970cf7e559b82783186d5fe68ae5c7c3d52274e255396"
+    },
+    "preregistration": {
+      "path": "docs/cycle-50-support-kernel-factorization-preregistration-v1.md",
+      "sha256": "ef1ffec93751ff2d4c819f003d2ce2c0644a021c8a994fa1d82ed2af46f61d26"
+    },
+    "tests": {
+      "path": "tests/test_cycle_50_support_kernel_factorization_v1.py",
+      "sha256": "0d4570e0c01bafb64e7746be3dd5da4c2f134d1811695e6351a7bdebcd415579"
+    }
+  },
+  "large_value_reduction": {
+    "epistemic_status": "PROVED",
+    "statement": "Phase-aligned Halasz--Montgomery reduces large F_(m,s) values to row sums of K(m(t-u)) H_s(t-u), with coefficient norm and support both X^(s+1+o(1))."
+  },
+  "prior_context": {
+    "epistemic_status": "PROVED",
+    "prior_role": "replace absolute coefficient-pair mass by an exact factored support-correlation kernel"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_50_support_kernel_factorization_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_50_support_kernel_factorization_v1.py",
+    "write_command": "python3 proof/build_cycle_50_support_kernel_factorization_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_50_support_kernel_factorization_v1.py",
+    "sha256": "d19603991565f3bd1cb68a7f93d97756499bb3bdd7a785895f620c9dcf2bdf2a"
+  },
+  "status": "SEALED_FACTORED_DIFFERENCE_KERNEL_DK4_PLUS_SMALL_M_OPEN"
+}

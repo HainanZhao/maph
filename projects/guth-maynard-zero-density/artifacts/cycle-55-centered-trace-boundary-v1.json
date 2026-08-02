@@ -1,0 +1,93 @@
+{
+  "artifact_id": "cycle-55-centered-trace-boundary-v1",
+  "centered_trace_boundary": {
+    "epistemic_status": "PROVED",
+    "statement": "For every R rho<=1 there are unit rows with common projection rho and Gram I_R, so every scalar-diagonal-centered even trace vanishes; Cycle 54 has R rho exponent -3/50."
+  },
+  "claim_boundary": "This artifact proves an abstract common-projection/PSD boundary only. It does not obstruct prime-coordinate cumulants or prove an analytic, density, or interval gain.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "endpoint_example": {
+      "R_rho": "1",
+      "all_even_centered_traces": "0",
+      "centered_gram": "0_R",
+      "common_projection_squared": "1/5",
+      "full_gram": "I_R",
+      "residual_gram_eigenvalue_constant_direction": "0",
+      "residual_gram_eigenvalue_orthogonal_direction": "1",
+      "rho": "1/5",
+      "row_count": 5
+    },
+    "penultimate_exponent": {
+      "R_rho_exponent": "-3/50",
+      "abstract_centered_trace_forced": false,
+      "status": "ABSTRACTLY_SHARP",
+      "strict_offdiagonal_trigger": "0",
+      "trigger_minus_selected_exponent": "3/50"
+    },
+    "required_new_input": "actual_prime_partition_cumulant_or_logarithmic_structure",
+    "strictly_below_example": {
+      "R_rho": "1/2",
+      "all_even_centered_traces": "0",
+      "centered_gram": "0_R",
+      "common_projection_squared": "1/10",
+      "full_gram": "I_R",
+      "residual_gram_eigenvalue_constant_direction": "1/2",
+      "residual_gram_eigenvalue_orthogonal_direction": "1",
+      "rho": "1/10",
+      "row_count": 5
+    }
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/centered_trace_boundary_v1.py",
+      "sha256": "45cdfe4816feb1e8f8e2724777e33743da4dc0302db4f7cabe8cc316e571372b"
+    },
+    "cycle54": {
+      "path": "artifacts/cycle-54-coordinatewise-bessel-ledger-v1.json",
+      "sha256": "566e0c651c7fc95cf91719094702fe35a7156821fedac688cb96a6cf1f6362e0"
+    },
+    "document": {
+      "path": "docs/cycle-55-centered-trace-v1.md",
+      "sha256": "179a7722a3cd1d5159c798c3372ed2fc0943e63d1cc1934790003b49fa015c9d"
+    },
+    "preregistration": {
+      "path": "docs/cycle-55-centered-trace-preregistration-v1.md",
+      "sha256": "ad904f4ba907562c96ffa9b200a01d1ee9b8b2e7195c57f8ed5a32d39145da6e"
+    },
+    "tests": {
+      "path": "tests/test_cycle_55_centered_trace_boundary_v1.py",
+      "sha256": "945ff0745115183c04cacd4bc023d5b5d5d91b6a8be48aaeb18fb25020efe20b"
+    }
+  },
+  "prime_cumulant_gate": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Insert actual prime-coordinate edge covariances or Cycle-51 partition cumulants before taking the trace and seek the missing 3/50."
+  },
+  "prior_context": {
+    "epistemic_status": "PROVED",
+    "prior_role": "test whether scalar diagonal centering can supply Cycle 54's missing 3/50"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_55_centered_trace_boundary_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_55_centered_trace_boundary_v1.py",
+    "write_command": "python3 proof/build_cycle_55_centered_trace_boundary_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_55_centered_trace_boundary_v1.py",
+    "sha256": "39ff7c5d9a4f40d7bdfbaf4d086963b9fe69351dff45bd9ccbb393ad31f6f7c6"
+  },
+  "status": "SEALED_SCALAR_CENTERED_TRACES_SHARP_PRIME_CUMULANT_OPEN"
+}

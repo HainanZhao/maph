@@ -1,0 +1,88 @@
+{
+  "analytic_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Use genuinely two-dimensional E14 or shifted multiplicative E15 structure on the twice-compressed residual, including the unchanged worst point."
+  },
+  "artifact_id": "cycle-76-hs-denominator-wedge-v1",
+  "claim_boundary": "This artifact closes only a strict denominator-curvature band of the Cycle-75 residual. The full two-dimensional/shifted residual, seed extraction, powered saving, density gain, and interval gain remain open.",
+  "denominator_bound": {
+    "epistemic_status": "PROVED",
+    "statement": "For fixed numerator, u=min(theta,1/10+alpha/6+theta/3); summing numerators gives alpha+u."
+  },
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "discovery_quarantine": {
+    "epistemic_status": "OBSERVED",
+    "statement": "The bounded rational-grid search located a witness only; the promoted wedge follows from the exact symbolic inequalities."
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "endpoint_tie": "(theta,kappa,alpha)=(6/25,0,9/175)",
+    "fixed_a_bound": "u=min(theta,1/10+alpha/6+theta/3)",
+    "gate": "remove the denominator HS wedge; E14/E15 remain open on the twice-compressed residual",
+    "improvement_region": "theta>3/20 and alpha<4*theta-3/5",
+    "new_witness": "(theta,kappa,alpha)=(6/25,0,0) ties Cycle 75 at 6/25 but denominator HS gives 9/50",
+    "strict_closure": "7*alpha/6+theta/3+kappa<7/50",
+    "summed_bound": "alpha+u"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/hs_denominator_wedge_v1.py",
+      "sha256": "b852de34d92d4af9afa864aaec3a82d800f603ad6eca670201a090de43750213"
+    },
+    "cycle47_source_ledger": {
+      "path": "artifacts/cycle-47-near-curve-gap-v1.json",
+      "sha256": "209dd38186cefbfad2f286b1fbc6400745425fb6fc8555bd8e06ac5547174a55"
+    },
+    "cycle75": {
+      "path": "artifacts/cycle-75-denominator-geometry-v1.json",
+      "sha256": "3dbe955aaea7dffece0b06e1e30fd9d46a7023d1d3ce438991a1dbd57c4576dd"
+    },
+    "discovery_search": {
+      "path": "discovery/search_cycle_76_hs_denominator_v1.py",
+      "sha256": "bec136c37b6dda43371a6b48f8b3f8906d9ee3940211f348fd26e8244cb42b78"
+    },
+    "document": {
+      "path": "docs/cycle-76-hs-denominator-v1.md",
+      "sha256": "8707a4635840ded15f30cbd659c4b8ec04efc449080578d7596b41bb17a449b7"
+    },
+    "preregistration": {
+      "path": "docs/cycle-76-hs-denominator-preregistration-v1.md",
+      "sha256": "8f17a6ef0bee1ede978978ba20b0e23008a0cec5085f55e23d1d7b16f1123f94"
+    },
+    "tests": {
+      "path": "tests/test_cycle_76_hs_denominator_wedge_v1.py",
+      "sha256": "3b70f07594a245717c1727f03b15acc63db330e0699afea2ff74c2f581b48bd4"
+    }
+  },
+  "new_wedge": {
+    "epistemic_status": "PROVED",
+    "statement": "On theta>3/20 and alpha<4theta-3/5, strict closure holds when 7alpha/6+theta/3+kappa<7/50.",
+    "witness": "(theta,kappa,alpha)=(6/25,0,0) improves a Cycle-75 tie at 6/25 to 9/50, margin 3/50."
+  },
+  "prior_context": {
+    "cycle47_role": "supply the checked order-three near-integer theorem and source chain",
+    "cycle75_role": "supply the combined residual and affine denominator geometry",
+    "epistemic_status": "PROVED"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_76_hs_denominator_wedge_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_76_hs_denominator_wedge_v1.py",
+    "write_command": "python3 proof/build_cycle_76_hs_denominator_wedge_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_76_hs_denominator_wedge_v1.py",
+    "sha256": "6291a0f13c8e899c9ed05a1a7f28569334413375ddd8a10c22f3d87dc0a7337f"
+  },
+  "status": "SEALED_DENOMINATOR_HS_WEDGE_CLOSED_TWOD_OR_SHIFTED_RESIDUAL_OPEN"
+}

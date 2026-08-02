@@ -1,0 +1,105 @@
+{
+  "artifact_id": "cycle-58-strict-hybrid-margin-correction-v1",
+  "claim_boundary": "This artifact corrects strict target wording only. It changes no proved Cycle 54--57 identity and proves no analytic, density, or interval gain.",
+  "correction_scope": {
+    "affected_scope": "analytic target wording in Cycles 54--57; proved algebra unchanged",
+    "epistemic_status": "PROVED"
+  },
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "below": {
+      "adjusted_trigger_minus_selected": "1/100",
+      "hybrid_saving": "1/20",
+      "original_gap": "3/50",
+      "status": "MISSES",
+      "strictly_triggers": false,
+      "with_cycle48_q_saving": true
+    },
+    "corrected_hybrid_target": "gamma>3/50 or gamma=3/50 plus an explicit non-exponent strict margin",
+    "corrected_powered_target": "gamma_q>1/5 or gamma_q=1/5 plus an explicit non-exponent strict margin",
+    "powered_tie": {
+      "adjusted_trigger_minus_selected": "0",
+      "hybrid_saving": "1/5",
+      "original_gap": "1/5",
+      "status": "TIES_NO_TRIGGER",
+      "strictly_triggers": false,
+      "with_cycle48_q_saving": false
+    },
+    "strict_surplus_example": {
+      "adjusted_trigger_minus_selected": "-1/1000",
+      "hybrid_saving": "61/1000",
+      "original_gap": "3/50",
+      "status": "STRICTLY_TRIGGERS",
+      "strictly_triggers": true,
+      "with_cycle48_q_saving": true
+    },
+    "tie": {
+      "adjusted_trigger_minus_selected": "0",
+      "hybrid_saving": "3/50",
+      "original_gap": "3/50",
+      "status": "TIES_NO_TRIGGER",
+      "strictly_triggers": false,
+      "with_cycle48_q_saving": true
+    }
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/strict_hybrid_margin_correction_v1.py",
+      "sha256": "286a502f8d96f74b4c32e93e4571fae213a939d266616fb5c522a7c070914a7f"
+    },
+    "cycle54": {
+      "path": "artifacts/cycle-54-coordinatewise-bessel-ledger-v1.json",
+      "sha256": "566e0c651c7fc95cf91719094702fe35a7156821fedac688cb96a6cf1f6362e0"
+    },
+    "cycle55": {
+      "path": "artifacts/cycle-55-centered-trace-boundary-v1.json",
+      "sha256": "50a66a5d1aea0e9173e4c23bc8bf262e0c937b162a86942e957065635c6c53ab"
+    },
+    "cycle56": {
+      "path": "artifacts/cycle-56-prime-edge-cumulant-v1.json",
+      "sha256": "3e38876a10cf4c5696b40eb69a77825569ec225566b6799f029f337cb4879d23"
+    },
+    "cycle57": {
+      "path": "artifacts/cycle-57-cumulant-support-collapse-v1.json",
+      "sha256": "c2af9b4aa7c467c6e9d795eb0c7665b9769aa9e4c6187b3c0e9a7d5d94174e8d"
+    },
+    "document": {
+      "path": "docs/cycle-58-strict-hybrid-margin-correction-v1.md",
+      "sha256": "70d58388d1859a143eb6e77606db198f9b32dbe08359f6e0349bcef1eed084a4"
+    },
+    "preregistration": {
+      "path": "docs/cycle-58-strict-hybrid-margin-correction-preregistration-v1.md",
+      "sha256": "61d6794c7d79d35d216c19605ac340584b26c03a577f3e742796d38ba7929e6d"
+    },
+    "tests": {
+      "path": "tests/test_cycle_58_strict_hybrid_margin_correction_v1.py",
+      "sha256": "b835e3c419531b3f902812bcc0bc96e4cf20c577bd0f242ea0eb131800096a5d"
+    }
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_58_strict_hybrid_margin_correction_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_58_strict_hybrid_margin_correction_v1.py",
+    "write_command": "python3 proof/build_cycle_58_strict_hybrid_margin_correction_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_58_strict_hybrid_margin_correction_v1.py",
+    "sha256": "d4906c2153bb005d04930e44fc43e1cac16b005b7e6aec562109276076b0169c"
+  },
+  "status": "SEALED_STRICT_GT_3_50_OR_ENDPOINT_MARGIN_REQUIRED",
+  "strictness_correction": {
+    "epistemic_status": "PROVED",
+    "statement": "A saving exactly 3/50 ties the strict trigger; closure needs >3/50 or an explicit endpoint margin. Standalone powered saving exactly 1/5 also ties."
+  }
+}

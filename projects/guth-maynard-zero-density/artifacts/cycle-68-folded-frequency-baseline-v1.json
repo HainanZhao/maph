@@ -1,0 +1,74 @@
+{
+  "analytic_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Recover the deficit by retaining M\u00f6bius cancellation, the exponential transport phase, or a seeded major-arc extraction."
+  },
+  "artifact_id": "cycle-68-folded-frequency-baseline-v1",
+  "claim_boundary": "This artifact proves a folded coefficient bound and generic large-sieve baseline only. It does not obstruct phase- or M\u00f6bius-sensitive estimates and proves no packet, recurrence, powered, density, or interval gain.",
+  "coefficient_folding": {
+    "epistemic_status": "PROVED",
+    "statement": "The composite-frequency coefficient is divisor-bounded, supported through X^(1+theta+kappa), and has square norm of that exponent up to subpower factors."
+  },
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "coefficient_bound": "each q'|m contributes a dyadic harmonic b-sum O(1), hence |A_m|<<tau(|m|)",
+    "folding": "A_m=sum_(q'|m) sum_(b: bq'~Q) mu(b)/b fhat_C(m/(q'bKX))",
+    "gate": "retain Mobius cancellation or exploit the exponential transport phase; coefficient folding plus a generic large sieve is insufficient",
+    "generic_baseline": "Cauchy plus the Delta^-1 separated large sieve gives X^(13/10+theta+kappa+o(1))",
+    "required_saving": "3/50+theta+kappa",
+    "square_norm": "sum_|m|<=M |A_m|^2<=M*X^o(1)",
+    "support": "|m|<<KXQ"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/folded_frequency_baseline_v1.py",
+      "sha256": "ece6a0c77348684797a82c7ffce7b421f09df687fdaf1b0b80d2a9d6bab72aca"
+    },
+    "cycle67": {
+      "path": "artifacts/cycle-67-seeded-packet-recurrence-v1.json",
+      "sha256": "85bd999fca3e1d675c0b3096a6cd287866d9e1aef227239b42b94b39ff585d02"
+    },
+    "document": {
+      "path": "docs/cycle-68-frequency-folding-v1.md",
+      "sha256": "0aed3654b6401087b9e627512b8f3d39042e76a549589d00c23274b0f3bc6ed0"
+    },
+    "preregistration": {
+      "path": "docs/cycle-68-frequency-folding-preregistration-v1.md",
+      "sha256": "6413e57cf9c803dae70ac2cea2290038d138a953257bc6cfae8de8d12db13ae2"
+    },
+    "tests": {
+      "path": "tests/test_cycle_68_folded_frequency_baseline_v1.py",
+      "sha256": "269cda8613b35be82f1ef98a83864edbbc3b32712a26dfb6be24783fa540119b"
+    }
+  },
+  "generic_baseline": {
+    "epistemic_status": "PROVED",
+    "statement": "Cauchy plus fractional-part separation gives exponent 13/10+theta+kappa, missing 31/25 by 3/50+theta+kappa."
+  },
+  "prior_context": {
+    "epistemic_status": "PROVED",
+    "prior_role": "measure the generic analytic baseline on the minor-arc primitive Poisson branch"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_68_folded_frequency_baseline_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_68_folded_frequency_baseline_v1.py",
+    "write_command": "python3 proof/build_cycle_68_folded_frequency_baseline_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_68_folded_frequency_baseline_v1.py",
+    "sha256": "95ae553192b851ad5c727ecf5abdc9620100714c81f9e4419976a8757c594f9b"
+  },
+  "status": "SEALED_FOLDED_LARGE_SIEVE_GAP_3_50_PLUS_THETA_KAPPA"
+}

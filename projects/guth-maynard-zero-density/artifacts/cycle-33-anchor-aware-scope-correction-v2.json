@@ -1,0 +1,72 @@
+{
+  "artifact_id": "cycle-33-anchor-aware-scope-correction-v2",
+  "claim_effect": "The original rank-one detector b has the required floor sqrt(rho), so its one-anchor route remains valid. Adaptive rank-J directions require an additional overlap theorem.",
+  "correction": "Anchor-span closeness yields useful recurrence only for a direction with a registered evaluation floor; multiple anchors additionally require coefficient stability.",
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "adaptive_direction_gate": "prove an evaluation floor before recurrence translation",
+    "multi_anchor": {
+      "coefficients": [
+        "100",
+        "-100"
+      ],
+      "l1_norm": "200",
+      "lesson": "anchor distance alone supplies no coefficient cap"
+    },
+    "one_anchor": {
+      "approximation_error": "1/20",
+      "coefficient": "1",
+      "evaluation_floor": "3/5",
+      "kernel_lower": "11/20"
+    },
+    "valid_direction": "original b with nu_C(b)>=sqrt(rho)"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/anchor_aware_scope_correction_v2.py",
+      "sha256": "da0c0dcd903e14b75559357f3d23fe70ae1ba09000012886b145d50ecd7932b0"
+    },
+    "cycle26": {
+      "path": "artifacts/cycle-26-detector-reconstruction-v1.json",
+      "sha256": "6082d255ea07383913f30ceb5d9835e5f902245972d208af66b95acd27dcc64e"
+    },
+    "cycle33_v1": {
+      "path": "artifacts/cycle-33-anchor-aware-correction-v1.json",
+      "sha256": "6594393b00ff39f98b85d8eb1027dbf85187c6772ef97d9616d14a3a580b654d"
+    },
+    "document": {
+      "path": "docs/cycle-33-anchor-aware-scope-correction-v2.md",
+      "sha256": "64310900af26b85fa848fe9be2348621fc4a0f55f91e606aaa79074395833e18"
+    },
+    "preregistration": {
+      "path": "docs/cycle-33-anchor-aware-correction-preregistration-v2.md",
+      "sha256": "b9536c1e886ad82e3959cc942e2fd4f5fa877c515f299f31b9873921248e9b60"
+    },
+    "tests": {
+      "path": "tests/test_cycle_33_anchor_aware_scope_correction_v2.py",
+      "sha256": "52ef19bc5614329a1730f399a8f4aa860256a897c433418451110d3faf093642"
+    }
+  },
+  "prior_context": {
+    "epistemic_status": "PROVED",
+    "v1_effect": "actual-prime witness retained; recurrence scope restricted to directions with an evaluation floor and stable anchor coefficients"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_33_anchor_aware_scope_correction_v2.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_33_anchor_aware_scope_correction_v2.py",
+    "write_command": "python3 proof/build_cycle_33_anchor_aware_scope_correction_v2.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_33_anchor_aware_scope_correction_v2.py",
+    "sha256": "3fcbb6dab82f0d34e2c8f33b11c44071b2fe4fe795c7f62d9af9dae67c649d83"
+  },
+  "status": "SEALED_ANCHOR_RECURRENCE_EVALUATION_STABILITY_CORRECTION"
+}

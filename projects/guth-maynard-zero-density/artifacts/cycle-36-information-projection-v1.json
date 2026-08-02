@@ -1,0 +1,125 @@
+{
+  "artifact_id": "cycle-36-information-projection-v1",
+  "claim_boundary": "This artifact proves an exact information-projection decomposition and scoped first-harmonic saturation. It does not control entropy excess or joint von Mises rigidity on prime rows, prove the kernel count, improve density, or improve intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "bessel_series": {
+      "I0_kappa_0_2_4_6": [
+        "1",
+        "1/4",
+        "1/64",
+        "1/2304"
+      ],
+      "I1_kappa_1_3_5_7": [
+        "1/2",
+        "1/16",
+        "1/384",
+        "1/18432"
+      ],
+      "kappa_r_1_3_5_7": [
+        "2",
+        "1",
+        "5/6",
+        "19/24"
+      ],
+      "mean_kappa_1_3_5_7": [
+        "1/2",
+        "-1/16",
+        "1/96",
+        "-11/6144"
+      ],
+      "rate_r_2_4_6": [
+        "1",
+        "1/4",
+        "5/36"
+      ],
+      "second_harmonic_r_2": [
+        "1/2"
+      ]
+    },
+    "exponent_match": {
+      "count": "21/25",
+      "cycle19_popular_kernel": "2/5",
+      "determinant_leading": "6/25",
+      "information_leading": "6/25",
+      "information_quadratic_error": "-9/25",
+      "rho": "-3/5",
+      "von_mises_second_harmonic_kernel": "2/5"
+    },
+    "pythagorean": {
+      "constraint": "sum_j q_j c_j=sum_j qstar_j c_j=r",
+      "excess": "E(q)=D(q||qstar)>=0",
+      "identity": "D(q||u)=D(qstar||u)+D(q||qstar)",
+      "pinsker_rigidity": "||q-qstar||_1<=sqrt(2E(q))",
+      "projection": "log(qstar_j/u_j)=kappa*c_j-log(Z)"
+    }
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/information_projection_v1.py",
+      "sha256": "bffc26fb3a7a394d4c4b4469497aa935c1204e8151a71595710d63a8cf5fee4c"
+    },
+    "cycle19": {
+      "path": "artifacts/cycle-19-synchronization-graph-v1.json",
+      "sha256": "3c68ee97a31f7a7cb2612769f58c2645b4a58332aeceaa856d7082de635aeb63"
+    },
+    "cycle20": {
+      "path": "artifacts/cycle-20-exterior-volume-v1.json",
+      "sha256": "5d647c7ccd850cdae77cb04bb5287d175cb210f1d546ab5f5341b50c4f185b5c"
+    },
+    "cycle35": {
+      "path": "artifacts/cycle-35-kernel-engine-ledger-v1.json",
+      "sha256": "cedc4cce7699fa02db9cabe2346286aac3eabd4f82e4559d4f0263c268cdce3e"
+    },
+    "document": {
+      "path": "docs/cycle-36-information-projection-v1.md",
+      "sha256": "d88cff80b85a2e45eb9b3675fd3978e62c506904369c1a4fcadd6f517b4e5f21"
+    },
+    "preregistration": {
+      "path": "docs/cycle-36-information-projection-preregistration-v1.md",
+      "sha256": "3cd926401f4bfb69a1140e0419d2de876723ecf6f94e4cef6387807be62a074b"
+    },
+    "tests": {
+      "path": "tests/test_cycle_36_information_projection_v1.py",
+      "sha256": "c907f715240f6888d8c300ccf46b36327bb1e045d463691d3d84cd8b361120e1"
+    }
+  },
+  "information_projection": {
+    "epistemic_status": "PROVED",
+    "statement": "D(q||u)=J(r)+E(q), with E(q)=D(q||qstar)>=0 and J(r)=r^2+r^4/4+5r^6/36+O(r^8)."
+  },
+  "prior_context": {
+    "epistemic_status": "PROVED",
+    "prior_role": "compare the Cycle 35 entropy budget with sharp Cycle 20 volume and Cycle 19 second-harmonic scales"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_36_information_projection_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_36_information_projection_v1.py",
+    "write_command": "python3 proof/build_cycle_36_information_projection_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "rigidity_boundary": {
+    "epistemic_status": "PROVED",
+    "statement": "Quadratically tiny excess returns the von Mises second harmonic at unnormalized scale X^(2/5), exactly the Cycle 19 popular-kernel scale; only excess entropy or joint rigidity is new."
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "scoped_saturation": {
+    "epistemic_status": "PROVED",
+    "statement": "At k=X^(21/25), r^2=X^(-3/5), kJ(r) and the sharp common-projection negative log determinant both have leading constant one at scale X^(6/25)."
+  },
+  "sealer": {
+    "path": "proof/build_cycle_36_information_projection_v1.py",
+    "sha256": "ef0b9d523c29cf2c63a0fefc3eae2bb47b295dbadd42186a9415c5e886bdaf4e"
+  },
+  "status": "SEALED_FIRST_HARMONIC_ENTROPY_DETERMINANT_EQUIVALENCE_EXCESS_OPEN"
+}

@@ -1,0 +1,93 @@
+{
+  "artifact_id": "cycle-23-residual-spectral-shift-v1",
+  "claim_boundary": "This artifact proves an exact common-direction residual factorization and shift/leverage dichotomy. It does not bound prime residual leverage, exclude the singular branch, prove the skeleton target, improve density, or improve intervals.",
+  "critical_dichotomy": {
+    "critical_scale": "k rho=X^(6/25)",
+    "epistemic_status": "PROVED",
+    "large_leverage": "Avoiding shift below -c k rho forces L>=exp((1-c)k rho)-1.",
+    "singular_branch": "RESIDUAL_SINGULAR retained separately",
+    "small_leverage": "L<=exp(epsilon k rho) forces residual spectral shift <=-(1-epsilon)k rho+log 2."
+  },
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "critical_exponents": {
+      "inverse_leverage_log_scale": "6/25",
+      "k_rho": "6/25",
+      "rho": "-3/5",
+      "rows": "21/25"
+    },
+    "determinant_identity": "det(H)/det(B)=product_t(1-rho_t)[1+s*B^-1s]",
+    "finite_diagonal_residual": {
+      "determinant_ratio": "189/256",
+      "direct_determinant": "189/256",
+      "direct_residual_eigenvalue": "3/4",
+      "direct_top_eigenvalue": "7/4",
+      "inverse_leverage": "4/3",
+      "k": 4,
+      "normalized_residual_B_diagonal": "1",
+      "product_factor": "81/256",
+      "residual_diagonal": "3/4",
+      "rho": "1/4"
+    },
+    "large_leverage_branch": "shift>-c k rho implies L>=exp((1-c)k rho)-1",
+    "residual_identity": "Z=H-qq*=U(I-aa*/A)U*/M",
+    "singular_branch": "if Z is singular, record RESIDUAL_SINGULAR and do not invoke B^-1",
+    "small_leverage_branch": "L<=exp(epsilon k rho) implies shift<=-(1-epsilon)k rho+log 2"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/residual_spectral_shift_v1.py",
+      "sha256": "a07efce513817a0da9878b7c58371990a1abd3026dc09d79ab85f43f737ee347"
+    },
+    "cycle22": {
+      "path": "artifacts/cycle-22-volume-noise-v1.json",
+      "sha256": "e75e69e9d8b770de14aa4c567a598ae60779b31c790b5714745c03068ce8f9cc"
+    },
+    "document": {
+      "path": "docs/cycle-23-residual-spectral-shift-v1.md",
+      "sha256": "dfebcc67148db74ca954095669a9f6ad55b3c87a8169dd48c91511b652d6e008"
+    },
+    "preregistration": {
+      "path": "docs/cycle-23-residual-spectral-shift-preregistration-v1.md",
+      "sha256": "a0a58e9f030c233a82938de0392b69a06242eb0524be4d0b940d67b22f19e19c"
+    },
+    "tests": {
+      "path": "tests/test_cycle_23_residual_spectral_shift_v1.py",
+      "sha256": "b73082f8b7d7a5f56620b5c68ee5fed39e986fdff8b418176d56f2b196350a57"
+    }
+  },
+  "prime_gate": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Exclude exponentially large inverse leverage and the residual-singular branch for actual separated prime rows, or show their structure feeds E10 detector surgery."
+  },
+  "prior_context": {
+    "cycle22_role": "motivation and scale boundary for canonical residual subtraction",
+    "epistemic_status": "PROVED"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_23_residual_spectral_shift_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_23_residual_spectral_shift_v1.py",
+    "write_command": "python3 proof/build_cycle_23_residual_spectral_shift_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "residual_factorization": {
+    "epistemic_status": "PROVED",
+    "statement": "With Z=H-qq*, D^2=diag(Z), B=D^-1ZD^-1, and s=D^-1q, det(H)/det(B)=product(1-rho_t)(1+s*B^-1s)."
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_23_residual_spectral_shift_v1.py",
+    "sha256": "8af280df4020bae597c86f61481a4d0df8ec8c605fd7b5cfc9e4be80cae3aef8"
+  },
+  "status": "SEALED_RESIDUAL_SPECTRAL_SHIFT_INVERSE_LEVERAGE_DICHOTOMY_PRIME_GATE_OPEN"
+}

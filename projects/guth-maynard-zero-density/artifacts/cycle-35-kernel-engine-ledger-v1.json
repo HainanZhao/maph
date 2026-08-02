@@ -1,0 +1,113 @@
+{
+  "artifact_id": "cycle-35-kernel-engine-ledger-v1",
+  "claim_boundary": "This artifact proves exact sufficient ledgers and a finite phase-histogram entropy lemma. It does not prove hollow fractional restriction, sifted curvature, entropy accumulation, the kernel count, a density gain, or an interval gain.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "curvature": {
+      "aggregate_correlation": "139/100",
+      "boundary_count": "1/100",
+      "diagonal": "1",
+      "kernel": "139/200",
+      "kernel_square": "139/100",
+      "time": "61/100"
+    },
+    "histogram_pinsker": {
+      "arc_error": "1/20",
+      "bias": "1/10",
+      "coarse_entropy_lower": "1/800",
+      "entropy_lower": "1/800",
+      "l1_lower": "1/20"
+    },
+    "hollow_fractional": {
+      "coherent_zero": "24/5",
+      "global_bound": "24/5",
+      "required_saving": "3/5",
+      "target_bound": "21/5",
+      "threshold_mass": "84/25"
+    },
+    "phase_entropy": {
+      "arc_count": "3/10",
+      "normalized_bias": "-3/10",
+      "per_row_entropy": "-3/5",
+      "residual_shift_match": "6/25",
+      "target_accumulation_budget": "6/25"
+    },
+    "scale": {
+      "height": "12/5",
+      "mass": "1",
+      "spacing": "3/5",
+      "target_count": "21/25",
+      "threshold": "7/10"
+    }
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/kernel_engine_ledger_v1.py",
+      "sha256": "2b6cae8144aea03c6602d2357031023c7f9c66f2047c11a0950a626b14f81a34"
+    },
+    "cycle20": {
+      "path": "artifacts/cycle-20-exterior-volume-v1.json",
+      "sha256": "5d647c7ccd850cdae77cb04bb5287d175cb210f1d546ab5f5341b50c4f185b5c"
+    },
+    "cycle23": {
+      "path": "artifacts/cycle-23-residual-spectral-shift-v1.json",
+      "sha256": "605e7a3eb5ac5b4e342b512e4465762d43b1b919051e4dafd01058e7ae14121b"
+    },
+    "cycle34": {
+      "path": "artifacts/cycle-34-stable-anchor-kernel-v1.json",
+      "sha256": "0390c0f9ce57deccfee89e2fa3632c9a0e217818f9d7b94ddbe5960ead63c4a1"
+    },
+    "document": {
+      "path": "docs/cycle-35-kernel-engine-ledger-v1.md",
+      "sha256": "0a2411dc15faf13ab0cef6c68da8530eeab5cda0891e11b67dc22a3e0d5afe46"
+    },
+    "preregistration": {
+      "path": "docs/cycle-35-kernel-engine-ledger-preregistration-v1.md",
+      "sha256": "9cd11dcfa8c0275c8066a85e30977f9036593aa52a769b6fc81c92e3f3333b1f"
+    },
+    "tests": {
+      "path": "tests/test_cycle_35_kernel_engine_ledger_v1.py",
+      "sha256": "7e884e41a0e2334ae560b2bfeb3877a83c762340effc89cfa9bd97367a4c0f0e"
+    }
+  },
+  "hollow_fractional": {
+    "epistemic_status": "PROVED",
+    "statement": "An off-origin separated 24/5 moment bound X^(21/5+o(1)) implies the target; it saves exactly the spacing exponent 3/5 over the global scale."
+  },
+  "phase_entropy": {
+    "accumulation_input": "CONJECTURED",
+    "epistemic_status": "PROVED",
+    "statement": "Each threshold row has coarse histogram divergence at least delta^2/8; the target total exponent is 6/25, exactly matching the sealed residual volume/shift scale."
+  },
+  "prior_context": {
+    "epistemic_status": "PROVED",
+    "prior_role": "unweighted kernel target plus independently sealed 6/25 volume and shift scales"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_35_kernel_engine_ledger_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_35_kernel_engine_ledger_v1.py",
+    "write_command": "python3 proof/build_cycle_35_kernel_engine_ledger_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_35_kernel_engine_ledger_v1.py",
+    "sha256": "c5152aac26d94eaf12266ddf1bfa1722085e0e97bf97c0136d60018685b21d56"
+  },
+  "sieve_curvature": {
+    "epistemic_status": "PROVED",
+    "prime_input": "CONJECTURED",
+    "statement": "The aggregate shifted-prime correlation bound X^(2+o(1))/|t| implies a pointwise power saving above X^(3/5+eta); the analogous unrestricted integer estimate follows from first derivatives only at low time."
+  },
+  "status": "SEALED_THREE_KERNEL_REDUCTIONS_ENTROPY_VOLUME_MATCH"
+}

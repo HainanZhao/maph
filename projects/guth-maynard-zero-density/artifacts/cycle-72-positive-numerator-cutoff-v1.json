@@ -1,0 +1,74 @@
+{
+  "analytic_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Apply a two-variable oscillatory estimate on the residual atlas with only X^theta determinant loss."
+  },
+  "artifact_id": "cycle-72-positive-numerator-cutoff-v1",
+  "claim_boundary": "This artifact sharpens the primitive endpoint and Hessian loss only. It proves no two-variable sum, full packet, recurrence, powered, density, or interval gain.",
+  "curvature_improvement": {
+    "epistemic_status": "PROVED",
+    "statement": "The factored stationary Hessian is at least X^(-theta-o(1)), superseding the nonsharp Cycle-70 loss X^(-9/25-kappa)."
+  },
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "ell_exponent": "lambda>=3/5-theta",
+    "gate": "apply the factored two-variable estimate with determinant loss X^theta on q>1 cells",
+    "hessian_lower": "exp(4pi*x)-1>>X^(-theta-o(1))",
+    "primitive_cutoff": "a>=1 implies q*alpha_ell>=1-o(1), hence ell>>Delta/q",
+    "q1_exception": "a=0 is reduced only for q=1 and is a constant-size denominator branch",
+    "stationary_ratio": "x=ell/Delta>>1/q=X^(-theta+o(1))",
+    "supersession": "Cycle70 loss X^(9/25+kappa) remains valid but is replaced strategically by X^theta"
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/positive_numerator_cutoff_v1.py",
+      "sha256": "ae5a68f3d5e2e7868e28a4978fb58397f3571ecd568b33ca9aedc496371241db"
+    },
+    "cycle71": {
+      "path": "artifacts/cycle-71-fraction-budget-wedge-v1.json",
+      "sha256": "f6711801f4f6b521a801933d6cfe596f2953821a56daa6baab206cb27557ef35"
+    },
+    "document": {
+      "path": "docs/cycle-72-positive-numerator-v1.md",
+      "sha256": "a63580381ce82e6dc9d33ad9fee15d984dccb3e588f6d1de9abd89247c3bb9fe"
+    },
+    "preregistration": {
+      "path": "docs/cycle-72-positive-numerator-preregistration-v1.md",
+      "sha256": "7c855f3b4080212623ddbeee769c55611dcba43ce5eea9b98b50928e9a646ca8"
+    },
+    "tests": {
+      "path": "tests/test_cycle_72_positive_numerator_cutoff_v1.py",
+      "sha256": "9d3249120a1c9f7fae7191bdbe5c9c41f0bdf54af6272847d01fa77da77a8d1f"
+    }
+  },
+  "positive_numerator": {
+    "epistemic_status": "PROVED",
+    "statement": "For q>1, primitivity excludes a=0; packet accuracy then forces ell>>Delta/q."
+  },
+  "prior_context": {
+    "epistemic_status": "PROVED",
+    "prior_role": "sharpen the curvature loss on the residual fraction-budget atlas"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_72_positive_numerator_cutoff_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_72_positive_numerator_cutoff_v1.py",
+    "write_command": "python3 proof/build_cycle_72_positive_numerator_cutoff_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_72_positive_numerator_cutoff_v1.py",
+    "sha256": "1498cdd8abe50cbbe2c2076c87097ce4116a6c2245abbe302e47cbc1b431891e"
+  },
+  "status": "SEALED_FACTORED_CURVATURE_LOSS_XTHETA_ON_RESIDUAL_ATLAS_OPEN"
+}
