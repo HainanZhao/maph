@@ -1,0 +1,53 @@
+{
+  "claim_boundary": "This exact result constructs only a normalized wild leading-residue character and its frozen finite F3 pairing with Artin exponents. It proves no regulator equality, coefficient map, AFK interface, fusion theorem, transport operation, or TCC identity.",
+  "epistemic_status": "PROVED",
+  "gate_outcome": {
+    "disallowed_pseudo_progress": [
+      "changing the uniformizer or residue normalization",
+      "changing the pairing after anchor inspection",
+      "calling a local pairing an AFK or coefficient interface"
+    ],
+    "local_pairing": "ORIENTATION_SENSITIVE_ANCHOR_DISTINGUISHING",
+    "next_engine": "test whether this fixed local pairing can define a transport compatible with the full 36-row torsor without fitting the defect"
+  },
+  "leading_residue": {
+    "c_h": 2,
+    "c_h_squared": 1,
+    "delta_relation": "delta=-c_h in F3",
+    "g_action_on_c_h": 2,
+    "generator_law": "c_(h^2)=2*c_h in F3",
+    "h_action_on_c_h": 2,
+    "oriented_difference_delta": 1,
+    "wild_generator": "h=g^2"
+  },
+  "pairing": {
+    "anchor_g1": {
+      "ray_label": "(3,5)->g^1",
+      "value": 2
+    },
+    "anchor_g2": {
+      "ray_label": "(3,4)->g^2",
+      "value": 1
+    },
+    "anchors_distinct_nonzero": true,
+    "definition": "B(a,b)=(a mod 3)(b mod 3)c_h in F3",
+    "matrix_a_rows_b_columns": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        1
+      ],
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  "schema": "sic-stark-cycle-175-leading-residue-pairing-prototype-v1"
+}

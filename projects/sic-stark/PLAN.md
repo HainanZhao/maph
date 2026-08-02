@@ -10,10 +10,10 @@
   scopes in dimensions 4, 5, 7, and 8. No dimension-six TCC identity,
   coefficient-to-ray map, fusion-continuity theorem, or boundary-limit theorem
   is proved. `CERTIFIED_NUMERICAL` packet growth is not a nonexistence theorem.
-- Current state: Cycle 174 / `B012` derives the complete local ramification
-  filtration and constructs the first orientation-sensitive quotient
-  `O_L/P^4`. Cycle 175 / `B013` must derive its normalized leading residue
-  and test a frozen local pairing against the two anchors.
+- Current state: Cycle 175 / `B013` derives a frozen F3-valued wild
+  leading-residue pairing with distinct nonzero values on the two anchors.
+  Cycle 176 / `B014` must test an outcome-blind all-36-row map into this
+  pairing before any transport claim.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -26,8 +26,8 @@
 ## Budget, accounting, and stop condition
 
 - Total forward budget: 200 substantive research cycles, counted `B001/200`
-  through `B200/200`; the counter is currently `B012/200`.
-- Cycle 175 is `B013`. Repository cycle numbers and budget ordinals advance
+  through `B200/200`; the counter is currently `B013/200`.
+- Cycle 176 is `B014`. Repository cycle numbers and budget ordinals advance
   together unless a non-counted record intervenes; the budget ordinal is the
   authoritative campaign counter.
 - A cycle counts only when it is a preregistered substantive research block
@@ -112,6 +112,11 @@
   quotient distinguishing `g` from `g^-1`. This is an oriented local
   quotient only, not a regulator or interface. See
   `artifacts/cycle-174-deeper-local-action-v1.json`.
+- `PROVED`: Cycle 175 extracts the wild leading coefficient `c_(g^2)=2` in
+  `F3`, with `c_(g^4)=1=2c_(g^2)` and oriented difference `-c_(g^2)=1`.
+  Its frozen bilinear local pairing gives the two anchors `g^1,g^2` the
+  distinct values `2,1`. This is local finite data only. See
+  `artifacts/cycle-175-leading-residue-pairing-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -172,7 +177,8 @@ Budget B001--B200
   |    |                                                 `-- first graded Artin action [ORIENTATION-BLIND]
   |    |                                                      `-- explicit deeper local action / break [SEALED]
   |    |                                                           `-- orientation-sensitive O/P^4 quotient [SEALED]
-  |    |                                                                `-- leading residue + local pairing [NEXT GATE]
+  |    |                                                                `-- leading residue + local pairing [SEALED]
+  |    |                                                                     `-- outcome-blind 36-row transport test [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -217,17 +223,16 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `B012_OF_200` | Seal Cycle 175 as `B013`, then increment only for substantive research blocks. | Counting workflow or archive-only work. |
-| D6 interface | `ORIENTATION_SENSITIVE_LOCAL_QUOTIENT_CONSTRUCTED_LEADING_RESIDUE_REQUIRED` | Derive the normalized leading residue of `(g(pi)-g^-1(pi))/pi^3`, its generator behavior, and a frozen pairing against both anchors. | Treating only a valuation as a pairing; fitting transport from the defect; treating local data as a logarithm map. |
+| Project budget | `B013_OF_200` | Seal Cycle 176 as `B014`, then increment only for substantive research blocks. | Counting workflow or archive-only work. |
+| D6 interface | `LOCAL_ANCHOR_PAIRING_CONSTRUCTED_36_ROW_TRANSPORT_TEST_REQUIRED` | Define an outcome-blind all-36-row map into the frozen local pairing and test totality, T-transport compatibility, and both anchors. | Changing the pairing; fitting row assignments from outcomes; treating local data as a logarithm map. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- What is the normalized leading residue of the first oriented local
-  difference, how does it transform under `g`, and can its frozen pairing
-  preserve both anchors?
+- Can an outcome-blind map from all 36 multiplier rows into the frozen local
+  pairing preserve totality, T-transport, and both anchors?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -236,24 +241,23 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 175 / `B013`
+## Next goal: Cycle 176 / `B014`
 
 Preregister one substantive block with this question:
 
-> What is the normalized leading residue of
-> `(g(pi)-g^-1(pi))/pi^3 mod P`, how does it transform under the oriented
-> generator, and can its local pairing preserve both frozen anchors?
+> Can a frozen outcome-blind map from all 36 multiplier rows into the local
+> `F3` pairing preserve totality, `T`-transport, and both labelled anchors?
 
-Cycle 175 must freeze the uniformizer normalization, residue identification,
-generator action, pairing family, anchors, and failure rule before executable
-work. No post-result residue normalization, defect-fitted transport, or
-orientation-free pairing advances the gate.
+Cycle 176 must freeze the row-source data, map family, outcome-blind selector,
+transport convention, anchors, and failure rule before executable work. No
+post-result row assignments, defect-fitted transport, or changed pairing
+advances the gate.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 174
+research cycle 175
 sed -n '1,260p' PLAN.md
-python3 proof/build_cycle_174_deeper_local_action_v1.py --check
+python3 proof/build_cycle_175_leading_residue_pairing_v1.py --check
 ```
