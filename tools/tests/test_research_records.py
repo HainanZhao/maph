@@ -23,5 +23,9 @@ class ResearchRecordsTest(unittest.TestCase):
                 con.execute("SELECT status FROM artifacts WHERE cycle_number = 151").fetchone()[0],
                 "SEALED_GCD_WEIGHTED_NEGATIVE_TAIL_LOBE_OR_BOUNDARY_OPEN",
             )
+            status = research_records.render_status(con)
+            self.assertIn("## Cold-start handoff", status)
+            self.assertIn("No improved zero-density coefficient", status)
+            self.assertIn("research cycle 151", status)
             self.assertEqual(research_records.check(con), 0)
             con.close()

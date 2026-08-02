@@ -6,6 +6,29 @@
   "legacy_exceptions_path": "research_index_legacy_exceptions.json",
   "cycle_pattern": "^cycle-(\\d+)(?:-|$)",
   "status_title": "Research status (generated)",
+  "cold_start_handoff": {
+    "project_outcome": {
+      "epistemic_status": "PROVED",
+      "statement": "No improved zero-density coefficient, prime-interval endpoint, or L-function-family transfer is proved. The checked baseline remains density coefficient 30/13, with uniform and almost-all interval endpoints 17/30 and 2/15."
+    },
+    "why_active_gate_matters": {
+      "epistemic_status": "PROVED",
+      "statement": "Within the explored coefficient-sensitive lower signed-alias route, smooth-halo anti-alignment can survive only through simultaneous lcm resonance, gcd-weighted capacity, and a negative tail-transform lobe. Bounding that population or classifying its divisor-fan extremizers is the present route to a genuine signed estimate."
+    },
+    "progress_criterion": {
+      "epistemic_status": "CONJECTURED",
+      "statement": "Cycle 152 advances E14D-L only with either a strict weighted bound on a nonempty, explicitly frozen denominator region or a proved explicit divisor-fan inverse; a heuristic cancellation, a scalar collision bound, or isolated endpoint norm aggregation does not advance the gate."
+    },
+    "deferred_work": "Boundary denominators within a fixed power of Q are a separate branch; paper-stage hostile audit begins only after a manuscript theorem is frozen.",
+    "start_commands": [
+      "source ../../tools/dev-env.sh",
+      "research rebuild",
+      "research check",
+      "research cycle 151",
+      "research search gcd-weighted",
+      "python3 proof/build_cycle_151_sampled_comb_double_poisson_v1.py --check"
+    ]
+  },
   "query_examples": [
     "python /root/projects/maph/tools/research_records.py --project research-records.json cycle 151",
     "python /root/projects/maph/tools/research_records.py --project research-records.json search negative-tail",
