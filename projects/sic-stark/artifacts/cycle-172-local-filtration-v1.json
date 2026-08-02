@@ -1,0 +1,80 @@
+{
+  "artifact_id": "cycle-172-local-filtration-v1",
+  "budget_ordinal": "B010",
+  "claim_boundary": "This exact result extracts only local decomposition and first principal-unit quotient data at 3 for the pinned ray field. It defines no local Artin module, regulator equality, coefficient map, AFK interface, Stark identity, fusion theorem, or TCC identity.",
+  "cycle": 172,
+  "epistemic_status": "PROVED",
+  "exact_prototype": {
+    "base_prime_e": 2,
+    "base_prime_f": 1,
+    "first_principal_unit_quotient_order": 3,
+    "ray_group": "C6",
+    "ray_prime_e": 12,
+    "ray_prime_f": 1,
+    "relative_ramification_e": 6,
+    "source_output": "discovery/cycle-172-local-filtration-prototype-v1.json",
+    "wild_subgroup": "C3=<g^2>"
+  },
+  "frozen_hashes": {
+    "instructions": {
+      "path": "AGENTS.md",
+      "sha256": "363495f0dbbe93e244b460c8eafb13247a8fb1f41be24f94c037ae9f6400c6f2"
+    },
+    "output": {
+      "path": "discovery/cycle-172-local-filtration-prototype-v1.json",
+      "sha256": "b27b71377884229d21661bd47de1c78e1e8df631c2867173801f52a11a27cb7d"
+    },
+    "prereg": {
+      "path": "docs/cycle-172-local-filtration-preregistration-v1.md",
+      "sha256": "f15fad9dc3ae315970eb2684829ba65e69fe15a0c0e108e86cf9270ef3a1c96d"
+    },
+    "prior": {
+      "path": "artifacts/cycle-171-wild-c3-module-v1.json",
+      "sha256": "9e9ed986998d28e6cb0ab863719636b86371195f70186528521c4b7852c74592"
+    },
+    "replay": {
+      "path": "proof/verify_cycle_172_local_filtration.py",
+      "sha256": "f60b157db8de7e2895b0a93ac73b89a4708af16552a872caded20ef15d0fc557"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    }
+  },
+  "gate_outcome": {
+    "d6_interface": "LOCAL_FILTRATION_EXTRACTED_ARTIN_ACTION_REQUIRED",
+    "remaining_bottleneck": "Derive the oriented local Artin action on the extracted filtration; do not choose its coefficient module."
+  },
+  "outcome": {
+    "epistemic_status": "PROVED",
+    "statement": "Exact local 3-adic decomposition and first graded unit quotient were extracted for the pinned ray field."
+  },
+  "preregistration_preflight": {
+    "cycle": 172,
+    "manifest_sha256": "f15fad9dc3ae315970eb2684829ba65e69fe15a0c0e108e86cf9270ef3a1c96d",
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Cycle 173/B011: derive the oriented local Artin action on the first 3-adic ray-unit quotient."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_172_local_filtration_v1.py --check",
+    "preflight_command": "research prereg check docs/cycle-172-local-filtration-preregistration-v1.md --expected-cycle 172 --allow-head-drift",
+    "prototype_command": "python3 proof/verify_cycle_172_local_filtration.py --output discovery/cycle-172-local-filtration-prototype-v1.json",
+    "write_command": "python3 proof/build_cycle_172_local_filtration_v1.py --write"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_172_local_filtration_v1.py",
+    "sha256": "3d58a4fe5fbb8dc6c27b7be7f2d7b75d33b60ccf13c45062d72379b84a153a59"
+  },
+  "status": "SEALED_RQ000692_LOCAL_FILTRATION_DATA"
+}
