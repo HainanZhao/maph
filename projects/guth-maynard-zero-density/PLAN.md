@@ -219,9 +219,11 @@ Cycle 162, preregistered at
 it retains a fixed share of the conditional forced excess in a dyadic
 high-codegree layer and exports either globally massed positive-real
 four-cycle mass or literal weighted labelled oriented-star mass. Next
-authorized action is a companion-selected, label-preserving coordinate
-pullback of one arm through `z_(d,q)=c0q exp(2pi d/D)`; it must either produce
-a rational/curvature inverse or an admissible labelled obstruction. Cycle
+authorized action is Cycle 163, preregistered at
+`docs/cycle-163-star-wrap-fiber-preregistration-v1.md`: pull back the
+weighted star family through `z_(d,q)=c0q exp(2pi d/D)` by the exact
+wrap/fiber effective-degree factorization, producing a common-wrap log web
+or explicit wrap-complexity inverse. Cycle
 158's concentration theorem remains deferred until a selector
 is real rather than formal. The older
 Cycle-155 partition remains a parallel output only if it is actual and
