@@ -1,0 +1,57 @@
+{
+  "artifact_id": "cycle-189-temporary-archive-v1",
+  "claim_boundary": "This is a replayable handoff, not an analytic advance.",
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "cycle184_correction": {
+      "path": "artifacts/cycle-184-phase-shift-correction-v1.json",
+      "sha256": "2509f737c60a9e2a71bb640a1567676beb7dfe68db33c08a9257924b0259fa89"
+    },
+    "cycle185_correction": {
+      "path": "artifacts/cycle-185-three-label-curvature-convention-correction-v1.json",
+      "sha256": "aa00a6f2da56eeaeab6fb765333fce696bb085f6e91df4d240d881bb99303a1e"
+    },
+    "cycle186": {
+      "path": "artifacts/cycle-186-actual-curve-convexity-v1.json",
+      "sha256": "7b73391ad91bed211c0c99e86fdc6857edb8f56d34a24c6f06cf05555d723422"
+    },
+    "cycle187": {
+      "path": "artifacts/cycle-187-separated-packing-v1.json",
+      "sha256": "4e2e7da78462809a4e2d31caf3dc0fcc0e20c62f7738a2b7cce5d0e0b2cb7bae"
+    },
+    "cycle188": {
+      "path": "artifacts/cycle-188-nonrational-root-tower-v1.json",
+      "sha256": "9528d0a62652a840e5daeeb0695d9749ca2a5e3fbafb08e065bf976c73846ffe"
+    },
+    "document": {
+      "path": "docs/cycle-189-temporary-archive-v1.md",
+      "sha256": "add7d72b2c520649187fbc5e170e444142fca9112b13f54a27d4847b6d6b4267"
+    },
+    "preregistration": {
+      "path": "docs/cycle-189-temporary-archive-preregistration-v1.md",
+      "sha256": "01f1a1922483bf70922b9d6ef89e0cf0d6e286bed720b700d6405b536829f84c"
+    },
+    "restart_archive": {
+      "path": "archive/TEMPORARY_RESTART_POINT-cycle-189.md",
+      "sha256": "5129f18692adb6b3a3fc8afac0ee894584dde7b7a2b6195271e775acfd7ed051"
+    }
+  },
+  "replay": {
+    "archive": "cat archive/TEMPORARY_RESTART_POINT-cycle-189.md",
+    "check_command": "python3 proof/build_cycle_189_temporary_archive_v1.py --check"
+  },
+  "restart_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Global actual-exponential distribution across separated labels and denominator windows."
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_189_temporary_archive_v1.py",
+    "sha256": "99167f0bc6a47cc2d8866ae33240a70c8d902a9dd07d0692cc2150bfdedb7664"
+  },
+  "status": "SEALED_TEMPORARY_RESTART_ARCHIVE"
+}

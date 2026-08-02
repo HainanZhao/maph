@@ -6,9 +6,9 @@ Canonical evidence is the Git-tracked per-cycle artifact and its linked files; `
 ## Cold-start handoff
 
 - Project outcome (PROVED): No improved zero-density coefficient, prime-interval endpoint, or L-function-family transfer is proved. The checked baseline remains density coefficient 30/13, with uniform and almost-all interval endpoints 17/30 and 2/15.
-- Why the active gate matters (PROVED): Cycles 177--184 separate the diagonal mechanisms exactly: Cycle 177 saturates raw beta-free pairs, Cycle 178 routes heavy fixed-beta fibres to seeded packets, Cycle 179 excludes exact-rational beta-zero towers, Cycle 180 excludes low-product rectangles, Cycle 181 exactifies common rational-intercept packets, Cycle 182 makes every participating fibre a primitive rational-line segment, Cycle 183 retains a critical packet in one populated seven-field primitive-ray box, and Cycle 184 proves the pairwise LCM resonance adds no independent error and gives a subcritical nonrational local deformation. The active bottleneck is now population-sensitive compatibility across labels/boxes—not raw pairs, same-label packets, exact-rational towers, low-product rectangles, a packet/line/box partition, or an LCM-only identity.
-- Progress criterion (CONJECTURED): By the Cycle-216 gate, the project must either prove a coefficient-preserving population-compatible primitive-ray-box estimate yielding a strict direct triple-census margin, force an aggregate heavy-packet-to-E7/E9 seeded recurrence, or delimit a materially larger genuinely critical nonrational primitive-ray-box saturation class. Cycles 177--184 already dispose of raw pairs, individual heavy fibres, exact-rational towers, low products, beta-free ambiguity, unstructured fibre multiplicity, unpopulated box interfaces, and LCM-only two-orbit compression; another such result or a finite transport/interface classifier without actual population is non-progress. If no viable mechanism survives, promote E11/E12 and target a complete-form saving strictly greater than 3/50. Cycle 500 is the hard terminal project cap.
-- Explicitly deferred: The raw beta-free pair route is saturated by Cycle 177; same-label heavy fibres are structurally routed by Cycle 178; exact-rational beta-zero towers and low-product cross-label rectangles are subcritical by Cycles 179--180; beta-free shell aggregation is superseded by Cycle-181 intercept packets; unstructured fibre counts are superseded by Cycle-182 primitive-line segments; an unpopulated dyadic interface is superseded by Cycle-183's populated ray box; and an LCM-only two-orbit compression is banked as redundant by Cycle 184. Cycles 165--176 remain parked as a conditional inverse toolkit until aggregate recurrence or other actual population enters an existing terminal branch. E14D-L, boundary denominators, direct interval propagation, and L-function transfer are deferred. Paper-stage hostile audit begins only after a manuscript theorem is frozen.
+- Why the active gate matters (PROVED): Cycles 177--188 reduce the active E13 obstruction to global actual-exponential distribution across separated labels and denominator windows. C183 retains a populated primitive-ray box; C184 and C185 have mandatory shifted-phase corrections; C186 supplies local actual-curve convexity exclusion; C187 proves local spacing plus current weighted data is insufficient; and C188 makes the corrected nonrational rational-root tower subcritical. No population-compatible global bound or saturator is proved.
+- Progress criterion (CONJECTURED): A future restart must prove a coefficient-preserving global actual-exponential distribution theorem across separated labels/denominator windows yielding a strict C183-box saving, an aggregate E7/E9 recurrence, or a genuine critical nonrational saturator. Further local geometry, mass/capacity, LCM, or root-tower work is non-progress without that bridge.
+- Explicitly deferred: C184/C185 uncorrected displays are superseded by their correction artifacts. Local convexity, local packing, and corrected root towers are banked limits, not restart targets. Cycles 165--176 remain parked until actual global population enters a terminal branch. Interval propagation and L-function transfer remain deferred.
 
 ### Start here (from this project directory)
 
@@ -16,43 +16,42 @@ Canonical evidence is the Git-tracked per-cycle artifact and its linked files; `
 - `research rebuild`
 - `research check`
 - `research cycle 63`
-- `research cycle 184`
-- `research cycle 183`
-- `research prereg check docs/cycle-184-ray-box-determinant-orbit-preregistration-v1.md --expected-cycle 184 --allow-head-drift`
-- `python3 proof/build_cycle_184_ray_box_determinant_orbit_v1.py --check`
+- `research cycle 188`
+- `python3 proof/build_cycle_184_phase_shift_correction_v1.py --check`
+- `python3 proof/build_cycle_185_three_label_curvature_convention_correction_v1.py --check`
+- `python3 proof/build_cycle_188_nonrational_root_tower_v1.py --check`
 - `python3 proof/build_cycle_183_intercept_cleared_ray_box_v1.py --check`
-- `cat docs/cycle-184-ray-box-determinant-orbit-v1.md`
-- `cat docs/cycle-183-intercept-cleared-ray-box-v1.md`
+- `cat archive/TEMPORARY_RESTART_POINT-cycle-189.md`
 - `cat PLAN.md`
 
 Read the listed record and its linked preregistration, proof document, conventions, builder, and test before changing mathematics or code. Do not infer a theorem from this handoff; its claim tags and boundaries are in the canonical record.
 
 ## Index coverage
 
-- Cycle artifact files found in the working tree: 285
-- Cycle artifacts present in the Git index: 284
-- Artifacts by top-level epistemic status: CONJECTURED=6, LEGACY_UNTAGGED=10, OBSERVED=56, PROVED=213
-- Recursively tagged fields indexed for search (not independent claims): 23658
+- Cycle artifact files found in the working tree: 292
+- Cycle artifacts present in the Git index: 291
+- Artifacts by top-level epistemic status: CONJECTURED=6, LEGACY_UNTAGGED=10, OBSERVED=56, PROVED=220
+- Recursively tagged fields indexed for search (not independent claims): 23682
 
 ## Latest sealed record
 
-- Latest record: `cycle-184-ray-box-determinant-orbit-v1` (Cycle 184, `PROVED`)
-- Status: `SEALED_LCM_RESONANCE_AND_SUBSEED_NONRATIONAL_LOCAL_DEFORMATION`
-- Boundary: This proves only exact LCM-resonance redundancy and a scale-matched nonrational two-label local deformation below the seed and critical box scales. It proves no bound, saturation, or impossibility theorem for a critical populated ray box, aggregate recurrence, density gain, or interval result.
-- Next mathematical target: A viable C185 engine must use three-label/shared-fibre compatibility or cross-box coefficient entropy to bound or transfer a populated family of varying LCM resonances, or construct a genuinely critical nonrational ray-box saturator. A single LCM relation or two-label deformation is non-progress for density.
+- Latest record: `cycle-189-temporary-archive-v1` (Cycle 189, `PROVED`)
+- Status: `SEALED_TEMPORARY_RESTART_ARCHIVE`
+- Boundary: This is a replayable handoff, not an analytic advance.
+- Next mathematical target: None
 
 ## Recent sealed records
 
 | Cycle | Record | Tag | Gate | Next target |
 |---:|---|---|---|---|
+| 189 | `cycle-189-temporary-archive-v1` | `PROVED` | `SEALED_TEMPORARY_RESTART_ARCHIVE` | None |
+| 188 | `cycle-188-nonrational-root-tower-v1` | `PROVED` | `SEALED_SUBCRITICAL_CORRECTED_NONRATIONAL_ROOT_TOWER` | None |
+| 187 | `cycle-187-separated-packing-v1` | `PROVED` | `SEALED_SEPARATED_WEIGHTED_LOCAL_PACKING_NO_GO` | A future E13 continuation needs a global actual-exponential distribution theorem across separated labels or denominator windows; local triple exclusion and weighted occupancy alone are exhausted. |
+| 186 | `cycle-186-actual-curve-convexity-v1` | `PROVED` | `SEALED_ACTUAL_CURVE_LOCAL_CONVEXITY_GRID_EXCLUSION` | Either amplify the local exclusion with full rectangle weights to a strict critical-box saving, or preserve a separated-support model proving that local crowding exclusion alone cannot do so. |
+| 185 | `cycle-185-three-label-curvature-v1` | `PROVED` | `SEALED_THREE_LABEL_EXACTIFIER_AND_MASS_ONLY_AP_FREE_NO_GO` | A viable C186 engine must constrain the actual-exponential distribution of high-depth rational approximants or impose a cross-box coefficient relation that defeats the AP-free occupancy. A curvature identity or weighted AP count without that analytic input is non-progress for density. |
+| 185 | `cycle-185-three-label-curvature-convention-correction-v1` | `PROVED` | `SEALED_CORRECTION_SHIFTED_EXPONENTIAL_CURVATURE_AND_ORIGINAL_CLAIM_WITHHELD` | None |
 | 184 | `cycle-184-ray-box-determinant-orbit-v1` | `PROVED` | `SEALED_LCM_RESONANCE_AND_SUBSEED_NONRATIONAL_LOCAL_DEFORMATION` | A viable C185 engine must use three-label/shared-fibre compatibility or cross-box coefficient entropy to bound or transfer a populated family of varying LCM resonances, or construct a genuinely critical nonrational ray-box saturator. A single LCM relation or two-label deformation is non-progress for density. |
-| 183 | `cycle-183-intercept-cleared-ray-box-v1` | `PROVED` | `SEALED_INTERCEPT_CLEARED_PRIMITIVE_RAY_BOX_SATURATION_CLASS` | Bound a populated primitive-ray box coefficient-preservingly, force its mass into a seeded recurrence, or construct it as a genuine nonrational actual exponential saturator. A dyadic box selection alone is not density or interval progress. |
-| 182 | `cycle-182-fibre-line-rigidity-v1` | `PROVED` | `SEALED_COMMON_INTERCEPT_FIBRE_LINE_RIGIDITY_AND_DENOMINATOR_CAPACITY` | Prove a coefficient-preserving upper bound for stable cross-label rectangles in one primitive common-intercept line packet, or construct a nonrational actual saturator for it. Fibre-line rigidity alone is not a census bound or recurrence. |
-| 181 | `cycle-181-common-intercept-packet-v1` | `PROVED` | `SEALED_COMMON_INTERCEPT_EXACTIFICATION_AND_STABLE_PACKET_REDUCTION` | Prove a coefficient-preserving upper bound inside a fixed common-intercept stable packet, or construct a nonrational actual saturator for such a packet. A packet decomposition alone is not recurrence, density, or interval progress. |
-| 180 | `cycle-180-cross-label-pair-determinant-v1` | `PROVED` | `SEALED_NONZERO_CROSS_LABEL_PAIR_DETERMINANT_AND_STABLE_SHELL_REDUCTION` | Prove a coefficient-preserving upper bound for the stable nonzero-determinant shell census, or construct a nonrational actual saturator for that census. Scalar product counts, raw pairs, exact-rational towers, and low-product rectangles are non-progress. |
-| 179 | `cycle-179-cross-label-geometric-tower-and-area-v1` | `PROVED` | `SEALED_EXACT_RATIONAL_CROSS_LABEL_NO_GO_AND_AFFINE_AREA_RESONANCE_REDUCTION` | Bound the coefficient-preserving labelled affine-area resonance census, or construct a realized approximate cross-label saturator. Exact rational roots and independent same-label packets are no longer admissible obstruction candidates. |
-| 178 | `cycle-178-diagonal-aware-fibre-extraction-v1-normalization-correction` | `PROVED` | `SEALED_ORDERED_CROSS_LABEL_NORMALIZATION_CORRECTION` | None |
-| 178 | `cycle-178-diagonal-aware-fibre-extraction-v1` | `PROVED` | `SEALED_FIXED_BETA_HEAVY_FIBRE_SEEDED_PACKET_OR_CROSS_LABEL_REMAINDER` | Prove a coefficient-preserving upper bound for the retained cross-label mass, or construct a genuine actual positive-exponential cross-label saturator. The combinatorial dichotomy alone is not an E13 advance. |
+| 184 | `cycle-184-phase-shift-correction-v1` | `PROVED` | `SEALED_CORRECTION_SHIFTED_SLOPES_NONRATIONAL_TWO_RAY_DEFORMATION` | None |
 
 ## Useful queries
 
