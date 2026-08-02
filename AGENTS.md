@@ -97,9 +97,12 @@ change.
 
 Before work: re-read frozen counts and conventions from artifacts, check
 `git status` and recent/fetched history, and preserve unrelated changes.
-Update `PLAN.md` only when strategy, status, a headline result, an open
-question, or the next authorized action changes. Seal cycle-level findings in
-their individual record and regenerate the compact status view. Never erase a
+Put routine research updates in their immutable cycle record and the
+generated `STATUS.md` handoff. Update `PLAN.md` only for a significant
+change to the strategic path, active gate, claim boundary, budget, stop
+condition, headline result, open question, or next authorized action; never
+use it as a per-cycle progress log. Seal cycle-level findings in their
+individual record and regenerate the compact status view. Never erase a
 failed path from the cycle record set.
 
 ### Research-block cadence

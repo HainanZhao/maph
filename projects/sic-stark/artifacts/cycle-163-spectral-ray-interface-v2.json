@@ -1,0 +1,68 @@
+{
+  "artifact_id": "cycle-163-spectral-ray-interface-v2",
+  "budget_ordinal": "B001",
+  "claim_boundary": "This correction adds the generated-handoff target omitted from Cycle 163 v1. It changes no mathematical result, count, orientation anchor, gate boundary, or budget accounting.",
+  "correction_of": "cycle-163-spectral-ray-interface-v1",
+  "cycle": 163,
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "corrected_record": {
+      "path": "artifacts/cycle-163-spectral-ray-interface-v1.json",
+      "sha256": "165096dfab6f44c85c3d19bf1b1150d392a05310acd2b6c6da32686fd6b54240"
+    },
+    "correction_document": {
+      "path": "docs/cycle-163-spectral-ray-interface-v2.md",
+      "sha256": "082e40d8f321c5842f1ac43ab3bef146e2907d673877e6d6ad873c4d7e05859f"
+    },
+    "project_instructions": {
+      "path": "AGENTS.md",
+      "sha256": "363495f0dbbe93e244b460c8eafb13247a8fb1f41be24f94c037ae9f6400c6f2"
+    },
+    "sealing_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    },
+    "test": {
+      "path": "tests/test_cycle_163_status_correction.py",
+      "sha256": "6ecebb009141262e4d2db04f2689c859ae79bc6b4c08d5a2fdd63ed1d4486a1d"
+    }
+  },
+  "inherited_exact_result": {
+    "eligible_rows": 18,
+    "ineligible_rows": 18,
+    "orientation_anchors": {
+      "3,4": {
+        "eligible": true,
+        "frozen_ray_log": 2
+      },
+      "3,5": {
+        "eligible": true,
+        "frozen_ray_log": 1
+      }
+    }
+  },
+  "outcome": {
+    "epistemic_status": "PROVED",
+    "statement": "The v1 artifact omitted remaining_target, causing the generated STATUS.md renderer to display no next target."
+  },
+  "record_kind": "METADATA_CORRECTION_NONCOUNTED",
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Cycle 164/B002: preregister and test an orientation-preserving characteristic-dependent conductor-lowering/ray-monoid state space with an explicit map from every reduced object to one common arithmetic-Frobenius-oriented C6 primitive target."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_163_spectral_ray_interface_v2.py --check",
+    "test_command": "python3 -m unittest tests.test_cycle_163_status_correction -v",
+    "write_command": "python3 proof/build_cycle_163_spectral_ray_interface_v2.py --write"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_163_spectral_ray_interface_v2.py",
+    "sha256": "e3359e6142f2fc5f5d4183f05d01a791328e92a5573468f300fafd57a42c73e8"
+  },
+  "status": "SEALED_FIXED_FULL_RAY_SELECTOR_METADATA_CORRECTION"
+}
