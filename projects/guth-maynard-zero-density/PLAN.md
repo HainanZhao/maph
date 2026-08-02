@@ -53,7 +53,12 @@ assumptions. Consult it before changing this plan, choosing or dropping an
 engine, revising a gate/advance criterion, preregistering a cycle, or deciding
 the next authorized action. Put its recommendation and the primary worker's
 adopt/reject reason in the relevant readable session/cycle decision record.
-Routine reversible exploration may proceed without waiting for it.
+Before each such decision, check the companion's live task status. If it is
+idle or completed, reactivate that same task identity with the frozen decision
+brief; if it is running, deliver the brief and await its response. Record the
+liveness check and response alongside the decision. If the companion cannot
+be invoked, defer the critical decision while routine reversible exploration
+continues.
 
 ## Frozen baseline
 
