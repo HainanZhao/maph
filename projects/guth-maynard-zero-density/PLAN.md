@@ -56,27 +56,6 @@ research search negative-tail
 research db tables
 ```
 
-## Critical-decision companion
-
-Every research session for this project starts one mentor companion alongside
-the primary worker, before calculations or path selection. It remains the
-same session companion across all Cycle 152+ branches and decisions; do not
-replace it with a fresh per-cycle reviewer. Where a more capable model is
-available, use it; otherwise use an independent agent with a fresh brief. The
-companion is not a second proof engine and does not run a hostile audit. Its
-narrow job is to track the preregistered checkpoint: frozen premise,
-alternatives, tagged decisive evidence, recommendation, and unexamined
-assumptions. Consult it before changing this plan, choosing or dropping an
-engine, revising a gate/advance criterion, preregistering a cycle, or deciding
-the next authorized action. Put its recommendation and the primary worker's
-adopt/reject reason in the relevant readable session/cycle decision record.
-Before each such decision, check the companion's live task status. If it is
-idle or completed, reactivate that same task identity with the frozen decision
-brief; if it is running, deliver the brief and await its response. Record the
-liveness check and response alongside the decision. If the companion cannot
-be invoked, defer the critical decision while routine reversible exploration
-continues.
-
 ## Frozen baseline
 
 - `PROVED`: the checked baseline density coefficient is `30/13`; the stated
