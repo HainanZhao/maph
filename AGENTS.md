@@ -160,30 +160,40 @@ The companion is a mentor/checkpoint tracker, not a duplicate implementer or
 a hostile auditor. It maintains a short decision ledger: the frozen premise,
 alternatives considered, decisive evidence and tags, the recommended next
 action, and any unexamined assumption. It operates asynchronously by default:
-send one compact session brief at start, then batch material deltas into a
-single checkpoint packet. Each packet asks for at most five short items:
-recommendation, decisive reason, flaw, falsifier, and next action. Do not
-poll or wait during reversible derivations, candidate engines, routine
-computations, or amendments within an already active cycle; notify the
-companion and continue.
+start it and send one compact session brief without waiting, then batch
+material deltas into one checkpoint packet. Routine deltas are notification
+only and request no reply. A decision packet is under 250 words and uses one
+fixed interface: decision sought; frozen claim/gate and tag; at most three
+decisive evidence or change bullets; known flaw; and requested disposition.
+Link a changed excerpt, artifact, or hash instead of asking for a project
+reread. Ask for exactly four short items in reply: recommendation, flaw,
+falsifier, and next action. The companion must not re-derive the live work or
+inspect unrelated files unless that packet asks it to. Do not poll or wait
+during reversible derivations, candidate engines, routine computations, or
+amendments within an already active cycle; notify the companion and continue.
 
 Blocking consultation is reserved for an irreversible or strategic decision:
-changing `PLAN.md`, changing a gate or advance condition, sealing/committing
-a material claim, starting or abandoning a cycle, promoting/containing a
-material theorem, or external publication. Before one of these decisions,
-inspect the companion status and reactivate the same identity if needed. If
-it is running, deliver the batched packet and await one concise response;
-otherwise routine work continues. Record only the final recommendation and
-adopt/reject reason in the relevant decision record. This protocol
-complements the paper-stage hostile audit; it does not start one early.
+changing the strategic status, claim boundary, gate, or advance condition in
+`PLAN.md`; starting or abandoning a path not already authorized by the plan;
+sealing/committing a material claim; promoting/containing a material theorem;
+or external publication. A routine cycle start already authorized by the
+current plan is notify-only, not a blocking checkpoint. Before a blocking
+decision, inspect the companion status and reactivate the same identity if
+needed. Deliver one batched packet and await one concise response; do not
+iterate unless its stated falsifier or flaw is triggered. Record only the
+final recommendation and adopt/reject reason in the relevant decision record.
+This protocol complements the paper-stage hostile audit; it does not start
+one early.
 
-At session start, perform and record a liveness rehearsal: send the companion
-its role and first checkpoint, then, if the platform permits an agent to
-complete, reactivate that same stable identity once and obtain an
-acknowledgement. This tests the recovery path rather than assuming that a
-completed agent will remain reachable. The primary keeps the companion task
-identity and the latest checkpoint brief in the session decision record; it
-must not silently replace the companion with a new, unbriefed agent.
+At session start, perform a nonblocking liveness rehearsal: send the role and
+first checkpoint, then inspect/reactivate that same stable identity at the
+first natural strategic checkpoint (or when it has completed). Do not delay
+exploration merely to obtain an acknowledgement. This tests the recovery path
+rather than assuming that a completed agent will remain reachable. The
+primary keeps the companion task identity and latest compact packet in the
+session decision record; it must not silently replace the companion with a
+new, unbriefed agent. A completed companion is an idle mentor, not a failure:
+reactivate its stable identity only when the next checkpoint is ready.
 
 ## 2. Discovery and proof are separate
 
