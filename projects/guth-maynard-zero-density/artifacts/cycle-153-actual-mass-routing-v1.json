@@ -1,0 +1,85 @@
+{
+  "actual_mass_routing_theorem": {
+    "boundary": "this exact routing compiler bounds neither branch and proves no full moment, density, or intervals",
+    "cycle152_interface": "the strict branch activates Cycle 152 only after a separate normalized-weight and uniform per-mode bound 0<=(-Re gamma_b)_+<=Cw_b/m_b is proved or imported",
+    "dichotomy": "either N_S>=mu_*/2, or the labelled escape class has negative correlation at least mu_*/2 in the same one-witness normalization",
+    "epistemic_status": "PROVED",
+    "label_audit": "strict modes retain b,w_b,r_b,h_b,d_b,m_b,L_b,tau_b,gamma_b; every other mode has one registered escape reason in an exhaustive disjoint partition",
+    "routing_identity": "for H=S+E and -Re(H)>=mu_*, N_S=sum_b(-Re gamma_b)_+ gives -Re(E)>=mu_*-N_S"
+  },
+  "artifact_id": "cycle-153-actual-mass-routing-v1",
+  "claim_boundary": "This artifact proves an exact post-error mass-routing dichotomy. It does not prove the strict branch's weight normalization or uniform per-mode bound, bound either routed class, or prove a full moment, density, or intervals.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/actual_mass_routing_v1.py",
+      "sha256": "a0b61b0db798eacb4e3e0c97203e088706b05ac60194daa4eacb6089c3e5094c"
+    },
+    "cycle152_correction": {
+      "path": "artifacts/cycle-152-bounded-multiplier-divisor-fan-v1-scope-correction.json",
+      "sha256": "fb602a39858838f62eee16e119747a7922baf6cf054129c1777a021a122ee2f8"
+    },
+    "document": {
+      "path": "docs/cycle-153-actual-mass-routing-v1.md",
+      "sha256": "cc450221b115a6915de9fab7de3a67842944f79db1243447bb70e0aeb6be1694"
+    },
+    "preregistration": {
+      "path": "docs/cycle-153-actual-mass-routing-preregistration-v1.md",
+      "sha256": "a15f414c3c2702b36578880c8c4e848a0be6bb2b86500a046dc0de9f2bcd72cb"
+    },
+    "seal_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "seal_scaffold_tests": {
+      "path": "tests/test_cycle_seal_v1.py",
+      "sha256": "5ae01d03653e8846b487869af99f9a1a4901e39570111e89495ddd27982f6427"
+    },
+    "tests": {
+      "path": "tests/test_cycle_153_actual_mass_routing_v1.py",
+      "sha256": "798c265722b306d54ad2240052800b2c741738b861f94a528a2e531dcca334e2"
+    }
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "prove the actual strict branch has normalized positive weights and a uniform complete per-mode bound so Cycle 152 yields an actual bounded-multiplier fan, or analyze the quantitative labelled escape obligation"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_153_actual_mass_routing_v1.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_153_actual_mass_routing_v1.py tests/test_cycle_seal_v1.py",
+    "write_command": "python3 proof/build_cycle_153_actual_mass_routing_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sample_escape_route": {
+    "epistemic_status": "PROVED",
+    "escape_correlation_lower_bound": "2/3",
+    "post_error_negative_mass": "1",
+    "route": "LABELLED_ESCAPE_OBLIGATION",
+    "strict_negative_mass": "1/3",
+    "threshold": "1/2"
+  },
+  "sample_strict_route": {
+    "epistemic_status": "PROVED",
+    "escape_correlation_lower_bound": "2/5",
+    "post_error_negative_mass": "1",
+    "route": "STRICT_LABELLED_MASS",
+    "strict_negative_mass": "3/5",
+    "threshold": "1/2"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_153_actual_mass_routing_v1.py",
+    "sha256": "4f54251b526c6b807d6b170b65856349468d44033f483e7649a03e0c8ecd9eda"
+  },
+  "status": "SEALED_ACTUAL_MASS_ROUTING_TO_STRICT_BRANCH_OR_LABELLED_ESCAPE"
+}
