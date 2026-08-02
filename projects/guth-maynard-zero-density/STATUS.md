@@ -6,8 +6,8 @@ Canonical evidence is the Git-tracked per-cycle artifact and its linked files; `
 ## Cold-start handoff
 
 - Project outcome (PROVED): No improved zero-density coefficient, prime-interval endpoint, or L-function-family transfer is proved. The checked baseline remains density coefficient 30/13, with uniform and almost-all interval endpoints 17/30 and 2/15.
-- Why the active gate matters (PROVED): Cycles 165--166 convert any critical fixed-beta Cycle-63 census into a massed labelled terminal web: rank-one/low-plane exponential-shift states retain X^(1/25-o(1)) parents, while beta-seeded packet states retain X^(2/25-o(1)). The active bottleneck is to control or transport one such web without dropping beta, divisibility, or h-range labels.
-- Progress criterion (CONJECTURED): The next advance must either compile a massed web into a strict E7/E9 skeleton input with beta, divisibility, and h-range preserved, or prove a labelled obstruction to that compilation. A web count alone, an unanchored recurrence, a beta-free packet, or a deduplicated plane count is non-progress.
+- Why the active gate matters (PROVED): Cycles 165--167 turn any critical fixed-beta Cycle-63 census into a massed labelled terminal web and classify its direct reduced-rational cross-label transport. That transport preserves beta only on exact residue/range/balance labels and is not a target-local Cycle-67 packet. The active bottleneck is a target-packet join or a closed labelled loop.
+- Progress criterion (CONJECTURED): The next advance must prove a labelled join between a cross-label edge and a target-local packet, or a closed-loop local relation, while preserving beta and range labels. A direct edge alone, a web count, an unanchored recurrence, a beta-free packet, or a deduplicated plane count is non-progress.
 - Explicitly deferred: Boundary denominators within a fixed power of Q are a separate branch; paper-stage hostile audit begins only after a manuscript theorem is frozen.
 
 ### Start here (from this project directory)
@@ -15,44 +15,46 @@ Canonical evidence is the Git-tracked per-cycle artifact and its linked files; `
 - `source ../../tools/dev-env.sh`
 - `research rebuild`
 - `research check`
-- `research cycle 166`
-- `python3 proof/build_cycle_166_terminal_bank_entropy_v1.py --check`
-- `cat docs/cycle-166-terminal-bank-entropy-v1.md`
-- `cat discovery/cycle-166-terminal-bank-entropy-working-v1.md`
+- `research cycle 167`
+- `python3 proof/build_cycle_167_affine_fibre_transport_v1.py --check`
+- `python3 proof/build_cycle_167_affine_fibre_transport_scope_correction_v1.py --check`
+- `cat docs/cycle-167-affine-fibre-transport-v1.md`
+- `cat docs/cycle-167-affine-fibre-transport-scope-correction-v1.md`
+- `cat discovery/cycle-167-affine-fibre-transport-working-v1.md`
 
 Read the listed record and its linked preregistration, proof document, conventions, builder, and test before changing mathematics or code. Do not infer a theorem from this handoff; its claim tags and boundaries are in the canonical record.
 
 ## Index coverage
 
-- Cycle artifact files found in the working tree: 264
-- Cycle artifacts present in the Git index: 263
-- Artifacts by top-level epistemic status: CONJECTURED=6, LEGACY_UNTAGGED=10, OBSERVED=56, PROVED=192
-- Recursively tagged fields indexed for search (not independent claims): 23557
+- Cycle artifact files found in the working tree: 266
+- Cycle artifacts present in the Git index: 264
+- Artifacts by top-level epistemic status: CONJECTURED=6, LEGACY_UNTAGGED=10, OBSERVED=56, PROVED=194
+- Recursively tagged fields indexed for search (not independent claims): 23565
 
 ## Current gate
 
-- Latest record: `cycle-166-terminal-bank-entropy-v1` (Cycle 166, `PROVED`)
-- Status: `SEALED_MASSED_BETA_ANCHORED_SHIFT_OR_SEEDED_PACKET_WEB`
-- Boundary: Conditional on a critical fixed-beta Cycle-63 census through Cycle 165, this forces one massed labelled terminal web. It does not bound the census or a web, prove E7/E9, density, or intervals.
-- Next mathematical target: Control one massed web, or turn a seeded packet/shift web into a strict E7/E9 skeleton margin while retaining beta, divisibility, and h-range labels.
+- Latest record: `cycle-167-affine-fibre-transport-v1-scope-correction` (Cycle 167, `PROVED`)
+- Status: `SEALED_REDUCED_RATIONAL_SCOPE_CORRECTION`
+- Boundary: This correction narrows the Cycle-167 top-level boundary to the reduced-rational approximant ansatz. It changes no mathematical identity or result and proves no transport recurrence, skeleton, density, or interval gain.
+- Next mathematical target: Join an eligible cross-label edge to a retained target-local packet, or construct a labelled closed loop yielding an equivalent local relation.
 
 ## Recent sealed records
 
 | Cycle | Record | Tag | Gate | Next target |
 |---:|---|---|---|---|
+| 167 | `cycle-167-affine-fibre-transport-v1-scope-correction` | `PROVED` | `SEALED_REDUCED_RATIONAL_SCOPE_CORRECTION` | Join an eligible cross-label edge to a retained target-local packet, or construct a labelled closed loop yielding an equivalent local relation. |
+| 167 | `cycle-167-affine-fibre-transport-v1` | `PROVED` | `SEALED_DIRECT_AFFINE_CROSS_LABEL_TRANSPORT_OR_OBSTRUCTION_CLASSIFIER` | Join an eligible cross-label edge to a retained target-local packet, or construct a labelled closed transport loop that yields an equivalent local relation while preserving beta and all range labels. |
 | 166 | `cycle-166-terminal-bank-entropy-v1` | `PROVED` | `SEALED_MASSED_BETA_ANCHORED_SHIFT_OR_SEEDED_PACKET_WEB` | Control one massed web, or turn a seeded packet/shift web into a strict E7/E9 skeleton margin while retaining beta, divisibility, and h-range labels. |
 | 165 | `cycle-165-anchored-fibre-product-determinant-v1` | `PROVED` | `SEALED_BETA_ANCHORED_FOUR_ANCHOR_PACKET_OR_RESONANCE_PLANE_CLASSIFICATION` | Bound every terminal bank strictly below the Cycle-63 critical census threshold, or compile a retained high-content packet into the E7/E9 skeleton with a strict margin. |
 | 164 | `cycle-164-wrap-valuation-sidon-v1` | `PROVED` | `SEALED_WRAP_VALUATION_WEB_OR_WEIGHTED_SIDON_CLASSIFICATION` | compile a valuation web through E16 or bound the weighted-Sidon and wrap-complexity alternatives |
 | 163 | `cycle-163-star-wrap-fiber-v1` | `PROVED` | `SEALED_STAR_WRAP_COMPLEXITY_OR_COMMON_WRAP_LOG_WEB` | compile the common-wrap log web or bound the labelled wrap-complexity alternative |
 | 162 | `cycle-162-mass-sensitive-high-cell-v1` | `PROVED` | `SEALED_GLOBAL_ALIGNED_FOUR_CYCLE_MASS_OR_WEIGHTED_HIGH_DEGREE_STAR_INVERSE_BANKED` | pull back one globally massed labelled output through the actual (d,q) coordinate map, or construct an admissible labelled obstruction |
 | 161 | `cycle-161-high-cell-refinement-v1` | `PROVED` | `SEALED_PHASE_ALIGNED_FOUR_CYCLE_OR_LABELLED_STAR_DEGENERACY_BANKED` | compile the actual labelled positive-real four-cycle population to a moment gain, or classify the labelled star as a rational web or admissible obstruction |
-| 160 | `cycle-160-colored-four-cycle-condenser-v1` | `PROVED` | `SEALED_COEFFICIENT_WEIGHTED_OFF_DIAGONAL_CONDENSER_HIGH_CODEGREE_PAIR_CELL_OPEN` | turn a labelled high effective-codegree pair-difference cell into a phase-aligned colored four-cycle or rational web, or exhibit an admissible condenser falsifier |
-| 159 | `cycle-159-coefficient-selector-information-loss-v1` | `PROVED` | `SEALED_PRIMITIVE_RAY_MULTIPLIER_INFORMATION_LOSS_COEFFICIENT_PRESERVING_SELECTOR_OPEN` | construct a multiplier-resolved coefficient-preserving collision measure with target mass, or timebox E14D-L and activate E14D-H |
 
 ## Useful queries
 
 ```sh
-python /root/projects/maph/tools/research_records.py --project research-records.json cycle 166
+python /root/projects/maph/tools/research_records.py --project research-records.json cycle 167
 python /root/projects/maph/tools/research_records.py --project research-records.json search "seeded packet"
 python /root/projects/maph/tools/research_records.py --project research-records.json check
 ```
