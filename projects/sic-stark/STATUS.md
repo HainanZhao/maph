@@ -19,35 +19,7 @@ Canonical evidence is the Git-tracked per-cycle artifact and its linked files; `
 
 Then read the listed record and its linked preregistration, proof document, conventions, builder, and test. Do not infer a theorem from this action card.
 
-## Index coverage
+## Current evidence
 
-- Cycle artifact files found in the working tree: 6
-- Cycle artifacts present in the Git index: 5
-- Artifacts by top-level epistemic status: PROVED=6
-- Recursively tagged fields indexed for search (not independent claims): 19
-
-## Latest sealed record
-
-- Latest record: `cycle-166-fibre-torsor-v1` (Cycle 166, `PROVED`)
-- Status: `SEALED_FIBRE_RESOLVED_MULTIPLIER_TORSOR`
-- Boundary: This exact finite result constructs a phase-derived fibre-resolved C6 transport torsor. It defines no additive coefficient-to-logarithm operation, analytic continuation, finite part, AFK-interface identification, Stark identity, fusion theorem, or TCC identity.
-- Next mathematical target: Cycle 167/B005: preregister an independent translation-invariant bilinear C6-twisted convolution family on the sealed torsor and test exact graph/product and transport compatibility, or falsify that named class.
-
-## Recent sealed records
-
-| Cycle | Record | Tag | Gate | Next target |
-|---:|---|---|---|---|
-| 166 | `cycle-166-fibre-torsor-v1` | `PROVED` | `SEALED_FIBRE_RESOLVED_MULTIPLIER_TORSOR` | Cycle 167/B005: preregister an independent translation-invariant bilinear C6-twisted convolution family on the sealed torsor and test exact graph/product and transport compatibility, or falsify that named class. |
-| 165 | `cycle-165-section-equivariance-v1` | `PROVED` | `SEALED_POINTWISE_SECTION_EQUIVARIANCE_FALSIFIED` | Cycle 166/B004: preregister a fibre-resolved C6-torsor state space, frozen multiplier law, preserved anchors, and the smallest exact intertwining-or-falsifier test. |
-| 164 | `cycle-164-oriented-ray-monoid-section-v1` | `PROVED` | `SEALED_CONDUCTOR_LOWERED_RAY_MONOID_SECTION` | Cycle 165/B003: preregister an outcome-blind additive-to-logarithmic operation class on the sealed section and seek exact compatibility or an exact falsifier of that named class. |
-| 163 | `cycle-163-spectral-ray-interface-v2` | `PROVED` | `SEALED_FIXED_FULL_RAY_SELECTOR_METADATA_CORRECTION` | Cycle 164/B002: preregister and test an orientation-preserving characteristic-dependent conductor-lowering/ray-monoid state space with an explicit map from every reduced object to one common arithmetic-Frobenius-oriented C6 primitive target. |
-| 163 | `cycle-163-spectral-ray-interface-v1` | `PROVED` | `SEALED_FIXED_FULL_RAY_SELECTOR_FALSIFIED` | None |
-| 162 | `cycle-162-workflow-migration-v1` | `PROVED` | `SEALED_ACCELERATED_WORKFLOW_AND_INTERFACE_FIRST_PROGRAM` | Construct and test a convention-pinned finite-characteristic coefficient-to-cocycle/ray-logarithm interface with explicit selection, operation, branches, finite part, and AFK identification; determine whether an oriented wild-local extension at RQ-000692 supplies any part of it. |
-
-## Useful queries
-
-```sh
-research db sql "SELECT artifact_id, status, remaining_target FROM artifacts ORDER BY cycle_number DESC, artifact_id DESC LIMIT 1"
-python3 ../../tools/research_records.py --project research-records.json search "Class-A"
-python3 ../../tools/research_records.py --project research-records.json check
-```
+- Newest immutable record: `cycle-166-fibre-torsor-v1` (Cycle 166, `PROVED`).
+- Its recorded immediate target: Cycle 167/B005: preregister an independent translation-invariant bilinear C6-twisted convolution family on the sealed torsor and test exact graph/product and transport compatibility, or falsify that named class.
