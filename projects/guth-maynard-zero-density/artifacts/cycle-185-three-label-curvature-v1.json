@@ -1,0 +1,265 @@
+{
+  "artifact_id": "cycle-185-three-label-curvature-v1",
+  "claim_boundary": "This proves a conditional three-label curvature exactifier and an abstract mass/capacity/stable-shell AP-free occupancy no-go. It proves no actual-exponential distribution theorem, populated-box bound, seeded recurrence, density gain, or interval result.",
+  "density_effect": {
+    "epistemic_status": "OBSERVED",
+    "status": "NO_PROMOTION"
+  },
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "boundary": "This proves a three-label exactification lemma and a mass/capacity-only no-go. It proves no actual-exponential distribution bound, populated-box bound, seeded recurrence, density gain, or interval result.",
+    "mass_only_no_go": "A shifted ternary-digit AP-free set with M=X^(13/50) complete fibres of depth X^(2/25)+1 and denominator X^(9/25) has stable ordered cross mass >>X^(21/25), yet contains no three-label arithmetic progression. Thus mass, capacity, and stable shells alone cannot force the deep triples needed for curvature exactification.",
+    "samples": {
+      "bound": {
+        "linear": "1/62500000000",
+        "quadratic": "1/125000000000000000000000",
+        "total": "2000000000001/125000000000000000000000"
+      },
+      "curvature": {
+        "K": 0,
+        "K_prime": 0,
+        "U": {
+          "minus": 2,
+          "plus": 8,
+          "zero": 4
+        },
+        "epsilon": {
+          "minus": "0",
+          "plus": "-12",
+          "zero": "-2"
+        },
+        "expanded_value": "0",
+        "expansion": "K/(U_-*U_+*U_0^2)=alpha_-*delta_++alpha_+*delta_-+delta_-*delta_+-2*alpha_0*delta_0-delta_0^2",
+        "formula": "K=U_0^2*A_-*A_+-U_-*U_+*A_0^2=v^2*K_prime",
+        "syzygy": "K_prime=u_0*A_+*F_-0-u_-*A_0*F_0+"
+      },
+      "occupancy_k1": {
+        "boundary": "This is an AP-free abstract occupancy ledger, not an actual-positive-exponential configuration or a counterexample to an analytic distribution theorem.",
+        "fibres": {
+          "capacity": 82,
+          "complete": true,
+          "depth": 82,
+          "pair_count_per_label": 3321
+        },
+        "labels": {
+          "ambient_upper": 205891132094649,
+          "construction": "1+cantor_encode(bits,30*k) for 0<=bits<M",
+          "selected_count": 1594323,
+          "three_ap_free": "ternary digits 0/1 admit no nontrivial x+z=2y digitwise; subsets and shifts preserve this"
+        },
+        "mass": {
+          "critical_target": 109418989131512359209,
+          "lower_factor": "2680055282/10460353203",
+          "ordered_cross_mass": 28034324853285768246
+        },
+        "parameters": {
+          "Delta": 205891132094649,
+          "H": 31381059609,
+          "M": 1594323,
+          "S": 81,
+          "U": 387420489,
+          "X": 717897987691852588770249,
+          "k": 1
+        },
+        "stable_shell": {
+          "cutoff_upper": 19,
+          "minimum_product": 150094635296999121
+        }
+      }
+    },
+    "three_label_exactification": "For an arithmetic-progression label triple, K=U_0^2*A_-*A_+-U_-*U_+*A_0^2 is divisible by v^2 and its primitive quotient has the retained pair-determinant syzygy. If all depths exceed S and 8*A_c*C*H^3/(v^2*S^4*X)+8*C^2*H^2/(v^2*S^4*X^2)<1, then K=0."
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "conventions/three_label_curvature_v1.py",
+      "sha256": "767e24ef170fb3f5e292dfbcbe700fc426ec25f988fa16dab9c35fed1c2e34e6"
+    },
+    "cycle181": {
+      "path": "artifacts/cycle-181-common-intercept-packet-v1.json",
+      "sha256": "1d7402f3233e5c2eebf5f391fcae98037ea63a543b868dd850a3744673cef21c"
+    },
+    "cycle182": {
+      "path": "artifacts/cycle-182-fibre-line-rigidity-v1.json",
+      "sha256": "ec2aa8e41ea5682b8c3bcf7818d26205700121ef097cb34ef4344a03a0e593a8"
+    },
+    "cycle183": {
+      "path": "artifacts/cycle-183-intercept-cleared-ray-box-v1.json",
+      "sha256": "4d74a23710ae5b48b6e0fc0ea99fc30a660c5b52efb2ef2f8179ad586dd9604f"
+    },
+    "cycle184": {
+      "path": "artifacts/cycle-184-ray-box-determinant-orbit-v1.json",
+      "sha256": "02a9c3e61166c6a265dd5f14dd80043daf8f6de5063594161cb435b68a340e25"
+    },
+    "document": {
+      "path": "docs/cycle-185-three-label-curvature-v1.md",
+      "sha256": "0c17db0d16d820623e7cb5f877f4876edc41e41bf12db87baf9c54738bbcf40c"
+    },
+    "preregistration": {
+      "path": "docs/cycle-185-three-label-curvature-preregistration-v1.md",
+      "sha256": "04f83bd4137799d899961a8cb226881df80ccca188bfb4e8d7a4dcb75583015f"
+    },
+    "sealing_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+    },
+    "tests": {
+      "path": "tests/test_cycle_185_three_label_curvature_v1.py",
+      "sha256": "171fa38116dc7ac16ec166c2ce9cafe40b4b006985036bb5d8c4995d38125889"
+    }
+  },
+  "local_no_go": {
+    "epistemic_status": "PROVED",
+    "statement": "No inference from critical cross mass, full-fibre capacity, and stable shells alone can force the arithmetic-progression label triple needed for curvature exactification: the explicit ternary-digit occupancy reaches X^(21/25) scale and has none. This does not model actual exponential approximants."
+  },
+  "mentor_checkpoint": {
+    "falsifier": "An admissible deep AP-label triple with K_prime nonzero, failure of the syzygy or depth threshold, an AP in the ternary support, or failure of its stable-shell mass ledger.",
+    "known_flaw": "The AP-free occupancy is deliberately non-exponential and therefore cannot be read as an analytic counterexample.",
+    "next_action": "Use actual-exponential rational-approximant distribution or cross-box coefficient entropy, not another mass/capacity-only AP argument.",
+    "recommendation": "APPROVE_SEAL",
+    "resolution": "Adopted: seal the conditional exactifier and abstract mass-only no-go only; retain the non-exponential boundary prominently."
+  },
+  "preflight_validator": {
+    "path": "../../tools/preregistration_check.py",
+    "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+  },
+  "preregistration_preflight": {
+    "cycle": 185,
+    "input_hashes": [
+      {
+        "path": "artifacts/cycle-181-common-intercept-packet-v1.json",
+        "sha256": "1d7402f3233e5c2eebf5f391fcae98037ea63a543b868dd850a3744673cef21c"
+      },
+      {
+        "path": "artifacts/cycle-182-fibre-line-rigidity-v1.json",
+        "sha256": "ec2aa8e41ea5682b8c3bcf7818d26205700121ef097cb34ef4344a03a0e593a8"
+      },
+      {
+        "path": "artifacts/cycle-183-intercept-cleared-ray-box-v1.json",
+        "sha256": "4d74a23710ae5b48b6e0fc0ea99fc30a660c5b52efb2ef2f8179ad586dd9604f"
+      },
+      {
+        "path": "artifacts/cycle-184-ray-box-determinant-orbit-v1.json",
+        "sha256": "02a9c3e61166c6a265dd5f14dd80043daf8f6de5063594161cb435b68a340e25"
+      },
+      {
+        "path": "proof/cycle_seal_v1.py",
+        "sha256": "96d404c0e493144d72e593b789062daeaa2bd2481ec8b84641a1e19f9cd646b9"
+      },
+      {
+        "path": "../../tools/preregistration_check.py",
+        "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+      }
+    ],
+    "manifest_sha256": "04f83bd4137799d899961a8cb226881df80ccca188bfb4e8d7a4dcb75583015f",
+    "parameters": {
+      "advance_threshold": {
+        "kind": "expression",
+        "rationale": "A new identity counts only if it moves the critical census rather than redescribing a local configuration.",
+        "value": "strict populated-box triple margin, forced X^(6/25) seed, or genuinely critical nonrational saturator"
+      },
+      "curvature_integer": {
+        "kind": "expression",
+        "rationale": "This is the proposed three-label invariant after clearing all three rational slopes.",
+        "value": "K=U_0^2*A_-*A_+ - U_-*U_+*A_0^2"
+      },
+      "label_configuration": {
+        "kind": "symbolic",
+        "rationale": "The exact multiplicative relation needs three distinct labels in one arithmetic progression inside the inherited chart.",
+        "value": "(ell-r,ell,ell+r), 1<=ell-r<ell+r<=c*Delta, 0<c<1"
+      },
+      "retained_state": {
+        "kind": "symbolic",
+        "rationale": "The new invariant may not erase C183 coefficient data.",
+        "value": "(N_-,N_0,N_+,U_-,U_0,U_+, all fibres, base residues, labels, pair multipliers, residuals, stable shells)"
+      }
+    },
+    "schema": "research-preregistration-freeze-v1"
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "A viable C186 engine must constrain the actual-exponential distribution of high-depth rational approximants or impose a cross-box coefficient relation that defeats the AP-free occupancy. A curvature identity or weighted AP count without that analytic input is non-progress for density."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_185_three_label_curvature_v1.py --check",
+    "preflight_command": "research prereg check docs/cycle-185-three-label-curvature-preregistration-v1.md --expected-cycle 185",
+    "test_command": "python3 -m unittest tests/test_cycle_185_three_label_curvature_v1.py",
+    "write_command": "python3 proof/build_cycle_185_three_label_curvature_v1.py --write"
+  },
+  "research_stage_review_policy": {
+    "hostile_audit": "DEFERRED_TO_PAPER_STAGE"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_185_three_label_curvature_v1.py",
+    "sha256": "3f629677fa29e5048779edd6ddc068c0dce4df9b8064e53cdd975c530624473b"
+  },
+  "status": "SEALED_THREE_LABEL_EXACTIFIER_AND_MASS_ONLY_AP_FREE_NO_GO",
+  "three_label_result": {
+    "boundary": "This proves a three-label exactification lemma and a mass/capacity-only no-go. It proves no actual-exponential distribution bound, populated-box bound, seeded recurrence, density gain, or interval result.",
+    "epistemic_status": "PROVED",
+    "mass_only_no_go": "A shifted ternary-digit AP-free set with M=X^(13/50) complete fibres of depth X^(2/25)+1 and denominator X^(9/25) has stable ordered cross mass >>X^(21/25), yet contains no three-label arithmetic progression. Thus mass, capacity, and stable shells alone cannot force the deep triples needed for curvature exactification.",
+    "samples": {
+      "bound": {
+        "linear": "1/62500000000",
+        "quadratic": "1/125000000000000000000000",
+        "total": "2000000000001/125000000000000000000000"
+      },
+      "curvature": {
+        "K": 0,
+        "K_prime": 0,
+        "U": {
+          "minus": 2,
+          "plus": 8,
+          "zero": 4
+        },
+        "epsilon": {
+          "minus": "0",
+          "plus": "-12",
+          "zero": "-2"
+        },
+        "expanded_value": "0",
+        "expansion": "K/(U_-*U_+*U_0^2)=alpha_-*delta_++alpha_+*delta_-+delta_-*delta_+-2*alpha_0*delta_0-delta_0^2",
+        "formula": "K=U_0^2*A_-*A_+-U_-*U_+*A_0^2=v^2*K_prime",
+        "syzygy": "K_prime=u_0*A_+*F_-0-u_-*A_0*F_0+"
+      },
+      "occupancy_k1": {
+        "boundary": "This is an AP-free abstract occupancy ledger, not an actual-positive-exponential configuration or a counterexample to an analytic distribution theorem.",
+        "fibres": {
+          "capacity": 82,
+          "complete": true,
+          "depth": 82,
+          "pair_count_per_label": 3321
+        },
+        "labels": {
+          "ambient_upper": 205891132094649,
+          "construction": "1+cantor_encode(bits,30*k) for 0<=bits<M",
+          "selected_count": 1594323,
+          "three_ap_free": "ternary digits 0/1 admit no nontrivial x+z=2y digitwise; subsets and shifts preserve this"
+        },
+        "mass": {
+          "critical_target": 109418989131512359209,
+          "lower_factor": "2680055282/10460353203",
+          "ordered_cross_mass": 28034324853285768246
+        },
+        "parameters": {
+          "Delta": 205891132094649,
+          "H": 31381059609,
+          "M": 1594323,
+          "S": 81,
+          "U": 387420489,
+          "X": 717897987691852588770249,
+          "k": 1
+        },
+        "stable_shell": {
+          "cutoff_upper": 19,
+          "minimum_product": 150094635296999121
+        }
+      }
+    },
+    "three_label_exactification": "For an arithmetic-progression label triple, K=U_0^2*A_-*A_+-U_-*U_+*A_0^2 is divisible by v^2 and its primitive quotient has the retained pair-determinant syzygy. If all depths exceed S and 8*A_c*C*H^3/(v^2*S^4*X)+8*C^2*H^2/(v^2*S^4*X^2)<1, then K=0."
+  }
+}
