@@ -10,14 +10,14 @@
   scopes in dimensions 4, 5, 7, and 8. No dimension-six TCC identity,
   coefficient-to-ray map, fusion-continuity theorem, or boundary-limit theorem
   is proved. `CERTIFIED_NUMERICAL` packet growth is not a nonexistence theorem.
-- Current state: Cycle 164 / `B002` exactly constructed a total,
-  characteristic-dependent conductor-lowered ray-monoid section from all 36
-  frozen characteristics into one arithmetic-Frobenius-oriented `C6` source.
-  The 18 full-modulus rows recover their direct logs and both anchors persist.
-  This settles the finite state-space subgate, but no outcome-blind additive
-  coefficient-to-logarithm operation or AFK compatibility law exists yet.
-  Fusion continuity remains downstream. The raw componentwise `BF_6` route
-  remains retired.
+- Current state: Cycle 165 / `B003` exactly falsified the deterministic
+  pointwise label-respecting section-pushforward class: no one of 46,656
+  target `C6` set actions intertwines it with the frozen Shintani action.
+  The obstruction is caused by unstable section fibres, not by the finite
+  ray-monoid state space itself. Cycle 166 / `B004` is authorized to retain
+  that fibre coordinate in a multiplier-pinned `C6` torsor. No analytic
+  coefficient-to-logarithm operation or AFK compatibility law exists yet;
+  fusion continuity remains downstream.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -30,8 +30,8 @@
 ## Budget, accounting, and stop condition
 
 - Total forward budget: 200 substantive research cycles, counted `B001/200`
-  through `B200/200`; the counter is currently `B002/200`.
-- Cycle 165 is `B003`. Repository cycle numbers and budget ordinals advance
+  through `B200/200`; the counter is currently `B003/200`.
+- Cycle 166 is `B004`. Repository cycle numbers and budget ordinals advance
   together unless a non-counted record intervenes; the budget ordinal is the
   authoritative campaign counter.
 - A cycle counts only when it is a preregistered substantive research block
@@ -77,6 +77,12 @@
   every direct full-modulus log and the two anchors. This is finite ray-class
   state space only, not an additive-to-logarithmic operation or AFK interface.
   See `artifacts/cycle-164-oriented-ray-monoid-section-v1.json`.
+- `PROVED`: Cycle 165 exactly enumerated all `6^6=46,656` target set actions
+  and found none that makes the pointwise section pushforward Shintani
+  equivariant. Its first fibre-instability witness is
+  `(0,0),(0,1)` at source label `0`, with successor labels `0,3`. It rejects
+  that named operation class only. See
+  `artifacts/cycle-165-section-equivariance-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -126,7 +132,8 @@ Budget B001--B200
   |    +-- analytic interface: 36 additive values -> 3 ray logs -> AFK cocycle
   |    |    +-- fixed-full-ray selector [FALSIFIED: 18/36 domain]
   |    |    `-- conductor-lowered ray-monoid lift [SEALED: total finite section]
-  |    |         `-- outcome-blind additive-to-logarithmic operation [NEXT GATE]
+  |    |         `-- pointwise section pushforward [FALSIFIED: fibre instability]
+  |    |              `-- fibre-resolved C6 torsor / multiplier lift [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -171,17 +178,17 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `B002_OF_200` | Seal Cycle 165 as `B003`, then increment only for substantive research blocks. | Counting workflow or archive-only work. |
-| D6 interface | `FINITE_RAY_MONOID_SECTION_SEALED_ADDITIVE_OPERATION_REQUIRED` | Define an outcome-blind additive-to-logarithmic operation class on the sealed section and prove exact compatibility or exactly falsify that named class. | Treating a set-theoretic finite label as an AFK/TCC interface; post-result changes to the section; raw/gauged packet extensions. |
+| Project budget | `B003_OF_200` | Seal Cycle 166 as `B004`, then increment only for substantive research blocks. | Counting workflow or archive-only work. |
+| D6 interface | `FIBRE_RESOLVED_TORSOR_ENGINE` | Define a fibre-resolved `C6` torsor, a frozen multiplier law, and an exact intertwining-or-falsifier test preserving both anchors. | Treating the pointwise-class failure as a global no-go; quotienting away the fibre coordinate; importing an unfrozen multiplier or packet fit. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- What outcome-blind operation maps the 36 finite additive coefficients,
-  through the sealed section, to the three primitive norm-37
-  ray-logarithm/cocycle values?
+- Can a fibre-resolved, multiplier-pinned lift of the 36 finite additive
+  characteristics retain Shintani transport while still projecting to the
+  three primitive norm-37 ray-logarithm/cocycle values?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -190,21 +197,20 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 165 / `B003`
+## Next goal: Cycle 166 / `B004`
 
 Preregister one substantive block with this question:
 
-> Can an outcome-blind additive-to-logarithmic operation class on the sealed
-> conductor-lowered ray-monoid section satisfy an exact finite compatibility
-> criterion, or can that named class be exactly falsified?
+> Can a fibre-resolved `C6`-torsor with a frozen multiplier law preserve the
+> two orientation anchors and support the smallest exact Shintani
+> intertwining test that the pointwise quotient could not satisfy?
 
-Cycle 165 must freeze the additive input family, the operation class, its
-domain/codomain and branch/normalization conventions, its relationship to the
-sealed section, the exact compatibility identity, the finite target data, and
-the failure rule before executable work. Re-labeling the section, fitting
-weights after inspecting a target value, packet numerics without an operation,
-or invoking AFK terminology without a checked identity do not advance the
-gate.
+Cycle 166 must freeze the torsor fibre, lift/action law, multiplier source and
+orientation convention, preserved anchors, projection back to the sealed
+section, exact intertwining criterion, and failure rule before executable
+work. A tautological graph relabeling, a multiplier chosen after a target
+value, a quotient that discards the fibre again, or an AFK label without a
+checked operation does not advance the gate.
 
 ## Recovery
 
@@ -212,9 +218,9 @@ gate.
 source ../../tools/dev-env.sh
 research rebuild
 research check
-research cycle 164
+research cycle 165
 sed -n '1,260p' PLAN.md
-sed -n '1,240p' docs/cycle-164-oriented-ray-monoid-section-v1.md
-python3 proof/build_cycle_164_oriented_ray_monoid_section_v1.py --check
-python3 -m unittest tests.test_cycle_164_oriented_ray_monoid_section -v
+sed -n '1,240p' docs/cycle-165-section-equivariance-v1.md
+python3 proof/build_cycle_165_section_equivariance_v1.py --check
+python3 -m unittest tests.test_cycle_165_section_equivariance -v
 ```

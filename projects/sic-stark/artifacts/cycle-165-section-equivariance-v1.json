@@ -1,0 +1,124 @@
+{
+  "artifact_id": "cycle-165-section-equivariance-v1",
+  "budget_ordinal": "B003",
+  "claim_boundary": "This exact finite result falsifies only deterministic pointwise label-respecting section pushforwards with a target set action. It does not rule out non-pointwise, nonlinear, fibre-resolved, characteristic-dependent, or analytic coefficient-to-logarithm operations.",
+  "cycle": 165,
+  "epistemic_status": "PROVED",
+  "exact_prototype": {
+    "compatible_target_actions": 0,
+    "fibre_instability_witness_count": 6,
+    "first_fibre_instability_witness": {
+      "first_point": [
+        0,
+        0
+      ],
+      "first_successor_label": 0,
+      "second_point": [
+        0,
+        1
+      ],
+      "second_successor_label": 3,
+      "source_label": 0,
+      "successor_labels": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "rows_checked": 36,
+    "section_equivariant_descent_exists": false,
+    "source_output": "discovery/cycle-165-section-equivariance-prototype-v1.json",
+    "target_actions_checked": 46656
+  },
+  "frozen_hashes": {
+    "cycle_164_section": {
+      "path": "artifacts/cycle-164-oriented-ray-monoid-section-v1.json",
+      "sha256": "f1815f8641780570c15c7e9c6b40f9de8390358fb3dec0ac93aa311b78a6a26d"
+    },
+    "decision_record": {
+      "path": "docs/cycle-165-section-equivariance-v1.md",
+      "sha256": "3111b17cb50e39ad6e7d77f37f0edab5b3f67fc33e2567e5f46f2b99471a620c"
+    },
+    "equivariance_output": {
+      "path": "discovery/cycle-165-section-equivariance-prototype-v1.json",
+      "sha256": "37fe29c7a13eb24ef39c1f1f603e3387262919c1a775d2195d7baf145082a323"
+    },
+    "equivariance_replay": {
+      "path": "proof/verify_cycle_165_section_equivariance.py",
+      "sha256": "6b9b2dcc9584dbb901b0cddd74487ee46b9cc4cf57880bb0e9001fe3636c83f8"
+    },
+    "preregistration": {
+      "path": "docs/cycle-165-section-equivariance-preregistration-v1.md",
+      "sha256": "e9323694fd97174f3d74033a92d9dc9bef39b36927943361f52814a7a9265290"
+    },
+    "project_instructions": {
+      "path": "AGENTS.md",
+      "sha256": "363495f0dbbe93e244b460c8eafb13247a8fb1f41be24f94c037ae9f6400c6f2"
+    },
+    "sealing_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    },
+    "test": {
+      "path": "tests/test_cycle_165_section_equivariance.py",
+      "sha256": "b9068888004b6d002f91d27bd2d604da8c90a7d060d0614a4247d1af48847ad8"
+    },
+    "working_ledger": {
+      "path": "discovery/cycle-165-section-equivariance-working-ledger.md",
+      "sha256": "85c03fb21eef207d5805ba8c56a2706010555c8198acc152d01eab9c2af7780f"
+    }
+  },
+  "gate_outcome": {
+    "d6_interface": "POINTWISE_SECTION_EQUIVARIANT_OPERATION_FALSIFIED",
+    "disallowed_pseudo_progress": [
+      "treating the pointwise-class obstruction as an interface or TCC no-go",
+      "discarding the fibre coordinate again before proving a replacement covariance law",
+      "fitting a target action after inspecting a continuous packet or Stark value"
+    ],
+    "falsified_operation_class": "deterministic_pointwise_label_respecting_section_pushforward",
+    "remaining_bottleneck": "A fibre-resolved or otherwise non-pointwise outcome-blind operation remains to be constructed and tested."
+  },
+  "mentor_checkpoint": {
+    "falsifier": "Any replay/census discrepancy, transform-direction error, invalid collision witness, or broader interpretation invalidates the seal.",
+    "identity": "/root/decision_companion_2",
+    "known_flaw": "The obstruction says nothing about non-pointwise, nonlinear, fibre-resolved, characteristic-dependent, or analytic operations.",
+    "next_action": "Preregister a fibre-resolved C6-torsor state space, frozen multiplier law, preserved orientation/anchors, and the smallest exact intertwining-or-falsifier test.",
+    "recommendation": "Seal Cycle 165/B003 only for the frozen pointwise label-respecting section-equivariant operation class; authorize the fibre-resolved C6-torsor/multiplier engine.",
+    "resolution": "ADOPTED"
+  },
+  "outcome": {
+    "epistemic_status": "PROVED",
+    "statement": "No one of the 46,656 target maps C6->C6 intertwines the preregistered pointwise section pushforward with the frozen Shintani action."
+  },
+  "preregistration_preflight": {
+    "cycle": 165,
+    "manifest_sha256": "e9323694fd97174f3d74033a92d9dc9bef39b36927943361f52814a7a9265290",
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Cycle 166/B004: preregister a fibre-resolved C6-torsor state space, frozen multiplier law, preserved anchors, and the smallest exact intertwining-or-falsifier test."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_165_section_equivariance_v1.py --check",
+    "preflight_command": "research prereg check docs/cycle-165-section-equivariance-preregistration-v1.md --expected-cycle 165 --allow-head-drift",
+    "prototype_command": "python3 proof/verify_cycle_165_section_equivariance.py --output discovery/cycle-165-section-equivariance-prototype-v1.json",
+    "test_command": "python3 -m unittest tests.test_cycle_165_section_equivariance -v",
+    "write_command": "python3 proof/build_cycle_165_section_equivariance_v1.py --write"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_165_section_equivariance_v1.py",
+    "sha256": "a14099aaddc75d7e487cb83ed61371b4ed45dfc899b440e93dc0d7ad1041ce0d"
+  },
+  "status": "SEALED_POINTWISE_SECTION_EQUIVARIANCE_FALSIFIED"
+}

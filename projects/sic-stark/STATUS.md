@@ -21,22 +21,23 @@ Then read the listed record and its linked preregistration, proof document, conv
 
 ## Index coverage
 
-- Cycle artifact files found in the working tree: 4
-- Cycle artifacts present in the Git index: 3
-- Artifacts by top-level epistemic status: PROVED=4
-- Recursively tagged fields indexed for search (not independent claims): 13
+- Cycle artifact files found in the working tree: 5
+- Cycle artifacts present in the Git index: 4
+- Artifacts by top-level epistemic status: PROVED=5
+- Recursively tagged fields indexed for search (not independent claims): 16
 
 ## Latest sealed record
 
-- Latest record: `cycle-164-oriented-ray-monoid-section-v1` (Cycle 164, `PROVED`)
-- Status: `SEALED_CONDUCTOR_LOWERED_RAY_MONOID_SECTION`
-- Boundary: This exact finite result constructs only a convention-pinned conductor-lowered ray-monoid section. It proves no additive coefficient-to-logarithm operation, finite part, AFK cocycle compatibility, Stark identity, fusion theorem, or dimension-six TCC identity.
-- Next mathematical target: Cycle 165/B003: preregister an outcome-blind additive-to-logarithmic operation class on the sealed section and seek exact compatibility or an exact falsifier of that named class.
+- Latest record: `cycle-165-section-equivariance-v1` (Cycle 165, `PROVED`)
+- Status: `SEALED_POINTWISE_SECTION_EQUIVARIANCE_FALSIFIED`
+- Boundary: This exact finite result falsifies only deterministic pointwise label-respecting section pushforwards with a target set action. It does not rule out non-pointwise, nonlinear, fibre-resolved, characteristic-dependent, or analytic coefficient-to-logarithm operations.
+- Next mathematical target: Cycle 166/B004: preregister a fibre-resolved C6-torsor state space, frozen multiplier law, preserved anchors, and the smallest exact intertwining-or-falsifier test.
 
 ## Recent sealed records
 
 | Cycle | Record | Tag | Gate | Next target |
 |---:|---|---|---|---|
+| 165 | `cycle-165-section-equivariance-v1` | `PROVED` | `SEALED_POINTWISE_SECTION_EQUIVARIANCE_FALSIFIED` | Cycle 166/B004: preregister a fibre-resolved C6-torsor state space, frozen multiplier law, preserved anchors, and the smallest exact intertwining-or-falsifier test. |
 | 164 | `cycle-164-oriented-ray-monoid-section-v1` | `PROVED` | `SEALED_CONDUCTOR_LOWERED_RAY_MONOID_SECTION` | Cycle 165/B003: preregister an outcome-blind additive-to-logarithmic operation class on the sealed section and seek exact compatibility or an exact falsifier of that named class. |
 | 163 | `cycle-163-spectral-ray-interface-v2` | `PROVED` | `SEALED_FIXED_FULL_RAY_SELECTOR_METADATA_CORRECTION` | Cycle 164/B002: preregister and test an orientation-preserving characteristic-dependent conductor-lowering/ray-monoid state space with an explicit map from every reduced object to one common arithmetic-Frobenius-oriented C6 primitive target. |
 | 163 | `cycle-163-spectral-ray-interface-v1` | `PROVED` | `SEALED_FIXED_FULL_RAY_SELECTOR_FALSIFIED` | None |
