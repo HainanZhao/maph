@@ -25,11 +25,11 @@
   germ. Cycle 202 proves that its weight-one normal derivative cannot map by a
   direct rate-independent linear bridge to C198's nonzero weight-zero values,
   and Cycle 203 proves the ordinary normal line has no intrinsic inverse
-  trivialization. This rejects neither a logarithmic normal bundle nor another
-  source-derived continuation. No divergent raw contour, periodized beta
-  channel, AFK amplitude identity, fusion, or TCC is proved; the active gate
-  is a logarithmic/b-normal endpoint construction before exact helical/Zak
-  amplitude matching.
+  trivialization. This rejects neither an equation-(66) Mellin/b-pairing nor
+  another source-derived continuation. No divergent raw contour, periodized
+  beta channel, AFK amplitude identity, fusion, or TCC is proved; the active
+  gate is a source-derived Mellin/b-pairing before exact helical/Zak amplitude
+  matching.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -329,6 +329,12 @@
   obstructions and a rank-36 germ, not an operational amplitude map; proceed
   with the distinct logarithmic normal-bundle engine in `B041`, without
   claiming fusion progress.
+- `PROVED`: Cycle 204 proves that the canonical b-generators `s*d/ds` and
+  `ds/s` have Abel-rate weight zero; every declared tensor/contraction with
+  the rank-36 normal packets retains weight one and cannot directly map to the
+  fixed nonzero C198 targets. An additional equation-(66) b-pairing theorem,
+  covariant target, nonlinear/higher-germ, or non-Abel route remains open. See
+  `artifacts/cycle-204-b041-log-normal-bundle-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -423,7 +429,8 @@ Budget B001--B200
   |    |                                                                                                                                                                                                                           `-- linear regulator-invariant functional [FALSIFIED]
   |    |                                                                                                                                                                                                                                `-- normal derivative to fixed endpoint target [FALSIFIED]
   |    |                                                                                                                                                                                                                                     `-- ordinary inverse normal line/density [FALSIFIED]
-  |    |                                                                                                                                                                                                                                          `-- logarithmic / b-normal endpoint construction [NEXT GATE]
+  |    |                                                                                                                                                                                                                                          `-- bare logarithmic / b-normal tensors [FALSIFIED]
+  |    |                                                                                                                                                                                                                                               `-- equation-(66) Mellin / b-pairing [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -468,16 +475,16 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 204 logarithmic-normal-bundle decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `SOURCE_ANALYTIC_FREQUENCY_ENDPOINT_FUNCTIONAL_ON_T6_SEALED_ORDINARY_NORMAL_LINE_FALSIFIED_LOG_NORMAL_BUNDLE_OPEN` | Derive or reject a source-defined logarithmic/b-normal endpoint object and its all-36 covariance; only an exact weight-zero map may advance to Zak/periodization amplitude matching, including zero modes, capital `Gamma_M`, and separately pinned AFK phase. | Treating `ds/s` as an ordinary cotangent vector; choosing a logarithmic scale or target pairing; selecting one alias; fitting weights, scalars, trivializations, or a functional; discarding alias holonomy, capital `Gamma_M`, or AFK phase; using selected exponents, SIC outcome variables, or ray labels. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 205 Mellin/b-pairing decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `SOURCE_ANALYTIC_FREQUENCY_ENDPOINT_FUNCTIONAL_ON_T6_SEALED_BARE_LOG_NORMAL_OBJECTS_FALSIFIED_MELLIN_B_PAIRING_OPEN` | Derive or reject an equation-(66)-forced Mellin/b-pairing with source-fixed homogeneity exponent, then test its residue or finite part for rate independence and all-36 C198 equality before any Zak/periodization amplitude claim. | Assuming an unproved Mellin/b-integral; choosing a Mellin contour, finite part, homogeneity exponent, or target pairing after results; selecting one alias; fitting weights/scalars; using selected exponents, SIC outcome variables, or ray labels. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Do `s*d/ds` and `ds/s` define a source-valid logarithmic endpoint category
-  in which the rank-36 germ has a canonical weight-zero target covariance?
+- Does the source asymptotic force a Mellin/b-pairing whose residue or finite
+  part cancels the normal packet's rate weight and equals the 36 C198 values?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -486,28 +493,28 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 204
+## Next goal: Cycle 205
 
 Preregister one substantive block with this question:
 
-> Does the equation-(66) source and `A_6` flow admit a logarithmic/b-normal
-> endpoint category in which `s*d/ds` and `ds/s` turn the rank-36 normal germ
-> into a canonical all-36 weight-zero map, without a chosen scale, fitted
-> pairing, selected alias, or ray data?
+> Does the equation-(66) source asymptotic force a Mellin/b-pairing on the
+> logarithmic normal variable whose residue or finite part is rate-independent
+> and equals all 36 C198 endpoint values, without a selected contour, fitted
+> finite part, alias, or ray data?
 
-Cycle 204 must freeze the logarithmic state space, source flow action,
-admissible b-geometric pairing, and all-row target test before executable
-work. It must distinguish an actual source logarithmic category from a formal
-symbol, retain all 24 modes and 36 target characters, and keep capital
-`Gamma_M` and AFK phase separate. It must not select a preferred alias, choose
-a logarithmic scale or fitted pairing, use selected exponents or ray labels,
-or claim an AFK, fusion, Stark, or TCC consequence.
+Cycle 205 must freeze the source asymptotic family, Mellin variable and
+contour/finite-part rule, homogeneity exponent, b-pairing formula, and all-row
+target equality before executable work. It must retain all 24 modes and 36
+target characters and keep capital `Gamma_M` and AFK phase separate. It must
+not select a preferred alias, choose a post-result contour/residue/finite part,
+fit a scalar, use selected exponents or ray labels, or claim an AFK, fusion,
+Stark, or TCC consequence.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 203
+research cycle 204
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_203_inverse_normal_line_v1.py --check
+python3 proof/build_cycle_204_log_normal_bundle_v1.py --check
 ```
