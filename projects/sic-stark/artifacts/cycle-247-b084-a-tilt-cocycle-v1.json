@@ -1,0 +1,86 @@
+{
+  "artifact_id": "cycle-247-b084-a-tilt-cocycle-v1",
+  "audit": {
+    "claim_boundary": "This refutes only C247's frozen one-q collapse/base-only tilt-stability engine. It does not prove or disprove a multi-base tilt cocycle, compare C244 constructed-current coefficients with the source line, normalize a current, or imply a contour identity, mixed-base transform, B-Fourier covariance, AFK, fusion, Stark, or TCC.",
+    "difference": "eta-theta=-(w^2-110*w+1)/(24*w)",
+    "epistemic_status": "PROVED",
+    "factor_role_derivation": {
+      "A1_A4": "alpha/beta=(w+5)/24=theta, so C245's Phi_alpha numerator factors use exp(2*pi*i*theta)",
+      "A2_A3": "-beta/alpha=(115-1/w)/24=eta, so C245's Laurent pole-ratio factors use exp(2*pi*i*eta)",
+      "subtraction": "eta-theta=(110-w-1/w)/24=-(w^2-110*w+1)/(24*w)",
+      "upper_tilt_sign": "with w=t_++i*epsilon and the exact root identity, Im(eta-theta)=-epsilon*(1-1/(t_+^2+epsilon^2))/24<0"
+    },
+    "imaginary_difference_certificate": "Im(eta-theta)=-epsilon*(1-1/(t_+^2+epsilon^2))/24<0 for epsilon>0",
+    "proposed_identity": "theta=eta modulo Z",
+    "q_bases": {
+      "A1_A4_numerator": "exp(2*pi*i*theta)",
+      "A2_A3_pole": "exp(2*pi*i*eta)",
+      "not_equal_for_any_positive_tilt": true
+    },
+    "q_series_degree_two_inspected": false,
+    "reason": "The C247 selection rule requires a common q base before its N=1 q^2 test; that prerequisite fails for every epsilon>0.",
+    "root_identity": "t_+^2-110*t_++1=0, t_+=55+12*sqrt(21)",
+    "status": "FROZEN_ONE_Q_TILT_COCHAIN_FALSIFIED"
+  },
+  "budget_ordinal": "B084",
+  "claim_boundary": "For every positive plus-embedding tilt, the C247 A1/A4 and A2/A3 source multiplier bases differ even modulo integers, so the preregistered single-q tilt-cocycle/base-only-stability engine cannot be formed. This does not exclude a two-base or multi-base cocycle and does not identify C244's constructed coefficients with the C245 source line, normalize a current, authorize a source identity, or prove a contour identity, mixed-base transform, B-Fourier covariance, AFK, fusion, Stark, or TCC.",
+  "companion_decision": {
+    "adopted": true,
+    "falsifier": "A corrected C228 role assignment or exact phase calculation yielding theta-eta in Z at a positive tilt.",
+    "identity": "/root/decision_companion_2",
+    "known_flaw": "It cannot exclude a two-base or multi-base transport and says nothing about source-to-current identification.",
+    "next_action": "Open a genuinely multi-base tilt-cocycle cycle only with both bases, branch/transport law, and a predeclared holonomy or Cauchy criterion frozen before work.",
+    "recommendation": "Seal C247/B084 as PROVED: FROZEN_ONE_Q_TILT_COCHAIN_FALSIFIED.",
+    "reviewed_work": "C247 exact C228 phase-role derivation, root-identity subtraction, positive-tilt imaginary-sign certificate, and preregistered stop before the q^2 test."
+  },
+  "cycle": 247,
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "prereg": {
+      "path": "docs/cycle-247-b084-a-tilt-cocycle-preregistration-v1.md",
+      "sha256": "e188c3334ec4cb7359668a8ae414a8098d27ec1e3d610999a5269800ad90b1cd"
+    },
+    "prior_c228": {
+      "path": "artifacts/cycle-228-b065-f3-square-residual-block-v1.json",
+      "sha256": "2078970c02c1f1359de25394f57c9229dab4fef01c15894bc36b1ea177deafe4"
+    },
+    "prior_c244": {
+      "path": "artifacts/cycle-244-b081-constructed-abel-current-v1.json",
+      "sha256": "58589f8ef0d37a6d26a2084ffb77527970309657ebfcdaacdd9f91cbedcc388a"
+    },
+    "prior_c245": {
+      "path": "artifacts/cycle-245-b082-a-principal-coefficients-v1.json",
+      "sha256": "74f0e4e3f91a7554e5cc1cb5145a146de3d54a74a98da13cf739878300ad3a65"
+    },
+    "prior_c246": {
+      "path": "artifacts/cycle-246-b083-fixed-tilt-a-bound-v1.json",
+      "sha256": "e66bc471b9a65e3512b1d97e86926942dbeba1094276dcb1fccac9233af429e6"
+    },
+    "replay": {
+      "path": "proof/verify_cycle_247_a_tilt_cocycle.py",
+      "sha256": "2dce77a0f72ec37a6b1f8e51fc03b3cf34d06d1e3c5c2eb8d03144deb8dfb8b2"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    },
+    "test": {
+      "path": "tests/test_cycle_247_a_tilt_cocycle.py",
+      "sha256": "d8ec63d2b2013d7cfac29f9858529c0b81d612c60f17111b9cfdfe3c5ac88dfd"
+    },
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_247_a_tilt_cocycle_v1.py",
+    "sha256": "fc553e2fdec3a0681d431b0baa85ab11361f8b4a6bdefb9d2928148863084048"
+  },
+  "status": "SEALED_FROZEN_ONE_Q_TILT_COCHAIN_FALSIFIED"
+}
