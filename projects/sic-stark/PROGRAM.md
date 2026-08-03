@@ -70,11 +70,13 @@
   the defining `tau`, `u`, and `tilde-u` product coordinates. Cycle 220 proves
   that normalized reflection composed with those signs reduces identically to
   that same diagonal family. The two `tau/u` survivors therefore isolate a
-  `tilde-u -> -tilde-u` defect; a genuinely new theta/Pochhammer correction
-  remains open. No endpoint binomial value has been evaluated. No divergent
-  raw contour, periodized beta channel, AFK amplitude identity, fusion, or TCC
-  is proved; the active gate is a source-derived tilde-sector correction with
-  full compatibility axioms.
+  `tilde-u -> -tilde-u` defect. Cycle 221 derives its unique unmodified
+  Pochhammer correction: it repairs the unnormalized product but leaves an
+  exact first normalized-shift sign mismatch. A source-derived
+  label-dependent normalization cocycle remains open. No endpoint binomial
+  value has been evaluated. No divergent raw contour, periodized beta channel,
+  AFK amplitude identity, fusion, or TCC is proved; the active gate is a
+  source-derived signed normalization cocycle with full compatibility axioms.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -484,6 +486,12 @@
   This leaves a correction-factor construction, not a reflection-only
   construction, as the next design problem. See
   `artifacts/cycle-220-b057-normalized-reflection-v1.json`.
+- `PROVED`: Cycle 221 derives the unique tilde-sector Pochhammer ratio for the
+  two `tau/u` survivors. It repairs their unnormalized product sector, but is
+  invariant under the first shift while its signed continuation requires the
+  opposite exact normalized sign. This rejects that unmodified construction
+  only; an independently derived label multiplier remains open. See
+  `artifacts/cycle-221-b058-tilde-inversion-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -638,17 +646,17 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 221 tilde-sector correction decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `REFLECTION_SIGN_FAMILY_FALSIFIED_SEALED` | Derive the forced tilde-sector Pochhammer/theta inversion factor from the two `tau/u` survivors, then prove product-coordinate agreement, involutivity, normalization, shifts, and both factorization identities before re-testing the affine E state. | Treating the reflection result as a general nonexistence theorem; fitting a correction factor; declaring a convention an extension; checking only a matrix; dropping normalization/branches/residual factors; or calling a partial extension a packet theorem. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 222 source-normalization cocycle decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `FORCED_TILDE_CORRECTION_NORMALIZATION_MISMATCH_SEALED` | Derive allowed root-of-unity label multipliers from source `Z(m)`, solve the exact mod-24 shift/reflection coboundary equations, and test both factorization identities before adjoining any multiplier. | Treating a raw negative-`k` continuation as a published theorem; fitting a multiplier; declaring a convention an extension; checking only a matrix; dropping normalization/branches/residual factors; or calling a partial extension a packet theorem. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Does inversion of the tilde-sector Pochhammer/theta product force one
-  correction factor for the two `tau/u` sign survivors, and can that factor
-  satisfy source normalization and functional identities without fitting?
+- Does source `Z(m)` force a mod-24 root-of-unity label cocycle that repairs
+  the two-survivor normalized shift sign while preserving reflection and both
+  factorization identities?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -657,26 +665,25 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 221 / B058
+## Next goal: Cycle 222 / B059
 
 Preregister one substantive block with this question:
 
-> Can the two `tau/u` sign survivors be corrected by the uniquely forced
-> tilde-sector Pochhammer/theta inversion factor, yielding a source-defined
-> signed-`k` extension at `k=±24` with the required product and functional
-> identities?
+> Do the source `Z(m)` normalization and the exact mod-24 shift/reflection
+> coboundary equations determine an admissible label multiplier for the forced
+> tilde-sector correction, compatible with both S--S factorization identities?
 
-Cycle 221 must derive—not fit—the correction factor and freeze its argument,
-label, branch, and normalization rule before executable work. It must retain
-capital `Gamma_M` normalization and all residual factors; keep the AFK phase
-separate; forbid target fitting; and not claim an AFK, fusion, Stark, or TCC
-consequence.
+Cycle 222 must derive—not fit—every candidate multiplier from the source
+`Z(m)` phases, freeze its mod-24 state and factorization pullbacks before
+executable work, retain capital `Gamma_M` normalization and all residual
+factors, keep the AFK phase separate, and not claim an AFK, fusion, Stark, or
+TCC consequence.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 220
+research cycle 221
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_220_normalized_reflection_v1.py --check
+python3 proof/build_cycle_221_tilde_inversion_v1.py --check
 ```
