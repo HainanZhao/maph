@@ -1,0 +1,193 @@
+{
+  "a6_cusp_multiplier_audit": {
+    "common_multiplier": "chi=zeta_48^8",
+    "common_multiplier_exponent_mod_48": 8,
+    "epistemic_status": "PROVED",
+    "records": [
+      {
+        "A6_image": [
+          0,
+          5
+        ],
+        "label": [
+          0,
+          5
+        ],
+        "zeta_48_exponent": 8
+      },
+      {
+        "A6_image": [
+          5,
+          0
+        ],
+        "label": [
+          5,
+          0
+        ],
+        "zeta_48_exponent": 8
+      }
+    ]
+  },
+  "artifact_id": "cycle-213-b050-two-ended-completion-v1",
+  "budget_ordinal": "B050",
+  "claim_boundary": "For the declared formal two-cusp completion W and its constructed exchange involution, the frozen common A6 multiplier forbids every nonzero strictly scalar A6-invariant bilinear pairing. The declared exchange-symmetric cross pairing is exactly A6-equivariant only after retaining its multiplier-character coefficient line; it restricts nontrivially to the iota-fixed line but does not descend to the formal iota-coinvariant quotient. This proves neither an analytic gluing, a source quotient, a density/orientation theorem, C198 comparison, AFK identity, fusion-continuity theorem, Stark relation, nor TCC statement.",
+  "companion_decision": {
+    "adopted": true,
+    "evidence_scope_review": "C213 establishes the formal two-ended representation and strictly scalar complex-bilinear invariant-form obstruction. The character-valued/conjugate-line construction is a distinct engine.",
+    "falsifier": "Any cusp multiplier, zeta_48 order, bilinear invariance equation, exchange symmetry, fixed-space restriction, coinvariant-descent, or replay discrepancy invalidates the seal.",
+    "identity": "/root/decision_companion_2",
+    "known_flaw": "W, the end exchange, and multiplier line M are not yet derived from an analytic or arithmetic source, and complex-bilinear failure does not exclude sesquilinear or dual-line pairings.",
+    "next_action": "Open a new cycle deriving the end exchange and multiplier line from source conjugation/theta automorphy, then test a canonical W tensor W-bar or W tensor W-dual scalar pairing before any fusion or C198 claim.",
+    "reason": "The frozen multiplier exactly rules out the declared scalar complex-bilinear family, while the remaining dual/conjugate constructions require a genuinely new source-authorized engine.",
+    "recommendation": "Seal C213/B050 as PROVED only for the formal two-ended representation and the strictly scalar complex-bilinear invariant-form obstruction; the character-valued/conjugate-line construction is a distinct engine."
+  },
+  "cycle": 213,
+  "epistemic_status": "PROVED",
+  "formal_completion_audit": {
+    "A6_action": "u_infinity->chi*u_infinity and u_zero->chi*u_zero",
+    "basis": {
+      "u_infinity": "formal representative of [e_(0,5)]",
+      "u_zero": "formal representative of [e_(5,0)]"
+    },
+    "epistemic_status": "PROVED",
+    "exchange_involution": {
+      "matrix": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "square": "identity"
+    },
+    "scope": "FORMAL_COMPLETION_ONLY_NOT_A_PROVED_ANALYTIC_OR_ARITHMETIC_GLUE",
+    "state_space": "W=C*u_infinity direct_sum C*u_zero"
+  },
+  "frozen_hashes": {
+    "cycle211_replay": {
+      "path": "proof/verify_cycle_211_cusp_asymptotic_flat_sections.py",
+      "sha256": "0cef852e1ebf2db3b2fec48e4bc197ca79e3be9bbd14cd09a09ca73ab99d589d"
+    },
+    "multiplier_ledger": {
+      "path": "scripts/dimension_six_stabilizer_ledger.py",
+      "sha256": "594a0d541478f340abe789234335f3ff1b2d874ad8fa3507ad95026c5cc6276b"
+    },
+    "preregistration": {
+      "path": "docs/cycle-213-b050-two-ended-completion-preregistration-v1.md",
+      "sha256": "9ce3d02d20c9cf8d7152036921f3759e1120e55f263fb1a3f6442994a2fbc286"
+    },
+    "preregistration_validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    },
+    "prior_two_cusp_sections": {
+      "path": "artifacts/cycle-211-b048-cusp-asymptotic-flat-sections-v1.json",
+      "sha256": "62b4afdbdf4ad2f9aa11e648929c54aa66219088689231373c7ad16635f8936c"
+    },
+    "prior_two_sign_orientation": {
+      "path": "artifacts/cycle-212-b049-logarithmic-axis-to-packet-orientation-v1.json",
+      "sha256": "8af644a7d17e4e9959d1cff95fc2a7a9128f45dfd91ec10b83789c076c7898c5"
+    },
+    "prototype": {
+      "path": "discovery/cycle-213-b050-two-ended-completion-prototype-v1.json",
+      "sha256": "1a64f096c1112e837dd6bb45ec9a68bba72a810cc680705ccadfb981b9dce4ff"
+    },
+    "regression_test": {
+      "path": "tests/test_cycle_213_two_ended_completion.py",
+      "sha256": "e796cdf769f06b34f1e53856092fc7a302da253fc4095c2c132b9d7af45becf4"
+    },
+    "replay": {
+      "path": "proof/verify_cycle_213_two_ended_completion.py",
+      "sha256": "0c2f56ff6195d7cf83f797af8aa6b7613f7dc1113c17194173b7436ca87644d4"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    }
+  },
+  "gate_outcome": {
+    "character_valued_fixed_line_pairing": "PROVED_BUT_NOT_A_SCALAR_FUSION_INVARIANT",
+    "coinvariant_descent_of_declared_cross_pairing": "FALSIFIED",
+    "formal_two_ended_completion": "PROVED_WITH_CONSTRUCTED_EXCHANGE_ONLY",
+    "remaining_design_problem": "Construct a source-authorized analytic/arithmetic completion or a multiplier trivialization derived from source data, then test a genuine fusion invariant without C198 fitting.",
+    "strict_scalar_sign_independent_pairing": "FALSIFIED_IN_DECLARED_COMPLETION"
+  },
+  "outcome": {
+    "epistemic_status": "PROVED",
+    "statement": "In the declared formal two-cusp completion with common A6 multiplier zeta_48^8, every complex-bilinear strictly scalar A6-invariant pairing vanishes. This is a scoped formal obstruction, not an analytic or arithmetic fusion result."
+  },
+  "preregistration_preflight": {
+    "cycle": 213,
+    "manifest_sha256": "9ce3d02d20c9cf8d7152036921f3759e1120e55f263fb1a3f6442994a2fbc286",
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "quarantined_cross_pairing_context": {
+    "audit": {
+      "A6_equivariance": "B(A6*u,A6*v)=zeta_48^16*B(u,v)=A6_M*B(u,v)",
+      "coefficient_line": "M with A6 action q->zeta_48^16*q",
+      "conclusion": "NONZERO_EXCHANGE_INVARIANT_CHARACTER_VALUED_PAIRING_RESTRICTS_TO_THE_FIXED_LINE_BUT_DOES_NOT_DESCEND_TO_THE_NATURAL_IOTA_COINVARIANT_QUOTIENT",
+      "definition": "B(u_infinity,u_zero)=B(u_zero,u_infinity)=q; same-end values are zero",
+      "descends_to_iota_coinvariant_quotient": false,
+      "epistemic_status": "PROVED",
+      "exchange_invariant": true,
+      "fixed_line": "W^iota=span(u_infinity+u_zero)",
+      "fixed_line_restriction_in_units_of_q": 2,
+      "iota_coinvariant_quotient": "W/span(u_infinity-u_zero)",
+      "pairing_matrix_in_u_infinity_u_zero_basis": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "quotient_failure": {
+        "left_relation_pairing_in_units_of_q": [
+          -1,
+          1
+        ],
+        "right_relation_pairing_in_units_of_q": [
+          -1,
+          1
+        ]
+      }
+    },
+    "epistemic_status": "PROVED",
+    "promotion_status": "NOT_A_FUSION_INVARIANT_AND_NOT_A_SOURCE_AUTHORIZED_DESCENT",
+    "reason": "It needs a constructed multiplier line and constructed exchange; it is retained only to prevent a future scalarization or quotient-descent misreading."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_213_two_ended_completion_v1.py --check",
+    "preflight_command": "research prereg check docs/cycle-213-b050-two-ended-completion-preregistration-v1.md --expected-cycle 213 --allow-head-drift",
+    "prototype_command": "python3 proof/verify_cycle_213_two_ended_completion.py --output discovery/cycle-213-b050-two-ended-completion-prototype-v1.json",
+    "test_command": "python3 -m unittest tests/test_cycle_213_two_ended_completion.py",
+    "write_command": "python3 proof/build_cycle_213_two_ended_completion_v1.py --write"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "scalar_pairing_audit": {
+    "coefficient_equation": "(zeta_48^16-1)*B_ij=0 for each of the four pairing-matrix entries",
+    "conclusion": "NO_NONZERO_STRICTLY_A6_INVARIANT_SCALAR_BILINEAR_PAIRING_ON_W",
+    "epistemic_status": "PROVED",
+    "nonzero_scalar_pairing_dimension": 0,
+    "strict_scalar_condition": "B(A6*u,A6*v)=B(u,v)",
+    "zeta_48_squared_exponent_mod_48": 16,
+    "zeta_48_squared_order": 3
+  },
+  "sealer": {
+    "path": "proof/build_cycle_213_two_ended_completion_v1.py",
+    "sha256": "22e394c699a894e1f03d8c7e90ba473f2663979a2045e04ddb6f842fe84edcfa"
+  },
+  "status": "SEALED_FORMAL_TWO_ENDED_SCALAR_PAIRING_OBSTRUCTION"
+}
