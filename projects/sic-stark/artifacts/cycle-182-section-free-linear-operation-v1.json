@@ -1,0 +1,615 @@
+{
+  "artifact_id": "cycle-182-section-free-linear-operation-v1",
+  "budget_ordinal": "B020",
+  "claim_boundary": "This exact finite result tests the preregistered canonical uniform-fibre map and the complete rational augmentation-preserving linear target-action class only. It defines no AFK coefficient identification, Stark regulator equality, fusion theorem, or TCC identity.",
+  "conventions": {
+    "canonical_map": "basis point maps to uniform measure on its source-built assembled exponent set",
+    "source": "Q[(Z/6Z)^2] with T(a,b)=(5a+b,-a)",
+    "target": "Q[C6]",
+    "target_action": "all rational augmentation-preserving 6x6 actions constrained by equivariance and A^3=I"
+  },
+  "cycle": 182,
+  "epistemic_status": "PROVED",
+  "exact_prototype": {
+    "source_output": "discovery/cycle-182-section-free-linear-operation-prototype-v1.json",
+    "summary": {
+      "action_solve": {
+        "augmentation_equations": 6,
+        "consistent": false,
+        "equations": 222,
+        "equivariance_consistent_without_augmentation": false,
+        "equivariance_equations": 216,
+        "equivariance_rref_rank": 36,
+        "identical_source_measure_conflicts": [
+          {
+            "points": [
+              [
+                1,
+                3
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                3,
+                2
+              ]
+            ],
+            "source_measure": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "1"
+            ],
+            "successor_measures": [
+              [
+                "0",
+                "0",
+                "1",
+                "0",
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "1",
+                "0",
+                "0",
+                "0",
+                "0"
+              ],
+              [
+                "1/3",
+                "0",
+                "1/3",
+                "0",
+                "1/3",
+                "0"
+              ]
+            ]
+          },
+          {
+            "points": [
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                1
+              ]
+            ],
+            "source_measure": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "1",
+              "0"
+            ],
+            "successor_measures": [
+              [
+                "0",
+                "1/3",
+                "0",
+                "1/3",
+                "0",
+                "1/3"
+              ],
+              [
+                "0",
+                "1",
+                "0",
+                "0",
+                "0",
+                "0"
+              ],
+              [
+                "1",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            ]
+          },
+          {
+            "points": [
+              [
+                0,
+                5
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                5,
+                1
+              ]
+            ],
+            "source_measure": [
+              "0",
+              "0",
+              "0",
+              "1",
+              "0",
+              "0"
+            ],
+            "successor_measures": [
+              [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1"
+              ],
+              [
+                "1/3",
+                "0",
+                "1/3",
+                "0",
+                "1/3",
+                "0"
+              ],
+              [
+                "1",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            ]
+          },
+          {
+            "points": [
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                5
+              ],
+              [
+                5,
+                3
+              ]
+            ],
+            "source_measure": [
+              "0",
+              "0",
+              "1",
+              "0",
+              "0",
+              "0"
+            ],
+            "successor_measures": [
+              [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1"
+              ],
+              [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0"
+              ],
+              [
+                "0",
+                "1/3",
+                "0",
+                "1/3",
+                "0",
+                "1/3"
+              ]
+            ]
+          },
+          {
+            "points": [
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ]
+            ],
+            "source_measure": [
+              "0",
+              "1/3",
+              "0",
+              "1/3",
+              "0",
+              "1/3"
+            ],
+            "successor_measures": [
+              [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1"
+              ],
+              [
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "1/3",
+                "0",
+                "1/3",
+                "0",
+                "1/3"
+              ],
+              [
+                "0",
+                "1",
+                "0",
+                "0",
+                "0",
+                "0"
+              ],
+              [
+                "1/3",
+                "0",
+                "1/3",
+                "0",
+                "1/3",
+                "0"
+              ]
+            ]
+          },
+          {
+            "points": [
+              [
+                3,
+                5
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                5,
+                4
+              ]
+            ],
+            "source_measure": [
+              "0",
+              "1",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "successor_measures": [
+              [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0"
+              ],
+              [
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              [
+                "1/3",
+                "0",
+                "1/3",
+                "0",
+                "1/3",
+                "0"
+              ]
+            ]
+          },
+          {
+            "points": [
+              [
+                0,
+                2
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                4
+              ],
+              [
+                5,
+                2
+              ],
+              [
+                5,
+                5
+              ]
+            ],
+            "source_measure": [
+              "1/3",
+              "0",
+              "1/3",
+              "0",
+              "1/3",
+              "0"
+            ],
+            "successor_measures": [
+              [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0"
+              ],
+              [
+                "0",
+                "0",
+                "1",
+                "0",
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "1/3",
+                "0",
+                "1/3",
+                "0",
+                "1/3"
+              ],
+              [
+                "1/3",
+                "0",
+                "1/3",
+                "0",
+                "1/3",
+                "0"
+              ],
+              [
+                "1",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            ]
+          },
+          {
+            "points": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                5
+              ],
+              [
+                5,
+                0
+              ]
+            ],
+            "source_measure": [
+              "1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "successor_measures": [
+              [
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0",
+                "1",
+                "0",
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "1/3",
+                "0",
+                "1/3",
+                "0",
+                "1/3"
+              ]
+            ]
+          }
+        ],
+        "inconsistency_certificate": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-2/3"
+        ],
+        "measure_span_rank": 6,
+        "rref_rank": 36,
+        "unknowns": 36
+      },
+      "conductor_pushforwards_checked": 36,
+      "orientation_anchors": {
+        "3,4": [
+          2
+        ],
+        "3,5": [
+          1
+        ]
+      },
+      "rows_checked": 36
+    }
+  },
+  "frozen_hashes": {
+    "assembly": {
+      "path": "artifacts/cycle-180-local-global-artin-assembly-v1.json",
+      "sha256": "00ed9e7d014d1e53e828390f589ed5b97ceacb8fba2ddf502b8f318707b7817f"
+    },
+    "instructions": {
+      "path": "AGENTS.md",
+      "sha256": "363495f0dbbe93e244b460c8eafb13247a8fb1f41be24f94c037ae9f6400c6f2"
+    },
+    "output": {
+      "path": "discovery/cycle-182-section-free-linear-operation-prototype-v1.json",
+      "sha256": "672f42b44aba5a4d80a5732fe2f0ef67af724810300f39063d39814fb650f273"
+    },
+    "prereg": {
+      "path": "docs/cycle-182-section-free-linear-operation-preregistration-v1.md",
+      "sha256": "c66852b77b1bd6e002a77eb8293858cdcb846541bcc4a2c72d9844c4893896ca"
+    },
+    "replay": {
+      "path": "proof/verify_cycle_182_section_free_linear_operation.py",
+      "sha256": "2113e889261c1506ccfc484aff9dc2876f3e39f6ae4e6b6d4c518447fd6c68b9"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    },
+    "transport": {
+      "path": "artifacts/cycle-181-shintani-local-action-v1.json",
+      "sha256": "539e7179b060c471603154331327843b909487125b80278c2d76d346a3d930e4"
+    }
+  },
+  "gate_outcome": {
+    "d6_interface": "COLLAPSED_UNIFORM_RAY_TARGET_FALSIFIED_CONDUCTOR_GRADED_TARGET_REQUIRED",
+    "disallowed_pseudo_progress": [
+      "discarding conductor grade again",
+      "generalizing the obstruction to graded, nonlinear, fibre-resolved, or analytic operations",
+      "using selected exponents, s,d, or target labels"
+    ],
+    "remaining_bottleneck": "Retain conductor grade in a section-free ray-algebra target and derive direct Shintani inter-grade maps before testing an additive operation."
+  },
+  "outcome": {
+    "epistemic_status": "PROVED",
+    "statement": "No rational linear target action on the collapsed Q[C6] can make the canonical uniform assembled-set map Shintani equivariant; source-measure collisions already contradict equivariance."
+  },
+  "preregistration_preflight": {
+    "cycle": 182,
+    "manifest_sha256": "c66852b77b1bd6e002a77eb8293858cdcb846541bcc4a2c72d9844c4893896ca",
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "The next distinct method is the direct sum of six conductor-graded ray algebras with exact Shintani inter-grade maps."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_182_section_free_linear_operation_v1.py --check",
+    "preflight_command": "research prereg check docs/cycle-182-section-free-linear-operation-preregistration-v1.md --expected-cycle 182 --allow-head-drift",
+    "prototype_command": "python3 proof/verify_cycle_182_section_free_linear_operation.py --output discovery/cycle-182-section-free-linear-operation-prototype-v1.json",
+    "write_command": "python3 proof/build_cycle_182_section_free_linear_operation_v1.py --write"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_182_section_free_linear_operation_v1.py",
+    "sha256": "13b7a53cb93860bcbf69413503ed3f4bae5e18d389d2493bd84c2246a5c1324f"
+  },
+  "status": "SEALED_COLLAPSED_UNIFORM_RAY_TARGET_LINEAR_CLASS_EMPTY"
+}

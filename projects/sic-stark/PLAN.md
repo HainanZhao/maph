@@ -10,11 +10,10 @@
   scopes in dimensions 4, 5, 7, and 8. No dimension-six TCC identity,
   coefficient-to-ray map, fusion-continuity theorem, or boundary-limit theorem
   is proved. `CERTIFIED_NUMERICAL` packet growth is not a nonexistence theorem.
-- Current state: Cycle 181 / `B019` proves a direct, source-built
-  set-valued Shintani transport on the conductor-varying ray assembly. It is
-  the first characteristic-to-ray-set relation, but not an additive map.
-  Cycle 182 / `B020` must test a section-free additive operation into a
-  ray-group-algebra target constrained by that transport.
+- Current state: Cycle 182 / `B020` falsifies the complete rational linear
+  action class on the collapsed uniform `Q[C6]` target: source-measure
+  collisions already violate Shintani equivariance. Cycle 183 / `B021` must
+  retain the six conductor grades and derive direct inter-grade maps.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -27,8 +26,8 @@
 ## Budget, accounting, and stop condition
 
 - Total forward budget: 200 substantive research cycles, counted `B001/200`
-  through `B200/200`; the counter is currently `B019/200`.
-- Cycle 182 is `B020`. Repository cycle numbers and budget ordinals advance
+  through `B200/200`; the counter is currently `B020/200`.
+- Cycle 183 is `B021`. Repository cycle numbers and budget ordinals advance
   together unless a non-counted record intervenes; the budget ordinal is the
   authoritative campaign counter.
 - A cycle counts only when it is a preregistered substantive research block
@@ -152,6 +151,12 @@
   third returns against the triple-conductor kernel, and 18 conductor
   transitions. It is finite ray transport only, not an additive/AFK map. See
   `artifacts/cycle-181-shintani-local-action-v1.json`.
+- `PROVED`: Cycle 182 exactly falsifies the entire rational linear target-
+  action class for the canonical uniform assembled-set map into collapsed
+  `Q[C6]`: its 36 source measures span the target but eight collision types
+  have incompatible successor measures. This does not constrain conductor-
+  graded, nonlinear, fibre-resolved, or analytic operations. See
+  `artifacts/cycle-182-section-free-linear-operation-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -219,7 +224,8 @@ Budget B001--B200
   |    |                                                                                    `-- modulus-defined p2 quotient [INJECTIVE / VACUOUS]
   |    |                                                                                         `-- local-global Artin assembly [SEALED]
   |    |                                                                                              `-- direct A6/Shintani action [SEALED]
-  |    |                                                                                                   `-- section-free additive operation [NEXT GATE]
+  |    |                                                                                                   `-- collapsed uniform target [FALSIFIED]
+  |    |                                                                                                        `-- conductor-graded ray algebra [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -264,17 +270,17 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `B019_OF_200` | Complete the companion-reviewed Cycle 182/B020 decision, then increment only for substantive research blocks. | Counting workflow or archive-only work. |
-| D6 interface | `SET_VALUED_RAY_TRANSPORT_EXACT_ADDITIVE_OPERATION_REQUIRED` | Define a section-free additive source-to-ray-group-algebra operation with exact conductor maps, A6 equivariance, and anchors, or exactly contain that named operation class. | Calling set-valued transport an AFK/additive map; choosing exponents; using `s,d` or target labels to force an operation. |
+| Project budget | `B020_OF_200` | Complete the companion-reviewed Cycle 183/B021 decision, then increment only for substantive research blocks. | Counting workflow or archive-only work. |
+| D6 interface | `COLLAPSED_UNIFORM_RAY_TARGET_FALSIFIED_CONDUCTOR_GRADED_TARGET_REQUIRED` | Define the six-grade section-free ray-algebra target and direct Shintani inter-grade maps, then test the corresponding additive operation class. | Discarding conductor grade; generalizing the collapsed-target falsifier; using selected exponents, `s,d`, or target labels. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Does a section-free additive operation from the characteristic module into
-  the conductor-compatible ray group algebra exist that is equivariant for the
-  direct Shintani correspondence and preserves orientation?
+- Does the direct sum of the six conductor-graded ray algebras admit
+  source-defined Shintani inter-grade maps and a section-free additive
+  characteristic operation that preserves orientation?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -283,29 +289,28 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 182 / `B020`
+## Next goal: Cycle 183 / `B021`
 
 Preregister one substantive block with this question:
 
-> Does a preregistered section-free additive characteristic-to-ray-group-
-> algebra operation exist with conductor maps, direct set-valued Shintani
-> equivariance, and the two orientation anchors—without `s`, `d`, selected
+> What are the source-defined inter-grade Shintani maps on the six
+> conductor-lowered ray algebras, and does the resulting graded target admit a
+> section-free additive characteristic operation without `s`, `d`, selected
 > exponents, or target-fitted labels?
 
-Cycle 182 must freeze the additive source module, the section-free ray-group-
-algebra target, all conductor maps, direct set-valued transport relation,
-equivariance convention, anchors, and failure rule before executable work. It
-must construct candidate operations without `s`, `d`, selected exponents, or
-target-fitted labels. The companion reviewed the sealed B019 transport and
-recommended this distinct additive-operation engine; its stated flaw is that
-finite transport alone neither maps AFK coefficients nor controls Stark
-values.
+Cycle 183 must freeze the six graded targets, the common-source and
+inter-grade maps, the additive source module, equivariance convention,
+anchors, and failure rule before executable work. It must not collapse the
+grade, select exponents, use `s,d`, or fit target maps. The companion reviewed
+the sealed B020 obstruction and recommended this distinct graded-target
+engine; its stated flaw is that retaining grade may still produce a merely
+finite transport rather than an AFK coefficient or Stark map.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 181
+research cycle 182
 sed -n '1,260p' PLAN.md
-python3 proof/build_cycle_181_shintani_local_action_v1.py --check
+python3 proof/build_cycle_182_section_free_linear_operation_v1.py --check
 ```
