@@ -144,7 +144,12 @@
   one-word, nonlinear, piecewise-linear, factor-dependent, residue-corrected,
   and other-regularization contours open. The next genuinely new engine is a
   two-chamber Picard--Lefschetz-style deformation with every crossed divisor
-  and residue explicitly audited.
+  and residue explicitly audited. Cycle 243 proves that every such frozen
+  continuous affine-normal deformation crosses an infinite uncancelled family:
+  the two A pole factors at `mu_N=N*(115*t-1)` change side at `u=1/115`, while
+  all eight factors supply opposite zeros only when `12` divides `N`. Hence no
+  finite residue ledger exists. An Abel/zeta-renormalized infinite-residue
+  construction remains a distinct untested engine.
   No endpoint binomial value has been
   evaluated. No divergent raw contour, periodized beta channel, AFK amplitude
   identity, fusion, or TCC is proved.
@@ -762,17 +767,17 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 243 two-chamber deformation-and-residue decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `COMMON_AFFINE_LINEAR_CONTOUR_OBSTRUCTED` | Freeze one source-derived normal for each A/C chamber, a Galois-equivariant connecting deformation, all crossed divisor classes, and their exact residue rule; prove or falsify a shared piecewise contour before B-Fourier covariance. | Treating a separately chosen contour as common, omitting a crossed divisor/residue, treating lattice self-duality as a special-function transform, or inferring a signed extension. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 244 Abel-renormalized wall-crossing decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `FINITE_RESIDUE_TWO_CHAMBER_OBSTRUCTED` | Freeze the exact residue sequence, an Abel or other source-defined regularization, the 12-dissection, and a non-fitted boundary continuation criterion; prove or falsify a renormalized crossing before B-Fourier covariance. | Replacing the infinite family by a finite ledger, fitted subtraction, unproved summation, treating lattice self-duality as a special-function transform, or inferring a signed extension. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Does a Galois-equivariant two-chamber deformation connect source-derived A
-  and C cone contours while accounting exactly for every crossed divisor and
-  residue, thereby defining a shared piecewise contour?
+- Does the exact infinite two-chamber residue family have a source-defined
+  Abel-regularized, 12-dissected boundary continuation without fitted
+  subtraction?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -781,25 +786,25 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 243 / B080
+## Next goal: Cycle 244 / B081
 
 Preregister one substantive block with this question:
 
-> Can separately source-derived A and C Minkowski cone normals be connected by
-> one Galois-equivariant piecewise deformation with a complete exact divisor
-> crossing and residue accounting?
+> Does the `N`-indexed C243 crossing residue, weighted by `rho^N` and split
+> into `12` residue classes, admit a source-defined meromorphic or
+> distributional `rho -> 1` continuation with no fitted subtraction?
 
-Cycle 243 must freeze both chamber normals, the full deformation class,
-ordinary-gamma divisor convention, finite versus infinite crossing rule,
-residue formula, and Galois-equivariance criterion before executable work. It
-must keep the AFK phase separate, forbid fitted contour choices, and not claim
-an AFK, mixed-base identity, fusion, Stark, or TCC consequence.
+Cycle 244 must freeze the exact source residue formula, Abel weight,
+12-dissection, allowed continuation theorem or certified boundary criterion,
+and failure rule before executable work. It must keep the AFK phase separate,
+forbid fitted subtraction, and not claim an AFK, mixed-base identity, fusion,
+Stark, or TCC consequence.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 242
+research cycle 243
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_242_minkowski_common_contour_v1.py --check
+python3 proof/build_cycle_243_two_chamber_crossing_v1.py --check
 ```
