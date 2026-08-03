@@ -1,0 +1,105 @@
+{
+  "a6_cusp_multiplier_audit": {
+    "common_multiplier": "chi=zeta_48^8",
+    "common_multiplier_exponent_mod_48": 8,
+    "epistemic_status": "PROVED",
+    "records": [
+      {
+        "A6_image": [
+          0,
+          5
+        ],
+        "label": [
+          0,
+          5
+        ],
+        "zeta_48_exponent": 8
+      },
+      {
+        "A6_image": [
+          5,
+          0
+        ],
+        "label": [
+          5,
+          0
+        ],
+        "zeta_48_exponent": 8
+      }
+    ]
+  },
+  "claim_boundary": "For the declared formal two-cusp completion W and its constructed exchange involution, the frozen common A6 multiplier forbids every nonzero strictly scalar A6-invariant bilinear pairing. The declared exchange-symmetric cross pairing is exactly A6-equivariant only after retaining its multiplier-character coefficient line; it restricts nontrivially to the iota-fixed line but does not descend to the formal iota-coinvariant quotient. This proves neither an analytic gluing, a source quotient, a density/orientation theorem, C198 comparison, AFK identity, fusion-continuity theorem, Stark relation, nor TCC statement.",
+  "cross_pairing_audit": {
+    "A6_equivariance": "B(A6*u,A6*v)=zeta_48^16*B(u,v)=A6_M*B(u,v)",
+    "coefficient_line": "M with A6 action q->zeta_48^16*q",
+    "conclusion": "NONZERO_EXCHANGE_INVARIANT_CHARACTER_VALUED_PAIRING_RESTRICTS_TO_THE_FIXED_LINE_BUT_DOES_NOT_DESCEND_TO_THE_NATURAL_IOTA_COINVARIANT_QUOTIENT",
+    "definition": "B(u_infinity,u_zero)=B(u_zero,u_infinity)=q; same-end values are zero",
+    "descends_to_iota_coinvariant_quotient": false,
+    "epistemic_status": "PROVED",
+    "exchange_invariant": true,
+    "fixed_line": "W^iota=span(u_infinity+u_zero)",
+    "fixed_line_restriction_in_units_of_q": 2,
+    "iota_coinvariant_quotient": "W/span(u_infinity-u_zero)",
+    "pairing_matrix_in_u_infinity_u_zero_basis": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "quotient_failure": {
+      "left_relation_pairing_in_units_of_q": [
+        -1,
+        1
+      ],
+      "right_relation_pairing_in_units_of_q": [
+        -1,
+        1
+      ]
+    }
+  },
+  "epistemic_status": "PROVED",
+  "formal_completion_audit": {
+    "A6_action": "u_infinity->chi*u_infinity and u_zero->chi*u_zero",
+    "basis": {
+      "u_infinity": "formal representative of [e_(0,5)]",
+      "u_zero": "formal representative of [e_(5,0)]"
+    },
+    "epistemic_status": "PROVED",
+    "exchange_involution": {
+      "matrix": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "square": "identity"
+    },
+    "scope": "FORMAL_COMPLETION_ONLY_NOT_A_PROVED_ANALYTIC_OR_ARITHMETIC_GLUE",
+    "state_space": "W=C*u_infinity direct_sum C*u_zero"
+  },
+  "gate_outcome": {
+    "character_valued_fixed_line_pairing": "PROVED_BUT_NOT_A_SCALAR_FUSION_INVARIANT",
+    "coinvariant_descent_of_declared_cross_pairing": "FALSIFIED",
+    "formal_two_ended_completion": "PROVED_WITH_CONSTRUCTED_EXCHANGE_ONLY",
+    "remaining_design_problem": "Construct a source-authorized analytic/arithmetic completion or a multiplier trivialization derived from source data, then test a genuine fusion invariant without C198 fitting.",
+    "strict_scalar_sign_independent_pairing": "FALSIFIED_IN_DECLARED_COMPLETION"
+  },
+  "scalar_pairing_audit": {
+    "coefficient_equation": "(zeta_48^16-1)*B_ij=0 for each of the four pairing-matrix entries",
+    "conclusion": "NO_NONZERO_STRICTLY_A6_INVARIANT_SCALAR_BILINEAR_PAIRING_ON_W",
+    "epistemic_status": "PROVED",
+    "nonzero_scalar_pairing_dimension": 0,
+    "strict_scalar_condition": "B(A6*u,A6*v)=B(u,v)",
+    "zeta_48_squared_exponent_mod_48": 16,
+    "zeta_48_squared_order": 3
+  },
+  "schema": "sic-stark-cycle-213-two-ended-completion-prototype-v1"
+}

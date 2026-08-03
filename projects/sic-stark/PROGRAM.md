@@ -48,10 +48,15 @@
   proves the frozen A6/multiplier data preserve both, so they supply no
   selector. Cycle 212 then proves the two natural logarithmic axis-to-packet
   lifts are equally covariant and likewise unselected by the pinned embedding
-  and Frobenius data. No endpoint binomial value has been evaluated. No
-  divergent raw contour, periodized beta channel, AFK amplitude identity,
-  fusion, or TCC is proved; the active gate is a sign-independent two-ended
-  completion and a descent test for a fusion invariant.
+  and Frobenius data. Cycle 213 constructs the minimal formal two-ended
+  completion and proves that its common multiplier `zeta_48^8` forbids every
+  nonzero strictly scalar complex-bilinear `A6`-invariant pairing. Its
+  constructed exchange and multiplier line are not source-authorized, and its
+  character-valued cross form is not fusion or coinvariant descent. No endpoint
+  binomial value has been evaluated. No divergent raw contour, periodized beta
+  channel, AFK amplitude identity, fusion, or TCC is proved; the active gate is
+  a source-derived conjugation/theta-automorphy completion and a dual-pairing
+  test.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -408,6 +413,13 @@
   action have no proved analytic sign action, so this lift family supplies no
   selector. See
   `artifacts/cycle-212-b049-logarithmic-axis-to-packet-orientation-v1.json`.
+- `PROVED`: Cycle 213 constructs the formal two-cusp completion with a
+  constructed end exchange. Because both frozen cusp lines carry multiplier
+  `zeta_48^8`, every strictly scalar complex-bilinear `A6`-invariant pairing
+  vanishes (`zeta_48^16` has order three). Its character-valued cross pairing
+  is quarantined: it is neither source-authorized nor a scalar fusion
+  invariant, and fails the natural exchange-coinvariant descent. See
+  `artifacts/cycle-213-b050-two-ended-completion-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -511,7 +523,8 @@ Budget B001--B200
   |    |                                                                                                                                                                                                                                                                        `-- logarithmic projective connection [SEALED: BASEPOINT-FREE NORMALIZATION OBSTRUCTED]
   |    |                                                                                                                                                                                                                                                                             `-- two source cusp sections [SEALED: NO DECLARED SELECTOR]
   |    |                                                                                                                                                                                                                                                                                  `-- two-sign logarithmic axis-to-packet lifts [SEALED: NO SELECTOR]
-  |    |                                                                                                                                                                                                                                                                                       `-- sign-independent two-ended completion / descent [NEXT GATE]
+  |    |                                                                                                                                                                                                                                                                                       `-- formal two-ended scalar pairing [SEALED: OBSTRUCTED]
+  |    |                                                                                                                                                                                                                                                                                            `-- source conjugation/theta-automorphy dual pairing [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -556,17 +569,17 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 213 two-ended-completion decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `TWO_SIGN_LOGARITHMIC_AXIS_PACKET_LIFTS_SEALED_NO_SELECTOR` | Construct or refute a sign-independent two-ended completion and test whether an `A6`/multiplier-equivariant pairing or fusion invariant descends without selecting a sign. | Choosing a cusp by convenience, treating a direct sum as descended fusion, fitting either end to C198, or inflating a completion result into an interface. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 214 source-derived dual-pairing decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `FORMAL_TWO_ENDED_COMPLETION_SEALED_SCALAR_PAIRING_OBSTRUCTED` | Derive an end exchange and multiplier/dual line from source conjugation or theta automorphy, then test a canonical scalar pairing on `W tensor W-bar` or `W tensor W-dual`. | Choosing a cusp by convenience, treating the formal exchange or its direct sum as source descent, trivializing a multiplier line by convention, fitting C198, or inflating a pairing into an interface. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Can the two source cusp lines be completed with their exchange involution so
-  that an `A6`/multiplier-equivariant pairing or fusion invariant descends
-  without selecting a sign or C198 target data?
+- Can source conjugation or theta automorphy derive the end exchange and its
+  multiplier/dual line, and does the resulting canonical dual pairing become
+  scalar without selecting a cusp or fitting C198 target data?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -575,25 +588,26 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 213
+## Next goal: Cycle 214 / B051
 
 Preregister one substantive block with this question:
 
-> Does a source-only two-ended completion with the involution exchanging the
-> two cusp lines admit an `A6`/multiplier-equivariant descended pairing or
-> fusion invariant, without selecting a sign or fitting C198 target data?
+> Can source conjugation or theta automorphy derive the exchange of the two
+> cusp ends and its multiplier/dual line, and does a canonical pairing on
+> `W tensor W-bar` or `W tensor W-dual` yield a scalar invariant without
+> selecting a cusp or fitting C198 target data?
 
-Cycle 213 must freeze the two-ended state space, exchange involution, allowed
-pairing/fusion family, `A6` and multiplier action, and exact acceptance or
-falsifier before executable work. It must retain all 36 labels, keep capital
-`Gamma_M` and AFK phase separate, forbid target fitting, and not claim an AFK,
-fusion, Stark, or TCC consequence.
+Cycle 214 must freeze the exact source conjugation/theta-automorphy input, its
+proved action on both ends and multiplier/dual line, the allowed dual-pairing
+family, and acceptance/falsifier before executable work. It must retain all 36
+labels, keep capital `Gamma_M` and AFK phase separate, forbid target fitting,
+and not claim an AFK, fusion, Stark, or TCC consequence.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 212
+research cycle 213
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_212_logarithmic_axis_to_packet_orientation_v1.py --check
+python3 proof/build_cycle_213_two_ended_completion_v1.py --check
 ```
