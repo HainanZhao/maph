@@ -1,0 +1,16 @@
+# Cycle 236 / B073 preregistration: ordered residual-word dualization
+
+Cycle 235's central extension deliberately forgot residual order. This block
+retains it and asks whether source reflection can act by reversing and
+inverting a word without inventing missing gamma factors.
+
+<!-- research-freeze-v1
+{"schema":"research-preregistration-freeze-v1","cycle":236,
+"parameters":{"word_category":{"kind":"expression","value":"Freeze the free ordered-word category on the two source-defined F3 edge residual alphabets a (A->C) and c (C->A), each standing for its retained ordered two ordinary-gamma factors. Composition is concatenation; the A and C F3^2 loop words are ac and ca, respectively. No commutation, cancellation, B/D, or negative-k edge is admitted.","rationale":"This is the minimal noncentral refinement of C235."},"dualization":{"kind":"expression","value":"Freeze D(word)=reverse(word) with each ordinary-gamma factor replaced only by its Sarkissian--Spiridonov equation-(32) reflection partner gamma(alpha+beta-z;alpha,beta), retaining its Bernoulli factor. Accept source dualization only if every reflected factor occurs in the declared A/C alphabet at matching period base and argument.","rationale":"Inversion without the actual reflection partner is not a source operation."},"acceptance":{"kind":"expression","value":"Test both four-factor loop words and all eight individual residual factors using C228 partner data. If one required partner is absent, D is not an endofunctor of the frozen ordered-word category; do not choose an external word, scalar, or quotient.","rationale":"Factor-level closure is necessary before any loop-holonomy relation."}},
+"resource_caps":{"objects":{"kind":"integer","value":2,"rationale":"A,C."},"edge_words":{"kind":"integer","value":2,"rationale":"a,c."},"loop_words":{"kind":"integer","value":2,"rationale":"ac,ca."},"residual_factors":{"kind":"integer","value":8,"rationale":"C228 A/C four-factor blocks."},"reflection_partner_checks":{"kind":"integer","value":8,"rationale":"One exact check per factor."},"floating_point":{"kind":"not_applicable","justification":"Exact bases and affine arguments only.","rationale":"Numerics cannot create a reflected word."},"wall_seconds":{"kind":"integer","value":180,"rationale":"Finite factor closure audit."}},
+"formula_families":["Cycle-228 equation-(32) reflection-partner audit","ordered free-word reversal","Cycle-235 A/C path fragment"],
+"selection_rule":["Preserve order through reversal.","Require every reflected factor at the same period base and affine argument.","Stop at factor closure failure before claiming loop functoriality."],
+"failure_rule":["Do not commute words, replace a partner by a scalar, append missing factors, use normalized reflection, or fit a dualization.","Do not claim a Gamma_M interface, target representation, AFK covariance, fusion, Stark, or TCC."],
+"pre_execution":{"timestamp_utc":"2026-08-03T08:16:03Z","git_head":"129cb4dd0f05e3d207af37cb6f3711572d6da1a2","git_state":"Dirty only from concurrent repository-wide PROGRAM migration and unrelated work."},
+"input_paths":["artifacts/cycle-235-b072-meromorphic-loop-holonomy-v1.json","artifacts/cycle-228-b065-f3-square-residual-block-v1.json","proof/verify_cycle_228_f3_square_residual_block.py","../../tools/preregistration_check.py"]}
+-->
