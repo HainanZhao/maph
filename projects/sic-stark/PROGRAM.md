@@ -52,11 +52,14 @@
   completion and proves that its common multiplier `zeta_48^8` forbids every
   nonzero strictly scalar complex-bilinear `A6`-invariant pairing. Its
   constructed exchange and multiplier line are not source-authorized, and its
-  character-valued cross form is not fusion or coinvariant descent. No endpoint
-  binomial value has been evaluated. No divergent raw contour, periodized beta
-  channel, AFK amplitude identity, fusion, or TCC is proved; the active gate is
-  a source-derived conjugation/theta-automorphy completion and a dual-pairing
-  test.
+  character-valued cross form is not fusion or coinvariant descent. Cycle 214
+  identifies the exact source candidate `E=J0*S`: it swaps those labels,
+  preserves `Q`, and reverses `A6`, but the supplied AFK covariance is only for
+  a transformed tuple and does not act on the beta-oriented asymptotic packet.
+  No endpoint binomial value has been evaluated. No divergent raw contour,
+  periodized beta channel, AFK amplitude identity, fusion, or TCC is proved;
+  the active gate is direct `E` transport of the equation-(66) `Gamma_M`
+  parameters and phases.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -420,6 +423,13 @@
   is quarantined: it is neither source-authorized nor a scalar fusion
   invariant, and fails the natural exchange-coinvariant descent. See
   `artifacts/cycle-213-b050-two-ended-completion-v1.json`.
+- `PROVED`: Cycle 214 identifies `E=J0*S` as the unique frozen source
+  candidate that exchanges the two cusp labels, preserves `Q`, and conjugates
+  `A6` to `A6^-1`. AFK transformed-tuple covariance and determinant-negative
+  cocycle conjugation do not supply an action on the beta-oriented packet,
+  `s`, `Lambda`, or packet `t`; this is a source-domain boundary, not an end
+  exchange theorem. See
+  `artifacts/cycle-214-b051-source-automorphy-end-exchange-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -524,7 +534,8 @@ Budget B001--B200
   |    |                                                                                                                                                                                                                                                                             `-- two source cusp sections [SEALED: NO DECLARED SELECTOR]
   |    |                                                                                                                                                                                                                                                                                  `-- two-sign logarithmic axis-to-packet lifts [SEALED: NO SELECTOR]
   |    |                                                                                                                                                                                                                                                                                       `-- formal two-ended scalar pairing [SEALED: OBSTRUCTED]
-  |    |                                                                                                                                                                                                                                                                                            `-- source conjugation/theta-automorphy dual pairing [NEXT GATE]
+  |    |                                                                                                                                                                                                                                                                                            `-- source automorphy reverser [SEALED: TRANSFORMED-TUPLE ONLY]
+  |    |                                                                                                                                                                                                                                                                                                 `-- direct equation-(66) E transport / conjugate-dual packet [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -569,17 +580,17 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 214 source-derived dual-pairing decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `FORMAL_TWO_ENDED_COMPLETION_SEALED_SCALAR_PAIRING_OBSTRUCTED` | Derive an end exchange and multiplier/dual line from source conjugation or theta automorphy, then test a canonical scalar pairing on `W tensor W-bar` or `W tensor W-dual`. | Choosing a cusp by convenience, treating the formal exchange or its direct sum as source descent, trivializing a multiplier line by convention, fitting C198, or inflating a pairing into an interface. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 215 direct-`E` packet-transport decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `SOURCE_AUTOMORPHY_REVERSER_SEALED_TRANSFORMED_TUPLE_ONLY` | Derive `E` directly on equation-(66) `Gamma_M` parameters and phases, then test whether it forces `t->t^-1` and a conjugate-dual packet isomorphism with an explicit scalar cocycle. | Treating transformed-tuple covariance as a packet theorem, choosing a cusp, formal dualization, trivializing a multiplier line by convention, fitting C198, or inflating a packet symmetry into an interface. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Can source conjugation or theta automorphy derive the end exchange and its
-  multiplier/dual line, and does the resulting canonical dual pairing become
-  scalar without selecting a cusp or fitting C198 target data?
+- Does `E=J0*S` act directly on the equation-(66) `Gamma_M` parameters and
+  phases so as to force `t->t^-1`, exchange the two packet ends, and yield a
+  source-derived conjugate-dual scalar cocycle without fitting C198 data?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -588,26 +599,25 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 214 / B051
+## Next goal: Cycle 215 / B052
 
 Preregister one substantive block with this question:
 
-> Can source conjugation or theta automorphy derive the exchange of the two
-> cusp ends and its multiplier/dual line, and does a canonical pairing on
-> `W tensor W-bar` or `W tensor W-dual` yield a scalar invariant without
-> selecting a cusp or fitting C198 target data?
+> Does `E=J0*S` act directly on the equation-(66) `Gamma_M` parameters and
+> phases so as to force `t->t^-1` and a conjugate-dual packet isomorphism
+> exchanging `[e_(0,5)]` and `[e_(5,0)]`, with an explicit scalar cocycle?
 
-Cycle 214 must freeze the exact source conjugation/theta-automorphy input, its
-proved action on both ends and multiplier/dual line, the allowed dual-pairing
-family, and acceptance/falsifier before executable work. It must retain all 36
-labels, keep capital `Gamma_M` and AFK phase separate, forbid target fitting,
-and not claim an AFK, fusion, Stark, or TCC consequence.
+Cycle 215 must freeze the equation-(66) parameter and phase family, the direct
+`E` substitution rule, the exact `t`-inversion/cocycle criterion, and its
+falsifier before executable work. It must retain all 36 labels, keep capital
+`Gamma_M` and AFK phase separate, forbid target fitting, and not claim an AFK,
+fusion, Stark, or TCC consequence.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 213
+research cycle 214
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_213_two_ended_completion_v1.py --check
+python3 proof/build_cycle_214_source_automorphy_end_exchange_v1.py --check
 ```

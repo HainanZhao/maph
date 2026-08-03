@@ -1,0 +1,246 @@
+{
+  "artifact_id": "cycle-214-b051-source-automorphy-end-exchange-v1",
+  "budget_ordinal": "B051",
+  "candidate_audit": {
+    "E_is_unique_frozen_candidate_exchanging_both_cusp_labels": true,
+    "beta": "(5+sqrt(21))/2",
+    "beta_inverse": "5-beta=(5-sqrt(21))/2",
+    "epistemic_status": "PROVED",
+    "records": [
+      {
+        "M_beta_in_Q_beta_basis": [
+          0,
+          -1
+        ],
+        "cusp_infinity_image": [
+          0,
+          5
+        ],
+        "cusp_zero_image": [
+          1,
+          0
+        ],
+        "determinant": -1,
+        "ell_sign": -1,
+        "label_action": "p->ell*M*p modulo 6",
+        "matrix": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            -1
+          ]
+        ],
+        "name": "J0",
+        "preserves_Q": false
+      },
+      {
+        "M_beta_in_Q_beta_basis": [
+          -5,
+          1
+        ],
+        "cusp_infinity_image": [
+          5,
+          0
+        ],
+        "cusp_zero_image": [
+          0,
+          1
+        ],
+        "determinant": 1,
+        "ell_sign": 1,
+        "label_action": "p->ell*M*p modulo 6",
+        "matrix": [
+          [
+            0,
+            1
+          ],
+          [
+            -1,
+            0
+          ]
+        ],
+        "name": "S",
+        "preserves_Q": false
+      },
+      {
+        "M_beta_in_Q_beta_basis": [
+          5,
+          -1
+        ],
+        "cusp_infinity_image": [
+          5,
+          0
+        ],
+        "cusp_zero_image": [
+          0,
+          5
+        ],
+        "determinant": -1,
+        "ell_sign": 1,
+        "label_action": "p->ell*M*p modulo 6",
+        "matrix": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "name": "E=J0*S",
+        "preserves_Q": true
+      }
+    ]
+  },
+  "claim_boundary": "For the three frozen source GL_2 candidates, E=J0*S is the unique listed matrix that exchanges both Cycle-211 cusp labels, preserves Q, and conjugates A6 to A6^-1. Its Mobius action sends beta to beta^-1. The pinned AFK covariance relates normalized ghost overlaps and determinant-negative cocycle factors for a transformed tuple, but does not supply an identification of that transformed object with the beta-oriented Cycle-211 packet. It therefore supplies no proved end exchange, dual line, or scalar pairing on that packet. This proves no new AFK theorem, analytic gluing, multiplier trivialization, C198 comparison, fusion, Stark, or TCC statement.",
+  "companion_decision": {
+    "adopted": true,
+    "evidence_scope_review": "C214 establishes the frozen candidate census and the exact source-domain role of E=J0*S; it identifies the unique available arithmetic reverser but not an action on the packet.",
+    "falsifier": "Any candidate-completeness, label/sign, determinant, Q-preservation, beta-to-beta^-1, E*A6*E=A6^-1, AFK-hypothesis, or source-scope discrepancy invalidates the seal.",
+    "identity": "/root/decision_companion_2",
+    "known_flaw": "The census covers only three declared GL2 candidates, and AFK transformed-tuple/conjugation covariance does not transport P(t), s, Lambda, or the beta-oriented equation-(66) carrier.",
+    "next_action": "Open a new cycle deriving E directly on the equation-(66) Gamma_M parameters and phases; test whether it forces t->t^-1 and a conjugate-dual packet isomorphism exchanging e05 and e50, with an explicit scalar cocycle.",
+    "reason": "The available source theorem identifies an exact transformed-tuple reverser but does not bridge it to the analytic packet or its two asymptotic ends.",
+    "recommendation": "Seal C214/B051 as PROVED only for the frozen candidate census and the exact source-domain role of E=J0S; it identifies the unique available arithmetic reverser but not an action on the packet."
+  },
+  "cycle": 214,
+  "epistemic_status": "PROVED",
+  "flow_conjugacy_audit": {
+    "A6_inverse": [
+      [
+        -5,
+        24
+      ],
+      [
+        -24,
+        115
+      ]
+    ],
+    "E_A6_E_inverse": [
+      [
+        -5,
+        24
+      ],
+      [
+        -24,
+        115
+      ]
+    ],
+    "conclusion": "E_EXCHANGES_THE_CUSP_LABELS_AND_REVERSES_THE_DECLARED_A6_STEP",
+    "epistemic_status": "PROVED"
+  },
+  "frozen_hashes": {
+    "cycle188_replay": {
+      "path": "proof/verify_cycle_188_stabilizer_covariance.py",
+      "sha256": "8132f5a4654115d438951d1cbf852ab659dc381bf93374f4db4ef80d227e49b2"
+    },
+    "cycle211_replay": {
+      "path": "proof/verify_cycle_211_cusp_asymptotic_flat_sections.py",
+      "sha256": "0cef852e1ebf2db3b2fec48e4bc197ca79e3be9bbd14cd09a09ca73ab99d589d"
+    },
+    "multiplier_ledger": {
+      "path": "scripts/dimension_six_stabilizer_ledger.py",
+      "sha256": "594a0d541478f340abe789234335f3ff1b2d874ad8fa3507ad95026c5cc6276b"
+    },
+    "preregistration": {
+      "path": "docs/cycle-214-b051-source-automorphy-end-exchange-preregistration-v1.md",
+      "sha256": "39298ea28f96b51391736d840341c5848af55c447d1f0fd57c342fa991918cd0"
+    },
+    "preregistration_validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    },
+    "prior_formal_pairing_obstruction": {
+      "path": "artifacts/cycle-213-b050-two-ended-completion-v1.json",
+      "sha256": "4ee1cbeea41b05f9ea402d57e25a85765a8d2cb4f1690a9c5c4273a980c3743b"
+    },
+    "prior_stabilizer_covariance": {
+      "path": "artifacts/cycle-188-stabilizer-covariance-v1.json",
+      "sha256": "5129382929e50457355c727d13d1f5ccded7f47774895b4893931d7eaead1973"
+    },
+    "prior_two_cusp_sections": {
+      "path": "artifacts/cycle-211-b048-cusp-asymptotic-flat-sections-v1.json",
+      "sha256": "62b4afdbdf4ad2f9aa11e648929c54aa66219088689231373c7ad16635f8936c"
+    },
+    "prototype": {
+      "path": "discovery/cycle-214-b051-source-automorphy-end-exchange-prototype-v1.json",
+      "sha256": "37a84dd90937a5849af69dda2975cc197cbe254ff4ef0e01fdf25223b731c83f"
+    },
+    "regression_test": {
+      "path": "tests/test_cycle_214_source_automorphy_end_exchange.py",
+      "sha256": "93931461af7ec46a47d706031c604923cd5d0ad30c7662b8106c3a25e2a20493"
+    },
+    "replay": {
+      "path": "proof/verify_cycle_214_source_automorphy_end_exchange.py",
+      "sha256": "a22c53d5e7939687105ac0b5d4a4149a247a7b2769a77d69c888816f9edf2023"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    }
+  },
+  "gate_outcome": {
+    "candidate_E_label_and_flow_exchange": "PROVED_TRANSFORMED_TUPLE_STRUCTURE",
+    "remaining_design_problem": "Derive a beta-to-beta^-1 analytic continuation or a source theorem identifying the transformed tuple's packet with the original packet before testing any dual pairing or fusion invariant.",
+    "source_derived_dual_or_sesquilinear_scalar_pairing": "NOT_SUPPLIED",
+    "source_derived_same_packet_end_exchange": "NOT_SUPPLIED_BY_DECLARED_AFK_COVARIANCE"
+  },
+  "outcome": {
+    "epistemic_status": "PROVED",
+    "statement": "Among the frozen source candidates, E=J0*S uniquely exchanges the two cusp labels, preserves Q, and reverses A6. The cited AFK covariance is transformed-tuple covariance and supplies no action on the beta-oriented asymptotic packet or scalar dual pairing."
+  },
+  "preregistration_preflight": {
+    "cycle": 214,
+    "manifest_sha256": "39298ea28f96b51391736d840341c5848af55c447d1f0fd57c342fa991918cd0",
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_214_source_automorphy_end_exchange_v1.py --check",
+    "preflight_command": "research prereg check docs/cycle-214-b051-source-automorphy-end-exchange-preregistration-v1.md --expected-cycle 214 --allow-head-drift",
+    "prototype_command": "python3 proof/verify_cycle_214_source_automorphy_end_exchange.py --output discovery/cycle-214-b051-source-automorphy-end-exchange-prototype-v1.json",
+    "test_command": "python3 -m unittest tests/test_cycle_214_source_automorphy_end_exchange.py",
+    "write_command": "python3 proof/build_cycle_214_source_automorphy_end_exchange_v1.py --write"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_214_source_automorphy_end_exchange_v1.py",
+    "sha256": "9b6e44a74c5f21562e79f7a96b5d3bd80cdc15a932577656a219d293df70e123"
+  },
+  "source_domain_audit": {
+    "E_covariance": {
+      "candidate_mobius_root_image": "E*beta=beta^-1",
+      "determinant_negative_effect": "Theorem 7.7 complex-conjugates the underlying B_t cocycle factors",
+      "same_beta_oriented_packet_identification": "NOT_SUPPLIED_BY_DECLARED_THEOREMS",
+      "tuple_relation": "nu_p(t_E)=nu_(E*p)(t), because ell=+1"
+    },
+    "conclusion": "THE_DOCUMENTED_E_COVARIANCE_IS_TRANSFORMED_TUPLE_COVARIANCE_NOT_A_PROVED_SAME_PACKET_END_EXCHANGE",
+    "epistemic_status": "PROVED",
+    "not_supplied_by_frozen_theorem": [
+      "an action on the Cycle-211 asymptotic packet P_(a,b,h)(t)",
+      "an action on the axis coordinate s, Lambda, or packet coordinate t",
+      "an identification of the beta^-1-oriented transformed packet with the beta-oriented packet",
+      "a source-derived exchange involution on W",
+      "a source-derived multiplier/dual line or scalar dual pairing"
+    ],
+    "primary_source": {
+      "frozen_provenance": "Cycle-188 primary-source hash and theorem identifiers",
+      "paper": "Appleby--Flammia--Kopp, arXiv:2501.03970v2",
+      "theorems": [
+        "Theorem 7.7",
+        "Theorem 7.8"
+      ]
+    }
+  },
+  "status": "SEALED_SOURCE_AUTOMORPHY_TRANSFORMED_TUPLE_END_EXCHANGE_CANDIDATE_ONLY"
+}
