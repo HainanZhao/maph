@@ -41,11 +41,13 @@
   those coefficients nor an actual interface. Cycle 209 rules out one fixed
   nonzero diagonal map from every admissible source fibre to the fixed C198
   projective point, because the source ratio `P_(0,1)/P_(0,0)=t^4` changes
-  from 16 to 81 at `t=2,3`. No endpoint binomial value has been evaluated.
-  No divergent raw contour, periodized beta channel, AFK amplitude identity,
-  fusion, or TCC is proved; the active gate is the logarithmic projective
-  connection forced by those packet exponents and its potential canonical,
-  multiplier-compatible parallel transport to C198 without fitting `t`.
+  from 16 to 81 at `t=2,3`. Cycle 210 derives the unique source exponent
+  connection and proves its relative transport is A6/multiplier compatible,
+  but its basepoint change is non-scalar, so it selects no canonical source
+  projective class. No endpoint binomial value has been evaluated. No
+  divergent raw contour, periodized beta channel, AFK amplitude identity,
+  fusion, or TCC is proved; the active gate is a source-only cusp/asymptotic
+  boundary section for this flat packet bundle, with no C198 target fitting.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -383,6 +385,13 @@
   would force it to be constant. This does not reject a `t`-dependent,
   non-diagonal, nonlinear, selected-fibre, or other source-authorized map.
   See `artifacts/cycle-209-b046-fixed-diagonal-projective-interface-v1.json`.
+- `PROVED`: Cycle 210 derives the 36-label, channel-independent logarithmic
+  projective connection `d-diag(4*b-5*a)*dlog(t)` and proves that its relative
+  transport commutes with the exact A6/multiplier action. The exact same-
+  component basepoint change from `2` to `3` has entries `1,81/16` on labels
+  `(0,0),(0,1)`, so it is not projectively scalar. This leaves a source-only
+  asymptotic base section or a non-diagonal connection open. See
+  `artifacts/cycle-210-b047-logarithmic-projective-connection-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -483,7 +492,8 @@ Budget B001--B200
   |    |                                                                                                                                                                                                                                                         `-- factorwise target Gamma_M recurrence [FALSIFIED]
   |    |                                                                                                                                                                                                                                                              `-- full diagonal 225-minor pullback criterion [SEALED]
   |    |                                                                                                                                                                                                                                                                   `-- fixed diagonal all-fibre projective interface [FALSIFIED]
-  |    |                                                                                                                                                                                                                                                                        `-- logarithmic projective connection / canonical parallel transport [NEXT GATE]
+  |    |                                                                                                                                                                                                                                                                        `-- logarithmic projective connection [SEALED: BASEPOINT-FREE NORMALIZATION OBSTRUCTED]
+  |    |                                                                                                                                                                                                                                                                             `-- source-only cusp/asymptotic base section [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -528,18 +538,17 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 210 logarithmic-projective-connection decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `FIXED_DIAGONAL_ALL_FIBRE_PROJECTIVE_INTERFACE_FALSIFIED_LOGARITHMIC_CONNECTION_OPEN` | Derive the source-forced logarithmic projective connection, then prove or refute a canonical `A6`/multiplier-compatible parallel transport to C198 without selecting or fitting `t`. | Replacing the all-fibre no-go by a broad interface no-go, choosing a source fibre or endpoint ratio, fitting a transport normalization, or treating source covariance as an AFK amplitude. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 211 source-only boundary-section decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `LOGARITHMIC_PROJECTIVE_CONNECTION_SEALED_BASEPOINT_FREE_NORMALIZATION_OBSTRUCTED` | Derive or refute a source-only cusp/asymptotic flat section and test whether it gives a canonical projective comparison without C198 target data or a selected source fibre. | Calling relative transport a canonical comparison, selecting a fibre/basepoint, fitting a boundary vector to C198, or treating source covariance as an AFK amplitude. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Does the exact source exponent array force a logarithmic projective
-  connection whose canonical parallel transport is compatible with `A6` and
-  the multiplier ledger, and can that transport reach C198 without selecting
-  or fitting `t`?
+- Does the source packet admit a canonical cusp/asymptotic flat section that
+  supplies the missing base data without any C198 target input or selected
+  source fibre?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -548,27 +557,25 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 210
+## Next goal: Cycle 211
 
 Preregister one substantive block with this question:
 
-> Does the complete C206 exponent array force a logarithmic projective
-> connection with canonical `A6`/multiplier-compatible parallel transport,
-> and can that transport be compared to C198 without selecting or fitting a
-> source fibre?
+> Does the complete source packet admit a source-only cusp/asymptotic flat
+> section that canonically fixes the logarithmic projective transport, without
+> selecting a source fibre or fitting any C198 target data?
 
-Cycle 210 must freeze the exponent connection, projective gauge convention,
-parallel-transport path and base-data rule, `A6` and multiplier comparison,
-and exact acceptance/falsifier before executable work. It must retain all 36
-labels, keep capital `Gamma_M` and AFK phase separate, forbid target fitting
-or a selected source fibre, and not claim an AFK, fusion, Stark, or TCC
-consequence.
+Cycle 211 must freeze the cusp/asymptotic regime, source flat-section rule,
+projective gauge, `A6` and multiplier comparison, and exact acceptance or
+falsifier before executable work. It must retain all 36 labels, keep capital
+`Gamma_M` and AFK phase separate, forbid a selected source fibre and target
+fitting, and not claim an AFK, fusion, Stark, or TCC consequence.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 209
+research cycle 210
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_209_fixed_diagonal_projective_interface_v1.py --check
+python3 proof/build_cycle_210_logarithmic_projective_connection_v1.py --check
 ```
