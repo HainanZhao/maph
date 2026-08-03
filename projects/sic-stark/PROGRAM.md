@@ -163,8 +163,10 @@
   proves the deliberately conservative all-`N` degree-zero bound
   `max_sigma |kappa_N^sigma/kappa_1^sigma| <= 2^40000000` at the one fixed
   upper tilt `t_sigma+i`. This does not control `epsilon->0` or remove the
-  C244 `lambda^N` ambiguity. The next distinct engine must test a
-  source-normalized regulator-independence or tilt-stability mechanism.
+  C244 `lambda^N` ambiguity. Cycle 247 then proves that its frozen one-`q`
+  tilt-cocycle premise fails: the A1/A4 and A2/A3 source multiplier bases are
+  distinct at every positive tilt. The next distinct engine must retain those
+  two bases and define an explicit multi-base transport or holonomy test.
   No endpoint binomial value has been
   evaluated. No divergent raw contour, periodized beta channel, AFK amplitude
   identity, fusion, or TCC is proved.
@@ -782,17 +784,17 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Formulate and preregister a companion-reviewed, distinct source-normalization or tilt-stability decision before opening Cycle 247/B084. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `FIXED_TILT_A_BOUND_SEALED` | Prove a source-normalized regulator-independence/tilt-stability relation, or a scoped no-go that precisely preserves the C246 fixed-tilt result, before B-Fourier covariance. | Treating one fixed tilt as canonical, fitting a regulator, or inferring a source identity. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Formulate and preregister a companion-reviewed, distinct multi-base tilt-transport decision before opening Cycle 248/B085. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `SINGLE_Q_TILT_ENGINE_FALSIFIED` | Prove a source-derived two-/multi-base tilt transport/holonomy relation, or a scoped no-go preserving the C246/C247 boundaries, before B-Fourier covariance. | Collapsing distinct bases, treating one tilt as canonical, fitting a regulator, or inferring a source identity. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Is there a source-defined relation in the upper tilt that distinguishes the
-  C245 principal-coefficient line from C244's free `lambda^N` reweighting and
-  yields a regulator-independent normalization or a scoped no-go?
+- Does the genuinely two-base A-word recurrence admit a source-derived tilt
+  transport or holonomy law that yields regulator-independent normalization or
+  a scoped no-go?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -801,15 +803,16 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: formulate Cycle 247 / B084
+## Next goal: formulate Cycle 248 / B085
 
 Before opening another counted block, formulate one falsifiable, source-defined
-normalization or tilt-stability engine that can distinguish the C245
-principal-coefficient line from C244's `lambda^N` reweighting. Seek a companion
-review of that concrete engine and its alternative before preregistration.
+multi-base tilt-transport engine. It must retain the A1/A4 and A2/A3 bases,
+state a branch/transport law and a holonomy or Cauchy criterion, and receive
+companion review of that concrete engine and its alternative before
+preregistration.
 
-Any future Cycle 247 must preserve C246's fixed-tilt scope, freeze a concrete
-source equation or invariant, the tested regulator/tilt family, and an exact
+Any future Cycle 248 must preserve C246/C247's scopes, freeze both source
+bases, a concrete transport invariant, the tested tilt family, and an exact
 falsifier before executable work. It must keep source authorization,
 canonical-current promotion, AFK, mixed-base identity, fusion, Stark, and TCC
 consequences explicitly out of scope.
@@ -818,7 +821,7 @@ consequences explicitly out of scope.
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 246
+research cycle 247
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_246_fixed_tilt_a_bound_v1.py --check
+python3 proof/build_cycle_247_a_tilt_cocycle_v1.py --check
 ```
