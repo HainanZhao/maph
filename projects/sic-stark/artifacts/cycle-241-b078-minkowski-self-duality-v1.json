@@ -1,0 +1,91 @@
+{
+  "artifact_id": "cycle-241-b078-minkowski-self-duality-v1",
+  "audit": {
+    "basis": [
+      "1",
+      "(1+sqrt(21))/2"
+    ],
+    "claim_boundary": "This proves only algebraic/Fourier infrastructure; it does not supply contour convergence, a mixed-base identity, AFK, fusion, Stark, or TCC.",
+    "determinant": -1,
+    "dual_basis_coordinates": [
+      [
+        "-1",
+        "1"
+      ],
+      [
+        "1",
+        "0"
+      ]
+    ],
+    "epistemic_status": "PROVED",
+    "field": "Q(sqrt(21))",
+    "fourier": {
+      "definition": "F_B f(x)=integral_R2 f(y) exp(-2*pi*i*B(x,y)) dy",
+      "poisson_for_O_K": true,
+      "reason": "B is real, symmetric, nondegenerate and |det Gram|=1; standard Fourier inversion/Plancherel and Poisson summation apply to Schwartz(R2) and its B-self-dual lattice.",
+      "self_dual_measure": true,
+      "square": "F_B^2 f(x)=f(-x)",
+      "unitary_on_L2": true
+    },
+    "gram": [
+      [
+        "0",
+        "1"
+      ],
+      [
+        "1",
+        "1"
+      ]
+    ],
+    "self_dual": true,
+    "signature": "(1,1)",
+    "trace_pairing_scale": "1/sqrt(21)"
+  },
+  "budget_ordinal": "B078",
+  "claim_boundary": "Trace-paired indefinite Minkowski lattice is self-dual and supports Schwartz Fourier/Poisson infrastructure only; no meromorphic-kernel admissibility, contour, mixed-base identity, AFK, fusion, Stark, or TCC.",
+  "companion_decision": {
+    "adopted": true,
+    "identity": "/root/decision_companion_2",
+    "known_flaw": "No kernel admissibility or identity.",
+    "next_action": "Test C228 kernels in Minkowski coordinates.",
+    "recommendation": "Seal C241 infrastructure."
+  },
+  "cycle": 241,
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "prereg": {
+      "path": "docs/cycle-241-b078-minkowski-self-duality-preregistration-v1.md",
+      "sha256": "5cb46fadb2e8aa55bd9a9c702347b5a1bd4914bf5863c5cde8427c3c8e1a07c7"
+    },
+    "prior": {
+      "path": "artifacts/cycle-240-b077-mixed-base-two-kernel-v1.json",
+      "sha256": "c49095afc7774b848b9137c5aca659ec0cb9fdaa5bd9b3f56e4faf1649da63b5"
+    },
+    "replay": {
+      "path": "proof/verify_cycle_241_minkowski_self_duality.py",
+      "sha256": "e9cb7b5a4dd22e0b1cf98d023904c9b35d4eb9bd00f1e8528b2341cf38ffffc3"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    },
+    "test": {
+      "path": "tests/test_cycle_241_minkowski_self_duality.py",
+      "sha256": "b614099b5617a9a53f026da3d11e840692165c2d1d8cf5636ba0dd4ddb6560f0"
+    },
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_241_minkowski_self_duality_v1.py",
+    "sha256": "285660f22dfe2af7a372e63eecaa6e8fd83efebdfc809f7f2bc2b2c65e27fdcf"
+  },
+  "status": "SEALED_MINKOWSKI_FOURIER_INFRASTRUCTURE"
+}
