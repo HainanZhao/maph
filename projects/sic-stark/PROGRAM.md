@@ -95,7 +95,9 @@
   residual word. Cycle 228 excludes reflection and the complete-Delta product
   decomposition for that minimal block. Cycle 229 then proves each residual
   block has an uncancelled order-four pole at `mu=0`; the next gate is a
-  divisor-coboundary equation for an argument-dependent cochain.
+  divisor-coboundary equation for an argument-dependent cochain. Cycle 230
+  obstructs every finite-valuation meromorphic such cochain; the remaining
+  local escape hatch is a universal-cover logarithmic cochain with descent.
   No endpoint binomial value has been
   evaluated. No divergent raw contour, periodized beta channel, AFK amplitude
   identity, fusion, or TCC is proved.
@@ -556,6 +558,9 @@
 - `PROVED`: Cycle 229 proves both minimal residual blocks have an uncancelled
   order-four pole at `mu=0`, excluding `mu`-independent scalar reductions only.
   See `artifacts/cycle-229-b066-f3-square-divisor-v1.json`.
+- `PROVED`: Cycle 230 obstructs the residual divisor coboundary for every
+  finite-valuation meromorphic cochain at the fixed divisor. See
+  `artifacts/cycle-230-b067-f3-square-divisor-coboundary-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -710,16 +715,16 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 230 divisor-coboundary decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `MINIMAL_RESIDUAL_NONSCALAR_DIVISOR_PROVED` | Formulate and solve or obstruct the divisor coboundary under the positive `F3^2` affine/`576` action, beginning with valuation at its fixed point. | Calling non-scalarity a no-cochain theorem; using a negative-`k` arrow; or constructing an infinite product before the divisor equation is solved. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 231 universal-cover cochain decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `FINITE_VALUATION_DIVISOR_COBOUNDARY_OBSTRUCTED` | On `w=log(mu)`, solve the frozen scaling equation and test monodromy, reflection, and descent to a single-valued cochain. | Calling a cover solution a descended cochain; ignoring monodromy; or inferring a signed extension. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Can an argument-dependent meromorphic cochain absorb the A/C residual
-  divisor under the positive `F3^2` affine/`576` action?
+- Can a universal-cover `w=log(mu)` cochain solve the scaling equation and
+  descend with the required monodromy and reflection data?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -728,23 +733,23 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 230 / B067
+## Next goal: Cycle 231 / B068
 
 Preregister one substantive block with this question:
 
-> Does the residual divisor define a coboundary under the source-defined
-> `F3^2` positive scaling action, or does fixed-point valuation obstruct it?
+> Does a source-frozen logarithmic/quadratic-exponential cochain solve the
+> residual scaling equation on the universal cover and descend single-valuedly?
 
-Cycle 230 must freeze the affine action, divisor module, allowed cochain class,
-fixed-point valuation convention, and a solve/obstruct criterion before
-executable work. It must keep the AFK phase separate, forbid fitted products,
+Cycle 231 must freeze the cover action, ansatz, monodromy/descent conditions,
+reflection condition, and a solve/obstruct criterion before executable work.
+It must keep the AFK phase separate, forbid fitted products,
 and not claim an AFK, fusion, Stark, or TCC consequence.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 229
+research cycle 230
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_229_f3_square_divisor_v1.py --check
+python3 proof/build_cycle_230_f3_square_divisor_coboundary_v1.py --check
 ```
