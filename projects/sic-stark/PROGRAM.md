@@ -137,7 +137,14 @@
   admissibility, a pole-separating contour, a mixed-base identity, AFK,
   fusion, Stark, or TCC. The next gate is to express the C228 A/C residual
   words in Minkowski coordinates and prove or falsify those analytic
-  prerequisites.
+  prerequisites. Cycle 242 then proves that, under the frozen
+  Galois-equivariant upper tilt, no shared fixed affine-linear pole/zero cone
+  contour can carry both words: the A generators force `0<u<1/115`, while a
+  C generator forces `u>5`, independently at both embeddings. This leaves
+  one-word, nonlinear, piecewise-linear, factor-dependent, residue-corrected,
+  and other-regularization contours open. The next genuinely new engine is a
+  two-chamber Picard--Lefschetz-style deformation with every crossed divisor
+  and residue explicitly audited.
   No endpoint binomial value has been
   evaluated. No divergent raw contour, periodized beta channel, AFK amplitude
   identity, fusion, or TCC is proved.
@@ -755,17 +762,17 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 242 Minkowski-kernel admissibility-and-contour decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `MINKOWSKI_FOURIER_INFRASTRUCTURE_SEALED` | Freeze both C228 embedding-coordinate kernel maps, the function/distribution class, contour domain, and pole-separation criterion; prove or falsify admissibility before asserting B-Fourier covariance. | Treating lattice self-duality as a special-function transform, ignoring poles or tails, or inferring a signed extension. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 243 two-chamber deformation-and-residue decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `COMMON_AFFINE_LINEAR_CONTOUR_OBSTRUCTED` | Freeze one source-derived normal for each A/C chamber, a Galois-equivariant connecting deformation, all crossed divisor classes, and their exact residue rule; prove or falsify a shared piecewise contour before B-Fourier covariance. | Treating a separately chosen contour as common, omitting a crossed divisor/residue, treating lattice self-duality as a special-function transform, or inferring a signed extension. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Do the C228 A/C four-gamma residual words, expressed in the two Minkowski
-  embeddings of `Q(sqrt(21))`, define an admissible tempered/distributional
-  kernel on a specified pole-separating contour?
+- Does a Galois-equivariant two-chamber deformation connect source-derived A
+  and C cone contours while accounting exactly for every crossed divisor and
+  residue, thereby defining a shared piecewise contour?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -774,25 +781,25 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 242 / B079
+## Next goal: Cycle 243 / B080
 
 Preregister one substantive block with this question:
 
-> With both C228 A/C residual words frozen in Minkowski coordinates, do their
-> exact divisors and asymptotics admit a specified function/distribution class
-> and pole-separating contour compatible with the C241 B-Fourier framework?
+> Can separately source-derived A and C Minkowski cone normals be connected by
+> one Galois-equivariant piecewise deformation with a complete exact divisor
+> crossing and residue accounting?
 
-Cycle 242 must freeze both embedding maps, the source-special-function
-convention and divisor/asymptotic source, contour candidate, function or
-distribution class, and exact failure criterion before executable work. It
-must keep the AFK phase separate, forbid fitted quotients, and not claim an
-AFK, mixed-base identity, fusion, Stark, or TCC consequence.
+Cycle 243 must freeze both chamber normals, the full deformation class,
+ordinary-gamma divisor convention, finite versus infinite crossing rule,
+residue formula, and Galois-equivariance criterion before executable work. It
+must keep the AFK phase separate, forbid fitted contour choices, and not claim
+an AFK, mixed-base identity, fusion, Stark, or TCC consequence.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 240
+research cycle 242
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_241_minkowski_self_duality_v1.py --check
+python3 proof/build_cycle_242_minkowski_common_contour_v1.py --check
 ```
