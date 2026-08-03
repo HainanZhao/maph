@@ -25,11 +25,12 @@
   germ. Cycle 202 proves that its weight-one normal derivative cannot map by a
   direct rate-independent linear bridge to C198's nonzero weight-zero values,
   and Cycle 203 proves the ordinary normal line has no intrinsic inverse
-  trivialization. This rejects neither an equation-(66) Mellin/b-pairing nor
-  another source-derived continuation. No divergent raw contour, periodized
-  beta channel, AFK amplitude identity, fusion, or TCC is proved; the active
-  gate is a source-derived Mellin/b-pairing before exact helical/Zak amplitude
-  matching.
+  trivialization. Cycle 205 exhausts the local first-order Mellin/b-pairing:
+  its forced residue is still weight-one `lambda*R`. This rejects neither a
+  projective line-valued target nor another source-derived continuation. No
+  divergent raw contour, periodized beta channel, AFK amplitude identity,
+  fusion, or TCC is proved; the active gate is a projective line-valued
+  interface before exact helical/Zak amplitude matching.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -335,6 +336,11 @@
   fixed nonzero C198 targets. An additional equation-(66) b-pairing theorem,
   covariant target, nonlinear/higher-germ, or non-Abel route remains open. See
   `artifacts/cycle-204-b041-log-normal-bundle-v1.json`.
+- `PROVED`: Cycle 205 proves the local first-order b-Mellin germ has forced
+  pole `z=-1` and residue `lambda*R`, with zero leading finite coefficient.
+  Neither that residue nor a rate-independent combination with the rank-30
+  boundary supplies an all-36 fixed-target map. See
+  `artifacts/cycle-205-b042-mellin-b-pairing-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -430,7 +436,8 @@ Budget B001--B200
   |    |                                                                                                                                                                                                                                `-- normal derivative to fixed endpoint target [FALSIFIED]
   |    |                                                                                                                                                                                                                                     `-- ordinary inverse normal line/density [FALSIFIED]
   |    |                                                                                                                                                                                                                                          `-- bare logarithmic / b-normal tensors [FALSIFIED]
-  |    |                                                                                                                                                                                                                                               `-- equation-(66) Mellin / b-pairing [NEXT GATE]
+  |    |                                                                                                                                                                                                                                               `-- local Mellin / b-pairing [FALSIFIED]
+  |    |                                                                                                                                                                                                                                                    `-- projective line-valued interface [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -475,16 +482,16 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 205 Mellin/b-pairing decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `SOURCE_ANALYTIC_FREQUENCY_ENDPOINT_FUNCTIONAL_ON_T6_SEALED_BARE_LOG_NORMAL_OBJECTS_FALSIFIED_MELLIN_B_PAIRING_OPEN` | Derive or reject an equation-(66)-forced Mellin/b-pairing with source-fixed homogeneity exponent, then test its residue or finite part for rate independence and all-36 C198 equality before any Zak/periodization amplitude claim. | Assuming an unproved Mellin/b-integral; choosing a Mellin contour, finite part, homogeneity exponent, or target pairing after results; selecting one alias; fitting weights/scalars; using selected exponents, SIC outcome variables, or ray labels. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 206 projective line-valued interface decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `SOURCE_ANALYTIC_FREQUENCY_ENDPOINT_FUNCTIONAL_ON_T6_SEALED_LOCAL_MELLIN_FALSIFIED_PROJECTIVE_LINE_OPEN` | Derive or reject a source-defined all-36 projective ratio/cross-ratio interface with exact C198/A6 covariance; only then seek one independent scalar normalization and amplitude equality. | Treating a projective ratio as a scalar amplitude; selecting a denominator or normalization after results; fitting weights/scalars; using selected exponents, SIC outcome variables, or ray labels. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Does the source asymptotic force a Mellin/b-pairing whose residue or finite
-  part cancels the normal packet's rate weight and equals the 36 C198 values?
+- Do the 36 common-weight normal packets have a source-defined projective
+  ratio/cross-ratio interface with exact C198/A6 covariance?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -493,28 +500,26 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 205
+## Next goal: Cycle 206
 
 Preregister one substantive block with this question:
 
-> Does the equation-(66) source asymptotic force a Mellin/b-pairing on the
-> logarithmic normal variable whose residue or finite part is rate-independent
-> and equals all 36 C198 endpoint values, without a selected contour, fitted
-> finite part, alias, or ray data?
+> Do the common weight-one normal packets define source-selected projective
+> ratios/cross-ratios with exact all-36 C198 and `A_6` covariance, without a
+> selected denominator, scalar normalization, alias, or ray data?
 
-Cycle 205 must freeze the source asymptotic family, Mellin variable and
-contour/finite-part rule, homogeneity exponent, b-pairing formula, and all-row
-target equality before executable work. It must retain all 24 modes and 36
-target characters and keep capital `Gamma_M` and AFK phase separate. It must
-not select a preferred alias, choose a post-result contour/residue/finite part,
-fit a scalar, use selected exponents or ray labels, or claim an AFK, fusion,
-Stark, or TCC consequence.
+Cycle 206 must freeze the full common-weight packet vector, allowed projective
+coordinates, denominator selection rule, C198/A6 covariance, and all-row test
+before executable work. It must retain all 24 modes and 36 target characters,
+keep capital `Gamma_M` and AFK phase separate, and not select a preferred
+alias, denominator, scalar normalization, use selected exponents or ray
+labels, or claim an AFK, fusion, Stark, or TCC consequence.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 204
+research cycle 205
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_204_log_normal_bundle_v1.py --check
+python3 proof/build_cycle_205_mellin_b_pairing_v1.py --check
 ```
