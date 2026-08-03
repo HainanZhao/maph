@@ -1,0 +1,1235 @@
+{
+  "artifact_id": "cycle-189-regularized-jacobi-lens-interface-v1",
+  "budget_ordinal": "B026",
+  "claim_boundary": "Exact interior q-series continuation only: the r=1 pole cancellation, removable finite-part formula, t->1^- regularization, all-36 lower-gamma-to-unphased-AFK source map, and the stated one-factor obstruction are proved. No real-multiplication/unit-circle continuation, regularized-packet-to-AFK identification, AFK cross-orbit relation, coefficient-to-ray map, fusion continuity, or TCC identity is proved.",
+  "companion_decision": {
+    "adopted": true,
+    "evidence_scope_review": "The normalized Kopp-to-AFK Shintani source map is checked on all 36 characteristics, and the exact 1,296-case raw-factor census excludes every single raw helical Gamma factor with a constant omega_2 shift in either orientation.",
+    "falsifier": "A gamma/AFK normalization or phase error, a tau-coefficient reduction error, a missed shift/orientation/census row, or a replay discrepancy.",
+    "identity": "/root/decision_companion_2",
+    "known_flaw": "Only one-factor constant shifts are excluded; finite sums, derivative-core constructions, nonconstant periodizations, and the real-multiplication boundary remain open.",
+    "next_action": "Open a cycle with a frozen at-most-three-dimensional derivative-core state and outcome-blind nonfactorwise periodization; seek exact AFK covariance/matching or a scoped obstruction before the unit-circle step.",
+    "reason": "The current replay has completed the frozen continuation and smallest factorwise construction, while its remaining construction has a different state space and failure class.",
+    "recommendation": "Seal Cycle 189; the factorwise route is exhausted and nonfactorwise periodization is a distinct engine."
+  },
+  "continuation": {
+    "audit": {
+      "first_2phi1": {
+        "argument": "t*w^5",
+        "bottom": "q*r^-1",
+        "top": [
+          "q*r^-1*w^3",
+          "q*w^3"
+        ]
+      },
+      "hypothesis_monomials": {
+        "az_over_d": "r",
+        "bq_over_d": "t*w^5",
+        "cd_over_ab": "q^2",
+        "raw_z_at_r_1": "q*w^3"
+      },
+      "interior_domain": "0<|q|<1, 0<t<1, |q|<r<|q|^(-1); then |cd/(ab)|=|q|^2<r|q|=|z|<1 and |bq/d|=t<1.",
+      "raw_direct_CCG_hypothesis": "FAILED: |bq/d|=1",
+      "raw_t_1_r_1_packet": "_2psi_2(x,w^2*x;-q*w^2*x,-q*x;q,-q)",
+      "required_next_check": "Derive the meromorphic cancellation of the full Chen--Chen--Gu two-term expression before either r->1 or t->1 is used.",
+      "second_2phi1": {
+        "argument": "q*r*w^3",
+        "bottom": "q*t*w^2",
+        "top": [
+          "w^3",
+          "t*w^5"
+        ]
+      },
+      "source_identity": "Chen--Chen--Gu Theorem 2.1 / equation (2.1)",
+      "substitution": {
+        "a": "x",
+        "b": "t*x*w^2",
+        "c": "q*t*x*w^5",
+        "d": "q*x*w^3",
+        "z": "q*r*w^3"
+      },
+      "termwise_r_1_status": "SINGULAR: first prefactor denominator contains (r;q)_infty, hence (1;q)_infty at r=1"
+    },
+    "finite_part": {
+      "cancellation_input": "G(1)=0 by the exact Heine/prefactor identity in r_one_residue_cancellation",
+      "epistemic_status": "PROVED",
+      "factored_expression": "F(r)=G(r)/((r;q)_infty), G(r)=C1_hat(r)*Phi1(r)-C2_hat(r)*Phi2(r)",
+      "finite_part_formula": "F(1)=-G'(1)/(q;q)_infty",
+      "product_identity": "(r;q)_infty=(1-r)*(r*q;q)_infty",
+      "scope": "This defines the raw sign-reflected interior packet by a removable-continuation finite part. It is not a product evaluation, AFK identification, or real-multiplication boundary theorem.",
+      "span_reason": "Phi1(1)=H(t)*Phi2(1), while the r derivative of G introduces only the two displayed parameter/argument derivatives. All x dependence remains in the explicit C1_hat,C2_hat prefactors and their r derivatives.",
+      "universal_core_span": [
+        "Phi2(1)=_2phi1(-1,t*w^(-1);q*t*w^2;q,-q)",
+        "partial_r Phi1(r)|_(r=1)",
+        "partial_r Phi2(r)|_(r=1)"
+      ]
+    },
+    "r_one_cancellation": {
+      "coefficient_ratio": "C2_hat/C1_hat=H(t), after removing the common (r;q)_infty^-1",
+      "common_singular_factor": "(r;q)_infty^-1 occurs once in each Chen--Chen--Gu coefficient",
+      "epistemic_status": "PROVED",
+      "first_core_at_r_1": "_2phi1(-q,-q;q;q,t*w^(-1))",
+      "heine_multiplier": {
+        "denominator_pochhammer_arguments": [
+          "q",
+          "t*w^5"
+        ],
+        "numerator_pochhammer_arguments": [
+          "q*w^3",
+          "q*t*w^2"
+        ]
+      },
+      "remaining_boundary_problem": "The finite r=1 value is the next Laurent coefficient, not supplied by this residue cancellation; the subsequent t->1^- and modular RM limits remain open.",
+      "residue_conclusion": "C1_hat*first_core-C2_hat*second_core=0; the apparent r=1 simple pole cancels in the full two-term expression.",
+      "second_core_at_r_1": "_2phi1(-1,t*w^(-1);q*t*w^2;q,-q)"
+    },
+    "source": "Chen--Chen--Gu, Theorem 2.1 / equation (2.1)",
+    "source_tex_sha256": "3d902b7d9c0beb6cd6f36e0c66c0213b1cc76ad9302e7311b9f4e3525e3df9a6",
+    "t_one_regularization": {
+      "epistemic_status": "PROVED",
+      "heine_input": "Phi1(r)=_2phi1(-q/r,-q;q/r;q,t*w^(-1))",
+      "heine_output": "Psi1(r)=_2phi1(-1,t*w^(-1);q*t*w^2/r;q,-q)",
+      "heine_prefactor": {
+        "denominator_pochhammer_arguments": [
+          "q*r^-1",
+          "t*w^5"
+        ],
+        "numerator_pochhammer_arguments": [
+          "q*w^3",
+          "q*t*r^-1*w^2"
+        ]
+      },
+      "interior_arguments": {
+        "Phi2": "q*r*w^3",
+        "Psi1": "q*w^3"
+      },
+      "scope": "This proves the prescribed t->1^- limit of the regularized interior representation away from its explicit q-Pochhammer divisors. It does not continue q to the unit-circle RM point or identify the result with AFK overlaps.",
+      "second_core": "Phi2(r)=_2phi1(-1,t*w^(-1);q*t*w^2;q,-r*q)",
+      "t_one_conclusion": "For fixed 0<|q|<1 and r near 1, both transformed unilateral series have arguments of modulus <1 and denominators away from their q-lattices. Therefore their values and r derivatives extend analytically to t=1; the explicit prefactors do so away from their stated x-dependent divisor set."
+    }
+  },
+  "cycle": 189,
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "alias_packet": {
+      "path": "scripts/dimension_six_alias_hypergeometric.py",
+      "sha256": "a687acc414379289f64d8320f1e0ce4de34f57845e6f5b536681f2b06d11f7b2"
+    },
+    "d6_paper": {
+      "path": "paper/sic-stark-dimension-six-boundary-fusion.tex",
+      "sha256": "347228e05a87946ca41bb31c118aae069b7fb6002fff4933d030a153cef21cb7"
+    },
+    "instructions": {
+      "path": "AGENTS.md",
+      "sha256": "363495f0dbbe93e244b460c8eafb13247a8fb1f41be24f94c037ae9f6400c6f2"
+    },
+    "legacy_continuation_reference": {
+      "path": "scripts/dimension_six_slater_reduction.py",
+      "sha256": "b7098424d8293c370ec178e32ab6aae6d5b281501d34d098c236f76d1f2dc1ff"
+    },
+    "lens_audit": {
+      "path": "scripts/dimension_six_ss_evaluation_audit.py",
+      "sha256": "24c9258e46a1233c552017f3b58de0d45acd0197c8c807579f090ca1332f626f"
+    },
+    "preregistration": {
+      "path": "docs/cycle-189-jacobi-lens-interface-preregistration-v1.md",
+      "sha256": "d96e1d60a338669e3b2be48599798431c321e4579bbb59f0cb882a73d34c9ba7"
+    },
+    "prior_stabilizer_cycle": {
+      "path": "artifacts/cycle-188-stabilizer-covariance-v1.json",
+      "sha256": "5129382929e50457355c727d13d1f5ccded7f47774895b4893931d7eaead1973"
+    },
+    "prototype": {
+      "path": "discovery/cycle-189-regularized-jacobi-lens-interface-prototype-v1.json",
+      "sha256": "253196aff1bb11eb524d29dd9c32fe022b08ed6e571af480b9ad6270833f1b18"
+    },
+    "replay": {
+      "path": "proof/verify_cycle_189_regularized_jacobi_lens_interface.py",
+      "sha256": "471a687512c0a0bb0560965e9526405778a0b9075ab825eda42ae379837a401e"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    },
+    "two_base_lens": {
+      "path": "scripts/dimension_six_two_base_lens.py",
+      "sha256": "72a4e0d9b577f661c89a84132f450c209f1f57a6131ba175b2a238f5bb197f79"
+    }
+  },
+  "gate_outcome": {
+    "d6_interface": "INTERIOR_PACKET_AND_ALL36_GAMMA_TO_SHIN_LINES_PROVED_NONFACTORWISE_PERIODIZATION_REQUIRED",
+    "disallowed_pseudo_progress": [
+      "calling the raw CCG boundary condition an interior use of its theorem",
+      "equating a raw gamma factor with a full periodization",
+      "discarding the capital Gamma_M normalization or AFK phase",
+      "using multiplier weights, ray labels, selected exponents, or fitted characters as the map",
+      "claiming a real-multiplication, fusion, Stark, or TCC consequence from this interior result"
+    ],
+    "remaining_bottleneck": "Construct and verify an outcome-blind nonfactorwise periodization from the three-dimensional regularized derivative-core state to the source-defined mu_p(tau) Jacobi lines, retaining the capital Gamma_M normalization and separate AFK phase before any real-multiplication boundary argument."
+  },
+  "jacobi_lens": {
+    "capital_normalization": "Retained explicitly; it is not absorbed into the unphased lower-gamma source map or AFK phase.",
+    "kopp_source": "Kopp arXiv:2411.06763v3",
+    "kopp_source_tex_sha256": "4f3d0b359502e575e28c6be8259ed0ac45422f94ff91a9f6f3caf7a4f1504bcc",
+    "lower_gamma_identity": {
+      "capital_gamma_boundary": "Gamma_M(mu,m)=Z(m)*exp(-pi*i*B_2,2(mu;omega,1)/48)*gamma_M(mu,m); the factor is retained, not discarded.",
+      "cleared_difference": {
+        "constant": 0,
+        "tau_coefficient": 0
+      },
+      "denominator_q_pochhammer_argument": "exp(2*pi*i*(mu+m)/24) on both sides",
+      "epistemic_status": "PROVED",
+      "lower_case_identity": "gamma_M(mu,m;24*tau-5,1)=sigma_{(0,m+1),A}((mu+m)/24,tau)",
+      "numerator_exponent_difference": "m*(1/(24*omega)+A.tau-115/24)"
+    },
+    "sarkissian_spiridonov_source": "Sarkissian--Spiridonov arXiv:1910.11747v4",
+    "sarkissian_spiridonov_source_tex_sha256": "69a140cfd4af010a7ffcf0643e1df211f4675a88c2480e1b868c77bca4520941",
+    "source_defined_afk_map": {
+      "all_gamma_to_shin_matches": true,
+      "capital_gamma_normalization_retained": true,
+      "conclusion": "The lower-case lens gamma has a source-defined, all-characteristic map to the unphased AFK modular cocycle along mu_p(tau). The required relation from the regularized 2psi2 packet's x/helical coordinate to these mu_p lines remains open.",
+      "epistemic_status": "PROVED",
+      "rows": [
+        {
+          "A_fixes_r_p_mod_Z2": true,
+          "elliptic_coordinate": "(0*tau-0)/6",
+          "first_coordinate_is_vestigial_integer": true,
+          "gamma_characteristic": [
+            0,
+            0
+          ],
+          "kappa_p": [
+            0,
+            0
+          ],
+          "kopp_integer_characteristic": [
+            0,
+            0
+          ],
+          "m_p": -1,
+          "mu_p": "0*tau+(1)",
+          "p": [
+            0,
+            0
+          ],
+          "r_p": [
+            "0/6",
+            "0/6"
+          ]
+        },
+        {
+          "A_fixes_r_p_mod_Z2": true,
+          "elliptic_coordinate": "(1*tau-0)/6",
+          "first_coordinate_is_vestigial_integer": true,
+          "gamma_characteristic": [
+            0,
+            1
+          ],
+          "kappa_p": [
+            4,
+            1
+          ],
+          "kopp_integer_characteristic": [
+            4,
+            1
+          ],
+          "m_p": 0,
+          "mu_p": "4*tau+(0)",
+          "p": [
+            0,
+            1
+          ],
+          "r_p": [
+            "0/6",
+            "1/6"
+          ]
+        },
+        {
+          "A_fixes_r_p_mod_Z2": true,
+          "elliptic_coordinate": "(2*tau-0)/6",
+          "first_coordinate_is_vestigial_integer": true,
+          "gamma_characteristic": [
+            0,
+            2
+          ],
+          "kappa_p": [
+            8,
+            2
+          ],
+          "kopp_integer_characteristic": [
+            8,
+            2
+          ],
+          "m_p": 1,
+          "mu_p": "8*tau+(-1)",
+          "p": [
+            0,
+            2
+          ],
+          "r_p": [
+            "0/6",
+            "2/6"
+          ]
+        },
+        {
+          "A_fixes_r_p_mod_Z2": true,
+          "elliptic_coordinate": "(3*tau-0)/6",
+          "first_coordinate_is_vestigial_integer": true,
+          "gamma_characteristic": [
+            0,
+            3
+          ],
+          "kappa_p": [
+            12,
+            3
+          ],
+          "kopp_integer_characteristic": [
+            12,
+            3
+          ],
+          "m_p": 2,
+          "mu_p": "12*tau+(-2)",
+          "p": [
+            0,
+            3
+          ],
+          "r_p": [
+            "0/6",
+            "3/6"
+          ]
+        },
+        {
+          "A_fixes_r_p_mod_Z2": true,
+          "elliptic_coordinate": "(4*tau-0)/6",
+          "first_coordinate_is_vestigial_integer": true,
+          "gamma_characteristic": [
+            0,
+            4
+          ],
+          "kappa_p": [
+            16,
+            4
+          ],
+          "kopp_integer_characteristic": [
+            16,
+            4
+          ],
+          "m_p": 3,
+          "mu_p": "16*tau+(-3)",
+          "p": [
+            0,
+            4
+          ],
+          "r_p": [
+            "0/6",
+            "4/6"
+          ]
+        },
+        {
+          "A_fixes_r_p_mod_Z2": true,
+          "elliptic_coordinate": "(5*tau-0)/6",
+          "first_coordinate_is_vestigial_integer": true,
+          "gamma_characteristic": [
+            0,
+            5
+          ],
+          "kappa_p": [
+            20,
+            5
+          ],
+          "kopp_integer_characteristic": [
+            20,
+            5
+          ],
+          "m_p": 4,
+          "mu_p": "20*tau+(-4)",
+          "p": [
+            0,
+            5
+          ],
+          "r_p": [
+            "0/6",
+            "5/6"
+          ]
+        },
+        {
+          "A_fixes_r_p_mod_Z2": true,
+          "elliptic_coordinate": "(0*tau-1)/6",
+          "first_coordinate_is_vestigial_integer": true,
+          "gamma_characteristic": [
+            0,
+            -4
+          ],
+          "kappa_p": [
+            -19,
+            -4
+          ],
+          "kopp_integer_characteristic": [
+            -19,
+            -4
+          ],
+          "m_p": -5,
+          "mu_p": "0*tau+(1)",
+          "p": [
+            1,
+            0
+          ],
+          "r_p": [
+            "1/6",
+            "0/6"
+          ]
+        },
+        {
+          "A_fixes_r_p_mod_Z2": true,
+          "elliptic_coordinate": "(1*tau-1)/6",
+          "first_coordinate_is_vestigial_integer": true,
+          "gamma_characteristic": [
+            0,
+            -3
+          ],
+          "kappa_p": [
+            -15,
+            -3
+          ],
+          "kopp_integer_characteristic": [
+            -15,
+            -3
+          ],
+          "m_p": -4,
+          "mu_p": "4*tau+(0)",
+          "p": [
+            1,
+            1
+          ],
+          "r_p": [
+            "1/6",
+            "1/6"
+          ]
+        },
+        {
+          "A_fixes_r_p_mod_Z2": true,
+          "elliptic_coordinate": "(2*tau-1)/6",
+          "first_coordinate_is_vestigial_integer": true,
+          "gamma_characteristic": [
+            0,
+            -2
+          ],
+          "kappa_p": [
+            -11,
+            -2
+          ],
+          "kopp_integer_characteristic": [
+            -11,
+            -2
+          ],
+          "m_p": -3,
+          "mu_p": "8*tau+(-1)",
+          "p": [
+            1,
+            2
+          ],
+          "r_p": [
+            "1/6",
+            "2/6"
+          ]
+        },
+        {
+          "A_fixes_r_p_mod_Z2": true,
+          "elliptic_coordinate": "(3*tau-1)/6",
+          "first_coordinate_is_vestigial_integer": true,
+          "gamma_characteristic": [
+            0,
+            -1
+          ],
+          "kappa_p": [
+            -7,
+            -1
+          ],
+          "kopp_integer_characteristic": [
+            -7,
+            -1
+          ],
+          "m_p": -2,
+          "mu_p": "12*tau+(-2)",
+          "p": [
+            1,
+            3
+          ],
+          "r_p": [
+            "1/6",
+            "3/6"
+          ]
+        },
+        {
+          "A_fixes_r_p_mod_Z2": true,
+          "elliptic_coordinate": "(4*tau-1)/6",
+          "first_coordinate_is_vestigial_integer": true,
+          "gamma_characteristic": [
+            0,
+            0
+          ],
+          "kappa_p": [
+            -3,
+            0
+          ],
+          "kopp_integer_characteristic": [
+            -3,
+            0
+          ],
+          "m_p": -1,
+          "mu_p": "16*tau+(-3)",
+          "p": [
+            1,
+            4
+          ],
+          "r_p": [
+            "1/6",
+            "4/6"
+          ]
+        },
+        {
+          "A_fixes_r_p_mod_Z2": true,
+          "elliptic_coordinate": "(5*tau-1)/6",
+          "first_coordinate_is_vestigial_integer": true,
+          "gamma_characteristic": [
+            0,
+            1
+          ],
+          "kappa_p": [
+            1,
+            1
+          ],
+          "kopp_integer_characteristic": [
+            1,
+            1
+          ],
+          "m_p": 0,
+          "mu_p": "20*tau+(-4)",
+          "p": [
+            1,
+            5
+          ],
+          "r_p": [
+            "1/6",
+            "5/6"
+          ]
+        },
+        {
+          "A_fixes_r_p_mod_Z2": true,
+          "elliptic_coordinate": "(0*tau-2)/6",
+          "first_coordinate_is_vestigial_integer": true,
+          "gamma_characteristic": [
+            0,
+            -8
+          ],
+          "kappa_p": [
+            -38,
+            -8
+          ],
+          "kopp_integer_characteristic": [
+            -38,
+            -8
+          ],
+          "m_p": -9,
+          "mu_p": "0*tau+(1)",
+          "p": [
+            2,
+            0
+          ],
+          "r_p": [
+            "2/6",
+            "0/6"
+          ]
+        },
+        {
+          "A_fixes_r_p_mod_Z2": true,
+          "elliptic_coordinate": "(1*tau-2)/6",
+          "first_coordinate_is_vestigial_integer": true,
+          "gamma_characteristic": [
+            0,
+            -7
+          ],
+          "kappa_p": [
+            -34,
+            -7
+          ],
+          "kopp_integer_characteristic": [
+            -34,
+            -7
+          ],
+          "m_p": -8,
+          "mu_p": "4*tau+(0)",
+          "p": [
+            2,
+            1
+          ],
+          "r_p": [
+            "2/6",
+            "1/6"
+          ]
+        },
+        {
+          "A_fixes_r_p_mod_Z2": true,
+          "elliptic_coordinate": "(2*tau-2)/6",
+          "first_coordinate_is_vestigial_integer": true,
+          "gamma_characteristic": [
+            0,
+            -6
+          ],
+          "kappa_p": [
+            -30,
+            -6
+          ],
+          "kopp_integer_characteristic": [
+            -30,
+            -6
+          ],
+          "m_p": -7,
+          "mu_p": "8*tau+(-1)",
+          "p": [
+            2,
+            2
+          ],
+          "r_p": [
+            "2/6",
+            "2/6"
+          ]
+        },
+        {
+          "A_fixes_r_p_mod_Z2": true,
+          "elliptic_coordinate": "(3*tau-2)/6",
+          "first_coordinate_is_vestigial_integer": true,
+          "gamma_characteristic": [
+            0,
+            -5
+          ],
+          "kappa_p": [
+            -26,
+            -5
+          ],
+          "kopp_integer_characteristic": [
+            -26,
+            -5
+          ],
+          "m_p": -6,
+          "mu_p": "12*tau+(-2)",
+          "p": [
+            2,
+            3
+          ],
+          "r_p": [
+            "2/6",
+            "3/6"
+          ]
+        },
+        {
+          "A_fixes_r_p_mod_Z2": true,
+          "elliptic_coordinate": "(4*tau-2)/6",
+          "first_coordinate_is_vestigial_integer": true,
+          "gamma_characteristic": [
+            0,
+            -4
+          ],
+          "kappa_p": [
+            -22,
+            -4
+          ],
+          "kopp_integer_characteristic": [
+            -22,
+            -4
+          ],
+          "m_p": -5,
+          "mu_p": "16*tau+(-3)",
+          "p": [
+            2,
+            4
+          ],
+          "r_p": [
+            "2/6",
+            "4/6"
+          ]
+        },
+        {
+          "A_fixes_r_p_mod_Z2": true,
+          "elliptic_coordinate": "(5*tau-2)/6",
+          "first_coordinate_is_vestigial_integer": true,
+          "gamma_characteristic": [
+            0,
+            -3
+          ],
+          "kappa_p": [
+            -18,
+            -3
+          ],
+          "kopp_integer_characteristic": [
+            -18,
+            -3
+          ],
+          "m_p": -4,
+          "mu_p": "20*tau+(-4)",
+          "p": [
+            2,
+            5
+          ],
+          "r_p": [
+            "2/6",
+            "5/6"
+          ]
+        },
+        {
+          "A_fixes_r_p_mod_Z2": true,
+          "elliptic_coordinate": "(0*tau-3)/6",
+          "first_coordinate_is_vestigial_integer": true,
+          "gamma_characteristic": [
+            0,
+            -12
+          ],
+          "kappa_p": [
+            -57,
+            -12
+          ],
+          "kopp_integer_characteristic": [
+            -57,
+            -12
+          ],
+          "m_p": -13,
+          "mu_p": "0*tau+(1)",
+          "p": [
+            3,
+            0
+          ],
+          "r_p": [
+            "3/6",
+            "0/6"
+          ]
+        },
+        {
+          "A_fixes_r_p_mod_Z2": true,
+          "elliptic_coordinate": "(1*tau-3)/6",
+          "first_coordinate_is_vestigial_integer": true,
+          "gamma_characteristic": [
+            0,
+            -11
+          ],
+          "kappa_p": [
+            -53,
+            -11
+          ],
+          "kopp_integer_characteristic": [
+            -53,
+            -11
+          ],
+          "m_p": -12,
+          "mu_p": "4*tau+(0)",
+          "p": [
+            3,
+            1
+          ],
+          "r_p": [
+            "3/6",
+            "1/6"
+          ]
+        },
+        {
+          "A_fixes_r_p_mod_Z2": true,
+          "elliptic_coordinate": "(2*tau-3)/6",
+          "first_coordinate_is_vestigial_integer": true,
+          "gamma_characteristic": [
+            0,
+            -10
+          ],
+          "kappa_p": [
+            -49,
+            -10
+          ],
+          "kopp_integer_characteristic": [
+            -49,
+            -10
+          ],
+          "m_p": -11,
+          "mu_p": "8*tau+(-1)",
+          "p": [
+            3,
+            2
+          ],
+          "r_p": [
+            "3/6",
+            "2/6"
+          ]
+        },
+        {
+          "A_fixes_r_p_mod_Z2": true,
+          "elliptic_coordinate": "(3*tau-3)/6",
+          "first_coordinate_is_vestigial_integer": true,
+          "gamma_characteristic": [
+            0,
+            -9
+          ],
+          "kappa_p": [
+            -45,
+            -9
+          ],
+          "kopp_integer_characteristic": [
+            -45,
+            -9
+          ],
+          "m_p": -10,
+          "mu_p": "12*tau+(-2)",
+          "p": [
+            3,
+            3
+          ],
+          "r_p": [
+            "3/6",
+            "3/6"
+          ]
+        },
+        {
+          "A_fixes_r_p_mod_Z2": true,
+          "elliptic_coordinate": "(4*tau-3)/6",
+          "first_coordinate_is_vestigial_integer": true,
+          "gamma_characteristic": [
+            0,
+            -8
+          ],
+          "kappa_p": [
+            -41,
+            -8
+          ],
+          "kopp_integer_characteristic": [
+            -41,
+            -8
+          ],
+          "m_p": -9,
+          "mu_p": "16*tau+(-3)",
+          "p": [
+            3,
+            4
+          ],
+          "r_p": [
+            "3/6",
+            "4/6"
+          ]
+        },
+        {
+          "A_fixes_r_p_mod_Z2": true,
+          "elliptic_coordinate": "(5*tau-3)/6",
+          "first_coordinate_is_vestigial_integer": true,
+          "gamma_characteristic": [
+            0,
+            -7
+          ],
+          "kappa_p": [
+            -37,
+            -7
+          ],
+          "kopp_integer_characteristic": [
+            -37,
+            -7
+          ],
+          "m_p": -8,
+          "mu_p": "20*tau+(-4)",
+          "p": [
+            3,
+            5
+          ],
+          "r_p": [
+            "3/6",
+            "5/6"
+          ]
+        },
+        {
+          "A_fixes_r_p_mod_Z2": true,
+          "elliptic_coordinate": "(0*tau-4)/6",
+          "first_coordinate_is_vestigial_integer": true,
+          "gamma_characteristic": [
+            0,
+            -16
+          ],
+          "kappa_p": [
+            -76,
+            -16
+          ],
+          "kopp_integer_characteristic": [
+            -76,
+            -16
+          ],
+          "m_p": -17,
+          "mu_p": "0*tau+(1)",
+          "p": [
+            4,
+            0
+          ],
+          "r_p": [
+            "4/6",
+            "0/6"
+          ]
+        },
+        {
+          "A_fixes_r_p_mod_Z2": true,
+          "elliptic_coordinate": "(1*tau-4)/6",
+          "first_coordinate_is_vestigial_integer": true,
+          "gamma_characteristic": [
+            0,
+            -15
+          ],
+          "kappa_p": [
+            -72,
+            -15
+          ],
+          "kopp_integer_characteristic": [
+            -72,
+            -15
+          ],
+          "m_p": -16,
+          "mu_p": "4*tau+(0)",
+          "p": [
+            4,
+            1
+          ],
+          "r_p": [
+            "4/6",
+            "1/6"
+          ]
+        },
+        {
+          "A_fixes_r_p_mod_Z2": true,
+          "elliptic_coordinate": "(2*tau-4)/6",
+          "first_coordinate_is_vestigial_integer": true,
+          "gamma_characteristic": [
+            0,
+            -14
+          ],
+          "kappa_p": [
+            -68,
+            -14
+          ],
+          "kopp_integer_characteristic": [
+            -68,
+            -14
+          ],
+          "m_p": -15,
+          "mu_p": "8*tau+(-1)",
+          "p": [
+            4,
+            2
+          ],
+          "r_p": [
+            "4/6",
+            "2/6"
+          ]
+        },
+        {
+          "A_fixes_r_p_mod_Z2": true,
+          "elliptic_coordinate": "(3*tau-4)/6",
+          "first_coordinate_is_vestigial_integer": true,
+          "gamma_characteristic": [
+            0,
+            -13
+          ],
+          "kappa_p": [
+            -64,
+            -13
+          ],
+          "kopp_integer_characteristic": [
+            -64,
+            -13
+          ],
+          "m_p": -14,
+          "mu_p": "12*tau+(-2)",
+          "p": [
+            4,
+            3
+          ],
+          "r_p": [
+            "4/6",
+            "3/6"
+          ]
+        },
+        {
+          "A_fixes_r_p_mod_Z2": true,
+          "elliptic_coordinate": "(4*tau-4)/6",
+          "first_coordinate_is_vestigial_integer": true,
+          "gamma_characteristic": [
+            0,
+            -12
+          ],
+          "kappa_p": [
+            -60,
+            -12
+          ],
+          "kopp_integer_characteristic": [
+            -60,
+            -12
+          ],
+          "m_p": -13,
+          "mu_p": "16*tau+(-3)",
+          "p": [
+            4,
+            4
+          ],
+          "r_p": [
+            "4/6",
+            "4/6"
+          ]
+        },
+        {
+          "A_fixes_r_p_mod_Z2": true,
+          "elliptic_coordinate": "(5*tau-4)/6",
+          "first_coordinate_is_vestigial_integer": true,
+          "gamma_characteristic": [
+            0,
+            -11
+          ],
+          "kappa_p": [
+            -56,
+            -11
+          ],
+          "kopp_integer_characteristic": [
+            -56,
+            -11
+          ],
+          "m_p": -12,
+          "mu_p": "20*tau+(-4)",
+          "p": [
+            4,
+            5
+          ],
+          "r_p": [
+            "4/6",
+            "5/6"
+          ]
+        },
+        {
+          "A_fixes_r_p_mod_Z2": true,
+          "elliptic_coordinate": "(0*tau-5)/6",
+          "first_coordinate_is_vestigial_integer": true,
+          "gamma_characteristic": [
+            0,
+            -20
+          ],
+          "kappa_p": [
+            -95,
+            -20
+          ],
+          "kopp_integer_characteristic": [
+            -95,
+            -20
+          ],
+          "m_p": -21,
+          "mu_p": "0*tau+(1)",
+          "p": [
+            5,
+            0
+          ],
+          "r_p": [
+            "5/6",
+            "0/6"
+          ]
+        },
+        {
+          "A_fixes_r_p_mod_Z2": true,
+          "elliptic_coordinate": "(1*tau-5)/6",
+          "first_coordinate_is_vestigial_integer": true,
+          "gamma_characteristic": [
+            0,
+            -19
+          ],
+          "kappa_p": [
+            -91,
+            -19
+          ],
+          "kopp_integer_characteristic": [
+            -91,
+            -19
+          ],
+          "m_p": -20,
+          "mu_p": "4*tau+(0)",
+          "p": [
+            5,
+            1
+          ],
+          "r_p": [
+            "5/6",
+            "1/6"
+          ]
+        },
+        {
+          "A_fixes_r_p_mod_Z2": true,
+          "elliptic_coordinate": "(2*tau-5)/6",
+          "first_coordinate_is_vestigial_integer": true,
+          "gamma_characteristic": [
+            0,
+            -18
+          ],
+          "kappa_p": [
+            -87,
+            -18
+          ],
+          "kopp_integer_characteristic": [
+            -87,
+            -18
+          ],
+          "m_p": -19,
+          "mu_p": "8*tau+(-1)",
+          "p": [
+            5,
+            2
+          ],
+          "r_p": [
+            "5/6",
+            "2/6"
+          ]
+        },
+        {
+          "A_fixes_r_p_mod_Z2": true,
+          "elliptic_coordinate": "(3*tau-5)/6",
+          "first_coordinate_is_vestigial_integer": true,
+          "gamma_characteristic": [
+            0,
+            -17
+          ],
+          "kappa_p": [
+            -83,
+            -17
+          ],
+          "kopp_integer_characteristic": [
+            -83,
+            -17
+          ],
+          "m_p": -18,
+          "mu_p": "12*tau+(-2)",
+          "p": [
+            5,
+            3
+          ],
+          "r_p": [
+            "5/6",
+            "3/6"
+          ]
+        },
+        {
+          "A_fixes_r_p_mod_Z2": true,
+          "elliptic_coordinate": "(4*tau-5)/6",
+          "first_coordinate_is_vestigial_integer": true,
+          "gamma_characteristic": [
+            0,
+            -16
+          ],
+          "kappa_p": [
+            -79,
+            -16
+          ],
+          "kopp_integer_characteristic": [
+            -79,
+            -16
+          ],
+          "m_p": -17,
+          "mu_p": "16*tau+(-3)",
+          "p": [
+            5,
+            4
+          ],
+          "r_p": [
+            "5/6",
+            "4/6"
+          ]
+        },
+        {
+          "A_fixes_r_p_mod_Z2": true,
+          "elliptic_coordinate": "(5*tau-5)/6",
+          "first_coordinate_is_vestigial_integer": true,
+          "gamma_characteristic": [
+            0,
+            -15
+          ],
+          "kappa_p": [
+            -75,
+            -15
+          ],
+          "kopp_integer_characteristic": [
+            -75,
+            -15
+          ],
+          "m_p": -16,
+          "mu_p": "20*tau+(-4)",
+          "p": [
+            5,
+            5
+          ],
+          "r_p": [
+            "5/6",
+            "5/6"
+          ]
+        }
+      ],
+      "rows_checked": 36,
+      "source_relations": [
+        "gamma_M(mu,m)=sigma_(0,m+1),A((mu+m)/24,tau)",
+        "shin_A^r(tau)=sigma_((I-A)r,A)(<r,(tau,1)>,tau)"
+      ]
+    }
+  },
+  "outcome": {
+    "epistemic_status": "PROVED",
+    "statement": "The sign-reflected packet has a checked Chen--Chen--Gu interior regularization, an exact removable r=1 finite-part formula, and a t->1^- unilateral continuation. Independently, lower-case lens gamma maps to the unphased AFK Shintani cocycle on all 36 source-defined characteristic lines. No raw kernel factor, after the only coefficient-compatible constant omega_2 shift, reaches any such line: all 1,296 frequency/characteristic pairs leave the exact residue 2 modulo 4."
+  },
+  "preregistration_preflight": {
+    "cycle": 189,
+    "manifest_sha256": "d96e1d60a338669e3b2be48599798431c321e4579bbb59f0cb882a73d34c9ba7",
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "An explicit outcome-blind nonfactorwise helical periodization of the regularized three-core derivative state may match the all-36 AFK Jacobi lines with exact covariance; otherwise an exact obstruction for a clearly delimited periodization class may identify the next completion mechanism."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_189_regularized_jacobi_lens_interface_v1.py --check",
+    "preflight_command": "research prereg check docs/cycle-189-jacobi-lens-interface-preregistration-v1.md --expected-cycle 189 --allow-head-drift",
+    "prototype_command": "python3 proof/verify_cycle_189_regularized_jacobi_lens_interface.py --output discovery/cycle-189-regularized-jacobi-lens-interface-prototype-v1.json",
+    "write_command": "python3 proof/build_cycle_189_regularized_jacobi_lens_interface_v1.py --write"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "scoped_controls_and_obstruction": {
+    "raw_helical_factor_alignment": {
+      "continuous_coefficient_conclusion": "Matching forces n=1 and h=p2 for the direct factor, or n=1 and h=-p2 for the reflected factor.",
+      "direct_discrete_residue_mod_4": [
+        2
+      ],
+      "epistemic_status": "PROVED",
+      "frequency_characteristic_pairs_checked": 1296,
+      "reflected_discrete_residue_mod_4": [
+        2
+      ],
+      "result": "No factorwise match survives: each forced discrete equation is 4*K+2=0.",
+      "scope": "This falsifies only the frozen single raw gamma factor plus constant omega_2-shift class. It leaves finite combinations, nonconstant periodization, and the already proved gamma-to-shin map available.",
+      "tested_class": "either raw kernel factor (alpha_z,N_z) or (-alpha_z,4-N_z), followed by any constant integer omega_2 shift (mu,m)->(mu+n,m-n), matched identically in tau to (mu_p,m_p)"
+    },
+    "untranslated_one_factor": {
+      "epistemic_status": "PROVED",
+      "frozen_class": "one lower-case gamma_M/Jacobi factor, no elliptic translation or finite factor product, and only a p-independent elementary prefactor",
+      "full_grid": 36,
+      "matching_characteristics": [
+        [
+          0,
+          0
+        ]
+      ],
+      "nonzero_characteristics_excluded": 35,
+      "reason": "denominator matching forces z=0 mod Z and hence an integral Jacobi characteristic (0,m+1); matching p/6 then forces p_2=0 and p_1=0",
+      "scope": "This excludes only the frozen direct one-factor match. A translation/periodization transform remains a proposed interface construction."
+    }
+  },
+  "sealer": {
+    "path": "proof/build_cycle_189_regularized_jacobi_lens_interface_v1.py",
+    "sha256": "7145cbd21b68c43c89d47f12d3891e5f4a091bf99b3f80e56c10fb7d1a2f829a"
+  },
+  "status": "SEALED_INTERIOR_REGULARIZATION_ALL36_JACOBI_LENS_MAP_AND_FACTORWISE_OBSTRUCTION"
+}
