@@ -10,11 +10,11 @@
   scopes in dimensions 4, 5, 7, and 8. No dimension-six TCC identity,
   coefficient-to-ray map, fusion-continuity theorem, or boundary-limit theorem
   is proved. `CERTIFIED_NUMERICAL` packet growth is not a nonexistence theorem.
-- Current state: Cycle 179 / `B017` derives the finite, modulus-defined
-  prime-2 ray factor and its canonical transition. Together with the frozen
-  prime-3 record it still resolves all 36 rows, so the fibre test remains
-  vacuous. Cycle 180 / `B018` must instead test a functorial local-global
-  Artin assembly for admissible sets, including the global-unit ambiguity.
+- Current state: Cycle 180 / `B018` exactly reconstructs every
+  conductor-lowered admissible exponent set from local residue-sign data
+  modulo the global-unit image, independently agreeing with ray arithmetic.
+  It remains arithmetic only. Cycle 181 / `B019` must relate this set-valued
+  assembly directly to the `A_6`/Shintani action on characteristics.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -27,8 +27,8 @@
 ## Budget, accounting, and stop condition
 
 - Total forward budget: 200 substantive research cycles, counted `B001/200`
-  through `B200/200`; the counter is currently `B017/200`.
-- Cycle 180 is `B018`. Repository cycle numbers and budget ordinals advance
+  through `B200/200`; the counter is currently `B018/200`.
+- Cycle 181 is `B019`. Repository cycle numbers and budget ordinals advance
   together unless a non-counted record intervenes; the budget ordinal is the
   authoritative campaign counter.
 - A cycle counts only when it is a preregistered substantive research block
@@ -140,6 +140,12 @@
   With the frozen p3 record, all 36 CRT records remain distinct; this is
   local coordinate resolution, not interface evidence. See
   `artifacts/cycle-179-p2-ray-quotient-v1.json`.
+- `PROVED`: Cycle 180 derives the six varying ray quotients from local
+  residue-sign factors modulo `{-/+ beta^k}`. It reconstructs all 36
+  admissible exponent sets, checks 18 conductor projections and all
+  36 source-power pairs per projection, and independently agrees with ray
+  arithmetic and both anchors. It supplies no additive/AFK operation. See
+  `artifacts/cycle-180-local-global-artin-assembly-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -205,7 +211,8 @@ Budget B001--B200
   |    |                                                                          `-- p3 local-to-selected-ray map [FALSIFIED]
   |    |                                                                               `-- unrestricted CRT record [INJECTIVE / VACUOUS]
   |    |                                                                                    `-- modulus-defined p2 quotient [INJECTIVE / VACUOUS]
-  |    |                                                                                         `-- local-global Artin assembly [NEXT GATE]
+  |    |                                                                                         `-- local-global Artin assembly [SEALED]
+  |    |                                                                                              `-- direct A6/Shintani action [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -250,18 +257,17 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `B017_OF_200` | Seal Cycle 180 as `B018`, then increment only for substantive research blocks. | Counting workflow or archive-only work. |
-| D6 interface | `LOCAL_RAY_FACTORS_RESOLVE_ROWS_ARTIN_ASSEMBLY_REQUIRED` | Derive a section-independent local-global Artin assembly of admissible exponent sets with explicit global-unit quotient, then test preregistered transition, homomorphism, orientation, and anchor identities. | More row-resolution/fibre tests; discarding valid factors merely to force collisions; using `s,d`, selected exponents, or target labels. |
+| Project budget | `B018_OF_200` | Seal Cycle 181 as `B019`, then increment only for substantive research blocks. | Counting workflow or archive-only work. |
+| D6 interface | `RAY_ASSEMBLY_EXACT_CHARACTERISTIC_ACTION_LINK_REQUIRED` | Derive the `A6`/Shintani action on local residue-sign/global-unit quotient classes and test set-valued equivariance, transition, orientation, and anchors without a section. | Calling arithmetic assembly an AFK/additive interface; using `s,d`, selected exponents, or target labels to supply equivariance. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Can the varying ray exact sequences be assembled into one functorial,
-  section-independent admissible-exponent-set construction after quotienting
-  by the exact global-unit image, with a structural relation to orientation
-  and characteristic dynamics?
+- Does the `A6`/Shintani action on characteristics induce a direct,
+  section-independent action on the residue-sign/global-unit assembly that is
+  equivariant on admissible exponent sets and preserves orientation?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -270,29 +276,28 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 180 / `B018`
+## Next goal: Cycle 181 / `B019`
 
 Preregister one substantive block with this question:
 
-> Do the exact local factors, conductor transition maps, and global-unit
-> images assemble functorially into the admissible exponent sets without a
-> chosen representative, and do the resulting maps satisfy preregistered
-> transition, homomorphism, Frobenius-orientation, and anchor identities?
+> Does the frozen `A6`/Shintani characteristic action act directly on
+> local residue-sign/global-unit quotient classes and make the assembled
+> admissible exponent sets equivariant without `s`, `d`, or a selected
+> exponent?
 
-Cycle 180 must freeze the exact ray-sequence maps, the local product and
-global-unit image, all row-varying transition maps, the common target of the
-assembly, its set/coset convention, anchors, structural identities, and
-failure rule before executable work. It must not select a representative or
-infer an interface from record injectivity. The companion reviewed the sealed
-B017 work and recommended this assembly engine; its stated flaw is that
-row-varying conductors and global-unit ambiguity may prevent a common,
-section-independent `C6` target.
+Cycle 181 must freeze the characteristic action, its source-side residue/sign
+transform, the six quotient/transition maps, set-action convention, anchors,
+and failure rule before executable work. It must construct the action without
+consulting assembled ray labels, `s`, `d`, or selected exponents. The
+companion reviewed the sealed B018 work and recommended this distinct action
+engine; its stated flaw is that arithmetic assembly alone gives no reason for
+characteristic transport to control logarithmic/Stark values.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 179
+research cycle 180
 sed -n '1,260p' PLAN.md
-python3 proof/build_cycle_179_p2_ray_quotient_v1.py --check
+python3 proof/build_cycle_180_local_global_artin_assembly_v1.py --check
 ```
