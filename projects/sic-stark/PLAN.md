@@ -10,10 +10,11 @@
   scopes in dimensions 4, 5, 7, and 8. No dimension-six TCC identity,
   coefficient-to-ray map, fusion-continuity theorem, or boundary-limit theorem
   is proved. `CERTIFIED_NUMERICAL` packet growth is not a nonexistence theorem.
-- Current state: Cycle 183 / `B021` proves that even the full 14-state
-  conductor-graded ray-coset target has incompatible repeated-state Shintani
-  successors. Cycle 184 / `B022` must add multiplier data, but only with a
-  genuine compression and independently defined composition law.
+- Current state: Cycle 184 / `B022` proves a 17-state multiplier-refined
+  local-ray correspondence with exact set-plus-phase composition, but ten
+  repeated refined states still have incompatible Shintani successors. Cycle
+  185 / `B023` must retain those fibres and test a source-defined
+  multiplier-weighted relation transfer without fitting labels.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -162,6 +163,13 @@
   It falsifies only deterministic linear action on that graded basis, not a
   multiplier-refined correspondence or any analytic construction. See
   `artifacts/cycle-183-conductor-graded-target-v1.json`.
+- `PROVED`: Cycle 184 combines the frozen AFK phase with the local-ray
+  correspondence, strictly compressing the 36 rows to 17 states.  All 36
+  direct relations equal independent ray-set differences and all three-step
+  set-plus-phase compositions have the prescribed kernel/zero return.  Its
+  ten successor conflicts make it a correspondence—not an action, AFK
+  coefficient map, regulator identity, fusion theorem, or TCC proof. See
+  `artifacts/cycle-184-multiplier-refined-correspondence-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -231,7 +239,8 @@ Budget B001--B200
   |    |                                                                                              `-- direct A6/Shintani action [SEALED]
   |    |                                                                                                   `-- collapsed uniform target [FALSIFIED]
   |    |                                                                                                        `-- conductor-graded target [FALSIFIED]
-  |    |                                                                                                             `-- multiplier-refined correspondence [NEXT GATE]
+  |    |                                                                                                             `-- multiplier-refined correspondence [SEALED]
+  |    |                                                                                                                  `-- multiplier-weighted relation transfer [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -276,17 +285,17 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `B021_OF_200` | Complete the companion-reviewed Cycle 184/B022 decision, then increment only for substantive research blocks. | Counting workflow or archive-only work. |
-| D6 interface | `CONDUCTOR_GRADED_DETERMINISTIC_TARGET_FALSIFIED_MULTIPLIER_REFINED_CORRESPONDENCE_REQUIRED` | Define a compressed multiplier-refined correspondence module with independent composition and test its direct Shintani action/additive operation. | Re-encoding all 36 rows; generalizing the deterministic-target falsifier; using selected exponents, `s,d`, or fitted labels. |
+| Project budget | `B022_OF_200` | Complete a companion-reviewed substantive Cycle 185/B023 decision before incrementing again. | Counting workflow or archive-only work. |
+| D6 interface | `MULTIPLIER_REFINED_CORRESPONDENCE_COMPOSITION_VALIDATED_MULTIPLIER_WEIGHTED_TRANSFER_REQUIRED` | Define a source-side multiplier-weighted relation transfer on the preserved correspondence fibres and test its unfitted multiplication law. | Calling the correspondence an action; re-encoding 36 rows; selecting exponents; using `s,d`, or fitted labels. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Can the frozen AFK multiplier phase refine the local ray correspondence into
-  a compressed state space with an independent composition law and direct
-  Shintani action?
+- Can source-defined AFK multiplier weights on the multiplier-refined
+  correspondence yield an exact relation transfer while retaining all intrinsic
+  fibre ambiguity?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -295,28 +304,28 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 184 / `B022`
+## Next goal: Cycle 185 / `B023`
 
 Preregister one substantive block with this question:
 
-> Does a multiplier-refined, non-row-encoding correspondence module built from
-> the frozen AFK phase and local ray data have an independently defined
-> composition law and direct Shintani action without `s`, `d`, selected
-> exponents, or fitted labels?
+> Does a source-defined AFK-multiplier-weighted relation transfer on the sealed
+> correspondence have an exact group-algebra multiplication law without `s`,
+> `d`, selected exponents, or fitted labels?
 
-Cycle 184 must freeze the phase input, proposed compressed state space and
-compression threshold, independent composition law, direct action convention,
-anchors, and failure rule before executable work. It must not encode every
-characteristic as a distinct target state, select exponents, use `s,d`, or fit
-maps. The companion reviewed the sealed B021 obstruction and recommended this
-distinct multiplier-refined engine; its stated flaw is that finite transport
-may still fail to map AFK coefficients or control Stark values.
+Cycle 185 must freeze the multiplier source, relation module,
+composition-compatible transfer rule, acceptance/falsification rule, anchors,
+and exact domain before executable work. It must not call these weights AFK
+coefficients, fit weights from ray labels, select exponents, collapse the
+conflicting fibres, use `s,d`, or claim a Stark/fusion/TCC consequence from
+finite transfer alone. The companion's Cycle-184 review recommends this
+distinct fibre-preserving engine; its stated flaw is that ten successor
+conflicts rule out treating the correspondence as a state action.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 183
+research cycle 184
 sed -n '1,260p' PLAN.md
-python3 proof/build_cycle_183_conductor_graded_target_v1.py --check
+python3 proof/build_cycle_184_multiplier_refined_correspondence_v1.py --check
 ```
