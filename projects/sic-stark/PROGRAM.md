@@ -10,14 +10,14 @@
   scopes in dimensions 4, 5, 7, and 8. No dimension-six TCC identity,
   coefficient-to-ray map, fusion-continuity theorem, or boundary-limit theorem
   is proved. `CERTIFIED_NUMERICAL` packet growth is not a nonexistence theorem.
-- Current state: Cycle 194 proves that the actual beta kernel forces the
+- Current state: the Cycle-194 v2 correction retains the source-forced,
   Fourier-stable six-dimensional `B_(1,-)` anti-channel missing from the
-  minimal fibre. Its aliases have coincident-pole orbits, whose exact helical
-  residue recurrence converges absolutely and is non-identically-zero in a
-  strict interior asymptotic sector. The next gate is a source-derived
-  distributional or contour continuation to the real-multiplication endpoint,
-  with exact pole-crossing and residue-jump rules—not an AFK, boundary,
-  fusion, or TCC result.
+  minimal fibre, but enforces the published true-pole inequality omitted by
+  v1. The six affine collision orbits are finite (sizes `2,4,6,8,10,12`),
+  with 42 nonzero individual residue summands; no combined-residue
+  noncancellation, endpoint continuation, AFK, boundary, fusion, or TCC
+  result is proved. The next gate is an exact source-defined combination of
+  those finite residues before a distributional or contour endpoint test.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -240,16 +240,16 @@
   domain, so no periodized beta identity, AFK value, boundary, fusion, or TCC
   result follows. See
   `artifacts/cycle-193-b030-helical-theta-amplitude-v1.json`.
-- `PROVED`: Cycle 194 proves that the physical two-gamma beta kernel has a
-  nonzero simple odd-antisymmetric principal part in every canonical
-  `(N,N+12)` pair, forcing the `B_(1,-)` complement and completing the
-  source fibre to dimension 24. Helical aliases collide at poles, so
-  termwise residues are invalid; the exact `H_+` recurrence has strict
-  interior root decay and an absolutely convergent, non-identically-zero
-  residue orbit in an asymptotic sector. It proves neither all-point
-  nonvanishing, endpoint continuation, AFK identification, a boundary value,
-  fusion, nor TCC. See
-  `artifacts/cycle-194-b031-meromorphic-anti-channel-v1.json`.
+- `CORRECTION` / `PROVED`: Cycle 194 v1 omitted the true-pole inequality in
+  its helical collision audit. Version 2 retains the physical two-gamma
+  kernel's nonzero simple odd-antisymmetric principal parts, the source-forced
+  `B_(1,-)` complement, and the 24-dimensional source fibre, but corrects the
+  alleged infinite orbit to finite true-pole orbits of sizes `2,4,6,8,10,12`
+  (42 nonzero individual residue summands). It withdraws the tail-convergence
+  and sector-nonvanishing claims; finite combined-residue cancellation,
+  endpoint continuation, AFK identification, a boundary value, fusion, and
+  TCC remain open. See
+  `artifacts/cycle-194-b031-meromorphic-anti-channel-v2.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -333,8 +333,9 @@ Budget B001--B200
   |    |                                                                                                                                                                    `-- continuous graded Schwartz theta transport [SEALED]
   |    |                                                                                                                                                                         `-- fibrewise iota-equivariant odd raw-amplitude recovery [OBSTRUCTED]
   |    |                                                                                                                                                                              `-- source-forced B_(1,-) meromorphic anti-channel [SEALED]
-  |    |                                                                                                                                                                                   `-- strict-interior coincident-pole residue orbit [SEALED]
-  |    |                                                                                                                                                                                        `-- endpoint distributional/contour continuation [NEXT GATE]
+  |    |                                                                                                                                                                                   `-- finite true-pole collision orbits [SEALED CORRECTION: 42 summands]
+  |    |                                                                                                                                                                                        `-- exact finite combined-residue rule [NEXT GATE]
+  |    |                                                                                                                                                                                             `-- endpoint distributional/contour continuation [SUBSEQUENT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -379,18 +380,20 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 195 endpoint-continuation decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `SOURCE_FORCED_24D_MEROMORPHIC_ANTI_CHANNEL_PROVED_STRICT_INTERIOR_RESIDUE_ORBIT_CONVERGENT_ENDPOINT_DISTRIBUTIONAL_OR_CONTOUR_CONTINUATION_REQUIRED` | Define one source-derived distributional or contour continuation of the completed 24D meromorphic channel to the real-multiplication endpoint, with frozen pole-crossing and residue-jump rules, then test anti-channel preservation before any AFK identification. | Calling sectorial interior nonvanishing all-point nonvanishing; calling strict-interior convergence endpoint continuation; identifying a raw/periodized channel with an AFK value or completed alias; fitting a residue, transfer entry, or counterterm; discarding capital `Gamma_M` normalization or AFK phase; using `s,d`, selected exponents, or ray labels. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 195 finite-residue-combination decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `SOURCE_FORCED_24D_ANTI_FIBRE_PROVED_FINITE_TRUE_POLE_COLLISION_SUM_REQUIRES_EXACT_COMBINATION` | Define one source-derived exact finite combined-residue rule for all six collision orbits, test it for cancellation/preservation without fitted coefficients, and only then choose a distributional or contour endpoint continuation. | Calling affine divisor equality an infinite true-pole orbit; calling individual nonzero summands a nonzero combined residue; fitting a residue, transfer entry, or counterterm; identifying a raw/periodized channel with an AFK value or completed alias; discarding capital `Gamma_M` normalization or AFK phase; using `s,d`, selected exponents, or ray labels. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Can the completed 24-dimensional source-forced meromorphic channel be
-  continued to the real-multiplication endpoint as a distribution or
-  contour-controlled finite part, with all pole crossings and residue jumps
-  fixed before evaluating any AFK comparison?
+- Do the finite source true-pole collision sums preserve all six anti
+  residues, or do any cancel exactly, before an endpoint contour or
+  distributional finite part is chosen?
+- Once those combined residues are defined, can the completed 24-dimensional
+  source-forced meromorphic channel be continued to the real-multiplication
+  endpoint as a distribution or contour-controlled finite part?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -403,20 +406,20 @@ than pretending fusion continuity is operational.
 
 Preregister one substantive block with this question:
 
-> Can one source-derived distributional or contour continuation of the
-> completed 24-dimensional meromorphic beta channel reach the
-> real-multiplication endpoint while preserving its six anti residues, under
-> fixed pole-crossing and residue-jump rules and without a fitted AFK map,
-> selected exponents, `s`, `d`, or ray labels?
+> Can one source-derived exact finite combination of every corrected
+> true-pole collision orbit determine whether the six `B_(1,-)` residues
+> survive or cancel, without a fitted coefficient, AFK map, selected
+> exponents, `s`, `d`, or ray labels?
 
-Cycle 195 must freeze one continuation state space, a contour/distribution
-rule, all candidate pole-crossing loci, residue-jump signs, and a strict
-endpoint acceptance criterion before executable work. It must retain capital
-`Gamma_M` normalization and the AFK phase separately. It must not infer an
-endpoint value from strict-interior convergence, call a raw/periodized channel
-an AFK cocycle or completed alias, fit a counterterm, use selected exponents,
-`s,d`, or ray labels, or claim an RM-boundary, Stark/fusion/TCC consequence
-before exact amplitude matching.
+Cycle 195 must freeze one finite collision-sum state space, the source
+functional-equation normalization that combines its summands, every
+true-pole/zero cancellation condition, and a strict acceptance criterion
+before executable work. It must retain capital `Gamma_M` normalization and
+the AFK phase separately. It must not treat the v1 affine orbit as a true
+tail, infer endpoint continuation from a finite source sum, call a
+raw/periodized channel an AFK cocycle or completed alias, fit a counterterm,
+use selected exponents, `s,d`, or ray labels, or claim an RM-boundary,
+Stark/fusion/TCC consequence before exact amplitude matching.
 
 ## Recovery
 
@@ -424,5 +427,5 @@ before exact amplitude matching.
 source ../../tools/dev-env.sh
 research cycle 194
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_194_meromorphic_anti_channel_v1.py --check
+python3 proof/build_cycle_194_meromorphic_anti_channel_v2.py --check
 ```

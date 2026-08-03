@@ -1,0 +1,1542 @@
+{
+  "artifact_id": "cycle-194-b031-meromorphic-anti-channel-v2",
+  "budget_ordinal": "B031",
+  "claim_boundary": "This correction enforces the source true-pole inequality on the C194 affine collision relation. It retains local source-forced anti-principal parts and spectral retention, proves finite collision orbits and nonzero individual residues, and withdraws the v1 infinite-tail/convergence/sector claims. It proves no finite combined-residue noncancellation, endpoint continuation, AFK identification, boundary value, fusion, Stark, or TCC result.",
+  "companion_decision": {
+    "adopted": true,
+    "falsifier": "Any error in the source inequality, substitutions m=N-6z and (z,j,n)=(-3k,k,-k), or an exact surviving infinite admissible pole sequence.",
+    "identity": "/root/decision_companion_2",
+    "known_flaw": "The recurrence tracked algebraic divisor collisions but omitted the source true-pole inequality; after substitution it permits only k<=N, so the asserted infinite residue tail does not exist.",
+    "next_action": "Rebuild the collision verifier with every divisor inequality enforced, classify the resulting finite pole orbits, compute possible finite residue cancellation exactly, seal C194 v2, then re-preregister Cycle 195 from the corrected boundary.",
+    "reason": "The correction preserves the valid source-local result while withdrawing the exact unsupported infinite-tail promotion before any endpoint work proceeds.",
+    "recommendation": "Issue an immutable Cycle 194 v2 correction immediately, superseding only the false infinite-tail/convergence/nonzero-sector claims while preserving the independently verified six local anti-principal parts and F_24 anti-fibre result; contain Cycle 195 meanwhile."
+  },
+  "corrected_true_pole_census": {
+    "combined_residue_status": "OPEN: each finite summand is nonzero, but no cancellation theorem for their finite sums is claimed",
+    "epistemic_status": "PROVED",
+    "orbit_cardinalities": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12
+    ],
+    "records": [
+      {
+        "admissible_depths": [
+          0,
+          1
+        ],
+        "affine_collision_law": "(z,j,n)=(-3k,k,-k) over the base pole",
+        "canonical_odd_N": 1,
+        "first_rejected_depth": 2,
+        "first_rejected_indices": {
+          "j": 2,
+          "m": 37,
+          "n": -2,
+          "z": -6
+        },
+        "first_rejected_inequality": -1,
+        "infinite_true_pole_tail_exists": false,
+        "members": [
+          {
+            "alias_index_z": 0,
+            "depth_k": 0,
+            "first_gamma_indices": {
+              "j": 0,
+              "m": 1,
+              "n": 0
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": 3,
+              "reflected_mu": "0*omega_1+(1-0)",
+              "zero_candidate_j": 0,
+              "zero_equation": "24*n=460",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=1"
+          },
+          {
+            "alias_index_z": -3,
+            "depth_k": 1,
+            "first_gamma_indices": {
+              "j": 1,
+              "m": 19,
+              "n": -1
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": -15,
+              "reflected_mu": "1*omega_1+(1-1)",
+              "zero_candidate_j": -1,
+              "zero_equation": "24*n=-1724",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=0"
+          }
+        ],
+        "substitution": "m=N-6z=N+18k, hence 24*n+5*j+m=N-k",
+        "true_pole_orbit_cardinality": 2,
+        "true_pole_rule": "24*n+5*j+m>=0"
+      },
+      {
+        "admissible_depths": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "affine_collision_law": "(z,j,n)=(-3k,k,-k) over the base pole",
+        "canonical_odd_N": 3,
+        "first_rejected_depth": 4,
+        "first_rejected_indices": {
+          "j": 4,
+          "m": 75,
+          "n": -4,
+          "z": -12
+        },
+        "first_rejected_inequality": -1,
+        "infinite_true_pole_tail_exists": false,
+        "members": [
+          {
+            "alias_index_z": 0,
+            "depth_k": 0,
+            "first_gamma_indices": {
+              "j": 0,
+              "m": 3,
+              "n": 0
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": 1,
+              "reflected_mu": "0*omega_1+(3-0)",
+              "zero_candidate_j": 2,
+              "zero_equation": "24*n=460",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=3"
+          },
+          {
+            "alias_index_z": -3,
+            "depth_k": 1,
+            "first_gamma_indices": {
+              "j": 1,
+              "m": 21,
+              "n": -1
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": -17,
+              "reflected_mu": "1*omega_1+(3-1)",
+              "zero_candidate_j": 1,
+              "zero_equation": "24*n=-1724",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=2"
+          },
+          {
+            "alias_index_z": -6,
+            "depth_k": 2,
+            "first_gamma_indices": {
+              "j": 2,
+              "m": 39,
+              "n": -2
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": -35,
+              "reflected_mu": "2*omega_1+(3-2)",
+              "zero_candidate_j": 0,
+              "zero_equation": "24*n=-3908",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=1"
+          },
+          {
+            "alias_index_z": -9,
+            "depth_k": 3,
+            "first_gamma_indices": {
+              "j": 3,
+              "m": 57,
+              "n": -3
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": -53,
+              "reflected_mu": "3*omega_1+(3-3)",
+              "zero_candidate_j": -1,
+              "zero_equation": "24*n=-6092",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=0"
+          }
+        ],
+        "substitution": "m=N-6z=N+18k, hence 24*n+5*j+m=N-k",
+        "true_pole_orbit_cardinality": 4,
+        "true_pole_rule": "24*n+5*j+m>=0"
+      },
+      {
+        "admissible_depths": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "affine_collision_law": "(z,j,n)=(-3k,k,-k) over the base pole",
+        "canonical_odd_N": 5,
+        "first_rejected_depth": 6,
+        "first_rejected_indices": {
+          "j": 6,
+          "m": 113,
+          "n": -6,
+          "z": -18
+        },
+        "first_rejected_inequality": -1,
+        "infinite_true_pole_tail_exists": false,
+        "members": [
+          {
+            "alias_index_z": 0,
+            "depth_k": 0,
+            "first_gamma_indices": {
+              "j": 0,
+              "m": 5,
+              "n": 0
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": -1,
+              "reflected_mu": "0*omega_1+(5-0)",
+              "zero_candidate_j": 4,
+              "zero_equation": "24*n=460",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=5"
+          },
+          {
+            "alias_index_z": -3,
+            "depth_k": 1,
+            "first_gamma_indices": {
+              "j": 1,
+              "m": 23,
+              "n": -1
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": -19,
+              "reflected_mu": "1*omega_1+(5-1)",
+              "zero_candidate_j": 3,
+              "zero_equation": "24*n=-1724",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=4"
+          },
+          {
+            "alias_index_z": -6,
+            "depth_k": 2,
+            "first_gamma_indices": {
+              "j": 2,
+              "m": 41,
+              "n": -2
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": -37,
+              "reflected_mu": "2*omega_1+(5-2)",
+              "zero_candidate_j": 2,
+              "zero_equation": "24*n=-3908",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=3"
+          },
+          {
+            "alias_index_z": -9,
+            "depth_k": 3,
+            "first_gamma_indices": {
+              "j": 3,
+              "m": 59,
+              "n": -3
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": -55,
+              "reflected_mu": "3*omega_1+(5-3)",
+              "zero_candidate_j": 1,
+              "zero_equation": "24*n=-6092",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=2"
+          },
+          {
+            "alias_index_z": -12,
+            "depth_k": 4,
+            "first_gamma_indices": {
+              "j": 4,
+              "m": 77,
+              "n": -4
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": -73,
+              "reflected_mu": "4*omega_1+(5-4)",
+              "zero_candidate_j": 0,
+              "zero_equation": "24*n=-8276",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=1"
+          },
+          {
+            "alias_index_z": -15,
+            "depth_k": 5,
+            "first_gamma_indices": {
+              "j": 5,
+              "m": 95,
+              "n": -5
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": -91,
+              "reflected_mu": "5*omega_1+(5-5)",
+              "zero_candidate_j": -1,
+              "zero_equation": "24*n=-10460",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=0"
+          }
+        ],
+        "substitution": "m=N-6z=N+18k, hence 24*n+5*j+m=N-k",
+        "true_pole_orbit_cardinality": 6,
+        "true_pole_rule": "24*n+5*j+m>=0"
+      },
+      {
+        "admissible_depths": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "affine_collision_law": "(z,j,n)=(-3k,k,-k) over the base pole",
+        "canonical_odd_N": 7,
+        "first_rejected_depth": 8,
+        "first_rejected_indices": {
+          "j": 8,
+          "m": 151,
+          "n": -8,
+          "z": -24
+        },
+        "first_rejected_inequality": -1,
+        "infinite_true_pole_tail_exists": false,
+        "members": [
+          {
+            "alias_index_z": 0,
+            "depth_k": 0,
+            "first_gamma_indices": {
+              "j": 0,
+              "m": 7,
+              "n": 0
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": -3,
+              "reflected_mu": "0*omega_1+(7-0)",
+              "zero_candidate_j": 6,
+              "zero_equation": "24*n=460",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=7"
+          },
+          {
+            "alias_index_z": -3,
+            "depth_k": 1,
+            "first_gamma_indices": {
+              "j": 1,
+              "m": 25,
+              "n": -1
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": -21,
+              "reflected_mu": "1*omega_1+(7-1)",
+              "zero_candidate_j": 5,
+              "zero_equation": "24*n=-1724",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=6"
+          },
+          {
+            "alias_index_z": -6,
+            "depth_k": 2,
+            "first_gamma_indices": {
+              "j": 2,
+              "m": 43,
+              "n": -2
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": -39,
+              "reflected_mu": "2*omega_1+(7-2)",
+              "zero_candidate_j": 4,
+              "zero_equation": "24*n=-3908",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=5"
+          },
+          {
+            "alias_index_z": -9,
+            "depth_k": 3,
+            "first_gamma_indices": {
+              "j": 3,
+              "m": 61,
+              "n": -3
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": -57,
+              "reflected_mu": "3*omega_1+(7-3)",
+              "zero_candidate_j": 3,
+              "zero_equation": "24*n=-6092",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=4"
+          },
+          {
+            "alias_index_z": -12,
+            "depth_k": 4,
+            "first_gamma_indices": {
+              "j": 4,
+              "m": 79,
+              "n": -4
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": -75,
+              "reflected_mu": "4*omega_1+(7-4)",
+              "zero_candidate_j": 2,
+              "zero_equation": "24*n=-8276",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=3"
+          },
+          {
+            "alias_index_z": -15,
+            "depth_k": 5,
+            "first_gamma_indices": {
+              "j": 5,
+              "m": 97,
+              "n": -5
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": -93,
+              "reflected_mu": "5*omega_1+(7-5)",
+              "zero_candidate_j": 1,
+              "zero_equation": "24*n=-10460",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=2"
+          },
+          {
+            "alias_index_z": -18,
+            "depth_k": 6,
+            "first_gamma_indices": {
+              "j": 6,
+              "m": 115,
+              "n": -6
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": -111,
+              "reflected_mu": "6*omega_1+(7-6)",
+              "zero_candidate_j": 0,
+              "zero_equation": "24*n=-12644",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=1"
+          },
+          {
+            "alias_index_z": -21,
+            "depth_k": 7,
+            "first_gamma_indices": {
+              "j": 7,
+              "m": 133,
+              "n": -7
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": -129,
+              "reflected_mu": "7*omega_1+(7-7)",
+              "zero_candidate_j": -1,
+              "zero_equation": "24*n=-14828",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=0"
+          }
+        ],
+        "substitution": "m=N-6z=N+18k, hence 24*n+5*j+m=N-k",
+        "true_pole_orbit_cardinality": 8,
+        "true_pole_rule": "24*n+5*j+m>=0"
+      },
+      {
+        "admissible_depths": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "affine_collision_law": "(z,j,n)=(-3k,k,-k) over the base pole",
+        "canonical_odd_N": 9,
+        "first_rejected_depth": 10,
+        "first_rejected_indices": {
+          "j": 10,
+          "m": 189,
+          "n": -10,
+          "z": -30
+        },
+        "first_rejected_inequality": -1,
+        "infinite_true_pole_tail_exists": false,
+        "members": [
+          {
+            "alias_index_z": 0,
+            "depth_k": 0,
+            "first_gamma_indices": {
+              "j": 0,
+              "m": 9,
+              "n": 0
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": -5,
+              "reflected_mu": "0*omega_1+(9-0)",
+              "zero_candidate_j": 8,
+              "zero_equation": "24*n=460",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=9"
+          },
+          {
+            "alias_index_z": -3,
+            "depth_k": 1,
+            "first_gamma_indices": {
+              "j": 1,
+              "m": 27,
+              "n": -1
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": -23,
+              "reflected_mu": "1*omega_1+(9-1)",
+              "zero_candidate_j": 7,
+              "zero_equation": "24*n=-1724",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=8"
+          },
+          {
+            "alias_index_z": -6,
+            "depth_k": 2,
+            "first_gamma_indices": {
+              "j": 2,
+              "m": 45,
+              "n": -2
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": -41,
+              "reflected_mu": "2*omega_1+(9-2)",
+              "zero_candidate_j": 6,
+              "zero_equation": "24*n=-3908",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=7"
+          },
+          {
+            "alias_index_z": -9,
+            "depth_k": 3,
+            "first_gamma_indices": {
+              "j": 3,
+              "m": 63,
+              "n": -3
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": -59,
+              "reflected_mu": "3*omega_1+(9-3)",
+              "zero_candidate_j": 5,
+              "zero_equation": "24*n=-6092",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=6"
+          },
+          {
+            "alias_index_z": -12,
+            "depth_k": 4,
+            "first_gamma_indices": {
+              "j": 4,
+              "m": 81,
+              "n": -4
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": -77,
+              "reflected_mu": "4*omega_1+(9-4)",
+              "zero_candidate_j": 4,
+              "zero_equation": "24*n=-8276",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=5"
+          },
+          {
+            "alias_index_z": -15,
+            "depth_k": 5,
+            "first_gamma_indices": {
+              "j": 5,
+              "m": 99,
+              "n": -5
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": -95,
+              "reflected_mu": "5*omega_1+(9-5)",
+              "zero_candidate_j": 3,
+              "zero_equation": "24*n=-10460",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=4"
+          },
+          {
+            "alias_index_z": -18,
+            "depth_k": 6,
+            "first_gamma_indices": {
+              "j": 6,
+              "m": 117,
+              "n": -6
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": -113,
+              "reflected_mu": "6*omega_1+(9-6)",
+              "zero_candidate_j": 2,
+              "zero_equation": "24*n=-12644",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=3"
+          },
+          {
+            "alias_index_z": -21,
+            "depth_k": 7,
+            "first_gamma_indices": {
+              "j": 7,
+              "m": 135,
+              "n": -7
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": -131,
+              "reflected_mu": "7*omega_1+(9-7)",
+              "zero_candidate_j": 1,
+              "zero_equation": "24*n=-14828",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=2"
+          },
+          {
+            "alias_index_z": -24,
+            "depth_k": 8,
+            "first_gamma_indices": {
+              "j": 8,
+              "m": 153,
+              "n": -8
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": -149,
+              "reflected_mu": "8*omega_1+(9-8)",
+              "zero_candidate_j": 0,
+              "zero_equation": "24*n=-17012",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=1"
+          },
+          {
+            "alias_index_z": -27,
+            "depth_k": 9,
+            "first_gamma_indices": {
+              "j": 9,
+              "m": 171,
+              "n": -9
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": -167,
+              "reflected_mu": "9*omega_1+(9-9)",
+              "zero_candidate_j": -1,
+              "zero_equation": "24*n=-19196",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=0"
+          }
+        ],
+        "substitution": "m=N-6z=N+18k, hence 24*n+5*j+m=N-k",
+        "true_pole_orbit_cardinality": 10,
+        "true_pole_rule": "24*n+5*j+m>=0"
+      },
+      {
+        "admissible_depths": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "affine_collision_law": "(z,j,n)=(-3k,k,-k) over the base pole",
+        "canonical_odd_N": 11,
+        "first_rejected_depth": 12,
+        "first_rejected_indices": {
+          "j": 12,
+          "m": 227,
+          "n": -12,
+          "z": -36
+        },
+        "first_rejected_inequality": -1,
+        "infinite_true_pole_tail_exists": false,
+        "members": [
+          {
+            "alias_index_z": 0,
+            "depth_k": 0,
+            "first_gamma_indices": {
+              "j": 0,
+              "m": 11,
+              "n": 0
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": -7,
+              "reflected_mu": "0*omega_1+(11-0)",
+              "zero_candidate_j": 10,
+              "zero_equation": "24*n=460",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=11"
+          },
+          {
+            "alias_index_z": -3,
+            "depth_k": 1,
+            "first_gamma_indices": {
+              "j": 1,
+              "m": 29,
+              "n": -1
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": -25,
+              "reflected_mu": "1*omega_1+(11-1)",
+              "zero_candidate_j": 9,
+              "zero_equation": "24*n=-1724",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=10"
+          },
+          {
+            "alias_index_z": -6,
+            "depth_k": 2,
+            "first_gamma_indices": {
+              "j": 2,
+              "m": 47,
+              "n": -2
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": -43,
+              "reflected_mu": "2*omega_1+(11-2)",
+              "zero_candidate_j": 8,
+              "zero_equation": "24*n=-3908",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=9"
+          },
+          {
+            "alias_index_z": -9,
+            "depth_k": 3,
+            "first_gamma_indices": {
+              "j": 3,
+              "m": 65,
+              "n": -3
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": -61,
+              "reflected_mu": "3*omega_1+(11-3)",
+              "zero_candidate_j": 7,
+              "zero_equation": "24*n=-6092",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=8"
+          },
+          {
+            "alias_index_z": -12,
+            "depth_k": 4,
+            "first_gamma_indices": {
+              "j": 4,
+              "m": 83,
+              "n": -4
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": -79,
+              "reflected_mu": "4*omega_1+(11-4)",
+              "zero_candidate_j": 6,
+              "zero_equation": "24*n=-8276",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=7"
+          },
+          {
+            "alias_index_z": -15,
+            "depth_k": 5,
+            "first_gamma_indices": {
+              "j": 5,
+              "m": 101,
+              "n": -5
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": -97,
+              "reflected_mu": "5*omega_1+(11-5)",
+              "zero_candidate_j": 5,
+              "zero_equation": "24*n=-10460",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=6"
+          },
+          {
+            "alias_index_z": -18,
+            "depth_k": 6,
+            "first_gamma_indices": {
+              "j": 6,
+              "m": 119,
+              "n": -6
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": -115,
+              "reflected_mu": "6*omega_1+(11-6)",
+              "zero_candidate_j": 4,
+              "zero_equation": "24*n=-12644",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=5"
+          },
+          {
+            "alias_index_z": -21,
+            "depth_k": 7,
+            "first_gamma_indices": {
+              "j": 7,
+              "m": 137,
+              "n": -7
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": -133,
+              "reflected_mu": "7*omega_1+(11-7)",
+              "zero_candidate_j": 3,
+              "zero_equation": "24*n=-14828",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=4"
+          },
+          {
+            "alias_index_z": -24,
+            "depth_k": 8,
+            "first_gamma_indices": {
+              "j": 8,
+              "m": 155,
+              "n": -8
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": -151,
+              "reflected_mu": "8*omega_1+(11-8)",
+              "zero_candidate_j": 2,
+              "zero_equation": "24*n=-17012",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=3"
+          },
+          {
+            "alias_index_z": -27,
+            "depth_k": 9,
+            "first_gamma_indices": {
+              "j": 9,
+              "m": 173,
+              "n": -9
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": -169,
+              "reflected_mu": "9*omega_1+(11-9)",
+              "zero_candidate_j": 1,
+              "zero_equation": "24*n=-19196",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=2"
+          },
+          {
+            "alias_index_z": -30,
+            "depth_k": 10,
+            "first_gamma_indices": {
+              "j": 10,
+              "m": 191,
+              "n": -10
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": -187,
+              "reflected_mu": "10*omega_1+(11-10)",
+              "zero_candidate_j": 0,
+              "zero_equation": "24*n=-21380",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=1"
+          },
+          {
+            "alias_index_z": -33,
+            "depth_k": 11,
+            "first_gamma_indices": {
+              "j": 11,
+              "m": 209,
+              "n": -11
+            },
+            "individual_simple_residue_nonzero": true,
+            "reflected_factor": {
+              "finite_nonzero": true,
+              "pole_reason": "-j=depth has no j>=0 solution unless depth=0; at depth=0 its constant equation is 24*n=-4",
+              "reflected_discrete_label": -205,
+              "reflected_mu": "11*omega_1+(11-11)",
+              "zero_candidate_j": -1,
+              "zero_equation": "24*n=-23564",
+              "zero_equation_mod_24": 4
+            },
+            "true_pole_inequality": "24*n+5*j+m=0"
+          }
+        ],
+        "substitution": "m=N-6z=N+18k, hence 24*n+5*j+m=N-k",
+        "true_pole_orbit_cardinality": 12,
+        "true_pole_rule": "24*n+5*j+m>=0"
+      }
+    ],
+    "source_condition": "Sarkissian--Spiridonov arXiv:1910.11747v4 equations (9)--(10): 24*n+5*j+m>=0",
+    "total_true_pole_summands": 42
+  },
+  "cycle": 194,
+  "epistemic_status": "CORRECTION",
+  "frozen_hashes": {
+    "correction_prototype": {
+      "path": "discovery/cycle-194-b031-meromorphic-anti-channel-correction-v2-prototype.json",
+      "sha256": "50ed5ab4da587fb7186cfe9893f389d9efe33a1088f343ed563ecdc7bbc4eada"
+    },
+    "correction_record": {
+      "path": "docs/cycle-194-b031-meromorphic-anti-channel-correction-v2.md",
+      "sha256": "18bfc2bd5e4fe32dc6c202157695d818b3e835515240ecbb6bb7c87b3d09b837"
+    },
+    "correction_replay": {
+      "path": "proof/verify_cycle_194_meromorphic_anti_channel_v2.py",
+      "sha256": "35cec8cb8d888377b86836fa371d3a9dfae413db670291dd227c8586f14db8cf"
+    },
+    "correction_test": {
+      "path": "tests/test_cycle_194_meromorphic_anti_channel_v2.py",
+      "sha256": "ad34d48bdf43493f3f72cfc82a73194a145d3382e7a52519d626f131ebe2b560"
+    },
+    "d6_paper": {
+      "path": "paper/sic-stark-dimension-six-boundary-fusion.tex",
+      "sha256": "347228e05a87946ca41bb31c118aae069b7fb6002fff4933d030a153cef21cb7"
+    },
+    "original_preregistration": {
+      "path": "docs/cycle-194-b031-meromorphic-anti-channel-preregistration-v1.md",
+      "sha256": "4249b01c5142ead9d676afca2f1c84f3b7c29689cbd56f7554278e4f6b272269"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    },
+    "superseded_v1_artifact": {
+      "path": "artifacts/cycle-194-b031-meromorphic-anti-channel-v1.json",
+      "sha256": "1e9919680100963b23613e510abc99baf139bec626fce79ead572bc731dd3cb6"
+    }
+  },
+  "gate_outcome": {
+    "d6_interface": "SOURCE_FORCED_24D_ANTI_FIBRE_PROVED_FINITE_TRUE_POLE_COLLISION_SUM_REQUIRES_EXACT_COMBINATION",
+    "disallowed_pseudo_progress": [
+      "calling affine divisor equality an infinite true-pole orbit",
+      "calling the withdrawn tail estimate an endpoint continuation",
+      "claiming finite combined-residue noncancellation without an exact sum",
+      "identifying a raw or periodized channel with an AFK cocycle or completed alias value",
+      "fitting a residue, transfer entry, or boundary counterterm",
+      "using selected exponents, s, d, or ray labels",
+      "claiming an RM boundary, fusion, Stark, or TCC consequence"
+    ],
+    "remaining_bottleneck": "Derive an exact source-defined rule for the finite combined residues before testing any distributional or contour continuation to the real-multiplication endpoint.",
+    "resolved_class": "the local source two-gamma kernel's B_(1,-) principal-part complement and finite true-pole collision census"
+  },
+  "next_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "A source-derived finite combined-residue rule and distributional or contour continuation of the 24D channel to the RM endpoint may preserve the anti-channel; no such result is supplied by the finite true-pole census."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_194_meromorphic_anti_channel_v2.py --check",
+    "prototype_command": "python3 proof/verify_cycle_194_meromorphic_anti_channel_v2.py --output discovery/cycle-194-b031-meromorphic-anti-channel-correction-v2-prototype.json",
+    "test_command": "python3 -m unittest tests/test_cycle_194_meromorphic_anti_channel_v2.py tests/test_cycle_194_meromorphic_anti_channel.py",
+    "write_command": "python3 proof/build_cycle_194_meromorphic_anti_channel_v2.py --write"
+  },
+  "retained_results": {
+    "forced_anti_fibre": {
+      "F24_block_action": {
+        "is_exact_unitary_six_point_kernel": true,
+        "kernel_exponents_mod_24": [
+          [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11
+          ],
+          [
+            3,
+            9,
+            15,
+            21,
+            3,
+            9
+          ],
+          [
+            5,
+            15,
+            1,
+            11,
+            21,
+            7
+          ],
+          [
+            7,
+            21,
+            11,
+            1,
+            15,
+            5
+          ],
+          [
+            9,
+            3,
+            21,
+            15,
+            9,
+            3
+          ],
+          [
+            11,
+            9,
+            7,
+            5,
+            3,
+            1
+          ]
+        ],
+        "kernel_root": "omega_24^((q+2k)*(p+2j))",
+        "kernel_scale": "1/sqrt(6)",
+        "target": "B_(1,-)"
+      },
+      "F24_preserves_A": true,
+      "all_six_anti_coordinates_source_forced": true,
+      "anti_fibre": "A=B_(1,-)=span{e_(1+2j)-e_(13+2j):j mod6}",
+      "dimension": 6,
+      "epistemic_status": "PROVED",
+      "full_source_fibre": "V direct-sum A has dimension 24",
+      "physical_kernel": "K_Q(y,m)=Gamma_M(y,m)*Gamma_M(Q-y,-m)",
+      "principal_part_records": [
+        {
+          "K_Q_y_N": {
+            "has_simple_true_pole": true,
+            "pole_witness": {
+              "factor": "Gamma_M(y,N)",
+              "simple": true,
+              "witness": {
+                "j": 0,
+                "m": 1,
+                "n": 0
+              },
+              "y": [
+                0,
+                -1
+              ]
+            },
+            "reflected_factor": {
+              "argument_at_y_minus_N": [
+                1,
+                2
+              ],
+              "factor": "Gamma_M(Q-y,-N)",
+              "finite_nonzero": true,
+              "pole_reason": "-j=1 has no j>=0 solution",
+              "zero_equation": "24*n=116"
+            }
+          },
+          "K_Q_y_N_plus_12": {
+            "first_factor": {
+              "argument_at_y_minus_N": [
+                0,
+                -1
+              ],
+              "factor": "Gamma_M(y,N+12)",
+              "finite_nonzero": true,
+              "pole_equation": "24*n=-12"
+            },
+            "is_finite_nonzero": true,
+            "reflected_factor": {
+              "argument_at_y_minus_N": [
+                1,
+                2
+              ],
+              "factor": "Gamma_M(Q-y,-N-12)",
+              "finite_nonzero": true,
+              "pole_reason": "-j=1 has no j>=0 solution",
+              "zero_equation": "24*n=-1264"
+            }
+          },
+          "anti_difference_has_nonzero_simple_principal_part": true,
+          "canonical_odd_N": 1,
+          "comparison_point": "y=-1"
+        },
+        {
+          "K_Q_y_N": {
+            "has_simple_true_pole": true,
+            "pole_witness": {
+              "factor": "Gamma_M(y,N)",
+              "simple": true,
+              "witness": {
+                "j": 0,
+                "m": 3,
+                "n": 0
+              },
+              "y": [
+                0,
+                -3
+              ]
+            },
+            "reflected_factor": {
+              "argument_at_y_minus_N": [
+                1,
+                4
+              ],
+              "factor": "Gamma_M(Q-y,-N)",
+              "finite_nonzero": true,
+              "pole_reason": "-j=1 has no j>=0 solution",
+              "zero_equation": "24*n=116"
+            }
+          },
+          "K_Q_y_N_plus_12": {
+            "first_factor": {
+              "argument_at_y_minus_N": [
+                0,
+                -3
+              ],
+              "factor": "Gamma_M(y,N+12)",
+              "finite_nonzero": true,
+              "pole_equation": "24*n=-12"
+            },
+            "is_finite_nonzero": true,
+            "reflected_factor": {
+              "argument_at_y_minus_N": [
+                1,
+                4
+              ],
+              "factor": "Gamma_M(Q-y,-N-12)",
+              "finite_nonzero": true,
+              "pole_reason": "-j=1 has no j>=0 solution",
+              "zero_equation": "24*n=-1264"
+            }
+          },
+          "anti_difference_has_nonzero_simple_principal_part": true,
+          "canonical_odd_N": 3,
+          "comparison_point": "y=-3"
+        },
+        {
+          "K_Q_y_N": {
+            "has_simple_true_pole": true,
+            "pole_witness": {
+              "factor": "Gamma_M(y,N)",
+              "simple": true,
+              "witness": {
+                "j": 0,
+                "m": 5,
+                "n": 0
+              },
+              "y": [
+                0,
+                -5
+              ]
+            },
+            "reflected_factor": {
+              "argument_at_y_minus_N": [
+                1,
+                6
+              ],
+              "factor": "Gamma_M(Q-y,-N)",
+              "finite_nonzero": true,
+              "pole_reason": "-j=1 has no j>=0 solution",
+              "zero_equation": "24*n=116"
+            }
+          },
+          "K_Q_y_N_plus_12": {
+            "first_factor": {
+              "argument_at_y_minus_N": [
+                0,
+                -5
+              ],
+              "factor": "Gamma_M(y,N+12)",
+              "finite_nonzero": true,
+              "pole_equation": "24*n=-12"
+            },
+            "is_finite_nonzero": true,
+            "reflected_factor": {
+              "argument_at_y_minus_N": [
+                1,
+                6
+              ],
+              "factor": "Gamma_M(Q-y,-N-12)",
+              "finite_nonzero": true,
+              "pole_reason": "-j=1 has no j>=0 solution",
+              "zero_equation": "24*n=-1264"
+            }
+          },
+          "anti_difference_has_nonzero_simple_principal_part": true,
+          "canonical_odd_N": 5,
+          "comparison_point": "y=-5"
+        },
+        {
+          "K_Q_y_N": {
+            "has_simple_true_pole": true,
+            "pole_witness": {
+              "factor": "Gamma_M(y,N)",
+              "simple": true,
+              "witness": {
+                "j": 0,
+                "m": 7,
+                "n": 0
+              },
+              "y": [
+                0,
+                -7
+              ]
+            },
+            "reflected_factor": {
+              "argument_at_y_minus_N": [
+                1,
+                8
+              ],
+              "factor": "Gamma_M(Q-y,-N)",
+              "finite_nonzero": true,
+              "pole_reason": "-j=1 has no j>=0 solution",
+              "zero_equation": "24*n=116"
+            }
+          },
+          "K_Q_y_N_plus_12": {
+            "first_factor": {
+              "argument_at_y_minus_N": [
+                0,
+                -7
+              ],
+              "factor": "Gamma_M(y,N+12)",
+              "finite_nonzero": true,
+              "pole_equation": "24*n=-12"
+            },
+            "is_finite_nonzero": true,
+            "reflected_factor": {
+              "argument_at_y_minus_N": [
+                1,
+                8
+              ],
+              "factor": "Gamma_M(Q-y,-N-12)",
+              "finite_nonzero": true,
+              "pole_reason": "-j=1 has no j>=0 solution",
+              "zero_equation": "24*n=-1264"
+            }
+          },
+          "anti_difference_has_nonzero_simple_principal_part": true,
+          "canonical_odd_N": 7,
+          "comparison_point": "y=-7"
+        },
+        {
+          "K_Q_y_N": {
+            "has_simple_true_pole": true,
+            "pole_witness": {
+              "factor": "Gamma_M(y,N)",
+              "simple": true,
+              "witness": {
+                "j": 0,
+                "m": 9,
+                "n": 0
+              },
+              "y": [
+                0,
+                -9
+              ]
+            },
+            "reflected_factor": {
+              "argument_at_y_minus_N": [
+                1,
+                10
+              ],
+              "factor": "Gamma_M(Q-y,-N)",
+              "finite_nonzero": true,
+              "pole_reason": "-j=1 has no j>=0 solution",
+              "zero_equation": "24*n=116"
+            }
+          },
+          "K_Q_y_N_plus_12": {
+            "first_factor": {
+              "argument_at_y_minus_N": [
+                0,
+                -9
+              ],
+              "factor": "Gamma_M(y,N+12)",
+              "finite_nonzero": true,
+              "pole_equation": "24*n=-12"
+            },
+            "is_finite_nonzero": true,
+            "reflected_factor": {
+              "argument_at_y_minus_N": [
+                1,
+                10
+              ],
+              "factor": "Gamma_M(Q-y,-N-12)",
+              "finite_nonzero": true,
+              "pole_reason": "-j=1 has no j>=0 solution",
+              "zero_equation": "24*n=-1264"
+            }
+          },
+          "anti_difference_has_nonzero_simple_principal_part": true,
+          "canonical_odd_N": 9,
+          "comparison_point": "y=-9"
+        },
+        {
+          "K_Q_y_N": {
+            "has_simple_true_pole": true,
+            "pole_witness": {
+              "factor": "Gamma_M(y,N)",
+              "simple": true,
+              "witness": {
+                "j": 0,
+                "m": 11,
+                "n": 0
+              },
+              "y": [
+                0,
+                -11
+              ]
+            },
+            "reflected_factor": {
+              "argument_at_y_minus_N": [
+                1,
+                12
+              ],
+              "factor": "Gamma_M(Q-y,-N)",
+              "finite_nonzero": true,
+              "pole_reason": "-j=1 has no j>=0 solution",
+              "zero_equation": "24*n=116"
+            }
+          },
+          "K_Q_y_N_plus_12": {
+            "first_factor": {
+              "argument_at_y_minus_N": [
+                0,
+                -11
+              ],
+              "factor": "Gamma_M(y,N+12)",
+              "finite_nonzero": true,
+              "pole_equation": "24*n=-12"
+            },
+            "is_finite_nonzero": true,
+            "reflected_factor": {
+              "argument_at_y_minus_N": [
+                1,
+                12
+              ],
+              "factor": "Gamma_M(Q-y,-N-12)",
+              "finite_nonzero": true,
+              "pole_reason": "-j=1 has no j>=0 solution",
+              "zero_equation": "24*n=-1264"
+            }
+          },
+          "anti_difference_has_nonzero_simple_principal_part": true,
+          "canonical_odd_N": 11,
+          "comparison_point": "y=-11"
+        }
+      ]
+    },
+    "spectral_anti_retention": {
+      "AFK_phase_retained_separately": true,
+      "all_six_odd_raw_differences_retained": true,
+      "capital_Gamma_normalization_retained_separately": true,
+      "epistemic_status": "PROVED",
+      "raw_beta_rhs": "R_N(alpha)=24*Gamma_M(Q,0)*Gamma_M(alpha,N)*Gamma_M(-alpha,4-N)",
+      "retention_records": [
+        {
+          "canonical_odd_N": 1,
+          "projection_formula": "Pi_A(R_N*e_N+R_(N+12)*e_(N+12))=(R_N-R_(N+12))/2*(e_N-e_(N+12))",
+          "raw_difference_meromorphically_nonzero": true
+        },
+        {
+          "canonical_odd_N": 3,
+          "projection_formula": "Pi_A(R_N*e_N+R_(N+12)*e_(N+12))=(R_N-R_(N+12))/2*(e_N-e_(N+12))",
+          "raw_difference_meromorphically_nonzero": true
+        },
+        {
+          "canonical_odd_N": 5,
+          "projection_formula": "Pi_A(R_N*e_N+R_(N+12)*e_(N+12))=(R_N-R_(N+12))/2*(e_N-e_(N+12))",
+          "raw_difference_meromorphically_nonzero": true
+        },
+        {
+          "canonical_odd_N": 7,
+          "projection_formula": "Pi_A(R_N*e_N+R_(N+12)*e_(N+12))=(R_N-R_(N+12))/2*(e_N-e_(N+12))",
+          "raw_difference_meromorphically_nonzero": true
+        },
+        {
+          "canonical_odd_N": 9,
+          "projection_formula": "Pi_A(R_N*e_N+R_(N+12)*e_(N+12))=(R_N-R_(N+12))/2*(e_N-e_(N+12))",
+          "raw_difference_meromorphically_nonzero": true
+        },
+        {
+          "canonical_odd_N": 11,
+          "projection_formula": "Pi_A(R_N*e_N+R_(N+12)*e_(N+12))=(R_N-R_(N+12))/2*(e_N-e_(N+12))",
+          "raw_difference_meromorphically_nonzero": true
+        }
+      ]
+    }
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_194_meromorphic_anti_channel_v2.py",
+    "sha256": "75db425dc3139c34afabb087384929041b1cb4bba12599960cad957d6bb4ff87"
+  },
+  "status": "SEALED_CORRECTION_TRUE_POLE_ORBITS_FINITE",
+  "supersedes": {
+    "affected_claims": [
+      "infinite coincident-pole residue orbit",
+      "strict-interior residue-tail convergence from that orbit",
+      "non-identically-zero sector conclusion derived from that tail"
+    ],
+    "artifact": "cycle-194-b031-meromorphic-anti-channel-v1.json",
+    "cause": "The v1 affine collision/recurrent-tail audit omitted the Sarkissian--Spiridonov true-pole inequality 24*n+5*j+m>=0.",
+    "unaffected_claims": [
+      "six source-forced local B_(1,-) anti-principal parts",
+      "F_24 preservation of B_(1,-)",
+      "retention of the six odd raw spectral differences"
+    ]
+  }
+}
