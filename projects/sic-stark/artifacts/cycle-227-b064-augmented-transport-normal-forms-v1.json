@@ -1,0 +1,400 @@
+{
+  "artifact_id": "cycle-227-b064-augmented-transport-normal-forms-v1",
+  "budget_ordinal": "B064",
+  "claim_boundary": "The exact F2/F3 augmented transport has the stated normal form through the preregistered census and its paired-generator recurrence. No C218 positive-scaling quotient preserves the generic period/argument/label state. At label zero only, positive all-F3 even paths from A/C return the product node up to positive scaling, while retaining a nonempty ordered ordinary-gamma residual word; this is not a closed factorization or cochain loop. This does not construct a signed-k product, a source cross-sign law, a packet cocycle, AFK covariance, fusion, Stark, or TCC.",
+  "companion_decision": {
+    "adopted": true,
+    "evidence_scope_review": "The paired-generator induction, 32,764-row census, raw parity, period scaling, affine sign, label reset, source-path classification, m=0 specialization, and residual ordering/count were reviewed together.",
+    "falsifier": "Any paired-generator induction, raw parity, period scaling, affine sign, label-reset, source-path classification, m=0 specialization, residual ordering/count, or replay discrepancy invalidates the seal.",
+    "identity": "/root/decision_companion_2",
+    "known_flaw": "The bounded census is not itself the theorem, and the m=0 product-node returns neither preserve generic labels nor close a factorization/cochain loop while 4j residual factors remain.",
+    "next_action": "Preregister the minimal F3^2 residual block at m=0 for starts A and C, admit only source-cited ordinary-gamma reflection/multiplication identities, and test whether its four factors reduce to a scalar/cocycle before attempting the full residual monoid.",
+    "reason": "The normal-form and quotient question is complete; residual-word reduction is a different formula family and must be frozen separately.",
+    "recommendation": "Seal C227 as the completed normal-form/quotient block and open a new cycle; residual-word reduction introduces a distinct ordinary-gamma identity engine."
+  },
+  "cycle": 227,
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "positive_scaling": {
+      "path": "artifacts/cycle-218-b055-signed-period-cover-v1.json",
+      "sha256": "7b456c630bbcc40c632c4b8b0a9ffe0aa128a6bbacf51813a7b029bb13da40a6"
+    },
+    "preregistration": {
+      "path": "docs/cycle-227-b064-augmented-transport-normal-forms-preregistration-v1.md",
+      "sha256": "5b3d031a1f449fef293211a2a6437c5f2a214d1dd0e1933b9686ff570eb4a00d"
+    },
+    "prior_groupoid": {
+      "path": "artifacts/cycle-226-b063-signed-product-groupoid-v1.json",
+      "sha256": "c1c3fd23d20a3cd2e40a84dda8e0fade3b1aa873d5c8b66a2b532a1c79fb516c"
+    },
+    "prior_scaling_replay": {
+      "path": "proof/verify_cycle_218_signed_period_cover.py",
+      "sha256": "8fca003418e205595fa2474449574b7e2577a59e768d065df1eb663ccff7ddb3"
+    },
+    "prior_transport": {
+      "path": "proof/verify_cycle_226_signed_product_groupoid.py",
+      "sha256": "51eb9d4f07b7c6a2a19ac4229d84badac876adfa0ca394a1cf2d5b2a5a5132b9"
+    },
+    "prototype": {
+      "path": "discovery/cycle-227-b064-augmented-transport-normal-forms-prototype-v1.json",
+      "sha256": "3af3a057f5144d7db6b3da2189a5c92c08b9738715341066037b7f48f1a2d0b1"
+    },
+    "regression_test": {
+      "path": "tests/test_cycle_227_augmented_transport_normal_forms.py",
+      "sha256": "d3b59cceb01a6be18b2330e5ba4275e5ab2564ae205abe160d64aa8b1b8794b4"
+    },
+    "replay": {
+      "path": "proof/verify_cycle_227_augmented_transport_normal_forms.py",
+      "sha256": "973fc04edd953d840a84d41647ad44279eb49b55944cc3de143b83f22dd5513c"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    },
+    "source_audit": {
+      "path": "scripts/dimension_six_ss_evaluation_audit.py",
+      "sha256": "24c9258e46a1233c552017f3b58de0d45acd0197c8c807579f090ca1332f626f"
+    },
+    "source_paper": {
+      "path": "paper/sic-stark-dimension-six-boundary-fusion.tex",
+      "sha256": "347228e05a87946ca41bb31c118aae069b7fb6002fff4933d030a153cef21cb7"
+    },
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "gate_outcome": {
+    "augmented_transport_normal_form": "PROVED",
+    "generic_augmented_scaling_quotient": "FALSIFIED_BY_LABEL_LOSS",
+    "remaining_design_problem": "Determine whether the retained residual-word monoid admits a source-derived reduction or a new signed-k completion without treating zero-label product-node scaling as a factorization loop.",
+    "zero_label_positive_product_node_quotient": "PROVED_WITH_RESIDUAL_WORD_RETAINED"
+  },
+  "normal_form_audit": {
+    "all_rows_match_closed_form": true,
+    "closed_form": {
+      "affine_argument": "sign(start_s)^n*(-1)^(sum_{F2 at position j}(n-j+1))*24^n*(mu+m*omega2)",
+      "label": "m at length zero and 0 at every positive length",
+      "periods_even": "length 2j: 576^j*I when both counts are even, 576^j*S when both are odd",
+      "periods_odd": "length 2j+1: 576^j times the start's one-step map selected by the odd generator count",
+      "raw_endpoint": "apply F2 iff count_F2 is odd and F3 iff count_F3 is odd",
+      "residual_word": "ordered two-ordinary-gamma block per generator; no commuting or cancellation"
+    },
+    "conclusion": "The exact census agrees with the paired-generator normal form through the frozen cap. The sixteen paired-generator identities supply the induction step, and one final letter supplies the odd form; this is not a bounded-search claim.",
+    "epistemic_status": "PROVED",
+    "length_summary": [
+      {
+        "all_match": true,
+        "length": 0,
+        "rows": 4
+      },
+      {
+        "all_match": true,
+        "length": 1,
+        "rows": 8
+      },
+      {
+        "all_match": true,
+        "length": 2,
+        "rows": 16
+      },
+      {
+        "all_match": true,
+        "length": 3,
+        "rows": 32
+      },
+      {
+        "all_match": true,
+        "length": 4,
+        "rows": 64
+      },
+      {
+        "all_match": true,
+        "length": 5,
+        "rows": 128
+      },
+      {
+        "all_match": true,
+        "length": 6,
+        "rows": 256
+      },
+      {
+        "all_match": true,
+        "length": 7,
+        "rows": 512
+      },
+      {
+        "all_match": true,
+        "length": 8,
+        "rows": 1024
+      },
+      {
+        "all_match": true,
+        "length": 9,
+        "rows": 2048
+      },
+      {
+        "all_match": true,
+        "length": 10,
+        "rows": 4096
+      },
+      {
+        "all_match": true,
+        "length": 11,
+        "rows": 8192
+      },
+      {
+        "all_match": true,
+        "length": 12,
+        "rows": 16384
+      }
+    ],
+    "paired_generator_induction": {
+      "conclusion": "These sixteen exact identities are the finite induction step; the length-12 census is a regression check of their closed form, not its only support.",
+      "epistemic_status": "PROVED",
+      "induction_rule": "Every two-letter block contributes 576*I or 576*S independently of the raw start; its affine sign is (-,+,+,-) for F2F2,F3F3,F2F3,F3F2. Concatenation gives the even normal form, and one final letter gives the odd form.",
+      "rows": [
+        {
+          "argument_sign": -1,
+          "label": 0,
+          "pair": "F2 F2",
+          "period_relation": "576*I",
+          "start": "A"
+        },
+        {
+          "argument_sign": 1,
+          "label": 0,
+          "pair": "F3 F3",
+          "period_relation": "576*I",
+          "start": "A"
+        },
+        {
+          "argument_sign": 1,
+          "label": 0,
+          "pair": "F2 F3",
+          "period_relation": "576*S",
+          "start": "A"
+        },
+        {
+          "argument_sign": -1,
+          "label": 0,
+          "pair": "F3 F2",
+          "period_relation": "576*S",
+          "start": "A"
+        },
+        {
+          "argument_sign": -1,
+          "label": 0,
+          "pair": "F2 F2",
+          "period_relation": "576*I",
+          "start": "B"
+        },
+        {
+          "argument_sign": 1,
+          "label": 0,
+          "pair": "F3 F3",
+          "period_relation": "576*I",
+          "start": "B"
+        },
+        {
+          "argument_sign": 1,
+          "label": 0,
+          "pair": "F2 F3",
+          "period_relation": "576*S",
+          "start": "B"
+        },
+        {
+          "argument_sign": -1,
+          "label": 0,
+          "pair": "F3 F2",
+          "period_relation": "576*S",
+          "start": "B"
+        },
+        {
+          "argument_sign": -1,
+          "label": 0,
+          "pair": "F2 F2",
+          "period_relation": "576*I",
+          "start": "C"
+        },
+        {
+          "argument_sign": 1,
+          "label": 0,
+          "pair": "F3 F3",
+          "period_relation": "576*I",
+          "start": "C"
+        },
+        {
+          "argument_sign": 1,
+          "label": 0,
+          "pair": "F2 F3",
+          "period_relation": "576*S",
+          "start": "C"
+        },
+        {
+          "argument_sign": -1,
+          "label": 0,
+          "pair": "F3 F2",
+          "period_relation": "576*S",
+          "start": "C"
+        },
+        {
+          "argument_sign": -1,
+          "label": 0,
+          "pair": "F2 F2",
+          "period_relation": "576*I",
+          "start": "D"
+        },
+        {
+          "argument_sign": 1,
+          "label": 0,
+          "pair": "F3 F3",
+          "period_relation": "576*I",
+          "start": "D"
+        },
+        {
+          "argument_sign": 1,
+          "label": 0,
+          "pair": "F2 F3",
+          "period_relation": "576*S",
+          "start": "D"
+        },
+        {
+          "argument_sign": -1,
+          "label": 0,
+          "pair": "F3 F2",
+          "period_relation": "576*S",
+          "start": "D"
+        }
+      ]
+    },
+    "rows_checked": 32764,
+    "source_defined_path_count": 26,
+    "word_length_cap": 12
+  },
+  "outcome": {
+    "epistemic_status": "PROVED",
+    "statement": "The augmented F2/F3 transport has an exact parity/576/affine-sign normal form; generic labels admit no C218 scaling quotient, while m=0 positive F3-even product-node returns retain their ordinary-gamma residual words."
+  },
+  "preregistration_preflight": {
+    "cycle": 227,
+    "manifest_sha256": "5b3d031a1f449fef293211a2a6437c5f2a214d1dd0e1933b9686ff570eb4a00d",
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "quotient_audit": {
+    "conclusion": "C218 scaling yields no quotient of the generic augmented state: every nonempty word loses the initial label. At m=0 only, the source-defined paths F3^(2j) from A or C return their product node with positive common scale 576^j, but their ordered ordinary-gamma residual blocks remain. They are product-node identifications, not closed factorization/cochain loops.",
+    "epistemic_status": "PROVED",
+    "generic_full_label_scaling_quotient_count": 0,
+    "rejected_raw_return_count": 10908,
+    "rejected_raw_return_counts": {
+      "crosses_negative_k_product_boundary": 10908
+    },
+    "zero_label_candidate_count": 12,
+    "zero_label_product_node_scaling_candidates": [
+      {
+        "ordinary_gamma_factors_retained": 4,
+        "residual_blocks": 2,
+        "scale": 576,
+        "start": "A",
+        "word": "F3 F3"
+      },
+      {
+        "ordinary_gamma_factors_retained": 4,
+        "residual_blocks": 2,
+        "scale": 576,
+        "start": "C",
+        "word": "F3 F3"
+      },
+      {
+        "ordinary_gamma_factors_retained": 8,
+        "residual_blocks": 4,
+        "scale": 331776,
+        "start": "A",
+        "word": "F3 F3 F3 F3"
+      },
+      {
+        "ordinary_gamma_factors_retained": 8,
+        "residual_blocks": 4,
+        "scale": 331776,
+        "start": "C",
+        "word": "F3 F3 F3 F3"
+      },
+      {
+        "ordinary_gamma_factors_retained": 12,
+        "residual_blocks": 6,
+        "scale": 191102976,
+        "start": "A",
+        "word": "F3 F3 F3 F3 F3 F3"
+      },
+      {
+        "ordinary_gamma_factors_retained": 12,
+        "residual_blocks": 6,
+        "scale": 191102976,
+        "start": "C",
+        "word": "F3 F3 F3 F3 F3 F3"
+      },
+      {
+        "ordinary_gamma_factors_retained": 16,
+        "residual_blocks": 8,
+        "scale": 110075314176,
+        "start": "A",
+        "word": "F3 F3 F3 F3 F3 F3 F3 F3"
+      },
+      {
+        "ordinary_gamma_factors_retained": 16,
+        "residual_blocks": 8,
+        "scale": 110075314176,
+        "start": "C",
+        "word": "F3 F3 F3 F3 F3 F3 F3 F3"
+      },
+      {
+        "ordinary_gamma_factors_retained": 20,
+        "residual_blocks": 10,
+        "scale": 63403380965376,
+        "start": "A",
+        "word": "F3 F3 F3 F3 F3 F3 F3 F3 F3 F3"
+      },
+      {
+        "ordinary_gamma_factors_retained": 20,
+        "residual_blocks": 10,
+        "scale": 63403380965376,
+        "start": "C",
+        "word": "F3 F3 F3 F3 F3 F3 F3 F3 F3 F3"
+      },
+      {
+        "ordinary_gamma_factors_retained": 24,
+        "residual_blocks": 12,
+        "scale": 36520347436056576,
+        "start": "A",
+        "word": "F3 F3 F3 F3 F3 F3 F3 F3 F3 F3 F3 F3"
+      },
+      {
+        "ordinary_gamma_factors_retained": 24,
+        "residual_blocks": 12,
+        "scale": 36520347436056576,
+        "start": "C",
+        "word": "F3 F3 F3 F3 F3 F3 F3 F3 F3 F3 F3 F3"
+      }
+    ]
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_227_augmented_transport_normal_forms_v1.py --check",
+    "preflight_command": "research prereg check docs/cycle-227-b064-augmented-transport-normal-forms-preregistration-v1.md --expected-cycle 227 --allow-head-drift",
+    "prototype_command": "python3 proof/verify_cycle_227_augmented_transport_normal_forms.py --output discovery/cycle-227-b064-augmented-transport-normal-forms-prototype-v1.json",
+    "test_command": "python3 -m unittest tests/test_cycle_227_augmented_transport_normal_forms.py",
+    "write_command": "python3 proof/build_cycle_227_augmented_transport_normal_forms_v1.py --write"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_227_augmented_transport_normal_forms_v1.py",
+    "sha256": "62d25e0fc2bdb24bf18c8a6d952d546c521b0c1a379aae680810aea467780001"
+  },
+  "status": "SEALED_AUGMENTED_TRANSPORT_NORMAL_FORM_AND_SCALING_BOUNDARY"
+}
