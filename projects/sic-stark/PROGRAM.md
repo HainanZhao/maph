@@ -149,7 +149,11 @@
   the two A pole factors at `mu_N=N*(115*t-1)` change side at `u=1/115`, while
   all eight factors supply opposite zeros only when `12` divides `N`. Hence no
   finite residue ledger exists. An Abel/zeta-renormalized infinite-residue
-  construction remains a distinct untested engine.
+  construction remains a distinct untested engine. C239 also proves that the
+  cited beta theorem supplies neither an A/C kernel nor a contour/discrete sum
+  for these words, so it does not source-authorize an Abel parameter. Cycle
+  244 is therefore an explicitly constructed residue-current experiment, not
+  a continuation inherited from that theorem.
   No endpoint binomial value has been
   evaluated. No divergent raw contour, periodized beta channel, AFK amplitude
   identity, fusion, or TCC is proved.
@@ -767,17 +771,17 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 244 Abel-renormalized wall-crossing decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `FINITE_RESIDUE_TWO_CHAMBER_OBSTRUCTED` | Freeze the exact residue sequence, an Abel or other source-defined regularization, the 12-dissection, and a non-fitted boundary continuation criterion; prove or falsify a renormalized crossing before B-Fourier covariance. | Replacing the infinite family by a finite ledger, fitted subtraction, unproved summation, treating lattice self-duality as a special-function transform, or inferring a signed extension. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 244 constructed residue-current decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `FINITE_RESIDUE_TWO_CHAMBER_OBSTRUCTED` | Freeze a constructed A-residual current, its exact Galois/12-dissection invariant, fixed Abel summability axioms, and a regulator-dependence falsifier; prove or falsify its boundary continuation before B-Fourier covariance. | Presenting the Abel parameter as source-supplied, replacing the infinite family by a finite ledger, fitted subtraction, unproved summation, treating lattice self-duality as a special-function transform, or inferring a signed extension. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Does the exact infinite two-chamber residue family have a source-defined
-  Abel-regularized, 12-dissected boundary continuation without fitted
-  subtraction?
+- Does an explicitly constructed A-residual current have an invariant,
+  non-fitted Abel-regularized 12-dissected boundary continuation, and can that
+  construction later be source-authorized?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -790,15 +794,17 @@ than pretending fusion continuity is operational.
 
 Preregister one substantive block with this question:
 
-> Does the `N`-indexed C243 crossing residue, weighted by `rho^N` and split
-> into `12` residue classes, admit a source-defined meromorphic or
-> distributional `rho -> 1` continuation with no fitted subtraction?
+> Does a constructed current from the `N`-indexed A-residual Laurent
+> coefficients, weighted by `rho^N` and split into `12` residue classes,
+> admit a fixed-axiom meromorphic or distributional `rho -> 1` continuation
+> without fitted subtraction?
 
-Cycle 244 must freeze the exact source residue formula, Abel weight,
-12-dissection, allowed continuation theorem or certified boundary criterion,
-and failure rule before executable work. It must keep the AFK phase separate,
-forbid fitted subtraction, and not claim an AFK, mixed-base identity, fusion,
-Stark, or TCC consequence.
+Cycle 244 must amend one preregistration in place before executable work to
+freeze the constructed Laurent-current state, its Galois/12-dissection
+invariant, Abel summability axioms, regulator-dependence falsifier, and
+allowed boundary criterion. It must keep source authorization, AFK,
+mixed-base identity, fusion, Stark, and TCC consequences explicitly out of
+scope.
 
 ## Recovery
 
