@@ -1,0 +1,227 @@
+{
+  "claim_boundary": "All 16 diagonal sign lifts of the raw negative-k coordinates fail to preserve the three defining product coordinates tau, u, and tilde-u simultaneously. Consequently this diagonal family supplies no signed-k Gamma_M extension and cannot satisfy downstream axioms. This does not exclude a non-diagonal extension involving reflection, theta/Pochhammer factors, additive shifts, period swaps, a new source theorem, a packet cocycle, AFK covariance, fusion, Stark, or TCC.",
+  "coordinate_sign_census": {
+    "candidate_count": 16,
+    "candidates": [
+      {
+        "signs": {
+          "m": -1,
+          "mu": -1,
+          "omega1": -1,
+          "omega2": -1
+        },
+        "tau": false,
+        "tilde_u": false,
+        "u": false
+      },
+      {
+        "signs": {
+          "m": -1,
+          "mu": -1,
+          "omega1": -1,
+          "omega2": 1
+        },
+        "tau": true,
+        "tilde_u": false,
+        "u": true
+      },
+      {
+        "signs": {
+          "m": -1,
+          "mu": -1,
+          "omega1": 1,
+          "omega2": -1
+        },
+        "tau": true,
+        "tilde_u": false,
+        "u": false
+      },
+      {
+        "signs": {
+          "m": -1,
+          "mu": -1,
+          "omega1": 1,
+          "omega2": 1
+        },
+        "tau": false,
+        "tilde_u": false,
+        "u": true
+      },
+      {
+        "signs": {
+          "m": 1,
+          "mu": -1,
+          "omega1": -1,
+          "omega2": -1
+        },
+        "tau": false,
+        "tilde_u": false,
+        "u": false
+      },
+      {
+        "signs": {
+          "m": 1,
+          "mu": -1,
+          "omega1": -1,
+          "omega2": 1
+        },
+        "tau": true,
+        "tilde_u": false,
+        "u": false
+      },
+      {
+        "signs": {
+          "m": 1,
+          "mu": -1,
+          "omega1": 1,
+          "omega2": -1
+        },
+        "tau": true,
+        "tilde_u": true,
+        "u": false
+      },
+      {
+        "signs": {
+          "m": 1,
+          "mu": -1,
+          "omega1": 1,
+          "omega2": 1
+        },
+        "tau": false,
+        "tilde_u": true,
+        "u": false
+      },
+      {
+        "signs": {
+          "m": -1,
+          "mu": 1,
+          "omega1": -1,
+          "omega2": -1
+        },
+        "tau": false,
+        "tilde_u": false,
+        "u": true
+      },
+      {
+        "signs": {
+          "m": -1,
+          "mu": 1,
+          "omega1": -1,
+          "omega2": 1
+        },
+        "tau": true,
+        "tilde_u": false,
+        "u": false
+      },
+      {
+        "signs": {
+          "m": -1,
+          "mu": 1,
+          "omega1": 1,
+          "omega2": -1
+        },
+        "tau": true,
+        "tilde_u": false,
+        "u": true
+      },
+      {
+        "signs": {
+          "m": -1,
+          "mu": 1,
+          "omega1": 1,
+          "omega2": 1
+        },
+        "tau": false,
+        "tilde_u": false,
+        "u": false
+      },
+      {
+        "signs": {
+          "m": 1,
+          "mu": 1,
+          "omega1": -1,
+          "omega2": -1
+        },
+        "tau": false,
+        "tilde_u": true,
+        "u": false
+      },
+      {
+        "signs": {
+          "m": 1,
+          "mu": 1,
+          "omega1": -1,
+          "omega2": 1
+        },
+        "tau": true,
+        "tilde_u": true,
+        "u": false
+      },
+      {
+        "signs": {
+          "m": 1,
+          "mu": 1,
+          "omega1": 1,
+          "omega2": -1
+        },
+        "tau": true,
+        "tilde_u": false,
+        "u": false
+      },
+      {
+        "signs": {
+          "m": 1,
+          "mu": 1,
+          "omega1": 1,
+          "omega2": 1
+        },
+        "tau": false,
+        "tilde_u": false,
+        "u": false
+      }
+    ],
+    "conclusion": "No diagonal sign lift preserves tau, u, and tilde-u simultaneously.",
+    "epistemic_status": "PROVED",
+    "survivor_count": 0,
+    "symbolic_conflict": "tau=u=1 forces a=c=-d and b=-1, hence tilde-u has mu coefficient -a*c=-1 and pm coefficient b=-1.",
+    "tau_and_u_candidates": [
+      {
+        "signs": {
+          "m": -1,
+          "mu": -1,
+          "omega1": -1,
+          "omega2": 1
+        },
+        "tau": true,
+        "tilde_u": false,
+        "u": true
+      },
+      {
+        "signs": {
+          "m": -1,
+          "mu": 1,
+          "omega1": 1,
+          "omega2": -1
+        },
+        "tau": true,
+        "tilde_u": false,
+        "u": true
+      }
+    ]
+  },
+  "epistemic_status": "PROVED",
+  "extension_axiom_audit": {
+    "agreement_with_positive_product": false,
+    "epistemic_status": "PROVED",
+    "factorization_tested": false,
+    "involutivity_tested": false,
+    "reason": "No diagonal lift reaches the defining product-coordinate domain, so downstream axioms would test an undefined extension rather than a constructed function.",
+    "reflection_tested": false,
+    "shift_tested": false
+  },
+  "gate_outcome": {
+    "diagonal_signed_k_extension": "FALSIFIED",
+    "remaining_design_problem": "Construct a non-diagonal signed-k extension with an explicit correction factor and prove its product/reflection/shift/factorization compatibility before any affine E comparison."
+  },
+  "schema": "sic-stark-cycle-219-signed-k-extension-prototype-v1"
+}

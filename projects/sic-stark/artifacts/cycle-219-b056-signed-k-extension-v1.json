@@ -1,0 +1,306 @@
+{
+  "artifact_id": "cycle-219-b056-signed-k-extension-v1",
+  "budget_ordinal": "B056",
+  "claim_boundary": "All 16 diagonal sign lifts of the raw negative-k coordinates fail to preserve the three defining product coordinates tau, u, and tilde-u simultaneously. Consequently this diagonal family supplies no signed-k Gamma_M extension and cannot satisfy downstream axioms. This does not exclude a non-diagonal extension involving reflection, theta/Pochhammer factors, additive shifts, period swaps, a new source theorem, a packet cocycle, AFK covariance, fusion, Stark, or TCC.",
+  "companion_decision": {
+    "adopted": true,
+    "evidence_scope_review": "The corrected 16-case census is exhaustive for the preregistered diagonal sign family. Its tau/u constraints force both remaining tilde-u coefficients to -1, leaving no product-coordinate survivor.",
+    "falsifier": "Any corrected tau/u/tilde-u coefficient, 16-candidate completeness, tau/u constraint, zero-survivor census, raw-state convention, or replay discrepancy invalidates the seal.",
+    "identity": "/root/decision_companion_2",
+    "known_flaw": "The result excludes no non-diagonal construction using normalized reflection, theta/Pochhammer corrections, additive shifts, period swaps, label changes, or a new Gamma_M theorem.",
+    "next_action": "Preregister the smallest source-derived non-diagonal candidate: combine normalized reflection (33) with the required sign reversal, freezing its argument/label map and correction factor, then test product-coordinate agreement, involutivity, shifts, and both factorization identities before any packet comparison.",
+    "reason": "The diagonal family has been exhausted exactly, while the named non-diagonal constructions remain distinct, untested designs.",
+    "recommendation": "Seal C219/B056 as PROVED only for nonexistence within the frozen 16 diagonal sign-lift family and open a new cycle."
+  },
+  "coordinate_sign_census": {
+    "candidate_count": 16,
+    "candidates": [
+      {
+        "signs": {
+          "m": -1,
+          "mu": -1,
+          "omega1": -1,
+          "omega2": -1
+        },
+        "tau": false,
+        "tilde_u": false,
+        "u": false
+      },
+      {
+        "signs": {
+          "m": -1,
+          "mu": -1,
+          "omega1": -1,
+          "omega2": 1
+        },
+        "tau": true,
+        "tilde_u": false,
+        "u": true
+      },
+      {
+        "signs": {
+          "m": -1,
+          "mu": -1,
+          "omega1": 1,
+          "omega2": -1
+        },
+        "tau": true,
+        "tilde_u": false,
+        "u": false
+      },
+      {
+        "signs": {
+          "m": -1,
+          "mu": -1,
+          "omega1": 1,
+          "omega2": 1
+        },
+        "tau": false,
+        "tilde_u": false,
+        "u": true
+      },
+      {
+        "signs": {
+          "m": 1,
+          "mu": -1,
+          "omega1": -1,
+          "omega2": -1
+        },
+        "tau": false,
+        "tilde_u": false,
+        "u": false
+      },
+      {
+        "signs": {
+          "m": 1,
+          "mu": -1,
+          "omega1": -1,
+          "omega2": 1
+        },
+        "tau": true,
+        "tilde_u": false,
+        "u": false
+      },
+      {
+        "signs": {
+          "m": 1,
+          "mu": -1,
+          "omega1": 1,
+          "omega2": -1
+        },
+        "tau": true,
+        "tilde_u": true,
+        "u": false
+      },
+      {
+        "signs": {
+          "m": 1,
+          "mu": -1,
+          "omega1": 1,
+          "omega2": 1
+        },
+        "tau": false,
+        "tilde_u": true,
+        "u": false
+      },
+      {
+        "signs": {
+          "m": -1,
+          "mu": 1,
+          "omega1": -1,
+          "omega2": -1
+        },
+        "tau": false,
+        "tilde_u": false,
+        "u": true
+      },
+      {
+        "signs": {
+          "m": -1,
+          "mu": 1,
+          "omega1": -1,
+          "omega2": 1
+        },
+        "tau": true,
+        "tilde_u": false,
+        "u": false
+      },
+      {
+        "signs": {
+          "m": -1,
+          "mu": 1,
+          "omega1": 1,
+          "omega2": -1
+        },
+        "tau": true,
+        "tilde_u": false,
+        "u": true
+      },
+      {
+        "signs": {
+          "m": -1,
+          "mu": 1,
+          "omega1": 1,
+          "omega2": 1
+        },
+        "tau": false,
+        "tilde_u": false,
+        "u": false
+      },
+      {
+        "signs": {
+          "m": 1,
+          "mu": 1,
+          "omega1": -1,
+          "omega2": -1
+        },
+        "tau": false,
+        "tilde_u": true,
+        "u": false
+      },
+      {
+        "signs": {
+          "m": 1,
+          "mu": 1,
+          "omega1": -1,
+          "omega2": 1
+        },
+        "tau": true,
+        "tilde_u": true,
+        "u": false
+      },
+      {
+        "signs": {
+          "m": 1,
+          "mu": 1,
+          "omega1": 1,
+          "omega2": -1
+        },
+        "tau": true,
+        "tilde_u": false,
+        "u": false
+      },
+      {
+        "signs": {
+          "m": 1,
+          "mu": 1,
+          "omega1": 1,
+          "omega2": 1
+        },
+        "tau": false,
+        "tilde_u": false,
+        "u": false
+      }
+    ],
+    "conclusion": "No diagonal sign lift preserves tau, u, and tilde-u simultaneously.",
+    "epistemic_status": "PROVED",
+    "survivor_count": 0,
+    "symbolic_conflict": "tau=u=1 forces a=c=-d and b=-1, hence tilde-u has mu coefficient -a*c=-1 and pm coefficient b=-1.",
+    "tau_and_u_candidates": [
+      {
+        "signs": {
+          "m": -1,
+          "mu": -1,
+          "omega1": -1,
+          "omega2": 1
+        },
+        "tau": true,
+        "tilde_u": false,
+        "u": true
+      },
+      {
+        "signs": {
+          "m": -1,
+          "mu": 1,
+          "omega1": 1,
+          "omega2": -1
+        },
+        "tau": true,
+        "tilde_u": false,
+        "u": true
+      }
+    ]
+  },
+  "cycle": 219,
+  "epistemic_status": "PROVED",
+  "extension_axiom_audit": {
+    "agreement_with_positive_product": false,
+    "epistemic_status": "PROVED",
+    "factorization_tested": false,
+    "involutivity_tested": false,
+    "reason": "No diagonal lift reaches the defining product-coordinate domain, so downstream axioms would test an undefined extension rather than a constructed function.",
+    "reflection_tested": false,
+    "shift_tested": false
+  },
+  "frozen_hashes": {
+    "preregistration": {
+      "path": "docs/cycle-219-b056-signed-k-extension-preregistration-v1.md",
+      "sha256": "69a4a95767173a5494e47bf722d74229b0420d317492ba13b410ed93a75d07c7"
+    },
+    "prior_signed_period_cover": {
+      "path": "artifacts/cycle-218-b055-signed-period-cover-v1.json",
+      "sha256": "7b456c630bbcc40c632c4b8b0a9ffe0aa128a6bbacf51813a7b029bb13da40a6"
+    },
+    "prototype": {
+      "path": "discovery/cycle-219-b056-signed-k-extension-prototype-v1.json",
+      "sha256": "90802e508355eb49b0b619326d6021633b5bc90269a0fcb2c980c5fb3305d75d"
+    },
+    "regression_test": {
+      "path": "tests/test_cycle_219_signed_k_extension.py",
+      "sha256": "c28f93e47e3f7bda91e4db04c901b5b7b0e872d5e3ec15aea7b577cc5f9319e9"
+    },
+    "replay": {
+      "path": "proof/verify_cycle_219_signed_k_extension.py",
+      "sha256": "467ef8084bdb6e5dbcafdbf285973b5b1cbccbdff354fd57dd829060d71df532"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    },
+    "source_audit": {
+      "path": "scripts/dimension_six_ss_evaluation_audit.py",
+      "sha256": "24c9258e46a1233c552017f3b58de0d45acd0197c8c807579f090ca1332f626f"
+    },
+    "source_paper": {
+      "path": "paper/sic-stark-dimension-six-boundary-fusion.tex",
+      "sha256": "347228e05a87946ca41bb31c118aae069b7fb6002fff4933d030a153cef21cb7"
+    },
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "gate_outcome": {
+    "diagonal_signed_k_extension": "FALSIFIED",
+    "remaining_design_problem": "Construct a non-diagonal signed-k extension with an explicit correction factor and prove its product/reflection/shift/factorization compatibility before any affine E comparison."
+  },
+  "outcome": {
+    "epistemic_status": "PROVED",
+    "statement": "Every frozen diagonal sign lift fails at least one of tau, u, and tilde-u; therefore none defines a signed-k Gamma_M extension in that family."
+  },
+  "preregistration_preflight": {
+    "cycle": 219,
+    "manifest_sha256": "69a4a95767173a5494e47bf722d74229b0420d317492ba13b410ed93a75d07c7",
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_219_signed_k_extension_v1.py --check",
+    "preflight_command": "research prereg check docs/cycle-219-b056-signed-k-extension-preregistration-v1.md --expected-cycle 219 --allow-head-drift",
+    "prototype_command": "python3 proof/verify_cycle_219_signed_k_extension.py --output discovery/cycle-219-b056-signed-k-extension-prototype-v1.json",
+    "test_command": "python3 -m unittest tests/test_cycle_219_signed_k_extension.py",
+    "write_command": "python3 proof/build_cycle_219_signed_k_extension_v1.py --write"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_219_signed_k_extension_v1.py",
+    "sha256": "1b0c12588dfbb10919f9353261fb09558ce85b9283f39bd1ec7bcbc0cae550fb"
+  },
+  "status": "SEALED_DIAGONAL_SIGNED_K_EXTENSION_FALSIFIED"
+}
