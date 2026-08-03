@@ -1,0 +1,86 @@
+{
+  "artifact_id": "cycle-238-b075-faddeev-fourier-dualization-v1",
+  "budget_ordinal": "B075",
+  "claim_boundary": "Faddeev's cited one-kernel Fourier identity does not dualize either four-factor heterogeneous residual word. Multi-kernel beta/star-triangle identities, new composition theorems, targets, AFK, fusion, Stark, and TCC remain open.",
+  "companion_decision": {
+    "adopted": true,
+    "evidence_scope_review": "Cited theorem kernel/base/contour/output scope and each residual word's factor/base census were reviewed.",
+    "falsifier": "Any cited-theorem kernel count, period-pair requirement, contour, reciprocal-output law, residual factor/base census, available-composition audit, or replay discrepancy.",
+    "identity": "/root/decision_companion_2",
+    "known_flaw": "A multi-kernel beta integral, Bailey composition, or new composition theorem may handle mixed bases.",
+    "next_action": "Freeze one concrete multi-kernel hyperbolic-beta/star-triangle identity and test its balancing/common-period hypotheses.",
+    "recommendation": "Seal C238 and test one concrete multi-kernel beta/star-triangle identity."
+  },
+  "cycle": 238,
+  "epistemic_status": "PROVED",
+  "fourier_scope_audit": {
+    "conclusion": "Faddeev's one-kernel Fourier duality cannot dualize either frozen four-factor residual word: every block has four distinct period bases and requires four reversed partners, while the cited identity has one fixed period pair and one reciprocal output. No source composition theorem licenses four separate transforms.",
+    "epistemic_status": "PROVED",
+    "residual_blocks": [
+      {
+        "distinct_period_pair_count": 4,
+        "factor_count": 4,
+        "one_factor_output_can_equal_four_factor_reversed_word": false,
+        "one_fixed_kernel_period_pair_applies": false,
+        "published_contour": "displaced real line for one kernel",
+        "start": "A"
+      },
+      {
+        "distinct_period_pair_count": 4,
+        "factor_count": 4,
+        "one_factor_output_can_equal_four_factor_reversed_word": false,
+        "one_fixed_kernel_period_pair_applies": false,
+        "published_contour": "displaced real line for one kernel",
+        "start": "C"
+      }
+    ],
+    "source_transform": {
+      "fixed_period_pair_count": 1,
+      "formula": "integral_R gamma(t-omega''+i0)e^(-2*pi*i*x*t)dt=c/gamma(x+omega''-i0)",
+      "kernel_factor_count": 1,
+      "output_factor_count": 1
+    },
+    "source_transform_applies_to_entire_residual_word": false,
+    "status": "FALSIFIED_BY_HETEROGENEOUS_BASES_AND_FACTOR_ARITY"
+  },
+  "frozen_hashes": {
+    "prereg": {
+      "path": "docs/cycle-238-b075-faddeev-fourier-dualization-preregistration-v1.md",
+      "sha256": "946d299fc2dc7481df4ffda36d973efc19b431724c1ca66cc2cc1809a3a14743"
+    },
+    "prior": {
+      "path": "artifacts/cycle-237-b074-reflection-partner-reachability-v1.json",
+      "sha256": "4ccc1d28d8bd4c969c185b2cdd45e7fe888a89f02ed1969d470aedf3854da2bf"
+    },
+    "prototype": {
+      "path": "discovery/cycle-238-b075-faddeev-fourier-dualization-prototype-v1.json",
+      "sha256": "a86a08b17fadd591c509f702a68a082b980560c581a1451891efc93334ea3170"
+    },
+    "replay": {
+      "path": "proof/verify_cycle_238_faddeev_fourier_dualization.py",
+      "sha256": "16d87f91eba280890f07dac4037962aac68780cf64f1b15088016b024672c82c"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    },
+    "test": {
+      "path": "tests/test_cycle_238_faddeev_fourier_dualization.py",
+      "sha256": "fbeb5c2fda31f975dd059047e848867d6304ae00ee86fc989f1e0022c1d6103a"
+    },
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_238_faddeev_fourier_dualization_v1.py",
+    "sha256": "4897c93a3b7a95e69d502765154229fbaf6555873f9c9fe86f855bec4cf38503"
+  },
+  "status": "SEALED_FADDEEV_FOURIER_RESIDUAL_WORD_SCOPE_CONTAINMENT"
+}
