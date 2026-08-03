@@ -194,7 +194,12 @@
   misses all eight opposite A/C targets, because the continued beta-shift
   quotient is `1-X^(-1)` while the target quotient is `1-X`. The mismatch is
   nonconstant, so the uncorrected direct cross-sign map is falsified before
-  jet comparison.
+  jet comparison. Cycle 254 independently reproduces that all-eight mismatch
+  at both embeddings and audits the twelve relevant sealed transition
+  records. None supplies a source-authorized all-eight operator satisfying the
+  two necessary nonconstant shift cocycles. Dimension-six TCC remains
+  unproved; the terminal classification is `C_FROZEN`, and the project is
+  stopped at `C254/B091`.
   No endpoint binomial value has been
   evaluated. No divergent raw contour, periodized beta channel, AFK amplitude
   identity, fusion, or TCC is proved.
@@ -202,11 +207,10 @@
   Cycles `C252/B089`, `C253/B090`, and `C254/B091` are the final research
   blocks. This supersedes Cycle 162's date-based schedule and the later
   200-cycle allocation without mutating either historical record.
-- `STRATEGIC_DECISION`: use those blocks for the reciprocal-base continuation,
-  the strongest surviving full-interface lift or distinct analytic fallback,
-  and a final proof replay or freeze classification. If dimension six is not
-  proved by the end of `C254/B091`, create the minimal handoff `STATUS.md`,
-  classify the project `C_FROZEN`, and stop all SIC--Stark research.
+- `STRATEGIC_DECISION`: fulfilled. The three blocks produced a theorem-backed
+  continuation, a nonconstant target obstruction, an independent terminal
+  replay, and the required `C_FROZEN` handoff. No further SIC--Stark research
+  is authorized inside this project.
 
 ## Budget, accounting, and stop condition
 
@@ -223,12 +227,8 @@
 - There are no intermediate reporting checkpoints. Reuse each cycle for its
   whole coherent decision block and seal only a result needed by the final
   decision or handoff.
-- Stop condition: after `C254/B091`, either record `A_CLOSED` with an
-  independent proof replay, or record `C_FROZEN`, generate the intentional
-  handoff `STATUS.md`, and stop the project. A Class-A reduction without a
-  complete dimension-six proof is handed off and frozen, not used to extend
-  the budget. Earlier proof or decisive falsification may trigger the same
-  terminal handoff sooner.
+- Stop condition: satisfied at `C254/B091` with `C_FROZEN`. `STATUS.md` is the
+  intentional handoff. No new cycle may open in this project.
 
 ## Frozen background
 
@@ -803,11 +803,11 @@ B091 without A_CLOSED -> C_FROZEN + STATUS.md handoff + stop
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Derive and preregister a genuinely new cross-sign law or enlarged-cover construction before opening a new counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `CONTINUATION_PROVED_DIRECT_TARGET_FALSIFIED` | In C254, independently replay the continuation/target mismatch and audit whether any already sourced nonconstant transition operator survives the frozen record. | Fitting the quotient of continued and target factors, opening another speculative engine, or extending the terminal budget. |
-| `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
-| D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
-| Pattern mining | `DEFERRED_AT_CLOSEOUT` | Resume only as a separate future project after an explicit new authorization. | Spending the final three SIC--Stark blocks on broad correlation mining. |
+| Project budget | `C_FROZEN_AT_B091` | None inside this project. | Opening C255 or extending the budget. |
+| D6 interface | `CONTINUATION_PROVED_TARGET_TRANSITION_OPEN` | Future separately authorized work would need a source-derived all-eight transition with both C254 cocycles. | Fitting the target/continuation quotient or treating the continuation alone as the interface. |
+| `RQ-000692` engine | `FROZEN_UNFINISHED` | Future separately authorized project only. | Treating weak absolute values or tame controls as the missing map. |
+| D6 fusion continuity | `FROZEN_BLOCKED_BY_INTERFACE` | Future separately authorized project only after interface closure. | `BF_6=>MFC_6` without the missing map. |
+| Pattern mining | `OUTSIDE_STOPPED_PROJECT` | Separate future authorization. | Reopening SIC--Stark implicitly. |
 
 ## Open questions
 
@@ -822,28 +822,17 @@ B091 without A_CLOSED -> C_FROZEN + STATUS.md handoff + stop
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: formulate Cycle 254 / B091
+## Next authorized action: none (project stopped)
 
-Independently replay C253's theorem hypotheses, normalization, slit-domain
-continuation, and all-eight nonconstant target mismatch. Audit the already
-frozen source identities for a previously derived nonconstant transition
-operator with the exact required shift quotient; do not invent or fit a new
-one. If none survives, seal `C_FROZEN`, generate the minimal `STATUS.md`
-handoff pointing to this program, the terminal artifact, and exact recovery
-commands, and stop the project. If one survives, run the complete downstream
-proof replay and record `A_CLOSED` only if dimension-six TCC actually closes.
-
-Any future representation assessment must preserve C246/C247's scopes, freeze
-both source bases when relevant, a full state invariant, exact source formulas,
-and an exact falsifier before executable work. It must keep source
-authorization, canonical-current promotion, AFK, mixed-base identity, fusion,
-Stark, and TCC consequences explicitly out of scope.
+Preserve the terminal artifact and handoff. Any resumption requires explicit
+authorization as a separate future project; do not open Cycle 255 here.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 253
+research rebuild
+research cycle 254
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_253_direct_hyperbolic_continuation_v1.py --check
+python3 proof/build_cycle_254_terminal_replay_handoff_v1.py --check
 ```
