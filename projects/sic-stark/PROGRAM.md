@@ -128,8 +128,16 @@
   Cycle 240 then excludes the smallest Faddeev two-kernel closure: the first
   A/C factor pairs have no common period system even up to scaling and swap,
   so Faddeev's FTD/MIR relation cannot instantiate an auxiliary convolution.
-  A Minkowski two-embedding lattice kernel over `Q(sqrt(21))` is the next
-  genuinely mixed-base construction.
+  Cycle 241 proves the positive algebraic/Fourier infrastructure for the
+  genuinely mixed-base construction: with
+  `O_K=Z[(1+sqrt(21))/2]` and `B(x,y)=Tr(xy/sqrt(21))`, its integral Gram
+  matrix is `[[0,1],[1,1]]`, so `O_K` is B-self-dual and the indefinite
+  Minkowski B-Fourier transform has the standard Schwartz inversion and
+  Poisson properties. This does not establish meromorphic-kernel
+  admissibility, a pole-separating contour, a mixed-base identity, AFK,
+  fusion, Stark, or TCC. The next gate is to express the C228 A/C residual
+  words in Minkowski coordinates and prove or falsify those analytic
+  prerequisites.
   No endpoint binomial value has been
   evaluated. No divergent raw contour, periodized beta channel, AFK amplitude
   identity, fusion, or TCC is proved.
@@ -747,16 +755,17 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 241 Minkowski two-embedding lattice-kernel decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `FADDEEV_TWO_KERNEL_COMMON_PERIOD_OBSTRUCTED` | Freeze the two Galois-embedding period maps, trace pairing, Fourier normalization, candidate `R^2` lattice kernel, and exact self-duality criterion; prove or falsify its first closure condition. | Identifying nonproportional periods; treating conjugacy as an integral identity; or inferring a signed extension. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 242 Minkowski-kernel admissibility-and-contour decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `MINKOWSKI_FOURIER_INFRASTRUCTURE_SEALED` | Freeze both C228 embedding-coordinate kernel maps, the function/distribution class, contour domain, and pole-separation criterion; prove or falsify admissibility before asserting B-Fourier covariance. | Treating lattice self-duality as a special-function transform, ignoring poles or tails, or inferring a signed extension. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Does the `Q(sqrt(21))` two-embedding period lattice admit the exact
-  trace-paired self-dual kernel required before a mixed-base transform?
+- Do the C228 A/C four-gamma residual words, expressed in the two Minkowski
+  embeddings of `Q(sqrt(21))`, define an admissible tempered/distributional
+  kernel on a specified pole-separating contour?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -765,17 +774,19 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 241 / B078
+## Next goal: Cycle 242 / B079
 
 Preregister one substantive block with this question:
 
-> Does one frozen Minkowski two-embedding lattice kernel satisfy the exact
-> trace-paired self-duality condition for the C228 period maps?
+> With both C228 A/C residual words frozen in Minkowski coordinates, do their
+> exact divisors and asymptotics admit a specified function/distribution class
+> and pole-separating contour compatible with the C241 B-Fourier framework?
 
-Cycle 241 must freeze both embedding maps, lattice basis, trace pairing,
-Fourier normalization, and self-duality acceptance criterion before executable
-work. It must keep the AFK phase separate, forbid fitted quotients, and not
-claim an AFK, fusion, Stark, or TCC consequence.
+Cycle 242 must freeze both embedding maps, the source-special-function
+convention and divisor/asymptotic source, contour candidate, function or
+distribution class, and exact failure criterion before executable work. It
+must keep the AFK phase separate, forbid fitted quotients, and not claim an
+AFK, mixed-base identity, fusion, Stark, or TCC consequence.
 
 ## Recovery
 
@@ -783,5 +794,5 @@ claim an AFK, fusion, Stark, or TCC consequence.
 source ../../tools/dev-env.sh
 research cycle 240
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_240_mixed_base_two_kernel_v1.py --check
+python3 proof/build_cycle_241_minkowski_self_duality_v1.py --check
 ```
