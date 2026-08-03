@@ -1,0 +1,215 @@
+{
+  "artifact_id": "cycle-216-b053-rotating-period-cone-v1",
+  "budget_ordinal": "B053",
+  "claim_boundary": "For the one fixed upper-half-plane path and its stated moving functional, the complete two-factor Gamma_M true-pole cones are separated for 0<u<1. The corridor collapses at u=1 and its limiting real contour contains dense m=0 limiting true-pole trajectories. The explicit one-step S--S factorization, reflection, and shift identities do not reach the E-transported matrix M_E. This does not disprove a different endpoint completion, a multistep/new transformation identity, a source-derived label-dependent cocycle, AFK covariance, fusion, Stark, or TCC.",
+  "companion_decision": {
+    "adopted": true,
+    "evidence_scope_review": "C216 proves full symbolic pole-cone separation on the frozen upper semicircle, collapse at u=1, density of an admissible m=0 limiting true-pole subfamily on the limiting real contour, and failure of the audited one-step S--S identities to reach M_E.",
+    "falsifier": "Any full-divisor cone inequality, endpoint parametrization, true-pole admissibility, irrational-density argument, source-matrix census, branch convention, or replay discrepancy invalidates the seal.",
+    "identity": "/root/decision_companion_2",
+    "known_flaw": "The result excludes neither another contour/distributional completion nor a multistep or new Gamma_M transformation carrying M to M_E with additional cocycle factors.",
+    "next_action": "Open a transformation-groupoid cycle: generate the full exact orbit of M under the cited S--S factorization/reflection/shift operations with cocycles tracked; either derive a word reaching M_E and test all 36 defects, or prove an invariant separating the complete generated orbit.",
+    "reason": "The specified path and one-step source family are now exactly contained, while the proposed groupoid state space is a distinct method rather than a post hoc contour alteration.",
+    "recommendation": "Seal C216 as a scoped obstruction to this literal endpoint path and one-step transformation family, then open a new cycle; a different completion or multistep identity is a distinct method."
+  },
+  "cycle": 216,
+  "endpoint_density_audit": {
+    "conclusion": "The limiting divisor trajectories of the prescribed C_u family are dense on its real endpoint contour, so this family has no literal pole-avoiding endpoint contour even though its interior corridors are pole-separated.",
+    "density_argument": "The elementary irrational-rotation lemma makes {j*(beta-5/12) mod 1:j>=0} dense. For each real target and tolerance, select a sufficiently large matching j and set n to its nearest integral quotient; then 24*n+5*j>=0 and the displayed true pole lies within the tolerance.",
+    "endpoint_contour_limit": "For C_u parametrized by exp(pi*i*u/2)*((W+1)*cos(pi*u/2)/2+i*t), the u->1 limit is the real axis.",
+    "epistemic_status": "PROVED",
+    "irrational_rotation_scale": "(W-5)/24=beta-5/12",
+    "irrationality_certificate": "beta has X^2-5X+1=0 with nonsquare discriminant 21; rational translation preserves irrationality.",
+    "limiting_m_zero_pole_trajectories_dense_on_real_contour": true,
+    "m_zero_true_pole_subfamily": "j*(W-5)-24*n, with j>=0 and 24*n+5*j>=0"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "equation66_audit": {
+      "path": "scripts/dimension_six_ss_evaluation_audit.py",
+      "sha256": "24c9258e46a1233c552017f3b58de0d45acd0197c8c807579f090ca1332f626f"
+    },
+    "preregistration": {
+      "path": "docs/cycle-216-b053-rotating-period-cone-preregistration-v1.md",
+      "sha256": "6a8b17ec198a7b56ddb7200bc83e59d6df38c516617fea1e4af24273eb172a94"
+    },
+    "preregistration_validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    },
+    "prior_direct_e_obstruction": {
+      "path": "artifacts/cycle-215-b052-equation66-e-transport-v1.json",
+      "sha256": "900f167c92c68c292d846694f5f2afa280b26c30ea5e27cfd732f271e8f1efbe"
+    },
+    "prior_reflection_audit": {
+      "path": "proof/verify_cycle_190_balanced_helical_reflection.py",
+      "sha256": "69da849d11c00ec30a5bca1a1220e1616d3d31beb75c8b906e8a67a9b0c98469"
+    },
+    "prototype": {
+      "path": "discovery/cycle-216-b053-rotating-period-cone-prototype-v1.json",
+      "sha256": "a3f65f26d1ff3a97b89b3c44a32b928aebbc8b2d14c402c1b94301afd194bc89"
+    },
+    "regression_test": {
+      "path": "tests/test_cycle_216_rotating_period_cone.py",
+      "sha256": "8a276c3c6ebbb7b2a06e6fae1100ec41ecb4a8ab798a873df7802bfba8e45535"
+    },
+    "replay": {
+      "path": "proof/verify_cycle_216_rotating_period_cone.py",
+      "sha256": "e5d386db16d3e2c17675bcd7c35e12b02760a2a357aac24d583f2914cfe39b76"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    },
+    "source_paper": {
+      "path": "paper/sic-stark-dimension-six-boundary-fusion.tex",
+      "sha256": "347228e05a87946ca41bb31c118aae069b7fb6002fff4933d030a153cef21cb7"
+    }
+  },
+  "gate_outcome": {
+    "direct_endpoint_cocycle": "NOT_SUPPLIED_BY_AUDITED_ONE_STEP_SOURCE_IDENTITIES",
+    "interior_divisor_control": "PROVED_FOR_THE_FROZEN_UPPER_PATH",
+    "remaining_design_problem": "Construct a genuinely different endpoint completion (not the literal C_u limit) and a theorem comparing its continued fixed-M kernel with M_E, including all contour/branch contributions and an unfitted all-label cocycle."
+  },
+  "one_step_source_matrix_audit": {
+    "E_transported_matrix": [
+      [
+        5,
+        -24
+      ],
+      [
+        24,
+        -115
+      ]
+    ],
+    "conclusion": "The cited one-step source identities do not themselves identify the fixed-M upper-path endpoint with M_E. This is not an exhaustion of multistep, new, or externally supplied transformation identities.",
+    "epistemic_status": "PROVED",
+    "matrices": {
+      "M": [
+        [
+          115,
+          -24
+        ],
+        [
+          24,
+          -5
+        ]
+      ],
+      "M2": [
+        [
+          5,
+          24
+        ],
+        [
+          -24,
+          -115
+        ]
+      ],
+      "M3": [
+        [
+          -115,
+          -24
+        ],
+        [
+          24,
+          5
+        ]
+      ],
+      "minus_M": [
+        [
+          -115,
+          24
+        ],
+        [
+          -24,
+          5
+        ]
+      ],
+      "minus_M2": [
+        [
+          -5,
+          -24
+        ],
+        [
+          24,
+          115
+        ]
+      ],
+      "minus_M3": [
+        [
+          115,
+          24
+        ],
+        [
+          -24,
+          -5
+        ]
+      ]
+    },
+    "one_step_factorization_reaches_M_E": false,
+    "reflection_and_shift_matrix_action": "preserve the fixed M",
+    "source_scope": "One application of the explicit factorization identities (16)--(17), together with normalized reflection (33) and shifts (38)--(39)."
+  },
+  "outcome": {
+    "epistemic_status": "PROVED",
+    "statement": "The frozen upper-path moving contour controls all interior divisor families, but its literal endpoint collapses onto dense limiting pole trajectories; the audited one-step source transformations do not supply M_E or its cocycle."
+  },
+  "packet_boundary_audit": {
+    "all_label_t_defects": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "claim_boundary": "No fitted packet correction has been introduced or tested as evidence.",
+    "epistemic_status": "PROVED",
+    "reason": "The rotating cone supplies a controlled interior contour class only; the audited one-step source identities do not supply the required M-to-M_E endpoint comparison or a label-dependent factor.",
+    "source_derived_endpoint_cocycle_available": false
+  },
+  "preregistration_preflight": {
+    "cycle": 216,
+    "manifest_sha256": "6a8b17ec198a7b56ddb7200bc83e59d6df38c516617fea1e4af24273eb172a94",
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_216_rotating_period_cone_v1.py --check",
+    "preflight_command": "research prereg check docs/cycle-216-b053-rotating-period-cone-preregistration-v1.md --expected-cycle 216 --allow-head-drift",
+    "prototype_command": "python3 proof/verify_cycle_216_rotating_period_cone.py --output discovery/cycle-216-b053-rotating-period-cone-prototype-v1.json",
+    "test_command": "python3 -m unittest tests/test_cycle_216_rotating_period_cone.py",
+    "write_command": "python3 proof/build_cycle_216_rotating_period_cone_v1.py --write"
+  },
+  "rotating_cone_audit": {
+    "all_divisors_covered_symbolically": true,
+    "corridor": "C_u={y:L_u(y)=L_u(Q(u))/2}, width L_u(Q(u))=(W+1)*cos(pi*u/2)>0",
+    "endpoint_conclusion": "The specified interior cone separation does not extend as a nonzero-width separating corridor to u=1.",
+    "endpoint_u_one_corridor_width": "0 (one-sided limit)",
+    "epistemic_status": "PROVED",
+    "factor_one_true_poles": "y=-j*omega(u)-L, j>=0, L=24*n+5*j+m>=0",
+    "factor_one_value": "L_u(y)=-cos(pi*u/2)*(j*W+L)<=0",
+    "factor_two_true_poles": "y=Q(u)+j*omega(u)+Lprime, j>=0, Lprime=24*n+5*j+((-m) mod 24)>=0",
+    "factor_two_value": "L_u(y)=L_u(Q(u))+cos(pi*u/2)*(j*W+Lprime)>=L_u(Q(u))",
+    "functional": "L_u(z)=Re(exp(-pi*i*u/2)*z)",
+    "interior_pole_crossing": false,
+    "path": "omega(u)=W*exp(pi*i*u), W=24*beta-5>0, 0<u<1"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_216_rotating_period_cone_v1.py",
+    "sha256": "0b74c09a95276cbecd97ea38edb8d74fbc560f5b83f12acc7785741af92e7652"
+  },
+  "status": "SEALED_ROTATING_PERIOD_CONE_LITERAL_ENDPOINT_OBSTRUCTION"
+}

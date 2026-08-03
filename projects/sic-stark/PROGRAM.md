@@ -58,10 +58,14 @@
   a transformed tuple and does not act on the beta-oriented asymptotic packet.
   Cycle 215 shows its direct equation-(66) transport changes the lens data,
   flips the frozen positive period, and cannot produce bare `t^-1` conjugate
-  duality with a channel-global scalar. No endpoint binomial value has been
-  evaluated. No divergent raw contour, periodized beta channel, AFK amplitude
-  identity, fusion, or TCC is proved; the active gate is a preregistered
-  `omega1`-to-`-omega1` continuation with divisor and branch control.
+  duality with a channel-global scalar. Cycle 216 proves that the frozen
+  upper-half-plane `omega1`-to-`-omega1` path has a pole-separated interior
+  cone but no literal endpoint contour: its corridor collapses onto dense
+  limiting pole trajectories. The explicit one-step source transformations
+  also do not reach the E-transported lens matrix. No endpoint binomial value
+  has been evaluated. No divergent raw contour, periodized beta channel, AFK
+  amplitude identity, fusion, or TCC is proved; the active gate is now an
+  exact source-transformation groupoid with cocycles tracked.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -438,6 +442,14 @@
   specialization. The bare all-label conjugate `t^-1` ansatz requires the
   varying power `t^(12-a-b)`, not a channel-global scalar. See
   `artifacts/cycle-215-b052-equation66-e-transport-v1.json`.
+- `PROVED`: Cycle 216 fixes the upper semicircle from `omega1` to
+  `-omega1` and a moving separating functional. It separates both complete
+  true-pole cones for every interior path point, but its corridor collapses
+  at the endpoint, where the limiting `m=0` pole trajectories are dense on
+  the limiting real contour. The explicit one-step S--S factorization,
+  reflection, and shift family does not reach the E-transported matrix. This
+  contains that literal path and one-step family only. See
+  `artifacts/cycle-216-b053-rotating-period-cone-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -544,7 +556,8 @@ Budget B001--B200
   |    |                                                                                                                                                                                                                                                                                       `-- formal two-ended scalar pairing [SEALED: OBSTRUCTED]
   |    |                                                                                                                                                                                                                                                                                            `-- source automorphy reverser [SEALED: TRANSFORMED-TUPLE ONLY]
   |    |                                                                                                                                                                                                                                                                                                 `-- direct equation-(66) E transport [SEALED: OBSTRUCTED]
-  |    |                                                                                                                                                                                                                                                                                                      `-- omega1-to-minus-omega1 Gamma_M continuation / cocycle [NEXT GATE]
+  |    |                                                                                                                                                                                                                                                                                                      `-- upper-path literal continuation / one-step source transforms [SEALED: ENDPOINT OBSTRUCTED]
+  |    |                                                                                                                                                                                                                                                                                                           `-- Gamma_M source-transformation groupoid / cocycle [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -589,17 +602,17 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 216 period-continuation/cocycle decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `DIRECT_E_EQUATION66_POSITIVE_PERIOD_AND_GLOBAL_SCALAR_OBSTRUCTION_SEALED` | Freeze a period-space path from `omega1` to `-omega1`, its divisor crossings and branches, then derive a `Gamma_M` continuation cocycle and test whether it cancels `12-a-b` without fitted factors. | Changing the path/branches after results, crossing poles silently, treating analytic continuation as supplied, target fitting, or inflating a continued packet into an interface. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 217 source-transformation-groupoid decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `UPPER_PATH_LITERAL_ENDPOINT_AND_ONE_STEP_SOURCE_TRANSFORMS_OBSTRUCTED_SEALED` | Freeze a complete source-transformation state space and cocycle law; derive a word reaching `M_E` with an all-36 unfitted cocycle, or prove an invariant separating the complete admitted orbit. | Treating the C216 one-step census as a full orbit proof, silently adding a source identity, target fitting, or inflating a matrix word into an interface. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Can a fixed, divisor-controlled continuation from `omega1` to `-omega1`
-  derive a `Gamma_M` cocycle that cancels `t^(12-a-b)` and yields a genuine
-  conjugate-dual packet relation without fitted label factors or C198 data?
+- Does the complete source-derived `Gamma_M` transformation groupoid contain
+  a branch/contour-controlled word from the frozen lens matrix to `M_E` whose
+  cocycle cancels `t^(12-a-b)` on all 36 labels without C198 data?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -608,25 +621,26 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 216 / B053
+## Next goal: Cycle 217 / B054
 
 Preregister one substantive block with this question:
 
-> Along a preregistered path from `omega1` to `-omega1`, can `Gamma_M` be
-> continued with controlled divisor crossings and branches to produce a
-> source-derived cocycle cancelling `t^(12-a-b)`?
+> In the preregistered groupoid generated only by cited S--S factorization,
+> reflection, and shift identities (with every branch and cocycle recorded),
+> is `M_E` reachable from the frozen lens matrix? If so, does the induced
+> source cocycle cancel `t^(12-a-b)` on all 36 labels?
 
-Cycle 216 must freeze the exact period path, all divisor-crossing and branch
-rules, the permitted changed-parameter `Gamma_M` continuation identity, and
-the all-36 cocycle criterion before executable work. It must keep capital
-`Gamma_M` and AFK phase separate, forbid target fitting, and not claim an AFK,
-fusion, Stark, or TCC consequence.
+Cycle 217 must freeze the complete state representation, generators, canonical
+sign/`k>0` reduction, composition depth or complete-orbit proof method,
+per-step period/argument/discrete-label/cocycle action, and all-36 criterion
+before executable work. It must keep capital `Gamma_M` and AFK phase separate,
+forbid target fitting, and not claim an AFK, fusion, Stark, or TCC consequence.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 215
+research cycle 216
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_215_equation66_e_transport_v1.py --check
+python3 proof/build_cycle_216_rotating_period_cone_v1.py --check
 ```
