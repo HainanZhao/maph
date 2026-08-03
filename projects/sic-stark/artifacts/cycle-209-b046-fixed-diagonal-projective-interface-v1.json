@@ -1,0 +1,174 @@
+{
+  "artifact_id": "cycle-209-b046-fixed-diagonal-projective-interface-v1",
+  "budget_ordinal": "B046",
+  "claim_boundary": "No fixed nonzero label-preserving diagonal map realizes the declared all-h, all-t projective equality between the complete Cycle-206 source family and the fixed C198 point. This does not reject parameter-dependent, non-diagonal, nonlinear, selected-source-point, or other source-authorized interfaces, and proves no target minor identity, AFK, fusion, Stark, or TCC statement.",
+  "companion_decision": {
+    "adopted": true,
+    "evidence_scope_review": "Corrected C209 proves nonconstant source projective variation on the admissible locus: P_(0,1)/P_(0,0)=t^4 gives 16 and 81 at t=2,3, incompatible with one fixed diagonal map to a fixed finite nonzero C198 projective point.",
+    "falsifier": "Any admissible-domain, packet-ratio, h-independence, target nonvanishing, fixed-c, projective-ratio, t=2,3, preflight, or replay discrepancy invalidates the seal.",
+    "identity": "/root/decision_companion_2",
+    "known_flaw": "Uniform equality for every admissible t may be stronger than the bridge requires, and no target ratio or minor has been evaluated.",
+    "next_action": "Derive the logarithmic projective connection forced by the packet exponents and test whether its canonical parallel transport is A6/multiplier-compatible and reaches the C198 target without selecting or fitting t.",
+    "reason": "The corrected witnesses are in the frozen source domain and give an exact contradiction while leaving every broader interface family outside the claim boundary.",
+    "recommendation": "Seal the corrected fixed-diagonal/all-fibre no-go and open a new cycle; a t-dependent intertwiner is a distinct method family."
+  },
+  "cycle": 209,
+  "epistemic_status": "PROVED",
+  "fixed_diagonal_contradiction": {
+    "assumed_map_family": "J_c(e_(a,b))=c_(a,b)*chi_(a,b), with every c_(a,b) nonzero and independent of h,t",
+    "assumed_projective_equality": "[c_(a,b)*P_(a,b;h)(t)]_(a,b)=[L_(a,b)]_(a,b) for every h and every admissible t>0, t!=1",
+    "conclusion": "No fixed nonzero label-preserving diagonal J_c satisfies the declared all-h, all-t projective equality.",
+    "constant_requirement": "The same nonzero right-hand-side constant must equal both 16 and 81.",
+    "contradiction": true,
+    "epistemic_status": "PROVED",
+    "two_label_consequence": "t^4=(L_(0,1)*c_(0,0))/(L_(0,0)*c_(0,1)) for every admissible t",
+    "witnesses": [
+      {
+        "t": "2",
+        "t_to_fourth": "16"
+      },
+      {
+        "t": "3",
+        "t_to_fourth": "81"
+      }
+    ]
+  },
+  "frozen_hashes": {
+    "cycle198_replay": {
+      "path": "proof/verify_cycle_198_analytic_frequency_endpoint.py",
+      "sha256": "fd659f66af2d31dbe1e94d6956a22be211ce279cfb93253ee91e0fb2bebb169d"
+    },
+    "cycle206_replay": {
+      "path": "proof/verify_cycle_206_projective_line_interface.py",
+      "sha256": "8e7769231af66c146f3e5b187bea6b4fe23f9c00c3359f2a606110e98019145a"
+    },
+    "preregistration": {
+      "path": "docs/cycle-209-b046-fixed-diagonal-projective-interface-preregistration-v1.md",
+      "sha256": "15bf453a72315917a9000d12cf3b44be002865d605b613357823ada10b819e17"
+    },
+    "preregistration_validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    },
+    "prior_diagonal_pullback_criterion": {
+      "path": "artifacts/cycle-208-b045-polarized-minor-pairing-v1.json",
+      "sha256": "933fbf0b09a0d66953193590fbf800c704de2e67ba9960f1ad0e185f00734230"
+    },
+    "prior_endpoint_functional": {
+      "path": "artifacts/cycle-198-b035-analytic-frequency-endpoint-v1.json",
+      "sha256": "78328f0e8df4ea566fea804cef79217ad1201ca028004d911b7f43871e8f9a3f"
+    },
+    "prior_projective_packet": {
+      "path": "artifacts/cycle-206-b043-projective-line-interface-v1.json",
+      "sha256": "a1ce1e2a0e0d9b42032dd984d9f7f7161f90e080bdf22d38650c097adfa90c8d"
+    },
+    "prototype": {
+      "path": "discovery/cycle-209-b046-fixed-diagonal-projective-interface-prototype-v1.json",
+      "sha256": "0c9e656823c3a1ad5d9ac2145315c11e018fc3d828b1cfb84e04683c5a6c6b04"
+    },
+    "regression_test": {
+      "path": "tests/test_cycle_209_fixed_diagonal_projective_interface.py",
+      "sha256": "9c0c290664aa0795094578063da4c835c8c91eb44ec8ff0022453bccaa027654"
+    },
+    "replay": {
+      "path": "proof/verify_cycle_209_fixed_diagonal_projective_interface.py",
+      "sha256": "9d9b7da35c04d010665701a98da4f8e554af3c410c24044cbb5971fd75d7e8cf"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    }
+  },
+  "gate_outcome": {
+    "fixed_diagonal_all_source_family_interface": "FALSIFIED",
+    "remaining_design_problem": "Construct or falsify a parameter-dependent, non-diagonal, nonlinear, or differently sourced interface without endpoint fitting."
+  },
+  "outcome": {
+    "epistemic_status": "PROVED",
+    "statement": "No fixed nonzero label-preserving diagonal map sends every admissible source packet fibre to the one fixed finite-nonzero C198 projective point. The contradiction is t^4=16=81 at the two admissible witnesses t=2,3."
+  },
+  "preregistration_preflight": {
+    "cycle": 209,
+    "manifest_sha256": "15bf453a72315917a9000d12cf3b44be002865d605b613357823ada10b819e17",
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_209_fixed_diagonal_projective_interface_v1.py --check",
+    "preflight_command": "research prereg check docs/cycle-209-b046-fixed-diagonal-projective-interface-preregistration-v1.md --expected-cycle 209 --allow-head-drift",
+    "prototype_command": "python3 proof/verify_cycle_209_fixed_diagonal_projective_interface.py --output discovery/cycle-209-b046-fixed-diagonal-projective-interface-prototype-v1.json",
+    "test_command": "python3 -m unittest tests/test_cycle_209_fixed_diagonal_projective_interface.py",
+    "write_command": "python3 proof/build_cycle_209_fixed_diagonal_projective_interface_v1.py --write"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_209_fixed_diagonal_projective_interface_v1.py",
+    "sha256": "d72157d3477dd97fcb220f80b72cb07e15f063dce77ff782b5c16b60e366df1c"
+  },
+  "source_ratio_audit": {
+    "all_h_ratio": "t^4",
+    "epistemic_status": "PROVED",
+    "records": [
+      {
+        "h_channel": 0,
+        "source_phase_ratio": "1",
+        "source_ratio": "P_(0,1;h)(t)/P_(0,0;h)(t)=t^4",
+        "t_exponent_difference": 4
+      },
+      {
+        "h_channel": 1,
+        "source_phase_ratio": "1",
+        "source_ratio": "P_(0,1;h)(t)/P_(0,0;h)(t)=t^4",
+        "t_exponent_difference": 4
+      },
+      {
+        "h_channel": 2,
+        "source_phase_ratio": "1",
+        "source_ratio": "P_(0,1;h)(t)/P_(0,0;h)(t)=t^4",
+        "t_exponent_difference": 4
+      },
+      {
+        "h_channel": 3,
+        "source_phase_ratio": "1",
+        "source_ratio": "P_(0,1;h)(t)/P_(0,0;h)(t)=t^4",
+        "t_exponent_difference": 4
+      },
+      {
+        "h_channel": 4,
+        "source_phase_ratio": "1",
+        "source_ratio": "P_(0,1;h)(t)/P_(0,0;h)(t)=t^4",
+        "t_exponent_difference": 4
+      },
+      {
+        "h_channel": 5,
+        "source_phase_ratio": "1",
+        "source_ratio": "P_(0,1;h)(t)/P_(0,0;h)(t)=t^4",
+        "t_exponent_difference": 4
+      }
+    ],
+    "unselected_source_domain": "h in Z/6Z and t>0 with t!=1"
+  },
+  "status": "SEALED_FIXED_DIAGONAL_ALL_FIBRE_PROJECTIVE_INTERFACE_FALSIFIED",
+  "target_nonvanishing_audit": {
+    "all_target_coordinates_finite_nonzero": true,
+    "epistemic_status": "PROVED",
+    "target_coordinate_count": 36,
+    "target_ratio_value": "NOT_EVALUATED",
+    "used_labels": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ]
+  }
+}
