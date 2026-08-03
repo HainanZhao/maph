@@ -93,7 +93,9 @@
   transport normal form: generic labels admit no positive-scaling quotient,
   while the `m=0` positive `F3`-even returns retain an ordered ordinary-gamma
   residual word. Cycle 228 excludes reflection and the complete-Delta product
-  decomposition for that minimal block; the next gate is its divisor invariant.
+  decomposition for that minimal block. Cycle 229 then proves each residual
+  block has an uncancelled order-four pole at `mu=0`; the next gate is a
+  divisor-coboundary equation for an argument-dependent cochain.
   No endpoint binomial value has been
   evaluated. No divergent raw contour, periodized beta channel, AFK amplitude
   identity, fusion, or TCC is proved.
@@ -551,6 +553,9 @@
   equation-(32) reflection pairing and are not operands for equation (15).
   This excludes only those two ordinary-gamma engines. See
   `artifacts/cycle-228-b065-f3-square-residual-block-v1.json`.
+- `PROVED`: Cycle 229 proves both minimal residual blocks have an uncancelled
+  order-four pole at `mu=0`, excluding `mu`-independent scalar reductions only.
+  See `artifacts/cycle-229-b066-f3-square-divisor-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -705,16 +710,16 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 229 divisor-invariant decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `MINIMAL_RESIDUAL_REFLECTION_PRODUCT_ENGINES_CONTAINED` | Compute full pole/zero divisors of the A/C four-factor blocks and identify an exact uncancelled divisor or a complete cancellation relation before another identity search. | Treating a bounded sample as a divisor proof; cancelling factors without a common pole/zero lattice; using a negative-`k` arrow; or inferring a signed extension. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 230 divisor-coboundary decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `MINIMAL_RESIDUAL_NONSCALAR_DIVISOR_PROVED` | Formulate and solve or obstruct the divisor coboundary under the positive `F3^2` affine/`576` action, beginning with valuation at its fixed point. | Calling non-scalarity a no-cochain theorem; using a negative-`k` arrow; or constructing an infinite product before the divisor equation is solved. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Do the A/C `F3^2` four-factor blocks have an exact uncancelled pole or zero
-  divisor, proving they are non-scalar before any further identity search?
+- Can an argument-dependent meromorphic cochain absorb the A/C residual
+  divisor under the positive `F3^2` affine/`576` action?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -723,23 +728,23 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 229 / B066
+## Next goal: Cycle 230 / B067
 
 Preregister one substantive block with this question:
 
-> Does either `m=0` A/C `F3^2` four-factor residual block carry an exact
-> uncancelled pole or zero divisor on the frozen period domain?
+> Does the residual divisor define a coboundary under the source-defined
+> `F3^2` positive scaling action, or does fixed-point valuation obstruct it?
 
-Cycle 229 must freeze both blocks, their complete pole/zero lattice families,
-an exact witness selection rule, and a divisor cancellation criterion before
-executable work. It must keep the AFK phase separate, forbid fitted witnesses,
+Cycle 230 must freeze the affine action, divisor module, allowed cochain class,
+fixed-point valuation convention, and a solve/obstruct criterion before
+executable work. It must keep the AFK phase separate, forbid fitted products,
 and not claim an AFK, fusion, Stark, or TCC consequence.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 228
+research cycle 229
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_228_f3_square_residual_block_v1.py --check
+python3 proof/build_cycle_229_f3_square_divisor_v1.py --check
 ```
