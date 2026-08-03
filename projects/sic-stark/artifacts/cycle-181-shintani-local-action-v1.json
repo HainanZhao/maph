@@ -1,0 +1,96 @@
+{
+  "artifact_id": "cycle-181-shintani-local-action-v1",
+  "budget_ordinal": "B019",
+  "claim_boundary": "This exact finite result derives a set-valued Shintani correspondence from local residue-sign/global-unit quotient data and independently validates it against ray sets. It defines no additive coefficient operation, AFK interface, regulator equality, fusion theorem, or TCC identity.",
+  "conventions": {
+    "characteristic_action": "T(a,b)=(5a+b,-a) mod 6",
+    "direct_relation": "alpha_Tx ~ u*(beta-9)^q*alpha_x modulo m_x+m_Tx with equal selected-place sign, u in {+/-beta^k}",
+    "oriented_generator": "(4beta+1)=(beta-9)",
+    "third_return": "sum of three direct relations equals the kernel at the triple conductor meet"
+  },
+  "cycle": 181,
+  "epistemic_status": "PROVED",
+  "exact_prototype": {
+    "source_output": "discovery/cycle-181-shintani-local-action-prototype-v1.json",
+    "summary": {
+      "all_direct_relations_equal_independent_ray_differences": true,
+      "all_third_returns_equal_kernel": true,
+      "conductor_transitions_checked": 18,
+      "orientation_anchor_rows_present": true,
+      "rows_checked": 36,
+      "shintani_edges_checked": 36,
+      "third_returns_checked": 36
+    }
+  },
+  "frozen_hashes": {
+    "instructions": {
+      "path": "AGENTS.md",
+      "sha256": "363495f0dbbe93e244b460c8eafb13247a8fb1f41be24f94c037ae9f6400c6f2"
+    },
+    "output": {
+      "path": "discovery/cycle-181-shintani-local-action-prototype-v1.json",
+      "sha256": "beed812494154f058b970791112cf76d29ffe6960c32b3736e9e871f1d99f95f"
+    },
+    "prereg": {
+      "path": "docs/cycle-181-shintani-local-action-preregistration-v1.md",
+      "sha256": "24f308be98e6c9cfa28908d2c82b594dd99b5c698ce5121018eff2fe42a0a4b9"
+    },
+    "prior": {
+      "path": "artifacts/cycle-180-local-global-artin-assembly-v1.json",
+      "sha256": "00ed9e7d014d1e53e828390f589ed5b97ceacb8fba2ddf502b8f318707b7817f"
+    },
+    "replay": {
+      "path": "proof/verify_cycle_181_shintani_local_action.py",
+      "sha256": "980f1c1cca9534f0233835b12078ca04c86eecf849f64958774acfbab295a623"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    },
+    "section": {
+      "path": "artifacts/cycle-164-oriented-ray-monoid-section-v1.json",
+      "sha256": "f1815f8641780570c15c7e9c6b40f9de8390358fb3dec0ac93aa311b78a6a26d"
+    }
+  },
+  "gate_outcome": {
+    "d6_interface": "SET_VALUED_RAY_TRANSPORT_EXACT_ADDITIVE_OPERATION_REQUIRED",
+    "disallowed_pseudo_progress": [
+      "calling set-valued transport an AFK coefficient map",
+      "selecting exponents or reintroducing s,d",
+      "claiming Stark, fusion, or TCC control"
+    ],
+    "remaining_bottleneck": "Construct a section-free additive operation from AFK/characteristic data into a ray-group-algebra target, constrained by this direct transport, or exactly contain a named operation class."
+  },
+  "outcome": {
+    "epistemic_status": "PROVED",
+    "statement": "The Shintani action induces an exact source-built, set-valued transport on the conductor-varying local ray quotient; it agrees independently with all ray-set differences and third returns."
+  },
+  "preregistration_preflight": {
+    "cycle": 181,
+    "manifest_sha256": "24f308be98e6c9cfa28908d2c82b594dd99b5c698ce5121018eff2fe42a0a4b9",
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "The next distinct method is a section-free additive source module and ray-group-algebra operation with exact A6 equivariance and anchors."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_181_shintani_local_action_v1.py --check",
+    "preflight_command": "research prereg check docs/cycle-181-shintani-local-action-preregistration-v1.md --expected-cycle 181 --allow-head-drift",
+    "prototype_command": "python3 proof/verify_cycle_181_shintani_local_action.py --output discovery/cycle-181-shintani-local-action-prototype-v1.json",
+    "write_command": "python3 proof/build_cycle_181_shintani_local_action_v1.py --write"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_181_shintani_local_action_v1.py",
+    "sha256": "c26da065beda1d457ffdb411249b7959f55f111b0f2b3fdbeb107f58d37c531a"
+  },
+  "status": "SEALED_DIRECT_SET_VALUED_SHINTANI_RAY_TRANSPORT"
+}

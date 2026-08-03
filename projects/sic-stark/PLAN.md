@@ -10,11 +10,11 @@
   scopes in dimensions 4, 5, 7, and 8. No dimension-six TCC identity,
   coefficient-to-ray map, fusion-continuity theorem, or boundary-limit theorem
   is proved. `CERTIFIED_NUMERICAL` packet growth is not a nonexistence theorem.
-- Current state: Cycle 180 / `B018` exactly reconstructs every
-  conductor-lowered admissible exponent set from local residue-sign data
-  modulo the global-unit image, independently agreeing with ray arithmetic.
-  It remains arithmetic only. Cycle 181 / `B019` must relate this set-valued
-  assembly directly to the `A_6`/Shintani action on characteristics.
+- Current state: Cycle 181 / `B019` proves a direct, source-built
+  set-valued Shintani transport on the conductor-varying ray assembly. It is
+  the first characteristic-to-ray-set relation, but not an additive map.
+  Cycle 182 / `B020` must test a section-free additive operation into a
+  ray-group-algebra target constrained by that transport.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -27,8 +27,8 @@
 ## Budget, accounting, and stop condition
 
 - Total forward budget: 200 substantive research cycles, counted `B001/200`
-  through `B200/200`; the counter is currently `B018/200`.
-- Cycle 181 is `B019`. Repository cycle numbers and budget ordinals advance
+  through `B200/200`; the counter is currently `B019/200`.
+- Cycle 182 is `B020`. Repository cycle numbers and budget ordinals advance
   together unless a non-counted record intervenes; the budget ordinal is the
   authoritative campaign counter.
 - A cycle counts only when it is a preregistered substantive research block
@@ -146,6 +146,12 @@
   36 source-power pairs per projection, and independently agrees with ray
   arithmetic and both anchors. It supplies no additive/AFK operation. See
   `artifacts/cycle-180-local-global-artin-assembly-v1.json`.
+- `PROVED`: Cycle 181 derives a direct, source-only set-valued Shintani
+  correspondence on the local residue-sign/global-unit quotient. It validates
+  all 36 characteristic edges against independent ray-set differences, all
+  third returns against the triple-conductor kernel, and 18 conductor
+  transitions. It is finite ray transport only, not an additive/AFK map. See
+  `artifacts/cycle-181-shintani-local-action-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -212,7 +218,8 @@ Budget B001--B200
   |    |                                                                               `-- unrestricted CRT record [INJECTIVE / VACUOUS]
   |    |                                                                                    `-- modulus-defined p2 quotient [INJECTIVE / VACUOUS]
   |    |                                                                                         `-- local-global Artin assembly [SEALED]
-  |    |                                                                                              `-- direct A6/Shintani action [NEXT GATE]
+  |    |                                                                                              `-- direct A6/Shintani action [SEALED]
+  |    |                                                                                                   `-- section-free additive operation [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -257,17 +264,17 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `B018_OF_200` | Seal Cycle 181 as `B019`, then increment only for substantive research blocks. | Counting workflow or archive-only work. |
-| D6 interface | `RAY_ASSEMBLY_EXACT_CHARACTERISTIC_ACTION_LINK_REQUIRED` | Derive the `A6`/Shintani action on local residue-sign/global-unit quotient classes and test set-valued equivariance, transition, orientation, and anchors without a section. | Calling arithmetic assembly an AFK/additive interface; using `s,d`, selected exponents, or target labels to supply equivariance. |
+| Project budget | `B019_OF_200` | Complete the companion-reviewed Cycle 182/B020 decision, then increment only for substantive research blocks. | Counting workflow or archive-only work. |
+| D6 interface | `SET_VALUED_RAY_TRANSPORT_EXACT_ADDITIVE_OPERATION_REQUIRED` | Define a section-free additive source-to-ray-group-algebra operation with exact conductor maps, A6 equivariance, and anchors, or exactly contain that named operation class. | Calling set-valued transport an AFK/additive map; choosing exponents; using `s,d` or target labels to force an operation. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Does the `A6`/Shintani action on characteristics induce a direct,
-  section-independent action on the residue-sign/global-unit assembly that is
-  equivariant on admissible exponent sets and preserves orientation?
+- Does a section-free additive operation from the characteristic module into
+  the conductor-compatible ray group algebra exist that is equivariant for the
+  direct Shintani correspondence and preserves orientation?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -276,28 +283,29 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 181 / `B019`
+## Next goal: Cycle 182 / `B020`
 
 Preregister one substantive block with this question:
 
-> Does the frozen `A6`/Shintani characteristic action act directly on
-> local residue-sign/global-unit quotient classes and make the assembled
-> admissible exponent sets equivariant without `s`, `d`, or a selected
-> exponent?
+> Does a preregistered section-free additive characteristic-to-ray-group-
+> algebra operation exist with conductor maps, direct set-valued Shintani
+> equivariance, and the two orientation anchors—without `s`, `d`, selected
+> exponents, or target-fitted labels?
 
-Cycle 181 must freeze the characteristic action, its source-side residue/sign
-transform, the six quotient/transition maps, set-action convention, anchors,
-and failure rule before executable work. It must construct the action without
-consulting assembled ray labels, `s`, `d`, or selected exponents. The
-companion reviewed the sealed B018 work and recommended this distinct action
-engine; its stated flaw is that arithmetic assembly alone gives no reason for
-characteristic transport to control logarithmic/Stark values.
+Cycle 182 must freeze the additive source module, the section-free ray-group-
+algebra target, all conductor maps, direct set-valued transport relation,
+equivariance convention, anchors, and failure rule before executable work. It
+must construct candidate operations without `s`, `d`, selected exponents, or
+target-fitted labels. The companion reviewed the sealed B019 transport and
+recommended this distinct additive-operation engine; its stated flaw is that
+finite transport alone neither maps AFK coefficients nor controls Stark
+values.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 180
+research cycle 181
 sed -n '1,260p' PLAN.md
-python3 proof/build_cycle_180_local_global_artin_assembly_v1.py --check
+python3 proof/build_cycle_181_shintani_local_action_v1.py --check
 ```
