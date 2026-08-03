@@ -1,0 +1,387 @@
+{
+  "artifact_id": "cycle-249-b086-common-jet-chamber-v1",
+  "audit": {
+    "claim_boundary": "This proves only the fixed-tilt common product chamber and factorwise analytic jets. It does not take epsilon to zero, establish C248's full path representation, derive a negative-k or cross-sign law, or imply a packet map, canonical current, contour identity, mixed-base transform, B-Fourier covariance, AFK, fusion, Stark, or TCC.",
+    "conclusion": "At both fixed upper-tilt embeddings, all eight C228 factors have |q|<1 and |qtilde|<1. Their normalized ordinary-gamma germs are holomorphic with nonzero leading coefficient and their degree-0:3 q-product/Lambert-series jets are absolutely convergent. This is a factorwise analytic-domain certificate only.",
+    "epistemic_status": "PROVED",
+    "factor_count": 8,
+    "factors": [
+      {
+        "alpha": [
+          "1/24",
+          "5/24"
+        ],
+        "analytic_jet": {
+          "absolute_convergence": true,
+          "degree_0_to_3_derivation": [
+            "log(qtilde*exp(A*c*mu);qtilde)_infinity-log(q*exp(B*c*mu);q)_infinity",
+            "plus log(mu/(1-exp(B*c*mu)))",
+            "differentiate through degree three using absolutely convergent Lambert series S1,S2,S3"
+          ],
+          "leading_coefficient": "-(qtilde;qtilde)_infinity/(B*c*(q;q)_infinity), B=2*pi*i/beta",
+          "leading_coefficient_nonzero": true,
+          "normalized_germ": "G(mu)=mu*gamma(c*mu;alpha,beta)"
+        },
+        "argument_slope": "1/24",
+        "beta": [
+          "0",
+          "1"
+        ],
+        "factor": "A1",
+        "period_determinant": "1/24",
+        "two_embedding_result": {
+          "minus": {
+            "alpha_over_beta": "Im(alpha/beta)=1/24/|beta(t+i)|^2>0",
+            "beta_over_alpha": "Im(beta/alpha)=-1/24/|alpha(t+i)|^2<0",
+            "q_modulus": "|q|=exp(-2*pi*Im(alpha/beta))<1",
+            "qtilde_modulus": "|qtilde|=exp(2*pi*Im(beta/alpha))<1"
+          },
+          "plus": {
+            "alpha_over_beta": "Im(alpha/beta)=1/24/|beta(t+i)|^2>0",
+            "beta_over_alpha": "Im(beta/alpha)=-1/24/|alpha(t+i)|^2<0",
+            "q_modulus": "|q|=exp(-2*pi*Im(alpha/beta))<1",
+            "qtilde_modulus": "|qtilde|=exp(2*pi*Im(beta/alpha))<1"
+          }
+        }
+      },
+      {
+        "alpha": [
+          "1",
+          "0"
+        ],
+        "analytic_jet": {
+          "absolute_convergence": true,
+          "degree_0_to_3_derivation": [
+            "log(qtilde*exp(A*c*mu);qtilde)_infinity-log(q*exp(B*c*mu);q)_infinity",
+            "plus log(mu/(1-exp(B*c*mu)))",
+            "differentiate through degree three using absolutely convergent Lambert series S1,S2,S3"
+          ],
+          "leading_coefficient": "-(qtilde;qtilde)_infinity/(B*c*(q;q)_infinity), B=2*pi*i/beta",
+          "leading_coefficient_nonzero": true,
+          "normalized_germ": "G(mu)=mu*gamma(c*mu;alpha,beta)"
+        },
+        "argument_slope": "1/24",
+        "beta": [
+          "-115/24",
+          "1/24"
+        ],
+        "factor": "A2",
+        "period_determinant": "1/24",
+        "two_embedding_result": {
+          "minus": {
+            "alpha_over_beta": "Im(alpha/beta)=1/24/|beta(t+i)|^2>0",
+            "beta_over_alpha": "Im(beta/alpha)=-1/24/|alpha(t+i)|^2<0",
+            "q_modulus": "|q|=exp(-2*pi*Im(alpha/beta))<1",
+            "qtilde_modulus": "|qtilde|=exp(2*pi*Im(beta/alpha))<1"
+          },
+          "plus": {
+            "alpha_over_beta": "Im(alpha/beta)=1/24/|beta(t+i)|^2>0",
+            "beta_over_alpha": "Im(beta/alpha)=-1/24/|alpha(t+i)|^2<0",
+            "q_modulus": "|q|=exp(-2*pi*Im(alpha/beta))<1",
+            "qtilde_modulus": "|qtilde|=exp(2*pi*Im(beta/alpha))<1"
+          }
+        }
+      },
+      {
+        "alpha": [
+          "24",
+          "0"
+        ],
+        "analytic_jet": {
+          "absolute_convergence": true,
+          "degree_0_to_3_derivation": [
+            "log(qtilde*exp(A*c*mu);qtilde)_infinity-log(q*exp(B*c*mu);q)_infinity",
+            "plus log(mu/(1-exp(B*c*mu)))",
+            "differentiate through degree three using absolutely convergent Lambert series S1,S2,S3"
+          ],
+          "leading_coefficient": "-(qtilde;qtilde)_infinity/(B*c*(q;q)_infinity), B=2*pi*i/beta",
+          "leading_coefficient_nonzero": true,
+          "normalized_germ": "G(mu)=mu*gamma(c*mu;alpha,beta)"
+        },
+        "argument_slope": "1",
+        "beta": [
+          "-115",
+          "1"
+        ],
+        "factor": "A3",
+        "period_determinant": "24",
+        "two_embedding_result": {
+          "minus": {
+            "alpha_over_beta": "Im(alpha/beta)=24/|beta(t+i)|^2>0",
+            "beta_over_alpha": "Im(beta/alpha)=-24/|alpha(t+i)|^2<0",
+            "q_modulus": "|q|=exp(-2*pi*Im(alpha/beta))<1",
+            "qtilde_modulus": "|qtilde|=exp(2*pi*Im(beta/alpha))<1"
+          },
+          "plus": {
+            "alpha_over_beta": "Im(alpha/beta)=24/|beta(t+i)|^2>0",
+            "beta_over_alpha": "Im(beta/alpha)=-24/|alpha(t+i)|^2<0",
+            "q_modulus": "|q|=exp(-2*pi*Im(alpha/beta))<1",
+            "qtilde_modulus": "|qtilde|=exp(2*pi*Im(beta/alpha))<1"
+          }
+        }
+      },
+      {
+        "alpha": [
+          "1",
+          "5"
+        ],
+        "analytic_jet": {
+          "absolute_convergence": true,
+          "degree_0_to_3_derivation": [
+            "log(qtilde*exp(A*c*mu);qtilde)_infinity-log(q*exp(B*c*mu);q)_infinity",
+            "plus log(mu/(1-exp(B*c*mu)))",
+            "differentiate through degree three using absolutely convergent Lambert series S1,S2,S3"
+          ],
+          "leading_coefficient": "-(qtilde;qtilde)_infinity/(B*c*(q;q)_infinity), B=2*pi*i/beta",
+          "leading_coefficient_nonzero": true,
+          "normalized_germ": "G(mu)=mu*gamma(c*mu;alpha,beta)"
+        },
+        "argument_slope": "1",
+        "beta": [
+          "0",
+          "24"
+        ],
+        "factor": "A4",
+        "period_determinant": "24",
+        "two_embedding_result": {
+          "minus": {
+            "alpha_over_beta": "Im(alpha/beta)=24/|beta(t+i)|^2>0",
+            "beta_over_alpha": "Im(beta/alpha)=-24/|alpha(t+i)|^2<0",
+            "q_modulus": "|q|=exp(-2*pi*Im(alpha/beta))<1",
+            "qtilde_modulus": "|qtilde|=exp(2*pi*Im(beta/alpha))<1"
+          },
+          "plus": {
+            "alpha_over_beta": "Im(alpha/beta)=24/|beta(t+i)|^2>0",
+            "beta_over_alpha": "Im(beta/alpha)=-24/|alpha(t+i)|^2<0",
+            "q_modulus": "|q|=exp(-2*pi*Im(alpha/beta))<1",
+            "qtilde_modulus": "|qtilde|=exp(2*pi*Im(beta/alpha))<1"
+          }
+        }
+      },
+      {
+        "alpha": [
+          "1/24",
+          "-5/24"
+        ],
+        "analytic_jet": {
+          "absolute_convergence": true,
+          "degree_0_to_3_derivation": [
+            "log(qtilde*exp(A*c*mu);qtilde)_infinity-log(q*exp(B*c*mu);q)_infinity",
+            "plus log(mu/(1-exp(B*c*mu)))",
+            "differentiate through degree three using absolutely convergent Lambert series S1,S2,S3"
+          ],
+          "leading_coefficient": "-(qtilde;qtilde)_infinity/(B*c*(q;q)_infinity), B=2*pi*i/beta",
+          "leading_coefficient_nonzero": true,
+          "normalized_germ": "G(mu)=mu*gamma(c*mu;alpha,beta)"
+        },
+        "argument_slope": "1/24",
+        "beta": [
+          "0",
+          "1"
+        ],
+        "factor": "C1",
+        "period_determinant": "1/24",
+        "two_embedding_result": {
+          "minus": {
+            "alpha_over_beta": "Im(alpha/beta)=1/24/|beta(t+i)|^2>0",
+            "beta_over_alpha": "Im(beta/alpha)=-1/24/|alpha(t+i)|^2<0",
+            "q_modulus": "|q|=exp(-2*pi*Im(alpha/beta))<1",
+            "qtilde_modulus": "|qtilde|=exp(2*pi*Im(beta/alpha))<1"
+          },
+          "plus": {
+            "alpha_over_beta": "Im(alpha/beta)=1/24/|beta(t+i)|^2>0",
+            "beta_over_alpha": "Im(beta/alpha)=-1/24/|alpha(t+i)|^2<0",
+            "q_modulus": "|q|=exp(-2*pi*Im(alpha/beta))<1",
+            "qtilde_modulus": "|qtilde|=exp(2*pi*Im(beta/alpha))<1"
+          }
+        }
+      },
+      {
+        "alpha": [
+          "1",
+          "0"
+        ],
+        "analytic_jet": {
+          "absolute_convergence": true,
+          "degree_0_to_3_derivation": [
+            "log(qtilde*exp(A*c*mu);qtilde)_infinity-log(q*exp(B*c*mu);q)_infinity",
+            "plus log(mu/(1-exp(B*c*mu)))",
+            "differentiate through degree three using absolutely convergent Lambert series S1,S2,S3"
+          ],
+          "leading_coefficient": "-(qtilde;qtilde)_infinity/(B*c*(q;q)_infinity), B=2*pi*i/beta",
+          "leading_coefficient_nonzero": true,
+          "normalized_germ": "G(mu)=mu*gamma(c*mu;alpha,beta)"
+        },
+        "argument_slope": "1/24",
+        "beta": [
+          "115/24",
+          "1/24"
+        ],
+        "factor": "C2",
+        "period_determinant": "1/24",
+        "two_embedding_result": {
+          "minus": {
+            "alpha_over_beta": "Im(alpha/beta)=1/24/|beta(t+i)|^2>0",
+            "beta_over_alpha": "Im(beta/alpha)=-1/24/|alpha(t+i)|^2<0",
+            "q_modulus": "|q|=exp(-2*pi*Im(alpha/beta))<1",
+            "qtilde_modulus": "|qtilde|=exp(2*pi*Im(beta/alpha))<1"
+          },
+          "plus": {
+            "alpha_over_beta": "Im(alpha/beta)=1/24/|beta(t+i)|^2>0",
+            "beta_over_alpha": "Im(beta/alpha)=-1/24/|alpha(t+i)|^2<0",
+            "q_modulus": "|q|=exp(-2*pi*Im(alpha/beta))<1",
+            "qtilde_modulus": "|qtilde|=exp(2*pi*Im(beta/alpha))<1"
+          }
+        }
+      },
+      {
+        "alpha": [
+          "24",
+          "0"
+        ],
+        "analytic_jet": {
+          "absolute_convergence": true,
+          "degree_0_to_3_derivation": [
+            "log(qtilde*exp(A*c*mu);qtilde)_infinity-log(q*exp(B*c*mu);q)_infinity",
+            "plus log(mu/(1-exp(B*c*mu)))",
+            "differentiate through degree three using absolutely convergent Lambert series S1,S2,S3"
+          ],
+          "leading_coefficient": "-(qtilde;qtilde)_infinity/(B*c*(q;q)_infinity), B=2*pi*i/beta",
+          "leading_coefficient_nonzero": true,
+          "normalized_germ": "G(mu)=mu*gamma(c*mu;alpha,beta)"
+        },
+        "argument_slope": "1",
+        "beta": [
+          "115",
+          "1"
+        ],
+        "factor": "C3",
+        "period_determinant": "24",
+        "two_embedding_result": {
+          "minus": {
+            "alpha_over_beta": "Im(alpha/beta)=24/|beta(t+i)|^2>0",
+            "beta_over_alpha": "Im(beta/alpha)=-24/|alpha(t+i)|^2<0",
+            "q_modulus": "|q|=exp(-2*pi*Im(alpha/beta))<1",
+            "qtilde_modulus": "|qtilde|=exp(2*pi*Im(beta/alpha))<1"
+          },
+          "plus": {
+            "alpha_over_beta": "Im(alpha/beta)=24/|beta(t+i)|^2>0",
+            "beta_over_alpha": "Im(beta/alpha)=-24/|alpha(t+i)|^2<0",
+            "q_modulus": "|q|=exp(-2*pi*Im(alpha/beta))<1",
+            "qtilde_modulus": "|qtilde|=exp(2*pi*Im(beta/alpha))<1"
+          }
+        }
+      },
+      {
+        "alpha": [
+          "1",
+          "-5"
+        ],
+        "analytic_jet": {
+          "absolute_convergence": true,
+          "degree_0_to_3_derivation": [
+            "log(qtilde*exp(A*c*mu);qtilde)_infinity-log(q*exp(B*c*mu);q)_infinity",
+            "plus log(mu/(1-exp(B*c*mu)))",
+            "differentiate through degree three using absolutely convergent Lambert series S1,S2,S3"
+          ],
+          "leading_coefficient": "-(qtilde;qtilde)_infinity/(B*c*(q;q)_infinity), B=2*pi*i/beta",
+          "leading_coefficient_nonzero": true,
+          "normalized_germ": "G(mu)=mu*gamma(c*mu;alpha,beta)"
+        },
+        "argument_slope": "1",
+        "beta": [
+          "0",
+          "24"
+        ],
+        "factor": "C4",
+        "period_determinant": "24",
+        "two_embedding_result": {
+          "minus": {
+            "alpha_over_beta": "Im(alpha/beta)=24/|beta(t+i)|^2>0",
+            "beta_over_alpha": "Im(beta/alpha)=-24/|alpha(t+i)|^2<0",
+            "q_modulus": "|q|=exp(-2*pi*Im(alpha/beta))<1",
+            "qtilde_modulus": "|qtilde|=exp(2*pi*Im(beta/alpha))<1"
+          },
+          "plus": {
+            "alpha_over_beta": "Im(alpha/beta)=24/|beta(t+i)|^2>0",
+            "beta_over_alpha": "Im(beta/alpha)=-24/|alpha(t+i)|^2<0",
+            "q_modulus": "|q|=exp(-2*pi*Im(alpha/beta))<1",
+            "qtilde_modulus": "|qtilde|=exp(2*pi*Im(beta/alpha))<1"
+          }
+        }
+      }
+    ],
+    "regularization": {
+      "embeddings": "t_+=55+12*sqrt(21), t_-=55-12*sqrt(21)",
+      "endpoint_excluded": true,
+      "field": "Q(sqrt(21))",
+      "fixed_tilt": "w_sigma=t_sigma+i"
+    },
+    "status": "COMMON_FIXED_UPPER_CHAMBER_FOR_C228_JETS"
+  },
+  "budget_ordinal": "B086",
+  "claim_boundary": "At the frozen two-embedding regularization w_sigma=t_sigma+i, all eight C228 ordinary-gamma factors have |q|<1 and |qtilde|<1. Their normalized germs have nonzero leading coefficients and absolutely convergent degree-0:3 q-product/Lambert-series jets. This proves no endpoint limit, no C248 path representation, no negative-k or cross-sign law, packet map, canonical current, contour identity, mixed-base transform, B-Fourier covariance, AFK, fusion, Stark, or TCC.",
+  "companion_decision": {
+    "adopted": true,
+    "falsifier": "Any retained factor with nonpositive determinant, a product base outside the unit disk, or a zero/undefined normalized leading coefficient.",
+    "identity": "/root/decision_companion_2",
+    "known_flaw": "The certificate supplies no compatibility of the jets with C248 coordinate-aware path composition and no endpoint or tilt-independence statement.",
+    "next_action": "Open a distinct cycle reconstructing the C248 positive filtered path representation using this frozen chamber; do not retrofit C248 or promote the certificate to a cross-sign result.",
+    "recommendation": "Seal C249/B086 with the factorwise fixed-tilt analytic-domain result.",
+    "reviewed_work": "C249 exact determinant audit for all eight C228 A/C factors at both embeddings, fixed-tilt q-product inequalities, normalized-germ factorization, and degree-0:3 Lambert-series convergence statement."
+  },
+  "cycle": 249,
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "prereg": {
+      "path": "docs/cycle-249-b086-common-jet-chamber-preregistration-v1.md",
+      "sha256": "c79df4ef48f8b67e2a1f2c4ed0cab711110661564fd8993b54d91146a18f69f9"
+    },
+    "prior_c228": {
+      "path": "artifacts/cycle-228-b065-f3-square-residual-block-v1.json",
+      "sha256": "2078970c02c1f1359de25394f57c9229dab4fef01c15894bc36b1ea177deafe4"
+    },
+    "prior_c228_replay": {
+      "path": "proof/verify_cycle_228_f3_square_residual_block.py",
+      "sha256": "3419d8d4f0e81cbfc8c970c3c1de5d16f6c79fa793042291156492796f683987"
+    },
+    "prior_c245": {
+      "path": "artifacts/cycle-245-b082-a-principal-coefficients-v1.json",
+      "sha256": "74f0e4e3f91a7554e5cc1cb5145a146de3d54a74a98da13cf739878300ad3a65"
+    },
+    "prior_c245_replay": {
+      "path": "proof/verify_cycle_245_a_principal_coefficients.py",
+      "sha256": "63829b316a362844f97bcfac4321bea5da8f0588e26b7ec2130d9dd3fc06d986"
+    },
+    "replay": {
+      "path": "proof/verify_cycle_249_common_jet_chamber.py",
+      "sha256": "a2d154cc8efed0db3db97d2ca7e0237ed1716ecf1cfadec57098bf3455f3b507"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    },
+    "source_paper": {
+      "path": "paper/sic-stark-dimension-six-boundary-fusion.tex",
+      "sha256": "347228e05a87946ca41bb31c118aae069b7fb6002fff4933d030a153cef21cb7"
+    },
+    "test": {
+      "path": "tests/test_cycle_249_common_jet_chamber.py",
+      "sha256": "fc0f610bcdd362f478ee02194f4b722d456d8e9c97ca0015eb62a379a74c04b7"
+    },
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_249_common_jet_chamber_v1.py",
+    "sha256": "59da8ecc19c9c477384fabe95470e9f1a4dd0114bcd8f85a6ec1137c2a0847f5"
+  },
+  "status": "SEALED_COMMON_FIXED_UPPER_CHAMBER_FOR_C228_JETS"
+}
