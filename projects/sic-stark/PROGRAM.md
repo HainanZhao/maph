@@ -14,9 +14,19 @@
   published equation-(66) transform defines a unique endpoint functional on
   the frozen 36-dimensional exponential-character space `T_6`. The exact
   helical lift is injective, and all 72 frequency factors plus
-  `Gamma_M(Q,0)` are finite and nonzero. This is not the divergent raw
-  contour, a periodized beta channel, an AFK amplitude identity, fusion, or
-  TCC; the active gate is exact helical/Zak amplitude matching.
+  `Gamma_M(Q,0)` are finite and nonzero. Cycle 199 proves that the declared
+  full-phase, symmetric three-class Abel boundary collapses to a
+  delta-supported rank-at-most-six input, so it cannot linearly realize the
+  36 distinct `T_6` characters. Cycle 200 proves the corresponding paired
+  pole jets through order five have rank at most 30, while the separate first
+  off-support source response has rank 36 but is Abel-rate dependent. This
+  separates a rank-36 two-scale germ from the endpoint boundary, and Cycle
+  201 proves that no complex-linear rate-invariant functional can retain that
+  germ. This rejects neither a rate-covariant normal derivative nor another
+  source-derived continuation. No divergent raw contour, periodized beta
+  channel, AFK amplitude identity, fusion, or TCC is proved; the active gate
+  is a source-forced rate-covariant normal-data construction before exact
+  helical/Zak amplitude matching.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -275,6 +285,29 @@
   unique source analytic-frequency functional, not a raw contour value or an
   AFK/periodization match. See
   `artifacts/cycle-198-b035-analytic-frequency-endpoint-v1.json`.
+- `PROVED`: Cycle 199 retains the full 24-dimensional source carrier and
+  derives the full equation-(66) three-step character ratio. The six and only
+  six Abel pole channels acquire opposite source-geodesically fixed `i0`
+  orientations. Their paired boundary is `12 i omega/D * delta(lambda)` and
+  loses all `b` dependence, giving rank at most six versus the 36 distinct
+  C198 targets. Thus no linear all-36 intertwiner exists for that exact
+  full-phase symmetric Abel prescription. It does not rule out off-support,
+  derivative, explicitly combined-residue, or non-Abel data. See
+  `artifacts/cycle-199-b036-full-phase-abel-boundary-v1.json`.
+- `PROVED`: Cycle 200 proves that symmetric paired-pole jets through
+  `delta^5` have only even orders and all-row rank at most 30; the fifth
+  finite-difference relation in `b` is an explicit witness. On every real
+  off-support interval, its first source Taylor coefficient has 36 independent
+  full-character analytic packets, but the raw coefficient is Abel-rate
+  dependent and is not an endpoint distribution. See
+  `artifacts/cycle-200-b037-regular-residue-jet-v1.json`.
+- `PROVED`: Cycle 201 treats the rank-30 boundary and rank-36 regular response
+  as a two-scale germ. Regulator dilation fixes the former and gives the
+  latter weight one. Thus every complex-linear rate-invariant functional kills
+  the regular coordinate and cannot map all 36 rows to the distinct C198
+  targets. This does not constrain rate-covariant normal derivatives,
+  nonlinear/higher-germ constructions, or non-Abel continuations. See
+  `artifacts/cycle-201-b038-two-scale-germ-covariance-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -363,7 +396,11 @@ Budget B001--B200
   |    |                                                                                                                                                                                             `-- finite-pole-free endpoint contour [SEALED]
   |    |                                                                                                                                                                                                  `-- scalar even Gaussian Abel rule [FALSIFIED]
   |    |                                                                                                                                                                                                       `-- analytic-frequency endpoint functional on T6 [SEALED]
-  |    |                                                                                                                                                                                                            `-- exact helical/Zak amplitude match [NEXT GATE]
+  |    |                                                                                                                                                                                                            `-- full-phase symmetric Abel boundary [FALSIFIED: rank <=6]
+  |    |                                                                                                                                                                                                                 `-- symmetric pole jets through delta^5 [FALSIFIED: rank <=30]
+  |    |                                                                                                                                                                                                                      `-- off-support full-character germ [SEALED: rank 36, rate-dependent]
+  |    |                                                                                                                                                                                                                           `-- linear regulator-invariant functional [FALSIFIED]
+  |    |                                                                                                                                                                                                                                `-- source normal derivative / rate-covariant functional [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -408,17 +445,17 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 199 helical/Zak amplitude decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `SOURCE_ANALYTIC_FREQUENCY_ENDPOINT_FUNCTIONAL_ON_T6_SEALED_PERIODIZED_AMPLITUDE_OPEN` | Construct one source-derived Zak/periodization map from the full equation-(66) carrier to `T_6` and prove exact all-36 amplitude equality, including zero modes, capital `Gamma_M`, and the separately pinned AFK phase. | Calling the analytic functional a raw integral or AFK value; selecting one alias; fitting weights/scalars; discarding alias holonomy, capital `Gamma_M`, or AFK phase; using selected exponents, SIC outcome variables, or ray labels. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 202 rate-covariant normal-data decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `SOURCE_ANALYTIC_FREQUENCY_ENDPOINT_FUNCTIONAL_ON_T6_SEALED_LINEAR_RATE_INVARIANT_GERM_FALSIFIED_NORMAL_DATA_OPEN` | Derive or reject a source-forced rate-covariant normal derivative of the rank-36 germ, then prove whether a source-defined Zak/periodization map can use it for exact all-36 amplitude equality, including zero modes, capital `Gamma_M`, and the separately pinned AFK phase. | Calling a rate-covariant normal datum a rate-invariant boundary value; selecting one alias; fitting weights, scalars, normalizations, or a functional; discarding alias holonomy, capital `Gamma_M`, or AFK phase; using selected exponents, SIC outcome variables, or ray labels. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Does the source helical quotient induce a phase-preserving Zak map from the
-  full equation-(66) carrier to `T_6`, or does exact alias holonomy obstruct
-  the required all-36 amplitude match?
+- Does the source normal derivative of the rank-36 two-scale Abel germ have
+  exact rate covariance and a source-defined route to a phase-preserving Zak
+  map to `T_6`?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -427,30 +464,29 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 199
+## Next goal: Cycle 202
 
 Preregister one substantive block with this question:
 
-> Does one source-derived helical/Zak periodization of the full 24-mode
-> equation-(66) transform descend to the sealed endpoint functional on `T_6`
-> and reproduce the exact all-36 capital-`Gamma_M` amplitudes with the AFK
-> phase kept separate, without fitted weights, selected aliases, or ray data?
+> Does the source normal derivative
+> `R=lim_(lambda->0) lambda^(-1)(G_lambda-B)` define a weight-one,
+> all-36 covariant germ datum, and can its normalization be fixed from the
+> source without fitted coefficients, selected aliases, or ray data?
 
-Cycle 199 must freeze the full source carrier, helical quotient, alias weights,
-Zak map, phase convention, and exact all-row amplitude criterion before
-executable work. It must include all 24 discrete modes and all 36 target
-characters, including zero modes; retain capital `Gamma_M` and the AFK phase
-as separate factors; and treat non-scalar alias holonomy and the finite
-anti-channel residues as constraints. It must not select a preferred alias,
-fit a scalar or counterterm, use selected exponents or ray labels, or claim an
-AFK, fusion, Stark, or TCC consequence unless the exact amplitude identity is
-proved first.
+Cycle 202 must freeze the two-scale germ, the normal coordinate, source
+dilation action, target covariance representation, and all-row normalization
+criterion before executable work. It must retain the rate-invariant boundary
+and rate-one regular response as distinct coordinates, include all 24 modes
+and 36 target characters, and keep capital `Gamma_M` and AFK phase separate.
+It must not select a preferred alias, divide by a post-chosen rate, fit a
+scalar/counterterm/normalization, use selected exponents or ray labels, or
+claim an AFK, fusion, Stark, or TCC consequence.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 198
+research cycle 201
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_198_analytic_frequency_endpoint_v1.py --check
+python3 proof/build_cycle_201_two_scale_germ_covariance_v1.py --check
 ```

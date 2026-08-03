@@ -1,0 +1,648 @@
+{
+  "artifact_id": "cycle-200-b037-regular-residue-jet-v1",
+  "budget_ordinal": "B037",
+  "claim_boundary": "For the frozen full-phase symmetric Abel family, the paired pole sector supplies only even delta jets through order five and has all-row rank at most 30. Separately, the exact first off-support source Taylor coefficient contains 36 independent full-character analytic packets, but its raw coefficient is Abel-rate dependent and is not an endpoint distribution. This proves neither a regular-plus-residue endpoint object, a Zak map, C198 amplitude equality, AFK data, fusion, Stark, nor TCC.",
+  "companion_decision": {
+    "adopted": true,
+    "falsifier": "Any i0 pairing/parity, jet-order, b-degree, rank-at-most-30, first off-support coefficient, residue-packet phase, analytic-rank-36, or replay discrepancy.",
+    "identity": "/root/decision_companion_2",
+    "known_flaw": "The rank-36 packet is a rate-dependent analytic germ, not a canonical endpoint distribution or regulator-independent AFK amplitude.",
+    "next_action": "Open a new cycle defining a source-forced two-scale boundary-germ space that retains the Abel normal variable, then test whether covariance selects a unique regulator-independent functional mapping its 36 packet germs to T_6.",
+    "reason": "The two exact, noninterchangeable categories are now explicit: the endpoint pole jet is insufficient, while the rank-complete germ has not crossed the endpoint-functional boundary.",
+    "recommendation": "Seal C200 as PROVED for the scoped symmetric endpoint-jet rank obstruction and the separate rank-36 off-support analytic packet ledger; keeping it live would conflate two target categories."
+  },
+  "cycle": 200,
+  "epistemic_status": "PROVED",
+  "first_off_support_coefficient": {
+    "abel_coordinate_coefficient": "1/(1-cosh(c_beta*Lambda))",
+    "domain": "real Lambda != 0, c_beta=pi*D/(2*omega)>0",
+    "epistemic_status": "PROVED",
+    "exact_kernel": "A_(exp(-lambda*s))(exp(-c_s*Lambda))=sinh(lambda*s)/(cosh(lambda*s)-cosh(c_s*Lambda))",
+    "first_s_coefficient": "lambda/(1-cosh(c_beta*Lambda))",
+    "proof": "sinh(lambda*s)=lambda*s+O(s^3), while the denominator is 1-cosh(c_beta*Lambda)+O(s) on the stated off-support domain.",
+    "rate_dependence": "The raw first s coefficient is proportional to lambda. Therefore it is not a lambda-independent endpoint limit; dividing by lambda*s defines only the displayed Abel-coordinate Taylor coefficient, not an endpoint value."
+  },
+  "frozen_hashes": {
+    "alias_normalization": {
+      "path": "scripts/dimension_six_alias_normalization.py",
+      "sha256": "b80fe677250136f1465679859f513bad7bccd49c8b72cc6e517a4fea300fe971"
+    },
+    "cycle199_character_comb_replay": {
+      "path": "proof/verify_cycle_199_abel_character_comb.py",
+      "sha256": "b06e6493dac1ac4b3de5c7f5af9d19f0367947025c7774b6f049a8a6839ee07b"
+    },
+    "cycle199_full_boundary_replay": {
+      "path": "proof/verify_cycle_199_full_phase_abel_boundary.py",
+      "sha256": "2ee95df4cf6b418ac2ad8736c6171ddc983412c7dd82567b56526aa88f585f0d"
+    },
+    "cycle199_full_carrier_replay": {
+      "path": "proof/verify_cycle_199_full_theta_carrier.py",
+      "sha256": "da80042d716df205b45f7b082d276da25f18508c92142a836b3fc7bfe552375f"
+    },
+    "cycle199_pole_geometry_replay": {
+      "path": "proof/verify_cycle_199_abel_pole_geometry.py",
+      "sha256": "b92e7d3512b289fb411ecbd4ff65d5ed0c5af9c242f5223f44bd08c947555e3d"
+    },
+    "helical_zak": {
+      "path": "scripts/dimension_six_helical_zak.py",
+      "sha256": "185f79ae0c3e5b560939a81551877cf0d14401100466793cc2d7fa4973061bf0"
+    },
+    "preregistration": {
+      "path": "docs/cycle-200-b037-regular-residue-jet-preregistration-v1.md",
+      "sha256": "75a855b03fd5fb17bf9fbf6d38b0d90b73b599ff8774ce1f4986bf0d11c67c05"
+    },
+    "preregistration_validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    },
+    "prior_endpoint_functional": {
+      "path": "artifacts/cycle-198-b035-analytic-frequency-endpoint-v1.json",
+      "sha256": "78328f0e8df4ea566fea804cef79217ad1201ca028004d911b7f43871e8f9a3f"
+    },
+    "prior_finite_anti_residue_sum": {
+      "path": "artifacts/cycle-195-b032-finite-anti-residue-sum-v1.json",
+      "sha256": "7e4d7615414dbf49627c9ea9cfa2b5e0191502cd6a6915fa93d13085cd50ae8d"
+    },
+    "prior_full_phase_abel_boundary": {
+      "path": "artifacts/cycle-199-b036-full-phase-abel-boundary-v1.json",
+      "sha256": "97e0100205df7e0ea73e9b61ab8e6278a146afe05d3000300ae57788be2c253e"
+    },
+    "prior_meromorphic_anti_channel": {
+      "path": "artifacts/cycle-194-b031-meromorphic-anti-channel-v2.json",
+      "sha256": "c8eb1e91d496019ed52c8a9b2c48949a5b87a7e88b84857259f34b9a8d43d52d"
+    },
+    "prototype": {
+      "path": "discovery/cycle-200-b037-regular-residue-jet-prototype-v1.json",
+      "sha256": "bb215149c983b32ae19491d84a0b0d4379e156d8864d341293c57895381afb64"
+    },
+    "regression_test": {
+      "path": "tests/test_cycle_200_regular_residue_jet.py",
+      "sha256": "b1b90b8891850633ce2d726f5dc69d77c865c733672f50dbb6ad4c295915a4d2"
+    },
+    "replay": {
+      "path": "proof/verify_cycle_200_regular_residue_jet.py",
+      "sha256": "c93c8f6e9341e3c94714f558176a726ba30ac63c2a2e6056114e8a4328b0a2e9"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    }
+  },
+  "full_packet_independence": {
+    "analytic_function_rank": 36,
+    "epistemic_status": "PROVED",
+    "fixed_a_b_packets": "six distinct monomials t^(4*b) times a common nonzero analytic factor",
+    "full_three_residue_packet": "zeta_6^(5*h*a)*t^(4*b-5*a)*(1+t^6+t^12)",
+    "h_phase_matrix": "[zeta_6^(5*h*a)]_(h,a in Z/6Z), a permuted six-point DFT",
+    "m_channels": [
+      0,
+      4,
+      8,
+      12,
+      16,
+      20
+    ],
+    "records": [
+      {
+        "characteristic": [
+          0,
+          0
+        ],
+        "h_phase": "zeta_6^(5*h*0)",
+        "packet": "zeta_6^(5*h*0)*t^(0)*(1+t^6+t^12)",
+        "t_exponents_for_r_0_1_2": [
+          0,
+          6,
+          12
+        ]
+      },
+      {
+        "characteristic": [
+          0,
+          1
+        ],
+        "h_phase": "zeta_6^(5*h*0)",
+        "packet": "zeta_6^(5*h*0)*t^(4)*(1+t^6+t^12)",
+        "t_exponents_for_r_0_1_2": [
+          4,
+          10,
+          16
+        ]
+      },
+      {
+        "characteristic": [
+          0,
+          2
+        ],
+        "h_phase": "zeta_6^(5*h*0)",
+        "packet": "zeta_6^(5*h*0)*t^(8)*(1+t^6+t^12)",
+        "t_exponents_for_r_0_1_2": [
+          8,
+          14,
+          20
+        ]
+      },
+      {
+        "characteristic": [
+          0,
+          3
+        ],
+        "h_phase": "zeta_6^(5*h*0)",
+        "packet": "zeta_6^(5*h*0)*t^(12)*(1+t^6+t^12)",
+        "t_exponents_for_r_0_1_2": [
+          12,
+          18,
+          24
+        ]
+      },
+      {
+        "characteristic": [
+          0,
+          4
+        ],
+        "h_phase": "zeta_6^(5*h*0)",
+        "packet": "zeta_6^(5*h*0)*t^(16)*(1+t^6+t^12)",
+        "t_exponents_for_r_0_1_2": [
+          16,
+          22,
+          28
+        ]
+      },
+      {
+        "characteristic": [
+          0,
+          5
+        ],
+        "h_phase": "zeta_6^(5*h*0)",
+        "packet": "zeta_6^(5*h*0)*t^(20)*(1+t^6+t^12)",
+        "t_exponents_for_r_0_1_2": [
+          20,
+          26,
+          32
+        ]
+      },
+      {
+        "characteristic": [
+          1,
+          0
+        ],
+        "h_phase": "zeta_6^(5*h*1)",
+        "packet": "zeta_6^(5*h*1)*t^(-5)*(1+t^6+t^12)",
+        "t_exponents_for_r_0_1_2": [
+          -5,
+          1,
+          7
+        ]
+      },
+      {
+        "characteristic": [
+          1,
+          1
+        ],
+        "h_phase": "zeta_6^(5*h*1)",
+        "packet": "zeta_6^(5*h*1)*t^(-1)*(1+t^6+t^12)",
+        "t_exponents_for_r_0_1_2": [
+          -1,
+          5,
+          11
+        ]
+      },
+      {
+        "characteristic": [
+          1,
+          2
+        ],
+        "h_phase": "zeta_6^(5*h*1)",
+        "packet": "zeta_6^(5*h*1)*t^(3)*(1+t^6+t^12)",
+        "t_exponents_for_r_0_1_2": [
+          3,
+          9,
+          15
+        ]
+      },
+      {
+        "characteristic": [
+          1,
+          3
+        ],
+        "h_phase": "zeta_6^(5*h*1)",
+        "packet": "zeta_6^(5*h*1)*t^(7)*(1+t^6+t^12)",
+        "t_exponents_for_r_0_1_2": [
+          7,
+          13,
+          19
+        ]
+      },
+      {
+        "characteristic": [
+          1,
+          4
+        ],
+        "h_phase": "zeta_6^(5*h*1)",
+        "packet": "zeta_6^(5*h*1)*t^(11)*(1+t^6+t^12)",
+        "t_exponents_for_r_0_1_2": [
+          11,
+          17,
+          23
+        ]
+      },
+      {
+        "characteristic": [
+          1,
+          5
+        ],
+        "h_phase": "zeta_6^(5*h*1)",
+        "packet": "zeta_6^(5*h*1)*t^(15)*(1+t^6+t^12)",
+        "t_exponents_for_r_0_1_2": [
+          15,
+          21,
+          27
+        ]
+      },
+      {
+        "characteristic": [
+          2,
+          0
+        ],
+        "h_phase": "zeta_6^(5*h*2)",
+        "packet": "zeta_6^(5*h*2)*t^(-10)*(1+t^6+t^12)",
+        "t_exponents_for_r_0_1_2": [
+          -10,
+          -4,
+          2
+        ]
+      },
+      {
+        "characteristic": [
+          2,
+          1
+        ],
+        "h_phase": "zeta_6^(5*h*2)",
+        "packet": "zeta_6^(5*h*2)*t^(-6)*(1+t^6+t^12)",
+        "t_exponents_for_r_0_1_2": [
+          -6,
+          0,
+          6
+        ]
+      },
+      {
+        "characteristic": [
+          2,
+          2
+        ],
+        "h_phase": "zeta_6^(5*h*2)",
+        "packet": "zeta_6^(5*h*2)*t^(-2)*(1+t^6+t^12)",
+        "t_exponents_for_r_0_1_2": [
+          -2,
+          4,
+          10
+        ]
+      },
+      {
+        "characteristic": [
+          2,
+          3
+        ],
+        "h_phase": "zeta_6^(5*h*2)",
+        "packet": "zeta_6^(5*h*2)*t^(2)*(1+t^6+t^12)",
+        "t_exponents_for_r_0_1_2": [
+          2,
+          8,
+          14
+        ]
+      },
+      {
+        "characteristic": [
+          2,
+          4
+        ],
+        "h_phase": "zeta_6^(5*h*2)",
+        "packet": "zeta_6^(5*h*2)*t^(6)*(1+t^6+t^12)",
+        "t_exponents_for_r_0_1_2": [
+          6,
+          12,
+          18
+        ]
+      },
+      {
+        "characteristic": [
+          2,
+          5
+        ],
+        "h_phase": "zeta_6^(5*h*2)",
+        "packet": "zeta_6^(5*h*2)*t^(10)*(1+t^6+t^12)",
+        "t_exponents_for_r_0_1_2": [
+          10,
+          16,
+          22
+        ]
+      },
+      {
+        "characteristic": [
+          3,
+          0
+        ],
+        "h_phase": "zeta_6^(5*h*3)",
+        "packet": "zeta_6^(5*h*3)*t^(-15)*(1+t^6+t^12)",
+        "t_exponents_for_r_0_1_2": [
+          -15,
+          -9,
+          -3
+        ]
+      },
+      {
+        "characteristic": [
+          3,
+          1
+        ],
+        "h_phase": "zeta_6^(5*h*3)",
+        "packet": "zeta_6^(5*h*3)*t^(-11)*(1+t^6+t^12)",
+        "t_exponents_for_r_0_1_2": [
+          -11,
+          -5,
+          1
+        ]
+      },
+      {
+        "characteristic": [
+          3,
+          2
+        ],
+        "h_phase": "zeta_6^(5*h*3)",
+        "packet": "zeta_6^(5*h*3)*t^(-7)*(1+t^6+t^12)",
+        "t_exponents_for_r_0_1_2": [
+          -7,
+          -1,
+          5
+        ]
+      },
+      {
+        "characteristic": [
+          3,
+          3
+        ],
+        "h_phase": "zeta_6^(5*h*3)",
+        "packet": "zeta_6^(5*h*3)*t^(-3)*(1+t^6+t^12)",
+        "t_exponents_for_r_0_1_2": [
+          -3,
+          3,
+          9
+        ]
+      },
+      {
+        "characteristic": [
+          3,
+          4
+        ],
+        "h_phase": "zeta_6^(5*h*3)",
+        "packet": "zeta_6^(5*h*3)*t^(1)*(1+t^6+t^12)",
+        "t_exponents_for_r_0_1_2": [
+          1,
+          7,
+          13
+        ]
+      },
+      {
+        "characteristic": [
+          3,
+          5
+        ],
+        "h_phase": "zeta_6^(5*h*3)",
+        "packet": "zeta_6^(5*h*3)*t^(5)*(1+t^6+t^12)",
+        "t_exponents_for_r_0_1_2": [
+          5,
+          11,
+          17
+        ]
+      },
+      {
+        "characteristic": [
+          4,
+          0
+        ],
+        "h_phase": "zeta_6^(5*h*4)",
+        "packet": "zeta_6^(5*h*4)*t^(-20)*(1+t^6+t^12)",
+        "t_exponents_for_r_0_1_2": [
+          -20,
+          -14,
+          -8
+        ]
+      },
+      {
+        "characteristic": [
+          4,
+          1
+        ],
+        "h_phase": "zeta_6^(5*h*4)",
+        "packet": "zeta_6^(5*h*4)*t^(-16)*(1+t^6+t^12)",
+        "t_exponents_for_r_0_1_2": [
+          -16,
+          -10,
+          -4
+        ]
+      },
+      {
+        "characteristic": [
+          4,
+          2
+        ],
+        "h_phase": "zeta_6^(5*h*4)",
+        "packet": "zeta_6^(5*h*4)*t^(-12)*(1+t^6+t^12)",
+        "t_exponents_for_r_0_1_2": [
+          -12,
+          -6,
+          0
+        ]
+      },
+      {
+        "characteristic": [
+          4,
+          3
+        ],
+        "h_phase": "zeta_6^(5*h*4)",
+        "packet": "zeta_6^(5*h*4)*t^(-8)*(1+t^6+t^12)",
+        "t_exponents_for_r_0_1_2": [
+          -8,
+          -2,
+          4
+        ]
+      },
+      {
+        "characteristic": [
+          4,
+          4
+        ],
+        "h_phase": "zeta_6^(5*h*4)",
+        "packet": "zeta_6^(5*h*4)*t^(-4)*(1+t^6+t^12)",
+        "t_exponents_for_r_0_1_2": [
+          -4,
+          2,
+          8
+        ]
+      },
+      {
+        "characteristic": [
+          4,
+          5
+        ],
+        "h_phase": "zeta_6^(5*h*4)",
+        "packet": "zeta_6^(5*h*4)*t^(0)*(1+t^6+t^12)",
+        "t_exponents_for_r_0_1_2": [
+          0,
+          6,
+          12
+        ]
+      },
+      {
+        "characteristic": [
+          5,
+          0
+        ],
+        "h_phase": "zeta_6^(5*h*5)",
+        "packet": "zeta_6^(5*h*5)*t^(-25)*(1+t^6+t^12)",
+        "t_exponents_for_r_0_1_2": [
+          -25,
+          -19,
+          -13
+        ]
+      },
+      {
+        "characteristic": [
+          5,
+          1
+        ],
+        "h_phase": "zeta_6^(5*h*5)",
+        "packet": "zeta_6^(5*h*5)*t^(-21)*(1+t^6+t^12)",
+        "t_exponents_for_r_0_1_2": [
+          -21,
+          -15,
+          -9
+        ]
+      },
+      {
+        "characteristic": [
+          5,
+          2
+        ],
+        "h_phase": "zeta_6^(5*h*5)",
+        "packet": "zeta_6^(5*h*5)*t^(-17)*(1+t^6+t^12)",
+        "t_exponents_for_r_0_1_2": [
+          -17,
+          -11,
+          -5
+        ]
+      },
+      {
+        "characteristic": [
+          5,
+          3
+        ],
+        "h_phase": "zeta_6^(5*h*5)",
+        "packet": "zeta_6^(5*h*5)*t^(-13)*(1+t^6+t^12)",
+        "t_exponents_for_r_0_1_2": [
+          -13,
+          -7,
+          -1
+        ]
+      },
+      {
+        "characteristic": [
+          5,
+          4
+        ],
+        "h_phase": "zeta_6^(5*h*5)",
+        "packet": "zeta_6^(5*h*5)*t^(-9)*(1+t^6+t^12)",
+        "t_exponents_for_r_0_1_2": [
+          -9,
+          -3,
+          3
+        ]
+      },
+      {
+        "characteristic": [
+          5,
+          5
+        ],
+        "h_phase": "zeta_6^(5*h*5)",
+        "packet": "zeta_6^(5*h*5)*t^(-5)*(1+t^6+t^12)",
+        "t_exponents_for_r_0_1_2": [
+          -5,
+          1,
+          7
+        ]
+      }
+    ],
+    "row_count": 36,
+    "scope": "Rank is on the six m=4h channel functions over any real Lambda interval avoiding the collision. It is not rank of the C199 delta boundary and does not construct J.",
+    "variable": "t=exp(-pi*D*Lambda/(36*omega))"
+  },
+  "gate_outcome": {
+    "off_support_full_character_response": "PROVED_RANK_36_BUT_NOT_ENDPOINT_OBJECT",
+    "paired_pole_jet_through_order_five": "FALSIFIED_FOR_ALL36_RANK",
+    "remaining_design_problem": "Derive a source-authorized operation that joins the rank-36 off-support response to a finite lambda-independent endpoint object without a fitted finite part or renormalization."
+  },
+  "outcome": {
+    "epistemic_status": "PROVED",
+    "statement": "The paired symmetric pole sector of the frozen Abel family has only even delta jets through order five and cannot retain all 36 rows (rank at most 30). The exact first off-support source Taylor coefficient instead carries 36 independent analytic full-character packets, but is Abel-rate dependent and is not a canonical endpoint object."
+  },
+  "paired_pole_jet_parity": {
+    "all_a_b_rank_upper_bound_through_order_five": 30,
+    "epistemic_status": "PROVED",
+    "fixed_a_collision_witness": "sum_(b=0)^5 (-1)^(5-b)*binom(5,b)*row_(a,b)=0 for every a; each retained full-phase coefficient is a polynomial in b of degree at most four",
+    "maximum_b_polynomial_degree_through_order_five": 4,
+    "maximum_b_rank_through_order_five": 5,
+    "odd_delta_jets_source_forbidden_by_pair_symmetry": true,
+    "paired_pole_distribution": "delta(Lambda-a_s)+delta(Lambda+a_s)",
+    "records": [
+      {
+        "b_rank_upper_bound": 1,
+        "delta_derivative_order": 0,
+        "maximum_full_phase_polynomial_degree": 0,
+        "source_coefficient_status": "possible paired-pole Taylor coefficient"
+      },
+      {
+        "b_rank_upper_bound": 3,
+        "delta_derivative_order": 2,
+        "maximum_full_phase_polynomial_degree": 2,
+        "source_coefficient_status": "possible paired-pole Taylor coefficient"
+      },
+      {
+        "b_rank_upper_bound": 5,
+        "delta_derivative_order": 4,
+        "maximum_full_phase_polynomial_degree": 4,
+        "source_coefficient_status": "possible paired-pole Taylor coefficient"
+      }
+    ],
+    "retained_orders_through_five": [
+      0,
+      2,
+      4
+    ],
+    "scope": "This bounds the paired pole sector only. It does not discard the regular off-support Taylor coefficient."
+  },
+  "preregistration_preflight": {
+    "cycle": 200,
+    "manifest_sha256": "75a855b03fd5fb17bf9fbf6d38b0d90b73b599ff8774ce1f4986bf0d11c67c05",
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_200_regular_residue_jet_v1.py --check",
+    "preflight_command": "research prereg check docs/cycle-200-b037-regular-residue-jet-preregistration-v1.md --expected-cycle 200 --allow-head-drift",
+    "prototype_command": "python3 proof/verify_cycle_200_regular_residue_jet.py --output discovery/cycle-200-b037-regular-residue-jet-prototype-v1.json",
+    "test_command": "python3 -m unittest tests/test_cycle_200_regular_residue_jet.py",
+    "write_command": "python3 proof/build_cycle_200_regular_residue_jet_v1.py --write"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_200_regular_residue_jet_v1.py",
+    "sha256": "2440dd8f9620de815d4b4ce0dd42b093dd59a4fa53939cef2edd8e0eaf09fc70"
+  },
+  "status": "SEALED_SYMMETRIC_POLE_JET_RANK30_AND_OFF_SUPPORT_PACKET_RANK36"
+}
