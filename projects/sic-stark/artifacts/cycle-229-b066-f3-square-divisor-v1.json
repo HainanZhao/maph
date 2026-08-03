@@ -1,0 +1,126 @@
+{
+  "artifact_id": "cycle-229-b066-f3-square-divisor-v1",
+  "budget_ordinal": "B066",
+  "claim_boundary": "The two frozen residual blocks have order-four poles at mu=0, excluding mu-independent scalar reductions only.",
+  "companion_decision": {
+    "adopted": true,
+    "identity": "/root/decision_companion_2",
+    "known_flaw": "Argument-dependent cochains remain open.",
+    "next_action": "Solve divisor coboundary under F3^2 affine/576 action.",
+    "recommendation": "Seal C229 and open divisor-coboundary cycle."
+  },
+  "cycle": 229,
+  "divisor_audit": {
+    "blocks": {
+      "A": {
+        "pole_order_at_mu_zero": 4,
+        "zero_order_at_mu_zero": 0
+      },
+      "C": {
+        "pole_order_at_mu_zero": 4,
+        "zero_order_at_mu_zero": 0
+      }
+    },
+    "conclusion": "Each four-factor block has an uncancelled pole of order four at mu=0, hence is nonconstant and cannot equal a scalar/cocycle independent of mu.",
+    "epistemic_status": "PROVED",
+    "rows": [
+      {
+        "mu_zero_pole": true,
+        "mu_zero_zero": false,
+        "period_determinant": "1/24",
+        "position": 1,
+        "start": "A"
+      },
+      {
+        "mu_zero_pole": true,
+        "mu_zero_zero": false,
+        "period_determinant": "1/24",
+        "position": 2,
+        "start": "A"
+      },
+      {
+        "mu_zero_pole": true,
+        "mu_zero_zero": false,
+        "period_determinant": "24",
+        "position": 3,
+        "start": "A"
+      },
+      {
+        "mu_zero_pole": true,
+        "mu_zero_zero": false,
+        "period_determinant": "24",
+        "position": 4,
+        "start": "A"
+      },
+      {
+        "mu_zero_pole": true,
+        "mu_zero_zero": false,
+        "period_determinant": "1/24",
+        "position": 1,
+        "start": "C"
+      },
+      {
+        "mu_zero_pole": true,
+        "mu_zero_zero": false,
+        "period_determinant": "1/24",
+        "position": 2,
+        "start": "C"
+      },
+      {
+        "mu_zero_pole": true,
+        "mu_zero_zero": false,
+        "period_determinant": "24",
+        "position": 3,
+        "start": "C"
+      },
+      {
+        "mu_zero_pole": true,
+        "mu_zero_zero": false,
+        "period_determinant": "24",
+        "position": 4,
+        "start": "C"
+      }
+    ]
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "prereg": {
+      "path": "docs/cycle-229-b066-f3-square-divisor-preregistration-v1.md",
+      "sha256": "d9a0c2a17a48714db26432adfb502449d9acce30b9245292ce6913bcfae9b519"
+    },
+    "prior": {
+      "path": "artifacts/cycle-228-b065-f3-square-residual-block-v1.json",
+      "sha256": "2078970c02c1f1359de25394f57c9229dab4fef01c15894bc36b1ea177deafe4"
+    },
+    "prototype": {
+      "path": "discovery/cycle-229-b066-f3-square-divisor-prototype-v1.json",
+      "sha256": "b166fdc0ee87f2f1458f30808ec9e61384517e6b5f56a883133871cd41a91355"
+    },
+    "replay": {
+      "path": "proof/verify_cycle_229_f3_square_divisor.py",
+      "sha256": "0a00cd8108dc664cd01f791a4e48ac765210a18df0db5980b8e0f21f7d72d99a"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    },
+    "test": {
+      "path": "tests/test_cycle_229_f3_square_divisor.py",
+      "sha256": "64600e93b716486b05786ef36bcb422f0cacf783f1052353aff1cb90b8183e0a"
+    },
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_229_f3_square_divisor_v1.py",
+    "sha256": "6ccc2102359adf4165607b75e650f9be8f42eda1d2f7e2a2e8b9e4be3ea90363"
+  },
+  "status": "SEALED_F3_SQUARE_UNCANCELLED_DIVISOR"
+}
