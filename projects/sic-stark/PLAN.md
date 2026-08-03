@@ -10,13 +10,12 @@
   scopes in dimensions 4, 5, 7, and 8. No dimension-six TCC identity,
   coefficient-to-ray map, fusion-continuity theorem, or boundary-limit theorem
   is proved. `CERTIFIED_NUMERICAL` packet growth is not a nonexistence theorem.
-- Current state: Cycle 186 / `B024` v2 corrects an even-d
-  standard-representative sign omission in v1 and proves that the corrected
-  finite AFK normalized-overlap relations still leave 16 free nonzero
-  inverse-pair coordinates: they do not determine even `nu_(0,1)^2`,
-  independently of the sealed 11-label multiplier transfer. The next gate is
-  an actual analytic cross-characteristic transport/evaluation identity from
-  the modular cocycle or the `2psi2/2phi1` packet.
+- Current state: Cycle 188 / `B025` applies actual same-tuple AFK stabilizer
+  covariance with the corrected even-d representative signs. It reduces the
+  finite packet from 16 inverse-pair coordinates to six stabilizer-orbit-pair
+  amplitudes, but still does not determine `nu_(0,1)^2`. The next gate is a
+  genuine modular-cocycle / sign-reflected `2psi2`-to-`2phi1` boundary
+  evaluation that supplies an additional cross-orbit relation.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -186,6 +185,14 @@
   `nu_(0,1)^2`; it neither realizes arbitrary analytic cocycles nor rules out
   an additional analytic identity. See
   `artifacts/cycle-186-normalized-afk-packet-v2.json`.
+- `PROVED`: Cycle 188 specializes AFK tuple covariance to the canonical
+  stabilizer `L=((5,-1),(1,0))`, checks `Q_L=Q` and its positive `j`-sign,
+  and combines it with the corrected standard-representative convention. All
+  35 signed transports close; the 16 free inverse-pair coordinates collapse
+  to six inverse stabilizer-orbit pairs plus one discrete self-inverse orbit.
+  Two exact signed assignments still separate `nu_(0,1)^2`. This is finite
+  source covariance only, not a cocycle evaluation, ray map, fusion theorem,
+  or TCC proof. See `artifacts/cycle-188-stabilizer-covariance-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -258,7 +265,8 @@ Budget B001--B200
   |    |                                                                                                             `-- multiplier-refined correspondence [SEALED]
   |    |                                                                                                                  `-- multiplier-weighted relation transfer [SEALED]
   |    |                                                                                                                       `-- finite normalized AFK packet relations [CORRECTED SEALED: UNDERDETERMINED]
-  |    |                                                                                                                            `-- analytic cocycle / 2psi2--2phi1 transport identity [NEXT GATE]
+  |    |                                                                                                                            `-- same-tuple stabilizer covariance [SEALED: SIX ORBIT PAIRS]
+  |    |                                                                                                                                 `-- analytic sign-reflected 2psi2--2phi1 boundary evaluation [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -303,19 +311,18 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `B024_OF_200` | Complete a companion-reviewed substantive Cycle 188/B025 decision before incrementing again. Cycle 187 was a contained, non-counted preflight that exposed the v1 convention defect. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `CORRECTED_NORMALIZED_AFK_FINITE_RELATIONS_UNDERDETERMINED_ANALYTIC_SHINTANI_TRANSPORT_REQUIRED` | Derive and test an exact analytic cross-characteristic identity from the source-defined modular cocycle or `2psi2/2phi1` packet; it must constrain an overlap beyond the corrected signed reciprocal pairing before comparison with the 11-label transfer algebra. | Treating finite countermodels as analytic cocycles; using unsigned standard-representative reciprocal relations in even d; calling multiplier weights spectral coefficients; fitting a character; selecting exponents; using `s,d`, or ray labels. |
+| Project budget | `B025_OF_200` | Complete a companion-reviewed substantive Cycle 189/B026 decision before incrementing again. Cycle 187 was a contained, non-counted preflight that exposed the v1 convention defect. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `SAME_TUPLE_STABILIZER_COVARIANCE_VALIDATED_ANALYTIC_QSERIES_EVALUATION_REQUIRED` | Prove an explicit sign-reflected `2psi2`-to-`2phi1` continuation/boundary identity with checked domain and branch, yielding either an exact cross-orbit relation or a rigorous enclosure with margin for a remaining amplitude before comparison with the 11-label transfer algebra. | Treating finite covariance as a cocycle evaluation; treating finite countermodels as analytic cocycles; using unsigned standard-representative relations; calling multiplier weights spectral coefficients; fitting a character; selecting exponents; using `s,d`, or ray labels. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Can a source-defined modular-cocycle or `2psi2/2phi1` transport identity
-  impose a cross-characteristic constraint beyond corrected signed reciprocal
-  pairing, and
-  does it agree with or rule out the 11-label multiplier-weighted transfer
-  algebra?
+- Can an explicit sign-reflected `2psi2`-to-`2phi1` continuation at the
+  canonical modular boundary impose a cross-orbit relation beyond the six
+  surviving stabilizer-orbit amplitudes, and does it agree with or rule out
+  the 11-label multiplier-weighted transfer algebra?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -324,33 +331,33 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 188 / `B025`
+## Next goal: Cycle 189 / `B026`
 
 Preregister one substantive block with this question:
 
-> Does the actual phase-and-modular-cocycle definition, or the exact d=6
-> `2psi2/2phi1` packet derived from it, furnish a valid cross-characteristic
-> `A_6`/Shintani transport identity that constrains `nu_(0,1)^2` beyond the
-> corrected signed reciprocal relations, without `s`, `d`, selected exponents, fitted
+> Can one explicit sign-reflected d=6 `2psi2`-to-`2phi1` continuation formula,
+> with a checked interior domain and a pinned modular boundary branch, yield
+> an exact cross-orbit relation or a `CERTIFIED_NUMERICAL` enclosure with
+> strict margin that constrains `nu_(0,1)^2` beyond the six sealed
+> stabilizer-orbit pairs, without `s`, `d`, selected exponents, fitted
 > characters, or ray labels?
 
-Cycle 188 must freeze the corrected standard-representative convention, the
-actual source-side definition, every proposed
-transport formula and its domain/continuation convention, the exact
-`2psi2/2phi1` packet reduction if used, the target observable, and a
-full-domain failure rule before executable work. It must distinguish a
-same-tuple packet identity from AFK's tuple covariance; it must not replace
-the modular-cocycle values with multiplier weights, fit character data to the
-transfer result, select exponents, use `s,d` or ray labels, or claim a
-Stark/fusion/TCC consequence from finite agreement. Cycle 186's companion
-review requires a genuinely analytic source-side construction, since the
-corrected finite quotient deliberately leaves the relevant amplitudes free.
+Cycle 189 must freeze one named continuation identity (including parameter
+map), its exact interior convergence domain, boundary approach and branch,
+the relation to a source-defined overlap observable, resource cap, and a
+strict exact/enclosure advance rule before executable work. It must not
+substitute Bailey--Daum's `+q` value for the required `-q` packet, replace the
+modular-cocycle values with multiplier weights, fit character data to transfer
+labels, select exponents, use `s,d` or ray labels, or claim a Stark/fusion/TCC
+consequence from finite agreement. The companion requires a genuinely
+analytic source-side construction because finite covariance leaves six orbit
+amplitudes free.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 186
+research cycle 188
 sed -n '1,260p' PLAN.md
-python3 proof/build_cycle_186_normalized_afk_packet_v2.py --check
+python3 proof/build_cycle_188_stabilizer_covariance_v1.py --check
 ```
