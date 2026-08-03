@@ -106,6 +106,10 @@
   four-gamma residual has an additional uncancelled period-dependent pole.
   The remaining design problem is a finite theta product with
   period-dependent arguments, constrained first by its full divisor classes.
+  Cycle 233 proves that the A residual already has infinitely many
+  uncancelled projective period directions, excluding every finite
+  linear-argument theta product. A source-normalized infinite scale product
+  remains the next distinct completion engine.
   No endpoint binomial value has been
   evaluated. No divergent raw contour, periodized beta channel, AFK amplitude
   identity, fusion, or TCC is proved.
@@ -723,17 +727,17 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 233 residual-divisor-class decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `SINGLE_THETA_FULL_RESIDUAL_CONTAINED` | Classify full residual pole classes, then construct or eliminate a finite theta product with frozen linear period-dependent arguments before testing reflection and normalization. | Calling a principal-only theta solution a full cochain; fitting theta arguments after inspecting divisor rows; ignoring an unmatched divisor family. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 234 scale-iterated cochain decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `FINITE_LINEAR_THETA_DIVISOR_OBSTRUCTED` | Normalize the full residual by its source Laurent coefficient, then construct or obstruct a convergent scale-iterated cochain before testing its full divisor, reflection, and source normalization. | Calling a formal or unproved-convergent product a cochain; ignoring its full divisor; or inferring a signed extension. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Do the full A/C residual pole classes admit a finite product of
-  `q=1/576` theta factors with frozen linear period-dependent arguments, or
-  does an exact unmatched divisor family obstruct that engine?
+- Does a source-normalized scale-iterated product of the full residual
+  converge and carry an admissible divisor, reflection, and source
+  normalization under the `576` action?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -742,23 +746,23 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 233 / B070
+## Next goal: Cycle 234 / B071
 
 Preregister one substantive block with this question:
 
-> Does the full residual divisor lattice admit a finite `q=1/576` theta
-> product with frozen linear period-dependent arguments?
+> Does a source-normalized scale-iterated full-residual product converge to
+> a cochain with the required divisor data?
 
-Cycle 233 must freeze the exact theta-product family, divisor-class action,
-finite-factor cap, and an explicit construct-or-unmatched-family criterion
+Cycle 234 must freeze the residual normalization, product order, convergence
+domain, divisor criterion, and reflection/normalization acceptance ladder
 before executable work. It must keep the AFK phase separate, forbid fitted
-arguments, and not claim an AFK, fusion, Stark, or TCC consequence.
+regularization, and not claim an AFK, fusion, Stark, or TCC consequence.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 232
+research cycle 233
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_232_multiplicative_theta_v1.py --check
+python3 proof/build_cycle_233_finite_linear_theta_v1.py --check
 ```
