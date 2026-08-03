@@ -1,0 +1,106 @@
+{
+  "artifact_id": "cycle-236-b073-ordered-word-dualization-v1",
+  "budget_ordinal": "B073",
+  "claim_boundary": "The frozen ordered A/C residual words admit no source reflection reverse/invert endofunctor. This excludes neither a source-reachable enlarged word category, formal localization, non-source duality, target representation, AFK, fusion, Stark, or TCC construction.",
+  "companion_decision": {
+    "adopted": true,
+    "evidence_scope_review": "C228 partners, eight-factor ledger, word reversal, four-position absence, loop assignment, and no-commutation boundary were reviewed.",
+    "falsifier": "Any C228 partner formula, eight-factor ledger, word reversal/order, four-position absence, loop assignment, no-commutation boundary, or replay discrepancy.",
+    "identity": "/root/decision_companion_2",
+    "known_flaw": "Source-reachable enlarged words, formal localization, non-source duality, and targets remain.",
+    "next_action": "Solve exact F2/F3 edge period/argument equations for each missing reflection partner.",
+    "recommendation": "Seal C236 and test source reachability of every missing partner before adjoining any."
+  },
+  "cycle": 236,
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "prereg": {
+      "path": "docs/cycle-236-b073-ordered-word-dualization-preregistration-v1.md",
+      "sha256": "cab8f3d6b1eb410eac077d9f7f445de8afc2932b080a011b5624c82a3f0e2319"
+    },
+    "prior": {
+      "path": "artifacts/cycle-235-b072-meromorphic-loop-holonomy-v1.json",
+      "sha256": "89064a523f1e26661d2041affc6a2708047bb0b6f412d6a20db9afc6bfc0268a"
+    },
+    "prototype": {
+      "path": "discovery/cycle-236-b073-ordered-word-dualization-prototype-v1.json",
+      "sha256": "499bf134abf46f0bef895267d9b9da9d653ab0ff5c8ce2daad544bad1e2196c1"
+    },
+    "replay": {
+      "path": "proof/verify_cycle_236_ordered_word_dualization.py",
+      "sha256": "ec8584272fab3eb909ab20b6081198df89999182af0503e0835b390faa74fe97"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    },
+    "test": {
+      "path": "tests/test_cycle_236_ordered_word_dualization.py",
+      "sha256": "090832732d633b45322b5affe696eb9b91dd198e39a3addc07d16c8cf11855e9"
+    },
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "ordered_word_audit": {
+    "conclusion": "Neither A nor C ordered F3^2 residual word is closed under source reflection reversal/inversion, because every required factor partner is absent from the frozen word category. This excludes only the frozen ordered-word dualization and proves no Gamma_M interface, target representation, AFK, fusion, Stark, or TCC result.",
+    "dualization": {
+      "rows": [
+        {
+          "dual_word_order": "reversed",
+          "dualization_is_endofunctor": false,
+          "missing_reflection_partner_positions": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "ordered_loop_word": "a c",
+          "start": "A"
+        },
+        {
+          "dual_word_order": "reversed",
+          "dualization_is_endofunctor": false,
+          "missing_reflection_partner_positions": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "ordered_loop_word": "c a",
+          "start": "C"
+        }
+      ],
+      "rule": "reverse order and replace every factor by its S--S (32) reflection partner with Bernoulli factor",
+      "source_reflection_endofunctor_exists": false,
+      "status": "FALSIFIED_BY_FACTOR_PARTNER_ABSENCE"
+    },
+    "epistemic_status": "PROVED",
+    "ordered_word_category": {
+      "composition": "concatenation without commutation",
+      "edge_words": {
+        "A_to_C": "a",
+        "C_to_A": "c"
+      },
+      "loop_words": {
+        "A": "a c",
+        "C": "c a"
+      },
+      "objects": [
+        "A",
+        "C"
+      ]
+    }
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_236_ordered_word_dualization_v1.py",
+    "sha256": "79cb8b748251d3fa7ce5875cdbc4cc0cc597af0102c63f739968138e14820127"
+  },
+  "status": "SEALED_ORDERED_WORD_REFLECTION_DUALIZATION_OBSTRUCTION"
+}
