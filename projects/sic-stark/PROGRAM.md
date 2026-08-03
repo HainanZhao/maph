@@ -34,10 +34,16 @@
   nonzero target coordinates but no multiplicative equality to that source
   packet. Cycle 207 proves that all 25 target elementary binomials are
   excluded from the entire standard factorwise `Gamma_M` shift/reflection
-  route by exact recurrence-class signatures. No endpoint binomial value has
+  route by exact recurrence-class signatures. Cycle 208 then proves, for the
+  whole label-preserving diagonal family, that containment of all 225 target
+  two-by-two minor pullbacks in the full rank-one source ideal is equivalent
+  to all 225 corresponding coefficient-minor conditions. It supplies neither
+  those coefficients nor an actual interface. No endpoint binomial value has
   been evaluated. No divergent raw contour, periodized beta channel, AFK
-  amplitude identity, fusion, or TCC is proved; the active gate is a
-  genuinely multifactor equation-(66) pairing/determinant construction.
+  amplitude identity, fusion, or TCC is proved; the active gate is a source-
+  authorized equation-(66) or translation-covariant construction of a
+  coefficient array satisfying the rank-one criterion, followed by a full
+  labeled C198 test.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -361,6 +367,13 @@
   identities cannot make any target binomial vanish. This is not an endpoint
   nonvanishing result and does not exclude multifactor identities. See
   `artifacts/cycle-207-b044-target-binomial-recurrence-v1.json`.
+- `PROVED`: Cycle 208 proves the full 225-minor coordinate-ring pullback
+  criterion for a label-preserving diagonal family: every target minor pulls
+  back to the full rank-one source ideal exactly when every coefficient minor
+  vanishes. It does not derive `r`, `s`, `c`, or `J`, nor prove a C198 target
+  relation. Its all-ones rank-one specialization supplies the exact converse
+  witness.
+  See `artifacts/cycle-208-b045-polarized-minor-pairing-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -459,7 +472,8 @@ Budget B001--B200
   |    |                                                                                                                                                                                                                                               `-- local Mellin / b-pairing [FALSIFIED]
   |    |                                                                                                                                                                                                                                                    `-- source projective normal packet [SEALED]
   |    |                                                                                                                                                                                                                                                         `-- factorwise target Gamma_M recurrence [FALSIFIED]
-  |    |                                                                                                                                                                                                                                                              `-- multifactor equation-(66) pairing/determinant [NEXT GATE]
+  |    |                                                                                                                                                                                                                                                              `-- full diagonal 225-minor pullback criterion [SEALED]
+  |    |                                                                                                                                                                                                                                                                   `-- source-derived equation-(66)/translation-covariant r,s construction [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -504,17 +518,18 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 208 polarized multifactor-pairing/determinant decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `SOURCE_PROJECTIVE_NORMAL_PACKET_SEALED_FACTORWISE_TARGET_RECURRENCE_FALSIFIED_MULTIFACTOR_PAIRING_OPEN` | Derive or reject one symmetry-representative target minor through a source-authorized polarized equation-(66) pairing or determinant identity, with a frozen propagation rule for all 25 squares. | Reusing a factorwise recurrence, asserting endpoint nonzero from a signature mismatch, selecting an affine denominator, scalar, alias, or ray datum, or treating projective covariance as an AFK amplitude. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 209 source-coefficient-construction decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `FULL_DIAGONAL_225_MINOR_PULLBACK_CRITERION_SEALED_SOURCE_COEFFICIENT_CONSTRUCTION_OPEN` | Derive or reject a coefficient array satisfying the 225 rank-one constraints through a source-authorized equation-(66) or translation-covariant construction, without endpoint fitting, then test its resulting `J` against all 225 labeled C198 target minors. | Reusing a factorwise recurrence, fitting a coefficient array, factor, scalar, alias, or ray datum to endpoint data, asserting target vanishing from the criterion, or treating projective covariance as an AFK amplitude. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Can one symmetry-representative C198 target minor be expressed by a
-  source-authorized polarized equation-(66) pairing or determinant, with a
-  valid exact propagation rule for all 25 squares?
+- Can a source-authorized equation-(66) or translation-covariant construction
+  derive a coefficient array satisfying the 225 rank-one constraints, without
+  fitting to C198 endpoint values, and can its resulting `J` pass all 225
+  labeled target minor tests?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -523,28 +538,27 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 208
+## Next goal: Cycle 209
 
 Preregister one substantive block with this question:
 
-> Does one symmetry-representative C198 target minor have a
-> source-authorized polarized equation-(66) pairing or determinant identity
-> that either gives an exact nonzero falsifier or propagates exact vanishing to
-> all 25 squares without factorwise matching, fitted scalars, aliases, or ray
-> data?
+> Can a source-derived equation-(66) or translation-covariant construction
+> determine a label-preserving coefficient array satisfying the 225 rank-one
+> constraints, without fitting any C198 endpoint data, and then either
+> construct or falsify the resulting full labeled diagonal interface?
 
-Cycle 208 must freeze the representative square, polarization and determinant
-or pairing state space, equation-(66) hypotheses, symmetry/propagation rule,
-and exact falsifier or vanishing criterion before executable work. It must
-retain all 36 labels, keep capital `Gamma_M` and AFK phase separate, and not
-select a preferred affine denominator, scalar, alias, exponent, or ray label,
-or claim an AFK, fusion, Stark, or TCC consequence.
+Cycle 209 must freeze the source state space, equation-(66) hypotheses or
+translation law, factor-extraction rule, and exact falsifier before executable
+work. It must retain all 36 labels, keep capital `Gamma_M` and AFK phase
+separate, forbid endpoint fitting, and not select a preferred affine
+denominator, scalar, alias, exponent, or ray label, or claim an AFK, fusion,
+Stark, or TCC consequence.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 207
+research cycle 208
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_207_target_binomial_recurrence_v1.py --check
+python3 proof/build_cycle_208_polarized_minor_pairing_v1.py --check
 ```
