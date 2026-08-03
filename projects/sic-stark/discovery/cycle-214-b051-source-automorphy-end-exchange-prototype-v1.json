@@ -1,0 +1,155 @@
+{
+  "candidate_audit": {
+    "E_is_unique_frozen_candidate_exchanging_both_cusp_labels": true,
+    "beta": "(5+sqrt(21))/2",
+    "beta_inverse": "5-beta=(5-sqrt(21))/2",
+    "epistemic_status": "PROVED",
+    "records": [
+      {
+        "M_beta_in_Q_beta_basis": [
+          0,
+          -1
+        ],
+        "cusp_infinity_image": [
+          0,
+          5
+        ],
+        "cusp_zero_image": [
+          1,
+          0
+        ],
+        "determinant": -1,
+        "ell_sign": -1,
+        "label_action": "p->ell*M*p modulo 6",
+        "matrix": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            -1
+          ]
+        ],
+        "name": "J0",
+        "preserves_Q": false
+      },
+      {
+        "M_beta_in_Q_beta_basis": [
+          -5,
+          1
+        ],
+        "cusp_infinity_image": [
+          5,
+          0
+        ],
+        "cusp_zero_image": [
+          0,
+          1
+        ],
+        "determinant": 1,
+        "ell_sign": 1,
+        "label_action": "p->ell*M*p modulo 6",
+        "matrix": [
+          [
+            0,
+            1
+          ],
+          [
+            -1,
+            0
+          ]
+        ],
+        "name": "S",
+        "preserves_Q": false
+      },
+      {
+        "M_beta_in_Q_beta_basis": [
+          5,
+          -1
+        ],
+        "cusp_infinity_image": [
+          5,
+          0
+        ],
+        "cusp_zero_image": [
+          0,
+          5
+        ],
+        "determinant": -1,
+        "ell_sign": 1,
+        "label_action": "p->ell*M*p modulo 6",
+        "matrix": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "name": "E=J0*S",
+        "preserves_Q": true
+      }
+    ]
+  },
+  "claim_boundary": "For the three frozen source GL_2 candidates, E=J0*S is the unique listed matrix that exchanges both Cycle-211 cusp labels, preserves Q, and conjugates A6 to A6^-1. Its Mobius action sends beta to beta^-1. The pinned AFK covariance relates normalized ghost overlaps and determinant-negative cocycle factors for a transformed tuple, but does not supply an identification of that transformed object with the beta-oriented Cycle-211 packet. It therefore supplies no proved end exchange, dual line, or scalar pairing on that packet. This proves no new AFK theorem, analytic gluing, multiplier trivialization, C198 comparison, fusion, Stark, or TCC statement.",
+  "epistemic_status": "PROVED",
+  "flow_conjugacy_audit": {
+    "A6_inverse": [
+      [
+        -5,
+        24
+      ],
+      [
+        -24,
+        115
+      ]
+    ],
+    "E_A6_E_inverse": [
+      [
+        -5,
+        24
+      ],
+      [
+        -24,
+        115
+      ]
+    ],
+    "conclusion": "E_EXCHANGES_THE_CUSP_LABELS_AND_REVERSES_THE_DECLARED_A6_STEP",
+    "epistemic_status": "PROVED"
+  },
+  "gate_outcome": {
+    "candidate_E_label_and_flow_exchange": "PROVED_TRANSFORMED_TUPLE_STRUCTURE",
+    "remaining_design_problem": "Derive a beta-to-beta^-1 analytic continuation or a source theorem identifying the transformed tuple's packet with the original packet before testing any dual pairing or fusion invariant.",
+    "source_derived_dual_or_sesquilinear_scalar_pairing": "NOT_SUPPLIED",
+    "source_derived_same_packet_end_exchange": "NOT_SUPPLIED_BY_DECLARED_AFK_COVARIANCE"
+  },
+  "schema": "sic-stark-cycle-214-source-automorphy-end-exchange-prototype-v1",
+  "source_domain_audit": {
+    "E_covariance": {
+      "candidate_mobius_root_image": "E*beta=beta^-1",
+      "determinant_negative_effect": "Theorem 7.7 complex-conjugates the underlying B_t cocycle factors",
+      "same_beta_oriented_packet_identification": "NOT_SUPPLIED_BY_DECLARED_THEOREMS",
+      "tuple_relation": "nu_p(t_E)=nu_(E*p)(t), because ell=+1"
+    },
+    "conclusion": "THE_DOCUMENTED_E_COVARIANCE_IS_TRANSFORMED_TUPLE_COVARIANCE_NOT_A_PROVED_SAME_PACKET_END_EXCHANGE",
+    "epistemic_status": "PROVED",
+    "not_supplied_by_frozen_theorem": [
+      "an action on the Cycle-211 asymptotic packet P_(a,b,h)(t)",
+      "an action on the axis coordinate s, Lambda, or packet coordinate t",
+      "an identification of the beta^-1-oriented transformed packet with the beta-oriented packet",
+      "a source-derived exchange involution on W",
+      "a source-derived multiplier/dual line or scalar dual pairing"
+    ],
+    "primary_source": {
+      "frozen_provenance": "Cycle-188 primary-source hash and theorem identifiers",
+      "paper": "Appleby--Flammia--Kopp, arXiv:2501.03970v2",
+      "theorems": [
+        "Theorem 7.7",
+        "Theorem 7.8"
+      ]
+    }
+  }
+}
