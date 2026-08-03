@@ -22,10 +22,12 @@
   off-support source response has rank 36 but is Abel-rate dependent. This
   separates a rank-36 two-scale germ from the endpoint boundary, and Cycle
   201 proves that no complex-linear rate-invariant functional can retain that
-  germ. This rejects neither a rate-covariant normal derivative nor another
+  germ. Cycle 202 proves that its weight-one normal derivative cannot map by a
+  direct rate-independent linear bridge to C198's nonzero weight-zero values.
+  This rejects neither a geometrically twisted target nor another
   source-derived continuation. No divergent raw contour, periodized beta
   channel, AFK amplitude identity, fusion, or TCC is proved; the active gate
-  is a source-forced rate-covariant normal-data construction before exact
+  is an intrinsic inverse normal-line/density construction before exact
   helical/Zak amplitude matching.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
@@ -308,6 +310,13 @@
   targets. This does not constrain rate-covariant normal derivatives,
   nonlinear/higher-germ constructions, or non-Abel continuations. See
   `artifacts/cycle-201-b038-two-scale-germ-covariance-v1.json`.
+- `PROVED`: Cycle 202 proves that the normal derivative of the rank-36 germ
+  has regulator weight one while all 36 C198 endpoint values are finite,
+  nonzero, and weight zero. Thus no direct complex-linear rate-independent
+  all-row identification can map the normal datum to those values. A
+  geometrically twisted target, nonlinear/higher-germ construction, or
+  non-Abel continuation remains outside the claim. See
+  `artifacts/cycle-202-b039-normal-derivative-target-weight-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -400,7 +409,8 @@ Budget B001--B200
   |    |                                                                                                                                                                                                                 `-- symmetric pole jets through delta^5 [FALSIFIED: rank <=30]
   |    |                                                                                                                                                                                                                      `-- off-support full-character germ [SEALED: rank 36, rate-dependent]
   |    |                                                                                                                                                                                                                           `-- linear regulator-invariant functional [FALSIFIED]
-  |    |                                                                                                                                                                                                                                `-- source normal derivative / rate-covariant functional [NEXT GATE]
+  |    |                                                                                                                                                                                                                                `-- normal derivative to fixed endpoint target [FALSIFIED]
+  |    |                                                                                                                                                                                                                                     `-- intrinsic inverse normal line/density [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -445,17 +455,16 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 202 rate-covariant normal-data decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `SOURCE_ANALYTIC_FREQUENCY_ENDPOINT_FUNCTIONAL_ON_T6_SEALED_LINEAR_RATE_INVARIANT_GERM_FALSIFIED_NORMAL_DATA_OPEN` | Derive or reject a source-forced rate-covariant normal derivative of the rank-36 germ, then prove whether a source-defined Zak/periodization map can use it for exact all-36 amplitude equality, including zero modes, capital `Gamma_M`, and the separately pinned AFK phase. | Calling a rate-covariant normal datum a rate-invariant boundary value; selecting one alias; fitting weights, scalars, normalizations, or a functional; discarding alias holonomy, capital `Gamma_M`, or AFK phase; using selected exponents, SIC outcome variables, or ray labels. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 203 inverse-normal-line decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `SOURCE_ANALYTIC_FREQUENCY_ENDPOINT_FUNCTIONAL_ON_T6_SEALED_DIRECT_NORMAL_TARGET_MAP_FALSIFIED_INVERSE_NORMAL_LINE_OPEN` | Derive or reject an intrinsic source normal line/density and its inverse trivialization; only a source-defined weight-zero tensor with exact all-36 target covariance may advance to Zak/periodization amplitude matching, including zero modes, capital `Gamma_M`, and separately pinned AFK phase. | Calling a chosen geodesic parameter or numerical division by the Abel rate an intrinsic density; selecting one alias; fitting weights, scalars, trivializations, or a functional; discarding alias holonomy, capital `Gamma_M`, or AFK phase; using selected exponents, SIC outcome variables, or ray labels. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Does the source normal derivative of the rank-36 two-scale Abel germ have
-  exact rate covariance and a source-defined route to a phase-preserving Zak
-  map to `T_6`?
+- Does the A_6 source geometry define an intrinsic inverse normal density that
+  twists the rank-36 germ to weight zero and has target covariance on `T_6`?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -464,29 +473,28 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 202
+## Next goal: Cycle 203
 
 Preregister one substantive block with this question:
 
-> Does the source normal derivative
-> `R=lim_(lambda->0) lambda^(-1)(G_lambda-B)` define a weight-one,
-> all-36 covariant germ datum, and can its normalization be fixed from the
-> source without fitted coefficients, selected aliases, or ray data?
+> Does the A_6 geodesic and equation-(66) source define an intrinsic normal
+> line/density whose inverse canonically twists the rank-36 normal datum to
+> weight zero, without a chosen regulator scale, fitted trivialization,
+> selected alias, or ray data?
 
-Cycle 202 must freeze the two-scale germ, the normal coordinate, source
-dilation action, target covariance representation, and all-row normalization
-criterion before executable work. It must retain the rate-invariant boundary
-and rate-one regular response as distinct coordinates, include all 24 modes
-and 36 target characters, and keep capital `Gamma_M` and AFK phase separate.
-It must not select a preferred alias, divide by a post-chosen rate, fit a
-scalar/counterterm/normalization, use selected exponents or ray labels, or
-claim an AFK, fusion, Stark, or TCC consequence.
+Cycle 203 must freeze the intrinsic geometry allowed to define a normal line,
+its covariance/trivialization criterion, and the all-row target test before
+executable work. It must distinguish an actual source density from a chosen
+parameter, retain all 24 modes and 36 target characters, and keep capital
+`Gamma_M` and AFK phase separate. It must not select a preferred alias, divide
+by a post-chosen rate, fit a scalar/counterterm/trivialization, use selected
+exponents or ray labels, or claim an AFK, fusion, Stark, or TCC consequence.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 201
+research cycle 202
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_201_two_scale_germ_covariance_v1.py --check
+python3 proof/build_cycle_202_normal_derivative_target_weight_v1.py --check
 ```
