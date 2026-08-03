@@ -10,11 +10,11 @@
   scopes in dimensions 4, 5, 7, and 8. No dimension-six TCC identity,
   coefficient-to-ray map, fusion-continuity theorem, or boundary-limit theorem
   is proved. `CERTIFIED_NUMERICAL` packet growth is not a nonexistence theorem.
-- Current state: Cycle 178 / `B016` proves that the initially frozen CRT
-  record is injective on all 36 characteristics because it retains an
-  unrestricted prime-2 valuation. Its admissible-set test is therefore
-  vacuous, not interface evidence. Cycle 179 / `B017` must derive the finite
-  prime-2 quotient dictated by conductor lowering before retesting fibres.
+- Current state: Cycle 179 / `B017` derives the finite, modulus-defined
+  prime-2 ray factor and its canonical transition. Together with the frozen
+  prime-3 record it still resolves all 36 rows, so the fibre test remains
+  vacuous. Cycle 180 / `B018` must instead test a functorial local-global
+  Artin assembly for admissible sets, including the global-unit ambiguity.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -27,8 +27,8 @@
 ## Budget, accounting, and stop condition
 
 - Total forward budget: 200 substantive research cycles, counted `B001/200`
-  through `B200/200`; the counter is currently `B016/200`.
-- Cycle 179 is `B017`. Repository cycle numbers and budget ordinals advance
+  through `B200/200`; the counter is currently `B017/200`.
+- Cycle 180 is `B018`. Repository cycle numbers and budget ordinals advance
   together unless a non-counted record intervenes; the budget ordinal is the
   authoritative campaign counter.
 - A cycle counts only when it is a preregistered substantive research block
@@ -133,6 +133,13 @@
   result is vacuous and not interface evidence; a ray-exact-sequence-defined
   finite prime-2 quotient is now required. See
   `artifacts/cycle-178-crt-local-admissible-set-v1.json`.
+- `PROVED`: Cycle 179 derives the prime-2 factor directly from each lowered
+  ray modulus: it is trivial at exponent zero and
+  `(O_K/p2)^times` at exponent one, with canonical projection on lowering.
+  Its counts are `9,27` and its four factor classes occur nine times each.
+  With the frozen p3 record, all 36 CRT records remain distinct; this is
+  local coordinate resolution, not interface evidence. See
+  `artifacts/cycle-179-p2-ray-quotient-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -197,7 +204,8 @@ Budget B001--B200
   |    |                                                                     `-- outcome-blind 36-row transport test [CONSISTENT ONLY]
   |    |                                                                          `-- p3 local-to-selected-ray map [FALSIFIED]
   |    |                                                                               `-- unrestricted CRT record [INJECTIVE / VACUOUS]
-  |    |                                                                                    `-- modulus-defined p2 quotient [NEXT GATE]
+  |    |                                                                                    `-- modulus-defined p2 quotient [INJECTIVE / VACUOUS]
+  |    |                                                                                         `-- local-global Artin assembly [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -242,17 +250,18 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `B016_OF_200` | Seal Cycle 179 as `B017`, then increment only for substantive research blocks. | Counting workflow or archive-only work. |
-| D6 interface | `EXACT_V2_CRT_RECORD_TOO_FINE_THEOREM_DEFINED_P2_QUOTIENT_REQUIRED` | Derive the finite p2 quotient and transition maps imposed by each conductor-lowered ray modulus, then test its fibres against admissible exponent sets. | Retaining unrestricted valuation data; treating singleton fibres as evidence; using `s,d` or target labels. |
+| Project budget | `B017_OF_200` | Seal Cycle 180 as `B018`, then increment only for substantive research blocks. | Counting workflow or archive-only work. |
+| D6 interface | `LOCAL_RAY_FACTORS_RESOLVE_ROWS_ARTIN_ASSEMBLY_REQUIRED` | Derive a section-independent local-global Artin assembly of admissible exponent sets with explicit global-unit quotient, then test preregistered transition, homomorphism, orientation, and anchor identities. | More row-resolution/fibre tests; discarding valid factors merely to force collisions; using `s,d`, selected exponents, or target labels. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Does the ray exact sequence determine a row-functorial finite prime-2 local
-  quotient and transition maps whose CRT classes have nontrivial, compatible
-  admissible-exponent fibres, independent of a chosen section?
+- Can the varying ray exact sequences be assembled into one functorial,
+  section-independent admissible-exponent-set construction after quotienting
+  by the exact global-unit image, with a structural relation to orientation
+  and characteristic dynamics?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -261,29 +270,29 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 179 / `B017`
+## Next goal: Cycle 180 / `B018`
 
 Preregister one substantive block with this question:
 
-> What finite prime-2 local quotient and conductor transition maps follow
-> from the exact ray sequence for each lowered modulus, and do its CRT fibres
-> have compatible admissible ray-exponent sets without using `s`, `d`, or a
-> selected exponent?
+> Do the exact local factors, conductor transition maps, and global-unit
+> images assemble functorially into the admissible exponent sets without a
+> chosen representative, and do the resulting maps satisfy preregistered
+> transition, homomorphism, Frobenius-orientation, and anchor identities?
 
-Cycle 179 must freeze the local exact-sequence theorem statement, the
-row-varying conductor rule, the finite p2 quotient and transition maps, the
-retained p3 record, target set, anchors, and failure rule before executable
-work. It must explicitly falsify any use of unrestricted valuation data,
-torsor labels, selected exponents, or target-fitted features. The companion
-reviewed the sealed B016 scope and recommended this theorem-first route; its
-stated flaw is that a single quotient is invalid unless it is functorial for
-the row-varying lowered modulus.
+Cycle 180 must freeze the exact ray-sequence maps, the local product and
+global-unit image, all row-varying transition maps, the common target of the
+assembly, its set/coset convention, anchors, structural identities, and
+failure rule before executable work. It must not select a representative or
+infer an interface from record injectivity. The companion reviewed the sealed
+B017 work and recommended this assembly engine; its stated flaw is that
+row-varying conductors and global-unit ambiguity may prevent a common,
+section-independent `C6` target.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 178
+research cycle 179
 sed -n '1,260p' PLAN.md
-python3 proof/build_cycle_178_crt_local_admissible_set_v1.py --check
+python3 proof/build_cycle_179_p2_ray_quotient_v1.py --check
 ```
