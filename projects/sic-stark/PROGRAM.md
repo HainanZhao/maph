@@ -179,9 +179,12 @@
   graded rank-four representation: with `P_24 f(mu)=f(24*mu)`, its arrows are
   `T_e^(n)=24^(-2n) M_(h_e) P_24`, and both ordered A/C two-edge matrices equal
   the direct C228 residual operator with `P_576`. This fixed-tilt positive-path
-  action supplies no endpoint or cross-sign law. The next gate is to test
-  whether its canonical jet dual can derive, rather than posit, orientation
-  reversal.
+  action supplies no endpoint or cross-sign law. Cycle 251 derives its
+  canonical residue contragredient, but `omega1 -> -omega1` sends all eight
+  factors to negative determinant, outside C249's product chamber, and leaves
+  an extra alpha-period sign relative to the A/C target. The next gate is an
+  explicit negative-alpha analytic continuation with branch and monodromy,
+  not another algebraic pairing.
   No endpoint binomial value has been
   evaluated. No divergent raw contour, periodized beta channel, AFK amplitude
   identity, fusion, or TCC is proved.
@@ -818,15 +821,15 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: formulate Cycle 251 / B088
+## Next goal: formulate Cycle 252 / B089
 
-Test the canonical contragredient of C250's graded representation as a derived
-cross-sign candidate. Freeze the coefficient-residue pairing on
-`C[mu]/(mu^4)`, its adjoint action on `M_h` and `P_24`, the orientation change
-`omega1 -> -omega1`, and the exact A/C source coefficients. Advance only if a
-single source-derived pairing intertwines both ordered paths with every
-period, affine-coordinate, grading, and label state retained; otherwise bank
-the first exact coefficient or state mismatch.
+Construct and test a negative-alpha continuation of the ordinary gamma factor
+using an explicitly frozen reciprocal-base `q`-product rule. Derive its
+branch, functional equations, double-sign consistency, Bernoulli/monodromy
+factor, and normalized degree-zero through three jets before comparing the
+eight C251 orientation-reflected factors with their A/C targets. Reject the
+engine on the first path dependence, failed source shift, or noncanonical
+normalization; do not fit a correction after the comparison.
 
 Any future representation assessment must preserve C246/C247's scopes, freeze
 both source bases when relevant, a full state invariant, exact source formulas,
@@ -838,7 +841,7 @@ Stark, and TCC consequences explicitly out of scope.
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 250
+research cycle 251
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_250_graded_f3_jet_representation_v1.py --check
+python3 proof/build_cycle_251_residue_dual_cross_sign_v1.py --check
 ```
