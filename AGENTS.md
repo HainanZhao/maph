@@ -160,15 +160,18 @@ are legitimate.
 
 Use one named companion only for a strategic fork, sealing a material claim,
 choosing the next cycle after a material result, or publication. It is a
-mentor, not a duplicate worker. A material seal and its next-cycle choice
-normally share one review packet under 200 words: state the decision, frozen
-claim/gate and tag, decisive evidence, known flaw, the completed work to
-review, and the plausible next engines. Request five short items: an evidence
-and scope review, recommendation, flaw, falsifier, and next action. The
-companion must assess the work and alternatives, rather than merely approve or
-reject the proposed choice. Do not notify, poll, or wait during routine
-cycles. If no reply is available at the irreversible decision, defer that
-decision rather than create process work around it.
+mentor, not a duplicate worker. A major next-cycle choice is a mandatory
+checkpoint: before selecting it, send the companion the work completed so far
+and ask it to review that work as well as recommend the next cycle. A material
+seal and its next-cycle choice normally share one review packet under 200
+words: state the decision, frozen claim/gate and tag, decisive evidence, known
+flaw, the completed work to review, and the plausible next engines. Request
+five short items: an evidence and scope review, recommendation, flaw,
+falsifier, and next action. The companion must assess the completed work and
+alternatives, rather than merely approve or reject the proposed choice. Do not
+notify, poll, or wait during routine cycles. If no reply is available at the
+irreversible decision, defer that decision rather than create process work
+around it.
 
 ## 2. Discovery and proof are separate
 
