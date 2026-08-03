@@ -101,7 +101,11 @@
   Cycle 231 proves that the frozen quadratic-exponential principal-part lift
   has a cover solution but forced nonconstant deck monodromy, so it cannot
   descend. A `log(576)`-periodic (multiplicative-theta) correction remains a
-  distinct untested engine.
+  distinct untested engine. Cycle 232 then constructs a single-valued theta
+  solution for the formal `mu^-4` multiplier but proves that each full
+  four-gamma residual has an additional uncancelled period-dependent pole.
+  The remaining design problem is a finite theta product with
+  period-dependent arguments, constrained first by its full divisor classes.
   No endpoint binomial value has been
   evaluated. No divergent raw contour, periodized beta channel, AFK amplitude
   identity, fusion, or TCC is proved.
@@ -719,17 +723,17 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 232 multiplicative-theta decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `QUADRATIC_COVER_DESCENT_OBSTRUCTED` | For `q=1/576`, construct and test a source-frozen multiplicative-theta correction for the residual multiplier; then test its descent, full four-gamma residual quotient, reflection, and source normalization. | Calling the formal principal-part lift or a cover-only theta multiplier a source cochain; ignoring full residual, reflection, or normalization. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 233 residual-divisor-class decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `SINGLE_THETA_FULL_RESIDUAL_CONTAINED` | Classify full residual pole classes, then construct or eliminate a finite theta product with frozen linear period-dependent arguments before testing reflection and normalization. | Calling a principal-only theta solution a full cochain; fitting theta arguments after inspecting divisor rows; ignoring an unmatched divisor family. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Can a `q=1/576` multiplicative-theta correction absorb the residual
-  multiplier while descending single-valuedly, and then absorb the actual
-  four-gamma quotient with its reflection and source-normalization data?
+- Do the full A/C residual pole classes admit a finite product of
+  `q=1/576` theta factors with frozen linear period-dependent arguments, or
+  does an exact unmatched divisor family obstruct that engine?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -738,23 +742,23 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 232 / B069
+## Next goal: Cycle 233 / B070
 
 Preregister one substantive block with this question:
 
-> Does a source-frozen `q=1/576` multiplicative-theta correction produce a
-> single-valued meromorphic cochain for the residual principal multiplier?
+> Does the full residual divisor lattice admit a finite `q=1/576` theta
+> product with frozen linear period-dependent arguments?
 
-Cycle 232 must freeze the multiplicative cover coordinate, theta convention,
-quasi-periodicity, descent condition, and full-residual/reflection/normalization
-acceptance ladder before executable work. It must keep the AFK phase separate,
-forbid fitted products, and not claim an AFK, fusion, Stark, or TCC consequence.
+Cycle 233 must freeze the exact theta-product family, divisor-class action,
+finite-factor cap, and an explicit construct-or-unmatched-family criterion
+before executable work. It must keep the AFK phase separate, forbid fitted
+arguments, and not claim an AFK, fusion, Stark, or TCC consequence.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 231
+research cycle 232
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_231_cover_cochain_v1.py --check
+python3 proof/build_cycle_232_multiplicative_theta_v1.py --check
 ```
