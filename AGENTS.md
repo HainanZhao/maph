@@ -328,6 +328,10 @@ Never conceal, erase, or silently work around a listed finding.
   already dismissed: continue safe local work or wait/retry silently. Surface
   it only after it has become a real blocker under the ordinary escalation
   rules, not merely because the interface is slow.
+- Never ask the user to respond to, approve, or interpret the notice “Our
+  systems are thinking a bit more about this request before responding.” It is
+  a transient wait state: wait or continue safe work silently, retry when
+  appropriate, and surface it only if it becomes a genuine blocker.
 - Pin tool/library versions. Different PARI versions may emit different
   but equivalent generators; prove equivalence before changing expected
   outputs. Use the pinned Linux/container pipeline when exact byte-level
