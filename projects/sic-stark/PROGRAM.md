@@ -188,18 +188,20 @@
   No endpoint binomial value has been
   evaluated. No divergent raw contour, periodized beta channel, AFK amplitude
   identity, fusion, or TCC is proved.
-- Strategic update: this plan supersedes Cycle 162's date-based schedule and
-  conditional 100-cycle campaign with one forward budget of 200 substantive
-  research cycles. Cycle 162 remains an immutable record of the prior decision.
-- `STRATEGIC_DECISION`: retain the four tranches because they preserve the
-  interface-to-fusion dependency and cap the project at
-  `B200`. The decision is falsified by counting bookkeeping, exceeding 200, or
-  weakening Class A; the explicit reallocation rule addresses its fixed-
-  tranche risk.
+- Strategic update: the project now has a hard three-cycle closeout horizon.
+  Cycles `C252/B089`, `C253/B090`, and `C254/B091` are the final research
+  blocks. This supersedes Cycle 162's date-based schedule and the later
+  200-cycle allocation without mutating either historical record.
+- `STRATEGIC_DECISION`: use those blocks for the reciprocal-base continuation,
+  the strongest surviving full-interface lift or distinct analytic fallback,
+  and a final proof replay or freeze classification. If dimension six is not
+  proved by the end of `C254/B091`, create the minimal handoff `STATUS.md`,
+  classify the project `C_FROZEN`, and stop all SIC--Stark research.
 
 ## Budget, accounting, and stop condition
 
-- Total forward budget: 200 substantive research cycles.
+- Remaining budget: exactly three substantive research blocks,
+  `C252/B089` through `C254/B091`.
 - Infer budget use from the highest `b<ordinal>` in counted preregistration or
   sealed-artifact filenames; do not maintain a live counter here. The next
   counted block takes the next ordinal. Repository cycle numbers and budget
@@ -208,17 +210,15 @@
   with a genuine bound, construction, theorem, counterexample, or scoped
   obstruction decision. Workflow repair, indexing, and archive-only records do
   not consume the budget.
-- Checkpoints occur at `B040`, `B140`, `B180`, and `B200`; within the bridge
-  campaign, record a compact Class-A assessment every ten counted cycles.
-- Early closure does not end the project budget: unused cycles transfer to
-  cross-dimension mechanism mining and uniformization. No reallocation may
-  increase the 200-cycle total or weaken the Class-A criterion.
-- Record any tranche reallocation in `PROGRAM.md` at the triggering checkpoint
-  before the next counted cycle; silent reassignment is not allowed.
-- Stop condition: at `B200`, classify the program. If dimension six is not
-  closed and no Class-A reduction survives, freeze dimension six and redirect
-  future work outside this budget to the proved cross-dimension mechanism. A
-  decisive scoped no-go may freeze the affected route earlier.
+- There are no intermediate reporting checkpoints. Reuse each cycle for its
+  whole coherent decision block and seal only a result needed by the final
+  decision or handoff.
+- Stop condition: after `C254/B091`, either record `A_CLOSED` with an
+  independent proof replay, or record `C_FROZEN`, generate the intentional
+  handoff `STATUS.md`, and stop the project. A Class-A reduction without a
+  complete dimension-six proof is handed off and frozen, not used to extend
+  the budget. Earlier proof or decisive falsification may trigger the same
+  terminal handoff sooner.
 
 ## Frozen background
 
@@ -684,15 +684,13 @@ Terminal outcomes are:
   replay closes dimension-six TCC;
 - `B_REDUCED`: a Class-A reduction is proved, but its terminal inequality or
   finite certificate remains open;
-- `C_FROZEN`: neither closure nor a surviving Class-A reduction exists at
-  `B200`, so dimension six freezes;
-- `U_TRANSFERRED`: dimension six closes early and the remaining budget produces
-  a falsifiable cross-dimension engine classifier or uniform mechanism.
+- `C_FROZEN`: dimension six is not proved by `C254/B091`; any surviving
+  reduction and exact recovery point are handed off, and the project stops.
 
 ## Research path
 
 ```text
-Budget B001--B200
+Budget B001--B091 (final blocks B089--B091)
   +-- dimension 6
   |    +-- analytic interface: 36 additive values -> 3 ray logs -> AFK cocycle
   |    |    +-- fixed-full-ray selector [FALSIFIED: 18/36 domain]
@@ -766,23 +764,16 @@ Budget B001--B200
   `-- proved dimensions 4,5,7,8
        `-- cross-dimension classifier -> transfer back to dimension 6
 
-B200 without A_CLOSED or B_REDUCED -> C_FROZEN
+B091 without A_CLOSED -> C_FROZEN + STATUS.md handoff + stop
 ```
 
-## Cycle roadmap
+## Final cycle roadmap
 
-| Budget tranche | Primary work | Required checkpoint output |
+| Cycle | Research block | Terminal test |
 |---|---|---|
-| `B001--B040` | Define and falsify the operational interface; in parallel test an oriented wild-local `RQ-000692` construction. | Exact prototype pass, exact falsifier, or a named scoped interface/engine obstruction with the next genuinely new engine. |
-| `B041--B140` | Attack the active operational-bridge bottleneck. Before interface closure this means new interface engines; afterward it means fusion continuity and compact/certified reduction. | `A_CLOSED`, `B_REDUCED`, or a surviving evidence-ranked engine ledger with Class-A assessments every ten cycles. |
-| `B141--B180` | Mine the proved dimensions and frontier case for an engine classifier; transfer any invariant back into the active dimension-six gate. | Falsifiable classifier tested on every proved stratum and `RQ-000692`, or a scoped countermodel eliminating it. |
-| `B181--B200` | Pursue the strongest surviving closure route, run independent proof replay, and make the terminal classification. | `A_CLOSED`, `B_REDUCED`, `C_FROZEN`, or `U_TRANSFERRED`, with no budget extension. |
-
-Tranche boundaries are checkpoints, not permission to ignore the active gate.
-If a gate closes early, advance immediately and roll the unused capacity into
-the next logical gate. If the interface remains open after `B040`, the next
-tranche continues interface invention under the missing-bridge rule rather
-than pretending fusion continuity is operational.
+| `C252/B089` | Derive and test the reciprocal-base negative-alpha continuation, including branch, shifts, monodromy, and the eight reflected factors. | Promote only a source-consistent canonical continuation; otherwise preserve the exact falsifier. |
+| `C253/B090` | Test the strongest surviving full-interface lift. If C252 fails, make one distinct direct meromorphic/integral continuation attempt rather than another fitted product variant. | Produce a complete interface candidate or its decisive scoped obstruction. |
+| `C254/B091` | Run the independent exact replay needed for closure; otherwise consolidate the strongest reduction and terminal classification. | `A_CLOSED`, or `C_FROZEN` plus minimal `STATUS.md` handoff and stop. |
 
 ## Engine policy
 
@@ -806,7 +797,7 @@ than pretending fusion continuity is operational.
 | D6 interface | `SINGLE_Q_TILT_ENGINE_FALSIFIED` | Construct or refute a new cross-sign transformation law on an enlarged affine signed-period cover preserving periods, argument, label, and residual/divisor state before B-Fourier covariance. | Scalarizing the C217 shadow, reparameterizing C226 raw loops, postulating reverse negative-`k` arrows, collapsing distinct bases, fitting a regulator, or inferring a source identity. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
-| Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
+| Pattern mining | `DEFERRED_AT_CLOSEOUT` | Resume only as a separate future project after an explicit new authorization. | Spending the final three SIC--Stark blocks on broad correlation mining. |
 
 ## Open questions
 
