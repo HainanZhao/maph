@@ -167,8 +167,10 @@
   tilt-cocycle premise fails: the A1/A4 and A2/A3 source multiplier bases are
   distinct at every positive tilt. A proposed scalar multi-base lift is only
   the C217 projective shadow and would hide its proved `576` period/argument,
-  label, and residual mismatch. The next distinct engine must instead build a
-  full affine signed-period-cover source state and transformation law.
+  label, and residual mismatch. Likewise, a two-negative-node root pullback
+  without added state is C226's contained raw groupoid. The next distinct
+  engine must derive a new cross-sign transformation law on an enlarged affine
+  signed-period cover, rather than postulate reverse negative-`k` arrows.
   No endpoint binomial value has been
   evaluated. No divergent raw contour, periodized beta channel, AFK amplitude
   identity, fusion, or TCC is proved.
@@ -786,17 +788,17 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Formulate and preregister a companion-reviewed, distinct full-state signed-period-cover decision before opening Cycle 248/B085. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `SINGLE_Q_TILT_ENGINE_FALSIFIED` | Construct or refute a source-derived affine signed-period-cover transport preserving periods, argument, label, and residual/divisor state before B-Fourier covariance. | Scalarizing the C217 projective shadow, collapsing distinct bases, treating one tilt as canonical, fitting a regulator, or inferring a source identity. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Derive and preregister a companion-reviewed, genuinely new cross-sign law or enlarged-cover construction before opening Cycle 248/B085. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `SINGLE_Q_TILT_ENGINE_FALSIFIED` | Construct or refute a new cross-sign transformation law on an enlarged affine signed-period cover preserving periods, argument, label, and residual/divisor state before B-Fourier covariance. | Scalarizing the C217 shadow, reparameterizing C226 raw loops, postulating reverse negative-`k` arrows, collapsing distinct bases, fitting a regulator, or inferring a source identity. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Can an affine signed-period-cover state
-  `(Omega_1,Omega_2; mu,m; label; residual divisor)` carry source-derived
-  arrows that resolve or precisely obstruct the C217 `576`-scale mismatch?
+- Can a new cross-sign theorem or enlarged affine signed-period cover—with
+  more than C226's raw state—supply a legal transformation law across the
+  C217 `576`-scale mismatch?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -808,10 +810,10 @@ than pretending fusion continuity is operational.
 ## Next goal: formulate Cycle 248 / B085
 
 Before opening another counted block, formulate one falsifiable, source-defined
-affine signed-period-cover engine. It must retain the oriented/scaled periods,
-affine argument, discrete label, and residual/divisor data; state exact
-permitted source arrows and a target-state criterion; and receive companion
-review of that construction and its alternative before preregistration.
+cross-sign or enlarged-cover engine. It must add a concrete state/invariant
+beyond C226's raw graph, derive rather than postulate its negative-`k` law,
+retain oriented/scaled periods, affine argument, discrete label, and
+residual/divisor data; and receive companion review before preregistration.
 
 Any future Cycle 248 must preserve C246/C247's scopes, freeze both source
 bases when relevant, a full state invariant, the exact source formulas, and an
