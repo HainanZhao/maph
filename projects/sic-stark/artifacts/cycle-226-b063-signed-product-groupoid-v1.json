@@ -1,0 +1,730 @@
+{
+  "artifact_id": "cycle-226-b063-signed-product-groupoid-v1",
+  "budget_ordinal": "B063",
+  "claim_boundary": "For the frozen four raw F2/F3 states, all eight displayed edge interfaces and all twelve raw matrix loops were tracked with periods, affine arguments, labels, and both ordinary-gamma residuals retained. Only the four k=24 source edges have a source-defined rarefied-product input; the four edges sourced at k=-24 lack one. Independently, none of the twelve raw matrix loops closes in the augmented period/argument/label state. Thus the proposed four-node state-complete signed-product groupoid cannot be constructed from the frozen interface. This does not rule out an enlarged signed-period/affine groupoid, a new signed-k product theorem, a source cross-sign law, a packet cocycle, AFK covariance, fusion, Stark, or TCC.",
+  "companion_decision": {
+    "adopted": true,
+    "evidence_scope_review": "The complete eight-edge inventory, all retained ordinary-gamma residuals, positive-versus-negative product-domain boundary, full twelve-loop period/argument/label transport, and the formal-versus-source distinction were reviewed together.",
+    "falsifier": "Any F2/F3 state map, authorized-edge domain, residual-factor transcription, period/argument/label transport, twelve-loop census, formal-versus-source distinction, or replay discrepancy invalidates the seal.",
+    "identity": "/root/decision_companion_2",
+    "known_flaw": "The negative-k transitions are formal diagnostics, not source identities, and nonclosure on four raw nodes does not exclude closure after adjoining period-scale, affine-argument, label, and residual-factor states.",
+    "next_action": "Open an enlarged semigroup/groupoid cycle deriving normal forms for the augmented period and affine actions\u2014quotienting only by already proved positive scaling\u2014then test whether reflection/swap identities close the 576-scaled loops before assigning any edge cocycle.",
+    "reason": "The raw graph is not the functional state space required by the factorization formulas; the next construction must first supply that larger state space rather than fit cochains to raw matrix loops.",
+    "recommendation": "Seal C226/B063 as PROVED only for containment of the frozen four-node raw-state groupoid; its authorized edges are incomplete and its formal matrix loops do not close in augmented state."
+  },
+  "construction_boundary_audit": {
+    "complete_eight_edge_source_interface_available": false,
+    "complete_twelve_loop_interface_available": false,
+    "epistemic_status": "PROVED",
+    "negative_raw_nodes_have_positive_representatives": true,
+    "reason": "A positive representative may support a new local product definition, but it does not supply the missing negative-k factorization arrows. Moreover, the preregistered raw loops do not close in the period/argument/label state required by the factorization formulas. Assigning an edge constant here would be a fitted datum rather than a cochain on a closed source groupoid.",
+    "signed_product_groupoid_constructed": false
+  },
+  "cycle": 226,
+  "edge_inventory": {
+    "conclusion": "Only the four arrows with source k=24 have a source-defined rarefied-product input under the frozen convention. The four arrows sourced at B or D require a negative-k product and are formal matrix substitutions, not source-authorized factorization identities.",
+    "directed_edge_count": 8,
+    "edges": [
+      {
+        "affine_argument": "-24*(mu+m*omega2)",
+        "edge": "A-F2->B",
+        "kind": "F2",
+        "ordinary_gamma_residuals": [
+          "gamma((mu+(24+m)*omega2)/(24); (omega1+(5)*omega2)/(24), omega2)",
+          "gamma((mu+(24-(-115)*m)*omega1)/(24); omega1, (omega2+(-115)*omega1)/(24))"
+        ],
+        "period_map": [
+          [
+            -115,
+            1
+          ],
+          [
+            1,
+            5
+          ]
+        ],
+        "residuals_scalarized": false,
+        "source_k": 24,
+        "source_product_definition_available": true,
+        "source_product_domain": "k>0",
+        "source_raw_state": [
+          -115,
+          24,
+          5,
+          24
+        ],
+        "target_label": 0,
+        "target_positive_representative": [
+          5,
+          24,
+          -115,
+          24
+        ],
+        "target_raw_state": [
+          -5,
+          -24,
+          115,
+          -24
+        ]
+      },
+      {
+        "affine_argument": "24*(mu+m*omega2)",
+        "edge": "A-F3->C",
+        "kind": "F3",
+        "ordinary_gamma_residuals": [
+          "gamma((mu+(m)*omega2)/(24); (omega1+(5)*omega2)/(24), omega2)",
+          "gamma((mu+(-(-115)*m)*omega1)/(24); omega1, (omega2+(-115)*omega1)/(24))"
+        ],
+        "period_map": [
+          [
+            1,
+            5
+          ],
+          [
+            -115,
+            1
+          ]
+        ],
+        "residuals_scalarized": false,
+        "source_k": 24,
+        "source_product_definition_available": true,
+        "source_product_domain": "k>0",
+        "source_raw_state": [
+          -115,
+          24,
+          5,
+          24
+        ],
+        "target_label": 0,
+        "target_positive_representative": [
+          115,
+          24,
+          -5,
+          24
+        ],
+        "target_raw_state": [
+          115,
+          24,
+          -5,
+          24
+        ]
+      },
+      {
+        "affine_argument": "24*(mu+m*omega2)",
+        "edge": "B-F2->A",
+        "kind": "F2",
+        "ordinary_gamma_residuals": [
+          "gamma((mu+(-24+m)*omega2)/(-24); (omega1+(115)*omega2)/(-24), omega2)",
+          "gamma((mu+(-24-(-5)*m)*omega1)/(-24); omega1, (omega2+(-5)*omega1)/(-24))"
+        ],
+        "period_map": [
+          [
+            -5,
+            1
+          ],
+          [
+            1,
+            115
+          ]
+        ],
+        "residuals_scalarized": false,
+        "source_k": -24,
+        "source_product_definition_available": false,
+        "source_product_domain": "k<0",
+        "source_raw_state": [
+          -5,
+          -24,
+          115,
+          -24
+        ],
+        "target_label": 0,
+        "target_positive_representative": [
+          -115,
+          24,
+          5,
+          24
+        ],
+        "target_raw_state": [
+          -115,
+          24,
+          5,
+          24
+        ]
+      },
+      {
+        "affine_argument": "-24*(mu+m*omega2)",
+        "edge": "B-F3->D",
+        "kind": "F3",
+        "ordinary_gamma_residuals": [
+          "gamma((mu+(m)*omega2)/(-24); (omega1+(115)*omega2)/(-24), omega2)",
+          "gamma((mu+(-(-5)*m)*omega1)/(-24); omega1, (omega2+(-5)*omega1)/(-24))"
+        ],
+        "period_map": [
+          [
+            1,
+            115
+          ],
+          [
+            -5,
+            1
+          ]
+        ],
+        "residuals_scalarized": false,
+        "source_k": -24,
+        "source_product_definition_available": false,
+        "source_product_domain": "k<0",
+        "source_raw_state": [
+          -5,
+          -24,
+          115,
+          -24
+        ],
+        "target_label": 0,
+        "target_positive_representative": [
+          -5,
+          24,
+          115,
+          24
+        ],
+        "target_raw_state": [
+          5,
+          -24,
+          -115,
+          -24
+        ]
+      },
+      {
+        "affine_argument": "-24*(mu+m*omega2)",
+        "edge": "C-F2->D",
+        "kind": "F2",
+        "ordinary_gamma_residuals": [
+          "gamma((mu+(24+m)*omega2)/(24); (omega1+(-5)*omega2)/(24), omega2)",
+          "gamma((mu+(24-(115)*m)*omega1)/(24); omega1, (omega2+(115)*omega1)/(24))"
+        ],
+        "period_map": [
+          [
+            115,
+            1
+          ],
+          [
+            1,
+            -5
+          ]
+        ],
+        "residuals_scalarized": false,
+        "source_k": 24,
+        "source_product_definition_available": true,
+        "source_product_domain": "k>0",
+        "source_raw_state": [
+          115,
+          24,
+          -5,
+          24
+        ],
+        "target_label": 0,
+        "target_positive_representative": [
+          -5,
+          24,
+          115,
+          24
+        ],
+        "target_raw_state": [
+          5,
+          -24,
+          -115,
+          -24
+        ]
+      },
+      {
+        "affine_argument": "24*(mu+m*omega2)",
+        "edge": "C-F3->A",
+        "kind": "F3",
+        "ordinary_gamma_residuals": [
+          "gamma((mu+(m)*omega2)/(24); (omega1+(-5)*omega2)/(24), omega2)",
+          "gamma((mu+(-(115)*m)*omega1)/(24); omega1, (omega2+(115)*omega1)/(24))"
+        ],
+        "period_map": [
+          [
+            1,
+            -5
+          ],
+          [
+            115,
+            1
+          ]
+        ],
+        "residuals_scalarized": false,
+        "source_k": 24,
+        "source_product_definition_available": true,
+        "source_product_domain": "k>0",
+        "source_raw_state": [
+          115,
+          24,
+          -5,
+          24
+        ],
+        "target_label": 0,
+        "target_positive_representative": [
+          -115,
+          24,
+          5,
+          24
+        ],
+        "target_raw_state": [
+          -115,
+          24,
+          5,
+          24
+        ]
+      },
+      {
+        "affine_argument": "24*(mu+m*omega2)",
+        "edge": "D-F2->C",
+        "kind": "F2",
+        "ordinary_gamma_residuals": [
+          "gamma((mu+(-24+m)*omega2)/(-24); (omega1+(-115)*omega2)/(-24), omega2)",
+          "gamma((mu+(-24-(5)*m)*omega1)/(-24); omega1, (omega2+(5)*omega1)/(-24))"
+        ],
+        "period_map": [
+          [
+            5,
+            1
+          ],
+          [
+            1,
+            -115
+          ]
+        ],
+        "residuals_scalarized": false,
+        "source_k": -24,
+        "source_product_definition_available": false,
+        "source_product_domain": "k<0",
+        "source_raw_state": [
+          5,
+          -24,
+          -115,
+          -24
+        ],
+        "target_label": 0,
+        "target_positive_representative": [
+          115,
+          24,
+          -5,
+          24
+        ],
+        "target_raw_state": [
+          115,
+          24,
+          -5,
+          24
+        ]
+      },
+      {
+        "affine_argument": "-24*(mu+m*omega2)",
+        "edge": "D-F3->B",
+        "kind": "F3",
+        "ordinary_gamma_residuals": [
+          "gamma((mu+(m)*omega2)/(-24); (omega1+(-115)*omega2)/(-24), omega2)",
+          "gamma((mu+(-(5)*m)*omega1)/(-24); omega1, (omega2+(5)*omega1)/(-24))"
+        ],
+        "period_map": [
+          [
+            1,
+            -115
+          ],
+          [
+            5,
+            1
+          ]
+        ],
+        "residuals_scalarized": false,
+        "source_k": -24,
+        "source_product_definition_available": false,
+        "source_product_domain": "k<0",
+        "source_raw_state": [
+          5,
+          -24,
+          -115,
+          -24
+        ],
+        "target_label": 0,
+        "target_positive_representative": [
+          5,
+          24,
+          -115,
+          24
+        ],
+        "target_raw_state": [
+          -5,
+          -24,
+          115,
+          -24
+        ]
+      }
+    ],
+    "epistemic_status": "PROVED",
+    "formal_negative_k_edge_count": 4,
+    "source_defined_edge_count": 4,
+    "source_defined_edges": [
+      "A-F2->B",
+      "A-F3->C",
+      "C-F2->D",
+      "C-F3->A"
+    ],
+    "unavailable_inverse_or_negative_k_edges": [
+      "B-F2->A",
+      "B-F3->D",
+      "D-F2->C",
+      "D-F3->B"
+    ]
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "preregistration": {
+      "path": "docs/cycle-226-b063-signed-product-groupoid-preregistration-v1.md",
+      "sha256": "32e85ff9b91ace04aa406e6d22bea27631bb3b174614f4c471b45945d1a20727"
+    },
+    "prior_groupoid": {
+      "path": "proof/verify_cycle_217_source_transformation_groupoid.py",
+      "sha256": "e038ffb0d9ab95d4eb6edfbf99eaf8ddbb046ba52fa46b8cb84b4c2bdeb3b465"
+    },
+    "prior_local_branch": {
+      "path": "artifacts/cycle-225-b062-reflection-root-branch-v1.json",
+      "sha256": "34b7d4943566e57f8c153127449226ec3eae4865f692f17336f6e4f5a3c9c29f"
+    },
+    "prototype": {
+      "path": "discovery/cycle-226-b063-signed-product-groupoid-prototype-v1.json",
+      "sha256": "a82eb5344934036a58f46ddc70e1f1293c573ef88497bcc895dfe05b65b9f879"
+    },
+    "regression_test": {
+      "path": "tests/test_cycle_226_signed_product_groupoid.py",
+      "sha256": "8835a045f28ef63878ce1441a5d8052a0778901c0cf23d433d7a83da9ddde96f"
+    },
+    "replay": {
+      "path": "proof/verify_cycle_226_signed_product_groupoid.py",
+      "sha256": "51eb9d4f07b7c6a2a19ac4229d84badac876adfa0ca394a1cf2d5b2a5a5132b9"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    },
+    "source_audit": {
+      "path": "scripts/dimension_six_ss_evaluation_audit.py",
+      "sha256": "24c9258e46a1233c552017f3b58de0d45acd0197c8c807579f090ca1332f626f"
+    },
+    "source_paper": {
+      "path": "paper/sic-stark-dimension-six-boundary-fusion.tex",
+      "sha256": "347228e05a87946ca41bb31c118aae069b7fb6002fff4933d030a153cef21cb7"
+    },
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "gate_outcome": {
+    "four_node_signed_product_groupoid": "FALSIFIED_BY_UNCLOSED_AUGMENTED_LOOPS_AND_MISSING_NEGATIVE_K_ARROWS",
+    "remaining_design_problem": "Enlarge the state space by the exact period-basis, affine-argument, and label transport semigroup; then construct a signed-k product and edge cochains on that enlarged groupoid before asserting any loop relation or affine E comparison."
+  },
+  "outcome": {
+    "epistemic_status": "PROVED",
+    "statement": "The four raw F2/F3 nodes do not support the preregistered state-complete signed-product groupoid: four edges lack a source-defined negative-k product input and none of the twelve raw loops closes after period, affine-argument, and label transport."
+  },
+  "preregistration_preflight": {
+    "cycle": 226,
+    "manifest_sha256": "32e85ff9b91ace04aa406e6d22bea27631bb3b174614f4c471b45945d1a20727",
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "raw_loop_audit": {
+    "augmented_closed_loop_count": 0,
+    "conclusion": "Every frozen raw matrix loop changes at least periods, affine argument, or label. Therefore the four-node raw orbit is not a state-complete factorization groupoid on which a loop cochain could be imposed.",
+    "epistemic_status": "PROVED",
+    "loop_count": 12,
+    "loops": [
+      {
+        "augmented_state_returns": false,
+        "final_affine_argument": {
+          "m_omega2_coefficient": -576,
+          "mu_coefficient": -576
+        },
+        "final_label": "0",
+        "final_periods": {
+          "omega1": [
+            576,
+            0
+          ],
+          "omega2": [
+            0,
+            576
+          ]
+        },
+        "raw_loop": "F2_square",
+        "raw_matrix_returns": true,
+        "start": "A",
+        "word": "F2 then F2"
+      },
+      {
+        "augmented_state_returns": false,
+        "final_affine_argument": {
+          "m_omega2_coefficient": 576,
+          "mu_coefficient": 576
+        },
+        "final_label": "0",
+        "final_periods": {
+          "omega1": [
+            576,
+            0
+          ],
+          "omega2": [
+            0,
+            576
+          ]
+        },
+        "raw_loop": "F3_square",
+        "raw_matrix_returns": true,
+        "start": "A",
+        "word": "F3 then F3"
+      },
+      {
+        "augmented_state_returns": false,
+        "final_affine_argument": {
+          "m_omega2_coefficient": 331776,
+          "mu_coefficient": 331776
+        },
+        "final_label": "0",
+        "final_periods": {
+          "omega1": [
+            331776,
+            0
+          ],
+          "omega2": [
+            0,
+            331776
+          ]
+        },
+        "raw_loop": "alternating_square",
+        "raw_matrix_returns": true,
+        "start": "A",
+        "word": "F2 then F3 then F2 then F3"
+      },
+      {
+        "augmented_state_returns": false,
+        "final_affine_argument": {
+          "m_omega2_coefficient": -576,
+          "mu_coefficient": -576
+        },
+        "final_label": "0",
+        "final_periods": {
+          "omega1": [
+            576,
+            0
+          ],
+          "omega2": [
+            0,
+            576
+          ]
+        },
+        "raw_loop": "F2_square",
+        "raw_matrix_returns": true,
+        "start": "B",
+        "word": "F2 then F2"
+      },
+      {
+        "augmented_state_returns": false,
+        "final_affine_argument": {
+          "m_omega2_coefficient": 576,
+          "mu_coefficient": 576
+        },
+        "final_label": "0",
+        "final_periods": {
+          "omega1": [
+            576,
+            0
+          ],
+          "omega2": [
+            0,
+            576
+          ]
+        },
+        "raw_loop": "F3_square",
+        "raw_matrix_returns": true,
+        "start": "B",
+        "word": "F3 then F3"
+      },
+      {
+        "augmented_state_returns": false,
+        "final_affine_argument": {
+          "m_omega2_coefficient": 331776,
+          "mu_coefficient": 331776
+        },
+        "final_label": "0",
+        "final_periods": {
+          "omega1": [
+            331776,
+            0
+          ],
+          "omega2": [
+            0,
+            331776
+          ]
+        },
+        "raw_loop": "alternating_square",
+        "raw_matrix_returns": true,
+        "start": "B",
+        "word": "F2 then F3 then F2 then F3"
+      },
+      {
+        "augmented_state_returns": false,
+        "final_affine_argument": {
+          "m_omega2_coefficient": -576,
+          "mu_coefficient": -576
+        },
+        "final_label": "0",
+        "final_periods": {
+          "omega1": [
+            576,
+            0
+          ],
+          "omega2": [
+            0,
+            576
+          ]
+        },
+        "raw_loop": "F2_square",
+        "raw_matrix_returns": true,
+        "start": "C",
+        "word": "F2 then F2"
+      },
+      {
+        "augmented_state_returns": false,
+        "final_affine_argument": {
+          "m_omega2_coefficient": 576,
+          "mu_coefficient": 576
+        },
+        "final_label": "0",
+        "final_periods": {
+          "omega1": [
+            576,
+            0
+          ],
+          "omega2": [
+            0,
+            576
+          ]
+        },
+        "raw_loop": "F3_square",
+        "raw_matrix_returns": true,
+        "start": "C",
+        "word": "F3 then F3"
+      },
+      {
+        "augmented_state_returns": false,
+        "final_affine_argument": {
+          "m_omega2_coefficient": 331776,
+          "mu_coefficient": 331776
+        },
+        "final_label": "0",
+        "final_periods": {
+          "omega1": [
+            331776,
+            0
+          ],
+          "omega2": [
+            0,
+            331776
+          ]
+        },
+        "raw_loop": "alternating_square",
+        "raw_matrix_returns": true,
+        "start": "C",
+        "word": "F2 then F3 then F2 then F3"
+      },
+      {
+        "augmented_state_returns": false,
+        "final_affine_argument": {
+          "m_omega2_coefficient": -576,
+          "mu_coefficient": -576
+        },
+        "final_label": "0",
+        "final_periods": {
+          "omega1": [
+            576,
+            0
+          ],
+          "omega2": [
+            0,
+            576
+          ]
+        },
+        "raw_loop": "F2_square",
+        "raw_matrix_returns": true,
+        "start": "D",
+        "word": "F2 then F2"
+      },
+      {
+        "augmented_state_returns": false,
+        "final_affine_argument": {
+          "m_omega2_coefficient": 576,
+          "mu_coefficient": 576
+        },
+        "final_label": "0",
+        "final_periods": {
+          "omega1": [
+            576,
+            0
+          ],
+          "omega2": [
+            0,
+            576
+          ]
+        },
+        "raw_loop": "F3_square",
+        "raw_matrix_returns": true,
+        "start": "D",
+        "word": "F3 then F3"
+      },
+      {
+        "augmented_state_returns": false,
+        "final_affine_argument": {
+          "m_omega2_coefficient": 331776,
+          "mu_coefficient": 331776
+        },
+        "final_label": "0",
+        "final_periods": {
+          "omega1": [
+            331776,
+            0
+          ],
+          "omega2": [
+            0,
+            331776
+          ]
+        },
+        "raw_loop": "alternating_square",
+        "raw_matrix_returns": true,
+        "start": "D",
+        "word": "F2 then F3 then F2 then F3"
+      }
+    ],
+    "raw_loop_count": 12
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_226_signed_product_groupoid_v1.py --check",
+    "preflight_command": "research prereg check docs/cycle-226-b063-signed-product-groupoid-preregistration-v1.md --expected-cycle 226 --allow-head-drift",
+    "prototype_command": "python3 proof/verify_cycle_226_signed_product_groupoid.py --output discovery/cycle-226-b063-signed-product-groupoid-prototype-v1.json",
+    "test_command": "python3 -m unittest tests/test_cycle_226_signed_product_groupoid.py",
+    "write_command": "python3 proof/build_cycle_226_signed_product_groupoid_v1.py --write"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_226_signed_product_groupoid_v1.py",
+    "sha256": "b7fdc10245d4b655d5b41ab7f2e87f228128ebf222b5a59f03f268b909500e52"
+  },
+  "status": "SEALED_FOUR_NODE_SIGNED_PRODUCT_GROUPOID_CONTAINED"
+}

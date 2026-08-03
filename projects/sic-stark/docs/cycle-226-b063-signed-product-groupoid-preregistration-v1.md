@@ -1,0 +1,24 @@
+# Cycle 226 / B063 preregistration: state-complete signed-product groupoid
+
+Cycle 225 establishes a local branch but leaves the two factorization target
+states undefined. This block attempts a state-complete construction on the
+entire raw `F2/F3` orbit rather than treating a matrix sign as an arrow.
+
+<!-- research-freeze-v1
+{
+  "schema":"research-preregistration-freeze-v1",
+  "cycle":226,
+  "parameters":{
+    "state_graph":{"kind":"expression","value":"Freeze raw states A=(-115,24,5,24), B=(-5,-24,115,-24), C=(115,24,-5,24), D=(5,-24,-115,-24), with F2 edges A<->B and C<->D, and F3 edges A<->C and B<->D. Freeze positive representatives A,C,-B=(5,24,-115,24),-D=(-5,24,115,24).","rationale":"This is the complete four-state raw orbit and every positive representative needed to define a signed product at B,D."},
+    "edge_data":{"kind":"expression","value":"For each directed F2 edge freeze the source equation-(16) period map (Omega1,Omega2)=(p*omega1+omega2,omega1+r*omega2), affine argument -s*(mu+m*omega2), label 0, and its two ordinary-gamma residual factors. For each F3 edge freeze equation-(17) periods (Omega1,Omega2)=(omega1+r*omega2,p*omega1+omega2), affine argument s*(mu+m*omega2), label 0, and its two ordinary-gamma residual factors. No residual is scalarized or omitted.","rationale":"The full edge labels, not raw matrices alone, are the factorization interface."},
+    "signed_products_and_cochains":{"kind":"expression","value":"Assign every negative raw node B,D a copy of the frozen c=±i local product template using its own positive representative, two survivor signs, parity cocycle, minimal shift cochain, and conjugate-root double-sign action. Assign unknown edge cochains only as explicit functions of the frozen edge arguments/periods/labels, constrained by the exact F2/F3 identities and every F2^2, F3^2, and square-loop relation. Do not fit values at a selected point.","rationale":"This is a constructive groupoid attempt, with unknowns constrained before evaluation."},
+    "acceptance_boundary":{"kind":"expression","value":"Accept only a state-complete assignment whose cochains make all eight directed factorization edges and all four elementary involution/square loops exact with residual factors retained. A missing edge state, unassigned cochain, or loop defect fails this groupoid construction. Do not claim source authorization, affine E closure, packet cocycle, AFK covariance, fusion, Stark, or TCC.","rationale":"Factorization compatibility is the advance criterion; local identities alone are insufficient."}
+  },
+  "resource_caps":{"raw_states":{"kind":"integer","value":4,"rationale":"Complete raw orbit."},"positive_representatives":{"kind":"integer","value":4,"rationale":"One source-side representative per raw state."},"directed_edges":{"kind":"integer","value":8,"rationale":"F2 and F3 in both directions at every node."},"loop_relations":{"kind":"integer","value":12,"rationale":"Four F2 squares, four F3 squares, and four alternating square loops."},"wall_seconds":{"kind":"integer","value":600,"rationale":"Exact symbolic edge/loop algebra."},"floating_point":{"kind":"not_applicable","justification":"All states, labels, and cochains are symbolic/exact.","rationale":"No numerical Gamma_M evaluation is admissible."}},
+  "formula_families":["Sarkissian--Spiridonov equations (16)--(17) with all ordinary-gamma factors","Cycle-217 raw F2/F3 graph and affine period data","Cycle-225 local c=±i signed-product template","Exact groupoid cochain and loop equations"],
+  "selection_rule":["Include all four raw nodes, all four positive representatives, all eight directed edges, and all twelve frozen loop relations.","Define edge cochains symbolically before testing an edge; retain every residual factor.","Accept only a uniform assignment on the complete frozen graph."],
+  "failure_rule":["Do not choose edge constants after inspecting a loop, delete an edge/state, scalarize an ordinary gamma factor, use only matrices, or replace a missing product with a projective representative.","Do not call a constructed groupoid source-derived or use it for E/packet statements before every edge and loop passes.","Do not infer any AFK, fusion, Stark, or TCC consequence."],
+  "pre_execution":{"timestamp_utc":"2026-08-03T08:32:00Z","git_head":"5cecbfd93be3a576a0647b3fa56853066b1da310","git_state":"Dirty only from the concurrent repository-wide PROGRAM migration and unrelated work; this cycle freezes the listed SIC--Stark inputs."},
+  "input_paths":["artifacts/cycle-225-b062-reflection-root-branch-v1.json","proof/verify_cycle_225_reflection_root_branch.py","proof/verify_cycle_217_source_transformation_groupoid.py","scripts/dimension_six_ss_evaluation_audit.py","paper/sic-stark-dimension-six-boundary-fusion.tex","../../tools/preregistration_check.py"]
+}
+-->

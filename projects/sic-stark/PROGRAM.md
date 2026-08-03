@@ -84,10 +84,15 @@
   product fail raw reflection by `-1`. The reflection equation now forces the
   separate `c=±i` branch. Cycle 225 proves that branch closes both shifts,
   reflection, and double sign (with root conjugation), but it is only a
-  one-state construction: both factorization targets remain undefined. The
-  next gate is a state-complete signed-product groupoid. No endpoint binomial
-  value has been evaluated. No divergent raw contour, periodized beta channel,
-  AFK amplitude identity, fusion, or TCC is proved.
+  one-state construction: both factorization targets remain undefined. Cycle
+  226 then retains all eight factorization interfaces and ordinary-gamma
+  residuals: only four have a source-defined positive-`k` product input, and
+  none of the twelve raw matrix loops closes after period, affine-argument,
+  and label transport. The raw four-node graph is therefore not the functional
+  state space for a signed-product cochain. The next gate is an enlarged
+  period/affine semigroup normal-form construction. No endpoint binomial value
+  has been evaluated. No divergent raw contour, periodized beta channel, AFK
+  amplitude identity, fusion, or TCC is proved.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -526,6 +531,13 @@
   two required factorization target states are undefined, so it is a local
   signed-product branch rather than a `Gamma_M` extension. See
   `artifacts/cycle-225-b062-reflection-root-branch-v1.json`.
+- `PROVED`: Cycle 226 retains every raw `F2/F3` edge's periods, affine
+  argument, label, and two ordinary-gamma residuals. Four edges sourced at
+  negative `k` lack a source-defined product input; independently, every raw
+  matrix loop changes the augmented state (by `576` or `576^2` scaling and
+  label loss). This contains the four-node groupoid only, not an enlarged
+  signed-period construction. See
+  `artifacts/cycle-226-b063-signed-product-groupoid-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -680,16 +692,17 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 226 state-complete signed-product groupoid decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `REFLECTION_ROOT_LOCAL_BRANCH_FACTORIZATION_UNDEFINED_SEALED` | Define compatible signed products and cochains on every raw four-state-orbit/factorization target, then solve all `F2/F3` edge and loop-consistency equations with residual factors retained before re-testing affine E. | Calling local closure a `Gamma_M` theorem; defining only the E state; fitting edge cochains; using projective matrices as arrows; dropping normalization/branches/residual factors; or calling a partial groupoid an extension. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 227 enlarged period/affine semigroup decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `FOUR_NODE_SIGNED_PRODUCT_GROUPOID_CONTAINED` | Derive exact normal forms for period basis, affine argument, and label transport, quotienting only by already proved positive scaling; then test whether a genuinely closed enlarged groupoid can support signed products/cochains with residual factors retained before re-testing affine E. | Calling raw matrix return a functional loop; treating formal negative-`k` transport as a source identity; fitting cochains; dropping normalization/branches/residual factors; or calling an unclosed semigroup an extension. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Can a state-complete signed-product groupoid on the full raw four-state
-  orbit carry compatible `F2/F3` factorization arrows and loop cochains?
+- What are the exact normal forms and possible finite quotients of the
+  period/affine/label transport semigroup generated by `F2,F3`, once only
+  already proved positive scaling is quotiented?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -698,18 +711,19 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 226 / B063
+## Next goal: Cycle 227 / B064
 
 Preregister one substantive block with this question:
 
-> Can the full raw `F2/F3` four-state orbit and its positive representatives
-> be assigned signed products/cochains so that every factorization edge and
-> closed loop is defined with its ordinary-gamma residual factor retained?
+> Does the enlarged period/affine/label transport semigroup admit exact normal
+> forms and a source-justified quotient on which any `F2/F3` loops genuinely
+> close before a signed-product cochain is assigned?
 
-Cycle 226 must freeze the complete state graph, all edge argument/label/period
-maps, the cochain unknowns, loop equations, and residual factors before
-executable work. It must keep the AFK phase separate, forbid target fitting,
-and not claim an AFK, fusion, Stark, or TCC consequence.
+Cycle 227 must freeze the augmented generators, the allowed positive-scaling
+quotient (if any), normal-form criterion, residual-factor transport, and a
+finite failure criterion before executable work. It must keep the AFK phase
+separate, forbid target fitting and projective raw-loop closure, and not claim
+an AFK, fusion, Stark, or TCC consequence.
 
 ## Recovery
 
@@ -717,5 +731,5 @@ and not claim an AFK, fusion, Stark, or TCC consequence.
 source ../../tools/dev-env.sh
 research cycle 225
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_225_reflection_root_branch_v1.py --check
+python3 proof/build_cycle_226_signed_product_groupoid_v1.py --check
 ```
