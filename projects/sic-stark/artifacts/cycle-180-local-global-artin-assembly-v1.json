@@ -1,0 +1,173 @@
+{
+  "artifact_id": "cycle-180-local-global-artin-assembly-v1",
+  "budget_ordinal": "B018",
+  "claim_boundary": "This exact finite result reconstructs conductor-lowered ray-exponent sets from local residue-sign classes modulo the exact global-unit image, and independently compares them with ray arithmetic. It defines no additive coefficient operation, AFK interface, regulator equality, fusion theorem, or TCC identity.",
+  "cycle": 180,
+  "epistemic_status": "PROVED",
+  "exact_prototype": {
+    "moduli": [
+      {
+        "conductor_exponents": [
+          0,
+          0
+        ],
+        "exact_sequence_quotient_order": 1,
+        "finite_local_unit_order": 1,
+        "positive_unit_image_period": 1,
+        "ray_cyc": []
+      },
+      {
+        "conductor_exponents": [
+          0,
+          1
+        ],
+        "exact_sequence_quotient_order": 2,
+        "finite_local_unit_order": 2,
+        "positive_unit_image_period": 1,
+        "ray_cyc": [
+          2
+        ]
+      },
+      {
+        "conductor_exponents": [
+          0,
+          2
+        ],
+        "exact_sequence_quotient_order": 2,
+        "finite_local_unit_order": 6,
+        "positive_unit_image_period": 3,
+        "ray_cyc": [
+          2
+        ]
+      },
+      {
+        "conductor_exponents": [
+          1,
+          0
+        ],
+        "exact_sequence_quotient_order": 1,
+        "finite_local_unit_order": 3,
+        "positive_unit_image_period": 3,
+        "ray_cyc": []
+      },
+      {
+        "conductor_exponents": [
+          1,
+          1
+        ],
+        "exact_sequence_quotient_order": 2,
+        "finite_local_unit_order": 6,
+        "positive_unit_image_period": 3,
+        "ray_cyc": [
+          2
+        ]
+      },
+      {
+        "conductor_exponents": [
+          1,
+          2
+        ],
+        "exact_sequence_quotient_order": 6,
+        "finite_local_unit_order": 18,
+        "positive_unit_image_period": 3,
+        "ray_cyc": [
+          6
+        ]
+      }
+    ],
+    "source_output": "discovery/cycle-180-local-global-artin-assembly-prototype-v1.json",
+    "summary": {
+      "all_assembled_sets_equal_independent_ray_sets": true,
+      "distinct_lowered_moduli": 6,
+      "orientation_anchors": {
+        "3,4": [
+          2
+        ],
+        "3,5": [
+          1
+        ]
+      },
+      "rows_checked": 36,
+      "source_power_pairs_per_transition": 36,
+      "transition_maps_checked": 18
+    }
+  },
+  "frozen_hashes": {
+    "instructions": {
+      "path": "AGENTS.md",
+      "sha256": "363495f0dbbe93e244b460c8eafb13247a8fb1f41be24f94c037ae9f6400c6f2"
+    },
+    "output": {
+      "path": "discovery/cycle-180-local-global-artin-assembly-prototype-v1.json",
+      "sha256": "a1715f66a7b4134d5a00d54e2e959445266ea0e5a63d595dc1f5c282dc8fc799"
+    },
+    "prereg": {
+      "path": "docs/cycle-180-local-global-artin-assembly-preregistration-v1.md",
+      "sha256": "859a5e89edfcfacb5ae145d0f18e40012b77df21631da6c34c34ef0fef207e3d"
+    },
+    "prior": {
+      "path": "artifacts/cycle-179-p2-ray-quotient-v1.json",
+      "sha256": "0192cb7095b8e0c5e5507e92e0c5f06c79da51c9b41f39824f2fb656b341229d"
+    },
+    "replay": {
+      "path": "proof/verify_cycle_180_local_global_artin_assembly.py",
+      "sha256": "35f385cc6335fabc437afd19f33e351e328c2c11de38a20a3e0db4cb424af3db"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    },
+    "section": {
+      "path": "artifacts/cycle-164-oriented-ray-monoid-section-v1.json",
+      "sha256": "f1815f8641780570c15c7e9c6b40f9de8390358fb3dec0ac93aa311b78a6a26d"
+    }
+  },
+  "gate_outcome": {
+    "d6_interface": "RAY_ASSEMBLY_EXACT_CHARACTERISTIC_ACTION_LINK_REQUIRED",
+    "disallowed_pseudo_progress": [
+      "calling ray assembly an additive coefficient operation",
+      "using s,d or selected exponents to supply equivariance",
+      "claiming TCC or fusion continuity"
+    ],
+    "remaining_bottleneck": "Relate the exact set-valued ray assembly to the A6/Shintani action on characteristics without choosing a section, then seek an additive coefficient/AFK operation."
+  },
+  "outcome": {
+    "epistemic_status": "PROVED",
+    "statement": "The six conductor-varying ray quotients and all 36 admissible exponent sets are exactly assembled from local residue-sign data modulo the global-unit image, with independent ray-arithmetic agreement."
+  },
+  "preregistration_preflight": {
+    "cycle": 180,
+    "manifest_sha256": "859a5e89edfcfacb5ae145d0f18e40012b77df21631da6c34c34ef0fef207e3d",
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "The next engine, subject to companion review, is a direct A6/Shintani action on residue-sign/global-unit quotient classes and an exact set-valued equivariance test."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_180_local_global_artin_assembly_v1.py --check",
+    "preflight_command": "research prereg check docs/cycle-180-local-global-artin-assembly-preregistration-v1.md --expected-cycle 180 --allow-head-drift",
+    "prototype_command": "python3 proof/verify_cycle_180_local_global_artin_assembly.py --output discovery/cycle-180-local-global-artin-assembly-prototype-v1.json",
+    "write_command": "python3 proof/build_cycle_180_local_global_artin_assembly_v1.py --write"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_180_local_global_artin_assembly_v1.py",
+    "sha256": "ae208a6ddccbce0af6a855d8dc87e626ca710f021001bfa084357dd60198f5d9"
+  },
+  "status": "SEALED_LOCAL_GLOBAL_RAY_ASSEMBLY_EXACT",
+  "unit_theorem": {
+    "full_unit_group": "{+/- beta^k : k in Z}",
+    "fundamental_unit": "beta",
+    "ordinary_class_number": 1,
+    "oriented_source_generator": "(4beta+1)=(beta-9)",
+    "selected_place_sign_of_generator": -1
+  }
+}
