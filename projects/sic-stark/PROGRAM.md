@@ -125,8 +125,11 @@
   239 excludes the direct application of the cited rarefied hyperbolic beta
   theorem: neither C228 word has its common rarefied lens state, six
   plus/minus pairs, complete kernel/denominator, balancing data, or contour.
-  A smallest explicitly proved mixed-base two-kernel composition is the next
-  source construction.
+  Cycle 240 then excludes the smallest Faddeev two-kernel closure: the first
+  A/C factor pairs have no common period system even up to scaling and swap,
+  so Faddeev's FTD/MIR relation cannot instantiate an auxiliary convolution.
+  A Minkowski two-embedding lattice kernel over `Q(sqrt(21))` is the next
+  genuinely mixed-base construction.
   No endpoint binomial value has been
   evaluated. No divergent raw contour, periodized beta channel, AFK amplitude
   identity, fusion, or TCC is proved.
@@ -744,16 +747,16 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 240 mixed-base two-kernel composition decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `DIRECT_RAREFIED_BETA_EMBEDDING_OBSTRUCTED` | Freeze the smallest mixed-base two-kernel composition, including transform order, auxiliary variable, exact period conversion, both contours, and Fubini conditions; prove or falsify its two-factor closure. | Adding complementary factors; composing transforms without a theorem or proof; treating proportional/modularly related bases as identical; or inferring a signed extension. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 241 Minkowski two-embedding lattice-kernel decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `FADDEEV_TWO_KERNEL_COMMON_PERIOD_OBSTRUCTED` | Freeze the two Galois-embedding period maps, trace pairing, Fourier normalization, candidate `R^2` lattice kernel, and exact self-duality criterion; prove or falsify its first closure condition. | Identifying nonproportional periods; treating conjugacy as an integral identity; or inferring a signed extension. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Can the two C228 factors arising at one F3 step admit one exact mixed-base
-  two-kernel composition with a common auxiliary contour and Fubini proof?
+- Does the `Q(sqrt(21))` two-embedding period lattice admit the exact
+  trace-paired self-dual kernel required before a mixed-base transform?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -762,24 +765,23 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 240 / B077
+## Next goal: Cycle 241 / B078
 
 Preregister one substantive block with this question:
 
-> Does one frozen mixed-base two-kernel composition close the first two C228
-> residual factors without adding a kernel by hand?
+> Does one frozen Minkowski two-embedding lattice kernel satisfy the exact
+> trace-paired self-duality condition for the C228 period maps?
 
-Cycle 240 must freeze transform order, source identity or proposed kernel,
-auxiliary variable, both contours, exact period conversion, Fubini/domain
-conditions, and a two-factor word-output acceptance criterion before
-executable work. It must keep the AFK phase separate, forbid fitted quotients,
-and not claim an AFK, fusion, Stark, or TCC consequence.
+Cycle 241 must freeze both embedding maps, lattice basis, trace pairing,
+Fourier normalization, and self-duality acceptance criterion before executable
+work. It must keep the AFK phase separate, forbid fitted quotients, and not
+claim an AFK, fusion, Stark, or TCC consequence.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 239
+research cycle 240
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_239_rarefied_beta_embedding_v1.py --check
+python3 proof/build_cycle_240_mixed_base_two_kernel_v1.py --check
 ```
