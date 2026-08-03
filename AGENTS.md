@@ -39,16 +39,21 @@ Keep `PLAN.md` short enough to reread routinely. Do not store per-cycle row
 registries, long correction narratives, exhaustive hashes, test transcripts,
 or detailed replay histories there.
 
-Each substantive research block has exactly two durable records:
+Keep a preregistration with its embedded freeze manifest before executable
+work that may support a durable claim. Sealing is optional, not a completion
+ritual. Create an immutable `artifacts/cycle-<n>-<slug>-v<version>.json` only
+when banking a `PROVED`/`CERTIFIED_NUMERICAL` result for later reliance,
+changing an irreversible gate or strategy, issuing a correction, or preparing
+an external handoff/publication. Otherwise keep the live work in its one
+preregistration and `discovery/`; it needs no artifact, status update, or
+handover record.
 
-- one preregistration with its embedded freeze manifest before executable work;
-- one immutable `artifacts/cycle-<n>-<slug>-v<version>.json` containing the
-  finding, claim boundary, frozen hashes, replay, and gate outcome.
-
-Create a separate readable decision document only for paper/publication work,
-a correction, or when the artifact cannot state the decision clearly. Keep
-failed, deferred, superseded, and corrected paths as artifacts; a correction
-creates a new record and never mutates a sealed one.
+When a result is sealed, its artifact contains the finding, claim boundary,
+frozen hashes, replay, and gate outcome. Create a separate readable decision
+document only for paper/publication work, a correction, or when the artifact
+cannot state the decision clearly. Preserve a failed, deferred, superseded,
+or corrected path only when it materially constrains a later decision; a
+correction creates a new record and never mutates a sealed one.
 
 Projects may maintain a local DuckDB index built from those records for
 search, dependency queries, and generated status. The database binary is
@@ -97,15 +102,15 @@ specific mathematical premise or prior artifact instead.
 ### Research-block cadence
 
 A research cycle is a coherent decision block, not a single algebraic
-observation, lemma, engine probe, or validation run. Its normal boundary is a
-material companion-review checkpoint: a seal/strategic decision at which the
+observation, lemma, engine probe, validation run, or required artifact. Its
+normal boundary is a material companion-review checkpoint at which the
 companion reviews the completed related work and recommends whether to reuse
 the live cycle or open a genuinely new one. Preregister one decision question
 with a real advance condition, then pursue all closely dependent derivations,
 counterexamples, alternative formulations, and exact checks needed to answer
-it before sealing. Reuse the live cycle and its one preregistration for that
-related work; do not create a cycle merely to name an intermediate
-decomposition, factorization, failed subtest, or bookkeeping repair.
+it. Reuse the live cycle and its one preregistration for that related work; do
+not create a cycle merely to name an intermediate decomposition,
+factorization, failed subtest, or bookkeeping repair.
 
 Open a new cycle only when the companion-reviewed decision selects a genuinely
 different research question or frozen method family, or when a correction,
@@ -117,9 +122,10 @@ cycle and open a new one only at that decision boundary; never evade the
 freeze by minting a routine successor cycle.
 
 Keep scratch in `discovery/` and promote only the conclusion. Run the relevant
-replay and commit once per completed research block—not after each lemma or
-subtest. An early seal is justified only by a correction, falsifier,
-externally useful result, or irreversible strategy/gate decision. Use a
+replay and commit only when it is useful; do not commit, seal, regenerate
+status, or write a handover after each lemma or subtest. A seal is justified
+only by a correction, a later-relevant falsifier, an externally useful
+proof-grade result, or an irreversible strategy/gate decision. Use a
 correction only for a genuine post-seal defect.
 
 ### One live specification per cycle
@@ -171,22 +177,22 @@ are legitimate.
 
 ## 1a. Critical-decision companion
 
-Use one named companion only for a strategic fork, sealing a material claim,
+Use one named companion only for a strategic fork, a proposed material seal,
 choosing whether to continue or break a cycle after a material result, or
-publication. It is a mentor, not a duplicate worker. A material cycle-boundary
+publication. It is a mentor, not a duplicate worker. A material boundary
 choice is a mandatory checkpoint: before choosing it, send the companion the
 work completed so far and ask it to review that work and recommend either
-continued use of the live cycle or a new cycle with a distinct question. A
-material seal and its boundary choice normally share one review packet under
-200 words: state the decision, frozen claim/gate and tag, decisive evidence,
-known flaw, the completed work to review, and the plausible next engines.
-Request five short items: an evidence and scope review, recommendation, flaw,
-falsifier, and next action; the next action must say whether the current cycle
-continues or a new one is warranted. The companion must assess the completed
-work and alternatives, rather than merely approve or reject the proposed
-choice. Do not notify, poll, or wait during routine cycles. If no reply is
-available at the irreversible decision, defer that decision rather than create
-process work around it.
+continued use of the live cycle, a seal, or a new cycle with a distinct
+question. A proposed material seal and its boundary choice normally share one
+review packet under 200 words: state the decision, frozen claim/gate and tag,
+decisive evidence, known flaw, the completed work to review, and plausible
+next engines. Request five short items: an evidence and scope review,
+recommendation, flaw, falsifier, and next action; the next action must say
+whether the current cycle continues, seals, or needs a new one. The companion
+must assess the completed work and alternatives, rather than merely approve or
+reject the proposed choice. Do not notify, poll, or wait during routine cycles.
+If no reply is available at the irreversible decision, defer that decision
+rather than create process work around it.
 
 ## 2. Discovery and proof are separate
 
