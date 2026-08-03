@@ -1,0 +1,117 @@
+{
+  "artifact_id": "cycle-183-conductor-graded-target-v1",
+  "budget_ordinal": "B021",
+  "claim_boundary": "This exact finite result tests only whether the source-built conductor-graded coset states admit one deterministic Shintani action. It defines no AFK coefficient identification, Stark regulator equality, fusion theorem, or TCC identity.",
+  "conventions": {
+    "source": "Q[(Z/6Z)^2] with T(a,b)=(5a+b,-a)",
+    "state": "(conductor grade, assembled exponent coset) without an exponent representative",
+    "target": "direct sum of six Q[C6/K_m] components"
+  },
+  "cycle": 183,
+  "epistemic_status": "PROVED",
+  "exact_prototype": {
+    "source_output": "discovery/cycle-183-conductor-graded-target-prototype-v1.json",
+    "summary": {
+      "all_source_states_observed": true,
+      "deterministic_state_conflict_count": 10,
+      "graded_components": 6,
+      "graded_target_dimension": 14,
+      "orientation_anchors": {
+        "3,4": {
+          "coset": [
+            2
+          ],
+          "grade": [
+            1,
+            2
+          ]
+        },
+        "3,5": {
+          "coset": [
+            1
+          ],
+          "grade": [
+            1,
+            2
+          ]
+        }
+      },
+      "rows_checked": 36
+    }
+  },
+  "frozen_hashes": {
+    "assembly": {
+      "path": "artifacts/cycle-180-local-global-artin-assembly-v1.json",
+      "sha256": "00ed9e7d014d1e53e828390f589ed5b97ceacb8fba2ddf502b8f318707b7817f"
+    },
+    "instructions": {
+      "path": "AGENTS.md",
+      "sha256": "363495f0dbbe93e244b460c8eafb13247a8fb1f41be24f94c037ae9f6400c6f2"
+    },
+    "output": {
+      "path": "discovery/cycle-183-conductor-graded-target-prototype-v1.json",
+      "sha256": "454a9e39ab46ea779bcc296ff74d0caac05bc0695332b75da5d6b21e09257cca"
+    },
+    "prereg": {
+      "path": "docs/cycle-183-conductor-graded-target-preregistration-v1.md",
+      "sha256": "a03b467631cdca462932c625d83d339cc2e459141781cdc14131221c2afc59ab"
+    },
+    "prior": {
+      "path": "artifacts/cycle-182-section-free-linear-operation-v1.json",
+      "sha256": "aec2479ae29a376726ba79ae99f10485d0c800e6c9b621416e4c00335269a2e1"
+    },
+    "replay": {
+      "path": "proof/verify_cycle_183_conductor_graded_target.py",
+      "sha256": "22ffb04f5e3b18e81348e494c1fde068bd4fad8f70f155f8ea910d859831c3f1"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    },
+    "transport": {
+      "path": "artifacts/cycle-181-shintani-local-action-v1.json",
+      "sha256": "539e7179b060c471603154331327843b909487125b80278c2d76d346a3d930e4"
+    }
+  },
+  "gate_outcome": {
+    "d6_interface": "CONDUCTOR_GRADED_DETERMINISTIC_TARGET_FALSIFIED_MULTIPLIER_REFINED_CORRESPONDENCE_REQUIRED",
+    "disallowed_pseudo_progress": [
+      "re-encoding all 36 rows as a purported target",
+      "generalizing to correspondence, multiplier, fibre-resolved, nonlinear, or analytic targets",
+      "using selected exponents, s,d, or fitted labels"
+    ],
+    "remaining_bottleneck": "Build a multiplier-refined correspondence module with nontrivial compression and independently defined composition, then test whether it yields an additive operation."
+  },
+  "outcome": {
+    "epistemic_status": "PROVED",
+    "statement": "Even after retaining all six conductor grades and all 14 ray-coset states, ten repeated states have incompatible Shintani successors; no deterministic linear action exists on that frozen basis."
+  },
+  "preregistration_preflight": {
+    "cycle": 183,
+    "manifest_sha256": "a03b467631cdca462932c625d83d339cc2e459141781cdc14131221c2afc59ab",
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "The next distinct method combines the exact ray correspondence with the frozen AFK multiplier phase, subject to a compression and composition-law gate."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_183_conductor_graded_target_v1.py --check",
+    "preflight_command": "research prereg check docs/cycle-183-conductor-graded-target-preregistration-v1.md --expected-cycle 183 --allow-head-drift",
+    "prototype_command": "python3 proof/verify_cycle_183_conductor_graded_target.py --output discovery/cycle-183-conductor-graded-target-prototype-v1.json",
+    "write_command": "python3 proof/build_cycle_183_conductor_graded_target_v1.py --write"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_183_conductor_graded_target_v1.py",
+    "sha256": "97e56877c1f043422dd90f768642fbc345e420ee5cf172d7ac0763a3508deb6a"
+  },
+  "status": "SEALED_CONDUCTOR_GRADED_DETERMINISTIC_ACTION_EMPTY"
+}

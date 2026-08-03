@@ -10,10 +10,10 @@
   scopes in dimensions 4, 5, 7, and 8. No dimension-six TCC identity,
   coefficient-to-ray map, fusion-continuity theorem, or boundary-limit theorem
   is proved. `CERTIFIED_NUMERICAL` packet growth is not a nonexistence theorem.
-- Current state: Cycle 182 / `B020` falsifies the complete rational linear
-  action class on the collapsed uniform `Q[C6]` target: source-measure
-  collisions already violate Shintani equivariance. Cycle 183 / `B021` must
-  retain the six conductor grades and derive direct inter-grade maps.
+- Current state: Cycle 183 / `B021` proves that even the full 14-state
+  conductor-graded ray-coset target has incompatible repeated-state Shintani
+  successors. Cycle 184 / `B022` must add multiplier data, but only with a
+  genuine compression and independently defined composition law.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -26,8 +26,8 @@
 ## Budget, accounting, and stop condition
 
 - Total forward budget: 200 substantive research cycles, counted `B001/200`
-  through `B200/200`; the counter is currently `B020/200`.
-- Cycle 183 is `B021`. Repository cycle numbers and budget ordinals advance
+  through `B200/200`; the counter is currently `B021/200`.
+- Cycle 184 is `B022`. Repository cycle numbers and budget ordinals advance
   together unless a non-counted record intervenes; the budget ordinal is the
   authoritative campaign counter.
 - A cycle counts only when it is a preregistered substantive research block
@@ -157,6 +157,11 @@
   have incompatible successor measures. This does not constrain conductor-
   graded, nonlinear, fibre-resolved, or analytic operations. See
   `artifacts/cycle-182-section-free-linear-operation-v1.json`.
+- `PROVED`: Cycle 183 retains all six conductor grades and all 14 ray-coset
+  states, yet finds ten repeated state types with distinct Shintani successors.
+  It falsifies only deterministic linear action on that graded basis, not a
+  multiplier-refined correspondence or any analytic construction. See
+  `artifacts/cycle-183-conductor-graded-target-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -225,7 +230,8 @@ Budget B001--B200
   |    |                                                                                         `-- local-global Artin assembly [SEALED]
   |    |                                                                                              `-- direct A6/Shintani action [SEALED]
   |    |                                                                                                   `-- collapsed uniform target [FALSIFIED]
-  |    |                                                                                                        `-- conductor-graded ray algebra [NEXT GATE]
+  |    |                                                                                                        `-- conductor-graded target [FALSIFIED]
+  |    |                                                                                                             `-- multiplier-refined correspondence [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -270,17 +276,17 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `B020_OF_200` | Complete the companion-reviewed Cycle 183/B021 decision, then increment only for substantive research blocks. | Counting workflow or archive-only work. |
-| D6 interface | `COLLAPSED_UNIFORM_RAY_TARGET_FALSIFIED_CONDUCTOR_GRADED_TARGET_REQUIRED` | Define the six-grade section-free ray-algebra target and direct Shintani inter-grade maps, then test the corresponding additive operation class. | Discarding conductor grade; generalizing the collapsed-target falsifier; using selected exponents, `s,d`, or target labels. |
+| Project budget | `B021_OF_200` | Complete the companion-reviewed Cycle 184/B022 decision, then increment only for substantive research blocks. | Counting workflow or archive-only work. |
+| D6 interface | `CONDUCTOR_GRADED_DETERMINISTIC_TARGET_FALSIFIED_MULTIPLIER_REFINED_CORRESPONDENCE_REQUIRED` | Define a compressed multiplier-refined correspondence module with independent composition and test its direct Shintani action/additive operation. | Re-encoding all 36 rows; generalizing the deterministic-target falsifier; using selected exponents, `s,d`, or fitted labels. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Does the direct sum of the six conductor-graded ray algebras admit
-  source-defined Shintani inter-grade maps and a section-free additive
-  characteristic operation that preserves orientation?
+- Can the frozen AFK multiplier phase refine the local ray correspondence into
+  a compressed state space with an independent composition law and direct
+  Shintani action?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -289,28 +295,28 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 183 / `B021`
+## Next goal: Cycle 184 / `B022`
 
 Preregister one substantive block with this question:
 
-> What are the source-defined inter-grade Shintani maps on the six
-> conductor-lowered ray algebras, and does the resulting graded target admit a
-> section-free additive characteristic operation without `s`, `d`, selected
-> exponents, or target-fitted labels?
+> Does a multiplier-refined, non-row-encoding correspondence module built from
+> the frozen AFK phase and local ray data have an independently defined
+> composition law and direct Shintani action without `s`, `d`, selected
+> exponents, or fitted labels?
 
-Cycle 183 must freeze the six graded targets, the common-source and
-inter-grade maps, the additive source module, equivariance convention,
-anchors, and failure rule before executable work. It must not collapse the
-grade, select exponents, use `s,d`, or fit target maps. The companion reviewed
-the sealed B020 obstruction and recommended this distinct graded-target
-engine; its stated flaw is that retaining grade may still produce a merely
-finite transport rather than an AFK coefficient or Stark map.
+Cycle 184 must freeze the phase input, proposed compressed state space and
+compression threshold, independent composition law, direct action convention,
+anchors, and failure rule before executable work. It must not encode every
+characteristic as a distinct target state, select exponents, use `s,d`, or fit
+maps. The companion reviewed the sealed B021 obstruction and recommended this
+distinct multiplier-refined engine; its stated flaw is that finite transport
+may still fail to map AFK coefficients or control Stark values.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 182
+research cycle 183
 sed -n '1,260p' PLAN.md
-python3 proof/build_cycle_182_section_free_linear_operation_v1.py --check
+python3 proof/build_cycle_183_conductor_graded_target_v1.py --check
 ```
