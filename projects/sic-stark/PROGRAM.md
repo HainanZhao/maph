@@ -44,10 +44,12 @@
   from 16 to 81 at `t=2,3`. Cycle 210 derives the unique source exponent
   connection and proves its relative transport is A6/multiplier compatible,
   but its basepoint change is non-scalar, so it selects no canonical source
-  projective class. No endpoint binomial value has been evaluated. No
-  divergent raw contour, periodized beta channel, AFK amplitude identity,
-  fusion, or TCC is proved; the active gate is a source-only cusp/asymptotic
-  boundary section for this flat packet bundle, with no C198 target fitting.
+  projective class. Cycle 211 identifies two exact source cusp lines and
+  proves the frozen A6/multiplier data preserve both, so they supply no
+  selector. No endpoint binomial value has been evaluated. No divergent raw
+  contour, periodized beta channel, AFK amplitude identity, fusion, or TCC is
+  proved; the active gate is an orientation theorem linking the pinned
+  Frobenius, A6 contraction, and real embedding to exactly one source cusp.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -392,6 +394,12 @@
   `(0,0),(0,1)`, so it is not projectively scalar. This leaves a source-only
   asymptotic base section or a non-diagonal connection open. See
   `artifacts/cycle-210-b047-logarithmic-projective-connection-v1.json`.
+- `PROVED`: Cycle 211 derives two all-h source cusp lines, `[e_(0,5)]` at
+  `t->infinity` and `[e_(5,0)]` at `t->0^+`, from the unique exponent extrema
+  20 and -25. Both are projectively preserved by the frozen A6/multiplier
+  action. Thus the declared source rules retain two candidates and select
+  neither; an orientation/boundary theorem remains open. See
+  `artifacts/cycle-211-b048-cusp-asymptotic-flat-sections-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -493,7 +501,8 @@ Budget B001--B200
   |    |                                                                                                                                                                                                                                                              `-- full diagonal 225-minor pullback criterion [SEALED]
   |    |                                                                                                                                                                                                                                                                   `-- fixed diagonal all-fibre projective interface [FALSIFIED]
   |    |                                                                                                                                                                                                                                                                        `-- logarithmic projective connection [SEALED: BASEPOINT-FREE NORMALIZATION OBSTRUCTED]
-  |    |                                                                                                                                                                                                                                                                             `-- source-only cusp/asymptotic base section [NEXT GATE]
+  |    |                                                                                                                                                                                                                                                                             `-- two source cusp sections [SEALED: NO DECLARED SELECTOR]
+  |    |                                                                                                                                                                                                                                                                                  `-- Frobenius/A6/real-embedding orientation theorem [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -538,17 +547,16 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 211 source-only boundary-section decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `LOGARITHMIC_PROJECTIVE_CONNECTION_SEALED_BASEPOINT_FREE_NORMALIZATION_OBSTRUCTED` | Derive or refute a source-only cusp/asymptotic flat section and test whether it gives a canonical projective comparison without C198 target data or a selected source fibre. | Calling relative transport a canonical comparison, selecting a fibre/basepoint, fitting a boundary vector to C198, or treating source covariance as an AFK amplitude. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 212 source-orientation decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `TWO_SOURCE_CUSP_SECTIONS_SEALED_ORIENTATION_SELECTOR_OPEN` | Derive or refute a source-authorized theorem linking pinned Frobenius, A6 contraction, and real embedding to exactly one cusp, without C198 target data. | Selecting an orientation by convenience, treating A6 preservation as selection, fitting a cusp to C198, or inflating a scoped orientation result into an interface. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Does the source packet admit a canonical cusp/asymptotic flat section that
-  supplies the missing base data without any C198 target input or selected
-  source fibre?
+- Do the pinned norm-37 Frobenius, A6 contraction, and real embedding select
+  exactly one of the two source cusp lines without C198 target data?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -557,25 +565,25 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 211
+## Next goal: Cycle 212
 
 Preregister one substantive block with this question:
 
-> Does the complete source packet admit a source-only cusp/asymptotic flat
-> section that canonically fixes the logarithmic projective transport, without
-> selecting a source fibre or fitting any C198 target data?
+> Do the pinned norm-37 Frobenius, A6 contraction, and real embedding imply a
+> source-authorized orientation selecting exactly one of the two source cusp
+> lines, without C198 target data or a fitted source fibre?
 
-Cycle 211 must freeze the cusp/asymptotic regime, source flat-section rule,
-projective gauge, `A6` and multiplier comparison, and exact acceptance or
-falsifier before executable work. It must retain all 36 labels, keep capital
-`Gamma_M` and AFK phase separate, forbid a selected source fibre and target
-fitting, and not claim an AFK, fusion, Stark, or TCC consequence.
+Cycle 212 must freeze the Frobenius orientation, A6 attracting direction, real
+embedding convention, cusp correspondence, and exact acceptance/falsifier
+before executable work. It must retain all 36 labels, keep capital `Gamma_M`
+and AFK phase separate, forbid target fitting, and not claim an AFK, fusion,
+Stark, or TCC consequence.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 210
+research cycle 211
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_210_logarithmic_projective_connection_v1.py --check
+python3 proof/build_cycle_211_cusp_asymptotic_flat_sections_v1.py --check
 ```
