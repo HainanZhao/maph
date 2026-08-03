@@ -117,7 +117,9 @@
   still admit no source reflection functor. The next engine must retain their
   ordered words and test reversed/inverted-word dualization directly. Cycle
   236 proves every required reflected factor remains absent even after order
-  is retained; only source-reachable partner enlargement remains authorized.
+  is retained. Cycle 237 then proves no finite positive-`k` source path can
+  reach any partner; only a source-defined orientation-reversing global
+  dualization remains authorized.
   No endpoint binomial value has been
   evaluated. No divergent raw contour, periodized beta channel, AFK amplitude
   identity, fusion, or TCC is proved.
@@ -735,16 +737,16 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 237 source-reflection-partner reachability decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `ORDERED_WORD_REFLECTION_OBSTRUCTED` | Solve the exact source F2/F3 period-and-argument equations for every missing reflected factor before adjoining it to any extension. | Adding a formal partner without source reachability; fitting a period/argument base; or inferring a signed extension. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 238 orientation-reversing global-dualization decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `POSITIVE_K_PARTNER_REACHABILITY_OBSTRUCTED` | Freeze and test one source-defined orientation-reversing integral/Fourier dualization, including kernel, contour, and its residual-word action. | Treating a non-source transform as a partner; dropping contour or kernel hypotheses; or inferring a signed extension. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Is any missing reflection partner source-reachable through a positive-k
-  F2/F3 edge with exactly matching period base and argument?
+- Does a source-defined orientation-reversing integral/Fourier transform
+  produce the required reversed residual word without negative-k factors?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -753,15 +755,15 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 237 / B074
+## Next goal: Cycle 238 / B075
 
 Preregister one substantive block with this question:
 
-> Is any missing residual reflection partner source-reachable from the frozen
-> positive-k F2/F3 source edges?
+> Does one frozen source-defined orientation-reversing global dualization
+> yield the required reversed residual word?
 
-Cycle 237 must freeze the partner list, source edge inventory, period/argument
-matching equations, and reachability criterion
+Cycle 238 must freeze the source transform, kernel, contour, parameter
+domain, and residual-word acceptance criterion
 before executable work. It must keep the AFK phase separate, forbid fitted
 quotients, and not claim an AFK, fusion, Stark, or TCC consequence.
 
@@ -769,7 +771,7 @@ quotients, and not claim an AFK, fusion, Stark, or TCC consequence.
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 236
+research cycle 237
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_236_ordered_word_dualization_v1.py --check
+python3 proof/build_cycle_237_reflection_partner_reachability_v1.py --check
 ```
