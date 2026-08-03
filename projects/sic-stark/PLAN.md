@@ -10,10 +10,11 @@
   scopes in dimensions 4, 5, 7, and 8. No dimension-six TCC identity,
   coefficient-to-ray map, fusion-continuity theorem, or boundary-limit theorem
   is proved. `CERTIFIED_NUMERICAL` packet growth is not a nonexistence theorem.
-- Current state: Cycle 177 / `B015` falsifies the ramified-prime local record
-  as a determinant of the chosen lowered ray exponent. Cycle 178 / `B016`
-  must add the prime-2 CRT component and test intrinsic admissible exponent
-  sets rather than a chosen section.
+- Current state: Cycle 178 / `B016` proves that the initially frozen CRT
+  record is injective on all 36 characteristics because it retains an
+  unrestricted prime-2 valuation. Its admissible-set test is therefore
+  vacuous, not interface evidence. Cycle 179 / `B017` must derive the finite
+  prime-2 quotient dictated by conductor lowering before retesting fibres.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -26,8 +27,8 @@
 ## Budget, accounting, and stop condition
 
 - Total forward budget: 200 substantive research cycles, counted `B001/200`
-  through `B200/200`; the counter is currently `B015/200`.
-- Cycle 178 is `B016`. Repository cycle numbers and budget ordinals advance
+  through `B200/200`; the counter is currently `B016/200`.
+- Cycle 179 is `B017`. Repository cycle numbers and budget ordinals advance
   together unless a non-counted record intervenes; the budget ordinal is the
   authoritative campaign counter.
 - A cycle counts only when it is a preregistered substantive research block
@@ -127,6 +128,11 @@
   chosen lowered ray exponents. It falsifies that finite record-to-selected-
   exponent map only; nonunique lowered-modulus exponent sets remain intrinsic
   data. See `artifacts/cycle-177-characteristic-local-ray-v1.json`.
+- `PROVED`: Cycle 178 adds the initially proposed prime-2 CRT record but its
+  exact valuation makes all 36 records distinct. The zero-fibre compatibility
+  result is vacuous and not interface evidence; a ray-exact-sequence-defined
+  finite prime-2 quotient is now required. See
+  `artifacts/cycle-178-crt-local-admissible-set-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -190,7 +196,8 @@ Budget B001--B200
   |    |                                                                `-- leading residue + local pairing [SEALED]
   |    |                                                                     `-- outcome-blind 36-row transport test [CONSISTENT ONLY]
   |    |                                                                          `-- p3 local-to-selected-ray map [FALSIFIED]
-  |    |                                                                               `-- CRT local-to-admissible-ray-set map [NEXT GATE]
+  |    |                                                                               `-- unrestricted CRT record [INJECTIVE / VACUOUS]
+  |    |                                                                                    `-- modulus-defined p2 quotient [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -235,17 +242,17 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `B015_OF_200` | Seal Cycle 178 as `B016`, then increment only for substantive research blocks. | Counting workflow or archive-only work. |
-| D6 interface | `P3_LOCAL_RECORD_INSUFFICIENT_FOR_SELECTED_EXPONENT_FULL_CRT_SET_TEST_REQUIRED` | Define a p2×p3 CRT record from the characteristics and test its fibres against admissible ray-exponent sets without choosing a section. | Treating a selected exponent as intrinsic; using `s,d`; target-derived record features. |
+| Project budget | `B016_OF_200` | Seal Cycle 179 as `B017`, then increment only for substantive research blocks. | Counting workflow or archive-only work. |
+| D6 interface | `EXACT_V2_CRT_RECORD_TOO_FINE_THEOREM_DEFINED_P2_QUOTIENT_REQUIRED` | Derive the finite p2 quotient and transition maps imposed by each conductor-lowered ray modulus, then test its fibres against admissible exponent sets. | Retaining unrestricted valuation data; treating singleton fibres as evidence; using `s,d` or target labels. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Does the complete finite-modulus CRT local record determine a functorial
-  admissible ray-exponent set for every characteristic, independent of a
-  chosen section?
+- Does the ray exact sequence determine a row-functorial finite prime-2 local
+  quotient and transition maps whose CRT classes have nontrivial, compatible
+  admissible-exponent fibres, independent of a chosen section?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -254,24 +261,29 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 178 / `B016`
+## Next goal: Cycle 179 / `B017`
 
 Preregister one substantive block with this question:
 
-> Does a fixed prime-2 × prime-3 CRT local record of every characteristic
-> determine its admissible conductor-lowered ray-exponent set without using
-> `s`, `d`, or a selected exponent?
+> What finite prime-2 local quotient and conductor transition maps follow
+> from the exact ray sequence for each lowered modulus, and do its CRT fibres
+> have compatible admissible ray-exponent sets without using `s`, `d`, or a
+> selected exponent?
 
-Cycle 178 must freeze the arithmetic characteristic source, both local prime
-records, admissible-set target, comparison rule, anchors, and failure rule
-before executable work. No torsor-label input, selected exponent, or
-target-fitted local feature advances the gate.
+Cycle 179 must freeze the local exact-sequence theorem statement, the
+row-varying conductor rule, the finite p2 quotient and transition maps, the
+retained p3 record, target set, anchors, and failure rule before executable
+work. It must explicitly falsify any use of unrestricted valuation data,
+torsor labels, selected exponents, or target-fitted features. The companion
+reviewed the sealed B016 scope and recommended this theorem-first route; its
+stated flaw is that a single quotient is invalid unless it is functorial for
+the row-varying lowered modulus.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 177
+research cycle 178
 sed -n '1,260p' PLAN.md
-python3 proof/build_cycle_177_characteristic_local_ray_v1.py --check
+python3 proof/build_cycle_178_crt_local_admissible_set_v1.py --check
 ```

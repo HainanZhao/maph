@@ -1,0 +1,96 @@
+{
+  "artifact_id": "cycle-178-crt-local-admissible-set-v1",
+  "budget_ordinal": "B016",
+  "claim_boundary": "This exact finite result compares a preregistered CRT local record only with conductor-lowered admissible ray-exponent sets. It defines no selected ray-label map, additive coefficient operation, AFK interface, regulator equality, fusion theorem, or TCC identity.",
+  "cycle": 178,
+  "epistemic_status": "PROVED",
+  "exact_prototype": {
+    "source_output": "discovery/cycle-178-crt-local-admissible-set-prototype-v1.json",
+    "summary": {
+      "anchor_admissible_sets": {
+        "3,4": [
+          2
+        ],
+        "3,5": [
+          1
+        ]
+      },
+      "crt_set_compatibility": true,
+      "distinct_crt_records": 36,
+      "empty_intersection_fibres": 0,
+      "nontrivial_fibres": 0,
+      "rows_checked": 36
+    }
+  },
+  "frozen_hashes": {
+    "instructions": {
+      "path": "AGENTS.md",
+      "sha256": "363495f0dbbe93e244b460c8eafb13247a8fb1f41be24f94c037ae9f6400c6f2"
+    },
+    "output": {
+      "path": "discovery/cycle-178-crt-local-admissible-set-prototype-v1.json",
+      "sha256": "a80a6cc54727d7b9432197c351d12164ffb2bc67494029ab777d8b43c6b1829f"
+    },
+    "prereg": {
+      "path": "docs/cycle-178-crt-local-admissible-set-preregistration-v1.md",
+      "sha256": "dcf0f85c41b32118550642b32be46087135c2642de34364ac9a244963aea5ed5"
+    },
+    "prior": {
+      "path": "artifacts/cycle-177-characteristic-local-ray-v1.json",
+      "sha256": "cb501f35db6a697d9a761bf5c082a6c6796c39ab38c61bc28de03118ca794978"
+    },
+    "replay": {
+      "path": "proof/verify_cycle_178_crt_local_admissible_set.py",
+      "sha256": "90a5f148d4e2e35b00824d5a37ccf332c8c718e4163b49ec09c7c8c8439704dc"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    },
+    "section": {
+      "path": "artifacts/cycle-164-oriented-ray-monoid-section-v1.json",
+      "sha256": "f1815f8641780570c15c7e9c6b40f9de8390358fb3dec0ac93aa311b78a6a26d"
+    }
+  },
+  "gate_outcome": {
+    "d6_interface": "EXACT_V2_CRT_RECORD_TOO_FINE_THEOREM_DEFINED_P2_QUOTIENT_REQUIRED",
+    "disallowed_pseudo_progress": [
+      "calling singleton-fibre compatibility an interface",
+      "retaining unrestricted v2 as a finite local quotient",
+      "using s,d or target labels in the source record"
+    ],
+    "remaining_bottleneck": "Derive the finite local quotient of K_p2^times dictated by the modulus-6 ray exact sequence, then rerun the admissible-set fibre test without unrestricted valuation data."
+  },
+  "outcome": {
+    "epistemic_status": "PROVED",
+    "statement": "The frozen exact-valuation CRT record is injective on 36 rows, so its admissible-set compatibility test has no nontrivial fibres and yields no interface evidence."
+  },
+  "preregistration_preflight": {
+    "cycle": 178,
+    "manifest_sha256": "dcf0f85c41b32118550642b32be46087135c2642de34364ac9a244963aea5ed5",
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Cycle 179/B017: derive the theorem-defined p2 local ray quotient and test its finite classes against admissible ray-exponent sets on all 36 characteristics."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_178_crt_local_admissible_set_v1.py --check",
+    "preflight_command": "research prereg check docs/cycle-178-crt-local-admissible-set-preregistration-v1.md --expected-cycle 178 --allow-head-drift",
+    "prototype_command": "python3 proof/verify_cycle_178_crt_local_admissible_set.py --output discovery/cycle-178-crt-local-admissible-set-prototype-v1.json",
+    "write_command": "python3 proof/build_cycle_178_crt_local_admissible_set_v1.py --write"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_178_crt_local_admissible_set_v1.py",
+    "sha256": "697dd480bebc1de3727df32eed5c93a20512661860cd860edc52ecb0258765f0"
+  },
+  "status": "SEALED_CRT_RECORD_INJECTIVE_COMPATIBILITY_VACUOUS"
+}
