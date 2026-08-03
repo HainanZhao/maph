@@ -1,0 +1,111 @@
+{
+  "claim_boundary": "For the two sealed tau/u survivors, the displayed tilde-sector Pochhammer ratio is uniquely forced by the frozen unnormalized product numerator. Under the frozen direct signed continuation of the first normalized shift, that correction is invariant and leaves an exact residual minus sign, so this sole unmodified correction construction fails. The source does not publish a negative-k normalized law; this does not exclude a new label-dependent multiplier, another correction family, a new source theorem, a packet cocycle, AFK covariance, fusion, Stark, or TCC.",
+  "downstream_identity_audit": {
+    "epistemic_status": "PROVED",
+    "factorization": "not_reached_after_failed_first_shift",
+    "normalized_reflection": "not_reached_after_failed_first_shift",
+    "reason": "The sole preregistered correction fails the first required normalized signed-continuation shift; testing later identities cannot make it an accepted extension.",
+    "second_shift": "not_reached_after_failed_first_shift",
+    "simultaneous_sign_involutivity": "not_reached_after_failed_first_shift",
+    "unnormalized_product_sector_match": true
+  },
+  "epistemic_status": "PROVED",
+  "first_shift_normalization_audit": {
+    "all_match": false,
+    "conclusion": "The forced tilde correction is invariant under the first shift and cannot repair the exact residual normalized-shift sign for either survivor.",
+    "epistemic_status": "PROVED",
+    "positive_phase_exponent": 1311,
+    "raw_phase_exponent": 1450,
+    "rows": [
+      {
+        "candidate_multiplier": "+(-1)^m * 2*sin(A)",
+        "correction_under_shift": "invariant",
+        "direct_signed_continuation_multiplier": "-(-1)^m * 2*sin(A)",
+        "matches": false,
+        "sigma": -1
+      },
+      {
+        "candidate_multiplier": "+(-1)^m * 2*sin(A)",
+        "correction_under_shift": "invariant",
+        "direct_signed_continuation_multiplier": "-(-1)^m * 2*sin(A)",
+        "matches": false,
+        "sigma": 1
+      }
+    ],
+    "source_boundary": "The raw k<0 formula is a frozen natural continuation requirement, not a published source theorem. The proved result is failure of this explicit construction to satisfy that requirement."
+  },
+  "forced_pochhammer_audit": {
+    "candidate": "H_sigma=C(z;qtilde)*Gamma_M+(sigma*mu,-m;sigma*omega1,-sigma*omega2)",
+    "epistemic_status": "PROVED",
+    "forced_factor": "C(z;qtilde)=(qtilde*z;qtilde)_infinity/(qtilde*z^(-1);qtilde)_infinity",
+    "inversion_identity": "C(z;qtilde)*C(z^(-1);qtilde)=1",
+    "omega1_r_shift": "z -> z, hence C -> C",
+    "omega2_minus1_shift": "z -> qtilde^(-1)*z, hence C -> (1-z)*(1-qtilde/z)*C",
+    "raw_tilde_numerator": "(qtilde*z;qtilde)_infinity",
+    "scope": "This proves equality of the two frozen unnormalized product sectors. It does not define a negative-k normalized multiplier Z or a source signed-matrix law.",
+    "survivor_tilde_numerator": "(qtilde*z^(-1);qtilde)_infinity"
+  },
+  "gate_outcome": {
+    "forced_tilde_pochhammer_product_repair": "PROVED_UNNORMALIZED_ONLY",
+    "remaining_design_problem": "Derive, rather than fit, a label-dependent signed normalization multiplier from a source theorem or an independent signed-product construction, then re-test the full functional identities.",
+    "unmodified_normalized_signed_extension": "FALSIFIED_UNDER_FROZEN_DIRECT_SHIFT_REQUIREMENT"
+  },
+  "schema": "sic-stark-cycle-221-tilde-inversion-prototype-v1",
+  "survivor_coordinate_audit": {
+    "conclusion": "For both survivors tau, u, and tilde-tau agree with the raw state, while tilde-u is exactly negated.",
+    "epistemic_status": "PROVED",
+    "survivor_count": 2,
+    "survivors": [
+      {
+        "sigma": -1,
+        "signs": {
+          "m": -1,
+          "mu": -1,
+          "omega1": -1,
+          "omega2": 1
+        },
+        "tau_relative": {
+          "omega1": 1,
+          "r": 1
+        },
+        "tilde_tau_relative": {
+          "omega1": 1,
+          "omega2": 1
+        },
+        "tilde_u_relative": {
+          "mu": -1,
+          "pm": -1
+        },
+        "u_relative": {
+          "m": 1,
+          "mu": 1
+        }
+      },
+      {
+        "sigma": 1,
+        "signs": {
+          "m": -1,
+          "mu": 1,
+          "omega1": 1,
+          "omega2": -1
+        },
+        "tau_relative": {
+          "omega1": 1,
+          "r": 1
+        },
+        "tilde_tau_relative": {
+          "omega1": 1,
+          "omega2": 1
+        },
+        "tilde_u_relative": {
+          "mu": -1,
+          "pm": -1
+        },
+        "u_relative": {
+          "m": 1,
+          "mu": 1
+        }
+      }
+    ]
+  }
+}
