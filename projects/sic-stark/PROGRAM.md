@@ -64,10 +64,11 @@
   limiting pole trajectories. Cycle 217 then shows the raw two-step source
   word reaches only `-M_E` projectively and carries the full period/argument/
   label state to a swapped, 576-scaled, label-zero state, not the E target.
-  No endpoint binomial value has been evaluated. No divergent raw contour,
-  periodized beta channel, AFK amplitude identity, fusion, or TCC is proved;
-  the active gate is a signed-period-cover construction derived from the
-  `Gamma_M` product definition.
+  Cycle 218 derives the positive scaling and finite swap-index laws but finds
+  the raw negative-`k` state outside the source product domain. No endpoint
+  binomial value has been evaluated. No divergent raw contour, periodized beta
+  channel, AFK amplitude identity, fusion, or TCC is proved; the active gate
+  is a newly constructed signed-`k` extension with compatibility axioms.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -459,6 +460,11 @@
   apparent `M_E` hit after `k>0` canonicalization is `OBSERVED` matrix algebra
   only, not a supplied `Gamma_M` arrow. See
   `artifacts/cycle-217-b054-source-transformation-groupoid-v1.json`.
+- `PROVED`: Cycle 218 proves positive common `576` scaling inside the source
+  `k>0` product domain and the complete 24-index swap relabeling. But the raw
+  endpoint has `k=-24`, so no supplied simultaneous-sign `Gamma_M` law can
+  combine those partial facts into a legal E lift. See
+  `artifacts/cycle-218-b055-signed-period-cover-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -567,7 +573,8 @@ Budget B001--B200
   |    |                                                                                                                                                                                                                                                                                                 `-- direct equation-(66) E transport [SEALED: OBSTRUCTED]
   |    |                                                                                                                                                                                                                                                                                                      `-- upper-path literal continuation / one-step source transforms [SEALED: ENDPOINT OBSTRUCTED]
   |    |                                                                                                                                                                                                                                                                                                           `-- raw Gamma_M source groupoid [SEALED: AFFINE STATE MISMATCH]
-  |    |                                                                                                                                                                                                                                                                                                                `-- signed/scaled period cover from Gamma_M products [NEXT GATE]
+  |    |                                                                                                                                                                                                                                                                                                                `-- signed/scaled period cover from Gamma_M products [SEALED: k<0 DOMAIN OPEN]
+  |    |                                                                                                                                                                                                                                                                                                                     `-- signed-k Gamma_M extension with compatibility axioms [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -612,17 +619,17 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 218 signed-period-cover decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `RAW_SOURCE_GROUPOID_AFFINE_MISMATCH_SEALED` | Derive exact sign, swap, and 576-scaling laws from the `Gamma_M` product definition on a frozen oriented period/argument/label cover; then test whether a legal lift reaches the E state and yields an all-36 unfitted cocycle. | Replacing the raw affine state by its projective matrix, assuming a sign law, hiding residual ordinary-gamma factors, target fitting, or calling a lifted matrix a packet theorem. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 219 signed-`k` extension decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `SIGNED_PERIOD_PRODUCT_DOMAIN_CONTAINMENT_SEALED` | Define a signed-`k` extension at `k=±24` and prove agreement with the positive product, involutivity, reflection, shifts, and both factorization identities before re-testing the affine E state. | Declaring a convention an extension, checking only a matrix, dropping normalization/branches/residual factors, target fitting, or calling a partial extension a packet theorem. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Can a source-derived signed/scaled period cover lift the raw two-step word
-  to the E period/argument/label state, and then produce a cocycle cancelling
-  `t^(12-a-b)` on all 36 labels without C198 data?
+- Does a uniquely compatible signed-`k` extension exist at `k=±24`, and can it
+  legally lift the raw word to the E period/argument/label state before any
+  all-36 cocycle comparison?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -631,26 +638,24 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 218 / B055
+## Next goal: Cycle 219 / B056
 
 Preregister one substantive block with this question:
 
-> From the `Gamma_M` product definition, what exact sign, swap, and
-> 576-scaling laws act on a frozen cover of oriented periods, affine
-> arguments, discrete labels, branches, and residual factors? Does the lifted
-> raw word reach the E target before any packet-cocycle comparison?
+> Can a signed-`k` rarefied `Gamma_M` extension be constructed at `k=±24`
+> that agrees with the source `k>0` product and satisfies involutivity,
+> reflection, shifts, and both S--S factorization identities?
 
-Cycle 218 must freeze the cover state representation, the product-definition
-formula family, sign/swap/scaling candidate laws, all branch and residual-factor
-rules, and the legal-lift criterion before executable work. It must keep
-capital `Gamma_M` and AFK phase separate, forbid target fitting, and not claim
-an AFK, fusion, Stark, or TCC consequence.
+Cycle 219 must freeze the extension state, axioms, normalization and branch
+rules, and a smallest exact compatibility census before executable work. It
+must keep capital `Gamma_M` and AFK phase separate, forbid target fitting, and
+not claim an AFK, fusion, Stark, or TCC consequence.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 217
+research cycle 218
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_217_source_transformation_groupoid_v1.py --check
+python3 proof/build_cycle_218_signed_period_cover_v1.py --check
 ```
