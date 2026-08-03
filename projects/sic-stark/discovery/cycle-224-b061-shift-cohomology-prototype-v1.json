@@ -1,0 +1,108 @@
+{
+  "boundary_audit": {
+    "epistemic_status": "PROVED",
+    "factorization_tested": false,
+    "involutivity_tested": false,
+    "jointly_invariant_quotient": "Any remaining quotient factor must be invariant under u->u-24 and u->u-tilde-tau; it is not represented in the frozen minimal exponential family.",
+    "reason": "A shift-integrable cochain is a new construction only. Reflection and factorization require separate state/argument maps and cannot be inferred from lattice cohomology.",
+    "reflection_tested": false
+  },
+  "claim_boundary": "For the frozen two signed shifts and Cycle-223 residuals, the minimal exponential family has the unique solution D=exp(pi*i*tilde-u_-), and its cocycle is integrable on the commuting shift lattice. Applied without alteration to the four frozen parity-normalized products, it makes each raw reflection product equal -1 rather than 1. This is a newly constructed containment result, not a source-defined signed Gamma_M normalization. It does not rule out a distinct reflection-normalized constant or other factor, and proves no factorization, packet cocycle, AFK covariance, fusion, Stark, or TCC statement.",
+  "combined_boundary_audit": {
+    "double_sign_involutivity": "not_accepted_after_failed_reflection",
+    "epistemic_status": "PROVED",
+    "factorization_16_17": "not_reached_after_failed_reflection",
+    "joint_shift_system": "passed",
+    "raw_reflection": "failed",
+    "reason": "No frozen candidate survives the required reflection identity, so later identities cannot certify this combined construction as a signed extension."
+  },
+  "combined_reflection_audit": {
+    "all_match": false,
+    "candidate_count": 4,
+    "conclusion": "The unique shift-integrable cochain makes every frozen parity-normalized candidate fail raw reflection by the exact sign -1.",
+    "epistemic_status": "PROVED",
+    "rows": [
+      {
+        "D_product": "exp(-pi*i*tilde-tau)",
+        "combined_reflection_product": -1,
+        "epsilon": -1,
+        "lambda_product": 1,
+        "matches_required_one": false,
+        "pochhammer_product": "4*exp(pi*i*tilde-tau)*sin(pi*u)*sin(pi*(u+tilde-tau))",
+        "positive_gamma_product": "-1/(4*sin(pi*u)*sin(pi*(u+tilde-tau)))",
+        "raw_reflection": "(mu,m,u)->(Q-mu,4-m,-u-tilde-tau-24)",
+        "sigma": -1
+      },
+      {
+        "D_product": "exp(-pi*i*tilde-tau)",
+        "combined_reflection_product": -1,
+        "epsilon": 1,
+        "lambda_product": 1,
+        "matches_required_one": false,
+        "pochhammer_product": "4*exp(pi*i*tilde-tau)*sin(pi*u)*sin(pi*(u+tilde-tau))",
+        "positive_gamma_product": "-1/(4*sin(pi*u)*sin(pi*(u+tilde-tau)))",
+        "raw_reflection": "(mu,m,u)->(Q-mu,4-m,-u-tilde-tau-24)",
+        "sigma": -1
+      },
+      {
+        "D_product": "exp(-pi*i*tilde-tau)",
+        "combined_reflection_product": -1,
+        "epsilon": -1,
+        "lambda_product": 1,
+        "matches_required_one": false,
+        "pochhammer_product": "4*exp(pi*i*tilde-tau)*sin(pi*u)*sin(pi*(u+tilde-tau))",
+        "positive_gamma_product": "-1/(4*sin(pi*u)*sin(pi*(u+tilde-tau)))",
+        "raw_reflection": "(mu,m,u)->(Q-mu,4-m,-u-tilde-tau-24)",
+        "sigma": 1
+      },
+      {
+        "D_product": "exp(-pi*i*tilde-tau)",
+        "combined_reflection_product": -1,
+        "epsilon": 1,
+        "lambda_product": 1,
+        "matches_required_one": false,
+        "pochhammer_product": "4*exp(pi*i*tilde-tau)*sin(pi*u)*sin(pi*(u+tilde-tau))",
+        "positive_gamma_product": "-1/(4*sin(pi*u)*sin(pi*(u+tilde-tau)))",
+        "raw_reflection": "(mu,m,u)->(Q-mu,4-m,-u-tilde-tau-24)",
+        "sigma": 1
+      }
+    ],
+    "scope": "The frozen constants epsilon=+/-1 were fixed before this cochain calculation. Changing them or adding another factor is a distinct construction, not a repair of this one."
+  },
+  "commutator_audit": {
+    "T1_then_T2": "rho1(T2*u)*rho2(u)=exp(-pi*i*tilde-tau)",
+    "T2_then_T1": "rho2(T1*u)*rho1(u)=exp(-pi*i*tilde-tau)",
+    "conclusion": "The unique minimal exponential cochain is a well-defined multiplicative cocycle on the commuting signed-shift lattice.",
+    "epistemic_status": "PROVED",
+    "integrable": true
+  },
+  "epistemic_status": "PROVED",
+  "gate_outcome": {
+    "frozen_combined_signed_product": "FALSIFIED_BY_RAW_REFLECTION",
+    "minimal_joint_shift_cochain": "PROVED_UNIQUE_AND_INTEGRABLE",
+    "remaining_design_problem": "Construct a distinct reflection-normalized state/factor system and solve its joint shifts before testing any factorization identity."
+  },
+  "minimal_exponential_solution_audit": {
+    "T1_check": "exp(-24*pi*i)=1",
+    "T1_ratio": "exp(-24*pi*i*a)",
+    "T2_check": "exp(-pi*i*tilde-tau)",
+    "T2_ratio": "exp(-pi*i*a*tilde-tau)",
+    "cochain": "D(u)=exp(pi*i*tilde-u_-)",
+    "epistemic_status": "PROVED",
+    "family": "D_a(u)=exp(pi*i*a*u)",
+    "solution": "a=1",
+    "uniqueness": "If exp(-pi*i*(a-1)*tilde-tau)=1 as a meromorphic identity on the variable period domain, then a=1. Thus the minimal exponential solution is unique."
+  },
+  "schema": "sic-stark-cycle-224-shift-cohomology-prototype-v1",
+  "shift_action_audit": {
+    "T1": "u -> u-24",
+    "T2": "u -> u-tilde-tau",
+    "commute": true,
+    "coordinate": "u=tilde-u_-",
+    "epistemic_status": "PROVED",
+    "residual_to_cancel": {
+      "T1": "1",
+      "T2": "exp(-pi*i*tilde-tau)"
+    }
+  }
+}

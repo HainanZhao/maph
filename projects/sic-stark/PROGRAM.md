@@ -79,9 +79,12 @@
   negative representative. Cycle 223 tests the resulting four explicit
   products: all repair the first shift but fail the second by the nonconstant
   factor `exp(pi*i*tilde-tau)`. The next gate is the exact joint shift
-  cohomology problem for an argument-dependent factor. No endpoint binomial
-  value has been evaluated. No divergent raw contour, periodized beta channel,
-  AFK amplitude identity, fusion, or TCC is proved.
+  cohomology problem for an argument-dependent factor. Cycle 224 derives the
+  unique integrable minimal cochain, but it makes every frozen `epsilon=±1`
+  product fail raw reflection by `-1`. The reflection equation now forces the
+  separate `c=±i` branch. No endpoint binomial value has been evaluated. No
+  divergent raw contour, periodized beta channel, AFK amplitude identity,
+  fusion, or TCC is proved.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -509,6 +512,12 @@
   `exp(pi*i*tilde-tau)` residual. This excludes that family, not a nontrivial
   argument-dependent shift cochain. See
   `artifacts/cycle-223-b060-explicit-signed-product-v1.json`.
+- `PROVED`: Cycle 224 derives the unique minimal joint-shift cochain
+  `exp(pi*i*tilde-u_-)` and proves its commutator integrability. Applied to the
+  frozen `epsilon=±1` products, it makes all four raw reflection products
+  equal `-1`. This rejects that branch only; reflection now determines a
+  distinct `c^2=-1` constant branch. See
+  `artifacts/cycle-224-b061-shift-cohomology-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -663,17 +672,17 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 224 joint-shift cohomology decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `EXPLICIT_PARITY_SIGNED_PRODUCT_SECOND_SHIFT_FAILURE_SEALED` | Solve the exact two-shift multiplicative cocycle equations for a minimal argument-dependent factor, prove commutator integrability and uniqueness, then test reflection, involutivity, and both factorization identities before re-testing affine E. | Repairing only one shift; fitting a factor; treating a period-only scalar as a shift correction; calling a new cochain source-derived; checking only a matrix; dropping normalization/branches/residual factors; or calling a partial extension a packet theorem. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 225 reflection-normalized constant decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `FROZEN_SHIFT_COHOMOLOGY_REFLECTION_FAILURE_SEALED` | Freeze the two constants `c=±i` compelled by the combined reflection equation; re-test both shifts, reflection, double-sign involutivity (including sign reversal of `c`), and both factorization identities before re-testing affine E. | Calling `c=±i` source-derived; fitting a further constant/factor; checking reflection without both shifts and involutivity; checking only a matrix; dropping normalization/branches/residual factors; or calling a partial extension a packet theorem. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Does the joint two-shift system force a unique minimal
-  argument-dependent multiplicative cochain, and does it remain compatible
-  with reflection and factorization?
+- Do the reflection-compelled constants `c=±i` yield a combined signed product
+  satisfying both shifts, raw reflection, double-sign involutivity, and both
+  factorization identities?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -682,24 +691,24 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 224 / B061
+## Next goal: Cycle 225 / B062
 
 Preregister one substantive block with this question:
 
-> What minimal argument-dependent multiplicative cochain solves both frozen
-> signed-shift residual equations, and is its solution commutator-integrable
-> and unique before reflection or factorization is imposed?
+> Does the cochain-corrected signed product with exactly `c=+i` or `c=-i`
+> satisfy both shifts, reflection, double-sign involutivity, and equations
+> (16)--(17), with the action of simultaneous sign reversal on `c` explicit?
 
-Cycle 224 must freeze the two shift actions, residuals, cochain family,
-commutator condition, and uniqueness quotient before executable work. It must
-retain all residual factors, keep the AFK phase separate, forbid target
+Cycle 225 must freeze the two reflection roots, their sign-reversal action,
+the full product state, and every identity pullback before executable work. It
+must retain all residual factors, keep the AFK phase separate, forbid target
 fitting, and not claim an AFK, fusion, Stark, or TCC consequence.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 223
+research cycle 224
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_223_explicit_signed_product_v1.py --check
+python3 proof/build_cycle_224_shift_cohomology_v1.py --check
 ```
