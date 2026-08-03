@@ -1,0 +1,117 @@
+{
+  "artifact_id": "cycle-246-b083-fixed-tilt-a-bound-v1",
+  "audit": {
+    "bound": {
+      "C": "2^40000000",
+      "all_N": true,
+      "d": 0,
+      "epistemic_status": "PROVED",
+      "numerical_sampling_used": false,
+      "statement": "For every N>=1, max(|kappa_N^+/kappa_1^+|,|kappa_N^-/kappa_1^-|) <= 2^40000000*(1+N)^0."
+    },
+    "claim_boundary": "This is a fixed-tilt, normalized A-word coefficient bound only. It does not resolve regulator-normalization ambiguity, source authorization, a canonical current, contour identity, mixed-base transform, B-Fourier covariance, AFK, fusion, Stark, or TCC.",
+    "embedding_bounds": {
+      "common_factor_bound": "Every C245 numerator deviation and inverse-denominator deviation is at most r^N for r=exp(-1/50000).",
+      "factor_classes": [
+        {
+          "Im_alpha_over_beta_lower": "1/24",
+          "determinant": "1/24",
+          "factor": "A1",
+          "minus_Im_beta_over_alpha_lower": "12/6613"
+        },
+        {
+          "Im_alpha_over_beta_lower": "24/160035725",
+          "determinant": "1/24",
+          "factor": "A2",
+          "minus_Im_beta_over_alpha_lower": "1/290424"
+        },
+        {
+          "Im_alpha_over_beta_lower": "24/160035725",
+          "determinant": "24",
+          "factor": "A3",
+          "minus_Im_beta_over_alpha_lower": "1/290424"
+        },
+        {
+          "Im_alpha_over_beta_lower": "1/24",
+          "determinant": "24",
+          "factor": "A4",
+          "minus_Im_beta_over_alpha_lower": "12/6613"
+        }
+      ],
+      "r": "r=exp(-1/50000)",
+      "root_certificate": "0<t_sigma<110 and |t_sigma+i|^2<12101"
+    },
+    "epistemic_status": "PROVED",
+    "norm": "max(|kappa_N^+/kappa_1^+|,|kappa_N^-/kappa_1^-|)",
+    "product_bound": {
+      "analytic_lemmas": [
+        "exp(x)>1+x for x>0",
+        "monotone integral and the positive -log(1-exp(-x)) power series give sum_{n>=1}-log(1-exp(-a*n))<=pi^2/(6*a)<2/a; pi^2<12 follows from pi<22/7",
+        "log(2)>1/2 follows from exp(1/2)<2 by its positive series and strict geometric-tail bound"
+      ],
+      "inverse_denominator_factors_per_N": 50,
+      "log_normalized_coefficient_bound": 16500000,
+      "numerator_factors_per_N": 230,
+      "sum_minus_log_one_minus_r_to_n_bound": 100000,
+      "sum_r_to_n_bound": 50000
+    },
+    "regularization": "w_sigma=t_sigma+i at both real embeddings"
+  },
+  "budget_ordinal": "B083",
+  "claim_boundary": "At the frozen common upper tilt w_sigma=t_sigma+i, the normalized C245 source-defined A-word principal coefficients satisfy max(|kappa_N^+/kappa_1^+|,|kappa_N^-/kappa_1^-|)<=2^40000000 for every N>=1. This neither controls epsilon-to-zero nor removes C244's lambda^N ambiguity; it proves no canonical current, source authorization, contour identity, mixed-base transform, B-Fourier covariance, AFK, fusion, Stark, or TCC.",
+  "companion_decision": {
+    "adopted": true,
+    "falsifier": "Any determinant/period bound, factor count, exponent-to-r^N reduction, elementary product inequality, or replay discrepancy; demonstrated fixed-tilt dependence refutes later regulator-independent promotion.",
+    "identity": "/root/decision_companion_2",
+    "known_flaw": "Fixed epsilon=1 does not control epsilon-to-zero and does not remove C244 lambda^N ambiguity; no canonical boundary current, source authorization, or A-to-C identity follows.",
+    "next_action": "Open a distinct uniqueness/regulator-independence engine only if it freezes a new question and preserves this boundary.",
+    "recommendation": "Seal C246/B083 as the narrow fixed-tilt normalized A-word boundedness result.",
+    "reviewed_work": "C246 exact root/period bounds at w_sigma=t_sigma+i, three factor-class audit at both embeddings, 230/50 product ledger, and analytic product estimate."
+  },
+  "cycle": 246,
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "prereg": {
+      "path": "docs/cycle-246-b083-fixed-tilt-a-bound-preregistration-v1.md",
+      "sha256": "64b6697a0ac294d5d2c741468d515f3369c9e1ee41a97cdda338eb3cd2f882b4"
+    },
+    "prior_c228": {
+      "path": "artifacts/cycle-228-b065-f3-square-residual-block-v1.json",
+      "sha256": "2078970c02c1f1359de25394f57c9229dab4fef01c15894bc36b1ea177deafe4"
+    },
+    "prior_c244": {
+      "path": "artifacts/cycle-244-b081-constructed-abel-current-v1.json",
+      "sha256": "58589f8ef0d37a6d26a2084ffb77527970309657ebfcdaacdd9f91cbedcc388a"
+    },
+    "prior_c245": {
+      "path": "artifacts/cycle-245-b082-a-principal-coefficients-v1.json",
+      "sha256": "74f0e4e3f91a7554e5cc1cb5145a146de3d54a74a98da13cf739878300ad3a65"
+    },
+    "replay": {
+      "path": "proof/verify_cycle_246_fixed_tilt_a_bound.py",
+      "sha256": "fd7661a7932f80688d3cc731f5b2624aac19bce1efb5fd5c1179e0a2df84a57d"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    },
+    "test": {
+      "path": "tests/test_cycle_246_fixed_tilt_a_bound.py",
+      "sha256": "fed6a12ef1798fb3e5fbb6441995242420f1faaff52a3965f438db6936004e75"
+    },
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_246_fixed_tilt_a_bound_v1.py",
+    "sha256": "44ad0a39da4ba081da5785399916f65a86dd1c0aa8023d776fa053779642fcf6"
+  },
+  "status": "SEALED_FIXED_TILT_A_COEFFICIENT_BOUND"
+}
