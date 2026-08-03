@@ -157,7 +157,11 @@
   12-dissected Minkowski support is locally finite and has a distributional
   `rho->1` boundary, but the exact `lambda^N` reweighting preserves every
   construction axiom while changing that boundary. The current is therefore
-  noncanonical; deriving actual A-word principal coefficients is next.
+  noncanonical. Cycle 245 then proves that the source-defined A-word
+  double-pole coefficients have an all-`N`, nonzero finite-product recurrence
+  and common-upper-chamber embedding-re-evaluation covariance. It does not
+  prove a uniform small-divisor estimate or polynomial/tempered growth. The
+  next distinct engine is a fixed-tilt exact coefficient-bound attempt.
   No endpoint binomial value has been
   evaluated. No divergent raw contour, periodized beta channel, AFK amplitude
   identity, fusion, or TCC is proved.
@@ -775,16 +779,16 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 245 A-word principal-coefficient decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `CONSTRUCTED_CURRENT_NONCANONICAL` | Freeze the A-word double-pole coefficient normalization at `N=1`, its exact recurrence, Galois behavior, and a tempered-growth criterion; prove or falsify canonical tempered-current data before B-Fourier covariance. | Treating a formal coefficient line as normalized, fitting a recurrence/gauge, or inferring a source identity. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete the distinct fixed-tilt A-word coefficient-bound decision in Cycle 246/B083 before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `A_COEFFICIENT_RECURRENCE_SEALED` | Freeze a specific upper tilt, embedding/norm convention, and constants `C,d`; then prove or falsify the resulting A-word polynomial coefficient bound before B-Fourier covariance. | Treating the recurrence as a temperedness proof, fitting `C,d`, or inferring a source identity. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Do the actual A-word double-pole principal coefficients define a canonical,
-  Galois-compatible tempered current?
+- At one frozen common upper tilt, do the source-defined A-word double-pole
+  coefficients satisfy a certified polynomial bound with predeclared `C,d`?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -793,24 +797,27 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 245 / B082
+## Next goal: Cycle 246 / B083
 
 Preregister one substantive block with this question:
 
-> Derive the `N`-dependent A-word double-pole principal coefficients from the
-> source gamma product, normalized at `N=1`, and prove or falsify an exact
-> recurrence, Galois compatibility, and tempered-growth bound.
+> At a fixed, explicitly named common upper tilt, prove or falsify a certified
+> polynomial bound for the C245 source-defined A-word principal-coefficient
+> recurrence, with the tilt, norm/embedding convention, `C`, and `d` frozen
+> before computation.
 
-Cycle 245 must freeze the source gamma convention, principal-coefficient
-normalization, recurrence family, Galois rule, and exact growth criterion
-before executable work. It must keep source authorization, AFK, mixed-base
-identity, fusion, Stark, and TCC consequences explicitly out of scope.
+Cycle 246 must freeze the source gamma convention, the C245 recurrence, its
+specific upper tilt, the exact coefficient norm, all constants, a small-divisor
+or full-product lower-bound route, and a failure criterion before executable
+work. It must keep source authorization, canonical-current promotion, AFK,
+mixed-base identity, fusion, Stark, and TCC consequences explicitly out of
+scope.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 244
+research cycle 245
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_244_constructed_abel_current_v1.py --check
+python3 proof/build_cycle_245_a_principal_coefficients_v1.py --check
 ```
