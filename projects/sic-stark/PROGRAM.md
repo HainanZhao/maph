@@ -10,12 +10,13 @@
   scopes in dimensions 4, 5, 7, and 8. No dimension-six TCC identity,
   coefficient-to-ray map, fusion-continuity theorem, or boundary-limit theorem
   is proved. `CERTIFIED_NUMERICAL` packet growth is not a nonexistence theorem.
-- Current state: Cycle 196 proves that a fixed source central contour separates
-  both true-pole cones for all 24 kernel labels along the attracting endpoint
-  path. Its finite crossing count and six anti-residue jump vector are zero.
-  The sole remaining endpoint obstruction is vertical-tail control at
-  imaginary infinity; no Abel/distributional finite part, AFK, boundary,
-  fusion, or TCC result is proved.
+- Current state: Cycle 197 falsifies the fixed even scalar Gaussian Abel
+  cutoff for the raw 30 nonzero real endpoint frequencies: every one has a
+  positive exact `1/epsilon` Laplace exponent. The six zero modes do not
+  restore a uniform rule. Finite contour geometry remains sound; a
+  frequency-continued, Fresnel, hyperfunction, or other source-defined
+  distributional endpoint rule remains open—not an AFK, boundary, fusion, or
+  TCC result.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -261,6 +262,12 @@
   finite crossings and the six finite anti-residue jumps are all zero. This
   does not control the divergent vertical tail at imaginary infinity. See
   `artifacts/cycle-196-b033-endpoint-contour-geometry-v1.json`.
+- `PROVED`: Cycle 197 rules out the one fixed even scalar Gaussian Abel
+  family as a uniform raw endpoint prescription: all 30 nonzero centered
+  frequencies have a positive exact Gaussian Laplace exponent, while six
+  zero modes remain separate. It does not rule out other distributional
+  boundary constructions. See
+  `artifacts/cycle-197-b034-gaussian-abel-tail-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -347,7 +354,8 @@ Budget B001--B200
   |    |                                                                                                                                                                                   `-- finite true-pole collision orbits [SEALED CORRECTION: 42 summands]
   |    |                                                                                                                                                                                        `-- exact finite combined-residue rule [SEALED]
   |    |                                                                                                                                                                                             `-- finite-pole-free endpoint contour [SEALED]
-  |    |                                                                                                                                                                                                  `-- Abel/distributional vertical-tail control [NEXT GATE]
+  |    |                                                                                                                                                                                                  `-- scalar even Gaussian Abel rule [FALSIFIED]
+  |    |                                                                                                                                                                                                       `-- analytic-frequency/hyperfunction endpoint rule [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -392,17 +400,17 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 197 vertical-tail decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `FINITE_POLE_FREE_ENDPOINT_CONTOUR_PROVED_INFINITY_FINITE_PART_OR_DISTRIBUTIONAL_CONTROL_REQUIRED` | Freeze an Abel regulator and test-function space, then prove uniform vertical-tail bounds sufficient first for `T->infinity` and then for the endpoint limit, preserving the zero finite-jump vector. | Calling zero finite jumps endpoint continuation; calling a symmetric truncation its limit; fitting a regulator/counterterm; identifying a raw/periodized channel with an AFK value or completed alias; discarding capital `Gamma_M` normalization or AFK phase; using `s,d`, selected exponents, or ray labels. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 198 analytic-frequency/hyperfunction decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `FINITE_POLE_FREE_ENDPOINT_CONTOUR_GAUSSIAN_ABEL_RAW_LIMIT_FALSIFIED_ALTERNATIVE_DISTRIBUTIONAL_RULE_REQUIRED` | Define one source-derived analytic-frequency or hyperfunction boundary rule on a frozen test space, with contour sectors and uniqueness criterion, then test a raw endpoint value before any AFK identification. | Calling the Gaussian failure an endpoint no-go; fitting a regulator/counterterm; identifying a raw/periodized channel with an AFK value or completed alias; discarding capital `Gamma_M` normalization or AFK phase; using `s,d`, selected exponents, or ray labels. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Can a source-fixed Abel/Fresnel or distributional rule control the regular
-  central-contour tail at imaginary infinity, first as `T->infinity` and then
-  as the real-multiplication endpoint is approached?
+- Can a source-derived analytic-frequency, hyperfunction, Fresnel, or other
+  distributional rule supply a unique endpoint boundary value after the
+  scalar Gaussian prescription fails?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -411,29 +419,29 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 197
+## Next goal: Cycle 198
 
 Preregister one substantive block with this question:
 
-> Can one source-fixed Abel/Fresnel regulator and test-function space give
-> a uniform vertical-tail bound for the central-contour regular part along the
-> attracting endpoint path, without a fitted counterterm, AFK map, selected
-> exponents, `s`, `d`, or ray labels?
+> Can one source-derived analytic-frequency or hyperfunction continuation on
+> a fixed exponential-type test space define a unique boundary value for the
+> central-contour regular part after the scalar Gaussian Abel failure, without
+> a fitted counterterm, AFK map, selected exponents, `s`, `d`, or ray labels?
 
-Cycle 197 must freeze one Abel/Fresnel regulator, a test-function space, the
-central-contour truncation order, an exact tail criterion uniform on a pinned
-endpoint path, and a strict endpoint acceptance criterion before executable
-work. It must retain capital `Gamma_M` normalization and the AFK phase
-separately. It must not call a regulator source-proved merely by naming it,
-infer an endpoint value from finite-pole separation, fit a counterterm, use
-selected exponents, `s,d`, or ray labels, or claim an RM-boundary,
-Stark/fusion/TCC consequence before exact amplitude matching.
+Cycle 198 must freeze one analytic-frequency/hyperfunction state space, test
+space, contour sectors, boundary-value uniqueness criterion, and endpoint
+acceptance condition before executable work. It must retain capital `Gamma_M`
+normalization and the AFK phase separately. It must not call a continuation
+canonical merely by naming it, infer an endpoint value from the Gaussian
+failure, fit a counterterm, use selected exponents, `s,d`, or ray labels, or
+claim an RM-boundary, Stark/fusion/TCC consequence before exact amplitude
+matching.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 196
+research cycle 197
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_196_endpoint_contour_geometry_v1.py --check
+python3 proof/build_cycle_197_gaussian_abel_tail_v1.py --check
 ```
