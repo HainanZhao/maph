@@ -27,10 +27,14 @@
   and Cycle 203 proves the ordinary normal line has no intrinsic inverse
   trivialization. Cycle 205 exhausts the local first-order Mellin/b-pairing:
   its forced residue is still weight-one `lambda*R`. This rejects neither a
-  projective line-valued target nor another source-derived continuation. No
-  divergent raw contour, periodized beta channel, AFK amplitude identity,
-  fusion, or TCC is proved; the active gate is a projective line-valued
-  interface before exact helical/Zak amplitude matching.
+  projective line-valued target nor another source-derived continuation.
+  Cycle 206 then constructs the complete denominator-free projective source
+  packet on its non-base locus: all 150 elementary source binomials vanish
+  and its common rate/A6 line cancels projectively. C198 supplies labeled
+  nonzero target coordinates but no multiplicative equality to that source
+  packet. No divergent raw contour, periodized beta channel, AFK amplitude
+  identity, fusion, or TCC is proved; the active gate is an exact target-side
+  multiplicative/projective-intertwiner test before helical/Zak matching.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -341,6 +345,13 @@
   Neither that residue nor a rate-independent combination with the rank-30
   boundary supplies an all-36 fixed-target map. See
   `artifacts/cycle-205-b042-mellin-b-pairing-v1.json`.
+- `PROVED`: Cycle 206 quotients the complete rank-36 regular packet by its
+  common normal line, retaining all six channels and 150 denominator-free
+  elementary binomials. They vanish identically and the source class is
+  invariant under rate dilation and `A6` on `1+t^6+t^12!=0` (in particular,
+  on the declared real source locus). C198 supplies no multiplicative theorem
+  identifying that source class with its labeled endpoint vector. See
+  `artifacts/cycle-206-b043-projective-line-interface-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -437,7 +448,8 @@ Budget B001--B200
   |    |                                                                                                                                                                                                                                     `-- ordinary inverse normal line/density [FALSIFIED]
   |    |                                                                                                                                                                                                                                          `-- bare logarithmic / b-normal tensors [FALSIFIED]
   |    |                                                                                                                                                                                                                                               `-- local Mellin / b-pairing [FALSIFIED]
-  |    |                                                                                                                                                                                                                                                    `-- projective line-valued interface [NEXT GATE]
+  |    |                                                                                                                                                                                                                                                    `-- source projective normal packet [SEALED]
+  |    |                                                                                                                                                                                                                                                         `-- target multiplicative/projective intertwiner [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -482,16 +494,16 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 206 projective line-valued interface decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `SOURCE_ANALYTIC_FREQUENCY_ENDPOINT_FUNCTIONAL_ON_T6_SEALED_LOCAL_MELLIN_FALSIFIED_PROJECTIVE_LINE_OPEN` | Derive or reject a source-defined all-36 projective ratio/cross-ratio interface with exact C198/A6 covariance; only then seek one independent scalar normalization and amplitude equality. | Treating a projective ratio as a scalar amplitude; selecting a denominator or normalization after results; fitting weights/scalars; using selected exponents, SIC outcome variables, or ray labels. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 207 exact target-binomial audit before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `SOURCE_PROJECTIVE_NORMAL_PACKET_SEALED_TARGET_MULTIPLICATIVE_PROJECTIVE_INTERTWINER_OPEN` | Derive or reject exact C198 target elementary-binomial identities as necessary conditions for source-to-target projective equality; if they all survive, then test labeled row/column-ratio matching without a fitted scalar. | Calling source binomial vanishing a target identity; selecting an affine denominator, `t`, `h`, normalization, alias, or ray datum; fitting a scalar or treating projective covariance as an AFK amplitude. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Do the 36 common-weight normal packets have a source-defined projective
-  ratio/cross-ratio interface with exact C198/A6 covariance?
+- Do the 25 C198 elementary target binomials obey an exact source-authorized
+  identity, as necessary for equality to the sealed projective normal packet?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -500,26 +512,27 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 206
+## Next goal: Cycle 207
 
 Preregister one substantive block with this question:
 
-> Do the common weight-one normal packets define source-selected projective
-> ratios/cross-ratios with exact all-36 C198 and `A_6` covariance, without a
-> selected denominator, scalar normalization, alias, or ray data?
+> Do the 25 elementary C198 target binomials vanish by an exact
+> equation-(66)-authorized identity, as necessary for a source-to-target
+> projective equality, without a selected denominator, scalar, alias, or ray
+> data?
 
-Cycle 206 must freeze the full common-weight packet vector, allowed projective
-coordinates, denominator selection rule, C198/A6 covariance, and all-row test
-before executable work. It must retain all 24 modes and 36 target characters,
-keep capital `Gamma_M` and AFK phase separate, and not select a preferred
-alias, denominator, scalar normalization, use selected exponents or ray
-labels, or claim an AFK, fusion, Stark, or TCC consequence.
+Cycle 207 must freeze all 25 target binomials, the exact `Gamma_M` functional
+equation family, a proof-or-certified-numerical criterion for each expression,
+and the row/column-ratio follow-up rule before executable work. It must retain
+all 36 labels, keep capital `Gamma_M` and AFK phase separate, and not select a
+preferred affine denominator, `t`, `h`, scalar, alias, exponent, or ray label,
+or claim an AFK, fusion, Stark, or TCC consequence.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 205
+research cycle 206
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_205_mellin_b_pairing_v1.py --check
+python3 proof/build_cycle_206_projective_line_interface_v1.py --check
 ```
