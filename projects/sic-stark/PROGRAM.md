@@ -98,6 +98,10 @@
   divisor-coboundary equation for an argument-dependent cochain. Cycle 230
   obstructs every finite-valuation meromorphic such cochain; the remaining
   local escape hatch is a universal-cover logarithmic cochain with descent.
+  Cycle 231 proves that the frozen quadratic-exponential principal-part lift
+  has a cover solution but forced nonconstant deck monodromy, so it cannot
+  descend. A `log(576)`-periodic (multiplicative-theta) correction remains a
+  distinct untested engine.
   No endpoint binomial value has been
   evaluated. No divergent raw contour, periodized beta channel, AFK amplitude
   identity, fusion, or TCC is proved.
@@ -715,16 +719,17 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 231 universal-cover cochain decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `FINITE_VALUATION_DIVISOR_COBOUNDARY_OBSTRUCTED` | On `w=log(mu)`, solve the frozen scaling equation and test monodromy, reflection, and descent to a single-valued cochain. | Calling a cover solution a descended cochain; ignoring monodromy; or inferring a signed extension. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 232 multiplicative-theta decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `QUADRATIC_COVER_DESCENT_OBSTRUCTED` | For `q=1/576`, construct and test a source-frozen multiplicative-theta correction for the residual multiplier; then test its descent, full four-gamma residual quotient, reflection, and source normalization. | Calling the formal principal-part lift or a cover-only theta multiplier a source cochain; ignoring full residual, reflection, or normalization. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Can a universal-cover `w=log(mu)` cochain solve the scaling equation and
-  descend with the required monodromy and reflection data?
+- Can a `q=1/576` multiplicative-theta correction absorb the residual
+  multiplier while descending single-valuedly, and then absorb the actual
+  four-gamma quotient with its reflection and source-normalization data?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -733,23 +738,23 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 231 / B068
+## Next goal: Cycle 232 / B069
 
 Preregister one substantive block with this question:
 
-> Does a source-frozen logarithmic/quadratic-exponential cochain solve the
-> residual scaling equation on the universal cover and descend single-valuedly?
+> Does a source-frozen `q=1/576` multiplicative-theta correction produce a
+> single-valued meromorphic cochain for the residual principal multiplier?
 
-Cycle 231 must freeze the cover action, ansatz, monodromy/descent conditions,
-reflection condition, and a solve/obstruct criterion before executable work.
-It must keep the AFK phase separate, forbid fitted products,
-and not claim an AFK, fusion, Stark, or TCC consequence.
+Cycle 232 must freeze the multiplicative cover coordinate, theta convention,
+quasi-periodicity, descent condition, and full-residual/reflection/normalization
+acceptance ladder before executable work. It must keep the AFK phase separate,
+forbid fitted products, and not claim an AFK, fusion, Stark, or TCC consequence.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 230
+research cycle 231
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_230_f3_square_divisor_coboundary_v1.py --check
+python3 proof/build_cycle_231_cover_cochain_v1.py --check
 ```
