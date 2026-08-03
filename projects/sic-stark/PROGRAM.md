@@ -67,12 +67,14 @@
   Cycle 218 derives the positive scaling and finite swap-index laws but finds
   the raw negative-`k` state outside the source product domain. Cycle 219
   exhausts the 16 frozen diagonal sign lifts and proves none preserves all of
-  the defining `tau`, `u`, and `tilde-u` product coordinates. This is a
-  diagonal-family obstruction only; a normalized-reflection or other
-  non-diagonal extension remains open. No endpoint binomial value has been
-  evaluated. No divergent raw contour, periodized beta channel, AFK amplitude
-  identity, fusion, or TCC is proved; the active gate is a source-derived
-  non-diagonal signed-`k` extension with compatibility axioms.
+  the defining `tau`, `u`, and `tilde-u` product coordinates. Cycle 220 proves
+  that normalized reflection composed with those signs reduces identically to
+  that same diagonal family. The two `tau/u` survivors therefore isolate a
+  `tilde-u -> -tilde-u` defect; a genuinely new theta/Pochhammer correction
+  remains open. No endpoint binomial value has been evaluated. No divergent
+  raw contour, periodized beta channel, AFK amplitude identity, fusion, or TCC
+  is proved; the active gate is a source-derived tilde-sector correction with
+  full compatibility axioms.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -476,6 +478,12 @@
   normalized-reflection, theta/Pochhammer, shifted, swapped, or otherwise
   non-diagonal construction. See
   `artifacts/cycle-219-b056-signed-k-extension-v1.json`.
+- `PROVED`: Cycle 220 proves that source normalized reflection, when composed
+  with any of those frozen signs, cancels its inverse and gives exactly the
+  Cycle-219 diagonal candidate. It supplies no new product-coordinate lift.
+  This leaves a correction-factor construction, not a reflection-only
+  construction, as the next design problem. See
+  `artifacts/cycle-220-b057-normalized-reflection-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -630,18 +638,17 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 220 non-diagonal signed-`k` construction decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `DIAGONAL_SIGNED_K_EXTENSION_FALSIFIED_SEALED` | Freeze one source-derived non-diagonal extension candidate (beginning with normalized reflection plus sign reversal), then prove its product-coordinate agreement, involutivity, reflection, shifts, and both factorization identities before re-testing the affine E state. | Treating the 16-case no-go as a general nonexistence result; declaring a convention an extension; checking only a matrix; dropping normalization/branches/residual factors; target fitting; or calling a partial extension a packet theorem. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 221 tilde-sector correction decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `REFLECTION_SIGN_FAMILY_FALSIFIED_SEALED` | Derive the forced tilde-sector Pochhammer/theta inversion factor from the two `tau/u` survivors, then prove product-coordinate agreement, involutivity, normalization, shifts, and both factorization identities before re-testing the affine E state. | Treating the reflection result as a general nonexistence theorem; fitting a correction factor; declaring a convention an extension; checking only a matrix; dropping normalization/branches/residual factors; or calling a partial extension a packet theorem. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Can normalized reflection (33), composed with the required sign reversal,
-  supply one explicitly normalized non-diagonal signed-`k` extension at
-  `k=±24` without violating the defining product coordinates or source
-  functional identities?
+- Does inversion of the tilde-sector Pochhammer/theta product force one
+  correction factor for the two `tau/u` sign survivors, and can that factor
+  satisfy source normalization and functional identities without fitting?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -650,25 +657,26 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 220 / B057
+## Next goal: Cycle 221 / B058
 
 Preregister one substantive block with this question:
 
-> Does the source normalized reflection (33), composed with the required
-> sign reversal, define a non-diagonal signed-`k` rarefied `Gamma_M`
-> extension at `k=±24` that agrees with the source `k>0` product and satisfies
-> involutivity, reflection, shifts, and both S--S factorization identities?
+> Can the two `tau/u` sign survivors be corrected by the uniquely forced
+> tilde-sector Pochhammer/theta inversion factor, yielding a source-defined
+> signed-`k` extension at `k=±24` with the required product and functional
+> identities?
 
-Cycle 220 must freeze the reflection argument/label map and every correction
-factor before executable work. It must retain capital `Gamma_M` normalization,
-all residual factors, and a branch rule; keep the AFK phase separate; forbid
-target fitting; and not claim an AFK, fusion, Stark, or TCC consequence.
+Cycle 221 must derive—not fit—the correction factor and freeze its argument,
+label, branch, and normalization rule before executable work. It must retain
+capital `Gamma_M` normalization and all residual factors; keep the AFK phase
+separate; forbid target fitting; and not claim an AFK, fusion, Stark, or TCC
+consequence.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 219
+research cycle 220
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_219_signed_k_extension_v1.py --check
+python3 proof/build_cycle_220_normalized_reflection_v1.py --check
 ```
