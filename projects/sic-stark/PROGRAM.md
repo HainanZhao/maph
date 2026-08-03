@@ -10,12 +10,14 @@
   scopes in dimensions 4, 5, 7, and 8. No dimension-six TCC identity,
   coefficient-to-ray map, fusion-continuity theorem, or boundary-limit theorem
   is proved. `CERTIFIED_NUMERICAL` packet growth is not a nonexistence theorem.
-- Current state: Cycle 191 / `B028` proves the published beta Fourier
-  character selects one of two central-character blocks for every AFK label,
-  but its alias holonomy is the non-scalar `diag((-1)^j)`. Scalar completion
-  is therefore excluded. The next gate is a source-derived `Z2`-graded
-  operator representation with continuous block preservation and an exact
-  matrix-valued AFK intertwiner—not a boundary or TCC result.
+- Current state: Cycle 192 / `B029` proves the source level-24 Fourier
+  component has a unique 18-dimensional three-block `Z2`-graded closure of
+  Cycle 191's forced blocks and exactly transports its non-scalar holonomy.
+  The all-36 AFK carrier has a distinct coefficient polarization: exponent
+  `12` versus `24` obstructs every finite Heisenberg-normalizer/metaplectic
+  intertwiner. The next gate is a genuinely continuous, polarization-changing
+  Zak/theta lift with a proved function-space and amplitude action—not a
+  boundary or TCC result.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -216,6 +218,17 @@
   Gamma/AFK normalization cannot remove. This excludes scalar completion only,
   not a `Z2`-graded continuous operator or any amplitude/boundary identity.
   See `artifacts/cycle-191-central-character-fourier-v1.json`.
+- `PROVED`: Cycle 192 derives the full source level-24 Fourier action on the
+  two-point blocks. The Cycle-191 pair has a unique three-block,
+  18-dimensional `Z2`-graded discrete closure; its alias holonomy becomes an
+  ordinary three-shift on the original `p=0` blocks and a boundary-twisted
+  three-shift on the forced added `p=1` block. All 36 AFK samples occupy all
+  four coefficient carriers. The ideal carrier subgroup has exponent `12`
+  while the coefficient carrier subgroup has exponent `24`, excluding the
+  entire finite Heisenberg-normalizer/metaplectic intertwiner class. This does
+  not prove continuous preservation, amplitude matching, an RM boundary,
+  fusion, or TCC. See
+  `artifacts/cycle-192-graded-fourier-polarization-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -294,7 +307,9 @@ Budget B001--B200
   |    |                                                                                                                                           `-- recurrence-only balanced helical periodization [FALSIFIED]
   |    |                                                                                                                                                `-- beta Fourier central-character selection [SEALED]
   |    |                                                                                                                                                     `-- scalar block completion [OBSTRUCTED]
-  |    |                                                                                                                                                          `-- Z2-graded beta-Fourier operator [NEXT GATE]
+  |    |                                                                                                                                                          `-- Z2-graded beta-Fourier closure [SEALED: 18D]
+  |    |                                                                                                                                                               `-- finite metaplectic AFK intertwiner [OBSTRUCTED: polarization exponent]
+  |    |                                                                                                                                                                    `-- continuous polarization-changing Zak/theta lift [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -339,17 +354,18 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `B028_OF_200` | Complete a companion-reviewed substantive Cycle 192/B029 graded-operator decision before incrementing again. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `ALL36_BETA_FOURIER_BLOCK_SELECTION_PROVED_SCALAR_COMPLETION_OBSTRUCTED_Z2_GRADED_OPERATOR_REQUIRED` | Define the source-derived `Z2`-graded block representation, prove continuous beta-transform preservation, and test an exact matrix-valued all-36 AFK intertwiner or a scoped obstruction before attempting the RM boundary. | Calling discrete selection continuous block preservation; replacing `diag((-1)^j)` by a scalar; adding a fitted block/coefficient; discarding capital `Gamma_M` normalization or AFK phase; using `s,d`, selected exponents, or ray labels. |
+| Project budget | `B029_OF_200` | Complete a companion-reviewed substantive Cycle 193/B030 continuous-lift decision before incrementing again. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `FINITE_GRADED_FOURIER_CLOSURE_PROVED_FINITE_METAPLECTIC_AFK_INTERTWINER_OBSTRUCTED_CONTINUOUS_POLARIZATION_CHANGING_OPERATOR_REQUIRED` | Define one source-derived continuous `Z2`-graded Zak/theta section space restricting to the sealed 18D closure, prove beta-transform preservation on that space, and test a non-finite polarization-changing all-36 amplitude intertwiner or a scoped obstruction before attempting the RM boundary. | Calling discrete closure continuous preservation; replacing the `p=1` boundary-twisted three-shift by a scalar; returning to a finite normalizer matrix; fitting a block/coefficient; discarding capital `Gamma_M` normalization or AFK phase; using `s,d`, selected exponents, or ray labels. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Can a source-derived `Z2`-graded beta-Fourier operator preserve the forced
-  central-character blocks and intertwine their non-scalar alias holonomy with
-  the all-36 AFK action, imposing a cross-orbit amplitude relation?
+- Can a source-derived continuous `Z2`-graded Zak/theta section space have
+  the sealed 18-dimensional closure as its sampled restriction, preserve the
+  beta transform, and supply a genuinely polarization-changing all-36 AFK
+  amplitude intertwiner?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -358,30 +374,33 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 192 / `B029`
+## Next goal: Cycle 193 / `B030`
 
 Preregister one substantive block with this question:
 
-> Does one source-derived `Z2`-graded representation of the beta Fourier
-> transform preserve the forced central-character blocks and supply an exact
-> matrix-valued all-36 AFK intertwiner, or yield a scoped obstruction for that
-> declared graded-operator class, without `s`, `d`, selected exponents, fitted
-> characters, or ray labels?
+> Can one source-derived continuous `Z2`-graded Zak/theta lift, whose sampled
+> restriction is the sealed 18-dimensional Fourier closure, be shown to be
+> preserved by the beta transform and to supply a non-finite,
+> polarization-changing all-36 AFK amplitude intertwiner, or yield a scoped
+> obstruction for that declared continuous class, without `s`, `d`, selected
+> exponents, fitted characters, or ray labels?
 
-Cycle 192 must freeze one source-derived `Z2`-graded state representation,
-its continuous beta-transform preservation criterion, one matrix-valued AFK
-intertwiner family with no fitted entries, retained capital `Gamma_M`
-normalization and separate AFK phase, and a strict exact advance criterion
-before executable work. It must not repackage discrete selection, replace the
-non-scalar holonomy by a scalar, fit transfer entries, select exponents, use
-`s,d` or ray labels, or claim an RM-boundary, Stark/fusion/TCC consequence
-before exact amplitude matching.
+Cycle 193 must freeze one explicit source-derived continuous section space and
+its Zak/theta boundary conditions, the exact beta-kernel domain and
+continuation/preservation criterion, the sealed 18D sampling map, and one
+non-finite polarization-changing AFK amplitude-intertwiner family with no
+fitted entries. It must retain capital `Gamma_M` normalization and the AFK
+phase separately and set a strict exact advance criterion before executable
+work. It must not call discrete closure continuous preservation, scalarize the
+`p=1` twisted three-shift, return to a finite normalizer map, fit transfer
+entries, select exponents, use `s,d` or ray labels, or claim an RM-boundary,
+Stark/fusion/TCC consequence before exact amplitude matching.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 191
+research cycle 192
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_191_central_character_fourier_v1.py --check
+python3 proof/build_cycle_192_graded_fourier_polarization_v1.py --check
 ```
