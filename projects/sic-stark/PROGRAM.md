@@ -76,10 +76,12 @@
   label-dependent normalization cocycle remains open. Cycle 222 proves the
   unique-up-to-constant mod-24 parity torsor that repairs that shift and is
   formally reflection-compatible, but source formulas do not bridge it to the
-  negative representative. The next gate is an explicit signed-product
-  construction with that cocycle, not a source attribution. No endpoint
-  binomial value has been evaluated. No divergent raw contour, periodized beta
-  channel, AFK amplitude identity, fusion, or TCC is proved.
+  negative representative. Cycle 223 tests the resulting four explicit
+  products: all repair the first shift but fail the second by the nonconstant
+  factor `exp(pi*i*tilde-tau)`. The next gate is the exact joint shift
+  cohomology problem for an argument-dependent factor. No endpoint binomial
+  value has been evaluated. No divergent raw contour, periodized beta channel,
+  AFK amplitude identity, fusion, or TCC is proved.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -501,6 +503,12 @@
   Positive-domain `Z(m)` has related parity but gives neither a cross-sign law
   nor a factorization pullback. See
   `artifacts/cycle-222-b059-z-label-cocycle-v1.json`.
+- `PROVED`: Cycle 223 exhausts the four parity-corrected products formed from
+  both survivors and both reflection-normalized constants. All pass the first
+  shift and fail the second by the same nonconstant
+  `exp(pi*i*tilde-tau)` residual. This excludes that family, not a nontrivial
+  argument-dependent shift cochain. See
+  `artifacts/cycle-223-b060-explicit-signed-product-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -655,17 +663,17 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 223 explicit signed-product construction decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `Z24_COCYCLE_TORSOR_SOURCE_NONSELECTION_SEALED` | Define a negative-`k` product state using the two-survivor lift, forced Pochhammer factor, and reflection-fixed `lambda(m)=lambda(0)(-1)^m`; prove involutivity/reflection, both shifts, and both factorization identities before re-testing affine E. | Calling parity resemblance a source theorem; fitting `lambda(0)`; declaring a convention an extension; checking only a matrix; dropping normalization/branches/residual factors; or calling a partial extension a packet theorem. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 224 joint-shift cohomology decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `EXPLICIT_PARITY_SIGNED_PRODUCT_SECOND_SHIFT_FAILURE_SEALED` | Solve the exact two-shift multiplicative cocycle equations for a minimal argument-dependent factor, prove commutator integrability and uniqueness, then test reflection, involutivity, and both factorization identities before re-testing affine E. | Repairing only one shift; fitting a factor; treating a period-only scalar as a shift correction; calling a new cochain source-derived; checking only a matrix; dropping normalization/branches/residual factors; or calling a partial extension a packet theorem. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Does the explicit parity-corrected negative-`k` product have a
-  reflection-fixed normalization and satisfy both source shifts and
-  factorization identities as a genuine new construction?
+- Does the joint two-shift system force a unique minimal
+  argument-dependent multiplicative cochain, and does it remain compatible
+  with reflection and factorization?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -674,24 +682,24 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 223 / B060
+## Next goal: Cycle 224 / B061
 
 Preregister one substantive block with this question:
 
-> Does the explicitly defined negative-`k` product using the two-survivor
-> lift, forced tilde Pochhammer factor, and reflection-fixed parity cocycle
-> satisfy involutivity, reflection, both shifts, and equations (16)--(17)?
+> What minimal argument-dependent multiplicative cochain solves both frozen
+> signed-shift residual equations, and is its solution commutator-integrable
+> and unique before reflection or factorization is imposed?
 
-Cycle 223 must freeze the complete state space, product, `lambda(0)`
-reflection condition, branch rule, and all source-identity pullbacks before
-executable work. It must retain residual factors, keep the AFK phase separate,
-forbid target fitting, and not claim an AFK, fusion, Stark, or TCC consequence.
+Cycle 224 must freeze the two shift actions, residuals, cochain family,
+commutator condition, and uniqueness quotient before executable work. It must
+retain all residual factors, keep the AFK phase separate, forbid target
+fitting, and not claim an AFK, fusion, Stark, or TCC consequence.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 222
+research cycle 223
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_222_z_label_cocycle_v1.py --check
+python3 proof/build_cycle_223_explicit_signed_product_v1.py --check
 ```

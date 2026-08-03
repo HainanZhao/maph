@@ -1,0 +1,232 @@
+{
+  "artifact_id": "cycle-223-b060-explicit-signed-product-v1",
+  "budget_ordinal": "B060",
+  "candidate_state_audit": {
+    "candidate_count": 4,
+    "candidates": [
+      {
+        "epsilon": -1,
+        "first_shift_ratio": -1,
+        "lambda": "epsilon*(-1)^m",
+        "reflection_label_product": 1,
+        "sigma": -1
+      },
+      {
+        "epsilon": 1,
+        "first_shift_ratio": -1,
+        "lambda": "epsilon*(-1)^m",
+        "reflection_label_product": 1,
+        "sigma": -1
+      },
+      {
+        "epsilon": -1,
+        "first_shift_ratio": -1,
+        "lambda": "epsilon*(-1)^m",
+        "reflection_label_product": 1,
+        "sigma": 1
+      },
+      {
+        "epsilon": 1,
+        "first_shift_ratio": -1,
+        "lambda": "epsilon*(-1)^m",
+        "reflection_label_product": 1,
+        "sigma": 1
+      }
+    ],
+    "definition": "H_(sigma,epsilon)=epsilon*(-1)^m*C(z;qtilde)*Gamma_M+(sigma*mu,-m;sigma*omega1,-sigma*omega2)",
+    "epistemic_status": "PROVED",
+    "formal_reflection_label_condition": true,
+    "scope": "This is an explicit proposed negative-k product, not a source-defined Gamma_M function.",
+    "unnormalized_product_sector_match": true
+  },
+  "claim_boundary": "The four explicitly defined candidates formed from both tau/u survivors, both reflection-normalized parity constants, and the forced tilde Pochhammer factor all repair the first frozen signed shift but fail the second by the nonconstant residual exp(pi*i*tilde-tau). This falsifies this complete explicit product family as a meromorphic signed-k extension under the frozen direct continuation requirements. It does not rule out a new period-dependent normalization derived from an independent signed product or source theorem, another state space, a packet cocycle, AFK covariance, fusion, Stark, or TCC.",
+  "companion_decision": {
+    "adopted": true,
+    "evidence_scope_review": "The complete survivor/epsilon census, reflection-label normalization, parity first-shift repair, second-shift ratio, and sigma/epsilon-independent residual were reviewed as one frozen construction.",
+    "falsifier": "Any survivor/epsilon census, reflection-label normalization, parity first-shift repair, second-shift ratio, sigma/epsilon independence, or replay discrepancy invalidates the seal.",
+    "identity": "/root/decision_companion_2",
+    "known_flaw": "The residual exp(pi*i*tilde-tau) excludes only period-only normalization; an argument-dependent exponential cochain or different product can still repair the shift law.",
+    "next_action": "Open a shift-cohomology cycle: freeze the two source shift actions, solve their exact multiplicative cocycle equations for a minimal argument-dependent exponential cochain, check commutator integrability and uniqueness, then retest reflection, involutivity, and both factorizations.",
+    "reason": "The specified four-candidate product family is exhausted; a nontrivial shift cochain is a distinct construction.",
+    "recommendation": "Seal C223/B060 as PROVED only for failure of the four parity-corrected signed-product candidates under the second shift."
+  },
+  "cycle": 223,
+  "downstream_identity_audit": {
+    "epistemic_status": "PROVED",
+    "factorization_16_17": "not_reached_after_failed_second_shift",
+    "first_shift": "passed",
+    "formal_reflection_label_condition": true,
+    "involutivity": "not_accepted_after_failed_second_shift",
+    "normalized_reflection": "not_accepted_after_failed_second_shift",
+    "reason": "No candidate satisfying the required shift system remains, so later identities cannot certify this explicit product as an extension.",
+    "second_shift": "failed"
+  },
+  "epistemic_status": "PROVED",
+  "first_shift_audit": {
+    "all_match": true,
+    "conclusion": "Every parity-corrected candidate satisfies the frozen direct first signed-shift continuation.",
+    "epistemic_status": "PROVED",
+    "rows": [
+      {
+        "correction_ratio": 1,
+        "epsilon": -1,
+        "lambda_ratio": -1,
+        "matches": true,
+        "sigma": -1,
+        "unmodified_residual": -1
+      },
+      {
+        "correction_ratio": 1,
+        "epsilon": 1,
+        "lambda_ratio": -1,
+        "matches": true,
+        "sigma": -1,
+        "unmodified_residual": -1
+      },
+      {
+        "correction_ratio": 1,
+        "epsilon": -1,
+        "lambda_ratio": -1,
+        "matches": true,
+        "sigma": 1,
+        "unmodified_residual": -1
+      },
+      {
+        "correction_ratio": 1,
+        "epsilon": 1,
+        "lambda_ratio": -1,
+        "matches": true,
+        "sigma": 1,
+        "unmodified_residual": -1
+      }
+    ],
+    "source_boundary": "This verifies a requirement of the new construction, not a published negative-k source identity."
+  },
+  "frozen_hashes": {
+    "preregistration": {
+      "path": "docs/cycle-223-b060-explicit-signed-product-preregistration-v1.md",
+      "sha256": "8ffbe17f8f4d7e9d64c788575a75914a2065970d8a8f0a50626012839a517a24"
+    },
+    "prior_cocycle_torsor": {
+      "path": "artifacts/cycle-222-b059-z-label-cocycle-v1.json",
+      "sha256": "83faa1a1fcad0f31f6cf142c5098069f82401ebf61e2b5244cb6fd0817bb0ae8"
+    },
+    "prior_groupoid": {
+      "path": "proof/verify_cycle_217_source_transformation_groupoid.py",
+      "sha256": "e038ffb0d9ab95d4eb6edfbf99eaf8ddbb046ba52fa46b8cb84b4c2bdeb3b465"
+    },
+    "prior_tilde": {
+      "path": "proof/verify_cycle_221_tilde_inversion.py",
+      "sha256": "a8db4b32f28b6e43246c11764f08fb60206a866c10e4f7e48a8b4f1783f93bd3"
+    },
+    "prototype": {
+      "path": "discovery/cycle-223-b060-explicit-signed-product-prototype-v1.json",
+      "sha256": "a19b1c6742ee4e64f88b12866cd3ef7b86dab2f0c030c7996ca6130aeacea722"
+    },
+    "regression_test": {
+      "path": "tests/test_cycle_223_explicit_signed_product.py",
+      "sha256": "6b565867cdf01462356fcc6995112448b9693e00c63847d2810805b2d70f382f"
+    },
+    "replay": {
+      "path": "proof/verify_cycle_223_explicit_signed_product.py",
+      "sha256": "817b49c05b84ded6f55650d6717349f8ad2b6ea2fc3588919dd14f2578ecc6bb"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    },
+    "source_audit": {
+      "path": "scripts/dimension_six_ss_evaluation_audit.py",
+      "sha256": "24c9258e46a1233c552017f3b58de0d45acd0197c8c807579f090ca1332f626f"
+    },
+    "source_paper": {
+      "path": "paper/sic-stark-dimension-six-boundary-fusion.tex",
+      "sha256": "347228e05a87946ca41bb31c118aae069b7fb6002fff4933d030a153cef21cb7"
+    },
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "gate_outcome": {
+    "explicit_parity_corrected_signed_product": "FALSIFIED_UNDER_FROZEN_SHIFT_REQUIREMENTS",
+    "remaining_design_problem": "Derive an argument-dependent shift cocycle (not a period-only scalar) from an independently defined signed product or source cross-sign theorem, then re-test both shifts and factorization before any affine E comparison."
+  },
+  "outcome": {
+    "epistemic_status": "PROVED",
+    "statement": "All four explicit parity-corrected candidates satisfy the first frozen shift but fail the second by the same nonconstant exp(pi*i*tilde-tau) factor."
+  },
+  "preregistration_preflight": {
+    "cycle": 223,
+    "manifest_sha256": "8ffbe17f8f4d7e9d64c788575a75914a2065970d8a8f0a50626012839a517a24",
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_223_explicit_signed_product_v1.py --check",
+    "preflight_command": "research prereg check docs/cycle-223-b060-explicit-signed-product-preregistration-v1.md --expected-cycle 223 --allow-head-drift",
+    "prototype_command": "python3 proof/verify_cycle_223_explicit_signed_product.py --output discovery/cycle-223-b060-explicit-signed-product-prototype-v1.json",
+    "test_command": "python3 -m unittest tests/test_cycle_223_explicit_signed_product.py",
+    "write_command": "python3 proof/build_cycle_223_explicit_signed_product_v1.py --write"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_223_explicit_signed_product_v1.py",
+    "sha256": "7d9d2de5c089b7e07537fd7ea601ecb6960c25e98f2dd7cd90c91cfd3d1b9916"
+  },
+  "second_shift_audit": {
+    "all_match": false,
+    "conclusion": "All four explicit candidates fail the second required signed-shift continuation by the same unremovable period factor; epsilon cancels from every shift ratio.",
+    "epistemic_status": "PROVED",
+    "reason": "exp(pi*i*tilde-tau) is a nonconstant meromorphic period factor and cannot equal 1 as an identity on the frozen source parameter domain.",
+    "rows": [
+      {
+        "candidate_multiplier": "2*(-1)^m*exp(pi*i*tilde-tau)*sin(pi*tilde-u_-)",
+        "correction_ratio": "(1-z)*(1-qtilde/z)",
+        "direct_signed_continuation_multiplier": "2*(-1)^m*sin(pi*tilde-u_-)",
+        "epsilon": -1,
+        "lambda_ratio": -1,
+        "matches_as_meromorphic_identity": false,
+        "residual": "exp(pi*i*tilde-tau)",
+        "sigma": -1
+      },
+      {
+        "candidate_multiplier": "2*(-1)^m*exp(pi*i*tilde-tau)*sin(pi*tilde-u_-)",
+        "correction_ratio": "(1-z)*(1-qtilde/z)",
+        "direct_signed_continuation_multiplier": "2*(-1)^m*sin(pi*tilde-u_-)",
+        "epsilon": 1,
+        "lambda_ratio": -1,
+        "matches_as_meromorphic_identity": false,
+        "residual": "exp(pi*i*tilde-tau)",
+        "sigma": -1
+      },
+      {
+        "candidate_multiplier": "2*(-1)^m*exp(pi*i*tilde-tau)*sin(pi*tilde-u_-)",
+        "correction_ratio": "(1-z)*(1-qtilde/z)",
+        "direct_signed_continuation_multiplier": "2*(-1)^m*sin(pi*tilde-u_-)",
+        "epsilon": -1,
+        "lambda_ratio": -1,
+        "matches_as_meromorphic_identity": false,
+        "residual": "exp(pi*i*tilde-tau)",
+        "sigma": 1
+      },
+      {
+        "candidate_multiplier": "2*(-1)^m*exp(pi*i*tilde-tau)*sin(pi*tilde-u_-)",
+        "correction_ratio": "(1-z)*(1-qtilde/z)",
+        "direct_signed_continuation_multiplier": "2*(-1)^m*sin(pi*tilde-u_-)",
+        "epsilon": 1,
+        "lambda_ratio": -1,
+        "matches_as_meromorphic_identity": false,
+        "residual": "exp(pi*i*tilde-tau)",
+        "sigma": 1
+      }
+    ]
+  },
+  "status": "SEALED_EXPLICIT_PARITY_SIGNED_PRODUCT_SECOND_SHIFT_FAILURE"
+}
