@@ -73,10 +73,13 @@
   `tilde-u -> -tilde-u` defect. Cycle 221 derives its unique unmodified
   Pochhammer correction: it repairs the unnormalized product but leaves an
   exact first normalized-shift sign mismatch. A source-derived
-  label-dependent normalization cocycle remains open. No endpoint binomial
-  value has been evaluated. No divergent raw contour, periodized beta channel,
-  AFK amplitude identity, fusion, or TCC is proved; the active gate is a
-  source-derived signed normalization cocycle with full compatibility axioms.
+  label-dependent normalization cocycle remains open. Cycle 222 proves the
+  unique-up-to-constant mod-24 parity torsor that repairs that shift and is
+  formally reflection-compatible, but source formulas do not bridge it to the
+  negative representative. The next gate is an explicit signed-product
+  construction with that cocycle, not a source attribution. No endpoint
+  binomial value has been evaluated. No divergent raw contour, periodized beta
+  channel, AFK amplitude identity, fusion, or TCC is proved.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -492,6 +495,12 @@
   opposite exact normalized sign. This rejects that unmodified construction
   only; an independently derived label multiplier remains open. See
   `artifacts/cycle-221-b058-tilde-inversion-v1.json`.
+- `PROVED`: Cycle 222 solves the complete mod-24 first-shift cocycle equation:
+  its solutions are `lambda(m)=lambda(0)(-1)^m`, and the normalized parity
+  representative is formally compatible with the raw reflection involution.
+  Positive-domain `Z(m)` has related parity but gives neither a cross-sign law
+  nor a factorization pullback. See
+  `artifacts/cycle-222-b059-z-label-cocycle-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -646,17 +655,17 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 222 source-normalization cocycle decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `FORCED_TILDE_CORRECTION_NORMALIZATION_MISMATCH_SEALED` | Derive allowed root-of-unity label multipliers from source `Z(m)`, solve the exact mod-24 shift/reflection coboundary equations, and test both factorization identities before adjoining any multiplier. | Treating a raw negative-`k` continuation as a published theorem; fitting a multiplier; declaring a convention an extension; checking only a matrix; dropping normalization/branches/residual factors; or calling a partial extension a packet theorem. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 223 explicit signed-product construction decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `Z24_COCYCLE_TORSOR_SOURCE_NONSELECTION_SEALED` | Define a negative-`k` product state using the two-survivor lift, forced Pochhammer factor, and reflection-fixed `lambda(m)=lambda(0)(-1)^m`; prove involutivity/reflection, both shifts, and both factorization identities before re-testing affine E. | Calling parity resemblance a source theorem; fitting `lambda(0)`; declaring a convention an extension; checking only a matrix; dropping normalization/branches/residual factors; or calling a partial extension a packet theorem. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Does source `Z(m)` force a mod-24 root-of-unity label cocycle that repairs
-  the two-survivor normalized shift sign while preserving reflection and both
-  factorization identities?
+- Does the explicit parity-corrected negative-`k` product have a
+  reflection-fixed normalization and satisfy both source shifts and
+  factorization identities as a genuine new construction?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -665,25 +674,24 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 222 / B059
+## Next goal: Cycle 223 / B060
 
 Preregister one substantive block with this question:
 
-> Do the source `Z(m)` normalization and the exact mod-24 shift/reflection
-> coboundary equations determine an admissible label multiplier for the forced
-> tilde-sector correction, compatible with both S--S factorization identities?
+> Does the explicitly defined negative-`k` product using the two-survivor
+> lift, forced tilde Pochhammer factor, and reflection-fixed parity cocycle
+> satisfy involutivity, reflection, both shifts, and equations (16)--(17)?
 
-Cycle 222 must derive—not fit—every candidate multiplier from the source
-`Z(m)` phases, freeze its mod-24 state and factorization pullbacks before
-executable work, retain capital `Gamma_M` normalization and all residual
-factors, keep the AFK phase separate, and not claim an AFK, fusion, Stark, or
-TCC consequence.
+Cycle 223 must freeze the complete state space, product, `lambda(0)`
+reflection condition, branch rule, and all source-identity pullbacks before
+executable work. It must retain residual factors, keep the AFK phase separate,
+forbid target fitting, and not claim an AFK, fusion, Stark, or TCC consequence.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 221
+research cycle 222
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_221_tilde_inversion_v1.py --check
+python3 proof/build_cycle_222_z_label_cocycle_v1.py --check
 ```
