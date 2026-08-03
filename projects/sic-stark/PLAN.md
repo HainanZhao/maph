@@ -10,13 +10,12 @@
   scopes in dimensions 4, 5, 7, and 8. No dimension-six TCC identity,
   coefficient-to-ray map, fusion-continuity theorem, or boundary-limit theorem
   is proved. `CERTIFIED_NUMERICAL` packet growth is not a nonexistence theorem.
-- Current state: Cycle 189 / `B026` proves the sign-reflected packet's checked
-  interior regularization, removable finite part, and `t->1^-` continuation;
-  it also maps all 36 source-defined lower-gamma lines to the unphased AFK
-  cocycle. The smallest raw-factor lift is exactly obstructed in both
-  orientations, so the next gate is an outcome-blind nonfactorwise
-  periodization of the three-core derivative state—not a boundary or TCC
-  result.
+- Current state: Cycle 190 / `B027` proves that normalized recurrence,
+  reflection, and helical reindexing cannot repair the raw pair's residual
+  lens label: every required continuous `Q` shift has discrete shift `+4`.
+  The next gate must introduce a source-derived derivative or contour identity
+  on the three-core state, then match all 36 AFK lines exactly; no boundary or
+  TCC result follows.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -29,7 +28,7 @@
 ## Budget, accounting, and stop condition
 
 - Total forward budget: 200 substantive research cycles, counted `B001/200`
-  through `B200/200`; the counter is currently `B026/200`.
+  through `B200/200`; the counter is currently `B027/200`.
 - Cycle 184 is `B022`. Repository cycle numbers and budget ordinals advance
   together unless a non-counted record intervenes; the budget ordinal is the
   authoritative campaign counter.
@@ -203,6 +202,13 @@
   residue `2 mod 4`. This requires a nonfactorwise periodization; it is not an
   RM boundary evaluation, AFK packet identification, fusion theorem, or TCC
   proof. See `artifacts/cycle-189-regularized-jacobi-lens-interface-v1.json`.
+- `PROVED`: Cycle 190 exhausts the recurrence-only balanced helical reflection
+  class. Its normalized translations satisfy `H=T1-T2`; every integer word
+  with the needed continuous `Q` shift has discrete shift `+4`, while every
+  continuous-zero word has discrete shift zero. The exact result holds across
+  the 3,888 frozen frequency/characteristic/residue rows. It does not exclude
+  a derivative, contour, residue, or other new analytic identity. See
+  `artifacts/cycle-190-balanced-helical-reflection-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -278,7 +284,8 @@ Budget B001--B200
   |    |                                                                                                                            `-- same-tuple stabilizer covariance [SEALED: SIX ORBIT PAIRS]
   |    |                                                                                                                                 `-- sign-reflected interior continuation + all-36 Jacobi lens [SEALED]
   |    |                                                                                                                                      `-- raw one-factor lift [FALSIFIED: mod-4 obstruction]
-  |    |                                                                                                                                           `-- nonfactorwise derivative-core periodization [NEXT GATE]
+  |    |                                                                                                                                           `-- recurrence-only balanced helical periodization [FALSIFIED]
+  |    |                                                                                                                                                `-- source-derived derivative/contour transform [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -323,18 +330,18 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `B026_OF_200` | Complete a companion-reviewed substantive Cycle 190/B027 construction or scoped obstruction decision before incrementing again. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `INTERIOR_PACKET_AND_ALL36_GAMMA_TO_SHIN_LINES_PROVED_NONFACTORWISE_PERIODIZATION_REQUIRED` | Define an outcome-blind nonfactorwise transform of the frozen three-core derivative state and prove exact all-36 AFK matching/covariance, or a scoped obstruction for that declared transform class, before attempting the RM boundary. | Treating a raw factor as its periodization; discarding capital `Gamma_M` normalization or AFK phase; treating finite covariance as a cocycle evaluation; fitting a character; selecting exponents; using `s,d`, or ray labels. |
+| Project budget | `B027_OF_200` | Complete a companion-reviewed substantive Cycle 191/B028 derivative or contour-transform decision before incrementing again. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `RECURRENCE_ONLY_BALANCED_HELICAL_PERIODIZATION_OBSTRUCTED_NEW_DERIVATIVE_OR_CONTOUR_IDENTITY_REQUIRED` | Derive one source-defined derivative or contour identity beyond the `T1,T2,H` lattice and prove exact all-36 AFK matching/covariance, or a scoped obstruction for that declared identity class, before attempting the RM boundary. | Reindexing the old quotient as a new transform; discarding capital `Gamma_M` normalization or AFK phase; treating a reflection norm as an oriented cocycle evaluation; fitting a character; selecting exponents; using `s,d`, or ray labels. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Can an outcome-blind, nonfactorwise periodization of the regularized
-  sign-reflected three-core derivative state reach the all-36 source-defined
-  AFK Jacobi lines with exact covariance, and does it impose a cross-orbit
-  relation beyond the six surviving stabilizer-orbit amplitudes?
+- Can one source-derived derivative or contour identity on the regularized
+  three-core state escape the proved recurrence lattice and reach the all-36
+  source-defined AFK Jacobi lines with exact covariance, imposing a
+  cross-orbit relation beyond the six surviving stabilizer-orbit amplitudes?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -343,29 +350,29 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 190 / `B027`
+## Next goal: Cycle 191 / `B028`
 
 Preregister one substantive block with this question:
 
-> Does one explicit, outcome-blind nonfactorwise periodization of the frozen
-> three-dimensional regularized derivative-core state map to the all-36
-> source-defined `mu_p(tau)` Jacobi lines with exact AFK covariance/matching,
-> or yield a scoped obstruction for the declared periodization class, without
-> `s`, `d`, selected exponents, fitted characters, or ray labels?
+> Does one source-derived derivative or contour-integral identity on the
+> frozen three-core sign-reflected state supply an outcome-blind transform to
+> the all-36 source-defined `mu_p(tau)` AFK Jacobi lines with exact
+> covariance/matching, or yield a scoped obstruction for that identity class,
+> without `s`, `d`, selected exponents, fitted characters, or ray labels?
 
-Cycle 190 must freeze the at-most-three-dimensional derivative-core state,
-one named nonfactorwise transform family, its outcome-blind covariance and
-failure rule, the retained capital `Gamma_M` normalization and separate AFK
-phase, and a strict exact advance criterion before executable work. It must
-not repackage a single raw factor, fit character data to transfer labels,
-select exponents, use `s,d` or ray labels, or claim an RM-boundary,
-Stark/fusion/TCC consequence before an exact packet-to-AFK identification.
+Cycle 191 must freeze one named source identity, its permitted derivative or
+contour operation, the at-most-three-dimensional state, outcome-blind
+covariance and failure rule, retained capital `Gamma_M` normalization and
+separate AFK phase, and a strict exact advance criterion before executable
+work. It must not repackage the `T1,T2,H` lattice, fit character data to
+transfer labels, select exponents, use `s,d` or ray labels, or claim an
+RM-boundary, Stark/fusion/TCC consequence before exact packet-to-AFK matching.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 189
+research cycle 190
 sed -n '1,260p' PLAN.md
-python3 proof/build_cycle_189_regularized_jacobi_lens_interface_v1.py --check
+python3 proof/build_cycle_190_balanced_helical_reflection_v1.py --check
 ```

@@ -1,0 +1,63 @@
+{
+  "bounded_census": {
+    "coefficient_box": [
+      -24,
+      24
+    ],
+    "continuous_Q_words": 47,
+    "continuous_Q_zero_label_words": 0,
+    "continuous_zero_nonzero_label_words": 0,
+    "epistemic_status": "PROVED",
+    "words_checked": 117649
+  },
+  "claim_boundary": "Exact normalized-Gamma translation-lattice algebra only. It excludes the declared recurrence-only balanced helical reflection class; it does not exclude a new integral transform, a derivative-core completion with additional identities, a real-multiplication boundary theorem, an AFK cocycle evaluation, fusion continuity, or TCC.",
+  "epistemic_status": "PROVED",
+  "full_grid_control": {
+    "characteristic_dependent_escape": false,
+    "epistemic_status": "PROVED",
+    "frequency_characteristic_residue_rows": 3888,
+    "reason": "The only admitted generators and the Q/reflection label defect are independent of the row; full-grid enumeration confirms that no row-dependent coefficient or lift was introduced."
+  },
+  "gate_outcome": {
+    "balanced_recurrence_periodization": "FALSIFIED_FOR_THE_DECLARED_T1_T2_H_REFLECTION_CLASS",
+    "next_engine": "Any nonfactorwise derivative-core completion must add a genuinely new identity or transform, not merely reindex the existing helical quotient and apply normalized Gamma_M recurrence/reflection."
+  },
+  "lattice": {
+    "conclusion": "No integer word in T1,T2,H realizes (Q,0); every word with continuous shift Q has discrete shift +4. Equivalently, no continuous-zero word can repair the residual -4 label defect.",
+    "continuous_kernel": "(a,b,c)=(-c,c,c)",
+    "epistemic_status": "PROVED",
+    "generators": {
+      "H": [
+        1,
+        -1,
+        6
+      ],
+      "T1": [
+        1,
+        0,
+        5
+      ],
+      "T2": [
+        0,
+        1,
+        -1
+      ]
+    },
+    "helical_relation": "H=T1-T2 exactly, including the discrete label",
+    "kernel_discrete_change": "-5c-c+6c=0",
+    "q_shift_discrete_change": "5(1-c)-(1+c)+6c=4",
+    "q_shift_preimage": "(a,b,c)=(1-c,1+c,c)"
+  },
+  "normalized_reflection": "Gamma_M(Q-mu,4-m)*Gamma_M(mu,m)=1 for the frozen d=6 lens parameters.",
+  "raw_pair": "Gamma_M(-alpha,4-N)*Gamma_M(alpha,N)",
+  "reflection_partner": "Gamma_M(Q-alpha,4-N)*Gamma_M(alpha,N)=1",
+  "required_translation": {
+    "from_raw_first_factor_to_reflection_partner": [
+      1,
+      1,
+      0
+    ],
+    "residual_label_problem": "The recurrence lattice supplies (Q,+4), not (Q,0)."
+  },
+  "schema": "sic-stark-cycle-190-balanced-helical-reflection-prototype-v1"
+}
