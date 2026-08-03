@@ -182,9 +182,13 @@
   action supplies no endpoint or cross-sign law. Cycle 251 derives its
   canonical residue contragredient, but `omega1 -> -omega1` sends all eight
   factors to negative determinant, outside C249's product chamber, and leaves
-  an extra alpha-period sign relative to the A/C target. The next gate is an
-  explicit negative-alpha analytic continuation with branch and monodromy,
-  not another algebraic pairing.
+  an extra alpha-period sign relative to the A/C target. Cycle 252 proves that
+  the frozen reciprocal-base extension passes both negative-alpha shifts and
+  double-sign consistency and has an exact theta-ratio reflection product, but
+  it defines only a disconnected product chamber. Neither that rule nor the
+  checked source supplies an overlapping chart, integral bridge, or
+  path-independence theorem across `|q|=1`; the required source continuation
+  therefore remains unproved and factor/jet comparison was not authorized.
   No endpoint binomial value has been
   evaluated. No divergent raw contour, periodized beta channel, AFK amplitude
   identity, fusion, or TCC is proved.
@@ -200,8 +204,8 @@
 
 ## Budget, accounting, and stop condition
 
-- Remaining budget: exactly three substantive research blocks,
-  `C252/B089` through `C254/B091`.
+- Terminal horizon: `C252/B089` through `C254/B091`; no SIC--Stark cycle may
+  open after `B091` without a separately authorized future project.
 - Infer budget use from the highest `b<ordinal>` in counted preregistration or
   sealed-artifact filenames; do not maintain a live counter here. The next
   counted block takes the next ordinal. Repository cycle numbers and budget
@@ -794,7 +798,7 @@ B091 without A_CLOSED -> C_FROZEN + STATUS.md handoff + stop
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
 | Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Derive and preregister a genuinely new cross-sign law or enlarged-cover construction before opening a new counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `SINGLE_Q_TILT_ENGINE_FALSIFIED` | Construct or refute a new cross-sign transformation law on an enlarged affine signed-period cover preserving periods, argument, label, and residual/divisor state before B-Fourier covariance. | Scalarizing the C217 shadow, reparameterizing C226 raw loops, postulating reverse negative-`k` arrows, collapsing distinct bases, fitting a regulator, or inferring a source identity. |
+| D6 interface | `RECIPROCAL_BASE_RULE_NOT_SOURCE_CONTINUATION` | Construct or refute one direct meromorphic/integral signed-period continuation preserving periods, argument, label, and residual/divisor state before B-Fourier covariance. | Treating a disconnected product formula or formal shifts as analytic continuation, fitting a modular correction, or inferring a source identity. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `DEFERRED_AT_CLOSEOUT` | Resume only as a separate future project after an explicit new authorization. | Spending the final three SIC--Stark blocks on broad correlation mining. |
@@ -812,15 +816,15 @@ B091 without A_CLOSED -> C_FROZEN + STATUS.md handoff + stop
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: formulate Cycle 252 / B089
+## Next goal: formulate Cycle 253 / B090
 
-Construct and test a negative-alpha continuation of the ordinary gamma factor
-using an explicitly frozen reciprocal-base `q`-product rule. Derive its
-branch, functional equations, double-sign consistency, Bernoulli/monodromy
-factor, and normalized degree-zero through three jets before comparing the
-eight C251 orientation-reflected factors with their A/C targets. Reject the
-engine on the first path dependence, failed source shift, or noncanonical
-normalization; do not fit a correction after the comparison.
+Construct and test one direct meromorphic/integral continuation of the
+ordinary hyperbolic gamma from C249's positive chamber to C251's
+negative-alpha states. Freeze one primary theorem or one explicit contour,
+its period domain, pole separation, branch, normalization, and monodromy.
+Only after those hypotheses pass may it be lifted across all eight factors and
+the C250 degree-zero through three jets. Reject on the first failed source
+hypothesis; do not substitute another product convention inside the cycle.
 
 Any future representation assessment must preserve C246/C247's scopes, freeze
 both source bases when relevant, a full state invariant, exact source formulas,
@@ -832,7 +836,7 @@ Stark, and TCC consequences explicitly out of scope.
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 251
+research cycle 252
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_251_residue_dual_cross_sign_v1.py --check
+python3 proof/build_cycle_252_reciprocal_negative_alpha_v1.py --check
 ```
