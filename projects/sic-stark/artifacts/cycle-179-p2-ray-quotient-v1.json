@@ -1,0 +1,140 @@
+{
+  "artifact_id": "cycle-179-p2-ray-quotient-v1",
+  "budget_ordinal": "B017",
+  "claim_boundary": "This exact finite result derives and tests only the prime-2 factor of the conductor-lowered ray exact sequence and its CRT fibres. It defines no additive coefficient operation, AFK interface, regulator equality, fusion theorem, or TCC identity.",
+  "cycle": 179,
+  "epistemic_status": "PROVED",
+  "exact_prototype": {
+    "source_output": "discovery/cycle-179-p2-ray-quotient-prototype-v1.json",
+    "summary": {
+      "anchor_admissible_sets": {
+        "3,4": [
+          2
+        ],
+        "3,5": [
+          1
+        ]
+      },
+      "crt_set_compatibility": true,
+      "distinct_crt_records": 36,
+      "empty_intersection_fibres": 0,
+      "nontrivial_fibres": 0,
+      "p2_conductor_exponent_counts": {
+        "0": 9,
+        "1": 27
+      },
+      "p2_factor_class_counts": {
+        "0:[0, 0]": 9,
+        "1:[0, 1]": 9,
+        "1:[1, 0]": 9,
+        "1:[1, 1]": 9
+      },
+      "rows_checked": 36
+    }
+  },
+  "frozen_hashes": {
+    "instructions": {
+      "path": "AGENTS.md",
+      "sha256": "363495f0dbbe93e244b460c8eafb13247a8fb1f41be24f94c037ae9f6400c6f2"
+    },
+    "output": {
+      "path": "discovery/cycle-179-p2-ray-quotient-prototype-v1.json",
+      "sha256": "21de802ee28d1d920ef5cc3069659fa0caf0f18b226a1f7e8d2b13cdf226dae1"
+    },
+    "p3_prior": {
+      "path": "artifacts/cycle-177-characteristic-local-ray-v1.json",
+      "sha256": "cb501f35db6a697d9a761bf5c082a6c6796c39ab38c61bc28de03118ca794978"
+    },
+    "prereg": {
+      "path": "docs/cycle-179-p2-ray-quotient-preregistration-v1.md",
+      "sha256": "cb9d0098db17b6986262f0fe46203bde0252b7801ecc13037c1a6789adb9897d"
+    },
+    "prior": {
+      "path": "artifacts/cycle-178-crt-local-admissible-set-v1.json",
+      "sha256": "08da527e3d66a2f78e5bf1f706139e3fd7bb2aeeb6abe9fcb1eea65290711e2b"
+    },
+    "replay": {
+      "path": "proof/verify_cycle_179_p2_ray_quotient.py",
+      "sha256": "10c4f4e622b5410aaec43b2c934a283658b2e4512ba96d8c016b7b84fda64155"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    },
+    "section": {
+      "path": "artifacts/cycle-164-oriented-ray-monoid-section-v1.json",
+      "sha256": "f1815f8641780570c15c7e9c6b40f9de8390358fb3dec0ac93aa311b78a6a26d"
+    }
+  },
+  "gate_outcome": {
+    "d6_interface": "LOCAL_RAY_FACTORS_RESOLVE_ROWS_ARTIN_ASSEMBLY_REQUIRED",
+    "disallowed_pseudo_progress": [
+      "calling singleton-fibre compatibility an interface",
+      "discarding a modulus-defined local factor merely to create collisions",
+      "using s,d, selected exponents, or target labels"
+    ],
+    "remaining_bottleneck": "A valid interface needs a functorial local-global Artin assembly with a structural relation to the characteristic dynamics, rather than a row-resolving local record."
+  },
+  "local_exact_sequence": {
+    "statement": "For lowered m=p2^n2*m' with n2 in {0,1}, the p2 local finite ray factor is trivial for n2=0 and (O_K/p2)^times for n2=1; lowering p2 to 1 induces its unique projection to the trivial factor.",
+    "transition": "Q2(p2) -> Q2(1) is the canonical projection; all tested classes map to the sentinel.",
+    "trivial_factor_sentinel": [
+      0,
+      0
+    ],
+    "unit_classes_mod_p2": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "verified_base_data": {
+      "Norm(p2)": 4,
+      "Norm(p3)": 3,
+      "full_ray_generator_log": [
+        1
+      ],
+      "v_p2((6))": 1
+    }
+  },
+  "outcome": {
+    "epistemic_status": "PROVED",
+    "statement": "The conductor-lowered prime-2 ray factor and its canonical transition are exact, but together with the frozen prime-3 record they still resolve all 36 rows; the fibre compatibility test remains vacuous."
+  },
+  "preregistration_preflight": {
+    "cycle": 179,
+    "manifest_sha256": "cb9d0098db17b6986262f0fe46203bde0252b7801ecc13037c1a6789adb9897d",
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "The next engine, subject to companion review, is an explicit local-global Artin assembly for admissible exponent sets with global-unit ambiguity and a preregistered structural identity test."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_179_p2_ray_quotient_v1.py --check",
+    "preflight_command": "research prereg check docs/cycle-179-p2-ray-quotient-preregistration-v1.md --expected-cycle 179 --allow-head-drift",
+    "prototype_command": "python3 proof/verify_cycle_179_p2_ray_quotient.py --output discovery/cycle-179-p2-ray-quotient-prototype-v1.json",
+    "write_command": "python3 proof/build_cycle_179_p2_ray_quotient_v1.py --write"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_179_p2_ray_quotient_v1.py",
+    "sha256": "ed2dc910f76bbf0b7e9ac05165ac7d706ab746f62a9e4c58114eff40896af7f5"
+  },
+  "status": "SEALED_RAY_EXACT_P2_FACTOR_CRT_INJECTIVE_VACUOUS"
+}
