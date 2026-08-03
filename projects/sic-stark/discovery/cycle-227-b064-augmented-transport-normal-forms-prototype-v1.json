@@ -1,0 +1,309 @@
+{
+  "claim_boundary": "The exact F2/F3 augmented transport has the stated normal form through the preregistered census and its paired-generator recurrence. No C218 positive-scaling quotient preserves the generic period/argument/label state. At label zero only, positive all-F3 even paths from A/C return the product node up to positive scaling, while retaining a nonempty ordered ordinary-gamma residual word; this is not a closed factorization or cochain loop. This does not construct a signed-k product, a source cross-sign law, a packet cocycle, AFK covariance, fusion, Stark, or TCC.",
+  "epistemic_status": "PROVED",
+  "gate_outcome": {
+    "augmented_transport_normal_form": "PROVED",
+    "generic_augmented_scaling_quotient": "FALSIFIED_BY_LABEL_LOSS",
+    "remaining_design_problem": "Determine whether the retained residual-word monoid admits a source-derived reduction or a new signed-k completion without treating zero-label product-node scaling as a factorization loop.",
+    "zero_label_positive_product_node_quotient": "PROVED_WITH_RESIDUAL_WORD_RETAINED"
+  },
+  "normal_form_audit": {
+    "all_rows_match_closed_form": true,
+    "closed_form": {
+      "affine_argument": "sign(start_s)^n*(-1)^(sum_{F2 at position j}(n-j+1))*24^n*(mu+m*omega2)",
+      "label": "m at length zero and 0 at every positive length",
+      "periods_even": "length 2j: 576^j*I when both counts are even, 576^j*S when both are odd",
+      "periods_odd": "length 2j+1: 576^j times the start's one-step map selected by the odd generator count",
+      "raw_endpoint": "apply F2 iff count_F2 is odd and F3 iff count_F3 is odd",
+      "residual_word": "ordered two-ordinary-gamma block per generator; no commuting or cancellation"
+    },
+    "conclusion": "The exact census agrees with the paired-generator normal form through the frozen cap. The sixteen paired-generator identities supply the induction step, and one final letter supplies the odd form; this is not a bounded-search claim.",
+    "epistemic_status": "PROVED",
+    "length_summary": [
+      {
+        "all_match": true,
+        "length": 0,
+        "rows": 4
+      },
+      {
+        "all_match": true,
+        "length": 1,
+        "rows": 8
+      },
+      {
+        "all_match": true,
+        "length": 2,
+        "rows": 16
+      },
+      {
+        "all_match": true,
+        "length": 3,
+        "rows": 32
+      },
+      {
+        "all_match": true,
+        "length": 4,
+        "rows": 64
+      },
+      {
+        "all_match": true,
+        "length": 5,
+        "rows": 128
+      },
+      {
+        "all_match": true,
+        "length": 6,
+        "rows": 256
+      },
+      {
+        "all_match": true,
+        "length": 7,
+        "rows": 512
+      },
+      {
+        "all_match": true,
+        "length": 8,
+        "rows": 1024
+      },
+      {
+        "all_match": true,
+        "length": 9,
+        "rows": 2048
+      },
+      {
+        "all_match": true,
+        "length": 10,
+        "rows": 4096
+      },
+      {
+        "all_match": true,
+        "length": 11,
+        "rows": 8192
+      },
+      {
+        "all_match": true,
+        "length": 12,
+        "rows": 16384
+      }
+    ],
+    "paired_generator_induction": {
+      "conclusion": "These sixteen exact identities are the finite induction step; the length-12 census is a regression check of their closed form, not its only support.",
+      "epistemic_status": "PROVED",
+      "induction_rule": "Every two-letter block contributes 576*I or 576*S independently of the raw start; its affine sign is (-,+,+,-) for F2F2,F3F3,F2F3,F3F2. Concatenation gives the even normal form, and one final letter gives the odd form.",
+      "rows": [
+        {
+          "argument_sign": -1,
+          "label": 0,
+          "pair": "F2 F2",
+          "period_relation": "576*I",
+          "start": "A"
+        },
+        {
+          "argument_sign": 1,
+          "label": 0,
+          "pair": "F3 F3",
+          "period_relation": "576*I",
+          "start": "A"
+        },
+        {
+          "argument_sign": 1,
+          "label": 0,
+          "pair": "F2 F3",
+          "period_relation": "576*S",
+          "start": "A"
+        },
+        {
+          "argument_sign": -1,
+          "label": 0,
+          "pair": "F3 F2",
+          "period_relation": "576*S",
+          "start": "A"
+        },
+        {
+          "argument_sign": -1,
+          "label": 0,
+          "pair": "F2 F2",
+          "period_relation": "576*I",
+          "start": "B"
+        },
+        {
+          "argument_sign": 1,
+          "label": 0,
+          "pair": "F3 F3",
+          "period_relation": "576*I",
+          "start": "B"
+        },
+        {
+          "argument_sign": 1,
+          "label": 0,
+          "pair": "F2 F3",
+          "period_relation": "576*S",
+          "start": "B"
+        },
+        {
+          "argument_sign": -1,
+          "label": 0,
+          "pair": "F3 F2",
+          "period_relation": "576*S",
+          "start": "B"
+        },
+        {
+          "argument_sign": -1,
+          "label": 0,
+          "pair": "F2 F2",
+          "period_relation": "576*I",
+          "start": "C"
+        },
+        {
+          "argument_sign": 1,
+          "label": 0,
+          "pair": "F3 F3",
+          "period_relation": "576*I",
+          "start": "C"
+        },
+        {
+          "argument_sign": 1,
+          "label": 0,
+          "pair": "F2 F3",
+          "period_relation": "576*S",
+          "start": "C"
+        },
+        {
+          "argument_sign": -1,
+          "label": 0,
+          "pair": "F3 F2",
+          "period_relation": "576*S",
+          "start": "C"
+        },
+        {
+          "argument_sign": -1,
+          "label": 0,
+          "pair": "F2 F2",
+          "period_relation": "576*I",
+          "start": "D"
+        },
+        {
+          "argument_sign": 1,
+          "label": 0,
+          "pair": "F3 F3",
+          "period_relation": "576*I",
+          "start": "D"
+        },
+        {
+          "argument_sign": 1,
+          "label": 0,
+          "pair": "F2 F3",
+          "period_relation": "576*S",
+          "start": "D"
+        },
+        {
+          "argument_sign": -1,
+          "label": 0,
+          "pair": "F3 F2",
+          "period_relation": "576*S",
+          "start": "D"
+        }
+      ]
+    },
+    "rows_checked": 32764,
+    "source_defined_path_count": 26,
+    "word_length_cap": 12
+  },
+  "quotient_audit": {
+    "conclusion": "C218 scaling yields no quotient of the generic augmented state: every nonempty word loses the initial label. At m=0 only, the source-defined paths F3^(2j) from A or C return their product node with positive common scale 576^j, but their ordered ordinary-gamma residual blocks remain. They are product-node identifications, not closed factorization/cochain loops.",
+    "epistemic_status": "PROVED",
+    "generic_full_label_scaling_quotient_count": 0,
+    "rejected_raw_return_count": 10908,
+    "rejected_raw_return_counts": {
+      "crosses_negative_k_product_boundary": 10908
+    },
+    "zero_label_candidate_count": 12,
+    "zero_label_product_node_scaling_candidates": [
+      {
+        "ordinary_gamma_factors_retained": 4,
+        "residual_blocks": 2,
+        "scale": 576,
+        "start": "A",
+        "word": "F3 F3"
+      },
+      {
+        "ordinary_gamma_factors_retained": 4,
+        "residual_blocks": 2,
+        "scale": 576,
+        "start": "C",
+        "word": "F3 F3"
+      },
+      {
+        "ordinary_gamma_factors_retained": 8,
+        "residual_blocks": 4,
+        "scale": 331776,
+        "start": "A",
+        "word": "F3 F3 F3 F3"
+      },
+      {
+        "ordinary_gamma_factors_retained": 8,
+        "residual_blocks": 4,
+        "scale": 331776,
+        "start": "C",
+        "word": "F3 F3 F3 F3"
+      },
+      {
+        "ordinary_gamma_factors_retained": 12,
+        "residual_blocks": 6,
+        "scale": 191102976,
+        "start": "A",
+        "word": "F3 F3 F3 F3 F3 F3"
+      },
+      {
+        "ordinary_gamma_factors_retained": 12,
+        "residual_blocks": 6,
+        "scale": 191102976,
+        "start": "C",
+        "word": "F3 F3 F3 F3 F3 F3"
+      },
+      {
+        "ordinary_gamma_factors_retained": 16,
+        "residual_blocks": 8,
+        "scale": 110075314176,
+        "start": "A",
+        "word": "F3 F3 F3 F3 F3 F3 F3 F3"
+      },
+      {
+        "ordinary_gamma_factors_retained": 16,
+        "residual_blocks": 8,
+        "scale": 110075314176,
+        "start": "C",
+        "word": "F3 F3 F3 F3 F3 F3 F3 F3"
+      },
+      {
+        "ordinary_gamma_factors_retained": 20,
+        "residual_blocks": 10,
+        "scale": 63403380965376,
+        "start": "A",
+        "word": "F3 F3 F3 F3 F3 F3 F3 F3 F3 F3"
+      },
+      {
+        "ordinary_gamma_factors_retained": 20,
+        "residual_blocks": 10,
+        "scale": 63403380965376,
+        "start": "C",
+        "word": "F3 F3 F3 F3 F3 F3 F3 F3 F3 F3"
+      },
+      {
+        "ordinary_gamma_factors_retained": 24,
+        "residual_blocks": 12,
+        "scale": 36520347436056576,
+        "start": "A",
+        "word": "F3 F3 F3 F3 F3 F3 F3 F3 F3 F3 F3 F3"
+      },
+      {
+        "ordinary_gamma_factors_retained": 24,
+        "residual_blocks": 12,
+        "scale": 36520347436056576,
+        "start": "C",
+        "word": "F3 F3 F3 F3 F3 F3 F3 F3 F3 F3 F3 F3"
+      }
+    ]
+  },
+  "schema": "sic-stark-cycle-227-augmented-transport-normal-forms-prototype-v1"
+}
