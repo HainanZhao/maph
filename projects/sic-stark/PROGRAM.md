@@ -38,12 +38,14 @@
   whole label-preserving diagonal family, that containment of all 225 target
   two-by-two minor pullbacks in the full rank-one source ideal is equivalent
   to all 225 corresponding coefficient-minor conditions. It supplies neither
-  those coefficients nor an actual interface. No endpoint binomial value has
-  been evaluated. No divergent raw contour, periodized beta channel, AFK
-  amplitude identity, fusion, or TCC is proved; the active gate is a source-
-  authorized equation-(66) or translation-covariant construction of a
-  coefficient array satisfying the rank-one criterion, followed by a full
-  labeled C198 test.
+  those coefficients nor an actual interface. Cycle 209 rules out one fixed
+  nonzero diagonal map from every admissible source fibre to the fixed C198
+  projective point, because the source ratio `P_(0,1)/P_(0,0)=t^4` changes
+  from 16 to 81 at `t=2,3`. No endpoint binomial value has been evaluated.
+  No divergent raw contour, periodized beta channel, AFK amplitude identity,
+  fusion, or TCC is proved; the active gate is the logarithmic projective
+  connection forced by those packet exponents and its potential canonical,
+  multiplier-compatible parallel transport to C198 without fitting `t`.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -374,6 +376,13 @@
   relation. Its all-ones rank-one specialization supplies the exact converse
   witness.
   See `artifacts/cycle-208-b045-polarized-minor-pairing-v1.json`.
+- `PROVED`: Cycle 209 rules out the full fixed nonzero label-preserving
+  diagonal map family for all admissible source fibres. In every `h` channel,
+  the exact projective ratio `P_(0,1)/P_(0,0)=t^4` has incompatible values
+  16 and 81 at the admissible witnesses `t=2,3`, whereas a fixed C198 point
+  would force it to be constant. This does not reject a `t`-dependent,
+  non-diagonal, nonlinear, selected-fibre, or other source-authorized map.
+  See `artifacts/cycle-209-b046-fixed-diagonal-projective-interface-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -473,7 +482,8 @@ Budget B001--B200
   |    |                                                                                                                                                                                                                                                    `-- source projective normal packet [SEALED]
   |    |                                                                                                                                                                                                                                                         `-- factorwise target Gamma_M recurrence [FALSIFIED]
   |    |                                                                                                                                                                                                                                                              `-- full diagonal 225-minor pullback criterion [SEALED]
-  |    |                                                                                                                                                                                                                                                                   `-- source-derived equation-(66)/translation-covariant r,s construction [NEXT GATE]
+  |    |                                                                                                                                                                                                                                                                   `-- fixed diagonal all-fibre projective interface [FALSIFIED]
+  |    |                                                                                                                                                                                                                                                                        `-- logarithmic projective connection / canonical parallel transport [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -518,18 +528,18 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 209 source-coefficient-construction decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `FULL_DIAGONAL_225_MINOR_PULLBACK_CRITERION_SEALED_SOURCE_COEFFICIENT_CONSTRUCTION_OPEN` | Derive or reject a coefficient array satisfying the 225 rank-one constraints through a source-authorized equation-(66) or translation-covariant construction, without endpoint fitting, then test its resulting `J` against all 225 labeled C198 target minors. | Reusing a factorwise recurrence, fitting a coefficient array, factor, scalar, alias, or ray datum to endpoint data, asserting target vanishing from the criterion, or treating projective covariance as an AFK amplitude. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 210 logarithmic-projective-connection decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `FIXED_DIAGONAL_ALL_FIBRE_PROJECTIVE_INTERFACE_FALSIFIED_LOGARITHMIC_CONNECTION_OPEN` | Derive the source-forced logarithmic projective connection, then prove or refute a canonical `A6`/multiplier-compatible parallel transport to C198 without selecting or fitting `t`. | Replacing the all-fibre no-go by a broad interface no-go, choosing a source fibre or endpoint ratio, fitting a transport normalization, or treating source covariance as an AFK amplitude. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Can a source-authorized equation-(66) or translation-covariant construction
-  derive a coefficient array satisfying the 225 rank-one constraints, without
-  fitting to C198 endpoint values, and can its resulting `J` pass all 225
-  labeled target minor tests?
+- Does the exact source exponent array force a logarithmic projective
+  connection whose canonical parallel transport is compatible with `A6` and
+  the multiplier ledger, and can that transport reach C198 without selecting
+  or fitting `t`?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -538,27 +548,27 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 209
+## Next goal: Cycle 210
 
 Preregister one substantive block with this question:
 
-> Can a source-derived equation-(66) or translation-covariant construction
-> determine a label-preserving coefficient array satisfying the 225 rank-one
-> constraints, without fitting any C198 endpoint data, and then either
-> construct or falsify the resulting full labeled diagonal interface?
+> Does the complete C206 exponent array force a logarithmic projective
+> connection with canonical `A6`/multiplier-compatible parallel transport,
+> and can that transport be compared to C198 without selecting or fitting a
+> source fibre?
 
-Cycle 209 must freeze the source state space, equation-(66) hypotheses or
-translation law, factor-extraction rule, and exact falsifier before executable
-work. It must retain all 36 labels, keep capital `Gamma_M` and AFK phase
-separate, forbid endpoint fitting, and not select a preferred affine
-denominator, scalar, alias, exponent, or ray label, or claim an AFK, fusion,
-Stark, or TCC consequence.
+Cycle 210 must freeze the exponent connection, projective gauge convention,
+parallel-transport path and base-data rule, `A6` and multiplier comparison,
+and exact acceptance/falsifier before executable work. It must retain all 36
+labels, keep capital `Gamma_M` and AFK phase separate, forbid target fitting
+or a selected source fibre, and not claim an AFK, fusion, Stark, or TCC
+consequence.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 208
+research cycle 209
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_208_polarized_minor_pairing_v1.py --check
+python3 proof/build_cycle_209_fixed_diagonal_projective_interface_v1.py --check
 ```
