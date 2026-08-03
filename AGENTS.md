@@ -96,18 +96,31 @@ specific mathematical premise or prior artifact instead.
 
 ### Research-block cadence
 
-A research cycle is a substantive block, not a single algebraic observation.
-Preregister one question with a real advance condition, then pursue all
-closely dependent derivations, counterexamples, and exact checks needed to
-answer it before sealing. A normal cycle should contain multiple lemmas or a
-genuine bound-or-obstruction decision; do not create a new cycle merely to
-name an intermediate decomposition, factorization, or bookkeeping repair.
+A research cycle is a coherent decision block, not a single algebraic
+observation, lemma, engine probe, or validation run. Its normal boundary is a
+material companion-review checkpoint: a seal/strategic decision at which the
+companion reviews the completed related work and recommends whether to reuse
+the live cycle or open a genuinely new one. Preregister one decision question
+with a real advance condition, then pursue all closely dependent derivations,
+counterexamples, alternative formulations, and exact checks needed to answer
+it before sealing. Reuse the live cycle and its one preregistration for that
+related work; do not create a cycle merely to name an intermediate
+decomposition, factorization, failed subtest, or bookkeeping repair.
+
+Open a new cycle only when the companion-reviewed decision selects a genuinely
+different research question or frozen method family, or when a correction,
+external result, resource boundary, or irreversible gate/status decision
+requires a separate record. A companion recommendation to continue the same
+question is explicit authorization to keep using the existing cycle. If new
+work would invalidate its executed freeze, contain it as a result of the live
+cycle and open a new one only at that decision boundary; never evade the
+freeze by minting a routine successor cycle.
 
 Keep scratch in `discovery/` and promote only the conclusion. Run the relevant
-replay and commit once per completed research block—not after each lemma. An
-early seal is justified only by a correction, falsifier, externally useful
-result, or irreversible strategy/gate decision. Use a correction only for a
-genuine post-seal defect.
+replay and commit once per completed research block—not after each lemma or
+subtest. An early seal is justified only by a correction, falsifier,
+externally useful result, or irreversible strategy/gate decision. Use a
+correction only for a genuine post-seal defect.
 
 ### One live specification per cycle
 
@@ -159,19 +172,21 @@ are legitimate.
 ## 1a. Critical-decision companion
 
 Use one named companion only for a strategic fork, sealing a material claim,
-choosing the next cycle after a material result, or publication. It is a
-mentor, not a duplicate worker. A major next-cycle choice is a mandatory
-checkpoint: before selecting it, send the companion the work completed so far
-and ask it to review that work as well as recommend the next cycle. A material
-seal and its next-cycle choice normally share one review packet under 200
-words: state the decision, frozen claim/gate and tag, decisive evidence, known
-flaw, the completed work to review, and the plausible next engines. Request
-five short items: an evidence and scope review, recommendation, flaw,
-falsifier, and next action. The companion must assess the completed work and
-alternatives, rather than merely approve or reject the proposed choice. Do not
-notify, poll, or wait during routine cycles. If no reply is available at the
-irreversible decision, defer that decision rather than create process work
-around it.
+choosing whether to continue or break a cycle after a material result, or
+publication. It is a mentor, not a duplicate worker. A material cycle-boundary
+choice is a mandatory checkpoint: before choosing it, send the companion the
+work completed so far and ask it to review that work and recommend either
+continued use of the live cycle or a new cycle with a distinct question. A
+material seal and its boundary choice normally share one review packet under
+200 words: state the decision, frozen claim/gate and tag, decisive evidence,
+known flaw, the completed work to review, and the plausible next engines.
+Request five short items: an evidence and scope review, recommendation, flaw,
+falsifier, and next action; the next action must say whether the current cycle
+continues or a new one is warranted. The companion must assess the completed
+work and alternatives, rather than merely approve or reject the proposed
+choice. Do not notify, poll, or wait during routine cycles. If no reply is
+available at the irreversible decision, defer that decision rather than create
+process work around it.
 
 ## 2. Discovery and proof are separate
 
