@@ -10,14 +10,13 @@
   scopes in dimensions 4, 5, 7, and 8. No dimension-six TCC identity,
   coefficient-to-ray map, fusion-continuity theorem, or boundary-limit theorem
   is proved. `CERTIFIED_NUMERICAL` packet growth is not a nonexistence theorem.
-- Current state: the Cycle-194 v2 correction retains the source-forced,
-  Fourier-stable six-dimensional `B_(1,-)` anti-channel missing from the
-  minimal fibre, but enforces the published true-pole inequality omitted by
-  v1. The six affine collision orbits are finite (sizes `2,4,6,8,10,12`),
-  with 42 nonzero individual residue summands; no combined-residue
-  noncancellation, endpoint continuation, AFK, boundary, fusion, or TCC
-  result is proved. The next gate is an exact source-defined combination of
-  those finite residues before a distributional or contour endpoint test.
+- Current state: Cycle 195 combines every corrected finite true-pole orbit
+  by the published helical `Gamma_M` multiplier. All six `B_(1,-)` combined
+  residues have normalized q-adic constant coefficient one, hence are
+  nonzero meromorphic germs away from their retained divisor loci. The next
+  gate is a source-defined contour or distributional continuation of the
+  regular periodized channel to the real-multiplication endpoint while
+  preserving these finite jumps—not an AFK, boundary, fusion, or TCC result.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -250,6 +249,13 @@
   endpoint continuation, AFK identification, a boundary value, fusion, and
   TCC remain open. See
   `artifacts/cycle-194-b031-meromorphic-anti-channel-v2.json`.
+- `PROVED`: Cycle 195 uses only those corrected finite orbits and the
+  published helical multiplier. For each `N=1,3,5,7,9,11`, the normalized
+  finite combined residue has constant coefficient one because its other
+  summands have q-adic orders `1,3,...,N(N+1)/2`. Thus all six are nonzero
+  meromorphic germs, not pointwise nonzero values or an endpoint
+  periodization. See
+  `artifacts/cycle-195-b032-finite-anti-residue-sum-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -334,8 +340,8 @@ Budget B001--B200
   |    |                                                                                                                                                                         `-- fibrewise iota-equivariant odd raw-amplitude recovery [OBSTRUCTED]
   |    |                                                                                                                                                                              `-- source-forced B_(1,-) meromorphic anti-channel [SEALED]
   |    |                                                                                                                                                                                   `-- finite true-pole collision orbits [SEALED CORRECTION: 42 summands]
-  |    |                                                                                                                                                                                        `-- exact finite combined-residue rule [NEXT GATE]
-  |    |                                                                                                                                                                                             `-- endpoint distributional/contour continuation [SUBSEQUENT GATE]
+  |    |                                                                                                                                                                                        `-- exact finite combined-residue rule [SEALED]
+  |    |                                                                                                                                                                                             `-- endpoint distributional/contour continuation [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -380,20 +386,18 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 195 finite-residue-combination decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `SOURCE_FORCED_24D_ANTI_FIBRE_PROVED_FINITE_TRUE_POLE_COLLISION_SUM_REQUIRES_EXACT_COMBINATION` | Define one source-derived exact finite combined-residue rule for all six collision orbits, test it for cancellation/preservation without fitted coefficients, and only then choose a distributional or contour endpoint continuation. | Calling affine divisor equality an infinite true-pole orbit; calling individual nonzero summands a nonzero combined residue; fitting a residue, transfer entry, or counterterm; identifying a raw/periodized channel with an AFK value or completed alias; discarding capital `Gamma_M` normalization or AFK phase; using `s,d`, selected exponents, or ray labels. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 196 endpoint-continuation decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `SOURCE_FORCED_24D_FINITE_ANTI_RESIDUE_GERMS_PROVED_ENDPOINT_REGULAR_PART_CONTINUATION_REQUIRED` | Fix a source-derived contour or distributional path to the RM endpoint, decompose the periodized kernel into a controlled regular part plus the six finite residue jumps, and prove endpoint preservation before any AFK identification. | Calling a formal meromorphic germ pointwise nonzero; calling finite residue sums an endpoint continuation; fitting a residue, transfer entry, or counterterm; identifying a raw/periodized channel with an AFK value or completed alias; discarding capital `Gamma_M` normalization or AFK phase; using `s,d`, selected exponents, or ray labels. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Do the finite source true-pole collision sums preserve all six anti
-  residues, or do any cancel exactly, before an endpoint contour or
-  distributional finite part is chosen?
-- Once those combined residues are defined, can the completed 24-dimensional
-  source-forced meromorphic channel be continued to the real-multiplication
-  endpoint as a distribution or contour-controlled finite part?
+- Can the completed 24-dimensional source-forced meromorphic channel be
+  continued to the real-multiplication endpoint as a distribution or
+  contour-controlled finite part, with its six nonzero finite anti-residue
+  jumps fixed before evaluating any AFK comparison?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -402,30 +406,30 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 195
+## Next goal: Cycle 196
 
 Preregister one substantive block with this question:
 
-> Can one source-derived exact finite combination of every corrected
-> true-pole collision orbit determine whether the six `B_(1,-)` residues
-> survive or cancel, without a fitted coefficient, AFK map, selected
-> exponents, `s`, `d`, or ray labels?
+> Can one source-derived contour or distributional continuation of the
+> completed 24-dimensional meromorphic beta channel reach the
+> real-multiplication endpoint while preserving its six already nonzero finite
+> anti-residue jumps, under fixed pole-crossing and residue-jump rules and
+> without a fitted AFK map, selected exponents, `s`, `d`, or ray labels?
 
-Cycle 195 must freeze one finite collision-sum state space, the source
-functional-equation normalization that combines its summands, every
-true-pole/zero cancellation condition, and a strict acceptance criterion
-before executable work. It must retain capital `Gamma_M` normalization and
-the AFK phase separately. It must not treat the v1 affine orbit as a true
-tail, infer endpoint continuation from a finite source sum, call a
-raw/periodized channel an AFK cocycle or completed alias, fit a counterterm,
-use selected exponents, `s,d`, or ray labels, or claim an RM-boundary,
-Stark/fusion/TCC consequence before exact amplitude matching.
+Cycle 196 must freeze one continuation state space, one contour/distribution
+rule, all candidate pole-crossing loci, finite residue-jump signs, and a
+strict endpoint acceptance criterion before executable work. It must retain
+capital `Gamma_M` normalization and the AFK phase separately. It must not
+infer an endpoint value from meromorphic nonidentity, call a raw/periodized
+channel an AFK cocycle or completed alias, fit a counterterm, use selected
+exponents, `s,d`, or ray labels, or claim an RM-boundary, Stark/fusion/TCC
+consequence before exact amplitude matching.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 194
+research cycle 195
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_194_meromorphic_anti_channel_v2.py --check
+python3 proof/build_cycle_195_finite_anti_residue_sum_v1.py --check
 ```
