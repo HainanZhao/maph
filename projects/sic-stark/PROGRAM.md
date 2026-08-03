@@ -82,9 +82,12 @@
   cohomology problem for an argument-dependent factor. Cycle 224 derives the
   unique integrable minimal cochain, but it makes every frozen `epsilon=±1`
   product fail raw reflection by `-1`. The reflection equation now forces the
-  separate `c=±i` branch. No endpoint binomial value has been evaluated. No
-  divergent raw contour, periodized beta channel, AFK amplitude identity,
-  fusion, or TCC is proved.
+  separate `c=±i` branch. Cycle 225 proves that branch closes both shifts,
+  reflection, and double sign (with root conjugation), but it is only a
+  one-state construction: both factorization targets remain undefined. The
+  next gate is a state-complete signed-product groupoid. No endpoint binomial
+  value has been evaluated. No divergent raw contour, periodized beta channel,
+  AFK amplitude identity, fusion, or TCC is proved.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -518,6 +521,11 @@
   equal `-1`. This rejects that branch only; reflection now determines a
   distinct `c^2=-1` constant branch. See
   `artifacts/cycle-224-b061-shift-cohomology-v1.json`.
+- `PROVED`: Cycle 225 proves the `c=±i` branch satisfies both shifts and raw
+  reflection, with double sign involutive exactly when it conjugates `c`. Its
+  two required factorization target states are undefined, so it is a local
+  signed-product branch rather than a `Gamma_M` extension. See
+  `artifacts/cycle-225-b062-reflection-root-branch-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -672,17 +680,16 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 225 reflection-normalized constant decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `FROZEN_SHIFT_COHOMOLOGY_REFLECTION_FAILURE_SEALED` | Freeze the two constants `c=±i` compelled by the combined reflection equation; re-test both shifts, reflection, double-sign involutivity (including sign reversal of `c`), and both factorization identities before re-testing affine E. | Calling `c=±i` source-derived; fitting a further constant/factor; checking reflection without both shifts and involutivity; checking only a matrix; dropping normalization/branches/residual factors; or calling a partial extension a packet theorem. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 226 state-complete signed-product groupoid decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `REFLECTION_ROOT_LOCAL_BRANCH_FACTORIZATION_UNDEFINED_SEALED` | Define compatible signed products and cochains on every raw four-state-orbit/factorization target, then solve all `F2/F3` edge and loop-consistency equations with residual factors retained before re-testing affine E. | Calling local closure a `Gamma_M` theorem; defining only the E state; fitting edge cochains; using projective matrices as arrows; dropping normalization/branches/residual factors; or calling a partial groupoid an extension. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Do the reflection-compelled constants `c=±i` yield a combined signed product
-  satisfying both shifts, raw reflection, double-sign involutivity, and both
-  factorization identities?
+- Can a state-complete signed-product groupoid on the full raw four-state
+  orbit carry compatible `F2/F3` factorization arrows and loop cochains?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -691,24 +698,24 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 225 / B062
+## Next goal: Cycle 226 / B063
 
 Preregister one substantive block with this question:
 
-> Does the cochain-corrected signed product with exactly `c=+i` or `c=-i`
-> satisfy both shifts, reflection, double-sign involutivity, and equations
-> (16)--(17), with the action of simultaneous sign reversal on `c` explicit?
+> Can the full raw `F2/F3` four-state orbit and its positive representatives
+> be assigned signed products/cochains so that every factorization edge and
+> closed loop is defined with its ordinary-gamma residual factor retained?
 
-Cycle 225 must freeze the two reflection roots, their sign-reversal action,
-the full product state, and every identity pullback before executable work. It
-must retain all residual factors, keep the AFK phase separate, forbid target
-fitting, and not claim an AFK, fusion, Stark, or TCC consequence.
+Cycle 226 must freeze the complete state graph, all edge argument/label/period
+maps, the cochain unknowns, loop equations, and residual factors before
+executable work. It must keep the AFK phase separate, forbid target fitting,
+and not claim an AFK, fusion, Stark, or TCC consequence.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 224
+research cycle 225
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_224_shift_cohomology_v1.py --check
+python3 proof/build_cycle_225_reflection_root_branch_v1.py --check
 ```

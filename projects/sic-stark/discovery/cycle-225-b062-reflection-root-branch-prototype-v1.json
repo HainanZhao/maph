@@ -1,0 +1,108 @@
+{
+  "acceptance_audit": {
+    "accepted_signed_extension": false,
+    "both_shifts": "passed",
+    "double_sign": "passed_only_for_conjugation_action",
+    "epistemic_status": "PROVED",
+    "factorization_16_17": "failed_by_undefined_required_signed_states",
+    "reason": "A full signed Gamma_M extension must supply its stated factorization targets. This one-state construction does not, and no projective matrix identification may fill the gap.",
+    "reflection": "passed"
+  },
+  "claim_boundary": "The four explicitly constructed c=+/-i root products satisfy both frozen shifts and raw reflection. Double simultaneous sign is involutive only when it conjugates c. But the construction defines only the raw E-negative state, while the two raw factorization arrows require two distinct states without signed-product definitions or cochain pullbacks. Thus this branch is not an accepted signed Gamma_M extension. This does not rule out a state-complete signed-product groupoid, a source theorem, a packet cocycle, AFK covariance, fusion, Stark, or TCC.",
+  "double_sign_action_audit": {
+    "conclusion": "Within the frozen root branch, double sign is involutive exactly for conjugation of c; preserving c fails by -1.",
+    "epistemic_status": "PROVED",
+    "rows": [
+      {
+        "c": "-i",
+        "conjugate_action_double_sign": "1",
+        "conjugate_action_involutive": true,
+        "preserve_action_double_sign": "-1",
+        "preserve_action_involutive": false
+      },
+      {
+        "c": "+i",
+        "conjugate_action_double_sign": "1",
+        "conjugate_action_involutive": true,
+        "preserve_action_double_sign": "-1",
+        "preserve_action_involutive": false
+      }
+    ],
+    "scope": "This defines the branch action for the new construction only; it is not a source-provided antilinear action.",
+    "surviving_action": "simultaneous sign reversal maps c to conjugate(c)=-c"
+  },
+  "epistemic_status": "PROVED",
+  "factorization_state_audit": {
+    "conclusion": "The frozen product was defined only at the raw E-negative state. Neither distinct raw factorization target has a frozen signed-product definition or cochain pullback, so neither equation can be tested as an identity of this construction.",
+    "defined_signed_state": [
+      5,
+      -24,
+      -115,
+      -24
+    ],
+    "epistemic_status": "PROVED",
+    "equation_16_pullback_defined": false,
+    "equation_16_required_state": [
+      115,
+      24,
+      -5,
+      24
+    ],
+    "equation_17_pullback_defined": false,
+    "equation_17_required_state": [
+      -5,
+      -24,
+      115,
+      -24
+    ],
+    "ordinary_gamma_residuals_retained": true
+  },
+  "gate_outcome": {
+    "accepted_signed_extension": "NOT_AVAILABLE",
+    "reflection_root_branch_local_identities": "PROVED",
+    "remaining_design_problem": "Construct a signed-product groupoid on every factorization state with compatible cochains and ordinary-gamma residual pullbacks before re-testing the raw E path.",
+    "state_complete_factorization_groupoid": "NOT_CONSTRUCTED"
+  },
+  "root_branch_audit": {
+    "candidate_count": 4,
+    "conclusion": "All four frozen reflection-root products pass both inherited shifts and raw reflection within the constructed one-state algebra.",
+    "epistemic_status": "PROVED",
+    "reflection_equation": "-c^2=1",
+    "roots": [
+      "+i",
+      "-i"
+    ],
+    "rows": [
+      {
+        "c": "-i",
+        "first_shift": true,
+        "raw_reflection_product": 1,
+        "second_shift": true,
+        "sigma": -1
+      },
+      {
+        "c": "+i",
+        "first_shift": true,
+        "raw_reflection_product": 1,
+        "second_shift": true,
+        "sigma": -1
+      },
+      {
+        "c": "-i",
+        "first_shift": true,
+        "raw_reflection_product": 1,
+        "second_shift": true,
+        "sigma": 1
+      },
+      {
+        "c": "+i",
+        "first_shift": true,
+        "raw_reflection_product": 1,
+        "second_shift": true,
+        "sigma": 1
+      }
+    ],
+    "source_boundary": "The roots are selected by this construction's reflection equation, not by a source cross-sign theorem."
+  },
+  "schema": "sic-stark-cycle-225-reflection-root-branch-prototype-v1"
+}
