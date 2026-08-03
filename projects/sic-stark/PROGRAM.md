@@ -171,14 +171,25 @@
   without added state is C226's contained raw groupoid. The next distinct
   engine must derive a new cross-sign transformation law on an enlarged affine
   signed-period cover, rather than postulate reverse negative-`k` arrows.
+  Cycle 248's unsealed formal filtered-jet calculation retained the ordered
+  positive `F3` coordinate pullback, but initially lacked a frozen common
+  upper chamber. Cycle 249 proves that, at `w_sigma=t_sigma+i`, every one of
+  the eight A/C factors has `|q|,|qtilde|<1` and a nonzero normalized analytic
+  jet through degree three. Cycle 250 then constructs the source-specific
+  graded rank-four representation: with `P_24 f(mu)=f(24*mu)`, its arrows are
+  `T_e^(n)=24^(-2n) M_(h_e) P_24`, and both ordered A/C two-edge matrices equal
+  the direct C228 residual operator with `P_576`. This fixed-tilt positive-path
+  action supplies no endpoint or cross-sign law. The next gate is to test
+  whether its canonical jet dual can derive, rather than posit, orientation
+  reversal.
   No endpoint binomial value has been
   evaluated. No divergent raw contour, periodized beta channel, AFK amplitude
   identity, fusion, or TCC is proved.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
-- `STRATEGIC_DECISION`: adopt the companion's recommendation because the four
-  tranches preserve the interface-to-fusion dependency and cap the project at
+- `STRATEGIC_DECISION`: retain the four tranches because they preserve the
+  interface-to-fusion dependency and cap the project at
   `B200`. The decision is falsified by counting bookkeeping, exceeding 200, or
   weakening Class A; the explicit reallocation rule addresses its fixed-
   tranche risk.
@@ -788,7 +799,7 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Derive and preregister a companion-reviewed, genuinely new cross-sign law or enlarged-cover construction before opening Cycle 248/B085. | Counting workflow, correction-only work, or archive-only work. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Derive and preregister a genuinely new cross-sign law or enlarged-cover construction before opening a new counted block. | Counting workflow, correction-only work, or archive-only work. |
 | D6 interface | `SINGLE_Q_TILT_ENGINE_FALSIFIED` | Construct or refute a new cross-sign transformation law on an enlarged affine signed-period cover preserving periods, argument, label, and residual/divisor state before B-Fourier covariance. | Scalarizing the C217 shadow, reparameterizing C226 raw loops, postulating reverse negative-`k` arrows, collapsing distinct bases, fitting a regulator, or inferring a source identity. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
@@ -807,25 +818,27 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: formulate Cycle 248 / B085
+## Next goal: formulate Cycle 251 / B088
 
-Before opening another counted block, formulate one falsifiable, source-defined
-cross-sign or enlarged-cover engine. It must add a concrete state/invariant
-beyond C226's raw graph, derive rather than postulate its negative-`k` law,
-retain oriented/scaled periods, affine argument, discrete label, and
-residual/divisor data; and receive companion review before preregistration.
+Test the canonical contragredient of C250's graded representation as a derived
+cross-sign candidate. Freeze the coefficient-residue pairing on
+`C[mu]/(mu^4)`, its adjoint action on `M_h` and `P_24`, the orientation change
+`omega1 -> -omega1`, and the exact A/C source coefficients. Advance only if a
+single source-derived pairing intertwines both ordered paths with every
+period, affine-coordinate, grading, and label state retained; otherwise bank
+the first exact coefficient or state mismatch.
 
-Any future Cycle 248 must preserve C246/C247's scopes, freeze both source
-bases when relevant, a full state invariant, the exact source formulas, and an
-exact falsifier before executable work. It must keep source authorization,
-canonical-current promotion, AFK, mixed-base identity, fusion, Stark, and TCC
-consequences explicitly out of scope.
+Any future representation assessment must preserve C246/C247's scopes, freeze
+both source bases when relevant, a full state invariant, exact source formulas,
+and an exact falsifier before executable work. It must keep source
+authorization, canonical-current promotion, AFK, mixed-base identity, fusion,
+Stark, and TCC consequences explicitly out of scope.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 247
+research cycle 250
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_247_a_tilt_cocycle_v1.py --check
+python3 proof/build_cycle_250_graded_f3_jet_representation_v1.py --check
 ```
