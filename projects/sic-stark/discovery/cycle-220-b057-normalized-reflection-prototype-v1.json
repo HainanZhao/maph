@@ -1,0 +1,61 @@
+{
+  "claim_boundary": "Within the preregistered family consisting only of the published normalized reflection composed with 16 diagonal sign lifts, source reflection reduces every candidate exactly to the sealed Cycle-219 diagonal family. Its exhaustive zero-survivor coordinate census therefore excludes this reflection-plus-sign construction. This does not exclude a candidate with a new non-reflection correction factor, theta/Pochhammer term, additive shift, period swap, label redefinition, new source theorem, packet cocycle, AFK covariance, fusion, Stark, or TCC.",
+  "downstream_axiom_audit": {
+    "epistemic_status": "PROVED",
+    "factorization_tested": false,
+    "involutivity_tested": false,
+    "reason": "Reflection itself collapses to the already falsified diagonal family; no candidate enters the raw product-coordinate state on which the remaining axioms could define a signed-k extension.",
+    "reflection_tested": true,
+    "shift_tested": false
+  },
+  "epistemic_status": "PROVED",
+  "gate_outcome": {
+    "normalized_reflection_plus_sign_extension": "FALSIFIED_WITHIN_FROZEN_FAMILY",
+    "remaining_design_problem": "Construct a genuinely new non-diagonal correction, beginning with an explicit theta/Pochhammer factor or source theorem, and prove all product and functional-identity compatibility before any affine E comparison."
+  },
+  "reflected_coordinate_census": {
+    "candidate_count": 16,
+    "conclusion": "Because normalized reflection reduces each H_abcd exactly to its diagonal counterpart, no reflection-plus-sign candidate preserves raw tau, u, and tilde-u simultaneously.",
+    "epistemic_status": "PROVED",
+    "survivor_count": 0,
+    "symbolic_conflict": "tau=u=1 forces a=c=-d and b=-1, hence tilde-u has mu coefficient -a*c=-1 and pm coefficient b=-1.",
+    "tau_and_u_candidates": [
+      {
+        "signs": {
+          "m": -1,
+          "mu": -1,
+          "omega1": -1,
+          "omega2": 1
+        },
+        "tau": true,
+        "tilde_u": false,
+        "u": true
+      },
+      {
+        "signs": {
+          "m": -1,
+          "mu": 1,
+          "omega1": 1,
+          "omega2": -1
+        },
+        "tau": true,
+        "tilde_u": false,
+        "u": true
+      }
+    ]
+  },
+  "reflection_reduction_audit": {
+    "candidate_after_reduction": "H_abcd=Gamma_M(a*mu,b*m;c*omega1,d*omega2)",
+    "candidate_before_reduction": "H_abcd=Gamma_M(Q_cd-a*mu,r-1-b*m;c*omega1,d*omega2)^(-1)",
+    "epistemic_status": "PROVED",
+    "reduction_target": "Cycle-219 frozen diagonal sign-lift family",
+    "source_identity": "Gamma_M(Q-x,r-1-y)^(-1)=Gamma_M(x,y)",
+    "source_scope": "The equality is used only as the published normalized reflection identity for a positive-k M_+ and its meromorphic period domain; it does not assert that the negative-k raw representative is source-defined.",
+    "substitution": {
+      "Q": "c*omega1+d*omega2",
+      "x": "a*mu",
+      "y": "b*m"
+    }
+  },
+  "schema": "sic-stark-cycle-220-normalized-reflection-prototype-v1"
+}

@@ -1,0 +1,140 @@
+{
+  "artifact_id": "cycle-220-b057-normalized-reflection-v1",
+  "budget_ordinal": "B057",
+  "claim_boundary": "Within the preregistered family consisting only of the published normalized reflection composed with 16 diagonal sign lifts, source reflection reduces every candidate exactly to the sealed Cycle-219 diagonal family. Its exhaustive zero-survivor coordinate census therefore excludes this reflection-plus-sign construction. This does not exclude a candidate with a new non-reflection correction factor, theta/Pochhammer term, additive shift, period swap, label redefinition, new source theorem, packet cocycle, AFK covariance, fusion, Stark, or TCC.",
+  "companion_decision": {
+    "adopted": true,
+    "evidence_scope_review": "The source normalized reflection and its Q/label substitution reduce all 16 frozen reflection-plus-sign candidates exactly to C219's exhaustive diagonal census.",
+    "falsifier": "Any normalized-reflection convention, Q/label substitution, reduction to the C219 diagonal candidates, corrected coefficient census, or replay discrepancy invalidates the seal.",
+    "identity": "/root/decision_companion_2",
+    "known_flaw": "The argument stays inside the positive-k meromorphic reflection law and neither defines nor excludes a signed product with an explicit theta/Pochhammer correction.",
+    "next_action": "Open a new cycle from the two tau/u survivors, for which the sole remaining product-coordinate defect is tilde-u -> -tilde-u; derive the forced tilde-sector Pochhammer/theta inversion factor and test involutivity, normalization, shifts, and factorization without fitted terms.",
+    "reason": "The reflection construction is exactly contained in the preceding diagonal family, while a correction factor would be a distinct new construction.",
+    "recommendation": "Seal C220/B057 as PROVED only for failure of the 16 normalized-reflection-plus-sign candidates; reflection adds no new product-coordinate lift beyond C219."
+  },
+  "cycle": 220,
+  "downstream_axiom_audit": {
+    "epistemic_status": "PROVED",
+    "factorization_tested": false,
+    "involutivity_tested": false,
+    "reason": "Reflection itself collapses to the already falsified diagonal family; no candidate enters the raw product-coordinate state on which the remaining axioms could define a signed-k extension.",
+    "reflection_tested": true,
+    "shift_tested": false
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "preregistration": {
+      "path": "docs/cycle-220-b057-normalized-reflection-preregistration-v1.md",
+      "sha256": "9a7c3fdd865816ec7c37c6eabc345ebb511aba4b42432be31addd9d10ec2e2e9"
+    },
+    "prior_diagonal_extension": {
+      "path": "artifacts/cycle-219-b056-signed-k-extension-v1.json",
+      "sha256": "d305dc5e7ad3fc904b51ba4ce208938b7c0c675d8b865397d862420c54744291"
+    },
+    "prototype": {
+      "path": "discovery/cycle-220-b057-normalized-reflection-prototype-v1.json",
+      "sha256": "f96886957437d88914d8d2025a467801e23cf589faae81f678e99bebe2dcb91a"
+    },
+    "regression_test": {
+      "path": "tests/test_cycle_220_normalized_reflection.py",
+      "sha256": "20a6899d146f868e9ff752900f76238c1baf08364f82e8839f3c8ab176664c8b"
+    },
+    "replay": {
+      "path": "proof/verify_cycle_220_normalized_reflection.py",
+      "sha256": "ee18f4ef9d27c8c78b4c1e82982818eb21f5697efd0c5f3eb69d1bd1354b4f93"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    },
+    "source_audit": {
+      "path": "scripts/dimension_six_ss_evaluation_audit.py",
+      "sha256": "24c9258e46a1233c552017f3b58de0d45acd0197c8c807579f090ca1332f626f"
+    },
+    "source_paper": {
+      "path": "paper/sic-stark-dimension-six-boundary-fusion.tex",
+      "sha256": "347228e05a87946ca41bb31c118aae069b7fb6002fff4933d030a153cef21cb7"
+    },
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "gate_outcome": {
+    "normalized_reflection_plus_sign_extension": "FALSIFIED_WITHIN_FROZEN_FAMILY",
+    "remaining_design_problem": "Construct a genuinely new non-diagonal correction, beginning with an explicit theta/Pochhammer factor or source theorem, and prove all product and functional-identity compatibility before any affine E comparison."
+  },
+  "outcome": {
+    "epistemic_status": "PROVED",
+    "statement": "The source normalized reflection reduces each frozen reflection-plus-sign candidate to a Cycle-219 diagonal sign lift, so its 16-member family has no raw product-coordinate survivor."
+  },
+  "preregistration_preflight": {
+    "cycle": 220,
+    "manifest_sha256": "9a7c3fdd865816ec7c37c6eabc345ebb511aba4b42432be31addd9d10ec2e2e9",
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "reflected_coordinate_census": {
+    "candidate_count": 16,
+    "conclusion": "Because normalized reflection reduces each H_abcd exactly to its diagonal counterpart, no reflection-plus-sign candidate preserves raw tau, u, and tilde-u simultaneously.",
+    "epistemic_status": "PROVED",
+    "survivor_count": 0,
+    "symbolic_conflict": "tau=u=1 forces a=c=-d and b=-1, hence tilde-u has mu coefficient -a*c=-1 and pm coefficient b=-1.",
+    "tau_and_u_candidates": [
+      {
+        "signs": {
+          "m": -1,
+          "mu": -1,
+          "omega1": -1,
+          "omega2": 1
+        },
+        "tau": true,
+        "tilde_u": false,
+        "u": true
+      },
+      {
+        "signs": {
+          "m": -1,
+          "mu": 1,
+          "omega1": 1,
+          "omega2": -1
+        },
+        "tau": true,
+        "tilde_u": false,
+        "u": true
+      }
+    ]
+  },
+  "reflection_reduction_audit": {
+    "candidate_after_reduction": "H_abcd=Gamma_M(a*mu,b*m;c*omega1,d*omega2)",
+    "candidate_before_reduction": "H_abcd=Gamma_M(Q_cd-a*mu,r-1-b*m;c*omega1,d*omega2)^(-1)",
+    "epistemic_status": "PROVED",
+    "reduction_target": "Cycle-219 frozen diagonal sign-lift family",
+    "source_identity": "Gamma_M(Q-x,r-1-y)^(-1)=Gamma_M(x,y)",
+    "source_scope": "The equality is used only as the published normalized reflection identity for a positive-k M_+ and its meromorphic period domain; it does not assert that the negative-k raw representative is source-defined.",
+    "substitution": {
+      "Q": "c*omega1+d*omega2",
+      "x": "a*mu",
+      "y": "b*m"
+    }
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_220_normalized_reflection_v1.py --check",
+    "preflight_command": "research prereg check docs/cycle-220-b057-normalized-reflection-preregistration-v1.md --expected-cycle 220 --allow-head-drift",
+    "prototype_command": "python3 proof/verify_cycle_220_normalized_reflection.py --output discovery/cycle-220-b057-normalized-reflection-prototype-v1.json",
+    "test_command": "python3 -m unittest tests/test_cycle_220_normalized_reflection.py",
+    "write_command": "python3 proof/build_cycle_220_normalized_reflection_v1.py --write"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_220_normalized_reflection_v1.py",
+    "sha256": "87ceae0a1c95896aa4e513074ec0d8e92a1d683f16a1aa0aab38b075130c7eb2"
+  },
+  "status": "SEALED_NORMALIZED_REFLECTION_SIGN_FAMILY_FALSIFIED"
+}
