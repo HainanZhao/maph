@@ -1,0 +1,187 @@
+{
+  "artifact_id": "cycle-224-b061-shift-cohomology-v1",
+  "budget_ordinal": "B061",
+  "claim_boundary": "For the frozen two signed shifts and Cycle-223 residuals, the minimal exponential family has the unique solution D=exp(pi*i*tilde-u_-), and its cocycle is integrable on the commuting shift lattice. Applied without alteration to the four frozen parity-normalized products, it makes each raw reflection product equal -1 rather than 1. This is a newly constructed containment result, not a source-defined signed Gamma_M normalization. It does not rule out a distinct reflection-normalized constant or other factor, and proves no factorization, packet cocycle, AFK covariance, fusion, Stark, or TCC statement.",
+  "combined_boundary_audit": {
+    "double_sign_involutivity": "not_accepted_after_failed_reflection",
+    "epistemic_status": "PROVED",
+    "factorization_16_17": "not_reached_after_failed_reflection",
+    "joint_shift_system": "passed",
+    "raw_reflection": "failed",
+    "reason": "No frozen candidate survives the required reflection identity, so later identities cannot certify this combined construction as a signed extension."
+  },
+  "combined_reflection_audit": {
+    "all_match": false,
+    "candidate_count": 4,
+    "conclusion": "The unique shift-integrable cochain makes every frozen parity-normalized candidate fail raw reflection by the exact sign -1.",
+    "epistemic_status": "PROVED",
+    "rows": [
+      {
+        "D_product": "exp(-pi*i*tilde-tau)",
+        "combined_reflection_product": -1,
+        "epsilon": -1,
+        "lambda_product": 1,
+        "matches_required_one": false,
+        "pochhammer_product": "4*exp(pi*i*tilde-tau)*sin(pi*u)*sin(pi*(u+tilde-tau))",
+        "positive_gamma_product": "-1/(4*sin(pi*u)*sin(pi*(u+tilde-tau)))",
+        "raw_reflection": "(mu,m,u)->(Q-mu,4-m,-u-tilde-tau-24)",
+        "sigma": -1
+      },
+      {
+        "D_product": "exp(-pi*i*tilde-tau)",
+        "combined_reflection_product": -1,
+        "epsilon": 1,
+        "lambda_product": 1,
+        "matches_required_one": false,
+        "pochhammer_product": "4*exp(pi*i*tilde-tau)*sin(pi*u)*sin(pi*(u+tilde-tau))",
+        "positive_gamma_product": "-1/(4*sin(pi*u)*sin(pi*(u+tilde-tau)))",
+        "raw_reflection": "(mu,m,u)->(Q-mu,4-m,-u-tilde-tau-24)",
+        "sigma": -1
+      },
+      {
+        "D_product": "exp(-pi*i*tilde-tau)",
+        "combined_reflection_product": -1,
+        "epsilon": -1,
+        "lambda_product": 1,
+        "matches_required_one": false,
+        "pochhammer_product": "4*exp(pi*i*tilde-tau)*sin(pi*u)*sin(pi*(u+tilde-tau))",
+        "positive_gamma_product": "-1/(4*sin(pi*u)*sin(pi*(u+tilde-tau)))",
+        "raw_reflection": "(mu,m,u)->(Q-mu,4-m,-u-tilde-tau-24)",
+        "sigma": 1
+      },
+      {
+        "D_product": "exp(-pi*i*tilde-tau)",
+        "combined_reflection_product": -1,
+        "epsilon": 1,
+        "lambda_product": 1,
+        "matches_required_one": false,
+        "pochhammer_product": "4*exp(pi*i*tilde-tau)*sin(pi*u)*sin(pi*(u+tilde-tau))",
+        "positive_gamma_product": "-1/(4*sin(pi*u)*sin(pi*(u+tilde-tau)))",
+        "raw_reflection": "(mu,m,u)->(Q-mu,4-m,-u-tilde-tau-24)",
+        "sigma": 1
+      }
+    ],
+    "scope": "The frozen constants epsilon=+/-1 were fixed before this cochain calculation. Changing them or adding another factor is a distinct construction, not a repair of this one."
+  },
+  "commutator_audit": {
+    "T1_then_T2": "rho1(T2*u)*rho2(u)=exp(-pi*i*tilde-tau)",
+    "T2_then_T1": "rho2(T1*u)*rho1(u)=exp(-pi*i*tilde-tau)",
+    "conclusion": "The unique minimal exponential cochain is a well-defined multiplicative cocycle on the commuting signed-shift lattice.",
+    "epistemic_status": "PROVED",
+    "integrable": true
+  },
+  "companion_decision": {
+    "adopted": true,
+    "evidence_scope_review": "The D uniqueness, both shift residuals, commutator cell, raw-reflection action, Pochhammer/Gamma reduction, parity product, and all-four-candidate total sign were reviewed together.",
+    "falsifier": "Any D uniqueness, shift/commutator, raw-reflection action, Pochhammer/Gamma factor, parity product, all-four-candidate, or total-sign discrepancy invalidates the seal.",
+    "identity": "/root/decision_companion_2",
+    "known_flaw": "The residual -1 may be removed by a newly preregistered normalization c with c^2=-1; the current result excludes neither that branch nor a changed signed state.",
+    "next_action": "Open a new cycle freezing exactly the two reflection-forced constants c=+/-i derived from c^2=-1, then retest both shifts, reflection, double-sign involutivity\u2014including whether sign reversal conjugates c\u2014and equations (16)--(17) before any packet use.",
+    "reason": "The frozen epsilon=+/-1 branch is exhausted; c=+/-i is a distinct reflection-normalized construction.",
+    "recommendation": "Seal amended C224/B061 as PROVED only for reflection failure of the frozen epsilon=+/-1 Pochhammer-times-parity-times-D construction."
+  },
+  "cycle": 224,
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "preregistration": {
+      "path": "docs/cycle-224-b061-shift-cohomology-preregistration-v1.md",
+      "sha256": "5eb57b4dea81efdb3f198f34760b2dc5560f09fa09eb75a35036b03031619878"
+    },
+    "prior_cocycle_replay": {
+      "path": "proof/verify_cycle_222_z_label_cocycle.py",
+      "sha256": "a9400fb73f1c4dc456727735a6498c300f1762992625e61b4075dae20caf0d52"
+    },
+    "prior_explicit_product": {
+      "path": "artifacts/cycle-223-b060-explicit-signed-product-v1.json",
+      "sha256": "a54c11b4b12530480d449f5a9ae75106d8e1b17f94f2eba4aedfc6fef07db5f1"
+    },
+    "prior_product_replay": {
+      "path": "proof/verify_cycle_223_explicit_signed_product.py",
+      "sha256": "817b49c05b84ded6f55650d6717349f8ad2b6ea2fc3588919dd14f2578ecc6bb"
+    },
+    "prototype": {
+      "path": "discovery/cycle-224-b061-shift-cohomology-prototype-v1.json",
+      "sha256": "9ac751ac5f734748537145d53b26e4a7838625974d697613e4410f1faecdd962"
+    },
+    "regression_test": {
+      "path": "tests/test_cycle_224_shift_cohomology.py",
+      "sha256": "981f9d260422383e8ceb7adcfc3f71cfe40d34f947255a2aa8699fe83159bbf6"
+    },
+    "replay": {
+      "path": "proof/verify_cycle_224_shift_cohomology.py",
+      "sha256": "14f5ee54d596e2775e9671fbd13fc2053b18af863d28552de8b21da5de2035aa"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    },
+    "source_audit": {
+      "path": "scripts/dimension_six_ss_evaluation_audit.py",
+      "sha256": "24c9258e46a1233c552017f3b58de0d45acd0197c8c807579f090ca1332f626f"
+    },
+    "source_paper": {
+      "path": "paper/sic-stark-dimension-six-boundary-fusion.tex",
+      "sha256": "347228e05a87946ca41bb31c118aae069b7fb6002fff4933d030a153cef21cb7"
+    },
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "gate_outcome": {
+    "frozen_combined_signed_product": "FALSIFIED_BY_RAW_REFLECTION",
+    "minimal_joint_shift_cochain": "PROVED_UNIQUE_AND_INTEGRABLE",
+    "remaining_design_problem": "Construct a distinct reflection-normalized state/factor system and solve its joint shifts before testing any factorization identity."
+  },
+  "minimal_exponential_solution_audit": {
+    "T1_check": "exp(-24*pi*i)=1",
+    "T1_ratio": "exp(-24*pi*i*a)",
+    "T2_check": "exp(-pi*i*tilde-tau)",
+    "T2_ratio": "exp(-pi*i*a*tilde-tau)",
+    "cochain": "D(u)=exp(pi*i*tilde-u_-)",
+    "epistemic_status": "PROVED",
+    "family": "D_a(u)=exp(pi*i*a*u)",
+    "solution": "a=1",
+    "uniqueness": "If exp(-pi*i*(a-1)*tilde-tau)=1 as a meromorphic identity on the variable period domain, then a=1. Thus the minimal exponential solution is unique."
+  },
+  "outcome": {
+    "epistemic_status": "PROVED",
+    "statement": "The unique minimal integrable shift cochain makes every frozen epsilon=+/-1 Pochhammer-times-parity product fail raw reflection by -1."
+  },
+  "preregistration_preflight": {
+    "cycle": 224,
+    "manifest_sha256": "5eb57b4dea81efdb3f198f34760b2dc5560f09fa09eb75a35036b03031619878",
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_224_shift_cohomology_v1.py --check",
+    "preflight_command": "research prereg check docs/cycle-224-b061-shift-cohomology-preregistration-v1.md --expected-cycle 224 --allow-head-drift",
+    "prototype_command": "python3 proof/verify_cycle_224_shift_cohomology.py --output discovery/cycle-224-b061-shift-cohomology-prototype-v1.json",
+    "test_command": "python3 -m unittest tests/test_cycle_224_shift_cohomology.py",
+    "write_command": "python3 proof/build_cycle_224_shift_cohomology_v1.py --write"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_224_shift_cohomology_v1.py",
+    "sha256": "a2dfb25f6ba474ea8c3df72e3a342de3976d8807995316c41ee96711e7567408"
+  },
+  "shift_action_audit": {
+    "T1": "u -> u-24",
+    "T2": "u -> u-tilde-tau",
+    "commute": true,
+    "coordinate": "u=tilde-u_-",
+    "epistemic_status": "PROVED",
+    "residual_to_cancel": {
+      "T1": "1",
+      "T2": "exp(-pi*i*tilde-tau)"
+    }
+  },
+  "status": "SEALED_FROZEN_SHIFT_COHOMOLOGY_REFLECTION_FAILURE"
+}
