@@ -10,15 +10,14 @@
   scopes in dimensions 4, 5, 7, and 8. No dimension-six TCC identity,
   coefficient-to-ray map, fusion-continuity theorem, or boundary-limit theorem
   is proved. `CERTIFIED_NUMERICAL` packet growth is not a nonexistence theorem.
-- Current state: Cycle 193 proves source-derived Poincare/Poisson transport
-  of the sealed 18-dimensional `Z2`-graded fibre for Schwartz seeds, without
-  scalarizing the `p=1` twist. Its `V` projection identifies six odd
-  `(N,N+12)` pairs, while the published raw beta amplitudes have distinct
-  divisors in every pair. This obstructs only fixed fibrewise complex-linear
-  `iota`-equivariant recovery of individual odd raw amplitudes. The next gate
-  is a renormalized meromorphic/distributional beta-kernel periodization with
-  principal-part or residue channels—not an AFK, boundary, fusion, or TCC
-  result.
+- Current state: Cycle 194 proves that the actual beta kernel forces the
+  Fourier-stable six-dimensional `B_(1,-)` anti-channel missing from the
+  minimal fibre. Its aliases have coincident-pole orbits, whose exact helical
+  residue recurrence converges absolutely and is non-identically-zero in a
+  strict interior asymptotic sector. The next gate is a source-derived
+  distributional or contour continuation to the real-multiplication endpoint,
+  with exact pole-crossing and residue-jump rules—not an AFK, boundary,
+  fusion, or TCC result.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -241,6 +240,16 @@
   domain, so no periodized beta identity, AFK value, boundary, fusion, or TCC
   result follows. See
   `artifacts/cycle-193-b030-helical-theta-amplitude-v1.json`.
+- `PROVED`: Cycle 194 proves that the physical two-gamma beta kernel has a
+  nonzero simple odd-antisymmetric principal part in every canonical
+  `(N,N+12)` pair, forcing the `B_(1,-)` complement and completing the
+  source fibre to dimension 24. Helical aliases collide at poles, so
+  termwise residues are invalid; the exact `H_+` recurrence has strict
+  interior root decay and an absolutely convergent, non-identically-zero
+  residue orbit in an asymptotic sector. It proves neither all-point
+  nonvanishing, endpoint continuation, AFK identification, a boundary value,
+  fusion, nor TCC. See
+  `artifacts/cycle-194-b031-meromorphic-anti-channel-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -323,7 +332,9 @@ Budget B001--B200
   |    |                                                                                                                                                               `-- finite metaplectic AFK intertwiner [OBSTRUCTED: polarization exponent]
   |    |                                                                                                                                                                    `-- continuous graded Schwartz theta transport [SEALED]
   |    |                                                                                                                                                                         `-- fibrewise iota-equivariant odd raw-amplitude recovery [OBSTRUCTED]
-  |    |                                                                                                                                                                              `-- meromorphic/distributional Poincare periodization with residue channels [NEXT GATE]
+  |    |                                                                                                                                                                              `-- source-forced B_(1,-) meromorphic anti-channel [SEALED]
+  |    |                                                                                                                                                                                   `-- strict-interior coincident-pole residue orbit [SEALED]
+  |    |                                                                                                                                                                                        `-- endpoint distributional/contour continuation [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -368,18 +379,18 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 194 decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `SCHWARTZ_THETA_TRANSPORT_PROVED_V_FIBREWISE_IOTA_EQUIVARIANT_ODD_RAW_AMPLITUDE_RECOVERY_OBSTRUCTED_MEROMORPHIC_PERIODIZATION_OR_LARGER_FIBRE_REQUIRED` | Define a source-derived renormalized meromorphic/distributional Poincare periodization of the beta kernel, including fixed principal-part and residue channels, then test whether it restores the lost odd antisymmetric amplitudes without a fitted AFK map. | Calling Schwartz-seed transport beta-kernel periodization; calling raw `R_N` an AFK value or completed alias; adding `B_(1,-)` without a source construction; breaking `iota` symmetry with fitted entries or row dependence; discarding capital `Gamma_M` normalization or AFK phase; using `s,d`, selected exponents, or ray labels. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 195 endpoint-continuation decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `SOURCE_FORCED_24D_MEROMORPHIC_ANTI_CHANNEL_PROVED_STRICT_INTERIOR_RESIDUE_ORBIT_CONVERGENT_ENDPOINT_DISTRIBUTIONAL_OR_CONTOUR_CONTINUATION_REQUIRED` | Define one source-derived distributional or contour continuation of the completed 24D meromorphic channel to the real-multiplication endpoint, with frozen pole-crossing and residue-jump rules, then test anti-channel preservation before any AFK identification. | Calling sectorial interior nonvanishing all-point nonvanishing; calling strict-interior convergence endpoint continuation; identifying a raw/periodized channel with an AFK value or completed alias; fitting a residue, transfer entry, or counterterm; discarding capital `Gamma_M` normalization or AFK phase; using `s,d`, selected exponents, or ray labels. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Can a source-derived renormalized meromorphic/distributional Poincare
-  periodization of the beta kernel define the missing principal-part/residue
-  channels and recover the odd antisymmetric amplitudes lost by the minimal
-  `V` fibre?
+- Can the completed 24-dimensional source-forced meromorphic channel be
+  continued to the real-multiplication endpoint as a distribution or
+  contour-controlled finite part, with all pole crossings and residue jumps
+  fixed before evaluating any AFK comparison?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -388,31 +399,30 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 194
+## Next goal: Cycle 195
 
 Preregister one substantive block with this question:
 
-> Can one source-derived renormalized meromorphic/distributional Poincare
-> periodization of the published beta kernel, with fixed principal-part and
-> residue channels, extend the Cycle-193 theta transport and restore the odd
-> antisymmetric raw-amplitude information without a fitted AFK map, selected
-> exponents, `s`, `d`, or ray labels?
+> Can one source-derived distributional or contour continuation of the
+> completed 24-dimensional meromorphic beta channel reach the
+> real-multiplication endpoint while preserving its six anti residues, under
+> fixed pole-crossing and residue-jump rules and without a fitted AFK map,
+> selected exponents, `s`, `d`, or ray labels?
 
-Cycle 194 must freeze the meromorphic/distributional state space, the exact
-regularization and principal-part/residue channel rule, a convergence or
-continuation criterion, and the source-derived action on the six lost odd
-directions before executable work. It must retain capital `Gamma_M`
-normalization and the AFK phase separately. It must not call a formal theta
-series a kernel periodization, identify raw `R_N` values with AFK cocycles or
-completed aliases, add `B_(1,-)` ad hoc, fit transfer entries, use selected
-exponents, `s,d`, or ray labels, or claim an RM-boundary, Stark/fusion/TCC
-consequence before exact amplitude matching.
+Cycle 195 must freeze one continuation state space, a contour/distribution
+rule, all candidate pole-crossing loci, residue-jump signs, and a strict
+endpoint acceptance criterion before executable work. It must retain capital
+`Gamma_M` normalization and the AFK phase separately. It must not infer an
+endpoint value from strict-interior convergence, call a raw/periodized channel
+an AFK cocycle or completed alias, fit a counterterm, use selected exponents,
+`s,d`, or ray labels, or claim an RM-boundary, Stark/fusion/TCC consequence
+before exact amplitude matching.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 193
+research cycle 194
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_193_helical_theta_amplitude_v1.py --check
+python3 proof/build_cycle_194_meromorphic_anti_channel_v1.py --check
 ```
