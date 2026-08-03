@@ -112,7 +112,10 @@
   remains the next distinct completion engine. Cycle 234 proves that product
   repeats one nonconstant normalized factor under the actual simultaneous
   source scaling and cannot converge to a nonzero cochain. The residual must
-  next be retained as loop holonomy rather than scalar-trivialized.
+  next be retained as loop holonomy rather than scalar-trivialized. Cycle 235
+  constructs that formal central A/C extension and proves its frozen residuals
+  still admit no source reflection functor. The next engine must retain their
+  ordered words and test reversed/inverted-word dualization directly.
   No endpoint binomial value has been
   evaluated. No divergent raw contour, periodized beta channel, AFK amplitude
   identity, fusion, or TCC is proved.
@@ -730,17 +733,16 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 235 meromorphic-holonomy extension decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `SOURCE_SCALE_ITERATION_OBSTRUCTED` | Construct a meromorphic central extension of the augmented transport groupoid that retains `F3^2` residual loop holonomy, then test associativity, A/C, and reflection compatibility. | Calling a nonconvergent scalar product a cochain; quotienting residual holonomy without a source law; or inferring a signed extension. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 236 ordered-word dualization decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `CENTRAL_HOLONOMY_REFLECTION_CONTAINED` | Construct a noncentral ordered-residual-word extension and test whether source reflection is reversed/inverted-word dualization compatible with A/C loop holonomy. | Treating free central associativity as a Gamma_M interface; fitting a reflection partner; or inferring a signed extension. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Can the residual ordinary-gamma word be retained as meromorphic loop
-  holonomy in an associative central extension compatible with A/C and
-  reflection data?
+- Does source reflection define a reversed/inverted-word dualization on a
+  noncentral ordered-residual extension compatible with A/C holonomy?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -749,15 +751,15 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 235 / B072
+## Next goal: Cycle 236 / B073
 
 Preregister one substantive block with this question:
 
-> Does an associative meromorphic central extension retain the frozen
-> `F3^2` residual as loop holonomy?
+> Does a noncentral ordered-residual-word extension admit source reflection
+> as a reversed/inverted-word dualization?
 
-Cycle 235 must freeze the groupoid state space, central coefficient sheaf,
-composition law, residual generator, and associativity/A/C/reflection tests
+Cycle 236 must freeze the ordered-word coefficient category, dualization
+operation, source reflection rule, and A/C loop compatibility tests
 before executable work. It must keep the AFK phase separate, forbid fitted
 quotients, and not claim an AFK, fusion, Stark, or TCC consequence.
 
@@ -765,7 +767,7 @@ quotients, and not claim an AFK, fusion, Stark, or TCC consequence.
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 234
+research cycle 235
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_234_scale_iterated_cochain_v1.py --check
+python3 proof/build_cycle_235_meromorphic_loop_holonomy_v1.py --check
 ```
