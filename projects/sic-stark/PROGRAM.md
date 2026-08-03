@@ -188,7 +188,13 @@
   it defines only a disconnected product chamber. Neither that rule nor the
   checked source supplies an overlapping chart, integral bridge, or
   path-independence theorem across `|q|=1`; the required source continuation
-  therefore remains unproved and factor/jet comparison was not authorized.
+  therefore remained unproved in that block. Cycle 253 supplies the missing
+  analytic theorem: Stokman's hyperbolic-gamma continuation makes the C252
+  formula path-independent on a fixed slit period domain. It nevertheless
+  misses all eight opposite A/C targets, because the continued beta-shift
+  quotient is `1-X^(-1)` while the target quotient is `1-X`. The mismatch is
+  nonconstant, so the uncorrected direct cross-sign map is falsified before
+  jet comparison.
   No endpoint binomial value has been
   evaluated. No divergent raw contour, periodized beta channel, AFK amplitude
   identity, fusion, or TCC is proved.
@@ -798,7 +804,7 @@ B091 without A_CLOSED -> C_FROZEN + STATUS.md handoff + stop
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
 | Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Derive and preregister a genuinely new cross-sign law or enlarged-cover construction before opening a new counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `RECIPROCAL_BASE_RULE_NOT_SOURCE_CONTINUATION` | Construct or refute one direct meromorphic/integral signed-period continuation preserving periods, argument, label, and residual/divisor state before B-Fourier covariance. | Treating a disconnected product formula or formal shifts as analytic continuation, fitting a modular correction, or inferring a source identity. |
+| D6 interface | `CONTINUATION_PROVED_DIRECT_TARGET_FALSIFIED` | In C254, independently replay the continuation/target mismatch and audit whether any already sourced nonconstant transition operator survives the frozen record. | Fitting the quotient of continued and target factors, opening another speculative engine, or extending the terminal budget. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `DEFERRED_AT_CLOSEOUT` | Resume only as a separate future project after an explicit new authorization. | Spending the final three SIC--Stark blocks on broad correlation mining. |
@@ -816,15 +822,16 @@ B091 without A_CLOSED -> C_FROZEN + STATUS.md handoff + stop
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: formulate Cycle 253 / B090
+## Next goal: formulate Cycle 254 / B091
 
-Construct and test one direct meromorphic/integral continuation of the
-ordinary hyperbolic gamma from C249's positive chamber to C251's
-negative-alpha states. Freeze one primary theorem or one explicit contour,
-its period domain, pole separation, branch, normalization, and monodromy.
-Only after those hypotheses pass may it be lifted across all eight factors and
-the C250 degree-zero through three jets. Reject on the first failed source
-hypothesis; do not substitute another product convention inside the cycle.
+Independently replay C253's theorem hypotheses, normalization, slit-domain
+continuation, and all-eight nonconstant target mismatch. Audit the already
+frozen source identities for a previously derived nonconstant transition
+operator with the exact required shift quotient; do not invent or fit a new
+one. If none survives, seal `C_FROZEN`, generate the minimal `STATUS.md`
+handoff pointing to this program, the terminal artifact, and exact recovery
+commands, and stop the project. If one survives, run the complete downstream
+proof replay and record `A_CLOSED` only if dimension-six TCC actually closes.
 
 Any future representation assessment must preserve C246/C247's scopes, freeze
 both source bases when relevant, a full state invariant, exact source formulas,
@@ -836,7 +843,7 @@ Stark, and TCC consequences explicitly out of scope.
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 252
+research cycle 253
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_252_reciprocal_negative_alpha_v1.py --check
+python3 proof/build_cycle_253_direct_hyperbolic_continuation_v1.py --check
 ```

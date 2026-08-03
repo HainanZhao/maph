@@ -1,0 +1,239 @@
+{
+  "artifact_id": "cycle-253-b090-direct-hyperbolic-continuation-v1",
+  "audit": {
+    "claim_boundary": "This proves existence of the theorem-backed ordinary-gamma continuation and excludes only its uncorrected identification with the eight C251 A/C targets. It does not exclude a separately sourced nonconstant transition operator, a full Gamma_M theorem, AFK identity, fusion theorem, Stark claim, or dimension-six TCC.",
+    "conclusion": "Stokman's theorem repairs C252's analytic defect: the reciprocal formula is the path-independent continuation of the source normalization on the fixed slit domain. However, that continuation does not land in any of the eight declared opposite A/C factors. Their beta-shift quotients differ nonconstantly, so the uncorrected direct signed-period bridge fails before jet comparison.",
+    "epistemic_status": "PROVED",
+    "status": "DIRECT_CONTINUATION_EXISTS_BUT_UNCORRECTED_TARGET_MAP_FALSIFIED",
+    "target_test": {
+      "all_eight_continuations_exist_at_both_embeddings": true,
+      "all_eight_target_maps_fail_by_nonconstant_shift_quotient": true,
+      "degree_0_to_3_jets_compared": false,
+      "rows": [
+        {
+          "X": "exp(2*pi*i*argument/target_alpha)",
+          "X_nonconstant": true,
+          "argument_slope": "1/24",
+          "continued_beta_shift": "1-X^-1",
+          "continued_factor_equals_target": false,
+          "continued_tau_h_half_plane": "lower",
+          "shift_quotients_equal": false,
+          "slit_domain_hypothesis_both_embeddings": true,
+          "source_factor": "A1",
+          "source_tau_h_half_plane": "upper",
+          "target_beta_shift": "1-X",
+          "target_factor": "C1"
+        },
+        {
+          "X": "exp(2*pi*i*argument/target_alpha)",
+          "X_nonconstant": true,
+          "argument_slope": "1/24",
+          "continued_beta_shift": "1-X^-1",
+          "continued_factor_equals_target": false,
+          "continued_tau_h_half_plane": "lower",
+          "shift_quotients_equal": false,
+          "slit_domain_hypothesis_both_embeddings": true,
+          "source_factor": "A2",
+          "source_tau_h_half_plane": "upper",
+          "target_beta_shift": "1-X",
+          "target_factor": "C2"
+        },
+        {
+          "X": "exp(2*pi*i*argument/target_alpha)",
+          "X_nonconstant": true,
+          "argument_slope": "1",
+          "continued_beta_shift": "1-X^-1",
+          "continued_factor_equals_target": false,
+          "continued_tau_h_half_plane": "lower",
+          "shift_quotients_equal": false,
+          "slit_domain_hypothesis_both_embeddings": true,
+          "source_factor": "A3",
+          "source_tau_h_half_plane": "upper",
+          "target_beta_shift": "1-X",
+          "target_factor": "C3"
+        },
+        {
+          "X": "exp(2*pi*i*argument/target_alpha)",
+          "X_nonconstant": true,
+          "argument_slope": "1",
+          "continued_beta_shift": "1-X^-1",
+          "continued_factor_equals_target": false,
+          "continued_tau_h_half_plane": "lower",
+          "shift_quotients_equal": false,
+          "slit_domain_hypothesis_both_embeddings": true,
+          "source_factor": "A4",
+          "source_tau_h_half_plane": "upper",
+          "target_beta_shift": "1-X",
+          "target_factor": "C4"
+        },
+        {
+          "X": "exp(2*pi*i*argument/target_alpha)",
+          "X_nonconstant": true,
+          "argument_slope": "1/24",
+          "continued_beta_shift": "1-X^-1",
+          "continued_factor_equals_target": false,
+          "continued_tau_h_half_plane": "lower",
+          "shift_quotients_equal": false,
+          "slit_domain_hypothesis_both_embeddings": true,
+          "source_factor": "C1",
+          "source_tau_h_half_plane": "upper",
+          "target_beta_shift": "1-X",
+          "target_factor": "A1"
+        },
+        {
+          "X": "exp(2*pi*i*argument/target_alpha)",
+          "X_nonconstant": true,
+          "argument_slope": "1/24",
+          "continued_beta_shift": "1-X^-1",
+          "continued_factor_equals_target": false,
+          "continued_tau_h_half_plane": "lower",
+          "shift_quotients_equal": false,
+          "slit_domain_hypothesis_both_embeddings": true,
+          "source_factor": "C2",
+          "source_tau_h_half_plane": "upper",
+          "target_beta_shift": "1-X",
+          "target_factor": "A2"
+        },
+        {
+          "X": "exp(2*pi*i*argument/target_alpha)",
+          "X_nonconstant": true,
+          "argument_slope": "1",
+          "continued_beta_shift": "1-X^-1",
+          "continued_factor_equals_target": false,
+          "continued_tau_h_half_plane": "lower",
+          "shift_quotients_equal": false,
+          "slit_domain_hypothesis_both_embeddings": true,
+          "source_factor": "C3",
+          "source_tau_h_half_plane": "upper",
+          "target_beta_shift": "1-X",
+          "target_factor": "A3"
+        },
+        {
+          "X": "exp(2*pi*i*argument/target_alpha)",
+          "X_nonconstant": true,
+          "argument_slope": "1",
+          "continued_beta_shift": "1-X^-1",
+          "continued_factor_equals_target": false,
+          "continued_tau_h_half_plane": "lower",
+          "shift_quotients_equal": false,
+          "slit_domain_hypothesis_both_embeddings": true,
+          "source_factor": "C4",
+          "source_tau_h_half_plane": "upper",
+          "target_beta_shift": "1-X",
+          "target_factor": "A4"
+        }
+      ],
+      "stop_reason": "For every factor, continuation at (-alpha,beta) has beta-shift quotient 1-exp(-2*pi*i*argument/alpha), while the declared target at (alpha,beta) has 1-exp(2*pi*i*argument/alpha). Their ratio is nonconstant."
+    },
+    "theorem_audit": {
+      "epistemic_status": "PROVED",
+      "negative_alpha_endpoint": {
+        "derived_product": "gamma_cont(mu;-alpha,beta)=(q*exp(B*mu);q)_infinity/(exp(-A*mu);qtilde)_infinity",
+        "equals_C252_reciprocal_formula": true,
+        "now_source_authorized_by_theorem": true,
+        "period_symmetry_used": "Gamma_h(r',1;z)=Gamma_h(1,r';z)"
+      },
+      "normalization": {
+        "E": "exp(-pi*i*(r+1/r)/24)*exp(-pi*i*z_h^2/(2*r))",
+        "center": "z_h=-i*(x-(r+1)/2)",
+        "derivation": "Stokman Proposition 6.1 product, first on Re(r)>0 and Im(r)>0, then meromorphically on Im(r)>0",
+        "positive_chamber_identity": "gamma(mu;alpha,beta)=E/Gamma_h(r,1;z_h)",
+        "r": "alpha/beta",
+        "tau_h": "-1/r=-beta/alpha",
+        "x": "mu/beta"
+      },
+      "path": {
+        "both_avoid_slit": true,
+        "orientation_endpoint": "tau_h'=1/r=-tau_h in the lower half-plane",
+        "path_independent": true,
+        "reason": "single-valued meromorphic continuation on the simply connected slit domain",
+        "source": "tau_h=-1/r in the upper half-plane"
+      },
+      "primary_source": "J. V. Stokman, Hyperbolic beta integrals, Adv. Math. 190 (2005), Appendix, Proposition 6.1 and the continuation statement after equation (6.8)",
+      "source_domain": "tau_h in C minus R_{>=0}",
+      "source_domain_simply_connected": true
+    }
+  },
+  "budget_ordinal": "B090",
+  "claim_boundary": "This proves existence of the theorem-backed ordinary-gamma continuation and excludes only its uncorrected identification with the eight C251 A/C targets. It does not exclude a separately sourced nonconstant transition operator, a full Gamma_M theorem, AFK identity, fusion theorem, Stark claim, or dimension-six TCC.",
+  "cycle": 253,
+  "decision": {
+    "basis": "Stokman's theorem uniquely continues every factor on the slit domain, but every continued beta-shift quotient is 1-X^-1 while its target quotient is 1-X.",
+    "falsifier": "A failed Stokman hypothesis, normalization error, slit-domain obstruction, a constant equality of the two shift quotients, factor transcription error, or replay discrepancy.",
+    "known_flaw": "A separately sourced nonconstant transition operator or full rarefied Gamma_M theorem could alter the target comparison.",
+    "next_action": "C254/B091 independently replays the strongest continuation and target obstruction, audits whether any already sourced transition operator survives prior records, then closes TCC or freezes with the minimal handoff."
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "prereg": {
+      "path": "docs/cycle-253-b090-direct-hyperbolic-continuation-preregistration-v1.md",
+      "sha256": "83d272ee70455c12a71bc7a3baac6858159be61113f502d0d889218a72f85274"
+    },
+    "prior_c249": {
+      "path": "artifacts/cycle-249-b086-common-jet-chamber-v1.json",
+      "sha256": "fc0bca22598fa6519657a607bc93b24ba5948dd0657f3f4c726b8aafafacb35a"
+    },
+    "prior_c249_replay": {
+      "path": "proof/verify_cycle_249_common_jet_chamber.py",
+      "sha256": "a2d154cc8efed0db3db97d2ca7e0237ed1716ecf1cfadec57098bf3455f3b507"
+    },
+    "prior_c250": {
+      "path": "artifacts/cycle-250-b087-graded-f3-jet-representation-v1.json",
+      "sha256": "f22c8b305a6e49066c8f77ab305bf3e29b621ddfca75fcca086683c61947b9b7"
+    },
+    "prior_c250_replay": {
+      "path": "proof/verify_cycle_250_graded_f3_jet_representation.py",
+      "sha256": "0229ae1aa9948559c03478f74e1a6d405487c6f37bb842dbf18ce245989b6bc7"
+    },
+    "prior_c251": {
+      "path": "artifacts/cycle-251-b088-residue-dual-cross-sign-v1.json",
+      "sha256": "d965cc663bf3bb5ba09b904419d16b2dfe8df5df7335d5c0b734087fee37971d"
+    },
+    "prior_c251_replay": {
+      "path": "proof/verify_cycle_251_residue_dual_cross_sign.py",
+      "sha256": "3ed67005d33c68ee97f1a4e03e2e5d66578f8c31c4125e4f4b8d7de6456a33ae"
+    },
+    "prior_c252": {
+      "path": "artifacts/cycle-252-b089-reciprocal-negative-alpha-v1.json",
+      "sha256": "8af8806e58bf9ee283acb5fb046a18df20637265fdb298acc514fbf0d12c8f1e"
+    },
+    "prior_c252_replay": {
+      "path": "proof/verify_cycle_252_reciprocal_negative_alpha.py",
+      "sha256": "82852c699c2a37edb7ad97e133ffe63e807cb029f365de6b5a881e23de9ff0ab"
+    },
+    "replay": {
+      "path": "proof/verify_cycle_253_direct_hyperbolic_continuation.py",
+      "sha256": "04990c39feeb8f269f59a6dd857667a163491055614fa359f089da705a9307bf"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    },
+    "source_paper": {
+      "path": "paper/sic-stark-dimension-six-boundary-fusion.tex",
+      "sha256": "347228e05a87946ca41bb31c118aae069b7fb6002fff4933d030a153cef21cb7"
+    },
+    "test": {
+      "path": "tests/test_cycle_253_direct_hyperbolic_continuation.py",
+      "sha256": "595363425747cb2c7c3deaa2e8cd9d3b942abeea4caa5fd9681684c070cbfe65"
+    },
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_253_direct_hyperbolic_continuation_v1.py",
+    "sha256": "48e9871e5718ce065cbd05b09991256298beeafe21104a9962d67e0ab95ded08"
+  },
+  "source_scope": {
+    "sarkissian_spiridonov": "arXiv:1910.11747v4, equation (13)",
+    "stokman": "Hyperbolic beta integrals, Adv. Math. 190 (2005), Appendix, Proposition 6.1 and continuation after equation (6.8)"
+  },
+  "status": "SEALED_DIRECT_CONTINUATION_EXISTS_UNCORRECTED_TARGET_MAP_FALSIFIED"
+}
