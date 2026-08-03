@@ -10,13 +10,12 @@
   scopes in dimensions 4, 5, 7, and 8. No dimension-six TCC identity,
   coefficient-to-ray map, fusion-continuity theorem, or boundary-limit theorem
   is proved. `CERTIFIED_NUMERICAL` packet growth is not a nonexistence theorem.
-- Current state: Cycle 195 combines every corrected finite true-pole orbit
-  by the published helical `Gamma_M` multiplier. All six `B_(1,-)` combined
-  residues have normalized q-adic constant coefficient one, hence are
-  nonzero meromorphic germs away from their retained divisor loci. The next
-  gate is a source-defined contour or distributional continuation of the
-  regular periodized channel to the real-multiplication endpoint while
-  preserving these finite jumps—not an AFK, boundary, fusion, or TCC result.
+- Current state: Cycle 196 proves that a fixed source central contour separates
+  both true-pole cones for all 24 kernel labels along the attracting endpoint
+  path. Its finite crossing count and six anti-residue jump vector are zero.
+  The sole remaining endpoint obstruction is vertical-tail control at
+  imaginary infinity; no Abel/distributional finite part, AFK, boundary,
+  fusion, or TCC result is proved.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -256,6 +255,12 @@
   meromorphic germs, not pointwise nonzero values or an endpoint
   periodization. See
   `artifacts/cycle-195-b032-finite-anti-residue-sum-v1.json`.
+- `PROVED`: Cycle 196 fixes the central contour
+  `Re(y)=Re(Q)/2` on the attracting segment, proves `Re(omega_1)>=55`,
+  and separates every source true-pole cone for all 24 labels. There are no
+  finite crossings and the six finite anti-residue jumps are all zero. This
+  does not control the divergent vertical tail at imaginary infinity. See
+  `artifacts/cycle-196-b033-endpoint-contour-geometry-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -341,7 +346,8 @@ Budget B001--B200
   |    |                                                                                                                                                                              `-- source-forced B_(1,-) meromorphic anti-channel [SEALED]
   |    |                                                                                                                                                                                   `-- finite true-pole collision orbits [SEALED CORRECTION: 42 summands]
   |    |                                                                                                                                                                                        `-- exact finite combined-residue rule [SEALED]
-  |    |                                                                                                                                                                                             `-- endpoint distributional/contour continuation [NEXT GATE]
+  |    |                                                                                                                                                                                             `-- finite-pole-free endpoint contour [SEALED]
+  |    |                                                                                                                                                                                                  `-- Abel/distributional vertical-tail control [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -386,18 +392,17 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 196 endpoint-continuation decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `SOURCE_FORCED_24D_FINITE_ANTI_RESIDUE_GERMS_PROVED_ENDPOINT_REGULAR_PART_CONTINUATION_REQUIRED` | Fix a source-derived contour or distributional path to the RM endpoint, decompose the periodized kernel into a controlled regular part plus the six finite residue jumps, and prove endpoint preservation before any AFK identification. | Calling a formal meromorphic germ pointwise nonzero; calling finite residue sums an endpoint continuation; fitting a residue, transfer entry, or counterterm; identifying a raw/periodized channel with an AFK value or completed alias; discarding capital `Gamma_M` normalization or AFK phase; using `s,d`, selected exponents, or ray labels. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 197 vertical-tail decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `FINITE_POLE_FREE_ENDPOINT_CONTOUR_PROVED_INFINITY_FINITE_PART_OR_DISTRIBUTIONAL_CONTROL_REQUIRED` | Freeze an Abel regulator and test-function space, then prove uniform vertical-tail bounds sufficient first for `T->infinity` and then for the endpoint limit, preserving the zero finite-jump vector. | Calling zero finite jumps endpoint continuation; calling a symmetric truncation its limit; fitting a regulator/counterterm; identifying a raw/periodized channel with an AFK value or completed alias; discarding capital `Gamma_M` normalization or AFK phase; using `s,d`, selected exponents, or ray labels. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Can the completed 24-dimensional source-forced meromorphic channel be
-  continued to the real-multiplication endpoint as a distribution or
-  contour-controlled finite part, with its six nonzero finite anti-residue
-  jumps fixed before evaluating any AFK comparison?
+- Can a source-fixed Abel/Fresnel or distributional rule control the regular
+  central-contour tail at imaginary infinity, first as `T->infinity` and then
+  as the real-multiplication endpoint is approached?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -406,30 +411,29 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 196
+## Next goal: Cycle 197
 
 Preregister one substantive block with this question:
 
-> Can one source-derived contour or distributional continuation of the
-> completed 24-dimensional meromorphic beta channel reach the
-> real-multiplication endpoint while preserving its six already nonzero finite
-> anti-residue jumps, under fixed pole-crossing and residue-jump rules and
-> without a fitted AFK map, selected exponents, `s`, `d`, or ray labels?
+> Can one source-fixed Abel/Fresnel regulator and test-function space give
+> a uniform vertical-tail bound for the central-contour regular part along the
+> attracting endpoint path, without a fitted counterterm, AFK map, selected
+> exponents, `s`, `d`, or ray labels?
 
-Cycle 196 must freeze one continuation state space, one contour/distribution
-rule, all candidate pole-crossing loci, finite residue-jump signs, and a
-strict endpoint acceptance criterion before executable work. It must retain
-capital `Gamma_M` normalization and the AFK phase separately. It must not
-infer an endpoint value from meromorphic nonidentity, call a raw/periodized
-channel an AFK cocycle or completed alias, fit a counterterm, use selected
-exponents, `s,d`, or ray labels, or claim an RM-boundary, Stark/fusion/TCC
-consequence before exact amplitude matching.
+Cycle 197 must freeze one Abel/Fresnel regulator, a test-function space, the
+central-contour truncation order, an exact tail criterion uniform on a pinned
+endpoint path, and a strict endpoint acceptance criterion before executable
+work. It must retain capital `Gamma_M` normalization and the AFK phase
+separately. It must not call a regulator source-proved merely by naming it,
+infer an endpoint value from finite-pole separation, fit a counterterm, use
+selected exponents, `s,d`, or ray labels, or claim an RM-boundary,
+Stark/fusion/TCC consequence before exact amplitude matching.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 195
+research cycle 196
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_195_finite_anti_residue_sum_v1.py --check
+python3 proof/build_cycle_196_endpoint_contour_geometry_v1.py --check
 ```
