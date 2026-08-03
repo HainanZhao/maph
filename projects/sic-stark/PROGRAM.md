@@ -165,8 +165,10 @@
   upper tilt `t_sigma+i`. This does not control `epsilon->0` or remove the
   C244 `lambda^N` ambiguity. Cycle 247 then proves that its frozen one-`q`
   tilt-cocycle premise fails: the A1/A4 and A2/A3 source multiplier bases are
-  distinct at every positive tilt. The next distinct engine must retain those
-  two bases and define an explicit multi-base transport or holonomy test.
+  distinct at every positive tilt. A proposed scalar multi-base lift is only
+  the C217 projective shadow and would hide its proved `576` period/argument,
+  label, and residual mismatch. The next distinct engine must instead build a
+  full affine signed-period-cover source state and transformation law.
   No endpoint binomial value has been
   evaluated. No divergent raw contour, periodized beta channel, AFK amplitude
   identity, fusion, or TCC is proved.
@@ -784,17 +786,17 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Formulate and preregister a companion-reviewed, distinct multi-base tilt-transport decision before opening Cycle 248/B085. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `SINGLE_Q_TILT_ENGINE_FALSIFIED` | Prove a source-derived two-/multi-base tilt transport/holonomy relation, or a scoped no-go preserving the C246/C247 boundaries, before B-Fourier covariance. | Collapsing distinct bases, treating one tilt as canonical, fitting a regulator, or inferring a source identity. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Formulate and preregister a companion-reviewed, distinct full-state signed-period-cover decision before opening Cycle 248/B085. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `SINGLE_Q_TILT_ENGINE_FALSIFIED` | Construct or refute a source-derived affine signed-period-cover transport preserving periods, argument, label, and residual/divisor state before B-Fourier covariance. | Scalarizing the C217 projective shadow, collapsing distinct bases, treating one tilt as canonical, fitting a regulator, or inferring a source identity. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Does the genuinely two-base A-word recurrence admit a source-derived tilt
-  transport or holonomy law that yields regulator-independent normalization or
-  a scoped no-go?
+- Can an affine signed-period-cover state
+  `(Omega_1,Omega_2; mu,m; label; residual divisor)` carry source-derived
+  arrows that resolve or precisely obstruct the C217 `576`-scale mismatch?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -806,14 +808,14 @@ than pretending fusion continuity is operational.
 ## Next goal: formulate Cycle 248 / B085
 
 Before opening another counted block, formulate one falsifiable, source-defined
-multi-base tilt-transport engine. It must retain the A1/A4 and A2/A3 bases,
-state a branch/transport law and a holonomy or Cauchy criterion, and receive
-companion review of that concrete engine and its alternative before
-preregistration.
+affine signed-period-cover engine. It must retain the oriented/scaled periods,
+affine argument, discrete label, and residual/divisor data; state exact
+permitted source arrows and a target-state criterion; and receive companion
+review of that construction and its alternative before preregistration.
 
 Any future Cycle 248 must preserve C246/C247's scopes, freeze both source
-bases, a concrete transport invariant, the tested tilt family, and an exact
-falsifier before executable work. It must keep source authorization,
+bases when relevant, a full state invariant, the exact source formulas, and an
+exact falsifier before executable work. It must keep source authorization,
 canonical-current promotion, AFK, mixed-base identity, fusion, Stark, and TCC
 consequences explicitly out of scope.
 
