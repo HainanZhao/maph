@@ -10,14 +10,15 @@
   scopes in dimensions 4, 5, 7, and 8. No dimension-six TCC identity,
   coefficient-to-ray map, fusion-continuity theorem, or boundary-limit theorem
   is proved. `CERTIFIED_NUMERICAL` packet growth is not a nonexistence theorem.
-- Current state: Cycle 192 / `B029` proves the source level-24 Fourier
-  component has a unique 18-dimensional three-block `Z2`-graded closure of
-  Cycle 191's forced blocks and exactly transports its non-scalar holonomy.
-  The all-36 AFK carrier has a distinct coefficient polarization: exponent
-  `12` versus `24` obstructs every finite Heisenberg-normalizer/metaplectic
-  intertwiner. The next gate is a genuinely continuous, polarization-changing
-  Zak/theta lift with a proved function-space and amplitude action—not a
-  boundary or TCC result.
+- Current state: Cycle 193 proves source-derived Poincare/Poisson transport
+  of the sealed 18-dimensional `Z2`-graded fibre for Schwartz seeds, without
+  scalarizing the `p=1` twist. Its `V` projection identifies six odd
+  `(N,N+12)` pairs, while the published raw beta amplitudes have distinct
+  divisors in every pair. This obstructs only fixed fibrewise complex-linear
+  `iota`-equivariant recovery of individual odd raw amplitudes. The next gate
+  is a renormalized meromorphic/distributional beta-kernel periodization with
+  principal-part or residue channels—not an AFK, boundary, fusion, or TCC
+  result.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -30,10 +31,10 @@
 ## Budget, accounting, and stop condition
 
 - Total forward budget: 200 substantive research cycles, counted `B001/200`
-  through `B200/200`; the counter is currently `B028/200`.
-- Cycle 184 is `B022`. Repository cycle numbers and budget ordinals advance
-  together unless a non-counted record intervenes; the budget ordinal is the
-  authoritative campaign counter.
+  through `B200/200`.
+- The sealed artifact filename and payload carry the authoritative budget
+  ordinal; do not duplicate a live counter here. Repository cycle numbers and
+  budget ordinals can differ when a non-counted record intervenes.
 - A cycle counts only when it is a preregistered substantive research block
   with a genuine bound, construction, theorem, counterexample, or scoped
   obstruction decision. Workflow repair, indexing, and archive-only records do
@@ -229,6 +230,17 @@
   not prove continuous preservation, amplitude matching, an RM boundary,
   fusion, or TCC. See
   `artifacts/cycle-192-graded-fourier-polarization-v1.json`.
+- `PROVED`: Cycle 193 turns that finite closure into a source-derived
+  Schwartz-seed helical theta class and proves exact continuous-discrete
+  Fourier/Poincare transport to its dual theta distributions. Its `V`
+  projection loses the six odd antisymmetric `(N,N+12)` directions; the
+  published raw beta amplitudes have distinct divisors in all twelve pairs.
+  Therefore no fixed fibrewise complex-linear `iota`-equivariant operator on
+  this projected fibre can recover individual odd raw amplitudes, affecting
+  18 characteristics. The meromorphic kernel is not in the proved Schwartz
+  domain, so no periodized beta identity, AFK value, boundary, fusion, or TCC
+  result follows. See
+  `artifacts/cycle-193-b030-helical-theta-amplitude-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -309,7 +321,9 @@ Budget B001--B200
   |    |                                                                                                                                                     `-- scalar block completion [OBSTRUCTED]
   |    |                                                                                                                                                          `-- Z2-graded beta-Fourier closure [SEALED: 18D]
   |    |                                                                                                                                                               `-- finite metaplectic AFK intertwiner [OBSTRUCTED: polarization exponent]
-  |    |                                                                                                                                                                    `-- continuous polarization-changing Zak/theta lift [NEXT GATE]
+  |    |                                                                                                                                                                    `-- continuous graded Schwartz theta transport [SEALED]
+  |    |                                                                                                                                                                         `-- fibrewise iota-equivariant odd raw-amplitude recovery [OBSTRUCTED]
+  |    |                                                                                                                                                                              `-- meromorphic/distributional Poincare periodization with residue channels [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -354,18 +368,18 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `B029_OF_200` | Complete a companion-reviewed substantive Cycle 193/B030 continuous-lift decision before incrementing again. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `FINITE_GRADED_FOURIER_CLOSURE_PROVED_FINITE_METAPLECTIC_AFK_INTERTWINER_OBSTRUCTED_CONTINUOUS_POLARIZATION_CHANGING_OPERATOR_REQUIRED` | Define one source-derived continuous `Z2`-graded Zak/theta section space restricting to the sealed 18D closure, prove beta-transform preservation on that space, and test a non-finite polarization-changing all-36 amplitude intertwiner or a scoped obstruction before attempting the RM boundary. | Calling discrete closure continuous preservation; replacing the `p=1` boundary-twisted three-shift by a scalar; returning to a finite normalizer matrix; fitting a block/coefficient; discarding capital `Gamma_M` normalization or AFK phase; using `s,d`, selected exponents, or ray labels. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 194 decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `SCHWARTZ_THETA_TRANSPORT_PROVED_V_FIBREWISE_IOTA_EQUIVARIANT_ODD_RAW_AMPLITUDE_RECOVERY_OBSTRUCTED_MEROMORPHIC_PERIODIZATION_OR_LARGER_FIBRE_REQUIRED` | Define a source-derived renormalized meromorphic/distributional Poincare periodization of the beta kernel, including fixed principal-part and residue channels, then test whether it restores the lost odd antisymmetric amplitudes without a fitted AFK map. | Calling Schwartz-seed transport beta-kernel periodization; calling raw `R_N` an AFK value or completed alias; adding `B_(1,-)` without a source construction; breaking `iota` symmetry with fitted entries or row dependence; discarding capital `Gamma_M` normalization or AFK phase; using `s,d`, selected exponents, or ray labels. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Can a source-derived continuous `Z2`-graded Zak/theta section space have
-  the sealed 18-dimensional closure as its sampled restriction, preserve the
-  beta transform, and supply a genuinely polarization-changing all-36 AFK
-  amplitude intertwiner?
+- Can a source-derived renormalized meromorphic/distributional Poincare
+  periodization of the beta kernel define the missing principal-part/residue
+  channels and recover the odd antisymmetric amplitudes lost by the minimal
+  `V` fibre?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -374,33 +388,31 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 193 / `B030`
+## Next goal: Cycle 194
 
 Preregister one substantive block with this question:
 
-> Can one source-derived continuous `Z2`-graded Zak/theta lift, whose sampled
-> restriction is the sealed 18-dimensional Fourier closure, be shown to be
-> preserved by the beta transform and to supply a non-finite,
-> polarization-changing all-36 AFK amplitude intertwiner, or yield a scoped
-> obstruction for that declared continuous class, without `s`, `d`, selected
-> exponents, fitted characters, or ray labels?
+> Can one source-derived renormalized meromorphic/distributional Poincare
+> periodization of the published beta kernel, with fixed principal-part and
+> residue channels, extend the Cycle-193 theta transport and restore the odd
+> antisymmetric raw-amplitude information without a fitted AFK map, selected
+> exponents, `s`, `d`, or ray labels?
 
-Cycle 193 must freeze one explicit source-derived continuous section space and
-its Zak/theta boundary conditions, the exact beta-kernel domain and
-continuation/preservation criterion, the sealed 18D sampling map, and one
-non-finite polarization-changing AFK amplitude-intertwiner family with no
-fitted entries. It must retain capital `Gamma_M` normalization and the AFK
-phase separately and set a strict exact advance criterion before executable
-work. It must not call discrete closure continuous preservation, scalarize the
-`p=1` twisted three-shift, return to a finite normalizer map, fit transfer
-entries, select exponents, use `s,d` or ray labels, or claim an RM-boundary,
-Stark/fusion/TCC consequence before exact amplitude matching.
+Cycle 194 must freeze the meromorphic/distributional state space, the exact
+regularization and principal-part/residue channel rule, a convergence or
+continuation criterion, and the source-derived action on the six lost odd
+directions before executable work. It must retain capital `Gamma_M`
+normalization and the AFK phase separately. It must not call a formal theta
+series a kernel periodization, identify raw `R_N` values with AFK cocycles or
+completed aliases, add `B_(1,-)` ad hoc, fit transfer entries, use selected
+exponents, `s,d`, or ray labels, or claim an RM-boundary, Stark/fusion/TCC
+consequence before exact amplitude matching.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 192
+research cycle 193
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_192_graded_fourier_polarization_v1.py --check
+python3 proof/build_cycle_193_helical_theta_amplitude_v1.py --check
 ```
