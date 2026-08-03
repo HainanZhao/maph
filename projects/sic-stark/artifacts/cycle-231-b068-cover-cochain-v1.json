@@ -1,0 +1,89 @@
+{
+  "artifact_id": "cycle-231-b068-cover-cochain-v1",
+  "budget_ordinal": "B068",
+  "claim_boundary": "The formal principal-part scaling equation has no single-valued solution in the frozen quadratic-exponential cover ansatz. This does not exclude periodic-corrected, nonquadratic, essential, enlarged-action, full residual-gamma, AFK, fusion, Stark, or TCC constructions.",
+  "companion_decision": {
+    "adopted": true,
+    "evidence_scope_review": "The forced A*log(576)=-2 coefficient, every integer constant branch, and the nonzero deck w coefficient were reviewed; the formal principal-part scope is appropriate.",
+    "falsifier": "Any scaling-coefficient comparison, integer constant branch, deck-action formula, nonzero w coefficient, ansatz completeness claim, or replay discrepancy.",
+    "identity": "/root/decision_companion_2",
+    "known_flaw": "A log(576)-periodic correction, including multiplicative theta functions, is not covered.",
+    "next_action": "Open a forced multiplicative-theta engine with q=1/576; test its quasi-periodicity, full four-gamma residual quotient, reflection, and source normalization.",
+    "recommendation": "Seal C231 as the completed quadratic-exponential ansatz obstruction and open a new periodic-correction engine."
+  },
+  "cover_cochain_audit": {
+    "ansatz": "H(w)=exp(A*w^2+B*w+C)",
+    "coefficient_comparison": {
+      "a_times_log_576": "-2",
+      "deck_w_coefficient": "4*pi*i*A = -8*pi*i/log(576)",
+      "exact_deck_w_coefficient_in_units_pi_i_over_log_576": "-8",
+      "exact_scaling_w_coefficient": "-4",
+      "scaling_constant_mod_2pi_i": "A*log(576)^2 + B*log(576) = 2*pi*i*n",
+      "scaling_w_coefficient": "2*A*log(576) = -4"
+    },
+    "conclusion": "The frozen quadratic-exponential cover ansatz solves the formal scaling equation but cannot descend to a single-valued cochain. This obstructs only that ansatz, not other cover, essential, periodic-corrected, enlarged-action, AFK, fusion, Stark, or TCC constructions.",
+    "cover": {
+      "coordinate": "mu=exp(w)",
+      "deck": "w -> w + 2*pi*i",
+      "scaling": "w -> w + log(576)"
+    },
+    "descent": {
+      "deck_multiplier_is_constant": false,
+      "descends_single_valuedly": false,
+      "reason": "The nonzero deck w coefficient is forced by the order-four residual term for every integer n."
+    },
+    "epistemic_status": "PROVED",
+    "frozen_equation": "H(w+log(576))/H(w)=exp(-4*w)",
+    "reflection": {
+      "reason": "The freeze permits source reflection only for a single-valued descended cochain; it supplies no alternative lifted reflection.",
+      "source_reflection_test": "UNAVAILABLE_AFTER_DESCENT_FAILURE"
+    },
+    "solution_family": {
+      "A": "-2/log(576)",
+      "B": "2 + 2*pi*i*n/log(576), n in Z",
+      "C": "arbitrary complex constant"
+    }
+  },
+  "cycle": 231,
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "prereg": {
+      "path": "docs/cycle-231-b068-cover-cochain-preregistration-v1.md",
+      "sha256": "e1bb370a27cc4bf1b3108016cc55f688f45c89782379353218cbfb27d73b6215"
+    },
+    "prior": {
+      "path": "artifacts/cycle-230-b067-f3-square-divisor-coboundary-v1.json",
+      "sha256": "401b4842b018d0eecd3daaee28275fd3dd1398bc2f5cf3af3afd458f8e93cee0"
+    },
+    "prototype": {
+      "path": "discovery/cycle-231-b068-cover-cochain-prototype-v1.json",
+      "sha256": "4d96f4c88087e3c79f32f2eb8e617fa827788fe14844cca8ed26105ab33182c7"
+    },
+    "replay": {
+      "path": "proof/verify_cycle_231_cover_cochain.py",
+      "sha256": "81b903e273adcdcf54609f219759d41f3472c03551791815ceb57b2e649a4600"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    },
+    "test": {
+      "path": "tests/test_cycle_231_cover_cochain.py",
+      "sha256": "c5225431cd93da3a6cf9145c608d5ebf3f57a923707b615eb584e7fbb2cedf33"
+    },
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_231_cover_cochain_v1.py",
+    "sha256": "12be224033e310de0a6f54ecca410bc76706f66d8df1a54146633d54236823c9"
+  },
+  "status": "SEALED_QUADRATIC_COVER_COCHAIN_DESCENT_OBSTRUCTION"
+}
