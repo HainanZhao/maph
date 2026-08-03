@@ -1,0 +1,103 @@
+{
+  "artifact_id": "cycle-234-b071-scale-iterated-cochain-v1",
+  "budget_ordinal": "B071",
+  "claim_boundary": "The frozen simultaneous-source-scale product cannot define a nonzero meromorphic cochain. This excludes neither non-source mu-only or regularized products, meromorphic loop-holonomy extensions, nor any AFK, fusion, Stark, or TCC construction.",
+  "companion_decision": {
+    "adopted": true,
+    "evidence_scope_review": "S--S (14) scale invariance, the Laurent-coefficient homogeneity, normalized-residual invariance, C233 nonconstancy, and repeated-factor convergence failure were reviewed.",
+    "falsifier": "Any equation-(14) scaling law, Laurent order, c_A homogeneity, normalized scale invariance, nonconstancy dependency, product recurrence, or replay discrepancy.",
+    "identity": "/root/decision_companion_2",
+    "known_flaw": "Non-source, regularized, or loop-holonomy constructions remain.",
+    "next_action": "Construct a meromorphic central extension of the augmented groupoid and test cocycle/associativity, A/C, and reflection compatibility.",
+    "recommendation": "Seal C234 and build a meromorphic central extension retaining residual loop holonomy."
+  },
+  "cycle": 234,
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "prereg": {
+      "path": "docs/cycle-234-b071-scale-iterated-cochain-preregistration-v1.md",
+      "sha256": "f70581e6398c058f2bbe560ea2734fcc55c8f226904ec8437abd96906cfd48a4"
+    },
+    "prior": {
+      "path": "artifacts/cycle-233-b070-finite-linear-theta-v1.json",
+      "sha256": "ba2d9b43411ae6e59516995f56d772b82d5d6422694bf691deb2264a82d03e85"
+    },
+    "prototype": {
+      "path": "discovery/cycle-234-b071-scale-iterated-cochain-prototype-v1.json",
+      "sha256": "de6623f4945bad7de4059d6dbf810dda57b2a0668723535967559ec096c3819a"
+    },
+    "replay": {
+      "path": "proof/verify_cycle_234_scale_iterated_cochain.py",
+      "sha256": "a36ded283527b9f3b7d355abc22f300ad367ada32a355e34fc7ff08854da1184"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    },
+    "test": {
+      "path": "tests/test_cycle_234_scale_iterated_cochain.py",
+      "sha256": "e4368c6f407f25e26f66a539541fcfe5b2fc0108df9a6a9fdf9f764ae80c050c"
+    },
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "scale_iteration_audit": {
+    "conclusion": "The source-normalized scale-iterated product is not a convergent nonzero meromorphic cochain for the frozen simultaneous 576 action. This excludes neither mu-only non-source iterations, regularized products, nonlinear/multivariable completions, nor any signed extension, AFK, fusion, Stark, or TCC construction.",
+    "epistemic_status": "PROVED",
+    "full_divisor_reflection_normalization": {
+      "reason": "No nonzero meromorphic scale-iterated cochain exists in the frozen product order to carry those further tests.",
+      "status": "UNAVAILABLE_AFTER_CONVERGENCE_FAILURE"
+    },
+    "normalized_residual": {
+      "definition": "Rhat_A(mu,omega)=mu^4*R_A(mu,omega)/c_A(omega)",
+      "laurent_coefficient_homogeneity": "c_A(lambda*omega)=lambda^4*c_A(omega)",
+      "nonconstancy_witness": "C233 A residual has uncancelled nonzero hyperplanes mu=-omega1-(5+24*N)*omega2.",
+      "nonconstant": true,
+      "source_scale_invariant": true
+    },
+    "scale_iterated_product": {
+      "definition": "P_N(x)=product_{j=1}^N Rhat_A(S^(-j)*x)",
+      "exact_partial_product": "P_N(x)=Rhat_A(x)^N",
+      "factor_limit": "Rhat_A(x), not 1 generically",
+      "nonzero_meromorphic_product_converges_generically": false,
+      "reason": "The factors repeat under the simultaneous source scaling and fail the necessary term-to-one condition on the generic nonconstant locus.",
+      "status": "FALSIFIED_FOR_FROZEN_SOURCE_SCALE_ITERATION"
+    },
+    "source_scale": {
+      "action": "S(mu,omega1,omega2)=(576*mu,576*omega1,576*omega2)",
+      "epistemic_status": "PROVED",
+      "factor_rows": [
+        {
+          "ordinary_gamma_scale_invariant": true,
+          "position": 1
+        },
+        {
+          "ordinary_gamma_scale_invariant": true,
+          "position": 2
+        },
+        {
+          "ordinary_gamma_scale_invariant": true,
+          "position": 3
+        },
+        {
+          "ordinary_gamma_scale_invariant": true,
+          "position": 4
+        }
+      ],
+      "residual_scale_invariant": true,
+      "source_formula": "Sarkissian--Spiridonov (14): gamma(lambda*z;lambda*a,lambda*b)=gamma(z;a,b)"
+    }
+  },
+  "sealer": {
+    "path": "proof/build_cycle_234_scale_iterated_cochain_v1.py",
+    "sha256": "5408e9ae28f14c611a9b9f859205e1ff73517fee7667d26eea9e8e19ef124eff"
+  },
+  "status": "SEALED_SOURCE_SCALE_ITERATED_COCHAIN_CONVERGENCE_OBSTRUCTION"
+}

@@ -109,7 +109,10 @@
   Cycle 233 proves that the A residual already has infinitely many
   uncancelled projective period directions, excluding every finite
   linear-argument theta product. A source-normalized infinite scale product
-  remains the next distinct completion engine.
+  remains the next distinct completion engine. Cycle 234 proves that product
+  repeats one nonconstant normalized factor under the actual simultaneous
+  source scaling and cannot converge to a nonzero cochain. The residual must
+  next be retained as loop holonomy rather than scalar-trivialized.
   No endpoint binomial value has been
   evaluated. No divergent raw contour, periodized beta channel, AFK amplitude
   identity, fusion, or TCC is proved.
@@ -727,17 +730,17 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 234 scale-iterated cochain decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `FINITE_LINEAR_THETA_DIVISOR_OBSTRUCTED` | Normalize the full residual by its source Laurent coefficient, then construct or obstruct a convergent scale-iterated cochain before testing its full divisor, reflection, and source normalization. | Calling a formal or unproved-convergent product a cochain; ignoring its full divisor; or inferring a signed extension. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 235 meromorphic-holonomy extension decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `SOURCE_SCALE_ITERATION_OBSTRUCTED` | Construct a meromorphic central extension of the augmented transport groupoid that retains `F3^2` residual loop holonomy, then test associativity, A/C, and reflection compatibility. | Calling a nonconvergent scalar product a cochain; quotienting residual holonomy without a source law; or inferring a signed extension. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Does a source-normalized scale-iterated product of the full residual
-  converge and carry an admissible divisor, reflection, and source
-  normalization under the `576` action?
+- Can the residual ordinary-gamma word be retained as meromorphic loop
+  holonomy in an associative central extension compatible with A/C and
+  reflection data?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -746,23 +749,23 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 234 / B071
+## Next goal: Cycle 235 / B072
 
 Preregister one substantive block with this question:
 
-> Does a source-normalized scale-iterated full-residual product converge to
-> a cochain with the required divisor data?
+> Does an associative meromorphic central extension retain the frozen
+> `F3^2` residual as loop holonomy?
 
-Cycle 234 must freeze the residual normalization, product order, convergence
-domain, divisor criterion, and reflection/normalization acceptance ladder
+Cycle 235 must freeze the groupoid state space, central coefficient sheaf,
+composition law, residual generator, and associativity/A/C/reflection tests
 before executable work. It must keep the AFK phase separate, forbid fitted
-regularization, and not claim an AFK, fusion, Stark, or TCC consequence.
+quotients, and not claim an AFK, fusion, Stark, or TCC consequence.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 233
+research cycle 234
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_233_finite_linear_theta_v1.py --check
+python3 proof/build_cycle_234_scale_iterated_cochain_v1.py --check
 ```
