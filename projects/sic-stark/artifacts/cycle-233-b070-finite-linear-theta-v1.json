@@ -1,0 +1,109 @@
+{
+  "artifact_id": "cycle-233-b070-finite-linear-theta-v1",
+  "budget_ordinal": "B070",
+  "claim_boundary": "No finite q=1/576 theta product with linear period-dependent arguments absorbs the A residual. Nonlinear, multivariable, infinite, or other cochains and all AFK, fusion, Stark, and TCC claims remain open.",
+  "companion_decision": {
+    "adopted": true,
+    "evidence_scope_review": "The full A pole family, all four zero-lattice exclusions, projective-direction proof, and arbitrary-finite-family scope were reviewed.",
+    "falsifier": "Any residual pole family, all-factor zero-lattice solution, noncancellation, projective-direction distinctness, finite-theta direction bound, or replay discrepancy.",
+    "identity": "/root/decision_companion_2",
+    "known_flaw": "Nonlinear, multivariable, or canonically regularized infinite theta products remain.",
+    "next_action": "Normalize a scale-iterated residual cochain and test convergence, full divisor, reflection, and normalization.",
+    "recommendation": "Seal C233 and open scale-iterated cochain testing."
+  },
+  "cycle": 233,
+  "epistemic_status": "PROVED",
+  "finite_theta_audit": {
+    "completion": {
+      "finite_linear_theta_completion_exists": false,
+      "reason": "The uncancelled A residual pole family has infinitely many projective period directions, so it cannot be contained in the divisor of any finite linear-argument theta product.",
+      "status": "FALSIFIED_FOR_ENTIRE_FROZEN_FAMILY"
+    },
+    "conclusion": "No finite product of q=1/576 theta factors with linear period-dependent arguments can absorb the frozen A residual block. This leaves nonlinear, multivariable, or infinite theta completions and all AFK, fusion, Stark, and TCC claims open.",
+    "direction_invariant": {
+      "comparison": "infinite residual direction set versus finite theta direction set",
+      "finite_theta_product_directions": "finite",
+      "residual_direction": "[-1:-5-24*N]",
+      "residual_directions_pairwise_distinct": true,
+      "theta_factor_direction": "[ell_r] for all q^m divisor translates"
+    },
+    "epistemic_status": "PROVED",
+    "frozen_theta_family": "mu^a*product_{r=1}^Ntheta theta_q(mu/ell_r(omega1,omega2))^(e_r), with arbitrary finite N and linear ell_r",
+    "reflection_and_normalization": {
+      "reason": "A theta product that misses an infinite residual divisor family cannot enter reflection or source-normalization tests.",
+      "status": "UNAVAILABLE_AFTER_DIVISOR_OBSTRUCTION"
+    },
+    "residual_family": {
+      "epistemic_status": "PROVED",
+      "pole_family": "mu=-omega1-(5+24*N)*omega2 for every integer N>=0",
+      "pole_source": "A first residual factor, (j,n)=(1,N)",
+      "uncancelled_for_every_N_ge_0": true,
+      "zero_checks": [
+        {
+          "cancels_every_family_member": false,
+          "position": 1,
+          "zero_lattice_r": "-1",
+          "zero_lattice_s": "0-1*N"
+        },
+        {
+          "cancels_every_family_member": false,
+          "position": 2,
+          "zero_lattice_r": "-24-115*N",
+          "zero_lattice_s": "-5-24*N"
+        },
+        {
+          "cancels_every_family_member": false,
+          "position": 3,
+          "zero_lattice_r": "-24-115*N",
+          "zero_lattice_s": "-5-24*N"
+        },
+        {
+          "cancels_every_family_member": false,
+          "position": 4,
+          "zero_lattice_r": "-1",
+          "zero_lattice_s": "0-1*N"
+        }
+      ]
+    }
+  },
+  "frozen_hashes": {
+    "prereg": {
+      "path": "docs/cycle-233-b070-finite-linear-theta-preregistration-v1.md",
+      "sha256": "c520e58beeacb222fe1141060be1dd15b071f22982d3fb4086a17ceba35affa0"
+    },
+    "prior": {
+      "path": "artifacts/cycle-232-b069-multiplicative-theta-v1.json",
+      "sha256": "18ca8e8f87cc14708c17c596754cb2341366369300c57e336d665d54f01e27a9"
+    },
+    "prototype": {
+      "path": "discovery/cycle-233-b070-finite-linear-theta-prototype-v1.json",
+      "sha256": "f3a25f879dd6b7512c5e3b3d28da414ce112f46704cbc2e18f6fc1bbee2f9d75"
+    },
+    "replay": {
+      "path": "proof/verify_cycle_233_finite_linear_theta.py",
+      "sha256": "66d16070c6ef1c008c6bb6d7be4014b661705675c6900f40ee3fd9b2e1863b05"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    },
+    "test": {
+      "path": "tests/test_cycle_233_finite_linear_theta.py",
+      "sha256": "3f28ff9cc9bdcc002e75c9b209b6f71bac3477bddeea115cf7b7a19ca43f7226"
+    },
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_233_finite_linear_theta_v1.py",
+    "sha256": "5ba52f6678bab3e0ac030973883c13a9ddae4bdda2ab8c718b425faf5adc0b39"
+  },
+  "status": "SEALED_FINITE_LINEAR_THETA_DIVISOR_OBSTRUCTION"
+}
