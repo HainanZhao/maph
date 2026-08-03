@@ -10,13 +10,13 @@
   scopes in dimensions 4, 5, 7, and 8. No dimension-six TCC identity,
   coefficient-to-ray map, fusion-continuity theorem, or boundary-limit theorem
   is proved. `CERTIFIED_NUMERICAL` packet growth is not a nonexistence theorem.
-- Current state: Cycle 197 falsifies the fixed even scalar Gaussian Abel
-  cutoff for the raw 30 nonzero real endpoint frequencies: every one has a
-  positive exact `1/epsilon` Laplace exponent. The six zero modes do not
-  restore a uniform rule. Finite contour geometry remains sound; a
-  frequency-continued, Fresnel, hyperfunction, or other source-defined
-  distributional endpoint rule remains open—not an AFK, boundary, fusion, or
-  TCC result.
+- Current state: Cycle 198 proves that the meromorphic continuation of the
+  published equation-(66) transform defines a unique endpoint functional on
+  the frozen 36-dimensional exponential-character space `T_6`. The exact
+  helical lift is injective, and all 72 frequency factors plus
+  `Gamma_M(Q,0)` are finite and nonzero. This is not the divergent raw
+  contour, a periodized beta channel, an AFK amplitude identity, fusion, or
+  TCC; the active gate is exact helical/Zak amplitude matching.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -28,11 +28,11 @@
 
 ## Budget, accounting, and stop condition
 
-- Total forward budget: 200 substantive research cycles, counted `B001/200`
-  through `B200/200`.
-- The sealed artifact filename and payload carry the authoritative budget
-  ordinal; do not duplicate a live counter here. Repository cycle numbers and
-  budget ordinals can differ when a non-counted record intervenes.
+- Total forward budget: 200 substantive research cycles.
+- Infer budget use from the highest `b<ordinal>` in counted preregistration or
+  sealed-artifact filenames; do not maintain a live counter here. The next
+  counted block takes the next ordinal. Repository cycle numbers and budget
+  ordinals can differ when a non-counted record intervenes.
 - A cycle counts only when it is a preregistered substantive research block
   with a genuine bound, construction, theorem, counterexample, or scoped
   obstruction decision. Workflow repair, indexing, and archive-only records do
@@ -268,6 +268,13 @@
   zero modes remain separate. It does not rule out other distributional
   boundary constructions. See
   `artifacts/cycle-197-b034-gaussian-abel-tail-v1.json`.
+- `PROVED`: Cycle 198 continues the published equation-(66) transform from
+  its source convergence chamber and restricts it to the exact all-36
+  centered helical character space `T_6`. The 36 characters are distinct;
+  every prescribed endpoint value is finite and nonzero. This supplies a
+  unique source analytic-frequency functional, not a raw contour value or an
+  AFK/periodization match. See
+  `artifacts/cycle-198-b035-analytic-frequency-endpoint-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -355,7 +362,8 @@ Budget B001--B200
   |    |                                                                                                                                                                                        `-- exact finite combined-residue rule [SEALED]
   |    |                                                                                                                                                                                             `-- finite-pole-free endpoint contour [SEALED]
   |    |                                                                                                                                                                                                  `-- scalar even Gaussian Abel rule [FALSIFIED]
-  |    |                                                                                                                                                                                                       `-- analytic-frequency/hyperfunction endpoint rule [NEXT GATE]
+  |    |                                                                                                                                                                                                       `-- analytic-frequency endpoint functional on T6 [SEALED]
+  |    |                                                                                                                                                                                                            `-- exact helical/Zak amplitude match [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -400,17 +408,17 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 198 analytic-frequency/hyperfunction decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `FINITE_POLE_FREE_ENDPOINT_CONTOUR_GAUSSIAN_ABEL_RAW_LIMIT_FALSIFIED_ALTERNATIVE_DISTRIBUTIONAL_RULE_REQUIRED` | Define one source-derived analytic-frequency or hyperfunction boundary rule on a frozen test space, with contour sectors and uniqueness criterion, then test a raw endpoint value before any AFK identification. | Calling the Gaussian failure an endpoint no-go; fitting a regulator/counterterm; identifying a raw/periodized channel with an AFK value or completed alias; discarding capital `Gamma_M` normalization or AFK phase; using `s,d`, selected exponents, or ray labels. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 199 helical/Zak amplitude decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `SOURCE_ANALYTIC_FREQUENCY_ENDPOINT_FUNCTIONAL_ON_T6_SEALED_PERIODIZED_AMPLITUDE_OPEN` | Construct one source-derived Zak/periodization map from the full equation-(66) carrier to `T_6` and prove exact all-36 amplitude equality, including zero modes, capital `Gamma_M`, and the separately pinned AFK phase. | Calling the analytic functional a raw integral or AFK value; selecting one alias; fitting weights/scalars; discarding alias holonomy, capital `Gamma_M`, or AFK phase; using selected exponents, SIC outcome variables, or ray labels. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Can a source-derived analytic-frequency, hyperfunction, Fresnel, or other
-  distributional rule supply a unique endpoint boundary value after the
-  scalar Gaussian prescription fails?
+- Does the source helical quotient induce a phase-preserving Zak map from the
+  full equation-(66) carrier to `T_6`, or does exact alias holonomy obstruct
+  the required all-36 amplitude match?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -419,29 +427,30 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 198
+## Next goal: Cycle 199
 
 Preregister one substantive block with this question:
 
-> Can one source-derived analytic-frequency or hyperfunction continuation on
-> a fixed exponential-type test space define a unique boundary value for the
-> central-contour regular part after the scalar Gaussian Abel failure, without
-> a fitted counterterm, AFK map, selected exponents, `s`, `d`, or ray labels?
+> Does one source-derived helical/Zak periodization of the full 24-mode
+> equation-(66) transform descend to the sealed endpoint functional on `T_6`
+> and reproduce the exact all-36 capital-`Gamma_M` amplitudes with the AFK
+> phase kept separate, without fitted weights, selected aliases, or ray data?
 
-Cycle 198 must freeze one analytic-frequency/hyperfunction state space, test
-space, contour sectors, boundary-value uniqueness criterion, and endpoint
-acceptance condition before executable work. It must retain capital `Gamma_M`
-normalization and the AFK phase separately. It must not call a continuation
-canonical merely by naming it, infer an endpoint value from the Gaussian
-failure, fit a counterterm, use selected exponents, `s,d`, or ray labels, or
-claim an RM-boundary, Stark/fusion/TCC consequence before exact amplitude
-matching.
+Cycle 199 must freeze the full source carrier, helical quotient, alias weights,
+Zak map, phase convention, and exact all-row amplitude criterion before
+executable work. It must include all 24 discrete modes and all 36 target
+characters, including zero modes; retain capital `Gamma_M` and the AFK phase
+as separate factors; and treat non-scalar alias holonomy and the finite
+anti-channel residues as constraints. It must not select a preferred alias,
+fit a scalar or counterterm, use selected exponents or ray labels, or claim an
+AFK, fusion, Stark, or TCC consequence unless the exact amplitude identity is
+proved first.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 197
+research cycle 198
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_197_gaussian_abel_tail_v1.py --check
+python3 proof/build_cycle_198_analytic_frequency_endpoint_v1.py --check
 ```
