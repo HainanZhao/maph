@@ -153,7 +153,11 @@
   cited beta theorem supplies neither an A/C kernel nor a contour/discrete sum
   for these words, so it does not source-authorize an Abel parameter. Cycle
   244 is therefore an explicitly constructed residue-current experiment, not
-  a continuation inherited from that theorem.
+  a continuation inherited from that theorem. Cycle 244 proves that its
+  12-dissected Minkowski support is locally finite and has a distributional
+  `rho->1` boundary, but the exact `lambda^N` reweighting preserves every
+  construction axiom while changing that boundary. The current is therefore
+  noncanonical; deriving actual A-word principal coefficients is next.
   No endpoint binomial value has been
   evaluated. No divergent raw contour, periodized beta channel, AFK amplitude
   identity, fusion, or TCC is proved.
@@ -771,17 +775,16 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 244 constructed residue-current decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `FINITE_RESIDUE_TWO_CHAMBER_OBSTRUCTED` | Freeze a constructed A-residual current, its exact Galois/12-dissection invariant, fixed Abel summability axioms, and a regulator-dependence falsifier; prove or falsify its boundary continuation before B-Fourier covariance. | Presenting the Abel parameter as source-supplied, replacing the infinite family by a finite ledger, fitted subtraction, unproved summation, treating lattice self-duality as a special-function transform, or inferring a signed extension. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 245 A-word principal-coefficient decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `CONSTRUCTED_CURRENT_NONCANONICAL` | Freeze the A-word double-pole coefficient normalization at `N=1`, its exact recurrence, Galois behavior, and a tempered-growth criterion; prove or falsify canonical tempered-current data before B-Fourier covariance. | Treating a formal coefficient line as normalized, fitting a recurrence/gauge, or inferring a source identity. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Does an explicitly constructed A-residual current have an invariant,
-  non-fitted Abel-regularized 12-dissected boundary continuation, and can that
-  construction later be source-authorized?
+- Do the actual A-word double-pole principal coefficients define a canonical,
+  Galois-compatible tempered current?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -790,27 +793,24 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 244 / B081
+## Next goal: Cycle 245 / B082
 
 Preregister one substantive block with this question:
 
-> Does a constructed current from the `N`-indexed A-residual Laurent
-> coefficients, weighted by `rho^N` and split into `12` residue classes,
-> admit a fixed-axiom meromorphic or distributional `rho -> 1` continuation
-> without fitted subtraction?
+> Derive the `N`-dependent A-word double-pole principal coefficients from the
+> source gamma product, normalized at `N=1`, and prove or falsify an exact
+> recurrence, Galois compatibility, and tempered-growth bound.
 
-Cycle 244 must amend one preregistration in place before executable work to
-freeze the constructed Laurent-current state, its Galois/12-dissection
-invariant, Abel summability axioms, regulator-dependence falsifier, and
-allowed boundary criterion. It must keep source authorization, AFK,
-mixed-base identity, fusion, Stark, and TCC consequences explicitly out of
-scope.
+Cycle 245 must freeze the source gamma convention, principal-coefficient
+normalization, recurrence family, Galois rule, and exact growth criterion
+before executable work. It must keep source authorization, AFK, mixed-base
+identity, fusion, Stark, and TCC consequences explicitly out of scope.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 243
+research cycle 244
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_243_two_chamber_crossing_v1.py --check
+python3 proof/build_cycle_244_constructed_abel_current_v1.py --check
 ```
