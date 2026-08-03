@@ -1,0 +1,199 @@
+{
+  "acceptance_audit": {
+    "accepted_signed_extension": false,
+    "both_shifts": "passed",
+    "double_sign": "passed_only_for_conjugation_action",
+    "epistemic_status": "PROVED",
+    "factorization_16_17": "failed_by_undefined_required_signed_states",
+    "reason": "A full signed Gamma_M extension must supply its stated factorization targets. This one-state construction does not, and no projective matrix identification may fill the gap.",
+    "reflection": "passed"
+  },
+  "artifact_id": "cycle-225-b062-reflection-root-branch-v1",
+  "budget_ordinal": "B062",
+  "claim_boundary": "The four explicitly constructed c=+/-i root products satisfy both frozen shifts and raw reflection. Double simultaneous sign is involutive only when it conjugates c. But the construction defines only the raw E-negative state, while the two raw factorization arrows require two distinct states without signed-product definitions or cochain pullbacks. Thus this branch is not an accepted signed Gamma_M extension. This does not rule out a state-complete signed-product groupoid, a source theorem, a packet cocycle, AFK covariance, fusion, Stark, or TCC.",
+  "companion_decision": {
+    "adopted": true,
+    "evidence_scope_review": "The four-branch census, both shifts, -c^2 reflection condition, c-to-conjugate(c) involutivity, factorization target states, and replay were reviewed together.",
+    "falsifier": "Any four-branch census, shift, -c^2 reflection, c-to-conjugate(c) involutivity, required-intermediate-state, or replay discrepancy invalidates the seal.",
+    "identity": "/root/decision_companion_2",
+    "known_flaw": "Local identities at one signed state do not define a Gamma_M theorem or show that the F2/F3 factorization groupoid closes consistently.",
+    "next_action": "Open a state-complete signed-product groupoid cycle over the full raw four-state orbit and its positive representatives; assign cochains before testing, then solve the F2/F3 edge and loop-consistency equations with every residual factor retained.",
+    "reason": "The local branch has exact identities but its missing target states are a categorical boundary, not a scalar correction.",
+    "recommendation": "Seal C225/B062 as PROVED only for the c=+/-i local signed-product branch satisfying shifts, reflection, and conjugate double-sign involutivity; record factorization compatibility as untested because the required states are undefined."
+  },
+  "cycle": 225,
+  "double_sign_action_audit": {
+    "conclusion": "Within the frozen root branch, double sign is involutive exactly for conjugation of c; preserving c fails by -1.",
+    "epistemic_status": "PROVED",
+    "rows": [
+      {
+        "c": "-i",
+        "conjugate_action_double_sign": "1",
+        "conjugate_action_involutive": true,
+        "preserve_action_double_sign": "-1",
+        "preserve_action_involutive": false
+      },
+      {
+        "c": "+i",
+        "conjugate_action_double_sign": "1",
+        "conjugate_action_involutive": true,
+        "preserve_action_double_sign": "-1",
+        "preserve_action_involutive": false
+      }
+    ],
+    "scope": "This defines the branch action for the new construction only; it is not a source-provided antilinear action.",
+    "surviving_action": "simultaneous sign reversal maps c to conjugate(c)=-c"
+  },
+  "epistemic_status": "PROVED",
+  "factorization_state_audit": {
+    "conclusion": "The frozen product was defined only at the raw E-negative state. Neither distinct raw factorization target has a frozen signed-product definition or cochain pullback, so neither equation can be tested as an identity of this construction.",
+    "defined_signed_state": [
+      5,
+      -24,
+      -115,
+      -24
+    ],
+    "epistemic_status": "PROVED",
+    "equation_16_pullback_defined": false,
+    "equation_16_required_state": [
+      115,
+      24,
+      -5,
+      24
+    ],
+    "equation_17_pullback_defined": false,
+    "equation_17_required_state": [
+      -5,
+      -24,
+      115,
+      -24
+    ],
+    "ordinary_gamma_residuals_retained": true
+  },
+  "frozen_hashes": {
+    "preregistration": {
+      "path": "docs/cycle-225-b062-reflection-root-branch-preregistration-v1.md",
+      "sha256": "8b2188e3befa2f7ce7a8f4a9e0f3938110dd94be659ce64154c6eb6bdcdaf921"
+    },
+    "prior_groupoid": {
+      "path": "proof/verify_cycle_217_source_transformation_groupoid.py",
+      "sha256": "e038ffb0d9ab95d4eb6edfbf99eaf8ddbb046ba52fa46b8cb84b4c2bdeb3b465"
+    },
+    "prior_product_replay": {
+      "path": "proof/verify_cycle_223_explicit_signed_product.py",
+      "sha256": "817b49c05b84ded6f55650d6717349f8ad2b6ea2fc3588919dd14f2578ecc6bb"
+    },
+    "prior_shift_branch": {
+      "path": "artifacts/cycle-224-b061-shift-cohomology-v1.json",
+      "sha256": "a24b0573942c5bd869240f7444f6db0542e5a0899d64e1ba1704625c8a5e7a26"
+    },
+    "prior_shift_replay": {
+      "path": "proof/verify_cycle_224_shift_cohomology.py",
+      "sha256": "14f5ee54d596e2775e9671fbd13fc2053b18af863d28552de8b21da5de2035aa"
+    },
+    "prototype": {
+      "path": "discovery/cycle-225-b062-reflection-root-branch-prototype-v1.json",
+      "sha256": "d59f79bb701c28e586a98a7cb0901b3bc245ed888f0b06db809cc1c352c5c823"
+    },
+    "regression_test": {
+      "path": "tests/test_cycle_225_reflection_root_branch.py",
+      "sha256": "83f3a808464ba7f5494f65d116ac1b6a31a90ed65875ceb9411821447a190ae9"
+    },
+    "replay": {
+      "path": "proof/verify_cycle_225_reflection_root_branch.py",
+      "sha256": "3f4867787a55a42f3d594df4bd5e898edddbd035c5c3777f879aeea477c57317"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    },
+    "source_audit": {
+      "path": "scripts/dimension_six_ss_evaluation_audit.py",
+      "sha256": "24c9258e46a1233c552017f3b58de0d45acd0197c8c807579f090ca1332f626f"
+    },
+    "source_paper": {
+      "path": "paper/sic-stark-dimension-six-boundary-fusion.tex",
+      "sha256": "347228e05a87946ca41bb31c118aae069b7fb6002fff4933d030a153cef21cb7"
+    },
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "gate_outcome": {
+    "accepted_signed_extension": "NOT_AVAILABLE",
+    "reflection_root_branch_local_identities": "PROVED",
+    "remaining_design_problem": "Construct a signed-product groupoid on every factorization state with compatible cochains and ordinary-gamma residual pullbacks before re-testing the raw E path.",
+    "state_complete_factorization_groupoid": "NOT_CONSTRUCTED"
+  },
+  "outcome": {
+    "epistemic_status": "PROVED",
+    "statement": "The c=+/-i local branch satisfies both shifts and reflection, with conjugate double sign involutivity, but lacks both required factorization target states and therefore is not a signed Gamma_M extension."
+  },
+  "preregistration_preflight": {
+    "cycle": 225,
+    "manifest_sha256": "8b2188e3befa2f7ce7a8f4a9e0f3938110dd94be659ce64154c6eb6bdcdaf921",
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_225_reflection_root_branch_v1.py --check",
+    "preflight_command": "research prereg check docs/cycle-225-b062-reflection-root-branch-preregistration-v1.md --expected-cycle 225 --allow-head-drift",
+    "prototype_command": "python3 proof/verify_cycle_225_reflection_root_branch.py --output discovery/cycle-225-b062-reflection-root-branch-prototype-v1.json",
+    "test_command": "python3 -m unittest tests/test_cycle_225_reflection_root_branch.py",
+    "write_command": "python3 proof/build_cycle_225_reflection_root_branch_v1.py --write"
+  },
+  "root_branch_audit": {
+    "candidate_count": 4,
+    "conclusion": "All four frozen reflection-root products pass both inherited shifts and raw reflection within the constructed one-state algebra.",
+    "epistemic_status": "PROVED",
+    "reflection_equation": "-c^2=1",
+    "roots": [
+      "+i",
+      "-i"
+    ],
+    "rows": [
+      {
+        "c": "-i",
+        "first_shift": true,
+        "raw_reflection_product": 1,
+        "second_shift": true,
+        "sigma": -1
+      },
+      {
+        "c": "+i",
+        "first_shift": true,
+        "raw_reflection_product": 1,
+        "second_shift": true,
+        "sigma": -1
+      },
+      {
+        "c": "-i",
+        "first_shift": true,
+        "raw_reflection_product": 1,
+        "second_shift": true,
+        "sigma": 1
+      },
+      {
+        "c": "+i",
+        "first_shift": true,
+        "raw_reflection_product": 1,
+        "second_shift": true,
+        "sigma": 1
+      }
+    ],
+    "source_boundary": "The roots are selected by this construction's reflection equation, not by a source cross-sign theorem."
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_225_reflection_root_branch_v1.py",
+    "sha256": "fa2c9a7a1e5a18416620c0557c3cfed09b43ddf69f9da4ec7c6ae43b826f3fdd"
+  },
+  "status": "SEALED_REFLECTION_ROOT_LOCAL_BRANCH_FACTORIZATION_UNDEFINED"
+}
