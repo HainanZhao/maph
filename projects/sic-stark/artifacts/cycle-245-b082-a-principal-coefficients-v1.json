@@ -1,0 +1,1276 @@
+{
+  "artifact_id": "cycle-245-b082-a-principal-coefficients-v1",
+  "audit": {
+    "conclusion": "PROVED: the source product fixes an all-N nonzero finite-product recurrence and C-linear embedding-swap law for the A double-pole coefficient line. Any tempered-growth bound remains open.",
+    "epistemic_status": "PROVED",
+    "factors": [
+      {
+        "argument_slope": "1/24",
+        "factor": "A1",
+        "shift_in_(alpha,beta)": [
+          115,
+          -24
+        ],
+        "source_multiplier": "finite ordered product of gamma(z+alpha)/gamma(z)=1-exp(2*pi*i*z/beta) and gamma(z+beta)/gamma(z)=1-exp(2*pi*i*z/alpha)"
+      },
+      {
+        "argument_slope": "1/24",
+        "factor": "A2",
+        "shift_in_(alpha,beta)": [
+          0,
+          -1
+        ],
+        "source_multiplier": "finite ordered product of gamma(z+alpha)/gamma(z)=1-exp(2*pi*i*z/beta) and gamma(z+beta)/gamma(z)=1-exp(2*pi*i*z/alpha)"
+      },
+      {
+        "argument_slope": "1",
+        "factor": "A3",
+        "shift_in_(alpha,beta)": [
+          0,
+          -1
+        ],
+        "source_multiplier": "finite ordered product of gamma(z+alpha)/gamma(z)=1-exp(2*pi*i*z/beta) and gamma(z+beta)/gamma(z)=1-exp(2*pi*i*z/alpha)"
+      },
+      {
+        "argument_slope": "1",
+        "factor": "A4",
+        "shift_in_(alpha,beta)": [
+          115,
+          -24
+        ],
+        "source_multiplier": "finite ordered product of gamma(z+alpha)/gamma(z)=1-exp(2*pi*i*z/beta) and gamma(z+beta)/gamma(z)=1-exp(2*pi*i*z/alpha)"
+      }
+    ],
+    "galois": {
+      "action_on_source_product": "re-evaluate the same ordinary-gamma product formula after swapping every affine period coefficient",
+      "claim_boundary": "This is C-linear field-embedding covariance of the frozen upper tilt. It is not an arithmetic action on the transcendental gamma values, complex conjugation, source authorization, or an A-to-C identity.",
+      "coefficient_label_swap": "The re-evaluated plus-embedding coefficient/multiplier formulas are exactly the minus-embedding formulas, and conversely.",
+      "epistemic_status": "PROVED",
+      "regularization": "sigma_+(t+i*epsilon)=t_-+i*epsilon and sigma_-(t+i*epsilon)=t_++i*epsilon",
+      "upper_chamber_certificate": {
+        "period_determinants": {
+          "A1": "1/24",
+          "A2": "1/24",
+          "A3": "24",
+          "A4": "24"
+        },
+        "reason": "At both embeddings, every Im(alpha/beta) is epsilon*det(alpha,beta)/|beta|^2>0, so the frozen q-products are defined in their common source chamber before applying the C-linear embedding swap."
+      }
+    },
+    "growth": {
+      "epistemic_status": "OPEN",
+      "reason": "The exact finite ratio gives no uniform lower bound away from its unit-circle small divisors.",
+      "tempered_bound_proved": false
+    },
+    "laurent_derivation": {
+      "A1": {
+        "regular_ratio_order": [
+          {
+            "argument": "z-1*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-2*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-3*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-4*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-5*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-6*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-7*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-8*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-9*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-10*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-11*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-12*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-13*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-14*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-15*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-16*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-17*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-18*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-19*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-20*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-21*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-22*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-23*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-24*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-24*beta+0*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+1*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+2*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+3*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+4*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+5*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+6*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+7*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+8*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+9*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+10*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+11*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+12*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+13*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+14*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+15*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+16*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+17*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+18*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+19*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+20*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+21*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+22*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+23*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+24*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+25*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+26*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+27*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+28*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+29*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+30*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+31*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+32*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+33*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+34*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+35*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+36*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+37*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+38*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+39*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+40*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+41*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+42*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+43*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+44*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+45*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+46*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+47*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+48*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+49*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+50*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+51*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+52*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+53*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+54*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+55*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+56*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+57*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+58*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+59*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+60*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+61*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+62*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+63*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+64*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+65*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+66*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+67*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+68*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+69*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+70*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+71*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+72*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+73*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+74*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+75*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+76*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+77*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+78*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+79*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+80*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+81*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+82*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+83*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+84*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+85*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+86*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+87*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+88*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+89*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+90*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+91*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+92*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+93*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+94*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+95*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+96*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+97*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+98*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+99*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+100*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+101*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+102*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+103*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+104*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+105*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+106*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+107*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+108*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+109*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+110*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+111*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+112*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+113*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+114*alpha",
+            "kind": "Phi_alpha"
+          }
+        ]
+      },
+      "A2": {
+        "pole_coordinate": "z_N=-N*beta",
+        "residue_ratio": "Res_(N+1)/Res_N=Phi_beta(-(N+1)*beta)^(-1)"
+      },
+      "A3": {
+        "pole_coordinate": "z_N=-N*beta",
+        "residue_ratio": "Res_(N+1)/Res_N=Phi_beta(-(N+1)*beta)^(-1)"
+      },
+      "A4": {
+        "regular_ratio_order": [
+          {
+            "argument": "z-1*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-2*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-3*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-4*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-5*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-6*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-7*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-8*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-9*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-10*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-11*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-12*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-13*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-14*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-15*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-16*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-17*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-18*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-19*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-20*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-21*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-22*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-23*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-24*beta",
+            "kind": "Phi_beta_inverse"
+          },
+          {
+            "argument": "z-24*beta+0*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+1*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+2*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+3*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+4*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+5*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+6*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+7*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+8*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+9*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+10*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+11*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+12*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+13*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+14*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+15*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+16*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+17*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+18*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+19*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+20*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+21*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+22*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+23*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+24*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+25*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+26*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+27*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+28*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+29*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+30*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+31*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+32*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+33*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+34*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+35*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+36*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+37*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+38*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+39*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+40*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+41*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+42*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+43*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+44*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+45*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+46*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+47*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+48*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+49*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+50*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+51*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+52*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+53*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+54*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+55*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+56*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+57*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+58*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+59*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+60*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+61*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+62*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+63*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+64*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+65*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+66*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+67*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+68*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+69*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+70*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+71*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+72*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+73*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+74*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+75*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+76*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+77*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+78*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+79*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+80*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+81*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+82*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+83*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+84*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+85*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+86*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+87*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+88*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+89*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+90*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+91*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+92*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+93*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+94*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+95*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+96*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+97*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+98*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+99*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+100*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+101*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+102*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+103*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+104*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+105*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+106*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+107*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+108*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+109*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+110*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+111*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+112*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+113*alpha",
+            "kind": "Phi_alpha"
+          },
+          {
+            "argument": "z-24*beta+114*alpha",
+            "kind": "Phi_alpha"
+          }
+        ]
+      },
+      "product_rule": "A1,A4 are regular nonzero at mu_N; multiplying the two simple-pole Laurent expansions for A2,A3 gives the double-pole coefficient ratio."
+    },
+    "recurrence": {
+      "all_multiplier_factors_nonzero": true,
+      "base_normalization": "kappa_1 from the frozen A product; no numerical/fitted value selected",
+      "epistemic_status": "PROVED",
+      "exact_recurrence_family_derived": true,
+      "multiplier": {
+        "A1_A4": "P_j,N=[product_{i=0}^{114} Phi_alpha(z_j,N-24*beta_j+i*alpha_j)]/[product_{q=1}^{24} Phi_beta(z_j,N-q*beta_j)]",
+        "A2_A3": "Q_j,N=1/Phi_beta(-(N+1)*beta_j)",
+        "definitions": "z_j,N=c_j*N*(115*t-1); alpha_j,beta_j are the frozen C228 A periods",
+        "phi_alpha": "Phi_alpha(z)=1-exp(2*pi*i*z/beta)",
+        "phi_beta": "Phi_beta(z)=1-exp(2*pi*i*z/alpha)",
+        "ratio": "kappa_(N+1)/kappa_N=P_1,N*Q_2,N*Q_3,N*P_4,N"
+      },
+      "nonvanishing_proof": {
+        "A1_A4_phi_alpha": "z_N-24*beta+i*alpha has alpha-coordinate 115*N+i>0 for 0<=i<115, so its ratio to beta is not an integer.",
+        "A1_A4_phi_beta": "z_N-q*beta has beta-coordinate -24*N-q<0 for 1<=q<=24, so its ratio to alpha is not an integer.",
+        "A1_A4_regular_at_z_N": "z_N=115*N*alpha-24*N*beta has positive alpha-coordinate and negative beta-coordinate, so it is neither a pole (-j,-n) nor a zero (j+1,n+1).",
+        "A2_A3_phi_beta": "beta/alpha=-115/24+1/(24*t) is irrational, hence -(N+1)*beta/alpha is never integral."
+      },
+      "statement": "For every N>=1, kappa_(N+1)=T_N*kappa_N with T_N=P_1,N*Q_2,N*Q_3,N*P_4,N."
+    },
+    "support_step": "a=115*t-1"
+  },
+  "budget_ordinal": "B082",
+  "claim_boundary": "For the frozen C228 A residual word, the exact double-pole principal coefficients obey an all-N nonzero finite-product recurrence and embedding-re-evaluation covariance in the common upper q-product chamber. This proves neither a polynomial/tempered bound nor source authorization, a contour identity, a mixed-base transform, B-Fourier covariance, AFK, fusion, Stark, or TCC.",
+  "companion_decision": {
+    "adopted": true,
+    "falsifier": "A shift, Laurent ratio, multiplier nonvanishing, determinant/chamber, embedding-re-evaluation, or replay discrepancy; for the deferred bound, any certified violation at frozen epsilon_0,C,d.",
+    "identity": "/root/decision_companion_2",
+    "known_flaw": "No uniform small-divisor lower bound, fixed tilt, constants C,d, temperedness, canonical current, source authorization, or A-to-C identity.",
+    "next_action": "Open a distinct fixed-tilt A-word coefficient-bound question with epsilon_0, C, d, norm/embedding convention, and failure rule frozen before computation.",
+    "recommendation": "Seal C245/B082 only for the exact recurrence, nonvanishing, and C-linear embedding-re-evaluation covariance; open a distinct fixed-tilt growth-bound cycle.",
+    "reviewed_work": "C245 exact shift decompositions, Laurent double-pole ratio, nonvanishing audit, and common-upper-chamber embedding re-evaluation."
+  },
+  "cycle": 245,
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "prereg": {
+      "path": "docs/cycle-245-b082-a-principal-coefficients-preregistration-v1.md",
+      "sha256": "bc092530194d073f308b32b909c0316d1ff8b96017e461bb66713a3286ca5fac"
+    },
+    "prior_c228": {
+      "path": "artifacts/cycle-228-b065-f3-square-residual-block-v1.json",
+      "sha256": "2078970c02c1f1359de25394f57c9229dab4fef01c15894bc36b1ea177deafe4"
+    },
+    "prior_c243": {
+      "path": "artifacts/cycle-243-b080-two-chamber-crossing-v1.json",
+      "sha256": "505846925694811b8f34b6c48120b56b406e15eb9e7e1a044e7763cea8d30896"
+    },
+    "prior_c244": {
+      "path": "artifacts/cycle-244-b081-constructed-abel-current-v1.json",
+      "sha256": "58589f8ef0d37a6d26a2084ffb77527970309657ebfcdaacdd9f91cbedcc388a"
+    },
+    "replay": {
+      "path": "proof/verify_cycle_245_a_principal_coefficients.py",
+      "sha256": "63829b316a362844f97bcfac4321bea5da8f0588e26b7ec2130d9dd3fc06d986"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    },
+    "test": {
+      "path": "tests/test_cycle_245_a_principal_coefficients.py",
+      "sha256": "0b25c069a068abd94b823c0419730a1bb4b980aeebdf99616667df5f52338019"
+    },
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_245_a_principal_coefficients_v1.py",
+    "sha256": "46b31f52962cfe238c9c3a1481ed440f854005034678f85ff591dd44deaadba9"
+  },
+  "status": "SEALED_A_PRINCIPAL_COEFFICIENT_RECURRENCE"
+}
