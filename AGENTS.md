@@ -23,30 +23,34 @@ add a narrower `AGENTS.md`.
 
 ## 1. Project memory and workflow
 
-Every active research project has a root `PLAN.md`; it is the concise,
+Every active research project has a root `PROGRAM.md`; it is the concise,
 authoritative strategic state over chat memory. Read the current gate and the
 one relevant prior artifact before acting. Do not reread historical material
 unless the next question depends on it.
 
-`PLAN.md` must contain:
+`PROGRAM.md` must contain:
 
 - original objective, claim boundary, status, and stop condition;
 - a high-level research-path graph and current gate states;
 - short headline theorem, breakthrough, correction, and no-go summaries;
 - open questions, next authorized action, and crash recovery commands.
 
-Keep `PLAN.md` short enough to reread routinely. Do not store per-cycle row
+Keep `PROGRAM.md` short enough to reread routinely. Do not store per-cycle row
 registries, long correction narratives, exhaustive hashes, test transcripts,
 or detailed replay histories there.
 
 Keep a preregistration with its embedded freeze manifest before executable
-work that may support a durable claim. Sealing is optional, not a completion
-ritual. Create an immutable `artifacts/cycle-<n>-<slug>-v<version>.json` only
-when banking a `PROVED`/`CERTIFIED_NUMERICAL` result for later reliance,
-changing an irreversible gate or strategy, issuing a correction, or preparing
-an external handoff/publication. Otherwise keep the live work in its one
-preregistration and `discovery/`; it needs no artifact, status update, or
-handover record.
+work that may support a durable claim. Sealing is optional, not a per-cycle
+requirement. Seal an immutable `artifacts/cycle-<n>-b<ordinal>-<slug>-v<version>.json`
+only when the result must be relied on later: a proof-grade finding, a
+later-relevant falsifier, a correction, an irreversible gate or strategy
+change, or an external handoff/publication. Otherwise keep the work live in
+its one preregistration and `discovery/`; no artifact, status update, or
+handover is needed.
+
+The `b<ordinal>` filename segment is the campaign-budget ordinal and must
+agree with the record payload; it makes budget use discoverable without a
+separate live counter. Legacy sealed names remain unchanged.
 
 When a result is sealed, its artifact contains the finding, claim boundary,
 frozen hashes, replay, and gate outcome. Create a separate readable decision
@@ -89,44 +93,44 @@ new record type; do not create per-project index/query scripts for routine
 cycle, claim, gate, dependency, or evidence queries.
 
 `STATUS.md` is optional, generated only for an intentional handoff. It points
-to `PLAN.md`, the newest artifact, and recovery commands; it never repeats
+to `PROGRAM.md`, the newest artifact, and recovery commands; it never repeats
 strategy or results. Do not regenerate it during ordinary research.
 
 Before work: read only the frozen counts, conventions, and records needed for
 the next authorized question; check `git status` and preserve unrelated
-changes. Update `PLAN.md` only when strategy, gate, budget, stop condition,
-or next action changes. Never use it as a progress log. `PLAN.md` is a mutable
-strategic source and must never be frozen as an artifact input: archive the
-specific mathematical premise or prior artifact instead.
+changes. Update `PROGRAM.md` only when a strategic boundary
+changes strategy, gate, budget/tranche allocation, stop condition, or the
+genuinely different next action. A counted cycle, sealed result, failed
+subtest, routine checkpoint, or ordinary continuation of the same
+research block does **not** by itself authorize a `PROGRAM.md` edit. Never use it
+as a progress log. `PROGRAM.md` is a mutable strategic source and must never be
+frozen as an artifact input: archive the specific mathematical premise or
+prior artifact instead.
 
 ### Research-block cadence
 
 A research cycle is a coherent decision block, not a single algebraic
 observation, lemma, engine probe, validation run, or required artifact. Its
-normal boundary is a material companion-review checkpoint at which the
-companion reviews the completed related work and recommends whether to reuse
-the live cycle or open a genuinely new one. Preregister one decision question
-with a real advance condition, then pursue all closely dependent derivations,
+normal boundary is a material decision point: reuse the live cycle while the
+same related question remains active, and open a new one only when the
+question or frozen method family genuinely changes. Preregister one decision
+question with a real advance condition, then pursue all closely dependent derivations,
 counterexamples, alternative formulations, and exact checks needed to answer
 it. Reuse the live cycle and its one preregistration for that related work; do
 not create a cycle merely to name an intermediate decomposition,
 factorization, failed subtest, or bookkeeping repair.
 
-Open a new cycle only when the companion-reviewed decision selects a genuinely
-different research question or frozen method family, or when a correction,
-external result, resource boundary, or irreversible gate/status decision
-requires a separate record. A companion recommendation to continue the same
-question is explicit authorization to keep using the existing cycle. If new
-work would invalidate its executed freeze, contain it as a result of the live
-cycle and open a new one only at that decision boundary; never evade the
-freeze by minting a routine successor cycle.
+Open a new cycle only when a material decision selects a genuinely different
+research question or frozen method family, or when a correction, external
+result, resource boundary, or irreversible gate/status decision requires a
+separate record. If new work would invalidate its executed freeze, contain it
+as a result of the live cycle and open a new one only at that decision
+boundary; never evade the freeze by minting a routine successor cycle.
 
 Keep scratch in `discovery/` and promote only the conclusion. Run the relevant
 replay and commit only when it is useful; do not commit, seal, regenerate
-status, or write a handover after each lemma or subtest. A seal is justified
-only by a correction, a later-relevant falsifier, an externally useful
-proof-grade result, or an irreversible strategy/gate decision. Use a
-correction only for a genuine post-seal defect.
+status, or write a handover after each lemma or subtest. Use a correction only
+for a genuine post-seal defect.
 
 ### One live specification per cycle
 
@@ -146,7 +150,7 @@ the pre-execution UTC/Git boundary, and all frozen input paths. Run the shared
 preflight first:
 
 ```sh
-research prereg check docs/cycle-<n>-<slug>-preregistration-v1.md \
+research prereg check docs/cycle-<n>-b<ordinal>-<slug>-preregistration-v1.md \
   --expected-cycle <n>
 ```
 
@@ -174,25 +178,6 @@ build the smallest falsifiable prototype, and seek a new proof mechanism
 before declaring the program saturated. A negative result may constrain that
 engine, but must not be recast as evidence that only existing building blocks
 are legitimate.
-
-## 1a. Critical-decision companion
-
-Use one named companion only for a strategic fork, a proposed material seal,
-choosing whether to continue or break a cycle after a material result, or
-publication. It is a mentor, not a duplicate worker. A material boundary
-choice is a mandatory checkpoint: before choosing it, send the companion the
-work completed so far and ask it to review that work and recommend either
-continued use of the live cycle, a seal, or a new cycle with a distinct
-question. A proposed material seal and its boundary choice normally share one
-review packet under 200 words: state the decision, frozen claim/gate and tag,
-decisive evidence, known flaw, the completed work to review, and plausible
-next engines. Request five short items: an evidence and scope review,
-recommendation, flaw, falsifier, and next action; the next action must say
-whether the current cycle continues, seals, or needs a new one. The companion
-must assess the completed work and alternatives, rather than merely approve or
-reject the proposed choice. Do not notify, poll, or wait during routine cycles.
-If no reply is available at the irreversible decision, defer that decision
-rather than create process work around it.
 
 ## 2. Discovery and proof are separate
 
