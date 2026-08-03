@@ -13,8 +13,8 @@
 - Current state: Cycle 185 / `B023` proves that the multiplier-refined
   correspondence linearizes to 11 exact normalized relation labels with
   independent triple-kernel multiplication.  It has no spectral coefficient
-  data. Cycle 186 / `B024` must derive a formal AFK coefficient-packet
-  representation source-side before comparing its `A_6` character
+  data. Cycle 186 / `B024` must derive the source-defined normalized AFK
+  ghost-overlap packet before comparing its `A_6` character
   decomposition with the transfer algebra.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
@@ -248,7 +248,7 @@ Budget B001--B200
   |    |                                                                                                        `-- conductor-graded target [FALSIFIED]
   |    |                                                                                                             `-- multiplier-refined correspondence [SEALED]
   |    |                                                                                                                  `-- multiplier-weighted relation transfer [SEALED]
-  |    |                                                                                                                       `-- formal AFK packet representation [NEXT GATE]
+  |    |                                                                                                                       `-- normalized AFK ghost-overlap packet [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -294,15 +294,15 @@ than pretending fusion continuity is operational.
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
 | Project budget | `B023_OF_200` | Complete a companion-reviewed substantive Cycle 186/B024 decision before incrementing again. | Counting workflow or archive-only work. |
-| D6 interface | `MULTIPLIER_WEIGHTED_RELATION_TRANSFER_VALIDATED_FORMAL_AFK_PACKET_REPRESENTATION_REQUIRED` | Derive a source-side formal AFK coefficient-packet representation and compare its exact `A_6` character decomposition with the 11-label transfer algebra. | Calling multiplier weights spectral coefficients; fitting a character; selecting exponents; using `s,d`, or ray labels. |
+| D6 interface | `MULTIPLIER_WEIGHTED_RELATION_TRANSFER_VALIDATED_NORMALIZED_AFK_PACKET_REQUIRED` | Derive the source-defined normalized AFK ghost-overlap packet and compare its exact `A_6` character data with the 11-label transfer algebra. | Calling multiplier weights spectral coefficients; fitting a character; selecting exponents; using `s,d`, or ray labels. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Can a formal AFK coefficient-packet representation be derived source-side,
-  and does its exact `A_6` character decomposition agree with or rule out the
+- Can the source-defined normalized AFK ghost-overlap packet be derived, and
+  does its exact `A_6` character data agree with or rule out the
   11-label multiplier-weighted transfer algebra?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
@@ -316,19 +316,20 @@ than pretending fusion continuity is operational.
 
 Preregister one substantive block with this question:
 
-> Can a formal AFK coefficient-packet representation be derived from its own
-> finite characteristic and multiplier data, then compared exactly with the
-> `A_6` character decomposition of the sealed 11-label transfer algebra
+> Can the normalized AFK ghost-overlap packet be derived from its actual
+> phase-and-modular-cocycle definition, then compared exactly with the
+> `A_6` character data of the sealed 11-label transfer algebra
 > without `s`, `d`, selected exponents, fitted characters, or ray labels?
 
-Cycle 186 must freeze an independently sourced AFK packet definition,
-coefficient field and character convention, the 11-label transfer character
-data, comparison rule, and full-domain failure rule before executable work.
-It must not infer coefficients from multiplier weights, fit a character to the
-transfer result, select exponents, use `s,d` or ray labels, or claim a
-Stark/fusion/TCC consequence from finite agreement. The companion's
-Cycle-185 review requires a separate packet-derived construction because the
-sealed transfer consists only of coset averages and multiplier phases.
+Cycle 186 must freeze the AFK normalized-overlap definition (phase times its
+modular-cocycle value), its exact source relations and character convention,
+the 11-label transfer character data, comparison rule, and full-domain failure
+rule before executable work. It must not replace the modular-cocycle values
+with multiplier weights, fit character data to the transfer result, select
+exponents, use `s,d` or ray labels, or claim a Stark/fusion/TCC consequence
+from finite agreement. The companion's Cycle-185 review requires a separate
+packet-derived construction because the sealed transfer consists only of coset
+averages and multiplier phases.
 
 ## Recovery
 
