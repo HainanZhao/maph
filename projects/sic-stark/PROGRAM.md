@@ -61,11 +61,13 @@
   duality with a channel-global scalar. Cycle 216 proves that the frozen
   upper-half-plane `omega1`-to-`-omega1` path has a pole-separated interior
   cone but no literal endpoint contour: its corridor collapses onto dense
-  limiting pole trajectories. The explicit one-step source transformations
-  also do not reach the E-transported lens matrix. No endpoint binomial value
-  has been evaluated. No divergent raw contour, periodized beta channel, AFK
-  amplitude identity, fusion, or TCC is proved; the active gate is now an
-  exact source-transformation groupoid with cocycles tracked.
+  limiting pole trajectories. Cycle 217 then shows the raw two-step source
+  word reaches only `-M_E` projectively and carries the full period/argument/
+  label state to a swapped, 576-scaled, label-zero state, not the E target.
+  No endpoint binomial value has been evaluated. No divergent raw contour,
+  periodized beta channel, AFK amplitude identity, fusion, or TCC is proved;
+  the active gate is a signed-period-cover construction derived from the
+  `Gamma_M` product definition.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -450,6 +452,13 @@
   reflection, and shift family does not reach the E-transported matrix. This
   contains that literal path and one-step family only. See
   `artifacts/cycle-216-b053-rotating-period-cone-v1.json`.
+- `PROVED`: Cycle 217 computes the complete four-state *raw matrix* orbit of
+  the cited factorization arrows. Its two-step word reaches `-M_E`
+  projectively, but the accompanying periods are `576*(omega2,omega1)`, its
+  argument is `576*(mu+m*omega2)`, and its discrete label is zero. The
+  apparent `M_E` hit after `k>0` canonicalization is `OBSERVED` matrix algebra
+  only, not a supplied `Gamma_M` arrow. See
+  `artifacts/cycle-217-b054-source-transformation-groupoid-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -557,7 +566,8 @@ Budget B001--B200
   |    |                                                                                                                                                                                                                                                                                            `-- source automorphy reverser [SEALED: TRANSFORMED-TUPLE ONLY]
   |    |                                                                                                                                                                                                                                                                                                 `-- direct equation-(66) E transport [SEALED: OBSTRUCTED]
   |    |                                                                                                                                                                                                                                                                                                      `-- upper-path literal continuation / one-step source transforms [SEALED: ENDPOINT OBSTRUCTED]
-  |    |                                                                                                                                                                                                                                                                                                           `-- Gamma_M source-transformation groupoid / cocycle [NEXT GATE]
+  |    |                                                                                                                                                                                                                                                                                                           `-- raw Gamma_M source groupoid [SEALED: AFFINE STATE MISMATCH]
+  |    |                                                                                                                                                                                                                                                                                                                `-- signed/scaled period cover from Gamma_M products [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -602,17 +612,17 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 217 source-transformation-groupoid decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `UPPER_PATH_LITERAL_ENDPOINT_AND_ONE_STEP_SOURCE_TRANSFORMS_OBSTRUCTED_SEALED` | Freeze a complete source-transformation state space and cocycle law; derive a word reaching `M_E` with an all-36 unfitted cocycle, or prove an invariant separating the complete admitted orbit. | Treating the C216 one-step census as a full orbit proof, silently adding a source identity, target fitting, or inflating a matrix word into an interface. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 218 signed-period-cover decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `RAW_SOURCE_GROUPOID_AFFINE_MISMATCH_SEALED` | Derive exact sign, swap, and 576-scaling laws from the `Gamma_M` product definition on a frozen oriented period/argument/label cover; then test whether a legal lift reaches the E state and yields an all-36 unfitted cocycle. | Replacing the raw affine state by its projective matrix, assuming a sign law, hiding residual ordinary-gamma factors, target fitting, or calling a lifted matrix a packet theorem. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Does the complete source-derived `Gamma_M` transformation groupoid contain
-  a branch/contour-controlled word from the frozen lens matrix to `M_E` whose
-  cocycle cancels `t^(12-a-b)` on all 36 labels without C198 data?
+- Can a source-derived signed/scaled period cover lift the raw two-step word
+  to the E period/argument/label state, and then produce a cocycle cancelling
+  `t^(12-a-b)` on all 36 labels without C198 data?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -621,26 +631,26 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 217 / B054
+## Next goal: Cycle 218 / B055
 
 Preregister one substantive block with this question:
 
-> In the preregistered groupoid generated only by cited S--S factorization,
-> reflection, and shift identities (with every branch and cocycle recorded),
-> is `M_E` reachable from the frozen lens matrix? If so, does the induced
-> source cocycle cancel `t^(12-a-b)` on all 36 labels?
+> From the `Gamma_M` product definition, what exact sign, swap, and
+> 576-scaling laws act on a frozen cover of oriented periods, affine
+> arguments, discrete labels, branches, and residual factors? Does the lifted
+> raw word reach the E target before any packet-cocycle comparison?
 
-Cycle 217 must freeze the complete state representation, generators, canonical
-sign/`k>0` reduction, composition depth or complete-orbit proof method,
-per-step period/argument/discrete-label/cocycle action, and all-36 criterion
-before executable work. It must keep capital `Gamma_M` and AFK phase separate,
-forbid target fitting, and not claim an AFK, fusion, Stark, or TCC consequence.
+Cycle 218 must freeze the cover state representation, the product-definition
+formula family, sign/swap/scaling candidate laws, all branch and residual-factor
+rules, and the legal-lift criterion before executable work. It must keep
+capital `Gamma_M` and AFK phase separate, forbid target fitting, and not claim
+an AFK, fusion, Stark, or TCC consequence.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 216
+research cycle 217
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_216_rotating_period_cone_v1.py --check
+python3 proof/build_cycle_217_source_transformation_groupoid_v1.py --check
 ```

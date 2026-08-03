@@ -1,0 +1,244 @@
+{
+  "affine_period_argument_audit": {
+    "E_target_periods": {
+      "omega1_E": [
+        -1,
+        0
+      ],
+      "omega2_E": [
+        0,
+        1
+      ]
+    },
+    "after_F2_raw_periods": {
+      "Omega1": [
+        -115,
+        1
+      ],
+      "Omega2": [
+        1,
+        5
+      ]
+    },
+    "after_F3_period_interpretation": "576*(omega2, omega1)",
+    "after_F3_periods": {
+      "Omega1": [
+        0,
+        576
+      ],
+      "Omega2": [
+        576,
+        0
+      ]
+    },
+    "conclusion": "Even before resolving the C2 sign law, the raw two-step source arrow reaches a swapped/rescaled period pair and a fixed discrete label, not the Cycle-215 E period data.",
+    "epistemic_status": "PROVED",
+    "initial_periods": {
+      "omega1": [
+        1,
+        0
+      ],
+      "omega2": [
+        0,
+        1
+      ]
+    },
+    "raw_argument_after_F2": "-24*(mu+m*omega2), discrete label 0",
+    "raw_argument_after_F3": "576*(mu+m*omega2), discrete label 0",
+    "raw_two_step_periods_match_E_target": false,
+    "residual_source_factors": "Equation (16) contributes two ordinary gamma factors; equation (17) relates the intermediate gamma_M times the final gamma_M to two further ordinary gamma factors. None has been suppressed or declared scalar."
+  },
+  "artifact_id": "cycle-217-b054-source-transformation-groupoid-v1",
+  "budget_ordinal": "B054",
+  "candidate_canonical_orbit_audit": {
+    "candidate_endpoint_matrix": [
+      [
+        5,
+        -24
+      ],
+      [
+        24,
+        -115
+      ]
+    ],
+    "candidate_endpoint_state": [
+      -5,
+      24,
+      115,
+      24
+    ],
+    "candidate_intermediate_state": [
+      5,
+      24,
+      -115,
+      24
+    ],
+    "candidate_word": "C2 then F3",
+    "epistemic_status": "OBSERVED",
+    "matrix_hit": "M_E",
+    "scope_warning": "C2 is only the matrix-level negation of the raw equation-(16) M2. No source-proved Gamma_M sign/cocycle/period law has yet made it an admissible arrow."
+  },
+  "claim_boundary": "The cited raw equations-(16)--(17) matrix orbit has four states and its F3 o F2_raw word reaches -M_E projectively. The tempting k>0 canonicalized word reaches M_E only at matrix level and is OBSERVED because its Gamma_M sign/cocycle/period law is not derived. The raw word instead carries periods to 576*(omega2,omega1) and discrete label zero, not the E target (-omega1,omega2). This does not exhaust a signed-period-cover construction, a new source identity, a source-derived packet map/cocycle, AFK covariance, fusion, Stark, or TCC.",
+  "companion_decision": {
+    "adopted": true,
+    "evidence_scope_review": "C217 proves the complete four-state raw F2/F3 matrix orbit, its projective hit on -M_E, and the decisive affine mismatch: periods 576*(omega2,omega1), argument 576*(mu+m*omega2), and discrete label zero. The k>0 M_E hit remains OBSERVED.",
+    "falsifier": "Any F2/F3 parameter map, four-state closure, period composition, affine argument, discrete-label, residual-factor, M_E comparison, or replay discrepancy invalidates the seal.",
+    "identity": "/root/decision_companion_2",
+    "known_flaw": "The result does not exclude a source-derived sign, swap, or multiplication formula that lifts projective canonicalization and reconciles the factor 576, discrete label, branches, and residual ordinary-gamma factors.",
+    "next_action": "Open a signed-period-cover cycle whose states include oriented/scaled periods, affine arguments, discrete labels, and residual factors; derive sign/swap/576-scaling laws from Gamma_M's product definition before testing whether C2 becomes an admissible arrow.",
+    "reason": "The raw groupoid frozen here is complete and exactly contained; the proposed period cover adds a different state representation and source-law requirement.",
+    "recommendation": "Seal C217 as the completed raw-groupoid audit and open a new cycle; adding a signed/scaled period cover changes the state space and transformation family."
+  },
+  "cycle": 217,
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "equation66_audit": {
+      "path": "scripts/dimension_six_ss_evaluation_audit.py",
+      "sha256": "24c9258e46a1233c552017f3b58de0d45acd0197c8c807579f090ca1332f626f"
+    },
+    "preregistration": {
+      "path": "docs/cycle-217-b054-source-transformation-groupoid-preregistration-v1.md",
+      "sha256": "0d1b6774d8baf1796fe8c24a253fc0b0b7bab7862e1fff283ee429e07d9758c1"
+    },
+    "preregistration_validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    },
+    "prior_direct_e_obstruction": {
+      "path": "artifacts/cycle-215-b052-equation66-e-transport-v1.json",
+      "sha256": "900f167c92c68c292d846694f5f2afa280b26c30ea5e27cfd732f271e8f1efbe"
+    },
+    "prior_reflection_audit": {
+      "path": "proof/verify_cycle_190_balanced_helical_reflection.py",
+      "sha256": "69da849d11c00ec30a5bca1a1220e1616d3d31beb75c8b906e8a67a9b0c98469"
+    },
+    "prior_rotating_path_obstruction": {
+      "path": "artifacts/cycle-216-b053-rotating-period-cone-v1.json",
+      "sha256": "223667885a6507615ba6a73af823e03364f15dfe7127b0c473c3f3b7a5c288e6"
+    },
+    "prototype": {
+      "path": "discovery/cycle-217-b054-source-transformation-groupoid-prototype-v1.json",
+      "sha256": "9dea9b279909d5b799157aeae620cb103bcea7362aa9425e3c0ca1a05aab15e1"
+    },
+    "regression_test": {
+      "path": "tests/test_cycle_217_source_transformation_groupoid.py",
+      "sha256": "38e932b19dbcee430434451fadb8c32b6ced8f4534c196bcaf24ff26fd142729"
+    },
+    "replay": {
+      "path": "proof/verify_cycle_217_source_transformation_groupoid.py",
+      "sha256": "e038ffb0d9ab95d4eb6edfbf99eaf8ddbb046ba52fa46b8cb84b4c2bdeb3b465"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    },
+    "source_paper": {
+      "path": "paper/sic-stark-dimension-six-boundary-fusion.tex",
+      "sha256": "347228e05a87946ca41bb31c118aae069b7fb6002fff4933d030a153cef21cb7"
+    }
+  },
+  "gate_outcome": {
+    "canonicalized_M_E_word": "OBSERVED_MATRIX_ONLY_NOT_SOURCE_AUTHORIZED",
+    "raw_source_matrix_orbit": "PROVED_FINITE_FOUR_STATE_PROJECTIVE_HIT",
+    "raw_two_step_E_period_match": "FALSIFIED",
+    "remaining_design_problem": "Construct a signed-period-cover or other new Gamma_M transformation that validates canonicalization and maps the full affine period/discrete state to the E target before any all-label cocycle test."
+  },
+  "outcome": {
+    "epistemic_status": "PROVED",
+    "statement": "The raw cited F2/F3 matrix orbit has a projective -M_E hit, but its full affine period/argument/discrete state misses the E target; the k>0 M_E hit is quarantined as OBSERVED matrix algebra."
+  },
+  "packet_boundary_audit": {
+    "all_label_t_defects": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "cocycle_cancellation_test_performed": false,
+    "epistemic_status": "PROVED",
+    "reason": "The raw source word does not have the E target period/discrete state, and C2 remains source-unvalidated; testing a fitted packet factor would violate the freeze.",
+    "source_arrow_to_packet_t_a_b_map_available": false
+  },
+  "preregistration_preflight": {
+    "cycle": 217,
+    "manifest_sha256": "0d1b6774d8baf1796fe8c24a253fc0b0b7bab7862e1fff283ee429e07d9758c1",
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "raw_orbit_audit": {
+    "conclusion": "The raw cited matrix orbit is exactly four states and its two-step word reaches -M_E projectively, not the k>0 target representative itself.",
+    "epistemic_status": "PROVED",
+    "f2_and_f3_involutive": true,
+    "raw_orbit_size": 4,
+    "raw_orbit_states": [
+      [
+        -115,
+        24,
+        5,
+        24
+      ],
+      [
+        -5,
+        -24,
+        115,
+        -24
+      ],
+      [
+        5,
+        -24,
+        -115,
+        -24
+      ],
+      [
+        115,
+        24,
+        -5,
+        24
+      ]
+    ],
+    "two_step_matrix": [
+      [
+        -5,
+        24
+      ],
+      [
+        -24,
+        115
+      ]
+    ],
+    "two_step_matrix_is_minus_M_E": true,
+    "two_step_state": [
+      5,
+      -24,
+      -115,
+      -24
+    ],
+    "two_step_word": "F3 o F2_raw"
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_217_source_transformation_groupoid_v1.py --check",
+    "preflight_command": "research prereg check docs/cycle-217-b054-source-transformation-groupoid-preregistration-v1.md --expected-cycle 217 --allow-head-drift",
+    "prototype_command": "python3 proof/verify_cycle_217_source_transformation_groupoid.py --output discovery/cycle-217-b054-source-transformation-groupoid-prototype-v1.json",
+    "test_command": "python3 -m unittest tests/test_cycle_217_source_transformation_groupoid.py",
+    "write_command": "python3 proof/build_cycle_217_source_transformation_groupoid_v1.py --write"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_217_source_transformation_groupoid_v1.py",
+    "sha256": "de6926a7ad2eb52bdfef15c95b91bb084a33dbf60dd5a7ea6787f8c73abd29e3"
+  },
+  "status": "SEALED_RAW_SOURCE_TRANSFORMATION_GROUPOID_AFFINE_MISMATCH"
+}
