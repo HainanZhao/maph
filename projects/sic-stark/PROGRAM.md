@@ -92,8 +92,9 @@
   state space for a signed-product cochain. Cycle 227 proves the enlarged
   transport normal form: generic labels admit no positive-scaling quotient,
   while the `m=0` positive `F3`-even returns retain an ordered ordinary-gamma
-  residual word. The next gate is reduction of that minimal residual block by
-  source-cited ordinary-gamma identities. No endpoint binomial value has been
+  residual word. Cycle 228 excludes reflection and the complete-Delta product
+  decomposition for that minimal block; the next gate is its divisor invariant.
+  No endpoint binomial value has been
   evaluated. No divergent raw contour, periodized beta channel, AFK amplitude
   identity, fusion, or TCC is proved.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
@@ -546,6 +547,10 @@
   exists; only label-zero, positive all-`F3` even paths return a product node,
   and their ordered ordinary-gamma residual words remain. See
   `artifacts/cycle-227-b064-augmented-transport-normal-forms-v1.json`.
+- `PROVED`: Cycle 228 proves the minimal A/C `F3^2` residual blocks have no
+  equation-(32) reflection pairing and are not operands for equation (15).
+  This excludes only those two ordinary-gamma engines. See
+  `artifacts/cycle-228-b065-f3-square-residual-block-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -700,16 +705,16 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 228 minimal residual-block decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `AUGMENTED_NORMAL_FORM_GENERIC_SCALING_QUOTIENT_CONTAINED` | Test whether the source-defined `m=0`, positive `F3^2` residual block reduces by cited ordinary-gamma identities without commuting or dropping factors; only then decide whether a residual-word monoid can support an enlarged cochain construction. | Treating product-node scaling as a factorization loop; using a negative-`k` arrow; cancelling/commuting residuals without a cited identity; fitting a scalar; or inferring a signed extension. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 229 divisor-invariant decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `MINIMAL_RESIDUAL_REFLECTION_PRODUCT_ENGINES_CONTAINED` | Compute full pole/zero divisors of the A/C four-factor blocks and identify an exact uncancelled divisor or a complete cancellation relation before another identity search. | Treating a bounded sample as a divisor proof; cancelling factors without a common pole/zero lattice; using a negative-`k` arrow; or inferring a signed extension. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Does the minimal source-defined `F3^2` ordinary-gamma residual block at
-  label zero reduce to a sourced scalar or cocycle without losing factor order?
+- Do the A/C `F3^2` four-factor blocks have an exact uncancelled pole or zero
+  divisor, proving they are non-scalar before any further identity search?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -718,25 +723,23 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 228 / B065
+## Next goal: Cycle 229 / B066
 
 Preregister one substantive block with this question:
 
-> For the `m=0` positive `F3^2` return at A and C, do the four ordered
-> ordinary-gamma residual factors reduce under specifically cited source
-> reflection/multiplication identities to a scalar or controlled cocycle?
+> Does either `m=0` A/C `F3^2` four-factor residual block carry an exact
+> uncancelled pole or zero divisor on the frozen period domain?
 
-Cycle 228 must freeze both start states, all four residual factors per block,
-the exact allowed ordinary-gamma identity list and hypotheses, factor order,
-and a scalar/cocycle acceptance criterion before executable work. It must keep
-the AFK phase separate, forbid fitted constants and unlicensed cancellations,
+Cycle 229 must freeze both blocks, their complete pole/zero lattice families,
+an exact witness selection rule, and a divisor cancellation criterion before
+executable work. It must keep the AFK phase separate, forbid fitted witnesses,
 and not claim an AFK, fusion, Stark, or TCC consequence.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 227
+research cycle 228
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_227_augmented_transport_normal_forms_v1.py --check
+python3 proof/build_cycle_228_f3_square_residual_block_v1.py --check
 ```
