@@ -23,12 +23,13 @@
   separates a rank-36 two-scale germ from the endpoint boundary, and Cycle
   201 proves that no complex-linear rate-invariant functional can retain that
   germ. Cycle 202 proves that its weight-one normal derivative cannot map by a
-  direct rate-independent linear bridge to C198's nonzero weight-zero values.
-  This rejects neither a geometrically twisted target nor another
+  direct rate-independent linear bridge to C198's nonzero weight-zero values,
+  and Cycle 203 proves the ordinary normal line has no intrinsic inverse
+  trivialization. This rejects neither a logarithmic normal bundle nor another
   source-derived continuation. No divergent raw contour, periodized beta
   channel, AFK amplitude identity, fusion, or TCC is proved; the active gate
-  is an intrinsic inverse normal-line/density construction before exact
-  helical/Zak amplitude matching.
+  is a logarithmic/b-normal endpoint construction before exact helical/Zak
+  amplitude matching.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -317,6 +318,17 @@
   geometrically twisted target, nonlinear/higher-germ construction, or
   non-Abel continuation remains outside the claim. See
   `artifacts/cycle-202-b039-normal-derivative-target-weight-v1.json`.
+- `PROVED`: Cycle 203 derives the exact `A_6` normal multiplier `beta^(-6)`
+  and proves every positive local-coordinate rescaling preserves the declared
+  axis data while rescaling an ordinary inverse normal line. Thus no nonzero
+  intrinsic ordinary inverse density exists; `ds/s` remains a distinct
+  logarithmic object, not an ordinary endpoint cotangent vector. See
+  `artifacts/cycle-203-b040-inverse-normal-line-v1.json`.
+- `B040_CLASS_A_ASSESSMENT`: `CONJECTURED` no Class-A fusion reduction is
+  available. The endpoint-interface chain has produced scoped exact
+  obstructions and a rank-36 germ, not an operational amplitude map; proceed
+  with the distinct logarithmic normal-bundle engine in `B041`, without
+  claiming fusion progress.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -410,7 +422,8 @@ Budget B001--B200
   |    |                                                                                                                                                                                                                      `-- off-support full-character germ [SEALED: rank 36, rate-dependent]
   |    |                                                                                                                                                                                                                           `-- linear regulator-invariant functional [FALSIFIED]
   |    |                                                                                                                                                                                                                                `-- normal derivative to fixed endpoint target [FALSIFIED]
-  |    |                                                                                                                                                                                                                                     `-- intrinsic inverse normal line/density [NEXT GATE]
+  |    |                                                                                                                                                                                                                                     `-- ordinary inverse normal line/density [FALSIFIED]
+  |    |                                                                                                                                                                                                                                          `-- logarithmic / b-normal endpoint construction [NEXT GATE]
   |    +-- arithmetic engine: oriented wild-local RQ-000692 extension
   |    `-- operational bridge
   |         `-- fusion continuity on the A_6 geodesic
@@ -455,16 +468,16 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 203 inverse-normal-line decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `SOURCE_ANALYTIC_FREQUENCY_ENDPOINT_FUNCTIONAL_ON_T6_SEALED_DIRECT_NORMAL_TARGET_MAP_FALSIFIED_INVERSE_NORMAL_LINE_OPEN` | Derive or reject an intrinsic source normal line/density and its inverse trivialization; only a source-defined weight-zero tensor with exact all-36 target covariance may advance to Zak/periodization amplitude matching, including zero modes, capital `Gamma_M`, and separately pinned AFK phase. | Calling a chosen geodesic parameter or numerical division by the Abel rate an intrinsic density; selecting one alias; fitting weights, scalars, trivializations, or a functional; discarding alias holonomy, capital `Gamma_M`, or AFK phase; using selected exponents, SIC outcome variables, or ray labels. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 204 logarithmic-normal-bundle decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `SOURCE_ANALYTIC_FREQUENCY_ENDPOINT_FUNCTIONAL_ON_T6_SEALED_ORDINARY_NORMAL_LINE_FALSIFIED_LOG_NORMAL_BUNDLE_OPEN` | Derive or reject a source-defined logarithmic/b-normal endpoint object and its all-36 covariance; only an exact weight-zero map may advance to Zak/periodization amplitude matching, including zero modes, capital `Gamma_M`, and separately pinned AFK phase. | Treating `ds/s` as an ordinary cotangent vector; choosing a logarithmic scale or target pairing; selecting one alias; fitting weights, scalars, trivializations, or a functional; discarding alias holonomy, capital `Gamma_M`, or AFK phase; using selected exponents, SIC outcome variables, or ray labels. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Does the A_6 source geometry define an intrinsic inverse normal density that
-  twists the rank-36 germ to weight zero and has target covariance on `T_6`?
+- Do `s*d/ds` and `ds/s` define a source-valid logarithmic endpoint category
+  in which the rank-36 germ has a canonical weight-zero target covariance?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -473,28 +486,28 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 203
+## Next goal: Cycle 204
 
 Preregister one substantive block with this question:
 
-> Does the A_6 geodesic and equation-(66) source define an intrinsic normal
-> line/density whose inverse canonically twists the rank-36 normal datum to
-> weight zero, without a chosen regulator scale, fitted trivialization,
-> selected alias, or ray data?
+> Does the equation-(66) source and `A_6` flow admit a logarithmic/b-normal
+> endpoint category in which `s*d/ds` and `ds/s` turn the rank-36 normal germ
+> into a canonical all-36 weight-zero map, without a chosen scale, fitted
+> pairing, selected alias, or ray data?
 
-Cycle 203 must freeze the intrinsic geometry allowed to define a normal line,
-its covariance/trivialization criterion, and the all-row target test before
-executable work. It must distinguish an actual source density from a chosen
-parameter, retain all 24 modes and 36 target characters, and keep capital
-`Gamma_M` and AFK phase separate. It must not select a preferred alias, divide
-by a post-chosen rate, fit a scalar/counterterm/trivialization, use selected
-exponents or ray labels, or claim an AFK, fusion, Stark, or TCC consequence.
+Cycle 204 must freeze the logarithmic state space, source flow action,
+admissible b-geometric pairing, and all-row target test before executable
+work. It must distinguish an actual source logarithmic category from a formal
+symbol, retain all 24 modes and 36 target characters, and keep capital
+`Gamma_M` and AFK phase separate. It must not select a preferred alias, choose
+a logarithmic scale or fitted pairing, use selected exponents or ray labels,
+or claim an AFK, fusion, Stark, or TCC consequence.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 202
+research cycle 203
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_202_normal_derivative_target_weight_v1.py --check
+python3 proof/build_cycle_203_inverse_normal_line_v1.py --check
 ```
