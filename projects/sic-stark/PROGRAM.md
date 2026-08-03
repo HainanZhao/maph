@@ -65,10 +65,14 @@
   word reaches only `-M_E` projectively and carries the full period/argument/
   label state to a swapped, 576-scaled, label-zero state, not the E target.
   Cycle 218 derives the positive scaling and finite swap-index laws but finds
-  the raw negative-`k` state outside the source product domain. No endpoint
-  binomial value has been evaluated. No divergent raw contour, periodized beta
-  channel, AFK amplitude identity, fusion, or TCC is proved; the active gate
-  is a newly constructed signed-`k` extension with compatibility axioms.
+  the raw negative-`k` state outside the source product domain. Cycle 219
+  exhausts the 16 frozen diagonal sign lifts and proves none preserves all of
+  the defining `tau`, `u`, and `tilde-u` product coordinates. This is a
+  diagonal-family obstruction only; a normalized-reflection or other
+  non-diagonal extension remains open. No endpoint binomial value has been
+  evaluated. No divergent raw contour, periodized beta channel, AFK amplitude
+  identity, fusion, or TCC is proved; the active gate is a source-derived
+  non-diagonal signed-`k` extension with compatibility axioms.
 - Strategic update: this plan supersedes Cycle 162's date-based schedule and
   conditional 100-cycle campaign with one forward budget of 200 substantive
   research cycles. Cycle 162 remains an immutable record of the prior decision.
@@ -465,6 +469,13 @@
   endpoint has `k=-24`, so no supplied simultaneous-sign `Gamma_M` law can
   combine those partial facts into a legal E lift. See
   `artifacts/cycle-218-b055-signed-period-cover-v1.json`.
+- `PROVED`: Cycle 219 exhausts all 16 frozen diagonal sign lifts of the raw
+  negative-`k` coordinates. None preserves `tau`, `u`, and `tilde-u`
+  simultaneously; the two lifts preserving the first two force both remaining
+  `tilde-u` coefficients to `-1`. This excludes diagonal lifts only, not a
+  normalized-reflection, theta/Pochhammer, shifted, swapped, or otherwise
+  non-diagonal construction. See
+  `artifacts/cycle-219-b056-signed-k-extension-v1.json`.
 - `CERTIFIED_NUMERICAL`: Cycle 157 found stable two-precision agreement and
   growth for selected normalized packets. This falsifies a naive bounded-
   component target only; it does not settle fusion continuity.
@@ -619,17 +630,18 @@ than pretending fusion continuity is operational.
 
 | Gate | State | Advance condition | Disallowed pseudo-progress |
 |---|---|---|---|
-| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 219 signed-`k` extension decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
-| D6 interface | `SIGNED_PERIOD_PRODUCT_DOMAIN_CONTAINMENT_SEALED` | Define a signed-`k` extension at `k=±24` and prove agreement with the positive product, involutivity, reflection, shifts, and both factorization identities before re-testing the affine E state. | Declaring a convention an extension, checking only a matrix, dropping normalization/branches/residual factors, target fitting, or calling a partial extension a packet theorem. |
+| Project budget | `SEALED_ARTIFACT_ORDINAL_IS_AUTHORITY` | Complete a companion-reviewed substantive Cycle 220 non-diagonal signed-`k` construction decision before opening another counted block. | Counting workflow, correction-only work, or archive-only work. |
+| D6 interface | `DIAGONAL_SIGNED_K_EXTENSION_FALSIFIED_SEALED` | Freeze one source-derived non-diagonal extension candidate (beginning with normalized reflection plus sign reversal), then prove its product-coordinate agreement, involutivity, reflection, shifts, and both factorization identities before re-testing the affine E state. | Treating the 16-case no-go as a general nonexistence result; declaring a convention an extension; checking only a matrix; dropping normalization/branches/residual factors; target fitting; or calling a partial extension a packet theorem. |
 | `RQ-000692` engine | `PARALLEL_DESIGN` | Oriented wild-local regulator equality with exact labels and an explicit interface consequence. | Treating weak absolute values or tame controls as the missing map. |
 | D6 fusion continuity | `BLOCKED_BY_INTERFACE` | After interface passage, prove fusion or a Class-A compact reduction. | `BF_6=>MFC_6` without the missing map. |
 | Pattern mining | `ALLOCATED_B141_B180` | Falsifiable classifier across proved and frontier cases, transferred to the active gate. | Correlation from dimensions alone without structural labels. |
 
 ## Open questions
 
-- Does a uniquely compatible signed-`k` extension exist at `k=±24`, and can it
-  legally lift the raw word to the E period/argument/label state before any
-  all-36 cocycle comparison?
+- Can normalized reflection (33), composed with the required sign reversal,
+  supply one explicitly normalized non-diagonal signed-`k` extension at
+  `k=±24` without violating the defining product coordinates or source
+  functional identities?
 - Can the `RQ-000692` wild-3 local row be crossed while preserving orientation,
   primitive regulator equality, and exact ray labels, and does that supply any
   part of the interface?
@@ -638,24 +650,25 @@ than pretending fusion continuity is operational.
 - Which structural feature predicts Shintani, CM descent, or boundary fusion
   across the proved and frontier dimensions?
 
-## Next goal: Cycle 219 / B056
+## Next goal: Cycle 220 / B057
 
 Preregister one substantive block with this question:
 
-> Can a signed-`k` rarefied `Gamma_M` extension be constructed at `k=±24`
-> that agrees with the source `k>0` product and satisfies involutivity,
-> reflection, shifts, and both S--S factorization identities?
+> Does the source normalized reflection (33), composed with the required
+> sign reversal, define a non-diagonal signed-`k` rarefied `Gamma_M`
+> extension at `k=±24` that agrees with the source `k>0` product and satisfies
+> involutivity, reflection, shifts, and both S--S factorization identities?
 
-Cycle 219 must freeze the extension state, axioms, normalization and branch
-rules, and a smallest exact compatibility census before executable work. It
-must keep capital `Gamma_M` and AFK phase separate, forbid target fitting, and
-not claim an AFK, fusion, Stark, or TCC consequence.
+Cycle 220 must freeze the reflection argument/label map and every correction
+factor before executable work. It must retain capital `Gamma_M` normalization,
+all residual factors, and a branch rule; keep the AFK phase separate; forbid
+target fitting; and not claim an AFK, fusion, Stark, or TCC consequence.
 
 ## Recovery
 
 ```sh
 source ../../tools/dev-env.sh
-research cycle 218
+research cycle 219
 sed -n '1,260p' PROGRAM.md
-python3 proof/build_cycle_218_signed_period_cover_v1.py --check
+python3 proof/build_cycle_219_signed_k_extension_v1.py --check
 ```
