@@ -1,0 +1,70 @@
+{
+  "artifact_id": "cycle-230-b067-f3-square-divisor-coboundary-v1",
+  "audit": {
+    "conclusion": "At the fixed divisor mu=0, every finite-valuation divisor coboundary has valuation zero, but both residuals have valuation -4. No permitted finite-valuation divisor cochain solves the equation.",
+    "epistemic_status": "PROVED",
+    "rows": [
+      {
+        "finite_cochain_coboundary_valuation": 0,
+        "fixed_divisor": "mu=0",
+        "residual_valuation": -4,
+        "solvable": false,
+        "start": "A"
+      },
+      {
+        "finite_cochain_coboundary_valuation": 0,
+        "fixed_divisor": "mu=0",
+        "residual_valuation": -4,
+        "solvable": false,
+        "start": "C"
+      }
+    ]
+  },
+  "budget_ordinal": "B067",
+  "claim_boundary": "No finite-valuation meromorphic divisor cochain solves the residual equation at the fixed divisor; universal-cover or enlarged-action cochains remain open.",
+  "companion_decision": {
+    "adopted": true,
+    "identity": "/root/decision_companion_2",
+    "known_flaw": "Essential/logarithmic cochains remain.",
+    "next_action": "Lift to log mu and test monodromy/descent.",
+    "recommendation": "Seal C230; universal-cover cochain is distinct."
+  },
+  "cycle": 230,
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "prereg": {
+      "path": "docs/cycle-230-b067-f3-square-divisor-coboundary-preregistration-v1.md",
+      "sha256": "da72380f708d0c6db1fc489c4228052de4d0f64a1a677d3932fc2a46d1180325"
+    },
+    "prior": {
+      "path": "artifacts/cycle-229-b066-f3-square-divisor-v1.json",
+      "sha256": "2a38f5332e40a8e07dae28027ad554426ca8a1d4f1d6e0ff8f83c2a44cc2ab69"
+    },
+    "prototype": {
+      "path": "discovery/cycle-230-b067-f3-square-divisor-coboundary-prototype-v1.json",
+      "sha256": "4f8bbfac4ed0cb9425445e92ff33865569dffa77dbb0ae0566a172e63e8eafec"
+    },
+    "replay": {
+      "path": "proof/verify_cycle_230_f3_square_divisor_coboundary.py",
+      "sha256": "a01a7047aff59c2558b34bceff4454aa648092a9e40bcdc719fed810d12c2dcc"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "92f3dbdf7914973db7bfd6290f826c83e8bf60c1495e2a546d9f76d11751d5e1"
+    },
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_230_f3_square_divisor_coboundary_v1.py",
+    "sha256": "22d0d557f296e7b3adcf932f4ad498ffa243edddc74db60c94e01f93b66d6bc9"
+  },
+  "status": "SEALED_FINITE_VALUATION_DIVISOR_COBOUNDARY_OBSTRUCTION"
+}
