@@ -1,0 +1,66 @@
+{
+  "artifact_id": "cycle-78-b078-compatible-spin-endpoint-correction-v1",
+  "budget_ordinal": "B078",
+  "claim_boundary": "The exact endpoint interpolation algebra is retained only conditional on Song--Chen Proposition 3. This correction makes no claim about the truth or falsehood of the compatible-marginal conjecture.",
+  "correction": {
+    "affected_claims": "C78 v1 epistemic status, unconditional theorem claim, and paper/publication readiness.",
+    "cause": "The paper-stage hostile audit checked mathematical applicability but surfaced the repository rule requiring a published theorem or an independent proof.",
+    "error": "A preprint proposition was treated as a published theorem in the PROVED promotion path.",
+    "repair": "Downgrade to a CONJECTURED conditional reduction; require an independent replayable proof of the Q=I/2 endpoint or a peer-reviewed source before promotion."
+  },
+  "cycle": 78,
+  "cycle_decision": {
+    "companion_advice": "Do not publish: internalize the preprint endpoint proof or locate a peer-reviewed version, then rerun hostile audit.",
+    "companion_identity": "/root/oracle_c78_paper_audit (Oracle)",
+    "decision": "Seal the certification correction immediately; retain the mathematical route as conditional rather than silently weakening the record.",
+    "falsifier": "A peer-reviewed theorem or independent proof of the Q=I/2 endpoint removes this certification defect; a counterexample to it refutes the conditional route."
+  },
+  "epistemic_status": "CONJECTURED",
+  "frozen_hashes": {
+    "checker": {
+      "path": "proof/check_cycle78_endpoint_interpolation.py",
+      "sha256": "b949c480c8e8acc89e22f28d92fcd87216fc1031e18719ddce7d3302de2b2976"
+    },
+    "correction": {
+      "path": "docs/cycle78_endpoint_certification_correction.md",
+      "sha256": "59e5c050cfa3246027d8c3c407311bd2ad3f177528d68285ca0c65c562b6b1ca"
+    },
+    "preregistration": {
+      "path": "docs/cycle-78-b078-compatible-spin-endpoint-preregistration-v1.md",
+      "sha256": "53f1d2e83421cf2ac23ca589123450ec70198afa9d82bbd2216313d4b4a13794"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "superseded_record": {
+      "path": "artifacts/cycle-78-b078-compatible-spin-endpoint-v1.json",
+      "sha256": "7542ffb9b8a49579accc884f62f36870baa1b1715aaa4b3a47bcfa1f2e73ede5"
+    },
+    "theorem_note": {
+      "path": "proof/cycle78_endpoint_interpolation.md",
+      "sha256": "8381e4450b7e16425357bb2f253f629537fba5bbbff1b2432e6702c8145cf8a6"
+    },
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "outcome": "C78's endpoint interpolation remains a conditional reduction, but its unconditional PROVED status and paper readiness are withdrawn because Song--Chen Proposition 3 is currently a preprint.",
+  "record_type": "CORRECTION_CERTIFICATION_STATUS_WITHDRAWAL",
+  "recorded_at_utc": "2026-08-05T18:20:00Z",
+  "replay": {
+    "check": "python3 proof/build_cycle_78_endpoint_correction.py --check"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_78_endpoint_correction.py",
+    "sha256": "47429dd0cc6617514c07bb3c9971c5ca7c5eec28710ec2f1066aed72e9f1421f"
+  },
+  "status": "SEALED",
+  "supersedes": "cycle-78-b078-compatible-spin-endpoint-v1"
+}

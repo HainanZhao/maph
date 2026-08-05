@@ -1,0 +1,157 @@
+{
+  "artifact_id": "cycle-26-b026-lrc-width-five-transfer-v1",
+  "audit": {
+    "certified_leaves": [],
+    "epistemic_status": "OBSERVED",
+    "maximum_nondeficit_gap": 49231,
+    "minimum_nondeficit_gap": 20681,
+    "source_recovery": {
+      "U": 65440,
+      "W": 65528,
+      "base_index": 4,
+      "leaf_ordinal": 952,
+      "margin": 88,
+      "support": 176
+    },
+    "status": "PASS",
+    "targets": 60
+  },
+  "budget_ordinal": "B026",
+  "claim_boundary": "Only one inherited sparse weight and one deterministic restriction-selected 5+4+4 partition per target are assessed. This is not a width-five, capacity-dual, or LRC no-go theorem.",
+  "companion_decision": {
+    "falsifier": "A source-mode recovery, independent option/separation, or direct U<W replay mismatch invalidates the affected fresh-LP claim.",
+    "final_action": "Seal this transfer family; do not treat it as a width-five no-go.",
+    "identity": "/root/darwin_cycle25_short",
+    "independent_ideas": [
+      "fresh width-five time-weight LP",
+      "semantic primal lift after equivalence theorem",
+      "individual/cyclotomic character dual"
+    ],
+    "recommendation": "Seal Cycle 26 and open distinct Cycle 27 for a fresh width-five time-weight LP.",
+    "scope_review": "The source certificate is exactly recovered; the all-60 fixed-geometry sweep is independently replayed but tests only one inherited sparse weight.",
+    "strongest_flaw": "The restriction rule yields the same 0-4|5-8|9-12 geometry for all 60 targets, and source recovery does not validate a fresh optimizer."
+  },
+  "cycle": 26,
+  "epistemic_status": "OBSERVED",
+  "frozen_hashes": {
+    "audit": {
+      "path": "proof/check_cycle_26_width_five_transfer.py",
+      "sha256": "c4d25155f1edb278b6a033f61b10159c0cd33335e6b294f4c26b271c3ac8c8f0"
+    },
+    "cnf_base3": {
+      "path": "discovery/out/cycle11-certified-sat/p199/003.cnf",
+      "sha256": "e07cde8b14f19bf2094e2643ac43c6aad6c6d62ade399db270968a479d0ee6c4"
+    },
+    "cnf_base4": {
+      "path": "discovery/out/cycle11-certified-sat/p199/004.cnf",
+      "sha256": "ea4356bd1ff5cdf06fb5504411d0ca57ddc8b3056dc8281c8025d1d24ef60648"
+    },
+    "control": {
+      "path": "discovery/out/cycle26-width-five-transfer/control.json",
+      "sha256": "79ea9450a131e1c1ab2f5ee14bdf1f39f99c43760930d459e5b9ada51248acdb"
+    },
+    "coupled": {
+      "path": "discovery/lrc_coupled_incidence.py",
+      "sha256": "b40d9ff5077b40caaeda0e1622d456ce9e9673c9451bc6cd19d2b58286853469"
+    },
+    "direct": {
+      "path": "discovery/lrc_pair_choice.py",
+      "sha256": "f3faa9c3152467243ec1acfe27310c857cadbbe40b565c7cf51fb6e47318d55a"
+    },
+    "preregistration": {
+      "path": "docs/cycle-26-b026-lrc-width-five-transfer-preregistration-v1.md",
+      "sha256": "bec59f99545f9318646437ea8ddaec91c3ae394b0c5019e7f2520c778ac2992a"
+    },
+    "prior_artifact": {
+      "path": "artifacts/cycle-25-b025-lrc-quadratic-crt-v1.json",
+      "sha256": "61fa41306155dbc55e6853434f2c0d567a6a6a2409c6847934dda902ebf80c68"
+    },
+    "prior_results": {
+      "path": "discovery/out/cycle25-quadratic-crt/results.tsv",
+      "sha256": "aa78578f2e54e7045d6dcf63e1278805d04057e48cd2b3981a4853889074e3d3"
+    },
+    "results": {
+      "path": "discovery/out/cycle26-width-five-transfer/results.tsv",
+      "sha256": "cbc18286a26ddc1b8c3cc8c2378db211d0c5b400be9c1368393972d8cdbef219"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "search": {
+      "path": "discovery/lrc_width_five_transfer.py",
+      "sha256": "5eae6c4da627a559723e500633868d9f0fbcad8a22f9f82be0807067fd2b9845"
+    },
+    "soundness": {
+      "path": "proof/cycle_26_width_five_transfer_soundness.md",
+      "sha256": "02e79f0f8ae363a1d970332b17b9ac88c2213b0a04d26a4a09a1f6b2096c4d38"
+    },
+    "source_artifact": {
+      "path": "artifacts/cycle-22-b022-lrc-width-four-v1.json",
+      "sha256": "512ecc6f854e2400b6ee733fd2d91f8860de50a522820703d44290ad53aab58d"
+    },
+    "source_results": {
+      "path": "discovery/out/cycle22-width-four/stage-b-results.tsv",
+      "sha256": "a89a0532292f188cedc0f5b41a04cb68e2ebcae09ed9514ffba6f0f0941b0c07"
+    },
+    "summary": {
+      "path": "discovery/out/cycle26-width-five-transfer/result.txt",
+      "sha256": "7e0f5fcdd6c2ab157b8fa4a0827fa16fe0e033219b37e6ebe77b38ef4cdc210a"
+    },
+    "test": {
+      "path": "tests/test_cycle_26_width_five_transfer.py",
+      "sha256": "8cfa4a5a6992d8598360b31eabac55ac428ca30a9e259200ae1cfb9a0b0be40b"
+    },
+    "timing": {
+      "path": "discovery/out/cycle26-width-five-transfer/run.time",
+      "sha256": "776f572f49e1e7d17f5c794acc9b7424056322255f3feed351ebf314029df742"
+    },
+    "width_four": {
+      "path": "discovery/lrc_width_four_stage_a.py",
+      "sha256": "3faee2712066bb15014b87b47f58a7be914298965dbf32678ee36485e9a0a9b9"
+    }
+  },
+  "method_outcome": {
+    "epistemic_status": "OBSERVED",
+    "maximum_nondeficit_gap": 49231,
+    "minimum_nondeficit_gap": 20681,
+    "targets": 60,
+    "unresolved": 60,
+    "wall_seconds": 1.438721
+  },
+  "outcome": "The compact 5+4+4 transfer of Cycle 22's proved 176-point weight left all 60 Cycle-25 survivors unresolved; no fresh direct integer deficit was emitted.",
+  "proved_interface": {
+    "epistemic_status": "PROVED",
+    "statement": "The Cycle-22 source witness replays exactly and direct U<W remains a named-leaf exclusion criterion for every frozen coordinate partition."
+  },
+  "record_type": "OBSERVED_FINITE_WIDTH_FIVE_TRANSFER_BOUNDARY",
+  "recorded_at_utc": "2026-08-04T05:48:00Z",
+  "replay": {
+    "audit_command": "taskset -c 0 .venv/bin/python proof/check_cycle_26_width_five_transfer.py",
+    "check_command": ".venv/bin/python proof/build_cycle_26_lrc_width_five_transfer.py --check",
+    "run_command": "taskset -c 0-2 .venv/bin/python discovery/lrc_width_five_transfer.py",
+    "test_command": ".venv/bin/python -m unittest tests.test_cycle_26_width_five_transfer -v"
+  },
+  "resources": {
+    "aggregate_wall_cap_seconds": 3600,
+    "aggregate_wall_seconds": 2,
+    "peak_rss_kib": 132888,
+    "reserved_cpu": 3,
+    "temporary_disk_cap_bytes": 21474836480,
+    "worker_cpus": [
+      0,
+      1,
+      2
+    ]
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_26_lrc_width_five_transfer.py",
+    "sha256": "2ef862b439481fe41d5b4f5f75a2e8fdf1ee3e84d64098fb8f3545f52a0ad075"
+  },
+  "status": "SEALED"
+}

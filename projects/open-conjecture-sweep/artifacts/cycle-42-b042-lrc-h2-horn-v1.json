@@ -1,0 +1,213 @@
+{
+  "artifact_id": "cycle-42-b042-lrc-h2-horn-v1",
+  "audit": {
+    "distinct_interfaces": 409,
+    "first_moment_filling_status": "CONSISTENT",
+    "maximum_h2_q": 40,
+    "nonzero_h2_q": 3893,
+    "raw_interfaces": 3954,
+    "status": "PASS"
+  },
+  "budget_ordinal": "B042",
+  "claim_boundary": "This is a selected ambient-topology census, not all four-type interfaces, not evidence that the Cycle 41 functional fails, not a full degree-four functional, not a leaf certificate, and not LRC(13). Only the first nonzero-H2 interface is coupled to the canonical moment cycle.",
+  "cycle": 42,
+  "cycle_decision": {
+    "companion_identity": "/root/darwin_cycle25_short",
+    "falsifier": "A verified actual moment cycle with nonzero dual-cochain pairing refutes the canonical Cycle 41 transport extension on that interface.",
+    "next_action": "Open Cycle 43 for exact canonical moment-H2 coupling across all 409 structural complexes / 3,954 raw selected interfaces, escalating to coherent face-choice variables if the canonical assignment fails.",
+    "outcome": "SEAL_AMBIENT_TOPOLOGY_AND_OPEN_FULL_MOMENT_COUPLING",
+    "scope_review": "Ambient H2 is abundant and exact, but it is irrelevant to extension unless the actual signed moment cycle has nonzero class; the first actual class fills.",
+    "strongest_flaw": "Only the first of 3,893 nonzero-H2 raw interfaces was moment-coupled, and even a future nonboundary canonical class would not rule out another degree-three choice or degree-four signed functional."
+  },
+  "epistemic_status": "PROVED",
+  "first_interface": {
+    "canonical_cochain_support": 2,
+    "canonical_cycle_support": 8,
+    "canonical_nonboundary_pairing": [
+      -1,
+      1
+    ],
+    "complex": {
+      "edges": 17,
+      "h2_q": 1,
+      "rank_d2_q": 11,
+      "rank_d3_q": 4,
+      "tetrahedra": 4,
+      "triangles": 16,
+      "vertices": 7
+    },
+    "moment_cycle_support": 4,
+    "moment_fill_tetrahedra": 1,
+    "moment_filling_status": "CONSISTENT",
+    "types": [
+      2,
+      5,
+      14,
+      5
+    ]
+  },
+  "frozen_hashes": {
+    "audit": {
+      "path": "proof/check_cycle_42_h2_horn.py",
+      "sha256": "93124bf2e4f94b2979f9f4133dc60085843fc6fb25704dba5d31de0d8f5d584a"
+    },
+    "census": {
+      "path": "discovery/out/cycle42-h2-horn/gf2-census.json",
+      "sha256": "948341955d3c3275878fbe415c5aee9831e364242fea03d30fc97394cfdc1976"
+    },
+    "census_engine": {
+      "path": "discovery/lrc_h2_horn.py",
+      "sha256": "b64440c78b10d3cfd2dc61d16f02f5cc9c3c4848d45978e2e62c7753c37df82a"
+    },
+    "cycle41_artifact": {
+      "path": "artifacts/cycle-41-b041-lrc-multiplied-ideal-v1.json",
+      "sha256": "5bff8d5b4848ad9381404c79de782033e26c3b1bd9d48078a752ae8611df6307"
+    },
+    "first_checker": {
+      "path": "proof/check_cycle_42_first_h2_coupling.py",
+      "sha256": "fc28f2c24a19f82faf538d226b128e8cd7ad930ce6291689505c2a45c856255e"
+    },
+    "first_result": {
+      "path": "discovery/out/cycle42-h2-horn/first-rational-coupling.json",
+      "sha256": "c57ecfa61649341cf51fd82890640b32dbc00e576d9f5b08115290b0f9e977cd"
+    },
+    "first_timing": {
+      "path": "discovery/out/cycle42-h2-horn/run-first-rational.time",
+      "sha256": "3f60acb200dfb1e0c8b8c47d6d72bdfacc4d2676599cdd4e5150cd9a39979d36"
+    },
+    "idea_selection": {
+      "path": "discovery/cycle42_h2_horn_idea_selection.md",
+      "sha256": "2108a801d6a2a979e6e33a9232f23203f4efcfcea29bc80aed45a9d52772ebf4"
+    },
+    "independent_replay": {
+      "path": "proof/replay_cycle_42_h2_horn_independent.py",
+      "sha256": "8c8ee228b111ef5c66bcdb47ebb4a6fdf6af34cf51a21315007f433a40323ef2"
+    },
+    "independent_result": {
+      "path": "discovery/out/cycle42-h2-horn/independent-replay.json",
+      "sha256": "6af808cb2fbaff6bb51f0c626a0c9d4944ffb9ebb249661bc1fabaed78bcde35"
+    },
+    "independent_timing": {
+      "path": "discovery/out/cycle42-h2-horn/run-independent.time",
+      "sha256": "ed30fbe404276ce1623381f1650b738e1d1bb746b3f289ccb63eb0baa1f5f056"
+    },
+    "initial_timing": {
+      "path": "discovery/out/cycle42-h2-horn/run-gf2-census.time",
+      "sha256": "79e9e04d4120b4631b3993b402139d13d8e3da62e695658f11c93a830c480210"
+    },
+    "preregistration": {
+      "path": "docs/cycle-42-b042-lrc-h2-horn-preregistration-v1.md",
+      "sha256": "7b629b6137368b029ae6559558a45223d192cfe15b61b7b10151a0155d106cf8"
+    },
+    "preregistration_validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    },
+    "rational_timing": {
+      "path": "discovery/out/cycle42-h2-horn/run-rational-census.time",
+      "sha256": "40d837aab0d0b7388da02430100fbdc39ba6dd30930249b1a8bc9ff2890f3ca8"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "soundness": {
+      "path": "proof/cycle_42_h2_horn_soundness.md",
+      "sha256": "94b96f7d2802e6d5d280a7effd26b9f42e653fbf90c7c5322770ffb0b684c77c"
+    },
+    "test": {
+      "path": "tests/test_cycle_42_h2_horn.py",
+      "sha256": "0c4a1df38ef9c20480870971db4f543f07a5635f2408294fb017a378cedc3497"
+    }
+  },
+  "homology": {
+    "aggregate_simplices_raw": {
+      "edges": 649947,
+      "tetrahedra": 1676918,
+      "triangles": 1975942,
+      "vertices": 88445
+    },
+    "epistemic_status": "PROVED",
+    "gf2_q_dimension_disagreements": 0,
+    "maximum_elimination_coefficient_bits": 1,
+    "maximum_h2_q": 40,
+    "nonzero_distinct_complexes_q": 354,
+    "nonzero_raw_interfaces_q": 3893
+  },
+  "independent_replay": {
+    "distinct_interfaces": 409,
+    "first_moment_filling_status": "CONSISTENT",
+    "nonzero_h2_q": 3893,
+    "raw_interfaces": 3954,
+    "route": "direct type/signature membership, reverse structural enumeration, and highest-pivot exact elimination",
+    "status": "PASS"
+  },
+  "outcome": "Among 3,954 preregistered four-type interfaces, exactly 3,893 have nonzero rational H2; the actual canonical Cycle 41 moment cycle on the first such interface is nevertheless the boundary of one allowed tetrahedron.",
+  "record_type": "PROVED_SELECTED_AMBIENT_H2_CENSUS",
+  "recorded_at_utc": "2026-08-04T20:20:00Z",
+  "replay": {
+    "audit_command": ".venv/bin/python proof/check_cycle_42_h2_horn.py",
+    "census_command": "taskset -c 0-2 .venv/bin/python discovery/lrc_h2_horn.py",
+    "check_command": ".venv/bin/python proof/build_cycle_42_lrc_h2_horn.py --check",
+    "first_coupling_command": "taskset -c 0 .venv/bin/python proof/check_cycle_42_first_h2_coupling.py",
+    "independent_command": "taskset -c 0-2 .venv/bin/python proof/replay_cycle_42_h2_horn_independent.py",
+    "test_command": ".venv/bin/python -m unittest tests.test_cycle_42_h2_horn -v"
+  },
+  "resources": {
+    "cycle_wall_upper_bound_seconds": 1200,
+    "independent_wall_seconds": 298.53805256201304,
+    "peak_rss_kib": 1084924,
+    "principal_rational_wall_seconds": 108.53563480899902,
+    "reserved_cpu": 3,
+    "temporary_disk_cap_bytes": 5368709120,
+    "worker_cpus": [
+      0,
+      1,
+      2
+    ]
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_42_lrc_h2_horn.py",
+    "sha256": "7923fa49327be532006bcf998ac914109329c36d694ac54987b11677e3159a37"
+  },
+  "selection": {
+    "anchors": [
+      {
+        "h1_gf2": 1,
+        "nonzero_ordinal": 0,
+        "types": [
+          2,
+          5,
+          14
+        ]
+      },
+      {
+        "h1_gf2": 1,
+        "nonzero_ordinal": 34963,
+        "types": [
+          14,
+          68,
+          71
+        ]
+      },
+      {
+        "h1_gf2": 2,
+        "nonzero_ordinal": 69926,
+        "types": [
+          80,
+          1306,
+          1307
+        ]
+      }
+    ],
+    "distinct_structural_complexes": 409,
+    "rank_three_deleted_classes": 0,
+    "raw_interfaces": 3954
+  },
+  "status": "SEALED"
+}

@@ -1,0 +1,116 @@
+{
+  "artifact_id": "cycle-68-b068-s3-fixed-comparison-v1",
+  "audit": {
+    "certificate_charts": 18,
+    "claim": "For every nonnegative a:S3->R, N(a)>=N(a_cl).",
+    "claim_boundary": "PROVED only for the fixed S3 host comparison; this neither proves Zhao's universal condition nor Sidorenko for the target graph.",
+    "epistemic_status": "PROVED",
+    "evidence_hashes": {
+      "discovery/out/cycle68-interior-chord/secant-blowup-sparse-audit.json": "9f71e80046c8e34ad62bae05d079e95a8be8e253831e0ab6fd6aa5a43abcbe6a",
+      "discovery/out/cycle68-interior-chord/secant-blowup/blowup-summary.json": "33889d137b99542de2d2a0f4b787db4c077730b0775947a2a40c1a321447acaf",
+      "discovery/out/cycle68-interior-chord/secant-cover-audit.json": "a99603975da3017c87d8aa04dcf65cdd6c7bb8b2cda3a3f7147a938d8eb4dc7d",
+      "discovery/out/cycle68-interior-chord/secant-secondary-blowup/secondary-blowup-summary.json": "c256159e30f7bfd15778e1816724e0fbfe61e5b4dc94f2c1185b84e676a7f186",
+      "discovery/out/cycle68-interior-chord/secant-stripped/factor-report.json": "a780520fd4b26ef5e2184b99af27748bbbebaaade5508dfc797591109c89c3ff",
+      "discovery/out/cycle68-interior-chord/secant/secant-summary.json": "744e47e8a5992a127659e51bc93454061c3ee1a29e37b8ca6f0e1f5dbfd50998"
+    },
+    "status": "PASS"
+  },
+  "budget_ordinal": "B068",
+  "claim_boundary": "PROVED only for the fixed S3 host comparison; this neither proves Zhao's universal condition nor Sidorenko for the target graph.",
+  "contained_events": {
+    "chord": "Exact witnesses refuted global u-chord dominance but not the theorem.",
+    "resource": "The abandoned full SymPy blow-up audit exceeded the aggregate memory cap; its output is not evidence. The sparse independent audit replaced it."
+  },
+  "cycle": 68,
+  "cycle_decision": {
+    "companion_advice": "After direct source replay and exact chart coverage, seal; do not call this a universal Zhao or Sidorenko proof.",
+    "companion_identity": "/root/darwin_cycle25_short",
+    "decision": "Seal the fixed-S3 theorem. The next distinct question must seek a representation-theoretic or conditional-expectation lift, not an S4/S5 census.",
+    "falsifier": "An exact nonnegative rational S3 function with negative direct deficit."
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "audit": {
+      "path": "proof/check_cycle68_fixed_s3_certificate.py",
+      "sha256": "2c7bd7a90eeab963e11bc041ba9474ea522b753e9c24f0afec3be2db5cb656cd"
+    },
+    "c67": {
+      "path": "artifacts/cycle-67-b067-s3-boundary-positivity-v1.json",
+      "sha256": "49112c9ad1ced71c79c274a6f5f5b95c2b8a5c54f8bc1a5deede743128f7fff0"
+    },
+    "coverage": {
+      "path": "proof/check_cycle68_secant_cover.py",
+      "sha256": "17bbeb431144dc928f397ae70c6c53393f0fcb925183585bb6678ad780ffcf79"
+    },
+    "orbit": {
+      "path": "discovery/out/cycle63-orbit-minimizer/orbit-polynomial.tsv",
+      "sha256": "1966204bef5189f821885223ac7b3a7bcb0828543b6d7dbf28dd2daad8c784c4"
+    },
+    "orbit_reducer": {
+      "path": "proof/cycle63_reduce_orbit.py",
+      "sha256": "26022a7de0299027e4884f7497a8d12cc481bd8f9293f21787908d3e679a2d78"
+    },
+    "prereg": {
+      "path": "docs/cycle-68-b068-s3-interior-chord-preregistration-v1.md",
+      "sha256": "df5f9041d96ae973af789823c9d12638d97c1c0b8927ae2bda254844fbaa8d77"
+    },
+    "primary": {
+      "path": "proof/cycle68_secant_equality_blowup.py",
+      "sha256": "3fa177b37c0e14f209af0b6c2be849eb38cb0b15226e58c2b7fbda3829ff8117"
+    },
+    "replay": {
+      "path": "proof/replay_cycle68_fixed_s3.sh",
+      "sha256": "acdedf14a19b98eb6bdb20d628f1824fec9fcf2bb052c001acd397349323c79d"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "secant": {
+      "path": "proof/cycle68_secant_polynomials.py",
+      "sha256": "4ba3d5c33e0dd66c2531aea70efaae52e3950b35cc1acbbbf5404a773ef16f56"
+    },
+    "secondary": {
+      "path": "proof/cycle68_secant_secondary_blowup.py",
+      "sha256": "d97192fbc7ad63dacd8f722e3cf1a33f77cb441588d5a9d4e09183832221df9e"
+    },
+    "source": {
+      "path": "discovery/out/cycle63-orbit-minimizer/source-polynomial.tsv",
+      "sha256": "64940bd62507415c112c26a72bef08799a97d5db40d7cf79700703ed5c966948"
+    },
+    "source_builder": {
+      "path": "proof/cycle63_s3_source_polynomial.cpp",
+      "sha256": "032a175fb02ce8e38631253c1da5c2e360e4fc013f38cdab767d44f239d85bc5"
+    },
+    "sparse_audit": {
+      "path": "proof/cycle68_blowup_sparse_audit.py",
+      "sha256": "a64a019616f097ee711310df6ba4ea84787313c9cdf583da463e176ff49d5437"
+    },
+    "strip": {
+      "path": "proof/cycle68_strip_boundary_factors.py",
+      "sha256": "3405b12e2a7c98e6d6b914b3cd1c7edee1fb6bad1431a339c297697a684e08aa"
+    },
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "outcome": "For every nonnegative a:S3->R, the fixed-host deficit N(a)-N(a_cl) is nonnegative.",
+  "record_type": "PROVED_FIXED_S3_COMPARISON_THEOREM",
+  "recorded_at_utc": "2026-08-05T14:00:00Z",
+  "replay": {
+    "audit": "python3 proof/check_cycle68_fixed_s3_certificate.py",
+    "check": "python3 proof/build_cycle_68_fixed_s3_certificate.py --check",
+    "full": "bash proof/replay_cycle68_fixed_s3.sh REPLAY_DIR"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_68_fixed_s3_certificate.py",
+    "sha256": "73e9cd7d4c43a867bb6378b9ee75d263310487e7e3c9122f177ba1eef5a6b957"
+  },
+  "status": "SEALED"
+}

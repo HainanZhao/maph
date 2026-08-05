@@ -1,0 +1,127 @@
+{
+  "artifact_id": "cycle-1-b001-lrc-frontier-census-v1",
+  "budget_ordinal": "B001",
+  "claim_boundary": "The frozen exact set-cover DFS reproduced two published l=1 ansatz counts and completed a finite census of 4,748,938 emitted canonical representatives for I(13,199,1). Every emitted frontier row was independently checked for representative shape, strict ordering/uniqueness, and exact modular bad-time coverage. Completeness and full orbit minimality at p=199 still rely on the C++ branch partition and canonicalization proof; there is no second exhaustive frontier enumeration. This proves neither J(13,199)=empty nor LRC(13), and the bounded source audit is not a universal openness or novelty claim.",
+  "companion_decision": {
+    "adopted": true,
+    "falsifier": "A branch-partition counterexample, a noncanonical emitted orbit representative, or a baseline-count change under independently proved canonical augmentation.",
+    "identity": "/root/decision_companion_2",
+    "known_flaw": "The p=199 completeness and orbit count still rest on one DFS/canonicalization implementation.",
+    "next_action": "Open Cycle 2; freeze the partial-cover group action, canonical-augmentation rule, and orbit-representative preservation proof before executable work.",
+    "recommendation": "Seal Cycle 1/B001 as an OBSERVED frontier census and open a distinct Cycle 2 for an orbit-aware exact-cover quotient."
+  },
+  "cycle": 1,
+  "eligibility": {
+    "epistemic_status": "OBSERVED",
+    "primary_boundary": "Sungkawichai--Trakulthongchai, arXiv:2604.23906v1, Theorem 1.3 proves LRC(k) through k=12; Section 7 names I(13,p,1) computation as the next bottleneck.",
+    "statement": "A primary-source and official-OpenAI bounded audit through 2026-08-03 identifies LRC(13), the 14-total-runner case, as the first eligible finite Lonely Runner target."
+  },
+  "epistemic_status": "OBSERVED",
+  "frontier_census": {
+    "canonical_representatives": 4748938,
+    "compressed_tuple_sha256": "5e3c007e90f9bd6e6f0d87bab126f8eb59e3e021df0d3515893fd2f2747402de",
+    "dfs_leaves": 295653716,
+    "dfs_nodes": 5869850724,
+    "epistemic_status": "OBSERVED",
+    "k": 13,
+    "p": 199,
+    "peak_rss_kib": 5178908,
+    "row_recheck": "stream_rechecked=4748938",
+    "statement": "The frozen Cycle-1 DFS completed its full branch traversal for k=13,p=199 and emitted 4,748,938 distinct sorted representatives, each satisfying the exact l=1 improper-tuple predicate.",
+    "wall_seconds_internal": 1472.69
+  },
+  "frozen_hashes": {
+    "baseline_k6_tuples": {
+      "path": "discovery/out/k6-p47.txt",
+      "sha256": "3282243c9bd46b7cf0cb2f57a60fcf75d01df5f3ffdd11fe0ad91f8713170e03"
+    },
+    "baseline_k7_tuples": {
+      "path": "discovery/out/k7-p47.txt",
+      "sha256": "8687bd7725b570baeb72d4d666a52c6b9fcf20204a6c4a036c21c672c9338a4d"
+    },
+    "exact_enumerator": {
+      "path": "discovery/lrc_ansatz_exact.cpp",
+      "sha256": "6654f3d3ee8c662fdef19b1e07bba3703713afd43b04ba917c7242c885281e62"
+    },
+    "frontier_recheck_timing": {
+      "path": "discovery/out/k13-p199-recheck.time",
+      "sha256": "37e3b74cdc470d7075963241ab9d1e057fef7769774312755f30446221ed0b51"
+    },
+    "frontier_result": {
+      "path": "discovery/out/k13-p199.result",
+      "sha256": "9cb6375acf02546509c79eb7ff3d57676ba999b9b0275fd69444a344592d5b44"
+    },
+    "frontier_timing": {
+      "path": "discovery/out/k13-p199.time",
+      "sha256": "d9400663ed01dcc6695a20dfe3cfb5c105436a61d4aa552c2b383965cba049d9"
+    },
+    "frontier_tuples_gzip": {
+      "path": "discovery/out/k13-p199.txt.gz",
+      "sha256": "5e3c007e90f9bd6e6f0d87bab126f8eb59e3e021df0d3515893fd2f2747402de"
+    },
+    "independent_rechecker": {
+      "path": "discovery/check_lrc_ansatz.py",
+      "sha256": "e08356377a8083d74929d061e0a24142b608720cf1bcfd13b26ec2fcbb769c8b"
+    },
+    "preregistration": {
+      "path": "docs/cycle-1-b001-lrc-frontier-preregistration-v1.md",
+      "sha256": "40efa6087803a75169128bd1a48934c938469cf0ef2d42db16d244ad561b97c6"
+    },
+    "preregistration_validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    },
+    "regression_test": {
+      "path": "tests/test_cycle_1_lrc_frontier.py",
+      "sha256": "75294f03ffd8ef1f2f25f10315b536f6c30e04e21503b8fd7d46d888dae295bb"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    }
+  },
+  "known_limitations": [
+    "The independent stream pass validates emitted rows, not omitted branches.",
+    "Full orbit-minimality for every p=199 row was not independently recomputed; the general canonicalization was independently exhausted only on the two p=47 baselines.",
+    "I(13,199,1) is only an initial sieve. It does not establish eventual properness, J(13,199)=empty, a prime-product contradiction, or LRC(13)."
+  ],
+  "published_baseline_reproduction": {
+    "epistemic_status": "OBSERVED",
+    "instances": [
+      {
+        "canonical_count": 53,
+        "k": 6,
+        "p": 47
+      },
+      {
+        "canonical_count": 50,
+        "k": 7,
+        "p": 47
+      }
+    ],
+    "statement": "The exact DFS and an independent brute-force oracle agree tuple-for-tuple with the frozen published counts."
+  },
+  "recorded_at_utc": "2026-08-03T12:49:15Z",
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Construct an orbit-aware exact-cover quotient that preserves every cover orbit, reproduces the 53/50 baselines, and materially reduces the certified node/leaf count at k=13,p=199; later lifting and the full LRC(13) bridge remain open."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_1_lrc_frontier.py --check",
+    "frontier_row_recheck": "python3 discovery/check_lrc_ansatz.py --k 13 --p 199 --tuples discovery/out/k13-p199.txt.gz --stream-recheck --expected-count 4748938",
+    "principal_replay": "g++ -std=c++20 -O3 -DNDEBUG -pthread discovery/lrc_ansatz_exact.cpp -o discovery/out/lrc_ansatz_exact && discovery/out/lrc_ansatz_exact --k 13 --p 199 --threads 8 --max-seconds 3600 --output discovery/out/k13-p199-replay.txt",
+    "test_command": "python3 -m unittest tests/test_cycle_1_lrc_frontier.py -v",
+    "write_command": "python3 proof/build_cycle_1_lrc_frontier.py --write"
+  },
+  "runtime": {
+    "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_1_lrc_frontier.py",
+    "sha256": "24526dbd189a1509c9ebe79388274fdaae08d5350933eec958a2ac7f7112e123"
+  },
+  "status": "SEALED"
+}

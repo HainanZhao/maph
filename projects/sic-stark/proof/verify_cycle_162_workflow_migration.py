@@ -20,7 +20,7 @@ EXPECTED_EFFECTIVE_STARK_CONTEXT_HASH = (
     "1963372c6e82b068844cc9469ddea2e39647d0b7e05e5c9aa4744bed814b7853"
 )
 MUTABLE_WORKFLOW_PATHS = {
-    "PLAN.md",
+    "PROGRAM.md",
     "STATUS.md",
     "research-records.json",
     "research_index_legacy_exceptions.json",

@@ -1,0 +1,116 @@
+{
+  "artifact_id": "cycle-7-b007-lrc-direct-feasibility-v1",
+  "budget_ordinal": "B007",
+  "claim_boundary": "This is a host-specific bounded benchmark of one implementation. It does not prove a lower bound for direct feasibility, rule out another representation or batching strategy, or make any LRC claim.",
+  "companion_decision": {
+    "adopted": true,
+    "falsifier": "A reproducible bounded exact implementation meeting the frozen p99 gate, or any cache/certificate/tuple defect.",
+    "flaw": "Single-host sample cannot rule out a different exact representation or batching strategy.",
+    "identity": "/root/decision_companion_2",
+    "next_action": "Freeze a lift-compatible fused state space and retained-path invariant.",
+    "recommendation": "Seal Cycle 7 as a performance-gate failure; open distinct Cycle 8 for fused cover/lifting."
+  },
+  "controls": {
+    "h11_direct_oracle_rows": 96,
+    "k6_direct_prunes": 47,
+    "k6_tuples": 53,
+    "k7_direct_prunes": 159,
+    "k7_tuples": 50,
+    "tuple_comparison": "BYTE_IDENTICAL_TO_CYCLE_4"
+  },
+  "cycle": 7,
+  "epistemic_status": "OBSERVED",
+  "frozen_hashes": {
+    "benchmark": {
+      "path": "discovery/lrc_direct_feasibility_benchmark.cpp",
+      "sha256": "5cf912b6cef4112418b460465bdde8cba306f7d5d7f54ad3f3dd5663533a1a4c"
+    },
+    "benchmark_first": {
+      "path": "discovery/out/cycle7-direct-strata.txt",
+      "sha256": "ba19cc7f0f51ef0a1bffe0a57254105fe6a16651d6ccbf7fd15698bec9f065ce"
+    },
+    "benchmark_replay": {
+      "path": "discovery/out/cycle7-direct-strata-replay.txt",
+      "sha256": "6cc1294122191b069839c76b431599dc1fc6bec2288934b689e64c817cb9ceec"
+    },
+    "h11_direct_oracle": {
+      "path": "proof/check_cycle_6_direct_oracle.py",
+      "sha256": "25390dfab957f38544d98575391ebceba8b2495d934d6cc114f6d0f170725f1b"
+    },
+    "k6_result": {
+      "path": "discovery/out/cycle7-k6.result",
+      "sha256": "fa5a86535f8ed9fb88349e10d69758696c4846aec5f0c41c41cd6a8db907132e"
+    },
+    "k6_tuples": {
+      "path": "discovery/out/cycle7-k6.txt",
+      "sha256": "3282243c9bd46b7cf0cb2f57a60fcf75d01df5f3ffdd11fe0ad91f8713170e03"
+    },
+    "k7_result": {
+      "path": "discovery/out/cycle7-k7.result",
+      "sha256": "4e877a82a5ac5c13203ac692b87f98b85d06da72a28be255efddac2870fce705"
+    },
+    "k7_tuples": {
+      "path": "discovery/out/cycle7-k7.txt",
+      "sha256": "8687bd7725b570baeb72d4d666a52c6b9fcf20204a6c4a036c21c672c9338a4d"
+    },
+    "partition_engine": {
+      "path": "discovery/lrc_direct_partitioned.cpp",
+      "sha256": "02e39ded3a2d164ea6b1e820a9e878450d4f4e9efce08de7ce45abc3b7fdf6c5"
+    },
+    "preregistration": {
+      "path": "docs/cycle-7-b007-lrc-direct-feasibility-preregistration-v1.md",
+      "sha256": "dff01abbba6520215a1790388dde7474d5d18ca8a820f9a30ca9c4869c723b89"
+    },
+    "regression_test": {
+      "path": "tests/test_cycle_7_lrc_direct_feasibility.py",
+      "sha256": "031ec2bbe172033a97cd364e1667ab69afd67d23b27dead3f206e7dcf43517b2"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "soundness_argument": {
+      "path": "proof/cycle_7_direct_feasibility_soundness.md",
+      "sha256": "ad5e04b3977e5663c33fb1338c143568ead127f7039621f892204ff579fb0498"
+    },
+    "strata": {
+      "path": "discovery/out/cycle7-stratified-p199.txt",
+      "sha256": "2d44632aad9e39293f55f0cad25142a2ee6c9efc55e9e2541ddcb58b3ab6f8a6"
+    },
+    "strata_builder": {
+      "path": "discovery/make_cycle_7_strata.py",
+      "sha256": "3555a37145dcc66d26dd1bb73ce8d8806bfbea4c6e0e6eae7f32dd5784e112f2"
+    }
+  },
+  "outcome": "The exact direct FEAS implementation is sound on frozen controls but fails the preregistered full-frontier performance gate; no full frontier was run.",
+  "performance_gate": {
+    "caps": 0,
+    "epistemic_status": "OBSERVED",
+    "feasible": 134,
+    "infeasible": 866,
+    "outcome": "FAILED",
+    "p99_nanoseconds_first": 31482867,
+    "p99_nanoseconds_replay": 30988241,
+    "peak_rss_kib": 1018424,
+    "required_p99_nanoseconds": 100000,
+    "stratified_rows": 1000
+  },
+  "record_type": "PERFORMANCE_GATE",
+  "recorded_at_utc": "2026-08-03T16:22:00Z",
+  "replay": {
+    "check_command": "python3 proof/build_cycle_7_lrc_direct_feasibility.py --check",
+    "direct_oracle_command": "python3 proof/check_cycle_6_direct_oracle.py",
+    "test_command": "python3 -m unittest tests/test_cycle_7_lrc_direct_feasibility.py -v"
+  },
+  "runtime": {
+    "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_7_lrc_direct_feasibility.py",
+    "sha256": "44eac9285466f34ee77cb25e0444c2d7cf9a61c83e2e3cce23d992fad4b4d422"
+  },
+  "status": "SEALED"
+}

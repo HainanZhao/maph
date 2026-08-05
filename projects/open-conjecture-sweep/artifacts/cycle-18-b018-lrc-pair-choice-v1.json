@@ -1,0 +1,156 @@
+{
+  "artifact_id": "cycle-18-b018-lrc-pair-choice-v1",
+  "bounded_search": {
+    "base3_candidates": 4,
+    "base4_candidates": 0,
+    "epistemic_status": "OBSERVED",
+    "interpretation": "The small gain makes broader enumeration of the same frozen pair family lower value, but proves no general no-go.",
+    "unresolved_rows": 76
+  },
+  "budget_ordinal": "B018",
+  "certificate_theorem": {
+    "epistemic_status": "PROVED",
+    "statement": "For a disjoint singleton/pair partition, count each weighted time once per block; any full cover has W<=U_P, so U_P<W is a contradiction."
+  },
+  "claim_boundary": "Only the four stored base-3 pair-choice inequalities are newly PROVED. The frozen engine reported no candidate on 76 other rows, but this bounded numerical search outcome is OBSERVED and does not rule out other partitions, weights, larger blocks, symbolic cases, CRT, complete base exclusion, F_1, J, or LRC(13).",
+  "companion_decision": {
+    "falsifier": "Any leaf/base/partition mismatch or reconstructed inequality with U_P>=W invalidates the affected certificate.",
+    "identity": "/root/decision_companion_2",
+    "independent_ideas": [
+      "first-seven-coordinate symbolic case split",
+      "exact fractional primal/integrality-gap witnesses",
+      "CRT after a coverage-equivalence test"
+    ],
+    "next_action": "Open Cycle 19: freeze a symbolic first-seven-coordinate grammar guided by exact fractional structure; every closed branch ends in an exact Hall or DRAT certificate.",
+    "recommendation": "Seal Cycle 18 after audit and open a distinct symbolic cycle; do not expand pair partitions.",
+    "scope_review": "After independent reconstruction, only four named base-3 leaves are new exact eliminations; 76 target rows remain unresolved.",
+    "strongest_flaw": "Four asymmetric hits give weak evidence about pair coupling, and the frozen partitions may miss the relevant interaction."
+  },
+  "cycle": 18,
+  "epistemic_status": "PROVED",
+  "exact_result": {
+    "base3_leaf_ordinals": [
+      83,
+      121,
+      952,
+      979
+    ],
+    "base3_new_certificates": 4,
+    "base4_new_certificates": 0,
+    "combined_base3_certified": 6048,
+    "combined_base4_certified": 6044,
+    "complete_bases": 0,
+    "epistemic_status": "PROVED",
+    "strict_margins": [
+      13,
+      21,
+      13,
+      21
+    ],
+    "target_rows": 80
+  },
+  "frozen_hashes": {
+    "audit": {
+      "path": "proof/check_cycle_18_pair_choice.py",
+      "sha256": "a3ca7288745b316df2fcbf75f9f0b560dd8de03a4207e78fe12efef41ed4ba4b"
+    },
+    "audit_timing": {
+      "path": "discovery/out/cycle18-pair-choice/audit.time",
+      "sha256": "0d27c7148fc322fd5414a5594e6cc3a735a8b869ed19fc8e6beb44867c57f488"
+    },
+    "base3_cnf": {
+      "path": "discovery/out/cycle11-certified-sat/p199/003.cnf",
+      "sha256": "e07cde8b14f19bf2094e2643ac43c6aad6c6d62ade399db270968a479d0ee6c4"
+    },
+    "base4_cnf": {
+      "path": "discovery/out/cycle11-certified-sat/p199/004.cnf",
+      "sha256": "ea4356bd1ff5cdf06fb5504411d0ca57ddc8b3056dc8281c8025d1d24ef60648"
+    },
+    "cycle17_bounded": {
+      "path": "discovery/out/cycle17-time-deficit/results.tsv",
+      "sha256": "0e3fcf08b7c168b1abef2307574e0f2896853f6691a924f1b14ef64c0c41f06e"
+    },
+    "cycle17_lp": {
+      "path": "discovery/out/cycle17-time-deficit/lp-results.tsv",
+      "sha256": "da5f5f926d317e07e662002ac722e2422f22beb47f15e4b55815be98540f935e"
+    },
+    "engine": {
+      "path": "discovery/lrc_pair_choice.py",
+      "sha256": "f3faa9c3152467243ec1acfe27310c857cadbbe40b565c7cf51fb6e47318d55a"
+    },
+    "preregistration": {
+      "path": "docs/cycle-18-b018-lrc-pair-choice-preregistration-v1.md",
+      "sha256": "b0dc79f6d20f70ba5b4a9545bd46136ab9bf895ea68455b45d238b05d70e01c9"
+    },
+    "prior_artifact": {
+      "path": "artifacts/cycle-17-b017-lrc-time-deficit-v1.json",
+      "sha256": "71460c48d17b58b366bf0ef415b7b16f5636bb6bc8381b28608b6ebaf318fb35"
+    },
+    "requirements": {
+      "path": "requirements-cycle17.txt",
+      "sha256": "ff5d0c36b5024e0b76b1eb815d52ff00cee3ab78523f3419b5006f728b02b7a4"
+    },
+    "result": {
+      "path": "discovery/out/cycle18-pair-choice/result.txt",
+      "sha256": "0f21c224f0bd4a659336a1f9653aa54ec22ef054b1c07056a8c5018fd5ffec54"
+    },
+    "results": {
+      "path": "discovery/out/cycle18-pair-choice/results.tsv",
+      "sha256": "7317d2285b0db951e8fffda50aab031c4c80a24c2ffdf863bd2052705057507c"
+    },
+    "run_timing": {
+      "path": "discovery/out/cycle18-pair-choice/run.time",
+      "sha256": "e54784df887af49ed0c041336b942491274981656bcc6d2777acf3d38387ebd7"
+    },
+    "sample_bases": {
+      "path": "discovery/out/cycle8-p199-strata.txt",
+      "sha256": "327334cf85b821a77b254420d0617c8771a9f272cf38b2512ab79c937de4299b"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "soundness": {
+      "path": "proof/cycle_18_pair_choice_soundness.md",
+      "sha256": "265c758036f95b292bbf099b2ff64e9db1f47b1f0d09b9b02b24b9818a96b4f1"
+    },
+    "test": {
+      "path": "tests/test_cycle_18_pair_choice.py",
+      "sha256": "7a20e2d702b13dd828e0a0966d815758431b8e24e142fc0743f7fcf7b16d9903"
+    }
+  },
+  "outcome": "The pair-choice Hall inequality is exact, and independent reconstruction validates four strict integer deficits for frozen base-3 leaf ordinals 83, 121, 952, and 979. Combined with Cycle 17, this raises base 3 to 6,048 of 6,084 certified canonical leaves while base 4 remains at 6,044. No base is complete.",
+  "record_type": "CERTIFIED_FINITE_RESULT",
+  "recorded_at_utc": "2026-08-03T21:55:52Z",
+  "replay": {
+    "audit_command": "python3 proof/check_cycle_18_pair_choice.py",
+    "check_command": "python3 proof/build_cycle_18_lrc_pair_choice.py --check",
+    "run_command": "taskset -c 0-2 .venv/bin/python discovery/lrc_pair_choice.py",
+    "test_command": "python3 -m unittest tests/test_cycle_18_pair_choice.py -v"
+  },
+  "resources": {
+    "aggregate_wall_cap_seconds": 3600,
+    "aggregate_wall_seconds": 380.85,
+    "dependency_environment_bytes": 235737075,
+    "output_corpus_bytes": 14691,
+    "peak_rss_kib": 176048,
+    "reserved_cpu": 3,
+    "runtime": "CPython 3.12.3, numpy 2.2.6, scipy 1.14.1",
+    "temporary_disk_cap_bytes": 21474836480,
+    "worker_cpus": [
+      0,
+      1,
+      2
+    ]
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_18_lrc_pair_choice.py",
+    "sha256": "dea7ede431e1d521006a57b0f815303d48d203bc824d7fb42ddbec2109e2be28"
+  },
+  "status": "SEALED"
+}

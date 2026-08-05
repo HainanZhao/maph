@@ -48,6 +48,13 @@ change, or an external handoff/publication. Otherwise keep the work live in
 its one preregistration and `discovery/`; no artifact, status update, or
 handover is needed.
 
+Do not seal an intermediate resource-cap result while the same engine,
+decision question, and method family are still being pursued with an
+optimization or a larger authorized resource tranche. Keep that cycle live
+and seal only the resulting strategic boundary. A premature seal remains
+immutable and is superseded by a correction in the same cycle; it does not
+justify consuming a new cycle.
+
 The `b<ordinal>` filename segment is the campaign-budget ordinal and must
 agree with the record payload; it makes budget use discoverable without a
 separate live counter. Legacy sealed names remain unchanged.
@@ -120,17 +127,87 @@ it. Reuse the live cycle and its one preregistration for that related work; do
 not create a cycle merely to name an intermediate decomposition,
 factorization, failed subtest, or bookkeeping repair.
 
-Open a new cycle only when a material decision selects a genuinely different
-research question or frozen method family, or when a correction, external
-result, resource boundary, or irreversible gate/status decision requires a
-separate record. If new work would invalidate its executed freeze, contain it
-as a result of the live cycle and open a new one only at that decision
-boundary; never evade the freeze by minting a routine successor cycle.
+Before opening any new cycle, perform an explicit creative idea-selection pass
+in scratch. Generate genuinely different mechanisms—not only variants of the
+last tool—including new state spaces, invariants, dualities, inversions,
+countermodels, and constructions. Formulate the decision question for each
+serious candidate, then question the questioning itself: why this question,
+why now, which assumption or inherited framing makes it misleading, what
+important question the candidate prevents us from seeing, and what simpler or
+more discriminating alternative was rejected. Distrust a familiar formulation
+merely because it is easy to execute. Choose one idea only after that
+adversarial comparison. Record the chosen question, the main rejected
+alternative, and the falsifier in the preregistration; do not turn the scratch
+brainstorm into a recurring report or a separate artifact.
 
-Keep scratch in `discovery/` and promote only the conclusion. Run the relevant
-replay and commit only when it is useful; do not commit, seal, regenerate
-status, or write a handover after each lemma or subtest. Use a correction only
-for a genuine post-seal defect.
+Open a new cycle only when a material decision selects a genuinely different
+research question or frozen method family, or when an external result or
+irreversible gate/status decision changes the research question. A larger
+resource tranche, faster implementation, storage-layout change, scheduling or
+parallelism change, deterministic replay, additional validation, failed cap,
+or bookkeeping correction remains in the same cycle while the engine and
+decision question are unchanged. Amend the live preregistration before the
+new execution and retain the earlier tranche as a contained result. If a
+resource continuation follows a premature seal, issue a same-cycle correction
+instead of minting a successor cycle. Never evade the cadence by renaming
+routine continuation as a new method family.
+
+Keep scratch in `discovery/` and promote only the conclusion. Replay and commit
+only when useful; do not seal, regenerate status, or write a handover after
+each subtest. Corrections are only for genuine post-seal defects.
+
+### Closure postmortem
+
+Whenever a problem is solved, refuted, closed for eligibility loss, saturated,
+or otherwise stopped, run one lightweight **postmortem cycle** before selecting
+the next problem. It is a non-budgeted closure decision block, not an attack
+cycle and not a substitute for paper work. Record one concise entry in the
+root POSTMORTEMS.md: problem/cycle, stop trigger and evidence, the assumption
+or check that failed or succeeded, the reusable rule, and the concrete
+next-screen change. Do not repeat the project strategy, reproduce logs, or
+write a handover. The postmortem must change a future decision or be omitted;
+its purpose is durable repository learning, not ceremony. This requirement
+also applies when the whole project closes; no successor problem may be chosen
+until its closure entry exists.
+
+### Research delegation
+
+Use subagents when two or more genuinely independent research tracks can run
+in parallel with light compute and little shared state—for example literature
+checks, proof derivations, or small code reviews. Skip delegation for a small
+task. Do not delegate CPU-, memory-, disk-, or runtime-heavy work: subagents
+share this machine, so centralize that work and obey the aggregate compute
+caps below. The primary agent owns integration and epistemic labeling.
+
+### Critical-decision companion (Oracle)
+
+Name the companion **Oracle** in every program. Use Oracle only for problem
+selection, a material fork or seal, a post-result cycle decision, or
+publication. Oracle is a co-planner, not a yes/no approver: it and the primary
+agent independently propose ideas, review evidence, challenge framing, and
+compare falsifiers, cost, and expected information gain.
+
+Invoke Oracle with `gpt-5.6-sol` and `high` reasoning effort or higher. Do
+not downshift Oracle for convenience: its role is reserved for the decisions
+where the best available conceptual review is worth the added deliberation.
+
+Oracle's standing philosophy is **question → question the questioning →
+brainstorm**. First question the inherited target, evidence, assumptions,
+state space, success criterion, and reason it is being asked now. Next question
+that critique itself: identify which familiarity, computability, prestige,
+recent failure, or inherited vocabulary may be biasing what Oracle treats as
+the problem, and name the important question the critique could still hide.
+Only after those two adversarial passes may Oracle brainstorm. That brainstorm
+must include genuinely different problems or mechanisms—not variants of the
+incumbent—and then rank them by falsifier, exact or rigorous verifier, cost,
+expected information gain, and credible path to closure. Oracle's packet must
+briefly expose this reasoning, not merely output a choice.
+
+For problem selection, the primary supplies its independent analysis; Oracle
+selects and records alternatives, strongest flaw, falsifier, information gain,
+and stop/pivot criterion. The primary executes the choice. At other forks,
+Oracle advises and the primary decides. Use one concise evidence packet and do
+not invoke, poll, or wait for Oracle during ordinary research.
 
 ### One live specification per cycle
 
@@ -308,6 +385,24 @@ Never conceal, erase, or silently work around a listed finding.
 
 - Re-read a file immediately before editing it.
 - Timebox exploration and preserve negative results as artifacts.
+- Treat runtime as the scarce resource in compute-heavy research. Before a
+  long run, optimize the hot path, compile with appropriate production
+  optimizations, and benchmark a representative exact control. Do not spend
+  hours on an avoidably slow implementation merely because code changes are
+  cheap.
+- Parallelize independent deterministic search work by default. On a shared
+  machine with `N` available CPUs, use at most `N-1` CPUs unless the user says
+  otherwise, leaving one CPU for the system and other work. Prefer balanced
+  or dynamic sharding, verify that shard union equals the unsharded search on
+  a small exact control, and enforce preregistered time, node, leaf, and memory
+  caps in aggregate rather than once per worker.
+- For future authorized disk-heavy runs, measure free space immediately before
+  preregistration and set the aggregate temporary-disk cap to at most that
+  free space minus 5 GiB, reserving the 5 GiB for the system and other work.
+  Log the byte-level measurement and cap, recheck free space at launch, and
+  stop naturally if concurrent use erodes the reserve. Do not reinterpret
+  total filesystem capacity as available space or alter an already-running
+  process merely because this default was added later.
 - Record wall time and peak memory for principal replays.
 - Treat a transient slow-server, spinner, or dismissible wait notice as
   already dismissed: continue safe local work or wait/retry silently. Surface

@@ -1,0 +1,228 @@
+{
+  "artifact_id": "cycle-50-b050-lrc-deletion-aware-packet-v1",
+  "audit": {
+    "buffer_incomplete": 2,
+    "contracted": 29048,
+    "epistemic_status": "PROVED",
+    "reason": "The frozen deletion-aware triple packet fixes three of the five C49 residuals, but the unchanged pair-fiber stage still fails on two (2,2,4) interfaces. The sole authorized theorem is false; no second packet family is permitted.",
+    "remaining_failures": [
+      {
+        "pivot": [
+          9,
+          9,
+          11
+        ],
+        "stage": "PAIR_01",
+        "status": "BUFFER_INCOMPLETE",
+        "support_sizes": [
+          2,
+          2,
+          4
+        ],
+        "types": [
+          4,
+          5,
+          35
+        ]
+      },
+      {
+        "pivot": [
+          9,
+          9,
+          11
+        ],
+        "stage": "PAIR_01",
+        "status": "BUFFER_INCOMPLETE",
+        "support_sizes": [
+          2,
+          2,
+          4
+        ],
+        "types": [
+          4,
+          6,
+          35
+        ]
+      }
+    ],
+    "resources": {
+      "independent_wall_seconds": 65.70831501399516,
+      "maximum_fraction_bits": 2,
+      "packet_moves_principal_and_independent": 10,
+      "principal_wall_seconds": 65.27301061499747,
+      "temporary_disk_bytes": 4912
+    },
+    "selected_type_triples": 29050,
+    "status": "THEOREM_FAIL"
+  },
+  "budget_ordinal": "B050",
+  "claim_boundary": "This is a scoped falsifier of the triple-only actual-mask relaxation plus the inherited C49 pair stage. It is not a terminal relative-homology obstruction, does not exclude a new pair-fiber theorem, and does not prove LRC(13). C50's stop rule prohibits adding that new local family here.",
+  "controls": {
+    "claim_boundary": "Controls prove only the selector algebra and declared positive/negative states; they do not classify the full p199 domain.",
+    "epistemic_status": "PROVED",
+    "exhaustive_actual_mask_checks": 17120,
+    "negative_no_admissible_packet": {
+      "status": "NO_ADMISSIBLE_PACKET",
+      "supports": [
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    "repeated_alternative_positive": {
+      "alternatives": [
+        10,
+        10,
+        12
+      ],
+      "status": "CONTRACTED",
+      "types": [
+        4,
+        4,
+        5
+      ]
+    },
+    "stage": "DELETION_AWARE_PACKET_CONTROLS",
+    "status": "PASS"
+  },
+  "cycle": 50,
+  "cycle_decision": {
+    "handoff_point": "C49/C50 establish a sharp local boundary: triple deletion-aware packets cure all (2,2,2) residuals but do not cure the two (2,2,4) pair-fiber failures.",
+    "not_authorized": [
+      "another local exception rule",
+      "per-face Gaussian elimination",
+      "an enlarged local fill census",
+      "Cycle 51 on pair packets without a new project decision"
+    ],
+    "outcome": "PAUSE_PROBLEM_1_AND_HANDOFF",
+    "reason": "C50 reached its preregistered theorem falsifier. The remaining two rows require a distinct pair-fiber method family, which the C50 stop rule expressly forbids adding."
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "audit": {
+      "path": "proof/check_cycle_50_deletion_aware_packet.py",
+      "sha256": "8d70bc79b9c6e042b474e5db21f1297e8274bcbedb985c9f0a4b6fd36a945d2b"
+    },
+    "c49_full_audit": {
+      "path": "discovery/lrc_relative_diagonal_full_audit.py",
+      "sha256": "341cef8a1397f2371d6ad2a5d300a230ac93d820b84682affa3104e6901a77f9"
+    },
+    "c49_inventory": {
+      "path": "discovery/lrc_relative_diagonal_inventory.py",
+      "sha256": "74bf5a5c73e4919bd08b8b97d7c195a02887fca4a91444449a9399b88b607568"
+    },
+    "c49_relative_module": {
+      "path": "discovery/lrc_relative_diagonal.py",
+      "sha256": "3d73fad7547a0a1448fc67898607b8588c0aa06babf2cfa6ffb7f0079d43175f"
+    },
+    "controls": {
+      "path": "discovery/out/cycle50-deletion-aware-packet/controls.json",
+      "sha256": "8edee0e531e6876c586eb13e1851548d4dbd35c4e626a57ab277eccc289df339"
+    },
+    "controls_engine": {
+      "path": "discovery/lrc_deletion_aware_packet_controls.py",
+      "sha256": "d1707f3a1a1d30477b65ccf080d54060ebdbd2795006fae0c868d8a3d5c11e7b"
+    },
+    "cube_rewrite": {
+      "path": "discovery/lrc_cube_rewrite.py",
+      "sha256": "106a237501b9bf115e8df265c2075f0605c6a7776c1bd8fdd870adc1b01e4de9"
+    },
+    "cycle49_artifact": {
+      "path": "artifacts/cycle-49-b049-lrc-relative-diagonal-contraction-v1.json",
+      "sha256": "c71f6cafaf9724be1458e9fc14af6d4ec69cc2d24b5c355b98006788dd76c76a"
+    },
+    "idea_selection": {
+      "path": "discovery/cycle50_deletion_aware_packet_idea_selection.md",
+      "sha256": "72c0cb9ef4400ce9900cbc66bd07bd834699d84e2b6c06ed4ef11ad0917b51cb"
+    },
+    "independent_engine": {
+      "path": "proof/replay_cycle_50_deletion_aware_independent.py",
+      "sha256": "866ec4123662b0ec902d144e316eea9de0996f551a75c79c9335a50f4216d849"
+    },
+    "independent_result": {
+      "path": "discovery/out/cycle50-deletion-aware-packet/independent-replay.json",
+      "sha256": "075a1ecd890a4279f5bca43990b4cc727a908c59ef906fa5aa94d3479a3e80b2"
+    },
+    "independent_timing": {
+      "path": "discovery/out/cycle50-deletion-aware-packet/run-independent.time",
+      "sha256": "17505bc0beb17698b4b51192f22f8662cb1e4e100ff0e9651bb970f9ff309323"
+    },
+    "packet_module": {
+      "path": "discovery/lrc_deletion_aware_packet.py",
+      "sha256": "faeb7a9151cab607e044f854851729b980cb2b627ee136df1111574a9d34f20c"
+    },
+    "preregistration": {
+      "path": "docs/cycle-50-b050-lrc-deletion-aware-packet-preregistration-v1.md",
+      "sha256": "55339ee28fc9ff70cd8017612460fdda20d27a8d9d13509ddd10aca90baaafbb"
+    },
+    "preregistration_validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    },
+    "principal_engine": {
+      "path": "discovery/lrc_deletion_aware_packet_full.py",
+      "sha256": "ac08d6ab85fdcd73f5c84a1417e45e5d664163447cc39bf4cdd569c1987a0c34"
+    },
+    "principal_result": {
+      "path": "discovery/out/cycle50-deletion-aware-packet/full-pattern-census.json",
+      "sha256": "98cab0bc9e292d3af3de81221664818256a13aeb9b7b76855da2949941cc4f76"
+    },
+    "principal_timing": {
+      "path": "discovery/out/cycle50-deletion-aware-packet/run-full-pattern-census.time",
+      "sha256": "d839fc6140f8afc7b864e773bf5cef2465536b44bedf5518187ba975072a0d36"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "soundness": {
+      "path": "proof/cycle_50_deletion_aware_packet_soundness.md",
+      "sha256": "0dc761be15df261357c900f6be057cfa58e539a389e7e0910366e41803d0100d"
+    },
+    "test": {
+      "path": "tests/test_cycle_50_deletion_aware_packet.py",
+      "sha256": "88ffb9cd3631b99414823b7c7d413701b23da3c5ab43a2bd451bf181fc153a05"
+    }
+  },
+  "outcome": "The sole preregistered deletion-aware triple-packet theorem is false. Its uniform actual-mask rule contracts 29,048 of 29,050 complete selected p199 interfaces, including three of the five C49 residuals, but leaves exactly (4,5,35) and (4,6,35) BUFFER_INCOMPLETE at the unchanged 01 pair-fiber stage. Principal and independent reverse-order reconstructions agree exactly.",
+  "record_type": "PROVED_DELETION_AWARE_TRIPLE_PACKET_THEOREM_FAIL",
+  "recorded_at_utc": "2026-08-05T08:00:00Z",
+  "replay": {
+    "audit_command": ".venv/bin/python proof/check_cycle_50_deletion_aware_packet.py",
+    "check_command": ".venv/bin/python proof/build_cycle_50_lrc_deletion_aware_packet.py --check",
+    "controls_command": ".venv/bin/python discovery/lrc_deletion_aware_packet_controls.py",
+    "independent_command": "taskset -c 0-2 .venv/bin/python proof/replay_cycle_50_deletion_aware_independent.py",
+    "principal_command": "taskset -c 0-2 .venv/bin/python discovery/lrc_deletion_aware_packet_full.py",
+    "test_command": ".venv/bin/python -m unittest tests.test_cycle_50_deletion_aware_packet -v"
+  },
+  "resources": {
+    "independent_wall_seconds": 65.70831501399516,
+    "maximum_fraction_bits": 2,
+    "packet_moves_principal_and_independent": 10,
+    "principal_wall_seconds": 65.27301061499747,
+    "reserved_cpu": 3,
+    "temporary_disk_bytes": 4912,
+    "worker_cpus": [
+      0,
+      1,
+      2
+    ]
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_50_lrc_deletion_aware_packet.py",
+    "sha256": "6195f9653f4caf177e16b63c62e9a1aea749fab1cd0a8b21dd31cf18b8942174"
+  },
+  "status": "SEALED"
+}

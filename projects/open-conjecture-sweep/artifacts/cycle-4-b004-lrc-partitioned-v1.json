@@ -1,0 +1,128 @@
+{
+  "artifact_id": "cycle-4-b004-lrc-partitioned-v1",
+  "baseline_validation": {
+    "counts": {
+      "k6_p47": 53,
+      "k7_p47": 50
+    },
+    "epistemic_status": "OBSERVED",
+    "tiny_oracle": [
+      "direct_rechecked=1",
+      "brute_force_canonical=1"
+    ],
+    "tuple_and_level_equality": true
+  },
+  "budget_ordinal": "B004",
+  "claim_boundary": "The 64-partition external engine exactly reproduced the tiny oracle, both frozen p=47 tuple sets, and their level sequences. At k=13,p=199 it passed the prior memory barrier and then stopped at its configured 64-GiB logical serialized-live-byte cap while expanding depth 9. This is an algorithmic storage result, not a physical-filesystem exhaustion claim or an LRC/J-empty result.",
+  "companion_decision": {
+    "adopted": true,
+    "identity": "/root/decision_companion_2",
+    "next_action": "Retain engine, serialization, 64 partitions, and all non-disk caps; log logical and filesystem storage observations.",
+    "recommendation": "Seal Cycle 4 and open Cycle 5 changing only the disk tranche to 128 GiB."
+  },
+  "cycle": 4,
+  "epistemic_status": "OBSERVED",
+  "frontier_gate": {
+    "cleanup_removed_entries": 257,
+    "completed_depth": 8,
+    "epistemic_status": "OBSERVED",
+    "expanded_states": 319603355,
+    "generated_edges": 4450491412,
+    "leaf_states": 0,
+    "outcome": "FAILED_LOGICAL_DISK_CAP",
+    "peak_logical_disk_bytes": 68719476736,
+    "peak_rss_kib": 375140,
+    "wall_seconds": 797.777
+  },
+  "frozen_hashes": {
+    "frontier_result": {
+      "path": "discovery/out/partitioned-k13-p199.result",
+      "sha256": "33009bbf7aba733a0c4e01a431e9a45e027fb1ccb2a7e430ce3b29204532b28e"
+    },
+    "frontier_runner": {
+      "path": "proof/run_cycle_4_frontier.sh",
+      "sha256": "116aebf6aad5d04e00d8d56386101063aa02138965018e4ecc6c8bc227591dac"
+    },
+    "frontier_timing": {
+      "path": "discovery/out/partitioned-k13-p199.time",
+      "sha256": "6efc8ec5b717ac4ab56faf51a2a0d1dd4992c30eef5ca3e66b33c970b910f185"
+    },
+    "k6_levels": {
+      "path": "discovery/out/partitioned-k6.levels",
+      "sha256": "2639fb05c967da8f12741dfdccdd0d7f48867f853c076c7daedbd5e9aa36609b"
+    },
+    "k6_result": {
+      "path": "discovery/out/partitioned-k6.result",
+      "sha256": "a3d71226e0e7d7369f44063a6f277ec7008a0d419a07ecd136890f87700b4e7b"
+    },
+    "k6_tuples": {
+      "path": "discovery/out/partitioned-k6.txt",
+      "sha256": "3282243c9bd46b7cf0cb2f57a60fcf75d01df5f3ffdd11fe0ad91f8713170e03"
+    },
+    "k7_levels": {
+      "path": "discovery/out/partitioned-k7.levels",
+      "sha256": "1895b2c652873a07556553f0c21039685b01642e0b8981f91d885f858caf6c5f"
+    },
+    "k7_result": {
+      "path": "discovery/out/partitioned-k7.result",
+      "sha256": "4f22517cfcb74f57a476d4f6885669159d9aa8d7f87b5f86d8ed7a4f66a1e391"
+    },
+    "k7_tuples": {
+      "path": "discovery/out/partitioned-k7.txt",
+      "sha256": "8687bd7725b570baeb72d4d666a52c6b9fcf20204a6c4a036c21c672c9338a4d"
+    },
+    "partition_argument": {
+      "path": "proof/cycle_4_partition_exactness_argument.md",
+      "sha256": "cde68555f2847c6b1b60da27170bc92d7ef84607ea4d735209c34bb44bf31479"
+    },
+    "partition_engine": {
+      "path": "discovery/lrc_coverage_partitioned.cpp",
+      "sha256": "2e2ccebba549ec194df2f6d2c63dc3815701077645fd46cb3dc5034bc3b7736b"
+    },
+    "preregistration": {
+      "path": "docs/cycle-4-b004-lrc-disk-partition-preregistration-v1.md",
+      "sha256": "692e2d5bb11d2f82cab4b72225a4e011c00e135d24764302a61ce491ef1437f1"
+    },
+    "regression_test": {
+      "path": "tests/test_cycle_4_lrc_partitioned.py",
+      "sha256": "d7f9ba1621265c7e9d2aee872f193e42b86c16c86f3984dbecd9f58364a0d469"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "tiny_result": {
+      "path": "discovery/out/partitioned-tiny.result",
+      "sha256": "48fb8baa585446179d1a9734315df299f49e4360c473d5fba748530173bad4fa"
+    },
+    "tiny_tuples": {
+      "path": "discovery/out/partitioned-tiny.txt",
+      "sha256": "1def07dbe06eeb097aafec8a40329937cd20c93a83634b8221ea2b41a894310c"
+    },
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "recorded_at_utc": "2026-08-03T14:28:37Z",
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "The same exact engine may progress farther under the user-authorized 128-GiB disk tranche."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_4_lrc_partitioned.py --check",
+    "frontier_command": "/usr/bin/time -v sh proof/run_cycle_4_frontier.sh > discovery/out/partitioned-k13-p199.result 2> discovery/out/partitioned-k13-p199.time",
+    "test_command": "python3 -m unittest tests/test_cycle_4_lrc_partitioned.py -v"
+  },
+  "runtime": {
+    "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_4_lrc_partitioned.py",
+    "sha256": "ac4056114c7d65fe6a986567d377c0c705a43b832d45288bbc13d822b0175a40"
+  },
+  "status": "SEALED"
+}

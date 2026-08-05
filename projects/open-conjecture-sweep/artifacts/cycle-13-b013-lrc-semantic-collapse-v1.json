@@ -1,0 +1,111 @@
+{
+  "artifact_id": "cycle-13-b013-lrc-semantic-collapse-v1",
+  "budget_ordinal": "B013",
+  "claim_boundary": "This closes only the selected core and the frozen coordinate-permutation plus 2/7-divisor-color-preserving within-coordinate substitution family. It does not constrain alternate proofs or cores, finer semantic roles, resolution motifs, exact CRT, full F_1 or J emptiness, or LRC(13).",
+  "collapse_theorem": {
+    "clause_partition": {
+      "choice_at_most_one": 196,
+      "color_invariant_coverage": 12,
+      "x_implies_y2": 84,
+      "y2_cardinality": 1
+    },
+    "epistemic_status": "PROVED",
+    "external_nonmatches_inherited": 100,
+    "reason": "The only target-dependent source clauses are unions of complete divisor-color classes, hence invariant under every permitted within-coordinate bijection; all other images are guaranteed target schemas.",
+    "source_clauses": 293,
+    "validation_nonmatches_inherited": 20
+  },
+  "companion_decision": {
+    "falsifier": "Any permitted within-color bijection changing a target-dependent clause, or any target match available only under a nonidentity residue map, invalidates the collapse.",
+    "identity": "/root/decision_companion_2",
+    "independent_ideas": [
+      "alternate DRAT/MUS proof diversification",
+      "resolution-proof motifs",
+      "exact CRT equivalence prototype"
+    ],
+    "next_action": "Open Cycle 14 for proof diversification and seek certified cores with non-color-invariant coverage structure.",
+    "recommendation": "Continue Cycle 13 only for the scripted audit; if it passes, seal immediately and do not run the redundant long search.",
+    "scope_review": "The result closes this specific typed-substitution family only after clause-by-clause multiplicity audit.",
+    "strongest_flaw": "A partial color class, channel mismatch, or multiplicity error would defeat the collapse."
+  },
+  "containment": {
+    "effect_on_claim": "None: the failing implementation produced no mathematical conclusion; the final checker, separate regression invocation, and measured replay all passed.",
+    "epistemic_status": "OBSERVED",
+    "event": "The first audit invocation incorrectly normalized an already-normalized target formula and failed its y2-channel control. The audit was corrected before the successful replay and sealed result."
+  },
+  "cycle": 13,
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "audit_result": {
+      "path": "discovery/out/cycle13-collapse.result",
+      "sha256": "e387ce72bfb4e71ecbe7860c5dbd09f99a1367f148949c90022f65b02eace3bb"
+    },
+    "audit_timing": {
+      "path": "discovery/out/cycle13-collapse.time",
+      "sha256": "402ae2bb17fb0267d0442ef5704024251267d847b93e9da62bdadfcc40e63eae"
+    },
+    "cycle12_artifact": {
+      "path": "artifacts/cycle-12-b012-lrc-core-template-v1.json",
+      "sha256": "45a160c8a0f843820daabe6a2305c9c9563f25786a3fd4cc556ce2d90b0515c7"
+    },
+    "independent_audit": {
+      "path": "proof/check_cycle_13_semantic_collapse.py",
+      "sha256": "5ce4c89c33fd9300fda424adeb7fe1496bb0eb0654afe9ac429cea1062da7c6e"
+    },
+    "preregistration": {
+      "path": "docs/cycle-13-b013-lrc-semantic-instantiation-preregistration-v1.md",
+      "sha256": "51d469863b7485917f906010dcbe428331d795cd8ca9c499846a6c73557be7cb"
+    },
+    "regression_test": {
+      "path": "tests/test_cycle_13_semantic_collapse.py",
+      "sha256": "5fe9fc581781df383dbeca38c8a1186184a2c8820b2ed2d87b3d04b23e696b24"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "soundness_and_collapse": {
+      "path": "proof/cycle_13_semantic_instantiation_soundness.md",
+      "sha256": "5f06b6279eda04b7efae74cae3a592ac8bd3019f6e141db6fc01b30f5d555743"
+    },
+    "source_core": {
+      "path": "discovery/out/cycle12-core-template/mus/076.cnf",
+      "sha256": "6179017eaa361064bcd36c9dc71a14e4d0d818b5e8cdb3d7e433c6e96f8d31bc"
+    },
+    "source_proof": {
+      "path": "discovery/out/cycle12-core-template/mus/076.drat",
+      "sha256": "d7fcabaae24d3f320ca3d46bf557a72a2792b94a023092d0ceb0ce9d140153ac"
+    }
+  },
+  "outcome": "For the frozen 293-clause row-76 certified subcore, every divisor-color-preserving within-coordinate choice bijection either fixes a coverage clause setwise or maps a universal exactly-one/gcd-channel clause to another universally present clause. Therefore a Cycle-13 typed embedding exists exactly when a Cycle-12 residue-identity coordinate embedding exists. Cycle 12 proved none exists in the frozen 20 validation and 100 external targets.",
+  "record_type": "STRUCTURAL_NO_GO",
+  "recorded_at_utc": "2026-08-03T19:41:26Z",
+  "replay": {
+    "audit_command": "python3 proof/check_cycle_13_semantic_collapse.py",
+    "check_command": "python3 proof/build_cycle_13_lrc_semantic_collapse.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_13_semantic_collapse.py -v"
+  },
+  "resources": {
+    "aggregate_wall_cap_seconds": 3600,
+    "aggregate_wall_seconds_observed": 89.0,
+    "peak_rss_kib": 643184,
+    "principal_replay_wall_seconds": 29.03,
+    "reserved_cpu": 3,
+    "temporary_disk_cap_bytes": 21474836480,
+    "worker_cpus": [
+      0,
+      1,
+      2
+    ]
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_13_lrc_semantic_collapse.py",
+    "sha256": "aea355503c4c97ab294c1165b4fbc4bed962d49adceb8de3b7fa52ed4cf02e64"
+  },
+  "status": "SEALED"
+}

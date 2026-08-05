@@ -1,0 +1,468 @@
+{
+  "artifact_id": "cycle-49-b049-lrc-relative-diagonal-contraction-v1",
+  "audit": {
+    "buffer_incomplete": 5,
+    "deletion_signature_closed": 29326638,
+    "exception_types": [
+      [
+        4,
+        4,
+        5
+      ],
+      [
+        4,
+        4,
+        6
+      ],
+      [
+        4,
+        4,
+        64
+      ],
+      [
+        4,
+        5,
+        35
+      ],
+      [
+        4,
+        6,
+        35
+      ]
+    ],
+    "first_terminal_classification": "BUFFER_INCOMPLETE",
+    "frozen_formula_closed": 382453314,
+    "generic_support_closed": 340918175,
+    "raw_valid_type_triples": 382453319,
+    "residual_counts": {
+      "BUFFER_INCOMPLETE": 5,
+      "mobius_already_allowed": 9138020,
+      "mobius_attempted": 9138026,
+      "mobius_contracted": 1,
+      "structural_closed": 3070480,
+      "type_triples": 12208506
+    },
+    "resources": {
+      "conservative_executed_wall_seconds_upper": 2100,
+      "maximum_fraction_bits": 2,
+      "packet_moves_principal_and_independent": 4,
+      "semantic_signature_upper": 726167,
+      "temporary_disk_bytes": 22709855
+    },
+    "status": "PASS"
+  },
+  "budget_ordinal": "B049",
+  "claim_boundary": "This proves the frozen generic support theorem and its complete p199-domain census, plus a scoped no-go for the pairwise-distinct buffer formula. It does not prove an unrestricted relative contraction, fill the other four exceptions, define a global lift map, prove every quadruple fills, or prove LRC(13).",
+  "controls": {
+    "claim_boundary": "Generic packet-support and buffer controls only; no p199 full-domain hypothesis has been checked.",
+    "epistemic_status": "PROVED",
+    "negative_terminal_class": {
+      "defect": [
+        [
+          [
+            0,
+            0,
+            0
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            0,
+            0,
+            1
+          ],
+          -1,
+          1
+        ]
+      ],
+      "kernel_dimension": 0,
+      "status": "BUFFER_INCOMPLETE"
+    },
+    "pair_packet_support_checks": 2520,
+    "positive_three_strata": {
+      "output": [
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            0,
+            1,
+            4
+          ],
+          -1,
+          1
+        ],
+        [
+          [
+            0,
+            3,
+            2
+          ],
+          -1,
+          1
+        ],
+        [
+          [
+            0,
+            3,
+            4
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            1,
+            3,
+            0
+          ],
+          -1,
+          1
+        ],
+        [
+          [
+            1,
+            3,
+            2
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            1,
+            4,
+            0
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            1,
+            4,
+            2
+          ],
+          -1,
+          1
+        ],
+        [
+          [
+            2,
+            1,
+            0
+          ],
+          -1,
+          1
+        ],
+        [
+          [
+            2,
+            1,
+            4
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            2,
+            3,
+            0
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            2,
+            3,
+            4
+          ],
+          -1,
+          1
+        ],
+        [
+          [
+            3,
+            1,
+            0
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            3,
+            1,
+            2
+          ],
+          -1,
+          1
+        ],
+        [
+          [
+            3,
+            4,
+            0
+          ],
+          -1,
+          1
+        ],
+        [
+          [
+            3,
+            4,
+            2
+          ],
+          1,
+          1
+        ]
+      ],
+      "status": "CONTRACTED",
+      "steps": 3
+    },
+    "repeated_buffer_spill_detected": true,
+    "stage": "GENERIC_RELATIVE_DIAGONAL_CONTROLS",
+    "status": "PASS",
+    "support_five_buffer_checks": 1296,
+    "triple_packet_support_checks": 7680,
+    "wall_seconds": 0.09433178399922326
+  },
+  "cycle": 49,
+  "cycle_decision": {
+    "companion_advice": "Seal C49 as a pattern theorem and open one distinct deletion-aware packet block; do not make five post hoc repairs.",
+    "companion_identity": "/root/darwin_cycle25_short",
+    "falsifier": "Any forbidden spill, nonzero preserved pair marginal, terminal residual, unfillable exception, or new residual structural pattern fails the theorem; no extra exception rule may be added.",
+    "reason_C50_is_authorized": "C49 supplies a clear, exact, falsifiable next theorem route rather than mere finite continuation, satisfying the stated Cycle-49 clarity condition.",
+    "selected_next_question": "Can a deletion-aware triple packet reuse alternate owners exactly when every cube vertex satisfies the actual deleted-pair constraints, and thereby close every (2,2,2) and (2,2,4) exception pattern without creating any new full-domain residual class?"
+  },
+  "epistemic_status": "PROVED",
+  "first_exception": {
+    "classification": "BUFFER_INCOMPLETE",
+    "cube_kernel_dimension": 1,
+    "interpretation": "The unique full-support cube with repeated owner alternative is allowed and fills the defect; pairwise-distinctness was an overly strong sufficient surrogate.",
+    "types": [
+      4,
+      4,
+      5
+    ]
+  },
+  "frozen_hashes": {
+    "audit": {
+      "path": "proof/check_cycle_49_relative_diagonal.py",
+      "sha256": "b8abc5cd83da3c94596ee548c921eb3603a139c4462f37e7069d25675852dcef"
+    },
+    "controls": {
+      "path": "discovery/out/cycle49-relative-diagonal/generic-controls.json",
+      "sha256": "51ebdab88fc54d98e69e64cb85a126511157dd0d44b7cd1ca9950d2e37a4cff1"
+    },
+    "controls_engine": {
+      "path": "discovery/lrc_relative_diagonal_controls.py",
+      "sha256": "f5b7cb8dcc3be8c101db6e9aed158964e90e370c2da1454c8c795488896d7e59"
+    },
+    "cube_rewrite": {
+      "path": "discovery/lrc_cube_rewrite.py",
+      "sha256": "106a237501b9bf115e8df265c2075f0605c6a7776c1bd8fdd870adc1b01e4de9"
+    },
+    "cycle29_interface": {
+      "path": "discovery/out/cycle29-ownership-blocker/result.json",
+      "sha256": "b213f8b790b2f53e2de30d244ead973143973e236083d24b38fffb5234271f15"
+    },
+    "cycle41_closure": {
+      "path": "discovery/out/cycle41-multiplied-ideal/zero-support-closure.json",
+      "sha256": "a1f742592375d035f68d3dcd0ecde65c4ee6e7b78c96fa2a1ed18362e979037e"
+    },
+    "cycle48_artifact": {
+      "path": "artifacts/cycle-48-b048-lrc-cube-rewrite-v1.json",
+      "sha256": "b9069dca26e99ab13d789806e4e71c16d9421bde5053e8ddf7a4766eb97d2836"
+    },
+    "deletion_classification": {
+      "path": "discovery/out/cycle49-relative-diagonal/deletion-classification.json",
+      "sha256": "b82dc096b22acf3f8c292c1e5b206af87cdd0f6b4b2818de61a48a1d909b1743"
+    },
+    "deletion_engine": {
+      "path": "discovery/lrc_relative_diagonal_deletion_classify.py",
+      "sha256": "3e77e6fd852dee8e6414dca49ac32f5b41abe7da7312da6cb20ce265ad05e6f4"
+    },
+    "full_audit": {
+      "path": "discovery/out/cycle49-relative-diagonal/full-audit.json",
+      "sha256": "33bfa7d3c89d7556a61f1858ca37042341406eb282a8682893b9eeebe608852d"
+    },
+    "full_audit_engine": {
+      "path": "discovery/lrc_relative_diagonal_full_audit.py",
+      "sha256": "341cef8a1397f2371d6ad2a5d300a230ac93d820b84682affa3104e6901a77f9"
+    },
+    "full_audit_timing": {
+      "path": "discovery/out/cycle49-relative-diagonal/run-full-audit.time",
+      "sha256": "5427b2dee52524242d7c8370a3d4b3ee4ba5db5a442490dbb27c05e366d43a9a"
+    },
+    "idea_selection": {
+      "path": "discovery/cycle49_relative_diagonal_idea_selection.md",
+      "sha256": "1ea09a57585f4eedeaf63fe9caf17b14d5771fdaa5067c38f2e1b00fb2f2b28e"
+    },
+    "independent_diagnostic": {
+      "path": "discovery/out/cycle49-relative-diagonal/independent-diagnostic.json",
+      "sha256": "0f13be3185ce5139d4715c2d44fcb2dd61fa3fc28febb49dc9464ad73e2540ae"
+    },
+    "independent_replay": {
+      "path": "proof/replay_cycle_49_relative_diagonal_independent.py",
+      "sha256": "62d805e6646a1b7336aa2ac7228a2669df5faf0606e7f6bf8668d04cbd5e36dc"
+    },
+    "independent_result": {
+      "path": "discovery/out/cycle49-relative-diagonal/independent-replay.json",
+      "sha256": "191a0f67c29c975008ea71cca52c4c5e1e80e78d4d40e991d67fd439757a2b64"
+    },
+    "independent_timing": {
+      "path": "discovery/out/cycle49-relative-diagonal/run-independent.time",
+      "sha256": "01634501760c063b80ba07909dbf5722904565d3c5fc5a8d3c35868ead590510"
+    },
+    "inventory": {
+      "path": "discovery/out/cycle49-relative-diagonal/inventory.json",
+      "sha256": "13b6d896b8876624f66d3709a3df2ddc6580135a3730376911f7925de728489a"
+    },
+    "inventory_engine": {
+      "path": "discovery/lrc_relative_diagonal_inventory.py",
+      "sha256": "74bf5a5c73e4919bd08b8b97d7c195a02887fca4a91444449a9399b88b607568"
+    },
+    "preregistration": {
+      "path": "docs/cycle-49-b049-lrc-relative-diagonal-contraction-preregistration-v1.md",
+      "sha256": "8ee9dbf432d3d03aa652b7a75934206ef1ab3676bab71c76ea4a1abf0f311d64"
+    },
+    "preregistration_validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    },
+    "relative_module": {
+      "path": "discovery/lrc_relative_diagonal.py",
+      "sha256": "3d73fad7547a0a1448fc67898607b8588c0aa06babf2cfa6ffb7f0079d43175f"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "soundness": {
+      "path": "proof/cycle_49_relative_diagonal_soundness.md",
+      "sha256": "592474d210a348ecf2e65643a8546d5126281b102d5c4df77b7cecaea9d86b68"
+    },
+    "support_classification": {
+      "path": "discovery/out/cycle49-relative-diagonal/support-classification.json",
+      "sha256": "7f73938494401525d7f3e2bad907606f4bcbaa8934958520190d0e864db6ae31"
+    },
+    "support_engine": {
+      "path": "discovery/lrc_relative_diagonal_support_classify.py",
+      "sha256": "cc167581d64628b13e4c15e464c61a0dc1117d6d785b0f15622641c13ec3dcd2"
+    },
+    "terminal_audit": {
+      "path": "discovery/out/cycle49-relative-diagonal/terminal-audit.json",
+      "sha256": "de191c66a97d0878b95b0cbb99654aa8dabc3d2b3063039576bea4b68c0a9bcf"
+    },
+    "terminal_engine": {
+      "path": "proof/check_cycle_49_terminal_exception.py",
+      "sha256": "49713a90d4b2259649931e82b4c4823c1480f223091bbde5b2c0c79a09e97d73"
+    },
+    "test": {
+      "path": "tests/test_cycle_49_relative_diagonal.py",
+      "sha256": "6cf82cdcc65f0b8acdbebfe2fd2de20eaea1d56fe26a943fe244b108dff4b52d"
+    }
+  },
+  "full_domain": {
+    "buffer_incomplete": 5,
+    "deletion_signature_closed": 29326638,
+    "exception_types": [
+      [
+        4,
+        4,
+        5
+      ],
+      [
+        4,
+        4,
+        6
+      ],
+      [
+        4,
+        4,
+        64
+      ],
+      [
+        4,
+        5,
+        35
+      ],
+      [
+        4,
+        6,
+        35
+      ]
+    ],
+    "formula_closed": 382453314,
+    "generic_support_closed": 340918175,
+    "raw_valid_unordered_type_triples": 382453319,
+    "residual_counts": {
+      "BUFFER_INCOMPLETE": 5,
+      "mobius_already_allowed": 9138020,
+      "mobius_attempted": 9138026,
+      "mobius_contracted": 1,
+      "structural_closed": 3070480,
+      "type_triples": 12208506
+    }
+  },
+  "generic_theorems": {
+    "cube_kernel": "Every alternating 2x2x2 cube preserves all three pair marginals.",
+    "fiber_contraction": "A deleted pair fiber has total zero; a no-spill packet transfers every nonterminal coefficient to one terminal, which then vanishes.",
+    "support_five": "Support size at least five in every owner coordinate supplies the frozen triple and pair buffers."
+  },
+  "independent_replay": {
+    "canonical_order_correction": "The first independent full replay exposed an all-same-support output-order mismatch. The bug was contained, a final canonical sort was added, and the full replay then agreed exactly on counts and all five labels.",
+    "method": "Separately implemented reverse-order reconstruction without importing the principal relative-diagonal module.",
+    "status": "PASS"
+  },
+  "outcome": "The frozen two-stage diagonal-fiber cube-packet formula is a generic contraction under its explicit buffer hypotheses and closes 382,453,314 of 382,453,319 raw-valid unordered p199 type triples. Exactly five interfaces fail only the frozen pairwise-distinct buffer surrogate. The first, (4,4,5), is exactly fillable by an allowed repeated-owner alternative, proving BUFFER_INCOMPLETE rather than terminal relative homology. The remaining four labels are retained as unclassified under the surrogate.",
+  "record_type": "PROVED_RELATIVE_DIAGONAL_CONTRACTION_BOUNDARY",
+  "recorded_at_utc": "2026-08-05T08:10:00Z",
+  "replay": {
+    "audit_command": ".venv/bin/python proof/check_cycle_49_relative_diagonal.py",
+    "check_command": ".venv/bin/python proof/build_cycle_49_lrc_relative_diagonal.py --check",
+    "controls_command": ".venv/bin/python discovery/lrc_relative_diagonal_controls.py",
+    "deletion_command": ".venv/bin/python discovery/lrc_relative_diagonal_deletion_classify.py",
+    "independent_command": "taskset -c 0-2 .venv/bin/python proof/replay_cycle_49_relative_diagonal_independent.py",
+    "inventory_command": ".venv/bin/python discovery/lrc_relative_diagonal_inventory.py",
+    "principal_command": "taskset -c 0-2 .venv/bin/python discovery/lrc_relative_diagonal_full_audit.py",
+    "support_command": ".venv/bin/python discovery/lrc_relative_diagonal_support_classify.py",
+    "terminal_command": ".venv/bin/python proof/check_cycle_49_terminal_exception.py",
+    "test_command": ".venv/bin/python -m unittest tests.test_cycle_49_relative_diagonal -v"
+  },
+  "resources": {
+    "conservative_executed_wall_seconds_upper": 2100,
+    "maximum_fraction_bits": 2,
+    "packet_moves_principal_and_independent": 4,
+    "reserved_cpu": 3,
+    "semantic_signature_upper": 726167,
+    "temporary_disk_bytes": 22709855,
+    "worker_cpus": [
+      0,
+      1,
+      2
+    ]
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_49_lrc_relative_diagonal.py",
+    "sha256": "c520ead0cc3481f28d0722fc80ff7208c469cb0b0c8b6bb08567e6473a2d7a4d"
+  },
+  "status": "SEALED"
+}

@@ -1,0 +1,79 @@
+{
+  "artifact_id": "cycle-56-b056-orbit-smoothing-v1",
+  "audit": {
+    "claim_boundary": "Frozen ternary S3 one-orbit smoothing packet only; no universal orbitwise smoothing or Zhao conclusion.",
+    "epistemic_status": "PROVED",
+    "functions": 729,
+    "negative_rows": 0,
+    "rows": 1458,
+    "status": "PASS"
+  },
+  "budget_ordinal": "B056",
+  "claim_boundary": "Frozen ternary S3 one-orbit smoothing packet only; no universal orbitwise smoothing or Zhao conclusion.",
+  "cycle": 56,
+  "cycle_decision": {
+    "companion_advice": "Seal finite packet and open a distinct symbolic conditional-variance identity attempt.",
+    "companion_identity": "/root/darwin_cycle25_short",
+    "falsifier": "One finite group, class, and rational nonnegative a with N(a)<N(S_Ca).",
+    "next_question": "Can N_G(a)-N_G(S_Ca) be expressed as nonnegative contractions of class-zero deviations?"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "audit": {
+      "path": "proof/check_cycle_56_orbit_smoothing.py",
+      "sha256": "137c6cf79891421f300e339426fb39fddcbc26e1ff1f40f3007902d88ae174ab"
+    },
+    "idea": {
+      "path": "discovery/cycle56_smoothing_idea_selection.md",
+      "sha256": "161c3637151ad3a5680dbf89b53e8cae4bb127680c20a38cce98c4f8ebbdd246"
+    },
+    "irows": {
+      "path": "discovery/out/cycle56-orbit-smoothing/independent-rows.tsv",
+      "sha256": "4fd4ff27febcdbbbc4a95768b06008b328bb4a2dde461c608816e353a294c7e1"
+    },
+    "prereg": {
+      "path": "docs/cycle-56-b056-orbit-smoothing-preregistration-v1.md",
+      "sha256": "dd4c338d8b127187ac8cb47233ebe1629a5dc4bc30a04b59f01bd7b9d44b8423"
+    },
+    "prev": {
+      "path": "artifacts/cycle-55-b055-zhao-deficit-v1.json",
+      "sha256": "c83b14e71f5b4b4482757f55ec4b018186daf68581d5833e4a6c638379d64c36"
+    },
+    "principal": {
+      "path": "discovery/cycle56_orbit_smoothing.cpp",
+      "sha256": "8a966890dc4f05afcea4d1ebe44b0029872a35689780b38b0b253a83fb1d8c14"
+    },
+    "replay": {
+      "path": "proof/replay_cycle_56_orbit_smoothing.py",
+      "sha256": "4088b235b873ea236467379fb3e5025189eb122a1327ff53d43b674020a208fd"
+    },
+    "rows": {
+      "path": "discovery/out/cycle56-orbit-smoothing/rows.tsv",
+      "sha256": "e96a722d680c3cb82ba69544b7e4ff26c48a786c95507a2fc8e54361dba9484d"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    }
+  },
+  "outcome": "All 1,458 frozen ternary S3 single-conjugacy-class smoothing comparisons are nonnegative.",
+  "record_type": "PROVED_FINITE_ORBIT_SMOOTHING_PACKET",
+  "recorded_at_utc": "2026-08-05T09:22:00Z",
+  "replay": {
+    "audit_command": ".venv/bin/python proof/check_cycle_56_orbit_smoothing.py",
+    "check_command": ".venv/bin/python proof/build_cycle_56_orbit_smoothing.py --check",
+    "independent_command": ".venv/bin/python proof/replay_cycle_56_orbit_smoothing.py",
+    "principal_command": "g++ -O3 -std=c++20 discovery/cycle56_orbit_smoothing.cpp -o /tmp/c56 && taskset -c 0-2 /tmp/c56 discovery/out/cycle56-orbit-smoothing"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_56_orbit_smoothing.py",
+    "sha256": "3f1b8f9df271c5c0b9239d5ef51ecfac1c3c81a3d9802341979a607c733114c6"
+  },
+  "smoothing_convention": "For a class C of size d, emit A=d S_C a: A equals class sum on C and d*a off C; compare d^15 N(a) with N(A).",
+  "status": "SEALED"
+}

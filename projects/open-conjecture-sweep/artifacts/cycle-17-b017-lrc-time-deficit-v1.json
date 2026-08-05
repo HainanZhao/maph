@@ -1,0 +1,172 @@
+{
+  "artifact_id": "cycle-17-b017-lrc-time-deficit-v1",
+  "bounded_grammar": {
+    "base3_certified": 5783,
+    "base4_certified": 5908,
+    "epistemic_status": "PROVED",
+    "support_distribution": {
+      "base3_support1": 5492,
+      "base3_support2": 282,
+      "base3_support3": 9,
+      "base4_support1": 5714,
+      "base4_support2": 184,
+      "base4_support3": 10
+    },
+    "total_certified": 11691
+  },
+  "budget_ordinal": "B017",
+  "certificate_theorem": {
+    "epistemic_status": "PROVED",
+    "positive_control": "PASS: base 7 leaf 74 has a singleton U=0<W=1 certificate",
+    "statement": "For nonnegative integer time weights, any full cover has W <= sum_i max_{allowed d} weighted_bad_count(i,d) = U; therefore U<W certifies the leaf UNSAT."
+  },
+  "claim_boundary": "Only the 12,088 named base/leaf residuals with stored exact U<W certificates are proved UNSAT by this family. The 80 floating LP optima reported as one are OBSERVED and do not prove dual optimality or saturation. No complete new base, F_1 emptiness, J(13,199) emptiness, or LRC(13) follows.",
+  "combined_result": {
+    "base3_certified": 6044,
+    "base3_unresolved": 40,
+    "base4_certified": 6044,
+    "base4_unresolved": 40,
+    "complete_bases": 0,
+    "epistemic_status": "PROVED",
+    "total_named_leaf_exclusions": 12088
+  },
+  "companion_decision": {
+    "falsifier": "Any base/leaf mapping error or independently recomputed stored inequality with U>=W invalidates the affected exclusion.",
+    "identity": "/root/decision_companion_2",
+    "independent_ideas": [
+      "conditional pair-choice Hall lift",
+      "symbolic case split on the first seven coordinates",
+      "CRT fallback"
+    ],
+    "next_action": "Open Cycle 18: branch on the localized survivor pattern and use disjoint two-coordinate option groups with exact integer weights, explicitly covering the two exceptions.",
+    "recommendation": "Seal Cycle 17; a coupled pair-choice state space is materially new and belongs in Cycle 18.",
+    "scope_review": "The exact inequalities prove 6,044 named leaves per base; the forty survivors per base remain unresolved and numerical LP optima are not exact saturation certificates.",
+    "strongest_flaw": "The 38-ordinal overlap may be an indexing artifact rather than a shared semantic obstruction, and the two base-dependent exceptions matter."
+  },
+  "cycle": 17,
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "audit": {
+      "path": "proof/check_cycle_17_time_deficit.py",
+      "sha256": "aa6971c671ccf3475242cd25bdbf5f867beb368aee0568836dce6872b0225161"
+    },
+    "audit_timing": {
+      "path": "discovery/out/cycle17-time-deficit/audit-full.time",
+      "sha256": "0d29b0be1f34b8467526e2397aa8f7efa98f1551b1fc5c4c265c926d247a960f"
+    },
+    "base3_cnf": {
+      "path": "discovery/out/cycle11-certified-sat/p199/003.cnf",
+      "sha256": "e07cde8b14f19bf2094e2643ac43c6aad6c6d62ade399db270968a479d0ee6c4"
+    },
+    "base4_cnf": {
+      "path": "discovery/out/cycle11-certified-sat/p199/004.cnf",
+      "sha256": "ea4356bd1ff5cdf06fb5504411d0ca57ddc8b3056dc8281c8025d1d24ef60648"
+    },
+    "base7_cnf": {
+      "path": "discovery/out/cycle11-certified-sat/p199/007.cnf",
+      "sha256": "cf88a2052e99b310304583294fb7d5db3f5a4fff9213f3f5428c18d60ef31ce9"
+    },
+    "bounded_engine": {
+      "path": "discovery/lrc_time_deficit.cpp",
+      "sha256": "e2d47f3a83ee4307c84137b5c03a4cd6b12014f1e605e5f9ae8b3ba7bebf30f8"
+    },
+    "bounded_results": {
+      "path": "discovery/out/cycle17-time-deficit/results.tsv",
+      "sha256": "0e3fcf08b7c168b1abef2307574e0f2896853f6691a924f1b14ef64c0c41f06e"
+    },
+    "bounded_timing": {
+      "path": "discovery/out/cycle17-time-deficit/run.time",
+      "sha256": "380ba7b31347acf10755aa9d0076f343115c35e35324a9527944a79c1c177fc6"
+    },
+    "lp_engine": {
+      "path": "discovery/lrc_time_deficit_lp.py",
+      "sha256": "53076f50a40d8ba6bfc080725026ac8a09bbd08f6afe7bb5c6eee0ee75935a34"
+    },
+    "lp_result": {
+      "path": "discovery/out/cycle17-time-deficit/lp.result",
+      "sha256": "91694c7cac93297a35017817fd8238d5e3ad26dc8de1fd9cb7105fc9adf03ab5"
+    },
+    "lp_results": {
+      "path": "discovery/out/cycle17-time-deficit/lp-results.tsv",
+      "sha256": "da5f5f926d317e07e662002ac722e2422f22beb47f15e4b55815be98540f935e"
+    },
+    "lp_timing": {
+      "path": "discovery/out/cycle17-time-deficit/lp.time",
+      "sha256": "1f657f7a4d44e1a3a4b403e3b2a92dc02801b3d8cdbc962d0f768b78819f9ae4"
+    },
+    "preregistration": {
+      "path": "docs/cycle-17-b017-lrc-time-deficit-preregistration-v1.md",
+      "sha256": "59f63187ac44572fb851d7d9c657b197d989df1d78187aa56e330e4bc4e98d36"
+    },
+    "prior_artifact": {
+      "path": "artifacts/cycle-16-b016-lrc-gcd-witness-tree-v1.json",
+      "sha256": "3d283b68eda692a8dbf4c6efced493eacddab7109d7ae80c98ddf5e002628eb0"
+    },
+    "requirements": {
+      "path": "requirements-cycle17.txt",
+      "sha256": "ff5d0c36b5024e0b76b1eb815d52ff00cee3ab78523f3419b5006f728b02b7a4"
+    },
+    "sample_bases": {
+      "path": "discovery/out/cycle8-p199-strata.txt",
+      "sha256": "327334cf85b821a77b254420d0617c8771a9f272cf38b2512ab79c937de4299b"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "soundness": {
+      "path": "proof/cycle_17_time_deficit_soundness.md",
+      "sha256": "1aeb54d9bbdc18487e95d19fbc29067a97d307b694cd5c5ba2392acfbc035d25"
+    },
+    "test": {
+      "path": "tests/test_cycle_17_time_deficit.py",
+      "sha256": "2e08a2f72bc75ffd86a82fbdc499afae61d64724f6793b22135d456440760fbd"
+    }
+  },
+  "full_signature_lp_proposals": {
+    "exact_integerized_certificates": 397,
+    "exact_promoted_epistemic_status": "PROVED",
+    "floating_failure_epistemic_status": "OBSERVED",
+    "floating_no_deficit_rows": 80,
+    "maximum_support": 60,
+    "minimum_support": 3,
+    "rows": 477
+  },
+  "outcome": "The weighted time-deficit inequality is exact. Independently reconstructed bounded-grammar certificates exclude 5,908 of 6,084 canonical leaves for frozen base 4 and 5,783 of 6,084 for frozen base 3. Full-signature LP proposals yielded 397 further integerized inequalities, all independently checked exactly. In total exactly 6,044 named leaves per base, 12,088 leaves total, are excluded. Forty leaves per base remain unresolved, so neither base is closed by this family.",
+  "record_type": "CERTIFIED_FINITE_RESULT",
+  "recorded_at_utc": "2026-08-03T21:43:52Z",
+  "replay": {
+    "audit_command": "python3 proof/check_cycle_17_time_deficit.py",
+    "bounded_command": "taskset -c 0-2 discovery/out/cycle17-time-deficit/lrc_time_deficit discovery/out/cycle8-p199-strata.txt discovery/out/cycle11-certified-sat/p199/004.cnf discovery/out/cycle11-certified-sat/p199/003.cnf discovery/out/cycle11-certified-sat/p199/007.cnf discovery/out/cycle17-time-deficit/results.tsv",
+    "check_command": "python3 proof/build_cycle_17_lrc_time_deficit.py --check",
+    "compile_command": "g++ -O3 -march=native -std=c++20 -pthread discovery/lrc_time_deficit.cpp -o discovery/out/cycle17-time-deficit/lrc_time_deficit",
+    "lp_command": "taskset -c 0-2 .venv/bin/python discovery/lrc_time_deficit_lp.py",
+    "test_command": "python3 -m unittest tests/test_cycle_17_time_deficit.py -v"
+  },
+  "resources": {
+    "aggregate_wall_cap_seconds": 3600,
+    "aggregate_wall_seconds": 15.92,
+    "compiler": "g++ 13.3.0 -O3 -march=native -std=c++20 -pthread",
+    "dependency_environment_bytes": 235737075,
+    "lp_runtime": "CPython 3.12.3, numpy 2.2.6, scipy 1.14.1",
+    "output_corpus_bytes": 971866,
+    "peak_rss_kib": 80388,
+    "reserved_cpu": 3,
+    "temporary_disk_cap_bytes": 21474836480,
+    "worker_cpus": [
+      0,
+      1,
+      2
+    ]
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_17_lrc_time_deficit.py",
+    "sha256": "374004d114945ed76f8deaf5073cce02864d6f278338c3476b4abd84815d0266"
+  },
+  "status": "SEALED"
+}

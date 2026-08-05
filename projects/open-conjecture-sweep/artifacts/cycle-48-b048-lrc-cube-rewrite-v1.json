@@ -1,0 +1,670 @@
+{
+  "artifact_id": "cycle-48-b048-lrc-cube-rewrite-v1",
+  "audit": {
+    "aggregate_critical_diamonds": 5830,
+    "aggregate_cube_candidates": 88110100,
+    "aggregate_forbidden_cells": 136442,
+    "aggregate_repair_steps": 2177,
+    "confluence_status_counts": {
+      "NONCONFLUENT": 314,
+      "NO_NONJOINABLE_REACHED_DIAMOND": 198
+    },
+    "faces": 512,
+    "mobius_defect_faces": 314,
+    "repair_status_counts": {
+      "STRONG_REPAIR": 12,
+      "TARGETED_REPAIR": 500
+    },
+    "resources": {
+      "aggregate_wall_seconds": 9318.194423981011,
+      "fraction_height_bits_upper": 473,
+      "selected_support_cells": 843372,
+      "support_cells_upper": 890284,
+      "temporary_disk_bytes": 5267475,
+      "tensor_entry_operations_upper": 38870758
+    },
+    "status": "PASS"
+  },
+  "budget_ordinal": "B048",
+  "claim_boundary": "The formula, cube-kernel identity, and triangular termination criterion are generic. Repair and nonconfluence counts are proved only for the frozen 512-face corpus. This does not prove a universal p199 face constructor, every quadruple fills, a degree-four functional, a leaf certificate, or LRC(13).",
+  "comparison_quarantine": {
+    "cycle47_overlap": 1,
+    "equal": 1,
+    "interpretation": "Performed only after principal classification; equality is a consistency check and was never a selection rule.",
+    "zero_marginal_unequal": 0
+  },
+  "corpus": {
+    "aggregate_critical_diamonds": 5830,
+    "aggregate_cube_candidates": 88110100,
+    "aggregate_forbidden_cells": 136442,
+    "aggregate_repair_steps": 2177,
+    "confluence_status_counts": {
+      "NONCONFLUENT": 314,
+      "NO_NONJOINABLE_REACHED_DIAMOND": 198
+    },
+    "descriptor_strata": 9052,
+    "hash_candidates": 100163,
+    "mobius_defect_faces": 314,
+    "repair_status_counts": {
+      "STRONG_REPAIR": 12,
+      "TARGETED_REPAIR": 500
+    },
+    "selected_faces": 512
+  },
+  "cycle": 48,
+  "cycle_decision": {
+    "companion_identity": "/root/darwin_cycle25_short",
+    "companion_strongest_flaw": "Zero total on each deleted pair fiber is insufficient by itself because packet moves may spill into the other pair strata or terminate on an unavailable cell.",
+    "falsifier": "An exact surviving relative cycle or dual cochain in the terminal group, or a full-domain p199 interface violating the preregistered buffer hypothesis.",
+    "next_question": "Does the allowed three-way cell complex admit a diagonal-stratum filtration whose cube packets explicitly contract every zero-pair-marginal defect, with zero terminal triple-intersection group under frozen support/buffer hypotheses?",
+    "outcome": "SEAL_C48_AND_OPEN_C49_RELATIVE_DIAGONAL_CONTRACTION",
+    "user_stop_gate": "Cycle 49 is the final clarity gate for Problem 1. If it yields neither a clear theorem route nor a decisive structural obstruction, pause LRC(13) immediately and create one concise handoff; do not open Cycle 50."
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "actual_engine": {
+      "path": "discovery/lrc_cube_rewrite_actual.py",
+      "sha256": "fa8dc7a73d56315eb5c92fcd07cc5e6c719d53551d87d17d2e9c695ec3015f4a"
+    },
+    "actual_result": {
+      "path": "discovery/out/cycle48-cube-rewrite/actual.json",
+      "sha256": "436182b5cfea6acae25c46f7f8bf6fc88f06c6c08b4a094aca0a268ba0037f84"
+    },
+    "actual_timing": {
+      "path": "discovery/out/cycle48-cube-rewrite/run-actual.time",
+      "sha256": "5fcb8cb692053ba21d0d5d1d96f33657f4908094bf8bd40988a0f82e392e6841"
+    },
+    "audit": {
+      "path": "proof/check_cycle_48_cube_rewrite.py",
+      "sha256": "1ecd94c59022b615abbf073acc648d112bc64e1d42e3804d3e0650978ef46de1"
+    },
+    "control_engine": {
+      "path": "discovery/lrc_cube_rewrite_controls.py",
+      "sha256": "56a04ab19df01ef0fe9ddbc2495b88efd6fbf374b9cb5be9de29e19cfffdbfa3"
+    },
+    "control_result": {
+      "path": "discovery/out/cycle48-cube-rewrite/generic-controls.json",
+      "sha256": "5de016105e10e44c31786105254659007d6671eab88fb4683cc64ec8e9542166"
+    },
+    "control_timing": {
+      "path": "discovery/out/cycle48-cube-rewrite/run-generic-controls.time",
+      "sha256": "a60338404d089ff3f41d4a5c782da2d8eb724eebfda9822fa8e181abb6ad0f5a"
+    },
+    "cycle29_interface": {
+      "path": "discovery/out/cycle29-ownership-blocker/result.json",
+      "sha256": "b213f8b790b2f53e2de30d244ead973143973e236083d24b38fffb5234271f15"
+    },
+    "cycle41_closure": {
+      "path": "discovery/out/cycle41-multiplied-ideal/zero-support-closure.json",
+      "sha256": "a1f742592375d035f68d3dcd0ecde65c4ee6e7b78c96fa2a1ed18362e979037e"
+    },
+    "cycle47_artifact": {
+      "path": "artifacts/cycle-47-b047-lrc-global-affine-descent-v1.json",
+      "sha256": "05b3b3b36691c933481a953a8415aba093db6c7e2db52917aabae47091c845bf"
+    },
+    "cycle47_selection": {
+      "path": "discovery/out/cycle47-affine-descent/selection.json",
+      "sha256": "eac88f41ac6ae261d407ba4e6026e121e25435fafe4a66911a3645454c4f5ac1"
+    },
+    "idea_selection": {
+      "path": "discovery/cycle48_cube_rewrite_idea_selection.md",
+      "sha256": "286cd1bee48283e8a5e1fa19c7b4e69ec43bbe10788cdb564e81fed0c55dfaa4"
+    },
+    "independent_replay": {
+      "path": "proof/replay_cycle_48_cube_rewrite_independent.py",
+      "sha256": "e46f7533466bd3377329fd4710ed5d2d5d4cd913752c278b6a345a19860e6915"
+    },
+    "independent_result": {
+      "path": "discovery/out/cycle48-cube-rewrite/independent-replay.json",
+      "sha256": "47ec9493f744464a12589d8ff50fa8f0e4cd3858d7a41762bdd96f80fb78321f"
+    },
+    "independent_selection": {
+      "path": "discovery/out/cycle48-cube-rewrite/independent-selection.json",
+      "sha256": "54f14e6aae29e824716991d0b30bc213b4e108196b735679e6d0b05e8b8d99b0"
+    },
+    "independent_selection_timing": {
+      "path": "discovery/out/cycle48-cube-rewrite/run-independent-selection.time",
+      "sha256": "1aed6dee8120add0e2bda9d185611dcf6ce08b7e780972c8e2f8a2ed9c11cb73"
+    },
+    "independent_selector": {
+      "path": "proof/check_cycle_48_selector_independent.py",
+      "sha256": "9c742187dbd034798b406a4319b0244b58204505eb4fb4bd9e46e4f85ccace42"
+    },
+    "independent_timing": {
+      "path": "discovery/out/cycle48-cube-rewrite/run-independent.time",
+      "sha256": "ae9128e9270d66d77da38998924637ebe0333a5a165a93ddf4c1e7ddea6a4b6b"
+    },
+    "ownership_interface": {
+      "path": "discovery/lrc_ownership_functional.py",
+      "sha256": "2e4d63706aff0f0c71f13c06bd0dc63374f28c82a1e9ae4fd2b241141d843589"
+    },
+    "preregistration": {
+      "path": "docs/cycle-48-b048-lrc-cube-rewrite-preregistration-v1.md",
+      "sha256": "7cef7d7ecfcc55aaea9932d6b8f48ec66eb1a28fd5e8ea4eb330659b575cc0a1"
+    },
+    "preregistration_validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    },
+    "rewrite_module": {
+      "path": "discovery/lrc_cube_rewrite.py",
+      "sha256": "106a237501b9bf115e8df265c2075f0605c6a7776c1bd8fdd870adc1b01e4de9"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "selection": {
+      "path": "discovery/out/cycle48-cube-rewrite/selection.json",
+      "sha256": "84137a655a2ef241557c4024ced74d4cb18f64d27a0f2c06d5ba56ceae2d73fc"
+    },
+    "selection_timing": {
+      "path": "discovery/out/cycle48-cube-rewrite/run-selection.time",
+      "sha256": "05090be0b87b90c150e271be55f83b7d444ffd998cf51c1c48d07f8d30c71e44"
+    },
+    "selector": {
+      "path": "discovery/lrc_cube_rewrite_select.py",
+      "sha256": "774eb105d308b390b075169b5a04ac6795d995e1a23a04096c7c342a32e32852"
+    },
+    "signed_moments": {
+      "path": "discovery/lrc_signed_ownership_moments.py",
+      "sha256": "cb76981ee928abd7b25bf665a83a55e883587c2c89b26b35282226a0afbae5f3"
+    },
+    "soundness": {
+      "path": "proof/cycle_48_cube_rewrite_soundness.md",
+      "sha256": "ef4950de15c7e44b8c59b4d2c6d95dece631f1b9908f199e50d70134a05ae126"
+    },
+    "test": {
+      "path": "tests/test_cycle_48_cube_rewrite.py",
+      "sha256": "106bf396af0c6121e68beab22d8f5841e7778f63d1df9876da7612c2c12759ef"
+    },
+    "transport": {
+      "path": "discovery/lrc_multiplied_fill_probe.py",
+      "sha256": "3bb02b3fcc56f6d5f83c0719556bf41e5a7d1821ffb61c79150160c9e44990f6"
+    }
+  },
+  "generic_theorems": {
+    "cube_kernel": "Every signed 2x2x2 alternating cube has zero in all three pair marginals.",
+    "mobius_extension": "M=P01 tensor delta2 + P02 tensor delta1 + delta0 tensor P12 - 2 delta000 has the three prescribed pair marginals when their singleton marginals are the distinguished point masses.",
+    "triangular_termination": "A reducer whose other forbidden cells are later in the frozen order kills its pivot without reintroducing earlier defects; finite scanning terminates."
+  },
+  "independent_replay": {
+    "faces": 512,
+    "material_status": "PASS",
+    "method": "Independent reverse candidate/cell order, direct marginal sums, and no import of the principal rewrite module.",
+    "selector_status": "PASS"
+  },
+  "literal_confluence_falsifier": {
+    "confluence_status": "NONCONFLUENT",
+    "critical_diamonds_tested": 25,
+    "cube_candidates": 248829,
+    "first_diamond": {
+      "alternative_owners": [
+        1,
+        3,
+        2
+      ],
+      "difference": [
+        [
+          [
+            0,
+            0,
+            1
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            0,
+            0,
+            2
+          ],
+          -1,
+          1
+        ],
+        [
+          [
+            0,
+            1,
+            0
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            0,
+            1,
+            1
+          ],
+          -1,
+          1
+        ],
+        [
+          [
+            0,
+            3,
+            0
+          ],
+          -1,
+          1
+        ],
+        [
+          [
+            0,
+            3,
+            2
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            1,
+            0,
+            1
+          ],
+          -1,
+          1
+        ],
+        [
+          [
+            1,
+            0,
+            2
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            1,
+            1,
+            0
+          ],
+          -1,
+          1
+        ],
+        [
+          [
+            1,
+            1,
+            1
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            1,
+            3,
+            0
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            1,
+            3,
+            2
+          ],
+          -1,
+          1
+        ]
+      ],
+      "first_missing": null,
+      "normal_form": [
+        [
+          [
+            0,
+            2,
+            1
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          -1,
+          1
+        ],
+        [
+          [
+            0,
+            3,
+            1
+          ],
+          -1,
+          1
+        ],
+        [
+          [
+            0,
+            3,
+            3
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            1,
+            2,
+            1
+          ],
+          -1,
+          1
+        ],
+        [
+          [
+            1,
+            2,
+            3
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            1,
+            3,
+            1
+          ],
+          1,
+          1
+        ],
+        [
+          [
+            1,
+            3,
+            3
+          ],
+          -1,
+          1
+        ]
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "status": "UNJOINABLE"
+    },
+    "first_missing": null,
+    "forbidden_cells": 348,
+    "mobius": [
+      [
+        [
+          0,
+          0,
+          0
+        ],
+        -2,
+        1
+      ],
+      [
+        [
+          0,
+          0,
+          1
+        ],
+        2,
+        1
+      ],
+      [
+        [
+          0,
+          1,
+          0
+        ],
+        1,
+        1
+      ],
+      [
+        [
+          0,
+          2,
+          0
+        ],
+        1,
+        1
+      ],
+      [
+        [
+          0,
+          2,
+          1
+        ],
+        -1,
+        1
+      ],
+      [
+        [
+          1,
+          0,
+          0
+        ],
+        1,
+        1
+      ],
+      [
+        [
+          1,
+          0,
+          1
+        ],
+        -1,
+        1
+      ],
+      [
+        [
+          2,
+          0,
+          0
+        ],
+        1,
+        1
+      ],
+      [
+        [
+          2,
+          1,
+          0
+        ],
+        -1,
+        1
+      ]
+    ],
+    "mobius_defects": 6,
+    "ordinal": 1,
+    "repair_status": "TARGETED_REPAIR",
+    "repair_steps": 9,
+    "repaired_tensor": [
+      [
+        [
+          0,
+          1,
+          3
+        ],
+        1,
+        1
+      ],
+      [
+        [
+          0,
+          2,
+          1
+        ],
+        1,
+        1
+      ],
+      [
+        [
+          0,
+          2,
+          3
+        ],
+        -1,
+        1
+      ],
+      [
+        [
+          1,
+          2,
+          0
+        ],
+        1,
+        1
+      ],
+      [
+        [
+          1,
+          2,
+          1
+        ],
+        -2,
+        1
+      ],
+      [
+        [
+          1,
+          2,
+          3
+        ],
+        1,
+        1
+      ],
+      [
+        [
+          1,
+          3,
+          1
+        ],
+        1,
+        1
+      ],
+      [
+        [
+          1,
+          3,
+          3
+        ],
+        -1,
+        1
+      ],
+      [
+        [
+          2,
+          0,
+          1
+        ],
+        1,
+        1
+      ],
+      [
+        [
+          2,
+          1,
+          3
+        ],
+        -1,
+        1
+      ],
+      [
+        [
+          2,
+          3,
+          1
+        ],
+        -1,
+        1
+      ],
+      [
+        [
+          2,
+          3,
+          3
+        ],
+        1,
+        1
+      ]
+    ],
+    "selection_hash": "00008c4b98767b7bed0f1dfe4d9538723b432df2a96f2a570ba8bea4193417ed",
+    "support_sizes": [
+      13,
+      13,
+      13
+    ],
+    "types": [
+      424,
+      507,
+      1264
+    ]
+  },
+  "negative_controls": {
+    "literal_nonjoinable_diamond": {
+      "normal_form_nonzero": 14,
+      "status": "NONJOINABLE"
+    },
+    "nonkernel_move_rejected": true,
+    "unrepaired_structural_zero": {
+      "first_missing": [
+        0,
+        0,
+        0
+      ],
+      "status": "UNREPAIRED"
+    }
+  },
+  "outcome": "A closed M\u00f6bius formula extends three compatible pair transports, signed 2x2x2 cubes preserve every pair marginal, and lexicographically triangular cube reduction terminates. Every one of 512 outcome-blind p199 structural faces repairs exactly, but every one of the 314 faces with an initial forbidden defect has a literal nonjoinable reached critical diamond. Deterministic construction survives; literal confluence is refuted on every nontrivial frozen start.",
+  "questioning_correction": {
+    "exact_reason": "If a pivot violates the 01 diagonal, changing only coordinate 2 leaves a second cube vertex with the same forbidden 01 pair; a zero-marginal cube cannot isolate that defect.",
+    "implication": "A new engine must contract coupled forbidden fibers or use their relative homology, not independent defect deletion.",
+    "rejected_idea": "Remove each forbidden coefficient with one cube having seven allowed companion vertices."
+  },
+  "record_type": "PROVED_MOBIUS_CUBE_REPAIR_AND_CONFLUENCE_NO_GO",
+  "recorded_at_utc": "2026-08-05T06:15:49Z",
+  "replay": {
+    "actual_command": "taskset -c 2 .venv/bin/python discovery/lrc_cube_rewrite_actual.py",
+    "audit_command": ".venv/bin/python proof/check_cycle_48_cube_rewrite.py",
+    "check_command": ".venv/bin/python proof/build_cycle_48_lrc_cube_rewrite.py --check",
+    "controls_command": "taskset -c 2 .venv/bin/python discovery/lrc_cube_rewrite_controls.py",
+    "independent_material_command": "taskset -c 2 .venv/bin/python proof/replay_cycle_48_cube_rewrite_independent.py",
+    "independent_selection_command": "taskset -c 1 .venv/bin/python proof/check_cycle_48_selector_independent.py",
+    "selection_command": "taskset -c 2 .venv/bin/python discovery/lrc_cube_rewrite_select.py",
+    "test_command": ".venv/bin/python -m unittest tests.test_cycle_48_cube_rewrite -v"
+  },
+  "resources": {
+    "actual_peak_rss_kib": 448032,
+    "aggregate_wall_seconds": 9318.194423981011,
+    "fraction_height_bits_upper": 473,
+    "independent_replay_peak_rss_kib": 446268,
+    "independent_selection_peak_rss_kib": 1182348,
+    "reserved_cpu": 3,
+    "selected_support_cells": 843372,
+    "selection_peak_rss_kib": 1253728,
+    "support_cells_upper": 890284,
+    "temporary_disk_bytes": 5267475,
+    "tensor_entry_operations_upper": 38870758,
+    "worker_cpus": [
+      1,
+      2
+    ]
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_48_lrc_cube_rewrite.py",
+    "sha256": "02173cf5c5d4457586f3087d7bd0a4f80e76f147513320d6a29ec1ad2c6d63d1"
+  },
+  "status": "SEALED"
+}

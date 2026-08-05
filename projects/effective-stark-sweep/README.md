@@ -17,7 +17,7 @@ census definitions, orchestration, records, and certificates.
 ## Master plan
 
 The authoritative current roadmap, dependency map, paper status, and
-research queue are maintained in [`PLAN.md`](PLAN.md). Historical
+research queue are maintained in [`PROGRAM.md`](PROGRAM.md). Historical
 cycle notes are evidence and process history; they do not supersede
 the master plan.
 

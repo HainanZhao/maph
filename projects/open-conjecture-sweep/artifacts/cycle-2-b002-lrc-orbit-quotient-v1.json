@@ -1,0 +1,124 @@
+{
+  "artifact_id": "cycle-2-b002-lrc-orbit-quotient-v1",
+  "baseline_validation": {
+    "counts": {
+      "k6_p47": 53,
+      "k7_p47": 50
+    },
+    "epistemic_status": "OBSERVED",
+    "leaves": {
+      "k6_p47": 682,
+      "k7_p47": 604
+    },
+    "nodes": {
+      "k6_p47": 3608,
+      "k7_p47": 9997
+    },
+    "statement": "Three-thread dynamic scheduling reproduced both Cycle-1 baseline tuple files byte-for-byte and preserved the unsharded node and leaf counts."
+  },
+  "budget_ordinal": "B002",
+  "claim_boundary": "The declared largest-entry canonical-parent quotient has a written completeness argument and reproduces the frozen p=47 tuple sets exactly. At k=13,p=199 it breached the preregistered aggregate node cap before completing any depth-13 leaf, so it is strategically insufficient at this frontier. This is an algorithmic performance result only: it proves neither a mathematical obstruction, J(13,199)=empty, nor LRC(13).",
+  "companion_decision": {
+    "adopted": true,
+    "identity": "/root/decision_companion_2",
+    "next_action": "Open Cycle 3 for a coverage-aware invariant parent with a canonical uncovered class and compatible add/delete rules; require the same baseline tuple equality before any frontier claim.",
+    "recommendation": "Seal Cycle 2 as exact quotient, strategically insufficient at the frozen frontier, and open a distinct Cycle 3."
+  },
+  "cycle": 2,
+  "epistemic_status": "OBSERVED",
+  "frontier_gate": {
+    "assigned_tasks": 3,
+    "canonical_solutions_seen": 0,
+    "epistemic_status": "OBSERVED",
+    "frontier_tasks": 42925,
+    "k": 13,
+    "leaves": 0,
+    "nodes": 586985073,
+    "outcome": "FAILED_NODE_CAP",
+    "p": 199,
+    "peak_rss_kib": 6448,
+    "statement": "The shared three-worker search crossed the frozen 586,985,072-node limit by the single detecting node; only three of 42,925 depth-four tasks began and no leaf was reached.",
+    "task_depth": 4,
+    "threads": 3,
+    "wall_seconds": 845.165
+  },
+  "frozen_hashes": {
+    "baseline_k6_result": {
+      "path": "discovery/out/orbit-k6-p47-dynamic.result",
+      "sha256": "975113ffadbb7aba24993618c05147c0827906532e4ae95bd66421ab77c82121"
+    },
+    "baseline_k6_tuples": {
+      "path": "discovery/out/orbit-k6-p47-dynamic.txt",
+      "sha256": "3282243c9bd46b7cf0cb2f57a60fcf75d01df5f3ffdd11fe0ad91f8713170e03"
+    },
+    "baseline_k7_result": {
+      "path": "discovery/out/orbit-k7-p47-dynamic.result",
+      "sha256": "d5c9bdde39b1ffee30e1d9e4c9a55fc24ff45dc8334106691cd77ef130596303"
+    },
+    "baseline_k7_tuples": {
+      "path": "discovery/out/orbit-k7-p47-dynamic.txt",
+      "sha256": "8687bd7725b570baeb72d4d666a52c6b9fcf20204a6c4a036c21c672c9338a4d"
+    },
+    "canonical_augmentation_argument": {
+      "path": "proof/cycle_2_canonical_augmentation_argument.md",
+      "sha256": "58873cdeda9e3f86c0934f467f354230b149be2d46ee6315289e65b61acbb336"
+    },
+    "exact_quotient_search": {
+      "path": "discovery/lrc_orbit_quotient.cpp",
+      "sha256": "37ae1fc9eeb63089fe66467bd0c81f7b4d39c6da593f66359399dc98d5de76de"
+    },
+    "frontier_result": {
+      "path": "discovery/out/orbit-k13-p199-dynamic.result",
+      "sha256": "a667907434fd63bf0979d924d97713e8c359fbd2dd7a3ab80cdaad9f2b1f5d7e"
+    },
+    "frontier_timing": {
+      "path": "discovery/out/orbit-k13-p199-dynamic.time",
+      "sha256": "e8919497ba72bf52543174a56e340f177029a7bfc33ff81e7495de12f4c745d7"
+    },
+    "preregistration": {
+      "path": "docs/cycle-2-b002-lrc-orbit-quotient-preregistration-v1.md",
+      "sha256": "10e47b26145f578e46e5bf3867a14a31132f5f7630d41d7ac76364447ccdc896"
+    },
+    "preregistration_validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    },
+    "regression_test": {
+      "path": "tests/test_cycle_2_lrc_orbit_quotient.py",
+      "sha256": "feea0afad2d66add17313bef90c1de7690fc4b02bbe5d309b46c48c7279bbc55"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    }
+  },
+  "recorded_at_utc": "2026-08-03T13:53:26Z",
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "Construct a coverage-directed orbit quotient that retains one construction path for every cover orbit while avoiding the largest-entry prefix explosion."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_2_lrc_orbit_quotient.py --check",
+    "compile_command": "g++ -std=c++20 -O3 -march=native -flto -DNDEBUG -pthread discovery/lrc_orbit_quotient.cpp -o discovery/out/lrc_orbit_quotient_opt",
+    "frontier_command": "taskset -c 0-2 discovery/out/lrc_orbit_quotient_opt --k 13 --p 199 --node-cap 586985072 --max-seconds 3600 --threads 3 --task-depth 4 --output discovery/out/orbit-k13-p199-dynamic.txt",
+    "test_command": "python3 -m unittest tests/test_cycle_2_lrc_orbit_quotient.py -v",
+    "write_command": "python3 proof/build_cycle_2_lrc_orbit_quotient.py --write"
+  },
+  "runtime": {
+    "compile_flags": "-std=c++20 -O3 -march=native -flto -DNDEBUG -pthread",
+    "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_2_lrc_orbit_quotient.py",
+    "sha256": "4d71f510b86cc80425bd9cc9b41b4daa9372d6fd2f260acb4ee0c44c9fd4b239"
+  },
+  "status": "SEALED",
+  "structural_diagnosis": {
+    "epistemic_status": "CONJECTURED",
+    "falsifier": "A reproducible complete k=13,p=199 run using the frozen parent and pruning rules that meets both tenfold node and leaf caps.",
+    "statement": "Largest-entry deletion preserves an orbit tree but appears to destroy the uncovered-time choice that makes exact-cover branching effective."
+  }
+}

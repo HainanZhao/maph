@@ -1,4 +1,4 @@
-# PLAN: SIC--Stark research program
+# PROGRAM: SIC--Stark research program
 
 ## Objective, claim boundary, and current state
 

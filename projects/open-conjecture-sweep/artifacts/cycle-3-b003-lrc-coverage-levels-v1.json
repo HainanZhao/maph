@@ -1,0 +1,128 @@
+{
+  "artifact_id": "cycle-3-b003-lrc-coverage-levels-v1",
+  "baseline_validation": {
+    "counts": {
+      "k6_p47": 53,
+      "k7_p47": 50
+    },
+    "epistemic_status": "OBSERVED",
+    "expanded_states": {
+      "k6_p47": 1241,
+      "k7_p47": 2454
+    },
+    "tiny_oracle": [
+      "direct_rechecked=1",
+      "brute_force_canonical=1"
+    ],
+    "tuple_equality": "The frozen output hashes are byte-identical to the Cycle-1 baseline tuple hashes."
+  },
+  "budget_ordinal": "B003",
+  "claim_boundary": "The coverage-directed canonical-level construction has a written retained-path argument and exactly reproduces a naive tiny oracle plus both frozen p=47 tuple sets. Its in-memory k=13,p=199 implementation failed while constructing depth 8 under the logged 8 GiB virtual-memory limit. This is a storage/resource result only; it proves no mathematical obstruction, J-empty claim, or LRC(13).",
+  "companion_decision": {
+    "adopted": true,
+    "identity": "/root/decision_companion_2",
+    "next_action": "Open Cycle 4 for deterministic disk/radix-partitioned canonical deduplication; freeze serialization, partition and merge proof, disk/wall caps, and baseline equality.",
+    "recommendation": "Seal Cycle 3 as an in-memory resource failure and open a distinct storage-engine cycle."
+  },
+  "cycle": 3,
+  "epistemic_status": "OBSERVED",
+  "frontier_gate": {
+    "depth_7_states": 2982862,
+    "epistemic_status": "OBSERVED",
+    "expanded_states_through_depth_7": 3267281,
+    "generated_edges_through_depth_7": 45741934,
+    "last_completed_depth": 7,
+    "outcome": "FAILED_MEMORY_CAP",
+    "peak_rss_kib": 4654424,
+    "statement": "Depth 7 completed exactly; allocation failed while materializing/deduplicating the next level under the logged RLIMIT_AS.",
+    "virtual_memory_limit_kib": 8388608,
+    "wall_seconds": 47.97
+  },
+  "frozen_hashes": {
+    "baseline_k6_result": {
+      "path": "discovery/out/coverage-k6.result",
+      "sha256": "fc3f409cb3719c157b50a1d387d01071adb24fbf08665663487f11fc701cf26c"
+    },
+    "baseline_k6_tuples": {
+      "path": "discovery/out/coverage-k6.txt",
+      "sha256": "3282243c9bd46b7cf0cb2f57a60fcf75d01df5f3ffdd11fe0ad91f8713170e03"
+    },
+    "baseline_k7_result": {
+      "path": "discovery/out/coverage-k7.result",
+      "sha256": "31acac65bb8416117eccb83c5d5809325677ab872af9baa2cd42dee54a7fb3c3"
+    },
+    "baseline_k7_tuples": {
+      "path": "discovery/out/coverage-k7.txt",
+      "sha256": "8687bd7725b570baeb72d4d666a52c6b9fcf20204a6c4a036c21c672c9338a4d"
+    },
+    "exact_level_search": {
+      "path": "discovery/lrc_coverage_levels.cpp",
+      "sha256": "e94f2e62273cb8a23bc18b00345a32c95c0778499b83077bd05579845d86ff2d"
+    },
+    "frontier_runner": {
+      "path": "proof/run_cycle_3_frontier.sh",
+      "sha256": "ce5b5f1262cdb91302a34f2e8f12c7c6fe4a5bb0d2183c3a8ad12e371ec6ae91"
+    },
+    "frontier_timing": {
+      "path": "discovery/out/coverage-k13-p199.time",
+      "sha256": "94c89ac54d805376106083ddbe478f24fabca71ce768a58357c8d2478d927955"
+    },
+    "preregistration": {
+      "path": "docs/cycle-3-b003-lrc-coverage-directed-orbits-preregistration-v1.md",
+      "sha256": "3191dcdff14a84cce2ea94f9afc29681b69fec3db936eab865a567aae4a4dfd2"
+    },
+    "preregistration_validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    },
+    "regression_test": {
+      "path": "tests/test_cycle_3_lrc_coverage_levels.py",
+      "sha256": "1caf5a7f2ad8626558cb64c7034c666061d9c8680c3e68d4ce6e55e123403665"
+    },
+    "retained_path_argument": {
+      "path": "proof/cycle_3_coverage_directed_argument.md",
+      "sha256": "e1091ef0bb6336be4340f30c161f6e2549a0304c4a26ad054de42f077eb3fe52"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "tiny_result": {
+      "path": "discovery/out/coverage-tiny.result",
+      "sha256": "a07249709fd5be7bcad645c13f3fa94c41ddff9ee3ffa00ac5e1f1993e3f701c"
+    },
+    "tiny_tuples": {
+      "path": "discovery/out/coverage-tiny.txt",
+      "sha256": "1def07dbe06eeb097aafec8a40329937cd20c93a83634b8221ea2b41a894310c"
+    }
+  },
+  "recorded_at_utc": "2026-08-03T14:06:22Z",
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "External partitioning may preserve the retained-path engine while bounding RAM independently of the next-level frontier width."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_3_lrc_coverage_levels.py --check",
+    "compile_command": "g++ -std=c++20 -O3 -march=native -flto -DNDEBUG -pthread discovery/lrc_coverage_levels.cpp -o discovery/out/lrc_coverage_levels",
+    "frontier_command": "/usr/bin/time -v sh proof/run_cycle_3_frontier.sh > discovery/out/coverage-k13-p199.result 2> discovery/out/coverage-k13-p199.time",
+    "test_command": "python3 -m unittest tests/test_cycle_3_lrc_coverage_levels.py -v",
+    "write_command": "python3 proof/build_cycle_3_lrc_coverage_levels.py --write"
+  },
+  "runtime": {
+    "compile_flags": "-std=c++20 -O3 -march=native -flto -DNDEBUG -pthread",
+    "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_3_lrc_coverage_levels.py",
+    "sha256": "f2a4cc1a19b16fa80aec4fcc775963d0c06e52af2e14c53fec3992d0520c66c6"
+  },
+  "status": "SEALED",
+  "structural_diagnosis": {
+    "epistemic_status": "OBSERVED",
+    "falsifier": "A reproducible complete in-memory run of the frozen construction within every Cycle-3 resource cap.",
+    "statement": "The in-memory implementation requires simultaneous storage for the current level, worker child buffers, and the merged next level; that representation exceeded the frozen memory budget before depth 8 completed."
+  }
+}

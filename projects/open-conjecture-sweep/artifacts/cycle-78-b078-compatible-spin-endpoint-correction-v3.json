@@ -1,0 +1,68 @@
+{
+  "artifact_id": "cycle-78-b078-compatible-spin-endpoint-correction-v3",
+  "audit": {
+    "c78_interpolation_status": "PASS",
+    "c79_endpoint_status": "PASS"
+  },
+  "budget_ordinal": "B078",
+  "claim_boundary": "No mathematical, source, replay, or scope claim changes. The current theorem remains the C78 compatible three-qubit pair-support arbitrary-qubit result.",
+  "correction": {
+    "affected_claims": "v2 recorded_at_utc metadata only.",
+    "cause": "A fixed timestamp was chosen ahead of the actual write clock.",
+    "repair": "Record the observed write-boundary timestamp in this immutable v3 correction."
+  },
+  "cycle": 78,
+  "cycle_decision": {
+    "decision": "Correct the sealed metadata through a new record; preserve v2 unchanged.",
+    "falsifier": "Any changed theorem hash or replay status would show this is not metadata-only."
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "c78_checker": {
+      "path": "proof/check_cycle78_endpoint_interpolation.py",
+      "sha256": "b949c480c8e8acc89e22f28d92fcd87216fc1031e18719ddce7d3302de2b2976"
+    },
+    "c79_checker": {
+      "path": "proof/check_cycle79_compatible_endpoint_foundation.py",
+      "sha256": "2532c3ccc9cdb5e671c64895c8e1bddb6fcf9a16064a490e9f0a44376fefc426"
+    },
+    "correction_note": {
+      "path": "docs/cycle78_reinstatement_timestamp_correction.md",
+      "sha256": "70d7dbc4e9fda8e07690a91d69ca3376a65f053fcd62ec8a23851c765e8e3260"
+    },
+    "reinstatement_sealer": {
+      "path": "proof/build_cycle_78_endpoint_reinstatement.py",
+      "sha256": "c6b38a14acb596dcaacba9f809cdd860571028fd160133b3df609dbf7cd15d14"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "superseded_reinstatement": {
+      "path": "artifacts/cycle-78-b078-compatible-spin-endpoint-correction-v2.json",
+      "sha256": "07b348daebd84dc7be8f6593acf9e76f336c64e64dd66681dd13b97ea63fa0a1"
+    },
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "outcome": "C78 reinstatement remains PROVED; this record corrects only the future recorded_at_utc value in v2.",
+  "record_type": "CORRECTION_METADATA_TIMESTAMP",
+  "recorded_at_utc": "2026-08-05T18:51:06Z",
+  "replay": {
+    "audit": "python3 proof/check_cycle79_compatible_endpoint_foundation.py && python3 proof/check_cycle78_endpoint_interpolation.py",
+    "check": "python3 proof/build_cycle_78_reinstatement_timestamp_correction.py --check"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_78_reinstatement_timestamp_correction.py",
+    "sha256": "9efc808876ffdea5bdd746a2bebbd24c657cb6cca0f42a2fcccbb2d65eb17702"
+  },
+  "status": "SEALED",
+  "supersedes": "cycle-78-b078-compatible-spin-endpoint-correction-v2"
+}

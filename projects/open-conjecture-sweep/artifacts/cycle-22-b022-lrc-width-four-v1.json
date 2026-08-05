@@ -1,0 +1,201 @@
+{
+  "artifact_id": "cycle-22-b022-lrc-width-four-v1",
+  "audit": {
+    "certified_leaves": [
+      {
+        "U": 65440,
+        "W": 65528,
+        "base_index": 4,
+        "leaf_ordinal": 952,
+        "margin": 88
+      }
+    ],
+    "claim_boundary": "One named leaf only; neither base is complete.",
+    "epistemic_status": "PROVED",
+    "exhaustive_transfer_caps": 60,
+    "exhaustive_transfer_partially_executed": 3,
+    "exhaustive_transfer_unstarted": 57,
+    "remaining_leaves": 60,
+    "stage_a_trials": 9150,
+    "stage_b_trials": 602,
+    "status": "PASS"
+  },
+  "budget_ordinal": "B022",
+  "claim_boundary": "Exactly one named leaf is newly excluded. Neither base, F_1, J, nor LRC(13) is closed. Stage-A and exhaustive-transfer failures are bounded OBSERVED method outcomes, not width-four no-go theorems.",
+  "companion_decision": {
+    "falsifier": "Any target mask, allowed-digit, weight, or U/W replay mismatch invalidates the affected transfer.",
+    "final_action": "The exhaustive continuation hit its wall cap without a new certificate; seal Cycle 22 and open adaptive column generation.",
+    "identity": "/root/decision_companion_2",
+    "independent_ideas": [
+      "all-four-subset direct transfer",
+      "adaptive width-four column generation",
+      "later Fourier obstruction"
+    ],
+    "recommendation": "Continue Cycle 22 with exhaustive direct replay of the new weight; if sparse, seal and open adaptive width-four column generation.",
+    "scope_review": "One named leaf is proved; negative searches concern only frozen policies and 60 leaves remain.",
+    "strongest_flaw": "The initial policy forces the three most restricted coordinates and misses contradictions centered elsewhere."
+  },
+  "cycle": 22,
+  "epistemic_status": "PROVED",
+  "exhaustive_transfer": {
+    "boundary": "The run does not assess the full all-four-subset transfer family.",
+    "certificates": 0,
+    "epistemic_status": "OBSERVED",
+    "partially_executed": [
+      {
+        "base_index": 4,
+        "leaf_ordinal": 78,
+        "partitions": 339
+      },
+      {
+        "base_index": 4,
+        "leaf_ordinal": 79,
+        "partitions": 472
+      },
+      {
+        "base_index": 4,
+        "leaf_ordinal": 80,
+        "partitions": 529
+      }
+    ],
+    "status": "AGGREGATE_WALL_CAP",
+    "unstarted": 57,
+    "wall_seconds": 1811.959842
+  },
+  "frozen_hashes": {
+    "audit": {
+      "path": "proof/check_cycle_22_width_four.py",
+      "sha256": "479c7f3728f26b038b6cfc82236ecbcc7549d015ee01099c6edad97d093327c1"
+    },
+    "audit_output": {
+      "path": "discovery/out/cycle22-width-four/audit-final.json",
+      "sha256": "8572c53a725a426b92aed1bad511f3de668c54dbaf354a47843428d95238e170"
+    },
+    "exhaustive_results": {
+      "path": "discovery/out/cycle22-width-four/exhaustive-transfer.tsv",
+      "sha256": "ee3eef30911447774dd930197e990fa7eb0bc544c64234581fda72653edbfb84"
+    },
+    "exhaustive_summary": {
+      "path": "discovery/out/cycle22-width-four/exhaustive-transfer-result.txt",
+      "sha256": "13fbad355512e7a92041bd2c76e9ef8cde1ca45c7f9000a778d04a1a49e216ac"
+    },
+    "exhaustive_timing": {
+      "path": "discovery/out/cycle22-width-four/exhaustive-transfer.time",
+      "sha256": "d4b82a4162766e7d7e79cdfc36de9657c455a8b6ad4ab683601a22b779937606"
+    },
+    "exhaustive_transfer": {
+      "path": "discovery/lrc_width_four_exhaustive_transfer.py",
+      "sha256": "812f271894444c0aa30048ffff5cf59955bd2f8c67ea84af820ddcce5296eded"
+    },
+    "preregistration": {
+      "path": "docs/cycle-22-b022-lrc-width-four-preregistration-v1.md",
+      "sha256": "7055659239bf06d439b78b2417f6de8307b28fa7e16ddb58df23db98119b3ea8"
+    },
+    "prior_artifact": {
+      "path": "artifacts/cycle-21-b021-lrc-coupled-incidence-v1.json",
+      "sha256": "360daaf46d9f4442a65cce29d8011d05ea529ad0e59a7f16dc6c12b6b66a0200"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "soundness": {
+      "path": "proof/cycle_22_width_four_soundness.md",
+      "sha256": "d93a3e0c5471480c27bf74154759b3d9e01f508371fb1963f11dd90831c9063c"
+    },
+    "stage_a": {
+      "path": "discovery/lrc_width_four_stage_a.py",
+      "sha256": "3faee2712066bb15014b87b47f58a7be914298965dbf32678ee36485e9a0a9b9"
+    },
+    "stage_a_results": {
+      "path": "discovery/out/cycle22-width-four/stage-a.tsv",
+      "sha256": "9fbd72611852d8b3080142174b7bc677282af8ea13eebb7b5a84983489255bd2"
+    },
+    "stage_a_summary": {
+      "path": "discovery/out/cycle22-width-four/stage-a-result.txt",
+      "sha256": "61ef40c1884d1113d0c635c32f66a35ebc6208fa9b71161e9fe1c27f8b0644e6"
+    },
+    "stage_a_timing": {
+      "path": "discovery/out/cycle22-width-four/stage-a.time",
+      "sha256": "9ed38b77a362a31ac907247f04b4ae49ea933fc28b188565ebfda8ea228fba2e"
+    },
+    "stage_b": {
+      "path": "discovery/lrc_width_four_stage_b.py",
+      "sha256": "d114e70f59d7289e0cb97c1747ee0868068d65a7c5567fdc6063ed5a374b89df"
+    },
+    "stage_b_results": {
+      "path": "discovery/out/cycle22-width-four/stage-b-results.tsv",
+      "sha256": "a89a0532292f188cedc0f5b41a04cb68e2ebcae09ed9514ffba6f0f0941b0c07"
+    },
+    "stage_b_summary": {
+      "path": "discovery/out/cycle22-width-four/stage-b-result.txt",
+      "sha256": "5de52f74aa44b12def31d56aeca0eeab00765f85176d24d1147ed19ebfc640fd"
+    },
+    "stage_b_timing": {
+      "path": "discovery/out/cycle22-width-four/stage-b.time",
+      "sha256": "c2462e15fc99f120e46a8498e460bfb2f24622024ea41c0b290cfd84a1d43d98"
+    },
+    "stage_b_trials": {
+      "path": "discovery/out/cycle22-width-four/stage-b-trials.tsv",
+      "sha256": "2d1d6004488efed95e4b0c0f69a94dab346b6399191669459f640a2a6e6f37bb"
+    },
+    "test": {
+      "path": "tests/test_cycle_22_width_four.py",
+      "sha256": "a1d0810af14ae6e86f7a35b7db657ccaa8a6191cb6f326ed3759c49ed4505a96"
+    }
+  },
+  "outcome": "An independently replayed width-four integer deficit excludes frozen base-4 leaf 952 with W=65,528, U=65,440, and margin 88. Sixty leaves remain unresolved.",
+  "record_type": "PROVED_LEAF_CERTIFICATE_AND_METHOD_BOUNDARY",
+  "recorded_at_utc": "2026-08-04T01:38:29Z",
+  "replay": {
+    "audit_command": ".venv/bin/python proof/check_cycle_22_width_four.py",
+    "check_command": ".venv/bin/python proof/build_cycle_22_lrc_width_four.py --check",
+    "exhaustive_command": "taskset -c 0-2 .venv/bin/python discovery/lrc_width_four_exhaustive_transfer.py",
+    "stage_a_command": "taskset -c 0-2 .venv/bin/python discovery/lrc_width_four_stage_a.py",
+    "stage_b_command": "taskset -c 0-2 .venv/bin/python discovery/lrc_width_four_stage_b.py",
+    "test_command": ".venv/bin/python -m unittest tests.test_cycle_22_width_four -v"
+  },
+  "resources": {
+    "aggregate_wall_cap_seconds": 3600,
+    "aggregate_wall_seconds": 3435.64762,
+    "peak_rss_kib": 2343552,
+    "reserved_cpu": 3,
+    "temporary_disk_cap_bytes": 21474836480,
+    "worker_cpus": [
+      0,
+      1,
+      2
+    ]
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_22_lrc_width_four.py",
+    "sha256": "63fde6ebd6c5e90197869c1ee81c0785ddc9324364226919f5a3f79c8cfe1f2a"
+  },
+  "stage_a": {
+    "certificates": 0,
+    "direct_transfer_trials": 9150,
+    "epistemic_status": "OBSERVED",
+    "wall_seconds": 109.638946
+  },
+  "stage_b": {
+    "certificates": [
+      {
+        "U": 65440,
+        "W": 65528,
+        "base_index": 4,
+        "leaf_ordinal": 952,
+        "margin": 88
+      }
+    ],
+    "epistemic_status": "PROVED",
+    "lp_trials": 602,
+    "unresolved": 60,
+    "wall_seconds": 1514.048832
+  },
+  "status": "SEALED"
+}

@@ -6,13 +6,13 @@
   "cycle_pattern": "^cycle-(\\d+)(?:-|$)",
   "status_title": "SIC--Stark research status (generated)",
   "cold_start_handoff": {
-    "plan_path": "PLAN.md",
+    "plan_path": "PROGRAM.md",
     "start_commands": [
       "source ../../tools/dev-env.sh",
       "research rebuild",
       "research check",
       "research db sql \"SELECT artifact_id, status, remaining_target FROM artifacts ORDER BY cycle_number DESC, artifact_id DESC LIMIT 1\"",
-      "sed -n '1,300p' PLAN.md",
+      "sed -n '1,300p' PROGRAM.md",
       "sed -n '1,240p' docs/effective-stark-sweep-context-v1.md"
     ]
   },

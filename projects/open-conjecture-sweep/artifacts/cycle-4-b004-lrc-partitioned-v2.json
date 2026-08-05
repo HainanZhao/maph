@@ -1,0 +1,91 @@
+{
+  "artifact_id": "cycle-4-b004-lrc-partitioned-v2",
+  "budget_ordinal": "B004",
+  "claim_boundary": "The exact 64-partition coverage engine passed the 64-GiB intermediate tranche, completed depth 9 under the 128-GiB continuation, and then breached the unchanged generated-edge cap before reaching a leaf. This is an algorithmic performance boundary only; it proves no J-empty claim, LRC(13), or asymptotic obstruction.",
+  "companion_decision": {
+    "adopted": true,
+    "falsifier": "A baseline tuple/level mismatch, partition-integrity failure, non-edge-counter stop, or materially different strict-cap frontier.",
+    "identity": "/root/decision_companion_2",
+    "next_action": "Open the next cycle only for the distinct question of a proved orbit-invariant dominance/completion cut; keep fused cover/lifting as fallback.",
+    "recommendation": "Close the combined Cycle-4 storage-engine block at the edge cap; the next distinct cycle tests a pre-emission invariant."
+  },
+  "correction": {
+    "affected_claim": "The v1 logical-disk-cap outcome is valid for its tranche but is not the final Cycle-4 strategic boundary.",
+    "cause": "A resource-cap continuation was mistaken for a new research question despite the unchanged engine and decision block.",
+    "error": "Cycle 4 was sealed after its intermediate 64-GiB tranche and the identical 128-GiB continuation was initially misnumbered as a new cycle.",
+    "resolution": "Preserve v1 immutably, count no B005 cycle, and supersede the intermediate conclusion with the combined-tranche edge-cap outcome."
+  },
+  "cycle": 4,
+  "epistemic_status": "OBSERVED",
+  "frontier_gate": {
+    "bounded_parallel_overshoot": 3,
+    "cleanup_removed_entries": 257,
+    "completed_depth": 9,
+    "depth_9_states": 354931861,
+    "edge_cap": 5869850724,
+    "epistemic_status": "OBSERVED",
+    "expanded_states": 442509045,
+    "filesystem_after_cleanup_available_bytes": 178664730624,
+    "filesystem_before_available_bytes": 178467733504,
+    "generated_edges": 5869850727,
+    "leaf_states": 0,
+    "outcome": "FAILED_EDGE_CAP",
+    "peak_logical_disk_bytes": 85667049952,
+    "peak_rss_kib": 3652580,
+    "wall_seconds_external": 1443.56,
+    "wall_seconds_internal": 1438.11
+  },
+  "frozen_hashes": {
+    "continuation_execution_freeze": {
+      "path": "discovery/cycle4-128g-execution-freeze.md",
+      "sha256": "226c997933f2daf44b4424ad04425116bab5c19393d355cf1016f3eaba7291b8"
+    },
+    "continuation_result": {
+      "path": "discovery/out/partitioned-k13-p199-128g.result",
+      "sha256": "946a6f060e2285ef90b6d3919fc7f24917df0b25fa5cbbe8695d2ad099580493"
+    },
+    "continuation_runner": {
+      "path": "proof/run_cycle_4_frontier_128g.sh",
+      "sha256": "e2e83ffeb5ee687ea1646901b24a414ef58b5ccc0daa928a5969c85454ce62e3"
+    },
+    "continuation_timing": {
+      "path": "discovery/out/partitioned-k13-p199-128g.time",
+      "sha256": "104a0d7ee1c334f9cabe28c6bccc9098ecc4f2ab5dcf30bffb7f3cb1c82b0a26"
+    },
+    "regression_test": {
+      "path": "tests/test_cycle_4_lrc_partitioned_v2.py",
+      "sha256": "e91c9ddda906077d27680692048d531b7dbd7d1247bb66d93aab351480fc5589"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "superseded_v1": {
+      "path": "artifacts/cycle-4-b004-lrc-partitioned-v1.json",
+      "sha256": "685b8d82f4c25ca969d9a7f1ccf42ee4249cb08b6e9a8f3de25e896d9d54c444"
+    }
+  },
+  "record_type": "CORRECTION",
+  "recorded_at_utc": "2026-08-03T14:56:54Z",
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "A sound pre-emission dominance/completion invariant might avoid generating most of the depth-10 frontier while retaining every cover orbit."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_4_lrc_partitioned_v2.py --check",
+    "frontier_command": "/usr/bin/time -v sh proof/run_cycle_4_frontier_128g.sh > discovery/out/partitioned-k13-p199-128g.result 2> discovery/out/partitioned-k13-p199-128g.time",
+    "test_command": "python3 -m unittest tests/test_cycle_4_lrc_partitioned_v2.py -v"
+  },
+  "runtime": {
+    "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_4_lrc_partitioned_v2.py",
+    "sha256": "aa8f62d17e210a42da3b9f0d280220a384ee7f1c8a4ddb2a0fad1f50e0f5c04e"
+  },
+  "status": "SEALED",
+  "supersedes": "cycle-4-b004-lrc-partitioned-v1"
+}

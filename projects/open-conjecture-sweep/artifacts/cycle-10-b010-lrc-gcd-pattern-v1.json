@@ -1,0 +1,107 @@
+{
+  "artifact_id": "cycle-10-b010-lrc-gcd-pattern-v1",
+  "budget_ordinal": "B010",
+  "claim_boundary": "The controls verify the exact gcd-admissibility predicate on the frozen finite instances. The p199 result is a bounded implementation-performance failure only: it proves no p199 lift feasible or infeasible and says nothing about F_1(13,199,14), J(13,199), or LRC(13).",
+  "companion_decision": {
+    "adopted": true,
+    "companion_independent_ideas": [
+      "proof-producing CDCL",
+      "certified PB/MaxSAT",
+      "small exact CRT preflight"
+    ],
+    "falsifier": "A directly checked SAT assignment is an improper first lift; a checked DRAT/LRAT or certified PB proof establishes finite UNSAT for its encoded base.",
+    "flaw": "The all-CAP result cannot distinguish intrinsic feasibility from weak bounds or repeated partial assignments.",
+    "identity": "/root/decision_companion_2",
+    "next_action": "New Cycle 11: exact CNF/PB encoding with direct SAT-witness checking and independently checked proof output for UNSAT.",
+    "primary_ideas": [
+      "proof-producing CDCL",
+      "CRT decomposition",
+      "custom learned cores",
+      "stop Problem 1"
+    ],
+    "recommendation": "Seal Cycle 10 and open Cycle 11 for a proof-producing CDCL/PB encoding."
+  },
+  "cycle": 10,
+  "epistemic_status": "OBSERVED",
+  "frozen_hashes": {
+    "control_result": {
+      "path": "discovery/out/cycle10-controls.result",
+      "sha256": "593c165c64f4960167ef85b81bc99aac7d13648c31ecee117758dcf6313718c5"
+    },
+    "p199_result": {
+      "path": "discovery/out/cycle10-p199-pattern.txt",
+      "sha256": "023218dafca5aeda4593262df25772df7b6b066a0afb4445578ffc966c364500"
+    },
+    "p199_timing": {
+      "path": "discovery/out/cycle10-p199-pattern.time",
+      "sha256": "da1de2e1651773eb10e15685f70a4f29a4c888d12628a8d6f05d09d2157ee570"
+    },
+    "pattern_engine": {
+      "path": "discovery/lrc_gcd_pattern_lift.cpp",
+      "sha256": "7b46322c5832ce5b0ef80097235aa254584603364f21926bb6ba0d90487b440f"
+    },
+    "preregistration": {
+      "path": "docs/cycle-10-b010-lrc-gcd-pattern-preregistration-v1.md",
+      "sha256": "28347486a89f246b5b59d4ad9a4a3358ce319a6a5bdcd221f2df0f980fdaf140"
+    },
+    "regression_test": {
+      "path": "tests/test_cycle_10_lrc_gcd_pattern.py",
+      "sha256": "0508234e83a3ae515b6ce8773368735bc62f130d9405aa1c313f266bca41f50c"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "sealed_control_engine": {
+      "path": "discovery/lrc_p199_multichoice_lift.cpp",
+      "sha256": "3478bc9b0723292f4b380dcf887935206219b3100d56eb1e9c6a0a34784facf8"
+    },
+    "soundness": {
+      "path": "proof/cycle_10_gcd_pattern_soundness.md",
+      "sha256": "e88c7a7a7e9284a35a66e07022dd5fadf909be1fef05e12ae7f47553fc91e7db"
+    }
+  },
+  "outcome": "The exact gcd-pattern engine passed the complete H11 and p47 controls. Every row of the fixed 100-orbit p199 sample reached its two-million-node cap without SAT or UNSAT, so the engine did not discriminate the sample.",
+  "p199_performance": {
+    "cap_interpretation": "The counter includes the deterministic cap-plus-one sentinel. CAP is neither SAT nor UNSAT.",
+    "epistemic_status": "OBSERVED",
+    "explored_node_cap_per_row": 2000000,
+    "node_counter_per_row": 2000001,
+    "node_counter_total": 200000100,
+    "peak_rss_kib": 6656,
+    "sample_orbits": 100,
+    "status_counts": {
+      "CAP": 100
+    },
+    "wall_seconds": 818.21,
+    "worker_cpus": [
+      0,
+      1,
+      2
+    ]
+  },
+  "proved_controls": {
+    "epistemic_status": "PROVED",
+    "h11_retained": 0,
+    "p47_eliminated": 53,
+    "p47_retained": 0,
+    "result": "PASS h11_retained=0 p47_retained=0 p47_eliminated=53"
+  },
+  "record_type": "CONTROL_AND_PERFORMANCE_GATE",
+  "recorded_at_utc": "2026-08-03T17:28:44Z",
+  "replay": {
+    "check_command": "python3 proof/build_cycle_10_lrc_gcd_pattern.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_10_lrc_gcd_pattern.py -v"
+  },
+  "runtime": {
+    "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_10_lrc_gcd_pattern.py",
+    "sha256": "943ebb2da2935f3f969a457187c59cbc94c27d81eeb1c53c733959e846c8d53c"
+  },
+  "status": "SEALED"
+}

@@ -25,7 +25,7 @@ SNAPSHOT = ROOT / "artifacts/cycle-4-p1r-authorization-snapshot-v1.json"
 V3 = ROOT / "artifacts/cycle-4-p1r-preregistration-v3.json"
 V3_FAIL = ROOT / "artifacts/cycle-4-p1r-preregistration-v3-hostile-audit-v1.json"
 GM_TEX = ROOT / "artifacts/sources/arxiv-2405.20552v2/LargevaluesDirichlet17.tex"
-PLAN = ROOT / "PLAN.md"
+PROGRAM = ROOT / "PROGRAM.md"
 PACKAGE = {
     "builder": "4dd7c196085ce60f5174072020b1c6b726338f53316a0746968c273f956c6e6c",
     "artifact": "e2aeec9ec90e1fea0a9eade53d5ff1e57020df48bd92ae852121a941fbadd7f9",
@@ -55,18 +55,18 @@ def run(command: list[str]) -> int:
     return subprocess.run(command, cwd=ROOT, capture_output=True, text=True).returncode
 
 
-def no_plan_replay(module: Any) -> bytes:
-    """Make either text or byte reads of live PLAN.md fatal during sealing."""
+def no_program_replay(module: Any) -> bytes:
+    """Make either text or byte reads of the live program fatal during sealing."""
     original_text, original_bytes = Path.read_text, Path.read_bytes
 
     def deny_text(path: Path, *args: Any, **kwargs: Any) -> str:
-        if path.resolve() == PLAN.resolve():
-            raise RuntimeError("v4 historical replay attempted a live PLAN read")
+        if path.resolve() == PROGRAM.resolve():
+            raise RuntimeError("v4 historical replay attempted a live PROGRAM read")
         return original_text(path, *args, **kwargs)
 
     def deny_bytes(path: Path, *args: Any, **kwargs: Any) -> bytes:
-        if path.resolve() == PLAN.resolve():
-            raise RuntimeError("v4 historical replay attempted a live PLAN read")
+        if path.resolve() == PROGRAM.resolve():
+            raise RuntimeError("v4 historical replay attempted a live PROGRAM read")
         return original_bytes(path, *args, **kwargs)
 
     Path.read_text, Path.read_bytes = deny_text, deny_bytes
@@ -86,7 +86,7 @@ def audit() -> dict[str, Any]:
         require(hashes[label] == expected, f"v4 package hash mismatch: {label}")
 
     builder_text = SCRIPT.read_text(encoding="utf-8")
-    require("PLAN.md" not in builder_text, "static live-PLAN path reference in v4 builder")
+    require("PROGRAM.md" not in builder_text, "static live-program path reference in v4 builder")
     payload = json.loads(ARTIFACT.read_text(encoding="utf-8"))
     snapshot = json.loads(SNAPSHOT.read_text(encoding="utf-8"))
     v3 = json.loads(V3.read_text(encoding="utf-8"))
@@ -102,8 +102,8 @@ def audit() -> dict[str, Any]:
 
     module = load_module(SCRIPT, "p1r_v4_hostile_target")
     require(all("preflight" not in str(path) for path, _ in module.INPUTS.values()), "operational preflight is frozen in v4")
-    historical = no_plan_replay(module)
-    require(historical == ARTIFACT.read_bytes(), "no-PLAN replay does not reproduce v4 bytes")
+    historical = no_program_replay(module)
+    require(historical == ARTIFACT.read_bytes(), "no-program replay does not reproduce v4 bytes")
 
     ledger = {entry["id"]: entry for entry in payload["source_hypothesis_ledger"]}
     theorem = ledger["GM-T1.1"]

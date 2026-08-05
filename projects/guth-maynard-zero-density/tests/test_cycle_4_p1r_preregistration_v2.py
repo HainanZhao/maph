@@ -29,6 +29,8 @@ class Cycle4P1RPreregistrationV2Tests(unittest.TestCase):
         self.assertEqual(data["discovery_authorization"], "PROHIBITED_PENDING_CRR_FORMALIZATION")
         self.assertTrue(data["correction"]["preserves_v1"])
         self.assertNotIn("plan", data["frozen_hashes"])
+        # The sealed v2 JSON retains its historical field spelling; the live
+        # program check is exercised separately below.
         self.assertFalse(data["current_plan_semantic_check"]["byte_hash_pinned"])
 
     def test_four_term_source_and_fs_gate_are_distinct(self) -> None:
@@ -46,14 +48,14 @@ class Cycle4P1RPreregistrationV2Tests(unittest.TestCase):
         self.assertIn(command, document)
         subprocess.run([sys.executable, str(SCRIPT), "--check"], cwd=PROJECT, check=True)
 
-    def test_semantic_plan_mutation_passes_but_clause_deletion_fails(self) -> None:
+    def test_semantic_program_mutation_passes_but_clause_deletion_fails(self) -> None:
         module = load_module()
-        plan = (PROJECT / "PLAN.md").read_text(encoding="utf-8")
-        harmless = plan.replace("source-anchored recovery", "source informed recovery", 1)
-        self.assertEqual(set(module.check_current_plan_text(harmless)), {"p1r_active", "fs_branch", "crr_branch", "crr_pre_search", "no_p2_selection"})
-        deleted = plan.replace("Before any search, a versioned preregistration must freeze:", "", 1)
-        with self.assertRaisesRegex(RuntimeError, "current PLAN semantic clause missing: crr_pre_search"):
-            module.check_current_plan_text(deleted)
+        program = (PROJECT / "PROGRAM.md").read_text(encoding="utf-8")
+        harmless = program.replace("source-anchored recovery", "source informed recovery", 1)
+        self.assertEqual(set(module.check_current_program_text(harmless)), {"p1r_active", "fs_branch", "crr_branch", "crr_pre_search", "no_p2_selection"})
+        deleted = program.replace("Before any search, a versioned preregistration must freeze:", "", 1)
+        with self.assertRaisesRegex(RuntimeError, "current PROGRAM semantic clause missing: crr_pre_search"):
+            module.check_current_program_text(deleted)
 
     def test_runtime_overwrite_self_identity_and_source_tamper(self) -> None:
         data = json.loads(ARTIFACT.read_text(encoding="utf-8"))

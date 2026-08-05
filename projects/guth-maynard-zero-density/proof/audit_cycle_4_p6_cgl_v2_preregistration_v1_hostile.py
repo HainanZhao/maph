@@ -78,19 +78,19 @@ def lines(tex: str, locator: str) -> str:
     return "\n".join(pieces)
 
 
-def no_plan_replay(module: Any) -> bytes:
-    """A historical seal must not read the mutable PLAN through either API."""
-    plan = (ROOT / "PLAN.md").resolve()
+def no_program_replay(module: Any) -> bytes:
+    """A historical seal must not read the mutable program through either API."""
+    program = (ROOT / "PROGRAM.md").resolve()
     old_text, old_bytes = Path.read_text, Path.read_bytes
 
     def deny_text(path: Path, *args: Any, **kwargs: Any) -> str:
-        if path.resolve() == plan:
-            raise RuntimeError("P6 historical replay attempted a live PLAN text read")
+        if path.resolve() == program:
+            raise RuntimeError("P6 historical replay attempted a live PROGRAM text read")
         return old_text(path, *args, **kwargs)
 
     def deny_bytes(path: Path, *args: Any, **kwargs: Any) -> bytes:
-        if path.resolve() == plan:
-            raise RuntimeError("P6 historical replay attempted a live PLAN byte read")
+        if path.resolve() == program:
+            raise RuntimeError("P6 historical replay attempted a live PROGRAM byte read")
         return old_bytes(path, *args, **kwargs)
 
     Path.read_text, Path.read_bytes = deny_text, deny_bytes
@@ -118,7 +118,7 @@ def audit() -> dict[str, Any]:
     literature = json.loads(LITERATURE_V1.read_text(encoding="utf-8"))
     correction = json.loads(LITERATURE_V2.read_text(encoding="utf-8"))
     target_text = TARGET.read_text(encoding="utf-8")
-    require("PLAN.md" not in target_text, "P6 sealer has a static mutable-PLAN reference")
+    require("PROGRAM.md" not in target_text, "P6 sealer has a static mutable-program reference")
     require(payload["sealer"] == {"path": "proof/build_cycle_4_p6_cgl_v2_reconstruction_preregistration_v1.py", "sha256": PACKAGE["builder"]}, "P6 self identity mismatch")
     require(payload["historical_replay"] == {
         "authorization_source": "immutable authorization snapshot", "mutable_research_plan_read": False,
@@ -194,7 +194,7 @@ def audit() -> dict[str, Any]:
     require(Fraction(7, 3) - Fraction(9, 4) == Fraction(1, 12) and Fraction(7, 3) - Fraction(30, 13) == Fraction(1, 39) and 10 > 9, "uniform 7/3 exact comparisons failed")
 
     module = load_module(TARGET)
-    historical = no_plan_replay(module)
+    historical = no_program_replay(module)
     require(historical == ARTIFACT.read_bytes(), "historical replay does not reproduce P6 artifact bytes")
     original_tex = module.INPUTS["cgl_v2_tex"]
     with tempfile.TemporaryDirectory() as temporary:

@@ -1,0 +1,21 @@
+# Large generated SAT instances and proof certificates. Keep local for replay;
+# durable claims live in artifacts/ with frozen hashes.
+.proof-cache/
+discovery/out/**/*.cnf
+discovery/out/**/*.icnf
+discovery/out/**/*.drat
+discovery/out/**/*.lrat
+discovery/out/**/sidorenko_conjugacy_census
+discovery/out/**/replay_cycle_51_conjugacy_independent
+
+# Rebuildable p199 census export (the compressed copy is also generated).
+discovery/out/k13-p199.txt
+discovery/out/k13-p199.txt.gz
+
+# Live engine checkpoints are disposable after their cycle seals.
+discovery/out/**/*-checkpoint.json
+
+# Rebuildable SAT-tool source/build trees.  The pinned drat-trim source archive
+# under discovery/vendor/ is the reproducible input; these extracted trees and
+# binaries are local execution caches, not research evidence.
+discovery/out/cycle11-tools/

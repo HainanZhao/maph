@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Report replaceable, current-Plan P1R operational eligibility."""
+"""Report replaceable, current-program P1R operational eligibility."""
 from __future__ import annotations
 
 import argparse
@@ -16,9 +16,9 @@ def normalized(text: str) -> str:
     return re.sub(r"\s+", " ", text).lower()
 
 
-def evaluate(plan_path: Path) -> dict[str, Any]:
+def evaluate(program_path: Path) -> dict[str, Any]:
     """Return an OBSERVED current-state report; never a historical proof input."""
-    text = plan_path.read_text(encoding="utf-8")
+    text = program_path.read_text(encoding="utf-8")
     value = normalized(text)
     required = {
         "p1r_active": "| p1r | active |",
@@ -30,11 +30,11 @@ def evaluate(plan_path: Path) -> dict[str, Any]:
     present = {label: clause in value for label, clause in required.items()}
     eligible = all(present.values())
     return {
-        "artifact_id": "cycle-4-p1r-current-plan-preflight-v1",
+        "artifact_id": "cycle-4-p1r-current-program-preflight-v1",
         "epistemic_status": "OBSERVED",
-        "status": "ELIGIBLE_CURRENT_PLAN" if eligible else "INELIGIBLE_CURRENT_PLAN",
-        "claim_boundary": "Mutable operational Plan eligibility only; not a proof, not a preregistration identity, and replaceable after every Plan revision.",
-        "plan_path": str(plan_path),
+        "status": "ELIGIBLE_CURRENT_PROGRAM" if eligible else "INELIGIBLE_CURRENT_PROGRAM",
+        "claim_boundary": "Mutable operational program eligibility only; not a proof, not a preregistration identity, and replaceable after every program revision.",
+        "program_path": str(program_path),
         "required_clauses": present,
         "historical_replay_dependency": "EXCLUDED",
         "discovery_authorization": "PROHIBITED_PENDING_CRR_FORMALIZATION",
@@ -43,11 +43,11 @@ def evaluate(plan_path: Path) -> dict[str, Any]:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--plan", type=Path, default=ROOT / "PLAN.md")
+    parser.add_argument("--program", type=Path, default=ROOT / "PROGRAM.md")
     args = parser.parse_args()
-    if not args.plan.is_file():
-        raise RuntimeError(f"current Plan is absent: {args.plan}")
-    print(json.dumps(evaluate(args.plan), indent=2, sort_keys=True))
+    if not args.program.is_file():
+        raise RuntimeError(f"current program is absent: {args.program}")
+    print(json.dumps(evaluate(args.program), indent=2, sort_keys=True))
     return 0
 
 

@@ -51,7 +51,7 @@ class Cycle4P1RPreregistrationV3Tests(unittest.TestCase):
     def test_historical_replay_ignores_legitimate_plan_lifecycle_changes(self) -> None:
         builder = load_module(SCRIPT, "p1r_v3_historical")
         preflight = load_module(PREFLIGHT, "p1r_v3_preflight")
-        self.assertNotIn("PLAN.md", SCRIPT.read_text(encoding="utf-8"))
+        self.assertNotIn("PROGRAM.md", SCRIPT.read_text(encoding="utf-8"))
         active = """| P1R | ACTIVE |\nP1R-FS: fixed-splice obstruction\nP1R-CRR: critical rational/random compatibility\nBefore any search, a versioned preregistration must freeze:\nNo P2A/P2B/P2C route is presently selected.\n"""
         completed = active.replace("| P1R | ACTIVE |", "| P1R | COMPLETE |", 1)
         later_p2 = active.replace("No P2A/P2B/P2C route is presently selected.", "P2B is selected by a later affirmative route decision.", 1)

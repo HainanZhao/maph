@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Correct Cycle 173 replay by excluding mutable PLAN.md from frozen inputs."""
+"""Correct Cycle 173 replay by excluding the mutable program from frozen inputs."""
 from __future__ import annotations
 
 import json
@@ -38,7 +38,7 @@ def payload() -> dict[str, object]:
         "supersedes": "cycle-173-local-artin-action-v1",
         "correction": {
             "epistemic_status": "PROVED",
-            "statement": "v1 froze mutable PLAN.md; v2 removes that replay-only input without changing the mathematical result.",
+            "statement": "v1 froze a mutable strategic document; v2 removes that replay-only input without changing the mathematical result.",
             "affected_claims": "v1 replay and evidence-drift status only; no mathematical claim is affected.",
         },
         "claim_boundary": result["claim_boundary"],

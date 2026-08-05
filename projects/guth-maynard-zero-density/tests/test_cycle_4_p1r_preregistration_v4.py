@@ -39,7 +39,7 @@ class Cycle4P1RPreregistrationV4Tests(unittest.TestCase):
         self.assertEqual(data["correction"]["pinned_v3_hostile_failure"], "FAIL_SOURCE_ATTRIBUTION_COMPLETENESS")
         self.assertFalse(data["historical_replay"]["current_plan_read"])
         self.assertEqual(data["historical_replay"]["current_plan_eligibility"], "EXCLUDED_FROM_HISTORICAL_ARTIFACT")
-        self.assertNotIn("PLAN.md", SCRIPT.read_text(encoding="utf-8"))
+        self.assertNotIn("PROGRAM.md", SCRIPT.read_text(encoding="utf-8"))
         self.assertNotIn("preflight", data["frozen_hashes"])
 
     def test_cli_runtime_overwrite_identity_and_source_tamper(self) -> None:

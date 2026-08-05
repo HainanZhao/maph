@@ -1,0 +1,145 @@
+{
+  "artifact_id": "cycle-8-b008-lrc-fused-lift-v1",
+  "budget_ordinal": "B008",
+  "claim_boundary": "The proved finite control statements are F_1(3,11,4)=empty and F_1(6,47,7)=empty, hence J(6,47)=empty by exactly checked Proposition 3.1. The p199 result is host/method-specific performance evidence only: it gives no survivor count and proves nothing about F_1(13,199,14), J(13,199), or LRC(13).",
+  "companion_decision": {
+    "adopted": true,
+    "falsifier": "Any raw/fused H11 mismatch, p47 fiber missed by independent direct checking, or retained-path/orbit counterexample invalidates the control proof; for p199 a cap is not a falsifier.",
+    "flaw": "The all-CAP p199 sample is non-discriminating and cannot distinguish structural difficulty from weak branch ordering/bounds.",
+    "identity": "/root/decision_companion_2",
+    "independent_ideas": [
+      "saturate P1",
+      "CRT factorization",
+      "pinned CDCL backend",
+      "exact rational weighted-time dual"
+    ],
+    "next_action": "New Cycle 9: smallest exact prototype of the weighted dual certificate.",
+    "recommendation": "Seal Cycle 8; open distinct Cycle 9 for an exact weighted-time dual certificate, with CDCL only as independent validation if the dual produces candidates."
+  },
+  "cycle": 8,
+  "epistemic_status": "OBSERVED",
+  "frozen_hashes": {
+    "fused_engine": {
+      "path": "discovery/lrc_fused_first_lift.cpp",
+      "sha256": "4acf461a2716ec3a91a42491c99ccaaa8acc872b06ef703d071d90b0e3a74052"
+    },
+    "fused_result": {
+      "path": "discovery/out/cycle8-fused.result",
+      "sha256": "a680d74cfdf174a624f40b2b01104c4ca92dead167253350800d7659e61d732f"
+    },
+    "fused_soundness": {
+      "path": "proof/cycle_8_fused_lift_soundness.md",
+      "sha256": "e433fa1b8091998093c7c0b8e4d0e4fb9fda47618fc2c16696bceb5e3f762f40"
+    },
+    "independent_control": {
+      "path": "proof/check_cycle_8_fused_lift.py",
+      "sha256": "705f706e175a30f13dcf67db0b6b9ce79093c188c1425893b55b5b370a7f75c7"
+    },
+    "independent_result": {
+      "path": "discovery/out/cycle8-independent.result",
+      "sha256": "593c165c64f4960167ef85b81bc99aac7d13648c31ecee117758dcf6313718c5"
+    },
+    "multichoice_engine": {
+      "path": "discovery/lrc_p199_multichoice_lift.cpp",
+      "sha256": "3478bc9b0723292f4b380dcf887935206219b3100d56eb1e9c6a0a34784facf8"
+    },
+    "multichoice_soundness": {
+      "path": "proof/cycle_8_p199_multichoice_soundness.md",
+      "sha256": "29e67a50c34661203d91f09d048dba3353283d1f2c098d03b1283e8b5590dd95"
+    },
+    "multichoice_v1": {
+      "path": "discovery/out/cycle8-p199-multichoice-v1.txt",
+      "sha256": "f2bcf4455cfd9c552e8be3ab5a26989f506b0343fe1b837a18b760a9d3ce904d"
+    },
+    "multichoice_v1_time": {
+      "path": "discovery/out/cycle8-p199-multichoice-v1.time",
+      "sha256": "0dfdfd91fbc9d3fc34fcb4f5952e9e8599646d9e6515432af41fb76e75627a4d"
+    },
+    "multichoice_v2": {
+      "path": "discovery/out/cycle8-p199-multichoice.txt",
+      "sha256": "c606cae296659cb70a1eeba83a61c3edd89223f490372336400fe59613652e35"
+    },
+    "multichoice_v2_time": {
+      "path": "discovery/out/cycle8-p199-multichoice.time",
+      "sha256": "064d38aa5dab9b93ea93ebc9d3dd336ec428ec663e701c9d7ab8a06a97323acd"
+    },
+    "p199_census": {
+      "path": "discovery/out/k13-p199.txt",
+      "sha256": "667c5582ec1719d9d85fdc33a95d812234bfe7480c050a442cb566d1505a935c"
+    },
+    "p199_strata": {
+      "path": "discovery/out/cycle8-p199-strata.txt",
+      "sha256": "327334cf85b821a77b254420d0617c8771a9f272cf38b2512ab79c937de4299b"
+    },
+    "p47_retained": {
+      "path": "discovery/out/cycle8-p47-retained.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "preregistration": {
+      "path": "docs/cycle-8-b008-lrc-fused-lift-preregistration-v1.md",
+      "sha256": "19eae02e556b981a162b72ab2153356b8ae5da7b3e03c90b362b3cc6f4cf9f54"
+    },
+    "regression_test": {
+      "path": "tests/test_cycle_8_lrc_fused_lift.py",
+      "sha256": "58b01551f2af12b97db2bd8ffbfc4c4d74cfe2c3d0a67021d606d7f77ad8db5b"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "strata_builder": {
+      "path": "discovery/make_cycle_8_p199_strata.py",
+      "sha256": "d3d9a34134b277bc8d2d317b3864618fcdacc3bdcdbba413eeb3d7842842956b"
+    }
+  },
+  "outcome": "The exact parent-intersected first-lift interface passed complete raw H11 and full p47 controls. On the fixed 100 completed p199 orbits, both capped multi-choice CSP formulations produced only CAP; no p199 orbit was classified SAT or UNSAT.",
+  "p199_performance": {
+    "cap_interpretation": "Each reported 1,000,001 is a 1,000,000 explored-node cap plus its deterministic sentinel check. CAP retained the orbit; it is neither SAT nor UNSAT.",
+    "epistemic_status": "OBSERVED",
+    "sample_orbits": 100,
+    "strata": "10 lexicographic index strata x 10 completed Cycle-1 representatives",
+    "v1": {
+      "node_counter_per_row": 1000001,
+      "node_counter_total": 100000100,
+      "status_counts": {
+        "CAP": 100
+      },
+      "wall_seconds": 74.32
+    },
+    "v2": {
+      "node_counter_per_row": 1000001,
+      "node_counter_total": 100000100,
+      "status_counts": {
+        "CAP": 100
+      },
+      "wall_seconds": 392.3
+    }
+  },
+  "proved_controls": {
+    "epistemic_status": "PROVED",
+    "h11_f1_survivors": 0,
+    "h11_raw_lift_tuples": 64000,
+    "independent_direct_recheck": "PASS h11_retained=0 p47_retained=0 p47_eliminated=53",
+    "p47_base_orbits": 53,
+    "p47_consequence": "J(6,47)=empty under Proposition 3.1 with the certified l=1 parent enumeration",
+    "p47_f1_survivors": 0
+  },
+  "record_type": "CONTROL_AND_PERFORMANCE_GATE",
+  "recorded_at_utc": "2026-08-03T16:55:00Z",
+  "replay": {
+    "check_command": "python3 proof/build_cycle_8_lrc_fused_lift.py --check",
+    "control_check": "python3 proof/check_cycle_8_fused_lift.py",
+    "test_command": "python3 -m unittest tests/test_cycle_8_lrc_fused_lift.py -v"
+  },
+  "runtime": {
+    "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_8_lrc_fused_lift.py",
+    "sha256": "1bb89c4a1ea2fde40cca8443cc6ae5f0cbcb0c472ce05cd9a174676197a6e8d8"
+  },
+  "status": "SEALED"
+}

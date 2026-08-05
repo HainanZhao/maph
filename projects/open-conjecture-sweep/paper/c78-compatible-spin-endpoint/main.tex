@@ -1,0 +1,236 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\KF}{K}
+
+\title{Compatible Spin Alignment for Arbitrary Qubit Reference States\\
+\large A three-qubit, pair-support theorem}
+\author{Draft research note --- authorship and venue pending}
+\date{August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We prove the compatible-marginal spin-alignment majorization inequality for
+three qubits, arbitrary qubit reference state, and arbitrary probability
+weights supported on the three two-body subsets.  The proof has two parts.  We
+first establish the maximally mixed endpoint from the published polygon
+inequalities for pure qubit marginals, a two-projection calculation, and a
+spin-flip identity.  We then interpolate to every qubit reference state using
+Ky Fan convexity and a common ordered target spectrum. The endpoint argument
+substantially overlaps with the earlier Song--Chen preprint; no novelty claim
+is made for that endpoint.
+\end{abstract}
+
+\section{Context and conventions}
+
+Song and Chen formulate the compatible-marginal spin-alignment conjecture for
+a global state, its compatible marginals, an arbitrary subset measure, and a
+reference state \(Q\) \cite[Conjecture 2]{SongChen}. Their Proposition 3
+handles the three-qubit, pair-support \(Q=I/2\) endpoint, and their outlook
+asks for arbitrary positive semidefinite \(Q\) in more general three-qubit
+settings. This note proves the qubit, same-pair-support extension.
+
+For a Hermitian matrix \(X\), write
+\(\lambda_1(X)\ge\cdots\ge\lambda_8(X)\) for its decreasing eigenvalues and
+\(\KF_r(X)=\sum_{i=1}^r\lambda_i(X)\). We write \(X\preceq Y\) when all Ky
+Fan sums of \(X\) are at most the corresponding sums of \(Y\), with equal
+trace. The distinct notation \(X\succeq Y\) means that \(X-Y\) is positive
+semidefinite.
+
+\section{Statement}
+
+For a three-qubit state \(\rho_{ABC}\), let \(\rho_{AB},\rho_{AC},\rho_{BC}\)
+be its marginals.  Let \(Q\) be a qubit state and choose a maximal eigenvector
+\(|q_1\rangle\).  For \(a,b,c\ge0\), \(a+b+c=1\), define
+\[
+\begin{aligned}
+H_Q={}&a\rho_{AB}\otimes Q_C+b\rho_{AC}\otimes Q_B+
+cQ_A\otimes\rho_{BC},\\
+T_Q={}&a|q_1q_1\rangle\!\langle q_1q_1|_{AB}\otimes Q_C+
+b|q_1q_1\rangle\!\langle q_1q_1|_{AC}\otimes Q_B+
+cQ_A\otimes|q_1q_1\rangle\!\langle q_1q_1|_{BC}.
+\end{aligned}
+\]
+The \(AC\) terms are in ambient \(ABC\) order.
+
+\begin{theorem}
+For every \(\rho_{ABC}\), every probability vector \((a,b,c)\), and every
+qubit state \(Q\), one has \(H_Q\preceq T_Q\).
+\end{theorem}
+
+This is the compatible-marginal conjecture only for three qubits and measure
+supported on \(AB,AC,BC\).  It does not cover incompatible triples, other
+supports, more parties, or higher local dimension.
+
+\section{The \(Q=I/2\) endpoint}
+
+\begin{lemma}\label{lem:endpoint}
+For every three-qubit state \(\rho_{ABC}\) and \(a,b,c\ge0\) with
+\(a+b+c=1\),
+\[
+a\rho_{AB}\otimes I_C+b\rho_{AC}\otimes I_B+cI_A\otimes\rho_{BC}
+\preceq
+aP_{00,AB}\otimes I_C+bP_{00,AC}\otimes I_B+cI_A\otimes P_{00,BC}.
+\tag{1}
+\]
+\end{lemma}
+
+\begin{proof}
+Permute systems so \(a\ge b\ge c\).  Let \(X_1,X_2,X_3\) be the successive
+one-, two-, and three-term sums on the left of (1), and let \(T_1,T_2,T_3\)
+be their aligned versions.  Then the two sides of (1) are
+\[
+(a-b)X_1+(b-c)X_2+cX_3,\qquad
+(a-b)T_1+(b-c)T_2+cT_3. \tag{2}
+\]
+
+The spectra of \(T_1,T_2,T_3\) are respectively
+\[
+(1,1,0^6),\qquad(2,1,1,0^5),\qquad(3,1,1,1,0^4). \tag{3}
+\]
+The first prefix is immediate: \(X_1=\rho_{AB}\otimes I_C\) has first two
+Ky Fan sums at most \(1,2\).
+
+For the second prefix, first take two pure pair states.  Their extensions to
+\(ABC\) are rank-two projections \(P=VV^\dagger\) and \(R=WW^\dagger\).
+If \(s_1\ge s_2\) are the singular values of \(V^\dagger W\), then their
+four principal-angle eigenvalues in \(P+R\) are
+\[
+1+s_1,\quad1+s_2,\quad1-s_2,\quad1-s_1. \tag{4}
+\]
+Writing the normalized pair-state coefficient matrices as \(\Phi,\Psi\),
+\[
+|\phi\rangle=\sum_{a,b}\Phi_{ab}|a,b\rangle,\quad
+|\psi\rangle=\sum_{a,c}\Psi_{ac}|a,c\rangle,\quad
+V|c\rangle=|\phi\rangle_{AB}|c\rangle_C,\quad
+W|b\rangle=|\psi\rangle_{AC}|b\rangle_B.
+\]
+Thus \((V^\dagger W)_{c,b}=(\Phi^\dagger\Psi)_{b,c}\), hence
+\[
+s_1+s_2=\|\Phi^\dagger\Psi\|_1\le\|\Phi\|_F\|\Psi\|_F=1. \tag{5}
+\]
+Thus the first three Ky Fan sums are at most \(2,3,4\), as in (3).
+Independent spectral decompositions and Ky Fan convexity extend this result
+to mixed pair states, proving \(X_2\preceq T_2\).
+
+For the third prefix, Ky Fan convexity reduces each index to a pure global
+state.  Independently diagonalize its one-qubit marginals as
+\[
+\rho_i=\operatorname{diag}(1-r_i,r_i),\qquad0\le r_i\le\tfrac12.
+\]
+Higuchi--Sudbery--Szulc prove the polygon inequalities
+\(r_i\le r_j+r_k\) \cite[Eq.~(2), p.~1]{Higuchi}.  With
+\[
+s=r_A+r_B+r_C,\quad\delta=(1-s)_+,\quad
+D=\rho_A\otimes I\otimes I+I\otimes\rho_B\otimes I+
+I\otimes I\otimes\rho_C-I,
+\]
+the qubit identity
+\(\sigma_yM^T\sigma_y=(\Tr M)I-M\) gives
+\[
+X_3=D+\rho+\widetilde\rho,\qquad
+\widetilde\rho=(\sigma_y^{\otimes3})\rho^T(\sigma_y^{\otimes3})\succeq0.
+\tag{6}
+\]
+The diagonal entries of \(D\) are
+\[
+2-s,\ 1-s+2r_C,\ 1-s+2r_B,\ 1-s+2r_A,\
+s-2r_A,\ s-2r_B,\ s-2r_C,\ s-1. \tag{7}
+\]
+If \(h_1\ge\cdots\ge h_8\) denotes their decreasing rearrangement, the
+polygon inequalities first show that every entry in (7) is at least \(s-1\):
+for the three displayed entry types, the differences are bounded below by
+\(3-2s\), \(2(1-r_j-r_k)\), and \(1-2r_i\), respectively. Hence
+\(h_8=s-1\). If \(s\ge1\), every entry in (7) is at most one. If
+\(s\le1\), only \(2-s=1+\delta\) can exceed one: the polygon inequalities
+bound \(1-s+2r_i\le1\), and all remaining entries are at most one. Therefore
+\[
+h_8=s-1,\qquad\KF_r(D)\le r+\delta\quad(r=1,2,3). \tag{8}
+\]
+Since \(X_3\succeq D\) and \(X_3\succeq0\),
+\[
+\sum_{i=r+1}^{8}\lambda_i(X_3)
+\ge4-\KF_r(D)+\delta,
+\]
+so \(\KF_r(X_3)\le2+\KF_r(D)-\delta\le r+2\) for \(r=1,2,3\).
+Positivity and trace handle \(r\ge4\).  Therefore \(X_3\preceq T_3\).
+
+Ky Fan subadditivity in (2) proves (1), because the aligned targets have a
+common nested diagonal order and the right-hand side has spectrum
+\((1,a,b,c,0^4)\).
+\end{proof}
+
+\section{Interpolation to arbitrary \(Q\)}
+
+\begin{proof}[Proof of the theorem]
+Apply one common local unitary sending the chosen maximal eigenvector to
+\(|0\rangle\) and diagonalizing \(Q\) as
+\(Q_q=\operatorname{diag}(q,1-q)\), \(1/2\le q\le1\).  This preserves both
+compatibility and majorization, including the degenerate case \(q=1/2\).
+Set \(t=2q-1\).  Since each selected support has one complement qubit,
+\[
+Q_q=(1-t)I/2+tP_0,\quad
+H_q=(1-t)H_{1/2}+tH_1,\quad
+T_q=(1-t)T_{1/2}+tT_1. \tag{9}
+\]
+Lemma~\ref{lem:endpoint}, scaled by \(1/2\), gives
+\(H_{1/2}\preceq T_{1/2}\). At \(q=1\),
+\(H_1\) is a density matrix and \(T_1=P_{000}\), hence
+\(H_1\preceq T_1\).
+
+After the earlier permutation of weights, the target spectrum is
+\[
+\lambda(T_q)=\bigl(q,(1-q)a,(1-q)b,(1-q)c,0^4\bigr). \tag{10}
+\]
+It remains in this order throughout the interval, so every target Ky Fan sum
+is affine in \(t\).  Ky Fan convexity now gives
+\[
+\KF_k(H_q)\le(1-t)\KF_k(H_{1/2})+t\KF_k(H_1)
+\le(1-t)\KF_k(T_{1/2})+t\KF_k(T_1)=\KF_k(T_q).
+\]
+Equal trace completes the proof.
+\end{proof}
+
+\section{Relation to prior work and replay}
+
+Song and Chen state the same \(Q=I/2\) compatible endpoint in their current
+preprint \cite[Proposition 3]{SongChen}; our endpoint derivation is an
+independently certified reconstruction of substantially the same proof
+architecture and is not claimed as new. The arbitrary-\(Q\) interpolation
+answers the qubit, same-support portion of a direction named in their
+outlook. The bounded literature/overlap assessment is recorded separately
+with this paper phase.
+Alhejji and Knill's classical-state result subsumes our earlier diagonal
+consistency check \cite[Proposition IV.5]{AlhejjiKnill}.
+
+The project-root replay materials named in REPLAY.md contain the immutable
+C79 endpoint certificate, C78 reinstatement chain, and exact checks of the
+spin-flip expansion, polygon polytope, target assembly, and interpolation
+spectrum. A standalone release archive has not yet been built.
+
+\begin{thebibliography}{9}
+\bibitem{SongChen}
+Z. Song and L. Chen,
+\newblock \emph{A counterexample to the strong spin alignment conjecture},
+\newblock arXiv:2603.25410 (2026).
+
+\bibitem{Higuchi}
+A. Higuchi, A. Sudbery, and J. Szulc,
+\newblock \emph{One-qubit reduced states of a pure many-qubit state:
+polygon inequalities},
+\newblock Physical Review Letters 90, 107902 (2003).
+
+\bibitem{AlhejjiKnill}
+M. A. Alhejji and E. Knill,
+\newblock \emph{Towards a resolution of the spin alignment problem},
+\newblock Communications in Mathematical Physics 405, 119 (2024).
+\end{thebibliography}
+
+\end{document}

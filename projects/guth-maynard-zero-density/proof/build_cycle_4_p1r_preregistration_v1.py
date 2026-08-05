@@ -19,7 +19,7 @@ EXPECTED_PYTHON = "3.12.3"
 
 # The documentation hash is filled only after its versioned text is frozen.
 INPUTS: dict[str, tuple[Path, str]] = {
-    "plan": (ROOT / "PLAN.md", "ce8cfb2c4c196b53a0e823667da2ce4e840d7ce18c754a9be1423064d9fce479"),
+    "program": (ROOT / "PROGRAM.md", "ce8cfb2c4c196b53a0e823667da2ce4e840d7ce18c754a9be1423064d9fce479"),
     "p1r_document": (ROOT / "docs/cycle-4-p1r-preregistration-v1.md", "675708d31772f9483f3d6d53c5975908d40fe6ab76d9a5c189170c7a332899f8"),
     "gm_tex": (ROOT / "artifacts/sources/arxiv-2405.20552v2/LargevaluesDirichlet17.tex", "36d64e4ec02f0cee8baccd6ee1dbf5ea73f0dfde55827e00ad2566a142ffa428"),
     "gm_pdf": (ROOT / "artifacts/sources/arxiv-2405.20552v2.pdf", "915392cf7d0ecd108479814a9a1481e23423ef63415776471cec3975ae482cae"),
@@ -189,7 +189,7 @@ def seal() -> dict[str, Any]:
         "runtime": runtime,
         "sealer": {"path": str(SELF.relative_to(ROOT)), "sha256": sha256(SELF)},
         "frozen_hashes": frozen_hashes,
-        "plan_authorization": {"status": "OBSERVED", "path": "PLAN.md", "required_action": "seal preregistration before P1R-FS routes or any P1R-CRR formalization/search"},
+        "program_authorization": {"status": "OBSERVED", "path": "PROGRAM.md", "required_action": "seal preregistration before P1R-FS routes or any P1R-CRR formalization/search"},
         "source_hypothesis_ledger": source_hypothesis_ledger(),
         "p1r_fs": {
             "epistemic_status": "PROVED",

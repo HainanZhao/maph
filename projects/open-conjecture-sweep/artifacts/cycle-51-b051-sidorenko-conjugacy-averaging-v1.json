@@ -1,0 +1,136 @@
+{
+  "artifact_id": "cycle-51-b051-sidorenko-conjugacy-averaging-v1",
+  "audit": {
+    "claim_boundary": "Exact agreement on the frozen finite groups/functions only; a full pass neither proves Zhao's all-group comparison nor Sidorenko.",
+    "edge_count": 15,
+    "epistemic_status": "PROVED",
+    "family_counts": {
+      "all_indicator:D8": 256,
+      "all_indicator:Q8": 256,
+      "all_indicator:S3": 64,
+      "subgroup_product:S3": 12,
+      "subgroup_product:S4": 252
+    },
+    "negative_rows": 0,
+    "normalized_left_assignments": 85803200,
+    "rows": 840,
+    "status": "PASS"
+  },
+  "budget_ordinal": "B051",
+  "claim_boundary": "This exact finite pass neither proves Zhao's all-finite-group/all-nonnegative-function hypothesis, strong Sidorenko, Sidorenko, nor a graphon extremizer reduction.",
+  "cycle": 51,
+  "cycle_decision": {
+    "companion_advice": "Seal the finite corpus; do not enlarge the structured-group census. Open a distinct fixed-density local graphon-variation block.",
+    "companion_identity": "/root/darwin_cycle25_short",
+    "falsifier": "One exact negative coefficient realized by a bounded rational step graphon gives a Sidorenko counterexample; nonnegative local forms are only a local boundary.",
+    "next_question": "Does an exact finite-rank zero-mean graphon perturbation have a negative first nonzero coefficient in t(H,p+epsilon U)-p^15?"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "audit": {
+      "path": "proof/check_cycle_51_conjugacy_averaging.py",
+      "sha256": "74dbc7cfecca847b2ba92df98cad84afedcc730072c0097aa202bebf9a9b03ee"
+    },
+    "cycle50_artifact": {
+      "path": "artifacts/cycle-50-b050-lrc-deletion-aware-packet-v1.json",
+      "sha256": "c29fb94c0e7eea145157ea3e71deb71c5352da6ebc53c96e908a93576047f3e9"
+    },
+    "direct_controls": {
+      "path": "discovery/out/cycle51-conjugacy-averaging/direct-s3-controls.tsv",
+      "sha256": "75a7dcc6c553f02a3786fea6a9bccef3ecd17a0218942a6866cf2c56a7061a6e"
+    },
+    "eligibility": {
+      "path": "discovery/problem2_eligibility_audit.md",
+      "sha256": "196c30a07951a091fefd10d1d2550e111d614664f3aea7fc70eebe9b70fc3250"
+    },
+    "idea_selection": {
+      "path": "discovery/cycle51_conjugacy_averaging_idea_selection.md",
+      "sha256": "10bec560c1210973f9acad49f7120053a27cee378c4a24410c8cdb725ae0afc8"
+    },
+    "independent_engine": {
+      "path": "proof/replay_cycle_51_conjugacy_independent.cpp",
+      "sha256": "ee277384f516affc2dff9b7efe89b6a0da9f1dfe3b65563413cf8b5423f83bf2"
+    },
+    "independent_rows": {
+      "path": "discovery/out/cycle51-conjugacy-averaging/independent-comparison-rows.tsv",
+      "sha256": "29182bfb6b9e48f0d837391d81ef3a2060f812dc9e9926da082aedf7c0c38f16"
+    },
+    "independent_summary": {
+      "path": "discovery/out/cycle51-conjugacy-averaging/independent-summary.json",
+      "sha256": "2daffa13e46f98cdd463371cedd9438faf310db237a625485c4bf7025c0a2b74"
+    },
+    "independent_timing": {
+      "path": "discovery/out/cycle51-conjugacy-averaging/run-independent.time",
+      "sha256": "5b036c250641e674f8db19e0603f601bbfb83574f18833419732674d43c7a04c"
+    },
+    "preregistration": {
+      "path": "docs/cycle-51-b051-sidorenko-conjugacy-averaging-preregistration-v1.md",
+      "sha256": "a07005e4845afca4d8e0c9fccdb6c767ed67687398ea18b3f83f215fa5fbc5b0"
+    },
+    "preregistration_validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    },
+    "principal_engine": {
+      "path": "discovery/sidorenko_conjugacy_census.cpp",
+      "sha256": "1f34232506d8e06e5d60f1ea723abfa0347c9197317aa8ec6e398d86287b074f"
+    },
+    "principal_rows": {
+      "path": "discovery/out/cycle51-conjugacy-averaging/comparison-rows.tsv",
+      "sha256": "2d4c7840746a78fd01ba75762a8fc4a622c65d2e4a6fde3d8123fb8689cdcc57"
+    },
+    "principal_summary": {
+      "path": "discovery/out/cycle51-conjugacy-averaging/summary.json",
+      "sha256": "0419a726a51586e6370d8484eb0f89e0b4ee27cdd9a8121053e273bef5f30218"
+    },
+    "principal_timing": {
+      "path": "discovery/out/cycle51-conjugacy-averaging/run-principal.time",
+      "sha256": "feb1c44299eb5db9cfce8b92910eac59d348bc1a655e2997f805e564ff10508c"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "soundness": {
+      "path": "proof/cycle_51_conjugacy_averaging_soundness.md",
+      "sha256": "6c7baed4510940f5800c53d019a2bf82f08212e820abc199220d5dbfb949d3f5"
+    },
+    "test": {
+      "path": "tests/test_cycle_51_conjugacy_averaging.py",
+      "sha256": "cea0ee6ca1581538c22dd7a10e6d83c92e4bd8bfcb84750a455204c53fae1a97"
+    }
+  },
+  "outcome": "The exact Zhao conjugacy-averaging comparison has no countermodel in the frozen 840-row corpus: every indicator on S3, D8, Q8 and every distinct subgroup-product indicator in S3,S4 is nondecreasing under conjugacy averaging for the 15-edge M\u00f6bius graph.",
+  "record_type": "PROVED_FINITE_CONJUGACY_AVERAGING_CORPUS",
+  "recorded_at_utc": "2026-08-05T08:20:00Z",
+  "replay": {
+    "audit_command": ".venv/bin/python proof/check_cycle_51_conjugacy_averaging.py",
+    "check_command": ".venv/bin/python proof/build_cycle_51_sidorenko_conjugacy.py --check",
+    "independent_command": "g++ -O3 -std=c++20 proof/replay_cycle_51_conjugacy_independent.cpp -o /tmp/c51-independent && taskset -c 0-2 /tmp/c51-independent discovery/out/cycle51-conjugacy-averaging",
+    "principal_command": "g++ -O3 -std=c++20 discovery/sidorenko_conjugacy_census.cpp -o /tmp/c51-principal && taskset -c 0-2 /tmp/c51-principal discovery/out/cycle51-conjugacy-averaging",
+    "test_command": ".venv/bin/python -m unittest tests.test_cycle_51_conjugacy_averaging -v"
+  },
+  "resources": {
+    "independent_peak_rss_kib": 3840,
+    "independent_wall_seconds": 14.73,
+    "principal_peak_rss_kib": 3840,
+    "principal_wall_seconds": 15.28,
+    "reserved_cpu": 3,
+    "temporary_disk_bytes": 199518,
+    "worker_cpus": [
+      0,
+      1,
+      2
+    ]
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_51_sidorenko_conjugacy.py",
+    "sha256": "cdcf09bf37c7952f1c59bba1348925dd0ca66259defa01cb7996777eb2b14401"
+  },
+  "status": "SEALED"
+}

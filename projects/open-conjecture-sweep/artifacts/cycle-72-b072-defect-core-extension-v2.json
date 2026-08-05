@@ -1,0 +1,139 @@
+{
+  "artifact_id": "cycle-72-b072-defect-core-extension-v2",
+  "audit": {
+    "claim_boundary": "Necessary-condition theorem only; not Ryser r=6, not a D=6 classification or defect ladder, and no novelty claim.",
+    "consequence": "Every intersecting six-partite six-uniform H with tau(H)=6 has D(H)>=6.",
+    "epistemic_status": "PROVED",
+    "finite_theorem": "Every generalized rooted D=5 equality core has a universal blocker of at most five core vertices.",
+    "independent_routes": [
+      "vertex-bitset trace recursion plus memoized blocker search",
+      "per-part line-signature exact partitions plus memo-free iterative-deepening blocker search"
+    ],
+    "outer_cases": 118462500,
+    "realized_cores": 26228880,
+    "resource_observation": {
+      "child_user_seconds": 1354.948,
+      "peak_child_rss_kib": 172044,
+      "source": "immutable v1 principal replay",
+      "wall_seconds": 458.027,
+      "worker_processes": 3
+    },
+    "shapes": {
+      "distinct": {
+        "cases": 39487500,
+        "hash_sum": 15509334374960293578,
+        "hash_xor": 15723684813517967096,
+        "maximum_extension_traces": 18,
+        "realized_cores": 20383920
+      },
+      "double": {
+        "cases": 39487500,
+        "hash_sum": 18070918136567069852,
+        "hash_xor": 5941124876935265852,
+        "maximum_extension_traces": 6,
+        "realized_cores": 4013280
+      },
+      "double-double": {
+        "cases": 39487500,
+        "hash_sum": 8202618639237995866,
+        "hash_xor": 15911616773689284708,
+        "maximum_extension_traces": 5,
+        "realized_cores": 1831680
+      }
+    },
+    "status": "PASS"
+  },
+  "budget_ordinal": "B072",
+  "claim_boundary": "Necessary-condition theorem only; not Ryser r=6, not a D=6 classification or defect ladder, and no novelty claim.",
+  "correction": {
+    "affected_claims": "Artifact replay determinism only; the mathematical replay completed successfully and its theorem claims are unchanged.",
+    "cause": "Nondeterministic resource observations were treated as reconstructed artifact fields.",
+    "error": "The v1 builder embedded live wall-time, child-CPU, and peak-RSS measurements in its payload, so --check could not be byte-deterministic.",
+    "repair": "Freeze the immutable v1 principal-replay measurements as historical observations while rerunning all mathematical checks; omit live measurements from reconstructed payload fields."
+  },
+  "cycle": 72,
+  "cycle_decision": {
+    "companion_advice": "Run exactly one orthogonal exhaustive replay; on full count/hash agreement seal immediately and select the next attack afresh.",
+    "companion_identity": "/root/darwin_cycle25_short (Oracle)",
+    "decision": "The independent replay agreed exactly on all three shapes, so seal the C72 theorem and end this research block.",
+    "falsifier": "A legal core with trace-family transversal number at least six, any count/hash disagreement, or an H with tau=6 and D<=5."
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "builder_v1": {
+      "path": "proof/build_cycle_72_generalized_blocker.py",
+      "sha256": "26960d9b7b1c52cc8909e960a3c214771e88fafba1cba7e861437900b2a97ba8"
+    },
+    "idea": {
+      "path": "discovery/cycle72_defect_core_extension_idea_selection.md",
+      "sha256": "c90f57a86ed04dc8495f9b60d6a987e4af1d90f11195c0d2c4c444472b01c5f6"
+    },
+    "independent": {
+      "path": "proof/cycle72_independent_blocker_replay.cpp",
+      "sha256": "00a14c04f3d607e9a2768397dcbbaf22c494817fc6113071efc9b68e52da6eea"
+    },
+    "prereg": {
+      "path": "docs/cycle-72-b072-defect-core-extension-preregistration-v1.md",
+      "sha256": "e25ab79b5741eb6b34808bd72309fc05e2b5debcbe0cf00b9a4fd97fee62afa8"
+    },
+    "primary": {
+      "path": "proof/cycle72_bad_core_search.cpp",
+      "sha256": "7af6c5fe9c0be8c43ffb4109022453d99759958094ec83b2363c2c73be662c21"
+    },
+    "primary_checker": {
+      "path": "proof/check_cycle72_bad_core_search.py",
+      "sha256": "4668fb14e2e68b33a7f2dd66521d3d1e9b0e7759b04700b572fb513a935e97a2"
+    },
+    "prior": {
+      "path": "artifacts/cycle-71-b071-high-star-defect-v1.json",
+      "sha256": "8417835fce57465f4f400c43999920adb4e25dc880e1ba72879dffcecfa9d8ba"
+    },
+    "reduction": {
+      "path": "proof/cycle72_universal_blocker_reduction.md",
+      "sha256": "e61165fc971d533d573286042c1237ea68f2a074efe706eb7ede0a1a09ade640"
+    },
+    "replay_checker": {
+      "path": "proof/check_cycle72_independent_replay.py",
+      "sha256": "1885f7cac852cdb72dd79ec45f728dd2c43d2f62cceaca389a76f685eac57af7"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "sealed_v1": {
+      "path": "artifacts/cycle-72-b072-defect-core-extension-v1.json",
+      "sha256": "acac8b40d147cc9b126f1e3144cec40d31f3dc809c0a3c50effa1215284d1267"
+    },
+    "side_reduction": {
+      "path": "proof/cycle72_side_shape_reduction.md",
+      "sha256": "14e252f53765c726d7aad5c451f9977fac39e6ae880b591e972bf6fac2140601"
+    },
+    "theorem": {
+      "path": "proof/cycle72_generalized_blocker_theorem.md",
+      "sha256": "01ac5511b8ee791116c0eec783d61abbff60313d0b3d7daca4a2f38fac53fc81"
+    },
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "outcome": "All 26,228,880 generalized D=5 equality cores have a universal five-blocker; consequently tau=6 forces D>=6.",
+  "record_type": "CORRECTION_AND_PROVED_GENERALIZED_BLOCKER_THEOREM",
+  "recorded_at_utc": "2026-08-05T16:27:00Z",
+  "replay": {
+    "check": "python3 proof/build_cycle_72_generalized_blocker_v2.py --check",
+    "expected_wall_minutes": "approximately 7",
+    "workers": 3
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_72_generalized_blocker_v2.py",
+    "sha256": "a96bc4bbce8ba1f7466860d257cfd0d740b1affa623fe025ebe27294929613c0"
+  },
+  "status": "SEALED",
+  "supersedes": "cycle-72-b072-defect-core-extension-v1"
+}
