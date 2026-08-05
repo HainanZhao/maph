@@ -1,0 +1,48 @@
+{
+  "artifact_id": "cycle-57-b057-conditional-variance-v1",
+  "audit": {
+    "claim_boundary": "Exact no-go only for the frozen 756-column homogeneous positive-monomial Handelman cone.",
+    "dual_coordinate": [
+      3,
+      6,
+      4,
+      2
+    ],
+    "epistemic_status": "PROVED",
+    "status": "PASS",
+    "target_coefficient": -35400
+  },
+  "budget_ordinal": "B057",
+  "claim_boundary": "Exact no-go only for the frozen 756-column homogeneous positive-monomial Handelman cone.",
+  "cycle": 57,
+  "cycle_decision": {
+    "companion_advice": "Seal and open a distinct representation/Gram conditional-variance engine.",
+    "companion_identity": "/root/darwin_cycle25_short",
+    "falsifier": "A rational smoothing reversal, or an exact non-PSD/dual obstruction for the frozen Gram family.",
+    "next_question": "Does a PSD Gram-square identity modulo simplex constraints prove one-class smoothing?"
+  },
+  "dual_certificate": {
+    "basis_values": "nonnegative for every frozen basis element",
+    "functional": "coefficient [c_e^3 c_T^6 c_C^4 t^2]",
+    "target_value": -35400
+  },
+  "epistemic_status": "PROVED",
+  "outcome": "The frozen 756-column homogeneous positive-monomial Handelman cone cannot represent the exact S3 C3 smoothing deficit.",
+  "record_type": "PROVED_FROZEN_HANDELMAN_CONE_NO_GO",
+  "recorded_at_utc": "2026-08-05T09:40:00Z",
+  "replay": {
+    "audit_command": ".venv/bin/python proof/check_cycle_57_conditional_variance.py",
+    "check_command": ".venv/bin/python proof/build_cycle_57_conditional_variance.py --check",
+    "symbolic_command": "g++ -O3 -std=c++20 proof/cycle57_s3_sparse_symbolic.cpp -o /tmp/c57 && /tmp/c57 discovery/out/cycle57-conditional-variance"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_57_conditional_variance.py",
+    "sha256": "e1cb4916c3f58ea9b8f7ed13753ad307ef1a51afacf61c293fed133b5f9b219a"
+  },
+  "status": "SEALED"
+}

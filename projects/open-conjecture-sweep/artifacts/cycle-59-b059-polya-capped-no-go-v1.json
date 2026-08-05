@@ -1,0 +1,23 @@
+{
+  "artifact_id": "cycle-59-b059-polya-capped-no-go-v1",
+  "budget_ordinal": "B059",
+  "cycle": 59,
+  "record_type": "PROVED_CAPPED_POLYA_FAMILY_NO_GO",
+  "status": "SEALED",
+  "epistemic_status": "PROVED",
+  "outcome": "For the corrected exact S3/C3 transformed remainder R, no multiplier S^K R has coefficientwise nonnegative coefficients for any frozen K from 0 through 24; K=24 has 928 negative coefficients among 9,857 monomials.",
+  "claim_boundary": "This rejects only the frozen degree-at-most-24 Pólya multiplier family. It neither disproves continuous S3 smoothing nor Zhao's conjugacy comparison.",
+  "containment": {
+    "prepromotion_defect": "The initial transform omitted the v exponent from (u+v)^c, yielding an invalid 83,584-term result.",
+    "resolution": "Corrected transform preserves homogeneous total degree; K=24 has 9,857 terms, within the frozen 10,000 cap."
+  },
+  "cycle_decision": {
+    "companion_identity": "/root/darwin_cycle25_short",
+    "companion_advice": "Do not enlarge the Pólya cap; open a distinct Reynolds-flow/isotypic-block engine.",
+    "next_question": "Does the all-at-once conjugation centralization deficit admit a group-uniform isotypic block identity?",
+    "falsifier": "A finite group and rational nonnegative function with N(a)<N(P_cl a)."
+  },
+  "replay": {
+    "command": ".venv/bin/python proof/cycle59_polya.py"
+  }
+}

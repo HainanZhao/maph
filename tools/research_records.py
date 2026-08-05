@@ -228,7 +228,7 @@ def render_status(con: duckdb.DuckDBPyConnection) -> str:
         lines += [
             "## Start here",
             "",
-            f"- Strategic state, claim boundary, active gate, and deferred work: `{handoff.get('plan_path', 'PLAN.md')}`.",
+            f"- Strategic state, claim boundary, active gate, and deferred work: `{handoff.get('plan_path', 'PROGRAM.md')}`.",
             "- The newest immutable record and its next target are listed below; read that record before changing mathematics or code.",
             "",
             "### Recovery commands (from this project directory)",

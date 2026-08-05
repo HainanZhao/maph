@@ -1,0 +1,188 @@
+{
+  "actual_corpus": {
+    "maximum_coefficient_bits": 4,
+    "outcomes": {
+      "BOUNDARY": 457
+    },
+    "pivot_counts": {
+      "0": 457
+    },
+    "reconstructed_deleted_pairs": 2382,
+    "reconstructed_deleted_triples": 15,
+    "residuals": 457,
+    "solver_routes": {
+      "FULL_EXACT": 32,
+      "LOCAL_INCIDENCE": 425,
+      "LOCAL_RADIUS_1": 401,
+      "LOCAL_RADIUS_2": 24
+    },
+    "target_pair_classes": 2536,
+    "target_triple_classes": 1726,
+    "target_types": 876,
+    "witness_nonzero_range": [
+      6,
+      178
+    ],
+    "witness_size_classes": 96
+  },
+  "artifact_id": "cycle-46-b046-lrc-global-cech-quotient-v1",
+  "audit": {
+    "independent_classes": 3,
+    "independent_records": 6,
+    "maximum_coefficient_bits": 4,
+    "maximum_witness_nonzero": 178,
+    "minimum_witness_nonzero": 6,
+    "outcomes": {
+      "BOUNDARY": 457
+    },
+    "pivot_counts": {
+      "0": 457
+    },
+    "records": 457,
+    "status": "PASS",
+    "witness_size_classes": 96
+  },
+  "budget_ordinal": "B046",
+  "claim_boundary": "The generic equivalence, finite 457-row classification, and coordinate-reformulation no-go are proved. This does not give a globally compatible shared-face section, classify all p199 type quadruples, certify a leaf, or prove LRC(13).",
+  "controls": {
+    "covered_suspension_sphere": "NONBOUNDARY_WITH_EXACT_DUAL",
+    "filled_tetrahedron": "BOUNDARY",
+    "unfilled_tetrahedron_sphere": "UNCOVERED"
+  },
+  "cycle": 46,
+  "cycle_decision": {
+    "companion_identity": "/root/darwin_cycle25_short",
+    "falsifier": "An exact global cocycle annihilating every local fill relation but pairing nontrivially with the required shared-face data.",
+    "next_question": "Do locally fillable constraints on a frozen connected p199 type-class component admit one globally compatible rational section after repeated labeled faces are identified?",
+    "outcome": "SEAL_COORDINATE_NO_GO_AND_OPEN_GLOBAL_AFFINE_DESCENT",
+    "primary_decision": "Require a genuinely new shared-face state space and exact descent equivalence; do not rerun local boundary membership under another cover.",
+    "strongest_flaw": "The next quotient could invent or erase overlap if repeated faces are identified without a raw-label descent theorem."
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "actual_engine": {
+      "path": "discovery/lrc_cech_actual.py",
+      "sha256": "ffa6b7f6d7623505b1de8dc301b7d7b0b814e878a833bffcb1fd22f76a90a166"
+    },
+    "actual_result": {
+      "path": "discovery/out/cycle46-global-cech-quotient/actual-quotient-localized.json",
+      "sha256": "c00a78d4767cf7acc3970363cbf9ced9cb571086cd5bb3c83da00af9cfc919ce"
+    },
+    "actual_timing": {
+      "path": "discovery/out/cycle46-global-cech-quotient/run-actual-quotient-localized.time",
+      "sha256": "08de2c42e2b56d4ab32b41c2d90b62de6e84af8784cf3d8aa658f6604a43cd25"
+    },
+    "audit": {
+      "path": "proof/check_cycle_46_cech.py",
+      "sha256": "a30e9e3def1d875e965f793a00defd7b386b4cfbaa5d4090d7d97c6e796fac11"
+    },
+    "control_engine": {
+      "path": "discovery/lrc_cech_controls.py",
+      "sha256": "5a3c759ae112d5a9d11edc7465c4438888a98859aecbc7c538b893bfa13ab03f"
+    },
+    "control_result": {
+      "path": "discovery/out/cycle46-global-cech-quotient/generic-controls.json",
+      "sha256": "db5c95a58a579528d234dde3961d4bb40bf66ac388522bf8b3cc29a37b0461e3"
+    },
+    "control_timing": {
+      "path": "discovery/out/cycle46-global-cech-quotient/run-injected-controls.time",
+      "sha256": "0d7bf8dc0ab90c15b9f4d1c73de34b40f692ec12c433afd293bf0ef889478623"
+    },
+    "cycle45_artifact": {
+      "path": "artifacts/cycle-45-b045-lrc-critical-projection-v1.json",
+      "sha256": "bd9759df06e5f32a46f5f0d199bfcc68ce190921ff780cb79672203a29d087a5"
+    },
+    "generic_complex": {
+      "path": "discovery/lrc_cech_total.py",
+      "sha256": "91e267ee6f661f632bc417a3cbdf76453c4a4f934d12717c9ecbb2363ce19272"
+    },
+    "idea_selection": {
+      "path": "discovery/cycle46_global_quotient_idea_selection.md",
+      "sha256": "8bc3a095139f46fa164a2127895e0172407f5ae09c2d5376f4f596e68c330448"
+    },
+    "independent_replay": {
+      "path": "proof/replay_cycle_46_cech_independent.py",
+      "sha256": "9c118b9be1b5662bb6b8898b8a099fd4439245dacadc49ed74981ba19ef4f761"
+    },
+    "independent_result": {
+      "path": "discovery/out/cycle46-global-cech-quotient/independent-replay.json",
+      "sha256": "8bfb5ee6cd5039f0e8272f374ad6e63b6658c15762bc944bd0856f7440223890"
+    },
+    "independent_timing": {
+      "path": "discovery/out/cycle46-global-cech-quotient/run-independent.time",
+      "sha256": "6485caa9e2c7f5ef3c251527d51ff38d62fbec97d1eb4a5514d7df1f455ab021"
+    },
+    "preregistration": {
+      "path": "docs/cycle-46-b046-lrc-global-cech-quotient-preregistration-v1.md",
+      "sha256": "0d832cb4da242f18d6c53a905b3f4a6acf330430fc7f82c0344ee441152842f6"
+    },
+    "preregistration_validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "soundness": {
+      "path": "proof/cycle_46_cech_soundness.md",
+      "sha256": "3b530bc665f4a651d2dc99165c4e601d5fa7274025bb5a75987c1c58e83043ce"
+    },
+    "target_cache": {
+      "path": "discovery/out/cycle46-global-cech-quotient/target-structure-cache.json",
+      "sha256": "75a59628e0ebfae6d646a5f51108a066b6f43ccf9de659a93dd2ccadce08dbdf"
+    },
+    "test": {
+      "path": "tests/test_cycle_46_cech.py",
+      "sha256": "b4d084f88604c3167c7c2da10cc8acdaef4ddc1b5faaf9c38a4d60899771f8fa"
+    }
+  },
+  "generic_theorem": {
+    "coefficient_ring": "Q",
+    "consequence": "For a covered cycle z, L(z) is a total boundary exactly when z is an ordinary boundary in the owner-star union.",
+    "statement": "The least-owner horizontal cone produces a linear total-cycle lift L, and augmentation induces a homology isomorphism from the owner-star Cech total complex to the cover union."
+  },
+  "independent_replay": {
+    "records": 6,
+    "route": "outcome-blind row selection, raw type/signature reconstruction, reversed orientation, and highest-pivot exact elimination",
+    "solver_classes": 3,
+    "status": "PASS"
+  },
+  "outcome": "The owner-star Cech total complex gives a canonical exact lift and correctly classifies all 457 frozen Cycle 45 residuals as rational boundaries. Its augmentation is a chain resolution and homology isomorphism, so this quotient is exactly a coordinate reformulation of ordinary boundary membership, not the missing global degree-four closure mechanism.",
+  "record_type": "PROVED_CECH_CLASSIFICATION_AND_COORDINATE_NO_GO",
+  "recorded_at_utc": "2026-08-05T06:30:00Z",
+  "replay": {
+    "actual_command": "taskset -c 1-2 .venv/bin/python discovery/lrc_cech_actual.py --workers 2",
+    "audit_command": ".venv/bin/python proof/check_cycle_46_cech.py",
+    "check_command": ".venv/bin/python proof/build_cycle_46_lrc_cech.py --check",
+    "controls_command": "taskset -c 1-2 .venv/bin/python discovery/lrc_cech_controls.py",
+    "independent_command": "taskset -c 1-2 .venv/bin/python proof/replay_cycle_46_cech_independent.py",
+    "test_command": ".venv/bin/python -m unittest tests.test_cycle_46_cech -v"
+  },
+  "resources": {
+    "actual_peak_rss_kib": 381252,
+    "actual_wall_seconds": 1898.1862086170004,
+    "independent_peak_rss_kib": 373600,
+    "independent_wall_seconds": 94.79487265998614,
+    "reserved_cpu": 3,
+    "worker_cpus": [
+      1,
+      2
+    ]
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_46_lrc_cech.py",
+    "sha256": "ced663793ecaa23d7f3a5fc8b71b94ea6c0a4c32e66a1790490628dd490a40fb"
+  },
+  "status": "SEALED",
+  "structural_no_go": {
+    "category_guard": "Cycle 41 lower marginal relations cannot be inserted as degree-four boundary columns without a proved graded descent map.",
+    "closed_family": "owner-star Cech localization as a stronger global quotient",
+    "reason": "The total complex is chain-resolved by augmentation; it changes coordinates but adds no relations."
+  }
+}

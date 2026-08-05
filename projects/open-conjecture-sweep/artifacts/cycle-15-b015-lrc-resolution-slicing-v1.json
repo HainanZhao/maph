@@ -1,0 +1,195 @@
+{
+  "artifact_id": "cycle-15-b015-lrc-resolution-slicing-v1",
+  "budget_ordinal": "B015",
+  "candidate_manifest": [
+    {
+      "clauses": 128,
+      "cnf_path": "discovery/out/cycle15-resolution-slicing/candidates/distance-128.cnf",
+      "cnf_sha256": "7a896477e4a37613766bf4ea6add050263547d96f6c0674b02bfde6d0942c3e1",
+      "discriminating_clauses": 1,
+      "family": "distance",
+      "model_path": "discovery/out/cycle15-resolution-slicing/models/distance-128.model",
+      "model_sha256": "58252cefc4b59eae9b3b35ce120ab1fe7fd924c2a11a1c4021e7235febf97618",
+      "parameter": 128,
+      "status": "CERTIFIED_SAT"
+    },
+    {
+      "clauses": 256,
+      "cnf_path": "discovery/out/cycle15-resolution-slicing/candidates/distance-256.cnf",
+      "cnf_sha256": "7871637cbafbb7d44f4d716f2578f60c4fdeba18ac2acbeb0fccf17200fd96b0",
+      "discriminating_clauses": 1,
+      "family": "distance",
+      "model_path": "discovery/out/cycle15-resolution-slicing/models/distance-256.model",
+      "model_sha256": "a43bd5d9fd92b865b7d48add577e2f77ce23002809897cd35329cab50a77cc41",
+      "parameter": 256,
+      "status": "CERTIFIED_SAT"
+    },
+    {
+      "clauses": 500,
+      "cnf_path": "discovery/out/cycle15-resolution-slicing/candidates/distance-500.cnf",
+      "cnf_sha256": "bbabee98c02f43a8e19d0b8e7408ec4e6af7f50035b71c0830c1fbb445920c35",
+      "discriminating_clauses": 1,
+      "family": "distance",
+      "model_path": "discovery/out/cycle15-resolution-slicing/models/distance-500.model",
+      "model_sha256": "452582343d94b4b3b9d8c3af61f690a7a15f1043bf3cb0c4064f95ba89def243",
+      "parameter": 500,
+      "status": "CERTIFIED_SAT"
+    },
+    {
+      "clauses": 128,
+      "cnf_path": "discovery/out/cycle15-resolution-slicing/candidates/frequency-128.cnf",
+      "cnf_sha256": "307bb161e4f0510c511a2bbe1ce3babd0fafd9821b661aaacd0d0ae990b3130c",
+      "discriminating_clauses": 1,
+      "family": "frequency",
+      "model_path": "discovery/out/cycle15-resolution-slicing/models/frequency-128.model",
+      "model_sha256": "b57a4eb2b1f0afe53cbbb22c55a6f1ff51a8f04659a523cbf43b16dec6f6a7e1",
+      "parameter": 128,
+      "status": "CERTIFIED_SAT"
+    },
+    {
+      "clauses": 256,
+      "cnf_path": "discovery/out/cycle15-resolution-slicing/candidates/frequency-256.cnf",
+      "cnf_sha256": "5c96a8ae08a1419bec283c0e98793543f7c34e01a9552d71c99472bda5bcfa8c",
+      "discriminating_clauses": 1,
+      "family": "frequency",
+      "model_path": "discovery/out/cycle15-resolution-slicing/models/frequency-256.model",
+      "model_sha256": "69b1e47d2fa4bf56427915899abaa9e6dc6aeb34e0386f19dee2e1146298ac6a",
+      "parameter": 256,
+      "status": "CERTIFIED_SAT"
+    },
+    {
+      "clauses": 500,
+      "cnf_path": "discovery/out/cycle15-resolution-slicing/candidates/frequency-500.cnf",
+      "cnf_sha256": "2f4db60ecf3e4f10c91b523a9469c82b8ed664f92b8f38f0e5b10809db0eee25",
+      "discriminating_clauses": 1,
+      "family": "frequency",
+      "model_path": "discovery/out/cycle15-resolution-slicing/models/frequency-500.model",
+      "model_sha256": "1b3c6f6a09d5e64bb483f54f980747d2cd8605f36d282fc1db6a7cc41b52e745",
+      "parameter": 500,
+      "status": "CERTIFIED_SAT"
+    }
+  ],
+  "claim_boundary": "This closes only strict derived dominators and the six frozen graph-centrality prefixes for one proof. It does not establish source-core minimality or exclude other subsets, branch-community unions, proofs, cores, target embeddings, F_1 or J emptiness, or LRC(13).",
+  "companion_decision": {
+    "falsifier": "Any LRAT/source-ID mismatch, missed all-branch-reachable node, invalid SAT model, or certified UNSAT frozen slice invalidates the affected result.",
+    "identity": "/root/decision_companion_2",
+    "independent_ideas": [
+      "gcd-conditioned learned-certificate decision tree",
+      "exact CRT equivalence preflight",
+      "certificate-checked resolution-community subset optimization"
+    ],
+    "next_action": "New Cycle 16: exact gcd-conditioned learned-certificate decision tree, with cover-deficit or DRAT closure at every leaf.",
+    "recommendation": "Seal Cycle 15; reranking more heuristic prefixes is low-information continuation.",
+    "scope_review": "The exact result concerns one strict-dominator test and six prefixes, not all proof-graph unions or core minimality.",
+    "strongest_flaw": "Centrality prefixes can destroy complementary constraints by removing one half of each necessary pair."
+  },
+  "cycle": 15,
+  "dependency_result": {
+    "epistemic_status": "PROVED",
+    "final_empty_id": 722343,
+    "immediate_branches": 31,
+    "irrelevant_to_lrat_derivation": 35,
+    "reached_input_clauses": 2294,
+    "source_clauses": 2329,
+    "strict_derived_dominator_candidates": 0
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "analysis_result": {
+      "path": "discovery/out/cycle15-resolution-slicing/analysis.result",
+      "sha256": "8306a40b640e4b3b9ac7bdcccc69c9f41307bc2ca81ddfcca8601aac05630f7e"
+    },
+    "analysis_timing": {
+      "path": "discovery/out/cycle15-analysis.time",
+      "sha256": "bc67c08c62ab1a3f22d52340b6bfcdb856d8bf1c33c123b7670afb78beaf13bc"
+    },
+    "audit": {
+      "path": "proof/check_cycle_15_resolution_slicing.py",
+      "sha256": "368da9b811e79a375f4ee07b33382121a5a281ab3ae0d77012ff3ff767b7f0e7"
+    },
+    "candidate_table": {
+      "path": "discovery/out/cycle15-resolution-slicing/candidates.tsv",
+      "sha256": "d678e149175093dd98be4bfaf6f980278dca3cbec8813c5b9769160cf0e97263"
+    },
+    "engine": {
+      "path": "discovery/lrc_resolution_slicing.py",
+      "sha256": "8c8a19962a82a8d2c66b4419d5612007bece0301be97df712e565e6579831037"
+    },
+    "lrat_timing": {
+      "path": "discovery/out/cycle15-lrat.time",
+      "sha256": "3f11a6aad0baaa436c25c7e1a67bec0c264411a7e3399f43b3facbe81a8609af"
+    },
+    "preregistration": {
+      "path": "docs/cycle-15-b015-lrc-resolution-slicing-preregistration-v1.md",
+      "sha256": "6a79aef6ca45879a94d0378da95813c9b25a16e2460aa2fd36a2648a1891e052"
+    },
+    "result_table": {
+      "path": "discovery/out/cycle15-resolution-slicing/results.tsv",
+      "sha256": "1cef00a522085c9933919c23abef987510f0a11f3268a02cf9311860e55a3cd9"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "solve_result": {
+      "path": "discovery/out/cycle15-resolution-slicing/solve.result",
+      "sha256": "73b7b4f4d0cc17db8f57674f58f54dc1388f6a5cc8b23ac878f78965b6d83984"
+    },
+    "solve_timing": {
+      "path": "discovery/out/cycle15-solve.time",
+      "sha256": "4c5bf97f8031d601d0dde2b5faf0fa900c0bfbaa6f2769913e9dca080b344bbe"
+    },
+    "soundness": {
+      "path": "proof/cycle_15_resolution_slicing_soundness.md",
+      "sha256": "392d97fc0dce3f52def357addddaa42b2617d66e01ef323d58667c7db5a256fe"
+    },
+    "source_lrat": {
+      "path": "discovery/out/cycle15-resolution-slicing/source.lrat",
+      "sha256": "6c167fa38747a834108855ca5a0222a68e11ff5d6520d95a607a598e6a2ada76"
+    },
+    "test": {
+      "path": "tests/test_cycle_15_resolution_slicing.py",
+      "sha256": "25c20c5129f030ff48c59546fbcdd3791d35644e84aa167e89761b4df37bf49d"
+    }
+  },
+  "outcome": "The checked LRAT proof depends on 2294 of 2329 source clauses. Its final empty clause has 31 immediate branches and no derived node reachable from every branch, so there is no strict derived dominator of the input super-sink. All six frozen protected distance/frequency slices of sizes 128, 256, and 500 are SAT by preserved, directly checked models. Hence none is a small UNSAT source slice.",
+  "record_type": "STRUCTURAL_NO_GO",
+  "recorded_at_utc": "2026-08-03T21:01:40Z",
+  "replay": {
+    "audit_command": "python3 proof/check_cycle_15_resolution_slicing.py",
+    "check_command": "python3 proof/build_cycle_15_lrc_resolution_slicing.py --check",
+    "test_command": "python3 -m unittest tests/test_cycle_15_resolution_slicing.py -v"
+  },
+  "resources": {
+    "aggregate_wall_cap_seconds": 3600,
+    "aggregate_wall_seconds": 40.59,
+    "corpus_bytes": 136118395,
+    "peak_rss_kib": 221412,
+    "reserved_cpu": 3,
+    "temporary_disk_cap_bytes": 21474836480,
+    "worker_cpus": [
+      0,
+      1,
+      2
+    ]
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_15_lrc_resolution_slicing.py",
+    "sha256": "4d710b5e5a68cbb075d1d5ec7bcff369535de777285e267e27d8d3c7618b8b64"
+  },
+  "slice_result": {
+    "advance_gate": "FAIL: no at-most-500 certified UNSAT slice",
+    "candidates": 6,
+    "caps": 0,
+    "certified_sat": 6,
+    "certified_unsat": 0,
+    "epistemic_status": "PROVED",
+    "errors": 0
+  },
+  "status": "SEALED"
+}

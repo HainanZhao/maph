@@ -1,0 +1,165 @@
+{
+  "artifact_id": "cycle-5-b005-lrc-packing-cut-v1",
+  "budget_ordinal": "B005",
+  "claim_boundary": "The no-go applies only to the frozen pairwise difference-set invariant for the specified bad set and quotient conventions. It does not constrain higher-order non-co-cover witnesses, fused cover/lifting, J(13,199), LRC(13), or any asymptotic statement.",
+  "companion_decision": {
+    "adopted": true,
+    "falsifier": "A missing exact difference, a valid rejected pairwise witness, or any nonzero prune from the frozen cut.",
+    "identity": "/root/decision_companion_2",
+    "next_action": "Open distinct Cycle 6 for a minimally falsifiable three-way non-co-cover hypergraph invariant; if saturated, switch to fused initial-cover construction with lifting.",
+    "recommendation": "Seal Cycle 5 as a structural no-go for the frozen pairwise incompatibility/clique-cut family.",
+    "strongest_flaw": "The no-go does not extend to higher-order non-co-cover constraints or fused cover/lifting."
+  },
+  "controls": {
+    "h11_exhaustive_rows": 96,
+    "h11_oracle": "PASS",
+    "p47_k6_tuple_count": 53,
+    "p47_k7_tuple_count": 50,
+    "p47_tuple_comparison": "BYTE_IDENTICAL_TO_CYCLE_4",
+    "tiny_canonical_solutions": 1
+  },
+  "cycle": 5,
+  "epistemic_status": "PROVED",
+  "frontier_gate": {
+    "bounded_parallel_overshoot": 3,
+    "cleanup_removed_entries": 257,
+    "completed_depth": 9,
+    "depth_9_edge_reduction_percent": 0.0,
+    "depth_9_states": 354931861,
+    "edge_cap": 5869850724,
+    "epistemic_status": "OBSERVED",
+    "expanded_states": 442509187,
+    "filesystem_reserve_bytes": 5368709120,
+    "generated_edges": 5869850727,
+    "leaf_states": 0,
+    "outcome": "FAILED_NO_REDUCTION_AND_EDGE_CAP",
+    "packing_checks": 416007772,
+    "packing_prunes": 0,
+    "peak_logical_disk_bytes": 86146489168,
+    "peak_rss_kib": 3652524,
+    "runtime_disk_cap_bytes": 173295362048,
+    "wall_seconds_external": 1428.13,
+    "wall_seconds_internal": 1422.73
+  },
+  "frozen_hashes": {
+    "cycle4_k6_tuples": {
+      "path": "discovery/out/partitioned-k6.txt",
+      "sha256": "3282243c9bd46b7cf0cb2f57a60fcf75d01df5f3ffdd11fe0ad91f8713170e03"
+    },
+    "cycle4_k7_tuples": {
+      "path": "discovery/out/partitioned-k7.txt",
+      "sha256": "8687bd7725b570baeb72d4d666a52c6b9fcf20204a6c4a036c21c672c9338a4d"
+    },
+    "engine": {
+      "path": "discovery/lrc_coverage_packing.cpp",
+      "sha256": "77d82ab2dafd5dfb4c54749fd376b38ea04c7f3785e5422f7c18c91c8a57baef"
+    },
+    "frontier_result": {
+      "path": "discovery/out/packing-k13-p199.result",
+      "sha256": "d8c52250e9b6972902b2a6e5cc16f1f1535030c60c65656cfa45272ce7a07d21"
+    },
+    "frontier_runner": {
+      "path": "proof/run_cycle_5_frontier.sh",
+      "sha256": "ba3dc6b4b5ab2b128d8834b9e6b5486fed7c01149488dc872ca1cf3630dff729"
+    },
+    "frontier_timing": {
+      "path": "discovery/out/packing-k13-p199.time",
+      "sha256": "70d964c2fc555dd6e8c8327dfc8502d443b22ee6d364c180bb0862a8b8754ea5"
+    },
+    "packing_k6_tuples": {
+      "path": "discovery/out/packing-k6.txt",
+      "sha256": "3282243c9bd46b7cf0cb2f57a60fcf75d01df5f3ffdd11fe0ad91f8713170e03"
+    },
+    "packing_k7_tuples": {
+      "path": "discovery/out/packing-k7.txt",
+      "sha256": "8687bd7725b570baeb72d4d666a52c6b9fcf20204a6c4a036c21c672c9338a4d"
+    },
+    "preregistration": {
+      "path": "docs/cycle-5-b005-lrc-packing-cut-preregistration-v1.md",
+      "sha256": "54ba0f84e1595c4e95619e511a5f35fb51bf64dfe158b7fd1e2981773a84929c"
+    },
+    "regression_test": {
+      "path": "tests/test_cycle_5_lrc_packing_cut.py",
+      "sha256": "930ac7dbad1e9c91f661ce1faeac54eacf8ef1b4d2a360ca5760ae1753b5afa1"
+    },
+    "relation_checker": {
+      "path": "proof/check_cycle_5_packing_relation.py",
+      "sha256": "caa894a97405f8056f8b4b3032fa60169e0f1c3cc45ea2f6aa9f0e52d5cd485e"
+    },
+    "relation_result": {
+      "path": "discovery/out/packing-relation-check.json",
+      "sha256": "56bab70904acefa0a815ac2a8dba5741ece70e22bca6439e9e5b64a410edaab3"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "small_oracle": {
+      "path": "discovery/check_lrc_packing.py",
+      "sha256": "b0dd3d97964675b025f6c8393be62f268dedd2f28013e19845dda1243ba73eb0"
+    },
+    "small_oracle_table": {
+      "path": "discovery/out/packing-h11.table",
+      "sha256": "ad42b05410f326420aee38b3e395ea69af98bf166a19e990b3485f914af60a34"
+    },
+    "soundness_argument": {
+      "path": "proof/cycle_5_packing_soundness_argument.md",
+      "sha256": "85d609f69080ffeaf2fd8b9ec65b826c53b8e54aacd024a606942b5193baf2c9"
+    },
+    "tiny_result": {
+      "path": "discovery/out/packing-tiny.result",
+      "sha256": "5f0705f279132f1273adb710f2a69d8d9c2b8f8f330d93c590cb4fbee579cb3c"
+    }
+  },
+  "outcome": "The frozen pairwise incompatibility/clique cut is vacuous for (13,199): B-B equals all of H_199, so its incompatibility graph has no edges and it cannot prune any state.",
+  "record_type": "STRUCTURAL_NO_GO",
+  "recorded_at_utc": "2026-08-03T15:32:50Z",
+  "remaining_target": {
+    "epistemic_status": "CONJECTURED",
+    "statement": "A higher-order non-co-cover invariant may prune completions even though every pair of times is co-coverable."
+  },
+  "replay": {
+    "check_command": "python3 proof/build_cycle_5_lrc_packing_cut.py --check",
+    "frontier_command": "/usr/bin/time -v sh proof/run_cycle_5_frontier.sh > discovery/out/packing-k13-p199.result 2> discovery/out/packing-k13-p199.time",
+    "oracle_command": "python3 discovery/check_lrc_packing.py discovery/out/packing-h11.table",
+    "relation_command": "python3 proof/check_cycle_5_packing_relation.py",
+    "test_command": "python3 -m unittest tests/test_cycle_5_lrc_packing_cut.py -v"
+  },
+  "runtime": {
+    "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_5_lrc_packing_cut.py",
+    "sha256": "eb75b2805911d4a305c306ed1236acb58bd5e99fd11add1c72e3f27ec3c80288"
+  },
+  "status": "SEALED",
+  "structural_no_go": {
+    "bad_exponents": [
+      0,
+      1,
+      2,
+      7,
+      8,
+      14,
+      15,
+      21,
+      39,
+      43,
+      46,
+      50,
+      73,
+      90
+    ],
+    "bad_set_size": 14,
+    "difference_set_size": 99,
+    "dimension": 13,
+    "epistemic_status": "PROVED",
+    "group_order": 99,
+    "implication": "No pairwise incompatibility witness of size at least two exists for any uncovered subset.",
+    "incompatibility_edge_count": 0,
+    "prime": 199
+  }
+}

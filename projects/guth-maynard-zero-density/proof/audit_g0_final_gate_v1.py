@@ -100,7 +100,7 @@ def certificate() -> dict[str, Any]:
     return {
         "artifact_id": "g0-final-gate-audit-v1", "epistemic_status": "OBSERVED",
         "claim_boundary": "Hostile fixed-scope gate audit. It evaluates whether the frozen WP0/preregistration requirements have evidence; it is not the authoritative global reconciliation and does not edit PLAN.",
-        "governance_note": "PLAN.md §6 WP0 was consulted to identify the gate, but is intentionally not hash-frozen: an authoritative adoption of a G0 decision must be able to update PLAN without staling this audit.",
+        "governance_note": "PROGRAM.md §6 WP0 was consulted to identify the gate, but is intentionally not hash-frozen: an authoritative adoption of a G0 decision must be able to update the program without staling this audit.",
         "frozen_dependencies": hashes,
         "cycle1_required_labels": {"count": 24, "labels": sorted(cycle1["labeled_comparisons"]), "status": "CLOSED by exact two-route reconciliation", "epistemic_status": "OBSERVED"},
         "stream_b_required_nodes": {"count": 7, "ids": [row["id"] for row in stream_b["canonical_mapping_table"]], "status": "CLOSED by narrow two-route reconciliation", "epistemic_status": "OBSERVED"},

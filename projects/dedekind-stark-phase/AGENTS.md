@@ -6,13 +6,13 @@ The repository-wide instructions in `../../AGENTS.md` apply.
 
 Before changing or extending this project, read in order:
 
-1. `PLAN.md` in full;
+1. `PROGRAM.md` in full;
 2. `docs/final-project-report.md`;
 3. the preregistration document controlling any branch proposed for
    reopening;
-4. the evidence artifact linked from the relevant `PLAN.md` gate.
+4. the evidence artifact linked from the relevant `PROGRAM.md` gate.
 
-`PLAN.md` is the authoritative project memory. Chat summaries are
+`PROGRAM.md` is the authoritative project memory. Chat summaries are
 secondary.
 
 ## Current project status
@@ -32,7 +32,7 @@ supplies its data section.
 ## Reporting rule
 
 Every block report must surface newly banked headline mathematics. For
-this project, the standing headline results are listed in `PLAN.md`.
+this project, the standing headline results are listed in `PROGRAM.md`.
 Their epistemic tags must be repeated accurately: the five-control
 fixed-orientation match is `OBSERVED` because the weak coefficients
 lack Arb enclosures; B2 Artin transport is `PROVED_EXACT_TRANSPORT`;
@@ -47,4 +47,4 @@ generator-only Frobenius failure in every relevant summary.
 - Preserve preregistrations and failed paths.
 - Run `sha256sum -c MANIFEST.sha256` and the complete unit suite before
   committing.
-- Recovery begins from `PLAN.md`, not from filenames guessed by date.
+- Recovery begins from `PROGRAM.md`, not from filenames guessed by date.

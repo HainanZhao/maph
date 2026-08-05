@@ -1,0 +1,107 @@
+{
+  "artifact_id": "cycle-78-b078-compatible-spin-endpoint-correction-v2",
+  "audit": {
+    "c78_interpolation": {
+      "epistemic_status": "PROVED",
+      "ky_fan_indices": 7,
+      "source_half_scale": "1/2",
+      "status": "PASS",
+      "sympy_version": "1.12",
+      "target_entries": 8
+    },
+    "c79_endpoint": {
+      "D_fan_vertex_rows": 736,
+      "epistemic_status": "PROVED",
+      "minimum_rows": 40,
+      "polygon_vertices": {
+        "s_ge_1": 4,
+        "s_le_1": 4
+      },
+      "scope": "exact finite scalar audit only",
+      "spin_flip_basis_rows": 64,
+      "status": "PASS",
+      "sympy_version": "1.12",
+      "target_ky_fan_rows": 8
+    }
+  },
+  "budget_ordinal": "B078",
+  "claim_boundary": "The proved result covers compatible three-qubit states, probability weights on AB, AC, BC, and every qubit Q. It excludes incompatible triples, other supports, more parties, and higher local dimensions.",
+  "correction": {
+    "affected_claims": "C78 v1's certification status and the C78 correction v1 withdrawal, not either immutable historical payload.",
+    "cause": "C79 independently proved the endpoint that was previously available only in a preprint.",
+    "repair": "Replace Song--Chen endpoint authority with the sealed C79 proof, recheck normalization and interpolation, and restore the PROVED status through this new record."
+  },
+  "cycle": 78,
+  "cycle_decision": {
+    "companion_advice": "Issue a same-cycle B078 reinstatement record; do not mutate C78 v1 or its withdrawal record; re-enter paper phase only after a self-contained manuscript rewrite and new audit.",
+    "companion_identity": "/root/oracle_c78_reinstatement (Oracle)",
+    "decision": "C79's exact endpoint scope, scaling, pure endpoint, target ordering, and all interpolation rows were independently rechecked. Reinstate the theorem in a new immutable record.",
+    "falsifier": "A compatible rho_ABC, admissible weights and qubit Q with a Ky Fan violation, or a defect in C79's endpoint proof, the 1/2 scaling, or target-affinity audit."
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "c78_checker": {
+      "path": "proof/check_cycle78_endpoint_interpolation.py",
+      "sha256": "b949c480c8e8acc89e22f28d92fcd87216fc1031e18719ddce7d3302de2b2976"
+    },
+    "c78_theorem": {
+      "path": "proof/cycle78_endpoint_interpolation.md",
+      "sha256": "8381e4450b7e16425357bb2f253f629537fba5bbbff1b2432e6702c8145cf8a6"
+    },
+    "c79_checker": {
+      "path": "proof/check_cycle79_compatible_endpoint_foundation.py",
+      "sha256": "2532c3ccc9cdb5e671c64895c8e1bddb6fcf9a16064a490e9f0a44376fefc426"
+    },
+    "c79_record": {
+      "path": "artifacts/cycle-79-b079-compatible-endpoint-foundation-v1.json",
+      "sha256": "4efb203967b29dc99fe7b669c590fafb5d1d2bb88fadc4682210c1fb7a014166"
+    },
+    "c79_theorem": {
+      "path": "proof/cycle79_compatible_endpoint_foundation.md",
+      "sha256": "b071f5aa80715a6827f52345aee91fbeb5f62d1a0bf75ffcbbc2e8472672ebd4"
+    },
+    "original_record": {
+      "path": "artifacts/cycle-78-b078-compatible-spin-endpoint-v1.json",
+      "sha256": "7542ffb9b8a49579accc884f62f36870baa1b1715aaa4b3a47bcfa1f2e73ede5"
+    },
+    "reinstatement_note": {
+      "path": "docs/cycle78_endpoint_reinstatement.md",
+      "sha256": "675ddfe90486ffea57a4521c8db679f66659819b3f435e06ddf2ceb49f2930df"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    },
+    "withdrawal_record": {
+      "path": "artifacts/cycle-78-b078-compatible-spin-endpoint-correction-v1.json",
+      "sha256": "5091f16f52f2b8d48b5eef2dde55d153617a72f7a1c5e7fdfe0915fe47218d2e"
+    }
+  },
+  "outcome": "C78's arbitrary-qubit compatible three-qubit pair-support theorem is reinstated as PROVED. C79 independently supplies the exact Q=I/2 endpoint, so Song--Chen Proposition 3 is no longer a preprint-only dependency.",
+  "proof_mechanism": {
+    "bridge": "common local-unitary diagonalization and affine Ky Fan interpolation",
+    "endpoint": "C79 unnormalized-I inequality scaled by 1/2",
+    "other_endpoint": "trace-one positivity against P_000 at Q=P_0"
+  },
+  "record_type": "CORRECTION_CERTIFICATION_REINSTATEMENT",
+  "recorded_at_utc": "2026-08-05T19:05:00Z",
+  "replay": {
+    "audit": "python3 proof/check_cycle79_compatible_endpoint_foundation.py && python3 proof/check_cycle78_endpoint_interpolation.py",
+    "check": "python3 proof/build_cycle_78_endpoint_reinstatement.py --check"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_78_endpoint_reinstatement.py",
+    "sha256": "c6b38a14acb596dcaacba9f809cdd860571028fd160133b3df609dbf7cd15d14"
+  },
+  "status": "SEALED",
+  "supersedes": "cycle-78-b078-compatible-spin-endpoint-correction-v1"
+}

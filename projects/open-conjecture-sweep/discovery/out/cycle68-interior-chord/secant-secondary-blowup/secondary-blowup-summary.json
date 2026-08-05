@@ -1,0 +1,180 @@
+{
+  "charts": {
+    "tangent-above-cycle_relative-dominant": {
+      "all_scales": [
+        "ratio_distance",
+        "primary_rho",
+        "cycle_relative"
+      ],
+      "clearing_factor": "3^12",
+      "degrees": [
+        12,
+        4,
+        47,
+        12,
+        30
+      ],
+      "dominant_scale": "cycle_relative",
+      "exact_rational_control": "PASS",
+      "output_coordinate_order": [
+        "retained_transposition_shape_z",
+        "lambda",
+        "eta",
+        "relative_scale_1",
+        "relative_scale_2"
+      ],
+      "removed_radial_factor": "eta^1",
+      "side": "above",
+      "terms": 30836
+    },
+    "tangent-above-primary_rho-dominant": {
+      "all_scales": [
+        "ratio_distance",
+        "primary_rho",
+        "cycle_relative"
+      ],
+      "clearing_factor": "3^12",
+      "degrees": [
+        12,
+        4,
+        47,
+        12,
+        6
+      ],
+      "dominant_scale": "primary_rho",
+      "exact_rational_control": "PASS",
+      "output_coordinate_order": [
+        "retained_transposition_shape_z",
+        "lambda",
+        "eta",
+        "relative_scale_1",
+        "relative_scale_2"
+      ],
+      "removed_radial_factor": "eta^1",
+      "side": "above",
+      "terms": 30836
+    },
+    "tangent-above-ratio_distance-dominant": {
+      "all_scales": [
+        "ratio_distance",
+        "primary_rho",
+        "cycle_relative"
+      ],
+      "clearing_factor": "3^12",
+      "degrees": [
+        12,
+        4,
+        47,
+        30,
+        6
+      ],
+      "dominant_scale": "ratio_distance",
+      "exact_rational_control": "PASS",
+      "output_coordinate_order": [
+        "retained_transposition_shape_z",
+        "lambda",
+        "eta",
+        "relative_scale_1",
+        "relative_scale_2"
+      ],
+      "removed_radial_factor": "eta^1",
+      "side": "above",
+      "terms": 30836
+    },
+    "tangent-below-cycle_relative-dominant": {
+      "all_scales": [
+        "ratio_distance",
+        "primary_rho",
+        "cycle_relative"
+      ],
+      "clearing_factor": "3^12",
+      "degrees": [
+        12,
+        4,
+        47,
+        12,
+        30
+      ],
+      "dominant_scale": "cycle_relative",
+      "exact_rational_control": "PASS",
+      "output_coordinate_order": [
+        "retained_transposition_shape_z",
+        "lambda",
+        "eta",
+        "relative_scale_1",
+        "relative_scale_2"
+      ],
+      "removed_radial_factor": "eta^1",
+      "side": "below",
+      "terms": 30836
+    },
+    "tangent-below-primary_rho-dominant": {
+      "all_scales": [
+        "ratio_distance",
+        "primary_rho",
+        "cycle_relative"
+      ],
+      "clearing_factor": "3^12",
+      "degrees": [
+        12,
+        4,
+        47,
+        12,
+        6
+      ],
+      "dominant_scale": "primary_rho",
+      "exact_rational_control": "PASS",
+      "output_coordinate_order": [
+        "retained_transposition_shape_z",
+        "lambda",
+        "eta",
+        "relative_scale_1",
+        "relative_scale_2"
+      ],
+      "removed_radial_factor": "eta^1",
+      "side": "below",
+      "terms": 30836
+    },
+    "tangent-below-ratio_distance-dominant": {
+      "all_scales": [
+        "ratio_distance",
+        "primary_rho",
+        "cycle_relative"
+      ],
+      "clearing_factor": "3^12",
+      "degrees": [
+        12,
+        4,
+        47,
+        30,
+        6
+      ],
+      "dominant_scale": "ratio_distance",
+      "exact_rational_control": "PASS",
+      "output_coordinate_order": [
+        "retained_transposition_shape_z",
+        "lambda",
+        "eta",
+        "relative_scale_1",
+        "relative_scale_2"
+      ],
+      "removed_radial_factor": "eta^1",
+      "side": "below",
+      "terms": 30836
+    }
+  },
+  "claim_boundary": "Exact secondary blow-up construction and radial division only; signs remain open.",
+  "coverage": {
+    "above": "a=(2+s)/3 covers 2/3<=a<=1",
+    "below": "a=2*(1-s)/3 covers 0<=a<=2/3",
+    "dominant_rule": "eta=max(scales), other scales=eta*relative",
+    "scales": [
+      "s",
+      "primary_rho",
+      "cycle_relative_b"
+    ]
+  },
+  "epistemic_status": "PROVED",
+  "source_chart": "high-below-second_scale-dominant.tsv",
+  "status": "PASS"
+}

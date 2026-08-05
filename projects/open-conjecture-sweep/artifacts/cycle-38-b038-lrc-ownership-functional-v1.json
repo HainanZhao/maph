@@ -1,0 +1,209 @@
+{
+  "artifact_id": "cycle-38-b038-lrc-ownership-functional-v1",
+  "audit": {
+    "augmented_left_null_rhs": 300,
+    "complete_type_tuples": 26348103,
+    "concrete_blockers": 190867444,
+    "direct_support_assignments_per_witness": 14406,
+    "roots": 13,
+    "status": "PASS",
+    "symbolic_patterns": 12264
+  },
+  "budget_ordinal": "B038",
+  "claim_boundary": "This closes only the thirteen deterministic rooted pushforwards and their linear span at the unmultiplied ownership-generator layer for one leaf. It does not constrain arbitrary local or nonlocal routing kernels, generator multiples, the full ownership ideal, the leaf, or LRC(13).",
+  "cycle": 38,
+  "cycle_decision": {
+    "companion_identity": "/root/darwin_cycle25_short",
+    "falsifier": "Any raw ownership/type instance whose moment or totality equation disagrees with the complete-type quotient, or any nonzero augmented coefficient product, invalidates the affected claim.",
+    "independent_ideas": [
+      "root-free signed local ownership-routing kernel",
+      "fully symmetric incidence-matrix basis of all covering coordinates",
+      "exact transportation/cohomology system with a left-null witness on failure"
+    ],
+    "next_action": "Open Cycle 39 for a root-free exact signed local routing kernel over all legally covering owner choices; use the symmetric incidence basis as the principal alternative and preserve an exact left-null witness if rank-two feasibility fails.",
+    "outcome": "SEALED_FOR_ROOT_FREE_ROUTING_QUESTION",
+    "scope_review": "The exact diagonal augmented-system certificate closes the rooted span, but deterministic first-cover/fallback ownership is highly special.",
+    "strongest_flaw": "Even an infeasible local routing system may fail because ownership correlations must be nonlocal; this result is not an ownership-ideal obstruction or leaf certificate."
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "audit": {
+      "path": "proof/check_cycle_38_ownership_functional.py",
+      "sha256": "a6b7b4a254c57b829cd517d94f10a1ef0b9de29c2dde38d049e8628c99a9c574"
+    },
+    "cycle29_artifact": {
+      "path": "artifacts/cycle-29-b029-lrc-ownership-blocker-v2.json",
+      "sha256": "faf097ebcc22e9e18055cbf4139aef30e17ee85e86ea2096d43b31873f6e8d09"
+    },
+    "cycle29_result": {
+      "path": "discovery/out/cycle29-ownership-blocker/result.json",
+      "sha256": "b213f8b790b2f53e2de30d244ead973143973e236083d24b38fffb5234271f15"
+    },
+    "cycle37_artifact": {
+      "path": "artifacts/cycle-37-b037-lrc-degree-two-product-v1.json",
+      "sha256": "0e606c64704f08158fa4a04b98737450b83ada03cb67b601f1680bff75b3265a"
+    },
+    "cycle37_result": {
+      "path": "discovery/out/cycle37-degree-two-product/result.json",
+      "sha256": "6d4f4ddb592be0f4cb1739b7b2ef0aab992b3b27defb7acf7fd4726f1d10558c"
+    },
+    "idea_selection": {
+      "path": "discovery/cycle38_ownership_functional_idea_selection.md",
+      "sha256": "35a0fd8328f5459779c00f72de9927e7271df075fa182ba535590e87b9ce8282"
+    },
+    "independent_replay": {
+      "path": "proof/replay_cycle_38_ownership_functional_independent.py",
+      "sha256": "e94bdc0b6462c633992dc448b3b4a24506a36934a8ecc838c9fed599820a559a"
+    },
+    "independent_result": {
+      "path": "discovery/out/cycle38-ownership-functional/independent-replay.json",
+      "sha256": "62777b173d44d615149fecc52c85fc63cfb0f53f7427ec0c73e6ae1efb1bcc54"
+    },
+    "independent_timing": {
+      "path": "discovery/out/cycle38-ownership-functional/independent-replay.time",
+      "sha256": "11a2393842ed1d5ef708ef14a616207065e22fd5d13a7602fa7e1550842b877c"
+    },
+    "preregistration": {
+      "path": "docs/cycle-38-b038-lrc-ownership-functional-preregistration-v1.md",
+      "sha256": "9965756e56282a6ebd983a3f850169f6acaea456235384b82a810134cf68c2d8"
+    },
+    "preregistration_validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    },
+    "primary_engine": {
+      "path": "discovery/lrc_ownership_functional.py",
+      "sha256": "2e4d63706aff0f0c71f13c06bd0dc63374f28c82a1e9ae4fd2b241141d843589"
+    },
+    "primary_result": {
+      "path": "discovery/out/cycle38-ownership-functional/result.json",
+      "sha256": "270dcd272c020c5af64e70af6eb57dbf63034d86964ab8a1472763923625fa54"
+    },
+    "primary_timing": {
+      "path": "discovery/out/cycle38-ownership-functional/run.time",
+      "sha256": "4c5b941f6e89915f0755fbc9736c1186ef4078924014f716b3ebdd808b826c97"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "soundness": {
+      "path": "proof/cycle_38_ownership_functional_soundness.md",
+      "sha256": "46f5c662a99d3ea8321110bbd5438bddd267a0f38be2604fbc4354b33fc1c241"
+    },
+    "test": {
+      "path": "tests/test_cycle_38_ownership_functional.py",
+      "sha256": "ef02dcc6f7b3591bab1a2ecc875f65794c554c585fa92ba2c06f4b8cf4d96970"
+    }
+  },
+  "obstruction": {
+    "all_roots_obstructed": true,
+    "augmented_system_left_null_certificate": {
+      "blocker_row_multipliers": [
+        -2,
+        -3,
+        -300,
+        -300,
+        -60,
+        -60,
+        -60,
+        300,
+        12,
+        -3,
+        15,
+        -75,
+        -300
+      ],
+      "left_product_with_coefficient_matrix": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "left_product_with_right_hand_side": 300,
+      "mass_row_multiplier": 300
+    },
+    "epistemic_status": "PROVED",
+    "first_nonzero_moments_by_root": [
+      150,
+      100,
+      1,
+      1,
+      5,
+      5,
+      5,
+      -1,
+      -25,
+      100,
+      -20,
+      4,
+      1
+    ],
+    "first_nonzero_rank_by_root": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "independent_signed_support_assignments": 14406
+  },
+  "outcome": "Every one of the thirteen cyclic rooted ownership pushforwards of the Cycle 37 signed product measure has a nonzero exact rank-two blocker moment on p199 base 4 / leaf 78. An independently checked integer augmented left-null certificate proves that their linear span contains no mass-one functional annihilating all unmultiplied Cycle 29 ownership generators.",
+  "proved_reduction": {
+    "complete_global_types": 1318,
+    "complete_type_tuples": 26348103,
+    "concrete_blockers": 190867444,
+    "epistemic_status": "PROVED",
+    "maximum_blocker_rank": 3,
+    "statement": "Rooted total ownership makes totality and exclusivity pointwise, makes every off-root blocker pointwise zero, and factorizes each own-root blocker moment into at most eight products of local signed contractions.",
+    "symbolic_blocker_patterns": 12264
+  },
+  "record_type": "PROVED_ROOTED_OWNERSHIP_FUNCTIONAL_NO_GO",
+  "recorded_at_utc": "2026-08-04T16:36:43Z",
+  "replay": {
+    "audit_command": ".venv/bin/python proof/check_cycle_38_ownership_functional.py",
+    "check_command": ".venv/bin/python proof/build_cycle_38_lrc_ownership_functional.py --check",
+    "independent_command": "taskset -c 0 .venv/bin/python proof/replay_cycle_38_ownership_functional_independent.py",
+    "primary_command": "taskset -c 0-2 .venv/bin/python discovery/lrc_ownership_functional.py",
+    "test_command": ".venv/bin/python -m unittest tests.test_cycle_38_ownership_functional -v"
+  },
+  "resources": {
+    "peak_rss_kib": 129956,
+    "primary_wall_seconds": 1394.5304011070111,
+    "reserved_cpu": 3,
+    "shell_elapsed_seconds": 1395.04,
+    "temporary_disk_cap_bytes": 5368709120,
+    "worker_cpus": [
+      0,
+      1,
+      2
+    ]
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_38_lrc_ownership_functional.py",
+    "sha256": "3d81b0c9882fbe3aac3085e8961f8af8a15966212450c51692bed22c704240ee"
+  },
+  "status": "SEALED"
+}

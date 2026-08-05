@@ -1,0 +1,152 @@
+{
+  "artifact_id": "cycle-6-b006-lrc-triple-hypergraph-v1",
+  "budget_ordinal": "B006",
+  "claim_boundary": "The proved lemma is only the necessary weak-colorability condition for the frozen triple hypergraph. The observed sample rejection rate does not prove full-frontier performance, equivalence of triple colorability and translate feasibility, J(13,199)=empty, LRC(13), or any higher-arity result.",
+  "cycle": 6,
+  "cycle_decision": {
+    "companion_identity": "/root/decision_companion_2",
+    "falsifier": "A fixed state where direct feasibility and declared triple weak-colorability disagree, or a reproducible direct-witness validation failure.",
+    "flaw": "The 1000-state agreement does not establish equivalence, and direct feasibility is not an independent validation of the triple encoding.",
+    "next_action": "Preregister Cycle 7 for direct exact r-translate feasibility with stratified triple comparisons and frontier caps.",
+    "outcome": "SEALED_FOR_DISTINCT_DIRECT_ENGINE",
+    "recommendation": "Seal Cycle 6; direct exact r-translate feasibility is a stronger method family and opens a distinct Cycle 7."
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "direct_oracle_check": {
+      "path": "proof/check_cycle_6_direct_oracle.py",
+      "sha256": "25390dfab957f38544d98575391ebceba8b2495d934d6cc114f6d0f170725f1b"
+    },
+    "direct_part_0": {
+      "path": "discovery/out/triple-direct-final-part-0.txt",
+      "sha256": "8802bf1f3c0987716afb6b87405bb8c062f86c087108d26eea3470176c6d61b9"
+    },
+    "direct_part_1": {
+      "path": "discovery/out/triple-direct-final-part-1.txt",
+      "sha256": "71924225779763d3754229009e963f76ad826686a9b6ac5bffc6b45d2785066f"
+    },
+    "direct_part_2": {
+      "path": "discovery/out/triple-direct-final-part-2.txt",
+      "sha256": "4375fe2408ab3224be98837d5f51ddd09241fa7d54162af5a413988bdad5a217"
+    },
+    "direct_prefix_result": {
+      "path": "discovery/out/triple-eval-1000-direct-fast.txt",
+      "sha256": "f09c9c9ab72ebfc2e4e88d918831c444aa7e1d991e63e6e62b61110af2631f38"
+    },
+    "evaluator": {
+      "path": "discovery/lrc_triple_sample_evaluate.cpp",
+      "sha256": "3345242912f040191916709af239857b65a3f0d74eeb28ead444e6f01a257e9d"
+    },
+    "global_relation": {
+      "path": "discovery/out/triple-global-2.json",
+      "sha256": "08dc73c654b8e731f9af93c44899c3d00732d4fc15436852962bd4fc547bca9a"
+    },
+    "h11_oracle": {
+      "path": "discovery/out/triple-h11-oracle.json",
+      "sha256": "a5c25d683fb41c4e54e713d9e5d8700fa153e97caab93573cca885f48865874c"
+    },
+    "preregistration": {
+      "path": "docs/cycle-6-b006-lrc-triple-hypergraph-preregistration-v1.md",
+      "sha256": "1d1693fa6cf8fc6f57264e7bbd3ded11aefb9e7e9b9cfdda2fae3c98b0a045c9"
+    },
+    "regression_test": {
+      "path": "tests/test_cycle_6_lrc_triple_hypergraph.py",
+      "sha256": "adc4330b067dc114be2812ad75ea37a335af525b1037ffb108dfe8a64453cb14"
+    },
+    "sample_generator": {
+      "path": "discovery/lrc_triple_sample.cpp",
+      "sha256": "f04944c25c58311f9c97c86adec0322affa61fe029c66969eaebd838fc5f122c"
+    },
+    "sample_result": {
+      "path": "discovery/out/triple-sample-p199.result",
+      "sha256": "15ca7827fd6344c41ede98bb7e24e43953e872407052c2a1949f9322e8dcabf8"
+    },
+    "sample_states": {
+      "path": "discovery/out/triple-sample-p199.txt",
+      "sha256": "cc003c483ae18513b630ea152d7479d4e014b8845dd60886f0eef1b7766b9712"
+    },
+    "sample_timing": {
+      "path": "discovery/out/triple-sample-p199.time",
+      "sha256": "e91093dbdecd1398d7c67d2bd42308ea9c12dcca5a1a72095882254886aee495"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "soundness_argument": {
+      "path": "proof/cycle_6_triple_hypergraph_soundness.md",
+      "sha256": "b5d0333e2a031ba255eeee433a6a9b23b00d019a1a4c06dd00124599fb4704a4"
+    },
+    "triple_checker": {
+      "path": "discovery/check_lrc_triple_hypergraph.py",
+      "sha256": "01015c8f2fd1001fcb349a76e583a8674decccd16c213022f912083a5719f04f"
+    },
+    "triple_prefix_result": {
+      "path": "discovery/out/triple-eval-1000-fast.txt",
+      "sha256": "a8f5f4b2172a9d9f1a9e9e52229c61e92f0e0e9ecddd5890938707e37be550fe"
+    }
+  },
+  "global_relation": {
+    "epistemic_status": "PROVED",
+    "forbidden_triples": 124674,
+    "h": 99,
+    "node_cap": 10000000,
+    "nodes": 2,
+    "primitive_root": 3,
+    "status": "UNSAT"
+  },
+  "h11_oracle": {
+    "epistemic_status": "PROVED",
+    "forbidden_triples": 10,
+    "h": 5,
+    "primitive_root": 2,
+    "rows": 96,
+    "status": "PASS"
+  },
+  "outcome": "Forbidden triples give a sound non-completability relation that is nontrivial at (13,199); its direct exact-translate comparator rejects 85.594% of the frozen depth-8 sample, motivating a distinct direct-feasibility engine.",
+  "record_type": "STRUCTURAL_REDUCTION",
+  "recorded_at_utc": "2026-08-03T16:16:00Z",
+  "replay": {
+    "check_command": "python3 proof/build_cycle_6_lrc_triple_hypergraph.py --check",
+    "direct_oracle_command": "python3 proof/check_cycle_6_direct_oracle.py",
+    "test_command": "python3 -m unittest tests/test_cycle_6_lrc_triple_hypergraph.py -v",
+    "triple_oracle_command": "python3 discovery/check_lrc_triple_hypergraph.py --h11-oracle"
+  },
+  "runtime": {
+    "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sample_comparison": {
+    "agreement": "EXACT_ON_FROZEN_PREFIX_1000",
+    "direct_sat": 6,
+    "direct_unsat": 994,
+    "epistemic_status": "OBSERVED",
+    "states": 1000,
+    "triple_sat": 6,
+    "triple_unsat": 994
+  },
+  "sample_direct_feasibility": {
+    "epistemic_status": "OBSERVED",
+    "independent_h11_direct_oracle_rows": 96,
+    "rejected_states": 85594,
+    "rejection_fraction": 0.85594,
+    "resource_workers": 3,
+    "retained_states": 14406,
+    "states": 100000
+  },
+  "sample_generation": {
+    "depth": 8,
+    "epistemic_status": "OBSERVED",
+    "lexicographic_prefix_states": 100000,
+    "peak_disk_bytes": 733747312,
+    "total_canonical_states": 33193860,
+    "wall_seconds": 13.9197
+  },
+  "sealer": {
+    "path": "proof/build_cycle_6_lrc_triple_hypergraph.py",
+    "sha256": "a51ca5d0494a9e79182e94e1b91b54f3dae89d3d9694901c93d78b81af82027e"
+  },
+  "status": "SEALED"
+}

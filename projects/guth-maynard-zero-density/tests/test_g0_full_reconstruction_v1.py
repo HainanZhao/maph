@@ -42,7 +42,7 @@ class G0FullReconstructionV1Tests(unittest.TestCase):
     def test_corrections_are_preserved_and_plan_is_not_frozen(self) -> None:
         self.assertEqual(len(self.data["corrections_preserved"]), 4)
         relatives = [value[0] for value in self.data["frozen_dependencies"].values() if isinstance(value, list)]
-        self.assertNotIn("PLAN.md", relatives)
+        self.assertNotIn("PROGRAM.md", relatives)
         self.assertNotIn("plan", self.data["frozen_dependencies"])
 
     def test_certificate_replays_byte_for_byte(self) -> None:

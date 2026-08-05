@@ -1,0 +1,196 @@
+{
+  "artifact_id": "cycle-27-b027-lrc-width-five-lp-v1",
+  "audit": {
+    "certified_leaves": [],
+    "cuts_max": 149,
+    "cuts_min": 58,
+    "epistemic_status": "OBSERVED",
+    "fully_separated_unresolved": 60,
+    "rounds_max": 69,
+    "rounds_min": 21,
+    "source_direct_recovery": {
+      "U": 65440,
+      "W": 65528,
+      "margin": 88
+    },
+    "status": "PASS",
+    "targets": 60
+  },
+  "budget_ordinal": "B027",
+  "claim_boundary": "Only the stated floating direct time-weight LP, deterministic 5+4+4 partition rule, finite separator, rounding schedule, and 60 named leaves are assessed. Near-one float objectives are not lower bounds, and this is not a width-five or LRC no-go theorem.",
+  "companion_decision": {
+    "falsifier": "Any candidate-partition census, selector tie-break, inherited-capacity, full-option separator, or direct integer U<W replay mismatch invalidates the affected claim. A near-one float remains OBSERVED.",
+    "final_action": "Seal the fixed-geometry block and choose a partition-changing cycle next.",
+    "identity": "/root/darwin_cycle25_short",
+    "independent_ideas": [
+      "portfolio-weight partition selector",
+      "exact rational primal lower-bound certificate",
+      "semantic lift after certificate-preserving equivalence",
+      "characters only after escaping class-constant collapse"
+    ],
+    "primary_ideas": [
+      "capacity-selected cyclic width-five geometry",
+      "exact rational fixed-geometry diagnostic",
+      "semantic lift after equivalence",
+      "further character refinement"
+    ],
+    "recommendation": "Seal C27 now; do not continue its fixed-partition question. Open a distinct capacity-selected cyclic 5+4+4 family with selection frozen before every fresh LP and audited directly.",
+    "scope_review": "The independent 60/60 streamed replay closes this frozen finite family: PROVED source-interface recovery and OBSERVED all-target nonpromotion.",
+    "strongest_flaw": "The fixed partition is identical on every target; even a partition selector driven by the lone Cycle-22 inherited weight may optimize for an irrelevant witness."
+  },
+  "cycle": 27,
+  "epistemic_status": "OBSERVED",
+  "frozen_hashes": {
+    "audit": {
+      "path": "proof/check_cycle_27_width_five_lp.py",
+      "sha256": "8962f5d61b3cc1ec41a9ebf17ee3e65221fce9d359eeee5c8738904acacedf43"
+    },
+    "cnf_base3": {
+      "path": "discovery/out/cycle11-certified-sat/p199/003.cnf",
+      "sha256": "e07cde8b14f19bf2094e2643ac43c6aad6c6d62ade399db270968a479d0ee6c4"
+    },
+    "cnf_base4": {
+      "path": "discovery/out/cycle11-certified-sat/p199/004.cnf",
+      "sha256": "ea4356bd1ff5cdf06fb5504411d0ca57ddc8b3056dc8281c8025d1d24ef60648"
+    },
+    "control": {
+      "path": "discovery/out/cycle27-width-five-lp/control.json",
+      "sha256": "f4df3486fa6196b9d9efb05bc5ca3c73334e062f8e82dea343897e9c2cb78887"
+    },
+    "coupled": {
+      "path": "discovery/lrc_coupled_incidence.py",
+      "sha256": "b40d9ff5077b40caaeda0e1622d456ce9e9673c9451bc6cd19d2b58286853469"
+    },
+    "direct": {
+      "path": "discovery/lrc_pair_choice.py",
+      "sha256": "f3faa9c3152467243ec1acfe27310c857cadbbe40b565c7cf51fb6e47318d55a"
+    },
+    "independent_replay": {
+      "path": "proof/replay_cycle_27_lp_independent.py",
+      "sha256": "259f24e458086d38365f69cb5e57851f945a974f83fa9229606f02245da41adb"
+    },
+    "independent_result": {
+      "path": "discovery/out/cycle27-width-five-lp/independent-replay.json",
+      "sha256": "16d69da6119298d7329278d45a3078e7e945f5c244d5fb59a00d93813c3a5753"
+    },
+    "independent_timing": {
+      "path": "discovery/out/cycle27-width-five-lp/independent-replay-v2.time",
+      "sha256": "a0f25d423c6f2e72012c01a6a47179cb6cf2ff0189c7c7173ad00d1d66079d31"
+    },
+    "independent_timing_first": {
+      "path": "discovery/out/cycle27-width-five-lp/independent-replay.time",
+      "sha256": "10c1f212c2f9e3d14569b3eb113422631dd2c1ef1038814c6acee5dda6903a41"
+    },
+    "preregistration": {
+      "path": "docs/cycle-27-b027-lrc-width-five-lp-preregistration-v1.md",
+      "sha256": "c28820b229e55a0766c267e4420a8727b774befb052f6a184bd23935db2e655b"
+    },
+    "prior_artifact": {
+      "path": "artifacts/cycle-25-b025-lrc-quadratic-crt-v1.json",
+      "sha256": "61fa41306155dbc55e6853434f2c0d567a6a6a2409c6847934dda902ebf80c68"
+    },
+    "prior_results": {
+      "path": "discovery/out/cycle25-quadratic-crt/results.tsv",
+      "sha256": "aa78578f2e54e7045d6dcf63e1278805d04057e48cd2b3981a4853889074e3d3"
+    },
+    "results": {
+      "path": "discovery/out/cycle27-width-five-lp/results.tsv",
+      "sha256": "bfe4141dc5c6ea80a81a3362abe75ba44a8902655752c875394bcba7c2c611d1"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "search": {
+      "path": "discovery/lrc_width_five_lp.py",
+      "sha256": "341088fa3dc35124b3d2fa2c3c9f2f895be2e2eb9fd56ec6d2b11ec92067235a"
+    },
+    "soundness": {
+      "path": "proof/cycle_27_width_five_lp_soundness.md",
+      "sha256": "1d8741bcbb0b058d7b5ffcd5de2d92461238d8500037c24d6a93ad273b7fddae"
+    },
+    "source_artifact": {
+      "path": "artifacts/cycle-22-b022-lrc-width-four-v1.json",
+      "sha256": "512ecc6f854e2400b6ee733fd2d91f8860de50a522820703d44290ad53aab58d"
+    },
+    "source_results": {
+      "path": "discovery/out/cycle22-width-four/stage-b-results.tsv",
+      "sha256": "a89a0532292f188cedc0f5b41a04cb68e2ebcae09ed9514ffba6f0f0941b0c07"
+    },
+    "source_timing": {
+      "path": "discovery/out/cycle27-width-five-lp/run.time",
+      "sha256": "0491f1fd5edd6213078509e1ab1ccc6d7868b8b0499c11ed10e50244f86c0990"
+    },
+    "summary": {
+      "path": "discovery/out/cycle27-width-five-lp/result.txt",
+      "sha256": "fdec7de31d63a5c431eb9e304efc23ac05b01c72b12ffb577caf2d35630f1270"
+    },
+    "test": {
+      "path": "tests/test_cycle_27_width_five_lp.py",
+      "sha256": "c5fd312c26b9e149703546536d8ce6492bba3909d5276949a1080cb04026f40c"
+    },
+    "transfer_artifact": {
+      "path": "artifacts/cycle-26-b026-lrc-width-five-transfer-v1.json",
+      "sha256": "f93ce541f3f8e5e2dd09d174381069dd007fb81281ff9b20bd72563d02e4b43d"
+    },
+    "width_four": {
+      "path": "discovery/lrc_width_four_stage_a.py",
+      "sha256": "3faee2712066bb15014b87b47f58a7be914298965dbf32678ee36485e9a0a9b9"
+    }
+  },
+  "independent_audit": {
+    "epistemic_status": "OBSERVED",
+    "independent_separator_replays": 60,
+    "status": "PASS",
+    "targets": 60
+  },
+  "method_outcome": {
+    "certified_leaves": [],
+    "cuts_max": 149,
+    "cuts_min": 58,
+    "epistemic_status": "OBSERVED",
+    "objectives": "within floating tolerance of 1; no value is promoted as an exact lower bound",
+    "rounds_max": 69,
+    "rounds_min": 21,
+    "source_wall_seconds": 486.297737,
+    "targets": 60,
+    "unresolved": 60
+  },
+  "outcome": "A fresh direct time-weight LP reached full finite separation on all 60 frozen survivors in the one restriction-selected 5+4+4 geometry, but produced no frozen-rule integer deficit.",
+  "proved_interface": {
+    "epistemic_status": "PROVED",
+    "statement": "The frozen Cycle-22 source integer witness replays exactly with W=65528 and U=65440; direct U<W remains a named-leaf exclusion condition."
+  },
+  "record_type": "OBSERVED_FINITE_WIDTH_FIVE_LP_BOUNDARY",
+  "recorded_at_utc": "2026-08-04T06:44:00Z",
+  "replay": {
+    "audit_command": "taskset -c 0 .venv/bin/python proof/check_cycle_27_width_five_lp.py",
+    "check_command": ".venv/bin/python proof/build_cycle_27_lrc_width_five_lp.py --check",
+    "independent_audit_command": "taskset -c 0-2 .venv/bin/python proof/replay_cycle_27_lp_independent.py",
+    "run_command": "taskset -c 0-2 .venv/bin/python discovery/lrc_width_five_lp.py",
+    "test_command": ".venv/bin/python -m unittest tests.test_cycle_27_width_five_lp -v"
+  },
+  "resources": {
+    "aggregate_wall_cap_seconds": 3600,
+    "aggregate_wall_seconds": 1874,
+    "independent_replay_peak_rss_kib": 1037904,
+    "largest_observed_process_peak_rss_kib": 1050916,
+    "reserved_cpu": 3,
+    "temporary_disk_cap_bytes": 21474836480,
+    "worker_cpus": [
+      0,
+      1,
+      2
+    ]
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_27_lrc_width_five_lp.py",
+    "sha256": "1db9537564f70656004ebfc5e9dae09e9b5722c9cc6e3434557357a2d7a68a46"
+  },
+  "status": "SEALED"
+}

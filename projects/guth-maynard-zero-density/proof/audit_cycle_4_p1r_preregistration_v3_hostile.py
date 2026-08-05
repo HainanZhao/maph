@@ -24,7 +24,7 @@ V1 = ROOT / "artifacts/cycle-4-p1r-preregistration-v1.json"
 V1_FAIL = ROOT / "artifacts/cycle-4-p1r-preregistration-v1-hostile-audit-v1.json"
 V2_FAIL = ROOT / "artifacts/cycle-4-p1r-preregistration-v2-hostile-audit-v1.json"
 GM_TEX = ROOT / "artifacts/sources/arxiv-2405.20552v2/LargevaluesDirichlet17.tex"
-PLAN = ROOT / "PLAN.md"
+PROGRAM = ROOT / "PROGRAM.md"
 PACKAGE = {
     "builder": "0b75dfac9f69b52d51a84d7db1e05705cd00698e6a129bbfa443b77362fb1807",
     "artifact": "60597c5e6aefd65fa4ce11a1a0c6e9494b048bed0fb4df6e87e26d4f07cab0ee",
@@ -55,17 +55,17 @@ def run(command: list[str]) -> int:
 
 
 def guarded_historical_replay(module: Any) -> bytes:
-    """Exercise seal with every attempted read of the live PLAN made fatal."""
+    """Exercise seal with every attempted read of the live program made fatal."""
     original_text, original_bytes = Path.read_text, Path.read_bytes
 
     def deny_plan_text(path: Path, *args: Any, **kwargs: Any) -> str:
-        if path.resolve() == PLAN.resolve():
-            raise RuntimeError("historical replay attempted to read mutable PLAN.md")
+        if path.resolve() == PROGRAM.resolve():
+            raise RuntimeError("historical replay attempted to read mutable PROGRAM.md")
         return original_text(path, *args, **kwargs)
 
     def deny_plan_bytes(path: Path, *args: Any, **kwargs: Any) -> bytes:
-        if path.resolve() == PLAN.resolve():
-            raise RuntimeError("historical replay attempted to read mutable PLAN.md")
+        if path.resolve() == PROGRAM.resolve():
+            raise RuntimeError("historical replay attempted to read mutable PROGRAM.md")
         return original_bytes(path, *args, **kwargs)
 
     Path.read_text, Path.read_bytes = deny_plan_text, deny_plan_bytes
@@ -85,7 +85,7 @@ def audit() -> dict[str, Any]:
         require(hashes[label] == expected, f"v3 package hash mismatch: {label}")
 
     builder_text = SCRIPT.read_text(encoding="utf-8")
-    require("PLAN.md" not in builder_text, "static live-PLAN path reference in historical builder")
+    require("PROGRAM.md" not in builder_text, "static live-program path reference in historical builder")
     payload = json.loads(ARTIFACT.read_text(encoding="utf-8"))
     snapshot = json.loads(SNAPSHOT.read_text(encoding="utf-8"))
     v1 = json.loads(V1.read_text(encoding="utf-8"))

@@ -22,7 +22,7 @@ ARTIFACT = ROOT / "artifacts/cycle-4-p1r-preregistration-v2.json"
 DOCUMENT = ROOT / "docs/cycle-4-p1r-preregistration-v2-correction.md"
 TESTS = ROOT / "tests/test_cycle_4_p1r_preregistration_v2.py"
 SNAPSHOT = ROOT / "artifacts/cycle-4-p1r-authorization-snapshot-v1.json"
-PLAN = ROOT / "PLAN.md"
+PROGRAM = ROOT / "PROGRAM.md"
 PACKAGE = {
     "builder": "bee4c5fd044d4fed4db5c6907524e48c7c4a2c553beffce683dff685fa16cab0",
     "artifact": "2f988a4feea44f0bf88b7519d7eff80f120575c64c13c975a6660ee6d6f01853",
@@ -84,17 +84,17 @@ def audit() -> dict[str, Any]:
     require(overwrite != 0, "v2 overwrite does not fail closed")
 
     module = load_module()
-    plan = PLAN.read_text(encoding="utf-8")
-    p1r_complete = plan.replace("| P1R | ACTIVE |", "| P1R | COMPLETE |", 1)
-    later_p2 = plan.replace("No P2A/P2B/P2C route is presently selected.", "P2B is selected by a later affirmative route decision.", 1)
+    program = PROGRAM.read_text(encoding="utf-8")
+    p1r_complete = program.replace("| P1R | ACTIVE |", "| P1R | COMPLETE |", 1)
+    later_p2 = program.replace("No P2A/P2B/P2C route is presently selected.", "P2B is selected by a later affirmative route decision.", 1)
     future_errors: dict[str, str] = {}
     for label, future in {"p1r_complete": p1r_complete, "later_affirmative_p2": later_p2}.items():
         try:
-            module.check_current_plan_text(future)
+            module.check_current_program_text(future)
         except RuntimeError as error:
             future_errors[label] = str(error)
         else:
-            raise RuntimeError(f"expected future PLAN status check failure absent: {label}")
+            raise RuntimeError(f"expected future PROGRAM status check failure absent: {label}")
     require("p1r_active" in future_errors["p1r_complete"], "P1R completion lifecycle defect was not exposed")
     require("no_p2_selection" in future_errors["later_affirmative_p2"], "later-P2 lifecycle defect was not exposed")
 

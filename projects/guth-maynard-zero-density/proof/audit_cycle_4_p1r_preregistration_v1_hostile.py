@@ -18,14 +18,14 @@ BUILDER = ROOT / "proof/build_cycle_4_p1r_preregistration_v1.py"
 ARTIFACT = ROOT / "artifacts/cycle-4-p1r-preregistration-v1.json"
 DOCUMENT = ROOT / "docs/cycle-4-p1r-preregistration-v1.md"
 TESTS = ROOT / "tests/test_cycle_4_p1r_preregistration_v1.py"
-PLAN = ROOT / "PLAN.md"
+PROGRAM = ROOT / "PROGRAM.md"
 TEX = ROOT / "artifacts/sources/arxiv-2405.20552v2/LargevaluesDirichlet17.tex"
 PACKAGE = {
     "builder": "9010102782404cf63eb669714dadfb1a0f4b67005f895c3175ec669c60c94059",
     "artifact": "c6491407fb3cc5096610ddda8a8db952ffe0e002441d105024368f6486e39a5b",
     "document": "675708d31772f9483f3d6d53c5975908d40fe6ab76d9a5c189170c7a332899f8",
     "tests": "779f504a333dcbfda1ed7f06d380a20b369919a3a494004e974621e6fc97e8b4",
-    "plan": "ce8cfb2c4c196b53a0e823667da2ce4e840d7ce18c754a9be1423064d9fce479",
+    "program": "ce8cfb2c4c196b53a0e823667da2ce4e840d7ce18c754a9be1423064d9fce479",
 }
 
 
@@ -46,7 +46,7 @@ def audit() -> dict[str, Any]:
     require(platform.python_implementation() == "CPython", "audit requires CPython")
     require(platform.python_version() == "3.12.3", "audit requires CPython 3.12.3")
     require(sys.flags.optimize == 0, "audit requires non-optimized mode")
-    paths = {"builder": BUILDER, "artifact": ARTIFACT, "document": DOCUMENT, "tests": TESTS, "plan": PLAN}
+    paths = {"builder": BUILDER, "artifact": ARTIFACT, "document": DOCUMENT, "tests": TESTS, "program": PROGRAM}
     hashes: dict[str, str] = {}
     for label, path in paths.items():
         require(path.is_file(), f"sealed v1 member absent: {label}")
@@ -67,7 +67,7 @@ def audit() -> dict[str, Any]:
     require(optimized != 0 and optimized_twice != 0, "optimized mode does not fail closed")
     require(overwrite != 0, "overwrite did not fail closed")
 
-    live_plan_defect = '"plan": (ROOT / "PLAN.md"' in builder_text
+    live_program_defect = '"program": (ROOT / "PROGRAM.md"' in builder_text
     source_s3_defect = (
         '"GM-S3"' in builder_text
         and '"locator": "GM TeX lines 1684--1692, Proposition prpstnS3"' in builder_text
@@ -78,9 +78,9 @@ def audit() -> dict[str, Any]:
         and 'Let $N\\ge T^{3/4}$' in tex
     )
     fs_status_defect = artifact["p1r_fs"]["epistemic_status"] == "PROVED" and "UNEXECUTED_REQUIRES_TWO_INDEPENDENT" in artifact["p1r_fs"]["gate"]
-    fs_authorized = artifact["status"] == "SEALED_PREREGISTRATION_NO_SEARCH_AUTHORIZED" and "execute the two independent exact P1R-FS routes" in PLAN.read_text(encoding="utf-8")
-    crr_forbidden = artifact["p1r_crr"]["formalization_gate"]["search_authorized"] is False and "Before any search" in PLAN.read_text(encoding="utf-8")
-    require(live_plan_defect and source_s3_defect and fs_status_defect, "expected v1 defects not found")
+    fs_authorized = artifact["status"] == "SEALED_PREREGISTRATION_NO_SEARCH_AUTHORIZED" and "execute the two independent exact P1R-FS routes" in PROGRAM.read_text(encoding="utf-8")
+    crr_forbidden = artifact["p1r_crr"]["formalization_gate"]["search_authorized"] is False and "Before any search" in PROGRAM.read_text(encoding="utf-8")
+    require(live_program_defect and source_s3_defect and fs_status_defect, "expected v1 defects not found")
     require(fs_authorized and crr_forbidden, "authorization boundary unexpectedly differs")
 
     return {
@@ -97,7 +97,7 @@ def audit() -> dict[str, Any]:
             "optimized_OO_fail_closed": "PASS",
             "overwrite_fail_closed": "PASS",
             "self_identity_binding": "PASS",
-            "mutable_live_PLAN_replay_lifecycle": "FAIL",
+            "mutable_live_program_replay_lifecycle": "FAIL",
             "four_term_S3_source_locator_and_hypothesis": "FAIL",
             "FS_status_wording": "FAIL",
             "FS_authorized_after_preregistration": "PASS",
@@ -105,13 +105,13 @@ def audit() -> dict[str, Any]:
         },
         "defects": {
             "documented_replay": "The document supplies --check followed by an artifact path, but v1 accepts only a boolean --check; the literal documented command exits nonzero.",
-            "mutable_plan": "The sealer hashes the live mutable PLAN.md. Repository policy requires PLAN updates at gate changes, so a legitimate future P1R-FS gate update makes the v1 artifact unreplayable.",
+            "mutable_program": "The sealer hashes the live mutable PROGRAM.md. A later strategic update makes the v1 artifact unreplayable.",
             "source_s3": "The cited Refined S3 proposition prpstnS3 is two-term. The v1 four-term scale algebra instead uses the later S3 Bound prpstn:S3, whose N>=T^(3/4) condition is not pinned in the v1 source ledger.",
             "fs_status": "p1r_fs is tagged PROVED while its own gate says UNEXECUTED and requires two independent routes plus hostile audit. It must remain an unexecuted target/premise until that gate passes.",
         },
-        "authorization": "FS execution is authorized by the current PLAN after this preregistration; CRR discovery/search remains forbidden until a separate formalization preregistration seals every listed field.",
+        "authorization": "FS execution is authorized by the current PROGRAM after this preregistration; CRR discovery/search remains forbidden until a separate formalization preregistration seals every listed field.",
         "required_correction": [
-            "Create a v2 artifact with a frozen PLAN snapshot or an explicitly archived plan-byte input; do not make replay depend on live PLAN.md after later mandatory gate updates.",
+            "Create a v2 artifact with a frozen program snapshot or an explicitly archived program-byte input; do not make replay depend on live PROGRAM.md after later strategic updates.",
             "Make the documented and parser replay commands identical, and add a verbatim-command regression.",
             "Replace the GM-S3 four-term source pin with Proposition prpstn:S3 and its N>=T^(3/4) gate, while separately retaining prpstnS3 only for its two-term statement if needed.",
             "Downgrade the P1R-FS branch from PROVED to an unexecuted route target until its required independent routes, reconciliation, and hostile audit close.",

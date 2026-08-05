@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "artifacts/cycle-173-local-artin-action-v1.json"
 INPUTS = {
     "instructions": (ROOT / "AGENTS.md", "363495f0dbbe93e244b460c8eafb13247a8fb1f41be24f94c037ae9f6400c6f2"),
-    "plan": (ROOT / "PLAN.md", "fd17682cdc228a7b9982a056dd7f8a710497d89bac270e9220f31cfc3352df42"),
+    "program": (ROOT / "PROGRAM.md", "fd17682cdc228a7b9982a056dd7f8a710497d89bac270e9220f31cfc3352df42"),
     "prior": (ROOT / "artifacts/cycle-172-local-filtration-v1.json", "b6775274f7e069ff765341eb1c0553a831864f3ad5d1e90727a1dcf22ee77adb"),
     "prereg": (ROOT / "docs/cycle-173-local-artin-action-preregistration-v1.md", "b2b76dccd70dc3bf1c1f0840e9963c434994b697e608e2fd5f7a76e0462f2d39"),
     "replay": (ROOT / "proof/verify_cycle_173_local_artin_action.py", "c445f484464191168da217ace66316f2e04e3390687a1c58fca02b427bed97d9"),

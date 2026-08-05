@@ -15,7 +15,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "artifacts/g0-full-reconstruction-v1.json"
 
-# PLAN.md is deliberately absent: adopting this decision must update PLAN
+# PROGRAM.md is deliberately absent: adopting this decision must update the program
 # without invalidating the evidence that authorized the update.
 FROZEN = {
     "cycle1_preregistration": ("docs/cycle-1-g0-preregistration.md", "150b4ee03383aa9be8d2301bbbc39644cb3464682a9c634b3143c1ada4fd7cf4"),

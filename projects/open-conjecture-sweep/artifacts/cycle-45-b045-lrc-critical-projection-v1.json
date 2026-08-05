@@ -1,0 +1,243 @@
+{
+  "actual_corpus": {
+    "allowed_simplices_weighted": 30212057,
+    "classification": "All 3,954 Cycle 43 rows and all 1,528 explicit Cycle 44 cones project to zero initially. Of 472 Cycle 44 GF(2)-H2-zero noncones, 2 project to zero and 470 remain; the extended schedule kills 13 more.",
+    "extended_nonzero": 457,
+    "extended_zero": 5497,
+    "initial_nonzero": 470,
+    "initial_zero": 5484,
+    "interfaces": 5954,
+    "matching_cycles": 0,
+    "maximum_extended_steps": 6,
+    "maximum_projection_support": 76,
+    "nonboundary_residuals": 0
+  },
+  "artifact_id": "cycle-45-b045-lrc-critical-projection-v1",
+  "audit": {
+    "actual_interfaces": 5954,
+    "arbitrary_nonboundary_models": 2647,
+    "basis_controls": 200,
+    "dual_certificates": [
+      {
+        "cells": 124,
+        "counter": 45187,
+        "pairing": [
+          1,
+          1
+        ],
+        "projection_nonzero": 13
+      },
+      {
+        "cells": 73,
+        "counter": 16686,
+        "pairing": [
+          1,
+          1
+        ],
+        "projection_nonzero": 8
+      },
+      {
+        "cells": 96,
+        "counter": 83362,
+        "pairing": [
+          -1,
+          1
+        ],
+        "projection_nonzero": 8
+      }
+    ],
+    "extended_nonzero_projections": 457,
+    "extended_zero_projections": 5497,
+    "initial_nonzero_projections": 470,
+    "initial_zero_projections": 5484,
+    "raw_control_status": "CAP",
+    "raw_two_owner_control_count": 2836566,
+    "signature_nonboundary_models": 649,
+    "status": "PASS"
+  },
+  "budget_ordinal": "B045",
+  "claim_boundary": "The generic homotopy identity and frozen finite classifications are proved. This does not prove annihilation on every actual type multiset, characterize p199 realizability, construct the full degree-four functional or a leaf certificate, or prove LRC(13).",
+  "control": {
+    "basis_controls": 200,
+    "interpretation": "The raw count exceeded the frozen 2,000,000-model cap before execution; no empirical universal claim is inferred.",
+    "raw_exhaustive_status": "CAP",
+    "raw_two_owner_descriptors": 2836566
+  },
+  "cycle": 45,
+  "cycle_decision": {
+    "companion_identity": "/root/darwin_cycle25_short",
+    "companion_proposal": "Construct the exact relative-chain/Cech map from the 457 residual projections to pair-intersection H1 modulo Cycle 41 global singleton/binary closure relations.",
+    "falsifier": "A residual and exact dual class that annihilates every imported global closure relation but pairs nontrivially refutes the proposed quotient bridge.",
+    "next_action": "Preregister the relative-chain quotient, its global relation matrix, and a dual obstruction falsifier before executable work.",
+    "outcome": "SEAL_NARROW_BOUNDARY_AND_OPEN_GLOBAL_RELATIVE_CHAIN_QUOTIENT",
+    "primary_decision": "Adopt that proposal as a genuinely new global engine. Do not spend another cycle tuning local Morse schedules.",
+    "strongest_flaw": "The 457 actual nonzero projections are known boundaries but have no local canonical explanation."
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "abstract_engine": {
+      "path": "discovery/lrc_morse_abstract.py",
+      "sha256": "55be8e0f7eb04e569256d7f105b0058ddcf159a9df4cf0ccba0e98649cdac491"
+    },
+    "abstract_result": {
+      "path": "discovery/out/cycle45-critical-projection/abstract-models.json",
+      "sha256": "27f78885d0718e8237929c13d5f4e44c812a350cfc969e801939de63ed5fe0b8"
+    },
+    "abstract_timing": {
+      "path": "discovery/out/cycle45-critical-projection/run-abstract-layered.time",
+      "sha256": "8afa21e2461ac005a22d51097932fe4f84679f0b564eac6d2cb084d411bec7ce"
+    },
+    "actual_engine": {
+      "path": "discovery/lrc_morse_actual.py",
+      "sha256": "303b0f3c70f4af019bf0274d76e05b1df1e6ab5e4ed548a2ca358d8015ed31fa"
+    },
+    "actual_result": {
+      "path": "discovery/out/cycle45-critical-projection/actual-corpus-layered.json",
+      "sha256": "814b7159834c6930a89a84b450d7a273b4465ba101a38140060a0a536dafdb64"
+    },
+    "actual_timing": {
+      "path": "discovery/out/cycle45-critical-projection/run-actual-layered.time",
+      "sha256": "0146809183e7ba03d6d7d1f3c01a2a3bfbda78f2a7f5c49229762c3c5755d98d"
+    },
+    "audit": {
+      "path": "proof/check_cycle_45_morse.py",
+      "sha256": "ca93a52bbe474189bcf949c252d2a1f9431994bb53a805bc5f939e82abfb4cc3"
+    },
+    "cycle41_closure": {
+      "path": "discovery/out/cycle41-multiplied-ideal/zero-support-closure.json",
+      "sha256": "a1f742592375d035f68d3dcd0ecde65c4ee6e7b78c96fa2a1ed18362e979037e"
+    },
+    "cycle43_faces": {
+      "path": "discovery/out/cycle43-moment-h2-coupling/canonical-coupling.json",
+      "sha256": "00737a038508ee4220b8ff158552afd976fab8e23194980de26879046566795b"
+    },
+    "cycle44_artifact": {
+      "path": "artifacts/cycle-44-b044-lrc-nonanchor-coupling-v1.json",
+      "sha256": "9599f64027d120467c1bba556a8e5fdd6c7868f3c655e88fa165af2887418a72"
+    },
+    "cycle44_coupling": {
+      "path": "discovery/out/cycle44-nonanchor-coupling/coupling.json",
+      "sha256": "32afe4526846a73f63969d8b1c95142a0bb94075b95273ec61ef31bc5f041eb9"
+    },
+    "generic_operator": {
+      "path": "discovery/lrc_morse_critical_projection.py",
+      "sha256": "669991dedd193fa7d27aef1fa47995bac5fe59b2e5fb5858c7eafd0509326bb2"
+    },
+    "idea_selection": {
+      "path": "discovery/cycle45_chain_homotopy_idea_selection.md",
+      "sha256": "51bd73402a94879758bfb233dbb344ca658b353a1b6be56c1cfa60aad4760fb8"
+    },
+    "independent_replay": {
+      "path": "proof/replay_cycle_45_morse_independent.py",
+      "sha256": "61aae6413cebf09501576e6b0dd9dcf24d5aa690db1604c3a38b99bb60fadcf9"
+    },
+    "independent_result": {
+      "path": "discovery/out/cycle45-critical-projection/independent-actual-replay.json",
+      "sha256": "152a4c497c1b0a9ed61a00490b90d2ea63a79a585663c2c96aa1a35349284488"
+    },
+    "independent_timing": {
+      "path": "discovery/out/cycle45-critical-projection/run-independent-actual.time",
+      "sha256": "7e2f5749b457dd2242adb19c66293c785f232897ff73e64c1679a36c4de778bb"
+    },
+    "preregistration": {
+      "path": "docs/cycle-45-b045-lrc-critical-projection-preregistration-v1.md",
+      "sha256": "e0cae514468762e4be5aa02f74c199800bba0f7740285ab567af9b0303690c59"
+    },
+    "preregistration_validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "signature_engine": {
+      "path": "discovery/lrc_morse_signature_abstract.py",
+      "sha256": "cbe36e4f3618777fe9b93f4b10700bace4f4571b2929fe607eac0d7e7b3620a6"
+    },
+    "signature_result": {
+      "path": "discovery/out/cycle45-critical-projection/signature-abstract-models.json",
+      "sha256": "92f9426404ac3fb8207355aea0b53e22d084c5d9ad367fccff676efbed50cc9f"
+    },
+    "signature_timing": {
+      "path": "discovery/out/cycle45-critical-projection/run-signature-abstract.time",
+      "sha256": "1b67b80a767e039dc452a1bbcd5e7eae6bf81174a972afd429864b0df321466e"
+    },
+    "soundness": {
+      "path": "proof/cycle_45_morse_soundness.md",
+      "sha256": "2b171e12a4b09c11dea9d1e7fbf5268e524ef8e3b4558b814e5e20af722d1be5"
+    },
+    "test": {
+      "path": "tests/test_cycle_45_morse.py",
+      "sha256": "9c64f8e4c1d43154b5221b5c9caac88cbd5c6a86bccc5d5ab9ce4fcbe52899cb"
+    }
+  },
+  "generic_theorem": {
+    "coefficient_ring": "Z incidences; instantiated over Q",
+    "proof_route": "single-stage insertion monotonicity, stagewise patchwork induction, and finite gradient-path stabilization",
+    "statement": "For a finite simplicial complex, greedy pairing by an ordered sequence of vertices is acyclic. With V on matched lower cells and Phi=I+dV+Vd, the stabilized projection pi satisfies dh+hd=I-pi and is a chain map."
+  },
+  "independent_replay": {
+    "allowed_simplices_weighted": 30212057,
+    "extended_nonzero": 457,
+    "initial_nonzero": 470,
+    "interfaces": 5954,
+    "route": "direct local-signature deletions, reverse enumeration, and DFS acyclicity",
+    "status": "PASS"
+  },
+  "local_axiom_falsifiers": {
+    "arbitrary_models": {
+      "deduplicated": 48037,
+      "extended_nonboundary": 2647,
+      "face_admissible": 41641,
+      "initial_nonboundary": 2647,
+      "rank3_free_nonboundary": 96
+    },
+    "implication": "Local signature-intersection realizability is necessary but insufficient; the next engine must expose global p199 type/marginal closure relations.",
+    "signature_realizable_models": {
+      "deduplicated": 31204,
+      "extended_nonboundary": 649,
+      "face_admissible": 31160,
+      "initial_nonboundary": 649
+    }
+  },
+  "outcome": "The stagewise distinguished-owner matching gives a finite acyclic Morse flow and an exact chain homotopy dh+hd=I-pi. On all 5,954 frozen actual interfaces the first schedule leaves 470 residuals and the extended schedule leaves 457, all rational boundaries. Exact arbitrary and signature-realizable abstract searches produce respectively 2,647 and 649 nonboundary residual models, proving that local blocker/signature geometry cannot explain the actual vanishing; the missing state is global p199 type and marginal closure.",
+  "record_type": "PROVED_MORSE_PROJECTION_AND_LOCAL_AXIOM_FALSIFIERS",
+  "recorded_at_utc": "2026-08-05T00:31:00Z",
+  "replay": {
+    "abstract_command": "taskset -c 0-2 .venv/bin/python discovery/lrc_morse_abstract.py",
+    "actual_command": "taskset -c 0-2 .venv/bin/python discovery/lrc_morse_actual.py",
+    "audit_command": ".venv/bin/python proof/check_cycle_45_morse.py",
+    "check_command": ".venv/bin/python proof/build_cycle_45_lrc_morse.py --check",
+    "independent_command": "taskset -c 0-2 .venv/bin/python proof/replay_cycle_45_morse_independent.py",
+    "signature_command": "taskset -c 0-2 .venv/bin/python discovery/lrc_morse_signature_abstract.py",
+    "test_command": ".venv/bin/python -m unittest tests.test_cycle_45_morse -v"
+  },
+  "resources": {
+    "abstract_peak_rss_kib": 254448,
+    "abstract_wall_seconds": 53.48806168400915,
+    "actual_peak_rss_kib": 1178248,
+    "actual_wall_seconds": 574.1154039160174,
+    "independent_peak_rss_kib": 224436,
+    "independent_wall_seconds": 591.3868212070083,
+    "reserved_cpu": 3,
+    "signature_peak_rss_kib": 233352,
+    "signature_wall_seconds": 100.31748308701208,
+    "temporary_disk_cap_bytes": 5368709120,
+    "worker_cpus": [
+      0,
+      1,
+      2
+    ]
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_45_lrc_morse.py",
+    "sha256": "eeaf8fa2c94ce32a295977fafe53a8eb5befaa11ffe9e905ff5bc3c2505aa9c9"
+  },
+  "status": "SEALED"
+}

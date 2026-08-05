@@ -27,7 +27,7 @@ class ResearchRecordsTest(unittest.TestCase):
             )
             status = research_records.render_status(con)
             self.assertIn("## Start here", status)
-            self.assertIn("Strategic state, claim boundary, active gate, and deferred work: `PLAN.md`", status)
+            self.assertIn("Strategic state, claim boundary, active gate, and deferred work: `PROGRAM.md`", status)
             self.assertIn("## Current evidence", status)
             self.assertIn("research cycle 63", status)
             self.assertIn("Newest immutable record", status)

@@ -1,0 +1,100 @@
+{
+  "artifact_id": "cycle-55-b055-zhao-deficit-v1",
+  "audit": {
+    "claim_boundary": "Exact frozen S3 class-zero ray packet only; neither Zhao's all-group comparison nor Sidorenko.",
+    "directions": 10,
+    "epistemic_status": "PROVED",
+    "negative_rays": 0,
+    "polynomials": 80,
+    "rays": 1360,
+    "status": "PASS"
+  },
+  "budget_ordinal": "B055",
+  "claim_boundary": "Exactly 1,360 finite parameter points: S3, eight central bases, ten ternary primitive class-zero directions, and 17 sampled dyadic values. This does not assert ray positivity between points, Zhao's all-group comparison, or Sidorenko.",
+  "containment": {
+    "cause": "missing dyadic denominator clearing",
+    "prepromotion_defect": "principal evaluated D(r) instead of the frozen D(r/8), producing six spurious negative rows",
+    "resolution": "corrected exact 8^15 D(r/8) evaluation agrees with independent cleared-value evaluator on every row; nothing was sealed before correction"
+  },
+  "cycle": 55,
+  "cycle_decision": {
+    "companion_advice": "Seal finite points only. C56 should test one-conjugacy-orbit smoothing as a universal conditional-variance contraction, not enlarge the group/grid census.",
+    "companion_identity": "/root/darwin_cycle25_short",
+    "falsifier": "One finite group, one conjugacy class, and one rational nonnegative function for which smoothing increases the numerator.",
+    "next_question": "Is the Cayley numerator nonincreasing under smoothing one conjugacy class to its mean?"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "audit": {
+      "path": "proof/check_cycle_55_zhao_deficit.py",
+      "sha256": "710d6befe8f5ecc59b80d0f8dad9d7a2986b3fafe577d4dd475952de68c087de"
+    },
+    "control": {
+      "path": "discovery/out/cycle55-zhao-deficit/direct-control.txt",
+      "sha256": "80d60f81e2e38b9bc21a12ca411397d3239cc8d206619059c493bcb97a90e01c"
+    },
+    "cycle54_artifact": {
+      "path": "artifacts/cycle-54-b054-bipartite-directional-v1.json",
+      "sha256": "585dd79d814ba6f0e4bb320dd56728510327580036b2dfa3c25dc980a1dee5ac"
+    },
+    "idea": {
+      "path": "discovery/cycle55_zhao_deficit_idea_selection.md",
+      "sha256": "afe556f6bb77bdd99007c5c063a91f7d8909c1274d05a51eb77f7c23cc77dee8"
+    },
+    "independent": {
+      "path": "proof/replay_cycle_55_zhao_deficit_direct.cpp",
+      "sha256": "2795517d136feeeb705466d283f8fae3ca08e873f3109c4e21f3ae488c268428"
+    },
+    "isummary": {
+      "path": "discovery/out/cycle55-zhao-deficit/independent-summary.json",
+      "sha256": "7a380e145194bddf41f64861f8ed2803adced13524baa1b027a8990b17839d04"
+    },
+    "poly": {
+      "path": "discovery/out/cycle55-zhao-deficit/polynomials.tsv",
+      "sha256": "14e4a55ece79acff9975b306b3e231faf00e654ea961cf776b12ae3c199d269e"
+    },
+    "preregistration": {
+      "path": "docs/cycle-55-b055-zhao-deficit-preregistration-v1.md",
+      "sha256": "9395b82d748cd7dbc2259006dbd774b1195d4e11179fbdd080036b635ea76ec8"
+    },
+    "principal": {
+      "path": "discovery/cycle55_zhao_deficit_packet.cpp",
+      "sha256": "aff54d887c11c21109bc2845a5c3182309b7bae46c296427454fb63fa9c1247d"
+    },
+    "rays": {
+      "path": "discovery/out/cycle55-zhao-deficit/rays.tsv",
+      "sha256": "dc36f5a0152e9f4c4e40bdb03637fb7de69f130bf22fffea9e8788929e0440fd"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "summary": {
+      "path": "discovery/out/cycle55-zhao-deficit/summary.json",
+      "sha256": "ce6e962c796ef7f517eb23de00a6cb5706030d98d5836799a6f5e619e83ef298"
+    },
+    "test": {
+      "path": "tests/test_cycle_55_zhao_deficit.py",
+      "sha256": "02b03e00611d652d78f0f863a36fa7d9c92b18bc9bb58302ce34d3d0850023c1"
+    }
+  },
+  "outcome": "All 1,360 frozen finite S3 parameter points have nonnegative exact Zhao-comparison deficit; no compact rational bridge falsifier occurs in this packet.",
+  "record_type": "PROVED_FINITE_S3_CONJUGACY_DEFICIT_PACKET",
+  "recorded_at_utc": "2026-08-05T09:08:00Z",
+  "replay": {
+    "audit_command": ".venv/bin/python proof/check_cycle_55_zhao_deficit.py",
+    "check_command": ".venv/bin/python proof/build_cycle_55_zhao_deficit.py --check",
+    "independent_command": "g++ -O3 -std=c++20 proof/replay_cycle_55_zhao_deficit_direct.cpp -o /tmp/c55-independent && taskset -c 0-2 /tmp/c55-independent discovery/out/cycle55-zhao-deficit",
+    "principal_command": "g++ -O3 -std=c++20 discovery/cycle55_zhao_deficit_packet.cpp -o /tmp/c55-principal && taskset -c 0-2 /tmp/c55-principal discovery/out/cycle55-zhao-deficit"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_55_zhao_deficit.py",
+    "sha256": "4e60ff63dcd21a470a24a61d081eb73c80b010f5252ba098748d54b3f045bfc1"
+  },
+  "status": "SEALED"
+}

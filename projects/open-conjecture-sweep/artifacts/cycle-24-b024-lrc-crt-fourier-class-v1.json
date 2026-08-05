@@ -1,0 +1,133 @@
+{
+  "artifact_id": "cycle-24-b024-lrc-crt-fourier-class-v1",
+  "audit": {
+    "certified_leaves": [],
+    "class_cardinalities": [
+      6,
+      6,
+      1,
+      1,
+      1188,
+      1188,
+      198,
+      198
+    ],
+    "epistemic_status": "OBSERVED",
+    "objective_max": 1.5656565656565653,
+    "objective_min": 1.404040404040404,
+    "status": "PASS",
+    "targets": 60
+  },
+  "budget_ordinal": "B024",
+  "claim_boundary": "Only the stated eight class space, class-aggregated selector, one selected width-four partition, floating LP and integerization rule are assessed. This is not a Fourier, width-four, or LRC no-go theorem.",
+  "companion_decision": {
+    "final_action": "Seal Cycle 24; do not extend its one-partition/one-LP rule.",
+    "identity": "/root/darwin_cycle24_review",
+    "independent_ideas": [
+      "12-class quadratic-residue CRT dual",
+      "compact width-five control",
+      "later exact cyclotomic-character family"
+    ],
+    "recommendation": "Seal and open a distinct 12-class quadratic-residue/nonresidue CRT refinement.",
+    "strongest_flaw": "58/60 optima collapse to one class, so this family is degenerate and a negative result has only its frozen finite scope."
+  },
+  "cycle": 24,
+  "epistemic_status": "OBSERVED",
+  "frozen_hashes": {
+    "audit": {
+      "path": "proof/check_cycle_24_crt_fourier_class.py",
+      "sha256": "0147ccaf86d950cc31fdb814d666afcc2dc06a2dd9857a8a896294d690dc5cd8"
+    },
+    "control": {
+      "path": "discovery/out/cycle24-crt-fourier-class/control.json",
+      "sha256": "0d0818cc5dac8bf4da3cb398c0d47760e6b90e8d940d1ca2368dcc6e42aaa8a7"
+    },
+    "coupled_interface": {
+      "path": "artifacts/cycle-21-b021-lrc-coupled-incidence-v1.json",
+      "sha256": "360daaf46d9f4442a65cce29d8011d05ea529ad0e59a7f16dc6c12b6b66a0200"
+    },
+    "crt_interface": {
+      "path": "artifacts/cycle-20-b020-lrc-crt-diagonal-v1.json",
+      "sha256": "cd2ced396549a819cd891472a1a71a1072dfbd8b322eb096fb2b2ce1841f62c6"
+    },
+    "preregistration": {
+      "path": "docs/cycle-24-b024-lrc-crt-fourier-class-preregistration-v1.md",
+      "sha256": "c91cd03784c55b07ed8c05c9df5f72d5f19e4069f3eb8666405d960c2924a19b"
+    },
+    "prior_artifact": {
+      "path": "artifacts/cycle-23-b023-lrc-adaptive-width-four-v1.json",
+      "sha256": "c1af453bc3e87e4844cf91e462c83df7abc4f5cf2a33639e44819798f69c1a88"
+    },
+    "results": {
+      "path": "discovery/out/cycle24-crt-fourier-class/results.tsv",
+      "sha256": "8e022ec85dd3e19a5cef97c7d54601263906ed0d202036a98bc57e67a792096e"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "search": {
+      "path": "discovery/lrc_crt_fourier_class.py",
+      "sha256": "9fe6849981871c69ecfe6cc97863536c6fc4f3fab7023cd8b45aaa6cee898b22"
+    },
+    "soundness": {
+      "path": "proof/cycle_24_crt_fourier_class_soundness.md",
+      "sha256": "fec54cb07cf09af7192bbd89b643d7fd9c62478406bb7c63d58138ab89bcef88"
+    },
+    "summary": {
+      "path": "discovery/out/cycle24-crt-fourier-class/result.txt",
+      "sha256": "cbbf99e7ece4e351e9a4dff393d6e98c3883724d76dca363907a34301a373ff4"
+    },
+    "test": {
+      "path": "tests/test_cycle_24_crt_fourier_class.py",
+      "sha256": "1eaf8fc55e9a1ea4c16dc0cc92308855575bec6488998c89731e21d56f6df4af"
+    },
+    "timing": {
+      "path": "discovery/out/cycle24-crt-fourier-class/run.time",
+      "sha256": "e8f503750fb18aa0c1868de78e7c392ca6347e7402a0de9b9de85e2d616434d7"
+    }
+  },
+  "method_outcome": {
+    "epistemic_status": "OBSERVED",
+    "objective_max": 1.5656565656565653,
+    "objective_min": 1.404040404040404,
+    "targets": 60,
+    "unresolved": 60,
+    "wall_seconds": 52.310638
+  },
+  "outcome": "The complete frozen eight-class CRT/Ramanujan capacity-dual family left all 60 Cycle-23 survivors unresolved; no direct integer deficit was emitted.",
+  "proved_interface": {
+    "epistemic_status": "PROVED",
+    "statement": "The eight CRT classes are an invertible integer Ramanujan tensor basis and U<W remains a direct leaf-exclusion criterion."
+  },
+  "record_type": "OBSERVED_FINITE_FOURIER_CLASS_BOUNDARY",
+  "recorded_at_utc": "2026-08-04T05:09:29Z",
+  "replay": {
+    "audit_command": ".venv/bin/python proof/check_cycle_24_crt_fourier_class.py",
+    "check_command": ".venv/bin/python proof/build_cycle_24_lrc_crt_fourier_class.py --check",
+    "run_command": "taskset -c 0-2 .venv/bin/python discovery/lrc_crt_fourier_class.py",
+    "test_command": ".venv/bin/python -m unittest tests.test_cycle_24_crt_fourier_class -v"
+  },
+  "resources": {
+    "aggregate_wall_cap_seconds": 3600,
+    "aggregate_wall_seconds": 53,
+    "peak_rss_kib": 75488,
+    "reserved_cpu": 3,
+    "temporary_disk_cap_bytes": 21474836480,
+    "worker_cpus": [
+      0,
+      1,
+      2
+    ]
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_24_lrc_crt_fourier_class.py",
+    "sha256": "39dcf731f55fd62fb1ca9e0c8d0644543026ecd7eaee9450f4b2f402ca5ca8ff"
+  },
+  "status": "SEALED"
+}

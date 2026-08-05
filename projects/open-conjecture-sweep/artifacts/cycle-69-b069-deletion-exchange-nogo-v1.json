@@ -1,0 +1,225 @@
+{
+  "artifact_id": "cycle-69-b069-deletion-exchange-nogo-v1",
+  "audit": {
+    "claim_boundary": "A necessary local condition only; it does not establish tau(H)<=5 for arbitrary intersecting 6-partite H.",
+    "control": "Every minimum four-cover of every edge-deletion of the published 13-edge tau=5 system is disjoint from the deleted edge and has no one-vertex exchange. Thus raw local exchange is not sufficient to distinguish a tau=6 counterexample.",
+    "control_rows": [
+      {
+        "all_disjoint_from_deleted_edge": true,
+        "all_exchange_move_counts": [
+          0,
+          0,
+          0
+        ],
+        "deleted_edge": 1,
+        "minimum_cover_count": 3
+      },
+      {
+        "all_disjoint_from_deleted_edge": true,
+        "all_exchange_move_counts": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "deleted_edge": 2,
+        "minimum_cover_count": 5
+      },
+      {
+        "all_disjoint_from_deleted_edge": true,
+        "all_exchange_move_counts": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "deleted_edge": 3,
+        "minimum_cover_count": 5
+      },
+      {
+        "all_disjoint_from_deleted_edge": true,
+        "all_exchange_move_counts": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "deleted_edge": 4,
+        "minimum_cover_count": 5
+      },
+      {
+        "all_disjoint_from_deleted_edge": true,
+        "all_exchange_move_counts": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "deleted_edge": 5,
+        "minimum_cover_count": 5
+      },
+      {
+        "all_disjoint_from_deleted_edge": true,
+        "all_exchange_move_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "deleted_edge": 6,
+        "minimum_cover_count": 6
+      },
+      {
+        "all_disjoint_from_deleted_edge": true,
+        "all_exchange_move_counts": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "deleted_edge": 7,
+        "minimum_cover_count": 4
+      },
+      {
+        "all_disjoint_from_deleted_edge": true,
+        "all_exchange_move_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "deleted_edge": 8,
+        "minimum_cover_count": 6
+      },
+      {
+        "all_disjoint_from_deleted_edge": true,
+        "all_exchange_move_counts": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "deleted_edge": 9,
+        "minimum_cover_count": 4
+      },
+      {
+        "all_disjoint_from_deleted_edge": true,
+        "all_exchange_move_counts": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "deleted_edge": 10,
+        "minimum_cover_count": 5
+      },
+      {
+        "all_disjoint_from_deleted_edge": true,
+        "all_exchange_move_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "deleted_edge": 11,
+        "minimum_cover_count": 6
+      },
+      {
+        "all_disjoint_from_deleted_edge": true,
+        "all_exchange_move_counts": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "deleted_edge": 12,
+        "minimum_cover_count": 4
+      },
+      {
+        "all_disjoint_from_deleted_edge": true,
+        "all_exchange_move_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "deleted_edge": 13,
+        "minimum_cover_count": 6
+      }
+    ],
+    "counterexample_necessary_condition": "For every e and every five-cover C of H-e, every c in C has essential edges with no common vertex in e.",
+    "epistemic_status": "PROVED",
+    "lemma": "If C covers H-e and c in C may be replaced by v in e while covering every edge uniquely hit by c, then (C-c)+v covers H.",
+    "status": "PASS"
+  },
+  "budget_ordinal": "B069",
+  "claim_boundary": "This proves only that equal-size local deletion-cover exchanges cannot distinguish a hypothetical tau=6 counterexample from the known tau=5 equality system. It is not a Ryser proof, a fractional-dual no-go, or an exclusion of larger recombination mechanisms.",
+  "cycle": 69,
+  "cycle_decision": {
+    "companion_advice": "Seal after correcting the scope; then open a distinct deletion-witness incidence-design cycle.",
+    "companion_identity": "/root/darwin_cycle25_short",
+    "decision": "Close raw local exchange as non-discriminating and change state space to all (edge, five-cover) witnesses of a hypothetical minimal tau>=6 counterexample.",
+    "falsifier": "A verified exchange in the cited tau=5 control would falsify this record; it is absent by exact enumeration and by tau=5 itself."
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "checker": {
+      "path": "proof/cycle69_deletion_exchange.py",
+      "sha256": "00914f302c6f102ad2aa866b898d06600a016f07fa28a318c7d9326540e8d40a"
+    },
+    "control": {
+      "path": "discovery/cycle69_r6_extremal_control.py",
+      "sha256": "c62edddd382483e1b243e385bfe14ba99a40a0b1e137d3145e995b3223bf2276"
+    },
+    "idea": {
+      "path": "discovery/cycle69_ryser_idea_selection.md",
+      "sha256": "0487df9abd9dcafe6d21e1ae89b15a5d94aae98d8f013bcafbf406f66a4c0aa1"
+    },
+    "literature": {
+      "path": "discovery/cycle69_literature_scope.md",
+      "sha256": "540539e97818a8012dcb6f19263e11d2d53e49e9e8b0c4b96f0c0e08f3856514"
+    },
+    "prereg": {
+      "path": "docs/cycle-69-b069-ryser-critical-cover-preregistration-v1.md",
+      "sha256": "0de4ab65081eca84ddceb0e16ccfbab2f7081d4b7a63cafafe232497e894ef6c"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "outcome": "All minimum deletion covers of the published 13-edge r=6 equality system have zero size-preserving exchanges into the deleted edge.",
+  "record_type": "PROVED_LOCAL_EXCHANGE_NO_GO",
+  "recorded_at_utc": "2026-08-05T14:25:00Z",
+  "replay": {
+    "audit": "python3 proof/cycle69_deletion_exchange.py",
+    "check": "python3 proof/build_cycle_69_exchange_nogo.py --check"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_69_exchange_nogo.py",
+    "sha256": "d4a443eff25f0255cd6d5db2abc546b8ce1ae8223601bbc623b27eaa5325be6e"
+  },
+  "status": "SEALED"
+}

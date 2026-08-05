@@ -1,0 +1,13 @@
+"""Seal C70's deletion-witness occupancy saturation result."""
+from pathlib import Path
+import json, subprocess, sys
+ROOT=Path(__file__).resolve().parents[1]; sys.path.insert(0,str(ROOT))
+from proof.cycle_seal_v1 import check_runtime, freeze_inputs, run_cli, sha256
+H={"prereg":("docs/cycle-70-b070-ryser-witness-design-preregistration-v1.md","73bc5d1c2c90426c900b6d030c6da6078f3b56a764bbc3cc93f2cd242c31ed65"),"idea":("discovery/cycle70_ryser_witness_design_idea_selection.md","a73086710db46487be5de2e2a0b28c35cb32a854ebbb3d5aefdb6e38eea7b32b"),"control":("discovery/cycle69_r6_extremal_control.py","c62edddd382483e1b243e385bfe14ba99a40a0b1e137d3145e995b3223bf2276"),"profile":("proof/cycle70_witness_profile_control.py","f5299ab15339493dba08e53dcc8520f53ed74cc4854fdcc45044e54ae9cea030"),"scaffold":("proof/cycle_seal_v1.py","9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"),"validator":("../../tools/preregistration_check.py","a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359")}
+def audit():
+ p=json.loads(subprocess.check_output([sys.executable,str(ROOT/'proof/cycle70_witness_profile_control.py')]))
+ assert p['status']=='PASS' and len(p['rows'])==64 and len(p['observed_part_patterns'])==64
+ return p
+def payload():
+ a=audit(); return {"artifact_id":"cycle-70-b070-witness-profile-saturation-v1","budget_ordinal":"B070","cycle":70,"record_type":"PROVED_WITNESS_PROFILE_SATURATION","recorded_at_utc":"2026-08-05T14:50:00Z","status":"SEALED","epistemic_status":"PROVED","outcome":"The 13-edge tau=5 equality control realizes 64 distinct minimum deletion-cover part profiles.","claim_boundary":"This proves that raw local part occupancy is non-discriminating in the chosen equality control. It does not rule out a global all-witness incidence invariant, prove Ryser, or restrict hypothetical tau>=6 systems.","audit":a,"cycle_decision":{"companion_identity":"/root/darwin_cycle25_short","companion_advice":"Seal narrowly and pivot to the exact six-partition global-cover formulation.","decision":"Do not overfit a local witness profile; move to pair co-clustering across six partitions.","falsifier":"A replay with fewer than 64 distinct profiles falsifies this record."},"frozen_hashes":freeze_inputs(ROOT,{k:(ROOT/p,h) for k,(p,h) in H.items()}),"runtime":check_runtime('c70'),"sealer":{"path":"proof/build_cycle_70_witness_saturation.py","sha256":sha256(Path(__file__))},"replay":{"audit":"python3 proof/cycle70_witness_profile_control.py","check":"python3 proof/build_cycle_70_witness_saturation.py --check"}}
+if __name__=='__main__': raise SystemExit(run_cli(description=__doc__,output=ROOT/'artifacts/cycle-70-b070-witness-profile-saturation-v1.json',payload_factory=payload))

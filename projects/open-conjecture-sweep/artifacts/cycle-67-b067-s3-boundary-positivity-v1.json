@@ -1,0 +1,294 @@
+{
+  "artifact_id": "cycle-67-b067-s3-boundary-positivity-v1",
+  "audit": {
+    "claim": "N(a)-N(a_cl)>=0 on all four C64 endpoint families",
+    "claim_boundary": "PROVED only on the four C64 endpoint families; interior fiber critical points and the full fixed-S3 comparison remain open.",
+    "endpoint_families": 4,
+    "epistemic_status": "PROVED",
+    "evidence_hashes": {
+      "blowup-fast/cycle_equal.tsv": "371834e6b1b51855b21c7ed04fda8081c54584fd0cf77f915369e55701c677fc",
+      "blowup-fast/cycle_zero_cycle_dominant.tsv": "8bbc578ab11bf55e2a2a2344755f42fa528ec2166a1b096b770f7f46ce3f5865",
+      "blowup-fast/cycle_zero_trans_dominant.tsv": "23f0af61272fef68d773fe3b9c503e07a25e468d303c7dc7793a4209413f2617",
+      "blowup-fast/trans_equal_cycle_dominant_pair_large.tsv": "bbf558a9a9161f0691ef7e002f8e615017ee99ba2f18f8e23dd63eeede6484e0",
+      "blowup-fast/trans_equal_cycle_dominant_singleton_large.tsv": "5a262bdded5273f169eb82cde32ad139dbeea7ff0c57d9c98b155cf0d957e958",
+      "blowup-fast/trans_equal_trans_dominant_pair_large.tsv": "53ce6fcb506ca996dc2e08e4330c1301483cff46263d2d9ab941da86e2ffcb0a",
+      "blowup-fast/trans_equal_trans_dominant_singleton_large.tsv": "90d644bd0c5facd4200ed0f06f3a438026de1e05ea84db16e62f15ae0edacfbe",
+      "blowup-fast/trans_zero_cycle_deviation_dominant.tsv": "207c926431a162c1c1e8942e5472d6a494d220167ebccdbbdc75edbdd11f1b80",
+      "blowup-fast/trans_zero_trans_mass_dominant.tsv": "91ee8db3d00bb88626c38dc4bec488b72ac7e5c11e15932cf0c9ae6dbfab76a5",
+      "blowup-source-fast/cycle_equal.tsv": "320a346fdbfc91b4181317a63ffc9c1ec83cfdcd78f5b03244eae69e604450a5",
+      "blowup-source-fast/cycle_zero_cycle_dominant.tsv": "1b099cf8456c5c78852ca3c4d7fb284074827434c0f2de1fa5617b29bf318276",
+      "blowup-source-fast/cycle_zero_trans_dominant.tsv": "2886ca2d8adbfe6127f3089c7a55c968375e345e12c1f3e8122d974a587c772c",
+      "blowup-source-fast/trans_equal_cycle_dominant_pair_large.tsv": "f7ae7024b25c0927c0ee5b296622bf9ad718f182152bfd1ed620ec5206412711",
+      "blowup-source-fast/trans_equal_cycle_dominant_singleton_large.tsv": "b795040581edba385e3a363a5dcd198253b3723f8b004ab8e816d4677691b3f0",
+      "blowup-source-fast/trans_equal_trans_dominant_pair_large.tsv": "44b7bc73ef19fd329389b3b61a1b59e29716958962deac3117ba063c86c2fd5b",
+      "blowup-source-fast/trans_equal_trans_dominant_singleton_large.tsv": "2b37124f60e6ece384cbaa239af6fed096347e34147884ebe49b290c07ed39ef",
+      "blowup-source-fast/trans_zero_cycle_deviation_dominant.tsv": "c8316325cf324194ba6b06a76d9b7b94920d1058d8955a71c669a832cf4fb56e",
+      "blowup-source-fast/trans_zero_trans_mass_dominant.tsv": "0e34f27272d7c2b2fba00b83bcea778ad8eaa0c360934c3617c5cac3f3acca31",
+      "blowup-stripped/cycle_equal.tsv": "71ca020136083eac59874c954509ae9fb600a3d0e01f0d6583a204e16d074da5",
+      "blowup-stripped/cycle_zero_cycle_dominant.tsv": "8bbc578ab11bf55e2a2a2344755f42fa528ec2166a1b096b770f7f46ce3f5865",
+      "blowup-stripped/cycle_zero_trans_dominant.tsv": "23f0af61272fef68d773fe3b9c503e07a25e468d303c7dc7793a4209413f2617",
+      "blowup-stripped/factor-report.json": "9883c10f2e90e8bebe0fd3f9aca07cc2e9f77680ce7f73a3089413823c471c56",
+      "blowup-stripped/trans_equal_cycle_dominant_pair_large.tsv": "a47e3fb925deef4f4ba748d38c9c21276cbd0f49fb6b4c1c02cba6bb623f569e",
+      "blowup-stripped/trans_equal_cycle_dominant_singleton_large.tsv": "a6290215f6158f9eb56f8cf155cf370116813af359e65f0a25c1f60c14021625",
+      "blowup-stripped/trans_equal_trans_dominant_pair_large.tsv": "08b046fde7ae3299c1f6a95dff65b4273c78235b1a9948e3a9cba9723dc42000",
+      "blowup-stripped/trans_equal_trans_dominant_singleton_large.tsv": "59e720ceb3647eb591a027b6388f1743e18527d7cf6b0ad11d00156e1203c051",
+      "blowup-stripped/trans_zero_cycle_deviation_dominant.tsv": "207c926431a162c1c1e8942e5472d6a494d220167ebccdbbdc75edbdd11f1b80",
+      "blowup-stripped/trans_zero_trans_mass_dominant.tsv": "91ee8db3d00bb88626c38dc4bec488b72ac7e5c11e15932cf0c9ae6dbfab76a5",
+      "chart-forms.tsv": "5b4f6f0850e03c46d3f4bb5f6f05506a28e6106cd1d5c2db52e45d740f805f72",
+      "cycle_equal.tsv": "269b7fea035dd4ed711b13c7437211117172def3c354696352072f2a1c5159af",
+      "cycle_zero.tsv": "ce347a37cdae4a7823c5a67c673cb959247496fa7bb13b703fed2945b577d00a",
+      "cyclezero-corner-blowup/corner-blowup-report.json": "86b83154a9f9f6961825858ca2347c690da86344c772a125cff8d8a7673b703e",
+      "cyclezero-corner-blowup/cycle_zero_cycle_dominant_corner_r_dominant.tsv": "39a5811d9567aae7c3d02c6bce4136e1c54d23342789c833886ccc62ecc805de",
+      "cyclezero-corner-blowup/cycle_zero_cycle_dominant_corner_x_dominant.tsv": "141780c5c8493f32c1757a57f1cfb3704c690646946e4de01604861f7ba316ad",
+      "cyclezero-corner-tensor/cycle_zero_cycle_dominant_corner_r_dominant-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650",
+      "cyclezero-corner-tensor/cycle_zero_cycle_dominant_corner_x_dominant-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650",
+      "cyclezero-corner-tensor/tensor-summary.json": "9adbb10821dd31601ff9507d8b22cd81bb23d6025d0330b882165cbf37b18e3d",
+      "cyclezero-trans-direct-tensor/cycle_zero_trans_dominant-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650",
+      "cyclezero-trans-direct-tensor/tensor-summary.json": "7e2c0704d8b3863eefe32efb895883805cc823914e0f4d45476ccc6eb786267f",
+      "equal-curve-restrictions/curve-restriction-report.json": "cb70aedfb4d3b7cf8c150071ea5b52c9034dcdd80fa7d7f51f20fc011c9d2fe8",
+      "equal-curve-restrictions/cycle_equal.tsv": "8805a4c25840eb488a39a8fdc7906282d933283c7923328480aaf0e43a1331a1",
+      "equal-curve-restrictions/trans_equal_cycle_dominant_pair_large.tsv": "e21c1a95af9140f20f2a812cc243a5c06c06c52619feeefa82c499a73780ba9d",
+      "equal-curve-restrictions/trans_equal_cycle_dominant_singleton_large.tsv": "d174a8bb2c894318c234724620f4437520bf961e91c85383481f4514e1e4887a",
+      "equal-curve-restrictions/trans_equal_trans_dominant_pair_large.tsv": "2ca279047c8fe05bfb32057a5b387af311dd13d4652e8299c8ee25a27b9fe4b8",
+      "equal-curve-restrictions/trans_equal_trans_dominant_singleton_large.tsv": "f51bf5c7e00fac45f5ceca55384cf57f0ab4b7781157844c13de57b22826c138",
+      "equal-curve-tensor/cycle_equal-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650",
+      "equal-curve-tensor/tensor-summary.json": "345534d00579125c5db5e6e9ceebe5dd272653aa7b9f2729432079524685565c",
+      "equal-curve-tensor/trans_equal_cycle_dominant_pair_large-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650",
+      "equal-curve-tensor/trans_equal_cycle_dominant_singleton_large-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650",
+      "equal-curve-tensor/trans_equal_trans_dominant_pair_large-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650",
+      "equal-curve-tensor/trans_equal_trans_dominant_singleton_large-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650",
+      "equal-hessian-quotients/cycle_equal.tsv": "be0100dda9aec9c7a050fc2f5868fa9bbbce3753986e8a5916794ab18cc8fd5d",
+      "equal-hessian-quotients/hessian-factor-report.json": "ae96676920b3bc7fe5cbf92c64733c1d6f2b764663649b6431eb6cda6875bb75",
+      "equal-hessian-quotients/trans_equal_cycle_dominant_pair_large.tsv": "4715cf6a81418b2d083cf444d27dd2bc9e176b2c14b34c59625aee5384d7e25d",
+      "equal-hessian-quotients/trans_equal_cycle_dominant_singleton_large.tsv": "0792e2ec97e3bc8799c10bd6a5b9e4f1eb815c14b278c06655613d7eea6fd306",
+      "equal-hessian-quotients/trans_equal_trans_dominant_pair_large.tsv": "52b5d0f7715c362a82ec5e76cb63f5a8303c4c9e469b0f83bd84f4f33fadf27a",
+      "equal-hessian-quotients/trans_equal_trans_dominant_singleton_large.tsv": "279c8dc0b052f3012e28d4cc97b42343830d876ad6e88dd30f4762c0d8047154",
+      "equal-hessian-tensor/cycle_equal-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650",
+      "equal-hessian-tensor/tensor-summary.json": "765c10cc3120a478182b255525c8b1217dd1f25daed166d14a779a941a3e2897",
+      "equal-hessian-tensor/trans_equal_cycle_dominant_pair_large-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650",
+      "equal-hessian-tensor/trans_equal_cycle_dominant_singleton_large-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650",
+      "equal-hessian-tensor/trans_equal_trans_dominant_pair_large-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650",
+      "equal-hessian-tensor/trans_equal_trans_dominant_singleton_large-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650",
+      "equal-joint-blowup/cycle_equal_above_curve_dominant.tsv": "f9bf57752afc8787acbd2fa9e3da36bd6b685b7149c83b38c475a79ef210db10",
+      "equal-joint-blowup/cycle_equal_above_radial_dominant.tsv": "9a00baa543f7d7e1995ddd91babd07e052499c054d50b6d7968a5184b9dfd48d",
+      "equal-joint-blowup/cycle_equal_below_curve_dominant.tsv": "c5c79a680da521a2f3b81e9ee741e6511897cf2a16217227d0db17886ab98bec",
+      "equal-joint-blowup/cycle_equal_below_radial_dominant.tsv": "60677f2d3364e30cb31f7717500f745751d76e41f4ccda80adc69c4ae035c50c",
+      "equal-joint-blowup/joint-blowup-report.json": "89a3002cfe983ef79d1e7f778a97b7e2e501b2d0c4da261393efb6119f5b0731",
+      "equal-joint-blowup/trans_equal_cycle_dominant_pair_large_above_curve_dominant.tsv": "f8d8b577f003217a964b2396be8dfcdfd0ff900f9a4a5ae3b2f32a24f9e8295d",
+      "equal-joint-blowup/trans_equal_cycle_dominant_pair_large_above_radial_dominant.tsv": "2599fad0572e9f4e3473ce49dd15fdb4d8ea5a4bad758c41c21d92f5d908df3c",
+      "equal-joint-blowup/trans_equal_cycle_dominant_pair_large_below_curve_dominant.tsv": "82e0ded5086c4785b7bf12e26820a978253bb9de84b46f663dfd3450bc410720",
+      "equal-joint-blowup/trans_equal_cycle_dominant_pair_large_below_radial_dominant.tsv": "935c282c763428ae1b3c96559d6bd5e707bfdb54de801f028c4fba316e15b9a7",
+      "equal-joint-blowup/trans_equal_cycle_dominant_singleton_large_above_curve_dominant.tsv": "284ae35a8844751a7a9a8c288a4424c550a05e448a158b08dbc6717a9e57010e",
+      "equal-joint-blowup/trans_equal_cycle_dominant_singleton_large_above_radial_dominant.tsv": "3a068760db1517e90394f4caa7980ebf3986c4e3e880883a67f29f11b459716f",
+      "equal-joint-blowup/trans_equal_cycle_dominant_singleton_large_below_curve_dominant.tsv": "59af7a0edc7f8254428bc4824b04e8eec92d1e716ad7bf7ee143df8b5207b0cf",
+      "equal-joint-blowup/trans_equal_cycle_dominant_singleton_large_below_radial_dominant.tsv": "e79f5b89638b7613906dfc2689d461b10b3a1073bb76b9666c5b498bf3abdba2",
+      "equal-joint-blowup/trans_equal_trans_dominant_pair_large_above_curve_dominant.tsv": "4cf3279b1c591ba27b4b0ae69f680f2fd9a4db9f122b96043c3bfe4ea41238ed",
+      "equal-joint-blowup/trans_equal_trans_dominant_pair_large_above_radial_dominant.tsv": "035ecde09af7b66a7fc0953617240702b48014da30a401e7fe5bea038dec3fbd",
+      "equal-joint-blowup/trans_equal_trans_dominant_pair_large_below_curve_dominant.tsv": "9748c9f618905815b7de4e6085d8d2bebfd98ab3a44fa77449581366db315197",
+      "equal-joint-blowup/trans_equal_trans_dominant_pair_large_below_radial_dominant.tsv": "da4a48813b854787a6194327ab52d63569a3bb531ee5d1d81541eae4b24b7394",
+      "equal-joint-blowup/trans_equal_trans_dominant_singleton_large_above_curve_dominant.tsv": "a8a1e1466547c814ba923029c03bb6a5cba0242eb9eef86ee7c7a770ffe32146",
+      "equal-joint-blowup/trans_equal_trans_dominant_singleton_large_above_radial_dominant.tsv": "d4cf2f67e140384f8760b1e12425f0c649c48c1da3722a31b2c7b5aab489365c",
+      "equal-joint-blowup/trans_equal_trans_dominant_singleton_large_below_curve_dominant.tsv": "9bb6f8d740aa795229e8f1f61b42b1624fac8f59dfcb1f2a2b825ed53a6e54e1",
+      "equal-joint-blowup/trans_equal_trans_dominant_singleton_large_below_radial_dominant.tsv": "a11fb672207e71916152c7a0850ab5abefcb6bcfd0b5dbc76e7f7c846ce4bcda",
+      "equal-joint-tensor/cycle_equal_above_curve_dominant-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650",
+      "equal-joint-tensor/cycle_equal_above_radial_dominant-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650",
+      "equal-joint-tensor/cycle_equal_below_curve_dominant-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650",
+      "equal-joint-tensor/cycle_equal_below_radial_dominant-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650",
+      "equal-joint-tensor/tensor-summary.json": "f615dd85f3ce76afb3604f992a7becdd0330cd6e24fdd9f9b2dd435e8051b92a",
+      "equal-joint-tensor/trans_equal_cycle_dominant_pair_large_above_curve_dominant-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650",
+      "equal-joint-tensor/trans_equal_cycle_dominant_pair_large_above_radial_dominant-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650",
+      "equal-joint-tensor/trans_equal_cycle_dominant_pair_large_below_curve_dominant-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650",
+      "equal-joint-tensor/trans_equal_cycle_dominant_pair_large_below_radial_dominant-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650",
+      "equal-joint-tensor/trans_equal_cycle_dominant_singleton_large_above_curve_dominant-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650",
+      "equal-joint-tensor/trans_equal_cycle_dominant_singleton_large_above_radial_dominant-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650",
+      "equal-joint-tensor/trans_equal_cycle_dominant_singleton_large_below_curve_dominant-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650",
+      "equal-joint-tensor/trans_equal_cycle_dominant_singleton_large_below_radial_dominant-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650",
+      "equal-joint-tensor/trans_equal_trans_dominant_pair_large_above_curve_dominant-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650",
+      "equal-joint-tensor/trans_equal_trans_dominant_pair_large_above_radial_dominant-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650",
+      "equal-joint-tensor/trans_equal_trans_dominant_pair_large_below_curve_dominant-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650",
+      "equal-joint-tensor/trans_equal_trans_dominant_pair_large_below_radial_dominant-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650",
+      "equal-joint-tensor/trans_equal_trans_dominant_singleton_large_above_curve_dominant-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650",
+      "equal-joint-tensor/trans_equal_trans_dominant_singleton_large_above_radial_dominant-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650",
+      "equal-joint-tensor/trans_equal_trans_dominant_singleton_large_below_curve_dominant-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650",
+      "equal-joint-tensor/trans_equal_trans_dominant_singleton_large_below_radial_dominant-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650",
+      "grid/cycle_equal-negative.tsv": "0f47a75af2b1c4afe8459ce66f40a301b770aefb89a4631d268f9bd40a9af0d3",
+      "grid/cycle_zero-negative.tsv": "0f47a75af2b1c4afe8459ce66f40a301b770aefb89a4631d268f9bd40a9af0d3",
+      "grid/grid-summary.json": "f71b3b8890ffa7ff47916ebd76bd222c7bd6eda408ff15af62dd866cceafb570",
+      "grid/trans_equal-negative.tsv": "0f47a75af2b1c4afe8459ce66f40a301b770aefb89a4631d268f9bd40a9af0d3",
+      "grid/trans_zero-negative.tsv": "0f47a75af2b1c4afe8459ce66f40a301b770aefb89a4631d268f9bd40a9af0d3",
+      "pullback-chart-forms.tsv": "4563783b56abade1918df5bcc24fbc18735060fce75582db6f46d5712afbd5c2",
+      "pullback-summary.json": "0ab09efc0eca5364ea2e382641ad79e42f467b525120b5b57a63b8132d5db3c9",
+      "trans_equal.tsv": "34762be86832032008e1717afafc0092dbd29f3447369983aff09409d343d48c",
+      "trans_zero.tsv": "7f50f0f30570fafda1ace550dc0856c13fdca462561048ec12378883a5432fa3",
+      "transzero-joint-blowup/joint-blowup-report.json": "1464c29f53939d4304580407a67e4f25a252eff97635c2c89ed71ae91384cade",
+      "transzero-joint-blowup/trans_zero_cycle_deviation_dominant_above_curve_dominant.tsv": "d0bc7c9c4da5a6ae1f3c7d4ee2665fac1fe34fa7a423f015fe61a72d494afa0c",
+      "transzero-joint-blowup/trans_zero_cycle_deviation_dominant_above_radial_dominant.tsv": "c87d8591b0d8243b71a185e01b051c9bcebbf0cf9f8b777bc6c3ea2cca0c4e56",
+      "transzero-joint-blowup/trans_zero_cycle_deviation_dominant_below_curve_dominant.tsv": "85311622db54cf5add32466458e923b4ebb874cae31b5a36f672f0de98868ab9",
+      "transzero-joint-blowup/trans_zero_cycle_deviation_dominant_below_radial_dominant.tsv": "fb69e7f82d24793c50867531f16d80529c621080b94cd10b9d78e0ba1a37f98c",
+      "transzero-joint-blowup/trans_zero_trans_mass_dominant_above_curve_dominant.tsv": "7a6f4642e5353c1a50756fd7985cb1a6d1f73690786b79eaa2774184300e0527",
+      "transzero-joint-blowup/trans_zero_trans_mass_dominant_above_radial_dominant.tsv": "0d2d7c7f72392bdee9a6a4586543d945734877e93c839e4e7367c9c763e5dcc3",
+      "transzero-joint-blowup/trans_zero_trans_mass_dominant_below_curve_dominant.tsv": "639f3173102936d6ed3119aa783b18ec0f9ee5df80c6dbe8492441db657d21bd",
+      "transzero-joint-blowup/trans_zero_trans_mass_dominant_below_radial_dominant.tsv": "5c602ef06673d03e8a6406bf492aa220d659558d57152eea886b80a7b2e2ba51",
+      "transzero-joint-tensor/tensor-summary.json": "634e167b7d68dbc055c7655c1e55945b1b9353ce541d0889e8d17543dc503a27",
+      "transzero-joint-tensor/trans_zero_cycle_deviation_dominant_above_curve_dominant-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650",
+      "transzero-joint-tensor/trans_zero_cycle_deviation_dominant_above_radial_dominant-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650",
+      "transzero-joint-tensor/trans_zero_cycle_deviation_dominant_below_curve_dominant-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650",
+      "transzero-joint-tensor/trans_zero_cycle_deviation_dominant_below_radial_dominant-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650",
+      "transzero-joint-tensor/trans_zero_trans_mass_dominant_above_curve_dominant-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650",
+      "transzero-joint-tensor/trans_zero_trans_mass_dominant_above_radial_dominant-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650",
+      "transzero-joint-tensor/trans_zero_trans_mass_dominant_below_curve_dominant-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650",
+      "transzero-joint-tensor/trans_zero_trans_mass_dominant_below_radial_dominant-unresolved.tsv": "64ce330815995110f75ea0619b2c14e02ca004a0216ad34c427020c1e9a0e650"
+    },
+    "final_certificate_charts": 31,
+    "source_invariant_charts": 9,
+    "status": "PASS"
+  },
+  "budget_ordinal": "B067",
+  "claim_boundary": "PROVED only on the four C64 endpoint families; interior fiber critical points and the full fixed-S3 comparison remain open.",
+  "contained_correction": {
+    "effect": "The faulty exploratory output was never promoted. The corrected explicit LCM route matches all nine invariant charts coefficient-for-coefficient.",
+    "finding": "An exploratory source optimizer assumed denominator 64 while endpoint pullbacks require LCM 11943936; -DNDEBUG suppressed its assertion."
+  },
+  "cycle": 67,
+  "cycle_decision": {
+    "companion_advice": "Seal after the integrated source/invariant and chart-coverage audit; open a distinct interior cycle. Prefer an exact chord-remainder test, with resultant/Sturm exclusion as fallback.",
+    "companion_identity": "/root/darwin_cycle25_short",
+    "decision": "Seal the endpoint theorem and open the next cycle on exact interior-fiber control; do not infer interior positivity from endpoints.",
+    "falsifier": "One exact endpoint point with negative deficit refutes this artifact; one exact feasible interior point with negative deficit refutes the fixed-S3 comparison.",
+    "next_question": "Does the degree-at-most-five C64 fiber deficit admit a nonnegative exact chord remainder, or can an exact feasible interior point be negative?"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "audit": {
+      "path": "proof/check_cycle67_boundary_certificate.py",
+      "sha256": "35d622a393c64292c226a18077d5a483179b79188fe01c2ebc07570d196dfb3f"
+    },
+    "bernstein": {
+      "path": "proof/cycle67_tensor_bernstein.cpp",
+      "sha256": "da6fbb9050c94b6b8421e84c103f8ab11d4e2fac599feafadec0563dacd79da3"
+    },
+    "c64": {
+      "path": "artifacts/cycle-64-b064-fiber-minimization-v1.json",
+      "sha256": "141097ac5719461203b118046adf16e9d85655bfcb084a55221f95ad582c66b7"
+    },
+    "c66": {
+      "path": "artifacts/cycle-66-b066-s3-pivot-audit-v1.json",
+      "sha256": "14ef49fea76ac01d9c9cc985d8997123d9e0a587c0a8be3c92de254692fdb8c6"
+    },
+    "chart_algebra": {
+      "path": "proof/cycle67_equality_blowup.py",
+      "sha256": "0ed0fe005416ee34270d0d1acd9497dbfc39c5733212115fc8166a06de20cd0c"
+    },
+    "curve": {
+      "path": "proof/cycle67_trans_curve_restrictions.py",
+      "sha256": "6541397c766ebdb625bf0a13b4d3895c7956d5e48ad3457ccd613460ba2ab7c0"
+    },
+    "cyclezero_corner": {
+      "path": "proof/cycle67_cyclezero_corner_blowup.py",
+      "sha256": "9d3bcfcc3396e9a43501712c3f14b538408e63ff181068f23c0b9d4d786466d7"
+    },
+    "equal_joint": {
+      "path": "proof/cycle67_trans_joint_blowup.py",
+      "sha256": "008ad5e68d2eb92ac41888777aa166b9734ebbd06dde6bf658e117cd5ae7ebae"
+    },
+    "factor_checker": {
+      "path": "proof/check_cycle67_boundary_factors.py",
+      "sha256": "663e6916dfeb37d4d85174653a1cdee7f4ea6279640ef5c9f9d0f7d4eeb8e63e"
+    },
+    "factor_stripper": {
+      "path": "proof/cycle67_strip_boundary_factors.py",
+      "sha256": "05b395e63252b3ed149d14a842badd83967503a58b78ad36a731992bae43b590"
+    },
+    "grid": {
+      "path": "proof/cycle67_boundary_grid.cpp",
+      "sha256": "084c4d20ffef300d87ec8617d5f0770f94277a687c6b251582d539d714a36b65"
+    },
+    "hessian": {
+      "path": "proof/cycle67_trans_hessian_quotients.py",
+      "sha256": "b5baf63b22c8e40a053ae29a761d003b22ba588ec6740e14ec336c6d1fe469c5"
+    },
+    "idea": {
+      "path": "discovery/cycle67_boundary_idea_selection.md",
+      "sha256": "3e9bb90807abae0ff209ae8868c7cf260022a2b76c83f05d5aac0d5ebc454786"
+    },
+    "invariant_expander": {
+      "path": "proof/cycle67_expand_charts_fast.cpp",
+      "sha256": "f27deb7a360e6c5d47a2ef7dc624d7def37833e31c22b5c068b9c43cc8bf23a5"
+    },
+    "invariant_forms": {
+      "path": "proof/cycle67_emit_scaled_chart_forms.py",
+      "sha256": "fbdd45debcc1b338b72bb78f31101d5ff2ae7a1207d092eccab430912a440a6b"
+    },
+    "orbit_algebra": {
+      "path": "proof/cycle67_equality_blowup_orbit.py",
+      "sha256": "940732009abb7eee5992ae884ba89feee98ad6c815bae6fe4da9a829d4472386"
+    },
+    "orbit_polynomial": {
+      "path": "discovery/out/cycle63-orbit-minimizer/orbit-polynomial.tsv",
+      "sha256": "1966204bef5189f821885223ac7b3a7bcb0828543b6d7dbf28dd2daad8c784c4"
+    },
+    "prereg": {
+      "path": "docs/cycle-67-b067-s3-boundary-positivity-preregistration-v1.md",
+      "sha256": "26940b67a6c11174d3e879dbddf0095de31a12969cf703c0cfb8441f43423be7"
+    },
+    "pullbacks": {
+      "path": "proof/cycle67_boundary_pullbacks.py",
+      "sha256": "7e5282787383608e9234c8216de6d761f559d360edd3c6401c104cc11037dca9"
+    },
+    "replay": {
+      "path": "proof/replay_cycle67_boundary_certificate.sh",
+      "sha256": "36e4020d4d9d80723b6e540ac886115839d0bd840eebc3ea3ace3ceb0414f4ce"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "soundness": {
+      "path": "proof/cycle_67_boundary_blowup_soundness.md",
+      "sha256": "60d9029d1a852a5feb3f5e86d68991bc46e9c2c33933cecf4cbfe103bd4192b3"
+    },
+    "source_expander": {
+      "path": "proof/cycle67_expand_pullbacks_fast.cpp",
+      "sha256": "3918d51527ada103f348be7a3884394e4b3bc1ce9eac3d838f007951886c7e17"
+    },
+    "source_forms": {
+      "path": "proof/cycle67_emit_scaled_pullback_forms.py",
+      "sha256": "e4baac5ad33af89ea95a7697c43207e31a0b2a3a16cd44554306343f3f665896"
+    },
+    "source_polynomial": {
+      "path": "discovery/out/cycle63-orbit-minimizer/source-polynomial.tsv",
+      "sha256": "64940bd62507415c112c26a72bef08799a97d5db40d7cf79700703ed5c966948"
+    },
+    "test": {
+      "path": "tests/test_cycle_67_boundary_certificate.py",
+      "sha256": "04851f73f019f02034c67063cd9f2f53646f7beb553bdf78b35a538365de7984"
+    },
+    "transzero_joint": {
+      "path": "proof/cycle67_transzero_joint_blowup.py",
+      "sha256": "2eaf5ae64243554fa694cf59c966dcb968d6e949f4017cbede7f4bf8fa01404c"
+    },
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "outcome": "For every nonnegative S3 function in any of the four C64 fiber endpoint families, N(a)-N(a_cl) is nonnegative. Exact equality blow-ups isolate the curves 1-y-3x+xy=0 and 3x-1=0; 31 exact tensor-Bernstein charts cover all exceptional divisors.",
+  "record_type": "PROVED_FIXED_S3_ENDPOINT_BOUNDARY_THEOREM",
+  "recorded_at_utc": "2026-08-05T12:12:15Z",
+  "replay": {
+    "audit": "python3 proof/check_cycle67_boundary_certificate.py",
+    "check": "python3 proof/build_cycle_67_boundary_certificate.py --check",
+    "full": "C67_REPLAY_THREADS=3 proof/replay_cycle67_boundary_certificate.sh",
+    "test": "python3 -m unittest tests/test_cycle_67_boundary_certificate.py"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_67_boundary_certificate.py",
+    "sha256": "de07612e903cdf2495aa2a79301eb2723669b39b811dbe1b0bde5ab10528fb15"
+  },
+  "status": "SEALED"
+}

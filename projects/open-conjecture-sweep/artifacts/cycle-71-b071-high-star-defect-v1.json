@@ -1,0 +1,162 @@
+{
+  "artifact_id": "cycle-71-b071-high-star-defect-v1",
+  "audit": {
+    "claim": "Any intersecting 6-partite H with tau(H)=6 has D(H)>=5.",
+    "claim_boundary": "Necessary condition only. A satisfiable 11-edge D=5 equality core shows that local equality incidence alone cannot prove D>=6 or a five-cover.",
+    "epistemic_status": "PROVED",
+    "equality_core": {
+      "claim": "The supplied 11-edge D=5 equality-core assignment satisfies every frozen partition constraint.",
+      "claim_boundary": "Core realization only; tau=6 is not asserted.",
+      "epistemic_status": "PROVED",
+      "status": "PASS"
+    },
+    "high_star_audit": {
+      "application": "For an intersecting 6-partite tau=6 hypergraph, the published degree inequality forces delta>=6; any line through another vertex on v's side supplies a localized repeated-pair defect.",
+      "claim_boundary": "Necessary local defect only; it does not yield a five-block cover or solve Ryser.",
+      "epistemic_status": "PROVED",
+      "lemma": "If a line meets delta star-lines through a vertex v in its five non-v positions, then the repeated-pair defect among those star-lines is at least delta-5.",
+      "rows": [
+        {
+          "minimum_repeated_pairs_on_one_transverse_line": 1,
+          "required_lower_bound": 1,
+          "star_degree": 6
+        },
+        {
+          "minimum_repeated_pairs_on_one_transverse_line": 2,
+          "required_lower_bound": 2,
+          "star_degree": 7
+        },
+        {
+          "minimum_repeated_pairs_on_one_transverse_line": 3,
+          "required_lower_bound": 3,
+          "star_degree": 8
+        },
+        {
+          "minimum_repeated_pairs_on_one_transverse_line": 4,
+          "required_lower_bound": 4,
+          "star_degree": 9
+        },
+        {
+          "minimum_repeated_pairs_on_one_transverse_line": 5,
+          "required_lower_bound": 5,
+          "star_degree": 10
+        },
+        {
+          "minimum_repeated_pairs_on_one_transverse_line": 7,
+          "required_lower_bound": 6,
+          "star_degree": 11
+        },
+        {
+          "minimum_repeated_pairs_on_one_transverse_line": 9,
+          "required_lower_bound": 7,
+          "star_degree": 12
+        },
+        {
+          "minimum_repeated_pairs_on_one_transverse_line": 11,
+          "required_lower_bound": 8,
+          "star_degree": 13
+        },
+        {
+          "minimum_repeated_pairs_on_one_transverse_line": 13,
+          "required_lower_bound": 9,
+          "star_degree": 14
+        },
+        {
+          "minimum_repeated_pairs_on_one_transverse_line": 15,
+          "required_lower_bound": 10,
+          "star_degree": 15
+        },
+        {
+          "minimum_repeated_pairs_on_one_transverse_line": 18,
+          "required_lower_bound": 11,
+          "star_degree": 16
+        },
+        {
+          "minimum_repeated_pairs_on_one_transverse_line": 21,
+          "required_lower_bound": 12,
+          "star_degree": 17
+        },
+        {
+          "minimum_repeated_pairs_on_one_transverse_line": 24,
+          "required_lower_bound": 13,
+          "star_degree": 18
+        }
+      ],
+      "status": "PASS"
+    },
+    "status": "PASS"
+  },
+  "budget_ordinal": "B071",
+  "claim_boundary": "Necessary condition only. A satisfiable 11-edge D=5 equality core shows that local equality incidence alone cannot prove D>=6 or a five-cover.",
+  "cycle": 71,
+  "cycle_decision": {
+    "companion_advice": "Audit D=5 once; a satisfiable core is a hard stop against an automatic defect ladder.",
+    "companion_identity": "/root/darwin_cycle25_short",
+    "decision": "Seal D>=5 and its local saturation. A later engine must add a genuinely global invariant, not D=6,7,... enumeration.",
+    "falsifier": "A tau=6 example with D<=4 falsifies the theorem; a failed core replay falsifies saturation."
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "checker": {
+      "path": "proof/check_cycle71_defect5_core.py",
+      "sha256": "e4b4e9070f537d9b19368c5adad1c9f5eea3273feeb4c01b40668552b44864da"
+    },
+    "csp": {
+      "path": "proof/cycle71_defect5_core_csp.cpp",
+      "sha256": "6bf3c859f0a33988e3bda908c3fc4bc23086cac233b61e1615b481fd7a66de15"
+    },
+    "defect": {
+      "path": "proof/cycle71_partition_defect_control.py",
+      "sha256": "2218176a4b3bff17c75470395fa47ae1e38ffc2010e80cd580e1f99a3c5c6069"
+    },
+    "equality": {
+      "path": "proof/cycle71_defect5_equality.md",
+      "sha256": "80166cd4dc5a9a0a1846d43b52eca74592b3e54f6bb54f6481c25624fb6be139"
+    },
+    "idea": {
+      "path": "discovery/cycle71_sixcolor_component_idea_selection.md",
+      "sha256": "77d252e65b7b947fcfd0cc068d91774eaa9185a8accc27e2e489caed86f2386f"
+    },
+    "partition": {
+      "path": "proof/cycle71_partition_control.py",
+      "sha256": "bf3c0e595f7bfd4041fadd5f80964bf075d93fbb518bdf00bfcf160ce2ade042"
+    },
+    "prereg": {
+      "path": "docs/cycle-71-b071-sixcolor-component-preregistration-v1.md",
+      "sha256": "0f77ac6ff5290a91e99856041d1c30b12d1e979dd273975abf14a3df2a2fa775"
+    },
+    "proof": {
+      "path": "proof/cycle71_high_star_defect_lemma.md",
+      "sha256": "186b2a65d715f5610a4fd7e870b0f55071cf51c89a3a9daec9d0d9c58a534433"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "star": {
+      "path": "proof/cycle71_star_defect_lemma.py",
+      "sha256": "3b2f50717106f0069c6e2f472e002850e338e3cbbc46dbfd29988a891c581c5f"
+    },
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "outcome": "Every hypothetical r=6 tau=6 counterexample has at least five excess pair intersections; the local D=5 equality core is exactly realizable.",
+  "record_type": "PROVED_NECESSARY_NONLINEARITY_THEOREM",
+  "recorded_at_utc": "2026-08-05T15:30:00Z",
+  "replay": {
+    "audit": "python3 proof/cycle71_star_defect_lemma.py; g++ -std=c++20 -O3 -DNDEBUG proof/cycle71_defect5_core_csp.cpp -o /tmp/c71-core; /tmp/c71-core 0 1 > /tmp/c71-core.json; python3 proof/check_cycle71_defect5_core.py /tmp/c71-core.json",
+    "check": "python3 proof/build_cycle_71_high_star_defect.py --check"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_71_high_star_defect.py",
+    "sha256": "56116bbf4527cbcaa5fc787d87f1fe3d46d2ee190e08c085468ae5a91d4302d5"
+  },
+  "status": "SEALED"
+}

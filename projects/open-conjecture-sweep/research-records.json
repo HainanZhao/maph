@@ -1,0 +1,21 @@
+{
+  "schema": "research-record-profile-v1",
+  "artifact_glob": "artifacts/cycle-*.json",
+  "database_path": ".research/index.duckdb",
+  "legacy_exceptions_path": "research_index_legacy_exceptions.json",
+  "cycle_pattern": "^cycle-(\\d+)(?:-|$)",
+  "status_title": "Open conjecture sweep status (generated)",
+  "cold_start_handoff": {
+    "plan_path": "PROGRAM.md",
+    "start_commands": [
+      "source ../../tools/dev-env.sh",
+      "research rebuild",
+      "research check",
+      "sed -n '1,260p' PROGRAM.md"
+    ]
+  },
+  "query_examples": [
+    "research cycle 1",
+    "research search LRC"
+  ]
+}

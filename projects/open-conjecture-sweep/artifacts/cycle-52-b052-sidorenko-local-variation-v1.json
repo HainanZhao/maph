@@ -1,0 +1,133 @@
+{
+  "artifact_id": "cycle-52-b052-sidorenko-local-variation-v1",
+  "audit": {
+    "claim_boundary": "Exact nonnegativity of the first nonzero local coefficient for the frozen primitive symmetric zero-mean 2/3-step directions at p=1/2 only; no arbitrary-step local theorem or Sidorenko proof.",
+    "directions": 512,
+    "edge_count": 15,
+    "epistemic_status": "PROVED",
+    "first_degree_counts": {
+      "2": 489,
+      "4": 23
+    },
+    "identically_zero": 0,
+    "local_negative": 0,
+    "local_positive": 512,
+    "q2_directions": 4,
+    "q3_directions": 508,
+    "status": "PASS"
+  },
+  "budget_ordinal": "B052",
+  "claim_boundary": "Exact nonnegativity of the first nonzero local coefficient for the frozen primitive symmetric zero-mean 2/3-step directions at p=1/2 only; no arbitrary-step local theorem or Sidorenko proof.",
+  "cycle": 52,
+  "cycle_decision": {
+    "companion_advice": "Seal C52 and open a distinct analytic fixed-density local-stability engine: derive the arbitrary finite-rank bipartite quadratic form at p=1/2, decompose under D10, and analyze the quartic form on its Hessian kernel.",
+    "companion_identity": "/root/darwin_cycle25_short",
+    "falsifier": "An exact finite-rank perturbation with a negative quadratic form, or a Hessian-null perturbation with a negative first surviving coefficient, gives a rational graphon counterexample candidate after bounded scaling.",
+    "next_question": "Is the exact p=1/2 quadratic form nonnegative on arbitrary finite-rank bipartite zero-mean perturbations, and is its first surviving higher form nonnegative on its kernel?",
+    "strongest_scope_flaw": "The finite family excludes unequal block sizes, nonsymmetric bipartite perturbations, higher-rank directions, other densities, and large-amplitude/global competitors."
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "audit": {
+      "path": "proof/check_cycle_52_local_variation.py",
+      "sha256": "d1e96716de06a75ea5313142b65598b5a72ee9a0954e5419985f030c4f7f023e"
+    },
+    "cycle51_artifact": {
+      "path": "artifacts/cycle-51-b051-sidorenko-conjugacy-averaging-v1.json",
+      "sha256": "f30ef5726bac1ab064f7d281efe48a8205ade1211c63dca58fa15c67fb2b599f"
+    },
+    "eligibility": {
+      "path": "discovery/problem2_eligibility_audit.md",
+      "sha256": "196c30a07951a091fefd10d1d2550e111d614664f3aea7fc70eebe9b70fc3250"
+    },
+    "idea_selection": {
+      "path": "discovery/cycle52_local_variation_idea_selection.md",
+      "sha256": "fdfe22e494abf57dbc38fc257ddbe63b19f3436de14aaaee8dd317be7bcf304d"
+    },
+    "independent_engine": {
+      "path": "proof/replay_cycle_52_local_variation_independent.cpp",
+      "sha256": "17ba140eb30b62f7a013a16881fdfdef221046da5575484d3616ee66cd9432c9"
+    },
+    "independent_rows": {
+      "path": "discovery/out/cycle52-local-variation/independent-rows.tsv",
+      "sha256": "d5bc195b4c07f13a0c315927cd8f4bcbcfd1377dc9a7a997f76419110799f127"
+    },
+    "independent_summary": {
+      "path": "discovery/out/cycle52-local-variation/independent-summary.json",
+      "sha256": "84f4c46956a17af1cb35f7a0cea9cbee70f652a37de31b79500e4aab5dd087a4"
+    },
+    "independent_timing": {
+      "path": "discovery/out/cycle52-local-variation/run-independent.time",
+      "sha256": "f07471ed13c18208543b561e098cddcbf3b76c17c816c370ba5f0f84839fc3ec"
+    },
+    "preregistration": {
+      "path": "docs/cycle-52-b052-sidorenko-local-variation-preregistration-v1.md",
+      "sha256": "146e5e567a1a1baf8bfe56886b59b1e4fd9a2c0a91a77a9ef6eeba2e2d4ecd23"
+    },
+    "preregistration_validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    },
+    "principal_engine": {
+      "path": "discovery/sidorenko_local_variation_census.cpp",
+      "sha256": "caafe606049c58447887d9bcbf77f01caacd3b328132e2aa351e23984d5e9147"
+    },
+    "principal_rows": {
+      "path": "discovery/out/cycle52-local-variation/rows.tsv",
+      "sha256": "8ede164a970b41eacb7bb80f3705187fb005dfe5f53f4d8abff5ea240d556bab"
+    },
+    "principal_summary": {
+      "path": "discovery/out/cycle52-local-variation/summary.json",
+      "sha256": "c31df84c0634d971de9683c2026ba3aa1a2a1e7e59c00e346df32790f1d71f57"
+    },
+    "principal_timing": {
+      "path": "discovery/out/cycle52-local-variation/run-principal.time",
+      "sha256": "1d0e2eb1ce037bec8de0f71b57689912fbbfb6d804bb56fa84b48fd6e42d6d74"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "soundness": {
+      "path": "proof/cycle_52_local_variation_soundness.md",
+      "sha256": "d4963d4b4f54529f3240187559a49f3b6e48a51155bbbcaa6b10d7c986a73f2e"
+    },
+    "test": {
+      "path": "tests/test_cycle_52_local_variation.py",
+      "sha256": "120b954cb8a7070283d491d3b4157d6c8d7ac06fce3398bcdc02d4e014f45876"
+    }
+  },
+  "outcome": "Every one of the 512 frozen primitive symmetric zero-mean equal-block 2/3-step perturbation directions at p=1/2 has a positive first nonzero coefficient in t_H(1/2+epsilon B/2)-2^-15; no local counterexample candidate occurs in this family.",
+  "record_type": "PROVED_FINITE_LOCAL_VARIATION_CENSUS",
+  "recorded_at_utc": "2026-08-05T08:32:00Z",
+  "replay": {
+    "audit_command": ".venv/bin/python proof/check_cycle_52_local_variation.py",
+    "check_command": ".venv/bin/python proof/build_cycle_52_sidorenko_local_variation.py --check",
+    "independent_command": "g++ -O3 -std=c++20 proof/replay_cycle_52_local_variation_independent.cpp -o /tmp/c52-independent && taskset -c 0-2 /tmp/c52-independent discovery/out/cycle52-local-variation",
+    "principal_command": "g++ -O3 -std=c++20 -fopenmp discovery/sidorenko_local_variation_census.cpp -o /tmp/c52-principal && taskset -c 0-2 /tmp/c52-principal discovery/out/cycle52-local-variation",
+    "test_command": ".venv/bin/python -m unittest tests.test_cycle_52_local_variation -v"
+  },
+  "resources": {
+    "independent_peak_rss_kib": 4096,
+    "independent_wall_seconds": 6.56,
+    "principal_peak_rss_kib": 4608,
+    "principal_wall_seconds": 2.22,
+    "reserved_cpu": 3,
+    "temporary_disk_bytes": 161162,
+    "worker_cpus": [
+      0,
+      1,
+      2
+    ]
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_52_sidorenko_local_variation.py",
+    "sha256": "c4097991fb86e8247933ed65077364beb236fac443d576316a3d666fb28bf8c0"
+  },
+  "status": "SEALED"
+}

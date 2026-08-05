@@ -1,0 +1,138 @@
+{
+  "artifact_id": "cycle-61-b061-flat-stratum-v1",
+  "audit": {
+    "bases": [
+      "111",
+      "121",
+      "212",
+      "222"
+    ],
+    "c55_independent_axis_and_sign_checks": 8,
+    "claim_boundary": "Four frozen S3 central Hessian-flat bases only; not a universal Zhao proof.",
+    "epistemic_status": "PROVED",
+    "status": "PASS",
+    "transverse_factor_audit": {
+      "sign_degree_2": {
+        "factor": "(c-e)^2",
+        "quotient_all_coefficients_positive": true,
+        "quotient_terms": 53
+      },
+      "standard_axis_degree_2": {
+        "factor": "(c-e)^2",
+        "quotient_all_coefficients_positive": true,
+        "quotient_terms": 65
+      },
+      "standard_generic_degree_2": {
+        "factor": "(c-e)^2",
+        "quotient_all_coefficients_positive": true,
+        "quotient_terms": 65
+      },
+      "standard_generic_degree_3": {
+        "factor": "(c-e)^4",
+        "quotient_all_coefficients_positive": true,
+        "quotient_terms": 45
+      }
+    }
+  },
+  "budget_ordinal": "B061",
+  "claim_boundary": "Four specified positive central S3 bases only; not arbitrary S3 functions, finite groups, Zhao's comparison, or Sidorenko.",
+  "cycle": 61,
+  "cycle_decision": {
+    "companion_advice": "Seal after representing the full cubic tensor and stating finite-polynomial remainder dominance; then pursue a conjugacy-orbit KKT/exchange minimizer lemma.",
+    "companion_identity": "/root/darwin_cycle25_short",
+    "falsifier": "A finite group and rational nonnegative a with N(a)<N(P_cl a) refutes the Zhao comparison itself; failure of an exchange identity only rejects that KKT engine.",
+    "next_question": "Can exact KKT conditions at a hypothetical finite-group endpoint minimizer force equality within each conjugacy class by an exchange direction?"
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "audit": {
+      "path": "proof/audit_cycle_61_flat_stratum.py",
+      "sha256": "347c9938fedfcd814e1a67ce713bf3c05fe341189d54194823d5605bb348856f"
+    },
+    "c55_polynomials": {
+      "path": "discovery/out/cycle55-zhao-deficit/polynomials.tsv",
+      "sha256": "14e4a55ece79acff9975b306b3e231faf00e654ea961cf776b12ae3c199d269e"
+    },
+    "idea_selection": {
+      "path": "discovery/cycle61_flat_stratum_idea_selection.md",
+      "sha256": "add2558034dba31c22a61c9267109e2a32eac4f5af8465c9d25cdc2d7c5b7faf"
+    },
+    "kernel_evaluator": {
+      "path": "proof/check_cycle_61_flat_stratum.py",
+      "sha256": "fcfae0d1d6da9f078c0bcaa06b2eb4ea58b01532c06c32aaaaaf422a16bd75ba"
+    },
+    "kernel_summary": {
+      "path": "discovery/out/cycle61-flat-stratum/flat-stratum-summary.json",
+      "sha256": "7b5df5509ee5c5456eeeee806fc78bd12b85c938adf2c88cd7ec1ba4529392cb"
+    },
+    "preflight": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    },
+    "preregistration": {
+      "path": "docs/cycle-61-b061-flat-stratum-preregistration-v1.md",
+      "sha256": "e073e51ab9a5cd002fb7a4738ead634ab28cb4c3647cc413e0b5ddb118df8781"
+    },
+    "prior_c55": {
+      "path": "artifacts/cycle-55-b055-zhao-deficit-v1.json",
+      "sha256": "c83b14e71f5b4b4482757f55ec4b018186daf68581d5833e4a6c638379d64c36"
+    },
+    "prior_c59": {
+      "path": "artifacts/cycle-59-b059-polya-capped-no-go-v1.json",
+      "sha256": "fe8e1c34dfe256194bc50156115488ae9fc15e85fead46669629ab86d58e2d2d"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "soundness": {
+      "path": "proof/cycle_61_flat_stratum_soundness.md",
+      "sha256": "c6816d5bd6de9c637fe8677c0755f9d68f2e79257fc57e7e0192bf3bcbcb1194"
+    },
+    "test": {
+      "path": "tests/test_cycle_61_flat_stratum.py",
+      "sha256": "01cdd29995673016ef110409b31a19ec36d865659da73e16a46dc8b6db4b0e0d"
+    },
+    "transverse_audit": {
+      "path": "proof/check_cycle_61_transverse.py",
+      "sha256": "cbe9c54b91b38d8fea304586ddbd48880c366b5a449929f8233df0a3a555459b"
+    },
+    "transverse_generator": {
+      "path": "discovery/cycle61_standard_curvature_symbolic.cpp",
+      "sha256": "33d0f3803b68836693566ac8683c24c9364ecb054f374212e613b879398c7014"
+    },
+    "transverse_raw": {
+      "path": "discovery/out/cycle61-flat-stratum/transverse-curvature.tsv",
+      "sha256": "b88497cac51e0fec34646d932e6e2d249572ede90d1bc4775122db89d963a986"
+    },
+    "transverse_summary": {
+      "path": "discovery/out/cycle61-flat-stratum/transverse-audit.json",
+      "sha256": "093e02fd998af1262c025c7ad90b0c263e5cffb4714e6ae84353a05414103d29"
+    }
+  },
+  "local_theorem": {
+    "conclusion": "Finite-polynomial remainder dominance yields a neighborhood in which N(a)>N(P_cl a) for noncentral a.",
+    "kernel": "At c=e, the full class-zero Hessian and cubic vanish; the invariant quartic has D=0 and A,B,C positive.",
+    "transverse": "Standard and sign Hessians are (c-e)^2 times coefficientwise-positive polynomials; the unique standard cubic is divisible by (c-e)^4."
+  },
+  "outcome": "Strict local S3 endpoint comparison holds near central bases 111, 121, 212, and 222, off the central subspace.",
+  "record_type": "PROVED_FINITE_LOCAL_ENDPOINT_COMPARISON",
+  "recorded_at_utc": "2026-08-05T11:20:00Z",
+  "replay": {
+    "audit_command": "python3 proof/audit_cycle_61_flat_stratum.py",
+    "check_command": "python3 proof/build_cycle_61_flat_stratum.py --check",
+    "kernel_command": "python3 proof/check_cycle_61_flat_stratum.py",
+    "test_command": "python3 -m unittest tests/test_cycle_61_flat_stratum.py",
+    "transverse_command": "g++ -O3 -std=c++20 discovery/cycle61_standard_curvature_symbolic.cpp -o /tmp/c61-transverse && /tmp/c61-transverse discovery/out/cycle61-flat-stratum && python3 proof/check_cycle_61_transverse.py"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_61_flat_stratum.py",
+    "sha256": "484754c00758d4ac5b9452e2804bd2b3f46c12c3a9f117c979adbaabdaee5b55"
+  },
+  "status": "SEALED"
+}

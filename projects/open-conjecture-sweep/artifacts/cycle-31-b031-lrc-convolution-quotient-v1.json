@@ -1,0 +1,149 @@
+{
+  "artifact_id": "cycle-31-b031-lrc-convolution-quotient-v1",
+  "audit": {
+    "claim_boundary": "the sealed 1390-atom p199 partition only",
+    "convolution_quotient": false,
+    "epistemic_status": "PROVED",
+    "first_splitting_pair_profile": 198,
+    "first_splitting_target_evaluation": 395,
+    "independent_replay": "PASS",
+    "singleton_profiles": 2780,
+    "status": "PASS"
+  },
+  "budget_ordinal": "B031",
+  "claim_boundary": "This exact witness rejects only the Cycle-30 1,390-atom partition as an additive convolution quotient. It does not reject the 1,394-orbit negation refinement, other CRT/association schemes, polynomial calculus, the named leaf, or LRC(13).",
+  "cycle": 31,
+  "cycle_decision": {
+    "companion_identity": "/root/darwin_cycle25_short",
+    "falsifier": "For the next engine, an exact legal ownership assignment or independently failed finite-field certificate identity invalidates a claimed refutation; a cap is only bounded failure.",
+    "independent_ideas": [
+      "use the 1,394 negation quotient only as verified preprocessing",
+      "attempt bounded-degree coordinate-specific Nullstellensatz on exact rank-three ownership blockers",
+      "deprioritize alternate association schemes unless their stabilizer exceeds negation"
+    ],
+    "next_action": "Open a distinct cycle for a monomial-count benchmark and bounded-degree Nullstellensatz prototype on base 4 / leaf 78, using only verified negation-pair deduplication.",
+    "outcome": "SEALED_FOR_DISTINCT_OWNERSHIP_POLYNOMIAL_QUESTION",
+    "scope_review": "The witness is decisive only for the four extra mergers beyond negation; it is not a general convolution or CRT no-go.",
+    "strongest_flaw": "Refining both six-point atoms into negation pairs removes this witness but supplies no new compression beyond known even symmetry."
+  },
+  "epistemic_status": "PROVED",
+  "finite_result": {
+    "epistemic_status": "PROVED",
+    "first_pair_profile": 198,
+    "four_sums": [
+      197,
+      199,
+      2587,
+      2589
+    ],
+    "independent_replay": "PASS",
+    "left_atom": [
+      1,
+      2785
+    ],
+    "right_atom": [
+      198,
+      2588
+    ],
+    "singleton_profiles_passed": 2780,
+    "splitting_values": {
+      "199": 1,
+      "597": 0
+    },
+    "target_atom": [
+      199,
+      597,
+      995,
+      1791,
+      2189,
+      2587
+    ],
+    "target_evaluations": 395
+  },
+  "frozen_hashes": {
+    "audit": {
+      "path": "proof/check_cycle_31_convolution_quotient.py",
+      "sha256": "fe141c064f91eae6e9a3c57a9db7d35b5f648463762a5fc0fdde127680ae050d"
+    },
+    "idea_selection": {
+      "path": "discovery/cycle31_convolution_quotient_idea_selection.md",
+      "sha256": "807b94a4257b485794bdad5442c1cd04b4d4166a36bcc6863b96b69619ca4370"
+    },
+    "independent_replay": {
+      "path": "proof/replay_cycle_31_convolution_quotient_independent.py",
+      "sha256": "4d05eb6abea5a48f16ff369bb2a2f8c1e47e92cc47bdcb1de9939604b42ad24d"
+    },
+    "independent_result": {
+      "path": "discovery/out/cycle31-convolution-quotient/independent-replay.json",
+      "sha256": "c7299a0bcb5df4aacc29311c992d9bcb91f50d77e36e197c1c76935bff74a01f"
+    },
+    "independent_timing": {
+      "path": "discovery/out/cycle31-convolution-quotient/independent-replay.time",
+      "sha256": "5868c29f851ad2563f245f9b00bcfebf75d3deeadb7adce6c2cecd98c7a89477"
+    },
+    "preregistration": {
+      "path": "docs/cycle-31-b031-lrc-convolution-quotient-preregistration-v1.md",
+      "sha256": "19a59c399ce6065d0d0280083677c5c1eeb5671f6b09256182c3dcb761983675"
+    },
+    "primary_engine": {
+      "path": "discovery/lrc_convolution_quotient.py",
+      "sha256": "46cad8aba1e110fb237a8fe2aa870955b80f938cb0639909fb265c4f1c8974d3"
+    },
+    "primary_result": {
+      "path": "discovery/out/cycle31-convolution-quotient/result.json",
+      "sha256": "56bb4ab23e91ed728799c7882c46d8f4d17d44d2b771c651430846fd87ee929d"
+    },
+    "primary_timing": {
+      "path": "discovery/out/cycle31-convolution-quotient.time",
+      "sha256": "fc15f4a91764a8b8c141626897121ec64e5b7f67070ce71e21c9c17fde1cc2b5"
+    },
+    "prior_artifact": {
+      "path": "artifacts/cycle-30-b030-lrc-crt-synchronization-v1.json",
+      "sha256": "13a617a6322b0ed1a2bfd9d1d51a3a09ea6da76c716e6b0f0d9791c5064ec674"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "soundness": {
+      "path": "proof/cycle_31_convolution_quotient_soundness.md",
+      "sha256": "62146000f37dbdf6f4c5ddc8cd52d53a293223fc9cb12348ea6ed0eceaf035ef"
+    },
+    "test": {
+      "path": "tests/test_cycle_31_convolution_quotient.py",
+      "sha256": "1b59d12bec6deed486f9c457ebd6fd14653d8aab8ddc445606916a352a4cd5b3"
+    }
+  },
+  "outcome": "The sealed 1,390-atom p199 partition is not an additive convolution quotient: the first targeted pair A={\u00b11}, B={\u00b1198} splits the six-point atom containing \u00b1199.",
+  "record_type": "PROVED_STRUCTURAL_NO_GO",
+  "recorded_at_utc": "2026-08-04T14:24:59Z",
+  "replay": {
+    "audit_command": ".venv/bin/python proof/check_cycle_31_convolution_quotient.py",
+    "check_command": ".venv/bin/python proof/build_cycle_31_lrc_convolution_quotient.py --check",
+    "independent_command": "taskset -c 0-2 .venv/bin/python proof/replay_cycle_31_convolution_quotient_independent.py",
+    "primary_command": "taskset -c 0-2 .venv/bin/python discovery/lrc_convolution_quotient.py",
+    "test_command": ".venv/bin/python -m unittest tests.test_cycle_31_convolution_quotient -v"
+  },
+  "resources": {
+    "aggregate_wall_seconds": 4.9,
+    "largest_peak_rss_kib": 79104,
+    "memory_max_bytes": 2147483648,
+    "reserved_cpu": 3,
+    "temporary_disk_cap_bytes": 5368709120,
+    "worker_cpus": [
+      0,
+      1,
+      2
+    ]
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_31_lrc_convolution_quotient.py",
+    "sha256": "6f9d229428c4c19b8e87041a6244fa556bd953423141ddc51f7180d38b688919"
+  },
+  "status": "SEALED"
+}

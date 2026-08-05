@@ -1,0 +1,203 @@
+{
+  "artifact_id": "cycle-81-b081-lem-method-boundary-v1",
+  "audit": {
+    "lem": {
+      "epistemic_status": "PROVED",
+      "extensions": 1431,
+      "predecessor_masks": [
+        0,
+        0,
+        2,
+        0,
+        1,
+        8,
+        25,
+        7,
+        42
+      ],
+      "scope": "one recovered nine-element witness",
+      "split_checks": [
+        {
+          "extensions": 3402,
+          "full_has_4_cycle": false,
+          "incomparable_has_4_cycle": false,
+          "orientation": "upper"
+        },
+        {
+          "extensions": 3402,
+          "full_has_4_cycle": false,
+          "incomparable_has_4_cycle": false,
+          "orientation": "lower"
+        }
+      ],
+      "status": "PASS",
+      "triangle": [
+        [
+          0,
+          3,
+          720,
+          711
+        ],
+        [
+          3,
+          1,
+          720,
+          711
+        ],
+        [
+          1,
+          0,
+          720,
+          711
+        ]
+      ]
+    },
+    "xyz": {
+      "epistemic_status": "PROVED",
+      "full_has_4_cycle": true,
+      "restricted_has_4_cycle": false,
+      "scope": "XYZ-only finite ranking model, not uniform linear extensions",
+      "status": "PASS",
+      "total_weight": 35,
+      "xyz_margins": [
+        [
+          0,
+          1,
+          2,
+          0
+        ],
+        [
+          0,
+          1,
+          3,
+          0
+        ],
+        [
+          0,
+          2,
+          3,
+          70
+        ],
+        [
+          1,
+          0,
+          2,
+          0
+        ],
+        [
+          1,
+          0,
+          3,
+          0
+        ],
+        [
+          1,
+          2,
+          3,
+          63
+        ],
+        [
+          2,
+          0,
+          1,
+          126
+        ],
+        [
+          2,
+          0,
+          3,
+          112
+        ],
+        [
+          2,
+          1,
+          3,
+          97
+        ],
+        [
+          3,
+          0,
+          1,
+          280
+        ],
+        [
+          3,
+          0,
+          2,
+          170
+        ],
+        [
+          3,
+          1,
+          2,
+          154
+        ]
+      ]
+    }
+  },
+  "budget_ordinal": "B081",
+  "claim_boundary": "This does not refute or prove Gupta Question 14. The XYZ witness is not a uniform linear-extension distribution; sampled chain splits are bounded regression evidence only.",
+  "cycle": 81,
+  "cycle_decision": {
+    "companion_advice": "Close C81; retain LEM only for an order-15-or-larger inverse modular realization, and do not enlarge the census.",
+    "companion_identity": "/root/oracle_c81_gate_review (Oracle)",
+    "decision": "Seal the later-relevant method falsifier and strategic transition; open a distinct inverse-realization cycle rather than continue C81.",
+    "falsifier": "A proof that the XYZ witness is a uniform linear-extension distribution, or a valid C81 split mismatch."
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "boundary": {
+      "path": "proof/cycle81_method_boundary.md",
+      "sha256": "c364db77b60d32eef32ab365da2015f1c6f46168a471014e33551ed64d6dfa75"
+    },
+    "chain_split": {
+      "path": "discovery/cycle81_chain_split.cpp",
+      "sha256": "c3d15f9a9f399a34027f31e9f169b3fafcabeeea2485818dc6278b0b95a8e5f5"
+    },
+    "lem_checker": {
+      "path": "proof/check_cycle81_lem_witness.py",
+      "sha256": "2c8e6dcd19238f788a99d64c288fd5d4a2517c8dbcee547f39b972b88ec96fe6"
+    },
+    "preregistration": {
+      "path": "docs/cycle-81-b081-lem-dominance-preregistration-v1.md",
+      "sha256": "dc19fc7c776799d6ba8b5520c83c77c6e3dd3359fb5cdfe87a5b46c3ffd4fecf"
+    },
+    "reduction": {
+      "path": "proof/cycle81_shortest_cycle_reduction.md",
+      "sha256": "5abbd28119860beb0e1b524b2c2814806595eeb1c481ab6331fb7f1a03314cfd"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    },
+    "xyz_checker": {
+      "path": "proof/check_cycle81_xyz_witness.py",
+      "sha256": "a0af35fc2d5c6f3c19e350a35bdb36e56029651733d71e8d6810da6b513a822f"
+    },
+    "xyz_search": {
+      "path": "discovery/cycle81_xyz_model.py",
+      "sha256": "77b6e02656ab95214cb064d61de7164ab290e97f2f341534f45a9717f6965718"
+    }
+  },
+  "outcome": "Dominance-only and common-pivot XYZ-only bridges cannot prove the LEM spectrum assertion; equal directed girth is proved, but Question 14 remains open.",
+  "record_type": "METHOD_BOUNDARY",
+  "recorded_at_utc": "2026-08-05T20:15:00Z",
+  "replay": {
+    "audit": "python3 proof/check_cycle81_xyz_witness.py && python3 proof/check_cycle81_lem_witness.py",
+    "check": "python3 proof/build_cycle_81_lem_method_boundary.py --check"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_81_lem_method_boundary.py",
+    "sha256": "cfc52241c7f6061a3f4feb3624b3d769b2ee483285cac7f59c93d7b4aa639e44"
+  },
+  "status": "SEALED"
+}
