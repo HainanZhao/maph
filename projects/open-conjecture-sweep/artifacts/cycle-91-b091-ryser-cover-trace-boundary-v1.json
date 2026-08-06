@@ -1,0 +1,102 @@
+{
+  "artifact_id": "cycle-91-b091-ryser-cover-trace-boundary-v1",
+  "audit": {
+    "claim_boundary": "Exact result for one published tau=5 control and one frozen reciprocal trace CSP only; not Ryser r=6 or an integral matching reduction.",
+    "edges": 13,
+    "epistemic_status": "PROVED",
+    "family_count_histogram": {
+      "3": 1,
+      "4": 3,
+      "5": 5,
+      "6": 4
+    },
+    "family_counts": [
+      3,
+      5,
+      5,
+      5,
+      5,
+      6,
+      4,
+      6,
+      4,
+      5,
+      6,
+      4,
+      6
+    ],
+    "minimum_deletion_cover_size": 4,
+    "route_a_csp": "UNSAT",
+    "route_b_csp": "UNSAT",
+    "selected_covers": null,
+    "status": "PASS",
+    "tau": 5,
+    "vertices": 31
+  },
+  "budget_ordinal": "B091",
+  "claim_boundary": "This refutes only the frozen reciprocal shared-coordinate trace condition on one rank-shifted tau=5 equality control. It says nothing about tau=6 counterexamples, intersecting Ryser, nonreciprocal/global trace systems, or the fractional matching theorem.",
+  "cycle": 91,
+  "cycle_decision": {
+    "companion_advice": "Seal and pivot; do not weaken reciprocity or use another control.",
+    "companion_identity": "/root/oracle_c88_retry (Oracle)",
+    "decision": "End C91 after the preregistered finite falsifier and return to portfolio discovery.",
+    "falsifier": "Any missing minimum cover, enumeration disagreement, satisfying reciprocal assignment, or source-transcription mismatch."
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "boundary": {
+      "path": "proof/cycle91_ryser_cover_trace_boundary.md",
+      "sha256": "0349ede128285af734c0b69dc840e1b4be16fa0d1c7bd47c818e02e93c691c52"
+    },
+    "checker": {
+      "path": "proof/check_cycle91_ryser_cover_trace.py",
+      "sha256": "4d64e5262f434d149ff33e7309681d1a593d11708e5f7db9bb28b820e6753454"
+    },
+    "preregistration": {
+      "path": "docs/cycle-91-b091-ryser-cover-trace-preregistration-v1.md",
+      "sha256": "73bb7b3411c8a10c74028dc02a00fb91a6b3e0d3661297ad1c469edd6ed918ca"
+    },
+    "published_control": {
+      "path": "discovery/cycle69_r6_extremal_control.py",
+      "sha256": "c62edddd382483e1b243e385bfe14ba99a40a0b1e137d3145e995b3223bf2276"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "selection": {
+      "path": "discovery/cycle91_ryser_trace_selection.md",
+      "sha256": "03f137b265cca3afdb7f97e0a1629781804312589b9dbd0662f6e286059db5ae"
+    },
+    "source_audit": {
+      "path": "discovery/cycle91_ryser_trace_source_audit.md",
+      "sha256": "784eed1a8b0b3065ce63ae099a99ccdad982b7e9f347a523f103deff303d564d"
+    },
+    "test": {
+      "path": "tests/test_cycle91_ryser_cover_trace.py",
+      "sha256": "d04cd74fb58224a152adf0b8a01b935cb8e3d85b8eddf2935503c13a8e3ec95b"
+    },
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "outcome": "The complete four-vertex deletion-cover families of the published 13-edge tau=5 control have counts [3,5,5,5,5,6,4,6,4,5,6,4,6]. Two exact routes agree that the frozen reciprocal shared-coordinate trace CSP is UNSAT.",
+  "record_type": "METHOD_BOUNDARY",
+  "recorded_at_utc": "2026-08-06T00:00:00Z",
+  "replay": {
+    "artifact_check": ".venv/bin/python proof/build_cycle_91_ryser_cover_trace_boundary.py --check",
+    "audit": ".venv/bin/python proof/check_cycle91_ryser_cover_trace.py",
+    "test": ".venv/bin/python -c \"import runpy; ns=runpy.run_path('tests/test_cycle91_ryser_cover_trace.py'); ns['test_c91_cover_trace_routes_agree']()\""
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_91_ryser_cover_trace_boundary.py",
+    "sha256": "a3871a7afab5da40b5dfd68c45c25cff57533e9ad58d7fca0933ae30c64ad664"
+  },
+  "status": "SEALED"
+}

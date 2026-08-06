@@ -6,7 +6,7 @@
   conjectures that have not been officially announced as solved by OpenAI,
   seeking either a complete proof/counterexample or a publishable scoped
   theorem, reduction, obstruction, or certified finite result.
-- **Status:** `ACTIVE / PORTFOLIO_DISCOVERY_AFTER_C90`. C72 is closed by the
+- **Status:** `ACTIVE / PORTFOLIO_DISCOVERY_AFTER_C91`. C72 is closed by the
   corrected sealed artifact
   `cycle-72-b072-defect-core-extension-v2`: `PROVED`, every generalized
   rooted \(D=5\) equality core has a universal five-blocker, so every
@@ -83,6 +83,11 @@
   one frozen S4 transposition-transfer line, and `OBSERVED` no reusable
   character-indexed factor under its one algebra cap. This closes only that
   representation-transfer bridge; it is not a Zhao or Sidorenko result.
+  C91 is sealed as `cycle-91-b091-ryser-cover-trace-boundary-v1`: `PROVED`,
+  the complete deletion-cover families of the published 13-edge \(\tau=5\)
+  Ryser control make the one frozen reciprocal coordinate-trace CSP UNSAT by
+  two exact routes. This closes only that rank-shifted trace-gluing axiom; it
+  is not evidence about \(\tau=6\), Ryser, or other trace systems.
   C86 is sealed as
   `cycle-86-b086-frankl-all-inclusion-hall-boundary-v1`: `PROVED`, all 2,034
   declared four-point dimension-three controls admit an all-inclusion Hall
@@ -237,6 +242,12 @@ may introduce a better eligible problem.
   monotonicity on one prescribed S4 T-transform line; the authorized factor
   cap found no reusable character-indexed identity. Do not test another
   transfer, background, group, grid, or graphon variation within C90.
+- **C91 boundary — PROVED:** the source-labelled 13-edge Ryser control has
+  31 vertices and \(\tau=5\). Its 13 complete four-vertex deletion-cover
+  families have counts \((3,5,5,5,5,6,4,6,4,5,6,4,6)\), and two exact CSP
+  routes make the frozen reciprocal shared-coordinate trace system UNSAT.
+  Do not weaken reciprocity, change the coordinate condition, or test another
+  control within C91; return to fresh portfolio discovery.
 - **Next action:** run a fresh, wide portfolio-discovery pass, including
   current eligibility and primary-source screens, then let Oracle select one
   distinct small exact gate.  Do not resume C83's local-fiber methods or
