@@ -66,3 +66,18 @@ choice, not merely summarize the work.
 - **Next-screen change:** require a source-defined transfer mechanism before
   any higher cube dimension, rational grid, random-point search, or arbitrary
   point continuation.
+
+## 2026-08-06 — Open Conjecture Sweep / C98
+
+- **Stop trigger:** `PROVED` complete no-hit in the preregistered
+  degree-(4,3,6), coefficient-648 polynomial family for the size-22 residual;
+  the exact replay exhausted 67,288,360 branches and the independent
+  expansion control passed.
+- **Failed assumption:** the successful adjacent-equation degree pattern
+  would automatically transfer to the constant-(-2) residual.
+- **Reusable rule:** a complete bounded-family no-hit is a method boundary,
+  not evidence that the underlying Diophantine equation has no infinite
+  solutions; borrowed coefficient heights must not be enlarged post-result.
+- **Next-screen change:** require a genuinely different elliptic-surface or
+  norm-form engine before another Diophantine attack; do not rerun this ansatz
+  with a larger box.
