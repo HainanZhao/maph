@@ -28,24 +28,30 @@ authoritative strategic state over chat memory. Read the current gate and the
 one relevant prior artifact before acting. Do not reread historical material
 unless the next question depends on it.
 
-`PROGRAM.md` must contain:
+`GOAL.md` is user-owned. Never create, edit, rename, or delete it without an
+explicit user instruction for that specific change.
 
-- original objective, claim boundary, status, and stop condition;
-- a high-level research-path graph and current gate states;
-- short headline theorem, breakthrough, correction, and no-go summaries;
-- open questions, next authorized action, and crash recovery commands.
+An instruction to **finish**, **complete**, or **follow** `GOAL.md` is a
+terminal research directive, not a document-editing task. It means carry out
+and resolve every in-scope research topic according to the completion criteria
+written in `GOAL.md`. Reading or reorganizing the file, improving plans,
+running bounded experiments, reaching a resource cap, proving a narrower
+method boundary, or preparing partial results does not finish the goal. Do not
+report `GOAL.md` complete or mark its goal achieved until every required topic
+has its stated proof, verified counterexample, or other explicitly permitted
+terminal outcome. This directive authorizes the research work described by
+the file; it does not by itself authorize changing the user-owned file.
 
-Keep `PROGRAM.md` short enough to reread routinely. Do not store per-cycle row
-registries, long correction narratives, exhaustive hashes, test transcripts,
-or detailed replay histories there.
+Keep `PROGRAM.md` short and strategic: current objective, claim boundary,
+active gate, meaningful constraints, and the next action. Do not use it as a
+progress log or duplicate replay evidence.
 
-Keep a preregistration with its embedded freeze manifest before executable
-work that may support a durable claim. Sealing is optional, not a per-cycle
+Preregistration is not required. Sealing is optional, not a per-cycle
 requirement. Seal an immutable `artifacts/cycle-<n>-b<ordinal>-<slug>-v<version>.json`
 only when the result must be relied on later: a proof-grade finding, a
 later-relevant falsifier, a correction, an irreversible gate or strategy
 change, or an external handoff/publication. Otherwise keep the work live in
-its one preregistration and `discovery/`; no artifact, status update, or
+`discovery/`; no artifact, status update, or
 handover is needed.
 
 Do not seal an intermediate resource-cap result while the same engine,
@@ -66,38 +72,9 @@ cannot state the decision clearly. Preserve a failed, deferred, superseded,
 or corrected path only when it materially constrains a later decision; a
 correction creates a new record and never mutates a sealed one.
 
-Projects may maintain a local DuckDB index built from those records for
-search, dependency queries, and generated status. The database binary is
-ignored and never canonical; commit its schema, pinned dependency, rebuild
-script, tests, and generated text status only. Do not create or append a
-monolithic `RESEARCH_LOG.md`. An existing one is historical archive only.
-Use `tools/research_records.py` with a project `research-records.json` profile
-to build, validate, and query standard immutable cycle records. Use
-`tools/duckdb_tools.py` for schema-agnostic read-only DuckDB inspection.
-Once per shell, activate the repository tools from any directory in the
-checkout:
-
-```sh
-source "$(git rev-parse --show-toplevel)/tools/dev-env.sh"
-```
-
-For routine use from inside a profiled project, use the short wrapper:
-
-```sh
-research rebuild
-research check
-research cycle 151
-research search negative-tail
-research db tables
-research db sql "SELECT status, count(*) FROM artifacts GROUP BY status"
-```
-
-The wrapper finds `research-records.json`, uses the project `.venv` when
-present, and dispatches `db` to the generic read-only DuckDB interface. If a
-shell cannot be initialized, `../../tools/research` remains equivalent.
-Project-specific code belongs only in its declarative profile or in a proven
-new record type; do not create per-project index/query scripts for routine
-cycle, claim, gate, dependency, or evidence queries.
+Projects may use a local index or the shared research tools for artifact
+search and validation. The immutable artifacts and their replay commands are
+canonical; a database, status file, or research log is never required.
 
 `STATUS.md` is optional, generated only for an intentional handoff. It points
 to `PROGRAM.md`, the newest artifact, and recovery commands; it never repeats
@@ -120,25 +97,16 @@ A research cycle is a coherent decision block, not a single algebraic
 observation, lemma, engine probe, validation run, or required artifact. Its
 normal boundary is a material decision point: reuse the live cycle while the
 same related question remains active, and open a new one only when the
-question or frozen method family genuinely changes. Preregister one decision
-question with a real advance condition, then pursue all closely dependent derivations,
+question or frozen method family genuinely changes. State one decision question
+with a real advance condition, then pursue all closely dependent derivations,
 counterexamples, alternative formulations, and exact checks needed to answer
-it. Reuse the live cycle and its one preregistration for that related work; do
+it. Reuse the live cycle for that related work; do
 not create a cycle merely to name an intermediate decomposition,
 factorization, failed subtest, or bookkeeping repair.
 
-Before opening any new cycle, perform an explicit creative idea-selection pass
-in scratch. Generate genuinely different mechanisms—not only variants of the
-last tool—including new state spaces, invariants, dualities, inversions,
-countermodels, and constructions. Formulate the decision question for each
-serious candidate, then question the questioning itself: why this question,
-why now, which assumption or inherited framing makes it misleading, what
-important question the candidate prevents us from seeing, and what simpler or
-more discriminating alternative was rejected. Distrust a familiar formulation
-merely because it is easy to execute. Choose one idea only after that
-adversarial comparison. Record the chosen question, the main rejected
-alternative, and the falsifier in the preregistration; do not turn the scratch
-brainstorm into a recurring report or a separate artifact.
+Before a genuinely new engine, consider at least one materially different
+mechanism and state what would falsify the chosen one. Do this in scratch; do
+not create a planning record unless it materially aids a later decision.
 
 Open a new cycle only when a material decision selects a genuinely different
 research question or frozen method family, or when an external result or
@@ -146,8 +114,8 @@ irreversible gate/status decision changes the research question. A larger
 resource tranche, faster implementation, storage-layout change, scheduling or
 parallelism change, deterministic replay, additional validation, failed cap,
 or bookkeeping correction remains in the same cycle while the engine and
-decision question are unchanged. Amend the live preregistration before the
-new execution and retain the earlier tranche as a contained result. If a
+decision question are unchanged. Update the live decision note when useful
+before the new execution and retain the earlier tranche as a contained result. If a
 resource continuation follows a premature seal, issue a same-cycle correction
 instead of minting a successor cycle. Never evade the cadence by renaming
 routine continuation as a new method family.
@@ -156,146 +124,31 @@ Keep scratch in `discovery/` and promote only the conclusion. Replay and commit
 only when useful; do not seal, regenerate status, or write a handover after
 each subtest. Corrections are only for genuine post-seal defects.
 
-### Closure postmortem
+### No autonomous project or problem switching
 
-Whenever a problem is solved, refuted, closed for eligibility loss, saturated,
-or otherwise stopped, run one lightweight **postmortem cycle** before selecting
-the next problem. It is a non-budgeted closure decision block, not an attack
-cycle and not a substitute for paper work. Record one concise entry in the
-root POSTMORTEMS.md: problem/cycle, stop trigger and evidence, the assumption
-or check that failed or succeeded, the reusable rule, and the concrete
-next-screen change. Do not repeat the project strategy, reproduce logs, or
-write a handover. The postmortem must change a future decision or be omitted;
-its purpose is durable repository learning, not ceremony. This requirement
-also applies when the whole project closes; no successor problem may be chosen
-until its closure entry exists.
+Agents must not autonomously search for, screen, select, reselect, pivot to,
+or switch projects or problems. Only an explicit user instruction may
+authorize portfolio discovery, problem selection, or a project switch. A
+bounded method-family result is never authorization to close the broader
+problem or begin another one.
 
-### Research delegation
-
-Use subagents when two or more genuinely independent research tracks can run
-in parallel with light compute and little shared state—for example literature
-checks, proof derivations, or small code reviews. Skip delegation for a small
-task. Do not delegate CPU-, memory-, disk-, or runtime-heavy work: subagents
-share this machine, so centralize that work and obey the aggregate compute
-caps below. The primary agent owns integration and epistemic labeling.
-
-### Critical-decision companion (Oracle)
-
-Name the companion **Oracle** in every program. Use Oracle only for problem
-selection, a material fork or seal, a post-result cycle decision, or
-publication. Oracle is a co-planner, not a yes/no approver: it and the primary
-agent independently propose ideas, review evidence, challenge framing, and
-compare falsifiers, cost, and expected information gain.
-
-Invoke Oracle with `gpt-5.6-sol` and `high` reasoning effort or higher. Do
-not downshift Oracle for convenience: its role is reserved for the decisions
-where the best available conceptual review is worth the added deliberation.
-
-Oracle's standing philosophy is **question → question the questioning →
-brainstorm**. First question the inherited target, evidence, assumptions,
-state space, success criterion, and reason it is being asked now. Next question
-that critique itself: identify which familiarity, computability, prestige,
-recent failure, or inherited vocabulary may be biasing what Oracle treats as
-the problem, and name the important question the critique could still hide.
-Only after those two adversarial passes may Oracle brainstorm. That brainstorm
-must include genuinely different problems or mechanisms—not variants of the
-incumbent—and then rank them by falsifier, exact or rigorous verifier, cost,
-expected information gain, and credible path to closure. Oracle's packet must
-briefly expose this reasoning, not merely output a choice.
-
-### Oracle historical-reconstruction preflight
-
-Before a selection or material-fork recommendation, Oracle must independently
-read the current `PROGRAM.md`. It is **encouraged, but not mandatory**, to
-reconstruct relevant decision history from files rather than trusting the
-current prompt or a conversation summary. Start with the current target, its
-most recent decision boundary, and the records named by the program; expand to
-older sealed artifacts, selection packets, overlap audits, no-selections, or
-corrections only when they could materially affect novelty, eligibility, or
-the candidate's claimed delta. Do not scan the whole history merely because it
-exists. This remains a compact summary read, never a request to load raw logs
-or replay transcripts. If a material historical gap remains, record it rather
-than guessing.
-
-Oracle's packet must include an artifact-cited **exclusion map** for the prior
-records actually relevant to every serious candidate: give the former decision
-question, its falsifier/outcome, and the exact state/invariant/claim boundary
-that the new candidate changes. A candidate whose relevant map cannot identify
-such a delta is a duplicate, even when chat context has forgotten the older
-cycle. A current statement, recent failure, or earlier Oracle wording is never
-evidence that a candidate is new. When no candidate survives this comparison,
-identify the missing bridge precisely and use it to formulate the first bounded
-design question for the selected highest-information problem; do not return an
-idle `NO_SELECTION` outcome.
-
-For a problem-selection cycle, Oracle owns the selection. The primary must
-not pre-propose target issues, candidates, or a preferred answer for Oracle to
-ratify; it supplies only the program location and any necessary access facts.
-Oracle independently reads the program, develops the portfolio, and **must
-select one concrete next problem**. `NO_SELECTION` is not an allowable
-selection outcome. If every option has a missing bridge, Oracle selects the
-highest-information problem and makes that bridge the first explicitly bounded
-design question rather than returning an idle screen. Its packet records the
-selected problem, alternatives, strongest flaw, falsifier, information gain,
-stop/pivot criterion, and the required input state, proposed
-invariant/map/transition, smallest direct verifier, and resource-bounded stop
-criterion. The primary executes the choice. At other forks, Oracle advises and
-the primary decides. Use one concise evidence packet and do not invoke, poll,
-or wait for Oracle during ordinary research.
-
-An Oracle recommendation to open a new engine is actionable only if its packet
-names the input state, the proposed invariant/map/transition, the smallest
-direct verifier, and a resource-bounded stop criterion. An unspecified
-"missing interface" is insufficient: refine it into one such bounded design
-question before opening the selected cycle. Do not use a finite census as a
-proxy for that question.
-
-### One live specification per cycle
-
-Keep one preregistration while a cycle is live. Amend it in place; Git history
-preserves intermediate states. Do not create ledgers, addenda, or same-cycle
-versions unless needed for a correction or publication decision.
-
-### Executable preregistration preflight
-
-For every new cycle, the canonical preregistration must contain exactly one
-embedded `research-freeze-v1` JSON manifest before executable discovery,
-proof, test, or replay code is created or run. It is the machine-readable
-freeze layer *inside that same preregistration*, not a second specification.
-It declares typed parameters and resource caps (or explicitly justified
-`not_applicable` entries), formula families, selection and failure rules,
-the pre-execution UTC/Git boundary, and all frozen input paths. Run the shared
-preflight first:
-
-```sh
-research prereg check docs/cycle-<n>-b<ordinal>-<slug>-preregistration-v1.md \
-  --expected-cycle <n>
-```
-
-The builder freezes both the preregistration and validator hashes and records
-the checked manifest hash. A manifest-head mismatch blocks initial execution;
-only deterministic replay after a later commit may use `--allow-head-drift`.
-Do not retrofit a sealed record: legacy pre-manifest cycles are explicitly
-unprotected, not silently repaired. A prose rule, placeholder value,
-post-result cap, or executable input that disagrees with the manifest fails
-preflight and halts that unsealed branch until corrected.
+Problem selection is exclusively human. Within that human-authorized problem,
+the primary agent selects and executes every research cycle. Before a material
+new cycle, the primary independently reads the current `PROGRAM.md` and the
+relevant recent records, performs **question → question the questioning →
+brainstorm**, and records an exclusion map: former question, outcome/falsifier,
+and the exact state, invariant, or claim-boundary delta. The selected cycle
+must name an input state, invariant/map/transition, smallest direct verifier,
+resource-bounded stop criterion, and falsifier. Do not substitute a finite
+census for an unspecified design question.
 
 ### Missing-bridge research rule
 
-An absent theorem, constructor, or interface is not a terminal research
-answer. Treat it as a named design problem. Before promoting a scoped
-interface cut or saturation barrier, attempt at least one genuinely new
-engine: a new invariant, lift, duality, completion, local-to-global
-principle, inverse theorem, or a discriminating countermodel. State what the
-new engine would have to preserve and what evidence would falsify it. Existing
-artifacts are constraints and launch points, not a ceiling on invention.
-The purpose of exploration is not merely to recombine available theorems.
-When the decisive bridge is absent, give the proposed construction equal
-standing with any literature route: formulate its state space and invariant,
-build the smallest falsifiable prototype, and seek a new proof mechanism
-before declaring the program saturated. A negative result may constrain that
-engine, but must not be recast as evidence that only existing building blocks
-are legitimate.
+An absent theorem, constructor, or interface is not by itself a terminal
+answer. Before claiming saturation, identify the missing bridge and decide
+whether a genuinely new invariant, lift, duality, completion, inverse theorem,
+or countermodel has enough expected information to justify work. Existing
+artifacts constrain future claims; they do not prohibit invention.
 
 ## 2. Discovery and proof are separate
 
@@ -305,8 +158,8 @@ are legitimate.
   proof pipelines. Legacy projects must maintain an explicit equivalent
   separation until migrated.
 - Discovery may select a candidate; it never closes an identity.
-  Closure requires exact algebra or a rigorous enclosure satisfying a
-  preregistered criterion with explicit margin.
+  Closure requires exact algebra or a rigorous enclosure satisfying an
+  explicit criterion with margin.
 - Every proof-grade result must be version-pinned, hash-recorded,
   scripted, and one-command replayable. If it cannot be replayed, it
   does not exist.
@@ -337,15 +190,16 @@ are legitimate.
 - Audit circularity: an “after aligning” step may inspect only the side
   frozen before the target was computed. Record the audit.
 
-## 4. Corrections and preregistration
+## 4. Corrections and declared controls
 
 - Never silently edit a certified record. Issue a versioned correction
   artifact stating the error, cause, affected claims, and reruns.
 - A convention change requires regeneration or explicit re-audit of
   every downstream certificate.
-- Before computing, freeze: ranges, thresholds, margins, samples, RNG
-  seeds, degree/resource caps, formula families, and the rule for failed
-  rows. Post-result choices are `EXPLORATORY`.
+- Before relying on a result, record the actual ranges, thresholds, margins,
+  samples, RNG seeds, degree/resource caps, formula families, and rule for
+  failed rows in its replay or artifact. Post-result choices are
+  `EXPLORATORY` unless independently justified.
 - During research, a failed lightweight check contains the affected
   claim/table and is logged, but it does not automatically terminate a broader
   speculative branch. Never drop the row silently.
@@ -388,11 +242,11 @@ the issue clearly once the current request, ask, or goal has been
 cleared:
 
 - an independent route disagrees with a certified record;
-- a preregistered audit fails;
+- a declared audit fails;
 - a candidate counterexample survives initial rigorous checks;
 - documents assign incompatible conventions/claims to one certificate;
 - a novelty claim depends on an unread reachable paper;
-- a resource cap would force an unregistered method substitution;
+- a resource cap would force an undeclared method substitution;
 - a surprising favorable result has not completed heightened checks.
 
 Use judgment to decide whether the evidence warrants stopping the
@@ -425,41 +279,16 @@ Never conceal, erase, or silently work around a listed finding.
 ## 9. Session and compute hygiene
 
 - Re-read a file immediately before editing it.
-- Timebox exploration and preserve negative results as artifacts.
 - Treat runtime as the scarce resource in compute-heavy research. Before a
   long run, optimize the hot path, compile with appropriate production
   optimizations, and benchmark a representative exact control. Do not spend
   hours on an avoidably slow implementation merely because code changes are
   cheap.
-- Parallelize independent deterministic search work by default. On a shared
-  machine with `N` available CPUs, use at most `N-1` CPUs unless the user says
-  otherwise, leaving one CPU for the system and other work. Prefer balanced
-  or dynamic sharding, verify that shard union equals the unsharded search on
-  a small exact control, and enforce preregistered time, node, leaf, and memory
-  caps in aggregate rather than once per worker.
-- For future authorized disk-heavy runs, measure free space immediately before
-  preregistration and set the aggregate temporary-disk cap to at most that
-  free space minus 5 GiB, reserving the 5 GiB for the system and other work.
-  Log the byte-level measurement and cap, recheck free space at launch, and
-  stop naturally if concurrent use erodes the reserve. Do not reinterpret
-  total filesystem capacity as available space or alter an already-running
-  process merely because this default was added later.
+- Parallelize only when it materially shortens an independent, deterministic
+  computation. Keep one CPU free and apply resource limits in aggregate.
+- Before a disk-heavy run, check available space and leave a practical system
+  reserve.
 - Record wall time and peak memory for principal replays.
-- **Persistent-goal continuation guard:** treat an automatic “still active”
-  or “continuing” event as an internal scheduler signal, never as a user-facing
-  result or a research action. On receipt, resume from the next concrete,
-  state-advancing step (inspect evidence, run a replay, edit a preregistration,
-  obtain a companion decision, or commit a verified result); do not acknowledge
-  the signal in commentary or a final. A continuation is permitted only after
-  recording a distinct action or newly observed external state since the prior
-  continuation. Never end a turn with a status-only final such as “continuing”,
-  “still active”, or a restatement of the active cycle. If no safe concrete
-  action remains, perform the ordinary blocked audit and mark the goal blocked
-  only when its threshold is met; otherwise wait silently for an actual user or
-  external-state event. De-duplicate scheduler signals: after one no-op signal
-  for a task/version, suppress every identical repeat until its state changes.
-  Treat repeated identical continuation notices as an orchestration defect, not
-  research progress; do not poll a background agent merely to produce one.
 - Treat a transient slow-server, spinner, or dismissible wait notice as
   already dismissed: continue safe local work or wait/retry silently. Surface
   it only after it has become a real blocker under the ordinary escalation
