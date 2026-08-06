@@ -6,11 +6,11 @@
   conjectures that have not been officially announced as solved by OpenAI,
   seeking either a complete proof/counterexample or a publishable scoped
   theorem, reduction, obstruction, or certified finite result.
-- **Status:** `ACTIVE / C100_ES7_STABILITY_LOCK`. Earlier closed
+- **Status:** `C001_STOPPED / D001_SELECTION_REQUIRED` (legacy cycle `C100`). Earlier closed
   problems, eligibility corrections, and method boundaries are preserved in
-  cycle artifacts and the current-gate ledger below. C100 is the selected
-  Erdős--Szekeres (ES(7)) anchor; its resource continuation stays live under
-  the rolling pivot stability lock.
+  cycle artifacts and the current-gate ledger below. C001's ES(7) anchor
+  stopped at its invalid n=25 control criterion; the next selection, if one is
+  authorized after the stability-lock review, must be D001.
 - **Claim boundary:** all solve probabilities and tractability rankings below
   are `CONJECTURED` planning estimates. A bounded source search is not proof
   that a problem is open or untouched by OpenAI; eligibility must be checked
@@ -36,6 +36,22 @@
   inherited pair-fiber stage. LRC(13) is paused with one concise handoff; 30
   unused cycles are banked for Problem 2. Do not add exception patches or
   another local face census without a new project decision.
+
+## Problem-track identifiers
+
+Use a problem prefix plus a three-digit within-problem sequence for strategic
+state: `A001`, `B001`, `C001`, and so on.  The current ES(7) problem is
+**C001**; its live legacy preregistration remains `C100` and must not be
+renamed.  Continue this problem as `C002`, `C003`, … only for genuinely new
+research cycles in the same problem.  Do not retrofit the older record
+registry or artifact filenames.
+
+The next genuinely selected problem starts **D001**.  Thereafter, a material
+problem selection advances the letter and restarts at `001`; a routine
+continuation, method optimization, correction, or `NO_SELECTION` retains the
+current problem prefix.  New program summaries should lead with the prefix and
+give the legacy cycle in parentheses when one exists, for example
+`C001 (C100)`.
 
 ## Automatic portfolio loop and budget
 
@@ -248,11 +264,14 @@ may introduce a better eligible problem.
   has a finite state, verifier, and falsifier. Do not open C99 as an attack,
   enlarge C98, or run the `|x|>10^50` benchmark search. See
   `discovery/cycle99_quadratic_form_screen.md`.
-- **C100 gate — ACTIVE / stability lock:** Oracle selected the source-defined
-  (ES(7)=33) reduced orientation-SAT anchor.  The first canonical attempt
-  hit an observed host OOM, so the live preregistration was amended for a
-  lower-memory control and bounded continuation; this is not a pivot trigger.
-  Keep the same target and method family until the preregistered gate closes.
+- **C001 (C100) closure — OBSERVED control defect:** Oracle selected the
+  source-defined (ES(7)=33) reduced orientation-SAT anchor. The canonical
+  attempt hit a host OOM. The amended n=25, k=7 lower-memory control then
+  returned SAT; its complete 179,400-variable model independently satisfies
+  all 3,504,438 generated clauses. Requiring this sub-threshold instance to
+  be UNSAT was an invalid scalability criterion, so it cannot authorize a
+  canonical retry. This is neither an ES(7) result nor a SAT-model
+  realizability claim. See `discovery/cycle100_control_outcome.md`.
 
 ### Closed gate — C80 quaternary Legendre pairs, length 42
 

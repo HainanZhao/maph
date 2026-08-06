@@ -81,3 +81,18 @@ choice, not merely summarize the work.
 - **Next-screen change:** require a genuinely different elliptic-surface or
   norm-form engine before another Diophantine attack; do not rerun this ansatz
   with a larger box.
+
+## 2026-08-06 — Open Conjecture Sweep / C001 (legacy C100)
+
+- **Stop trigger:** `OBSERVED` control-specification failure. The amended
+  five-layer n=25, k=7 reduced-encoding control returned SAT, and its full
+  assignment independently satisfied all 3,504,438 clauses.
+- **Failed assumption:** a sub-threshold no-convex-7-gon control should be
+  UNSAT and could measure a proof-producing pipeline's scalability. That
+  expectation reverses the purpose of an existence-compatible control.
+- **Reusable rule:** before choosing an UNSAT control, prove from the frozen
+  target theorem or a source-backed lemma that the control's hypotheses force
+  unsatisfiability; separately verify the test's quantifiers and threshold.
+- **Next-screen change:** every SAT/UNSAT scalability control must state why
+  its expected polarity follows before execution. A polarity mismatch stops
+  the gate; it does not authorize a canonical retry or a new parameter sweep.
