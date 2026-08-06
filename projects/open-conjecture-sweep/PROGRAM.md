@@ -6,13 +6,14 @@
   conjectures that have not been officially announced as solved by OpenAI,
   seeking either a complete proof/counterexample or a publishable scoped
   theorem, reduction, obstruction, or certified finite result.
-- **Status:** `C001_STOPPED / D001_CLOSED / E001_CLOSED / F001_SELECTION_PENDING` (legacy cycle `C100`). Earlier closed
+- **Status:** `C001_STOPPED / D001_CLOSED / E001_CLOSED / F001_SELECTED` (legacy cycle `C100`). Earlier closed
   problems, eligibility corrections, and method boundaries are preserved in
   cycle artifacts and the current-gate ledger below. C001's ES(7) anchor
   stopped at its invalid n=25 control criterion. D001's book-Ramsey
   character-sign gate closed at its exact q=7 falsifier. Oracle independently
   selected E001's bounded Hadamard-668 quartic-character completion gate,
-  which exhausted its exact family; Oracle must select F001.
+  which exhausted its exact family. Oracle selected F001's dihedral-reflection
+  book-Ramsey completion gate.
 - **Claim boundary:** all solve probabilities and tractability rankings below
   are `CONJECTURED` planning estimates. A bounded source search is not proof
   that a problem is open or untouched by OpenAI; eligibility must be checked
@@ -326,6 +327,12 @@ may introduce a better eligible problem.
   quartic parameters, with zero PAF completions. This closes only
   \(B_b(i)=\chi(i^4+bi^2+1)\); do not widen it or search arbitrary sequences.
   See sealed `cycle-102-b102-hadamard-quartic-boundary-v1`.
+- **F001 (C103) selection — CONJECTURED planning decision:** Oracle selected
+  the smallest new D001 block type: inversion \(R\) on the cyclic index set,
+  applied to six inter-block entries. The gate keeps the 19 signs, adds six
+  reflection bits, and tests \(q=7\), then \(q=23\). A no-hit closes this
+  one-reflection family only. See
+  `discovery/_005_f001_book_ramsey_reflection_selection.md`.
 
 ### Closed gate — C80 quaternary Legendre pairs, length 42
 
