@@ -1,7 +1,6 @@
 # Human-send outreach draft
 
-Do not send before the arXiv posting is public. Replace `[ARXIV LINK]`, attach
-or link the replay archive, and send manually.
+Attach or link the replay archive and send manually.
 
 To: Brendan B. Connelly `<brendanconnelly@ucla.edu>`; Thomas C. Martinez
 `<thomasmart@ucla.edu>`
@@ -18,8 +17,8 @@ have proved the next full slice: `[m+4 choose 4]_F` is unimodal for every
 The proof takes first coefficient differences and, below the midpoint,
 reduces them to four translates of the restricted partition function for
 parts 1, 2, and 3. Its period-six formula gives uniform quadratic bounds for
-`m >= 8`; the seven smaller cases are exact. The paper is at [ARXIV LINK],
-and the DOI-backed paper, source, and replay archive are at
+`m >= 8`; the seven smaller cases are exact. The DOI-backed paper, source,
+and replay archive are at
 <https://doi.org/10.5281/zenodo.21826970>.
 
 I would be grateful for a quick check of three falsifiable points:

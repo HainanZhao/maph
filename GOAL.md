@@ -41,12 +41,11 @@ A topic exits the queue on A, B, or C. It does not exit on "still trying."
 
 **Status: Outcome A. Proved, replayable, written.**
 
-**Action: ship this month. Nothing is sequenced ahead of it.**
+**Action: complete direct outreach this month. Nothing is sequenced ahead of it.**
 
-- [ ] Post to arXiv (math.CO) by **2026-08-31**
-- [ ] Zenodo deposit, DOI recorded in the paper before posting
-- [ ] Email Connelly / Martinez (UCLA) with the link on the day of posting
-- [ ] Cite Bergeron–Ceballos–Küstner Conjecture 2.5 and
+- [x] Zenodo deposit published; DOI recorded in the paper
+- [ ] Email Connelly / Martinez (UCLA) with the Zenodo link
+- [x] Cite Bergeron–Ceballos–Küstner Conjecture 2.5 and
       arXiv:2605.12822 as the n ≤ 3 case explicitly
 
 **Why the date is hard.** arXiv:2605.12822 (May 2026) resolved n ≤ 3 and
