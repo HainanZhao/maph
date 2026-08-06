@@ -6,12 +6,12 @@
   conjectures that have not been officially announced as solved by OpenAI,
   seeking either a complete proof/counterexample or a publishable scoped
   theorem, reduction, obstruction, or certified finite result.
-- **Status:** `C001_STOPPED / D001_CLOSED / E001_SELECTION_PENDING` (legacy cycle `C100`). Earlier closed
+- **Status:** `C001_STOPPED / D001_CLOSED / E001_SELECTED` (legacy cycle `C100`). Earlier closed
   problems, eligibility corrections, and method boundaries are preserved in
   cycle artifacts and the current-gate ledger below. C001's ES(7) anchor
   stopped at its invalid n=25 control criterion. D001's book-Ramsey
-  character-sign gate closed at its exact q=7 falsifier; Oracle must now
-  independently select E001.
+  character-sign gate closed at its exact q=7 falsifier. Oracle independently
+  selected E001's bounded Hadamard-668 quartic-character completion gate.
 - **Claim boundary:** all solve probabilities and tractability rankings below
   are `CONJECTURED` planning estimates. A bounded source search is not proof
   that a problem is open or untouched by OpenAI; eligibility must be checked
@@ -312,6 +312,14 @@ may introduce a better eligible problem.
   all-\(n\) conjecture. Do not enlarge signs or perform a graph census; D001
   closes because no residual bounded block type is identified. See sealed
   `cycle-101-b101-book-ramsey-character-sign-rigidity-v1`.
+- **E001 (C102) selection — CONJECTURED planning decision:** Oracle selected
+  a reciprocal-even quartic-character near-Williamson constructor at order
+  167: form \(A(i)=\chi(i)\) off zero and \(B_b(i)=\chi(i^4+bi^2+1)\), then
+  exactly complete three \(B_b\) autocorrelation vectors against \(A\). This
+  is at most 167 algebraically generated sequences and 14,028 pair sums, not
+  an arbitrary sequence census. A hit is checked by all-shift PAF and a
+  668-by-668 block product; a no-hit closes only this quartic mechanism. See
+  `discovery/_004_e001_hadamard_quartic_selection.md`.
 
 ### Closed gate — C80 quaternary Legendre pairs, length 42
 
@@ -1063,14 +1071,12 @@ each shortlisted problem immediately before starting it.
 
 ## Next authorized action
 
-Resume C72's direct bad-core engine under its existing equality-core decision
-question. Canonicalize every realizable six-partite incidence map, construct
-its compatible-extension hypergraph, and decide whether its core-vertex
-transversal number exceeds five. A surviving exact core falsifies the blocker
-engine and triggers one genuinely different global-cover invariant; if that
-also fails, return to Oracle with Q7 leading. Exhaustive UNSAT instead advances
-to symbolic blocker-template extraction and the scoped theorem
-\(D=5\Rightarrow\tau\le5\). Do not open a new cycle for this resumption.
+Open E001 (legacy Cycle 102 / B102) only under a preregistration freezing the
+reciprocal-even quartic-character map on \(\mathbb F_{167}\), its 84-coordinate
+PAF/row-sum vector, and exact pair-sum completion. Run no arbitrary-sequence
+search, SAT, local search, or new character family. A no-hit closes only this
+constructor; a hit requires independent all-shift, block-product, eligibility,
+and overlap checks before any Hadamard claim.
 
 ## Crash recovery
 
