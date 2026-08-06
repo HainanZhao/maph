@@ -10,14 +10,12 @@ very different tractability into a single completion target.
 
 ## Primary goal
 
-**Post one result that someone outside my own framework cites, reuses, or
-corresponds about.**
+**Complete every topic below by reaching Outcome A, B, or C under its stated
+stop condition.**
 
-This replaces "resolve N of 3." Rationale: the failure mode of the analytic
-number theory work was not lack of proved statements — it was that the proved
-statements were internal to a self-invented coordinate system with no
-externally legible implication. Counting resolutions does not detect that
-failure. External uptake does.
+Success is research closure: a proof or refutation, a self-contained
+reduction, or a documented kill criterion. Publication, external uptake, and
+outreach are not requirements of this goal.
 
 Secondary goal: keep at most one topic in open-ended proof search at a time.
 
@@ -29,7 +27,7 @@ Secondary goal: keep at most one topic in open-ended proof search at a time.
   written up.
 - **Outcome B — reduced.** Reduced to a stated, self-contained, checkable
   sub-problem that a third party could attack without my scaffolding.
-  *B is a shippable contribution, not a failure.*
+  *B is a terminal research outcome, not a failure.*
 - **Outcome C — killed.** Kill criterion met. Record the obstruction and the
   reason in the ledger. Stop.
 
@@ -41,22 +39,8 @@ A topic exits the queue on A, B, or C. It does not exit on "still trying."
 
 **Status: Outcome A. Proved, replayable, written.**
 
-**Publication status: shipped via Zenodo.**
-
-- [x] Zenodo deposit published; DOI recorded in the paper
-- [x] Cite Bergeron–Ceballos–Küstner Conjecture 2.5 and
-      arXiv:2605.12822 as the n ≤ 3 case explicitly
-
-**Why the date is hard.** arXiv:2605.12822 (May 2026) resolved n ≤ 3 and
-stated that its methods suggest further directions. Five authors at one
-department are plausibly on n = 4 now. Crowding is the central strategic
-constraint of this program; holding a finished, timing-sensitive result while
-grinding an unrelated topic is precisely the failure that constraint names.
-
-**Explicitly rejected option:** merging Topic 3 into a heavier joint paper
-with Topic 2. The combined paper would be stronger, but the exposure window
-on n = 4 does not support waiting. Ship 3 now; let 2 be the sequel that
-cites it.
+**Evidence:** self-contained proof, exact replay, and written research note
+are complete.
 
 ---
 
@@ -67,7 +51,7 @@ window-dominance inequality.
 
 **This is the highest-return live target.** One inequality from A; plausible
 shared machinery with Topic 3 (gap absorption in products of q-analogs);
-same audience; would cite Topic 3.
+it directly builds on Topic 3.
 
 **Pre-registered kill criterion.** Review on **2026-10-31**. If the
 window-dominance inequality is not proved by that date:
@@ -76,7 +60,7 @@ window-dominance inequality is not proved by that date:
 - Write the reduction as a short standalone note: statement of the
   inequality, proof that it implies (k = 4, r = 4), the computational
   evidence, and the obstruction encountered.
-- Post it. Do not extend the date.
+- Record Outcome B in the ledger and stop. Do not extend the date.
 
 **Before resuming proof work:**
 
@@ -111,14 +95,13 @@ cannot expand later:
 - Compute budget: **[FILL IN core-hours]**, single allocation, no extension.
 - Wall-clock cap: **[FILL IN]**.
 - Stop conditions, whichever comes first:
-  - a verified 20-block cover is found → Outcome A, ship immediately;
+  - a verified 20-block cover is found → Outcome A, record and close;
   - the symmetry-broken encoding is built and the DRAT proof is *projected*
     to exceed the budget by more than 10x → **Outcome C, cut the topic**;
   - budget exhausted → **Outcome C, cut the topic.**
 - Deliverable on C: a one-page note recording the encoding, the symmetry
-  breaking used, the observed scaling, and the projected cost. Publishable
-  as a negative computational result; more importantly, it closes the topic
-  honestly instead of leaving it open indefinitely.
+  breaking used, the observed scaling, and the projected cost. This closes
+  the topic honestly instead of leaving it open indefinitely.
 
 **If the budget line above is not filled in by 2026-09-15, cut the topic
 without running the experiment.**
@@ -127,7 +110,7 @@ without running the experiment.**
 
 ## Sequencing
 
-1. Ship Topic 3 (by 2026-08-31).
+1. Topic 3 is complete (Outcome A).
 2. Topic 2 proof attempt, single-threaded, until 2026-10-31.
 3. Topic 1 bounded experiment only after Topic 2 exits, and only if the
    budget was fixed on time.
@@ -151,7 +134,4 @@ Do not open a fourth topic while any of the above is unresolved.
 ## Out of scope for this file
 
 The compatible spin-alignment note (three-qubit, pair-support, arbitrary Q)
-is on a separate track but competes for the same shipping bandwidth. It has
-referee-level fixes outstanding and a live crowding risk from Song–Chen. Do
-not let it and Topic 3 queue behind each other; they are both short and both
-timing-sensitive.
+is on a separate track and is not part of this goal.
