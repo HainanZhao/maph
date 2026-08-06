@@ -177,7 +177,7 @@ value falls below a screened alternative.
 The entries below are starting candidates. Discovery governs their order and
 may introduce a better eligible problem.
 
-### Current gate — portfolio discovery after C96
+### Current gate — portfolio discovery after C97
 
 - **C80 closure — OBSERVED engine boundary:** the corrected d=6/m=7 and
   d=7/m=6 compression identities passed exact controls. Balance plus
@@ -291,6 +291,12 @@ may introduce a better eligible problem.
   family. Oracle returned `NO_SELECTION`; full exclusions and the decision
   packet are in `discovery/cycle96_portfolio_no_selection.md`. Do not invoke
   another attack until a genuinely new gate is source-defined.
+- **C97 screen — NO_SELECTION:** the size-22 Diophantine equation is a
+  source-defined residual with exact witness checking, but Oracle found no
+  bounded, source-cleared polynomial/norm-form ansatz. Do not run the
+  `|x|>10^50` benchmark search or open C97 as an attack; fixed degrees,
+  coefficient bounds, and an overlap audit are required first. See
+  `discovery/cycle97_diophantine_candidate_screen.md`.
 
 ### Closed gate — C80 quaternary Legendre pairs, length 42
 
