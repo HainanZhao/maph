@@ -6,7 +6,7 @@
   conjectures that have not been officially announced as solved by OpenAI,
   seeking either a complete proof/counterexample or a publishable scoped
   theorem, reduction, obstruction, or certified finite result.
-- **Status:** `ACTIVE / PORTFOLIO_DISCOVERY_AFTER_C83`. C72 is closed by the
+- **Status:** `ACTIVE / PORTFOLIO_DISCOVERY_AFTER_C85`. C72 is closed by the
   corrected sealed artifact
   `cycle-72-b072-defect-core-extension-v2`: `PROVED`, every generalized
   rooted \(D=5\) equality core has a universal five-blocker, so every
@@ -53,6 +53,15 @@
   declared binary zero-divisor controls.  This ends only the verbatim
   composite extension; it neither refutes \(LRC(13)\) nor authorizes another
   p=199 local-census continuation.  Return to portfolio discovery.
+  C85 is sealed as
+  `cycle-85-b085-sidorenko-c5-kernel-boundary-v1`: `PROVED`, direct and
+  triple-kernel evaluations agree on 729 declared rational two-atom
+  bigraphon controls, with no negative defects and 81 equalities.  The exact
+  two-atom CP defect has 8,771 terms; `OBSERVED`, the one bounded
+  factorization/division attempt produced no certificate or negative
+  specialization before the host time window.  This is not a conclusion on
+  (C5-K) or Sidorenko.  Return to portfolio discovery; do not enlarge this
+  C5-kernel grid.
 - **Claim boundary:** all solve probabilities and tractability rankings below
   are `CONJECTURED` planning estimates. A bounded source search is not proof
   that a problem is open or untouched by OpenAI; eligibility must be checked
@@ -131,7 +140,7 @@ value falls below a screened alternative.
 The entries below are starting candidates. Discovery governs their order and
 may introduce a better eligible problem.
 
-### Current gate — portfolio discovery after C84
+### Current gate — portfolio discovery after C85
 
 - **C80 closure — OBSERVED engine boundary:** the corrected d=6/m=7 and
   d=7/m=6 compression identities passed exact controls. Balance plus
@@ -166,10 +175,20 @@ may introduce a better eligible problem.
   failures.  See sealed
   `cycle-84-b084-lrc-composite-polynomial-boundary-v1`.  This is a source
   theorem-interface boundary, not an eventual-properness or LRC result.
+- **C85 boundary — PROVED / OBSERVED:** Oracle's distinct C5
+  triple-kernel route for \(K_{5,5}\setminus C_{10}\) passed its complete
+  729-row rational two-atom bigraphon control by matching the direct 15-edge
+  and reduced kernel routes, with 81 zero rows and least positive defect
+  \(7381/14281868906496\).  The exact two-atom CP defect has 8,771 terms.
+  The frozen factorization gate produced no checked certificate or rational
+  negative before its host-window cap; this is a method boundary, not
+  evidence for the global C5-K or Sidorenko inequalities.  See sealed
+  `cycle-85-b085-sidorenko-c5-kernel-boundary-v1`.
 - **Next action:** run a fresh, wide portfolio-discovery pass, including
   current eligibility and primary-source screens, then let Oracle select one
   distinct small exact gate.  Do not resume C83's local-fiber methods or
-  C84's direct composite target-box extension.
+  C84's direct composite target-box extension, or enlarge C85's C5-kernel
+  grid without a new mechanism.
 
 ### Closed gate — C80 quaternary Legendre pairs, length 42
 

@@ -1,0 +1,182 @@
+{
+  "artifact_id": "cycle-85-b085-sidorenko-c5-kernel-boundary-v1",
+  "audit": {
+    "cp_expansion": {
+      "epistemic_status": "PROVED",
+      "expanded_sha256": "5cd3cc7d244ae83ce8c55fa335ee4806038570b76d71da016496ed4c52fd2397",
+      "expanded_terms": 8771,
+      "named_cp_specialization_defect": "63/32768",
+      "status": "PASS",
+      "total_degree": 35,
+      "uv_total_degree": 15
+    },
+    "direct_packet": {
+      "epistemic_status": "PROVED",
+      "minimum_defect": "0",
+      "minimum_positive_defect": "7381/14281868906496",
+      "minimum_positive_witness": {
+        "W": [
+          [
+            "1/2",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "integral_K": "1/648",
+        "left_weight": "1/3",
+        "right_weight": "1/3",
+        "t_H": "1/1934917632"
+      },
+      "minimum_witness": {
+        "W": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "integral_K": "0",
+        "left_weight": "1/3",
+        "right_weight": "1/3",
+        "t_H": "0"
+      },
+      "negative_rows": 0,
+      "packet_rows": 729,
+      "status": "PASS",
+      "zero_rows": 81
+    },
+    "kernel_packet": {
+      "epistemic_status": "PROVED",
+      "minimum_defect": "0",
+      "minimum_positive_defect": "7381/14281868906496",
+      "minimum_positive_witness": {
+        "W": [
+          [
+            "1/2",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "integral_K": "1/648",
+        "left_weight": "1/3",
+        "right_weight": "1/3",
+        "t_H": "1/1934917632"
+      },
+      "minimum_witness": {
+        "W": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "integral_K": "0",
+        "left_weight": "1/3",
+        "right_weight": "1/3",
+        "t_H": "0"
+      },
+      "negative_rows": 0,
+      "packet_rows": 729,
+      "status": "PASS",
+      "zero_rows": 81
+    }
+  },
+  "budget_ordinal": "B085",
+  "claim_boundary": "This seals only the finite C5-kernel method attempt. It neither proves nor refutes C5-K outside the packet, nor the Sidorenko inequality for K_{5,5} minus C_{10}.",
+  "cycle": 85,
+  "cycle_decision": {
+    "companion_advice": "Do not add a grid; pursue one exact two-atom CP factorization/SOS gate, then pivot if it yields neither a certificate nor a rational negative specialization.",
+    "companion_identity": "/root/oracle_c85_portfolio (Oracle)",
+    "decision": "Seal the bounded method boundary and return to portfolio discovery because the authorized symbolic gate produced no checked identity or falsifier.",
+    "falsifier": "A negative exact packet row, a rational negative CP specialization, or disagreement between the direct and kernel density routes."
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "boundary": {
+      "path": "proof/cycle85_c5_kernel_boundary.md",
+      "sha256": "6650b808266a6bf826f706323994ec15c8727c420a18f519f8c699bc8f573099"
+    },
+    "direct_checker": {
+      "path": "proof/check_cycle85_direct_bigraphon.py",
+      "sha256": "cf6326372e0568af0e8b004471a74ab9f98dace2ea333f028b399577a7f8146d"
+    },
+    "eligibility_audit": {
+      "path": "discovery/problem2_eligibility_audit.md",
+      "sha256": "196c30a07951a091fefd10d1d2550e111d614664f3aea7fc70eebe9b70fc3250"
+    },
+    "expansion_checker": {
+      "path": "proof/check_cycle85_cp_expansion.py",
+      "sha256": "0ace15fa34504fac18ace1a198f3a318d55ae3c83e5804af313da1f9b749dbd6"
+    },
+    "factor_attempt": {
+      "path": "proof/check_cycle85_cp_symbolic.py",
+      "sha256": "facb1db9a77cc4dd4ae241968a671aa5ba02fd244a6c87a5b2106c70995a8f60"
+    },
+    "idea_selection": {
+      "path": "discovery/cycle85_sidorenko_tensor_selection.md",
+      "sha256": "6b21dfcbc48c76c6611f1ddb7a212de10b8a13f6775d97d27cfde78109a4bf6b"
+    },
+    "kernel_checker": {
+      "path": "proof/check_cycle85_c5_kernel.py",
+      "sha256": "e38d6ace9f318c8034374701933a1a0243b96ad25319b62b7abe8de00a30613e"
+    },
+    "preregistration": {
+      "path": "docs/cycle-85-b085-sidorenko-c5-kernel-preregistration-v1.md",
+      "sha256": "f5e7f7b077dfa7578754e50568afeeaf8eb19db7584f5405b59df5f1662b299b"
+    },
+    "prior_c68": {
+      "path": "artifacts/cycle-68-b068-s3-fixed-comparison-v1.json",
+      "sha256": "2a6b725bbe1ab23aa0c44d244acb87cc297a5f210d44798a0ac169c940c33498"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "source_audit": {
+      "path": "discovery/cycle85_sidorenko_source_audit.md",
+      "sha256": "41621d7a8b90c1886db0e1ad5c3b0919dbbd1f72907a74e88be3660db293b674"
+    },
+    "symbolic_cap": {
+      "path": "discovery/cycle85_symbolic_cap.md",
+      "sha256": "d525b7f30389e5c2e2a1a034ca4b0eff2fb1572708e278db310f8b5ac39da6ae"
+    },
+    "test": {
+      "path": "tests/test_cycle85_c5_kernel.py",
+      "sha256": "39b2b45563f352aa8072b9e1152a2a27533d55a8bdb902a3e44e3635934e7c8c"
+    },
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "outcome": "The declared 729 two-atom rational bigraphon controls satisfy C5-K by matching direct and triple-kernel routes; the two-atom CP defect expands exactly to 8,771 terms. No factorization/SOS or negative specialization was produced under the frozen symbolic cap.",
+  "record_type": "METHOD_BOUNDARY",
+  "recorded_at_utc": "2026-08-06T00:44:14Z",
+  "replay": {
+    "audit": "python3 proof/check_cycle85_c5_kernel.py && python3 proof/check_cycle85_direct_bigraphon.py && python3 proof/check_cycle85_cp_expansion.py",
+    "check": "python3 proof/build_cycle_85_sidorenko_c5_kernel_boundary.py --check",
+    "test": "python3 -c 'from tests.test_cycle85_c5_kernel import test_c85_packet_routes_and_cp_expansion; test_c85_packet_routes_and_cp_expansion()'"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_85_sidorenko_c5_kernel_boundary.py",
+    "sha256": "3e5258afbc6a88bc4293a9bfe74f09dccc9141c6b13b4952c45c6c713b0936fa"
+  },
+  "status": "SEALED"
+}
