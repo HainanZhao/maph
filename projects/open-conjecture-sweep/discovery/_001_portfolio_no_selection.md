@@ -53,6 +53,27 @@ This rejects only the obvious tangent-plane rational-curve engine.  It does
 not show that `S(Z)` is finite, rule out another rational curve or
 elliptic fibration, or change C98's exact bounded-ansatz boundary.
 
+### Affine-line probe
+
+`PROVED` (elementary exact algebra): neither evident integral point lies on an
+affine rational line contained in `S`. For a line through `P+`, write
+
+```text
+x = 1 + a*t,  y = b*t,  z = 1 + c*t.
+```
+
+The coefficients of `t`, `t^2`, and `t^3` after substitution in `S` are
+`2*c + 3*a`, `c^2 + b^2 + 3*a^2`, and `b^2*c + a^3`. The first two vanish
+over the rationals only when `a = b = c = 0`: the first gives `c = -3*a`,
+and the second becomes `12*a^2 + b^2 = 0`. For a line through `P-`, set
+`z = -1 + c*t`; the first two coefficients are `-2*c + 3*a` and
+`c^2 - b^2 + 3*a^2`. They imply `c = 3*a` and `b^2 = 12*a^2`, hence again
+only the zero rational direction.
+
+This rules out only line parametrizations through the two known integral
+points. It leaves rational curves not through them, multisections, and all
+integrality-preserving maps open.
+
 ## Oracle historical reconstruction
 
 Oracle (`gpt-5.6-sol`, high effort) independently read `PROGRAM.md`, the
