@@ -6,7 +6,7 @@
   conjectures that have not been officially announced as solved by OpenAI,
   seeking either a complete proof/counterexample or a publishable scoped
   theorem, reduction, obstruction, or certified finite result.
-- **Status:** `ACTIVE / PORTFOLIO_DISCOVERY_AFTER_C88`. C72 is closed by the
+- **Status:** `ACTIVE / PORTFOLIO_DISCOVERY_AFTER_C89`. C72 is closed by the
   corrected sealed artifact
   `cycle-72-b072-defect-core-extension-v2`: `PROVED`, every generalized
   rooted \(D=5\) equality core has a universal five-blocker, so every
@@ -72,6 +72,13 @@
   number \(23/8\) for which no one-vertex deletion reaches \(2\).  This
   ends only the greedy one-vertex fractional-drop mechanism, not Ryser or
   non-greedy rounding.
+  C89 is sealed as
+  `cycle-89-b089-sidorenko-rank-one-hessian-boundary-v1`: `PROVED`, for
+  (K_{5,5}\setminus C_{10}), every bounded stationary density-tangent
+  direction at a positive rank-one bigraphon has nonnegative deficit Hessian.
+  The exact 30/30/150 edge-pair decomposition and independent finite-step
+  coefficient replays pass.  This is not local stability or Sidorenko; C89
+  closes this stationary-Hessian mechanism and returns to portfolio discovery.
   C86 is sealed as
   `cycle-86-b086-frankl-all-inclusion-hall-boundary-v1`: `PROVED`, all 2,034
   declared four-point dimension-three controls admit an all-inclusion Hall
@@ -157,7 +164,7 @@ value falls below a screened alternative.
 The entries below are starting candidates. Discovery governs their order and
 may introduce a better eligible problem.
 
-### Current gate — portfolio discovery after C88
+### Current gate — portfolio discovery after C89
 
 - **C80 closure — OBSERVED engine boundary:** the corrected d=6/m=7 and
   d=7/m=6 compression identities passed exact controls. Balance plus
@@ -216,6 +223,12 @@ may introduce a better eligible problem.
   `cycle-88-b088-ryser-fractional-drop-boundary-v1`.  This is a greedy
   one-vertex descent boundary only; do not add pair-deletion or threshold
   repairs within it.
+- **C89 boundary — PROVED / METHOD_BOUNDARY:** the rank-one stationary
+  density-tangent Hessian is nonnegative by the exact 30/30/150 Gram
+  decomposition, independently coefficient-replayed on two rational
+  three-step controls.  It does not imply a local minimum, higher-order
+  control, global Sidorenko, or novelty; do not add grids or regular-graph
+  extensions within C89.
 - **Next action:** run a fresh, wide portfolio-discovery pass, including
   current eligibility and primary-source screens, then let Oracle select one
   distinct small exact gate.  Do not resume C83's local-fiber methods or
