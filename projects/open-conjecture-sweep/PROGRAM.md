@@ -6,7 +6,7 @@
   conjectures that have not been officially announced as solved by OpenAI,
   seeking either a complete proof/counterexample or a publishable scoped
   theorem, reduction, obstruction, or certified finite result.
-- **Status:** `ACTIVE / PORTFOLIO_DISCOVERY_AFTER_C89`. C72 is closed by the
+- **Status:** `ACTIVE / PORTFOLIO_DISCOVERY_AFTER_C90`. C72 is closed by the
   corrected sealed artifact
   `cycle-72-b072-defect-core-extension-v2`: `PROVED`, every generalized
   rooted \(D=5\) equality core has a universal five-blocker, so every
@@ -79,6 +79,10 @@
   The exact 30/30/150 edge-pair decomposition and independent finite-step
   coefficient replays pass.  This is not local stability or Sidorenko; C89
   closes this stationary-Hessian mechanism and returns to portfolio discovery.
+  C90 is sealed as `cycle-90-b090-s4-ttransform-boundary-v1`: `PROVED` for
+  one frozen S4 transposition-transfer line, and `OBSERVED` no reusable
+  character-indexed factor under its one algebra cap. This closes only that
+  representation-transfer bridge; it is not a Zhao or Sidorenko result.
   C86 is sealed as
   `cycle-86-b086-frankl-all-inclusion-hall-boundary-v1`: `PROVED`, all 2,034
   declared four-point dimension-three controls admit an all-inclusion Hall
@@ -164,7 +168,7 @@ value falls below a screened alternative.
 The entries below are starting candidates. Discovery governs their order and
 may introduce a better eligible problem.
 
-### Current gate — portfolio discovery after C89
+### Current gate — portfolio discovery after C90
 
 - **C80 closure — OBSERVED engine boundary:** the corrected d=6/m=7 and
   d=7/m=6 compression identities passed exact controls. Balance plus
@@ -229,6 +233,10 @@ may introduce a better eligible problem.
   three-step controls.  It does not imply a local minimum, higher-order
   control, global Sidorenko, or novelty; do not add grids or regular-graph
   extensions within C89.
+- **C90 boundary — PROVED / OBSERVED:** two exact contractions prove strict
+  monotonicity on one prescribed S4 T-transform line; the authorized factor
+  cap found no reusable character-indexed identity. Do not test another
+  transfer, background, group, grid, or graphon variation within C90.
 - **Next action:** run a fresh, wide portfolio-discovery pass, including
   current eligibility and primary-source screens, then let Oracle select one
   distinct small exact gate.  Do not resume C83's local-fiber methods or
