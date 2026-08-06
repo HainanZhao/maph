@@ -6,10 +6,10 @@
   conjectures that have not been officially announced as solved by OpenAI,
   seeking either a complete proof/counterexample or a publishable scoped
   theorem, reduction, obstruction, or certified finite result.
-- **Status:** `ACTIVE / PORTFOLIO_DISCOVERY_AFTER_C98`. Earlier closed
+- **Status:** `ACTIVE / PORTFOLIO_DISCOVERY_AFTER_C99`. Earlier closed
   problems, eligibility corrections, and method boundaries are preserved in
   cycle artifacts and the current-gate ledger below. The active frontier is
-  fresh source/idea discovery after C98; no new attack is authorized until a
+  fresh source/idea discovery after C99; no new attack is authorized until a
   source-cleared gate is selected.
 - **Claim boundary:** all solve probabilities and tractability rankings below
   are `CONJECTURED` planning estimates. A bounded source search is not proof
@@ -89,7 +89,7 @@ value falls below a screened alternative.
 The entries below are starting candidates. Discovery governs their order and
 may introduce a better eligible problem.
 
-### Current gate — portfolio discovery after C98
+### Current gate — portfolio discovery after C99
 
 - **C80 closure — OBSERVED engine boundary:** the corrected d=6/m=7 and
   d=7/m=6 compression identities passed exact controls. Balance plus
@@ -192,7 +192,7 @@ may introduce a better eligible problem.
   \(Q_5\), grids, random points, or arbitrary cube points without a new
   orbit/metric mechanism; return to portfolio discovery after the C95
   postmortem.
-- **Next action:** perform a fresh source/eligibility screen, then invoke
+- **Historical next action before C96:** perform a fresh source/eligibility screen, then invoke
   Oracle only with an artifact-cited historical exclusion map and a genuinely
   new exact or rigorous first gate.
 - **C96 screen — NO_SELECTION:** the post-C95 primary-source search found no
@@ -217,6 +217,14 @@ may introduce a better eligible problem.
   do not enlarge the box. See sealed
   `cycle-98-b098-diophantine-fixed-ansatz-boundary-v1`; pivot to an
   elliptic-surface or norm-form engine after a fresh source/idea screen.
+- **C99 screen — NO_SELECTION:** the primary quadratic-form source confirms
+  that `z^2+y^2 z+x^3-2=0` remains open, but its tangent algorithm does not
+  transfer directly: completing the square leaves an additional square-
+  coordinate constraint. Oracle ranked a square-preserving tangent lift,
+  elliptic multisection, and cubic norm-form orbit as future designs, but none
+  has a finite state, verifier, and falsifier. Do not open C99 as an attack,
+  enlarge C98, or run the `|x|>10^50` benchmark search. See
+  `discovery/cycle99_quadratic_form_screen.md`.
 
 ### Closed gate — C80 quaternary Legendre pairs, length 42
 
