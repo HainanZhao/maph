@@ -6,99 +6,11 @@
   conjectures that have not been officially announced as solved by OpenAI,
   seeking either a complete proof/counterexample or a publishable scoped
   theorem, reduction, obstruction, or certified finite result.
-- **Status:** `ACTIVE / PORTFOLIO_DISCOVERY_AFTER_C95`. C72 is closed by the
-  corrected sealed artifact
-  `cycle-72-b072-defect-core-extension-v2`: `PROVED`, every generalized
-  rooted \(D=5\) equality core has a universal five-blocker, so every
-  intersecting six-partite six-uniform \(H\) with \(\tau(H)=6\) has
-  \(D(H)\ge6\). This does not prove Ryser. V2 supersedes v1 only because
-  v1 embedded nondeterministic runtime fields; its mathematical replay passed.
-  Problem 2 closed at C68 with a `PROVED` fixed-`S3` Zhao-comparison
-  theorem, not Zhao's all-group condition or Sidorenko. Problem 1 remains
-  paused at its C50 handoff. C74/C75's Holevo--Utkin target is closed by
-  **eligibility loss**, not by this program: Zhang's arXiv:2605.05243v1
-  (4 May 2026), Theorem 2, proves the conjecture for all \(d\ge4\).
-  C75's work is an overlapping reconstruction with no novelty or paper
-  claim. Its required closure postmortem is recorded in root POSTMORTEMS.md.
-  C76 completed the corrected source screen and Oracle selected the
-  compatible-marginal spin-alignment conjecture for a small exact falsifier
-  gate.  C77's finite packet is contained and its diagonal replay is prior
-  art. C79 now `PROVED` the \(Q=I/2\) endpoint independently, using the
-  published Higuchi--Sudbery--Szulc polygon theorem, direct two-projection
-  algebra, and an exact replay. The separately audited C78 bridge is now
-  reinstated as `PROVED` through same-cycle correction v3. Its paper phase
-  completed as a documented non-release outcome because authorship, release
-  archive, DOI, and repository-release gates are absent. C76--C79 is closed
-  and postmortemed. C80's corrected compression controls and exact
-  compressed-witness gate are contained: they produce necessary signatures,
-  not a lift invariant, so C80 is closed and postmortemed. Per its
-  preregistered pivot, select the LEM 4-cycle gate next. C81 is sealed as
-  `cycle-81-b081-lem-method-boundary-v1`: it proves equal directed girth and
-  supplies exact dominance/XYZ-only method falsifiers, but does not resolve
-  equal spectra. C82 is sealed as
-  `cycle-82-b082-lem-inverse-family-boundary-v1`: `PROVED`, its frozen
-  15-element three-chain substitution has 571,725 linear extensions and no
-  full directed 4-cycle. That ends only this one-member construction family.
-  C83 is sealed as
-  `cycle-83-b083-lem-local-defect-boundary-v1`: `PROVED`, exact C81/C82
-  controls falsify the conditional-majority, outside-word-pairing, and final
-  global-defect mechanisms.  No frozen control realizes the full ordered
-  two-triangle hypothesis, so this is a method boundary rather than a result
-  on Question 14.  Per its pivot rule, return to portfolio discovery; do not
-  widen C82 or add another local-fiber C83 variant.
-  C84 is sealed as
-  `cycle-84-b084-lrc-composite-polynomial-boundary-v1`: `PROVED`, the direct
-  \(\mathbb Z_{14}\) replacement for the 2026 LRC paper's prime-field
-  target-box lemma fails on \((0,7,0,\ldots,0)\), and on 4,824 of 8,191
-  declared binary zero-divisor controls.  This ends only the verbatim
-  composite extension; it neither refutes \(LRC(13)\) nor authorizes another
-  p=199 local-census continuation.  Return to portfolio discovery.
-  C85 is sealed as
-  `cycle-85-b085-sidorenko-c5-kernel-boundary-v1`: `PROVED`, direct and
-  triple-kernel evaluations agree on 729 declared rational two-atom
-  bigraphon controls, with no negative defects and 81 equalities.  The exact
-  two-atom CP defect has 8,771 terms; `OBSERVED`, the one bounded
-  factorization/division attempt produced no certificate or negative
-  specialization before the host time window.  This is not a conclusion on
-  (C5-K) or Sidorenko.  Return to portfolio discovery; do not enlarge this
-  C5-kernel grid. C87 is sealed as
-  `cycle-87-b087-ryser-private-absorption-boundary-v1`: `PROVED`, a minimal
-  12-point pair-covering partition system has six nonempty private regions
-  but no third-color absorbed pair, while retaining a three-component cover.
-  This ends only the private-region absorption invariant.
-  C88 is sealed as
-  `cycle-88-b088-ryser-fractional-drop-boundary-v1`: `PROVED`, the published
-  13-edge six-partite control has a nine-edge residual of fractional cover
-  number \(23/8\) for which no one-vertex deletion reaches \(2\).  This
-  ends only the greedy one-vertex fractional-drop mechanism, not Ryser or
-  non-greedy rounding.
-  C89 is sealed as
-  `cycle-89-b089-sidorenko-rank-one-hessian-boundary-v1`: `PROVED`, for
-  (K_{5,5}\setminus C_{10}), every bounded stationary density-tangent
-  direction at a positive rank-one bigraphon has nonnegative deficit Hessian.
-  The exact 30/30/150 edge-pair decomposition and independent finite-step
-  coefficient replays pass.  This is not local stability or Sidorenko; C89
-  closes this stationary-Hessian mechanism and returns to portfolio discovery.
-  C90 is sealed as `cycle-90-b090-s4-ttransform-boundary-v1`: `PROVED` for
-  one frozen S4 transposition-transfer line, and `OBSERVED` no reusable
-  character-indexed factor under its one algebra cap. This closes only that
-  representation-transfer bridge; it is not a Zhao or Sidorenko result.
-  C91 is sealed as `cycle-91-b091-ryser-cover-trace-boundary-v1`: `PROVED`,
-  the complete deletion-cover families of the published 13-edge \(\tau=5\)
-  Ryser control make the one frozen reciprocal coordinate-trace CSP UNSAT by
-  two exact routes. This closes only that rank-shifted trace-gluing axiom; it
-  is not evidence about \(\tau=6\), Ryser, or other trace systems.
-  C92 is sealed as `cycle-92-b092-frankl-temperature-boundary-v1`: `PROVED`,
-  its two exact enumerators agree on 4,223 frozen intersection-closed
-  four-coordinate families and no endpoint-witness crossing occurs. This is
-  a finite control only, not a common-witness theorem or a Frankl result.
-  C86 is sealed as
-  `cycle-86-b086-frankl-all-inclusion-hall-boundary-v1`: `PROVED`, all 2,034
-  declared four-point dimension-three controls admit an all-inclusion Hall
-  matching for some optimal element, but the published five-point Example
-  3.20 has every element optimal and abundant while every such matching
-  fails.  This closes only the inclusion-edge transport mechanism; return to
-  portfolio discovery without a larger Frankl census.
+- **Status:** `ACTIVE / PORTFOLIO_DISCOVERY_AFTER_C98`. Earlier closed
+  problems, eligibility corrections, and method boundaries are preserved in
+  cycle artifacts and the current-gate ledger below. The active frontier is
+  fresh source/idea discovery after C98; no new attack is authorized until a
+  source-cleared gate is selected.
 - **Claim boundary:** all solve probabilities and tractability rankings below
   are `CONJECTURED` planning estimates. A bounded source search is not proof
   that a problem is open or untouched by OpenAI; eligibility must be checked
