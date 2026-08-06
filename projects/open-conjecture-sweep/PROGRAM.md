@@ -46,6 +46,13 @@
   two-triangle hypothesis, so this is a method boundary rather than a result
   on Question 14.  Per its pivot rule, return to portfolio discovery; do not
   widen C82 or add another local-fiber C83 variant.
+  C84 is sealed as
+  `cycle-84-b084-lrc-composite-polynomial-boundary-v1`: `PROVED`, the direct
+  \(\mathbb Z_{14}\) replacement for the 2026 LRC paper's prime-field
+  target-box lemma fails on \((0,7,0,\ldots,0)\), and on 4,824 of 8,191
+  declared binary zero-divisor controls.  This ends only the verbatim
+  composite extension; it neither refutes \(LRC(13)\) nor authorizes another
+  p=199 local-census continuation.  Return to portfolio discovery.
 - **Claim boundary:** all solve probabilities and tractability rankings below
   are `CONJECTURED` planning estimates. A bounded source search is not proof
   that a problem is open or untouched by OpenAI; eligibility must be checked
@@ -124,7 +131,7 @@ value falls below a screened alternative.
 The entries below are starting candidates. Discovery governs their order and
 may introduce a better eligible problem.
 
-### Current gate — portfolio discovery after C83
+### Current gate — portfolio discovery after C84
 
 - **C80 closure — OBSERVED engine boundary:** the corrected d=6/m=7 and
   d=7/m=6 compression identities passed exact controls. Balance plus
@@ -151,9 +158,18 @@ may introduce a better eligible problem.
   one final global-defect inequality has 18 C81 and 768 C82 violations.  See
   sealed `cycle-83-b083-lem-local-defect-boundary-v1` for its exact claim
   boundary; it does not test the full ordered two-triangle configuration.
+- **C84 boundary — PROVED:** after source overlap rejected the selected
+  1/3--2/3 and Frankl decompositions as prior art, Oracle selected the new
+  LRC polynomial route's \(k=13\) composite-modulus gate.  Its direct
+  \(\mathbb Z_{14}\) target-box analogue has the exact witness
+  \((0,7,0,\ldots,0)\); the complete declared binary fiber has 4,824
+  failures.  See sealed
+  `cycle-84-b084-lrc-composite-polynomial-boundary-v1`.  This is a source
+  theorem-interface boundary, not an eventual-properness or LRC result.
 - **Next action:** run a fresh, wide portfolio-discovery pass, including
   current eligibility and primary-source screens, then let Oracle select one
-  distinct small exact gate.  Do not resume C83's local-fiber methods.
+  distinct small exact gate.  Do not resume C83's local-fiber methods or
+  C84's direct composite target-box extension.
 
 ### Closed gate — C80 quaternary Legendre pairs, length 42
 
