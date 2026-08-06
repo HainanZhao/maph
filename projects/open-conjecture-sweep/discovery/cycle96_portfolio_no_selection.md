@@ -21,6 +21,15 @@ machinery. No smallest unresolved group with an aggregate-feasible exact
 enumerator is supplied; selecting one would be a scale-driven census, not a
 new bounded gate.
 
+The primary source for Ferudun, *Positivity of stretched
+Littlewood--Richardson coefficients for partitions of length at most four*
+(arXiv:2607.22301), proves the entire length-at-most-four case by an exact
+rank-four normal-atlas check. Its remaining frontier is the conjectural
+all-rank hive-specific effectivity statement (HTE); the source supplies no
+smallest unresolved rank-five instance with a preregisterable exact
+falsifier. Treating HTE itself as a finite attack would therefore be a method
+substitution, not a bounded source-defined gate.
+
 The C80--C95 artifact history contains no untested candidate with a named
 state, invariant, exact verifier, falsifier, and resource-bounded stop rule.
 Therefore C96 is `NO_SELECTION`. Do not invoke Oracle merely to restate C95 or
