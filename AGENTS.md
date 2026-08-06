@@ -224,22 +224,31 @@ that the new candidate changes. A candidate whose relevant map cannot identify
 such a delta is a duplicate, even when chat context has forgotten the older
 cycle. A current statement, recent failure, or earlier Oracle wording is never
 evidence that a candidate is new. When no candidate survives this comparison,
-return `NO_SELECTION` with the missing bridge stated precisely; do not turn it
-into a recommendation merely to keep the program active.
+identify the missing bridge precisely and use it to formulate the first bounded
+design question for the selected highest-information problem; do not return an
+idle `NO_SELECTION` outcome.
 
-For problem selection, the primary supplies its independent analysis; Oracle
-selects and records alternatives, strongest flaw, falsifier, information gain,
-and stop/pivot criterion. The primary executes the choice. At other forks,
-Oracle advises and the primary decides. Use one concise evidence packet and do
-not invoke, poll, or wait for Oracle during ordinary research.
+For a problem-selection cycle, Oracle owns the selection. The primary must
+not pre-propose target issues, candidates, or a preferred answer for Oracle to
+ratify; it supplies only the program location and any necessary access facts.
+Oracle independently reads the program, develops the portfolio, and **must
+select one concrete next problem**. `NO_SELECTION` is not an allowable
+selection outcome. If every option has a missing bridge, Oracle selects the
+highest-information problem and makes that bridge the first explicitly bounded
+design question rather than returning an idle screen. Its packet records the
+selected problem, alternatives, strongest flaw, falsifier, information gain,
+stop/pivot criterion, and the required input state, proposed
+invariant/map/transition, smallest direct verifier, and resource-bounded stop
+criterion. The primary executes the choice. At other forks, Oracle advises and
+the primary decides. Use one concise evidence packet and do not invoke, poll,
+or wait for Oracle during ordinary research.
 
 An Oracle recommendation to open a new engine is actionable only if its packet
-also names the input state, the proposed invariant/map/transition, the smallest
+names the input state, the proposed invariant/map/transition, the smallest
 direct verifier, and a resource-bounded stop criterion. An unspecified
-"missing interface" is a `NO_SELECTION` design finding, not an attack choice:
-record its missing data, do not start a finite census as a proxy, and return to
-the primary discovery screen. Do not send follow-ups merely to turn a
-`NO_SELECTION` into an active-looking status.
+"missing interface" is insufficient: refine it into one such bounded design
+question before opening the selected cycle. Do not use a finite census as a
+proxy for that question.
 
 ### One live specification per cycle
 
