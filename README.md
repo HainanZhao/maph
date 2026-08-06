@@ -3,6 +3,16 @@
 This repository contains independent mathematical research programs. Each
 project is self-contained: run its commands from that project's directory.
 
+## Published results
+
+- **`PROVED` — The width-four q-Fibonomial coefficients are unimodal.** For
+  every integer (m\geq1),
+  \(\left[\!\begin{smallmatrix}m+4\\4\end{smallmatrix}\!\right]_{\mathcal F}\)
+  is unimodal. Read the [paper](paper/qfib-width-four/main.pdf), inspect the
+  [source and verification record](paper/qfib-width-four/), or cite the
+  public proof archive: [doi:10.5281/zenodo.21826970](https://doi.org/10.5281/zenodo.21826970).
+  Exact replay: `python3 proof/qfib_width4_unimodality_proof.py`.
+
 ## Projects
 
 - [`projects/erdos-700/`](projects/erdos-700/): exact and computational

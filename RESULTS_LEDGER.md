@@ -16,3 +16,21 @@ evidence.
   two-parameter conjecture, log-concavity, or a chain decomposition.
 - External-uptake status: awaiting a third-party citation, reuse, or
   correspondence; publication alone does not satisfy the primary goal.
+
+## 2026-08-06 — Conjecture 5.4 at k = r = 4
+
+- Classification: **Outcome B — reduced (proof attempt remains live until
+  the 2026-10-31 review)**.
+- Claim: the non-divisible sufficient-condition branch reduces to the
+  four-section/window-dominance inequality stated in
+  `discovery/qanalog_k4_r4_reduction.md`; the divisible branch follows from
+  the source's published results.
+- Community check: this is Connelly--Ito--Martinez--Shevchenko--Yang
+  Conjecture 5.4 and its first corner outside both proved regimes `k <= 3`
+  and `r <= 3`.
+- Boundary evidence: exact sharp-boundary testing through `a_i <= 64` found
+  no counterexample; this is `OBSERVED`, not proof. Replay with
+  `python3 discovery/goal_qanalog_k4r4_boundary.py --limit 64`.
+- Evidence note: `discovery/qanalog_k4_r4_audience_boundary.md`.
+- Kill criterion: if no proof exists by 2026-10-31, ship Outcome B as the
+  final short note and do not extend the date.
