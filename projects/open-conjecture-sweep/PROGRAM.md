@@ -134,13 +134,9 @@ the paper trigger. **Oracle** is the named companion for this
 program. Problem selection is a critical decision led by Oracle: it
 independently screens the eligible candidates,
 proposes and ranks targets, challenges the inherited framing, and selects the
-next target from a concise evidence packet. Before deciding, Oracle must itself
-read the relevant sealed-cycle summaries and intervening selection/overlap/no-
-selection records, then provide an artifact-cited exclusion map showing why
-each serious candidate is not a forgotten C80--C94 method. The primary agent
-supplies its own candidate analysis and then executes the selected attack; it
-does not wait for user approval. The companion is not used for ordinary attack
-work.
+next target from a concise evidence packet. The primary agent supplies its own
+candidate analysis and then executes the selected attack; it does not wait for
+user approval. The companion is not used for ordinary attack work.
 
 Each selected problem has an 80-cycle envelope, with an automatic strategic
 review at 50 cycles since its selection. The 50-cycle review is a *discovery
