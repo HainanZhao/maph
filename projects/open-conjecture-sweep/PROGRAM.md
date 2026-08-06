@@ -6,7 +6,7 @@
   conjectures that have not been officially announced as solved by OpenAI,
   seeking either a complete proof/counterexample or a publishable scoped
   theorem, reduction, obstruction, or certified finite result.
-- **Status:** `ACTIVE / PORTFOLIO_DISCOVERY_AFTER_C94`. C72 is closed by the
+- **Status:** `ACTIVE / C95_BOOLEAN_FOUR_CUBE_GATE`. C72 is closed by the
   corrected sealed artifact
   `cycle-72-b072-defect-core-extension-v2`: `PROVED`, every generalized
   rooted \(D=5\) equality core has a universal five-blocker, so every
@@ -265,11 +265,15 @@ may introduce a better eligible problem.
   schema, not Zhao's comparison.  Do not run an \(S_4\)/\(S_5\) recurrence
   census.  A future bridge must specify an inclusion-compatible subgroup tower
   and state map before executable work; otherwise resume wide discovery.
-- **Next action:** run a fresh, wide portfolio-discovery pass, including
-  current eligibility and primary-source screens, then let Oracle select one
-  distinct small exact gate.  Do not resume C83's local-fiber methods or
-  C84's direct composite target-box extension, or enlarge C85's C5-kernel
-  grid or C86's all-inclusion transport census without a new mechanism.
+- **C95 selection — CONJECTURED:** Oracle's artifact-cited C80--C94 exclusion
+  map selected the adjusted Bollobás--Meir Boolean four-cube gate: test every
+  nontrivial subset of \(\{0,1\}^4\) for a Hamiltonian cycle of fourth-power
+  Euclidean cost at most \(32\). A certified excess refutes the adjusted
+  \(k=4\) conjecture; a pass proves only that finite class and must stop
+  absent an orbit/metric explanation. Do not quotient, enlarge to \(Q_5\),
+  or use rational grids/random points.
+- **Next action:** preflight and execute only the C95 frozen labelled-subset
+  exact gate, then independently audit every emitted witness.
 
 ### Closed gate — C80 quaternary Legendre pairs, length 42
 
