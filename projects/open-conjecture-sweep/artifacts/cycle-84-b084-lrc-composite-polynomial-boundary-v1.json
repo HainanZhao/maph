@@ -1,0 +1,162 @@
+{
+  "artifact_id": "cycle-84-b084-lrc-composite-polynomial-boundary-v1",
+  "audit": {
+    "exhaustive_binary_fiber": {
+      "epistemic_status": "PROVED",
+      "failing_vectors": 4824,
+      "fiber_vectors": 8191,
+      "first_failure": {
+        "vector": [
+          0,
+          7,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "k": 13,
+      "modulus": 14,
+      "status": "PASS",
+      "successful_vectors": 3367,
+      "unit_pairs_per_vector": 36
+    },
+    "independent_witness_table": {
+      "all_unit_s_have_s_times_7_equal_7": true,
+      "epistemic_status": "PROVED",
+      "modulus": 14,
+      "r_rows": [
+        {
+          "bad_coordinates": [
+            13
+          ],
+          "r": 1
+        },
+        {
+          "bad_coordinates": [
+            2,
+            9
+          ],
+          "r": 3
+        },
+        {
+          "bad_coordinates": [
+            11
+          ],
+          "r": 5
+        },
+        {
+          "bad_coordinates": [
+            3
+          ],
+          "r": 9
+        },
+        {
+          "bad_coordinates": [
+            5
+          ],
+          "r": 11
+        },
+        {
+          "bad_coordinates": [
+            1
+          ],
+          "r": 13
+        }
+      ],
+      "status": "PASS",
+      "vector": [
+        0,
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "budget_ordinal": "B084",
+  "claim_boundary": "This refutes only the verbatim composite extension of the cited target-box lemma. It neither refutes LRC(13), nor eventual properness, nor every possible CRT/composite-modulus theorem.",
+  "cycle": 84,
+  "cycle_decision": {
+    "companion_advice": "Audit the k=13 CRT obstruction in the prime-field Proposition 4.1 and pivot if a structural zero-divisor case survives.",
+    "companion_identity": "/root/oracle_c84_portfolio (Oracle)",
+    "decision": "Seal the exact direct-extension boundary and return to portfolio discovery rather than reopen the paused p=199 local LRC engine.",
+    "falsifier": "A successful unit pair for the named vector, or a differing exhaustive binary-fiber count."
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "certificate": {
+      "path": "proof/cycle84_composite_prop41_boundary.md",
+      "sha256": "0a48911b5088de0f17c0045697cb8d31e7447dd12689d67aac3e76d6d259c78e"
+    },
+    "exhaustive_checker": {
+      "path": "proof/check_cycle84_composite_prop41.py",
+      "sha256": "d9b82942894455aab304177d237a72b0ae7e661fecceec50f794e4060e3053c8"
+    },
+    "idea_selection": {
+      "path": "discovery/cycle84_portfolio_idea_selection.md",
+      "sha256": "01fb3a89b2ba32b81068f928812e691402dc61c1d71703eed5482db71c549549"
+    },
+    "preregistration": {
+      "path": "docs/cycle-84-b084-lrc-composite-eventual-properness-preregistration-v1.md",
+      "sha256": "6ad97975a51887e7b3097d6beb0624740c0cc5acdea08fbf68d83d568dcbd13a"
+    },
+    "prior_lrc_boundary": {
+      "path": "artifacts/cycle-50-b050-lrc-deletion-aware-packet-v1.json",
+      "sha256": "c29fb94c0e7eea145157ea3e71deb71c5352da6ebc53c96e908a93576047f3e9"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "source_audit": {
+      "path": "discovery/cycle84_lrc_source_audit.md",
+      "sha256": "94051d81a7c342e98a1ba23545941b154b8e2102aae67beb3a0921a91aff2da5"
+    },
+    "test": {
+      "path": "tests/test_cycle84_composite_prop41.py",
+      "sha256": "6c56845b4d1daca46081597ea83c221108dff4ee9df3aa80123bdeca6054dc7e"
+    },
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    },
+    "witness_checker": {
+      "path": "proof/check_cycle84_composite_witness.py",
+      "sha256": "f676986f4d347c1e3ebc5349473e786503f9d1c2049ef24e5765018bc3153348"
+    }
+  },
+  "outcome": "The direct Z_14 analogue of the source's prime-field target-box lemma fails: 4,824 of 8,191 declared binary zero-divisor vectors fail, including (0,7,0,...,0).",
+  "record_type": "METHOD_BOUNDARY",
+  "recorded_at_utc": "2026-08-06T00:20:22Z",
+  "replay": {
+    "audit": "python3 proof/check_cycle84_composite_prop41.py && python3 proof/check_cycle84_composite_witness.py",
+    "check": "python3 proof/build_cycle_84_lrc_composite_boundary.py --check",
+    "test": "pytest -q tests/test_cycle84_composite_prop41.py"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_84_lrc_composite_boundary.py",
+    "sha256": "ea596e9ce377cac824ee39232a24eda5e0a3e326130ff6badb33b23c2c91354c"
+  },
+  "status": "SEALED"
+}
