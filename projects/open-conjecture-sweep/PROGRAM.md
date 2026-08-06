@@ -6,10 +6,10 @@
   conjectures that have not been officially announced as solved by OpenAI,
   seeking either a complete proof/counterexample or a publishable scoped
   theorem, reduction, obstruction, or certified finite result.
-- **Status:** `C001_STOPPED / D001_RESERVED_NO_SELECTION` (legacy cycle `C100`). Earlier closed
+- **Status:** `C001_STOPPED / _001_NO_SELECTION / D001_RESERVED` (legacy cycle `C100`). Earlier closed
   problems, eligibility corrections, and method boundaries are preserved in
   cycle artifacts and the current-gate ledger below. C001's ES(7) anchor
-  stopped at its invalid n=25 control criterion. The D001 screen returned
+  stopped at its invalid n=25 control criterion. The _001 screen returned
   `NO_SELECTION`; the next genuinely selected problem must be D001.
 - **Claim boundary:** all solve probabilities and tractability rankings below
   are `CONJECTURED` planning estimates. A bounded source search is not proof
@@ -39,19 +39,23 @@
 
 ## Problem-track identifiers
 
-Use a problem prefix plus a three-digit within-problem sequence for strategic
-state: `A001`, `B001`, `C001`, and so on.  The current ES(7) problem is
-**C001**; its live legacy preregistration remains `C100` and must not be
-renamed.  Continue this problem as `C002`, `C003`, … only for genuinely new
-research cycles in the same problem.  Do not retrofit the older record
-registry or artifact filenames.
+Use a problem prefix plus a three-digit within-problem sequence only for
+credit-consuming research state: `A001`, `B001`, `C001`, and so on. The
+current ES(7) problem is **C001**; its live legacy preregistration remains
+`C100` and must not be renamed. Continue this problem as `C002`, `C003`, …
+only for genuinely new research cycles in the same problem. Do not retrofit
+the older record registry or artifact filenames.
 
-The next genuinely selected problem starts **D001**.  Thereafter, a material
-problem selection advances the letter and restarts at `001`; a routine
-continuation, method optimization, correction, or `NO_SELECTION` retains the
-current problem prefix.  New program summaries should lead with the prefix and
-give the legacy cycle in parentheses when one exists, for example
-`C001 (C100)`.
+Every new non-credit selection, source/eligibility screen, postmortem, or
+other strategic decision uses a separate global underscore sequence:
+`_001`, `_002`, … . These records do not allocate a problem prefix, consume a
+cycle credit, or restart a problem's numeric sequence. `_001` is the present
+no-selection screen. The next genuinely selected problem starts **D001**.
+Thereafter, a material problem selection advances the letter and restarts at
+`001`; a routine continuation, method optimization, correction, or
+`NO_SELECTION` retains the current problem prefix. New program summaries
+should lead with the appropriate prefix and give the legacy cycle in
+parentheses when one exists, for example `C001 (C100)`.
 
 ## Automatic portfolio loop and budget
 
@@ -272,13 +276,15 @@ may introduce a better eligible problem.
   be UNSAT was an invalid scalability criterion, so it cannot authorize a
   canonical retry. This is neither an ES(7) result nor a SAT-model
   realizability claim. See `discovery/cycle100_control_outcome.md`.
-- **D001 screen — NO_SELECTION:** Oracle independently reconstructed the
+- **_001 screen — NO_SELECTION:** Oracle independently reconstructed the
   C80--C001 decisions and found no candidate with an explicit state,
   invariant/transition, direct verifier, falsifier, bounded stop, and a
   nonduplicating historical delta. The closest design is C99's
-  square-preserving tangent lift, but it lacks its required self-map and
-  integrality invariant. D001 is reserved; do not start a new attack or turn
-  the missing bridge into a census. See `discovery/d001_portfolio_no_selection.md`.
+  square-preserving tangent lift. Its two evident tangent-plane curves have
+  only their base integral points, and no non-tangent-plane self-map or
+  integrality invariant is known. D001 is reserved; do not start a new attack
+  or turn the missing bridge into a census. See
+  `discovery/_001_portfolio_no_selection.md`.
 
 ### Closed gate — C80 quaternary Legendre pairs, length 42
 
