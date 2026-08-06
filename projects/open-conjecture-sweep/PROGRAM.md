@@ -177,7 +177,7 @@ value falls below a screened alternative.
 The entries below are starting candidates. Discovery governs their order and
 may introduce a better eligible problem.
 
-### Current gate — portfolio discovery after C90
+### Current gate — portfolio discovery after C96
 
 - **C80 closure — OBSERVED engine boundary:** the corrected d=6/m=7 and
   d=7/m=6 compression identities passed exact controls. Balance plus
