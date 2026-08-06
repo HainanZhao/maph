@@ -6,11 +6,11 @@
   conjectures that have not been officially announced as solved by OpenAI,
   seeking either a complete proof/counterexample or a publishable scoped
   theorem, reduction, obstruction, or certified finite result.
-- **Status:** `C001_STOPPED / _002_NO_SELECTION / D001_RESERVED` (legacy cycle `C100`). Earlier closed
+- **Status:** `C001_STOPPED / D001_SELECTION_PENDING` (legacy cycle `C100`). Earlier closed
   problems, eligibility corrections, and method boundaries are preserved in
   cycle artifacts and the current-gate ledger below. C001's ES(7) anchor
-  stopped at its invalid n=25 control criterion. The _002 screen returned
-  `NO_SELECTION`; the next genuinely selected problem must be D001.
+  stopped at its invalid n=25 control criterion. The next genuinely selected
+  problem must be D001, selected independently by Oracle.
 - **Claim boundary:** all solve probabilities and tractability rankings below
   are `CONJECTURED` planning estimates. A bounded source search is not proof
   that a problem is open or untouched by OpenAI; eligibility must be checked
@@ -50,11 +50,11 @@ Every new non-credit selection, source/eligibility screen, postmortem, or
 other strategic decision uses a separate global underscore sequence:
 `_001`, `_002`, … . These records do not allocate a problem prefix, consume a
 cycle credit, or restart a problem's numeric sequence. `_001` and `_002` are
-the current non-credit no-selection screens. The next genuinely selected
-problem starts **D001**.
+historical non-credit screens; they do not defer the next selection. The next
+genuinely selected problem starts **D001**.
 Thereafter, a material problem selection advances the letter and restarts at
-`001`; a routine continuation, method optimization, correction, or
-`NO_SELECTION` retains the current problem prefix. New program summaries
+`001`; a routine continuation, method optimization, or correction retains the
+current problem prefix. New program summaries
 should lead with the appropriate prefix and give the legacy cycle in
 parentheses when one exists, for example `C001 (C100)`.
 
@@ -277,21 +277,21 @@ may introduce a better eligible problem.
   be UNSAT was an invalid scalability criterion, so it cannot authorize a
   canonical retry. This is neither an ES(7) result nor a SAT-model
   realizability claim. See `discovery/cycle100_control_outcome.md`.
-- **_001 screen — NO_SELECTION:** Oracle independently reconstructed the
+- **_001 historical screen:** Oracle independently reconstructed the
   C80--C001 decisions and found no candidate with an explicit state,
   invariant/transition, direct verifier, falsifier, bounded stop, and a
   nonduplicating historical delta. The closest design is C99's
   square-preserving tangent lift. Its two evident tangent-plane curves have
   only their base integral points, and no non-tangent-plane self-map or
-  integrality invariant is known. D001 is reserved; do not start a new attack
-  or turn the missing bridge into a census. See
+  integrality invariant is known. This is an exclusion record, not permission
+  to leave D001 unselected. See
   `discovery/_001_portfolio_no_selection.md`.
-- **_002 screen — NO_SELECTION:** the 2026 near-Williamson source gives a
+- **_002 historical screen:** the 2026 near-Williamson source gives a
   genuine structured order-167 Hadamard-668 state and exact autocorrelation
   verifier, unlike the C96 record. But it ends at exhaustive generation and
   has no lift, constructor, or informative negative cap at 167. Do not run a
-  SAT/local-search/enumeration census; D001 requires a non-enumerative map and
-  reconstruction invariant. See
+  SAT/local-search/enumeration census. This is an exclusion record, not an
+  allowable selection outcome; Oracle must now choose D001 independently. See
   `discovery/_002_hadamard_near_williamson_screen.md`.
 
 ### Closed gate — C80 quaternary Legendre pairs, length 42
