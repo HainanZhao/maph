@@ -6,7 +6,7 @@
   conjectures that have not been officially announced as solved by OpenAI,
   seeking either a complete proof/counterexample or a publishable scoped
   theorem, reduction, obstruction, or certified finite result.
-- **Status:** `ACTIVE / C95_BOOLEAN_FOUR_CUBE_GATE`. C72 is closed by the
+- **Status:** `ACTIVE / PORTFOLIO_DISCOVERY_AFTER_C95`. C72 is closed by the
   corrected sealed artifact
   `cycle-72-b072-defect-core-extension-v2`: `PROVED`, every generalized
   rooted \(D=5\) equality core has a universal five-blocker, so every
@@ -272,8 +272,16 @@ may introduce a better eligible problem.
   \(k=4\) conjecture; a pass proves only that finite class and must stop
   absent an orbit/metric explanation. Do not quotient, enlarge to \(Q_5\),
   or use rational grids/random points.
-- **Next action:** preflight and execute only the C95 frozen labelled-subset
-  exact gate, then independently audit every emitted witness.
+- **C95 boundary — PROVED:** the exact rooted Held--Karp replay and independent
+  witness audit cover all 65,519 labelled nontrivial subsets of \(Q_4\), with
+  maximum cost 32 and no excess. See sealed
+  `cycle-95-b095-bollobas-meir-q4-boundary-v1`. This proves only the Boolean
+  four-cube subclass of the adjusted Bollobás--Meir conjecture. Do not move to
+  \(Q_5\), grids, random points, or arbitrary cube points without a new
+  orbit/metric mechanism; return to portfolio discovery after the C95
+  postmortem.
+- **Next action:** run the C95 closure postmortem, then perform a fresh
+  source/eligibility screen before Oracle selection.
 
 ### Closed gate — C80 quaternary Legendre pairs, length 42
 
