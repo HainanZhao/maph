@@ -6,7 +6,7 @@
   conjectures that have not been officially announced as solved by OpenAI,
   seeking either a complete proof/counterexample or a publishable scoped
   theorem, reduction, obstruction, or certified finite result.
-- **Status:** `ACTIVE / PORTFOLIO_DISCOVERY_AFTER_C86`. C72 is closed by the
+- **Status:** `ACTIVE / PORTFOLIO_DISCOVERY_AFTER_C87`. C72 is closed by the
   corrected sealed artifact
   `cycle-72-b072-defect-core-extension-v2`: `PROVED`, every generalized
   rooted \(D=5\) equality core has a universal five-blocker, so every
@@ -61,7 +61,11 @@
   factorization/division attempt produced no certificate or negative
   specialization before the host time window.  This is not a conclusion on
   (C5-K) or Sidorenko.  Return to portfolio discovery; do not enlarge this
-  C5-kernel grid.
+  C5-kernel grid. C87 is sealed as
+  `cycle-87-b087-ryser-private-absorption-boundary-v1`: `PROVED`, a minimal
+  12-point pair-covering partition system has six nonempty private regions
+  but no third-color absorbed pair, while retaining a three-component cover.
+  This ends only the private-region absorption invariant.
   C86 is sealed as
   `cycle-86-b086-frankl-all-inclusion-hall-boundary-v1`: `PROVED`, all 2,034
   declared four-point dimension-three controls admit an all-inclusion Hall
@@ -147,7 +151,7 @@ value falls below a screened alternative.
 The entries below are starting candidates. Discovery governs their order and
 may introduce a better eligible problem.
 
-### Current gate — portfolio discovery after C86
+### Current gate — portfolio discovery after C87
 
 - **C80 closure — OBSERVED engine boundary:** the corrected d=6/m=7 and
   d=7/m=6 compression identities passed exact controls. Balance plus

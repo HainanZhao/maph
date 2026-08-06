@@ -1,0 +1,246 @@
+{
+  "artifact_id": "cycle-87-b087-ryser-private-absorption-boundary-v1",
+  "audit": {
+    "candidate": {
+      "absorbed_pairs": [],
+      "minimum_component_cover": 3,
+      "partitions": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            5,
+            6,
+            9,
+            10,
+            11
+          ],
+          [
+            3,
+            4,
+            7,
+            8
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            7,
+            9,
+            10
+          ],
+          [
+            5,
+            6,
+            8,
+            11
+          ]
+        ],
+        [
+          [
+            0,
+            4,
+            5
+          ],
+          [
+            1,
+            3,
+            6,
+            9,
+            11
+          ],
+          [
+            2,
+            7,
+            8
+          ],
+          [
+            10
+          ]
+        ],
+        [
+          [
+            0,
+            6,
+            7
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ],
+          [
+            4,
+            8,
+            10,
+            11
+          ],
+          [
+            9
+          ]
+        ],
+        [
+          [
+            0,
+            8,
+            9
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            5,
+            7,
+            10,
+            11
+          ],
+          [
+            4,
+            6
+          ]
+        ],
+        [
+          [
+            0,
+            10,
+            11
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            5,
+            7,
+            9
+          ],
+          [
+            6
+          ]
+        ]
+      ],
+      "private_regions": [
+        [
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          10,
+          11
+        ]
+      ]
+    },
+    "cnf_clauses": 3190,
+    "cnf_variables": 330,
+    "epistemic_status": "PROVED",
+    "lower_bound": {
+      "argument": "At most one of six nonempty private regions is singleton; 1+1+5*2=12.",
+      "epistemic_status": "PROVED",
+      "minimum_no_absorption_points": 12
+    },
+    "solver_status": "SAT",
+    "status": "PASS"
+  },
+  "budget_ordinal": "B087",
+  "claim_boundary": "This refutes only C87 private-region absorption, not intersecting Ryser at r=6 or other global partition mechanisms.",
+  "cycle": 87,
+  "cycle_decision": {
+    "companion_advice": "Test the minimal root-normalized interface and pivot on any exact no-absorption system.",
+    "companion_identity": "/root/oracle_c87_portfolio (Oracle)",
+    "decision": "Seal the method boundary; the exact candidate falsifies absorption but is not a Ryser counterexample.",
+    "falsifier": "A verified pair-covering partition system with all private regions nonempty and no absorbed pair."
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "boundary": {
+      "path": "proof/cycle87_private_absorption_boundary.md",
+      "sha256": "8dd6ba25e6764e4ca1f89b1a4bdc84dba8e20855670e67b134fdfdd4b426235c"
+    },
+    "checker": {
+      "path": "proof/check_cycle87_private_absorption.py",
+      "sha256": "5decb3dd800af3683618e5002c5a8b237eb8c454f950282c32ff30be170b6141"
+    },
+    "idea_selection": {
+      "path": "discovery/cycle87_ryser_private_absorption_selection.md",
+      "sha256": "9c4bdb891f1db6eea04d61ab1c05536fbc5ebd4f205e629f2ddebe363d403bfd"
+    },
+    "preregistration": {
+      "path": "docs/cycle-87-b087-ryser-private-absorption-preregistration-v1.md",
+      "sha256": "5c7b34a65a28d8a56adfb99bee89adf1511d6ede33b4c69b0a44c09c53b186c7"
+    },
+    "prior_c72": {
+      "path": "artifacts/cycle-72-b072-defect-core-extension-v2.json",
+      "sha256": "09f1199d73f4d3b6fa7fe65e348fef45952c3c559ad2d294291f10d40a82d585"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "source_audit": {
+      "path": "discovery/cycle87_ryser_private_absorption_source_audit.md",
+      "sha256": "8cb789dddcbbe288436526c347154b1c5f3f4a2255ae6d5e7a213b5dd0c00859"
+    },
+    "test": {
+      "path": "tests/test_cycle87_private_absorption.py",
+      "sha256": "081e087d92149d5af3ec369b6d471c38d4f33a8bacb60361205dbd4951125a13"
+    },
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "outcome": "The smallest possible no-absorption interface has 12 points, and an exact 12-point pair-covering partition system has no absorbed private-region pair while retaining a three-component cover.",
+  "record_type": "METHOD_BOUNDARY",
+  "recorded_at_utc": "2026-08-06T01:08:53Z",
+  "replay": {
+    "audit": "python3 proof/check_cycle87_private_absorption.py",
+    "check": "python3 proof/build_cycle_87_ryser_private_absorption_boundary.py --check",
+    "test": "python3 -c \"import runpy; ns=runpy.run_path('tests/test_cycle87_private_absorption.py'); ns['test_c87_minimal_absorption_countermodel']()\""
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_87_ryser_private_absorption_boundary.py",
+    "sha256": "9d8883e7779c511e2e0a7c68baf930b0df09ef926398d8cb44df2578ea85f164"
+  },
+  "status": "SEALED"
+}
