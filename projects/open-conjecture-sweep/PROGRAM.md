@@ -6,10 +6,10 @@
   conjectures that have not been officially announced as solved by OpenAI,
   seeking either a complete proof/counterexample or a publishable scoped
   theorem, reduction, obstruction, or certified finite result.
-- **Status:** `C001_STOPPED / _001_NO_SELECTION / D001_RESERVED` (legacy cycle `C100`). Earlier closed
+- **Status:** `C001_STOPPED / _002_NO_SELECTION / D001_RESERVED` (legacy cycle `C100`). Earlier closed
   problems, eligibility corrections, and method boundaries are preserved in
   cycle artifacts and the current-gate ledger below. C001's ES(7) anchor
-  stopped at its invalid n=25 control criterion. The _001 screen returned
+  stopped at its invalid n=25 control criterion. The _002 screen returned
   `NO_SELECTION`; the next genuinely selected problem must be D001.
 - **Claim boundary:** all solve probabilities and tractability rankings below
   are `CONJECTURED` planning estimates. A bounded source search is not proof
@@ -49,8 +49,9 @@ the older record registry or artifact filenames.
 Every new non-credit selection, source/eligibility screen, postmortem, or
 other strategic decision uses a separate global underscore sequence:
 `_001`, `_002`, … . These records do not allocate a problem prefix, consume a
-cycle credit, or restart a problem's numeric sequence. `_001` is the present
-no-selection screen. The next genuinely selected problem starts **D001**.
+cycle credit, or restart a problem's numeric sequence. `_001` and `_002` are
+the current non-credit no-selection screens. The next genuinely selected
+problem starts **D001**.
 Thereafter, a material problem selection advances the letter and restarts at
 `001`; a routine continuation, method optimization, correction, or
 `NO_SELECTION` retains the current problem prefix. New program summaries
@@ -285,6 +286,13 @@ may introduce a better eligible problem.
   integrality invariant is known. D001 is reserved; do not start a new attack
   or turn the missing bridge into a census. See
   `discovery/_001_portfolio_no_selection.md`.
+- **_002 screen — NO_SELECTION:** the 2026 near-Williamson source gives a
+  genuine structured order-167 Hadamard-668 state and exact autocorrelation
+  verifier, unlike the C96 record. But it ends at exhaustive generation and
+  has no lift, constructor, or informative negative cap at 167. Do not run a
+  SAT/local-search/enumeration census; D001 requires a non-enumerative map and
+  reconstruction invariant. See
+  `discovery/_002_hadamard_near_williamson_screen.md`.
 
 ### Closed gate — C80 quaternary Legendre pairs, length 42
 
