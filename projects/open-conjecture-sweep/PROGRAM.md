@@ -6,7 +6,7 @@
   conjectures that have not been officially announced as solved by OpenAI,
   seeking either a complete proof/counterexample or a publishable scoped
   theorem, reduction, obstruction, or certified finite result.
-- **Status:** `ACTIVE / C83_LEM_TRIANGLE_TIP_INTERVAL_GATE`. C72 is closed by the
+- **Status:** `ACTIVE / PORTFOLIO_DISCOVERY_AFTER_C83`. C72 is closed by the
   corrected sealed artifact
   `cycle-72-b072-defect-core-extension-v2`: `PROVED`, every generalized
   rooted \(D=5\) equality core has a universal five-blocker, so every
@@ -39,8 +39,13 @@
   `cycle-82-b082-lem-inverse-family-boundary-v1`: `PROVED`, its frozen
   15-element three-chain substitution has 571,725 linear extensions and no
   full directed 4-cycle. That ends only this one-member construction family.
-  Oracle selected C83's distinct triangle-tip interval engine; do not widen
-  C82 or automatically begin a \(D=6\) defect ladder.
+  C83 is sealed as
+  `cycle-83-b083-lem-local-defect-boundary-v1`: `PROVED`, exact C81/C82
+  controls falsify the conditional-majority, outside-word-pairing, and final
+  global-defect mechanisms.  No frozen control realizes the full ordered
+  two-triangle hypothesis, so this is a method boundary rather than a result
+  on Question 14.  Per its pivot rule, return to portfolio discovery; do not
+  widen C82 or add another local-fiber C83 variant.
 - **Claim boundary:** all solve probabilities and tractability rankings below
   are `CONJECTURED` planning estimates. A bounded source search is not proof
   that a problem is open or untouched by OpenAI; eligibility must be checked
@@ -119,7 +124,7 @@ value falls below a screened alternative.
 The entries below are starting candidates. Discovery governs their order and
 may introduce a better eligible problem.
 
-### Current gate — C83 LEM triangle-tip interval
+### Current gate — portfolio discovery after C83
 
 - **C80 closure — OBSERVED engine boundary:** the corrected d=6/m=7 and
   d=7/m=6 compression identities passed exact controls. Balance plus
@@ -140,16 +145,15 @@ may introduce a better eligible problem.
   clone-chain relations in the direct restricted-graph audit; it does not
   affect the no-full-cycle result. See sealed
   `cycle-82-b082-lem-inverse-family-boundary-v1` for the exact boundary.
-- **C83 selection — CONJECTURED planning decision:** for a proposed comparable
-  full-cycle edge \(x<y\to z\to w\to x\), study the two incomparable LEM
-  triangles sharing \(z\to w\) with ordered tips \(x<y\). Seek an event
-  injection or order-ideal identity forcing a restricted 4-cycle. A finite
-  exact poset with the ordered-tip configuration but no restricted 4-cycle
-  falsifies this engine; pivot after one cycle if neither an invariant nor an
-  exact countermodel emerges.
-- **Next action:** perform C83's creative-selection pass, preregister the
-  named triangle-tip interval formulation, and execute its smallest exact
-  identity/countermodel gate. Do not widen C82's frozen family.
+- **C83 boundary — PROVED:** the exact comparable-tip identity holds on the
+  C81/C82 controls, but 30 interval-conditioned reversals and 216 imbalanced
+  outside-word fibers refute its two local strengthening attempts.  Oracle's
+  one final global-defect inequality has 18 C81 and 768 C82 violations.  See
+  sealed `cycle-83-b083-lem-local-defect-boundary-v1` for its exact claim
+  boundary; it does not test the full ordered two-triangle configuration.
+- **Next action:** run a fresh, wide portfolio-discovery pass, including
+  current eligibility and primary-source screens, then let Oracle select one
+  distinct small exact gate.  Do not resume C83's local-fiber methods.
 
 ### Closed gate — C80 quaternary Legendre pairs, length 42
 
