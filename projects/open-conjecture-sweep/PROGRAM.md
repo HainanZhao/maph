@@ -6,7 +6,7 @@
   conjectures that have not been officially announced as solved by OpenAI,
   seeking either a complete proof/counterexample or a publishable scoped
   theorem, reduction, obstruction, or certified finite result.
-- **Status:** `ACTIVE / PORTFOLIO_DISCOVERY_AFTER_C85`. C72 is closed by the
+- **Status:** `ACTIVE / PORTFOLIO_DISCOVERY_AFTER_C86`. C72 is closed by the
   corrected sealed artifact
   `cycle-72-b072-defect-core-extension-v2`: `PROVED`, every generalized
   rooted \(D=5\) equality core has a universal five-blocker, so every
@@ -62,6 +62,13 @@
   specialization before the host time window.  This is not a conclusion on
   (C5-K) or Sidorenko.  Return to portfolio discovery; do not enlarge this
   C5-kernel grid.
+  C86 is sealed as
+  `cycle-86-b086-frankl-all-inclusion-hall-boundary-v1`: `PROVED`, all 2,034
+  declared four-point dimension-three controls admit an all-inclusion Hall
+  matching for some optimal element, but the published five-point Example
+  3.20 has every element optimal and abundant while every such matching
+  fails.  This closes only the inclusion-edge transport mechanism; return to
+  portfolio discovery without a larger Frankl census.
 - **Claim boundary:** all solve probabilities and tractability rankings below
   are `CONJECTURED` planning estimates. A bounded source search is not proof
   that a problem is open or untouched by OpenAI; eligibility must be checked
@@ -140,7 +147,7 @@ value falls below a screened alternative.
 The entries below are starting candidates. Discovery governs their order and
 may introduce a better eligible problem.
 
-### Current gate — portfolio discovery after C85
+### Current gate — portfolio discovery after C86
 
 - **C80 closure — OBSERVED engine boundary:** the corrected d=6/m=7 and
   d=7/m=6 compression identities passed exact controls. Balance plus
@@ -184,11 +191,18 @@ may introduce a better eligible problem.
   negative before its host-window cap; this is a method boundary, not
   evidence for the global C5-K or Sidorenko inequalities.  See sealed
   `cycle-85-b085-sidorenko-c5-kernel-boundary-v1`.
+- **C86 boundary — PROVED:** Oracle's height-four Frankl all-inclusion Hall
+  transport passes every declared four-point control (2,034 retained
+  dimension-three families, independently matched and Hall-verified), but
+  Colbert's named five-point Example 3.20 has all five elements optimal and
+  abundant while all five inclusion matchings fail.  This is a direct
+  source-control falsifier of the transport, not a Frankl counterexample.
+  See sealed `cycle-86-b086-frankl-all-inclusion-hall-boundary-v1`.
 - **Next action:** run a fresh, wide portfolio-discovery pass, including
   current eligibility and primary-source screens, then let Oracle select one
   distinct small exact gate.  Do not resume C83's local-fiber methods or
   C84's direct composite target-box extension, or enlarge C85's C5-kernel
-  grid without a new mechanism.
+  grid or C86's all-inclusion transport census without a new mechanism.
 
 ### Closed gate — C80 quaternary Legendre pairs, length 42
 
