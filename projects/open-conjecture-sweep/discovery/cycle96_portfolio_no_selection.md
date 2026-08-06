@@ -14,6 +14,13 @@ open, yet the accessible sources provide no finite exact falsifier or
 proof-grade bounded interface. The official OpenAI mathematics screen found no
 new eligible target beyond the already excluded unit-distance result.
 
+The new finite-cyclic Fuglede paper (Somlai, arXiv:2607.26534) confirms that
+the unresolved direction is still a family of arbitrary finite cyclic groups,
+while its usable cube-rule state is already part of the cited inductive
+machinery. No smallest unresolved group with an aggregate-feasible exact
+enumerator is supplied; selecting one would be a scale-driven census, not a
+new bounded gate.
+
 The C80--C95 artifact history contains no untested candidate with a named
 state, invariant, exact verifier, falsifier, and resource-bounded stop rule.
 Therefore C96 is `NO_SELECTION`. Do not invoke Oracle merely to restate C95 or
