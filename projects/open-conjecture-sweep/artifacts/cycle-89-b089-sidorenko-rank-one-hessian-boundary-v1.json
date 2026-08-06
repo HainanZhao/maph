@@ -1,0 +1,111 @@
+{
+  "artifact_id": "cycle-89-b089-sidorenko-rank-one-hessian-boundary-v1",
+  "audit": {
+    "edge_pair_orbits": {
+      "disjoint": 150,
+      "shared_left": 30,
+      "shared_right": 30
+    },
+    "finite_control": {
+      "density": "1/4",
+      "negative_principal_minors": 0,
+      "status": "PSD_CONTROL_PASS",
+      "tangent_dimension": 7
+    },
+    "independent_coefficient_replay": {
+      "controls": [
+        "frozen_equal_atoms",
+        "asymmetric_atoms"
+      ],
+      "mismatch_counts": [
+        0,
+        0
+      ],
+      "status": "COEFFICIENTWISE_REPLAY_PASS"
+    }
+  },
+  "budget_ordinal": "B089",
+  "claim_boundary": "This is conditional second-variation positivity only. It proves no local minimum, feasible-neighborhood positivity, higher-order control, global Sidorenko inequality, counterexample, or novelty claim.",
+  "cycle": 89,
+  "cycle_decision": {
+    "companion_advice": "Seal after the explicit density-term, hypotheses, L=0, and source-overlap audit; do not add grids, higher-order expansions, or general regular extensions.",
+    "companion_identity": "/root/oracle_c88_retry (Oracle)",
+    "decision": "Seal the scoped stationary-Hessian theorem and its method boundary, then return to portfolio discovery.",
+    "falsifier": "A legal bounded rank-one tangent direction with negative Hessian, an orbit-count error, a coefficient replay mismatch, or an exact-overlap source changing the novelty classification."
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "boundary": {
+      "path": "proof/cycle89_rank_one_escape_boundary.md",
+      "sha256": "e1c3fdf1e32a539c5ef345a5e9990c5eff18e2862b7e7ad3e31f404e35fd5d02"
+    },
+    "coefficient_replay": {
+      "path": "proof/check_cycle89_rank_one_symbolic_replay.py",
+      "sha256": "078d75bc961e1d0a2f8707b7106d49e0c7539c8896cd8f8bc6af166e5cd75979"
+    },
+    "derivation": {
+      "path": "proof/cycle89_rank_one_symbolic.md",
+      "sha256": "a47323468e1428fdca8c25368bb1ad9bdb9b106fd710f4ec867e4b09e4d3b347"
+    },
+    "finite_checker": {
+      "path": "proof/check_cycle89_rank_one_escape.py",
+      "sha256": "4ecafb11e0fa3dfe512484b4cece78c1e1ae9336c0592de27c23dc06f2b41e3d"
+    },
+    "finite_test": {
+      "path": "tests/test_cycle89_rank_one_escape.py",
+      "sha256": "b35a2e8c4dcce3b344b941e4a82efa0c56a1908b3d4efcad36ebdb3a0e7c2a78"
+    },
+    "idea_selection": {
+      "path": "discovery/cycle89_sidorenko_rank_one_escape_selection.md",
+      "sha256": "456030d0d893b7f3dc8be1abdfb504b0180b827da12ca215e426c8d31372199b"
+    },
+    "orbit_checker": {
+      "path": "proof/check_cycle89_rank_one_symbolic.py",
+      "sha256": "57527c6340cf8c94e4c7838f5912626b55caeb1447bfada83ec890c08509b8e3"
+    },
+    "preregistration": {
+      "path": "docs/cycle-89-b089-sidorenko-rank-one-escape-preregistration-v1.md",
+      "sha256": "46cdb77b9bc9fd43fef3b6753906ca6aa71933d8a3199fcec0237307650dc329"
+    },
+    "prior_c85": {
+      "path": "artifacts/cycle-85-b085-sidorenko-c5-kernel-boundary-v1.json",
+      "sha256": "3fb242906c97496c6a5e32cd373880a4b487db231aaa81b827df8ecc1e61e131"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "source_audit": {
+      "path": "discovery/cycle89_sidorenko_rank_one_escape_source_audit.md",
+      "sha256": "a502b3dd66e056aed5e423dd8031d25f1872fc6550053bcd49617604b3865a0b"
+    },
+    "symbolic_test": {
+      "path": "tests/test_cycle89_rank_one_symbolic.py",
+      "sha256": "6b030f06a7dc4835c5bfa1fb3ce8d0bb27eb9bc1e4141075a5659d068a8e674f"
+    },
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "outcome": "For K_{5,5}\\C_{10}, every bounded stationary density-tangent direction at a positive rank-one bigraphon has nonnegative deficit Hessian. The exact 30/30/150 edge-pair Gram decomposition and two independent rational finite-step coefficient replays pass.",
+  "record_type": "PROVED_SCOPED_THEOREM_AND_METHOD_BOUNDARY",
+  "recorded_at_utc": "2026-08-06T03:10:00Z",
+  "replay": {
+    "check": ".venv/bin/python proof/build_cycle_89_sidorenko_rank_one_hessian_boundary.py --check",
+    "coefficient_replay": ".venv/bin/python proof/check_cycle89_rank_one_symbolic_replay.py",
+    "finite": ".venv/bin/python proof/check_cycle89_rank_one_escape.py",
+    "orbits": ".venv/bin/python proof/check_cycle89_rank_one_symbolic.py",
+    "tests": ".venv/bin/python -c \"import runpy; runpy.run_path('tests/test_cycle89_rank_one_symbolic.py')['test_c89_rank_one_symbolic_replay'](); runpy.run_path('tests/test_cycle89_rank_one_escape.py')['test_c89_rank_one_escape_control']()\""
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_89_sidorenko_rank_one_hessian_boundary.py",
+    "sha256": "1cc22a69982fee10173c6a70404942d02787d9f0208f18099cfce30e4c23f22e"
+  },
+  "status": "SEALED"
+}
