@@ -285,7 +285,7 @@ may introduce a better eligible problem.
   new exact or rigorous first gate.
 - **C96 screen — NO_SELECTION:** the post-C95 primary-source search found no
   new bounded verifier. Bollobás--Meir continuations are blocked by C95;
-  Kakeya, finite-cyclic Fuglede, and the remaining all-rank
+  Kakeya, finite-cyclic Fuglede, Nivat's remaining |F|=6 case, and the remaining all-rank
   Littlewood--Richardson effectivity frontier have no smallest
   preregisterable exact gate. Full exclusions and source links are in
   `discovery/cycle96_portfolio_no_selection.md`; do not invoke Oracle until a
