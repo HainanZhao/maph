@@ -1,0 +1,255 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\qint}[1]{[#1]_q}
+\newcommand{\qfib}[2]{\left[\!\begin{matrix}#1\\#2\end{matrix}\!\right]_{\!\mathcal F}}
+
+\title{The Width-Four \(q\)-Fibonomial Coefficients Are Unimodal}
+\author{hainzhao}
+\date{August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Bergeron, Ceballos, and K\"ustner conjectured that every
+\(q\)-Fibonomial coefficient is unimodal.  Recent work proves the cases of
+width at most three.  We prove the next infinite family: for every integer
+\(m\geq1\), the polynomial \(\qfib{m+4}{4}\) is unimodal.  After taking a
+first coefficient difference, the problem reduces below the midpoint to four
+translates of the restricted partition function for parts \(1,2,3\).  Its
+period-six quasipolynomial formula yields elementary quadratic lower bounds
+for all \(m\geq8\); the seven remaining cases are checked exactly.
+\end{abstract}
+
+\section{Introduction}
+
+Let \(F_0=0,F_1=1\), and \(F_{j+2}=F_{j+1}+F_j\).  For a positive integer
+\(r\), write
+\[
+  \qint r=1+q+\cdots+q^{r-1},\qquad
+  [F_r]^!_q=\prod_{j=1}^r [F_j]_q.
+\]
+Building on the unweighted path--domino model of Sagan and Savage
+\cite{SaganSavage}, Bergeron, Ceballos, and K\"ustner define
+\[
+  \qfib{m+n}{n}
+  =\frac{[F_{m+n}]^!_q}{[F_m]^!_q[F_n]^!_q}.
+  \tag{1}
+\]
+Their path--domino model proves that (1) is a polynomial with nonnegative
+integer coefficients \cite[Theorem~2.4]{BCK}; they conjecture that all these
+polynomials are unimodal \cite[Conjecture~2.5]{BCK}.  Connelly, Ito,
+Martinez, Shevchenko, and Yang prove the conjecture for \(n\leq3\)
+\cite[Theorem~1.2]{CIMSY} and report finite computations for larger parameters.
+
+This note proves the width-four case.  The proof is algebraic and uses the
+published path--domino theorem only to import polynomiality and nonnegativity.
+The May 2026 preprint \cite{CIMSY} explicitly leaves the cases \(n\geq4\)
+open and notes that its proposed product criterion does not directly fit
+their factorization.  Our literature search through August 6, 2026 found no
+later proof of width four; this is a bounded search statement, not an
+exhaustive priority claim.
+
+\begin{theorem}\label{thm:main}
+For every integer \(m\geq1\), the \(q\)-Fibonomial coefficient
+\(\qfib{m+4}{4}\) is unimodal.
+\end{theorem}
+
+Here a polynomial \(C(q)=\sum_{j=0}^D c_jq^j\) is \emph{unimodal} if its
+coefficient sequence first weakly increases and then weakly decreases.
+
+\section{The midpoint difference formula}
+
+Fix \(m\geq1\), and put
+\[
+  a=F_{m+1},\qquad b=F_{m+2}.
+\]
+The next two Fibonacci numbers are \(a+b\) and \(a+2b\).  Since
+\([F_1]_q=[F_2]_q=1\), \([F_3]_q=[2]_q\), and
+\([F_4]_q=[3]_q\), equation (1) becomes
+\[
+ W_m(q):=\qfib{m+4}{4}
+ =\frac{[a]_q[b]_q[a+b]_q[a+2b]_q}{[2]_q[3]_q}.
+ \tag{2}
+\]
+Its degree is
+\[
+ D=3a+4b-7. \tag{3}
+\]
+Indeed, \([r]_{q^{-1}}=q^{1-r}[r]_q\), so (2) gives
+\(W_m(q^{-1})=q^{-D}W_m(q)\).  The path--domino theorem makes \(W_m\) a
+polynomial, and its constant term is one; consequently it has degree \(D\)
+and is symmetric.
+
+For an integer \(t\), define
+\[
+ p(t)=[q^t]\frac{1}{(1-q)(1-q^2)(1-q^3)}.
+\]
+
+\begin{lemma}\label{lem:p}
+One has
+\[
+ p(t)=
+ \begin{cases}
+ \displaystyle\left\lfloor\frac{t^2+6t+12}{12}\right\rfloor,&t\geq0,\\[6pt]
+ 0,&t<0.
+ \end{cases} \tag{4}
+\]
+In particular, for \(t\geq0\),
+\[
+ \frac{t^2+6t+1}{12}\leq p(t)
+ \leq\frac{t^2+6t+12}{12}. \tag{5}
+\]
+\end{lemma}
+
+\begin{proof}
+For \(t\geq0\), the generating function shows that \(p(t)\) counts the
+solutions of \(x+2y+3z=t\) in nonnegative integers.  Thus
+\[
+ p(t)=\sum_{z=0}^{\lfloor t/3\rfloor}
+ \left(\left\lfloor\frac{t-3z}{2}\right\rfloor+1\right).
+\]
+Writing \(t=6u+r\), \(0\leq r<6\), and summing separately over even and
+odd \(z\) gives (4) in each of the six residues.  The upper bound in (5) is
+immediate.  Since the numerator in (4) is an integer, rounding down loses at
+most \(11/12\), which gives the lower bound.
+\end{proof}
+
+Write \(W_m(q)=\sum_{t=0}^Dc_tq^t\), with \(c_{-1}=0\), and let
+\(T=\lfloor D/2\rfloor\).  Symmetry reduces unimodality to showing
+\(c_t-c_{t-1}\geq0\) for \(0\leq t\leq T\).  From (2),
+\[
+ (1-q)W_m(q)=
+ \frac{(1-q^a)(1-q^b)(1-q^{a+b})(1-q^{a+2b})}
+ {(1-q)(1-q^2)(1-q^3)}. \tag{6}
+\]
+
+\begin{lemma}\label{lem:difference}
+For \(0\leq t\leq T\),
+\[
+ c_t-c_{t-1}
+ =p(t)-p(t-a)-p(t-b)+p(t-(2a+b)). \tag{7}
+\]
+\end{lemma}
+
+\begin{proof}
+Expand the numerator of (6) by inclusion--exclusion.  The pair shift
+\(a+b\) cancels the singleton shift \(a+b\), while the pair shift
+\(b+(a+b)=a+2b\) cancels the singleton shift \(a+2b\).  The only other pair
+shift that can occur at or below \(T\) is \(a+(a+b)=2a+b\).  Indeed, every
+remaining pair shift is at least \(2a+2b>T\), as follows directly from (3).
+Every triple shift is also at least \(2a+2b>T\).  The four surviving terms
+give (7).
+\end{proof}
+
+\section{Uniform positivity}
+
+We now prove the required coefficient inequalities for \(m\geq8\).  In this
+range, \(a\geq F_9=34\).  Let the right side of (7) be \(g(t)\).
+
+If \(0\leq t<a\), then \(g(t)=p(t)>0\).  If \(a\leq t<b\), then
+\(g(t)=p(t)-p(t-a)\geq0\), since the counting function \(p\) is
+nondecreasing.
+
+Suppose next that \(b\leq t<2a+b\).  The last term of (7) vanishes.  Applying
+the lower estimate in (5) to the positive term and the upper estimate to the
+two negative terms gives
+\[
+ 12g(t)\geq K(t), \tag{8}
+\]
+where
+\[
+ K(t)=-t^2+(2a+2b-6)t-a^2-b^2+6a+6b-23.
+\]
+The quadratic \(K\) is concave, so its minimum on the integer interval
+\([b,2a+b-1]\) occurs at an endpoint.  We have
+\[
+ K(b)=a(2b-a+6)-23,
+\]
+and
+\[
+ K(2a+b-1)>K(2a+b)=a(2b-a-6)-23, \tag{9}
+\]
+where the first difference is exactly \(2a+5\).  Since \(b>a\) and
+\(a\geq34\), the displayed expressions for \(K(b)\) and \(K(2a+b)\) are
+positive.  Thus \(g(t)>0\) throughout this interval.
+
+Finally, suppose \(2a+b\leq t\leq T\).  Applying the appropriate side of
+(5) to all four terms of (7) yields
+\[
+ 12g(t)\geq -2at+3a^2+4ab-6a-22. \tag{10}
+\]
+The right side decreases with \(t\).  By (3),
+\[
+ t\leq T\leq\frac{3a+4b-7}{2},
+\]
+and substitution in (10) gives
+\[
+ 12g(t)\geq a-22>0. \tag{11}
+\]
+This proves all midpoint differences for \(m\geq8\).
+
+\section{The seven finite cases}
+
+For \(1\leq m\leq7\), we evaluate the exact integer formula (7) over the
+entire interval \(0\leq t\leq T\).  The resulting minima are shown in
+Table~\ref{tab:small}.
+
+\begin{center}
+\refstepcounter{table}\label{tab:small}
+\centering
+\begin{tabular}{cccr}
+\toprule
+\(m\)&\((a,b)\)&\(T\)&\(\min_{0\leq t\leq T}g(t)\)\\
+\midrule
+1&(1,2)&2&0\\
+2&(2,3)&5&0\\
+3&(3,5)&11&0\\
+4&(5,8)&20&0\\
+5&(8,13)&34&1\\
+6&(13,21)&58&1\\
+7&(21,34)&96&1\\
+\bottomrule
+\end{tabular}
+
+\smallskip
+\small Table~\thetable: Exact finite cases not covered by the uniform estimate.
+\end{center}
+
+Every listed minimum is nonnegative.  Together with the preceding section,
+Lemma~\ref{lem:difference} shows that the coefficients weakly increase to the
+midpoint for every \(m\geq1\).  Symmetry then proves
+Theorem~\ref{thm:main}.
+
+\section{Reproducibility and claim boundary}
+
+The finite calculation uses only integer arithmetic.  From the repository
+root, it is replayed by
+\begin{verbatim}
+python3 proof/qfib_width4_unimodality_proof.py
+\end{verbatim}
+The script performs three checks: it compares (4) with direct enumeration for
+\(0\leq t\leq300\); it verifies every entry of Table~\ref{tab:small}; and,
+as an independent consistency check, it constructs the exact quotient (2)
+for \(1\leq m\leq24\) and compares all midpoint differences with (7).  The
+last two ranges beyond \(m=7\) are checks, not assumptions in the proof.
+
+The theorem proves only the family \(\qfib{m+4}{4}\), \(m\geq1\).  It does
+not prove the full two-parameter conjecture, a combinatorial chain
+decomposition, log-concavity, or any width \(n\geq5\).
+
+\paragraph{AI assistance.}
+The author used AI assistance in preparing this draft and its verification
+code.
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}
