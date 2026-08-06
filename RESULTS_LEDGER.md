@@ -34,3 +34,26 @@ evidence.
 - Evidence note: `discovery/qanalog_k4_r4_audience_boundary.md`.
 - Kill criterion: if no proof exists by 2026-10-31, ship Outcome B as the
   final short note and do not extend the date.
+
+## 2026-08-06 — Conjecture 5.4 sufficient direction, all k and r
+
+- Classification: **Outcome A — resolved**, superseding the live Outcome B
+  entry above.
+- Claim: for every `k >= 1`, `r >= 2`, and positive
+  `a_1,...,a_k,b`, the product `product_i [a_i]_q [b]_(q^r)` is symmetric
+  unimodal whenever some `r | a_i` or
+  `b <= 1 + sum_i floor(a_i/r)`.
+- Evidence: `proof/qanalog_conjecture54_sufficiency.md` and the
+  standard-library replay
+  `python3 proof/qanalog_conjecture54_sufficiency.py`.
+- Manuscript: `paper/qanalog-conjecture54/main.tex` and `main.pdf`.
+- Breakthrough: the aligned-center identity
+  `[a+r]_q[b+1]_(q^r) = q^r[a]_q[b]_(q^r) + [a+r(b+1)]_q`
+  turns every authorized parameter increment into a sum of two symmetric
+  unimodal polynomials with the same center.
+- Claim boundary: this proves sufficiency, including and strictly generalizing
+  the `k=r=4` target. It does not claim general necessity or general
+  q-Fibonomial unimodality.
+- Publication status: DOI reserved at
+  <https://doi.org/10.5281/zenodo.21830407>; public-file verification is
+  pending.

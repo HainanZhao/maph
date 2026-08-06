@@ -138,3 +138,18 @@ choice, not merely summarize the work.
 - **Next-screen change:** apply coefficient-difference and shift-cancellation
   reductions before any new bounded unimodality search; retain computation
   only for the finite residue/base cases left by the uniform inequalities.
+
+## 2026-08-06 — GOAL topic 2 / Conjecture 5.4 sufficiency
+
+- **Stop trigger:** `PROVED` universal closure. The aligned-center recursion
+  proves the sufficient direction for every `k>=1` and `r>=2`, strictly
+  generalizing the requested `k=r=4` slice.
+- **Successful check:** the inherited four-section inequality was questioned
+  rather than polished indefinitely; coupling one length increment with one
+  spacer increment exposed a two-term identity whose summands share a center.
+- **Reusable rule:** when a parameter condition is a sum of integer
+  capacities, search for a one-capacity recursion and verify center alignment
+  before building coefficient-section machinery.
+- **Next-screen change:** screen future product-unimodality problems first for
+  parameter-coupled recursions that decompose into aligned symmetric-unimodal
+  summands.
