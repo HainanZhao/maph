@@ -96,3 +96,18 @@ choice, not merely summarize the work.
 - **Next-screen change:** every SAT/UNSAT scalability control must state why
   its expected polarity follows before execution. A polarity mismatch stops
   the gate; it does not authorize a canonical retry or a new parameter sweep.
+
+## 2026-08-06 — Open Conjecture Sweep / D001 (legacy C101)
+
+- **Stop trigger:** `PROVED` fixed-family falsifier. Two independent exact
+  evaluators exhausted all 524,288 allowed signs; none satisfies the Seidel
+  conditions already at \(q=7\).
+- **Failed assumption:** changing only signs in the public six-block
+  character placement could repair the \(q\equiv3\pmod8\) to
+  \(q\equiv7\pmod8\) row-sum interface.
+- **Reusable rule:** a small exact specialization can decisively reject a
+  proposed uniform algebraic transition before any larger control or graph
+  construction is attempted.
+- **Next-screen change:** any successor character construction must name a
+  new finite block type and a corresponding symbolic invariant before a sign
+  enumeration is authorized.

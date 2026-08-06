@@ -6,11 +6,12 @@
   conjectures that have not been officially announced as solved by OpenAI,
   seeking either a complete proof/counterexample or a publishable scoped
   theorem, reduction, obstruction, or certified finite result.
-- **Status:** `C001_STOPPED / D001_SELECTION_PENDING` (legacy cycle `C100`). Earlier closed
+- **Status:** `C001_STOPPED / D001_CLOSED / E001_SELECTION_PENDING` (legacy cycle `C100`). Earlier closed
   problems, eligibility corrections, and method boundaries are preserved in
   cycle artifacts and the current-gate ledger below. C001's ES(7) anchor
-  stopped at its invalid n=25 control criterion. The next genuinely selected
-  problem must be D001, selected independently by Oracle.
+  stopped at its invalid n=25 control criterion. D001's book-Ramsey
+  character-sign gate closed at its exact q=7 falsifier; Oracle must now
+  independently select E001.
 - **Claim boundary:** all solve probabilities and tractability rankings below
   are `CONJECTURED` planning estimates. A bounded source search is not proof
   that a problem is open or untouched by OpenAI; eligibility must be checked
@@ -64,12 +65,12 @@ The program runs itself as a repeating **discovery → Oracle selection →
 attack → review/pivot** loop. A non-budgeted **postmortem phase** follows every
 closed problem, and a non-budgeted **paper phase** follows a result that meets
 the paper trigger. **Oracle** is the named companion for this
-program. Problem selection is a critical decision led by Oracle: it
-independently screens the eligible candidates,
-proposes and ranks targets, challenges the inherited framing, and selects the
-next target from a concise evidence packet. The primary agent supplies its own
-candidate analysis and then executes the selected attack; it does not wait for
-user approval. The companion is not used for ordinary attack work.
+program. Problem selection is a critical decision owned by Oracle: it
+independently screens the eligible candidates, proposes and ranks targets,
+challenges the inherited framing, and selects the next target from a concise
+evidence packet. The primary does not pre-propose candidates for ratification;
+it executes Oracle's selected attack without waiting for user approval. The
+companion is not used for ordinary attack work.
 
 Each selected problem has an 80-cycle envelope, with an automatic strategic
 review at 50 cycles since its selection. The 50-cycle review is a *discovery
@@ -293,6 +294,24 @@ may introduce a better eligible problem.
   SAT/local-search/enumeration census. This is an exclusion record, not an
   allowable selection outcome; Oracle must now choose D001 independently. See
   `discovery/_002_hadamard_near_williamson_screen.md`.
+- **D001 (C101) selection — CONJECTURED planning decision:** Oracle selected
+  the book-Ramsey all-\(n\) construction problem, beginning with a uniform
+  signed six-block character completion for prime powers \(q\equiv7\pmod8\),
+  \(n=(q+1)/2\). The frozen first gate is symbolic: retain the public
+  \(n=70\) block-type placement and exhaust only its 19 sign choices against
+  the character-matrix relations, with direct \(q=7,23\) checks. A pass is a
+  candidate arithmetic family; a no-hit is a rigidity boundary for this
+  completion, not a graph census or a claim about the general conjecture. See
+  `discovery/_003_d001_book_ramsey_selection.md`.
+- **D001 (C101/B101) closure — PROVED method boundary:** both exact-integer
+  evaluators exhausted all \(2^{19}=524{,}288\) fixed sign assignments at
+  \(q=7\), with zero satisfying the frozen Seidel conditions. Since a uniform
+  \(q\equiv7\pmod8\) identity would specialize to \(q=7\), this exactly
+  falsifies the selected completion. It does not constrain a new block type,
+  another character architecture, individual graph constructions, or the
+  all-\(n\) conjecture. Do not enlarge signs or perform a graph census; D001
+  closes because no residual bounded block type is identified. See sealed
+  `cycle-101-b101-book-ramsey-character-sign-rigidity-v1`.
 
 ### Closed gate — C80 quaternary Legendre pairs, length 42
 
