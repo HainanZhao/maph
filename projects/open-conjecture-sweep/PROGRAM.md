@@ -280,8 +280,15 @@ may introduce a better eligible problem.
   \(Q_5\), grids, random points, or arbitrary cube points without a new
   orbit/metric mechanism; return to portfolio discovery after the C95
   postmortem.
-- **Next action:** run the C95 closure postmortem, then perform a fresh
-  source/eligibility screen before Oracle selection.
+- **Next action:** perform a fresh source/eligibility screen, then invoke
+  Oracle only with an artifact-cited historical exclusion map and a genuinely
+  new exact or rigorous first gate.
+- **C96 screen — NO_SELECTION:** the post-C95 primary-source search found no
+  new bounded verifier. Bollobás--Meir higher-cube/grid/point continuations are
+  explicitly blocked by C95's boundary; Kakeya and other surfaced leads lack
+  a finite exact falsifier or proof-grade interface. Do not invoke Oracle to
+  restate an under-specified lead; resume only after a genuinely new gate is
+  source-defined.
 
 ### Closed gate — C80 quaternary Legendre pairs, length 42
 
