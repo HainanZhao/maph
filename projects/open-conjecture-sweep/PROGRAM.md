@@ -177,7 +177,7 @@ value falls below a screened alternative.
 The entries below are starting candidates. Discovery governs their order and
 may introduce a better eligible problem.
 
-### Current gate — portfolio discovery after C97
+### Current gate — portfolio discovery after C98
 
 - **C80 closure — OBSERVED engine boundary:** the corrected d=6/m=7 and
   d=7/m=6 compression identities passed exact controls. Balance plus
@@ -297,6 +297,14 @@ may introduce a better eligible problem.
   `|x|>10^50` benchmark search or open C97 as an attack; fixed degrees,
   coefficient bounds, and an overlap audit are required first. See
   `discovery/cycle97_diophantine_candidate_screen.md`.
+- **C98 boundary — PROVED:** the exact normalized degree-(4,3,6) family in
+  coefficient box `[-648,648]` has no identity for
+  `z^2+y^2 z+x^3-2`. The replay exhausted 67,288,360 bounded branches in
+  25.99 seconds, with the published adjacent-family control passing an
+  independent generic expansion. This closes only that degree/height family;
+  do not enlarge the box. See sealed
+  `cycle-98-b098-diophantine-fixed-ansatz-boundary-v1`; pivot to an
+  elliptic-surface or norm-form engine after a fresh source/idea screen.
 
 ### Closed gate — C80 quaternary Legendre pairs, length 42
 
