@@ -203,6 +203,28 @@ incumbent—and then rank them by falsifier, exact or rigorous verifier, cost,
 expected information gain, and credible path to closure. Oracle's packet must
 briefly expose this reasoning, not merely output a choice.
 
+### Oracle historical-reconstruction preflight
+
+Before a selection or material-fork recommendation, Oracle must independently
+read the current `PROGRAM.md` **and reconstruct the relevant decision history
+from files**, rather than trusting the current prompt or a conversation
+summary. Read the outcome, claim boundary, and cycle decision of every sealed
+artifact in the active target since its last genuine portfolio/problem
+selection, plus every intervening selection, overlap-audit, no-selection, and
+correction document named by the program. This is a compact summary read, not
+a request to load raw logs or replay transcripts. If a historical summary is
+missing, derive it from the artifact header and record that gap; do not guess.
+
+Oracle's packet must include an artifact-cited **exclusion map**: for every
+serious candidate, give the prior cycle(s), the former decision question, its
+falsifier/outcome, and the exact state/invariant/claim boundary that the new
+candidate changes. A candidate whose map cannot identify such a delta is a
+duplicate, even when chat context has forgotten the older cycle. A current
+statement, recent failure, or earlier Oracle wording is never evidence that a
+candidate is new. When no candidate survives this comparison, return
+`NO_SELECTION` with the missing bridge stated precisely; do not turn it into a
+recommendation merely to keep the program active.
+
 For problem selection, the primary supplies its independent analysis; Oracle
 selects and records alternatives, strongest flaw, falsifier, information gain,
 and stop/pivot criterion. The primary executes the choice. At other forks,
