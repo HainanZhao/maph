@@ -53,3 +53,27 @@ invariant/injection or exact countermodel emerges.
 **Decision:** preregister the triangle-tip interval identity with a smallest
 exact symbolic/order-ideal gate.  Do not widen C82, perform a census, or use a
 relaxation without an exact realizability bridge.
+
+## Post-control refinement
+
+The frozen C81/C82 tip-gap control establishes only the partition identities;
+it supplies no inequality.  The next candidate is **interval-conditioned
+majority inheritance**: for (x<y), test whether a global arrow (z	o w)
+must remain a strict majority after conditioning uniform linear extensions on
+(xprec z,wprec y).  If true under the ordered-tip hypotheses, it offers a
+direct injection target for the shared triangle edge.  If an exact frozen
+control reverses the sign, the conditional-inheritance engine is falsified;
+the unconditional pair margins then cannot simply be localized to the tip
+interval.  This is a distinct order-ideal/fiber invariant, not a rank-pattern
+inequality or a new-poset census.
+
+## Post-result pivot
+
+`PROVED` exact controls found 30 conditional sign reversals, so simple
+interval-conditioned majority inheritance is closed.  The next
+`CONJECTURED` engine is an **extension-graph interval pairing**: restrict the
+adjacent-incomparable-swap graph of linear extensions to a marked tip fiber
+and seek a pairing that exchanges the relative order of the shared vertices
+while preserving its outside prefix/suffix.  A frozen fiber with an exact
+component or boundary imbalance falsifies a proposed pairing; no census is
+authorized.

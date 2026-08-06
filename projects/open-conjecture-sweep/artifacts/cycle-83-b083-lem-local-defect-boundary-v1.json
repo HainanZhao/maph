@@ -1,0 +1,159 @@
+{
+  "artifact_id": "cycle-83-b083-lem-local-defect-boundary-v1",
+  "audit": {
+    "conditional_fibers": {
+      "c81_queries": 504,
+      "c82_queries": 6,
+      "epistemic_status": "PROVED",
+      "nonempty_fibers": 434,
+      "reversed_rows": 30,
+      "status": "PASS"
+    },
+    "global_defect": {
+      "c81": {
+        "extensions": 1431,
+        "inequality_failures": 18,
+        "marked_quadruples": 504,
+        "maximum_defect_denominator": 1431,
+        "maximum_defect_numerator": 2196,
+        "maximum_witness_xyzw": [
+          1,
+          2,
+          4,
+          6
+        ]
+      },
+      "c82": {
+        "extensions": 571725,
+        "inequality_failures": 768,
+        "marked_quadruples": 6084,
+        "maximum_defect_denominator": 571725,
+        "maximum_defect_numerator": 1143450,
+        "maximum_witness_xyzw": [
+          0,
+          1,
+          2,
+          10
+        ]
+      },
+      "epistemic_status": "PROVED",
+      "inequality": "P(z<w)+P(w<x)+P(y<z)<=3/2 for every marked x<y,z,w",
+      "status": "PASS"
+    },
+    "outside_word_pairing": {
+      "c81_global_arrow_queries": 252,
+      "c81_imbalanced_global_arrow_queries": 216,
+      "c81_queries": 504,
+      "c82": {
+        "fiber_extensions": 0,
+        "first_imbalance": null,
+        "global_margin": 5775,
+        "imbalanced_words": 0,
+        "outside_words": 0
+      },
+      "epistemic_status": "PROVED",
+      "status": "PASS"
+    },
+    "tip_identities": {
+      "c81": {
+        "extensions": 1431,
+        "identities": 84,
+        "queries": 84
+      },
+      "c82": {
+        "extensions": 571725,
+        "identities": 78,
+        "queries": 78
+      },
+      "epistemic_status": "PROVED",
+      "identity": "E[x<z]-E[y<z]=E[x<z<y]=E[z<y]-E[z<x] for x<y",
+      "status": "PASS"
+    }
+  },
+  "budget_ordinal": "B083",
+  "claim_boundary": "This closes only the local-fiber/global-defect method family. It neither proves nor refutes Gupta Question 14 and does not realize or exclude the full ordered two-triangle hypothesis.",
+  "cycle": 83,
+  "cycle_decision": {
+    "companion_advice": "Retain C83 for one final full-hypothesis global-defect gate; pivot immediately if it is falsified or no precise charge map emerges.",
+    "companion_identity": "/root/oracle_c83_pivot (Oracle)",
+    "decision": "Seal the exact method boundary and return to portfolio discovery rather than extend the failed local-fiber framing.",
+    "falsifier": "A differing exact marked-tuple count or defect scan; specifically, no C81/C82 tuple may violate the proposed three-probability inequality."
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "boundary": {
+      "path": "proof/cycle83_local_defect_boundary.md",
+      "sha256": "4c51d0ec591303ef737ca74696d652a0b3a1d600d06dd660f888e872aa1be16f"
+    },
+    "conditional_checker": {
+      "path": "proof/check_cycle83_interval_conditioning.py",
+      "sha256": "0a4c197e46fe5c3b393a2e71957e2e7d2fce7a85daae616c50378272feffaf54"
+    },
+    "defect_checker": {
+      "path": "proof/check_cycle83_global_defect.py",
+      "sha256": "3b9cb09ac23bd78c2087f06c7590589f5c2be00cbd55a0bcccea3e40296282b0"
+    },
+    "idea_selection": {
+      "path": "discovery/cycle83_triangle_tip_idea_selection.md",
+      "sha256": "9154395f7e624f269082b674d6da9d60e6729d6cc5da1e11f1e89cae4c40b448"
+    },
+    "preregistration": {
+      "path": "docs/cycle-83-b083-lem-tip-fiber-preregistration-v1.md",
+      "sha256": "a35eaa7ccecc4940d7517204982e496bb1de5d8a8dd03a5d156c2e282290cc8c"
+    },
+    "prior_c81": {
+      "path": "artifacts/cycle-81-b081-lem-method-boundary-v1.json",
+      "sha256": "817e1643b33c6d4c1f9f943e93507fadb5efe31289e26ceaf5193e39953c53f5"
+    },
+    "prior_c82": {
+      "path": "artifacts/cycle-82-b082-lem-inverse-family-boundary-v1.json",
+      "sha256": "8a89cef3b5536e210528e3de6138aad1dd11a8ddf0b1b319301eaa64a398d7bf"
+    },
+    "reduction": {
+      "path": "proof/cycle83_triangle_tip_reduction.md",
+      "sha256": "d6f858040809a3f75dd89c412fbc885739a1b1426695cab65e08ec1d69280948"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "source_context": {
+      "path": "discovery/cycle83_source_context.md",
+      "sha256": "30960f1038e8d9a3bc19f11ed37291e85b0228acc6c9f0540deedabaa47a2b51"
+    },
+    "test": {
+      "path": "tests/test_cycle83_local_defect_boundary.py",
+      "sha256": "c1b18b16cb56287f69b5ff0a5a1bf16d9cf366dcea12c0da049d549d71350e04"
+    },
+    "tip_checker": {
+      "path": "proof/check_cycle83_tip_fibers.py",
+      "sha256": "aec260b32f09af54ce6d296d2014a8cab4735f028e58506f5ec0f331af1537ea"
+    },
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    },
+    "word_checker": {
+      "path": "proof/check_cycle83_word_pairing.py",
+      "sha256": "ea328808ce6fc5b478baf081d14585852b8d29924e11cf3aa66693d4c48e1cad"
+    }
+  },
+  "outcome": "Exact C81/C82 controls falsify C83's conditional-majority, outside-word-pairing, and global-defect mechanisms; the last has 18 and 768 marked-tuple violations respectively.",
+  "record_type": "METHOD_BOUNDARY",
+  "recorded_at_utc": "2026-08-06T00:08:35Z",
+  "replay": {
+    "audit": "python3 proof/check_cycle83_tip_fibers.py && python3 proof/check_cycle83_interval_conditioning.py && python3 proof/check_cycle83_word_pairing.py && python3 proof/check_cycle83_global_defect.py",
+    "check": "python3 proof/build_cycle_83_lem_local_defect_boundary.py --check",
+    "test": "pytest -q tests/test_cycle83_local_defect_boundary.py"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_83_lem_local_defect_boundary.py",
+    "sha256": "2e3bc443be7279e779917a646d13f77f1dfa08e60091c3c9104575885bc54650"
+  },
+  "status": "SEALED"
+}
