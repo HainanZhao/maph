@@ -1,102 +1,159 @@
-# Research goals
+# GOAL.md
 
-The user has selected every research topic in this file. Following this goal
-means carrying all three topics to mathematical resolution, not merely
-screening them, running bounded searches, proposing approaches, or preparing
-a shortlist.
+Revised 2026-08-07. Supersedes the previous version, whose goal was
+"finish every research topic below." That goal is retired: it contained no
+kill condition, which conflicts with the pre-registered-kill-criteria
+discipline used everywhere else in this program, and it bound three topics of
+very different tractability into a single completion target.
 
-**Overall status:** `OPEN (0/3 resolved)`.
+---
 
-The overall goal is complete only when each numbered topic has one of these
-outcomes:
+## Primary goal
 
-1. a proof of its stated universal claim with all hypotheses checked;
-2. an exact counterexample independently verified against the statement; or
-3. a verified prior result that already resolves precisely the same claim.
+**Post one result that someone outside my own framework cites, reuses, or
+corresponds about.**
 
-A finite search without a counterexample, a resource limit, a method-family
-no-go, or a publishable partial result does not resolve a topic and does not
-permit removing or replacing it. Work may proceed in the order below, but all
-three completion conditions are conjunctive.
+This replaces "resolve N of 3." Rationale: the failure mode of the analytic
+number theory work was not lack of proved statements — it was that the proved
+statements were internal to a self-invented coordinate system with no
+externally legible implication. Counting resolutions does not detect that
+failure. External uptake does.
 
-## Execution order
+Secondary goal: keep at most one topic in open-ended proof search at a time.
 
-| Order | Target | Topic status | First exact gate |
-| --- | --- | --- | --- |
-| 1 | covering number \(C(23,6,2)\) | `OPEN` | 20-block witness or SAT/DRAT no-go |
-| 2 | q-analog Conjecture 5.4 at \(k=4,r=4\) | `OPEN` | exact coefficient-difference sign |
-| 3 | q-Fibonomial unimodality at width 4 | `OPEN` | exact coefficient-difference sign |
+---
 
-## 1. The exact covering number \(C(23,6,2)\)
+## Success ladder (applies to every topic)
 
-- **Claim:** `CONJECTURED`. Decide whether 20 six-subsets of a 23-set cover
-  all pairs. The current La Jolla tables give lower bound 20 and a 21-block
-  construction, hence the exact value is 20 or 21.
-- **Direct verifier:** check all \(\binom{23}{2}=253\) pairs in a proposed
-  20-block family. A no-go requires a symmetry-broken SAT encoding and an
-  independently checked DRAT certificate.
-- **Proposed mechanism:** derive pair-degree and block-intersection constraints
-  before SAT to reduce the incidence patterns. This is a finite decision
-  problem, not a heuristic search.
-- **Stop rule:** a 20-block witness or a checked UNSAT certificate is complete;
-  an unverified solver status is not a result.
-- **Sources:** [La Jolla upper-bound table](https://ljcr.dmgordon.org/cover/table.html)
-  and [lower-bound table](https://ljcr.dmgordon.org/cover/low_tab.html), both
-  current in 2026.
+- **Outcome A — resolved.** Proved or refuted, uniformly, replayable,
+  written up.
+- **Outcome B — reduced.** Reduced to a stated, self-contained, checkable
+  sub-problem that a third party could attack without my scaffolding.
+  *B is a shippable contribution, not a failure.*
+- **Outcome C — killed.** Kill criterion met. Record the obstruction and the
+  reason in the ledger. Stop.
 
-## 2. q-analog Conjecture 5.4: the \(k=4,r=4\) slice
+A topic exits the queue on A, B, or C. It does not exit on "still trying."
 
-- **Claim:** `CONJECTURED`. For all positive integers
-  \(a_1,a_2,a_3,a_4,b\), if one \(a_i\) is divisible by four or
-  \[
-  b\le1+\sum_{i=1}^{4}\left\lfloor a_i/4\right\rfloor,
-  \]
-  then \([a_1]_q[a_2]_q[a_3]_q[a_4]_q[b]_{q^4}\) is unimodal.
-- **Status:** this is the source's named Conjecture 5.4. The authors checked
-  their general conjecture through \(k\le5,r\le6\), with parameters at most
-  15. A separate exact local sweep found no counterexample in this slice for
-  every nondecreasing \(a_i,b\le20\): 143,440 admissible tuples. This is
-  `OBSERVED`, not proof; replay it with
-  `python3 discovery/goal_qanalog_k4r4_sweep.py --limit 20`.
-- **Direct verifier:** multiply the five finite geometric series in exact
-  integer arithmetic and inspect successive coefficient differences. Any
-  descent followed by an ascent refutes the claim.
-- **Proposed mechanism:** each coefficient counts bounded solutions of
-  \(x_1+x_2+x_3+x_4+4y=d\). Prove an injection or interval dominance between
-  consecutive degree fibers under the displayed inequality.
-- **Stop rule:** an exact counterexample disproves the slice; a uniform fiber
-  injection or coefficient-difference proof settles it.
-- **Primary source:** Connelly--Ito--Martinez--Shevchenko--Yang, Conjecture
-  5.4, <https://arxiv.org/html/2605.12822>.
+---
 
-## 3. Fixed-width q-Fibonomial unimodality: the \(n=4\) slice
+## Topic 3 — Width-four q-Fibonomial unimodality (n = 4, all m ≥ 1)
 
-- **Claim:** `CONJECTURED`. For every \(m\ge1\), prove or refute the
-  unimodality of
-  \[
-  \left[\!\begin{matrix}m+4\\4\end{matrix}\!\right]_{\mathcal F}.
-  \]
-- **Status:** the current primary source proves the full conjecture only for
-  widths \(n\le3\). An exact local sweep for \(m=1,\ldots,10\) found no
-  counterexample: `OBSERVED`, not proof; replay it with
-  `python3 discovery/goal_qfibonomial_width4_sweep.py --limit 10`.
-- **Direct verifier:** form the exact quotient
-  \[
-  \frac{[F_{m+1}]_q[F_{m+2}]_q[F_{m+3}]_q[F_{m+4}]_q}
-       {[2]_q[3]_q}
-  \]
-  and inspect successive coefficient differences.
-- **Obstacle / proposed mechanism:** the source explicitly says that its
-  available q-analog factorization does not cover width four. First supply a
-  new factorization or a tiling recurrence; only then seek periodic
-  coefficient inequalities.
-- **Stop rule:** a proof or counterexample settles this fixed-width slice; a
-  computation-only range extension does not.
-- **Primary source:** same paper, Conjecture 1.1 and §5.2,
-  <https://arxiv.org/html/2605.12822>.
+**Status: Outcome A. Proved, replayable, written.**
 
-## Out of scope
+**Action: ship this month. Nothing is sequenced ahead of it.**
 
-- Alon--Jaeger--Tarsi nowhere-zero mappings, finite-cyclic Fuglede,
-  projective planes of order 12, HRT, and strong Littlewood lack a small,
-  discriminating first gate for this program. They are not part of this goal.
+- [ ] Post to arXiv (math.CO) by **2026-08-31**
+- [ ] Zenodo deposit, DOI recorded in the paper before posting
+- [ ] Email Connelly / Martinez (UCLA) with the link on the day of posting
+- [ ] Cite Bergeron–Ceballos–Küstner Conjecture 2.5 and
+      arXiv:2605.12822 as the n ≤ 3 case explicitly
+
+**Why the date is hard.** arXiv:2605.12822 (May 2026) resolved n ≤ 3 and
+stated that its methods suggest further directions. Five authors at one
+department are plausibly on n = 4 now. Crowding is the central strategic
+constraint of this program; holding a finished, timing-sensitive result while
+grinding an unrelated topic is precisely the failure that constraint names.
+
+**Explicitly rejected option:** merging Topic 3 into a heavier joint paper
+with Topic 2. The combined paper would be stronger, but the exposure window
+on n = 4 does not support waiting. Ship 3 now; let 2 be the sequel that
+cites it.
+
+---
+
+## Topic 2 — q-analog Conjecture 5.4, case (k = 4, r = 4)
+
+**Status: Outcome B in hand.** Reduced to a specific coefficient /
+window-dominance inequality.
+
+**This is the highest-return live target.** One inequality from A; plausible
+shared machinery with Topic 3 (gap absorption in products of q-analogs);
+same audience; would cite Topic 3.
+
+**Pre-registered kill criterion.** Review on **2026-10-31**. If the
+window-dominance inequality is not proved by that date:
+
+- Declare Outcome B final.
+- Write the reduction as a short standalone note: statement of the
+  inequality, proof that it implies (k = 4, r = 4), the computational
+  evidence, and the obstruction encountered.
+- Post it. Do not extend the date.
+
+**Before resuming proof work:**
+
+- [ ] Record whose Conjecture 5.4 this is, and what the (k = 4, r = 4) case
+      is worth to that community. If the answer is "nothing to anyone but
+      me," this topic moves to the same challenge Topic 1 is under.
+- [ ] Test the inequality numerically at the boundary of the admissible
+      range before investing in a proof.
+
+---
+
+## Topic 1 — Exact covering number C(23,6,2)
+
+**Status: open. 20 ≤ C(23,6,2) ≤ 21. Schönheim gives the lower bound;
+the open question is whether it is attained.**
+
+**This topic is under challenge and must justify its slot.** Three strikes:
+
+1. **The likely answer is the expensive direction.** If stochastic search has
+   failed to find a 20-block cover, the answer is probably 21 — which
+   requires exhaustive nonexistence over 20 six-subsets of a 23-set modulo
+   S_23. Symmetry breaking at that scale is a research problem in itself,
+   not a compute purchase.
+2. **Zero synergy.** Different field, toolchain, and audience from Topics 2
+   and 3. Nothing transfers in either direction.
+3. **Lowest payoff.** Resolved, it updates a table entry. Topic 2 resolved
+   yields a technique that generalizes.
+
+**Bounded experiment, budget fixed before starting.** Written down now so it
+cannot expand later:
+
+- Compute budget: **[FILL IN core-hours]**, single allocation, no extension.
+- Wall-clock cap: **[FILL IN]**.
+- Stop conditions, whichever comes first:
+  - a verified 20-block cover is found → Outcome A, ship immediately;
+  - the symmetry-broken encoding is built and the DRAT proof is *projected*
+    to exceed the budget by more than 10x → **Outcome C, cut the topic**;
+  - budget exhausted → **Outcome C, cut the topic.**
+- Deliverable on C: a one-page note recording the encoding, the symmetry
+  breaking used, the observed scaling, and the projected cost. Publishable
+  as a negative computational result; more importantly, it closes the topic
+  honestly instead of leaving it open indefinitely.
+
+**If the budget line above is not filled in by 2026-09-15, cut the topic
+without running the experiment.**
+
+---
+
+## Sequencing
+
+1. Ship Topic 3 (by 2026-08-31).
+2. Topic 2 proof attempt, single-threaded, until 2026-10-31.
+3. Topic 1 bounded experiment only after Topic 2 exits, and only if the
+   budget was fixed on time.
+
+Do not open a fourth topic while any of the above is unresolved.
+
+---
+
+## Standing disciplines (unchanged)
+
+- Append-only ledger; every claim classified A / B / C at the time it is
+  made.
+- Independent verification of all arithmetic before any claim is written up.
+- Kill criteria pre-registered in writing, with dates, before work begins.
+- Phase-0 direct-attempt protocol before building any scaffolding.
+- No result is "finished" until a third party could replay it from the
+  archive without asking me a question.
+
+---
+
+## Out of scope for this file
+
+The compatible spin-alignment note (three-qubit, pair-support, arbitrary Q)
+is on a separate track but competes for the same shipping bandwidth. It has
+referee-level fixes outstanding and a live crowding risk from Song–Chen. Do
+not let it and Topic 3 queue behind each other; they are both short and both
+timing-sensitive.
