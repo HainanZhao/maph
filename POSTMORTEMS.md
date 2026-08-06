@@ -51,3 +51,18 @@ choice, not merely summarize the work.
 - **Next-screen change:** require a stated exact lift-fiber invariant or
   quotient theorem before choosing compression as a primary attack; otherwise
   cap it at a convention control and one witness gate.
+
+## 2026-08-06 — Open Conjecture Sweep / C95
+
+- **Stop trigger:** `PROVED` finite subclass boundary. Exact Held--Karp and
+  independent witness replay covered every nontrivial labelled subset of
+  \(\{0,1\}^4\), with maximum fourth-power cycle cost 32.
+- **Failed assumption:** a finite Boolean-cube pass would itself provide a
+  bridge to arbitrary points of \([0,1]^4\); the replay supplies no such
+  orbit or metric explanation.
+- **Reusable rule:** a sharp finite falsifier gate is worth selecting when an
+  excess would refute the target, but a pass must stop at its frozen class
+  unless a structural transfer is independently derived.
+- **Next-screen change:** require a source-defined transfer mechanism before
+  any higher cube dimension, rational grid, random-point search, or arbitrary
+  point continuation.

@@ -1,0 +1,37 @@
+{
+  "artifact_id": "cycle-95-b095-bollobas-meir-q4-boundary-v1",
+  "audit": {
+    "max_cost": 32,
+    "over_threshold": 0,
+    "status": "PASS",
+    "subsets": 65519
+  },
+  "budget_ordinal": "B095",
+  "claim_boundary": "This proves only the Boolean-vertex Q4 subclass of the adjusted Bollobas--Meir conjecture. It does not prove the conjecture for arbitrary points, any other dimension, or an orbit/metric explanation.",
+  "cycle": 95,
+  "cycle_decision": {
+    "decision": "Seal finite Q4 subclass and stop.",
+    "falsifier": "A replayed labelled subset with exact optimum above 32.",
+    "stop": "No Q5, rational grids, random points, or arbitrary-cube continuation without a new source-defined orbit/metric mechanism."
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "checker": "7b89a7e2ddb135ee330e3ed407739c5ef1aafabf9b631010a31a9d4c245fa037",
+    "engine": "ae51f967d3b4f719f26c69b581684d7ffe894d54174cccc433e2f59a8e71ac6a",
+    "prereg": "50e26280bc74f8b0bb6ebba155c75ef582aae18c6bfcbeade941258430f38dd7",
+    "rows": "c435c9a955f982652fd0dfa5ccd831ae1048ab898fddadca7fc9616574f25ee8",
+    "selection": "ae36169f3b165d4ee7c0353d5c4bad602010672fb4e47bb21e363c7f8ea3a907"
+  },
+  "outcome": "All 65,519 labelled nontrivial subsets of Q4 have an exact Hamiltonian cycle of fourth-power Euclidean cost at most 32; the maximum emitted optimum is 32.",
+  "record_type": "FINITE_SUBCLASS_BOUNDARY",
+  "replay": {
+    "check": "python3 proof/check_cycle95_q4.py discovery/out/cycle95-q4/rows.tsv",
+    "engine": "g++ -std=c++20 -O3 -DNDEBUG proof/cycle95_q4_hypercube_dp.cpp -o /tmp/c95-q4 && /tmp/c95-q4 discovery/out/cycle95-q4/rows.tsv"
+  },
+  "runtime": {
+    "engine_peak_rss_kib": 7296,
+    "engine_wall_seconds": 0.06,
+    "implementation": "C++20 -O3; Python 3 checker"
+  },
+  "status": "SEALED"
+}
