@@ -122,3 +122,19 @@ choice, not merely summarize the work.
   when its whole completion invariant is checked, not merely its symmetry.
 - **Next-screen change:** require a distinct bounded character map before
   returning to Hadamard-668; never widen this quartic family or census signs.
+
+## 2026-08-06 — GOAL topic 3 / width-four q-Fibonomial unimodality
+
+- **Stop trigger:** `PROVED` universal closure.  The coefficients of
+  `(1-q)W_m(q)` reduce below the midpoint to four values of the partition
+  function for parts `1,2,3`; elementary quadratic bounds cover `m>=8`, and
+  exact substitution covers `m=1,...,7`.
+- **Successful check:** replacing direct polynomial expansion by the
+  coefficient-difference generating function exposed cancellations coming
+  from the consecutive Fibonacci identities.
+- **Reusable rule:** for a symmetric rational product, multiply by `(1-q)`
+  first and simplify subset shifts before seeking a factorization or extending
+  a coefficient sweep.
+- **Next-screen change:** apply coefficient-difference and shift-cancellation
+  reductions before any new bounded unimodality search; retain computation
+  only for the finite residue/base cases left by the uniform inequalities.
