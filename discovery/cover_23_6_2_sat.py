@@ -19,6 +19,17 @@ V = 23
 B = 20
 K = 6
 
+# If a 20-block cover exists, write r_v = 5 + e_v.  Counting gives
+# sum_v e_v = 5, while the exact excess-spectrum argument in
+# cover_23_6_2_excess_spectral.md proves that at least three e_v are positive.
+# Thus these are all and only the surviving excess partitions.
+SURVIVING_EXCESS_PATTERNS = {
+    "311": {1: 2, 2: 0, 3: 1},
+    "221": {1: 1, 2: 2, 3: 0},
+    "2111": {1: 3, 2: 1, 3: 0},
+    "11111": {1: 5, 2: 0, 3: 0},
+}
+
 
 class CNF:
     def __init__(self) -> None:
@@ -62,6 +73,13 @@ class CNF:
         self.at_most(lits, value)
         self.at_most([-lit for lit in lits], len(lits) - value)
 
+    def guarded_exactly(self, guard: int, lits: list[int], value: int) -> None:
+        """Require sum(lits) == value whenever guard is true."""
+        first_clause = len(self.clauses)
+        self.exactly(lits, value)
+        for clause in self.clauses[first_clause:]:
+            clause.insert(0, -guard)
+
     def lex_greater_equal(self, left: list[int], right: list[int]) -> None:
         """Require left >= right lexicographically, with 1 > 0."""
         assert len(left) == len(right)
@@ -84,6 +102,37 @@ class CNF:
             out.write(f"p cnf {self.nvars} {len(self.clauses)}\n")
             for clause in self.clauses:
                 out.write(" ".join(map(str, clause)) + " 0\n")
+
+
+def add_surviving_replication_patterns(
+    cnf: CNF, x: list[list[int]]
+) -> tuple[list[list[int]], dict[str, int]]:
+    """Encode the four exact replication patterns left by the theorem.
+
+    ``degree[v][e]`` selects replication ``5 + e`` for point ``v``.  The
+    pattern selector then fixes the number of points having each positive
+    excess.  This is a redundant theorem-derived constraint, not a heuristic
+    restriction of the search space.
+    """
+    assert len(x) == B and all(len(row) == V for row in x)
+    degree = [[cnf.var() for _ in range(4)] for _ in range(V)]
+    for v in range(V):
+        cnf.exactly(degree[v], 1)
+        incidences = [x[b][v] for b in range(B)]
+        for excess, selector in enumerate(degree[v]):
+            cnf.guarded_exactly(selector, incidences, 5 + excess)
+
+    patterns = {name: cnf.var() for name in SURVIVING_EXCESS_PATTERNS}
+    cnf.exactly(list(patterns.values()), 1)
+    for name, counts in SURVIVING_EXCESS_PATTERNS.items():
+        guard = patterns[name]
+        for excess in range(1, 4):
+            cnf.guarded_exactly(
+                guard,
+                [degree[v][excess] for v in range(V)],
+                counts[excess],
+            )
+    return degree, patterns
 
 
 def build(star_repeats: int | None = None) -> tuple[CNF, list[list[int]]]:
@@ -119,6 +168,8 @@ def build(star_repeats: int | None = None) -> tuple[CNF, list[list[int]]]:
     # exposes a strong necessary condition early to the solver.
     for v in range(V):
         cnf.at_most([-x[b][v] for b in range(B)], B - 5)
+
+    add_surviving_replication_patterns(cnf, x)
 
     # At most five points can have replication above five.  Hence the
     # 17-point complement of block 0 contains at least twelve degree-five
