@@ -6,11 +6,11 @@
   conjectures that have not been officially announced as solved by OpenAI,
   seeking either a complete proof/counterexample or a publishable scoped
   theorem, reduction, obstruction, or certified finite result.
-- **Status:** `C001_STOPPED / D001_SELECTION_REQUIRED` (legacy cycle `C100`). Earlier closed
+- **Status:** `C001_STOPPED / D001_RESERVED_NO_SELECTION` (legacy cycle `C100`). Earlier closed
   problems, eligibility corrections, and method boundaries are preserved in
   cycle artifacts and the current-gate ledger below. C001's ES(7) anchor
-  stopped at its invalid n=25 control criterion; the next selection, if one is
-  authorized after the stability-lock review, must be D001.
+  stopped at its invalid n=25 control criterion. The D001 screen returned
+  `NO_SELECTION`; the next genuinely selected problem must be D001.
 - **Claim boundary:** all solve probabilities and tractability rankings below
   are `CONJECTURED` planning estimates. A bounded source search is not proof
   that a problem is open or untouched by OpenAI; eligibility must be checked
@@ -272,6 +272,13 @@ may introduce a better eligible problem.
   be UNSAT was an invalid scalability criterion, so it cannot authorize a
   canonical retry. This is neither an ES(7) result nor a SAT-model
   realizability claim. See `discovery/cycle100_control_outcome.md`.
+- **D001 screen — NO_SELECTION:** Oracle independently reconstructed the
+  C80--C001 decisions and found no candidate with an explicit state,
+  invariant/transition, direct verifier, falsifier, bounded stop, and a
+  nonduplicating historical delta. The closest design is C99's
+  square-preserving tangent lift, but it lacks its required self-map and
+  integrality invariant. D001 is reserved; do not start a new attack or turn
+  the missing bridge into a census. See `discovery/d001_portfolio_no_selection.md`.
 
 ### Closed gate — C80 quaternary Legendre pairs, length 42
 
