@@ -111,3 +111,14 @@ choice, not merely summarize the work.
 - **Next-screen change:** any successor character construction must name a
   new finite block type and a corresponding symbolic invariant before a sign
   enumeration is authorized.
+
+## 2026-08-06 — Open Conjecture Sweep / E001 (legacy C102)
+
+- **Stop trigger:** `PROVED` exact no-hit in all 333,375 admissible quartic
+  triples for the complete near-Williamson PAF target.
+- **Failed assumption:** a reciprocal-even quartic character trace family
+  could supply the missing order-167 construction interface.
+- **Reusable rule:** a formula-generated sequence family is informative only
+  when its whole completion invariant is checked, not merely its symmetry.
+- **Next-screen change:** require a distinct bounded character map before
+  returning to Hadamard-668; never widen this quartic family or census signs.

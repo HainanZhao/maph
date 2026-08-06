@@ -6,12 +6,13 @@
   conjectures that have not been officially announced as solved by OpenAI,
   seeking either a complete proof/counterexample or a publishable scoped
   theorem, reduction, obstruction, or certified finite result.
-- **Status:** `C001_STOPPED / D001_CLOSED / E001_SELECTED` (legacy cycle `C100`). Earlier closed
+- **Status:** `C001_STOPPED / D001_CLOSED / E001_CLOSED / F001_SELECTION_PENDING` (legacy cycle `C100`). Earlier closed
   problems, eligibility corrections, and method boundaries are preserved in
   cycle artifacts and the current-gate ledger below. C001's ES(7) anchor
   stopped at its invalid n=25 control criterion. D001's book-Ramsey
   character-sign gate closed at its exact q=7 falsifier. Oracle independently
-  selected E001's bounded Hadamard-668 quartic-character completion gate.
+  selected E001's bounded Hadamard-668 quartic-character completion gate,
+  which exhausted its exact family; Oracle must select F001.
 - **Claim boundary:** all solve probabilities and tractability rankings below
   are `CONJECTURED` planning estimates. A bounded source search is not proof
   that a problem is open or untouched by OpenAI; eligibility must be checked
@@ -320,6 +321,11 @@ may introduce a better eligible problem.
   an arbitrary sequence census. A hit is checked by all-shift PAF and a
   668-by-668 block product; a no-hit closes only this quartic mechanism. See
   `discovery/_004_e001_hadamard_quartic_selection.md`.
+- **E001 (C102/B102) closure — PROVED method boundary:** the independent
+  exact replays checked all 333,375 unordered triples from the 125 admissible
+  quartic parameters, with zero PAF completions. This closes only
+  \(B_b(i)=\chi(i^4+bi^2+1)\); do not widen it or search arbitrary sequences.
+  See sealed `cycle-102-b102-hadamard-quartic-boundary-v1`.
 
 ### Closed gate — C80 quaternary Legendre pairs, length 42
 
