@@ -404,16 +404,21 @@ Never conceal, erase, or silently work around a listed finding.
   total filesystem capacity as available space or alter an already-running
   process merely because this default was added later.
 - Record wall time and peak memory for principal replays.
-- **Persistent-goal continuation guard:** a continuation turn must take one
-  concrete, state-advancing action (for example inspect evidence, run a
-  replay, edit a preregistration, obtain a companion decision, or commit a
-  verified result). Never end such a turn with a status-only final such as
-  "continuing" or "still active": that can retrigger the same goal without
-  progress. If no safe concrete action remains, perform the ordinary blocked
-  audit and mark the goal blocked only when its threshold is met; otherwise
-  wait silently for an actual user or external-state event. Treat repeated
-  identical continuation notices as an orchestration defect, not research
-  progress, and stop emitting them.
+- **Persistent-goal continuation guard:** treat an automatic “still active”
+  or “continuing” event as an internal scheduler signal, never as a user-facing
+  result or a research action. On receipt, resume from the next concrete,
+  state-advancing step (inspect evidence, run a replay, edit a preregistration,
+  obtain a companion decision, or commit a verified result); do not acknowledge
+  the signal in commentary or a final. A continuation is permitted only after
+  recording a distinct action or newly observed external state since the prior
+  continuation. Never end a turn with a status-only final such as “continuing”,
+  “still active”, or a restatement of the active cycle. If no safe concrete
+  action remains, perform the ordinary blocked audit and mark the goal blocked
+  only when its threshold is met; otherwise wait silently for an actual user or
+  external-state event. De-duplicate scheduler signals: after one no-op signal
+  for a task/version, suppress every identical repeat until its state changes.
+  Treat repeated identical continuation notices as an orchestration defect, not
+  research progress; do not poll a background agent merely to produce one.
 - Treat a transient slow-server, spinner, or dismissible wait notice as
   already dismissed: continue safe local work or wait/retry silently. Surface
   it only after it has become a real blocker under the ordinary escalation
