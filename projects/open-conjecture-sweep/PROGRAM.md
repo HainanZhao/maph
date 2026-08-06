@@ -6,7 +6,7 @@
   conjectures that have not been officially announced as solved by OpenAI,
   seeking either a complete proof/counterexample or a publishable scoped
   theorem, reduction, obstruction, or certified finite result.
-- **Status:** `ACTIVE / PORTFOLIO_DISCOVERY_AFTER_C93`. C72 is closed by the
+- **Status:** `ACTIVE / PORTFOLIO_DISCOVERY_AFTER_C94`. C72 is closed by the
   corrected sealed artifact
   `cycle-72-b072-defect-core-extension-v2`: `PROVED`, every generalized
   rooted \(D=5\) equality core has a universal five-blocker, so every
@@ -257,6 +257,14 @@ may introduce a better eligible problem.
   \(t=1/3\)/uniform endpoint witness under two exact enumerators. Do not
   extend to \([5]\), change temperature, or invent a post-result monotonicity
   predicate within C92; return to fresh portfolio discovery.
+- **C94 interface audit — PROVED / CONJECTURED:** Zhao's decisive condition
+  quantifies independently over arbitrary subgroup pairs in every \(S_n\).
+  The proposed fixed-diagram, subgroup-free \(n\)-recurrence is therefore
+  ill-posed: the unique \(S_1\) input has valid \(S_2\) continuations with
+  Möbius densities \(2^{-9}\) and \(1\).  This refutes only that state-only
+  schema, not Zhao's comparison.  Do not run an \(S_4\)/\(S_5\) recurrence
+  census.  A future bridge must specify an inclusion-compatible subgroup tower
+  and state map before executable work; otherwise resume wide discovery.
 - **Next action:** run a fresh, wide portfolio-discovery pass, including
   current eligibility and primary-source screens, then let Oracle select one
   distinct small exact gate.  Do not resume C83's local-fiber methods or
