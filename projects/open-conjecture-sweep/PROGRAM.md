@@ -286,9 +286,10 @@ may introduce a better eligible problem.
 - **C96 screen — NO_SELECTION:** the post-C95 primary-source search found no
   new bounded verifier. Bollobás--Meir higher-cube/grid/point continuations are
   explicitly blocked by C95's boundary; Kakeya and other surfaced leads lack
-  a finite exact falsifier or proof-grade interface. Do not invoke Oracle to
-  restate an under-specified lead; resume only after a genuinely new gate is
-  source-defined.
+  a finite exact falsifier or proof-grade interface, and the new finite-cyclic
+  Fuglede lead has no aggregate-feasible smallest unresolved group. Do not
+  invoke Oracle to restate an under-specified lead; resume only after a
+  genuinely new gate is source-defined.
 
 ### Closed gate — C80 quaternary Legendre pairs, length 42
 
