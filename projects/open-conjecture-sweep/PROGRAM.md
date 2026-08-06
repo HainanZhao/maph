@@ -6,11 +6,11 @@
   conjectures that have not been officially announced as solved by OpenAI,
   seeking either a complete proof/counterexample or a publishable scoped
   theorem, reduction, obstruction, or certified finite result.
-- **Status:** `ACTIVE / PORTFOLIO_DISCOVERY_AFTER_C99`. Earlier closed
+- **Status:** `ACTIVE / C100_ES7_STABILITY_LOCK`. Earlier closed
   problems, eligibility corrections, and method boundaries are preserved in
-  cycle artifacts and the current-gate ledger below. The active frontier is
-  fresh source/idea discovery after C99; no new attack is authorized until a
-  source-cleared gate is selected.
+  cycle artifacts and the current-gate ledger below. C100 is the selected
+  Erdős--Szekeres (ES(7)) anchor; its resource continuation stays live under
+  the rolling pivot stability lock.
 - **Claim boundary:** all solve probabilities and tractability rankings below
   are `CONJECTURED` planning estimates. A bounded source search is not proof
   that a problem is open or untouched by OpenAI; eligibility must be checked
@@ -67,6 +67,29 @@ new candidate dominates it. A failed lemma, a resource optimization, a single
 negative sample, or ordinary continuation is *not* a pivot trigger; keep the
 same research cycle and target while its question and method family remain
 coherent. This prevents both rabbit holes and artificial micro-cycles.
+
+### Rolling pivot guard (C100 correction)
+
+The last-100-cycle audit found 16 material target/engine pivots
+(`discovery/cycle100_pivot_audit.md`).  This exceeds the program's tolerated
+three-pivot rate and activates a stability lock.  For every rolling window of
+100 cycles, at most three material pivots are allowed.  A fourth proposed pivot
+is rejected unless it is forced by a proved result or counterexample, an
+external eligibility loss, or an irreversible status gate.  Minor blocks—one
+failed lemma, a bounded negative subtest, an OOM/time/disk cap, a bookkeeping
+repair, or a method optimization—must stay in the live cycle and be handled by
+an amended preregistration or a genuinely different continuation inside the
+same target.
+
+Before any non-exempt pivot, the primary must first document (i) the current
+preregistered stop condition, (ii) one continuation attempt that addresses the
+block without changing the target, and (iii) an artifact-cited Oracle packet
+comparing continuation against the proposed target, including a falsifier and
+expected information gain.  After the guard trips, keep the incumbent target
+for a ten-cycle stability block; no portfolio reselection is permitted during
+that block except for the four exemptions above.  The guard is a cadence rule,
+not a new research cycle, and does not authorize retroactive edits to sealed
+records.
 
 The discovery cycle must contain a wide primary-source/official-status screen,
 creative candidate generation, an adversarial comparison of assumptions and
@@ -225,6 +248,11 @@ may introduce a better eligible problem.
   has a finite state, verifier, and falsifier. Do not open C99 as an attack,
   enlarge C98, or run the `|x|>10^50` benchmark search. See
   `discovery/cycle99_quadratic_form_screen.md`.
+- **C100 gate — ACTIVE / stability lock:** Oracle selected the source-defined
+  (ES(7)=33) reduced orientation-SAT anchor.  The first canonical attempt
+  hit an observed host OOM, so the live preregistration was amended for a
+  lower-memory control and bounded continuation; this is not a pivot trigger.
+  Keep the same target and method family until the preregistered gate closes.
 
 ### Closed gate — C80 quaternary Legendre pairs, length 42
 
