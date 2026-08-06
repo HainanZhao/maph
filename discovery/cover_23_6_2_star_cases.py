@@ -9,7 +9,15 @@ import json
 import subprocess
 from pathlib import Path
 
-from cover_23_6_2_sat import B, K, V, CNF, parse_model, verify
+from cover_23_6_2_sat import (
+    B,
+    K,
+    V,
+    CNF,
+    add_surviving_replication_patterns,
+    parse_model,
+    verify,
+)
 
 
 SUPPORTS = {
@@ -74,11 +82,8 @@ def build(case: str) -> tuple[CNF, list[list[int]], list[set[int]]]:
             cnf.lex_greater_equal(columns[left], columns[right])
     for v in range(V):
         cnf.at_most([-x[b][v] for b in range(B)], B - 5)
-        # With 120 incidences and the lower bound r_v >= 5 at every point,
-        # a single replication number cannot exceed 10: that alone would
-        # consume all five incidences above the global minimum 23 * 5.
-        # State the implied upper bound explicitly for propagation.
-        cnf.at_most([x[b][v] for b in range(B)], 10)
+        cnf.at_most([x[b][v] for b in range(B)], 8)
+    add_surviving_replication_patterns(cnf, x)
     for u, v in itertools.combinations(range(V), 2):
         covering = []
         for b in range(B):
