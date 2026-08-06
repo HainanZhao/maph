@@ -6,7 +6,7 @@
   conjectures that have not been officially announced as solved by OpenAI,
   seeking either a complete proof/counterexample or a publishable scoped
   theorem, reduction, obstruction, or certified finite result.
-- **Status:** `ACTIVE / PORTFOLIO_DISCOVERY_AFTER_C91`. C72 is closed by the
+- **Status:** `ACTIVE / PORTFOLIO_DISCOVERY_AFTER_C92`. C72 is closed by the
   corrected sealed artifact
   `cycle-72-b072-defect-core-extension-v2`: `PROVED`, every generalized
   rooted \(D=5\) equality core has a universal five-blocker, so every
@@ -88,6 +88,10 @@
   Ryser control make the one frozen reciprocal coordinate-trace CSP UNSAT by
   two exact routes. This closes only that rank-shifted trace-gluing axiom; it
   is not evidence about \(\tau=6\), Ryser, or other trace systems.
+  C92 is sealed as `cycle-92-b092-frankl-temperature-boundary-v1`: `PROVED`,
+  its two exact enumerators agree on 4,223 frozen intersection-closed
+  four-coordinate families and no endpoint-witness crossing occurs. This is
+  a finite control only, not a common-witness theorem or a Frankl result.
   C86 is sealed as
   `cycle-86-b086-frankl-all-inclusion-hall-boundary-v1`: `PROVED`, all 2,034
   declared four-point dimension-three controls admit an all-inclusion Hall
@@ -248,6 +252,11 @@ may introduce a better eligible problem.
   routes make the frozen reciprocal shared-coordinate trace system UNSAT.
   Do not weaken reciprocity, change the coordinate condition, or test another
   control within C91; return to fresh portfolio discovery.
+- **C92 boundary — PROVED:** every one of the 4,223 frozen nontrivial,
+  full-universe intersection-closed \([4]\) families has a shared
+  \(t=1/3\)/uniform endpoint witness under two exact enumerators. Do not
+  extend to \([5]\), change temperature, or invent a post-result monotonicity
+  predicate within C92; return to fresh portfolio discovery.
 - **Next action:** run a fresh, wide portfolio-discovery pass, including
   current eligibility and primary-source screens, then let Oracle select one
   distinct small exact gate.  Do not resume C83's local-fiber methods or
