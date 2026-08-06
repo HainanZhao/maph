@@ -404,6 +404,16 @@ Never conceal, erase, or silently work around a listed finding.
   total filesystem capacity as available space or alter an already-running
   process merely because this default was added later.
 - Record wall time and peak memory for principal replays.
+- **Persistent-goal continuation guard:** a continuation turn must take one
+  concrete, state-advancing action (for example inspect evidence, run a
+  replay, edit a preregistration, obtain a companion decision, or commit a
+  verified result). Never end such a turn with a status-only final such as
+  "continuing" or "still active": that can retrigger the same goal without
+  progress. If no safe concrete action remains, perform the ordinary blocked
+  audit and mark the goal blocked only when its threshold is met; otherwise
+  wait silently for an actual user or external-state event. Treat repeated
+  identical continuation notices as an orchestration defect, not research
+  progress, and stop emitting them.
 - Treat a transient slow-server, spinner, or dismissible wait notice as
   already dismissed: continue safe local work or wait/retry silently. Surface
   it only after it has become a real blocker under the ordinary escalation
