@@ -6,7 +6,7 @@
   conjectures that have not been officially announced as solved by OpenAI,
   seeking either a complete proof/counterexample or a publishable scoped
   theorem, reduction, obstruction, or certified finite result.
-- **Status:** `ACTIVE / PORTFOLIO_DISCOVERY_AFTER_C87`. C72 is closed by the
+- **Status:** `ACTIVE / PORTFOLIO_DISCOVERY_AFTER_C88`. C72 is closed by the
   corrected sealed artifact
   `cycle-72-b072-defect-core-extension-v2`: `PROVED`, every generalized
   rooted \(D=5\) equality core has a universal five-blocker, so every
@@ -66,6 +66,12 @@
   12-point pair-covering partition system has six nonempty private regions
   but no third-color absorbed pair, while retaining a three-component cover.
   This ends only the private-region absorption invariant.
+  C88 is sealed as
+  `cycle-88-b088-ryser-fractional-drop-boundary-v1`: `PROVED`, the published
+  13-edge six-partite control has a nine-edge residual of fractional cover
+  number \(23/8\) for which no one-vertex deletion reaches \(2\).  This
+  ends only the greedy one-vertex fractional-drop mechanism, not Ryser or
+  non-greedy rounding.
   C86 is sealed as
   `cycle-86-b086-frankl-all-inclusion-hall-boundary-v1`: `PROVED`, all 2,034
   declared four-point dimension-three controls admit an all-inclusion Hall
@@ -151,7 +157,7 @@ value falls below a screened alternative.
 The entries below are starting candidates. Discovery governs their order and
 may introduce a better eligible problem.
 
-### Current gate — portfolio discovery after C87
+### Current gate — portfolio discovery after C88
 
 - **C80 closure — OBSERVED engine boundary:** the corrected d=6/m=7 and
   d=7/m=6 compression identities passed exact controls. Balance plus
@@ -202,6 +208,14 @@ may introduce a better eligible problem.
   abundant while all five inclusion matchings fail.  This is a direct
   source-control falsifier of the transport, not a Frankl counterexample.
   See sealed `cycle-86-b086-frankl-all-inclusion-hall-boundary-v1`.
+- **C88 boundary — PROVED:** the C69 published 13-edge intersecting
+  six-partite control has an exact nine-edge residual after deleting \((1,6)\)
+  with \(\tau^*=23/8\), but every one-vertex child has \(\tau^*>2\).  The
+  complete depth-five packet reconstructs 6,102 rational primal/dual LP
+  certificates and has 263 least-applicable FD failures.  See sealed
+  `cycle-88-b088-ryser-fractional-drop-boundary-v1`.  This is a greedy
+  one-vertex descent boundary only; do not add pair-deletion or threshold
+  repairs within it.
 - **Next action:** run a fresh, wide portfolio-discovery pass, including
   current eligibility and primary-source screens, then let Oracle select one
   distinct small exact gate.  Do not resume C83's local-fiber methods or
