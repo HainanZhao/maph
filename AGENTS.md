@@ -209,6 +209,14 @@ and stop/pivot criterion. The primary executes the choice. At other forks,
 Oracle advises and the primary decides. Use one concise evidence packet and do
 not invoke, poll, or wait for Oracle during ordinary research.
 
+An Oracle recommendation to open a new engine is actionable only if its packet
+also names the input state, the proposed invariant/map/transition, the smallest
+direct verifier, and a resource-bounded stop criterion. An unspecified
+"missing interface" is a `NO_SELECTION` design finding, not an attack choice:
+record its missing data, do not start a finite census as a proxy, and return to
+the primary discovery screen. Do not send follow-ups merely to turn a
+`NO_SELECTION` into an active-looking status.
+
 ### One live specification per cycle
 
 Keep one preregistration while a cycle is live. Amend it in place; Git history
