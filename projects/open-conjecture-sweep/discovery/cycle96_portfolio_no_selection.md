@@ -30,6 +30,15 @@ smallest unresolved rank-five instance with a preregisterable exact
 falsifier. Treating HTE itself as a finite attack would therefore be a method
 substitution, not a bounded source-defined gate.
 
+The primary source for Khetan, *A Counterexample to Nivat's Conjecture for a
+Non-Convex Window of Full Affine Span* (arXiv:2607.09830), reports a full
+affine-span counterexample at |F|=8 and proves prime and prime-squared
+cardinalities periodic in the required orbit-closure sense. It explicitly
+leaves |F|=6 open. That residual is an infinite tiling/dynamical
+classification, not a finite enumeration with a source-specified exact
+verifier, falsifier, and resource stop; it is therefore ineligible for a new
+bounded attack here.
+
 The C80--C95 artifact history contains no untested candidate with a named
 state, invariant, exact verifier, falsifier, and resource-bounded stop rule.
 Therefore C96 is `NO_SELECTION`. Do not invoke Oracle merely to restate C95 or
