@@ -41,10 +41,9 @@ A topic exits the queue on A, B, or C. It does not exit on "still trying."
 
 **Status: Outcome A. Proved, replayable, written.**
 
-**Action: complete direct outreach this month. Nothing is sequenced ahead of it.**
+**Publication status: shipped via Zenodo.**
 
 - [x] Zenodo deposit published; DOI recorded in the paper
-- [ ] Email Connelly / Martinez (UCLA) with the Zenodo link
 - [x] Cite Bergeron–Ceballos–Küstner Conjecture 2.5 and
       arXiv:2605.12822 as the n ≤ 3 case explicitly
 
