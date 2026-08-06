@@ -6,7 +6,7 @@
   conjectures that have not been officially announced as solved by OpenAI,
   seeking either a complete proof/counterexample or a publishable scoped
   theorem, reduction, obstruction, or certified finite result.
-- **Status:** `ACTIVE / PORTFOLIO_DISCOVERY_AFTER_C92`. C72 is closed by the
+- **Status:** `ACTIVE / PORTFOLIO_DISCOVERY_AFTER_C93`. C72 is closed by the
   corrected sealed artifact
   `cycle-72-b072-defect-core-extension-v2`: `PROVED`, every generalized
   rooted \(D=5\) equality core has a universal five-blocker, so every

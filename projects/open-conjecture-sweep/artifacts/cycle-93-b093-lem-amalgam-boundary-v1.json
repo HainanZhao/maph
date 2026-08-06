@@ -1,0 +1,107 @@
+{
+  "artifact_id": "cycle-93-b093-lem-amalgam-boundary-v1",
+  "audit": {
+    "comparability_xy": true,
+    "epistemic_status": "PROVED",
+    "extensions": 303908928,
+    "full_cycle": false,
+    "marked_arrows_hold": false,
+    "marked_pair_route_agreement": true,
+    "marked_pairs": [
+      [
+        1,
+        0,
+        137940480,
+        165968448
+      ],
+      [
+        0,
+        3,
+        132744768,
+        171164160
+      ],
+      [
+        3,
+        1,
+        189864480,
+        114044448
+      ],
+      [
+        8,
+        0,
+        22060800,
+        281848128
+      ],
+      [
+        0,
+        3,
+        132744768,
+        171164160
+      ],
+      [
+        3,
+        8,
+        303908928,
+        0
+      ]
+    ],
+    "pair_route_agreement": true,
+    "required_incomparabilities": false,
+    "restricted_4cycle": false,
+    "status": "PASS",
+    "vertices": 16,
+    "w": 3,
+    "x": 1,
+    "y": 8,
+    "z": 0
+  },
+  "budget_ordinal": "B093",
+  "claim_boundary": "One canonical amalgam only; no statement on other gluing, configuration realizability, or Gupta Question 14.",
+  "cycle": 93,
+  "cycle_decision": {
+    "companion_advice": "Seal and pivot; no alternate gluing.",
+    "companion_identity": "/root/oracle_c88_retry (Oracle)",
+    "decision": "End C93 after its construction falsifier.",
+    "falsifier": "Relation/label mismatch, differing total or marked-pair counts, or required configuration appearing."
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "check": {
+      "path": "proof/check_cycle93_lem_amalgam.py",
+      "sha256": "b9e92bf7492bc96df368bb3a1a01bab9d2cbd72cf7b7775358bf4e2dd14f47f1"
+    },
+    "lrc_reject": {
+      "path": "discovery/cycle93_lrc_intermediate_sieve_overlap_audit.md",
+      "sha256": "49d49bc014e35b8b2a14c975ef707c73d3fa74c1573f926769094779ddfbad1a"
+    },
+    "prereg": {
+      "path": "docs/cycle-93-b093-lem-amalgam-preregistration-v1.md",
+      "sha256": "cb7cfce28ff7530c5752223c2263a7027be50557245d811240222b6d0e08eaa0"
+    },
+    "selection": {
+      "path": "discovery/cycle93_lem_amalgam_selection.md",
+      "sha256": "defed04d56e296d0ab637afa55665a047064704dca27eeac71fcb20290f158b8"
+    },
+    "source": {
+      "path": "discovery/cycle93_lem_amalgam_source_audit.md",
+      "sha256": "014fc9c364d3b419988a95b53c26302c25742351a4b459b8c78f1e37ae5e7147"
+    }
+  },
+  "outcome": "The canonical 16-vertex C81 free amalgam has 303,908,928 extensions; two DPs agree on total and six marked pair counts, but closure creates forbidden comparabilities and the ordered two-triangle arrows fail.",
+  "record_type": "FAMILY_METHOD_BOUNDARY",
+  "recorded_at_utc": "2026-08-06T00:00:00Z",
+  "replay": {
+    "artifact_check": ".venv/bin/python proof/build_cycle_93_lem_amalgam_boundary.py --check",
+    "audit": ".venv/bin/python proof/check_cycle93_lem_amalgam.py"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle_93_lem_amalgam_boundary.py",
+    "sha256": "59d48f9d987ab2d881da923b4c1a527d6535c51f22c43e94ccbad556094456a4"
+  },
+  "status": "SEALED"
+}
