@@ -41,6 +41,15 @@ bounded attack here.
 
 The C80--C95 artifact history contains no untested candidate with a named
 state, invariant, exact verifier, falsifier, and resource-bounded stop rule.
-Therefore C96 is `NO_SELECTION`. Do not invoke Oracle merely to restate C95 or
-to turn an under-specified literature lead into an active cycle. Resume only
-when a primary-source screen supplies a genuinely new bounded gate.
+Therefore C96 is `NO_SELECTION`.
+
+## Oracle decision
+
+Oracle reconstructed the C80--C95 exclusion map and independently compared
+the book-Ramsey, Large Steiner, arithmetic Kakeya, and Hadamard-668 leads.
+It returned `NO_SELECTION`: book-Ramsey lacks a verified currently uncovered
+parameter and a new finite algebraic family; Steiner lacks a source-cleared
+parameter triple and invariant; arithmetic Kakeya lacks certificate and
+construction caps; Hadamard-668 lacks a bounded structured family. A finite
+verifier without a frozen method family is not an authorized gate. Resume
+only when a primary-source screen supplies the missing interface.
