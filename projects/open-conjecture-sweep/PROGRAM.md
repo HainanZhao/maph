@@ -284,11 +284,11 @@ may introduce a better eligible problem.
   Oracle only with an artifact-cited historical exclusion map and a genuinely
   new exact or rigorous first gate.
 - **C96 screen — NO_SELECTION:** the post-C95 primary-source search found no
-  new bounded verifier. Bollobás--Meir higher-cube/grid/point continuations are
-  explicitly blocked by C95's boundary; Kakeya and other surfaced leads lack
-  a finite exact falsifier or proof-grade interface, and the new finite-cyclic
-  Fuglede lead has no aggregate-feasible smallest unresolved group. Do not
-  invoke Oracle to restate an under-specified lead; resume only after a
+  new bounded verifier. Bollobás--Meir continuations are blocked by C95;
+  Kakeya, finite-cyclic Fuglede, and the remaining all-rank
+  Littlewood--Richardson effectivity frontier have no smallest
+  preregisterable exact gate. Full exclusions and source links are in
+  `discovery/cycle96_portfolio_no_selection.md`; do not invoke Oracle until a
   genuinely new gate is source-defined.
 
 ### Closed gate — C80 quaternary Legendre pairs, length 42
