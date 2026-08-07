@@ -1,0 +1,340 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Aligned-Center Criteria for Products with Multiple q-Integer Spacers},
+  pdfauthor={Hainan Zhao}
+}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\qint}[1]{[#1]_q}
+\newcommand{\qrint}[2]{[#1]_{q^{#2}}}
+
+\title{Aligned-Center Criteria for Products with Multiple
+\(q\)-Integer Spacers}
+\author{Hainan Zhao}
+\date{August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Connelly, Ito, Martinez, Shevchenko, and Yang conjectured a sufficient
+condition for the unimodality of a product of ordinary \(q\)-integers and
+one lacunar factor.  We first prove that condition for every number of
+ordinary factors and every spacer step in its stated range.  We then prove
+a hybrid criterion for arbitrarily many lacunar factors: disjoint
+divisibility pairs are absorbed factor by factor, and the remaining spacer
+increments are assigned to the remaining ordinary factors by a nonnegative
+integer allocation matrix.  No coprimality among the spacer steps is
+required.  Both results follow from one aligned-center recursion.  The
+criterion is sufficient rather than necessary, and explicit small examples
+map that boundary.
+\end{abstract}
+
+\section{Introduction}
+
+For a positive integer \(n\), write
+\[
+ [n]_q=1+q+\cdots+q^{n-1}.
+\]
+Connelly, Ito, Martinez, Shevchenko, and Yang proposed the following
+criterion \cite[Conjecture~5.4]{CIMSY}.  If \(r\geq2\), \(k\geq1\), and
+\(a_1,\ldots,a_k,b\) are positive integers satisfying
+\[
+ r\mid a_i\quad\text{for some }i,
+ \qquad\text{or}\qquad
+ b\leq1+\sum_{i=1}^k\left\lfloor\frac{a_i}{r}\right\rfloor,
+ \tag{1}
+\]
+then
+\[
+ \prod_{i=1}^k[a_i]_q[b]_{q^r}                    \tag{2}
+\]
+is unimodal.  They conjectured necessity when \(k\leq3\) or \(r\leq3\),
+with the one-factor case and the \((k,r)=(2,2)\) case among their proved
+precursors.  Their bounded checks are separate computational evidence.
+
+Our first result settles the sufficient direction exactly as stated.
+
+\begin{theorem}[one-spacer criterion]\label{thm:one-spacer}
+Let \(r\geq2\), \(k\geq1\), and let \(a_1,\ldots,a_k,b\) be positive
+integers.  If either condition in \emph{(1)} holds, then the polynomial
+\emph{(2)} is symmetric and unimodal.
+\end{theorem}
+
+The same mechanism permits several spacers.  For the next statement, choose
+sets \(J\subseteq\{1,\ldots,s\}\) and
+\(I\subseteq\{1,\ldots,k\}\), and a bijection
+\(\phi:J\to I\).  Write \(J^c\) and \(I^c\) for their complements.
+
+\begin{theorem}[hybrid multi-spacer criterion]\label{thm:hybrid}
+Let \(k,s\geq1\); let \(a_1,\ldots,a_k,b_1,\ldots,b_s\) be positive
+integers; and let \(r_1,\ldots,r_s\geq1\).  Suppose that
+\[
+ r_j\mid a_{\phi(j)}\qquad(j\in J),
+\]
+and that there are nonnegative integers \(d_{j,i}\), for
+\(j\in J^c\) and \(i\in I^c\), such that
+\[
+ \sum_{i\in I^c}d_{j,i}=b_j-1\qquad(j\in J^c),       \tag{3}
+\]
+and
+\[
+ a_i-\sum_{j\in J^c}r_jd_{j,i}\geq1
+ \qquad(i\in I^c).                                  \tag{4}
+\]
+Then
+\[
+ \prod_{i=1}^k[a_i]_q\prod_{j=1}^s[b_j]_{q^{r_j}}
+\]
+is symmetric and unimodal.  Empty residual index sets are allowed, with
+the displayed conditions interpreted as empty sums.
+\end{theorem}
+
+Theorem~\ref{thm:hybrid} has no coprimality hypothesis.  It is genuinely
+beyond the named conjecture because it allows arbitrarily many spacers, but
+it remains only sufficient.  The source example
+\(([3]_q)^4[2]_{q^4}\) is unimodal while violating (1), so no general
+necessity claim is made.  At two spacers,
+\([2]_{q^2}[2]_{q^3}=1+q^2+q^3+q^5\) is symmetric but not unimodal and is
+excluded by (4).  The nearby unimodal product
+\([5]_q[2]_{q^2}[2]_{q^3}\) is also outside (4), showing that the new
+condition is not necessary.  We do not give an exact characterization of
+multi-spacer unimodality.
+
+\section{Symmetric unimodality}
+
+A finite nonnegative coefficient sequence is \emph{symmetric unimodal about
+\(C\)} if coefficients at exponents equidistant from \(C\) agree and the
+coefficients weakly increase up to \(C\).  We allow initial and terminal
+zeros; this convention makes translates convenient.
+
+\begin{lemma}\label{lem:closure}
+If \(F\) and \(G\) are nonnegative symmetric unimodal polynomials about
+centers \(C_1\) and \(C_2\), respectively, then \(FG\) is symmetric
+unimodal about \(C_1+C_2\).  A sum of nonnegative symmetric unimodal
+polynomials having a common center \(C\) is symmetric unimodal about \(C\).
+\end{lemma}
+
+\begin{proof}
+The assertion about sums follows coefficientwise.  For products, decompose
+each symmetric unimodal coefficient sequence into a nonnegative linear
+combination of indicator sequences of nested intervals having the same
+center.  Unimodality permits zeros only before and after the nonzero support,
+not internally, which licenses this nested-interval decomposition.  The
+convolution of two interval indicators is a symmetric
+trapezoidal sequence, hence unimodal, and all resulting convolutions have
+the sum of the original centers.  Summing them proves the claim.
+\end{proof}
+
+\section{The aligned-center recursion}
+
+\begin{lemma}[aligned-center recursion]\label{lem:recursion}
+For positive integers \(a,b,r\),
+\[
+ [a+r]_q[b+1]_{q^r}
+ =q^r[a]_q[b]_{q^r}+[a+r(b+1)]_q.                  \tag{5}
+\]
+\end{lemma}
+
+\begin{proof}
+Use
+\[
+ [a+r]_q=[r]_q+q^r[a]_q,
+ \qquad
+ [b+1]_{q^r}=1+q^r[b]_{q^r}.
+\]
+After subtracting the first term on the right side of (5), the remaining
+terms are
+\begin{align*}
+ [r]_q[b+1]_{q^r}+q^r[a]_q
+       \bigl(1+(q^r-1)[b]_{q^r}\bigr)
+ &= [r(b+1)]_q+q^{r(b+1)}[a]_q\\
+ &= [a+r(b+1)]_q.
+\end{align*}
+
+For a coefficient-level proof independent of this manipulation, the left
+side counts pairs \((x,j)\) with \(0\leq x<a+r\) and \(0\leq j\leq b\),
+weighted by \(x+rj\).  The pairs with \(x<a\) and \(j\geq1\) give
+\(q^r[a]_q[b]_{q^r}\).  The complementary pairs have either \(j=0\), or
+\(x\geq a\) and \(j\geq1\); their weights occur once each and fill the
+consecutive interval from \(0\) to \(a+r(b+1)-1\).  They give the second
+term in (5).
+\end{proof}
+
+\section{The hybrid criterion}
+
+We first prove the allocation part of Theorem~\ref{thm:hybrid}.
+
+\begin{lemma}[matrix induction]\label{lem:matrix}
+Let \(k\geq1\) and \(s\geq0\).  If nonnegative integers \(d_{j,i}\)
+satisfy (3)--(4) with \(I=J=\varnothing\), then
+\[
+ \prod_{i=1}^k[a_i]_q\prod_{j=1}^s[b_j]_{q^{r_j}}
+\]
+is symmetric and unimodal.
+\end{lemma}
+
+\begin{proof}
+Induct on \(s\).  The case \(s=0\) is a product of ordinary
+\(q\)-integers and follows from Lemma~\ref{lem:closure}.  For \(s\geq1\),
+put
+\[
+ a_i^{(0)}=a_i-r_1d_{1,i}.
+\]
+Condition (4) shows that the rows \(2,\ldots,s\) certify the induction
+hypothesis for
+\[
+ \prod_i[a_i^{(0)}]_q\prod_{j=2}^s[b_j]_{q^{r_j}}.
+\]
+This is the base at first-spacer length one.
+
+Reconstruct the \(b_1-1\) increments in any order realizing the first row
+of the matrix.  At one step, let \(x\) be the current selected ordinary
+length, \(c\) the current first-spacer length, \(B(q)\) the product of the
+other ordinary factors, and \(R(q)\) the product of spacers
+\(2,\ldots,s\).  Lemma~\ref{lem:recursion} gives
+\begin{align*}
+ &[x+r_1]_qB(q)[c+1]_{q^{r_1}}R(q)\\
+ &\qquad=q^{r_1}[x]_qB(q)[c]_{q^{r_1}}R(q)
+ +[x+r_1(c+1)]_qB(q)R(q).                         \tag{6}
+\end{align*}
+The first summand is a translate of the preceding polynomial.  In the
+second, every ordinary length is at least its base value, and the selected
+length is larger still.  The unchanged rows \(2,\ldots,s\) therefore
+continue to satisfy (4), so the induction hypothesis makes the correction
+term symmetric unimodal.
+
+If the old degree is
+\[
+ E=(x-1)+\deg B+r_1(c-1)+\deg R,
+\]
+the new degree is \(E+2r_1\).  The translated old support has endpoints
+\(r_1\) and \(E+r_1\), while the correction term has degree
+\[
+ x+r_1(c+1)-1+\deg B+\deg R=E+2r_1.
+\]
+Both summands in (6) therefore have center \((E+2r_1)/2\).  Their sum is
+symmetric unimodal by Lemma~\ref{lem:closure}.  Iteration reconstructs the
+first spacer and all ordinary lengths, completing the induction.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:hybrid}]
+For every \(j\in J\), write \(a_{\phi(j)}=r_je_j\) and set \(z=q^{r_j}\).
+Then
+\[
+ [a_{\phi(j)}]_q[b_j]_{q^{r_j}}
+ =[r_j]_q\bigl([e_j]_z[b_j]_z\bigr)\big|_{z=q^{r_j}}. \tag{7}
+\]
+The product \([e_j]_z[b_j]_z\) is symmetric unimodal in \(z\) by
+Lemma~\ref{lem:closure}.  Substitution followed by multiplication by
+\([r_j]_q\) repeats each coefficient in a consecutive block of length
+\(r_j\), so (7) is symmetric unimodal in \(q\).
+
+The map \(\phi\) is a bijection between the selected sets, so each ordinary
+factor is consumed by at most one spacer.  Thus the factors in (7) are
+disjoint and do not interact with the residual allocation matrix.  The
+residual product is symmetric unimodal by Lemma~\ref{lem:matrix}; multiplying
+it by the pair factors preserves symmetric unimodality by
+Lemma~\ref{lem:closure}.
+
+If no residual ordinary factors remain, (3) forces every residual spacer
+length to equal one, so that residual product is the constant polynomial.
+This also covers the empty case.
+\end{proof}
+
+The statement permits \(r_j=1\).  Such a spacer is an ordinary bracket.  In
+the one-factor, one-spacer matrix case, (3)--(4) become \(b\leq a\); swapping
+the two ordinary brackets covers the opposite ordering.  No step of the
+proof assumes \(r_j\geq2\).
+
+\section{The named conjecture as a corollary}
+
+\begin{proof}[Proof of Theorem~\ref{thm:one-spacer}]
+If \(r\mid a_i\) for some \(i\), pair that ordinary factor with the sole
+spacer in Theorem~\ref{thm:hybrid}.  The remaining ordinary factors are
+handled by Lemma~\ref{lem:closure}.
+
+Otherwise, put \(c_i=\lfloor a_i/r\rfloor\).  The inequality in (1) permits
+integers \(d_i\) with
+\[
+ 0\leq d_i\leq c_i,
+ \qquad \sum_i d_i=b-1.
+\]
+Because \(r\nmid a_i\),
+\[
+ a_i-rd_i\geq a_i-r\left\lfloor\frac{a_i}{r}\right\rfloor
+ =a_i\bmod r\geq1.                                \tag{8}
+\]
+Thus the single row \((d_i)_i\) satisfies (3)--(4), and
+Theorem~\ref{thm:hybrid} applies.
+\end{proof}
+
+\section{Sharpness and relation to width five}
+
+The allocation condition pays for every spacer increment against the
+worst-case remaining capacity.  For
+\([a]_q[2]_{q^2}[2]_{q^3}\), the unique one-column allocation requires
+\(a-2-3\geq1\), so it activates at \(a=6\).  The exact products at
+\(a=4\) and \(a=5\) have coefficient sequences
+\[
+ (1,1,2,3,2,3,2,1,1),\qquad
+ (1,1,2,3,3,3,3,2,1,1),
+\]
+respectively.  Hence \(a=4\) is not unimodal, while \(a=5\) is unimodal
+but not certified.  For repeated steps
+\([a]_q[2]_{q^2}[2]_{q^2}\), the allocation threshold is \(a=5\), while
+\(a=2\) already has coefficients \((1,1,2,2,1,1)\).  These examples show
+why no necessity or sharp-threshold conjecture is asserted.
+
+The width-five \(q\)-Fibonomial theorem requires three spacer steps
+\(2,3,5\) in the classes admitting a bracket decomposition.  Across the 60
+stable residue classes, matrix allocation reaches 18 classes, divisibility
+absorption alone reaches none, and the hybrid reaches the same 18.  It
+misses 24 further decomposable classes and all 18 classes without such a
+decomposition.  The companion width-five paper therefore uses a
+restricted-partition coefficient-difference argument that treats all
+classes uniformly \cite{ZhaoWidthFive}.  An exact characterization of
+multi-spacer unimodality remains open.
+
+\section{Reproducibility and scope}
+
+The proofs use exact algebra.  A standard-library checker verifies (5) by
+both polynomial multiplication and the independent pair partition, replays
+the one-spacer induction, checks the matrix induction through four spacers,
+tests divisibility absorption, and reproduces the sharpness and width-five
+coverage calculations.  From the repository root run
+\begin{verbatim}
+python3 proof/qanalog_multispacer_criterion.py
+\end{verbatim}
+The finite corpus is regression evidence only; it is not an assumption in
+either universal proof.
+
+Theorems~\ref{thm:one-spacer} and \ref{thm:hybrid} are sufficiency results.
+They do not characterize all unimodal products, prove necessity beyond
+previously known cases, or settle general \(q\)-Fibonomial unimodality.
+
+\paragraph{AI assistance.}
+The author used AI assistance in developing the proof presentation and its
+verification code.
+
+\begin{thebibliography}{2}
+
+\bibitem{CIMSY}
+Brendan B. Connelly, Ezekiel Ito, Thomas C. Martinez, Olha Shevchenko, and
+Kacey Yang.
+\newblock Unimodality of \(q\)-Fibonomial coefficients for small cases.
+\newblock \emph{arXiv:2605.12822v1 [math.CO]}, May 12, 2026.
+
+\bibitem{ZhaoWidthFive}
+Hainan Zhao.
+\newblock The width-five \(q\)-Fibonomial coefficients are unimodal.
+\newblock Manuscript, 2026.
+
+\end{thebibliography}
+
+\end{document}
