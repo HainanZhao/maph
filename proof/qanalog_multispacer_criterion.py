@@ -134,6 +134,18 @@ def main() -> None:
         str(ROOT / "experiments" / "multi_spacer_adversarial_and_width5_overlap.py"),
         run_name="__main__",
     )
+    runpy.run_path(
+        str(ROOT / "proof" / "qanalog_width5_coverage_independent.py"),
+        run_name="__main__",
+    )
+    runpy.run_path(
+        str(ROOT / "experiments" / "qanalog_adaptive_allocation_probe.py"),
+        run_name="__main__",
+    )
+    runpy.run_path(
+        str(ROOT / "experiments" / "qanalog_one_spacer_dip_census.py"),
+        run_name="__main__",
+    )
     rows = independent_spot_checks()
     print(json.dumps({**rows, "status": "COMBINED_CRITERION_PASS"}, sort_keys=True))
 

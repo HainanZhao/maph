@@ -25,8 +25,12 @@ Verification date: 2026-08-07 UTC.
 - G0.3 `PASS` under the author's single-researcher instruction: a separately
   implemented exact bounded-weight solver was compared with brute force on
   93,618 small instances. The stable width-five counts are matrix `18`,
-  absorption `0`, hybrid `18`. Thus the hybrid does not subsume the
-  width-five theorem.
+  absorption `0`, hybrid `18`. A further independently written program
+  reconstructed the Fibonacci windows directly, without importing either
+  prior table or its labels. It verified that the 18 reached classes and 18
+  undecomposable classes have the stated memberships and are disjoint; the
+  remaining 24 classes are decomposable but unreached. Thus the hybrid does
+  not subsume the width-five theorem.
 
 ## Exact runner
 
@@ -46,10 +50,27 @@ The runner reported:
 - 20 separately written direct identity checks;
 - 20 separately written direct matrix checks;
 - 10 separately written divisibility-absorption checks;
+- an independently reconstructed three-set width-five coverage partition;
+- the adaptive certificate for `[5]_q[2]_(q^2)[2]_(q^3)` and its zero
+  width-five class gain;
+- 33,728 exact violating one-spacer rows in the conjectured necessity
+  regimes, grouped into 4,576 fixed `(r,a_1,...,a_k)` tuples;
+- 100 independently constructed direct-polynomial cross-checks of that
+  first-dip census;
+- a deterministic 256-group endpoint extension to `b=100`, checked by both
+  sliding windows and separately written direct multiplication;
 - all threshold and width-five class regressions;
 - final status `COMBINED_CRITERION_PASS`.
 
-Measured wall time: 11.84 seconds. Peak resident memory: 16,000 KiB.
+Measured wall time: 12.86 seconds. Peak resident memory: 16,768 KiB.
+
+The bounded dip census found a first dip in every violating row. Within each
+fixed `(r,a_1,...,a_k)` group its position was independent of `b` throughout
+the violating range, and every first-dip depth was one or two. This is
+`OBSERVED` exact finite data, not a universal necessity result. In a
+deterministic sample of 256 groups, the original first-dip position also
+persisted at `b=100` by two separately written exact constructions; this
+does not enlarge the manuscript's declared census box.
 
 ## Statement diff
 
@@ -63,6 +84,10 @@ some r | a_i, OR b <= 1 + sum_i floor(a_i/r).
 Theorem 1 has the same parameter domain, existential divisibility branch,
 weak inequality, floor expression, and `OR`. No side condition was added or
 dropped.
+
+The introduction's necessity attribution was also diffed against the 0.3
+ledger table: CIMSY conjectures necessity when `k<=3` or `r<=3`, while its
+proved precursors include the full iff for `k=1` and for `(k,r)=(2,2)`.
 
 ## Introduction gate
 
@@ -91,9 +116,12 @@ DOI and page-local layout hack are absent.
 ## Hashes
 
 ```text
-684ceb3800e2f296775186456a47ee428ba99ebc4ee28192b86cfb8c9da054b9  paper/qanalog-multispacer-criterion/main.tex
-63671174cf2cb4c622aec26f4208e752b3a420b85961924d691c1093ec81b071  paper/qanalog-multispacer-criterion/main.pdf
-13e9bb8be9c856fe8960d73d313fb9af018344b8f7b8aafac0bb074d683971f1  proof/qanalog_multispacer_criterion.py
+264324e773e6a31c4e5c13a570434bb58c98f315242855abb495f5c2f747a5ac  paper/qanalog-multispacer-criterion/main.tex
+e6715a9efa51652b32562f6d1748c0aa9aba9ce011561a6f55b9bcd68c86b16b  paper/qanalog-multispacer-criterion/main.pdf
+b01e16c51f907dfba6b0a21b74426b7afedeaba1cc767b1144d7558a702e0f02  proof/qanalog_multispacer_criterion.py
+85c16c9f64ac74562c07b3aad56301c18e5d738c4a218f2d02350171b740104e  proof/qanalog_width5_coverage_independent.py
+47b01ebc4c5918c201b3febc757ec35faae6349a80bb93a895ca9753ab21f7d9  experiments/qanalog_adaptive_allocation_probe.py
+44dd160267e8b555f5063ed0bb3c6fa8b75cc0d73e81bfebbe51a5cfa8aa9e1b  experiments/qanalog_one_spacer_dip_census.py
 0c004dcaa80353a5ac6a4849b7149650065a6f569765b2c2b2e96df4dde263a6  proof/qanalog_conjecture54_sufficiency.py
 7d921bfd30cb1d1a5ec88be6878c9b2f74f76b8439f08104c422aaa119486b61  discovery/multi_spacer_aligned_recursion_check.py
 8c53dec1a7578d3d7ea52d16d9cc0747bc22f7701263bce2088fbf0d874397df  experiments/multi_spacer_adversarial_and_width5_overlap.py
