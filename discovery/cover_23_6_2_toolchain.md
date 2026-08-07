@@ -22,6 +22,13 @@ bounded experiment.
   independent checking only after the decision screen. This preserves the
   possibility of finding and directly verifying a cover without making every
   undecided search pay continuous proof-I/O cost.
+- `OBSERVED`: the first decision-only schedule left each branch with the
+  global time limit, so three hard branches could starve the other eight.
+  It was stopped after 461.8 seconds and 1,380.8 charged slot-seconds. The
+  balanced continuation conservatively charges all earlier tranches as
+  1,800 core-seconds and 610 wall-seconds, then caps each initial branch at
+  6,900 seconds. Four scheduling waves therefore fit within the remaining
+  wall time and every one of the eleven exhaustive branches is screened.
 
 ## Independent checker
 

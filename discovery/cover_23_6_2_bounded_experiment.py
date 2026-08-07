@@ -17,6 +17,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import math
 import os
 import shutil
 import signal
@@ -167,6 +168,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--wall-hours", type=float)
     parser.add_argument("--prior-core-seconds", type=float, default=0.0)
     parser.add_argument("--prior-wall-seconds", type=float, default=0.0)
+    parser.add_argument("--branch-seconds", type=int)
     parser.add_argument("--max-workers", type=int)
     parser.add_argument("--memory-gib", type=float)
     parser.add_argument("--disk-gib", type=float)
@@ -190,6 +192,7 @@ def validate_execution(args: argparse.Namespace) -> tuple[Path, Path, Path]:
         "core-hours": args.core_hours,
         "wall-hours": args.wall_hours,
         "max-workers": args.max_workers,
+        "branch-seconds": args.branch_seconds,
         "memory-gib": args.memory_gib,
         "disk-gib": args.disk_gib,
         "output": args.output,
@@ -199,7 +202,13 @@ def validate_execution(args: argparse.Namespace) -> tuple[Path, Path, Path]:
         raise SystemExit("--execute requires: " + ", ".join(f"--{x}" for x in missing))
     if any(
         value <= 0
-        for value in (args.core_hours, args.wall_hours, args.memory_gib, args.disk_gib)
+        for value in (
+            args.core_hours,
+            args.wall_hours,
+            args.memory_gib,
+            args.disk_gib,
+            args.branch_seconds,
+        )
     ):
         raise SystemExit("all resource caps must be positive")
     if args.prior_core_seconds < 0 or args.prior_wall_seconds < 0:
@@ -213,6 +222,15 @@ def validate_execution(args: argparse.Namespace) -> tuple[Path, Path, Path]:
     if args.max_workers * remaining_wall > remaining_core + 1e-9:
         raise SystemExit(
             "max-workers * remaining wall time exceeds the remaining core budget"
+        )
+    screening_waves = math.ceil(len(BRANCHES) / args.max_workers)
+    if screening_waves * args.branch_seconds > remaining_wall:
+        raise SystemExit(
+            "branch ceiling does not leave enough wall time to screen every branch"
+        )
+    if len(BRANCHES) * args.branch_seconds > remaining_core:
+        raise SystemExit(
+            "branch ceiling does not fit the aggregate core budget"
         )
     solver = require_executable(args.solver, "solver")
     checker = require_executable(args.checker, "checker")
@@ -245,6 +263,7 @@ def main() -> None:
         "core_seconds": args.core_hours * 3600,
         "wall_seconds": args.wall_hours * 3600,
         "max_workers": args.max_workers,
+        "branch_seconds": args.branch_seconds,
         "memory_bytes": int(args.memory_gib * GIB),
         "disk_bytes": int(args.disk_gib * GIB),
         "system_disk_reserve_bytes": SYSTEM_DISK_RESERVE,
@@ -346,11 +365,12 @@ def main() -> None:
                 branch_state = state["branches"][branch]
                 remaining_wall = max(1, int(caps["wall_seconds"] - wall_used))
                 if kind == "solve":
+                    task_limit = min(remaining_wall, caps["branch_seconds"])
                     log = output / f"{branch}.solver.log"
                     command = [
                         str(solver),
                         "-t",
-                        str(remaining_wall),
+                        str(task_limit),
                         str(output / branch_state["cnf"]),
                     ]
                     branch_state.update(
