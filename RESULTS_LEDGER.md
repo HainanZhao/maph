@@ -57,3 +57,21 @@ evidence.
 - Publication status: DOI reserved at
   <https://doi.org/10.5281/zenodo.21830407>; public-file verification is
   pending.
+
+## 2026-08-07 — Topic 2 record-location correction
+
+- Classification: **Outcome A — resolved**, unchanged.
+- Correction: the standalone `paper/qanalog-conjecture54/` manuscript was
+  merged into the stronger combined paper
+  `paper/qanalog-multispacer-criterion/main.tex` and `main.pdf`; its exact
+  replay is now `python3 proof/qanalog_multispacer_criterion.py`.
+- Evidence: `paper/qanalog-multispacer-criterion/verification.md` records
+  1,680 two-route recursion identities, 15,163 one-spacer induction rows,
+  43,002 nested recursion steps, the independent checks, and final status
+  `COMBINED_CRITERION_PASS`.
+- Superseded metadata: the old standalone manuscript path and its pending DOI
+  statement above are historical. No DOI was assigned to the combined paper,
+  and dissemination is not required by `GOAL.md`.
+- Claim boundary: the universal sufficient-direction theorem and its Outcome
+  A classification are unchanged; the combined paper adds a sufficient
+  multi-spacer criterion but does not prove necessity.

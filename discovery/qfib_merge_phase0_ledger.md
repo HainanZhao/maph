@@ -634,3 +634,96 @@ were untouched by this cleanup.
 because dissemination is outside the authorized merge. Cold DOI fetch and
 deposited-archive replay therefore remain unperformed. The combined paper is
 a locally verified working manuscript, not a disseminated final archive.
+
+## 2026-08-07 — Criterion-paper coverage clarification
+
+**PASS under the author's single-researcher rule.** A newly written checker,
+`proof/qanalog_width5_coverage_independent.py`, reconstructed the stable
+width-five Fibonacci windows directly and imported neither the earlier class
+table nor its labels. It confirmed the following disjoint partition modulo
+60:
+
+- matrix/hybrid reached, 18 classes:
+  `2,3,4,7,8,14,23,24,26,29,31,32,41,47,49,51,53,54`;
+- decomposable but unreached, 24 classes:
+  `0,1,5,6,11,13,15,19,20,22,25,28,30,34,35,39,40,43,46,48,50,52,55,59`;
+- no injective bracket decomposition, 18 classes:
+  `9,10,12,16,17,18,21,27,33,36,37,38,42,44,45,56,57,58`.
+
+The two counts of 18 are therefore coincidental, and the corresponding sets
+are disjoint. Divisibility absorption alone reaches no stable class because
+all three spacers are nontrivial while a decomposition leaves only two
+ordinary factors. Hybrid absorption adds no width-five class, but remains
+essential to the combined theorem because it recovers the one-spacer
+divisibility branch.
+
+The manuscript now states this boundary and asks which additional mechanism
+reaches the 24 decomposable but unreached classes while retaining an
+aligned-center proof. The necessity attribution was checked against the 0.3
+table and now says explicitly that CIMSY proved the full iff for `k=1` and
+for `(k,r)=(2,2)`. The companion-manuscript citation was removed to eliminate
+a readiness coupling; only the stable restricted-partition method is
+described.
+
+## 2026-08-07 — P1 adaptive allocation probe
+
+**KILLED AS A CURRENT-PAPER UPGRADE; successor lemma banked.** The smallest
+adaptive condition compatible with the existing induction was formalized and
+proved. If all increments of spacer `j` are assigned to one column `i`, set
+`x_0=a_i-r_j(b_j-1)`. It suffices that the residual base at `x_0` is already
+certified and that the smallest correction, with that length replaced by
+`x_0+2r_j`, is matrix-certified. Later corrections only enlarge the same
+length, so the first correction's matrix remains valid.
+
+This condition certifies the near-miss
+`[5]_q[2]_(q^2)[2]_(q^3)`. However, recursive exact testing over every stable
+width-five decomposition adds zero classes beyond the hybrid theorem's 18.
+The predeclared no-coverage-gain kill condition therefore fires before any
+attempt to complicate Theorem 2. Broader adaptive certificate trees would
+require a genuinely different search/proof interface and remain a successor
+question. Proof and replay are in `discovery/adaptive_allocation_probe.md`
+and `experiments/qanalog_adaptive_allocation_probe.py`.
+
+## 2026-08-07 — P2 first-dip census
+
+**OBSERVED exact finite regularity.** The census used `1<=k<=5`, `2<=r<=6`,
+all `a_i,b<=15`, restricted to `k<=3 or r<=3`, and retained precisely rows
+violating both branches of condition (1). All 33,728 violating rows had a
+midpoint-side dip. For every one of the 4,576 fixed
+`(r,a_1,...,a_k)` groups, the first-dip position was independent of `b`
+throughout the violating range; its depth was always one or two.
+
+The sliding-window construction was cross-checked against separately written
+naive polynomial multiplication on 100 deterministic rows. Replay is
+`experiments/qanalog_one_spacer_dip_census.py`. The manuscript includes one
+bounded-data sentence and makes no boundary conjecture.
+
+## 2026-08-07 — P1/P2 interpretation and targeted extension
+
+**PROVED clarification (P1).** The adaptive lemma certifies
+`[5]_q[2]_(q^2)[2]_(q^3)`, so the manuscript no longer describes this
+example as uncertified in general. It now says precisely that the example
+violates static condition (4), identifies the omitted adaptive certificate,
+and reports that the refinement adds no stable width-five class. This does
+not reopen P1: the predeclared coverage-gain kill condition remains met.
+
+**OBSERVED mechanism (P2).** The first-dip data suggest that, once `b`
+violates (1), the first obstruction lies in a low-exponent coefficient
+window determined by `(r,a_1,...,a_k)` and is unchanged when further terms
+of the lacunary bracket are appended. If this mechanism is correct, the
+necessity question reduces to one explicit coefficient inequality at a
+position computed from `(r,a_1,...,a_k)`, uniformly in `b`. This is a
+candidate proof shape, not a theorem or conjecture.
+
+Falsifiers are: a fixed `(r,a_1,...,a_k)` for which two violating values of
+`b` have different first-dip positions; a violating row with no midpoint-side
+dip; or failure of the proposed low-window inequality even though a later dip
+exists. The observed depth range `{1,2}` is retained only as small-box data
+and is not promoted as a pattern.
+
+To probe the shallow `b<=15` range, a deterministic sample of 256 of the
+4,576 parameter groups was extended exactly to `b=100`. Sliding-window
+construction and separately written direct polynomial multiplication agreed,
+and every endpoint retained the original first-dip position. This strengthens
+the finite evidence but does not enlarge the manuscript's declared census
+box or establish uniformity in `b`.
