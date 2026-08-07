@@ -8,7 +8,11 @@ bounded experiment.
 
 - CaDiCaL 1.7.3 at `/usr/bin/cadical` on the audited host.
 - The coordinator records the executable's SHA-256 digest in each run.
-- Proofs are requested in plain DRAT format with `--no-binary`.
+- Proofs are requested in CaDiCaL's default binary DRAT format. `OBSERVED`:
+  an initial 62-second instrumentation tranche produced 1,684,017,152 bytes
+  of plain DRAT across three branches; keeping it would have wasted the fixed
+  disk and compute allocation. The continuation conservatively charges 190
+  core-seconds and 64 wall-seconds to that tranche.
 
 ## Independent checker
 
@@ -29,7 +33,7 @@ binary hash again in the run summary.
 ## Independent smoke control
 
 `CERTIFIED_NUMERICAL`: CaDiCaL returned code 20 on the four-clause
-two-variable contradictory control, emitted an ASCII DRAT proof, and the
+two-variable contradictory control, emitted a binary DRAT proof, and the
 pinned `drat-trim` binary returned code 0 with `s VERIFIED`. This validates
 the solver-to-checker file-format interface only; it says nothing about
 `C(23,6,2)`.
