@@ -92,8 +92,8 @@ the open question is whether it is attained.**
 **Bounded experiment, budget fixed before starting.** Written down now so it
 cannot expand later:
 
-- Compute budget: **[FILL IN core-hours]**, single allocation, no extension.
-- Wall-clock cap: **[FILL IN]**.
+- Compute budget: **24 aggregate core-hours**, single allocation, no extension.
+- Wall-clock cap: **8 hours**.
 - Stop conditions, whichever comes first:
   - a verified 20-block cover is found → Outcome A, record and close;
   - the symmetry-broken encoding is built and the DRAT proof is *projected*
