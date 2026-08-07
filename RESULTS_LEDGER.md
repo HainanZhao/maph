@@ -75,3 +75,16 @@ evidence.
 - Claim boundary: the universal sufficient-direction theorem and its Outcome
   A classification are unchanged; the combined paper adds a sufficient
   multi-spacer criterion but does not prove necessity.
+
+## 2026-08-07 — Conjecture-project path relocation
+
+- Classification: **administrative relocation; no research claim changed**.
+- The legacy root trees `discovery/`, `experiments/`, `paper/`, and `proof/`
+  moved intact under `projects/open-conjecture-sweep/`.
+- Paths in earlier ledger entries are historical project-relative paths. Read
+  and replay them from `projects/open-conjecture-sweep/`; for example,
+  `proof/qfib_width4_unimodality_proof.py` now means
+  `projects/open-conjecture-sweep/proof/qfib_width4_unimodality_proof.py`
+  from repository root.
+- This relocation changes no proof, outcome classification, claim boundary,
+  manuscript content, or recorded checksum.

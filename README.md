@@ -7,10 +7,13 @@ project is self-contained: run its commands from that project's directory.
 
 - **`PROVED` — The width-four q-Fibonomial coefficients are unimodal.** For
   every integer `m >= 1`, the coefficient `[m+4 choose 4]_F` is unimodal.
-  Read the [paper](paper/qfib-width-four/main.pdf), inspect the
-  [source and verification record](paper/qfib-width-four/), or cite the
+  Read the [paper](projects/open-conjecture-sweep/paper/qfib-width-four/main.pdf),
+  inspect the
+  [source and verification record](projects/open-conjecture-sweep/paper/qfib-width-four/),
+  or cite the
   public proof archive: [doi:10.5281/zenodo.21826970](https://doi.org/10.5281/zenodo.21826970).
-  Exact replay: `python3 proof/qfib_width4_unimodality_proof.py`.
+  Exact replay from `projects/open-conjecture-sweep/`:
+  `python3 proof/qfib_width4_unimodality_proof.py`.
 
 ## Projects
 
@@ -30,6 +33,10 @@ project is self-contained: run its commands from that project's directory.
 - [`projects/sic-stark/`](projects/sic-stark/): a focused investigation of
   Zauner's conjecture through the Shintani--Faddeev/Stark-unit construction,
   with exact Weyl--Heisenberg diagnostics and canonical-family reductions.
+- [`projects/open-conjecture-sweep/`](projects/open-conjecture-sweep/):
+  human-selected open-problem work, including the q-Fibonomial and q-analog
+  proofs, the bounded covering-design experiment, and the active
+  book-Ramsey program.
 - [`projects/certified-qmc/`](projects/certified-qmc/): cancelled research
   campaign retained as an archival process record; only the small exact
   evaluator remains an internal utility, and no production run or release
