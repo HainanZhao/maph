@@ -346,8 +346,19 @@ def main() -> None:
                 branch_state = state["branches"][branch]
                 remaining_wall = max(1, int(caps["wall_seconds"] - wall_used))
                 if kind == "solve":
-                    proof = output / f"{branch}.drat"
                     log = output / f"{branch}.solver.log"
+                    command = [
+                        str(solver),
+                        "-t",
+                        str(remaining_wall),
+                        str(output / branch_state["cnf"]),
+                    ]
+                    branch_state.update(
+                        {"status": "SOLVING", "solver_log": log.name}
+                    )
+                elif kind == "prove":
+                    proof = output / f"{branch}.drat"
+                    log = output / f"{branch}.proof_solver.log"
                     command = [
                         str(solver),
                         "-t",
@@ -356,9 +367,13 @@ def main() -> None:
                         str(proof),
                     ]
                     branch_state.update(
-                        {"status": "SOLVING", "proof": proof.name, "solver_log": log.name}
+                        {
+                            "status": "GENERATING_UNSAT_PROOF",
+                            "proof": proof.name,
+                            "proof_solver_log": log.name,
+                        }
                     )
-                else:
+                elif kind == "check":
                     log = output / f"{branch}.checker.log"
                     command = [
                         str(checker),
@@ -368,6 +383,8 @@ def main() -> None:
                         str(remaining_wall),
                     ]
                     branch_state.update({"status": "CHECKING_UNSAT", "checker_log": log.name})
+                else:
+                    raise AssertionError(f"unknown task kind: {kind}")
                 task = launch(command, log, branch, kind)
                 active.append(task)
                 atomic_json(output / "summary.json", state)
@@ -384,11 +401,12 @@ def main() -> None:
                 branch_state.setdefault("charged_slot_seconds", 0.0)
                 branch_state["charged_slot_seconds"] += elapsed
                 returncode = task.process.returncode
-                if task.kind == "solve":
+                if task.kind in {"solve", "prove"}:
+                    model_log = output / branch_state[
+                        "solver_log" if task.kind == "solve" else "proof_solver_log"
+                    ]
                     if returncode == 10:
-                        witness = decode_and_verify(
-                            task.branch, output / branch_state["solver_log"]
-                        )
+                        witness = decode_and_verify(task.branch, model_log)
                         witness_path = output / f"{task.branch}.witness.json"
                         atomic_json(witness_path, witness)
                         branch_state.update(
@@ -403,12 +421,22 @@ def main() -> None:
                         queued.clear()
                         break
                     if returncode == 20:
-                        proof_path = output / branch_state["proof"]
-                        branch_state["proof_sha256"] = sha256(proof_path)
-                        branch_state["status"] = "UNSAT_PROOF_PENDING_CHECK"
-                        queued.insert(0, (task.branch, "check"))
+                        if task.kind == "solve":
+                            branch_state["status"] = "UNSAT_DECISION_PENDING_PROOF"
+                            # Screen every branch for a cover before spending
+                            # remaining budget on proof regeneration.
+                            queued.append((task.branch, "prove"))
+                        else:
+                            proof_path = output / branch_state["proof"]
+                            branch_state["proof_sha256"] = sha256(proof_path)
+                            branch_state["status"] = "UNSAT_PROOF_PENDING_CHECK"
+                            queued.append((task.branch, "check"))
                     elif returncode == 0:
-                        branch_state["status"] = "UNKNOWN_SOLVER_LIMIT"
+                        branch_state["status"] = (
+                            "UNKNOWN_SOLVER_LIMIT"
+                            if task.kind == "solve"
+                            else "UNKNOWN_PROOF_GENERATION_LIMIT"
+                        )
                     else:
                         branch_state.update(
                             {"status": "SOLVER_ERROR", "returncode": returncode}
@@ -467,7 +495,11 @@ def main() -> None:
     if stop_reason:
         for task in active:
             branch_state = state["branches"][task.branch]
-            if branch_state["status"] in {"SOLVING", "CHECKING_UNSAT"}:
+            if branch_state["status"] in {
+                "SOLVING",
+                "GENERATING_UNSAT_PROOF",
+                "CHECKING_UNSAT",
+            }:
                 branch_state["status"] = f"INTERRUPTED_BY_{stop_reason}"
         for branch, _ in queued:
             branch_state = state["branches"][branch]
