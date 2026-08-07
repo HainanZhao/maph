@@ -58,5 +58,6 @@ while the bounded covering experiment is active. Its explicit
 `--relay-active-covering` mode pauses a live run during the atomic move and
 leaves a temporary untracked compatibility symlink for its frozen paths. Run
 conjecture commands from `projects/open-conjecture-sweep/` after migration.
-Root `GOAL.md` and shared repository governance files remain at repository
-root.
+Shared repository governance files remain at repository root. After the
+three-topic goal closed, its root `GOAL.md` was archived unchanged as
+`projects/open-conjecture-sweep/docs/completed-goal-three-topic-closure-2026-08-07.md`.

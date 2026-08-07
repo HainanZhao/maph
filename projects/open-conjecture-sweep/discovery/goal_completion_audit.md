@@ -3,6 +3,9 @@
 This audit maps each requirement to authoritative evidence so completion does
 not rely on chat memory.
 
+Goal specification:
+`../docs/completed-goal-three-topic-closure-2026-08-07.md`.
+
 ## Primary and secondary goals
 
 Requirement: every listed topic reaches Outcome A, B, or C under its stated
@@ -56,8 +59,8 @@ stop condition, with at most one open-ended proof search at a time.
   script exactly match `paper/qanalog-multispacer-criterion/verification.md`.
 - Git reports the combined manuscript and replay tree clean; `dd26d7f7`
   contains the merge and `2a5c01a6` the current refined evidence.
-- The preparatory community-value and numerical-boundary checks named in
-  `GOAL.md` are recorded in `discovery/qanalog_k4_r4_audience_boundary.md`;
+- The preparatory community-value and numerical-boundary checks named in the
+  archived goal are recorded in `discovery/qanalog_k4_r4_audience_boundary.md`;
   they were completed before the stronger proof.
 - Fresh post-relocation replay from `projects/open-conjecture-sweep/` on
   2026-08-07 returned all expected component passes and final
