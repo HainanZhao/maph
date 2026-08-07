@@ -24,9 +24,9 @@
 \begin{abstract}
 Connelly, Ito, Martinez, Shevchenko, and Yang conjectured a sufficient
 condition for the unimodality of a product of ordinary \(q\)-integers and
-one lacunar factor.  We first prove that condition for every number of
+one lacunary factor.  We first prove that condition for every number of
 ordinary factors and every spacer step in its stated range.  We then prove
-a hybrid criterion for arbitrarily many lacunar factors: disjoint
+a hybrid criterion for arbitrarily many lacunary factors: disjoint
 divisibility pairs are absorbed factor by factor, and the remaining spacer
 increments are assigned to the remaining ordinary factors by a nonnegative
 integer allocation matrix.  No coprimality among the spacer steps is
@@ -55,8 +55,8 @@ then
  \prod_{i=1}^k[a_i]_q[b]_{q^r}                    \tag{2}
 \]
 is unimodal.  They conjectured necessity when \(k\leq3\) or \(r\leq3\),
-with the one-factor case and the \((k,r)=(2,2)\) case among their proved
-precursors.  Their bounded checks are separate computational evidence.
+having already proved the full equivalence for \(k=1\) and for
+\((k,r)=(2,2)\).  Their bounded checks are separate computational evidence.
 
 Our first result settles the sufficient direction exactly as stated.
 
@@ -256,8 +256,7 @@ proof assumes \(r_j\geq2\).
 
 \begin{proof}[Proof of Theorem~\ref{thm:one-spacer}]
 If \(r\mid a_i\) for some \(i\), pair that ordinary factor with the sole
-spacer in Theorem~\ref{thm:hybrid}.  The remaining ordinary factors are
-handled by Lemma~\ref{lem:closure}.
+spacer in Theorem~\ref{thm:hybrid}.
 
 Otherwise, put \(c_i=\lfloor a_i/r\rfloor\).  The inequality in (1) permits
 integers \(d_i\) with
@@ -286,20 +285,40 @@ worst-case remaining capacity.  For
  (1,1,2,3,3,3,3,2,1,1),
 \]
 respectively.  Hence \(a=4\) is not unimodal, while \(a=5\) is unimodal
-but not certified.  For repeated steps
+and violates (4); a mild adaptive refinement certifies it but is omitted
+because it adds no width-five class.  For repeated steps
 \([a]_q[2]_{q^2}[2]_{q^2}\), the allocation threshold is \(a=5\), while
 \(a=2\) already has coefficients \((1,1,2,2,1,1)\).  These examples show
 why no necessity or sharp-threshold conjecture is asserted.
+
+There is nevertheless a stable bounded pattern in the one-spacer necessity
+regimes.  For \(k\leq5\), \(r\leq6\), and all parameters at most 15, an
+exact census of the 33,728 rows violating (1) with \(k\leq3\) or \(r\leq3\)
+found a midpoint-side dip in every row.  Across all 4,576 fixed
+\((r,a_1,\ldots,a_k)\) groups, the location of the first dip was independent
+of \(b\) throughout the violating range, and its depth was always one or
+two.  This is computational evidence, not an exact-boundary conjecture.
 
 The width-five \(q\)-Fibonomial theorem requires three spacer steps
 \(2,3,5\) in the classes admitting a bracket decomposition.  Across the 60
 stable residue classes, matrix allocation reaches 18 classes, divisibility
 absorption alone reaches none, and the hybrid reaches the same 18.  It
 misses 24 further decomposable classes and all 18 classes without such a
-decomposition.  The companion width-five paper therefore uses a
-restricted-partition coefficient-difference argument that treats all
-classes uniformly \cite{ZhaoWidthFive}.  An exact characterization of
-multi-spacer unimodality remains open.
+decomposition.  The equal counts are coincidental: the 18 reached classes
+and the 18 undecomposable classes are disjoint.  Absorption alone cannot
+cover a stable class because all three spacers are nontrivial while only two
+ordinary factors remain; allowing absorption inside the hybrid adds no new
+class.  Its role is nevertheless essential in
+Theorem~\ref{thm:one-spacer}, where it recovers the divisibility branch.
+The same exact class census shows that the mild adaptive refinement above
+does not enlarge the 18-class coverage.
+
+Thus 24 of the 42 decomposable classes remain beyond the criterion.  What
+additional mechanism reaches those 24 classes while retaining an
+aligned-center proof?  A separate restricted-partition coefficient-
+difference argument treats all width-five classes uniformly, but does not
+answer that structural question.  An exact characterization of
+multi-spacer unimodality also remains open.
 
 \section{Reproducibility and scope}
 
@@ -322,18 +341,13 @@ previously known cases, or settle general \(q\)-Fibonomial unimodality.
 The author used AI assistance in developing the proof presentation and its
 verification code.
 
-\begin{thebibliography}{2}
+\begin{thebibliography}{1}
 
 \bibitem{CIMSY}
 Brendan B. Connelly, Ezekiel Ito, Thomas C. Martinez, Olha Shevchenko, and
 Kacey Yang.
 \newblock Unimodality of \(q\)-Fibonomial coefficients for small cases.
 \newblock \emph{arXiv:2605.12822v1 [math.CO]}, May 12, 2026.
-
-\bibitem{ZhaoWidthFive}
-Hainan Zhao.
-\newblock The width-five \(q\)-Fibonomial coefficients are unimodal.
-\newblock Manuscript, 2026.
 
 \end{thebibliography}
 
