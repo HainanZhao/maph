@@ -1,0 +1,578 @@
+{
+  "artifact_id": "cycle-2-b2-five-lane-boundary-v1",
+  "author": "Hainan Zhao",
+  "budget_ordinal": "B2",
+  "claim_boundary": "No lane yet supplies a successful reduction, controlled thermodynamic limit, critical datum, or exact solution. Every no-go is limited to its stated ansatz.",
+  "cycle": 2,
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "arithmetic": "exact integers, fractions, and SymPy polynomial arithmetic",
+    "claim_boundary": "First decisive tests of five explicit ansatz classes; no thermodynamic claim, critical data, or exact solution.",
+    "lanes": {
+      "A_tetrahedron_integrability": {
+        "auxiliary_dimensions": {
+          "D=2": "direct tensor fails",
+          "D=3,4": "any extension preserving the binary physical subspace for every local R fails after projection to the same residual"
+        },
+        "claim_boundary": "Direct binary vertex tensor and invariant physical-block extensions through D=4; non-invariant auxiliary mixing, IRF tensors, and other tetrahedron relations remain open.",
+        "isotropic_residual": "-(t - 1)**3*(t + 1)**2",
+        "local_spaces": "V_x tensor V_y tensor V_z with each V_mu=Q^2",
+        "periodic_layer": {
+          "TpTq": "187237750649389056/126105021875",
+          "TqTp": "123634928582656/121060821",
+          "commutator_entry": [
+            0,
+            0
+          ],
+          "difference": "25050585732481024/54045009375",
+          "parameter_p": [
+            "1/2",
+            "1/3",
+            "1/5"
+          ],
+          "parameter_q": [
+            "1/3",
+            "1/4",
+            "1/7"
+          ],
+          "shape": [
+            3,
+            3
+          ]
+        },
+        "physical_isotropic_interval": "0<t<1, where the displayed residual is nonzero",
+        "status": "RESTRICTED_NO_GO",
+        "symbolic_residual": "x**2*y**2 + 2*x**2*y*z + 2*x**2*y + x**2*z - x*y**2*z**2 - x*y*z**2 - x*y - x*z**2 - y**2*z**2 + y**2*z - y*z**2 - y - z**2 + 1",
+        "tensor": "R[o,i]=delta_even(i,o)*x^o_x*y^o_y*z^o_z",
+        "tetrahedron_equation": "R123 R145 R246 R356 = R356 R246 R145 R123",
+        "witness_entry": {
+          "incoming": 3,
+          "outgoing": 0
+        }
+      },
+      "B_spin_structure_compression": {
+        "calibration_graph": {
+          "F_matrix_rank_over_Q(t)": 2,
+          "F_polynomials": {
+            "00": {
+              "0": 1,
+              "10": -27,
+              "11": 90,
+              "12": 27,
+              "13": 36,
+              "14": -9,
+              "15": 6,
+              "18": -1,
+              "3": 6,
+              "4": 9,
+              "5": 36,
+              "6": -27,
+              "7": 90,
+              "8": 27,
+              "9": 248
+            },
+            "01": {
+              "0": 1,
+              "10": 171,
+              "12": 75,
+              "14": 9,
+              "18": 1,
+              "4": 9,
+              "6": 75,
+              "8": 171
+            },
+            "10": {
+              "0": 1,
+              "10": 171,
+              "12": 75,
+              "14": 9,
+              "18": 1,
+              "4": 9,
+              "6": 75,
+              "8": 171
+            },
+            "11": {
+              "0": 1,
+              "10": -27,
+              "11": -90,
+              "12": 27,
+              "13": -36,
+              "14": -9,
+              "15": -6,
+              "18": -1,
+              "3": -6,
+              "4": 9,
+              "5": -36,
+              "6": -27,
+              "7": -90,
+              "8": 27,
+              "9": -248
+            }
+          },
+          "arf_reconstruction_verified": true,
+          "cycle_space_dimension": 10,
+          "edges": 18,
+          "fourier_support": 4,
+          "graph": "simple 3x3 square grid cellularly embedded in the torus",
+          "homology_sector_polynomials": {
+            "00": {
+              "0": 1,
+              "10": 72,
+              "12": 51,
+              "4": 9,
+              "6": 24,
+              "8": 99
+            },
+            "01": {
+              "11": 45,
+              "13": 18,
+              "15": 3,
+              "3": 3,
+              "5": 18,
+              "7": 45,
+              "9": 124
+            },
+            "10": {
+              "11": 45,
+              "13": 18,
+              "15": 3,
+              "3": 3,
+              "5": 18,
+              "7": 45,
+              "9": 124
+            },
+            "11": {
+              "10": 99,
+              "12": 24,
+              "14": 9,
+              "18": 1,
+              "6": 51,
+              "8": 72
+            }
+          },
+          "physical_even_subgraph_polynomial": {
+            "0": 1,
+            "10": 171,
+            "11": 90,
+            "12": 75,
+            "13": 36,
+            "14": 9,
+            "15": 6,
+            "18": 1,
+            "3": 6,
+            "4": 9,
+            "5": 36,
+            "6": 75,
+            "7": 90,
+            "8": 171,
+            "9": 248
+          },
+          "rank_witness_at_t=1/2": "-1412718083/67108864",
+          "rank_witness_determinant": {
+            "10": -4608,
+            "12": -17040,
+            "14": -57744,
+            "16": -105120,
+            "18": -153344,
+            "20": -105120,
+            "22": -57744,
+            "24": -17040,
+            "26": -4608,
+            "28": -720,
+            "30": -240,
+            "6": -240,
+            "8": -720
+          },
+          "vertices": 9
+        },
+        "claim_boundary": "Exact minimum-genus-one data for the free 3x3x2 cubic slab, a torus calibration, and the lattice-symmetry orbit bound only; no growing-genus F table or low-rank recurrence has been constructed.",
+        "cubic_graph": {
+          "F_matrix_rank_over_Q(t)": 2,
+          "F_polynomials": {
+            "00": {
+              "0": 1,
+              "10": 988,
+              "12": 2629,
+              "14": 5604,
+              "16": 8309,
+              "18": 8248,
+              "20": 4870,
+              "22": 1450,
+              "24": 276,
+              "26": 28,
+              "28": 1,
+              "4": 20,
+              "6": 66,
+              "8": 278
+            },
+            "01": {
+              "0": 1,
+              "10": 952,
+              "12": 2581,
+              "14": 5692,
+              "16": 8549,
+              "18": 8088,
+              "20": 4634,
+              "22": 1562,
+              "24": 312,
+              "26": 32,
+              "28": 1,
+              "4": 16,
+              "6": 58,
+              "8": 290
+            },
+            "10": {
+              "0": 1,
+              "10": 658,
+              "12": 2215,
+              "14": 5912,
+              "16": 9373,
+              "18": 8820,
+              "20": 4528,
+              "22": 972,
+              "24": 104,
+              "26": 10,
+              "28": -1,
+              "4": 10,
+              "6": 12,
+              "8": 154
+            },
+            "11": {
+              "0": 1,
+              "10": -682,
+              "12": -2393,
+              "14": -6064,
+              "16": -9139,
+              "18": -8524,
+              "20": -4716,
+              "22": -1100,
+              "24": -60,
+              "26": 6,
+              "28": -1,
+              "4": 6,
+              "6": -20,
+              "8": -82
+            }
+          },
+          "arf_reconstruction_verified": true,
+          "cycle_space_dimension": 16,
+          "edges": 33,
+          "embedding_genus": 1,
+          "euler_characteristic": 0,
+          "face_boundary_rank": 14,
+          "face_lengths": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            8,
+            6,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "fourier_support": 4,
+          "genus_lower_bound": 1,
+          "graph": "free 3x3x2 simple-cubic slab",
+          "homology_sector_polynomials": {
+            "00": {
+              "0": 1,
+              "10": 479,
+              "12": 1258,
+              "14": 2786,
+              "16": 4273,
+              "18": 4158,
+              "20": 2329,
+              "22": 721,
+              "24": 158,
+              "26": 19,
+              "4": 13,
+              "6": 29,
+              "8": 160
+            },
+            "01": {
+              "10": 344,
+              "12": 1164,
+              "14": 2972,
+              "16": 4568,
+              "18": 4376,
+              "20": 2370,
+              "22": 490,
+              "24": 32,
+              "4": 2,
+              "6": 10,
+              "8": 56
+            },
+            "10": {
+              "10": 491,
+              "12": 1347,
+              "14": 2862,
+              "16": 4156,
+              "18": 4010,
+              "20": 2423,
+              "22": 785,
+              "24": 136,
+              "26": 11,
+              "28": 1,
+              "4": 5,
+              "6": 33,
+              "8": 124
+            },
+            "11": {
+              "10": 326,
+              "12": 1140,
+              "14": 3016,
+              "16": 4688,
+              "18": 4296,
+              "20": 2252,
+              "22": 546,
+              "24": 50,
+              "26": 2,
+              "6": 6,
+              "8": 62
+            }
+          },
+          "minimum_genus_certified": true,
+          "physical_even_subgraph_polynomial": {
+            "0": 1,
+            "10": 1640,
+            "12": 4909,
+            "14": 11636,
+            "16": 17685,
+            "18": 16840,
+            "20": 9374,
+            "22": 2542,
+            "24": 376,
+            "26": 32,
+            "28": 1,
+            "4": 20,
+            "6": 78,
+            "8": 402
+          },
+          "rank_witness_at_t=1/2": "-18091539867185275/562949953421312",
+          "rank_witness_determinant": {
+            "10": -2080,
+            "12": -11912,
+            "14": -63208,
+            "16": -293904,
+            "18": -1234352,
+            "20": -4521784,
+            "22": -14461360,
+            "24": -39971776,
+            "26": -94084416,
+            "28": -186354960,
+            "30": -304627088,
+            "32": -402020640,
+            "34": -419435744,
+            "36": -339024688,
+            "38": -207841208,
+            "40": -94241952,
+            "42": -30816032,
+            "44": -7172328,
+            "46": -1167880,
+            "48": -127312,
+            "50": -8432,
+            "52": -280,
+            "6": -24,
+            "8": -288
+          },
+          "rotation_faces": 15,
+          "shape": [
+            3,
+            3,
+            2
+          ],
+          "vertices": 18
+        },
+        "exact_identity": "F_(a,b)(t)=sum_h (-1)^(h_x*h_y+a*h_x+b*h_y) W_h(t); the Arf-weighted Fourier coefficient recovers the even-subgraph polynomial",
+        "failed_submechanisms": [
+          "factorization over the two torus spin bits (rank is 2, not 1)",
+          "bounded Boolean Fourier degree on a cellular embedding (every homology sector is nonempty)",
+          "polynomially many sectors from cubic-lattice symmetry alone"
+        ],
+        "status": "SURVIVES",
+        "surviving_submechanisms": [
+          "submaximal tensor-train rank at growing genus",
+          "a recurrence in L mixing all homology sectors collectively"
+        ],
+        "symmetry_orbit_bound": "For a free L-cube, |Aut(G_L)|=48 (L>=3), so its action on 4^g spin structures has at least ceil(4^g/48) orbits; Stage 1 gives g=Omega(L^3)."
+      },
+      "C_higher_form_fermionization": {
+        "boundaries_and_topology": "On an LxL torus, local plaquette fluxes obey one product constraint and two independent holonomies, giving 2^(L^2+1) gauge-inequivalent link fields.",
+        "candidate": "Apply locality-preserving 2D bosonization to the transfer plane and evaluate the resulting fermions sector by sector in a Z2 gauge field.",
+        "claim_boundary": "Direct substitution of the known locality-preserving bosonization/free-fermion gauge model for the standard 3D Ising dual. Other interacting higher-form fermionizations remain open.",
+        "exact_constraint_comparison": {
+          "decisive_local_witness": "A simultaneous eigenstate with G_v=+1 and W_NE(v)=-1 is accepted by the standard projector (1+G_v)/2 and annihilated by (1+G'_v)/2.",
+          "local_free_fermion_bosonization": "modified Gauss law G'_v=G_v W_NE(v)=1 and kinetic U_e=X_e Z_r(e)",
+          "physical_3d_Ising_dual": "standard Gauss law G_v=product_(e incident v) X_e=1"
+        },
+        "interaction_order": "The modified gauge model can be quadratic in its fermionic dual; the standard Ising-dual gauge model does not acquire that quadraticity without changing its Gauss law.",
+        "sector_count_if_flux_is_left_unrestricted": {
+          "2": {
+            "edges": 8,
+            "gauge_inequivalent_link_fields": 32,
+            "local_flux_patterns": 8,
+            "topological_holonomies": 4,
+            "vertices": 4
+          },
+          "3": {
+            "edges": 18,
+            "gauge_inequivalent_link_fields": 1024,
+            "local_flux_patterns": 256,
+            "topological_holonomies": 4,
+            "vertices": 9
+          },
+          "4": {
+            "edges": 32,
+            "gauge_inequivalent_link_fields": 131072,
+            "local_flux_patterns": 32768,
+            "topological_holonomies": 4,
+            "vertices": 16
+          },
+          "8": {
+            "edges": 128,
+            "gauge_inequivalent_link_fields": 36893488147419103232,
+            "local_flux_patterns": 9223372036854775808,
+            "topological_holonomies": 4,
+            "vertices": 64
+          }
+        },
+        "status": "KILLED"
+      },
+      "D_local_tensor_transformation": {
+        "auxiliary_cost": "Replacing the ordinary crossing by the fermionic crossing changes only the 1111 value to -1; restoring the missing occupancy-dependent signs globally is exactly the unresolved spin-structure/gauge-sector problem.",
+        "bounded_auxiliary_extension": {
+          "D=2": "C_bosonic=C_fermionic+2*E_1111, an exact sum of two Gaussian/matchgate signatures selected by one binary auxiliary index",
+          "D=3,4": "contain the D=2 decomposition by unused padded selector states",
+          "component_identity_verified": true,
+          "global_cost": "With c independently planarized crossings and no selector closure, the exact expansion has 2^c assignments; bounded local D alone is not a reduction."
+        },
+        "claim_boundary": "Local parity tensors, parity-preserving diagonal gauges, and the explicit independent D=2 crossing selector. General GL(2) holographic bases and collectively constrained crossover auxiliaries are not excluded.",
+        "exact_identity": "P(i_1,...,i_6)=delta_even(i)*product_j w_j^i_j equals the vector of principal Pfaffian minors of A_ij=w_i*w_j (i<j).",
+        "gauge_classification": "Independent nonzero diagonal leg rescalings multiply this residual by their total leg product, so no invertible diagonal Ising bond gauge removes it.",
+        "local_parity_tensor": {
+          "matchgate": true,
+          "maximum_arity": 6,
+          "pfaffian_minors_checked": 32
+        },
+        "ordinary_crossing_tensor": {
+          "all_values": 1,
+          "grassmann_pluecker_residual": 2,
+          "nonzero_entries": [
+            "0000",
+            "1010",
+            "0101",
+            "1111"
+          ],
+          "required_four_leg_value_from_two_leg_data": -1
+        },
+        "status": "RESTRICTED_NO_GO"
+      },
+      "E_exact_renormalization_closure": {
+        "blocking": "One checkerboard decimation with a 2x2x2 translation cell; each eliminated spin has its six retained +/-x,+/-y,+/-z neighbours on the block boundary.",
+        "claim_boundary": "Nearest-neighbour/pairwise closure under the declared checkerboard 2x2x2 blocking is excluded. A larger finite interaction algebra, critical-locus closure, and nonlocal changes of variables remain open.",
+        "exact_identity": "W(s_1,...,s_6)=sum_(s_0=+/-1) product_i (1+t_i*s_0*s_i), with (t_1,...,t_6)=(t_x,t_x,t_y,t_y,t_z,t_z).",
+        "exact_specialization": [
+          "1/2",
+          "1/2",
+          "1/3",
+          "1/3",
+          "1/5",
+          "1/5"
+        ],
+        "four_body_multiplicative_walsh_ratio": "690618655925447181028866289/4205503500998020172119140625",
+        "induced_log_interactions": {
+          "constant": 1,
+          "formula": "J_S=2^-6 sum_s (product_(i in S) s_i) log W(s)",
+          "four_body": 15,
+          "odd_body": 0,
+          "pair": 15,
+          "six_body": 1
+        },
+        "interpretation": "The ratios equal exp(64 J_S) and are not one, proving nonzero four- and six-spin interactions at an interior eliminated site.",
+        "six_body_multiplicative_walsh_ratio": "451735884769/338520330625",
+        "status": "RESTRICTED_NO_GO"
+      }
+    },
+    "selection_after_all_tests": {
+      "meaning": "next exact experiment, not a successful representation",
+      "remaining_mechanisms": [
+        "growing-genus tensor-train rank",
+        "exact recurrence in L mixing all homology sectors"
+      ],
+      "selected_lane": "B_spin_structure_compression"
+    },
+    "status": "PASS",
+    "sympy_version": "1.12"
+  },
+  "falsifier": "Any replay mismatch, invalid minimum-genus rotation system, vanishing declared residual, or source theorem whose exact hypotheses contradict the recorded use.",
+  "frozen_hashes": {
+    "candidate_report": {
+      "path": "docs/cycle2-candidate-report.md",
+      "sha256": "021ee0d7f46ce58686c6220f1bb5a4874fd2b550d55118696e1a509013c9b013"
+    },
+    "conventions": {
+      "path": "src/conventions.py",
+      "sha256": "b6b328f6b7b1725c39f4e4ba4084c275a141189b7efe32e9727c75488d705bb3"
+    },
+    "embedding": {
+      "path": "src/embeddings.py",
+      "sha256": "ebc9f3839f74d4590bcd853913b69ca4effc5a5a44e415203bfffca30092dada"
+    },
+    "failure_ledger": {
+      "path": "discovery/failure-ledger-cycle2.md",
+      "sha256": "d7896743d4139ad0e323b9109959311e5f3e68053127b10bd3b5fb608cf37484"
+    },
+    "prior": {
+      "path": "artifacts/cycle-1-b1-stage1-obstruction-v1.json",
+      "sha256": "9125472b04a263222a62d2e23b573c400f839c5c795e1929de117605a3a5a198"
+    },
+    "requirements": {
+      "path": "requirements.txt",
+      "sha256": "8347daed02ebf7b3c3cfa494e97049b7e0ab15b9af00a5addd843ed44381a64a"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "c4a09e7baa8a5588d4c6855a533eb933c85791707ed9653437644c1e1ad6c163"
+    },
+    "selection": {
+      "path": "discovery/cycle-2-five-lane-selection.md",
+      "sha256": "05d821d464aa8172037cfec1736a1d61f9a3ce2f1132110ab6c2cf1344bc2645"
+    },
+    "source_audit": {
+      "path": "discovery/cycle2-source-audit.md",
+      "sha256": "3e3e5b5e8948efbe96add2817e2ae86311cb7d532a7be951f46f7f48de0f4614"
+    },
+    "tests": {
+      "path": "tests/test_cycle2_five_lanes.py",
+      "sha256": "f19e2723e1f3a273502d0078c0c4d372274d6ce4b0198a7d9f9e6892c1162f1e"
+    },
+    "verifier": {
+      "path": "proof/verify_cycle2_five_lanes.py",
+      "sha256": "b5f1db0718b9b1677083545af66ebc88e5ebae390a67a203c5da899e77bdc038"
+    }
+  },
+  "outcome": "All five Stage 2 lanes received an exact first falsification test. Lane A is a restricted no-go for the direct vertex tetrahedron tensor and invariant D<=4 extensions; Lane B survives only through growing-genus TT rank or an exact L-recurrence; Lane C's direct known-bosonization substitution is killed by the Gauss-law mismatch; Lane D is a restricted crossing-selector no-go; and Lane E is a restricted pairwise-closure no-go. Lane B was selected only after all tests as the next exact experiment.",
+  "record_type": "FIVE_LANE_DECISIVE_SCREEN_AND_SELECTION",
+  "replay": {
+    "artifact_check": "python3 proof/build_cycle2_five_lane_boundary.py --check",
+    "five_lanes": "python3 proof/verify_cycle2_five_lanes.py",
+    "tests": "python3 -m unittest discover -s tests -v"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle2_five_lane_boundary.py",
+    "sha256": "11ec756c403bc320740f0bde982d185b73b67aa9fd4d59dfa6bd8e9062a3973d"
+  },
+  "status": "SEALED"
+}

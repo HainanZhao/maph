@@ -1,0 +1,56 @@
+{
+  "artifact_id": "cycle-107-b107-book-ramsey-paley-cross-boundary-correction-v2",
+  "budget_ordinal": "B107",
+  "claim_boundary": "Only the displayed fixed-Paley-cross two-layer translation state for the asymmetric F001 target; not other cross kernels, nontranslation constructions, or book Ramsey generally.",
+  "correction": {
+    "affected_claims": "Only source framing and novelty context; no algebraic identity, control, or method-family boundary changes.",
+    "cause": "The order-4n-2 Seidel target was not reconciled with the asymmetric book-Ramsey parameterization before the literature note was frozen.",
+    "error": "C107 v1 source audit called F001 diagonal and treated Dai--Lin's diagonal PC-graph result as direct overlap.",
+    "repair": "Record the asymmetric target and Wesley's direct q=1 mod 4 family; retain the v1 mathematics and replay."
+  },
+  "cycle": 107,
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "check": {
+      "path": "discovery/out/cycle107-paley-cross-check.json",
+      "sha256": "47b5cb47998936792b5bc98fb1196c9186963fd9047288e42254e766be4e3065"
+    },
+    "checker": {
+      "path": "proof/check_cycle107_paley_cross.py",
+      "sha256": "202c8716d3e984dcaa413e80ec8b54538c28fd54be4b27f46b0d5555b4f4bbf2"
+    },
+    "correction": {
+      "path": "docs/cycle-107-b107-book-ramsey-paley-cross-correction-v2.md",
+      "sha256": "c179f0ba954bd36153e5f47bc7530f5db19b82affa1f986f2ce03d8623052c2a"
+    },
+    "proof": {
+      "path": "proof/cycle107_paley_cross_proof.md",
+      "sha256": "00225bcbe2249046f3f6f2555c9ee52bb60ac534eed79c3643af72c51fcc736c"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "superseded_record": {
+      "path": "artifacts/cycle-107-b107-book-ramsey-paley-cross-boundary-v1.json",
+      "sha256": "b6aad9e8aa1498d8fb030b7e40e3170c1f28b8bbe3f1914988da6046a3ef7e4d"
+    }
+  },
+  "outcome": "C107's Paley-cross obstruction and controls are unchanged; this correction repairs the F001 asymmetric-versus-diagonal source framing.",
+  "record_type": "CORRECTION_SOURCE_SCOPE",
+  "replay": {
+    "check": "python3 proof/build_cycle107_paley_cross_correction_v2.py --check",
+    "checker": "python3 proof/check_cycle107_paley_cross.py"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle107_paley_cross_correction_v2.py",
+    "sha256": "c659a1d46060348fce8b9d3e6d4ba3a294e06aa530e9812f5fe7a56bc659c1b9"
+  },
+  "status": "SEALED",
+  "supersedes": "cycle-107-b107-book-ramsey-paley-cross-boundary-v1"
+}

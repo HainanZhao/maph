@@ -1,0 +1,232 @@
+{
+  "artifact_id": "cycle-11-b10-lane-b-embedding-robustness-v1",
+  "author": "Hainan Zhao",
+  "budget_ordinal": "B10",
+  "claim_boundary": "No invariance under arbitrary embeddings or cross-cut symplectic mixing is claimed. The normalized physical Arf contraction remains the same Ising polynomial.",
+  "cycle": 11,
+  "epistemic_status": "MIXED_PROVED_AND_CERTIFIED_NUMERICAL",
+  "exact_replay": {
+    "claim_boundary": "This proves that the complete pre-Arf family is not invariant under arbitrary rotation changes.  It does not contradict the separator theorem, whose bound is conditional on a filtration-adapted embedding and basis.",
+    "claim_status": "CERTIFIED_NUMERICAL exact GF(2)/finite-field audit",
+    "graph": "K3,3",
+    "interpretation": "The same abstract graph has cellular orientable embeddings of genus one and two, hence pre-Arf tensors with 4 and 16 entries.  Their normalized Arf contractions agree with the same direct even-subgraph value.",
+    "primes": [
+      1000000007,
+      1000000009
+    ],
+    "rotations": {
+      "maximum_genus_two": {
+        "0": [
+          3,
+          4,
+          5
+        ],
+        "1": [
+          3,
+          4,
+          5
+        ],
+        "2": [
+          3,
+          4,
+          5
+        ],
+        "3": [
+          0,
+          1,
+          2
+        ],
+        "4": [
+          0,
+          1,
+          2
+        ],
+        "5": [
+          0,
+          2,
+          1
+        ]
+      },
+      "minimum_genus_one": {
+        "0": [
+          3,
+          4,
+          5
+        ],
+        "1": [
+          3,
+          4,
+          5
+        ],
+        "2": [
+          3,
+          4,
+          5
+        ],
+        "3": [
+          0,
+          1,
+          2
+        ],
+        "4": [
+          0,
+          1,
+          2
+        ],
+        "5": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    "rows": [
+      {
+        "face_boundary_rank": 2,
+        "face_lengths": [
+          6,
+          6,
+          6
+        ],
+        "faces": 3,
+        "genus": 1,
+        "graph_to_surface_homology_rank": 2,
+        "independent_intersection_routes_agree": true,
+        "normalized_arf_sum": 153166085,
+        "physical_even_subgraph_value": 153166085,
+        "physical_values_agree": true,
+        "prime": 1000000007,
+        "rotation": "minimum_genus_one",
+        "spin_structure_count": 4
+      },
+      {
+        "face_boundary_rank": 0,
+        "face_lengths": [
+          18
+        ],
+        "faces": 1,
+        "genus": 2,
+        "graph_to_surface_homology_rank": 4,
+        "independent_intersection_routes_agree": null,
+        "normalized_arf_sum": 153166085,
+        "physical_even_subgraph_value": 153166085,
+        "physical_values_agree": true,
+        "prime": 1000000007,
+        "rotation": "maximum_genus_two",
+        "spin_structure_count": 16
+      },
+      {
+        "face_boundary_rank": 2,
+        "face_lengths": [
+          6,
+          6,
+          6
+        ],
+        "faces": 3,
+        "genus": 1,
+        "graph_to_surface_homology_rank": 2,
+        "independent_intersection_routes_agree": true,
+        "normalized_arf_sum": 153150597,
+        "physical_even_subgraph_value": 153150597,
+        "physical_values_agree": true,
+        "prime": 1000000009,
+        "rotation": "minimum_genus_one",
+        "spin_structure_count": 4
+      },
+      {
+        "face_boundary_rank": 0,
+        "face_lengths": [
+          18
+        ],
+        "faces": 1,
+        "genus": 2,
+        "graph_to_surface_homology_rank": 4,
+        "independent_intersection_routes_agree": null,
+        "normalized_arf_sum": 153150597,
+        "physical_even_subgraph_value": 153150597,
+        "physical_values_agree": true,
+        "prime": 1000000009,
+        "rotation": "maximum_genus_two",
+        "spin_structure_count": 16
+      }
+    ]
+  },
+  "frozen_hashes": {
+    "conventions": {
+      "path": "src/conventions.py",
+      "sha256": "b6b328f6b7b1725c39f4e4ba4084c275a141189b7efe32e9727c75488d705bb3"
+    },
+    "failure_ledger": {
+      "path": "discovery/failure-ledger-cycle11.md",
+      "sha256": "7640e8f1972922a4e89813aec295e3ac63c3d4f9a7519f49b347022f0e67492d"
+    },
+    "frontier_dependency": {
+      "path": "proof/verify_lane_b_arbitrary_width_frontier.py",
+      "sha256": "f98f80b203eb93bd0c18deb37e80dbf7cdcbb58237129cba60c42cff3fa73615"
+    },
+    "homology_dependency": {
+      "path": "proof/verify_lane_b_genus3.py",
+      "sha256": "1f5a944a1249525ff75b4a471da73e55709de169f0e53d0540ede14b1bb298a4"
+    },
+    "intersection_dependency": {
+      "path": "proof/verify_lane_b_intersection.py",
+      "sha256": "1b6b59d188dfdc033b1c37c0059ee3e068181c458a9da028d0a8e0f1a273abd9"
+    },
+    "prior": {
+      "path": "artifacts/cycle-10-b9-abstract-separator-k33-sharpness-v1.json",
+      "sha256": "c85caf6df8bf59c77b5ff5b38d772e69ac39b43bc9147c3886880f4a76ec27c8"
+    },
+    "proof": {
+      "path": "proof/lane_b_embedding_robustness.md",
+      "sha256": "403784d0679692ce21bd32541b0a835cb3be25b2bfc512d5457c03a849728fa7"
+    },
+    "report": {
+      "path": "docs/cycle11-lane-b-embedding-robustness.md",
+      "sha256": "92ddc1da1fbc0024221aaeabc830f59fdefe745cd643cdad4aea19a68ea0fffe"
+    },
+    "requirements": {
+      "path": "requirements.txt",
+      "sha256": "8347daed02ebf7b3c3cfa494e97049b7e0ab15b9af00a5addd843ed44381a64a"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "c4a09e7baa8a5588d4c6855a533eb933c85791707ed9653437644c1e1ad6c163"
+    },
+    "selection": {
+      "path": "discovery/cycle-11-embedding-robustness-selection.md",
+      "sha256": "1818cc35aa856d9224feeb3f53310a987fcc2aeb0c7d8ee61287fc5fd1585c60"
+    },
+    "tests": {
+      "path": "tests/test_lane_b_embedding_robustness.py",
+      "sha256": "68312d1cef177e98b7fd59b413baf4a1d70592a784584b85e44b60e1459f6689"
+    },
+    "verifier": {
+      "path": "proof/verify_lane_b_embedding_robustness.py",
+      "sha256": "0f7617765e280bdc1ea6b95ffd00c96cf8bd0bc1f19aa73cd772bf12fba59dd3"
+    }
+  },
+  "gate_outcome": "UPGRADE_4_COMPLETE",
+  "outcome": "The separator bound is invariant under filtration-compatible homeomorphisms, gauge/completion changes, and cut-local coordinate changes. Gauge-redundant stabilization is rank one but noncellular; arbitrary rotation changes can alter genus and the dimension of the complete pre-Arf tensor.",
+  "record_type": "LANE_B_EMBEDDING_ROBUSTNESS_CLASSIFICATION",
+  "replay": {
+    "artifact_check": "python3 proof/build_cycle11_lane_b_embedding_robustness.py --check",
+    "tests": "python3 -m unittest tests/test_lane_b_embedding_robustness.py -v",
+    "verification": "python3 proof/verify_lane_b_embedding_robustness.py"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle11_lane_b_embedding_robustness.py",
+    "sha256": "c5314dc09dc761cfcd47bca40c0a9a6a435c5f101c93fe52778d0bb9e55b33b8"
+  },
+  "status": "SEALED",
+  "theorem": {
+    "cellular_obstruction": "H_1(graph)->H_1(surface) is surjective",
+    "positive_class": "filtration-compatible embedded separator data satisfying H1-H3",
+    "rotation_counterexample": "K3,3 genus 1 versus genus 2; 4 versus 16 spin structures",
+    "stabilization": "rank-one if disjoint from graph; necessarily noncellular"
+  }
+}

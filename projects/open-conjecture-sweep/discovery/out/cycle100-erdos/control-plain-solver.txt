@@ -1,0 +1,133 @@
+c --- [ banner ] -------------------------------------------------------------
+c 
+c CaDiCaL SAT Solver
+c Copyright (c) 2016-2024
+c A. Biere, M. Fleury, N. Froleyks, K. Fazekas, F. Pollitt, T. Faller
+c JKU Linz, University of Freiburg, TU Wien
+c 
+c Version 2.1.3 56a703fc84a535523d115d61af4398b66d6dd409
+c g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0 -Wall -Wextra -O3 -DNDEBUG
+c Thu Aug 6 05:12:31 UTC 2026 Linux srv1416736 6.8.0-136-generic x86_64
+c 
+c --- [ proof tracing ] ------------------------------------------------------
+c 
+c opening file to write '/root/projects/maph/projects/open-conjecture-sweep/discovery/out/cycle100-erdos/control-17-6-plain.drat'
+c writing non-binary proof trace to '/root/projects/maph/projects/open-conjecture-sweep/discovery/out/cycle100-erdos/control-17-6-plain.drat'
+c 
+c --- [ parsing input ] ------------------------------------------------------
+c 
+c reading DIMACS file from '/root/projects/maph/projects/open-conjecture-sweep/discovery/out/cycle100-erdos/control-17-6.cnf'
+c opening file to read '/root/projects/maph/projects/open-conjecture-sweep/discovery/out/cycle100-erdos/control-17-6.cnf'
+c found 'p cnf 34000 429043' header
+c parsed 429043 clauses in 0.21 seconds process time
+c 
+c --- [ options ] ------------------------------------------------------------
+c 
+c   --binary=false                 (different from default 'true')
+c   --compact=false                (different from default 'true')
+c   --decompose=false              (different from default 'true')
+c   --deduplicate=false            (different from default 'true')
+c   --elim=false                   (different from default 'true')
+c   --probe=false                  (different from default 'true')
+c   --subsume=false                (different from default 'true')
+c   --ternary=false                (different from default 'true')
+c   --transred=false               (different from default 'true')
+c   --vivify=false                 (different from default 'true')
+c 
+c --- [ solving ] ------------------------------------------------------------
+c 
+c time measured in process time since initialization
+c 
+c  seconds  reductions  redundant  irredundant
+c         MB    restarts       trail       variables
+c          level   conflicts       glue         remaining
+c 
+c *  0.21 64  0 0   0    0    0  0% 0 428876 21902 64%
+c {  0.22 67  0 0   0    0    0  0% 0 428876 21902 64%
+c i  0.22 67  1 0   0    1    0 36% 0 428876 21901 64%
+c i  0.22 67  1 0   0    2    0 37% 0 428876 21900 64%
+c i  0.22 67  2 0   0    4    1 38% 1 428876 21899 64%
+c i  0.22 67  5 0   0    8    4 40% 1 428876 21898 64%
+c i  0.22 67  5 0   0    9    4 41% 1 428876 21897 64%
+c i  0.22 67 12 0   2   24   14 47% 6 428876 21896 64%
+c i  0.23 67 16 0   2   30   19 49% 5 428876 21895 64%
+c i  0.23 68 23 0   8   57   42 53% 8 428876 21894 64%
+c i  0.24 68 25 0   8   60   44 54% 8 428876 21893 64%
+c -  0.41 68 30 1  22  300  249 64% 9 238646 21893 64%
+c i  0.46 70 30 1  37  551  457 66% 8 238646 21892 64%
+c i  0.46 70 30 1  37  558  461 66% 8 238646 21891 64%
+c i  0.46 70 31 1  37  564  465 65% 9 238646 21890 64%
+c }  0.54 70 29 1  46 1000  841 64% 8 238646 21890 64%
+c [  0.54 70  0 1  46 1000  841  0% 0 238646 21890 64%
+c O  0.54 70 25 1  46 1002  843 55% 3 238646 21890 64%
+c -  0.63 85 21 2  46 1129  864 70% 9 238637 21890 64%
+c i  0.84 85 17 2  47 2297 1869 69% 8 238637 20627 61%
+c 
+c  seconds  reductions  redundant  irredundant
+c         MB    restarts       trail       variables
+c          level   conflicts       glue         remaining
+c 
+c i  0.85 85 16 2  47 2321 1883 68% 7 238637 20362 60%
+c i  0.85 85 16 2  47 2323 1884 68% 7 238637 20231 60%
+c ]  0.86 85 16 2  47 2357 1902 68% 7 238637 12250 36%
+c 0  0.86 85 16 2  47 2357 1902 68% 7 238637 12250 36%
+c 
+c --- [ closing proof ] ------------------------------------------------------
+c 
+c DRAT proof file '/root/projects/maph/projects/open-conjecture-sweep/discovery/out/cycle100-erdos/control-17-6-plain.drat' closed
+c DRAT 88942 added clauses 25.81%
+c DRAT 255695 deleted clauses 74.19%
+c DRAT 21028816 bytes (20.05 MB)
+c 
+c --- [ result ] -------------------------------------------------------------
+c 
+s UNSATISFIABLE
+c 
+c --- [ run-time profiling ] -------------------------------------------------
+c 
+c process time taken by individual solving procedures
+c (percentage relative to process time for solving)
+c 
+c         0.65   99.97% search
+c         0.32   49.75% unstable
+c         0.31   48.29% stable
+c         0.21   31.72% parse
+c         0.01    1.92% lucky
+c         0.00    0.00% simplify
+c   =================================
+c         0.65   75.89% solve
+c 
+c last line shows process time for solving
+c (percentage relative to total process time)
+c 
+c --- [ statistics ] ---------------------------------------------------------
+c 
+c chronological:               905        38.40 %  of conflicts
+c conflicts:                  2357      3628.59    per second
+c decisions:                  5470      8421.05    per second
+c fixed:                     21750        63.97 %  of all variables
+c learned:                    2242        95.12 %  per conflict
+c learned_lits:             159480       100.00 %  learned literals
+c minimized:                     0         0.00 %  learned literals
+c shrunken:                  29803        18.69 %  learned literals
+c minishrunken:              40721        25.53 %  learned literals
+c otfs:                         30         1.27 %  of conflict
+c propagations:            3216449         4.95 M  per second
+c reduced:                      99         4.20 %  per conflict
+c rephased:                      1      2357.00    interval
+c restarts:                     47        50.15    interval
+c stabilizing:                   1        57.57 %  of conflicts
+c subsumed:                    227         0.05 %  of all clauses
+c strengthened:                 28         0.01 %  of all clauses
+c 
+c seconds are measured in process time for solving
+c 
+c --- [ resources ] ----------------------------------------------------------
+c 
+c total process time since initialization:         0.86    seconds
+c total real time since initialization:            0.86    seconds
+c maximum resident set size of process:           84.45    MB
+c 
+c --- [ shutting down ] ------------------------------------------------------
+c 
+c exit 20

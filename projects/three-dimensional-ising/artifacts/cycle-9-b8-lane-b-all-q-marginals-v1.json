@@ -1,0 +1,328 @@
+{
+  "artifact_id": "cycle-9-b8-lane-b-all-q-marginals-v1",
+  "author": "Hainan Zhao",
+  "budget_ordinal": "B8",
+  "claim_boundary": "The advantage is over explicit all-sector evaluation for these 4g family observables. It is not an advantage over ordinary transfer for one physical Z, and it gives no thermodynamic or critical-temperature result.",
+  "cycle": 9,
+  "epistemic_status": "MIXED_PROVED_AND_CERTIFIED_NUMERICAL",
+  "exact_replay": {
+    "claim_boundary": "This validates the all-q operation and exact TT algebra on nontrivial strips. It is not an advantage claim for evaluating the final physical partition function once.",
+    "claim_status": "CERTIFIED_NUMERICAL exact finite-field validation",
+    "compilers": {
+      "1000000007": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+      "1000000009": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+    },
+    "complexity": {
+      "given_TT_dense_environment_contraction": "O(g*p*d^2), p=4",
+      "memory": "O(g*d) environments plus the supplied cores",
+      "sector_enumeration": "Omega(4^g) tensor entries before per-sector evaluation cost"
+    },
+    "operation": "all four Walsh marginals at every handle under arbitrary product-form sector weights",
+    "primes": [
+      1000000007,
+      1000000009
+    ],
+    "rows": [
+      {
+        "all_single_handle_walsh_marginals": [
+          [
+            988784017,
+            733915322,
+            364060401,
+            209936303
+          ],
+          [
+            965391036,
+            566964173,
+            261670917,
+            56572132
+          ],
+          [
+            789181328,
+            874809477,
+            197241737,
+            588878693
+          ],
+          [
+            822499201,
+            140014619,
+            497820303,
+            373876436
+          ],
+          [
+            692263334,
+            349317099,
+            219246156,
+            524250310
+          ]
+        ],
+        "direct_enumeration_agrees": true,
+        "edge_label_sha256": "a6434582487bd733cc045ed226a007dac09e35c2498cc1fce30841cfb6613b6f",
+        "genus": 5,
+        "pair_tt_ranks": [
+          4,
+          16,
+          16,
+          4
+        ],
+        "prime": 1000000007,
+        "sector_count": 1024,
+        "shape": [
+          6,
+          3,
+          3
+        ],
+        "weight_rule": "omega_i(s)=17*i+11*s+3 mod p, zero-based i,s"
+      },
+      {
+        "all_single_handle_walsh_marginals": [
+          [
+            635818222,
+            429365633,
+            285078430,
+            686648941
+          ],
+          [
+            160620962,
+            666124769,
+            390717939,
+            865081049
+          ],
+          [
+            629801406,
+            935346745,
+            58989669,
+            350368334
+          ],
+          [
+            313903278,
+            293410463,
+            783212900,
+            627802760
+          ],
+          [
+            473526672,
+            988508592,
+            690518616,
+            421466314
+          ],
+          [
+            191184277,
+            103902249,
+            909655722,
+            919078436
+          ]
+        ],
+        "direct_enumeration_agrees": true,
+        "edge_label_sha256": "20f0b3ef403b82e073e9c17fb7a64bb5c5bc3c8de3c44b672640c58356f39bc9",
+        "genus": 6,
+        "pair_tt_ranks": [
+          4,
+          16,
+          64,
+          16,
+          4
+        ],
+        "prime": 1000000007,
+        "sector_count": 4096,
+        "shape": [
+          7,
+          3,
+          3
+        ],
+        "weight_rule": "omega_i(s)=17*i+11*s+3 mod p, zero-based i,s"
+      },
+      {
+        "all_single_handle_walsh_marginals": [
+          [
+            151081637,
+            521597975,
+            365703777,
+            494846187
+          ],
+          [
+            857748820,
+            411639875,
+            589931897,
+            820058423
+          ],
+          [
+            928916797,
+            289162775,
+            186553765,
+            888310303
+          ],
+          [
+            378508120,
+            170788473,
+            562811285,
+            16449986
+          ],
+          [
+            934991214,
+            759206188,
+            598321364,
+            855381384
+          ]
+        ],
+        "direct_enumeration_agrees": true,
+        "edge_label_sha256": "a6434582487bd733cc045ed226a007dac09e35c2498cc1fce30841cfb6613b6f",
+        "genus": 5,
+        "pair_tt_ranks": [
+          4,
+          16,
+          16,
+          4
+        ],
+        "prime": 1000000009,
+        "sector_count": 1024,
+        "shape": [
+          6,
+          3,
+          3
+        ],
+        "weight_rule": "omega_i(s)=17*i+11*s+3 mod p, zero-based i,s"
+      },
+      {
+        "all_single_handle_walsh_marginals": [
+          [
+            849214743,
+            212949121,
+            904405904,
+            601789977
+          ],
+          [
+            231950242,
+            863992709,
+            979474697,
+            936491671
+          ],
+          [
+            293139478,
+            44621127,
+            408867586,
+            628487054
+          ],
+          [
+            678962287,
+            559252254,
+            713722834,
+            883978899
+          ],
+          [
+            216011749,
+            377217785,
+            307847979,
+            465816061
+          ],
+          [
+            951393614,
+            664031013,
+            438950813,
+            278619064
+          ]
+        ],
+        "direct_enumeration_agrees": true,
+        "edge_label_sha256": "20f0b3ef403b82e073e9c17fb7a64bb5c5bc3c8de3c44b672640c58356f39bc9",
+        "genus": 6,
+        "pair_tt_ranks": [
+          4,
+          16,
+          64,
+          16,
+          4
+        ],
+        "prime": 1000000009,
+        "sector_count": 4096,
+        "shape": [
+          7,
+          3,
+          3
+        ],
+        "weight_rule": "omega_i(s)=17*i+11*s+3 mod p, zero-based i,s"
+      }
+    ]
+  },
+  "frozen_hashes": {
+    "canonical_dependency": {
+      "path": "proof/verify_lane_b_universal_canonical_ranks.py",
+      "sha256": "d631149c9429d921359a6a67042b0e476cb681b9bc8aa63de42bcac6503662b0"
+    },
+    "conventions": {
+      "path": "src/conventions.py",
+      "sha256": "b6b328f6b7b1725c39f4e4ba4084c275a141189b7efe32e9727c75488d705bb3"
+    },
+    "embedding": {
+      "path": "src/lane_b_universal_embedding.py",
+      "sha256": "62e57075103f4f2f252f30f9bd1e01c63820656455900b6db0b875e5294ab430"
+    },
+    "frontier_dependency": {
+      "path": "proof/verify_lane_b_arbitrary_width_frontier.py",
+      "sha256": "f98f80b203eb93bd0c18deb37e80dbf7cdcbb58237129cba60c42cff3fa73615"
+    },
+    "prior": {
+      "path": "artifacts/cycle-7-b7-lane-b-arbitrary-width-closure-v1.json",
+      "sha256": "3caa6e9e2a170b6de7660a158719c762d733dcc9f022707143d6ff2aaa80320c"
+    },
+    "proof": {
+      "path": "proof/lane_b_all_q_marginal_algorithm.md",
+      "sha256": "2db827bb258786ba4672a33bd8fc101f6faecc25ef859a2a86cb62491884c378"
+    },
+    "report": {
+      "path": "docs/cycle9-lane-b-all-q-marginals.md",
+      "sha256": "2b4878a3d3742d02ba11b32a66fd58c2d30c8a9ea08604096f23040bf4fd1fe9"
+    },
+    "requirements": {
+      "path": "requirements.txt",
+      "sha256": "8347daed02ebf7b3c3cfa494e97049b7e0ab15b9af00a5addd843ed44381a64a"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "c4a09e7baa8a5588d4c6855a533eb933c85791707ed9653437644c1e1ad6c163"
+    },
+    "selection": {
+      "path": "discovery/cycle-9-all-q-marginal-selection.md",
+      "sha256": "d9783df1f3d7cd1040df62be4e27a6b3997e9d393d7974cb0bc487beb126fb8a"
+    },
+    "tests": {
+      "path": "tests/test_lane_b_all_q_marginals.py",
+      "sha256": "5d4ce771c82f1e41a895798221ba0e40a3de02fee9e6ac2abe2eb17fbc07b65f"
+    },
+    "transfer_engine": {
+      "path": "proof/lane_b_width4_character_transfer.cpp",
+      "sha256": "dd7f5f3e381ae3759eaa8d86a930d968ab3ac75773646ba69c52d59f77e1d940"
+    },
+    "verifier": {
+      "path": "proof/verify_lane_b_all_q_marginals.py",
+      "sha256": "ad582ba38c3628024d0e160578d1d04b3798eef66718c158f4d5feb86e03ddcb"
+    },
+    "width_dependency": {
+      "path": "proof/verify_lane_b_width_scaling.py",
+      "sha256": "2cb86284481e69b26bea8d9f7a52e91664a7b2b7869cdf1915795bef18926ae4"
+    }
+  },
+  "gate_outcome": "UPGRADE_3_COMPLETE",
+  "outcome": "All four single-handle Walsh marginals at every canonical handle, under arbitrary product-form sector weights, are obtained by two TT environment sweeps in O(g*4*d_w^2) dense ring operations.",
+  "record_type": "LANE_B_ALL_Q_ALGORITHMIC_APPLICATION",
+  "replay": {
+    "artifact_check": "python3 proof/build_cycle9_lane_b_all_q_marginals.py --check",
+    "tests": "python3 -m unittest tests/test_lane_b_all_q_marginals.py -v",
+    "verification": "python3 proof/verify_lane_b_all_q_marginals.py"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle9_lane_b_all_q_marginals.py",
+    "sha256": "87b0e8d3c28e835d0ffc40155f4ddf1c3962e24dc1da727f2a320aa64ec73278"
+  },
+  "status": "SEALED",
+  "theorem": {
+    "dense_ring_operations": "O(g*4*d_w^2)",
+    "explicit_sector_baseline": "Omega(4^g) tensor entries",
+    "input": "exact four-state all-q TT with bond at most d_w",
+    "output": "4g product-weighted single-handle Walsh marginals"
+  }
+}

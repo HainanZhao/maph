@@ -1,0 +1,307 @@
+{
+  "artifact_id": "cycle-105-b105-book-ramsey-complement-translate-boundary-v1",
+  "audit": {
+    "controls": {
+      "controls": [
+        {
+          "A": [
+            1,
+            6
+          ],
+          "degree": 7,
+          "parity_pairing_agrees": true,
+          "q": 7,
+          "seidel_formula_agrees": true
+        },
+        {
+          "A": [
+            1,
+            22
+          ],
+          "degree": 23,
+          "parity_pairing_agrees": true,
+          "q": 23,
+          "seidel_formula_agrees": true
+        },
+        {
+          "A": [],
+          "degree": 7,
+          "parity_pairing_agrees": true,
+          "q": 7,
+          "seidel_formula_agrees": true
+        },
+        {
+          "A": [],
+          "degree": 23,
+          "parity_pairing_agrees": true,
+          "q": 23,
+          "seidel_formula_agrees": true
+        }
+      ],
+      "family": "dihedral-complement-translate-autocorrelation",
+      "scalar": [
+        {
+          "forced_autocorrelation": 2,
+          "forced_autocorrelation_even": true,
+          "q": 7,
+          "quadratic_roots": [
+            3,
+            4
+          ],
+          "symmetric_nonzero_root": 4
+        },
+        {
+          "forced_autocorrelation": 6,
+          "forced_autocorrelation_even": true,
+          "q": 23,
+          "quadratic_roots": [
+            11,
+            12
+          ],
+          "symmetric_nonzero_root": 12
+        }
+      ]
+    },
+    "matrix_checker": {
+      "controls": 4,
+      "q_values": [
+        7,
+        23
+      ],
+      "roots": [
+        [
+          3,
+          4
+        ],
+        [
+          11,
+          12
+        ]
+      ],
+      "status": "PASS"
+    },
+    "symbolic_checker": {
+      "identity": "P(t) mod 2 = 1_A(t/2) by the fixed-point involution",
+      "status": "PASS",
+      "symbolic_rows": [
+        {
+          "lambda": 2,
+          "parity_targets": [
+            1,
+            0
+          ],
+          "q": 7,
+          "roots": [
+            3,
+            4
+          ]
+        },
+        {
+          "lambda": 4,
+          "parity_targets": [
+            1,
+            0
+          ],
+          "q": 15,
+          "roots": [
+            7,
+            8
+          ]
+        },
+        {
+          "lambda": 6,
+          "parity_targets": [
+            1,
+            0
+          ],
+          "q": 23,
+          "roots": [
+            11,
+            12
+          ]
+        },
+        {
+          "lambda": 8,
+          "parity_targets": [
+            1,
+            0
+          ],
+          "q": 31,
+          "roots": [
+            15,
+            16
+          ]
+        },
+        {
+          "lambda": 10,
+          "parity_targets": [
+            1,
+            0
+          ],
+          "q": 39,
+          "roots": [
+            19,
+            20
+          ]
+        },
+        {
+          "lambda": 12,
+          "parity_targets": [
+            1,
+            0
+          ],
+          "q": 47,
+          "roots": [
+            23,
+            24
+          ]
+        },
+        {
+          "lambda": 14,
+          "parity_targets": [
+            1,
+            0
+          ],
+          "q": 55,
+          "roots": [
+            27,
+            28
+          ]
+        },
+        {
+          "lambda": 16,
+          "parity_targets": [
+            1,
+            0
+          ],
+          "q": 63,
+          "roots": [
+            31,
+            32
+          ]
+        },
+        {
+          "lambda": 18,
+          "parity_targets": [
+            1,
+            0
+          ],
+          "q": 71,
+          "roots": [
+            35,
+            36
+          ]
+        },
+        {
+          "lambda": 20,
+          "parity_targets": [
+            1,
+            0
+          ],
+          "q": 79,
+          "roots": [
+            39,
+            40
+          ]
+        },
+        {
+          "lambda": 22,
+          "parity_targets": [
+            1,
+            0
+          ],
+          "q": 87,
+          "roots": [
+            43,
+            44
+          ]
+        },
+        {
+          "lambda": 24,
+          "parity_targets": [
+            1,
+            0
+          ],
+          "q": 95,
+          "roots": [
+            47,
+            48
+          ]
+        }
+      ]
+    }
+  },
+  "budget_ordinal": "B105",
+  "claim_boundary": "This excludes only the deterministic complement transition B=Z_q minus A. It does not exclude arbitrary B, nonsymmetric A, other dihedral Cayley states, non-Cayley constructions, or the book-Ramsey conjecture.",
+  "cycle": 105,
+  "cycle_decision": {
+    "decision": "Seal and close the complement-translate transition.",
+    "falsifier": "An admissible A satisfying the stated Seidel coefficients, or a failure of a displayed proof identity.",
+    "stop": "Do not add affine decimations or enumerate arbitrary B. A successor must decouple the reflection autocorrelation from the complement of A."
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "check": {
+      "path": "discovery/out/cycle105-complement-translate/check.json",
+      "sha256": "7e27f6af90591128b726cd7888b1c0d00efe1bd5318ed6131742192a4fb8cfa0"
+    },
+    "engine": {
+      "path": "proof/cycle105_complement_translate_obstruction.py",
+      "sha256": "002622d3bbe58c06bcddca173284afd9b8f94d06ef2150b2a3937cb73eec4b65"
+    },
+    "matrix_checker": {
+      "path": "proof/check_cycle105_complement_translate_obstruction.py",
+      "sha256": "c3070e79901e9aeec8318cdbcaec8a51cffc807f697f389c0802cf74bcc5743c"
+    },
+    "preregistration": {
+      "path": "docs/cycle-105-b105-book-ramsey-complement-translate-preregistration-v1.md",
+      "sha256": "8d7a77d0052de24fa90520e912b6dd36614fa1228e82a309df4aaec26b940fe6"
+    },
+    "prior_c104": {
+      "path": "artifacts/cycle-104-b104-book-ramsey-dihedral-cayley-boundary-v1.json",
+      "sha256": "2ce94a45c68e27876463655ccea0cc8fb3348fa8fc11330a5f68e366b0f8adbd"
+    },
+    "proof": {
+      "path": "proof/cycle105_complement_translate_proof.md",
+      "sha256": "a77b1a61cc7158006ea99f21b53e7782749c6c71576307d33c3418936d298ffe"
+    },
+    "result": {
+      "path": "discovery/out/cycle105-complement-translate/result.json",
+      "sha256": "a7b731d9f87d886231d921d22c0e7eb843bb0e2701097f80b72b14057ab0ce97"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "selection": {
+      "path": "discovery/cycle105_oracle_complement_translate_selection.md",
+      "sha256": "6c39a115499fe4d325b73139abced81d43750d6277a49af5d71d4dee6cc1c227"
+    },
+    "symbolic_checker": {
+      "path": "proof/check_cycle105_symbolic_obstruction.py",
+      "sha256": "359bd497c606f258e0c077db7412312f0c1b98d4bf9bbcd61ffb659b0bae5b0e"
+    },
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "outcome": "For every q congruent to 7 modulo 8, a symmetric nonzero rotation set A with zero excluded and complement reflection set B=Z_q minus A cannot satisfy the frozen Cayley Seidel-square condition.",
+  "record_type": "UNIFORM_METHOD_FAMILY_OBSTRUCTION",
+  "replay": {
+    "check": "python3 proof/build_cycle105_complement_translate_boundary.py --check",
+    "matrix": "python3 proof/cycle105_complement_translate_obstruction.py --output discovery/out/cycle105-complement-translate/result.json && python3 proof/check_cycle105_complement_translate_obstruction.py discovery/out/cycle105-complement-translate/result.json > discovery/out/cycle105-complement-translate/check.json",
+    "proof": "sed -n '1,240p' proof/cycle105_complement_translate_proof.md",
+    "symbolic": "python3 proof/check_cycle105_symbolic_obstruction.py"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle105_complement_translate_boundary.py",
+    "sha256": "64650e656ef0b5a6b689f2adfaaa79cc5042842a6e33b48304b97d44bdbfd822"
+  },
+  "status": "SEALED"
+}

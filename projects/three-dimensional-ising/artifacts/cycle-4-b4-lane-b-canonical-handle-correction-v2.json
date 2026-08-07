@@ -1,0 +1,701 @@
+{
+  "affected_claims": "Withdraw the Cycle 4 canonical-F 1024/2048 rank theorem and the literal c=raw_new_b statement. Genus, face surgery, carrier dimension, relative defect, and character-transfer identities are unaffected.",
+  "artifact_id": "cycle-4-b4-lane-b-canonical-handle-correction-v2",
+  "author": "Hainan Zhao",
+  "budget_ordinal": "B4",
+  "correction": "c=old_second_last+raw_new_b",
+  "cycle": 4,
+  "epistemic_status": "PROVED",
+  "error": "The old verifier proved d=old_last+raw_new_a was orthogonal, but did not check that c=raw_new_b was orthogonal to the old homology space. It is not.",
+  "exact_replay": {
+    "boundary_audit": {
+      "antiperiodic": "a seam is a fixed 1-cocycle; adding delta s changes its representative but not its cohomology class, provided s is single-valued on the periodic slice",
+      "fixed_spin": "boundary spins must be gauge-transformed; invariance is not asserted",
+      "free": "the all-spin-sum boundary vector is U_s invariant",
+      "periodic": "trace is invariant under conjugation by U_s"
+    },
+    "claim_boundary": "This proves an all-length rank upper bound for the pinned minimum-genus free 3x3 tube family and audits the same local gauge identity for periodic and antiperiodic conventions. It does not prove a growing-width bound h(w), a cubic-box compression, or any thermodynamic singularity.",
+    "claim_status": "PROVED",
+    "cochain_checks": {
+      "all_4096_transverse_subsets_checked_per_mode": true,
+      "b_mode_potentials": {
+        "1080": 79,
+        "452": 27
+      },
+      "cochain_identity": "<delta s,S>=<s,partial S> over GF(2)"
+    },
+    "cochain_gauge_identity": "For arbitrary edge weights, D_(eta+delta s)=U_s^(-1)D_eta U_s. The connector kernel commutes with simultaneous U_s because each longitudinal factor depends only on sigma_v sigma'_v.",
+    "frozen_twist_audit": "Only an exact edge cochain is changed. Its class in C^1/B^1 and every other frozen homology coordinate are unchanged.",
+    "handle_transform": {
+      "a_bar_b_operator_schmidt_rank": 2,
+      "normalization": "actual transform is the displayed integer matrix divided by 2",
+      "twice_G_to_F_transform": [
+        [
+          1,
+          1,
+          1,
+          -1
+        ],
+        [
+          1,
+          1,
+          -1,
+          1
+        ],
+        [
+          1,
+          -1,
+          1,
+          1
+        ],
+        [
+          -1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    "normalization_audit": "Gauge maps are permutations, so they introduce no scalar. Walsh transforms use only powers of two; the local G-to-F map is (1/2) times the recorded integer matrix.",
+    "rank_theorem": {
+      "F_internal_upper": 256,
+      "F_pair_upper": 256,
+      "G_internal_upper": 256,
+      "G_pair_upper": 256,
+      "physical_carrier": 256,
+      "reason": "Align the spatial separator with the last occurrence of the a coordinate at the twist cut. Every b-sector contribution on either side is a transverse coboundary, hence a known character of the exposed frontier mask. The linear a phase and the quadratic a*b phase then split across the separator conditional on that same mask. For an internal lambda_a|lambda_b cut, lambda_b multiplies only the frontier-determined b value and is emitted as a diagonal carrier factor. Thus neither pair nor internal cuts enlarge the 256-state carrier."
+    },
+    "semantic_coordinate_checks": {
+      "all_layers": [
+        {
+          "coordinate_bits": [
+            0
+          ],
+          "edge_mode_masks": {
+            "0": 1056
+          },
+          "exact_bits": [],
+          "layer": 0,
+          "nonexact_bits": [
+            0
+          ]
+        },
+        {
+          "coordinate_bits": [
+            0,
+            1,
+            2
+          ],
+          "edge_mode_masks": {
+            "0": 1056,
+            "1": 452,
+            "2": 320
+          },
+          "exact_bits": [
+            1
+          ],
+          "layer": 1,
+          "nonexact_bits": [
+            0,
+            2
+          ]
+        },
+        {
+          "coordinate_bits": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "edge_mode_masks": {
+            "0": 1080,
+            "1": 452,
+            "2": 320,
+            "3": 1080,
+            "4": 1056
+          },
+          "exact_bits": [
+            0,
+            1,
+            3
+          ],
+          "layer": 2,
+          "nonexact_bits": [
+            2,
+            4
+          ]
+        },
+        {
+          "coordinate_bits": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "edge_mode_masks": {
+            "0": 1080,
+            "1": 452,
+            "2": 452,
+            "3": 1080,
+            "4": 1056,
+            "5": 452,
+            "6": 320
+          },
+          "exact_bits": [
+            0,
+            1,
+            2,
+            3,
+            5
+          ],
+          "layer": 3,
+          "nonexact_bits": [
+            4,
+            6
+          ]
+        },
+        {
+          "coordinate_bits": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "edge_mode_masks": {
+            "0": 1080,
+            "1": 452,
+            "2": 452,
+            "3": 1080,
+            "4": 1080,
+            "5": 452,
+            "6": 320,
+            "7": 1080,
+            "8": 1056
+          },
+          "exact_bits": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            7
+          ],
+          "layer": 4,
+          "nonexact_bits": [
+            6,
+            8
+          ]
+        },
+        {
+          "coordinate_bits": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "edge_mode_masks": {
+            "0": 1080,
+            "1": 452,
+            "10": 320,
+            "2": 452,
+            "3": 1080,
+            "4": 1080,
+            "5": 452,
+            "6": 452,
+            "7": 1080,
+            "8": 1056,
+            "9": 452
+          },
+          "exact_bits": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9
+          ],
+          "layer": 5,
+          "nonexact_bits": [
+            8,
+            10
+          ]
+        },
+        {
+          "coordinate_bits": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "edge_mode_masks": {
+            "0": 1080,
+            "1": 452,
+            "10": 320,
+            "11": 1080,
+            "12": 1056,
+            "2": 452,
+            "3": 1080,
+            "4": 1080,
+            "5": 452,
+            "6": 452,
+            "7": 1080,
+            "8": 1080,
+            "9": 452
+          },
+          "exact_bits": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            11
+          ],
+          "layer": 6,
+          "nonexact_bits": [
+            10,
+            12
+          ]
+        },
+        {
+          "coordinate_bits": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "edge_mode_masks": {
+            "0": 1080,
+            "1": 452,
+            "10": 452,
+            "11": 1080,
+            "12": 1056,
+            "13": 452,
+            "14": 320,
+            "2": 452,
+            "3": 1080,
+            "4": 1080,
+            "5": 452,
+            "6": 452,
+            "7": 1080,
+            "8": 1080,
+            "9": 452
+          },
+          "exact_bits": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            13
+          ],
+          "layer": 7,
+          "nonexact_bits": [
+            12,
+            14
+          ]
+        },
+        {
+          "coordinate_bits": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+          ],
+          "edge_mode_masks": {
+            "0": 1080,
+            "1": 452,
+            "10": 452,
+            "11": 1080,
+            "12": 1080,
+            "13": 452,
+            "14": 320,
+            "15": 1080,
+            "16": 1056,
+            "2": 452,
+            "3": 1080,
+            "4": 1080,
+            "5": 452,
+            "6": 452,
+            "7": 1080,
+            "8": 1080,
+            "9": 452
+          },
+          "exact_bits": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            15
+          ],
+          "layer": 8,
+          "nonexact_bits": [
+            14,
+            16
+          ]
+        },
+        {
+          "coordinate_bits": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "edge_mode_masks": {
+            "0": 1080,
+            "1": 452,
+            "10": 452,
+            "11": 1080,
+            "12": 1080,
+            "13": 452,
+            "14": 452,
+            "15": 1080,
+            "16": 1056,
+            "17": 452,
+            "18": 320,
+            "2": 452,
+            "3": 1080,
+            "4": 1080,
+            "5": 452,
+            "6": 452,
+            "7": 1080,
+            "8": 1080,
+            "9": 452
+          },
+          "exact_bits": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            17
+          ],
+          "layer": 9,
+          "nonexact_bits": [
+            16,
+            18
+          ]
+        },
+        {
+          "coordinate_bits": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "edge_mode_masks": {
+            "0": 1080,
+            "1": 452,
+            "10": 452,
+            "11": 1080,
+            "12": 1080,
+            "13": 452,
+            "14": 452,
+            "15": 1080,
+            "16": 1080,
+            "17": 452,
+            "18": 320,
+            "19": 1080,
+            "2": 452,
+            "20": 1056,
+            "3": 1080,
+            "4": 1080,
+            "5": 452,
+            "6": 452,
+            "7": 1080,
+            "8": 1080,
+            "9": 452
+          },
+          "exact_bits": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            19
+          ],
+          "layer": 10,
+          "nonexact_bits": [
+            18,
+            20
+          ]
+        },
+        {
+          "coordinate_bits": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21
+          ],
+          "edge_mode_masks": {
+            "0": 1080,
+            "1": 452,
+            "10": 452,
+            "11": 1080,
+            "12": 1080,
+            "13": 452,
+            "14": 452,
+            "15": 1080,
+            "16": 1080,
+            "17": 452,
+            "18": 452,
+            "19": 1080,
+            "2": 452,
+            "20": 1056,
+            "21": 452,
+            "3": 1080,
+            "4": 1080,
+            "5": 452,
+            "6": 452,
+            "7": 1080,
+            "8": 1080,
+            "9": 452
+          },
+          "exact_bits": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            21
+          ],
+          "layer": 11,
+          "nonexact_bits": [
+            20
+          ]
+        }
+      ],
+      "canonical_symplectic_intersection": true,
+      "length": 12,
+      "no_unclassified_extra_modes": true
+    }
+  },
+  "frozen_hashes": {
+    "cochain_module": {
+      "path": "src/lane_b_cochain_gauge.py",
+      "sha256": "9f54aa39773cc6e675e21a9ba3ba8b26fd9d2d851c385e658bef06f644bc76fc"
+    },
+    "correction_report": {
+      "path": "docs/cycle4-canonical-handle-correction.md",
+      "sha256": "3e161e7dd3ac2fb861026e44a377f12436ddda505eb7de310bb3360829fdf9ed"
+    },
+    "intersection_verifier": {
+      "path": "proof/verify_lane_b_intersection.py",
+      "sha256": "1b6b59d188dfdc033b1c37c0059ee3e068181c458a9da028d0a8e0f1a273abd9"
+    },
+    "label_verifier": {
+      "path": "proof/verify_lane_b_width_scaling.py",
+      "sha256": "2cb86284481e69b26bea8d9f7a52e91664a7b2b7869cdf1915795bef18926ae4"
+    },
+    "proof": {
+      "path": "proof/lane_b_cochain_gauge_proof.md",
+      "sha256": "da33907099dfc2a345ede511430fcf8b3da106480f42feb6a0d6c98c2674477b"
+    },
+    "recursive_family": {
+      "path": "src/lane_b_recursive_family.py",
+      "sha256": "2c945132811228cb33acc8a98d1602d3e7133c474b219ceaab73a4e8e72b171e"
+    },
+    "requirements": {
+      "path": "requirements.txt",
+      "sha256": "8347daed02ebf7b3c3cfa494e97049b7e0ab15b9af00a5addd843ed44381a64a"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "c4a09e7baa8a5588d4c6855a533eb933c85791707ed9653437644c1e1ad6c163"
+    },
+    "superseded_artifact": {
+      "path": "artifacts/cycle-4-b4-lane-b-bounded-theta-transfer-v1.json",
+      "sha256": "3bbc61164f68eaaed3b1babcdd9e782da06aa0ccfc90637f81de27501c7dcb8d"
+    },
+    "tests": {
+      "path": "tests/test_lane_b_cochain_gauge.py",
+      "sha256": "7fafedc1794792c9abaaf8eb9bb656bbb21a7d941498ed29aaa987af85d4e545"
+    },
+    "verifier": {
+      "path": "proof/verify_lane_b_cochain_gauge.py",
+      "sha256": "bb6db11ac8e9a800c883d30c5368917acfd9fbb600fb42e55800aa6d9bc49a08"
+    }
+  },
+  "record_type": "POST_SEAL_CANONICAL_COORDINATE_CORRECTION",
+  "replacement_boundary": "Cycle 6 separately proves and certifies the corrected canonical rank closure. This record does not modify the immutable Cycle 4 artifact.",
+  "replay": {
+    "artifact_check": "python3 proof/build_cycle4_lane_b_canonical_correction_v2.py --check",
+    "correction": "python3 proof/verify_lane_b_cochain_gauge.py",
+    "tests": "python3 -m unittest tests/test_lane_b_cochain_gauge.py -v"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle4_lane_b_canonical_correction_v2.py",
+    "sha256": "2ec0ce589bf2ff7d2f62a3df4b0cb96456d424aaf2d3f2663d4b5621240dc899"
+  },
+  "status": "SEALED_CORRECTION",
+  "supersedes_affected_claims_in": "cycle-4-b4-lane-b-bounded-theta-transfer-v1",
+  "version": 2
+}

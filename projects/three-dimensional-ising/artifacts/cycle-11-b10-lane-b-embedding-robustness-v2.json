@@ -1,0 +1,346 @@
+{
+  "artifact_id": "cycle-11-b10-lane-b-embedding-robustness-v2",
+  "author": "Hainan Zhao",
+  "budget_ordinal": "B10",
+  "claim_boundary": "This strengthens only the embedding-dependence obstruction. It does not alter the filtration-compatible robustness theorem or the physical Ising polynomial.",
+  "cycle": 11,
+  "epistemic_status": "MIXED_PROVED_AND_CERTIFIED_NUMERICAL",
+  "exact_replay": {
+    "base_cyclic_orders": {
+      "(0, 0, 0)": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "(0, 0, 1)": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "(0, 1, 0)": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "(0, 1, 1)": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "(1, 0, 0)": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "(1, 0, 1)": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "(1, 1, 0)": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "(1, 1, 1)": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ]
+    },
+    "claim_boundary": "This is an embedding-dependence obstruction for the complete pre-Arf family, not for the physical Ising polynomial and not for filtration-compatible rotations.",
+    "claim_status": "CERTIFIED_NUMERICAL exact exhaustive GF(2)/finite-field audit",
+    "graph": "G_(2,2)=P_2 square P_2 square P_2 (the cube graph)",
+    "interpretation": "The same smallest cubic grid graph has orientable cellular rotations of genus zero and two, hence pre-Arf families of sizes one and sixteen, while their normalized Arf contractions equal the same even-subgraph polynomial values.",
+    "primes": [
+      1000000007,
+      1000000009
+    ],
+    "rotation_census": {
+      "0": 2,
+      "1": 54,
+      "2": 200
+    },
+    "rows": [
+      {
+        "bits_in_lexicographic_vertex_order": "01011010",
+        "face_boundary_rank": 5,
+        "face_count": 6,
+        "face_lengths": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "genus": 0,
+        "graph_to_surface_homology_rank": 0,
+        "normalized_arf_sum": 195594167,
+        "physical_even_subgraph_value": 195594167,
+        "prime": 1000000007,
+        "rotation": "planar_genus_zero",
+        "spin_structure_count": 1
+      },
+      {
+        "bits_in_lexicographic_vertex_order": "00000001",
+        "face_boundary_rank": 1,
+        "face_count": 2,
+        "face_lengths": [
+          6,
+          18
+        ],
+        "genus": 2,
+        "graph_to_surface_homology_rank": 4,
+        "normalized_arf_sum": 195594167,
+        "physical_even_subgraph_value": 195594167,
+        "prime": 1000000007,
+        "rotation": "maximum_genus_two",
+        "spin_structure_count": 16
+      },
+      {
+        "bits_in_lexicographic_vertex_order": "01011010",
+        "face_boundary_rank": 5,
+        "face_count": 6,
+        "face_lengths": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "genus": 0,
+        "graph_to_surface_homology_rank": 0,
+        "normalized_arf_sum": 712329530,
+        "physical_even_subgraph_value": 712329530,
+        "prime": 1000000009,
+        "rotation": "planar_genus_zero",
+        "spin_structure_count": 1
+      },
+      {
+        "bits_in_lexicographic_vertex_order": "00000001",
+        "face_boundary_rank": 1,
+        "face_count": 2,
+        "face_lengths": [
+          6,
+          18
+        ],
+        "genus": 2,
+        "graph_to_surface_homology_rank": 4,
+        "normalized_arf_sum": 712329530,
+        "physical_even_subgraph_value": 712329530,
+        "prime": 1000000009,
+        "rotation": "maximum_genus_two",
+        "spin_structure_count": 16
+      }
+    ],
+    "selected_rotation_bits": {
+      "maximum_genus_two": "00000001",
+      "planar_genus_zero": "01011010"
+    },
+    "vertex_order": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ]
+  },
+  "extends": "cycle-11-b10-lane-b-embedding-robustness-v1",
+  "frozen_hashes": {
+    "conventions": {
+      "path": "src/conventions.py",
+      "sha256": "b6b328f6b7b1725c39f4e4ba4084c275a141189b7efe32e9727c75488d705bb3"
+    },
+    "frontier_dependency": {
+      "path": "proof/verify_lane_b_arbitrary_width_frontier.py",
+      "sha256": "f98f80b203eb93bd0c18deb37e80dbf7cdcbb58237129cba60c42cff3fa73615"
+    },
+    "homology_dependency": {
+      "path": "proof/verify_lane_b_genus3.py",
+      "sha256": "1f5a944a1249525ff75b4a471da73e55709de169f0e53d0540ede14b1bb298a4"
+    },
+    "intersection_dependency": {
+      "path": "proof/verify_lane_b_intersection.py",
+      "sha256": "1b6b59d188dfdc033b1c37c0059ee3e068181c458a9da028d0a8e0f1a273abd9"
+    },
+    "prior_v1": {
+      "path": "artifacts/cycle-11-b10-lane-b-embedding-robustness-v1.json",
+      "sha256": "9dc1774c262c373e6ba5cea02bbe5055561071f73893100955d4abd95249e361"
+    },
+    "proof": {
+      "path": "proof/lane_b_grid_rotation_addendum.md",
+      "sha256": "266664df79cc9d60e4110946507457c5b8093d17500c087d8480886cdaf4cc16"
+    },
+    "report": {
+      "path": "docs/cycle11-lane-b-grid-rotation-addendum-v2.md",
+      "sha256": "fc271f75bd6d59ee07fa8ddb7df5df86f5b10c355456b66ad361cf6853bbc7b0"
+    },
+    "requirements": {
+      "path": "requirements.txt",
+      "sha256": "8347daed02ebf7b3c3cfa494e97049b7e0ab15b9af00a5addd843ed44381a64a"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "c4a09e7baa8a5588d4c6855a533eb933c85791707ed9653437644c1e1ad6c163"
+    },
+    "tests": {
+      "path": "tests/test_lane_b_grid_rotation_robustness.py",
+      "sha256": "f5414e136f82ed71a770aaa705a44423ab0346161a35696c57a6559d52d4ac1e"
+    },
+    "verifier": {
+      "path": "proof/verify_lane_b_grid_rotation_robustness.py",
+      "sha256": "4f6d04f1939855d0d4a593858029d49e0de401b364b602f5e79b2a62aa53e434"
+    }
+  },
+  "gate_outcome": "UPGRADE_4_COMPLETE_WITH_EXPLICIT_SAME_GRID_ROTATIONS",
+  "outcome": "The same cube grid graph has orientable cellular rotations of genera zero, one, and two; selected genus-zero and genus-two rotations have pre-Arf family sizes one and sixteen while preserving the physical Arf contraction.",
+  "record_type": "LANE_B_SAME_GRID_ROTATION_OBSTRUCTION_ADDENDUM",
+  "replay": {
+    "artifact_check": "python3 proof/build_cycle11_lane_b_grid_rotation_addendum_v2.py --check",
+    "tests": "python3 -m unittest tests/test_lane_b_grid_rotation_robustness.py -v",
+    "verification": "python3 proof/verify_lane_b_grid_rotation_robustness.py"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle11_lane_b_grid_rotation_addendum_v2.py",
+    "sha256": "fa31c31196ce4f968d002cf6981a90d9b4a350f5d33d4a2b5cc131f4e8ab09be"
+  },
+  "status": "SEALED_ADDENDUM"
+}

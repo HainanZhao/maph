@@ -1,0 +1,12 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+import json,sys
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
+from proof.cycle_seal_v1 import check_runtime,freeze_inputs,require,run_cli,sha256
+OUT=ROOT/'artifacts/cycle-117-b115-book-ramsey-hadamard-puncture-boundary-v1.json'
+H={'prereg':('docs/cycle-117-b115-book-ramsey-hadamard-puncture-preregistration-v1.md','4165d7a1e26c0eaf3cefd27a8478ce21ea32b03b80ad379de47910c8d2c33b30'),'proof':('proof/cycle117_hadamard_puncture_proof.md','56bb3a27445338e4c4bf882d793c13309992c09f11cb3fd3e23661a9ca298d2e'),'checker':('proof/check_cycle117_hadamard_puncture.cpp','5fd40989f9b7113faa8bead213563ac536ae3565155bde65929a4d7663d722f1'),'replay':('proof/replay_cycle117_hadamard_puncture.py','972d360a1e5017ab2eab5686f154c2fe484286fb3e528e6a8b4fce6492556d0d'),'result':('discovery/out/cycle117-hadamard-puncture-check.json','b56406ae9d496815c287b7d499bae0407b5b06191c824cae8deb7337e6e3fc1f'),'prior':('artifacts/cycle-114-b114-book-ramsey-two-block-circulant-boundary-v1.json','5dc4b1b6d1d45d1d46857da8bc92383b5a324e349ba2a5e5ad104541cd11bdd2'),'scaffold':('proof/cycle_seal_v1.py','9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7')}
+def payload():
+ d=json.loads((ROOT/H['result'][0]).read_text());require(d['status']=='PASS' and d['states']==983040 and not d['hits'],'drift')
+ return {'artifact_id':'cycle-117-b115-book-ramsey-hadamard-puncture-boundary-v1','cycle':117,'budget_ordinal':'B115','status':'SEALED','epistemic_status':'PROVED','record_type':'FINITE_METHOD_FAMILY_BOUNDARY','outcome':'No q=7 switched two-vertex puncture of the fixed Sylvester order-16 signed state satisfies the asymmetric book caps.','claim_boundary':'Only the fixed Sylvester parent, two-vertex puncture, and q=7; not other Hadamard matrices, switching classes, or F001 generally.','audit':d,'frozen_hashes':freeze_inputs(ROOT,{k:(ROOT/p,h)for k,(p,h)in H.items()}),'runtime':check_runtime('c117'),'sealer':{'path':'proof/build_cycle117_hadamard_puncture_boundary.py','sha256':sha256(Path(__file__))},'replay':{'checker':'g++ -std=c++20 -O3 -DNDEBUG proof/check_cycle117_hadamard_puncture.cpp -o /tmp/check-cycle117 && /tmp/check-cycle117','independent':'python3 proof/replay_cycle117_hadamard_puncture.py','check':'python3 proof/build_cycle117_hadamard_puncture_boundary.py --check'}}
+if __name__=='__main__':raise SystemExit(run_cli(description=__doc__,output=OUT,payload_factory=payload))

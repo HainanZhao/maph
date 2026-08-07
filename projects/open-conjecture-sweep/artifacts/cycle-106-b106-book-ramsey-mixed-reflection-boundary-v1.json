@@ -1,0 +1,246 @@
+{
+  "artifact_id": "cycle-106-b106-book-ramsey-mixed-reflection-boundary-v1",
+  "audit": {
+    "controls": [
+      {
+        "A": [
+          1,
+          6
+        ],
+        "B": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "degree": 7,
+        "non_complement": true,
+        "q": 7,
+        "reflection_convolution_agrees": true,
+        "reflection_equivalence": true,
+        "seidel_formula_agrees": true
+      },
+      {
+        "A": [
+          1,
+          22
+        ],
+        "B": [
+          1,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22
+        ],
+        "degree": 23,
+        "non_complement": true,
+        "q": 23,
+        "reflection_convolution_agrees": true,
+        "reflection_equivalence": true,
+        "seidel_formula_agrees": true
+      }
+    ],
+    "status": "PASS",
+    "symbolic": [
+      {
+        "h": 2,
+        "q": 7,
+        "q_plus_one_square": null,
+        "roots": []
+      },
+      {
+        "h": 6,
+        "q": 23,
+        "q_plus_one_square": null,
+        "roots": []
+      },
+      {
+        "h": 8,
+        "q": 31,
+        "q_plus_one_square": null,
+        "roots": []
+      },
+      {
+        "h": 12,
+        "q": 47,
+        "q_plus_one_square": null,
+        "roots": []
+      },
+      {
+        "h": 18,
+        "q": 71,
+        "q_plus_one_square": null,
+        "roots": []
+      },
+      {
+        "h": 20,
+        "q": 79,
+        "q_plus_one_square": null,
+        "roots": []
+      },
+      {
+        "h": 26,
+        "q": 103,
+        "q_plus_one_square": null,
+        "roots": []
+      },
+      {
+        "h": 32,
+        "q": 127,
+        "q_plus_one_square": null,
+        "roots": []
+      },
+      {
+        "h": 38,
+        "q": 151,
+        "q_plus_one_square": null,
+        "roots": []
+      },
+      {
+        "h": 42,
+        "q": 167,
+        "q_plus_one_square": null,
+        "roots": []
+      },
+      {
+        "h": 48,
+        "q": 191,
+        "q_plus_one_square": null,
+        "roots": []
+      },
+      {
+        "h": 50,
+        "q": 199,
+        "q_plus_one_square": null,
+        "roots": []
+      },
+      {
+        "h": 56,
+        "q": 223,
+        "q_plus_one_square": null,
+        "roots": []
+      },
+      {
+        "h": 60,
+        "q": 239,
+        "q_plus_one_square": null,
+        "roots": []
+      },
+      {
+        "h": 66,
+        "q": 263,
+        "q_plus_one_square": null,
+        "roots": []
+      },
+      {
+        "h": 68,
+        "q": 271,
+        "q_plus_one_square": null,
+        "roots": []
+      },
+      {
+        "h": 78,
+        "q": 311,
+        "q_plus_one_square": null,
+        "roots": []
+      },
+      {
+        "h": 86,
+        "q": 343,
+        "q_plus_one_square": null,
+        "roots": []
+      },
+      {
+        "h": 90,
+        "q": 359,
+        "q_plus_one_square": null,
+        "roots": []
+      },
+      {
+        "h": 92,
+        "q": 367,
+        "q_plus_one_square": null,
+        "roots": []
+      },
+      {
+        "h": 96,
+        "q": 383,
+        "q_plus_one_square": null,
+        "roots": []
+      }
+    ]
+  },
+  "budget_ordinal": "B106",
+  "claim_boundary": "Only the displayed dihedral Cayley state; not non-Cayley constructions or book-Ramsey.",
+  "cycle": 106,
+  "cycle_decision": {
+    "decision": "Seal and close C106.",
+    "falsifier": "An admissible state satisfying the stated Seidel condition or a failure of the proof identities.",
+    "stop": "Do not patch C106 with restricted B families; a successor needs non-Cayley or non-dihedral state."
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "check": {
+      "path": "discovery/out/cycle106-mixed-reflection-check.json",
+      "sha256": "ac9195d48aa8755ebcf4a10f5be1460e8607ce0df2c96ea10390a60a975c7991"
+    },
+    "checker": {
+      "path": "proof/check_cycle106_mixed_reflection.py",
+      "sha256": "f2f48a7f774e9d1f8af8170f25e1b5efcef531b088cd5a478661ba2da60ee381"
+    },
+    "prereg": {
+      "path": "docs/cycle-106-b106-book-ramsey-mixed-reflection-preregistration-v1.md",
+      "sha256": "f57e5b0546ab0f60995cb4231bc6243ddc2502d4c524f2a3b90bf9406a5cf769"
+    },
+    "prior": {
+      "path": "artifacts/cycle-105-b105-book-ramsey-complement-translate-boundary-v1.json",
+      "sha256": "c4e7b4f2edbeca97a77b71ac3810eb08c1557bd2588af6373472749e21727875"
+    },
+    "proof": {
+      "path": "proof/cycle106_mixed_reflection_proof.md",
+      "sha256": "cf0ef89254240c0f09c02208ff605a3bd86c63b7dbbdc76aa448f509f4e15a46"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "selection": {
+      "path": "discovery/cycle106_oracle_mixed_reflection_selection.md",
+      "sha256": "8137d096772e2b0fe3cf4aa8dfdd815f0f8590fb38e1d8bfe216a9d0436ac5ba"
+    }
+  },
+  "outcome": "For every prime power q=7 mod 8, no inverse-closed degree-q dihedral Cayley state C=A union Bs with A=-A and zero excluded can meet the frozen off-diagonal Seidel-square condition.",
+  "record_type": "UNIFORM_METHOD_FAMILY_OBSTRUCTION",
+  "replay": {
+    "check": "python3 proof/build_cycle106_mixed_reflection_boundary.py --check",
+    "checker": "python3 proof/check_cycle106_mixed_reflection.py",
+    "proof": "sed -n '1,200p' proof/cycle106_mixed_reflection_proof.md"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle106_mixed_reflection_boundary.py",
+    "sha256": "93df03174a0bcfd592442d20adcb74ff156bdb0c06e7d5b599600bc986485287"
+  },
+  "status": "SEALED"
+}

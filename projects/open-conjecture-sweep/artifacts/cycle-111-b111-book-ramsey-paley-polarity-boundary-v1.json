@@ -1,0 +1,60 @@
+{
+  "artifact_id": "cycle-111-b111-book-ramsey-paley-polarity-boundary-v1",
+  "audit": {
+    "hits": 0,
+    "p0_states": 465,
+    "polarities": 28,
+    "status": "PASS"
+  },
+  "budget_ordinal": "B111",
+  "claim_boundary": "Only q=7 fixed-Paley-cross states satisfying the displayed polarity reconstruction; not a uniform obstruction or other kernels.",
+  "cycle": 111,
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "checker": {
+      "path": "proof/check_cycle111_paley_polarity.py",
+      "sha256": "2ecf3613947b822c409393a7bc52ca949512bca08f012e4b43802f6e98796072"
+    },
+    "prereg": {
+      "path": "docs/cycle-111-b111-book-ramsey-paley-polarity-preregistration-v1.md",
+      "sha256": "c1a5d3c69b02ba4b995e770eb1fedc1fb1ac3ac4cb971d8752247f330ffd80fa"
+    },
+    "prior": {
+      "path": "artifacts/cycle-109-b109-book-ramsey-inversion-warp-boundary-v1.json",
+      "sha256": "0b302302656280ade1904b86a92c48f887a1ca6ff419535d88026c66a6687822"
+    },
+    "proof": {
+      "path": "proof/cycle111_paley_polarity_proof.md",
+      "sha256": "0a2bbf56d859538d0f3750eb9b65138eba5df13e548564dde96a060ae665951e"
+    },
+    "replay": {
+      "path": "proof/replay_cycle111_paley_polarity.py",
+      "sha256": "798b31de36dfb19268ad0ad2be62ea7c5332623b4862c786030aaea719375c5d"
+    },
+    "result": {
+      "path": "discovery/out/cycle111-paley-polarity-check.json",
+      "sha256": "acc265baa869bcad0e8931020714c837c1b014498ee6e4c695f9a23751898966"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    }
+  },
+  "outcome": "No q=7 completion exists in the fixed Paley-cross nontranslation polarity reconstruction state.",
+  "record_type": "FINITE_METHOD_FAMILY_BOUNDARY",
+  "replay": {
+    "check": "python3 proof/build_cycle111_paley_polarity_boundary.py --check",
+    "checker": "python3 proof/check_cycle111_paley_polarity.py",
+    "independent": "python3 proof/replay_cycle111_paley_polarity.py"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle111_paley_polarity_boundary.py",
+    "sha256": "e847f6eb79d93700c2e12fed3df86bd436354b268cea463f75c9d48968c83b55"
+  },
+  "status": "SEALED"
+}

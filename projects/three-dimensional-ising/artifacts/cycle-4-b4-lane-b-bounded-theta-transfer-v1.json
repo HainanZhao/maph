@@ -1,0 +1,1296 @@
+{
+  "artifact_id": "cycle-4-b4-lane-b-bounded-theta-transfer-v1",
+  "author": "Hainan Zhao",
+  "budget_ordinal": "B4",
+  "claim_boundary": "The theorem is for free boxes with fixed 3x3 transverse section. It does not cover growing transverse dimensions, periodic or antiperiodic closure, the full three-dimensional thermodynamic limit, beta_c, or critical exponents. The 3D Ising model is not solved.",
+  "cycle": 4,
+  "epistemic_status": "PROVED",
+  "exact_replay": {
+    "all_size_family": {
+      "claim_boundary": "The period-two free Lx3x3 family has minimum genus L-1 and an exact all-size collective handle-site MPS bound 1024 (binary-site TT bound 2048) for the spin-structure tensor. This fixed 3x3 transverse family does not control the full three-dimensional thermodynamic limit.",
+      "claim_status": "PROVED",
+      "collective_transfer": {
+        "boundary_parity": {
+          "even_boundary_states": 256,
+          "subsets_per_boundary": 16,
+          "transverse_edges": 12
+        },
+        "character_memory_states_across_cut": 4,
+        "direct_tensor_entries": "4^(L-1)",
+        "local_matrix_dimension": 256,
+        "local_transform_preserves_TT_rank": true,
+        "one_handle_Arf_Walsh_kernel": [
+          [
+            1,
+            1,
+            1,
+            -1
+          ],
+          [
+            1,
+            -1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            -1,
+            1
+          ],
+          [
+            1,
+            -1,
+            -1,
+            -1
+          ]
+        ],
+        "storage_scaling": "O(L) without period reuse; O(1) bulk tensors with period-two reuse",
+        "uniform_binary_site_TT_rank_upper_bound": 2048,
+        "uniform_handle_site_TT_rank_upper_bound": 1024
+      },
+      "falsifier": "An error in either local extension table, a nonlocal edge label, a failure of the published genus-theorem hypothesis map, a handle-cut rank above 1024, or a binary-coordinate TT rank above 2048.",
+      "minimum_genus_theorem": {
+        "hypothesis_map": "shape Lx3x3 equals their G(L-1,2,2)",
+        "minimum_genus_formula": "L-1",
+        "source": "Millichap--Salinas (2022), Theorem 4, pp. 15-16"
+      },
+      "period_two_rotation": {
+        "face_censuses": {
+          "10": {
+            "edges": 201,
+            "faces": 95,
+            "four_faces": 94,
+            "genus": 9,
+            "long_face_length": 26,
+            "vertices": 90
+          },
+          "11": {
+            "edges": 222,
+            "faces": 105,
+            "four_faces": 104,
+            "genus": 10,
+            "long_face_length": 28,
+            "vertices": 99
+          },
+          "12": {
+            "edges": 243,
+            "faces": 115,
+            "four_faces": 114,
+            "genus": 11,
+            "long_face_length": 30,
+            "vertices": 108
+          },
+          "4": {
+            "edges": 75,
+            "faces": 35,
+            "four_faces": 34,
+            "genus": 3,
+            "long_face_length": 14,
+            "vertices": 36
+          },
+          "5": {
+            "edges": 96,
+            "faces": 45,
+            "four_faces": 44,
+            "genus": 4,
+            "long_face_length": 16,
+            "vertices": 45
+          },
+          "6": {
+            "edges": 117,
+            "faces": 55,
+            "four_faces": 54,
+            "genus": 5,
+            "long_face_length": 18,
+            "vertices": 54
+          },
+          "7": {
+            "edges": 138,
+            "faces": 65,
+            "four_faces": 64,
+            "genus": 6,
+            "long_face_length": 20,
+            "vertices": 63
+          },
+          "8": {
+            "edges": 159,
+            "faces": 75,
+            "four_faces": 74,
+            "genus": 7,
+            "long_face_length": 22,
+            "vertices": 72
+          },
+          "9": {
+            "edges": 180,
+            "faces": 85,
+            "four_faces": 84,
+            "genus": 8,
+            "long_face_length": 24,
+            "vertices": 81
+          }
+        },
+        "inductive_local_transition_types": [
+          "even-to-odd",
+          "odd-to-even"
+        ],
+        "pinned_controls_reproduced": [
+          5,
+          6
+        ],
+        "transition_checks": [
+          {
+            "active_topological_window_width": 3,
+            "added_edge_semantic_counts": {
+              "new_b": 4,
+              "old_last": 2,
+              "old_last_plus_new_a": 2,
+              "zero": 13
+            },
+            "correction_edges": [
+              [
+                [
+                  3,
+                  1,
+                  0
+                ],
+                [
+                  3,
+                  2,
+                  0
+                ]
+              ],
+              [
+                [
+                  3,
+                  1,
+                  1
+                ],
+                [
+                  3,
+                  2,
+                  1
+                ]
+              ]
+            ],
+            "length": 5,
+            "new_face_lengths": {
+              "4": 11,
+              "16": 1
+            },
+            "new_face_rank": 44,
+            "old_face_rank": 34,
+            "old_intersection_preserved": true,
+            "parity": "odd-target",
+            "relative_defect_dimension": 1,
+            "removed_face_lengths": [
+              4,
+              14
+            ],
+            "retained_old_faces": 33,
+            "two_intersection_routes_agree": true
+          },
+          {
+            "active_topological_window_width": 3,
+            "added_edge_semantic_counts": {
+              "new_b": 4,
+              "old_last": 2,
+              "old_last_plus_new_a": 2,
+              "zero": 13
+            },
+            "correction_edges": [
+              [
+                [
+                  4,
+                  1,
+                  0
+                ],
+                [
+                  4,
+                  1,
+                  1
+                ]
+              ],
+              [
+                [
+                  4,
+                  2,
+                  0
+                ],
+                [
+                  4,
+                  2,
+                  1
+                ]
+              ]
+            ],
+            "length": 6,
+            "new_face_lengths": {
+              "4": 11,
+              "18": 1
+            },
+            "new_face_rank": 54,
+            "old_face_rank": 44,
+            "old_intersection_preserved": true,
+            "parity": "even-target",
+            "relative_defect_dimension": 1,
+            "removed_face_lengths": [
+              4,
+              16
+            ],
+            "retained_old_faces": 43,
+            "two_intersection_routes_agree": true
+          },
+          {
+            "active_topological_window_width": 3,
+            "added_edge_semantic_counts": {
+              "new_b": 4,
+              "old_last": 2,
+              "old_last_plus_new_a": 2,
+              "zero": 13
+            },
+            "correction_edges": [
+              [
+                [
+                  5,
+                  1,
+                  0
+                ],
+                [
+                  5,
+                  2,
+                  0
+                ]
+              ],
+              [
+                [
+                  5,
+                  1,
+                  1
+                ],
+                [
+                  5,
+                  2,
+                  1
+                ]
+              ]
+            ],
+            "length": 7,
+            "new_face_lengths": {
+              "4": 11,
+              "20": 1
+            },
+            "new_face_rank": 64,
+            "old_face_rank": 54,
+            "old_intersection_preserved": true,
+            "parity": "odd-target",
+            "relative_defect_dimension": 1,
+            "removed_face_lengths": [
+              4,
+              18
+            ],
+            "retained_old_faces": 53,
+            "two_intersection_routes_agree": true
+          },
+          {
+            "active_topological_window_width": 3,
+            "added_edge_semantic_counts": {
+              "new_b": 4,
+              "old_last": 2,
+              "old_last_plus_new_a": 2,
+              "zero": 13
+            },
+            "correction_edges": [
+              [
+                [
+                  6,
+                  1,
+                  0
+                ],
+                [
+                  6,
+                  1,
+                  1
+                ]
+              ],
+              [
+                [
+                  6,
+                  2,
+                  0
+                ],
+                [
+                  6,
+                  2,
+                  1
+                ]
+              ]
+            ],
+            "length": 8,
+            "new_face_lengths": {
+              "4": 11,
+              "22": 1
+            },
+            "new_face_rank": 74,
+            "old_face_rank": 64,
+            "old_intersection_preserved": true,
+            "parity": "even-target",
+            "relative_defect_dimension": 1,
+            "removed_face_lengths": [
+              4,
+              20
+            ],
+            "retained_old_faces": 63,
+            "two_intersection_routes_agree": true
+          }
+        ]
+      },
+      "relative_homology_recurrence": {
+        "active_window_width": 3,
+        "defect_dimension": 1,
+        "new_pair": "d=old_last+raw_new_a, c=raw_new_b",
+        "old_form_embeds_orthogonally": true,
+        "period": 2
+      },
+      "user_workflow_status": "PROVED"
+    },
+    "first_relative_step": {
+      "certificate": "exact GF(2) arithmetic; enclosure radius 0 and integer rank margin 1",
+      "claim_boundary": "The single 4x3x3 to 5x3x3 step has a one-bit relative boundary defect and three-bit adapted topological support. No size-uniform recurrence, theta identity, or thermodynamic compression is proved.",
+      "claim_status": "CERTIFIED_NUMERICAL",
+      "falsifier": "A second compatible slice for which the old boundary image has unbounded dimension or the added-edge labels act on an unbounded number of prior handle coordinates.",
+      "local_support": {
+        "active_adapted_coordinates": [
+          5,
+          6,
+          7
+        ],
+        "added_edge_adapted_label_counts": {
+          "0": 13,
+          "32": 2,
+          "96": 2,
+          "128": 4
+        },
+        "old_edge_defect_support": [
+          {
+            "correction": 96,
+            "edge": [
+              [
+                3,
+                1,
+                0
+              ],
+              [
+                3,
+                2,
+                0
+              ]
+            ],
+            "edge_index": 69
+          },
+          {
+            "correction": 96,
+            "edge": [
+              [
+                3,
+                1,
+                1
+              ],
+              [
+                3,
+                2,
+                1
+              ]
+            ],
+            "edge_index": 71
+          }
+        ],
+        "semantic_pattern": {
+          "conjugate": 4,
+          "old_last": 2,
+          "old_last_plus_defect": 2,
+          "zero": 13
+        }
+      },
+      "new_embedding": {
+        "face_lengths": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          16
+        ],
+        "face_rank": 44,
+        "faces": 45,
+        "genus": 4,
+        "independent_intersection_routes_agree": true
+      },
+      "old_embedding": {
+        "face_rank": 34,
+        "faces": 35,
+        "genus": 3
+      },
+      "old_homology": {
+        "intersection_rows": [
+          38,
+          25,
+          1,
+          2,
+          34,
+          17
+        ],
+        "preserved_label_by_label": true,
+        "representative_images": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ]
+      },
+      "relative_boundary": {
+        "defect_conjugate": 128,
+        "defect_dimension": 1,
+        "intersection_dimension": 33,
+        "nonzero_old_face_image": 96,
+        "old_face_image_counts": {
+          "0": 33,
+          "96": 2
+        }
+      },
+      "relative_sector_identity": {
+        "cardinality_per_refined_sector": 8589934592,
+        "coefficientwise_reunion_verified": true,
+        "kernel_dimension": 33,
+        "ordinary_frontier_maximum_states": 16384,
+        "ordinary_sectors": 64,
+        "refined_sectors": 128,
+        "relative_frontier_maximum_states": 16384,
+        "restricted_new_labels_verified_edgewise": true,
+        "walsh_channels": 2
+      },
+      "rotation_restriction_exact": true
+    },
+    "independent_character_transfer": {
+      "arithmetic": {
+        "evaluation_points": [
+          2,
+          3
+        ],
+        "field": "GF(1000000007)"
+      },
+      "cases": [
+        {
+          "character_selection": "exhaustive",
+          "evaluations": [
+            {
+              "all_agree": true,
+              "characters": 64,
+              "t": 2
+            },
+            {
+              "all_agree": true,
+              "characters": 64,
+              "t": 3
+            }
+          ],
+          "face_rank": 34,
+          "genus": 3,
+          "length": 4,
+          "maximum_frontier_states": 16384,
+          "sector_count": 64
+        },
+        {
+          "character_selection": "zero, all-ones, units, and pairs",
+          "evaluations": [
+            {
+              "all_agree": true,
+              "characters": 38,
+              "t": 2
+            },
+            {
+              "all_agree": true,
+              "characters": 38,
+              "t": 3
+            }
+          ],
+          "face_rank": 44,
+          "genus": 4,
+          "length": 5,
+          "maximum_frontier_states": 32768,
+          "sector_count": 256
+        }
+      ],
+      "claim_boundary": "These modular controls test the implementation. The multivariate all-size identity is established algebraically in lane_b_bounded_theta_transfer_proof.md.",
+      "claim_status": "COMPUTATIONALLY VERIFIED",
+      "independence": "Route 1 evaluates exact homology-sector polynomials from the edge frontier. Route 2 contracts the independently ordered 256-state slice-parity matrices."
+    },
+    "independent_heldout_falsifier": {
+      "F_polynomial_equalities_equal_symmetry_orbits": true,
+      "claim_boundary": "The nonzero modular minors prove exact full generic rank for the displayed, preselected direct extension of the Cycle 3 basis. They do not prove that all Sp(8,2) bases are full rank. The 100000-basis random discovery screen is not part of this proof claim.",
+      "claim_status": "COMPUTATIONALLY_VERIFIED",
+      "embedding_symmetry_group_order": 4,
+      "evaluations": {
+        "1/2": {
+          "TT_profile": [
+            2,
+            4,
+            8,
+            16,
+            8,
+            4,
+            2
+          ],
+          "cycle3_row_identity_survives": false,
+          "modular_prime": 1000000007
+        },
+        "1/3": {
+          "TT_profile": [
+            2,
+            4,
+            8,
+            16,
+            8,
+            4,
+            2
+          ],
+          "cycle3_row_identity_survives": false,
+          "modular_prime": 1000000007
+        }
+      },
+      "exact_distinct_F_polynomials": 76,
+      "face_boundary_rank": 44,
+      "gate_outcome": "DIRECT_HANDLE_EXTENSION_FALSIFIED",
+      "generic_TT_profile_over_Q(t)": [
+        2,
+        4,
+        8,
+        16,
+        8,
+        4,
+        2
+      ],
+      "homology_dimension": 8,
+      "intersection": {
+        "alternating": true,
+        "cup_product_route": {
+          "cohomology_cup_matrix_rows": [
+            64,
+            8,
+            16,
+            34,
+            68,
+            136,
+            145,
+            96
+          ],
+          "homology_intersection_matrix_rows": [
+            102,
+            137,
+            17,
+            2,
+            4,
+            129,
+            1,
+            34
+          ],
+          "triangles": 192,
+          "triangulated_edges": 288,
+          "triangulated_vertices": 90
+        },
+        "face_boundary_rank": 44,
+        "genus": 4,
+        "independent_routes_agree_with_labels": true,
+        "intersection_matrix_binary": [
+          "01100110",
+          "10010001",
+          "10001000",
+          "01000000",
+          "00100000",
+          "10000001",
+          "10000000",
+          "01000100"
+        ],
+        "intersection_matrix_rows": [
+          102,
+          137,
+          17,
+          2,
+          4,
+          129,
+          1,
+          34
+        ],
+        "pinned_homology_representatives": [
+          282712,
+          33562672,
+          536880147,
+          35184707633320,
+          2252076839208448,
+          147610122141430718512,
+          2361223773850796303379,
+          77372728195565851722645672
+        ],
+        "rank": 8,
+        "shape": [
+          5,
+          3,
+          3
+        ],
+        "symplectic_transport_rows": [
+          153,
+          6,
+          36,
+          24,
+          144,
+          96,
+          64,
+          128
+        ],
+        "tree_cotree_route": {
+          "bouquet_homology_intersection_matrix_rows": [
+            132,
+            168,
+            1,
+            2,
+            128,
+            66,
+            160,
+            83
+          ],
+          "chord_cohomology_cup_matrix_rows": [
+            4,
+            8,
+            17,
+            66,
+            164,
+            80,
+            40,
+            16
+          ],
+          "dual_tree_edges": [
+            8,
+            11,
+            16,
+            18,
+            21,
+            22,
+            24,
+            25,
+            27,
+            29,
+            30,
+            32,
+            33,
+            35,
+            37,
+            39,
+            42,
+            43,
+            45,
+            46,
+            50,
+            51,
+            53,
+            54,
+            56,
+            60,
+            63,
+            64,
+            66,
+            67,
+            69,
+            71,
+            72,
+            77,
+            79,
+            81,
+            84,
+            85,
+            86,
+            87,
+            89,
+            90,
+            91,
+            93
+          ],
+          "homology_intersection_matrix_rows": [
+            102,
+            137,
+            17,
+            2,
+            4,
+            129,
+            1,
+            34
+          ],
+          "leftover_edges": [
+            48,
+            58,
+            74,
+            75,
+            88,
+            92,
+            94,
+            95
+          ],
+          "leftover_to_pinned_homology_rows": [
+            160,
+            1,
+            2,
+            4,
+            8,
+            16,
+            64,
+            32
+          ],
+          "primal_tree_edges": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            17,
+            19,
+            20,
+            23,
+            26,
+            28,
+            31,
+            34,
+            36,
+            38,
+            40,
+            41,
+            44,
+            47,
+            49,
+            52,
+            55,
+            57,
+            59,
+            61,
+            62,
+            65,
+            68,
+            70,
+            73,
+            76,
+            78,
+            80,
+            82,
+            83
+          ],
+          "reduced_boundary_word": [
+            48,
+            74,
+            48,
+            58,
+            75,
+            58,
+            94,
+            75,
+            92,
+            94,
+            95,
+            88,
+            95,
+            92,
+            74,
+            88
+          ]
+        }
+      },
+      "maximum_frontier_states": 65536,
+      "minimum_genus_certificate": {
+        "cycle_space_dimension": 52,
+        "edges": 96,
+        "elementary_squares": 68,
+        "face_lengths": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          16
+        ],
+        "faces": 45,
+        "genus_three_eight_face_covers": 0,
+        "genus_three_two_hexagon_covers": 0,
+        "minimum_orientable_genus": 4,
+        "positive_genus_four_cover_control": true,
+        "reduced_eight_walks": 2455,
+        "reduced_six_walks": 336,
+        "vertices": 45
+      },
+      "sector_cardinality": 17592186044416,
+      "sector_count": 256,
+      "spin_structure_orbit_size_counts": {
+        "1": 4,
+        "2": 18,
+        "4": 54
+      },
+      "spin_structure_orbits": 76,
+      "tested_basis": [
+        1,
+        34,
+        4,
+        8,
+        17,
+        32,
+        64,
+        128
+      ],
+      "y_z_swap_homology_action_rows": [
+        9,
+        2,
+        38,
+        8,
+        152,
+        32,
+        96,
+        128
+      ]
+    },
+    "second_relative_step": {
+      "certificate": "exact exhaustive integer/GF(2) computation; radius 0, rank margin 1",
+      "claim_boundary": "Two consecutive handle additions have the same one-defect, three-bit local form. A size-uniform recurrence and thermodynamic compression remain unproved.",
+      "claim_status": "CERTIFIED_NUMERICAL",
+      "falsifier": "A later compatible minimum-genus slice whose defect dimension exceeds one, whose label support reaches beyond the last old handle, or whose local semantic pattern changes.",
+      "local_support": {
+        "active_adapted_coordinates": [
+          7,
+          8,
+          9
+        ],
+        "added_edge_adapted_label_counts": {
+          "0": 13,
+          "128": 2,
+          "384": 2,
+          "512": 4
+        },
+        "old_edge_defect_support": [
+          {
+            "correction": 384,
+            "edge": [
+              [
+                4,
+                1,
+                0
+              ],
+              [
+                4,
+                1,
+                1
+              ]
+            ],
+            "edge_index": 89
+          },
+          {
+            "correction": 384,
+            "edge": [
+              [
+                4,
+                2,
+                0
+              ],
+              [
+                4,
+                2,
+                1
+              ]
+            ],
+            "edge_index": 94
+          }
+        ],
+        "semantic_pattern": {
+          "conjugate": 4,
+          "old_last": 2,
+          "old_last_plus_defect": 2,
+          "zero": 13
+        }
+      },
+      "minimum_genus_certificate": {
+        "candidate_multisets_exhausted": {
+          "10": 29934,
+          "6+6+6": 12614424,
+          "8+6": 1334364
+        },
+        "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+        "compiler_stderr": "",
+        "euler_girth_lower_bound": 4,
+        "genus_four_required_face_patterns": [
+          [
+            10
+          ],
+          [
+            8,
+            6
+          ],
+          [
+            6,
+            6,
+            6
+          ]
+        ],
+        "minimum_orientable_genus": 5,
+        "positive_genus_five_rotation": "54 elementary squares plus one 18-gon",
+        "reduced_walk_counts": {
+          "10": 29934,
+          "6": 422,
+          "8": 3162
+        },
+        "surviving_face_incidence_covers": 0
+      },
+      "new_embedding": {
+        "face_lengths": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          18
+        ],
+        "face_rank": 54,
+        "faces": 55,
+        "genus": 5,
+        "independent_intersection_routes_agree": true
+      },
+      "old_embedding": {
+        "face_rank": 44,
+        "faces": 45,
+        "genus": 4
+      },
+      "old_homology": {
+        "intersection_rows": [
+          102,
+          153,
+          1,
+          2,
+          98,
+          145,
+          17,
+          34
+        ],
+        "preserved_label_by_label": true,
+        "representative_images": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32,
+          64,
+          128
+        ]
+      },
+      "recurrence_control": {
+        "active_topological_window_widths": [
+          3,
+          3
+        ],
+        "added_edge_semantic_pattern_repeats": true,
+        "boundary_defect_dimensions": [
+          1,
+          1
+        ],
+        "steps_compared": [
+          "4->5",
+          "5->6"
+        ]
+      },
+      "relative_boundary": {
+        "defect_conjugate": 512,
+        "defect_dimension": 1,
+        "intersection_dimension": 43,
+        "nonzero_old_face_image": 384,
+        "old_face_image_counts": {
+          "0": 43,
+          "384": 2
+        }
+      },
+      "relative_sector_identity": {
+        "cardinality_per_refined_sector": 8796093022208,
+        "coefficientwise_reunion_verified": true,
+        "kernel_dimension": 43,
+        "ordinary_frontier_maximum_states": 32768,
+        "ordinary_sectors": 256,
+        "refined_sectors": 512,
+        "relative_frontier_maximum_states": 32768,
+        "restricted_new_labels_verified_edgewise": true,
+        "walsh_channels": 2
+      },
+      "rotation_restriction_exact": true,
+      "user_workflow_status": "COMPUTATIONALLY VERIFIED"
+    }
+  },
+  "falsifier": "Any frozen replay failure; mismatch in either local rotation/label table; failure of the Millichap--Salinas Theorem 4 hypothesis map; disagreement of the two intersection routes; failure of the independent character-transfer controls; or a handle-cut rank above 1024 or binary-site TT rank above 2048.",
+  "frozen_hashes": {
+    "artifact_tests": {
+      "path": "tests/test_cycle4_lane_b_recursive_compression.py",
+      "sha256": "926b98c9e31e809c1a705bee082b192369940de1655f2872b039f7928dc4df11"
+    },
+    "character_tests": {
+      "path": "tests/test_lane_b_character_transfer.py",
+      "sha256": "87142532b85f41a121bb517425fd037462899589bc4c9a09bdacf4ee15af9778"
+    },
+    "character_verifier": {
+      "path": "proof/verify_lane_b_character_transfer.py",
+      "sha256": "6f5dd13a4e21243e86f8914842c081a9fc70ae2b0eea3f0c4ed69054c3058234"
+    },
+    "conventions": {
+      "path": "src/conventions.py",
+      "sha256": "b6b328f6b7b1725c39f4e4ba4084c275a141189b7efe32e9727c75488d705bb3"
+    },
+    "failure_ledger": {
+      "path": "discovery/failure-ledger-cycle4.md",
+      "sha256": "966a2ad5b3b6202184373e16b34a983bfa7417b5d327e7550f54afce707f3191"
+    },
+    "family_tests": {
+      "path": "tests/test_lane_b_recursive_family.py",
+      "sha256": "c310b50cede5fde223d7dd85fd5e4363f84281a1eec6626c0ffec22bf68cb1ed"
+    },
+    "family_verifier": {
+      "path": "proof/verify_lane_b_recursive_family.py",
+      "sha256": "1f5bc7cefc988cf14234631ec887248120eaebce2c430e5b2e4d443a0e62a400"
+    },
+    "genus3_rotation": {
+      "path": "src/lane_b_genus3.py",
+      "sha256": "9129a873a842fceb4744fd41a6ebb2c2c83d0c62b8a1f9c673ba90d725bf265f"
+    },
+    "genus4_no_cover": {
+      "path": "proof/verify_lane_b_genus4_no_cover_6x3x3.cpp",
+      "sha256": "574304a693ebbaab2825a66e702264b74103c460d48d10a4fd715884a69baa11"
+    },
+    "heldout_tests": {
+      "path": "tests/test_lane_b_heldout.py",
+      "sha256": "131d8ca37a4868683131be7c56c9cd984eadb8eb1b10b11d32e6ad5d6044ce96"
+    },
+    "heldout_verifier": {
+      "path": "proof/verify_lane_b_heldout.py",
+      "sha256": "2fc2105a9bf295e88bd222111b67c990685ecf3fbfb4102195a4d56a9be7d213"
+    },
+    "prior": {
+      "path": "artifacts/cycle-3-b3-lane-b-rank-seven-v1.json",
+      "sha256": "b9d95dee5f70ef35c79dbbfb1852e430d3e732d0e03b9449da08b4fb6ee7a3d3"
+    },
+    "proof_note": {
+      "path": "proof/lane_b_bounded_theta_transfer_proof.md",
+      "sha256": "fdd7eafd3611d9146c816675310d46111646d2dcd30255a4683a2cbfa70b70cb"
+    },
+    "recursive5_rotation": {
+      "path": "src/lane_b_recursive.py",
+      "sha256": "20c7faea3b243ec2ed6e3d8c2b9761fd1cada6c9b3a8ad5fc1f0faa9cee2166c"
+    },
+    "recursive5_tests": {
+      "path": "tests/test_lane_b_recursive.py",
+      "sha256": "f591367929b8ac04ef205934b9d2d3f899d0db8b227ed2aa99f0c54cc7d57921"
+    },
+    "recursive5_verifier": {
+      "path": "proof/verify_lane_b_recursive.py",
+      "sha256": "92f232cf1040be67598df6d210e80002b51974153798ba7390e31fc33a3841ac"
+    },
+    "recursive6_rotation": {
+      "path": "src/lane_b_recursive6.py",
+      "sha256": "a615b8a745e8aee78398e6fa1fdfcc78a8ce3800c92c471a6ebde90be9a86b61"
+    },
+    "recursive6_tests": {
+      "path": "tests/test_lane_b_recursive6.py",
+      "sha256": "4841f729d71e839b09c5ea1c4c9855e5f93bf4fbeb821689d0785ae23d950364"
+    },
+    "recursive6_verifier": {
+      "path": "proof/verify_lane_b_recursive6.py",
+      "sha256": "e1bdf6675e1fb8869a02f2ee2a378fcfccb2403e55d41aa3740a6449aeae22cc"
+    },
+    "recursive_family": {
+      "path": "src/lane_b_recursive_family.py",
+      "sha256": "2c945132811228cb33acc8a98d1602d3e7133c474b219ceaab73a4e8e72b171e"
+    },
+    "relative_note": {
+      "path": "discovery/cycle-4-relative-theta-bridge.md",
+      "sha256": "4ca5ae3017a1316e1288a863c3d7eb5355849ae59541755dfcca59ecca9c7354"
+    },
+    "report": {
+      "path": "docs/cycle4-lane-b-recursive-compression-report.md",
+      "sha256": "3ba93b80e5779ec65e2717300e4b925af2cf4773e491b6b5c652d4d80c040d78"
+    },
+    "requirements": {
+      "path": "requirements.txt",
+      "sha256": "8347daed02ebf7b3c3cfa494e97049b7e0ab15b9af00a5addd843ed44381a64a"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "c4a09e7baa8a5588d4c6855a533eb933c85791707ed9653437644c1e1ad6c163"
+    },
+    "selection": {
+      "path": "discovery/cycle-4-lane-b-heldout-selection.md",
+      "sha256": "c1ab37c01c9ebd019402c94a5dad97ad1d79feaf11b1c9bd92d175c276f752b2"
+    },
+    "source_audit": {
+      "path": "discovery/cycle4-grid-genus-source-audit.md",
+      "sha256": "2add7bc695f4906edde4e27bf49aa225be6a9ca21efe2569ae0908ef4de6dc09"
+    }
+  },
+  "gate_outcome": "GATES_3_AND_4_POSITIVE_FIXED_TRANSVERSE_COMPRESSION",
+  "novelty_boundary": "The minimum-genus formula is prior work. No priority claim is made here for the period-two nested-homology or bounded-TT construction pending a dedicated search.",
+  "outcome": "For every free Lx3x3 box with L>=4, a period-two minimum-genus rotation gives an exact nested relative-homology recurrence. The full 4^(L-1) Walsh tensor, and hence the full F(q) tensor, has handle-site TT rank at most 1024 and binary-site TT rank at most 2048 uniformly in L. Direct storage is exponential in L; the exact representation uses bounded local matrices and O(L) cores.",
+  "record_type": "LANE_B_MINIMUM_GENUS_BOUNDED_RELATIVE_THETA_TRANSFER",
+  "replay": {
+    "all_size_family": "python3 proof/verify_lane_b_recursive_family.py",
+    "artifact_check": "python3 proof/build_cycle4_lane_b_recursive_compression.py --check",
+    "character_transfer": "python3 proof/verify_lane_b_character_transfer.py",
+    "heldout": "python3 proof/verify_lane_b_heldout.py",
+    "relative_4_to_5": "python3 proof/verify_lane_b_recursive.py",
+    "relative_5_to_6": "python3 proof/verify_lane_b_recursive6.py",
+    "tests": "python3 -m unittest discover -s tests -v"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle4_lane_b_recursive_compression.py",
+    "sha256": "8c16831a73c02cb74ab30774063cf57cd60ac2a702fa3d9b22b38b4a32af51fa"
+  },
+  "status": "SEALED",
+  "success_level": 2
+}

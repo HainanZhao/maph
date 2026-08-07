@@ -1,0 +1,265 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={The Width-Five q-Fibonomial Coefficients Are Unimodal},
+  pdfauthor={Hainan Zhao}
+}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\qint}[1]{[#1]_q}
+\newcommand{\qfib}[2]{\left[\!\begin{matrix}#1\\#2\end{matrix}\!\right]_{\!\mathcal F}}
+
+\title{The Width-Five \(q\)-Fibonomial Coefficients Are Unimodal}
+\author{Hainan Zhao}
+\date{August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Bergeron, Ceballos, and K\"ustner conjectured that every
+\(q\)-Fibonomial coefficient is unimodal.  The cases of width at most four
+are known.  We prove the next infinite family: for every integer \(m\geq1\),
+the polynomial \(\qfib{m+5}{5}\) is unimodal.  Its first coefficient
+difference reduces below the midpoint to six translates of the restricted
+partition function for parts \(1,2,3,5\).  That function is a cubic
+quasipolynomial whose nonconstant terms are independent of the residue
+class.  Uniform error bounds prove positivity for \(m\geq8\), and the seven
+remaining cases are checked exactly.
+\end{abstract}
+
+\section{Introduction}
+
+Let \(F_0=0,F_1=1\), and \(F_{j+2}=F_{j+1}+F_j\).  For a positive integer
+\(r\), write
+\[
+ [r]_q=1+q+\cdots+q^{r-1},\qquad
+ [F_r]^!_q=\prod_{j=1}^r[F_j]_q.
+\]
+The \(q\)-Fibonomial coefficient is
+\[
+ \qfib{m+n}{n}=\frac{[F_{m+n}]^!_q}{[F_m]^!_q[F_n]^!_q}.
+\]
+Bergeron, Ceballos, and K\"ustner proved that this is a polynomial with
+nonnegative integer coefficients and conjectured that it is unimodal
+\cite{BCK}.  Connelly, Ito, Martinez, Shevchenko, and Yang proved the cases
+\(n\leq3\) \cite{CIMSY}; the case \(n=4\) was subsequently proved by the
+restricted-partition method used here \cite{ZhaoWidthFour}.
+
+\begin{theorem}\label{thm:main}
+For every integer \(m\geq1\), the \(q\)-Fibonomial coefficient
+\(\qfib{m+5}{5}\) is unimodal.
+\end{theorem}
+
+The argument is algebraic.  The path--domino theorem of \cite{BCK} is used
+only for polynomiality and nonnegativity.  We make no claim here about width
+six, the full two-parameter conjecture, log-concavity, or a combinatorial
+chain decomposition.
+
+There is also an aligned-center criterion for products with several
+lacunar brackets: after pairing disjoint factors whenever a spacer step
+divides an ordinary bracket length, the remaining spacer increments may be
+allocated among the remaining ordinary brackets, provided every residual
+length stays positive.  Applied to the three steps (2,3,5) in (2), that
+criterion proves exactly 18 of the 60 stable residue classes modulo 60.  It
+does not reach 24 further classes that admit such a three-spacer
+decomposition, nor the 18 classes without one.  Thus it does not subsume
+Theorem~\ref{thm:main}; the restricted-partition argument below treats all
+classes uniformly.
+
+\section{The restricted-partition kernel}
+
+For an integer \(t\), define
+\[
+ p(t)=[q^t]\frac{1}{(1-q)(1-q^2)(1-q^3)(1-q^5)},
+ \qquad p(t)=0\quad(t<0),
+\]
+and put
+\[
+ Q(t)=\frac{t^3}{180}+\frac{11t^2}{120}+\frac{9t}{20}.
+\]
+
+\begin{lemma}\label{lem:kernel}
+For \(t\geq0\),
+\[
+ p(t)=Q(t)+\rho_{t\bmod30},
+\]
+where the values of \(360\rho_r\), for \(r=0,1,\ldots,29\), are
+\[
+\begin{array}{c|rrrrrrrrrr}
+r&0&1&2&3&4&5&6&7&8&9\\ \hline
+360\rho_r&360&163&248&243&136&275&288&163&248&171\\[2pt]
+r&10&11&12&13&14&15&16&17&18&19\\ \hline
+360\rho_r&280&203&288&163&176&315&208&203&288&91\\[2pt]
+r&20&21&22&23&24&25&26&27&28&29\\ \hline
+360\rho_r&320&243&208&203&216&235&248&243&208&131
+\end{array}
+\]
+In particular,
+\[
+ Q(t)+\frac{91}{360}\leq p(t)\leq Q(t)+1. \tag{1}
+\]
+\end{lemma}
+
+\begin{proof}
+The generating function shows that \(p(t)\) counts solutions of
+\(x+2y+3z+5w=t\) in nonnegative integers.  Summing first over \(w\) gives
+\[
+ p(t)=\sum_{w=0}^{\lfloor t/5\rfloor}
+ \left\lfloor\frac{(t-5w)^2+6(t-5w)+12}{12}\right\rfloor,
+\]
+using the period-six formula for partitions with parts \(1,2,3\).
+Write \(t=30u+r\), split \(w\) by its residue modulo six, and sum the
+resulting quadratic progressions.  The cubic, quadratic, and linear terms
+are independent of \(r\) and give \(Q(t)\); the constant terms are precisely
+the displayed table.  Its minimum and maximum give (1).
+\end{proof}
+
+\section{The midpoint difference}
+
+Fix \(m\geq1\) and set
+\[
+ a=F_{m+1},\qquad b=F_{m+2}.
+\]
+The five numerator lengths are
+\(a,b,a+b,a+2b,2a+3b\), so
+\[
+ W_m(q):=\qfib{m+5}{5}
+ =\frac{[a]_q[b]_q[a+b]_q[a+2b]_q[2a+3b]_q}
+ {[2]_q[3]_q[5]_q}. \tag{2}
+\]
+Its degree is
+\[
+ D=5a+7b-12. \tag{3}
+\]
+As in the width-four case, q-reciprocity, polynomiality, and the constant
+term one show that \(W_m\) is symmetric of degree \(D\).
+
+Write \(W_m(q)=\sum_{t=0}^Dc_tq^t\), put \(c_{-1}=0\), and let
+\(T=\lfloor D/2\rfloor\).
+
+\begin{lemma}\label{lem:difference}
+For \(0\leq t\leq T\),
+\begin{align*}
+c_t-c_{t-1}={}&p(t)-p(t-a)-p(t-b)+p(t-(2a+b))\\
+&+p(t-(a+3b))-p(t-(2a+3b)). \tag{4}
+\end{align*}
+\end{lemma}
+
+\begin{proof}
+From (2),
+\[
+(1-q)W_m(q)=
+\frac{(1-q^a)(1-q^b)(1-q^{a+b})(1-q^{a+2b})
+(1-q^{2a+3b})}
+{(1-q)(1-q^2)(1-q^3)(1-q^5)}.
+\]
+With \(X=q^a\) and \(Y=q^b\), its numerator is
+\begin{align*}
+&(1-X)(1-Y)(1-XY)(1-XY^2)(1-X^2Y^3)\\
+={}&1-Y-X+X^2Y+XY^3-X^2Y^3+X^3Y^4-X^4Y^4\\
+&\quad-X^3Y^6+X^4Y^7+X^5Y^6-X^5Y^7.
+\end{align*}
+The first six monomials give the shifts in (4).  Every remaining shift is at
+least \(3a+4b\), while (3) gives
+\(3a+4b>T\).  Hence the remaining terms do not contribute at or below the
+midpoint.
+\end{proof}
+
+\section{Uniform positivity}
+
+Let \(g(t)\) denote the right side of (4).  Assume first \(m\geq8\), so
+\(a\geq34\), and write \(d=b-a\geq1\).  On each interval cut out by the five
+positive shifts in (4), replace a positive translate \(p(x)\) by
+\(Q(x)+91/360\), and a negative translate by \(Q(x)+1\).  Call the resulting
+lower bound \(H(t)\).  By Lemma~\ref{lem:kernel}, \(g(t)\geq H(t)\).
+
+Direct differentiation gives the following bounds.  Each entry in the last
+column is \(360\) times a lower bound for \(H\) on the stated interval.
+\[
+\begin{array}{ccl}
+\toprule
+\text{interval}&\text{behavior of }H&360\min H\text{ is at least}\\
+\midrule
+{}[0,a)&\text{increasing}&91\\
+{}[a,b)&\text{increasing}&2a^3+33a^2+162a-269\\
+{}[b,2a+b)&\text{increasing}&
+2a^3+6a^2d+33a^2+6ad^2+66ad+162a-629\\
+{}[2a+b,a+3b)&\text{concave}&
+22a^3+30a^2d-33a^2+6ad^2-66ad-162a-538\\
+{}[a+3b,2a+3b)&\text{decreasing}&3(2ab(a+b-11)-149)\\
+{}[2a+3b,T]&\text{decreasing}&3(2ab-269)\\
+\bottomrule
+\end{array} \tag{5}
+\]
+For completeness, on the third interval \(H'\) is a concave quadratic and
+is positive at both endpoints.  On the fourth interval \(H\) is concave and
+the smaller endpoint value is the one displayed.  On the fifth interval
+\(H'\) is convex and negative at both endpoints.  On the last interval,
+\(360H'=-12ab\); evaluation at the continuous midpoint
+\((5a+7b-12)/2\) yields the final entry of (5), so the integer midpoint gives
+at least that value.
+
+Every expression in (5) is positive for \(a\geq34\) and \(d\geq1\).  For
+example, the only non-obvious fourth entry can be grouped as
+\[
+(22a^3-33a^2-162a-538)+6ad^2+6ad(5a-11)>0.
+\]
+Thus all midpoint differences are positive for \(m\geq8\).
+
+For \(1\leq m\leq7\), exact evaluation of (4) gives
+\[
+\begin{array}{c|rrrrrrr}
+m&1&2&3&4&5&6&7\\ \hline
+\min_{0\leq t\leq T}g(t)&0&0&0&1&1&1&1
+\end{array}
+\]
+All midpoint differences are therefore nonnegative for every \(m\geq1\).
+Symmetry proves Theorem~\ref{thm:main}.
+
+\section{Reproducibility and claim boundary}
+
+The proof uses exact arithmetic.  The companion checker verifies the
+period-30 kernel, the inclusion--exclusion identity, all finite cases, and
+the uniform lower-envelope calculations.  From the repository root run
+\begin{verbatim}
+python3 proof/qfib_width5_unimodality_proof.py
+\end{verbatim}
+The residue-class comparison in the introduction is checked exactly by
+\begin{verbatim}
+python3 experiments/multi_spacer_adversarial_and_width5_overlap.py
+\end{verbatim}
+
+The theorem proves only \(\qfib{m+5}{5}\) for \(m\geq1\).  It does not prove
+the full two-parameter conjecture, width six, log-concavity, or a
+combinatorial chain decomposition.
+
+\paragraph{AI assistance.}
+The author used AI assistance in developing the proof presentation and its
+verification code.
+
+\begin{thebibliography}{3}
+\bibitem{BCK}
+Nantel Bergeron, Cesar Ceballos, and Josef K\"ustner.
+\newblock Elliptic and \(q\)-analogs of the Fibonomial numbers.
+\newblock \emph{SIGMA}, 16:076, 2020.
+
+\bibitem{CIMSY}
+Brendan B. Connelly, Ezekiel Ito, Thomas C. Martinez, Olha Shevchenko, and
+Kacey Yang.
+\newblock Unimodality of \(q\)-Fibonomial coefficients for small cases.
+\newblock \emph{arXiv:2605.12822v1 [math.CO]}, 2026.
+
+\bibitem{ZhaoWidthFour}
+Hainan Zhao.
+\newblock The width-four \(q\)-Fibonomial coefficients are unimodal.
+\newblock Zenodo, 2026. \href{https://doi.org/10.5281/zenodo.21826970}
+{doi:10.5281/zenodo.21826970}.
+\end{thebibliography}
+
+\end{document}

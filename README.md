@@ -37,6 +37,10 @@ project is self-contained: run its commands from that project's directory.
   human-selected open-problem work, including the q-Fibonomial and q-analog
   proofs, the bounded covering-design experiment, and the active
   book-Ramsey program.
+- [`projects/three-dimensional-ising/`](projects/three-dimensional-ising/):
+  exact finite-lattice structural representations for the zero-field
+  ferromagnetic simple-cubic Ising model, beginning with a source-checked
+  reconstruction of the three-dimensional obstruction.
 - [`projects/certified-qmc/`](projects/certified-qmc/): cancelled research
   campaign retained as an archival process record; only the small exact
   evaluator remains an internal utility, and no production run or release

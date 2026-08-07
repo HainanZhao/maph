@@ -1,0 +1,110 @@
+{
+  "artifact_id": "cycle-114-b114-book-ramsey-two-block-circulant-boundary-v1",
+  "audit": {
+    "hits": [],
+    "profiles": [
+      [
+        [
+          0,
+          5
+        ],
+        1
+      ],
+      [
+        [
+          3,
+          3
+        ],
+        168
+      ],
+      [
+        [
+          3,
+          4
+        ],
+        21
+      ],
+      [
+        [
+          4,
+          2
+        ],
+        168
+      ],
+      [
+        [
+          4,
+          3
+        ],
+        105
+      ],
+      [
+        [
+          4,
+          4
+        ],
+        42
+      ],
+      [
+        [
+          5,
+          0
+        ],
+        7
+      ]
+    ],
+    "states": 512,
+    "status": "PASS"
+  },
+  "budget_ordinal": "B114",
+  "claim_boundary": "Only the complete q=7 source-native two-block-circulant state; not larger q, non-circulant states, or F001 generally.",
+  "cycle": 114,
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "checker": {
+      "path": "proof/check_cycle114_two_block_circulant.py",
+      "sha256": "7092db4b26fb5ff2cee22e0a791e9a0d2dde9113fb05b6e3725c06ca457e5fd6"
+    },
+    "prereg": {
+      "path": "docs/cycle-114-b114-book-ramsey-two-block-circulant-preregistration-v1.md",
+      "sha256": "0133e8e051e94475871db2d5d11ca5e09474ff1edd39b2d1b0b641286227defa"
+    },
+    "prior": {
+      "path": "artifacts/cycle-113-b113-book-ramsey-paired-fiber-boundary-v1.json",
+      "sha256": "490c9dc32a18aa02310fc9dea6866dcb43369bfeb1a269b90d4066dd8b88e762"
+    },
+    "proof": {
+      "path": "proof/cycle114_two_block_circulant_proof.md",
+      "sha256": "4a760ee793a9e0f8b4e1b91b4d58f994d02dbb3a1aff5d38282d8cc4c95c2f2c"
+    },
+    "replay": {
+      "path": "proof/replay_cycle114_two_block_circulant.py",
+      "sha256": "4a38b2d5c7b0407f6dff5e8dccd4e550c6f9a69618e1d472fc184a984b7dc635"
+    },
+    "result": {
+      "path": "discovery/out/cycle114-two-block-circulant-check.json",
+      "sha256": "cc777549f2da736cb51f9fbfbf057ce71de533de99b7f4a01a47011e3e7b51b8"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    }
+  },
+  "outcome": "No q=7 degree-seven full two-block-circulant state satisfies the asymmetric book caps.",
+  "record_type": "FINITE_METHOD_FAMILY_BOUNDARY",
+  "replay": {
+    "check": "python3 proof/build_cycle114_two_block_circulant_boundary.py --check",
+    "checker": "python3 proof/check_cycle114_two_block_circulant.py",
+    "independent": "python3 proof/replay_cycle114_two_block_circulant.py"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle114_two_block_circulant_boundary.py",
+    "sha256": "255f205a19a8ab30b813178449aec4df97aded2e0ffabb84dfc53e3a75d7a93e"
+  },
+  "status": "SEALED"
+}

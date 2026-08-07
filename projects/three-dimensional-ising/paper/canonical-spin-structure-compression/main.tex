@@ -1,0 +1,1082 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,array,longtable,microtype}
+\usepackage[hidelinks]{hyperref}
+
+\hypersetup{
+  pdftitle={Separator compression of the complete spin-structure family for cubic Ising strips},
+  pdfauthor={Hainan Zhao}
+}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\Ftwo}{\mathbb F_2}
+\newcommand{\cE}{\mathcal E}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cQ}{\mathcal Q}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\Flat}{\operatorname{Flat}}
+\newcommand{\Arf}{\operatorname{Arf}}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\Zar}{\operatorname{Zar}}
+\newcommand{\cref}[1]{\ref{#1}}
+\newcommand{\claimtag}[1]{\textsc{#1}}
+\newcommand{\proved}{\claimtag{Proved}}
+\newcommand{\certified}{\claimtag{Certified\_Numerical}}
+\newcommand{\observed}{\claimtag{Observed}}
+\newcommand{\conjectured}{\claimtag{Conjectured}}
+
+\title{Separator Compression of the Complete Spin-Structure Family\\
+for Cubic Ising Strips}
+\author{Hainan Zhao}
+\date{August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+For a graph cellularly embedded in an orientable surface of genus \(g\), the
+generalized Kac--Ward formula represents the zero-field Ising even-subgraph
+polynomial as an Arf-weighted sum of \(4^g\) signed square roots.  We study the
+complete tensor of those pre-Arf values, before the final sum.  We prove a
+separator theorem: if a filtration-adapted spin-structure basis makes every
+cross-cut linear and quadratic phase factor through the even boundary mask on
+a separator \(S\), then every handle-pair flattening has rank at most
+\(2^{|S|-1}\).  A relative exactness condition gives the same bound at cuts
+inside a handle.
+
+For the cubic grid strips
+
+\[
+  G_{n,w}=P_n\mathbin\square P_w\mathbin\square P_w,
+\]
+
+we construct an explicit nested checkerboard ribbon embedding and a canonical
+handle ordering satisfying these hypotheses with \(|S|=w^2\).  Hence the
+entire \(4^g\)-entry spin-structure family has an exact tensor train of bond at
+most \(d_w=2^{w^2-1}\), over the polynomial ring in arbitrary edge weights.
+We then prove that this bound is generically sharp for independent nonuniform
+weights for every \(w\geq3\); \(n=11\) is uniformly sufficient.  Thus surface
+genus creates no additional exact bond dimension beyond the ordinary
+zero-field transverse carrier, but that carrier is itself generically
+minimal.  We also give a non-grid toroidal \(K_{3,3}\) chain showing that the
+internal-handle hypothesis is sharp, and an \(O(gd_w^2)\) contraction for all
+single-handle Walsh marginals of the complete family.
+
+This is a structural and exact-complexity result for the spin-structure
+representation.  For cubic boxes \(w=n=L\), the remaining bond is
+\(2^{L^2-1}\).  No thermodynamic limit, critical temperature, or exact solution
+of the three-dimensional Ising model is obtained.
+\end{abstract}
+
+\section{Introduction}
+
+Let \(G=(V,E)\) be a finite graph with zero magnetic field and couplings
+\(K_e\).  With \(t_e=\tanh K_e\), the high-temperature expansion is
+\begin{equation}\label{eq:ht}
+ Z_G=2^{|V|}\prod_{e\in E}\cosh K_e\;\cE_G(t),
+ \qquad
+ \cE_G(t)=\sum_{A\in Z_1(G;\Ftwo)}\prod_{e\in A}t_e .
+\end{equation}
+Here \(Z_1(G;\Ftwo)\) is the set of even edge subsets.  If \(G\) is embedded
+in an orientable surface of genus \(g\), the generalized Kac--Ward formula
+expresses \(\cE_G\) as an Arf-weighted sum over all \(4^g\) quadratic
+refinements of the surface intersection form
+\cite[Theorem~2.1]{Cimasoni2010}.  Equivalently, these are the signed
+Kac--Ward square roots or Fisher--Kasteleyn Pfaffians associated with the
+surface spin structures.
+
+The number of terms is topologically natural and, within the corresponding
+linear-combination model, optimal: Loebl and Masbaum prove that \(4^g\)
+projected Pfaffians are necessary at embedding genus \(g\)
+\cite[Theorems~4 and 4.1]{LoeblMasbaum2011}.  Our question is different.
+Rather than replace the \(4^g\) functions by fewer Pfaffians, we preserve all
+of them and ask for the exact tensor rank of their joint dependence on the
+spin-structure coordinates.  This distinction is essential: none of the
+results below contradicts Pfaffian-count optimality.
+
+For fixed \(w\), the strip \(G_{n,w}\) has bounded pathwidth and is already
+tractable by ordinary transfer or tree-decomposition dynamic programming
+\cite{ScottSorkin2009}.  The issue is therefore not whether a fixed-width
+strip can be evaluated.  It is whether the exponentially many surface
+sectors carry an additional topological memory beyond the ordinary
+transverse state.  This paper answers that question exactly.
+
+\subsection{Main results and epistemic boundary}
+
+Every new theorem in this paper is marked \proved.  Exact finite-field
+cross-checks are marked \certified.  The main results are as follows.
+
+\begin{enumerate}
+\item \proved: The abstract separator theorem, \cref{thm:separator}, bounds
+  the complete pre-Arf tensor by the attainable separator-mask space.  Its
+  hypotheses are intrinsic relative-chain exactness and quadratic gluing,
+  not planarity, minimum genus, or translation invariance.
+
+\item \proved: For an explicit checkerboard embedding of \(G_{n,w}\), every
+  pair cut and every binary cut inside a canonical handle has rank at most
+  \[
+     d_w=2^{w^2-1}.
+  \]
+  Consequently the complete function of all \(2g\) spin-structure bits has
+  an exact all-sector tensor train of that bond dimension
+  (\cref{thm:grid-upper}).
+
+\item \proved: For generic independent nonuniform edge weights and every
+  \(w\geq3\), the preceding bound is minimal:
+  \begin{equation}\label{eq:g1-intro}
+     R_\infty(w)=2^{w^2-1}.
+  \end{equation}
+  A length \(n=11\) suffices uniformly in \(w\)
+  (\cref{thm:grid-tight}).  The lower bound holds on a nonempty open set of
+  strictly positive ferromagnetic weights, but it is not proved after
+  restricting to homogeneous anisotropic or isotropic weights.
+
+\item \proved: An iterated toroidal \(K_{3,3}\) two-sum chain has generic
+  pair rank two but generic internal-handle rank four.  This is an infinite
+  sharpness family for the internal relative-exactness condition
+  (\cref{thm:k33}).
+
+\item \proved: Given the exact all-sector tensor train, all four
+  single-handle Walsh marginals at every handle, under arbitrary product-form
+  sector weights, are obtained in \(O(gd_w^2)\) ring operations
+  (\cref{thm:marginals}).
+\end{enumerate}
+
+The conclusion is deliberately limited.  The surface-spin-structure factor
+has no rank overhead beyond the physical separator carrier.  For cubic boxes
+\(w=L\), however, that carrier has dimension \(2^{L^2-1}\), and
+\cref{eq:g1-intro} shows it is generically unavoidable within this complete
+pre-Arf tensor.  We do not derive a controlled thermodynamic limit, an exact
+free energy, a critical temperature, or critical exponents.\footnote{A
+published operator-algebra claim of a full solution, a formal criticism, and
+the author's reply appear in \cite{Zhang2021,Perk2023,ZhangReply2023}.  That
+exchange concerns a different proposed transfer reduction and is not used
+here.}
+
+\subsection{Relation to existing mechanisms}
+
+Cimasoni's theorem extends the planar Kac--Ward mechanism
+\cite{KacWard1952} to the surface Kac--Ward/Arf representation, but does
+not organize the complete family as a separator-adapted tensor train
+\cite{Cimasoni2010}.  Bravyi contracts nonplanar matchgate networks by
+Grassmann Gaussian integration with an explicit genus-dependent sector sum
+\cite{Bravyi2009}; our result instead isolates when all sector phases factor
+through the same physical boundary mask.  Gobron packages the nonplanar
+calculation into one Pfaffian over a multicomplex coefficient algebra whose
+size still grows with the embedding parameter \cite[Theorem~3.2 and
+Corollary~3.4]{Gobron2013}; our rank statement concerns the collective sector
+tensor over the ordinary edge-weight ring.  Standard bounded-width dynamic
+programming supplies a \(2^{\Theta(w^2)}\) physical frontier but does not by
+itself state the all-spin-structure factorization.  The theorem below is the
+bridge between these two descriptions.
+
+The minimum genus of many grid products has been studied by Millichap and
+Salinas \cite{MillichapSalinas2022}.  We use their Theorem~4 only for the
+separate statement that \(P_n\square P_3\square P_3\) has minimum orientable
+genus \(n-1\).  Minimum genus is not a hypothesis of our compression theorem.
+No broad priority claim is made beyond the theorem-by-theorem comparisons
+just stated.
+
+\section{The complete pre-Arf tensor}
+
+Let \(G\hookrightarrow\Sigma_g\) be a cellular embedding in a closed
+orientable surface and let
+\[
+ \pi:Z_1(G;\Ftwo)\longrightarrow H_1(\Sigma_g;\Ftwo)=H
+\]
+be induced by inclusion.  Fix a symplectic basis
+\((a_1,b_1,\ldots,a_g,b_g)\), so the intersection form is
+\(J=\bigoplus_{i=1}^g\left(\begin{smallmatrix}0&1\\1&0\end{smallmatrix}\right)\).
+For
+\(\lambda=(\lambda_{a_1},\lambda_{b_1},\ldots,
+\lambda_{a_g},\lambda_{b_g})\in\Ftwo^{2g}\), define
+\begin{equation}\label{eq:q}
+ q_\lambda(x,y)=x\cdot y+\lambda_a\cdot x+\lambda_b\cdot y,
+ \qquad (x,y)\in\Ftwo^g\oplus\Ftwo^g.
+\end{equation}
+Then
+\[
+ q_\lambda(u+v)=q_\lambda(u)+q_\lambda(v)+u^TJv,
+ \qquad
+ \Arf(q_\lambda)=\lambda_a\cdot\lambda_b.
+\]
+
+\begin{definition}[complete pre-Arf tensor]\label{def:F}
+Over the polynomial ring \(R=\mathbb Z[t_e:e\in E]\), put
+\begin{equation}\label{eq:F}
+ \cF_G(\lambda)
+  =\sum_{A\in Z_1(G;\Ftwo)}
+       (-1)^{q_\lambda(\pi A)}\prod_{e\in A}t_e.
+\end{equation}
+The order-\(g\), four-state tensor obtained by grouping
+\((\lambda_{a_i},\lambda_{b_i})\) is the complete pre-Arf tensor.
+\end{definition}
+
+By character orthogonality,
+\begin{equation}\label{eq:arf}
+ \cE_G(t)=2^{-g}\sum_{\lambda\in\Ftwo^{2g}}
+     (-1)^{\lambda_a\cdot\lambda_b}\cF_G(\lambda).
+\end{equation}
+This is also the signed square-root form of the generalized Kac--Ward
+identity, after fixing its branches and global signs consistently
+\cite[Theorem~2.1]{Cimasoni2010}.  We use \cref{eq:F}, which is polynomial
+and branch-free, as the definition; the determinant representation supplies
+the interpretation, not an unverified identity.
+
+For an ordered tensor \(T(s_1,\ldots,s_g)\), the rank at the cut
+\(\{1,\ldots,j\}\mid\{j+1,\ldots,g\}\) is the matrix rank of its flattening over
+the fraction field of \(R\).  A tensor train of bond \(D\) is an identity
+\begin{equation}\label{eq:tt}
+ T(s_1,\ldots,s_g)=\ell^TA_1(s_1)\cdots A_g(s_g)r
+\end{equation}
+with all intermediate dimensions at most \(D\).  We also use the binary
+ordering
+\((\lambda_{a_1},\lambda_{b_1},\ldots,\lambda_{a_g},\lambda_{b_g})\), which
+adds cuts inside a handle.
+
+\section{An abstract separator theorem}
+
+We formulate the mechanism independently of grids.  Partition
+\(E=E_L\sqcup E_R\) across a labelled interface \(S\).  Partial chains have
+boundary maps
+\[
+ \partial_L:\Ftwo^{E_L}\to\Ftwo^S,
+ \qquad
+ \partial_R:\Ftwo^{E_R}\to\Ftwo^S,
+\]
+and glue to an even subgraph exactly when their boundary masks agree.  For a
+connected interface, every attainable mask lies in
+\begin{equation}\label{eq:VS}
+ V(S)=\left\{m\in\Ftwo^S:\sum_{s\in S}m_s=0\right\},
+ \qquad |V(S)|=2^{|S|-1}.
+\end{equation}
+Choose linear completion chains \(c_L(m),c_R(m)\), and write
+\(h_L(A_L,m),h_R(A_R,m)\) for the homology classes obtained by closing a
+partial chain.
+
+\begin{definition}[filtration-adapted cut]\label{def:adapted}
+A cut of the ordered spin coordinates into \(\lambda_L|\lambda_R\) is
+\emph{filtration adapted} if the following conditions hold.
+
+\begin{description}
+\item[H1: relative character exactness.]
+Every character cochain belonging to \(\lambda_L\), restricted to right
+partial chains, is a coboundary plus a fixed linear function of the trace
+\(m\); the left-right reversed assertion holds for \(\lambda_R\).
+Concretely, for a right partial-chain space \(P_R\) with trace
+\(\tau_R(c)=\partial c|_S\), there are \(s\in C^0(G_R;\Ftwo)\) and a linear
+functional \(\phi\) on \(im\tau_R\) such that
+\begin{equation}\label{eq:H1}
+ \langle\alpha,c\rangle
+   =\langle\delta s,c\rangle+\phi(\tau_Rc)
+   =\langle s,\tau_Rc\rangle+\phi(\tau_Rc)
+\end{equation}
+for every \(c\in P_R\).
+
+\item[H2: quadratic gluing.]
+There are binary functions \(Q_L,Q_R,\kappa\) such that for all compatible
+partial chains,
+\begin{equation}\label{eq:H2}
+ q_0(\pi(A_L+A_R))
+   =Q_L(A_L,m)+Q_R(A_R,m)+\kappa(m).
+\end{equation}
+
+\item[H3: internal-handle trace.]
+At a cut \(\lambda_{a_i}|\lambda_{b_i}\), the evaluation of the un-emitted
+\(b_i\)-character on the exposed half is a function \(\rho_i(m)\).  The
+polarization term \(\lambda_{a_i}\lambda_{b_i}\) may then be assigned to the
+\(a_i\) side conditional on this known trace.
+\end{description}
+\end{definition}
+
+Affine changes of quadratic origin are linear characters and are included in
+H1.  Literal cochain exactness is sufficient but not necessary; what is
+intrinsic is equality of the induced phase on partial configurations with the
+same separator trace.
+
+\begin{theorem}[separator compression; \proved]\label{thm:separator}
+Suppose every pair cut in a canonical handle ordering has a cut datum with
+\(|S|\leq k\) satisfying H1--H2.  Then every pair flattening of the complete
+pre-Arf tensor has rank at most \(2^{k-1}\).  If H3 holds at every internal
+handle cut, the same bound holds in the binary-coordinate ordering.  Without
+H3, the general binary-coordinate bound is \(2^k\).
+\end{theorem}
+
+\begin{proof}
+Fix a cut.  By H1, every left spin coordinate evaluated on a right partial
+chain is a sign depending only on \(m\), and conversely for right
+coordinates.  Absorb these signs into the corresponding factors.  H2 then
+gives, coefficientwise in the independent edge variables,
+\begin{equation}\label{eq:XY}
+ \cF_G(\lambda_L,\lambda_R)
+ =\sum_{m\in V(S)}X(\lambda_L,m)(-1)^{\kappa(m)}
+                       Y(m,\lambda_R),
+\end{equation}
+where, for example,
+\[
+ X(\lambda_L,m)=
+ \sum_{\substack{A_L\subseteq E_L\\\partial_LA_L=m}}
+ (-1)^{Q_L(A_L,m)+\text{left character phases}}
+ \prod_{e\in A_L}t_e .
+\]
+Thus the flattening factors through the attainable mask space, of cardinality
+at most \(2^{k-1}\).
+
+At an internal handle cut, H3 turns the remaining \(b_i\)-phase into a
+diagonal function of the same \(m\).  The conditional \(a_ib_i\) term stays
+in the left factor, so the intermediate space does not grow.  Without H3,
+splitting a four-state core into its two binary coordinates gives the general
+factor-two bound.  Applying \cref{eq:XY} successively constructs the exact
+tensor train \cref{eq:tt}.
+\end{proof}
+
+For a disconnected interface, the correct bound is the cardinality of the
+actually attainable trace module; it need not equal \(2^{|S|-1}\).
+Free boundaries select the zero mask.  An antiperiodic seam is a fixed edge
+cocycle and changes only a local sign.  A periodic closure is a trace over the
+same mask carrier after cutting a seam.  Fixed-spin boundaries must be
+transformed together with a gauge change.
+
+\section{The checkerboard grid embedding}
+
+Put
+\[
+ V_{n,w}=\{(i,y,z):0\leq i<n,\ 0\leq y,z<w\},
+\]
+with nearest-neighbour grid edges, and decompose along the \(i\)-coordinate.
+The transverse slice is
+\(\Lambda_w=P_w\square P_w\).
+
+\subsection{Rotation system and genus}
+
+Let \(N,W\) be the least even integers with \(N\geq n\), \(W\geq w\).
+Inside \([0,N-1]\times[0,W-1]^2\), take the union of unit cubes whose lower
+corner has at least two even coordinates.  Its oriented boundary induces a
+cyclic order on the incident grid edges at every vertex.  Delete neighbours
+outside \(V_{n,w}\) from these cyclic orders and cap every boundary walk.
+This defines a closed orientable ribbon surface \(\Sigma_{n,w}\).  Deleting a
+terminal longitudinal slice only deletes neighbours from a cyclic order, so
+the family is nested in \(n\).
+
+\begin{proposition}[constructed genus; \proved]\label{prop:genus}
+Let \(p\geq1\).  The genus of the preceding embedding is
+\begin{align}
+ g(n,2)&=0,\nonumber\\
+ g(n,2p+1)&=p^2(n-1),\label{eq:genus}\\
+ g(n,2p)&=\sum_{i=0}^{n-2}r_i,
+ &r_i&=\begin{cases}(p-1)^2,&i\text{ even},\\p^2-1,&i\text{ odd}.
+ \end{cases}\nonumber
+\end{align}
+When \(n,w\) are even the embedding is minimum genus.  For \(w=3\), its
+genus \(n-1\) is minimum by Millichap--Salinas, Theorem~4
+\cite{MillichapSalinas2022}.  No other minimum-genus assertion is needed.
+\end{proposition}
+
+\begin{proof}
+Move through the ribbon body one longitudinal slab at a time.  In odd width
+\(2p+1\), the \(p^2\) disjoint transverse checkerboard squares are co-cores
+of the new one-handles.  In even width \(2p\), an even-to-odd slab contributes
+\((p-1)^2\) co-cores; an odd-to-even slab has \(p^2\) candidate co-cores with
+one outer-boundary relation, hence \(p^2-1\).  All remaining boundary walks
+cap disks.  This gives \cref{eq:genus} by Euler characteristic.  When \(n,w\)
+are even all faces are quadrilaterals, so the bipartite girth-four Euler lower
+bound is attained.
+\end{proof}
+
+\subsection{A nested canonical Lagrangian}
+
+Let \(P_{i,y,z}\) be the four-edge boundary of the transverse unit square in
+slice \(i\) with lower corner \((i,y,z)\).  In the slab from \(i\) to \(i+1\),
+take the classes
+\begin{equation}\label{eq:Ais}
+ [P_{i,y,z}],\qquad y\equiv z\equiv i+1\pmod2.
+\end{equation}
+If \(w=2p\) and \(i\) is odd, omit the lexicographically last of these \(p^2\)
+classes.  Order first by slab and then lexicographically.
+
+\begin{lemma}[canonical handle basis; \proved]\label{lem:canonical}
+The classes in \cref{eq:Ais} form a Lagrangian basis
+\(A=(a_1,\ldots,a_g)\) of \(H_1(\Sigma_{n,w};\Ftwo)\).  They admit a nested
+symplectic extension \(B=(b_1,\ldots,b_g)\), and the resulting order
+\((a_1,b_1,\ldots,a_g,b_g)\) is filtration adapted.
+\end{lemma}
+
+\begin{proof}
+Within a slab the squares are disjoint; different slabs use different
+transverse slices.  Hence their mutual intersections vanish.  They are the
+boundaries of the complete system of co-core disks counted in
+\cref{prop:genus}; cutting along them removes every one-handle, with exactly
+the one outer relation already omitted.  Their number is \(g(n,w)\), so they
+form a Lagrangian basis.
+
+In any pinned homology basis with intersection matrix \(\Omega\), solve
+\(A^T\Omega B=I\), choosing the lexicographically least solutions with free
+bits zero.  Put \(C=B^T\Omega B\), and let \(U\) be the strictly upper
+triangular matrix with the same upper triangle as \(C\).  Replacing
+\(B\) by \(B+AU\) gives
+\[
+ A^T\Omega B=I,\qquad A^T\Omega A=B^T\Omega B=0.
+\]
+This construction retains old slab co-cores when a terminal slice is added.
+The geometric longitude dual to each co-core lies in its local slab collar,
+which supplies the claimed filtration adaptation.
+\end{proof}
+
+If a geometric quadratic refinement is chosen as the affine origin, the
+linear correction \(q_{\mathrm{geom}}(Se_j)\) on the canonical generators
+must be transported with the basis.  The results below include this
+correction; setting it silently to zero is not permitted.
+
+\section{No spin-structure overhead on grid strips}
+
+At a transverse separator, a partial even subgraph exposes the even frontier
+mask
+\begin{equation}\label{eq:Vw}
+ V_w=\left\{m\in\Ftwo^{w^2}:\sum_{v\in\Lambda_w}m_v=0\right\},
+ \qquad d_w=|V_w|=2^{w^2-1}.
+\end{equation}
+
+\begin{lemma}[grid relative exactness; \proved]\label{lem:grid-exact}
+Move the transverse separator through the co-cores in the order of
+\cref{lem:canonical}.  At every pair cut and every midpoint cut inside a
+handle it meets exactly \(w^2\) labelled grid strands.  The cut satisfies
+H1--H3 with trace space \(V_w\).
+\end{lemma}
+
+\begin{proof}
+Moving through one checkerboard co-core replaces two intersection points on
+one square by the other two and neither creates nor removes a longitudinal
+strand.  Hence the labelled separator size stays \(w^2\).
+
+Fix a completion \(c(m)\) in a tree in the interface collar.  A character
+behind the separator is exact on the right, and a character ahead is exact
+on the left.  If two representatives differ by \(\delta s\), discrete Stokes
+gives
+\begin{equation}\label{eq:stokes}
+ \langle\delta s,A'\rangle=\langle s,\partial A'\rangle
+                         =\langle s,m\rangle,
+\end{equation}
+so the change is a mask-diagonal sign.  The polarization between the two
+completed partial chains is supported in the collar and is a fixed function
+of \(m\), proving H1--H2.
+
+Halfway through one handle, \(a_i\) is the co-core meridian and \(b_i\) is
+its longitude.  On the exposed half the longitude is the coboundary of the
+side of the co-core, so its value is \(\langle s_i,m\rangle\).  It is therefore
+frontier known, which is H3.  This is the point that prevents a spurious
+factor two at the binary cut.
+\end{proof}
+
+\begin{theorem}[all-sector grid compression; \proved]\label{thm:grid-upper}
+For every \(n,w\geq2\), the complete pre-Arf tensor of the checkerboard
+embedding of \(G_{n,w}\), in the canonical binary ordering, has an exact
+tensor train over \(\mathbb Z[t_e:e\in E]\) with every bond at most
+\[
+ d_w=2^{w^2-1}.
+\]
+The bound holds both between handle pairs and inside every handle.  It is
+valid for arbitrary nonuniform edge weights and before the Arf sum.
+\end{theorem}
+
+\begin{proof}
+Apply \cref{thm:separator} and \cref{lem:grid-exact} at every successive
+separator.
+\end{proof}
+
+The theorem also has explicit local cores.  Let
+\(Gamma_0,\ldots,\Gamma_{2g}\) be the successive pair and half-handle
+separators, with the mask labels identified with \(V_w\), and let \(E_j\) be
+the edge block between \(Gamma_{j-1}\) and \(Gamma_j\).  For the local
+spin bit \(epsilon_j\), define
+\begin{equation}\label{eq:cores}
+ A_j(\epsilon_j)[m,m']
+ =\sum_{\substack{S\subseteq E_j\\
+       \partial_-S=m,\ \partial_+S=m'}}
+ (-1)^{Q_j(S,m,m')+\epsilon_jH_j(S,m,m')}
+ \prod_{e\in S}t_e .
+\end{equation}
+The local functions \(Q_j,H_j\) are precisely the H1--H3 phases in
+\cref{lem:grid-exact}.  Zero-mask boundary vectors and multiplication of the
+cores reproduce every term of \cref{eq:F} exactly once.  Thus
+\begin{equation}\label{eq:allq-mps}
+ \cF_{n,w}(\lambda)=
+ \ell^TA_1(\lambda_{a_1})A_2(\lambda_{b_1})\cdots
+ A_{2g}(\lambda_{b_g})r.
+\end{equation}
+The representation supports evaluation of one sector, Arf-weighted
+contraction, partial sector sums, Walsh projection, and fixing selected
+twists.  It does not permit all \(4^g\) values to be explicitly output in
+polynomial time.
+
+There are \(O(nw^2)\) binary cores.  A direct dense representation of the
+cores takes \(O(nw^2d_w^2)\) ring entries and a fixed boundary contraction
+takes the same order of dense ring operations.  For fixed \(w\), both are
+linear in \(n\).  These are separator-complexity bounds, not polynomial bounds
+when \(w\) grows with \(n\).
+
+\section{Generic minimality of the carrier}
+
+For a fixed \(w\), define
+\begin{equation}\label{eq:Rinf}
+ R_\infty(w)=\sup_n\max_{\text{canonical pair and internal cuts}}
+       \rank\Flat(\cF_{n,w}).
+\end{equation}
+By \cref{thm:grid-upper}, \(R_\infty(w)\leq d_w\).  We now prove equality
+for generic independent weights.  The proof uses two different five-layer
+encoders separated by a two-slab diagonal buffer; attempting to reflect one
+encoder is false and is recorded in \cref{sec:failure}.
+
+\subsection{One-sided encoders}
+
+Let \(Gamma_w=G_{5,w}\) with terminal slice
+\(S_w=\{(4,y,z):0\leq y,z<w\}\).  Let \(e_x(x,y,z)\), \(e_y(x,y,z)\), and
+\(e_z(x,y,z)\) denote the positive coordinate edges.  Define the gauge tree
+\begin{equation}\label{eq:T0}
+ T_w^0=\{\text{all }e_x\}
+ \cup\{e_y(0,y,z):0\leq y<w-1\}
+ \cup\{e_z(0,0,z):0\leq z<w-1\}.
+\end{equation}
+Gauging homology cochains to vanish on \(T_w^0\), every chord is labelled by
+the homology class of its fundamental cycle.
+
+The explicit edge recurrences for the normal and opposite-phase encoder
+trees are given in \cref{app:encoders}.  Their relevant property is the
+following lemma.
+
+\begin{lemma}[two encoder lemma; \proved]\label{lem:encoders}
+For every \(w\geq4\), there are spanning trees \(T_w^+\) in the normal
+five-layer checkerboard phase and \(T_w^-\) in the opposite five-layer phase
+such that the terminal maps
+\begin{equation}\label{eq:terminal-map}
+ V(S_w)\longrightarrow H_1(\Sigma_{5,w};\Ftwo),\qquad
+ m\longmapsto[\text{the unique tree }m\text{-join, completed at }S_w]
+\end{equation}
+are injective.  The construction is recursive in \(w\) and retains exactly
+\(w^2-1\) independent homology chords.
+\end{lemma}
+
+\begin{proof}
+We give the invariant; the explicit parity recurrences are in
+\cref{app:encoders}.  For \(T_w^+\), let \(P_w\) be the \(w^2-1\) retained
+chords relative to \cref{eq:T0}.  Deleting \(P_w\) from \(T_w^+\) leaves a
+forest with exactly one terminal vertex in every component.  Therefore the
+terminal-cut columns of \(P_w\) form a basis of \(V(S_w)\).
+
+Let \(D_w\) be the face-dual graph.  The tree--cotree criterion says that the
+fundamental-cycle homology labels of \(P_w\) are independent exactly when
+\[
+ D_w-(T_w^0\cup P_w)^*
+\]
+is connected.  The width-four base and both parity steps have connected dual
+remainders; after contracting old and new face components, their quotients
+are the trees listed in \cref{tab:encoder-checks}.  A small exceptional chord
+set \(X_w\) is homologically disjoint from \(P_w\), as follows from the rank
+identity
+\[
+ \rank h(A)=|A|-c\bigl(D_w-(T_w^0\cup A)^*\bigr)+1.
+\]
+Thus the terminal-cut basis maps to \(w^2-1\) independent homology labels,
+which proves injectivity.
+
+The opposite tree \(T_w^-\) obeys the same terminal-forest and dual-cotree
+invariants.  For even \(w\) it has one exceptional chord; the unique dual-cut
+relation and the unique terminal-cut column have disjoint support, so the
+matrix determinant lemma preserves determinant one over \(\Ftwo\).  The
+explicit shell count in \cref{tab:encoder-checks} exhausts all vertices and
+dual components.  This proves \cref{eq:terminal-map} for both phases.
+\end{proof}
+
+\subsection{Buffered factor ranks}
+
+Work in \(G_{11,w}\) and cut after the canonical handles in the first four
+slabs.  At this cut, \cref{eq:XY} has the form
+\begin{equation}\label{eq:XDY}
+ \cF(\lambda_L,\lambda_R)=X(\lambda_L,m)D(m)Y(m,\lambda_R),
+ \qquad m\in V_w,
+\end{equation}
+where \(D\) is a nonzero diagonal sign matrix.
+
+\begin{lemma}[reachability and observability; \proved]\label{lem:XYfull}
+Over the fraction field of the independent edge variables, \(X\) has column
+rank \(d_w\) and \(Y\) has row rank \(d_w\).
+\end{lemma}
+
+\begin{proof}
+On layers \(0,\ldots,4\), retain \(T_w^+\) and set all other left edge
+variables to zero.  A tree has a unique partial even subgraph for each
+terminal mask.  By \cref{lem:encoders}, the completed homology labels are
+distinct.  Walsh transforming the left spin coordinates produces a square
+character table of these labels multiplied by nonzero monomial and sign
+diagonals.  Hence \(X\) has full column rank.
+
+The last five layers \(6,\ldots,10\), after longitudinal reflection, have the
+opposite checkerboard phase.  Retain \(T_w^-\).  Its terminal injectivity and
+a Walsh transform give a full-rank suffix factor at slice \(6\).
+
+Between slices \(4\) and \(6\), set all transverse edges to zero and retain
+the two longitudinal edges at every \((y,z)\).  For each even mask \(m\), the
+unique buffer configuration uses both longitudinal edges precisely at the
+marked vertices.  The buffer transfer is therefore diagonal on \(V_w\), with
+nonzero monomial diagonal.  It preserves the suffix rank, so \(Y\) has full
+row rank.
+\end{proof}
+
+\begin{theorem}[generic minimality; \proved]\label{thm:grid-tight}
+For every \(w\geq3\) and generic independent nonuniform edge weights,
+\[
+ R_\infty(w)=2^{w^2-1}.
+\]
+For every \(w\geq4\), the equality is already attained at a canonical pair
+cut of \(G_{11,w}\).  Width three has a separate explicit \(256\times256\)
+paired-cycle certificate.
+\end{theorem}
+
+\begin{proof}
+For \(w\geq4\), choose a left inverse \(L\) of \(X\) and a right inverse
+\(R\) of \(Y\) over the fraction field.  By \cref{eq:XDY},
+\(L\cF R=D\), so the selected flattening has rank at least \(d_w\).  The
+upper bound in \cref{thm:grid-upper} gives equality.
+
+Every matrix entry is polynomial in the independent edge variables.  Thus a
+full-rank minor over the fraction field is a nonzero real polynomial, whose
+nonvanishing locus is Zariski open.  A nonzero real polynomial cannot vanish
+on the entire positive orthant, so the same rank holds on a nonempty open set
+of strictly positive, nonuniform ferromagnetic weights.  At \(w=3\), the
+certificate uses \(G_{10,3}\) at the fifth handle cut.  Its sparse
+specialization has cycle dimension eight, generated by chords with edge
+indices
+\[
+ 44,52,103,110,112,118,120,162.
+\]
+The left and right homology projections of this cycle space both have rank
+eight over \(\Ftwo\).  Invertible Walsh transforms therefore identify the
+selected flattening with
+\(H_L\operatorname{diag}((-1)^{q_0})H_R^T\), up to row and column
+permutations.  This has rank \(2^8=256\).  As independent replays, the full
+minor determinants are \(409643880\pmod {1000000007}\) and
+\(276933753\pmod {1000000009}\).  Either nonzero specialization proves that
+the corresponding integer-polynomial minor is not identically zero.
+\end{proof}
+
+The theorem does not imply that a chosen minor remains nonzero on the
+homogeneous anisotropic locus \((t_x,t_y,t_z)\), on the isotropic line, at
+every physical temperature, or at a critical point.  These are separate
+algebraic restrictions and remain open here.
+
+\section{A non-grid sharpness family}
+
+The H3 condition in \cref{thm:separator} is genuinely stronger than pair-cut
+factorization.  Take the toroidal cellular rotation of \(K_{3,3}\), with
+bipartition \(0,1,2\mid3,4,5\), in which every vertex uses the displayed
+opposite part in cyclic order.  Its three faces are hexagons and its genus is
+one.  Choose disjoint port edges \((0,3)\) and \((1,5)\), and concatenate \(r\)
+copies by oriented edge-two-sums.  Denote the resulting ribbon graph by
+\(C_r\).
+
+\begin{theorem}[sharp internal obstruction; \proved]\label{thm:k33}
+The surface of \(C_r\) has genus \(r\).  For arbitrary nonuniform weights,
+the complete pre-Arf tensor has four-state handle-site bond at most two and
+binary-coordinate bond at most four.  For generic independent weights every
+nontrivial pair cut has rank exactly two, while every internal cut of a
+non-end handle has rank exactly four.  The latter rank remains four under all
+24 local affine symplectic relabellings of that handle.
+\end{theorem}
+
+\begin{proof}
+The edge-two-sum realizes a connected sum of the explicit tori.  Between
+gadgets the separator has two marked points, with attainable masks \(00\) and
+\(11\).  Handles behind and ahead have disjoint support, so H1--H2 hold and
+\cref{thm:separator} gives pair bond two.  Splitting each handle gives the
+unconditional binary bond four.
+
+For a selected pair cut, set all edges outside its two adjacent gadgets to
+zero.  A frozen \(2\times2\) minor of the resulting two-gadget tensor is a
+nonzero polynomial.  For an internal cut, retain the three gadgets centered
+at that handle and set all exterior and standalone outer-port weights to
+zero.  A \(4\times4\) minor is nonzero.  These minors embed unchanged at every
+chain length, giving generic lower bounds two and four.  Direct permutation
+of the four local quadratic refinements checks the same nonzero rank-four
+minor for all 24 affine symplectic relabellings.  Hence H3 cannot be restored
+by a local canonical-coordinate change.
+\end{proof}
+
+This family separates two phenomena: separator compression can be exact at
+handle-pair cuts while a binary ordering needs an extra local trace bit.  It
+also prevents the grid midpoint argument from being mistaken for a formal
+consequence of pair-cut compression alone.
+
+\section{An all-sector algorithmic application}
+
+Write the four-state version of \cref{eq:allq-mps} as
+\[
+ \cF(s_1,\ldots,s_g)=\ell^TA_1(s_1)\cdots A_g(s_g)r,
+ \qquad s_i\in\Ftwo^2,
+\]
+and let \(\omega_i:\Ftwo^2\to R\) be arbitrary product-form sector weights.
+For each handle \(i\) and Walsh character \(c\in\Ftwo^2\), define
+\begin{equation}\label{eq:marginal}
+ M_i(c)=\sum_{s\in(\Ftwo^2)^g}
+   (-1)^{c\cdot s_i}\cF(s_1,\ldots,s_g)
+   \prod_{j\ne i}\omega_j(s_j).
+\end{equation}
+
+\begin{theorem}[all single-handle Walsh marginals; \proved]
+\label{thm:marginals}
+Given an all-sector tensor train of bond at most \(d\), all \(4g\) quantities
+in \cref{eq:marginal} can be computed with \(O(4gd^2)\) dense ring operations
+and \(O(gd)\) environment storage, in addition to the cores.
+\end{theorem}
+
+\begin{proof}
+Put
+\(B_i=\sum_s\omega_i(s)A_i(s)\), and compute environments
+\[
+ L_0=\ell^T,\quad L_{i+1}=L_iB_i,
+ \qquad
+ R_g=r,\quad R_i=B_iR_{i+1}.
+\]
+Then
+\begin{equation}\label{eq:marginal-contract}
+ M_i(c)=\sum_{s\in\Ftwo^2}(-1)^{c\cdot s}
+        L_iA_i(s)R_{i+1}.
+\end{equation}
+Expanding the products selects one local state at every handle and gives
+exactly \cref{eq:marginal}.  The two sweeps and all four local contractions
+per handle have the stated cost.
+\end{proof}
+
+An explicit sector-list calculation must inspect \(4^g\) values before
+applying arbitrary product weights.  The comparison is for the \(4g\)
+all-family observables \cref{eq:marginal}, not for computing only the physical
+partition function \cref{eq:arf}; ordinary transfer already has the same
+separator dependence for that single contraction.
+
+\section{Embedding and coordinate robustness}
+
+\begin{theorem}[robust class; \proved]\label{thm:robust}
+The separator bound is invariant under filtration-preserving surface
+homeomorphisms; coboundary changes of character representatives; relative-
+boundary changes of completion chains; explicitly transported affine changes
+of quadratic origin; and invertible coordinate changes supported entirely on
+one side of each pair cut.  At an internal cut, the coordinate change must
+also preserve H3.  The bound is not invariant under an arbitrary rotation
+system or an arbitrary symplectic mixing across a declared cut.
+\end{theorem}
+
+\begin{proof}
+A filtration-preserving homeomorphism relabels partial chains and masks.
+Coboundary changes are mask-diagonal by \cref{eq:stokes}.  Changing a
+completion alters the phase by left-only, right-only, and mask-only terms.
+Affine corrections are H1 characters.  A coordinate change confined to one
+side multiplies the flattening by an invertible matrix on that side.  These
+operations preserve \cref{eq:XY}.  A transformation mixing an internal cut
+need not preserve the trace property, as \cref{thm:k33} shows.
+\end{proof}
+
+\proved: Stabilizing the surface in a disk disjoint from the graph makes the pre-Arf
+tensor independent of the two new bits; the new four-state site is the
+rank-one vector \((1,1,1,1)\).  Such a stabilization is noncellular.  Indeed,
+for a connected cellular embedding the cellular chain complex makes
+\(H_1(G;\Ftwo)\to H_1(\Sigma;\Ftwo)\) surjective, so no surface handle is
+homologically unused by the graph.
+
+\proved: Arbitrary cellular rotations are different.  The cube graph
+\(P_2\square P_2\square P_2\) has orientable rotation systems of genera zero,
+one, and two.  Exhausting the \(2^8\) choices of local orientation relative to
+fixed cyclic orders gives respectively \(2,54,200\) rotations.  The genus-zero
+and genus-two pre-Arf families have sizes one and sixteen and cannot be
+related by an invertible map in one fixed sector space.  Their normalized Arf
+sums nevertheless give the same embedding-independent even-subgraph
+polynomial, as required by \cref{eq:arf}.
+
+\section{Exact validation and failure ledger}
+
+The theorems above are algebraic; finite computation is not used as a
+substitute for the arbitrary-width proofs.  It is used as an independent
+coordinate and implementation firewall.
+
+\subsection{Validation}
+
+\certified: Over both primes \(1{,}000{,}000{,}007\) and
+\(1{,}000{,}000{,}009\), exact scripts verify the following:
+
+\begin{itemize}
+\item \(S^T\Omega S=J\) over \(\Ftwo\), quadratic polarization, affine
+  corrections, and basis-independent Arf signs for \(2\leq n,w\leq6\), with
+  additional embedding stress tests at \(w=7,8\);
+\item agreement of direct spin, even-subgraph, domain-wall, Kac--Ward, and
+  compressed-transfer evaluations on the small graphs in the proof archive;
+\item pair and internal ranks independently, including the canonical
+  rank profiles in \cref{tab:ranks};
+\item all \(4g\) Walsh marginals from \cref{eq:marginal-contract} against
+  literal enumeration of \(4^g\) sectors for \(G_{6,3}\) and \(G_{7,3}\);
+\item topology and nonzero minors for the \(K_{3,3}\) sharpness family, and
+  the exhaustive 256-rotation census of the cube graph.
+\end{itemize}
+
+\begin{table}[ht]
+\centering
+\caption{Exact canonical binary rank profiles, identical over the two
+primes.  The nonuniform weights are independently specialized; the other
+columns are additional checks, not arbitrary-width homogeneous theorems.}
+\label{tab:ranks}
+\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+graph & weights & binary rank profile\\
+\midrule
+\(G_{10,3}\) & nonuniform &
+\(2,4,8,16,32,64,128,256,256,256,128,64,32,16,8,4,2\)\\
+\(G_{10,3}\) & anisotropic \((2,3,5)\) & same\\
+\(G_{10,3}\) & isotropic \(t=2\) & same\\
+\(G_{4,4}\) & nonuniform & \(2,4,8,16,32,16,8,4,2\)\\
+\(G_{4,4}\) & anisotropic \((2,3,5)\) & same\\
+\(G_{4,4}\) & isotropic \(t=2\) & same\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+For the marginal test, \(G_{6,3}\) has genus five, \(1024\) sectors, and
+pair ranks \(4,16,16,4\); \(G_{7,3}\) has genus six, \(4096\) sectors, and
+pair ranks \(4,16,64,16,4\).  The exact tensor-train outputs equal literal
+sector summation over both primes.
+
+\subsection{Contained failures}\label{sec:failure}
+
+Two failures materially constrain the claims.
+
+First, before canonical normalization, a raw coordinate tensor at
+\(G_{10,3}\) has apparent central internal rank \(512\).  Transporting the
+spin labels, Walsh phases, quadratic correction, and minor indices through
+the full symplectic change gives the canonical ranks \(256,256,256\) across
+the adjacent pair/internal/pair cuts.  The raw excess is a coordinate
+artifact and is not a topological obstruction.
+
+Second, reflecting the normal five-layer encoder does not produce a valid
+right encoder in the same global canonical labelling.  At widths \(4,5,6\),
+its exact right ranks are \(7,12,15\), against targets \(15,24,35\), while the
+left ranks are full.  The false step is the assumption that two independently
+chosen side completions can be absorbed by one harmless mask diagonal.  A
+single global cochain gauge need not trivialize both completions.  The proof
+of \cref{thm:grid-tight} therefore uses the independently constructed
+opposite-phase encoder and the explicit two-slab buffer.
+
+\section{Discussion}
+
+The central structural statement is exact:
+\[
+ \boxed{\text{complete spin-structure bond}
+        =\text{ordinary even-frontier bond generically}.}
+\]
+The upper equality means that repeated handle attachment, Arf/Walsh phases,
+and cochain gauge changes introduce no additional exact memory once the
+frontier mask is retained.  The generic lower equality means that no
+universal exact compression of this complete tensor below the transverse
+carrier can exist for arbitrary independent weights.
+
+This result refines, rather than bypasses, the usual width barrier.  At fixed
+\(w\) it is a rigorous strip compression, and for \(w=L\) its exact bond is
+area exponential.  It does not conflict with complexity results for richer
+families of nonplanar Ising instances, which allow selectable couplings and
+different input classes \cite{Istrail2000}.  Nor does it settle the
+homogeneous simple-cubic sequence: an independent-weight minor can vanish
+identically after a homogeneous specialization.
+
+Three concrete questions remain.  First, does generic minimality persist on
+the homogeneous anisotropic or isotropic loci?  Second, can the abstract
+separator theorem be applied to other surface decompositions with trace
+dimension smaller than the ordinary spin frontier?  Third, can a different
+representation---not the complete pre-Arf family studied here---replace the
+area carrier by a structure stable under the cubic thermodynamic limit?
+None is answered by the present work.
+
+\appendix
+
+\section{Explicit recursive encoder data}\label{app:encoders}
+
+This appendix freezes the constructive content of \cref{lem:encoders}.  An
+edge \(e_\alpha(x,y,z)\) starts at \((x,y,z)\) and points in coordinate
+\(\alpha\in\{x,y,z\}\).  Empty ranges contribute no edges.  The width-four
+normal tree is the 79-edge base stored verbatim in the ancillary certificate;
+equivalently it is the edge-index set
+\begin{verbatim}
+1,2,5,7,8,9,10,13,15,16,19,21,23,24,25,26,27,29,30,32,
+34,36,37,39,42,44,45,48,50,51,53,56,57,59,61,64,67,69,70,72,
+74,76,78,79,82,83,85,88,90,92,93,96,99,100,101,104,107,110,
+112,114,116,118,119,122,125,130,139,147,152,154,158,159,162,
+163,167,168,171,172,177
+\end{verbatim}
+in the repository convention that sorts grid edges lexicographically by
+their ordered endpoints.  The verifier checks that this list has 79 entries;
+the display is data, not a claim inferred from the printed line wrapping.
+
+For the normal extension from old width \(o\) to \(o+1\), first include all
+new \(x\)-rails
+\[
+ e_x(r,o,z),\quad 0\leq z\leq o,
+ \qquad
+ e_x(r,y,o),\quad0\leq y<o,
+ \qquad r=0,1,2.
+\]
+If \(o\) is even, add
+\begin{align*}
+&e_y(0,o-1,z)\ (0\leq z\leq o),\quad e_y(0,0,o),\quad
+ e_y(0,y,o)\ (y\text{ odd}),\\
+&e_z(0,y,o-1)\ (2\leq y<o,\ y\text{ even}),\quad e_y(1,o-2,o),\\
+&e_x(3,o,o),\quad e_x(3,y,o)\ (2\leq y<o,\ y\text{ even}),\\
+&e_y(4,o-1,z),e_y(4,z,o),e_z(4,o,z)\ (0\leq z<o,\ z\text{ even}),\\
+&e_z(4,0,o-1).
+\end{align*}
+If \(o\) is odd, add
+\begin{align*}
+&e_y(0,o-1,z)\ (3\leq z\leq o,\ z\text{ odd}),\\
+&e_y(0,y,o)\ (y=0,o-2\text{ or }2\leq y<o\text{ even}),\\
+&e_z(0,o,0),\quad e_z(0,o,z)\ (z\text{ odd}),\quad e_y(1,o-1,1),\\
+&e_z(1,y,o-1)\ (y\text{ odd}),\quad
+ e_x(3,o,z)\ (z\text{ even or }z=o),\quad e_x(3,0,o),\\
+&e_y(4,o-1,z),e_y(4,z,o)\ (z\text{ odd}),\quad
+ e_z(4,y,o-1)\ (y\text{ odd}).
+\end{align*}
+Each extension contains \(10o+5\) edges, one per new vertex.
+
+The opposite width-four base is obtained from the normal base by the 13-edge
+exchange in \cref{tab:exchange}.  For all later extensions, first include the
+new \(x\)-rails at \(x=1,2\).  If \(o\) is odd, add
+\begin{align*}
+&e_x(0,y,o)\ (y\ne1),\quad e_x(0,o,z),\quad
+ e_x(3,y,o)\ (y=0\text{ or }y\text{ odd}),\quad e_x(3,o,0),e_x(3,o,o),\\
+&e_y(0,y,o)\ (y\text{ even},y<o-1),\quad e_y(0,o-1,z)\ (2\leq z\leq o),\\
+&e_y(1,1,o),e_y(1,o-2,o),\quad e_y(4,y,o)\ (y\text{ odd}),
+ e_y(4,o-1,z)\ (z\text{ odd}),\\
+&e_z(0,y,o-1)\ (y\text{ odd}),\quad e_z(0,o,0),e_z(1,o,1),
+ e_z(4,o,z)\ (z\text{ odd}).
+\end{align*}
+If \(o\geq6\) is even, add
+\begin{align*}
+&e_x(0,y,o),e_x(0,o,z),\quad e_x(3,o,z)\ (z\text{ odd or }z=o),\\
+&e_y(0,y,o)\ (y<o-1),\quad
+ e_y(0,o-1,z)\ (z=0,1,2\text{ or positive even}),\\
+&e_y(4,y,o)\ (y\text{ even}),\quad e_y(4,o-1,z)\ (z\text{ even}),\\
+&e_z(0,o,z)\ (z=2,4,\ldots,o-2),\quad e_z(1,0,o-1),
+ e_z(4,y,o-1)\ (y\text{ even}).
+\end{align*}
+The \(o=4\) shell uses \(e_x(3,4,z)\) for \(z=1,2,4\), the \(x=4\)
+shell positions \(z=0,3\), and \(e_z(0,4,0)\), exactly as frozen by the
+ancillary verifier.
+
+\begin{table}[p]
+\centering
+\caption{Thirteen-edge exchange from the normal to the opposite width-four
+base.  Each tuple denotes an unoriented edge.}
+\label{tab:exchange}
+\scriptsize
+\begin{tabular}{@{}p{.47\textwidth}p{.47\textwidth}@{}}
+\toprule
+remove & add\\
+\midrule
+\((0,1,0)(1,1,0)\), \((0,1,3)(1,1,3)\),
+\((0,2,1)(0,2,2)\), \((1,0,1)(1,1,1)\),
+\((1,1,0)(1,1,1)\), \((1,1,2)(1,1,3)\),
+\((1,2,2)(1,3,2)\), \((2,0,1)(2,0,2)\),
+\((2,1,0)(2,2,0)\), \((2,1,3)(2,2,3)\),
+\((3,2,1)(4,2,1)\), \((4,1,0)(4,1,1)\),
+\((4,1,2)(4,1,3)\)
+&
+\((0,0,1)(0,1,1)\), \((0,1,0)(0,1,1)\),
+\((0,1,2)(0,1,3)\), \((1,0,1)(1,0,2)\),
+\((1,1,0)(1,2,0)\), \((1,1,3)(1,2,3)\),
+\((1,2,1)(1,2,2)\), \((2,1,0)(2,1,1)\),
+\((2,1,2)(2,1,3)\), \((2,2,2)(2,3,2)\),
+\((3,1,0)(4,1,0)\), \((3,1,3)(4,1,3)\),
+\((4,2,1)(4,2,2)\)\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[p]
+\centering
+\caption{Finite component types used in the parity induction of
+\cref{lem:encoders}.  ``Old 0'' is an unchanged old terminal component.}
+\label{tab:encoder-checks}
+\scriptsize
+\begin{tabular}{@{}p{.14\textwidth}p{.40\textwidth}p{.34\textwidth}@{}}
+\toprule
+case & terminal components after deleting retained chords
+& breadth-first layer sizes of the contracted dual remainder\\
+\midrule
+normal \(w=4\) & 16 components, one per terminal & direct connected check\\
+normal odd \(w\geq7\) & new: \(3(w-1)/2+1\) of size 1,
+\((w-3)/2\) of size 9, one of size 13; old: \(w-3\) of size 4, one of
+size 8, otherwise old 0 & \(1,3w-4,w-1,w-1,1\)\\
+normal even \(w\geq6\) & new: \(3(w-2)/2\) of size 1,
+\((w-2)/2\) of size 5, two of size 9, one of size 17; old:
+\((w-4)/2\) of size 4, \((w-6)/2\) of size 8, otherwise old 0
+& \(1,3w-6,w-2,w-2\)\\
+opposite \(w=4\) & new sizes \(1,4,4,5,5,6,6\), one old size 4,
+eight old 0 & direct connected check\\
+opposite odd \(w\geq5\) & new: \(3(w-1)/2\) of size 1,
+\((w-1)/2\) of size 5, one of size \(4w+1\); old: \((w-1)/2\) of size 4,
+otherwise old 0 & \(w=5:1,11; w\geq7:1,2w-4,w-2,w-1\)\\
+opposite even \(w\geq6\) & new: \(3(w-2)/2\) of size 1, one of size 4,
+one of size 6, \(w/2\) of size 9; old: \(w-3\) of size 4, otherwise old 0
+& \(w=6:1,8,4,4,3; w\geq8:1,2w-5,w-2,w-2,3\)\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\clearpage
+\section{Reproducibility and claim inventory}
+
+The proof archive separates discovery scripts from exact proof scripts.  The
+authoritative immutable records are:
+\begin{center}
+\small
+\begin{tabular}{@{}ll@{}}
+\toprule
+claim & artifact\\
+\midrule
+grid upper bound & \texttt{cycle-7-b7-lane-b-arbitrary-width-closure-v1.json}\\
+generic tightness & \texttt{cycle-8-b11-g1-generic-tightness-v2.json}\\
+Walsh marginals & \texttt{cycle-9-b8-lane-b-all-q-marginals-v1.json}\\
+abstract theorem and \(K_{3,3}\) chain &
+\texttt{cycle-10-b9-abstract-separator-k33-sharpness-v1.json}\\
+embedding robustness &
+\texttt{cycle-11-b10-lane-b-embedding-robustness-v2.json}\\
+\bottomrule
+\end{tabular}
+\end{center}
+Each record freezes source hashes, conventions, prime specializations, and a
+one-command immutable check.  The corrected generic-tightness record removes
+volatile timing fields from its predecessor; no mathematical field changed.
+
+The principal proof documents are:
+\begin{itemize}
+\item \path{proof/lane_b_arbitrary_width_closure_proof.md};
+\item \path{proof/g1_arbitrary_width_generic_tightness.md};
+\item \path{proof/abstract_spin_structure_separator_theorem.md};
+\item \path{proof/lane_b_all_q_marginal_algorithm.md}.
+\end{itemize}
+The replay suite
+pins Python \(3.11\) and uses exact integer, rational, and finite-field
+arithmetic.  Important modular certificates are replayed over the two primes
+listed in \cref{tab:ranks}; denominators and normalization factors are checked
+invertible before reduction.
+
+\paragraph{AI assistance.}
+The author used AI assistance in developing candidate formulations, proof
+presentation, and verification code.  All promoted mathematical claims are
+supported by the explicit proofs and replay records identified above.
+
+\bibliographystyle{alpha}
+\bibliography{references}
+
+\end{document}

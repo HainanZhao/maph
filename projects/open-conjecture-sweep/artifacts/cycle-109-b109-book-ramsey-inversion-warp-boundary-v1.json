@@ -1,0 +1,99 @@
+{
+  "artifact_id": "cycle-109-b109-book-ramsey-inversion-warp-boundary-v1",
+  "audit": {
+    "hits": [],
+    "profiles": [
+      [
+        [
+          1,
+          6
+        ],
+        147
+      ],
+      [
+        [
+          2,
+          5
+        ],
+        735
+      ],
+      [
+        [
+          3,
+          5
+        ],
+        294
+      ],
+      [
+        [
+          4,
+          5
+        ],
+        147
+      ]
+    ],
+    "q": 7,
+    "states": 1323,
+    "status": "PASS"
+  },
+  "budget_ordinal": "B109",
+  "claim_boundary": "Only this q=7 nonlinear two-layer family; not q=23, other kernels, or the all-n target.",
+  "cycle": 109,
+  "cycle_decision": {
+    "decision": "Seal q=7 no-hit; do not execute conditional q=23.",
+    "falsifier": "Any state passing both exact routes.",
+    "stop": "Do not enlarge this family or run q=23 without q=7 hit."
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "checker": {
+      "path": "proof/check_cycle109_inversion_warp.py",
+      "sha256": "0d7df02d11faa6116701820e7971f5e3d0c49f6bd6464a8d5a21bff6c96364d6"
+    },
+    "prereg": {
+      "path": "docs/cycle-109-b109-book-ramsey-inversion-warp-preregistration-v1.md",
+      "sha256": "f7269dacc910a34aa10f88a87d02f17d12d47d3ad59b27ccfeee7d2e0e26c4c9"
+    },
+    "prior": {
+      "path": "artifacts/cycle-107-b107-book-ramsey-paley-cross-boundary-correction-v2.json",
+      "sha256": "c47670fa3e2518836dcd782ea414f533b2cba2378583aaebde0d0fc3fcc36c18"
+    },
+    "proof": {
+      "path": "proof/cycle109_inversion_warp_proof.md",
+      "sha256": "a5ad9890010f3b51c1a56da2da7000244d2bf814e41333552ca127e6b7a05120"
+    },
+    "replay": {
+      "path": "proof/replay_cycle109_inversion_warp.py",
+      "sha256": "01fb8cf01043e3423ca2752175066d77edbe4b80fd7665b4f9e72e019c14175f"
+    },
+    "result": {
+      "path": "discovery/out/cycle109-inversion-warp-check.json",
+      "sha256": "30e58d0079cd5a901bb67eedd6325c72329efefdbc1b9df669f600bda2d53a94"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "selection": {
+      "path": "discovery/cycle109_oracle_inversion_warp_selection.md",
+      "sha256": "c826581ee0d482416ed63fd48aa6014aa6fd312c12f0354cf2f9451fdef23819"
+    }
+  },
+  "outcome": "No q=7 inversion-warped quadratic-character state in the declared 1323-state family satisfies the asymmetric book caps.",
+  "record_type": "FINITE_METHOD_FAMILY_BOUNDARY",
+  "replay": {
+    "check": "python3 proof/build_cycle109_inversion_warp_boundary.py --check",
+    "checker": "python3 proof/check_cycle109_inversion_warp.py",
+    "independent": "python3 proof/replay_cycle109_inversion_warp.py"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle109_inversion_warp_boundary.py",
+    "sha256": "ef5a09c71433a347df5e6c8fc67cab82438d43a9ffb9102e9e43b56ca1634c3e"
+  },
+  "status": "SEALED"
+}

@@ -1,0 +1,135 @@
+{
+  "artifact_id": "cycle-113-b113-book-ramsey-paired-fiber-boundary-v1",
+  "audit": {
+    "balanced_states_directly_checked": 32768,
+    "degree_rejected_logical_states": 4161536,
+    "formula_disagreements": [],
+    "hits": [],
+    "normalized_q7_logical_states": 4194304,
+    "normalized_sign_states": 32768,
+    "profiles": [
+      [
+        [
+          0,
+          5
+        ],
+        1
+      ],
+      [
+        [
+          3,
+          4
+        ],
+        1620
+      ],
+      [
+        [
+          3,
+          5
+        ],
+        1057
+      ],
+      [
+        [
+          4,
+          3
+        ],
+        1620
+      ],
+      [
+        [
+          4,
+          4
+        ],
+        7560
+      ],
+      [
+        [
+          4,
+          5
+        ],
+        6930
+      ],
+      [
+        [
+          5,
+          0
+        ],
+        1
+      ],
+      [
+        [
+          5,
+          3
+        ],
+        1057
+      ],
+      [
+        [
+          5,
+          4
+        ],
+        6930
+      ],
+      [
+        [
+          5,
+          5
+        ],
+        5992
+      ]
+    ],
+    "status": "PASS"
+  },
+  "budget_ordinal": "B113",
+  "claim_boundary": "Only q=7 paired-fiber matching states with Seidel row sum -1; not a uniform obstruction, general F001 state, or other problem.",
+  "cycle": 113,
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "checker": {
+      "path": "proof/check_cycle113_paired_fiber.py",
+      "sha256": "9a6edaf1286ad83970418ebb54b793662a9d6f986c33c7063ae9dd033ff2d7f2"
+    },
+    "prereg": {
+      "path": "docs/cycle-113-b113-book-ramsey-paired-fiber-preregistration-v1.md",
+      "sha256": "6f9565ddc5dcc7027f4a99b8bce85bbde9d14b8de9924401b9ef186d0ed0241b"
+    },
+    "prior": {
+      "path": "artifacts/cycle-112-b112-book-ramsey-norm-kernel-boundary-v1.json",
+      "sha256": "b3f185f1e7dcccd3a515fd6065eabeaa055a2c51249da2c252be77120f31ae3b"
+    },
+    "proof": {
+      "path": "proof/cycle113_paired_fiber_proof.md",
+      "sha256": "7416eba77e7909a3bad5ae60539c46710617d97e7b04682dddffa7e5c4003a0f"
+    },
+    "replay": {
+      "path": "proof/replay_cycle113_paired_fiber.py",
+      "sha256": "d842815e380fb8128922915b0c9448bf6af976bed35cb4acd0b39021c566b8b9"
+    },
+    "result": {
+      "path": "discovery/out/cycle113-paired-fiber-check.json",
+      "sha256": "ed2d068b18286c210de91c814ce880ef7f832eca5da9bf4a2adc681fb034e9ba"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    }
+  },
+  "outcome": "No q=7 normalized balanced paired-fiber matching state satisfies the asymmetric book caps.",
+  "record_type": "FINITE_METHOD_FAMILY_BOUNDARY",
+  "replay": {
+    "check": "python3 proof/build_cycle113_paired_fiber_boundary.py --check",
+    "checker": "python3 proof/check_cycle113_paired_fiber.py",
+    "independent": "python3 proof/replay_cycle113_paired_fiber.py"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle113_paired_fiber_boundary.py",
+    "sha256": "012b192c77a7ef94e12cd5ac22374812f819a5db593ccfc0da445950c4bb0f58"
+  },
+  "status": "SEALED"
+}

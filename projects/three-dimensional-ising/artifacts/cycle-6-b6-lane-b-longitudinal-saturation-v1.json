@@ -1,0 +1,3080 @@
+{
+  "artifact_id": "cycle-6-b6-lane-b-longitudinal-saturation-v1",
+  "author": "Hainan Zhao",
+  "budget_ordinal": "B6",
+  "claim_boundary": "This is an all-length theorem only for the fixed 3x3 tube family. It does not prove arbitrary-width closure, a sub-area cubic carrier, a thermodynamic limit, a critical temperature, or a solution of the three-dimensional Ising model.",
+  "correction_dependency": "cycle-4-b4-lane-b-canonical-handle-correction-v2",
+  "cycle": 6,
+  "epistemic_status": "MIXED_PROVED_AND_CERTIFIED_NUMERICAL",
+  "exact_replay": {
+    "rank_certificates": {
+      "arithmetic": {
+        "control_prime": 1000000009,
+        "lifting": "Each projected determinant is a determinant of fixed integer linear combinations of flattening rows and columns. Nonzero reduction proves rank at least the target over the corresponding symbolic coefficient field.",
+        "primary_prime": 1000000007
+      },
+      "central_rank_law_n4_to_n12": "min(2^(n-1),256) in all three primary-prime regimes",
+      "claim_boundary": "The exact equality is proved for the saturation suprema by combining the local all-length upper bound with the recorded finite-field lower witnesses. The displayed central sequence is certified only for n=4..12. A symbolic recurrence at every n, a growing-width estimate, and a cubic-box result are not claimed.",
+      "claim_status": "CERTIFIED_NUMERICAL with PROVED cochain upper bound",
+      "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+      "independent_gauge_reduction_control": {
+        "characters": 65536,
+        "legacy_and_gauge_reduced_outputs_identical": true,
+        "regime": "homogeneous_isotropic",
+        "shape": [
+          9,
+          3,
+          3
+        ]
+      },
+      "prime_audits": {
+        "1000000007": {
+          "cases": [
+            {
+              "canonical_intersection_rows": [
+                2,
+                1,
+                8,
+                4,
+                32,
+                16
+              ],
+              "central_cut_type": "internal",
+              "central_side": 8,
+              "certificates": {
+                "F": {
+                  "dimension": 6,
+                  "mode": "F",
+                  "projected_determinant": 737613662,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..7",
+                    "selected_rows": "0..7",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 8,
+                  "side": 8
+                },
+                "G": {
+                  "dimension": 6,
+                  "mode": "G",
+                  "projected_determinant": 657994934,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..7",
+                    "selected_rows": "0..7",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 8,
+                  "side": 8
+                }
+              },
+              "coordinate_order": "(a0,b0,a1,b1,...) in corrected nested symplectic coordinates",
+              "cut_order": "low coordinate bits are rows; high coordinate bits are columns",
+              "edge_order": "src.conventions.cubic_box lexicographic",
+              "exact_central_rank": 8,
+              "field": "GF(1000000007)",
+              "genus": 3,
+              "homology_bits": 6,
+              "homology_labels_sha256": "f4b0eb4e0dd5f271d5761c3beb4b9489a47501d0678827f493516ce021b08d90",
+              "normalization": {
+                "denominator_invertible": true,
+                "inverse_Walsh_denominator": 64,
+                "one_handle_transform_denominator": 2,
+                "two_invertible": true
+              },
+              "proved_upper_bound": 8,
+              "regime": "nonuniform",
+              "shape": [
+                4,
+                3,
+                3
+              ],
+              "symplectic_transport_sha256": "31eaf360b8982108008f3cd064f9851d322e8df1a27f5e60952c36ff5791347e",
+              "transfer_wall_seconds": 0.003435,
+              "weight_specialization": "deterministic independent nonzero edge values"
+            },
+            {
+              "canonical_intersection_rows": [
+                2,
+                1,
+                8,
+                4,
+                32,
+                16
+              ],
+              "central_cut_type": "internal",
+              "central_side": 8,
+              "certificates": {
+                "F": {
+                  "dimension": 6,
+                  "mode": "F",
+                  "projected_determinant": 78568957,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..7",
+                    "selected_rows": "0..7",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 8,
+                  "side": 8
+                },
+                "G": {
+                  "dimension": 6,
+                  "mode": "G",
+                  "projected_determinant": 593489739,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..7",
+                    "selected_rows": "0..7",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 8,
+                  "side": 8
+                }
+              },
+              "coordinate_order": "(a0,b0,a1,b1,...) in corrected nested symplectic coordinates",
+              "cut_order": "low coordinate bits are rows; high coordinate bits are columns",
+              "edge_order": "src.conventions.cubic_box lexicographic",
+              "exact_central_rank": 8,
+              "field": "GF(1000000007)",
+              "genus": 3,
+              "homology_bits": 6,
+              "homology_labels_sha256": "f4b0eb4e0dd5f271d5761c3beb4b9489a47501d0678827f493516ce021b08d90",
+              "normalization": {
+                "denominator_invertible": true,
+                "inverse_Walsh_denominator": 64,
+                "one_handle_transform_denominator": 2,
+                "two_invertible": true
+              },
+              "proved_upper_bound": 8,
+              "regime": "homogeneous_anisotropic",
+              "shape": [
+                4,
+                3,
+                3
+              ],
+              "symplectic_transport_sha256": "31eaf360b8982108008f3cd064f9851d322e8df1a27f5e60952c36ff5791347e",
+              "transfer_wall_seconds": 0.003947,
+              "weight_specialization": "(t_x,t_y,t_z)=(2,3,5)"
+            },
+            {
+              "canonical_intersection_rows": [
+                2,
+                1,
+                8,
+                4,
+                32,
+                16
+              ],
+              "central_cut_type": "internal",
+              "central_side": 8,
+              "certificates": {
+                "F": {
+                  "dimension": 6,
+                  "mode": "F",
+                  "projected_determinant": 743388609,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..7",
+                    "selected_rows": "0..7",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 8,
+                  "side": 8
+                },
+                "G": {
+                  "dimension": 6,
+                  "mode": "G",
+                  "projected_determinant": 607899125,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..7",
+                    "selected_rows": "0..7",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 8,
+                  "side": 8
+                }
+              },
+              "coordinate_order": "(a0,b0,a1,b1,...) in corrected nested symplectic coordinates",
+              "cut_order": "low coordinate bits are rows; high coordinate bits are columns",
+              "edge_order": "src.conventions.cubic_box lexicographic",
+              "exact_central_rank": 8,
+              "field": "GF(1000000007)",
+              "genus": 3,
+              "homology_bits": 6,
+              "homology_labels_sha256": "f4b0eb4e0dd5f271d5761c3beb4b9489a47501d0678827f493516ce021b08d90",
+              "normalization": {
+                "denominator_invertible": true,
+                "inverse_Walsh_denominator": 64,
+                "one_handle_transform_denominator": 2,
+                "two_invertible": true
+              },
+              "proved_upper_bound": 8,
+              "regime": "homogeneous_isotropic",
+              "shape": [
+                4,
+                3,
+                3
+              ],
+              "symplectic_transport_sha256": "31eaf360b8982108008f3cd064f9851d322e8df1a27f5e60952c36ff5791347e",
+              "transfer_wall_seconds": 0.003251,
+              "weight_specialization": "t_x=t_y=t_z=2"
+            },
+            {
+              "canonical_intersection_rows": [
+                2,
+                1,
+                8,
+                4,
+                32,
+                16,
+                128,
+                64
+              ],
+              "central_cut_type": "pair",
+              "central_side": 16,
+              "certificates": {
+                "F": {
+                  "dimension": 8,
+                  "mode": "F",
+                  "projected_determinant": 882036308,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..15",
+                    "selected_rows": "0..15",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 16,
+                  "side": 16
+                },
+                "G": {
+                  "dimension": 8,
+                  "mode": "G",
+                  "projected_determinant": 882036308,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..15",
+                    "selected_rows": "0..15",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 16,
+                  "side": 16
+                }
+              },
+              "coordinate_order": "(a0,b0,a1,b1,...) in corrected nested symplectic coordinates",
+              "cut_order": "low coordinate bits are rows; high coordinate bits are columns",
+              "edge_order": "src.conventions.cubic_box lexicographic",
+              "exact_central_rank": 16,
+              "field": "GF(1000000007)",
+              "genus": 4,
+              "homology_bits": 8,
+              "homology_labels_sha256": "b6dd15f11e1bec699d042c2769cb5006d2e4e563c4f986e3c6f1f51d6a1890df",
+              "normalization": {
+                "denominator_invertible": true,
+                "inverse_Walsh_denominator": 256,
+                "one_handle_transform_denominator": 2,
+                "two_invertible": true
+              },
+              "proved_upper_bound": 16,
+              "regime": "nonuniform",
+              "shape": [
+                5,
+                3,
+                3
+              ],
+              "symplectic_transport_sha256": "5eb471c416081fcda6869bcc205d9bbadc979b797e2fe138495fc180ebcda4b4",
+              "transfer_wall_seconds": 0.00565,
+              "weight_specialization": "deterministic independent nonzero edge values"
+            },
+            {
+              "canonical_intersection_rows": [
+                2,
+                1,
+                8,
+                4,
+                32,
+                16,
+                128,
+                64
+              ],
+              "central_cut_type": "pair",
+              "central_side": 16,
+              "certificates": {
+                "F": {
+                  "dimension": 8,
+                  "mode": "F",
+                  "projected_determinant": 378067297,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..15",
+                    "selected_rows": "0..15",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 16,
+                  "side": 16
+                },
+                "G": {
+                  "dimension": 8,
+                  "mode": "G",
+                  "projected_determinant": 378067297,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..15",
+                    "selected_rows": "0..15",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 16,
+                  "side": 16
+                }
+              },
+              "coordinate_order": "(a0,b0,a1,b1,...) in corrected nested symplectic coordinates",
+              "cut_order": "low coordinate bits are rows; high coordinate bits are columns",
+              "edge_order": "src.conventions.cubic_box lexicographic",
+              "exact_central_rank": 16,
+              "field": "GF(1000000007)",
+              "genus": 4,
+              "homology_bits": 8,
+              "homology_labels_sha256": "b6dd15f11e1bec699d042c2769cb5006d2e4e563c4f986e3c6f1f51d6a1890df",
+              "normalization": {
+                "denominator_invertible": true,
+                "inverse_Walsh_denominator": 256,
+                "one_handle_transform_denominator": 2,
+                "two_invertible": true
+              },
+              "proved_upper_bound": 16,
+              "regime": "homogeneous_anisotropic",
+              "shape": [
+                5,
+                3,
+                3
+              ],
+              "symplectic_transport_sha256": "5eb471c416081fcda6869bcc205d9bbadc979b797e2fe138495fc180ebcda4b4",
+              "transfer_wall_seconds": 0.009882,
+              "weight_specialization": "(t_x,t_y,t_z)=(2,3,5)"
+            },
+            {
+              "canonical_intersection_rows": [
+                2,
+                1,
+                8,
+                4,
+                32,
+                16,
+                128,
+                64
+              ],
+              "central_cut_type": "pair",
+              "central_side": 16,
+              "certificates": {
+                "F": {
+                  "dimension": 8,
+                  "mode": "F",
+                  "projected_determinant": 986466776,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..15",
+                    "selected_rows": "0..15",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 16,
+                  "side": 16
+                },
+                "G": {
+                  "dimension": 8,
+                  "mode": "G",
+                  "projected_determinant": 986466776,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..15",
+                    "selected_rows": "0..15",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 16,
+                  "side": 16
+                }
+              },
+              "coordinate_order": "(a0,b0,a1,b1,...) in corrected nested symplectic coordinates",
+              "cut_order": "low coordinate bits are rows; high coordinate bits are columns",
+              "edge_order": "src.conventions.cubic_box lexicographic",
+              "exact_central_rank": 16,
+              "field": "GF(1000000007)",
+              "genus": 4,
+              "homology_bits": 8,
+              "homology_labels_sha256": "b6dd15f11e1bec699d042c2769cb5006d2e4e563c4f986e3c6f1f51d6a1890df",
+              "normalization": {
+                "denominator_invertible": true,
+                "inverse_Walsh_denominator": 256,
+                "one_handle_transform_denominator": 2,
+                "two_invertible": true
+              },
+              "proved_upper_bound": 16,
+              "regime": "homogeneous_isotropic",
+              "shape": [
+                5,
+                3,
+                3
+              ],
+              "symplectic_transport_sha256": "5eb471c416081fcda6869bcc205d9bbadc979b797e2fe138495fc180ebcda4b4",
+              "transfer_wall_seconds": 0.006265,
+              "weight_specialization": "t_x=t_y=t_z=2"
+            },
+            {
+              "canonical_intersection_rows": [
+                2,
+                1,
+                8,
+                4,
+                32,
+                16,
+                128,
+                64,
+                512,
+                256
+              ],
+              "central_cut_type": "internal",
+              "central_side": 32,
+              "certificates": {
+                "F": {
+                  "dimension": 10,
+                  "mode": "F",
+                  "projected_determinant": 982907458,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..31",
+                    "selected_rows": "0..31",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 32,
+                  "side": 32
+                },
+                "G": {
+                  "dimension": 10,
+                  "mode": "G",
+                  "projected_determinant": 80720532,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..31",
+                    "selected_rows": "0..31",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 32,
+                  "side": 32
+                }
+              },
+              "coordinate_order": "(a0,b0,a1,b1,...) in corrected nested symplectic coordinates",
+              "cut_order": "low coordinate bits are rows; high coordinate bits are columns",
+              "edge_order": "src.conventions.cubic_box lexicographic",
+              "exact_central_rank": 32,
+              "field": "GF(1000000007)",
+              "genus": 5,
+              "homology_bits": 10,
+              "homology_labels_sha256": "ae270f75b83fda0760df65fc3e654ff1ef3fa67bc3d922d46e4b1c244fdb104b",
+              "normalization": {
+                "denominator_invertible": true,
+                "inverse_Walsh_denominator": 1024,
+                "one_handle_transform_denominator": 2,
+                "two_invertible": true
+              },
+              "proved_upper_bound": 32,
+              "regime": "nonuniform",
+              "shape": [
+                6,
+                3,
+                3
+              ],
+              "symplectic_transport_sha256": "f1aea275e5bfbb3986387b1995186f15cc5d91ec712592388d74c3116695947f",
+              "transfer_wall_seconds": 0.018556,
+              "weight_specialization": "deterministic independent nonzero edge values"
+            },
+            {
+              "canonical_intersection_rows": [
+                2,
+                1,
+                8,
+                4,
+                32,
+                16,
+                128,
+                64,
+                512,
+                256
+              ],
+              "central_cut_type": "internal",
+              "central_side": 32,
+              "certificates": {
+                "F": {
+                  "dimension": 10,
+                  "mode": "F",
+                  "projected_determinant": 298377911,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..31",
+                    "selected_rows": "0..31",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 32,
+                  "side": 32
+                },
+                "G": {
+                  "dimension": 10,
+                  "mode": "G",
+                  "projected_determinant": 287423152,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..31",
+                    "selected_rows": "0..31",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 32,
+                  "side": 32
+                }
+              },
+              "coordinate_order": "(a0,b0,a1,b1,...) in corrected nested symplectic coordinates",
+              "cut_order": "low coordinate bits are rows; high coordinate bits are columns",
+              "edge_order": "src.conventions.cubic_box lexicographic",
+              "exact_central_rank": 32,
+              "field": "GF(1000000007)",
+              "genus": 5,
+              "homology_bits": 10,
+              "homology_labels_sha256": "ae270f75b83fda0760df65fc3e654ff1ef3fa67bc3d922d46e4b1c244fdb104b",
+              "normalization": {
+                "denominator_invertible": true,
+                "inverse_Walsh_denominator": 1024,
+                "one_handle_transform_denominator": 2,
+                "two_invertible": true
+              },
+              "proved_upper_bound": 32,
+              "regime": "homogeneous_anisotropic",
+              "shape": [
+                6,
+                3,
+                3
+              ],
+              "symplectic_transport_sha256": "f1aea275e5bfbb3986387b1995186f15cc5d91ec712592388d74c3116695947f",
+              "transfer_wall_seconds": 0.018917,
+              "weight_specialization": "(t_x,t_y,t_z)=(2,3,5)"
+            },
+            {
+              "canonical_intersection_rows": [
+                2,
+                1,
+                8,
+                4,
+                32,
+                16,
+                128,
+                64,
+                512,
+                256
+              ],
+              "central_cut_type": "internal",
+              "central_side": 32,
+              "certificates": {
+                "F": {
+                  "dimension": 10,
+                  "mode": "F",
+                  "projected_determinant": 65687332,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..31",
+                    "selected_rows": "0..31",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 32,
+                  "side": 32
+                },
+                "G": {
+                  "dimension": 10,
+                  "mode": "G",
+                  "projected_determinant": 220762208,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..31",
+                    "selected_rows": "0..31",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 32,
+                  "side": 32
+                }
+              },
+              "coordinate_order": "(a0,b0,a1,b1,...) in corrected nested symplectic coordinates",
+              "cut_order": "low coordinate bits are rows; high coordinate bits are columns",
+              "edge_order": "src.conventions.cubic_box lexicographic",
+              "exact_central_rank": 32,
+              "field": "GF(1000000007)",
+              "genus": 5,
+              "homology_bits": 10,
+              "homology_labels_sha256": "ae270f75b83fda0760df65fc3e654ff1ef3fa67bc3d922d46e4b1c244fdb104b",
+              "normalization": {
+                "denominator_invertible": true,
+                "inverse_Walsh_denominator": 1024,
+                "one_handle_transform_denominator": 2,
+                "two_invertible": true
+              },
+              "proved_upper_bound": 32,
+              "regime": "homogeneous_isotropic",
+              "shape": [
+                6,
+                3,
+                3
+              ],
+              "symplectic_transport_sha256": "f1aea275e5bfbb3986387b1995186f15cc5d91ec712592388d74c3116695947f",
+              "transfer_wall_seconds": 0.019905,
+              "weight_specialization": "t_x=t_y=t_z=2"
+            },
+            {
+              "canonical_intersection_rows": [
+                2,
+                1,
+                8,
+                4,
+                32,
+                16,
+                128,
+                64,
+                512,
+                256,
+                2048,
+                1024
+              ],
+              "central_cut_type": "pair",
+              "central_side": 64,
+              "certificates": {
+                "F": {
+                  "dimension": 12,
+                  "mode": "F",
+                  "projected_determinant": 315642865,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..63",
+                    "selected_rows": "0..63",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 64,
+                  "side": 64
+                },
+                "G": {
+                  "dimension": 12,
+                  "mode": "G",
+                  "projected_determinant": 315642865,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..63",
+                    "selected_rows": "0..63",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 64,
+                  "side": 64
+                }
+              },
+              "coordinate_order": "(a0,b0,a1,b1,...) in corrected nested symplectic coordinates",
+              "cut_order": "low coordinate bits are rows; high coordinate bits are columns",
+              "edge_order": "src.conventions.cubic_box lexicographic",
+              "exact_central_rank": 64,
+              "field": "GF(1000000007)",
+              "genus": 6,
+              "homology_bits": 12,
+              "homology_labels_sha256": "82a3f8c71af98a18630fb115e341ebecae7f66404165acb5217516fd34d58cf3",
+              "normalization": {
+                "denominator_invertible": true,
+                "inverse_Walsh_denominator": 4096,
+                "one_handle_transform_denominator": 2,
+                "two_invertible": true
+              },
+              "proved_upper_bound": 64,
+              "regime": "nonuniform",
+              "shape": [
+                7,
+                3,
+                3
+              ],
+              "symplectic_transport_sha256": "0bb52f432286b59c3c8d946e3d946738ddc7919f6e695dd9fa151c380a47d16e",
+              "transfer_wall_seconds": 0.076978,
+              "weight_specialization": "deterministic independent nonzero edge values"
+            },
+            {
+              "canonical_intersection_rows": [
+                2,
+                1,
+                8,
+                4,
+                32,
+                16,
+                128,
+                64,
+                512,
+                256,
+                2048,
+                1024
+              ],
+              "central_cut_type": "pair",
+              "central_side": 64,
+              "certificates": {
+                "F": {
+                  "dimension": 12,
+                  "mode": "F",
+                  "projected_determinant": 886170893,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..63",
+                    "selected_rows": "0..63",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 64,
+                  "side": 64
+                },
+                "G": {
+                  "dimension": 12,
+                  "mode": "G",
+                  "projected_determinant": 886170893,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..63",
+                    "selected_rows": "0..63",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 64,
+                  "side": 64
+                }
+              },
+              "coordinate_order": "(a0,b0,a1,b1,...) in corrected nested symplectic coordinates",
+              "cut_order": "low coordinate bits are rows; high coordinate bits are columns",
+              "edge_order": "src.conventions.cubic_box lexicographic",
+              "exact_central_rank": 64,
+              "field": "GF(1000000007)",
+              "genus": 6,
+              "homology_bits": 12,
+              "homology_labels_sha256": "82a3f8c71af98a18630fb115e341ebecae7f66404165acb5217516fd34d58cf3",
+              "normalization": {
+                "denominator_invertible": true,
+                "inverse_Walsh_denominator": 4096,
+                "one_handle_transform_denominator": 2,
+                "two_invertible": true
+              },
+              "proved_upper_bound": 64,
+              "regime": "homogeneous_anisotropic",
+              "shape": [
+                7,
+                3,
+                3
+              ],
+              "symplectic_transport_sha256": "0bb52f432286b59c3c8d946e3d946738ddc7919f6e695dd9fa151c380a47d16e",
+              "transfer_wall_seconds": 0.083997,
+              "weight_specialization": "(t_x,t_y,t_z)=(2,3,5)"
+            },
+            {
+              "canonical_intersection_rows": [
+                2,
+                1,
+                8,
+                4,
+                32,
+                16,
+                128,
+                64,
+                512,
+                256,
+                2048,
+                1024
+              ],
+              "central_cut_type": "pair",
+              "central_side": 64,
+              "certificates": {
+                "F": {
+                  "dimension": 12,
+                  "mode": "F",
+                  "projected_determinant": 623344627,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..63",
+                    "selected_rows": "0..63",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 64,
+                  "side": 64
+                },
+                "G": {
+                  "dimension": 12,
+                  "mode": "G",
+                  "projected_determinant": 623344627,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..63",
+                    "selected_rows": "0..63",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 64,
+                  "side": 64
+                }
+              },
+              "coordinate_order": "(a0,b0,a1,b1,...) in corrected nested symplectic coordinates",
+              "cut_order": "low coordinate bits are rows; high coordinate bits are columns",
+              "edge_order": "src.conventions.cubic_box lexicographic",
+              "exact_central_rank": 64,
+              "field": "GF(1000000007)",
+              "genus": 6,
+              "homology_bits": 12,
+              "homology_labels_sha256": "82a3f8c71af98a18630fb115e341ebecae7f66404165acb5217516fd34d58cf3",
+              "normalization": {
+                "denominator_invertible": true,
+                "inverse_Walsh_denominator": 4096,
+                "one_handle_transform_denominator": 2,
+                "two_invertible": true
+              },
+              "proved_upper_bound": 64,
+              "regime": "homogeneous_isotropic",
+              "shape": [
+                7,
+                3,
+                3
+              ],
+              "symplectic_transport_sha256": "0bb52f432286b59c3c8d946e3d946738ddc7919f6e695dd9fa151c380a47d16e",
+              "transfer_wall_seconds": 0.074063,
+              "weight_specialization": "t_x=t_y=t_z=2"
+            },
+            {
+              "canonical_intersection_rows": [
+                2,
+                1,
+                8,
+                4,
+                32,
+                16,
+                128,
+                64,
+                512,
+                256,
+                2048,
+                1024,
+                8192,
+                4096
+              ],
+              "central_cut_type": "internal",
+              "central_side": 128,
+              "certificates": {
+                "F": {
+                  "dimension": 14,
+                  "mode": "F",
+                  "projected_determinant": 770295686,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..127",
+                    "selected_rows": "0..127",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 128,
+                  "side": 128
+                },
+                "G": {
+                  "dimension": 14,
+                  "mode": "G",
+                  "projected_determinant": 539579661,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..127",
+                    "selected_rows": "0..127",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 128,
+                  "side": 128
+                }
+              },
+              "coordinate_order": "(a0,b0,a1,b1,...) in corrected nested symplectic coordinates",
+              "cut_order": "low coordinate bits are rows; high coordinate bits are columns",
+              "edge_order": "src.conventions.cubic_box lexicographic",
+              "exact_central_rank": 128,
+              "field": "GF(1000000007)",
+              "genus": 7,
+              "homology_bits": 14,
+              "homology_labels_sha256": "e128dcc3a0ccc853aa2937832febb3f1ec4c0d418fd43bb4c106060dca6ee083",
+              "normalization": {
+                "denominator_invertible": true,
+                "inverse_Walsh_denominator": 16384,
+                "one_handle_transform_denominator": 2,
+                "two_invertible": true
+              },
+              "proved_upper_bound": 128,
+              "regime": "nonuniform",
+              "shape": [
+                8,
+                3,
+                3
+              ],
+              "symplectic_transport_sha256": "346783cbecad1cafc16aa19bae3028311032ef8d007f0d1c234c1de7a818c8c7",
+              "transfer_wall_seconds": 0.370927,
+              "weight_specialization": "deterministic independent nonzero edge values"
+            },
+            {
+              "canonical_intersection_rows": [
+                2,
+                1,
+                8,
+                4,
+                32,
+                16,
+                128,
+                64,
+                512,
+                256,
+                2048,
+                1024,
+                8192,
+                4096
+              ],
+              "central_cut_type": "internal",
+              "central_side": 128,
+              "certificates": {
+                "F": {
+                  "dimension": 14,
+                  "mode": "F",
+                  "projected_determinant": 857924304,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..127",
+                    "selected_rows": "0..127",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 128,
+                  "side": 128
+                },
+                "G": {
+                  "dimension": 14,
+                  "mode": "G",
+                  "projected_determinant": 826041940,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..127",
+                    "selected_rows": "0..127",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 128,
+                  "side": 128
+                }
+              },
+              "coordinate_order": "(a0,b0,a1,b1,...) in corrected nested symplectic coordinates",
+              "cut_order": "low coordinate bits are rows; high coordinate bits are columns",
+              "edge_order": "src.conventions.cubic_box lexicographic",
+              "exact_central_rank": 128,
+              "field": "GF(1000000007)",
+              "genus": 7,
+              "homology_bits": 14,
+              "homology_labels_sha256": "e128dcc3a0ccc853aa2937832febb3f1ec4c0d418fd43bb4c106060dca6ee083",
+              "normalization": {
+                "denominator_invertible": true,
+                "inverse_Walsh_denominator": 16384,
+                "one_handle_transform_denominator": 2,
+                "two_invertible": true
+              },
+              "proved_upper_bound": 128,
+              "regime": "homogeneous_anisotropic",
+              "shape": [
+                8,
+                3,
+                3
+              ],
+              "symplectic_transport_sha256": "346783cbecad1cafc16aa19bae3028311032ef8d007f0d1c234c1de7a818c8c7",
+              "transfer_wall_seconds": 0.341623,
+              "weight_specialization": "(t_x,t_y,t_z)=(2,3,5)"
+            },
+            {
+              "canonical_intersection_rows": [
+                2,
+                1,
+                8,
+                4,
+                32,
+                16,
+                128,
+                64,
+                512,
+                256,
+                2048,
+                1024,
+                8192,
+                4096
+              ],
+              "central_cut_type": "internal",
+              "central_side": 128,
+              "certificates": {
+                "F": {
+                  "dimension": 14,
+                  "mode": "F",
+                  "projected_determinant": 34865511,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..127",
+                    "selected_rows": "0..127",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 128,
+                  "side": 128
+                },
+                "G": {
+                  "dimension": 14,
+                  "mode": "G",
+                  "projected_determinant": 730464907,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..127",
+                    "selected_rows": "0..127",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 128,
+                  "side": 128
+                }
+              },
+              "coordinate_order": "(a0,b0,a1,b1,...) in corrected nested symplectic coordinates",
+              "cut_order": "low coordinate bits are rows; high coordinate bits are columns",
+              "edge_order": "src.conventions.cubic_box lexicographic",
+              "exact_central_rank": 128,
+              "field": "GF(1000000007)",
+              "genus": 7,
+              "homology_bits": 14,
+              "homology_labels_sha256": "e128dcc3a0ccc853aa2937832febb3f1ec4c0d418fd43bb4c106060dca6ee083",
+              "normalization": {
+                "denominator_invertible": true,
+                "inverse_Walsh_denominator": 16384,
+                "one_handle_transform_denominator": 2,
+                "two_invertible": true
+              },
+              "proved_upper_bound": 128,
+              "regime": "homogeneous_isotropic",
+              "shape": [
+                8,
+                3,
+                3
+              ],
+              "symplectic_transport_sha256": "346783cbecad1cafc16aa19bae3028311032ef8d007f0d1c234c1de7a818c8c7",
+              "transfer_wall_seconds": 0.341038,
+              "weight_specialization": "t_x=t_y=t_z=2"
+            },
+            {
+              "canonical_intersection_rows": [
+                2,
+                1,
+                8,
+                4,
+                32,
+                16,
+                128,
+                64,
+                512,
+                256,
+                2048,
+                1024,
+                8192,
+                4096,
+                32768,
+                16384
+              ],
+              "central_cut_type": "pair",
+              "central_side": 256,
+              "certificates": {
+                "F": {
+                  "dimension": 16,
+                  "mode": "F",
+                  "projected_determinant": 572111020,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..255",
+                    "selected_rows": "0..255",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 256,
+                  "side": 256
+                },
+                "G": {
+                  "dimension": 16,
+                  "mode": "G",
+                  "projected_determinant": 572111020,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..255",
+                    "selected_rows": "0..255",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 256,
+                  "side": 256
+                }
+              },
+              "coordinate_order": "(a0,b0,a1,b1,...) in corrected nested symplectic coordinates",
+              "cut_order": "low coordinate bits are rows; high coordinate bits are columns",
+              "edge_order": "src.conventions.cubic_box lexicographic",
+              "exact_central_rank": 256,
+              "field": "GF(1000000007)",
+              "genus": 8,
+              "homology_bits": 16,
+              "homology_labels_sha256": "f4b3b64ca660db42872be55e32af7778c96d93072f86891a73e581a26da75919",
+              "normalization": {
+                "denominator_invertible": true,
+                "inverse_Walsh_denominator": 65536,
+                "one_handle_transform_denominator": 2,
+                "two_invertible": true
+              },
+              "proved_upper_bound": 256,
+              "regime": "nonuniform",
+              "shape": [
+                9,
+                3,
+                3
+              ],
+              "symplectic_transport_sha256": "087ed30d27f1adbd986539afc8b44382aeec11df5f629e0db077d60cdea6c9fb",
+              "transfer_wall_seconds": 1.601407,
+              "weight_specialization": "deterministic independent nonzero edge values"
+            },
+            {
+              "canonical_intersection_rows": [
+                2,
+                1,
+                8,
+                4,
+                32,
+                16,
+                128,
+                64,
+                512,
+                256,
+                2048,
+                1024,
+                8192,
+                4096,
+                32768,
+                16384
+              ],
+              "central_cut_type": "pair",
+              "central_side": 256,
+              "certificates": {
+                "F": {
+                  "dimension": 16,
+                  "mode": "F",
+                  "projected_determinant": 454759762,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..255",
+                    "selected_rows": "0..255",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 256,
+                  "side": 256
+                },
+                "G": {
+                  "dimension": 16,
+                  "mode": "G",
+                  "projected_determinant": 454759762,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..255",
+                    "selected_rows": "0..255",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 256,
+                  "side": 256
+                }
+              },
+              "coordinate_order": "(a0,b0,a1,b1,...) in corrected nested symplectic coordinates",
+              "cut_order": "low coordinate bits are rows; high coordinate bits are columns",
+              "edge_order": "src.conventions.cubic_box lexicographic",
+              "exact_central_rank": 256,
+              "field": "GF(1000000007)",
+              "genus": 8,
+              "homology_bits": 16,
+              "homology_labels_sha256": "f4b3b64ca660db42872be55e32af7778c96d93072f86891a73e581a26da75919",
+              "normalization": {
+                "denominator_invertible": true,
+                "inverse_Walsh_denominator": 65536,
+                "one_handle_transform_denominator": 2,
+                "two_invertible": true
+              },
+              "proved_upper_bound": 256,
+              "regime": "homogeneous_anisotropic",
+              "shape": [
+                9,
+                3,
+                3
+              ],
+              "symplectic_transport_sha256": "087ed30d27f1adbd986539afc8b44382aeec11df5f629e0db077d60cdea6c9fb",
+              "transfer_wall_seconds": 1.527937,
+              "weight_specialization": "(t_x,t_y,t_z)=(2,3,5)"
+            },
+            {
+              "canonical_intersection_rows": [
+                2,
+                1,
+                8,
+                4,
+                32,
+                16,
+                128,
+                64,
+                512,
+                256,
+                2048,
+                1024,
+                8192,
+                4096,
+                32768,
+                16384
+              ],
+              "central_cut_type": "pair",
+              "central_side": 256,
+              "certificates": {
+                "F": {
+                  "dimension": 16,
+                  "mode": "F",
+                  "projected_determinant": 765614996,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..255",
+                    "selected_rows": "0..255",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 256,
+                  "side": 256
+                },
+                "G": {
+                  "dimension": 16,
+                  "mode": "G",
+                  "projected_determinant": 765614996,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..255",
+                    "selected_rows": "0..255",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 256,
+                  "side": 256
+                }
+              },
+              "coordinate_order": "(a0,b0,a1,b1,...) in corrected nested symplectic coordinates",
+              "cut_order": "low coordinate bits are rows; high coordinate bits are columns",
+              "edge_order": "src.conventions.cubic_box lexicographic",
+              "exact_central_rank": 256,
+              "field": "GF(1000000007)",
+              "genus": 8,
+              "homology_bits": 16,
+              "homology_labels_sha256": "f4b3b64ca660db42872be55e32af7778c96d93072f86891a73e581a26da75919",
+              "normalization": {
+                "denominator_invertible": true,
+                "inverse_Walsh_denominator": 65536,
+                "one_handle_transform_denominator": 2,
+                "two_invertible": true
+              },
+              "proved_upper_bound": 256,
+              "regime": "homogeneous_isotropic",
+              "shape": [
+                9,
+                3,
+                3
+              ],
+              "symplectic_transport_sha256": "087ed30d27f1adbd986539afc8b44382aeec11df5f629e0db077d60cdea6c9fb",
+              "transfer_wall_seconds": 1.579736,
+              "weight_specialization": "t_x=t_y=t_z=2"
+            },
+            {
+              "canonical_intersection_rows": [
+                2,
+                1,
+                8,
+                4,
+                32,
+                16,
+                128,
+                64,
+                512,
+                256,
+                2048,
+                1024,
+                8192,
+                4096,
+                32768,
+                16384,
+                131072,
+                65536
+              ],
+              "central_cut_type": "internal",
+              "central_side": 512,
+              "certificates": {
+                "F": {
+                  "dimension": 18,
+                  "mode": "F",
+                  "projected_determinant": 873939489,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..255",
+                    "selected_rows": "0..255",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 256,
+                  "side": 512
+                },
+                "G": {
+                  "dimension": 18,
+                  "mode": "G",
+                  "projected_determinant": 328988266,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..255",
+                    "selected_rows": "0..255",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 256,
+                  "side": 512
+                }
+              },
+              "coordinate_order": "(a0,b0,a1,b1,...) in corrected nested symplectic coordinates",
+              "cut_order": "low coordinate bits are rows; high coordinate bits are columns",
+              "edge_order": "src.conventions.cubic_box lexicographic",
+              "exact_central_rank": 256,
+              "field": "GF(1000000007)",
+              "genus": 9,
+              "homology_bits": 18,
+              "homology_labels_sha256": "27bab4b0c1d8364a62a119d687ee37b656fb27e7f5216ce492f4a092e68efdb6",
+              "normalization": {
+                "denominator_invertible": true,
+                "inverse_Walsh_denominator": 262144,
+                "one_handle_transform_denominator": 2,
+                "two_invertible": true
+              },
+              "proved_upper_bound": 256,
+              "regime": "nonuniform",
+              "shape": [
+                10,
+                3,
+                3
+              ],
+              "symplectic_transport_sha256": "ae2a132e1756063621da54971f938f25156bde7154e9389c901c4ea578665e11",
+              "transfer_wall_seconds": 7.290709,
+              "weight_specialization": "deterministic independent nonzero edge values"
+            },
+            {
+              "canonical_intersection_rows": [
+                2,
+                1,
+                8,
+                4,
+                32,
+                16,
+                128,
+                64,
+                512,
+                256,
+                2048,
+                1024,
+                8192,
+                4096,
+                32768,
+                16384,
+                131072,
+                65536
+              ],
+              "central_cut_type": "internal",
+              "central_side": 512,
+              "certificates": {
+                "F": {
+                  "dimension": 18,
+                  "mode": "F",
+                  "projected_determinant": 340784368,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..255",
+                    "selected_rows": "0..255",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 256,
+                  "side": 512
+                },
+                "G": {
+                  "dimension": 18,
+                  "mode": "G",
+                  "projected_determinant": 191961936,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..255",
+                    "selected_rows": "0..255",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 256,
+                  "side": 512
+                }
+              },
+              "coordinate_order": "(a0,b0,a1,b1,...) in corrected nested symplectic coordinates",
+              "cut_order": "low coordinate bits are rows; high coordinate bits are columns",
+              "edge_order": "src.conventions.cubic_box lexicographic",
+              "exact_central_rank": 256,
+              "field": "GF(1000000007)",
+              "genus": 9,
+              "homology_bits": 18,
+              "homology_labels_sha256": "27bab4b0c1d8364a62a119d687ee37b656fb27e7f5216ce492f4a092e68efdb6",
+              "normalization": {
+                "denominator_invertible": true,
+                "inverse_Walsh_denominator": 262144,
+                "one_handle_transform_denominator": 2,
+                "two_invertible": true
+              },
+              "proved_upper_bound": 256,
+              "regime": "homogeneous_anisotropic",
+              "shape": [
+                10,
+                3,
+                3
+              ],
+              "symplectic_transport_sha256": "ae2a132e1756063621da54971f938f25156bde7154e9389c901c4ea578665e11",
+              "transfer_wall_seconds": 7.103503,
+              "weight_specialization": "(t_x,t_y,t_z)=(2,3,5)"
+            },
+            {
+              "canonical_intersection_rows": [
+                2,
+                1,
+                8,
+                4,
+                32,
+                16,
+                128,
+                64,
+                512,
+                256,
+                2048,
+                1024,
+                8192,
+                4096,
+                32768,
+                16384,
+                131072,
+                65536
+              ],
+              "central_cut_type": "internal",
+              "central_side": 512,
+              "certificates": {
+                "F": {
+                  "dimension": 18,
+                  "mode": "F",
+                  "projected_determinant": 117304849,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..255",
+                    "selected_rows": "0..255",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 256,
+                  "side": 512
+                },
+                "G": {
+                  "dimension": 18,
+                  "mode": "G",
+                  "projected_determinant": 946838140,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..255",
+                    "selected_rows": "0..255",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 256,
+                  "side": 512
+                }
+              },
+              "coordinate_order": "(a0,b0,a1,b1,...) in corrected nested symplectic coordinates",
+              "cut_order": "low coordinate bits are rows; high coordinate bits are columns",
+              "edge_order": "src.conventions.cubic_box lexicographic",
+              "exact_central_rank": 256,
+              "field": "GF(1000000007)",
+              "genus": 9,
+              "homology_bits": 18,
+              "homology_labels_sha256": "27bab4b0c1d8364a62a119d687ee37b656fb27e7f5216ce492f4a092e68efdb6",
+              "normalization": {
+                "denominator_invertible": true,
+                "inverse_Walsh_denominator": 262144,
+                "one_handle_transform_denominator": 2,
+                "two_invertible": true
+              },
+              "proved_upper_bound": 256,
+              "regime": "homogeneous_isotropic",
+              "shape": [
+                10,
+                3,
+                3
+              ],
+              "symplectic_transport_sha256": "ae2a132e1756063621da54971f938f25156bde7154e9389c901c4ea578665e11",
+              "transfer_wall_seconds": 7.148571,
+              "weight_specialization": "t_x=t_y=t_z=2"
+            },
+            {
+              "canonical_intersection_rows": [
+                2,
+                1,
+                8,
+                4,
+                32,
+                16,
+                128,
+                64,
+                512,
+                256,
+                2048,
+                1024,
+                8192,
+                4096,
+                32768,
+                16384,
+                131072,
+                65536,
+                524288,
+                262144
+              ],
+              "central_cut_type": "pair",
+              "central_side": 1024,
+              "certificates": {
+                "F": {
+                  "dimension": 20,
+                  "mode": "F",
+                  "projected_determinant": 983806085,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..255",
+                    "selected_rows": "0..255",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 256,
+                  "side": 1024
+                },
+                "G": {
+                  "dimension": 20,
+                  "mode": "G",
+                  "projected_determinant": 250747493,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..255",
+                    "selected_rows": "0..255",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 256,
+                  "side": 1024
+                }
+              },
+              "coordinate_order": "(a0,b0,a1,b1,...) in corrected nested symplectic coordinates",
+              "cut_order": "low coordinate bits are rows; high coordinate bits are columns",
+              "edge_order": "src.conventions.cubic_box lexicographic",
+              "exact_central_rank": 256,
+              "field": "GF(1000000007)",
+              "genus": 10,
+              "homology_bits": 20,
+              "homology_labels_sha256": "b5c7685391dfa420f1f64a27b97f2bef1c8b2e9ba16fb634c1abf6c83ca78f05",
+              "normalization": {
+                "denominator_invertible": true,
+                "inverse_Walsh_denominator": 1048576,
+                "one_handle_transform_denominator": 2,
+                "two_invertible": true
+              },
+              "proved_upper_bound": 256,
+              "regime": "nonuniform",
+              "shape": [
+                11,
+                3,
+                3
+              ],
+              "symplectic_transport_sha256": "3d14e27553e4d7cd736942aad467fdf14e86ea768221e4a4865de5dca900028e",
+              "transfer_wall_seconds": 32.084162,
+              "weight_specialization": "deterministic independent nonzero edge values"
+            },
+            {
+              "canonical_intersection_rows": [
+                2,
+                1,
+                8,
+                4,
+                32,
+                16,
+                128,
+                64,
+                512,
+                256,
+                2048,
+                1024,
+                8192,
+                4096,
+                32768,
+                16384,
+                131072,
+                65536,
+                524288,
+                262144
+              ],
+              "central_cut_type": "pair",
+              "central_side": 1024,
+              "certificates": {
+                "F": {
+                  "dimension": 20,
+                  "mode": "F",
+                  "projected_determinant": 656868251,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..255",
+                    "selected_rows": "0..255",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 256,
+                  "side": 1024
+                },
+                "G": {
+                  "dimension": 20,
+                  "mode": "G",
+                  "projected_determinant": 653493602,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..255",
+                    "selected_rows": "0..255",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 256,
+                  "side": 1024
+                }
+              },
+              "coordinate_order": "(a0,b0,a1,b1,...) in corrected nested symplectic coordinates",
+              "cut_order": "low coordinate bits are rows; high coordinate bits are columns",
+              "edge_order": "src.conventions.cubic_box lexicographic",
+              "exact_central_rank": 256,
+              "field": "GF(1000000007)",
+              "genus": 10,
+              "homology_bits": 20,
+              "homology_labels_sha256": "b5c7685391dfa420f1f64a27b97f2bef1c8b2e9ba16fb634c1abf6c83ca78f05",
+              "normalization": {
+                "denominator_invertible": true,
+                "inverse_Walsh_denominator": 1048576,
+                "one_handle_transform_denominator": 2,
+                "two_invertible": true
+              },
+              "proved_upper_bound": 256,
+              "regime": "homogeneous_anisotropic",
+              "shape": [
+                11,
+                3,
+                3
+              ],
+              "symplectic_transport_sha256": "3d14e27553e4d7cd736942aad467fdf14e86ea768221e4a4865de5dca900028e",
+              "transfer_wall_seconds": 31.511966,
+              "weight_specialization": "(t_x,t_y,t_z)=(2,3,5)"
+            },
+            {
+              "canonical_intersection_rows": [
+                2,
+                1,
+                8,
+                4,
+                32,
+                16,
+                128,
+                64,
+                512,
+                256,
+                2048,
+                1024,
+                8192,
+                4096,
+                32768,
+                16384,
+                131072,
+                65536,
+                524288,
+                262144
+              ],
+              "central_cut_type": "pair",
+              "central_side": 1024,
+              "certificates": {
+                "F": {
+                  "dimension": 20,
+                  "mode": "F",
+                  "projected_determinant": 810799396,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..255",
+                    "selected_rows": "0..255",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 256,
+                  "side": 1024
+                },
+                "G": {
+                  "dimension": 20,
+                  "mode": "G",
+                  "projected_determinant": 580437277,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..255",
+                    "selected_rows": "0..255",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 256,
+                  "side": 1024
+                }
+              },
+              "coordinate_order": "(a0,b0,a1,b1,...) in corrected nested symplectic coordinates",
+              "cut_order": "low coordinate bits are rows; high coordinate bits are columns",
+              "edge_order": "src.conventions.cubic_box lexicographic",
+              "exact_central_rank": 256,
+              "field": "GF(1000000007)",
+              "genus": 10,
+              "homology_bits": 20,
+              "homology_labels_sha256": "b5c7685391dfa420f1f64a27b97f2bef1c8b2e9ba16fb634c1abf6c83ca78f05",
+              "normalization": {
+                "denominator_invertible": true,
+                "inverse_Walsh_denominator": 1048576,
+                "one_handle_transform_denominator": 2,
+                "two_invertible": true
+              },
+              "proved_upper_bound": 256,
+              "regime": "homogeneous_isotropic",
+              "shape": [
+                11,
+                3,
+                3
+              ],
+              "symplectic_transport_sha256": "3d14e27553e4d7cd736942aad467fdf14e86ea768221e4a4865de5dca900028e",
+              "transfer_wall_seconds": 31.548653,
+              "weight_specialization": "t_x=t_y=t_z=2"
+            },
+            {
+              "canonical_intersection_rows": [
+                2,
+                1,
+                8,
+                4,
+                32,
+                16,
+                128,
+                64,
+                512,
+                256,
+                2048,
+                1024,
+                8192,
+                4096,
+                32768,
+                16384,
+                131072,
+                65536,
+                524288,
+                262144,
+                2097152,
+                1048576
+              ],
+              "central_cut_type": "internal",
+              "central_side": 2048,
+              "certificates": {
+                "F": {
+                  "dimension": 22,
+                  "mode": "F",
+                  "projected_determinant": 658086699,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..255",
+                    "selected_rows": "0..255",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 256,
+                  "side": 2048
+                },
+                "G": {
+                  "dimension": 22,
+                  "mode": "G",
+                  "projected_determinant": 268243764,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..255",
+                    "selected_rows": "0..255",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 256,
+                  "side": 2048
+                }
+              },
+              "coordinate_order": "(a0,b0,a1,b1,...) in corrected nested symplectic coordinates",
+              "cut_order": "low coordinate bits are rows; high coordinate bits are columns",
+              "edge_order": "src.conventions.cubic_box lexicographic",
+              "exact_central_rank": 256,
+              "field": "GF(1000000007)",
+              "genus": 11,
+              "homology_bits": 22,
+              "homology_labels_sha256": "794a9401311906d36fc30772ebd60ddc98fc38b5b80f3194c56485200a5abede",
+              "normalization": {
+                "denominator_invertible": true,
+                "inverse_Walsh_denominator": 4194304,
+                "one_handle_transform_denominator": 2,
+                "two_invertible": true
+              },
+              "proved_upper_bound": 256,
+              "regime": "nonuniform",
+              "shape": [
+                12,
+                3,
+                3
+              ],
+              "symplectic_transport_sha256": "66624c08c030f2505adccf3e738bb1cc8ce30361c065cde5e334c11c1cc188d2",
+              "transfer_wall_seconds": 140.858194,
+              "weight_specialization": "deterministic independent nonzero edge values"
+            },
+            {
+              "canonical_intersection_rows": [
+                2,
+                1,
+                8,
+                4,
+                32,
+                16,
+                128,
+                64,
+                512,
+                256,
+                2048,
+                1024,
+                8192,
+                4096,
+                32768,
+                16384,
+                131072,
+                65536,
+                524288,
+                262144,
+                2097152,
+                1048576
+              ],
+              "central_cut_type": "internal",
+              "central_side": 2048,
+              "certificates": {
+                "F": {
+                  "dimension": 22,
+                  "mode": "F",
+                  "projected_determinant": 216076965,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..255",
+                    "selected_rows": "0..255",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 256,
+                  "side": 2048
+                },
+                "G": {
+                  "dimension": 22,
+                  "mode": "G",
+                  "projected_determinant": 551818153,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..255",
+                    "selected_rows": "0..255",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 256,
+                  "side": 2048
+                }
+              },
+              "coordinate_order": "(a0,b0,a1,b1,...) in corrected nested symplectic coordinates",
+              "cut_order": "low coordinate bits are rows; high coordinate bits are columns",
+              "edge_order": "src.conventions.cubic_box lexicographic",
+              "exact_central_rank": 256,
+              "field": "GF(1000000007)",
+              "genus": 11,
+              "homology_bits": 22,
+              "homology_labels_sha256": "794a9401311906d36fc30772ebd60ddc98fc38b5b80f3194c56485200a5abede",
+              "normalization": {
+                "denominator_invertible": true,
+                "inverse_Walsh_denominator": 4194304,
+                "one_handle_transform_denominator": 2,
+                "two_invertible": true
+              },
+              "proved_upper_bound": 256,
+              "regime": "homogeneous_anisotropic",
+              "shape": [
+                12,
+                3,
+                3
+              ],
+              "symplectic_transport_sha256": "66624c08c030f2505adccf3e738bb1cc8ce30361c065cde5e334c11c1cc188d2",
+              "transfer_wall_seconds": 140.322822,
+              "weight_specialization": "(t_x,t_y,t_z)=(2,3,5)"
+            },
+            {
+              "canonical_intersection_rows": [
+                2,
+                1,
+                8,
+                4,
+                32,
+                16,
+                128,
+                64,
+                512,
+                256,
+                2048,
+                1024,
+                8192,
+                4096,
+                32768,
+                16384,
+                131072,
+                65536,
+                524288,
+                262144,
+                2097152,
+                1048576
+              ],
+              "central_cut_type": "internal",
+              "central_side": 2048,
+              "certificates": {
+                "F": {
+                  "dimension": 22,
+                  "mode": "F",
+                  "projected_determinant": 150026344,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..255",
+                    "selected_rows": "0..255",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 256,
+                  "side": 2048
+                },
+                "G": {
+                  "dimension": 22,
+                  "mode": "G",
+                  "projected_determinant": 596370217,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..255",
+                    "selected_rows": "0..255",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 256,
+                  "side": 2048
+                }
+              },
+              "coordinate_order": "(a0,b0,a1,b1,...) in corrected nested symplectic coordinates",
+              "cut_order": "low coordinate bits are rows; high coordinate bits are columns",
+              "edge_order": "src.conventions.cubic_box lexicographic",
+              "exact_central_rank": 256,
+              "field": "GF(1000000007)",
+              "genus": 11,
+              "homology_bits": 22,
+              "homology_labels_sha256": "794a9401311906d36fc30772ebd60ddc98fc38b5b80f3194c56485200a5abede",
+              "normalization": {
+                "denominator_invertible": true,
+                "inverse_Walsh_denominator": 4194304,
+                "one_handle_transform_denominator": 2,
+                "two_invertible": true
+              },
+              "proved_upper_bound": 256,
+              "regime": "homogeneous_isotropic",
+              "shape": [
+                12,
+                3,
+                3
+              ],
+              "symplectic_transport_sha256": "66624c08c030f2505adccf3e738bb1cc8ce30361c065cde5e334c11c1cc188d2",
+              "transfer_wall_seconds": 140.355066,
+              "weight_specialization": "t_x=t_y=t_z=2"
+            }
+          ],
+          "prime": 1000000007,
+          "schedule": "all regimes n=4..12"
+        },
+        "1000000009": {
+          "cases": [
+            {
+              "canonical_intersection_rows": [
+                2,
+                1,
+                8,
+                4,
+                32,
+                16,
+                128,
+                64,
+                512,
+                256,
+                2048,
+                1024,
+                8192,
+                4096,
+                32768,
+                16384
+              ],
+              "central_cut_type": "pair",
+              "central_side": 256,
+              "certificates": {
+                "F": {
+                  "dimension": 16,
+                  "mode": "F",
+                  "projected_determinant": 546428700,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..255",
+                    "selected_rows": "0..255",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 256,
+                  "side": 256
+                },
+                "G": {
+                  "dimension": 16,
+                  "mode": "G",
+                  "projected_determinant": 546428700,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..255",
+                    "selected_rows": "0..255",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 256,
+                  "side": 256
+                }
+              },
+              "coordinate_order": "(a0,b0,a1,b1,...) in corrected nested symplectic coordinates",
+              "cut_order": "low coordinate bits are rows; high coordinate bits are columns",
+              "edge_order": "src.conventions.cubic_box lexicographic",
+              "exact_central_rank": 256,
+              "field": "GF(1000000009)",
+              "genus": 8,
+              "homology_bits": 16,
+              "homology_labels_sha256": "f4b3b64ca660db42872be55e32af7778c96d93072f86891a73e581a26da75919",
+              "normalization": {
+                "denominator_invertible": true,
+                "inverse_Walsh_denominator": 65536,
+                "one_handle_transform_denominator": 2,
+                "two_invertible": true
+              },
+              "proved_upper_bound": 256,
+              "regime": "homogeneous_isotropic",
+              "shape": [
+                9,
+                3,
+                3
+              ],
+              "symplectic_transport_sha256": "087ed30d27f1adbd986539afc8b44382aeec11df5f629e0db077d60cdea6c9fb",
+              "transfer_wall_seconds": 1.590029,
+              "weight_specialization": "t_x=t_y=t_z=2"
+            },
+            {
+              "canonical_intersection_rows": [
+                2,
+                1,
+                8,
+                4,
+                32,
+                16,
+                128,
+                64,
+                512,
+                256,
+                2048,
+                1024,
+                8192,
+                4096,
+                32768,
+                16384,
+                131072,
+                65536
+              ],
+              "central_cut_type": "internal",
+              "central_side": 512,
+              "certificates": {
+                "F": {
+                  "dimension": 18,
+                  "mode": "F",
+                  "projected_determinant": 476594215,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..255",
+                    "selected_rows": "0..255",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 256,
+                  "side": 512
+                },
+                "G": {
+                  "dimension": 18,
+                  "mode": "G",
+                  "projected_determinant": 783644769,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..255",
+                    "selected_rows": "0..255",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 256,
+                  "side": 512
+                }
+              },
+              "coordinate_order": "(a0,b0,a1,b1,...) in corrected nested symplectic coordinates",
+              "cut_order": "low coordinate bits are rows; high coordinate bits are columns",
+              "edge_order": "src.conventions.cubic_box lexicographic",
+              "exact_central_rank": 256,
+              "field": "GF(1000000009)",
+              "genus": 9,
+              "homology_bits": 18,
+              "homology_labels_sha256": "27bab4b0c1d8364a62a119d687ee37b656fb27e7f5216ce492f4a092e68efdb6",
+              "normalization": {
+                "denominator_invertible": true,
+                "inverse_Walsh_denominator": 262144,
+                "one_handle_transform_denominator": 2,
+                "two_invertible": true
+              },
+              "proved_upper_bound": 256,
+              "regime": "homogeneous_isotropic",
+              "shape": [
+                10,
+                3,
+                3
+              ],
+              "symplectic_transport_sha256": "ae2a132e1756063621da54971f938f25156bde7154e9389c901c4ea578665e11",
+              "transfer_wall_seconds": 7.161731,
+              "weight_specialization": "t_x=t_y=t_z=2"
+            },
+            {
+              "canonical_intersection_rows": [
+                2,
+                1,
+                8,
+                4,
+                32,
+                16,
+                128,
+                64,
+                512,
+                256,
+                2048,
+                1024,
+                8192,
+                4096,
+                32768,
+                16384,
+                131072,
+                65536,
+                524288,
+                262144
+              ],
+              "central_cut_type": "pair",
+              "central_side": 1024,
+              "certificates": {
+                "F": {
+                  "dimension": 20,
+                  "mode": "F",
+                  "projected_determinant": 953560912,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..255",
+                    "selected_rows": "0..255",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 256,
+                  "side": 1024
+                },
+                "G": {
+                  "dimension": 20,
+                  "mode": "G",
+                  "projected_determinant": 301931590,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..255",
+                    "selected_rows": "0..255",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 256,
+                  "side": 1024
+                }
+              },
+              "coordinate_order": "(a0,b0,a1,b1,...) in corrected nested symplectic coordinates",
+              "cut_order": "low coordinate bits are rows; high coordinate bits are columns",
+              "edge_order": "src.conventions.cubic_box lexicographic",
+              "exact_central_rank": 256,
+              "field": "GF(1000000009)",
+              "genus": 10,
+              "homology_bits": 20,
+              "homology_labels_sha256": "b5c7685391dfa420f1f64a27b97f2bef1c8b2e9ba16fb634c1abf6c83ca78f05",
+              "normalization": {
+                "denominator_invertible": true,
+                "inverse_Walsh_denominator": 1048576,
+                "one_handle_transform_denominator": 2,
+                "two_invertible": true
+              },
+              "proved_upper_bound": 256,
+              "regime": "homogeneous_isotropic",
+              "shape": [
+                11,
+                3,
+                3
+              ],
+              "symplectic_transport_sha256": "3d14e27553e4d7cd736942aad467fdf14e86ea768221e4a4865de5dca900028e",
+              "transfer_wall_seconds": 31.339452,
+              "weight_specialization": "t_x=t_y=t_z=2"
+            },
+            {
+              "canonical_intersection_rows": [
+                2,
+                1,
+                8,
+                4,
+                32,
+                16,
+                128,
+                64,
+                512,
+                256,
+                2048,
+                1024,
+                8192,
+                4096,
+                32768,
+                16384,
+                131072,
+                65536,
+                524288,
+                262144,
+                2097152,
+                1048576
+              ],
+              "central_cut_type": "internal",
+              "central_side": 2048,
+              "certificates": {
+                "F": {
+                  "dimension": 22,
+                  "mode": "F",
+                  "projected_determinant": 856004552,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..255",
+                    "selected_rows": "0..255",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 256,
+                  "side": 2048
+                },
+                "G": {
+                  "dimension": 22,
+                  "mode": "G",
+                  "projected_determinant": 275715019,
+                  "projection": {
+                    "column_diagonal": "1+((column+1)*130363) mod (p-1)",
+                    "row_diagonal": "1+((row+1)*104729) mod (p-1)",
+                    "selected_columns": "0..255",
+                    "selected_rows": "0..255",
+                    "transform": "unnormalized low-bit-first Walsh on rows and columns"
+                  },
+                  "rank_lower_bound": 256,
+                  "side": 2048
+                }
+              },
+              "coordinate_order": "(a0,b0,a1,b1,...) in corrected nested symplectic coordinates",
+              "cut_order": "low coordinate bits are rows; high coordinate bits are columns",
+              "edge_order": "src.conventions.cubic_box lexicographic",
+              "exact_central_rank": 256,
+              "field": "GF(1000000009)",
+              "genus": 11,
+              "homology_bits": 22,
+              "homology_labels_sha256": "794a9401311906d36fc30772ebd60ddc98fc38b5b80f3194c56485200a5abede",
+              "normalization": {
+                "denominator_invertible": true,
+                "inverse_Walsh_denominator": 4194304,
+                "one_handle_transform_denominator": 2,
+                "two_invertible": true
+              },
+              "proved_upper_bound": 256,
+              "regime": "homogeneous_isotropic",
+              "shape": [
+                12,
+                3,
+                3
+              ],
+              "symplectic_transport_sha256": "66624c08c030f2505adccf3e738bb1cc8ce30361c065cde5e334c11c1cc188d2",
+              "transfer_wall_seconds": 138.708913,
+              "weight_specialization": "t_x=t_y=t_z=2"
+            }
+          ],
+          "prime": 1000000009,
+          "schedule": "independent isotropic control n=9..12"
+        }
+      },
+      "saturation": {
+        "R_infinity_internal_w3": 256,
+        "R_infinity_pair_w3": 256,
+        "first_internal_witness_n": 10,
+        "first_pair_witness_n": 9,
+        "upper_bound_source": "proof/lane_b_cochain_gauge_proof.md"
+      }
+    },
+    "upper_factorization": {
+      "boundary_audit": {
+        "antiperiodic": "a seam is a fixed 1-cocycle; adding delta s changes its representative but not its cohomology class, provided s is single-valued on the periodic slice",
+        "fixed_spin": "boundary spins must be gauge-transformed; invariance is not asserted",
+        "free": "the all-spin-sum boundary vector is U_s invariant",
+        "periodic": "trace is invariant under conjugation by U_s"
+      },
+      "claim_boundary": "This proves an all-length rank upper bound for the pinned minimum-genus free 3x3 tube family and audits the same local gauge identity for periodic and antiperiodic conventions. It does not prove a growing-width bound h(w), a cubic-box compression, or any thermodynamic singularity.",
+      "claim_status": "PROVED",
+      "cochain_checks": {
+        "all_4096_transverse_subsets_checked_per_mode": true,
+        "b_mode_potentials": {
+          "1080": 79,
+          "452": 27
+        },
+        "cochain_identity": "<delta s,S>=<s,partial S> over GF(2)"
+      },
+      "cochain_gauge_identity": "For arbitrary edge weights, D_(eta+delta s)=U_s^(-1)D_eta U_s. The connector kernel commutes with simultaneous U_s because each longitudinal factor depends only on sigma_v sigma'_v.",
+      "frozen_twist_audit": "Only an exact edge cochain is changed. Its class in C^1/B^1 and every other frozen homology coordinate are unchanged.",
+      "handle_transform": {
+        "a_bar_b_operator_schmidt_rank": 2,
+        "normalization": "actual transform is the displayed integer matrix divided by 2",
+        "twice_G_to_F_transform": [
+          [
+            1,
+            1,
+            1,
+            -1
+          ],
+          [
+            1,
+            1,
+            -1,
+            1
+          ],
+          [
+            1,
+            -1,
+            1,
+            1
+          ],
+          [
+            -1,
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "normalization_audit": "Gauge maps are permutations, so they introduce no scalar. Walsh transforms use only powers of two; the local G-to-F map is (1/2) times the recorded integer matrix.",
+      "rank_theorem": {
+        "F_internal_upper": 256,
+        "F_pair_upper": 256,
+        "G_internal_upper": 256,
+        "G_pair_upper": 256,
+        "physical_carrier": 256,
+        "reason": "Align the spatial separator with the last occurrence of the a coordinate at the twist cut. Every b-sector contribution on either side is a transverse coboundary, hence a known character of the exposed frontier mask. The linear a phase and the quadratic a*b phase then split across the separator conditional on that same mask. For an internal lambda_a|lambda_b cut, lambda_b multiplies only the frontier-determined b value and is emitted as a diagonal carrier factor. Thus neither pair nor internal cuts enlarge the 256-state carrier."
+      },
+      "semantic_coordinate_checks": {
+        "all_layers": [
+          {
+            "coordinate_bits": [
+              0
+            ],
+            "edge_mode_masks": {
+              "0": 1056
+            },
+            "exact_bits": [],
+            "layer": 0,
+            "nonexact_bits": [
+              0
+            ]
+          },
+          {
+            "coordinate_bits": [
+              0,
+              1,
+              2
+            ],
+            "edge_mode_masks": {
+              "0": 1056,
+              "1": 452,
+              "2": 320
+            },
+            "exact_bits": [
+              1
+            ],
+            "layer": 1,
+            "nonexact_bits": [
+              0,
+              2
+            ]
+          },
+          {
+            "coordinate_bits": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "edge_mode_masks": {
+              "0": 1080,
+              "1": 452,
+              "2": 320,
+              "3": 1080,
+              "4": 1056
+            },
+            "exact_bits": [
+              0,
+              1,
+              3
+            ],
+            "layer": 2,
+            "nonexact_bits": [
+              2,
+              4
+            ]
+          },
+          {
+            "coordinate_bits": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "edge_mode_masks": {
+              "0": 1080,
+              "1": 452,
+              "2": 452,
+              "3": 1080,
+              "4": 1056,
+              "5": 452,
+              "6": 320
+            },
+            "exact_bits": [
+              0,
+              1,
+              2,
+              3,
+              5
+            ],
+            "layer": 3,
+            "nonexact_bits": [
+              4,
+              6
+            ]
+          },
+          {
+            "coordinate_bits": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "edge_mode_masks": {
+              "0": 1080,
+              "1": 452,
+              "2": 452,
+              "3": 1080,
+              "4": 1080,
+              "5": 452,
+              "6": 320,
+              "7": 1080,
+              "8": 1056
+            },
+            "exact_bits": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              7
+            ],
+            "layer": 4,
+            "nonexact_bits": [
+              6,
+              8
+            ]
+          },
+          {
+            "coordinate_bits": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "edge_mode_masks": {
+              "0": 1080,
+              "1": 452,
+              "10": 320,
+              "2": 452,
+              "3": 1080,
+              "4": 1080,
+              "5": 452,
+              "6": 452,
+              "7": 1080,
+              "8": 1056,
+              "9": 452
+            },
+            "exact_bits": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              9
+            ],
+            "layer": 5,
+            "nonexact_bits": [
+              8,
+              10
+            ]
+          },
+          {
+            "coordinate_bits": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "edge_mode_masks": {
+              "0": 1080,
+              "1": 452,
+              "10": 320,
+              "11": 1080,
+              "12": 1056,
+              "2": 452,
+              "3": 1080,
+              "4": 1080,
+              "5": 452,
+              "6": 452,
+              "7": 1080,
+              "8": 1080,
+              "9": 452
+            },
+            "exact_bits": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              11
+            ],
+            "layer": 6,
+            "nonexact_bits": [
+              10,
+              12
+            ]
+          },
+          {
+            "coordinate_bits": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14
+            ],
+            "edge_mode_masks": {
+              "0": 1080,
+              "1": 452,
+              "10": 452,
+              "11": 1080,
+              "12": 1056,
+              "13": 452,
+              "14": 320,
+              "2": 452,
+              "3": 1080,
+              "4": 1080,
+              "5": 452,
+              "6": 452,
+              "7": 1080,
+              "8": 1080,
+              "9": 452
+            },
+            "exact_bits": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              13
+            ],
+            "layer": 7,
+            "nonexact_bits": [
+              12,
+              14
+            ]
+          },
+          {
+            "coordinate_bits": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16
+            ],
+            "edge_mode_masks": {
+              "0": 1080,
+              "1": 452,
+              "10": 452,
+              "11": 1080,
+              "12": 1080,
+              "13": 452,
+              "14": 320,
+              "15": 1080,
+              "16": 1056,
+              "2": 452,
+              "3": 1080,
+              "4": 1080,
+              "5": 452,
+              "6": 452,
+              "7": 1080,
+              "8": 1080,
+              "9": 452
+            },
+            "exact_bits": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              15
+            ],
+            "layer": 8,
+            "nonexact_bits": [
+              14,
+              16
+            ]
+          },
+          {
+            "coordinate_bits": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18
+            ],
+            "edge_mode_masks": {
+              "0": 1080,
+              "1": 452,
+              "10": 452,
+              "11": 1080,
+              "12": 1080,
+              "13": 452,
+              "14": 452,
+              "15": 1080,
+              "16": 1056,
+              "17": 452,
+              "18": 320,
+              "2": 452,
+              "3": 1080,
+              "4": 1080,
+              "5": 452,
+              "6": 452,
+              "7": 1080,
+              "8": 1080,
+              "9": 452
+            },
+            "exact_bits": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              17
+            ],
+            "layer": 9,
+            "nonexact_bits": [
+              16,
+              18
+            ]
+          },
+          {
+            "coordinate_bits": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "edge_mode_masks": {
+              "0": 1080,
+              "1": 452,
+              "10": 452,
+              "11": 1080,
+              "12": 1080,
+              "13": 452,
+              "14": 452,
+              "15": 1080,
+              "16": 1080,
+              "17": 452,
+              "18": 320,
+              "19": 1080,
+              "2": 452,
+              "20": 1056,
+              "3": 1080,
+              "4": 1080,
+              "5": 452,
+              "6": 452,
+              "7": 1080,
+              "8": 1080,
+              "9": 452
+            },
+            "exact_bits": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              19
+            ],
+            "layer": 10,
+            "nonexact_bits": [
+              18,
+              20
+            ]
+          },
+          {
+            "coordinate_bits": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21
+            ],
+            "edge_mode_masks": {
+              "0": 1080,
+              "1": 452,
+              "10": 452,
+              "11": 1080,
+              "12": 1080,
+              "13": 452,
+              "14": 452,
+              "15": 1080,
+              "16": 1080,
+              "17": 452,
+              "18": 452,
+              "19": 1080,
+              "2": 452,
+              "20": 1056,
+              "21": 452,
+              "3": 1080,
+              "4": 1080,
+              "5": 452,
+              "6": 452,
+              "7": 1080,
+              "8": 1080,
+              "9": 452
+            },
+            "exact_bits": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              21
+            ],
+            "layer": 11,
+            "nonexact_bits": [
+              20
+            ]
+          }
+        ],
+        "canonical_symplectic_intersection": true,
+        "length": 12,
+        "no_unclassified_extra_modes": true
+      }
+    }
+  },
+  "frozen_hashes": {
+    "cochain_module": {
+      "path": "src/lane_b_cochain_gauge.py",
+      "sha256": "9f54aa39773cc6e675e21a9ba3ba8b26fd9d2d851c385e658bef06f644bc76fc"
+    },
+    "correction": {
+      "path": "artifacts/cycle-4-b4-lane-b-canonical-handle-correction-v2.json",
+      "sha256": "03c795cb7452488c99ecc77f41f40e6e92499e34c65452cfeafa08df22361ec1"
+    },
+    "failure_ledger": {
+      "path": "discovery/failure-ledger-cycle6.md",
+      "sha256": "9a79a84eba22ac83ff973a2d315907b24a5ffbb236f98cde24aa557711562639"
+    },
+    "gauge_engine": {
+      "path": "proof/lane_b_gauge_reduced_character_transfer.cpp",
+      "sha256": "504d8d60e2982b48be5d8cc3af5495615877c5ea5c8492e64e9c0023720ccd91"
+    },
+    "legacy_engine": {
+      "path": "proof/lane_b_width4_character_transfer.cpp",
+      "sha256": "dd7f5f3e381ae3759eaa8d86a930d968ab3ac75773646ba69c52d59f77e1d940"
+    },
+    "lower_verifier": {
+      "path": "proof/verify_lane_b_longitudinal_saturation.py",
+      "sha256": "6ac976394a4bae5dbd5b7869b3affc675499dd5128f118c90ea5f6ae3f911fef"
+    },
+    "prior": {
+      "path": "artifacts/cycle-5-b5-lane-b-width-rank-audit-v1.json",
+      "sha256": "89307d257a0e8263c62e3e5948707ac656657c015fb69d31a96d32917718a150"
+    },
+    "projected_minor_engine": {
+      "path": "proof/lane_b_modular_determinant.cpp",
+      "sha256": "6103696e14c9b36ccd434670ec772711323152bf4fd61699f36bc1c511f2a804"
+    },
+    "proof": {
+      "path": "proof/lane_b_cochain_gauge_proof.md",
+      "sha256": "da33907099dfc2a345ede511430fcf8b3da106480f42feb6a0d6c98c2674477b"
+    },
+    "report": {
+      "path": "docs/cycle6-lane-b-longitudinal-saturation.md",
+      "sha256": "817774b02e11e65d0a35ed6b09b51413f035e7a222e05a208bf54113f0cbe646"
+    },
+    "requirements": {
+      "path": "requirements.txt",
+      "sha256": "8347daed02ebf7b3c3cfa494e97049b7e0ab15b9af00a5addd843ed44381a64a"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "c4a09e7baa8a5588d4c6855a533eb933c85791707ed9653437644c1e1ad6c163"
+    },
+    "selection": {
+      "path": "discovery/cycle-6-b6-longitudinal-saturation-selection.md",
+      "sha256": "f319a9cb1a0a53a3e32c58003daef01db13b1381610b909e595a74b6bc72b9b9"
+    },
+    "tests": {
+      "path": "tests/test_lane_b_cochain_gauge.py",
+      "sha256": "7fafedc1794792c9abaaf8eb9bb656bbb21a7d941498ed29aaa987af85d4e545"
+    },
+    "upper_verifier": {
+      "path": "proof/verify_lane_b_cochain_gauge.py",
+      "sha256": "bb6db11ac8e9a800c883d30c5368917acfd9fbb600fb42e55800aa6d9bc49a08"
+    }
+  },
+  "gate_outcome": "B1_FIXED_TOPOLOGICAL_OVERHEAD_ZERO_BEYOND_PHYSICAL_CARRIER_AT_W3",
+  "outcome": "In corrected canonical handles, every pair and internal cut of the complete width-three spin-structure tensor factors through the ordinary 256-state even frontier. Exact projected minors prove both saturation suprema equal 256.",
+  "principal_replay_benchmark": {
+    "command": "python3 proof/verify_lane_b_longitudinal_saturation.py",
+    "peak_rss_kib": 401188,
+    "threads": 3,
+    "wall_seconds": 775.45
+  },
+  "record_type": "LANE_B_CANONICAL_COHCHAIN_CLOSURE_AND_SATURATION",
+  "replay": {
+    "artifact_check": "python3 proof/build_cycle6_lane_b_longitudinal_saturation.py --check",
+    "lower": "python3 proof/verify_lane_b_longitudinal_saturation.py",
+    "tests": "python3 -m unittest tests/test_lane_b_cochain_gauge.py -v",
+    "upper": "python3 proof/verify_lane_b_cochain_gauge.py"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle6_lane_b_longitudinal_saturation.py",
+    "sha256": "a186e1588a48ad63604dd610e588478b04324a474491c9c7c11c51466fbdce1d"
+  },
+  "status": "SEALED"
+}

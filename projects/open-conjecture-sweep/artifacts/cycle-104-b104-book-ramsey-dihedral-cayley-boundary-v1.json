@@ -1,0 +1,282 @@
+{
+  "artifact_id": "cycle-104-b104-book-ramsey-dihedral-cayley-boundary-v1",
+  "audit": {
+    "enumerator": {
+      "family": "two-orbit-dihedral-cayley-four-bit",
+      "q23": [],
+      "q7": [
+        {
+          "degree": 0,
+          "hit": false,
+          "mask": 0,
+          "offdiagonal_square_distribution": {
+            "12": 91
+          },
+          "route_agrees": true,
+          "row_ok": false,
+          "square_ok": false
+        },
+        {
+          "degree": 6,
+          "hit": false,
+          "mask": 1,
+          "offdiagonal_square_distribution": {
+            "-12": 49,
+            "12": 42
+          },
+          "route_agrees": true,
+          "row_ok": false,
+          "square_ok": false
+        },
+        {
+          "degree": 1,
+          "hit": false,
+          "mask": 2,
+          "offdiagonal_square_distribution": {
+            "12": 7,
+            "8": 84
+          },
+          "route_agrees": true,
+          "row_ok": false,
+          "square_ok": false
+        },
+        {
+          "degree": 7,
+          "hit": false,
+          "mask": 3,
+          "offdiagonal_square_distribution": {
+            "-12": 7,
+            "-8": 42,
+            "8": 42
+          },
+          "route_agrees": true,
+          "row_ok": true,
+          "square_ok": false
+        },
+        {
+          "degree": 3,
+          "hit": false,
+          "mask": 4,
+          "offdiagonal_square_distribution": {
+            "0": 28,
+            "4": 63
+          },
+          "route_agrees": true,
+          "row_ok": false,
+          "square_ok": false
+        },
+        {
+          "degree": 9,
+          "hit": false,
+          "mask": 5,
+          "offdiagonal_square_distribution": {
+            "-4": 21,
+            "0": 28,
+            "4": 42
+          },
+          "route_agrees": true,
+          "row_ok": false,
+          "square_ok": false
+        },
+        {
+          "degree": 4,
+          "hit": false,
+          "mask": 6,
+          "offdiagonal_square_distribution": {
+            "-4": 21,
+            "0": 28,
+            "4": 42
+          },
+          "route_agrees": true,
+          "row_ok": false,
+          "square_ok": false
+        },
+        {
+          "degree": 10,
+          "hit": false,
+          "mask": 7,
+          "offdiagonal_square_distribution": {
+            "0": 28,
+            "4": 63
+          },
+          "route_agrees": true,
+          "row_ok": false,
+          "square_ok": false
+        },
+        {
+          "degree": 3,
+          "hit": false,
+          "mask": 8,
+          "offdiagonal_square_distribution": {
+            "0": 28,
+            "4": 63
+          },
+          "route_agrees": true,
+          "row_ok": false,
+          "square_ok": false
+        },
+        {
+          "degree": 9,
+          "hit": false,
+          "mask": 9,
+          "offdiagonal_square_distribution": {
+            "-4": 21,
+            "0": 28,
+            "4": 42
+          },
+          "route_agrees": true,
+          "row_ok": false,
+          "square_ok": false
+        },
+        {
+          "degree": 4,
+          "hit": false,
+          "mask": 10,
+          "offdiagonal_square_distribution": {
+            "-4": 21,
+            "0": 28,
+            "4": 42
+          },
+          "route_agrees": true,
+          "row_ok": false,
+          "square_ok": false
+        },
+        {
+          "degree": 10,
+          "hit": false,
+          "mask": 11,
+          "offdiagonal_square_distribution": {
+            "0": 28,
+            "4": 63
+          },
+          "route_agrees": true,
+          "row_ok": false,
+          "square_ok": false
+        },
+        {
+          "degree": 6,
+          "hit": false,
+          "mask": 12,
+          "offdiagonal_square_distribution": {
+            "-12": 7,
+            "-8": 42,
+            "8": 42
+          },
+          "route_agrees": true,
+          "row_ok": false,
+          "square_ok": false
+        },
+        {
+          "degree": 12,
+          "hit": false,
+          "mask": 13,
+          "offdiagonal_square_distribution": {
+            "12": 7,
+            "8": 84
+          },
+          "route_agrees": true,
+          "row_ok": false,
+          "square_ok": false
+        },
+        {
+          "degree": 7,
+          "hit": false,
+          "mask": 14,
+          "offdiagonal_square_distribution": {
+            "-12": 49,
+            "12": 42
+          },
+          "route_agrees": true,
+          "row_ok": true,
+          "square_ok": false
+        },
+        {
+          "degree": 13,
+          "hit": false,
+          "mask": 15,
+          "offdiagonal_square_distribution": {
+            "12": 91
+          },
+          "route_agrees": true,
+          "row_ok": false,
+          "square_ok": false
+        }
+      ],
+      "q7_hits": []
+    },
+    "independent_checker": {
+      "q23_rows": 0,
+      "q7_hits": [],
+      "q7_rows": 16,
+      "status": "PASS"
+    }
+  },
+  "budget_ordinal": "B104",
+  "claim_boundary": "This proves only the finite four-bit D14 class. q=23 was not tested because the frozen conditional rule permits it only after a q=7 hit. It does not exclude exceptional q=7 treatment, arbitrary dihedral connection sets, other character architectures, or the all-n book-Ramsey conjecture.",
+  "cycle": 104,
+  "cycle_decision": {
+    "decision": "Seal and close the four-bit D14 Cayley gate.",
+    "falsifier": "A replayed q=7 mask satisfying the frozen Seidel conditions, or a convolution/adjacency disagreement.",
+    "stop": "Do not add orbit bits or enumerate arbitrary reflection subsets. A continuation must change to a compressed group-ring/autocorrelation invariant with an independently checked Seidel equivalence."
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "check": {
+      "path": "discovery/out/cycle104-book-ramsey-dihedral-cayley/check.json",
+      "sha256": "c7b17a9e88ec5a405e7cf7d0c5c4d29898361fe978c8bfc199e7d63dfd17d3a7"
+    },
+    "checker": {
+      "path": "proof/check_cycle104_book_ramsey_dihedral_cayley.py",
+      "sha256": "dac614a86c60804dc6a7233e235c94cbdc938bf79d349be2ea695f056146ca20"
+    },
+    "engine": {
+      "path": "proof/cycle104_book_ramsey_dihedral_cayley.py",
+      "sha256": "2225c3b285019a7fc3c98bcbd401f6838a6c1a9030c1930f287e7cd446ef36b6"
+    },
+    "oracle_packet": {
+      "path": "discovery/cycle104_oracle_post_result_packet.md",
+      "sha256": "33318aeed8c905031bf64fddd5b128c6995611298971eb5783cf07583a208099"
+    },
+    "preregistration": {
+      "path": "docs/cycle-104-b104-book-ramsey-dihedral-cayley-preregistration-v1.md",
+      "sha256": "ebfa46ec8d4441c83632a669e2e9a4a7a48bfd7fe482dd00ceddfd908bb2afde"
+    },
+    "prior_c103": {
+      "path": "artifacts/cycle-103-b103-book-ramsey-reflection-boundary-correction-v2.json",
+      "sha256": "93ff897b30292baaa3ddde43cf8f97572487c4bf78cde026a2ae834d129f2159"
+    },
+    "replay": {
+      "path": "proof/replay_cycle104_book_ramsey_dihedral_cayley.py",
+      "sha256": "4212bb90229d4b1b5fbd0ee6ef392c42d317af8676067e4bcdd158c577addad4"
+    },
+    "result": {
+      "path": "discovery/out/cycle104-book-ramsey-dihedral-cayley/result.json",
+      "sha256": "7986290b2fef9e06e0233ac13bf2f9809da42df55a1314da9a1089557d2dd145"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    },
+    "validator": {
+      "path": "../../tools/preregistration_check.py",
+      "sha256": "a1d4ef9ce6714c8a774deeb11db7684e7e244ff342f2ee6b8546d57520181359"
+    }
+  },
+  "outcome": "All 16 four-bit inverse-closed D14 Cayley connection sets fail the frozen q=7 Seidel condition; only masks 3 and 14 have row sum -1, and each has a nonpermitted exact off-diagonal S^2 distribution.",
+  "record_type": "FINITE_METHOD_FAMILY_BOUNDARY",
+  "replay": {
+    "check": "python3 proof/build_cycle104_book_ramsey_dihedral_cayley_boundary.py --check",
+    "full": "python3 proof/replay_cycle104_book_ramsey_dihedral_cayley.py",
+    "preflight": "source ../../tools/dev-env.sh && research prereg check docs/cycle-104-b104-book-ramsey-dihedral-cayley-preregistration-v1.md --expected-cycle 104"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle104_book_ramsey_dihedral_cayley_boundary.py",
+    "sha256": "37455b8bbe017d1e45ca6804eee08fd1cf01ce3abd73f613be659fb86f7fd475"
+  },
+  "status": "SEALED"
+}

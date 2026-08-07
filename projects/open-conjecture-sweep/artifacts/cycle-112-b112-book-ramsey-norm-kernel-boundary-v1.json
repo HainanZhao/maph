@@ -1,0 +1,75 @@
+{
+  "artifact_id": "cycle-112-b112-book-ramsey-norm-kernel-boundary-v1",
+  "audit": {
+    "hits": [],
+    "profiles": [
+      [
+        [
+          3,
+          6
+        ],
+        9
+      ],
+      [
+        [
+          4,
+          6
+        ],
+        45
+      ]
+    ],
+    "states": 54,
+    "status": "PASS"
+  },
+  "budget_ordinal": "B112",
+  "claim_boundary": "Only q=7 norm-kernel family; not q=23 or other cross kernels.",
+  "cycle": 112,
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "checker": {
+      "path": "proof/check_cycle112_norm_kernel.py",
+      "sha256": "0df72843507b292e67ee75aff8015e6afcdb2fa41684b3984803b44ae7d54737"
+    },
+    "prereg": {
+      "path": "docs/cycle-112-b112-book-ramsey-norm-kernel-preregistration-v1.md",
+      "sha256": "fbfbde47f482ed16c2a533003435850b01450739f9b91a126b55c1276ec2f4a0"
+    },
+    "prior": {
+      "path": "artifacts/cycle-111-b111-book-ramsey-paley-polarity-boundary-v1.json",
+      "sha256": "98629680c865f10e01d16605ae052d2199bdcdd30b7ee97d354a32757490a1f0"
+    },
+    "proof": {
+      "path": "proof/cycle112_norm_kernel_proof.md",
+      "sha256": "3f34f1f854da8db16e44e78ae566e130011839f11c2bba9f0d1fd6907e12256b"
+    },
+    "replay": {
+      "path": "proof/replay_cycle112_norm_kernel.py",
+      "sha256": "2ca03d42bc5323ae8d0a8125eb8d4d27f61807bbe04f9c80ba8f7cf5cb04aba5"
+    },
+    "result": {
+      "path": "discovery/out/cycle112-norm-kernel-check.json",
+      "sha256": "b3eaf95254618b17dc6f037d24a39bf780f7f4c3d7136064f2a9b482b940a244"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "9494b7693cff5ea537764211fa3a6b980ae96b121fcb35aeb5b13022d550d4e7"
+    }
+  },
+  "outcome": "No q=7 anisotropic norm-kernel state in the declared 54-state family satisfies the asymmetric caps.",
+  "record_type": "FINITE_METHOD_FAMILY_BOUNDARY",
+  "replay": {
+    "check": "python3 proof/build_cycle112_norm_kernel_boundary.py --check",
+    "checker": "python3 proof/check_cycle112_norm_kernel.py",
+    "independent": "python3 proof/replay_cycle112_norm_kernel.py"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle112_norm_kernel_boundary.py",
+    "sha256": "d54ecaf839506331de4d243aba042656681ae51d5e8a5454b3a76c97d62bc9cc"
+  },
+  "status": "SEALED"
+}
