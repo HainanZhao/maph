@@ -5,7 +5,7 @@
 \usepackage[hidelinks]{hyperref}
 \hypersetup{
   pdftitle={An Aligned-Center Recursion for Products of q-Integers},
-  pdfauthor={hainzhao}
+  pdfauthor={Hainan Zhao}
 }
 
 \newtheorem{theorem}{Theorem}
@@ -15,7 +15,7 @@
 \newcommand{\archivedoi}{10.5281/zenodo.21830407}
 
 \title{An Aligned-Center Recursion for Products of $q$-Integers}
-\author{hainzhao}
+\author{Hainan Zhao}
 \date{August 2026\\[4pt]
 \small Proof and source archive:
 \href{https://doi.org/\archivedoi}{doi:\archivedoi}}
@@ -26,9 +26,11 @@
 \begin{abstract}
 Connelly, Ito, Martinez, Shevchenko, and Yang conjectured a sufficient
 condition for the unimodality of
-\(\prod_{i=1}^k[a_i]_q[b]_{q^r}\), and proved necessity in two
-low-dimensional regimes.  We prove their sufficient condition for every
-\(k\geq1\) and \(r\geq2\).  The proof is an induction based on the identity
+\(\prod_{i=1}^k[a_i]_q[b]_{q^r}\), and separately conjectured that the
+condition is necessary when \(k\leq3\) or \(r\leq3\).  We prove the
+sufficient condition for every \(k\geq1\) and \(r\geq2\).  The source's
+example at \(k=r=4\) shows that necessity fails in general, so no necessity
+claim is made here.  The proof is an induction based on the identity
 \[
  [a+r]_q[b+1]_{q^r}
  =q^r[a]_q[b]_{q^r}+[a+r(b+1)]_q.
@@ -62,9 +64,11 @@ then
 is unimodal.  They also conjecture necessity when \(k\leq3\) or
 \(r\leq3\), prove several precursor cases, and verify bounded instances.
 
-We prove the universally quantified sufficient statement in (1).  In
-particular, this settles its first corner beyond both low-dimensional
-regimes, \(k=r=4\), but the argument does not depend on either value.
+The sufficient direction of Conjecture~5.4 was open in general.  We prove it
+for all \(k\geq1\) and \(r\geq2\).  Necessity is a separate question: the
+source itself observes that \(([3]_q)^4[2]_{q^4}\) is unimodal although it
+violates (1) \cite[after Conjecture~5.4]{CIMSY}, so no necessity claim is
+made here.
 
 \begin{theorem}\label{thm:main}
 Let \(r\geq2\), \(k\geq1\), and let \(a_1,\ldots,a_k,b\) be positive
@@ -72,11 +76,9 @@ integers.  If either condition in \emph{(1)} holds, then the polynomial
 \emph{(2)} is symmetric and unimodal.
 \end{theorem}
 
-The condition is not necessary for general \(k,r\).  For example, the
-source observes that \(([3]_q)^4[2]_{q^4}\) is unimodal although it violates
-the inequality in (1) \cite[after Conjecture~5.4]{CIMSY}.  Thus
-Theorem~\ref{thm:main} proves only the sufficient direction and makes no new
-necessity claim.
+The hypothesis \(r\geq2\) is inherited from the source's statement rather
+than used in the proof.  Identity~\emph{(3)} and the argument remain valid
+for \(r=1\), where the divisibility condition is automatic.
 
 \section{Two elementary lemmas}
 
@@ -86,16 +88,19 @@ coefficients weakly increase up to \(C\).  We allow initial and terminal
 zeros; this convention makes translates convenient.
 
 \begin{lemma}\label{lem:closure}
-The product of two nonnegative symmetric unimodal polynomials is symmetric
-unimodal.  A sum of nonnegative symmetric unimodal polynomials having a
-common center is symmetric unimodal.
+If \(F\) and \(G\) are nonnegative symmetric unimodal polynomials about
+centers \(C_1\) and \(C_2\), respectively, then \(FG\) is symmetric
+unimodal about \(C_1+C_2\).  A sum of nonnegative symmetric unimodal
+polynomials having a common center \(C\) is symmetric unimodal about \(C\).
 \end{lemma}
 
 \begin{proof}
 The assertion about sums follows coefficientwise.  For products, decompose
 each symmetric unimodal coefficient sequence into a nonnegative linear
 combination of indicator sequences of nested intervals having the same
-center.  The convolution of two interval indicators is a symmetric
+center.  Unimodality permits zeros only before and after the nonzero support,
+not internally, which licenses this nested-interval decomposition.  The
+convolution of two interval indicators is a symmetric
 trapezoidal sequence, hence unimodal, and all resulting convolutions have
 the sum of the original centers.  Summing them proves the claim.
 \end{proof}
@@ -193,28 +198,43 @@ Theorem~\ref{thm:main}.
 
 \section{Reproducibility and scope}
 
-The identity and induction use no computation.  The accompanying exact
-standard-library replay nevertheless checks (3) by both polynomial
-multiplication and the independent pair partition, checks center alignment
-at every recursive step, and compares the recursive construction with direct
-multiplication over a bounded regression corpus.  From the archive root run
+The identity and induction use no computation.  A companion Python program,
+using only exact integer arithmetic and modules from the Python standard
+library, checks (3) by both polynomial multiplication and the independent
+pair partition, checks center alignment at every recursive step, and compares
+the recursive construction with direct multiplication over a bounded
+regression corpus.  From the archive root run
 \begin{verbatim}
 python3 proof/qanalog_conjecture54_sufficiency.py
 \end{verbatim}
 The bounded corpus is regression evidence only; it is not an assumption in
 the universal proof.
 
-The theorem proves the sufficient direction of Conjecture~5.4 for all
-\(k,r\).  It does not prove the conjectured necessity for \(k\leq3\) or
-\(r\leq3\), does not characterize the additional unimodal products outside
-(1), and does not by itself settle the general \(q\)-Fibonomial unimodality
-conjecture.
+The theorem is a gap-absorption criterion for a product with one lacunary
+factor.  A natural next question is whether there is a two-spacer analogue
+for
+\[
+ \prod_{i=1}^k[a_i]_q\,[b]_{q^r}\,[c]_{q^{r'}},
+\]
+with a recursion whose summands again share a common center.  Width-four
+\(q\)-Fibonomials already involve two coprime spacer steps, 2 and 3, which is
+why Theorem~\ref{thm:main} does not subsume that case.  A two-spacer identity
+would offer a systematic route toward wider \(q\)-Fibonomial coefficients
+rather than a sequence of unrelated case arguments.
 
+\enlargethispage{4\baselineskip}
 \paragraph{AI assistance.}
 The author used AI assistance in developing the proof presentation and its
 verification code.
 
-\bibliographystyle{plain}
-\bibliography{references}
+\begin{thebibliography}{1}
+
+\bibitem{CIMSY}
+Brendan B. Connelly, Ezekiel Ito, Thomas C. Martinez, Olha Shevchenko, and
+Kacey Yang.
+\newblock Unimodality of \(q\)-Fibonomial coefficients for small cases.
+\newblock \emph{arXiv:2605.12822v1 [math.CO]}, May 12, 2026.
+
+\end{thebibliography}
 
 \end{document}

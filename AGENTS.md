@@ -4,6 +4,9 @@ This is the repository-wide instruction file. Root `CLAUDE.md` points here;
 edit only this file. Projects live independently under `projects/*/` and may
 add a narrower `AGENTS.md`.
 
+The author's name is **Hainan Zhao**. Use that full name in manuscripts,
+archives, and publication metadata; do not abbreviate it to a username.
+
 ## 0. Epistemic ground rules
 
 - Distrust the first answer, including the first trust assessment.

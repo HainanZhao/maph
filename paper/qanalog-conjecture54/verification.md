@@ -1,6 +1,6 @@
 # Verification record
 
-Verification date: 2026-08-06 UTC.
+Verification date: 2026-08-07 UTC.
 
 Claim status: `PROVED`. The manuscript proves the sufficient direction of
 Connelly--Ito--Martinez--Shevchenko--Yang Conjecture 5.4 for every `k >= 1`
@@ -23,7 +23,7 @@ Observed output:
 {"claim": "Conjecture 5.4 sufficient direction for all k>=1 and r>=2", "direct_induction_rows": 15163, "direct_polynomials_checked": 15163, "identity_rows_two_routes": 1680, "length_limit": 12, "nonnecessity_scope_example": "([3]_q)^4[2]_(q^4)", "python": "3.12.3", "status": "PASS"}
 ```
 
-Measured principal replay: 2.49 seconds wall time and 12,800 KiB maximum
+Measured principal replay: 2.65 seconds wall time and 12,928 KiB maximum
 resident memory. The exact bounded rows are regression checks, not the basis
 of the universal proof.
 
@@ -38,13 +38,16 @@ of the universal proof.
   subtracting any allocated `r floor(a_i/r)` leaves a positive base length.
 - `PROVED`: the divisibility branch repeats each coefficient of an ordinary
   symmetric unimodal product in a block of length `r`.
+- `PROVED`: the statement transcribed from arXiv:2605.12822v1 has the
+  inclusive inequality `b <= 1 + sum_i floor(a_i/r)`, joined by “or” to the
+  divisibility condition, with no omitted parameter constraint.
 - `OBSERVED`: direct multiplication agrees with the induction for 15,163
   bounded rows across `2 <= r <= 6`, `1 <= k <= 4`, and non-divisible
   lengths at most 12.
 
 ## Manuscript build and hashes
 
-Builder: pdfTeX 3.141592653-2.6-1.40.25, TeX Live 2023/Debian; BibTeX 0.99d.
+Builder: pdfTeX 3.141592653-2.6-1.40.25, TeX Live 2023/Debian.
 The final three-page build completed with no undefined citations or
 references, overfull boxes, underfull boxes, or package warnings. All three
 rendered pages were inspected as images. A subsequent build under the same
@@ -54,12 +57,11 @@ fixed timestamp was byte-identical. The visible proof/source archive DOI is
 ```text
 0c004dcaa80353a5ac6a4849b7149650065a6f569765b2c2b2e96df4dde263a6  proof/qanalog_conjecture54_sufficiency.py
 0c8c327d288c483f13d7097f78e2ca15180d54318a05460c2697fdf6fbab284e  proof/qanalog_conjecture54_sufficiency.md
-05b2d20c7640e890bb5c0aacabd873746efbacc63ceebe040976b9d483f6d3bc  paper/qanalog-conjecture54/main.tex
-83bf726354cdfbdb456a5f4c59652c1550626c222a63d72763f17c8e74eb2a5e  paper/qanalog-conjecture54/references.bib
+c7f8dd492f40cd1b3e9b57976e75cdceecb235cc1d43160376e496423f922507  paper/qanalog-conjecture54/main.tex
 43c930cd70ebdf9baa290461191ac5ed7e23f1f9aff2533ab52809d7226a921b  paper/qanalog-conjecture54/literature-audit.md
-986070e9c937bfb0a843640dcecc6205c2fea9851f1f6fe1ac5220301bd3ebcc  paper/qanalog-conjecture54/hostile-audit.md
-700d56bd8433059fc871e6b85765d9de0610942236097a52eea30d955259e988  paper/qanalog-conjecture54/main.pdf
-ba6d13d528d2adaacb676be2eed688805ac4112678c2f7d7350569379d0a041c  paper/qanalog-conjecture54/README.md
-157c4052069d914499cfaabbb63c9415da9c5f0d7bdf7ae375a1135a4056304d  paper/qanalog-conjecture54/LICENSE.md
-aa7667f26ab3cdda4de8f5a9426ec49cbd73cd02da6fc65a19e76c5ae83cc4ba  paper/qanalog-conjecture54/build_release.py
+6f5336dd67aea17a38264e71aafd6c030c98b4c596b6e8de9ed6ecc7736c1904  paper/qanalog-conjecture54/hostile-audit.md
+97403b00e3169f8533ceb4c51bc640c42a9f0ae0a4256585ea5309a393e8ba77  paper/qanalog-conjecture54/main.pdf
+23a253e11e68cbf07ebcf377c8884f6aedcd5336f9c0b5e46244a11098c6f56b  paper/qanalog-conjecture54/README.md
+d017acb57dbef190cbda3e9a5228dfc7d35a3d7b1f8b304c4e6da18d0ac5c6eb  paper/qanalog-conjecture54/LICENSE.md
+658367c8d7a7edea102bea297041cc5c70c73e02306f5c67ae29de877ec77402  paper/qanalog-conjecture54/build_release.py
 ```

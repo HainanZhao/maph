@@ -19,7 +19,6 @@ ARCHIVE_FILES = {
     "LICENSE.md": PAPER / "LICENSE.md",
     "paper/main.pdf": PAPER / "main.pdf",
     "paper/main.tex": PAPER / "main.tex",
-    "paper/references.bib": PAPER / "references.bib",
     "paper/literature-audit.md": PAPER / "literature-audit.md",
     "paper/hostile-audit.md": PAPER / "hostile-audit.md",
     "paper/verification.md": PAPER / "verification.md",
