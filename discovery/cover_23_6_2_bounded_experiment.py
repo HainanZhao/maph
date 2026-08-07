@@ -164,6 +164,12 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="run the experiment (inert without this explicit switch)",
     )
+    parser.add_argument(
+        "--branches",
+        nargs="+",
+        choices=BRANCHES,
+        help="run only these canonical branches (default: all eleven)",
+    )
     parser.add_argument("--core-hours", type=float)
     parser.add_argument("--wall-hours", type=float)
     parser.add_argument("--prior-core-seconds", type=float, default=0.0)
@@ -187,7 +193,9 @@ def require_executable(path: Path | None, label: str) -> Path:
     return resolved
 
 
-def validate_execution(args: argparse.Namespace) -> tuple[Path, Path, Path]:
+def validate_execution(
+    args: argparse.Namespace,
+) -> tuple[Path, Path, Path, tuple[str, ...]]:
     required = {
         "core-hours": args.core_hours,
         "wall-hours": args.wall_hours,
@@ -215,20 +223,24 @@ def validate_execution(args: argparse.Namespace) -> tuple[Path, Path, Path]:
         raise SystemExit("prior resource use cannot be negative")
     remaining_core = args.core_hours * 3600 - args.prior_core_seconds
     remaining_wall = args.wall_hours * 3600 - args.prior_wall_seconds
+    selected_branches = tuple(args.branches or BRANCHES)
+    if len(set(selected_branches)) != len(selected_branches):
+        raise SystemExit("--branches cannot contain duplicates")
     if remaining_core <= 0 or remaining_wall <= 0:
         raise SystemExit("prior resource use exhausts the fixed allocation")
     if args.max_workers < 1 or args.max_workers > max(1, (os.cpu_count() or 1) - 1):
         raise SystemExit("--max-workers must leave at least one host CPU unused")
-    if args.max_workers * remaining_wall > remaining_core + 1e-9:
+    effective_workers = min(args.max_workers, len(selected_branches))
+    if effective_workers * remaining_wall > remaining_core + 1e-9:
         raise SystemExit(
-            "max-workers * remaining wall time exceeds the remaining core budget"
+            "active workers * remaining wall time exceeds the remaining core budget"
         )
-    screening_waves = math.ceil(len(BRANCHES) / args.max_workers)
+    screening_waves = math.ceil(len(selected_branches) / args.max_workers)
     if screening_waves * args.branch_seconds > remaining_wall:
         raise SystemExit(
             "branch ceiling does not leave enough wall time to screen every branch"
         )
-    if len(BRANCHES) * args.branch_seconds > remaining_core:
+    if len(selected_branches) * args.branch_seconds > remaining_core:
         raise SystemExit(
             "branch ceiling does not fit the aggregate core budget"
         )
@@ -244,7 +256,7 @@ def validate_execution(args: argparse.Namespace) -> tuple[Path, Path, Path]:
             f"disk cap {requested} exceeds free-space-safe cap "
             f"{max(0, free - SYSTEM_DISK_RESERVE)}"
         )
-    return solver, checker, output
+    return solver, checker, output, selected_branches
 
 
 def main() -> None:
@@ -254,7 +266,7 @@ def main() -> None:
         if not args.execute:
             return
 
-    solver, checker, output = validate_execution(args)
+    solver, checker, output, selected_branches = validate_execution(args)
     output.mkdir(parents=False)
     started_utc = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
     experiment_start = time.monotonic()
@@ -289,6 +301,7 @@ def main() -> None:
             str(path.resolve()): sha256(path.resolve()) for path in FROZEN_INPUTS
         },
         "python": os.sys.version,
+        "selected_branches": selected_branches,
         "branches": {},
         "status": "RUNNING",
     }
@@ -298,7 +311,7 @@ def main() -> None:
 
     # CNF construction is sequential so the encoder's transient Python memory
     # is never multiplied by worker count.
-    for branch in BRANCHES:
+    for branch in selected_branches:
         cnf, _ = make_branch(branch)
         cnf_path = output / f"{branch}.cnf"
         cnf.write(cnf_path)
@@ -323,7 +336,9 @@ def main() -> None:
             raise SystemExit("aggregate disk cap reached during CNF construction")
         atomic_json(output / "summary.json", state)
 
-    queued: list[tuple[str, str]] = [(branch, "solve") for branch in BRANCHES]
+    queued: list[tuple[str, str]] = [
+        (branch, "solve") for branch in selected_branches
+    ]
     active: list[Task] = []
     charged_slot_seconds = 0.0
     stop_reason: str | None = None
