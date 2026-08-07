@@ -13,6 +13,15 @@ bounded experiment.
   of plain DRAT across three branches; keeping it would have wasted the fixed
   disk and compute allocation. The continuation conservatively charges 190
   core-seconds and 64 wall-seconds to that tranche.
+- `OBSERVED`: a second 70.4-second binary-proof instrumentation tranche used
+  206.4 charged slot-seconds and produced 951,573,046 output bytes. The final
+  decision-first continuation conservatively charges both tranches together
+  as 405 core-seconds and 140 wall-seconds.
+- The final coordinator first runs all canonical branches without proof
+  logging. A branch returning UNSAT is queued for proof regeneration and
+  independent checking only after the decision screen. This preserves the
+  possibility of finding and directly verifying a cover without making every
+  undecided search pay continuous proof-I/O cost.
 
 ## Independent checker
 
