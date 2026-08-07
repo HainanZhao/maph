@@ -9,7 +9,15 @@ import json
 import subprocess
 from pathlib import Path
 
-from cover_23_6_2_sat import B, K, V, CNF, parse_model, verify
+from cover_23_6_2_sat import (
+    B,
+    K,
+    V,
+    CNF,
+    add_surviving_replication_patterns,
+    parse_model,
+    verify,
+)
 
 
 STAR = [
@@ -45,7 +53,8 @@ def build(point1_degree: int) -> tuple[CNF, list[list[int]]]:
 
     for v in range(V):
         cnf.at_most([-x[b][v] for b in range(B)], B - 5)
-        cnf.at_most([x[b][v] for b in range(B)], 10)
+        cnf.at_most([x[b][v] for b in range(B)], 8)
+    add_surviving_replication_patterns(cnf, x)
     cnf.exactly([x[b][1] for b in range(B)], point1_degree)
     if point1_degree == 5:
         for v in range(18):
