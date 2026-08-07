@@ -1,6 +1,6 @@
 # An Aligned-Center Recursion for Products of q-Integers
 
-Author: hainzhao
+Author: Hainan Zhao
 
 DOI: <https://doi.org/10.5281/zenodo.21830407>
 
@@ -36,8 +36,6 @@ paper.
 From the extracted archive's `paper/` directory, run:
 
 ```sh
-pdflatex -interaction=nonstopmode -halt-on-error main.tex
-bibtex main
 pdflatex -interaction=nonstopmode -halt-on-error main.tex
 pdflatex -interaction=nonstopmode -halt-on-error main.tex
 ```
