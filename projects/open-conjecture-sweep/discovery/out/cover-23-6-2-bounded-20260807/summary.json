@@ -1,0 +1,131 @@
+{
+  "branches": {
+    "222-double-disjoint": {
+      "clauses": 139977,
+      "cnf": "222-double-disjoint.cnf",
+      "cnf_sha256": "1bb4cc92a55e0f9929205e82e00951294649b4bdd63f13d8c1530e63497e673c",
+      "proof": "222-double-disjoint.drat",
+      "solver_log": "222-double-disjoint.solver.log",
+      "status": "SOLVING",
+      "variables": 65228
+    },
+    "222-double-share": {
+      "clauses": 139977,
+      "cnf": "222-double-share.cnf",
+      "cnf_sha256": "bedc6de45f91f5e67f039c71d93fe67ff0be9dc1449ad2e91fdb7ca8b8ede224",
+      "proof": "222-double-share.drat",
+      "solver_log": "222-double-share.solver.log",
+      "status": "SOLVING",
+      "variables": 65228
+    },
+    "222-path": {
+      "clauses": 139856,
+      "cnf": "222-path.cnf",
+      "cnf_sha256": "5d374c3c7fa7763de83c2ec05957b179ee13a9137901db88077389a81078a1af",
+      "status": "QUEUED",
+      "variables": 65207
+    },
+    "222-path-edge": {
+      "clauses": 139856,
+      "cnf": "222-path-edge.cnf",
+      "cnf_sha256": "e1845fbf87d3bede82964c99d01f6df6d2eb85f35789bbbc9ad79443d5b2921d",
+      "status": "QUEUED",
+      "variables": 65207
+    },
+    "222-star": {
+      "clauses": 139856,
+      "cnf": "222-star.cnf",
+      "cnf_sha256": "4a857cdb7f01d9c8e6ebceadc07822ce3d7f5ecedc95974da2c8d1b4f7d3c35f",
+      "status": "QUEUED",
+      "variables": 65207
+    },
+    "222-triangle": {
+      "clauses": 139856,
+      "cnf": "222-triangle.cnf",
+      "cnf_sha256": "eb1bad6fa6c422d30f363f789177348c86b0f730ce621fc4373c7b728b8b9f04",
+      "status": "QUEUED",
+      "variables": 65207
+    },
+    "222-triple": {
+      "clauses": 140098,
+      "cnf": "222-triple.cnf",
+      "cnf_sha256": "454c01c4797168ac79b4098f1d95f06965e460bd73f005d16ced8bdf5dff490d",
+      "status": "QUEUED",
+      "variables": 65249
+    },
+    "32-overlap0": {
+      "clauses": 139977,
+      "cnf": "32-overlap0.cnf",
+      "cnf_sha256": "87db015aef0d906726d0fa836507bca2adc105bfa439aae9749ece8e19e5614a",
+      "status": "QUEUED",
+      "variables": 65228
+    },
+    "32-overlap1": {
+      "clauses": 139977,
+      "cnf": "32-overlap1.cnf",
+      "cnf_sha256": "377bb2ce701aafb45c4746ee8165ae8eccce8bb13a77b8491d6dc22a5380fa85",
+      "status": "QUEUED",
+      "variables": 65228
+    },
+    "32-overlap2": {
+      "clauses": 139977,
+      "cnf": "32-overlap2.cnf",
+      "cnf_sha256": "540bc6dd32ebb1d987b3dd158cd937738e058478510e3cf68d3a40b231ccdacb",
+      "status": "QUEUED",
+      "variables": 65228
+    },
+    "4": {
+      "clauses": 136607,
+      "cnf": "4.cnf",
+      "cnf_sha256": "f24001292d2577a2356a71a9ca8280f1ec523d7478ab6cc49b319567203e92f3",
+      "proof": "4.drat",
+      "solver_log": "4.solver.log",
+      "status": "SOLVING",
+      "variables": 63196
+    }
+  },
+  "caps": {
+    "core_seconds": 86400.0,
+    "disk_bytes": 124554051584,
+    "max_workers": 3,
+    "memory_bytes": 10737418240,
+    "system_disk_reserve_bytes": 5368709120,
+    "wall_seconds": 28800.0
+  },
+  "checker": "/root/projects/maph/discovery/out/toolchain/drat-trim-v05.22.2023/drat-trim",
+  "checker_sha256": "a48ebed7b4b6b373d3ddbeb3368dae7622a9e17bab7fe6eb751ab996757f9fbe",
+  "claim_boundary": "SAT requires direct pair verification; UNSAT requires the external checker; limits or incomplete branches decide neither covering number",
+  "command": [
+    "discovery/cover_23_6_2_bounded_experiment.py",
+    "--execute",
+    "--core-hours",
+    "24",
+    "--wall-hours",
+    "8",
+    "--max-workers",
+    "3",
+    "--memory-gib",
+    "10",
+    "--disk-gib",
+    "116",
+    "--solver",
+    "/usr/bin/cadical",
+    "--checker",
+    "discovery/out/toolchain/drat-trim-v05.22.2023/drat-trim",
+    "--output",
+    "discovery/out/cover-23-6-2-bounded-20260807"
+  ],
+  "finished_utc": "2026-08-07T00:16:18Z",
+  "frozen_inputs": {
+    "/root/projects/maph/discovery/cover_23_6_2_bounded_experiment.py": "b1fb22d2bde7ddb122328a30b0339ca232e87529c6a5922287f002b7c2eab43d",
+    "/root/projects/maph/discovery/cover_23_6_2_encoding.md": "6449d2eaa41d2f92ef8867fb9bf507796f239427444f5cc3f5989a3d59dde618",
+    "/root/projects/maph/discovery/cover_23_6_2_excess_spectral.md": "1dd8ec1aac0e393f095b055c974ee73190abfa91268d06115a1994a377d1350d",
+    "/root/projects/maph/discovery/cover_23_6_2_sat.py": "5571ebcf4b8d57baacd4de62c487ef6875b9bce2b426f5a59311058f54592999",
+    "/root/projects/maph/discovery/cover_23_6_2_star_cases.py": "67e8be55c5d16ccefedde0a4c6723192c6de48af8edb56ceadebb4800bb9253e"
+  },
+  "python": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
+  "solver": "/usr/bin/cadical",
+  "solver_sha256": "7b73df0a6d9cf3c751a1948300e5baff8e82c4d39bcd88f0c063b5f5cfb8b33e",
+  "started_utc": "2026-08-07T00:15:16Z",
+  "status": "INTERRUPTED"
+}

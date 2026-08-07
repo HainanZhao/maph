@@ -1,0 +1,91 @@
+{
+  "branches": {
+    "222-triangle": {
+      "clauses": 139856,
+      "cnf": "222-triangle.cnf",
+      "cnf_sha256": "eb1bad6fa6c422d30f363f789177348c86b0f730ce621fc4373c7b728b8b9f04",
+      "solver_log": "222-triangle.solver.log",
+      "status": "SOLVING",
+      "variables": 65207
+    },
+    "222-triple": {
+      "clauses": 140098,
+      "cnf": "222-triple.cnf",
+      "cnf_sha256": "454c01c4797168ac79b4098f1d95f06965e460bd73f005d16ced8bdf5dff490d",
+      "solver_log": "222-triple.solver.log",
+      "status": "SOLVING",
+      "variables": 65249
+    },
+    "32-overlap0": {
+      "clauses": 139977,
+      "cnf": "32-overlap0.cnf",
+      "cnf_sha256": "87db015aef0d906726d0fa836507bca2adc105bfa439aae9749ece8e19e5614a",
+      "solver_log": "32-overlap0.solver.log",
+      "status": "SOLVING",
+      "variables": 65228
+    }
+  },
+  "caps": {
+    "branch_seconds": 6800,
+    "core_seconds": 86400.0,
+    "disk_bytes": 120259084288,
+    "max_workers": 3,
+    "memory_bytes": 10737418240,
+    "system_disk_reserve_bytes": 5368709120,
+    "wall_seconds": 28800.0
+  },
+  "checker": "/root/projects/maph/discovery/out/toolchain/drat-trim-v05.22.2023/drat-trim",
+  "checker_sha256": "a48ebed7b4b6b373d3ddbeb3368dae7622a9e17bab7fe6eb751ab996757f9fbe",
+  "claim_boundary": "SAT requires direct pair verification; UNSAT requires the external checker; limits or incomplete branches decide neither covering number",
+  "command": [
+    "discovery/cover_23_6_2_bounded_experiment.py",
+    "--execute",
+    "--branches",
+    "222-triangle",
+    "222-triple",
+    "32-overlap0",
+    "--core-hours",
+    "24",
+    "--wall-hours",
+    "8",
+    "--prior-core-seconds",
+    "43300",
+    "--prior-wall-seconds",
+    "14500",
+    "--branch-seconds",
+    "6800",
+    "--max-workers",
+    "3",
+    "--memory-gib",
+    "10",
+    "--disk-gib",
+    "112",
+    "--solver",
+    "/usr/bin/cadical",
+    "--checker",
+    "discovery/out/toolchain/drat-trim-v05.22.2023/drat-trim",
+    "--output",
+    "discovery/out/cover-23-6-2-wave3-20260807"
+  ],
+  "frozen_inputs": {
+    "/root/projects/maph/discovery/cover_23_6_2_bounded_experiment.py": "441e3ab70f470c5b47be4482811b1c8ea4f1a85edfd64c692ffc68f16fbdd6b6",
+    "/root/projects/maph/discovery/cover_23_6_2_encoding.md": "6449d2eaa41d2f92ef8867fb9bf507796f239427444f5cc3f5989a3d59dde618",
+    "/root/projects/maph/discovery/cover_23_6_2_excess_spectral.md": "1dd8ec1aac0e393f095b055c974ee73190abfa91268d06115a1994a377d1350d",
+    "/root/projects/maph/discovery/cover_23_6_2_sat.py": "5571ebcf4b8d57baacd4de62c487ef6875b9bce2b426f5a59311058f54592999",
+    "/root/projects/maph/discovery/cover_23_6_2_star_cases.py": "67e8be55c5d16ccefedde0a4c6723192c6de48af8edb56ceadebb4800bb9253e"
+  },
+  "prior_consumption": {
+    "core_seconds": 43300.0,
+    "wall_seconds": 14500.0
+  },
+  "python": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
+  "selected_branches": [
+    "222-triangle",
+    "222-triple",
+    "32-overlap0"
+  ],
+  "solver": "/usr/bin/cadical",
+  "solver_sha256": "7b73df0a6d9cf3c751a1948300e5baff8e82c4d39bcd88f0c063b5f5cfb8b33e",
+  "started_utc": "2026-08-07T04:19:29Z",
+  "status": "RUNNING"
+}

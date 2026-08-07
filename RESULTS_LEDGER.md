@@ -88,3 +88,22 @@ evidence.
   from repository root.
 - This relocation changes no proof, outcome classification, claim boundary,
   manuscript content, or recorded checksum.
+
+## 2026-08-07 — Exact covering number C(23,6,2)
+
+- Classification: **Outcome C — killed by the fixed eight-hour wall cap**.
+- `PROVED`: the exact reduction partitions every hypothetical 20-block cover
+  into eleven canonical replication-five star cases. Independent orbit,
+  replication-pattern, CNF-primitive, regenerated-DIMACS, manifest, and
+  budget-chain checks pass.
+- `OBSERVED`: CaDiCaL 1.7.3 returned `UNKNOWN_SOLVER_LIMIT` on all eleven
+  cases. The final two each ran for 7,399.00 seconds; the coordinator recorded
+  78,622.98 aggregate charged seconds and 28,800.07 aggregate wall seconds.
+- Evidence: from `projects/open-conjecture-sweep/`, run
+  `python3 proof/verify_cover_23_6_2_bounded_archive.py`; the terminal replay
+  returns `ARCHIVE_TERMINAL_PASS` and derives `WALL_CAP_DERIVED` from the raw
+  numeric meter. The readable record is
+  `discovery/cover_23_6_2_bounded_outcome.md`.
+- Claim boundary: this fixed-budget method found no 20-block cover and did not
+  certify any branch UNSAT. It proves neither `C(23,6,2)=20` nor
+  `C(23,6,2)=21`; the mathematical question remains open.

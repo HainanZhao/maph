@@ -153,3 +153,17 @@ choice, not merely summarize the work.
 - **Next-screen change:** screen future product-unimodality problems first for
   parameter-coupled recursions that decompose into aligned symmetric-unimodal
   summands.
+
+## 2026-08-07 — GOAL topic 1 / C(23,6,2)
+
+- **Stop trigger:** `PROVED` exhaustion of the fixed eight-hour wall cap after
+  all eleven exhaustive symmetry cases returned `UNKNOWN_SOLVER_LIMIT`.
+- **Failed assumption:** the exact star-orbit reduction would make a direct
+  proof-producing SAT partition tractable within 24 aggregate core-hours and
+  eight wall-hours.
+- **Reusable rule:** complete symmetry coverage does not imply affordable
+  decision complexity; a censored exact run supports a method kill, not the
+  likely value of the unresolved invariant.
+- **Next-screen change:** reject any return to `C(23,6,2)` unless a human
+  explicitly selects it with a genuinely new invariant or construction—not a
+  larger resource tranche or another solver on the same eleven CNFs.
