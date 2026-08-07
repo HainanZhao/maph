@@ -165,6 +165,8 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--core-hours", type=float)
     parser.add_argument("--wall-hours", type=float)
+    parser.add_argument("--prior-core-seconds", type=float, default=0.0)
+    parser.add_argument("--prior-wall-seconds", type=float, default=0.0)
     parser.add_argument("--max-workers", type=int)
     parser.add_argument("--memory-gib", type=float)
     parser.add_argument("--disk-gib", type=float)
@@ -200,11 +202,17 @@ def validate_execution(args: argparse.Namespace) -> tuple[Path, Path, Path]:
         for value in (args.core_hours, args.wall_hours, args.memory_gib, args.disk_gib)
     ):
         raise SystemExit("all resource caps must be positive")
+    if args.prior_core_seconds < 0 or args.prior_wall_seconds < 0:
+        raise SystemExit("prior resource use cannot be negative")
+    remaining_core = args.core_hours * 3600 - args.prior_core_seconds
+    remaining_wall = args.wall_hours * 3600 - args.prior_wall_seconds
+    if remaining_core <= 0 or remaining_wall <= 0:
+        raise SystemExit("prior resource use exhausts the fixed allocation")
     if args.max_workers < 1 or args.max_workers > max(1, (os.cpu_count() or 1) - 1):
         raise SystemExit("--max-workers must leave at least one host CPU unused")
-    if args.max_workers * args.wall_hours > args.core_hours + 1e-12:
+    if args.max_workers * remaining_wall > remaining_core + 1e-9:
         raise SystemExit(
-            "max-workers * wall-hours exceeds the aggregate core-hour cap"
+            "max-workers * remaining wall time exceeds the remaining core budget"
         )
     solver = require_executable(args.solver, "solver")
     checker = require_executable(args.checker, "checker")
@@ -241,12 +249,17 @@ def main() -> None:
         "disk_bytes": int(args.disk_gib * GIB),
         "system_disk_reserve_bytes": SYSTEM_DISK_RESERVE,
     }
+    prior = {
+        "core_seconds": args.prior_core_seconds,
+        "wall_seconds": args.prior_wall_seconds,
+    }
     state: dict[str, Any] = {
         "claim_boundary": (
             "SAT requires direct pair verification; UNSAT requires the external "
             "checker; limits or incomplete branches decide neither covering number"
         ),
         "caps": caps,
+        "prior_consumption": prior,
         "started_utc": started_utc,
         "solver": str(solver),
         "solver_sha256": sha256(solver),
@@ -300,10 +313,12 @@ def main() -> None:
     try:
         while queued or active:
             now = time.monotonic()
-            wall_used = now - experiment_start
+            current_wall_used = now - experiment_start
+            wall_used = prior["wall_seconds"] + current_wall_used
             running_charge = sum(now - task.started for task in active)
             compute_used = (
-                charged_slot_seconds
+                prior["core_seconds"]
+                + charged_slot_seconds
                 + running_charge
                 + (time.process_time() - coordinator_cpu_start)
             )
@@ -335,7 +350,6 @@ def main() -> None:
                     log = output / f"{branch}.solver.log"
                     command = [
                         str(solver),
-                        "--no-binary",
                         "-t",
                         str(remaining_wall),
                         str(output / branch_state["cnf"]),
@@ -350,6 +364,8 @@ def main() -> None:
                         str(checker),
                         str(output / branch_state["cnf"]),
                         str(output / branch_state["proof"]),
+                        "-t",
+                        str(remaining_wall),
                     ]
                     branch_state.update({"status": "CHECKING_UNSAT", "checker_log": log.name})
                 task = launch(command, log, branch, kind)
@@ -417,8 +433,27 @@ def main() -> None:
                 break
     except BaseException:
         terminate(active)
+        interrupted_now = time.monotonic()
+        interrupted_slot_seconds = charged_slot_seconds + sum(
+            interrupted_now - task.started for task in active
+        )
         state["status"] = "INTERRUPTED"
         state["finished_utc"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+        state["current_wall_seconds"] = interrupted_now - experiment_start
+        state["aggregate_wall_seconds"] = (
+            prior["wall_seconds"] + state["current_wall_seconds"]
+        )
+        state["current_charged_slot_seconds"] = interrupted_slot_seconds
+        state["aggregate_charged_seconds"] = (
+            prior["core_seconds"]
+            + interrupted_slot_seconds
+            + (time.process_time() - coordinator_cpu_start)
+        )
+        state["known_output_bytes"] = known_bytes(output)
+        state["peak_known_output_bytes"] = max(
+            peak_known_output_bytes, state["known_output_bytes"]
+        )
+        state["peak_rss_bytes"] = peak_rss_bytes
         atomic_json(output / "summary.json", state)
         raise
     finally:
@@ -451,8 +486,17 @@ def main() -> None:
         {
             "status": final_status,
             "finished_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-            "wall_seconds": final_now - experiment_start,
-            "charged_slot_seconds": charged_slot_seconds,
+            "current_wall_seconds": final_now - experiment_start,
+            "aggregate_wall_seconds": (
+                prior["wall_seconds"] + final_now - experiment_start
+            ),
+            "current_charged_slot_seconds": charged_slot_seconds,
+            "aggregate_charged_seconds": (
+                prior["core_seconds"]
+                + charged_slot_seconds
+                + time.process_time()
+                - coordinator_cpu_start
+            ),
             "coordinator_cpu_seconds": time.process_time() - coordinator_cpu_start,
             "known_output_bytes": final_output_bytes,
             "peak_known_output_bytes": peak_known_output_bytes,
