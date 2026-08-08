@@ -82,50 +82,6 @@ representation.  For cubic boxes \(w=n=L\), the remaining bond is
 of the three-dimensional Ising model is obtained.
 \end{abstract}
 
-\begin{center}
-\fbox{\begin{minipage}{.92\textwidth}\small
-\textbf{Revision status.}
-The headline grid upper bound and generic-saturation statements now have
-self-contained arbitrary-width arguments.  Exact finite-field computations
-in this draft are audits, not substitutes for those arguments.  The direct
-local-core replay required by the proof firewall is complete.  Thus the
-mathematical and computational obligations of Phase~0 are closed.  The
-width-three homogeneous-locus theorem and tensor-network translation are also
-complete.  The associated proof/replay archive is identified by the DOI in
-the reproducibility section.
-
-This revision corrects a character-duality error in the first public
-version: the internal-cut proof formerly used the exposed longitude cocycle
-\(\operatorname{PD}(b_i)\), which extracts \(x_i\), where the
-\(\lambda_{b_i}\) character requires the meridian cocycle
-\(\operatorname{PD}(a_i)\), which extracts \(y_i\).  The corrected
-meridian-push-off proof and the contragredient triangular transport are given
-in \cref{lem:grid-exact}; the prior longitude-H3 step is withdrawn.
-
-\medskip
-\textbf{Dependency rule.}
-A statement is pending exactly when its own displayed proof has a named gap,
-or a named logical dependency is pending; finite-field agreement never
-promotes a statement.  The nontrivial dependency graph is
-\[
-\begin{gathered}
- \text{\cref{lem:canonical}}\longrightarrow
- \text{\cref{lem:grid-exact}}\longrightarrow
- \text{\cref{thm:grid-upper}}\longrightarrow
- \text{\cref{thm:grid-tight}},\\
- \text{\cref{lem:encoders}}\longrightarrow
- \text{\cref{lem:XYfull}}\longrightarrow
- \text{\cref{thm:grid-tight}},\\
- \text{\cref{thm:separator}},\text{\cref{lem:phase-telescoping}}
- \longrightarrow\text{\cref{thm:grid-upper}}.
-\end{gathered}
-\]
-\cref{prop:genus} is a parallel geometric calculation, not a premise of the
-compression theorem.  \cref{thm:k33} and \cref{thm:marginals} are independent
-of the grid branch.
-\end{minipage}}
-\end{center}
-
 \section{Introduction}
 
 Let \(G=(V,E)\) be a finite graph with zero magnetic field and couplings
@@ -480,7 +436,11 @@ At cut \(j\), H2 gives
 \end{equation}
 Fix one canonical right continuation for every reachable mask, built from
 the transported joins, and normalize \(L_j\) by evaluating the one global
-phase against that continuation.  If \(p,p'\) are two left paths ending at
+phase against that continuation.  At the endpoints choose the normalization
+\begin{equation}\label{eq:endpoint-normalization}
+ L_0(0,0)=0,\qquad L_N(A,0)=q_0(\pi A).
+\end{equation}
+If \(p,p'\) are two left paths ending at
 the same mask \(m\), \(S\subseteq E_j\) is a common next block ending at
 \(m'\), and \(r\) is a common right continuation, apply
 \eqref{eq:phase-cut-potential} at cuts \(j-1\) and \(j\) to \(p+S+r\) and
@@ -494,10 +454,12 @@ Therefore
 \begin{equation}\label{eq:Q-potential-difference}
  Q_j(S,m,m')=L_j(p+S,m')+L_{j-1}(p,m)
 \end{equation}
-is independent of \(p\).  Its sum telescopes to \(q_0(\pi A)\).  At an
-internal cut, the separate formula \eqref{eq:grid-H2-internal} below is the
-H2 input: H3 turns its sole current \(a_ib_i\) cross term into a function of
-the shared mask.  Hence no hidden history bit occurs in \(Q_j\).
+is independent of \(p\).  At an internal cut, H2 is used in its stated form:
+together with H3 it assigns every cross term to a side potential or to the
+shared mask.  Hence no hidden history bit occurs in \(Q_j\).  Summing
+\eqref{eq:Q-potential-difference} and using
+\eqref{eq:endpoint-normalization} gives exactly \(q_0(\pi A)\), with no
+residual constant.
 
 For the linear character, use the fixed global cocycle \(\gamma_j\).  H1 on
 the earlier prefix and later suffix gives pinned vertex potentials and trace
@@ -812,7 +774,7 @@ classes.  Order first by slab and then lexicographically.
 The classes in \cref{eq:Ais} form a Lagrangian basis
 \(A=(a_1,\ldots,a_g)\) of \(H_1(\Sigma_{n,w};\Ftwo)\).  They admit a nested
 symplectic extension \(B=(b_1,\ldots,b_g)\), and the resulting order
-\((a_1,b_1,\ldots,a_g,b_g)\) is filtration adapted.
+\((a_1,b_1,\ldots,a_g,b_g)\) is nested and slab-supported.
 \end{lemma}
 
 \begin{proof}
@@ -902,9 +864,9 @@ induction that adding a terminal slice leaves every old pair fixed and only
 appends new pairs.  The preliminary duals may be represented by geometric
 longitudes in the corresponding slab collars; the triangular correction
 adds only new co-core meridians.  Thus every new pair remains supported in
-its slab collar.  This support gives the separation property needed for
-filtration adaptation; the actual H1--H3 statements are proved separately in
-\cref{lem:grid-exact}.
+its slab collar.  This proves that the ordering is nested and slab-supported;
+the H1--H3 statements that make it filtration adapted are proved separately
+in \cref{lem:grid-exact}.
 \end{proof}
 
 If a geometric quadratic refinement is chosen as the affine origin, the
@@ -939,7 +901,7 @@ claimed cochain identity.  The choice of component changes \(s_\alpha\) by
 the constant one cochain and leaves its coboundary unchanged.
 \end{proof}
 
-\begin{lemma}[collar push-off]
+\begin{lemma}[collar push-off]\label{lem:collar-push-off}
 Let \(u,u'\) be transverse curves in a ribbon collar that cobound an embedded
 rectangle disjoint from graph vertices.  Their cellular intersection
 cocycles differ by a coboundary.  In particular they induce the same
@@ -1027,7 +989,23 @@ alter only the two side terms and a mask function.
 
 At the midpoint of handle \(i\), take \(a_i\) to be its co-core meridian and
 choose the preliminary \(b_i\) as the longitude drawn in
-\cref{fig:slab-cocores}.  H3 concerns neither the longitude nor
+\cref{fig:slab-cocores}.  The emitted \(\lambda_{a_i}\) character is
+\(\alpha_i=\operatorname{PD}(b_i)\).  Its restriction to the un-emitted side
+is represented by the exposed longitude arc in the planar cut collar.  Push
+that arc slightly off the separator endpoints into the collar.
+\cref{lem:collar-push-off} changes its cellular cocycle only by a coboundary and a fixed
+frontier-trace functional; the pushed-off arc is properly embedded in the
+disk of \eqref{eq:collar-tree}, so \cref{lem:planar-arc} makes the remaining
+cocycle a coboundary.  Thus for every right relative chain \(c\),
+\begin{equation}\label{eq:midpoint-alpha-H1}
+ \langle\alpha_i,c\rangle
+   =\langle\delta s_i^{\alpha},c\rangle
+      +\phi_i^{\alpha}(\tau_Rc).
+\end{equation}
+This is H1 for the current \(\alpha_i\), and in particular its contribution
+to the right-side \(a_i\)-coordinate depends only on the frontier mask.
+
+H3 concerns neither the longitude nor
 \(\operatorname{PD}(b_i)\): by \cref{eq:dual-character-table}, the
 un-emitted \(\lambda_{b_i}\) character is
 \(\beta_i=\operatorname{PD}(a_i)\).
@@ -1041,7 +1019,7 @@ properly embedded arc \(\widehat a_i\) in that disk, with endpoints at the
 two marked separator strands.  Intersecting an edge band with
 \(\widehat a_i\) represents the restriction of
 \(\operatorname{PD}(a_i)\): moving from the meridian to this push-off sweeps
-a rectangle in the collar, so the collar push-off lemma changes the cellular
+a rectangle in the collar, so \cref{lem:collar-push-off} changes the cellular
 representative only by a coboundary.  This is also valid when
 the co-core meets an outer boundary tile, where the push-off is taken into
 the adjacent \(L_j\)-tile.  The complete tile list in
@@ -1077,9 +1055,11 @@ Here \(u_<,z_<\) use completed handles preceding \(i\), while
 partial chain.  The coefficient of \(b_i\) on the exposed un-emitted side is
 exactly \(\rho_i(m)\) by \cref{eq:stokes}; the other two \(b_i\)-terms come
 from the fixed left and completion chains and are likewise functions of
-\(m\).  There is no right-history-dependent \(a_i\)-coefficient: the
-meridian is behind the moving separator, so its right restriction is removed
-by the H1 gauge and its trace contribution is included in \(\xi_i^0(m)\).
+\(m\).  There is no right-history-dependent \(a_i\)-coefficient: the emitted
+longitude-dual character \(\alpha_i=\operatorname{PD}(b_i)\) is H1-exact on
+the right by \eqref{eq:midpoint-alpha-H1}, so the right contribution to the
+\(a_i\)-coordinate is a function of \(m\) and is absorbed into
+\(\xi_i^0(m)\).
 
 The subspaces before and after handle \(i\) are symplectically orthogonal.
 Consequently polarization gives
@@ -1118,6 +1098,8 @@ The corrected basis is symplectic, so the canonical quadratic polynomial is
 \(\sum_jx_jy_j\); in \cref{eq:grid-H2-internal} only the already displayed
 side and mask functions change.  The H1--H3 formulas therefore survive
 passage from the geometric preliminary longitudes to the canonical basis.
+Therefore the nested slab-supported ordering of \cref{lem:canonical} is
+filtration adapted.
 \end{proof}
 
 \begin{theorem}[all-sector grid polynomial tensor train; \proved]\label{thm:grid-upper}
@@ -1127,10 +1109,11 @@ train over \(R=\mathbb Z[t_e:e\in E]\) of bond at most
 \[
  d_w=2^{w^2-1}.
 \]
-Equivalently, every pair and internal flattening has rank over
+In particular, every pair and internal flattening has rank over
 \(\operatorname{Frac}R\) at most \(d_w\).  The statement is valid for
-arbitrary nonuniform edge weights and before the Arf sum.  The exposed-
-longitude support required at internal cuts is supplied uniformly by
+arbitrary nonuniform edge weights and before the Arf sum.  The exposed
+longitude and meridian push-off coboundaries required at internal cuts are
+supplied uniformly by
 \cref{lem:planar-arc} and \cref{lem:grid-exact}.
 \end{theorem}
 
@@ -1189,7 +1172,7 @@ when \(w\) grows with \(n\).
 With \(R_\infty(w)\) defined in \cref{eq:Rinf},
 \cref{thm:grid-upper} gives \(R_\infty(w)\leq d_w\).  We next prove
 the matching generic lower bound.
-The proposed proof uses two different five-layer
+The proof uses two different five-layer
 encoders separated by a two-slab diagonal buffer; attempting to reflect one
 encoder is false and is recorded in \cref{sec:failure}.
 
@@ -1725,7 +1708,7 @@ polynomial, as required by \cref{eq:arf}.
 
 The theorems above are algebraic; finite computation is not used as a
 substitute for the arbitrary-width proofs.  It is used as an independent
-coordinate and implementation firewall.
+coordinate and implementation audit.
 
 \subsection{Validation}
 
@@ -2328,7 +2311,7 @@ bookkeeping obligation.  Together with the four symbolic parent maps and the
 two complete width-four base traces, they prove both encoder invariants for
 every width and complete the proof of \cref{lem:encoders}.
 
-The following generated firewall table records an independent check.  A
+The following generated audit table records an independent check.  A
 normal entry has the form
 \(|I|;|E_{\rm int}|/|\partial I\cap T^0|/|\partial I\cap X^+|\); an
 opposite entry has the form
@@ -2347,7 +2330,7 @@ proof.
 \section{Reproducibility and claim inventory}
 
 The immutable proof/replay archive for this corrected revision is deposited
-at \url{https://doi.org/10.5281/zenodo.21847231}.  It supersedes the first
+at \url{https://doi.org/10.5281/zenodo.21848792}.  It supersedes the first
 public version, \url{https://doi.org/10.5281/zenodo.21845273}, whose
 longitude-H3 step is explicitly withdrawn.  The corrected record contains the main
 paper, a standalone compilable source bundle, a deterministic proof archive,
@@ -2373,7 +2356,7 @@ embedding robustness &
 \texttt{cycle-11-b10-lane-b-embedding-robustness-v2.json}\\
 encoder incidence proof &
 \texttt{cycle-12-b12-encoder-incidence-proof-v2.json}\\
-polynomial grid cores and Phase~0 closure &
+polynomial grid cores &
 \texttt{cycle-13-b13-polynomial-tt-grid-cores-v1.json}\\
 tensor-network translation &
 \texttt{cycle-16-b16-tensor-network-translation-v2.json}\\

@@ -8,6 +8,40 @@ Separator Compression of Cubic-Lattice Ising Strips}
 \begin{document}
 \maketitle
 
+\section{Revision status and dependency ledger}
+
+The headline grid upper bound and generic-saturation statements now have
+self-contained arbitrary-width arguments.  Exact finite-field computations
+are audit firewalls, not substitutes for those arguments.  The direct
+local-core replay and the denominator-free global phase telescoping check are
+complete.
+
+The first public version contained a character-duality error: its
+internal-cut H3 step used the longitude cocycle
+\(\operatorname{PD}(b_i)\), which extracts the \(a_i\)-coordinate, where the
+\(\lambda_{b_i}\) character requires the meridian cocycle
+\(\operatorname{PD}(a_i)\), which extracts the \(b_i\)-coordinate.  The
+corrected proof treats H1 for the exposed longitude and H3 for the pushed-off
+meridian separately.  Under the triangular canonical-basis correction,
+\(\operatorname{PD}(a_i)\) is unchanged.
+
+A statement is promoted only when its own written proof and every named
+dependency are complete; finite-field agreement never promotes it.  The
+nontrivial dependency graph is
+\[
+ \text{canonical basis}\to\text{grid H1--H3}\to
+ \text{polynomial grid TT}\to\text{generic minimality},
+\]
+\[
+ \text{encoder lemma}\to\text{reachability/observability}\to
+ \text{generic minimality},
+ \qquad
+ \text{separator theorem, phase telescoping}\to\text{polynomial grid TT}.
+\]
+The genus calculation is parallel rather than a premise of compression.  The
+\(K_{3,3}\) obstruction and the Walsh-marginal contraction are independent
+of the generic-lower-bound branch.
+
 \section{Noncanonical internal rank}
 
 Before canonical normalization, a raw coordinate tensor at
@@ -35,8 +69,9 @@ different right-observability mechanism.
 \section{Current manuscript consequence}
 
 The main manuscript therefore uses only canonical coordinates, separates
-the normal and opposite encoder constructions, and marks the
-arbitrary-width encoder lemma proof-incomplete until the full contracted
-dual quotient edge sets and width-four bases are printed.
+the normal and opposite encoder constructions, prints the full contracted
+dual quotient incidence data and width-four bases, and treats the exposed
+longitude H1 and pushed-off meridian H3 obligations independently.  The
+superseded longitude-H3 step remains withdrawn.
 
 \end{document}

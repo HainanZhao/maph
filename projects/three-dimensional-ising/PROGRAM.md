@@ -6,8 +6,8 @@
   zero-field ferromagnetic simple-cubic Ising partition function that gives a
   demonstrable structural or complexity reduction and can plausibly control
   the thermodynamic limit.
-- Current stage: Cycle 18 character-duality correction is closed and publicly
-  released at version DOI `10.5281/zenodo.21847231` (concept DOI
+- Current stage: the post-review character-duality correction is closed and
+  publicly released at version DOI `10.5281/zenodo.21848792` (concept DOI
   `10.5281/zenodo.21845272`).  The unsupported original version DOI
   `10.5281/zenodo.21845273` was retracted and now resolves only to a Zenodo
   tombstone.
@@ -66,9 +66,11 @@
   `artifacts/cycle-18-b18-character-duality-correction-v3.json` supersedes its
   two same-cycle sealing corrections.
 - Corrected publication:
-  `artifacts/zenodo-canonical-spin-structure-compression-published-v2.json`.
-  The v1 publication artifact and retracted DOI are unsupported historical
-  records, not replay obligations.
+  `artifacts/zenodo-canonical-spin-structure-compression-published-v3.json`.
+  It supersedes the v2 publication after adding the explicit exposed-longitude
+  H1 proof and telescoping endpoint normalization.  The v1 publication
+  artifact and retracted DOI are unsupported historical records, not replay
+  obligations.
 
 ## Strategic next action
 
