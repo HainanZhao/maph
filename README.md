@@ -3,6 +3,11 @@
 This repository contains independent mathematical research programs. Each
 project is self-contained: run its commands from that project's directory.
 
+Interactive pages are built from the root [`demos/`](demos/) application and
+published together through GitHub Pages. Each research project may register
+one or more independent demo routes without adding a separate deployment
+workflow.
+
 ## Published results
 
 - **`PROVED` — The width-four q-Fibonomial coefficients are unimodal.** For
