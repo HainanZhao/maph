@@ -1,0 +1,74 @@
+{
+  "artifact_id": "cycle-2-b002-frozen-ballistic-transmission-v1",
+  "audit": {
+    "exact_step_barrier": {
+      "ballistic_interface_transmission": "2/3",
+      "barrier_height": 3,
+      "claim_boundary": "Exact step-barrier algebra only; bridge asymptotics remain written proof.",
+      "interface_checks": 2,
+      "left_characteristic_exponent": 1,
+      "ode_coefficient_checks": 6,
+      "status": "PASS"
+    },
+    "scaffold": {
+      "status": "PASS"
+    }
+  },
+  "budget_ordinal": "B002",
+  "claim_boundary": "The potential C is frozen, bounded, nonnegative, and exponentially decaying to the unpopulated side. This does not justify freezing K*u during nonlinear hump formation, prove seed universality, select a wavelength, or prove P1/P2.",
+  "cycle": 2,
+  "cycle_decision": {
+    "abandoned": "The zero-energy scattering fixed point L=z_L; it samples the diffusive spectral edge rather than the ballistic critical ray.",
+    "next_falsifier": "Two admissible nonlinear formation histories with the same proposed hump state but different leading transmission moments.",
+    "surviving_state": "The ballistic transmission function H_C together with the incoming exponentially weighted seed moment."
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "exact_step_audit": {
+      "path": "proof/verify_ballistic_transmission.py",
+      "sha256": "b9a0584543507fa49b70272ad597002648666ae3b8b2b37bb8b0e1f95423a7ca"
+    },
+    "mathematical_record": {
+      "path": "proof/frozen_barrier_ballistic_transmission.md",
+      "sha256": "55bac53a96949c7f5b6aae5f9d7974862d1f1f51309163a1203ea0352b40b91e"
+    },
+    "scaffold_test": {
+      "path": "proof/test_cycle_seal_v1.py",
+      "sha256": "13b7c93eaadba30e33a39aa0ad3e31431af5ec47296aa30e0d6df0639e55be04"
+    },
+    "sealing_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "2061713b05a9c2a64677a7fd504d6c987ecae7ef9cf46da218b803d92b0816d6"
+    }
+  },
+  "outcome": "For q_t=q_xx+(1-C)q, the critical-ray coefficient at x=2t+s is the drift-two survival-weighted moment integral e^y H_C(y) q_0(y)dy. The same weight is an exact generalized moment.",
+  "published_dependency": {
+    "hypothesis_check": "C is continuous and bounded nonnegative, hence the corresponding Schrodinger potential is continuous and bounded below; the generator normalization differs by a factor-two time rescaling.",
+    "identifier": "arXiv:math-ph/9907022",
+    "result": "Theorem 1.1",
+    "source": "Barry Simon, A Feynman-Kac Formula for Unbounded Semigroups",
+    "use": "Brownian-bridge heat-kernel representation only"
+  },
+  "record_type": "THEOREM_AND_METHOD_CORRECTION",
+  "recorded_at_utc": "2026-08-08T13:42:28Z",
+  "replay": {
+    "artifact_check": "python3 proof/build_cycle2_ballistic_transmission.py --check",
+    "exact_step_audit": "python3 proof/verify_ballistic_transmission.py",
+    "scaffold_test": "python3 proof/test_cycle_seal_v1.py"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle2_ballistic_transmission.py",
+    "sha256": "b02d08aa3f74dfbf160c12c63f03f0e3e8a54f320c77e6e7cca4129d4c1d6b39"
+  },
+  "status": "SEALED",
+  "theorem": {
+    "generalized_eigenfunction": "phi_C=exp(x)*H_C; phi_C''+(1-C)*phi_C=2*phi_C",
+    "ray_limit": "sqrt(4*pi*t)*exp(s)*q(t,2*t+s) -> integral exp(y)*H_C(y)*q_0(y)dy",
+    "transmission_ode": "H_C''+2*H_C'-C*H_C=0; H_C(+infinity)=1"
+  }
+}

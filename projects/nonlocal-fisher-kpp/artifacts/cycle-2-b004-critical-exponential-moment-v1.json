@@ -1,0 +1,68 @@
+{
+  "artifact_id": "cycle-2-b004-critical-exponential-moment-v1",
+  "audit": {
+    "exact_coefficients": {
+      "claim_boundary": "Exact coefficient audit only; strictness and integration by parts are written proofs.",
+      "critical_tilts_checked": 3,
+      "status": "PASS",
+      "symmetrizations_checked": 3,
+      "total_exact_checks": 11
+    },
+    "scaffold": {
+      "status": "PASS"
+    }
+  },
+  "budget_ordinal": "B004",
+  "claim_boundary": "Requires a nonzero nonnegative classical solution with finite critical exponential moments. It rules out an exact localized repeating packet at pulled speed, not a front with divergent critical moment, a stationary deposited wake, P1/P2, or any specific wake wavelength.",
+  "cycle": 2,
+  "cycle_decision": {
+    "killed_state": "An exact finite-moment shedding packet that repeats at or above the pulled speed.",
+    "next_gate": "Bound the tilted competition delay over one actual nonlinear hump-formation cycle.",
+    "required_new_ingredient": "Separate the critical leading tail from the localized wake and retain the tilted competition-delay integral."
+  },
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "exact_coefficient_audit": {
+      "path": "proof/verify_critical_exponential_moment.py",
+      "sha256": "8585c0093a9eb85f3c469913aad5207ae4c1229243e422b78f5318ba4a016af2"
+    },
+    "mathematical_record": {
+      "path": "proof/critical_exponential_moment.md",
+      "sha256": "f8fca6a2d40f43696dbd495a5e17c9da0e0124b2175522bd6df0240758bb01ec"
+    },
+    "scaffold_test": {
+      "path": "proof/test_cycle_seal_v1.py",
+      "sha256": "13b7c93eaadba30e33a39aa0ad3e31431af5ec47296aa30e0d6df0639e55be04"
+    },
+    "sealing_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "2061713b05a9c2a64677a7fd504d6c987ecae7ef9cf46da218b803d92b0816d6"
+    }
+  },
+  "outcome": "For the full nonlinear top-hat equation, exp(-2t) integral exp(plus_or_minus x/sqrt(D))u is strictly decreasing, with an explicit positive top-hat pair-interaction dissipation.",
+  "published_dependency": {
+    "doi": "10.1088/0951-7715/27/11/2735",
+    "hypothesis_check": "The radius-one top-hat kernel is nonnegative, has unit mass, and has positive essential infimum on an interval.",
+    "result": "Theorem 1.2",
+    "source": "Hamel and Ryzhik, On the nonlocal Fisher-KPP equation",
+    "use": "global bounded classical solution for bounded nonnegative data"
+  },
+  "record_type": "THEOREM_AND_METHOD_OBSTRUCTION",
+  "recorded_at_utc": "2026-08-08T13:51:06Z",
+  "replay": {
+    "artifact_check": "python3 proof/build_cycle2_critical_exponential_moment.py --check",
+    "exact_coefficient_audit": "python3 proof/verify_critical_exponential_moment.py",
+    "scaffold_test": "python3 proof/test_cycle_seal_v1.py"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle2_critical_exponential_moment.py",
+    "sha256": "281850c780ecd9e28e2f884896a18025b7f04fd9e663f4c58d157f6bdbe30753"
+  },
+  "status": "SEALED",
+  "translation_delay": "If u(t+T,x)=u(t,x-lambda), then lambda/sqrt(D)=2T-integral_0^T tilted_average(K*u)dt, hence lambda/T<2sqrt(D)."
+}

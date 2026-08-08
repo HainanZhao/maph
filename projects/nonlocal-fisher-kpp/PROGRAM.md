@@ -90,8 +90,9 @@ v''+v\left(1-M+\tfrac12\int_{\xi-L}^{\xi+L}v\right)=0,
 
 `CONJECTURED`, conditional on existence: its exact integrated identity is
 \(Q_L=2M(M-1)\), forcing \(1<M<2\), and an exponential tail has
-\(\sigma^2=M-1\).  The primary source appears to omit the square root in the
-corresponding decay-rate display; this is contained pending source audit.
+\(\sigma^2=M-1\). The 2025 publisher's PDF has now been audited: its
+Equation (143) omits the square root required by direct substitution into
+Equation (137). This source correction does not select a wavelength.
 
 Along a ray moving at \(2\sqrt D\), the exact completed-square identity is
 
@@ -104,12 +105,70 @@ Along a ray moving at \(2\sqrt D\), the exact completed-square identity is
 It isolates the nonlinear competition delay from an explicit slope/curvature
 defect and is the current front-matching interface.
 
-## Next action
+`PROVED` for a frozen competition barrier: a zero-energy scattering-length
+closure uses the wrong spectral scale. It was falsified after its numerical
+fixed point had converged: the pulled front is sampled on a ballistic ray and
+therefore probes exponential spatial weight one. For a frozen inner-scale
+competition profile \(C\), the correct collective object is instead the
+positive solution of
 
-Bound the critical-ray slope/curvature defect over one inter-hump interval and
-match the integrated competition trace to the one-sided cumulative profile of
-\(v_L\).  The resulting event law must be level-independent at leading order
-and satisfy the mass/tail and detuning identities.  A surviving \(O(1)\) defect
-or event-level dependence kills this closure.  In parallel, audit the source
-decay-rate discrepancy.  A demo may only follow a genuine theorem or a clearly
-labelled numerical observation.
+\[
+H''+2H'-CH=0,
+\]
+
+or equivalently the generalized eigenfunction
+\(\phi=e^xH\) satisfying \(\phi''+(1-C)\phi=2\phi\). The exact conserved
+quantity for \(q_t=q_{xx}+(1-C)q\) is
+
+\[
+e^{-2t}\int \phi q.
+\]
+
+The frozen-barrier critical-ray theorem identifies a ballistic transmission
+factor as the surviving candidate memory. It also exposes the next
+obstruction: the factor acts on the incoming
+exponentially small seed, so it is not yet a closed function of the previous
+hump alone.
+
+`PROVED` for the full nonlinear equation: the critical exponential moments
+
+\[
+\mathcal E_\pm(t)=e^{-2t}\int e^{\pm x/\sqrt D}u(x,t)\,dx
+\]
+
+are strictly decreasing, with an explicit positive top-hat pair-interaction
+as their dissipation. If a finite-moment state repeats after time $T$ shifted
+by $\lambda$, then
+
+\[
+\frac{\lambda}{\sqrt D}
+=2T-\int_0^T\langle K*u\rangle_{+,t}\,dt,
+\qquad \frac\lambda T<2\sqrt D.
+\]
+
+Thus an exact localized shedding packet cannot itself repeat at the pulled
+speed. The leading tail and deposited wake must be separated, and the tilted
+competition integral is the exact phase-delay quantity to control.
+
+## Terminal gate reached
+
+The campaign's permitted structural-no-go outcome is now met by sealed artifact
+`cycle-2-b004-critical-exponential-moment-v1`. It rules out the concrete broad
+class of nonzero finite-critical-moment states that repeat at or above the
+pulled speed, and it identifies the missing ingredient exactly: a separate
+critical leading tail together with the tilted competition-delay integral.
+
+This does **not** prove P1/P2, a selected wake wavelength, nonlinear seed
+universality, or a thermodynamic/biological prediction. Those remain open
+research directions rather than hidden consequences of the terminal theorem.
+
+## Optional continuation beyond the completed gate
+
+Evaluate or bound the exact tilted competition delay over one formation cycle
+after separating the nonintegrable critical leading tail from the localized
+hump/wake state. Determine whether the incoming generalized moment becomes a
+universal function of the established boundary-layer hump; two full nonlinear
+histories with the same hump state but different leading delay kill the
+one-step map. Any surviving map must also satisfy the mass/tail and detuning
+identities. A demo may only follow a genuine theorem or a clearly labelled
+numerical observation.
