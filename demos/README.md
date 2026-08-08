@@ -23,4 +23,7 @@ npm run build
 ```
 
 GitHub Pages builds set `BASE_PATH=/<repository-name>/`; local development
-uses `/`. Never present an extrapolated benchmark point as measured data.
+uses `/`. The CI build runs on every relevant push. Once GitHub Pages is
+available for the repository, set the repository variable
+`ENABLE_GITHUB_PAGES=true` to enable the upload/deploy jobs. Never present an
+extrapolated benchmark point as measured data.
