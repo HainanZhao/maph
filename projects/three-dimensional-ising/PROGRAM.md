@@ -6,14 +6,16 @@
   zero-field ferromagnetic simple-cubic Ising partition function that gives a
   demonstrable structural or complexity reduction and can plausibly control
   the thermodynamic limit.
-- Current stage: the Lane B paper's Phase 0 proofs and Phase 1 upgrades have
-  reached their prescribed terminal outcomes, and the deterministic release
-  is public at version DOI `10.5281/zenodo.21845273` (concept DOI
-  `10.5281/zenodo.21845272`).
-- Active gate: closed.  The archive was built twice byte-identically, checked
-  after extraction, replayed through the authoritative Cycle 7--17 records,
-  uploaded with verified checksums, and published with the main PDF as the
-  public default preview.
+- Current stage: Cycle 18 character-duality correction is closed and publicly
+  released at version DOI `10.5281/zenodo.21847231` (concept DOI
+  `10.5281/zenodo.21845272`).  The unsupported original version DOI
+  `10.5281/zenodo.21845273` was retracted and now resolves only to a Zenodo
+  tombstone.
+- Closed gate: the arbitrary-width internal-cut proof now uses the correct
+  crossed character table `lambda_a <-> PD(b)`, `lambda_b <-> PD(a)`, and a
+  pushed-off meridian proof for H3.  The affected exact rank and
+  denominator-free-core certificates were replayed independently before the
+  corrected release.
 - `G1` holds for generic independent nonuniform weights: for every `w>=3`,
   `R_infinity(w)=d_w=2^(w^2-1)`, and `n=11` is uniformly sufficient.  The
   lower bound uses separate normal/opposite one-sided encoders and an
@@ -21,7 +23,7 @@
 - The intrinsic separator theorem, sharp toroidal `K_(3,3)` chain corollary,
   all-q Walsh-marginal algorithm, and embedding-robustness classification are
   sealed as Upgrades 2--4.
-- Claim boundary: the complete all-spin-structure tensor has an exact TT/MPS
+- Target claim boundary after correction: the complete all-spin-structure tensor has an exact TT/MPS
   of bond at most `d_w` for arbitrary `n,w` and arbitrary nonuniform edge
   weights in the declared embedding, and this carrier is generically minimal
   for every width.  At width three, one frozen minor remains generically
@@ -60,15 +62,17 @@
   corrected dependency.
 - Optional second-application stop:
   `artifacts/cycle-17-b17-second-application-probe-v1.json`.
-- Publication:
-  `artifacts/zenodo-canonical-spin-structure-compression-published-v1.json`;
-  the earlier draft-reservation artifact remains historical only.
-- Every authoritative artifact's immutable `--check` replay passed in the
-  pinned runtime from the extracted public archive.
+- Character-duality correction:
+  `artifacts/cycle-18-b18-character-duality-correction-v3.json` supersedes its
+  two same-cycle sealing corrections.
+- Corrected publication:
+  `artifacts/zenodo-canonical-spin-structure-compression-published-v2.json`.
+  The v1 publication artifact and retracted DOI are unsupported historical
+  records, not replay obligations.
 
 ## Strategic next action
 
-No in-scope work remains for the paper goal.  Any post-publication manuscript
-or archive change requires a new Zenodo version.  Preserve the limitation
-that the homogeneous result is width three only, the cubic carrier is still
-`2^(L^2-1)`, and the three-dimensional Ising model is not solved.
+No further correction action is open.  Preserve the limitation that the
+homogeneous result is width three only, the cubic carrier is still
+`2^(L^2-1)`, and the three-dimensional Ising model is not solved.  The next
+research question requires an explicit user direction.

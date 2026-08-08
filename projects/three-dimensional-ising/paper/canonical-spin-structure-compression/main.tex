@@ -94,6 +94,14 @@ width-three homogeneous-locus theorem and tensor-network translation are also
 complete.  The associated proof/replay archive is identified by the DOI in
 the reproducibility section.
 
+This revision corrects a character-duality error in the first public
+version: the internal-cut proof formerly used the exposed longitude cocycle
+\(\operatorname{PD}(b_i)\), which extracts \(x_i\), where the
+\(\lambda_{b_i}\) character requires the meridian cocycle
+\(\operatorname{PD}(a_i)\), which extracts \(y_i\).  The corrected
+meridian-push-off proof and the contragredient triangular transport are given
+in \cref{lem:grid-exact}; the prior longitude-H3 step is withdrawn.
+
 \medskip
 \textbf{Dependency rule.}
 A statement is pending exactly when its own displayed proof has a named gap,
@@ -260,6 +268,20 @@ Then
  \qquad
  \Arf(q_\lambda)=\lambda_a\cdot\lambda_b.
 \]
+Write a homology class as
+\(h=\sum_i(x_i a_i+y_i b_i)\), and fix the character-cocycle convention
+\begin{equation}\label{eq:dual-character-table}
+ \alpha_i:=\operatorname{PD}(b_i),\qquad
+ \beta_i:=\operatorname{PD}(a_i),
+ \qquad
+ \langle\alpha_i,h\rangle=x_i,\quad
+ \langle\beta_i,h\rangle=y_i.
+\end{equation}
+Thus \(\lambda_{a_i}\) multiplies the longitude-dual character
+\(\alpha_i\), whereas \(\lambda_{b_i}\) multiplies the meridian-dual
+character \(\beta_i\).  The crossed subscripts in
+\cref{eq:dual-character-table} are forced by the symplectic pairing and are
+part of our convention firewall.
 
 \begin{definition}[complete pre-Arf tensor]\label{def:F}
 Over the polynomial ring \(R=\mathbb Z[t_e:e\in E]\), put
@@ -348,7 +370,8 @@ partial chains,
 
 \item[H3: internal-handle trace.]
 At a cut \(\lambda_{a_i}|\lambda_{b_i}\), the evaluation of the un-emitted
-\(b_i\)-character, represented by the cochain \(\beta_i\), on the exposed
+\(b_i\)-coordinate character, represented by
+\(\beta_i=\operatorname{PD}(a_i)\), on the exposed
 half depends only on its trace: if \(c,c'\)
 are exposed partial chains with \(\tau(c)=\tau(c')=m\), then
 \(\langle\beta_i,c\rangle=\langle\beta_i,c'\rangle\).  Consequently
@@ -487,8 +510,10 @@ A gauge change adds the two endpoint traces and the block coboundary; their
 sum vanishes by Stokes.  Thus \eqref{eq:H-local} is representative
 independent.  At a handle midpoint its trace term is the explicit
 \(\rho_i(m)\) of H3.  The triangular symplectic correction adds only earlier
-meridian cocycles in the same new collar, so their pinned potentials add to
-\(\phi_j^\pm\) and \(\rho_i\), without changing the formula.
+meridian cocycles to the \(\lambda_a\) character in the same new collar, so
+their pinned potentials add to the corresponding \(\phi_j^\pm\).  The
+\(\lambda_b\) cocycle and \(\rho_i\) are unchanged, as shown explicitly in
+\eqref{eq:triangular-character-transport}; hence the formula is preserved.
 
 This proves \eqref{eq:global-telescoping}.  Restriction to the disjoint edge
 blocks is a bijection between even subgraphs and compatible sequences
@@ -914,6 +939,26 @@ claimed cochain identity.  The choice of component changes \(s_\alpha\) by
 the constant one cochain and leaves its coboundary unchanged.
 \end{proof}
 
+\begin{lemma}[collar push-off]
+Let \(u,u'\) be transverse curves in a ribbon collar that cobound an embedded
+rectangle disjoint from graph vertices.  Their cellular intersection
+cocycles differ by a coboundary.  In particular they induce the same
+functional on closed cycles and differ on a relative chain only by a
+function of its boundary trace.
+\end{lemma}
+
+\begin{proof}
+Let \(s\) be the indicator of the graph vertices in the interior side of the
+rectangle swept from \(u\) to \(u'\).  For every edge \(e=vw\), the parity of
+the intersections created or removed during the sweep is one exactly when
+one of \(v,w\) lies on that side and the other does not.  Hence
+\(\gamma_u(e)+\gamma_{u'}(e)=s(v)+s(w)=(\delta s)(e)\).
+Evaluation on a relative chain and discrete Stokes give
+\(\langle\gamma_u+
+\gamma_{u'},c\rangle=\langle s,\partial c\rangle\), which depends only on
+the separator trace.
+\end{proof}
+
 \begin{lemma}[grid relative exactness; \proved]\label{lem:grid-exact}
 Move the transverse separator through the co-cores in the order of
 \cref{lem:canonical}.  At every pair cut and every midpoint cut inside a
@@ -938,22 +983,27 @@ Choose the lexicographic spanning tree of the marked vertices in the collar
 and let \(c_\nu(m)\) be its unique \(m\)-join.  These are the relative-chain
 spaces, trace maps, and completions used below.
 
-For a canonical generator \(u\), represent its character by the cellular
-Poincar\'e-dual cocycle \(\gamma_u\): on a grid edge it is the mod-two
-intersection of that edge band with the fixed meridian or longitude arc in
-the slab collar.  If \(u\) is behind \(\Gamma\), every closed cycle in
-\(G_R(\Gamma)\) has zero intersection with \(u\); hence
-\(\gamma_u\) has zero period on \(\ker\tau_R\).  Choose a collar base vertex
+For each handle use exactly the crossed character convention
+\begin{equation}\label{eq:grid-character-cochains}
+ \alpha_i=\operatorname{PD}(b_i),\qquad
+ \beta_i=\operatorname{PD}(a_i).
+\end{equation}
+On a grid edge these cellular cocycles record mod-two intersection with the
+fixed longitude and meridian, respectively.  Let \(\gamma\) denote whichever
+of \(\alpha_i,\beta_i\) belongs to the spin coordinate under consideration.
+If its representing curve is behind \(\Gamma\), every closed cycle in
+\(G_R(\Gamma)\) has zero intersection with that curve; hence
+\(\gamma\) has zero period on \(\ker\tau_R\).  Choose a collar base vertex
 \(v_*\), paths \(p_v\subset G_R\) from \(v_*\) to every right vertex, and set
 \begin{equation}\label{eq:explicit-s-phi}
- s_u(v)=\langle\gamma_u,p_v\rangle,\qquad
- \phi_u(m)=\langle\gamma_u,c_R(m)\rangle+\langle s_u,m\rangle .
+ s_\gamma(v)=\langle\gamma,p_v\rangle,\qquad
+ \phi_\gamma(m)=\langle\gamma,c_R(m)\rangle+\langle s_\gamma,m\rangle .
 \end{equation}
-Zero periods make \(s_u\) path independent.  For \(c\in P_R\), the chain
+Zero periods make \(s_\gamma\) path independent.  For \(c\in P_R\), the chain
 \(c+c_R(\tau_Rc)\) has zero trace, so
 \[
- \langle\gamma_u,c\rangle
- =\langle\delta s_u,c\rangle+\phi_u(\tau_Rc).
+ \langle\gamma,c\rangle
+ =\langle\delta s_\gamma,c\rangle+\phi_\gamma(\tau_Rc).
 \]
 This is H1 with explicit \(s_u,\phi_u\).  A generator ahead of the separator
 uses the identical construction in \(G_L\).
@@ -977,16 +1027,34 @@ alter only the two side terms and a mask function.
 
 At the midpoint of handle \(i\), take \(a_i\) to be its co-core meridian and
 choose the preliminary \(b_i\) as the longitude drawn in
-\cref{fig:slab-cocores}.  By the disk-collar proof in
-\cref{lem:canonical}, cutting the co-cores leaves precisely the planar disk
-whose tile-incidence tree is \eqref{eq:collar-tree}.  The exposed half of the
-longitude is a properly embedded arc in that disk, including when the
-co-core meets an outer boundary tile.  By \cref{lem:planar-arc}, its cocycle
-is \(\delta s_i\), where \(s_i\) is the indicator of the vertices in the far
+\cref{fig:slab-cocores}.  H3 concerns neither the longitude nor
+\(\operatorname{PD}(b_i)\): by \cref{eq:dual-character-table}, the
+un-emitted \(\lambda_{b_i}\) character is
+\(\beta_i=\operatorname{PD}(a_i)\).
+
+By the disk-collar proof in \cref{lem:canonical}, cutting the co-cores leaves
+precisely the planar disk whose tile-incidence tree is
+\eqref{eq:collar-tree}.  At the midpoint move, the two half-band tiles
+\(S_i^-,S_i^+\) have not yet been re-identified.  A small transverse
+push-off of the exposed copy of the meridian boundary is therefore a
+properly embedded arc \(\widehat a_i\) in that disk, with endpoints at the
+two marked separator strands.  Intersecting an edge band with
+\(\widehat a_i\) represents the restriction of
+\(\operatorname{PD}(a_i)\): moving from the meridian to this push-off sweeps
+a rectangle in the collar, so the collar push-off lemma changes the cellular
+representative only by a coboundary.  This is also valid when
+the co-core meets an outer boundary tile, where the push-off is taken into
+the adjacent \(L_j\)-tile.  The complete tile list in
+\eqref{eq:collar-tree} shows that no other endpoint or component occurs.
+
+By \cref{lem:planar-arc}, the pushed-off meridian cocycle is
+\(\delta s_i\), where \(s_i\) is the indicator of the vertices in the far
 component.  This single argument covers both slab parities, both width
-parities, and every interior, edge, and corner position.  Thus
+parities, and every interior, edge, and corner position.  Hence, for the
+actual \(\lambda_{b_i}\) character,
 \begin{equation}\label{eq:stokes}
- \rho_i(m)=\langle\delta s_i,c\rangle
+ \rho_i(m)=\langle\beta_i,c\rangle
+          =\langle\delta s_i,c\rangle
           =\langle s_i,\partial c\rangle
           =\sum_{v\in\Gamma}s_i(v)m_v .
 \end{equation}
@@ -1032,21 +1100,24 @@ internal cut.
 
 Finally consider the triangular correction in \cref{lem:canonical}.
 Replacing \(\widetilde b_j\) by
-\(b_j=\widetilde b_j+\sum_kU_{kj}a_k\) adds the corresponding cocycles.
-The functions in \eqref{eq:explicit-s-phi} add in \(\Ftwo\), and all
-\(a_k\) in column \(j\) of the strictly upper-triangular correction precede
-\(b_j\) in the same newly attached slab complement.  On the un-emitted side
-their character cochains are H1-exact, so
-\[
- \rho_j(m)=\widetilde\rho_j(m)+\sum_kU_{kj}\phi_{a_k}(m)
-\]
-is still a function only of the frontier mask.  Thus no corrected cocycle
-acquires a period on the opposite relative-cycle space.  The change is
-symplectic, so the canonical quadratic polynomial remains
-\(\sum_jx_jy_j\); in \cref{eq:grid-H2-internal} it only replaces the displayed
-mask functions by their corrected sums.  The H1--H3 formulas therefore
-survive passage from the geometric preliminary longitudes to the canonical
-basis.
+\(b_j=\widetilde b_j+\sum_kU_{kj}a_k\) transforms the character cocycles as
+\begin{equation}\label{eq:triangular-character-transport}
+ \alpha_j=\operatorname{PD}(b_j)
+   =\widetilde\alpha_j+\sum_kU_{kj}\beta_k,
+ \qquad
+ \beta_j=\operatorname{PD}(a_j)=\widetilde\beta_j.
+\end{equation}
+In particular, the H3 cocycle and its function \(\rho_j(m)\) are unchanged,
+not corrected by a longitude term.  Since \(U\) is strictly upper
+triangular, every \(\beta_k\) added to \(\alpha_j\) comes from an earlier
+meridian in the same newly attached slab complement.  Its restriction on
+the un-emitted side is H1-exact, so \eqref{eq:explicit-s-phi} merely adds the
+corresponding trace functions to the \(\lambda_{a_j}\) side factor.  No
+character cocycle acquires a period on the opposite relative-cycle space.
+The corrected basis is symplectic, so the canonical quadratic polynomial is
+\(\sum_jx_jy_j\); in \cref{eq:grid-H2-internal} only the already displayed
+side and mask functions change.  The H1--H3 formulas therefore survive
+passage from the geometric preliminary longitudes to the canonical basis.
 \end{proof}
 
 \begin{theorem}[all-sector grid polynomial tensor train; \proved]\label{thm:grid-upper}
@@ -2275,8 +2346,10 @@ proof.
 \clearpage
 \section{Reproducibility and claim inventory}
 
-The immutable proof/replay archive for this revision is deposited at
-\url{https://doi.org/10.5281/zenodo.21845273}.  The record contains the main
+The immutable proof/replay archive for this corrected revision is deposited
+at \url{https://doi.org/10.5281/zenodo.21847231}.  It supersedes the first
+public version, \url{https://doi.org/10.5281/zenodo.21845273}, whose
+longitude-H3 step is explicitly withdrawn.  The corrected record contains the main
 paper, a standalone compilable source bundle, a deterministic proof archive,
 and a checksum inventory.  The archive was rebuilt twice byte-for-byte and
 tested after extraction before publication.

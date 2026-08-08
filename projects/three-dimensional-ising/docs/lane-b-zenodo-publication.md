@@ -1,13 +1,18 @@
-# Lane B Zenodo publication
+# Lane B Zenodo publication — retracted original version
 
-Published: 2026-08-08
+Published and retracted: 2026-08-08
 
 - Version DOI: `10.5281/zenodo.21845273`
 - Concept DOI: `10.5281/zenodo.21845272`
-- Public record: `https://zenodo.org/records/21845273`
+- Tombstone: `https://zenodo.org/records/21845273`
 - Author: Hainan Zhao
 
-Public files, in lexical preview order:
+This version is unsupported.  Zenodo accepted a retraction request after the
+internal-cut H3 character-duality error was found.  The API returns HTTP 410
+with removal reason `retracted`, and its files are no longer downloadable.
+The corrected supported release is DOI `10.5281/zenodo.21847231`.
+
+The withdrawn inventory was:
 
 | file | bytes | SHA-256 |
 |---|---:|---|
@@ -16,9 +21,5 @@ Public files, in lexical preview order:
 | `02_proof-replay-archive.tar.gz` | 618085 | `b5ca8ba9e64426a8a2438559e8404b134f9fa4e1ec1bbeaea9c4a5f40e5e77cc` |
 | `03_SHA256SUMS.txt` | 310 | `b3c96e241d049e9648828ebd4ee5834e06a14012e7d8a4068114d263b8d86139` |
 
-The public HTML preview iframe points to
-`/records/21845273/preview/00_separator-compression-cubic-lattice-ising-strips.pdf`.
-The deterministic archive was built twice byte-identically, its manifest was
-checked after extraction, the standalone source was compiled after extraction,
-and authoritative Cycle 7--17 records were replayed from the extracted proof
-archive before publication.
+This inventory is retained only to identify the withdrawn files.  It is not a
+current replay or support commitment.
