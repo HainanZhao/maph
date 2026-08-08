@@ -1,0 +1,440 @@
+{
+  "artifact_id": "cycle-13-b13-polynomial-tt-grid-cores-v1",
+  "author": "Hainan Zhao",
+  "benchmark": {
+    "canonical_peak_rss_kib": 339784,
+    "canonical_wall_seconds": 124.260542,
+    "measurement_note": "Recorded from the pre-seal full replay on the pinned runtime; volatile measurements are excluded from deterministic replay."
+  },
+  "budget_ordinal": "B13",
+  "claim_boundary": "The finite replay audits the construction but does not prove arbitrary width; that proof is the frozen telescoping argument. The result removes spin-structure/genus overhead only. For cubic boxes the carrier remains 2^(L^2-1); no thermodynamic or homogeneous-weight conclusion follows.",
+  "cycle": 13,
+  "epistemic_status": "PROVED_WITH_TWO_ROUTE_EXACT_FINITE_FIREWALL",
+  "exact_replay": {
+    "claim_status": "CERTIFIED_NUMERICAL direct polynomial-core firewall",
+    "compilers": {
+      "1000000007": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+      "1000000009": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+    },
+    "construction": "atomic cochains -> one transported layer gauge -> residual two-layer handle groups -> parity-mask convolution cores -> local quadratic Walsh/Gauss transform",
+    "gauss_kernel_scaled": [
+      [
+        1,
+        1,
+        1,
+        -1
+      ],
+      [
+        1,
+        1,
+        -1,
+        1
+      ],
+      [
+        1,
+        -1,
+        1,
+        1
+      ],
+      [
+        -1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "independence": "Direct route uses even-mask convolution and local core actions. Reference route uses spin-slice transfer for every linear character followed by the global quadratic Walsh transform.",
+    "no_final_tensor_factorization": true,
+    "primes": [
+      1000000007,
+      1000000009
+    ],
+    "rows": [
+      {
+        "all_spin_structures": true,
+        "atomic_label_sha256": "a6434582487bd733cc045ed226a007dac09e35c2498cc1fce30841cfb6613b6f",
+        "carrier": 256,
+        "checked_spin_structures": 1024,
+        "core_convention_sha256": "55b5f44a2b2cdd6ab49103524391509317cfec40dde34142dc31138e1c451fc9",
+        "direct_core_matches_independent_reference": true,
+        "evaluation": 0,
+        "genus": 5,
+        "group_handle_counts": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "prime": 1000000007,
+        "shape": [
+          6,
+          3,
+          3
+        ]
+      },
+      {
+        "all_spin_structures": true,
+        "atomic_label_sha256": "a6434582487bd733cc045ed226a007dac09e35c2498cc1fce30841cfb6613b6f",
+        "carrier": 256,
+        "checked_spin_structures": 1024,
+        "core_convention_sha256": "2af969d73c6ceb0cffaab9f5684eb78fb75078beeca26fd5a6dc3864092089d3",
+        "direct_core_matches_independent_reference": true,
+        "evaluation": 1,
+        "genus": 5,
+        "group_handle_counts": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "prime": 1000000007,
+        "shape": [
+          6,
+          3,
+          3
+        ]
+      },
+      {
+        "all_spin_structures": false,
+        "atomic_label_sha256": "20f0b3ef403b82e073e9c17fb7a64bb5c5bc3c8de3c44b672640c58356f39bc9",
+        "carrier": 256,
+        "checked_spin_structures": 83,
+        "core_convention_sha256": "79dbdc28b9e6f6a510789986570d432cc0c39845df003842170b8fac92d2fb6f",
+        "direct_core_matches_independent_reference": true,
+        "evaluation": 0,
+        "genus": 6,
+        "group_handle_counts": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "prime": 1000000007,
+        "shape": [
+          7,
+          3,
+          3
+        ]
+      },
+      {
+        "all_spin_structures": false,
+        "atomic_label_sha256": "20f0b3ef403b82e073e9c17fb7a64bb5c5bc3c8de3c44b672640c58356f39bc9",
+        "carrier": 256,
+        "checked_spin_structures": 83,
+        "core_convention_sha256": "d76683bc29366a412ec134553f2a9d83e25bbabbdb4770b7eac8f3de3cc626e5",
+        "direct_core_matches_independent_reference": true,
+        "evaluation": 1,
+        "genus": 6,
+        "group_handle_counts": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "prime": 1000000007,
+        "shape": [
+          7,
+          3,
+          3
+        ]
+      },
+      {
+        "all_spin_structures": false,
+        "atomic_label_sha256": "a2ed34895463ca3028bb14fa22e23b4db18f21ae9623a8796288c63f26104330",
+        "carrier": 32768,
+        "checked_spin_structures": 80,
+        "core_convention_sha256": "eed83ffb138c6a396a81a7524a092f8753ed66b07acaad4a7b434615ff8263de",
+        "direct_core_matches_independent_reference": true,
+        "evaluation": 0,
+        "genus": 5,
+        "group_handle_counts": [
+          1,
+          3,
+          1
+        ],
+        "prime": 1000000007,
+        "shape": [
+          4,
+          4,
+          4
+        ]
+      },
+      {
+        "all_spin_structures": false,
+        "atomic_label_sha256": "a2ed34895463ca3028bb14fa22e23b4db18f21ae9623a8796288c63f26104330",
+        "carrier": 32768,
+        "checked_spin_structures": 80,
+        "core_convention_sha256": "9e253e869d2386ba08b398f72e5c8723acaec2d9a2c6f727603c8adb177538e4",
+        "direct_core_matches_independent_reference": true,
+        "evaluation": 1,
+        "genus": 5,
+        "group_handle_counts": [
+          1,
+          3,
+          1
+        ],
+        "prime": 1000000007,
+        "shape": [
+          4,
+          4,
+          4
+        ]
+      },
+      {
+        "all_spin_structures": true,
+        "atomic_label_sha256": "a6434582487bd733cc045ed226a007dac09e35c2498cc1fce30841cfb6613b6f",
+        "carrier": 256,
+        "checked_spin_structures": 1024,
+        "core_convention_sha256": "55b5f44a2b2cdd6ab49103524391509317cfec40dde34142dc31138e1c451fc9",
+        "direct_core_matches_independent_reference": true,
+        "evaluation": 0,
+        "genus": 5,
+        "group_handle_counts": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "prime": 1000000009,
+        "shape": [
+          6,
+          3,
+          3
+        ]
+      },
+      {
+        "all_spin_structures": true,
+        "atomic_label_sha256": "a6434582487bd733cc045ed226a007dac09e35c2498cc1fce30841cfb6613b6f",
+        "carrier": 256,
+        "checked_spin_structures": 1024,
+        "core_convention_sha256": "2af969d73c6ceb0cffaab9f5684eb78fb75078beeca26fd5a6dc3864092089d3",
+        "direct_core_matches_independent_reference": true,
+        "evaluation": 1,
+        "genus": 5,
+        "group_handle_counts": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "prime": 1000000009,
+        "shape": [
+          6,
+          3,
+          3
+        ]
+      },
+      {
+        "all_spin_structures": false,
+        "atomic_label_sha256": "20f0b3ef403b82e073e9c17fb7a64bb5c5bc3c8de3c44b672640c58356f39bc9",
+        "carrier": 256,
+        "checked_spin_structures": 83,
+        "core_convention_sha256": "79dbdc28b9e6f6a510789986570d432cc0c39845df003842170b8fac92d2fb6f",
+        "direct_core_matches_independent_reference": true,
+        "evaluation": 0,
+        "genus": 6,
+        "group_handle_counts": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "prime": 1000000009,
+        "shape": [
+          7,
+          3,
+          3
+        ]
+      },
+      {
+        "all_spin_structures": false,
+        "atomic_label_sha256": "20f0b3ef403b82e073e9c17fb7a64bb5c5bc3c8de3c44b672640c58356f39bc9",
+        "carrier": 256,
+        "checked_spin_structures": 83,
+        "core_convention_sha256": "d76683bc29366a412ec134553f2a9d83e25bbabbdb4770b7eac8f3de3cc626e5",
+        "direct_core_matches_independent_reference": true,
+        "evaluation": 1,
+        "genus": 6,
+        "group_handle_counts": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "prime": 1000000009,
+        "shape": [
+          7,
+          3,
+          3
+        ]
+      },
+      {
+        "all_spin_structures": false,
+        "atomic_label_sha256": "a2ed34895463ca3028bb14fa22e23b4db18f21ae9623a8796288c63f26104330",
+        "carrier": 32768,
+        "checked_spin_structures": 80,
+        "core_convention_sha256": "eed83ffb138c6a396a81a7524a092f8753ed66b07acaad4a7b434615ff8263de",
+        "direct_core_matches_independent_reference": true,
+        "evaluation": 0,
+        "genus": 5,
+        "group_handle_counts": [
+          1,
+          3,
+          1
+        ],
+        "prime": 1000000009,
+        "shape": [
+          4,
+          4,
+          4
+        ]
+      },
+      {
+        "all_spin_structures": false,
+        "atomic_label_sha256": "a2ed34895463ca3028bb14fa22e23b4db18f21ae9623a8796288c63f26104330",
+        "carrier": 32768,
+        "checked_spin_structures": 80,
+        "core_convention_sha256": "9e253e869d2386ba08b398f72e5c8723acaec2d9a2c6f727603c8adb177538e4",
+        "direct_core_matches_independent_reference": true,
+        "evaluation": 1,
+        "genus": 5,
+        "group_handle_counts": [
+          1,
+          3,
+          1
+        ],
+        "prime": 1000000009,
+        "shape": [
+          4,
+          4,
+          4
+        ]
+      }
+    ],
+    "runtime": {
+      "implementation": "CPython",
+      "numpy": "1.26.4",
+      "python": "3.12.3"
+    },
+    "weight_rule": "2 + ((hash+1)*104729 + evaluation*13007) mod (p-3)"
+  },
+  "frozen_hashes": {
+    "canonical_dependency": {
+      "path": "proof/verify_lane_b_universal_canonical_ranks.py",
+      "sha256": "d631149c9429d921359a6a67042b0e476cb681b9bc8aa63de42bcac6503662b0"
+    },
+    "conventions": {
+      "path": "src/conventions.py",
+      "sha256": "b6b328f6b7b1725c39f4e4ba4084c275a141189b7efe32e9727c75488d705bb3"
+    },
+    "embedding_dependency": {
+      "path": "src/lane_b_universal_embedding.py",
+      "sha256": "62e57075103f4f2f252f30f9bd1e01c63820656455900b6db0b875e5294ab430"
+    },
+    "failure_ledger": {
+      "path": "discovery/failure-ledger-cycle13.md",
+      "sha256": "18f29ce151056454119bfd04f3948eb650d435135b889ad852dd11f862c82275"
+    },
+    "frontier_dependency": {
+      "path": "proof/verify_lane_b_arbitrary_width_frontier.py",
+      "sha256": "f98f80b203eb93bd0c18deb37e80dbf7cdcbb58237129cba60c42cff3fa73615"
+    },
+    "generated_table": {
+      "path": "paper/canonical-spin-structure-compression/polynomial-core-firewall.tex",
+      "sha256": "9d3c2a35234fd589a6cff00d363f221991acf20998110631e4f62f0dba994019"
+    },
+    "homology_dependency": {
+      "path": "proof/verify_lane_b_genus3.py",
+      "sha256": "1f5a944a1249525ff75b4a471da73e55709de169f0e53d0540ede14b1bb298a4"
+    },
+    "intersection_dependency": {
+      "path": "proof/verify_lane_b_intersection.py",
+      "sha256": "1b6b59d188dfdc033b1c37c0059ee3e068181c458a9da028d0a8e0f1a273abd9"
+    },
+    "label_audit": {
+      "path": "discovery/cycle-13-label-dependency-audit.md",
+      "sha256": "3153df174c08b52248d4345f6f93c49aacbbbe088e1329b1c6cfa1a1b6f5e026"
+    },
+    "phase_tests": {
+      "path": "tests/test_global_phase_telescoping.py",
+      "sha256": "fba5ff275ebae64ba601c87ca3a0f9f0bba781197ff8b2ac957acf4d025b2912"
+    },
+    "phase_verifier": {
+      "path": "proof/verify_global_phase_telescoping.py",
+      "sha256": "7baaa6164f8bd4f1b6d66e47f337a34081953e1f1933a0edd79913556e7bfa91"
+    },
+    "preregistration": {
+      "path": "discovery/cycle-13-polynomial-tt-preregistration.md",
+      "sha256": "4edc2aafff084bebfeb5edb6aa46eb4f68ea3b3fdfc90a931fcb9d87198a405b"
+    },
+    "proof": {
+      "path": "proof/polynomial_tt_telescoping_proof.md",
+      "sha256": "c55df74246996d493579d0bfca300e993b54fe596316212d6e87e31d9d26b399"
+    },
+    "recursive_dependency": {
+      "path": "src/lane_b_recursive_family.py",
+      "sha256": "2c945132811228cb33acc8a98d1602d3e7133c474b219ceaab73a4e8e72b171e"
+    },
+    "requirements": {
+      "path": "requirements.txt",
+      "sha256": "8347daed02ebf7b3c3cfa494e97049b7e0ab15b9af00a5addd843ed44381a64a"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "c4a09e7baa8a5588d4c6855a533eb933c85791707ed9653437644c1e1ad6c163"
+    },
+    "spin_reference": {
+      "path": "proof/lane_b_direct_core_reference.cpp",
+      "sha256": "033e007d006ed32561a0dd721027af2d76f04a02523fbe68e97821ddd66afc04"
+    },
+    "tests": {
+      "path": "tests/test_polynomial_tt_grid_cores.py",
+      "sha256": "c93ade9fa60c26b773070e6ee3c9bec7bda0f4a566efd350abdeebad62ff150a"
+    },
+    "verifier": {
+      "path": "proof/verify_polynomial_tt_grid_cores.py",
+      "sha256": "ce8b69d1d2570e971cd2d3fdce65ea93c40c1372287da448869455e8058b4082"
+    },
+    "width_dependency": {
+      "path": "proof/verify_lane_b_width_scaling.py",
+      "sha256": "2cb86284481e69b26bea8d9f7a52e91664a7b2b7869cdf1915795bef18926ae4"
+    }
+  },
+  "gate_outcome": "PAPER_PHASE0_COMPLETE",
+  "outcome": "One global cochain gauge and phase potential give polynomial-ring all-sector cores of bond 2^(w^2-1). Direct parity-mask core actions agree with an independent spin-slice all-character reference in every declared two-prime, two-evaluation case.",
+  "record_type": "DENOMINATOR_FREE_GRID_TT_AND_PHASE0_CLOSURE",
+  "replay": {
+    "artifact_check": "python3 proof/build_cycle13_polynomial_tt_grid_cores.py --check",
+    "tests": "python3 -m unittest tests/test_polynomial_tt_grid_cores.py tests/test_global_phase_telescoping.py -v",
+    "verification": "python3 proof/verify_polynomial_tt_grid_cores.py"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle13_polynomial_tt_grid_cores.py",
+    "sha256": "1c2cc1a66c356451facaac48249162d4456821f5630c91e7dae66676d3b62e77"
+  },
+  "status": "SEALED",
+  "theorem": {
+    "bond": "2^(w^2-1)",
+    "coefficient_ring": "Z[t_e : e in E]",
+    "edge_counting": "every even subgraph and monomial occurs exactly once",
+    "local_phase": "Q_j + epsilon_j H_j from one global gauge",
+    "physical_indices": "all canonical spin-structure bits before Arf sum"
+  }
+}

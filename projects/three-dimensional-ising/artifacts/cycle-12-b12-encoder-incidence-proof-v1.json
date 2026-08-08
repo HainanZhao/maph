@@ -1,0 +1,275 @@
+{
+  "artifact_id": "cycle-12-b12-encoder-incidence-proof-v1",
+  "author": "Hainan Zhao",
+  "budget_ordinal": "B12",
+  "claim_boundary": "Finite face-walk rows audit but do not prove the arbitrary-width encoder parent recurrences. No homogeneous-weight or thermodynamic claim follows.",
+  "cycle": 12,
+  "epistemic_status": "PROVED_WITH_EXACT_COMBINATORIAL_FIREWALL",
+  "exact_replay": {
+    "claim_boundary": "The symbolic square-boundary identities are arbitrary-width algebraic identities. Widths 4..8 independently audit their placement in the fixed ribbon rotations; the finite rows do not prove the encoder parent recurrences.",
+    "conventions": {
+      "arithmetic": "GF(2) cellular boundary only; no prime specialization enters",
+      "normal_phase": "global checkerboard layers 0..4",
+      "opposite_phase": "global checkerboard layers 1..5 translated to 0..4",
+      "width_firewall": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    "rows": [
+      {
+        "normal": [
+          {
+            "exceptional_boundary_count": 1,
+            "face_count": 3,
+            "gauge_boundary_count": 7,
+            "internal_count": 2,
+            "is_dual_component": true,
+            "name": "I_3",
+            "unclassified_count": 0
+          }
+        ],
+        "opposite": {
+          "applicable": false,
+          "case": "width-four base trace"
+        },
+        "width": 4
+      },
+      {
+        "normal": [
+          {
+            "exceptional_boundary_count": 1,
+            "face_count": 3,
+            "gauge_boundary_count": 7,
+            "internal_count": 2,
+            "is_dual_component": true,
+            "name": "I_3",
+            "unclassified_count": 0
+          }
+        ],
+        "opposite": {
+          "applicable": false,
+          "case": "odd width: no exceptional chord"
+        },
+        "width": 5
+      },
+      {
+        "normal": [
+          {
+            "exceptional_boundary_count": 1,
+            "face_count": 3,
+            "gauge_boundary_count": 7,
+            "internal_count": 2,
+            "is_dual_component": true,
+            "name": "I_3",
+            "unclassified_count": 0
+          },
+          {
+            "exceptional_boundary_count": 1,
+            "face_count": 5,
+            "gauge_boundary_count": 11,
+            "internal_count": 4,
+            "is_dual_component": true,
+            "name": "I_5",
+            "unclassified_count": 0
+          }
+        ],
+        "opposite": {
+          "applicable": true,
+          "case": "even symbolic cut",
+          "components_after_exceptional_deletion": 2,
+          "connected_before_exceptional_deletion": true,
+          "exceptional_boundary_count": 1,
+          "face_count": 49,
+          "gauge_boundary_count": 32,
+          "retained_boundary_count": 3,
+          "unclassified_count": 0
+        },
+        "width": 6
+      },
+      {
+        "normal": [
+          {
+            "exceptional_boundary_count": 1,
+            "face_count": 3,
+            "gauge_boundary_count": 7,
+            "internal_count": 2,
+            "is_dual_component": true,
+            "name": "I_3",
+            "unclassified_count": 0
+          },
+          {
+            "exceptional_boundary_count": 1,
+            "face_count": 5,
+            "gauge_boundary_count": 11,
+            "internal_count": 4,
+            "is_dual_component": true,
+            "name": "I_5",
+            "unclassified_count": 0
+          }
+        ],
+        "opposite": {
+          "applicable": false,
+          "case": "odd width: no exceptional chord"
+        },
+        "width": 7
+      },
+      {
+        "normal": [
+          {
+            "exceptional_boundary_count": 1,
+            "face_count": 3,
+            "gauge_boundary_count": 7,
+            "internal_count": 2,
+            "is_dual_component": true,
+            "name": "I_3",
+            "unclassified_count": 0
+          },
+          {
+            "exceptional_boundary_count": 1,
+            "face_count": 5,
+            "gauge_boundary_count": 11,
+            "internal_count": 4,
+            "is_dual_component": true,
+            "name": "I_5",
+            "unclassified_count": 0
+          },
+          {
+            "exceptional_boundary_count": 2,
+            "face_count": 2,
+            "gauge_boundary_count": 4,
+            "internal_count": 1,
+            "is_dual_component": true,
+            "name": "I_{2,3}",
+            "unclassified_count": 0
+          }
+        ],
+        "opposite": {
+          "applicable": true,
+          "case": "even symbolic cut",
+          "components_after_exceptional_deletion": 2,
+          "connected_before_exceptional_deletion": true,
+          "exceptional_boundary_count": 1,
+          "face_count": 67,
+          "gauge_boundary_count": 43,
+          "retained_boundary_count": 4,
+          "unclassified_count": 0
+        },
+        "width": 8
+      }
+    ],
+    "status": "PROVED symbolic unit-square boundary identities; finite face-walk firewall",
+    "symbolic_patterns": {
+      "normal": [
+        "I_3",
+        "I_5 for W>=6",
+        "I_{2,r} for 3<=r<floor(W/2)"
+      ],
+      "opposite": [
+        "T0: e_z(0,0,0)",
+        "T0: e_y(0,y,0), 0<=y<=W-2",
+        "T0: e_y(0,y,1), odd 1<=y<=W-3",
+        "T0: e_x(x,y,1), 0<=x<=3, 0<=y<W",
+        "X-: e_z(0,W-1,0)",
+        "P-: e_y(4,2j,1), 0<=j<W/2"
+      ]
+    }
+  },
+  "frozen_hashes": {
+    "component_dependency": {
+      "path": "proof/verify_g1_arbitrary_width_generic_tightness.py",
+      "sha256": "4d55b1fc8667261d19ca9e89c276d7763c41c629b336471de519565e5e14e63b"
+    },
+    "conventions": {
+      "path": "src/conventions.py",
+      "sha256": "b6b328f6b7b1725c39f4e4ba4084c275a141189b7efe32e9727c75488d705bb3"
+    },
+    "failure_ledger": {
+      "path": "discovery/failure-ledger-cycle12.md",
+      "sha256": "f95c5ea5e0e09b748370d2e9d51de376c97079cf5ec789d717039a049f3b0c71"
+    },
+    "generated_table": {
+      "path": "paper/canonical-spin-structure-compression/encoder-incidence-firewall.tex",
+      "sha256": "0239b0c12dd90b3ee76885f64898dcad06941ac05488aa2cde9f2e99bde41609"
+    },
+    "generator": {
+      "path": "proof/generate_encoder_incidence_tables.py",
+      "sha256": "8a5bf5c765aeadab8ae606fc3ebe6802be876f491241261b51d81305387bfa3d"
+    },
+    "manuscript": {
+      "path": "paper/canonical-spin-structure-compression/main.tex",
+      "sha256": "77ef57eaa1eb2b3402aa3b844915d0268df03128e67b288e6b4fc9589c474de4"
+    },
+    "normal_exceptional_dependency": {
+      "path": "discovery/audit_g1_explicit_common_basis.py",
+      "sha256": "07d84fe4ab0d6058b95e8e1ac95e047440e2b89c251cf7f6f5a9a39d897f01df"
+    },
+    "opposite_dependency": {
+      "path": "discovery/audit_g1_opposite_explicit_all_width.py",
+      "sha256": "cdfbd0e26ef1d65d0229054556a516d73d41a5317e298e95a0faa653ff9108d4"
+    },
+    "preregistration": {
+      "path": "discovery/cycle-12-encoder-incidence-preregistration.md",
+      "sha256": "2c7ebf6137cd756d41083f87fb8c94ce8c65b1d9d69a9a1804a91ec9a280ed30"
+    },
+    "proof": {
+      "path": "proof/encoder_incidence_proof.md",
+      "sha256": "d6e84f3ad53c1fa04fb7eb7cd59508fb73c515b1d4c410e69297bf4a511f0711"
+    },
+    "requirements": {
+      "path": "requirements.txt",
+      "sha256": "8347daed02ebf7b3c3cfa494e97049b7e0ab15b9af00a5addd843ed44381a64a"
+    },
+    "rotation_dependency": {
+      "path": "src/lane_b_universal_embedding.py",
+      "sha256": "62e57075103f4f2f252f30f9bd1e01c63820656455900b6db0b875e5294ab430"
+    },
+    "scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "c4a09e7baa8a5588d4c6855a533eb933c85791707ed9653437644c1e1ad6c163"
+    },
+    "tests": {
+      "path": "tests/test_encoder_incidence_tables.py",
+      "sha256": "7b48de58ab601790121064a29d9244da4727ff5b3aeb5b231c8433832d1cf6d3"
+    },
+    "tree_dependency": {
+      "path": "proof/verify_g1_buffered_factorization.py",
+      "sha256": "8859db6ae70c2189f6bb3276728d05c383f471f6fada2f48b85e549dcfba725f"
+    }
+  },
+  "gate_outcome": "ENCODER_INCIDENCE_GAP_CLOSED",
+  "outcome": "The normal I3/I5/I2r and even-width opposite C_W cellular boundaries are exact arbitrary-width identities. Widths 4..8 independently agree with face walks in the fixed normal and translated-opposite rotations.",
+  "record_type": "LANE_B_ENCODER_INCIDENCE_PROOF",
+  "replay": {
+    "artifact_check": "python3 proof/build_cycle12_encoder_incidence_proof.py --check",
+    "tests": "python3 -m unittest tests/test_encoder_incidence_tables.py -v",
+    "verification": "python3 proof/generate_encoder_incidence_tables.py --check-tex paper/canonical-spin-structure-compression/encoder-incidence-firewall.tex"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle12_encoder_incidence_proof.py",
+    "sha256": "de5a749c320c0d4b88e4e2b2bfb61555103c1ff693adf10067076432903b41b1"
+  },
+  "status": "SEALED",
+  "theorem": {
+    "modular_arithmetic": "not applicable; GF(2) cellular incidence only",
+    "normal_boundary_classes": [
+      "internal",
+      "T_W^0",
+      "X_W^+"
+    ],
+    "opposite_boundary_classes": [
+      "T_W^0",
+      "X_W^-",
+      "P_W^-"
+    ],
+    "opposite_bridge_components": 2
+  }
+}

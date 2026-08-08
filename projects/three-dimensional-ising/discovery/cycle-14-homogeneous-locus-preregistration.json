@@ -1,0 +1,61 @@
+{
+  "acceptance": {
+    "anisotropic_branch_A": "At least one frozen paired-cycle determinant is nonzero modulo a declared prime, with every declared point replayed over both primes; this proves nonidentity over Z[tx,ty,tz].",
+    "branch_B": "All cheap-gate values zero triggers symbolic elimination or exact interpolation. No finite zero sample is promoted to polynomial identity.",
+    "isotropic_branch_A": "At least one frozen paired-cycle determinant is nonzero modulo a declared prime, with every declared point replayed over both primes; this proves nonidentity over Z[t]."
+  },
+  "author": "Hainan Zhao",
+  "budget_ordinal": "B14",
+  "claim_templates": {
+    "anisotropic_nonzero": "PROVED: for G_(10,3), the frozen paired-cycle minor is nonzero on a nonempty Zariski-open subset of the homogeneous anisotropic locus; hence generic canonical rank is 256 there.",
+    "isotropic_nonzero": "PROVED: for G_(10,3), the frozen paired-cycle minor is nonzero on the isotropic line outside the finite algebraic exceptional set E={t:D_iso(t)=0}; no nonvanishing at every physical temperature is claimed.",
+    "restriction_zero": "PROVED only after symbolic closure: the named frozen minor lies in the vanishing ideal of the stated homogeneous restriction. This is a witness separation, not rank deficiency, unless all maximal minors are shown to vanish."
+  },
+  "cycle": 14,
+  "decision_question": "Does the Cycle 8 frozen 256x256 paired-cycle minor remain a nonzero polynomial on the homogeneous anisotropic and isotropic width-three loci?",
+  "degree_bounds": {
+    "edge_counts_by_axis": {
+      "tx": 81,
+      "ty": 60,
+      "tz": 60
+    },
+    "entry_multidegree_at_most": {
+      "tx": 81,
+      "ty": 60,
+      "tz": 60
+    },
+    "isotropic_determinant_degree_at_most": 51456,
+    "minor_multidegree_at_most": {
+      "tx": 20736,
+      "ty": 15360,
+      "tz": 15360
+    },
+    "minor_size": 256,
+    "total_edges": 201
+  },
+  "fixed_cut": {
+    "handle_cut": 5,
+    "row_and_column_rule": "Exactly the Cycle 8 paired-cycle character sets from the frozen tree, chords, and selected dual coordinates; no post-specialization pivot selection.",
+    "shape": [10, 3, 3],
+    "shift": 10
+  },
+  "fixed_points": {
+    "anisotropic_per_prime": [[2, 3, 5], [7, 11, 13], [17, 19, 23]],
+    "isotropic_per_prime": [2, 3, 5],
+    "point_count_per_prime": 6
+  },
+  "interpolation_branch": {
+    "anisotropic_full_tensor_grid_upper_bound": 4893109176577,
+    "anisotropic_rule": "Do not launch the full Cartesian grid automatically. First seek exact symbolic factorization or a proved lower-degree/sparsity bound; absent such a reduction, classify the frozen-minor identity question unresolved rather than infer identity from samples.",
+    "isotropic_evaluation_upper_bound": 51457,
+    "isotropic_rule": "Degree <=51456, so 51457 exact distinct evaluations determine D_iso(t). Use an earlier stopping rule only after a proved degree reduction or symbolic factorization.",
+    "root_set_rule": "If D_iso is nonzero, the only excluded physical values are the finite algebraic set E=D_iso^{-1}(0) intersect (0,1), of cardinality at most 51456. State 'outside a finite exceptional set', never 'all temperatures'."
+  },
+  "kill_criteria": [
+    "A mismatch in the canonical tensor hash or full-rank profile at the previously certified controls anisotropic (2,3,5) or isotropic t=2 kills the implementation; vanishing of this preselected minor alone does not.",
+    "If the frozen minor vanishes but a different minor is full rank, preserve the witness failure and do not silently change rows.",
+    "All fixed evaluations zero do not prove polynomial identity."
+  ],
+  "primes": [1000000007, 1000000009],
+  "status": "PREREGISTERED"
+}
