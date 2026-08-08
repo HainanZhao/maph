@@ -1,0 +1,60 @@
+{
+  "artifact_id": "cycle-2-b001-local-event-closure-obstruction-v1",
+  "audit": {
+    "exact_arithmetic": {
+      "bump_mass": "1/17920",
+      "critical_ray_checks": 54,
+      "epsilon": "1/7",
+      "level_speed_delta": "-1/125440",
+      "status": "PASS"
+    },
+    "scaffold": {
+      "status": "PASS"
+    }
+  },
+  "budget_ordinal": "B001",
+  "claim_boundary": "Kills exact local-germ-only hump-event closure for arbitrary positive data. It does not rule out an asymptotic map carrying a window profile and proves no wake-selection or P1/P2 statement.",
+  "cycle": 2,
+  "cycle_decision": {
+    "decision": "Abandon exact Markov closure on hump positions/local edge shape; continue Cycle 2 with a nonlocal boundary-layer trace.",
+    "falsifier": "Two positive profiles identical near the level point have level-speed difference -epsilon/17920.",
+    "surviving_state": "Competition trace K*u or a controlled window profile."
+  },
+  "epistemic_status": "CONJECTURED",
+  "frozen_hashes": {
+    "exact_replay": {
+      "path": "proof/verify_local_event_obstruction.py",
+      "sha256": "621df28273abd81a1b9e71e36a5bb7b66f9f8151185d1acd5b428763033a767f"
+    },
+    "mathematical_record": {
+      "path": "proof/cycle2_local_event_obstruction.md",
+      "sha256": "7b4b949275f955758461656b07eaf5780d945811d7222cb447a5766160240f35"
+    },
+    "scaffold_test": {
+      "path": "proof/test_cycle_seal_v1.py",
+      "sha256": "13b7c93eaadba30e33a39aa0ad3e31431af5ec47296aa30e0d6df0639e55be04"
+    },
+    "sealing_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "2061713b05a9c2a64677a7fd504d6c987ecae7ef9cf46da218b803d92b0816d6"
+    }
+  },
+  "outcome": "Equal complete local germs at a regular density level can have different exact level velocities because the top-hat competition trace is not locally determined.",
+  "record_type": "METHOD_OBSTRUCTION",
+  "recorded_at_utc": "2026-08-08T13:08:52Z",
+  "replay": {
+    "artifact_check": "python3 proof/build_cycle2_local_event_obstruction.py --check",
+    "audit": "python3 proof/verify_local_event_obstruction.py",
+    "scaffold_test": "python3 proof/test_cycle_seal_v1.py"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle2_local_event_obstruction.py",
+    "sha256": "9206c8bcb35de9ba775a8ddda76f904b2301bfc6746cd5d4ebd64c64d8a18448"
+  },
+  "status": "SEALED"
+}

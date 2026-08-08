@@ -73,10 +73,43 @@ wake-selection rule using only pulled-front linearization at \(u=0\) can be
 correct across the top-hat-radius family.  Kernel information must enter
 through the populated state or nonlinear competition memory.
 
+The exact logarithmic level law further gives a Gate-2 obstruction.  Two
+positive profiles can have the same complete local germ at a prospective hump
+level but different top-hat window masses, hence different instantaneous level
+velocities.  A position/local-shape-only event map is therefore killed; the
+minimum instantaneous state must retain the competition trace \(K*u\), whose
+own evolution is still spatially nonlocal.
+
+The surviving small-\(D\) state is the scaled window profile \(v\) with
+\(\lambda=1+\sqrt D\,L\).  The translated boundary-layer equation is
+
+\[
+v''+v\left(1-M+\tfrac12\int_{\xi-L}^{\xi+L}v\right)=0,
+\qquad M=\int_{\mathbb R}v.
+\]
+
+`CONJECTURED`, conditional on existence: its exact integrated identity is
+\(Q_L=2M(M-1)\), forcing \(1<M<2\), and an exponential tail has
+\(\sigma^2=M-1\).  The primary source appears to omit the square root in the
+corresponding decay-rate display; this is contained pending source audit.
+
+Along a ray moving at \(2\sqrt D\), the exact completed-square identity is
+
+\[
+\frac d{dt}\log u
+=D(\log u)_{xx}
++D\bigl((\log u)_x+D^{-1/2}\bigr)^2-K*u.
+\]
+
+It isolates the nonlinear competition delay from an explicit slope/curvature
+defect and is the current front-matching interface.
+
 ## Next action
 
-Derive a front-formation law for the detuning \(\lambda-1\), using the Cycle 2
-inequality as a mandatory consistency condition, while independently auditing
-the commensurability and kernel-blind no-go arguments for promotion.  The local
-Turing branch is `RECOGNIZED` as existing literature, not a new bridge.  A demo
-may only follow a genuine theorem or a clearly labelled numerical observation.
+Bound the critical-ray slope/curvature defect over one inter-hump interval and
+match the integrated competition trace to the one-sided cumulative profile of
+\(v_L\).  The resulting event law must be level-independent at leading order
+and satisfy the mass/tail and detuning identities.  A surviving \(O(1)\) defect
+or event-level dependence kills this closure.  In parallel, audit the source
+decay-rate discrepancy.  A demo may only follow a genuine theorem or a clearly
+labelled numerical observation.

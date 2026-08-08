@@ -232,6 +232,242 @@ wake period from pulled-front linearization at $u=0$ alone. The required new
 input is now explicit: populated-state instability or the nonlinear
 competition trace left by earlier humps.
 
+## Front-event map: exact local-state obstruction
+
+### Dependent decision question
+
+Can a hump-formation event be propagated from the position and local shape of
+the exponentially small leading edge, without retaining a nonlocal
+competition trace?
+
+- **Input state:** a regular level $u(X(t),t)=\theta>0$ and any finite local
+  jet—or even the complete local germ—of $u$ at $X(t)$.
+- **Transition:** the instantaneous level velocity.
+- **Smallest verifier:** two positive initial profiles identical near the
+  level point but differing by one compact $C^2$ bump inside its top-hat
+  window.
+- **Advance condition:** an exact closed velocity functional of the proposed
+  local state.
+- **Falsifier:** equal proposed states with unequal level velocities.
+- **Stop criterion:** one exact counterexample kills only local-event closure;
+  it does not rule out an asymptotic map carrying a competition-memory state.
+
+For $W=\log u$, the PDE gives the exact identity
+
+\[
+W_t=D(W_{xx}+W_x^2)+1-K*u.
+\tag{7}
+\]
+
+At a regular level $W(X(t),t)=\log\theta$,
+
+\[
+X'(t)=-\frac{D(W_{xx}+W_x^2)+1-(K*u)(X(t),t)}{W_x}.
+\tag{8}
+\]
+
+`CONJECTURED` under the repository promotion policy, with a complete
+elementary counterexample now recorded: no exact event law depending only on
+the local germ at $X$ can reproduce (8) for all positive smooth data.
+
+Take $X=0$ and
+
+\[
+u_0(x)=2-\frac{x}{1+x^2}.
+\]
+
+Then $u_0>0$, $u_0(0)=2$, $u_0'(0)=-1$, and $u_0''(0)=0$. Let
+
+\[
+h(x)=\begin{cases}
+((x-\tfrac14)(\tfrac34-x))^3,&x\in[\tfrac14,\tfrac34],\\
+0,&\text{otherwise},
+\end{cases}
+\qquad u_\varepsilon=u_0+\varepsilon h.
+\]
+
+The bump is $C^2$, is zero on a neighborhood of zero, and satisfies
+
+\[
+\int h(x)\,dx=\frac1{17920}.
+\]
+
+Thus $u_0$ and $u_\varepsilon$ have identical local germs at the level point,
+but
+
+\[
+(K*u_\varepsilon)(0)-(K*u_0)(0)
+=\frac{\varepsilon}{35840}.
+\]
+
+Their vector fields at zero differ by $-\varepsilon/17920$, and because
+their common spatial derivative is $-1$, their level velocities also differ
+by
+
+\[
+X_\varepsilon'(0)-X_0'(0)=-\frac{\varepsilon}{17920}.
+\tag{9}
+\]
+
+For sufficiently small $\varepsilon>0$, both profiles remain positive and
+the level near zero remains regular. This is the Gate-2 kill condition for a
+position/local-shape-only map.
+
+Equation (8) also identifies the smallest missing instantaneous observable:
+
+\[
+C(X,t)=(K*u)(X,t).
+\]
+
+But this scalar is not dynamically closed. Direct differentiation gives
+
+\[
+C_t=D C_{xx}+K*\bigl[u(1-C)\bigr],
+\tag{10}
+\]
+
+so propagating $C(X,t)$ requires spatial competition information, not merely
+its current value. The surviving route is therefore an **asymptotic**
+front-memory closure with a controlled window profile or boundary layer;
+an exact Markov map on hump positions and local edge shape is killed.
+
+## Surviving asymptotic state: the scaled window profile
+
+`RECOGNIZED`: in the radius-$1/2$ normalization, Needham et al. derive a
+small-diffusion steady boundary-layer equation when
+$\lambda=\tfrac12+\sqrt D\,L$. Translating their spatial and diffusivity
+normalization to this project's radius-one kernel gives
+
+\[
+\lambda=1+\sqrt D\,L,\qquad
+u(x)=D^{-1/2}v(x/\sqrt D)+o(D^{-1/2}),
+\]
+
+and the candidate even profile equation
+
+\[
+v''+v\left(
+1-M+\frac12\int_{\xi-L}^{\xi+L}v(s)\,ds
+\right)=0,
+\qquad
+M=\int_{\mathbb R}v(s)\,ds.
+\tag{11}
+\]
+
+The existence and uniqueness of a positive decaying solution of (11) for
+each $L>0$ are only `OBSERVED` numerically in the cited paper after
+normalization; they are not assumed here.
+
+### Conditional mass theorem
+
+`CONJECTURED` under the repository promotion policy, with a self-contained
+calculation: every positive, even, integrable $C^2$ solution of (11) with
+$v'(\pm\infty)=0$ satisfies
+
+\[
+Q_L=2M(M-1),\qquad
+Q_L=\iint_{|x-y|\le L}v(x)v(y)\,dx\,dy,
+\tag{12}
+\]
+
+and therefore
+
+\[
+1<M<2.
+\tag{13}
+\]
+
+To prove (12), integrate (11) over the line. The $v''$ term vanishes,
+the constant term contributes $(1-M)M$, and Tonelli's theorem identifies
+the remaining term with $Q_L/2$. Positivity gives $Q_L>0$, hence $M>1$.
+Because $v$ is positive on the line and $L<\infty$, the complementary
+double integral over $|x-y|>L$ is strictly positive, so $Q_L<M^2$.
+Substitution into (12) gives $M<2$.
+
+If $v(\xi)\sim A e^{-\sigma\xi}$ as $\xi\to+\infty$, the moving-window
+integral vanishes in the limit and (11) gives
+
+\[
+\sigma^2=M-1,\qquad 0<\sigma<1.
+\tag{14}
+\]
+
+Thus the minimal asymptotic memory can be parameterized by a full window
+profile, while its total mass and tail exponent are constrained by (12)--(14).
+This does not yet determine $L$; it supplies exact acceptance tests for a
+front-matching law.
+
+### Literature discrepancy firewall
+
+`RECOGNIZED`: Equation (5.97) of the primary source writes the tail as
+$e^{-\sigma_\infty\xi}$, while its displayed Equation (5.98), in the
+radius-$1/2$ variables, states $\sigma_\infty=4\int_0^\infty v-1$.
+Direct substitution into its own far-field differential equation instead
+gives
+
+\[
+\sigma_\infty^2=4\int_0^\infty v-1.
+\]
+
+Unless a convention is missing from the display, the square root is absent.
+This discrepancy affects the reported tail rate, not the derivation of
+Equation (11) or the exact identities (12)--(14). No correction or novelty
+claim is promoted until the journal version and author conventions receive
+an independent audit.
+
+## Exact critical-ray identity: a controlled front-matching target
+
+Let $X(t)=X_0+2\sqrt D\,(t-t_0)$ and retain $W=\log u$ and
+$C=K*u$. Combining (7) with the chain rule gives the exact identity
+
+\[
+\frac d{dt}W(X(t),t)
+=D W_{xx}
+ +D\left(W_x+D^{-1/2}\right)^2-C
+\quad\text{at }(X(t),t).
+\tag{15}
+\]
+
+Equivalently, for $t_1>t_0$,
+
+\[
+W(X(t_1),t_1)-W(X(t_0),t_0)
+=-\int_{t_0}^{t_1}C(X(t),t)\,dt
+ +\mathcal E_{t_0,t_1},
+\tag{16}
+\]
+
+where
+
+\[
+\mathcal E_{t_0,t_1}
+=\int_{t_0}^{t_1}
+\left[D W_{xx}
+ +D\left(W_x+D^{-1/2}\right)^2\right](X(t),t)\,dt.
+\tag{17}
+\]
+
+`CONJECTURED` as a route, not as a concluded estimate: if the leading edge
+can be shown to retain critical slope $W_x=-D^{-1/2}+o(D^{-1/2})$, its
+integrated curvature is controlled, and the competition trace converges in
+the edge scale to the one-sided cumulative profile generated by $v_L$, then
+(16) becomes a scalar phase-delay law. Matching that delay between
+consecutive formation events is the first mechanism in this cycle capable of
+determining $L=(\lambda-1)/\sqrt D$ while retaining the required nonlinear
+memory.
+
+The acceptance conditions are now quantitative:
+
+1. bound $\mathcal E_{t_0,t_1}$ uniformly on the inter-event interval;
+2. prove a trace approximation for $C(X(t),t)$ in terms of $v_L$;
+3. define formation events by a fixed regular log-density level and show the
+   resulting $L$ is level-independent at leading order;
+4. verify that the resulting $L$ obeys (6) and the mass/tail constraints
+   (12)--(14).
+
+A surviving $O(1)$ curvature defect, a noncritical edge slope, or leading
+dependence on the chosen event level falsifies this phase-delay closure.
+
 ## Failure ledger
 
 - **False first-replay step:** for $r<0$, the deleted residual tail was
