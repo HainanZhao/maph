@@ -4,9 +4,14 @@
 \usepackage{amsmath,amssymb,amsthm,mathtools}
 \usepackage{booktabs,array,longtable,microtype}
 \usepackage[hidelinks]{hyperref}
+\IfFileExists{cleveref.sty}{%
+  \usepackage[nameinlink,noabbrev]{cleveref}%
+}{%
+  \newcommand{\cref}[1]{\autoref{##1}}%
+}
 
 \hypersetup{
-  pdftitle={Separator compression of the complete spin-structure family for cubic Ising strips},
+  pdftitle={Separator compression of the complete spin-structure family for cubic-lattice Ising strips},
   pdfauthor={Hainan Zhao}
 }
 
@@ -27,7 +32,6 @@
 \newcommand{\im}{\operatorname{im}}
 \newcommand{\supp}{\operatorname{supp}}
 \newcommand{\Zar}{\operatorname{Zar}}
-\newcommand{\cref}[1]{\ref{#1}}
 \newcommand{\claimtag}[1]{\textsc{#1}}
 \newcommand{\proved}{\claimtag{Proved}}
 \newcommand{\certified}{\claimtag{Certified\_Numerical}}
@@ -35,7 +39,7 @@
 \newcommand{\conjectured}{\claimtag{Conjectured}}
 
 \title{Separator Compression of the Complete Spin-Structure Family\\
-for Cubic Ising Strips}
+for Cubic-Lattice Ising Strips}
 \author{Hainan Zhao}
 \date{August 2026}
 
@@ -63,8 +67,9 @@ we construct an explicit nested checkerboard ribbon embedding and a canonical
 handle ordering satisfying these hypotheses with \(|S|=w^2\).  Hence the
 entire \(4^g\)-entry spin-structure family has an exact tensor train of bond at
 most \(d_w=2^{w^2-1}\), over the polynomial ring in arbitrary edge weights.
-We then prove that this bound is generically sharp for independent nonuniform
-weights for every \(w\geq3\); \(n=11\) is uniformly sufficient.  Thus surface
+We then prove that, for independent nonuniform weights and every \(w\geq3\),
+some canonical cut generically attains this bound; \(n=11\) is uniformly
+sufficient.  Thus surface
 genus creates no additional exact bond dimension beyond the ordinary
 zero-field transverse carrier, but that carrier is itself generically
 minimal.  We also give a non-grid toroidal \(K_{3,3}\) chain showing that the
@@ -114,6 +119,14 @@ transverse state.  This paper answers that question exactly.
 
 Every new theorem in this paper is marked \proved.  Exact finite-field
 cross-checks are marked \certified.  The main results are as follows.
+
+For fixed \(w\), write
+\begin{equation}\label{eq:Rinf}
+ R_\infty(w)=\sup_n\max_{\text{canonical pair and internal cuts}}
+       \rank\Flat(\cF_{n,w}).
+\end{equation}
+Thus equality for \(R_\infty(w)\) means that at least one canonical cut
+attains the carrier bound; it does not assert that every cut has that rank.
 
 \begin{enumerate}
 \item \proved: The abstract separator theorem, \cref{thm:separator}, bounds
@@ -272,9 +285,14 @@ A cut of the ordered spin coordinates into \(\lambda_L|\lambda_R\) is
 Every character cochain belonging to \(\lambda_L\), restricted to right
 partial chains, is a coboundary plus a fixed linear function of the trace
 \(m\); the left-right reversed assertion holds for \(\lambda_R\).
-Concretely, for a right partial-chain space \(P_R\) with trace
-\(\tau_R(c)=\partial c|_S\), there are \(s\in C^0(G_R;\Ftwo)\) and a linear
-functional \(\phi\) on \(im\tau_R\) such that
+Concretely, put
+\[
+ P_R=\{c\in C_1(G_R;\Ftwo):\supp(\partial c)\subseteq S\},
+ \qquad \tau_R(c)=\partial c|_S,
+\]
+and define \(P_L\) analogously.  There are
+\(s\in C^0(G_R;\Ftwo)\) and a linear
+functional \(\phi\) on \(\im\tau_R\) such that
 \begin{equation}\label{eq:H1}
  \langle\alpha,c\rangle
    =\langle\delta s,c\rangle+\phi(\tau_Rc)
@@ -292,9 +310,15 @@ partial chains,
 
 \item[H3: internal-handle trace.]
 At a cut \(\lambda_{a_i}|\lambda_{b_i}\), the evaluation of the un-emitted
-\(b_i\)-character on the exposed half is a function \(\rho_i(m)\).  The
-polarization term \(\lambda_{a_i}\lambda_{b_i}\) may then be assigned to the
-\(a_i\) side conditional on this known trace.
+\(b_i\)-character, represented by the cochain \(\beta_i\), on the exposed
+half depends only on its trace: if \(c,c'\)
+are exposed partial chains with \(\tau(c)=\tau(c')=m\), then
+\(\langle\beta_i,c\rangle=\langle\beta_i,c'\rangle\).  Consequently
+\begin{equation}\label{eq:rho}
+ \rho_i(m):=\langle\beta_i,c\rangle
+ \quad\text{for any exposed }c\text{ with }\tau(c)=m
+\end{equation}
+is well defined.
 \end{description}
 \end{definition}
 
@@ -331,9 +355,15 @@ where, for example,
 Thus the flattening factors through the attainable mask space, of cardinality
 at most \(2^{k-1}\).
 
-At an internal handle cut, H3 turns the remaining \(b_i\)-phase into a
-diagonal function of the same \(m\).  The conditional \(a_ib_i\) term stays
-in the left factor, so the intermediate space does not grow.  Without H3,
+At an internal handle cut, the pre-Arf sign is still the sign in
+\cref{eq:q}: its dependence on \(\lambda_{b_i}\) is the character factor
+\((-1)^{\lambda_{b_i}\langle\beta_i,c\rangle}\).  By H3 and
+\cref{eq:rho}, this is the mask diagonal
+\((-1)^{\lambda_{b_i}\rho_i(m)}\), so it can be absorbed into the factor
+containing \(\lambda_{b_i}\) without enlarging the shared index.  The
+quadratic term \(x_i y_i\) belongs to \(q_0\) and has already been split by
+H2.  (The product \(\lambda_{a_i}\lambda_{b_i}\) occurs in the final Arf
+weight, not in the pre-Arf tensor.)  Without H3,
 splitting a four-state core into its two binary coordinates gives the general
 factor-two bound.  Applying \cref{eq:XY} successively constructs the exact
 tensor train \cref{eq:tt}.
@@ -387,9 +417,27 @@ Move through the ribbon body one longitudinal slab at a time.  In odd width
 of the new one-handles.  In even width \(2p\), an even-to-odd slab contributes
 \((p-1)^2\) co-cores; an odd-to-even slab has \(p^2\) candidate co-cores with
 one outer-boundary relation, hence \(p^2-1\).  All remaining boundary walks
-cap disks.  This gives \cref{eq:genus} by Euler characteristic.  When \(n,w\)
-are even all faces are quadrilaterals, so the bipartite girth-four Euler lower
-bound is attained.
+cap disks, so attaching a slab changes the Euler characteristic by minus
+twice the displayed number of co-cores.  Starting from the genus-zero first
+slice gives \cref{eq:genus}.
+
+For a numerical check on the face count, at \(w=3\) the rotation system has
+\[
+ V=9n,\qquad E=21n-9,\qquad F=10n-5,
+\]
+and hence \(V-E+F=4-2n=2-2(n-1)\).  If \(n,w\) are even, every face is a
+quadrilateral.  Since
+\[
+ V=nw^2,\qquad E=(n-1)w^2+2nw(w-1),\qquad F=E/2,
+\]
+the constructed genus is
+\begin{equation}\label{eq:even-genus-euler}
+ g=1+\frac{E-2V}{4}.
+\end{equation}
+In any cellular embedding of this bipartite graph, girth four gives
+\(4F\leq2E\); Euler's formula therefore gives
+\(g\geq1+(E-2V)/4\).  Equality in \cref{eq:even-genus-euler} proves the
+minimum-genus assertion.
 \end{proof}
 
 \subsection{A nested canonical Lagrangian}
@@ -418,17 +466,44 @@ boundaries of the complete system of co-core disks counted in
 the one outer relation already omitted.  Their number is \(g(n,w)\), so they
 form a Lagrangian basis.
 
-In any pinned homology basis with intersection matrix \(\Omega\), solve
-\(A^T\Omega B=I\), choosing the lexicographically least solutions with free
-bits zero.  Put \(C=B^T\Omega B\), and let \(U\) be the strictly upper
-triangular matrix with the same upper triangle as \(C\).  Replacing
-\(B\) by \(B+AU\) gives
+We construct the duals inductively in the longitudinal direction.  Before
+capping boundary walks, adjoining the terminal slab replaces terminal cap
+disks by an orientable ribbon cobordism carrying exactly the new one-handles
+counted in \cref{prop:genus}.  More explicitly, cut that cobordism along all
+new co-core disks listed in \cref{eq:Ais}.  The boundary-walk count in
+\cref{prop:genus} leaves a planar collar and the old terminal caps; capping
+the cut pairs therefore recovers \(\Sigma_{n,w}\).  Reversing the operation
+attaches one orientable one-handle for each independent new co-core, all in
+the terminal collar.  With \(r_n=g(n+1,w)-g(n,w)\), the pair is therefore a
+relative connected-sum extension
 \[
- A^T\Omega B=I,\qquad A^T\Omega A=B^T\Omega B=0.
+ (\Sigma_{n+1,w},\text{old ribbon body})
+ \cong
+ (\Sigma_{n,w}\mathbin\# r_n(S^1\!\times S^1),
+  \Sigma_{n,w}\setminus\text{terminal cap disks}).
 \]
-This construction retains old slab co-cores when a terminal slice is added.
-The geometric longitude dual to each co-core lies in its local slab collar,
-which supplies the claimed filtration adaptation.
+Cycles supported in the old ribbon body are
+unchanged, their intersections are unchanged, and the old homology therefore
+embeds as a symplectic subspace.  Its symplectic orthogonal complement is the
+homology carried by the new slab collars.  The new classes in
+\cref{eq:Ais} lie in that complement and form a Lagrangian there.
+
+Retain the already chosen old pairs.  In the new complement choose preliminary
+duals \(\widetilde B\) with
+\(A_{\rm new}^T\Omega\widetilde B=I\).  Put
+\(C=\widetilde B^T\Omega\widetilde B\), let \(U\) be the strictly upper
+triangular matrix with the same upper triangle as \(C\), and set
+\(B_{\rm new}=\widetilde B+A_{\rm new}U\).  Then
+\[
+ A_{\rm new}^T\Omega B_{\rm new}=I,
+ \qquad B_{\rm new}^T\Omega B_{\rm new}=0,
+\]
+and orthogonality to the retained old pairs is automatic.  This proves by
+induction that adding a terminal slice leaves every old pair fixed and only
+appends new pairs.  The preliminary duals may be represented by geometric
+longitudes in the corresponding slab collars; the triangular correction
+adds only new co-core meridians.  Thus every new pair remains supported in
+its slab collar, which gives filtration adaptation as well as nesting.
 \end{proof}
 
 If a geometric quadratic refinement is chosen as the affine origin, the
@@ -471,8 +546,12 @@ of \(m\), proving H1--H2.
 
 Halfway through one handle, \(a_i\) is the co-core meridian and \(b_i\) is
 its longitude.  On the exposed half the longitude is the coboundary of the
-side of the co-core, so its value is \(\langle s_i,m\rangle\).  It is therefore
-frontier known, which is H3.  This is the point that prevents a spurious
+side of the co-core.  Hence any two exposed partial chains with the same mask
+differ by a relative cycle on which that coboundary vanishes, while either
+one evaluates to \(\langle s_i,m\rangle\), where \(s_i\) is the indicator
+zero-cochain of the chosen side in the exposed collar.  Thus \(\rho_i(m)\) in
+\cref{eq:rho} is well defined and frontier known, which is H3.  This is the
+point that prevents a spurious
 factor two at the binary cut.
 \end{proof}
 
@@ -525,12 +604,8 @@ when \(w\) grows with \(n\).
 
 \section{Generic minimality of the carrier}
 
-For a fixed \(w\), define
-\begin{equation}\label{eq:Rinf}
- R_\infty(w)=\sup_n\max_{\text{canonical pair and internal cuts}}
-       \rank\Flat(\cF_{n,w}).
-\end{equation}
-By \cref{thm:grid-upper}, \(R_\infty(w)\leq d_w\).  We now prove equality
+With \(R_\infty(w)\) defined in \cref{eq:Rinf},
+\cref{thm:grid-upper} gives \(R_\infty(w)\leq d_w\).  We now prove equality
 for generic independent weights.  The proof uses two different five-layer
 encoders separated by a two-slab diagonal buffer; attempting to reflect one
 encoder is false and is recorded in \cref{sec:failure}.
@@ -664,7 +739,13 @@ selected flattening with
 permutations.  This has rank \(2^8=256\).  As independent replays, the full
 minor determinants are \(409643880\pmod {1000000007}\) and
 \(276933753\pmod {1000000009}\).  Either nonzero specialization proves that
-the corresponding integer-polynomial minor is not identically zero.
+the corresponding integer-polynomial minor is not identically zero.  Under
+the nested basis of \cref{lem:canonical}, append an eleventh slice, specialize
+all newly incident edge variables to zero, and fix the newly appended sector
+bits.  The same \(G_{10,3}\) minor is then a subminor of the \(G_{11,3}\)
+flattening: every surviving chain lies in the old ribbon body, whereas every
+new canonical pair is supported in the appended collar.  Thus \(n=11\) is
+also sufficient at width three, which proves the uniform-length statement.
 \end{proof}
 
 The theorem does not imply that a chosen minor remains nonzero on the
@@ -860,6 +941,13 @@ spin labels, Walsh phases, quadratic correction, and minor indices through
 the full symplectic change gives the canonical ranks \(256,256,256\) across
 the adjacent pair/internal/pair cuts.  The raw excess is a coordinate
 artifact and is not a topological obstruction.
+
+Earlier intermediate factorizations gave only the coarse bounds
+\(R_{\rm pair}\leq512\) and \(R_{\rm internal}\leq1024\) at \(w=3\).
+Those were pre-quotient upper bounds, not saturation certificates.  H3 and
+the fully transported coboundary gauge reduce both canonical cut types to
+the bare carrier bound \(256\); the certified canonical profile in
+\cref{tab:ranks} reaches \(256\), not \(512\) or \(1024\).
 
 Second, reflecting the normal five-layer encoder does not produce a valid
 right encoder in the same global canonical labelling.  At widths \(4,5,6\),
