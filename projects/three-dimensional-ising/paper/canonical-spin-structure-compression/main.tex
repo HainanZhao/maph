@@ -37,11 +37,12 @@
 \newcommand{\certified}{\claimtag{Certified\_Numerical}}
 \newcommand{\observed}{\claimtag{Observed}}
 \newcommand{\conjectured}{\claimtag{Conjectured}}
+\newcommand{\proofpending}{\claimtag{Proof incomplete}}
 
 \title{Separator Compression of the Complete Spin-Structure Family\\
 for Cubic-Lattice Ising Strips}
 \author{Hainan Zhao}
-\date{August 2026}
+\date{August 2026\\\small Reserved archive DOI: \url{https://doi.org/10.5281/zenodo.21845273}}
 
 \begin{document}
 \maketitle
@@ -50,8 +51,8 @@ for Cubic-Lattice Ising Strips}
 For a graph cellularly embedded in an orientable surface of genus \(g\), the
 generalized Kac--Ward formula represents the zero-field Ising even-subgraph
 polynomial as an Arf-weighted sum of \(4^g\) signed square roots.  We study the
-complete tensor of those pre-Arf values, before the final sum.  We prove a
-separator theorem: if a filtration-adapted spin-structure basis makes every
+complete tensor of those pre-Arf values, before the final sum.  We prove an
+abstract separator theorem: if a filtration-adapted spin-structure basis makes every
 cross-cut linear and quadratic phase factor through the even boundary mask on
 a separator \(S\), then every handle-pair flattening has rank at most
 \(2^{|S|-1}\).  A relative exactness condition gives the same bound at cuts
@@ -63,13 +64,13 @@ For the cubic grid strips
   G_{n,w}=P_n\mathbin\square P_w\mathbin\square P_w,
 \]
 
-we construct an explicit nested checkerboard ribbon embedding and a canonical
-handle ordering satisfying these hypotheses with \(|S|=w^2\).  Hence the
-entire \(4^g\)-entry spin-structure family has an exact tensor train of bond at
-most \(d_w=2^{w^2-1}\), over the polynomial ring in arbitrary edge weights.
-We then prove that, for independent nonuniform weights and every \(w\geq3\),
-some canonical cut generically attains this bound; \(n=11\) is uniformly
-sufficient.  Thus surface
+we give an explicit nested checkerboard ribbon embedding and a candidate
+canonical handle ordering with \(|S|=w^2\).  The target conclusion is that
+the entire \(4^g\)-entry spin-structure family has fraction-field bond at
+most \(d_w=2^{w^2-1}\), and that for independent nonuniform weights and every
+\(w\geq3\), some canonical cut generically attains this bound with \(n=11\)
+uniformly sufficient.  The remaining self-contained proof obligations are
+marked in the text.  If discharged, these statements show that surface
 genus creates no additional exact bond dimension beyond the ordinary
 zero-field transverse carrier, but that carrier is itself generically
 minimal.  We also give a non-grid toroidal \(K_{3,3}\) chain showing that the
@@ -81,6 +82,17 @@ representation.  For cubic boxes \(w=n=L\), the remaining bond is
 \(2^{L^2-1}\).  No thermodynamic limit, critical temperature, or exact solution
 of the three-dimensional Ising model is obtained.
 \end{abstract}
+
+\begin{center}
+\fbox{\begin{minipage}{.92\textwidth}\small
+\textbf{Revision status.}
+The headline grid upper bound and generic-saturation statements are retained
+as targets but are marked \proofpending.  Exact finite-field computations in
+this draft are audits, not substitutes for the arbitrary-width geometric and
+combinatorial proofs.  In particular, no submission-ready claim is made
+until the explicitly identified proof obligations are discharged.
+\end{minipage}}
+\end{center}
 
 \section{Introduction}
 
@@ -113,20 +125,23 @@ tractable by ordinary transfer or tree-decomposition dynamic programming
 \cite{ScottSorkin2009}.  The issue is therefore not whether a fixed-width
 strip can be evaluated.  It is whether the exponentially many surface
 sectors carry an additional topological memory beyond the ordinary
-transverse state.  This paper answers that question exactly.
+transverse state.  The target theorems below would answer that question
+exactly once their marked proof obligations are discharged.
 
 \subsection{Main results and epistemic boundary}
 
-Every new theorem in this paper is marked \proved.  Exact finite-field
-cross-checks are marked \certified.  The main results are as follows.
+Completed mathematical arguments are marked \proved, exact finite-field
+cross-checks are marked \certified, and claims whose self-contained proof is
+still being assembled are marked \proofpending.
 
 For fixed \(w\), write
 \begin{equation}\label{eq:Rinf}
  R_\infty(w)=\sup_n\max_{\text{canonical pair and internal cuts}}
-       \rank\Flat(\cF_{n,w}).
+       \rank_{\operatorname{Frac}\mathbb Z[t_e]}\Flat(\cF_{n,w}).
 \end{equation}
-Thus equality for \(R_\infty(w)\) means that at least one canonical cut
-attains the carrier bound; it does not assert that every cut has that rank.
+This is the generic, or fraction-field, rank invariant.  Equality means that
+at least one canonical cut attains the carrier bound; it does not assert that
+every cut or every specialization has that rank.
 
 \begin{enumerate}
 \item \proved: The abstract separator theorem, \cref{thm:separator}, bounds
@@ -134,31 +149,33 @@ attains the carrier bound; it does not assert that every cut has that rank.
   hypotheses are intrinsic relative-chain exactness and quadratic gluing,
   not planarity, minimum genus, or translation invariance.
 
-\item \proved: For an explicit checkerboard embedding of \(G_{n,w}\), every
+\item \proofpending: For an explicit checkerboard embedding of \(G_{n,w}\), every
   pair cut and every binary cut inside a canonical handle has rank at most
   \[
      d_w=2^{w^2-1}.
   \]
   Consequently the complete function of all \(2g\) spin-structure bits has
-  an exact all-sector tensor train of that bond dimension
-  (\cref{thm:grid-upper}).
+  a fraction-field tensor train of that bond dimension
+  (\cref{thm:grid-upper}).  The denominator-free polynomial-ring refinement
+  remains a separate proof obligation.
 
-\item \proved: For generic independent nonuniform edge weights and every
+\item \proofpending: For generic independent nonuniform edge weights and every
   \(w\geq3\), the preceding bound is minimal:
   \begin{equation}\label{eq:g1-intro}
      R_\infty(w)=2^{w^2-1}.
   \end{equation}
   A length \(n=11\) suffices uniformly in \(w\)
   (\cref{thm:grid-tight}).  The lower bound holds on a nonempty open set of
-  strictly positive ferromagnetic weights, but it is not proved after
-  restricting to homogeneous anisotropic or isotropic weights.
+  strictly positive ferromagnetic weights \(0<t_e<1\), but it is not proved
+  after restricting to homogeneous
+  anisotropic or isotropic weights.
 
-\item \proved: An iterated toroidal \(K_{3,3}\) two-sum chain has generic
+\item \proofpending: An iterated toroidal \(K_{3,3}\) two-sum chain has generic
   pair rank two but generic internal-handle rank four.  This is an infinite
   sharpness family for the internal relative-exactness condition
   (\cref{thm:k33}).
 
-\item \proved: Given the exact all-sector tensor train, all four
+\item \proofpending: Given a denominator-free all-sector tensor train, all four
   single-handle Walsh marginals at every handle, under arbitrary product-form
   sector weights, are obtained in \(O(gd_w^2)\) ring operations
   (\cref{thm:marginals}).
@@ -169,11 +186,7 @@ has no rank overhead beyond the physical separator carrier.  For cubic boxes
 \(w=L\), however, that carrier has dimension \(2^{L^2-1}\), and
 \cref{eq:g1-intro} shows it is generically unavoidable within this complete
 pre-Arf tensor.  We do not derive a controlled thermodynamic limit, an exact
-free energy, a critical temperature, or critical exponents.\footnote{A
-published operator-algebra claim of a full solution, a formal criticism, and
-the author's reply appear in \cite{Zhang2021,Perk2023,ZhangReply2023}.  That
-exchange concerns a different proposed transfer reduction and is not used
-here.}
+free energy, a critical temperature, or critical exponents.
 
 \subsection{Relation to existing mechanisms}
 
@@ -365,8 +378,10 @@ quadratic term \(x_i y_i\) belongs to \(q_0\) and has already been split by
 H2.  (The product \(\lambda_{a_i}\lambda_{b_i}\) occurs in the final Arf
 weight, not in the pre-Arf tensor.)  Without H3,
 splitting a four-state core into its two binary coordinates gives the general
-factor-two bound.  Applying \cref{eq:XY} successively constructs the exact
-tensor train \cref{eq:tt}.
+factor-two bound.  The bounds at all successive cuts imply a tensor train
+over the fraction field of \(R\) by the successive-rank characterization of
+tensor-train rank.  This implication alone does not produce
+denominator-free cores over \(R\).
 \end{proof}
 
 For a disconnected interface, the correct bound is the cardinality of the
@@ -389,15 +404,79 @@ The transverse slice is
 \subsection{Rotation system and genus}
 
 Let \(N,W\) be the least even integers with \(N\geq n\), \(W\geq w\).
-Inside \([0,N-1]\times[0,W-1]^2\), take the union of unit cubes whose lower
-corner has at least two even coordinates.  Its oriented boundary induces a
-cyclic order on the incident grid edges at every vertex.  Delete neighbours
-outside \(V_{n,w}\) from these cyclic orders and cap every boundary walk.
-This defines a closed orientable ribbon surface \(\Sigma_{n,w}\).  Deleting a
-terminal longitudinal slice only deletes neighbours from a cyclic order, so
-the family is nested in \(n\).
+For \(c=(c_0,c_1,c_2)\) with
+\(0\le c_0<N-1\) and \(0\le c_1,c_2<W-1\), put
+\begin{equation}\label{eq:cube-set}
+ c\in\mathcal C_{N,W}\quad\Longleftrightarrow\quad
+ \#\{r:c_r\equiv0\pmod2\}\ge2.
+\end{equation}
+This parity rule determines the rotation system as follows.  If the face of
+the cube \(c\) perpendicular to axis \(a\), with outward sign
+\(\eta\in\{-1,+1\}\), is not shared with another cube in
+\(\mathcal C_{N,W}\), orient its four vertices
+\(v_0,v_1,v_2,v_3\) by the outward-normal rule and set
+\begin{equation}\label{eq:successor}
+ \operatorname{succ}_{v_r}(v_{r-1})=v_{r+1}\qquad(r\bmod4).
+\end{equation}
+For reference, if \(b<c\) are the two axes different from \(a\), the positive
+ordered tangent pair is
+\begin{center}
+\begin{tabular}{c|rrrrrr}
+\((a,\eta)\)&\((0,+)\)&\((0,-)\)&\((1,+)\)&\((1,-)\)&\((2,+)\)&\((2,-)\)\\
+\midrule
+\((b,c)\)&\((1,2)\)&\((2,1)\)&\((2,0)\)&\((0,2)\)&\((0,1)\)&\((1,0)\)
+\end{tabular}
+\end{center}
+and \(v_0,v_1,v_2,v_3\) traverses the corresponding unit square in the
+positive \((b,c)\) order.
 
-\begin{proposition}[constructed genus; \proved]\label{prop:genus}
+Here is the parity check that makes the definition global.  Around an
+interior edge, the four adjacent cube indicators, read cyclically, are a
+cyclic shift of \(1110\) when the edge coordinate is even and of \(1000\)
+when it is odd.  In either case there are exactly two indicator changes.
+Thus exactly two oriented boundary faces contain every grid edge, and they
+give one predecessor and one successor at each endpoint.  The vertex link is
+therefore a single oriented cycle; its neighbour order is the cycle of
+\(u\mapsto\operatorname{succ}_v(u)\).  At a boundary vertex, out-of-box cube
+indicators are zero.  Equivalently, its cyclic order is obtained by deleting
+absent neighbours from the next-even parent box.  This covers all eight
+vertex parities and every boundary type without an implicit geometric
+choice.
+
+Let \(D\) be the dart set of the retained grid, let \(\alpha\) reverse a
+dart, and let \(\sigma\) advance it in the preceding vertex order.  The
+orbits of \(\varphi=\sigma\alpha\) are the face walks.  Attach one oriented
+disk along each orbit.  Every edge band then has two oppositely oriented
+sides and every vertex link is one circle, so the resulting CW complex is a
+closed orientable surface.  Its complement is exactly the union of the
+attached open disks, proving cellularity directly.  We denote this surface
+by \(\Sigma_{n,w}\).  Deleting a terminal longitudinal slice deletes
+precisely its darts from \(\sigma\), so the restricted rotations are nested
+in \(n\).
+
+\begin{figure}[t]
+\centering
+\setlength{\unitlength}{.7mm}
+\begin{picture}(115,45)
+ \thicklines
+ \put(5,5){\line(1,0){35}}\put(40,5){\line(0,1){28}}
+ \put(40,33){\line(-1,0){35}}\put(5,33){\line(0,-1){28}}
+ \put(5,33){\line(2,1){18}}\put(40,33){\line(2,1){18}}
+ \put(40,5){\line(2,1){18}}\put(58,23){\line(0,1){19}}
+ \put(23,42){\line(1,0){35}}
+ \put(15,18){selected cube}
+ \put(8,8){\vector(1,0){23}}\put(37,9){\vector(0,1){18}}
+ \thinlines
+ \put(62,23){\vector(1,0){13}}
+ \put(78,19){\shortstack{oriented boundary faces\\define the dart successor}}
+\end{picture}
+\caption{Local ribbon rule.  A boundary plaquette is oriented by its outward
+normal; \eqref{eq:successor} converts its two incident sides at a vertex into
+the cyclic-order successor.}
+\label{fig:rotation}
+\end{figure}
+
+\begin{proposition}[constructed genus; \proofpending]\label{prop:genus}
 Let \(p\geq1\).  The genus of the preceding embedding is
 \begin{align}
  g(n,2)&=0,\nonumber\\
@@ -412,14 +491,51 @@ genus \(n-1\) is minimum by Millichap--Salinas, Theorem~4
 \end{proposition}
 
 \begin{proof}
-Move through the ribbon body one longitudinal slab at a time.  In odd width
-\(2p+1\), the \(p^2\) disjoint transverse checkerboard squares are co-cores
-of the new one-handles.  In even width \(2p\), an even-to-odd slab contributes
-\((p-1)^2\) co-cores; an odd-to-even slab has \(p^2\) candidate co-cores with
-one outer-boundary relation, hence \(p^2-1\).  All remaining boundary walks
-cap disks, so attaching a slab changes the Euler characteristic by minus
-twice the displayed number of co-cores.  Starting from the genus-zero first
-slice gives \cref{eq:genus}.
+We trace the face permutation \(\varphi=\sigma\alpha\).  For the first slice,
+the ribbon graph is the planar \(w\times w\) grid, so
+\[
+ F(1,w)=2w(w-1)-w^2+2=w^2-2w+2.
+\]
+When slab \(i\) is attached, the new vertices and edges number
+\[
+ \Delta V=w^2,\qquad
+ \Delta E=w^2+2w(w-1)=3w^2-2w.
+\]
+The \(\varphi\)-orbits meeting the slab can be followed from their first
+transverse dart.  The parity rule \eqref{eq:cube-set} gives the following
+exhaustive trace table:
+\[
+\begin{array}{c|c|c}
+ w& i\pmod2&r_i\\ \hline
+ 2p+1&0,1&p^2\\
+ 2p&0&(p-1)^2\\
+ 2p&1&p^2-1.
+\end{array}
+\qquad
+\Delta F=2w(w-1)-2r_i.                              \tag{*}
+\]
+To verify the table, scan the transverse squares by their lower corner
+\((y,z)\).  A face orbit entering at that square exits at the translated
+square in the old boundary unless
+\[
+ y\equiv z\equiv i+1\pmod2.
+\]
+At such a square its four local darts instead split the old orbit into the
+two boundary components of a new band.  There are \(p^2\) such squares at
+odd width.  At even width there are \((p-1)^2\) for \(i\) even; for \(i\)
+odd there are \(p^2\), but their outer arcs concatenate into one orbit, so
+the sum of all \(p^2\) local splittings has one relation.  Every transverse
+square belongs either to this congruence class or to a translated old orbit,
+and the longitudinal boundary rows supply the remaining
+\(2w(w-1)-2\#\{\text{independent splittings}\}\) face orbits.  This proves
+both the exhaustion and \((*)\) directly from \(\varphi\).
+
+Euler's formula now gives
+\[
+ \Delta(2-2g)=\Delta V-\Delta E+\Delta F=-2r_i.
+\]
+The first slice has genus zero, so summing the displayed \(r_i\) proves
+\cref{eq:genus}.
 
 For a numerical check on the face count, at \(w=3\) the rotation system has
 \[
@@ -440,6 +556,30 @@ In any cellular embedding of this bipartite graph, girth four gives
 minimum-genus assertion.
 \end{proof}
 
+\begin{figure}[t]
+\centering
+\setlength{\unitlength}{.65mm}
+\begin{picture}(125,48)
+ \multiput(5,8)(10,0){5}{\line(0,1){40}}
+ \multiput(5,8)(0,10){5}{\line(1,0){40}}
+ \multiput(78,8)(10,0){5}{\line(0,1){40}}
+ \multiput(78,8)(0,10){5}{\line(1,0){40}}
+ \thicklines
+ \put(5,8){\framebox(10,10){}}\put(25,8){\framebox(10,10){}}
+ \put(5,28){\framebox(10,10){}}\put(25,28){\framebox(10,10){}}
+ \put(78,8){\framebox(10,10){}}\put(98,8){\framebox(10,10){}}
+ \put(78,28){\framebox(10,10){}}\put(98,28){\framebox(10,10){}}
+ \put(52,27){\vector(1,0){18}}\put(51,31){attach slab}
+ \put(82,13){\oval(12,7)}\put(88,13){\vector(0,1){22}}
+ \put(12,2){co-core meridians}\put(88,2){dual longitude}
+\end{picture}
+\caption{One slab attachment.  The congruence-class transverse squares are
+co-core meridians; cutting them leaves the translated old face orbits and a
+planar collar.  A longitude crosses its meridian once and the others zero
+times.}
+\label{fig:slab-cocores}
+\end{figure}
+
 \subsection{A nested canonical Lagrangian}
 
 Let \(P_{i,y,z}\) be the four-edge boundary of the transverse unit square in
@@ -451,7 +591,7 @@ take the classes
 If \(w=2p\) and \(i\) is odd, omit the lexicographically last of these \(p^2\)
 classes.  Order first by slab and then lexicographically.
 
-\begin{lemma}[canonical handle basis; \proved]\label{lem:canonical}
+\begin{lemma}[canonical handle basis; \proofpending]\label{lem:canonical}
 The classes in \cref{eq:Ais} form a Lagrangian basis
 \(A=(a_1,\ldots,a_g)\) of \(H_1(\Sigma_{n,w};\Ftwo)\).  They admit a nested
 symplectic extension \(B=(b_1,\ldots,b_g)\), and the resulting order
@@ -461,27 +601,42 @@ symplectic extension \(B=(b_1,\ldots,b_g)\), and the resulting order
 \begin{proof}
 Within a slab the squares are disjoint; different slabs use different
 transverse slices.  Hence their mutual intersections vanish.  They are the
-boundaries of the complete system of co-core disks counted in
-\cref{prop:genus}; cutting along them removes every one-handle, with exactly
-the one outer relation already omitted.  Their number is \(g(n,w)\), so they
-form a Lagrangian basis.
+boundaries of the co-core disks shown in \cref{fig:slab-cocores}.  Completeness
+is a consequence of the face trace, not merely of the count.  In one slab,
+cut along all congruence-class disks and contract each translated old face
+orbit and each longitudinal boundary strip.  The remaining incidence graph
+has a vertex for each boundary row and an edge for each non-co-core square.
+Scanning first in \(y\) and then in \(z\) gives the path
+\[
+ (0,0),(1,0),\ldots,(w-1,0),(w-1,1),\ldots,(0,w-1);
+\]
+all other incidence edges join two vertices already on this path.  Hence the
+cut collar is connected.  Its Euler characteristic is that of a planar
+surface by the computation \((*)\).  At even width and odd \(i\), the outer
+face orbit identifies the two ends of the displayed path, producing exactly
+the single relation among the \(p^2\) candidate disks; omitting the
+lexicographically last disk breaks that relation.  Thus cutting the stated
+disks removes every new one-handle and leaves a planar collar.  Inducting
+over slabs shows that their boundaries are independent and form a complete
+meridian system.  Their number is \(g(n,w)\), hence their span is
+Lagrangian.
 
-We construct the duals inductively in the longitudinal direction.  Before
-capping boundary walks, adjoining the terminal slab replaces terminal cap
-disks by an orientable ribbon cobordism carrying exactly the new one-handles
-counted in \cref{prop:genus}.  More explicitly, cut that cobordism along all
-new co-core disks listed in \cref{eq:Ais}.  The boundary-walk count in
-\cref{prop:genus} leaves a planar collar and the old terminal caps; capping
-the cut pairs therefore recovers \(\Sigma_{n,w}\).  Reversing the operation
-attaches one orientable one-handle for each independent new co-core, all in
-the terminal collar.  With \(r_n=g(n+1,w)-g(n,w)\), the pair is therefore a
-relative connected-sum extension
+We construct the duals inductively in the longitudinal direction.  The
+preceding cut-collar argument says more precisely that adjoining the terminal
+slab removes \(2r_n\) disks from the old terminal cap region and joins their
+boundary circles in \(r_n\) orientation-preserving pairs.  No other old face
+orbit changes.  Gluing one such pair is an orientable one-handle attachment;
+performing all pairs gives the relative homeomorphism
 \[
  (\Sigma_{n+1,w},\text{old ribbon body})
  \cong
  (\Sigma_{n,w}\mathbin\# r_n(S^1\!\times S^1),
-  \Sigma_{n,w}\setminus\text{terminal cap disks}).
+  \Sigma_{n,w}\setminus\text{terminal cap disks}),\qquad
+ r_n=g(n+1,w)-g(n,w).
 \]
+This supplies the claimed relative connected-sum decomposition explicitly:
+the meridian of each summand is the boundary of its displayed co-core disk,
+and the path across its paired boundary circles is a dual longitude.
 Cycles supported in the old ribbon body are
 unchanged, their intersections are unchanged, and the old homology therefore
 embeds as a symplectic subspace.  Its symplectic orthogonal complement is the
@@ -520,7 +675,7 @@ mask
  \qquad d_w=|V_w|=2^{w^2-1}.
 \end{equation}
 
-\begin{lemma}[grid relative exactness; \proved]\label{lem:grid-exact}
+\begin{lemma}[grid relative exactness; \proofpending]\label{lem:grid-exact}
 Move the transverse separator through the co-cores in the order of
 \cref{lem:canonical}.  At every pair cut and every midpoint cut inside a
 handle it meets exactly \(w^2\) labelled grid strands.  The cut satisfies
@@ -532,72 +687,131 @@ Moving through one checkerboard co-core replaces two intersection points on
 one square by the other two and neither creates nor removes a longitudinal
 strand.  Hence the labelled separator size stays \(w^2\).
 
-Fix a completion \(c(m)\) in a tree in the interface collar.  A character
-behind the separator is exact on the right, and a character ahead is exact
-on the left.  If two representatives differ by \(\delta s\), discrete Stokes
-gives
-\begin{equation}\label{eq:stokes}
- \langle\delta s,A'\rangle=\langle s,\partial A'\rangle
-                         =\langle s,m\rangle,
-\end{equation}
-so the change is a mask-diagonal sign.  The polarization between the two
-completed partial chains is supported in the collar and is a fixed function
-of \(m\), proving H1--H2.
+Write \(G_L(\Gamma)\) and \(G_R(\Gamma)\) for the closed ribbon subgraphs on
+the two sides of the moving separator \(\Gamma\), including its \(w^2\)
+marked vertices, and put
+\[
+ P_\nu(\Gamma)=\{c\in C_1(G_\nu;\Ftwo):
+                  \supp\partial c\subseteq\Gamma\},\qquad
+ \tau_\nu c=(\partial c)|_\Gamma,\quad \nu=L,R.
+\]
+Choose the lexicographic spanning tree of the marked vertices in the collar
+and let \(c_\nu(m)\) be its unique \(m\)-join.  These are the relative-chain
+spaces, trace maps, and completions used below.
 
-Halfway through one handle, \(a_i\) is the co-core meridian and \(b_i\) is
-its longitude.  On the exposed half the longitude is the coboundary of the
-side of the co-core.  Hence any two exposed partial chains with the same mask
-differ by a relative cycle on which that coboundary vanishes, while either
-one evaluates to \(\langle s_i,m\rangle\), where \(s_i\) is the indicator
-zero-cochain of the chosen side in the exposed collar.  Thus \(\rho_i(m)\) in
-\cref{eq:rho} is well defined and frontier known, which is H3.  This is the
-point that prevents a spurious
-factor two at the binary cut.
+For a canonical generator \(u\), represent its character by the cellular
+Poincar\'e-dual cocycle \(\gamma_u\): on a grid edge it is the mod-two
+intersection of that edge band with the fixed meridian or longitude arc in
+the slab collar.  If \(u\) is behind \(\Gamma\), every closed cycle in
+\(G_R(\Gamma)\) has zero intersection with \(u\); hence
+\(\gamma_u\) has zero period on \(\ker\tau_R\).  Choose a collar base vertex
+\(v_*\), paths \(p_v\subset G_R\) from \(v_*\) to every right vertex, and set
+\begin{equation}\label{eq:explicit-s-phi}
+ s_u(v)=\langle\gamma_u,p_v\rangle,\qquad
+ \phi_u(m)=\langle\gamma_u,c_R(m)\rangle+\langle s_u,m\rangle .
+\end{equation}
+Zero periods make \(s_u\) path independent.  For \(c\in P_R\), the chain
+\(c+c_R(\tau_Rc)\) has zero trace, so
+\[
+ \langle\gamma_u,c\rangle
+ =\langle\delta s_u,c\rangle+\phi_u(\tau_Rc).
+\]
+This is H1 with explicit \(s_u,\phi_u\).  A generator ahead of the separator
+uses the identical construction in \(G_L\).
+
+For H2, put
+\[
+ u=h_L(A_L,m),\quad v=h_R(A_R,m),\quad
+ z(m)=\pi\bigl(c_L(m)+c_R(m)\bigr).
+\]
+At a pair cut, the slabwise connected-sum decomposition makes the left and
+right handle subspaces symplectically orthogonal.  With \(B\) denoting the
+intersection pairing, polarization gives the explicit split
+\begin{align}
+ q_0(u+v+z(m))
+ &=\underbrace{q_0(u)+B(u,z(m))}_{Q_L(A_L,m)}
+  +\underbrace{q_0(v)+B(v,z(m))}_{Q_R(A_R,m)}
+  +\underbrace{q_0(z(m))}_{\kappa(m)}.              \label{eq:grid-H2}
+\end{align}
+Linear affine-origin corrections use \eqref{eq:explicit-s-phi} and therefore
+alter only the two side terms and a mask function.
+
+At the midpoint of handle \(i\), take \(a_i\) to be its co-core meridian and
+choose the preliminary \(b_i\) as the longitude drawn in
+\cref{fig:slab-cocores}.  On the exposed half, that longitude cocycle is
+\(\delta s_i\), where \(s_i\) is the indicator of the vertices on the far
+side of the co-core.  Thus
+\begin{equation}\label{eq:stokes}
+ \rho_i(m)=\langle\delta s_i,c\rangle
+          =\langle s_i,\partial c\rangle
+          =\sum_{v\in\Gamma}s_i(v)m_v .
+\end{equation}
+This is independent of the exposed chain \(c\) and proves H3.  In
+\eqref{eq:grid-H2}, the only new cross-polarization at this midpoint is the
+current \(a_i b_i\) term; its un-emitted value is \(\rho_i(m)\), so the term
+is assigned to the \(a_i\) factor without enlarging the trace.
+
+Finally consider the triangular correction in \cref{lem:canonical}.
+Replacing \(\widetilde b_j\) by
+\(b_j=\widetilde b_j+\sum_kU_{kj}a_k\) adds the corresponding cocycles.
+The functions in \eqref{eq:explicit-s-phi} add in \(\Ftwo\), and all
+\(a_k\) in a correction belong to the same newly attached slab complement.
+Thus no corrected cocycle acquires a period on the opposite relative-cycle
+space.  The pairing \(B\), and hence \eqref{eq:grid-H2}, is invariant under
+the symplectic correction.  H1--H3 therefore survive the passage from the
+geometric preliminary longitudes to the canonical basis.
 \end{proof}
 
-\begin{theorem}[all-sector grid compression; \proved]\label{thm:grid-upper}
+\begin{theorem}[all-sector grid rank bound; \proofpending]\label{thm:grid-upper}
 For every \(n,w\geq2\), the complete pre-Arf tensor of the checkerboard
-embedding of \(G_{n,w}\), in the canonical binary ordering, has an exact
-tensor train over \(\mathbb Z[t_e:e\in E]\) with every bond at most
+embedding of \(G_{n,w}\), in the canonical binary ordering, has every
+flattening rank over \(\operatorname{Frac}\mathbb Z[t_e:e\in E]\) at most
 \[
  d_w=2^{w^2-1}.
 \]
 The bound holds both between handle pairs and inside every handle.  It is
 valid for arbitrary nonuniform edge weights and before the Arf sum.
+Consequently a tensor train of this bond exists over the fraction field.
 \end{theorem}
 
 \begin{proof}
 Apply \cref{thm:separator} and \cref{lem:grid-exact} at every successive
-separator.
+separator.  The final assertion follows from the characterization of
+tensor-train ranks by successive flattening ranks.
 \end{proof}
 
-The theorem also has explicit local cores.  Let
-\(Gamma_0,\ldots,\Gamma_{2g}\) be the successive pair and half-handle
+The following is the candidate denominator-free refinement and is not used
+in the preceding theorem.  Let
+\(\mathcal S_0,\ldots,\mathcal S_{2g}\) be the successive pair and half-handle
 separators, with the mask labels identified with \(V_w\), and let \(E_j\) be
-the edge block between \(Gamma_{j-1}\) and \(Gamma_j\).  For the local
-spin bit \(epsilon_j\), define
+the edge block between \(\mathcal S_{j-1}\) and \(\mathcal S_j\).  For the local
+spin bit \(\varepsilon_j\), define
 \begin{equation}\label{eq:cores}
- A_j(\epsilon_j)[m,m']
+ A_j(\varepsilon_j)[m,m']
  =\sum_{\substack{S\subseteq E_j\\
        \partial_-S=m,\ \partial_+S=m'}}
- (-1)^{Q_j(S,m,m')+\epsilon_jH_j(S,m,m')}
+ (-1)^{Q_j(S,m,m')+\varepsilon_jH_j(S,m,m')}
  \prod_{e\in S}t_e .
 \end{equation}
-The local functions \(Q_j,H_j\) are precisely the H1--H3 phases in
-\cref{lem:grid-exact}.  Zero-mask boundary vectors and multiplication of the
-cores reproduce every term of \cref{eq:F} exactly once.  Thus
+The functions \(Q_j,H_j\) must be obtained from one global cochain gauge,
+one compatible system of completion trees, and a phase assignment that
+telescopes under gluing.  Defining them independently from the two-cut
+factorizations is insufficient.  Proving that the edge blocks partition the
+graph and that multiplication reproduces every term of \cref{eq:F} exactly
+once is the remaining polynomial-ring obligation.  Conditional on that
+obligation,
 \begin{equation}\label{eq:allq-mps}
  \cF_{n,w}(\lambda)=
  \ell^TA_1(\lambda_{a_1})A_2(\lambda_{b_1})\cdots
  A_{2g}(\lambda_{b_g})r.
 \end{equation}
-The representation supports evaluation of one sector, Arf-weighted
+the representation supports evaluation of one sector, Arf-weighted
 contraction, partial sector sums, Walsh projection, and fixing selected
 twists.  It does not permit all \(4^g\) values to be explicitly output in
 polynomial time.
 
-There are \(O(nw^2)\) binary cores.  A direct dense representation of the
-cores takes \(O(nw^2d_w^2)\) ring entries and a fixed boundary contraction
+There are \(O(nw^2)\) binary coordinates.  A direct dense representation of
+such denominator-free cores would take \(O(nw^2d_w^2)\) ring entries and a fixed boundary contraction
 takes the same order of dense ring operations.  For fixed \(w\), both are
 linear in \(n\).  These are separator-complexity bounds, not polynomial bounds
 when \(w\) grows with \(n\).
@@ -605,14 +819,15 @@ when \(w\) grows with \(n\).
 \section{Generic minimality of the carrier}
 
 With \(R_\infty(w)\) defined in \cref{eq:Rinf},
-\cref{thm:grid-upper} gives \(R_\infty(w)\leq d_w\).  We now prove equality
-for generic independent weights.  The proof uses two different five-layer
+\cref{thm:grid-upper} targets \(R_\infty(w)\leq d_w\).  We next formulate
+the matching generic lower bound and isolate its remaining proof obligations.
+The proposed proof uses two different five-layer
 encoders separated by a two-slab diagonal buffer; attempting to reflect one
 encoder is false and is recorded in \cref{sec:failure}.
 
 \subsection{One-sided encoders}
 
-Let \(Gamma_w=G_{5,w}\) with terminal slice
+Let \(\mathcal G_w=G_{5,w}\) with terminal slice
 \(S_w=\{(4,y,z):0\leq y,z<w\}\).  Let \(e_x(x,y,z)\), \(e_y(x,y,z)\), and
 \(e_z(x,y,z)\) denote the positive coordinate edges.  Define the gauge tree
 \begin{equation}\label{eq:T0}
@@ -627,7 +842,7 @@ The explicit edge recurrences for the normal and opposite-phase encoder
 trees are given in \cref{app:encoders}.  Their relevant property is the
 following lemma.
 
-\begin{lemma}[two encoder lemma; \proved]\label{lem:encoders}
+\begin{lemma}[two encoder lemma; \proofpending]\label{lem:encoders}
 For every \(w\geq4\), there are spanning trees \(T_w^+\) in the normal
 five-layer checkerboard phase and \(T_w^-\) in the opposite five-layer phase
 such that the terminal maps
@@ -640,34 +855,22 @@ are injective.  The construction is recursive in \(w\) and retains exactly
 \end{lemma}
 
 \begin{proof}
-We give the invariant; the explicit parity recurrences are in
-\cref{app:encoders}.  For \(T_w^+\), let \(P_w\) be the \(w^2-1\) retained
-chords relative to \cref{eq:T0}.  Deleting \(P_w\) from \(T_w^+\) leaves a
-forest with exactly one terminal vertex in every component.  Therefore the
-terminal-cut columns of \(P_w\) form a basis of \(V(S_w)\).
+The edge recurrences are in \cref{app:encoders}.  The four symbolic shell
+inductions---normal and opposite, each at odd and even new width---are proved
+in \cref{app:encoder-induction}.  They establish two invariants for every
+width, rather than extrapolating from a finite check.  First, deleting the
+\(w^2-1\) retained chords leaves a forest with exactly one terminal in every
+component, so its terminal-cut columns form a basis of \(V(S_w)\).  Second,
+after deletion of the duals of the gauge tree and retained chords, the
+face-dual remainder is connected.  The tree--cotree criterion then makes the
+corresponding fundamental-cycle homology labels independent.
 
-Let \(D_w\) be the face-dual graph.  The tree--cotree criterion says that the
-fundamental-cycle homology labels of \(P_w\) are independent exactly when
-\[
- D_w-(T_w^0\cup P_w)^*
-\]
-is connected.  The width-four base and both parity steps have connected dual
-remainders; after contracting old and new face components, their quotients
-are the trees listed in \cref{tab:encoder-checks}.  A small exceptional chord
-set \(X_w\) is homologically disjoint from \(P_w\), as follows from the rank
-identity
-\[
- \rank h(A)=|A|-c\bigl(D_w-(T_w^0\cup A)^*\bigr)+1.
-\]
-Thus the terminal-cut basis maps to \(w^2-1\) independent homology labels,
-which proves injectivity.
-
-The opposite tree \(T_w^-\) obeys the same terminal-forest and dual-cotree
-invariants.  For even \(w\) it has one exceptional chord; the unique dual-cut
-relation and the unique terminal-cut column have disjoint support, so the
-matrix determinant lemma preserves determinant one over \(\Ftwo\).  The
-explicit shell count in \cref{tab:encoder-checks} exhausts all vertices and
-dual components.  This proves \cref{eq:terminal-map} for both phases.
+The same appendix treats the exceptional normal set and the single
+exceptional opposite chord at even width.  In the latter case the unique
+dual-cut relation and terminal-cut column have disjoint support, so the
+matrix determinant lemma preserves determinant one over \(\Ftwo\).  Hence
+the terminal basis maps injectively to homology in both checkerboard phases,
+which is \cref{eq:terminal-map}.
 \end{proof}
 
 \subsection{Buffered factor ranks}
@@ -680,7 +883,7 @@ slabs.  At this cut, \cref{eq:XY} has the form
 \end{equation}
 where \(D\) is a nonzero diagonal sign matrix.
 
-\begin{lemma}[reachability and observability; \proved]\label{lem:XYfull}
+\begin{lemma}[reachability and observability; \proofpending]\label{lem:XYfull}
 Over the fraction field of the independent edge variables, \(X\) has column
 rank \(d_w\) and \(Y\) has row rank \(d_w\).
 \end{lemma}
@@ -705,7 +908,7 @@ nonzero monomial diagonal.  It preserves the suffix rank, so \(Y\) has full
 row rank.
 \end{proof}
 
-\begin{theorem}[generic minimality; \proved]\label{thm:grid-tight}
+\begin{theorem}[generic minimality; \proofpending]\label{thm:grid-tight}
 For every \(w\geq3\) and generic independent nonuniform edge weights,
 \[
  R_\infty(w)=2^{w^2-1}.
@@ -724,22 +927,59 @@ upper bound in \cref{thm:grid-upper} gives equality.
 Every matrix entry is polynomial in the independent edge variables.  Thus a
 full-rank minor over the fraction field is a nonzero real polynomial, whose
 nonvanishing locus is Zariski open.  A nonzero real polynomial cannot vanish
-on the entire positive orthant, so the same rank holds on a nonempty open set
-of strictly positive, nonuniform ferromagnetic weights.  At \(w=3\), the
-certificate uses \(G_{10,3}\) at the fifth handle cut.  Its sparse
-specialization has cycle dimension eight, generated by chords with edge
-indices
+on the open cube \(0<t_e<1\), so the same rank holds on a nonempty open set
+of physical ferromagnetic high-temperature weights.
+
+For \(w=3\), use \(G_{10,3}\) and cut after canonical handle five.  Order an
+unoriented edge by first sorting its endpoints lexicographically and then
+sorting the resulting endpoint pairs.  Retain the spanning-tree indices
 \[
- 44,52,103,110,112,118,120,162.
+\begin{split}
+T=\{&0,4,6,7,9,10,13,16,20,21,23,25,26,27,29,30,36,37,38,39,41,45,\\
+&48,49,50,51,57,59,60,62,65,67,68,70,73,78,79,80,83,86,88,89,91,\\
+&94,95,99,100,101,104,107,115,116,121,122,125,128,131,133,135,137,\\
+&138,139,143,146,148,149,151,154,155,161,164,165,170,173,175,176,\\
+&181,182,185,187,188,189,192,193,194,195,196,198,200\}
+\end{split}
 \]
-The left and right homology projections of this cycle space both have rank
-eight over \(\Ftwo\).  Invertible Walsh transforms therefore identify the
-selected flattening with
-\(H_L\operatorname{diag}((-1)^{q_0})H_R^T\), up to row and column
-permutations.  This has rank \(2^8=256\).  As independent replays, the full
-minor determinants are \(409643880\pmod {1000000007}\) and
-\(276933753\pmod {1000000009}\).  Either nonzero specialization proves that
-the corresponding integer-polynomial minor is not identically zero.  Under
+and the chord indices
+\[
+ C=(44,52,103,110,112,118,120,162).
+\]
+All other edge weights are zero and retained weights are one.  The set
+\(T\) has \(90-1=89\) edges and is connected; adjoining \(C\) therefore
+gives cycle dimension eight.  In the ordered fundamental-cycle basis
+specified by \(C\), select left canonical coordinates \(2,\ldots,9\) and all
+eight right coordinates.  The two projection matrices are
+\[
+L=\begin{pmatrix}
+1&0&0&0&1&0&0&0\\1&0&0&1&1&1&1&0\\1&0&0&0&0&0&0&0\\
+0&0&0&1&0&1&1&1\\0&0&0&0&0&1&1&1\\1&1&0&0&0&0&0&0\\
+1&1&0&1&0&1&0&0\\0&0&1&0&0&1&1&1
+\end{pmatrix},\quad
+R=\begin{pmatrix}
+0&0&1&0&0&1&1&1\\1&1&0&1&0&1&0&0\\1&1&0&1&0&1&1&0\\
+0&0&0&0&0&1&1&1\\0&0&0&1&0&1&1&1\\1&0&0&1&0&1&1&0\\
+1&0&0&1&1&1&1&1\\0&0&0&0&0&0&0&1
+\end{pmatrix}.
+\]
+Row reduction over \(\Ftwo\) gives
+\(\det L=\det R=1\).  Hence both homology projections are isomorphisms.
+Character orthogonality, applied on the two sides, gives the primary exact
+factorization
+\[
+ W_LMW_R^T
+ =2^{16}P_L\operatorname{diag}_{z\in\Ftwo^8}
+       \bigl((-1)^{q_0(z)}\bigr)P_R .
+\]
+Both Walsh matrices and both permutations are invertible, so
+\(\rank M=2^8=256\).  In the unnormalised original coordinates the
+determinant has magnitude \(2^{8\cdot256}=2^{2048}\).  The modular values
+\(409643880\pmod {1000000007}\) and
+\(276933753\pmod {1000000009}\) are independent audits of this symbolic
+argument, not its basis.
+
+Under
 the nested basis of \cref{lem:canonical}, append an eleventh slice, specialize
 all newly incident edge variables to zero, and fix the newly appended sector
 bits.  The same \(G_{10,3}\) minor is then a subminor of the \(G_{11,3}\)
@@ -757,13 +997,22 @@ algebraic restrictions and remain open here.
 
 The H3 condition in \cref{thm:separator} is genuinely stronger than pair-cut
 factorization.  Take the toroidal cellular rotation of \(K_{3,3}\), with
-bipartition \(0,1,2\mid3,4,5\), in which every vertex uses the displayed
-opposite part in cyclic order.  Its three faces are hexagons and its genus is
-one.  Choose disjoint port edges \((0,3)\) and \((1,5)\), and concatenate \(r\)
-copies by oriented edge-two-sums.  Denote the resulting ribbon graph by
-\(C_r\).
+bipartition \(0,1,2\mid3,4,5\), and rotation
+\[
+ \sigma_0=\sigma_1=\sigma_2=(3,4,5),\qquad
+ \sigma_3=\sigma_4=\sigma_5=(0,1,2).
+\]
+The face permutation has the three hexagonal orbits
+obtained from \(\varphi=\sigma\alpha\); hence \(V-E+F=6-9+3=0\) and the
+surface is a torus.  Choose left and right port edges \((0,3)\) and \((1,5)\).
+For an oriented edge-two-sum, delete the right port in copy \(j\) and the
+left port in copy \(j+1\), identify \(1_j\sim0_{j+1}\) and
+\(5_j\sim3_{j+1}\), and concatenate the two cyclic orders beginning
+immediately after the deleted darts, reversing the order at the second
+endpoint.  This is the boundary-orientation convention for gluing the two
+port disks.  Iterating it defines \(C_r\).
 
-\begin{theorem}[sharp internal obstruction; \proved]\label{thm:k33}
+\begin{theorem}[sharp internal obstruction; \proofpending]\label{thm:k33}
 The surface of \(C_r\) has genus \(r\).  For arbitrary nonuniform weights,
 the complete pre-Arf tensor has four-state handle-site bond at most two and
 binary-coordinate bond at most four.  For generic independent weights every
@@ -773,21 +1022,68 @@ non-end handle has rank exactly four.  The latter rank remains four under all
 \end{theorem}
 
 \begin{proof}
-The edge-two-sum realizes a connected sum of the explicit tori.  Between
+Deleting a port ribbon leaves one disk in each torus; the stated
+orientation-reversing boundary identification is their connected sum.
+Induction gives genus \(r\).  Between
 gadgets the separator has two marked points, with attainable masks \(00\) and
 \(11\).  Handles behind and ahead have disjoint support, so H1--H2 hold and
 \cref{thm:separator} gives pair bond two.  Splitting each handle gives the
 unconditional binary bond four.
 
-For a selected pair cut, set all edges outside its two adjacent gadgets to
-zero.  A frozen \(2\times2\) minor of the resulting two-gadget tensor is a
-nonzero polynomial.  For an internal cut, retain the three gadgets centered
-at that handle and set all exterior and standalone outer-port weights to
-zero.  A \(4\times4\) minor is nonzero.  These minors embed unchanged at every
-chain length, giving generic lower bounds two and four.  Direct permutation
-of the four local quadratic refinements checks the same nonzero rank-four
-minor for all 24 affine symplectic relabellings.  Hence H3 cannot be restored
-by a local canonical-coordinate change.
+We print exact lower-bound witnesses.  Order the surviving unoriented edges
+lexicographically by their ordered endpoints, work in
+\(\mathbb F_p\), \(p=1000000007\), and set
+\[
+ t_e=2+104729(e+1)\pmod p.
+\]
+For two gadgets set the two external port weights (edge indices \(0,13\))
+to zero.  At the pair cut, rows and columns \(0,1\) give
+\[
+ M_2=\begin{pmatrix}
+580027348&972921000\\846017352&721285802
+\end{pmatrix},\qquad
+\det M_2=592118981\ne0\pmod p.
+\]
+For three gadgets set external port indices \(0,20\) to zero.  At the
+internal cut after binary coordinate three, rows \(0,1,4,5\) and columns
+\(0,1,2,3\) give
+\[
+M_3=\begin{pmatrix}
+162853324&832578617&826262699&661314214\\
+899577535&497270790&261851776&256133602\\
+218465529&640022455&220866473&792750087\\
+850525458&627258512&600657840&119903730
+\end{pmatrix},
+\qquad\det M_3=839109772\ne0\pmod p.
+\]
+These displayed matrices are independently checkable finite-field
+specializations of integer-polynomial minors, so nonvanishing proves that
+the symbolic minors are not identically zero.
+
+At an arbitrary pair cut, zero every edge outside the two adjacent gadgets
+and fix all exterior spin coordinates to \(00\); the surviving even
+subgraphs and their signs are literally those defining \(M_2\).  At an
+internal cut do the same outside the centered three-gadget block, also
+zeroing its standalone outer ports; the surviving submatrix is \(M_3\).
+Thus the minors embed unchanged for every chain length.
+
+Finally, an affine symplectic relabelling in genus one is an arbitrary
+permutation of the four quadratic refinements.  The determinants of the
+same selected rank-four witness, after rank-revealing row selection, are:
+\[
+\begin{array}{c|r@{\qquad}c|r@{\qquad}c|r}
+0123&839109772&0132&818787838&0213&192657990\\
+0231&369943708&0312&465239613&0321&723491933\\
+1023&818787838&1032&839109772&1203&465239613\\
+1230&723491933&1302&192657990&1320&369943708\\
+2013&369943708&2031&192657990&2103&723491933\\
+2130&465239613&2301&839109772&2310&818787838\\
+3012&723491933&3021&465239613&3102&369943708\\
+3120&192657990&3201&818787838&3210&839109772
+\end{array}\pmod p .
+\]
+Every entry is nonzero.  Hence no local affine symplectic relabelling
+restores the H3 conclusion.
 \end{proof}
 
 This family separates two phenomena: separator compression can be exact at
@@ -933,39 +1229,22 @@ sector summation over both primes.
 
 \subsection{Contained failures}\label{sec:failure}
 
-Two failures materially constrain the claims.
-
-First, before canonical normalization, a raw coordinate tensor at
-\(G_{10,3}\) has apparent central internal rank \(512\).  Transporting the
-spin labels, Walsh phases, quadratic correction, and minor indices through
-the full symplectic change gives the canonical ranks \(256,256,256\) across
-the adjacent pair/internal/pair cuts.  The raw excess is a coordinate
-artifact and is not a topological obstruction.
-
-Earlier intermediate factorizations gave only the coarse bounds
-\(R_{\rm pair}\leq512\) and \(R_{\rm internal}\leq1024\) at \(w=3\).
-Those were pre-quotient upper bounds, not saturation certificates.  H3 and
-the fully transported coboundary gauge reduce both canonical cut types to
-the bare carrier bound \(256\); the certified canonical profile in
-\cref{tab:ranks} reaches \(256\), not \(512\) or \(1024\).
-
-Second, reflecting the normal five-layer encoder does not produce a valid
-right encoder in the same global canonical labelling.  At widths \(4,5,6\),
-its exact right ranks are \(7,12,15\), against targets \(15,24,35\), while the
-left ranks are full.  The false step is the assumption that two independently
-chosen side completions can be absorbed by one harmless mask diagonal.  A
-single global cochain gauge need not trivialize both completions.  The proof
-of \cref{thm:grid-tight} therefore uses the independently constructed
-opposite-phase encoder and the explicit two-slab buffer.
+Two failures constrain the argument: a noncanonical coordinate system
+creates a spurious width-three internal rank \(512\), and reflection of the
+normal encoder gives a rank-deficient right map.  Their full data and the
+discarded inferences are moved to
+\path{failure-ledger-supplement.tex}.  The present proof uses only canonical
+coordinates and an independently defined opposite-phase encoder.
 
 \section{Discussion}
 
-The central structural statement is exact:
+The central structural target is:
 \[
  \boxed{\text{complete spin-structure bond}
         =\text{ordinary even-frontier bond generically}.}
 \]
-The upper equality means that repeated handle attachment, Arf/Walsh phases,
+If the pending grid and encoder lemmas are completed, the upper equality
+means that repeated handle attachment, Arf/Walsh phases,
 and cochain gauge changes introduce no additional exact memory once the
 frontier mask is retained.  The generic lower equality means that no
 universal exact compression of this complete tensor below the transverse
@@ -1036,6 +1315,20 @@ If \(o\) is odd, add
 \end{align*}
 Each extension contains \(10o+5\) edges, one per new vertex.
 
+For the normal phase put \(k=\lfloor w/2\rfloor\) and define the exceptional
+tree chords
+\begin{align}\label{eq:Xplus}
+ X_w^+={}&\{e_z(0,3,2)\}
+ \cup\{e_z(0,y,0):y=5,7,\ldots,2k-1\}\notag\\
+ &\cup\{e_z(1,2a+1,2b):1\leq a\leq k-3,\ a+2\leq b\leq k-1\},
+\end{align}
+and retain
+\begin{equation}\label{eq:Pplus}
+ P_w^+=(T_w^+\setminus T_w^0)\setminus X_w^+.
+\end{equation}
+Empty ranges are again omitted.  Direct subtraction from the preceding
+recurrence gives \(|P_w^+|=w^2-1\).
+
 The opposite width-four base is obtained from the normal base by the 13-edge
 exchange in \cref{tab:exchange}.  For all later extensions, first include the
 new \(x\)-rails at \(x=1,2\).  If \(o\) is odd, add
@@ -1060,6 +1353,20 @@ If \(o\geq6\) is even, add
 The \(o=4\) shell uses \(e_x(3,4,z)\) for \(z=1,2,4\), the \(x=4\)
 shell positions \(z=0,3\), and \(e_z(0,4,0)\), exactly as frozen by the
 ancillary verifier.
+
+For the opposite phase define
+\begin{equation}\label{eq:Xminus}
+ X_w^-=\begin{cases}
+ \varnothing,&w\text{ odd},\\
+ \{e_z(0,3,2)\},&w=4,\\
+ \{e_z(0,w-1,0)\},&w\geq6\text{ even},
+ \end{cases}
+ \qquad
+ P_w^-=(T_w^-\setminus T_w^0)\setminus X_w^-.
+\end{equation}
+The recurrences give \(|P_w^-|=w^2-1\).  These are the retained chord sets
+used in every subsequent primal and dual deletion; no implicit fitted subset
+is being chosen.
 
 \begin{table}[p]
 \centering
@@ -1113,16 +1420,293 @@ opposite \(w=4\) & new sizes \(1,4,4,5,5,6,6\), one old size 4,
 eight old 0 & direct connected check\\
 opposite odd \(w\geq5\) & new: \(3(w-1)/2\) of size 1,
 \((w-1)/2\) of size 5, one of size \(4w+1\); old: \((w-1)/2\) of size 4,
-otherwise old 0 & \(w=5:1,11; w\geq7:1,2w-4,w-2,w-1\)\\
+otherwise old 0 & \(1,2w-3,w-2,w-1\)\\
 opposite even \(w\geq6\) & new: \(3(w-2)/2\) of size 1, one of size 4,
 one of size 6, \(w/2\) of size 9; old: \(w-3\) of size 4, otherwise old 0
-& \(w=6:1,8,4,4,3; w\geq8:1,2w-5,w-2,w-2,3\)\\
+& \(1,2w-4,w-2,w-2,3\)\\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \clearpage
+\section{Symbolic shell induction for the encoder lemma}
+\label{app:encoder-induction}
+
+We give the symbolic shell induction intended to show that the recurrences
+of \cref{app:encoders} preserve the two encoder invariants at arbitrary
+width.  The finite-width programs described in the reproducibility section
+are regression checks only.  The remaining base and exceptional-mode
+obligations are stated at the end of the appendix.
+
+Write \(o=W-1\) for the old and new widths.  The new transverse
+L-shell has \(5(2o+1)=10W-5\) vertices.  Old components are contracted
+before examining the shell.  Since each recurrence retains the old tree and
+adds one parent edge for every new vertex, with no edge joining two already
+reached vertices, the new graph is again a spanning tree.  All old faces
+away from \(y=W-2\) and \(z=W-2\) keep their former dual component.  Thus a
+shell can meet the old contracted dual remainder only along these two
+boundary rows.  The edge lists in \cref{app:encoders} depend there only on
+the parity of the running coordinate.  Consequently each induction step is
+the repetition of the finite local parent patterns recorded below, plus the
+unchanged old remainder.
+
+\paragraph{The terminal-forest invariant.}
+Delete the retained chords.  Following the rails from each new vertex until
+the first terminal or contracted old component gives the component types in
+the middle column of \cref{tab:encoder-checks}.  The following four sums show
+that those types exhaust the new shell:
+\begin{align*}
+ W\text{ odd, normal: }&
+ \left(\frac{3(W-1)}2+1\right)
+ +9\frac{W-3}2+13+4(W-3)+8=10W-5,\\
+ W\text{ even, normal: }&
+ 3\frac{W-2}2+5\frac{W-2}2+2\cdot9+17
+ +4\frac{W-4}2+8\frac{W-6}2=10W-5,\\
+ W\text{ odd, opposite: }&
+ 3\frac{W-1}2+5\frac{W-1}2+(4W+1)
+ +4\frac{W-1}2=10W-5,\\
+ W\text{ even, opposite: }&
+ 3\frac{W-2}2+4+6+9\frac W2+4(W-3)=10W-5.
+\end{align*}
+The summands occur in the order ``new components, modified old
+components'' used in the table.  Their anchors are distinct: a new component
+ends at its displayed shell terminal, while a modified old component retains
+the unique terminal supplied by the induction hypothesis.  Counting the
+unchanged old components gives exactly \(W^2\) anchors in every row.  The
+four vertex identities therefore leave neither an anchor-free component nor
+an unassigned shell vertex.  Because the graph is a forest, every component
+contains exactly one terminal.  This proves the terminal invariant by
+induction from the two width-four bases (with the exceptional normal
+\(4\to5\) step checked directly from the displayed recurrence).
+
+\paragraph{Normal dual parent map.}
+Denote a boundary square by \((a;x,y,z)\), where \(a\) is its fixed
+coordinate axis and \((x,y,z)\) its lower corner.  Contract separately each
+connected old/bulk or changed/new face component after deleting
+\((T_W^0\cup P_W)^*\).  For odd \(W\), the only nondirect shell arms are,
+for even \(0\le j\le W-3\),
+\[
+ \begin{array}{ccccc}
+ (2;3,j,W-2)&\longleftarrow&(0;0,j,W-2)
+ &\longleftarrow&(2;1,j,W-2),\\
+ (1;3,W-2,j)&\longleftarrow&(0;1,W-2,j)
+ &\longleftarrow&(1;1,W-2,j).
+ \end{array}
+\]
+The arrows point toward the parent.  The first arm with \(j=W-3\) has the
+additional child \((0;0,W-3,W-2)\); every other contracted component meets
+the outer component directly.  The two arm families have \((W-1)/2\)
+members each.  Together with the unchanged direct bulk components they give
+the breadth-first counts
+\[
+ 1,\quad 3W-4,\quad W-1,\quad W-1,\quad1.
+\]
+
+For even \(W\), each odd \(1\le j\le W-3\) gives the parent tree
+\[
+ (1;0,W-2,j)\longleftarrow(0;1,j,W-2)
+ \longleftarrow
+ \{(2;0,j,W-2),(2;2,j,W-2)\}.
+\]
+The old component containing \((0;0,0,W-3)\) additionally parents the
+\((W-2)/2\) leaves \((0;0,W-2,j)\) with odd \(j\); all other old components
+meet the outer component.  Hence the layer counts are
+\[
+ 1,\quad3W-6,\quad W-2,\quad W-2.
+\]
+In both parities, consecutive displayed squares share the unique transverse
+edge left undeleted by the corresponding recurrence.  Splitting the two
+boundary rows according to coordinate parity gives exactly the displayed
+families; a corner belongs to the distinguished family, and an interior
+boundary square belongs to one value of \(j\).  Every other cross-component
+boundary edge is in \(T_W^0\cup P_W\), while every off-shell adjacency stays
+inside an old component.  Thus every nonroot quotient component occurs once
+and has one parent.  The quotient has one fewer displayed edge than vertices
+and is a tree.  This proves connectedness of the normal dual remainder for
+all \(W\).
+
+\paragraph{Opposite dual parent map.}
+The same contraction applied to the opposite recurrence admits the following
+complete parent description.  This also corrects a layer-count transcription
+error in the earlier working proof: the correct second-layer counts are
+\(2W-3\) for odd \(W\) and \(2W-4\) for even \(W\).
+
+Suppose first that \(W\geq5\) is odd, and put
+\(r=W-2\).  The root is the component represented by
+\(O=(0;0,0,r)\).  The components adjacent to \(O\) are
+\begin{align*}
+ A_j&=(0;0,0,j) &&(j=1,3,\ldots,r-2),\\
+ B_j&=(0;0,1,j),&
+ C_j&=(1;0,r,j),&
+ D_j&=(1;2,r,j) &&(j=0,2,\ldots,r-1).
+\end{align*}
+Here and below every member of a displayed family has the displayed parent;
+thus \(A_j,B_j,C_j,D_j\leftarrow O\).  The remaining parent edges are
+\begin{align*}
+ E_j=(0;0,r,j)&\leftarrow C_j &&(j=2,4,\ldots,r-1),\\
+ F_j=(0;1,j,r)&\leftarrow B_{r-1} &&(j=0,2,\ldots,r-1),\\
+ (2;0,j,r)&\leftarrow F_j,&
+ (2;2,j,r)&\leftarrow F_j &&(j=0,2,\ldots,r-1).
+\end{align*}
+Consequently the breadth-first layers have cardinalities
+\[
+ 1,\quad2W-3,\quad W-2,\quad W-1.
+\]
+The formula includes the base shell \(W=5\), where the layers are
+\(1,7,3,4\).  In that base shell only, the first line is replaced by
+\(E_0=(0;0,3,0)\leftarrow C_0\); its cardinality is unchanged.
+
+Now suppose that \(W\geq6\) is even and again put \(r=W-2\).  The root is
+\(O=(0;0,r,1)\).  Its children are
+\begin{align*}
+ A_j&=(0;0,0,j) &&(j=1,3,\ldots,r-1),\\
+ B_j&=(0;0,1,j) &&(j=0,2,\ldots,r-2),\\
+ C_j&=(1;3,r,j),&
+ D_j&=(2;3,j,r) &&(j=1,3,\ldots,r-1).
+\end{align*}
+The next layer and its parents are
+\begin{align*}
+ E_j=(0;0,j,r)&\leftarrow D_j &&(j=3,5,\ldots,r-3),\\
+ F_j=(0;1,r,j)&\leftarrow C_j &&(j=3,5,\ldots,r-1),\\
+ G_1=(0;2,1,r)&\leftarrow D_1,&
+ G_{r-1}=(0;2,r-1,r)&\leftarrow D_{r-1},\\
+ H=(0;2,r,1)&\leftarrow C_1.&
+\end{align*}
+Empty ranges are omitted.  The third layer is
+\begin{align*}
+ I_1=(1;1,r,1)&\leftarrow H,&
+ I_j=(1;1,r,j)&\leftarrow F_j &&(j=3,5,\ldots,r-1),\\
+ J_1=(2;1,1,r)&\leftarrow G_1,&
+ J_{r-1}=(2;1,r-1,r)&\leftarrow G_{r-1},\\
+ J_j=(2;1,j,r)&\leftarrow E_j &&(j=3,5,\ldots,r-3),
+\end{align*}
+and the final three leaves are
+\[
+ (0;0,1,r)\leftarrow J_1,qquad
+ (0;0,r-1,r)\leftarrow J_{r-1},qquad
+ (0;1,r,1)\leftarrow I_1.
+\]
+The even-width layers therefore have sizes
+\[
+ 1,\quad2W-4,\quad W-2,\quad W-2,\quad3.
+\]
+
+It remains to verify that these are the \emph{complete} quotient edge sets,
+not merely spanning parent sets.  Two boundary squares in the list are
+adjacent exactly when their descriptors share the transverse edge indicated
+by the arrow.  Substitution in the odd and even edge recurrences of
+\cref{app:encoders} shows that every arrow edge is outside
+\(T_W^0\cup P_W^-\).  The other boundary adjacencies either join faces
+already contracted into the same old/new component or use an edge of
+\(T_W^0\cup P_W^-\).  Off-shell adjacencies remain inside an old component.
+The displayed families are disjoint and exhaust the parity classes on both
+boundary rows, so there are no omitted quotient vertices.  Hence the
+quotient has exactly one displayed edge per nonroot component and is a tree.
+This proves connectedness of the opposite dual remainder, conditional only
+on the printed width-four base trace discussed below.
+
+\paragraph{Exceptional modes.}
+Let \(D_W\) be the face dual and let \(h_e\) denote the fundamental-cycle
+homology label of a chord relative to \(T_W^0\).  For any chord set \(A\),
+the cographic rank formula is
+\begin{equation}\label{eq:tree-cotree-rank}
+ \rank h(A)=|A|-c\bigl(D_W-(T_W^0\cup A)^*\bigr)+1.
+\end{equation}
+
+For the normal encoder, deletion with and without the exceptional set
+\(X_W^+\) has the same dual-component partition.  Besides the large
+component, its small components are
+\begin{equation}\label{eq:normal-islands}
+ \begin{split}
+ I_3&=\{(0;0,y,2):0\le y\le2\},\\
+ I_5&=\{(0;0,y,0):0\le y\le4\},\\
+ I_{2,r}&=\{(0;0,2r-1,0),(0;0,2r,0)\},
+       \qquad3\le r<\lfloor W/2\rfloor .
+ \end{split}
+\end{equation}
+Indeed, along the \(x=0\) boundary row, the first exceptional tooth closes
+\(I_3\), the first \(z=0\) tooth closes \(I_5\), and each subsequent
+odd-row tooth closes the displayed pair.  Every other boundary edge of
+these sets lies in \(T_W^0\cup X_W^+\), while the triangular \(x=1\) teeth
+and all edges of \(P_W^+\) have both incident faces in the same displayed
+set or in the large component.  Thus the component claim reduces to the
+finite parity families in \cref{eq:normal-islands}; the still-unprinted
+boundary-incidence table is the explicit check of this sentence.  Once that
+check is supplied, applying
+\cref{eq:tree-cotree-rank} to \(X_W^+\) and to
+\(P_W^+\cup X_W^+\), and using connectedness for \(P_W^+\), shows
+\begin{equation}\label{eq:normal-span-split}
+ \operatorname{span}h(P_W^+)\cap\operatorname{span}h(X_W^+)=0.
+\end{equation}
+
+For the opposite encoder, \(X_W^-\) is empty at odd width.  At even
+\(W\ge6\), put \(X=e_z(0,W-1,0)\).  Removing additionally \(X^*\) from the
+connected dual remainder splits off the following face set:
+\begin{align}\label{eq:opposite-cut}
+ C_W={}&\{(1;x,y,0):x\in\{0,2\},\ 0\le y<W\}\notag\\
+ &\cup\{(1;x,y,0):x\in\{1,3\},\ y\in\{0,W-1\}\}\notag\\
+ &\cup\{(2;x,y,0):x\in\{0,2\},\ 0\le y\le W-2,\ y\text{ even}\}\notag\\
+ &\cup\{(2;x,y,0):x\in\{1,3\},\ 0\le y\le W-2\}\notag\\
+ &\cup\{(0;x,y,0):0\le x\le3,\ 1\le y\le W-3,\ y\text{ odd}\}\notag\\
+ &\cup\{(0;4,y,0):0\le y\le W-2\}\notag\\
+ &\cup\{(2;x,y,1):x\in\{1,3\},\ 1\le y\le W-3,\ y\text{ odd}\}.
+\end{align}
+Successive squares in each row of \cref{eq:opposite-cut} are joined by the
+undeleted rails in the even recurrence, so \(C_W\) is connected.  Inspecting
+its boundary shows that the non-gauge chord edges crossing the cut are
+exactly
+\[
+ \{X\}\cup\{e_y(4,2j,1):0\le j<W/2\}.
+\]
+Gauge-tree edges have zero label.  The face-boundary relation for
+\(C_W\) therefore gives the unique dependence
+\begin{equation}\label{eq:opposite-h-relation}
+ h_X=\sum_{j=0}^{W/2-1}h_{e_y(4,2j,1)}.
+\end{equation}
+
+It remains to compare terminal cuts.  Root the terminal slice at
+\(s_0=(4,0,0)\), and for a tree edge \(e\) let \(u_e\in V(S_W)\) be the
+indicator of the terminals on the component of \(T_W^-\setminus e\) not
+containing \(s_0\).  Following the printed even-width rails shows that both
+\(X\) and \(e_z(1,W-1,1)\) separate the sole terminal \((4,W-1,0)\).  Hence
+\begin{equation}\label{eq:opposite-u-relation}
+ u_X=u_{e_z(1,W-1,1)}.
+\end{equation}
+The edge on the right of \cref{eq:opposite-u-relation} does not occur in
+\cref{eq:opposite-h-relation}.  At \(W=4\), the complete base trace below
+gives instead
+\begin{align*}
+ h_X&=h_{e_y(4,0,1)}+h_{e_y(4,2,1)},\\
+ u_X&=u_{e_z(1,2,1)}+u_{e_y(2,2,2)},
+\end{align*}
+again with disjoint supports.
+
+Finally use the \(P_W^-\) terminal-cut columns and homology labels as bases.
+Without \(X\), the terminal-to-homology matrix is the identity.  Adding
+\(X\) is the rank-one update \(I+uv^T\), where \(u\) and \(v\) are the two
+coordinate vectors just displayed.  Their supports are disjoint, so
+\(v^Tu=0\) and
+\[
+ \det(I+uv^T)=1+v^Tu=1\quad\text{in }\Ftwo.
+\]
+Thus the exceptional edge does not reduce terminal injectivity.  The
+opposite quotient parent map and both finite width-four base traces are
+printed below.  The remaining manuscript-level gap in \cref{lem:encoders}
+is the fully expanded boundary-incidence verification of
+\cref{eq:normal-islands} and \cref{eq:opposite-cut}; until that bookkeeping is included,
+the lemma remains marked \proofpending.
+
+\input{width4-normal-base-trace.tex}
+\input{width4-base-trace.tex}
+
+\clearpage
 \section{Reproducibility and claim inventory}
+
+Zenodo version DOI \url{https://doi.org/10.5281/zenodo.21845273} is reserved
+in an unsubmitted draft record.  The DOI is not yet registered, no files have
+been uploaded, and there is no public immutable proof archive; the manuscript
+is therefore not submission-ready.  Replay links will be inserted only when
+they identify the exact archived revision.
 
 The proof archive separates discovery scripts from exact proof scripts.  The
 authoritative immutable records are:
@@ -1145,6 +1729,18 @@ embedding robustness &
 Each record freezes source hashes, conventions, prime specializations, and a
 one-command immutable check.  The corrected generic-tightness record removes
 volatile timing fields from its predecessor; no mathematical field changed.
+From the project directory the principal checks are
+\begin{verbatim}
+python3 proof/build_cycle7_lane_b_arbitrary_width_closure.py --check
+python3 proof/build_cycle8_g1_generic_tightness_correction_v2.py --check
+python3 proof/build_cycle10_abstract_separator_theorem.py --check
+python3 discovery/diagnose_g1_opposite_quotient.py --maximum-width 20
+python3 discovery/render_width4_encoder_base_trace.py --phase normal
+python3 discovery/render_width4_encoder_base_trace.py --phase opposite
+\end{verbatim}
+The first three commands audit frozen claims.  The last three regenerate the
+working quotient and printed base tables.  None replaces the \(\forall w\)
+arguments in the manuscript.
 
 The principal proof documents are:
 \begin{itemize}
@@ -1161,8 +1757,9 @@ invertible before reduction.
 
 \paragraph{AI assistance.}
 The author used AI assistance in developing candidate formulations, proof
-presentation, and verification code.  All promoted mathematical claims are
-supported by the explicit proofs and replay records identified above.
+presentation, and verification code.  Claims marked \proofpending are not
+promoted mathematical results; exact replays are identified separately as
+audits.
 
 \bibliographystyle{alpha}
 \bibliography{references}

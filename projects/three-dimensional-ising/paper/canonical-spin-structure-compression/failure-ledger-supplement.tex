@@ -1,0 +1,42 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\title{Supplementary Failure Ledger for\\
+Separator Compression of Cubic-Lattice Ising Strips}
+\author{Hainan Zhao}
+\date{August 2026}
+\begin{document}
+\maketitle
+
+\section{Noncanonical internal rank}
+
+Before canonical normalization, a raw coordinate tensor at
+\(G_{10,3}\) has apparent central internal rank \(512\).  Transporting the
+spin labels, Walsh phases, quadratic correction, and minor indices through
+the full symplectic change gives canonical ranks \(256,256,256\) across the
+adjacent pair/internal/pair cuts.  The raw excess is a coordinate artifact.
+
+Earlier intermediate factorizations gave only
+\(R_{\rm pair}\le512\) and \(R_{\rm internal}\le1024\).  These were
+pre-quotient bounds.  They are not saturation certificates and cannot be
+used in place of the canonical rank profile.
+
+\section{Invalid reflected encoder}
+
+Reflecting the normal five-layer encoder does not produce a valid right
+encoder in the same global canonical labelling.  At widths \(4,5,6\), its
+exact right ranks are \(7,12,15\), against targets \(15,24,35\), while its
+left ranks are full.  The false step was to assume that two independently
+chosen side completions could be absorbed by one mask diagonal.  One global
+cochain gauge need not trivialize both completions.  Any generic-tightness
+proof must use the independently defined opposite-phase encoder or a
+different right-observability mechanism.
+
+\section{Current manuscript consequence}
+
+The main manuscript therefore uses only canonical coordinates, separates
+the normal and opposite encoder constructions, and marks the
+arbitrary-width encoder lemma proof-incomplete until the full contracted
+dual quotient edge sets and width-four bases are printed.
+
+\end{document}
