@@ -1,0 +1,10 @@
+#!/bin/sh
+set -eu
+
+if ! command -v git-lfs >/dev/null 2>&1
+then
+    echo "This repository requires git-lfs. Install it before pushing." >&2
+    exit 2
+fi
+
+git lfs pre-push "$@"

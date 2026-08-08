@@ -1,0 +1,24 @@
+#!/bin/sh
+set -eu
+
+git diff --cached --name-only --diff-filter=ACMR -- '*.pdf' |
+while IFS= read -r path
+do
+    test -n "$path" || continue
+
+    filter=$(git check-attr filter -- "$path")
+    case "$filter" in
+        *': filter: lfs') ;;
+        *)
+            echo "PDF is not covered by Git LFS attributes: $path" >&2
+            exit 1
+            ;;
+    esac
+
+    first_line=$(git show ":$path" | sed -n '1p')
+    if test "$first_line" != 'version https://git-lfs.github.com/spec/v1'
+    then
+        echo "PDF is staged as a Git blob instead of an LFS pointer: $path" >&2
+        exit 1
+    fi
+done
