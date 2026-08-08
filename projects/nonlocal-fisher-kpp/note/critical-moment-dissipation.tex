@@ -1,0 +1,222 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper,margin=0.85in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+
+\title{Critical exponential-moment dissipation and a no-go theorem\\
+for repeating packets in nonlocal Fisher--KPP fronts}
+\author{Hainan Zhao}
+\date{Research note, August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+For the one-dimensional nonlocal Fisher--KPP equation
+\[
+ u_t=D u_{xx}+u(1-K*u),
+\]
+with an even nonnegative competition kernel, we derive an exact dissipation
+identity for every exponentially weighted mass after removing its linear
+growth.  At the critical Fisher--KPP tilt, this gives a strict Lyapunov
+quantity and an exact formula for the phase delay caused by nonlocal
+competition.  A nonzero state with finite critical exponential moment that
+repeats after a spatial translation must travel strictly slower than the
+pulled speed $2\sqrt D$.  Thus a periodic-shedding description at pulled speed
+cannot identify the complete localized state from one cycle to the next.  A
+critical leading tail must be separated from the deposited wake, or an
+additional competition-memory variable must be retained.  The result does
+not select a wake wavelength or prove the proposed large-time pattern behind
+the front.
+\end{abstract}
+
+\section{Setting and claim boundary}
+
+Let $D>0$ and let $K\in L^1(\R)$ be even, nonnegative, nonzero, and normalized
+by $\int_{\R}K=1$.  Consider
+\begin{equation}
+ u_t=D u_{xx}+u(1-K*u)
+\end{equation}
+on $\R$.  We assume that $u$ is a nonzero nonnegative classical solution on
+$[t_0,t_1]$ and that the weighted integrals and integrations by parts below
+are justified.  Bounded compactly supported initial data satisfy the needed
+conditions at positive times under standard well-posedness hypotheses.  For
+the top-hat model below, the required global bounded classical solution is
+supplied by Hamel and Ryzhik~\cite[Theorem~1.2]{HamelRyzhik2014}.
+
+The motivating special case is the radius-one top-hat kernel
+\begin{equation}
+ K(x)=\frac12\mathbf 1_{[-1,1]}(x),
+\end{equation}
+for which recent asymptotic and numerical work displays patterned wakes
+behind an invasion front~\cite{NeedhamEtAl2025}.  Our conclusion concerns
+exactly repeating, exponentially localized packets.  It does not exclude a
+pulled front whose critical weighted moment diverges, nor a stationary wake
+behind a separate leading edge.
+
+\section{An exact family of dissipating moments}
+
+For $a\in\R$, set
+\[
+ J_a(t)=\int_{\R}e^{ax}u(x,t)\,dx,
+ \qquad
+ \mathcal E_a(t)=e^{-(1+Da^2)t}J_a(t).
+\]
+
+\begin{theorem}[Exponential-moment dissipation]\label{thm:dissipation}
+For every $a$ for which the preceding quantities are finite,
+\begin{equation}
+ \mathcal E_a'(t)
+ =-\frac{e^{-(1+Da^2)t}}2
+ \iint_{\R^2}K(x-y)\bigl(e^{ax}+e^{ay}\bigr)
+ u(x,t)u(y,t)\,dx\,dy.
+\end{equation}
+In particular, $\mathcal E_a$ is nonincreasing.  It is strictly decreasing
+whenever the double integral in \emph{(3)} is positive; this holds, for
+example, when $u(\cdot,t)>0$ and $K$ is nonzero and nonnegative.
+\end{theorem}
+
+\begin{proof}
+Twice integrating the diffusion term by parts gives
+\begin{equation}
+ J_a'=(1+Da^2)J_a-
+ \int_{\R}e^{ax}u(x)(K*u)(x)\,dx.
+\end{equation}
+Evenness of $K$ permits exchange of $x$ and $y$, so
+\begin{align*}
+ \int e^{ax}u(x)(K*u)(x)\,dx
+ &=\iint K(x-y)e^{ax}u(x)u(y)\,dx\,dy\\
+ &=\frac12\iint K(x-y)(e^{ax}+e^{ay})u(x)u(y)\,dx\,dy.
+\end{align*}
+Differentiating the exponential normalization in $\mathcal E_a$ proves
+\emph{(3)}.  Its integrand is nonnegative under the stated assumptions.
+\end{proof}
+
+For the top-hat kernel, (3) becomes
+\begin{equation}
+ \mathcal E_a'(t)
+ =-\frac{e^{-(1+Da^2)t}}4
+ \iint_{|x-y|\leq1}(e^{ax}+e^{ay})u(x,t)u(y,t)\,dx\,dy.
+\end{equation}
+At the critical tilts $a=\pm D^{-1/2}$ the normalizing exponent is $2$.
+
+\section{Translation speed and competition delay}
+
+Suppose that, for some $T>0$ and $\lambda>0$,
+\begin{equation}
+ u(x,t_0+T)=u(x-\lambda,t_0).
+\end{equation}
+Then $J_a(t_0+T)=e^{a\lambda}J_a(t_0)$.  Define the tilted
+competition average
+\begin{equation}
+ \langle K*u\rangle_{a,t}
+ =\frac{\int e^{ax}u(x,t)(K*u)(x,t)\,dx}
+        {\int e^{ax}u(x,t)\,dx}.
+\end{equation}
+
+\begin{corollary}[Exact translation-delay identity]\label{cor:delay}
+If $a>0$, $J_a$ is finite and nonzero on the interval, and \emph{(6)} holds,
+then
+\begin{equation}
+ \frac{\lambda}{T}
+ =Da+\frac1a-\frac1{aT}
+   \int_{t_0}^{t_0+T}\langle K*u\rangle_{a,t}\,dt.
+\end{equation}
+Consequently,
+\begin{equation}
+ \frac{\lambda}{T}<Da+\frac1a
+\end{equation}
+whenever the competition integral is positive.  At $a=D^{-1/2}$,
+\begin{equation}
+ \frac{\lambda}{\sqrt D}
+ =2T-\int_{t_0}^{t_0+T}\langle K*u\rangle_{D^{-1/2},t}\,dt,
+ \qquad \frac{\lambda}{T}<2\sqrt D.
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+Divide (4) by $J_a$, integrate in time, and use the translated endpoint
+relation.  Strict positivity gives (9).  Substitution of $a=D^{-1/2}$ gives
+(10).
+\end{proof}
+
+The first two terms on the right of (8) are the linear dispersion curve
+$Da+a^{-1}$; its minimum over $a>0$ is the pulled speed $2\sqrt D$.  The last
+term is an exact nonlinear phase delay, not an error estimate.
+
+\section{What the obstruction says about patterned wakes}
+
+Equation (10) rules out the following closure: a nonzero finite-critical-
+moment state advances at pulled speed and, after each shedding time, becomes
+an exact translate of itself.  The obstruction is not that a patterned wake
+cannot form.  Rather, the complete state of a pulled invasion cannot be one
+localized repeating packet.  At least one of the following must occur:
+\begin{enumerate}
+  \item the critical leading tail, whose critical exponential moment is
+        typically divergent, is treated separately from the localized wake;
+  \item the cycle state retains the time-integrated tilted competition trace
+        in (10), or an equivalent memory variable;
+  \item the shedding process is not exactly recurrent up to translation.
+\end{enumerate}
+
+This distinction matters because an invasion front can move at pulled speed
+while leaving nearly stationary humps behind it.  Such a solution is not a
+counterexample to Corollary~\ref{cor:delay}: its leading edge and wake are not
+a single finite-moment translate.
+
+\section{Open quantitative step}
+
+The identity isolates a concrete next problem.  After decomposing a solution
+into a critical leading component and a localized hump/wake component, one
+must evaluate or bound
+\[
+ \int_{t_0}^{t_0+T}\langle K*u\rangle_{D^{-1/2},t}\,dt.
+\]
+If this integral becomes a universal functional of one established hump and
+its incoming leading-edge amplitude, it could close a finite-dimensional
+formation map.  If two nonlinear histories with the same visible hump retain
+different values of this integral, then a one-hump Markov description is
+impossible.  Neither alternative is proved here.
+
+\section{Status and review questions}
+
+Theorem~\ref{thm:dissipation} and Corollary~\ref{cor:delay} are
+\textbf{PROVED} under their stated regularity and finiteness assumptions.
+The interpretation as a necessary state decomposition is a direct logical
+consequence of the corollary.  No claim of wavelength selection, asymptotic
+periodicity, or biological prediction is made.
+
+The author especially invites review of three points:
+\begin{enumerate}
+  \item Is identity (3), or its critical-tilt consequence (10), already
+        explicit in the nonlocal Fisher--KPP literature?
+  \item Can the regularity assumptions be weakened to a natural
+        measure-valued or one-sided weighted class?
+  \item Can the competition-delay integral be connected rigorously to a
+        leading-edge/wake decomposition for top-hat kernels?
+\end{enumerate}
+
+\begin{thebibliography}{9}
+\bibitem{HamelRyzhik2014}
+F.~Hamel and L.~Ryzhik,
+\newblock On the nonlocal Fisher--KPP equation: steady states, spreading
+speed and global bounds,
+\newblock \emph{Nonlinearity} \textbf{27} (2014), 2735--2753.
+\newblock \url{https://doi.org/10.1088/0951-7715/27/11/2735}.
+
+\bibitem{NeedhamEtAl2025}
+D.~J. Needham, J.~Billingham, N.~M. Ladas, and J.~Meyer,
+\newblock The evolution problem for the 1D nonlocal Fisher--KPP equation
+with a top hat kernel. Part 1: The Cauchy problem on the real line,
+\newblock \emph{European Journal of Applied Mathematics} \textbf{36}
+(2025), 775--810.
+\newblock \url{https://doi.org/10.1017/S0956792524000688}.
+\end{thebibliography}
+
+\end{document}

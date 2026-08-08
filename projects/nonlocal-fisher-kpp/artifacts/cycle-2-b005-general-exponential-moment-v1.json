@@ -1,0 +1,58 @@
+{
+  "artifact_id": "cycle-2-b005-general-exponential-moment-v1",
+  "audit": {
+    "exact_algebra": {
+      "claim_boundary": "Exact coefficient and rearrangement audit only; integration by parts, kernel exchange, finiteness, and strictness are written proofs.",
+      "critical_dispersion_checks": 6,
+      "status": "PASS",
+      "symmetrizations_checked": 3,
+      "total_exact_checks": 11,
+      "translation_checks": 2
+    },
+    "scaffold": {
+      "status": "PASS"
+    }
+  },
+  "budget_ordinal": "B005",
+  "claim_boundary": "Assumes a classical nonnegative solution and the weighted integrability and boundary decay needed for differentiation and integration by parts. It does not provide those hypotheses for every kernel, exclude fronts with divergent critical moment, select a wake wavelength, or prove asymptotic pattern formation.",
+  "cycle": 2,
+  "epistemic_status": "PROVED",
+  "frozen_hashes": {
+    "exact_algebra_audit": {
+      "path": "proof/verify_general_exponential_moment.py",
+      "sha256": "331fc89cc1c3729c968125407c39887112692e9e3120037a73c2d841f32bee44"
+    },
+    "mathematical_record": {
+      "path": "proof/general_exponential_moment.md",
+      "sha256": "57fdbddb1e9acc494e87484916207cc0f3903deae529015e6d4ae9b8dc49b426"
+    },
+    "scaffold_test": {
+      "path": "proof/test_cycle_seal_v1.py",
+      "sha256": "13b7c93eaadba30e33a39aa0ad3e31431af5ec47296aa30e0d6df0639e55be04"
+    },
+    "sealing_scaffold": {
+      "path": "proof/cycle_seal_v1.py",
+      "sha256": "2061713b05a9c2a64677a7fd504d6c987ecae7ef9cf46da218b803d92b0816d6"
+    }
+  },
+  "outcome": "For every even nonnegative competition kernel and every finite exponential tilt a, exp(-(1+D*a^2)t) times the a-weighted mass has an exact nonnegative pair-interaction dissipation.",
+  "record_type": "THEOREM_GENERALIZATION_FOR_REVIEW_NOTE",
+  "recorded_at_utc": "2026-08-08T14:06:12Z",
+  "relation_to_b004": "B005 generalizes the sealed radius-one top-hat critical-tilt identity B004 to arbitrary even nonnegative kernels and arbitrary finite exponential tilts; it does not change the terminal gate.",
+  "replay": {
+    "artifact_check": "python3 proof/build_cycle2_general_exponential_moment.py --check",
+    "exact_algebra_audit": "python3 proof/verify_general_exponential_moment.py",
+    "scaffold_test": "python3 proof/test_cycle_seal_v1.py"
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "optimization_level": 0,
+    "python": "3.12.3"
+  },
+  "sealer": {
+    "path": "proof/build_cycle2_general_exponential_moment.py",
+    "sha256": "068ad4db1b4e29bd1d433be4fe4a97f2cbcbea11a29fc1d53de339e4274e1783"
+  },
+  "status": "SEALED",
+  "translation_delay": "An exact translated finite-a-moment state has speed D*a+1/a minus its positive tilted competition delay; at the critical tilt this is strictly below 2sqrt(D)."
+}
