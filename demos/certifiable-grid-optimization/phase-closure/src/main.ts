@@ -1,0 +1,26 @@
+import "./styles.css";
+import { cycleDefect, reconstruct } from "./model";
+
+const app = document.querySelector<HTMLDivElement>("#app");
+if (!app) throw new Error("missing app");
+app.innerHTML = `<header><a href="../../">← Research demos</a><p class="eyebrow">A local consistency certificate</p><h1>Can local readings<br>describe <em>one grid?</em></h1><p>Three transmission lines can each report a plausible phase difference. But around a loop, those differences must add back to zero. Otherwise no single set of bus voltages can explain them all.</p></header><main><section class="panel controls"><label>line 1 → 2 <output id="a-out"></output><input id="a" type="range" min="-1" max="1" step="0.01" value="0.25"></label><label>line 2 → 3 <output id="b-out"></output><input id="b" type="range" min="-1" max="1" step="0.01" value="-0.10"></label><label>line 3 → 1 <output id="c-out"></output><input id="c" type="range" min="-1" max="1" step="0.01" value="-0.15"></label><button id="break">Introduce mismatch</button><button id="repair">Repair closure</button></section><section class="grid"><article class="panel diagram"><div class="head"><div><p class="eyebrow">Three local measurements</p><h2>Walk around the triangle</h2></div><span id="status"></span></div><svg id="svg" viewBox="0 0 600 350" role="img" aria-label="Three-bus electrical grid triangle"></svg><p>Follow the arrows around the cycle. The highlighted return arrow shows the accumulated disagreement.</p></article><article class="panel result"><p class="eyebrow">The certificate</p><h2 id="defect"></h2><p id="interpretation"></p><dl><div><dt>bus 1 angle</dt><dd id="v1"></dd></div><div><dt>bus 2 angle</dt><dd id="v2"></dd></div><div><dt>bus 3 angle</dt><dd id="v3"></dd></div></dl><p class="limit">This test concerns whether local voltage data can be made globally consistent. It does not prove that a proposed power dispatch is economically optimal or operationally feasible.</p></article></section><section class="panel why"><div><p class="eyebrow">What the project contributes</p><h2>A feasible-looking edge at a time is not enough.</h2></div><p>AC power-flow relaxations often store local information on individual lines. Cycle certificates expose when those line measurements cannot come from one global voltage vector. The research program studies when such local moment data can be recovered—and carefully separates that question from solving optimal power flow.</p></section><footer><b>EXACT local identity:</b> closure means the oriented phase sum is zero modulo 2π. The current sliders are an educational three-bus illustration.</footer></main>`;
+const ids = ["a", "b", "c"] as const;
+const input = (id: typeof ids[number]) => document.querySelector<HTMLInputElement>(`#${id}`)!;
+const value = (): [number, number, number] => [Number(input("a").value), Number(input("b").value), Number(input("c").value)];
+const fmt = (radians: number) => `${radians.toFixed(2)} rad`;
+function render(): void {
+  const edges = value(); const defect = cycleDefect(edges); const consistent = Math.abs(defect) < 1e-9; const angles = reconstruct(edges);
+  ids.forEach((id, i) => { document.querySelector(`#${id}-out`)!.textContent = fmt(edges[i] ?? 0); });
+  document.querySelector("#status")!.textContent = consistent ? "closure passes" : "closure fails";
+  document.querySelector("#status")!.className = consistent ? "pass" : "fail";
+  document.querySelector("#defect")!.textContent = consistent ? "0.00 rad around the cycle" : `${defect.toFixed(3)} rad does not close`;
+  document.querySelector("#interpretation")!.textContent = consistent ? "One global set of voltage angles can reproduce these three local measurements." : "Each line can look reasonable alone, but no single global voltage assignment reproduces all three readings.";
+  ["v1", "v2", "v3"].forEach((id, i) => { document.querySelector(`#${id}`)!.textContent = fmt(angles[i] ?? 0); });
+  const pos: readonly [number, number][] = [[300,55],[105,280],[495,280]];
+  const lines = [[0,1,edges[0]],[1,2,edges[1]],[2,0,edges[2]]].map(([from,to,edge], i) => { const p = pos[from as number]!; const q = pos[to as number]!; const x = (p[0]! + q[0]!) / 2; const y = (p[1]! + q[1]!) / 2; return `<line class="edge e${i}" x1="${p[0]}" y1="${p[1]}" x2="${q[0]}" y2="${q[1]}"/><text x="${x}" y="${y - 9}">${(edge as number).toFixed(2)} rad</text>`; }).join("");
+  document.querySelector("#svg")!.innerHTML = `<defs><marker id="arrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z"/></marker></defs>${lines}${pos.map((point, i) => `<circle cx="${point[0]}" cy="${point[1]}" r="34"/><text class="node" x="${point[0]}" y="${point[1] + 5}">bus ${i + 1}</text>`).join("")}<text class="sum ${consistent ? "good" : "bad"}" x="300" y="190">sum = ${edges.reduce((sum, edge) => sum + edge, 0).toFixed(3)} rad</text>`;
+}
+ids.forEach((id) => input(id).addEventListener("input", render));
+document.querySelector("#break")!.addEventListener("click", () => { input("c").value = "0.20"; render(); });
+document.querySelector("#repair")!.addEventListener("click", () => { const [a,b] = value(); input("c").value = String(-a - b); render(); });
+render();

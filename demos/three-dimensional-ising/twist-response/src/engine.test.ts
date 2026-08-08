@@ -71,6 +71,21 @@ describe("width-three twist-response engine", () => {
     }
   });
 
+  it("retains exact agreement after one local coupling perturbation", () => {
+    const field = new PrimeField(PRIMES[1]);
+    const engine = new TwistResponseEngine({
+      n: 5,
+      field,
+      weights: { tx: 7n, ty: 11n, tz: 13n },
+      perturbHandle: 2,
+      perturbFactor: 17n,
+    });
+    const weights = uniformProductWeights(field).slice(0, engine.genus);
+    const shared = engine.sharedResponses(weights);
+    expect(responseTablesEqual(shared, engine.separateResponses(weights))).toBe(true);
+    expect(responseTablesEqual(shared, engine.literalResponses(weights))).toBe(true);
+  });
+
   it("floating-point paths agree within roundoff", () => {
     const field = new FloatField();
     const engine = new TwistResponseEngine({ n: 4, field, weights: { tx: 0.19, ty: 0.23, tz: 0.17 } });
